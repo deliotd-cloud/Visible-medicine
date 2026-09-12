@@ -118,7 +118,7 @@ import { RelatedStudy } from './related-study';
 import { UpperLimbMotorExplorer } from './upper-limb-motor';
 import { ArterialConnections } from './arterial-connections';
 import { BoneJoints } from './bone-joints';
-import { footJointPlan } from '@/lib/foot-joints';
+import { boneJointPlan } from '@/lib/bone-joints';
 import { arterialPlan } from '../lib/arterial';
 import { VenousDrainage } from './venous-drainage';
 import { venousDrainagePlan } from '../lib/venous-drainage';
@@ -760,7 +760,7 @@ export default function BodyExplorer({
   }
   function showJointPartners() {
     if (!catalog || !selectedId) return;
-    const plan = footJointPlan(catalog, initialRegion, side, selectedId, exam);
+    const plan = boneJointPlan(catalog, initialRegion, side, selectedId, exam);
     if (!plan) return;
     dispatch(plan.action);
     setSystems((prev) => ({ ...prev, skeleton: true }));
@@ -775,7 +775,7 @@ export default function BodyExplorer({
     cameraRestore.current = null;
     setSelectionNotice({
       id: plan.selectedId,
-      message: `${plan.label}: available ankle/foot joint partners shown; variable facets excluded. No donor contact or joint space is verified.`,
+      message: `${plan.label}: available ${plan.scopeLabel} joint partners shown; variable facets excluded. No donor contact or joint space is verified.`,
     });
     setReset((n) => n + 1);
     // Visibility only; existing selection and imaging identity are retained.

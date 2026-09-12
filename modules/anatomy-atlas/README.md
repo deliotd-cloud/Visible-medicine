@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Selected bone → Wrist & hand joint partners** extends the [compact partner navigator](docs/HAND_JOINT_PARTNERS.md) to 58 existing bones, alongside the ankle/foot map. It supports same-side navigation, reversible partner isolation and whole-body links for out-of-region bones. TFCC separation and variable carpal facets are explicit. No new meshes or permanent toolbar; runtime publication and clinical/device acceptance remain pending.
+
 **Selected bone → Ankle & foot joint partners** adds a [compact, source-bound partner navigator](docs/FOOT_JOINT_PARTNERS.md) across 56 existing bones. Show partners is one reversible visibility step; neighbours are selectable or linked to the whole body. Variable facets are explicit and excluded from automatic isolation. No geometry or anatomy-count increase; radiologist/device review and runtime publication remain pending.
 
 **Lung → Explore lung branches → Branch type** now separates [airways, pulmonary arteries and pulmonary veins](docs/PULMONARY_BRANCH_TYPES.md). Each can be studied across the lung or within one existing lobe group, using the same labels, selection, cutaway and separation controls. Original source surfaces are retained; no lobe tissue, capillary network or new anatomy identity is invented. Publication and radiologist/device acceptance remain pending.

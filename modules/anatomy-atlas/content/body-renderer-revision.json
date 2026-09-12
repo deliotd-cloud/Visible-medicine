@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "db814d64bd75bcf6f2c702480b2d91f62945a28502794806d22ab7f87f77a97f"
+      "sha256": "6dde83e6547250a4794ce45628ab580cf65e582968ddc3fd035786813bd4e335"
     },
     {
       "path": "app/body-scene.tsx",
@@ -78,7 +78,7 @@
     },
     {
       "path": "app/bone-joints.tsx",
-      "sha256": "5dd49ab2c4fe39a55f41b8a8d005d2e3ff473b9a3eb3e63cbf2d0ce0c3469138"
+      "sha256": "dbeb74df1bf96ac7a6a9bd41c18393cff89d9efe268135d406e15f4bd6e60032"
     },
     {
       "path": "app/brand.tsx",
@@ -419,6 +419,14 @@
     {
       "path": "content/genicular-study.ts",
       "sha256": "e3990bacdac2466a03bfec56e5fc8eecc0767b1f474d5b161e16cb84d5a1cfaa"
+    },
+    {
+      "path": "content/hand-joint-pins.json",
+      "sha256": "8dca1c9b298ee5a1a33efad161acef8f3d05de5f443ea69644c027d72a3a8e26"
+    },
+    {
+      "path": "content/hand-joints.ts",
+      "sha256": "c7062b9b6a416f575687d3d30da43137d4e1bbe9f7ebf9fcccf5ee930315b74c"
     },
     {
       "path": "content/hepatic-teaching.ts",
@@ -769,6 +777,10 @@
       "sha256": "67b34405e32541d49c85ad931cc818d5a1d9ab923b317f91e83d9a0fb6fbe285"
     },
     {
+      "path": "lib/bone-joints.ts",
+      "sha256": "6ac746a3f09fd982dbbb7b24f6c6cc2f61d88b35742d9ac7686632dead421389"
+    },
+    {
       "path": "lib/brachial-veins.ts",
       "sha256": "d675f79d288ce1eb799e4c58a7d14fe5894257274ef302ce96e3a2990bda5b2c"
     },
@@ -890,7 +902,7 @@
     },
     {
       "path": "lib/foot-joints.ts",
-      "sha256": "0c3bd55687da1c5b87014ac93c166f646f1c208f3db1b04c443651a8de34f09b"
+      "sha256": "3eb2ccb69d9a2d9a05f12d81474ad4171f5850e122f6415f34d585066cbbf2ee"
     },
     {
       "path": "lib/foot-reasoning.ts",
@@ -935,6 +947,10 @@
     {
       "path": "lib/hand-curriculum.ts",
       "sha256": "6c3af658311c8a4ea7c50980d327915e0ea8249e7a00a8aab54f22e777111c56"
+    },
+    {
+      "path": "lib/hand-joints.ts",
+      "sha256": "0672bed057e57c516d59e9f7af23587f25317116b572ea35195a25bac25ef6a4"
     },
     {
       "path": "lib/hand-reasoning.ts",
@@ -1233,6 +1249,10 @@
       "sha256": "304c2141126aab659f8c6852a004ec004a2017dcb2cb266124cb82a9733edb8f"
     },
     {
+      "path": "lib/regional-bone-joints.ts",
+      "sha256": "833268e839a6f4b978fee73d96361a712a5520030397e43198a1ae078faaeecb"
+    },
+    {
       "path": "lib/regional-connective-clinical-curriculum.ts",
       "sha256": "d741394acb5ba6a97b7da80688be07b4a35fa48bd07153385a7c67755d34fb61"
     },
@@ -1470,7 +1490,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "25dccdd3890ff4900c50d47a9460d5ef4291a92ca890dc5616a32624c4cb24a4"
+      "sha256": "97691e835647356e49560f3c59d16ced9444d09dfe2ac7d354c249f99afccc8d"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1637,5 +1657,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "fc607128bd184b2382ba117e2dce2be67fea5f10ac9bc47be1f801df975b8c75"
+  "sha256": "e8b254bc5d44a936315ad72bdf241be4858348ed185cc649469cd9b8636f6460"
 }

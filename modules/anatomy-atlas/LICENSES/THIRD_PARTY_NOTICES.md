@@ -1,5 +1,7 @@
 # Third-party notices
 
+[Wrist/hand partners](../docs/HAND_JOINT_PARTNERS.md) uses original factual relationship labels with reading references to TTUHSC El Paso, historical Gray text, Anatomic Structures at Risk, Viegas primary anatomical studies and ASSH. Their artwork, tables, PDFs, images and prose are not imported or redistributed. Existing BodyParts3D CC BY 4.0 credit is retained for the 58 unchanged source selections and metadata. No new mesh, font, texture, package, scan or paid/mandatory service.
+
 [Ankle/foot joint partners](../docs/FOOT_JOINT_PARTNERS.md) adds original factual relationships and reading links to TTUHSC El Paso, Samojla/Kent State, OpenStax and a primary navicular morphology paper. No source prose, table, diagram, PDF or image is imported or redistributed. OpenStax's current non-commercial terms do not admit any asset to this product. Source identity pins repeat existing BodyParts3D CC BY 4.0 metadata; DBCLS attribution remains. No new dependency, font, texture, mesh, acquired image or mandatory service.
 
 [Pulmonary branch-type filtering](../docs/PULMONARY_BRANCH_TYPES.md) derives two optional GLBs from the already licensed BodyParts3D CC BY 4.0 lung surfaces. The adaptation separates existing source-labelled airways, arteries and veins into display subsets while retaining exact original triangles/normals. Required DBCLS credit and licence link remain. The NCI SEER page is a factual reading reference; its figures/text are not imported. No new dataset, font, texture, dependency, scan or paid service is included.

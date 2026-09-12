@@ -2,8 +2,7 @@
 import { useMemo } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { footJointNeighbours } from '@/lib/foot-joints';
-import { footJointReferences } from '@/content/foot-joints';
+import { boneJointNeighbours } from '@/lib/bone-joints';
 import { makeStudyLink, type StudySide } from '@/lib/study-links';
 import type { BodyCatalog } from './body-types';
 
@@ -25,14 +24,19 @@ export function BoneJoints({
   onShow: () => void;
 }) {
   const info = useMemo(
-    () => footJointNeighbours(catalog, region, side, selectedId, disabled),
+    () => boneJointNeighbours(catalog, region, side, selectedId, disabled),
     [catalog, region, side, selectedId, disabled],
   );
   if (!info) return null;
-  const references = [...new Set(info.rows.map((r) => r.reference))];
+  const references = [
+    ...new Set([
+      ...info.rows.map((r) => r.reference),
+      ...(info.note ? [info.note.reference] : []),
+    ]),
+  ];
   return (
     <details className="body-study-tools body-motor-explorer">
-      <summary>Ankle & foot joint partners</summary>
+      <summary>{info.scope.title}</summary>
       <p>
         {info.selected.name} · anatomical teaching map, not verified donor
         contacts.
@@ -40,6 +44,7 @@ export function BoneJoints({
       <Button size="sm" variant="outline" onClick={onShow}>
         Show available joint partners
       </Button>
+      {info.note && <p>{info.note.text}</p>}
       {(['synovial', 'syndesmosis', 'variable'] as const).map((kind) => {
         const rows = info.rows.filter((r) => r.kind === kind);
         if (!rows.length) return null;
@@ -99,16 +104,11 @@ export function BoneJoints({
       })}
       <details>
         <summary>Scope, limits & references</summary>
-        <p>
-          Ankle and foot only: knee and proximal tibiofibular relationships are
-          outside this map. Bone pairs do not count separate facets or joint
-          cavities. Hallux sesamoid partners remain unresolved in the source
-          selection.
-        </p>
+        <p>{info.scope.summary}</p>
         <p>
           No cartilage, ligament, joint-space measurement, motion or CT/MRI
-          registration is generated. Talocalcaneal facets are not separated.
-          Unlisted variants are not presumed absent. Specialist review pending.
+          registration is generated. {info.scope.limits} Unlisted variants are
+          not presumed absent. Specialist review pending.
         </p>
         <p>
           Show partners resets cutaway, separation and camera. Dissection Undo
@@ -118,11 +118,11 @@ export function BoneJoints({
         {references.map((key) => (
           <a
             key={key}
-            href={footJointReferences[key].url}
+            href={info.references[key].url}
             target="_blank"
             rel="noreferrer"
           >
-            {footJointReferences[key].title} ↗
+            {info.references[key].title} ↗
           </a>
         ))}
       </details>

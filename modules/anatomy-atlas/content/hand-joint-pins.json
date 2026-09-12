@@ -1,0 +1,3241 @@
+{
+  "sourceCommit": "6d27b004d297dc15fd94c43716e40fb87210715f",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "hand-skeleton",
+      "url": "/models/bodyparts3d/full-body/hand-skeleton.glb",
+      "bytes": 416816,
+      "sha256": "5f61ad363b757aa0cfcf0d7be4bcedcf63cbfec9ff5728cace9d62aa0447eac1",
+      "structures": 54
+    },
+    {
+      "id": "forearm-skeleton",
+      "url": "/models/bodyparts3d/full-body/forearm-skeleton.glb",
+      "bytes": 57728,
+      "sha256": "7af54bdb11a8ae93d9236c6ed35b9a471543bc2a8a32867992a8917d22b1e0d5",
+      "structures": 4
+    }
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-index-finger",
+      "fmaId": "FMA23953",
+      "name": "Distal phalanx of left index finger",
+      "sourceName": "distal phalanx of left index finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23953",
+      "bounds": {
+        "min": [
+          3.0126099586486816,
+          -1.381489872932434,
+          1.196139931678772
+        ],
+        "max": [
+          3.1125400066375732,
+          -1.244329810142517,
+          1.367110013961792
+        ]
+      },
+      "center": [
+        3.0625749826431274,
+        -1.3129098415374756,
+        1.281624972820282
+      ],
+      "anchor": [
+        3.050759792327881,
+        -1.3065801858901978,
+        1.2914299964904785
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3183",
+          "sha256": "53cd2e02023923e93f7651aed2b7b198fdaa9e0c8c8e83167b7ba371a2467396"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-little-finger",
+      "fmaId": "FMA23959",
+      "name": "Distal phalanx of left little finger",
+      "sourceName": "distal phalanx of left little finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23959",
+      "bounds": {
+        "min": [
+          2.1889400482177734,
+          -1.233720064163208,
+          1.1841999292373657
+        ],
+        "max": [
+          2.271549940109253,
+          -1.1069097518920898,
+          1.3228399753570557
+        ]
+      },
+      "center": [
+        2.230244994163513,
+        -1.170314908027649,
+        1.2535199522972107
+      ],
+      "anchor": [
+        2.2397000789642334,
+        -1.1856402158737183,
+        1.2676199674606323
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3184",
+          "sha256": "56799202f865a5f250cf43da0619baebccde1dae3ee6cd3295e8e8171b4b6158"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-middle-finger",
+      "fmaId": "FMA23955",
+      "name": "Distal phalanx of left middle finger",
+      "sourceName": "distal phalanx of left middle finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23955",
+      "bounds": {
+        "min": [
+          2.7136099338531494,
+          -1.4663299322128296,
+          1.2808400392532349
+        ],
+        "max": [
+          2.808540105819702,
+          -1.3362902402877808,
+          1.450890064239502
+        ]
+      },
+      "center": [
+        2.761075019836426,
+        -1.4013100862503052,
+        1.3658650517463684
+      ],
+      "anchor": [
+        2.759739875793457,
+        -1.393499732017517,
+        1.382390022277832
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3186",
+          "sha256": "52a6da87eb85141fbfc47457b45704fbb360a64d30a9fe13b44edbfcdfcc7a8a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-ring-finger",
+      "fmaId": "FMA23957",
+      "name": "Distal phalanx of left ring finger",
+      "sourceName": "distal phalanx of left ring finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23957",
+      "bounds": {
+        "min": [
+          2.453000068664551,
+          -1.3518798351287842,
+          1.287559986114502
+        ],
+        "max": [
+          2.5364599227905273,
+          -1.2610101699829102,
+          1.443600058555603
+        ]
+      },
+      "center": [
+        2.494729995727539,
+        -1.3064450025558472,
+        1.3655800223350525
+      ],
+      "anchor": [
+        2.5017800331115723,
+        -1.2966901063919067,
+        1.375749945640564
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3187",
+          "sha256": "30fde420c59b5e151de258f9c358c4cc1463de8b85c60e7c4b0a4d7ff573b9ad"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-thumb",
+      "fmaId": "FMA23951",
+      "name": "Distal phalanx of left thumb",
+      "sourceName": "distal phalanx of left thumb",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23951",
+      "bounds": {
+        "min": [
+          3.108380079269409,
+          -0.807570219039917,
+          1.072409987449646
+        ],
+        "max": [
+          3.2393500804901123,
+          -0.5776898264884949,
+          1.2327299118041992
+        ]
+      },
+      "center": [
+        3.1738650798797607,
+        -0.6926300227642059,
+        1.1525699496269226
+      ],
+      "anchor": [
+        3.1494698524475098,
+        -0.7068102955818176,
+        1.1598199605941772
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3188",
+          "sha256": "cafb49c4af872d990b2cd7a3ea279e088ea596cea25ee2fdce16b8ebbb04d37c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-index-finger",
+      "fmaId": "FMA24460",
+      "name": "Distal phalanx of right index finger",
+      "sourceName": "distal phalanx of right index finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24460",
+      "bounds": {
+        "min": [
+          -3.113680124282837,
+          -1.3815399408340454,
+          1.196470022201538
+        ],
+        "max": [
+          -3.014249801635742,
+          -1.2431097030639648,
+          1.3672999143600464
+        ]
+      },
+      "center": [
+        -3.0639649629592896,
+        -1.3123248219490051,
+        1.2818849682807922
+      ],
+      "anchor": [
+        -3.047600030899048,
+        -1.3177300691604614,
+        1.280269980430603
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3193",
+          "sha256": "00d90373136e996def72c45bb2de42630f7533014b622d36bbf56c4121355e4b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-little-finger",
+      "fmaId": "FMA24463",
+      "name": "Distal phalanx of right little finger",
+      "sourceName": "distal phalanx of right little finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24463",
+      "bounds": {
+        "min": [
+          -2.2720301151275635,
+          -1.232509732246399,
+          1.1817100048065186
+        ],
+        "max": [
+          -2.1889500617980957,
+          -1.1072301864624023,
+          1.3187299966812134
+        ]
+      },
+      "center": [
+        -2.2304900884628296,
+        -1.1698699593544006,
+        1.250220000743866
+      ],
+      "anchor": [
+        -2.2409698963165283,
+        -1.1692700386047363,
+        1.2391499280929565
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3194",
+          "sha256": "0edc751d14c5260c93fcde78f868ce49521eec95085a613417a96ddfd6a8965d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-middle-finger",
+      "fmaId": "FMA24461",
+      "name": "Distal phalanx of right middle finger",
+      "sourceName": "distal phalanx of right middle finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24461",
+      "bounds": {
+        "min": [
+          -2.809119939804077,
+          -1.469329833984375,
+          1.2820500135421753
+        ],
+        "max": [
+          -2.7136499881744385,
+          -1.334689974784851,
+          1.454279899597168
+        ]
+      },
+      "center": [
+        -2.761384963989258,
+        -1.402009904384613,
+        1.3681649565696716
+      ],
+      "anchor": [
+        -2.742770195007324,
+        -1.395640254020691,
+        1.3711199760437012
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3196",
+          "sha256": "901e109df6e4a98b88dae7cdddda416c4cdd91e58093f1dc51d80ccc7c4e9b34"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-ring-finger",
+      "fmaId": "FMA24462",
+      "name": "Distal phalanx of right ring finger",
+      "sourceName": "distal phalanx of right ring finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24462",
+      "bounds": {
+        "min": [
+          -2.536139965057373,
+          -1.3513097763061523,
+          1.2871699333190918
+        ],
+        "max": [
+          -2.452810049057007,
+          -1.2599200010299683,
+          1.4438000917434692
+        ]
+      },
+      "center": [
+        -2.49447500705719,
+        -1.3056148886680603,
+        1.3654850125312805
+      ],
+      "anchor": [
+        -2.478450059890747,
+        -1.3010797500610352,
+        1.3658699989318848
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3197",
+          "sha256": "4fece0e70293449e99a1b27a0d40c9d4fedd548ff0471fa7c783e5d973cbfba3"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-thumb",
+      "fmaId": "FMA24459",
+      "name": "Distal phalanx of right thumb",
+      "sourceName": "distal phalanx of right thumb",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24459",
+      "bounds": {
+        "min": [
+          -3.239140033721924,
+          -0.808610200881958,
+          1.0713499784469604
+        ],
+        "max": [
+          -3.1026298999786377,
+          -0.5783398151397705,
+          1.2335799932479858
+        ]
+      },
+      "center": [
+        -3.1708849668502808,
+        -0.6934750080108643,
+        1.1524649858474731
+      ],
+      "anchor": [
+        -3.146090030670166,
+        -0.6867401003837585,
+        1.1562199592590332
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3198",
+          "sha256": "bfae0f42c3cffa63b93403bf6fe1b446dcf0f8fc3e1f8994544ac256830a7b3e"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-first-metacarpal-bone",
+      "fmaId": "FMA24465",
+      "name": "Left first metacarpal bone",
+      "sourceName": "left first metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24465",
+      "bounds": {
+        "min": [
+          2.7235300540924072,
+          -0.3970501720905304,
+          0.7340599894523621
+        ],
+        "max": [
+          3.096250057220459,
+          -0.025930175557732582,
+          1.0378199815750122
+        ]
+      },
+      "center": [
+        2.909890055656433,
+        -0.2114901738241315,
+        0.8859399855136871
+      ],
+      "anchor": [
+        2.888230085372925,
+        -0.1816699206829071,
+        0.8883599638938904
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3240",
+          "sha256": "f512f1433a67003297c3ca0fca775c94372313cf3c3de28774a1cd7556e08362"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-second-metacarpal-bone",
+      "fmaId": "FMA24467",
+      "name": "Left second metacarpal bone",
+      "sourceName": "left second metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24467",
+      "bounds": {
+        "min": [
+          2.618410110473633,
+          -0.8095800876617432,
+          0.6711699962615967
+        ],
+        "max": [
+          2.9261300563812256,
+          -0.13130980730056763,
+          0.9243299961090088
+        ]
+      },
+      "center": [
+        2.772270083427429,
+        -0.4704449474811554,
+        0.7977499961853027
+      ],
+      "anchor": [
+        2.8213000297546387,
+        -0.48330017924308777,
+        0.7823800444602966
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3243",
+          "sha256": "728fb5278b0e3d2ac9fb0af78ade721c5cb8764144e318a85f07ff9cdb9d7f7d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-third-metacarpal-bone",
+      "fmaId": "FMA24469",
+      "name": "Left third metacarpal bone",
+      "sourceName": "left third metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24469",
+      "bounds": {
+        "min": [
+          2.5236001014709473,
+          -0.7935101389884949,
+          0.6241000294685364
+        ],
+        "max": [
+          2.722520112991333,
+          -0.149749755859375,
+          0.928130030632019
+        ]
+      },
+      "center": [
+        2.62306010723114,
+        -0.47162994742393494,
+        0.7761150300502777
+      ],
+      "anchor": [
+        2.6117498874664307,
+        -0.4807202219963074,
+        0.7944599986076355
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3246",
+          "sha256": "fa86f28ff85a3a1e3ac6872a05912deece4d3f8489e08ea4d21b432db304938b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-fourth-metacarpal-bone",
+      "fmaId": "FMA24471",
+      "name": "Left fourth metacarpal bone",
+      "sourceName": "left fourth metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24471",
+      "bounds": {
+        "min": [
+          2.413559913635254,
+          -0.7474700808525085,
+          0.6589800119400024
+        ],
+        "max": [
+          2.5377399921417236,
+          -0.14781981706619263,
+          0.9191099405288696
+        ]
+      },
+      "center": [
+        2.4756499528884888,
+        -0.4476449489593506,
+        0.789044976234436
+      ],
+      "anchor": [
+        2.48826003074646,
+        -0.46893006563186646,
+        0.7905600070953369
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3249",
+          "sha256": "c5f7a10a04542437ff52fde75f81c5b0b2cba6a4a68c56b829c9e0de2fe1b72f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-fifth-metacarpal-bone",
+      "fmaId": "FMA24473",
+      "name": "Left fifth metacarpal bone",
+      "sourceName": "left fifth metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24473",
+      "bounds": {
+        "min": [
+          2.252700090408325,
+          -0.6796899437904358,
+          0.702239990234375
+        ],
+        "max": [
+          2.453939914703369,
+          -0.13241027295589447,
+          0.9441999793052673
+        ]
+      },
+      "center": [
+        2.353320002555847,
+        -0.40605010837316513,
+        0.8232199847698212
+      ],
+      "anchor": [
+        2.373500108718872,
+        -0.41370972990989685,
+        0.8138800263404846
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3252",
+          "sha256": "ca8db2999ff2d7a14a61e9cbeb83a01011a3557df844ff1c47bb7ac3eaeccdb8"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-capitate",
+      "fmaId": "FMA24447",
+      "name": "Left capitate",
+      "sourceName": "left capitate",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24447",
+      "bounds": {
+        "min": [
+          2.4860999584198,
+          -0.1783599853515625,
+          0.6057299971580505
+        ],
+        "max": [
+          2.6428799629211426,
+          0.04588012769818306,
+          0.7735099792480469
+        ]
+      },
+      "center": [
+        2.564489960670471,
+        -0.06623992882668972,
+        0.6896199882030487
+      ],
+      "anchor": [
+        2.558990001678467,
+        -0.05231994763016701,
+        0.6493800282478333
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3257",
+          "sha256": "d229f9418122099af72721ebeee60b15b68604f3da3532c0625909dc2ac9520c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-hamate",
+      "fmaId": "FMA24449",
+      "name": "Left hamate",
+      "sourceName": "left hamate",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24449",
+      "bounds": {
+        "min": [
+          2.3659698963165283,
+          -0.1874401867389679,
+          0.6132199764251709
+        ],
+        "max": [
+          2.515700101852417,
+          0.006309814285486937,
+          0.8398199677467346
+        ]
+      },
+      "center": [
+        2.4408349990844727,
+        -0.09056518622674048,
+        0.7265199720859528
+      ],
+      "anchor": [
+        2.4443600177764893,
+        -0.05999999865889549,
+        0.7370400428771973
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3261",
+          "sha256": "665e0be6779b9bc398e0947eaf190cc4d942e030a05d1a4cfe3ce4270bf8ddbf"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-lunate",
+      "fmaId": "FMA24438",
+      "name": "Left lunate",
+      "sourceName": "left lunate",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24438",
+      "bounds": {
+        "min": [
+          2.3633899688720703,
+          -0.02778015099465847,
+          0.6062799692153931
+        ],
+        "max": [
+          2.528830051422119,
+          0.09888000786304474,
+          0.7713099718093872
+        ]
+      },
+      "center": [
+        2.4461100101470947,
+        0.035549928434193134,
+        0.6887949705123901
+      ],
+      "anchor": [
+        2.450549840927124,
+        0.0064398194663226604,
+        0.6798700094223022
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3268",
+          "sha256": "3d4a712f4ee30883f8967d15e8ac70e707d524213814bc7e2fbd51a123619b83"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-pisiform",
+      "fmaId": "FMA24442",
+      "name": "Left pisiform",
+      "sourceName": "left pisiform",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24442",
+      "bounds": {
+        "min": [
+          2.3183798789978027,
+          -0.10275024175643921,
+          0.7703099846839905
+        ],
+        "max": [
+          2.4003000259399414,
+          0.012769775465130806,
+          0.8758900165557861
+        ]
+      },
+      "center": [
+        2.359339952468872,
+        -0.0449902331456542,
+        0.8231000006198883
+      ],
+      "anchor": [
+        2.328850030899048,
+        -0.05520019680261612,
+        0.8421000838279724
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3276",
+          "sha256": "6162726ac4bcb29a9ba8489570650ba8a323576b03423fb16b27bcd1e55c0658"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:bone:left-radius",
+      "fmaId": "FMA23465",
+      "name": "Left radius",
+      "sourceName": "left radius",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23465",
+      "bounds": {
+        "min": [
+          2.198359966278076,
+          0.0616302490234375,
+          0.11469299346208572
+        ],
+        "max": [
+          2.7914299964904785,
+          2.350100040435791,
+          0.7725200057029724
+        ]
+      },
+      "center": [
+        2.4948949813842773,
+        1.2058651447296143,
+        0.44360649958252907
+      ],
+      "anchor": [
+        2.561270236968994,
+        1.1699999570846558,
+        0.4131059944629669
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3277",
+          "sha256": "c41a7de7eddf5b91543fb22cf34c7dcad50241ffe1faae6ae22e1be30ca9390a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-scaphoid",
+      "fmaId": "FMA24436",
+      "name": "Left scaphoid",
+      "sourceName": "left scaphoid",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24436",
+      "bounds": {
+        "min": [
+          2.4945199489593506,
+          -0.037800293415784836,
+          0.6152700185775757
+        ],
+        "max": [
+          2.7297699451446533,
+          0.1168200671672821,
+          0.7644400000572205
+        ]
+      },
+      "center": [
+        2.612144947052002,
+        0.039509886875748634,
+        0.6898550093173981
+      ],
+      "anchor": [
+        2.606029987335205,
+        0.032169800251722336,
+        0.7195900082588196
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3278",
+          "sha256": "5389b07855a3273ac4646092eaf667466eb3f00cf5f78ed90993e82200f550ab"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-trapezium",
+      "fmaId": "FMA24444",
+      "name": "Left trapezium",
+      "sourceName": "left trapezium",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24444",
+      "bounds": {
+        "min": [
+          2.6478099822998047,
+          -0.1425299048423767,
+          0.6771000027656555
+        ],
+        "max": [
+          2.8179502487182617,
+          0.057930298149585724,
+          0.8455399870872498
+        ]
+      },
+      "center": [
+        2.732880115509033,
+        -0.04229980334639549,
+        0.7613199949264526
+      ],
+      "anchor": [
+        2.75150990486145,
+        -0.0782000720500946,
+        0.7886000275611877
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3283",
+          "sha256": "50006736c04d10ad0af5c94054c9cf64eac6e55fb0cdde25eefcad1170492f93"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-trapezoid",
+      "fmaId": "FMA24445",
+      "name": "Left trapezoid",
+      "sourceName": "left trapezoid",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24445",
+      "bounds": {
+        "min": [
+          2.622529983520508,
+          -0.17278015613555908,
+          0.6364499926567078
+        ],
+        "max": [
+          2.7328901290893555,
+          -0.04729980602860451,
+          0.7844999432563782
+        ]
+      },
+      "center": [
+        2.6777100563049316,
+        -0.1100399810820818,
+        0.710474967956543
+      ],
+      "anchor": [
+        2.6738698482513428,
+        -0.13955993950366974,
+        0.7267099618911743
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3284",
+          "sha256": "e4378dd24f9206c580457f09b75cc05a36f0a1b4049fc2c2ce57da51a2ebd7c5"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-triquetral",
+      "fmaId": "FMA24440",
+      "name": "Left triquetral",
+      "sourceName": "left triquetral",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24440",
+      "bounds": {
+        "min": [
+          2.3182098865509033,
+          -0.11051025241613388,
+          0.6442500352859497
+        ],
+        "max": [
+          2.427309989929199,
+          0.025200195610523224,
+          0.7980700731277466
+        ]
+      },
+      "center": [
+        2.3727599382400513,
+        -0.04265502840280533,
+        0.7211600542068481
+      ],
+      "anchor": [
+        2.377570152282715,
+        -0.0758502185344696,
+        0.7176399827003479
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3285",
+          "sha256": "3561c1648197f5c2f44c577e2b54c1fbf76b36bbcab207f8b67286ba134cea2c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:bone:left-ulna",
+      "fmaId": "FMA23468",
+      "name": "Left ulna",
+      "sourceName": "left ulna",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23468",
+      "bounds": {
+        "min": [
+          1.9689199924468994,
+          0.050159912556409836,
+          -0.05447700619697571
+        ],
+        "max": [
+          2.4711999893188477,
+          2.5246996879577637,
+          0.7327899932861328
+        ]
+      },
+      "center": [
+        2.2200599908828735,
+        1.2874298002570868,
+        0.33915649354457855
+      ],
+      "anchor": [
+        2.191890001296997,
+        1.2612799406051636,
+        0.3485729992389679
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3286",
+          "sha256": "0e3c48a4b664ffc37ef11eb4754c6c7f4adc8fd1d3e54d1286307432c7d04bfc"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-ring-finger",
+      "fmaId": "FMA23942",
+      "name": "Middle phalanx of left ring finger",
+      "sourceName": "middle phalanx of left ring finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23942",
+      "bounds": {
+        "min": [
+          2.4278199672698975,
+          -1.3017901182174683,
+          1.06794011592865
+        ],
+        "max": [
+          2.5453200340270996,
+          -1.0631598234176636,
+          1.3054699897766113
+        ]
+      },
+      "center": [
+        2.4865700006484985,
+        -1.182474970817566,
+        1.1867050528526306
+      ],
+      "anchor": [
+        2.4808900356292725,
+        -1.1811999082565308,
+        1.1913200616836548
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3291",
+          "sha256": "5c352c5c4329997419f731995176a2e293c749bc4896de37e6feb9d8b122cfac"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-ring-finger",
+      "fmaId": "FMA24457",
+      "name": "Middle phalanx of right ring finger",
+      "sourceName": "middle phalanx of right ring finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24457",
+      "bounds": {
+        "min": [
+          -2.5429298877716064,
+          -1.3029601573944092,
+          1.0653599500656128
+        ],
+        "max": [
+          -2.4276299476623535,
+          -1.0639599561691284,
+          1.3056700229644775
+        ]
+      },
+      "center": [
+        -2.48527991771698,
+        -1.1834600567817688,
+        1.1855149865150452
+      ],
+      "anchor": [
+        -2.4890999794006348,
+        -1.178220272064209,
+        1.1903899908065796
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3292",
+          "sha256": "11af3f3453af291b20b0f4a9002c3e0906535acdc0004bd175876ddeecb9a094"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-index-finger",
+      "fmaId": "FMA23938",
+      "name": "Middle phalanx of left index finger",
+      "sourceName": "middle phalanx of left index finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23938",
+      "bounds": {
+        "min": [
+          2.94389009475708,
+          -1.290250301361084,
+          1.0125600099563599
+        ],
+        "max": [
+          3.090010166168213,
+          -1.0854699611663818,
+          1.2205700874328613
+        ]
+      },
+      "center": [
+        3.0169501304626465,
+        -1.187860131263733,
+        1.1165650486946106
+      ],
+      "anchor": [
+        3.010430097579956,
+        -1.1797497272491455,
+        1.1273499727249146
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3296",
+          "sha256": "a2f1986d020da3ec013aeefb14b11223b18ab4181f0e7f2e56d54faee672e34f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-little-finger",
+      "fmaId": "FMA23944",
+      "name": "Middle phalanx of left little finger",
+      "sourceName": "middle phalanx of left little finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23944",
+      "bounds": {
+        "min": [
+          2.1892099380493164,
+          -1.1253399848937988,
+          1.0491200685501099
+        ],
+        "max": [
+          2.302989959716797,
+          -0.9293902516365051,
+          1.2147899866104126
+        ]
+      },
+      "center": [
+        2.2460999488830566,
+        -1.027365118265152,
+        1.1319550275802612
+      ],
+      "anchor": [
+        2.267199993133545,
+        -1.0419098138809204,
+        1.1407699584960938
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3297",
+          "sha256": "536be862531dc82ab85bc0f7a49f1492574a39d613db552a1dc98b535e2c83f5"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-middle-finger",
+      "fmaId": "FMA23940",
+      "name": "Middle phalanx of left middle finger",
+      "sourceName": "middle phalanx of left middle finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23940",
+      "bounds": {
+        "min": [
+          2.6651699542999268,
+          -1.3759100437164307,
+          1.0785800218582153
+        ],
+        "max": [
+          2.8020498752593994,
+          -1.1223297119140625,
+          1.3087600469589233
+        ]
+      },
+      "center": [
+        2.733609914779663,
+        -1.2491198778152466,
+        1.1936700344085693
+      ],
+      "anchor": [
+        2.7057502269744873,
+        -1.2561999559402466,
+        1.199679970741272
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3299",
+          "sha256": "f0404230992ffcf77f1d3834c6015305abe10c2c40a84e2e920a21d9cc0743f2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-index-finger",
+      "fmaId": "FMA24455",
+      "name": "Middle phalanx of right index finger",
+      "sourceName": "middle phalanx of right index finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24455",
+      "bounds": {
+        "min": [
+          -3.0899999141693115,
+          -1.2899402379989624,
+          1.0130900144577026
+        ],
+        "max": [
+          -2.944000005722046,
+          -1.0852398872375488,
+          1.220829963684082
+        ]
+      },
+      "center": [
+        -3.0169999599456787,
+        -1.1875900626182556,
+        1.1169599890708923
+      ],
+      "anchor": [
+        -2.999540090560913,
+        -1.2109496593475342,
+        1.1353100538253784
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3303",
+          "sha256": "af5955d21314bf58ed06fc28f28467e56ce366b658372b37a5e21936ed9f2c8b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-little-finger",
+      "fmaId": "FMA24458",
+      "name": "Middle phalanx of right little finger",
+      "sourceName": "middle phalanx of right little finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24458",
+      "bounds": {
+        "min": [
+          -2.305449962615967,
+          -1.1242998838424683,
+          1.0482299327850342
+        ],
+        "max": [
+          -2.189349889755249,
+          -0.9284496903419495,
+          1.2143899202346802
+        ]
+      },
+      "center": [
+        -2.247399926185608,
+        -1.0263747870922089,
+        1.1313099265098572
+      ],
+      "anchor": [
+        -2.2532401084899902,
+        -1.0122802257537842,
+        1.1373399496078491
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3304",
+          "sha256": "4cd1972167a669afb93f288cf994101bb32083b95efbfc1696b1781560586ca0"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-middle-finger",
+      "fmaId": "FMA24456",
+      "name": "Middle phalanx of right middle finger",
+      "sourceName": "middle phalanx of right middle finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24456",
+      "bounds": {
+        "min": [
+          -2.8020200729370117,
+          -1.3754303455352783,
+          1.077989935874939
+        ],
+        "max": [
+          -2.6658802032470703,
+          -1.1219298839569092,
+          1.309340000152588
+        ]
+      },
+      "center": [
+        -2.733950138092041,
+        -1.2486801147460938,
+        1.1936649680137634
+      ],
+      "anchor": [
+        -2.7432501316070557,
+        -1.230080008506775,
+        1.1914900541305542
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3306",
+          "sha256": "60a6197d8d7dedcb1039f82613c3c9e968109a9588b89a767ba6a44202f7c830"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-index-finger",
+      "fmaId": "FMA71915",
+      "name": "Proximal phalanx of left index finger",
+      "sourceName": "proximal phalanx of left index finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA71915",
+      "bounds": {
+        "min": [
+          2.8081400394439697,
+          -1.1427899599075317,
+          0.8408900499343872
+        ],
+        "max": [
+          3.02810001373291,
+          -0.7664397954940796,
+          1.0705701112747192
+        ]
+      },
+      "center": [
+        2.91812002658844,
+        -0.9546148777008057,
+        0.9557300806045532
+      ],
+      "anchor": [
+        2.91441011428833,
+        -0.9245398044586182,
+        0.9560099840164185
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3313",
+          "sha256": "3eb71ace606cc3271523e30a405c061290d9da661b59310a682c9d50d9c0ddf1"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-little-finger",
+      "fmaId": "FMA66791",
+      "name": "Proximal phalanx of left little finger",
+      "sourceName": "proximal phalanx of left little finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA66791",
+      "bounds": {
+        "min": [
+          2.2222700119018555,
+          -0.9661499261856079,
+          0.886680006980896
+        ],
+        "max": [
+          2.3629400730133057,
+          -0.6421002149581909,
+          1.0946099758148193
+        ]
+      },
+      "center": [
+        2.2926050424575806,
+        -0.8041250705718994,
+        0.9906449913978577
+      ],
+      "anchor": [
+        2.31427001953125,
+        -0.7887499928474426,
+        0.9864500164985657
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3314",
+          "sha256": "8b824d96eed3bc1325665fa99592d58ebd43346b436154fefae6a3c2a98753af"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-middle-finger",
+      "fmaId": "FMA71908",
+      "name": "Proximal phalanx of left middle finger",
+      "sourceName": "proximal phalanx of left middle finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA71908",
+      "bounds": {
+        "min": [
+          2.5920097827911377,
+          -1.1570098400115967,
+          0.8519200086593628
+        ],
+        "max": [
+          2.7738001346588135,
+          -0.7503399848937988,
+          1.1409599781036377
+        ]
+      },
+      "center": [
+        2.6829049587249756,
+        -0.9536749124526978,
+        0.9964399933815002
+      ],
+      "anchor": [
+        2.6530802249908447,
+        -0.9588897824287415,
+        1.0060200691223145
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3316",
+          "sha256": "5dccce5f8ff2f9152fb6b758b8cdd0bcf9fd73cc01a78464a965f69e90994bb6"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-ring-finger",
+      "fmaId": "FMA71916",
+      "name": "Proximal phalanx of left ring finger",
+      "sourceName": "proximal phalanx of left ring finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA71916",
+      "bounds": {
+        "min": [
+          2.4049201011657715,
+          -1.0994800329208374,
+          0.8570899963378906
+        ],
+        "max": [
+          2.5388600826263428,
+          -0.7104198932647705,
+          1.1192998886108398
+        ]
+      },
+      "center": [
+        2.471890091896057,
+        -0.904949963092804,
+        0.9881949424743652
+      ],
+      "anchor": [
+        2.466089963912964,
+        -0.8757598996162415,
+        0.9792799353599548
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3317",
+          "sha256": "099ccb27cdafeb169ffeb8bc73804910f30a6cefccf830d4dbfa6855bfebf46c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-thumb",
+      "fmaId": "FMA65470",
+      "name": "Proximal phalanx of left thumb",
+      "sourceName": "proximal phalanx of left thumb",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA65470",
+      "bounds": {
+        "min": [
+          2.9869399070739746,
+          -0.6447100639343262,
+          0.926289975643158
+        ],
+        "max": [
+          3.186189889907837,
+          -0.3283196985721588,
+          1.1475300788879395
+        ]
+      },
+      "center": [
+        3.0865648984909058,
+        -0.4865148812532425,
+        1.0369100272655487
+      ],
+      "anchor": [
+        3.0822501182556152,
+        -0.45986998081207275,
+        1.0437699556350708
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3318",
+          "sha256": "3b327f7169609c03540967f7f8ceba810afda27a427cb5f16ea6641ef429837a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-index-finger",
+      "fmaId": "FMA24451",
+      "name": "Proximal phalanx of right index finger",
+      "sourceName": "proximal phalanx of right index finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24451",
+      "bounds": {
+        "min": [
+          -3.0276501178741455,
+          -1.1418102979660034,
+          0.8409300446510315
+        ],
+        "max": [
+          -2.8095200061798096,
+          -0.7680298089981079,
+          1.067579984664917
+        ]
+      },
+      "center": [
+        -2.9185850620269775,
+        -0.9549200534820557,
+        0.9542550146579742
+      ],
+      "anchor": [
+        -2.9455599784851074,
+        -0.9092297554016113,
+        0.950950026512146
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3322",
+          "sha256": "03cb38d378f7eb94046e45a6fcc214c48b1081b6a35c37a491bde356cb948764"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-little-finger",
+      "fmaId": "FMA24454",
+      "name": "Proximal phalanx of right little finger",
+      "sourceName": "proximal phalanx of right little finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24454",
+      "bounds": {
+        "min": [
+          -2.3632898330688477,
+          -0.9664398431777954,
+          0.887209951877594
+        ],
+        "max": [
+          -2.221519947052002,
+          -0.640440046787262,
+          1.095229983329773
+        ]
+      },
+      "center": [
+        -2.292404890060425,
+        -0.8034399449825287,
+        0.9912199676036835
+      ],
+      "anchor": [
+        -2.2627201080322266,
+        -0.8029101490974426,
+        0.9962600469589233
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3323",
+          "sha256": "c3aaebcb7e86e3610f6d7a6896b33a60d7f544f924bdf0c4b639f8dae8c62e55"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-middle-finger",
+      "fmaId": "FMA24452",
+      "name": "Proximal phalanx of right middle finger",
+      "sourceName": "proximal phalanx of right middle finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24452",
+      "bounds": {
+        "min": [
+          -2.7741401195526123,
+          -1.157189965248108,
+          0.8511199951171875
+        ],
+        "max": [
+          -2.5920801162719727,
+          -0.751389741897583,
+          1.1420100927352905
+        ]
+      },
+      "center": [
+        -2.6831101179122925,
+        -0.9542898535728455,
+        0.996565043926239
+      ],
+      "anchor": [
+        -2.671720027923584,
+        -0.958250105381012,
+        1.0065100193023682
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3325",
+          "sha256": "ea76430375e036eea61a11c3edcbece711496563e5f2d35e6bee7f1a1cb49569"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-ring-finger",
+      "fmaId": "FMA24453",
+      "name": "Proximal phalanx of right ring finger",
+      "sourceName": "proximal phalanx of right ring finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24453",
+      "bounds": {
+        "min": [
+          -2.5382399559020996,
+          -1.1003198623657227,
+          0.8565800189971924
+        ],
+        "max": [
+          -2.405910015106201,
+          -0.7106799483299255,
+          1.1197700500488281
+        ]
+      },
+      "center": [
+        -2.4720749855041504,
+        -0.9054999053478241,
+        0.9881750345230103
+      ],
+      "anchor": [
+        -2.481029987335205,
+        -0.9124798774719238,
+        0.9977299571037292
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3326",
+          "sha256": "5bb35c193650c9e390ad18d2e9ca834c19ab32d478a12446380d8cd50b9b0ca2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-thumb",
+      "fmaId": "FMA24450",
+      "name": "Proximal phalanx of right thumb",
+      "sourceName": "proximal phalanx of right thumb",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24450",
+      "bounds": {
+        "min": [
+          -3.1880898475646973,
+          -0.6439300775527954,
+          0.9265300035476685
+        ],
+        "max": [
+          -2.986489772796631,
+          -0.32802000641822815,
+          1.1488299369812012
+        ]
+      },
+      "center": [
+        -3.087289810180664,
+        -0.4859750419855118,
+        1.0376799702644348
+      ],
+      "anchor": [
+        -3.0790300369262695,
+        -0.5008697509765625,
+        1.0447500944137573
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3327",
+          "sha256": "84d3df498603c91935ae8edfc341c17ad3e46b910249a98e1e3edd4ccf309e71"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:bone:right-radius",
+      "fmaId": "FMA23464",
+      "name": "Right radius",
+      "sourceName": "right radius",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23464",
+      "bounds": {
+        "min": [
+          -2.7953500747680664,
+          0.05835022032260895,
+          0.11102600395679474
+        ],
+        "max": [
+          -2.1983299255371094,
+          2.3505005836486816,
+          0.7690799832344055
+        ]
+      },
+      "center": [
+        -2.496840000152588,
+        1.2044254019856453,
+        0.44005299359560013
+      ],
+      "anchor": [
+        -2.5462300777435303,
+        1.1810302734375,
+        0.42398497462272644
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3349",
+          "sha256": "0f824e639b13ea02959734a0d9bd8d7ca67d0b51f531a138d769e1d3b22e0c98"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-first-metacarpal-bone",
+      "fmaId": "FMA24464",
+      "name": "Right first metacarpal bone",
+      "sourceName": "right first metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24464",
+      "bounds": {
+        "min": [
+          -3.0957698822021484,
+          -0.3971899449825287,
+          0.736270010471344
+        ],
+        "max": [
+          -2.7223598957061768,
+          -0.027620239183306694,
+          1.0386099815368652
+        ]
+      },
+      "center": [
+        -2.9090648889541626,
+        -0.2124050920829177,
+        0.8874399960041046
+      ],
+      "anchor": [
+        -2.914479970932007,
+        -0.24702025949954987,
+        0.8846299648284912
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3350",
+          "sha256": "92ef27746cf2c5b317b88558b42e171128f980ea16414ca6e3647d19d1594382"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-second-metacarpal-bone",
+      "fmaId": "FMA24466",
+      "name": "Right second metacarpal bone",
+      "sourceName": "right second metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24466",
+      "bounds": {
+        "min": [
+          -2.926870107650757,
+          -0.8112902641296387,
+          0.6705700159072876
+        ],
+        "max": [
+          -2.6182000637054443,
+          -0.13130980730056763,
+          0.9278700351715088
+        ]
+      },
+      "center": [
+        -2.7725350856781006,
+        -0.47130003571510315,
+        0.7992200255393982
+      ],
+      "anchor": [
+        -2.7511701583862305,
+        -0.46614015102386475,
+        0.7921000719070435
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3352",
+          "sha256": "6d4e9874925f542124ced9e041f340de5b9c8f872d6ad7e2d483e9d0ab159980"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-third-metacarpal-bone",
+      "fmaId": "FMA24468",
+      "name": "Right third metacarpal bone",
+      "sourceName": "right third metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24468",
+      "bounds": {
+        "min": [
+          -2.7234601974487305,
+          -0.7915997505187988,
+          0.623259961605072
+        ],
+        "max": [
+          -2.52485990524292,
+          -0.14737975597381592,
+          0.9273300170898438
+        ]
+      },
+      "center": [
+        -2.624160051345825,
+        -0.4694897532463074,
+        0.7752949893474579
+      ],
+      "anchor": [
+        -2.628920078277588,
+        -0.4772900342941284,
+        0.7948399186134338
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3354",
+          "sha256": "98a26b8f08e6cd3578706a65d83c2e1e432d7a206202294cd525aa287b75072b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-fourth-metacarpal-bone",
+      "fmaId": "FMA24470",
+      "name": "Right fourth metacarpal bone",
+      "sourceName": "right fourth metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24470",
+      "bounds": {
+        "min": [
+          -2.537410020828247,
+          -0.7472100853919983,
+          0.6591699719429016
+        ],
+        "max": [
+          -2.414259910583496,
+          -0.1484197974205017,
+          0.9197099208831787
+        ]
+      },
+      "center": [
+        -2.4758349657058716,
+        -0.44781494140625,
+        0.7894399464130402
+      ],
+      "anchor": [
+        -2.476410150527954,
+        -0.44835999608039856,
+        0.7853500247001648
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3356",
+          "sha256": "3bb88e2a98ce1cb0ab8af411397e5edc5777546c394b25d4d4ee585493ee3718"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-fifth-metacarpal-bone",
+      "fmaId": "FMA24472",
+      "name": "Right fifth metacarpal bone",
+      "sourceName": "right fifth metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24472",
+      "bounds": {
+        "min": [
+          -2.4531400203704834,
+          -0.679840087890625,
+          0.7007599472999573
+        ],
+        "max": [
+          -2.2520198822021484,
+          -0.1308099329471588,
+          0.9452000260353088
+        ]
+      },
+      "center": [
+        -2.352579951286316,
+        -0.4053250104188919,
+        0.8229799866676331
+      ],
+      "anchor": [
+        -2.342400074005127,
+        -0.4185498058795929,
+        0.8263299465179443
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3358",
+          "sha256": "23d26888c325fd6a2de2688e948de72057afaf383db13875445fe597bd2a8bfd"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-capitate",
+      "fmaId": "FMA24446",
+      "name": "Right capitate",
+      "sourceName": "right capitate",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24446",
+      "bounds": {
+        "min": [
+          -2.644819974899292,
+          -0.17809021472930908,
+          0.6053399443626404
+        ],
+        "max": [
+          -2.4840099811553955,
+          0.045969847589731216,
+          0.7749199867248535
+        ]
+      },
+      "center": [
+        -2.5644149780273438,
+        -0.06606018356978893,
+        0.690129965543747
+      ],
+      "anchor": [
+        -2.571499824523926,
+        -0.05504028499126434,
+        0.6550499796867371
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3361",
+          "sha256": "982098ff86ccc18075bd4ecf422c4bca732f4d691d249c8f381bac574287c59b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-hamate",
+      "fmaId": "FMA24448",
+      "name": "Right hamate",
+      "sourceName": "right hamate",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24448",
+      "bounds": {
+        "min": [
+          -2.519279956817627,
+          -0.18706969916820526,
+          0.6140599846839905
+        ],
+        "max": [
+          -2.366000175476074,
+          0.0065301512368023396,
+          0.8393099904060364
+        ]
+      },
+      "center": [
+        -2.4426400661468506,
+        -0.09026977396570146,
+        0.7266849875450134
+      ],
+      "anchor": [
+        -2.4433600902557373,
+        -0.06616027653217316,
+        0.7440400123596191
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3367",
+          "sha256": "9c27cf5b75dd149f2469403af7ad68263e1eff29307864ae10481ac647262eba"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-lunate",
+      "fmaId": "FMA24437",
+      "name": "Right lunate",
+      "sourceName": "right lunate",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24437",
+      "bounds": {
+        "min": [
+          -2.527240037918091,
+          -0.025390014052391052,
+          0.6063500046730042
+        ],
+        "max": [
+          -2.3620200157165527,
+          0.09820007532835007,
+          0.7692400217056274
+        ]
+      },
+      "center": [
+        -2.4446300268173218,
+        0.03640503063797951,
+        0.6877950131893158
+      ],
+      "anchor": [
+        -2.471640110015869,
+        0.022319946438074112,
+        0.6949800252914429
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3374",
+          "sha256": "82da5ab98cc4f4e311eba2ee20b811bfa392a05d65d9f8c4ed0b9c7fd62880a1"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-pisiform",
+      "fmaId": "FMA24441",
+      "name": "Right pisiform",
+      "sourceName": "right pisiform",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24441",
+      "bounds": {
+        "min": [
+          -2.4021999835968018,
+          -0.10325012356042862,
+          0.7724900245666504
+        ],
+        "max": [
+          -2.3195600509643555,
+          0.013250121846795082,
+          0.8765800595283508
+        ]
+      },
+      "center": [
+        -2.3608800172805786,
+        -0.04500000085681677,
+        0.8245350420475006
+      ],
+      "anchor": [
+        -2.3296401500701904,
+        -0.02854003943502903,
+        0.839139997959137
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3382",
+          "sha256": "c5b1ce6020acc6e1feff8f44a3f0b5ec717e3cb3218701fbe86644975d981684"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-scaphoid",
+      "fmaId": "FMA24435",
+      "name": "Right scaphoid",
+      "sourceName": "right scaphoid",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24435",
+      "bounds": {
+        "min": [
+          -2.730599880218506,
+          -0.03645996004343033,
+          0.6157400012016296
+        ],
+        "max": [
+          -2.4933199882507324,
+          0.11789978295564651,
+          0.7666299939155579
+        ]
+      },
+      "center": [
+        -2.611959934234619,
+        0.04071991145610809,
+        0.6911849975585938
+      ],
+      "anchor": [
+        -2.6074700355529785,
+        0.03192993253469467,
+        0.7223300337791443
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3383",
+          "sha256": "e96e60d6c03b0581caa5733e3ab65aca6dc3671a476d78f123dcd48ecbee0050"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-trapezium",
+      "fmaId": "FMA24443",
+      "name": "Right trapezium",
+      "sourceName": "right trapezium",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24443",
+      "bounds": {
+        "min": [
+          -2.8172197341918945,
+          -0.1419500708580017,
+          0.6773000359535217
+        ],
+        "max": [
+          -2.6493799686431885,
+          0.05732971057295799,
+          0.8457600474357605
+        ]
+      },
+      "center": [
+        -2.7332998514175415,
+        -0.04231018014252186,
+        0.7615300416946411
+      ],
+      "anchor": [
+        -2.7505600452423096,
+        -0.07653991878032684,
+        0.7888699173927307
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3388",
+          "sha256": "3b2475587f9ca59d43cb48c7275999f795f97f8b0ed6c68d5b37ff582382d81f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-trapezoid",
+      "fmaId": "FMA23725",
+      "name": "Right trapezoid",
+      "sourceName": "right trapezoid",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23725",
+      "bounds": {
+        "min": [
+          -2.732609748840332,
+          -0.17135009169578552,
+          0.6352699995040894
+        ],
+        "max": [
+          -2.6214001178741455,
+          -0.0468902587890625,
+          0.7838799953460693
+        ]
+      },
+      "center": [
+        -2.6770049333572388,
+        -0.10912017524242401,
+        0.7095749974250793
+      ],
+      "anchor": [
+        -2.674639940261841,
+        -0.14263977110385895,
+        0.7184200286865234
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3389",
+          "sha256": "6823c47b6593463e65b85861e51026b06b76e0196dde1e8fae8b902a32f2a0e8"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-triquetral",
+      "fmaId": "FMA24439",
+      "name": "Right triquetral",
+      "sourceName": "right triquetral",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24439",
+      "bounds": {
+        "min": [
+          -2.4276599884033203,
+          -0.11231017857789993,
+          0.6463099718093872
+        ],
+        "max": [
+          -2.3215699195861816,
+          0.02590026892721653,
+          0.7973599433898926
+        ]
+      },
+      "center": [
+        -2.374614953994751,
+        -0.0432049548253417,
+        0.7218349575996399
+      ],
+      "anchor": [
+        -2.3802099227905273,
+        -0.0769500732421875,
+        0.7228700518608093
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3390",
+          "sha256": "aa1d02ab7a2b7e2d87125a43fc92f497d9d35323de3d1a8b25185dbb7dd5cc09"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:bone:right-ulna",
+      "fmaId": "FMA23467",
+      "name": "Right ulna",
+      "sourceName": "right ulna",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23467",
+      "bounds": {
+        "min": [
+          -2.471790075302124,
+          0.05172973498702049,
+          -0.052008017897605896
+        ],
+        "max": [
+          -1.968809962272644,
+          2.5244994163513184,
+          0.7349400520324707
+        ]
+      },
+      "center": [
+        -2.220300018787384,
+        1.2881145756691694,
+        0.3414660170674324
+      ],
+      "anchor": [
+        -2.2308499813079834,
+        1.2578003406524658,
+        0.39101600646972656
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3391",
+          "sha256": "0aad73148e036c980ab24dfa675fcc1f109e5c60d82c12f3696420cf93cb4a98"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ]
+}

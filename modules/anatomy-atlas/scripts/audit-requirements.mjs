@@ -15,6 +15,7 @@ import { inferiorEpigastricStudy } from '../content/inferior-epigastric-study.ts
 import { pelvicVeinStudy } from '../content/pelvic-vein-study.ts';
 import { limbicLandmarkStudy } from '../content/limbic-landmark-study.ts';
 import { footBoneFmas, footJoints } from '../content/foot-joints.ts';
+import { handBoneFmas, handJoints } from '../content/hand-joints.ts';
 
 // This inventory executes the real content resolver. It measures displayed copy,
 // not medical correctness, complete lessons, browser acceptance or approval.
@@ -988,6 +989,9 @@ const report = {
     anatomicalCompletenessMeasured: false,
   },
   study: {
+    wristHandPartnerBones: Object.values(handBoneFmas).flat().length,
+    wristHandOrdinaryPairsPerSide: handJoints.filter(j => j.kind !== 'variable').length,
+    wristHandVariablePairsPerSide: handJoints.filter(j => j.kind === 'variable').length,
     ankleFootPartnerBones: Object.values(footBoneFmas).flat().length,
     ankleFootOrdinaryPairsPerSide: footJoints.filter(j => j.kind !== 'variable').length,
     ankleFootVariablePairsPerSide: footJoints.filter(j => j.kind === 'variable').length,

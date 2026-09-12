@@ -5,10 +5,11 @@ import { runInNewContext } from 'node:vm';
 import ts from 'typescript';
 import { build } from './workspace-test-build.mjs';
 import { build as componentBuild } from './workspace-component-test-build.mjs';
+const hand = process.argv.includes('--hand');
 const compiled = await build({
   stdin: {
     contents:
-      "export * from './lib/foot-joints'; export * from './content/foot-joints'; export * from './app/dissection-data'; export * from './lib/study-links'; export {bodyDisplayCatalog} from './lib/body-display-catalog';",
+      "export * from './lib/foot-joints'; export * from './content/foot-joints'; export * from './lib/hand-joints'; export * from './content/hand-joints'; export * from './lib/bone-joints'; export * from './app/dissection-data'; export * from './lib/study-links'; export {bodyDisplayCatalog} from './lib/body-display-catalog';",
     resolveDir: process.cwd(),
     loader: 'ts',
   },
@@ -26,10 +27,20 @@ const raw = JSON.parse(
 );
 const catalog = api.bodyDisplayCatalog(raw),
   snapshot = JSON.stringify(catalog);
-const pins = JSON.parse(await readFile('content/foot-joint-pins.json', 'utf8'));
+const pins = JSON.parse(
+  await readFile(
+    hand ? 'content/hand-joint-pins.json' : 'content/foot-joint-pins.json',
+    'utf8',
+  ),
+);
+const neighbours = hand ? api.handJointNeighbours : api.footJointNeighbours,
+  plan = hand ? api.handJointPlan : api.footJointPlan,
+  boneFmas = hand ? api.handBoneFmas : api.footBoneFmas,
+  joints = hand ? api.handJoints : api.footJoints,
+  references = hand ? api.handJointReferences : api.footJointReferences,
+  testRegion = hand ? 'hand' : 'foot',
+  testBone = hand ? 'scaphoid' : 'talus';
 const {
-  footJointNeighbours: neighbours,
-  footJointPlan: plan,
   dissectionReducer: reduce,
   resolveDissection: resolve,
   initialDissection: initial,
@@ -38,42 +49,85 @@ const {
 const targets = pins.entries.map((p) =>
   catalog.structures.find((s) => s.id === p.id),
 );
-assert.equal(targets.length, 56);
-assert.equal(Object.keys(api.footBoneFmas).length, 28);
-assert.equal(api.footJoints.length, 39);
-assert.equal(api.footJoints.filter((j) => j.kind === 'variable').length, 2);
-assert.equal(api.footJoints.filter((j) => j.kind === 'syndesmosis').length, 1);
+assert.equal(targets.length, hand ? 58 : 56);
+assert.equal(Object.keys(boneFmas).length, hand ? 29 : 28);
+assert.equal(joints.length, hand ? 40 : 39);
+assert.equal(joints.filter((j) => j.kind === 'variable').length, 2);
 assert.equal(
-  new Set(api.footJoints.map((j) => [j.a, j.b].sort().join(':'))).size,
-  39,
+  joints.filter((j) => j.kind === 'syndesmosis').length,
+  hand ? 0 : 1,
+);
+assert.equal(
+  new Set(joints.map((j) => [j.a, j.b].sort().join(':'))).size,
+  hand ? 40 : 39,
 );
 const bone = (key, index = 0) =>
-  targets.find((s) => s.fmaId === api.footBoneFmas[key][index]);
+  targets.find((s) => s.fmaId === boneFmas[key][index]);
 const near = (key) => neighbours(catalog, 'whole-body', 'right', bone(key).id);
 const keys = (key) =>
   near(key)
     .rows.map((r) =>
-      Object.keys(api.footBoneFmas).find((k) =>
-        api.footBoneFmas[k].includes(r.structure.fmaId),
+      Object.keys(boneFmas).find((k) =>
+        boneFmas[k].includes(r.structure.fmaId),
       ),
     )
     .sort();
-assert.deepEqual(keys('talus'), ['calcaneus', 'fibula', 'navicular', 'tibia']);
-assert.deepEqual(keys('m2'), ['c1', 'c2', 'c3', 'm1', 'm3', 'p2']);
-assert.deepEqual(keys('m4'), ['c3', 'cuboid', 'm3', 'm5', 'p4']);
-assert.deepEqual(keys('p1'), ['d1', 'm1']);
-assert.deepEqual(keys('i5'), ['d5', 'p5']);
-assert(!keys('calcaneus').includes('fibula'));
-assert(!keys('calcaneus').includes('navicular')); // A ligament is not a normal bony articulation.
-assert.equal(
-  near('tibia').rows.find((r) => r.structure.id === bone('fibula').id).kind,
-  'syndesmosis',
-);
-assert(
-  near('navicular').rows.some(
-    (r) => r.kind === 'variable' && r.structure.id === bone('cuboid').id,
-  ),
-);
+if (hand) {
+  assert.deepEqual(keys('scaphoid'), [
+    'capitate',
+    'lunate',
+    'radius',
+    'trapezium',
+    'trapezoid',
+  ]);
+  assert.deepEqual(keys('ulna'), ['radius']);
+  assert.deepEqual(keys('radius'), ['lunate', 'scaphoid', 'ulna']);
+  assert.deepEqual(keys('pisiform'), ['triquetrum']);
+  assert.deepEqual(keys('m1'), ['p1', 'trapezium']);
+  assert.deepEqual(keys('m2'), [
+    'capitate',
+    'm3',
+    'p2',
+    'trapezium',
+    'trapezoid',
+  ]);
+  assert.deepEqual(keys('m4'), ['capitate', 'hamate', 'm3', 'm5', 'p4']);
+  assert.equal(
+    near('lunate').rows.find((r) => r.structure.id === bone('hamate').id).kind,
+    'variable',
+  );
+  assert.equal(
+    near('m4').rows.find((r) => r.structure.id === bone('capitate').id).kind,
+    'variable',
+  );
+  for (const key of ['ulna', 'lunate', 'triquetrum'])
+    assert.equal(near(key).note.text, api.handJointNote);
+  assert.equal(near('radius').note, undefined);
+  assert.deepEqual(keys('p1'), ['d1', 'm1']);
+  assert.deepEqual(keys('i5'), ['d5', 'p5']);
+} else {
+  assert.deepEqual(keys('talus'), [
+    'calcaneus',
+    'fibula',
+    'navicular',
+    'tibia',
+  ]);
+  assert.deepEqual(keys('m2'), ['c1', 'c2', 'c3', 'm1', 'm3', 'p2']);
+  assert.deepEqual(keys('m4'), ['c3', 'cuboid', 'm3', 'm5', 'p4']);
+  assert.deepEqual(keys('p1'), ['d1', 'm1']);
+  assert.deepEqual(keys('i5'), ['d5', 'p5']);
+  assert(!keys('calcaneus').includes('fibula'));
+  assert(!keys('calcaneus').includes('navicular')); // A ligament is not a normal bony articulation.
+  assert.equal(
+    near('tibia').rows.find((r) => r.structure.id === bone('fibula').id).kind,
+    'syndesmosis',
+  );
+  assert(
+    near('navicular').rows.some(
+      (r) => r.kind === 'variable' && r.structure.id === bone('cuboid').id,
+    ),
+  );
+}
 let plans = 0,
   rows = 0,
   links = 0,
@@ -99,7 +153,7 @@ for (const s of targets) {
     assert(reciprocal);
     assert.equal(reciprocal.label, r.label);
     assert.equal(reciprocal.kind, r.kind);
-    assert(api.footJointReferences[r.reference]);
+    assert(references[r.reference]);
   }
   for (const region of ['whole-body', ...s.regions])
     for (const side of ['both', 'left', 'right']) {
@@ -110,6 +164,11 @@ for (const s of targets) {
       const info = neighbours(catalog, region, side, s.id),
         recipe = plan(catalog, region, side, s.id);
       assert(info && recipe);
+      assert.deepEqual(
+        api.boneJointNeighbours(catalog, region, side, s.id),
+        info,
+      );
+      assert.deepEqual(api.boneJointPlan(catalog, region, side, s.id), recipe);
       plans++;
       assert.equal(recipe.selectedId, s.id);
       const before = reduce(
@@ -130,7 +189,7 @@ for (const s of targets) {
             .filter((r) => r.kind !== 'variable')
             .map((r) => r.structure.fmaId),
         ].flatMap((fma) =>
-          Object.values(api.footBoneFmas).find((pair) => pair.includes(fma)),
+          Object.values(boneFmas).find((pair) => pair.includes(fma)),
         ),
       );
       for (const viewSide of ['both', 'left', 'right']) {
@@ -173,7 +232,17 @@ for (const s of targets) {
       assert.equal(plan(catalog, region, side, s.id, true), null);
     }
 }
-assert.equal(rows, 156);
+assert.equal(rows, hand ? 160 : 156);
+// A failed admission in the other territory must not disable this valid map.
+{
+  const bad = structuredClone(catalog);
+  const other = hand ? api.footBoneFmas.talus[0] : api.handBoneFmas.scaphoid[0];
+  bad.structures.find((s) => s.fmaId === other).name = 'changed';
+  assert.deepEqual(
+    api.boneJointNeighbours(bad, testRegion, 'right', bone(testBone).id),
+    neighbours(catalog, testRegion, 'right', bone(testBone).id),
+  );
+}
 for (const s of catalog.structures.filter(
   (s) => !targets.some((t) => t.id === s.id),
 ))
@@ -181,7 +250,7 @@ for (const s of catalog.structures.filter(
 for (const s of targets) {
   const bad = structuredClone(catalog);
   bad.structures.find((x) => x.id === s.id).sources[0].sha256 = '0'.repeat(64);
-  assert.equal(plan(bad, 'whole-body', 'both', bone('talus').id), null);
+  assert.equal(plan(bad, 'whole-body', 'both', bone(testBone).id), null);
   rejections++;
 }
 for (const mutate of [
@@ -199,40 +268,49 @@ for (const mutate of [
   },
   ...['name', 'fmaId', 'laterality', 'sourceTree', 'bundle'].map(
     (key) => (c) => {
-      c.structures.find((s) => s.id === bone('talus').id)[key] = 'changed';
+      c.structures.find((s) => s.id === bone(testBone).id)[key] = 'changed';
     },
   ),
   (c) => {
-    c.structures.find((s) => s.id === bone('talus').id).bounds.min[0] += 1;
+    c.structures.find((s) => s.id === bone(testBone).id).bounds.min[0] += 1;
   },
   (c) => {
-    c.structures.find((s) => s.id === bone('talus').id).anchor[0] += 1;
+    c.structures.find((s) => s.id === bone(testBone).id).anchor[0] += 1;
   },
   (c) => {
-    c.structures.find((s) => s.id === bone('talus').id).regions.push('leg');
+    c.structures.find((s) => s.id === bone(testBone).id).regions.push('leg');
   },
   (c) => {
-    c.structures.push(c.structures.find((s) => s.id === bone('talus').id));
+    c.structures.push(c.structures.find((s) => s.id === bone(testBone).id));
   },
   (c) => {
-    c.structures = c.structures.filter((s) => s.id !== bone('talus').id);
+    c.structures = c.structures.filter((s) => s.id !== bone(testBone).id);
   },
   (c) => {
-    c.bundles.find((b) => b.id === bone('talus').bundle).sha256 = 'bad';
+    c.bundles.find((b) => b.id === bone(testBone).bundle).sha256 = 'bad';
   },
   (c) => {
-    c.bundles.push(c.bundles.find((b) => b.id === bone('talus').bundle));
+    c.bundles.push(c.bundles.find((b) => b.id === bone(testBone).bundle));
   },
 ]) {
   const bad = structuredClone(catalog);
   mutate(bad);
-  assert.equal(neighbours(bad, 'foot', 'right', bone('talus').id), null);
+  assert.equal(neighbours(bad, testRegion, 'right', bone(testBone).id), null);
   rejections++;
 }
-assert.equal(neighbours(catalog, 'invalid', 'both', bone('talus').id), null);
-assert.equal(neighbours(catalog, 'foot', 'invalid', bone('talus').id), null);
-assert.equal(neighbours(catalog, 'hand', 'both', bone('talus').id), null);
-assert.equal(neighbours(catalog, 'foot', 'right', bone('tibia').id), null);
+assert.equal(neighbours(catalog, 'invalid', 'both', bone(testBone).id), null);
+assert.equal(
+  neighbours(catalog, testRegion, 'invalid', bone(testBone).id),
+  null,
+);
+assert.equal(
+  neighbours(catalog, hand ? 'foot' : 'hand', 'both', bone(testBone).id),
+  null,
+);
+assert.equal(
+  neighbours(catalog, testRegion, 'right', bone(hand ? 'radius' : 'tibia').id),
+  null,
+);
 const require = createRequire(import.meta.url),
   React = require('react'),
   actualLink = await import('vinext/shims/link');
@@ -271,7 +349,17 @@ for (const s of targets)
     };
     const html = render(props);
     renders++;
-    assert(html.includes('Ankle &amp; foot joint partners'));
+    assert(
+      html.includes(
+        hand
+          ? 'Wrist &amp; hand joint partners'
+          : 'Ankle &amp; foot joint partners',
+      ),
+    );
+    if (hand && neighbours(catalog, region, 'both', s.id).note) {
+      assert(html.includes('TFCC articular disc'));
+      assert(html.includes('American Society for Surgery of the Hand'));
+    }
     assert(html.includes(s.name));
     assert(html.includes('Specialist review pending'));
     assert(!/<details[^>]*\bopen=/.test(html));
@@ -315,7 +403,7 @@ for (const selected of targets)
         side: 'both',
         selectedId: selected.id,
         exam,
-        footJointPlan: api.footJointPlan,
+        boneJointPlan: api.boneJointPlan,
         initialInspection: { enabled: false },
         cameraRestore: { current: 'old' },
         dispatch: (v) => calls.push(['dispatch', v]),
@@ -370,8 +458,9 @@ assert.equal(JSON.stringify(catalog), snapshot);
 console.log(
   JSON.stringify({
     bones: targets.length,
-    concepts: 28,
-    typicalPairsPerSide: 37,
+    territory: testRegion,
+    concepts: hand ? 29 : 28,
+    typicalPairsPerSide: hand ? 38 : 37,
     variablePairsPerSide: 2,
     reciprocalRows: rows,
     plans,

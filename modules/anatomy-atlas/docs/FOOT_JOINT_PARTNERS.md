@@ -24,6 +24,8 @@ These links are factual reading references, not imported anatomy datasets or lic
 
 ## Architecture and regression
 
+The wrist/hand extension now shares the source gate and planner through `lib/regional-bone-joints.ts`; the foot API, pins and relationship data remain unchanged. The existing panel adapts its title and scope. See [hand joint partners](HAND_JOINT_PARTNERS.md). Foot regression still runs independently as well as through the combined selector.
+
 `content/foot-joints.ts` defines exact FMA pairs, typed undirected relationships, joint kind and per-edge reading reference. `content/foot-joint-pins.json` preserves full source records, bundles and coordinate frame. Its generator verifies the original catalog SHA256 `109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7`; it refuses implicit overwrite. Runtime source gating checks complete records, unique identities, bundle metadata and frame before enabling the map. No runtime fuzzy name matching or nearest-surface assumption.
 
 `lib/foot-joints.ts` returns reciprocal same-side neighbours and a reversible visibility plan. `app/bone-joints.tsx` reuses the established compact UI, selection handler and study-link contract. Adding another region later requires reviewed exact source admissions, reciprocal evidence-backed relationships, ambiguity handling and regression tests, not broad keyword inference.
