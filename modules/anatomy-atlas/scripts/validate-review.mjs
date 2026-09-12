@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import './validate-review-history.mjs';
 import { DatabaseSync } from 'node:sqlite';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';

@@ -64,7 +64,10 @@ review-document checksum. The same failure was reproduced against source
 `e2b3ff0e5c9d310455c7caf7ba5726a5af5b2f3f`, with all six review/history inputs
 unchanged. That historical reconstruction needs a separate evidence-preserving
 repair; this change does not refresh its expected checksum or migrate approvals.
-The full legacy suite is **not** reported as passing.
+The full legacy suite is **not** reported as passing. A subsequent
+[evidence-history repair](REVIEW_EVIDENCE_HISTORY.md) resolves this display
+transition without changing runtime revisions; a separate X-ray authoring
+history assertion is now the first remaining failure.
 
 Actual browser sampling on `/regions/forearm`: selected radial recurrent and
 radial collateral sources; followed their communication; checked the parent
@@ -82,7 +85,9 @@ This removes the duplicate React key without changing anatomy or teaching text.
 The regenerated reference ledger records **1,101 root selections**, 104 nested
 selections and 366 source pieces needing source/anatomical review. Three older
 right-MCA PART-OF files (FJ1662, FJ1663, FJ1692) still lack IS-A equivalence proof
-in this comparison; they are not counted as proven equivalents. No source hold
+in the initial comparison. Subsequent original-source cross-tree evidence
+verifies their ordered surface geometry, as documented in the evidence-history
+note; this is not a clinical or naming approval. No source hold
 was released. These counts are not anatomical completeness.
 
 ## Remaining review

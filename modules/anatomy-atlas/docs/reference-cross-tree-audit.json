@@ -21,6 +21,30 @@
   "sources": [
     {
       "tree": "isa",
+      "file": "FJ1662",
+      "path": "content/prototypes/reference-cross-tree/isa/FJ1662.obj",
+      "bytes": 119006,
+      "sha256": "ba609f6d5ca0b51ef533d5537f96c950ec7933245f4541861ac8424a060810b5",
+      "geometrySha256": "8b4171150f8eba820c6bcfc2c00ac91fe5cfb61c96fe99773dc9a4b6061700da"
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1663",
+      "path": "content/prototypes/reference-cross-tree/isa/FJ1663.obj",
+      "bytes": 30086,
+      "sha256": "8ee8a930f84f50040f7cc02d34b71e2ef49355c157260ac088104ae5a35e517d",
+      "geometrySha256": "47a7bcc008e733ac70f79d0f81deeaf607766a800b8694b9e7a6ceb337d4492b"
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1692",
+      "path": "content/prototypes/reference-cross-tree/isa/FJ1692.obj",
+      "bytes": 47192,
+      "sha256": "99bb5115dcc1d28e6e89d6e35d6b013b31b8903e358f9cbd8cec1652c3bb97c2",
+      "geometrySha256": "37a3941311356bb078225bbc8e2fb6113bb123532462c8020c7d925b65225e13"
+    },
+    {
+      "tree": "isa",
       "file": "FJ3481",
       "path": "content/prototypes/reference-cross-tree/isa/FJ3481.obj",
       "bytes": 89028,
@@ -50,6 +74,30 @@
       "bytes": 58362,
       "sha256": "d71a9a39bc150c49d6610911863ad69f6cc8e77ae67b2d7b086bbbfd295a6481",
       "geometrySha256": "3995399a28157deb5c40ba065753a60b9cc788bff31f78f83aa14b8b10f4e96b"
+    },
+    {
+      "tree": "partof",
+      "file": "FJ1662",
+      "path": "content/prototypes/reference-cross-tree/partof/FJ1662.obj",
+      "bytes": 119009,
+      "sha256": "afdefea26af3c469cd5cedf56b327c252faeef55466af4e4b83a4f31af4c382b",
+      "geometrySha256": "8b4171150f8eba820c6bcfc2c00ac91fe5cfb61c96fe99773dc9a4b6061700da"
+    },
+    {
+      "tree": "partof",
+      "file": "FJ1663",
+      "path": "content/prototypes/reference-cross-tree/partof/FJ1663.obj",
+      "bytes": 30089,
+      "sha256": "876f965a5a0e01b73c27571f53778282b8248b2966f79aa7a8e431a07004c6c0",
+      "geometrySha256": "47a7bcc008e733ac70f79d0f81deeaf607766a800b8694b9e7a6ceb337d4492b"
+    },
+    {
+      "tree": "partof",
+      "file": "FJ1692",
+      "path": "content/prototypes/reference-cross-tree/partof/FJ1692.obj",
+      "bytes": 47195,
+      "sha256": "5c8d20a994fc1ae2e04e833899757d24cb4eae1d51130e60baae5bd7d50ceee8",
+      "geometrySha256": "37a3941311356bb078225bbc8e2fb6113bb123532462c8020c7d925b65225e13"
     },
     {
       "tree": "partof",
@@ -85,6 +133,21 @@
     }
   ],
   "comparisons": [
+    {
+      "file": "FJ1662",
+      "identicalBytes": false,
+      "identicalGeometry": true
+    },
+    {
+      "file": "FJ1663",
+      "identicalBytes": false,
+      "identicalGeometry": true
+    },
+    {
+      "file": "FJ1692",
+      "identicalBytes": false,
+      "identicalGeometry": true
+    },
     {
       "file": "FJ3481",
       "identicalBytes": false,

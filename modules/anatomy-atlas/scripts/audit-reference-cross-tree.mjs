@@ -3,7 +3,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { archiveReader } from './bodyparts-archive.mjs';
 import { geometryFingerprint } from './anatomy-inventory.mjs';
-const files = ['FJ3481', 'FJ3581', 'FJ3582', 'FJ3584'];
+const files = ['FJ1662', 'FJ1663', 'FJ1692', 'FJ3481', 'FJ3581', 'FJ3582', 'FJ3584'];
 const hash = (b) => createHash('sha256').update(b).digest('hex');
 const check = process.argv.includes('--check');
 const inventory = JSON.parse(await readFile('content/source-inventory.json'));

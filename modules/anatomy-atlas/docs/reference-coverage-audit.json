@@ -31,7 +31,7 @@
         "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
       }
     ],
-    "crossTreeProofSha256": "149aa0c50045717713a17706a8e8bbaa1002cc1dec4427d0425e860bf24946ed",
+    "crossTreeProofSha256": "e61cb973d9b64046464d03da9c61febeabe31f93f2c81ce07493f73398408bfa",
     "supplementalSourceHoldEvidence": [
       {
         "path": "docs/limbic-landmark-source-audit.json",
@@ -61,15 +61,14 @@
     "rootSourceFileIds": 1788,
     "reachableNestedSelections": 104,
     "rootOnlyDifferences": 446,
-    "rootBindingsNeedingEquivalenceReview": 3,
+    "rootBindingsNeedingEquivalenceReview": 0,
     "allSourceStatuses": {
-      "cross-tree-equivalence-unverified": 3,
       "excluded-by-display-correction": 1,
       "known-source-hold": 54,
       "needs-source-and-anatomical-review": 366,
       "nested-source-covered": 24,
       "related-cross-tree-hold": 1,
-      "root-source-covered": 1785
+      "root-source-covered": 1788
     },
     "rootDifferenceStatuses": {
       "excluded-by-display-correction": 1,
@@ -114,140 +113,7 @@
     "No competitor geometry or explanatory prose is imported. Only audit ID/group metadata is retained; eight original official OBJ files are retained separately as non-runtime cross-tree evidence, with attribution.",
     "The review queue is not an admission list; source topology, spatial extent, aliases, laterality, complete concept membership, licensing and clinical review remain required."
   ],
-  "rootBindingsNeedingEquivalenceReview": [
-    {
-      "file": "FJ1662",
-      "referenceDisplaySystem": "arterial",
-      "status": "cross-tree-equivalence-unverified",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50377",
-          "name": "anterolateral central branch of right middle cerebral artery",
-          "componentCount": 2
-        }
-      ],
-      "owners": [
-        {
-          "scope": "root",
-          "id": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
-          "fmaId": "FMA50082",
-          "tree": "partof",
-          "file": "FJ1662",
-          "sha256": "afdefea26af3c469cd5cedf56b327c252faeef55466af4e4b83a4f31af4c382b",
-          "evidence": "cross-tree-filename-only"
-        },
-        {
-          "scope": "nested",
-          "id": "vm:anatomy:body:head-neck:right:source-component:fma50082-fj1662",
-          "fmaId": "FMA50082",
-          "tree": "partof",
-          "file": "FJ1662",
-          "sha256": "afdefea26af3c469cd5cedf56b327c252faeef55466af4e4b83a4f31af4c382b",
-          "study": "cranial-artery-components",
-          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
-          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086",
-          "evidence": "cross-tree-filename-only"
-        }
-      ],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 119006,
-        "crc32": 1557940643,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1663",
-      "referenceDisplaySystem": "arterial",
-      "status": "cross-tree-equivalence-unverified",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50377",
-          "name": "anterolateral central branch of right middle cerebral artery",
-          "componentCount": 2
-        }
-      ],
-      "owners": [
-        {
-          "scope": "root",
-          "id": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
-          "fmaId": "FMA50082",
-          "tree": "partof",
-          "file": "FJ1663",
-          "sha256": "876f965a5a0e01b73c27571f53778282b8248b2966f79aa7a8e431a07004c6c0",
-          "evidence": "cross-tree-filename-only"
-        },
-        {
-          "scope": "nested",
-          "id": "vm:anatomy:body:head-neck:right:source-component:fma50082-fj1663",
-          "fmaId": "FMA50082",
-          "tree": "partof",
-          "file": "FJ1663",
-          "sha256": "876f965a5a0e01b73c27571f53778282b8248b2966f79aa7a8e431a07004c6c0",
-          "study": "cranial-artery-components",
-          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
-          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086",
-          "evidence": "cross-tree-filename-only"
-        }
-      ],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 30086,
-        "crc32": 758028658,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1692",
-      "referenceDisplaySystem": "arterial",
-      "status": "cross-tree-equivalence-unverified",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50366",
-          "name": "sphenoid part of right middle cerebral artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [
-        {
-          "scope": "root",
-          "id": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
-          "fmaId": "FMA50082",
-          "tree": "partof",
-          "file": "FJ1692",
-          "sha256": "5c8d20a994fc1ae2e04e833899757d24cb4eae1d51130e60baae5bd7d50ceee8",
-          "evidence": "cross-tree-filename-only"
-        },
-        {
-          "scope": "nested",
-          "id": "vm:anatomy:body:head-neck:right:source-component:fma50082-fj1692",
-          "fmaId": "FMA50082",
-          "tree": "partof",
-          "file": "FJ1692",
-          "sha256": "5c8d20a994fc1ae2e04e833899757d24cb4eae1d51130e60baae5bd7d50ceee8",
-          "study": "cranial-artery-components",
-          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
-          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086",
-          "evidence": "cross-tree-filename-only"
-        }
-      ],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 47192,
-        "crc32": 3968707266,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    }
-  ],
+  "rootBindingsNeedingEquivalenceReview": [],
   "rootDifferences": [
     {
       "file": "FJ1252",

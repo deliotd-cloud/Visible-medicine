@@ -1,11 +1,20 @@
 # Audited-source implementation — 11 September 2026
 
-Latest checkpoint, 12 September: [elbow collateral/recurrent arteries](ELBOW_ARTERIES.md)
+Latest evidence follow-up, 12 September: original IS-A and PART-OF files FJ1662,
+FJ1663 and FJ1692 have matching ordered vertex coordinates and face indices.
+Their byte hashes differ, so file identity, normals/materials, anatomical naming
+and clinical validity are not inferred. The source-binding audit now verifies
+all 1,788 currently referenced root file IDs; no unresolved root equivalence
+entries remain. All 54 source holds and 366 review-queue pieces remain unchanged.
+No geometry was added, repaired or clinically approved. See [review/source
+evidence](REVIEW_EVIDENCE_HISTORY.md) and the replayable cross-tree audit.
+
+Preceding checkpoint, 12 September: [elbow collateral/recurrent arteries](ELBOW_ARTERIES.md)
 add 14 original selections. Regeneration also incorporates preceding cranial
 work that the prior ledger had not captured: 1,101 root selections, 104 nested
 selections, 1,788 referenced source IDs, 446 root-only differences and 366 pieces
-needing review. Three older right-MCA PART-OF files have unverified cross-tree
-equivalence and are explicitly excluded from proven IS-A coverage. All 54 source
+needing review. Three older right-MCA PART-OF files initially had unverified
+cross-tree equivalence; the evidence follow-up above resolves that question. All 54 source
 holds remain. These are source-file counts, not anatomical completeness.
 
 Current checkpoint, 12 September: [descending lateral circumflex branches](CIRCUMFLEX_FEMORAL.md) add original FJ2057/FJ2063. The ledger now has 1,082 root selections and 1,743 reference source IDs; 491 root-only differences remain (24 nested, 54 holds, one display correction, one cross-tree hold and 411 needing review). Two parent surfaces are already contained in existing aggregates and are not duplicated. Older counts below are historical; these source-file counts do not measure anatomical completeness.

@@ -73,6 +73,17 @@ assert.equal(
 const report = JSON.parse(
   await readFile('docs/reference-coverage-audit.json', 'utf8'),
 );
+const crossProof = JSON.parse(await readFile('docs/reference-cross-tree-audit.json', 'utf8'));
+for (const file of ['FJ1662', 'FJ1663', 'FJ1692']) {
+  const isa = crossProof.sources.find(s => s.tree === 'isa' && s.file === file);
+  const partof = crossProof.sources.find(s => s.tree === 'partof' && s.file === file);
+  assert.notEqual(isa.sha256, partof.sha256, 'File identity is not assumed');
+  assert.equal(isa.geometrySha256, partof.geometrySha256);
+  assert.equal(sourceBindingEvidence(isa, { ...partof, scope: 'root' }, crossProof.sources), 'cross-tree-geometry-match');
+  assert.equal(sourceBindingEvidence(isa, { ...partof, scope: 'root' }, [{ ...partof, geometrySha256: '0'.repeat(64) }]), 'cross-tree-filename-only');
+  assert.throws(() => sourceBindingEvidence(isa, { ...partof, sha256: '0'.repeat(64) }, crossProof.sources));
+}
+assert.equal(report.summary.rootBindingsNeedingEquivalenceReview, 0);
 assert.equal(report.summary.referenceSourceFiles, 2234);
 for(const file of ['FJ2190','FJ2194','FJ2200','FJ2184','FJ2187','FJ1735','FJ1736']) {
   const row=report.rootDifferences.find(r=>r.file===file);

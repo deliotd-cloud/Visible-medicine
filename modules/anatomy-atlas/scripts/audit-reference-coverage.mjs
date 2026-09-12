@@ -60,13 +60,13 @@ const crossBytes = await readFile('docs/reference-cross-tree-audit.json');
 const cross = JSON.parse(crossBytes);
 assert.equal(cross.license, 'CC-BY-4.0');
 assert.equal(cross.sourceVersion, '4.0');
-assert.equal(cross.sources.length, 8);
-assert.equal(new Set(cross.sources.map((s) => s.tree + '/' + s.file)).size, 8);
+assert.equal(cross.sources.length, 14);
+assert.equal(new Set(cross.sources.map((s) => s.tree + '/' + s.file)).size, 14);
 const assets = structuredClone(h.inventory.assets);
 for (const source of cross.sources) {
   assert(
     ['isa', 'partof'].includes(source.tree) &&
-      ['FJ3481', 'FJ3581', 'FJ3582', 'FJ3584'].includes(source.file),
+      ['FJ1662', 'FJ1663', 'FJ1692', 'FJ3481', 'FJ3581', 'FJ3582', 'FJ3584'].includes(source.file),
   );
   assert.equal(
     source.path,

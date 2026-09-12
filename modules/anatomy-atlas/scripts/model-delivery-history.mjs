@@ -1,19 +1,15 @@
 // Offline evidence comparison only. Never migrates approvals or runtime revisions.
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readFile } from 'node:fs/promises';
+import { reviewDocumentBeforeWebsitePilot } from './review-website-history.mjs';
 const hash = (value) => createHash('sha256').update(value).digest('hex');
 const encode = (value) => JSON.stringify(value, null, 2) + '\n';
 
 export async function reviewDocumentBeforeModelDelivery(revisions, manifest, structures) {
+  revisions = await reviewDocumentBeforeWebsitePilot(revisions, manifest, structures);
   assert.equal(hash(encode(revisions)),
     '5365d114752b157338dc9ebcf9e58dabe56be2d4d35296e717845bce939dfd05',
     'Exact deferent-duct search display transition');
-  for (const [path, expected] of revisions.display) {
-    const source = await readFile(new URL('../' + path, import.meta.url), 'utf8');
-    assert.equal(hash(source.replace(/\r\n/g, '\n')), expected,
-      'Stale current display fingerprint: ' + path);
-  }
   // Reconstruct only the exact pre-duct-search document for offline comparison.
   // All current source bytes were checked above. Runtime approvals are untouched.
   const current = revisions;
