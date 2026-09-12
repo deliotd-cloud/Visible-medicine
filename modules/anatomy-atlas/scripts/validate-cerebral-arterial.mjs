@@ -25,9 +25,20 @@ const raw = JSON.parse(
   await readFile('public/models/bodyparts3d/full-body/catalog.json', 'utf8'),
 );
 const catalog = api.bodyDisplayCatalog(raw);
-const pins = JSON.parse(
+const originalPins = JSON.parse(
   await readFile('content/cerebral-arterial-pins.json', 'utf8'),
 );
+const extension = JSON.parse(
+  await readFile(
+    'public/models/bodyparts3d/cranial-arteries/catalog.json',
+    'utf8',
+  ),
+);
+const pins = {
+  ...originalPins,
+  entries: [...originalPins.entries, ...extension.structures],
+  bundles: [...originalPins.bundles, ...extension.bundles],
+};
 const concepts = api.cerebralArterialConcepts,
   relations = api.cerebralArterialRelations;
 const ids = new Set(Object.values(concepts).flatMap((c) => c.fmaIds));
@@ -46,10 +57,10 @@ const sideHas = (s, side) =>
   side === 'both' ||
   s.laterality === side ||
   ['midline', 'unpaired', 'unspecified'].includes(s.laterality);
-assert.equal(targets.length, 14);
-assert.equal(pins.entries.length, 25);
-assert.equal(Object.keys(concepts).length, 8);
-assert.equal(relations.length, 7);
+assert.equal(targets.length, 19);
+assert.equal(pins.entries.length, 30);
+assert.equal(Object.keys(concepts).length, 11);
+assert.equal(relations.length, 10);
 for (const name of ['abdominal', 'upper-limb', 'lower-limb']) {
   const other = JSON.parse(
     await readFile(`content/${name}-arterial-pins.json`, 'utf8'),
@@ -65,10 +76,10 @@ const rows = targets.flatMap((s) =>
     ...r,
   })),
 );
-assert.equal(rows.length, 28);
+assert.equal(rows.length, 38);
 assert.equal(
   new Set(rows.map((r) => [r.from.id, r.structure.id].sort().join('|'))).size,
-  14,
+  19,
 );
 for (const row of rows) {
   const inverse = neighbours(
@@ -130,7 +141,11 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)])
         continue;
       }
       assert(info);
-      assert.deepEqual(info, neighbours(raw, region, side, selected.id));
+      assert.equal(
+        neighbours(raw, region, side, selected.id),
+        null,
+        'Extended graph requires its complete source set',
+      );
       assert.deepEqual(
         info,
         api.cerebralArterialNeighbours(catalog, region, side, selected.id),
@@ -220,7 +235,7 @@ for (const args of [
   assert.equal(neighbours(catalog, ...args), null);
   assert.equal(plan(catalog, ...args), null);
 }
-// PCA selections are official partof groups; the other twelve use ISA. Preserve both.
+// PCA and the right MCA are official partof groups; preserve each source tree.
 const official = {};
 for (const tree of ['isa', 'partof'])
   official[tree] = (
@@ -232,7 +247,9 @@ for (const tree of ['isa', 'partof'])
 for (const selected of targets) {
   assert.equal(
     selected.sourceTree,
-    ['FMA50584', 'FMA50585'].includes(selected.fmaId) ? 'partof' : 'isa',
+    ['FMA50584', 'FMA50585', 'FMA50082'].includes(selected.fmaId)
+      ? 'partof'
+      : 'isa',
   );
   const match = official[selected.sourceTree].filter(
     (r) => r[0] === selected.fmaId,
@@ -246,7 +263,7 @@ for (const selected of targets) {
 }
 assert.equal(
   targets.reduce((n, s) => n + s.sources.length, 0),
-  31,
+  62,
 );
 for (const fma of ['FMA50584', 'FMA50585'])
   assert.equal(byFma(fma).sources.length, 9);
@@ -304,7 +321,7 @@ console.log(
   JSON.stringify({
     vessels: targets.length,
     contextBones: 11,
-    relations: 14,
+    relations: 19,
     reciprocalRows: rows.length,
     reversiblePlans: plans,
     rejectedSourceMutations: rejected,

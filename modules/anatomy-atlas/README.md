@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Head & neck / Whole body:** [Five additional cranial artery selections](docs/CRANIAL_ARTERIES.md) add bilateral PICA, bilateral superior cerebellar arteries and the supplied right MCA group, with source-preserved geometry, parent links and reversible dissection. AICA's bilateral group remains offline; no left MCA is invented. Draft teaching, specialist/device review and runtime publication are distinct from source admission.
+
 **Head & neck → select an artery → Arterial connections:** [Explore fourteen existing carotid, vertebral and cerebral selections](docs/CEREBRAL_ARTERIAL_CONNECTIONS.md), including a distinct vertebral–basilar confluence and direction-neutral communicating links. Source-bound, side-aware and reversible within the collapsed inspector; no new vessel geometry or patient-scan registration is implied. Specialist/device review and runtime publication remain pending.
 
 **Local CT + 3D pilot:** [Open the same-study review workflow](docs/LOCAL_IMAGING_STUDY.md) at `/imaging/local` (also linked from Review). Reuses accepted CT-head masks and explicitly included, clearly labelled drafts without editing them. Linked CT/3D review marks can now be checked against the original source and converted into locked Slicer point lists. No scan data is included in this repository or uploaded by this viewer. Dataset privacy, viewer validation and publication remain separate gates.

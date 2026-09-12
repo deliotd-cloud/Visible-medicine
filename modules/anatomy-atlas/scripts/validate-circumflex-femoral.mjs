@@ -45,7 +45,7 @@ for (const old of audit.screened) {
 }
 assert(!catalog.structures.some(s => ['FMA20801','FMA20802'].includes(s.fmaId)), 'Do not duplicate an existing grouped surface');
 assert.equal(raw.structures.length, 1022);
-assert.equal(catalog.structures.length, 1082);
+assert.equal(catalog.structures.length, 1087);
 assert.equal(JSON.stringify(raw), before);
 assert.equal(api.bodyDisplayCatalog(catalog), catalog);
 assert.deepEqual(
@@ -254,7 +254,7 @@ for (let i = 0; i < sourceShapes.length; i++)
 console.log(
   JSON.stringify({
     sourceSelections: 2,
-    displaySelections: 1082,
+    displaySelections: 1087,
     triangles,
     links,
     rejections,

@@ -2,6 +2,8 @@
 
 Status: original source-bound teaching draft; radiologist and device review pending.
 
+**Extension:** the [cranial artery milestone](CRANIAL_ARTERIES.md) adds five separately audited selections to this original fourteen-vessel baseline. The current explorer therefore has nineteen arterial selections and nineteen source-ID pairs. The descriptions of the original baseline below are historical scope, not the present total; right MCA and paired PICA/superior cerebellar routes are now supplied, while left MCA, AICA, perforators and complete territories remain unmapped.
+
 In **Head & neck** or **Whole body**, select a carotid, vertebral or supplied cerebral artery, then expand **Arterial connections** in its inspector. Select a listed neighbour, or **Show available connections & bones** for one reversible dissection step. The existing compact controls, side filters and Undo/Redo remain in use; there is no extra permanently open panel.
 
 ## Scope and implementation

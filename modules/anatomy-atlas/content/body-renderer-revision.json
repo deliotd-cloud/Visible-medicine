@@ -58,7 +58,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "b1585dc3d40d93e543e8bd2d462107cade09f34cb2fd70e1edc98a238ab992b1"
+      "sha256": "98f7b5dacf048b6fce71efa22c961d345e40010fee145e91208663079a515fd4"
     },
     {
       "path": "app/body-explorer.css",
@@ -406,7 +406,7 @@
     },
     {
       "path": "content/cerebral-arterial.ts",
-      "sha256": "efcd7abd4d2403db876b7bd98d4814014f84c8b124cdf7af2259e2725b64e49e"
+      "sha256": "b6917c427751f93555519e55ad25c364fbdfeb0b66afdb49bf0accd116731351"
     },
     {
       "path": "content/cerebral-teaching.ts",
@@ -818,7 +818,7 @@
     },
     {
       "path": "lib/body-display-catalog.ts",
-      "sha256": "5faad874e43e90a33a57434983319cbf17caa1123feb604bd7cb99b5cb240e3d"
+      "sha256": "fab4f7610c55c898c4fab8af84f7f2db62d8bd5c13eec239de1536114f713481"
     },
     {
       "path": "lib/body-source-additions.ts",
@@ -866,7 +866,7 @@
     },
     {
       "path": "lib/cerebral-arterial.ts",
-      "sha256": "ead6c65e1cb3b7953ee0870ef35aff389b415b36a9ca7a2e86ebd8c1299d4978"
+      "sha256": "b44185de2dffed0bf552da5ea90d351182ed65a8993dab14a48b6c5beb130d87"
     },
     {
       "path": "lib/cerebral.ts",
@@ -895,6 +895,10 @@
     {
       "path": "lib/content-types.ts",
       "sha256": "47ac24cbf05c1061238305589df148e3849265e33c728fce4bdc9c6912e4c3a6"
+    },
+    {
+      "path": "lib/cranial-arteries.ts",
+      "sha256": "503181d76e2a323134da111234bd3842c85026ecf8cae460138271b7279f3804"
     },
     {
       "path": "lib/cranial-bone-clinical-curriculum.ts",
@@ -1566,7 +1570,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "8176ea83b705611c08653463435979ac75f54b46ff1ea32e708e70aba2b58c37"
+      "sha256": "442d4b5c52d4c66c5c5c9712df5fca66e994feb4b82d3991cc61dfdbc7d0d241"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1603,6 +1607,10 @@
     {
       "path": "public/models/bodyparts3d/collicular-brachia/catalog.json",
       "sha256": "a607dbbdae16aff65fa35c65e181fe0aa828b3e4d09b10ba2a851d46a0a4e9d0"
+    },
+    {
+      "path": "public/models/bodyparts3d/cranial-arteries/catalog.json",
+      "sha256": "b9505be9ffd9e7a46348e76e65a4d421a77f57fd5bd2e7252ed685282a0b5ee7"
     },
     {
       "path": "public/models/bodyparts3d/cricothyroid/catalog.json",
@@ -1745,5 +1753,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "1f6ffec77579e3e3aa55c45f04ebde8db775ee6a827812afb1b5f5fd21568ab5"
+  "sha256": "dbc56c27b724699d4e2a4ab0abc23d2b8b3edef6e32813ec176d020766684555"
 }

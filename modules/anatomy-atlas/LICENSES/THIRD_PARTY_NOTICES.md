@@ -1,5 +1,9 @@
 # Third-party notices
 
+## Additional cranial artery surfaces — 12 September 2026
+
+The five cranial artery selections use 31 original BodyParts3D v4 ISA/PART-OF OBJ files under CC BY 4.0. Preserve: **BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International**. Original coordinates, winding and all faces are retained; derivatives use exact-coordinate indexing/normals and Float32 scene encoding only. Original files remain separately licensed in `content/sources/cranial-arteries`; the code's MIT licence does not relicense them. No new package, texture, font, paid API or mandatory service is added. Brief original teaching cites TTUHSC El Paso for facts only, without copying its table dataset, prose, figures or scans. AICA was audited offline but is not redistributed in this addition. See [the source scope, licence and validation requirements](../docs/CRANIAL_ARTERIES.md).
+
 ## Cervical/cerebral arterial connections — 12 September 2026
 
 This extension adds original MIT code and brief original factual notes with links to TTUHSC El Paso and a primary MRA morphologic study. No source table dataset, figure, article prose, angiogram, medical scan or external media is redistributed. The fourteen existing BodyParts3D v4 vessel selections and eleven context bones remain under their existing DBCLS/CC BY 4.0 notices, unchanged. No model, font, texture, dependency, paid API or mandatory service is introduced. Reference access is not a licence to reuse its media. See [scope and review requirements](../docs/CEREBRAL_ARTERIAL_CONNECTIONS.md).

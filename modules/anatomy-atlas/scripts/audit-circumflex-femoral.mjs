@@ -47,13 +47,13 @@ const { bodyDisplayCatalog } = await import(
     Buffer.from(built.outputFiles[0].text).toString('base64')
 );
 const display = bodyDisplayCatalog(raw);
-// Audit is replayable after admission; exclude only this separately pinned addition.
+// Preserve the admission baseline; subsequent cranial sources have their own full screen.
 const catalog = {
   ...display,
   structures: display.structures.filter(
-    (s) => !['circumflex-femoral'].includes(s.bundle),
+    (s) => !['circumflex-femoral', 'cranial-arteries'].includes(s.bundle),
   ),
-  bundles: display.bundles.filter((b) => !['circumflex-femoral'].includes(b.id)),
+  bundles: display.bundles.filter((b) => !['circumflex-femoral', 'cranial-arteries'].includes(b.id)),
 };
 async function shape(tree, file, sha) {
   const bytes = await readFile(`../work/bodyparts3d/${tree}/${file}.obj`);

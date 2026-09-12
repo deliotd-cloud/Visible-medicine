@@ -37,17 +37,17 @@ export const cerebralArterialConcepts = {
   ),
   internalCarotid: concept(
     ['FMA3949', 'FMA4062'],
-    'Available ACA and posterior communicating routes only. MCA, ophthalmic and perforating routes are not supplied by this map.',
+    'ACA, posterior communicating and a partial right MCA source are available. Left MCA, ophthalmic and perforating routes are not mapped.',
     [...cervicalBones, ...skullBaseBones],
   ),
   vertebral: concept(
     ['FMA3958', 'FMA4066'],
-    'Paired vertebral arteries unite into the basilar artery. Subclavian origins, cerebellar and spinal branches are outside this map.',
+    'Paired vertebral arteries unite into the basilar artery; PICA source groups are available. Subclavian origins and spinal branches are outside this map.',
     [...cervicalBones, ...skullBaseBones],
   ),
   basilar: concept(
     ['FMA50542'],
-    'Two vertebral inflows, one basilar selection. Cerebellar and pontine branches are not mapped; the PCA origins shown are a typical pattern.',
+    'Two vertebral inflows, one basilar selection. PCA and superior cerebellar routes are available; AICA and pontine branches remain outside this map.',
   ),
   anteriorCerebral: concept(
     ['FMA50029', 'FMA50030'],
@@ -65,6 +65,18 @@ export const cerebralArterialConcepts = {
     ['FMA50085', 'FMA50086'],
     'The ipsilateral carotid–PCA connection is shown. Small or absent communicating segments occur; source surfaces do not establish patency.',
   ),
+  middleCerebral: concept(
+    ['FMA50082'],
+    'Right MCA only: three original PART-OF files form six components. No left counterpart, complete tree or separate M1/M2 labels are inferred.',
+  ),
+  posteriorInferiorCerebellar: concept(
+    ['FMA50519', 'FMA50520'],
+    'Each PICA group contains thirteen original files and fourteen components. Source gaps remain visible; this is not a continuous lumen or complete perfusion territory.',
+  ),
+  superiorCerebellar: concept(
+    ['FMA50574', 'FMA50575'],
+    'Source names retain their laterality despite a small proximal midline crossing. No vessel is repositioned to enforce a side or junction.',
+  ),
 } satisfies ArterialDefinitions;
 
 type Concept = keyof typeof cerebralArterialConcepts;
@@ -74,6 +86,24 @@ export const cerebralArterialRelations: readonly {
   kind: ArterialRelationKind;
   note: string;
 }[] = [
+  {
+    from: 'internalCarotid',
+    to: 'middleCerebral',
+    kind: 'branch',
+    note: 'Typical MCA origin. Only the supplied right-side group is selectable.',
+  },
+  {
+    from: 'vertebral',
+    to: 'posteriorInferiorCerebellar',
+    kind: 'branch',
+    note: 'Typical same-side PICA origin; no donor lumen continuity is demonstrated.',
+  },
+  {
+    from: 'basilar',
+    to: 'superiorCerebellar',
+    kind: 'branch',
+    note: 'Typical paired superior cerebellar origins; no individual variation is assigned.',
+  },
   {
     from: 'commonCarotid',
     to: 'internalCarotid',

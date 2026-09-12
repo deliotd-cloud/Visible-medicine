@@ -10,7 +10,10 @@ assert.equal(
 );
 const catalog = JSON.parse(raw);
 const concepts = Object.values(cerebralArterialConcepts);
-const ids = concepts.flatMap((c) => c.fmaIds);
+// Retain the original raw-catalogue pins. New source groups have separate audited bindings.
+const ids = concepts
+  .flatMap((c) => c.fmaIds)
+  .filter((id) => catalog.structures.some((s) => s.fmaId === id));
 const boneIds = [...new Set(concepts.flatMap((c) => c.contextFmaIds))];
 assert.equal(ids.length, 14);
 assert.equal(new Set(ids).size, 14);

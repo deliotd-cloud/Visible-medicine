@@ -44,7 +44,7 @@ for (const [region, profile] of Object.entries(api.dissectionProfiles)) for (con
 }
 assert.equal(JSON.stringify(catalog),catalogBefore);
 const all=catalog.structures.map(s=>s.id), groups=api.vesselVisibilityGroups(catalog.structures,all);
-assert.deepEqual(groups.map(g=>[g.kind,g.total]),[['artery',179],['vein',98]]);
+assert.deepEqual(groups.map(g=>[g.kind,g.total]),[['artery',184],['vein',98]]);
 assert(groups.every(g=>g.shown===g.total));
 assert.deepEqual(groups.map(g=>g.kind),['artery','vein']);
 const artery=catalog.structures.find(s=>s.system==='vessels'&&api.vesselKind(s)==='artery');
@@ -111,7 +111,11 @@ const expectedWithCircumflex=expectedLessons
   .replace('export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {', 'export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {\n  const circumflex = circumflexFemoralLesson(s, tab);\n  if (circumflex) return circumflex;');
 assert.notEqual(expectedLessons,previousLessons);
 assert.notEqual(expectedWithCircumflex,expectedLessons);
-assert.equal(normalize(await readFile('app/body-content.ts','utf8')),expectedWithCircumflex);
+const expectedWithCranial=expectedWithCircumflex
+  .replace("import { circumflexFemoralLesson } from '../lib/circumflex-femoral';", "import { circumflexFemoralLesson } from '../lib/circumflex-femoral';\nimport { cranialArteryLesson } from '../lib/cranial-arteries';")
+  .replace('export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {', 'export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {\n  const cranial = cranialArteryLesson(s, tab);\n  if (cranial) return cranial;');
+assert.notEqual(expectedWithCranial,expectedWithCircumflex);
+assert.equal(normalize(await readFile('app/body-content.ts','utf8')),expectedWithCranial);
 for(const path of ['app/body-scene.tsx','lib/anatomy-vessels.ts','package-lock.json','public/models/bodyparts3d/full-body/catalog.json','content/abdominal-organ-imaging.ts'])
   assert.deepEqual(await readFile(path),execFileSync('git',['show','e5521766d4035044bd2b057818d6153783a4294e:'+path],{maxBuffer:8e6}));
 const report={scopes,plans,groups,componentCallbacks,parentCallbacks,defaultCollapsed:true,sourcePreserved:true,clinicalApproval:false,browserTesting:false};
