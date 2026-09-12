@@ -1,0 +1,6 @@
+# Code-only backup. Do not add imaging packets, manifests, caches or runtime binaries.
+*
+!.gitignore
+!README.md
+!prepare-private-mri.py
+!validate-private-mri.py
