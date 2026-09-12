@@ -5,7 +5,9 @@ import {
 import {
   backLayersLessonIds,
   backLayersLessons,
+  backLayersPartNotes,
 } from '../content/back-layers-teaching';
+import { backLayersClinical } from '../content/back-layers-clinical';
 import {
   identificationFromPool,
   type SpecimenPracticeAdapter,
@@ -28,12 +30,21 @@ export function backLayersTeachingFor(
   const key = surface.fmaId && backLayersLessonIds[surface.fmaId];
   const lesson = key && backLayersLessons[key];
   if (!lesson) return null;
-  return {
-    ...lesson,
-    references: [...lesson.references],
-    ...(lesson.attachments ? { attachments: { ...lesson.attachments } } : {}),
-    anatomy: `${lesson.anatomy} ${surface.sourceName.includes('multifidus') ? 'The selected source contains disconnected parts, not independently labelled fascicles or a measured segmental map.' : 'This is a source-defined surface; its precise attachment footprint and muscle/aponeurotic extent remain unvalidated.'}`,
-  };
+  // Authored records contain JSON data only; detach every nested reference list.
+  const result: SpecimenLesson = JSON.parse(
+    JSON.stringify({
+      ...lesson,
+      ...(key && backLayersClinical[key]
+        ? { extended: backLayersClinical[key] }
+        : {}),
+    }),
+  );
+  const part = surface.fmaId && backLayersPartNotes[surface.fmaId];
+  if (part) result.function += ` ${part}`;
+  if (key === 'multifidus')
+    result.function += ` For the selected ${surface.laterality} group, the typical unilateral rotational contribution is towards the ${surface.laterality === 'right' ? 'left' : 'right'}; individual levels and recruitment are not simulated.`;
+  result.anatomy += ` ${key === 'multifidus' ? 'The selected source contains disconnected parts, not independently labelled fascicles or a measured segmental map.' : 'This is a source-defined surface; its precise attachment footprint and muscle/aponeurotic extent remain unvalidated.'}`;
+  return result;
 }
 export function backLayersPracticeIds(
   definition: SpecimenDefinition,

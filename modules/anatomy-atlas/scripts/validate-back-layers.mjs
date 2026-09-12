@@ -378,7 +378,8 @@ for (const surface of def.surfaces.filter((s) => s.tissue === 'muscle')) {
     );
     ok(notes.includes('Teaching draft'));
     if (initialTopic === 'mri') {
-      ok(notes.includes('MRI teaching is pending'));
+      ok(notes.includes('Modality teaching only'));
+      ok(!notes.includes('MRI teaching is pending'));
       ok(notes.includes('No patient images'));
     }
     notesRenders++;

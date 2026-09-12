@@ -345,8 +345,12 @@
       "sha256": "534d166d46212fedb3316c8113162f7e18ab70fe0adea43501af475796b92374"
     },
     {
+      "path": "content/back-layers-clinical.ts",
+      "sha256": "aef46c639404b420803382ae7763c47b1f951d4903b68c91c5514955e1f093ea"
+    },
+    {
       "path": "content/back-layers-teaching.ts",
-      "sha256": "a5823a15efa2b5729a83f25428352fbdc3b18296e46625df0cea0cf985f40ef6"
+      "sha256": "c11d21bae060ae3ddefa1a5f60b0613f9bc1a22e8378d952519d21b388c001bc"
     },
     {
       "path": "content/brain-imaging-teaching.ts",
@@ -682,7 +686,7 @@
     },
     {
       "path": "lib/back-layers-teaching.ts",
-      "sha256": "ebddc04a533caf36f3f606a55ef135eb488b0c83bc7f2f9a75a287b434cac0c0"
+      "sha256": "3af67fa9527171d1937090a9f9f9e08b5adda85feef2bfe155e7171e1f68edb1"
     },
     {
       "path": "lib/back-layers.ts",
@@ -1521,5 +1525,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "b0d0c1a4e8ca1c5fb593a59d312a359f3849e9b8b22e59dc76c1b3c80e84556e"
+  "sha256": "386df3d80a8f17e65d33b847559745d089abd5be7fcf76708b567d3873a31946"
 }

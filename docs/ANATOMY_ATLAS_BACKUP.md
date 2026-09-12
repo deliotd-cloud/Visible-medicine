@@ -1,6 +1,18 @@
 # Anatomy atlas backup — 12 September 2026
 
-## 12 September 2026 — inferior epigastric vessels (current source)
+## 12 September 2026 — back-layer functional/radiology teaching (current source)
+
+Source `f36f9bc702598b98eb192943fd9a888da5dad61f`, tree `cde38b71cf9066ffbba570c8753843d1a9f4fdc8`, parent `08025b3ee6b1314b7851a8006fa7facd4d823c18`. Seventeen exact source paths mirrored. All earlier anatomical/source-search work remains included. No geometry, source definition, recipe, dependency, auth, database or entitlement change; main-body teaching/study inventory is unchanged.
+
+All fourteen separate back muscles have attachment/motor notes, three exact trapezius-part qualifications and sided multifidus action notes. Existing collapsed Learn groups gain 46 draft Clinical/Pathology/MRI/CT/US placements drawn from 17 topic texts and five clinical self-checks. Unsupported topics remain pending: no X-ray, only two multifidus CT and four latissimus/multifidus US placements; minor-specific pathology is not inferred from major cases. Thirty-four context bones still have pending teaching. Primary case/cohort references inform original synthesis; no publisher imagery, scans, question-bank text or procedures copied. Existing asset licence terms remain unchanged.
+
+Passed: 1,117 teaching checks, 112 actual React topic renders (38 pending), ten changed-definition rejection cases and nested-copy isolation; 1,438 back geometry/dissection/practice checks and all 999,546 source face corners; 751 abdominal teaching checks; TypeScript, build, requirement freshness and whitespace. MRI-pending expectation in the back regression was explicitly updated for newly authored MRI drafts. The unrelated preexisting model-first snapshot failure remains unmodified and is not claimed passing. Renderer fingerprint `386df3d80a8f17e65d33b847559745d089abd5be7fcf76708b567d3873a31946` covers 378 inputs; shoulder fingerprints and all 122 model delivery scenes remain unchanged. No browser/GPU/mobile/clinical acceptance.
+
+D: recovery stem `atlas-back-teaching-2026-09-12`: runtime archive 119,421,963 bytes / SHA256 `3954781cf5f41133fca4d863f04e06207e3f38b42f9fff2f7d7169f136032b45`; delta 634,880 bytes / `34f7e51dd8ac139ed1f59d920f6aa69b50626184381ccb8ab64bef90cf40ddf2`; incremental bundle 16,689 bytes / `3efecd761d7e46e3f9bcd41959b6d320d01d411c864f286a88e8ef947ee0ddf8`. Independent restore/fsck verifies exact source/tree, with the verifier's original main unchanged. Runtime archive has 426 safe entries, exact manifest and two unchanged migrations. Earlier backups are preserved.
+
+Exact Sites source push succeeded; owner-only archive upload timed out after 60 seconds. Reconciliation still shows latest version 171, so no new publication is claimed. Source backups do not include conversation history, production databases/reviews, accounts, patient scans or separate lectures. Goal remains active; continue substantive other regional anatomy/function and cleared source work rather than repeating this introductory teaching extension. Clinical/device, actual imaging and separate lecture entitlement gates remain.
+
+## 12 September 2026 — inferior epigastric vessels (previous source)
 
 Source `08025b3ee6b1314b7851a8006fa7facd4d823c18`, tree `509cd5737db93cbe81861f33c4039e4040c7e8dd`, parent `28c9486ed698848aa0d7b32e97dcd214413aa359`. Thirty-eight exact source paths mirrored. Four original v4 inferior epigastric artery/vein selections retain all 28,968 triangles, with a ten-vessel abdominal/whole-body Study and 16 introductory Anatomy/Function/Clinical/Quiz draft placements. The existing compact controls are reused; no new permanent toolbar. Display scope is 1,064 selections; unrelated teaching, prior study recipes, raw catalogue, dependencies, auth, databases and entitlements remain unchanged.
 
