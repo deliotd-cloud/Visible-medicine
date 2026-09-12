@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Female pelvic support teaching](FEMALE_PELVIC_SUPPORT_TEACHING.md) fills 14 untaught source selections with eight differentiated anatomy/function concepts, 56 extended draft placements and self-checks. The existing Learn panel and visible-pool practice stay compact. Thirty-one of 41 female-pelvis selections now have introductory teaching; ten remain pending. All 41 meshes, eight studies, six source holds and prior 17 lessons remain unchanged. No clinical, imaging or device approval is inferred; dated external checkpoints record actual backup/publication status.
+
 [Thigh-to-knee attachment relationships](THIGH_ATTACHMENT_RELATIONSHIPS.md) adds 20 existing muscle/head selections and ten existing attachment bones to the same collapsed control as the shoulder. Quadriceps tibial continuation is explicitly indirect; regional limits, source-bound whole-body links, Left/Right and reversible dissection are preserved. No new meshes, image admission or clinical approval. Actual deployment and backups are recorded separately in the dated checkpoint.
 
 [Pelvic-organ imaging](PELVIC_ORGAN_IMAGING.md) adds 44 introductory draft placements across CT/MRI/X-ray/Ultrasound for 11 existing urinary/male reproductive selections, using the existing tabs. No patient images, segmentation, registration, extra panel or clinical approval is added. Source continuity and model/sex/side limits are explicit. Check the dated external checkpoint for actual publication status; source completion is not live-deployment evidence.

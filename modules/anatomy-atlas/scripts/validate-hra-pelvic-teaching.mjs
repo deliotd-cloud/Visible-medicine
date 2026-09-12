@@ -5,6 +5,7 @@ import { readFile } from 'node:fs/promises';
 import { build } from './workspace-test-build.mjs';
 import { build as componentBuild } from './workspace-component-test-build.mjs';
 import { hraDigest } from './hra-pelvis-source.mjs';
+import { execFileSync } from 'node:child_process';
 const compiled = await build({
   stdin: {
     contents:
@@ -32,13 +33,13 @@ const {
 const source = JSON.stringify(def),
   rows = def.surfaces.filter((s) => bindings[s.id]),
   urls = new Set(Object.values(references).map((r) => r.url));
-assert.equal(rows.length, 17);
-assert.equal(Object.keys(bindings).length, 17);
-assert.equal(Object.keys(concepts).length, 12);
-assert.equal(new Set(rows.map((s) => lessonFor(def, s).anatomy)).size, 12);
+assert.equal(rows.length, 31);
+assert.equal(Object.keys(bindings).length, 31);
+assert.equal(Object.keys(concepts).length, 20);
+assert.equal(new Set(rows.map((s) => lessonFor(def, s).anatomy)).size, 20);
 assert.equal(
   new Set(rows.map((s) => lessonFor(def, s).extended.selfCheck.question)).size,
-  12,
+  20,
 );
 const counts = {
   clinical: 0,
@@ -84,13 +85,69 @@ for (const s of def.surfaces) {
     assert.equal(lessonFor(def, { ...s, [field]: 'foreign' }), null);
 }
 assert.deepEqual(counts, {
-  clinical: 17,
-  pathology: 17,
+  clinical: 31,
+  pathology: 31,
   ct: 2,
-  mri: 17,
+  mri: 31,
   xray: 0,
-  ultrasound: 16,
+  ultrasound: 30,
 });
+// Explicit extension contract: all 17 earlier source lessons remain identical.
+const oldSource = execFileSync(
+  'git',
+  [
+    'show',
+    '776df013c1553e1d42a0e9ea8db0cd835f1ce89e:content/hra-pelvic-teaching.ts',
+  ],
+  { encoding: 'utf8' },
+);
+const oldBuild = await build({
+  stdin: { contents: oldSource, resolveDir: process.cwd(), loader: 'ts' },
+  bundle: true,
+  write: false,
+  format: 'esm',
+  platform: 'node',
+});
+const oldApi = await import(
+  'data:text/javascript;base64,' +
+    Buffer.from(oldBuild.outputFiles[0].text).toString('base64')
+);
+for (const [id, concept] of Object.entries(oldApi.hraPelvicLessonBindings)) {
+  assert.equal(bindings[id], concept);
+  assert.deepEqual(
+    lessonFor(
+      def,
+      def.surfaces.find((s) => s.id === id),
+    ),
+    oldApi.authoredHraPelvicLesson(concept),
+  );
+}
+const additions = rows.filter((s) => !oldApi.hraPelvicLessonBindings[s.id]);
+assert.deepEqual(
+  additions.map((s) => s.slug).sort(),
+  [
+    'right-uterosacral-ligament',
+    'left-uterosacral-ligament',
+    'right-cardinal-ligament-of-uterus',
+    'left-cardinal-ligament-of-uterus',
+    'suspensory-ligament-of-ovary-r',
+    'suspensory-ligament-of-ovary-l',
+    'ovarian-ligament-r',
+    'ovarian-ligament-l',
+    'broad-ligament',
+    'mesosalpinx-r',
+    'mesosalpinx-l',
+    'mesovarium-r',
+    'mesovarium-l',
+    'uterovesical-pouch',
+  ].sort(),
+);
+assert(concepts.vesicouterine.anatomy.includes('peritoneal recess'));
+assert(concepts.vesicouterine.function.includes('rather than an organ'));
+assert(concepts.suspensory.anatomy.includes('pelvic brim'));
+assert(concepts.ovarianLigament.function.includes('not a duct'));
+assert(concepts.mesosalpinx.anatomy.includes('uterine tube'));
+assert(concepts.mesovarium.anatomy.includes('ovary'));
 for (const change of [
   (d) => (d.source.version = 'other'),
   (d) => (d.catalog.bundles[0].sha256 = '0'.repeat(64)),
@@ -188,12 +245,12 @@ assert(
 );
 console.log(
   JSON.stringify({
-    sourceBoundSelections: 17,
-    distinctConcepts: 12,
+    sourceBoundSelections: 31,
+    distinctConcepts: 20,
     topicDrafts: counts,
     totalExtendedDrafts: Object.values(counts).reduce((a, b) => a + b, 0),
-    pendingSelections: 24,
-    selfChecks: 17,
+    pendingSelections: 10,
+    selfChecks: 31,
     renderedTopics,
     geometryUnchanged: true,
     clinicalOrImagingApproval: false,

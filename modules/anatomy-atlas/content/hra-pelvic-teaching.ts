@@ -7,6 +7,18 @@ import type {
 } from './um-limb-clinical';
 
 export const hraPelvicReferences = {
+  dissection: {
+    title: 'Texas Tech · Female pelvic relationships and support',
+    url: 'https://anatomy.ttuhscep.edu/reproductive_system/pelvicvisc_ans.html',
+  },
+  endometriosis: {
+    title: 'ESHRE · Endometriosis guideline (2022)',
+    url: 'https://www.eshre.eu/Guidelines-and-Legal/Guidelines/Endometriosis-Guideline',
+  },
+  compartments: {
+    title: 'ESUR · Endometriosis MRI protocol and compartments (2025)',
+    url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC12559084/',
+  },
   anatomy: {
     title: 'Texas Tech · Pelvic viscera anatomy',
     url: 'https://anatomy.ttuhscep.edu/reproductive_system/pelvicvisc_tables.html',
@@ -56,9 +68,114 @@ const draft = (body: string, ...keys: Ref[]): SpecimenTopicDraft => ({
 });
 type TopicSet = SpecimenClinicalLesson['topics'];
 const topics: Record<
-  'ovary' | 'tube' | 'uterus' | 'fundus' | 'cervix' | 'vagina',
+  | 'ovary'
+  | 'tube'
+  | 'uterus'
+  | 'fundus'
+  | 'cervix'
+  | 'vagina'
+  | 'uterosacral'
+  | 'cardinal'
+  | 'peritoneal'
+  | 'adnexalSupport'
+  | 'pouch',
   TopicSet
 > = {
+  uterosacral: {
+    clinical: draft(
+      'Compare each ligament with the posterior cervix, vaginal fornix and neighbouring rectum. A source-labelled band is not a complete pelvic-support apparatus or an operative dissection plane.',
+      'dissection',
+    ),
+    pathology: draft(
+      'Deep endometriosis may affect the uterosacral region. Assess a suspected deposit and adjacent spread on acquired images; a thick or irregular source mesh is not a lesion.',
+      'compartments',
+    ),
+    mri: draft(
+      'Follow the ligament in more than one plane. ESUR cautions that thickness alone is not specific for an endometriotic deposit; a nodule seen in only one plane remains uncertain. This model cannot supply either signal or diagnostic measurements.',
+      'compartments',
+    ),
+    ultrasound: draft(
+      'Ultrasound and MRI contribute to endometriosis assessment, but negative imaging does not exclude disease, particularly superficial peritoneal disease. The visible source ligament is not evidence of sonographic visibility or a negative examination.',
+      'endometriosis',
+    ),
+  },
+  cardinal: {
+    clinical: draft(
+      'Relate the lateral cervical support region to the uterine vessels. Its rendered border does not define all parametrial connective tissue, ureteral relationships or a safe surgical boundary.',
+      'dissection',
+    ),
+    pathology: draft(
+      'Parametrial involvement is a location to assess, not a diagnosis conferred by selecting the cardinal surface. Distinguish the underlying disease, its extent and neighbouring organ involvement on patient studies.',
+      'compartments',
+    ),
+    mri: draft(
+      'Use the cervix, vagina and lateral pelvic tissues as orientation landmarks when assessing parametrial spread. Named reporting compartments are analytical divisions, not separately encapsulated organs or these mesh outlines.',
+      'compartments',
+    ),
+    ultrasound: draft(
+      'Interpret lateral cervical tissue with the rest of a dedicated pelvic examination. This reference does not contain ultrasound texture, dynamic tissue mobility or the missing ureter needed for patient-specific assessment.',
+      'anatomy',
+      'endometriosis',
+    ),
+  },
+  peritoneal: {
+    clinical: draft(
+      'Identify which organ the fold relates to before naming a nearby finding. A broad-ligament, paraovarian or tubal location is not automatically an ovarian origin.',
+      'anatomy',
+      'cystic',
+    ),
+    pathology: draft(
+      'A cyst beside the ovary may be extraovarian. Establish the ovary separately and assess the lesion itself; separating these folds does not simulate a cyst, adhesion or obstructed tube.',
+      'cystic',
+    ),
+    mri: draft(
+      'Orient the uterus, ovaries and tubes together. MRI can clarify an indeterminate adnexal finding, but this thin source surface is not an MR-visible tissue boundary or a validated segmentation of a lesion.',
+      'adnexa',
+    ),
+    ultrasound: draft(
+      'During adnexal assessment, distinguish a finding from a separately identified ovary. These labelled mesenteric folds cannot establish which normal folds a particular ultrasound examination resolves.',
+      'adnexa',
+      'anatomy',
+    ),
+  },
+  adnexalSupport: {
+    clinical: draft(
+      'Distinguish the ovarian attachment towards the uterus from the lateral fold carrying the ovarian neurovascular route. No complete vessels, ureter or nerves are supplied by selecting either ligament.',
+      'dissection',
+    ),
+    pathology: draft(
+      'A mass near an ovarian attachment still requires determination of its organ of origin. Surface displacement in this atlas is a display operation, not evidence of a mass or vascular compromise.',
+      'cystic',
+    ),
+    mri: draft(
+      'Use the ovary, uterus and pelvic sidewall as relational landmarks. The source contains no flow, enhancement or tissue signal; a geometric connection cannot demonstrate perfusion.',
+      'anatomy',
+      'dissection',
+    ),
+    ultrasound: draft(
+      'Locate the ovary independently during adnexal assessment. Doppler findings must come from a patient examination, not the colour of this support surface or its proximity to a labelled vessel.',
+      'adnexa',
+    ),
+  },
+  pouch: {
+    clinical: draft(
+      'Keep the anterior vesicouterine recess separate from the posterior rectouterine pouch. The source support-surface grouping is a display category: this selection represents a peritoneal recess, not a solid ligament.',
+      'dissection',
+    ),
+    pathology: draft(
+      'Describe a lesion near this recess separately from invasion of the bladder wall. An apparent contact between model surfaces supplies no evidence of tissue invasion or adhesion.',
+      'compartments',
+    ),
+    mri: draft(
+      'The vesico-uterine space relates to the posterior part of the bladder dome. Localize findings relative to the uterus and bladder wall; do not confuse this with the bladder base or the posterior pouch of Douglas.',
+      'compartments',
+      'dissection',
+    ),
+    ultrasound: draft(
+      'Use the bladder and uterus to orient the anterior pelvic relationship. This static source cannot demonstrate a fluid collection, dynamic sliding or patient-specific separation of the organs.',
+      'dissection',
+    ),
+  },
   ovary: {
     clinical: draft(
       'First establish whether an adnexal finding arises within the ovary or beside it. “Adnexal” and “ovarian” are not interchangeable; this reference supplies no lesion-specific model.',
@@ -178,6 +295,98 @@ type Concept = {
   answer: string;
 };
 export const hraPelvicConcepts = {
+  uterosacral: {
+    anatomy:
+      'Paired posterior cervical support extending towards the sacral region beside the rectum. Compare its cervical and posterior ends without inferring uninterrupted fascia from an open source shell.',
+    function:
+      'Contributes to apical uterine support together with other connective tissues and pelvic-floor muscles. Those muscles and a complete nerve pathway are not represented here.',
+    refs: ['anatomy', 'dissection'],
+    family: 'uterosacral',
+    question:
+      'Does a single-plane thickening alone prove uterosacral endometriosis?',
+    answer:
+      'No. Corroborate morphology in other planes and assess the acquired signal and context; isolated thickness is not a specific diagnosis.',
+  },
+  cardinal: {
+    anatomy:
+      'Lateral cervical connective-tissue support towards the pelvic sidewall. The paired source regions retain separate identities even where their ontology term is shared.',
+    function:
+      'Helps support the cervix. It is not equivalent to the whole broad-ligament peritoneal sheet, and its outline does not establish the full vascular or ureteral course.',
+    refs: ['dissection'],
+    family: 'cardinal',
+    question:
+      'Is the cardinal support region identical to the broad-ligament peritoneal sheet?',
+    answer:
+      'No. Distinguish lateral cervical supporting connective tissue from the broad peritoneal fold; neither rendered boundary is an operative plane.',
+  },
+  suspensory: {
+    anatomy:
+      'The lateral ovarian peritoneal fold associated with the ovarian vessels crossing the pelvic brim; also called the infundibulopelvic ligament.',
+    function:
+      'Provides a route for ovarian vessels, lymphatics and autonomic nerves. Selecting this surface does not reveal those missing contents or prove their continuity.',
+    refs: ['anatomy', 'dissection'],
+    family: 'adnexalSupport',
+    question:
+      'Which ovarian attachment carries the lateral ovarian neurovascular route?',
+    answer:
+      'The suspensory ligament; the proper ovarian ligament connects the ovary towards the uterus.',
+  },
+  ovarianLigament: {
+    anatomy:
+      'The proper ovarian ligament connects the ovary to the uterus below the tubal attachment. It is distinct from the more lateral suspensory ligament.',
+    function:
+      'Tethers the ovary towards the uterus. It is a gubernacular remnant, not a duct connecting ovarian tissue to the uterine cavity.',
+    refs: ['dissection'],
+    family: 'adnexalSupport',
+    question:
+      'Does the proper ovarian ligament transmit an oocyte into the uterine cavity?',
+    answer:
+      'No. It is an attachment, not a reproductive duct; the uterine tube provides the relevant transport pathway.',
+  },
+  broadLigament: {
+    anatomy:
+      'A paired-layer peritoneal fold relating uterus and adnexa to the pelvic walls. Its named regions include mesometrium, mesosalpinx and mesovarium.',
+    function:
+      'Organizes peritoneal relationships around uterus, tube and ovary. Do not interpret its name as a thick load-bearing cord or a complete pelvic-support model.',
+    refs: ['anatomy', 'dissection'],
+    family: 'peritoneal',
+    question: 'Which two named regions relate specifically to tube and ovary?',
+    answer:
+      'Mesosalpinx relates to the uterine tube; mesovarium attaches the ovary. Mesometrium is the uterine portion.',
+  },
+  mesosalpinx: {
+    anatomy:
+      'The broad-ligament portion associated with the uterine tube, distinct from the mesovarium beside the ovary.',
+    function:
+      'Supports the tubal relationship within the peritoneal fold. Its surface does not demonstrate a tubal lumen, patency or intramural continuation.',
+    refs: ['anatomy'],
+    family: 'peritoneal',
+    question: 'Is the mesosalpinx a segment of the uterine-tube lumen?',
+    answer:
+      'No. It is a related peritoneal fold, not the ampulla, isthmus or another luminal segment.',
+  },
+  mesovarium: {
+    anatomy:
+      'A short peritoneal attachment between the ovary and broad ligament. It is distinct from both the uterine-tube fold and the lateral suspensory ligament.',
+    function:
+      'Provides the ovarian mesenteric attachment. It does not form a complete peritoneal envelope enclosing the ovarian surface.',
+    refs: ['anatomy', 'dissection'],
+    family: 'peritoneal',
+    question: 'Does the mesovarium enclose the entire ovarian surface?',
+    answer:
+      'No. It is a local mesenteric attachment; the exposed ovarian surface and its other attachments remain distinct.',
+  },
+  vesicouterine: {
+    anatomy:
+      'The anterior peritoneal recess at the reflection between bladder and uterus. The source name uterovesical refers here to the vesicouterine pouch.',
+    function:
+      'Defines a peritoneal relationship rather than an organ, duct or fibrous ligament. Its displayed surface is not a measured cavity or a fluid collection.',
+    refs: ['dissection'],
+    family: 'pouch',
+    question: 'Is the vesicouterine pouch the pouch of Douglas?',
+    answer:
+      'No. The vesicouterine recess is anterior to the uterus; the rectouterine pouch of Douglas lies posteriorly.',
+  },
   ovary: {
     anatomy:
       'The paired gonad lies beside the uterus, related to the uterine tube and its supporting folds. Its source position is not a universal patient position.',
@@ -321,6 +530,20 @@ const prefix = 'vm:reference:hra-united-female-v1-10:pelvis:';
 export const hraPelvicLessonBindings: Readonly<
   Record<string, HraPelvicConcept>
 > = {
+  [prefix + 'right-uterosacral-ligament']: 'uterosacral',
+  [prefix + 'left-uterosacral-ligament']: 'uterosacral',
+  [prefix + 'right-cardinal-ligament-of-uterus']: 'cardinal',
+  [prefix + 'left-cardinal-ligament-of-uterus']: 'cardinal',
+  [prefix + 'suspensory-ligament-of-ovary-r']: 'suspensory',
+  [prefix + 'suspensory-ligament-of-ovary-l']: 'suspensory',
+  [prefix + 'ovarian-ligament-r']: 'ovarianLigament',
+  [prefix + 'ovarian-ligament-l']: 'ovarianLigament',
+  [prefix + 'broad-ligament']: 'broadLigament',
+  [prefix + 'mesosalpinx-r']: 'mesosalpinx',
+  [prefix + 'mesosalpinx-l']: 'mesosalpinx',
+  [prefix + 'mesovarium-r']: 'mesovarium',
+  [prefix + 'mesovarium-l']: 'mesovarium',
+  [prefix + 'uterovesical-pouch']: 'vesicouterine',
   [prefix + 'left-ovary']: 'ovary',
   [prefix + 'right-ovary']: 'ovary',
   [prefix + 'ampulla-of-uterine-tube-l']: 'ampulla',

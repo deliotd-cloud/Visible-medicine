@@ -50,5 +50,5 @@ export const hraPelvicPractice: SpecimenPracticeAdapter = {
   },
   feedback: (d, s) => hraPelvicTeaching(d, s)?.function ?? null,
   scopeNote:
-    'Source-identification practice only, using up to ten visible source-checked reproductive surfaces with draft teaching. Not a validated anatomy examination. Your dissection is preserved on return.',
+    'Source-identification practice only, using up to ten visible source-checked pelvic selections with draft teaching. Not a validated anatomy examination. Your dissection is preserved on return.',
 };

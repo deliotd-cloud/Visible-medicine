@@ -56,7 +56,8 @@ for (const group of api.specimenReviewRows)
   }
 assert.equal(contexts, 354);
 assert.equal(hashes.size, 354);
-assert.equal(teachingReady, 295);
+// Fourteen new support selections are reviewable drafts, not clinical approvals.
+assert.equal(teachingReady, 309);
 for (const key of ["", "__proto__", "body-display-catalog", "shoulder-pilot"])
   assert.equal(await api.specimenReviewMaterial(key, "unknown"), null);
 const group = api.specimenReviewRows[0],

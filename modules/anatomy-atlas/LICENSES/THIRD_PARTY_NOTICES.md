@@ -486,6 +486,8 @@ The ocular extension adds ten original BodyParts3D v4 ISA components under the s
 
 The dental/orbital extension adds 32 official BodyParts3D v4 source definitions/components under the same CC BY 4.0 grant, with exact evidence in `content/head-detail-source-audit.json`. It includes no other diagram, font, texture, numbering-system dataset or dependency. Preserve attribution for the new derivatives; see `BODYPARTS3D_FULL_BODY.md` and `docs/HEAD_DETAIL.md`. Brief original teaching summaries cite factual resources only, without redistributing their images or authored table datasets.
 
+Female pelvic support teaching (12 September 2026) adds original brief factual synthesis and citation links to Texas Tech anatomy, ESHRE and ESUR guidance. No reference diagrams, articles, tables, clinical datasets or quoted passages are imported. Those sources retain their own rights; citing them grants no redistribution licence. No package, model, font, texture or paid service is added. The HRA model and its CC BY 4.0 notice remain unchanged. See `docs/FEMALE_PELVIC_SUPPORT_TEACHING.md`.
+
 Run:
 
 ```bash
