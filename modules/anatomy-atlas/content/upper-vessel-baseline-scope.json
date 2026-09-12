@@ -1,0 +1,567 @@
+{
+  "sourceCommit": "50ac6f326f14e292c6382e518adaeea20169163c",
+  "sourceTree": "e19814086b1b09f81250c0284e14e30649416ab5",
+  "recordedAgainst": "1ddc0732fd882bf3380310ad6b3f673bf014fb5f",
+  "originalWholeCurriculumHash": "ff12af39a1a8fbed6716321fba0549d93bec2be438dfd475be60bad5bd36a0be",
+  "beforeCatalogHash": "e8c3cd0235bd5fca121cb8db58fba2b025839d8c99bb8a7776073016b61c10a0",
+  "afterCatalogHash": "302ea8b417e67354c10b07d9e448f92f7d50e638300de677aa3661dc43f9408d",
+  "beforeSelections": 1060,
+  "afterSelections": 1078,
+  "removedStructures": [
+    "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+    "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+    "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery",
+    "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein",
+    "vm:anatomy:body:pelvis:left:vessel:left-iliolumbar-vein",
+    "vm:anatomy:body:pelvis:left:vessel:left-inferior-gluteal-vein",
+    "vm:anatomy:body:pelvis:left:vessel:left-obturator-vein",
+    "vm:anatomy:body:pelvis:left:vessel:left-superior-gluteal-vein",
+    "vm:anatomy:body:pelvis:right:vessel:right-iliolumbar-vein",
+    "vm:anatomy:body:pelvis:right:vessel:right-inferior-gluteal-vein",
+    "vm:anatomy:body:pelvis:right:vessel:right-internal-pudendal-vein",
+    "vm:anatomy:body:pelvis:right:vessel:right-lateral-sacral-vein",
+    "vm:anatomy:body:pelvis:right:vessel:right-obturator-vein",
+    "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein",
+    "vm:anatomy:body:head-neck:left:organ:left-stria-medullaris-of-thalamus",
+    "vm:anatomy:body:head-neck:right:organ:right-stria-medullaris-of-thalamus",
+    "vm:anatomy:body:head-neck:midline:organ:lamina-terminalis",
+    "vm:anatomy:body:head-neck:midline:organ:septum-of-telencephalon"
+  ],
+  "removedBundles": [
+    "inferior-epigastric-vessels",
+    "pelvic-veins",
+    "limbic-landmarks"
+  ],
+  "beforeRecipesHash": "6718d55292f24620477c701a8bc93ef39cf786f6a56f605b292abec294291644",
+  "afterRecipesHash": "dd8a2f264c93de2e79256b26fd38f52aeefb7ebae96ca47e88010a3c4b9f901d",
+  "snapshotInputs": [
+    {
+      "path": "app/anatomy-data.ts",
+      "gitBlob": "aad16f695cae037d5254663fcdd06fb91ab4c877"
+    },
+    {
+      "path": "app/body-content.ts",
+      "gitBlob": "18d7338b27734bc5ae36005f1386db84ff2024ad"
+    },
+    {
+      "path": "app/dissection-data.ts",
+      "gitBlob": "5564d8bc03387c0905baa7263e7f595733097004"
+    },
+    {
+      "path": "content/arm-vascular-studies.ts",
+      "gitBlob": "a6ac10f06c959feea468463cb2cef297206a9480"
+    },
+    {
+      "path": "content/deferent-duct-study.ts",
+      "gitBlob": "de9e45accfed7625681028481e8699c9de81c6ba"
+    },
+    {
+      "path": "content/elbow-studies.ts",
+      "gitBlob": "0b269679376b60b8d9cf32c85f6b37bcad631aa1"
+    },
+    {
+      "path": "content/genicular-study.ts",
+      "gitBlob": "b82cc6baf7ff4c7d5098a1b413d41896f6833ad7"
+    },
+    {
+      "path": "content/hip-imaging-concepts.ts",
+      "gitBlob": "010436cec6b206ec60ce91a6feaf40f7990d8aae"
+    },
+    {
+      "path": "content/hip-imaging-pins.json",
+      "gitBlob": "107ba8c59cbe5bb11c4d3851fd67570fe2a483ba"
+    },
+    {
+      "path": "content/limb-vascular-studies.ts",
+      "gitBlob": "4d6179f47e1412309d8feedad1726fec7c019f21"
+    },
+    {
+      "path": "content/longus-colli-studies.ts",
+      "gitBlob": "57a1c0ff7ffab8516055a9d0ea259a5a67497c6d"
+    },
+    {
+      "path": "content/shoulder-xray-bindings.json",
+      "gitBlob": "52e7109f6827a651421aff621aaed4e4c2eaad86"
+    },
+    {
+      "path": "content/spine-imaging-concepts.ts",
+      "gitBlob": "3eecdc6ba012a1b794317c97ac16200f8060626f"
+    },
+    {
+      "path": "content/spine-imaging-pins.json",
+      "gitBlob": "aeb20d18808d9a0a701c2b7dbf00c667756fd942"
+    },
+    {
+      "path": "content/tarsal-imaging-concepts.ts",
+      "gitBlob": "7c27249f27df1d43958142c59cc682f5d5d0e8c8"
+    },
+    {
+      "path": "content/tarsal-imaging-pins.json",
+      "gitBlob": "8daf7202f4f7184ea29d3c5bd2923403cc0eb1df"
+    },
+    {
+      "path": "content/tentorium-studies.ts",
+      "gitBlob": "da69837025887277326b74e34436c1cd6a8a7277"
+    },
+    {
+      "path": "content/wrist-imaging-concepts.ts",
+      "gitBlob": "6af781924b1e8298989cc8d17c7a24caedbee430"
+    },
+    {
+      "path": "content/wrist-imaging-pins.json",
+      "gitBlob": "10706e158b890da0d3803731ab9608cd531e21a3"
+    },
+    {
+      "path": "lib/abdominal-organ-clinical-curriculum.ts",
+      "gitBlob": "e19339852795eb49478abd41e127193b628d208a"
+    },
+    {
+      "path": "lib/abdominal-vessel-clinical-curriculum.ts",
+      "gitBlob": "831386d6ae7f9e4134db3a05df4942b207a63de5"
+    },
+    {
+      "path": "lib/abdominal-vessel-curriculum.ts",
+      "gitBlob": "5523b6544457ce007d64f54855a5348befc63c36"
+    },
+    {
+      "path": "lib/achilles-imaging.ts",
+      "gitBlob": "710bec2d215b1cb945807758ab65786e39fbca96"
+    },
+    {
+      "path": "lib/acral-bone-clinical-curriculum.ts",
+      "gitBlob": "ccf515fb0b42d62a48dba47704a1828eed4e260f"
+    },
+    {
+      "path": "lib/acral-bone-curriculum.ts",
+      "gitBlob": "f332c4bd11656179d4b15e56cca77c7f7ff2e978"
+    },
+    {
+      "path": "lib/acral-bone-studies.ts",
+      "gitBlob": "625df79548cf6e916a25e19c04530b7ca9e20265"
+    },
+    {
+      "path": "lib/axial-anatomy.ts",
+      "gitBlob": "3695d83896939b19bf785c7db45081598f74a210"
+    },
+    {
+      "path": "lib/axial-bone-clinical-curriculum.ts",
+      "gitBlob": "ab782a9ab87f9a23cbfeb4ba6b12faf0fa39cb82"
+    },
+    {
+      "path": "lib/axial-connective-clinical-curriculum.ts",
+      "gitBlob": "ff00f903bcc923b2603f5b265366a6a62f1aacc7"
+    },
+    {
+      "path": "lib/body-display-catalog.ts",
+      "gitBlob": "32b2bb3e2162be7d208adeefb8ad1dea50e821fe"
+    },
+    {
+      "path": "lib/body-source-additions.ts",
+      "gitBlob": "bde3568076a227856aa38843155a3a1663ba9bfb"
+    },
+    {
+      "path": "lib/brachial-veins.ts",
+      "gitBlob": "514a5706771a590447f13c21bf8b88da0f5c76a0"
+    },
+    {
+      "path": "lib/central-neural-clinical-curriculum.ts",
+      "gitBlob": "00217ffc5943251eeb8bc99577d400784b286fbd"
+    },
+    {
+      "path": "lib/central-neuro-curriculum.ts",
+      "gitBlob": "e926fb366b5f007ca7094d4eb67f3b703a44e846"
+    },
+    {
+      "path": "lib/connective-anatomy-curriculum.ts",
+      "gitBlob": "0c61f192e47bb88e7b7b2590efc7ef327ac153ee"
+    },
+    {
+      "path": "lib/connective-curriculum.ts",
+      "gitBlob": "5079d3c0078b5657467a0b11220530d34fa85d5f"
+    },
+    {
+      "path": "lib/content-types.ts",
+      "gitBlob": "e44215350417d8ab2601582bc8a0dd627bee5aba"
+    },
+    {
+      "path": "lib/cranial-bone-clinical-curriculum.ts",
+      "gitBlob": "9a2aab9e5ec59abf7dc4de82e0d91a0638b7623e"
+    },
+    {
+      "path": "lib/cranial-bone-curriculum.ts",
+      "gitBlob": "e1a483acbabd6aaffd10ff01a905655e479e89f9"
+    },
+    {
+      "path": "lib/cubital-veins.ts",
+      "gitBlob": "2df08739c687f53231c668d10a66d02b00927f2a"
+    },
+    {
+      "path": "lib/deep-leg-veins.ts",
+      "gitBlob": "aa02dc4ccc72cf0cc40c9ec3a3753ce36bdd115e"
+    },
+    {
+      "path": "lib/deep-neck-curriculum.ts",
+      "gitBlob": "b66c068f6959ebbf9b1ffc638361fe8054cbe434"
+    },
+    {
+      "path": "lib/deferent-ducts.ts",
+      "gitBlob": "0bcbf90cf476a72c00453ce8402145f5dcdf3fc9"
+    },
+    {
+      "path": "lib/dental-clinical-curriculum.ts",
+      "gitBlob": "7c178a400320182fc09b59367cc4bc7a3b69c4bc"
+    },
+    {
+      "path": "lib/foot-clinical-curriculum.ts",
+      "gitBlob": "0fc98ed16b2b2b72b90d4e72b039f0be20bf0cb7"
+    },
+    {
+      "path": "lib/foot-curriculum.ts",
+      "gitBlob": "31fe0568483a4bd1d8e5c9f822933facc31fcf46"
+    },
+    {
+      "path": "lib/foot-vascular-anatomy.ts",
+      "gitBlob": "7e8d56a27233065e07d873e65b94980169400ddf"
+    },
+    {
+      "path": "lib/forearm-clinical-curriculum.ts",
+      "gitBlob": "e9302cfc742f74930f18849ca4f1a9b5d767f4e3"
+    },
+    {
+      "path": "lib/forearm-curriculum.ts",
+      "gitBlob": "189e41ff8827b0ebbc9b544e86ec88fa9ad3faea"
+    },
+    {
+      "path": "lib/forearm-vascular-anatomy.ts",
+      "gitBlob": "2e0aee5fdc982db7bf4f6e22d0dc9aa2d6611ac1"
+    },
+    {
+      "path": "lib/forearm-vessel-clinical-curriculum.ts",
+      "gitBlob": "beb091e9e52736105dd182b2d35cc19051fcb683"
+    },
+    {
+      "path": "lib/genicular-arteries.ts",
+      "gitBlob": "1535188f0016f07b46ebbb3c2189b62f1c42c09b"
+    },
+    {
+      "path": "lib/hand-clinical-curriculum.ts",
+      "gitBlob": "9ea6c5d8f6e99a2926eea4e8dc15d10339083642"
+    },
+    {
+      "path": "lib/hand-curriculum.ts",
+      "gitBlob": "3d7f9f04eb4c67e670d59392f9ce805b173a4219"
+    },
+    {
+      "path": "lib/hand-vascular-anatomy.ts",
+      "gitBlob": "40d947cb467c51c46dde8b2894d42a4931c608ee"
+    },
+    {
+      "path": "lib/hand-venous-anatomy.ts",
+      "gitBlob": "4888af74e92034a2c680884b1c89e9cae40a070e"
+    },
+    {
+      "path": "lib/hand-vessel-clinical-curriculum.ts",
+      "gitBlob": "cd1f29e64c56eef37de7371e313636fe7e2b8465"
+    },
+    {
+      "path": "lib/head-clinical-curriculum.ts",
+      "gitBlob": "3dbe38fb6d1220149b851e0eefbda967a9547b82"
+    },
+    {
+      "path": "lib/head-detail.ts",
+      "gitBlob": "33b66bb7de8284d03918b8996d37a83ffb987d60"
+    },
+    {
+      "path": "lib/head-neck-vessel-clinical-curriculum.ts",
+      "gitBlob": "72be1f45d6f226c8e73e8ab621ff3fd901fb74a3"
+    },
+    {
+      "path": "lib/head-organ-clinical-curriculum.ts",
+      "gitBlob": "780c829aea466699bd1025d50b358113166d84a5"
+    },
+    {
+      "path": "lib/hepatic-veins.ts",
+      "gitBlob": "bcdea1d0f00508b0ebedb1e3fd5a304cbc0e6aad"
+    },
+    {
+      "path": "lib/hip-imaging.ts",
+      "gitBlob": "8ebacbc808704d90a25ecc0bb56625151c85a9b1"
+    },
+    {
+      "path": "lib/inferior-thyroid-arteries.ts",
+      "gitBlob": "8afadfe72b35546b86c5c6fcbbcabac03dfa2ac6"
+    },
+    {
+      "path": "lib/intestinal-junction.ts",
+      "gitBlob": "c0ddcb174dc251bb0646709231e7174245d62266"
+    },
+    {
+      "path": "lib/knee-imaging.ts",
+      "gitBlob": "5b3e23321b44eabcc3eadc2e40e141f6eead80e0"
+    },
+    {
+      "path": "lib/knee-studies.ts",
+      "gitBlob": "235c14ebc86b1b88d6c0ae8dd936480a88a25315"
+    },
+    {
+      "path": "lib/laryngeal-anatomy.ts",
+      "gitBlob": "9870195eddc7fd1878b9604d785080c441d2cf12"
+    },
+    {
+      "path": "lib/leg-clinical-curriculum.ts",
+      "gitBlob": "60d831022a46e9b25dddb2f2bf41db178d1a05b6"
+    },
+    {
+      "path": "lib/leg-curriculum.ts",
+      "gitBlob": "77daf8db474ae16f63457deead177b6eb5704bd8"
+    },
+    {
+      "path": "lib/limb-bone-clinical-curriculum.ts",
+      "gitBlob": "497717180338f6a4cd27b575734831a80e037a05"
+    },
+    {
+      "path": "lib/limb-bone-curriculum.ts",
+      "gitBlob": "ac9a74060548069e4392acd762ffb58b4da3f043"
+    },
+    {
+      "path": "lib/limb-connective-clinical-curriculum.ts",
+      "gitBlob": "bc5d7a9f5059450788f4fbfd56beee81bd4da746"
+    },
+    {
+      "path": "lib/longus-colli.ts",
+      "gitBlob": "645553d7bc5513d817f5d40e459d16f5799ae9df"
+    },
+    {
+      "path": "lib/lower-limb-vessel-clinical-curriculum.ts",
+      "gitBlob": "4682af96ae17b44c0b63775d1eae8cc3a756a310"
+    },
+    {
+      "path": "lib/mesenteric-anatomy.ts",
+      "gitBlob": "215f183b6f5fce941e2a8b49716bb209101e3efa"
+    },
+    {
+      "path": "lib/neck-clinical-curriculum.ts",
+      "gitBlob": "0769c9983654f4b3e35396ae05f97060067962bc"
+    },
+    {
+      "path": "lib/neck-curriculum.ts",
+      "gitBlob": "44407cd4c8899893645d17949e05df7f468f8f56"
+    },
+    {
+      "path": "lib/neural-anatomy-curriculum.ts",
+      "gitBlob": "defc9b4837837cc210b17041ede26824f13f022d"
+    },
+    {
+      "path": "lib/neuroanatomy.ts",
+      "gitBlob": "9481ee64552312c4cba9a9212db62fc103f91960"
+    },
+    {
+      "path": "lib/ocular-anatomy.ts",
+      "gitBlob": "9b1ffebf102b1d73187bf6698004ba8b33dd6811"
+    },
+    {
+      "path": "lib/orbital-curriculum.ts",
+      "gitBlob": "1c3f0b93c11f9b1d240665c0d9354ae830abba40"
+    },
+    {
+      "path": "lib/orbital-motor-studies.ts",
+      "gitBlob": "0888dc60e5180b2ef59515023b197837ab218a56"
+    },
+    {
+      "path": "lib/orbital-nerve-curriculum.ts",
+      "gitBlob": "016b7accf7469219933519dfe39ba9a6efaa2716"
+    },
+    {
+      "path": "lib/orbital-neural-clinical-curriculum.ts",
+      "gitBlob": "b5b2a9cc6959328dde88cbd8a84bfae4487f6e08"
+    },
+    {
+      "path": "lib/organ-anatomy-curriculum.ts",
+      "gitBlob": "11efaa49d39caf40c91760e6dbd9ce49236dc658"
+    },
+    {
+      "path": "lib/organ-curriculum.ts",
+      "gitBlob": "f0810cc5b944b58fa89e4c310af7df9ebf9cef39"
+    },
+    {
+      "path": "lib/pancreatic-anatomy.ts",
+      "gitBlob": "b00c22c23f50207932b330fbf3729950a47197a4"
+    },
+    {
+      "path": "lib/pelvic-curriculum.ts",
+      "gitBlob": "522f366685ce7319e91635f461c55f847b35ce32"
+    },
+    {
+      "path": "lib/pelvic-organ-clinical-curriculum.ts",
+      "gitBlob": "e8ab8cb05469c83d06e456dd46000616a9c805b3"
+    },
+    {
+      "path": "lib/pelvic-vessel-clinical-curriculum.ts",
+      "gitBlob": "383259b577a72ca75b39835e04822c826d984e6c"
+    },
+    {
+      "path": "lib/pelvic-vessel-curriculum.ts",
+      "gitBlob": "d71dfd04603cd32c08845d3cacda3c129a3c0645"
+    },
+    {
+      "path": "lib/portal-veins.ts",
+      "gitBlob": "6f6057eeafe408516dc6ceebedb1270e58f5274d"
+    },
+    {
+      "path": "lib/regional-connective-clinical-curriculum.ts",
+      "gitBlob": "381f8ae254464ed2c5cd8d3da156db350a17c0c4"
+    },
+    {
+      "path": "lib/regional-vessel-curriculum.ts",
+      "gitBlob": "6a63735064aacfe42aebbd46ecd40a2ad147210e"
+    },
+    {
+      "path": "lib/renal-studies.ts",
+      "gitBlob": "6cec0c8a8d8a87b20f00ceb3216170923a7d8db0"
+    },
+    {
+      "path": "lib/scapular-arm-clinical-curriculum.ts",
+      "gitBlob": "73b07f6f1866faa2460edef9a9a4faccc4fcad82"
+    },
+    {
+      "path": "lib/shoulder-arm-curriculum.ts",
+      "gitBlob": "945e3607bbd7027907d516d000763275cdb6fc62"
+    },
+    {
+      "path": "lib/shoulder-arm-vessel-clinical-curriculum.ts",
+      "gitBlob": "8274cb195344c8adf5ae78c01c65ca7847981321"
+    },
+    {
+      "path": "lib/shoulder-clinical-curriculum.ts",
+      "gitBlob": "de0abe4edd4d9f270a1e63ebdddbc2e05e6e648e"
+    },
+    {
+      "path": "lib/spinal-bone-curriculum.ts",
+      "gitBlob": "32793221cc17647851a81d060df431cdc39a0577"
+    },
+    {
+      "path": "lib/spinal-level-studies.ts",
+      "gitBlob": "c2c52be5af70b12d7d39d4c1b35fc98d0550bfe7"
+    },
+    {
+      "path": "lib/spine-imaging.ts",
+      "gitBlob": "10c75b755084bfebc0e745ead6e9a0a345ae05dc"
+    },
+    {
+      "path": "lib/swallowing-curriculum.ts",
+      "gitBlob": "df0452751b8a77d7a9897ba570b283c57e50cc10"
+    },
+    {
+      "path": "lib/tarsal-imaging.ts",
+      "gitBlob": "69951dc0848e23a6b50908e03bbdf3c6b6925970"
+    },
+    {
+      "path": "lib/tentorium.ts",
+      "gitBlob": "9931f1265f0ab4acc47ccc0f0ff9d653f7eed2c7"
+    },
+    {
+      "path": "lib/thigh-clinical-curriculum.ts",
+      "gitBlob": "7c8d8fff4d8901ca64a1392ba17764f068698c74"
+    },
+    {
+      "path": "lib/thigh-curriculum.ts",
+      "gitBlob": "029733fb38ab0316a8b3d3f6e17c583e983d29b1"
+    },
+    {
+      "path": "lib/thoracic-anatomy.ts",
+      "gitBlob": "d2a172754e94451334650cada7001fe24a86e865"
+    },
+    {
+      "path": "lib/thoracic-bone-curriculum.ts",
+      "gitBlob": "963235e69a5b71ba116181f804948e653265489c"
+    },
+    {
+      "path": "lib/thoracic-organ-clinical-curriculum.ts",
+      "gitBlob": "6aa31bc21a7c13ec5140c3b683a09897a0168108"
+    },
+    {
+      "path": "lib/thoracic-vessel-clinical-curriculum.ts",
+      "gitBlob": "36565bbdf6235143676ff8a367f0a2935ce2aeaa"
+    },
+    {
+      "path": "lib/thoracic-vessel-curriculum.ts",
+      "gitBlob": "f0f739eb19b1e57e2bcfc01ee941dbce226b193d"
+    },
+    {
+      "path": "lib/trunk-clinical-curriculum.ts",
+      "gitBlob": "aba67f301f3744d89132222e5c58bedf7d88379d"
+    },
+    {
+      "path": "lib/trunk-curriculum.ts",
+      "gitBlob": "e59bf634a671339f77683bc72dbef2f230339cfd"
+    },
+    {
+      "path": "lib/upper-limb-vessel-curriculum.ts",
+      "gitBlob": "67f13827f80c1098d46343f145616de1c15590b1"
+    },
+    {
+      "path": "lib/wrist-imaging.ts",
+      "gitBlob": "f9236ee67f7229ab9c3784eddcc6cedc3dea3f61"
+    },
+    {
+      "path": "lib/xray-teaching.ts",
+      "gitBlob": "c047017d6208e500b44c2b90214bac6df895c8a5"
+    },
+    {
+      "path": "package-lock.json",
+      "gitBlob": "a98e04f275aeba7c355cfa942befbb4f6b6ad2e2"
+    },
+    {
+      "path": "public/models/bodyparts3d/brachial-veins/catalog.json",
+      "gitBlob": "883691ccedf46f1f82c68015da76a08e5a979323"
+    },
+    {
+      "path": "public/models/bodyparts3d/cubital-veins/catalog.json",
+      "gitBlob": "457d1bc3e17cd6bcb252920a7024d575aea393bb"
+    },
+    {
+      "path": "public/models/bodyparts3d/deep-leg-veins/catalog.json",
+      "gitBlob": "8990e60d7eece65eb3b96e164e13f4a450e22a05"
+    },
+    {
+      "path": "public/models/bodyparts3d/deferent-ducts/catalog.json",
+      "gitBlob": "1f59f04814a58f01ac009300506b3ec6f3b87455"
+    },
+    {
+      "path": "public/models/bodyparts3d/eye-layers/display-correction.json",
+      "gitBlob": "fd806de3fa7c9a74b11241947fd67c15b49f0352"
+    },
+    {
+      "path": "public/models/bodyparts3d/full-body/catalog.json",
+      "gitBlob": "2f4dc97cf918c3cff128dbb55092260430634eaa"
+    },
+    {
+      "path": "public/models/bodyparts3d/genicular-arteries/catalog.json",
+      "gitBlob": "d27d2230792af437be38426afa075746a9061430"
+    },
+    {
+      "path": "public/models/bodyparts3d/hepatic-veins/catalog.json",
+      "gitBlob": "a936666041d721d6b75e170901a338922582820d"
+    },
+    {
+      "path": "public/models/bodyparts3d/inferior-thyroid-arteries/catalog.json",
+      "gitBlob": "7a708fd98cd70977ba0a23dee01be41e42f9e3d5"
+    },
+    {
+      "path": "public/models/bodyparts3d/longus-colli/catalog.json",
+      "gitBlob": "8e06c72830cdfbbf23331a3cd5589893db71a77c"
+    },
+    {
+      "path": "public/models/bodyparts3d/pancreas/display-correction.json",
+      "gitBlob": "25dbbe88ea6ed744f627373c6683998655322bb6"
+    },
+    {
+      "path": "public/models/bodyparts3d/portal-veins/catalog.json",
+      "gitBlob": "49b2eec8fa663655e3ec45cb762ae251a4eae7f3"
+    },
+    {
+      "path": "public/models/bodyparts3d/tentorium/catalog.json",
+      "gitBlob": "2d0c0d5ee5bf76019bc0d0edd79a67476ec433ac"
+    }
+  ]
+}

@@ -1,5 +1,20 @@
 # Anatomy atlas backup — 12 September 2026
 
+## 12 September 2026 — upper-vessel historical validation repaired (no runtime change)
+
+Source `73e9c78faaefa41ae938271ee40e75d41946119b`, tree `810c1862d72c49f93f1c634e3a33ab2a6377c8c6`, parent `1ddc0732fd882bf3380310ad6b3f673bf014fb5f`. Seven offline validation/evidence/documentation paths changed. This resolves the legacy failure recorded immediately below: the original checksum covered1,060 records, while the failing test supplied1,078 records and three later study groups. The18 later anatomy records are preserved in the viewer and current checks; only the historical comparison reconstructs the prior scope.
+
+Independent compilation of132 original Git inputs at `50ac6f326f14e292c6382e518adaeea20169163c` reproduced original checksum `ff12af39a1a8fbed6716321fba0549d93bec2be438dfd475be60bad5bd36a0be` exactly; it was not repinned. Historical source tree `e19814086b1b09f81250c0284e14e30649416ab5`; compact evidence SHA256 `7e6a8cb979532d556b4500e1744b8f1e8559422fc144ec6fe1c871fc267e8318`. Full prior catalogue/recipe fingerprints and explicit later IDs prevent broad omission or automatic baseline acceptance. Seven negative historical mutations fail. Ordinary validation does not require original Git history.
+
+Passed: all three documented upper-vessel commands (pins, transition, validation);34 placements,42 actual notes renders,336 altered-source/topic rejections, six invalid asset paths,9,668 unaffected current sections; optional independent provenance regeneration; tarsal regression; requirement inventory; renderer freshness. No medical facts, geometry, UI, rights, dependencies, schema, private data or runtime input changed. Renderer remains399 inputs / `d106b507d553ee16647a9702f8f707f0685d2886d4088f837619ccf41a2fc697`. No clinical or browser/device approval claimed; this is not a whole-suite audit.
+
+D-drive stem `atlas-upper-vessel-validation-2026-09-12`:
+
+- `.delta.tar`:61440 bytes, SHA256 `0520697a7233415254d33600686083b6902192ad9ab581862682323d1ca56b8b`.
+- `.incremental.bundle`:13970 bytes, SHA256 `f5ffeed08b01007209a52bb9afb3afc3247deb9263212150903e566663774c0e`.
+
+Independent fetch/full-fsck at `refs/verification/upper-vessel-validation-20260912` verifies source/tree, with verifier main preserved. Earlier recovery files remain intact. The unchanged runtime package remains `atlas-limb-bone-imaging-2026-09-12.site.tar.gz` (source1ddc073…,122619234 bytes,SHA256 `de3de236d1af178f3890be387bf0746efb6a525685fd673b73da8459417846ab`), verified rather than redundantly rebuilt/copied. Exact source pushed to Sites main; no runtime upload/deployment attempted and last verified live version remains171. Source/runtime recovery is not a conversation or private database backup. Website main unchanged.
+
 ## 12 September 2026 — limb-bone imaging teaching (runtime publication pending)
 
 Source `1ddc0732fd882bf3380310ad6b3f673bf014fb5f`, tree `579599d1b7bb906882b78cd560670bb6e5376070`, parent `f82bfdf411a10667a1c3aa5f3efdc05e55051ee8`. Twenty-six exact source paths mirrored. Twelve existing sided radius/ulna/fibula/femur/tibia/patella records gain 24 introductory placements (12 X-ray, six CT, six MRI) from 12 topic texts and six landmark notes. Existing knee CT/MRI/US, all other prior teaching/recipes and geometry remain intact. Reading references are linked primary medical sources; no images, external prose, new dataset or dependency imported. Current body teaching counts: CT148, MRI150, X-ray95 draft representations, not clinical approvals.

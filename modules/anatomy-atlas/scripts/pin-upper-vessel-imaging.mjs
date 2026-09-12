@@ -2,7 +2,6 @@ import assert from 'node:assert/strict';
 import { readFile, writeFile, access } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { contentContext } from './content-contract-tools.mjs';
-import { bodyDisplayCatalog } from '../lib/body-display-catalog.ts';
 import {
   upperVesselImagingGroups,
   upperVesselImagingTopics,
@@ -15,7 +14,8 @@ assert.equal(
   createHash('sha256').update(raw).digest('hex'),
   '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7',
 );
-const catalog = bodyDisplayCatalog(JSON.parse(raw)),
+const { api } = await contentContext();
+const catalog = api.bodyDisplayCatalog(JSON.parse(raw)),
   ids = Object.values(upperVesselImagingGroups).flat();
 assert.equal(ids.length, 14);
 assert.equal(new Set(ids).size, 14);
@@ -70,7 +70,6 @@ if (process.argv.includes('--check')) {
     assert.deepEqual(p[key], base[key]);
 } else {
   await assert.rejects(access(path), 'Never overwrite source admission');
-  const { api } = await contentContext();
   const previousAllLessonsAndRecipesHash = hash({
     body: catalog.structures.map((s) => ({
       id: s.id,

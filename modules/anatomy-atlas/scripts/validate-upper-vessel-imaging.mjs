@@ -1,11 +1,12 @@
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import ts from 'typescript';
 import { contentContext, contentValidator } from './content-contract-tools.mjs';
 import { authoringBeforeLowerArterialImaging } from './lower-arterial-imaging-history.mjs';
+import { upperVesselBaselineScope } from './upper-vessel-baseline-scope.mjs';
 import {
   authoringBeforeUpperVesselImaging,
   upperVesselContentHash as hash,
@@ -23,20 +24,29 @@ const preArterial = authoringBeforeLowerArterialImaging({ api, catalog });
 const pins = JSON.parse(
   await readFile('content/upper-vessel-imaging-pins.json'),
 );
+const baseline = upperVesselBaselineScope(catalog, before.dissectionProfiles);
+assert.equal(baseline.sourceCommit, pins.sourceCommit);
+assert.equal(baseline.originalWholeCurriculumHash, pins.previousAllLessonsAndRecipesHash);
+const historicalCurriculum = (bodyLesson) => ({
+  body: baseline.catalog.structures.map(s=>({id:s.id,sections:Object.fromEntries(api.contentTabs.map(t=>[t,bodyLesson(s,t)]))})),
+  shoulder: api.structures, recipes: baseline.profiles,
+});
 assert.equal(
-  hash({
-    body: catalog.structures.map((s) => ({
-      id: s.id,
-      sections: Object.fromEntries(
-        api.contentTabs.map((t) => [t, before.bodyLesson(s, t)]),
-      ),
-    })),
-    shoulder: api.structures,
-    recipes: before.dissectionProfiles,
-  }),
+  hash(historicalCurriculum(before.bodyLesson)),
   pins.previousAllLessonsAndRecipesHash,
-  'All earlier body/shoulder teaching and recipes retained',
+  'All original 1060 body records, shoulder teaching and recipes retained',
 );
+// Recorded later additions are omitted only from this historical checksum,
+// never from the current validation loops below. Unknown changes still fail.
+let rejectedHistoricalMutations=0;
+for(const mutate of [
+  c=>c.structures.pop(), c=>c.structures.push({...c.structures[0],id:'unrecorded-new-structure'}),
+  c=>c.structures[0].name+=' changed', c=>c.structures.at(-1).name+=' changed',
+  c=>c.bundles.at(-1).sha256='changed',
+]){const bad=structuredClone(catalog);mutate(bad);assert.throws(()=>upperVesselBaselineScope(bad,api.dissectionProfiles),/Unrecorded catalogue/);rejectedHistoricalMutations++;}
+const badProfiles=structuredClone(api.dissectionProfiles);badProfiles['whole-body'].focuses.at(-1).title+=' changed';
+assert.throws(()=>upperVesselBaselineScope(catalog,badProfiles),/Unrecorded recipe/);rejectedHistoricalMutations++;
+assert.notEqual(hash(historicalCurriculum((s,t)=>{const lesson=before.bodyLesson(s,t);return s.id===baseline.catalog.structures[0].id&&t==='anatomy'?{...lesson,body:'unrecorded'}:lesson;})),pins.previousAllLessonsAndRecipesHash);rejectedHistoricalMutations++;
 assert.equal(pins.sourceVersion, catalog.sourceVersion);
 assert.deepEqual(pins.coordinateSystem, catalog.coordinateSystem);
 for (const b of pins.bundles) {
@@ -217,8 +227,7 @@ for (const e of pins.entries)
     }
   }
 assert.equal(JSON.stringify(catalog), initial);
-console.log(
-  JSON.stringify({
+const report = {
     selections: pins.entries.length,
     distinctTopicTexts: 10,
     sections,
@@ -230,5 +239,10 @@ console.log(
     geometryChanged: false,
     clinicalApproval: false,
     browserTesting: false,
-  }),
-);
+    historicalSelections: baseline.catalog.structures.length,
+    currentSelections: catalog.structures.length,
+    historicalChecksumUnchanged: true,
+    rejectedHistoricalMutations,
+  };
+await writeFile('docs/upper-vessel-imaging-validation.json', JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify(report));
