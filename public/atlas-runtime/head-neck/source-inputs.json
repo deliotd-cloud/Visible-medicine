@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "c2c2aa9cf5d7a1188e2320dded72d808da7ad9804f2059415a24168f5a495f0d"
+    "sha256": "2055e33c30383d5c5cd548b20326b04b8e29f6036eaf989ef51f432d1a4be610"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "0ae82f202896ae486be850da03a92d6fc611158e4f1774c4d9e36fba2ec02177"
+    "sha256": "9958e050cea7262ebedc18dba59ff5bafadfecc83b204ff078f087a0662243ab"
   },
   {
     "path": "app/body-explorer.css",
@@ -826,6 +826,14 @@
   {
     "path": "content/thoracic-bone-imaging.ts",
     "sha256": "1929be45d018e3803ac092f803e87e26f9db7e8458c6046e3d404383ef0941c2"
+  },
+  {
+    "path": "content/thoracoabdominal-organ-imaging-pins.json",
+    "sha256": "e8c92ef7101f083c10c75c0b109c5bcd58197fe5a307ffd8203fcfee8d66a129"
+  },
+  {
+    "path": "content/thoracoabdominal-organ-imaging.ts",
+    "sha256": "daf1e872df2e2f1d1c183000744080a87d8fdc794e671f22d1828870265375c6"
   },
   {
     "path": "content/um-bone-cartilage-clinical.ts",
@@ -1834,6 +1842,10 @@
   {
     "path": "lib/thoracic-vessel-curriculum.ts",
     "sha256": "d05924f41b4921cc3d8c3dd97c5171c88ac8f4f949d9ce7cddcc715eb647aac7"
+  },
+  {
+    "path": "lib/thoracoabdominal-organ-imaging.ts",
+    "sha256": "2048fd644d43721614d44b749511e3f877623873391edc227f70994f2e81ec08"
   },
   {
     "path": "lib/trunk-clinical-curriculum.ts",

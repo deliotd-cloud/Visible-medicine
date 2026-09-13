@@ -2,6 +2,33 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 13 September — chest and abdominal organ imaging
+
+Atlas `6d8c900b4f80843ca7568e4222ffb49d0d22e1f1` adds 42 source-bound draft
+orientation notes for 15 existing organs: CT/MRI for all and ultrasound for 12.
+The heart, sided lungs, central airways, oesophagus, thymus, stomach, bowel,
+remaining biliary ducts, appendix and ileocecal junction retain their exact
+source context and cautions. Esophageal/main-bronchial external US topics remain
+pending; this is not a claim about specialised endoscopic ultrasound.
+
+All 42 actual note renders, 798 source/topic rejection checks, 1,101 current
+schemas and preservation of the other 9,867 topics pass. Previous orbital/neck,
+full 33,444 historical content and 235 review checks, TypeScript and Atlas builds
+also pass. All models and dissection recipes remain unchanged. No patient data,
+figures, scans, dependency or new control is introduced. Nineteen references are
+reading links, not redistribution permissions. Teaching remains draft for the
+owner's revision-bound clinical review, particularly modality visibility,
+cardiac/echo planes, thymic age variation, bowel distension/nonvisualisation and
+biliary variants. No review approval is copied to the new display revision.
+
+The shared website module is generated from committed source. Publication,
+website tests and GitHub/D recovery are recorded in the dated thoracoabdominal
+checkpoint. Homepage equal-sized previews, compact controls, independent
+entitlements and Didanix Education/light boundaries remain intact. The full
+Atlas goal stays active: next remaining thoracoabdominal vessel teaching,
+regional anatomy/dissection detail and cleared Education/case/lecture journeys.
+Do not restart completed native MRI QA or unchanged asset/upload holds.
+
 ## 13 September — balanced homepage modality previews
 
 Owner-requested presentation change: the homepage hero now gives 3D, CT, MRI,

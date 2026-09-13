@@ -1,5 +1,14 @@
 # Third-party notices
 
+## Chest and abdominal organ imaging teaching — 13 September 2026
+
+Original MIT resolver code and concise factual drafts add 42 teaching placements
+for 15 existing selections. Nineteen publication/society reading references are
+not imported articles, diagrams, scans, tables or datasets and do not grant
+redistribution rights. No model, texture, font, dependency, paid API or mandatory
+service is introduced. All existing asset notices and source holds remain.
+See [scope, reading references and review](../docs/THORACOABDOMINAL_ORGAN_IMAGING.md).
+
 ## Hand and foot bone CT/MRI teaching — 13 September 2026
 
 Original MIT resolver code and concise factual drafts extend 76 existing bone
