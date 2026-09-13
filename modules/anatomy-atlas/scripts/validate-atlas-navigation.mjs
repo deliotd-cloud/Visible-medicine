@@ -147,6 +147,7 @@ runInNewContext(output.outputFiles[0].text, {
   exports: vmModule.exports,
   console,
   URLSearchParams,
+  window: { innerWidth: 1280, innerHeight: 720 },
   process: { env: { NODE_ENV: 'test' } },
   require: (id) =>
     id === 'react' ? shim : id === 'next/link' ? () => null : require(id),
@@ -234,7 +235,7 @@ same(
   Array.from(api.noteGroups.flatMap((g) => g.sections.map(([id]) => id))).sort(
     (a, b) => a.localeCompare(b, 'en'),
   ),
-  ['anatomy', 'clinical', 'ct', 'function', 'mri', 'pathology', 'ultrasound'],
+  ['anatomy', 'clinical', 'ct', 'function', 'mri', 'pathology', 'ultrasound', 'xray'],
 );
 same(api.noteGroups.map((g) => g.title).join('/'), 'Anatomy/Clinical/Imaging');
 

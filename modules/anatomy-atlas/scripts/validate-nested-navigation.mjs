@@ -80,6 +80,7 @@ const uiModule = { exports: {} },
     exports: uiModule.exports,
     console,
     URLSearchParams,
+    window: { innerWidth: 1280, innerHeight: 720 },
     process: { env: { NODE_ENV: 'test' } },
     require: (id) =>
       id === 'react' ? shim : id === 'next/link' ? () => null : require(id),
@@ -343,6 +344,8 @@ const workspace = {
   exam: false,
   chooseMode: (mode) => calls.push(['mode', mode]),
   showInfo: () => calls.push(['info']),
+  focusView: false,
+  panelLayout: null,
 };
 const props = {
   catalog,
@@ -395,6 +398,60 @@ for (const entry of atlasSearchIndex(catalog, 'head-neck', 'both').filter(
     'Ordinary search close returns to trigger',
   );
 }
+
+// Search must not steal focus from a newly opened info/tools sheet. Exercise
+// the actual component closures at standalone, focus-view and embedded sizes.
+for (const layout of [
+  { name: 'phone', width: 390, focusView: false, panelLayout: null, info: true, tools: true },
+  { name: 'tablet', width: 900, focusView: false, panelLayout: null, info: false, tools: true },
+  { name: 'desktop', width: 1280, focusView: false, panelLayout: null, info: false, tools: false },
+  { name: 'focus view', width: 1280, focusView: true, panelLayout: null, info: true, tools: true },
+  { name: 'embedded narrow', width: 1400, focusView: false, panelLayout: { info: true, tools: true, short: false }, info: true, tools: true },
+  { name: 'embedded wide', width: 1400, focusView: false, panelLayout: { info: false, tools: false, short: false }, info: false, tools: false },
+]) {
+  Object.assign(workspace, { focusView: layout.focusView, panelLayout: layout.panelLayout });
+  uiEnv.window.innerWidth = layout.width;
+  for (const type of ['select', 'window', 'focus']) {
+    const entry = atlasSearchIndex(catalog, 'head-neck', 'both').find(e => e.action.type === type);
+    states = [true, entry.label, type === 'select' ? 'structure' : 'view', 100, null];
+    refs = [{ current: searchLauncher }, { current: false }];
+    const actionProps = {
+      ...props,
+      onSelect: id => calls.push(['select', id]),
+      onWindow: id => calls.push(['window', id]),
+      onFocus: id => calls.push(['focus', id]),
+    };
+    const renderSearch = () => {
+      cursor = 0; refCursor = 0; active = true;
+      const result = api.AtlasSearch(actionProps);
+      active = false;
+      return result;
+    };
+    let tree = renderSearch();
+    calls.length = 0;
+    const button = walk(tree, n => n.type === 'button' && n.key === entry.key)[0];
+    workspace.exam = true;
+    button.props.onClick();
+    same(calls, [], 'Exam keeps search inert');
+    workspace.exam = false;
+    button.props.onClick();
+    if (type !== 'select') {
+      same(calls, [], 'Study preview does not mutate the view');
+      tree = renderSearch();
+      walk(tree, n => n.props.children === 'Open study view')[0].props.onClick();
+    }
+    same(calls, type === 'select' ? [['select', entry.action.id], ['info']] : [['mode', 'dissect'], [type, entry.action.id]]);
+    same(states[0], false);
+    const popup = walk(tree, n => n.props.className === 'atlas-search-dialog')[0];
+    same(popup.props.finalFocus(), layout[type === 'select' ? 'info' : 'tools'] ? false : searchLauncher, `${layout.name}/${type}`);
+    tree.props.onOpenChange(true);
+    same(popup.props.finalFocus(), searchLauncher, 'Reopening clears the prior handover');
+    tree.props.onOpenChange(false);
+    same(popup.props.finalFocus(), searchLauncher, 'Ordinary dismissal still returns to Search');
+  }
+}
+Object.assign(workspace, { focusView: false, panelLayout: null });
+uiEnv.window.innerWidth = 1280;
 
 // Execute BodyExplorer's real source-checked action and return handlers.
 const source = await readFile('app/body-explorer.tsx', 'utf8');

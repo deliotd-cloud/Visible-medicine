@@ -415,7 +415,7 @@ export function AtlasSearch({
     [limit, setLimit] = useState(12);
   const [preview, setPreview] = useState<AtlasSearchEntry | null>(null);
   const launcher = useRef<HTMLButtonElement | null>(null);
-  const dissecting = useRef(false);
+  const transferringFocus = useRef(false);
   const entries = useMemo(
     () => atlasSearchIndex(catalog, region, side),
     [catalog, region, side],
@@ -442,10 +442,12 @@ export function AtlasSearch({
       return;
     }
     if (entry.action.type === 'dissect') {
-      dissecting.current = true;
+      transferringFocus.current = true;
       if (workspace.mode === 'practice') workspace.chooseMode('explore');
       onDissect(entry.action.target, launcher.current);
     } else if (entry.action.type === 'select') {
+      transferringFocus.current = workspace.focusView ||
+        (workspace.panelLayout ?? atlasPanelLayout(window.innerWidth, window.innerHeight)).info;
       onSelect(entry.action.id);
       if (workspace.mode === 'practice') workspace.chooseMode('explore');
       workspace.showInfo();
@@ -453,6 +455,8 @@ export function AtlasSearch({
       entry.action.type === 'window' ||
       entry.action.type === 'focus'
     ) {
+      transferringFocus.current = workspace.focusView ||
+        (workspace.panelLayout ?? atlasPanelLayout(window.innerWidth, window.innerHeight)).tools;
       workspace.chooseMode('dissect');
       if (entry.action.type === 'window') onWindow(entry.action.id);
       else onFocus(entry.action.id);
@@ -465,7 +469,7 @@ export function AtlasSearch({
       open={open && !workspace.exam}
       onOpenChange={(value) => {
         setOpen(value);
-        if (value) dissecting.current = false;
+        if (value) transferringFocus.current = false;
         setPreview(null);
       }}
     >
@@ -483,7 +487,9 @@ export function AtlasSearch({
       </DialogTrigger>
       <DialogContent
         className="atlas-search-dialog"
-        finalFocus={() => (dissecting.current ? false : launcher.current)}
+        // A newly opened sheet owns focus; returning to Search would steal it.
+        // Inline desktop panels and ordinary dismissal still return to Search.
+        finalFocus={() => (transferringFocus.current ? false : launcher.current)}
       >
         <DialogTitle>Search the atlas</DialogTitle>
         <DialogDescription>
