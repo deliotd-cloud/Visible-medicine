@@ -2,6 +2,38 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 14 September — thoracic branch imaging
+
+Atlas `193de0e4273fee3ae69cf3f4402b74b6cde5e118` adds 50 original draft
+placements to 26 existing vessels: 26 CT, 13 MRI and 11 ultrasound. Coverage
+includes thoracic inlet, coronary arteries, cardiac veins, chest-wall branches
+and bronchial/oesophageal arteries. Exact source identity, laterality, variant
+labels and unresolved venous termination are preserved. Thirteen MRI and 15 US
+topics in this increment remain pending instead of receiving generic filler.
+
+All 50 actual React note renders, 950 altered-source/topic rejections, 1,101
+current schemas, three original GLB hashes and 9,859 unchanged topics pass.
+Previous central-vessel tests, 33,444 historical content checks, 235 review
+checks, TypeScript and both Atlas builds pass. The generated module preserves
+all 131 model objects/137 paths. Homepage equal-sized modality previews and
+the Atlas overview list are unchanged. No new image, scan, dependency, fee,
+control, access entitlement or clinical approval is introduced. Nineteen
+publication links are factual reading references, not figure-reuse licences.
+
+Radiologist review remains revision-bound, particularly coronary grooves,
+dedicated versus routine imaging, venous contrast, small-vessel visibility,
+chest-wall layers and bronchial source ambiguity. No patient data, masks or
+spatial registration are touched. Didanix Education/light remains separate
+from clinical PACS; case, Atlas and paid-lecture access remain independent.
+
+Fresh primary-region audit: all 38 retained thoracic vessels have CT drafts;
+13 MRI and 22 US topics remain pending. Of 51 abdominal vessels, 34 CT, 34 MRI
+and 35 US topics remain pending. Counts do not establish clinical completeness.
+Continue those remaining abdominal vessels, regional anatomy/dissection detail
+and cleared Education journeys. Native MRI QA is already complete. Keep the
+full Atlas goal active. Website validation, publication and exact GitHub/D
+recovery evidence are recorded in the thoracic-branch checkpoint.
+
 ## 13 September — central vessel imaging
 
 Atlas `270ef68dc7499672549ee3967b485f61eecf3139` adds 79 original source-bound

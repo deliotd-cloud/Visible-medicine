@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "53fd6ea65cb09bb5c62651fb65c9db506ba54d040c370f65ba48db0f98c50ae0"
+    "sha256": "687953d26da9b01dbd0d1f74d987714780cee3fb07af1e0076de1c2d8514a07e"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "084f3e8171ed02b9e0a00400bc8817f805859793a644cac768d1d65411992e0b"
+    "sha256": "231e2589eb698caf52c47c795bf0d8eb8a50a909c3985616c697ef0af34cb0f3"
   },
   {
     "path": "app/body-explorer.css",
@@ -834,6 +834,14 @@
   {
     "path": "content/thoracic-bone-imaging.ts",
     "sha256": "1929be45d018e3803ac092f803e87e26f9db7e8458c6046e3d404383ef0941c2"
+  },
+  {
+    "path": "content/thoracic-branch-imaging-pins.json",
+    "sha256": "d178da82b85301f1dd0fa00c052b7d24d68860c4700db078c370203b1430fa5e"
+  },
+  {
+    "path": "content/thoracic-branch-imaging.ts",
+    "sha256": "dbcdafccd6d506138015fc394675b9a3c53ce6c7166577c0a2c1d2fdbe900219"
   },
   {
     "path": "content/thoracoabdominal-organ-imaging-pins.json",
@@ -1842,6 +1850,10 @@
   {
     "path": "lib/thoracic-bone-imaging.ts",
     "sha256": "cd980735bb04d2a76a899a166ecd3315e70fdfc0bc397f90baea168cb7e02ba8"
+  },
+  {
+    "path": "lib/thoracic-branch-imaging.ts",
+    "sha256": "ea501db08476c08242a8c22fefd68352ff1d55fba3a9c02cf3f9cd4bff688bea"
   },
   {
     "path": "lib/thoracic-organ-clinical-curriculum.ts",
