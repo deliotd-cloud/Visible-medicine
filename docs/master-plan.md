@@ -77,6 +77,14 @@ Latest specialist-chat review reports both anterior cerebellar edges accepted an
 
 ## Ordered delivery roadmap
 
+13 September — owner clarification: Whole body is the first 3D option and the
+default `/atlas/3d` destination. The homepage Atlas section now shares the hub's
+five preview cards, exact modality routes, availability labels and image credits.
+Its main Atlas preview links to 3D and uses the existing sourced shoulder viewer
+image, explicitly labelled, replacing the unsupported decorative CT/normal-study
+presentation. Courses, brand, splash behaviour and imaging/lecture rights stay
+unchanged. This joins the pending whole-body deployment below.
+
 13 September — [all-region and whole-body delivery](whole-body-atlas-pilot.md)
 is now implemented from Atlas `a0b00d42…`: eleven regions and the 1,101-selection
 whole body, retaining all nested families, independent specimens and previous

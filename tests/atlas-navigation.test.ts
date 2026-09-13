@@ -15,6 +15,8 @@ test('all five modalities have local destinations, preview images and honest sta
 });
 test('every current 3D route is retained and wired to the compact region bar',()=>{
   const regions=atlasRegionLinks('3d');
+  assert.equal(regions[0].id,'whole-body');
+  assert.equal(regions[0].href,'/atlas/3d');
   assert.equal(regions.length,15);
   assert.equal(new Set(regions.map(r=>r.href)).size,15);
   for(const r of regions){
@@ -76,4 +78,20 @@ test('credits and image hashes bind the reviewed preview bytes',()=>{
     assert.equal(bytes.length,image.bytes);
     assert.equal(createHash('sha256').update(bytes).digest('hex'),image.sha256);
   }
+});
+test('homepage and Atlas overview share the same five-modality cards and honest availability',()=>{
+  const home=readFileSync(new URL('../app/page.tsx',import.meta.url),'utf8');
+  const atlas=readFileSync(new URL('../app/atlas/page.tsx',import.meta.url),'utf8');
+  const cards=readFileSync(new URL('../components/AtlasModalityCards.tsx',import.meta.url),'utf8');
+  assert.ok(home.includes('<AtlasModalityCards headingLevel={3}/>'));
+  assert.ok(atlas.includes('<AtlasModalityCards/>'));
+  for(const page of [home,atlas])assert.ok(page.includes('<AtlasImageNotes/>'));
+  assert.ok(cards.includes('atlasModalities.map'));
+  for(const field of ['modality.href','modality.status','modality.image','modality.alt'])assert.ok(cards.includes(field));
+  assert.ok(home.includes('className="atlas-preview homepage-atlas-preview" href="/atlas/3d"'));
+  assert.ok(home.includes('Start with whole-body 3D anatomy'));
+  assert.ok(home.includes('Shoulder preview from the 3D viewer'));
+  assert.ok(!home.includes('atlasModules.slice'));
+  assert.ok(!home.includes('One normal study'));
+  assert.ok(!home.includes('className="ct-scan"'));
 });

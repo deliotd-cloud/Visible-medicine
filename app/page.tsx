@@ -1,4 +1,5 @@
-import { atlasModules } from "../lib/catalog";
+import { atlasModalities } from "../lib/atlas-navigation";
+import { AtlasModalityCards, AtlasImageNotes } from "../components/AtlasModalityCards";
 import Link from "next/link";
 import { listCatalogueCourses } from "../lib/education-platform";
 
@@ -22,46 +23,24 @@ export default async function Home() {
           </div>
         </div>
 
-        <Link className="atlas-preview" href="/atlas/ct-head">
-          <div className="viewer-bar">
-            <div><span className="live-dot" /> CT head · axial</div>
-            <div className="viewer-tools" aria-hidden="true"><span>W/L</span><span>⌕</span><span>⤢</span></div>
-          </div>
-          <div className="viewer-stage">
-            <div className="slice-count">34 <small>/ 120</small></div>
-            <div className="orientation left">R</div><div className="orientation right">L</div>
-            <div className="ct-scan" aria-hidden="true"><div className="ventricle v-left" /><div className="ventricle v-right" /></div>
-            <div className="label label-one"><span /> Frontal lobe</div>
-            <div className="label label-two"><span /> Caudate nucleus</div>
-            <div className="label label-three"><span /> Sylvian fissure</div>
-            <span className="viewer-cta">Open interactive module <b>↗</b></span>
-          </div>
-          <div className="viewer-footer"><span>Brain</span><div className="slice-track"><i /></div><span className="didanix-credit"><small>Powered by</small> <b>Didanix</b></span></div>
+        <Link className="atlas-preview homepage-atlas-preview" href="/atlas/3d">
+          <div className="homepage-atlas-preview-bar"><span>3D anatomy</span><span>Review pending</span></div>
+          <div className="atlas-modality-image atlas-modality-image-3d"><img src={atlasModalities[0].image} alt={atlasModalities[0].alt} width={1280} height={720}/></div>
+          <div className="homepage-atlas-preview-footer"><div><strong>Whole body &amp; regional anatomy</strong><span>Shoulder preview from the 3D viewer</span><small>BodyParts3D · CC BY 4.0 · Adapted</small></div><span aria-hidden="true">↗</span></div>
         </Link>
       </section>
 
-      <section className="content-section module-showcase">
+      <section className="content-section module-showcase homepage-atlas" id="atlas" aria-labelledby="homepage-atlas-title">
         <div className="section-heading">
-          <div><p className="section-index">01 / Atlas</p><h2>One normal study, explored properly.</h2></div>
-          <p>Search structures and synonyms, move through the series, reveal only the anatomy you need and turn any position into retrieval practice.</p>
+          <div><p className="section-index">01 / Atlas</p><h2 id="homepage-atlas-title">From whole body to cross-section.</h2></div>
+          <p>Start with whole-body 3D anatomy, then choose a region. Or explore the imaging atlases by modality.</p>
         </div>
-        <div className="module-grid module-grid-compact">
-          {atlasModules.slice(0, 3).map((module, index) => (
-            <Link className={`module-card module-card-${index + 1}`} href={`/atlas/${module.slug}`} key={module.slug}>
-              <div className="module-visual" aria-hidden="true"><i /><i /><i /></div>
-              <div className="module-card-copy">
-                <span>{module.status === "available" ? "Interactive preview" : "Planned module"}</span>
-                <h3>{module.title}</h3>
-                <p>{module.region} · {module.orientation}</p>
-                <b>0{index + 1}</b>
-              </div>
-            </Link>
-          ))}
-        </div>
+        <AtlasModalityCards headingLevel={3}/>
         <div className="section-action-row">
-          <p>The CT head interface is prepared for publication-cleared imaging, reviewed labels and terminology mapping.</p>
-          <Link className="outline-button" href="/atlas">View the complete Atlas roadmap <span>→</span></Link>
+          <p>3D exploration and a CT demonstration are available for review. MRI, ultrasound and X-ray atlases are in preparation.</p>
+          <Link className="outline-button" href="/atlas">Explore all atlases <span>→</span></Link>
         </div>
+        <AtlasImageNotes/>
       </section>
 
       <section className="dark-section" id="courses">

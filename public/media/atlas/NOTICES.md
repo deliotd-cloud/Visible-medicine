@@ -7,8 +7,12 @@ dataset was used. Checked 13 September 2026.
 BodyParts3D, © The Database Center for Life Science, CC BY 4.0.
 https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
 https://creativecommons.org/licenses/by/4.0/
-Screenshot from the existing Visible Medicine shoulder viewer, privately
-published version 61. Source selections, axis transforms, upper-arm cropping,
+`3d-detail-preview.jpg` is a fresh 1920×1080 screenshot from the existing Visible
+Medicine shoulder viewer in focus mode, captured locally on 13 September 2026.
+The unchanged runtime is bound to Atlas source `6fe99634045ab1e7df6828ff67fcd75d0ae8f724`,
+also used in the preceding private website. The earlier `3d-preview.png` is
+retained as a legacy capture from private version 61.
+Source selections, axis transforms, upper-arm cropping,
 smooth normals, material colours and illustrative hatching are documented at
 /atlas-runtime/shoulder/models/bodyparts3d/credits.html and its manifest.
 The viewport screenshot is presented with a CSS crop and labels hidden.
