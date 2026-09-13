@@ -68,6 +68,18 @@ Latest specialist-chat review reports both anterior cerebellar edges accepted an
 
 ## Ordered delivery roadmap
 
+The next saved layout milestone is [compact regional headings](atlas-compact-heading.md):
+the same short module viewport now has 23.9% more drawing height, while all full
+source bounds, 290/75 head/neck and 157/9 thorax identities remain. The website
+header is shorter only on Atlas pages. Actual desktop/mobile samples and source
+checks are scoped in that note; no complete-device or clinical acceptance is
+claimed. The runtime export binds `431e4849621a085d47ca6add68c21383d2159cd5`.
+Continue scalable publication and full abdomen nested/specimen delivery, then
+the remaining substantive anatomy, teaching and cleared Education roadmap.
+Do not retry the materially unchanged large upload merely for this UI revision.
+Exact recovery and live-state evidence belongs in the main task's
+`work/COMPACT-REGIONAL-CHECKPOINT-20260913.md`; the splash is unchanged.
+
 Latest integration slice, 13 September: the [thorax pilot](thorax-atlas-pilot.md)
 shares the original head/neck module, source-bound to Atlas
 `5b54f9dde33d0aca2cab8e0c00a6e831ac6530cd`. All 157 regional and nine nested
