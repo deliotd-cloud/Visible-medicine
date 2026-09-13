@@ -70,6 +70,34 @@ static-route fallbacks and supports cancellation. The learner UI gains no toolba
 
 ## Acceptance and rollback
 
+Private website **version 56**, source
+`fb04d2464b662396eddbad00069ff8c26c84cc67`, deployed successfully on 13 September
+2026 at 12:17:28 UTC. The native archive upload is now 30,980,933 bytes rather
+than the failed roughly 104 MB full-static attempt. It retains all 78 registered
+runtime/manifest/notice companion files and no static GLB copies. The exact
+archive and source are recorded in the main task's protected-delivery checkpoint.
+
+The actual authenticated staff browser completed **59/59 original model URLs**:
+HEAD 200, complete GET size/SHA-256, exact GLB-header range 206 and conditional
+304, all carrying the protected-storage marker and no-store response. No identity
+or roles were changed for this check. Desktop thorax displays its 157 selections;
+the first dissection stage removes two pectoralis selections and Undo restores
+157. Searching for the left ventricular cavity opens the loaded nested four-space
+cardiac study with the correct selected label. At 390×844 the model and controls
+remain visible, page width equals viewport width, and hiding/restoring the right
+atrial cavity works. The 290-selection head/neck view also renders. These are
+sampled browser checks, not complete device, anatomy or clinical acceptance.
+
+The captured viewer logs show the pre-existing Three.Clock deprecation warning,
+not a loading error. Initial integrated overview framing remains small and is a
+further presentation improvement. A direct browser navigation intended to inspect
+a stale GLB query was blocked by the browser client; it is **not** recorded as a
+live application rejection. Local stale-query tests pass. Legitimate non-owner
+live denial, deployed cancellation/failure recovery and an exercised live
+rollback remain open before learner release. Current access stays administrator
+review, without clinical or public release approval. All 85 website tests,
+TypeScript, production build and exact archive/source-companion checks pass.
+
 Local tests exercise real Miniflare D1/R2 bindings, denied/revoked/expired access,
 independent lecture rights and the browser diagnostic against that storage
 handler. Packaging tests include corruption, unknown GLBs, missing notices and

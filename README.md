@@ -11,6 +11,12 @@ The platform is for education and non-clinical research only. It is not intended
 
 ## Brand and product boundary
 
+**Atlas publication:** the complete model set now uses private registered storage.
+After building exact committed source, follow the mandatory build-only preparation
+and archive checks in [Atlas protected delivery](docs/atlas-protected-delivery.md).
+Keep originals and notices; do not publish duplicated static GLBs that bypass the
+delivery access checks. All current anatomy remains administrator-review draft.
+
 The site uses a dedicated Visible Medicine monogram, Segoe typography and the Elivion deep-teal, accessible-teal and light-surface palette. Atlas retains a warm editorial accent while Courses and Studio use the same parent system, so the platform feels related without being mistaken for clinical software.
 
 **Didanix PACS is a separate future clinical product.** It must retain separate identity, tenants, data stores, deployment, quality management, validation and release controls. Visible Medicine must not share patient records, clinical worklists, diagnostic tools, clinical uploads or clinical identity claims with Didanix PACS.
