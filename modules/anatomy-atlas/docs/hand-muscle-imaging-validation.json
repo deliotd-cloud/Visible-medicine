@@ -1,0 +1,31 @@
+{
+  "baselineSource": "4b3f7ace0da5e8c9d589795e446fdad62d224216",
+  "groups": 10,
+  "sourceSelections": 20,
+  "addedDraftPlacements": 80,
+  "modalities": {
+    "ct": 20,
+    "mri": 20,
+    "ultrasound": 20,
+    "xray": 20
+  },
+  "unchangedTopics": 9829,
+  "bodySchemaRecords": 1101,
+  "actualNoteRenders": 80,
+  "rejectedSourceTopicCombinations": 1200,
+  "uniqueReferenceFacts": 22,
+  "sourceWordCounts": {
+    "ct": 29,
+    "mri": 31,
+    "ultrasound": 31,
+    "xray": 26,
+    "anatomy": 89,
+    "handUS": 142
+  },
+  "sourceGeometryChanged": false,
+  "currentApprovalRecordsChanged": false,
+  "clinicalApproval": false,
+  "imagesImported": false,
+  "imagingConnected": false,
+  "browserOrDeviceAcceptance": false
+}

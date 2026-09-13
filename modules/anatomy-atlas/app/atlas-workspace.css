@@ -189,6 +189,14 @@
   width: 100%;
   flex-wrap: nowrap;
 }
+.atlas-grouped-notes > [data-slot='tabs-list'] {
+  /* Keep the line indicator and focus ring outside the button without making
+     the note navigation a second vertical scroll area. Wrap on narrow views. */
+  flex-wrap: wrap;
+  overflow: visible;
+  height: auto;
+  padding-bottom: 8px;
+}
 .atlas-grouped-notes [data-slot='tabs-trigger'] {
   font-size: 14px;
   min-height: 40px;

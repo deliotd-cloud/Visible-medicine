@@ -50,7 +50,7 @@
     },
     {
       "path": "app/atlas-workspace.css",
-      "sha256": "938edb0aeff51e660829bbde701b198c6f82f1c47089ab07e91d24ea3da0584b"
+      "sha256": "5cad6203770ad4201dca8fb550208753b60f9938088dfeacc2083585990a8ce5"
     },
     {
       "path": "app/atlas-workspace.tsx",
@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "0491aed8588af3d765686c6aadf922d2eccabfceb3cae131f420fbb5adc72f51"
+      "sha256": "ebd0a7c6d4ba6ab238e6c1f897655d67f96952632eaa0478f956eba19a7e94fd"
     },
     {
       "path": "app/body-explorer.css",
@@ -509,6 +509,14 @@
       "sha256": "c7062b9b6a416f575687d3d30da43137d4e1bbe9f7ebf9fcccf5ee930315b74c"
     },
     {
+      "path": "content/hand-muscle-imaging-pins.json",
+      "sha256": "0f6a3a095f2e7db3f358ea19c6ab2ad42f915c975c543281a3684cebd651204f"
+    },
+    {
+      "path": "content/hand-muscle-imaging.ts",
+      "sha256": "e91d54120b06c48f163ee9ddb84b646c96a40d0c0ef13d4e4f9749c22c1125e2"
+    },
+    {
       "path": "content/hepatic-teaching.ts",
       "sha256": "793d49e8e33bc4daed5889b9bc58403a11280d39dd1d6894d0f5ff7c8fc0372d"
     },
@@ -634,7 +642,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "9ea0c180c0e47b282632181ec07915231ed88b181a8390c52c63fb6ae792e878"
+      "sha256": "cece4dcb38f9fcc3f4a8ea7c824a24af8c241858dbd5987a17c16c927d488c1f"
     },
     {
       "path": "content/shoulder-xray-bindings.json",
@@ -1123,6 +1131,10 @@
     {
       "path": "lib/hand-joints.ts",
       "sha256": "0672bed057e57c516d59e9f7af23587f25317116b572ea35195a25bac25ef6a4"
+    },
+    {
+      "path": "lib/hand-muscle-imaging.ts",
+      "sha256": "14d038b51ce7aabae0b0a1ae85028d6ac70078dfec095a5fed38e58fe5ad152e"
     },
     {
       "path": "lib/hand-reasoning.ts",
@@ -1885,5 +1897,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "a429b4a7508411712a3ee8f19534347d94245afea49c5e59237f37bdd1820d2b"
+  "sha256": "fa85f6f6fd976ab9331c17ff1cc146f7b490d644468c96271d6f8e32d40e8438"
 }

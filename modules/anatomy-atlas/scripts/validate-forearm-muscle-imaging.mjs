@@ -8,7 +8,9 @@ import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {authoringBeforeForearmMuscleImaging,forearmImagingHash as hash} from './forearm-muscle-imaging-history.mjs';
 import {forearmMuscleImagingGroups as groups,forearmMuscleImagingModes as modes,forearmMuscleImagingReferences as references} from '../content/forearm-muscle-imaging.ts';
 import pins from '../content/forearm-muscle-imaging-pins.json' with {type:'json'};
-const context=await contentContext(),{api}=context,catalog=api.bodyDisplayCatalog(context.catalog);
+import {authoringBeforeHandMuscleImaging} from './hand-muscle-imaging-history.mjs';
+const rawCurrent=await contentContext(),context={...rawCurrent,api:authoringBeforeHandMuscleImaging(rawCurrent)};
+const {api}=context,catalog=api.bodyDisplayCatalog(context.catalog);
 const original=JSON.stringify(catalog),before=authoringBeforeForearmMuscleImaging(context);
 assert.equal(hash({body:catalog.structures.map(s=>({id:s.id,sections:Object.fromEntries(api.contentTabs.map(t=>[t,before.bodyLesson(s,t)]))})),shoulder:api.structures,recipes:api.dissectionProfiles}),pins.previousAllLessonsAndRecipesHash,'All preceding teaching and recipes preserved');
 const records=api.bodyContentRecords(catalog),registry=new Map([...context.shoulder,...records].map(r=>[r.representationScope+'|'+r.id,r]));
@@ -55,5 +57,4 @@ assert.equal(JSON.stringify(catalog),original);
 const report={baselineSource:pins.sourceCommit,groups:Object.keys(groups).length,sourceSelections:pins.entries.length,addedDraftPlacements:changed,modalities:{ct:42,mri:42,ultrasound:42,xray:42},unchangedTopics:unchanged,bodySchemaRecords:records.length,actualNoteRenders:rendered,rejectedSourceTopicCombinations:rejected,uniqueReferenceFacts:unique.size,sourceWordCounts:budgets,sourceGeometryChanged:false,currentApprovalRecordsChanged:false,clinicalApproval:false,imagesImported:false,imagingConnected:false,browserOrDeviceAcceptance:false};
 await writeFile('docs/forearm-muscle-imaging-validation.json',JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify(report));
-
 
