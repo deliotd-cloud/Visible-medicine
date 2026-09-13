@@ -5,8 +5,8 @@ import { atlasStagingModels } from './atlas-model-staging-registry';
 // Candidate catalogue copied exactly from this saved, audited website revision.
 // It grants admin staging only, not clinical approval or active Atlas delivery.
 export const ATLAS_STAGING_CANDIDATE = {
-  sourceCommit: '554054e4791f5f7f5e11c2e5c38431873140d017',
-  inventorySha256: '091481333b4d5a89fc1a3d05f38db397d125e8009280100b0c69c72e61a79b4b',
+  sourceCommit: 'ec4aa5c4c0168258d15f968c1905189755a4cb5e',
+  inventorySha256: '376093665a82d5f5add5c537599bd51cf399eb80729768062a2c4f19c3b0f833',
 } as const;
 
 export const atlasRegisteredStagingModels = atlasStagingModels(activeInventory.models, candidateInventory.models);

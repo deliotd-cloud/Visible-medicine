@@ -1,5 +1,22 @@
 # Register first, activate after verification
 
+## Whole-body and remaining-region candidate — 13 September
+
+This staging-only tree retains version 62's complete 94-model active inventory,
+all runtime files, routes, notices and policy. The candidate is copied exactly
+from `ec4aa5c4c0168258d15f968c1905189755a4cb5e`, inventory SHA-256
+`376093665a82d5f5add5c537599bd51cf399eb80729768062a2c4f19c3b0f833`.
+It contains 131 objects/137 paths: 37 additions, 21,561,872 bytes, with all 94
+current objects and their paths retained. The expanded navigation opens Whole
+body first; that new runtime is not activated by this registry-only change.
+
+All 96 staging-source tests and build pass, including actual local R2 uploads,
+complete-byte/range/conditional reads and active-path denial for all 37 added
+objects. Publish staging, upload and verify the exact additions while checking
+the old 94-object delivery, then activate the full candidate. No clinical,
+privacy, entitlement, other-account or broad-device approval is conferred.
+The coordinating checkpoint records actual storage/deployment/backup outcomes.
+
 The staging API and administrator maintenance page now combine the active model
 inventory with one separately source-bound candidate. The protected delivery API
 continues to resolve paths and revisions exclusively against the active inventory

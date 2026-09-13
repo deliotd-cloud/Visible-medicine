@@ -10,19 +10,19 @@ import { atlasStagingModels, atlasStagingCheckModels } from '../lib/atlas-model-
 import { resolveAtlasDeliveryModel } from '../lib/atlas-model-delivery.ts';
 import type { AtlasStoredModel } from '../lib/atlas-model-storage.ts';
 
-const sourceCommit = '554054e4791f5f7f5e11c2e5c38431873140d017';
+const sourceCommit = 'ec4aa5c4c0168258d15f968c1905189755a4cb5e';
 const source = (path: string, commit = sourceCommit) => execFileSync('git', ['cat-file', 'blob', `${commit}:${path}`], { maxBuffer: 40 * 1024 * 1024 });
 const sha = (bytes: Uint8Array | string) => createHash('sha256').update(bytes).digest('hex');
-const previous: { models: AtlasStoredModel[] } = JSON.parse(source('lib/atlas-model-inventory.json', '64f7156427972050307d24a6253049b4f5f11970').toString());
+const previous: { models: AtlasStoredModel[] } = JSON.parse(source('lib/atlas-model-inventory.json', '62c037f98b0589b2048890ddc28a8dd4fec1a84c').toString());
 const candidate: { models: AtlasStoredModel[] } = JSON.parse(readFileSync('lib/atlas-model-staging-candidate.json', 'utf8'));
 const active: { models: AtlasStoredModel[] } = JSON.parse(readFileSync('lib/atlas-model-inventory.json', 'utf8'));
 const added = candidate.models.filter(m => !previous.models.some(p => p.sha256 === m.sha256));
 
 test('staging candidate is an exact saved source inventory, not an active release or scan manifest', () => {
-  assert.equal(sha(JSON.stringify(candidate, null, 2) + '\n'), '091481333b4d5a89fc1a3d05f38db397d125e8009280100b0c69c72e61a79b4b');
+  assert.equal(sha(JSON.stringify(candidate, null, 2) + '\n'), '376093665a82d5f5add5c537599bd51cf399eb80729768062a2c4f19c3b0f833');
   assert.deepEqual(candidate, JSON.parse(source('lib/atlas-model-inventory.json').toString()));
-  assert.equal(previous.models.length, 80); assert.equal(candidate.models.length, 94); assert.equal(added.length, 14);
-  assert.equal(added.reduce((n,m) => n + m.bytes, 0), 14198676);
+  assert.equal(previous.models.length, 94); assert.equal(candidate.models.length, 131); assert.equal(added.length, 37);
+  assert.equal(added.reduce((n,m) => n + m.bytes, 0), 21561872);
   const binding = readFileSync('lib/atlas-model-staging.ts', 'utf8');
   assert.ok(binding.includes(sourceCommit)); assert.ok(binding.includes(sha(JSON.stringify(candidate, null, 2) + '\n')));
   for (const path of ['app/api/atlas-delivery/[...asset]/route.ts', 'worker/index.ts', 'lib/atlas-delivery-policy.ts', 'scripts/prepare-atlas-delivery.mjs']) {
@@ -35,8 +35,8 @@ test('staging candidate is an exact saved source inventory, not an active releas
 test('staging deduplicates immutable objects without mutating or promoting the active inventory', () => {
   const before = JSON.stringify(previous);
   const staging = atlasStagingModels(previous.models, candidate.models);
-  assert.equal(staging.length, 94);
-  assert.equal(atlasStagingModels(active.models, candidate.models).length, 94, 'works both before and after separately verified activation');
+  assert.equal(staging.length, 131);
+  assert.equal(atlasStagingModels(active.models, candidate.models).length, 131, 'works both before and after separately verified activation');
   for (const model of previous.models) {
     const current = active.models.find(m => m.sha256 === model.sha256);
     assert(current); assert.equal(current.bytes, model.bytes);
@@ -61,7 +61,7 @@ test('staging deduplicates immutable objects without mutating or promoting the a
   assert.throws(() => atlasStagingModels([original], [{ ...original, bytes: original.bytes + 4 }]));
 });
 
-test('all 14 added GLBs stage in real local R2 but remain unavailable through the active 80-model delivery', { timeout: 60_000 }, async () => {
+test('all 37 added GLBs stage in real local R2 but remain unavailable through the active 94-model delivery', { timeout: 60_000 }, async () => {
   const staging = atlasStagingModels(previous.models, candidate.models);
   const transpile = (path: string) => ts.transpileModule(readFileSync(path, 'utf8'), { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext } }).outputText;
   const worker = `import {handleAtlasModel, AtlasModelError} from './atlas-model-storage.ts';
@@ -110,6 +110,6 @@ test('all 14 added GLBs stage in real local R2 but remain unavailable through th
     assert.equal(stillActive.status, 200); assert.equal(stillActive.headers.get('x-atlas-delivery'), 'registered-storage-v1');
     assert.equal(sha(new Uint8Array(await stillActive.arrayBuffer())), existing.sha256);
     const bucket = await mf.getR2Bucket('FILES');
-    assert.equal((await bucket.list()).objects.length, 15, 'only the fixture active model and exact 14 candidates were stored locally');
+    assert.equal((await bucket.list()).objects.length, 38, 'only the fixture active model and exact 37 candidates were stored locally');
   } finally { await mf.dispose(); }
 });
