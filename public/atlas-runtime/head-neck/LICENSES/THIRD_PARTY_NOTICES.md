@@ -1,5 +1,15 @@
 # Third-party notices
 
+## Skull, facial-bone and hyoid CT/MRI teaching — 13 September 2026
+
+Original concise factual notes and MIT resolver code add 46 draft placements
+to 23 existing bone selections. Ten primary publications are reading references,
+not imported articles, figures, tables, scans, diagrams or anatomical datasets.
+No dependency, font, texture, model, paid API or mandatory service is added.
+Existing BodyParts3D attribution and change notices remain unchanged. Reference
+access is not permission to redistribute publisher images. See
+[scope, references and pending clinical review](../docs/CRANIAL_BONE_IMAGING.md).
+
 ## Neck/upper-back attachment relationships — 13 September 2026
 
 Original MIT interaction code and concise factual labels connect 18 existing

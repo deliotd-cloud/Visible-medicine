@@ -2,6 +2,32 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 13 September — skull, facial-bone and hyoid CT/MRI teaching
+
+Atlas source `4492d6bc47bd11f537cb6aa2bffe324ca3dc3881` adds 46 draft CT/MRI
+placements across 23 existing bone selections / 15 concepts. The shared regional
+module is rebuilt/exported from that clean source; no generated module is edited
+by hand. This replaces the separately saved unverified cranial-teaching WIP noted
+below. The five-modality homepage, descriptive Atlas list and Whole body default
+remain intact. The other 9,863 topics, anatomy surfaces and recipes are preserved.
+
+All 46 real note renders, 690 identity/topic rejection cases, 1,101 displayed
+schema records, the full 33,444 content-contract checks, prior spine/pelvic and
+shoulder/arm imaging checks, 235 review checks, TypeScript and the Atlas build pass.
+The historical spine mutation test now injects into the newest source state so
+each history layer is applied once; its original rejection assertion is retained.
+Website checks and actual publication/recovery outcome belong in the dated main
+task checkpoint. No new patient data, dependency, external image or paid service.
+
+These are short orientation notes, not acquired imaging or a complete radiology
+curriculum. The grouped hyoid, whole-bone/internal-tissue distinctions, dedicated
+temporal-bone/TMJ imaging and variant wording require revision-bound radiologist
+review. The 23 ultrasound topics remain pending. Existing clinical approvals are
+not promoted. Didanix Education/light, independent case/Atlas/lecture entitlements
+and privacy/release gates remain unchanged. The full goal remains active: continue
+remaining substantive anatomy, hand/foot and head/neck imaging teaching and cleared
+Education integration, not completed native MRI QA or unchanged archive retries.
+
 ## 13 September — multimodality homepage and Atlas list
 
 The large homepage preview now shows five independently linked reference images

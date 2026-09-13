@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "c749ab995d36491556dea042f97aa580d8dd9ce18b4b5c31005d9af143592386"
+    "sha256": "e79fb548287310c95310218046986d99ad8d69a7249ae1e28e05e9cae0d3bb59"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "316a6c3af398921049c0be8f3c01ec93a2dbfb7c9608ae8ccbdc67197f16ddc7"
+    "sha256": "013f63f169803bae012b59ae3bf6f7933be7781792c1b5fba2fc1542b9fdea96"
   },
   {
     "path": "app/body-explorer.css",
@@ -466,6 +466,14 @@
   {
     "path": "content/collicular-brachia-teaching.ts",
     "sha256": "f805f4ab67d5d0ae82a0e2bd9116d0e2a7b31f837d05d349dd8cfabd1172428d"
+  },
+  {
+    "path": "content/cranial-bone-imaging-pins.json",
+    "sha256": "c45e8bb107ee02a976c43fd47cc77305391e112fdeaf84c51e1d2bc3f7850be0"
+  },
+  {
+    "path": "content/cranial-bone-imaging.ts",
+    "sha256": "61087027fac4511522badf36e39e1958ceb4b502750285498aa11ad3e3df0b24"
   },
   {
     "path": "content/cricothyroid-teaching.ts",
@@ -1166,6 +1174,10 @@
   {
     "path": "lib/cranial-bone-curriculum.ts",
     "sha256": "b84405a1a36b0f9dcf2066c89f91b0e5066298e288c1924cdf8aa643934c833c"
+  },
+  {
+    "path": "lib/cranial-bone-imaging.ts",
+    "sha256": "4b55a1d4824b5181185399093458888bf6854255c9f29a7731b0bc5410aa5848"
   },
   {
     "path": "lib/cricothyroid.ts",
