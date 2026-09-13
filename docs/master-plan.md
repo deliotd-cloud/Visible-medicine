@@ -68,6 +68,19 @@ Latest specialist-chat review reports both anterior cerebellar edges accepted an
 
 ## Ordered delivery roadmap
 
+13 September — [independent model staging](atlas-model-storage.md) now supplies
+an administrator-only immutable upload/read route and a compact maintenance page.
+Its generated allowlist binds all 59 unchanged GLBs in the four existing exports
+(127,449,300 bytes), with complete companion-file/notices verification. Actual
+local Workers/R2 tests exercise corrupt/short/oversized files, concurrent writes,
+range reads and the largest retained model. This is not yet hosted or learner
+delivery: preserve static assets until compact bootstrap, deployed authorization,
+complete stored-byte verification and manifest-bound learner routing are proven.
+No source anatomy, private scans/masks, licences, entitlements, splash behavior or
+clinical decisions change. Exact source/GitHub/D evidence is recorded in the main
+task's `work/MODEL-STAGING-CHECKPOINT-20260913.md`. Continue full abdomen integration
+and the complete roadmap after scalable publication; the goal remains active.
+
 The next saved layout milestone is [compact regional headings](atlas-compact-heading.md):
 the same short module viewport now has 23.9% more drawing height, while all full
 source bounds, 290/75 head/neck and 157/9 thorax identities remain. The website

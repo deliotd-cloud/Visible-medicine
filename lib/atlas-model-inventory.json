@@ -1,0 +1,446 @@
+{
+  "schemaVersion": 1,
+  "purpose": "licensed-atlas-model-staging-only",
+  "learnerDelivery": "existing-static-assets",
+  "sources": [
+    {
+      "module": "shoulder",
+      "sourceCommit": "97853ebe945d0ba1bc21fcf738133d0733fd3ad3",
+      "manifestSha256": "e0131773edc87a30bdd3acef2c023ec0319fba7d2f821aeb67541e25175ae786",
+      "modelPaths": 1
+    },
+    {
+      "module": "female-pelvis",
+      "sourceCommit": "cc34a98783d8f01d44951b5566f0adaf7f9db75e",
+      "manifestSha256": "4d99cf73d2c9c27dded3e78b499b6a5e51b39f8d8a0af890ab635b405ccd450a",
+      "modelPaths": 1
+    },
+    {
+      "module": "lower-limb",
+      "sourceCommit": "cc34a98783d8f01d44951b5566f0adaf7f9db75e",
+      "manifestSha256": "95dd15cee8f372c7af507e2d1c2cd6c2bf6dc2f4e862d97b94932567257bba70",
+      "modelPaths": 5
+    },
+    {
+      "module": "head-neck",
+      "sourceCommit": "431e4849621a085d47ca6add68c21383d2159cd5",
+      "manifestSha256": "cf122263b5c02ba2513b767f6d3d22942fa68919859c653d026b0324a6ade621",
+      "modelPaths": 52
+    }
+  ],
+  "models": [
+    {
+      "sha256": "08b23d00975e6cd10eeca344d556fe75ec8cd6f45fc7087ac7da28754754108b",
+      "bytes": 94876,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-connective-ocular-detail.glb"
+      ]
+    },
+    {
+      "sha256": "0c82e1cb2960c6f2474f2b4759974adab5871d8074a2f4e3712e1c3a37a48ca7",
+      "bytes": 1131748,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-vessels-recovery.glb"
+      ]
+    },
+    {
+      "sha256": "0ff2ab3d8b16b2c3af0b3320bc85b72512c54af5bfedc3f2159dd2316fa5de60",
+      "bytes": 149456,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb"
+      ]
+    },
+    {
+      "sha256": "12ff12c3ea0e745193b90842a3c62fd980dabd24e737ece8dee399925ab2e9a0",
+      "bytes": 314224,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-muscles-dissection.glb"
+      ]
+    },
+    {
+      "sha256": "2243b05c7b505ee666ac4a36becfe5298735558b0e86b4d8e4476115f372ce05",
+      "bytes": 175092,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-connective-recovery.glb"
+      ]
+    },
+    {
+      "sha256": "2874e8680da861973d2eac549f62cf4d0b5f4c26472a532b7661c74b2ce96900",
+      "bytes": 289716,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-connective-recovery.glb"
+      ]
+    },
+    {
+      "sha256": "2f0b7535025dfd415ef448ae4fef66e351303e1fad2e7da128fa7122bac9929b",
+      "bytes": 57312,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-organs-ocular-detail.glb"
+      ]
+    },
+    {
+      "sha256": "3375bde94900a77d8ab7c6c37ec934b30e2a745495006630b1645053522c040a",
+      "bytes": 745932,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-organs-head-detail.glb"
+      ]
+    },
+    {
+      "sha256": "3bbf7759e54e34272175de042ef4e26c24412b9f073a2f8eea3ce4fe79ebb682",
+      "bytes": 14990372,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-muscles.glb"
+      ]
+    },
+    {
+      "sha256": "3edb8b2d00673b08631070a682d34d56aba8d55d5aa6398874580afa3036d3d2",
+      "bytes": 19648284,
+      "paths": [
+        "/atlas-runtime/lower-limb/models/um-limb/thigh.glb"
+      ]
+    },
+    {
+      "sha256": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+      "bytes": 212796,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/cranial-arteries/cranial-arteries.glb"
+      ]
+    },
+    {
+      "sha256": "40dd8f7f7b9a6bc79be1fdc6282ed50965c7f07d853a4db981dd7203477185c8",
+      "bytes": 13044,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/collicular-brachia/collicular-brachia.glb"
+      ]
+    },
+    {
+      "sha256": "4aba05d53fa7bf578be5ef6f945c4a498a007e62529dd0e7c5db32f57d0c1461",
+      "bytes": 100964,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-nerves-gaps.glb"
+      ]
+    },
+    {
+      "sha256": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+      "bytes": 3578388,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/eye-layers/eye-layers.glb"
+      ]
+    },
+    {
+      "sha256": "4d05d792dd062b49d22f8740e4f0a0c4785249cbcac61a47ac7a48d06b5a6ab1",
+      "bytes": 98216,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-organs-gaps.glb"
+      ]
+    },
+    {
+      "sha256": "4e7f008f8f6167e351bc02c6b04f538ba74433f893d77e5a5b0bb8396fa3b1b9",
+      "bytes": 10012,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-nerves-inventory.glb"
+      ]
+    },
+    {
+      "sha256": "54d54094b4f071a137a7c2279bcfd031474c91cf3e8e2354a9d4bb1f013b6263",
+      "bytes": 771836,
+      "paths": [
+        "/atlas-runtime/shoulder/models/bodyparts3d/shoulder-right.glb"
+      ]
+    },
+    {
+      "sha256": "6046dacb923f5103acb3b86dadf2817b5f0c133af88e0d225170cf331fbd0e3c",
+      "bytes": 1866940,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-nerves-deep-brain.glb"
+      ]
+    },
+    {
+      "sha256": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+      "bytes": 3711452,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-organs.glb"
+      ]
+    },
+    {
+      "sha256": "62bb25db79270dbd6fe96598e9438d7bfca3592c5f7559cd1ea320e18bb16eca",
+      "bytes": 1330588,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/pulmonary/pulmonary-right.glb"
+      ]
+    },
+    {
+      "sha256": "64d93898db3b6cb4dbea452508799c98cbe65b361eba2f17658ecae532a01f67",
+      "bytes": 587588,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/cardiac/cardiac.glb"
+      ]
+    },
+    {
+      "sha256": "6cc6a2b15cda5a0defc35fdc2bebda607eac042571fec74bb1d2caba51748404",
+      "bytes": 5127960,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-muscles.glb"
+      ]
+    },
+    {
+      "sha256": "6e7ccebe78f6a8c89b556e5e1256d755801725590c4625bebd3fecd6d93f04b3",
+      "bytes": 31116,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/subscapular-arteries/subscapular-arteries.glb"
+      ]
+    },
+    {
+      "sha256": "72470f8171fcfe7b7eb397ea86be47f2ec781a4c12b4c9755213d91e4f04f262",
+      "bytes": 11143104,
+      "paths": [
+        "/atlas-runtime/lower-limb/models/um-limb/hip-thigh.glb"
+      ]
+    },
+    {
+      "sha256": "76698dfcc0ed1710b06227cfccc5eb574cd03534966a406c9252899a7337437c",
+      "bytes": 9251564,
+      "paths": [
+        "/atlas-runtime/lower-limb/models/um-limb/leg.glb"
+      ]
+    },
+    {
+      "sha256": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410",
+      "bytes": 1856608,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/cerebral/cerebral.glb"
+      ]
+    },
+    {
+      "sha256": "7a6695ee3fc8feeba3b187e3d9a800aa205b57486208f84a8ef8e170097452a4",
+      "bytes": 323604,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/cricothyroid/cricothyroid.glb"
+      ]
+    },
+    {
+      "sha256": "7f6c0355e8db6b561ea3b8d7bf10584422dccf873c842cb010f0987056f1a2f5",
+      "bytes": 45764,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-connective-head-detail.glb"
+      ]
+    },
+    {
+      "sha256": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+      "bytes": 3587376,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-organs-recovery.glb"
+      ]
+    },
+    {
+      "sha256": "800d583a96a6df8fdd2b5fff86c6e719a90e897d6c3c89bbb1a3bd71b0e89cbb",
+      "bytes": 608992,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-vessels-recovery.glb"
+      ]
+    },
+    {
+      "sha256": "8071f97ac5b843ab55e8bf019918947ab9c363b1e1901faebefa619e5345fe6f",
+      "bytes": 483532,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-vessels-inventory.glb"
+      ]
+    },
+    {
+      "sha256": "87b0684fd3a8d120d622f2f96edb49059cd530ba927423d5ac5f28d1069c2f84",
+      "bytes": 65180,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-organs-visceral-detail.glb"
+      ]
+    },
+    {
+      "sha256": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086",
+      "bytes": 227840,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/cranial-artery-components/cranial-artery-components.glb"
+      ]
+    },
+    {
+      "sha256": "9b17997e1211d794777fb1b6fbb6e84252445ae15f1b2cc811c80efad8a8e514",
+      "bytes": 150304,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/limbic-landmarks/limbic-landmarks.glb"
+      ]
+    },
+    {
+      "sha256": "9c45f3aef04a0507414a6280b4866d31eda2a9df50ef61acc3071d5d909d12cd",
+      "bytes": 3099336,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton.glb"
+      ]
+    },
+    {
+      "sha256": "a4788313cc86677900a528208e8ac7045f07bee300ea17073386bf0c12c83de4",
+      "bytes": 178112,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-connective-laryngeal-detail.glb"
+      ]
+    },
+    {
+      "sha256": "aae6dc0589fa3dc9ce5ea51ff28520a077290adb5b92fa4570c3cf20b2090e02",
+      "bytes": 934264,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-connective-gaps.glb"
+      ]
+    },
+    {
+      "sha256": "abe5a85b810ba231cf032546e26e35c6c6243b7cfd880853bf7110345da0b155",
+      "bytes": 20064,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/inferior-thyroid-arteries/inferior-thyroid-arteries.glb"
+      ]
+    },
+    {
+      "sha256": "ad355b54f865461f5433bd1062bb206bde1967f6d4dc003840e7788800a69adb",
+      "bytes": 8566352,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-muscles.glb"
+      ]
+    },
+    {
+      "sha256": "b43cedda733267f51027a892b1ac08a35874853ce65802deca5304e039f6d08f",
+      "bytes": 133088,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/longus-colli/longus-colli.glb"
+      ]
+    },
+    {
+      "sha256": "b79225df1153cff7b18c0da4db7cd3257db94f16222376c4d6623a5e542bddc3",
+      "bytes": 157388,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-organs-inventory.glb"
+      ]
+    },
+    {
+      "sha256": "b7b35094243dab53b9681c98d5123aa4b93a881fb0e48de4a8d7f32186007d4c",
+      "bytes": 396152,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/tentorium/tentorium.glb"
+      ]
+    },
+    {
+      "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957",
+      "bytes": 1286192,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-skeleton.glb"
+      ]
+    },
+    {
+      "sha256": "bd86da53fb00401a01db7e321ca14b0bfec784b53a496a22dc5e6338db3d0044",
+      "bytes": 91700,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-vessels-thoracic-detail.glb"
+      ]
+    },
+    {
+      "sha256": "c1b950c82fd76e69cf153757ca275a6bd27fd25d74d3fd24259b15f9172a39d4",
+      "bytes": 2355384,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-skeleton.glb"
+      ]
+    },
+    {
+      "sha256": "c2073b8bfca9d8aa41c5c4810738138ba54fe6db1f5bfd935a3231414a38c3f8",
+      "bytes": 692376,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-connective-gaps.glb"
+      ]
+    },
+    {
+      "sha256": "c9698e52e4678c06a5ed5df8212e3ecb1ce89d9a25d4e1859f0ec5be7d4864bc",
+      "bytes": 120068,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/visual-pathway/visual-pathway.glb"
+      ]
+    },
+    {
+      "sha256": "cf61571a8c80f463805b1362bb81b3d9eec3c62a1780c7288355e4a20fa8515b",
+      "bytes": 5298360,
+      "paths": [
+        "/atlas-runtime/lower-limb/models/um-knee/knee.glb"
+      ]
+    },
+    {
+      "sha256": "d12d81529a1408f934b5055462bb39f0f79c84e25c878a25225652b9baac3e84",
+      "bytes": 616356,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/shoulder-arm-vessels-inventory.glb"
+      ]
+    },
+    {
+      "sha256": "d4670d3c15580e2a1ef53debab32f08c8199fe6ddaf90af3f3aedb197d93e68d",
+      "bytes": 754268,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/pulmonary/pulmonary-left.glb"
+      ]
+    },
+    {
+      "sha256": "d62d13a0a9a999495f771ecaee2e9cafe27c8d4fbdac4019fa699a711d6dc355",
+      "bytes": 38832,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-organs-recovery.glb"
+      ]
+    },
+    {
+      "sha256": "d7e3b995e0c18e3ebe7e7b97a11fbcd1e228218e0010462614e4938acf7f87ee",
+      "bytes": 381316,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-muscles-axial-detail.glb"
+      ]
+    },
+    {
+      "sha256": "dbd323ceaa7385977905b8aa9dfbfa2c03a9e7ca02c3084b5fd8d94e933a14d5",
+      "bytes": 2676564,
+      "paths": [
+        "/atlas-runtime/lower-limb/models/um-limb/foot.glb"
+      ]
+    },
+    {
+      "sha256": "e41d66684de08fd9bd7dfca340acb63cbf7714eb09a3ea9594184f497c509abe",
+      "bytes": 477592,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/abdomen-vessels-recovery.glb"
+      ]
+    },
+    {
+      "sha256": "e99326a0fd0b0bdc0a64d2a1adbb7a63c758af6f765199b8febe851e62b9eab1",
+      "bytes": 846988,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/ventricles/ventricles.glb"
+      ]
+    },
+    {
+      "sha256": "f18f1f0e3c6e8c0562b6b66864a8d786ffdb9e6a688da9288550fad6e491b866",
+      "bytes": 3796080,
+      "paths": [
+        "/atlas-runtime/female-pelvis/models/hra-pelvis/pelvis.glb"
+      ]
+    },
+    {
+      "sha256": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+      "bytes": 1756184,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/eye-layers/right-eyeball.glb"
+      ]
+    },
+    {
+      "sha256": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "bytes": 8286776,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-nerves.glb"
+      ]
+    },
+    {
+      "sha256": "fd1d8d04656a300fe0e8271a418ec0807b227baa96d6afa822d0df6ad0bf72ba",
+      "bytes": 1707728,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/brainstem/brainstem.glb"
+      ]
+    }
+  ]
+}
