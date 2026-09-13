@@ -121,6 +121,7 @@ import { shoulderArmMuscleImagingLesson } from '../lib/shoulder-arm-muscle-imagi
 import { spinePelvicMuscleImagingLesson } from '../lib/spine-pelvic-muscle-imaging';
 import { cranialBoneImagingLesson } from '../lib/cranial-bone-imaging';
 import { acralBoneImagingLesson } from '../lib/acral-bone-imaging';
+import { orbitalNeckMuscleImagingLesson } from '../lib/orbital-neck-muscle-imaging';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -165,6 +166,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const orbitalNeckMuscleImaging = orbitalNeckMuscleImagingLesson(s, tab);
+  if (orbitalNeckMuscleImaging) return orbitalNeckMuscleImaging;
   const acralBoneImaging = acralBoneImagingLesson(s, tab);
   if (acralBoneImaging) return acralBoneImaging;
   const cranialBoneImaging = cranialBoneImagingLesson(s, tab);

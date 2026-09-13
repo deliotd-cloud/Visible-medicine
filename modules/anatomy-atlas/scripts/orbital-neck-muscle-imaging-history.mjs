@@ -1,15 +1,13 @@
 // Offline comparison only: never imported by the viewer or approval workflow.
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
-import pins from '../content/acral-bone-imaging-pins.json' with {type:'json'};
-import after from '../content/acral-bone-imaging.transition.json' with {type:'json'};
-import {authoringBeforeOrbitalNeckMuscleImaging} from './orbital-neck-muscle-imaging-history.mjs';
-export const acralBoneImagingHash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
-export function authoringBeforeAcralBoneImaging(context) {
-  const {catalog}=context,api=authoringBeforeOrbitalNeckMuscleImaging(context);
-  assert.equal(acralBoneImagingHash(pins),'668daecdc8f76d8c7d0d6648a36196587c486c0b0f091d14238a7e0b8980ef18');
-  assert.equal(acralBoneImagingHash(after),'0f7526337d67dba5ab2adebd2c1c0bca4270071c0edae30e65bc2013c7b65dce');
-  assert.equal(pins.sourceCommit,'4492d6bc47bd11f537cb6aa2bffe324ca3dc3881');
+import pins from '../content/orbital-neck-muscle-imaging-pins.json' with {type:'json'};
+import after from '../content/orbital-neck-muscle-imaging.transition.json' with {type:'json'};
+export const orbitalNeckMuscleImagingHash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
+export function authoringBeforeOrbitalNeckMuscleImaging({api,catalog}) {
+  assert.equal(orbitalNeckMuscleImagingHash(pins),'60b567bffd425213579f53f3ecd444b94f3746fa62943ea1fe4c578f232dd722');
+  assert.equal(orbitalNeckMuscleImagingHash(after),'4319013a1a2c16ea7b9456385377b00f68b64aba8bf246e832d4bbbd4773d059');
+  assert.equal(pins.sourceCommit,'d709e70a6678b7846053f39b4e7ebae8efb79f55');
   assert.equal(after.parentCommit,pins.sourceCommit);
   const display=api.bodyDisplayCatalog(catalog),prior=new Map();
   assert.equal(display.sourceVersion,pins.sourceVersion);
@@ -22,11 +20,11 @@ export function authoringBeforeAcralBoneImaging(context) {
     assert.equal(after.entries[i].id,e.identity.id);
     for(const tab of e.topics) {
       assert.equal(e.previous[tab].readiness,'pending');
-      assert.equal(acralBoneImagingHash(api.bodyLesson(e.identity,tab)),after.entries[i].sections[tab],'Unrecorded acral-bone imaging change');
+      assert.equal(orbitalNeckMuscleImagingHash(api.bodyLesson(e.identity,tab)),after.entries[i].sections[tab],'Unrecorded orbital/neck muscle imaging change');
       prior.set(e.identity.id+'|'+tab,{identity:e.identity,lesson:e.previous[tab]});
     }
   }
-  assert.equal(prior.size,152);
+  assert.equal(prior.size,112);
   const bodyLesson=(s,t)=>{const entry=prior.get(s.id+'|'+t);if(!entry)return api.bodyLesson(s,t);assert.deepEqual(s,entry.identity);return structuredClone(entry.lesson);};
   return {...api,bodyLesson,bodyContent(s,t){const {readiness:_r,...content}=bodyLesson(s,t);return content;}};
 }

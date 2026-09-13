@@ -1,5 +1,12 @@
 # Clinical validation checklist
 
+[Orbital/neck muscle imaging](ORBITAL_NECK_MUSCLE_IMAGING.md): review 112 draft
+CT/MRI/US placements for 42 retained selections, including gaze versus structural
+imaging, rectus/levator separation, oblique courses, clinical entrapment limits,
+scalene rib levels, hyoid layers and thyroid-cartilage/gland distinctions. Fourteen
+orbital US topics remain pending. No mesh, patient registration, private case,
+device certification or approval is supplied. Sign-off is revision-bound.
+
 [Hand/foot bone CT/MRI drafts](ACRAL_BONE_IMAGING.md): review 38 paired concepts /
 152 placements for exact side, ray, segment, joint partners, anatomical extent
 and useful teaching depth. Confirm thumb/hallux differences, finger tendon

@@ -1,0 +1,3445 @@
+{
+  "sourceCommit": "d709e70a6678b7846053f39b4e7ebae8efb79f55",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "head-neck-muscles",
+      "url": "/models/bodyparts3d/full-body/head-neck-muscles.glb",
+      "bytes": 8566352,
+      "sha256": "ad355b54f865461f5433bd1062bb206bde1967f6d4dc003840e7788800a69adb",
+      "structures": 72
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-inferior-oblique",
+        "fmaId": "FMA49051",
+        "name": "Left inferior oblique",
+        "sourceName": "left inferior oblique",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49051",
+        "bounds": {
+          "min": [
+            0.12558099627494812,
+            7.031500339508057,
+            0.9047900438308716
+          ],
+          "max": [
+            0.4191780090332031,
+            7.195000171661377,
+            1.1631300449371338
+          ]
+        },
+        "center": [
+          0.2723795026540756,
+          7.113250255584717,
+          1.0339600443840027
+        ],
+        "anchor": [
+          0.29078200459480286,
+          7.04949951171875,
+          1.040890097618103
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1294",
+            "sha256": "fc7dd40ee970cbbeae8ee147d0e7638e94fb166d28d4b1e1e62314f19395d6a8"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "inferior-oblique",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-inferior-rectus",
+        "fmaId": "FMA49047",
+        "name": "Left inferior rectus",
+        "sourceName": "left inferior rectus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49047",
+        "bounds": {
+          "min": [
+            0.12114999443292618,
+            7.042199611663818,
+            0.6904499530792236
+          ],
+          "max": [
+            0.34292301535606384,
+            7.269000053405762,
+            1.1000500917434692
+          ]
+        },
+        "center": [
+          0.232036504894495,
+          7.15559983253479,
+          0.8952500224113464
+        ],
+        "anchor": [
+          0.22043699026107788,
+          7.126199722290039,
+          0.8682800531387329
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1295",
+            "sha256": "7e5c20a2e78d0d606c370a626b299d6fa9183c5be487a04dd5c760ee6ec8d801"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "inferior-rectus",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-lateral-rectus",
+        "fmaId": "FMA49055",
+        "name": "Left lateral rectus",
+        "sourceName": "left lateral rectus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49055",
+        "bounds": {
+          "min": [
+            0.16356898844242096,
+            7.13170051574707,
+            0.6910800337791443
+          ],
+          "max": [
+            0.427962988615036,
+            7.30709981918335,
+            1.0872700214385986
+          ]
+        },
+        "center": [
+          0.2957659885287285,
+          7.21940016746521,
+          0.8891750276088715
+        ],
+        "anchor": [
+          0.33296000957489014,
+          7.228899955749512,
+          0.8812500238418579
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1304",
+            "sha256": "214943158bb5b523bd981c0040f49df1210e7d3afa6a5df861dac2b5d4436549"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lateral-rectus",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-levator-palpebrae-superioris",
+        "fmaId": "FMA49049",
+        "name": "Left levator palpebrae superioris",
+        "sourceName": "left levator palpebrae superioris",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49049",
+        "bounds": {
+          "min": [
+            0.11840200424194336,
+            7.208799839019775,
+            0.6957100033760071
+          ],
+          "max": [
+            0.41971197724342346,
+            7.36959981918335,
+            1.1537699699401855
+          ]
+        },
+        "center": [
+          0.2690569907426834,
+          7.2891998291015625,
+          0.9247399866580963
+        ],
+        "anchor": [
+          0.2724649906158447,
+          7.331200122833252,
+          0.9014500379562378
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1306",
+            "sha256": "114bfa94da75435db3d4afadafe060c57e0345c78e2174068ef4698a61d72e49"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "levator-palpebrae-superioris",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-medial-rectus",
+        "fmaId": "FMA49057",
+        "name": "Left medial rectus",
+        "sourceName": "left medial rectus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49057",
+        "bounds": {
+          "min": [
+            0.11240100115537643,
+            7.124100208282471,
+            0.70933997631073
+          ],
+          "max": [
+            0.2123749852180481,
+            7.300300121307373,
+            1.1117900609970093
+          ]
+        },
+        "center": [
+          0.16238799318671227,
+          7.212200164794922,
+          0.9105650186538696
+        ],
+        "anchor": [
+          0.16784100234508514,
+          7.213799953460693,
+          0.9095799326896667
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1308",
+            "sha256": "98d6d7cb6842243dceacbea4c494b1554d719b7fbb76e2c90020f126beb4defe"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "medial-rectus",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-superior-oblique",
+        "fmaId": "FMA49053",
+        "name": "Left superior oblique",
+        "sourceName": "left superior oblique",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49053",
+        "bounds": {
+          "min": [
+            0.11307000368833542,
+            7.233100414276123,
+            0.7210800051689148
+          ],
+          "max": [
+            0.39283502101898193,
+            7.346899509429932,
+            1.1550899744033813
+          ]
+        },
+        "center": [
+          0.2529525123536587,
+          7.289999961853027,
+          0.9380849897861481
+        ],
+        "anchor": [
+          0.2669000029563904,
+          7.293799877166748,
+          0.9565600752830505
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1322",
+            "sha256": "3a84379998b92f3c359c41426dba02b79c9fe648cfb9e3e835ce63677c9f8e9a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superior-oblique",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-superior-rectus",
+        "fmaId": "FMA49045",
+        "name": "Left superior rectus",
+        "sourceName": "left superior rectus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49045",
+        "bounds": {
+          "min": [
+            0.12585800886154175,
+            7.258000373840332,
+            0.7107299566268921
+          ],
+          "max": [
+            0.35514700412750244,
+            7.326099872589111,
+            1.1161500215530396
+          ]
+        },
+        "center": [
+          0.2405025064945221,
+          7.292050123214722,
+          0.9134399890899658
+        ],
+        "anchor": [
+          0.22472400963306427,
+          7.292800426483154,
+          0.9017900228500366
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1323",
+            "sha256": "e79c60ca4e54078df13c609d739a09f8e83c7fddebcc79a4f03f785c006423a1"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superior-rectus",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-inferior-oblique",
+        "fmaId": "FMA49050",
+        "name": "Right inferior oblique",
+        "sourceName": "right inferior oblique",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49050",
+        "bounds": {
+          "min": [
+            -0.4323759973049164,
+            7.031400203704834,
+            0.9047099351882935
+          ],
+          "max": [
+            -0.13864700496196747,
+            7.195000171661377,
+            1.1630700826644897
+          ]
+        },
+        "center": [
+          -0.2855115011334419,
+          7.1132001876831055,
+          1.0338900089263916
+        ],
+        "anchor": [
+          -0.30253899097442627,
+          7.049699783325195,
+          1.044029951095581
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1345",
+            "sha256": "b5508969b711e3c7bbfff0fdffc7567157326ee0e88b28416326513e06263c41"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "inferior-oblique",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-inferior-rectus",
+        "fmaId": "FMA49046",
+        "name": "Right inferior rectus",
+        "sourceName": "right inferior rectus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49046",
+        "bounds": {
+          "min": [
+            -0.35603001713752747,
+            7.042199611663818,
+            0.6904000043869019
+          ],
+          "max": [
+            -0.1339620053768158,
+            7.269100189208984,
+            1.100000023841858
+          ]
+        },
+        "center": [
+          -0.24499601125717163,
+          7.155649900436401,
+          0.8952000141143799
+        ],
+        "anchor": [
+          -0.2266799956560135,
+          7.126800537109375,
+          0.8730499148368835
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1346",
+            "sha256": "f961776090739a493c006f8933c8ded45365a86a92bdbfee2fb8dc0e35b651bc"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "inferior-rectus",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-lateral-rectus",
+        "fmaId": "FMA49054",
+        "name": "Right lateral rectus",
+        "sourceName": "right lateral rectus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49054",
+        "bounds": {
+          "min": [
+            -0.4411109983921051,
+            7.131800651550293,
+            0.6909599900245667
+          ],
+          "max": [
+            -0.1765809953212738,
+            7.307199478149414,
+            1.0873199701309204
+          ]
+        },
+        "center": [
+          -0.30884599685668945,
+          7.2195000648498535,
+          0.8891399800777435
+        ],
+        "anchor": [
+          -0.33801600337028503,
+          7.241999626159668,
+          0.8782000541687012
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1355",
+            "sha256": "0e1019c51724d672a6673e97f81f3e57f41f568d5ef5d68cf024096215165797"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lateral-rectus",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-levator-palpebrae-superioris",
+        "fmaId": "FMA49048",
+        "name": "Right levator palpebrae superioris",
+        "sourceName": "right levator palpebrae superioris",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49048",
+        "bounds": {
+          "min": [
+            -0.4329740107059479,
+            7.208600044250488,
+            0.695580005645752
+          ],
+          "max": [
+            -0.13164199888706207,
+            7.369699478149414,
+            1.15378999710083
+          ]
+        },
+        "center": [
+          -0.282308004796505,
+          7.289149761199951,
+          0.924685001373291
+        ],
+        "anchor": [
+          -0.28552699089050293,
+          7.337299823760986,
+          0.9223300218582153
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1357",
+            "sha256": "430068a4d8fc68e5e96b725c8e09849f757ccdc090ab6cec84341d945c22b9c5"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "levator-palpebrae-superioris",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-medial-rectus",
+        "fmaId": "FMA49056",
+        "name": "Right medial rectus",
+        "sourceName": "right medial rectus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49056",
+        "bounds": {
+          "min": [
+            -0.22549200057983398,
+            7.124000072479248,
+            0.7094399929046631
+          ],
+          "max": [
+            -0.1253570020198822,
+            7.300500392913818,
+            1.1117700338363647
+          ]
+        },
+        "center": [
+          -0.1754245012998581,
+          7.212250232696533,
+          0.9106050133705139
+        ],
+        "anchor": [
+          -0.17976200580596924,
+          7.217700004577637,
+          0.9125300645828247
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1359",
+            "sha256": "ad4c08e84c570715c5cdc24faf0bdb9bc54030b7fe6131a10e27e0c43e0588a1"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "medial-rectus",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-superior-oblique",
+        "fmaId": "FMA49052",
+        "name": "Right superior oblique",
+        "sourceName": "right superior oblique",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49052",
+        "bounds": {
+          "min": [
+            -0.4058050215244293,
+            7.233199596405029,
+            0.7207300066947937
+          ],
+          "max": [
+            -0.12636598944664001,
+            7.346899509429932,
+            1.1550999879837036
+          ]
+        },
+        "center": [
+          -0.26608550548553467,
+          7.2900495529174805,
+          0.9379149973392487
+        ],
+        "anchor": [
+          -0.28172898292541504,
+          7.292900562286377,
+          0.9547999501228333
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1373",
+            "sha256": "90d01a639fd51a3cb956e17dbb581f6d51e037cfacdcfccf21716e8a57f50c6e"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superior-oblique",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-superior-rectus",
+        "fmaId": "FMA49044",
+        "name": "Right superior rectus",
+        "sourceName": "right superior rectus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49044",
+        "bounds": {
+          "min": [
+            -0.3682989776134491,
+            7.257900238037109,
+            0.7105600237846375
+          ],
+          "max": [
+            -0.1387930065393448,
+            7.326200008392334,
+            1.1161599159240723
+          ]
+        },
+        "center": [
+          -0.25354599207639694,
+          7.292050123214722,
+          0.9133599698543549
+        ],
+        "anchor": [
+          -0.24859501421451569,
+          7.293699741363525,
+          0.9136300683021545
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1374",
+            "sha256": "ae2a718964765d9492e871dd9d2d41246bf8b9f9f01b3c2e4f612bd72e165013"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superior-rectus",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-subclavius",
+        "fmaId": "FMA13412",
+        "name": "Right subclavius",
+        "sourceName": "right subclavius",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA13412",
+        "bounds": {
+          "min": [
+            -1.0467699766159058,
+            5.114599704742432,
+            0.2409929633140564
+          ],
+          "max": [
+            -0.342879980802536,
+            5.428599834442139,
+            0.8487399220466614
+          ]
+        },
+        "center": [
+          -0.6948249787092209,
+          5.271599769592285,
+          0.5448664426803589
+        ],
+        "anchor": [
+          -0.7268129587173462,
+          5.275200366973877,
+          0.5781099796295166
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1460",
+            "sha256": "39c2b495c92f2603b5df5cf4ae18e25ef9a34bf583c6e8657b667596d238c28e"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "subclavius",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-subclavius",
+        "fmaId": "FMA13411",
+        "name": "Left subclavius",
+        "sourceName": "left subclavius",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA13411",
+        "bounds": {
+          "min": [
+            0.342879980802536,
+            5.11400032043457,
+            0.2409929633140564
+          ],
+          "max": [
+            1.0467699766159058,
+            5.428599834442139,
+            0.8487399220466614
+          ]
+        },
+        "center": [
+          0.6948249787092209,
+          5.2713000774383545,
+          0.5448664426803589
+        ],
+        "anchor": [
+          0.7268129587173462,
+          5.275200366973877,
+          0.5781099796295166
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1460M",
+            "sha256": "c35b0e090826dec2b6ce70de4f1e119e5791b171e2ae9737ce3e15f2af3309ac"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "subclavius",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-digastric",
+        "fmaId": "FMA46293",
+        "name": "Left digastric",
+        "sourceName": "left digastric",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46293",
+        "bounds": {
+          "min": [
+            0.025336898863315582,
+            6.285999774932861,
+            0.16211998462677002
+          ],
+          "max": [
+            0.5620160102844238,
+            6.950400352478027,
+            1.0845398902893066
+          ]
+        },
+        "center": [
+          0.2936764545738697,
+          6.618200063705444,
+          0.6233299374580383
+        ],
+        "anchor": [
+          0.26811301708221436,
+          6.569699764251709,
+          0.5108699798583984
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1555",
+            "sha256": "de61ba665a21727587c77ec819ca6606b4aacd2a43fa228a59a0c2b91db4c0a0"
+          },
+          {
+            "file": "FJ1560",
+            "sha256": "8e001c787d59c211017d574330a4a475088452bd997e858c74ed69c4d4627463"
+          },
+          {
+            "file": "FJ1578",
+            "sha256": "2135567871f49ec25abbe3f9e12875ab9fa011216d9f0389a28e89ac33c4bbc8"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "digastric",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-digastric",
+        "fmaId": "FMA46292",
+        "name": "Right digastric",
+        "sourceName": "right digastric",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46292",
+        "bounds": {
+          "min": [
+            -0.576108992099762,
+            6.298299789428711,
+            0.16183403134346008
+          ],
+          "max": [
+            -0.038320399820804596,
+            6.950899600982666,
+            1.0850399732589722
+          ]
+        },
+        "center": [
+          -0.3072146959602833,
+          6.6245996952056885,
+          0.6234370023012161
+        ],
+        "anchor": [
+          -0.2860479950904846,
+          6.572400093078613,
+          0.5129200220108032
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1556",
+            "sha256": "ceca25da24cfae6460cf682de4c080bd165b22ec413773c19ed7f631ec8abcb7"
+          },
+          {
+            "file": "FJ1579",
+            "sha256": "42e2244e314cb9095ba8e4261e0c413a6693bee02f8f41e897998904f908560b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "digastric",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-platysma",
+        "fmaId": "FMA45740",
+        "name": "Left platysma",
+        "sourceName": "left platysma",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA45740",
+        "bounds": {
+          "min": [
+            -0.003766370005905628,
+            5.193699836730957,
+            -0.002015991136431694
+          ],
+          "max": [
+            1.457610011100769,
+            6.681800365447998,
+            1.235129952430725
+          ]
+        },
+        "center": [
+          0.7269218205474317,
+          5.9377501010894775,
+          0.6165569806471467
+        ],
+        "anchor": [
+          0.42753398418426514,
+          5.89810037612915,
+          0.5735900402069092
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1558",
+            "sha256": "21711ac424696b6bc9a08ed225405228a26eef29beb237b7d9d8ed5a0a65d394"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "platysma",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-geniohyoid",
+        "fmaId": "FMA46327",
+        "name": "Left geniohyoid",
+        "sourceName": "left geniohyoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46327",
+        "bounds": {
+          "min": [
+            -0.0054899901151657104,
+            6.230600357055664,
+            0.7096299529075623
+          ],
+          "max": [
+            0.0702056959271431,
+            6.368800163269043,
+            1.1024800539016724
+          ]
+        },
+        "center": [
+          0.03235785290598869,
+          6.2997002601623535,
+          0.9060550034046173
+        ],
+        "anchor": [
+          0.04145520180463791,
+          6.323000431060791,
+          0.9014900326728821
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1559",
+            "sha256": "f774104354835d3d5347d323642f305cb439d861d9c979227948239309be41dc"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "geniohyoid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-mylohyoid",
+        "fmaId": "FMA46322",
+        "name": "Left mylohyoid",
+        "sourceName": "left mylohyoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46322",
+        "bounds": {
+          "min": [
+            -0.006552690174430609,
+            6.316199779510498,
+            0.7219499945640564
+          ],
+          "max": [
+            0.25460898876190186,
+            6.558800220489502,
+            1.088070034980774
+          ]
+        },
+        "center": [
+          0.12402814929373562,
+          6.4375,
+          0.9050100147724152
+        ],
+        "anchor": [
+          0.15799099206924438,
+          6.420899868011475,
+          0.8969600200653076
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1562",
+            "sha256": "33970bf53e3065f79e3600c6b2bf2f99c2d02e56fe75ac085b1a5615993afda3"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "mylohyoid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-omohyoid",
+        "fmaId": "FMA13349",
+        "name": "Left omohyoid",
+        "sourceName": "left omohyoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA13349",
+        "bounds": {
+          "min": [
+            0.11320900171995163,
+            5.178699970245361,
+            -0.23548299074172974
+          ],
+          "max": [
+            1.0450999736785889,
+            6.272299766540527,
+            0.7225900292396545
+          ]
+        },
+        "center": [
+          0.5791544876992702,
+          5.725499868392944,
+          0.2435535192489624
+        ],
+        "anchor": [
+          0.6046810150146484,
+          5.577199935913086,
+          0.32055604457855225
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1565",
+            "sha256": "1552449f945343885869b8495474e44963c906ce559abf2f508506f784357b59"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "omohyoid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-scalenus-anterior",
+        "fmaId": "FMA13393",
+        "name": "Left scalenus anterior",
+        "sourceName": "left scalenus anterior",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA13393",
+        "bounds": {
+          "min": [
+            0.21012501418590546,
+            5.342800140380859,
+            0.2888610064983368
+          ],
+          "max": [
+            0.5501620173454285,
+            6.209599494934082,
+            0.46829596161842346
+          ]
+        },
+        "center": [
+          0.38014351576566696,
+          5.776199817657471,
+          0.3785784840583801
+        ],
+        "anchor": [
+          0.37602001428604126,
+          5.780099868774414,
+          0.39251700043678284
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1570",
+            "sha256": "7cffc2140b07a8966c1bf36937f3e260b4b565b8151ecfa2f683b72bcd5f546d"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "scalenus-anterior",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-scalenus-medius",
+        "fmaId": "FMA13391",
+        "name": "Left scalenus medius",
+        "sourceName": "left scalenus medius",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA13391",
+        "bounds": {
+          "min": [
+            0.20902100205421448,
+            5.432199478149414,
+            0.21364302933216095
+          ],
+          "max": [
+            0.5427790284156799,
+            6.486099720001221,
+            0.36007797718048096
+          ]
+        },
+        "center": [
+          0.3759000152349472,
+          5.959149599075317,
+          0.28686050325632095
+        ],
+        "anchor": [
+          0.3698440194129944,
+          5.947400093078613,
+          0.2874400317668915
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1571",
+            "sha256": "87f401434568a449ee7ac71d8d372998611f5eed4190e8273e31cf252fccfbcd"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "scalenus-medius",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-scalenus-posterior",
+        "fmaId": "FMA13389",
+        "name": "Left scalenus posterior",
+        "sourceName": "left scalenus posterior",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA13389",
+        "bounds": {
+          "min": [
+            0.23622101545333862,
+            5.413700103759766,
+            0.06075599789619446
+          ],
+          "max": [
+            0.7275430560112,
+            6.029599666595459,
+            0.3143240213394165
+          ]
+        },
+        "center": [
+          0.4818820357322693,
+          5.721649885177612,
+          0.18754000961780548
+        ],
+        "anchor": [
+          0.46903499960899353,
+          5.719100475311279,
+          0.20082001388072968
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1572",
+            "sha256": "227a19a0ccceb88b370c8fe5af637ccb491bcb2c1f1898cd101c24e93fa82ae7"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "scalenus-posterior",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-sternocleidomastoid",
+        "fmaId": "FMA13409",
+        "name": "Left sternocleidomastoid",
+        "sourceName": "left sternocleidomastoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA13409",
+        "bounds": {
+          "min": [
+            0.005796629935503006,
+            5.019899845123291,
+            -0.1260889768600464
+          ],
+          "max": [
+            0.6166549921035767,
+            7.030200004577637,
+            1.068060040473938
+          ]
+        },
+        "center": [
+          0.31122581101953983,
+          6.025049924850464,
+          0.4709855318069458
+        ],
+        "anchor": [
+          0.30642998218536377,
+          6.015999794006348,
+          0.4588710069656372
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1573",
+            "sha256": "2035124d82e26f8e2ba9985925a746d0fd1fd94535d6ca7eed4b622f60bf5363"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "sternocleidomastoid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-sternohyoid",
+        "fmaId": "FMA13347",
+        "name": "Left sternohyoid",
+        "sourceName": "left sternohyoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA13347",
+        "bounds": {
+          "min": [
+            0.024815700948238373,
+            5.134699821472168,
+            0.5788999795913696
+          ],
+          "max": [
+            0.24992699921131134,
+            6.290400505065918,
+            0.8763200640678406
+          ]
+        },
+        "center": [
+          0.13737135007977486,
+          5.712550163269043,
+          0.7276100218296051
+        ],
+        "anchor": [
+          0.09614899754524231,
+          5.689499378204346,
+          0.6548200249671936
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1574",
+            "sha256": "ea466d41ef524b945f5e4e50620b74d8c493288c36a3d0207922f514364a5c65"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "sternohyoid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-sternothyroid",
+        "fmaId": "FMA13351",
+        "name": "Left sternothyroid",
+        "sourceName": "left sternothyroid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA13351",
+        "bounds": {
+          "min": [
+            0.025041799992322922,
+            5.018299579620361,
+            0.465535968542099
+          ],
+          "max": [
+            0.21678800880908966,
+            6.155099868774414,
+            0.9116499423980713
+          ]
+        },
+        "center": [
+          0.12091490440070629,
+          5.586699724197388,
+          0.6885929554700851
+        ],
+        "anchor": [
+          0.12273900210857391,
+          5.586199760437012,
+          0.6357800364494324
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1575",
+            "sha256": "2b6162444c2c9447e9f0d2bb0947d9f95d76498ddf71a3277e96dabfef550f5f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "sternothyroid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-stylohyoid",
+        "fmaId": "FMA45827",
+        "name": "Left stylohyoid",
+        "sourceName": "left stylohyoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA45827",
+        "bounds": {
+          "min": [
+            0.0903237983584404,
+            6.295899868011475,
+            0.3494270443916321
+          ],
+          "max": [
+            0.3938470184803009,
+            6.900200366973877,
+            0.743149995803833
+          ]
+        },
+        "center": [
+          0.24208540841937065,
+          6.598050117492676,
+          0.5462885200977325
+        ],
+        "anchor": [
+          0.26338499784469604,
+          6.58560037612915,
+          0.5573000311851501
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1576",
+            "sha256": "2c6d6a6008f602842ab36c6738960da0fcc2a1e9bb7ffb4b127f7bfd20ddc057"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "stylohyoid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-thyrohyoid",
+        "fmaId": "FMA13353",
+        "name": "Left thyrohyoid",
+        "sourceName": "left thyrohyoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA13353",
+        "bounds": {
+          "min": [
+            0.06477029621601105,
+            5.979699611663818,
+            0.4683389961719513
+          ],
+          "max": [
+            0.18758699297904968,
+            6.288199424743652,
+            0.7310600280761719
+          ]
+        },
+        "center": [
+          0.12617864459753036,
+          6.133949518203735,
+          0.5996995121240616
+        ],
+        "anchor": [
+          0.11997400224208832,
+          6.141700267791748,
+          0.5979699492454529
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1577",
+            "sha256": "f342f7656d7164fc8bf24f3690f3ba1b2ac029beea0ad435347809476c7f8d81"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thyrohyoid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-geniohyoid",
+        "fmaId": "FMA46326",
+        "name": "Right geniohyoid",
+        "sourceName": "right geniohyoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46326",
+        "bounds": {
+          "min": [
+            -0.0834209993481636,
+            6.2305006980896,
+            0.7104099988937378
+          ],
+          "max": [
+            -0.007387880235910416,
+            6.369000434875488,
+            1.102389931678772
+          ]
+        },
+        "center": [
+          -0.04540443979203701,
+          6.299750566482544,
+          0.9063999652862549
+        ],
+        "anchor": [
+          -0.04039569944143295,
+          6.324399471282959,
+          0.8989700078964233
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1580",
+            "sha256": "848229dad5d1cee4765c43edcf577e02bb901737cd58afc0cb41f6271a121346"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "geniohyoid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-mylohyoid",
+        "fmaId": "FMA46321",
+        "name": "Right mylohyoid",
+        "sourceName": "right mylohyoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46321",
+        "bounds": {
+          "min": [
+            -0.2674909830093384,
+            6.317099571228027,
+            0.7219499945640564
+          ],
+          "max": [
+            -0.006329089868813753,
+            6.558800220489502,
+            1.0884000062942505
+          ]
+        },
+        "center": [
+          -0.13691003643907607,
+          6.437949895858765,
+          0.9051750004291534
+        ],
+        "anchor": [
+          -0.14297200739383698,
+          6.396999359130859,
+          0.901430070400238
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1583",
+            "sha256": "1a12e34cd47b7c713e9e01509fd5bfadddfcf6b58e38617484f37298d345fb9d"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "mylohyoid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-omohyoid",
+        "fmaId": "FMA13348",
+        "name": "Right omohyoid",
+        "sourceName": "right omohyoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA13348",
+        "bounds": {
+          "min": [
+            -1.0586400032043457,
+            5.178699970245361,
+            -0.23607900738716125
+          ],
+          "max": [
+            -0.12741400301456451,
+            6.272299766540527,
+            0.7226200103759766
+          ]
+        },
+        "center": [
+          -0.5930270031094551,
+          5.725499868392944,
+          0.24327050149440765
+        ],
+        "anchor": [
+          -0.6286460161209106,
+          5.575799465179443,
+          0.31089895963668823
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1586",
+            "sha256": "2ec30a6720efb6eaf451bc141c61d2419b33027b2f10c5b00378f54861be0605"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "omohyoid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-platysma",
+        "fmaId": "FMA45739",
+        "name": "Right platysma",
+        "sourceName": "right platysma",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA45739",
+        "bounds": {
+          "min": [
+            -1.4709500074386597,
+            5.194399356842041,
+            -0.0023220062721520662
+          ],
+          "max": [
+            0.02764509990811348,
+            6.681500434875488,
+            1.2353500127792358
+          ]
+        },
+        "center": [
+          -0.7216524537652731,
+          5.937949895858765,
+          0.6165140032535419
+        ],
+        "anchor": [
+          -0.43803298473358154,
+          5.929499626159668,
+          0.5776999592781067
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1587",
+            "sha256": "6b7deb39529e4ae7aeb013bdcbca4d7c773035d75d4d2e7c821bb1bdc1852790"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "platysma",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-scalenus-anterior",
+        "fmaId": "FMA13392",
+        "name": "Right scalenus anterior",
+        "sourceName": "right scalenus anterior",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA13392",
+        "bounds": {
+          "min": [
+            -0.5631909966468811,
+            5.343299388885498,
+            0.28804197907447815
+          ],
+          "max": [
+            -0.22326499223709106,
+            6.20989990234375,
+            0.4680580198764801
+          ]
+        },
+        "center": [
+          -0.3932279944419861,
+          5.776599645614624,
+          0.3780499994754791
+        ],
+        "anchor": [
+          -0.37499499320983887,
+          5.789499282836914,
+          0.38975799083709717
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1592",
+            "sha256": "a8e09cc9dcc353437edeafeb78873c3f4d9727fcd9187d0f43dd57a3e72efb83"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "scalenus-anterior",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-scalenus-medius",
+        "fmaId": "FMA13390",
+        "name": "Right scalenus medius",
+        "sourceName": "right scalenus medius",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA13390",
+        "bounds": {
+          "min": [
+            -0.5559110045433044,
+            5.431800365447998,
+            0.21341003477573395
+          ],
+          "max": [
+            -0.2214769870042801,
+            6.486099720001221,
+            0.3597709536552429
+          ]
+        },
+        "center": [
+          -0.38869399577379227,
+          5.958950042724609,
+          0.28659049421548843
+        ],
+        "anchor": [
+          -0.39165401458740234,
+          5.971199989318848,
+          0.277353972196579
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1593",
+            "sha256": "d601c1bf83da406115bc5605305b04ef8f4a37518e3d8528ca35e93fde0f4140"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "scalenus-medius",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-scalenus-posterior",
+        "fmaId": "FMA13388",
+        "name": "Right scalenus posterior",
+        "sourceName": "right scalenus posterior",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA13388",
+        "bounds": {
+          "min": [
+            -0.7407209873199463,
+            5.413199424743652,
+            0.060773011296987534
+          ],
+          "max": [
+            -0.2489279955625534,
+            6.029399394989014,
+            0.31419602036476135
+          ]
+        },
+        "center": [
+          -0.49482449144124985,
+          5.721299409866333,
+          0.18748451583087444
+        ],
+        "anchor": [
+          -0.4923139810562134,
+          5.708899974822998,
+          0.19425399601459503
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1594",
+            "sha256": "babdc76481ea863c4f1d5599fbc843da667780a2d7a5abe2c30a4c82374c9f11"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "scalenus-posterior",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-sternocleidomastoid",
+        "fmaId": "FMA13408",
+        "name": "Right sternocleidomastoid",
+        "sourceName": "right sternocleidomastoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA13408",
+        "bounds": {
+          "min": [
+            -0.6304000020027161,
+            5.019699573516846,
+            -0.1274610161781311
+          ],
+          "max": [
+            0.6140499711036682,
+            7.031899452209473,
+            1.0690699815750122
+          ]
+        },
+        "center": [
+          -0.008175015449523926,
+          6.025799512863159,
+          0.47080448269844055
+        ],
+        "anchor": [
+          -0.23635299503803253,
+          6.007099628448486,
+          0.5803200006484985
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1595",
+            "sha256": "287ce88ff3321e41d83b34bb0c30f66ab273aceac9fd0a6c693af4532d0e0681"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "sternocleidomastoid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-sternohyoid",
+        "fmaId": "FMA13346",
+        "name": "Right sternohyoid",
+        "sourceName": "right sternohyoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA13346",
+        "bounds": {
+          "min": [
+            -0.2623469829559326,
+            5.134499549865723,
+            0.5783299803733826
+          ],
+          "max": [
+            -0.03761909902095795,
+            6.290300369262695,
+            0.8777999877929688
+          ]
+        },
+        "center": [
+          -0.14998304098844528,
+          5.712399959564209,
+          0.7280649840831757
+        ],
+        "anchor": [
+          -0.10972900688648224,
+          5.692500114440918,
+          0.6542400121688843
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1596",
+            "sha256": "262225d820e3b09f05a269a23f32eb1d97ce29dfa569d569c73e88c0a106708c"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "sternohyoid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-sternothyroid",
+        "fmaId": "FMA13350",
+        "name": "Right sternothyroid",
+        "sourceName": "right sternothyroid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA13350",
+        "bounds": {
+          "min": [
+            -0.22975799441337585,
+            5.018000602722168,
+            0.4656520187854767
+          ],
+          "max": [
+            -0.03784960135817528,
+            6.157299995422363,
+            0.9124299883842468
+          ]
+        },
+        "center": [
+          -0.13380379788577557,
+          5.587650299072266,
+          0.6890410035848618
+        ],
+        "anchor": [
+          -0.14753399789333344,
+          5.589799880981445,
+          0.6317999958992004
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1597",
+            "sha256": "82534889c09ad8efb043e374fdedb9af25dbffa59299d425f233c17173182c11"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "sternothyroid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-stylohyoid",
+        "fmaId": "FMA45826",
+        "name": "Right stylohyoid",
+        "sourceName": "right stylohyoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA45826",
+        "bounds": {
+          "min": [
+            -0.4070810079574585,
+            6.296600341796875,
+            0.3494069576263428
+          ],
+          "max": [
+            -0.1029449999332428,
+            6.897299766540527,
+            0.7430300116539001
+          ]
+        },
+        "center": [
+          -0.25501300394535065,
+          6.596950054168701,
+          0.5462184846401215
+        ],
+        "anchor": [
+          -0.27489200234413147,
+          6.57729959487915,
+          0.5449199676513672
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1598",
+            "sha256": "4011f33b0992f727c3468fd2aa50dbb1a9f0eb3ef4667cb0cb60aa04b3c98486"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "stylohyoid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-thyrohyoid",
+        "fmaId": "FMA13352",
+        "name": "Right thyrohyoid",
+        "sourceName": "right thyrohyoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA13352",
+        "bounds": {
+          "min": [
+            -0.2016250044107437,
+            5.979499340057373,
+            0.46832001209259033
+          ],
+          "max": [
+            0.17524200677871704,
+            6.288199424743652,
+            0.73117995262146
+          ]
+        },
+        "center": [
+          -0.013191498816013336,
+          6.133849382400513,
+          0.5997499823570251
+        ],
+        "anchor": [
+          -0.08290620148181915,
+          6.111800670623779,
+          0.6381400227546692
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1599",
+            "sha256": "fe3834ea88fcbf9d0140df58928bd7df22e00c8b602ef47a92102e507af2266c"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thyrohyoid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "af1eb1c86e04e349807d15211b23d177d694abc2268d1d09e94a443ee63fff10"
+}

@@ -1,0 +1,53 @@
+{
+  "baselineSource": "d709e70a6678b7846053f39b4e7ebae8efb79f55",
+  "groups": 21,
+  "sourceSelections": 42,
+  "addedDraftPlacements": 112,
+  "modalities": {
+    "ct": 42,
+    "mri": 42,
+    "ultrasound": 28
+  },
+  "unchangedTopics": 9797,
+  "ultrasoundPending": [
+    "FMA49051",
+    "FMA49047",
+    "FMA49055",
+    "FMA49049",
+    "FMA49057",
+    "FMA49053",
+    "FMA49045",
+    "FMA49050",
+    "FMA49046",
+    "FMA49054",
+    "FMA49048",
+    "FMA49056",
+    "FMA49052",
+    "FMA49044"
+  ],
+  "bodySchemaRecords": 1101,
+  "actualNoteRenders": 112,
+  "rejectedSourceTopicCombinations": 2128,
+  "uniqueReferenceFacts": 59,
+  "sourceWordCounts": {
+    "orbitCT": 92,
+    "orbitMRI": 149,
+    "pulley": 20,
+    "orbitTrauma": 23,
+    "subclaviusVariant": 25,
+    "subclavius": 22,
+    "neckUS": 93,
+    "triangle": 105,
+    "thyroidUS": 56,
+    "spaces": 91,
+    "supraUS": 99,
+    "mylohyoidVariant": 27,
+    "omohyoid": 26
+  },
+  "sourceGeometryChanged": false,
+  "currentApprovalRecordsChanged": false,
+  "clinicalApproval": false,
+  "imagesImported": false,
+  "imagingConnected": false,
+  "browserOrDeviceAcceptance": false
+}
