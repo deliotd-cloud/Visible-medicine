@@ -1,0 +1,36 @@
+{
+  "baselineSource": "213699f56adf0f25055913c906f3a976df80a10a",
+  "groups": 36,
+  "sourceSelections": 64,
+  "addedDraftPlacements": 192,
+  "modalities": {
+    "ct": 64,
+    "mri": 64,
+    "ultrasound": 64
+  },
+  "unchangedTopics": 9717,
+  "unresolvedIdentities": [
+    "FMA19728"
+  ],
+  "bodySchemaRecords": 1101,
+  "actualNoteRenders": 192,
+  "rejectedSourceTopicCombinations": 2880,
+  "uniqueReferenceFacts": 50,
+  "sourceWordCounts": {
+    "mri": 27,
+    "thoracicMRI": 74,
+    "paraspinalUS": 187,
+    "lumbarMRI": 25,
+    "cervicalMRI": 149,
+    "craniocervical": 69,
+    "suboccipitalUS": 29,
+    "pelvicMRI": 29,
+    "pelvicUS": 28
+  },
+  "sourceGeometryChanged": false,
+  "currentApprovalRecordsChanged": false,
+  "clinicalApproval": false,
+  "imagesImported": false,
+  "imagingConnected": false,
+  "browserOrDeviceAcceptance": false
+}
