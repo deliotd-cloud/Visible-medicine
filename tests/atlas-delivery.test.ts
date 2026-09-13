@@ -17,7 +17,7 @@ test('delivery policy binds the complete inventory and retains private draft rev
   assert.equal('approvedRevision' in ATLAS_DELIVERY_POLICY, false);
 });
 
-test('all 59 original model paths retain full or short revisions without accepting stale geometry', () => {
+test('all registered original model paths retain full or short revisions without accepting stale geometry', () => {
   for (const model of inventory.models) for (const path of model.paths) {
     for (const query of ['', `?v=${model.sha256}`, `?v=${model.sha256.slice(0, 12)}`]) {
       const url = new URL(path + query, 'https://atlas.test');

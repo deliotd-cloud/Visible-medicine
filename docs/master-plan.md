@@ -68,6 +68,18 @@ Latest specialist-chat review reports both anterior cerebellar edges accepted an
 
 ## Ordered delivery roadmap
 
+13 September — [full abdomen source integration](abdomen-atlas-pilot.md) now
+includes the 106/16 regional/nested scope, all relationship contexts, and the
+separate 29-surface abdominal-wall and 82-surface HRA renal specimens. Exact
+source/licences and source-bound share/return links are retained. Atlas export
+`031fa555b6f3e48825353de115f6aa5d8e275d6c` is locally browser-sampled and both
+builds pass; all 87 website tests pass. This is not newly hosted: version 56
+remains the working 59-model release. Next publish only the candidate staging
+registry while retaining active delivery, verify the 21 added models, then
+activate and verify the complete 80-model website. One unattributed mobile
+MutationObserver error, overview framing and broader device/clinical gates remain.
+The main task's abdomen checkpoint records actual GitHub/D recovery state.
+
 13 September — [protected model transport](atlas-protected-delivery.md) is now
 privately deployed in version 56 for the complete 59-model canonical source, retaining administrator
 review until revision-bound clinical release. It preserves original URLs and

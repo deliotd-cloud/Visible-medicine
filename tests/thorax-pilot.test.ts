@@ -17,6 +17,6 @@ test('thorax shares audited assets while retaining its own root and nested ident
   assert.equal(new Set(scope.regionalIds).size,157);assert.equal(scope.nestedTargets.length,9);
   assert.deepEqual([...new Set(scope.nestedTargets.map((t:{study:string})=>t.study))].sort(),['cardiac','pulmonary']);
   for(const b of scope.bundles)assert(manifest.modelBundles.some((m:{url:string;sha256:string;bytes:number})=>m.url===b.url&&m.sha256===b.sha256&&m.bytes===b.bytes));
-  assert.equal(new Set(manifest.modelBundles.map((b:{url:string})=>b.url)).size,52);
+  assert.equal(new Set(manifest.modelBundles.map((b:{url:string})=>b.url)).size,73);
   for(const key of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[key],false);
 });

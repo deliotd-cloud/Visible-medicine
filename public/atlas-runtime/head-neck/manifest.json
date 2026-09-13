@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "sourceCommit": "431e4849621a085d47ca6add68c21383d2159cd5",
+  "sourceCommit": "031fa555b6f3e48825353de115f6aa5d8e275d6c",
   "region": "head-neck",
   "sourceVersion": "4.0",
   "regionalIds": [
@@ -1796,6 +1796,7 @@
           "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
         }
       ],
+      "independentSpecimens": [],
       "bundles": [
         {
           "id": "brainstem",
@@ -2295,6 +2296,7 @@
           "sourceHash": "d4670d3c15580e2a1ef53debab32f08c8199fe6ddaf90af3f3aedb197d93e68d"
         }
       ],
+      "independentSpecimens": [],
       "bundles": [
         {
           "id": "cardiac",
@@ -2460,14 +2462,655 @@
       ],
       "sourceVersion": "4.0",
       "license": "CC-BY-4.0"
+    },
+    {
+      "region": "abdomen",
+      "regionalIds": [
+        "vm:anatomy:body:spine:midline:bone:first-lumbar-vertebra",
+        "vm:anatomy:body:spine:midline:bone:second-lumbar-vertebra",
+        "vm:anatomy:body:spine:midline:bone:third-lumbar-vertebra",
+        "vm:anatomy:body:spine:midline:bone:fourth-lumbar-vertebra",
+        "vm:anatomy:body:spine:midline:bone:fifth-lumbar-vertebra",
+        "vm:anatomy:body:abdomen:right:muscle:right-external-oblique",
+        "vm:anatomy:body:abdomen:left:muscle:left-external-oblique",
+        "vm:anatomy:body:spine:right:muscle:right-lumbar-rotator",
+        "vm:anatomy:body:spine:left:muscle:left-lumbar-rotator",
+        "vm:anatomy:body:spine:midline:muscle:lateral-lumbar-intertransversarius",
+        "vm:anatomy:body:spine:midline:muscle:medial-lumbar-intertransversarius",
+        "vm:anatomy:body:abdomen:unpaired:organ:liver",
+        "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
+        "vm:anatomy:body:abdomen:unpaired:organ:stomach",
+        "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
+        "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
+        "vm:anatomy:body:pelvis:unpaired:organ:gallbladder",
+        "vm:anatomy:body:abdomen:right:organ:right-kidney",
+        "vm:anatomy:body:abdomen:left:organ:left-kidney",
+        "vm:anatomy:body:abdomen:unpaired:organ:spleen",
+        "vm:anatomy:body:abdomen:right:organ:right-adrenal-gland",
+        "vm:anatomy:body:abdomen:left:organ:left-adrenal-gland",
+        "vm:anatomy:body:abdomen:right:organ:right-ureter",
+        "vm:anatomy:body:abdomen:left:organ:left-ureter",
+        "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+        "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
+        "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+        "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
+        "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
+        "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
+        "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-artery",
+        "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-artery",
+        "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-artery",
+        "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-artery",
+        "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-artery",
+        "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-artery",
+        "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-vein",
+        "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-vein",
+        "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-vein",
+        "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-vein",
+        "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-vein",
+        "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-vein",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-first-lumbar-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-lumbar-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-lumbar-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra",
+        "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+        "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+        "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+        "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+        "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+        "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+        "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
+        "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
+        "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+        "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
+        "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
+        "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:splenic-vein",
+        "vm:anatomy:body:abdomen:left:vessel:left-gastroepiploic-vein",
+        "vm:anatomy:body:abdomen:right:vessel:right-gastroepiploic-vein",
+        "vm:anatomy:body:abdomen:left:vessel:left-gastric-vein",
+        "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:middle-hepatic-vein",
+        "vm:anatomy:body:abdomen:right:vessel:tributary-of-right-hepatic-vein",
+        "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein",
+        "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+        "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+        "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein"
+      ],
+      "nestedTargets": [
+        {
+          "parentId": "vm:anatomy:body:abdomen:unpaired:organ:liver",
+          "parentHash": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+          "study": "hepatic",
+          "title": "Liver internal branches",
+          "structureId": "vm:anatomy:body:abdomen:right:vessel:right-hepatic-arterial-branches",
+          "sourceHash": "4cf393e8b9bce6637f139b6e85d47be0098aac52103bbacfba3cc399747d9857"
+        },
+        {
+          "parentId": "vm:anatomy:body:abdomen:unpaired:organ:liver",
+          "parentHash": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+          "study": "hepatic",
+          "title": "Liver internal branches",
+          "structureId": "vm:anatomy:body:abdomen:left:vessel:left-hepatic-arterial-branches",
+          "sourceHash": "4cf393e8b9bce6637f139b6e85d47be0098aac52103bbacfba3cc399747d9857"
+        },
+        {
+          "parentId": "vm:anatomy:body:abdomen:unpaired:organ:liver",
+          "parentHash": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+          "study": "hepatic",
+          "title": "Liver internal branches",
+          "structureId": "vm:anatomy:body:abdomen:right:vessel:right-portal-vein-branches",
+          "sourceHash": "4cf393e8b9bce6637f139b6e85d47be0098aac52103bbacfba3cc399747d9857"
+        },
+        {
+          "parentId": "vm:anatomy:body:abdomen:unpaired:organ:liver",
+          "parentHash": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+          "study": "hepatic",
+          "title": "Liver internal branches",
+          "structureId": "vm:anatomy:body:abdomen:left:vessel:left-portal-vein-branches",
+          "sourceHash": "4cf393e8b9bce6637f139b6e85d47be0098aac52103bbacfba3cc399747d9857"
+        },
+        {
+          "parentId": "vm:anatomy:body:abdomen:unpaired:organ:liver",
+          "parentHash": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+          "study": "hepatic",
+          "title": "Liver internal branches",
+          "structureId": "vm:anatomy:body:abdomen:right:organ:right-hepatic-bile-ducts",
+          "sourceHash": "4cf393e8b9bce6637f139b6e85d47be0098aac52103bbacfba3cc399747d9857"
+        },
+        {
+          "parentId": "vm:anatomy:body:abdomen:unpaired:organ:liver",
+          "parentHash": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+          "study": "hepatic",
+          "title": "Liver internal branches",
+          "structureId": "vm:anatomy:body:abdomen:left:organ:left-hepatic-bile-ducts",
+          "sourceHash": "4cf393e8b9bce6637f139b6e85d47be0098aac52103bbacfba3cc399747d9857"
+        },
+        {
+          "parentId": "vm:anatomy:body:abdomen:unpaired:organ:liver",
+          "parentHash": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+          "study": "hepatic",
+          "title": "Liver internal branches",
+          "structureId": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-tributary-of-middle-hepatic-vein",
+          "sourceHash": "4cf393e8b9bce6637f139b6e85d47be0098aac52103bbacfba3cc399747d9857"
+        },
+        {
+          "parentId": "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
+          "parentHash": "716e391810aa6dcc7a415b9d97c20b9cc70cc7e0f4561495a9a700ea73a774bf",
+          "study": "pancreatic",
+          "title": "Pancreatic duct sources",
+          "structureId": "vm:anatomy:body:abdomen:unpaired:organ:pancreatic-duct-source",
+          "sourceHash": "e96b496cb36205d2338204d6d0c6f94cb6e3722f7ff9a7a4e176d435d6de0b1c"
+        },
+        {
+          "parentId": "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
+          "parentHash": "716e391810aa6dcc7a415b9d97c20b9cc70cc7e0f4561495a9a700ea73a774bf",
+          "study": "pancreatic",
+          "title": "Pancreatic duct sources",
+          "structureId": "vm:anatomy:body:abdomen:unpaired:organ:pancreatic-tree-source",
+          "sourceHash": "e96b496cb36205d2338204d6d0c6f94cb6e3722f7ff9a7a4e176d435d6de0b1c"
+        },
+        {
+          "parentId": "vm:anatomy:body:abdomen:right:organ:right-kidney",
+          "parentHash": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+          "study": "renal",
+          "title": "Renal vascular relationships",
+          "structureId": "vm:anatomy:body:abdomen:right:vessel:ureteric-segment-of-right-renal-artery",
+          "sourceHash": "410fb0c4179785c91d018e549cd0ffbdd48c8e9919620dc0f32cdac3559c6a3e"
+        },
+        {
+          "parentId": "vm:anatomy:body:abdomen:right:organ:right-kidney",
+          "parentHash": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+          "study": "renal",
+          "title": "Renal vascular relationships",
+          "structureId": "vm:anatomy:body:abdomen:right:vessel:right-inferior-suprarenal-artery",
+          "sourceHash": "410fb0c4179785c91d018e549cd0ffbdd48c8e9919620dc0f32cdac3559c6a3e"
+        },
+        {
+          "parentId": "vm:anatomy:body:abdomen:right:organ:right-kidney",
+          "parentHash": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+          "study": "renal",
+          "title": "Renal vascular relationships",
+          "structureId": "vm:anatomy:body:abdomen:right:vessel:right-renal-vein",
+          "sourceHash": "410fb0c4179785c91d018e549cd0ffbdd48c8e9919620dc0f32cdac3559c6a3e"
+        },
+        {
+          "parentId": "vm:anatomy:body:abdomen:right:organ:right-kidney",
+          "parentHash": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+          "study": "renal",
+          "title": "Renal vascular relationships",
+          "structureId": "vm:anatomy:body:abdomen:right:vessel:right-suprarenal-vein",
+          "sourceHash": "410fb0c4179785c91d018e549cd0ffbdd48c8e9919620dc0f32cdac3559c6a3e"
+        },
+        {
+          "parentId": "vm:anatomy:body:abdomen:left:organ:left-kidney",
+          "parentHash": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+          "study": "renal",
+          "title": "Renal vascular relationships",
+          "structureId": "vm:anatomy:body:abdomen:left:vessel:ureteric-segment-of-left-renal-artery",
+          "sourceHash": "410fb0c4179785c91d018e549cd0ffbdd48c8e9919620dc0f32cdac3559c6a3e"
+        },
+        {
+          "parentId": "vm:anatomy:body:abdomen:left:organ:left-kidney",
+          "parentHash": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+          "study": "renal",
+          "title": "Renal vascular relationships",
+          "structureId": "vm:anatomy:body:abdomen:left:vessel:left-renal-vein",
+          "sourceHash": "410fb0c4179785c91d018e549cd0ffbdd48c8e9919620dc0f32cdac3559c6a3e"
+        },
+        {
+          "parentId": "vm:anatomy:body:abdomen:left:organ:left-kidney",
+          "parentHash": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+          "study": "renal",
+          "title": "Renal vascular relationships",
+          "structureId": "vm:anatomy:body:abdomen:left:vessel:left-suprarenal-vein",
+          "sourceHash": "410fb0c4179785c91d018e549cd0ffbdd48c8e9919620dc0f32cdac3559c6a3e"
+        }
+      ],
+      "independentSpecimens": [
+        {
+          "key": "bp3d3-abdominal-wall",
+          "label": "Abdominal wall",
+          "license": "CC BY-SA 2.1 JP",
+          "surfaceIds": [
+            "bp3d3-abdominal-wall-FMA13336",
+            "bp3d3-abdominal-wall-FMA13337",
+            "bp3d3-abdominal-wall-FMA13892",
+            "bp3d3-abdominal-wall-FMA13893",
+            "bp3d3-abdominal-wall-FMA22344",
+            "bp3d3-abdominal-wall-FMA22345",
+            "bp3d3-abdominal-wall-FMA13377",
+            "bp3d3-abdominal-wall-FMA13378",
+            "bp3d3-abdominal-wall-FMA16586",
+            "bp3d3-abdominal-wall-FMA16587",
+            "bp3d3-abdominal-wall-FMA16202",
+            "bp3d3-abdominal-wall-FMA7488",
+            "bp3d3-abdominal-wall-FMA13072",
+            "bp3d3-abdominal-wall-FMA13073",
+            "bp3d3-abdominal-wall-FMA13074",
+            "bp3d3-abdominal-wall-FMA13075",
+            "bp3d3-abdominal-wall-FMA13076",
+            "bp3d3-abdominal-wall-FMA8229",
+            "bp3d3-abdominal-wall-FMA8256",
+            "bp3d3-abdominal-wall-FMA8283",
+            "bp3d3-abdominal-wall-FMA8310",
+            "bp3d3-abdominal-wall-FMA8364",
+            "bp3d3-abdominal-wall-FMA8391",
+            "bp3d3-abdominal-wall-FMA8445",
+            "bp3d3-abdominal-wall-FMA8472",
+            "bp3d3-abdominal-wall-FMA8531",
+            "bp3d3-abdominal-wall-FMA8532",
+            "bp3d3-abdominal-wall-FMA8533",
+            "bp3d3-abdominal-wall-FMA8534"
+          ],
+          "studyIds": [
+            "all",
+            "internal",
+            "transverse",
+            "rectus",
+            "right",
+            "left",
+            "muscles"
+          ],
+          "sourceFrame": {
+            "sourceToSceneColumnMajor": [
+              0.01,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -0.01,
+              0,
+              0,
+              0.01,
+              0,
+              0,
+              0,
+              -10.5,
+              -1,
+              1
+            ],
+            "unitsPerMillimetre": 0.01
+          },
+          "bundles": [
+            {
+              "id": "bp3d3-abdominal-wall",
+              "url": "/models/bodyparts3d-v3/abdominal-wall/abdominal-wall.glb",
+              "bytes": 15335852,
+              "sha256": "2b80e2e9505593d10f807475ff3e3226ee917b7f0cb8abf5e59f9421d1d50748",
+              "structures": 29
+            }
+          ]
+        },
+        {
+          "key": "hra-united-female-v1.10-kidneys",
+          "label": "Kidneys",
+          "license": "CC BY 4.0",
+          "surfaceIds": [
+            "vm:reference:hra-united-female-v1-10:kidneys:kidney-capsule-l",
+            "vm:reference:hra-united-female-v1-10:kidneys:hilum-of-kidney-l",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-a",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-b",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-c",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-d",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-e",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-f",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-g",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-h",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-i",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-j",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-k",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-a",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-b",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-c",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-d",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-e",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-f",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-g",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-h",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-i",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-j",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-k",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-column-l",
+            "vm:reference:hra-united-female-v1-10:kidneys:kidney-capsule-r",
+            "vm:reference:hra-united-female-v1-10:kidneys:hilum-of-kidney-r",
+            "vm:reference:hra-united-female-v1-10:kidneys:outer-cortex-of-kidney-r",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-r-a",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-r-b",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-r-c",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-r-d",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-r-e",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-r-f",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-r-g",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-r-h",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-r-i",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-r-j",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-r-a",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-r-b",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-r-c",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-r-d",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-r-e",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-r-f",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-r-g",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-r-h",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-r-i",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-r-j",
+            "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-r-a",
+            "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-r-b",
+            "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-r-c",
+            "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-r-d",
+            "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-r-e",
+            "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-r-f",
+            "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-r-g",
+            "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-r-h",
+            "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-r-i",
+            "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-r-j",
+            "vm:reference:hra-united-female-v1-10:kidneys:major-calyx-r-a",
+            "vm:reference:hra-united-female-v1-10:kidneys:major-calyx-r-b",
+            "vm:reference:hra-united-female-v1-10:kidneys:major-calyx-r-c",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pelvis-r",
+            "vm:reference:hra-united-female-v1-10:kidneys:right-ureter",
+            "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-l-a",
+            "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-l-b",
+            "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-l-c",
+            "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-l-d",
+            "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-l-e",
+            "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-l-f",
+            "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-l-g",
+            "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-l-h",
+            "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-l-i",
+            "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-l-j",
+            "vm:reference:hra-united-female-v1-10:kidneys:major-calyx-l-a",
+            "vm:reference:hra-united-female-v1-10:kidneys:major-calyx-l-b",
+            "vm:reference:hra-united-female-v1-10:kidneys:major-calyx-l-c",
+            "vm:reference:hra-united-female-v1-10:kidneys:major-calyx-l-d",
+            "vm:reference:hra-united-female-v1-10:kidneys:renal-pelvis-l",
+            "vm:reference:hra-united-female-v1-10:kidneys:left-ureter",
+            "vm:reference:hra-united-female-v1-10:kidneys:right-renal-artery",
+            "vm:reference:hra-united-female-v1-10:kidneys:left-renal-artery",
+            "vm:reference:hra-united-female-v1-10:kidneys:right-renal-vein"
+          ],
+          "studyIds": [
+            "internal-right",
+            "collecting-right",
+            "layers-right",
+            "internal-left",
+            "collecting-left",
+            "layers-left",
+            "hila",
+            "ureters",
+            "all"
+          ],
+          "sourceFrame": {
+            "sourceToSceneColumnMajor": [
+              0.01,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -0.01,
+              0,
+              0,
+              0.01,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "unitsPerMillimetre": 0.01
+          },
+          "bundles": [
+            {
+              "id": "hra-united-female-v1.10-kidneys",
+              "url": "/models/hra-renal/kidneys.glb?v=bd5d2affb912",
+              "sha256": "bd5d2affb912f135c8c8da7e7892fbc906ebae017ed7042e900646c2b6332cfc",
+              "bytes": 3557552,
+              "structures": 82
+            }
+          ]
+        }
+      ],
+      "bundles": [
+        {
+          "id": "bp3d3-abdominal-wall",
+          "url": "/models/bodyparts3d-v3/abdominal-wall/abdominal-wall.glb",
+          "bytes": 15335852,
+          "sha256": "2b80e2e9505593d10f807475ff3e3226ee917b7f0cb8abf5e59f9421d1d50748",
+          "structures": 29
+        },
+        {
+          "id": "abdomen-connective-axial-detail",
+          "url": "/models/bodyparts3d/full-body/abdomen-connective-axial-detail.glb",
+          "bytes": 37124,
+          "sha256": "896e726212e5823542796bf7b12e3b6588a30ff519de4425959d8991c890228d",
+          "structures": 1
+        },
+        {
+          "id": "abdomen-connective-mesenteric",
+          "url": "/models/bodyparts3d/full-body/abdomen-connective-mesenteric.glb",
+          "bytes": 727116,
+          "sha256": "45d592f6eaef66743c7fe88ec944d68a6e6ddf2496d59331e353b15f99b91845",
+          "structures": 3
+        },
+        {
+          "id": "abdomen-muscles",
+          "url": "/models/bodyparts3d/full-body/abdomen-muscles.glb",
+          "bytes": 4031580,
+          "sha256": "0317376bdb64b43c8eba26598419cb980f3a7090b68656375136df617d817b8c",
+          "structures": 2
+        },
+        {
+          "id": "abdomen-organs-inventory",
+          "url": "/models/bodyparts3d/full-body/abdomen-organs-inventory.glb",
+          "bytes": 40896,
+          "sha256": "beb3ff34d8e0d64041f6639fea2a4aefff6e11f04f5ed0a9f9d62cec85257a42",
+          "structures": 3
+        },
+        {
+          "id": "abdomen-organs-junction",
+          "url": "/models/bodyparts3d/full-body/abdomen-organs-junction.glb",
+          "bytes": 6484,
+          "sha256": "233de27cdb6d272b62e99917813aba52abfbab4978374b6fb2b322573abbd672",
+          "structures": 1
+        },
+        {
+          "id": "abdomen-organs-recovery",
+          "url": "/models/bodyparts3d/full-body/abdomen-organs-recovery.glb",
+          "bytes": 74092,
+          "sha256": "9ed6f0864a2b37edc4c36ffbb84fdab9cacf34c6069d93455f1ffcb6eee711ab",
+          "structures": 2
+        },
+        {
+          "id": "abdomen-organs",
+          "url": "/models/bodyparts3d/full-body/abdomen-organs.glb",
+          "bytes": 6383736,
+          "sha256": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+          "structures": 10
+        },
+        {
+          "id": "abdomen-vessels-mesenteric",
+          "url": "/models/bodyparts3d/full-body/abdomen-vessels-mesenteric.glb",
+          "bytes": 226020,
+          "sha256": "d26bb01909128f5cd8a56fb410967a688801a22652305bb2656e04d3e7df2680",
+          "structures": 14
+        },
+        {
+          "id": "abdomen-vessels-recovery",
+          "url": "/models/bodyparts3d/full-body/abdomen-vessels-recovery.glb",
+          "bytes": 477592,
+          "sha256": "e41d66684de08fd9bd7dfca340acb63cbf7714eb09a3ea9594184f497c509abe",
+          "structures": 14
+        },
+        {
+          "id": "abdomen-vessels-visceral-detail",
+          "url": "/models/bodyparts3d/full-body/abdomen-vessels-visceral-detail.glb",
+          "bytes": 133144,
+          "sha256": "be90ec41dc6046b820b337d986b6a67792a33ba33216db8aecb068fed4b85173",
+          "structures": 11
+        },
+        {
+          "id": "pelvis-organs",
+          "url": "/models/bodyparts3d/full-body/pelvis-organs.glb",
+          "bytes": 49544,
+          "sha256": "90baaeb1c521a6b2546e99576bce4b231c6e068b4fa3d48dbd4cb7eb355f93c3",
+          "structures": 2
+        },
+        {
+          "id": "pelvis-vessels-recovery",
+          "url": "/models/bodyparts3d/full-body/pelvis-vessels-recovery.glb",
+          "bytes": 122592,
+          "sha256": "e089b9e9d3eac8ec6c1731ddc2ab0972ae0be041d5175cdedc5cc0bfb8eb09ad",
+          "structures": 12
+        },
+        {
+          "id": "spine-connective-gaps",
+          "url": "/models/bodyparts3d/full-body/spine-connective-gaps.glb",
+          "bytes": 934264,
+          "sha256": "aae6dc0589fa3dc9ce5ea51ff28520a077290adb5b92fa4570c3cf20b2090e02",
+          "structures": 22
+        },
+        {
+          "id": "spine-muscles",
+          "url": "/models/bodyparts3d/full-body/spine-muscles.glb",
+          "bytes": 5127960,
+          "sha256": "6cc6a2b15cda5a0defc35fdc2bebda607eac042571fec74bb1d2caba51748404",
+          "structures": 52
+        },
+        {
+          "id": "spine-skeleton",
+          "url": "/models/bodyparts3d/full-body/spine-skeleton.glb",
+          "bytes": 1286192,
+          "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957",
+          "structures": 25
+        },
+        {
+          "id": "thorax-vessels-inventory",
+          "url": "/models/bodyparts3d/full-body/thorax-vessels-inventory.glb",
+          "bytes": 483532,
+          "sha256": "8071f97ac5b843ab55e8bf019918947ab9c363b1e1901faebefa619e5345fe6f",
+          "structures": 9
+        },
+        {
+          "id": "hepatic-veins",
+          "url": "/models/bodyparts3d/hepatic-veins/hepatic-veins.glb?v=1f8922b93ec4c92bf6d695de9b75a00fb6f1552522125ca25861b1ed04f403cf",
+          "bytes": 256984,
+          "sha256": "1f8922b93ec4c92bf6d695de9b75a00fb6f1552522125ca25861b1ed04f403cf",
+          "structures": 3
+        },
+        {
+          "id": "hepatic-branches",
+          "url": "/models/bodyparts3d/hepatic/hepatic-branches.glb?v=4cf393e8b9bce6637f139b6e85d47be0098aac52103bbacfba3cc399747d9857",
+          "sha256": "4cf393e8b9bce6637f139b6e85d47be0098aac52103bbacfba3cc399747d9857",
+          "bytes": 1065752,
+          "structures": 7
+        },
+        {
+          "id": "hepatic-tissue-context",
+          "url": "/models/bodyparts3d/hepatic/hepatic-tissue-context.glb?v=bdec533f350ee74b15e14f073f600599841b060a8275d3c60795646c8bd7523c",
+          "sha256": "bdec533f350ee74b15e14f073f600599841b060a8275d3c60795646c8bd7523c",
+          "bytes": 2302328,
+          "structures": 1
+        },
+        {
+          "id": "inferior-epigastric-vessels",
+          "url": "/models/bodyparts3d/inferior-epigastric-vessels/inferior-epigastric-vessels.glb?v=8049ac70b0130cfe597cde159d1716f79f1b686583ea71dc91a5955f6c95925c",
+          "bytes": 526756,
+          "sha256": "8049ac70b0130cfe597cde159d1716f79f1b686583ea71dc91a5955f6c95925c",
+          "structures": 4
+        },
+        {
+          "id": "pancreas-corrected-parent",
+          "url": "/models/bodyparts3d/pancreas/pancreas.glb?v=716e391810aa6dcc7a415b9d97c20b9cc70cc7e0f4561495a9a700ea73a774bf",
+          "bytes": 229880,
+          "sha256": "716e391810aa6dcc7a415b9d97c20b9cc70cc7e0f4561495a9a700ea73a774bf",
+          "structures": 1
+        },
+        {
+          "id": "pancreatic-components",
+          "url": "/models/bodyparts3d/pancreatic/pancreatic.glb?v=e96b496cb36205d2338204d6d0c6f94cb6e3722f7ff9a7a4e176d435d6de0b1c",
+          "bytes": 232172,
+          "sha256": "e96b496cb36205d2338204d6d0c6f94cb6e3722f7ff9a7a4e176d435d6de0b1c",
+          "structures": 3
+        },
+        {
+          "id": "portal-veins",
+          "url": "/models/bodyparts3d/portal-veins/portal-veins.glb?v=583069160dbd753bb7f64b62667d20134ccbf7554b9bd4cf57b0de0a5a50ee53",
+          "bytes": 76724,
+          "sha256": "583069160dbd753bb7f64b62667d20134ccbf7554b9bd4cf57b0de0a5a50ee53",
+          "structures": 5
+        },
+        {
+          "id": "renal-vascular",
+          "url": "/models/bodyparts3d/renal/renal-vascular.glb?v=410fb0c4179785c91d018e549cd0ffbdd48c8e9919620dc0f32cdac3559c6a3e",
+          "sha256": "410fb0c4179785c91d018e549cd0ffbdd48c8e9919620dc0f32cdac3559c6a3e",
+          "bytes": 266784,
+          "structures": 7
+        },
+        {
+          "id": "hra-united-female-v1.10-kidneys",
+          "url": "/models/hra-renal/kidneys.glb?v=bd5d2affb912",
+          "sha256": "bd5d2affb912f135c8c8da7e7892fbc906ebae017ed7042e900646c2b6332cfc",
+          "bytes": 3557552,
+          "structures": 82
+        }
+      ],
+      "sourceVersion": "4.0",
+      "license": "CC-BY-4.0"
     }
   ],
-  "sharedRegionalStructures": 426,
+  "sharedRegionalStructures": 524,
   "patientDataIncluded": false,
   "clinicalApproved": false,
   "standaloneReviewConnection": false,
   "imagingConnection": false,
   "modelBundles": [
+    {
+      "id": "bp3d3-abdominal-wall",
+      "url": "/models/bodyparts3d-v3/abdominal-wall/abdominal-wall.glb",
+      "bytes": 15335852,
+      "sha256": "2b80e2e9505593d10f807475ff3e3226ee917b7f0cb8abf5e59f9421d1d50748",
+      "structures": 29
+    },
     {
       "id": "brainstem",
       "url": "/models/bodyparts3d/brainstem/brainstem.glb?v=fd1d8d04656a300fe0e8271a418ec0807b227baa96d6afa822d0df6ad0bf72ba",
@@ -2532,11 +3175,74 @@
       "structures": 1
     },
     {
+      "id": "abdomen-connective-axial-detail",
+      "url": "/models/bodyparts3d/full-body/abdomen-connective-axial-detail.glb",
+      "bytes": 37124,
+      "sha256": "896e726212e5823542796bf7b12e3b6588a30ff519de4425959d8991c890228d",
+      "structures": 1
+    },
+    {
+      "id": "abdomen-connective-mesenteric",
+      "url": "/models/bodyparts3d/full-body/abdomen-connective-mesenteric.glb",
+      "bytes": 727116,
+      "sha256": "45d592f6eaef66743c7fe88ec944d68a6e6ddf2496d59331e353b15f99b91845",
+      "structures": 3
+    },
+    {
+      "id": "abdomen-muscles",
+      "url": "/models/bodyparts3d/full-body/abdomen-muscles.glb",
+      "bytes": 4031580,
+      "sha256": "0317376bdb64b43c8eba26598419cb980f3a7090b68656375136df617d817b8c",
+      "structures": 2
+    },
+    {
+      "id": "abdomen-organs-inventory",
+      "url": "/models/bodyparts3d/full-body/abdomen-organs-inventory.glb",
+      "bytes": 40896,
+      "sha256": "beb3ff34d8e0d64041f6639fea2a4aefff6e11f04f5ed0a9f9d62cec85257a42",
+      "structures": 3
+    },
+    {
+      "id": "abdomen-organs-junction",
+      "url": "/models/bodyparts3d/full-body/abdomen-organs-junction.glb",
+      "bytes": 6484,
+      "sha256": "233de27cdb6d272b62e99917813aba52abfbab4978374b6fb2b322573abbd672",
+      "structures": 1
+    },
+    {
+      "id": "abdomen-organs-recovery",
+      "url": "/models/bodyparts3d/full-body/abdomen-organs-recovery.glb",
+      "bytes": 74092,
+      "sha256": "9ed6f0864a2b37edc4c36ffbb84fdab9cacf34c6069d93455f1ffcb6eee711ab",
+      "structures": 2
+    },
+    {
+      "id": "abdomen-organs",
+      "url": "/models/bodyparts3d/full-body/abdomen-organs.glb",
+      "bytes": 6383736,
+      "sha256": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+      "structures": 10
+    },
+    {
+      "id": "abdomen-vessels-mesenteric",
+      "url": "/models/bodyparts3d/full-body/abdomen-vessels-mesenteric.glb",
+      "bytes": 226020,
+      "sha256": "d26bb01909128f5cd8a56fb410967a688801a22652305bb2656e04d3e7df2680",
+      "structures": 14
+    },
+    {
       "id": "abdomen-vessels-recovery",
       "url": "/models/bodyparts3d/full-body/abdomen-vessels-recovery.glb",
       "bytes": 477592,
       "sha256": "e41d66684de08fd9bd7dfca340acb63cbf7714eb09a3ea9594184f497c509abe",
       "structures": 14
+    },
+    {
+      "id": "abdomen-vessels-visceral-detail",
+      "url": "/models/bodyparts3d/full-body/abdomen-vessels-visceral-detail.glb",
+      "bytes": 133144,
+      "sha256": "be90ec41dc6046b820b337d986b6a67792a33ba33216db8aecb068fed4b85173",
+      "structures": 11
     },
     {
       "id": "head-neck-connective-gaps",
@@ -2658,6 +3364,20 @@
       "structures": 16
     },
     {
+      "id": "pelvis-organs",
+      "url": "/models/bodyparts3d/full-body/pelvis-organs.glb",
+      "bytes": 49544,
+      "sha256": "90baaeb1c521a6b2546e99576bce4b231c6e068b4fa3d48dbd4cb7eb355f93c3",
+      "structures": 2
+    },
+    {
+      "id": "pelvis-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/pelvis-vessels-recovery.glb",
+      "bytes": 122592,
+      "sha256": "e089b9e9d3eac8ec6c1731ddc2ab0972ae0be041d5175cdedc5cc0bfb8eb09ad",
+      "structures": 12
+    },
+    {
       "id": "shoulder-arm-vessels-inventory",
       "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-inventory.glb",
       "bytes": 616356,
@@ -2770,6 +3490,34 @@
       "structures": 4
     },
     {
+      "id": "hepatic-veins",
+      "url": "/models/bodyparts3d/hepatic-veins/hepatic-veins.glb?v=1f8922b93ec4c92bf6d695de9b75a00fb6f1552522125ca25861b1ed04f403cf",
+      "bytes": 256984,
+      "sha256": "1f8922b93ec4c92bf6d695de9b75a00fb6f1552522125ca25861b1ed04f403cf",
+      "structures": 3
+    },
+    {
+      "id": "hepatic-branches",
+      "url": "/models/bodyparts3d/hepatic/hepatic-branches.glb?v=4cf393e8b9bce6637f139b6e85d47be0098aac52103bbacfba3cc399747d9857",
+      "sha256": "4cf393e8b9bce6637f139b6e85d47be0098aac52103bbacfba3cc399747d9857",
+      "bytes": 1065752,
+      "structures": 7
+    },
+    {
+      "id": "hepatic-tissue-context",
+      "url": "/models/bodyparts3d/hepatic/hepatic-tissue-context.glb?v=bdec533f350ee74b15e14f073f600599841b060a8275d3c60795646c8bd7523c",
+      "sha256": "bdec533f350ee74b15e14f073f600599841b060a8275d3c60795646c8bd7523c",
+      "bytes": 2302328,
+      "structures": 1
+    },
+    {
+      "id": "inferior-epigastric-vessels",
+      "url": "/models/bodyparts3d/inferior-epigastric-vessels/inferior-epigastric-vessels.glb?v=8049ac70b0130cfe597cde159d1716f79f1b686583ea71dc91a5955f6c95925c",
+      "bytes": 526756,
+      "sha256": "8049ac70b0130cfe597cde159d1716f79f1b686583ea71dc91a5955f6c95925c",
+      "structures": 4
+    },
+    {
       "id": "inferior-thyroid-arteries",
       "url": "/models/bodyparts3d/inferior-thyroid-arteries/inferior-thyroid-arteries.glb?v=abe5a85b810ba231cf032546e26e35c6c6243b7cfd880853bf7110345da0b155",
       "bytes": 20064,
@@ -2791,6 +3539,27 @@
       "structures": 3
     },
     {
+      "id": "pancreas-corrected-parent",
+      "url": "/models/bodyparts3d/pancreas/pancreas.glb?v=716e391810aa6dcc7a415b9d97c20b9cc70cc7e0f4561495a9a700ea73a774bf",
+      "bytes": 229880,
+      "sha256": "716e391810aa6dcc7a415b9d97c20b9cc70cc7e0f4561495a9a700ea73a774bf",
+      "structures": 1
+    },
+    {
+      "id": "pancreatic-components",
+      "url": "/models/bodyparts3d/pancreatic/pancreatic.glb?v=e96b496cb36205d2338204d6d0c6f94cb6e3722f7ff9a7a4e176d435d6de0b1c",
+      "bytes": 232172,
+      "sha256": "e96b496cb36205d2338204d6d0c6f94cb6e3722f7ff9a7a4e176d435d6de0b1c",
+      "structures": 3
+    },
+    {
+      "id": "portal-veins",
+      "url": "/models/bodyparts3d/portal-veins/portal-veins.glb?v=583069160dbd753bb7f64b62667d20134ccbf7554b9bd4cf57b0de0a5a50ee53",
+      "bytes": 76724,
+      "sha256": "583069160dbd753bb7f64b62667d20134ccbf7554b9bd4cf57b0de0a5a50ee53",
+      "structures": 5
+    },
+    {
       "id": "pulmonary-left",
       "url": "/models/bodyparts3d/pulmonary/pulmonary-left.glb?v=d4670d3c15580e2a1ef53debab32f08c8199fe6ddaf90af3f3aedb197d93e68d",
       "sha256": "d4670d3c15580e2a1ef53debab32f08c8199fe6ddaf90af3f3aedb197d93e68d",
@@ -2803,6 +3572,13 @@
       "sha256": "62bb25db79270dbd6fe96598e9438d7bfca3592c5f7559cd1ea320e18bb16eca",
       "bytes": 1330588,
       "structures": 3
+    },
+    {
+      "id": "renal-vascular",
+      "url": "/models/bodyparts3d/renal/renal-vascular.glb?v=410fb0c4179785c91d018e549cd0ffbdd48c8e9919620dc0f32cdac3559c6a3e",
+      "sha256": "410fb0c4179785c91d018e549cd0ffbdd48c8e9919620dc0f32cdac3559c6a3e",
+      "bytes": 266784,
+      "structures": 7
     },
     {
       "id": "subscapular-arteries",
@@ -2831,13 +3607,20 @@
       "sha256": "c9698e52e4678c06a5ed5df8212e3ecb1ce89d9a25d4e1859f0ec5be7d4864bc",
       "bytes": 120068,
       "structures": 3
+    },
+    {
+      "id": "hra-united-female-v1.10-kidneys",
+      "url": "/models/hra-renal/kidneys.glb?v=bd5d2affb912",
+      "sha256": "bd5d2affb912f135c8c8da7e7892fbc906ebae017ed7042e900646c2b6332cfc",
+      "bytes": 3557552,
+      "structures": 82
     }
   ],
   "files": [
     {
       "path": "index.html",
       "bytes": 821,
-      "sha256": "f3d1ddf74ff75936685b70b5f0327ed2feddcc31721ef9857a4a8d52af11a1a4"
+      "sha256": "91fa821cdf4af265210481413f4a4d98fe14d242337527ca27a71eaa9fef1f46"
     },
     {
       "path": "BUNDLED_NOTICES.txt",
@@ -2851,23 +3634,28 @@
     },
     {
       "path": "source-inputs.json",
-      "bytes": 66048,
-      "sha256": "d335b140112cd93703f3c7db89e8a08c499c16e1fa75ed3cb70bb79d5fb24f30"
+      "bytes": 68711,
+      "sha256": "dc241f657c018207eaf01150a5bca8dad047765dcc30ecab263331966351fcca"
     },
     {
-      "path": "assets/abdominal-wall-study-IdIUAaFc.js",
-      "bytes": 44486,
-      "sha256": "ad55e68fa95aa4f518060cb5ccda3f6502e2e9ae18f2c032bd3a977166c1f44c"
+      "path": "assets/abdominal-wall-study-CheRyfM7.js",
+      "bytes": 44609,
+      "sha256": "1e62e6d1e0bbfb5f793e674e07eb66d0f5e0d9b7c0bef6fb6d56e996ed98349b"
     },
     {
-      "path": "assets/anatomy-load-state-CxSGVTmH.js",
-      "bytes": 249079,
-      "sha256": "5dc4e48641906f002b3af8920ec29947528b40bba6064291e1cde63705b6d25e"
+      "path": "assets/anatomy-load-state-DksGHRIN.js",
+      "bytes": 249654,
+      "sha256": "038334a23ec851e3d9fbb4a3eb0dfde8fb00904767ef258e53f19ca675d26dd2"
     },
     {
-      "path": "assets/back-layers-study-B9xn9a44.js",
+      "path": "assets/back-layers-study-CHoNYF3r.js",
       "bytes": 74775,
-      "sha256": "151ae18303d778b4476f4f34135db4295f70b1a46b18dfeb3bf5bebff049925b"
+      "sha256": "ad1e76abefa7d507a5ef780e587025150da6458a0f6b188d20350a8f66cc39e4"
+    },
+    {
+      "path": "assets/body-scene-CF-l42Mm.js",
+      "bytes": 1023531,
+      "sha256": "070b09f3278b7d9572b2dcf8092ae7a771df4ff9d38300863ddb893c13e2b3b0"
     },
     {
       "path": "assets/body-scene-CGUv3Rnc.css",
@@ -2875,19 +3663,14 @@
       "sha256": "dde88f89e2ce955558fd6e9551a8796969da6d9d91be0bed8a70bc0482e09416"
     },
     {
-      "path": "assets/body-scene-DOdFVMpS.js",
-      "bytes": 1023531,
-      "sha256": "8736db466b32083edc4ac728fea11d17771a2237a064b36261b31019f8a37532"
-    },
-    {
       "path": "assets/cutaway-controls-4N0ICIXO.css",
       "bytes": 1127,
       "sha256": "87c31bfe8303461a8afbde6251bb48df5a77645f774c8ef3ac48c292a30ec5c8"
     },
     {
-      "path": "assets/cutaway-controls-DK6OJ6Yg.js",
+      "path": "assets/cutaway-controls-D_FhZ_s4.js",
       "bytes": 4905,
-      "sha256": "a4711d0d96dd577851b6778db62e6809adfb71d927c7d6e9838869fd08621d87"
+      "sha256": "9bd3e8b6595d2eacb8010831a73bd2c3d509208a74e9e82b696914d5f65a0fc2"
     },
     {
       "path": "assets/eye-layers-B3CQEl2o.css",
@@ -2895,29 +3678,24 @@
       "sha256": "58f9322c6a028c52be262400337233bf1eb9350ca31aef05830a1df107bbd343"
     },
     {
-      "path": "assets/eye-layers-mUc7-Hfg.js",
-      "bytes": 11493,
-      "sha256": "95c7302a742b6e8bbcf68fac4a49469c989091bd69594bd4263edc44ff09da1a"
+      "path": "assets/eye-layers-BRQQG5TM.js",
+      "bytes": 11503,
+      "sha256": "937e5cc879609fe341a81ed48ab3579f68759a6f6b25b79972857a02d6a99e78"
     },
     {
-      "path": "assets/hra-pelvis-study-83sfxqoS.js",
+      "path": "assets/hra-pelvis-study-pXXWZ2XN.js",
       "bytes": 92711,
-      "sha256": "1b8615fde9118ccc68bfb3a1cab582d73d54583a0c1190a30435f781600b2f0c"
+      "sha256": "83a1cdd344b53dd3b66a8d63d328851d6651cca600560979705362a97d0c7fe4"
     },
     {
-      "path": "assets/hra-renal-study-5FN4Qxzg.js",
-      "bytes": 116487,
-      "sha256": "ba8912371bb312afec74bcf3faf3c00414a2dd2724191296a91bc226a4f54956"
+      "path": "assets/hra-renal-study-B52a6p0l.js",
+      "bytes": 116609,
+      "sha256": "9f1c5ba0d8eab7f67494e4991573ff033253ec9167b9bcecc774ab5bbf214e1e"
     },
     {
-      "path": "assets/independent-study-navigation-BLO7ke7z.js",
-      "bytes": 6035,
-      "sha256": "c60e485fa8fab241738a2db08c6504547f12feb20a1dc923b29dfb6761075c6d"
-    },
-    {
-      "path": "assets/index-6Pyxl5Jr.js",
-      "bytes": 4213999,
-      "sha256": "be0ba080db540150a83805fc102847c69ce6516284bc5b43e574717cf35c0196"
+      "path": "assets/independent-study-navigation-U7RtNKsc.js",
+      "bytes": 2629,
+      "sha256": "7f99e22ba2bb80167a8c15f1d5cb2cf17129b639f2c93b7a1505f6da92bfaad9"
     },
     {
       "path": "assets/index-CUulsHkX.css",
@@ -2925,14 +3703,14 @@
       "sha256": "dbd627b87051b8c365b10818a569e354ec4db823a0e72329bd08258fdc8922af"
     },
     {
+      "path": "assets/index-D0QvT_cS.js",
+      "bytes": 4222916,
+      "sha256": "04a7295e9719edc51121ddc0aea4dac9bede3ecf3094d34f0da1f2ec0aefb5d0"
+    },
+    {
       "path": "assets/rolldown-runtime-hePW80VL.js",
       "bytes": 716,
       "sha256": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021"
-    },
-    {
-      "path": "assets/um-knee-study-CEaEwtmj.js",
-      "bytes": 521104,
-      "sha256": "c2463d7c4b0b0f7e295faaeb78529df4bfcc6b5af1432cad14f1caa666410dcd"
     },
     {
       "path": "assets/um-knee-study-DE_VvcAw.css",
@@ -2940,24 +3718,34 @@
       "sha256": "7f1d701756afcca6313a1ea8b3bb47f578ae6066d9d6750576f1003f9c65da3b"
     },
     {
-      "path": "assets/um-limb-study-DpGtO9X6.js",
-      "bytes": 2300,
-      "sha256": "8b8824da8a12c9b4dea0f97f2c3e33f2857c9c594de0d5921a07c7c01c39642a"
+      "path": "assets/um-knee-study-DZd4d-Mv.js",
+      "bytes": 517044,
+      "sha256": "f5bfc56ada7494efb2aba1eb7080128420ec5b35bb89e93920d63821f31fcd74"
     },
     {
-      "path": "assets/ventricles-BPG7ARhp.js",
-      "bytes": 228889,
-      "sha256": "1d13a96154d859eed411583c3bb9b428f033dfe0c224b77a44cb91c91b8abb1c"
+      "path": "assets/um-limb-study-DQOkY2nr.js",
+      "bytes": 2333,
+      "sha256": "f2071f670f32cf3c00382aa22fbdccaa96232904f60d8eeeb23505bcd63d3a95"
     },
     {
-      "path": "assets/ventricles-D80QgUEs.js",
+      "path": "assets/ventricles-CJM6Uepw.js",
+      "bytes": 228921,
+      "sha256": "952b9afa81ff2207fa781757f3313c8d801c994a610b86eed28d121cccc1263e"
+    },
+    {
+      "path": "assets/ventricles-CWIAHlJ4.js",
       "bytes": 183286,
-      "sha256": "a423211ab93e7f8867e7722f66f2d7e19755ff5ea4592398b83be8fd10a8db19"
+      "sha256": "c26eb826d23fd821fc8283f04252679cef3657846a3c0c758886399a3d0b4f19"
     },
     {
       "path": "assets/ventricles-zpa0fhqb.css",
       "bytes": 975,
       "sha256": "402aa99d0fb2bc759da951e478aa67b937ead0e2edb2d0e83a9e793c0e3669c9"
+    },
+    {
+      "path": "models/bodyparts3d-v3/abdominal-wall/abdominal-wall.glb",
+      "bytes": 15335852,
+      "sha256": "2b80e2e9505593d10f807475ff3e3226ee917b7f0cb8abf5e59f9421d1d50748"
     },
     {
       "path": "models/bodyparts3d/brainstem/brainstem.glb",
@@ -3005,9 +3793,54 @@
       "sha256": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7"
     },
     {
+      "path": "models/bodyparts3d/full-body/abdomen-connective-axial-detail.glb",
+      "bytes": 37124,
+      "sha256": "896e726212e5823542796bf7b12e3b6588a30ff519de4425959d8991c890228d"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/abdomen-connective-mesenteric.glb",
+      "bytes": 727116,
+      "sha256": "45d592f6eaef66743c7fe88ec944d68a6e6ddf2496d59331e353b15f99b91845"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/abdomen-muscles.glb",
+      "bytes": 4031580,
+      "sha256": "0317376bdb64b43c8eba26598419cb980f3a7090b68656375136df617d817b8c"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/abdomen-organs-inventory.glb",
+      "bytes": 40896,
+      "sha256": "beb3ff34d8e0d64041f6639fea2a4aefff6e11f04f5ed0a9f9d62cec85257a42"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/abdomen-organs-junction.glb",
+      "bytes": 6484,
+      "sha256": "233de27cdb6d272b62e99917813aba52abfbab4978374b6fb2b322573abbd672"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/abdomen-organs-recovery.glb",
+      "bytes": 74092,
+      "sha256": "9ed6f0864a2b37edc4c36ffbb84fdab9cacf34c6069d93455f1ffcb6eee711ab"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/abdomen-organs.glb",
+      "bytes": 6383736,
+      "sha256": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/abdomen-vessels-mesenteric.glb",
+      "bytes": 226020,
+      "sha256": "d26bb01909128f5cd8a56fb410967a688801a22652305bb2656e04d3e7df2680"
+    },
+    {
       "path": "models/bodyparts3d/full-body/abdomen-vessels-recovery.glb",
       "bytes": 477592,
       "sha256": "e41d66684de08fd9bd7dfca340acb63cbf7714eb09a3ea9594184f497c509abe"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/abdomen-vessels-visceral-detail.glb",
+      "bytes": 133144,
+      "sha256": "be90ec41dc6046b820b337d986b6a67792a33ba33216db8aecb068fed4b85173"
     },
     {
       "path": "models/bodyparts3d/full-body/head-neck-connective-gaps.glb",
@@ -3095,6 +3928,16 @@
       "sha256": "800d583a96a6df8fdd2b5fff86c6e719a90e897d6c3c89bbb1a3bd71b0e89cbb"
     },
     {
+      "path": "models/bodyparts3d/full-body/pelvis-organs.glb",
+      "bytes": 49544,
+      "sha256": "90baaeb1c521a6b2546e99576bce4b231c6e068b4fa3d48dbd4cb7eb355f93c3"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/pelvis-vessels-recovery.glb",
+      "bytes": 122592,
+      "sha256": "e089b9e9d3eac8ec6c1731ddc2ab0972ae0be041d5175cdedc5cc0bfb8eb09ad"
+    },
+    {
       "path": "models/bodyparts3d/full-body/shoulder-arm-vessels-inventory.glb",
       "bytes": 616356,
       "sha256": "d12d81529a1408f934b5055462bb39f0f79c84e25c878a25225652b9baac3e84"
@@ -3175,6 +4018,26 @@
       "sha256": "bd86da53fb00401a01db7e321ca14b0bfec784b53a496a22dc5e6338db3d0044"
     },
     {
+      "path": "models/bodyparts3d/hepatic-veins/hepatic-veins.glb",
+      "bytes": 256984,
+      "sha256": "1f8922b93ec4c92bf6d695de9b75a00fb6f1552522125ca25861b1ed04f403cf"
+    },
+    {
+      "path": "models/bodyparts3d/hepatic/hepatic-branches.glb",
+      "bytes": 1065752,
+      "sha256": "4cf393e8b9bce6637f139b6e85d47be0098aac52103bbacfba3cc399747d9857"
+    },
+    {
+      "path": "models/bodyparts3d/hepatic/hepatic-tissue-context.glb",
+      "bytes": 2302328,
+      "sha256": "bdec533f350ee74b15e14f073f600599841b060a8275d3c60795646c8bd7523c"
+    },
+    {
+      "path": "models/bodyparts3d/inferior-epigastric-vessels/inferior-epigastric-vessels.glb",
+      "bytes": 526756,
+      "sha256": "8049ac70b0130cfe597cde159d1716f79f1b686583ea71dc91a5955f6c95925c"
+    },
+    {
       "path": "models/bodyparts3d/inferior-thyroid-arteries/inferior-thyroid-arteries.glb",
       "bytes": 20064,
       "sha256": "abe5a85b810ba231cf032546e26e35c6c6243b7cfd880853bf7110345da0b155"
@@ -3190,6 +4053,21 @@
       "sha256": "b43cedda733267f51027a892b1ac08a35874853ce65802deca5304e039f6d08f"
     },
     {
+      "path": "models/bodyparts3d/pancreas/pancreas.glb",
+      "bytes": 229880,
+      "sha256": "716e391810aa6dcc7a415b9d97c20b9cc70cc7e0f4561495a9a700ea73a774bf"
+    },
+    {
+      "path": "models/bodyparts3d/pancreatic/pancreatic.glb",
+      "bytes": 232172,
+      "sha256": "e96b496cb36205d2338204d6d0c6f94cb6e3722f7ff9a7a4e176d435d6de0b1c"
+    },
+    {
+      "path": "models/bodyparts3d/portal-veins/portal-veins.glb",
+      "bytes": 76724,
+      "sha256": "583069160dbd753bb7f64b62667d20134ccbf7554b9bd4cf57b0de0a5a50ee53"
+    },
+    {
       "path": "models/bodyparts3d/pulmonary/pulmonary-left.glb",
       "bytes": 754268,
       "sha256": "d4670d3c15580e2a1ef53debab32f08c8199fe6ddaf90af3f3aedb197d93e68d"
@@ -3198,6 +4076,11 @@
       "path": "models/bodyparts3d/pulmonary/pulmonary-right.glb",
       "bytes": 1330588,
       "sha256": "62bb25db79270dbd6fe96598e9438d7bfca3592c5f7559cd1ea320e18bb16eca"
+    },
+    {
+      "path": "models/bodyparts3d/renal/renal-vascular.glb",
+      "bytes": 266784,
+      "sha256": "410fb0c4179785c91d018e549cd0ffbdd48c8e9919620dc0f32cdac3559c6a3e"
     },
     {
       "path": "models/bodyparts3d/subscapular-arteries/subscapular-arteries.glb",
@@ -3218,6 +4101,11 @@
       "path": "models/bodyparts3d/visual-pathway/visual-pathway.glb",
       "bytes": 120068,
       "sha256": "c9698e52e4678c06a5ed5df8212e3ecb1ce89d9a25d4e1859f0ec5be7d4864bc"
+    },
+    {
+      "path": "models/hra-renal/kidneys.glb",
+      "bytes": 3557552,
+      "sha256": "bd5d2affb912f135c8c8da7e7892fbc906ebae017ed7042e900646c2b6332cfc"
     },
     {
       "path": "models/bodyparts3d/full-body/catalog.json",
@@ -3266,8 +4154,58 @@
     },
     {
       "path": "models/bodyparts3d/credits.html",
-      "bytes": 2620,
-      "sha256": "744934bbce85581d7bc4035cdd54ce9785248204780277f7de82deb64b972f61"
+      "bytes": 5009,
+      "sha256": "a9f6c843ce88e37237d23b5c6fa90f8569eecfb9fc46e3c8ade56a3b4baaa8f1"
+    },
+    {
+      "path": "models/bodyparts3d-v3/abdominal-wall/catalog.json",
+      "bytes": 39011,
+      "sha256": "a2fa96e5203e8a2c0ce5898a0d190834523a34f0b61c4ebfbce502a933f6d03e"
+    },
+    {
+      "path": "models/bodyparts3d-v3/abdominal-wall/NOTICE.md",
+      "bytes": 2084,
+      "sha256": "da24e3c60a56b46d3d3c23933beee0752a5adac3fe3bf3967c9eac1a73ccc7f0"
+    },
+    {
+      "path": "models/hra-renal/catalog.json",
+      "bytes": 135779,
+      "sha256": "0bdc5a8ec478c58fbc977b2cf720543d9715d3654bf42b9b3bb5d2e1d49cecf5"
+    },
+    {
+      "path": "models/hra-renal/NOTICE.md",
+      "bytes": 2374,
+      "sha256": "cb30b4dc59e4df19cf533753eab2299354d0f948e694d865042971a74cf2da78"
+    },
+    {
+      "path": "models/bodyparts3d-v3/abdominal-wall/source-readme.html",
+      "bytes": 13104,
+      "sha256": "0c2913b3c51f2c6b248ac054acfd0b2a72940386199ca95fa9aa848bd69746e0"
+    },
+    {
+      "path": "models/bodyparts3d-v3/abdominal-wall/license-deed.html",
+      "bytes": 35950,
+      "sha256": "4a02a925c115a4f8e0e5018fbed2fcb9388fde1b0c0ce4a61a506bb44e0307ec"
+    },
+    {
+      "path": "models/bodyparts3d-v3/abdominal-wall/license-legalcode.html",
+      "bytes": 37208,
+      "sha256": "d44c2a342063c22bb793a7ab5f9bbf3374f03f0d433f7530333f409d1fea42f9"
+    },
+    {
+      "path": "models/bodyparts3d-v3/abdominal-wall/source-audit.json",
+      "bytes": 98061,
+      "sha256": "d805df5b5693a8ad5e9463cb04d31d002fb56c107c600718cf4886472de6dd87"
+    },
+    {
+      "path": "models/bodyparts3d-v3/abdominal-wall/specimen-data.ts.txt",
+      "bytes": 6057,
+      "sha256": "06795f84c4440639f4b24ea31e10b5e0a37f0e8f494a261f512d12c8ea1687b7"
+    },
+    {
+      "path": "models/hra-renal/source-metadata.json",
+      "bytes": 8855,
+      "sha256": "b9f137b1176c31419c68b78ac87f0926f874dad22f56d4dde7df3e2f15bab501"
     }
   ]
 }

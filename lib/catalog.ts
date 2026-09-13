@@ -62,6 +62,13 @@ export const atlasModules: AtlasModule[] = [
     systems:['Bones','Muscles','Heart','Lungs','Vessels','Connective'], reviewed:'Private integration pilot · Review pending',
   },
   {
+    slug:'abdomen-3d', title:'Abdomen 3D anatomy', region:'Abdomen',
+    modality:'3D', orientation:'Rotatable',
+    description:'Dissect abdominal structures, explore liver and kidney relationships, and open separate abdominal-wall and renal specimens.',
+    structures:106, images:0, status:'available',
+    systems:['Bones','Muscles','Organs','Vessels','Connective'], reviewed:'Private integration pilot · Review pending',
+  },
+  {
     slug: "ct-head",
     title: "CT head",
     region: "Neuroanatomy",

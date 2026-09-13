@@ -1,7 +1,31 @@
 [
   {
+    "path": "LICENSE",
+    "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+  },
+  {
+    "path": "LICENSES/BODYPARTS3D.md",
+    "sha256": "f38c70c390c721341f55b89515d0757941d4042a1b299419efc1f96d399957b6"
+  },
+  {
+    "path": "LICENSES/BODYPARTS3D_FULL_BODY.md",
+    "sha256": "3d8d22ddf1bf0998f81b400d639b9ce83d9feca323627a72459078aff0669204"
+  },
+  {
+    "path": "LICENSES/CC-BY-4.0.txt",
+    "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+  },
+  {
+    "path": "LICENSES/THIRD_PARTY_NOTICES.md",
+    "sha256": "ce7f2f206179f83c3a97ddb0880c54183c42956799e5069d45882a79c5fc468b"
+  },
+  {
+    "path": "LICENSES/bodyparts3d-license-evidence.html",
+    "sha256": "90dea95329aea5015ce339e430d9f342090617c82ee48613e15dd2240f08b746"
+  },
+  {
     "path": "app/abdominal-wall-study.tsx",
-    "sha256": "f06b1b622f711c78f0b7e43b193dd3aa16826f3ddc660a7cc29b4df31ea9072d"
+    "sha256": "ac3d99616ba8b79fd57346d058821d79142ddea44d3eb373fd846852217932f1"
   },
   {
     "path": "app/anatomy-canvas.tsx",
@@ -57,7 +81,7 @@
   },
   {
     "path": "app/body-explorer.tsx",
-    "sha256": "0c44fbfd0b0407437f6319af305a3108084a1aba90650dbb8a159c76661b25d8"
+    "sha256": "ca857ca0e59267e9ee7de4e905db7825f4b0e68a9b00ed0d45eb37427151d90f"
   },
   {
     "path": "app/body-scene.tsx",
@@ -141,7 +165,7 @@
   },
   {
     "path": "app/hra-renal-study.tsx",
-    "sha256": "5012bb2a4c12349482b219e5a8b24f275e53275393ce4326a8f77e0682989315"
+    "sha256": "2599c938339d227868d3cb6b50b52c248ea59fd7a32cde0234d142024850520c"
   },
   {
     "path": "app/imaging-comparison.css",
@@ -161,7 +185,7 @@
   },
   {
     "path": "app/independent-study-navigation.tsx",
-    "sha256": "431d71c8f6b792b8227c13c6d2a7bc6316029c28f148299853b1bc6dd3b23d9d"
+    "sha256": "b76bf1f595ea238d44dcc85906a723553ba190d3a531fe86e5c2121658dc4679"
   },
   {
     "path": "app/inspection-controls.tsx",
@@ -656,6 +680,26 @@
     "sha256": "f3e544bf002d4bf8ab0101f5e300e207fff74296f156378667ecc7fe3de10975"
   },
   {
+    "path": "content/sources/bodyparts3d-v3-abdominal-wall/license-deed.html",
+    "sha256": "4a02a925c115a4f8e0e5018fbed2fcb9388fde1b0c0ce4a61a506bb44e0307ec"
+  },
+  {
+    "path": "content/sources/bodyparts3d-v3-abdominal-wall/license-legalcode.html",
+    "sha256": "d44c2a342063c22bb793a7ab5f9bbf3374f03f0d433f7530333f409d1fea42f9"
+  },
+  {
+    "path": "content/sources/bodyparts3d-v3-abdominal-wall/source-audit.json",
+    "sha256": "d805df5b5693a8ad5e9463cb04d31d002fb56c107c600718cf4886472de6dd87"
+  },
+  {
+    "path": "content/sources/bodyparts3d-v3-abdominal-wall/source-readme.html",
+    "sha256": "0c2913b3c51f2c6b248ac054acfd0b2a72940386199ca95fa9aa848bd69746e0"
+  },
+  {
+    "path": "content/sources/hra-renal/metadata.json",
+    "sha256": "b9f137b1176c31419c68b78ac87f0926f874dad22f56d4dde7df3e2f15bab501"
+  },
+  {
     "path": "content/spine-imaging-concepts.ts",
     "sha256": "98d598a175bb38ce1a038662dffb768869aa5f198b01b4069735d0687bf8623a"
   },
@@ -776,12 +820,16 @@
     "sha256": "3f187b82214165b932599c9df5a47a2f65d9416747e2d651231acb99db4fbf33"
   },
   {
+    "path": "integration/head-neck/companions.mjs",
+    "sha256": "367e6ba3f614d4a564b359b0e4bf39b9e9a9e6bc31aa201966e2a6ca6ea162b3"
+  },
+  {
     "path": "integration/head-neck/credits.html",
-    "sha256": "744934bbce85581d7bc4035cdd54ce9785248204780277f7de82deb64b972f61"
+    "sha256": "a9f6c843ce88e37237d23b5c6fa90f8569eecfb9fc46e3c8ade56a3b4baaa8f1"
   },
   {
     "path": "integration/head-neck/delivery.ts",
-    "sha256": "7ef0a4c2b6cf77519f09c4985b09fa61fa3aefc6bc8a8ea5564fcf6a5bdce0ff"
+    "sha256": "6ad92fc72062c2f7eca9b24a243b364c825cbd370ebf2371ed94d238e83741a3"
   },
   {
     "path": "integration/head-neck/framework.tsx",
@@ -793,7 +841,7 @@
   },
   {
     "path": "integration/head-neck/main.tsx",
-    "sha256": "2d3708457ec64ce2a534abbe8a04a4ed18d2f37af4bfb742c5e881955773159e"
+    "sha256": "089d4d9b05e63a43f5d2eb331fd996965310349b46e3614866b41a0fcf132176"
   },
   {
     "path": "integration/head-neck/panel-host.css",
@@ -801,11 +849,15 @@
   },
   {
     "path": "integration/head-neck/regions.ts",
-    "sha256": "0518849aae8112e70572a2b00d41d31f2b825f01d6f60227bcfb45e64e07ee2e"
+    "sha256": "45df36b12bfc24a526807b3f0f38756fb78a1bc55b96494ee0c7445daa23ce71"
+  },
+  {
+    "path": "integration/head-neck/specimen-route.ts",
+    "sha256": "3195045c5ab01ddcfc90807de9f76aba7441c33fb576d959873413023aa395cc"
   },
   {
     "path": "integration/head-neck/vite.config.mjs",
-    "sha256": "923311e411c3146b7c3ba02a5db8abdbc01b84f8a55ed7a465251cd75f9ed5e2"
+    "sha256": "8b4c57eed934d452fcb504a626f566217b88d111dd8f6d50562282644d11babe"
   },
   {
     "path": "integration/module-audit.mjs",
@@ -1385,7 +1437,7 @@
   },
   {
     "path": "lib/model-delivery.ts",
-    "sha256": "b12ac419cedcc07e38f14189f431d0e9c85a652cc9e0c26b29953e57d45ad033"
+    "sha256": "600e68cdfd57cd16c78c45b9a2cd8e4e69aa295afeff9593cd66de0d57d429b6"
   },
   {
     "path": "lib/neck-clinical-curriculum.ts",
@@ -1768,6 +1820,18 @@
     "sha256": "e55a3718d0786a13a27301297f39bf8f54ae0de2cb4bf5f6e7c65ff399ec5f22"
   },
   {
+    "path": "public/brand/visible-medicine-lockup-dark.png",
+    "sha256": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98"
+  },
+  {
+    "path": "public/brand/visible-medicine-lockup-light.png",
+    "sha256": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42"
+  },
+  {
+    "path": "public/models/bodyparts3d-v3/abdominal-wall/NOTICE.md",
+    "sha256": "da24e3c60a56b46d3d3c23933beee0752a5adac3fe3bf3967c9eac1a73ccc7f0"
+  },
+  {
     "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
     "sha256": "a2fa96e5203e8a2c0ce5898a0d190834523a34f0b61c4ebfbce502a933f6d03e"
   },
@@ -1842,6 +1906,10 @@
   {
     "path": "public/models/bodyparts3d/femoral-components/catalog.json",
     "sha256": "594f8071b63861fcb1f4a0b821a26fd5c54b609444b8321474802b16ec13a799"
+  },
+  {
+    "path": "public/models/bodyparts3d/full-body/catalog.json",
+    "sha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7"
   },
   {
     "path": "public/models/bodyparts3d/genicular-arteries/catalog.json",
@@ -1932,6 +2000,10 @@
     "sha256": "a0e997a2eb4af64d25bf5f6f9901ea70616fb59443696f7630e0aea6bd53c619"
   },
   {
+    "path": "public/models/hra-renal/NOTICE.md",
+    "sha256": "cb30b4dc59e4df19cf533753eab2299354d0f948e694d865042971a74cf2da78"
+  },
+  {
     "path": "public/models/hra-renal/catalog.json",
     "sha256": "0bdc5a8ec478c58fbc977b2cf720543d9715d3654bf42b9b3bb5d2e1d49cecf5"
   },
@@ -1945,10 +2017,10 @@
   },
   {
     "path": "scripts/export-head-neck-module.mjs",
-    "sha256": "572645e93f14292ffde1dcfa7949ad85df035ce6c5edafffa6864e6402783362"
+    "sha256": "44848a51808f75a9aa12dfc0665548af5895823af7488dac5ddb32591881f2c4"
   },
   {
     "path": "scripts/head-neck-module-inputs.mjs",
-    "sha256": "9716425f6dc3b6a827888a58824c7b627df42a3d3cc3120390d69d66e86b3b85"
+    "sha256": "a1b6e9b568be667b515eea8282bd3c8e0928e8a09b3292e2316a09b88c55ee91"
   }
 ]
