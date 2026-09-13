@@ -69,6 +69,20 @@ export const atlasModules: AtlasModule[] = [
     systems:['Bones','Muscles','Organs','Vessels','Connective'], reviewed:'Private integration pilot · Review pending',
   },
   {
+    slug:'pelvis-3d', title:'Pelvis 3D anatomy', region:'Pelvis',
+    modality:'3D', orientation:'Rotatable',
+    description:'Explore pelvic structures and deep-femoral source parts; open separate female-pelvis and hip/thigh dissections.',
+    structures:81, images:0, status:'available',
+    systems:['Bones','Muscles','Organs','Vessels','Connective'], reviewed:'Private integration pilot · Review pending',
+  },
+  {
+    slug:'spine-3d', title:'Spine and back 3D anatomy', region:'Spine',
+    modality:'3D', orientation:'Rotatable',
+    description:'Dissect the regional spine and explore eight separate back-layer studies with source-bound draft teaching.',
+    structures:115, images:0, status:'available',
+    systems:['Bones','Muscles','Nervous','Vessels','Connective'], reviewed:'Private integration pilot · Review pending',
+  },
+  {
     slug: "ct-head",
     title: "CT head",
     region: "Neuroanatomy",

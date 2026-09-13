@@ -27,8 +27,8 @@ test('head and neck delivery preserves the complete audited regional and nested 
     const bytes=await readFile(new URL(file.path,runtime));assert.equal(bytes.length,file.bytes);assert.equal(sha(bytes),file.sha256);
   }
   assert.equal(manifest.schemaVersion,2);
-  assert.deepEqual(manifest.regionalScopes.map((s:{region:string;regionalIds:string[];nestedTargets:unknown[]})=>[s.region,s.regionalIds.length,s.nestedTargets.length]),[['head-neck',290,75],['thorax',157,9],['abdomen',106,16]]);
-  assert.equal(found.filter(p=>p.endsWith('.glb')).length,73);
+  assert.deepEqual(manifest.regionalScopes.map((s:{region:string;regionalIds:string[];nestedTargets:unknown[]})=>[s.region,s.regionalIds.length,s.nestedTargets.length]),[['head-neck',290,75],['thorax',157,9],['abdomen',106,16],['pelvis',81,4],['spine',115,0]]);
+  assert.equal(found.filter(p=>p.endsWith('.glb')).length,93);
   for(const bundle of manifest.modelBundles){
     const bytes=await readFile(new URL(bundle.url.split('?')[0].slice(1),runtime));
     assert.equal(sha(bytes),bundle.sha256);assert.equal(bytes.length,bundle.bytes);

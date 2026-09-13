@@ -36,7 +36,8 @@ test('staging deduplicates immutable objects without mutating or promoting the a
   const before = JSON.stringify(previous);
   const staging = atlasStagingModels(previous.models, candidate.models);
   assert.equal(staging.length, 80);
-  assert.equal(atlasStagingModels(active.models, candidate.models).length, 80, 'also works after the separately verified 80-model activation');
+  assert.equal(atlasStagingModels(active.models, candidate.models).length, 94, 'the newer candidate source retains all 80 previously staged objects');
+  for(const model of candidate.models){const current=active.models.find(m=>m.sha256===model.sha256);assert(current);assert.equal(current.bytes,model.bytes);for(const path of model.paths)assert(current.paths.includes(path));}
   for (const mode of ['check', 'download', 'upload'] as const) assert.strictEqual(atlasStagingCheckModels(mode, staging, previous.models), staging);
   assert.strictEqual(atlasStagingCheckModels('delivery', staging, previous.models), previous.models);
   for (const model of added) for (const path of model.paths) assert.throws(() => resolveAtlasDeliveryModel(new URL(path, 'https://atlas.test'), previous.models));

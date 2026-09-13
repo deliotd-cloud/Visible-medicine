@@ -24,6 +24,14 @@
     "sha256": "90dea95329aea5015ce339e430d9f342090617c82ee48613e15dd2240f08b746"
   },
   {
+    "path": "LICENSES/um-lower-limb-v1-2/dataverse.json",
+    "sha256": "a9d0957579f4c78975978e12f5627fc9e0be758da676dd11d16dd72a303e5375"
+  },
+  {
+    "path": "LICENSES/um-lower-limb-v1-2/readme.txt",
+    "sha256": "deb6b13e74e499015a79a84c0bc5c4faa15cc8a763de43ebb8ec088824fc2967"
+  },
+  {
     "path": "app/abdominal-wall-study.tsx",
     "sha256": "ac3d99616ba8b79fd57346d058821d79142ddea44d3eb373fd846852217932f1"
   },
@@ -65,7 +73,7 @@
   },
   {
     "path": "app/back-layers-study.tsx",
-    "sha256": "3159ece2ddae1b584fc2f838d53ea53b7276f06b11cab7731a519880dcc2a2aa"
+    "sha256": "4fbb5707a859a8268a767fc85f4fcd33a9a96fe523b78cc3fda9adff6cdbf658"
   },
   {
     "path": "app/body-batch.tsx",
@@ -81,7 +89,7 @@
   },
   {
     "path": "app/body-explorer.tsx",
-    "sha256": "4d55036a55741d95e4cd881a437b26d3f6611c2ad8f869fb6d4aa5611da41574"
+    "sha256": "b1648927570f1848a68d8a232c3756a9c0d3a220654e8bb21f7159453f48ff39"
   },
   {
     "path": "app/body-scene.tsx",
@@ -157,7 +165,7 @@
   },
   {
     "path": "app/hra-pelvis-study.tsx",
-    "sha256": "1409567b303b914f98a5a5afb6ed7e0594ac2e2f31b3918c6e8951fe44527e52"
+    "sha256": "a17db7ad07b5281bfed8ae1a68c484d51e243d903f1c3258621528ef7d36f608"
   },
   {
     "path": "app/hra-pelvis-supplement.tsx",
@@ -257,7 +265,7 @@
   },
   {
     "path": "app/specimen-study-link.tsx",
-    "sha256": "cfdf5c519d24137651ee2ce4e962fc0358d27812d904291956ea55d9b219052e"
+    "sha256": "164b2735a30329f012eccdaa662b22c8be569a896032474f71b765e2f6da7335"
   },
   {
     "path": "app/structure-navigator.tsx",
@@ -301,7 +309,7 @@
   },
   {
     "path": "app/um-limb-study.tsx",
-    "sha256": "30a8b2c8066fb502a89e54bbc7f288e897d2439253fe77af3e6643db4fdfb421"
+    "sha256": "41899cfeed853d0e2562eeb4876a19a1c56044a6436f36f8630a2b2cd2a2e28a"
   },
   {
     "path": "app/upper-limb-motor.css",
@@ -696,6 +704,26 @@
     "sha256": "0c2913b3c51f2c6b248ac054acfd0b2a72940386199ca95fa9aa848bd69746e0"
   },
   {
+    "path": "content/sources/bodyparts3d-v3-back-layers/license-deed.html",
+    "sha256": "4a02a925c115a4f8e0e5018fbed2fcb9388fde1b0c0ce4a61a506bb44e0307ec"
+  },
+  {
+    "path": "content/sources/bodyparts3d-v3-back-layers/license-legalcode.html",
+    "sha256": "d44c2a342063c22bb793a7ab5f9bbf3374f03f0d433f7530333f409d1fea42f9"
+  },
+  {
+    "path": "content/sources/bodyparts3d-v3-back-layers/source-audit.json",
+    "sha256": "9332271aa8fb112732af273747aba8ce3f1938f15399cbc8e35566333e0e4387"
+  },
+  {
+    "path": "content/sources/bodyparts3d-v3-back-layers/source-readme.html",
+    "sha256": "0c2913b3c51f2c6b248ac054acfd0b2a72940386199ca95fa9aa848bd69746e0"
+  },
+  {
+    "path": "content/sources/hra-pelvis/metadata.json",
+    "sha256": "b9f137b1176c31419c68b78ac87f0926f874dad22f56d4dde7df3e2f15bab501"
+  },
+  {
     "path": "content/sources/hra-renal/metadata.json",
     "sha256": "b9f137b1176c31419c68b78ac87f0926f874dad22f56d4dde7df3e2f15bab501"
   },
@@ -821,15 +849,15 @@
   },
   {
     "path": "integration/head-neck/companions.mjs",
-    "sha256": "367e6ba3f614d4a564b359b0e4bf39b9e9a9e6bc31aa201966e2a6ca6ea162b3"
+    "sha256": "c0f7336a698469e1d90a686a9a5abd5501c405130e699eedc1d0304b4c5ee8e1"
   },
   {
     "path": "integration/head-neck/credits.html",
-    "sha256": "a9f6c843ce88e37237d23b5c6fa90f8569eecfb9fc46e3c8ade56a3b4baaa8f1"
+    "sha256": "fdc8507897dbc230ee32130af5fb3ce254db74ea9e037d32a498c8b1ebe558a5"
   },
   {
     "path": "integration/head-neck/delivery.ts",
-    "sha256": "6ad92fc72062c2f7eca9b24a243b364c825cbd370ebf2371ed94d238e83741a3"
+    "sha256": "6d2ddd416d8a45d51b00e2d677218e0915e022383906b7286671840c56ffde33"
   },
   {
     "path": "integration/head-neck/framework.tsx",
@@ -841,7 +869,7 @@
   },
   {
     "path": "integration/head-neck/main.tsx",
-    "sha256": "089d4d9b05e63a43f5d2eb331fd996965310349b46e3614866b41a0fcf132176"
+    "sha256": "5da6e3cfd9e3721d6fbb9895ae7ef2adbecf1f8344b21d7ea20b8c3df7434786"
   },
   {
     "path": "integration/head-neck/panel-host.css",
@@ -849,15 +877,19 @@
   },
   {
     "path": "integration/head-neck/regions.ts",
-    "sha256": "45df36b12bfc24a526807b3f0f38756fb78a1bc55b96494ee0c7445daa23ce71"
+    "sha256": "4788f73ba36848e757bb4de48298a2d3c5fe1c19b853dc008f4169b2a2165628"
   },
   {
     "path": "integration/head-neck/specimen-route.ts",
-    "sha256": "3195045c5ab01ddcfc90807de9f76aba7441c33fb576d959873413023aa395cc"
+    "sha256": "3e5a33b482c743f564e97bbe84efc71cbc879ab25a999541a1349db9313e2b22"
   },
   {
     "path": "integration/head-neck/vite.config.mjs",
     "sha256": "8b4c57eed934d452fcb504a626f566217b88d111dd8f6d50562282644d11babe"
+  },
+  {
+    "path": "integration/lower-limb/MODEL_NOTICE.md",
+    "sha256": "283726a12527577a3f28343ace3ab37094c8726e31a6e7782ee208d14d79011e"
   },
   {
     "path": "integration/module-audit.mjs",
@@ -1437,7 +1469,7 @@
   },
   {
     "path": "lib/model-delivery.ts",
-    "sha256": "600e68cdfd57cd16c78c45b9a2cd8e4e69aa295afeff9593cd66de0d57d429b6"
+    "sha256": "be7ae1dc92401317fa5d9055a381e2a2159c12e8fb3f9500724dad10477791d5"
   },
   {
     "path": "lib/neck-clinical-curriculum.ts",
@@ -1836,6 +1868,10 @@
     "sha256": "a2fa96e5203e8a2c0ce5898a0d190834523a34f0b61c4ebfbce502a933f6d03e"
   },
   {
+    "path": "public/models/bodyparts3d-v3/back-layers/NOTICE.md",
+    "sha256": "41cdebcbf14c33d84bb3338db05015b9cf1c4a815b6909cb2db698fd2c6e884f"
+  },
+  {
     "path": "public/models/bodyparts3d-v3/back-layers/catalog.json",
     "sha256": "23ba69e7268a03c8ab722313326bb7ffc3ac13aa49c0036c043993b38e0e9242"
   },
@@ -1996,6 +2032,10 @@
     "sha256": "f3ba11e16956eed6530df9449cdbca919364d76d8d838df2b3520ef678125c16"
   },
   {
+    "path": "public/models/hra-pelvis/NOTICE.md",
+    "sha256": "898505e9c8837bd74e9f2535726676e13e9020e593ef15943b61a7845ff1c927"
+  },
+  {
     "path": "public/models/hra-pelvis/catalog.json",
     "sha256": "a0e997a2eb4af64d25bf5f6f9901ea70616fb59443696f7630e0aea6bd53c619"
   },
@@ -2021,6 +2061,6 @@
   },
   {
     "path": "scripts/head-neck-module-inputs.mjs",
-    "sha256": "a1b6e9b568be667b515eea8282bd3c8e0928e8a09b3292e2316a09b88c55ee91"
+    "sha256": "dc466c0bad379b70d7d76ce4571e5ba08121d52f00f50bee217374644cc96da2"
   }
 ]

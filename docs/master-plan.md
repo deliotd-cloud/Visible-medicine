@@ -77,6 +77,17 @@ Latest specialist-chat review reports both anterior cerebellar edges accepted an
 
 ## Ordered delivery roadmap
 
+13 September — [pelvis and spine source integration](pelvis-spine-atlas-pilot.md)
+adds their full 196 regional and four nested selections plus separate back,
+female-pelvis and lower-limb studies. Atlas `54805a89…` preserves source geometry,
+licences, held anatomy, draft teaching and compact controls. The website candidate
+has 94 immutable model objects at 100 paths, retaining all prior 80. It is not
+newly live: stage and verify the 14 added objects while preserving version 59,
+then activate the complete runtime. Source/React checks are not clinical or live
+device acceptance. The main task's pelvis/spine checkpoint records actual source,
+GitHub, D recovery and hosting outcomes. Continue full-body/regional delivery and
+the complete teaching/cleared-Education roadmap after this milestone.
+
 13 September — [larger label-safe framing](atlas-framing.md) is now integrated
 across all four source-bound website modules. It uses available vertical drawing
 space without cropping anatomy, changing geometry or adding controls. All 80

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "sourceCommit": "6fe99634045ab1e7df6828ff67fcd75d0ae8f724",
+  "sourceCommit": "54805a89ea4078a65cce8a0860989fafbd72d7e4",
   "region": "head-neck",
   "sourceVersion": "4.0",
   "regionalIds": [
@@ -3096,9 +3096,1114 @@
       ],
       "sourceVersion": "4.0",
       "license": "CC-BY-4.0"
+    },
+    {
+      "region": "pelvis",
+      "regionalIds": [
+        "vm:anatomy:body:pelvis:right:bone:right-hip-bone",
+        "vm:anatomy:body:thigh:left:bone:left-femur",
+        "vm:anatomy:body:pelvis:left:bone:left-hip-bone",
+        "vm:anatomy:body:thigh:right:bone:right-femur",
+        "vm:anatomy:body:spine:midline:bone:sacrum",
+        "vm:anatomy:body:thigh:right:muscle:right-gemellus-inferior",
+        "vm:anatomy:body:thigh:left:muscle:left-gemellus-inferior",
+        "vm:anatomy:body:thigh:right:muscle:right-gemellus-superior",
+        "vm:anatomy:body:thigh:left:muscle:left-gemellus-superior",
+        "vm:anatomy:body:thigh:right:muscle:right-gluteus-maximus",
+        "vm:anatomy:body:thigh:left:muscle:left-gluteus-maximus",
+        "vm:anatomy:body:thigh:right:muscle:right-gluteus-medius",
+        "vm:anatomy:body:thigh:left:muscle:left-gluteus-medius",
+        "vm:anatomy:body:thigh:right:muscle:right-gluteus-minimus",
+        "vm:anatomy:body:thigh:left:muscle:left-gluteus-minimus",
+        "vm:anatomy:body:thigh:right:muscle:right-iliacus",
+        "vm:anatomy:body:thigh:left:muscle:left-iliacus",
+        "vm:anatomy:body:thigh:right:muscle:right-obturator-externus",
+        "vm:anatomy:body:thigh:left:muscle:left-obturator-externus",
+        "vm:anatomy:body:thigh:right:muscle:right-obturator-internus",
+        "vm:anatomy:body:thigh:left:muscle:left-obturator-internus",
+        "vm:anatomy:body:thigh:right:muscle:right-piriformis",
+        "vm:anatomy:body:thigh:left:muscle:left-piriformis",
+        "vm:anatomy:body:thigh:right:muscle:right-quadratus-femoris",
+        "vm:anatomy:body:thigh:left:muscle:left-quadratus-femoris",
+        "vm:anatomy:body:pelvis:left:muscle:left-coccygeus",
+        "vm:anatomy:body:thigh:midline:muscle:superficial-perineal-muscle",
+        "vm:anatomy:body:pelvis:right:muscle:right-coccygeus",
+        "vm:anatomy:body:pelvis:unpaired:organ:urinary-bladder",
+        "vm:anatomy:body:pelvis:unpaired:organ:prostate",
+        "vm:anatomy:body:pelvis:right:organ:right-testis",
+        "vm:anatomy:body:pelvis:left:organ:left-testis",
+        "vm:anatomy:body:pelvis:right:organ:right-seminal-vesicle",
+        "vm:anatomy:body:pelvis:left:organ:left-seminal-vesicle",
+        "vm:anatomy:body:abdomen:right:organ:right-ureter",
+        "vm:anatomy:body:abdomen:left:organ:left-ureter",
+        "vm:anatomy:body:pelvis:unpaired:organ:rectum",
+        "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+        "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-artery",
+        "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-artery",
+        "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-artery",
+        "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-artery",
+        "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-artery",
+        "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-artery",
+        "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-vein",
+        "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-vein",
+        "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-vein",
+        "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-vein",
+        "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-vein",
+        "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-vein",
+        "vm:anatomy:body:thigh:right:vessel:right-femoral-artery",
+        "vm:anatomy:body:thigh:left:vessel:left-femoral-artery",
+        "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery",
+        "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery",
+        "vm:anatomy:body:thigh:right:vessel:right-femoral-vein",
+        "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
+        "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
+        "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+        "vm:anatomy:body:pelvis:right:organ:right-epididymis",
+        "vm:anatomy:body:pelvis:left:organ:left-epididymis",
+        "vm:anatomy:body:pelvis:unpaired:organ:urethra",
+        "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+        "vm:anatomy:body:pelvis:left:organ:left-deferent-duct",
+        "vm:anatomy:body:pelvis:right:organ:right-deferent-duct",
+        "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+        "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+        "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein",
+        "vm:anatomy:body:pelvis:left:vessel:left-iliolumbar-vein",
+        "vm:anatomy:body:pelvis:left:vessel:left-inferior-gluteal-vein",
+        "vm:anatomy:body:pelvis:left:vessel:left-obturator-vein",
+        "vm:anatomy:body:pelvis:left:vessel:left-superior-gluteal-vein",
+        "vm:anatomy:body:pelvis:right:vessel:right-iliolumbar-vein",
+        "vm:anatomy:body:pelvis:right:vessel:right-inferior-gluteal-vein",
+        "vm:anatomy:body:pelvis:right:vessel:right-internal-pudendal-vein",
+        "vm:anatomy:body:pelvis:right:vessel:right-lateral-sacral-vein",
+        "vm:anatomy:body:pelvis:right:vessel:right-obturator-vein",
+        "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein"
+      ],
+      "nestedTargets": [
+        {
+          "parentId": "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery",
+          "parentHash": "5037db3cd7d8d0bf2ac6ae2c4656b50e73c71f5f530595b80cd68153afb6c9f7",
+          "study": "femoral-components",
+          "title": "Deep-femoral source components",
+          "structureId": "vm:anatomy:body:thigh:right:source-component:fj2137",
+          "sourceHash": "a35dfffc15ed011570781c6c194ecbfeda08bc70926a39b8cbf0cffa8b88dca0"
+        },
+        {
+          "parentId": "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery",
+          "parentHash": "5037db3cd7d8d0bf2ac6ae2c4656b50e73c71f5f530595b80cd68153afb6c9f7",
+          "study": "femoral-components",
+          "title": "Deep-femoral source components",
+          "structureId": "vm:anatomy:body:thigh:right:source-component:fj2158",
+          "sourceHash": "a35dfffc15ed011570781c6c194ecbfeda08bc70926a39b8cbf0cffa8b88dca0"
+        },
+        {
+          "parentId": "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery",
+          "parentHash": "5037db3cd7d8d0bf2ac6ae2c4656b50e73c71f5f530595b80cd68153afb6c9f7",
+          "study": "femoral-components",
+          "title": "Deep-femoral source components",
+          "structureId": "vm:anatomy:body:thigh:left:source-component:fj2069",
+          "sourceHash": "a35dfffc15ed011570781c6c194ecbfeda08bc70926a39b8cbf0cffa8b88dca0"
+        },
+        {
+          "parentId": "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery",
+          "parentHash": "5037db3cd7d8d0bf2ac6ae2c4656b50e73c71f5f530595b80cd68153afb6c9f7",
+          "study": "femoral-components",
+          "title": "Deep-femoral source components",
+          "structureId": "vm:anatomy:body:thigh:left:source-component:fj2078",
+          "sourceHash": "a35dfffc15ed011570781c6c194ecbfeda08bc70926a39b8cbf0cffa8b88dca0"
+        }
+      ],
+      "independentSpecimens": [
+        {
+          "key": "hra-united-female-v1.10-pelvis",
+          "label": "Female pelvis",
+          "license": "CC BY 4.0",
+          "surfaceIds": [
+            "vm:reference:hra-united-female-v1-10:pelvis:vagina",
+            "vm:reference:hra-united-female-v1-10:pelvis:cervicovaginal-junction",
+            "vm:reference:hra-united-female-v1-10:pelvis:ampulla-of-uterine-tube-r",
+            "vm:reference:hra-united-female-v1-10:pelvis:isthmus-of-fallopian-tube-r",
+            "vm:reference:hra-united-female-v1-10:pelvis:fibria-of-uterine-tube-r",
+            "vm:reference:hra-united-female-v1-10:pelvis:uterine-tube-infundibulum-r",
+            "vm:reference:hra-united-female-v1-10:pelvis:uterine-tube-infundibulum-l",
+            "vm:reference:hra-united-female-v1-10:pelvis:fibria-of-uterine-tube-l",
+            "vm:reference:hra-united-female-v1-10:pelvis:isthmus-of-fallopian-tube-l",
+            "vm:reference:hra-united-female-v1-10:pelvis:ampulla-of-uterine-tube-l",
+            "vm:reference:hra-united-female-v1-10:pelvis:uterovesical-pouch",
+            "vm:reference:hra-united-female-v1-10:pelvis:right-uterosacral-ligament",
+            "vm:reference:hra-united-female-v1-10:pelvis:left-uterosacral-ligament",
+            "vm:reference:hra-united-female-v1-10:pelvis:right-cardinal-ligament-of-uterus",
+            "vm:reference:hra-united-female-v1-10:pelvis:left-cardinal-ligament-of-uterus",
+            "vm:reference:hra-united-female-v1-10:pelvis:suspensory-ligament-of-ovary-r",
+            "vm:reference:hra-united-female-v1-10:pelvis:suspensory-ligament-of-ovary-l",
+            "vm:reference:hra-united-female-v1-10:pelvis:ovarian-ligament-l",
+            "vm:reference:hra-united-female-v1-10:pelvis:ovarian-ligament-r",
+            "vm:reference:hra-united-female-v1-10:pelvis:broad-ligament",
+            "vm:reference:hra-united-female-v1-10:pelvis:mesosalpinx-l",
+            "vm:reference:hra-united-female-v1-10:pelvis:mesosalpinx-r",
+            "vm:reference:hra-united-female-v1-10:pelvis:mesovarium-r",
+            "vm:reference:hra-united-female-v1-10:pelvis:mesovarium-l",
+            "vm:reference:hra-united-female-v1-10:pelvis:left-ovary",
+            "vm:reference:hra-united-female-v1-10:pelvis:right-ovary",
+            "vm:reference:hra-united-female-v1-10:pelvis:body-of-uterus",
+            "vm:reference:hra-united-female-v1-10:pelvis:fundus-of-uterus",
+            "vm:reference:hra-united-female-v1-10:pelvis:lower-uterine-segment",
+            "vm:reference:hra-united-female-v1-10:pelvis:cervix",
+            "vm:reference:hra-united-female-v1-10:pelvis:internal-cervical-os",
+            "vm:reference:hra-united-female-v1-10:pelvis:external-cervical-os",
+            "vm:reference:hra-united-female-v1-10:pelvis:rectum",
+            "vm:reference:hra-united-female-v1-10:pelvis:fundus-of-urinary-bladder-dome",
+            "vm:reference:hra-united-female-v1-10:pelvis:urinary-bladder-neck-smooth-muscle",
+            "vm:reference:hra-united-female-v1-10:pelvis:fundus-of-urinary-bladder-base",
+            "vm:reference:hra-united-female-v1-10:pelvis:left-uterine-artery",
+            "vm:reference:hra-united-female-v1-10:pelvis:right-uterine-artery",
+            "vm:reference:hra-united-female-v1-10:pelvis:left-uterine-vein",
+            "vm:reference:hra-united-female-v1-10:pelvis:right-uterine-vein",
+            "vm:reference:hra-united-female-v1-10:pelvis:sacrum"
+          ],
+          "studyIds": [
+            "overview",
+            "all",
+            "uterus",
+            "adnexa-left",
+            "adnexa-right",
+            "supports",
+            "vessels",
+            "neighbours"
+          ],
+          "sourceFrame": {
+            "sourceToSceneColumnMajor": [
+              0.01,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -0.01,
+              0,
+              0,
+              0.01,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "unitsPerMillimetre": 0.01
+          },
+          "bundles": [
+            {
+              "id": "hra-united-female-v1.10-pelvis",
+              "url": "/models/hra-pelvis/pelvis.glb?v=f18f1f0e3c6e",
+              "sha256": "f18f1f0e3c6e8c0562b6b66864a8d786ffdb9e6a688da9288550fad6e491b866",
+              "bytes": 3796080,
+              "structures": 41
+            }
+          ]
+        },
+        {
+          "key": "um-5t6tz7-v1-2:knee",
+          "label": "Knee",
+          "license": "CC0-1.0",
+          "surfaceIds": [
+            "vm:reference:um-5t6tz7-v1-2:knee:femur",
+            "vm:reference:um-5t6tz7-v1-2:knee:tibia",
+            "vm:reference:um-5t6tz7-v1-2:knee:fibula",
+            "vm:reference:um-5t6tz7-v1-2:knee:patella",
+            "vm:reference:um-5t6tz7-v1-2:knee:femoral-cartilage",
+            "vm:reference:um-5t6tz7-v1-2:knee:tibial-cartilage",
+            "vm:reference:um-5t6tz7-v1-2:knee:patellar-cartilage",
+            "vm:reference:um-5t6tz7-v1-2:knee:acl",
+            "vm:reference:um-5t6tz7-v1-2:knee:pcl",
+            "vm:reference:um-5t6tz7-v1-2:knee:mcl",
+            "vm:reference:um-5t6tz7-v1-2:knee:lcl",
+            "vm:reference:um-5t6tz7-v1-2:knee:patellar-ligament",
+            "vm:reference:um-5t6tz7-v1-2:knee:meniscus-group",
+            "vm:reference:um-5t6tz7-v1-2:knee:quadriceps-tendon",
+            "vm:reference:um-5t6tz7-v1-2:knee:popliteus"
+          ],
+          "studyIds": [
+            "all",
+            "cruciates",
+            "collaterals",
+            "articular",
+            "extensor",
+            "posterior"
+          ],
+          "sourceFrame": {
+            "sourceToSceneColumnMajor": [
+              0.01,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -0.01,
+              0,
+              0,
+              0.01,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "unitsPerMillimetre": 0.01
+          },
+          "bundles": [
+            {
+              "id": "um-knee",
+              "url": "/models/um-knee/knee.glb",
+              "bytes": 5298360,
+              "sha256": "cf61571a8c80f463805b1362bb81b3d9eec3c62a1780c7288355e4a20fa8515b",
+              "structures": 15
+            }
+          ]
+        },
+        {
+          "key": "um-5t6tz7-v1-2:lower-limb:hip-thigh",
+          "label": "Hip & thigh",
+          "license": "CC0-1.0",
+          "surfaceIds": [
+            "vm:reference:um-5t6tz7-v1-2:knee:femur",
+            "vm:reference:um-5t6tz7-v1-2:knee:tibia",
+            "vm:reference:um-5t6tz7-v1-2:knee:fibula",
+            "vm:reference:um-5t6tz7-v1-2:knee:patella",
+            "vm:reference:um-5t6tz7-v1-2:knee:patellar-ligament",
+            "vm:reference:um-5t6tz7-v1-2:knee:quadriceps-tendon",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:pelvis-group",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:femoral-head-cartilage",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:adductor-brevis",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:adductor-longus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:adductor-magnus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:biceps-femoris-long-head",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:biceps-femoris-short-head",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:gluteus-maximus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:gluteus-medius",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:gluteus-minimus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:gracilis",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:iliacus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:inferior-gemellus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:obturator-externus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:obturator-internus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:pectineus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:piriformis",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:psoas-major",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:quadratus-femoris",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:rectus-femoris",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:sartorius",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:semimembranosus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:semitendinosus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:superior-gemellus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:tensor-fasciae-latae",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:vastus-intermedius",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:vastus-lateralis",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:vastus-medialis"
+          ],
+          "studyIds": [
+            "all",
+            "gluteal",
+            "deep-hip",
+            "hip-flexors",
+            "quadriceps",
+            "adductors",
+            "hamstrings",
+            "hip-cartilage"
+          ],
+          "sourceFrame": {
+            "sourceToSceneColumnMajor": [
+              0.01,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -0.01,
+              0,
+              0,
+              0.01,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "unitsPerMillimetre": 0.01
+          },
+          "bundles": [
+            {
+              "id": "um-knee",
+              "url": "/models/um-knee/knee.glb",
+              "bytes": 5298360,
+              "sha256": "cf61571a8c80f463805b1362bb81b3d9eec3c62a1780c7288355e4a20fa8515b",
+              "structures": 15
+            },
+            {
+              "id": "um-limb-hip-thigh",
+              "url": "/models/um-limb/hip-thigh.glb",
+              "bytes": 11143104,
+              "sha256": "72470f8171fcfe7b7eb397ea86be47f2ec781a4c12b4c9755213d91e4f04f262",
+              "structures": 14
+            },
+            {
+              "id": "um-limb-thigh",
+              "url": "/models/um-limb/thigh.glb",
+              "bytes": 19648284,
+              "sha256": "3edb8b2d00673b08631070a682d34d56aba8d55d5aa6398874580afa3036d3d2",
+              "structures": 14
+            }
+          ]
+        },
+        {
+          "key": "um-5t6tz7-v1-2:lower-limb:calf",
+          "label": "Calf & ankle tendons",
+          "license": "CC0-1.0",
+          "surfaceIds": [
+            "vm:reference:um-5t6tz7-v1-2:knee:tibia",
+            "vm:reference:um-5t6tz7-v1-2:knee:fibula",
+            "vm:reference:um-5t6tz7-v1-2:knee:popliteus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:calcaneus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:extensor-digitorum-longus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:extensor-hallucis-longus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:flexor-digitorum-longus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:flexor-hallucis-longus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:gastrocnemius-lateral",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:gastrocnemius-medial",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:peroneus-longus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:soleus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:tibialis-anterior",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:tibialis-posterior",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:achilles-tendon"
+          ],
+          "studyIds": [
+            "all",
+            "anterior",
+            "superficial",
+            "deep",
+            "lateral"
+          ],
+          "sourceFrame": {
+            "sourceToSceneColumnMajor": [
+              0.01,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -0.01,
+              0,
+              0,
+              0.01,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "unitsPerMillimetre": 0.01
+          },
+          "bundles": [
+            {
+              "id": "um-knee",
+              "url": "/models/um-knee/knee.glb",
+              "bytes": 5298360,
+              "sha256": "cf61571a8c80f463805b1362bb81b3d9eec3c62a1780c7288355e4a20fa8515b",
+              "structures": 15
+            },
+            {
+              "id": "um-limb-leg",
+              "url": "/models/um-limb/leg.glb",
+              "bytes": 9251564,
+              "sha256": "76698dfcc0ed1710b06227cfccc5eb574cd03534966a406c9252899a7337437c",
+              "structures": 11
+            },
+            {
+              "id": "um-limb-foot",
+              "url": "/models/um-limb/foot.glb",
+              "bytes": 2676564,
+              "sha256": "dbd323ceaa7385977905b8aa9dfbfa2c03a9e7ca02c3084b5fd8d94e933a14d5",
+              "structures": 13
+            }
+          ]
+        },
+        {
+          "key": "um-5t6tz7-v1-2:lower-limb:foot",
+          "label": "Ankle & foot",
+          "license": "CC0-1.0",
+          "surfaceIds": [
+            "vm:reference:um-5t6tz7-v1-2:knee:tibia",
+            "vm:reference:um-5t6tz7-v1-2:knee:fibula",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:calcaneus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:cuboid",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:intermediate-cuneiform",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:lateral-cuneiform",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:medial-cuneiform",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:navicular",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:foot-bone-group",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:talus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:abductor-digiti-minimi",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:abductor-hallucis",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:extensor-digitorum-brevis",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:extensor-digitorum-longus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:extensor-hallucis-longus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:flexor-digitorum-brevis",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:flexor-digitorum-longus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:flexor-hallucis-longus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:peroneus-longus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:quadratus-plantae",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:tibialis-anterior",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:tibialis-posterior",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:achilles-tendon"
+          ],
+          "studyIds": [
+            "all",
+            "bones",
+            "plantar",
+            "dorsal",
+            "ankle-extensors",
+            "achilles"
+          ],
+          "sourceFrame": {
+            "sourceToSceneColumnMajor": [
+              0.01,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -0.01,
+              0,
+              0,
+              0.01,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "unitsPerMillimetre": 0.01
+          },
+          "bundles": [
+            {
+              "id": "um-knee",
+              "url": "/models/um-knee/knee.glb",
+              "bytes": 5298360,
+              "sha256": "cf61571a8c80f463805b1362bb81b3d9eec3c62a1780c7288355e4a20fa8515b",
+              "structures": 15
+            },
+            {
+              "id": "um-limb-leg",
+              "url": "/models/um-limb/leg.glb",
+              "bytes": 9251564,
+              "sha256": "76698dfcc0ed1710b06227cfccc5eb574cd03534966a406c9252899a7337437c",
+              "structures": 11
+            },
+            {
+              "id": "um-limb-foot",
+              "url": "/models/um-limb/foot.glb",
+              "bytes": 2676564,
+              "sha256": "dbd323ceaa7385977905b8aa9dfbfa2c03a9e7ca02c3084b5fd8d94e933a14d5",
+              "structures": 13
+            }
+          ]
+        },
+        {
+          "key": "um-5t6tz7-v1-2:lower-limb:whole",
+          "label": "Whole source limb",
+          "license": "CC0-1.0",
+          "surfaceIds": [
+            "vm:reference:um-5t6tz7-v1-2:knee:femur",
+            "vm:reference:um-5t6tz7-v1-2:knee:tibia",
+            "vm:reference:um-5t6tz7-v1-2:knee:fibula",
+            "vm:reference:um-5t6tz7-v1-2:knee:patella",
+            "vm:reference:um-5t6tz7-v1-2:knee:femoral-cartilage",
+            "vm:reference:um-5t6tz7-v1-2:knee:tibial-cartilage",
+            "vm:reference:um-5t6tz7-v1-2:knee:patellar-cartilage",
+            "vm:reference:um-5t6tz7-v1-2:knee:acl",
+            "vm:reference:um-5t6tz7-v1-2:knee:pcl",
+            "vm:reference:um-5t6tz7-v1-2:knee:mcl",
+            "vm:reference:um-5t6tz7-v1-2:knee:lcl",
+            "vm:reference:um-5t6tz7-v1-2:knee:patellar-ligament",
+            "vm:reference:um-5t6tz7-v1-2:knee:meniscus-group",
+            "vm:reference:um-5t6tz7-v1-2:knee:quadriceps-tendon",
+            "vm:reference:um-5t6tz7-v1-2:knee:popliteus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:calcaneus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:cuboid",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:intermediate-cuneiform",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:lateral-cuneiform",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:medial-cuneiform",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:navicular",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:pelvis-group",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:foot-bone-group",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:talus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:femoral-head-cartilage",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:abductor-digiti-minimi",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:abductor-hallucis",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:adductor-brevis",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:adductor-longus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:adductor-magnus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:biceps-femoris-long-head",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:biceps-femoris-short-head",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:extensor-digitorum-brevis",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:extensor-digitorum-longus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:extensor-hallucis-longus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:flexor-digitorum-brevis",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:flexor-digitorum-longus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:flexor-hallucis-longus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:gastrocnemius-lateral",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:gastrocnemius-medial",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:gluteus-maximus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:gluteus-medius",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:gluteus-minimus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:gracilis",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:iliacus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:inferior-gemellus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:obturator-externus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:obturator-internus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:pectineus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:peroneus-longus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:piriformis",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:psoas-major",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:quadratus-femoris",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:quadratus-plantae",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:rectus-femoris",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:sartorius",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:semimembranosus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:semitendinosus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:soleus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:superior-gemellus",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:tensor-fasciae-latae",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:tibialis-anterior",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:tibialis-posterior",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:vastus-intermedius",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:vastus-lateralis",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:vastus-medialis",
+            "vm:reference:um-5t6tz7-v1-2:lower-limb:achilles-tendon"
+          ],
+          "studyIds": [
+            "all"
+          ],
+          "sourceFrame": {
+            "sourceToSceneColumnMajor": [
+              0.01,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -0.01,
+              0,
+              0,
+              0.01,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "unitsPerMillimetre": 0.01
+          },
+          "bundles": [
+            {
+              "id": "um-knee",
+              "url": "/models/um-knee/knee.glb",
+              "bytes": 5298360,
+              "sha256": "cf61571a8c80f463805b1362bb81b3d9eec3c62a1780c7288355e4a20fa8515b",
+              "structures": 15
+            },
+            {
+              "id": "um-limb-hip-thigh",
+              "url": "/models/um-limb/hip-thigh.glb",
+              "bytes": 11143104,
+              "sha256": "72470f8171fcfe7b7eb397ea86be47f2ec781a4c12b4c9755213d91e4f04f262",
+              "structures": 14
+            },
+            {
+              "id": "um-limb-thigh",
+              "url": "/models/um-limb/thigh.glb",
+              "bytes": 19648284,
+              "sha256": "3edb8b2d00673b08631070a682d34d56aba8d55d5aa6398874580afa3036d3d2",
+              "structures": 14
+            },
+            {
+              "id": "um-limb-leg",
+              "url": "/models/um-limb/leg.glb",
+              "bytes": 9251564,
+              "sha256": "76698dfcc0ed1710b06227cfccc5eb574cd03534966a406c9252899a7337437c",
+              "structures": 11
+            },
+            {
+              "id": "um-limb-foot",
+              "url": "/models/um-limb/foot.glb",
+              "bytes": 2676564,
+              "sha256": "dbd323ceaa7385977905b8aa9dfbfa2c03a9e7ca02c3084b5fd8d94e933a14d5",
+              "structures": 13
+            }
+          ]
+        }
+      ],
+      "bundles": [
+        {
+          "id": "deferent-ducts",
+          "url": "/models/bodyparts3d/deferent-ducts/deferent-ducts.glb?v=53d2cdcb86c04d78671705b34f5b82c0130427735c8c7986553b3a042d8c7544",
+          "bytes": 39612,
+          "sha256": "53d2cdcb86c04d78671705b34f5b82c0130427735c8c7986553b3a042d8c7544",
+          "structures": 2
+        },
+        {
+          "id": "femoral-components",
+          "url": "/models/bodyparts3d/femoral-components/femoral-components.glb?v=a35dfffc15ed011570781c6c194ecbfeda08bc70926a39b8cbf0cffa8b88dca0",
+          "bytes": 283964,
+          "sha256": "a35dfffc15ed011570781c6c194ecbfeda08bc70926a39b8cbf0cffa8b88dca0",
+          "structures": 4
+        },
+        {
+          "id": "abdomen-organs-inventory",
+          "url": "/models/bodyparts3d/full-body/abdomen-organs-inventory.glb",
+          "bytes": 40896,
+          "sha256": "beb3ff34d8e0d64041f6639fea2a4aefff6e11f04f5ed0a9f9d62cec85257a42",
+          "structures": 3
+        },
+        {
+          "id": "abdomen-organs-recovery",
+          "url": "/models/bodyparts3d/full-body/abdomen-organs-recovery.glb",
+          "bytes": 74092,
+          "sha256": "9ed6f0864a2b37edc4c36ffbb84fdab9cacf34c6069d93455f1ffcb6eee711ab",
+          "structures": 2
+        },
+        {
+          "id": "abdomen-vessels-recovery",
+          "url": "/models/bodyparts3d/full-body/abdomen-vessels-recovery.glb",
+          "bytes": 477592,
+          "sha256": "e41d66684de08fd9bd7dfca340acb63cbf7714eb09a3ea9594184f497c509abe",
+          "structures": 14
+        },
+        {
+          "id": "pelvis-muscles",
+          "url": "/models/bodyparts3d/full-body/pelvis-muscles.glb",
+          "bytes": 115108,
+          "sha256": "ffaed94ac4c0f18df42d7cc21903e8e2b32d4c163929713913935a3eecf95ba2",
+          "structures": 2
+        },
+        {
+          "id": "pelvis-organs-gaps",
+          "url": "/models/bodyparts3d/full-body/pelvis-organs-gaps.glb",
+          "bytes": 16892,
+          "sha256": "28a4c4665dacfa483546cc8166dd31698c7a0fdb1e678cf9f22e5a2c63f88abc",
+          "structures": 3
+        },
+        {
+          "id": "pelvis-organs-recovery",
+          "url": "/models/bodyparts3d/full-body/pelvis-organs-recovery.glb",
+          "bytes": 73348,
+          "sha256": "d2876cb12fa3f6c71170d18bd6813f96783c47fe12ddf68263bf12e0cae98629",
+          "structures": 6
+        },
+        {
+          "id": "pelvis-organs",
+          "url": "/models/bodyparts3d/full-body/pelvis-organs.glb",
+          "bytes": 49544,
+          "sha256": "90baaeb1c521a6b2546e99576bce4b231c6e068b4fa3d48dbd4cb7eb355f93c3",
+          "structures": 2
+        },
+        {
+          "id": "pelvis-skeleton",
+          "url": "/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+          "bytes": 86960,
+          "sha256": "58e1008b8064e8a61ce659e0246615960826772abe7070f66496eadcd86f4746",
+          "structures": 2
+        },
+        {
+          "id": "pelvis-vessels-recovery",
+          "url": "/models/bodyparts3d/full-body/pelvis-vessels-recovery.glb",
+          "bytes": 122592,
+          "sha256": "e089b9e9d3eac8ec6c1731ddc2ab0972ae0be041d5175cdedc5cc0bfb8eb09ad",
+          "structures": 12
+        },
+        {
+          "id": "spine-skeleton",
+          "url": "/models/bodyparts3d/full-body/spine-skeleton.glb",
+          "bytes": 1286192,
+          "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957",
+          "structures": 25
+        },
+        {
+          "id": "thigh-connective-axial-detail",
+          "url": "/models/bodyparts3d/full-body/thigh-connective-axial-detail.glb",
+          "bytes": 620568,
+          "sha256": "a4df87c97da679dd55fa2640f502c6d9a75ad83afc6c8beb9de334f0aa0b0b17",
+          "structures": 2
+        },
+        {
+          "id": "thigh-muscles",
+          "url": "/models/bodyparts3d/full-body/thigh-muscles.glb",
+          "bytes": 1802128,
+          "sha256": "b67c1e601bb0926ab1a488873ea35b213b4757894ed86918f1eb1b12dc69fbd1",
+          "structures": 41
+        },
+        {
+          "id": "thigh-skeleton",
+          "url": "/models/bodyparts3d/full-body/thigh-skeleton.glb",
+          "bytes": 115852,
+          "sha256": "27bd799bd85387beea9fab40cbe2f83a5e780983170db4dfd1d2e0eda8fd2b59",
+          "structures": 2
+        },
+        {
+          "id": "thigh-vessels-recovery",
+          "url": "/models/bodyparts3d/full-body/thigh-vessels-recovery.glb",
+          "bytes": 1415760,
+          "sha256": "5037db3cd7d8d0bf2ac6ae2c4656b50e73c71f5f530595b80cd68153afb6c9f7",
+          "structures": 8
+        },
+        {
+          "id": "inferior-epigastric-vessels",
+          "url": "/models/bodyparts3d/inferior-epigastric-vessels/inferior-epigastric-vessels.glb?v=8049ac70b0130cfe597cde159d1716f79f1b686583ea71dc91a5955f6c95925c",
+          "bytes": 526756,
+          "sha256": "8049ac70b0130cfe597cde159d1716f79f1b686583ea71dc91a5955f6c95925c",
+          "structures": 4
+        },
+        {
+          "id": "pelvic-veins",
+          "url": "/models/bodyparts3d/pelvic-veins/pelvic-veins.glb?v=d503c707236e8b344ee0c582e8ef935cdb11a5dd6bdbcec2b9f758df4b6f60fa",
+          "bytes": 1183456,
+          "sha256": "d503c707236e8b344ee0c582e8ef935cdb11a5dd6bdbcec2b9f758df4b6f60fa",
+          "structures": 10
+        },
+        {
+          "id": "hra-united-female-v1.10-pelvis",
+          "url": "/models/hra-pelvis/pelvis.glb?v=f18f1f0e3c6e",
+          "sha256": "f18f1f0e3c6e8c0562b6b66864a8d786ffdb9e6a688da9288550fad6e491b866",
+          "bytes": 3796080,
+          "structures": 41
+        },
+        {
+          "id": "um-knee",
+          "url": "/models/um-knee/knee.glb",
+          "bytes": 5298360,
+          "sha256": "cf61571a8c80f463805b1362bb81b3d9eec3c62a1780c7288355e4a20fa8515b",
+          "structures": 15
+        },
+        {
+          "id": "um-limb-foot",
+          "url": "/models/um-limb/foot.glb",
+          "bytes": 2676564,
+          "sha256": "dbd323ceaa7385977905b8aa9dfbfa2c03a9e7ca02c3084b5fd8d94e933a14d5",
+          "structures": 13
+        },
+        {
+          "id": "um-limb-hip-thigh",
+          "url": "/models/um-limb/hip-thigh.glb",
+          "bytes": 11143104,
+          "sha256": "72470f8171fcfe7b7eb397ea86be47f2ec781a4c12b4c9755213d91e4f04f262",
+          "structures": 14
+        },
+        {
+          "id": "um-limb-leg",
+          "url": "/models/um-limb/leg.glb",
+          "bytes": 9251564,
+          "sha256": "76698dfcc0ed1710b06227cfccc5eb574cd03534966a406c9252899a7337437c",
+          "structures": 11
+        },
+        {
+          "id": "um-limb-thigh",
+          "url": "/models/um-limb/thigh.glb",
+          "bytes": 19648284,
+          "sha256": "3edb8b2d00673b08631070a682d34d56aba8d55d5aa6398874580afa3036d3d2",
+          "structures": 14
+        }
+      ],
+      "sourceVersion": "4.0",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "region": "spine",
+      "regionalIds": [
+        "vm:anatomy:body:spine:midline:bone:tenth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:eleventh-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:twelfth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:first-lumbar-vertebra",
+        "vm:anatomy:body:spine:midline:bone:first-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:second-lumbar-vertebra",
+        "vm:anatomy:body:spine:midline:bone:second-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:third-cervical-vertebra",
+        "vm:anatomy:body:spine:midline:bone:third-lumbar-vertebra",
+        "vm:anatomy:body:spine:midline:bone:third-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:fourth-cervical-vertebra",
+        "vm:anatomy:body:spine:midline:bone:fourth-lumbar-vertebra",
+        "vm:anatomy:body:spine:midline:bone:fourth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:fifth-cervical-vertebra",
+        "vm:anatomy:body:spine:midline:bone:fifth-lumbar-vertebra",
+        "vm:anatomy:body:spine:midline:bone:fifth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:sixth-cervical-vertebra",
+        "vm:anatomy:body:spine:midline:bone:sixth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:seventh-cervical-vertebra",
+        "vm:anatomy:body:spine:midline:bone:seventh-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:eighth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:ninth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:atlas",
+        "vm:anatomy:body:spine:midline:bone:axis",
+        "vm:anatomy:body:spine:midline:bone:sacrum",
+        "vm:anatomy:body:spine:right:muscle:right-psoas-major",
+        "vm:anatomy:body:spine:left:muscle:left-psoas-major",
+        "vm:anatomy:body:spine:right:muscle:right-lumbar-rotator",
+        "vm:anatomy:body:spine:left:muscle:left-lumbar-rotator",
+        "vm:anatomy:body:spine:right:muscle:right-cervical-rotator",
+        "vm:anatomy:body:spine:left:muscle:left-cervical-rotator",
+        "vm:anatomy:body:spine:midline:muscle:thoracic-rotator",
+        "vm:anatomy:body:spine:right:muscle:right-iliocostalis-cervicis",
+        "vm:anatomy:body:spine:left:muscle:left-iliocostalis-cervicis",
+        "vm:anatomy:body:spine:right:muscle:right-iliocostalis-lumborum",
+        "vm:anatomy:body:spine:left:muscle:left-iliocostalis-lumborum",
+        "vm:anatomy:body:spine:right:muscle:right-iliocostalis-thoracis",
+        "vm:anatomy:body:spine:left:muscle:left-iliocostalis-thoracis",
+        "vm:anatomy:body:spine:right:muscle:right-longissimus-capitis",
+        "vm:anatomy:body:spine:left:muscle:left-longissimus-capitis",
+        "vm:anatomy:body:spine:right:muscle:right-longissimus-cervicis",
+        "vm:anatomy:body:spine:left:muscle:left-longissimus-cervicis",
+        "vm:anatomy:body:spine:right:muscle:right-longissimus-thoracis",
+        "vm:anatomy:body:spine:left:muscle:left-longissimus-thoracis",
+        "vm:anatomy:body:spine:right:muscle:right-semispinalis-capitis",
+        "vm:anatomy:body:spine:left:muscle:left-semispinalis-capitis",
+        "vm:anatomy:body:spine:right:muscle:right-semispinalis-cervicis",
+        "vm:anatomy:body:spine:left:muscle:left-semispinalis-cervicis",
+        "vm:anatomy:body:spine:right:muscle:right-semispinalis-thoracis",
+        "vm:anatomy:body:spine:left:muscle:left-semispinalis-thoracis",
+        "vm:anatomy:body:spine:right:muscle:right-serratus-posterior-inferior",
+        "vm:anatomy:body:spine:left:muscle:left-serratus-posterior-inferior",
+        "vm:anatomy:body:spine:right:muscle:right-serratus-posterior-superior",
+        "vm:anatomy:body:spine:left:muscle:left-serratus-posterior-superior",
+        "vm:anatomy:body:spine:midline:muscle:spinalis",
+        "vm:anatomy:body:spine:right:muscle:right-splenius-capitis",
+        "vm:anatomy:body:spine:left:muscle:left-splenius-capitis",
+        "vm:anatomy:body:spine:right:muscle:right-splenius-cervicis",
+        "vm:anatomy:body:spine:left:muscle:left-splenius-cervicis",
+        "vm:anatomy:body:spine:midline:muscle:lateral-lumbar-intertransversarius",
+        "vm:anatomy:body:spine:midline:muscle:medial-lumbar-intertransversarius",
+        "vm:anatomy:body:spine:right:muscle:right-interspinalis-thoracis",
+        "vm:anatomy:body:spine:left:muscle:left-interspinalis-thoracis",
+        "vm:anatomy:body:spine:left:muscle:left-longus-capitis",
+        "vm:anatomy:body:spine:left:muscle:left-obliquus-capitis-inferior",
+        "vm:anatomy:body:spine:left:muscle:left-obliquus-capitis-superior",
+        "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-anterior",
+        "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-posterior-major",
+        "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-posterior-minor",
+        "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-lateralis",
+        "vm:anatomy:body:spine:right:muscle:right-longus-capitis",
+        "vm:anatomy:body:spine:right:muscle:right-obliquus-capitis-inferior",
+        "vm:anatomy:body:spine:right:muscle:right-obliquus-capitis-superior",
+        "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-anterior",
+        "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-posterior-major",
+        "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-posterior-minor",
+        "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-lateralis",
+        "vm:anatomy:body:spine:right:muscle:ascending-part-of-right-trapezius",
+        "vm:anatomy:body:spine:left:muscle:ascending-part-of-left-trapezius",
+        "vm:anatomy:body:spine:right:muscle:transverse-part-of-right-trapezius",
+        "vm:anatomy:body:spine:left:muscle:transverse-part-of-left-trapezius",
+        "vm:anatomy:body:spine:right:muscle:descending-part-of-right-trapezius",
+        "vm:anatomy:body:spine:left:muscle:descending-part-of-left-trapezius",
+        "vm:anatomy:body:spine:midline:space:central-canal-of-spinal-cord",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-axis",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-cervical-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-cervical-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-cervical-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-sixth-cervical-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-cervical-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-first-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-sixth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eighth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-ninth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-tenth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eleventh-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-first-lumbar-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-lumbar-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-lumbar-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra",
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum",
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+        "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+        "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
+        "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
+        "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
+        "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
+        "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
+        "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli"
+      ],
+      "nestedTargets": [],
+      "independentSpecimens": [
+        {
+          "key": "bp3d3-back-layers",
+          "label": "Back layers",
+          "license": "CC BY-SA 2.1 JP",
+          "surfaceIds": [
+            "bp3d3-back-layers-FMA13358",
+            "bp3d3-back-layers-FMA13359",
+            "bp3d3-back-layers-FMA13381",
+            "bp3d3-back-layers-FMA13382",
+            "bp3d3-back-layers-FMA13383",
+            "bp3d3-back-layers-FMA13384",
+            "bp3d3-back-layers-FMA22878",
+            "bp3d3-back-layers-FMA22879",
+            "bp3d3-back-layers-FMA33581",
+            "bp3d3-back-layers-FMA33583",
+            "bp3d3-back-layers-FMA33584",
+            "bp3d3-back-layers-FMA33585",
+            "bp3d3-back-layers-FMA33586",
+            "bp3d3-back-layers-FMA33587",
+            "bp3d3-back-layers-FMA52735",
+            "bp3d3-back-layers-FMA12519",
+            "bp3d3-back-layers-FMA12520",
+            "bp3d3-back-layers-FMA12525",
+            "bp3d3-back-layers-FMA16202",
+            "bp3d3-back-layers-FMA10014",
+            "bp3d3-back-layers-FMA10037",
+            "bp3d3-back-layers-FMA10059",
+            "bp3d3-back-layers-FMA10081",
+            "bp3d3-back-layers-FMA12521",
+            "bp3d3-back-layers-FMA12522",
+            "bp3d3-back-layers-FMA12523",
+            "bp3d3-back-layers-FMA12524",
+            "bp3d3-back-layers-FMA13072",
+            "bp3d3-back-layers-FMA13073",
+            "bp3d3-back-layers-FMA13074",
+            "bp3d3-back-layers-FMA13075",
+            "bp3d3-back-layers-FMA13076",
+            "bp3d3-back-layers-FMA13322",
+            "bp3d3-back-layers-FMA13323",
+            "bp3d3-back-layers-FMA13395",
+            "bp3d3-back-layers-FMA13396",
+            "bp3d3-back-layers-FMA16586",
+            "bp3d3-back-layers-FMA16587",
+            "bp3d3-back-layers-FMA23130",
+            "bp3d3-back-layers-FMA23131",
+            "bp3d3-back-layers-FMA9165",
+            "bp3d3-back-layers-FMA9187",
+            "bp3d3-back-layers-FMA9209",
+            "bp3d3-back-layers-FMA9248",
+            "bp3d3-back-layers-FMA9922",
+            "bp3d3-back-layers-FMA9945",
+            "bp3d3-back-layers-FMA9968",
+            "bp3d3-back-layers-FMA9991"
+          ],
+          "studyIds": [
+            "all",
+            "below-trapezius",
+            "latissimus",
+            "rhomboids",
+            "multifidus",
+            "right",
+            "left",
+            "muscles"
+          ],
+          "sourceFrame": {
+            "sourceToSceneColumnMajor": [
+              0.01,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -0.01,
+              0,
+              0,
+              0.01,
+              0,
+              0,
+              0,
+              -10.5,
+              -1,
+              1
+            ],
+            "unitsPerMillimetre": 0.01
+          },
+          "bundles": [
+            {
+              "id": "bp3d3-back-layers",
+              "url": "/models/bodyparts3d-v3/back-layers/back-layers.glb",
+              "bytes": 7625848,
+              "sha256": "f8fa3e2a955ae43d74b359dfc9ad14487381ed496fecfeca9d47aa6a0024a7c4",
+              "structures": 48
+            }
+          ]
+        }
+      ],
+      "bundles": [
+        {
+          "id": "bp3d3-back-layers",
+          "url": "/models/bodyparts3d-v3/back-layers/back-layers.glb",
+          "bytes": 7625848,
+          "sha256": "f8fa3e2a955ae43d74b359dfc9ad14487381ed496fecfeca9d47aa6a0024a7c4",
+          "structures": 48
+        },
+        {
+          "id": "spine-connective-gaps",
+          "url": "/models/bodyparts3d/full-body/spine-connective-gaps.glb",
+          "bytes": 934264,
+          "sha256": "aae6dc0589fa3dc9ce5ea51ff28520a077290adb5b92fa4570c3cf20b2090e02",
+          "structures": 22
+        },
+        {
+          "id": "spine-muscles-axial-detail",
+          "url": "/models/bodyparts3d/full-body/spine-muscles-axial-detail.glb",
+          "bytes": 381316,
+          "sha256": "d7e3b995e0c18e3ebe7e7b97a11fbcd1e228218e0010462614e4938acf7f87ee",
+          "structures": 6
+        },
+        {
+          "id": "spine-muscles-dissection",
+          "url": "/models/bodyparts3d/full-body/spine-muscles-dissection.glb",
+          "bytes": 804760,
+          "sha256": "05090ad649d93cea83e30d8156afdd18c0e21dd29c1dca7f96749d6ace611841",
+          "structures": 6
+        },
+        {
+          "id": "spine-muscles",
+          "url": "/models/bodyparts3d/full-body/spine-muscles.glb",
+          "bytes": 5127960,
+          "sha256": "6cc6a2b15cda5a0defc35fdc2bebda607eac042571fec74bb1d2caba51748404",
+          "structures": 52
+        },
+        {
+          "id": "spine-nerves",
+          "url": "/models/bodyparts3d/full-body/spine-nerves.glb",
+          "bytes": 14420,
+          "sha256": "e88d03a126729c550c2aa9524eb3c466dc222cf874a327ec2d97432e97c8814d",
+          "structures": 1
+        },
+        {
+          "id": "spine-skeleton",
+          "url": "/models/bodyparts3d/full-body/spine-skeleton.glb",
+          "bytes": 1286192,
+          "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957",
+          "structures": 25
+        },
+        {
+          "id": "longus-colli",
+          "url": "/models/bodyparts3d/longus-colli/longus-colli.glb?v=b43cedda733267f51027a892b1ac08a35874853ce65802deca5304e039f6d08f",
+          "bytes": 133088,
+          "sha256": "b43cedda733267f51027a892b1ac08a35874853ce65802deca5304e039f6d08f",
+          "structures": 3
+        }
+      ],
+      "sourceVersion": "4.0",
+      "license": "CC-BY-4.0"
     }
   ],
-  "sharedRegionalStructures": 524,
+  "sharedRegionalStructures": 637,
   "patientDataIncluded": false,
   "clinicalApproved": false,
   "standaloneReviewConnection": false,
@@ -3110,6 +4215,13 @@
       "bytes": 15335852,
       "sha256": "2b80e2e9505593d10f807475ff3e3226ee917b7f0cb8abf5e59f9421d1d50748",
       "structures": 29
+    },
+    {
+      "id": "bp3d3-back-layers",
+      "url": "/models/bodyparts3d-v3/back-layers/back-layers.glb",
+      "bytes": 7625848,
+      "sha256": "f8fa3e2a955ae43d74b359dfc9ad14487381ed496fecfeca9d47aa6a0024a7c4",
+      "structures": 48
     },
     {
       "id": "brainstem",
@@ -3161,6 +4273,13 @@
       "structures": 4
     },
     {
+      "id": "deferent-ducts",
+      "url": "/models/bodyparts3d/deferent-ducts/deferent-ducts.glb?v=53d2cdcb86c04d78671705b34f5b82c0130427735c8c7986553b3a042d8c7544",
+      "bytes": 39612,
+      "sha256": "53d2cdcb86c04d78671705b34f5b82c0130427735c8c7986553b3a042d8c7544",
+      "structures": 2
+    },
+    {
       "id": "eye-layers",
       "url": "/models/bodyparts3d/eye-layers/eye-layers.glb?v=4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
       "bytes": 3578388,
@@ -3173,6 +4292,13 @@
       "bytes": 1756184,
       "sha256": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
       "structures": 1
+    },
+    {
+      "id": "femoral-components",
+      "url": "/models/bodyparts3d/femoral-components/femoral-components.glb?v=a35dfffc15ed011570781c6c194ecbfeda08bc70926a39b8cbf0cffa8b88dca0",
+      "bytes": 283964,
+      "sha256": "a35dfffc15ed011570781c6c194ecbfeda08bc70926a39b8cbf0cffa8b88dca0",
+      "structures": 4
     },
     {
       "id": "abdomen-connective-axial-detail",
@@ -3364,10 +4490,38 @@
       "structures": 16
     },
     {
+      "id": "pelvis-muscles",
+      "url": "/models/bodyparts3d/full-body/pelvis-muscles.glb",
+      "bytes": 115108,
+      "sha256": "ffaed94ac4c0f18df42d7cc21903e8e2b32d4c163929713913935a3eecf95ba2",
+      "structures": 2
+    },
+    {
+      "id": "pelvis-organs-gaps",
+      "url": "/models/bodyparts3d/full-body/pelvis-organs-gaps.glb",
+      "bytes": 16892,
+      "sha256": "28a4c4665dacfa483546cc8166dd31698c7a0fdb1e678cf9f22e5a2c63f88abc",
+      "structures": 3
+    },
+    {
+      "id": "pelvis-organs-recovery",
+      "url": "/models/bodyparts3d/full-body/pelvis-organs-recovery.glb",
+      "bytes": 73348,
+      "sha256": "d2876cb12fa3f6c71170d18bd6813f96783c47fe12ddf68263bf12e0cae98629",
+      "structures": 6
+    },
+    {
       "id": "pelvis-organs",
       "url": "/models/bodyparts3d/full-body/pelvis-organs.glb",
       "bytes": 49544,
       "sha256": "90baaeb1c521a6b2546e99576bce4b231c6e068b4fa3d48dbd4cb7eb355f93c3",
+      "structures": 2
+    },
+    {
+      "id": "pelvis-skeleton",
+      "url": "/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+      "bytes": 86960,
+      "sha256": "58e1008b8064e8a61ce659e0246615960826772abe7070f66496eadcd86f4746",
       "structures": 2
     },
     {
@@ -3399,6 +4553,13 @@
       "structures": 6
     },
     {
+      "id": "spine-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/spine-muscles-dissection.glb",
+      "bytes": 804760,
+      "sha256": "05090ad649d93cea83e30d8156afdd18c0e21dd29c1dca7f96749d6ace611841",
+      "structures": 6
+    },
+    {
       "id": "spine-muscles",
       "url": "/models/bodyparts3d/full-body/spine-muscles.glb",
       "bytes": 5127960,
@@ -3406,11 +4567,46 @@
       "structures": 52
     },
     {
+      "id": "spine-nerves",
+      "url": "/models/bodyparts3d/full-body/spine-nerves.glb",
+      "bytes": 14420,
+      "sha256": "e88d03a126729c550c2aa9524eb3c466dc222cf874a327ec2d97432e97c8814d",
+      "structures": 1
+    },
+    {
       "id": "spine-skeleton",
       "url": "/models/bodyparts3d/full-body/spine-skeleton.glb",
       "bytes": 1286192,
       "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957",
       "structures": 25
+    },
+    {
+      "id": "thigh-connective-axial-detail",
+      "url": "/models/bodyparts3d/full-body/thigh-connective-axial-detail.glb",
+      "bytes": 620568,
+      "sha256": "a4df87c97da679dd55fa2640f502c6d9a75ad83afc6c8beb9de334f0aa0b0b17",
+      "structures": 2
+    },
+    {
+      "id": "thigh-muscles",
+      "url": "/models/bodyparts3d/full-body/thigh-muscles.glb",
+      "bytes": 1802128,
+      "sha256": "b67c1e601bb0926ab1a488873ea35b213b4757894ed86918f1eb1b12dc69fbd1",
+      "structures": 41
+    },
+    {
+      "id": "thigh-skeleton",
+      "url": "/models/bodyparts3d/full-body/thigh-skeleton.glb",
+      "bytes": 115852,
+      "sha256": "27bd799bd85387beea9fab40cbe2f83a5e780983170db4dfd1d2e0eda8fd2b59",
+      "structures": 2
+    },
+    {
+      "id": "thigh-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/thigh-vessels-recovery.glb",
+      "bytes": 1415760,
+      "sha256": "5037db3cd7d8d0bf2ac6ae2c4656b50e73c71f5f530595b80cd68153afb6c9f7",
+      "structures": 8
     },
     {
       "id": "thorax-connective-recovery",
@@ -3553,6 +4749,13 @@
       "structures": 3
     },
     {
+      "id": "pelvic-veins",
+      "url": "/models/bodyparts3d/pelvic-veins/pelvic-veins.glb?v=d503c707236e8b344ee0c582e8ef935cdb11a5dd6bdbcec2b9f758df4b6f60fa",
+      "bytes": 1183456,
+      "sha256": "d503c707236e8b344ee0c582e8ef935cdb11a5dd6bdbcec2b9f758df4b6f60fa",
+      "structures": 10
+    },
+    {
       "id": "portal-veins",
       "url": "/models/bodyparts3d/portal-veins/portal-veins.glb?v=583069160dbd753bb7f64b62667d20134ccbf7554b9bd4cf57b0de0a5a50ee53",
       "bytes": 76724,
@@ -3609,18 +4812,60 @@
       "structures": 3
     },
     {
+      "id": "hra-united-female-v1.10-pelvis",
+      "url": "/models/hra-pelvis/pelvis.glb?v=f18f1f0e3c6e",
+      "sha256": "f18f1f0e3c6e8c0562b6b66864a8d786ffdb9e6a688da9288550fad6e491b866",
+      "bytes": 3796080,
+      "structures": 41
+    },
+    {
       "id": "hra-united-female-v1.10-kidneys",
       "url": "/models/hra-renal/kidneys.glb?v=bd5d2affb912",
       "sha256": "bd5d2affb912f135c8c8da7e7892fbc906ebae017ed7042e900646c2b6332cfc",
       "bytes": 3557552,
       "structures": 82
+    },
+    {
+      "id": "um-knee",
+      "url": "/models/um-knee/knee.glb",
+      "bytes": 5298360,
+      "sha256": "cf61571a8c80f463805b1362bb81b3d9eec3c62a1780c7288355e4a20fa8515b",
+      "structures": 15
+    },
+    {
+      "id": "um-limb-foot",
+      "url": "/models/um-limb/foot.glb",
+      "bytes": 2676564,
+      "sha256": "dbd323ceaa7385977905b8aa9dfbfa2c03a9e7ca02c3084b5fd8d94e933a14d5",
+      "structures": 13
+    },
+    {
+      "id": "um-limb-hip-thigh",
+      "url": "/models/um-limb/hip-thigh.glb",
+      "bytes": 11143104,
+      "sha256": "72470f8171fcfe7b7eb397ea86be47f2ec781a4c12b4c9755213d91e4f04f262",
+      "structures": 14
+    },
+    {
+      "id": "um-limb-leg",
+      "url": "/models/um-limb/leg.glb",
+      "bytes": 9251564,
+      "sha256": "76698dfcc0ed1710b06227cfccc5eb574cd03534966a406c9252899a7337437c",
+      "structures": 11
+    },
+    {
+      "id": "um-limb-thigh",
+      "url": "/models/um-limb/thigh.glb",
+      "bytes": 19648284,
+      "sha256": "3edb8b2d00673b08631070a682d34d56aba8d55d5aa6398874580afa3036d3d2",
+      "structures": 14
     }
   ],
   "files": [
     {
       "path": "index.html",
       "bytes": 821,
-      "sha256": "24ee7bcf80b852136064143d58ebbfc1bab7fb396b4c87f01e73810fa0338b8d"
+      "sha256": "f2f12a55a2a01f0a0876be325e0bbfcd4b5ece3634535ba4eefa2e69493f543c"
     },
     {
       "path": "BUNDLED_NOTICES.txt",
@@ -3634,23 +4879,23 @@
     },
     {
       "path": "source-inputs.json",
-      "bytes": 68711,
-      "sha256": "d04cecf34b15bf5d831bd77dc240b1505d85174379bd95ab00d4b896a76e4acd"
+      "bytes": 70259,
+      "sha256": "5db4d0bad794020d203f663279e3c58b6816706a2fb8d24b838ba068c3b286c5"
     },
     {
-      "path": "assets/abdominal-wall-study-CzdpiAoB.js",
+      "path": "assets/abdominal-wall-study-71y1M5Yc.js",
       "bytes": 44609,
-      "sha256": "2ca7678b15080a24a167441d5e0519d3faf8a4bacb21f0278a3a73e8847d6007"
+      "sha256": "0c880c68187fb16c65d3d7e879bcb3a81ee788f31e6115687e03572c507b61b2"
     },
     {
-      "path": "assets/anatomy-load-state-DksGHRIN.js",
-      "bytes": 249654,
-      "sha256": "038334a23ec851e3d9fbb4a3eb0dfde8fb00904767ef258e53f19ca675d26dd2"
+      "path": "assets/anatomy-load-state-B02ogcox.js",
+      "bytes": 249947,
+      "sha256": "009ae809e05950a30aded426a783f872ba066b0990372743d7e68548718dac87"
     },
     {
-      "path": "assets/back-layers-study-JdXT0bGL.js",
-      "bytes": 74775,
-      "sha256": "12c8e6e6549224376b2cbd272fdfb5a7fdf653dfae06e864dfe096d07e5f634a"
+      "path": "assets/back-layers-study-DoUZzrJJ.js",
+      "bytes": 74899,
+      "sha256": "0369aaf77675d960baca5e33400d01bcc8e91e1e4e396fd689395800d092d566"
     },
     {
       "path": "assets/body-scene-CGUv3Rnc.css",
@@ -3658,9 +4903,9 @@
       "sha256": "dde88f89e2ce955558fd6e9551a8796969da6d9d91be0bed8a70bc0482e09416"
     },
     {
-      "path": "assets/body-scene-D3dnzV1H.js",
+      "path": "assets/body-scene-Co9QD9k3.js",
       "bytes": 1023540,
-      "sha256": "6b5ca705bee1cab7bb2da4b21dc429ee88a33118ea4938acbe990ebe7bacaefb"
+      "sha256": "a2263a107ae1383ca820f6ef4696589993bfc39fb665e515f5fb833d08c1124a"
     },
     {
       "path": "assets/cutaway-controls-4N0ICIXO.css",
@@ -3668,9 +4913,9 @@
       "sha256": "87c31bfe8303461a8afbde6251bb48df5a77645f774c8ef3ac48c292a30ec5c8"
     },
     {
-      "path": "assets/cutaway-controls-BdNqaANn.js",
+      "path": "assets/cutaway-controls-CRXCGRw-.js",
       "bytes": 4905,
-      "sha256": "aa8715fbca89427f88bd9aec5ca41bf98435060968be18e61052f50cf33e74f1"
+      "sha256": "ad1c117276574919303cda070ca4012c2cdef7d9780c8fa8cbfb514b2d4718f8"
     },
     {
       "path": "assets/eye-layers-B3CQEl2o.css",
@@ -3678,24 +4923,24 @@
       "sha256": "58f9322c6a028c52be262400337233bf1eb9350ca31aef05830a1df107bbd343"
     },
     {
-      "path": "assets/eye-layers-CdP_Kl3i.js",
+      "path": "assets/eye-layers-DxRficTh.js",
       "bytes": 11503,
-      "sha256": "5c1bb5790b3e1d82d505dc9b8b4e9ac596d77e86425e6a921024e36645eeae42"
+      "sha256": "f4a01b5fc818406587038916f313a8efc2ac6429e31cd188f90428e627254010"
     },
     {
-      "path": "assets/hra-pelvis-study-BueCF9Fm.js",
-      "bytes": 92711,
-      "sha256": "07a4d058e97c5776430efe6bdeb67f4a9453cf47612c129f3ab46192874cb232"
+      "path": "assets/hra-pelvis-study-DcvNaXHz.js",
+      "bytes": 92811,
+      "sha256": "c6163aa1192e8ef0d4824e9b07ab73cbbc728a0e71d261ea0a8c9dd8b85ccd5f"
     },
     {
-      "path": "assets/hra-renal-study-DDIuoTYI.js",
+      "path": "assets/hra-renal-study-DLgfpU0Y.js",
       "bytes": 116609,
-      "sha256": "3a32920fced3fb83a2c1b9b76bb4574ba8030ba15678941c8fd0f1542701412c"
+      "sha256": "2072bdb5e0138a1b912e3423420067b53a7117d924b2968fd5e22186a0198564"
     },
     {
-      "path": "assets/independent-study-navigation-iDLriwJh.js",
+      "path": "assets/independent-study-navigation-DMqS2DDk.js",
       "bytes": 2629,
-      "sha256": "696a863332286d038ca1681cf07b647f396335fa076c3b6bcfbfe4e4367677b1"
+      "sha256": "1a39302a127215bd1f42a49f95001e66a942dd386dad59feb49d742a507f9cec"
     },
     {
       "path": "assets/index-CUulsHkX.css",
@@ -3703,9 +4948,9 @@
       "sha256": "dbd627b87051b8c365b10818a569e354ec4db823a0e72329bd08258fdc8922af"
     },
     {
-      "path": "assets/index-d23ipMzA.js",
-      "bytes": 4222852,
-      "sha256": "f96568500b33d6d5e4ada20e3cef42804effab13d17adac91f9ec29edef84df3"
+      "path": "assets/index-DsWHok3A.js",
+      "bytes": 4223866,
+      "sha256": "fcd7494ab2931a438fcf077092966e9870e319fc01cf051561adbf95eb83f371"
     },
     {
       "path": "assets/rolldown-runtime-hePW80VL.js",
@@ -3713,29 +4958,29 @@
       "sha256": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021"
     },
     {
-      "path": "assets/um-knee-study-CISHxZPS.js",
-      "bytes": 517044,
-      "sha256": "8c031be52da14b30cc6743e7e97b471e303cbe7e414c2c1a979c0d1b27d68a52"
-    },
-    {
       "path": "assets/um-knee-study-DE_VvcAw.css",
       "bytes": 3863,
       "sha256": "7f1d701756afcca6313a1ea8b3bb47f578ae6066d9d6750576f1003f9c65da3b"
     },
     {
-      "path": "assets/um-limb-study-DO7sOWhT.js",
-      "bytes": 2333,
-      "sha256": "64f1844988b5b7c3b3016eb0b31a055b3013fb9942f3b4fd892a9fc67775f23d"
+      "path": "assets/um-knee-study-SYqAa2J8.js",
+      "bytes": 517080,
+      "sha256": "36b715dfadc391d273707c9db81a959d2ab07cadbfd45129af2195c38c88e123"
     },
     {
-      "path": "assets/ventricles-B8u8J9_Q.js",
+      "path": "assets/um-limb-study-POBY9ifQ.js",
+      "bytes": 2642,
+      "sha256": "556943c3ed73e35e3865cbe5bdf00026b43f00633bfb540de60dce0defaa62ba"
+    },
+    {
+      "path": "assets/ventricles--YNUHb9j.js",
+      "bytes": 183278,
+      "sha256": "dbc1ab31936ac9ede240e9f983d5ea3d7986f1c7ae550bd46bcbd442634ff276"
+    },
+    {
+      "path": "assets/ventricles-DaflOZMp.js",
       "bytes": 228921,
-      "sha256": "db343980c5aa078c7b4be007d6493181df02b68f01a6075ab4e34f94dfdce77a"
-    },
-    {
-      "path": "assets/ventricles-CWIAHlJ4.js",
-      "bytes": 183286,
-      "sha256": "c26eb826d23fd821fc8283f04252679cef3657846a3c0c758886399a3d0b4f19"
+      "sha256": "df426913d32de72c265e4992968171f70c3dad8b639913a35b225bc92bebaab2"
     },
     {
       "path": "assets/ventricles-zpa0fhqb.css",
@@ -3746,6 +4991,11 @@
       "path": "models/bodyparts3d-v3/abdominal-wall/abdominal-wall.glb",
       "bytes": 15335852,
       "sha256": "2b80e2e9505593d10f807475ff3e3226ee917b7f0cb8abf5e59f9421d1d50748"
+    },
+    {
+      "path": "models/bodyparts3d-v3/back-layers/back-layers.glb",
+      "bytes": 7625848,
+      "sha256": "f8fa3e2a955ae43d74b359dfc9ad14487381ed496fecfeca9d47aa6a0024a7c4"
     },
     {
       "path": "models/bodyparts3d/brainstem/brainstem.glb",
@@ -3783,6 +5033,11 @@
       "sha256": "7a6695ee3fc8feeba3b187e3d9a800aa205b57486208f84a8ef8e170097452a4"
     },
     {
+      "path": "models/bodyparts3d/deferent-ducts/deferent-ducts.glb",
+      "bytes": 39612,
+      "sha256": "53d2cdcb86c04d78671705b34f5b82c0130427735c8c7986553b3a042d8c7544"
+    },
+    {
       "path": "models/bodyparts3d/eye-layers/eye-layers.glb",
       "bytes": 3578388,
       "sha256": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78"
@@ -3791,6 +5046,11 @@
       "path": "models/bodyparts3d/eye-layers/right-eyeball.glb",
       "bytes": 1756184,
       "sha256": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7"
+    },
+    {
+      "path": "models/bodyparts3d/femoral-components/femoral-components.glb",
+      "bytes": 283964,
+      "sha256": "a35dfffc15ed011570781c6c194ecbfeda08bc70926a39b8cbf0cffa8b88dca0"
     },
     {
       "path": "models/bodyparts3d/full-body/abdomen-connective-axial-detail.glb",
@@ -3928,9 +5188,29 @@
       "sha256": "800d583a96a6df8fdd2b5fff86c6e719a90e897d6c3c89bbb1a3bd71b0e89cbb"
     },
     {
+      "path": "models/bodyparts3d/full-body/pelvis-muscles.glb",
+      "bytes": 115108,
+      "sha256": "ffaed94ac4c0f18df42d7cc21903e8e2b32d4c163929713913935a3eecf95ba2"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/pelvis-organs-gaps.glb",
+      "bytes": 16892,
+      "sha256": "28a4c4665dacfa483546cc8166dd31698c7a0fdb1e678cf9f22e5a2c63f88abc"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/pelvis-organs-recovery.glb",
+      "bytes": 73348,
+      "sha256": "d2876cb12fa3f6c71170d18bd6813f96783c47fe12ddf68263bf12e0cae98629"
+    },
+    {
       "path": "models/bodyparts3d/full-body/pelvis-organs.glb",
       "bytes": 49544,
       "sha256": "90baaeb1c521a6b2546e99576bce4b231c6e068b4fa3d48dbd4cb7eb355f93c3"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/pelvis-skeleton.glb",
+      "bytes": 86960,
+      "sha256": "58e1008b8064e8a61ce659e0246615960826772abe7070f66496eadcd86f4746"
     },
     {
       "path": "models/bodyparts3d/full-body/pelvis-vessels-recovery.glb",
@@ -3953,14 +5233,44 @@
       "sha256": "d7e3b995e0c18e3ebe7e7b97a11fbcd1e228218e0010462614e4938acf7f87ee"
     },
     {
+      "path": "models/bodyparts3d/full-body/spine-muscles-dissection.glb",
+      "bytes": 804760,
+      "sha256": "05090ad649d93cea83e30d8156afdd18c0e21dd29c1dca7f96749d6ace611841"
+    },
+    {
       "path": "models/bodyparts3d/full-body/spine-muscles.glb",
       "bytes": 5127960,
       "sha256": "6cc6a2b15cda5a0defc35fdc2bebda607eac042571fec74bb1d2caba51748404"
     },
     {
+      "path": "models/bodyparts3d/full-body/spine-nerves.glb",
+      "bytes": 14420,
+      "sha256": "e88d03a126729c550c2aa9524eb3c466dc222cf874a327ec2d97432e97c8814d"
+    },
+    {
       "path": "models/bodyparts3d/full-body/spine-skeleton.glb",
       "bytes": 1286192,
       "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/thigh-connective-axial-detail.glb",
+      "bytes": 620568,
+      "sha256": "a4df87c97da679dd55fa2640f502c6d9a75ad83afc6c8beb9de334f0aa0b0b17"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/thigh-muscles.glb",
+      "bytes": 1802128,
+      "sha256": "b67c1e601bb0926ab1a488873ea35b213b4757894ed86918f1eb1b12dc69fbd1"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/thigh-skeleton.glb",
+      "bytes": 115852,
+      "sha256": "27bd799bd85387beea9fab40cbe2f83a5e780983170db4dfd1d2e0eda8fd2b59"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/thigh-vessels-recovery.glb",
+      "bytes": 1415760,
+      "sha256": "5037db3cd7d8d0bf2ac6ae2c4656b50e73c71f5f530595b80cd68153afb6c9f7"
     },
     {
       "path": "models/bodyparts3d/full-body/thorax-connective-recovery.glb",
@@ -4063,6 +5373,11 @@
       "sha256": "e96b496cb36205d2338204d6d0c6f94cb6e3722f7ff9a7a4e176d435d6de0b1c"
     },
     {
+      "path": "models/bodyparts3d/pelvic-veins/pelvic-veins.glb",
+      "bytes": 1183456,
+      "sha256": "d503c707236e8b344ee0c582e8ef935cdb11a5dd6bdbcec2b9f758df4b6f60fa"
+    },
+    {
       "path": "models/bodyparts3d/portal-veins/portal-veins.glb",
       "bytes": 76724,
       "sha256": "583069160dbd753bb7f64b62667d20134ccbf7554b9bd4cf57b0de0a5a50ee53"
@@ -4103,9 +5418,39 @@
       "sha256": "c9698e52e4678c06a5ed5df8212e3ecb1ce89d9a25d4e1859f0ec5be7d4864bc"
     },
     {
+      "path": "models/hra-pelvis/pelvis.glb",
+      "bytes": 3796080,
+      "sha256": "f18f1f0e3c6e8c0562b6b66864a8d786ffdb9e6a688da9288550fad6e491b866"
+    },
+    {
       "path": "models/hra-renal/kidneys.glb",
       "bytes": 3557552,
       "sha256": "bd5d2affb912f135c8c8da7e7892fbc906ebae017ed7042e900646c2b6332cfc"
+    },
+    {
+      "path": "models/um-knee/knee.glb",
+      "bytes": 5298360,
+      "sha256": "cf61571a8c80f463805b1362bb81b3d9eec3c62a1780c7288355e4a20fa8515b"
+    },
+    {
+      "path": "models/um-limb/foot.glb",
+      "bytes": 2676564,
+      "sha256": "dbd323ceaa7385977905b8aa9dfbfa2c03a9e7ca02c3084b5fd8d94e933a14d5"
+    },
+    {
+      "path": "models/um-limb/hip-thigh.glb",
+      "bytes": 11143104,
+      "sha256": "72470f8171fcfe7b7eb397ea86be47f2ec781a4c12b4c9755213d91e4f04f262"
+    },
+    {
+      "path": "models/um-limb/leg.glb",
+      "bytes": 9251564,
+      "sha256": "76698dfcc0ed1710b06227cfccc5eb574cd03534966a406c9252899a7337437c"
+    },
+    {
+      "path": "models/um-limb/thigh.glb",
+      "bytes": 19648284,
+      "sha256": "3edb8b2d00673b08631070a682d34d56aba8d55d5aa6398874580afa3036d3d2"
     },
     {
       "path": "models/bodyparts3d/full-body/catalog.json",
@@ -4154,8 +5499,8 @@
     },
     {
       "path": "models/bodyparts3d/credits.html",
-      "bytes": 5009,
-      "sha256": "a9f6c843ce88e37237d23b5c6fa90f8569eecfb9fc46e3c8ade56a3b4baaa8f1"
+      "bytes": 7432,
+      "sha256": "fdc8507897dbc230ee32130af5fb3ce254db74ea9e037d32a498c8b1ebe558a5"
     },
     {
       "path": "models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -4168,6 +5513,16 @@
       "sha256": "da24e3c60a56b46d3d3c23933beee0752a5adac3fe3bf3967c9eac1a73ccc7f0"
     },
     {
+      "path": "models/bodyparts3d-v3/back-layers/catalog.json",
+      "bytes": 64060,
+      "sha256": "23ba69e7268a03c8ab722313326bb7ffc3ac13aa49c0036c043993b38e0e9242"
+    },
+    {
+      "path": "models/bodyparts3d-v3/back-layers/NOTICE.md",
+      "bytes": 2087,
+      "sha256": "41cdebcbf14c33d84bb3338db05015b9cf1c4a815b6909cb2db698fd2c6e884f"
+    },
+    {
       "path": "models/hra-renal/catalog.json",
       "bytes": 135779,
       "sha256": "0bdc5a8ec478c58fbc977b2cf720543d9715d3654bf42b9b3bb5d2e1d49cecf5"
@@ -4176,6 +5531,16 @@
       "path": "models/hra-renal/NOTICE.md",
       "bytes": 2374,
       "sha256": "cb30b4dc59e4df19cf533753eab2299354d0f948e694d865042971a74cf2da78"
+    },
+    {
+      "path": "models/hra-pelvis/catalog.json",
+      "bytes": 65210,
+      "sha256": "a0e997a2eb4af64d25bf5f6f9901ea70616fb59443696f7630e0aea6bd53c619"
+    },
+    {
+      "path": "models/hra-pelvis/NOTICE.md",
+      "bytes": 3098,
+      "sha256": "898505e9c8837bd74e9f2535726676e13e9020e593ef15943b61a7845ff1c927"
     },
     {
       "path": "models/bodyparts3d-v3/abdominal-wall/source-readme.html",
@@ -4198,14 +5563,69 @@
       "sha256": "d805df5b5693a8ad5e9463cb04d31d002fb56c107c600718cf4886472de6dd87"
     },
     {
+      "path": "models/bodyparts3d-v3/back-layers/source-readme.html",
+      "bytes": 13104,
+      "sha256": "0c2913b3c51f2c6b248ac054acfd0b2a72940386199ca95fa9aa848bd69746e0"
+    },
+    {
+      "path": "models/bodyparts3d-v3/back-layers/license-deed.html",
+      "bytes": 35950,
+      "sha256": "4a02a925c115a4f8e0e5018fbed2fcb9388fde1b0c0ce4a61a506bb44e0307ec"
+    },
+    {
+      "path": "models/bodyparts3d-v3/back-layers/license-legalcode.html",
+      "bytes": 37208,
+      "sha256": "d44c2a342063c22bb793a7ab5f9bbf3374f03f0d433f7530333f409d1fea42f9"
+    },
+    {
+      "path": "models/bodyparts3d-v3/back-layers/source-audit.json",
+      "bytes": 165771,
+      "sha256": "9332271aa8fb112732af273747aba8ce3f1938f15399cbc8e35566333e0e4387"
+    },
+    {
       "path": "models/bodyparts3d-v3/abdominal-wall/specimen-data.ts.txt",
       "bytes": 6057,
       "sha256": "06795f84c4440639f4b24ea31e10b5e0a37f0e8f494a261f512d12c8ea1687b7"
     },
     {
+      "path": "models/bodyparts3d-v3/back-layers/specimen-data.ts.txt",
+      "bytes": 5889,
+      "sha256": "f11998c77ff5823e257f9c81b625532d952ded36fd9729e65fbace6d0090f62c"
+    },
+    {
       "path": "models/hra-renal/source-metadata.json",
       "bytes": 8855,
       "sha256": "b9f137b1176c31419c68b78ac87f0926f874dad22f56d4dde7df3e2f15bab501"
+    },
+    {
+      "path": "models/hra-pelvis/source-metadata.json",
+      "bytes": 8855,
+      "sha256": "b9f137b1176c31419c68b78ac87f0926f874dad22f56d4dde7df3e2f15bab501"
+    },
+    {
+      "path": "models/um-knee/catalog.json",
+      "bytes": 19729,
+      "sha256": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e"
+    },
+    {
+      "path": "models/um-limb/catalog.json",
+      "bytes": 81420,
+      "sha256": "fc27b778fe8a0e13f773f272bd0bd9bdf9d22117029bd5a5b5d11f0dc39c83fb"
+    },
+    {
+      "path": "LICENSES/um-lower-limb-v1-2/readme.txt",
+      "bytes": 7540,
+      "sha256": "deb6b13e74e499015a79a84c0bc5c4faa15cc8a763de43ebb8ec088824fc2967"
+    },
+    {
+      "path": "LICENSES/um-lower-limb-v1-2/dataverse.json",
+      "bytes": 12272,
+      "sha256": "a9d0957579f4c78975978e12f5627fc9e0be758da676dd11d16dd72a303e5375"
+    },
+    {
+      "path": "models/um-limb/MODEL_NOTICE.md",
+      "bytes": 1903,
+      "sha256": "283726a12527577a3f28343ace3ab37094c8726e31a6e7782ee208d14d79011e"
     }
   ]
 }

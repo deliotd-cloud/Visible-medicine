@@ -23,9 +23,9 @@
     },
     {
       "module": "head-neck",
-      "sourceCommit": "6fe99634045ab1e7df6828ff67fcd75d0ae8f724",
-      "manifestSha256": "ecd3ec988a73a93bd889eb73e979468a2e668ccda3e759ae35e7212442850eca",
-      "modelPaths": 73
+      "sourceCommit": "54805a89ea4078a65cce8a0860989fafbd72d7e4",
+      "manifestSha256": "11ed3a32c2ea348e3a86234d66b203a803078d3be944276a2d37de0f8c5b5e67",
+      "modelPaths": 93
     }
   ],
   "models": [
@@ -34,6 +34,13 @@
       "bytes": 4031580,
       "paths": [
         "/atlas-runtime/head-neck/models/bodyparts3d/full-body/abdomen-muscles.glb"
+      ]
+    },
+    {
+      "sha256": "05090ad649d93cea83e30d8156afdd18c0e21dd29c1dca7f96749d6ace611841",
+      "bytes": 804760,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-muscles-dissection.glb"
       ]
     },
     {
@@ -86,10 +93,24 @@
       ]
     },
     {
+      "sha256": "27bd799bd85387beea9fab40cbe2f83a5e780983170db4dfd1d2e0eda8fd2b59",
+      "bytes": 115852,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-skeleton.glb"
+      ]
+    },
+    {
       "sha256": "2874e8680da861973d2eac549f62cf4d0b5f4c26472a532b7661c74b2ce96900",
       "bytes": 289716,
       "paths": [
         "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-connective-recovery.glb"
+      ]
+    },
+    {
+      "sha256": "28a4c4665dacfa483546cc8166dd31698c7a0fdb1e678cf9f22e5a2c63f88abc",
+      "bytes": 16892,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-organs-gaps.glb"
       ]
     },
     {
@@ -124,7 +145,8 @@
       "sha256": "3edb8b2d00673b08631070a682d34d56aba8d55d5aa6398874580afa3036d3d2",
       "bytes": 19648284,
       "paths": [
-        "/atlas-runtime/lower-limb/models/um-limb/thigh.glb"
+        "/atlas-runtime/lower-limb/models/um-limb/thigh.glb",
+        "/atlas-runtime/head-neck/models/um-limb/thigh.glb"
       ]
     },
     {
@@ -191,6 +213,20 @@
       ]
     },
     {
+      "sha256": "5037db3cd7d8d0bf2ac6ae2c4656b50e73c71f5f530595b80cd68153afb6c9f7",
+      "bytes": 1415760,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-vessels-recovery.glb"
+      ]
+    },
+    {
+      "sha256": "53d2cdcb86c04d78671705b34f5b82c0130427735c8c7986553b3a042d8c7544",
+      "bytes": 39612,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/deferent-ducts/deferent-ducts.glb"
+      ]
+    },
+    {
       "sha256": "54d54094b4f071a137a7c2279bcfd031474c91cf3e8e2354a9d4bb1f013b6263",
       "bytes": 771836,
       "paths": [
@@ -202,6 +238,13 @@
       "bytes": 76724,
       "paths": [
         "/atlas-runtime/head-neck/models/bodyparts3d/portal-veins/portal-veins.glb"
+      ]
+    },
+    {
+      "sha256": "58e1008b8064e8a61ce659e0246615960826772abe7070f66496eadcd86f4746",
+      "bytes": 86960,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-skeleton.glb"
       ]
     },
     {
@@ -264,14 +307,16 @@
       "sha256": "72470f8171fcfe7b7eb397ea86be47f2ec781a4c12b4c9755213d91e4f04f262",
       "bytes": 11143104,
       "paths": [
-        "/atlas-runtime/lower-limb/models/um-limb/hip-thigh.glb"
+        "/atlas-runtime/lower-limb/models/um-limb/hip-thigh.glb",
+        "/atlas-runtime/head-neck/models/um-limb/hip-thigh.glb"
       ]
     },
     {
       "sha256": "76698dfcc0ed1710b06227cfccc5eb574cd03534966a406c9252899a7337437c",
       "bytes": 9251564,
       "paths": [
-        "/atlas-runtime/lower-limb/models/um-limb/leg.glb"
+        "/atlas-runtime/lower-limb/models/um-limb/leg.glb",
+        "/atlas-runtime/head-neck/models/um-limb/leg.glb"
       ]
     },
     {
@@ -373,10 +418,24 @@
       ]
     },
     {
+      "sha256": "a35dfffc15ed011570781c6c194ecbfeda08bc70926a39b8cbf0cffa8b88dca0",
+      "bytes": 283964,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/femoral-components/femoral-components.glb"
+      ]
+    },
+    {
       "sha256": "a4788313cc86677900a528208e8ac7045f07bee300ea17073386bf0c12c83de4",
       "bytes": 178112,
       "paths": [
         "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-connective-laryngeal-detail.glb"
+      ]
+    },
+    {
+      "sha256": "a4df87c97da679dd55fa2640f502c6d9a75ad83afc6c8beb9de334f0aa0b0b17",
+      "bytes": 620568,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-connective-axial-detail.glb"
       ]
     },
     {
@@ -405,6 +464,13 @@
       "bytes": 133088,
       "paths": [
         "/atlas-runtime/head-neck/models/bodyparts3d/longus-colli/longus-colli.glb"
+      ]
+    },
+    {
+      "sha256": "b67c1e601bb0926ab1a488873ea35b213b4757894ed86918f1eb1b12dc69fbd1",
+      "bytes": 1802128,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-muscles.glb"
       ]
     },
     {
@@ -488,7 +554,8 @@
       "sha256": "cf61571a8c80f463805b1362bb81b3d9eec3c62a1780c7288355e4a20fa8515b",
       "bytes": 5298360,
       "paths": [
-        "/atlas-runtime/lower-limb/models/um-knee/knee.glb"
+        "/atlas-runtime/lower-limb/models/um-knee/knee.glb",
+        "/atlas-runtime/head-neck/models/um-knee/knee.glb"
       ]
     },
     {
@@ -506,10 +573,24 @@
       ]
     },
     {
+      "sha256": "d2876cb12fa3f6c71170d18bd6813f96783c47fe12ddf68263bf12e0cae98629",
+      "bytes": 73348,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-organs-recovery.glb"
+      ]
+    },
+    {
       "sha256": "d4670d3c15580e2a1ef53debab32f08c8199fe6ddaf90af3f3aedb197d93e68d",
       "bytes": 754268,
       "paths": [
         "/atlas-runtime/head-neck/models/bodyparts3d/pulmonary/pulmonary-left.glb"
+      ]
+    },
+    {
+      "sha256": "d503c707236e8b344ee0c582e8ef935cdb11a5dd6bdbcec2b9f758df4b6f60fa",
+      "bytes": 1183456,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/pelvic-veins/pelvic-veins.glb"
       ]
     },
     {
@@ -530,7 +611,8 @@
       "sha256": "dbd323ceaa7385977905b8aa9dfbfa2c03a9e7ca02c3084b5fd8d94e933a14d5",
       "bytes": 2676564,
       "paths": [
-        "/atlas-runtime/lower-limb/models/um-limb/foot.glb"
+        "/atlas-runtime/lower-limb/models/um-limb/foot.glb",
+        "/atlas-runtime/head-neck/models/um-limb/foot.glb"
       ]
     },
     {
@@ -545,6 +627,13 @@
       "bytes": 477592,
       "paths": [
         "/atlas-runtime/head-neck/models/bodyparts3d/full-body/abdomen-vessels-recovery.glb"
+      ]
+    },
+    {
+      "sha256": "e88d03a126729c550c2aa9524eb3c466dc222cf874a327ec2d97432e97c8814d",
+      "bytes": 14420,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-nerves.glb"
       ]
     },
     {
@@ -565,7 +654,8 @@
       "sha256": "f18f1f0e3c6e8c0562b6b66864a8d786ffdb9e6a688da9288550fad6e491b866",
       "bytes": 3796080,
       "paths": [
-        "/atlas-runtime/female-pelvis/models/hra-pelvis/pelvis.glb"
+        "/atlas-runtime/female-pelvis/models/hra-pelvis/pelvis.glb",
+        "/atlas-runtime/head-neck/models/hra-pelvis/pelvis.glb"
       ]
     },
     {
@@ -583,10 +673,24 @@
       ]
     },
     {
+      "sha256": "f8fa3e2a955ae43d74b359dfc9ad14487381ed496fecfeca9d47aa6a0024a7c4",
+      "bytes": 7625848,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d-v3/back-layers/back-layers.glb"
+      ]
+    },
+    {
       "sha256": "fd1d8d04656a300fe0e8271a418ec0807b227baa96d6afa822d0df6ad0bf72ba",
       "bytes": 1707728,
       "paths": [
         "/atlas-runtime/head-neck/models/bodyparts3d/brainstem/brainstem.glb"
+      ]
+    },
+    {
+      "sha256": "ffaed94ac4c0f18df42d7cc21903e8e2b32d4c163929713913935a3eecf95ba2",
+      "bytes": 115108,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-muscles.glb"
       ]
     }
   ]
