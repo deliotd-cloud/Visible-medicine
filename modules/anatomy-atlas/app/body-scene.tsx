@@ -70,6 +70,8 @@ type Props = {
   view: DissectionView;
   zoom: number;
   zoomStep?: number;
+  /** Presentation clearance only; persisted camera scale uses the legacy fit. */
+  fitOccupancy?: [number, number];
   reset: number;
   focus: boolean;
   exam: boolean;
@@ -564,6 +566,7 @@ export function BodyScene(props: Props) {
             viewKey={props.view}
             zoom={props.zoom}
             zoomStep={props.zoomStep}
+            fitOccupancy={props.fitOccupancy}
             reset={props.reset}
             locked={props.plate && layout !== 'tray'}
             planar={layout === 'tray'}
