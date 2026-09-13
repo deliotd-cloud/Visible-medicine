@@ -27,6 +27,18 @@ test('actual stream limits reject truncation, oversize and invalid GLB headers',
     await assert.rejects(() => verifyAtlasModelDownload(new Response(invalid, { headers }), model), /GLB header/);
   }
 });
+test('proxy streaming metadata never substitutes for actual bytes and SHA-256', async () => {
+  for (const metadata of [
+    { 'content-type': 'model/gltf-binary' },
+    { 'content-type': 'application/octet-stream', etag: `W/"${model.sha256}"` },
+  ]) {
+    assert.deepEqual(await verifyAtlasModelDownload(new Response(bytes, { headers: metadata }), model), model);
+    await assert.rejects(() => verifyAtlasModelDownload(new Response(bytes.subarray(0, 13), { headers: metadata }), model), /incomplete/);
+    await assert.rejects(() => verifyAtlasModelDownload(new Response(Buffer.concat([bytes, Buffer.from([0])]), { headers: metadata }), model), /exceeds/);
+    const corrupted = Buffer.from(bytes); corrupted[corrupted.length - 1] ^= 1;
+    await assert.rejects(() => verifyAtlasModelDownload(new Response(corrupted, { headers: metadata }), model), /fingerprint/);
+  }
+});
 test('cancellation before and during a stalled stream terminates verification', async () => {
   const before = new AbortController(); before.abort();
   await assert.rejects(() => verifyAtlasModelDownload(new Response(bytes, { headers }), model, before.signal), /cancelled/);

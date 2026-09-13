@@ -8,6 +8,7 @@ import styles from './AtlasModelStaging.module.css';
 export function AtlasModelStaging({ models }: { models: AtlasStoredModel[] }) {
   const [files, setFiles] = useState<File[]>([]);
   const [states, setStates] = useState<Record<string, string>>({});
+  const [responseMetadata, setResponseMetadata] = useState<Record<string, string>>({});
   const [message, setMessage] = useState('Check storage, or select the registered GLB model files to stage.');
   const [busy, setBusy] = useState(false);
   const active = useRef<AbortController | null>(null);
@@ -20,6 +21,7 @@ export function AtlasModelStaging({ models }: { models: AtlasStoredModel[] }) {
     active.current = controller;
     setBusy(true);
     setStates({});
+    setResponseMetadata({});
     try {
       const selected: { file: File; model: AtlasStoredModel }[] = [];
       if (upload) {
@@ -47,6 +49,8 @@ export function AtlasModelStaging({ models }: { models: AtlasStoredModel[] }) {
           setStatus(model.sha256, 'Downloading for verification');
           try {
             const response = await fetch(url, { credentials: 'same-origin', signal: controller.signal, cache: 'no-store', redirect: 'error' });
+            const etag = response.headers.get('etag');
+            setResponseMetadata(current => ({ ...current, [model.sha256]: `HTTP ${response.status}; Content-Length ${response.headers.get('content-length') ?? 'omitted'}; ETag ${etag === null ? 'omitted' : etag.startsWith('W/') ? 'weak' : 'strong'}; ${response.headers.get('content-type')?.slice(0, 80) ?? 'no media type'}` }));
             await verifyAtlasModelDownload(response, model, controller.signal);
             setStatus(model.sha256, 'Full download verified');
           } catch (error) { setStatus(model.sha256, 'Download not verified'); throw error; }
@@ -92,6 +96,7 @@ export function AtlasModelStaging({ models }: { models: AtlasStoredModel[] }) {
     <details><summary>Registered model inventory</summary><ul className={styles.models}>{models.map(model => <li key={model.sha256}>
       <span>{model.paths.map(path => path.replace('/atlas-runtime/', '')).join(', ')}</span>
       <small>{(model.bytes / 1048576).toFixed(2)} MB · {states[model.sha256] ?? 'Not checked'}</small>
+      {responseMetadata[model.sha256] && <small>{responseMetadata[model.sha256]}</small>}
     </li>)}</ul></details>
   </section>;
 }
