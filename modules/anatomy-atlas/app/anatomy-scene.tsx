@@ -556,7 +556,7 @@ export function AnatomyScene(props: SceneProps) {
           )}
           <FittedCamera
             bounds={bounds}
-            fitOccupancy={[0.7, 0.86]}
+            fitOccupancy={[0.7, 0.9]}
             direction={
               orthographic
                 ? props.view === 'posterior'

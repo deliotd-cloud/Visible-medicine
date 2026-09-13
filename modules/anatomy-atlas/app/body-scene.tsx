@@ -566,7 +566,7 @@ export function BodyScene(props: Props) {
             viewKey={props.view}
             zoom={props.zoom}
             zoomStep={props.zoomStep}
-            fitOccupancy={props.fitOccupancy}
+            fitOccupancy={props.fitOccupancy ?? [0.7, 0.9]}
             reset={props.reset}
             locked={props.plate && layout !== 'tray'}
             planar={layout === 'tray'}

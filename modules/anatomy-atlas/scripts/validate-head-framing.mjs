@@ -20,7 +20,7 @@ let fits=0;
 const ratios=[];
 for(const ss of groups)for(const aspect of [.46,.65,1.58,2.8])for(const [view,d,u] of angles){
   const bounds=union(ss),direction=new Vector3(...d).normalize(),up=new Vector3(...u);
-  const old=fitBounds(bounds,direction,up,aspect,38),fit=fitBounds(bounds,direction,up,aspect,38,[.7,.86]);
+  const old=fitBounds(bounds,direction,up,aspect,38),fit=fitBounds(bounds,direction,up,aspect,38,[.7,.9]);
   assert(fit.distance<=old.distance+1e-10);
   assert.deepEqual(fit.center,old.center);
   if(ss===all&&view==='anterior')ratios.push({aspect,distanceRatio:fit.distance/old.distance});
@@ -31,7 +31,7 @@ for(const ss of groups)for(const aspect of [.46,.65,1.58,2.8])for(const [view,d,
     // one chosen landmark or a cropped regional subset.
     for(const s of ss)for(const x of [s.bounds.min[0],s.bounds.max[0]])for(const y of [s.bounds.min[1],s.bounds.max[1]])for(const z of [s.bounds.min[2],s.bounds.max[2]]){
       const p=new Vector3(x,y,z).project(camera);
-      assert(Math.abs(p.x)<=.700001&&Math.abs(p.y)<=.860001&&p.z>-1&&p.z<1,`${view}/${aspect}/${s.id}`);
+      assert(Math.abs(p.x)<=.700001&&Math.abs(p.y)<=.900001&&p.z>-1&&p.z<1,`${view}/${aspect}/${s.id}`);
     }
     fits++;
   }
@@ -50,8 +50,8 @@ let sceneCases=0;
 for(const fitOccupancy of [undefined,[.7,.86]])for(const exam of [false,true])for(const layout of ['spatial','extract','tray']){
   const scene=mod.exports.BodyScene({...props,fitOccupancy,exam,layout});
   const camera=nodes(scene.props.children(()=>{})).find(n=>n.type===mod.exports.FittedCamera);
-  assert(camera);assert.equal(camera.props.fitOccupancy,fitOccupancy);sceneCases++;
+  assert(camera);assert.deepEqual(Array.from(camera.props.fitOccupancy),fitOccupancy??[.7,.9]);sceneCases++;
 }
 const explorer=await readFile('app/body-explorer.tsx','utf8');
-assert(explorer.includes("fitOccupancy={['head-neck', 'thorax'].includes(initialRegion) ? [0.7, 0.86] : undefined}"),'Only head/neck and thorax opt in; full source fitting is retained');
+assert(!explorer.includes('fitOccupancy='),'All root regions use the same label-safe scene default; full source fitting is retained');
 console.log(JSON.stringify({sourceSelections:all.length,sourceGroups:groups.length,cameraFits:fits,actualSceneCases:sceneCases,anteriorDistanceRatios:ratios,sourceUnchanged:true,croppedSources:0,browserOrClinicalAcceptance:false}));

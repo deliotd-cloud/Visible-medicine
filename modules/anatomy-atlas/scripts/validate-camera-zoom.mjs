@@ -113,7 +113,7 @@ for(const orthographic of [false,true]) {
 // Exercise the actual camera effect, not just the new fit helper's arithmetic.
 for (const orthographic of [false, true]) {
   const h = harness(orthographic), kind = orthographic ? 'parallel' : 'perspective';
-  const initial = h.render({fitOccupancy:[.7,.86]}).scale;
+  const initial = h.render({fitOccupancy:[.7,.9]}).scale;
   same(initial < 1 && initial > .7, true, kind+' tighter initial presentation');
   close(h.render({zoomStep:1}).scale, initial*.85, kind+' presentation button step');
   h.gesture(.6); h.orbit([.5,.3,.8]);
@@ -172,7 +172,7 @@ for (const aspect of [390/600, 1, 724/190, 724/365])
   for (const direction of [[2.5,1.2,-12],[-1.5,1,12],[-14,1.5,-1.3],[.4,.8,.2]]) {
     const bounds = new three.Box3(new three.Vector3(-5,-3,-2),new three.Vector3(2,3,2));
     const orbit = new three.Vector3(...direction).normalize();
-    const fit = fitBounds(bounds,orbit,new three.Vector3(0,1,0),aspect,39,[.7,.86]);
+    const fit = fitBounds(bounds,orbit,new three.Vector3(0,1,0),aspect,39,[.7,.9]);
     for (const camera of [
       new three.PerspectiveCamera(39,aspect,.01,150),
       new three.OrthographicCamera(-fit.halfHeight*aspect,fit.halfHeight*aspect,fit.halfHeight,-fit.halfHeight,.01,150),
@@ -183,11 +183,11 @@ for (const aspect of [390/600, 1, 724/190, 724/365])
         for(const y of [bounds.min.y,bounds.max.y])
           for(const z of [bounds.min.z,bounds.max.z]) {
             const projected = new three.Vector3(x,y,z).project(camera);
-            same(Math.abs(projected.x)<=.7+1e-9 && Math.abs(projected.y)<=.86+1e-9 && Math.abs(projected.z)<1,true,'presentation fit contains all corners');
+            same(Math.abs(projected.x)<=.7+1e-9 && Math.abs(projected.y)<=.9+1e-9 && Math.abs(projected.z)<1,true,'presentation fit contains all corners');
           }
     }
   }
-same((await readFile('app/anatomy-scene.tsx','utf8')).includes('fitOccupancy={[0.7, 0.86]}'),true,'shoulder scene opts into label-safe vertical framing');
+same((await readFile('app/anatomy-scene.tsx','utf8')).includes('fitOccupancy={[0.7, 0.9]}'),true,'shoulder scene opts into label-safe vertical framing');
 const {steppedCameraScale:step}=harness().api;
 for(const scale of [.001,.02,.05,.2,1,20,50,999]) {
   same(step(scale,1)<=scale,true,'plus never reverses direction');

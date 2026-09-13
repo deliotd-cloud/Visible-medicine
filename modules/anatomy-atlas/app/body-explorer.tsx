@@ -1713,7 +1713,6 @@ export default function BodyExplorer({
                   exam={exam}
                   inspection={exam ? initialInspection : inspection}
                   cameraBounds={jointCloseUp}
-                  fitOccupancy={['head-neck', 'thorax'].includes(initialRegion) ? [0.7, 0.86] : undefined}
                   presetBounds={regionalCloseUp}
                   presetKey={['hand', 'foot'].includes(initialRegion)
                     ? `${initialRegion}/${side}/${regionalCloseUp ? 'regional' : 'sources'}`
