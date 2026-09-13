@@ -1,5 +1,18 @@
 # Third-party notices
 
+## Elbow arteries — 12 September 2026
+
+BodyParts3D, © The Database Center for Life Science licensed under CC Attribution
+4.0 International. Fourteen original v4 IS-A OBJ files and their metadata are
+retained, with source hashes in `docs/elbow-artery-source-audit.json` and unchanged
+originals in `content/sources/elbow-arteries`. The GLB uses exact-coordinate
+indexing, the established scene transform and Float32 storage; no source face
+was removed, smoothed, mirrored or connected to another mesh. The existing
+official licence text and credit apply. Short original teaching and relationship
+labels cite UAMS as a factual reference; no diagram, table or source article is
+redistributed. No dependency, font, texture, paid API or mandatory service added.
+See `docs/ELBOW_ARTERIES.md` for scope and pending clinical review.
+
 ## Pelvic-vein teaching — 12 September 2026
 
 Original concise factual notes and reading links extend ten existing root-body pelvic-vein selections. No source article, image, table, classification score, question bank or new anatomical asset is redistributed. References retain their own rights; free access is not a commercial image licence. Authored content remains MIT; existing BodyParts3D CC BY 4.0 attribution/change notices remain. No dependency, font, texture, paid API or mandatory service was added. See `docs/PELVIC_VEIN_TEACHING.md`.
@@ -122,7 +135,7 @@ The [superficial cubital/forearm veins](../docs/CUBITAL_VEINS.md) retain four or
 
 The [inferior collicular brachia](../docs/COLLICULAR_BRACHIA.md) retain four original BodyParts3D v4 OBJ sources and add only the two laterality-consistent inferior surfaces. Superior candidates remain non-runtime evidence with explicit source-label holds. BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International. Original/derived anatomy remains **CC BY 4.0**; preserve attribution and changes: established coordinate transform, exact-coordinate welding for normals and Float32 GLB storage, with all 568 admitted source faces retained. Original code/brief factual teaching remain MIT. UTHealth is a reading reference only; no university diagram, text passage, scan or file is redistributed. No new dependency, font, texture, paid service or fee. Licensing and source checks are not clinical approval.
 
-The [reference coverage ledger](../docs/REFERENCE_COVERAGE.md) retains 2,234 ID/display-group pairs extracted from ashemag/human-atlas at pinned commit `1c38bf35c254a891200d3cedecfd57abebe83d8d`, with its [MIT notice](ASHEMAG_HUMAN_ATLAS_MIT.txt). Anatomy metadata keeps its underlying BodyParts3D terms. Eight unchanged official BodyParts3D v4 IS-A/PART-OF OBJ originals are retained under `content/prototypes/reference-cross-tree` as non-runtime audit evidence under **CC BY 4.0**: BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International. Metadata is extracted/grouped for comparison; source geometry is not modified or newly admitted. No competitor geometry, code, teaching text, diagram, font, texture, dependency or paid service is imported. The original label-work optimization and audit code use the project's MIT grant. Existing separately licensed specimens are unchanged; licensing is not clinical approval.
+The [reference coverage ledger](../docs/REFERENCE_COVERAGE.md) retains 2,234 ID/display-group pairs extracted from ashemag/human-atlas at pinned commit `1c38bf35c254a891200d3cedecfd57abebe83d8d`, with its [MIT notice](ASHEMAG_HUMAN_ATLAS_MIT.txt). Anatomy metadata keeps its underlying BodyParts3D terms. Fourteen unchanged official BodyParts3D v4 IS-A/PART-OF OBJ originals are retained under `content/prototypes/reference-cross-tree` as non-runtime audit evidence under **CC BY 4.0**: BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International. Metadata is extracted/grouped for comparison; source geometry is not modified or newly admitted. No competitor geometry, code, teaching text, diagram, font, texture, dependency or paid service is imported. The original label-work optimization and audit code use the project's MIT grant. Existing separately licensed specimens are unchanged; licensing is not clinical approval.
 
 The [decoded-volume viewer](../docs/VOLUME_VIEWER.md) adds original MIT affine reslicing, grayscale windowing, Canvas rendering and adapter lifecycle code using the existing React stack. DICOM PS3.3 is consulted as a specification; no DICOM library, dataset, image, model, font, texture or paid service is imported. This is not a DICOM conformance claim. Future image resources need separate rights, privacy, entitlement and clinical review.
 
@@ -475,6 +488,14 @@ The installed dependency graph also contains commercially compatible licences th
 These licences permit commercial use; they are not non-commercial licences and do not impose a mandatory fee. This file is not legal advice. A release owner should review the generated graph and preserve licence texts/notices when distributing build tooling or binaries rather than only deploying the compiled web application.
 
 ## Reproducible full audit
+
+Hip/thigh muscle imaging teaching (13 September 2026) adds brief original factual
+drafts and ten external reading links, not articles, chapters, tables, images,
+scans or question banks. ESSR, TTUHSC, RSNA/ACR and the cited research publishers
+retain their rights; NC/ND reference material is not admitted as a commercial
+asset. No model, font, texture, dependency or paid service is added. Existing
+BodyParts3D attribution and authored-content terms are unchanged. See
+`docs/THIGH_MUSCLE_IMAGING.md` for source bindings and review limitations.
 
 The abdominal-organ imaging extension supplies brief original teaching and twelve external reading links, not imported article text, figures, scans, tables or datasets. TTUHSC El Paso, ACR/RSNA, NIDDK, Springer/NCBI, Singapore Medical Journal and Journal of Ultrasonography retain their respective rights. No new asset, dependency, font, texture or paid service is introduced. BodyParts3D attribution is unchanged; the independent HRA kidney specimen remains separate. See `docs/ABDOMINAL_ORGAN_IMAGING.md` for source scope and clinical limitations.
 

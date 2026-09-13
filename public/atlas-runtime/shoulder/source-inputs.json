@@ -25,11 +25,11 @@
   },
   {
     "path": "app/atlas-workspace.tsx",
-    "sha256": "6d58aa6add31bb481855e2d7ef24bf1faf42147271037c522c08a9b57d1e3f77"
+    "sha256": "27219b2275c7077bdb1b28dd531e58680e7921c74dbc1c52d1a9dbeb2ddd2d1d"
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "353cfb8a84152b3167f5228c0e6c5294bd6304de93bba0880f7977657e60643c"
+    "sha256": "a57c5fd8b5859bb0e8cb716ef22e203303f0fb35014c1fa882c9485cd248d0f8"
   },
   {
     "path": "app/body-explorer.css",
@@ -69,7 +69,7 @@
   },
   {
     "path": "app/inspection-controls.tsx",
-    "sha256": "9f55aa6dae377c580a619bbbb6589e0e611070dffd05c06f21a055ac4656343f"
+    "sha256": "a4f51d9e92359c296e4fdbe3359f91cf59d70d06ac653d09029d217fa3c8c7d8"
   },
   {
     "path": "app/inspection.css",
@@ -105,7 +105,7 @@
   },
   {
     "path": "app/shoulder-explorer.tsx",
-    "sha256": "f3407fcd49efd2d9f5a47b215fa249b1940c0844e8288bd3468f424a28dbc58b"
+    "sha256": "7a7e59352fd2e4d7debc03824af67a2f37322b64d1d3989cfe231a28b7a42bed"
   },
   {
     "path": "app/shoulder-workspace.css",
@@ -153,7 +153,7 @@
   },
   {
     "path": "components/ui/slider.tsx",
-    "sha256": "af657e73d672f4dd205f19abf151d21a172cf36abfdca49fd7014a20e12367a9"
+    "sha256": "1bf16ef0b71435f474d7ce741da41bf99b9d9141d4ba01df3d6b12e04a3b8462"
   },
   {
     "path": "components/ui/switch.tsx",
@@ -190,6 +190,10 @@
   {
     "path": "content/deferent-duct-study.ts",
     "sha256": "175762062c00f6d92dbf5505cd50b4ab1b483f12e7d69161c0b53735dad66120"
+  },
+  {
+    "path": "content/elbow-arterial.ts",
+    "sha256": "9550d3887134e04f289cb3d7e39ab710340e0fcfec59c64419441fa4f4779c6e"
   },
   {
     "path": "content/elbow-studies.ts",
@@ -265,7 +269,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "a10f44f714f7bb7a9fcd4c9cf5bf6c188e0ff357458996c40c3f807d1a5717ec"
+    "sha256": "99917e0a258567e21f975c69a841a5007b8314ab88f328f082cf0d6896b2b386"
   },
   {
     "path": "content/shoulder-xray-bindings.json",
@@ -290,6 +294,14 @@
   {
     "path": "content/tentorium-studies.ts",
     "sha256": "7dc07b8f6ff0b466a9f184923860c80a249dde8f39edd0f1b27b86f01e5494d0"
+  },
+  {
+    "path": "content/thigh-muscle-imaging-pins.json",
+    "sha256": "b062dc8f8d42992617d43dabe2dbaaa48c3bcf3bfc59410729e5cd5e66f5dc61"
+  },
+  {
+    "path": "content/thigh-muscle-imaging.ts",
+    "sha256": "d571c8a4f0f76358983b4b15257219ef15c8c609577fc2e7ebb8ea2ada788e61"
   },
   {
     "path": "content/thoracic-bone-imaging-pins.json",
@@ -421,7 +433,7 @@
   },
   {
     "path": "lib/body-display-catalog.ts",
-    "sha256": "fab4f7610c55c898c4fab8af84f7f2db62d8bd5c13eec239de1536114f713481"
+    "sha256": "69b28c56f29a7d7fac2a8de8c2910ba6b922f4992896932b847e70dfed2907aa"
   },
   {
     "path": "lib/body-source-additions.ts",
@@ -518,6 +530,10 @@
   {
     "path": "lib/dissection-workbench.ts",
     "sha256": "7b12978528d0c08743aa4d4fbe8e08df7f787596576978c39ffdc003227215be"
+  },
+  {
+    "path": "lib/elbow-arteries.ts",
+    "sha256": "03fd24faf169b0cbccf32802d082351b9beac605d7692d7836ea84f1d4cac96e"
   },
   {
     "path": "lib/eye-layers.ts",
@@ -904,6 +920,10 @@
     "sha256": "f01c5971d13fa780e453e8d66b3a07c111dddd808e3a8cc2a0fdb8b8d1919ddd"
   },
   {
+    "path": "lib/thigh-muscle-imaging.ts",
+    "sha256": "76400dbd2175a46882c9e856e4c8ce98a76fbee2bf3141aa03e0b3f416f46c70"
+  },
+  {
     "path": "lib/thoracic-anatomy.ts",
     "sha256": "5da4967636bc9f4979a20b8db0ce3b4e5921d318a0f1052500a3667ba01cffe9"
   },
@@ -1014,6 +1034,10 @@
   {
     "path": "public/models/bodyparts3d/deferent-ducts/catalog.json",
     "sha256": "7af85fbe970f87143697c069bbdfefaa3759374a031e0e6d36d65fcfe6761af1"
+  },
+  {
+    "path": "public/models/bodyparts3d/elbow-arteries/catalog.json",
+    "sha256": "2d36e29240315db1d4c1b783013dc73c9f4c329d0811c1540f2ad4c911af81d0"
   },
   {
     "path": "public/models/bodyparts3d/eye-layers/catalog.json",

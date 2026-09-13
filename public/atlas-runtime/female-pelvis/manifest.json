@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "sourceCommit": "e2b3ff0e5c9d310455c7caf7ba5726a5af5b2f3f",
+  "sourceCommit": "cc34a98783d8f01d44951b5566f0adaf7f9db75e",
   "region": "independent-female-pelvis",
   "structures": 41,
   "studies": 8,
@@ -13,7 +13,7 @@
     {
       "path": "index.html",
       "bytes": 486,
-      "sha256": "968d488de83b7de3eef2e5e8278d7d265e961525676383a693c87c2f335b2bff"
+      "sha256": "8bbbd96d3aa2fb21aca0bae40b24f5b362298ee22846755771ad5566f167f83d"
     },
     {
       "path": "BUNDLED_NOTICES.txt",
@@ -28,17 +28,17 @@
     {
       "path": "source-inputs.json",
       "bytes": 11447,
-      "sha256": "681b595805bfb3df26f2b3793f8e5dccf22bc5e9b9ebac7442066c777ed34d27"
-    },
-    {
-      "path": "assets/index-2R3k0iMa.js",
-      "bytes": 2109616,
-      "sha256": "5aee7cb8aeaf69f100d60f12cd823ed031f505b4d5051bdcbf256651392355c9"
+      "sha256": "e22426e7e8381f188895549c2e8fb79ed8dfcebb3733e41503459a354263cbe5"
     },
     {
       "path": "assets/index-BNZmQGZv.css",
       "bytes": 231940,
       "sha256": "576f971e474a3b54aec2b72bbcc22021aa926b42475f19e8edab298437a38b12"
+    },
+    {
+      "path": "assets/index-Q6KFxvD3.js",
+      "bytes": 2109914,
+      "sha256": "cb4aee0af3a7ff842288ed95d8b93a8cd9aefeb9f212592f1b5db706875ccd9a"
     },
     {
       "path": "models/hra-pelvis/pelvis.glb",
@@ -62,8 +62,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "bytes": 130225,
-      "sha256": "61b634258869b109984a8f2be5d36a9357d259e9a2d3e63e678f07b202fa7686"
+      "bytes": 131601,
+      "sha256": "bc7910654629dc659208e7e442de86b64151abb3aa1735e4fa232944c156a328"
     },
     {
       "path": "LICENSES/CC-BY-4.0.txt",
