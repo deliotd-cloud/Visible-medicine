@@ -77,6 +77,23 @@ Latest specialist-chat review reports both anterior cerebellar edges accepted an
 
 ## Ordered delivery roadmap
 
+13 September — the full abdomen pilot is now privately live in **version 58**,
+after a staging-only version 57 kept all 59 existing models available while the
+21 added licensed bundles were uploaded. Actual administrator browser checks
+passed 80/80 full staged downloads, 59/59 original active URLs before activation,
+and **80/80 active URLs afterwards**. The local installed 3D parser also passed
+all 80 files. Live wall/renal dissection, Undo, source-bound wall sharing and renal
+identification practice were sampled. Exact sources are `fef7471…` (staging)
+and `95d39ec…` (full release); both histories are preserved. The
+[abdomen evidence](abdomen-atlas-pilot.md) separates these results from pending
+live phone-width, browser-blocked candidate-denial, other-account, failure,
+rollback and clinical gates. The main task's abdomen-live checkpoint records
+GitHub/D recovery. Next: better initial overview framing, then the remaining
+regional/whole-body anatomy, teaching and cleared Didanix Education roadmap.
+No repeated splash-screen status updates; continue substantive Atlas work.
+
+The following dated source milestone is retained as historical rollout context:
+
 13 September — [full abdomen source integration](abdomen-atlas-pilot.md) now
 includes the 106/16 regional/nested scope, all relationship contexts, and the
 separate 29-surface abdominal-wall and 82-surface HRA renal specimens. Exact

@@ -1,9 +1,10 @@
-# Abdominal anatomy — source integration, publication pending
+# Abdominal anatomy — private live pilot
 
 The website now contains `/atlas/abdomen-3d`, using the shared regional runtime
-exported from Atlas `031fa555b6f3e48825353de115f6aa5d8e275d6c`. This is source and
-local-browser progress, not a claim that the new route is hosted. Private website
-version 56 remains the working 59-model release until the rollout below completes.
+exported from Atlas `031fa555b6f3e48825353de115f6aa5d8e275d6c`. The complete module
+is privately live in website version 58, deployed from
+`95d39ec18136ea5ad98a9a50bd8de8767fbcce27` on 13 September 2026. Its unchanged
+administrator-review restriction is not a clinical or learner-release approval.
 
 ## Scope and boundaries
 
@@ -27,7 +28,7 @@ administrator-review policy, not clinical or learner-release approval.
 
 ## Verification
 
-Both source builds and TypeScript pass. The website's 87 tests pass, including
+Both source builds and TypeScript pass. The website's 90 tests pass, including
 all generated files/notices, original-model integrity and authorization/storage
 checks. Atlas tests cover 653 regional root/nested links, 543 independent specimen
 links, 5,973 specimen rejections, 18 abdominal context combinations and 16 actual
@@ -59,16 +60,41 @@ not established; investigate/reproduce before broad device acceptance. Other
 sampled tabs had no error-level logs. No claim of complete browser/device acceptance.
 Initial overview framing remains visibly small and needs the planned polish.
 
-## Required staged publication
+## Completed staged publication and live evidence
 
-Do not deploy this candidate directly while the live staging registry only knows
-the previous 59 models. First publish a source-bound staging-only registry update
-that preserves version 56's active runtime/delivery inventory and working routes.
-Upload/check the 21 additional licensed models through existing administrator
-storage; verify their full bytes, hashes, ranges and actual loader behaviour.
-Then publish this complete candidate with its matching delivery policy and verify
-all 80 original model URLs and the new region/specimen journeys on the live host.
-Do not roll back to the old 44-static-model bootstrap or weaken authentication.
+1. Version 57 preserved the working 59-model runtime and registered the 80-model
+   candidate independently. The real administrator browser staged all 21 added
+   GLBs, verified complete downloads for all 80, and then passed all 59 active
+   URL checks. Source: `fef7471b07892645b1899fcd51e9e9d8a61f7179`.
+2. The installed Three.js 0.185.1 GLTFLoader parsed all 80 original files locally:
+   163,132,412 bytes, 908 meshes and 8,372,713 triangles. All SHA/length/header,
+   finite position and triangle-index checks passed; no model was rewritten.
+   This is parser evidence, not live-device or anatomical validation.
+3. Version 58 activated the complete abdomen inventory after those checks. The
+   real live administrator batch then passed **80/80** original URLs: complete
+   byte/hash, HEAD, range and conditional responses through protected storage.
+4. Actual live desktop browser samples: regional dissection/Undo restored
+   106 → 104 → 106; wall Expose transversus displayed 25/29 and its source-bound
+   link restored the selected right transversus/study in another document;
+   Back returned to abdomen. The kidney internal study restored 34 → 33 → 34
+   after selected-pelvis removal/Undo. Hila, pelves & vessels supported name-hidden
+   identification practice and returned to the same 7/82 study. Both live
+   interaction tabs had no recorded error-level console logs.
+
+Limits: direct browser inspection of a pending model during version 57 was
+blocked by the browser client before an application response, so it is **not**
+evidence of a live application denial. All 21 pending denials pass local real
+Workers/R2 tests. The current live mobile override attempt remained at 1280 px;
+it is not new phone-width acceptance. Retain the preceding genuine local 390 px
+samples and unresolved console-error/device gates above. Hepatic/pancreatic
+journeys were locally sampled, not repeated in this live sample. Overview framing
+is still small. Other-account, failure, rollback and clinical acceptance remain.
+
+Version 57's 30,982,535-byte and version 58's 31,055,595-byte archives retain
+exact runtime companions/notices and omit only build-output duplicate GLBs.
+Original source files and immutable storage objects remain. The main task's
+`work/ABDOMEN-LIVE-CHECKPOINT-20260913.md` records exact deployment, GitHub and
+D-recovery evidence. Do not return to the 44-static-model bootstrap.
 
 Patient scans/masks, clinical decisions, source holds, other module source assets,
 lecture/case rights, paid services, audience and splash settings are unchanged.
