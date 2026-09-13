@@ -438,6 +438,7 @@ export function FemoralComponentView({
           <Slider
             id="femoral-component-separation"
             aria-label="Artery component separation"
+            aria-valuetext={`${explode}%`}
             min={0}
             max={100}
             step={1}

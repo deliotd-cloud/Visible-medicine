@@ -1770,6 +1770,7 @@ export default function BodyExplorer({
                   />
                   <Slider
                     value={[explode]}
+                    aria-valuetext={`${explode}%`}
                     min={0}
                     max={100}
                     step={1}

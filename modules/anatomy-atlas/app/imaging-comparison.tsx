@@ -120,6 +120,7 @@ export function ComparisonPanel({
             </Button>
             <Slider
               aria-label="Image slice"
+              aria-valuetext={`${frame.slice + 1} of ${frame.sliceCount}`}
               min={0}
               max={Math.max(1, frame.sliceCount - 1)}
               step={1}

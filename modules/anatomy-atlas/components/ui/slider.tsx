@@ -2,19 +2,25 @@ import { Slider as SliderPrimitive } from '@base-ui/react/slider';
 
 import { cn } from '@/lib/utils';
 
+type SliderProps = SliderPrimitive.Root.Props &
+  Pick<SliderPrimitive.Thumb.Props, 'getAriaLabel' | 'getAriaValueText'>;
+
 function Slider({
   className,
   defaultValue,
   value,
   min = 0,
   max = 100,
+  'aria-label': ariaLabel,
+  'aria-labelledby': ariaLabelledBy,
+  'aria-describedby': ariaDescribedBy,
+  'aria-valuetext': ariaValueText,
+  getAriaLabel,
+  getAriaValueText,
   ...props
-}: SliderPrimitive.Root.Props) {
-  const _values = Array.isArray(value)
-    ? value
-    : Array.isArray(defaultValue)
-      ? defaultValue
-      : [min, max];
+}: SliderProps) {
+  const values = value ?? defaultValue ?? min;
+  const thumbCount = typeof values === 'number' ? 1 : values.length;
 
   return (
     <SliderPrimitive.Root
@@ -24,7 +30,12 @@ function Slider({
       value={value}
       min={min}
       max={max}
-      thumbAlignment="edge"
+      // Percentage positioning also works when mounted inside closed details.
+      // Edge alignment can retain an unmeasured, hidden thumb after reopening.
+      thumbAlignment="center"
+      aria-label={ariaLabel}
+      aria-labelledby={ariaLabelledBy}
+      aria-describedby={ariaDescribedBy}
       {...props}
     >
       <SliderPrimitive.Control className="data-vertical:min-h-40 relative flex w-full touch-none items-center select-none data-disabled:opacity-50 data-vertical:h-full data-vertical:w-auto data-vertical:flex-col">
@@ -37,10 +48,17 @@ function Slider({
             className="bg-primary select-none data-horizontal:h-full data-vertical:w-full"
           />
         </SliderPrimitive.Track>
-        {Array.from({ length: _values.length }, (_, index) => (
+        {Array.from({ length: thumbCount }, (_, index) => (
           <SliderPrimitive.Thumb
             data-slot="slider-thumb"
             key={index}
+            index={index}
+            aria-label={ariaLabel}
+            aria-labelledby={ariaLabelledBy}
+            aria-describedby={ariaDescribedBy}
+            aria-valuetext={ariaValueText}
+            getAriaLabel={getAriaLabel}
+            getAriaValueText={getAriaValueText}
             className="border-ring ring-ring/50 relative size-3 rounded-full border bg-white transition-[color,box-shadow] after:absolute after:-inset-2 hover:ring-3 focus-visible:ring-3 focus-visible:outline-hidden active:ring-3 block shrink-0 select-none disabled:pointer-events-none disabled:opacity-50"
           />
         ))}

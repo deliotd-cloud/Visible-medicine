@@ -1012,6 +1012,7 @@ export default function ShoulderExplorer({
                   />
                   <Slider
                     min={0}
+                    aria-valuetext={`${Math.round(explode)}%`}
                     max={100}
                     step={1}
                     value={[explode]}

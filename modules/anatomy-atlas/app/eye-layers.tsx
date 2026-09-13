@@ -413,6 +413,7 @@ export function EyeLayerView({
           <Slider
             id="eye-layer-explode"
             aria-label="Eye component separation"
+            aria-valuetext={`${explode}%`}
             min={0}
             max={100}
             step={1}

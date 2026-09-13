@@ -161,6 +161,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
         <label className="um-knee-label">Separation <output>{explode}%</output></label>
         <ExplodeStyleSelect value={layout} disabled={false} onChange={(next) => { setLayout(next); setFocus(false); }} />
         <Slider value={[explode]} min={0} max={100} step={5} disabled={!ready || !visible.length || (layout === 'extract' && !selected)}
+          aria-valuetext={`${explode}%`}
           onValueChange={(v) => { const n = Array.isArray(v) ? v[0] : v; if (Number.isFinite(n)) { setExplode(n); setFocus(false); } }} aria-label={`${specimen.label} tissue separation`} />
         {explode > 0 && <Button size="sm" variant="ghost" onClick={() => setExplode(0)}>Return to source positions</Button>}
       </div>

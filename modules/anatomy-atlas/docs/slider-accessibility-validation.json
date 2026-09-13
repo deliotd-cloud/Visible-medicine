@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "checks": 82,
+  "consumers": [
+    {
+      "file": "body-explorer.tsx",
+      "line": 1771
+    },
+    {
+      "file": "cutaway-controls.tsx",
+      "line": 63
+    },
+    {
+      "file": "eye-layers.tsx",
+      "line": 413
+    },
+    {
+      "file": "femoral-components.tsx",
+      "line": 438
+    },
+    {
+      "file": "imaging-comparison.tsx",
+      "line": 121
+    },
+    {
+      "file": "inspection-controls.tsx",
+      "line": 79
+    },
+    {
+      "file": "inspection-controls.tsx",
+      "line": 125
+    },
+    {
+      "file": "shoulder-explorer.tsx",
+      "line": 1013
+    },
+    {
+      "file": "um-knee-study.tsx",
+      "line": 163
+    },
+    {
+      "file": "ventricles.tsx",
+      "line": 1393
+    }
+  ],
+  "actualBaseUiInputs": true,
+  "browserOrScreenReaderAcceptance": false,
+  "clinicalApproval": false
+}

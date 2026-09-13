@@ -83,6 +83,7 @@ export function InspectionControls({
                   max={100}
                   step={1}
                   aria-label={`${value.plane} cutaway position`}
+                  aria-valuetext={`${value.position}% from ${axis.low.toLowerCase()} to ${axis.high.toLowerCase()}`}
                   onValueChange={(v) =>
                     onChange({
                       ...value,
@@ -128,6 +129,7 @@ export function InspectionControls({
                   value={[value.opacity[system.id] ?? 100]}
                   disabled={!system.enabled || disabled}
                   aria-label={`${system.name} opacity`}
+                  aria-valuetext={`${value.opacity[system.id] ?? 100}%`}
                   onValueChange={(v) =>
                     onChange({
                       ...value,

@@ -1393,6 +1393,7 @@ export function VentricularView({
           <Slider
             id="ventricular-explode"
             aria-label={`${title} separation`}
+            aria-valuetext={`${explode}%`}
             min={0}
             max={100}
             step={1}
