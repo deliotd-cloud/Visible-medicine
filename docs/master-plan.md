@@ -77,6 +77,21 @@ Latest specialist-chat review reports both anterior cerebellar edges accepted an
 
 ## Ordered delivery roadmap
 
+13 September — shoulder/arm muscle imaging: 96 previously pending CT/MRI/US
+sections now have source-bound draft teaching across 32 muscle selections and
+20 anatomical groups. Cuff, deltoid, biceps/triceps and scapular/arm muscles have
+specific landmarks, coverage limits and imaging pitfalls. Existing right-shoulder
+teaching, all other topics, geometry and dissection recipes are preserved. No new
+controls, source imagery, scans, dependencies or paid resources are introduced.
+Dedicated checks validate all 96 actual note renders and reject 1,440 altered
+source/topic combinations. Clinical sign-off and future Education case/lecture
+mapping remain separate. The source build also refreshes stale review fingerprints
+and the shoulder export left by the earlier layout update, without migrating
+stored approvals. Publication and GitHub/D restoration are recorded in the
+coordinating shoulder-arm-imaging checkpoint; do not infer live status here.
+Continue substantive spine/pelvic imaging gaps and the full anatomy/Education
+roadmap; the completed MRI QA increment is not a competing learner viewer.
+
 13 September — embedded anatomy workspace: the shared regional module now uses
 one combined region/title/action bar inside the website; standalone/full-screen
 entry points retain their own brand and heading. The title, source count and

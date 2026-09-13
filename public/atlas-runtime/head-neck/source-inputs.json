@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "ce7f2f206179f83c3a97ddb0880c54183c42956799e5069d45882a79c5fc468b"
+    "sha256": "0e8344db8bbfccc37fe49e5a519e1ececece4875ce4d2e19b0c2808d93784c6f"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "477d2b600d1d74226a72561f1c5148f661c0e7133c5227f10eed6ebdc73e7676"
+    "sha256": "e3e7160d7c40676609f16618ea47fceb62d2258f5f02c2ff92b23013024bb5a2"
   },
   {
     "path": "app/body-explorer.css",
@@ -681,7 +681,15 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "24ab9be82f718bcad32f76dd942eda9067ec1d2e3a03a928d19f13c11392a5d0"
+    "sha256": "b69626a74dc58b5abae663e83cfdc00821fa3dd760ab61c0e17d14fe1fcafef6"
+  },
+  {
+    "path": "content/shoulder-arm-muscle-imaging-pins.json",
+    "sha256": "c19f5a4d20cbd492c512529ef70c7681c5bce7b36343e0bddf75778f4d7e8813"
+  },
+  {
+    "path": "content/shoulder-arm-muscle-imaging.ts",
+    "sha256": "f1362fbc88cebd958073b476b3aa44eae847091fe265e9194971ae5e4360d0c3"
   },
   {
     "path": "content/shoulder-xray-bindings.json",
@@ -1650,6 +1658,10 @@
   {
     "path": "lib/shoulder-arm-curriculum.ts",
     "sha256": "1f3ed2b25a8dd8ee8f80291f92bc79760c70aaeeb86e6d2bf77ca63082714f4e"
+  },
+  {
+    "path": "lib/shoulder-arm-muscle-imaging.ts",
+    "sha256": "9c9c4fbd877ecc5afc19ce7462e4b6650e38db3e479dfafa1d4f4508b06424d5"
   },
   {
     "path": "lib/shoulder-arm-vessel-clinical-curriculum.ts",
