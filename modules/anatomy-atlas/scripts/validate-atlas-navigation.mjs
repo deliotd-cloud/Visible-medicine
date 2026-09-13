@@ -4,19 +4,31 @@ import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import { build } from './workspace-component-test-build.mjs';
-import {
+import { build as buildHelpers } from './workspace-test-build.mjs';
+// Resolve the actual TypeScript helper graph as the app does, including its
+// extensionless transitive imports. No production import or assertion changes.
+const helpers = await buildHelpers({
+  stdin: {
+    contents: `export * from './lib/atlas-navigation.ts';
+export * from './lib/study-links.ts';
+export { dissectionProfiles } from './app/dissection-data.ts';
+export { studyLibrary } from './lib/study-library.ts';`,
+    resolveDir: process.cwd(),
+    loader: 'ts',
+  },
+  bundle: true, platform: 'node', format: 'esm', write: false,
+});
+const {
   atlasSearchIndex,
   filterAtlasSearch,
   cameraDirections,
   directionLabel,
-} from '../lib/atlas-navigation.ts';
-import {
   bodyStudyScope,
   parseStudyLink,
   resolveStudyLink,
-} from '../lib/study-links.ts';
-import { dissectionProfiles } from '../app/dissection-data.ts';
-import { studyLibrary } from '../lib/study-library.ts';
+  dissectionProfiles,
+  studyLibrary,
+} = await import('data:text/javascript;base64,' + Buffer.from(helpers.outputFiles[0].text).toString('base64'));
 let checks = 0;
 const same = (a, b, message) => {
   checks++;

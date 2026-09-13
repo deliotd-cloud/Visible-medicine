@@ -1,5 +1,14 @@
 # Third-party notices
 
+## Neck/upper-back attachment relationships — 13 September 2026
+
+Original MIT interaction code and concise factual labels connect 18 existing
+muscle selections to 13 existing bones. UAMS/TTUHSC and two primary anatomical
+studies are reading references, not imported tables, figures or datasets. No
+new dependency, font, mesh, texture, private scan, paid API or service is added.
+Existing BodyParts3D CC BY 4.0 attribution/change notices remain unchanged.
+See [scope, sources and pending review](../docs/NECK_ATTACHMENT_RELATIONSHIPS.md).
+
 ## Chest/abdominal muscle imaging teaching — 13 September 2026
 
 Original concise factual drafts extend 12 existing source selections. The 13

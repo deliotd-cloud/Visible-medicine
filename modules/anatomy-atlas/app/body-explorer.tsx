@@ -130,6 +130,7 @@ import { boneJointPlan } from '@/lib/bone-joints';
 import { ArmAttachments } from './arm-attachments';
 import { armAttachmentPlan } from '@/lib/arm-attachments';
 import { thighAttachmentPlan } from '@/lib/thigh-attachments';
+import { neckAttachmentPlan } from '@/lib/neck-attachments';
 import { arterialPlan } from '../lib/arterial';
 import { VenousDrainage } from './venous-drainage';
 import { venousDrainagePlan } from '../lib/venous-drainage';
@@ -826,7 +827,8 @@ export default function BodyExplorer({
     if (!catalog || !selectedId || exam) return;
     const plan =
       armAttachmentPlan(catalog, initialRegion, side, selectedId, exam) ??
-      thighAttachmentPlan(catalog, initialRegion, side, selectedId, exam);
+      thighAttachmentPlan(catalog, initialRegion, side, selectedId, exam) ??
+      neckAttachmentPlan(catalog, initialRegion, side, selectedId, exam);
     if (!plan) return;
     dispatch(plan.action);
     setSystems((prev) => ({ ...prev, skeleton: true, muscles: true }));

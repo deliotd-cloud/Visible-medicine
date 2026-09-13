@@ -6,8 +6,11 @@ export const assetBase = '/atlas-runtime/head-neck';
 // Only navigation is relocated. Anatomical IDs, bundle hashes and coordinate frames stay canonical.
 export function Link({href,children,prefetch:_prefetch,...props}: AnchorHTMLAttributes<HTMLAnchorElement> & {prefetch?:boolean}) {
   const localRegion=href?.startsWith('/?')?'whole-body':Object.keys(regionalModules).find(region=>region!=='whole-body'&&(href===`/regions/${region}`||href?.startsWith(`/regions/${region}?`)));
-  // Bare cross-region navigation must update the outer heading and selected
-  // region bar. Source-bound study URLs remain within the same module.
+  // Whole-body continuation updates the host heading/region bar as well as the
+  // model. The host relays only bounded study fields; the module validates them.
+  if (localRegion==='whole-body' && href)
+    return <a {...props} href={'/atlas/3d'+href.slice(1)} target="_top">{children}</a>;
+  // Other source-bound regional study URLs remain within the same module.
   if (localRegion && href===`/regions/${localRegion}`)
     return <a {...props} href={regionalHostHref(localRegion)!} target="_top">{children}</a>;
   if (localRegion && href)

@@ -38,7 +38,7 @@
     },
     {
       "path": "app/arm-attachments.tsx",
-      "sha256": "e3e37076689f31831dcbfaf707466945c41c576d7b55c5fcf755d5f041e2577c"
+      "sha256": "90c591685afa32bcccb347a64927ea65aae3c8694fe8897e8441e42b1fbf2418"
     },
     {
       "path": "app/arterial-connections.tsx",
@@ -74,7 +74,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "aeb7ff610fa9fc482c12265652ae2cbcb4dcc9672dc70b608f115789ad378ca0"
+      "sha256": "c6e2765aca319bf3737c87f87c269ad3ac23bf287224fdcbdaab56f14f6d3e01"
     },
     {
       "path": "app/body-scene.tsx",
@@ -302,7 +302,7 @@
     },
     {
       "path": "app/upper-limb-motor.css",
-      "sha256": "e4e643409be394c71b3bb3958799e90399ee1229611d4196439ee818d00ab6ca"
+      "sha256": "8642774fece7df3c1b7597191362bbd83efb87dc0b3a063fb457e274d809b496"
     },
     {
       "path": "app/upper-limb-motor.tsx",
@@ -631,6 +631,14 @@
     {
       "path": "content/lower-limb-motor.ts",
       "sha256": "b94da1bcd39a91f513565135cb8a4e70c64998fff05aaba8df8a83d7f156f36b"
+    },
+    {
+      "path": "content/neck-attachment-pins.json",
+      "sha256": "d2f530522d72e3aebf22c41a09164f352b896b8aaeb34d361213721aa75d6f15"
+    },
+    {
+      "path": "content/neck-attachments.ts",
+      "sha256": "c73802bb9c51b4bb575b83d08ddf6c516047512687c8e0b2b4727f301ae79a0b"
     },
     {
       "path": "content/nested-teaching-bindings.v1.json",
@@ -1393,6 +1401,10 @@
       "sha256": "465d37a26064d03c7f559c4fe1524820349f46549858374af6a3bd9dd5807ed1"
     },
     {
+      "path": "lib/neck-attachments.ts",
+      "sha256": "0e18bd97d301e46e21e5a48ee5a97d67823c7d0814bc4861e0b325cf05adc521"
+    },
+    {
       "path": "lib/neck-clinical-curriculum.ts",
       "sha256": "446017a9ff682d35f28a0c75e68c0bccd38d4aaf6799fab7af01516dbd5e8772"
     },
@@ -1973,5 +1985,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "ccf48ebb3e67947a5be085cd8f76aace71fb18cee9cbaa341331007cd70f4a17"
+  "sha256": "4746fee586b9896d0f84ce4ef7873b46dd46f856befaf836733198a85472e581"
 }

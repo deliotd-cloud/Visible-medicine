@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { armAttachmentInfo } from '@/lib/arm-attachments';
 import { thighAttachmentInfo } from '@/lib/thigh-attachments';
+import { neckAttachmentInfo } from '@/lib/neck-attachments';
 import { armAttachmentReference } from '@/content/arm-attachments';
 import { makeStudyLink, type StudySide } from '@/lib/study-links';
 import type { BodyCatalog } from './body-types';
@@ -28,7 +29,8 @@ export function ArmAttachments({
   const info = useMemo(
     () =>
       armAttachmentInfo(catalog, region, side, selectedId, disabled) ??
-      thighAttachmentInfo(catalog, region, side, selectedId, disabled),
+      thighAttachmentInfo(catalog, region, side, selectedId, disabled) ??
+      neckAttachmentInfo(catalog, region, side, selectedId, disabled),
     [catalog, region, side, selectedId, disabled],
   );
   if (!info) return null;
@@ -44,7 +46,7 @@ export function ArmAttachments({
         {info.selected.name} · bony attachment teaching, not a verified donor
         footprint.
       </p>
-      <Button size="sm" variant="outline" onClick={onShow}>
+      <Button className="body-attachment-show" size="sm" variant="outline" onClick={onShow}>
         {info.completeHere
           ? 'Show muscle with attachment bones'
           : 'Show muscle with available attachment bones'}
@@ -71,17 +73,18 @@ export function ArmAttachments({
                   : 'Distal / insertion'}
             </strong>
             <p>{row.site}</p>
-            {row.availableHere ? (
+            {('structures' in row ? row.structures : [row]).map((partner) => partner.availableHere ? (
               <Button
+                key={partner.structure.id}
                 size="sm"
                 variant="ghost"
-                onClick={() => onSelect(row.structure.id)}
+                onClick={() => onSelect(partner.structure.id)}
               >
-                {row.structure.name}
+                {partner.structure.name}
               </Button>
             ) : (
-              <span>{row.structure.name} · outside this region</span>
-            )}
+              <span className="body-attachment-unavailable" key={partner.structure.id}>{partner.structure.name} · outside this region</span>
+            ))}
           </li>
         ))}
       </ul>

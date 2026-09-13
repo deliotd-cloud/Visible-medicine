@@ -15,6 +15,22 @@
   padding: 0.3rem 0;
   border-bottom: 1px solid var(--border);
 }
+.body-attachment-unavailable {
+  display: block;
+  padding: 0.35rem 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.body-motor-explorer > .body-attachment-show {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  height: auto;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
 .body-motor-targets button {
   min-height: 44px;
   height: auto;
