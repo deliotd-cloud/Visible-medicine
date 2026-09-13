@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "a57c5fd8b5859bb0e8cb716ef22e203303f0fb35014c1fa882c9485cd248d0f8"
+      "sha256": "e4e2b95fccc2018645bede29680393a469573210eac79f629cf9d39e4c52a4ce"
     },
     {
       "path": "app/body-explorer.css",
@@ -523,6 +523,14 @@
     {
       "path": "content/inferior-thyroid-context-pins.json",
       "sha256": "1928f2ecce49146511325abe3fe6331291dcbbbb0ca6308f99e95be2353f07f8"
+    },
+    {
+      "path": "content/leg-muscle-imaging-pins.json",
+      "sha256": "8871bf36ae747e3b3a3dd8ce3b3646fe6df9db6e84687478ed993ba71b654196"
+    },
+    {
+      "path": "content/leg-muscle-imaging.ts",
+      "sha256": "da36f669814e010c544f116244e7b6a98e6ab7e0f019397a2fb94e1376542289"
     },
     {
       "path": "content/limb-bone-imaging-pins.json",
@@ -1217,6 +1225,10 @@
       "sha256": "21b71758f0c558d520547044cb736538e56004416b4962bcf0e812a229a12143"
     },
     {
+      "path": "lib/leg-muscle-imaging.ts",
+      "sha256": "21c432732b7f27ccb00e093c0ca0a3ba4cb3a171243e42745339008e951972eb"
+    },
+    {
       "path": "lib/leg-reasoning.ts",
       "sha256": "d94d6ea36a8962684935ed07bc235852095b624abc189dd7611d5551cd30022b"
     },
@@ -1849,5 +1861,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "3bcb63d566eaac09a2dfb7ecbf340233be4ae525780fb2ecaf0bbfe3762f7fcc"
+  "sha256": "255ae0522bba380f441855f75a15027113ce2b0e0386d1441d3700ad8220f873"
 }

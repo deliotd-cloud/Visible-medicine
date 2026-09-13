@@ -1,0 +1,32 @@
+{
+  "baselineSource": "f26c886ce1fec191d5fff7b5a42001ce9813c747",
+  "groups": 14,
+  "sourceSelections": 28,
+  "addedDraftPlacements": 112,
+  "modalities": {
+    "ct": 28,
+    "mri": 28,
+    "ultrasound": 28,
+    "xray": 28
+  },
+  "unchangedTopics": 9797,
+  "bodySchemaRecords": 1101,
+  "actualNoteRenders": 112,
+  "rejectedSourceTopicCombinations": 1680,
+  "uniqueReferenceFacts": 40,
+  "sourceWordCounts": {
+    "mri": 35,
+    "ultrasound": 45,
+    "xray": 27,
+    "anatomy": 172,
+    "ankleUS": 168,
+    "kneeUS": 114,
+    "plantarisMRI": 47
+  },
+  "sourceGeometryChanged": false,
+  "currentApprovalRecordsChanged": false,
+  "clinicalApproval": false,
+  "imagesImported": false,
+  "imagingConnected": false,
+  "browserOrDeviceAcceptance": false
+}

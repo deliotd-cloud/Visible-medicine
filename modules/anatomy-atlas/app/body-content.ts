@@ -110,6 +110,7 @@ import { thoracicBoneImagingLesson } from '../lib/thoracic-bone-imaging';
 import { abdominalOrganImagingLesson } from '../lib/abdominal-organ-imaging';
 import { pelvicOrganImagingLesson } from '../lib/pelvic-organ-imaging';
 import { thighMuscleImagingLesson } from '../lib/thigh-muscle-imaging';
+import { legMuscleImagingLesson } from '../lib/leg-muscle-imaging';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -200,6 +201,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (pelvicOrganImaging) return pelvicOrganImaging;
   const thighMuscleImaging = thighMuscleImagingLesson(s, tab);
   if (thighMuscleImaging) return thighMuscleImaging;
+  const legMuscleImaging = legMuscleImagingLesson(s, tab);
+  if (legMuscleImaging) return legMuscleImaging;
   const tentorium = tentoriumLesson(s, tab);
   if (tentorium) return tentorium;
   const brachialVein = brachialVeinLesson(s, tab);
