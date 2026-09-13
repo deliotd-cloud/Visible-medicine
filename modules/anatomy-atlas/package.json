@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "thoracic-branch-imaging:test": "node scripts/pin-thoracic-branch-imaging.mjs --check && node scripts/validate-thoracic-branch-imaging.mjs",
     "central-vessel-imaging:test": "node scripts/pin-central-vessel-imaging.mjs --check && node scripts/validate-central-vessel-imaging.mjs",
     "thoracoabdominal-organ-imaging:test": "node scripts/pin-thoracoabdominal-organ-imaging.mjs --check && node scripts/validate-thoracoabdominal-organ-imaging.mjs",
     "acral-bone-imaging:test": "node scripts/pin-acral-bone-imaging.mjs --check && node scripts/validate-acral-bone-imaging.mjs",

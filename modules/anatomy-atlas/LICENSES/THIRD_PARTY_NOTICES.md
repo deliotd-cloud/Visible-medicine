@@ -1,5 +1,13 @@
 # Third-party notices
 
+## Thoracic branch imaging — 13 September 2026
+
+Original MIT resolver code and concise factual drafts add 50 placements to 26
+existing vessels. Nineteen publication links are reading references, not imported
+figures, scans, article text, tables, models or redistribution permissions.
+No new asset, dependency, paid API or mandatory fee is introduced. All source
+credits and holds remain. See [scope and review](../docs/THORACIC_BRANCH_IMAGING.md).
+
 ## Central vessel imaging teaching — 13 September 2026
 
 Original MIT resolver code and concise factual drafts add 79 placements for 29

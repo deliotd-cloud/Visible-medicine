@@ -1,5 +1,12 @@
 # Clinical validation checklist
 
+[Thoracic branch imaging](THORACIC_BRANCH_IMAGING.md): review 50 draft CT/MRI/US
+placements for 26 retained vessels. Confirm coronary and cardiac venous courses,
+dedicated versus routine imaging, inlet side/position/contrast limits, chest-wall
+layers and small bronchial/oesophageal identity caveats. Thirteen MRI and fifteen
+US topics remain pending. No scan connection, branch-completeness claim, flow
+measurement, procedural route or migrated clinical approval is supplied.
+
 [Central vessel imaging](CENTRAL_VESSEL_IMAGING.md): review 79 draft CT/MRI/US
 placements for 29 exact vessels. Check aortic planes and echo limits, venous
 mixing/flow artefacts, pulmonary drainage variants, visceral arterial and portal
