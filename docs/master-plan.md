@@ -77,6 +77,21 @@ Latest specialist-chat review reports both anterior cerebellar edges accepted an
 
 ## Ordered delivery roadmap
 
+13 September — embedded anatomy workspace: the shared regional module now uses
+one combined region/title/action bar inside the website; standalone/full-screen
+entry points retain their own brand and heading. The title, source count and
+expandable review disclosure remain available. Same-size desktop comparison
+shows more usable model height, and phone search now sits beside the title.
+Whole-body explode/reset, review details, phone head/neck navigation, frontal-bone
+selection and the information sheet were sampled locally. Camera and all 131
+model objects/137 paths are unchanged; no new anatomy or clinical approval is
+implied. Website tests 98/98 and TypeScript pass; actual camera compatibility
+checks 398 and contained study checks 104 pass. The older standalone navigation
+script currently fails on an extensionless transitive Node import before its
+assertions; it is not counted as passed. Publication and GitHub/D recovery are
+tracked in the coordinating embedded-header checkpoint. Continue substantive
+anatomy/teaching and the separate cleared-Education roadmap afterwards.
+
 13 September — native MRI follow-up: the existing internal import checker was
 tested with tiny synthetic anisotropic and signed oblique packets, not patient
 data. A reproduced Reset-display bug now clears edited/unsubmitted fields even

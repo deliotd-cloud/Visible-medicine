@@ -1,5 +1,28 @@
 # Larger anatomy within the existing workspace
 
+## Latest embedded-header refinement
+
+The shared regional export now binds Atlas `b18335e1841f14ec631d2434a52f5d23638d9225`.
+Inside the website frame, its title, source count and review disclosure share
+the existing mode/action bar, reclaiming the separate title row for the model.
+On phones, search sits beside the title; modes retain their full-width row.
+Direct/full-screen entry retains its own brand and heading. All disclosure and
+camera controls remain available. This changes layout, not camera-fit math.
+
+Same-size 1280×720 desktop comparison showed the complete skeleton larger without
+cropping; 390×844 checks covered whole body, head/neck, selection and information
+sheet access without horizontal page overflow. Full-screen layout was checked
+separately. Broader physical-device/200% text testing remains open.
+
+All 131 original model objects and 137 delivery paths are unchanged. The current
+inventory hash is `eb6d448ab2a2532dd28617cb0446474340d5ef727a95669c50f2e5757a424d85`;
+only source/manifest bindings changed. The administrator-review policy remains
+in place; existing stored geometry does not need re-uploading. See the dated
+coordinating checkpoint for actual publication and recovery, not the older
+camera-only rollout below.
+
+## Earlier camera-profile rollout
+
 13 September 2026. All four contained module exports now bind Atlas source
 `6fe99634045ab1e7df6828ff67fcd75d0ae8f724`. Regional, independent specimen and
 shoulder scenes reserve the existing 70% width for side-label clearance but use
