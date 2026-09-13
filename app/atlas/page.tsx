@@ -1,36 +1,19 @@
-import type { Metadata } from "next";
-import { atlasModules } from "../../lib/catalog";
-
-export const metadata: Metadata = { title: "Anatomy atlas", description: "Explore radiological anatomy modules by body region and modality." };
-
-export default async function AtlasCatalogue({ searchParams }: { searchParams: Promise<{ modality?: string }> }) {
-  const requested = (await searchParams).modality;
-  const modality = ['3D', 'CT', 'MRI'].includes(requested ?? '') ? requested : undefined;
-  const modules = atlasModules.filter(module => !modality || module.modality === modality);
-  return (
-    <main className="inner-page">
-      <section className="page-hero atlas-page-hero">
-        <p className="eyebrow"><span /> Interactive imaging atlas</p>
-        <h1>Anatomy in context,<br />slice by slice.</h1>
-        <p>Explore 3D anatomy alongside cross-sectional imaging modules. Private previews remain separate from clinically reviewed releases.</p>
-      </section>
-      <section className="catalogue-controls" aria-label="Atlas filters">
-        <span>{modules.length} modules</span>
-        <div role="group" aria-label="Filter by modality">{[undefined, '3D', 'CT', 'MRI'].map(value => <a key={value ?? 'all'} className={modality === value ? 'active' : undefined} aria-current={modality === value ? 'page' : undefined} href={value ? `/atlas?modality=${value}` : '/atlas'}>{value ?? 'All modalities'}</a>)}</div>
-      </section>
-      <section className="catalogue-list">
-        {modules.map((module, index) => (
-          <a href={`/atlas/${module.slug}`} className="catalogue-item" key={module.slug}>
-            <div className={`catalogue-scan catalogue-scan-${index + 1}`} aria-hidden="true"><i /><i /><span>{module.region}</span></div>
-            <div className="catalogue-number">0{index + 1}</div>
-            <div className="catalogue-copy">
-              <span>{module.modality} · {module.orientation}</span><h2>{module.title}</h2><p>{module.description}</p>
-              <div>{module.systems.map((system) => <small key={system}>{system}</small>)}</div>
-            </div>
-              <div className="catalogue-meta"><span className={`module-status ${module.status}`}>{module.modality === '3D' && module.status === 'available' ? 'Private 3D pilot' : module.status === "available" ? "Available preview" : "Planned"}</span><span>{module.structures} structures</span><span>{module.modality === '3D' ? 'Interactive dissection' : `${module.images} images`}</span><b>{module.status === "available" ? "Open module ↗" : "View roadmap ↗"}</b></div>
-          </a>
-        ))}
-      </section>
-    </main>
-  );
+import type {Metadata} from 'next';
+import Link from 'next/link';
+import {redirect} from 'next/navigation';
+import {atlasModalities,legacyModalityHref} from '../../lib/atlas-navigation';
+export const metadata:Metadata={title:'Anatomy atlas',description:'Explore Visible Medicine anatomy in 3D, CT, MRI, ultrasound and X-ray.'};
+export default async function AtlasCatalogue({searchParams}:{searchParams:Promise<{modality?:string|string[]}>}){
+  const destination=legacyModalityHref((await searchParams).modality);
+  if(destination)redirect(destination);
+  return <main className="atlas-hub">
+    <header className="atlas-hub-heading"><p className="eyebrow">Visible Medicine Atlas</p><h1>Explore anatomy.</h1><p>Choose a modality, then a body region.</p></header>
+    <section className="atlas-modality-grid" aria-label="Choose an atlas modality">
+      {atlasModalities.map(modality=><Link className="atlas-modality-card" href={modality.href} key={modality.id}>
+        <div className={`atlas-modality-image atlas-modality-image-${modality.id}`}><img src={modality.image} alt={modality.alt} width={640} height={440}/><span>{modality.label}</span></div>
+        <div className="atlas-modality-copy"><span className="atlas-availability">{modality.status}</span><h2>{modality.title}<span aria-hidden="true">↗</span></h2><p>{modality.description}</p><small>{modality.caption}</small></div>
+      </Link>)}
+    </section>
+    <details className="atlas-hub-notes"><summary>Image sources &amp; availability</summary><p>Tiles preview each modality, not a complete or clinically approved atlas. The CT viewer is an illustrative demonstration. MRI, ultrasound and X-ray modules are in preparation; no private patient studies are published here.</p><p><a href="/media/atlas/NOTICES.md">Image credits, source links and licences</a>. Imaging-case and lecture access will remain separate from Atlas access.</p></details>
+  </main>;
 }

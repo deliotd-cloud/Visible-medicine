@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { AtlasExplorer } from "../../../components/AtlasExplorer";
 import { atlasModules, findAtlasModule } from "../../../lib/catalog";
 import { ctHeadStructures } from "../../../lib/atlas-knowledge";
+import {AtlasRegionNavigation} from '../../../components/AtlasRegionNavigation';
 
 type PageProps = { params: Promise<{ slug: string }> };
 
@@ -33,8 +34,9 @@ export default async function AtlasModulePage({ params }: PageProps) {
         <div><Link href="/atlas">Atlas</Link><span>/</span><b>{atlasModule.region}</b></div>
         <h1>{atlasModule.title}</h1>
         <p>{atlasModule.description}</p>
-        <div className="module-facts"><span>{atlasModule.modality}</span><span>{atlasModule.orientation}</span><span>{atlasModule.slug === "ct-head" ? `${ctHeadStructures.length} indexed in preview · ${atlasModule.structures} planned` : `${atlasModule.structures} structures`}</span><span>{atlasModule.images} images</span></div>
+        <div className="module-facts"><span>{atlasModule.modality}</span><span>{atlasModule.orientation}</span><span>{atlasModule.slug === "ct-head" ? `${ctHeadStructures.length} demonstration entries · no scan attached` : 'In preparation · no released images'}</span></div>
       </section>
+      <AtlasRegionNavigation modality={atlasModule.modality === 'MRI' ? 'mri' : 'ct'} selected={atlasModule.slug === 'ct-head' ? 'head-neck' : atlasModule.slug === 'ct-chest' ? 'thorax' : atlasModule.slug === 'ct-abdomen' ? 'abdomen' : 'knee'}/>
       {atlasModule.status === "available" ? (
         <AtlasExplorer moduleSlug={atlasModule.slug} totalImages={atlasModule.images} />
       ) : (

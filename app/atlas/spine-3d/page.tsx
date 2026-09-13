@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import Link from 'next/link';
+import {AtlasRegionNavigation} from '../../../components/AtlasRegionNavigation';
 import '../shoulder-3d/shoulder-module.css';
 
 export const metadata:Metadata={title:'Spine and back 3D anatomy — private pilot',description:'Source-based spine dissection and independent back-muscle layer studies.',robots:{index:false,follow:false}};
@@ -10,6 +11,7 @@ export default function SpineModulePage(){
       <h1>Spine &amp; back</h1><span>Private pilot · Review pending</span>
       <a href="/atlas-runtime/head-neck/index.html?region=spine" target="_blank" rel="noopener noreferrer">Open full screen ↗</a>
     </header>
+    <AtlasRegionNavigation modality="3d" selected="spine"/>
     <iframe className="shoulder-module-frame" src="/atlas-runtime/head-neck/index.html?region=spine" title="Interactive spine and back: explore, dissect and practise" referrerPolicy="same-origin" allowFullScreen/>
     <details className="shoulder-module-notes">
       <summary>Coverage, sources &amp; imaging links</summary>

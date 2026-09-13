@@ -4,6 +4,7 @@ import { SiteFrame } from "../components/SiteFrame";
 import { SplashScreen } from "../components/SplashScreen";
 import { SPLASH_BOOTSTRAP_SCRIPT } from "../lib/splash-intro";
 import "./globals.css";
+import "./atlas-navigation.css";
 
 const geistMono = Geist_Mono({ variable: "--font-atlas-mono", subsets: ["latin"] });
 const siteOrigin = process.env.SITE_ORIGIN ?? "https://visiblemedicine.com";

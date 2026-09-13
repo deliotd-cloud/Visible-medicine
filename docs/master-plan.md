@@ -77,6 +77,17 @@ Latest specialist-chat review reports both anterior cerebellar edges accepted an
 
 ## Ordered delivery roadmap
 
+13 September — the owner's modality-first navigation is implemented: five visual
+Atlas tiles, the matching top-menu dropdown, and compact region navigation under
+each module title (native select on phones). Existing 3D/study links are retained.
+CT is labelled as a demonstration; unreleased CT regions, MRI, ultrasound and
+X-ray have explicit preparation states. Preview images have source/licence/hash
+records; no private imaging or additional model delivery is activated. See
+[navigation evidence](atlas-navigation.md) and the coordinating task's modality
+checkpoint for exact save/publication state. Continue the separately preserved
+whole-body/limb expansion and full clinical/Education roadmap; avoid duplicating
+the new region bar inside the viewer.
+
 13 September — pelvis and spine are now privately live in **version 61**.
 Staging version 60 preserved all 80 existing models while 14 additions were
 uploaded; 94 complete staged downloads and the old 80 delivery paths passed

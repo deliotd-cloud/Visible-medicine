@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import {AtlasRegionNavigation} from '../../../components/AtlasRegionNavigation';
 import '../shoulder-3d/shoulder-module.css';
 
 export const metadata: Metadata = {
@@ -16,6 +17,7 @@ export default function FemalePelvisModulePage() {
       <span>Private pilot · Review pending</span>
       <a href="/atlas-runtime/female-pelvis/index.html" target="_blank" rel="noopener noreferrer">Open full screen ↗</a>
     </header>
+    <AtlasRegionNavigation modality="3d" selected="female-pelvis"/>
     <iframe className="shoulder-module-frame" src="/atlas-runtime/female-pelvis/index.html" title="Interactive female pelvic reference: explore, dissect and practise" referrerPolicy="same-origin" allowFullScreen />
     <details className="shoulder-module-notes">
       <summary>Coverage, sources &amp; imaging links</summary>

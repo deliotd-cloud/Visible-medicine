@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState, type FocusEvent, type MouseEvent, type PointerEvent } from "react";
 import { BrandLockup } from "./BrandLockup";
+import { atlasModalities } from '../lib/atlas-navigation';
 
 type NavigationLink = {
   label: string;
@@ -28,16 +29,11 @@ const navigationSections: NavigationSection[] = [
     id: "atlas",
     label: "Atlas",
     href: "/atlas",
-    description: "Explore reviewed and in-development imaging anatomy modules.",
+    description: "Choose a modality, then a body region.",
     groups: [
       {
-        label: "Explore anatomy",
-        links: [
-          { label: "Atlas overview", href: "/atlas", description: "Browse every available and planned anatomy module." },
-          { label: "Shoulder 3D pilot", href: "/atlas/shoulder-3d", description: "Explore and dissect the right shoulder. Review pending." },
-          { label: "CT head demonstration", href: "/atlas/ct-head", description: "Explore labelled cross-sectional head anatomy." },
-          { label: "Research use", href: "/research", description: "Review provenance, citations and non-clinical workflows." },
-        ],
+        label: "Atlas by modality",
+        links: atlasModalities.map(modality => ({label:modality.label,href:modality.href,description:modality.status})),
       },
     ],
   },
@@ -175,11 +171,13 @@ export function SiteHeader({ workspace = false }: { workspace?: boolean }) {
               data-nav-section={section.id}
               key={section.id}
               onBlur={(event) => closeGroupAfterBlur(section.id, event)}
-              onFocus={() => setOpenMenu(section.id)}
-              onPointerEnter={() => setOpenMenu(section.id)}
+              onFocus={(event) => {
+                if (section.id !== 'atlas' || !(event.target instanceof Element) || !event.target.closest('[data-nav-trigger]')) setOpenMenu(section.id);
+              }}
+              onPointerEnter={() => { if (section.id !== 'atlas') setOpenMenu(section.id); }}
               onPointerLeave={(event) => closeGroupAfterPointerLeave(section.id, event)}
             >
-              <Link className="primary-nav-link" aria-current={isActive(section.href) ? "page" : undefined} href={section.href} onClick={() => setOpenMenu(null)}>{section.label}</Link>
+              <Link className="primary-nav-link" aria-current={isActive(section.href) ? "page" : undefined} href={section.href} onPointerEnter={() => setOpenMenu(section.id)} onClick={() => setOpenMenu(null)}>{section.label}</Link>
               <button
                 aria-controls={`${section.id}-navigation`}
                 aria-expanded={expanded}
@@ -267,6 +265,7 @@ function MobileNavigationGroup({
         <span>{section.label}</span><span aria-hidden="true">⌄</span>
       </summary>
       <div className="mobile-nav-group-content">
+        {section.id === 'atlas' && <Link href="/atlas" onClick={onNavigate}>Atlas overview<span aria-hidden="true">→</span></Link>}
         {section.groups.map((group) => (
           <div className={`mobile-nav-subgroup${group.workspace ? " mobile-nav-workspace" : ""}`} key={group.label}>
             <span>{group.label}</span>

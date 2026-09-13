@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import Link from 'next/link';
+import {AtlasRegionNavigation} from '../../../components/AtlasRegionNavigation';
 import '../shoulder-3d/shoulder-module.css';
 
 export const metadata:Metadata={title:'Head and neck 3D anatomy — private pilot',description:'Regional anatomy and nested eye, brain, ventricular and vessel dissection with draft teaching.',robots:{index:false,follow:false}};
@@ -10,6 +11,7 @@ export default function HeadNeckModulePage(){
       <h1>Head &amp; neck anatomy</h1><span>Private pilot · Review pending</span>
       <a href="/atlas-runtime/head-neck/index.html" target="_blank" rel="noopener noreferrer">Open full screen ↗</a>
     </header>
+    <AtlasRegionNavigation modality="3d" selected="head-neck"/>
     <iframe className="shoulder-module-frame" src="/atlas-runtime/head-neck/index.html" title="Interactive head and neck: explore, dissect and practise" referrerPolicy="same-origin" allowFullScreen/>
     <details className="shoulder-module-notes">
       <summary>Coverage, sources &amp; imaging links</summary>

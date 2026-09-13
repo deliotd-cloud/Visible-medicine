@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import {AtlasRegionNavigation} from '../../../components/AtlasRegionNavigation';
 import '../shoulder-3d/shoulder-module.css';
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ export default function LowerLimbModulePage() {
       <h1>Lower-limb anatomy</h1><span>Private pilot · Review pending</span>
       <a href="/atlas-runtime/lower-limb/index.html" target="_blank" rel="noopener noreferrer">Open full screen ↗</a>
     </header>
+    <AtlasRegionNavigation modality="3d" selected="lower-limb"/>
     <iframe className="shoulder-module-frame" src="/atlas-runtime/lower-limb/index.html" title="Interactive right lower limb: choose a region, dissect and practise" referrerPolicy="same-origin" allowFullScreen />
     <details className="shoulder-module-notes">
       <summary>Coverage, sources &amp; imaging links</summary>

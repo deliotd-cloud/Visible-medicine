@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import Link from 'next/link';
+import {AtlasRegionNavigation} from '../../../components/AtlasRegionNavigation';
 import '../shoulder-3d/shoulder-module.css';
 
 export const metadata:Metadata={title:'Thorax 3D anatomy — private pilot',description:'Chest-wall dissection, cardiac chamber spaces and lung branch groups with draft imaging teaching.',robots:{index:false,follow:false}};
@@ -10,6 +11,7 @@ export default function ThoraxModulePage(){
       <h1>Thorax anatomy</h1><span>Private pilot · Review pending</span>
       <a href="/atlas-runtime/head-neck/index.html?region=thorax" target="_blank" rel="noopener noreferrer">Open full screen ↗</a>
     </header>
+    <AtlasRegionNavigation modality="3d" selected="thorax"/>
     <iframe className="shoulder-module-frame" src="/atlas-runtime/head-neck/index.html?region=thorax" title="Interactive thorax: explore, dissect and practise" referrerPolicy="same-origin" allowFullScreen/>
     <details className="shoulder-module-notes">
       <summary>Coverage, sources &amp; imaging links</summary>
