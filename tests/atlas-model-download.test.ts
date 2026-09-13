@@ -28,10 +28,11 @@ test('actual stream limits reject truncation, oversize and invalid GLB headers',
   }
 });
 test('proxy streaming metadata never substitutes for actual bytes and SHA-256', async () => {
-  for (const metadata of [
+  const variants: Record<string, string>[] = [
     { 'content-type': 'model/gltf-binary' },
     { 'content-type': 'application/octet-stream', etag: `W/"${model.sha256}"` },
-  ]) {
+  ];
+  for (const metadata of variants) {
     assert.deepEqual(await verifyAtlasModelDownload(new Response(bytes, { headers: metadata }), model), model);
     await assert.rejects(() => verifyAtlasModelDownload(new Response(bytes.subarray(0, 13), { headers: metadata }), model), /incomplete/);
     await assert.rejects(() => verifyAtlasModelDownload(new Response(Buffer.concat([bytes, Buffer.from([0])]), { headers: metadata }), model), /exceeds/);
