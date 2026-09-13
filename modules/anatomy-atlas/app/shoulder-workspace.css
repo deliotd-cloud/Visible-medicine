@@ -10,6 +10,7 @@
 }
 .shoulder-model-heading {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
@@ -59,9 +60,28 @@
   letter-spacing: 0.025em;
   pointer-events: none;
 }
-.shoulder-workspace .zoom-controls {
-  bottom: 12px;
-  right: 12px;
+.shoulder-heading-actions,
+.shoulder-zoom-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.shoulder-heading-actions {
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+.shoulder-zoom-controls {
+  flex: none;
+}
+.shoulder-zoom-controls button {
+  width: 40px;
+  height: 40px;
+}
+@media (pointer: coarse) {
+  .shoulder-zoom-controls button {
+    width: 44px;
+    height: 44px;
+  }
 }
 .shoulder-exam-prompt {
   padding: 4px 16px 10px;

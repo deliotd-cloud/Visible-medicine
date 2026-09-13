@@ -136,6 +136,14 @@ for (const selected of structures) {
     check(html.includes('class="body-app shoulder-workspace"'));
     check(html.includes(`data-workspace-mode="${mode}"`));
     check(html.includes('aria-label="Workspace mode"'));
+    // Zoom must remain outside the canvas/label overlay in every workspace mode.
+    const headingStart = html.indexOf('class="shoulder-model-heading"');
+    const zoomStart = html.indexOf('class="shoulder-zoom-controls"');
+    const viewControlsStart = html.indexOf('class="shoulder-view-controls"');
+    check(headingStart >= 0 && zoomStart > headingStart && zoomStart < viewControlsStart,
+      `${mode}: zoom controls belong in the heading, not over anatomy labels`);
+    check(html.includes('aria-label="Shoulder zoom controls"') && !html.includes('class="zoom-controls"'),
+      `${mode}: one named external zoom group and no legacy floating controls`);
     const railStart = html.indexOf(
       '<aside class="body-rail anatomy-control-rail"',
     );

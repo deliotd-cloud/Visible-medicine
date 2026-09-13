@@ -799,7 +799,27 @@ export default function ShoulderExplorer({
           <div className="shoulder-model-workspace body-workspace">
             <div className="shoulder-model-heading">
               <Title>Right shoulder</Title>
-              {mode === 'study' && <StructureDetailsButton />}
+              <div className="shoulder-heading-actions">
+                <div className="shoulder-zoom-controls" role="group" aria-label="Shoulder zoom controls">
+                  <Button
+                    size="icon"
+                    variant="outline"
+                    aria-label="Zoom in"
+                    onClick={() => setZoomStep(s => s + 1)}
+                  >
+                    <Plus />
+                  </Button>
+                  <Button
+                    size="icon"
+                    variant="outline"
+                    aria-label="Zoom out"
+                    onClick={() => setZoomStep(s => s - 1)}
+                  >
+                    <Minus />
+                  </Button>
+                </div>
+                {mode === 'study' && <StructureDetailsButton />}
+              </div>
             </div>
             <div className="shoulder-view-controls">
               <Select
@@ -930,24 +950,6 @@ export default function ShoulderExplorer({
                 onRendererHealth={setRendererHealth}
                 onModelReady={setModelReady}
               />
-              <div className="zoom-controls">
-                <Button
-                  size="icon"
-                  variant="outline"
-                  aria-label="Zoom in"
-                  onClick={() => setZoomStep(s => s + 1)}
-                >
-                  <Plus />
-                </Button>
-                <Button
-                  size="icon"
-                  variant="outline"
-                  aria-label="Zoom out"
-                  onClick={() => setZoomStep(s => s - 1)}
-                >
-                  <Minus />
-                </Button>
-              </div>
             </section>
             <div className="shoulder-view-footer illustration-mode">
               <div className="viewer-toolbar" aria-label="3D view controls">
