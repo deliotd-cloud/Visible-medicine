@@ -64,9 +64,14 @@ test('all 21 added GLBs stage in real local R2 but remain unavailable through th
     export default { async fetch(request, env) {
       const url = new URL(request.url);
       const authorize = async () => { if (request.headers.get('x-test-role') !== 'admin') throw new AtlasModelError('Denied', 403); };
-      return url.pathname.startsWith('/stage/')
+      const response = await (url.pathname.startsWith('/stage/')
         ? handleAtlasModel(request, url.pathname.slice(7), ${JSON.stringify(staging)}, env.FILES, authorize)
-        : handleAtlasDelivery(request, ${JSON.stringify(previous.models)}, env.FILES, authorize);
+        : handleAtlasDelivery(request, ${JSON.stringify(previous.models)}, env.FILES, authorize));
+      // Test transport only: consume an unused fixture body after the actual
+      // handler decides. Keep full-size denial and all storage assertions.
+      // https://github.com/cloudflare/workerd/issues/918
+      if (request.body && !request.bodyUsed) await request.body.pipeTo(new WritableStream());
+      return response;
     }};`;
   const mf = new Miniflare(convertV4MiniflareOptions({ modules: [
     { type: 'ESModule', path: resolve('tests/staging-registry-worker.mjs'), contents: worker },

@@ -39,7 +39,12 @@ test('actual Workers R2 streams, checksums, immutable writes and protected range
       headers.set('content-length', '${bytes.length}');
       request = new Request(request, { headers });
     }
-    return handleAtlasModel(request, url.pathname.slice(1), [{sha256:'${sha}',bytes:${bytes.length},paths:['fixture.glb']}, ${JSON.stringify(largest)}], env.FILES, authorize);
+    const response = await handleAtlasModel(request, url.pathname.slice(1), [{sha256:'${sha}',bytes:${bytes.length},paths:['fixture.glb']}, ${JSON.stringify(largest)}], env.FILES, authorize);
+    // Test transport only: workerd can reset an unread large PUT after an early
+    // response. Keep the full request and real handler/auth/result unchanged.
+    // https://github.com/cloudflare/workerd/issues/918
+    if (request.body && !request.bodyUsed) await request.body.pipeTo(new WritableStream());
+    return response;
   }};`;
   const mf = new Miniflare(convertV4MiniflareOptions({ modules: [
     { type: 'ESModule', path: resolve('tests/atlas-storage-worker.mjs'), contents: worker },
@@ -68,9 +73,10 @@ test('actual Workers R2 streams, checksums, immutable writes and protected range
       assert.equal(result.status, 422, 'actual stream bounds, independent of stated length');
       assert.equal((await request('HEAD')).status, 404);
     }
+    const bucket = await mf.getR2Bucket('FILES');
+    assert.equal((await bucket.list()).objects.length, 0, 'denied and invalid full-body uploads never store anything');
     const competing = await Promise.all([request('PUT', {}, bytes), request('PUT', {}, bytes)]);
     assert.deepEqual(competing.map(response => response.status).sort(), [200, 201], 'concurrent writers settle without overwrite or deadlock');
-    const bucket = await mf.getR2Bucket('FILES');
     const before = await bucket.head(`atlas-models/v1/${sha}.glb`);
     assert.ok(before);
     assert.equal((await request('PUT', {}, bytes)).status, 200);
