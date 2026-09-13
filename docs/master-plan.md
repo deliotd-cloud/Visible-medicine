@@ -68,6 +68,15 @@ Latest specialist-chat review reports both anterior cerebellar edges accepted an
 
 ## Ordered delivery roadmap
 
+13 September — [protected model transport](atlas-protected-delivery.md) is now
+implemented for the complete 59-model canonical source, retaining administrator
+review until revision-bound clinical release. It preserves original URLs and
+all source geometry/notices, separates Atlas from lecture/case rights, and
+provides exact build-only omission and live-delivery diagnostics. Local checks
+do not establish a deployed or learner-approved result; the next dated checkpoint
+will record actual publication, browser, GitHub and D recovery evidence. Continue
+full abdomen nested/specimen delivery and the full roadmap afterwards.
+
 13 September — independent storage is now live in the private maintenance
 bootstrap. A fresh owner-session check confirms all 59 canonical models in R2;
 all 59 also pass the installed 3D parser without altering geometry or source

@@ -2,6 +2,7 @@
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
 import { contentSecurityPolicy } from "../lib/content-security-policy";
+import { atlasDeliveryForwardUrl } from "../lib/atlas-model-delivery";
 
 interface Env {
   ASSETS: Fetcher;
@@ -193,7 +194,9 @@ const worker = {
       }, allowedWidths);
     }
 
-    const response = await handler.fetch(request, env, ctx);
+    const modelDeliveryUrl = atlasDeliveryForwardUrl(url);
+    const routedRequest = modelDeliveryUrl ? new Request(modelDeliveryUrl, request) : request;
+    const response = await handler.fetch(routedRequest, env, ctx);
     // A WebSocket response carries a runtime-only socket handle. Cloning it
     // into a normal Response would detach that handle and break the upgrade.
     if (response.status === 101) return response;
