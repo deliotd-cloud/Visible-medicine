@@ -13,10 +13,10 @@ The new review workspace requires trusted authenticated-user headers and D1 stor
 ## Integration choices
 
 The [shared regional module](REGIONAL_WEBSITE_MODULE.md) now covers head/neck and
-thorax, abdomen, pelvis and spine with their full supported nested/context views and separately
+thorax, abdomen, pelvis, spine, all six limb regions and the whole body with their full supported nested/context views and separately
 framed specimens. The existing head-neck delivery namespace is retained;
 the destination region is selected explicitly in its launch URL.
-This is four runtime directories serving eight website module entries, not eight
+This is four runtime directories serving fifteen website module entries, not fifteen
 duplicated viewers. See the dated checkpoint for actual hosted availability.
 
 The website now uses its source-bound registered storage/protected-delivery

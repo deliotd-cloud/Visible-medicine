@@ -12,17 +12,25 @@ export function modelDeliveryUrl(url: string, assetBase = ''): string {
 export function regionalStudyDeliveryUrl(url: string, region: string, assetBase = ''): string {
   if (!assetBase) return url;
   modelDeliveryUrl('/models/catalog.json', assetBase); // Same strict local-base rule.
+  const route=region==='whole-body'?'/':`/regions/${region}`;
   if (!/^[a-z]+(?:-[a-z]+)*$/.test(region) ||
-      !(url === `/regions/${region}` || url.startsWith(`/regions/${region}?`))) {
+      !(url === route || url.startsWith(`${route}?`))) {
     throw new Error('Study link is outside the contained region');
   }
-  const suffix=url.slice(`/regions/${region}`.length);
+  const suffix=url.slice(route.length);
   if(new URLSearchParams(suffix).has('region'))throw new Error('Unexpected regional routing field');
   // Keep existing single-region links stable. Shared regional deliveries carry
   // the destination explicitly, so a thorax study cannot open the default head.
   const query=assetBase.split('/').at(-1)===region ? suffix
     : `?region=${encodeURIComponent(region)}${suffix ? '&'+suffix.slice(1) : ''}`;
   return `${assetBase}/index.html${query}`;
+}
+
+export const containedLimbRegions=['pelvis','thigh','leg','foot'] as const;
+export type ContainedLimbStudyBase=`/atlas-runtime/head-neck/index.html?region=${typeof containedLimbRegions[number]}`;
+export function containedLimbStudyBase(region:string):ContainedLimbStudyBase {
+  if(!containedLimbRegions.some(value=>value===region))throw new Error('Unsupported lower-limb container');
+  return `/atlas-runtime/head-neck/index.html?region=${region}` as ContainedLimbStudyBase;
 }
 
 /** Keep separately licensed/source-framed specimens separate inside the host.

@@ -8,14 +8,18 @@ import {headNeckModuleInputs,root} from './head-neck-module-inputs.mjs';
 const compiled=await build({stdin:{contents:"export * from './lib/model-delivery';export * from './lib/study-links';export * from './integration/head-neck/regions';export {bodyDisplayCatalog} from './lib/body-display-catalog';",resolveDir:root,loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
 const api=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
 const {plan,models}=await headNeckModuleInputs(true);
-assert.deepEqual(plan.scopes.map(s=>[s.region,s.regionalIds.length,s.nestedTargets.length]),[['head-neck',290,75],['thorax',157,9],['abdomen',106,16],['pelvis',81,4],['spine',115,0]]);
-assert.equal(models.length,93);assert.equal(models.reduce((n,m)=>n+m.bytes,0),176559252);
+const retained=[['head-neck',290,75],['thorax',157,9],['abdomen',106,16],['pelvis',81,4],['spine',115,0]];
+assert.deepEqual(plan.scopes.slice(0,5).map(s=>[s.region,s.regionalIds.length,s.nestedTargets.length]),retained);
+assert.deepEqual(plan.scopes.slice(5).map(s=>[s.region,s.regionalIds.length,s.nestedTargets.length]),[['shoulder-arm',115,0],['forearm',86,0],['hand',124,0],['thigh',95,4],['leg',76,4],['foot',122,0],['whole-body',1101,104]]);
+assert.equal(models.length,130);assert.equal(models.reduce((n,m)=>n+m.bytes,0),198121124);
+const oldModels=new Map(plan.scopes.slice(0,5).flatMap(s=>s.bundles).map(b=>[b.url,b]));
+assert.equal(oldModels.size,93);assert.equal([...oldModels.values()].reduce((n,b)=>n+b.bytes,0),176559252);
 const raw=JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json',import.meta.url),'utf8'));
 const original=JSON.stringify(raw),catalog=api.bodyDisplayCatalog(raw),base='/atlas-runtime/head-neck';
 let links=0;
 for(const scope of plan.scopes){
   for(const bundle of scope.bundles)assert(plan.bundles.some(b=>b.url===bundle.url&&b.sha256===bundle.sha256&&b.bytes===bundle.bytes));
-  assert.deepEqual(scope.regionalIds,catalog.structures.filter(s=>s.regions.includes(scope.region)).map(s=>s.id));
+  assert.deepEqual(scope.regionalIds,catalog.structures.filter(s=>scope.region==='whole-body'||s.regions.includes(scope.region)).map(s=>s.id));
   for(const item of [...scope.regionalIds.map(id=>({id})),...scope.nestedTargets.map(t=>({id:t.parentId,nested:t}))]){
     const link=api.makeStudyLink(catalog,scope.region,item.id,'both',null,item.nested);assert(link);
     const delivered=api.regionalStudyDeliveryUrl(link,scope.region,base),url=new URL(delivered,'https://example.invalid');
@@ -27,19 +31,19 @@ for(const scope of plan.scopes){
     assert.equal(api.parseStudyLink({...params,structure:[params.structure,params.structure]}).status,'invalid');links++;
   }
 }
-assert.equal(links,853);assert.equal(JSON.stringify(raw),original);
-for(const query of ['region=','region=hand','region=__proto__','region=THORAX','region=head-neck&region=thorax','region=thorax&region=thorax','region=../thorax'])assert.equal(api.parseRegionalModule(new URLSearchParams(query)),null);
+assert.equal(links,2684);assert.equal(JSON.stringify(raw),original);
+for(const query of ['region=','region=not-a-region','region=__proto__','region=THORAX','region=head-neck&region=thorax','region=thorax&region=thorax','region=../thorax'])assert.equal(api.parseRegionalModule(new URLSearchParams(query)),null);
 assert.equal(api.parseRegionalModule(new URLSearchParams()),'head-neck');
 assert.throws(()=>api.regionalStudyDeliveryUrl('/regions/thorax?region=head-neck','thorax',base),/routing field/);
 assert.equal(api.regionalStudyDeliveryUrl('/regions/thorax','thorax',''),'/regions/thorax');
 const c=await componentBuild({entryPoints:['integration/head-neck/framework.tsx'],bundle:true,write:false,format:'cjs',platform:'node'});
 const module={exports:{}},require=createRequire(import.meta.url);runInNewContext(c.outputFiles[0].text,{module,exports:module.exports,require,URL,URLSearchParams});
 const React=require('react'),render=require('react-dom/server').renderToStaticMarkup;
-for(const [href,want]of [['/regions/thorax',base+'/index.html?region=thorax'],['/regions/head-neck',base+'/index.html'],['/regions/abdomen',base+'/index.html?region=abdomen'],['/regions/pelvis',base+'/index.html?region=pelvis'],['/regions/spine',base+'/index.html?region=spine']]){
-  const html=render(React.createElement(module.exports.Link,{href},'Study'));assert(html.includes('href="'+want+'"'));assert(!html.includes('target="_blank"'));
+for(const [region,item]of Object.entries(api.regionalModules).filter(([region])=>region!=='whole-body')){
+  const html=render(React.createElement(module.exports.Link,{href:'/regions/'+region},'Study'));assert(html.includes('href="'+item.website+'"'));assert(html.includes('target="_top"'));assert(!html.includes('target="_blank"'));
 }
 // A heart selection must never be silently substituted into head/neck.
 const heart=catalog.structures.find(s=>s.name==='Heart');assert(heart);
 const link=api.makeStudyLink(catalog,'thorax',heart.id,'both');assert(link);
 assert.equal(api.resolveStudyLink(catalog,'head-neck',api.parseStudyLink(Object.fromEntries(new URL(link,'https://example.invalid').searchParams))).status,'rejected');
-console.log(JSON.stringify({scopes:plan.scopes.map(s=>({region:s.region,root:s.regionalIds.length,nested:s.nestedTargets.length})),uniqueModels:models.length,modelBytes:models.reduce((n,m)=>n+m.bytes,0),sourceRoundTrips:links,staleAndDuplicateRejections:links*2,invalidRegionQueries:7,actualLocalNavigationRenders:5,privateData:false,clinicalApproval:false}));
+console.log(JSON.stringify({scopes:plan.scopes.map(s=>({region:s.region,root:s.regionalIds.length,nested:s.nestedTargets.length})),uniqueModels:models.length,retainedModelCount:oldModels.size,modelBytes:models.reduce((n,m)=>n+m.bytes,0),sourceRoundTrips:links,staleAndDuplicateRejections:links*2,invalidRegionQueries:7,actualHostNavigationRenders:11,privateData:false,clinicalApproval:false}));

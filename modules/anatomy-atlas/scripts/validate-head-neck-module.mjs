@@ -39,7 +39,7 @@ for(const importedModule of [false,true]){
   await stream.allReady;
   assert((await new Response(stream).text()).includes('Nested study ready'),'Both next/dynamic loader shapes render');
 }
-for(const [href,destination,target]of [['/','/atlas','_top'],['/shoulder','/atlas/shoulder-3d','_top'],['/regions/head-neck',base+'/index.html',null],['/regions/hand','https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site/regions/hand','_blank']]){
+for(const [href,destination,target]of [['/','/atlas','_top'],['/shoulder','/atlas/shoulder-3d','_top'],['/regions/head-neck','/atlas/head-neck-3d','_top'],['/regions/hand','/atlas/3d?region=hand','_top']]){
   const html=render(React.createElement(module.exports.Link,{href},'Open'));assert(html.includes('href="'+destination+'"'));if(target)assert(html.includes('target="'+target+'"'));
 }
 console.log(JSON.stringify({regionalSelections:290,nestedSelections:75,verifiedModels:models.length,modelBytes:models.reduce((n,b)=>n+b.bytes,0),roundTripLinks:links,staleAndDuplicateRejections:links*2,actualNavigationRenders:4,clinicalApproval:false},null,2));

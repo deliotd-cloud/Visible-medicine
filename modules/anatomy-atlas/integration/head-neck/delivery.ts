@@ -25,7 +25,7 @@ import {regionalModules,type RegionalModule} from './regions';
 export function regionalDelivery(raw:BodyCatalog,region:RegionalModule) {
   if(!Object.hasOwn(regionalModules,region))throw Error('Region needs delivery review');
   const catalog=bodyDisplayCatalog(raw);
-  const regional=catalog.structures.filter(s=>s.regions.includes(region));
+  const regional=catalog.structures.filter(s=>region==='whole-body'||s.regions.includes(region));
   const scoped={...catalog,structures:regional};
   const targets=nestedStudyTargets(scoped);
   const views:BodyCatalog[]=[scoped];
@@ -64,7 +64,9 @@ export function regionalDelivery(raw:BodyCatalog,region:RegionalModule) {
   }
   const specimens=region==='abdomen'?[abdominalWallDefinition,hraRenalDefinition]
     :region==='spine'?[backLayersDefinition]
-    :region==='pelvis'?[hraPelvisDefinition,...Object.values(limbDefinitions)]:[];
+    :region==='pelvis'?[hraPelvisDefinition,...Object.values(limbDefinitions)]
+    :['thigh','leg','foot'].includes(region)?Object.values(limbDefinitions)
+    :region==='whole-body'?[backLayersDefinition,hraPelvisDefinition,hraRenalDefinition]:[];
   // Distinct catalogues/frames and licences; never fit these specimens into v4.
   views.push(...specimens.map(specimen=>specimen.catalog));
   const bundles=new Map<string,BodyCatalog['bundles'][number]>();

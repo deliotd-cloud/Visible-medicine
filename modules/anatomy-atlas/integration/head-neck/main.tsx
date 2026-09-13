@@ -29,7 +29,7 @@ createRoot(document.getElementById('root')!).render(
     ? specimen.status==='ready'
       ? <Suspense fallback={<p role="status">Loading the separate source specimen…</p>}>
           {specimen.kind==='lower-limb'
-            ? <LowerLimb assetBase="/atlas-runtime/head-neck" initialRegion="pelvis" initialLink={specimen.link} onClose={backToRegion}/>
+            ? <LowerLimb assetBase="/atlas-runtime/head-neck" initialRegion={region} initialLink={specimen.link} onClose={backToRegion}/>
             : specimen.kind==='back-layers'
             ? <BackLayers assetBase="/atlas-runtime/head-neck" initialLink={specimen.link} onClose={backToRegion}/>
             : specimen.kind==='female-pelvis'

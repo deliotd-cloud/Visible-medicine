@@ -8,8 +8,9 @@ import type { SpecimenDefinition } from '@/lib/independent-specimen';
 import { specimenTopicLabels, type SpecimenTopic } from '@/lib/specimen-links';
 import { availableSpecimenTopics } from '@/lib/um-limb-teaching';
 import type { DissectionView } from './dissection-data';
+import type {ContainedLimbStudyBase} from '@/lib/model-delivery';
 
-export function SpecimenStudyLink({ definition, selectedId, studyId, view, basePath, reviewAvailable = true }: { definition: SpecimenDefinition; selectedId: string; studyId: string | null; view: DissectionView; basePath?: '/atlas-runtime/lower-limb/index.html'|'/atlas-runtime/head-neck/index.html?region=pelvis'; reviewAvailable?: boolean }) {
+export function SpecimenStudyLink({ definition, selectedId, studyId, view, basePath, reviewAvailable = true }: { definition: SpecimenDefinition; selectedId: string; studyId: string | null; view: DissectionView; basePath?: '/atlas-runtime/lower-limb/index.html'|ContainedLimbStudyBase; reviewAvailable?: boolean }) {
   const [topic, setTopic] = useState<SpecimenTopic | null>(null);
   const topics = availableSpecimenTopics(definition, selectedId);
   const canonical = makeSpecimenLink(definition, { selectedId, studyId, view, topic });

@@ -12,7 +12,13 @@ export async function headNeckModuleInputs(shared=false){
   const plan=shared?api.regionalWebsiteDelivery(raw):api.headNeckDelivery(raw);
   if(plan.license!=='CC BY 4.0' && plan.license!=='CC-BY-4.0')throw Error('Re-audit changed anatomy licence: '+plan.license);
   const scopes=shared?plan.scopes:[plan];
-  const independent=scopes.flatMap(scope=>scope.independentSpecimens);
+  const bySpecimen=new Map();
+  for(const specimen of scopes.flatMap(scope=>scope.independentSpecimens)){
+    const previous=bySpecimen.get(specimen.key);
+    if(previous&&JSON.stringify(previous)!==JSON.stringify(specimen))throw Error('Conflicting independent specimen scope');
+    bySpecimen.set(specimen.key,specimen);
+  }
+  const independent=[...bySpecimen.values()];
   const expected=shared?[
     ['bp3d3-abdominal-wall','CC BY-SA 2.1 JP','bodyparts3d-v3/abdominal-wall'],
     ['hra-united-female-v1.10-kidneys','CC BY 4.0','hra-renal'],

@@ -1,22 +1,25 @@
 import assert from 'node:assert/strict';
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-import { bodyDisplayCatalog } from '../lib/body-display-catalog.ts';
-import {
+import { fileURLToPath } from 'node:url';
+import { build } from './workspace-test-build.mjs';
+// Resolve the application's extensionless TypeScript graph through the same
+// confined builder as the regional delivery tests. Keep every assertion below.
+const compiled = await build({stdin:{contents: "export * from './lib/body-display-catalog';export * from './lib/study-links';export * from './app/dissection-data';",resolveDir:fileURLToPath(new URL('../',import.meta.url)),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
+const {
+  bodyDisplayCatalog,
   parseStudyLink,
   makeStudyLink,
   resolveStudyLink,
   studyDestinations,
   bodyStudyScope,
   studyLinkKey,
-} from '../lib/study-links.ts';
-import {
   dissectionProfiles,
   dissectionReducer,
   initialDissection,
   resolveDissection,
   matchesRule,
-} from '../app/dissection-data.ts';
+} = await import('data:text/javascript;base64,' + Buffer.from(compiled.outputFiles[0].text).toString('base64'));
 // Check the installed route runtime's actual duplicate-parameter collection too.
 import { collectAppPageSearchParams } from '../node_modules/vinext/dist/server/app-page-head.js';
 

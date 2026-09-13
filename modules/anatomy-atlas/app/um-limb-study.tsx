@@ -9,6 +9,7 @@ import { KneeSpecimenView } from './um-knee-study';
 import { noSpecimenLink, type ParsedSpecimenLink } from '@/lib/specimen-links';
 import { resolveSpecimenLink } from '@/lib/um-limb-navigation';
 import {SpecimenStudyLink} from './specimen-study-link';
+import {containedLimbStudyBase} from '@/lib/model-delivery';
 
 export default function LimbSpecimenDialog({ initialRegion, initialLink = noSpecimenLink, onClose,assetBase='' }: { initialRegion: string; initialLink?: ParsedSpecimenLink; onClose: () => void;assetBase?:string }) {
   const resolved = resolveSpecimenLink(initialLink);
@@ -34,7 +35,7 @@ export default function LimbSpecimenDialog({ initialRegion, initialLink = noSpec
         <p>Choose another region above, or explicitly open the current source view to make a new link.</p>
         <Button variant="outline" onClick={() => setIgnoreLink(true)}>Open current source view</Button>
       </section> : <KneeSpecimenView key={scope} assetBase={assetBase} specimen={specimen} initialNavigation={!ignoreLink && resolved.status === 'ready' ? resolved : undefined}
-        studyLink={assetBase?(definition,selectedId,studyId,view)=><SpecimenStudyLink definition={definition} selectedId={selectedId} studyId={studyId} view={view} basePath="/atlas-runtime/head-neck/index.html?region=pelvis" reviewAvailable={false}/>:undefined} />}
+        studyLink={assetBase?(definition,selectedId,studyId,view)=><SpecimenStudyLink definition={definition} selectedId={selectedId} studyId={studyId} view={view} basePath={containedLimbStudyBase(initialRegion)} reviewAvailable={false}/>:undefined} />}
     </DialogContent>
   </Dialog>;
 }

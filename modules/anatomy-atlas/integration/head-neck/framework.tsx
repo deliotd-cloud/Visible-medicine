@@ -1,11 +1,15 @@
 import { lazy, Suspense, type AnchorHTMLAttributes, type ComponentType, type ImgHTMLAttributes } from 'react';
 import { regionalStudyDeliveryUrl } from '../../lib/model-delivery';
-import { regionalModules } from './regions';
+import { regionalModules,regionalHostHref } from './regions';
 export const assetBase = '/atlas-runtime/head-neck';
 
 // Only navigation is relocated. Anatomical IDs, bundle hashes and coordinate frames stay canonical.
 export function Link({href,children,prefetch:_prefetch,...props}: AnchorHTMLAttributes<HTMLAnchorElement> & {prefetch?:boolean}) {
-  const localRegion=Object.keys(regionalModules).find(region=>href===`/regions/${region}`||href?.startsWith(`/regions/${region}?`));
+  const localRegion=href?.startsWith('/?')?'whole-body':Object.keys(regionalModules).find(region=>region!=='whole-body'&&(href===`/regions/${region}`||href?.startsWith(`/regions/${region}?`)));
+  // Bare cross-region navigation must update the outer heading and selected
+  // region bar. Source-bound study URLs remain within the same module.
+  if (localRegion && href===`/regions/${localRegion}`)
+    return <a {...props} href={regionalHostHref(localRegion)!} target="_top">{children}</a>;
   if (localRegion && href)
     return <a {...props} href={regionalStudyDeliveryUrl(href,localRegion,assetBase)}>{children}</a>;
   if (href === '/' || href === '/shoulder')
