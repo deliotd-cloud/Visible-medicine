@@ -1,5 +1,58 @@
 # Third-party notices
 
+## Thoracic branch imaging — 13 September 2026
+
+Original MIT resolver code and concise factual drafts add 50 placements to 26
+existing vessels. Nineteen publication links are reading references, not imported
+figures, scans, article text, tables, models or redistribution permissions.
+No new asset, dependency, paid API or mandatory fee is introduced. All source
+credits and holds remain. See [scope and review](../docs/THORACIC_BRANCH_IMAGING.md).
+
+## Central vessel imaging teaching — 13 September 2026
+
+Original MIT resolver code and concise factual drafts add 79 placements for 29
+existing vessels. Twenty-seven publication/society links are reading references,
+not imported articles, figures, scans, models or redistribution permissions.
+No new dependency, asset, paid API or mandatory service is introduced. Existing
+source credits, licences and holds remain. See [scope and review](../docs/CENTRAL_VESSEL_IMAGING.md).
+
+## Chest and abdominal organ imaging teaching — 13 September 2026
+
+Original MIT resolver code and concise factual drafts add 42 teaching placements
+for 15 existing selections. Nineteen publication/society reading references are
+not imported articles, diagrams, scans, tables or datasets and do not grant
+redistribution rights. No model, texture, font, dependency, paid API or mandatory
+service is introduced. All existing asset notices and source holds remain.
+See [scope, reading references and review](../docs/THORACOABDOMINAL_ORGAN_IMAGING.md).
+
+## Hand and foot bone CT/MRI teaching — 13 September 2026
+
+Original MIT resolver code and concise factual drafts extend 76 existing bone
+selections. Ten primary-publication reading references are not imported figures,
+articles, tables, scans, datasets or redistribution permissions. No dependency,
+font, texture, model, paid API or mandatory service is introduced. Existing
+model credits and change notices remain intact. The grouped foot-sesamoid
+identities remain unresolved. See [scope and review](../docs/ACRAL_BONE_IMAGING.md).
+
+## Skull, facial-bone and hyoid CT/MRI teaching — 13 September 2026
+
+Original concise factual notes and MIT resolver code add 46 draft placements
+to 23 existing bone selections. Ten primary publications are reading references,
+not imported articles, figures, tables, scans, diagrams or anatomical datasets.
+No dependency, font, texture, model, paid API or mandatory service is added.
+Existing BodyParts3D attribution and change notices remain unchanged. Reference
+access is not permission to redistribute publisher images. See
+[scope, references and pending clinical review](../docs/CRANIAL_BONE_IMAGING.md).
+
+## Neck/upper-back attachment relationships — 13 September 2026
+
+Original MIT interaction code and concise factual labels connect 18 existing
+muscle selections to 13 existing bones. UAMS/TTUHSC and two primary anatomical
+studies are reading references, not imported tables, figures or datasets. No
+new dependency, font, mesh, texture, private scan, paid API or service is added.
+Existing BodyParts3D CC BY 4.0 attribution/change notices remain unchanged.
+See [scope, sources and pending review](../docs/NECK_ATTACHMENT_RELATIONSHIPS.md).
+
 ## Chest/abdominal muscle imaging teaching — 13 September 2026
 
 Original concise factual drafts extend 12 existing source selections. The 13
@@ -527,6 +580,18 @@ The ocular extension adds ten original BodyParts3D v4 ISA components under the s
 The dental/orbital extension adds 32 official BodyParts3D v4 source definitions/components under the same CC BY 4.0 grant, with exact evidence in `content/head-detail-source-audit.json`. It includes no other diagram, font, texture, numbering-system dataset or dependency. Preserve attribution for the new derivatives; see `BODYPARTS3D_FULL_BODY.md` and `docs/HEAD_DETAIL.md`. Brief original teaching summaries cite factual resources only, without redistributing their images or authored table datasets.
 
 Female pelvic support teaching (12 September 2026) adds original brief factual synthesis and citation links to Texas Tech anatomy, ESHRE and ESUR guidance. No reference diagrams, articles, tables, clinical datasets or quoted passages are imported. Those sources retain their own rights; citing them grants no redistribution licence. No package, model, font, texture or paid service is added. The HRA model and its CC BY 4.0 notice remain unchanged. See `docs/FEMALE_PELVIC_SUPPORT_TEACHING.md`.
+
+Shoulder-and-arm muscle imaging teaching (13 September 2026) adds original brief synthesis and reading links to ESSR, ACR/RSNA and named anatomy/imaging publications. Existing authored attachment notes are reused. No publisher prose, figure, scan, table, model, dataset, acquisition protocol or question bank is redistributed; reading references do not grant commercial reuse of linked material. Original notes/code retain MIT terms and existing BodyParts3D CC BY 4.0 notices remain. No dependency, font, texture, paid API or mandatory service is added. See `docs/SHOULDER_ARM_MUSCLE_IMAGING.md` for the exact draft scope and radiologist-review requirements.
+
+Spine/pelvic muscle imaging teaching (13 September 2026) adds original brief synthesis and reading links to ACR/RSNA and cited primary imaging/anatomical publications. Existing original attachment teaching is reused. No publisher prose, figures, tables, scan, ultrasound image, model, protocol or dataset is redistributed; citation does not grant commercial reuse of linked material. Original notes/code retain MIT terms, and all existing model licences, attribution and source holds remain unchanged. No dependency, font, texture, paid API or mandatory service is added. See `docs/SPINE_PELVIC_MUSCLE_IMAGING.md` for source scope and radiologist-review gates.
+
+Orbital/neck muscle imaging teaching (13 September 2026) adds original brief
+orientation notes and factual reading links, with existing attachment teaching
+reused. No publisher article, figure, table, scan, model or protocol is imported;
+open access does not grant redistribution rights. Original notes/code retain MIT
+terms, and existing BodyParts3D notices/source holds remain unchanged. No new
+dependency, font, texture, paid API or mandatory fee. See
+`docs/ORBITAL_NECK_MUSCLE_IMAGING.md` for the exact draft and source scope.
 
 Run:
 

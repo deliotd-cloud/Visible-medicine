@@ -17,19 +17,19 @@
   },
   {
     "path": "app/atlas-panel.css",
-    "sha256": "c6c4fcdc567a49fa13239439711cbec2bf0cb92dd252fb1645ad2b66fd657cde"
+    "sha256": "6a2c74a43745e59ae955fceac7b563af9fbf2a7296d74ad3aa85bc91ee3bb90f"
   },
   {
     "path": "app/atlas-workspace.css",
-    "sha256": "5cad6203770ad4201dca8fb550208753b60f9938088dfeacc2083585990a8ce5"
+    "sha256": "c3a1128758c8e8afa6e475ce9d3f02939410a54cc63171529f8e25c01c0dc69e"
   },
   {
     "path": "app/atlas-workspace.tsx",
-    "sha256": "54df872c82b3d194d16afdeceaa0801fd3c85dff16ac4aed325f0dff35fb92c8"
+    "sha256": "09cca795f30bea2587ac8ba9e0f79b09ebb70efb1666e036dcdeeab30d34a5e5"
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "477d2b600d1d74226a72561f1c5148f661c0e7133c5227f10eed6ebdc73e7676"
+    "sha256": "231e2589eb698caf52c47c795bf0d8eb8a50a909c3985616c697ef0af34cb0f3"
   },
   {
     "path": "app/body-explorer.css",
@@ -105,7 +105,7 @@
   },
   {
     "path": "app/shoulder-explorer.tsx",
-    "sha256": "a53a4b2e1352edac84d0eed9ba17db2088025ea08bf685dc9f8e2caaa84d24ac"
+    "sha256": "3eab9ca1fa10b5207bc0ee6f2e38893488796477f60375b9cf22e4c013053ed3"
   },
   {
     "path": "app/shoulder-workspace.css",
@@ -118,6 +118,10 @@
   {
     "path": "app/study-views.tsx",
     "sha256": "8c8c84f855d0516964a6e970c3d421d926dc964c0dd2f41bea5da75e446bf6dc"
+  },
+  {
+    "path": "app/workspace-session.ts",
+    "sha256": "7a2a73775b9eebebc50df257cc520f2f33499ebb7130f496a4b2cdfb46fc379a"
   },
   {
     "path": "components/ui/button.tsx",
@@ -180,6 +184,14 @@
     "sha256": "a0a0f57b5061048a8765cd9899c5467a98b66c81184b784ce0a93e710417a5ef"
   },
   {
+    "path": "content/acral-bone-imaging-pins.json",
+    "sha256": "863aa9a374ddd086a2f0a7fe56335582a94431ad98a69ea6caa7fbc4d952db73"
+  },
+  {
+    "path": "content/acral-bone-imaging.ts",
+    "sha256": "591ecb75daf091a4d6e00945e169724245ea6f0514f6ae8778b285f08d8b9f9e"
+  },
+  {
     "path": "content/arm-vascular-studies.ts",
     "sha256": "4def11852e5843a9ee57a298d4f69758f0b7bd2451f627a951985ca90bb15d0d"
   },
@@ -196,12 +208,28 @@
     "sha256": "95ebfa3cc9e0da134286ee682fc5ec7194e3c9ac81d4e8dfd00e8706311145d5"
   },
   {
+    "path": "content/central-vessel-imaging-pins.json",
+    "sha256": "29610e12ec6864a4131874e0d3f6520597af3e65179fd0f009b216aff1371a63"
+  },
+  {
+    "path": "content/central-vessel-imaging.ts",
+    "sha256": "5fb6804e811bc770dd417372855ac59abef1ce8efda43fcae9c3b314a00b1001"
+  },
+  {
     "path": "content/chest-wall-muscle-imaging-pins.json",
     "sha256": "d8e371ae1188185393a28f5a70109ba2eb5f62b99cb7655e03bf4c2d50d9709d"
   },
   {
     "path": "content/chest-wall-muscle-imaging.ts",
     "sha256": "3d5d7552cb1d0ffa75fc031acf2b147edbb65b66b35ee76799815c0bbbf75e5c"
+  },
+  {
+    "path": "content/cranial-bone-imaging-pins.json",
+    "sha256": "c45e8bb107ee02a976c43fd47cc77305391e112fdeaf84c51e1d2bc3f7850be0"
+  },
+  {
+    "path": "content/cranial-bone-imaging.ts",
+    "sha256": "61087027fac4511522badf36e39e1958ceb4b502750285498aa11ad3e3df0b24"
   },
   {
     "path": "content/deferent-duct-study.ts",
@@ -308,6 +336,14 @@
     "sha256": "c7de12b3f630344c3ba9feb273032a44d8b72fc599be2e1eee3e32b3123516f2"
   },
   {
+    "path": "content/orbital-neck-muscle-imaging-pins.json",
+    "sha256": "fb352a056f2fd5ae7693c70ef9c5f3083f358613d3cb78850cd41697371fb6d4"
+  },
+  {
+    "path": "content/orbital-neck-muscle-imaging.ts",
+    "sha256": "5eb532c3b631fb996071bb5736139d2400f55712b8fded8e81a8c7f78c3910fe"
+  },
+  {
     "path": "content/pelvic-organ-imaging-pins.json",
     "sha256": "244a6414a66c44ddbda0b923475a8b64e278557b4894d8ef13252a952bdb9e97"
   },
@@ -325,7 +361,15 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "24ab9be82f718bcad32f76dd942eda9067ec1d2e3a03a928d19f13c11392a5d0"
+    "sha256": "affe43c6b546f55c4486fd0cc7993012aed27d34ffe04af244a8f2ddbd3b71a0"
+  },
+  {
+    "path": "content/shoulder-arm-muscle-imaging-pins.json",
+    "sha256": "c19f5a4d20cbd492c512529ef70c7681c5bce7b36343e0bddf75778f4d7e8813"
+  },
+  {
+    "path": "content/shoulder-arm-muscle-imaging.ts",
+    "sha256": "f1362fbc88cebd958073b476b3aa44eae847091fe265e9194971ae5e4360d0c3"
   },
   {
     "path": "content/shoulder-xray-bindings.json",
@@ -338,6 +382,14 @@
   {
     "path": "content/spine-imaging-pins.json",
     "sha256": "4976164571345045f0a0c8d1a16f12afa4122858ecd522fc9ea3949ff18bc6de"
+  },
+  {
+    "path": "content/spine-pelvic-muscle-imaging-pins.json",
+    "sha256": "909170521ff3e07d02ca4a6f9e37b3b21085ab701a8005fc723a2a91c028d32d"
+  },
+  {
+    "path": "content/spine-pelvic-muscle-imaging.ts",
+    "sha256": "199970087d2e10d264c3c86c91cbe1151116a32f7b51637d1cf583586ac13416"
   },
   {
     "path": "content/tarsal-imaging-concepts.ts",
@@ -366,6 +418,22 @@
   {
     "path": "content/thoracic-bone-imaging.ts",
     "sha256": "1929be45d018e3803ac092f803e87e26f9db7e8458c6046e3d404383ef0941c2"
+  },
+  {
+    "path": "content/thoracic-branch-imaging-pins.json",
+    "sha256": "d178da82b85301f1dd0fa00c052b7d24d68860c4700db078c370203b1430fa5e"
+  },
+  {
+    "path": "content/thoracic-branch-imaging.ts",
+    "sha256": "dbcdafccd6d506138015fc394675b9a3c53ce6c7166577c0a2c1d2fdbe900219"
+  },
+  {
+    "path": "content/thoracoabdominal-organ-imaging-pins.json",
+    "sha256": "e8c92ef7101f083c10c75c0b109c5bcd58197fe5a307ffd8203fcfee8d66a129"
+  },
+  {
+    "path": "content/thoracoabdominal-organ-imaging.ts",
+    "sha256": "daf1e872df2e2f1d1c183000744080a87d8fdc794e671f22d1828870265375c6"
   },
   {
     "path": "content/upper-vessel-imaging-pins.json",
@@ -434,6 +502,10 @@
   {
     "path": "lib/acral-bone-curriculum.ts",
     "sha256": "c6d1a50721378ca17916b37d8fa9241eedf5e3e0b331f25c2e0393b3287211e5"
+  },
+  {
+    "path": "lib/acral-bone-imaging.ts",
+    "sha256": "82dc48c9c76ba0c65b81a71ab7b85cff991dd70e9e45296817969c3b736b3927"
   },
   {
     "path": "lib/acral-bone-studies.ts",
@@ -528,6 +600,10 @@
     "sha256": "e5247f94660df1d974ee98cba7b705b02e3f5da316f9215cb86237e838d94b76"
   },
   {
+    "path": "lib/central-vessel-imaging.ts",
+    "sha256": "92cc59bf3f16daddd09b9e1261a23454e679f3a36f6c6c317564173c6dc08558"
+  },
+  {
     "path": "lib/cerebral.ts",
     "sha256": "10138a8bad86e98cc03dc458c3d9b7245dace9369ded56c980623b15c6d6fdff"
   },
@@ -566,6 +642,10 @@
   {
     "path": "lib/cranial-bone-curriculum.ts",
     "sha256": "b84405a1a36b0f9dcf2066c89f91b0e5066298e288c1924cdf8aa643934c833c"
+  },
+  {
+    "path": "lib/cranial-bone-imaging.ts",
+    "sha256": "4b55a1d4824b5181185399093458888bf6854255c9f29a7731b0bc5410aa5848"
   },
   {
     "path": "lib/cricothyroid.ts",
@@ -844,6 +924,10 @@
     "sha256": "1fded41a546a647e2c0db94ad1537bad6b1cacd62d2ff4ad14413707b98e3c23"
   },
   {
+    "path": "lib/orbital-neck-muscle-imaging.ts",
+    "sha256": "c688abf58ce9e17cda65917108dcbfd7cac9f125f0c049c4da4254e29e761e09"
+  },
+  {
     "path": "lib/orbital-nerve-curriculum.ts",
     "sha256": "a9fe89f754f6d49ea78f9a1e8600299e0251f5c30e5384685f68c35c27d75c95"
   },
@@ -944,6 +1028,10 @@
     "sha256": "1f3ed2b25a8dd8ee8f80291f92bc79760c70aaeeb86e6d2bf77ca63082714f4e"
   },
   {
+    "path": "lib/shoulder-arm-muscle-imaging.ts",
+    "sha256": "9c9c4fbd877ecc5afc19ce7462e4b6650e38db3e479dfafa1d4f4508b06424d5"
+  },
+  {
     "path": "lib/shoulder-arm-vessel-clinical-curriculum.ts",
     "sha256": "b2d3a2a32e40fa2bfc6e6b454cd5023583506000627fde80173a28b0a3b9624f"
   },
@@ -966,6 +1054,10 @@
   {
     "path": "lib/spine-imaging.ts",
     "sha256": "356b143c89bbf974c1b588463808354cac4a317de3eaf4458f7e70209ba66394"
+  },
+  {
+    "path": "lib/spine-pelvic-muscle-imaging.ts",
+    "sha256": "873607de42973b82b281ac4b70e6301c24a3d9bef4203f6e822198dc4fa26b9c"
   },
   {
     "path": "lib/study-camera.ts",
@@ -1028,6 +1120,10 @@
     "sha256": "cd980735bb04d2a76a899a166ecd3315e70fdfc0bc397f90baea168cb7e02ba8"
   },
   {
+    "path": "lib/thoracic-branch-imaging.ts",
+    "sha256": "ea501db08476c08242a8c22fefd68352ff1d55fba3a9c02cf3f9cd4bff688bea"
+  },
+  {
     "path": "lib/thoracic-organ-clinical-curriculum.ts",
     "sha256": "6996aea073a7c5e20dbf33a1d607d261eba35051ef8d983d177c6d0704c3d6dc"
   },
@@ -1038,6 +1134,10 @@
   {
     "path": "lib/thoracic-vessel-curriculum.ts",
     "sha256": "d05924f41b4921cc3d8c3dd97c5171c88ac8f4f949d9ce7cddcc715eb647aac7"
+  },
+  {
+    "path": "lib/thoracoabdominal-organ-imaging.ts",
+    "sha256": "2048fd644d43721614d44b749511e3f877623873391edc227f70994f2e81ec08"
   },
   {
     "path": "lib/trunk-clinical-curriculum.ts",

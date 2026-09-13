@@ -2,6 +2,36 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 14 September — distinct Explore, Dissect and Practice modes
+
+Atlas `6786ed3c723cba41a04b747d2be742c7e0a2b0ab` separates assembled
+exploration from dissection in both the dedicated shoulder and the shared
+regional/whole-body module. Explore keeps camera, systems, selection/isolation,
+labels and Anatomy/Clinical/Imaging notes. Dissect owns layer removal, history,
+explode/extract, cutaways, relationship studies and saved dissection views.
+Practice remains the formative exercise workspace. Basic navigation and notes
+are shared; selection survives mode switches. Independent in-memory display
+snapshots preserve the saved dissection while Explore returns to assembled
+anatomy. Bookmarks remain device-local; changing regions/reloading is not a
+persistent session. The Explore toolbar shrinks to its remaining controls.
+
+Actual hook lifecycle, 108 shoulder renders/288 handlers, navigation, nested
+study links, history, selection visibility, saved-view and review tests pass.
+Desktop/mobile head-neck and desktop shoulder checks cover assembled return,
+restored separation, undo, selection, drawers and practice entry/exit. Three
+older broad harnesses contain stale baseline assumptions, documented in the
+Atlas `docs/EXPLORE_DISSECT_WORKSPACES.md`; they are not claimed passing.
+TypeScript, standalone and both module builds pass. Website verification,
+publication and exact GitHub/D recovery evidence are in the dated checkpoint.
+
+The homepage, modality catalogue, all 131 model objects/137 paths and teaching
+content remain unchanged. No scans, dependencies, payment/access rules or
+clinical approvals are added. Review fingerprints include the new session
+logic. Full Atlas goal remains active; the unfinished abdominal-branch teaching
+draft is preserved separately, not included in this UI release. Continue it
+after this explicit interface request, then wider anatomy and cleared Education
+integration with independent Atlas/case/lecture entitlements.
+
 ## 14 September — thoracic branch imaging
 
 Atlas `193de0e4273fee3ae69cf3f4402b74b6cde5e118` adds 50 original draft
