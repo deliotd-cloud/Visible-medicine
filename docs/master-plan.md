@@ -77,6 +77,22 @@ Latest specialist-chat review reports both anterior cerebellar edges accepted an
 
 ## Ordered delivery roadmap
 
+13 September — native MRI follow-up: the existing internal import checker was
+tested with tiny synthetic anisotropic and signed oblique packets, not patient
+data. A reproduced Reset-display bug now clears edited/unsubmitted fields even
+when the applied window is already the default. Desktop/phone samples confirm
+native aspect, source-space samples, slice controls, invalid-file recovery and
+clear/reopen behaviour. Seventy-one component/format/lifecycle checks and the
+unchanged 78 CT checks pass; delayed cancellation/replacement tests are synthetic,
+not real-device memory certification. The route title now identifies MRI QA.
+See Atlas `docs/NATIVE_MRI_VIEWER.md` and the coordinating MRI-browser checkpoint
+for exact source, recovery and publication evidence. This is not a second learner
+viewer: Didanix Education remains the integration target, and no private scans,
+masks, accepted CT boundaries, clinical approvals or entitlements changed.
+Continue substantive anatomy/teaching and source-respecting whole-body framing
+while the separate Education/cleared-case gates remain open. This website edit
+is plan-only; its working private version 64 runtime is unchanged.
+
 13 September — owner clarification: Whole body is the first 3D option and the
 default `/atlas/3d` destination. The homepage Atlas section now shares the hub's
 five preview cards, exact modality routes, availability labels and image credits.
