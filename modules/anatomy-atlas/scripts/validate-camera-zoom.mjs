@@ -133,6 +133,39 @@ for (const orthographic of [false, true]) {
   close(h.render({reset:1}).scale, initial, kind+' reset uses tighter default');
   close(h.render({recenterKey:'selected'}).scale, initial, kind+' recenter uses tighter default');
 }
+// Regional presets change the first camera pose, never the save/restore basis.
+// Existing full-source bookmarks and new close-ups both restore without a snap.
+for (const orthographic of [false, true]) {
+  const h = harness(orthographic), kind = orthographic ? 'parallel' : 'perspective';
+  const core = new three.Box3(new three.Vector3(-.6,-1.9,-.3),new three.Vector3(.5,-.7,.3));
+  const fullPose = structuredClone(h.render());
+  const regional = structuredClone(h.render({presetBounds:core,recenterKey:'hand/right'}));
+  same(regional.scale < fullPose.scale, true, kind+' regional preset is closer');
+  close(h.controls.target.distanceTo(core.getCenter(new three.Vector3())),0,kind+' preset targets core');
+  const target = h.controls.target.clone();
+  close(h.render().scale,regional.scale,kind+' preset does not snap on rerender');
+  close(h.controls.target.distanceTo(target),0,kind+' core pan retained');
+  close(h.render({zoomStep:1}).scale,regional.scale*.85,kind+' zoom composes with close-up');
+  h.gesture(.8); h.orbit([.5,.3,.8]);
+  h.controls.target.add(new three.Vector3(.1,.2,0));
+  h.camera.position.add(new three.Vector3(.1,.2,0));
+  h.camera.updateMatrixWorld();
+  const saved = h.api.captureStudyCamera(h.camera,h.controls.target,h.props.bounds,1.5);
+  const screen = new three.Vector3(.1,-1.2,0).project(h.camera);
+  h.render({presetBounds:null,recenterKey:'hand/full',reset:1});
+  h.restore.current=structuredClone(saved);
+  h.render({presetBounds:core,recenterKey:'hand/right',reset:2});
+  let restored = new three.Vector3(.1,-1.2,0).project(h.camera);
+  close(restored.x,screen.x,kind+' saved core screen x');
+  close(restored.y,screen.y,kind+' saved core screen y');
+  close(h.render().scale,saved.scale,kind+' saved core stays restored');
+  h.restore.current=fullPose;
+  close(h.render({reset:3}).scale,fullPose.scale,kind+' old full bookmark wins over new preset');
+  close(h.render().scale,fullPose.scale,kind+' old full bookmark stays restored');
+  close(h.render({reset:4}).scale,regional.scale,kind+' explicit reset reapplies close-up');
+  close(h.render({presetBounds:null,recenterKey:'hand/full',reset:5}).scale,1,kind+' full-source action restores fit');
+  close(h.controls.target.distanceTo(h.props.bounds.getCenter(new three.Vector3())),0,kind+' full-source center restored');
+}
 // Perspective depth and orthographic extents must both stay inside the reserved
 // label margins, including very narrow/tall and short embedded canvases.
 for (const aspect of [390/600, 1, 724/190, 724/365])

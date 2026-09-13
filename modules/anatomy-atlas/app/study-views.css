@@ -123,13 +123,13 @@
     min-width: 50%;
   }
 }
-.control-rail .vm-study-views > summary span {
+:is(.control-rail, .anatomy-control-rail) .vm-study-views > summary span {
   display: block;
   margin: 5px 0 0;
 }
-.control-rail .vm-study-content li {
+:is(.control-rail, .anatomy-control-rail) .vm-study-content li {
   flex-wrap: wrap;
 }
-.control-rail .vm-study-content li > div {
+:is(.control-rail, .anatomy-control-rail) .vm-study-content li > div {
   flex-basis: 100%;
 }

@@ -54,7 +54,7 @@
     },
     {
       "path": "app/atlas-workspace.tsx",
-      "sha256": "27219b2275c7077bdb1b28dd531e58680e7921c74dbc1c52d1a9dbeb2ddd2d1d"
+      "sha256": "1b4275277d6ca5b2c9696626ae4c690b36a88c9c5a70b3f858aa14290672f989"
     },
     {
       "path": "app/back-layers-study.tsx",
@@ -74,11 +74,11 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "71713e932bb59a04436b6589f4016eb8faf96b88a942589791024df4f7adfa5a"
+      "sha256": "fb81bc3a7c954450b5e81a6d9baf91aca08e7a15a4fee6a403f4a2487123a308"
     },
     {
       "path": "app/body-scene.tsx",
-      "sha256": "0d224fd83b65dc02aaf823f86159c852fa32e43d780bcbd9a7399047e9609120"
+      "sha256": "b98133a78c0d7cc287f3d3cd7f18138c20c68c2e58b6b738e70cf423d01c0b8c"
     },
     {
       "path": "app/body-types.ts",
@@ -142,7 +142,7 @@
     },
     {
       "path": "app/fitted-camera.tsx",
-      "sha256": "86093037b8cedc98deed1601e021af87c01d8836985aefc703a7e0d8fdde4427"
+      "sha256": "c429693a45c6862f12e75f47fdf6da4a23f21d4887c9002c2cb5b21d8835afa2"
     },
     {
       "path": "app/globals.css",
@@ -266,7 +266,7 @@
     },
     {
       "path": "app/study-views.css",
-      "sha256": "64a3aad4d04f1ce8ad9e14765e400c2a46a24a59232ecbee530862c9326845aa"
+      "sha256": "990575bf75078182028c3ed0c30985d842e7814623b82f99e7aa69a761a54f8e"
     },
     {
       "path": "app/study-views.tsx",
@@ -642,7 +642,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "cece4dcb38f9fcc3f4a8ea7c824a24af8c241858dbd5987a17c16c927d488c1f"
+      "sha256": "fb073004304ec2b73ab4c02979cb2e6b7d4c54729b8634ecc11911d69a3c7f63"
     },
     {
       "path": "content/shoulder-xray-bindings.json",
@@ -1127,6 +1127,10 @@
     {
       "path": "lib/hand-curriculum.ts",
       "sha256": "6c3af658311c8a4ea7c50980d327915e0ea8249e7a00a8aab54f22e777111c56"
+    },
+    {
+      "path": "lib/hand-framing.ts",
+      "sha256": "918695d2987684a77a65c749ee199e8c4331b72f514a2d8f7050103217696bad"
     },
     {
       "path": "lib/hand-joints.ts",
@@ -1897,5 +1901,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "fa85f6f6fd976ab9331c17ff1cc146f7b490d644468c96271d6f8e32d40e8438"
+  "sha256": "083d229c9b7bdcb11bd7a06396cfc81a4ed18f53031f46ac138b901d56f31a9c"
 }

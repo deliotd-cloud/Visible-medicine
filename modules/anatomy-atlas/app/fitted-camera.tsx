@@ -23,6 +23,7 @@ export function FittedCamera({
   zoom,
   zoomStep = 0,
   fitOccupancy = [0.7, 0.7],
+  presetBounds = null,
   reset,
   locked = false,
   planar = false,
@@ -37,6 +38,8 @@ export function FittedCamera({
   zoom: number;
   zoomStep?: number;
   fitOccupancy?: [number, number];
+  /** Initial/reset/recenter target only; saves stay relative to full bounds. */
+  presetBounds?: Box3 | null;
   reset: number;
   locked?: boolean;
   planar?: boolean;
@@ -128,6 +131,9 @@ export function FittedCamera({
       fov,
       [horizontalFill, verticalFill],
     );
+    const presetFit = (isPreset || isRecenter) && presetBounds
+      ? fitBounds(presetBounds, orbit, camera.up, aspect, fov, [horizontalFill, verticalFill])
+      : fit;
     const retainZoom =
       !isPreset &&
       !isRecenter &&
@@ -151,7 +157,9 @@ export function FittedCamera({
             priorFit.distance,
             priorFit.halfHeight,
           )
-        : zoom;
+        : zoom * (camera instanceof OrthographicCamera
+          ? presetFit.halfHeight / fit.halfHeight
+          : presetFit.distance / fit.distance);
     const stepDelta = !isPreset && !isRecenter && previous.current
       ? zoomStep - previous.current.zoomStep : 0;
     const userZoom = steppedCameraScale(retainedScale, stepDelta);
@@ -161,7 +169,7 @@ export function FittedCamera({
           ? camera.position.distanceTo(controls.current.target) * fit.distance / priorFit.distance
           : fit.distance
         : fit.distance * userZoom;
-    const target = fit.center.clone();
+    const target = presetFit.center.clone();
     if (!isPreset && !isRecenter && previous.current && controls.current)
       target.add(controls.current.target.clone().sub(previous.current.center));
     camera.position.copy(target).addScaledVector(orbit, distance);
@@ -197,6 +205,8 @@ export function FittedCamera({
       recenterKey,
       zoom,
       zoomStep,
+      // Keep the full-frame reference even when the preset targeted a smaller
+      // region. Later orbit/zoom/resize and legacy saves retain that pan/scale.
       center: fit.center,
     };
     capture();
@@ -224,6 +234,7 @@ export function FittedCamera({
     fov,
     horizontalFill,
     verticalFill,
+    presetBounds,
   ]);
   return (
     <OrbitControls

@@ -98,6 +98,7 @@ import { Brand } from './brand';
 import { ReviewStatus } from './review-status';
 import { InspectionControls } from './inspection-controls';
 import { initialInspection } from '@/lib/inspection-state';
+import { handFramingBounds, initialBodySide } from '@/lib/hand-framing';
 import {
   selectionBounds,
   selectionVisibility,
@@ -252,9 +253,10 @@ export default function BodyExplorer({
     [systems, setSystems] = useState(
       initialRegion === 'whole-body' ? initialSystems : allBodySystems,
     );
-  const [side, setSide] = useState('both'),
+  const [side, setSide] = useState<string>(() => initialBodySide(initialRegion)),
     [isolated, setIsolated] = useState(false),
     [focus, setFocus] = useState(false);
+  const [regionalFraming, setRegionalFraming] = useState(true);
   const [explode, setExplode] = useState(0),
     [labels, setLabels] = useState(true);
   const [layout, setLayout] = useState<BodyLayout>('spatial');
@@ -495,6 +497,18 @@ export default function BodyExplorer({
     [regionStructures, systems, hiddenIds],
   );
   const enabledIds = useMemo(() => new Set(available.map((item) => item.id)), [available]);
+  const handCloseUp = useMemo(() => handFramingBounds({
+    region: initialRegion,
+    side,
+    structures: regionStructures,
+    visibleIds: available.map((s) => s.id),
+    selectedId,
+    enabled: regionalFraming && !exam && !focus && !isolated &&
+      !ghostRemoved && !showOrigins && explode === 0 &&
+      layout === 'spatial' && inspection.plane === 'off',
+  }), [initialRegion, side, regionStructures, available, selectedId,
+    regionalFraming, exam, focus, isolated, ghostRemoved, showOrigins,
+    explode, layout, inspection.plane]);
   const jointCloseUp = useMemo(() => {
     const input = {
       region: initialRegion,
@@ -1025,6 +1039,8 @@ export default function BodyExplorer({
     }
   }
   function resetView() {
+    cameraRestore.current = null;
+    setRegionalFraming(true);
     setLayout('spatial');
     setInspection(initialInspection);
     setPlate(false);
@@ -1165,6 +1181,9 @@ export default function BodyExplorer({
     };
   }
   function restoreView(state: StudyView) {
+    // The saved pose wins; do not reinterpret old full-source bookmarks as a
+    // new regional preset. Camera capture uses the unchanged full-frame basis.
+    setRegionalFraming(false);
     practiceDispatch({ type: 'dismiss' });
     setSide(state.side);
     setSelectedId(state.selectedId);
@@ -1621,6 +1640,19 @@ export default function BodyExplorer({
                 <CameraViewMenu
                   value={view}
                   region={initialRegion}
+                  framingAction={initialRegion === 'hand' && !exam && side !== 'both' &&
+                    !focus && !isolated && !ghostRemoved && !showOrigins &&
+                    explode === 0 && layout === 'spatial' && inspection.plane === 'off'
+                    ? {
+                      label: handCloseUp ? 'Fit all sources' : 'Frame hand',
+                      run: () => {
+                        cameraRestore.current = null;
+                        setRegionalFraming(!handCloseUp);
+                        if (!handCloseUp) setSelectedId(null);
+                        setZoom(1);
+                        setReset((n) => n + 1);
+                      },
+                    } : undefined}
                   onChange={(v) => {
                     setView(v);
                     setReset((n) => n + 1);
@@ -1677,6 +1709,10 @@ export default function BodyExplorer({
                   exam={exam}
                   inspection={exam ? initialInspection : inspection}
                   cameraBounds={jointCloseUp}
+                  presetBounds={handCloseUp}
+                  presetKey={initialRegion === 'hand'
+                    ? `hand/${side}/${handCloseUp ? 'regional' : 'sources'}`
+                    : undefined}
                   plate={plate && !exam}
                   cameraCapture={cameraCapture}
                   cameraRestore={cameraRestore}
@@ -1798,7 +1834,9 @@ export default function BodyExplorer({
                 </Button>
               </div>
               <div className="body-canvas-caption">
-                {jointCloseUp
+                {handCloseUp
+                  ? 'Hand close-up · Proximal vessels off-screen'
+                  : jointCloseUp
                   ? `${initialRegion === 'forearm' ? 'Elbow' : 'Knee'} close-up · Whole bones extend beyond the view · Pan / pinch to explore`
                   : layout === 'tray' && !exam
                     ? explode === 100

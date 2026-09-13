@@ -1,7 +1,7 @@
 {
   "version": 1,
   "reviewStatus": "draft-unvalidated",
-  "displayCatalogSha256": "e8c3cd0235bd5fca121cb8db58fba2b025839d8c99bb8a7776073016b61c10a0",
+  "displayCatalogSha256": "daa38c78ebc35b1e20e34228ad4220bc95fe05064dc6221d6f6781f76c4efe22",
   "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
   "profiles": [
     {
@@ -23,7 +23,16 @@
         "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
         "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html",
         "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html",
-        "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html"
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/schemes/inguinal_tables.html",
+        "https://anatomy.ttuhscep.edu/schemes/abdo_wall_ing_questions/abdo_wall_12_feedback.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/veins_pelvis_perineum.html",
+        "https://anatomy.ttuhscep.edu/reproductive_system/pelvicwall_tables.html",
+        "https://pubmed.ncbi.nlm.nih.gov/17373712/",
+        "https://nba.uth.tmc.edu/neuroanatomy/L11/Lab11p09_index.html",
+        "https://publish.uwo.ca/~jkiernan/brndiss.htm",
+        "https://link.springer.com/article/10.1007/s00701-026-06791-w"
       ],
       "stages": [
         {
@@ -1094,7 +1103,48 @@
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
             "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
             "vm:anatomy:body:pelvis:left:organ:left-deferent-duct",
-            "vm:anatomy:body:pelvis:right:organ:right-deferent-duct"
+            "vm:anatomy:body:pelvis:right:organ:right-deferent-duct",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-iliolumbar-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-inferior-gluteal-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-obturator-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-superior-gluteal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-iliolumbar-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-inferior-gluteal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-internal-pudendal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-lateral-sacral-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-obturator-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein",
+            "vm:anatomy:body:head-neck:left:organ:left-stria-medullaris-of-thalamus",
+            "vm:anatomy:body:head-neck:right:organ:right-stria-medullaris-of-thalamus",
+            "vm:anatomy:body:head-neck:midline:organ:lamina-terminalis",
+            "vm:anatomy:body:head-neck:midline:organ:septum-of-telencephalon",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery",
+            "vm:anatomy:body:thigh:right:vessel:descending-branch-of-right-lateral-circumflex-femoral-artery",
+            "vm:anatomy:body:thigh:left:vessel:descending-branch-of-left-lateral-circumflex-femoral-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-superior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-superior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:radial-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:radial-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery"
           ]
         },
         {
@@ -1870,7 +1920,11 @@
             "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
             "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
             "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
-            "vm:anatomy:body:head-neck:midline:organ:mammillary-body"
+            "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+            "vm:anatomy:body:head-neck:left:organ:left-stria-medullaris-of-thalamus",
+            "vm:anatomy:body:head-neck:right:organ:right-stria-medullaris-of-thalamus",
+            "vm:anatomy:body:head-neck:midline:organ:lamina-terminalis",
+            "vm:anatomy:body:head-neck:midline:organ:septum-of-telencephalon"
           ]
         },
         {
@@ -2572,7 +2626,44 @@
             "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
             "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery",
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
-            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-iliolumbar-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-inferior-gluteal-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-obturator-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-superior-gluteal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-iliolumbar-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-inferior-gluteal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-internal-pudendal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-lateral-sacral-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-obturator-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery",
+            "vm:anatomy:body:thigh:right:vessel:descending-branch-of-right-lateral-circumflex-femoral-artery",
+            "vm:anatomy:body:thigh:left:vessel:descending-branch-of-left-lateral-circumflex-femoral-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-superior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-superior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:radial-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:radial-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery"
           ]
         },
         {
@@ -3267,7 +3358,32 @@
             "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
             "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery",
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
-            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery",
+            "vm:anatomy:body:thigh:right:vessel:descending-branch-of-right-lateral-circumflex-femoral-artery",
+            "vm:anatomy:body:thigh:left:vessel:descending-branch-of-left-lateral-circumflex-femoral-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-superior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-superior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:radial-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:radial-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery"
           ]
         },
         {
@@ -3561,7 +3677,19 @@
             "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
             "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
             "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
-            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein"
+            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-iliolumbar-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-inferior-gluteal-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-obturator-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-superior-gluteal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-iliolumbar-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-inferior-gluteal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-internal-pudendal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-lateral-sacral-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-obturator-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein"
           ]
         },
         {
@@ -4017,6 +4145,162 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:right-deep-brachial-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:left-deep-brachial-artery"
           ]
+        },
+        {
+          "id": "abdominal-wall-epigastric-vessels",
+          "title": "Abdominal wall: epigastric vessels",
+          "rule": {
+            "fmaIds": [
+              "FMA20689",
+              "FMA21164",
+              "FMA20688",
+              "FMA21163"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA18806",
+                "FMA18807",
+                "FMA18885",
+                "FMA18886",
+                "FMA3988",
+                "FMA4083"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the inferior epigastric arteries and veins with the external iliac vessels and superior epigastric arteries. Choose a side for a simpler view.",
+          "inspect": "Select an artery or vein, set it aside, and use Undo to restore it. Return separation to 0% before comparing original source positions. This vessels-only reference does not supply rectus sheath, inguinal rings, fascia, nerves or a complete perforator network. Proximity is not proof of a joined lumen or anastomosis. The separate abdominal-wall specimen belongs to a different source version and is not overlaid here. Clinical review is pending.",
+          "landmarks": [
+            "inferior epigastric artery$",
+            "inferior epigastric vein$",
+            "external iliac artery$",
+            "superior epigastric artery$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-artery",
+            "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-artery",
+            "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-vein",
+            "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein"
+          ]
+        },
+        {
+          "id": "pelvic-venous-tributaries",
+          "title": "Pelvic venous tributaries",
+          "rule": {
+            "fmaIds": [
+              "FMA18904",
+              "FMA18913",
+              "FMA18916",
+              "FMA18910",
+              "FMA18903",
+              "FMA18912",
+              "FMA18918",
+              "FMA18906",
+              "FMA18915",
+              "FMA18909"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA21387",
+                "FMA21388",
+                "FMA18887",
+                "FMA18888",
+                "FMA16586",
+                "FMA16587",
+                "FMA16202"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Inspect ten pelvic vein selections with the iliac veins, hip bones and sacrum. Choose a side to simplify the view. Left-side coverage is incomplete.",
+          "inspect": "Select a vein or set aside an obscuring bone, then Undo to restore it. Return separation to 0% to inspect original positions. Left internal pudendal and left lateral sacral sources are held for coordinate/laterality review; they have not been mirrored or reconstructed. Short superior gluteal surfaces do not show a complete drainage network. Surface proximity is not proof of connected lumens, patency or a safe procedural route. Clinical review is pending.",
+          "landmarks": [
+            "iliolumbar vein$",
+            "gluteal vein$",
+            "obturator vein$",
+            "internal pudendal vein$",
+            "lateral sacral vein$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:pelvis:right:bone:right-hip-bone",
+            "vm:anatomy:body:pelvis:left:bone:left-hip-bone",
+            "vm:anatomy:body:spine:midline:bone:sacrum",
+            "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-iliolumbar-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-inferior-gluteal-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-obturator-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-superior-gluteal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-iliolumbar-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-inferior-gluteal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-internal-pudendal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-lateral-sacral-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-obturator-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein"
+          ]
+        },
+        {
+          "id": "deep-brain-septal-landmarks",
+          "title": "Deep brain: septal landmarks",
+          "rule": {
+            "fmaIds": [
+              "FMA73414",
+              "FMA73413",
+              "FMA61975",
+              "FMA61842"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA258714",
+                "FMA258716",
+                "FMA72924",
+                "FMA72925",
+                "FMA86464",
+                "FMA61961",
+                "FMA61970"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the striae medullares, lamina terminalis and source septal group with the thalami, fornices and commissural landmarks.",
+          "inspect": "Set aside the corpus callosum or a fornix to uncover deeper selections, then Undo to restore it. Use 0% separation when comparing original spatial relationships. The lamina comprises two source pieces touching at one point, not a reconstructed sheet. The septal group does not isolate septal nuclei or establish complete septum-pellucidum anatomy. Stria terminalis is withheld for source defects. These coarse reference surfaces are not tractography, a complete limbic circuit or clinically validated anatomy.",
+          "landmarks": [
+            "stria medullaris of thalamus$",
+            "lamina terminalis$",
+            "septum of telencephalon$",
+            "fornix of forebrain$",
+            "anterior commissure$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+            "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+            "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+            "vm:anatomy:body:head-neck:left:organ:left-stria-medullaris-of-thalamus",
+            "vm:anatomy:body:head-neck:right:organ:right-stria-medullaris-of-thalamus",
+            "vm:anatomy:body:head-neck:midline:organ:lamina-terminalis",
+            "vm:anatomy:body:head-neck:midline:organ:septum-of-telencephalon"
+          ]
         }
       ]
     },
@@ -4142,7 +4426,23 @@
             "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
             "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein",
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
-            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:radial-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:radial-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery"
           ]
         },
         {
@@ -4258,7 +4558,23 @@
             "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
             "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein",
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
-            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:radial-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:radial-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery"
           ]
         },
         {
@@ -4366,7 +4682,23 @@
             "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
             "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein",
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
-            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:radial-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:radial-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery"
           ]
         },
         {
@@ -4511,7 +4843,23 @@
             "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
             "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein",
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
-            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:radial-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:radial-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery"
           ]
         },
         {
@@ -4568,7 +4916,9 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
-            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery"
           ]
         }
       ],
@@ -4707,7 +5057,23 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
-            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:radial-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:radial-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery"
           ]
         },
         {
@@ -4783,7 +5149,9 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
-            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery"
           ]
         },
         {
@@ -4986,7 +5354,21 @@
             "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
             "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
             "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
-            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein"
+            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:radial-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:radial-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery"
           ]
         },
         {
@@ -5067,7 +5449,21 @@
             "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
             "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
             "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
-            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein"
+            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:radial-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:radial-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery"
           ]
         },
         {
@@ -5148,7 +5544,21 @@
             "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
             "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
             "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
-            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein"
+            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:radial-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:radial-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery"
           ]
         },
         {
@@ -5217,7 +5627,21 @@
             "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
             "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
             "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
-            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein"
+            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:radial-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:radial-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery"
           ]
         },
         {
@@ -5286,7 +5710,21 @@
             "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
             "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
             "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
-            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein"
+            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:radial-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:radial-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery"
           ]
         },
         {
@@ -5773,7 +6211,21 @@
             "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
             "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
             "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
-            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:radial-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:radial-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-inferior-ulnar-collateral-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-posterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-radial-recurrent-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-anterior-ulnar-recurrent-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery"
           ]
         },
         {
@@ -8618,7 +9070,9 @@
             "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
-            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:thigh:right:vessel:descending-branch-of-right-lateral-circumflex-femoral-artery",
+            "vm:anatomy:body:thigh:left:vessel:descending-branch-of-left-lateral-circumflex-femoral-artery"
           ]
         },
         {
@@ -8727,7 +9181,9 @@
             "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
-            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:thigh:right:vessel:descending-branch-of-right-lateral-circumflex-femoral-artery",
+            "vm:anatomy:body:thigh:left:vessel:descending-branch-of-left-lateral-circumflex-femoral-artery"
           ]
         },
         {
@@ -8835,7 +9291,9 @@
             "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
-            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:thigh:right:vessel:descending-branch-of-right-lateral-circumflex-femoral-artery",
+            "vm:anatomy:body:thigh:left:vessel:descending-branch-of-left-lateral-circumflex-femoral-artery"
           ]
         },
         {
@@ -8936,7 +9394,9 @@
             "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
-            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:thigh:right:vessel:descending-branch-of-right-lateral-circumflex-femoral-artery",
+            "vm:anatomy:body:thigh:left:vessel:descending-branch-of-left-lateral-circumflex-femoral-artery"
           ]
         },
         {
@@ -9036,7 +9496,9 @@
             "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
-            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:thigh:right:vessel:descending-branch-of-right-lateral-circumflex-femoral-artery",
+            "vm:anatomy:body:thigh:left:vessel:descending-branch-of-left-lateral-circumflex-femoral-artery"
           ]
         },
         {
@@ -9115,7 +9577,9 @@
             "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
-            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:thigh:right:vessel:descending-branch-of-right-lateral-circumflex-femoral-artery",
+            "vm:anatomy:body:thigh:left:vessel:descending-branch-of-left-lateral-circumflex-femoral-artery"
           ]
         },
         {
@@ -9324,7 +9788,9 @@
             "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
-            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:thigh:right:vessel:descending-branch-of-right-lateral-circumflex-femoral-artery",
+            "vm:anatomy:body:thigh:left:vessel:descending-branch-of-left-lateral-circumflex-femoral-artery"
           ]
         },
         {
@@ -9561,7 +10027,9 @@
             "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
-            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:thigh:right:vessel:descending-branch-of-right-lateral-circumflex-femoral-artery",
+            "vm:anatomy:body:thigh:left:vessel:descending-branch-of-left-lateral-circumflex-femoral-artery"
           ]
         },
         {
@@ -9653,7 +10121,9 @@
             "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
-            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:thigh:right:vessel:descending-branch-of-right-lateral-circumflex-femoral-artery",
+            "vm:anatomy:body:thigh:left:vessel:descending-branch-of-left-lateral-circumflex-femoral-artery"
           ]
         },
         {
@@ -9742,7 +10212,9 @@
             "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
-            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:thigh:right:vessel:descending-branch-of-right-lateral-circumflex-femoral-artery",
+            "vm:anatomy:body:thigh:left:vessel:descending-branch-of-left-lateral-circumflex-femoral-artery"
           ]
         },
         {
@@ -9870,7 +10342,9 @@
             "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
-            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:thigh:right:vessel:descending-branch-of-right-lateral-circumflex-femoral-artery",
+            "vm:anatomy:body:thigh:left:vessel:descending-branch-of-left-lateral-circumflex-femoral-artery"
           ]
         },
         {
@@ -10140,7 +10614,9 @@
             "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
-            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:thigh:right:vessel:descending-branch-of-right-lateral-circumflex-femoral-artery",
+            "vm:anatomy:body:thigh:left:vessel:descending-branch-of-left-lateral-circumflex-femoral-artery"
           ]
         },
         {
@@ -12480,7 +12956,9 @@
             "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
             "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
-            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery"
           ]
         },
         {
@@ -12655,7 +13133,9 @@
             "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
             "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
-            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery"
           ]
         },
         {
@@ -12827,7 +13307,9 @@
             "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
             "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
-            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery"
           ]
         },
         {
@@ -13079,7 +13561,9 @@
             "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
             "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
-            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery"
           ]
         },
         {
@@ -13627,7 +14111,9 @@
             "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
             "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
-            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery"
           ]
         },
         {
@@ -14009,7 +14495,10 @@
       "references": [
         "https://anatomy.ttuhscep.edu/anatomytables/viscera_abdomen.html",
         "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
-        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/schemes/inguinal_tables.html",
+        "https://anatomy.ttuhscep.edu/schemes/abdo_wall_ing_questions/abdo_wall_12_feedback.html"
       ],
       "stages": [
         {
@@ -14122,7 +14611,11 @@
             "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein",
             "vm:anatomy:body:abdomen:unspecified:vessel:middle-hepatic-vein",
             "vm:anatomy:body:abdomen:right:vessel:tributary-of-right-hepatic-vein",
-            "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein"
+            "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein"
           ]
         },
         {
@@ -14245,7 +14738,11 @@
             "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein",
             "vm:anatomy:body:abdomen:unspecified:vessel:middle-hepatic-vein",
             "vm:anatomy:body:abdomen:right:vessel:tributary-of-right-hepatic-vein",
-            "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein"
+            "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein"
           ]
         },
         {
@@ -14432,7 +14929,11 @@
             "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein",
             "vm:anatomy:body:abdomen:unspecified:vessel:middle-hepatic-vein",
             "vm:anatomy:body:abdomen:right:vessel:tributary-of-right-hepatic-vein",
-            "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein"
+            "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein"
           ]
         },
         {
@@ -15000,7 +15501,9 @@
             "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
             "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
             "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
-            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery"
+            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery"
           ]
         },
         {
@@ -15044,7 +15547,9 @@
             "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein",
             "vm:anatomy:body:abdomen:unspecified:vessel:middle-hepatic-vein",
             "vm:anatomy:body:abdomen:right:vessel:tributary-of-right-hepatic-vein",
-            "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein"
+            "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein"
           ]
         },
         {
@@ -15662,6 +16167,52 @@
             "vm:anatomy:body:abdomen:right:organ:right-ureter",
             "vm:anatomy:body:abdomen:left:organ:left-ureter"
           ]
+        },
+        {
+          "id": "abdominal-wall-epigastric-vessels",
+          "title": "Abdominal wall: epigastric vessels",
+          "rule": {
+            "fmaIds": [
+              "FMA20689",
+              "FMA21164",
+              "FMA20688",
+              "FMA21163"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA18806",
+                "FMA18807",
+                "FMA18885",
+                "FMA18886",
+                "FMA3988",
+                "FMA4083"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the inferior epigastric arteries and veins with the external iliac vessels and superior epigastric arteries. Choose a side for a simpler view.",
+          "inspect": "Select an artery or vein, set it aside, and use Undo to restore it. Return separation to 0% before comparing original source positions. This vessels-only reference does not supply rectus sheath, inguinal rings, fascia, nerves or a complete perforator network. Proximity is not proof of a joined lumen or anastomosis. The separate abdominal-wall specimen belongs to a different source version and is not overlaid here. Clinical review is pending.",
+          "landmarks": [
+            "inferior epigastric artery$",
+            "inferior epigastric vein$",
+            "external iliac artery$",
+            "superior epigastric artery$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-artery",
+            "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-artery",
+            "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-vein",
+            "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein"
+          ]
         }
       ]
     },
@@ -15675,7 +16226,10 @@
       ],
       "references": [
         "https://anatomy.ttuhscep.edu/reproductive_system/pelvicvisc_tables.html",
-        "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html"
+        "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/veins_pelvis_perineum.html",
+        "https://anatomy.ttuhscep.edu/reproductive_system/pelvicwall_tables.html",
+        "https://pubmed.ncbi.nlm.nih.gov/17373712/"
       ],
       "stages": [
         {
@@ -15753,7 +16307,21 @@
             "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
             "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
             "vm:anatomy:body:pelvis:left:organ:left-deferent-duct",
-            "vm:anatomy:body:pelvis:right:organ:right-deferent-duct"
+            "vm:anatomy:body:pelvis:right:organ:right-deferent-duct",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-iliolumbar-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-inferior-gluteal-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-obturator-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-superior-gluteal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-iliolumbar-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-inferior-gluteal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-internal-pudendal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-lateral-sacral-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-obturator-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein"
           ]
         },
         {
@@ -15840,7 +16408,21 @@
             "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
             "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
             "vm:anatomy:body:pelvis:left:organ:left-deferent-duct",
-            "vm:anatomy:body:pelvis:right:organ:right-deferent-duct"
+            "vm:anatomy:body:pelvis:right:organ:right-deferent-duct",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-iliolumbar-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-inferior-gluteal-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-obturator-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-superior-gluteal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-iliolumbar-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-inferior-gluteal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-internal-pudendal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-lateral-sacral-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-obturator-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein"
           ]
         },
         {
@@ -15926,7 +16508,21 @@
             "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
             "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
             "vm:anatomy:body:pelvis:left:organ:left-deferent-duct",
-            "vm:anatomy:body:pelvis:right:organ:right-deferent-duct"
+            "vm:anatomy:body:pelvis:right:organ:right-deferent-duct",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-iliolumbar-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-inferior-gluteal-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-obturator-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-superior-gluteal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-iliolumbar-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-inferior-gluteal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-internal-pudendal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-lateral-sacral-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-obturator-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein"
           ]
         },
         {
@@ -16018,7 +16614,21 @@
             "vm:anatomy:body:thigh:right:vessel:right-femoral-vein",
             "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
             "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
-            "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein"
+            "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-iliolumbar-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-inferior-gluteal-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-obturator-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-superior-gluteal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-iliolumbar-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-inferior-gluteal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-internal-pudendal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-lateral-sacral-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-obturator-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein"
           ]
         },
         {
@@ -16137,7 +16747,9 @@
             "vm:anatomy:body:thigh:right:vessel:right-femoral-artery",
             "vm:anatomy:body:thigh:left:vessel:left-femoral-artery",
             "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery",
-            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery"
+            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery"
           ]
         },
         {
@@ -16166,7 +16778,19 @@
             "vm:anatomy:body:thigh:right:vessel:right-femoral-vein",
             "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
             "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
-            "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein"
+            "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-iliolumbar-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-inferior-gluteal-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-obturator-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-superior-gluteal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-iliolumbar-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-inferior-gluteal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-internal-pudendal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-lateral-sacral-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-obturator-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein"
           ]
         },
         {
@@ -16214,6 +16838,67 @@
             "vm:anatomy:body:pelvis:left:organ:left-deferent-duct",
             "vm:anatomy:body:pelvis:right:organ:right-deferent-duct"
           ]
+        },
+        {
+          "id": "pelvic-venous-tributaries",
+          "title": "Pelvic venous tributaries",
+          "rule": {
+            "fmaIds": [
+              "FMA18904",
+              "FMA18913",
+              "FMA18916",
+              "FMA18910",
+              "FMA18903",
+              "FMA18912",
+              "FMA18918",
+              "FMA18906",
+              "FMA18915",
+              "FMA18909"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA21387",
+                "FMA21388",
+                "FMA18887",
+                "FMA18888",
+                "FMA16586",
+                "FMA16587",
+                "FMA16202"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Inspect ten pelvic vein selections with the iliac veins, hip bones and sacrum. Choose a side to simplify the view. Left-side coverage is incomplete.",
+          "inspect": "Select a vein or set aside an obscuring bone, then Undo to restore it. Return separation to 0% to inspect original positions. Left internal pudendal and left lateral sacral sources are held for coordinate/laterality review; they have not been mirrored or reconstructed. Short superior gluteal surfaces do not show a complete drainage network. Surface proximity is not proof of connected lumens, patency or a safe procedural route. Clinical review is pending.",
+          "landmarks": [
+            "iliolumbar vein$",
+            "gluteal vein$",
+            "obturator vein$",
+            "internal pudendal vein$",
+            "lateral sacral vein$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:pelvis:right:bone:right-hip-bone",
+            "vm:anatomy:body:pelvis:left:bone:left-hip-bone",
+            "vm:anatomy:body:spine:midline:bone:sacrum",
+            "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-iliolumbar-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-inferior-gluteal-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-obturator-vein",
+            "vm:anatomy:body:pelvis:left:vessel:left-superior-gluteal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-iliolumbar-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-inferior-gluteal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-internal-pudendal-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-lateral-sacral-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-obturator-vein",
+            "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein"
+          ]
         }
       ]
     },
@@ -16233,7 +16918,10 @@
         "https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/nerve-tables/nerves-of-the-head-and-neck/",
         "https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/mml/so.htm",
         "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
-        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf"
+        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf",
+        "https://nba.uth.tmc.edu/neuroanatomy/L11/Lab11p09_index.html",
+        "https://publish.uwo.ca/~jkiernan/brndiss.htm",
+        "https://link.springer.com/article/10.1007/s00701-026-06791-w"
       ],
       "stages": [
         {
@@ -16525,7 +17213,16 @@
             "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
             "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli",
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
-            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:left:organ:left-stria-medullaris-of-thalamus",
+            "vm:anatomy:body:head-neck:right:organ:right-stria-medullaris-of-thalamus",
+            "vm:anatomy:body:head-neck:midline:organ:lamina-terminalis",
+            "vm:anatomy:body:head-neck:midline:organ:septum-of-telencephalon",
+            "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-superior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-superior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery"
           ]
         },
         {
@@ -16826,7 +17523,16 @@
             "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
             "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli",
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
-            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:left:organ:left-stria-medullaris-of-thalamus",
+            "vm:anatomy:body:head-neck:right:organ:right-stria-medullaris-of-thalamus",
+            "vm:anatomy:body:head-neck:midline:organ:lamina-terminalis",
+            "vm:anatomy:body:head-neck:midline:organ:septum-of-telencephalon",
+            "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-superior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-superior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery"
           ]
         },
         {
@@ -17126,7 +17832,16 @@
             "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
             "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli",
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
-            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:left:organ:left-stria-medullaris-of-thalamus",
+            "vm:anatomy:body:head-neck:right:organ:right-stria-medullaris-of-thalamus",
+            "vm:anatomy:body:head-neck:midline:organ:lamina-terminalis",
+            "vm:anatomy:body:head-neck:midline:organ:septum-of-telencephalon",
+            "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-superior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-superior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery"
           ]
         },
         {
@@ -17200,7 +17915,11 @@
             "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
             "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
             "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
-            "vm:anatomy:body:head-neck:midline:organ:mammillary-body"
+            "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+            "vm:anatomy:body:head-neck:left:organ:left-stria-medullaris-of-thalamus",
+            "vm:anatomy:body:head-neck:right:organ:right-stria-medullaris-of-thalamus",
+            "vm:anatomy:body:head-neck:midline:organ:lamina-terminalis",
+            "vm:anatomy:body:head-neck:midline:organ:septum-of-telencephalon"
           ]
         },
         {
@@ -17395,7 +18114,12 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
             "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
-            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-superior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-superior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery"
           ]
         },
         {
@@ -18664,7 +19388,12 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
             "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
-            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-superior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-superior-cerebellar-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery"
           ]
         },
         {
@@ -19889,6 +20618,55 @@
             "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
             "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
             "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli"
+          ]
+        },
+        {
+          "id": "deep-brain-septal-landmarks",
+          "title": "Deep brain: septal landmarks",
+          "rule": {
+            "fmaIds": [
+              "FMA73414",
+              "FMA73413",
+              "FMA61975",
+              "FMA61842"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA258714",
+                "FMA258716",
+                "FMA72924",
+                "FMA72925",
+                "FMA86464",
+                "FMA61961",
+                "FMA61970"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the striae medullares, lamina terminalis and source septal group with the thalami, fornices and commissural landmarks.",
+          "inspect": "Set aside the corpus callosum or a fornix to uncover deeper selections, then Undo to restore it. Use 0% separation when comparing original spatial relationships. The lamina comprises two source pieces touching at one point, not a reconstructed sheet. The septal group does not isolate septal nuclei or establish complete septum-pellucidum anatomy. Stria terminalis is withheld for source defects. These coarse reference surfaces are not tractography, a complete limbic circuit or clinically validated anatomy.",
+          "landmarks": [
+            "stria medullaris of thalamus$",
+            "lamina terminalis$",
+            "septum of telencephalon$",
+            "fornix of forebrain$",
+            "anterior commissure$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+            "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+            "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+            "vm:anatomy:body:head-neck:left:organ:left-stria-medullaris-of-thalamus",
+            "vm:anatomy:body:head-neck:right:organ:right-stria-medullaris-of-thalamus",
+            "vm:anatomy:body:head-neck:midline:organ:lamina-terminalis",
+            "vm:anatomy:body:head-neck:midline:organ:septum-of-telencephalon"
           ]
         }
       ]

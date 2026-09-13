@@ -2,21 +2,34 @@ import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import * as THREE from 'three';
-import { studyLibrary } from '../lib/study-library.ts';
-import { bodyDisplayCatalog } from '../lib/body-display-catalog.ts';
-import {
-  bodyOffset,
-  translatedBox,
-  fitBounds,
-} from '../lib/explode-layout.mjs';
-import {
+import { build } from './workspace-test-build.mjs';
+import { bodyOffset, translatedBox, fitBounds } from '../lib/explode-layout.mjs';
+// Use the same confined TypeScript resolver as the other pure-helper suites.
+// Direct Node imports cannot resolve the application's extensionless imports.
+// Bundle the real helpers; retain every assertion and use no runtime stubs.
+const compiled = await build({
+  stdin: {
+    contents: `export * from './lib/study-library';
+export * from './lib/body-display-catalog';
+export * from './app/dissection-data';`,
+    resolveDir: process.cwd(),
+    loader: 'ts',
+  },
+  bundle: true,
+  write: false,
+  platform: 'node',
+  format: 'esm',
+});
+const {
+  studyLibrary,
+  bodyDisplayCatalog,
   dissectionProfiles,
   stageStructures,
   initialDissection,
   dissectionReducer,
   resolveDissection,
   matchesRule,
-} from '../app/dissection-data.ts';
+} = await import('data:text/javascript;base64,' + Buffer.from(compiled.outputFiles[0].text).toString('base64'));
 
 const catalog = bodyDisplayCatalog(JSON.parse(
   await fs.readFile('public/models/bodyparts3d/full-body/catalog.json', 'utf8'),

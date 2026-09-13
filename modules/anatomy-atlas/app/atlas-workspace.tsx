@@ -259,15 +259,21 @@ export function CameraViewMenu({
   value,
   region,
   onChange,
+  framingAction,
 }: {
   value: CameraDirection;
   region: string;
   onChange: (value: CameraDirection) => void;
+  framingAction?: { label: string; run: () => void };
 }) {
   return (
-    <Select
+    <Select<CameraDirection | 'fit-source-frame'>
       value={value}
       onValueChange={(next) => {
+        if (next === 'fit-source-frame') {
+          framingAction?.run();
+          return;
+        }
         if (cameraDirections.includes(next as CameraDirection))
           onChange(next as CameraDirection);
       }}
@@ -275,6 +281,7 @@ export function CameraViewMenu({
       <SelectTrigger
         aria-label="Camera direction"
         className="atlas-camera-view"
+        title={framingAction ? `View direction or ${framingAction.label.toLowerCase()}` : undefined}
       >
         <span>View:</span>
         <SelectValue>{directionLabel(value, region)}</SelectValue>
@@ -285,6 +292,9 @@ export function CameraViewMenu({
             {directionLabel(direction, region)}
           </SelectItem>
         ))}
+        {framingAction && (
+          <SelectItem value="fit-source-frame">{framingAction.label}</SelectItem>
+        )}
       </SelectContent>
     </Select>
   );

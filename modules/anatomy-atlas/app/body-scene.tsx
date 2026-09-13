@@ -78,6 +78,9 @@ type Props = {
   inspectionBounds?: SelectionBounds | null;
   /** Camera-only close-up; original geometry and inspection frame stay intact. */
   cameraBounds?: SelectionBounds | null;
+  /** Optional camera preset; does not replace the full bounds used by saves. */
+  presetBounds?: SelectionBounds | null;
+  presetKey?: string;
   plate: boolean;
   cameraCapture?: RefObject<StudyCamera | null>;
   cameraRestore?: RefObject<StudyCamera | null>;
@@ -466,6 +469,11 @@ export function BodyScene(props: Props) {
   const bundles = props.catalog.bundles.filter((b) =>
     rendered.some((s) => s.bundle === b.id),
   );
+  const cameraPreset = useMemo(() => props.presetBounds
+    ? new THREE.Box3(
+      new THREE.Vector3().fromArray(props.presetBounds.min),
+      new THREE.Vector3().fromArray(props.presetBounds.max),
+    ) : null, [props.presetBounds]);
   const labelIds = sceneLabelIds(
     props.selectedId,
     props.landmarks,
@@ -540,6 +548,7 @@ export function BodyScene(props: Props) {
           </SceneLabelLayer>
           <FittedCamera
             bounds={bounds}
+            presetBounds={cameraPreset}
             direction={
               orthographic && !['inferior', 'superior'].includes(props.view)
                 ? [vectors[props.view][0], 0, vectors[props.view][2]]
@@ -558,7 +567,7 @@ export function BodyScene(props: Props) {
             reset={props.reset}
             locked={props.plate && layout !== 'tray'}
             planar={layout === 'tray'}
-            recenterKey={focusId ?? ''}
+            recenterKey={focusId ?? props.presetKey ?? ''}
             cameraCapture={props.cameraCapture}
             cameraRestore={props.cameraRestore}
           />
