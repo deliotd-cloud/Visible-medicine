@@ -62,6 +62,15 @@ The earlier production-plan suggestion that an Individual tier might include off
 
 Details: [shoulder pilot](shoulder-atlas-pilot.md), Atlas `docs/DIDANIX_SELECTION_ADAPTER.md` and local `work/DIDANIX-LINK-CHECKPOINT-20260912.md`. Documentation-only commits after this checkpoint do not rebuild or redeploy the product.
 
+## Model rollout without interrupted anatomy delivery
+
+The [staged model rollout](atlas-staged-rollout.md) separates administrator-only
+candidate registration from the active Atlas inventory. Keep the working
+59-model release during candidate uploads; verify the extra 21 exact bundles
+before activating the full 80-model abdomen runtime. Registration, local tests,
+source pushes and publication are separate states. The dated task checkpoint
+records which have actually completed. No model is clinically approved by staging.
+
 ## CT-head handover: preserve, do not redo here
 
 Latest specialist-chat review reports both anterior cerebellar edges accepted and preserved. Its most recent user request identifies axial midbrain overcoverage and insufficient superior extent on sagittal/coronal views. Progress was saved without further mask changes. Resume that correction through the CT-head task, inspect its latest saved state, and protect accepted cerebellar boundaries. Partial boundary acceptance is not full structure or release approval. No scan/mask review or modification was performed during this consolidation.

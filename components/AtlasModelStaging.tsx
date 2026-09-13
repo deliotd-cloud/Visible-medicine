@@ -4,14 +4,16 @@ import { useEffect, useRef, useState } from 'react';
 import type { AtlasStoredModel } from '@/lib/atlas-model-storage';
 import { verifyAtlasModelDownload } from '@/lib/atlas-model-download';
 import { verifyAtlasDelivery } from '@/lib/atlas-delivery-check';
+import { atlasStagingCheckModels } from '@/lib/atlas-model-staging-registry';
 import styles from './AtlasModelStaging.module.css';
 
-export function AtlasModelStaging({ models }: { models: AtlasStoredModel[] }) {
+export function AtlasModelStaging({ models, deliveryModels }: { models: AtlasStoredModel[]; deliveryModels: AtlasStoredModel[] }) {
   const [files, setFiles] = useState<File[]>([]);
   const [states, setStates] = useState<Record<string, string>>({});
   const [responseMetadata, setResponseMetadata] = useState<Record<string, string>>({});
   const [message, setMessage] = useState('Check storage, or select the registered GLB model files to stage.');
   const [busy, setBusy] = useState(false);
+  const [checkedModels, setCheckedModels] = useState<readonly AtlasStoredModel[]>(models);
   const active = useRef<AbortController | null>(null);
   useEffect(() => () => active.current?.abort(), []);
   const setStatus = (sha: string, status: string) => setStates(current => ({ ...current, [sha]: status }));
@@ -40,7 +42,8 @@ export function AtlasModelStaging({ models }: { models: AtlasStoredModel[] }) {
         }
         if (!selected.length) throw new Error('Select registered model files first.');
       }
-      const queue = upload ? selected : models.map(model => ({ model, file: null }));
+      const queue = upload ? selected : atlasStagingCheckModels(mode, models, deliveryModels).map(model => ({ model, file: null }));
+      setCheckedModels(queue.map(({ model }) => model));
       let verified = 0;
       for (const { model, file } of queue) {
         if (controller.signal.aborted) throw new Error('Cancelled. Existing stored models are retained.');
@@ -85,15 +88,16 @@ export function AtlasModelStaging({ models }: { models: AtlasStoredModel[] }) {
         }
         verified++;
       }
-      setMessage(mode === 'delivery' ? 'All registered Atlas URLs pass full-byte, HEAD, range and conditional checks through protected storage. This is not clinical approval or a learner release.' : mode === 'download' ? 'All staged model downloads match their exact bytes and fingerprints.' : 'Check complete. Staging does not activate a release or grant learner access.');
+      setMessage(mode === 'delivery' ? 'All active Atlas URLs pass full-byte, HEAD, range and conditional checks through protected storage. Candidate-only models are not activated by this check. This is not clinical approval or a learner release.' : mode === 'download' ? 'All staged model downloads match their exact bytes and fingerprints.' : 'Check complete. Staging does not activate a release or grant learner access.');
     } catch (error) {
       setMessage(controller.signal.aborted ? 'Cancelled. No stored model was deleted. Check storage before resuming.' : error instanceof Error ? error.message : 'The operation could not finish.');
     } finally { active.current = null; setBusy(false); }
   }
-  const verifiedCount = models.filter(model => ['Verified in storage', 'Full download verified', 'Atlas delivery verified'].includes(states[model.sha256])).length;
-  const downloadedCount = models.filter(model => states[model.sha256] === 'Full download verified').length;
+  const verifiedCount = checkedModels.filter(model => ['Verified in storage', 'Full download verified', 'Atlas delivery verified'].includes(states[model.sha256])).length;
+  const downloadedCount = checkedModels.filter(model => states[model.sha256] === 'Full download verified').length;
   return <section className={styles.panel} aria-label="Atlas model staging">
     <p>Registered files only. This is not a scan-upload page. Patient images, segmentation masks and unregistered models must not be selected.</p>
+    <p>{models.length} models registered for staging; {deliveryModels.length} models in the active Atlas. Staging does not switch the active inventory.</p>
     <div className={styles.controls}>
       <label htmlFor="atlas-model-files">Registered GLB files<input id="atlas-model-files" type="file" accept=".glb,model/gltf-binary" multiple disabled={busy} onChange={event => setFiles(Array.from(event.target.files ?? []))} /></label>
       <button type="button" disabled={busy || !files.length} onClick={() => void run('upload')}>Stage selected files</button>
@@ -103,8 +107,8 @@ export function AtlasModelStaging({ models }: { models: AtlasStoredModel[] }) {
       {busy && <button type="button" onClick={() => active.current?.abort()}>Cancel</button>}
     </div>
     <p role="status" aria-live="polite">{message}</p>
-    <p>{verifiedCount} / {models.length} models verified in this check. Atlas release: administrator review only.</p>
-    {downloadedCount > 0 && <p>{downloadedCount} / {models.length} full downloads verified. This checks transfer integrity, not clinical accuracy or viewer acceptance.</p>}
+    <p>{verifiedCount} / {checkedModels.length} models verified in this check. Atlas release: administrator review only.</p>
+    {downloadedCount > 0 && <p>{downloadedCount} / {checkedModels.length} full downloads verified. This checks transfer integrity, not clinical accuracy or viewer acceptance.</p>}
     <details><summary>Registered model inventory</summary><ul className={styles.models}>{models.map(model => <li key={model.sha256}>
       <span>{model.paths.map(path => path.replace('/atlas-runtime/', '')).join(', ')}</span>
       <small>{(model.bytes / 1048576).toFixed(2)} MB · {states[model.sha256] ?? 'Not checked'}</small>
