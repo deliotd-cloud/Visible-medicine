@@ -1,5 +1,22 @@
 # Label-safe atlas framing
 
+## Embedded workspace height
+
+The shared regional website module now places its region heading, source count
+and expandable review disclosure inside the existing mode/action bar when it is
+inside a website frame. This removes the repeated logo/title band above the
+anatomy without hiding review information. Direct/full-screen module entry points
+retain their own brand and heading. Frame detection is presentation only, never
+authorization; no asset or case access changes.
+
+Inspection showed the complete skeleton already occupies the camera's reserved
+height. The short desktop view was constrained by stacked interface rows, not
+bad geometry bounds. This layout change gives the existing camera more actual
+canvas height; its fit, saved-camera scale, source meshes and label anchors are
+unchanged. Browser size/interaction evidence is recorded in the dated checkpoint.
+
+## Camera profile
+
 13 September 2026. Regional and independent specimen scenes now reserve 70% of
 the canvas width and 90% of its height for the complete geometry bounds. The
 shoulder uses the same presentation profile. Previously most scenes used 70% on

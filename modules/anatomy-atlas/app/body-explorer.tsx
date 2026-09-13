@@ -223,12 +223,16 @@ export default function BodyExplorer({
   studyLink = noStudyLink,
   assetBase = '',
   presentation = 'standalone',
+  embedded = false,
 }: {
   initialRegion: string;
   studyLink?: ParsedStudyLink;
   assetBase?: string;
   presentation?: 'standalone' | 'panel';
+  /** Presentation only: the containing website supplies its own brand/header. */
+  embedded?: boolean;
 }) {
+  const sharedHeader = presentation === 'panel' && embedded;
   const profile = Object.hasOwn(dissectionProfiles, initialRegion)
     ? dissectionProfiles[initialRegion]
     : dissectionProfiles['whole-body'];
@@ -1564,8 +1568,9 @@ export default function BodyExplorer({
   return (
     <AtlasWorkspace exam={exam} presentation={presentation}>
       <PracticeAttention answered={answered} exam={exam} />
-      <header className="body-topbar">
-        <Brand />
+      <header className="body-topbar" data-shared-header={sharedHeader}>
+        {sharedHeader ? <RegionHeading title={title} count={regionStructures.length}
+          compact description={whole ? 'Explore the body by region or anatomical system.' : region!.description}/> : <Brand />}
         <WorkspaceModes />
         <AtlasSearch
           catalog={catalog}
@@ -1609,9 +1614,9 @@ export default function BodyExplorer({
       <div className="body-layout">
         <AnatomyControlRail>{railContent}</AnatomyControlRail>
         <section className="body-workspace" aria-label={`${title} 3D anatomy`}>
-          <RegionHeading title={title} count={regionStructures.length}
+          {!sharedHeader && <RegionHeading title={title} count={regionStructures.length}
             compact={presentation === 'panel'}
-            description={whole ? 'Explore the body by region or anatomical system.' : region!.description}/>
+            description={whole ? 'Explore the body by region or anatomical system.' : region!.description}/>}
           {!exam && selected && (
             <SelectionVisibilityNotice
               name={selected.name}

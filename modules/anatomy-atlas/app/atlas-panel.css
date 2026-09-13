@@ -53,7 +53,26 @@
 .region-heading-context summary:focus-visible { outline:2px solid var(--vm-teal); outline-offset:2px; }
 .region-heading-context[open] { flex-basis:100%; }
 .body-app[data-presentation='panel'] .region-heading-context p { margin:0 0 8px; font-size:1rem; line-height:1.5; }
+/* In the website iframe, retain title, count and review disclosure in the
+   existing action bar instead of spending a second row above the model.
+   Standalone/full-screen entry points keep their own approved brand lockup. */
+.body-app[data-presentation='panel']>.body-topbar[data-shared-header='true']>.region-heading-compact {
+  flex:0 1 auto; padding:0; gap:2px 10px; color:var(--vm-ivory);
+  max-width:100%; border:0;
+}
+.body-app[data-presentation='panel']>.body-topbar[data-shared-header='true'] .region-heading-compact :is(h1,.body-count,.region-heading-context,p) {
+  color:var(--vm-ivory);
+}
+.body-topbar[data-shared-header='true'] .region-heading-context { margin-left:0; }
+.body-topbar[data-shared-header='true'] .region-heading-context summary { padding:8px 0; }
+.body-topbar[data-shared-header='true'] .region-heading-context[open] { max-width:34rem; }
 @media(max-width:700px) {
   .region-heading-context { flex-basis:100%; margin-left:0; }
   .region-heading-context summary { min-height:44px; display:list-item; }
+  .body-app[data-presentation='panel']>.body-topbar[data-shared-header='true'] {
+    display:grid; grid-template-columns:minmax(0,1fr) auto; gap:6px 10px; align-items:start;
+  }
+  .body-topbar[data-shared-header='true']>.region-heading-compact { grid-column:1; min-width:0; }
+  .body-topbar[data-shared-header='true']>.atlas-search-trigger { grid-column:2; grid-row:1; margin:0; }
+  .body-topbar[data-shared-header='true']>:is(.atlas-workspace-modes,.vm-practice-start) { grid-column:1 / -1; }
 }

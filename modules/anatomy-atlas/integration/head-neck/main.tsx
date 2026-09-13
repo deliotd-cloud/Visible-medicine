@@ -38,7 +38,7 @@ createRoot(document.getElementById('root')!).render(
             ? <Kidneys assetBase="/atlas-runtime/head-neck" initialLink={specimen.link} onClose={backToRegion}/>
             : <AbdominalWall assetBase="/atlas-runtime/head-neck" initialLink={specimen.link} onClose={backToRegion}/>}
         </Suspense>
-      : <BodyExplorer initialRegion={region} studyLink={parseStudyLink(params)} presentation="panel" assetBase="/atlas-runtime/head-neck"/>
+      : <BodyExplorer initialRegion={region} studyLink={parseStudyLink(params)} presentation="panel" embedded={window.self !== window.top} assetBase="/atlas-runtime/head-neck"/>
     : <section className="module-recovery" role="alert"><h2>This region link cannot be opened</h2><p>No alternative region or structure has been selected.</p><a href="/atlas" target="_top">Return to the Atlas</a></section>}
   </ModuleBoundary>
 );
