@@ -1,5 +1,14 @@
 # Third-party notices
 
+## Hand and foot bone CT/MRI teaching — 13 September 2026
+
+Original MIT resolver code and concise factual drafts extend 76 existing bone
+selections. Ten primary-publication reading references are not imported figures,
+articles, tables, scans, datasets or redistribution permissions. No dependency,
+font, texture, model, paid API or mandatory service is introduced. Existing
+model credits and change notices remain intact. The grouped foot-sesamoid
+identities remain unresolved. See [scope and review](../docs/ACRAL_BONE_IMAGING.md).
+
 ## Skull, facial-bone and hyoid CT/MRI teaching — 13 September 2026
 
 Original concise factual notes and MIT resolver code add 46 draft placements

@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "acral-bone-imaging:test": "node scripts/pin-acral-bone-imaging.mjs --check && node scripts/validate-acral-bone-imaging.mjs",
     "cranial-bone-imaging:test": "node scripts/pin-cranial-bone-imaging.mjs --check && node scripts/validate-cranial-bone-imaging.mjs",
     "elbow-arteries:test": "node scripts/audit-elbow-arteries.mjs --check && node scripts/export-elbow-arteries.mjs --check && node scripts/validate-elbow-arteries.mjs",
     "cranial-artery-components:test": "node scripts/export-cranial-artery-components.mjs --check && node scripts/validate-cranial-artery-components.mjs",

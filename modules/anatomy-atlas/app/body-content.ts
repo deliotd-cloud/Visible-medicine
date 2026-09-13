@@ -120,6 +120,7 @@ import { chestWallMuscleImagingLesson } from '../lib/chest-wall-muscle-imaging';
 import { shoulderArmMuscleImagingLesson } from '../lib/shoulder-arm-muscle-imaging';
 import { spinePelvicMuscleImagingLesson } from '../lib/spine-pelvic-muscle-imaging';
 import { cranialBoneImagingLesson } from '../lib/cranial-bone-imaging';
+import { acralBoneImagingLesson } from '../lib/acral-bone-imaging';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -164,6 +165,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const acralBoneImaging = acralBoneImagingLesson(s, tab);
+  if (acralBoneImaging) return acralBoneImaging;
   const cranialBoneImaging = cranialBoneImagingLesson(s, tab);
   if (cranialBoneImaging) return cranialBoneImaging;
   const spinePelvicImaging = spinePelvicMuscleImagingLesson(s, tab);

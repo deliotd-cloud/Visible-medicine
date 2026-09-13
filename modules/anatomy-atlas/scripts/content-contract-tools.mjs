@@ -37,6 +37,8 @@ export * from './lib/spine-pelvic-muscle-imaging.ts';
 export * from './content/spine-pelvic-muscle-imaging.ts';
 export * from './lib/cranial-bone-imaging.ts';
 export * from './content/cranial-bone-imaging.ts';
+export * from './lib/acral-bone-imaging.ts';
+export * from './content/acral-bone-imaging.ts';
 export * from './content/shoulder-arm-muscle-imaging.ts';
 export * from './lib/shoulder-arm-curriculum.ts';
 export * from './lib/forearm-curriculum.ts';

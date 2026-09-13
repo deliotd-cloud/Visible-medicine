@@ -1,0 +1,37 @@
+{
+  "baselineSource": "4492d6bc47bd11f537cb6aa2bffe324ca3dc3881",
+  "groups": 38,
+  "sourceSelections": 76,
+  "addedDraftPlacements": 152,
+  "modalities": {
+    "ct": 76,
+    "mri": 76
+  },
+  "unchangedTopics": 9757,
+  "unresolvedIdentities": [
+    "FMA45098",
+    "FMA45097"
+  ],
+  "bodySchemaRecords": 1101,
+  "actualNoteRenders": 152,
+  "rejectedSourceTopicCombinations": 2888,
+  "uniqueReferenceFacts": 27,
+  "sourceWordCounts": {
+    "handMRI": 143,
+    "footMRI": 105,
+    "handCT": 33,
+    "firstMTP": 70,
+    "load": 36,
+    "lisfranc": 71,
+    "stress": 70,
+    "thumb": 34,
+    "fingerMRI": 111,
+    "plantarPlate": 43
+  },
+  "sourceGeometryChanged": false,
+  "currentApprovalRecordsChanged": false,
+  "clinicalApproval": false,
+  "imagesImported": false,
+  "imagingConnected": false,
+  "browserOrDeviceAcceptance": false
+}

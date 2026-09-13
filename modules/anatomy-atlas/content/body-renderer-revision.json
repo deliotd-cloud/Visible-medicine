@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "013f63f169803bae012b59ae3bf6f7933be7781792c1b5fba2fc1542b9fdea96"
+      "sha256": "bd00f9f194c20103b76c0640ec8b16e4bd586ee10bcbb1b70cdb6347a3a59743"
     },
     {
       "path": "app/body-explorer.css",
@@ -387,6 +387,14 @@
     {
       "path": "content/abdominal-wall-teaching.ts",
       "sha256": "b0da512ba08095bb8516538b11f6f052f5e1bd052f2a418fc1015602fe8f5896"
+    },
+    {
+      "path": "content/acral-bone-imaging-pins.json",
+      "sha256": "863aa9a374ddd086a2f0a7fe56335582a94431ad98a69ea6caa7fbc4d952db73"
+    },
+    {
+      "path": "content/acral-bone-imaging.ts",
+      "sha256": "591ecb75daf091a4d6e00945e169724245ea6f0514f6ae8778b285f08d8b9f9e"
     },
     {
       "path": "content/arm-attachment-pins.json",
@@ -879,6 +887,10 @@
     {
       "path": "lib/acral-bone-curriculum.ts",
       "sha256": "c6d1a50721378ca17916b37d8fa9241eedf5e3e0b331f25c2e0393b3287211e5"
+    },
+    {
+      "path": "lib/acral-bone-imaging.ts",
+      "sha256": "82dc48c9c76ba0c65b81a71ab7b85cff991dd70e9e45296817969c3b736b3927"
     },
     {
       "path": "lib/acral-bone-studies.ts",
@@ -1806,7 +1818,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "2f6be5c6ffaa2e6f71ef5e9a366415f3fde32ee9cd5dd4724fc781d7f9723f7c"
+      "sha256": "8fb234fdb4ef30f3fcfa0db741f235162a1e234d85d6f91d1b864199462abfd7"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1997,5 +2009,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "b11538745f2f0dc205fdc9ed4cc3a6c0917830acd88f889660c6dfb05a086f6f"
+  "sha256": "819c99bebcb3d1e6cb08eece2dd00e93ec58519f7b5adbe0ee721083e747fd89"
 }

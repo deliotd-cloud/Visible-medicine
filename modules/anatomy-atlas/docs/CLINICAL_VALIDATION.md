@@ -1,5 +1,14 @@
 # Clinical validation checklist
 
+[Hand/foot bone CT/MRI drafts](ACRAL_BONE_IMAGING.md): review 38 paired concepts /
+152 placements for exact side, ray, segment, joint partners, anatomical extent
+and useful teaching depth. Confirm thumb/hallux differences, finger tendon
+relationships, first-MTP versus lesser plantar plates, Lisfranc/load wording and
+developmental fifth-metatarsal cautions. Both grouped foot-sesamoid holds remain.
+No acquired image, tissue segmentation, diagnosis, measured stability, protocol,
+patient registration or clinical approval is supplied. Approve only the actual
+source/content revision; future cases need separate clinical/privacy clearance.
+
 [Skull, facial-bone and hyoid CT/MRI teaching](CRANIAL_BONE_IMAGING.md): review
 15 concepts / 46 draft placements for source identity, laterality, extent,
 sequence-specific visibility and anatomical relationships. Confirm whole-bone

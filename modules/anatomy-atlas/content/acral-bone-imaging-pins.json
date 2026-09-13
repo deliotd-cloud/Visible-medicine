@@ -1,0 +1,5828 @@
+{
+  "sourceCommit": "4492d6bc47bd11f537cb6aa2bffe324ca3dc3881",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "foot-skeleton",
+      "url": "/models/bodyparts3d/full-body/foot-skeleton.glb",
+      "bytes": 612448,
+      "sha256": "1b363def6136145a2a0faa31ca5edb46db8345631a4343c25919a3abf73d2d40",
+      "structures": 54
+    },
+    {
+      "id": "hand-skeleton",
+      "url": "/models/bodyparts3d/full-body/hand-skeleton.glb",
+      "bytes": 416816,
+      "sha256": "5f61ad363b757aa0cfcf0d7be4bcedcf63cbfec9ff5728cace9d62aa0447eac1",
+      "structures": 54
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-second-toe",
+        "fmaId": "FMA32653",
+        "name": "Distal phalanx of left second toe",
+        "sourceName": "distal phalanx of left second toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32653",
+        "bounds": {
+          "min": [
+            1.3215299844741821,
+            -8.70226764678955,
+            1.7086399793624878
+          ],
+          "max": [
+            1.4339699745178223,
+            -8.630226135253906,
+            1.8401700258255005
+          ]
+        },
+        "center": [
+          1.3777499794960022,
+          -8.666246891021729,
+          1.7744050025939941
+        ],
+        "anchor": [
+          1.3842599391937256,
+          -8.650444030761719,
+          1.7721400260925293
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3179",
+            "sha256": "99c76669f09d0758cd2baadbba001728458615370705ef255b933f184689941b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32652",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-third-toe",
+        "fmaId": "FMA32655",
+        "name": "Distal phalanx of left third toe",
+        "sourceName": "distal phalanx of left third toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32655",
+        "bounds": {
+          "min": [
+            1.458419919013977,
+            -8.70261287689209,
+            1.6231399774551392
+          ],
+          "max": [
+            1.5484100580215454,
+            -8.643680572509766,
+            1.7365100383758545
+          ]
+        },
+        "center": [
+          1.5034149885177612,
+          -8.673146724700928,
+          1.6798250079154968
+        ],
+        "anchor": [
+          1.4990299940109253,
+          -8.657767295837402,
+          1.6822500228881836
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3180",
+            "sha256": "4b3b06a548ec2cf7eec686f9314dc0fb10fd7a72afc216b88d0b2bf857bb7bf1"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32654",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-fourth-toe",
+        "fmaId": "FMA32657",
+        "name": "Distal phalanx of left fourth toe",
+        "sourceName": "distal phalanx of left fourth toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32657",
+        "bounds": {
+          "min": [
+            1.5521200895309448,
+            -8.703092575073242,
+            1.4543099403381348
+          ],
+          "max": [
+            1.6407499313354492,
+            -8.634546279907227,
+            1.5655299425125122
+          ]
+        },
+        "center": [
+          1.596435010433197,
+          -8.668819427490234,
+          1.5099199414253235
+        ],
+        "anchor": [
+          1.5892599821090698,
+          -8.662097930908203,
+          1.5229600667953491
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3181",
+            "sha256": "71e7e83288bde730b7f2c04b3150de2d27236f0ed8e9db6a88704f6c1b9c9721"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32656",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-big-toe",
+        "fmaId": "FMA32651",
+        "name": "Distal phalanx of left big toe",
+        "sourceName": "distal phalanx of left big toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32651",
+        "bounds": {
+          "min": [
+            1.0250400304794312,
+            -8.700064659118652,
+            1.6072500944137573
+          ],
+          "max": [
+            1.2505600452423096,
+            -8.590411186218262,
+            1.8591901063919067
+          ]
+        },
+        "center": [
+          1.1378000378608704,
+          -8.645237922668457,
+          1.733220100402832
+        ],
+        "anchor": [
+          1.1560699939727783,
+          -8.621658325195312,
+          1.753059983253479
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3182",
+            "sha256": "aa0a98125fc8e3cfafa4eb1a4a00df9f21b7eefbd6d66327561a70be6f15c5d9"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32650",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-index-finger",
+        "fmaId": "FMA23953",
+        "name": "Distal phalanx of left index finger",
+        "sourceName": "distal phalanx of left index finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA23953",
+        "bounds": {
+          "min": [
+            3.0126099586486816,
+            -1.381489872932434,
+            1.196139931678772
+          ],
+          "max": [
+            3.1125400066375732,
+            -1.244329810142517,
+            1.367110013961792
+          ]
+        },
+        "center": [
+          3.0625749826431274,
+          -1.3129098415374756,
+          1.281624972820282
+        ],
+        "anchor": [
+          3.050759792327881,
+          -1.3065801858901978,
+          1.2914299964904785
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3183",
+            "sha256": "53cd2e02023923e93f7651aed2b7b198fdaa9e0c8c8e83167b7ba371a2467396"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24460",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-little-finger",
+        "fmaId": "FMA23959",
+        "name": "Distal phalanx of left little finger",
+        "sourceName": "distal phalanx of left little finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA23959",
+        "bounds": {
+          "min": [
+            2.1889400482177734,
+            -1.233720064163208,
+            1.1841999292373657
+          ],
+          "max": [
+            2.271549940109253,
+            -1.1069097518920898,
+            1.3228399753570557
+          ]
+        },
+        "center": [
+          2.230244994163513,
+          -1.170314908027649,
+          1.2535199522972107
+        ],
+        "anchor": [
+          2.2397000789642334,
+          -1.1856402158737183,
+          1.2676199674606323
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3184",
+            "sha256": "56799202f865a5f250cf43da0619baebccde1dae3ee6cd3295e8e8171b4b6158"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24463",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-little-toe",
+        "fmaId": "FMA32659",
+        "name": "Distal phalanx of left little toe",
+        "sourceName": "distal phalanx of left little toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32659",
+        "bounds": {
+          "min": [
+            1.6126099824905396,
+            -8.704798698425293,
+            1.2616000175476074
+          ],
+          "max": [
+            1.6935800313949585,
+            -8.651289939880371,
+            1.3654500246047974
+          ]
+        },
+        "center": [
+          1.653095006942749,
+          -8.678044319152832,
+          1.3135250210762024
+        ],
+        "anchor": [
+          1.6396600008010864,
+          -8.676704406738281,
+          1.3209500312805176
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3185",
+            "sha256": "5978ed3c7d728bc03a558c5fe2a7db6fd272d02dc6ed67a1fbb21ce1693d659f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32658",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-middle-finger",
+        "fmaId": "FMA23955",
+        "name": "Distal phalanx of left middle finger",
+        "sourceName": "distal phalanx of left middle finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA23955",
+        "bounds": {
+          "min": [
+            2.7136099338531494,
+            -1.4663299322128296,
+            1.2808400392532349
+          ],
+          "max": [
+            2.808540105819702,
+            -1.3362902402877808,
+            1.450890064239502
+          ]
+        },
+        "center": [
+          2.761075019836426,
+          -1.4013100862503052,
+          1.3658650517463684
+        ],
+        "anchor": [
+          2.759739875793457,
+          -1.393499732017517,
+          1.382390022277832
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3186",
+            "sha256": "52a6da87eb85141fbfc47457b45704fbb360a64d30a9fe13b44edbfcdfcc7a8a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24461",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-ring-finger",
+        "fmaId": "FMA23957",
+        "name": "Distal phalanx of left ring finger",
+        "sourceName": "distal phalanx of left ring finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA23957",
+        "bounds": {
+          "min": [
+            2.453000068664551,
+            -1.3518798351287842,
+            1.287559986114502
+          ],
+          "max": [
+            2.5364599227905273,
+            -1.2610101699829102,
+            1.443600058555603
+          ]
+        },
+        "center": [
+          2.494729995727539,
+          -1.3064450025558472,
+          1.3655800223350525
+        ],
+        "anchor": [
+          2.5017800331115723,
+          -1.2966901063919067,
+          1.375749945640564
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3187",
+            "sha256": "30fde420c59b5e151de258f9c358c4cc1463de8b85c60e7c4b0a4d7ff573b9ad"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24462",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-thumb",
+        "fmaId": "FMA23951",
+        "name": "Distal phalanx of left thumb",
+        "sourceName": "distal phalanx of left thumb",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA23951",
+        "bounds": {
+          "min": [
+            3.108380079269409,
+            -0.807570219039917,
+            1.072409987449646
+          ],
+          "max": [
+            3.2393500804901123,
+            -0.5776898264884949,
+            1.2327299118041992
+          ]
+        },
+        "center": [
+          3.1738650798797607,
+          -0.6926300227642059,
+          1.1525699496269226
+        ],
+        "anchor": [
+          3.1494698524475098,
+          -0.7068102955818176,
+          1.1598199605941772
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3188",
+            "sha256": "cafb49c4af872d990b2cd7a3ea279e088ea596cea25ee2fdce16b8ebbb04d37c"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24459",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-second-toe",
+        "fmaId": "FMA32652",
+        "name": "Distal phalanx of right second toe",
+        "sourceName": "distal phalanx of right second toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32652",
+        "bounds": {
+          "min": [
+            -1.4334598779678345,
+            -8.702884674072266,
+            1.7101199626922607
+          ],
+          "max": [
+            -1.3234801292419434,
+            -8.630534172058105,
+            1.840959906578064
+          ]
+        },
+        "center": [
+          -1.378470003604889,
+          -8.666709423065186,
+          1.7755399346351624
+        ],
+        "anchor": [
+          -1.3784500360488892,
+          -8.649070739746094,
+          1.7747900485992432
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3189",
+            "sha256": "82657ea63694cff41a774da0ad28110e80ea4951e0ddaafcb2e2646275a22702"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32652",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-third-toe",
+        "fmaId": "FMA32654",
+        "name": "Distal phalanx of right third toe",
+        "sourceName": "distal phalanx of right third toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32654",
+        "bounds": {
+          "min": [
+            -1.5482499599456787,
+            -8.70197582244873,
+            1.6225900650024414
+          ],
+          "max": [
+            -1.4589101076126099,
+            -8.643865585327148,
+            1.7366600036621094
+          ]
+        },
+        "center": [
+          -1.5035800337791443,
+          -8.67292070388794,
+          1.6796250343322754
+        ],
+        "anchor": [
+          -1.5013600587844849,
+          -8.657671928405762,
+          1.679010033607483
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3190",
+            "sha256": "b31499b63bc1798909b2c8cec77b7ebbb422cf2e0f715381601aa7c136b32aa9"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32654",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-fourth-toe",
+        "fmaId": "FMA32656",
+        "name": "Distal phalanx of right fourth toe",
+        "sourceName": "distal phalanx of right fourth toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32656",
+        "bounds": {
+          "min": [
+            -1.6412700414657593,
+            -8.703923225402832,
+            1.4536799192428589
+          ],
+          "max": [
+            -1.5533500909805298,
+            -8.633959770202637,
+            1.56535005569458
+          ]
+        },
+        "center": [
+          -1.5973100662231445,
+          -8.668941497802734,
+          1.5095149874687195
+        ],
+        "anchor": [
+          -1.5972800254821777,
+          -8.654884338378906,
+          1.5148299932479858
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3191",
+            "sha256": "24a38431aa67546c25d938f7c5a572fb1206ffcf6bb6a14281c0322fc3d03bac"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32656",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-big-toe",
+        "fmaId": "FMA32650",
+        "name": "Distal phalanx of right big toe",
+        "sourceName": "distal phalanx of right big toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32650",
+        "bounds": {
+          "min": [
+            -1.2511900663375854,
+            -8.698979377746582,
+            1.6078200340270996
+          ],
+          "max": [
+            -1.0239800214767456,
+            -8.59005355834961,
+            1.8604400157928467
+          ]
+        },
+        "center": [
+          -1.1375850439071655,
+          -8.644516468048096,
+          1.7341300249099731
+        ],
+        "anchor": [
+          -1.13850998878479,
+          -8.620617866516113,
+          1.7453700304031372
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3192",
+            "sha256": "aa15fa88eb0a4643efca0763a8088091f970ae510003dcc78c63e9a3dece5b03"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32650",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-index-finger",
+        "fmaId": "FMA24460",
+        "name": "Distal phalanx of right index finger",
+        "sourceName": "distal phalanx of right index finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24460",
+        "bounds": {
+          "min": [
+            -3.113680124282837,
+            -1.3815399408340454,
+            1.196470022201538
+          ],
+          "max": [
+            -3.014249801635742,
+            -1.2431097030639648,
+            1.3672999143600464
+          ]
+        },
+        "center": [
+          -3.0639649629592896,
+          -1.3123248219490051,
+          1.2818849682807922
+        ],
+        "anchor": [
+          -3.047600030899048,
+          -1.3177300691604614,
+          1.280269980430603
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3193",
+            "sha256": "00d90373136e996def72c45bb2de42630f7533014b622d36bbf56c4121355e4b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24460",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-little-finger",
+        "fmaId": "FMA24463",
+        "name": "Distal phalanx of right little finger",
+        "sourceName": "distal phalanx of right little finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24463",
+        "bounds": {
+          "min": [
+            -2.2720301151275635,
+            -1.232509732246399,
+            1.1817100048065186
+          ],
+          "max": [
+            -2.1889500617980957,
+            -1.1072301864624023,
+            1.3187299966812134
+          ]
+        },
+        "center": [
+          -2.2304900884628296,
+          -1.1698699593544006,
+          1.250220000743866
+        ],
+        "anchor": [
+          -2.2409698963165283,
+          -1.1692700386047363,
+          1.2391499280929565
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3194",
+            "sha256": "0edc751d14c5260c93fcde78f868ce49521eec95085a613417a96ddfd6a8965d"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24463",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-little-toe",
+        "fmaId": "FMA32658",
+        "name": "Distal phalanx of right little toe",
+        "sourceName": "distal phalanx of right little toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32658",
+        "bounds": {
+          "min": [
+            -1.693269968032837,
+            -8.703537940979004,
+            1.2619999647140503
+          ],
+          "max": [
+            -1.6116900444030762,
+            -8.651418685913086,
+            1.3657898902893066
+          ]
+        },
+        "center": [
+          -1.6524800062179565,
+          -8.677478313446045,
+          1.3138949275016785
+        ],
+        "anchor": [
+          -1.652940034866333,
+          -8.66653823852539,
+          1.3238499164581299
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3195",
+            "sha256": "8053dcba2724d596cd66546934df05d04e5019b3b95ed6ec46795dff1b9abfde"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32658",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-middle-finger",
+        "fmaId": "FMA24461",
+        "name": "Distal phalanx of right middle finger",
+        "sourceName": "distal phalanx of right middle finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24461",
+        "bounds": {
+          "min": [
+            -2.809119939804077,
+            -1.469329833984375,
+            1.2820500135421753
+          ],
+          "max": [
+            -2.7136499881744385,
+            -1.334689974784851,
+            1.454279899597168
+          ]
+        },
+        "center": [
+          -2.761384963989258,
+          -1.402009904384613,
+          1.3681649565696716
+        ],
+        "anchor": [
+          -2.742770195007324,
+          -1.395640254020691,
+          1.3711199760437012
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3196",
+            "sha256": "901e109df6e4a98b88dae7cdddda416c4cdd91e58093f1dc51d80ccc7c4e9b34"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24461",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-ring-finger",
+        "fmaId": "FMA24462",
+        "name": "Distal phalanx of right ring finger",
+        "sourceName": "distal phalanx of right ring finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24462",
+        "bounds": {
+          "min": [
+            -2.536139965057373,
+            -1.3513097763061523,
+            1.2871699333190918
+          ],
+          "max": [
+            -2.452810049057007,
+            -1.2599200010299683,
+            1.4438000917434692
+          ]
+        },
+        "center": [
+          -2.49447500705719,
+          -1.3056148886680603,
+          1.3654850125312805
+        ],
+        "anchor": [
+          -2.478450059890747,
+          -1.3010797500610352,
+          1.3658699989318848
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3197",
+            "sha256": "4fece0e70293449e99a1b27a0d40c9d4fedd548ff0471fa7c783e5d973cbfba3"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24462",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-thumb",
+        "fmaId": "FMA24459",
+        "name": "Distal phalanx of right thumb",
+        "sourceName": "distal phalanx of right thumb",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24459",
+        "bounds": {
+          "min": [
+            -3.239140033721924,
+            -0.808610200881958,
+            1.0713499784469604
+          ],
+          "max": [
+            -3.1026298999786377,
+            -0.5783398151397705,
+            1.2335799932479858
+          ]
+        },
+        "center": [
+          -3.1708849668502808,
+          -0.6934750080108643,
+          1.1524649858474731
+        ],
+        "anchor": [
+          -3.146090030670166,
+          -0.6867401003837585,
+          1.1562199592590332
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3198",
+            "sha256": "bfae0f42c3cffa63b93403bf6fe1b446dcf0f8fc3e1f8994544ac256830a7b3e"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24459",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:left-first-metacarpal-bone",
+        "fmaId": "FMA24465",
+        "name": "Left first metacarpal bone",
+        "sourceName": "left first metacarpal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24465",
+        "bounds": {
+          "min": [
+            2.7235300540924072,
+            -0.3970501720905304,
+            0.7340599894523621
+          ],
+          "max": [
+            3.096250057220459,
+            -0.025930175557732582,
+            1.0378199815750122
+          ]
+        },
+        "center": [
+          2.909890055656433,
+          -0.2114901738241315,
+          0.8859399855136871
+        ],
+        "anchor": [
+          2.888230085372925,
+          -0.1816699206829071,
+          0.8883599638938904
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3240",
+            "sha256": "f512f1433a67003297c3ca0fca775c94372313cf3c3de28774a1cd7556e08362"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24464",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:left-first-metatarsal-bone",
+        "fmaId": "FMA24508",
+        "name": "Left first metatarsal bone",
+        "sourceName": "left first metatarsal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24508",
+        "bounds": {
+          "min": [
+            0.7483699917793274,
+            -8.653757095336914,
+            0.7997099161148071
+          ],
+          "max": [
+            1.043779969215393,
+            -8.221405982971191,
+            1.422410011291504
+          ]
+        },
+        "center": [
+          0.8960749804973602,
+          -8.437581539154053,
+          1.1110599637031555
+        ],
+        "anchor": [
+          0.8785949945449829,
+          -8.485761642456055,
+          1.1109199523925781
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3241",
+            "sha256": "1bb41c84fddb65d6394a55c1f534102794942541212702008a6316f93ba08e16"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24507",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:left-second-metacarpal-bone",
+        "fmaId": "FMA24467",
+        "name": "Left second metacarpal bone",
+        "sourceName": "left second metacarpal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24467",
+        "bounds": {
+          "min": [
+            2.618410110473633,
+            -0.8095800876617432,
+            0.6711699962615967
+          ],
+          "max": [
+            2.9261300563812256,
+            -0.13130980730056763,
+            0.9243299961090088
+          ]
+        },
+        "center": [
+          2.772270083427429,
+          -0.4704449474811554,
+          0.7977499961853027
+        ],
+        "anchor": [
+          2.8213000297546387,
+          -0.48330017924308777,
+          0.7823800444602966
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3243",
+            "sha256": "728fb5278b0e3d2ac9fb0af78ade721c5cb8764144e318a85f07ff9cdb9d7f7d"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24466",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:left-second-metatarsal-bone",
+        "fmaId": "FMA24510",
+        "name": "Left second metatarsal bone",
+        "sourceName": "left second metatarsal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24510",
+        "bounds": {
+          "min": [
+            0.9058940410614014,
+            -8.661637306213379,
+            0.7248899936676025
+          ],
+          "max": [
+            1.213479995727539,
+            -8.183069229125977,
+            1.373710036277771
+          ]
+        },
+        "center": [
+          1.0596870183944702,
+          -8.422353267669678,
+          1.0493000149726868
+        ],
+        "anchor": [
+          1.0705000162124634,
+          -8.424696922302246,
+          1.0501400232315063
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3244",
+            "sha256": "4992101f55b96d8fe47abca6e441c902ba1e60429ee41576a1d3a9fc17e4f22a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24509",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:left-third-metacarpal-bone",
+        "fmaId": "FMA24469",
+        "name": "Left third metacarpal bone",
+        "sourceName": "left third metacarpal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24469",
+        "bounds": {
+          "min": [
+            2.5236001014709473,
+            -0.7935101389884949,
+            0.6241000294685364
+          ],
+          "max": [
+            2.722520112991333,
+            -0.149749755859375,
+            0.928130030632019
+          ]
+        },
+        "center": [
+          2.62306010723114,
+          -0.47162994742393494,
+          0.7761150300502777
+        ],
+        "anchor": [
+          2.6117498874664307,
+          -0.4807202219963074,
+          0.7944599986076355
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3246",
+            "sha256": "fa86f28ff85a3a1e3ac6872a05912deece4d3f8489e08ea4d21b432db304938b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24468",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:left-third-metatarsal-bone",
+        "fmaId": "FMA24512",
+        "name": "Left third metatarsal bone",
+        "sourceName": "left third metatarsal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24512",
+        "bounds": {
+          "min": [
+            0.9831990003585815,
+            -8.665047645568848,
+            0.681410014629364
+          ],
+          "max": [
+            1.3360999822616577,
+            -8.23668098449707,
+            1.3079500198364258
+          ]
+        },
+        "center": [
+          1.1596494913101196,
+          -8.450864315032959,
+          0.9946800172328949
+        ],
+        "anchor": [
+          1.146009922027588,
+          -8.43350601196289,
+          1.0128998756408691
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3247",
+            "sha256": "84d0c310fd1448e753ac7ed2bda2d62d9dfb8fbe78f749111aaae3a7281ac5cc"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24511",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:left-fourth-metacarpal-bone",
+        "fmaId": "FMA24471",
+        "name": "Left fourth metacarpal bone",
+        "sourceName": "left fourth metacarpal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24471",
+        "bounds": {
+          "min": [
+            2.413559913635254,
+            -0.7474700808525085,
+            0.6589800119400024
+          ],
+          "max": [
+            2.5377399921417236,
+            -0.14781981706619263,
+            0.9191099405288696
+          ]
+        },
+        "center": [
+          2.4756499528884888,
+          -0.4476449489593506,
+          0.789044976234436
+        ],
+        "anchor": [
+          2.48826003074646,
+          -0.46893006563186646,
+          0.7905600070953369
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3249",
+            "sha256": "c5f7a10a04542437ff52fde75f81c5b0b2cba6a4a68c56b829c9e0de2fe1b72f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24470",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:left-fourth-metatarsal-bone",
+        "fmaId": "FMA24514",
+        "name": "Left fourth metatarsal bone",
+        "sourceName": "left fourth metatarsal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24514",
+        "bounds": {
+          "min": [
+            1.0177299976348877,
+            -8.673905372619629,
+            0.5696600079536438
+          ],
+          "max": [
+            1.4263800382614136,
+            -8.320211410522461,
+            1.1942499876022339
+          ]
+        },
+        "center": [
+          1.2220550179481506,
+          -8.497058391571045,
+          0.8819549977779388
+        ],
+        "anchor": [
+          1.207509994506836,
+          -8.499809265136719,
+          0.8479499816894531
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3250",
+            "sha256": "e1656035430f9bf5c5b5bb3de96fabfd18e3d78c6e47c39a403a47bd80dfa61b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24513",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:left-fifth-metacarpal-bone",
+        "fmaId": "FMA24473",
+        "name": "Left fifth metacarpal bone",
+        "sourceName": "left fifth metacarpal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24473",
+        "bounds": {
+          "min": [
+            2.252700090408325,
+            -0.6796899437904358,
+            0.702239990234375
+          ],
+          "max": [
+            2.453939914703369,
+            -0.13241027295589447,
+            0.9441999793052673
+          ]
+        },
+        "center": [
+          2.353320002555847,
+          -0.40605010837316513,
+          0.8232199847698212
+        ],
+        "anchor": [
+          2.373500108718872,
+          -0.41370972990989685,
+          0.8138800263404846
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3252",
+            "sha256": "ca8db2999ff2d7a14a61e9cbeb83a01011a3557df844ff1c47bb7ac3eaeccdb8"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24472",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:left-fifth-metatarsal-bone",
+        "fmaId": "FMA24516",
+        "name": "Left fifth metatarsal bone",
+        "sourceName": "left fifth metatarsal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24516",
+        "bounds": {
+          "min": [
+            1.0643699169158936,
+            -8.698140144348145,
+            0.3929239511489868
+          ],
+          "max": [
+            1.5237499475479126,
+            -8.397727012634277,
+            1.0508599281311035
+          ]
+        },
+        "center": [
+          1.294059932231903,
+          -8.547933578491211,
+          0.7218919396400452
+        ],
+        "anchor": [
+          1.3113698959350586,
+          -8.51496696472168,
+          0.7386799454689026
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3253",
+            "sha256": "29642383bc5c2d96f7025b2da0b8139f5b71d5d0e1470622745fd9b606575010"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24515",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-ring-finger",
+        "fmaId": "FMA23942",
+        "name": "Middle phalanx of left ring finger",
+        "sourceName": "middle phalanx of left ring finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA23942",
+        "bounds": {
+          "min": [
+            2.4278199672698975,
+            -1.3017901182174683,
+            1.06794011592865
+          ],
+          "max": [
+            2.5453200340270996,
+            -1.0631598234176636,
+            1.3054699897766113
+          ]
+        },
+        "center": [
+          2.4865700006484985,
+          -1.182474970817566,
+          1.1867050528526306
+        ],
+        "anchor": [
+          2.4808900356292725,
+          -1.1811999082565308,
+          1.1913200616836548
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3291",
+            "sha256": "5c352c5c4329997419f731995176a2e293c749bc4896de37e6feb9d8b122cfac"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24457",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-ring-finger",
+        "fmaId": "FMA24457",
+        "name": "Middle phalanx of right ring finger",
+        "sourceName": "middle phalanx of right ring finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24457",
+        "bounds": {
+          "min": [
+            -2.5429298877716064,
+            -1.3029601573944092,
+            1.0653599500656128
+          ],
+          "max": [
+            -2.4276299476623535,
+            -1.0639599561691284,
+            1.3056700229644775
+          ]
+        },
+        "center": [
+          -2.48527991771698,
+          -1.1834600567817688,
+          1.1855149865150452
+        ],
+        "anchor": [
+          -2.4890999794006348,
+          -1.178220272064209,
+          1.1903899908065796
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3292",
+            "sha256": "11af3f3453af291b20b0f4a9002c3e0906535acdc0004bd175876ddeecb9a094"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24457",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-second-toe",
+        "fmaId": "FMA32643",
+        "name": "Middle phalanx of left second toe",
+        "sourceName": "middle phalanx of left second toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32643",
+        "bounds": {
+          "min": [
+            1.2512699365615845,
+            -8.679535865783691,
+            1.5752900838851929
+          ],
+          "max": [
+            1.3921200037002563,
+            -8.593413352966309,
+            1.7462899684906006
+          ]
+        },
+        "center": [
+          1.3216949701309204,
+          -8.636474609375,
+          1.6607900261878967
+        ],
+        "anchor": [
+          1.3186700344085693,
+          -8.627381324768066,
+          1.6844900846481323
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3293",
+            "sha256": "72afe21185eed25dbab98a1bb7cb28e64012f672bfb3a76d81fdbf5b531f4958"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32642",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-third-toe",
+        "fmaId": "FMA32645",
+        "name": "Middle phalanx of left third toe",
+        "sourceName": "middle phalanx of left third toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32645",
+        "bounds": {
+          "min": [
+            1.3891499042510986,
+            -8.689835548400879,
+            1.489109992980957
+          ],
+          "max": [
+            1.5181100368499756,
+            -8.611088752746582,
+            1.6585201025009155
+          ]
+        },
+        "center": [
+          1.453629970550537,
+          -8.65046215057373,
+          1.5738150477409363
+        ],
+        "anchor": [
+          1.4457899332046509,
+          -8.633589744567871,
+          1.580509901046753
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3294",
+            "sha256": "036f7e9bca027b8b7e6075976249ba90178a9639591878a1b5954d0f7d237c17"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32644",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-fourth-toe",
+        "fmaId": "FMA32647",
+        "name": "Middle phalanx of left fourth toe",
+        "sourceName": "middle phalanx of left fourth toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32647",
+        "bounds": {
+          "min": [
+            1.490440011024475,
+            -8.697918891906738,
+            1.3543299436569214
+          ],
+          "max": [
+            1.6138999462127686,
+            -8.619694709777832,
+            1.4877901077270508
+          ]
+        },
+        "center": [
+          1.5521699786186218,
+          -8.658806800842285,
+          1.421060025691986
+        ],
+        "anchor": [
+          1.5460400581359863,
+          -8.674824714660645,
+          1.4180400371551514
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3295",
+            "sha256": "cffbba99a2d64e833cac9545d91dc21092b2d7ecef35dd276a80ff7d35157239"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32646",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-index-finger",
+        "fmaId": "FMA23938",
+        "name": "Middle phalanx of left index finger",
+        "sourceName": "middle phalanx of left index finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA23938",
+        "bounds": {
+          "min": [
+            2.94389009475708,
+            -1.290250301361084,
+            1.0125600099563599
+          ],
+          "max": [
+            3.090010166168213,
+            -1.0854699611663818,
+            1.2205700874328613
+          ]
+        },
+        "center": [
+          3.0169501304626465,
+          -1.187860131263733,
+          1.1165650486946106
+        ],
+        "anchor": [
+          3.010430097579956,
+          -1.1797497272491455,
+          1.1273499727249146
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3296",
+            "sha256": "a2f1986d020da3ec013aeefb14b11223b18ab4181f0e7f2e56d54faee672e34f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24455",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-little-finger",
+        "fmaId": "FMA23944",
+        "name": "Middle phalanx of left little finger",
+        "sourceName": "middle phalanx of left little finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA23944",
+        "bounds": {
+          "min": [
+            2.1892099380493164,
+            -1.1253399848937988,
+            1.0491200685501099
+          ],
+          "max": [
+            2.302989959716797,
+            -0.9293902516365051,
+            1.2147899866104126
+          ]
+        },
+        "center": [
+          2.2460999488830566,
+          -1.027365118265152,
+          1.1319550275802612
+        ],
+        "anchor": [
+          2.267199993133545,
+          -1.0419098138809204,
+          1.1407699584960938
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3297",
+            "sha256": "536be862531dc82ab85bc0f7a49f1492574a39d613db552a1dc98b535e2c83f5"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24458",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-little-toe",
+        "fmaId": "FMA230988",
+        "name": "Middle phalanx of left little toe",
+        "sourceName": "middle phalanx of left little toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA230988",
+        "bounds": {
+          "min": [
+            1.5810000896453857,
+            -8.700543403625488,
+            1.2155200242996216
+          ],
+          "max": [
+            1.6667399406433105,
+            -8.637796401977539,
+            1.2895399332046509
+          ]
+        },
+        "center": [
+          1.6238700151443481,
+          -8.669169902801514,
+          1.2525299787521362
+        ],
+        "anchor": [
+          1.618149995803833,
+          -8.691596984863281,
+          1.2495100498199463
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3298",
+            "sha256": "140d41e53c49bbbaea54972b738b215d3c3ef6bb9c5284f9f7e0516a25e2f68c"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA230986",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-middle-finger",
+        "fmaId": "FMA23940",
+        "name": "Middle phalanx of left middle finger",
+        "sourceName": "middle phalanx of left middle finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA23940",
+        "bounds": {
+          "min": [
+            2.6651699542999268,
+            -1.3759100437164307,
+            1.0785800218582153
+          ],
+          "max": [
+            2.8020498752593994,
+            -1.1223297119140625,
+            1.3087600469589233
+          ]
+        },
+        "center": [
+          2.733609914779663,
+          -1.2491198778152466,
+          1.1936700344085693
+        ],
+        "anchor": [
+          2.7057502269744873,
+          -1.2561999559402466,
+          1.199679970741272
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3299",
+            "sha256": "f0404230992ffcf77f1d3834c6015305abe10c2c40a84e2e920a21d9cc0743f2"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24456",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-second-toe",
+        "fmaId": "FMA32642",
+        "name": "Middle phalanx of right second toe",
+        "sourceName": "middle phalanx of right second toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32642",
+        "bounds": {
+          "min": [
+            -1.393549919128418,
+            -8.680103302001953,
+            1.5764799118041992
+          ],
+          "max": [
+            -1.252369999885559,
+            -8.594038963317871,
+            1.746880054473877
+          ]
+        },
+        "center": [
+          -1.3229599595069885,
+          -8.637071132659912,
+          1.661679983139038
+        ],
+        "anchor": [
+          -1.2956500053405762,
+          -8.636598587036133,
+          1.663540005683899
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3300",
+            "sha256": "505ff6d5185c0cec018be5a18206a2ccbcc8822f09b9282b9ad2586716d3a3d9"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32642",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-third-toe",
+        "fmaId": "FMA32644",
+        "name": "Middle phalanx of right third toe",
+        "sourceName": "middle phalanx of right third toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32644",
+        "bounds": {
+          "min": [
+            -1.517259955406189,
+            -8.688310623168945,
+            1.488669991493225
+          ],
+          "max": [
+            -1.388890027999878,
+            -8.60914421081543,
+            1.6574499607086182
+          ]
+        },
+        "center": [
+          -1.4530749917030334,
+          -8.648727416992188,
+          1.5730599761009216
+        ],
+        "anchor": [
+          -1.4524099826812744,
+          -8.636129379272461,
+          1.5889300107955933
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3301",
+            "sha256": "1da31f6465a4767ab9dc18df433e5e0df0da4e9578d2864b02e5a71e785b5d8c"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32644",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-fourth-toe",
+        "fmaId": "FMA32646",
+        "name": "Middle phalanx of right fourth toe",
+        "sourceName": "middle phalanx of right fourth toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32646",
+        "bounds": {
+          "min": [
+            -1.613420009613037,
+            -8.698887825012207,
+            1.354349970817566
+          ],
+          "max": [
+            -1.4907100200653076,
+            -8.619355201721191,
+            1.4880599975585938
+          ]
+        },
+        "center": [
+          -1.5520650148391724,
+          -8.6591215133667,
+          1.4212049841880798
+        ],
+        "anchor": [
+          -1.5481399297714233,
+          -8.670809745788574,
+          1.430090069770813
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3302",
+            "sha256": "dd69a8df55e8ff34f55fe2b906507aac2659be0d2784833b6a0c2046258929e3"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32646",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-index-finger",
+        "fmaId": "FMA24455",
+        "name": "Middle phalanx of right index finger",
+        "sourceName": "middle phalanx of right index finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24455",
+        "bounds": {
+          "min": [
+            -3.0899999141693115,
+            -1.2899402379989624,
+            1.0130900144577026
+          ],
+          "max": [
+            -2.944000005722046,
+            -1.0852398872375488,
+            1.220829963684082
+          ]
+        },
+        "center": [
+          -3.0169999599456787,
+          -1.1875900626182556,
+          1.1169599890708923
+        ],
+        "anchor": [
+          -2.999540090560913,
+          -1.2109496593475342,
+          1.1353100538253784
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3303",
+            "sha256": "af5955d21314bf58ed06fc28f28467e56ce366b658372b37a5e21936ed9f2c8b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24455",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-little-finger",
+        "fmaId": "FMA24458",
+        "name": "Middle phalanx of right little finger",
+        "sourceName": "middle phalanx of right little finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24458",
+        "bounds": {
+          "min": [
+            -2.305449962615967,
+            -1.1242998838424683,
+            1.0482299327850342
+          ],
+          "max": [
+            -2.189349889755249,
+            -0.9284496903419495,
+            1.2143899202346802
+          ]
+        },
+        "center": [
+          -2.247399926185608,
+          -1.0263747870922089,
+          1.1313099265098572
+        ],
+        "anchor": [
+          -2.2532401084899902,
+          -1.0122802257537842,
+          1.1373399496078491
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3304",
+            "sha256": "4cd1972167a669afb93f288cf994101bb32083b95efbfc1696b1781560586ca0"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24458",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-little-toe",
+        "fmaId": "FMA230986",
+        "name": "Middle phalanx of right little toe",
+        "sourceName": "middle phalanx of right little toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA230986",
+        "bounds": {
+          "min": [
+            -1.6669000387191772,
+            -8.70090389251709,
+            1.2144999504089355
+          ],
+          "max": [
+            -1.5808000564575195,
+            -8.637391090393066,
+            1.288179874420166
+          ]
+        },
+        "center": [
+          -1.6238500475883484,
+          -8.669147491455078,
+          1.2513399124145508
+        ],
+        "anchor": [
+          -1.6055299043655396,
+          -8.690170288085938,
+          1.2569500207901
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3305",
+            "sha256": "e1a4698c0de159b1851711084ddb96ccaf85022d941f305d670789444d6395bf"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA230986",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-middle-finger",
+        "fmaId": "FMA24456",
+        "name": "Middle phalanx of right middle finger",
+        "sourceName": "middle phalanx of right middle finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24456",
+        "bounds": {
+          "min": [
+            -2.8020200729370117,
+            -1.3754303455352783,
+            1.077989935874939
+          ],
+          "max": [
+            -2.6658802032470703,
+            -1.1219298839569092,
+            1.309340000152588
+          ]
+        },
+        "center": [
+          -2.733950138092041,
+          -1.2486801147460938,
+          1.1936649680137634
+        ],
+        "anchor": [
+          -2.7432501316070557,
+          -1.230080008506775,
+          1.1914900541305542
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3306",
+            "sha256": "60a6197d8d7dedcb1039f82613c3c9e968109a9588b89a767ba6a44202f7c830"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24456",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-big-toe",
+        "fmaId": "FMA43253",
+        "name": "Proximal phalanx of right big toe",
+        "sourceName": "proximal phalanx of right big toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA43253",
+        "bounds": {
+          "min": [
+            -1.1719599962234497,
+            -8.68639087677002,
+            1.3607001304626465
+          ],
+          "max": [
+            -0.866595983505249,
+            -8.514086723327637,
+            1.6928900480270386
+          ]
+        },
+        "center": [
+          -1.0192779898643494,
+          -8.600238800048828,
+          1.5267950892448425
+        ],
+        "anchor": [
+          -1.0429099798202515,
+          -8.565116882324219,
+          1.5583900213241577
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3310",
+            "sha256": "bb72eb8ed4cedf8ad2ab9a0ee2de9c80232ab6bd0e8840259beb59b8bac3bd07"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA43253",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-third-toe",
+        "fmaId": "FMA32637",
+        "name": "Proximal phalanx of left third toe",
+        "sourceName": "proximal phalanx of left third toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32637",
+        "bounds": {
+          "min": [
+            1.2513200044631958,
+            -8.676982879638672,
+            1.2461700439453125
+          ],
+          "max": [
+            1.4580799341201782,
+            -8.559133529663086,
+            1.5283399820327759
+          ]
+        },
+        "center": [
+          1.354699969291687,
+          -8.618058204650879,
+          1.3872550129890442
+        ],
+        "anchor": [
+          1.3760099411010742,
+          -8.629802703857422,
+          1.3880099058151245
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3311",
+            "sha256": "4787599e0e9fefaa45c40736f38ccacc8ec7e7e867cde692c5ea4f775e97364b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32636",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-fourth-toe",
+        "fmaId": "FMA32639",
+        "name": "Proximal phalanx of left fourth toe",
+        "sourceName": "proximal phalanx of left fourth toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32639",
+        "bounds": {
+          "min": [
+            1.3430900573730469,
+            -8.697052955627441,
+            1.144279956817627
+          ],
+          "max": [
+            1.5589998960494995,
+            -8.565251350402832,
+            1.3842500448226929
+          ]
+        },
+        "center": [
+          1.4510449767112732,
+          -8.631152153015137,
+          1.26426500082016
+        ],
+        "anchor": [
+          1.4594999551773071,
+          -8.6431245803833,
+          1.2571600675582886
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3312",
+            "sha256": "32b171c096dfe9993503b4f14e58d5b2996dadf73352efc506c04d1098370a5b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32638",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-index-finger",
+        "fmaId": "FMA71915",
+        "name": "Proximal phalanx of left index finger",
+        "sourceName": "proximal phalanx of left index finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA71915",
+        "bounds": {
+          "min": [
+            2.8081400394439697,
+            -1.1427899599075317,
+            0.8408900499343872
+          ],
+          "max": [
+            3.02810001373291,
+            -0.7664397954940796,
+            1.0705701112747192
+          ]
+        },
+        "center": [
+          2.91812002658844,
+          -0.9546148777008057,
+          0.9557300806045532
+        ],
+        "anchor": [
+          2.91441011428833,
+          -0.9245398044586182,
+          0.9560099840164185
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3313",
+            "sha256": "3eb71ace606cc3271523e30a405c061290d9da661b59310a682c9d50d9c0ddf1"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24451",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-little-finger",
+        "fmaId": "FMA66791",
+        "name": "Proximal phalanx of left little finger",
+        "sourceName": "proximal phalanx of left little finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA66791",
+        "bounds": {
+          "min": [
+            2.2222700119018555,
+            -0.9661499261856079,
+            0.886680006980896
+          ],
+          "max": [
+            2.3629400730133057,
+            -0.6421002149581909,
+            1.0946099758148193
+          ]
+        },
+        "center": [
+          2.2926050424575806,
+          -0.8041250705718994,
+          0.9906449913978577
+        ],
+        "anchor": [
+          2.31427001953125,
+          -0.7887499928474426,
+          0.9864500164985657
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3314",
+            "sha256": "8b824d96eed3bc1325665fa99592d58ebd43346b436154fefae6a3c2a98753af"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24454",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-little-toe",
+        "fmaId": "FMA32641",
+        "name": "Proximal phalanx of left little toe",
+        "sourceName": "proximal phalanx of left little toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32641",
+        "bounds": {
+          "min": [
+            1.4293800592422485,
+            -8.698091506958008,
+            0.9877499341964722
+          ],
+          "max": [
+            1.6478999853134155,
+            -8.599870681762695,
+            1.240190029144287
+          ]
+        },
+        "center": [
+          1.538640022277832,
+          -8.648981094360352,
+          1.1139699816703796
+        ],
+        "anchor": [
+          1.5457299947738647,
+          -8.661887168884277,
+          1.0898399353027344
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3315",
+            "sha256": "4488ac24e66f25118feb375fbdf19e6e123595cbd26c726c3df1604bec59c7f8"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32640",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-middle-finger",
+        "fmaId": "FMA71908",
+        "name": "Proximal phalanx of left middle finger",
+        "sourceName": "proximal phalanx of left middle finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA71908",
+        "bounds": {
+          "min": [
+            2.5920097827911377,
+            -1.1570098400115967,
+            0.8519200086593628
+          ],
+          "max": [
+            2.7738001346588135,
+            -0.7503399848937988,
+            1.1409599781036377
+          ]
+        },
+        "center": [
+          2.6829049587249756,
+          -0.9536749124526978,
+          0.9964399933815002
+        ],
+        "anchor": [
+          2.6530802249908447,
+          -0.9588897824287415,
+          1.0060200691223145
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3316",
+            "sha256": "5dccce5f8ff2f9152fb6b758b8cdd0bcf9fd73cc01a78464a965f69e90994bb6"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24452",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-ring-finger",
+        "fmaId": "FMA71916",
+        "name": "Proximal phalanx of left ring finger",
+        "sourceName": "proximal phalanx of left ring finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA71916",
+        "bounds": {
+          "min": [
+            2.4049201011657715,
+            -1.0994800329208374,
+            0.8570899963378906
+          ],
+          "max": [
+            2.5388600826263428,
+            -0.7104198932647705,
+            1.1192998886108398
+          ]
+        },
+        "center": [
+          2.471890091896057,
+          -0.904949963092804,
+          0.9881949424743652
+        ],
+        "anchor": [
+          2.466089963912964,
+          -0.8757598996162415,
+          0.9792799353599548
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3317",
+            "sha256": "099ccb27cdafeb169ffeb8bc73804910f30a6cefccf830d4dbfa6855bfebf46c"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24453",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-thumb",
+        "fmaId": "FMA65470",
+        "name": "Proximal phalanx of left thumb",
+        "sourceName": "proximal phalanx of left thumb",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA65470",
+        "bounds": {
+          "min": [
+            2.9869399070739746,
+            -0.6447100639343262,
+            0.926289975643158
+          ],
+          "max": [
+            3.186189889907837,
+            -0.3283196985721588,
+            1.1475300788879395
+          ]
+        },
+        "center": [
+          3.0865648984909058,
+          -0.4865148812532425,
+          1.0369100272655487
+        ],
+        "anchor": [
+          3.0822501182556152,
+          -0.45986998081207275,
+          1.0437699556350708
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3318",
+            "sha256": "3b327f7169609c03540967f7f8ceba810afda27a427cb5f16ea6641ef429837a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24450",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-second-toe",
+        "fmaId": "FMA32634",
+        "name": "Proximal phalanx of right second toe",
+        "sourceName": "proximal phalanx of right second toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32634",
+        "bounds": {
+          "min": [
+            -1.3356499671936035,
+            -8.66873550415039,
+            1.3355499505996704
+          ],
+          "max": [
+            -1.1134600639343262,
+            -8.545463562011719,
+            1.6167999505996704
+          ]
+        },
+        "center": [
+          -1.2245550155639648,
+          -8.607099533081055,
+          1.4761749505996704
+        ],
+        "anchor": [
+          -1.219580054283142,
+          -8.615654945373535,
+          1.4902299642562866
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3319",
+            "sha256": "f8f7d8f026953233fd9412b80ba897fdd329a48108cbfd11578b56dcf9edcc1e"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32634",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-third-toe",
+        "fmaId": "FMA32636",
+        "name": "Proximal phalanx of right third toe",
+        "sourceName": "proximal phalanx of right third toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32636",
+        "bounds": {
+          "min": [
+            -1.4590198993682861,
+            -8.6764497756958,
+            1.244360089302063
+          ],
+          "max": [
+            -1.2507599592208862,
+            -8.562044143676758,
+            1.5284100770950317
+          ]
+        },
+        "center": [
+          -1.3548899292945862,
+          -8.61924695968628,
+          1.3863850831985474
+        ],
+        "anchor": [
+          -1.3747600317001343,
+          -8.615997314453125,
+          1.3690699338912964
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3320",
+            "sha256": "49b6fc5fe03ba23422e852d1fcd419b94bafbdf69fd20552eca0620e1ed62e6e"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32636",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-fourth-toe",
+        "fmaId": "FMA32638",
+        "name": "Proximal phalanx of right fourth toe",
+        "sourceName": "proximal phalanx of right fourth toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32638",
+        "bounds": {
+          "min": [
+            -1.5592999458312988,
+            -8.697409629821777,
+            1.1437900066375732
+          ],
+          "max": [
+            -1.3433899879455566,
+            -8.564986228942871,
+            1.3842799663543701
+          ]
+        },
+        "center": [
+          -1.4513449668884277,
+          -8.631197929382324,
+          1.2640349864959717
+        ],
+        "anchor": [
+          -1.4282898902893066,
+          -8.63337516784668,
+          1.2634899616241455
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3321",
+            "sha256": "87949e88d498df13a376db05c0b094bae55ade09d5dec4ebd1557a5022d4f8ea"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32638",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-index-finger",
+        "fmaId": "FMA24451",
+        "name": "Proximal phalanx of right index finger",
+        "sourceName": "proximal phalanx of right index finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24451",
+        "bounds": {
+          "min": [
+            -3.0276501178741455,
+            -1.1418102979660034,
+            0.8409300446510315
+          ],
+          "max": [
+            -2.8095200061798096,
+            -0.7680298089981079,
+            1.067579984664917
+          ]
+        },
+        "center": [
+          -2.9185850620269775,
+          -0.9549200534820557,
+          0.9542550146579742
+        ],
+        "anchor": [
+          -2.9455599784851074,
+          -0.9092297554016113,
+          0.950950026512146
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3322",
+            "sha256": "03cb38d378f7eb94046e45a6fcc214c48b1081b6a35c37a491bde356cb948764"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24451",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-little-finger",
+        "fmaId": "FMA24454",
+        "name": "Proximal phalanx of right little finger",
+        "sourceName": "proximal phalanx of right little finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24454",
+        "bounds": {
+          "min": [
+            -2.3632898330688477,
+            -0.9664398431777954,
+            0.887209951877594
+          ],
+          "max": [
+            -2.221519947052002,
+            -0.640440046787262,
+            1.095229983329773
+          ]
+        },
+        "center": [
+          -2.292404890060425,
+          -0.8034399449825287,
+          0.9912199676036835
+        ],
+        "anchor": [
+          -2.2627201080322266,
+          -0.8029101490974426,
+          0.9962600469589233
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3323",
+            "sha256": "c3aaebcb7e86e3610f6d7a6896b33a60d7f544f924bdf0c4b639f8dae8c62e55"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24454",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-little-toe",
+        "fmaId": "FMA32640",
+        "name": "Proximal phalanx of right little toe",
+        "sourceName": "proximal phalanx of right little toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32640",
+        "bounds": {
+          "min": [
+            -1.6483700275421143,
+            -8.698931694030762,
+            0.9871099591255188
+          ],
+          "max": [
+            -1.4288499355316162,
+            -8.600473403930664,
+            1.240839958190918
+          ]
+        },
+        "center": [
+          -1.5386099815368652,
+          -8.649702548980713,
+          1.1139749586582184
+        ],
+        "anchor": [
+          -1.557539939880371,
+          -8.653310775756836,
+          1.0894900560379028
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3324",
+            "sha256": "deeabcf2bf83d7b9f77acf1c1634650805d467188f05505a6898aa3cbbdcea2b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32640",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-middle-finger",
+        "fmaId": "FMA24452",
+        "name": "Proximal phalanx of right middle finger",
+        "sourceName": "proximal phalanx of right middle finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24452",
+        "bounds": {
+          "min": [
+            -2.7741401195526123,
+            -1.157189965248108,
+            0.8511199951171875
+          ],
+          "max": [
+            -2.5920801162719727,
+            -0.751389741897583,
+            1.1420100927352905
+          ]
+        },
+        "center": [
+          -2.6831101179122925,
+          -0.9542898535728455,
+          0.996565043926239
+        ],
+        "anchor": [
+          -2.671720027923584,
+          -0.958250105381012,
+          1.0065100193023682
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3325",
+            "sha256": "ea76430375e036eea61a11c3edcbece711496563e5f2d35e6bee7f1a1cb49569"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24452",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-ring-finger",
+        "fmaId": "FMA24453",
+        "name": "Proximal phalanx of right ring finger",
+        "sourceName": "proximal phalanx of right ring finger",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24453",
+        "bounds": {
+          "min": [
+            -2.5382399559020996,
+            -1.1003198623657227,
+            0.8565800189971924
+          ],
+          "max": [
+            -2.405910015106201,
+            -0.7106799483299255,
+            1.1197700500488281
+          ]
+        },
+        "center": [
+          -2.4720749855041504,
+          -0.9054999053478241,
+          0.9881750345230103
+        ],
+        "anchor": [
+          -2.481029987335205,
+          -0.9124798774719238,
+          0.9977299571037292
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3326",
+            "sha256": "5bb35c193650c9e390ad18d2e9ca834c19ab32d478a12446380d8cd50b9b0ca2"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24453",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-thumb",
+        "fmaId": "FMA24450",
+        "name": "Proximal phalanx of right thumb",
+        "sourceName": "proximal phalanx of right thumb",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24450",
+        "bounds": {
+          "min": [
+            -3.1880898475646973,
+            -0.6439300775527954,
+            0.9265300035476685
+          ],
+          "max": [
+            -2.986489772796631,
+            -0.32802000641822815,
+            1.1488299369812012
+          ]
+        },
+        "center": [
+          -3.087289810180664,
+          -0.4859750419855118,
+          1.0376799702644348
+        ],
+        "anchor": [
+          -3.0790300369262695,
+          -0.5008697509765625,
+          1.0447500944137573
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3327",
+            "sha256": "84d3df498603c91935ae8edfc341c17ad3e46b910249a98e1e3edd4ccf309e71"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24450",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-second-toe",
+        "fmaId": "FMA32635",
+        "name": "Proximal phalanx of left second toe",
+        "sourceName": "proximal phalanx of left second toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32635",
+        "bounds": {
+          "min": [
+            1.114490032196045,
+            -8.668400764465332,
+            1.3348499536514282
+          ],
+          "max": [
+            1.3349299430847168,
+            -8.544700622558594,
+            1.6162399053573608
+          ]
+        },
+        "center": [
+          1.2247099876403809,
+          -8.606550693511963,
+          1.4755449295043945
+        ],
+        "anchor": [
+          1.2201800346374512,
+          -8.6148099899292,
+          1.4928100109100342
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3328",
+            "sha256": "fd7064f417423cb6224e68867b0f3c5fd46c165a76fba035199e4db235d0616b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA32634",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-big-toe",
+        "fmaId": "FMA43254",
+        "name": "Proximal phalanx of left big toe",
+        "sourceName": "proximal phalanx of left big toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA43254",
+        "bounds": {
+          "min": [
+            0.8670330047607422,
+            -8.684151649475098,
+            1.3603599071502686
+          ],
+          "max": [
+            1.1708199977874756,
+            -8.515522003173828,
+            1.6927099227905273
+          ]
+        },
+        "center": [
+          1.0189265012741089,
+          -8.599836826324463,
+          1.526534914970398
+        ],
+        "anchor": [
+          0.9830190539360046,
+          -8.58358383178711,
+          1.5520700216293335
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3329",
+            "sha256": "3b6770f4dd2bfc54fea30468a90eafd63c21aea8381688ce0912f85502f86f25"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA43253",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:right-first-metacarpal-bone",
+        "fmaId": "FMA24464",
+        "name": "Right first metacarpal bone",
+        "sourceName": "right first metacarpal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24464",
+        "bounds": {
+          "min": [
+            -3.0957698822021484,
+            -0.3971899449825287,
+            0.736270010471344
+          ],
+          "max": [
+            -2.7223598957061768,
+            -0.027620239183306694,
+            1.0386099815368652
+          ]
+        },
+        "center": [
+          -2.9090648889541626,
+          -0.2124050920829177,
+          0.8874399960041046
+        ],
+        "anchor": [
+          -2.914479970932007,
+          -0.24702025949954987,
+          0.8846299648284912
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3350",
+            "sha256": "92ef27746cf2c5b317b88558b42e171128f980ea16414ca6e3647d19d1594382"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24464",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:right-first-metatarsal-bone",
+        "fmaId": "FMA24507",
+        "name": "Right first metatarsal bone",
+        "sourceName": "right first metatarsal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24507",
+        "bounds": {
+          "min": [
+            -1.0436500310897827,
+            -8.653291702270508,
+            0.7994400262832642
+          ],
+          "max": [
+            -0.7481369972229004,
+            -8.22120189666748,
+            1.421820044517517
+          ]
+        },
+        "center": [
+          -0.8958935141563416,
+          -8.437246799468994,
+          1.1106300354003906
+        ],
+        "anchor": [
+          -0.8959369659423828,
+          -8.49156665802002,
+          1.0965800285339355
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3351",
+            "sha256": "b70e565ec8ad8c09264ae66159415ca4f0cf639598812aac6fcf7b761c3758d3"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24507",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:right-second-metacarpal-bone",
+        "fmaId": "FMA24466",
+        "name": "Right second metacarpal bone",
+        "sourceName": "right second metacarpal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24466",
+        "bounds": {
+          "min": [
+            -2.926870107650757,
+            -0.8112902641296387,
+            0.6705700159072876
+          ],
+          "max": [
+            -2.6182000637054443,
+            -0.13130980730056763,
+            0.9278700351715088
+          ]
+        },
+        "center": [
+          -2.7725350856781006,
+          -0.47130003571510315,
+          0.7992200255393982
+        ],
+        "anchor": [
+          -2.7511701583862305,
+          -0.46614015102386475,
+          0.7921000719070435
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3352",
+            "sha256": "6d4e9874925f542124ced9e041f340de5b9c8f872d6ad7e2d483e9d0ab159980"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24466",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:right-second-metatarsal-bone",
+        "fmaId": "FMA24509",
+        "name": "Right second metatarsal bone",
+        "sourceName": "right second metatarsal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24509",
+        "bounds": {
+          "min": [
+            -1.212730050086975,
+            -8.663178443908691,
+            0.7244799733161926
+          ],
+          "max": [
+            -0.9065660238265991,
+            -8.183246612548828,
+            1.374060034751892
+          ]
+        },
+        "center": [
+          -1.059648036956787,
+          -8.42321252822876,
+          1.0492700040340424
+        ],
+        "anchor": [
+          -1.0672000646591187,
+          -8.418490409851074,
+          1.0409300327301025
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3353",
+            "sha256": "f6c034b6b18aee623f510ee40e4171346c084e8bdd092354d634c87fc9af6acf"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24509",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:right-third-metacarpal-bone",
+        "fmaId": "FMA24468",
+        "name": "Right third metacarpal bone",
+        "sourceName": "right third metacarpal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24468",
+        "bounds": {
+          "min": [
+            -2.7234601974487305,
+            -0.7915997505187988,
+            0.623259961605072
+          ],
+          "max": [
+            -2.52485990524292,
+            -0.14737975597381592,
+            0.9273300170898438
+          ]
+        },
+        "center": [
+          -2.624160051345825,
+          -0.4694897532463074,
+          0.7752949893474579
+        ],
+        "anchor": [
+          -2.628920078277588,
+          -0.4772900342941284,
+          0.7948399186134338
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3354",
+            "sha256": "98a26b8f08e6cd3578706a65d83c2e1e432d7a206202294cd525aa287b75072b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24468",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:right-third-metatarsal-bone",
+        "fmaId": "FMA24511",
+        "name": "Right third metatarsal bone",
+        "sourceName": "right third metatarsal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24511",
+        "bounds": {
+          "min": [
+            -1.3359599113464355,
+            -8.663774490356445,
+            0.6836100220680237
+          ],
+          "max": [
+            -0.9832219481468201,
+            -8.236724853515625,
+            1.3085699081420898
+          ]
+        },
+        "center": [
+          -1.1595909297466278,
+          -8.450249671936035,
+          0.9960899651050568
+        ],
+        "anchor": [
+          -1.1883200407028198,
+          -8.480106353759766,
+          1.0029200315475464
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3355",
+            "sha256": "90b28dbcd11e3d3a6f253adb1ddaa33f30040a08c71bb3a86242372ea9b6170e"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24511",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:right-fourth-metacarpal-bone",
+        "fmaId": "FMA24470",
+        "name": "Right fourth metacarpal bone",
+        "sourceName": "right fourth metacarpal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24470",
+        "bounds": {
+          "min": [
+            -2.537410020828247,
+            -0.7472100853919983,
+            0.6591699719429016
+          ],
+          "max": [
+            -2.414259910583496,
+            -0.1484197974205017,
+            0.9197099208831787
+          ]
+        },
+        "center": [
+          -2.4758349657058716,
+          -0.44781494140625,
+          0.7894399464130402
+        ],
+        "anchor": [
+          -2.476410150527954,
+          -0.44835999608039856,
+          0.7853500247001648
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3356",
+            "sha256": "3bb88e2a98ce1cb0ab8af411397e5edc5777546c394b25d4d4ee585493ee3718"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24470",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:right-fourth-metatarsal-bone",
+        "fmaId": "FMA24513",
+        "name": "Right fourth metatarsal bone",
+        "sourceName": "right fourth metatarsal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24513",
+        "bounds": {
+          "min": [
+            -1.4266999959945679,
+            -8.673439025878906,
+            0.5697599649429321
+          ],
+          "max": [
+            -1.0186699628829956,
+            -8.319584846496582,
+            1.1968400478363037
+          ]
+        },
+        "center": [
+          -1.2226849794387817,
+          -8.496511936187744,
+          0.8833000063896179
+        ],
+        "anchor": [
+          -1.2274199724197388,
+          -8.512786865234375,
+          0.8551600575447083
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3357",
+            "sha256": "a5fd57a36b7525de383809bbbb37ff6a56a08ed0fb25af1684085418cc6e8202"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24513",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:right-fifth-metacarpal-bone",
+        "fmaId": "FMA24472",
+        "name": "Right fifth metacarpal bone",
+        "sourceName": "right fifth metacarpal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24472",
+        "bounds": {
+          "min": [
+            -2.4531400203704834,
+            -0.679840087890625,
+            0.7007599472999573
+          ],
+          "max": [
+            -2.2520198822021484,
+            -0.1308099329471588,
+            0.9452000260353088
+          ]
+        },
+        "center": [
+          -2.352579951286316,
+          -0.4053250104188919,
+          0.8229799866676331
+        ],
+        "anchor": [
+          -2.342400074005127,
+          -0.4185498058795929,
+          0.8263299465179443
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3358",
+            "sha256": "23d26888c325fd6a2de2688e948de72057afaf383db13875445fe597bd2a8bfd"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24472",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:right-fifth-metatarsal-bone",
+        "fmaId": "FMA24515",
+        "name": "Right fifth metatarsal bone",
+        "sourceName": "right fifth metatarsal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24515",
+        "bounds": {
+          "min": [
+            -1.5233099460601807,
+            -8.698196411132812,
+            0.39382103085517883
+          ],
+          "max": [
+            -1.064579963684082,
+            -8.398794174194336,
+            1.0507800579071045
+          ]
+        },
+        "center": [
+          -1.2939449548721313,
+          -8.548495292663574,
+          0.7223005443811417
+        ],
+        "anchor": [
+          -1.3091399669647217,
+          -8.51633071899414,
+          0.725640058517456
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3359",
+            "sha256": "cc75b866a2d5ac0317eb3a1d64cef41a65231fab975613d108a4fcdcbc2c58b1"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "FMA24515",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "54b83298c089c948938f6dc9ffd5b8750b70654eb0ac6e1dd04615725a296a65"
+}

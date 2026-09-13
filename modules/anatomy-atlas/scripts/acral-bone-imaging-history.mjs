@@ -1,15 +1,13 @@
 // Offline comparison only: never imported by the viewer or approval workflow.
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
-import pins from '../content/cranial-bone-imaging-pins.json' with {type:'json'};
-import after from '../content/cranial-bone-imaging.transition.json' with {type:'json'};
-import {authoringBeforeAcralBoneImaging} from './acral-bone-imaging-history.mjs';
-export const cranialBoneImagingHash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
-export function authoringBeforeCranialBoneImaging({api,catalog}) {
-  api=authoringBeforeAcralBoneImaging({api,catalog});
-  assert.equal(cranialBoneImagingHash(pins),'d523e503beac8efdce674054c4d0e40d765763734f45fd1dc43c23751730a47a');
-  assert.equal(cranialBoneImagingHash(after),'ef99aa613b9a53bfb6dd6c3c1a01d1ff8ad797ef45a550ea1c9ac904bc93c803');
-  assert.equal(pins.sourceCommit,'ae9b0112b9980206b14c4676c941dc13a88834fc');
+import pins from '../content/acral-bone-imaging-pins.json' with {type:'json'};
+import after from '../content/acral-bone-imaging.transition.json' with {type:'json'};
+export const acralBoneImagingHash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
+export function authoringBeforeAcralBoneImaging({api,catalog}) {
+  assert.equal(acralBoneImagingHash(pins),'668daecdc8f76d8c7d0d6648a36196587c486c0b0f091d14238a7e0b8980ef18');
+  assert.equal(acralBoneImagingHash(after),'0f7526337d67dba5ab2adebd2c1c0bca4270071c0edae30e65bc2013c7b65dce');
+  assert.equal(pins.sourceCommit,'4492d6bc47bd11f537cb6aa2bffe324ca3dc3881');
   assert.equal(after.parentCommit,pins.sourceCommit);
   const display=api.bodyDisplayCatalog(catalog),prior=new Map();
   assert.equal(display.sourceVersion,pins.sourceVersion);
@@ -22,11 +20,11 @@ export function authoringBeforeCranialBoneImaging({api,catalog}) {
     assert.equal(after.entries[i].id,e.identity.id);
     for(const tab of e.topics) {
       assert.equal(e.previous[tab].readiness,'pending');
-      assert.equal(cranialBoneImagingHash(api.bodyLesson(e.identity,tab)),after.entries[i].sections[tab],'Unrecorded cranial-bone imaging change');
+      assert.equal(acralBoneImagingHash(api.bodyLesson(e.identity,tab)),after.entries[i].sections[tab],'Unrecorded acral-bone imaging change');
       prior.set(e.identity.id+'|'+tab,{identity:e.identity,lesson:e.previous[tab]});
     }
   }
-  assert.equal(prior.size,46);
+  assert.equal(prior.size,152);
   const bodyLesson=(s,t)=>{const entry=prior.get(s.id+'|'+t);if(!entry)return api.bodyLesson(s,t);assert.deepEqual(s,entry.identity);return structuredClone(entry.lesson);};
   return {...api,bodyLesson,bodyContent(s,t){const {readiness:_r,...content}=bodyLesson(s,t);return content;}};
 }
