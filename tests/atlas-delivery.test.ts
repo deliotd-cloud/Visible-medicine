@@ -38,7 +38,8 @@ test('all registered original model paths retain full or short revisions without
 });
 
 test('actual D1/R2 access is read-only, revision-bound and independent of lecture rights', { timeout: 60000 }, async () => {
-  const model = inventory.models.find((m: { paths: string[] }) => m.paths[0].includes('/shoulder/'));
+  const model = inventory.models.find((m: { paths: string[] }) => m.paths.length > 1);
+  assert(model, 'Exercise a real shared model through every registered alias');
   const bytes = readFileSync('public' + model.paths[0]);
   const modules = ['atlas-model-storage', 'atlas-model-delivery', 'atlas-delivery-access'].map(name => ({
     type: 'ESModule' as const, path: resolve(`lib/${name}.ts`),
@@ -82,13 +83,21 @@ test('actual D1/R2 access is read-only, revision-bound and independent of lectur
     const learnerHeaders = { 'x-fixture-audience': 'reviewed-learner', 'x-fixture-approval': ATLAS_DELIVERY_POLICY.manifestRevision };
     for (const subject of ['', 'unknown', 'wrong-subject', 'learner', 'lecture-only']) assert.equal((await call(subject, 'HEAD')).status, subject ? 403 : 401);
     assert.equal((await call('admin', 'HEAD')).status, 200);
+    const checkedUrls: string[] = [];
     const browserRequest: typeof fetch = async (input, init) => {
+      checkedUrls.push(String(input));
       const headers = new Headers(init?.headers);
       headers.set('x-fixture-subject', 'admin');
       const response = await mf.dispatchFetch(new URL(String(input), 'https://atlas.test').href, { method: init?.method, headers: Object.fromEntries(headers) });
       return new Response(init?.method === 'HEAD' || response.status === 304 ? null : await response.arrayBuffer(), { status: response.status, headers: Object.fromEntries(response.headers) });
     };
     assert.equal((await verifyAtlasDelivery(model, new AbortController().signal, browserRequest)).sha256, model.sha256);
+    assert.equal(checkedUrls.length, 4 * model.paths.length);
+    for (const path of model.paths) assert.equal(checkedUrls.filter(url => url === `${path}?v=${model.sha256}`).length, 4, 'HEAD/full/range/conditional checks run for each alias');
+    await assert.rejects(verifyAtlasDelivery(model, new AbortController().signal, (input, init) => String(input).startsWith(model.paths[1]) ? Promise.resolve(new Response(null, {status:403})) : browserRequest(input, init)), /protected storage route/, 'A failed second alias cannot be reported as verified');
+    const cancelled = new AbortController(); cancelled.abort();
+    await assert.rejects(verifyAtlasDelivery(model, cancelled.signal, browserRequest), /cancelled/);
+    for (const paths of [[], [model.paths[0], model.paths[0]]]) await assert.rejects(verifyAtlasDelivery({...model, paths}, new AbortController().signal, browserRequest), /missing or repeated/);
     await assert.rejects(verifyAtlasDelivery(model, new AbortController().signal, async () => new Response(null, {status:403})), /protected storage route/);
     assert.equal((await call('admin', 'PUT')).status, 405);
     assert.equal((await call('learner', 'HEAD', { 'x-fixture-audience': 'reviewed-learner' })).status, 403);

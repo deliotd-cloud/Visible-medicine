@@ -32,6 +32,13 @@ transport limitation reported in [workerd issue 918](https://github.com/cloudfla
 The complete 91-test candidate suite passed twice before updating this registry;
 rollout and final source checks must still be recorded separately.
 
+The complete candidate's delivery diagnostic also visits every registered URL,
+including the six extra shared-model aliases. Each path gets HEAD, full SHA-256
+download, range and conditional checks. The real local D1/R2 fixture uses a shared
+model and proves a failed second alias cannot be reported as success; cancellation
+and missing/repeated paths fail explicitly. All 91 tests and TypeScript pass.
+This affects administrator diagnostics only, not authorization or source anatomy.
+
 ## Historical abdomen rollout
 
 The candidate is the exact 80-model inventory from saved website source

@@ -4,7 +4,16 @@ import { verifyAtlasModelDownload } from './atlas-model-download.ts';
 /** Staff diagnostic of the actual model URL, not the staging endpoint.
  * Read-only, sequential and cancellable; no identity or approval is supplied. */
 export async function verifyAtlasDelivery(model: AtlasStoredModel, signal: AbortSignal, request = fetch) {
-  const url = `${model.paths[0]}?v=${model.sha256}`;
+  if (!model.paths.length || new Set(model.paths).size !== model.paths.length) throw new Error('Atlas delivery paths are missing or repeated.');
+  for (const path of model.paths) {
+    if (signal.aborted) throw new Error('Atlas delivery check cancelled.');
+    await verifyAtlasDeliveryPath(model, path, signal, request);
+  }
+  return { sha256: model.sha256, bytes: model.bytes, checks: `${model.paths.length} URL(s): HEAD 200; full GET SHA-256; range 206; conditional 304` };
+}
+
+async function verifyAtlasDeliveryPath(model: AtlasStoredModel, path: string, signal: AbortSignal, request: typeof fetch) {
+  const url = `${path}?v=${model.sha256}`;
   const read = async (method: string, headers?: Record<string, string>) => {
     const response = await request(url, { method, headers, credentials: 'same-origin', cache: 'no-store', redirect: 'error', signal });
     if (response.headers.get('x-atlas-delivery') !== 'registered-storage-v1'
@@ -41,5 +50,4 @@ export async function verifyAtlasDelivery(model: AtlasStoredModel, signal: Abort
   finally { signal.removeEventListener('abort', cancel); reader.releaseLock(); }
   const conditional = await read('GET', { 'If-None-Match': `"${model.sha256}"` });
   if (conditional.status !== 304) { await conditional.body?.cancel(); throw new Error(`Atlas conditional check failed (${conditional.status}).`); }
-  return { sha256: model.sha256, bytes: model.bytes, checks: 'HEAD 200; full GET SHA-256; range 206; conditional 304' };
 }
