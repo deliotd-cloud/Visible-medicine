@@ -12,6 +12,9 @@ const sourceCommit=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'u
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const build=join(root,'.sites-runtime/shoulder-module');
 const inputs=JSON.parse(await readFile(join(build,'source-inputs.json'),'utf8'));
+for (const required of ['integration/shoulder/vite.config.mjs','app/anatomy-scene.tsx','app/fitted-camera.tsx','lib/explode-layout.mjs']) {
+  if (!inputs.some(input => input.path === required)) throw Error('Incomplete module source manifest: ' + required);
+}
 for(const input of inputs) {
   if(input.path.includes('..') || input.path.startsWith('/') || input.path.includes(':')) throw Error('Unsafe input record');
   if(hash(await readFile(join(root,input.path)))!==input.sha256) throw Error('Stale module build: '+input.path);

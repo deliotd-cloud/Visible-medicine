@@ -47,3 +47,11 @@ this change does not restrict that interaction. Radiologist sign-off remains
 revision-bound. The generated website shoulder module must be refreshed and
 verified before claiming this source change is available on the website;
 consult the main task's dated framing checkpoint for publication and recovery.
+
+Export verification also identified and corrected the shoulder build's omitted
+`.mjs` input records (other regional builds already include this format). The
+shoulder source inventory now includes `.mjs`, `.cjs` and `.jsx` modules alongside
+its existing extensions, and the exporter rejects a missing camera/layout or
+build-configuration record. In particular, `lib/explode-layout.mjs` is now
+hashed and checked before export. Existing exported source manifests are not
+retroactively treated as complete; this publication requires a fresh build.

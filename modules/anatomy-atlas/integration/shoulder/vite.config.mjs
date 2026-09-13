@@ -49,7 +49,7 @@ export default defineConfig({
       for(const id of this.getModuleIds()) {
         if(id.includes('node_modules') || id.startsWith('\0')) continue;
         const path=relative(root,id.split('?')[0]).replaceAll('\\','/');
-        if(!path.startsWith('..') && /\.(ts|tsx|js|json|css)$/.test(path)) inputs.add(path);
+        if(!path.startsWith('..') && /\.(ts|tsx|mjs|cjs|jsx|js|json|css)$/.test(path)) inputs.add(path);
       }
       const inputRecords=await Promise.all([...inputs].sort().map(async path=>({path,sha256:createHash('sha256').update(await readFile(join(root,path))).digest('hex')})));
       this.emitFile({type:'asset',fileName:'source-inputs.json',source:JSON.stringify(inputRecords,null,2)+'\n'});
