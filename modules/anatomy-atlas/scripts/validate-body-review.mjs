@@ -22,7 +22,9 @@ const api = await import(
     Buffer.from(compiled.outputFiles[0].text).toString('base64')
 );
 const rows = api.bodyReviewSummaries;
-assert.equal(rows.length, 1060);
+// Current retained display scope (including subsequent admitted source parts).
+// Every row still exercises exact source, topics and unsubmitted review state.
+assert.equal(rows.length, 1101);
 assert.equal(new Set(rows.map((s) => s.id)).size, rows.length);
 let links = 0,
   topics = 0;
@@ -49,8 +51,8 @@ for (const row of rows) {
   }
   packets.push(packet);
 }
-assert.equal(topics, 9540);
-assert.equal(links, 1060);
+assert.equal(topics, 9909);
+assert.equal(links, 1101);
 assert.equal(new Set(packets.map((p) => p.materialHash)).size, rows.length);
 const selected = packets.find((p) =>
   p.source.structure.regions.includes('forearm'),

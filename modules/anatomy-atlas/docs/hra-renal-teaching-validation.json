@@ -18,7 +18,11 @@
   "pendingTopicStates": 94,
   "rejectedMutations": 984,
   "originalCoreTeachingPreserved": true,
-  "geometryAndNavigationUnchanged": true,
+  "historicalPreservation": {
+    "before": "bd0ec72c46247676c02e9375ba9038823c6e75df",
+    "after": "bc36e110fda43e394f3811676626f42fc0ec6b2f",
+    "geometryAndNavigationUnchanged": true
+  },
   "sourceSha256": "5b60eca8e237bb04bade39b0d9adb3c98d590666124fa03176e09a3588ae413b",
   "clinicalOrDeviceApproval": false,
   "realImaging": false

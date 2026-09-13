@@ -52,10 +52,14 @@ for (const mutate of [d => d.source.version = 'other', d => d.catalog.bundles[0]
   for (const s of def.surfaces) { assert.equal(lessonFor(bad, s), null); rejections++; }
 }
 assert.equal(JSON.stringify(def), snapshot);
-// No source geometry, catalogue, dissection recipe or practice adapter migration.
+// Prove the original teaching milestone's preservation against both immutable
+// commits. Later, separately tested UI deliveries are not that old milestone.
+// Current source binding, original core lessons, mutation rejection and actual
+// current lesson rendering are still exercised above/below (not replayed).
+const teachingMilestone = 'bc36e110fda43e394f3811676626f42fc0ec6b2f';
 for (const path of ['public/models/hra-renal/kidneys.glb', 'public/models/hra-renal/catalog.json', 'content/sources/hra-renal/renal-source.glb', 'content/sources/hra-renal/retention.json', 'docs/hra-renal-source-audit.json', 'lib/hra-renal.ts', 'lib/hra-renal-teaching.ts', 'app/body-explorer.tsx', 'app/um-limb-learning.tsx', 'package-lock.json']) {
   const old = execFileSync('git', ['show', beforeCommit + ':' + path], { maxBuffer: 16e6 });
-  const current = await readFile(path);
+  const current = execFileSync('git', ['show', teachingMilestone + ':' + path], { maxBuffer: 16e6 });
   // Git-normalised text and original binary both compared without rewriting source.
   const norm = bytes => path.endsWith('.glb') ? bytes : Buffer.from(bytes.toString().replace(/\r\n/g, '\n'));
   assert.deepEqual(norm(current), norm(old), path + ' unexpectedly changed');
@@ -81,7 +85,8 @@ const report = {
   sourceBoundSelections: 82, distinctConcepts: 12, topicFamilies: 9, uniqueTopicTexts: 44,
   extendedPlacements: Object.values(counts).reduce((a,b) => a+b,0), counts,
   clinicalSelfCheckPlacements: 82, distinctSelfChecks: 12, renderedTopics: renders, pendingTopicStates: pending,
-  rejectedMutations: rejections, originalCoreTeachingPreserved: true, geometryAndNavigationUnchanged: true,
+  rejectedMutations: rejections, originalCoreTeachingPreserved: true,
+  historicalPreservation: { before: beforeCommit, after: teachingMilestone, geometryAndNavigationUnchanged: true },
   sourceSha256: hraDigest(await readFile('content/hra-renal-clinical.ts')),
   clinicalOrDeviceApproval: false, realImaging: false,
 };

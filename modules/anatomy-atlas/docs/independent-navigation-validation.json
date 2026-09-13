@@ -47,7 +47,11 @@
   "distinctReviewFingerprints": 354,
   "scenePropChecks": 32,
   "verifiedModelBundles": 9,
-  "preservedFiles": 21,
+  "historicalPreservation": {
+    "before": "3d3909597ce063f3b928c0fff47a1398c6cb5294",
+    "after": "f82bfdf411a10667a1c3aa5f3efdc05e55051ee8",
+    "preservedFiles": 21
+  },
   "sourceGeometryChanged": false,
   "privateRecordsRead": false,
   "clinicalApproval": false,

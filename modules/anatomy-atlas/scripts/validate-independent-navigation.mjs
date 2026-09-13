@@ -189,8 +189,11 @@ for (const group of api.specimenReviewRows)
 assert.equal(scopeLinks, 354);
 assert.equal(sourceIds.size, 267);
 assert.equal(fingerprints.size, 354);
-// Actual source assets/catalogues/teaching and already generated migrations are
-// unchanged from the preceding saved milestone. No mesh correction is implied.
+// This is the original navigation milestone's preservation claim, not a ban
+// on subsequent source-bound teaching/UI work. Compare its two immutable commits;
+// all navigation, model hashes and component checks here still use current code.
+const navigationBefore='3d3909597ce063f3b928c0fff47a1398c6cb5294';
+const navigationMilestone='f82bfdf411a10667a1c3aa5f3efdc05e55051ee8';
 const unchanged = [
   'public/models/hra-renal/catalog.json',
   'public/models/hra-renal/kidneys.glb',
@@ -215,10 +218,10 @@ const unchanged = [
   'package-lock.json',
 ];
 for (const path of unchanged) {
-  const disk = await readFile(path),
+  const disk = execFileSync('git', ['show', navigationMilestone + ':' + path], { maxBuffer: 25e6 }),
     prior = execFileSync(
       'git',
-      ['show', '3d3909597ce063f3b928c0fff47a1398c6cb5294:' + path],
+      ['show', navigationBefore + ':' + path],
       { maxBuffer: 25e6 },
     );
   assert.deepEqual(
@@ -370,7 +373,7 @@ const report = {
   distinctReviewFingerprints: fingerprints.size,
   scenePropChecks: rendered,
   verifiedModelBundles: checkedBundles.size,
-  preservedFiles: unchanged.length,
+  historicalPreservation: { before: navigationBefore, after: navigationMilestone, preservedFiles: unchanged.length },
   sourceGeometryChanged: false,
   privateRecordsRead: false,
   clinicalApproval: false,

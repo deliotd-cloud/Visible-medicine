@@ -24,3 +24,17 @@ export function regionalStudyDeliveryUrl(url: string, region: string, assetBase 
     : `?region=${encodeURIComponent(region)}${suffix ? '&'+suffix.slice(1) : ''}`;
   return `${assetBase}/index.html${query}`;
 }
+
+/** Keep separately licensed/source-framed specimens separate inside the host.
+ * The original ref fields remain untouched for revision validation on arrival. */
+export function independentStudyDeliveryUrl(url: string, assetBase = ''): string {
+  if (!assetBase) return url;
+  modelDeliveryUrl('/models/catalog.json', assetBase);
+  const parsed = new URL(url, 'https://atlas.invalid');
+  if (!url.startsWith('/') || parsed.origin !== 'https://atlas.invalid'
+    || !['/specimens/abdominal-wall', '/specimens/kidneys'].includes(parsed.pathname)
+    || parsed.hash || parsed.searchParams.has('region')
+    || parsed.searchParams.get('ref') !== 'independent-1'
+    || parsed.searchParams.get('refSpecimen') !== (parsed.pathname === '/specimens/kidneys' ? 'hra-united-female-v1.10-kidneys' : 'bp3d3-abdominal-wall')) throw new Error('Unsupported contained specimen link');
+  return `${assetBase}/index.html?region=abdomen${parsed.search ? '&' + parsed.search.slice(1) : ''}`;
+}

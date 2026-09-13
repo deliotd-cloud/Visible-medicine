@@ -11,15 +11,18 @@ import type { SpecimenDefinition } from '@/lib/independent-specimen';
 import type { DissectionView } from './dissection-data';
 import { CopySpecimenLink } from './specimen-study-link';
 import { KneeSpecimenView, type SpecimenSupplement } from './um-knee-study';
+import { independentStudyDeliveryUrl } from '@/lib/model-delivery';
 
 export function IndependentStudyView({
   definition,
   supplement,
   link = noIndependentStudyLink,
+  assetBase = '',
 }: {
   definition: SpecimenDefinition;
   supplement: SpecimenSupplement;
   link?: IndependentStudyLink;
+  assetBase?: string;
 }) {
   return (
     <ResolvedIndependentStudy
@@ -27,6 +30,7 @@ export function IndependentStudyView({
       definition={definition}
       supplement={supplement}
       link={link}
+      assetBase={assetBase}
     />
   );
 }
@@ -34,10 +38,12 @@ function ResolvedIndependentStudy({
   definition,
   supplement,
   link,
+  assetBase,
 }: {
   definition: SpecimenDefinition;
   supplement: SpecimenSupplement;
   link: IndependentStudyLink;
+  assetBase: string;
 }) {
   const [result, setResult] = useState<{
     definition: SpecimenDefinition;
@@ -88,6 +94,7 @@ function ResolvedIndependentStudy({
     );
   return (
     <KneeSpecimenView
+      assetBase={assetBase}
       specimen={definition}
       supplement={supplement}
       initialNavigation={
@@ -101,13 +108,15 @@ export function IndependentStudyLinkControl({
   selectedId,
   studyId,
   view,
+  assetBase = '',
 }: {
   definition: SpecimenDefinition;
   selectedId: string;
   studyId: string | null;
   view: DissectionView;
+  assetBase?: string;
 }) {
-  const identity = JSON.stringify([definition.key, selectedId, studyId, view]);
+  const identity = JSON.stringify([definition.key, selectedId, studyId, view, assetBase]);
   const [result, setResult] = useState<{
     identity: string;
     href: string | null;
@@ -116,7 +125,7 @@ export function IndependentStudyLinkControl({
     let current = true;
     makeIndependentStudyLink(definition, { selectedId, studyId, view })
       .then((href) => {
-        if (current) setResult({ identity, href });
+        if (current) setResult({ identity, href: href ? independentStudyDeliveryUrl(href, assetBase) : null });
       })
       .catch(() => {
         if (current) setResult({ identity, href: null });
@@ -124,10 +133,10 @@ export function IndependentStudyLinkControl({
     return () => {
       current = false;
     };
-  }, [definition, selectedId, studyId, view, identity]);
+  }, [definition, selectedId, studyId, view, identity, assetBase]);
   return (
     <details className="um-knee-details">
-      <summary>Link &amp; review this structure</summary>
+      <summary>{assetBase ? 'Link to this structure' : 'Link & review this structure'}</summary>
       {result?.identity === identity ? (
         result.href ? (
           <CopySpecimenLink key={result.href} href={result.href} />
@@ -137,7 +146,7 @@ export function IndependentStudyLinkControl({
       ) : (
         <p role="status">Preparing source-checked link…</p>
       )}
-      <p>
+      {!assetBase && <p>
         <a
           href={`/review/specimens?specimen=${encodeURIComponent(definition.key)}&structure=${encodeURIComponent(selectedId)}`}
           target="_blank"
@@ -145,7 +154,7 @@ export function IndependentStudyLinkControl({
         >
           Review this structure
         </a>
-      </p>
+      </p>}
       <p>
         {studyId
           ? 'Opens this selection with the chosen source study.'

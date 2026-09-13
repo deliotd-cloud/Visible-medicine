@@ -2557,7 +2557,7 @@ export default function BodyExplorer({
           />
         )}
       {abdominalWallOpen && initialRegion === 'abdomen' && !exam && (
-        <AbdominalWallSpecimen onClose={closeAbdominalWall} />
+        <AbdominalWallSpecimen assetBase={assetBase} onClose={closeAbdominalWall} />
       )}
       {backLayersOpen &&
         ['spine', 'whole-body'].includes(initialRegion) &&
@@ -2567,7 +2567,7 @@ export default function BodyExplorer({
         !exam && <HraPelvisSpecimen onClose={closeHraPelvis} />}
       {hraRenalOpen &&
         ['abdomen', 'whole-body'].includes(initialRegion) &&
-        !exam && <HraRenalSpecimen onClose={closeHraRenal} />}
+        !exam && <HraRenalSpecimen assetBase={assetBase} onClose={closeHraRenal} />}
       {ventricleParent && !exam && ventricleParent.id === selectedId && (
         <Ventricles
           assetBase={assetBase}

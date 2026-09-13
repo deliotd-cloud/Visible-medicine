@@ -13,15 +13,18 @@ The new review workspace requires trusted authenticated-user headers and D1 stor
 ## Integration choices
 
 The [shared regional module](REGIONAL_WEBSITE_MODULE.md) now covers head/neck and
-thorax with their full supported nested/context views. The existing head-neck
-delivery namespace is retained; thorax is selected explicitly in its launch URL.
-This is four runtime directories serving five website module entries, not five
+thorax and abdomen with their full supported nested/context views and separately
+framed abdominal specimens. The existing head-neck delivery namespace is retained;
+thorax and abdomen are selected explicitly in their launch URLs.
+This is four runtime directories serving six website module entries, not six
 duplicated viewers. See the dated checkpoint for actual hosted availability.
 
-For the four contained modules, [lossless delivery](WEBSITE_LOSSLESS_DELIVERY.md)
-compresses only the website build output after export/build. Canonical model and
-catalogue hashes remain unchanged; the transport has its own verified manifest.
-Repeat the preparation/check after any website rebuild and before packaging.
+The website now uses its source-bound registered storage/protected-delivery
+workflow (`docs/atlas-protected-delivery.md` in the website checkout). Preserve
+canonical models and notices; omit verified build-only duplicate GLBs before
+packaging. The older [lossless delivery](WEBSITE_LOSSLESS_DELIVERY.md) remains
+historical evidence, not the current website publication command. Stage and
+verify new registered models before publishing a runtime that needs them.
 
 The independent right lower-limb workbench also has a contained module build and
 export at `/atlas/lower-limb-3d`; see `LOWER_LIMB_WEBSITE_PILOT.md`. Five region

@@ -10,6 +10,11 @@ import {cricothyroidViewCatalog} from '../../lib/cricothyroid';
 import {cranialArteryComponentViewCatalog} from '../../lib/cranial-artery-components';
 import {cardiacContextViewCatalog,cardiacRelationshipsFor} from '../../lib/cardiac-context';
 import {pulmonaryContextViewCatalog} from '../../lib/pulmonary-context';
+import {hepaticBiliaryViewCatalog,hepaticBiliaryRelationshipsFor} from '../../lib/hepatic-biliary-context';
+import {renalRelationshipViewCatalog,renalRelationshipsFor} from '../../lib/renal-relationships';
+import {pancreaticViewCatalog} from '../../lib/pancreatic';
+import {abdominalWallDefinition} from '../../lib/abdominal-wall';
+import {hraRenalDefinition} from '../../lib/hra-renal';
 import {regionalModules,type RegionalModule} from './regions';
 
 /** All selectable root structures plus every supported child/context state, not a reduced catalogue. */
@@ -35,6 +40,15 @@ export function regionalDelivery(raw:BodyCatalog,region:RegionalModule) {
           for(const relation of cardiacRelationshipsFor(parent))views.push(cardiacContextViewCatalog(parent,relation.id));
           break;
         case 'pulmonary': views.push(pulmonaryContextViewCatalog(parent,true,'all'));break;
+        case 'hepatic':
+          views.push(hepaticBiliaryViewCatalog(parent,true));
+          for(const relation of hepaticBiliaryRelationshipsFor(parent))views.push(hepaticBiliaryViewCatalog(parent,true,relation.id));
+          break;
+        case 'renal':
+          views.push(renalRelationshipViewCatalog(parent,true));
+          for(const relation of renalRelationshipsFor(parent))views.push(renalRelationshipViewCatalog(parent,true,relation.id));
+          break;
+        case 'pancreatic': views.push(pancreaticViewCatalog(parent,true));break;
         case 'visual-pathway':
           views.push(visualContextViewCatalog(parent,true));
           for(const relation of visualRelationshipsFor(parent)) views.push(visualContextViewCatalog(parent,true,relation.id));
@@ -43,6 +57,9 @@ export function regionalDelivery(raw:BodyCatalog,region:RegionalModule) {
       }
     }
   }
+  const specimens=region==='abdomen'?[abdominalWallDefinition,hraRenalDefinition]:[];
+  // Distinct catalogues/frames and licences; never fit these specimens into v4.
+  views.push(...specimens.map(specimen=>specimen.catalog));
   const bundles=new Map<string,BodyCatalog['bundles'][number]>();
   for(const view of views) for(const structure of view.structures) {
     const matches=view.bundles.filter(b=>b.id===structure.bundle);
@@ -52,6 +69,9 @@ export function regionalDelivery(raw:BodyCatalog,region:RegionalModule) {
     bundles.set(bundle.url,bundle);
   }
   return {region,regionalIds:regional.map(s=>s.id),nestedTargets:targets.map(({structure,...target})=>target),
+    independentSpecimens:specimens.map(specimen=>({key:specimen.key,label:specimen.label,license:specimen.source.license,
+      surfaceIds:specimen.surfaces.map(surface=>surface.id),studyIds:specimen.studies.map(study=>study.id),
+      sourceFrame:specimen.catalog.coordinateSystem,bundles:specimen.catalog.bundles})),
     bundles:[...bundles.values()].sort((a,b)=>a.url.localeCompare(b.url)),
     sourceVersion:catalog.sourceVersion,license:catalog.license};
 }

@@ -128,7 +128,7 @@ for (const exam of [false, true]) {
   runInNewContext('(' + launcher.getText(ast) + ')()', { exam, setHraRenalOpen: v => calls.push(v) });
   assert.deepEqual(calls, exam ? [] : [true]);
 }
-assert.match(explorer, /hraRenalOpen && \['abdomen','whole-body'\]\.includes\(initialRegion\) && !exam/);
+assert.match(explorer, /hraRenalOpen\s*&&\s*\['abdomen',\s*'whole-body'\]\.includes\(initialRegion\)\s*&&\s*!exam/);
 const calls = [];
 runInNewContext('(' + close.getText(ast) + ')()', { setHraRenalOpen: v => calls.push(v), requestAnimationFrame: f => f(), hraRenalLauncher: { current: { focus: () => calls.push('focus') } } });
 assert.deepEqual(calls, [false, 'focus']);
