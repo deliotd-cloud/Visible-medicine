@@ -54,7 +54,7 @@
     },
     {
       "path": "app/atlas-workspace.tsx",
-      "sha256": "1b4275277d6ca5b2c9696626ae4c690b36a88c9c5a70b3f858aa14290672f989"
+      "sha256": "6cf33eb380bd92535093984563f8711606c218a4450a176f1f8f5df96d1791fc"
     },
     {
       "path": "app/back-layers-study.tsx",
@@ -650,7 +650,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "fb073004304ec2b73ab4c02979cb2e6b7d4c54729b8634ecc11911d69a3c7f63"
+      "sha256": "d214d709d0402f8b417af03811c8f977f12ee2805704a2ec8832c8b0b4ef09ec"
     },
     {
       "path": "content/shoulder-xray-bindings.json",
@@ -879,6 +879,10 @@
     {
       "path": "lib/atlas-navigation.ts",
       "sha256": "57d816744ec19ea2e2656f4cf307a653cedd49239a05e3afc4f33e67b125d7e6"
+    },
+    {
+      "path": "lib/atlas-note-navigation.ts",
+      "sha256": "99b6c8a4d774670e4fd71e1ddc086a78eb6f36739bf726ee63a8959ac0490ba6"
     },
     {
       "path": "lib/atlas-panel-layout.ts",
@@ -1917,5 +1921,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "094d5b936890e64736c28cda77e43276ec444371fb0632cc113058bc79430508"
+  "sha256": "e49ceb220999054fb9d024002d73e14cc1b6304399c44db3cbc29bd8a6b7d4f6"
 }

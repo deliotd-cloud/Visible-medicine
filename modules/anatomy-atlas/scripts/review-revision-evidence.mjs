@@ -25,6 +25,7 @@ export const reviewDisplayPaths = [
   'app/atlas-workspace.css',
   'app/atlas-panel.css',
   'lib/atlas-panel-layout.ts',
+  'lib/atlas-note-navigation.ts',
   'app/anatomy-control-rail.tsx',
   'app/body-explorer.css',
   'lib/atlas-navigation.ts',

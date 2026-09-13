@@ -44,6 +44,14 @@ import { bodyContent } from './body-content';
 import type { StudySide } from '@/lib/study-links';
 import type { ContentTab } from './anatomy-data';
 import { atlasPanelLayout } from '@/lib/atlas-panel-layout';
+import {
+  initialNoteNavigation,
+  chooseNoteGroup,
+  chooseNoteSection,
+  noteGroups,
+  type NoteGroup,
+} from '@/lib/atlas-note-navigation';
+export { noteGroups } from '@/lib/atlas-note-navigation';
 import './atlas-panel.css';
 
 const emptyWorkspace = {
@@ -56,6 +64,9 @@ const emptyWorkspace = {
   chooseMode: (_mode: WorkspaceMode) => {},
   toggleFocus: () => {},
   showInfo: () => {},
+  noteNavigation: initialNoteNavigation(),
+  setNoteGroup: (_value: unknown) => {},
+  setNoteSection: (_group: NoteGroup, _value: unknown) => {},
 };
 const WorkspaceContext = createContext(emptyWorkspace);
 export const useAtlasWorkspace = () => useContext(WorkspaceContext);
@@ -91,6 +102,15 @@ export function AtlasWorkspace({
   const [chosen, setChosen] = useState<WorkspaceMode>('explore'),
     [focusView, setFocusView] = useState(false);
   const [panels, setPanels] = useState({ tools: false, info: false });
+  // The desktop aside and focus/mobile sheet have different React parents.
+  // Keep navigation above that remount boundary, isolated to this workspace.
+  const [noteNavigation, setNoteNavigation] = useState(initialNoteNavigation);
+  const setNoteGroup = useCallback((value: unknown) => {
+    setNoteNavigation(current => chooseNoteGroup(current, value, exam));
+  }, [exam]);
+  const setNoteSection = useCallback((group: NoteGroup, value: unknown) => {
+    setNoteNavigation(current => chooseNoteSection(current, group, value, exam));
+  }, [exam]);
   const setPanelOpen = useCallback((info: boolean, open: boolean) => {
     setPanels((current) =>
       open
@@ -125,6 +145,9 @@ export function AtlasWorkspace({
         chooseMode,
         toggleFocus,
         showInfo,
+        noteNavigation,
+        setNoteGroup,
+        setNoteSection,
       }}
     >
       <Root
@@ -300,46 +323,17 @@ export function CameraViewMenu({
   );
 }
 
-export const noteGroups: Array<{
-  id: string;
-  title: string;
-  sections: Array<[ContentTab, string]>;
-}> = [
-  {
-    id: 'anatomy',
-    title: 'Anatomy',
-    sections: [
-      ['anatomy', 'Overview'],
-      ['function', 'Function'],
-    ],
-  },
-  {
-    id: 'clinical',
-    title: 'Clinical',
-    sections: [
-      ['clinical', 'Clinical notes'],
-      ['pathology', 'Pathology'],
-    ],
-  },
-  {
-    id: 'imaging',
-    title: 'Imaging',
-    sections: [
-      ['ct', 'CT'],
-      ['mri', 'MRI'],
-      ['xray', 'X-ray'],
-      ['ultrasound', 'Ultrasound'],
-    ],
-  },
-];
 export function GroupedAnatomyNotes({
   children,
 }: {
   children: (tab: ContentTab) => ReactNode;
 }) {
+  const {noteNavigation, setNoteGroup, setNoteSection, exam} = useAtlasWorkspace();
+  if (exam) return null;
   return (
     <Tabs
-      defaultValue="anatomy"
+      value={noteNavigation.group}
+      onValueChange={setNoteGroup}
       className="body-content-tabs atlas-grouped-notes"
     >
       <TabsList aria-label="Structure information" variant="line">
@@ -352,7 +346,8 @@ export function GroupedAnatomyNotes({
       {noteGroups.map((group) => (
         <TabsContent key={group.id} value={group.id}>
           <Tabs
-            defaultValue={group.sections[0][0]}
+            value={noteNavigation.sections[group.id]}
+            onValueChange={value => setNoteSection(group.id, value)}
             className="atlas-note-sections"
           >
             <TabsList aria-label={`${group.title} sections`}>

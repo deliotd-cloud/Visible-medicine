@@ -69,12 +69,8 @@ const output = await build({
               '[focusView, setFocusView] = useState(globalThis.__focus)',
             )
             .replace(
-              'defaultValue="anatomy"',
-              'defaultValue={globalThis.__group}',
-            )
-            .replace(
-              'defaultValue={group.sections[0][0]}',
-              'defaultValue={group.sections.some(([id]) => id === globalThis.__tab) ? globalThis.__tab : group.sections[0][0]}',
+              'useState(initialNoteNavigation)',
+              'useState(() => ({ group: globalThis.__group, sections: { anatomy: globalThis.__group === "anatomy" ? globalThis.__tab : "anatomy", clinical: globalThis.__group === "clinical" ? globalThis.__tab : "clinical", imaging: globalThis.__group === "imaging" ? globalThis.__tab : "ct" } }))',
             ),
         }));
       },
