@@ -24,7 +24,7 @@ No scan, mask, lesson, font, texture, dependency, identity or entitlement change
 - Original study-link assertions pass through the repaired TypeScript loader:
   303,882 checks and 14,127 links. Existing dissection, reasoning-practice and
   revision-bound review safeguards pass. No private acceptance was migrated.
-- All 97 website tests, TypeScript, the Atlas production/shared-module builds
+- All 98 website tests, TypeScript, the Atlas production/shared-module builds
   and website production build pass. Export/inventory hashes include every
   delivered model and companion file.
 - Actual local 1280×720 browser: whole-body skeleton loads; hand selection
@@ -40,12 +40,21 @@ No scan, mask, lesson, font, texture, dependency, identity or entitlement change
 
 ## Safe rollout / remaining gates
 
-Source/GitHub recovery is not publication. Keep the working private version 62
-and its 94-model inventory while registering/staging the 37 additions. Verify
-stored full bytes, the existing active paths and source-bound candidate before
-activating the expanded runtime. Do not upload private `D:/Cases` content or
-weaken administrator-review policy to make a preview work. The coordinating
-checkpoint records the actual current staging/publication/backup state.
+Private staging version 63 (`19bb9364…`) retained version 62's runtime, homepage
+and 94-model active inventory while registering the complete candidate. All
+37 additions passed the actual administrator upload/HEAD checks; all 131 full
+stored downloads matched their exact fingerprints. Every preceding active URL
+(100 paths across 94 objects) passed full-byte, HEAD, range and conditional
+checks before the activation source was prepared. Both source histories remain
+ancestors; no force-push or stored-object deletion is required for rollback.
+
+The activation source includes the matching five-modality homepage and sharper
+real shoulder-viewer preview, while `/atlas/3d` opens Whole body first. The shared
+homepage/overview tiles preserve explicit modality availability and image
+credits. Successful source recovery or staging does not itself prove the final
+runtime is deployed: the coordinating checkpoint records native publication,
+the subsequent 137-path check and backup evidence. Do not upload private
+`D:/Cases` content or weaken administrator-review policy to make a preview work.
 
 Continue real-device and keyboard sampling, source-respecting framing and
 substantive teaching. User revision-bound anatomical/clinical sign-off, complete
