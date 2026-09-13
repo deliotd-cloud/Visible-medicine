@@ -1,3 +1,4 @@
+import {authoringBeforeHeadNeckVesselImaging} from './head-neck-vessel-imaging-history.mjs';
 // Offline authoring reconstruction only; never a runtime or approval migration.
 import assert from 'node:assert/strict';
 import {isDeepStrictEqual} from 'node:util';
@@ -14,6 +15,7 @@ import {authoringBeforeHandMuscleImaging} from './hand-muscle-imaging-history.mj
 import {authoringBeforeCentralNeuralImaging} from './central-neural-imaging-history.mjs';
 export const abdominalOrganContentHash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function authoringBeforeAbdominalOrganImaging({api,catalog}) {
+  api=authoringBeforeHeadNeckVesselImaging({api,catalog});
   api=authoringBeforeCentralNeuralImaging({api,catalog});
   api=authoringBeforeHandMuscleImaging({api,catalog});
   api=authoringBeforeForearmMuscleImaging({api,catalog});

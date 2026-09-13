@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import { readFile, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { contentContext } from './content-contract-tools.mjs';
+import pins from '../content/head-neck-vessel-imaging-pins.json' with {type:'json'};
+const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
+const {api}=await contentContext();
+const record={parentCommit:pins.sourceCommit,entries:pins.entries.map(e=>({id:e.identity.id,sections:Object.fromEntries(e.topics.map(t=>{const lesson=api.bodyLesson(e.identity,t);assert.equal(lesson.readiness,'draft');return[t,hash(lesson)];}))}))};
+const path='content/head-neck-vessel-imaging.transition.json';
+if(process.argv.includes('--check'))assert.deepEqual(JSON.parse(await readFile(path)),record);
+else await writeFile(path,JSON.stringify(record,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({entries:record.entries.length,sha256:hash(record)}));

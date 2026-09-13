@@ -1,3 +1,4 @@
+import {authoringBeforeHeadNeckVesselImaging} from './head-neck-vessel-imaging-history.mjs';
 import assert from 'node:assert/strict';
 import {readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
@@ -12,7 +13,7 @@ import {authoringBeforeFootMuscleImaging} from './foot-muscle-imaging-history.mj
 import {authoringBeforeForearmMuscleImaging} from './forearm-muscle-imaging-history.mjs';
 import {authoringBeforeHandMuscleImaging} from './hand-muscle-imaging-history.mjs';
 import {authoringBeforeCentralNeuralImaging} from './central-neural-imaging-history.mjs';
-const latest=await contentContext();
+const newest=await contentContext(),latest={...newest,api:authoringBeforeHeadNeckVesselImaging(newest)};
 const rawCurrent={...latest,api:authoringBeforeCentralNeuralImaging(latest)},current={...rawCurrent,api:authoringBeforeHandMuscleImaging(rawCurrent)},beforeForearm={...current,api:authoringBeforeForearmMuscleImaging(current)},context={...current,api:authoringBeforeFootMuscleImaging(beforeForearm)};
 const {api}=context,catalog=api.bodyDisplayCatalog(context.catalog);
 const original=JSON.stringify(catalog),before=authoringBeforeLegMuscleImaging(context);

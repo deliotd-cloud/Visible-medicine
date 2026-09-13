@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "1dc57500f40f3897ef36cd17afe0d60a152bda5f285e59e0e49cccd4e82d8e3f"
+      "sha256": "23c0989d60ca3e744291d5d158648db82b09850fa7253f38bd9c7aeb10755a58"
     },
     {
       "path": "app/body-explorer.css",
@@ -523,6 +523,14 @@
     {
       "path": "content/hand-muscle-imaging.ts",
       "sha256": "e91d54120b06c48f163ee9ddb84b646c96a40d0c0ef13d4e4f9749c22c1125e2"
+    },
+    {
+      "path": "content/head-neck-vessel-imaging-pins.json",
+      "sha256": "c1fb20037d691a8b507272ca857317ef9d4bf70b6203cc1565833b10c9bf94e4"
+    },
+    {
+      "path": "content/head-neck-vessel-imaging.ts",
+      "sha256": "f1bd1059c712beb66b4120f1541443d89decd349f072183ffa4766507109524a"
     },
     {
       "path": "content/hepatic-teaching.ts",
@@ -1187,6 +1195,10 @@
     {
       "path": "lib/head-neck-vessel-clinical-curriculum.ts",
       "sha256": "a3020e17918ec2c310bcf8a7ff005ce79715ed4b9c8b485a266544dcfb0a9936"
+    },
+    {
+      "path": "lib/head-neck-vessel-imaging.ts",
+      "sha256": "3dcfb5410b33fd27da137401aa3d51bb60bb82e37c65f3f9bc48e02a3aa1b607"
     },
     {
       "path": "lib/head-organ-clinical-curriculum.ts",
@@ -1921,5 +1933,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "3611058dabac0a28221e4a6d393a3714044aa27d9bc46d1927c82966957316ac"
+  "sha256": "9c0a3d93d6d88fb3cbdf8b0a44a646fae97ef4ac929b370c48ae7ee1d2e0ba2f"
 }

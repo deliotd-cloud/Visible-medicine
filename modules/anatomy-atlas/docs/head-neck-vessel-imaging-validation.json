@@ -1,0 +1,37 @@
+{
+  "baselineSource": "b76fe16e01197a475a82e1adb461f86f29e5792c",
+  "groups": 5,
+  "sourceSelections": 9,
+  "addedDraftPlacements": 36,
+  "modalities": {
+    "ct": 9,
+    "mri": 9,
+    "ultrasound": 9,
+    "xray": 9
+  },
+  "unchangedTopics": 9873,
+  "bodySchemaRecords": 1101,
+  "actualNoteRenders": 36,
+  "rejectedSourceTopicCombinations": 540,
+  "uniqueReferenceFacts": 29,
+  "sourceWordCounts": {
+    "ct": 91,
+    "mri": 89,
+    "duplex": 110,
+    "carotid": 86,
+    "catheter": 121,
+    "arteries": 48,
+    "ctArtifacts": 88,
+    "posterior": 41,
+    "mrFlow": 60,
+    "transcranial": 29,
+    "jugularPosition": 56,
+    "mrVenography": 27
+  },
+  "sourceGeometryChanged": false,
+  "currentApprovalRecordsChanged": false,
+  "clinicalApproval": false,
+  "imagesImported": false,
+  "imagingConnected": false,
+  "browserOrDeviceAcceptance": false
+}

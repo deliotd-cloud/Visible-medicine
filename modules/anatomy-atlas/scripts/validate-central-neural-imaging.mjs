@@ -1,3 +1,4 @@
+import {authoringBeforeHeadNeckVesselImaging} from './head-neck-vessel-imaging-history.mjs';
 import assert from 'node:assert/strict';
 import {readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
@@ -8,7 +9,7 @@ import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {authoringBeforeCentralNeuralImaging,centralImagingHash as hash} from './central-neural-imaging-history.mjs';
 import {centralNeuralImagingGroups as groups,centralNeuralImagingModes as modes,centralNeuralImagingReferences as references} from '../content/central-neural-imaging.ts';
 import pins from '../content/central-neural-imaging-pins.json' with {type:'json'};
-const context=await contentContext(),{api}=context,catalog=api.bodyDisplayCatalog(context.catalog);
+const newest=await contentContext(),context={...newest,api:authoringBeforeHeadNeckVesselImaging(newest)},{api}=context,catalog=api.bodyDisplayCatalog(context.catalog);
 const original=JSON.stringify(catalog),before=authoringBeforeCentralNeuralImaging(context);
 assert.equal(hash({body:catalog.structures.map(s=>({id:s.id,sections:Object.fromEntries(api.contentTabs.map(t=>[t,before.bodyLesson(s,t)]))})),shoulder:api.structures,recipes:api.dissectionProfiles}),pins.previousAllLessonsAndRecipesHash,'All preceding teaching and recipes preserved');
 const records=api.bodyContentRecords(catalog),registry=new Map([...context.shoulder,...records].map(r=>[r.representationScope+'|'+r.id,r]));
