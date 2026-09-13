@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "316a6c3af398921049c0be8f3c01ec93a2dbfb7c9608ae8ccbdc67197f16ddc7"
+      "sha256": "013f63f169803bae012b59ae3bf6f7933be7781792c1b5fba2fc1542b9fdea96"
     },
     {
       "path": "app/body-explorer.css",
@@ -455,6 +455,14 @@
     {
       "path": "content/collicular-brachia-teaching.ts",
       "sha256": "f805f4ab67d5d0ae82a0e2bd9116d0e2a7b31f837d05d349dd8cfabd1172428d"
+    },
+    {
+      "path": "content/cranial-bone-imaging-pins.json",
+      "sha256": "c45e8bb107ee02a976c43fd47cc77305391e112fdeaf84c51e1d2bc3f7850be0"
+    },
+    {
+      "path": "content/cranial-bone-imaging.ts",
+      "sha256": "61087027fac4511522badf36e39e1958ceb4b502750285498aa11ad3e3df0b24"
     },
     {
       "path": "content/cricothyroid-teaching.ts",
@@ -1071,6 +1079,10 @@
     {
       "path": "lib/cranial-bone-curriculum.ts",
       "sha256": "b84405a1a36b0f9dcf2066c89f91b0e5066298e288c1924cdf8aa643934c833c"
+    },
+    {
+      "path": "lib/cranial-bone-imaging.ts",
+      "sha256": "4b55a1d4824b5181185399093458888bf6854255c9f29a7731b0bc5410aa5848"
     },
     {
       "path": "lib/cricothyroid.ts",
@@ -1794,7 +1806,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "0736743194f7ed49571a66a79fade111ff018475ada6aa99854ea195a57abe29"
+      "sha256": "2f6be5c6ffaa2e6f71ef5e9a366415f3fde32ee9cd5dd4724fc781d7f9723f7c"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1985,5 +1997,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "4746fee586b9896d0f84ce4ef7873b46dd46f856befaf836733198a85472e581"
+  "sha256": "b11538745f2f0dc205fdc9ed4cc3a6c0917830acd88f889660c6dfb05a086f6f"
 }

@@ -1,5 +1,15 @@
 # Clinical validation checklist
 
+[Skull, facial-bone and hyoid CT/MRI teaching](CRANIAL_BONE_IMAGING.md): review
+15 concepts / 46 draft placements for source identity, laterality, extent,
+sequence-specific visibility and anatomical relationships. Confirm whole-bone
+versus internal tissue boundaries, dedicated temporal-bone/TMJ imaging limits,
+variable hyoid fusion and the unvalidated FJ2772/FJ3201 hyoid grouping. These are
+brief orientation drafts, not acquired scans, complete teaching, diagnoses,
+protocols, procedures or patient registration. Existing ultrasound gaps remain.
+Approve only the actual source/content revision; technical checks do not supply
+clinical or device acceptance. Future cases require independent release clearance.
+
 **Private candidate comparison and feedback:** verify original-DICOM/source identity, LPS orientation, all three reformats, surfaces, change colours/opacity, warnings and changed-native-slice navigation against Slicer. Check baseline/candidate mark identity, glyphs, separate downloads, locked Slicer fiducial placement, conflicts and exact candidate/request/report pins. Validate thin/fragmented structures, oblique/reflected grids, empty candidates, actual devices and memory/graphics failure handling. Synthetic tests/hashes do not certify segmentation accuracy. Saved verbal midbrain trim/superior-extension feedback still needs precise localisation; accepted cerebellar boundaries need explicit protection, not inferred ROIs. No real corrected candidate or clinical approval is supplied by these tools.
 
 [Deep-brain septal landmarks](LIMBIC_LANDMARKS.md): review the four source identities/extents, septal terminology, point-contact lamina halves, stria-medullaris laterality/midline course, relationships and self-intersections. Review the withheld stria-terminalis compound before any admission; no alias/subset shortcut. Verify eleven introductory draft placements and small-structure controls on real devices. No nuclear/tract parcellation, complete circuit, clinical acceptance or patient registration is supplied.
