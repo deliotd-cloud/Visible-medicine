@@ -1,0 +1,3077 @@
+{
+  "sourceCommit": "76e0d191c683f273d2399216d82a592b14438b7d",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "thorax-organs",
+      "url": "/models/bodyparts3d/full-body/thorax-organs.glb",
+      "bytes": 3711452,
+      "sha256": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+      "structures": 5
+    },
+    {
+      "id": "abdomen-organs",
+      "url": "/models/bodyparts3d/full-body/abdomen-organs.glb",
+      "bytes": 6383736,
+      "sha256": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+      "structures": 10
+    },
+    {
+      "id": "thorax-organs-recovery",
+      "url": "/models/bodyparts3d/full-body/thorax-organs-recovery.glb",
+      "bytes": 38832,
+      "sha256": "d62d13a0a9a999495f771ecaee2e9cafe27c8d4fbdac4019fa699a711d6dc355",
+      "structures": 1
+    },
+    {
+      "id": "thorax-organs-inventory",
+      "url": "/models/bodyparts3d/full-body/thorax-organs-inventory.glb",
+      "bytes": 157388,
+      "sha256": "b79225df1153cff7b18c0da4db7cd3257db94f16222376c4d6623a5e542bddc3",
+      "structures": 2
+    },
+    {
+      "id": "abdomen-organs-inventory",
+      "url": "/models/bodyparts3d/full-body/abdomen-organs-inventory.glb",
+      "bytes": 40896,
+      "sha256": "beb3ff34d8e0d64041f6639fea2a4aefff6e11f04f5ed0a9f9d62cec85257a42",
+      "structures": 3
+    },
+    {
+      "id": "abdomen-organs-junction",
+      "url": "/models/bodyparts3d/full-body/abdomen-organs-junction.glb",
+      "bytes": 6484,
+      "sha256": "233de27cdb6d272b62e99917813aba52abfbab4978374b6fb2b322573abbd672",
+      "structures": 1
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "8df979c3fde7a53838b46b8b0a653652d60bd8c0b6033b06814ca36d03adf067",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:unpaired:organ:heart",
+        "fmaId": "FMA7088",
+        "name": "Heart",
+        "sourceName": "heart",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-organs",
+        "nodeName": "FMA7088",
+        "bounds": {
+          "min": [
+            -0.36303699016571045,
+            3.7492003440856934,
+            0.2017040252685547
+          ],
+          "max": [
+            0.7454040050506592,
+            4.795000076293945,
+            1.2651699781417847
+          ]
+        },
+        "center": [
+          0.19118350744247437,
+          4.272100210189819,
+          0.7334370017051697
+        ],
+        "anchor": [
+          0.18683800101280212,
+          4.283900260925293,
+          0.7416999936103821
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2417",
+            "sha256": "b4888f2a738be2f11b98d909c3fc08c0a3ccb05f88a94e53d7e283ad17af15dc"
+          },
+          {
+            "file": "FJ2418",
+            "sha256": "e462c4455225f7d99845af95988ca2d9885144fbb3f7567610ca5635ca3a3dbc"
+          },
+          {
+            "file": "FJ2419",
+            "sha256": "05242b351343b3cce42237dd3e8256a53bb395eaee90e4e8a465578259b58fe8"
+          },
+          {
+            "file": "FJ2420",
+            "sha256": "859e44dbbc0e66eb64da60eff23afba5c4bba1a9b6aaf260d075502c0f3c4f44"
+          },
+          {
+            "file": "FJ2421",
+            "sha256": "ab4d65a190910effcffa60cb5522359756504edb45b9dd312971083cb70c3af7"
+          },
+          {
+            "file": "FJ2422",
+            "sha256": "88654bd73fa155daf0b44fd67bccaec81c9e37c105e046076993f2684c463d95"
+          },
+          {
+            "file": "FJ2423",
+            "sha256": "390747e238ba9239961d02d1e02516d7af7aacc86d2bc0c29fc835381032ceeb"
+          },
+          {
+            "file": "FJ2424",
+            "sha256": "8bd340059ff697cfe9ce57f2427e8c5a982e248a1d2230d477a4fe094adc2a2a"
+          },
+          {
+            "file": "FJ2425",
+            "sha256": "223233fef054fb67b81d27881f10a1acce47c9ade147546b6859fa90e4e37dc3"
+          },
+          {
+            "file": "FJ2426",
+            "sha256": "a309412ea0b21043e9851a6e8d7d529db01034c379f0b846a49f2ac070c94bee"
+          },
+          {
+            "file": "FJ2427",
+            "sha256": "2c07c02f4913f9ee34b4a169f64ab506394a751d0906fad9aa596329da703a1e"
+          },
+          {
+            "file": "FJ2429",
+            "sha256": "83ad99e19bb6105883aa99a86a3c0089385dc5d2de96844c3e9eec6616e571e8"
+          },
+          {
+            "file": "FJ2430",
+            "sha256": "92d65071f4ffc0bb22dcf5da52160cb22fd90056af85d9cbb0cb56794b8b5bac"
+          },
+          {
+            "file": "FJ2431",
+            "sha256": "6ab13f8acf9a3cf93830ab28538e39c423b24c07ffad6c305196671dfc419df0"
+          },
+          {
+            "file": "FJ2432",
+            "sha256": "bdcf7f32b2a16bd8d7b2920ac0f03958174c90d31353e9b38c4462aacfc038f3"
+          },
+          {
+            "file": "FJ2433",
+            "sha256": "736c0689a5489394df568e2788d27e1a547d8fcbc464490e7bef94ba9c66e8e8"
+          },
+          {
+            "file": "FJ2434",
+            "sha256": "ab3806e8ae151df2ea1973043cd5ffe48a89f73dc27c81b2a1d4c1b6cee51131"
+          },
+          {
+            "file": "FJ2435",
+            "sha256": "410689ed978de91a6f14a3332f333b9b8db32931edb47e880cf7bc58b505d191"
+          },
+          {
+            "file": "FJ2436",
+            "sha256": "d2d152ec63544d37077ede2c72f2e8ebd80eb98537386ab917c6a19788f8ed98"
+          },
+          {
+            "file": "FJ2437",
+            "sha256": "510fbbf7a56981733876388838d5acfa392de92a37e84a68d489882e7a063dcb"
+          },
+          {
+            "file": "FJ2438",
+            "sha256": "187235f3c3612ef27abde924d01c71579c2946435e64319164f43e5ad008284d"
+          },
+          {
+            "file": "FJ2439",
+            "sha256": "e7c21cd1659eced056eb56e28f4fa9019ace451ea6e0333097846177f807bb5a"
+          },
+          {
+            "file": "FJ2655",
+            "sha256": "6cc76de968f59ae4244f5990fc00023a1ad137e500eea7e3ab02740a9505e030"
+          },
+          {
+            "file": "FJ2667",
+            "sha256": "6bb2898acda5680828658540ed9048abc51b9df9761fed5608567849fcbd6a61"
+          },
+          {
+            "file": "FJ2668",
+            "sha256": "ecd7de3f9aa7a87a85da8abc9c023d6701040c3297fd1f6ba93d7875e871f611"
+          },
+          {
+            "file": "FJ2670",
+            "sha256": "d23c5be67fc7e0a221e6d284772cf89bbc75b31a5bfa431210bd396be8d087b7"
+          },
+          {
+            "file": "FJ2671",
+            "sha256": "095344f7ee5d89c8877b24c76fd57671491f34cb59e0fdf1f0738c54c239b200"
+          },
+          {
+            "file": "FJ2672",
+            "sha256": "0adecd6703d24888e3c236c8a248393777a9b83d902ed9bfc69f258809188092"
+          },
+          {
+            "file": "FJ2673",
+            "sha256": "b3fe7f8dd47fd7758fe4b2f8613c24c642be96d419a7699f85b44a2396a127a7"
+          },
+          {
+            "file": "FJ2674",
+            "sha256": "605cda4cb28547b67d9569ff8576ab7dc9a945d47a9d8b4a15d9552c80daee91"
+          },
+          {
+            "file": "FJ2675",
+            "sha256": "f0d843e88d508d4ab383c4e8131974d9fdcab3b340c87e3002fabde9cf23d3f4"
+          },
+          {
+            "file": "FJ2676",
+            "sha256": "c588c075c7c665691e6789312dad8d86541a1d2916fb63c33d03e38266e213d7"
+          },
+          {
+            "file": "FJ2677",
+            "sha256": "a63f5990cabf34ead2c743bda11b178cdb60a983e7d181c2b757757354f2681e"
+          },
+          {
+            "file": "FJ2692",
+            "sha256": "560c831439ab349de9b564ca92ed175677a3d12963ccd5483314175948797347"
+          },
+          {
+            "file": "FJ2693",
+            "sha256": "ec42da30e165d2cb4ccf189982843b88a8ba006daae95b99104a2061bf30633b"
+          },
+          {
+            "file": "FJ2694",
+            "sha256": "2d2b675af567f743da81826537d13fe72087c98a39741f5848bb70b1676b5c75"
+          },
+          {
+            "file": "FJ2695",
+            "sha256": "00e9b8257eed1ddb8bfb60dfe301b03c08fd8a6e4b83002dad567d8cc738ba73"
+          },
+          {
+            "file": "FJ2696",
+            "sha256": "ec8ecd7100e6a34661db1a99861ef4f3df17c8ac87316cafac2dbf6f895efd5a"
+          },
+          {
+            "file": "FJ2697",
+            "sha256": "e029d3b95fc5b032016ff1e0783a2c71623a55be49cdbbd4be37fcbbfed0117a"
+          },
+          {
+            "file": "FJ2698",
+            "sha256": "2864725de555603dc502c206c9d12bef366358ee4064e8f375c1df9294b7f955"
+          },
+          {
+            "file": "FJ2699",
+            "sha256": "b52176deba592a44bcec3e29d11a8cac00031cac0a35e215d06df515e3224fc4"
+          },
+          {
+            "file": "FJ2700",
+            "sha256": "7c1bda6f9d3170fc5a553a5e917514bb7d108f6c3e37cbe912d6573d634fe983"
+          },
+          {
+            "file": "FJ2714",
+            "sha256": "aa76ceec1e0b4e19b281a2da0e15328d2719eaa1d7b1a3666421bf11ab9c877a"
+          },
+          {
+            "file": "FJ2715",
+            "sha256": "d34c2023e84119131841fe5a1e1251a7252d4900b62b2b1b61d29d3ece4cb51a"
+          },
+          {
+            "file": "FJ2716",
+            "sha256": "ecb5e668e2cf43031263ceed40e29b6862519d8dadef6b21ef63c3398e2f81a5"
+          },
+          {
+            "file": "FJ2717",
+            "sha256": "1dcde62744c8b83892ce1828179d736d2eafdf2fb3cbd74aa61658001dab686b"
+          },
+          {
+            "file": "FJ2718",
+            "sha256": "07ca611daf69f5411871802dbf76e6845519b71df1ef39a772d648c7b1861414"
+          },
+          {
+            "file": "FJ2719",
+            "sha256": "dd10bda525a6b29340babe9b70aa02f8273bedd77519fdc69398dc9f492001b7"
+          },
+          {
+            "file": "FJ2720",
+            "sha256": "996196bea87629d81a5c2040b767026e2a0a77854500999fe9857f3f4a030f5f"
+          },
+          {
+            "file": "FJ2721",
+            "sha256": "d42f1d3059c8a78d65b44ea7934deebd96dbc84338b30341a422a9ce1751c243"
+          },
+          {
+            "file": "FJ2722",
+            "sha256": "f5de57227430b3622ad827348883760596469ed754c473685975be5247cc9abd"
+          },
+          {
+            "file": "FJ2724",
+            "sha256": "419e6a37e1fd0b0e7468654b6b58e561229a94f9641f5b04506271659017b2d4"
+          },
+          {
+            "file": "FJ2727",
+            "sha256": "e482e49e0568a53afa594791946a4cb98ad774dbdf4db6bb32d7f9b3629bdced"
+          },
+          {
+            "file": "FJ2728",
+            "sha256": "107b8fc3f7740ca108ac0d2b4b722d6242a3b78f8e67e29433ac56f08544a31b"
+          },
+          {
+            "file": "FJ2729",
+            "sha256": "8b21e5b96cc8cdd8d4b63d798ff7ae01c0d0b335cc6f3fb8ae00b7895067ad48"
+          },
+          {
+            "file": "FJ2731",
+            "sha256": "ac26ffa55a72b44913d761c6b922f6c000f9a229f29740ab765e5ef5fe43f9c5"
+          }
+        ],
+        "coverageNote": "Display aggregate excludes the separately selectable trunk of right coronary artery surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable trunk of left coronary artery surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable anterior interventricular branch of left coronary artery surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable circumflex branch of left coronary artery surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable great cardiac vein surface. Source coordinates are unchanged.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "heart",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Heart · Location & relationships · draft",
+        "body": "Within the middle mediastinum, the heart is enclosed by the pericardial sac. Two atria receive blood; two ventricles lead to the pulmonary and systemic circulations.",
+        "bullets": [
+          "This is an aggregate selection. Component count does not establish individually selectable chambers, valves or a validated conduction system.",
+          "Source identity: FMA7088 · 56 source components. Component counts are not anatomical subdivision counts; excluded components and absent tissue are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode and clipping controls are teaching aids, not physiological motion, acquired imaging or procedure guidance. Display aggregate excludes the separately selectable trunk of right coronary artery surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable trunk of left coronary artery surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable anterior interventricular branch of left coronary artery surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable circumflex branch of left coronary artery surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable great cardiac vein surface. Source coordinates are unchanged.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/viscera_thorax.html",
+          "https://www.nhlbi.nih.gov/health/heart/anatomy"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:organ:right-lung",
+        "fmaId": "FMA7309",
+        "name": "Right lung",
+        "sourceName": "right lung",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-organs",
+        "nodeName": "FMA7309",
+        "bounds": {
+          "min": [
+            -1.1654000282287598,
+            2.145900249481201,
+            -0.2905749976634979
+          ],
+          "max": [
+            0.04834650084376335,
+            5.480200290679932,
+            1.2380999326705933
+          ]
+        },
+        "center": [
+          -0.5585267636924982,
+          3.8130502700805664,
+          0.47376246750354767
+        ],
+        "anchor": [
+          -0.6279900074005127,
+          4.010000228881836,
+          0.2966809868812561
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2041",
+            "sha256": "d52990514f3fd26238511bc25ae0fdbeef1555b2b450b13166925fb8f3541120"
+          },
+          {
+            "file": "FJ2044",
+            "sha256": "92c5a838b3e2be5316d0b4c0ff2b644e533f60d91dffd2716807116033aef0e7"
+          },
+          {
+            "file": "FJ2449",
+            "sha256": "0b17bf783e9229d279c86e9322b6f6e243b841de14a0409a1fa96456a8a6fd04"
+          },
+          {
+            "file": "FJ2451",
+            "sha256": "5c1771d3c4837b5b69e74441236e1cd1f505bf967e6a81e0c1e17445032eec1e"
+          },
+          {
+            "file": "FJ2452",
+            "sha256": "13a428c6691e43fc62b70f055061518ef59e25bc39f7ff4ba29b72d120ffbaab"
+          },
+          {
+            "file": "FJ2453",
+            "sha256": "4753a2f69f7ca376a149db4fd659ec2ea1f86884a59ce92c51635697bb455843"
+          },
+          {
+            "file": "FJ2454",
+            "sha256": "88123cad730989bea78f4f0c9d1c278763ae0936fc463832dab147c86fa78e34"
+          },
+          {
+            "file": "FJ2455",
+            "sha256": "7758820e2beb33284de3276d986ecfe2947f8a7869d8ad939b54e337f5590743"
+          },
+          {
+            "file": "FJ2456",
+            "sha256": "98b2b20bb08530aca323ac07b2c2d35eeb001fffd4a587f47de825349c09dc26"
+          },
+          {
+            "file": "FJ2457",
+            "sha256": "9693f23e864bc668c5705df406d99f911d65b2dd184d6cf50d923b2046af9a75"
+          },
+          {
+            "file": "FJ2458",
+            "sha256": "311b93c7abf1c094c045c18c2eb7f17963b0d60ad2c874a823f57fb2f11187c6"
+          },
+          {
+            "file": "FJ2459",
+            "sha256": "c93561e1dff5a7ea360a95cd7600f1d7306bfd12e10c4dccd36dfc34c7fba83e"
+          },
+          {
+            "file": "FJ2470",
+            "sha256": "ff2aade1295ecc04ea46f39181b2c6688a9320b374bd98ce45e5e24979d660e4"
+          },
+          {
+            "file": "FJ2481",
+            "sha256": "92669323b5b0c67ab73db4d2e0708c812b356cdcc7695cea86ccd3d9a4c82aa1"
+          },
+          {
+            "file": "FJ2486",
+            "sha256": "24a05a87546c554c7ca8ead6b83d101075c034bcca4bbd565f6555b0546436cd"
+          },
+          {
+            "file": "FJ2487",
+            "sha256": "92b1374c9c5fd44c7c9b30d56ceebe335f04dea0246cc4e7e39931db9a7cf499"
+          },
+          {
+            "file": "FJ2488",
+            "sha256": "0c13f3775d83c97e3680cdcd21dd6a08aaa88e27f3ec194c46656ba3fec86856"
+          },
+          {
+            "file": "FJ2489",
+            "sha256": "4da7026ff7c343f8ba453e3bf6f8b9d6a3ed3951dc912e3cb1bdfd8ef8898778"
+          },
+          {
+            "file": "FJ2490",
+            "sha256": "b4f90915d8bab4bbdc709eb3cfc2ee5f69747a55e7c49e192d901dbc754af57c"
+          },
+          {
+            "file": "FJ2491",
+            "sha256": "70cf62a3f2795a31d105a4529501e35f7d6cac81918b3daa67efa2066c312490"
+          },
+          {
+            "file": "FJ2492",
+            "sha256": "09f07da0cbb3e991fbd11acc3b7972e53322ffc8943a0fddeb6206b43ba314dd"
+          },
+          {
+            "file": "FJ2493",
+            "sha256": "316057eefe3951378a54a8be78a812ef770cb840fcd3510652488e2a6f01bf10"
+          },
+          {
+            "file": "FJ2494",
+            "sha256": "ad18d80f4adfefac9e28afc3e92977ff3a2b91363442125eb1b76ef79dc5198b"
+          },
+          {
+            "file": "FJ2495",
+            "sha256": "05cd679bcc9bdf096f8225fc912629ca7e9d8ac5bdfd953aa035d7f5febdeca0"
+          },
+          {
+            "file": "FJ2496",
+            "sha256": "1c25619334e8c82d823706ca5c95bb9466eb65a00b82e38305cb51e370ceecbb"
+          },
+          {
+            "file": "FJ2497",
+            "sha256": "45f451850b731505fd33b5cb853181290b8ecf2cdb6e9eb38bf4ed45fae06feb"
+          },
+          {
+            "file": "FJ2498",
+            "sha256": "397d42ba5f2579cabf2de58ba365482ddf92c93e74390e74026a06eee0f33da8"
+          },
+          {
+            "file": "FJ2499",
+            "sha256": "dcdf9aa446ea578d1a5029e0ea8354369b0dfb74c98ea6f6f690cac8c26cec8e"
+          },
+          {
+            "file": "FJ2500",
+            "sha256": "30055ea7c3210934af6473ea76fc21e2d491344dde3db588ceed344528e8d3ee"
+          },
+          {
+            "file": "FJ2501",
+            "sha256": "6b6f46acabe02d28557b4313300f496c9c360da605645e60a33053aadc855e49"
+          },
+          {
+            "file": "FJ2502",
+            "sha256": "98e5e5a7e774f2c70a97883365137d700b512ef142b0a8f616fd35a8e2dbf65b"
+          },
+          {
+            "file": "FJ2503",
+            "sha256": "c0b528632a04c5f1f6e64e4a5b1c5f7f931eeac04809be955f367165747c4913"
+          },
+          {
+            "file": "FJ2504",
+            "sha256": "ca40945d3428c057e62be35150bd7569d5749e9d01809da3c57f98fee783fc06"
+          },
+          {
+            "file": "FJ2505",
+            "sha256": "3bba26b9b0d2d0138e227a5e6e3b53226e0e12cceac13014d0e0800a5c314c49"
+          },
+          {
+            "file": "FJ2506",
+            "sha256": "cef0aded90ec711f89d9f133187555ffd6b235718855c7c4df2673f1e41b0dc4"
+          },
+          {
+            "file": "FJ2507",
+            "sha256": "5566feecce7363209e4d8f3910e0699ad93789b50f812008cc5eac427f491a3b"
+          },
+          {
+            "file": "FJ2508",
+            "sha256": "8a6145969f6ece99bc5ebc7bbd8db44178016b5527f0036c1e55d0b187967124"
+          },
+          {
+            "file": "FJ2509",
+            "sha256": "1714bc450b7fadc5735099fdd7bc6ea03f35b591a96c7c63e12e93d5c9ba7aa5"
+          },
+          {
+            "file": "FJ2510",
+            "sha256": "cf2c2acd29c67b6890894472099c3c3387a970fdf6c75496c9dccd38e33cdeaf"
+          },
+          {
+            "file": "FJ2511",
+            "sha256": "edc3b11467d2b2bf91a9691d5f738526b94d7bdde39fa7809d164dec8a2f5505"
+          },
+          {
+            "file": "FJ2512",
+            "sha256": "96f6c4bf177237f27bd0694c6c818f1f5227b5ece8884eacdb9f447592010c2e"
+          },
+          {
+            "file": "FJ2513",
+            "sha256": "4b261ffedf0954bc7e9119c8bae7edf8779cc2114291b8c631f1a487a0045114"
+          },
+          {
+            "file": "FJ2514",
+            "sha256": "9404eb550bacf8b5bab8fc09675717576a8fa7dfb27b9cf5d714172b58f9ae68"
+          },
+          {
+            "file": "FJ2515",
+            "sha256": "0b69795c5ad5bc506e7f51327e4a52032b6ca49d631fff0160317dd608a60966"
+          },
+          {
+            "file": "FJ2516",
+            "sha256": "826b1bc8c191768f3cb8c490511ebedcb8b97454383ba5719c2bc878f7ae0ce9"
+          },
+          {
+            "file": "FJ2517",
+            "sha256": "bedfdb3f698ab46309118fa7ffa5761308f51ca88f7f2467e4657c3a767b2377"
+          },
+          {
+            "file": "FJ2518",
+            "sha256": "3a7e31fde656404844fc4c4c4e4f79b136586a8a3272fe481176a23530771e4c"
+          },
+          {
+            "file": "FJ2519",
+            "sha256": "f599ba9c13ec90e64ffb445b9ff02cfd56bb83ab721256399e2cbd9cff03cb72"
+          },
+          {
+            "file": "FJ2520",
+            "sha256": "39e86b28fd18cb4f9ed2ffbb4a29935d4891000e6b5242b298b6b1755f4d5715"
+          },
+          {
+            "file": "FJ2521",
+            "sha256": "4d07b383a6d4e1a604c7ec0c6677e030cdc609b4065251410a3cae38ff7024be"
+          },
+          {
+            "file": "FJ2522",
+            "sha256": "b19bcb13f7f8dbf8a0fe755c449839689c4addb7e08156a678c7eb6616a8018a"
+          },
+          {
+            "file": "FJ2523",
+            "sha256": "85675485c514feb3c8627923fd7c3a7ac50335ff3824211da29ec21d336c3bb7"
+          },
+          {
+            "file": "FJ2524",
+            "sha256": "a2942179f276ca4450e87736a3d3316aa27b655d2bdf9db730ad269712238d37"
+          },
+          {
+            "file": "FJ2525",
+            "sha256": "68cdd6f1c1b22f5fb4546b9bc645b07cf62da3d0537d5328aa0b1ab9bd25f7b9"
+          },
+          {
+            "file": "FJ2526",
+            "sha256": "5fea18655f20183f11295ecdfdc019277ff395486360a7a0fda16c2621c159f9"
+          },
+          {
+            "file": "FJ2967",
+            "sha256": "3b18d2e99aebc749e230f9994fbe677313bf2a14bf79e3573bc8ac7859bb73da"
+          },
+          {
+            "file": "FJ2968",
+            "sha256": "0267770d371d5c3928cd7ed558bb234644c852007ea7e0a5c340fd65cd743bb8"
+          },
+          {
+            "file": "FJ2969",
+            "sha256": "6c3bbe60cde8152bdd21bcc0d864a0fda94174a1bb75e6b55530695e7b9c3ce2"
+          },
+          {
+            "file": "FJ2970",
+            "sha256": "69d361d775022c820afe6d8fe784d834482d4c0ce55a1df0f94370f4f963a46e"
+          },
+          {
+            "file": "FJ2971",
+            "sha256": "29c805a2b89a9587df2b158395b20ed4c905f56e643c0441f6485dcac82199a2"
+          },
+          {
+            "file": "FJ2972",
+            "sha256": "da6aa85ff26d46e5ee3feb9b9b483a80a99965f3eba76df42d83b9299ae1f4fa"
+          },
+          {
+            "file": "FJ2973",
+            "sha256": "e741ad502c67f78ae98f918193e34286224f8380b0551c03ae7a1a7e1d2af9c5"
+          },
+          {
+            "file": "FJ2974",
+            "sha256": "623910c3664b645dbdebae004130f124965453dfb6cfd4166f976eb2bea78391"
+          },
+          {
+            "file": "FJ2975",
+            "sha256": "8e912f0d152e037c81eddd8f86ae84722f7a21ab32e4b3ca4e341594c3eeec28"
+          },
+          {
+            "file": "FJ2976",
+            "sha256": "7148c08361207cbf9887834bcbadbb361e84cd2aa185a4b6d49ab45c9f719666"
+          },
+          {
+            "file": "FJ2977",
+            "sha256": "9d877f080e66dc6d7222d950dbf1a4e4916fa24ece279d92bce62f88145310ec"
+          },
+          {
+            "file": "FJ2978",
+            "sha256": "0c8a4ec2f2755fde9e89835f8df28862f8666e77b72185731b2aec694f88b8ab"
+          },
+          {
+            "file": "FJ2979",
+            "sha256": "80c8df6c3859ba8b68a6d839f16877d06b7733c3903e41f0fb4dbec9b6002c8d"
+          },
+          {
+            "file": "FJ2980",
+            "sha256": "0fa70de8164718985d303a9b8645f10d56d15938ece1c9516616c062695cca3d"
+          },
+          {
+            "file": "FJ2981",
+            "sha256": "01ad75de79e0a9d4dc4281c40a750ec17daa5b8b3a321ca6eca23fa1f0f72c50"
+          },
+          {
+            "file": "FJ2982",
+            "sha256": "7494dcce5d01681979d19b8ca6b9e47f50a070798448ca5d6758e436ff4eaff9"
+          },
+          {
+            "file": "FJ2983",
+            "sha256": "0124c45a5e00914f90eff4118dad2f4d384fcff423e3371af2a4cda69d984854"
+          },
+          {
+            "file": "FJ2984",
+            "sha256": "3df3920fed60f9116b8c1ef8370b3bef41bc1eda4282cd76cbf76e1b4d097151"
+          },
+          {
+            "file": "FJ2985",
+            "sha256": "190e3dce0b1a866fef0302d90eac21f9ae617631a7dff2a8ef3b57def6daab7d"
+          },
+          {
+            "file": "FJ2986",
+            "sha256": "77e49deba75b03615e15e81ebf1495006c9d29cbfeeec0bb035095b1bca54cd9"
+          },
+          {
+            "file": "FJ2987",
+            "sha256": "d16ffeaf8b5da0884b2773c781f2763d1b170f3f296d3e717c34cdf30153a80e"
+          },
+          {
+            "file": "FJ2988",
+            "sha256": "3d7d7ffe312bfe4e516edfb67421f19eee24ad614abb5be782d6d9ffc63bb7fc"
+          },
+          {
+            "file": "FJ2989",
+            "sha256": "ffc5e7b5ef204d6f66b1582dd13a6e4b60952c1fd95b933390fde464ff01718b"
+          },
+          {
+            "file": "FJ2990",
+            "sha256": "bb9345ace85f5b8c35412b953d51aadb5ccfa4d2e51d85af655c42c83d8dcd9b"
+          },
+          {
+            "file": "FJ2991",
+            "sha256": "022d7193227b41d25fe639a8ec4d49b05a9048bc41edebcbf88e353f94ef9be2"
+          },
+          {
+            "file": "FJ2992",
+            "sha256": "fe994778e6a7659b9ff1f65d70b190f4d7388e4eb6704674845c375708151875"
+          },
+          {
+            "file": "FJ2993",
+            "sha256": "07cfb61f8620bc29d8962738b405102fb00e8728e66e95a477a4b7a51c7781e9"
+          },
+          {
+            "file": "FJ2994",
+            "sha256": "be8bc186033d93f6a104537972d14f646cfc8f16ec30564ccdbcee637973144f"
+          },
+          {
+            "file": "FJ2995",
+            "sha256": "e60f9f58a24e683a0eb4c4c8423ee69fca0d62690b7d548b148b9b399a02d828"
+          },
+          {
+            "file": "FJ2996",
+            "sha256": "5e8197cb11567126932629538de9c407a6af49368617c1857a87fba920c43989"
+          },
+          {
+            "file": "FJ2997",
+            "sha256": "09ff589f6aab4edc59cee6e2439efa426cb636033682bb5d2bfb22dbd68f153b"
+          },
+          {
+            "file": "FJ2998",
+            "sha256": "ac138f3e6f044a94dd5306e3edb9a25bc1849996d88fa6fdd635de9b39b92c68"
+          },
+          {
+            "file": "FJ2999",
+            "sha256": "bf597ef5eee13e22cd83f4d78d9ff1aaf074a513dc98fc223060b59a4b4dd4d3"
+          },
+          {
+            "file": "FJ3000",
+            "sha256": "f50a98d1a391ae137702cdbf47603d75d1300735d65e4ca9fd84c1ebbe7500f4"
+          },
+          {
+            "file": "FJ3001",
+            "sha256": "3f8a4a113437bc9bd097d7cceb5d82934458e5562f8d7f1c6b1ab80a6037823c"
+          },
+          {
+            "file": "FJ3002",
+            "sha256": "d66ec5db20772fbce61e563d4804be9aed680f91141ff13a02c25b1b26e47675"
+          },
+          {
+            "file": "FJ3003",
+            "sha256": "c906af931a973815637ad5524e4f946b8ea1c41a5b01ead598b6c5941c7fc240"
+          },
+          {
+            "file": "FJ3004",
+            "sha256": "dfc3321ef449d7a274a485617437a43c611048c38f9a27690eff849bb61b66a8"
+          },
+          {
+            "file": "FJ3005",
+            "sha256": "4829d47c6937364d4841f1aa5d645c0672323b5196c1162a6b0c85e78384ec6a"
+          },
+          {
+            "file": "FJ3006",
+            "sha256": "afb6adf3c58e47bf5a08666c6e5570ae23feb7d51ba079b9466d29c19f2c8d13"
+          },
+          {
+            "file": "FJ3007",
+            "sha256": "48ab550f68716d5e9bc228c71733604c368eb47c946a3f23be72a974801ee615"
+          },
+          {
+            "file": "FJ3008",
+            "sha256": "f3956466989e7d0b92405aa4059bf8f75b473da60176b238906ab7adc6e1e4b0"
+          },
+          {
+            "file": "FJ3009",
+            "sha256": "56762f7e7766a85140e50964848d0d56a11252c76b02811d2d8e5e895bf78363"
+          },
+          {
+            "file": "FJ3010",
+            "sha256": "40c1e43cc4948a5e497ea7a740ba7d1c8eb89b4e8137adfee0bf19fc929a9b5a"
+          },
+          {
+            "file": "FJ3011",
+            "sha256": "ca0f4ca7d3032444d952190c3e50cc8c03090b311ad88df5428582a00619a85d"
+          },
+          {
+            "file": "FJ3012",
+            "sha256": "b62ce0956c98fe8ccb9e92aa7f1e04979a2fc67eea9011b9fec267e970efb6f9"
+          },
+          {
+            "file": "FJ3013",
+            "sha256": "7d462f3de4c52328332787ef529a7e673f444411bfd437eec0c766ea5e4568c3"
+          },
+          {
+            "file": "FJ3014",
+            "sha256": "cfe69f44c2f72fdc7928319ab389759d2b329fb0d12d93ee2b3b4c17135b1ad3"
+          },
+          {
+            "file": "FJ3015",
+            "sha256": "de6f61d587d4c8176f16f86ffd4442ec5c69208bc8e8d7625e9b7aa1dc6579f9"
+          },
+          {
+            "file": "FJ3016",
+            "sha256": "e7bb5644f4853c91d74a4691e520b58d937b840b60d1b87792fac2562428ded0"
+          },
+          {
+            "file": "FJ3017",
+            "sha256": "0363f0de71395705d583533706645f83bcd27f486953b0a7cf74754ed96b3214"
+          },
+          {
+            "file": "FJ3018",
+            "sha256": "5d16b04e44b0979df0f0346ced1d49096e3be79a53962c129ec3ab2fe487ae10"
+          },
+          {
+            "file": "FJ3021",
+            "sha256": "d7c046ef6d3d84c58c33b55cee9bafb14170862bed5b9d4fe1dc897a35aa961b"
+          },
+          {
+            "file": "FJ3022",
+            "sha256": "1fcfdf4d6bb75498f20cde31a18d3a6a9abb19f52ab3d7b3399ebf42699b28fd"
+          },
+          {
+            "file": "FJ3023",
+            "sha256": "9853554488b7e9879f2f1a96b34b19cbeaecd01a8720b8752d55755913513151"
+          },
+          {
+            "file": "FJ3024",
+            "sha256": "aa19f43fea57296c8330c017ea0f307489c7a73a6470de755910a801051d824a"
+          },
+          {
+            "file": "FJ3025",
+            "sha256": "0ab47fe8dd1f565d6455447b5a615ee1e9cb4aa9a53e9e6500119c1ef6aa31e7"
+          },
+          {
+            "file": "FJ3026",
+            "sha256": "ef1032250149dfcf88673cd8c944d6f201040000469e7f0b949af6afabda4e8e"
+          },
+          {
+            "file": "FJ3027",
+            "sha256": "fe4643b42c0fe785c0e60b09c715132da7e03225564233d34b3e094f8d9febf9"
+          },
+          {
+            "file": "FJ3028",
+            "sha256": "01915769535411ec4597c1582620b5821cd636f54dc79331de3bdcfc89cab720"
+          },
+          {
+            "file": "FJ3029",
+            "sha256": "6378d522355f810c3b42281438e0f6fc990239b1e812d679cb1295260a194bd4"
+          },
+          {
+            "file": "FJ3030",
+            "sha256": "0aea211bdc5bd1ab4fababacf2c31bd781c98b33a25b9cbab887caea90336079"
+          },
+          {
+            "file": "FJ3031",
+            "sha256": "5b36e47a88886de1ab64453c6f97cad458794d861e7367544fd920e3ff648cdb"
+          },
+          {
+            "file": "FJ3032",
+            "sha256": "e88becca7ddf38d900a78c4d192959ecd589ce0032026e09a9fdbfc2b278937a"
+          },
+          {
+            "file": "FJ3033",
+            "sha256": "c9d23ebe4835a50e0ea13109292d451c7c34026effee27a764b11b4b9fabd318"
+          },
+          {
+            "file": "FJ3034",
+            "sha256": "0d84a80aa138f074f4caad194e7d930d88a62f478f9c73dcbf5db2ccf87c007e"
+          },
+          {
+            "file": "FJ3035",
+            "sha256": "00cfa5c5489240f21d0efd7b20009f120bace9909699b400f497321bdc65ac22"
+          },
+          {
+            "file": "FJ3036",
+            "sha256": "8bccfc47d20659b4772080af6948e9c01f0356e35e05ef131756d7661b1f6457"
+          },
+          {
+            "file": "FJ3037",
+            "sha256": "aaf657ee22b9749e365462c729d557be0ddcd3026d9ffa33429169f921e63f08"
+          },
+          {
+            "file": "FJ3038",
+            "sha256": "3300d4e15ff24574cdcb750d9e03909ebf3499242b238f5eefa792fd8a4132c6"
+          },
+          {
+            "file": "FJ3039",
+            "sha256": "3c7d62a01349f154d8d3496ca0f6f84a6858b50b3c95e2a82c51cb13d31691e4"
+          },
+          {
+            "file": "FJ3041",
+            "sha256": "dba8530e4e021d6378881c6315f21377ef6819352b0d48dab32f971f55b68e29"
+          },
+          {
+            "file": "FJ3042",
+            "sha256": "8348cb98ec1bc66b5852ddcf254d9923ffdbfccf6d162776dbfc8dd907bc327b"
+          },
+          {
+            "file": "FJ3043",
+            "sha256": "05d961534e19451d65531109a40a9bd2276b35b1f2f3b612f5a5d06168226b99"
+          },
+          {
+            "file": "FJ3044",
+            "sha256": "30ad07679245f56ec20b383e4665df228f9acf59f357a2aacaf9fad402299dd2"
+          },
+          {
+            "file": "FJ3045",
+            "sha256": "a1a70bb44cecb8a52796d02f7958a43388a9308a9fd0ad064c95e66b49e95aa5"
+          },
+          {
+            "file": "FJ3046",
+            "sha256": "74d6222055c21c6581ab154e351b91f4e57bba2f3abfb8da17364b8917e34229"
+          },
+          {
+            "file": "FJ3047",
+            "sha256": "6c7990555ce97dea123932a1fb56135cf82b2d6c309e7083387d53c8f690bfb5"
+          },
+          {
+            "file": "FJ3048",
+            "sha256": "655dabe52638e598cc552cbf7bb7c31ffd8cd1d37a92dab2129b3282e8bb504a"
+          },
+          {
+            "file": "FJ3049",
+            "sha256": "d8668404e9a9fe58cec2c8676751550c856e62b660cbb7d1ecaff8f152b5a7c9"
+          },
+          {
+            "file": "FJ3050",
+            "sha256": "848e258c0bfa7ef596e3a96646e43d89da1dad8633d04c9531e56454f4efcc53"
+          },
+          {
+            "file": "FJ3051",
+            "sha256": "001e64913b5efc2af0cee710f0891586f1a9e8de0b0e214ce9be1f0536d620de"
+          },
+          {
+            "file": "FJ3052",
+            "sha256": "2c68df1784d024669e0e37a4fb1d0e22b0bb804547f4ecbfcc814b8832ddf902"
+          },
+          {
+            "file": "FJ3053",
+            "sha256": "73f302620f1d778175b9fe6067f93e9253f92ecd170f7770ccefcd4d038b40a1"
+          },
+          {
+            "file": "FJ3054",
+            "sha256": "cf8013a7e9aff9db39703108ddcd3a3cff95210f608afea2a9aeb31e684fbb1f"
+          },
+          {
+            "file": "FJ3055",
+            "sha256": "e581441e67fed5b6225b401529610d65f3b199f24ed32a61c84d212a5061c24c"
+          },
+          {
+            "file": "FJ3056",
+            "sha256": "6ab8a75fa921d473dc53ea2f233a806ed0e5227c1cb1cf1693cd0c76f013d85a"
+          },
+          {
+            "file": "FJ3057",
+            "sha256": "7e5b47ae7217398ed3604484ffe2c8d9c9ecf7da7b9fba9261518891fa2b5a31"
+          },
+          {
+            "file": "FJ3058",
+            "sha256": "5f3dd61a518b3d46bc903797e37b5f1df9c9bf0459ed4c8715cca31d114be2da"
+          },
+          {
+            "file": "FJ3059",
+            "sha256": "0869acb61038b06dbfa8adc90e77faac650913070b5733b377e8d6242ee5def2"
+          },
+          {
+            "file": "FJ3060",
+            "sha256": "ee39c7e79005aaa920afba4a21517de78e2cb8674ff9ff60535131242cc7f92e"
+          },
+          {
+            "file": "FJ3061",
+            "sha256": "75536e65550d3bf1fd7a3c15ca8c6b9c4497fe9945d1d12a221dca0e90d59660"
+          },
+          {
+            "file": "FJ3062",
+            "sha256": "5389d53834968728a52dbba765230e533b3c1c2dcc53d797a68e328cf65500ad"
+          },
+          {
+            "file": "FJ3063",
+            "sha256": "ed8211f4f7b5e5439f70c98333f15c79d791676ce76595633278444949d941bd"
+          },
+          {
+            "file": "FJ3064",
+            "sha256": "7aea5192bb926177f306944c21f866d3d35c2fd307f8b00349a1eb8c1b2bb758"
+          },
+          {
+            "file": "FJ3065",
+            "sha256": "dc4249b117762f15f6adc2e03b8dc96822bf4b61cc29053b53b4e752a435ccbd"
+          },
+          {
+            "file": "FJ3066",
+            "sha256": "e5c53904242f77732a33d793184c4cf422e36e7712c480b276ab019237082c82"
+          },
+          {
+            "file": "FJ3067",
+            "sha256": "c16c1e6158bc3523a6dbaca1691aeff61efa43eeb4cdb4a5a8f7b1be8a596b33"
+          },
+          {
+            "file": "FJ3068",
+            "sha256": "0e13303935659ec4b5bb05fb1765ce986e72b77acff8a177fe6ac765d9b1a798"
+          },
+          {
+            "file": "FJ3069",
+            "sha256": "fac24171ab61e7b50ac353600cf5d58dab4b5417c3922f4e1781c80aabc27661"
+          },
+          {
+            "file": "FJ3070",
+            "sha256": "79b6af3a5d4fa81c2aac0e7d665cf4e8e489f850ae3a6ae4345e3d95f2ac619a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "right-lung",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Right lung · Location & relationships · draft",
+        "body": "The right lung has upper, middle and lower lobes. Its horizontal fissure separates upper from middle lobe; the oblique fissure separates the lower lobe from both.",
+        "bullets": [
+          "The many grouped surfaces are not a count of bronchopulmonary segments. Fissure completeness, pleural boundaries and distal airways require review.",
+          "Source identity: FMA7309 · 156 source components. Component counts are not anatomical subdivision counts; excluded components and absent tissue are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode and clipping controls are teaching aids, not physiological motion, acquired imaging or procedure guidance.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/viscera_thorax.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:organ:left-lung",
+        "fmaId": "FMA7310",
+        "name": "Left lung",
+        "sourceName": "left lung",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-organs",
+        "nodeName": "FMA7310",
+        "bounds": {
+          "min": [
+            0.19649401307106018,
+            3.231099843978882,
+            -0.2968609929084778
+          ],
+          "max": [
+            1.2543200254440308,
+            5.559399604797363,
+            1.2787100076675415
+          ]
+        },
+        "center": [
+          0.7254070192575455,
+          4.395249724388123,
+          0.49092450737953186
+        ],
+        "anchor": [
+          0.7670379877090454,
+          4.426199913024902,
+          0.47642698884010315
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2441",
+            "sha256": "64b373dbea8fea4f475219800087b0bdec736471a640e2660a9a9cac5f35b3ec"
+          },
+          {
+            "file": "FJ2442",
+            "sha256": "49fbe8509027d1d8e9d572b31de9a3741a02de9eca1ee65a6f1d96b79b35fd57"
+          },
+          {
+            "file": "FJ2443",
+            "sha256": "d9ecc1c75a9021f68a186433dd6f7e6cbe5058459f4c0b94aff3239e0dcff4fd"
+          },
+          {
+            "file": "FJ2444",
+            "sha256": "4fa463ea77c7aaea2b44ac26272a9fb10711d1d000b1464662a7a5389c8e6104"
+          },
+          {
+            "file": "FJ2445",
+            "sha256": "e38bac437798a86e2ec37730443443134c0923ef9532c75b428dc530b81df32a"
+          },
+          {
+            "file": "FJ2446",
+            "sha256": "56338429270073446704a97d17c52719f8eee320393658d9f1774a645d2908d9"
+          },
+          {
+            "file": "FJ2447",
+            "sha256": "3550c217bbea847d0bff2cdbbebd8f10607247ac6cae96b2458641b18c3ecf06"
+          },
+          {
+            "file": "FJ2448",
+            "sha256": "9b95d3c4d9115b2b5dfb36ecb5ca7a66953a5f87fe4c7f58a6d486c352cfc183"
+          },
+          {
+            "file": "FJ2460",
+            "sha256": "33b697f2b0996c6d5ff6723d62573e2b515f657cf675776bf7aab3da35db2856"
+          },
+          {
+            "file": "FJ2461",
+            "sha256": "da15dca4d16db1ddd3b51ddf46ccbb3e7b2780920a09665d0ea321cb1021bf0b"
+          },
+          {
+            "file": "FJ2462",
+            "sha256": "654b5b6e95817618bf7b186c363ffe8336abdbde9b305fcaefc3e4fbdedecea9"
+          },
+          {
+            "file": "FJ2463",
+            "sha256": "4f3659eab7252936df40eb3029836834ed563797ebd5b1fe081a2d1303853e05"
+          },
+          {
+            "file": "FJ2464",
+            "sha256": "6eae8179f9a5a765d9a1f2353a6b35342a15665bb3c52000dd10fb7efc5a9c87"
+          },
+          {
+            "file": "FJ2465",
+            "sha256": "e821c7b23402f6e64914d6c485b5a9e37c5e5d9bed386776b6c572486a5777ec"
+          },
+          {
+            "file": "FJ2466",
+            "sha256": "0fbb025940446f5a4c7a46f5e0aadd186b1ce0e14d83ed73f6581c2337143478"
+          },
+          {
+            "file": "FJ2467",
+            "sha256": "adb6e9730a4f48ab4976216c5bc9b28fb2077b9a213f1ca9f6b23d91077c6683"
+          },
+          {
+            "file": "FJ2468",
+            "sha256": "4b97d114f6af1274ae2b07fc7fb1ff426808012b061c20998b3ec75f305f583e"
+          },
+          {
+            "file": "FJ2469",
+            "sha256": "d0ba96fa139c3e4aa58ccfe3e5bbc601845ddb95aeebe15c3e52ba3720b5b4ed"
+          },
+          {
+            "file": "FJ2471",
+            "sha256": "65042bb74a06d48d9fc6adb7d0d33167db7e0195199a6af741acc5a81c9e2bbc"
+          },
+          {
+            "file": "FJ2472",
+            "sha256": "46c5f757ade14ef9d0b4629fbd360ac52d992fa1e3f22a9c4ff986482ddfe0e8"
+          },
+          {
+            "file": "FJ2473",
+            "sha256": "c6db14ca2d3f5ba038b1a64ea29df192cbc5f2319d524214b491b571dc4506a3"
+          },
+          {
+            "file": "FJ2474",
+            "sha256": "bb8e119c4518f5238026a2e37a73faffaeca4958a8f137aeaf27eab89f77dcdd"
+          },
+          {
+            "file": "FJ2475",
+            "sha256": "76ce29f348ed8ba738f35a9cfb7c1b087ead1e734ef4358aca789e45b667c749"
+          },
+          {
+            "file": "FJ2476",
+            "sha256": "7ca6f318aa98dc428c3f5b5237b5cd11744ca0b2ad54e2c23ee4585c1ce8508e"
+          },
+          {
+            "file": "FJ2477",
+            "sha256": "153faedcab2867f0731b9b56727e375b8de11aae2e4e16c72a74f335b8094400"
+          },
+          {
+            "file": "FJ2478",
+            "sha256": "159053dc8c5f1d4bf5021548dc0ff79d2ca980a3108e910a77b828604523aa15"
+          },
+          {
+            "file": "FJ2479",
+            "sha256": "53574009c39352a0fd2a6dd84b68845690b77d652b6b2a8de784ad92aa6c4551"
+          },
+          {
+            "file": "FJ2480",
+            "sha256": "7e07ea18e778db8f00142c69b4b2bb0ee415d294044dc332b138055f902ef4f8"
+          },
+          {
+            "file": "FJ2482",
+            "sha256": "5722b7698bedb29cf076888f776811b1c7d1d729f5ec14f9d51dac8057389e8c"
+          },
+          {
+            "file": "FJ2483",
+            "sha256": "37cee30d3fd34853e8be332261ecebf4a3f2a95170cf414a97d6151ed6c6d22c"
+          },
+          {
+            "file": "FJ2484",
+            "sha256": "859d772c3a7e053109365d3aa777b064d1f6ef7a266d4266405fb1af84cb8196"
+          },
+          {
+            "file": "FJ2485",
+            "sha256": "2f43d9288d325e57de763d458717f04fabd06fc697c337a1fe7d0ae043726f44"
+          },
+          {
+            "file": "FJ2527",
+            "sha256": "2812f475d2c482cd23064de0aa5f2b59c6b72058814d652a45845aa2b0fb0676"
+          },
+          {
+            "file": "FJ2528",
+            "sha256": "bf677fabc8c85fa8b35718048e9138582680a578e1be670ccde9108a14e9be11"
+          },
+          {
+            "file": "FJ2529",
+            "sha256": "cff5d941d69aae1ccfe21bd2cd775a294bea6cd53f3f9239f866811e223bcf33"
+          },
+          {
+            "file": "FJ2530",
+            "sha256": "09eb35909d8fbf647b0e52385ced1e895aa8b8e5e225118cd1fe89fca7571a08"
+          },
+          {
+            "file": "FJ2531",
+            "sha256": "169a4dbc6947dcfd98bb0bcf5f4ffb437ecbf2a7ee51d93944d3ca58252251fd"
+          },
+          {
+            "file": "FJ2532",
+            "sha256": "bf30a052e36f1a984fb9cca54df188a6995875dba5bf07bf7b2b6548dcd1461e"
+          },
+          {
+            "file": "FJ2533",
+            "sha256": "3f033d99e01946940c4191019fc0c174d1d5fa9b28dddc1426968feb61e6d9de"
+          },
+          {
+            "file": "FJ2534",
+            "sha256": "461e5c6c3dc5de63c38dc937e6128fb4889c8605c50a15807037addaae12e79a"
+          },
+          {
+            "file": "FJ2535",
+            "sha256": "4670a1458826c005d352d25bb2e9d029ba7c105f9c94ab1794e72c13fe0bf93d"
+          },
+          {
+            "file": "FJ2536",
+            "sha256": "d3ad0f299e740ab709a4d626a21f7e8fe15eb130de52ec293be518d7eb5cc8f9"
+          },
+          {
+            "file": "FJ2537",
+            "sha256": "b71c206496ab91bab4988e857fb49d4b74daa3e05af02dcb1c7eb2d54defc461"
+          },
+          {
+            "file": "FJ2538",
+            "sha256": "1b0fbbabb7b834cf21554103793e3b6040cd040a4553522db38a0cd14a68dfdf"
+          },
+          {
+            "file": "FJ2540",
+            "sha256": "034abcb466e8f71def0d77707f6266d1fcdbceae26a0dcc0dfd92ec6b5ecb076"
+          },
+          {
+            "file": "FJ2881",
+            "sha256": "ed30dc150cff62adeea8107c3fa164a3a14a06e54c2fc1709875655a9db37fe6"
+          },
+          {
+            "file": "FJ2882",
+            "sha256": "4c818f1db1cc14b6d7c1549174fc3fb6e7b6cce56bd04542b23eebe33efcfa62"
+          },
+          {
+            "file": "FJ2883",
+            "sha256": "4ed8ded534c49f725c3403bafdc47dac755c9dacd02c3b8d4cdaad7c951e00dc"
+          },
+          {
+            "file": "FJ2884",
+            "sha256": "abfae95bcf1f126d11866a62c2f45839f99f88b3722c88da1ab57baf8baccfd6"
+          },
+          {
+            "file": "FJ2885",
+            "sha256": "fc1ce0a1524c6866c03aaf518f0d7056ba47834dc5c8a24f6f689f8c50ca724b"
+          },
+          {
+            "file": "FJ2886",
+            "sha256": "32b38d09c913d78e21863e40d1e661730a0522e06f6d9c8595fc8ce37050f1c4"
+          },
+          {
+            "file": "FJ2887",
+            "sha256": "c2ada586c2153865073bd233f98b659035675c9a49ff96d297a92e324a8dfb5d"
+          },
+          {
+            "file": "FJ2888",
+            "sha256": "48c2b6729e09202fa97918fc47dddf8bf0cfa46b32025be63bbf48d9aacca6f5"
+          },
+          {
+            "file": "FJ2889",
+            "sha256": "8fdf31ccfc469d7fbe00825a3daa990b478e32c1ad476263b5c62a1bfa6e1d00"
+          },
+          {
+            "file": "FJ2890",
+            "sha256": "a96f916bb1ee2d6be37600737d95d8b587c39b4555b6e120667e4394cd8e4830"
+          },
+          {
+            "file": "FJ2891",
+            "sha256": "379124a8465b7c0c3998e6eb6780a8f2f606dfcd771a1af1e3ec90b11866a3bd"
+          },
+          {
+            "file": "FJ2892",
+            "sha256": "cf6100ec0a04f979b00a8803732b1420deac3f82b8ed053456c34ee1f625fe2a"
+          },
+          {
+            "file": "FJ2893",
+            "sha256": "58544ef724582a4cbbea92d24b2b7ebadda07bbb9371de4a37db9cc857b0456b"
+          },
+          {
+            "file": "FJ2894",
+            "sha256": "89d4a63a968bd00dc2da4fe5baf7427b30ac29ae3fbe1944cdb750fc8cbfb666"
+          },
+          {
+            "file": "FJ2895",
+            "sha256": "4533df99087110a5230718ac586a17e893a1bdeb4459b666910db2958f399a65"
+          },
+          {
+            "file": "FJ2896",
+            "sha256": "a71de7bfc5ecd1b331a63b8303df66c943d14bd285e77e937790ad6adc4834c7"
+          },
+          {
+            "file": "FJ2897",
+            "sha256": "c698f9bf423345605feea0d9d235a57ee7bd3d54d59b053c30759340b25bd64f"
+          },
+          {
+            "file": "FJ2898",
+            "sha256": "0641fd4ca72a62ce5d5b2e977d4c3d85a4fa5d4ded1e564c39d36f7dc96ad4b7"
+          },
+          {
+            "file": "FJ2899",
+            "sha256": "38925605225819b262b62e5c0dff100a5969c04ec3c9a042d87a813309c57cca"
+          },
+          {
+            "file": "FJ2900",
+            "sha256": "07ca5c4533537685d5cb5449f5d62a275360e004ad2b56145fc7b0cd693806a9"
+          },
+          {
+            "file": "FJ2901",
+            "sha256": "e4705150e8e90e71e494fd2366adad0b399c0f8bead1d11592521e41955c9b36"
+          },
+          {
+            "file": "FJ2902",
+            "sha256": "23875d0f6ee363ba4ce26c2e742ce69fab8c7634330e9f4eb9778316ccd902b8"
+          },
+          {
+            "file": "FJ2903",
+            "sha256": "05c973d111b02754c02206fe101cda69e83a24ffcb4b0f788c4eb1fc4d68cac4"
+          },
+          {
+            "file": "FJ2904",
+            "sha256": "f36eafda5102fd0c4de1e364aea22e31663e8436b6c4b6e5009dd05519efa593"
+          },
+          {
+            "file": "FJ2905",
+            "sha256": "32cc6acd5fdf81bc1100b59c6d009ea21098eaafc012c221e767ffe0b88fb672"
+          },
+          {
+            "file": "FJ2906",
+            "sha256": "31b12f04efe6a0692f7d9f81cbe5cdb8bb38cbfc1d6f18b94c1bb74f31e2a9a3"
+          },
+          {
+            "file": "FJ2907",
+            "sha256": "b8c1877af9f078506c014c9e54a0181118c53da32f5747cc062bf6d10af34899"
+          },
+          {
+            "file": "FJ2908",
+            "sha256": "2a712a6f06c93e243186958635991d44c709e0d628d2140378398be5a6fede22"
+          },
+          {
+            "file": "FJ2909",
+            "sha256": "839fad0bb73387e30eba955eae475bae3f82fa67de92fde8cd45b972c2e14a29"
+          },
+          {
+            "file": "FJ2910",
+            "sha256": "93a28ddbf18ddef08c4e27d7eae71cc66e9fcd664fde90bde60dc08dd0925ec7"
+          },
+          {
+            "file": "FJ2911",
+            "sha256": "68dbb8593222b414fd5e5ad73842cbfb11c41f525eef42f2f3eee5c0486bf966"
+          },
+          {
+            "file": "FJ2912",
+            "sha256": "6f730d880c0a79587b24f8c8b1bc83056efaede4d7aab76638085abb7566d978"
+          },
+          {
+            "file": "FJ2913",
+            "sha256": "4936e7c72d76224afd96d13043e9a7289407eac60bff18e0e80e36da56805782"
+          },
+          {
+            "file": "FJ2914",
+            "sha256": "a7688a81452a84efa9bab01ba4ce5caecf37f52595d5c192f57e247b797cebcb"
+          },
+          {
+            "file": "FJ2915",
+            "sha256": "c1243bba41b9bf8e7d653dc87c2ee3d44794e181fb2eb2dc90125796f281a800"
+          },
+          {
+            "file": "FJ2916",
+            "sha256": "fbfff75d26deb68fd550025e6e7566a523af95e84f03c3670b31b6039f859180"
+          },
+          {
+            "file": "FJ2917",
+            "sha256": "7cae7fcbf70c5ebc56bf057f34225e66bcc37362ee6932c5d84c68c7d0c48aad"
+          },
+          {
+            "file": "FJ2918",
+            "sha256": "28e665ef0994bb3e8ffc02e8bda5fb0b970a23f1a320e0aaf5bf3fc9b1676533"
+          },
+          {
+            "file": "FJ2919",
+            "sha256": "9c1eaf17f330259874b90e906373aa1da51e326ef7a9a0dd3896259d5c8a5cb4"
+          },
+          {
+            "file": "FJ2920",
+            "sha256": "ac4833fc2019d4955ef0729ac14e07cf836135625c48ad2c25c5b190caa99557"
+          },
+          {
+            "file": "FJ2921",
+            "sha256": "35a721530266089dc3fd4eab9a946fc9f0173e76ff048cc6d4a62498ce103b6f"
+          },
+          {
+            "file": "FJ2922",
+            "sha256": "1dec6ac7c766169cdc1e096e6cb4d6afe507ccd43d7192b1a6ef1734b5b67bf1"
+          },
+          {
+            "file": "FJ2923",
+            "sha256": "9f49cebddf11bc380e358a6efc79987f5223a7384189434a68773eedb855ff02"
+          },
+          {
+            "file": "FJ2926",
+            "sha256": "fad414b395ab2c152b6a1e325a52035bd7ca9e01227e20bc80581e47b8b01343"
+          },
+          {
+            "file": "FJ2927",
+            "sha256": "363b208397100681a7f4bbc8b85d78eb997dccf970545cd849dc2d8c03d040bc"
+          },
+          {
+            "file": "FJ2928",
+            "sha256": "ac55e50920077e8bb9040abbf2b5a738d62574fc4d4fb0cdc070bc3e05802e43"
+          },
+          {
+            "file": "FJ2929",
+            "sha256": "58648f6a537960d1fbbf2fb281f8bd6aaac6592defbaca89ad33d331336ceba2"
+          },
+          {
+            "file": "FJ2930",
+            "sha256": "77ffddd9e5caeb43f2209b994563c4790be69b62d4e476418ed1e3fbc74ff62a"
+          },
+          {
+            "file": "FJ2931",
+            "sha256": "49225dadab2ba06e6050123a56b02266297f4cf0083a04dd91d4e304026b6613"
+          },
+          {
+            "file": "FJ2932",
+            "sha256": "6104f828c75ee74f80283a01a6ca46a6e23ced0b3b009527bcaad13d6ef3f55d"
+          },
+          {
+            "file": "FJ2934",
+            "sha256": "793374cff1ad399a5d33239b76e919c534fffd7680ce2c6125a535330ef7d54c"
+          },
+          {
+            "file": "FJ2935",
+            "sha256": "38e8748bbc3211d87c5a07ac58f18951fb304373d5306e8eaf969fa6e0ef0e82"
+          },
+          {
+            "file": "FJ2936",
+            "sha256": "59d31a9d4a8bce89ce9cb9679d6453e9a60bb64ec1af6ef6a76dacdeebd3f022"
+          },
+          {
+            "file": "FJ2937",
+            "sha256": "d756defc0690df98dfe2f3d8dcd921e27d7808f6da6b02f5f91fbf72b2610f46"
+          },
+          {
+            "file": "FJ2938",
+            "sha256": "29cbd44a1a23886d928581749cb55f11eb8d1a373f3729d950529837e2f0efa4"
+          },
+          {
+            "file": "FJ2939",
+            "sha256": "3554e5004bc079d3f6b4285903df1ac9cb6e786a825a036cfb7ae50b852e9ef6"
+          },
+          {
+            "file": "FJ2940",
+            "sha256": "d16c3735ac73b3c4350d40dac386159ab33e0c89478f82d3e3b29e0aa788953a"
+          },
+          {
+            "file": "FJ2941",
+            "sha256": "84244ca55e36c864f120e50386e1ef7222421dac701d025a6ca8e1b7e6193f66"
+          },
+          {
+            "file": "FJ2942",
+            "sha256": "06c2e1f33d64582246b2f7c72d1e280e405eefc74eb416adb434174db7174feb"
+          },
+          {
+            "file": "FJ2943",
+            "sha256": "8e0ca7020bd35705642118266421daaa6465b257f8972e8f7e5577c96200ea36"
+          },
+          {
+            "file": "FJ2945",
+            "sha256": "d9323f8364e3f36ee32ccaf41142fd321acd9fc4adce54687a7e0ce420cb65df"
+          },
+          {
+            "file": "FJ2946",
+            "sha256": "ac29bbb11a29e54c93f03840ad052316e8d45de9153ce9c802f13e70418cb97a"
+          },
+          {
+            "file": "FJ2947",
+            "sha256": "371fed38231d406a72f3b1711e0d8df8c065952055b2993a7487b67e4d764f61"
+          },
+          {
+            "file": "FJ2948",
+            "sha256": "778cc361cd4c1b56c192e686d04b26ba0bc1a9b21bcb9363f91dbf062fee7aaf"
+          },
+          {
+            "file": "FJ2949",
+            "sha256": "ee8a3c9bc9a97f8b9bbd1c8d0be4a34357511f175ceab098e4bbd95a3201a97f"
+          },
+          {
+            "file": "FJ2951",
+            "sha256": "d63bcdb232e79e2bf88e3da62994b5bcdddc1e1821a0e6057b1bb7b8902dc6f0"
+          },
+          {
+            "file": "FJ2952",
+            "sha256": "6830d54b9b35e1062cb57807a6ef582206148cc8e35cc8199975bbe4ddaf51f7"
+          },
+          {
+            "file": "FJ2953",
+            "sha256": "0517ed1e8c48d39d815a881e92ffcdf48295f453ae27305c05038bc00536c943"
+          },
+          {
+            "file": "FJ2954",
+            "sha256": "d3bcc4279b58b38171861b577c1d3fc211de998cb73bdd7c2c1a8255a2bf248e"
+          },
+          {
+            "file": "FJ2956",
+            "sha256": "40b055d9eba6dc8ce90def14f4f74d52481edc931821e1f394c2aacbf5694746"
+          },
+          {
+            "file": "FJ2957",
+            "sha256": "94ce2b6eb030ae026730d7690cfbc25bb7c584dd0ac0abc66a855e7ae15a022f"
+          },
+          {
+            "file": "FJ2958",
+            "sha256": "07e806d97e0a0a79d0b7dc6a4e633bdfa5016bb3956cd04548681e3bb81e8ef0"
+          },
+          {
+            "file": "FJ2959",
+            "sha256": "bcbcb7fd063492bbf82b413fca1b1aa92963cb60bb3c5a07ab3e8c7ff74def85"
+          },
+          {
+            "file": "FJ2960",
+            "sha256": "909c5e1c806f948c8b260ced4c4ecb00c09048e4bd9f66038337427ff26de439"
+          },
+          {
+            "file": "FJ2961",
+            "sha256": "1406206eb57cc1044d8490254d8ec55a37bf274b279c98db14e5fca11941b358"
+          },
+          {
+            "file": "FJ2962",
+            "sha256": "0d2d819e42c32c550dcb4bcd2e3c5bb792b3d11479dae12b32f07c9ce4751d37"
+          },
+          {
+            "file": "FJ2963",
+            "sha256": "05d14aa9f4220464c00ad01a581176a56460714dfa2ac67858345ffdaa012a4b"
+          },
+          {
+            "file": "FJ2964",
+            "sha256": "1740fff7638d1eb24e5d1a5f414f4809e929181202c87d14ae214413fb3fac73"
+          },
+          {
+            "file": "FJ2965",
+            "sha256": "f224fab88bea0cff03a42e6582182e8503ff11b7b17b7bf803c6ba03fa1be803"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-lung",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Left lung · Location & relationships · draft",
+        "body": "The left lung has upper and lower lobes separated by an oblique fissure. The lingula belongs to the upper lobe, below the cardiac notch.",
+        "bullets": [
+          "The lingula is not a separate middle lobe. An aggregate selection does not validate segment boundaries or a complete airway tree.",
+          "Source identity: FMA7310 · 124 source components. Component counts are not anatomical subdivision counts; excluded components and absent tissue are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode and clipping controls are teaching aids, not physiological motion, acquired imaging or procedure guidance.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/viscera_thorax.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unpaired:organ:stomach",
+        "fmaId": "FMA7148",
+        "name": "Stomach",
+        "sourceName": "stomach",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-organs",
+        "nodeName": "FMA7148",
+        "bounds": {
+          "min": [
+            -0.28951600193977356,
+            2.3988001346588135,
+            0.3147989511489868
+          ],
+          "max": [
+            1.0552400350570679,
+            3.5689001083374023,
+            1.4436999559402466
+          ]
+        },
+        "center": [
+          0.38286201655864716,
+          2.983850121498108,
+          0.8792494535446167
+        ],
+        "anchor": [
+          0.2751089930534363,
+          2.9746997356414795,
+          0.8883700370788574
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2564",
+            "sha256": "cb78c3f2214fd21a16fa6c9f2389b9aa874e9d3ce624c42b34d4563c31554c67"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "stomach",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Stomach · Location & relationships · draft",
+        "body": "The stomach connects the esophagus to the duodenum. Its named regions include cardia, fundus, body and pyloric part, bounded by greater and lesser curvatures.",
+        "bullets": [
+          "This single surface does not separate mucosa, muscle layers or a functional sphincter. Filling-dependent shape is not simulated.",
+          "Source identity: FMA7148 · 1 source component. Component counts are not anatomical subdivision counts; excluded components and absent tissue are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode and clipping controls are teaching aids, not physiological motion, acquired imaging or procedure guidance.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/viscera_abdomen.html",
+          "https://www.niddk.nih.gov/health-information/digestive-diseases/digestive-system-how-it-works"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
+        "fmaId": "FMA7200",
+        "name": "Small intestine",
+        "sourceName": "small intestine",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-organs",
+        "nodeName": "FMA7200",
+        "bounds": {
+          "min": [
+            -0.8705390095710754,
+            0.05289978161454201,
+            0.5389299988746643
+          ],
+          "max": [
+            1.0662100315093994,
+            2.771099805831909,
+            1.3342900276184082
+          ]
+        },
+        "center": [
+          0.09783551096916199,
+          1.4119997937232256,
+          0.9366100132465363
+        ],
+        "anchor": [
+          0.116116002202034,
+          1.4182201623916626,
+          1.1060800552368164
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2573",
+            "sha256": "d549d9857ced73b198cdde3ad2494e897b620884364588f8644d7f6fd74ae1cb"
+          },
+          {
+            "file": "FJ2574",
+            "sha256": "b6547b41e4102688005d102b63a853dc0dc5c2e34610672e8c0639a6b4c4d563"
+          },
+          {
+            "file": "FJ2575",
+            "sha256": "6be375a4887d1354e6b3e8e251e55f22da640e5b5f1f8a8224fd6678d1eda826"
+          },
+          {
+            "file": "FJ2576",
+            "sha256": "5e5687e8af2e373c06136c1020a24ab8803c6dc580197fc589a41f9faea4f40e"
+          },
+          {
+            "file": "FJ2577",
+            "sha256": "ee3f47d0554de48b943b4db2d0f6bc1ec584e6ade56f8ec74bb185d1bdbcf84e"
+          },
+          {
+            "file": "FJ2578",
+            "sha256": "390a30e04a95b41f2a243cc96cc584a463ce8d1accd9b20d459ff71385b29065"
+          },
+          {
+            "file": "FJ2579",
+            "sha256": "b82be69d1481aeab262e79b074b4eacb1f783ae2090cf42b7774b20209e7cf58"
+          },
+          {
+            "file": "FJ2580",
+            "sha256": "f45bc8e30afc5d0aa37e8bcf5e310f5b4716df2c21ae7ebea299c8ec183b5b8b"
+          },
+          {
+            "file": "FJ2581",
+            "sha256": "bde15b34176f21e9eb9f65f7c2c6746637d183a8f088200595443a1f5d4266d5"
+          },
+          {
+            "file": "FJ2582",
+            "sha256": "d48d46d478d409f78b8d68c0ac8848192669680c93f00efdf1aff3741ab1eddb"
+          },
+          {
+            "file": "FJ2583",
+            "sha256": "69cc9c8b12d7c12092fbe451f2ed68860e378ec2c46967a2b71ac2e8806838f5"
+          },
+          {
+            "file": "FJ2584",
+            "sha256": "7bfd148d820040c750592c12cb0c86411fead3701607dffd2c3895369c6c1c11"
+          },
+          {
+            "file": "FJ2585",
+            "sha256": "1263e4a01037f3348768686d364f9f590008dfee2f8dd78539964db91f4aa861"
+          },
+          {
+            "file": "FJ2586",
+            "sha256": "91b76f2902b8f280779820a305caf932cae577073952ba6d116be7a2f8a9243b"
+          },
+          {
+            "file": "FJ2587",
+            "sha256": "cd8315e26a28fce7c54233477704ed4ef1474d75572eb3e26e4e2e9ddc9c056d"
+          },
+          {
+            "file": "FJ2588",
+            "sha256": "b7cbb7897f8d57eb4a7169c32be00f5be796c1e7cc86e74aaec3ad193c677485"
+          },
+          {
+            "file": "FJ2589",
+            "sha256": "1d7695ab41a305eb349921c43dd720bf8016d23bf3859567370d9c339baf6722"
+          },
+          {
+            "file": "FJ2590",
+            "sha256": "73a877864b309b18fc7cb65db64d32baa9c058c9536b4b89fee097e2fc82dbae"
+          },
+          {
+            "file": "FJ2591",
+            "sha256": "dadd4bbb9dc091d2800e3f8d955d7766e5c86c2b854c34a6cd5c61a072d641a3"
+          },
+          {
+            "file": "FJ2592",
+            "sha256": "f5c18c8096976a2c19daa3d6c26cd0032ecec1691392d478b22f1d20c8273a1d"
+          },
+          {
+            "file": "FJ2593",
+            "sha256": "af8ebff2a50f5af91a8a54dac0fb2102850fe9415adb8a3d6893d3275c6736ff"
+          },
+          {
+            "file": "FJ2594",
+            "sha256": "70d6c0ad3390dbfccdda54d352f45b8156ab3255c2184072fecf2e974da01a5d"
+          },
+          {
+            "file": "FJ2595",
+            "sha256": "996e47dec84bf03f4ac007194b83e0eb4d5f511288288986a444fcb6140c1d1d"
+          },
+          {
+            "file": "FJ2596",
+            "sha256": "6dc16ba09ede9b97474595da2540e1268d98bfb10af952b0cc9e36231c3a505f"
+          },
+          {
+            "file": "FJ2597",
+            "sha256": "bdd01b5ff6a117a4a13f23e9f4a9ac390dfa6f0e7550464527c62cf4998dceb6"
+          },
+          {
+            "file": "FJ2598",
+            "sha256": "0efc0e799d28e9df3d0483c828ff9cd4b65db7e0da5fd5d157bf0d10959bd897"
+          },
+          {
+            "file": "FJ2600",
+            "sha256": "14cbe0e74c698aace6e1ed1d95d9da60a494f215caf948d760a84441cb47ffda"
+          },
+          {
+            "file": "FJ2601",
+            "sha256": "af315559e744dcc9ba57c249ec3e7faae53f19211861731ba6cbb994d91061cf"
+          },
+          {
+            "file": "FJ2602",
+            "sha256": "7300e8d6bcefd3476479fecc61eb1f707806500c9a896934ac7248a6088a01d3"
+          },
+          {
+            "file": "FJ2603",
+            "sha256": "cdff2efd1e8a0acd13aafa6328043cc8f6e5b8a2b0831fb457af06e33d0d97ab"
+          },
+          {
+            "file": "FJ2604",
+            "sha256": "cbe476086c02ceced25590d0fcbb6f250e0361f6cac08dca6e743f5ada2b6872"
+          },
+          {
+            "file": "FJ2605",
+            "sha256": "3ad5c6f04a91c08332c264e9b7fea7839867ca1cada6d540d018ba75c64d49e9"
+          },
+          {
+            "file": "FJ2606",
+            "sha256": "89b5f2a7b84ce723f206eefd2ffedd8318fca2fd540ceddee173243fb57d9912"
+          },
+          {
+            "file": "FJ2607",
+            "sha256": "13bbe7d80aa85d7d25e1dad84b9c91842c64f25baa7d46c55950aac11cd12e94"
+          },
+          {
+            "file": "FJ2608",
+            "sha256": "f1699baa49100725b02d81bec5cbe9a344f08bbf04f66a335d77fae079230130"
+          },
+          {
+            "file": "FJ2609",
+            "sha256": "c666347a146576fef68f20a0108b3aaa4c64a4b47340fb4d438429a6878d7b0b"
+          },
+          {
+            "file": "FJ2610",
+            "sha256": "b99fd902532e7f255a4bbf324e8965adc3630544f981763357f1a3362bc8f2d1"
+          },
+          {
+            "file": "FJ2611",
+            "sha256": "f307128f506971b523b25c63df7d603561f283327f7cb7a027c69cbd05985abf"
+          },
+          {
+            "file": "FJ2612",
+            "sha256": "4caa419f277f7a7543a92becadeafdbb2ece3f7e9d423986edb0b2f5c72efd77"
+          },
+          {
+            "file": "FJ2613",
+            "sha256": "4050e67d24cc9e4682b006278584417b05b996501fc14fa1b9ac3e25924174a2"
+          },
+          {
+            "file": "FJ2614",
+            "sha256": "3a0fe667c05cf00349c0f0e6dee83af8f9612d2ab0a61cb393082acbd2f45273"
+          },
+          {
+            "file": "FJ2615",
+            "sha256": "d88c128830e798dd41d723687954fa148702362df7794cb8bff0e69e85fbac6b"
+          },
+          {
+            "file": "FJ2616",
+            "sha256": "39f4f1e9c3e1c6882e60b1e1386ca8b75b7877b7da247c7188868ddd891c9411"
+          },
+          {
+            "file": "FJ2617",
+            "sha256": "b590f94cbe6821b109ecb7d6db1f0a7ba34c696c7618187c3c93ce732317a31d"
+          },
+          {
+            "file": "FJ2618",
+            "sha256": "dba020a6ad5d06cefef0bd468aa2767ff642f8fa9fe8d9907ad7d4d8031358a6"
+          },
+          {
+            "file": "FJ2619",
+            "sha256": "9f4394a95d24321b3c19f7cf41744a10db1fc8cb8b180c11c89ca15a01c0b920"
+          },
+          {
+            "file": "FJ2620",
+            "sha256": "e44f63bc62ff749cb53c1e7a914e6ab6284e82adbdfc4117c6c62092de4d2ecc"
+          },
+          {
+            "file": "FJ2621",
+            "sha256": "fa44e8a3155ccd5c6c98b111a28de4727654ddc5a2ff7a22dd0a50e6efe3ab76"
+          },
+          {
+            "file": "FJ2622",
+            "sha256": "005ab831ac1e943836bbab604e1d65977d4c386e593e3644e78f5361ed027cbf"
+          },
+          {
+            "file": "FJ2623",
+            "sha256": "38ecee2c5b418641b9399e91f493db87abba6b6a1e8cf9250fcdc295491f025d"
+          },
+          {
+            "file": "FJ2624",
+            "sha256": "732a475c4d81228ac54222aa259390d259d2d0f86453777fd23c670a1123a626"
+          },
+          {
+            "file": "FJ2625",
+            "sha256": "668459db84a25f6301edb716439c81a58532ccda4e763f4235da6ea1248163fe"
+          },
+          {
+            "file": "FJ2626",
+            "sha256": "35124a0a754ebdf402a38f8e8d2193dde0c91bbb4cd851163fed49dba2747b8c"
+          },
+          {
+            "file": "FJ2627",
+            "sha256": "994297bdf2c25126db37d5afae74cb9cec76550c4adb6748a7c1f906a2ffab03"
+          },
+          {
+            "file": "FJ2628",
+            "sha256": "be71bf232347b0d1188112f4ded90d1efe15b6672b6d17cdf4728c661da9b732"
+          }
+        ],
+        "coverageNote": "Display aggregate excludes the separately selectable ileocecal junction surface. Source coordinates are unchanged.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "small-intestine",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Small intestine · Location & relationships · draft",
+        "body": "Between stomach and large bowel, the small intestine comprises duodenum, jejunum and ileum in sequence. The terminal ileum reaches the cecum.",
+        "bullets": [
+          "The grouped loops are not individually validated bowel segments. The ileocecal junction has a separate selection; villi, wall layers and luminal continuity are not demonstrated.",
+          "Source identity: FMA7200 · 55 source components. Component counts are not anatomical subdivision counts; excluded components and absent tissue are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode and clipping controls are teaching aids, not physiological motion, acquired imaging or procedure guidance. Display aggregate excludes the separately selectable ileocecal junction surface. Source coordinates are unchanged.",
+        "citations": [
+          "https://www.niddk.nih.gov/health-information/digestive-diseases/digestive-system-how-it-works"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
+        "fmaId": "FMA7201",
+        "name": "Large intestine",
+        "sourceName": "large intestine",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-organs",
+        "nodeName": "FMA7201",
+        "bounds": {
+          "min": [
+            -1.2678300142288208,
+            0.22320984303951263,
+            0.002812004182487726
+          ],
+          "max": [
+            1.174820065498352,
+            2.6472997665405273,
+            1.4693100452423096
+          ]
+        },
+        "center": [
+          -0.046504974365234375,
+          1.43525480479002,
+          0.7360610247123986
+        ],
+        "anchor": [
+          -0.06190739944577217,
+          2.001300096511841,
+          1.112089991569519
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2566",
+            "sha256": "8c156d4b6c70b181ae7d5b181913f693948c38558a530996dbad0158993fb653"
+          },
+          {
+            "file": "FJ2567",
+            "sha256": "01227dde6807b83e2d2a4d1771765e5cb9f33d54719dbd1771b7245a5f7f7a4b"
+          },
+          {
+            "file": "FJ2568",
+            "sha256": "0cb3bccddc08f3121e0e25355c88f68f484ea07d5d8815733b7b49eefd9dbcda"
+          },
+          {
+            "file": "FJ2569",
+            "sha256": "9566e92b9c5c2a265c752200709f45d3deaacf32e8a62e4c41f0f3866b569107"
+          },
+          {
+            "file": "FJ2570",
+            "sha256": "9574b2cbadd22a230c1450101f27ba566d11e2f8c0c3c63329a082b39d89a807"
+          },
+          {
+            "file": "FJ2572",
+            "sha256": "66c493a453400d704e39950bbf468e70182c1e68090ac8a85099bfece42c9d35"
+          }
+        ],
+        "coverageNote": "Display aggregate excludes the separately selectable rectum surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable ileocecal junction surface. Source coordinates are unchanged.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "large-intestine",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Large intestine · Location & relationships · draft",
+        "body": "The large intestine includes cecum and appendix, colon and rectum. The colon proceeds through ascending, transverse, descending and sigmoid portions toward the rectum.",
+        "bullets": [
+          "This display aggregate excludes the separately selectable rectum and ileocecal junction. The organ definition is broader than the currently selected surfaces.",
+          "Source identity: FMA7201 · 6 source components. Component counts are not anatomical subdivision counts; excluded components and absent tissue are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode and clipping controls are teaching aids, not physiological motion, acquired imaging or procedure guidance. Display aggregate excludes the separately selectable rectum surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable ileocecal junction surface. Source coordinates are unchanged.",
+        "citations": [
+          "https://www.niddk.nih.gov/health-information/digestive-diseases/digestive-system-how-it-works",
+          "https://anatomy.ttuhscep.edu/anatomytables/viscera_abdomen.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:unpaired:organ:esophagus",
+        "fmaId": "FMA7131",
+        "name": "Esophagus",
+        "sourceName": "esophagus",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-organs",
+        "nodeName": "FMA7131",
+        "bounds": {
+          "min": [
+            -0.08810629695653915,
+            3.159899950027466,
+            0.16387298703193665
+          ],
+          "max": [
+            0.23603200912475586,
+            5.903900146484375,
+            0.7426400184631348
+          ]
+        },
+        "center": [
+          0.07396285608410835,
+          4.53190004825592,
+          0.4532565027475357
+        ],
+        "anchor": [
+          0.025848200544714928,
+          4.502500057220459,
+          0.262287974357605
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2563",
+            "sha256": "0bc2935e13650b9a5ea143dee97767e2dba0589eae92f0df4e01f3e2fce3c4b0"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "esophagus",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Esophagus · Location & relationships · draft",
+        "body": "The esophagus connects pharynx and stomach, descending behind the trachea and passing through the diaphragm near the T10 level.",
+        "bullets": [
+          "The thorax route is a browsing category, not the full anatomical extent. This surface does not resolve wall layers or validate physiological narrowing.",
+          "Source identity: FMA7131 · 1 source component. Component counts are not anatomical subdivision counts; excluded components and absent tissue are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode and clipping controls are teaching aids, not physiological motion, acquired imaging or procedure guidance.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/viscera_thorax.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:unpaired:organ:trachea",
+        "fmaId": "FMA7394",
+        "name": "Trachea",
+        "sourceName": "trachea",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-organs",
+        "nodeName": "FMA7394",
+        "bounds": {
+          "min": [
+            -0.13124099373817444,
+            4.850899696350098,
+            0.27365997433662415
+          ],
+          "max": [
+            0.1281449943780899,
+            5.954399585723877,
+            0.6013099551200867
+          ]
+        },
+        "center": [
+          -0.0015479996800422668,
+          5.402649641036987,
+          0.4374849647283554
+        ],
+        "anchor": [
+          -0.02547919936478138,
+          5.411400318145752,
+          0.38577696681022644
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2541",
+            "sha256": "f4c8cd3c70d212b09db6319e3b218b35aecfa02f53678d6886484a31aaa11cd9"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "trachea",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Trachea · Location & relationships · draft",
+        "body": "The trachea lies in front of the esophagus, continuing from the cricoid region to its division into right and left main bronchi.",
+        "bullets": [
+          "Its thorax browsing assignment does not exclude its cervical course. Rings, posterior membranous wall and a patent lumen are not independently established here.",
+          "Source identity: FMA7394 · 1 source component. Component counts are not anatomical subdivision counts; excluded components and absent tissue are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode and clipping controls are teaching aids, not physiological motion, acquired imaging or procedure guidance.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/viscera_thorax.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:unpaired:organ:thymus",
+        "fmaId": "FMA9607",
+        "name": "Thymus",
+        "sourceName": "thymus",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-organs-recovery",
+        "nodeName": "FMA9607",
+        "bounds": {
+          "min": [
+            -0.24754498898983002,
+            4.57550048828125,
+            0.6974199414253235
+          ],
+          "max": [
+            0.21814198791980743,
+            5.297500133514404,
+            1.0928900241851807
+          ]
+        },
+        "center": [
+          -0.014701500535011292,
+          4.936500310897827,
+          0.8951549828052521
+        ],
+        "anchor": [
+          -0.00526787992566824,
+          4.933199405670166,
+          0.8574000597000122
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ3150",
+            "sha256": "54102c62c92c793d69b6900b7b8b5d5a130ff024767e25a50eaac6105cb0189d"
+          },
+          {
+            "file": "FJ3151",
+            "sha256": "12da29f923a948d45b2eee05bd39805ec84bea612aeaa7056f13813986415d67"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thymus",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Thymus · Structure & relationships · draft",
+        "body": "A two-lobed lymphoid organ behind the sternum, anterior to the great vessels. Its relative size decreases with age after childhood.",
+        "bullets": [
+          "Two source lobes are grouped into one selectable thymus. This fixed reference does not show age-related involution, cortical/medullary microanatomy or immune activity.",
+          "Source identity: FMA9607 · 2 source components. Boundaries and relationships require independent review."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "citations": [
+          "https://training.seer.cancer.gov/anatomy/lymphatic/components/thymus.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+        "fmaId": "FMA7395",
+        "name": "Right main bronchus",
+        "sourceName": "right main bronchus",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-organs-inventory",
+        "nodeName": "FMA7395",
+        "bounds": {
+          "min": [
+            -0.5041910409927368,
+            4.040300369262695,
+            0.11328700929880142
+          ],
+          "max": [
+            -0.0037724198773503304,
+            4.980000019073486,
+            0.4849279820919037
+          ]
+        },
+        "center": [
+          -0.2539817304350436,
+          4.510150194168091,
+          0.29910749569535255
+        ],
+        "anchor": [
+          -0.24193701148033142,
+          4.500400543212891,
+          0.30463501811027527
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2539",
+            "sha256": "0e1e4dc8c326263c21819c3c48a3e2e41e72fa92425983876d4902fa5dcc3074"
+          }
+        ],
+        "coverageNote": "Proximal airway source segment only; no complete bronchial-tree or wall-layer segmentation is implied. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "right-main-bronchus",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Right main bronchus · Location & relationships · draft",
+        "body": "The right main bronchus leaves the tracheal bifurcation for the right lung. It is generally wider, shorter and more vertical than its left counterpart.",
+        "bullets": [
+          "These are general relationships, not validated dimensions of this mesh. The selected proximal segment is not the complete right bronchial tree.",
+          "Source identity: FMA7395 · 1 source component. Component counts are not anatomical subdivision counts; excluded components and absent tissue are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode and clipping controls are teaching aids, not physiological motion, acquired imaging or procedure guidance. Proximal airway source segment only; no complete bronchial-tree or wall-layer segmentation is implied. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/viscera_thorax.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
+        "fmaId": "FMA7396",
+        "name": "Left main bronchus",
+        "sourceName": "left main bronchus",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-organs-inventory",
+        "nodeName": "FMA7396",
+        "bounds": {
+          "min": [
+            0.004211960360407829,
+            4.208199501037598,
+            0.11001399904489517
+          ],
+          "max": [
+            0.7234739661216736,
+            4.967099666595459,
+            0.4338349997997284
+          ]
+        },
+        "center": [
+          0.3638429632410407,
+          4.587649583816528,
+          0.2719244994223118
+        ],
+        "anchor": [
+          0.375588983297348,
+          4.597700119018555,
+          0.2967270016670227
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2450",
+            "sha256": "7c4ac571448fb3d0c3c1095874bf17a60853bf12457d842a11dd2c62c0994946"
+          }
+        ],
+        "coverageNote": "Proximal airway source segment only; no complete bronchial-tree or wall-layer segmentation is implied. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-main-bronchus",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Left main bronchus · Location & relationships · draft",
+        "body": "The left main bronchus connects the tracheal bifurcation to the left lung, with a generally longer and less vertical course than the right main bronchus.",
+        "bullets": [
+          "The selected proximal segment does not establish lobar or segmental branching, airway-wall layers or luminal continuity.",
+          "Source identity: FMA7396 · 1 source component. Component counts are not anatomical subdivision counts; excluded components and absent tissue are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode and clipping controls are teaching aids, not physiological motion, acquired imaging or procedure guidance. Proximal airway source segment only; no complete bronchial-tree or wall-layer segmentation is implied. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/viscera_thorax.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
+        "fmaId": "FMA14539",
+        "name": "Cystic duct",
+        "sourceName": "cystic duct",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-organs-inventory",
+        "nodeName": "FMA14539",
+        "bounds": {
+          "min": [
+            -0.29680201411247253,
+            2.791600227355957,
+            0.7844099402427673
+          ],
+          "max": [
+            -0.2089800089597702,
+            2.9134998321533203,
+            0.8778599500656128
+          ]
+        },
+        "center": [
+          -0.25289101153612137,
+          2.8525500297546387,
+          0.8311349451541901
+        ],
+        "anchor": [
+          -0.257409006357193,
+          2.8639001846313477,
+          0.8359300494194031
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3080",
+            "sha256": "8f7a2604f762392129842c1a7251be006b00bfe9211698d48d0e6dd2bd512d28"
+          }
+        ],
+        "coverageNote": "Selected biliary duct source surface; no complete biliary-tree or luminal validation is supplied. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "cystic-duct",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Cystic duct · Location & relationships · draft",
+        "body": "The cystic duct links the gallbladder neck to the extrahepatic biliary route. Its union with the common hepatic duct forms the common bile duct.",
+        "bullets": [
+          "The cystic duct is not the common bile duct. Junction patterns vary; this surface is not a validated operative landmark or patent-lumen model.",
+          "Source identity: FMA14539 · 1 source component. Component counts are not anatomical subdivision counts; excluded components and absent tissue are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode and clipping controls are teaching aids, not physiological motion, acquired imaging or procedure guidance. Selected biliary duct source surface; no complete biliary-tree or luminal validation is supplied. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/schemes/liver_tables.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
+        "fmaId": "FMA14668",
+        "name": "Common hepatic duct",
+        "sourceName": "common hepatic duct",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-organs-inventory",
+        "nodeName": "FMA14668",
+        "bounds": {
+          "min": [
+            -0.43682000041007996,
+            2.1958000659942627,
+            0.5703700184822083
+          ],
+          "max": [
+            -0.1786300092935562,
+            3.0386998653411865,
+            0.9450799822807312
+          ]
+        },
+        "center": [
+          -0.3077250048518181,
+          2.6172499656677246,
+          0.7577250003814697
+        ],
+        "anchor": [
+          -0.27831700444221497,
+          2.666300058364868,
+          0.7028900384902954
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3079",
+            "sha256": "31a8cf303123987ddd1a3092b9a7c5ceb092fc10afce61193f40e1fe43af845f"
+          }
+        ],
+        "coverageNote": "Selected biliary duct source surface; no complete biliary-tree or luminal validation is supplied. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "common-hepatic-duct",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Common hepatic duct · Location & relationships · draft",
+        "body": "The common hepatic duct begins where right and left hepatic ducts unite. After joining the cystic duct, the downstream channel is called the common bile duct.",
+        "bullets": [
+          "Common hepatic and common bile ducts are distinct identities. The selected surface does not prove complete intrahepatic branches, junction boundaries or continuity.",
+          "Source identity: FMA14668 · 1 source component. Component counts are not anatomical subdivision counts; excluded components and absent tissue are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode and clipping controls are teaching aids, not physiological motion, acquired imaging or procedure guidance. Selected biliary duct source surface; no complete biliary-tree or luminal validation is supplied. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/schemes/liver_tables.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+        "fmaId": "FMA14542",
+        "name": "Appendix",
+        "sourceName": "appendix",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "abdomen",
+        "regions": [
+          "abdomen",
+          "pelvis"
+        ],
+        "bundle": "abdomen-organs-inventory",
+        "nodeName": "FMA14542",
+        "bounds": {
+          "min": [
+            -0.8842359781265259,
+            0.655869722366333,
+            0.31784698367118835
+          ],
+          "max": [
+            -0.18863099813461304,
+            0.836560070514679,
+            0.7078999876976013
+          ]
+        },
+        "center": [
+          -0.5364334881305695,
+          0.746214896440506,
+          0.5128734856843948
+        ],
+        "anchor": [
+          -0.517009973526001,
+          0.7499401569366455,
+          0.5480700135231018
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2565",
+            "sha256": "26717e62b43eab2d48c6133aa4f9ea7a6f6a65ade4c5af81741b942a47fc56de"
+          }
+        ],
+        "coverageNote": "Reference appendix surface only; variation, wall layers and mesoappendix are not reconstructed. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "appendix",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Appendix · Structure & relationships · draft",
+        "body": "A blind-ending appendage of the caecum. Its wall contains lymphoid tissue, which is generally more prominent earlier in life.",
+        "bullets": [
+          "Reference surface only: variable position, wall layers, mesoappendix and luminal continuity are not reconstructed. Clipping cannot diagnose appendicitis.",
+          "Source identity: FMA14542 · 1 source component. Boundaries and relationships require independent review."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Reference appendix surface only; variation, wall layers and mesoappendix are not reconstructed. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "citations": [
+          "https://histologyguide.com/slideview/MH-122-appendix/14-slide-1.html",
+          "https://histologyguide.com/slidebox/10-lymphoid-system.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
+        "fmaId": "FMA11338",
+        "name": "Ileocecal junction",
+        "sourceName": "ileocecal junction",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-organs-junction",
+        "nodeName": "FMA11338",
+        "bounds": {
+          "min": [
+            -0.7984409928321838,
+            0.7010302543640137,
+            0.5718200206756592
+          ],
+          "max": [
+            -0.5137779712677002,
+            1.2325701713562012,
+            0.9128300547599792
+          ]
+        },
+        "center": [
+          -0.656109482049942,
+          0.9668002128601074,
+          0.7423250377178192
+        ],
+        "anchor": [
+          -0.6675820350646973,
+          0.964139997959137,
+          0.7129799723625183
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2599",
+            "sha256": "7b759605d311999dcd8c3ff13f224f9a208f4856ddaf21057d8e31952ee8dff1"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 ileocecal-junction source surface, separated from both bowel display aggregates without changing coordinates or shape. The source also aliases this surface to cecal and ileal-wall concepts; it is not a separately validated cecum, valve, bowel wall or surgical plane. This corrects duplicate rendering, not missing tissue. No imaging appearance or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ileocecal-junction",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Ileocecal junction · draft",
+        "body": "The ileocecal junction is where the ileum joins the cecum. This small source surface is independently selectable; the surrounding small- and large-intestine display aggregates no longer repeat it.",
+        "bullets": [
+          "Source identity: FMA11338 · 1 source component",
+          "The source uses this same component for several cecal and ileal-wall definitions. It does not establish a complete cecum, separate valve leaflets, bowel-wall layers or a safe dissection plane. Specialist review is still required.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 ileocecal-junction source surface, separated from both bowel display aggregates without changing coordinates or shape. The source also aliases this surface to cecal and ileal-wall concepts; it is not a separately validated cecum, valve, bowel wall or surgical plane. This corrects duplicate rendering, not missing tissue. No imaging appearance or patient registration is established.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/gastrointestinal_system/peritoneum_tables.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

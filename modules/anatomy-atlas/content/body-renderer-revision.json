@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "0ae82f202896ae486be850da03a92d6fc611158e4f1774c4d9e36fba2ec02177"
+      "sha256": "9958e050cea7262ebedc18dba59ff5bafadfecc83b204ff078f087a0662243ab"
     },
     {
       "path": "app/body-explorer.css",
@@ -775,6 +775,14 @@
     {
       "path": "content/thoracic-bone-imaging.ts",
       "sha256": "1929be45d018e3803ac092f803e87e26f9db7e8458c6046e3d404383ef0941c2"
+    },
+    {
+      "path": "content/thoracoabdominal-organ-imaging-pins.json",
+      "sha256": "e8c92ef7101f083c10c75c0b109c5bcd58197fe5a307ffd8203fcfee8d66a129"
+    },
+    {
+      "path": "content/thoracoabdominal-organ-imaging.ts",
+      "sha256": "daf1e872df2e2f1d1c183000744080a87d8fdc794e671f22d1828870265375c6"
     },
     {
       "path": "content/um-bone-cartilage-clinical.ts",
@@ -1741,6 +1749,10 @@
       "sha256": "d05924f41b4921cc3d8c3dd97c5171c88ac8f4f949d9ce7cddcc715eb647aac7"
     },
     {
+      "path": "lib/thoracoabdominal-organ-imaging.ts",
+      "sha256": "2048fd644d43721614d44b749511e3f877623873391edc227f70994f2e81ec08"
+    },
+    {
       "path": "lib/trunk-clinical-curriculum.ts",
       "sha256": "4ad74f7bf268f451f04fc6d3ba88853658fd1acf09e90aed794ec1a62d9eb4cc"
     },
@@ -1830,7 +1842,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "a046410c2d06356581c9342b7a625adc6f42d8bd2697f6f255d94e885654a8c9"
+      "sha256": "83e082e1f2472efc789197f55b7b2db404b40fe56ff576ea3b8287e696bd754b"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2021,5 +2033,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "eea61a7cd04ce7ee59c2e885bf19bfb27ab61b55e3e2d2a9d0ee176563f1b58a"
+  "sha256": "4a19f252b9dd58fbcae1b8f5cdd5b948284927788354c2f822e2bf5810f82b56"
 }

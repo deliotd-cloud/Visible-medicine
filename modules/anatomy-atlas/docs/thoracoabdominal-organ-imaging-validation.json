@@ -1,0 +1,48 @@
+{
+  "baselineSource": "76e0d191c683f273d2399216d82a592b14438b7d",
+  "groups": 15,
+  "sourceSelections": 15,
+  "addedDraftPlacements": 42,
+  "modalities": {
+    "ct": 15,
+    "mri": 15,
+    "ultrasound": 12
+  },
+  "unchangedTopics": 9867,
+  "ultrasoundPending": [
+    "FMA7131",
+    "FMA7395",
+    "FMA7396"
+  ],
+  "bodySchemaRecords": 1101,
+  "actualNoteRenders": 42,
+  "rejectedSourceTopicCombinations": 798,
+  "uniqueReferenceFacts": 42,
+  "sourceWordCounts": {
+    "cardiacCT": 44,
+    "cmr": 36,
+    "echo": 46,
+    "lungMRI": 81,
+    "lungUS": 86,
+    "esophagus": 78,
+    "airway": 180,
+    "airwayUS": 41,
+    "thymus": 74,
+    "thymusMRI": 37,
+    "stomachCT": 41,
+    "stomachMRI": 39,
+    "bowelUS": 116,
+    "enterographyCT": 117,
+    "enterographyMRI": 115,
+    "mrcp": 85,
+    "bileUS": 79,
+    "appendix": 75,
+    "bowelUSMeasurements": 73
+  },
+  "sourceGeometryChanged": false,
+  "currentApprovalRecordsChanged": false,
+  "clinicalApproval": false,
+  "imagesImported": false,
+  "imagingConnected": false,
+  "browserOrDeviceAcceptance": false
+}

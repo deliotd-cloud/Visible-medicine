@@ -41,6 +41,8 @@ export * from './lib/acral-bone-imaging.ts';
 export * from './content/acral-bone-imaging.ts';
 export * from './lib/orbital-neck-muscle-imaging.ts';
 export * from './content/orbital-neck-muscle-imaging.ts';
+export * from './lib/thoracoabdominal-organ-imaging.ts';
+export * from './content/thoracoabdominal-organ-imaging.ts';
 export * from './content/shoulder-arm-muscle-imaging.ts';
 export * from './lib/shoulder-arm-curriculum.ts';
 export * from './lib/forearm-curriculum.ts';

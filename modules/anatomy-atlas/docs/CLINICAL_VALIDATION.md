@@ -1,5 +1,12 @@
 # Clinical validation checklist
 
+[Chest/abdominal organ imaging](THORACOABDOMINAL_ORGAN_IMAGING.md): review 42
+draft CT/MRI/US notes across 15 exact selections. Check cardiac/echo planes,
+airway and lung visibility limits, age-dependent thymus, bowel distension and
+continuity, appendiceal nonvisualisation and biliary junction/MRCP pitfalls.
+Esophageal and main-bronchial external US topics remain pending. No scan,
+registration, validated valve/wall layer or clinical approval is supplied.
+
 [Orbital/neck muscle imaging](ORBITAL_NECK_MUSCLE_IMAGING.md): review 112 draft
 CT/MRI/US placements for 42 retained selections, including gaze versus structural
 imaging, rectus/levator separation, oblique courses, clinical entrapment limits,
