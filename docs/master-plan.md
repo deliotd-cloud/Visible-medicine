@@ -77,6 +77,18 @@ Latest specialist-chat review reports both anterior cerebellar edges accepted an
 
 ## Ordered delivery roadmap
 
+13 September — [all-region and whole-body delivery](whole-body-atlas-pilot.md)
+is now implemented from Atlas `a0b00d42…`: eleven regions and the 1,101-selection
+whole body, retaining all nested families, independent specimens and previous
+eight website entries. One compact host region bar serves fifteen destinations;
+phones use a native selector. All 97 website tests, source/link/review checks,
+builds and scoped local desktop/mobile journeys pass. The 131-object candidate
+retains every live 94 object; 37 additions require staged verification before
+activation. No source geometry, private imaging, lecture right or clinical
+decision changed. Check the main task checkpoint for actual GitHub/D/hosting
+state; do not infer publication from this source milestone. Continue the full
+anatomy/teaching/cleared-Education roadmap after delivery.
+
 13 September — the owner's modality-first navigation is implemented: five visual
 Atlas tiles, the matching top-menu dropdown, and compact region navigation under
 each module title (native select on phones). Existing 3D/study links are retained.

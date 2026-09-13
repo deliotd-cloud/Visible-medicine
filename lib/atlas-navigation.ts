@@ -8,14 +8,28 @@ export const atlasModalities = [
 ] as const;
 export type AtlasModalityId = typeof atlasModalities[number]['id'];
 export type AtlasRegionLink = { id:string; label:string; href:string; planned?:boolean };
+/** Root selections, not a claim of complete anatomical coverage. Export-checked. */
+export const atlasBodyRegions = [
+  { id:'whole-body', label:'Whole body', href:'/atlas/3d', structures:1101 },
+  { id:'head-neck', label:'Head & neck', href:'/atlas/head-neck-3d', structures:290 },
+  { id:'spine', label:'Spine & back', href:'/atlas/spine-3d', structures:115 },
+  { id:'thorax', label:'Thorax', href:'/atlas/thorax-3d', structures:157 },
+  { id:'abdomen', label:'Abdomen', href:'/atlas/abdomen-3d', structures:106 },
+  { id:'pelvis', label:'Pelvis', href:'/atlas/pelvis-3d', structures:81 },
+  { id:'shoulder-arm', label:'Shoulder & arm', href:'/atlas/3d?region=shoulder-arm', structures:115 },
+  { id:'forearm', label:'Elbow & forearm', href:'/atlas/3d?region=forearm', structures:86 },
+  { id:'hand', label:'Wrist & hand', href:'/atlas/3d?region=hand', structures:124 },
+  { id:'thigh', label:'Hip & thigh', href:'/atlas/3d?region=thigh', structures:95 },
+  { id:'leg', label:'Knee & leg', href:'/atlas/3d?region=leg', structures:76 },
+  { id:'foot', label:'Ankle & foot', href:'/atlas/3d?region=foot', structures:122 },
+] as const;
+export function selectedBodyRegion(requested?:string|string[]){
+  return atlasBodyRegions.find(region=>region.id===(requested===undefined?'whole-body':requested))??null;
+}
 const regions3d: AtlasRegionLink[] = [
-  { id:'head-neck', label:'Head & neck', href:'/atlas/head-neck-3d' },
-  { id:'shoulder', label:'Shoulder', href:'/atlas/shoulder-3d' },
-  { id:'thorax', label:'Thorax', href:'/atlas/thorax-3d' },
-  { id:'abdomen', label:'Abdomen', href:'/atlas/abdomen-3d' },
-  { id:'pelvis', label:'Pelvis', href:'/atlas/pelvis-3d' },
-  { id:'spine', label:'Spine & back', href:'/atlas/spine-3d' },
-  { id:'lower-limb', label:'Lower limb', href:'/atlas/lower-limb-3d' },
+  ...atlasBodyRegions,
+  { id:'shoulder', label:'Shoulder detail', href:'/atlas/shoulder-3d' },
+  { id:'lower-limb', label:'Lower limb reference', href:'/atlas/lower-limb-3d' },
   { id:'female-pelvis', label:'Female pelvis reference', href:'/atlas/female-pelvis-3d' },
 ];
 const imagingRegions = [

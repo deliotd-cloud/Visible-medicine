@@ -36,7 +36,7 @@ test('staging deduplicates immutable objects without mutating or promoting the a
   const before = JSON.stringify(previous);
   const staging = atlasStagingModels(previous.models, candidate.models);
   assert.equal(staging.length, 94);
-  assert.equal(atlasStagingModels(active.models, candidate.models).length, 94, 'works both before and after separately verified activation');
+  assert.equal(atlasStagingModels(active.models, candidate.models).length, 131, 'current expansion retains the historical candidate and active objects');
   for (const model of previous.models) {
     const current = active.models.find(m => m.sha256 === model.sha256);
     assert(current); assert.equal(current.bytes, model.bytes);

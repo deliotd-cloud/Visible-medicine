@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {test} from 'node:test';
 import {readFileSync,existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
-import {atlasModalities,atlasRegionLinks,selectedImagingRegion,legacyModalityHref} from '../lib/atlas-navigation.ts';
+import {atlasModalities,atlasBodyRegions,atlasRegionLinks,selectedBodyRegion,selectedImagingRegion,legacyModalityHref} from '../lib/atlas-navigation.ts';
 test('all five modalities have local destinations, preview images and honest status',()=>{
   assert.deepEqual(atlasModalities.map(m=>m.label),['3D','CT','MRI','Ultrasound','X-ray']);
   for(const m of atlasModalities){
@@ -15,14 +15,33 @@ test('all five modalities have local destinations, preview images and honest sta
 });
 test('every current 3D route is retained and wired to the compact region bar',()=>{
   const regions=atlasRegionLinks('3d');
-  assert.equal(regions.length,8);
-  assert.equal(new Set(regions.map(r=>r.href)).size,8);
+  assert.equal(regions.length,15);
+  assert.equal(new Set(regions.map(r=>r.href)).size,15);
   for(const r of regions){
-    const source=readFileSync(new URL('../app'+r.href+'/page.tsx',import.meta.url),'utf8');
-    assert.ok(source.includes(`<AtlasRegionNavigation modality="3d" selected="${r.id}"/>`));
+    const path=new URL(r.href,'https://atlas.invalid').pathname;
+    const source=readFileSync(new URL('../app'+path+'/page.tsx',import.meta.url),'utf8');
+    assert.ok(source.includes(path==='/atlas/3d'?'<AtlasRegionNavigation modality="3d" selected={region.id}/>':`<AtlasRegionNavigation modality="3d" selected="${r.id}"/>`));
     assert.ok(source.includes('allowFullScreen'));
     assert.equal(r.planned,undefined);
   }
+  for(const id of ['head-neck','shoulder','thorax','abdomen','pelvis','spine','lower-limb','female-pelvis'])assert.ok(regions.some(region=>region.id===id));
+});
+test('all eleven regions and whole body are bound to the actual exported scopes',()=>{
+  const manifest=JSON.parse(readFileSync(new URL('../public/atlas-runtime/head-neck/manifest.json',import.meta.url),'utf8'));
+  assert.equal(atlasBodyRegions.length,12);
+  assert.equal(manifest.regionalScopes.length,12);
+  for(const region of atlasBodyRegions){
+    const scope=manifest.regionalScopes.find((s:{region:string})=>s.region===region.id);
+    assert.ok(scope);assert.equal(scope.regionalIds.length,region.structures);
+    assert.equal(selectedBodyRegion(region.id),region);
+  }
+  assert.equal(selectedBodyRegion()?.id,'whole-body');
+  for(const bad of ['', '__proto__','constructor','../hand','https://example.test',['hand','hand'],['hand','foot']])assert.equal(selectedBodyRegion(bad),null);
+  const page=readFileSync(new URL('../app/atlas/3d/page.tsx',import.meta.url),'utf8');
+  for(const snippet of ['if(!region)notFound()', 'key={region.id}', 'region=${region.id}', 'No scan or spatial registration is connected']){
+    assert.ok(page.includes(snippet),snippet);
+  }
+  assert.ok(readFileSync(new URL('../components/SiteFrame.tsx',import.meta.url),'utf8').includes("pathname === '/atlas/3d'"));
 });
 test('imaging regions are modality scoped; only the CT demonstration is available',()=>{
   for(const modality of ['ct','mri','ultrasound','x-ray'] as const){
