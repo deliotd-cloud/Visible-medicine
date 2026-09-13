@@ -8,6 +8,13 @@ entitlement, clinical decision, user role or original geometry.
 
 ## Pelvis and spine rollout — 13 September
 
+**Completed privately:** version 60 (`d0be77db…`) staged all 14 additions while
+retaining the 80-object release; all 94 full downloads and all 80 old delivery
+paths passed. Version 61 (`f1014856…`) then activated the complete regional source
+and passed all 100 active URLs across 94 objects. See the [live pilot record](pelvis-spine-atlas-pilot.md)
+for actual browser evidence and outstanding acceptance gates. The sequence below
+records the staged procedure, not remaining upload work.
+
 The current candidate is copied exactly from website `554054e4791f5f7f5e11c2e5c38431873140d017`:
 94 objects / 100 paths, inventory SHA-256
 `091481333b4d5a89fc1a3d05f38db397d125e8009280100b0c69c72e61a79b4b`.

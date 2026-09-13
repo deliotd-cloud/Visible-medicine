@@ -77,6 +77,22 @@ Latest specialist-chat review reports both anterior cerebellar edges accepted an
 
 ## Ordered delivery roadmap
 
+13 September — pelvis and spine are now privately live in **version 61**.
+Staging version 60 preserved all 80 existing models while 14 additions were
+uploaded; 94 complete staged downloads and the old 80 delivery paths passed
+before activation. All **100 current model URLs / 94 unique objects** then passed
+full-byte, HEAD, range and conditional checks in the real administrator session.
+Spine dissection/Undo, independent back layers and pelvic female/hip-thigh studies
+were sampled, including practice return. Source `f1014856…` and staging `d0be77db…`
+retain every licensed source surface and separate coordinate frame. Clinical,
+real Education, other-account and broad device/release gates remain open. See
+[live pilot evidence](pelvis-spine-atlas-pilot.md) and the main task's
+`work/PELVIS-SPINE-LIVE-CHECKPOINT-20260913.md` for exact GitHub/D recovery.
+Next: more useful source-respecting regional framing, remaining upper-limb and
+whole-body delivery, substantive teaching and the full roadmap below.
+
+The preceding source-only milestone is retained as rollout history:
+
 13 September — [pelvis and spine source integration](pelvis-spine-atlas-pilot.md)
 adds their full 196 regional and four nested selections plus separate back,
 female-pelvis and lower-limb studies. Atlas `54805a89…` preserves source geometry,
