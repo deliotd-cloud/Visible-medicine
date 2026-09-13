@@ -77,6 +77,16 @@ Latest specialist-chat review reports both anterior cerebellar edges accepted an
 
 ## Ordered delivery roadmap
 
+13 September — [larger label-safe framing](atlas-framing.md) is now integrated
+across all four source-bound website modules. It uses available vertical drawing
+space without cropping anatomy, changing geometry or adding controls. All 80
+model byte/hash/path records are unchanged; current source/manifest bindings and
+administrator-review policy are refreshed. Same-size local browser comparison,
+rotation/zoom/reset, 79 source/study groups and saved-camera compatibility are
+checked. Exact publication/recovery belongs in the main task's framing checkpoint.
+Continue remaining region/whole-body delivery, substantive anatomy/teaching and
+cleared Didanix Education work; retain broad device and clinical release gates.
+
 13 September — the full abdomen pilot is now privately live in **version 58**,
 after a staging-only version 57 kept all 59 existing models available while the
 21 added licensed bundles were uploaded. Actual administrator browser checks

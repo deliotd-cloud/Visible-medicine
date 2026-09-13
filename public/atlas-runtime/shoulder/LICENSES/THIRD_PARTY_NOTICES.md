@@ -1,5 +1,16 @@
 # Third-party notices
 
+## Chest/abdominal muscle imaging teaching — 13 September 2026
+
+Original concise factual drafts extend 12 existing source selections. The 13
+reading references are not imported assets or redistribution permissions: no
+article prose, figure, table, ultrasound image, scan, diagram or protocol is
+copied into the product. Original text/code retain MIT terms; the unchanged
+BodyParts3D models retain their existing CC BY 4.0 credits and change notices.
+No package, font, texture, model, paid API or mandatory service is introduced.
+See `docs/CHEST_WALL_MUSCLE_IMAGING.md` for references, source scope and pending
+revision-bound radiologist review.
+
 ## Elbow arteries — 12 September 2026
 
 BodyParts3D, © The Database Center for Life Science licensed under CC Attribution
@@ -536,3 +547,5 @@ Forearm muscle imaging teaching (13 September 2026) adds original short synthesi
 Hand muscle imaging teaching (13 September 2026) adds original brief factual synthesis and reading links to TTUHSC, Picasso et al. (2023) and RadiologyInfo. The Picasso article is CC BY-NC-ND 4.0 and is a factual reading reference only: no publisher prose, figures, tables, scans or datasets are admitted as commercial assets. Citation is not a redistribution licence. Original notes/code retain MIT terms and existing BodyParts3D CC BY 4.0 attribution remains. No new model, font, texture, dependency, paid API or mandatory service is added. See `docs/HAND_MUSCLE_IMAGING.md` for source bindings and remaining clinical-review requirements.
 
 Central-neural CT/MRI teaching (13 September 2026) adds original short factual synthesis and thirteen reading references, including RSNA/ACR, UTHealth, peer-reviewed anatomy/imaging research and StatPearls. No figures, diagrams, article prose, tables, protocols, datasets or scans are redistributed. StatPearls' NC-ND restrictions and all other linked-source terms remain separate; citations do not admit those materials as commercial assets. No model, dependency, font, texture, paid API or mandatory service is added. Original notes/code retain MIT terms and unchanged BodyParts3D CC BY 4.0 attribution remains. See `docs/CENTRAL_NEURAL_IMAGING.md` for exact scope, source binding and pending radiologist review.
+
+Head/neck vessel imaging (13 September 2026) adds original brief factual synthesis and twelve reading links to TTUHSC, UTHealth, RSNA/ACR, AIUM and cited imaging research. Linked publishers retain their rights; no prose, images, diagrams, scans, tables, protocols or datasets are redistributed, and citation is not a commercial-reuse grant. No new model, package, font, texture, paid API or mandatory service is added. Original notes/code retain MIT terms; existing BodyParts3D CC BY 4.0 attribution and source holds are unchanged. See `docs/HEAD_NECK_VESSEL_IMAGING.md` for source limits and pending radiologist review.

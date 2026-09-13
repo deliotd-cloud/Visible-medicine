@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "sourceCommit": "97853ebe945d0ba1bc21fcf738133d0733fd3ad3",
+  "sourceCommit": "6fe99634045ab1e7df6828ff67fcd75d0ae8f724",
   "region": "shoulder-right",
   "structures": 9,
   "patientDataIncluded": false,
@@ -10,7 +10,7 @@
     {
       "path": "index.html",
       "bytes": 504,
-      "sha256": "5aa4a01ec3045ad5c6f31626758529d84ca411757432e4f5398a08db35f13997"
+      "sha256": "6e027b6b97d0e82ab32e2180e92cde30647d804d138f6d2f54c3ee1570495304"
     },
     {
       "path": "BUNDLED_NOTICES.txt",
@@ -24,13 +24,8 @@
     },
     {
       "path": "source-inputs.json",
-      "bytes": 40638,
-      "sha256": "812b6a0242b10f23086654b0d9961bbabc44468072848539f54de177ed83872d"
-    },
-    {
-      "path": "assets/anatomy-scene-30uK-R6w.js",
-      "bytes": 1016653,
-      "sha256": "3b40248b7de33ee29c5f9bdd6cfe7c47c4ff237fc177cb798e08cbf91051fda4"
+      "bytes": 41493,
+      "sha256": "2860f45b0d155df293b9529b98df8593910097892e212abaa3a78fa9eecd4908"
     },
     {
       "path": "assets/anatomy-scene-B5vBwAGD.css",
@@ -38,14 +33,19 @@
       "sha256": "1cf5ea93e7e61ab957de6c3513be4c23214cbdcc680e54780fece40747b9b3ba"
     },
     {
-      "path": "assets/index-CZXZPeOA.css",
-      "bytes": 285078,
-      "sha256": "982190d4af4011a999e7bd3933b3036acb52bb33fb46c795e1097c95913e87af"
+      "path": "assets/anatomy-scene-DkEW0usH.js",
+      "bytes": 1016652,
+      "sha256": "893dffb54f22985ca6d42e16b84a07308fe0de08ff62d7bf0e93c9eef2432996"
     },
     {
-      "path": "assets/index-DrLHhPTh.js",
-      "bytes": 2277328,
-      "sha256": "7445f365bfd117f7a6e3cd96aa276deac75ceb8670394a2f93946a979fd4221e"
+      "path": "assets/index-BuNdwJ15.css",
+      "bytes": 287412,
+      "sha256": "e9c1d4b5e34160cbf9abbe4bf1a545c1e520f9251a6cc8b902e67499f3da22f0"
+    },
+    {
+      "path": "assets/index-B_tF1UEa.js",
+      "bytes": 2331421,
+      "sha256": "028c665293a5bec3238ff83f3852dc4e3c62675eef5e9d93581e30503aca7980"
     },
     {
       "path": "models/bodyparts3d/shoulder-right.glb",
@@ -69,8 +69,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "bytes": 134703,
-      "sha256": "95d7a2717f98ef9bacc5ab52da52a8ba14084806e3ec92b69d97564ca92332f7"
+      "bytes": 135973,
+      "sha256": "ce7f2f206179f83c3a97ddb0880c54183c42956799e5069d45882a79c5fc468b"
     },
     {
       "path": "LICENSES/dependency-license-audit.json",
