@@ -3,3 +3,6 @@ public/atlas-runtime/shoulder/** -text
 public/atlas-runtime/female-pelvis/** -text
 public/atlas-runtime/lower-limb/** -text
 public/atlas-runtime/head-neck/** -text
+# Inventory fingerprints must survive Windows checkouts unchanged.
+lib/atlas-model-inventory.json text eol=lf
+lib/atlas-model-staging-candidate.json text eol=lf
