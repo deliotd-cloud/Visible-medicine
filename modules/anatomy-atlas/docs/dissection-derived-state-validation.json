@@ -1,0 +1,18 @@
+{
+  "baselineSource": "6b1385e522a90cda5f76aa5fc7e587673991c910",
+  "scopes": 36,
+  "comparisons": 1044,
+  "presentationRenders": 432,
+  "heavyHelperCallsOnPresentation": 0,
+  "changedInputChecks": 864,
+  "twelveWholeBodyDerivations": {
+    "beforeMs": 64.922,
+    "afterMs": 0.534,
+    "measurement": "Node execution of actual extracted explorer derivations; not browser frame rate or INP"
+  },
+  "sourceRecords": 1101,
+  "anatomyChanged": false,
+  "clinicalApproval": false,
+  "browserInteractionTesting": false,
+  "limitations": "Memo semantics/dependency replay and local CPU sample, not WebGL, browser, touch, clinical acceptance or a performance guarantee."
+}

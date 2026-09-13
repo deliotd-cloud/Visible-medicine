@@ -110,7 +110,6 @@ import {
   initialPractice,
   practiceScore,
   practicePool,
-  practiceCanStart,
   practiceRenderIds,
   practiceQuestionCount,
   missedPracticeIds,
@@ -487,10 +486,15 @@ export default function BodyExplorer({
       exam ? [] : relatedStudyViews(regionStructures, profile, selectedId),
     [exam, regionStructures, profile, selectedId],
   );
-  const available = regionStructures.filter(
-    (s) => systems[s.system] && !hiddenIds.includes(s.id),
+  // Keep membership stable during camera, separation and presentation changes.
+  // Loading, visibility and practice transitions still recompute their own data.
+  const available = useMemo(
+    () => regionStructures.filter(
+      (s) => systems[s.system] && !hiddenIds.includes(s.id),
+    ),
+    [regionStructures, systems, hiddenIds],
   );
-  const enabledIds = new Set(available.map((item) => item.id));
+  const enabledIds = useMemo(() => new Set(available.map((item) => item.id)), [available]);
   const jointCloseUp = useMemo(() => {
     const input = {
       region: initialRegion,
@@ -528,14 +532,17 @@ export default function BodyExplorer({
     layout,
     inspection.plane,
   ]);
-  const guidance = dissectionGuidance(
-    regionStructures,
-    profile,
-    dissection,
-    available.map((s) => s.id),
-    hiddenIds,
-    loaded,
-    failed,
+  const guidance = useMemo(
+    () => dissectionGuidance(
+      regionStructures,
+      profile,
+      dissection,
+      available.map((s) => s.id),
+      hiddenIds,
+      loaded,
+      failed,
+    ),
+    [regionStructures, profile, dissection, available, hiddenIds, loaded, failed],
   );
   function structureDetail(item: BodyStructure) {
     if (hiddenIds.includes(item.id)) return 'Removed · select to restore';
@@ -545,46 +552,57 @@ export default function BodyExplorer({
     if (!loaded.includes(item.bundle)) return 'Model loading';
     return 'Enabled in dissection';
   }
-  const focusTargetIds = focusedStudy
-    ? available
-        .filter((s) => matchesRule(s, focusedStudy.rule))
-        .map((s) => s.id)
-    : [];
-  const practiceEligible = practicePool(
-    available,
-    anatomyLoadSummary(loaded, loaded, failed).loaded,
-    practiceSampling === 'focus' ? focusTargetIds : undefined,
+  const focusTargetIds = useMemo(
+    () => focusedStudy
+      ? available
+          .filter((s) => matchesRule(s, focusedStudy.rule))
+          .map((s) => s.id)
+      : [],
+    [focusedStudy, available],
   );
-  const practiceReady = practiceCanStart(practiceEligible, practiceMode);
-  const availableQuestions = practiceQuestionCount(
-    practiceEligible,
-    practiceMode,
+  const practiceEligible = useMemo(
+    () => practicePool(
+      available,
+      anatomyLoadSummary(loaded, loaded, failed).loaded,
+      practiceSampling === 'focus' ? focusTargetIds : undefined,
+    ),
+    [available, loaded, failed, practiceSampling, focusTargetIds],
   );
-  const practiceLoadStatus = anatomyLoadSummary(
-    available.map((s) => s.bundle),
-    loaded,
-    failed,
+  const availableQuestions = useMemo(
+    () => practiceQuestionCount(practiceEligible, practiceMode),
+    [practiceEligible, practiceMode],
+  );
+  const practiceReady = availableQuestions > 0;
+  const practiceLoadStatus = useMemo(
+    () => anatomyLoadSummary(available.map((s) => s.bundle), loaded, failed),
+    [available, loaded, failed],
   );
   const practiceBlocked =
     practiceLoadStatus.pending.length > 0 || !practiceReady || !displayReady;
-  const retryIds = missedPracticeIds(practiceResult ?? []).filter((id) =>
-    practiceEligible.some((s) => s.id === id),
+  const retryIds = useMemo(
+    () => missedPracticeIds(practiceResult ?? []).filter((id) =>
+      practiceEligible.some((s) => s.id === id),
+    ),
+    [practiceResult, practiceEligible],
   );
-  const retryCount = practiceQuestionCount(
-    practiceEligible,
-    practiceMode,
-    retryIds,
+  const retryCount = useMemo(
+    () => retryIds.length ? practiceQuestionCount(practiceEligible, practiceMode, retryIds) : 0,
+    [practiceEligible, practiceMode, retryIds],
   );
-  const sceneStructures = exam
-    ? regionStructures.filter((s) => practiceRenderIds(practice).includes(s.id))
-    : regionStructures;
-  const required = requestedAnatomyBundles(
-    sceneStructures,
-    systems,
-    hiddenIds,
-    ghostRemoved && !exam,
+  const sceneStructures = useMemo(
+    () => exam
+      ? regionStructures.filter((s) => practiceRenderIds(practice).includes(s.id))
+      : regionStructures,
+    [exam, regionStructures, practice],
   );
-  const loadStatus = anatomyLoadSummary(required, loaded, failed);
+  const required = useMemo(
+    () => requestedAnatomyBundles(sceneStructures, systems, hiddenIds, ghostRemoved && !exam),
+    [sceneStructures, systems, hiddenIds, ghostRemoved, exam],
+  );
+  const loadStatus = useMemo(
+    () => anatomyLoadSummary(required, loaded, failed),
+    [required, loaded, failed],
+  );
   const pending = loadStatus.pending;
   const practicePaused =
     exam &&
