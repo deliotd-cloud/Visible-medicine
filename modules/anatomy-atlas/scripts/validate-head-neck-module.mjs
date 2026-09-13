@@ -30,7 +30,7 @@ for(const invalid of ['https://example.invalid','//evil','/atlas-runtime/head-ne
 for(const invalid of ['/regions/spine','//evil','/regions/head-neck-other','https://example.invalid','/regions/head-neck/../spine'])assert.throws(()=>api.regionalStudyDeliveryUrl(invalid,'head-neck',base));
 const components=await componentBuild({entryPoints:['integration/head-neck/framework.tsx'],bundle:true,write:false,format:'cjs',platform:'node'});
 const module={exports:{}},require=createRequire(import.meta.url);
-runInNewContext(components.outputFiles[0].text,{module,exports:module.exports,require,URL});
+runInNewContext(components.outputFiles[0].text,{module,exports:module.exports,require,URL,URLSearchParams});
 const React=require('react'),render=require('react-dom/server').renderToStaticMarkup;
 for(const importedModule of [false,true]){
   const View=({label})=>React.createElement('p',null,label);

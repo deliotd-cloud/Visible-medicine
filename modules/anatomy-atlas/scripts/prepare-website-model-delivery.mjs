@@ -22,7 +22,7 @@ const sourceCommit = git(atlas, 'rev-parse', 'HEAD'), websiteCommit = git(websit
 const config = JSON.parse(await readFile(resolve(website, '.openai/hosting.json'), 'utf8'));
 assert.equal(config.project_id, 'appgprj_6a8b1e2c3d348191be844899e57ccbc6', 'Wrong website destination');
 const modules = ['shoulder', 'female-pelvis', 'lower-limb', 'head-neck'];
-const counts = [1, 1, 5, 37];
+const counts = [1, 1, 5, 52];
 const canonicalRoot = resolve(website, 'public/atlas-runtime');
 const deliveredRoot = resolve(website, 'dist/client/atlas-runtime');
 const require = createRequire(import.meta.url);

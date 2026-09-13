@@ -12,6 +12,12 @@ The new review workspace requires trusted authenticated-user headers and D1 stor
 
 ## Integration choices
 
+The [shared regional module](REGIONAL_WEBSITE_MODULE.md) now covers head/neck and
+thorax with their full supported nested/context views. The existing head-neck
+delivery namespace is retained; thorax is selected explicitly in its launch URL.
+This is four runtime directories serving five website module entries, not five
+duplicated viewers. See the dated checkpoint for actual hosted availability.
+
 For the four contained modules, [lossless delivery](WEBSITE_LOSSLESS_DELIVERY.md)
 compresses only the website build output after export/build. Canonical model and
 catalogue hashes remain unchanged; the transport has its own verified manifest.

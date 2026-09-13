@@ -8,11 +8,15 @@ import {cerebralCatalog} from '../../lib/cerebral';
 import {visualContextViewCatalog,visualRelationshipsFor} from '../../lib/visual-pathway-context';
 import {cricothyroidViewCatalog} from '../../lib/cricothyroid';
 import {cranialArteryComponentViewCatalog} from '../../lib/cranial-artery-components';
+import {cardiacContextViewCatalog,cardiacRelationshipsFor} from '../../lib/cardiac-context';
+import {pulmonaryContextViewCatalog} from '../../lib/pulmonary-context';
+import {regionalModules,type RegionalModule} from './regions';
 
 /** All selectable root structures plus every supported child/context state, not a reduced catalogue. */
-export function headNeckDelivery(raw:BodyCatalog) {
+export function regionalDelivery(raw:BodyCatalog,region:RegionalModule) {
+  if(!Object.hasOwn(regionalModules,region))throw Error('Region needs delivery review');
   const catalog=bodyDisplayCatalog(raw);
-  const regional=catalog.structures.filter(s=>s.regions.includes('head-neck'));
+  const regional=catalog.structures.filter(s=>s.regions.includes(region));
   const scoped={...catalog,structures:regional};
   const targets=nestedStudyTargets(scoped);
   const views:BodyCatalog[]=[scoped];
@@ -26,6 +30,11 @@ export function headNeckDelivery(raw:BodyCatalog) {
         case 'cerebral': views.push(cerebralCatalog);break;
         case 'cricothyroid': views.push(cricothyroidViewCatalog(parent,true));break;
         case 'cranial-artery-components': views.push(cranialArteryComponentViewCatalog(parent));break;
+        case 'cardiac':
+          views.push(cardiacContextViewCatalog(parent));
+          for(const relation of cardiacRelationshipsFor(parent))views.push(cardiacContextViewCatalog(parent,relation.id));
+          break;
+        case 'pulmonary': views.push(pulmonaryContextViewCatalog(parent,true,'all'));break;
         case 'visual-pathway':
           views.push(visualContextViewCatalog(parent,true));
           for(const relation of visualRelationshipsFor(parent)) views.push(visualContextViewCatalog(parent,true,relation.id));
@@ -42,8 +51,20 @@ export function headNeckDelivery(raw:BodyCatalog) {
     if(prior && (prior.sha256!==bundle.sha256 || prior.bytes!==bundle.bytes))throw Error('Conflicting delivery identity');
     bundles.set(bundle.url,bundle);
   }
-  return {regionalIds:regional.map(s=>s.id),nestedTargets:targets.map(({structure,...target})=>target),
+  return {region,regionalIds:regional.map(s=>s.id),nestedTargets:targets.map(({structure,...target})=>target),
     bundles:[...bundles.values()].sort((a,b)=>a.url.localeCompare(b.url)),
     sourceVersion:catalog.sourceVersion,license:catalog.license};
 }
 
+export const headNeckDelivery=(raw:BodyCatalog)=>regionalDelivery(raw,'head-neck');
+export function regionalWebsiteDelivery(raw:BodyCatalog) {
+  const scopes=(Object.keys(regionalModules) as RegionalModule[]).map(region=>regionalDelivery(raw,region));
+  const byUrl=new Map<string,BodyCatalog['bundles'][number]>();
+  for(const scope of scopes)for(const bundle of scope.bundles){
+    const previous=byUrl.get(bundle.url);
+    if(previous && (previous.sha256!==bundle.sha256 || previous.bytes!==bundle.bytes))throw Error('Conflicting shared source');
+    byUrl.set(bundle.url,bundle);
+  }
+  return {defaultRegion:'head-neck',sourceVersion:scopes[0].sourceVersion,license:scopes[0].license,scopes,
+    bundles:[...byUrl.values()].sort((a,b)=>a.url.localeCompare(b.url))};
+}

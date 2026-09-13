@@ -1,11 +1,13 @@
 import { lazy, Suspense, type AnchorHTMLAttributes, type ComponentType, type ImgHTMLAttributes } from 'react';
 import { regionalStudyDeliveryUrl } from '../../lib/model-delivery';
+import { regionalModules } from './regions';
 export const assetBase = '/atlas-runtime/head-neck';
 
 // Only navigation is relocated. Anatomical IDs, bundle hashes and coordinate frames stay canonical.
 export function Link({href,children,prefetch:_prefetch,...props}: AnchorHTMLAttributes<HTMLAnchorElement> & {prefetch?:boolean}) {
-  if (href === '/regions/head-neck' || href?.startsWith('/regions/head-neck?'))
-    return <a {...props} href={regionalStudyDeliveryUrl(href,'head-neck',assetBase)}>{children}</a>;
+  const localRegion=Object.keys(regionalModules).find(region=>href===`/regions/${region}`||href?.startsWith(`/regions/${region}?`));
+  if (localRegion && href)
+    return <a {...props} href={regionalStudyDeliveryUrl(href,localRegion,assetBase)}>{children}</a>;
   if (href === '/' || href === '/shoulder')
     return <a {...props} href={href === '/' ? '/atlas' : '/atlas/shoulder-3d'} target="_top">{children}</a>;
   if (href?.startsWith('/regions/'))

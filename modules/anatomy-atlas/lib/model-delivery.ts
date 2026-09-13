@@ -16,5 +16,11 @@ export function regionalStudyDeliveryUrl(url: string, region: string, assetBase 
       !(url === `/regions/${region}` || url.startsWith(`/regions/${region}?`))) {
     throw new Error('Study link is outside the contained region');
   }
-  return `${assetBase}/index.html${url.slice(`/regions/${region}`.length)}`;
+  const suffix=url.slice(`/regions/${region}`.length);
+  if(new URLSearchParams(suffix).has('region'))throw new Error('Unexpected regional routing field');
+  // Keep existing single-region links stable. Shared regional deliveries carry
+  // the destination explicitly, so a thorax study cannot open the default head.
+  const query=assetBase.split('/').at(-1)===region ? suffix
+    : `?region=${encodeURIComponent(region)}${suffix ? '&'+suffix.slice(1) : ''}`;
+  return `${assetBase}/index.html${query}`;
 }

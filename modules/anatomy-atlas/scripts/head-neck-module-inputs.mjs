@@ -5,11 +5,11 @@ import {createHash} from 'node:crypto';
 import {build} from './workspace-test-build.mjs';
 export const root=fileURLToPath(new URL('../',import.meta.url));
 export const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
-export async function headNeckModuleInputs(){
+export async function headNeckModuleInputs(shared=false){
   const compiled=await build({entryPoints:[join(root,'integration/head-neck/delivery.ts')],bundle:true,write:false,format:'esm',platform:'node'});
   const api=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
   const raw=JSON.parse(await readFile(join(root,'public/models/bodyparts3d/full-body/catalog.json'),'utf8'));
-  const plan=api.headNeckDelivery(raw);
+  const plan=shared?api.regionalWebsiteDelivery(raw):api.headNeckDelivery(raw);
   if(plan.license!=='CC BY 4.0' && plan.license!=='CC-BY-4.0')throw Error('Re-audit changed anatomy licence: '+plan.license);
   const models=[];
   for(const bundle of plan.bundles){
@@ -23,7 +23,6 @@ export async function headNeckModuleInputs(){
   return {plan,models};
 }
 if(process.argv.includes('--audit')){
-  const {plan,models}=await headNeckModuleInputs();
-  console.log(JSON.stringify({regionalSelections:plan.regionalIds.length,nestedSelections:plan.nestedTargets.length,nestedStudies:[...new Set(plan.nestedTargets.map(t=>t.study))],bundles:models.length,modelBytes:models.reduce((n,b)=>n+b.bytes,0),license:plan.license},null,2));
+  const {plan,models}=await headNeckModuleInputs(true);
+  console.log(JSON.stringify({scopes:plan.scopes.map(s=>({region:s.region,regionalSelections:s.regionalIds.length,nestedSelections:s.nestedTargets.length,nestedStudies:[...new Set(s.nestedTargets.map(t=>t.study))]})),bundles:models.length,modelBytes:models.reduce((n,b)=>n+b.bytes,0),license:plan.license},null,2));
 }
-
