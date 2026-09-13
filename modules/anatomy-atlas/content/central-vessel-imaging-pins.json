@@ -1,0 +1,2875 @@
+{
+  "sourceCommit": "6d8c900b4f80843ca7568e4222ffb49d0d22e1f1",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "thorax-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/thorax-vessels-recovery.glb",
+      "bytes": 1131748,
+      "sha256": "0c82e1cb2960c6f2474f2b4759974adab5871d8074a2f4e3712e1c3a37a48ca7",
+      "structures": 25
+    },
+    {
+      "id": "abdomen-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/abdomen-vessels-recovery.glb",
+      "bytes": 477592,
+      "sha256": "e41d66684de08fd9bd7dfca340acb63cbf7714eb09a3ea9594184f497c509abe",
+      "structures": 14
+    },
+    {
+      "id": "abdomen-vessels-mesenteric",
+      "url": "/models/bodyparts3d/full-body/abdomen-vessels-mesenteric.glb",
+      "bytes": 226020,
+      "sha256": "d26bb01909128f5cd8a56fb410967a688801a22652305bb2656e04d3e7df2680",
+      "structures": 14
+    },
+    {
+      "id": "portal-veins",
+      "url": "/models/bodyparts3d/portal-veins/portal-veins.glb?v=583069160dbd753bb7f64b62667d20134ccbf7554b9bd4cf57b0de0a5a50ee53",
+      "bytes": 76724,
+      "sha256": "583069160dbd753bb7f64b62667d20134ccbf7554b9bd4cf57b0de0a5a50ee53",
+      "structures": 5
+    },
+    {
+      "id": "hepatic-veins",
+      "url": "/models/bodyparts3d/hepatic-veins/hepatic-veins.glb?v=1f8922b93ec4c92bf6d695de9b75a00fb6f1552522125ca25861b1ed04f403cf",
+      "bytes": 256984,
+      "sha256": "1f8922b93ec4c92bf6d695de9b75a00fb6f1552522125ca25861b1ed04f403cf",
+      "structures": 3
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "de8c41fb18b49b0e3ff04b72f146341950b29fb6f8ddd02710358caa81f8eb1a",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
+        "fmaId": "FMA3736",
+        "name": "Ascending aorta",
+        "sourceName": "ascending aorta",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA3736",
+        "bounds": {
+          "min": [
+            -0.0682218000292778,
+            4.340600490570068,
+            0.5666200518608093
+          ],
+          "max": [
+            0.28943002223968506,
+            4.819000244140625,
+            0.8743899464607239
+          ]
+        },
+        "center": [
+          0.11060411110520363,
+          4.579800367355347,
+          0.7205049991607666
+        ],
+        "anchor": [
+          0.22574399411678314,
+          4.614399433135986,
+          0.726830005645752
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3413",
+            "sha256": "764f23e432a9308e0780c586f9d1638db1fbcc52a5019ae61817b4b1de323870"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ascending-aorta",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Ascending aorta · Course & connections · draft",
+        "body": "The ascending aorta connects the left ventricular outflow to the arch; the coronary origins belong to its proximal root region.",
+        "bullets": [
+          "The selected segment does not independently resolve valve cusps, sinuses, coronary ostia or aortic wall layers.",
+          "Red/blue denotes artery/vein, not oxygenation. Source surfaces do not resolve wall layers, lumen patency, flow direction or measured haemodynamics.",
+          "Source identity: FMA3736 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK538140/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
+        "fmaId": "FMA3768",
+        "name": "Arch of aorta",
+        "sourceName": "arch of aorta",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA3768",
+        "bounds": {
+          "min": [
+            -0.06830459833145142,
+            4.819000244140625,
+            -0.0015510177472606301
+          ],
+          "max": [
+            0.3483780026435852,
+            5.170899868011475,
+            0.8716299533843994
+          ]
+        },
+        "center": [
+          0.1400367021560669,
+          4.99495005607605,
+          0.4350394678185694
+        ],
+        "anchor": [
+          0.13091500103473663,
+          4.957399845123291,
+          0.4406839609146118
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3411",
+            "sha256": "9eeb5e5a627e8145f03961c661c9c66d8fdc55ed1234d04b84212b87a21d902c"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "aortic-arch",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Arch of aorta · Course & connections · draft",
+        "body": "The arch bridges ascending and descending aorta, curving toward the left and posteriorly. Its usual branches are the brachiocephalic, left common carotid and left subclavian arteries.",
+        "bullets": [
+          "Typical anatomical relationships vary. Branch origins, joins and neighbouring structures are teaching context, not verified connections in this source surface.",
+          "Red/blue denotes artery/vein, not oxygenation. Source surfaces do not resolve wall layers, lumen patency, flow direction or measured haemodynamics.",
+          "Source identity: FMA3768 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK538140/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:unspecified:vessel:descending-thoracic-aorta",
+        "fmaId": "FMA87217",
+        "name": "Descending thoracic aorta",
+        "sourceName": "descending thoracic aorta",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA87217",
+        "bounds": {
+          "min": [
+            0.015932898968458176,
+            3.288599967956543,
+            0.04117400944232941
+          ],
+          "max": [
+            0.29951199889183044,
+            4.997399806976318,
+            0.49786102771759033
+          ]
+        },
+        "center": [
+          0.1577224489301443,
+          4.142999887466431,
+          0.26951751857995987
+        ],
+        "anchor": [
+          0.1419690102338791,
+          4.165999889373779,
+          0.25322502851486206
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1931",
+            "sha256": "b213c8178b48f9afae695254f7bcfb3e08d5781878a76724c353e7e6ea6269be"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "descending-aorta",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Descending thoracic aorta · Course & connections · draft",
+        "body": "The descending thoracic aorta continues from the arch through the posterior mediastinum to the diaphragmatic aortic hiatus.",
+        "bullets": [
+          "The catalogue laterality remains unspecified. Regional course does not certify vertebral levels, branch completeness, lumen diameter or aortic wall integrity.",
+          "Red/blue denotes artery/vein, not oxygenation. Source surfaces do not resolve wall layers, lumen patency, flow direction or measured haemodynamics.",
+          "Source identity: FMA87217 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK538140/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:unspecified:vessel:superior-vena-cava",
+        "fmaId": "FMA4720",
+        "name": "Superior vena cava",
+        "sourceName": "superior vena cava",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4720",
+        "bounds": {
+          "min": [
+            -0.2663489878177643,
+            4.748100757598877,
+            0.5358699560165405
+          ],
+          "max": [
+            -0.04109429940581322,
+            5.098100662231445,
+            0.7727600336074829
+          ]
+        },
+        "center": [
+          -0.15372164361178875,
+          4.923100709915161,
+          0.6543149948120117
+        ],
+        "anchor": [
+          -0.06418830156326294,
+          4.938199520111084,
+          0.6031400561332703
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3645",
+            "sha256": "5cc007c2ea51255df641225630e83ddbf3e5c4545dffe4814b098c9199ceb26c"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superior-cava",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Superior vena cava · Course & connections · draft",
+        "body": "The superior vena cava is formed by the brachiocephalic veins and descends to the right atrium, usually receiving the azygos arch.",
+        "bullets": [
+          "This is not the pulmonary venous return to the left atrium. Catalogue laterality remains unspecified; caval variants and atrial entry need independent review.",
+          "Red/blue denotes artery/vein, not oxygenation. Source surfaces do not resolve wall layers, lumen patency, flow direction or measured haemodynamics.",
+          "Source identity: FMA4720 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK545255/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:unspecified:vessel:azygos-vein",
+        "fmaId": "FMA4838",
+        "name": "Azygos vein",
+        "sourceName": "azygos vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4838",
+        "bounds": {
+          "min": [
+            -0.18150199949741364,
+            2.737499952316284,
+            0.09845699369907379
+          ],
+          "max": [
+            -0.05621640384197235,
+            4.913000583648682,
+            0.6302899718284607
+          ]
+        },
+        "center": [
+          -0.118859201669693,
+          3.825250267982483,
+          0.36437348276376724
+        ],
+        "anchor": [
+          -0.14386799931526184,
+          3.819399356842041,
+          0.22390297055244446
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3416",
+            "sha256": "88b374af13155c62ea5bcaad554a699d1d95e23948eeb810b62edb7467789dde"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "azygos",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Azygos vein · Course & connections · draft",
+        "body": "The azygos vein usually ascends beside the right thoracic vertebral column and arches over the right lung root to reach the superior vena cava.",
+        "bullets": [
+          "Typical right-sided course does not overwrite unspecified catalogue laterality. Neither a complete collateral circuit nor its flow capacity is demonstrated.",
+          "Red/blue denotes artery/vein, not oxygenation. Source surfaces do not resolve wall layers, lumen patency, flow direction or measured haemodynamics.",
+          "Source identity: FMA4838 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK554430/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+        "fmaId": "FMA4944",
+        "name": "Hemiazygos vein",
+        "sourceName": "hemiazygos vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4944",
+        "bounds": {
+          "min": [
+            -0.15802399814128876,
+            2.7026000022888184,
+            0.0510060116648674
+          ],
+          "max": [
+            0.24038200080394745,
+            3.742500066757202,
+            0.25790101289749146
+          ]
+        },
+        "center": [
+          0.041179001331329346,
+          3.2225500345230103,
+          0.15445351228117943
+        ],
+        "anchor": [
+          0.18140000104904175,
+          3.217600107192993,
+          0.1522589921951294
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3434",
+            "sha256": "dcc2d6adb32cb84ffd91fd9104a3ba13986d6e9801231733086cbd8ab5ca2b26"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "hemiazygos",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Hemiazygos vein · Course & connections · draft",
+        "body": "The hemiazygos pathway ascends on the lower left side of the thoracic spine and crosses to the azygos system; crossing patterns vary.",
+        "bullets": [
+          "The source is recorded as midline, which is retained for this crossing vessel. It is not relabelled as the accessory hemiazygos vein or treated as its complete drainage territory.",
+          "Red/blue denotes artery/vein, not oxygenation. Source surfaces do not resolve wall layers, lumen patency, flow direction or measured haemodynamics.",
+          "Source identity: FMA4944 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK554430/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+        "fmaId": "FMA3789",
+        "name": "Abdominal aorta",
+        "sourceName": "abdominal aorta",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "abdomen",
+        "regions": [
+          "abdomen",
+          "pelvis",
+          "thorax"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA3789",
+        "bounds": {
+          "min": [
+            -0.009028740227222443,
+            1.4869097471237183,
+            0.32476097345352173
+          ],
+          "max": [
+            0.200547993183136,
+            3.359100341796875,
+            0.8277599811553955
+          ]
+        },
+        "center": [
+          0.09575962647795677,
+          2.4230050444602966,
+          0.5762604773044586
+        ],
+        "anchor": [
+          0.0937374010682106,
+          2.370999813079834,
+          0.619629979133606
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1932",
+            "sha256": "c74d3742308c1f05ce9e85c4508d348e3debf57d4aab5bfbc42041d682d39e02"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "abdominal-aorta",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Abdominal aorta · Course & connections · draft",
+        "body": "The abdominal aorta continues below the diaphragm, anterior to the lumbar spine, and ends by dividing into the common iliac arteries. The inferior vena cava usually lies to its right.",
+        "bullets": [
+          "The selected abdominal segment is not the entire aorta. Thorax/pelvis memberships support navigation, not a claim that all branches, wall layers or vertebral levels are validated.",
+          "Red/blue denotes artery/vein, not oxygenation or measured flow. Vascular surfaces do not establish wall layers, lumen patency or complete branch continuity.",
+          "Source identity: FMA3789 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK525964/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+        "fmaId": "FMA10951",
+        "name": "Inferior vena cava",
+        "sourceName": "inferior vena cava",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen",
+          "pelvis",
+          "thorax"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA10951",
+        "bounds": {
+          "min": [
+            -0.2682560086250305,
+            1.5089203119277954,
+            0.5355200171470642
+          ],
+          "max": [
+            -0.02058500051498413,
+            3.9053003787994385,
+            0.787899911403656
+          ]
+        },
+        "center": [
+          -0.14442050457000732,
+          2.707110345363617,
+          0.6617099642753601
+        ],
+        "anchor": [
+          -0.17249399423599243,
+          2.727900505065918,
+          0.7307199835777283
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3441",
+            "sha256": "7b03ef0464b622d0a839c3c55aedcec2a713b4399112e7ce6efa1ac51861b606"
+          },
+          {
+            "file": "FJ3659",
+            "sha256": "2241af6de027922eb74cb58d882433a5d0ffb7ecce41a1925f05e13dd78d666c"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "inferior-cava",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Inferior vena cava · Course & connections · draft",
+        "body": "The inferior vena cava forms from the common iliac veins, ascends beside the spine and passes through the diaphragm to the right atrium.",
+        "bullets": [
+          "Its two source components are not independently labelled caval segments. Unspecified catalogue laterality is retained; duplication, interruption, tributaries and patency are not adjudicated.",
+          "Red/blue denotes artery/vein, not oxygenation or measured flow. Vascular surfaces do not establish wall layers, lumen patency or complete branch continuity.",
+          "Source identity: FMA10951 · 2 source components. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK482353/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-pulmonary-artery",
+        "fmaId": "FMA50872",
+        "name": "Right pulmonary artery",
+        "sourceName": "right pulmonary artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA50872",
+        "bounds": {
+          "min": [
+            -0.5894550085067749,
+            4.244000434875488,
+            0.12964801490306854
+          ],
+          "max": [
+            0.36937999725341797,
+            4.940100193023682,
+            0.8119999766349792
+          ]
+        },
+        "center": [
+          -0.11003750562667847,
+          4.592050313949585,
+          0.4708239957690239
+        ],
+        "anchor": [
+          -0.09992719441652298,
+          4.619300365447998,
+          0.4936710298061371
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3019",
+            "sha256": "c773fc2d3d3f79544699c16f38f56619730a6d5a1a2c8bb4d8f0dc2ab6889d97"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "right-pulmonary-artery",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Right pulmonary artery · Course & connections · draft",
+        "body": "The right pulmonary artery branches from the pulmonary trunk and normally passes behind the ascending aorta and anterior to the right main bronchus.",
+        "bullets": [
+          "The named vessel is not a validated lobar or segmental tree. Compound source components are not independently assigned to lung segments or atrial ostia; branching and ostial variants need review.",
+          "Red/blue denotes artery/vein, not oxygenation. Source surfaces do not resolve wall layers, lumen patency, flow direction or measured haemodynamics.",
+          "Source identity: FMA50872 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK534812/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-pulmonary-artery",
+        "fmaId": "FMA50873",
+        "name": "Left pulmonary artery",
+        "sourceName": "left pulmonary artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA50873",
+        "bounds": {
+          "min": [
+            0.14751499891281128,
+            4.262099742889404,
+            0.08049900084733963
+          ],
+          "max": [
+            0.7908399701118469,
+            4.940500259399414,
+            0.8659499883651733
+          ]
+        },
+        "center": [
+          0.4691774845123291,
+          4.601300001144409,
+          0.4732244946062565
+        ],
+        "anchor": [
+          0.44685599207878113,
+          4.713100433349609,
+          0.39950796961784363
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2924",
+            "sha256": "0cb5312cf816387fdad0d3809a5b5cae1445806ce85546adea39240bc72d2580"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-pulmonary-artery",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Left pulmonary artery · Course & connections · draft",
+        "body": "The left pulmonary artery branches from the pulmonary trunk and normally lies superior to the left main bronchus.",
+        "bullets": [
+          "The named vessel is not a validated lobar or segmental tree. Compound source components are not independently assigned to lung segments or atrial ostia; branching and ostial variants need review.",
+          "Red/blue denotes artery/vein, not oxygenation. Source surfaces do not resolve wall layers, lumen patency, flow direction or measured haemodynamics.",
+          "Source identity: FMA50873 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK534812/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-superior-pulmonary-vein",
+        "fmaId": "FMA49914",
+        "name": "Right superior pulmonary vein",
+        "sourceName": "right superior pulmonary vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA49914",
+        "bounds": {
+          "min": [
+            -0.37140801548957825,
+            4.349300384521484,
+            0.38331300020217896
+          ],
+          "max": [
+            -0.14016400277614594,
+            4.617700099945068,
+            0.5653600096702576
+          ]
+        },
+        "center": [
+          -0.2557860091328621,
+          4.483500242233276,
+          0.47433650493621826
+        ],
+        "anchor": [
+          -0.25931400060653687,
+          4.48520040512085,
+          0.47599801421165466
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3020",
+            "sha256": "074ba67bb3db8f93d6ac7d4e9d2bd1ddcca6e54a2bcb765ec146a9fd30bb3aa8"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "right-superior-pulmonary-vein",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Right superior pulmonary vein · Course & connections · draft",
+        "body": "The right superior pulmonary vein usually collects upper- and middle-lobe venous return and enters the left atrium.",
+        "bullets": [
+          "The named vessel is not a validated lobar or segmental tree. Compound source components are not independently assigned to lung segments or atrial ostia; branching and ostial variants need review.",
+          "Red/blue denotes artery/vein, not oxygenation. Source surfaces do not resolve wall layers, lumen patency, flow direction or measured haemodynamics.",
+          "Source identity: FMA49914 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK545205/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-superior-pulmonary-vein",
+        "fmaId": "FMA49916",
+        "name": "Left superior pulmonary vein",
+        "sourceName": "left superior pulmonary vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA49916",
+        "bounds": {
+          "min": [
+            0.33699798583984375,
+            4.188799858093262,
+            0.31547796726226807
+          ],
+          "max": [
+            0.8181610107421875,
+            4.732199668884277,
+            0.6084799766540527
+          ]
+        },
+        "center": [
+          0.5775794982910156,
+          4.4604997634887695,
+          0.4619789719581604
+        ],
+        "anchor": [
+          0.5861729979515076,
+          4.45359992980957,
+          0.4640119969844818
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2925",
+            "sha256": "e87124704e4ca94bfe3206a571e464fe8ccc41afe0f36ee5ccf46cf00aaf4918"
+          },
+          {
+            "file": "FJ2933",
+            "sha256": "64e0d2deec1d847be95f41a25c616935c9b400f233a2c07a8c453a3441f80a35"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-superior-pulmonary-vein",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Left superior pulmonary vein · Course & connections · draft",
+        "body": "The left superior pulmonary vein usually collects upper-lobe return, including the lingula, and enters the left atrium.",
+        "bullets": [
+          "The named vessel is not a validated lobar or segmental tree. Compound source components are not independently assigned to lung segments or atrial ostia; branching and ostial variants need review.",
+          "Red/blue denotes artery/vein, not oxygenation. Source surfaces do not resolve wall layers, lumen patency, flow direction or measured haemodynamics.",
+          "Source identity: FMA49916 · 2 source components. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK545205/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-inferior-pulmonary-vein",
+        "fmaId": "FMA49911",
+        "name": "Right inferior pulmonary vein",
+        "sourceName": "right inferior pulmonary vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA49911",
+        "bounds": {
+          "min": [
+            -0.33806800842285156,
+            4.112800121307373,
+            0.2604289948940277
+          ],
+          "max": [
+            -0.06283020228147507,
+            4.288900375366211,
+            0.3902049958705902
+          ]
+        },
+        "center": [
+          -0.20044910535216331,
+          4.200850248336792,
+          0.32531699538230896
+        ],
+        "anchor": [
+          -0.17592698335647583,
+          4.173699855804443,
+          0.2966970205307007
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3040",
+            "sha256": "2e15b98f227f16c3dcacab1a93a26d42e07cd2c2d72ba34b1ef438396f598a12"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "right-inferior-pulmonary-vein",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Right inferior pulmonary vein · Course & connections · draft",
+        "body": "The right inferior pulmonary vein usually collects lower-lobe return and lies inferiorly at the right hilum before reaching the left atrium.",
+        "bullets": [
+          "The named vessel is not a validated lobar or segmental tree. Compound source components are not independently assigned to lung segments or atrial ostia; branching and ostial variants need review.",
+          "Red/blue denotes artery/vein, not oxygenation. Source surfaces do not resolve wall layers, lumen patency, flow direction or measured haemodynamics.",
+          "Source identity: FMA49911 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK545205/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-inferior-pulmonary-vein",
+        "fmaId": "FMA49913",
+        "name": "Left inferior pulmonary vein",
+        "sourceName": "left inferior pulmonary vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA49913",
+        "bounds": {
+          "min": [
+            0.3284890055656433,
+            4.015400409698486,
+            0.03518100827932358
+          ],
+          "max": [
+            0.7297419905662537,
+            4.36359977722168,
+            0.4131690263748169
+          ]
+        },
+        "center": [
+          0.5291154980659485,
+          4.189500093460083,
+          0.22417501732707024
+        ],
+        "anchor": [
+          0.5075929760932922,
+          4.20829963684082,
+          0.2092829942703247
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2944",
+            "sha256": "a531b898f54ae008b1ad0c0f0993158e1a15cfbebee79098033ea8c2d2f84372"
+          },
+          {
+            "file": "FJ2950",
+            "sha256": "f32bbffccdb0528ed085041ad4243b5b4817a26aa82a73669f9132d6c54f17de"
+          },
+          {
+            "file": "FJ2955",
+            "sha256": "bfbb5067eb2da9857069139f12d019bb0f599babc89730aeb4accb1a77916991"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-inferior-pulmonary-vein",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Left inferior pulmonary vein · Course & connections · draft",
+        "body": "The left inferior pulmonary vein usually collects lower-lobe return and lies inferiorly at the left hilum before reaching the left atrium.",
+        "bullets": [
+          "The named vessel is not a validated lobar or segmental tree. Compound source components are not independently assigned to lung segments or atrial ostia; branching and ostial variants need review.",
+          "Red/blue denotes artery/vein, not oxygenation. Source surfaces do not resolve wall layers, lumen patency, flow direction or measured haemodynamics.",
+          "Source identity: FMA49913 · 3 source components. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK545205/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
+        "fmaId": "FMA50737",
+        "name": "Celiac artery",
+        "sourceName": "celiac artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA50737",
+        "bounds": {
+          "min": [
+            0.011040699668228626,
+            2.7765002250671387,
+            0.5759400129318237
+          ],
+          "max": [
+            0.12240300327539444,
+            2.898399591445923,
+            0.8078700304031372
+          ]
+        },
+        "center": [
+          0.06672185147181153,
+          2.8374499082565308,
+          0.6919050216674805
+        ],
+        "anchor": [
+          0.0719733014702797,
+          2.86579966545105,
+          0.7196300029754639
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1846",
+            "sha256": "7aae236dac488ac875ae9f62b59d84ce6f0d85cb80098ef12346cac59f5a609f"
+          },
+          {
+            "file": "FJ2013",
+            "sha256": "5ab733ce7f017e7d9c033936f2008b682eb73dacd742e8ea53cb77a8a28d4492"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "celiac",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Celiac artery · Course & connections · draft",
+        "body": "The celiac artery is a short anterior aortic branch whose usual major divisions are the left gastric, splenic and common hepatic arteries.",
+        "bullets": [
+          "Supply territory does not imply a shared embryological origin: the spleen is not a gut derivative. Two source components do not establish a normal trifurcation or a clinically significant compression.",
+          "Red/blue denotes artery/vein, not oxygenation or measured flow. Vascular surfaces do not establish wall layers, lumen patency or complete branch continuity.",
+          "Source identity: FMA50737 · 2 source components. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK459241/",
+          "https://www.ncbi.nlm.nih.gov/books/NBK525959/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+        "fmaId": "FMA14749",
+        "name": "Superior mesenteric artery",
+        "sourceName": "superior mesenteric artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14749",
+        "bounds": {
+          "min": [
+            -0.6094620227813721,
+            1.094559907913208,
+            0.6211900115013123
+          ],
+          "max": [
+            0.08399049937725067,
+            2.546600341796875,
+            1.0136399269104004
+          ]
+        },
+        "center": [
+          -0.2627357617020607,
+          1.8205801248550415,
+          0.8174149692058563
+        ],
+        "anchor": [
+          -0.09160909801721573,
+          1.8007702827453613,
+          0.9157600402832031
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1928",
+            "sha256": "14ce4846d476c185a279247162ee118ac9c056593023f66d24f4a4d470e56a7c"
+          },
+          {
+            "file": "FJ2011",
+            "sha256": "db6caec612b1564155c869d452904b1e9e834f2f556a9a0b3e2564ce9757e65a"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "sma",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Superior mesenteric artery · Course & connections · draft",
+        "body": "The superior mesenteric artery arises below the celiac origin and passes anterior to the left renal vein and third part of the duodenum toward the small-bowel mesentery.",
+        "bullets": [
+          "The two-file selection does not resolve individual arcades or vasa recta. Aortomesenteric angle, compression and adequate collateral flow cannot be diagnosed from this source surface.",
+          "Red/blue denotes artery/vein, not oxygenation or measured flow. Vascular surfaces do not establish wall layers, lumen patency or complete branch continuity.",
+          "Source identity: FMA14749 · 2 source components. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK519560/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+        "fmaId": "FMA14750",
+        "name": "Inferior mesenteric artery",
+        "sourceName": "inferior mesenteric artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14750",
+        "bounds": {
+          "min": [
+            0.0419296994805336,
+            0.9904998540878296,
+            0.6327300071716309
+          ],
+          "max": [
+            0.18455900251865387,
+            1.8623199462890625,
+            0.8671899437904358
+          ]
+        },
+        "center": [
+          0.11324435099959373,
+          1.426409900188446,
+          0.7499599754810333
+        ],
+        "anchor": [
+          0.14257699251174927,
+          1.4129101037979126,
+          0.7858900427818298
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3442",
+            "sha256": "865cc814e7412113703bfe503424a92e745e6cbf6e788465f06c6be8f1079c6c"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ima",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Inferior mesenteric artery · Course & connections · draft",
+        "body": "The inferior mesenteric artery arises from the abdominal aorta below the superior mesenteric artery; its usual branches include left colic, sigmoid and superior rectal arteries.",
+        "bullets": [
+          "Not the inferior mesenteric vein. Named bowel territories are approximate and overlapping, not segmented perfusion maps. The whole rectum is not exclusively supplied by this artery.",
+          "Red/blue denotes artery/vein, not oxygenation or measured flow. Vascular surfaces do not establish wall layers, lumen patency or complete branch continuity.",
+          "Source identity: FMA14750 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK525959/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+        "fmaId": "FMA14771",
+        "name": "Common hepatic artery",
+        "sourceName": "common hepatic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14771",
+        "bounds": {
+          "min": [
+            -0.15322299301624298,
+            2.7520995140075684,
+            0.7689099907875061
+          ],
+          "max": [
+            0.05790700018405914,
+            2.8542003631591797,
+            0.9266900420188904
+          ]
+        },
+        "center": [
+          -0.04765799641609192,
+          2.803149938583374,
+          0.8478000164031982
+        ],
+        "anchor": [
+          -0.027087800204753876,
+          2.7968993186950684,
+          0.8521899580955505
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3078",
+            "sha256": "f8285f60775b0feb990af2f35591196b2a43253c87df2c8b02b7ec7f492d1409"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "common-hepatic-artery",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Common hepatic artery · Course & connections · draft",
+        "body": "The common hepatic artery usually arises from the celiac axis; beyond the gastroduodenal origin its hepatic continuation is termed the proper hepatic artery.",
+        "bullets": [
+          "Common and proper hepatic arteries are distinct selections. Replaced/accessory hepatic supply and variable gastric branches are not ruled out by the usual description; the liver is not supplied solely by arterial blood.",
+          "Red/blue denotes artery/vein, not oxygenation or measured flow. Vascular surfaces do not establish wall layers, lumen patency or complete branch continuity.",
+          "Source identity: FMA14771 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK525959/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
+        "fmaId": "FMA14772",
+        "name": "Hepatic artery proper",
+        "sourceName": "hepatic artery proper",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14772",
+        "bounds": {
+          "min": [
+            -0.22417400777339935,
+            2.815300226211548,
+            0.8881500363349915
+          ],
+          "max": [
+            -0.1144069954752922,
+            3.1173999309539795,
+            1.0145798921585083
+          ]
+        },
+        "center": [
+          -0.16929050162434578,
+          2.9663500785827637,
+          0.9513649642467499
+        ],
+        "anchor": [
+          -0.17672199010849,
+          2.9759998321533203,
+          0.9442999362945557
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3081",
+            "sha256": "bd4cff9e5fc6feb0d0f742a91d8a67e1fa4cda96e455e5a21a638b064d195da6"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proper-hepatic-artery",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Hepatic artery proper · Course & connections · draft",
+        "body": "The proper hepatic artery ascends in the hepatoduodenal ligament toward its right and left hepatic branches, accompanying the portal vein and bile duct.",
+        "bullets": [
+          "This artery is an inflow route, not a hepatic vein or bile duct. No fixed arterial/portal flow fraction, branch completeness, portal-triad clearance or operative corridor is certified.",
+          "Red/blue denotes artery/vein, not oxygenation or measured flow. Vascular surfaces do not establish wall layers, lumen patency or complete branch continuity.",
+          "Source identity: FMA14772 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK554488/",
+          "https://www.ncbi.nlm.nih.gov/books/NBK525959/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
+        "fmaId": "FMA14773",
+        "name": "Splenic artery",
+        "sourceName": "splenic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14773",
+        "bounds": {
+          "min": [
+            0.019408300518989563,
+            2.5958995819091797,
+            0.30418097972869873
+          ],
+          "max": [
+            1.0045599937438965,
+            2.945699453353882,
+            0.875809907913208
+          ]
+        },
+        "center": [
+          0.511984147131443,
+          2.7707995176315308,
+          0.5899954438209534
+        ],
+        "anchor": [
+          0.5094789862632751,
+          2.776099920272827,
+          0.5806400179862976
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2562",
+            "sha256": "f0ea297213c33d68e9da6158016cf963dfa3922520f7b533aabda2254e8a64fd"
+          },
+          {
+            "file": "FJ3420",
+            "sha256": "3d20dc80614ce5394ee45caf1d2fcec225912f06eac4ff01734f987513172ad5"
+          },
+          {
+            "file": "FJ3544",
+            "sha256": "d22809e5be114a70c1e380d370c42c91439ed849f1f6fe03f595955cdd6898b3"
+          },
+          {
+            "file": "FJ3640",
+            "sha256": "27b149be4ab4edd36c86799827a10ea40e5b29b596eacc2b830da44f143ed063"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "splenic-artery",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Splenic artery · Course & connections · draft",
+        "body": "The splenic artery usually arises from the celiac axis and travels along the superior pancreatic border behind the stomach toward the spleen.",
+        "bullets": [
+          "Its four source components are not automatically named pancreatic, short-gastric or gastro-omental branches. Tortuosity, aneurysm, splenic territories and collateral sufficiency require separate evidence.",
+          "Red/blue denotes artery/vein, not oxygenation or measured flow. Vascular surfaces do not establish wall layers, lumen patency or complete branch continuity.",
+          "Source identity: FMA14773 · 4 source components. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK525959/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
+        "fmaId": "FMA14768",
+        "name": "Left gastric artery",
+        "sourceName": "left gastric artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14768",
+        "bounds": {
+          "min": [
+            0.049337901175022125,
+            2.809000253677368,
+            0.7280099987983704
+          ],
+          "max": [
+            0.26731598377227783,
+            3.2628002166748047,
+            1.194849967956543
+          ]
+        },
+        "center": [
+          0.15832694247364998,
+          3.0359002351760864,
+          0.9614299833774567
+        ],
+        "anchor": [
+          0.1788559854030609,
+          3.014200448989868,
+          0.849120020866394
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3499",
+            "sha256": "983a0580d4324a210eeb5671c4caf115c29ce13c0761e718102db8092a849ccf"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-gastric-artery",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Left gastric artery · Course & connections · draft",
+        "body": "The left gastric artery normally arises from the celiac axis, gives lower-esophageal branches and follows the lesser gastric curvature toward the right gastric pathway.",
+        "bullets": [
+          "Not the left gastro-omental artery along the greater curvature. This surface does not demonstrate a patent gastric anastomosis or determine a variant hepatic branch.",
+          "Red/blue denotes artery/vein, not oxygenation or measured flow. Vascular surfaces do not establish wall layers, lumen patency or complete branch continuity.",
+          "Source identity: FMA14768 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK459241/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+        "fmaId": "FMA50735",
+        "name": "Hepatic portal vein",
+        "sourceName": "hepatic portal vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA50735",
+        "bounds": {
+          "min": [
+            -0.2144879847764969,
+            2.623199462890625,
+            0.7359400391578674
+          ],
+          "max": [
+            -0.07081809639930725,
+            3.1111998558044434,
+            0.9421499371528625
+          ]
+        },
+        "center": [
+          -0.14265304058790207,
+          2.867199659347534,
+          0.839044988155365
+        ],
+        "anchor": [
+          -0.17304199934005737,
+          2.8711998462677,
+          0.8311700224876404
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1853",
+            "sha256": "a9e359ffc1ab1d6f3134e72ca2a8ebaf1dc91df94827f4226a453fb3608e2d9b"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "portal-vein",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Hepatic portal vein · Course & connections · draft",
+        "body": "The hepatic portal vein usually forms behind the pancreatic neck where splenic and superior mesenteric veins unite, then travels toward the liver in the hepatoduodenal ligament.",
+        "bullets": [
+          "Do not confuse portal inflow with hepatic venous outflow. This selected segment does not reveal all tributaries, liver segments, sinusoids, portal pressure or actual flow direction.",
+          "Red/blue denotes artery/vein, not oxygenation or measured flow. Vascular surfaces do not establish wall layers, lumen patency or complete branch continuity.",
+          "Source identity: FMA50735 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK500014/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
+        "fmaId": "FMA14752",
+        "name": "Right renal artery",
+        "sourceName": "right renal artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14752",
+        "bounds": {
+          "min": [
+            -0.4234410226345062,
+            2.251800537109375,
+            0.4725840091705322
+          ],
+          "max": [
+            0.1271129995584488,
+            2.4871997833251953,
+            0.695609986782074
+          ]
+        },
+        "center": [
+          -0.14816401153802872,
+          2.369500160217285,
+          0.5840969979763031
+        ],
+        "anchor": [
+          -0.13355699181556702,
+          2.382800340652466,
+          0.5872600078582764
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2038",
+            "sha256": "2bf3da140369524e15335694773718b4e83b254234bc3e8376a4708565276045"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "right-renal-artery",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Right renal artery · Course & connections · draft",
+        "body": "The right renal artery normally crosses from the aorta behind the inferior vena cava to the right renal hilum; its course is usually longer than on the left.",
+        "bullets": [
+          "A blood vessel, not the ureter. Accessory arteries and segmental branches may be present; this surface neither excludes them nor measures renal blood flow, filtration or stenosis.",
+          "Red/blue denotes artery/vein, not oxygenation or measured flow. Vascular surfaces do not establish wall layers, lumen patency or complete branch continuity.",
+          "Source identity: FMA14752 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK572135/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
+        "fmaId": "FMA14753",
+        "name": "Left renal artery",
+        "sourceName": "left renal artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14753",
+        "bounds": {
+          "min": [
+            0.03650899976491928,
+            2.3655004501342773,
+            0.46762001514434814
+          ],
+          "max": [
+            0.39461201429367065,
+            2.497499942779541,
+            0.7030699849128723
+          ]
+        },
+        "center": [
+          0.21556050702929497,
+          2.431500196456909,
+          0.5853450000286102
+        ],
+        "anchor": [
+          0.2146729975938797,
+          2.449599504470825,
+          0.5566700100898743
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2046",
+            "sha256": "b1a9ce8a37cd9c89fbf4c90a68a554184bf2919dbad391c552c0f4c8dd788845"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-renal-artery",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Left renal artery · Course & connections · draft",
+        "body": "The left renal artery normally travels from the aorta toward the left renal hilum, posterior to the left renal vein.",
+        "bullets": [
+          "Not a mirror copy of the right caval crossing. Accessory arteries, early branching and hilar relationships require review; no Doppler velocity, resistance index or renal function is inferred.",
+          "Red/blue denotes artery/vein, not oxygenation or measured flow. Vascular surfaces do not establish wall layers, lumen patency or complete branch continuity.",
+          "Source identity: FMA14753 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK572135/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
+        "fmaId": "FMA14338",
+        "name": "Right hepatic vein",
+        "sourceName": "right hepatic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14338",
+        "bounds": {
+          "min": [
+            -1.0827900171279907,
+            2.959399461746216,
+            0.26052695512771606
+          ],
+          "max": [
+            -0.20694099366664886,
+            3.6603002548217773,
+            1.0732600688934326
+          ]
+        },
+        "center": [
+          -0.6448655053973198,
+          3.3098498582839966,
+          0.6668935120105743
+        ],
+        "anchor": [
+          -0.6585360169410706,
+          3.2908997535705566,
+          0.6377800107002258
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2416",
+            "sha256": "2d3c37d1811a909e5cfd016f9d5c700b433d5f55e4bcb5fb64494dbfcb839181"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "right-hepatic-vein",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Right hepatic vein · Course & connections · draft",
+        "body": "The right hepatic vein collects venous blood from right-sided liver regions and joins the inferior vena cava as part of hepatic outflow.",
+        "bullets": [
+          "Not the right portal branch: portal/arterial inflow and hepatic outflow differ. A single source file does not define a complete right-lobe drainage territory, segment boundary or venous waveform.",
+          "Red/blue denotes artery/vein, not oxygenation or measured flow. Vascular surfaces do not establish wall layers, lumen patency or complete branch continuity.",
+          "Source identity: FMA14338 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK500014/",
+          "https://www.ncbi.nlm.nih.gov/books/NBK482353/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
+        "fmaId": "FMA14339",
+        "name": "Left hepatic vein",
+        "sourceName": "left hepatic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14339",
+        "bounds": {
+          "min": [
+            -0.11933600157499313,
+            3.264200448989868,
+            0.6738200187683105
+          ],
+          "max": [
+            0.5190989971160889,
+            3.6432995796203613,
+            1.2178999185562134
+          ]
+        },
+        "center": [
+          0.19988149777054787,
+          3.4537500143051147,
+          0.945859968662262
+        ],
+        "anchor": [
+          0.2203809916973114,
+          3.4426000118255615,
+          0.9140899777412415
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2415",
+            "sha256": "dced2210d0b4b725e40c2e63791023fdcf7ee8aadd2f6718fd442c0e7654107f"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-hepatic-vein",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Left hepatic vein · Course & connections · draft",
+        "body": "The left hepatic vein collects venous blood from left-sided liver regions and reaches the inferior vena cava through the hepatic venous outflow system.",
+        "bullets": [
+          "The exact confluence with other hepatic veins and individual drainage territories require review. Do not infer a separate ostium, a complete middle hepatic vein or liver segment boundaries from this selection.",
+          "Red/blue denotes artery/vein, not oxygenation or measured flow. Vascular surfaces do not establish wall layers, lumen patency or complete branch continuity.",
+          "Source identity: FMA14339 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK500014/",
+          "https://www.ncbi.nlm.nih.gov/books/NBK482353/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+        "fmaId": "FMA14332",
+        "name": "Superior mesenteric vein",
+        "sourceName": "superior mesenteric vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA14332",
+        "bounds": {
+          "min": [
+            -0.6255090236663818,
+            1.101409912109375,
+            0.591439962387085
+          ],
+          "max": [
+            -0.05020520091056824,
+            2.6697998046875,
+            0.9963299632072449
+          ]
+        },
+        "center": [
+          -0.33785711228847504,
+          1.8856048583984375,
+          0.7938849627971649
+        ],
+        "anchor": [
+          -0.14364799857139587,
+          1.8945099115371704,
+          0.8900300860404968
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3647",
+            "sha256": "55ea29d132bf0e79a7af6657a975c9ed5bd64e516f91c4794d96e2db2675e2e8"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superior-mesenteric-vein",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Selected mesenteric venous segments · draft",
+        "body": "The available superior/inferior mesenteric and named bowel veins form part of the portal venous drainage system.",
+        "bullets": [
+          "Source identity: FMA14332 · 1 source component",
+          "Named source segments do not establish a continuous vascular tree, a patent lumen, normal calibre, perfusion territory or an individual patient’s anatomy. Mesenteric plexuses, lymphatic networks and many branches remain absent. Three overlapping arterial alternatives are deliberately withheld.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "citations": [
+          "https://pubmed.ncbi.nlm.nih.gov/23749713/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:splenic-vein",
+        "fmaId": "FMA14331",
+        "name": "Splenic vein",
+        "sourceName": "splenic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "portal-veins",
+        "nodeName": "FMA14331",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3641",
+            "sha256": "4dabe1ffb6e36e9f7714ba5f8da7ed48b11d304963372f982446467e584d2e9f"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.12030299752950668,
+            2.5125999450683594,
+            0.33072200417518616
+          ],
+          "max": [
+            0.9985010027885437,
+            2.917799949645996,
+            0.7408300042152405
+          ]
+        },
+        "center": [
+          0.4390990026295185,
+          2.7151999473571777,
+          0.5357760041952133
+        ],
+        "anchor": [
+          0.4338200092315674,
+          2.7239999771118164,
+          0.5332099795341492
+        ],
+        "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "splenic-vein",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Splenic vein · Anatomy · draft",
+        "body": "The splenic vein runs behind the pancreas and joins the superior mesenteric vein to form the portal vein.",
+        "bullets": [
+          "One whole source surface remains selectable. Smaller tributaries, lumens and exact junctions are not established.",
+          "Gastroepiploic and gastro-omental are alternative names. Left/right gastric names do not require every point to remain on one side of the midline.",
+          "Use Portal venous drainage to explore the available relationships; hide a covering structure or extract the selected vessel, then Undo or reset separation."
+        ],
+        "note": "Anatomical and clinical review pending. No flow, thrombosis, portal hypertension, scan appearance or patient registration is inferred.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/veins_abdomen.html",
+          "https://anatomy.ttuhscep.edu/schemes/duodenum_vid_C480.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:middle-hepatic-vein",
+        "fmaId": "FMA14340",
+        "name": "Middle hepatic vein",
+        "sourceName": "middle hepatic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "hepatic-veins",
+        "nodeName": "FMA14340",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2414",
+            "sha256": "bd57b4b26daef763025a4e2ae75102c687926a604db3b19fa44993033dc0f32f"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.6027029752731323,
+            3.031899929046631,
+            0.6817799806594849
+          ],
+          "max": [
+            -0.05198270082473755,
+            3.6484999656677246,
+            1.3945300579071045
+          ]
+        },
+        "center": [
+          -0.32734283804893494,
+          3.3401999473571777,
+          1.0381550192832947
+        ],
+        "anchor": [
+          -0.3519819974899292,
+          3.3910999298095703,
+          1.1050599813461304
+        ],
+        "coverageNote": "Whole source-labelled hepatic vein or tributary group; disconnected components remain within the original selection. Original coordinates and every source face retained. No complete venous tree, Couinaud territory, lumen or validated confluence. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "middle-hepatic-vein",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Middle hepatic vein · Anatomy · draft",
+        "body": "The middle hepatic vein is one of the main hepatic veins draining the liver. This is the whole source-labelled surface, not a validated territory map.",
+        "bullets": [
+          "Hide covering tissue or use Venous drainage → Show available veins & bones; extract the selected group and Undo or reset separation.",
+          "All original source faces are retained; no bridging, mirroring, cropping or inferred continuity. A tributary group moves together, preserving its internal spacing.",
+          "The separate liver-branches dissection retains its own source groups, including the anterior inferior tributary of the middle hepatic vein. Root and nested selections are not interchangeable."
+        ],
+        "note": "Anatomical and clinical review pending. No flow, thrombosis, venous territory, scan appearance or patient registration is inferred.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/veins_abdomen.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

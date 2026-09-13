@@ -1,5 +1,12 @@
 # Clinical validation checklist
 
+[Central vessel imaging](CENTRAL_VESSEL_IMAGING.md): review 79 draft CT/MRI/US
+placements for 29 exact vessels. Check aortic planes and echo limits, venous
+mixing/flow artefacts, pulmonary drainage variants, visceral arterial and portal
+connections, renal accessory branches and Doppler interpretation. Eight US
+topics remain pending, without excluding specialised imaging. No scan, flow
+measurement, registration, procedure route or clinical approval is supplied.
+
 [Chest/abdominal organ imaging](THORACOABDOMINAL_ORGAN_IMAGING.md): review 42
 draft CT/MRI/US notes across 15 exact selections. Check cardiac/echo planes,
 airway and lung visibility limits, age-dependent thymus, bowel distension and

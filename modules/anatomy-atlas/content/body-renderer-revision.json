@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "9958e050cea7262ebedc18dba59ff5bafadfecc83b204ff078f087a0662243ab"
+      "sha256": "084f3e8171ed02b9e0a00400bc8817f805859793a644cac768d1d65411992e0b"
     },
     {
       "path": "app/body-explorer.css",
@@ -439,6 +439,14 @@
     {
       "path": "content/central-neural-imaging.ts",
       "sha256": "95ebfa3cc9e0da134286ee682fc5ec7194e3c9ac81d4e8dfd00e8706311145d5"
+    },
+    {
+      "path": "content/central-vessel-imaging-pins.json",
+      "sha256": "29610e12ec6864a4131874e0d3f6520597af3e65179fd0f009b216aff1371a63"
+    },
+    {
+      "path": "content/central-vessel-imaging.ts",
+      "sha256": "5fb6804e811bc770dd417372855ac59abef1ce8efda43fcae9c3b314a00b1001"
     },
     {
       "path": "content/cerebral-arterial-pins.json",
@@ -1055,6 +1063,10 @@
     {
       "path": "lib/central-neuro-curriculum.ts",
       "sha256": "e5247f94660df1d974ee98cba7b705b02e3f5da316f9215cb86237e838d94b76"
+    },
+    {
+      "path": "lib/central-vessel-imaging.ts",
+      "sha256": "92cc59bf3f16daddd09b9e1261a23454e679f3a36f6c6c317564173c6dc08558"
     },
     {
       "path": "lib/cerebral-arterial.ts",
@@ -1842,7 +1854,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "83e082e1f2472efc789197f55b7b2db404b40fe56ff576ea3b8287e696bd754b"
+      "sha256": "e40ac4091e5cbf162036ce600e343c8754f834b89a9b08de3642f440e5cbc4e6"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2033,5 +2045,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "4a19f252b9dd58fbcae1b8f5cdd5b948284927788354c2f822e2bf5810f82b56"
+  "sha256": "082876b350a4375747d2ac028ae1c1978e0c3fcec416a65b90854e676a39cd11"
 }

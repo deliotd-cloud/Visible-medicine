@@ -1,5 +1,13 @@
 # Third-party notices
 
+## Central vessel imaging teaching — 13 September 2026
+
+Original MIT resolver code and concise factual drafts add 79 placements for 29
+existing vessels. Twenty-seven publication/society links are reading references,
+not imported articles, figures, scans, models or redistribution permissions.
+No new dependency, asset, paid API or mandatory service is introduced. Existing
+source credits, licences and holds remain. See [scope and review](../docs/CENTRAL_VESSEL_IMAGING.md).
+
 ## Chest and abdominal organ imaging teaching — 13 September 2026
 
 Original MIT resolver code and concise factual drafts add 42 teaching placements
