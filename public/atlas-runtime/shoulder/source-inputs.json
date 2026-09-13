@@ -13,7 +13,7 @@
   },
   {
     "path": "app/anatomy-scene.tsx",
-    "sha256": "04382a609082f18bc305939ec1c00af70f5bcb37cc53c6a98c3fbc74246caf9e"
+    "sha256": "ffcd0593a0b82eccff567f720b01ae2e4c4978ec9380019d980357ccc5d64495"
   },
   {
     "path": "app/atlas-panel.css",
@@ -29,7 +29,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "a57c5fd8b5859bb0e8cb716ef22e203303f0fb35014c1fa882c9485cd248d0f8"
+    "sha256": "7818cdecef81273bfe15655ae085e2f8a74c6b0dd89ba2792102df0d7ae6efdc"
   },
   {
     "path": "app/body-explorer.css",
@@ -53,7 +53,7 @@
   },
   {
     "path": "app/fitted-camera.tsx",
-    "sha256": "d62eab66f908c01481e7182ee9d4948e4724f4735e8e7962082ffc3abc6c5aa5"
+    "sha256": "86093037b8cedc98deed1601e021af87c01d8836985aefc703a7e0d8fdde4427"
   },
   {
     "path": "app/globals.css",
@@ -200,6 +200,14 @@
     "sha256": "57f958516bc4750cfb7863c5c642fe4612b2c5b7deab09f7a455b57b4fbe71a1"
   },
   {
+    "path": "content/foot-muscle-imaging-pins.json",
+    "sha256": "0d64ea48081d3141c72effe8e5f637d2784f75032d680f591519d0decc53f533"
+  },
+  {
+    "path": "content/foot-muscle-imaging.ts",
+    "sha256": "80aba36ae5a6dfb3313510f75d414f96c27468d00c912c22b3d87dad5dfa2ba2"
+  },
+  {
     "path": "content/genicular-study-pins.json",
     "sha256": "fb98f5cedf269b60b8f25e5acada14d44961196478858502f3f48d1cd498890d"
   },
@@ -218,6 +226,14 @@
   {
     "path": "content/inferior-epigastric-study.ts",
     "sha256": "6dcae13f43d2ec4279f89f17bc277e1ca0a45c0f7949fb4cf88bb4415eeaed47"
+  },
+  {
+    "path": "content/leg-muscle-imaging-pins.json",
+    "sha256": "8871bf36ae747e3b3a3dd8ce3b3646fe6df9db6e84687478ed993ba71b654196"
+  },
+  {
+    "path": "content/leg-muscle-imaging.ts",
+    "sha256": "da36f669814e010c544f116244e7b6a98e6ab7e0f019397a2fb94e1376542289"
   },
   {
     "path": "content/limb-bone-imaging-pins.json",
@@ -269,7 +285,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "4e46ffde2ea694444a56b7d0a864c3a67e5c16bf138a76e4d2c1b8b8035d2802"
+    "sha256": "9ea0c180c0e47b282632181ec07915231ed88b181a8390c52c63fb6ae792e878"
   },
   {
     "path": "content/shoulder-xray-bindings.json",
@@ -349,7 +365,7 @@
   },
   {
     "path": "integration/shoulder/vite.config.mjs",
-    "sha256": "33874d0a3136b516b6d8204bc4a7cb2275c558679ccef884ce3731db9254dc4b"
+    "sha256": "3df24b150aa3d903977354510a71c9c1d4094cc0e3fcbe8b71eb0077a6176030"
   },
   {
     "path": "lib/abdominal-organ-clinical-curriculum.ts",
@@ -536,6 +552,10 @@
     "sha256": "03fd24faf169b0cbccf32802d082351b9beac605d7692d7836ea84f1d4cac96e"
   },
   {
+    "path": "lib/explode-layout.mjs",
+    "sha256": "d5790bc375114b906fdede4e430764df3fc0ff3ce71fba02ed87fec45129dff3"
+  },
+  {
     "path": "lib/eye-layers.ts",
     "sha256": "34f668314fa95d7fd1a8bf8c2e8e26d2cfb5d8db7fe16bcc4a06f3e33dc6c0fe"
   },
@@ -550,6 +570,10 @@
   {
     "path": "lib/foot-curriculum.ts",
     "sha256": "d3148c29229c46e10dfd7a75dd9e7327e0b4545f581070162b11ceeb749a4579"
+  },
+  {
+    "path": "lib/foot-muscle-imaging.ts",
+    "sha256": "6c0b568ac63cf9c43d99051557191e0f8b6d38c04297ffec6a9b5fb618a58262"
   },
   {
     "path": "lib/foot-vascular-anatomy.ts",
@@ -678,6 +702,10 @@
   {
     "path": "lib/leg-curriculum.ts",
     "sha256": "21b71758f0c558d520547044cb736538e56004416b4962bcf0e812a229a12143"
+  },
+  {
+    "path": "lib/leg-muscle-imaging.ts",
+    "sha256": "21c432732b7f27ccb00e093c0ca0a3ba4cb3a171243e42745339008e951972eb"
   },
   {
     "path": "lib/limb-bone-clinical-curriculum.ts",
