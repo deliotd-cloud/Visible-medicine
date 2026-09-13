@@ -1,0 +1,1159 @@
+{
+  "sourceCommit": "83bb1b6cd8bdb3f6b72ed9f8f6d98ee782e52fde",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "thorax-muscles",
+      "url": "/models/bodyparts3d/full-body/thorax-muscles.glb",
+      "bytes": 14990372,
+      "sha256": "3bbf7759e54e34272175de042ef4e26c24412b9f073a2f8eea3ce4fe79ebb682",
+      "structures": 8
+    },
+    {
+      "id": "abdomen-muscles",
+      "url": "/models/bodyparts3d/full-body/abdomen-muscles.glb",
+      "bytes": 4031580,
+      "sha256": "0317376bdb64b43c8eba26598419cb980f3a7090b68656375136df617d817b8c",
+      "structures": 2
+    },
+    {
+      "id": "thorax-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/thorax-muscles-dissection.glb",
+      "bytes": 314224,
+      "sha256": "12ff12c3ea0e745193b90842a3c62fd980dabd24e737ece8dee399925ab2e9a0",
+      "structures": 2
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:midline:muscle:external-intercostal-muscle",
+        "fmaId": "FMA9756",
+        "name": "External intercostal muscle",
+        "sourceName": "external intercostal muscle",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "midline",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-muscles",
+        "nodeName": "FMA9756",
+        "bounds": {
+          "min": [
+            -1.3616600036621094,
+            2.115100145339966,
+            -0.46718260645866394
+          ],
+          "max": [
+            1.3616600036621094,
+            5.65369987487793,
+            1.4164100885391235
+          ]
+        },
+        "center": [
+          0,
+          3.8844000101089478,
+          0.4746137410402298
+        ],
+        "anchor": [
+          -0.294655978679657,
+          3.6945996284484863,
+          -0.21502599120140076
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1451",
+            "sha256": "588de751687a05ae711f9b8d65f78ddac891994158fa4a94ea2ca48d36dc1b61"
+          },
+          {
+            "file": "FJ1451M",
+            "sha256": "d4c021ba00dbe2bd3c7e722cb5982df7659d7d68fe6f4ec980588bfd65d31214"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "externalIntercostal",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:muscle:right-external-oblique",
+        "fmaId": "FMA13336",
+        "name": "Right external oblique",
+        "sourceName": "right external oblique",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-muscles",
+        "nodeName": "FMA13336",
+        "bounds": {
+          "min": [
+            -1.408229947090149,
+            -0.06374023109674454,
+            -0.1297919899225235
+          ],
+          "max": [
+            -0.03448580205440521,
+            4.115799427032471,
+            1.6876600980758667
+          ]
+        },
+        "center": [
+          -0.7213578745722771,
+          2.026029597967863,
+          0.7789340540766716
+        ],
+        "anchor": [
+          -1.0500199794769287,
+          1.9734997749328613,
+          0.9708000421524048
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1452",
+            "sha256": "8fb254f196b1e249b1aea667d195f00c355f901f5fa89e37f586a8316c2fcdcd"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "externalOblique",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:muscle:left-external-oblique",
+        "fmaId": "FMA13337",
+        "name": "Left external oblique",
+        "sourceName": "left external oblique",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-muscles",
+        "nodeName": "FMA13337",
+        "bounds": {
+          "min": [
+            0.034485701471567154,
+            -0.0637499988079071,
+            -0.1297919899225235
+          ],
+          "max": [
+            1.408229947090149,
+            4.115799427032471,
+            1.6876600980758667
+          ]
+        },
+        "center": [
+          0.721357824280858,
+          2.026024714112282,
+          0.7789340540766716
+        ],
+        "anchor": [
+          1.0500199794769287,
+          1.9734997749328613,
+          0.9708000421524048
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1452M",
+            "sha256": "2f0ba9782cf27bd57446c6f9f44a399bfb98e88a67136c7304e47098838fce1f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "externalOblique",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:midline:muscle:innermost-intercostal-muscle",
+        "fmaId": "FMA9758",
+        "name": "Innermost intercostal muscle",
+        "sourceName": "innermost intercostal muscle",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "midline",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-muscles",
+        "nodeName": "FMA9758",
+        "bounds": {
+          "min": [
+            -1.346250057220459,
+            2.1915998458862305,
+            -0.4369722008705139
+          ],
+          "max": [
+            1.346250057220459,
+            5.149899959564209,
+            1.4337300062179565
+          ]
+        },
+        "center": [
+          0,
+          3.6707499027252197,
+          0.4983789026737213
+        ],
+        "anchor": [
+          -0.5804660320281982,
+          3.5676000118255615,
+          -0.3345470130443573
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1454",
+            "sha256": "8e9a5c48482ba61dfe2ed19ced05121093a7bf3f8c6e0ac7d0c0b8ebe8bce45d"
+          },
+          {
+            "file": "FJ1454M",
+            "sha256": "7458ea18bdf836da68b0220da5421cddb1bb653da909d998dea14db3d5ef00c5"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "innermostIntercostal",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:midline:muscle:internal-intercostal-muscle",
+        "fmaId": "FMA9757",
+        "name": "Internal intercostal muscle",
+        "sourceName": "internal intercostal muscle",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "midline",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-muscles",
+        "nodeName": "FMA9757",
+        "bounds": {
+          "min": [
+            -1.329140067100525,
+            2.1844000816345215,
+            -0.45345309376716614
+          ],
+          "max": [
+            1.329140067100525,
+            5.140200138092041,
+            1.5931100845336914
+          ]
+        },
+        "center": [
+          0,
+          3.6623001098632812,
+          0.5698284953832626
+        ],
+        "anchor": [
+          -0.257999986410141,
+          3.940000057220459,
+          1.5195199251174927
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1455",
+            "sha256": "aa71a14eb5d50c91569fb348ccf3747438bf0e5a4a8cd73784f7ae9ad2f801e3"
+          },
+          {
+            "file": "FJ1455M",
+            "sha256": "d92760297b5c8ceacf1013460e372abcb05f97192ffc514758d74ac0b73af373"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "internalIntercostal",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:muscle:right-pectoralis-minor",
+        "fmaId": "FMA13375",
+        "name": "Right pectoralis minor",
+        "sourceName": "right pectoralis minor",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-muscles",
+        "nodeName": "FMA13375",
+        "bounds": {
+          "min": [
+            -1.301759958267212,
+            3.8166003227233887,
+            0.3034919798374176
+          ],
+          "max": [
+            -0.697359025478363,
+            5.266700267791748,
+            1.2304699420928955
+          ]
+        },
+        "center": [
+          -0.9995594918727875,
+          4.541650295257568,
+          0.7669809609651566
+        ],
+        "anchor": [
+          -1.0301400423049927,
+          4.582299709320068,
+          0.8125500679016113
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1456",
+            "sha256": "65831afdc2f80bf5fca581f196de727aa30c3adcc682ac4506a4a5d6cc71db05"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "pectoralisMinor",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:muscle:left-pectoralis-minor",
+        "fmaId": "FMA13376",
+        "name": "Left pectoralis minor",
+        "sourceName": "left pectoralis minor",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-muscles",
+        "nodeName": "FMA13376",
+        "bounds": {
+          "min": [
+            0.697359025478363,
+            3.8166003227233887,
+            0.3034919798374176
+          ],
+          "max": [
+            1.301759958267212,
+            5.266700267791748,
+            1.2304699420928955
+          ]
+        },
+        "center": [
+          0.9995594918727875,
+          4.541650295257568,
+          0.7669809609651566
+        ],
+        "anchor": [
+          1.0301400423049927,
+          4.582299709320068,
+          0.8125500679016113
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1456M",
+            "sha256": "3fddf544e2ec4cf4f403cba3efe864a9aa6697ec75db0e12ca7589eb3229055b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "pectoralisMinor",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:muscle:right-transversus-thoracis",
+        "fmaId": "FMA9761",
+        "name": "Right transversus thoracis",
+        "sourceName": "right transversus thoracis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-muscles",
+        "nodeName": "FMA9761",
+        "bounds": {
+          "min": [
+            -0.8957420587539673,
+            3.434499502182007,
+            1.0548300743103027
+          ],
+          "max": [
+            -0.02331010065972805,
+            4.884100437164307,
+            1.5952099561691284
+          ]
+        },
+        "center": [
+          -0.45952607970684767,
+          4.159299969673157,
+          1.3250200152397156
+        ],
+        "anchor": [
+          -0.46754300594329834,
+          4.193199634552002,
+          1.3649799823760986
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1461",
+            "sha256": "bce9619bd5a8afcd77e28139313dd3d4c553127fc8832ecc2412931308bac390"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "transversusThoracis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:muscle:left-transversus-thoracis",
+        "fmaId": "FMA9762",
+        "name": "Left transversus thoracis",
+        "sourceName": "left transversus thoracis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-muscles",
+        "nodeName": "FMA9762",
+        "bounds": {
+          "min": [
+            0.02331010065972805,
+            3.434499502182007,
+            1.0548300743103027
+          ],
+          "max": [
+            0.8957420587539673,
+            4.884100437164307,
+            1.5952099561691284
+          ]
+        },
+        "center": [
+          0.45952607970684767,
+          4.159299969673157,
+          1.3250200152397156
+        ],
+        "anchor": [
+          0.46754300594329834,
+          4.193199634552002,
+          1.3649799823760986
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1461M",
+            "sha256": "be04d1b4da0f157e45053496c8581dbc62f0b31ef20c576249d4debb54a75042"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "transversusThoracis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:midline:muscle:diaphragm",
+        "fmaId": "FMA13295",
+        "name": "Diaphragm",
+        "sourceName": "diaphragm",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "midline",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-muscles",
+        "nodeName": "FMA13295",
+        "bounds": {
+          "min": [
+            -1.223289966583252,
+            1.8585199117660522,
+            -0.24084199965000153
+          ],
+          "max": [
+            1.2086299657821655,
+            3.925799608230591,
+            1.5532299280166626
+          ]
+        },
+        "center": [
+          -0.007330000400543213,
+          2.8921597599983215,
+          0.6561939641833305
+        ],
+        "anchor": [
+          -0.022627100348472595,
+          3.0029003620147705,
+          0.5967299938201904
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3131",
+            "sha256": "db97e5f8f8d46928ea54b42fb50789e8f5523ef973cc744b2c2f17930fc33dc8"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "diaphragm",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:muscle:right-pectoralis-major",
+        "fmaId": "FMA13373",
+        "name": "Right pectoralis major",
+        "sourceName": "right pectoralis major",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-muscles-dissection",
+        "nodeName": "FMA13373",
+        "bounds": {
+          "min": [
+            -1.878480076789856,
+            3.047800302505493,
+            0.3100000023841858
+          ],
+          "max": [
+            -0.04815569892525673,
+            5.13800048828125,
+            1.6935299634933472
+          ]
+        },
+        "center": [
+          -0.9633178878575563,
+          4.092900395393372,
+          1.0017649829387665
+        ],
+        "anchor": [
+          -1.0912799835205078,
+          4.103799819946289,
+          1.1295199394226074
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1446",
+            "sha256": "964ab8e287e7f44f14b07d8c7694ec70eee63bc9d7b1eeb3c5dc79e80460336d"
+          },
+          {
+            "file": "FJ1464",
+            "sha256": "bbdc0f731053d83a39689dcd5c9c7b559060de298b97bd90caee3791aeedd7bb"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "pectoralisMajor",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:muscle:left-pectoralis-major",
+        "fmaId": "FMA13374",
+        "name": "Left pectoralis major",
+        "sourceName": "left pectoralis major",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-muscles-dissection",
+        "nodeName": "FMA13374",
+        "bounds": {
+          "min": [
+            0.04815569892525673,
+            3.047800302505493,
+            0.3100000023841858
+          ],
+          "max": [
+            1.878480076789856,
+            5.13800048828125,
+            1.6935299634933472
+          ]
+        },
+        "center": [
+          0.9633178878575563,
+          4.092900395393372,
+          1.0017649829387665
+        ],
+        "anchor": [
+          1.0912799835205078,
+          4.103799819946289,
+          1.1295199394226074
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1446M",
+            "sha256": "950d6ab140639cb6633cd81edfeeef726a62b6b53d75a0ce0d0bd040e998a88b"
+          },
+          {
+            "file": "FJ1464M",
+            "sha256": "f3c9dd7ac80492a4f4269a88568a13276f66473796f651ca7c8ec5cc93e6e0f6"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "pectoralisMajor",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "0cd64f62dc0738e83065bf3e731a50086182ffae0261f20e0ffb9cff1899e965"
+}

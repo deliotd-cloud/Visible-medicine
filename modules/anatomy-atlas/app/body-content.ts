@@ -116,6 +116,7 @@ import { forearmMuscleImagingLesson } from '../lib/forearm-muscle-imaging';
 import { handMuscleImagingLesson } from '../lib/hand-muscle-imaging';
 import { centralNeuralImagingLesson } from '../lib/central-neural-imaging';
 import { headNeckVesselImagingLesson } from '../lib/head-neck-vessel-imaging';
+import { chestWallMuscleImagingLesson } from '../lib/chest-wall-muscle-imaging';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -160,6 +161,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const chestWallImaging = chestWallMuscleImagingLesson(s, tab);
+  if (chestWallImaging) return chestWallImaging;
   const elbow = elbowArteryLesson(s, tab);
   if (elbow) return elbow;
   const cranial = cranialArteryLesson(s, tab);

@@ -13,7 +13,8 @@ import {authoringBeforeFootMuscleImaging} from './foot-muscle-imaging-history.mj
 import {authoringBeforeForearmMuscleImaging} from './forearm-muscle-imaging-history.mjs';
 import {authoringBeforeHandMuscleImaging} from './hand-muscle-imaging-history.mjs';
 import {authoringBeforeCentralNeuralImaging} from './central-neural-imaging-history.mjs';
-const newest=await contentContext(),latest={...newest,api:authoringBeforeHeadNeckVesselImaging(newest)};
+import {authoringBeforeChestWallMuscleImaging} from './chest-wall-muscle-imaging-history.mjs';
+const rawNewest=await contentContext(),newest={...rawNewest,api:authoringBeforeChestWallMuscleImaging(rawNewest)},latest={...newest,api:authoringBeforeHeadNeckVesselImaging(newest)};
 const rawCurrent={...latest,api:authoringBeforeCentralNeuralImaging(latest)},current={...rawCurrent,api:authoringBeforeHandMuscleImaging(rawCurrent)},beforeForearm={...current,api:authoringBeforeForearmMuscleImaging(current)},context={...current,api:authoringBeforeFootMuscleImaging(beforeForearm)};
 const {api}=context,catalog=api.bodyDisplayCatalog(context.catalog);
 const original=JSON.stringify(catalog),before=authoringBeforeLegMuscleImaging(context);

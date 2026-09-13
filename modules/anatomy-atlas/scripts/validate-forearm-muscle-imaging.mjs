@@ -11,7 +11,8 @@ import {forearmMuscleImagingGroups as groups,forearmMuscleImagingModes as modes,
 import pins from '../content/forearm-muscle-imaging-pins.json' with {type:'json'};
 import {authoringBeforeHandMuscleImaging} from './hand-muscle-imaging-history.mjs';
 import {authoringBeforeCentralNeuralImaging} from './central-neural-imaging-history.mjs';
-const newest=await contentContext(),latest={...newest,api:authoringBeforeHeadNeckVesselImaging(newest)};
+import {authoringBeforeChestWallMuscleImaging} from './chest-wall-muscle-imaging-history.mjs';
+const rawNewest=await contentContext(),newest={...rawNewest,api:authoringBeforeChestWallMuscleImaging(rawNewest)},latest={...newest,api:authoringBeforeHeadNeckVesselImaging(newest)};
 const rawCurrent={...latest,api:authoringBeforeCentralNeuralImaging(latest)},context={...rawCurrent,api:authoringBeforeHandMuscleImaging(rawCurrent)};
 const {api}=context,catalog=api.bodyDisplayCatalog(context.catalog);
 const original=JSON.stringify(catalog),before=authoringBeforeForearmMuscleImaging(context);

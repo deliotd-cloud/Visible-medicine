@@ -1,0 +1,38 @@
+{
+  "baselineSource": "83bb1b6cd8bdb3f6b72ed9f8f6d98ee782e52fde",
+  "groups": 8,
+  "sourceSelections": 12,
+  "addedDraftPlacements": 48,
+  "modalities": {
+    "ct": 12,
+    "mri": 12,
+    "ultrasound": 12,
+    "xray": 12
+  },
+  "unchangedTopics": 9861,
+  "bodySchemaRecords": 1101,
+  "actualNoteRenders": 48,
+  "rejectedSourceTopicCombinations": 720,
+  "uniqueReferenceFacts": 44,
+  "sourceWordCounts": {
+    "mri": 20,
+    "chestUS": 21,
+    "xray": 172,
+    "thorax": 177,
+    "intercostalUS": 104,
+    "pectoralis": 103,
+    "pectoralisMRI": 25,
+    "axilla": 93,
+    "transversus": 72,
+    "parasternal": 27,
+    "diaphragm": 117,
+    "abdominalUS": 51,
+    "abdominalImaging": 54
+  },
+  "sourceGeometryChanged": false,
+  "currentApprovalRecordsChanged": false,
+  "clinicalApproval": false,
+  "imagesImported": false,
+  "imagingConnected": false,
+  "browserOrDeviceAcceptance": false
+}
