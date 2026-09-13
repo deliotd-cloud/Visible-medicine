@@ -49,7 +49,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "23c0989d60ca3e744291d5d158648db82b09850fa7253f38bd9c7aeb10755a58"
+    "sha256": "477d2b600d1d74226a72561f1c5148f661c0e7133c5227f10eed6ebdc73e7676"
   },
   {
     "path": "app/body-explorer.css",
@@ -420,6 +420,14 @@
     "sha256": "ba741cc7373be4ffad1dd7a04af2605d5a033bbe6d40723196241d89d905b1a0"
   },
   {
+    "path": "content/chest-wall-muscle-imaging-pins.json",
+    "sha256": "d8e371ae1188185393a28f5a70109ba2eb5f62b99cb7655e03bf4c2d50d9709d"
+  },
+  {
+    "path": "content/chest-wall-muscle-imaging.ts",
+    "sha256": "3d5d7552cb1d0ffa75fc031acf2b147edbb65b66b35ee76799815c0bbbf75e5c"
+  },
+  {
     "path": "content/collicular-brachia-teaching.ts",
     "sha256": "f805f4ab67d5d0ae82a0e2bd9116d0e2a7b31f837d05d349dd8cfabd1172428d"
   },
@@ -765,27 +773,31 @@
   },
   {
     "path": "integration/head-neck/credits.html",
-    "sha256": "9eac57499cc4fc0925d9e7fdd370390ed4df10cca6fb13974ef81180cf5b8ffc"
+    "sha256": "744934bbce85581d7bc4035cdd54ce9785248204780277f7de82deb64b972f61"
   },
   {
     "path": "integration/head-neck/delivery.ts",
-    "sha256": "47b029161ddd70927cab323d6faadc047da1afd3ea820394a201afd384610ede"
+    "sha256": "7ef0a4c2b6cf77519f09c4985b09fa61fa3aefc6bc8a8ea5564fcf6a5bdce0ff"
   },
   {
     "path": "integration/head-neck/framework.tsx",
-    "sha256": "2e90376f47727843a2e3dc7486df2729d5367f09dfec82e4dacece66bea981c6"
+    "sha256": "27707b7a07455fad7eb9d380c82a95c04af7c120d3c098f1882bac99a19c3e07"
   },
   {
     "path": "integration/head-neck/index.html",
-    "sha256": "251d42c626bdcaddc621db07f2c47dfab1fc146ee0d21e8938ba40fa82b0eef5"
+    "sha256": "4d1e7c94fd23b9c66a1c50abb16caf3f636872c0dee68e7adce9dda9288a5506"
   },
   {
     "path": "integration/head-neck/main.tsx",
-    "sha256": "ee3ba3e05d3bae3c57b552197d018fec950b93c53c7c1bfc96c00cc201ab5c20"
+    "sha256": "2d3708457ec64ce2a534abbe8a04a4ed18d2f37af4bfb742c5e881955773159e"
   },
   {
     "path": "integration/head-neck/panel-host.css",
     "sha256": "523ed846e518fcef671a347291a4c465870cc4ab03c6f8ce665ced317bfee67f"
+  },
+  {
+    "path": "integration/head-neck/regions.ts",
+    "sha256": "0518849aae8112e70572a2b00d41d31f2b825f01d6f60227bcfb45e64e07ee2e"
   },
   {
     "path": "integration/head-neck/vite.config.mjs",
@@ -998,6 +1010,10 @@
   {
     "path": "lib/cerebral.ts",
     "sha256": "10138a8bad86e98cc03dc458c3d9b7245dace9369ded56c980623b15c6d6fdff"
+  },
+  {
+    "path": "lib/chest-wall-muscle-imaging.ts",
+    "sha256": "e97986190d60d6bde5ffcb9f17181880a5521aad4dfca71850c59c22ca431d79"
   },
   {
     "path": "lib/circumflex-femoral.ts",
@@ -1365,7 +1381,7 @@
   },
   {
     "path": "lib/model-delivery.ts",
-    "sha256": "f92fc0d95535725d7cd348c599480cd29374c3c97412b8adc532ba0f438582c9"
+    "sha256": "b12ac419cedcc07e38f14189f431d0e9c85a652cc9e0c26b29953e57d45ad033"
   },
   {
     "path": "lib/neck-clinical-curriculum.ts",
@@ -1925,10 +1941,10 @@
   },
   {
     "path": "scripts/export-head-neck-module.mjs",
-    "sha256": "94ae718063d21db8a128de7ad20be99dd86238c51b4f555e34ad00113f0f866f"
+    "sha256": "572645e93f14292ffde1dcfa7949ad85df035ce6c5edafffa6864e6402783362"
   },
   {
     "path": "scripts/head-neck-module-inputs.mjs",
-    "sha256": "82737432e8e4f4611dde96b035edd6f006bec271dc5a866aed551ad341008b14"
+    "sha256": "9716425f6dc3b6a827888a58824c7b627df42a3d3cc3120390d69d66e86b3b85"
   }
 ]

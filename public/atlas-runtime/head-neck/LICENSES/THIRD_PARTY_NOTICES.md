@@ -1,5 +1,16 @@
 # Third-party notices
 
+## Chest/abdominal muscle imaging teaching — 13 September 2026
+
+Original concise factual drafts extend 12 existing source selections. The 13
+reading references are not imported assets or redistribution permissions: no
+article prose, figure, table, ultrasound image, scan, diagram or protocol is
+copied into the product. Original text/code retain MIT terms; the unchanged
+BodyParts3D models retain their existing CC BY 4.0 credits and change notices.
+No package, font, texture, model, paid API or mandatory service is introduced.
+See `docs/CHEST_WALL_MUSCLE_IMAGING.md` for references, source scope and pending
+revision-bound radiologist review.
+
 ## Elbow arteries — 12 September 2026
 
 BodyParts3D, © The Database Center for Life Science licensed under CC Attribution

@@ -74,7 +74,7 @@ function WorkspaceContextBar({ pathname }: { pathname: string }) {
 
 export function SiteFrame({ children }: { children: ReactNode }) {
   const pathname = usePathname();
-  const anatomyPanel = pathname === '/atlas/shoulder-3d' || pathname === '/atlas/female-pelvis-3d' || pathname === '/atlas/lower-limb-3d' || pathname === '/atlas/head-neck-3d';
+  const anatomyPanel = pathname === '/atlas/shoulder-3d' || pathname === '/atlas/female-pelvis-3d' || pathname === '/atlas/lower-limb-3d' || pathname === '/atlas/head-neck-3d' || pathname === '/atlas/thorax-3d';
   const immersive = isImmersiveRoute(pathname);
   const workspace = !immersive && isWorkspaceRoute(pathname);
   const publicSite = !immersive && !workspace;

@@ -1,7 +1,7 @@
 # Atlas model delivery
 
 The website retains original, source-bound GLB exports for shoulder, female
-pelvis, lower limb and head/neck in `public/atlas-runtime`. Source tests continue
+pelvis, lower limb and the shared head/neck–thorax module in `public/atlas-runtime`. Source tests continue
 to check their exact canonical hashes, inventory and licences. Do not hand-edit
 these generated exports, replace their models with reduced meshes or rewrite
 catalogue hashes to describe transport bytes.
@@ -36,6 +36,12 @@ input hashes and decoder versions. All other files remain byte-identical. The
 Atlas `--check` command recomputes these results instead of trusting the report.
 Clinical review, actual-device acceptance, cleared imaging and public launch
 remain separate gates. A size saving is not evidence of any of those approvals.
+
+The shared runtime retains `/atlas-runtime/head-neck/` for existing links. Its
+schema-2 manifest preserves the 290/75 head/neck scope and adds the separate
+157/9 thorax scope. The 52-bundle union includes all supported nested contexts;
+thorax launches with `index.html?region=thorax`. There are still four runtime
+directories, so the existing exact-path decoder policy needs no wider exception.
 
 ## Browser security policy
 

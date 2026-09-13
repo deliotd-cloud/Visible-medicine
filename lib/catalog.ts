@@ -55,6 +55,13 @@ export const atlasModules: AtlasModule[] = [
     systems: ['Bones', 'Muscles', 'Organs', 'Nervous', 'Vessels', 'Connective'], reviewed: 'Private integration pilot · Review pending',
   },
   {
+    slug:'thorax-3d', title:'Thorax 3D anatomy', region:'Thorax',
+    modality:'3D', orientation:'Rotatable',
+    description:'Explore 157 chest selections, deeper cardiac and lung studies, chest-wall dissection and draft imaging notes.',
+    structures:157, images:0, status:'available',
+    systems:['Bones','Muscles','Heart','Lungs','Vessels','Connective'], reviewed:'Private integration pilot · Review pending',
+  },
+  {
     slug: "ct-head",
     title: "CT head",
     region: "Neuroanatomy",

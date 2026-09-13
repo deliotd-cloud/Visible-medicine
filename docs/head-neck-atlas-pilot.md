@@ -1,9 +1,16 @@
 # Head and neck website pilot
 
 The existing source-based BodyExplorer is now delivered at `/atlas/head-neck-3d`.
-Its generated module comes from Atlas commit
+Its initial generated module came from Atlas commit
 `879b5a85ed7da19eb3dc379d1f46c04695ea611b`; do not hand-edit the runtime copy.
 The contained module manifest records every delivered file and model hash.
+
+The current export is shared with the [thorax pilot](thorax-atlas-pilot.md), from
+Atlas `5b54f9dde33d0aca2cab8e0c00a6e831ac6530cd`. Its schema-2 manifest retains
+the original head/neck 290/75 scope and all 37 required GLBs within a 52-GLB
+shared union. Default head/neck links are unchanged; thorax requires its explicit
+region parameter. Earlier browser evidence below describes the initial pilot,
+not a claim that every interaction has been retested on the latest build.
 
 ## What is retained
 

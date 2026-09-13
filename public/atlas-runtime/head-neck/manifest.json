@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "sourceCommit": "83bb1b6cd8bdb3f6b72ed9f8f6d98ee782e52fde",
+  "schemaVersion": 2,
+  "sourceCommit": "5b54f9dde33d0aca2cab8e0c00a6e831ac6530cd",
   "region": "head-neck",
   "sourceVersion": "4.0",
   "regionalIds": [
@@ -899,6 +899,1570 @@
   ],
   "structures": 290,
   "nestedSelections": 75,
+  "regionalScopes": [
+    {
+      "region": "head-neck",
+      "regionalIds": [
+        "vm:anatomy:body:head-neck:midline:bone:hyoid-bone",
+        "vm:anatomy:body:spine:midline:bone:third-cervical-vertebra",
+        "vm:anatomy:body:spine:midline:bone:fourth-cervical-vertebra",
+        "vm:anatomy:body:spine:midline:bone:fifth-cervical-vertebra",
+        "vm:anatomy:body:spine:midline:bone:sixth-cervical-vertebra",
+        "vm:anatomy:body:spine:midline:bone:seventh-cervical-vertebra",
+        "vm:anatomy:body:spine:midline:bone:atlas",
+        "vm:anatomy:body:spine:midline:bone:axis",
+        "vm:anatomy:body:head-neck:midline:bone:ethmoid",
+        "vm:anatomy:body:head-neck:midline:bone:frontal-bone",
+        "vm:anatomy:body:head-neck:left:bone:left-inferior-nasal-concha",
+        "vm:anatomy:body:head-neck:left:bone:left-lacrimal-bone",
+        "vm:anatomy:body:head-neck:left:bone:left-maxilla",
+        "vm:anatomy:body:head-neck:left:bone:left-nasal-bone",
+        "vm:anatomy:body:head-neck:left:bone:left-palatine-bone",
+        "vm:anatomy:body:head-neck:left:bone:left-parietal-bone",
+        "vm:anatomy:body:head-neck:left:bone:left-temporal-bone",
+        "vm:anatomy:body:head-neck:left:bone:left-zygomatic-bone",
+        "vm:anatomy:body:head-neck:midline:bone:mandible",
+        "vm:anatomy:body:head-neck:midline:bone:occipital-bone",
+        "vm:anatomy:body:head-neck:right:bone:right-inferior-nasal-concha",
+        "vm:anatomy:body:head-neck:right:bone:right-lacrimal-bone",
+        "vm:anatomy:body:head-neck:right:bone:right-maxilla",
+        "vm:anatomy:body:head-neck:right:bone:right-nasal-bone",
+        "vm:anatomy:body:head-neck:right:bone:right-palatine-bone",
+        "vm:anatomy:body:head-neck:right:bone:right-parietal-bone",
+        "vm:anatomy:body:head-neck:right:bone:right-temporal-bone",
+        "vm:anatomy:body:head-neck:right:bone:right-zygomatic-bone",
+        "vm:anatomy:body:head-neck:midline:bone:sphenoid-bone",
+        "vm:anatomy:body:head-neck:midline:bone:vomer",
+        "vm:anatomy:body:head-neck:left:muscle:left-inferior-oblique",
+        "vm:anatomy:body:head-neck:left:muscle:left-inferior-rectus",
+        "vm:anatomy:body:head-neck:left:muscle:left-lateral-rectus",
+        "vm:anatomy:body:head-neck:left:muscle:left-levator-palpebrae-superioris",
+        "vm:anatomy:body:head-neck:left:muscle:left-medial-rectus",
+        "vm:anatomy:body:head-neck:left:muscle:left-superior-oblique",
+        "vm:anatomy:body:head-neck:left:muscle:left-superior-rectus",
+        "vm:anatomy:body:head-neck:right:muscle:right-inferior-oblique",
+        "vm:anatomy:body:head-neck:right:muscle:right-inferior-rectus",
+        "vm:anatomy:body:head-neck:right:muscle:right-lateral-rectus",
+        "vm:anatomy:body:head-neck:right:muscle:right-levator-palpebrae-superioris",
+        "vm:anatomy:body:head-neck:right:muscle:right-medial-rectus",
+        "vm:anatomy:body:head-neck:right:muscle:right-superior-oblique",
+        "vm:anatomy:body:head-neck:right:muscle:right-superior-rectus",
+        "vm:anatomy:body:head-neck:right:muscle:right-subclavius",
+        "vm:anatomy:body:head-neck:left:muscle:left-subclavius",
+        "vm:anatomy:body:spine:right:muscle:right-cervical-rotator",
+        "vm:anatomy:body:spine:left:muscle:left-cervical-rotator",
+        "vm:anatomy:body:head-neck:left:muscle:left-digastric",
+        "vm:anatomy:body:head-neck:right:muscle:right-digastric",
+        "vm:anatomy:body:head-neck:left:muscle:left-platysma",
+        "vm:anatomy:body:head-neck:left:muscle:left-geniohyoid",
+        "vm:anatomy:body:head-neck:left:muscle:left-mylohyoid",
+        "vm:anatomy:body:head-neck:left:muscle:left-omohyoid",
+        "vm:anatomy:body:head-neck:left:muscle:left-scalenus-anterior",
+        "vm:anatomy:body:head-neck:left:muscle:left-scalenus-medius",
+        "vm:anatomy:body:head-neck:left:muscle:left-scalenus-posterior",
+        "vm:anatomy:body:head-neck:left:muscle:left-sternocleidomastoid",
+        "vm:anatomy:body:head-neck:left:muscle:left-sternohyoid",
+        "vm:anatomy:body:head-neck:left:muscle:left-sternothyroid",
+        "vm:anatomy:body:head-neck:left:muscle:left-stylohyoid",
+        "vm:anatomy:body:head-neck:left:muscle:left-thyrohyoid",
+        "vm:anatomy:body:head-neck:right:muscle:right-geniohyoid",
+        "vm:anatomy:body:head-neck:right:muscle:right-mylohyoid",
+        "vm:anatomy:body:head-neck:right:muscle:right-omohyoid",
+        "vm:anatomy:body:head-neck:right:muscle:right-platysma",
+        "vm:anatomy:body:head-neck:right:muscle:right-scalenus-anterior",
+        "vm:anatomy:body:head-neck:right:muscle:right-scalenus-medius",
+        "vm:anatomy:body:head-neck:right:muscle:right-scalenus-posterior",
+        "vm:anatomy:body:head-neck:right:muscle:right-sternocleidomastoid",
+        "vm:anatomy:body:head-neck:right:muscle:right-sternohyoid",
+        "vm:anatomy:body:head-neck:right:muscle:right-sternothyroid",
+        "vm:anatomy:body:head-neck:right:muscle:right-stylohyoid",
+        "vm:anatomy:body:head-neck:right:muscle:right-thyrohyoid",
+        "vm:anatomy:body:head-neck:left:muscle:left-genioglossus",
+        "vm:anatomy:body:head-neck:left:muscle:left-hyoglossus",
+        "vm:anatomy:body:head-neck:left:muscle:left-inferior-pharyngeal-constrictor",
+        "vm:anatomy:body:head-neck:left:muscle:left-levator-veli-palatini",
+        "vm:anatomy:body:head-neck:left:muscle:left-palatopharyngeus",
+        "vm:anatomy:body:head-neck:left:muscle:left-salpingopharyngeus",
+        "vm:anatomy:body:head-neck:left:muscle:left-stylopharyngeus",
+        "vm:anatomy:body:head-neck:left:muscle:left-superior-pharyngeal-constrictor",
+        "vm:anatomy:body:head-neck:left:muscle:left-tensor-veli-palatini",
+        "vm:anatomy:body:head-neck:right:muscle:right-genioglossus",
+        "vm:anatomy:body:head-neck:right:muscle:right-hyoglossus",
+        "vm:anatomy:body:head-neck:right:muscle:right-inferior-pharyngeal-constrictor",
+        "vm:anatomy:body:head-neck:right:muscle:right-levator-veli-palatini",
+        "vm:anatomy:body:head-neck:right:muscle:right-palatopharyngeus",
+        "vm:anatomy:body:head-neck:right:muscle:right-salpingopharyngeus",
+        "vm:anatomy:body:head-neck:right:muscle:right-stylopharyngeus",
+        "vm:anatomy:body:head-neck:right:muscle:right-superior-pharyngeal-constrictor",
+        "vm:anatomy:body:head-neck:right:muscle:right-tensor-veli-palatini",
+        "vm:anatomy:body:head-neck:midline:muscle:uvular-muscle",
+        "vm:anatomy:body:head-neck:left:muscle:left-lateral-crico-arytenoid",
+        "vm:anatomy:body:head-neck:left:muscle:left-oblique-arytenoid",
+        "vm:anatomy:body:head-neck:left:muscle:left-posterior-crico-arytenoid",
+        "vm:anatomy:body:head-neck:left:muscle:left-thyro-arytenoid",
+        "vm:anatomy:body:head-neck:left:muscle:left-vocalis",
+        "vm:anatomy:body:head-neck:right:muscle:right-lateral-crico-arytenoid",
+        "vm:anatomy:body:head-neck:right:muscle:right-oblique-arytenoid",
+        "vm:anatomy:body:head-neck:right:muscle:right-posterior-crico-arytenoid",
+        "vm:anatomy:body:head-neck:right:muscle:right-thyro-arytenoid",
+        "vm:anatomy:body:head-neck:right:muscle:right-vocalis",
+        "vm:anatomy:body:head-neck:midline:muscle:transverse-arytenoid",
+        "vm:anatomy:body:head-neck:left:nerve:left-anterior-ethmoidal-nerve",
+        "vm:anatomy:body:head-neck:left:nerve:left-frontal-nerve",
+        "vm:anatomy:body:head-neck:left:nerve:inferior-branch-of-left-oculomotor-nerve",
+        "vm:anatomy:body:head-neck:left:nerve:left-infratrochlear-nerve",
+        "vm:anatomy:body:head-neck:left:nerve:left-lacrimal-nerve",
+        "vm:anatomy:body:head-neck:left:nerve:left-nasociliary-nerve",
+        "vm:anatomy:body:head-neck:left:nerve:communicating-branch-of-left-nasociliary-nerve-with-left-ciliary-ganglion",
+        "vm:anatomy:body:head-neck:left:nerve:left-ophthalmic-nerve",
+        "vm:anatomy:body:head-neck:left:nerve:left-posterior-ethmoidal-nerve",
+        "vm:anatomy:body:head-neck:left:nerve:left-long-ciliary-nerve",
+        "vm:anatomy:body:head-neck:left:nerve:superior-branch-of-left-oculomotor-nerve",
+        "vm:anatomy:body:head-neck:left:nerve:left-supra-orbital-nerve",
+        "vm:anatomy:body:head-neck:left:nerve:left-supratrochlear-nerve",
+        "vm:anatomy:body:head-neck:right:nerve:right-anterior-ethmoidal-nerve",
+        "vm:anatomy:body:head-neck:right:nerve:right-frontal-nerve",
+        "vm:anatomy:body:head-neck:right:nerve:inferior-branch-of-right-oculomotor-nerve",
+        "vm:anatomy:body:head-neck:right:nerve:right-infratrochlear-nerve",
+        "vm:anatomy:body:head-neck:right:nerve:right-lacrimal-nerve",
+        "vm:anatomy:body:head-neck:right:nerve:right-nasociliary-nerve",
+        "vm:anatomy:body:head-neck:right:nerve:communicating-branch-of-right-nasociliary-nerve-with-right-ciliary-ganglion",
+        "vm:anatomy:body:head-neck:right:nerve:right-ophthalmic-nerve",
+        "vm:anatomy:body:head-neck:right:nerve:right-posterior-ethmoidal-nerve",
+        "vm:anatomy:body:head-neck:right:nerve:right-long-ciliary-nerve",
+        "vm:anatomy:body:head-neck:right:nerve:superior-branch-of-right-oculomotor-nerve",
+        "vm:anatomy:body:head-neck:right:nerve:right-supra-orbital-nerve",
+        "vm:anatomy:body:head-neck:right:nerve:right-supratrochlear-nerve",
+        "vm:anatomy:body:head-neck:midline:organ:brain",
+        "vm:anatomy:body:head-neck:midline:cartilage:septal-nasal-cartilage",
+        "vm:anatomy:body:head-neck:right:cartilage:right-major-alar-cartilage",
+        "vm:anatomy:body:head-neck:left:cartilage:left-major-alar-cartilage",
+        "vm:anatomy:body:head-neck:right:cartilage:right-lateral-nasal-cartilage",
+        "vm:anatomy:body:head-neck:left:cartilage:left-lateral-nasal-cartilage",
+        "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+        "vm:anatomy:body:head-neck:midline:cartilage:cricoid-cartilage",
+        "vm:anatomy:body:head-neck:right:cartilage:right-arytenoid-cartilage",
+        "vm:anatomy:body:head-neck:left:cartilage:left-arytenoid-cartilage",
+        "vm:anatomy:body:head-neck:unpaired:organ:pituitary-gland",
+        "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+        "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+        "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+        "vm:anatomy:body:thorax:right:vessel:right-subclavian-artery",
+        "vm:anatomy:body:thorax:left:vessel:left-subclavian-artery",
+        "vm:anatomy:body:thorax:right:vessel:right-brachiocephalic-vein",
+        "vm:anatomy:body:thorax:left:vessel:left-brachiocephalic-vein",
+        "vm:anatomy:body:thorax:right:vessel:right-subclavian-vein",
+        "vm:anatomy:body:thorax:left:vessel:left-subclavian-vein",
+        "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
+        "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
+        "vm:anatomy:body:head-neck:right:vessel:right-internal-carotid-artery",
+        "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
+        "vm:anatomy:body:head-neck:right:vessel:right-vertebral-artery",
+        "vm:anatomy:body:head-neck:left:vessel:left-vertebral-artery",
+        "vm:anatomy:body:head-neck:right:vessel:right-internal-jugular-vein",
+        "vm:anatomy:body:head-neck:left:vessel:left-internal-jugular-vein",
+        "vm:anatomy:body:head-neck:midline:vessel:basilar-artery",
+        "vm:anatomy:body:head-neck:midline:vessel:anterior-communicating-artery",
+        "vm:anatomy:body:head-neck:right:vessel:right-anterior-cerebral-artery",
+        "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
+        "vm:anatomy:body:head-neck:right:vessel:right-posterior-cerebral-artery",
+        "vm:anatomy:body:head-neck:left:vessel:left-posterior-cerebral-artery",
+        "vm:anatomy:body:head-neck:right:vessel:right-posterior-communicating-artery",
+        "vm:anatomy:body:head-neck:left:vessel:left-posterior-communicating-artery",
+        "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
+        "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve",
+        "vm:anatomy:body:head-neck:unpaired:organ:tongue",
+        "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
+        "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland",
+        "vm:anatomy:body:head-neck:right:organ:right-submandibular-gland",
+        "vm:anatomy:body:head-neck:left:organ:left-submandibular-gland",
+        "vm:anatomy:body:head-neck:right:organ:right-sublingual-gland",
+        "vm:anatomy:body:head-neck:left:organ:left-sublingual-gland",
+        "vm:anatomy:body:head-neck:right:cartilage:right-corniculate-cartilage",
+        "vm:anatomy:body:head-neck:left:cartilage:left-corniculate-cartilage",
+        "vm:anatomy:body:head-neck:right:cartilage:right-cuneiform-cartilage",
+        "vm:anatomy:body:head-neck:left:cartilage:left-cuneiform-cartilage",
+        "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-lateral-rectus",
+        "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-lateral-rectus",
+        "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-medial-rectus",
+        "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-medial-rectus",
+        "vm:anatomy:body:head-neck:midline:ligament:median-thyrohyoid-ligament",
+        "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
+        "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
+        "vm:anatomy:body:head-neck:unspecified:ligament:hyo-epiglottic-ligament",
+        "vm:anatomy:body:head-neck:midline:ligament:thyro-epiglottic-ligament",
+        "vm:anatomy:body:head-neck:midline:ligament:median-cricothyroid-ligament",
+        "vm:anatomy:body:head-neck:right:ligament:right-vocal-ligament",
+        "vm:anatomy:body:head-neck:left:ligament:left-vocal-ligament",
+        "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
+        "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-axis",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-cervical-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-cervical-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-cervical-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-sixth-cervical-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-cervical-vertebra",
+        "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+        "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+        "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+        "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+        "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+        "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
+        "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+        "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+        "vm:anatomy:body:head-neck:right:organ:right-putamen",
+        "vm:anatomy:body:head-neck:left:organ:left-putamen",
+        "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+        "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+        "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+        "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+        "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+        "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+        "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+        "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+        "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+        "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+        "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+        "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+        "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
+        "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
+        "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
+        "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring",
+        "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:unpaired:organ:epiglottis",
+        "vm:anatomy:body:head-neck:right:organ:right-lacrimal-canaliculus",
+        "vm:anatomy:body:head-neck:left:organ:left-lacrimal-canaliculus",
+        "vm:anatomy:body:head-neck:right:organ:right-nasolacrimal-duct",
+        "vm:anatomy:body:head-neck:left:organ:left-nasolacrimal-duct",
+        "vm:anatomy:body:head-neck:right:organ:right-lacrimal-sac",
+        "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac",
+        "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
+        "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
+        "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
+        "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid",
+        "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
+        "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
+        "vm:anatomy:body:head-neck:right:connective:tentorium-source-portion",
+        "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
+        "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
+        "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli",
+        "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+        "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+        "vm:anatomy:body:head-neck:left:organ:left-stria-medullaris-of-thalamus",
+        "vm:anatomy:body:head-neck:right:organ:right-stria-medullaris-of-thalamus",
+        "vm:anatomy:body:head-neck:midline:organ:lamina-terminalis",
+        "vm:anatomy:body:head-neck:midline:organ:septum-of-telencephalon",
+        "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+        "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+        "vm:anatomy:body:head-neck:right:vessel:right-superior-cerebellar-artery",
+        "vm:anatomy:body:head-neck:left:vessel:left-superior-cerebellar-artery",
+        "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery"
+      ],
+      "nestedTargets": [
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "ventricles",
+          "title": "Ventricular spaces",
+          "structureId": "vm:anatomy:body:head-neck:left:space:left-lateral-ventricle",
+          "sourceHash": "e99326a0fd0b0bdc0a64d2a1adbb7a63c758af6f765199b8febe851e62b9eab1"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "ventricles",
+          "title": "Ventricular spaces",
+          "structureId": "vm:anatomy:body:head-neck:right:space:right-lateral-ventricle",
+          "sourceHash": "e99326a0fd0b0bdc0a64d2a1adbb7a63c758af6f765199b8febe851e62b9eab1"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "ventricles",
+          "title": "Ventricular spaces",
+          "structureId": "vm:anatomy:body:head-neck:midline:space:third-ventricle",
+          "sourceHash": "e99326a0fd0b0bdc0a64d2a1adbb7a63c758af6f765199b8febe851e62b9eab1"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "ventricles",
+          "title": "Ventricular spaces",
+          "structureId": "vm:anatomy:body:head-neck:midline:space:fourth-ventricle",
+          "sourceHash": "e99326a0fd0b0bdc0a64d2a1adbb7a63c758af6f765199b8febe851e62b9eab1"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "brainstem",
+          "title": "Brainstem and cerebellum",
+          "structureId": "vm:anatomy:body:head-neck:midline:organ:midbrain",
+          "sourceHash": "fd1d8d04656a300fe0e8271a418ec0807b227baa96d6afa822d0df6ad0bf72ba"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "brainstem",
+          "title": "Brainstem and cerebellum",
+          "structureId": "vm:anatomy:body:head-neck:midline:organ:pons",
+          "sourceHash": "fd1d8d04656a300fe0e8271a418ec0807b227baa96d6afa822d0df6ad0bf72ba"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "brainstem",
+          "title": "Brainstem and cerebellum",
+          "structureId": "vm:anatomy:body:head-neck:midline:organ:medulla-oblongata",
+          "sourceHash": "fd1d8d04656a300fe0e8271a418ec0807b227baa96d6afa822d0df6ad0bf72ba"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "brainstem",
+          "title": "Brainstem and cerebellum",
+          "structureId": "vm:anatomy:body:head-neck:midline:organ:cerebellum",
+          "sourceHash": "fd1d8d04656a300fe0e8271a418ec0807b227baa96d6afa822d0df6ad0bf72ba"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "brainstem",
+          "title": "Brainstem and cerebellum",
+          "structureId": "vm:anatomy:body:head-neck:left:organ:brachium-of-left-inferior-colliculus",
+          "sourceHash": "40dd8f7f7b9a6bc79be1fdc6282ed50965c7f07d853a4db981dd7203477185c8"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "brainstem",
+          "title": "Brainstem and cerebellum",
+          "structureId": "vm:anatomy:body:head-neck:right:organ:brachium-of-right-inferior-colliculus",
+          "sourceHash": "40dd8f7f7b9a6bc79be1fdc6282ed50965c7f07d853a4db981dd7203477185c8"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "cerebral",
+          "title": "Cerebral regions",
+          "structureId": "vm:anatomy:body:head-neck:left:organ:left-frontal-lobe",
+          "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "cerebral",
+          "title": "Cerebral regions",
+          "structureId": "vm:anatomy:body:head-neck:right:organ:right-frontal-lobe",
+          "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "cerebral",
+          "title": "Cerebral regions",
+          "structureId": "vm:anatomy:body:head-neck:left:organ:left-parietal-lobe",
+          "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "cerebral",
+          "title": "Cerebral regions",
+          "structureId": "vm:anatomy:body:head-neck:right:organ:right-parietal-lobe",
+          "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "cerebral",
+          "title": "Cerebral regions",
+          "structureId": "vm:anatomy:body:head-neck:left:organ:left-temporal-lobe",
+          "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "cerebral",
+          "title": "Cerebral regions",
+          "structureId": "vm:anatomy:body:head-neck:right:organ:right-temporal-lobe",
+          "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "cerebral",
+          "title": "Cerebral regions",
+          "structureId": "vm:anatomy:body:head-neck:left:organ:left-occipital-lobe",
+          "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "cerebral",
+          "title": "Cerebral regions",
+          "structureId": "vm:anatomy:body:head-neck:right:organ:right-occipital-lobe",
+          "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "cerebral",
+          "title": "Cerebral regions",
+          "structureId": "vm:anatomy:body:head-neck:left:organ:left-insula",
+          "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "cerebral",
+          "title": "Cerebral regions",
+          "structureId": "vm:anatomy:body:head-neck:right:organ:right-insula",
+          "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "cerebral",
+          "title": "Cerebral regions",
+          "structureId": "vm:anatomy:body:head-neck:left:organ:anterior-part-of-left-superior-temporal-gyrus",
+          "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "cerebral",
+          "title": "Cerebral regions",
+          "structureId": "vm:anatomy:body:head-neck:right:organ:anterior-part-of-right-superior-temporal-gyrus",
+          "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "cerebral",
+          "title": "Cerebral regions",
+          "structureId": "vm:anatomy:body:head-neck:left:organ:posterior-part-of-left-superior-temporal-gyrus",
+          "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "cerebral",
+          "title": "Cerebral regions",
+          "structureId": "vm:anatomy:body:head-neck:right:organ:posterior-part-of-right-superior-temporal-gyrus",
+          "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "visual-pathway",
+          "title": "Optic chiasm and tracts",
+          "structureId": "vm:anatomy:body:head-neck:midline:organ:optic-chiasm",
+          "sourceHash": "c9698e52e4678c06a5ed5df8212e3ecb1ce89d9a25d4e1859f0ec5be7d4864bc"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "visual-pathway",
+          "title": "Optic chiasm and tracts",
+          "structureId": "vm:anatomy:body:head-neck:right:organ:right-optic-tract",
+          "sourceHash": "c9698e52e4678c06a5ed5df8212e3ecb1ce89d9a25d4e1859f0ec5be7d4864bc"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "visual-pathway",
+          "title": "Optic chiasm and tracts",
+          "structureId": "vm:anatomy:body:head-neck:left:organ:left-optic-tract",
+          "sourceHash": "c9698e52e4678c06a5ed5df8212e3ecb1ce89d9a25d4e1859f0ec5be7d4864bc"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+          "parentHash": "2243b05c7b505ee666ac4a36becfe5298735558b0e86b4d8e4476115f372ce05",
+          "study": "cricothyroid",
+          "title": "Cricothyroid muscle parts",
+          "structureId": "vm:anatomy:component:laryngeal:right:muscle:cricothyroid-straight",
+          "sourceHash": "7a6695ee3fc8feeba3b187e3d9a800aa205b57486208f84a8ef8e170097452a4"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+          "parentHash": "2243b05c7b505ee666ac4a36becfe5298735558b0e86b4d8e4476115f372ce05",
+          "study": "cricothyroid",
+          "title": "Cricothyroid muscle parts",
+          "structureId": "vm:anatomy:component:laryngeal:left:muscle:cricothyroid-straight",
+          "sourceHash": "7a6695ee3fc8feeba3b187e3d9a800aa205b57486208f84a8ef8e170097452a4"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+          "parentHash": "2243b05c7b505ee666ac4a36becfe5298735558b0e86b4d8e4476115f372ce05",
+          "study": "cricothyroid",
+          "title": "Cricothyroid muscle parts",
+          "structureId": "vm:anatomy:component:laryngeal:right:muscle:cricothyroid-oblique",
+          "sourceHash": "7a6695ee3fc8feeba3b187e3d9a800aa205b57486208f84a8ef8e170097452a4"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+          "parentHash": "2243b05c7b505ee666ac4a36becfe5298735558b0e86b4d8e4476115f372ce05",
+          "study": "cricothyroid",
+          "title": "Cricothyroid muscle parts",
+          "structureId": "vm:anatomy:component:laryngeal:left:muscle:cricothyroid-oblique",
+          "sourceHash": "7a6695ee3fc8feeba3b187e3d9a800aa205b57486208f84a8ef8e170097452a4"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+          "parentHash": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+          "study": "eye",
+          "title": "Eye layers",
+          "structureId": "vm:anatomy:body:head-neck:right:organ:right-cornea",
+          "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+          "parentHash": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+          "study": "eye",
+          "title": "Eye layers",
+          "structureId": "vm:anatomy:body:head-neck:right:organ:right-iris",
+          "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+          "parentHash": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+          "study": "eye",
+          "title": "Eye layers",
+          "structureId": "vm:anatomy:body:head-neck:right:organ:right-lens",
+          "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+          "parentHash": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+          "study": "eye",
+          "title": "Eye layers",
+          "structureId": "vm:anatomy:body:head-neck:right:ligament:suspensory-ligament-of-right-lens",
+          "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+          "parentHash": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+          "study": "eye",
+          "title": "Eye layers",
+          "structureId": "vm:anatomy:body:head-neck:right:organ:right-vitreous-body",
+          "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+          "parentHash": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+          "study": "eye",
+          "title": "Eye layers",
+          "structureId": "vm:anatomy:body:head-neck:right:organ:right-choroid",
+          "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+          "parentHash": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+          "study": "eye",
+          "title": "Eye layers",
+          "structureId": "vm:anatomy:body:head-neck:right:organ:right-sclera",
+          "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+          "parentHash": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+          "study": "eye",
+          "title": "Eye layers",
+          "structureId": "vm:anatomy:body:head-neck:left:organ:left-cornea",
+          "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+          "parentHash": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+          "study": "eye",
+          "title": "Eye layers",
+          "structureId": "vm:anatomy:body:head-neck:left:organ:left-iris",
+          "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+          "parentHash": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+          "study": "eye",
+          "title": "Eye layers",
+          "structureId": "vm:anatomy:body:head-neck:left:organ:left-lens",
+          "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+          "parentHash": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+          "study": "eye",
+          "title": "Eye layers",
+          "structureId": "vm:anatomy:body:head-neck:left:ligament:suspensory-ligament-of-left-lens",
+          "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+          "parentHash": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+          "study": "eye",
+          "title": "Eye layers",
+          "structureId": "vm:anatomy:body:head-neck:left:organ:left-vitreous-body",
+          "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+          "parentHash": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+          "study": "eye",
+          "title": "Eye layers",
+          "structureId": "vm:anatomy:body:head-neck:left:organ:left-choroid",
+          "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+          "parentHash": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+          "study": "eye",
+          "title": "Eye layers",
+          "structureId": "vm:anatomy:body:head-neck:left:organ:left-sclera",
+          "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+          "parentHash": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+          "study": "eye",
+          "title": "Eye layers",
+          "structureId": "vm:anatomy:body:head-neck:left:space:anterior-chamber-of-left-eyeball",
+          "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1700",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1701",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1702",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1703",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1704",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1705",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1706",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1707",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1708",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1709",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1710",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1711",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1715",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1700m",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1701m",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1702m",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1703m",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1704m",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1705m",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1706m",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1707m",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1708m",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1709m",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1710m",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1711m",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1715m",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:right:source-component:fma50082-fj1662",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:right:source-component:fma50082-fj1663",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+          "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "study": "cranial-artery-components",
+          "title": "Cranial artery source parts",
+          "structureId": "vm:anatomy:body:head-neck:right:source-component:fma50082-fj1692",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
+        }
+      ],
+      "bundles": [
+        {
+          "id": "brainstem",
+          "url": "/models/bodyparts3d/brainstem/brainstem.glb?v=fd1d8d04656a300fe0e8271a418ec0807b227baa96d6afa822d0df6ad0bf72ba",
+          "bytes": 1707728,
+          "sha256": "fd1d8d04656a300fe0e8271a418ec0807b227baa96d6afa822d0df6ad0bf72ba",
+          "structures": 4
+        },
+        {
+          "id": "cerebral",
+          "url": "/models/bodyparts3d/cerebral/cerebral.glb?v=7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410",
+          "bytes": 1856608,
+          "sha256": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410",
+          "structures": 14
+        },
+        {
+          "id": "collicular-brachia",
+          "url": "/models/bodyparts3d/collicular-brachia/collicular-brachia.glb?v=40dd8f7f7b9a6bc79be1fdc6282ed50965c7f07d853a4db981dd7203477185c8",
+          "bytes": 13044,
+          "sha256": "40dd8f7f7b9a6bc79be1fdc6282ed50965c7f07d853a4db981dd7203477185c8",
+          "structures": 2
+        },
+        {
+          "id": "cranial-arteries",
+          "url": "/models/bodyparts3d/cranial-arteries/cranial-arteries.glb?v=3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "bytes": 212796,
+          "sha256": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+          "structures": 5
+        },
+        {
+          "id": "cranial-artery-components",
+          "url": "/models/bodyparts3d/cranial-artery-components/cranial-artery-components.glb?v=8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086",
+          "bytes": 227840,
+          "sha256": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086",
+          "structures": 29
+        },
+        {
+          "id": "cricothyroid",
+          "url": "/models/bodyparts3d/cricothyroid/cricothyroid.glb?v=7a6695ee3fc8feeba3b187e3d9a800aa205b57486208f84a8ef8e170097452a4",
+          "sha256": "7a6695ee3fc8feeba3b187e3d9a800aa205b57486208f84a8ef8e170097452a4",
+          "bytes": 323604,
+          "structures": 4
+        },
+        {
+          "id": "eye-layers",
+          "url": "/models/bodyparts3d/eye-layers/eye-layers.glb?v=4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+          "bytes": 3578388,
+          "sha256": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+          "structures": 15
+        },
+        {
+          "id": "eye-corrected-parent",
+          "url": "/models/bodyparts3d/eye-layers/right-eyeball.glb?v=f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+          "bytes": 1756184,
+          "sha256": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+          "structures": 1
+        },
+        {
+          "id": "head-neck-connective-gaps",
+          "url": "/models/bodyparts3d/full-body/head-neck-connective-gaps.glb",
+          "bytes": 692376,
+          "sha256": "c2073b8bfca9d8aa41c5c4810738138ba54fe6db1f5bfd935a3231414a38c3f8",
+          "structures": 18
+        },
+        {
+          "id": "head-neck-connective-head-detail",
+          "url": "/models/bodyparts3d/full-body/head-neck-connective-head-detail.glb",
+          "bytes": 45764,
+          "sha256": "7f6c0355e8db6b561ea3b8d7bf10584422dccf873c842cb010f0987056f1a2f5",
+          "structures": 4
+        },
+        {
+          "id": "head-neck-connective-laryngeal-detail",
+          "url": "/models/bodyparts3d/full-body/head-neck-connective-laryngeal-detail.glb",
+          "bytes": 178112,
+          "sha256": "a4788313cc86677900a528208e8ac7045f07bee300ea17073386bf0c12c83de4",
+          "structures": 2
+        },
+        {
+          "id": "head-neck-connective-ocular-detail",
+          "url": "/models/bodyparts3d/full-body/head-neck-connective-ocular-detail.glb",
+          "bytes": 94876,
+          "sha256": "08b23d00975e6cd10eeca344d556fe75ec8cd6f45fc7087ac7da28754754108b",
+          "structures": 4
+        },
+        {
+          "id": "head-neck-connective-recovery",
+          "url": "/models/bodyparts3d/full-body/head-neck-connective-recovery.glb",
+          "bytes": 175092,
+          "sha256": "2243b05c7b505ee666ac4a36becfe5298735558b0e86b4d8e4476115f372ce05",
+          "structures": 9
+        },
+        {
+          "id": "head-neck-muscles",
+          "url": "/models/bodyparts3d/full-body/head-neck-muscles.glb",
+          "bytes": 8566352,
+          "sha256": "ad355b54f865461f5433bd1062bb206bde1967f6d4dc003840e7788800a69adb",
+          "structures": 72
+        },
+        {
+          "id": "head-neck-nerves-deep-brain",
+          "url": "/models/bodyparts3d/full-body/head-neck-nerves-deep-brain.glb",
+          "bytes": 1866940,
+          "sha256": "6046dacb923f5103acb3b86dadf2817b5f0c133af88e0d225170cf331fbd0e3c",
+          "structures": 22
+        },
+        {
+          "id": "head-neck-nerves-gaps",
+          "url": "/models/bodyparts3d/full-body/head-neck-nerves-gaps.glb",
+          "bytes": 100964,
+          "sha256": "4aba05d53fa7bf578be5ef6f945c4a498a007e62529dd0e7c5db32f57d0c1461",
+          "structures": 2
+        },
+        {
+          "id": "head-neck-nerves-inventory",
+          "url": "/models/bodyparts3d/full-body/head-neck-nerves-inventory.glb",
+          "bytes": 10012,
+          "sha256": "4e7f008f8f6167e351bc02c6b04f538ba74433f893d77e5a5b0bb8396fa3b1b9",
+          "structures": 2
+        },
+        {
+          "id": "head-neck-nerves",
+          "url": "/models/bodyparts3d/full-body/head-neck-nerves.glb",
+          "bytes": 8286776,
+          "sha256": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "structures": 27
+        },
+        {
+          "id": "head-neck-organs-gaps",
+          "url": "/models/bodyparts3d/full-body/head-neck-organs-gaps.glb",
+          "bytes": 98216,
+          "sha256": "4d05d792dd062b49d22f8740e4f0a0c4785249cbcac61a47ac7a48d06b5a6ab1",
+          "structures": 7
+        },
+        {
+          "id": "head-neck-organs-head-detail",
+          "url": "/models/bodyparts3d/full-body/head-neck-organs-head-detail.glb",
+          "bytes": 745932,
+          "sha256": "3375bde94900a77d8ab7c6c37ec934b30e2a745495006630b1645053522c040a",
+          "structures": 28
+        },
+        {
+          "id": "head-neck-organs-ocular-detail",
+          "url": "/models/bodyparts3d/full-body/head-neck-organs-ocular-detail.glb",
+          "bytes": 57312,
+          "sha256": "2f0b7535025dfd415ef448ae4fef66e351303e1fad2e7da128fa7122bac9929b",
+          "structures": 6
+        },
+        {
+          "id": "head-neck-organs-recovery",
+          "url": "/models/bodyparts3d/full-body/head-neck-organs-recovery.glb",
+          "bytes": 3587376,
+          "sha256": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+          "structures": 3
+        },
+        {
+          "id": "head-neck-organs-visceral-detail",
+          "url": "/models/bodyparts3d/full-body/head-neck-organs-visceral-detail.glb",
+          "bytes": 65180,
+          "sha256": "87b0684fd3a8d120d622f2f96edb49059cd530ba927423d5ac5f28d1069c2f84",
+          "structures": 1
+        },
+        {
+          "id": "head-neck-skeleton",
+          "url": "/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+          "bytes": 2355384,
+          "sha256": "c1b950c82fd76e69cf153757ca275a6bd27fd25d74d3fd24259b15f9172a39d4",
+          "structures": 23
+        },
+        {
+          "id": "head-neck-vessels-recovery",
+          "url": "/models/bodyparts3d/full-body/head-neck-vessels-recovery.glb",
+          "bytes": 608992,
+          "sha256": "800d583a96a6df8fdd2b5fff86c6e719a90e897d6c3c89bbb1a3bd71b0e89cbb",
+          "structures": 16
+        },
+        {
+          "id": "shoulder-arm-vessels-inventory",
+          "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-inventory.glb",
+          "bytes": 616356,
+          "sha256": "d12d81529a1408f934b5055462bb39f0f79c84e25c878a25225652b9baac3e84",
+          "structures": 20
+        },
+        {
+          "id": "spine-connective-gaps",
+          "url": "/models/bodyparts3d/full-body/spine-connective-gaps.glb",
+          "bytes": 934264,
+          "sha256": "aae6dc0589fa3dc9ce5ea51ff28520a077290adb5b92fa4570c3cf20b2090e02",
+          "structures": 22
+        },
+        {
+          "id": "spine-muscles-axial-detail",
+          "url": "/models/bodyparts3d/full-body/spine-muscles-axial-detail.glb",
+          "bytes": 381316,
+          "sha256": "d7e3b995e0c18e3ebe7e7b97a11fbcd1e228218e0010462614e4938acf7f87ee",
+          "structures": 6
+        },
+        {
+          "id": "spine-muscles",
+          "url": "/models/bodyparts3d/full-body/spine-muscles.glb",
+          "bytes": 5127960,
+          "sha256": "6cc6a2b15cda5a0defc35fdc2bebda607eac042571fec74bb1d2caba51748404",
+          "structures": 52
+        },
+        {
+          "id": "spine-skeleton",
+          "url": "/models/bodyparts3d/full-body/spine-skeleton.glb",
+          "bytes": 1286192,
+          "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957",
+          "structures": 25
+        },
+        {
+          "id": "thorax-vessels-recovery",
+          "url": "/models/bodyparts3d/full-body/thorax-vessels-recovery.glb",
+          "bytes": 1131748,
+          "sha256": "0c82e1cb2960c6f2474f2b4759974adab5871d8074a2f4e3712e1c3a37a48ca7",
+          "structures": 25
+        },
+        {
+          "id": "inferior-thyroid-arteries",
+          "url": "/models/bodyparts3d/inferior-thyroid-arteries/inferior-thyroid-arteries.glb?v=abe5a85b810ba231cf032546e26e35c6c6243b7cfd880853bf7110345da0b155",
+          "bytes": 20064,
+          "sha256": "abe5a85b810ba231cf032546e26e35c6c6243b7cfd880853bf7110345da0b155",
+          "structures": 2
+        },
+        {
+          "id": "limbic-landmarks",
+          "url": "/models/bodyparts3d/limbic-landmarks/limbic-landmarks.glb?v=9b17997e1211d794777fb1b6fbb6e84252445ae15f1b2cc811c80efad8a8e514",
+          "bytes": 150304,
+          "sha256": "9b17997e1211d794777fb1b6fbb6e84252445ae15f1b2cc811c80efad8a8e514",
+          "structures": 4
+        },
+        {
+          "id": "longus-colli",
+          "url": "/models/bodyparts3d/longus-colli/longus-colli.glb?v=b43cedda733267f51027a892b1ac08a35874853ce65802deca5304e039f6d08f",
+          "bytes": 133088,
+          "sha256": "b43cedda733267f51027a892b1ac08a35874853ce65802deca5304e039f6d08f",
+          "structures": 3
+        },
+        {
+          "id": "tentorium-partial",
+          "url": "/models/bodyparts3d/tentorium/tentorium.glb?v=b7b35094243dab53b9681c98d5123aa4b93a881fb0e48de4a8d7f32186007d4c",
+          "bytes": 396152,
+          "sha256": "b7b35094243dab53b9681c98d5123aa4b93a881fb0e48de4a8d7f32186007d4c",
+          "structures": 1
+        },
+        {
+          "id": "ventricles",
+          "url": "/models/bodyparts3d/ventricles/ventricles.glb?v=e99326a0fd0b0bdc0a64d2a1adbb7a63c758af6f765199b8febe851e62b9eab1",
+          "bytes": 846988,
+          "sha256": "e99326a0fd0b0bdc0a64d2a1adbb7a63c758af6f765199b8febe851e62b9eab1",
+          "structures": 4
+        },
+        {
+          "id": "visual-pathway",
+          "url": "/models/bodyparts3d/visual-pathway/visual-pathway.glb?v=c9698e52e4678c06a5ed5df8212e3ecb1ce89d9a25d4e1859f0ec5be7d4864bc",
+          "sha256": "c9698e52e4678c06a5ed5df8212e3ecb1ce89d9a25d4e1859f0ec5be7d4864bc",
+          "bytes": 120068,
+          "structures": 3
+        }
+      ],
+      "sourceVersion": "4.0",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "region": "thorax",
+      "regionalIds": [
+        "vm:anatomy:body:spine:midline:bone:tenth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:eleventh-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:twelfth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:first-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:second-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:third-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:fourth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:fifth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:sixth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:seventh-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:eighth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:bone:ninth-thoracic-vertebra",
+        "vm:anatomy:body:thorax:left:bone:left-tenth-rib",
+        "vm:anatomy:body:thorax:left:bone:left-eleventh-rib",
+        "vm:anatomy:body:thorax:left:bone:left-twelfth-rib",
+        "vm:anatomy:body:thorax:left:bone:left-first-rib",
+        "vm:anatomy:body:thorax:left:bone:left-second-rib",
+        "vm:anatomy:body:thorax:left:bone:left-third-rib",
+        "vm:anatomy:body:thorax:left:bone:left-fourth-rib",
+        "vm:anatomy:body:thorax:left:bone:left-fifth-rib",
+        "vm:anatomy:body:thorax:left:bone:left-sixth-rib",
+        "vm:anatomy:body:thorax:left:bone:left-seventh-rib",
+        "vm:anatomy:body:thorax:left:bone:left-eighth-rib",
+        "vm:anatomy:body:thorax:left:bone:left-ninth-rib",
+        "vm:anatomy:body:thorax:right:bone:right-tenth-rib",
+        "vm:anatomy:body:thorax:right:bone:right-eleventh-rib",
+        "vm:anatomy:body:thorax:right:bone:right-twelfth-rib",
+        "vm:anatomy:body:thorax:right:bone:right-first-rib",
+        "vm:anatomy:body:thorax:right:bone:right-second-rib",
+        "vm:anatomy:body:thorax:right:bone:right-third-rib",
+        "vm:anatomy:body:thorax:right:bone:right-fourth-rib",
+        "vm:anatomy:body:thorax:right:bone:right-fifth-rib",
+        "vm:anatomy:body:thorax:right:bone:right-sixth-rib",
+        "vm:anatomy:body:thorax:right:bone:right-seventh-rib",
+        "vm:anatomy:body:thorax:right:bone:right-eighth-rib",
+        "vm:anatomy:body:thorax:right:bone:right-ninth-rib",
+        "vm:anatomy:body:thorax:midline:muscle:external-intercostal-muscle",
+        "vm:anatomy:body:thorax:midline:muscle:innermost-intercostal-muscle",
+        "vm:anatomy:body:thorax:midline:muscle:internal-intercostal-muscle",
+        "vm:anatomy:body:thorax:right:muscle:right-pectoralis-minor",
+        "vm:anatomy:body:thorax:left:muscle:left-pectoralis-minor",
+        "vm:anatomy:body:thorax:right:muscle:right-transversus-thoracis",
+        "vm:anatomy:body:thorax:left:muscle:left-transversus-thoracis",
+        "vm:anatomy:body:spine:midline:muscle:thoracic-rotator",
+        "vm:anatomy:body:thorax:midline:muscle:diaphragm",
+        "vm:anatomy:body:thorax:right:muscle:right-pectoralis-major",
+        "vm:anatomy:body:thorax:left:muscle:left-pectoralis-major",
+        "vm:anatomy:body:thorax:unpaired:organ:heart",
+        "vm:anatomy:body:thorax:right:organ:right-lung",
+        "vm:anatomy:body:thorax:left:organ:left-lung",
+        "vm:anatomy:body:thorax:unpaired:organ:esophagus",
+        "vm:anatomy:body:thorax:unpaired:organ:trachea",
+        "vm:anatomy:body:thorax:midline:bone:manubrium",
+        "vm:anatomy:body:thorax:midline:bone:body-of-sternum",
+        "vm:anatomy:body:thorax:midline:bone:xiphoid-process",
+        "vm:anatomy:body:thorax:right:cartilage:right-first-costal-cartilage",
+        "vm:anatomy:body:thorax:left:cartilage:left-first-costal-cartilage",
+        "vm:anatomy:body:thorax:right:cartilage:right-second-costal-cartilage",
+        "vm:anatomy:body:thorax:left:cartilage:left-second-costal-cartilage",
+        "vm:anatomy:body:thorax:right:cartilage:right-third-costal-cartilage",
+        "vm:anatomy:body:thorax:left:cartilage:left-third-costal-cartilage",
+        "vm:anatomy:body:thorax:right:cartilage:right-fourth-costal-cartilage",
+        "vm:anatomy:body:thorax:left:cartilage:left-fourth-costal-cartilage",
+        "vm:anatomy:body:thorax:right:cartilage:right-fifth-costal-cartilage",
+        "vm:anatomy:body:thorax:left:cartilage:left-fifth-costal-cartilage",
+        "vm:anatomy:body:thorax:right:cartilage:right-sixth-costal-cartilage",
+        "vm:anatomy:body:thorax:left:cartilage:left-sixth-costal-cartilage",
+        "vm:anatomy:body:thorax:right:cartilage:right-seventh-costal-cartilage",
+        "vm:anatomy:body:thorax:left:cartilage:left-seventh-costal-cartilage",
+        "vm:anatomy:body:thorax:unpaired:organ:thymus",
+        "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
+        "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
+        "vm:anatomy:body:thorax:unspecified:vessel:descending-thoracic-aorta",
+        "vm:anatomy:body:thorax:unspecified:vessel:superior-vena-cava",
+        "vm:anatomy:body:thorax:unspecified:vessel:azygos-vein",
+        "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+        "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+        "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+        "vm:anatomy:body:thorax:right:vessel:right-subclavian-artery",
+        "vm:anatomy:body:thorax:left:vessel:left-subclavian-artery",
+        "vm:anatomy:body:thorax:right:vessel:right-brachiocephalic-vein",
+        "vm:anatomy:body:thorax:left:vessel:left-brachiocephalic-vein",
+        "vm:anatomy:body:thorax:right:vessel:right-subclavian-vein",
+        "vm:anatomy:body:thorax:left:vessel:left-subclavian-vein",
+        "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
+        "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
+        "vm:anatomy:body:head-neck:right:vessel:right-internal-carotid-artery",
+        "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
+        "vm:anatomy:body:head-neck:right:vessel:right-vertebral-artery",
+        "vm:anatomy:body:head-neck:left:vessel:left-vertebral-artery",
+        "vm:anatomy:body:head-neck:right:vessel:right-internal-jugular-vein",
+        "vm:anatomy:body:head-neck:left:vessel:left-internal-jugular-vein",
+        "vm:anatomy:body:thorax:right:vessel:trunk-of-right-coronary-artery",
+        "vm:anatomy:body:thorax:left:vessel:trunk-of-left-coronary-artery",
+        "vm:anatomy:body:thorax:left:vessel:anterior-interventricular-branch-of-left-coronary-artery",
+        "vm:anatomy:body:thorax:left:vessel:circumflex-branch-of-left-coronary-artery",
+        "vm:anatomy:body:thorax:unspecified:vessel:great-cardiac-vein",
+        "vm:anatomy:body:thorax:unspecified:vessel:middle-cardiac-vein",
+        "vm:anatomy:body:thorax:right:vessel:right-pulmonary-artery",
+        "vm:anatomy:body:thorax:left:vessel:left-pulmonary-artery",
+        "vm:anatomy:body:thorax:right:vessel:right-superior-pulmonary-vein",
+        "vm:anatomy:body:thorax:left:vessel:left-superior-pulmonary-vein",
+        "vm:anatomy:body:thorax:right:vessel:right-inferior-pulmonary-vein",
+        "vm:anatomy:body:thorax:left:vessel:left-inferior-pulmonary-vein",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-first-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-sixth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eighth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-ninth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-tenth-thoracic-vertebra",
+        "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eleventh-thoracic-vertebra",
+        "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
+        "vm:anatomy:body:thorax:left:vessel:left-internal-thoracic-artery",
+        "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+        "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+        "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+        "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+        "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-vein",
+        "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+        "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+        "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+        "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+        "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+        "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+        "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+        "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+        "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+        "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+        "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+        "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+        "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+        "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+        "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+        "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+        "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+        "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+        "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+        "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+        "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+        "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+        "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+        "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
+        "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
+        "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
+        "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+        "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
+        "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+        "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
+        "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+        "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+        "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
+        "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery"
+      ],
+      "nestedTargets": [
+        {
+          "parentId": "vm:anatomy:body:thorax:unpaired:organ:heart",
+          "parentHash": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+          "study": "cardiac",
+          "title": "Cardiac chamber spaces",
+          "structureId": "vm:anatomy:body:thorax:right:organ:cavity-of-right-atrium",
+          "sourceHash": "64d93898db3b6cb4dbea452508799c98cbe65b361eba2f17658ecae532a01f67"
+        },
+        {
+          "parentId": "vm:anatomy:body:thorax:unpaired:organ:heart",
+          "parentHash": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+          "study": "cardiac",
+          "title": "Cardiac chamber spaces",
+          "structureId": "vm:anatomy:body:thorax:left:organ:cavity-of-left-atrium",
+          "sourceHash": "64d93898db3b6cb4dbea452508799c98cbe65b361eba2f17658ecae532a01f67"
+        },
+        {
+          "parentId": "vm:anatomy:body:thorax:unpaired:organ:heart",
+          "parentHash": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+          "study": "cardiac",
+          "title": "Cardiac chamber spaces",
+          "structureId": "vm:anatomy:body:thorax:right:organ:cavity-of-right-ventricle",
+          "sourceHash": "64d93898db3b6cb4dbea452508799c98cbe65b361eba2f17658ecae532a01f67"
+        },
+        {
+          "parentId": "vm:anatomy:body:thorax:unpaired:organ:heart",
+          "parentHash": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+          "study": "cardiac",
+          "title": "Cardiac chamber spaces",
+          "structureId": "vm:anatomy:body:thorax:left:organ:cavity-of-left-ventricle",
+          "sourceHash": "64d93898db3b6cb4dbea452508799c98cbe65b361eba2f17658ecae532a01f67"
+        },
+        {
+          "parentId": "vm:anatomy:body:thorax:right:organ:right-lung",
+          "parentHash": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+          "study": "pulmonary",
+          "title": "Lung branch groups",
+          "structureId": "vm:anatomy:body:thorax:right:organ:right-upper-lobe-branches",
+          "sourceHash": "62bb25db79270dbd6fe96598e9438d7bfca3592c5f7559cd1ea320e18bb16eca"
+        },
+        {
+          "parentId": "vm:anatomy:body:thorax:right:organ:right-lung",
+          "parentHash": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+          "study": "pulmonary",
+          "title": "Lung branch groups",
+          "structureId": "vm:anatomy:body:thorax:right:organ:right-middle-lobe-branches",
+          "sourceHash": "62bb25db79270dbd6fe96598e9438d7bfca3592c5f7559cd1ea320e18bb16eca"
+        },
+        {
+          "parentId": "vm:anatomy:body:thorax:right:organ:right-lung",
+          "parentHash": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+          "study": "pulmonary",
+          "title": "Lung branch groups",
+          "structureId": "vm:anatomy:body:thorax:right:organ:right-lower-lobe-branches",
+          "sourceHash": "62bb25db79270dbd6fe96598e9438d7bfca3592c5f7559cd1ea320e18bb16eca"
+        },
+        {
+          "parentId": "vm:anatomy:body:thorax:left:organ:left-lung",
+          "parentHash": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+          "study": "pulmonary",
+          "title": "Lung branch groups",
+          "structureId": "vm:anatomy:body:thorax:left:organ:left-upper-lobe-branches",
+          "sourceHash": "d4670d3c15580e2a1ef53debab32f08c8199fe6ddaf90af3f3aedb197d93e68d"
+        },
+        {
+          "parentId": "vm:anatomy:body:thorax:left:organ:left-lung",
+          "parentHash": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+          "study": "pulmonary",
+          "title": "Lung branch groups",
+          "structureId": "vm:anatomy:body:thorax:left:organ:left-lower-lobe-branches",
+          "sourceHash": "d4670d3c15580e2a1ef53debab32f08c8199fe6ddaf90af3f3aedb197d93e68d"
+        }
+      ],
+      "bundles": [
+        {
+          "id": "cardiac",
+          "url": "/models/bodyparts3d/cardiac/cardiac.glb?v=64d93898db3b6cb4dbea452508799c98cbe65b361eba2f17658ecae532a01f67",
+          "bytes": 587588,
+          "sha256": "64d93898db3b6cb4dbea452508799c98cbe65b361eba2f17658ecae532a01f67",
+          "structures": 6
+        },
+        {
+          "id": "abdomen-vessels-recovery",
+          "url": "/models/bodyparts3d/full-body/abdomen-vessels-recovery.glb",
+          "bytes": 477592,
+          "sha256": "e41d66684de08fd9bd7dfca340acb63cbf7714eb09a3ea9594184f497c509abe",
+          "structures": 14
+        },
+        {
+          "id": "head-neck-vessels-recovery",
+          "url": "/models/bodyparts3d/full-body/head-neck-vessels-recovery.glb",
+          "bytes": 608992,
+          "sha256": "800d583a96a6df8fdd2b5fff86c6e719a90e897d6c3c89bbb1a3bd71b0e89cbb",
+          "structures": 16
+        },
+        {
+          "id": "shoulder-arm-vessels-inventory",
+          "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-inventory.glb",
+          "bytes": 616356,
+          "sha256": "d12d81529a1408f934b5055462bb39f0f79c84e25c878a25225652b9baac3e84",
+          "structures": 20
+        },
+        {
+          "id": "spine-connective-gaps",
+          "url": "/models/bodyparts3d/full-body/spine-connective-gaps.glb",
+          "bytes": 934264,
+          "sha256": "aae6dc0589fa3dc9ce5ea51ff28520a077290adb5b92fa4570c3cf20b2090e02",
+          "structures": 22
+        },
+        {
+          "id": "spine-muscles-axial-detail",
+          "url": "/models/bodyparts3d/full-body/spine-muscles-axial-detail.glb",
+          "bytes": 381316,
+          "sha256": "d7e3b995e0c18e3ebe7e7b97a11fbcd1e228218e0010462614e4938acf7f87ee",
+          "structures": 6
+        },
+        {
+          "id": "spine-muscles",
+          "url": "/models/bodyparts3d/full-body/spine-muscles.glb",
+          "bytes": 5127960,
+          "sha256": "6cc6a2b15cda5a0defc35fdc2bebda607eac042571fec74bb1d2caba51748404",
+          "structures": 52
+        },
+        {
+          "id": "spine-skeleton",
+          "url": "/models/bodyparts3d/full-body/spine-skeleton.glb",
+          "bytes": 1286192,
+          "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957",
+          "structures": 25
+        },
+        {
+          "id": "thorax-connective-recovery",
+          "url": "/models/bodyparts3d/full-body/thorax-connective-recovery.glb",
+          "bytes": 289716,
+          "sha256": "2874e8680da861973d2eac549f62cf4d0b5f4c26472a532b7661c74b2ce96900",
+          "structures": 14
+        },
+        {
+          "id": "thorax-muscles-dissection",
+          "url": "/models/bodyparts3d/full-body/thorax-muscles-dissection.glb",
+          "bytes": 314224,
+          "sha256": "12ff12c3ea0e745193b90842a3c62fd980dabd24e737ece8dee399925ab2e9a0",
+          "structures": 2
+        },
+        {
+          "id": "thorax-muscles",
+          "url": "/models/bodyparts3d/full-body/thorax-muscles.glb",
+          "bytes": 14990372,
+          "sha256": "3bbf7759e54e34272175de042ef4e26c24412b9f073a2f8eea3ce4fe79ebb682",
+          "structures": 8
+        },
+        {
+          "id": "thorax-organs-inventory",
+          "url": "/models/bodyparts3d/full-body/thorax-organs-inventory.glb",
+          "bytes": 157388,
+          "sha256": "b79225df1153cff7b18c0da4db7cd3257db94f16222376c4d6623a5e542bddc3",
+          "structures": 2
+        },
+        {
+          "id": "thorax-organs-recovery",
+          "url": "/models/bodyparts3d/full-body/thorax-organs-recovery.glb",
+          "bytes": 38832,
+          "sha256": "d62d13a0a9a999495f771ecaee2e9cafe27c8d4fbdac4019fa699a711d6dc355",
+          "structures": 1
+        },
+        {
+          "id": "thorax-organs",
+          "url": "/models/bodyparts3d/full-body/thorax-organs.glb",
+          "bytes": 3711452,
+          "sha256": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+          "structures": 5
+        },
+        {
+          "id": "thorax-skeleton-recovery",
+          "url": "/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+          "bytes": 149456,
+          "sha256": "0ff2ab3d8b16b2c3af0b3320bc85b72512c54af5bfedc3f2159dd2316fa5de60",
+          "structures": 3
+        },
+        {
+          "id": "thorax-skeleton",
+          "url": "/models/bodyparts3d/full-body/thorax-skeleton.glb",
+          "bytes": 3099336,
+          "sha256": "9c45f3aef04a0507414a6280b4866d31eda2a9df50ef61acc3071d5d909d12cd",
+          "structures": 24
+        },
+        {
+          "id": "thorax-vessels-inventory",
+          "url": "/models/bodyparts3d/full-body/thorax-vessels-inventory.glb",
+          "bytes": 483532,
+          "sha256": "8071f97ac5b843ab55e8bf019918947ab9c363b1e1901faebefa619e5345fe6f",
+          "structures": 9
+        },
+        {
+          "id": "thorax-vessels-recovery",
+          "url": "/models/bodyparts3d/full-body/thorax-vessels-recovery.glb",
+          "bytes": 1131748,
+          "sha256": "0c82e1cb2960c6f2474f2b4759974adab5871d8074a2f4e3712e1c3a37a48ca7",
+          "structures": 25
+        },
+        {
+          "id": "thorax-vessels-thoracic-detail",
+          "url": "/models/bodyparts3d/full-body/thorax-vessels-thoracic-detail.glb",
+          "bytes": 91700,
+          "sha256": "bd86da53fb00401a01db7e321ca14b0bfec784b53a496a22dc5e6338db3d0044",
+          "structures": 4
+        },
+        {
+          "id": "inferior-thyroid-arteries",
+          "url": "/models/bodyparts3d/inferior-thyroid-arteries/inferior-thyroid-arteries.glb?v=abe5a85b810ba231cf032546e26e35c6c6243b7cfd880853bf7110345da0b155",
+          "bytes": 20064,
+          "sha256": "abe5a85b810ba231cf032546e26e35c6c6243b7cfd880853bf7110345da0b155",
+          "structures": 2
+        },
+        {
+          "id": "pulmonary-left",
+          "url": "/models/bodyparts3d/pulmonary/pulmonary-left.glb?v=d4670d3c15580e2a1ef53debab32f08c8199fe6ddaf90af3f3aedb197d93e68d",
+          "sha256": "d4670d3c15580e2a1ef53debab32f08c8199fe6ddaf90af3f3aedb197d93e68d",
+          "bytes": 754268,
+          "structures": 2
+        },
+        {
+          "id": "pulmonary-right",
+          "url": "/models/bodyparts3d/pulmonary/pulmonary-right.glb?v=62bb25db79270dbd6fe96598e9438d7bfca3592c5f7559cd1ea320e18bb16eca",
+          "sha256": "62bb25db79270dbd6fe96598e9438d7bfca3592c5f7559cd1ea320e18bb16eca",
+          "bytes": 1330588,
+          "structures": 3
+        },
+        {
+          "id": "subscapular-arteries",
+          "url": "/models/bodyparts3d/subscapular-arteries/subscapular-arteries.glb?v=6e7ccebe78f6a8c89b556e5e1256d755801725590c4625bebd3fecd6d93f04b3",
+          "bytes": 31116,
+          "sha256": "6e7ccebe78f6a8c89b556e5e1256d755801725590c4625bebd3fecd6d93f04b3",
+          "structures": 2
+        }
+      ],
+      "sourceVersion": "4.0",
+      "license": "CC-BY-4.0"
+    }
+  ],
+  "sharedRegionalStructures": 426,
   "patientDataIncluded": false,
   "clinicalApproved": false,
   "standaloneReviewConnection": false,
@@ -910,6 +2474,13 @@
       "bytes": 1707728,
       "sha256": "fd1d8d04656a300fe0e8271a418ec0807b227baa96d6afa822d0df6ad0bf72ba",
       "structures": 4
+    },
+    {
+      "id": "cardiac",
+      "url": "/models/bodyparts3d/cardiac/cardiac.glb?v=64d93898db3b6cb4dbea452508799c98cbe65b361eba2f17658ecae532a01f67",
+      "bytes": 587588,
+      "sha256": "64d93898db3b6cb4dbea452508799c98cbe65b361eba2f17658ecae532a01f67",
+      "structures": 6
     },
     {
       "id": "cerebral",
@@ -959,6 +2530,13 @@
       "bytes": 1756184,
       "sha256": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
       "structures": 1
+    },
+    {
+      "id": "abdomen-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/abdomen-vessels-recovery.glb",
+      "bytes": 477592,
+      "sha256": "e41d66684de08fd9bd7dfca340acb63cbf7714eb09a3ea9594184f497c509abe",
+      "structures": 14
     },
     {
       "id": "head-neck-connective-gaps",
@@ -1115,11 +2693,81 @@
       "structures": 25
     },
     {
+      "id": "thorax-connective-recovery",
+      "url": "/models/bodyparts3d/full-body/thorax-connective-recovery.glb",
+      "bytes": 289716,
+      "sha256": "2874e8680da861973d2eac549f62cf4d0b5f4c26472a532b7661c74b2ce96900",
+      "structures": 14
+    },
+    {
+      "id": "thorax-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/thorax-muscles-dissection.glb",
+      "bytes": 314224,
+      "sha256": "12ff12c3ea0e745193b90842a3c62fd980dabd24e737ece8dee399925ab2e9a0",
+      "structures": 2
+    },
+    {
+      "id": "thorax-muscles",
+      "url": "/models/bodyparts3d/full-body/thorax-muscles.glb",
+      "bytes": 14990372,
+      "sha256": "3bbf7759e54e34272175de042ef4e26c24412b9f073a2f8eea3ce4fe79ebb682",
+      "structures": 8
+    },
+    {
+      "id": "thorax-organs-inventory",
+      "url": "/models/bodyparts3d/full-body/thorax-organs-inventory.glb",
+      "bytes": 157388,
+      "sha256": "b79225df1153cff7b18c0da4db7cd3257db94f16222376c4d6623a5e542bddc3",
+      "structures": 2
+    },
+    {
+      "id": "thorax-organs-recovery",
+      "url": "/models/bodyparts3d/full-body/thorax-organs-recovery.glb",
+      "bytes": 38832,
+      "sha256": "d62d13a0a9a999495f771ecaee2e9cafe27c8d4fbdac4019fa699a711d6dc355",
+      "structures": 1
+    },
+    {
+      "id": "thorax-organs",
+      "url": "/models/bodyparts3d/full-body/thorax-organs.glb",
+      "bytes": 3711452,
+      "sha256": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+      "structures": 5
+    },
+    {
+      "id": "thorax-skeleton-recovery",
+      "url": "/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+      "bytes": 149456,
+      "sha256": "0ff2ab3d8b16b2c3af0b3320bc85b72512c54af5bfedc3f2159dd2316fa5de60",
+      "structures": 3
+    },
+    {
+      "id": "thorax-skeleton",
+      "url": "/models/bodyparts3d/full-body/thorax-skeleton.glb",
+      "bytes": 3099336,
+      "sha256": "9c45f3aef04a0507414a6280b4866d31eda2a9df50ef61acc3071d5d909d12cd",
+      "structures": 24
+    },
+    {
+      "id": "thorax-vessels-inventory",
+      "url": "/models/bodyparts3d/full-body/thorax-vessels-inventory.glb",
+      "bytes": 483532,
+      "sha256": "8071f97ac5b843ab55e8bf019918947ab9c363b1e1901faebefa619e5345fe6f",
+      "structures": 9
+    },
+    {
       "id": "thorax-vessels-recovery",
       "url": "/models/bodyparts3d/full-body/thorax-vessels-recovery.glb",
       "bytes": 1131748,
       "sha256": "0c82e1cb2960c6f2474f2b4759974adab5871d8074a2f4e3712e1c3a37a48ca7",
       "structures": 25
+    },
+    {
+      "id": "thorax-vessels-thoracic-detail",
+      "url": "/models/bodyparts3d/full-body/thorax-vessels-thoracic-detail.glb",
+      "bytes": 91700,
+      "sha256": "bd86da53fb00401a01db7e321ca14b0bfec784b53a496a22dc5e6338db3d0044",
+      "structures": 4
     },
     {
       "id": "inferior-thyroid-arteries",
@@ -1141,6 +2789,27 @@
       "bytes": 133088,
       "sha256": "b43cedda733267f51027a892b1ac08a35874853ce65802deca5304e039f6d08f",
       "structures": 3
+    },
+    {
+      "id": "pulmonary-left",
+      "url": "/models/bodyparts3d/pulmonary/pulmonary-left.glb?v=d4670d3c15580e2a1ef53debab32f08c8199fe6ddaf90af3f3aedb197d93e68d",
+      "sha256": "d4670d3c15580e2a1ef53debab32f08c8199fe6ddaf90af3f3aedb197d93e68d",
+      "bytes": 754268,
+      "structures": 2
+    },
+    {
+      "id": "pulmonary-right",
+      "url": "/models/bodyparts3d/pulmonary/pulmonary-right.glb?v=62bb25db79270dbd6fe96598e9438d7bfca3592c5f7559cd1ea320e18bb16eca",
+      "sha256": "62bb25db79270dbd6fe96598e9438d7bfca3592c5f7559cd1ea320e18bb16eca",
+      "bytes": 1330588,
+      "structures": 3
+    },
+    {
+      "id": "subscapular-arteries",
+      "url": "/models/bodyparts3d/subscapular-arteries/subscapular-arteries.glb?v=6e7ccebe78f6a8c89b556e5e1256d755801725590c4625bebd3fecd6d93f04b3",
+      "bytes": 31116,
+      "sha256": "6e7ccebe78f6a8c89b556e5e1256d755801725590c4625bebd3fecd6d93f04b3",
+      "structures": 2
     },
     {
       "id": "tentorium-partial",
@@ -1167,8 +2836,8 @@
   "files": [
     {
       "path": "index.html",
-      "bytes": 832,
-      "sha256": "1d1b0bb7d897e2412a6d8e85f42f6197cf70241dc2de8f4c238e181cd4ba60b3"
+      "bytes": 821,
+      "sha256": "46ebd3a0fbf579593d92f0774ac56ecb487fad58aeee241225a3cac72c7cd85e"
     },
     {
       "path": "BUNDLED_NOTICES.txt",
@@ -1182,23 +2851,23 @@
     },
     {
       "path": "source-inputs.json",
-      "bytes": 65353,
-      "sha256": "aa471008c9dfc87d2060c3ee3bbb700cdfa69325292693a59fd26e2b835c2abb"
+      "bytes": 65920,
+      "sha256": "f66402566ebc62bb7ec24e5ca5f4b9dd63a452ea7123a60f67bf8f3778f85d4a"
     },
     {
-      "path": "assets/abdominal-wall-study-CrJkEOQ5.js",
+      "path": "assets/abdominal-wall-study-Bx2wBeW7.js",
       "bytes": 44486,
-      "sha256": "d1a94742b6ad29d7980c51a22306ee731175b18dbef050896b9eaecd93f1e290"
+      "sha256": "26bf0554d7f3175d202b98dee9ad4271fac541e29b94e9dc5f5436c129a6e166"
     },
     {
-      "path": "assets/anatomy-load-state-8SWCaBdH.js",
-      "bytes": 248901,
-      "sha256": "f1aa35013c08351f7e7d97a9250c37098c033e0bdb856cd6fb1391a05321001b"
+      "path": "assets/anatomy-load-state-CxSGVTmH.js",
+      "bytes": 249079,
+      "sha256": "5dc4e48641906f002b3af8920ec29947528b40bba6064291e1cde63705b6d25e"
     },
     {
-      "path": "assets/back-layers-study-BPN2b-Lm.js",
+      "path": "assets/back-layers-study-CoI5-Th3.js",
       "bytes": 74775,
-      "sha256": "7a08dffb9cae9ec35ecda2a1f7fa04d220040231a5e88c167f2be908f2f6e933"
+      "sha256": "9d15bf5c63d6b62247a2104778795d89c224b2e06c562fbb2c00cbbe2e0883db"
     },
     {
       "path": "assets/body-scene-CGUv3Rnc.css",
@@ -1206,9 +2875,9 @@
       "sha256": "dde88f89e2ce955558fd6e9551a8796969da6d9d91be0bed8a70bc0482e09416"
     },
     {
-      "path": "assets/body-scene-D9dBJxqh.js",
+      "path": "assets/body-scene-DOdFVMpS.js",
       "bytes": 1023531,
-      "sha256": "0b21378749ac6a0890a338832f612f0f0e9e521db68c92caf612186292abc0f2"
+      "sha256": "8736db466b32083edc4ac728fea11d17771a2237a064b36261b31019f8a37532"
     },
     {
       "path": "assets/cutaway-controls-4N0ICIXO.css",
@@ -1216,9 +2885,14 @@
       "sha256": "87c31bfe8303461a8afbde6251bb48df5a77645f774c8ef3ac48c292a30ec5c8"
     },
     {
-      "path": "assets/cutaway-controls-D78LfRIb.js",
+      "path": "assets/cutaway-controls-XeGvyeFh.js",
       "bytes": 4905,
-      "sha256": "d8f1b5b815d0220da3c9332b72e8b7976c508cb33c55d06faaa96392311ef42b"
+      "sha256": "cd71cb18505c406e87fd86524abd2e9a2930ac3239dc0875de22226452ea914e"
+    },
+    {
+      "path": "assets/eye-layers-1GkwnCiE.js",
+      "bytes": 11493,
+      "sha256": "7d6ccde0a466cb166d0a3e63cad12126e3ce2587795dba7f9b879c1d652b5edc"
     },
     {
       "path": "assets/eye-layers-B3CQEl2o.css",
@@ -1226,24 +2900,24 @@
       "sha256": "58f9322c6a028c52be262400337233bf1eb9350ca31aef05830a1df107bbd343"
     },
     {
-      "path": "assets/eye-layers-BC3gNtPK.js",
-      "bytes": 11493,
-      "sha256": "d306d986a143adf92bc5ff2ceec61ee2520b0c4dee185902394159eb3becb106"
-    },
-    {
-      "path": "assets/hra-pelvis-study-BrBBzV_J.js",
+      "path": "assets/hra-pelvis-study-f86PtDUH.js",
       "bytes": 92711,
-      "sha256": "70b81b418eec2bf815bcbca3e1dd3713a2a750e7a714e39ea98562e76aa0f845"
+      "sha256": "f0aa2d1f4958ed57811b779a0c86936b75491d3b5bfb59a42857ee7d322ea41f"
     },
     {
-      "path": "assets/hra-renal-study-uhTi1HhW.js",
+      "path": "assets/hra-renal-study-BHgDp73i.js",
       "bytes": 116487,
-      "sha256": "20a1802011b5495e14252452659026352dc31ae6b144b785bb6e9eaa0c9b6d33"
+      "sha256": "4c4cafedf4e5c0d4b8006da7726f6299fe320e54976c4a8b6a446b534c5c7143"
     },
     {
-      "path": "assets/independent-study-navigation-DXaMdFjc.js",
+      "path": "assets/independent-study-navigation-DFFaV7lo.js",
       "bytes": 6035,
-      "sha256": "cc01ac3db935eea26d5577e0fc49bde3b212a8c2f5a82d83d1eec80723b38da7"
+      "sha256": "66b317ca214c23312d95ab702424896c909e117b4485f251d646813e9c035dbd"
+    },
+    {
+      "path": "assets/index-DeQMEyFu.js",
+      "bytes": 4213471,
+      "sha256": "dcb7a823fa16d7b639cb61fd602961ba3917e2c2c8af53050eca6ff4bb72b83b"
     },
     {
       "path": "assets/index-DL7nqval.css",
@@ -1251,14 +2925,14 @@
       "sha256": "60ce3d47ac1aea5703d52b5c5dcede831191e1d04ce1d3b6985b952e37bb0e66"
     },
     {
-      "path": "assets/index-RO-C3nrg.js",
-      "bytes": 4171715,
-      "sha256": "170a41cdf9c88e6d062b893539971419b0f346a207c3e97c3eb17c700140d48a"
-    },
-    {
       "path": "assets/rolldown-runtime-hePW80VL.js",
       "bytes": 716,
       "sha256": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021"
+    },
+    {
+      "path": "assets/um-knee-study-BC-QaiMK.js",
+      "bytes": 521104,
+      "sha256": "edcf7d60f1fd61263468f25bddf8189d5279bc68327a28bb1f521cac93ccb771"
     },
     {
       "path": "assets/um-knee-study-DE_VvcAw.css",
@@ -1266,24 +2940,19 @@
       "sha256": "7f1d701756afcca6313a1ea8b3bb47f578ae6066d9d6750576f1003f9c65da3b"
     },
     {
-      "path": "assets/um-knee-study-XH3QjfSm.js",
-      "bytes": 521104,
-      "sha256": "d76dfbcab7ca088010ea20d9de743dd3633e18422ac9b9d1b327c1c07d3fef05"
-    },
-    {
-      "path": "assets/um-limb-study-wjWKS87N.js",
+      "path": "assets/um-limb-study-C8kdI05C.js",
       "bytes": 2300,
-      "sha256": "122edeb586f933479df04837da82d80d57bd7c8bc2af2a669331a087886ab2c8"
+      "sha256": "06887c7d87af31d6af2d94272819fa59c0e5dccece7c44ca06723f13837fede1"
     },
     {
-      "path": "assets/ventricles-Bn-yJt99.js",
+      "path": "assets/ventricles-B9ByeNgo.js",
       "bytes": 228889,
-      "sha256": "d8e0c3b1735588783e563e7746656ee77c1a6ce9c5aa11d6d21b84b43f76b667"
+      "sha256": "17c6a21d4d223d9d4df5acbdb0aa2dbc02d6c34c043a05c6edd27b7d4ca87702"
     },
     {
-      "path": "assets/ventricles-Doc-40_G.js",
+      "path": "assets/ventricles-D80QgUEs.js",
       "bytes": 183286,
-      "sha256": "594fa61137f0465554bd974ce3c63b35f098330b48eee1c41712e13331e8c3ef"
+      "sha256": "a423211ab93e7f8867e7722f66f2d7e19755ff5ea4592398b83be8fd10a8db19"
     },
     {
       "path": "assets/ventricles-zpa0fhqb.css",
@@ -1294,6 +2963,11 @@
       "path": "models/bodyparts3d/brainstem/brainstem.glb",
       "bytes": 1707728,
       "sha256": "fd1d8d04656a300fe0e8271a418ec0807b227baa96d6afa822d0df6ad0bf72ba"
+    },
+    {
+      "path": "models/bodyparts3d/cardiac/cardiac.glb",
+      "bytes": 587588,
+      "sha256": "64d93898db3b6cb4dbea452508799c98cbe65b361eba2f17658ecae532a01f67"
     },
     {
       "path": "models/bodyparts3d/cerebral/cerebral.glb",
@@ -1329,6 +3003,11 @@
       "path": "models/bodyparts3d/eye-layers/right-eyeball.glb",
       "bytes": 1756184,
       "sha256": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/abdomen-vessels-recovery.glb",
+      "bytes": 477592,
+      "sha256": "e41d66684de08fd9bd7dfca340acb63cbf7714eb09a3ea9594184f497c509abe"
     },
     {
       "path": "models/bodyparts3d/full-body/head-neck-connective-gaps.glb",
@@ -1441,9 +3120,59 @@
       "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957"
     },
     {
+      "path": "models/bodyparts3d/full-body/thorax-connective-recovery.glb",
+      "bytes": 289716,
+      "sha256": "2874e8680da861973d2eac549f62cf4d0b5f4c26472a532b7661c74b2ce96900"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/thorax-muscles-dissection.glb",
+      "bytes": 314224,
+      "sha256": "12ff12c3ea0e745193b90842a3c62fd980dabd24e737ece8dee399925ab2e9a0"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/thorax-muscles.glb",
+      "bytes": 14990372,
+      "sha256": "3bbf7759e54e34272175de042ef4e26c24412b9f073a2f8eea3ce4fe79ebb682"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/thorax-organs-inventory.glb",
+      "bytes": 157388,
+      "sha256": "b79225df1153cff7b18c0da4db7cd3257db94f16222376c4d6623a5e542bddc3"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/thorax-organs-recovery.glb",
+      "bytes": 38832,
+      "sha256": "d62d13a0a9a999495f771ecaee2e9cafe27c8d4fbdac4019fa699a711d6dc355"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/thorax-organs.glb",
+      "bytes": 3711452,
+      "sha256": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+      "bytes": 149456,
+      "sha256": "0ff2ab3d8b16b2c3af0b3320bc85b72512c54af5bfedc3f2159dd2316fa5de60"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/thorax-skeleton.glb",
+      "bytes": 3099336,
+      "sha256": "9c45f3aef04a0507414a6280b4866d31eda2a9df50ef61acc3071d5d909d12cd"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/thorax-vessels-inventory.glb",
+      "bytes": 483532,
+      "sha256": "8071f97ac5b843ab55e8bf019918947ab9c363b1e1901faebefa619e5345fe6f"
+    },
+    {
       "path": "models/bodyparts3d/full-body/thorax-vessels-recovery.glb",
       "bytes": 1131748,
       "sha256": "0c82e1cb2960c6f2474f2b4759974adab5871d8074a2f4e3712e1c3a37a48ca7"
+    },
+    {
+      "path": "models/bodyparts3d/full-body/thorax-vessels-thoracic-detail.glb",
+      "bytes": 91700,
+      "sha256": "bd86da53fb00401a01db7e321ca14b0bfec784b53a496a22dc5e6338db3d0044"
     },
     {
       "path": "models/bodyparts3d/inferior-thyroid-arteries/inferior-thyroid-arteries.glb",
@@ -1459,6 +3188,21 @@
       "path": "models/bodyparts3d/longus-colli/longus-colli.glb",
       "bytes": 133088,
       "sha256": "b43cedda733267f51027a892b1ac08a35874853ce65802deca5304e039f6d08f"
+    },
+    {
+      "path": "models/bodyparts3d/pulmonary/pulmonary-left.glb",
+      "bytes": 754268,
+      "sha256": "d4670d3c15580e2a1ef53debab32f08c8199fe6ddaf90af3f3aedb197d93e68d"
+    },
+    {
+      "path": "models/bodyparts3d/pulmonary/pulmonary-right.glb",
+      "bytes": 1330588,
+      "sha256": "62bb25db79270dbd6fe96598e9438d7bfca3592c5f7559cd1ea320e18bb16eca"
+    },
+    {
+      "path": "models/bodyparts3d/subscapular-arteries/subscapular-arteries.glb",
+      "bytes": 31116,
+      "sha256": "6e7ccebe78f6a8c89b556e5e1256d755801725590c4625bebd3fecd6d93f04b3"
     },
     {
       "path": "models/bodyparts3d/tentorium/tentorium.glb",
@@ -1497,8 +3241,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "bytes": 135325,
-      "sha256": "8ce80970bf9fdeb1edc55fdbd3ec4611ad039f7a7500aae79e3d34d47475f468"
+      "bytes": 135973,
+      "sha256": "ce7f2f206179f83c3a97ddb0880c54183c42956799e5069d45882a79c5fc468b"
     },
     {
       "path": "LICENSES/CC-BY-4.0.txt",
@@ -1522,8 +3266,8 @@
     },
     {
       "path": "models/bodyparts3d/credits.html",
-      "bytes": 2442,
-      "sha256": "9eac57499cc4fc0925d9e7fdd370390ed4df10cca6fb13974ef81180cf5b8ffc"
+      "bytes": 2620,
+      "sha256": "744934bbce85581d7bc4035cdd54ce9785248204780277f7de82deb64b972f61"
     }
   ]
 }

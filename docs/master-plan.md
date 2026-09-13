@@ -68,6 +68,21 @@ Latest specialist-chat review reports both anterior cerebellar edges accepted an
 
 ## Ordered delivery roadmap
 
+Latest integration slice, 13 September: the [thorax pilot](thorax-atlas-pilot.md)
+shares the original head/neck module, source-bound to Atlas
+`5b54f9dde33d0aca2cab8e0c00a6e831ac6530cd`. All 157 regional and nine nested
+thorax selections plus the prior 290/75 head/neck scope use 52 unchanged GLBs,
+including cardiac relationship and pulmonary airway contexts. No new permanent
+toolbar, anatomy, dependency, private imaging, lecture entitlement or clinical
+approval is introduced. Exact source/asset/link tests and 73 website tests pass;
+desktop dissection/Undo/extraction, nested cardiac/lung views, 390-pixel diaphragm
+notes and head/neck regression were sampled. The small embedded overview remains
+an observed framing issue, not a completed polish claim. Continue that correction,
+then abdomen with all nested contexts and independently licensed specimen dialogs;
+do not substitute root-only delivery. GitHub/D and private-publication outcome are
+recorded in the main task's `work/SHARED-REGIONAL-CHECKPOINT-20260913.md`. The full
+anatomy/teaching/cleared-Education goal remains active; splash behaviour is unchanged.
+
 | Step | Work | Completion evidence / gate |
 | --- | --- | --- |
 | 1 — Coordinate | Use this chat; maintain this plan, decision log, workspace map and recovery checkpoint. Keep specialist histories. | Files saved and GitHub/D recovery verified. Optional sidebar project setup remains manual. |
