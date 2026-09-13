@@ -2,6 +2,7 @@
 import { femoralComponentsFor } from '@/lib/femoral-components';
 import { cranialArteryComponentsFor } from '@/lib/cranial-artery-components';
 import './um-knee-entry.css';
+import { useWorkspaceSession } from './workspace-session';
 import './upper-limb-motor.css';
 import {
   useCallback,
@@ -242,10 +243,13 @@ export default function BodyExplorer({
     studyLink.status === 'none',
   );
   const [linkIssue, setLinkIssue] = useState<string | null>(null);
-  const [dissection, dispatch] = useReducer(dissectionReducer, {
+  const [dissection, setDissection] = useState({
     ...initialDissection,
     stageId: initialRegion === 'whole-body' ? 'free' : 'assembled',
   });
+  const dispatch = useCallback((action: Parameters<typeof dissectionReducer>[1]) => {
+    setDissection(current => dissectionReducer(current, action));
+  }, []);
   const [ghostRemoved, setGhostRemoved] = useState(false),
     [illustrated, setIllustrated] = useState(true);
   const [catalog, setCatalog] = useState<BodyCatalog | null>(null),
@@ -351,6 +355,24 @@ export default function BodyExplorer({
   const [practiceSampling, setPracticeSampling] =
     useState<PracticeSampling>('landmarks');
   const exam = practice.status === 'active';
+  const workspace = useWorkspaceSession(
+    () => ({ dissection, systems, explode, layout, inspection, plate, ghostRemoved,
+      anchorSkeleton, showOrigins, isolated, focus, regionalFraming, view, zoom,
+      camera: cameraCapture.current }),
+    state => {
+      setDissection(state.dissection); setSystems(state.systems); setExplode(state.explode);
+      setLayout(state.layout); setInspection(state.inspection); setPlate(state.plate);
+      setGhostRemoved(state.ghostRemoved); setAnchorSkeleton(state.anchorSkeleton);
+      setShowOrigins(state.showOrigins); setIsolated(state.isolated); setFocus(state.focus);
+      setRegionalFraming(state.regionalFraming); setView(state.view); setZoom(state.zoom);
+      cameraRestore.current = state.camera; setReset(n => n + 1);
+    },
+    () => ({ dissection: { ...initialDissection, stageId: initialRegion === 'whole-body' ? 'free' : 'assembled' },
+      systems: initialRegion === 'whole-body' ? initialSystems : allBodySystems,
+      explode: 0, layout: 'spatial' as BodyLayout, inspection: initialInspection, plate: false,
+      ghostRemoved: false, anchorSkeleton: false, showOrigins: false, isolated: false,
+      focus: false, regionalFraming: true, view: profile.stages[0].view, zoom: 1, camera: null }),
+  );
   useEffect(() => {
     if (eyeParent && (exam || eyeParent.id !== selectedId)) closeEyeLayers();
   }, [exam, selectedId, eyeParent, closeEyeLayers]);
@@ -396,6 +418,7 @@ export default function BodyExplorer({
             // Commit the linked selection with the loaded catalogue, before
             // mounting the scene. Never emit an imaging event from URL input.
             if (result.status === 'ready') {
+              if (result.focusId || result.nested) workspace.chooseMode('dissect');
               setSide(result.side);
               setSelectedId(result.selected.id);
               setSystems(allBodySystems);
@@ -730,6 +753,7 @@ export default function BodyExplorer({
         !resolveComponentImagingTarget(catalog, request, teachingTopic, side)
       )
         return;
+      workspace.chooseMode('dissect');
       cameraRestore.current = cameraCapture.current
         ? copyRecoveryCamera(cameraCapture.current)
         : null;
@@ -740,7 +764,7 @@ export default function BodyExplorer({
       if (target.study === 'eye') setEyeParent(parent);
       else setVentricleParent(parent);
     },
-    [exam, catalog, regionStructures, side, applySelection],
+    [exam, catalog, regionStructures, side, applySelection, workspace],
   );
   function changeStage(id: string) {
     if (
@@ -1195,6 +1219,7 @@ export default function BodyExplorer({
     };
   }
   function restoreView(state: StudyView) {
+    workspace.chooseMode('dissect');
     // The saved pose wins; do not reinterpret old full-source bookmarks as a
     // new regional preset. Camera capture uses the unchanged full-frame basis.
     setRegionalFraming(false);
@@ -1322,11 +1347,6 @@ export default function BodyExplorer({
         })}
       </div>
 
-      <WorkspaceOnly modes={['explore']} className="atlas-dissection-entry">
-        <WorkspaceModeButton mode="dissect">
-          Dissect this region
-        </WorkspaceModeButton>
-      </WorkspaceOnly>
       <WorkspaceOnly modes={['dissect']}>
         <details className="body-study-tools" open>
           <summary>
@@ -1360,7 +1380,7 @@ export default function BodyExplorer({
           onExplore={exploreMotorGroup}
         />
       </WorkspaceOnly>
-      <WorkspaceOnly modes={['explore', 'dissect']}>
+      <WorkspaceOnly modes={['dissect']}>
         {['spine', 'whole-body'].includes(initialRegion) && (
           <Button
             ref={backLayersLauncher}
@@ -1518,12 +1538,14 @@ export default function BodyExplorer({
           disabled={exam}
         />
       </WorkspaceOnly>
+      <WorkspaceOnly modes={['dissect']}>
       <StudyViews
         scope={studyScope}
         capture={captureView}
         restore={restoreView}
         disabled={exam || pending.length > 0}
       />
+      </WorkspaceOnly>
       <ImagingLink link={imagingLink} />
 
       <details className="body-coverage-tools">
@@ -1568,7 +1590,7 @@ export default function BodyExplorer({
   );
 
   return (
-    <AtlasWorkspace exam={exam} presentation={presentation}>
+    <AtlasWorkspace exam={exam} presentation={presentation} session={workspace}>
       <PracticeAttention answered={answered} exam={exam} />
       <header className="body-topbar" data-shared-header={sharedHeader}>
         {sharedHeader ? <RegionHeading title={title} count={regionStructures.length}
@@ -1791,6 +1813,7 @@ export default function BodyExplorer({
                 >
                   <Tags />
                 </Button>
+                <WorkspaceOnly modes={['dissect']} className="atlas-inline-mode">
                 <div className="body-explode">
                   <ExplodeStyleSelect
                     value={exam ? 'spatial' : layout}
@@ -1817,6 +1840,7 @@ export default function BodyExplorer({
                   />
                   <output>{explode}%</output>
                 </div>
+                </WorkspaceOnly>
                 <Button
                   size="icon"
                   variant="ghost"
@@ -2227,6 +2251,7 @@ export default function BodyExplorer({
                         Source-cleaned eye model · anatomical review pending.
                       </p>
                     )}
+                    <WorkspaceOnly modes={['dissect']}>
                     {!exam && eyeLayersFor(selected).length > 0 && (
                       <div className="body-selection-actions">
                         <Button
@@ -2286,6 +2311,7 @@ export default function BodyExplorer({
                           </Button>
                         </div>
                       )}
+                    </WorkspaceOnly>
                     <div className="body-selection-actions">
                       <Button
                         size="sm"
@@ -2299,6 +2325,7 @@ export default function BodyExplorer({
                         <Focus />
                         Isolate & frame
                       </Button>
+                      <WorkspaceOnly modes={['dissect']} className="atlas-inline-mode">
                       <Button
                         size="sm"
                         variant="outline"
@@ -2312,6 +2339,7 @@ export default function BodyExplorer({
                         <EyeOff />
                         Remove
                       </Button>
+                      </WorkspaceOnly>
                       <details className="atlas-more-actions">
                         <summary>More</summary>{' '}
                         <Button
@@ -2415,6 +2443,7 @@ export default function BodyExplorer({
                         );
                       }}
                     </GroupedAnatomyNotes>
+                    <WorkspaceOnly modes={['dissect']}>
                     <RelatedStudy
                       views={relatedViews}
                       selectedId={selected.id}
@@ -2467,6 +2496,7 @@ export default function BodyExplorer({
                       onSelect={select}
                       onShow={showVenousDrainage}
                     />
+                    </WorkspaceOnly>
                     <dl className="body-facts">
                       <div>
                         <dt>Region</dt>

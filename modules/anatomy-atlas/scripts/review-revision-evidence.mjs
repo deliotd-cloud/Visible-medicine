@@ -22,6 +22,7 @@ export const reviewDisplayPaths = [
   'app/shoulder-explorer.tsx',
   'app/shoulder-workspace.css',
   'app/atlas-workspace.tsx',
+  'app/workspace-session.ts',
   'app/atlas-workspace.css',
   'app/atlas-panel.css',
   'lib/atlas-panel-layout.ts',

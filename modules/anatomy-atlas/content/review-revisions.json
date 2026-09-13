@@ -56,7 +56,7 @@
     ],
     [
       "app/shoulder-explorer.tsx",
-      "a53a4b2e1352edac84d0eed9ba17db2088025ea08bf685dc9f8e2caaa84d24ac"
+      "3eab9ca1fa10b5207bc0ee6f2e38893488796477f60375b9cf22e4c013053ed3"
     ],
     [
       "app/shoulder-workspace.css",
@@ -64,11 +64,15 @@
     ],
     [
       "app/atlas-workspace.tsx",
-      "54df872c82b3d194d16afdeceaa0801fd3c85dff16ac4aed325f0dff35fb92c8"
+      "09cca795f30bea2587ac8ba9e0f79b09ebb70efb1666e036dcdeeab30d34a5e5"
+    ],
+    [
+      "app/workspace-session.ts",
+      "7a2a73775b9eebebc50df257cc520f2f33499ebb7130f496a4b2cdfb46fc379a"
     ],
     [
       "app/atlas-workspace.css",
-      "5cad6203770ad4201dca8fb550208753b60f9938088dfeacc2083585990a8ce5"
+      "c3a1128758c8e8afa6e475ce9d3f02939410a54cc63171529f8e25c01c0dc69e"
     ],
     [
       "app/atlas-panel.css",
@@ -193,47 +197,47 @@
   ],
   "revisions": {
     "vm:anatomy:upper-limb:shoulder:right:bone:scapula": {
-      "geometry": "06782fcd68497bc7cfb221977e4f17b24b7fccf895f5ec6e7f126706e4906237",
+      "geometry": "0caf9bb594afc723454193f2550e8cf3956cc8540dc2af7efce76909cca4d9dc",
       "teaching": "9830dba1ac8afa2b3d488e72d007d3b12eda4dd102527e9a63f6b81a4557a348",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:bone:humerus": {
-      "geometry": "3cb85a82505bda8dc47c377e44de4500cf34ab8561a0b8b9a8dae13867c91326",
+      "geometry": "d5590c7d814d2cb5414131379ecd7f07f7c82912caca27397d19ca65b6d2ca1d",
       "teaching": "fa7b66290bccd261156f67ea9299f4a620b05df8d6afd22f7b3dba9ee70ef35b",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:bone:clavicle": {
-      "geometry": "dfd5a198f4f2ca44fa878e02a51850737e6a17c443af1a05bad4e495dd6d1304",
+      "geometry": "fc8fa3b0d085c9abb2332c07837843843b6e37ad3adcd0363c0df96bd95dd1b1",
       "teaching": "462dda8c347cfb7dce3ba40217b6b7ebfcc89f90c45c6beccb6f6774c69c69f4",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:deltoid": {
-      "geometry": "9196bc822684dc12bd923fb89a76540936981d79d4f4b5f822839a9b651d91b1",
+      "geometry": "39d923c3c2ea3699e381082bda63f7e5792c2087e34c5c2e74ce0bd9981acd9e",
       "teaching": "4afe81669690b71d3957e55b5960f55a4396b481301d11e32fe2670b9fa42f11",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:supraspinatus": {
-      "geometry": "80419e196e3e56ef57547d6712f1486836e89d5c7670b9d99fd246d28fa6a092",
+      "geometry": "fd71c55c699a2603d942f7de0d94b8b786f0d4e65fd568ec2ecd11d734d7f915",
       "teaching": "64b7f8a8204e7bcd73281b475d573623c565ddb2cf2c5d1aac5484ef076513ec",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:infraspinatus": {
-      "geometry": "2e61fbed5847954c7867f08ec1499ff50bc3ca781aa720665e6c03534c4f638e",
+      "geometry": "df6b5a809b064f6158608565116b548027064629414ef764f4dfa0371668ad1f",
       "teaching": "4701ce2f9ee4bbf8cdc83cd7f2518ac88a0cfebe90593ba49869d556a80e2338",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:subscapularis": {
-      "geometry": "7c175c46c4b8694f5fee220fce69c561eb3b2bc375c188753a9cdbddd8392f61",
+      "geometry": "8815bc4c0768a1164f4b95b2a0679ccc10c01baeb3e9b24301e0b8eb618c8653",
       "teaching": "2e734adf238288e47b38f71100129480c4efb1d268f40e263ae7f8521f8a2afa",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:biceps-long-head": {
-      "geometry": "59ac599dbf0b94629640b3388eaf08b11451c46f41c58ef2aa6c74bb1e12bad9",
+      "geometry": "2eaa20e68a430617e8cae7e64ebac9474f971cbb846029f930052efdccc0e962",
       "teaching": "f1698d1f5f39172af3eafa8bbae6a2eea6e5215ed0ffe868555b564fefe1f03f",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:teres-minor": {
-      "geometry": "b4d2b0b49fb54a7aa38dcacf0ea1e21597fab0f19f5efb2ca6101da3f8dbd65c",
+      "geometry": "4e7f287f9af3b9678f52596aa8380776d3f58b9d4e2bf2466b6f1a13adae3627",
       "teaching": "f4a6cad130df40e6990cde48a5dea238bbff1ad7e86758331b32efc31f9e2a6b",
       "imaging": null
     }

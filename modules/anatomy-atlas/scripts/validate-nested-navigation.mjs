@@ -504,6 +504,7 @@ for (const target of targets) {
     if (!accepted) link.request.nested.sourceHash = '0'.repeat(64);
     const env = {
       data: raw,
+      workspace: { chooseMode: mode => { changes.workspaceMode = mode; } },
       bodyDisplayCatalog: api.bodyDisplayCatalog,
       bodyLinkEntries: () => {},
       active: true,
@@ -541,6 +542,7 @@ for (const target of targets) {
     same(changes.setLinkedStudyReady, true);
     same(env.appliedStudyLink.current, true);
     if (accepted) {
+      same(changes.workspaceMode, 'dissect');
       same(changes.setSelectedId, target.parentId);
       same(changes.setNestedSelection.structureId, target.structureId);
       same(
@@ -557,6 +559,7 @@ for (const target of targets) {
         'Already applied URL cannot reopen closed work',
       );
     } else {
+      same(changes.workspaceMode, undefined);
       same(changes.setSelectedId, undefined);
       same(changes.setNestedSelection, undefined);
       check(changes.setLinkIssue);
@@ -578,6 +581,7 @@ for (const target of targets) {
   let focused = 0;
   const env = {
     request: target,
+    workspace: { chooseMode: mode => events.push(['mode', mode]) },
     launcher: { focus: () => focused++ },
     exam: false,
     catalog,
@@ -609,6 +613,7 @@ for (const target of targets) {
   }
   execute('openNested', env);
   same(events, [
+    ['mode', 'dissect'],
     ['parent', target.parentId],
     ['nested', target.structureId],
     [target.study === 'eye' ? 'eye' : 'brain', target.parentId],

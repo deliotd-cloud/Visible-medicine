@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { WorkspaceOnly } from './atlas-workspace';
 import { ChevronRight, Network } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
@@ -23,13 +24,13 @@ export function VesselVisibilityOptions({ structures, visibleIds, enabled, disab
         onCheckedChange={value => { if (!disabled && enabled) onVisibility(group.kind, value); }} />
       <span>{group.label}</span><small>{group.shown}/{group.total}</small>
     </label>)}
-    <div className="vessel-system-history">
+    <WorkspaceOnly modes={['dissect']}><div className="vessel-system-history">
       <Button type="button" size="sm" variant="outline" disabled={disabled || !canUndo}
         onClick={() => { if (!disabled && canUndo) onUndo(); }}>Undo</Button>
       <Button type="button" size="sm" variant="outline" disabled={disabled || !canRedo}
         onClick={() => { if (!disabled && canRedo) onRedo(); }}>Redo</Button>
-    </div>
-    <p>{enabled ? 'Show restores this vessel type in the current region and side. Undo/Redo uses your dissection history.' : 'Turn on Vessels to change these groups.'}</p>
+    </div></WorkspaceOnly>
+    <p>{enabled ? 'Show or hide this vessel type in the current region and side.' : 'Turn on Vessels to change these groups.'}</p>
   </div>;
 }
 export function VesselSystemControl(props: VesselControlsProps) {

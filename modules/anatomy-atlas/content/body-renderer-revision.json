@@ -50,11 +50,11 @@
     },
     {
       "path": "app/atlas-workspace.css",
-      "sha256": "5cad6203770ad4201dca8fb550208753b60f9938088dfeacc2083585990a8ce5"
+      "sha256": "c3a1128758c8e8afa6e475ce9d3f02939410a54cc63171529f8e25c01c0dc69e"
     },
     {
       "path": "app/atlas-workspace.tsx",
-      "sha256": "54df872c82b3d194d16afdeceaa0801fd3c85dff16ac4aed325f0dff35fb92c8"
+      "sha256": "09cca795f30bea2587ac8ba9e0f79b09ebb70efb1666e036dcdeeab30d34a5e5"
     },
     {
       "path": "app/back-layers-study.tsx",
@@ -74,7 +74,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "c6e2765aca319bf3737c87f87c269ad3ac23bf287224fdcbdaab56f14f6d3e01"
+      "sha256": "36c50ce1cca32014392b1a16438209219e19aece16def97e3f3dcf887633fe76"
     },
     {
       "path": "app/body-scene.tsx",
@@ -326,7 +326,11 @@
     },
     {
       "path": "app/vessel-system-control.tsx",
-      "sha256": "35d7b68b657424def8b923d7c18f6ba69cf39fcf020d04ec4ab6e5a3b6279819"
+      "sha256": "339c5d43af81240d1ce2ca3a032983b4134b32c14d8911efe19b8bd6edb8787c"
+    },
+    {
+      "path": "app/workspace-session.ts",
+      "sha256": "7a2a73775b9eebebc50df257cc520f2f33499ebb7130f496a4b2cdfb46fc379a"
     },
     {
       "path": "components/ui/button.tsx",
@@ -710,7 +714,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "b69626a74dc58b5abae663e83cfdc00821fa3dd760ab61c0e17d14fe1fcafef6"
+      "sha256": "affe43c6b546f55c4486fd0cc7993012aed27d34ffe04af244a8f2ddbd3b71a0"
     },
     {
       "path": "content/shoulder-arm-muscle-imaging-pins.json",
@@ -2057,5 +2061,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "afbab649ef4dd9ea0cc704694a2f3d1d3dcf2313924179f77fbac25a193b0768"
+  "sha256": "3c2740e020fa13376abad39f3073805e6664d52a68a4e6c3b117c9b193f7e3f8"
 }

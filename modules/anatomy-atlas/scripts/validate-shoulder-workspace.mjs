@@ -37,6 +37,13 @@ const output = await build({
     {
       name: 'shoulder-entry-fixtures',
       setup(api) {
+        api.onLoad({ filter: /workspace-session\.ts$/ }, async () => ({
+          loader: 'ts',
+          contents: (await fs.readFile('app/workspace-session.ts', 'utf8')).replace(
+            "useState<WorkspaceMode>('explore')",
+            'useState<WorkspaceMode>(globalThis.__mode)',
+          ),
+        }));
         api.onLoad({ filter: /shoulder-explorer\.tsx$/ }, () => ({
           loader: 'tsx',
           contents: source
@@ -156,7 +163,7 @@ for (const selected of structures) {
       'Search name or landmark',
       'Structures · ',
       'Inspect deeper',
-      'Saved views &amp; imaging link',
+      'Saved dissection views',
       'Illustration plates',
       'Review workspace',
     ])
@@ -187,7 +194,10 @@ for (const selected of structures) {
     const gates = [
       ...rail.matchAll(/class="atlas-mode-panel "( hidden="")?/g),
     ].map((m) => Boolean(m[1]));
-    same(gates, [mode !== 'dissect', mode === 'practice', mode !== 'dissect']);
+    same(gates, [mode !== 'dissect', mode !== 'dissect', mode === 'practice', mode !== 'dissect']);
+    const inlineGates = [...model.matchAll(/class="atlas-mode-panel atlas-inline-mode"( hidden="")?/g)]
+      .map(m => Boolean(m[1]));
+    same(inlineGates, [mode !== 'dissect', mode !== 'dissect'], 'Layer/explode controls only in Dissect');
   }
   context.__mode = 'explore';
   for (const [group, tabs] of Object.entries(groups))

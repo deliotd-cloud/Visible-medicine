@@ -49,6 +49,7 @@ import {
 } from '@/components/ui/combobox';
 import { Slider } from '@/components/ui/slider';
 import { ExplodeStyleSelect } from './explode-style-select';
+import { useWorkspaceSession } from './workspace-session';
 import type { BodyLayout } from '@/lib/body-arrangement';
 import { Switch } from '@/components/ui/switch';
 import {
@@ -152,7 +153,7 @@ export default function ShoulderExplorer({
   const [modelReady, setModelReady] = useState(false);
   const displayReady = rendererReady(rendererHealth) && modelReady;
   const [view, setView] = useState<CameraView>('posterior');
-  const [layer, setLayer] = useState<AnatomyLayer>('cuff');
+  const [layer, setLayer] = useState<AnatomyLayer>('surface');
   const [zoom, setZoom] = useState(1);
   const [zoomStep, setZoomStep] = useState(0);
   const [visibleSystems, setVisibleSystems] = useState<
@@ -171,6 +172,22 @@ export default function ShoulderExplorer({
   const [syncPlane, setSyncPlane] = useState(false);
   const [resetNonce, setResetNonce] = useState(0);
   const [mode, setMode] = useState<Mode>('study');
+  const workspace = useWorkspaceSession(
+    () => ({ layer, visibleSystems, explode, layout, inspection, plate, anchorSkeleton,
+      showOrigins, isolated, syncPlane, view, zoom, camera: cameraCapture.current }),
+    state => {
+      setLayer(state.layer); setVisibleSystems(state.visibleSystems); setExplode(state.explode);
+      setLayout(state.layout); setInspection(state.inspection); setPlate(state.plate);
+      setAnchorSkeleton(state.anchorSkeleton); setShowOrigins(state.showOrigins);
+      setIsolated(state.isolated); setSyncPlane(state.syncPlane); setView(state.view);
+      setZoom(state.zoom); cameraRestore.current = state.camera; setResetNonce(n => n + 1);
+    },
+    next => ({ layer: (next === 'dissect' ? 'cuff' : 'surface') as AnatomyLayer,
+      visibleSystems: { skeleton: true, muscles: true, 'soft-tissue': true },
+      explode: 0, layout: 'spatial' as BodyLayout, inspection: initialInspection, plate: false,
+      anchorSkeleton: false, showOrigins: false, isolated: false, syncPlane: false,
+      view: 'posterior' as CameraView, zoom: 1, camera: null }),
+  );
   const [shoulderPractice, practiceDispatch] = useReducer(
     practiceReducer,
     initialPractice,
@@ -230,6 +247,7 @@ export default function ShoulderExplorer({
     };
   }
   function restoreView(state: StudyView) {
+    workspace.chooseMode('dissect');
     setMode('study');
     practiceDispatch({ type: 'dismiss' });
     setSyncPlane(false);
@@ -461,6 +479,8 @@ export default function ShoulderExplorer({
               typeof config.isolateSelected !== 'boolean'
             )
               throw new Error('isolateSelected must be boolean');
+            if (config.layer !== undefined || config.explode !== undefined)
+              workspace.chooseMode('dissect');
             if (typeof config.view === 'string')
               setView(config.view as CameraView);
             if (typeof config.layer === 'string')
@@ -484,7 +504,7 @@ export default function ShoulderExplorer({
     };
     void register().catch(reportError);
     return () => lifecycle.abort();
-  }, [selectStructure]);
+  }, [selectStructure, workspace]);
 
   const answerCorrect = answerId === currentQuestion.answer;
   const answerName = answerId ? structureById.get(answerId)?.name : '';
@@ -512,7 +532,7 @@ export default function ShoulderExplorer({
 
   return (
     <TooltipProvider>
-      <AtlasWorkspace exam={mode === 'exam'} className="shoulder-workspace" presentation={presentation}>
+      <AtlasWorkspace exam={mode === 'exam'} className="shoulder-workspace" presentation={presentation} session={workspace}>
         <PracticeAttention
           exam={mode === 'exam'}
           answered={Boolean(answerId)}
@@ -688,16 +708,18 @@ export default function ShoulderExplorer({
                       onPlate={changePlate}
                     />
                   </WorkspaceOnly>
-                  <WorkspaceOnly modes={['explore', 'dissect']}>
+                  <WorkspaceOnly modes={['dissect']}>
                     <details className="shoulder-tool-group">
-                      <summary>Saved views & imaging link</summary>
+                      <summary>Saved dissection views</summary>
                       <StudyViews
                         scope={studyScope}
                         capture={captureView}
                         restore={restoreView}
                       />
-                      <ImagingLink link={imagingLink} />
                     </details>
+                  </WorkspaceOnly>
+                  <WorkspaceOnly modes={['explore', 'dissect']}>
+                    <ImagingLink link={imagingLink} />
                   </WorkspaceOnly>
                   <WorkspaceOnly modes={['dissect']}>
                     <details className="shoulder-tool-group">
@@ -853,6 +875,7 @@ export default function ShoulderExplorer({
                   )}
                 </SelectContent>
               </Select>
+              <WorkspaceOnly modes={['dissect']} className="atlas-inline-mode">
               <Select
                 value={layer}
                 disabled={mode === 'exam'}
@@ -887,6 +910,7 @@ export default function ShoulderExplorer({
                   <SelectItem value="bones">Bones</SelectItem>
                 </SelectContent>
               </Select>
+              </WorkspaceOnly>
             </div>
             {mode === 'study' && (
               <SelectionVisibilityNotice
@@ -1005,6 +1029,7 @@ export default function ShoulderExplorer({
                     Reference plane illustration — not a scan
                   </TooltipContent>
                 </Tooltip>
+                <WorkspaceOnly modes={['dissect']} className="atlas-inline-mode">
                 <span className="toolbar-divider" />
                 <div className="explode-control">
                   <ExplodeStyleSelect
@@ -1033,6 +1058,7 @@ export default function ShoulderExplorer({
                   <output>{Math.round(explode)}%</output>
                 </div>
                 <span className="toolbar-divider" />
+                </WorkspaceOnly>
                 <Tooltip>
                   <TooltipTrigger
                     render={

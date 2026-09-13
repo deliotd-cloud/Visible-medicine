@@ -75,11 +75,13 @@ export function AtlasWorkspace({
   exam,
   className = '',
   presentation = 'standalone',
+  session,
 }: {
   children: ReactNode;
   exam: boolean;
   className?: string;
   presentation?: 'standalone' | 'panel';
+  session?: { mode: WorkspaceMode; chooseMode: (mode: WorkspaceMode) => void };
 }) {
   const boundary = useRef<HTMLElement | null>(null);
   const [measured, setMeasured] = useState(() => atlasPanelLayout(0, 0));
@@ -118,15 +120,16 @@ export function AtlasWorkspace({
         : { ...current, [info ? 'info' : 'tools']: false },
     );
   }, []);
-  const mode = exam ? 'practice' : chosen;
+  const mode = exam ? 'practice' : session?.mode ?? chosen;
   const chooseMode = useCallback(
     (next: WorkspaceMode) => {
       if (exam && next !== 'practice') return;
-      setChosen(next);
+      if (session) session.chooseMode(next);
+      else setChosen(next);
       if (next === 'dissect') setPanelOpen(false, true);
       if (next === 'practice') setPanelOpen(true, true);
     },
-    [exam, setPanelOpen],
+    [exam, setPanelOpen, session],
   );
   const showInfo = useCallback(() => setPanelOpen(true, true), [setPanelOpen]);
   const toggleFocus = useCallback(() => {
@@ -453,7 +456,6 @@ export function AtlasSearch({
     }
     if (entry.action.type === 'dissect') {
       transferringFocus.current = true;
-      if (workspace.mode === 'practice') workspace.chooseMode('explore');
       onDissect(entry.action.target, launcher.current);
     } else if (entry.action.type === 'select') {
       transferringFocus.current = workspace.focusView ||
