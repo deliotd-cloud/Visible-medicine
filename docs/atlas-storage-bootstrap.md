@@ -24,3 +24,10 @@ evidence of clinical approval or full-goal completion.
 Roll forward to the preserved development tree after storage is verified, keeping
 an append-only Git history and all prior release artifacts. Never force-push or
 replace newer development files with this temporary learner snapshot.
+
+The full-download follow-up copies the maintenance component, bounded verifier,
+its four regression groups and the storage note exactly from development
+`d2d4441bff79fa570f8528a4d6a1b4c586983a3c`. It preserves every learner-facing
+file and the same 44-model transport. All 59 registered models passed a fresh
+live owner-session HEAD check before this follow-up; actual complete downloads
+are checked separately after publication. No learner routing is activated here.
