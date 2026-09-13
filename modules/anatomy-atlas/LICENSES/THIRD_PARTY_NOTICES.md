@@ -528,6 +528,8 @@ The dental/orbital extension adds 32 official BodyParts3D v4 source definitions/
 
 Female pelvic support teaching (12 September 2026) adds original brief factual synthesis and citation links to Texas Tech anatomy, ESHRE and ESUR guidance. No reference diagrams, articles, tables, clinical datasets or quoted passages are imported. Those sources retain their own rights; citing them grants no redistribution licence. No package, model, font, texture or paid service is added. The HRA model and its CC BY 4.0 notice remain unchanged. See `docs/FEMALE_PELVIC_SUPPORT_TEACHING.md`.
 
+Shoulder-and-arm muscle imaging teaching (13 September 2026) adds original brief synthesis and reading links to ESSR, ACR/RSNA and named anatomy/imaging publications. Existing authored attachment notes are reused. No publisher prose, figure, scan, table, model, dataset, acquisition protocol or question bank is redistributed; reading references do not grant commercial reuse of linked material. Original notes/code retain MIT terms and existing BodyParts3D CC BY 4.0 notices remain. No dependency, font, texture, paid API or mandatory service is added. See `docs/SHOULDER_ARM_MUSCLE_IMAGING.md` for the exact draft scope and radiologist-review requirements.
+
 Run:
 
 ```bash

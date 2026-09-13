@@ -1,0 +1,35 @@
+{
+  "baselineSource": "b18335e1841f14ec631d2434a52f5d23638d9225",
+  "groups": 20,
+  "sourceSelections": 32,
+  "addedDraftPlacements": 96,
+  "modalities": {
+    "ct": 32,
+    "mri": 32,
+    "ultrasound": 32
+  },
+  "unchangedTopics": 9813,
+  "bodySchemaRecords": 1101,
+  "actualNoteRenders": 96,
+  "rejectedSourceTopicCombinations": 1440,
+  "uniqueReferenceFacts": 63,
+  "sourceWordCounts": {
+    "mri": 172,
+    "girdleMRI": 102,
+    "scapularUS": 90,
+    "brachialisUS": 22,
+    "pectoralRelations": 49,
+    "uncommonUS": 66,
+    "shoulderMRI": 124,
+    "shoulderUS": 162,
+    "subscapularisMRI": 51,
+    "teresMRI": 29,
+    "elbowUS": 70
+  },
+  "sourceGeometryChanged": false,
+  "currentApprovalRecordsChanged": false,
+  "clinicalApproval": false,
+  "imagesImported": false,
+  "imagingConnected": false,
+  "browserOrDeviceAcceptance": false
+}

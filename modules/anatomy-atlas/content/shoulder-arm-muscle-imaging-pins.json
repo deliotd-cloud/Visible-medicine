@@ -1,0 +1,2708 @@
+{
+  "sourceCommit": "b18335e1841f14ec631d2434a52f5d23638d9225",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "shoulder-arm-muscles",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-muscles.glb",
+      "bytes": 2623088,
+      "sha256": "01c2e96da438f1761a3e6d6121f54e04c866073d396111ec6e018b0cc689a3e8",
+      "structures": 24
+    },
+    {
+      "id": "shoulder-arm-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-muscles-dissection.glb",
+      "bytes": 510384,
+      "sha256": "fa709d07df413d2228065f153b6f8f7d951ffa03365052c56e920914d0376b4d",
+      "structures": 16
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-serratus-anterior",
+        "fmaId": "FMA13398",
+        "name": "Right serratus anterior",
+        "sourceName": "right serratus anterior",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles",
+        "nodeName": "FMA13398",
+        "bounds": {
+          "min": [
+            -1.4439200162887573,
+            2.7816002368927,
+            -0.5526406168937683
+          ],
+          "max": [
+            -0.5772969722747803,
+            5.483799934387207,
+            1.0759199857711792
+          ]
+        },
+        "center": [
+          -1.0106084942817688,
+          4.132700085639954,
+          0.26163968443870544
+        ],
+        "anchor": [
+          -1.2965699434280396,
+          4.167700290679932,
+          0.2574089765548706
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1459",
+            "sha256": "33f4ae8c7a84785e2bc5f4f21432d13de0805e485a29f3e6762bac6f85cb61d5"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "serratus-anterior",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-serratus-anterior",
+        "fmaId": "FMA13399",
+        "name": "Left serratus anterior",
+        "sourceName": "left serratus anterior",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles",
+        "nodeName": "FMA13399",
+        "bounds": {
+          "min": [
+            0.5772979855537415,
+            2.7816002368927,
+            -0.5526406168937683
+          ],
+          "max": [
+            1.4439200162887573,
+            5.483799934387207,
+            1.0759199857711792
+          ]
+        },
+        "center": [
+          1.0106090009212494,
+          4.132700085639954,
+          0.26163968443870544
+        ],
+        "anchor": [
+          1.2965699434280396,
+          4.167700290679932,
+          0.2574089765548706
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1459M",
+            "sha256": "cb0e133829295b809e7dccc072318f335e34ccb3c33c80fbc68b8d6da327b7cb"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "serratus-anterior",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-anconeus",
+        "fmaId": "FMA37705",
+        "name": "Right anconeus",
+        "sourceName": "right anconeus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles",
+        "nodeName": "FMA37705",
+        "bounds": {
+          "min": [
+            -2.2930800914764404,
+            1.5953302383422852,
+            -0.08177898079156876
+          ],
+          "max": [
+            -2.0633599758148193,
+            2.6089000701904297,
+            0.17017997801303864
+          ]
+        },
+        "center": [
+          -2.17822003364563,
+          2.1021151542663574,
+          0.04420049861073494
+        ],
+        "anchor": [
+          -2.1931700706481934,
+          2.0896997451782227,
+          0.025242004543542862
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1485",
+            "sha256": "5c2e838a39547c4cdbb799cd5a54258d4ff76ab54b2859aecbfae2ba4588c5d4"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "anconeus",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-anconeus",
+        "fmaId": "FMA37706",
+        "name": "Left anconeus",
+        "sourceName": "left anconeus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles",
+        "nodeName": "FMA37706",
+        "bounds": {
+          "min": [
+            2.0633599758148193,
+            1.5953302383422852,
+            -0.08177898079156876
+          ],
+          "max": [
+            2.2930800914764404,
+            2.6089000701904297,
+            0.17017997801303864
+          ]
+        },
+        "center": [
+          2.17822003364563,
+          2.1021151542663574,
+          0.04420049861073494
+        ],
+        "anchor": [
+          2.1931700706481934,
+          2.0896997451782227,
+          0.025242004543542862
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1485M",
+            "sha256": "4ca0901654d56656e4da354560abefb85bb958b3d786c148b5bb510fea106abf"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "anconeus",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-brachialis",
+        "fmaId": "FMA37668",
+        "name": "Right brachialis",
+        "sourceName": "right brachialis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles",
+        "nodeName": "FMA37668",
+        "bounds": {
+          "min": [
+            -2.351210117340088,
+            1.9536101818084717,
+            0.10569698363542557
+          ],
+          "max": [
+            -1.7638499736785889,
+            4.201999664306641,
+            0.36396002769470215
+          ]
+        },
+        "center": [
+          -2.0575300455093384,
+          3.077804923057556,
+          0.23482850566506386
+        ],
+        "anchor": [
+          -2.0775399208068848,
+          3.066899299621582,
+          0.2378140240907669
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1486",
+            "sha256": "be5f40b153fd6ce0c8c274eb4c26be8d1a29b4bbe75dd0e4a0dfe5c4d251fa03"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "brachialis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-brachialis",
+        "fmaId": "FMA37669",
+        "name": "Left brachialis",
+        "sourceName": "left brachialis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles",
+        "nodeName": "FMA37669",
+        "bounds": {
+          "min": [
+            1.7638499736785889,
+            1.9536101818084717,
+            0.10569698363542557
+          ],
+          "max": [
+            2.351210117340088,
+            4.201999664306641,
+            0.3639589548110962
+          ]
+        },
+        "center": [
+          2.0575300455093384,
+          3.077804923057556,
+          0.23482796922326088
+        ],
+        "anchor": [
+          2.0775301456451416,
+          3.066899299621582,
+          0.2378140240907669
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1486M",
+            "sha256": "cedf106a4917deab99f86f077dde7d34d0672dbbb74f30652a4f81f75d7ef180"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "brachialis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-coracobrachialis",
+        "fmaId": "FMA37665",
+        "name": "Right coracobrachialis",
+        "sourceName": "right coracobrachialis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles",
+        "nodeName": "FMA37665",
+        "bounds": {
+          "min": [
+            -1.8942599296569824,
+            3.7013001441955566,
+            0.16860496997833252
+          ],
+          "max": [
+            -1.301509976387024,
+            5.27869987487793,
+            0.561750054359436
+          ]
+        },
+        "center": [
+          -1.5978849530220032,
+          4.490000009536743,
+          0.3651775121688843
+        ],
+        "anchor": [
+          -1.567870020866394,
+          4.435600757598877,
+          0.4145210385322571
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1488",
+            "sha256": "7eb9835056883a0e35954d39ff930c4c8c32d41db000e9f0d656e3c663401e56"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "coracobrachialis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-coracobrachialis",
+        "fmaId": "FMA37666",
+        "name": "Left coracobrachialis",
+        "sourceName": "left coracobrachialis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles",
+        "nodeName": "FMA37666",
+        "bounds": {
+          "min": [
+            1.301509976387024,
+            3.7013001441955566,
+            0.16860496997833252
+          ],
+          "max": [
+            1.8942599296569824,
+            5.27869987487793,
+            0.561750054359436
+          ]
+        },
+        "center": [
+          1.5978849530220032,
+          4.490000009536743,
+          0.3651775121688843
+        ],
+        "anchor": [
+          1.567870020866394,
+          4.435600757598877,
+          0.4145210385322571
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1488M",
+            "sha256": "4004a378ca0d8be2924ce0b614fa19a4819804977e374e7cebcd5faa1cd7aa6b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "coracobrachialis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-infraspinatus-muscle",
+        "fmaId": "FMA32548",
+        "name": "Left infraspinatus muscle",
+        "sourceName": "left infraspinatus muscle",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles",
+        "nodeName": "FMA32548",
+        "bounds": {
+          "min": [
+            0.6025840044021606,
+            4.065300464630127,
+            -0.5366613268852234
+          ],
+          "max": [
+            1.8905000686645508,
+            5.309799671173096,
+            0.2708699703216553
+          ]
+        },
+        "center": [
+          1.2465420365333557,
+          4.687550067901611,
+          -0.13289567828178406
+        ],
+        "anchor": [
+          1.2613999843597412,
+          4.721199989318848,
+          -0.2147030085325241
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1500M",
+            "sha256": "9013158a3c598eb6dbf95dcaf72da439721dec4d3ebc37f660db9c2748f1e42e"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "infraspinatus",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-subscapularis",
+        "fmaId": "FMA13415",
+        "name": "Left subscapularis",
+        "sourceName": "left subscapularis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles",
+        "nodeName": "FMA13415",
+        "bounds": {
+          "min": [
+            0.6318219900131226,
+            3.9516003131866455,
+            -0.47242170572280884
+          ],
+          "max": [
+            1.6611700057983398,
+            5.248000621795654,
+            0.4995500147342682
+          ]
+        },
+        "center": [
+          1.1464959979057312,
+          4.59980046749115,
+          0.013564154505729675
+        ],
+        "anchor": [
+          1.1621499061584473,
+          4.628599643707275,
+          -0.03496498242020607
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1504M",
+            "sha256": "926fe07c8cf1056aa3aedda2f3a02a5027f4ef24cc5d41ba1359c53eedce1bc6"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "subscapularis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-supraspinatus",
+        "fmaId": "FMA32545",
+        "name": "Left supraspinatus",
+        "sourceName": "left supraspinatus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles",
+        "nodeName": "FMA32545",
+        "bounds": {
+          "min": [
+            0.638759970664978,
+            5.073399543762207,
+            -0.3703869879245758
+          ],
+          "max": [
+            1.884429931640625,
+            5.423699855804443,
+            0.41901299357414246
+          ]
+        },
+        "center": [
+          1.2615949511528015,
+          5.248549699783325,
+          0.024313002824783325
+        ],
+        "anchor": [
+          1.2605500221252441,
+          5.209000110626221,
+          0.04334400221705437
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1506M",
+            "sha256": "6d6741ab840272a59d50c59cd87ccfa676e1f72fa9b600bba06bf9c24d1e01fe"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "supraspinatus",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-teres-major",
+        "fmaId": "FMA32551",
+        "name": "Right teres major",
+        "sourceName": "right teres major",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles",
+        "nodeName": "FMA32551",
+        "bounds": {
+          "min": [
+            -1.7220900058746338,
+            3.8965003490448,
+            -0.5155565142631531
+          ],
+          "max": [
+            -0.8614250421524048,
+            4.853499889373779,
+            0.2955690026283264
+          ]
+        },
+        "center": [
+          -1.2917575240135193,
+          4.3750001192092896,
+          -0.10999375581741333
+        ],
+        "anchor": [
+          -1.2664999961853027,
+          4.422800064086914,
+          -0.13644100725650787
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1507",
+            "sha256": "217aa2d39fdaa682998c8a1a1ffe9c8b37fed881edbbeb8ed5c633fa1541eaac"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "teres-major",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-teres-major",
+        "fmaId": "FMA32552",
+        "name": "Left teres major",
+        "sourceName": "left teres major",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles",
+        "nodeName": "FMA32552",
+        "bounds": {
+          "min": [
+            0.8614250421524048,
+            3.8965003490448,
+            -0.5155565142631531
+          ],
+          "max": [
+            1.7220900058746338,
+            4.853499889373779,
+            0.2955690026283264
+          ]
+        },
+        "center": [
+          1.2917575240135193,
+          4.3750001192092896,
+          -0.10999375581741333
+        ],
+        "anchor": [
+          1.2664999961853027,
+          4.42270040512085,
+          -0.13644100725650787
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1507M",
+            "sha256": "967a771f0d2e0950adfe251ac14b4878f9b12a3aacb16cbf472dac94db38519d"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "teres-major",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-teres-minor",
+        "fmaId": "FMA32554",
+        "name": "Left teres minor",
+        "sourceName": "left teres minor",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles",
+        "nodeName": "FMA32554",
+        "bounds": {
+          "min": [
+            1.0540900230407715,
+            4.205600738525391,
+            -0.3759379982948303
+          ],
+          "max": [
+            1.9055498838424683,
+            5.169200420379639,
+            0.30310600996017456
+          ]
+        },
+        "center": [
+          1.4798199534416199,
+          4.687400579452515,
+          -0.03641599416732788
+        ],
+        "anchor": [
+          1.5616999864578247,
+          4.759100437164307,
+          -0.10894599556922913
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1508M",
+            "sha256": "4b07345bef6658a27bac6b2c7c2c52307bc769a804a80e7e657ce40e03427a17"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "teres-minor",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-levator-scapulae",
+        "fmaId": "FMA32540",
+        "name": "Right levator scapulae",
+        "sourceName": "right levator scapulae",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles",
+        "nodeName": "FMA32540",
+        "bounds": {
+          "min": [
+            -0.8107860088348389,
+            5.093199253082275,
+            -0.37912699580192566
+          ],
+          "max": [
+            -0.21074800193309784,
+            6.685600757598877,
+            0.32453498244285583
+          ]
+        },
+        "center": [
+          -0.5107670053839684,
+          5.889400005340576,
+          -0.027296006679534912
+        ],
+        "anchor": [
+          -0.4235309958457947,
+          5.836700439453125,
+          0.005924987606704235
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1532",
+            "sha256": "ee7897cbc5cde540e9cc29b03617d90f1b3caaebee4489f6590ee9c4632dcd42"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "levator-scapulae",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-levator-scapulae",
+        "fmaId": "FMA32541",
+        "name": "Left levator scapulae",
+        "sourceName": "left levator scapulae",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles",
+        "nodeName": "FMA32541",
+        "bounds": {
+          "min": [
+            0.21074800193309784,
+            5.093199253082275,
+            -0.37912699580192566
+          ],
+          "max": [
+            0.8107860088348389,
+            6.685600757598877,
+            0.32453498244285583
+          ]
+        },
+        "center": [
+          0.5107670053839684,
+          5.889400005340576,
+          -0.027296006679534912
+        ],
+        "anchor": [
+          0.4235309958457947,
+          5.836700439453125,
+          0.00592399574816227
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1532M",
+            "sha256": "cd98c83bc88a183c77b3eb10ce396f805843444d6f31053b1e3fb04f34647372"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "levator-scapulae",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-rhomboid-major",
+        "fmaId": "FMA13381",
+        "name": "Right rhomboid major",
+        "sourceName": "right rhomboid major",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles",
+        "nodeName": "FMA13381",
+        "bounds": {
+          "min": [
+            -0.895035982131958,
+            3.881899356842041,
+            -0.5609220862388611
+          ],
+          "max": [
+            0.0077675702050328255,
+            5.616600513458252,
+            -0.27901899814605713
+          ]
+        },
+        "center": [
+          -0.4436342059634626,
+          4.7492499351501465,
+          -0.4199705421924591
+        ],
+        "anchor": [
+          -0.4482319951057434,
+          4.739699840545654,
+          -0.42545831203460693
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1536",
+            "sha256": "81b84d6d2e7c859004ee2d71f8fef2768ec422fbace3967d54e3f3b2965bdb89"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "rhomboid-major",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-rhomboid-major",
+        "fmaId": "FMA13382",
+        "name": "Left rhomboid major",
+        "sourceName": "left rhomboid major",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles",
+        "nodeName": "FMA13382",
+        "bounds": {
+          "min": [
+            -0.0077675702050328255,
+            3.881899356842041,
+            -0.5609220862388611
+          ],
+          "max": [
+            0.895035982131958,
+            5.616600513458252,
+            -0.27901899814605713
+          ]
+        },
+        "center": [
+          0.4436342059634626,
+          4.7492499351501465,
+          -0.4199705421924591
+        ],
+        "anchor": [
+          0.4482319951057434,
+          4.739699840545654,
+          -0.42545831203460693
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1536M",
+            "sha256": "89601e72c95415990585118c08e0fb1b9c388f5bfa2b45ac1de116759f663701"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "rhomboid-major",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-rhomboid-minor",
+        "fmaId": "FMA13383",
+        "name": "Right rhomboid minor",
+        "sourceName": "right rhomboid minor",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles",
+        "nodeName": "FMA13383",
+        "bounds": {
+          "min": [
+            -0.6170539855957031,
+            4.808000564575195,
+            -0.451839804649353
+          ],
+          "max": [
+            0.009160500019788742,
+            5.875100135803223,
+            -0.1392359882593155
+          ]
+        },
+        "center": [
+          -0.3039467427879572,
+          5.341550350189209,
+          -0.29553789645433426
+        ],
+        "anchor": [
+          -0.3133779764175415,
+          5.3555006980896,
+          -0.3166449964046478
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1537",
+            "sha256": "acbd2dcd51879085bb2ec7d12b45c0ba2514ce3a2a1bb680bcf78732a1f688ff"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "rhomboid-minor",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-rhomboid-minor",
+        "fmaId": "FMA13384",
+        "name": "Left rhomboid minor",
+        "sourceName": "left rhomboid minor",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles",
+        "nodeName": "FMA13384",
+        "bounds": {
+          "min": [
+            -0.009160500019788742,
+            4.808000564575195,
+            -0.451839804649353
+          ],
+          "max": [
+            0.6170539855957031,
+            5.875100135803223,
+            -0.1392359882593155
+          ]
+        },
+        "center": [
+          0.3039467427879572,
+          5.341550350189209,
+          -0.29553789645433426
+        ],
+        "anchor": [
+          0.3133779764175415,
+          5.3555006980896,
+          -0.3166449964046478
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1537M",
+            "sha256": "c1708ef88207aef30c32673af54b7c3b8cad2863a29a17f1f7a54859f96232a4"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "rhomboid-minor",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:clavicular-part-of-left-deltoid",
+        "fmaId": "FMA34681",
+        "name": "Clavicular part of left deltoid",
+        "sourceName": "clavicular part of left deltoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA34681",
+        "bounds": {
+          "min": [
+            0.8855500221252441,
+            4.03849983215332,
+            0.2512519955635071
+          ],
+          "max": [
+            2.0361900329589844,
+            5.553900241851807,
+            0.7133100032806396
+          ]
+        },
+        "center": [
+          1.4608700275421143,
+          4.7962000370025635,
+          0.48228099942207336
+        ],
+        "anchor": [
+          1.5803300142288208,
+          4.938100814819336,
+          0.6531999707221985
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1468M",
+            "sha256": "75340ac9157ea6c64baaa74c0bbfd6173114dcff0d30ea814702c288b002f104"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "deltoid-clavicular",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:acromial-part-of-left-deltoid",
+        "fmaId": "FMA34683",
+        "name": "Acromial part of left deltoid",
+        "sourceName": "acromial part of left deltoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA34683",
+        "bounds": {
+          "min": [
+            1.4658600091934204,
+            4.050899505615234,
+            -0.09162899106740952
+          ],
+          "max": [
+            2.272279977798462,
+            5.492199897766113,
+            0.5333699584007263
+          ]
+        },
+        "center": [
+          1.8690699934959412,
+          4.771549701690674,
+          0.2208704836666584
+        ],
+        "anchor": [
+          1.9287800788879395,
+          4.7669997215271,
+          0.3068679869174957
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1467M",
+            "sha256": "a523b5f2ab862ad6505787f4936098fbcfe3f28a3742b57aac34307fe752f8eb"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "deltoid-acromial",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:spinal-part-of-left-deltoid",
+        "fmaId": "FMA34685",
+        "name": "Spinal part of left deltoid",
+        "sourceName": "spinal part of left deltoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA34685",
+        "bounds": {
+          "min": [
+            0.828341007232666,
+            3.877500057220459,
+            -0.4727487862110138
+          ],
+          "max": [
+            2.1917099952697754,
+            5.398399829864502,
+            0.29252997040748596
+          ]
+        },
+        "center": [
+          1.5100255012512207,
+          4.6379499435424805,
+          -0.09010940790176392
+        ],
+        "anchor": [
+          1.6042500734329224,
+          4.669000148773193,
+          -0.24217501282691956
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1513M",
+            "sha256": "a806a9a20b68009f0071c22411b009f4baef3de118f00a37cc4a3be8cdf7ce2e"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "deltoid-spinal",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:short-head-of-right-biceps-brachii",
+        "fmaId": "FMA37684",
+        "name": "Short head of right biceps brachii",
+        "sourceName": "short head of right biceps brachii",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA37684",
+        "bounds": {
+          "min": [
+            -2.1238999366760254,
+            2.6521997451782227,
+            0.2595809996128082
+          ],
+          "max": [
+            -1.352370023727417,
+            5.277600288391113,
+            0.5910099744796753
+          ]
+        },
+        "center": [
+          -1.7381349802017212,
+          3.964900016784668,
+          0.42529548704624176
+        ],
+        "anchor": [
+          -1.8180700540542603,
+          3.974900007247925,
+          0.46761101484298706
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1512",
+            "sha256": "2173b7cce29f11036907b80e068e9bd6c16f22359d6e7994af9684454b99b4d5"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "biceps-short-head",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:short-head-of-left-biceps-brachii",
+        "fmaId": "FMA37685",
+        "name": "Short head of left biceps brachii",
+        "sourceName": "short head of left biceps brachii",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA37685",
+        "bounds": {
+          "min": [
+            1.352370023727417,
+            2.6521997451782227,
+            0.2595809996128082
+          ],
+          "max": [
+            2.1238999366760254,
+            5.277600288391113,
+            0.5910199880599976
+          ]
+        },
+        "center": [
+          1.7381349802017212,
+          3.964900016784668,
+          0.4253004938364029
+        ],
+        "anchor": [
+          1.8180700540542603,
+          3.974900007247925,
+          0.46761101484298706
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1512M",
+            "sha256": "6b0ed7b70973b3a2e08de4ea5ce59c05a4ddce2b90212ff734326be2726d1293"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "biceps-short-head",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:long-head-of-left-biceps-brachii",
+        "fmaId": "FMA37687",
+        "name": "Long head of left biceps brachii",
+        "sourceName": "long head of left biceps brachii",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA37687",
+        "bounds": {
+          "min": [
+            1.3526800870895386,
+            1.9407202005386353,
+            0.1780889928340912
+          ],
+          "max": [
+            2.2985999584198,
+            5.394200325012207,
+            0.592930018901825
+          ]
+        },
+        "center": [
+          1.8256400227546692,
+          3.667460262775421,
+          0.38550950586795807
+        ],
+        "anchor": [
+          1.8757100105285645,
+          3.694000244140625,
+          0.42243897914886475
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1478M",
+            "sha256": "10189f1d7b5220df3baef2b259ae9855ed301c1afaadfc2de25af3222c5a08fc"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "biceps-long-head",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:medial-head-of-right-triceps-brachii",
+        "fmaId": "FMA37695",
+        "name": "Medial head of right triceps brachii",
+        "sourceName": "medial head of right triceps brachii",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA37695",
+        "bounds": {
+          "min": [
+            -2.269629955291748,
+            2.293499708175659,
+            -0.03682800382375717
+          ],
+          "max": [
+            -1.6737300157546997,
+            4.560400485992432,
+            0.21879898011684418
+          ]
+        },
+        "center": [
+          -1.9716799855232239,
+          3.4269500970840454,
+          0.0909854881465435
+        ],
+        "anchor": [
+          -2.004539966583252,
+          3.4326000213623047,
+          0.039486005902290344
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1480",
+            "sha256": "1ea653667afa5ff0bf0e01d71ac648819655241c130e8dd1778ed2f9561c34c5"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "triceps-medial-head",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:medial-head-of-left-triceps-brachii",
+        "fmaId": "FMA37696",
+        "name": "Medial head of left triceps brachii",
+        "sourceName": "medial head of left triceps brachii",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA37696",
+        "bounds": {
+          "min": [
+            1.6737399101257324,
+            2.293499708175659,
+            -0.03682800382375717
+          ],
+          "max": [
+            2.269629955291748,
+            4.560400485992432,
+            0.21879898011684418
+          ]
+        },
+        "center": [
+          1.9716849327087402,
+          3.4269500970840454,
+          0.0909854881465435
+        ],
+        "anchor": [
+          2.004549980163574,
+          3.432499885559082,
+          0.039487000554800034
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1480M",
+            "sha256": "fc35854102a057ca85a201eeff4c18f03722b1ceab52c311ce1b87abf4fa2ff8"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "triceps-medial-head",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:lateral-head-of-right-triceps-brachii",
+        "fmaId": "FMA37697",
+        "name": "Lateral head of right triceps brachii",
+        "sourceName": "lateral head of right triceps brachii",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA37697",
+        "bounds": {
+          "min": [
+            -2.280050039291382,
+            2.3596997261047363,
+            -0.2991580069065094
+          ],
+          "max": [
+            -1.74455988407135,
+            4.921299934387207,
+            0.18796798586845398
+          ]
+        },
+        "center": [
+          -2.012304961681366,
+          3.6404998302459717,
+          -0.05559501051902771
+        ],
+        "anchor": [
+          -1.9548399448394775,
+          3.627500057220459,
+          -0.12564602494239807
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1477",
+            "sha256": "1d1c3b42eec0dffe696bd25cffa81784c87c15f16c9605050fdf1cb2f47698dd"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "triceps-lateral-head",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:lateral-head-of-left-triceps-brachii",
+        "fmaId": "FMA37698",
+        "name": "Lateral head of left triceps brachii",
+        "sourceName": "lateral head of left triceps brachii",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA37698",
+        "bounds": {
+          "min": [
+            1.74455988407135,
+            2.3596997261047363,
+            -0.2991580069065094
+          ],
+          "max": [
+            2.280050039291382,
+            4.921299934387207,
+            0.18796798586845398
+          ]
+        },
+        "center": [
+          2.012304961681366,
+          3.6404998302459717,
+          -0.05559501051902771
+        ],
+        "anchor": [
+          1.9548399448394775,
+          3.627500057220459,
+          -0.12564602494239807
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1477M",
+            "sha256": "96d9859e983736f53864e53fa0579b8f6a18006067967df42e4fe7ea2d2b9e6f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "triceps-lateral-head",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:long-head-of-right-triceps-brachii",
+        "fmaId": "FMA37699",
+        "name": "Long head of right triceps brachii",
+        "sourceName": "long head of right triceps brachii",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA37699",
+        "bounds": {
+          "min": [
+            -2.1646201610565186,
+            2.3523998260498047,
+            -0.312404990196228
+          ],
+          "max": [
+            -1.346909999847412,
+            5.007500171661377,
+            0.1410209685564041
+          ]
+        },
+        "center": [
+          -1.7557650804519653,
+          3.679949998855591,
+          -0.08569201081991196
+        ],
+        "anchor": [
+          -1.7705299854278564,
+          3.6558997631073,
+          0.012681007385253906
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1479",
+            "sha256": "acc48f746bd07a117357a9c49a1a9850c96b85d7c63cf90a662a45717875a315"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "triceps-long-head",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:long-head-of-left-triceps-brachii",
+        "fmaId": "FMA37700",
+        "name": "Long head of left triceps brachii",
+        "sourceName": "long head of left triceps brachii",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA37700",
+        "bounds": {
+          "min": [
+            1.346909999847412,
+            2.3523998260498047,
+            -0.31240400671958923
+          ],
+          "max": [
+            2.1646201610565186,
+            5.007500171661377,
+            0.1410209685564041
+          ]
+        },
+        "center": [
+          1.7557650804519653,
+          3.679949998855591,
+          -0.08569151908159256
+        ],
+        "anchor": [
+          1.7705299854278564,
+          3.6558997631073,
+          0.012681007385253906
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1479M",
+            "sha256": "4b8315f9134a213f45c3af830270f4526e705d0a149894516d3f5fba98878f15"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "triceps-long-head",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "9d8067446bfffcac786426f4a4e326922e40ea5943433081a6a65265f0321c72"
+}
