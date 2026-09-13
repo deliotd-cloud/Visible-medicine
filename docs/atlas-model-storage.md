@@ -74,10 +74,10 @@ repeat writes, full/ranged/conditional reads and stored corruption. The actual
 largest model is uploaded and downloaded with an exact SHA-256 comparison.
 The test-only authorization fixture is never imported by application routes.
 
-The full-download addition passes four focused test groups, and the complete
-website suite now passes 80 tests with TypeScript passing. Its production build
-and live download outcome are recorded in the dated delivery checkpoint rather
-than inferred from these tests. An earlier complete-suite run hit a transient local `ECONNRESET` during
+The full-download addition passes five focused test groups, and the complete
+website suite now passes 81 tests, with TypeScript and both the full-development
+and temporary-bootstrap production builds passing. An earlier complete-suite
+run hit a transient local `ECONNRESET` during
 Miniflare dispatch; its focused and subsequent full run pass without weakening
 assertions. The Sites build helper's Windows npm resolution failed; the existing
 `npm run build` completed successfully without dependency/config changes.
@@ -89,20 +89,41 @@ registered files; a fresh 59/59 HEAD check confirms their R2 checksums and sizes
 Live non-owner denial, cancellation after transmission, all-device accessibility
 and clinical acceptance are not established by this owner-session test.
 
+Version 54's initial live GET stopped on the first model because it required a
+Content-Length header. Version 55 retains exact actual-size/SHA-256 verification
+but tolerates an omitted length/ETag or a weak matching ETag, and shows response
+metadata in the collapsed staff inventory. In the actual live response the host
+omits Content-Length, retains a strong ETag and returns model/gltf-binary. The
+first completed downloads pass actual-byte verification. A mismatched declared
+length/ETag, non-binary media type, non-200/redirected response, truncated,
+oversized or corrupted body still fails. No server authorization rule changed.
+The completed live owner-session batch verifies **59/59 full downloads**, each
+with the exact registered bytes and SHA-256. All 59 responses were HTTP 200,
+model/gltf-binary, a strong ETag and omitted Content-Length. The dated checkpoint
+binds this observation to version 55 and the unchanged 59-model inventory.
+
+All 59 canonical files (127,449,300 bytes) also parse through the exact installed
+@react-three/drei three-stdlib GLTFLoader/MeshoptDecoder. All 705 referenced
+default-scene mesh primitives load with finite positions/transforms and bounded
+indices, without external buffers/images. The source-bound report records each
+model and loaded-scene fingerprint. This is local parser evidence, not a claim
+of browser GPU rendering, complete anatomy, learner permission or clinical review.
+
 ## Required next steps — do not skip to asset removal
 
 1. Completed: a compact **bootstrap deployment** preserves the current working
    learner experience, introduces the staging route and carries the complete
-   expected model inventory. Inspect exact source/manifest differences. Do not
+   expected model inventory. Exact source/manifest differences are checked.
    The public audience and paid plans were not changed. The current full package still
    has the large-upload condition; repeating it is not a scalable solution.
 2. Owner access and all 59 registered uploads/HEAD checks are verified. Retain
    originals/notices/source hashes; test other-user denial through legitimate
    accounts before learner activation. No test role header or fabricated identity
    may be introduced into production. Recheck objects after any interruption.
-3. Verify every intended object through authenticated GET (including byte hash),
-   HEAD/range requests, and the actual Three.js loader before activating delivery.
-   Save a revision-bound delivery receipt. Staging success alone is not this gate.
+3. Full authenticated GET and HEAD for all 59 objects, plus the installed local
+   Three.js parser, are verified. Actual deployed range/conditional and non-owner
+   denial tests, and real-browser storage-backed rendering, remain before delivery
+   activation. Local Workers range/permission tests do not prove those live paths.
 4. Add an explicit manifest-bound delivery adapter and server authorization for
    the learner Atlas. Do **not** point learners at this administrator-only API or
    assume an Atlas entitlement grants a paid case/lecture entitlement.

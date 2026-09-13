@@ -68,6 +68,23 @@ Latest specialist-chat review reports both anterior cerebellar edges accepted an
 
 ## Ordered delivery roadmap
 
+13 September — independent storage is now live in the private maintenance
+bootstrap. A fresh owner-session check confirms all 59 canonical models in R2;
+all 59 also pass the installed 3D parser without altering geometry or source
+files. The first full-download check exposed the hosting layer's omitted
+Content-Length header. Version 55 verifies actual byte size and SHA-256 without
+requiring that optional header, retaining corruption/oversize/authorization
+rejection. All 59 full authenticated live downloads now pass exact size and
+SHA-256 checks. The complete website suite passes 81 tests and both builds pass.
+See [storage evidence](atlas-model-storage.md) and the main task's
+`work/MODEL-DOWNLOAD-CHECKPOINT-20260913.md` for final live-batch and recovery
+outcomes. Learner delivery remains the unchanged 44-model static live release;
+the complete 59-model head/neck–thorax development source is preserved, not
+replaced with that temporary snapshot. Next: complete source-bound delivery and
+learner authorization, real-browser loading/rollback, then full abdomen nested
+and specimen contexts and the full roadmap below. No private scans/masks,
+clinical decisions, public access, lecture rights or splash rules are changed.
+
 13 September — [independent model staging](atlas-model-storage.md) now supplies
 an administrator-only immutable upload/read route and a compact maintenance page.
 Its generated allowlist binds all 59 unchanged GLBs in the four existing exports
