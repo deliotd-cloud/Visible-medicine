@@ -3,6 +3,11 @@ These small previews represent modalities. They are not a registered multimodal
 study, released imaging modules, or clinical validation. No private patient
 dataset was used. Checked 13 September 2026.
 
+The homepage multimodality composition and Atlas list reuse these same five
+image files, with proportionate display scaling and the documented 3D CSS crop.
+They are separate reference images, not aligned modalities of one patient.
+No source bytes or image rights changed in this presentation update.
+
 ## 3D shoulder
 BodyParts3D, © The Database Center for Life Science, CC BY 4.0.
 https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html

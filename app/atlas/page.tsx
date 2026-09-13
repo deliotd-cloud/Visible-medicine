@@ -8,7 +8,7 @@ export default async function AtlasCatalogue({searchParams}:{searchParams:Promis
   if(destination)redirect(destination);
   return <main className="atlas-hub">
     <header className="atlas-hub-heading"><p className="eyebrow">Visible Medicine Atlas</p><h1>Explore anatomy.</h1><p>Choose a modality, then a body region.</p></header>
-    <AtlasModalityCards/>
+    <AtlasModalityCards layout="list"/>
     <AtlasImageNotes/>
   </main>;
 }

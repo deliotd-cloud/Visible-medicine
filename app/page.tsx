@@ -1,5 +1,4 @@
-import { atlasModalities } from "../lib/atlas-navigation";
-import { AtlasModalityCards, AtlasImageNotes } from "../components/AtlasModalityCards";
+import { AtlasModalityCards, AtlasImageNotes, AtlasModalityPreview } from "../components/AtlasModalityCards";
 import Link from "next/link";
 import { listCatalogueCourses } from "../lib/education-platform";
 
@@ -23,11 +22,7 @@ export default async function Home() {
           </div>
         </div>
 
-        <Link className="atlas-preview homepage-atlas-preview" href="/atlas/3d">
-          <div className="homepage-atlas-preview-bar"><span>3D anatomy</span><span>Review pending</span></div>
-          <div className="atlas-modality-image atlas-modality-image-3d"><img src={atlasModalities[0].image} alt={atlasModalities[0].alt} width={1280} height={720}/></div>
-          <div className="homepage-atlas-preview-footer"><div><strong>Whole body &amp; regional anatomy</strong><span>Shoulder preview from the 3D viewer</span><small>BodyParts3D · CC BY 4.0 · Adapted</small></div><span aria-hidden="true">↗</span></div>
-        </Link>
+        <AtlasModalityPreview/>
       </section>
 
       <section className="content-section module-showcase homepage-atlas" id="atlas" aria-labelledby="homepage-atlas-title">

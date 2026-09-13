@@ -2,6 +2,29 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 13 September — multimodality homepage and Atlas list
+
+The large homepage preview now shows five independently linked reference images
+(3D, CT, MRI, ultrasound and X-ray), using the unchanged audited image bytes.
+The main Atlas catalogue uses semantic list rows with an image on the left and
+short descriptive text/availability on the right. Homepage discovery cards remain
+compact. Whole body stays the first/default 3D destination. All entries use one
+shared navigation source, and planned modalities remain explicitly in preparation.
+
+Actual local browser samples at 1280 and 390 px verified the composition, five
+loaded hero images, image/description alignment, absence of horizontal overflow,
+and the MRI row's navigation to its planned-module page. Temporary viewport
+overrides were reset. These are scoped browser samples, not device certification
+or medical approval. The 99 website tests, TypeScript and production build pass.
+Image licences, image hashes, all runtime models, entitlements and source scans
+are unchanged. Publication/recovery outcome belongs in the main task checkpoint.
+
+The separate Atlas checkout retains the in-progress 46 skull/facial/hyoid CT/MRI
+draft placements. They were interrupted by the owner's presentation request and
+are not included in this website update. Complete and verify the history-chain
+integration before committing or exporting them; do not infer a successful test
+from an expired session handle. The main goal remains active.
+
 ## Coordination
 
 The owner has designated **Visible Medicine — Website & Atlas** (task `01a07332-8768-7c20-a9ef-15e3acced95b`, formerly **Build 3D anatomy MVP**) as the main working chat. Website, atlas and cross-product requests can be made there together. Preserve **Visible medicine** (`01a02c32-4729-7501-9215-b0dc59355c13`) as a historical reference. Neither history was merged, deleted, archived or restarted.
