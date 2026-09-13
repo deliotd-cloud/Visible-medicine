@@ -2,6 +2,35 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 13 September — central vessel imaging
+
+Atlas `270ef68dc7499672549ee3967b485f61eecf3139` adds 79 original source-bound
+draft notes to 29 major chest/abdominal vessels: CT/MRI for all and ultrasound
+for 21. The aortic/caval, azygos, pulmonary, visceral arterial, renal, portal and
+hepatic outflow selections retain their exact anatomy, source caveats and
+laterality. Eight routine ultrasound topics stay pending; specialised imaging
+is not declared impossible. The existing panels are used without new controls.
+
+All 79 actual note renders, 1,501 altered-source/topic rejections and 1,101 current
+schemas pass. The other 9,830 topics, original model hashes and dissection recipes
+are unchanged. The previous organ suite, 33,444 historical content checks, 235
+review checks, TypeScript and both Atlas builds pass. The generated website
+module preserves all 131 model objects/137 paths and the balanced homepage.
+No patient data, image, dependency, paid API, approval or new entitlement is added.
+Twenty-seven publication links are reading references, not image reuse licences.
+
+Radiologist review must confirm aortic planes/motion, venous mixing, pulmonary
+drainage/ostia, visceral branching, hepatic inflow versus outflow, renal accessory
+arteries and modality/Doppler visibility limits against the actual revision.
+GitHub/D recovery and private publication are recorded in the central-vessel
+checkpoint. No new browser/device acceptance is claimed for this text-only pass.
+
+The full goal remains active: remaining coronary/inlet/wall and smaller visceral
+vessel teaching, regional anatomy/dissection detail, comprehensive clinical
+content and cleared Education links with independent case/Atlas/lecture access.
+Native MRI QA is completed; do not restart a competing learner PACS or unchanged
+licensing/standalone-upload holds. Private scans and masks remain untouched.
+
 ## 13 September — chest and abdominal organ imaging
 
 Atlas `6d8c900b4f80843ca7568e4222ffb49d0d22e1f1` adds 42 source-bound draft
