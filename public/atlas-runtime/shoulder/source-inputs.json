@@ -21,15 +21,15 @@
   },
   {
     "path": "app/atlas-workspace.css",
-    "sha256": "938edb0aeff51e660829bbde701b198c6f82f1c47089ab07e91d24ea3da0584b"
+    "sha256": "5cad6203770ad4201dca8fb550208753b60f9938088dfeacc2083585990a8ce5"
   },
   {
     "path": "app/atlas-workspace.tsx",
-    "sha256": "27219b2275c7077bdb1b28dd531e58680e7921c74dbc1c52d1a9dbeb2ddd2d1d"
+    "sha256": "6cf33eb380bd92535093984563f8711606c218a4450a176f1f8f5df96d1791fc"
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "7818cdecef81273bfe15655ae085e2f8a74c6b0dd89ba2792102df0d7ae6efdc"
+    "sha256": "1dc57500f40f3897ef36cd17afe0d60a152bda5f285e59e0e49cccd4e82d8e3f"
   },
   {
     "path": "app/body-explorer.css",
@@ -53,7 +53,7 @@
   },
   {
     "path": "app/fitted-camera.tsx",
-    "sha256": "86093037b8cedc98deed1601e021af87c01d8836985aefc703a7e0d8fdde4427"
+    "sha256": "c429693a45c6862f12e75f47fdf6da4a23f21d4887c9002c2cb5b21d8835afa2"
   },
   {
     "path": "app/globals.css",
@@ -113,7 +113,7 @@
   },
   {
     "path": "app/study-views.css",
-    "sha256": "64a3aad4d04f1ce8ad9e14765e400c2a46a24a59232ecbee530862c9326845aa"
+    "sha256": "990575bf75078182028c3ed0c30985d842e7814623b82f99e7aa69a761a54f8e"
   },
   {
     "path": "app/study-views.tsx",
@@ -188,6 +188,14 @@
     "sha256": "534d166d46212fedb3316c8113162f7e18ab70fe0adea43501af475796b92374"
   },
   {
+    "path": "content/central-neural-imaging-pins.json",
+    "sha256": "3395a863ca17220821a540ae016a2d864d421d2e57e61f5ddcdae81f57d940be"
+  },
+  {
+    "path": "content/central-neural-imaging.ts",
+    "sha256": "95ebfa3cc9e0da134286ee682fc5ec7194e3c9ac81d4e8dfd00e8706311145d5"
+  },
+  {
     "path": "content/deferent-duct-study.ts",
     "sha256": "175762062c00f6d92dbf5505cd50b4ab1b483f12e7d69161c0b53735dad66120"
   },
@@ -208,12 +216,28 @@
     "sha256": "80aba36ae5a6dfb3313510f75d414f96c27468d00c912c22b3d87dad5dfa2ba2"
   },
   {
+    "path": "content/forearm-muscle-imaging-pins.json",
+    "sha256": "0d8aa48f409c7dc3a9e8b9fdb1e0b54c4bcbcd85c979a8828b347782e0df2db4"
+  },
+  {
+    "path": "content/forearm-muscle-imaging.ts",
+    "sha256": "3997414ad4f60fd6a9f2689bb02aea230aa7ddaa01190640dc8638150a280005"
+  },
+  {
     "path": "content/genicular-study-pins.json",
     "sha256": "fb98f5cedf269b60b8f25e5acada14d44961196478858502f3f48d1cd498890d"
   },
   {
     "path": "content/genicular-study.ts",
     "sha256": "e3990bacdac2466a03bfec56e5fc8eecc0767b1f474d5b161e16cb84d5a1cfaa"
+  },
+  {
+    "path": "content/hand-muscle-imaging-pins.json",
+    "sha256": "0f6a3a095f2e7db3f358ea19c6ab2ad42f915c975c543281a3684cebd651204f"
+  },
+  {
+    "path": "content/hand-muscle-imaging.ts",
+    "sha256": "e91d54120b06c48f163ee9ddb84b646c96a40d0c0ef13d4e4f9749c22c1125e2"
   },
   {
     "path": "content/hip-imaging-concepts.ts",
@@ -285,7 +309,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "9ea0c180c0e47b282632181ec07915231ed88b181a8390c52c63fb6ae792e878"
+    "sha256": "d214d709d0402f8b417af03811c8f977f12ee2805704a2ec8832c8b0b4ef09ec"
   },
   {
     "path": "content/shoulder-xray-bindings.json",
@@ -428,6 +452,10 @@
     "sha256": "57d816744ec19ea2e2656f4cf307a653cedd49239a05e3afc4f33e67b125d7e6"
   },
   {
+    "path": "lib/atlas-note-navigation.ts",
+    "sha256": "99b6c8a4d774670e4fd71e1ddc086a78eb6f36739bf726ee63a8959ac0490ba6"
+  },
+  {
     "path": "lib/atlas-panel-layout.ts",
     "sha256": "8285d84094cc4d3aaab02dbf89360f4e60ad23856cff2bb69faf3a6240c3c23f"
   },
@@ -474,6 +502,10 @@
   {
     "path": "lib/central-neural-clinical-curriculum.ts",
     "sha256": "1034631e736dd108c677f5fbd7f4242e6e2c588f9d69ebeaa8ba7de8119f51e2"
+  },
+  {
+    "path": "lib/central-neural-imaging.ts",
+    "sha256": "b6e2c570c6f595dbc728616b9296b2ca6913be549ae7277f9e86b20ca68c6810"
   },
   {
     "path": "lib/central-neuro-curriculum.ts",
@@ -588,6 +620,10 @@
     "sha256": "c3f357aabdccb863e967244435118cedb335dd7ee5c07df31909384d9ab35511"
   },
   {
+    "path": "lib/forearm-muscle-imaging.ts",
+    "sha256": "e322acc549440be5f0dbb6252785173f17eaf8ef9ca02b93a4baad6e7db56939"
+  },
+  {
     "path": "lib/forearm-vascular-anatomy.ts",
     "sha256": "2313c21bd2efed6048baad038739009cbd0fcad1eb2b2aed55fb009563bf6f99"
   },
@@ -610,6 +646,10 @@
   {
     "path": "lib/hand-curriculum.ts",
     "sha256": "6c3af658311c8a4ea7c50980d327915e0ea8249e7a00a8aab54f22e777111c56"
+  },
+  {
+    "path": "lib/hand-muscle-imaging.ts",
+    "sha256": "14d038b51ce7aabae0b0a1ae85028d6ac70078dfec095a5fed38e58fe5ad152e"
   },
   {
     "path": "lib/hand-vascular-anatomy.ts",
