@@ -3,6 +3,7 @@ import Link from 'next/link';
 import {notFound,redirect} from 'next/navigation';
 import {AtlasRegionNavigation} from '../../../components/AtlasRegionNavigation';
 import {selectedBodyRegion} from '../../../lib/atlas-navigation';
+import {atlasStudySuffix} from '../../../lib/atlas-study-transport';
 import '../shoulder-3d/shoulder-module.css';
 
 export const metadata:Metadata={title:'3D anatomy atlas',description:'Explore whole-body and regional anatomy with source-based dissection and contextual teaching.',robots:{index:false,follow:false}};
@@ -10,8 +11,10 @@ export default async function ThreeDAtlas({searchParams}:{searchParams:Promise<R
   const params=await searchParams;
   const region=selectedBodyRegion(params.region);
   if(!region)notFound();
+  const studySuffix=atlasStudySuffix(params);
+  if(studySuffix===null)notFound();
   if(!region.href.startsWith('/atlas/3d'))redirect(region.href);
-  const source=`/atlas-runtime/head-neck/index.html?region=${region.id}`;
+  const source=`/atlas-runtime/head-neck/index.html?region=${region.id}${studySuffix}`;
   return <main className="shoulder-module-page">
     <header className="shoulder-module-bar">
       <Link href="/atlas" aria-label="Back to anatomy atlas">← Atlas</Link>

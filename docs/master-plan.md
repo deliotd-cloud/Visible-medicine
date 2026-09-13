@@ -77,6 +77,27 @@ Latest specialist-chat review reports both anterior cerebellar edges accepted an
 
 ## Ordered delivery roadmap
 
+13 September — neck/upper-back attachment navigation extends the existing
+collapsed muscle panel to 18 selections and 13 existing bones. Grouped origin
+and insertion rows support shared midline vertebrae/occiput and sided scapulae;
+regional clipping, whole-body continuation, exam denial and dissection Undo are
+preserved. Current source memberships place these selections in spine or
+shoulder-arm, not directly in head-neck. No source geometry, private imaging,
+lecture entitlement or new toolbar changes. Seventy-two exact visibility plans,
+223 changed-source rejections, 36 actual panel renders, 96 bone-button callbacks
+and 36 parent-handler executions pass. Existing arm/thigh suites are unchanged.
+Browser sampling caught and corrected Show-label overflow and whole-body
+continuation leaving a stale outer regional heading. The host now relays only
+bounded, allowlisted study fields, with identity/revision checks still performed
+by the source module; no external destination or unrelated query is forwarded.
+The navigation-test import failure is fixed through its existing hermetic helper
+builder; all 169,702 assertions pass. Full content/review checks and Atlas builds
+pass. The shared website export binds Atlas ae9b0112 and preserves all 131 model
+objects/137 paths. Publication and GitHub/D recovery are recorded separately in
+the coordinating neck-attachments checkpoint. Continue substantive remaining
+anatomy, teaching and cleared Education integration; specialist/device review
+and source holds remain open. No clinical acceptance is inferred from tests.
+
 13 September — spine/pelvic muscle imaging: 192 pending CT/MRI/ultrasound topics
 now have source-bound draft notes across 64 selections and 36 groups. Current
 attachments and cautions are retained; small grouped muscles are not portrayed
