@@ -35,6 +35,47 @@ Coordinate basis: [DICOM PS3.3 Image Plane Module](https://dicom.nema.org/medica
 
 ## Verification and remaining acceptance
 
+### Browser follow-up, 13 September 2026
+
+Actual local Windows in-app-browser testing used generated, non-anatomical
+fixtures only, never the private MRI packet or `D:/Cases`. The new
+`scripts/create-native-mr-browser-fixtures.mjs` writes two tiny, explicit
+synthetic packets and one invalid file into an existing directory outside Git
+repositories, refusing to overwrite files. The adjacent evidence JSON lists
+each expected starting pixel, source-space point, aspect ratio and edge label.
+No dataset, dependency, licence, scan or mask changed.
+
+- Desktop 1294×856: the 4×3×3 unsigned pattern preserves its 2:1 physical aspect.
+  The initial sample is signal 18 at column 3, row 2, LPS 48,46,33.6 mm.
+  Arrow/Page Down and Enter give signal 29 at 48,43,37.2 without a synthetic
+  keyboard click jump. Pointer selection gives the expected first sample.
+- The real browser exposed a reset bug: edited but unapplied/invalid range
+  fields survived Reset when the applied window was already the default.
+  Reset now remounts the range form explicitly. Repeating 30/10 → validation
+  error → Reset restores 0/35 in both fields and clears the error; source sample
+  and coordinate remain unchanged.
+- At 390×844, slice controls, Close, collapsed settings and the image fit without
+  horizontal page overflow. Home selects the first native slice and disables
+  Previous; Close removes the viewer. An invalid file is rejected and a new
+  signed oblique fixture loads without retaining the old sample or error.
+- The 8×6×5 signed oblique pattern displays signal 4 at 24.88,-40.16,18.30 mm,
+  a one-mm acquisition gap, AR/PL/I/S edges, and its 5.6:6.6 physical aspect.
+  The phone image measures 380.15625×448.046875 CSS pixels (rounding preserved).
+- Seventy-one synthetic/real-component callback checks retain the original 57
+  and add reset and delayed-read lifecycle coverage. Cancelled late success is
+  ignored; an old failure cannot erase a newly loaded study; an oversize file
+  is rejected before reading. These delayed-read tests use controlled promises,
+  not a claim of real-browser in-flight cancellation or memory certification.
+  The unchanged CT suite passes 78 checks; TypeScript passes.
+
+These are engineering/browser samples, not real-DICOM decoding, clinical or
+privacy approval, independent scanner-viewer comparison, physical-phone QA,
+200% text-zoom acceptance or secure memory-erasure evidence. Real in-flight
+cancellation, large-file memory behaviour and those other gates remain open.
+The page title now identifies MRI import checking rather than a 3D anatomy page.
+Publication and exact source/recovery state belong in the coordinating task's
+dated checkpoint; do not assume the hosted standalone utility is current.
+
 ```text
 node scripts/validate-native-mr.mjs
 node scripts/validate-local-imaging.mjs

@@ -28,6 +28,7 @@ export function LoadedNativeMr({
   const [window, setWindow] = useState(study.window);
   const [inverted, setInverted] = useState(false),
     [message, setMessage] = useState('');
+  const [displayReset, setDisplayReset] = useState(0);
   const canvas = useRef<HTMLCanvasElement>(null),
     frame = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState({ width: 0, height: 0 }),
@@ -94,7 +95,7 @@ export function LoadedNativeMr({
         <details>
           <summary>Brightness &amp; contrast</summary>
           <form
-            key={window.join(':')}
+            key={`${displayReset}:${window.join(':')}`}
             onSubmit={(e) => {
               e.preventDefault();
               const values = new FormData(e.currentTarget),
@@ -154,6 +155,8 @@ export function LoadedNativeMr({
               setWindow(study.window);
               setInverted(false);
               setMessage('');
+              // Reset unsubmitted inputs even when the applied range is already the default.
+              setDisplayReset((revision) => revision + 1);
             }}
           >
             Reset display

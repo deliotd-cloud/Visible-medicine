@@ -46,6 +46,7 @@ const hooks = {
   },
 };
 const scope = { exports: {} };
+const pendingDigests = [];
 runInNewContext(compiled.outputFiles[0].text, {
   module: scope,
   exports: scope.exports,
@@ -58,7 +59,11 @@ runInNewContext(compiled.outputFiles[0].text, {
   Uint8ClampedArray,
   DataView,
   TextDecoder,
-  crypto: webcrypto,
+  crypto: { subtle: { digest(...args) {
+    const pending = webcrypto.subtle.digest(...args);
+    pendingDigests.push(pending);
+    return pending;
+  } } },
   console,
   FormData: class {
     constructor(form) {
@@ -313,8 +318,60 @@ find((n) => n.type === 'form').props.onSubmit({
 same(slots[2], [5, 25]);
 find((n) => n.props?.children === 'Reset display').props.onClick();
 same(slots[2], [0, 35]);
+// The browser keeps uncontrolled input edits when a form's key is unchanged.
+// Reset must remount even if validation failed and the applied range never changed.
+const defaultFormKey = find((n) => n.type === 'form').key;
+find((n) => n.type === 'form').props.onSubmit({
+  preventDefault() {},
+  currentTarget: { fields: { low: '30', high: '10' } },
+});
+same(slots[2], [0, 35]);
+find((n) => n.props?.children === 'Reset display').props.onClick();
+check(find((n) => n.type === 'form').key !== defaultFormKey);
+same(slots[2], [0, 35]);
+same(slots[4], '');
+same(slots[1], [3, 2]);
 find((n) => n.props?.children === 'Close local MRI').props.onClick();
 same(closed, 1);
+// Exercise the actual import callbacks with deliberately delayed local reads.
+function opener() {
+  active = true; cursor = 0;
+  const result = api.Workbench(); active = false;
+  return result;
+}
+const openerControl = predicate => {
+  const result = walk(opener()).find(predicate);
+  assert(result, 'Expected real import control');
+  return result;
+};
+const loadFile = file => openerControl(n => n.props?.type === 'file').props.onChange({ target: { files: [file], value: 'synthetic' } });
+const settle = async () => {
+  // Cross-realm file promises and WebCrypto each enqueue their own continuations.
+  for (let turn = 0; turn < 4; turn++) {
+    await new Promise(setImmediate);
+    await Promise.all(pendingDigests);
+  }
+};
+slots = [];
+let finishOldRead;
+loadFile({ size: packet.byteLength, arrayBuffer: () => new Promise(resolve => { finishOldRead = resolve; }) });
+check(slots[1]);
+openerControl(n => n.props?.children === 'Cancel').props.onClick();
+same([slots[0], slots[1], slots[2]], [null, false, '']);
+finishOldRead(packet); await settle();
+same([slots[0], slots[1], slots[2]], [null, false, '']);
+let rejectOldRead;
+loadFile({ size: packet.byteLength, arrayBuffer: () => new Promise((_, reject) => { rejectOldRead = reject; }) });
+openerControl(n => n.props?.children === 'Cancel').props.onClick();
+const signedPacket = encode(signed, Int16Array.from({ length: 36 }, (_, i) => i - 18));
+loadFile({ size: signedPacket.byteLength, arrayBuffer: async () => signedPacket });
+await settle(); same(slots[0].range, [-18, 17]);
+rejectOldRead(Error('Synthetic cancelled read')); await settle();
+same(slots[0].range, [-18, 17]); same([slots[1], slots[2]], [false, '']);
+openerControl(n => n.type === api.LoadedNativeMr).props.close();
+let readOversize = false;
+loadFile({ size: api.LOCAL_MR_MAX_BYTES + 1, arrayBuffer() { readOversize = true; throw Error('Must reject before reading'); } });
+check(!readOversize); check(slots[2].includes('128 MiB')); same(slots[0], null);
 let privateFrames = 0;
 const arg = (name) => {
   const i = process.argv.indexOf(name);
