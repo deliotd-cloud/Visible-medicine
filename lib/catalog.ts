@@ -48,6 +48,13 @@ export const atlasModules: AtlasModule[] = [
     systems: ['Bones', 'Rotator cuff', 'Muscles'], reviewed: 'Private integration pilot · Review pending',
   },
   {
+    slug: 'head-neck-3d', title: 'Head and neck 3D anatomy', region: 'Head & neck',
+    modality: '3D', orientation: 'Rotatable',
+    description: 'Explore 290 regional selections plus nested eye, brain, ventricular and vessel dissections, with source-bound draft teaching.',
+    structures: 290, images: 0, status: 'available',
+    systems: ['Bones', 'Muscles', 'Organs', 'Nervous', 'Vessels', 'Connective'], reviewed: 'Private integration pilot · Review pending',
+  },
+  {
     slug: "ct-head",
     title: "CT head",
     region: "Neuroanatomy",
