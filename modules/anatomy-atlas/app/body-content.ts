@@ -114,6 +114,7 @@ import { legMuscleImagingLesson } from '../lib/leg-muscle-imaging';
 import { footMuscleImagingLesson } from '../lib/foot-muscle-imaging';
 import { forearmMuscleImagingLesson } from '../lib/forearm-muscle-imaging';
 import { handMuscleImagingLesson } from '../lib/hand-muscle-imaging';
+import { centralNeuralImagingLesson } from '../lib/central-neural-imaging';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -168,6 +169,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (subscapular) return subscapular;
   const lowerArterialImaging = lowerArterialImagingLesson(s, tab);
   if (lowerArterialImaging) return lowerArterialImaging;
+  const centralNeuralImaging = centralNeuralImagingLesson(s, tab);
+  if (centralNeuralImaging) return centralNeuralImaging;
   const limbic = limbicLandmarkLesson(s, tab);
   if (limbic) return limbic;
   const pelvicVein = pelvicVeinLesson(s, tab);

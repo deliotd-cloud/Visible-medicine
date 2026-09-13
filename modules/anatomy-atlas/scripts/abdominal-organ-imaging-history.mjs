@@ -11,8 +11,10 @@ import {authoringBeforeLegMuscleImaging} from './leg-muscle-imaging-history.mjs'
 import {authoringBeforeFootMuscleImaging} from './foot-muscle-imaging-history.mjs';
 import {authoringBeforeForearmMuscleImaging} from './forearm-muscle-imaging-history.mjs';
 import {authoringBeforeHandMuscleImaging} from './hand-muscle-imaging-history.mjs';
+import {authoringBeforeCentralNeuralImaging} from './central-neural-imaging-history.mjs';
 export const abdominalOrganContentHash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function authoringBeforeAbdominalOrganImaging({api,catalog}) {
+  api=authoringBeforeCentralNeuralImaging({api,catalog});
   api=authoringBeforeHandMuscleImaging({api,catalog});
   api=authoringBeforeForearmMuscleImaging({api,catalog});
   api=authoringBeforeFootMuscleImaging({api,catalog});

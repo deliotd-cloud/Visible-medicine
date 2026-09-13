@@ -12,7 +12,9 @@ import {authoringBeforeLegMuscleImaging} from './leg-muscle-imaging-history.mjs'
 import {authoringBeforeFootMuscleImaging} from './foot-muscle-imaging-history.mjs';
 import {authoringBeforeForearmMuscleImaging} from './forearm-muscle-imaging-history.mjs';
 import {authoringBeforeHandMuscleImaging} from './hand-muscle-imaging-history.mjs';
-const rawCurrent=await contentContext(),current={...rawCurrent,api:authoringBeforeHandMuscleImaging(rawCurrent)},beforeForearm={...current,api:authoringBeforeForearmMuscleImaging(current)},beforeFoot={...current,api:authoringBeforeFootMuscleImaging(beforeForearm)},context={...current,api:authoringBeforeLegMuscleImaging(beforeFoot)};
+import {authoringBeforeCentralNeuralImaging} from './central-neural-imaging-history.mjs';
+const latest=await contentContext();
+const rawCurrent={...latest,api:authoringBeforeCentralNeuralImaging(latest)},current={...rawCurrent,api:authoringBeforeHandMuscleImaging(rawCurrent)},beforeForearm={...current,api:authoringBeforeForearmMuscleImaging(current)},beforeFoot={...current,api:authoringBeforeFootMuscleImaging(beforeForearm)},context={...current,api:authoringBeforeLegMuscleImaging(beforeFoot)};
 const {api}=context,catalog=api.bodyDisplayCatalog(context.catalog);
 const original=JSON.stringify(catalog),before=authoringBeforeThighMuscleImaging(context);
 assert.equal(hash({body:catalog.structures.map(s=>({id:s.id,sections:Object.fromEntries(api.contentTabs.map(t=>[t,before.bodyLesson(s,t)]))})),shoulder:api.structures,recipes:api.dissectionProfiles}),pins.previousAllLessonsAndRecipesHash,'All preceding teaching and recipes preserved');

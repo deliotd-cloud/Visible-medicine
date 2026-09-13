@@ -1,0 +1,2363 @@
+{
+  "sourceCommit": "affddc827d88194b25fffa657531437c39781eed",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "head-neck-nerves",
+      "url": "/models/bodyparts3d/full-body/head-neck-nerves.glb",
+      "bytes": 8286776,
+      "sha256": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structures": 27
+    },
+    {
+      "id": "head-neck-nerves-deep-brain",
+      "url": "/models/bodyparts3d/full-body/head-neck-nerves-deep-brain.glb",
+      "bytes": 1866940,
+      "sha256": "6046dacb923f5103acb3b86dadf2817b5f0c133af88e0d225170cf331fbd0e3c",
+      "structures": 22
+    },
+    {
+      "id": "limbic-landmarks",
+      "url": "/models/bodyparts3d/limbic-landmarks/limbic-landmarks.glb?v=9b17997e1211d794777fb1b6fbb6e84252445ae15f1b2cc811c80efad8a8e514",
+      "bytes": 150304,
+      "sha256": "9b17997e1211d794777fb1b6fbb6e84252445ae15f1b2cc811c80efad8a8e514",
+      "structures": 4
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "fmaId": "FMA50801",
+        "name": "Brain",
+        "sourceName": "brain",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves",
+        "nodeName": "FMA50801",
+        "bounds": {
+          "min": [
+            -0.6994040012359619,
+            6.644999980926514,
+            -0.6032930016517639
+          ],
+          "max": [
+            0.6889340281486511,
+            8.30459976196289,
+            1.1967700719833374
+          ]
+        },
+        "center": [
+          -0.0052349865436553955,
+          7.474799871444702,
+          0.29673853516578674
+        ],
+        "anchor": [
+          -0.006699590012431145,
+          7.463000297546387,
+          0.28210097551345825
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1730",
+            "sha256": "7acd4a30d13b409221aea7267ae302ef7c100162a6185d891c91843ec876dd79"
+          },
+          {
+            "file": "FJ1731",
+            "sha256": "b56e1cd574977821f5331174a31a830ec6a477e2c6c3f32667f7e46a6716eae8"
+          },
+          {
+            "file": "FJ1732",
+            "sha256": "661e99ae245f0392bd7bfd63aa65074f61fb47e9c35641310f1804c9973acb9a"
+          },
+          {
+            "file": "FJ1733",
+            "sha256": "4f154c33e0c43d68d75aaec659b9a6f65ca42ef4b8ea6462a4482e2178b92a0f"
+          },
+          {
+            "file": "FJ1738",
+            "sha256": "089159be9815563e0645e5a28e7302fbc0bc842af760ac886bf3d0542f34a8f3"
+          },
+          {
+            "file": "FJ1739",
+            "sha256": "26feea54a830b6cf523926e9a50f64935591d30206511f2804cfe79bed423d11"
+          },
+          {
+            "file": "FJ1740",
+            "sha256": "deb04b668a1aa817aa01472ab0191add32393a1bdba518b19d5c8f29431d136f"
+          },
+          {
+            "file": "FJ1743",
+            "sha256": "e2c529932bb78ebae41cbc82496dcfe512f15455b6d806783e019444d10b2eae"
+          },
+          {
+            "file": "FJ1744",
+            "sha256": "055774da0ba432560fb8e65b2b474ddaf5ac1a683f5b4fbcc1e8cac6e9536c25"
+          },
+          {
+            "file": "FJ1745",
+            "sha256": "6210acb1780932a25c00b2f4cbdf5ab28cd9ed95eef46ef792ab3647a42c1b47"
+          },
+          {
+            "file": "FJ1746",
+            "sha256": "4be36eec071bfe6d1878acfa535e74dbf91c773c351dea9bc9a4704e3db3fe2e"
+          },
+          {
+            "file": "FJ1747",
+            "sha256": "0e04dea5d156768ae580670b771197c882d9b652132358ef6197ae3f823640f6"
+          },
+          {
+            "file": "FJ1748",
+            "sha256": "deca1e77a904006224aa6cc34e3710c8d963d1fc89e474ac42258e1f2f3315fd"
+          },
+          {
+            "file": "FJ1749",
+            "sha256": "564190a0427db7acf0b27dc124673d028ff99c3dbd0aaa54ec0c236ee3baf754"
+          },
+          {
+            "file": "FJ1750",
+            "sha256": "ac3d98925d313c0db553ec22a26c20520657f3d9f78c07b0b3cc6d72c5837e93"
+          },
+          {
+            "file": "FJ1751",
+            "sha256": "8f66e76ffc8bccc07a7fb14e49441bc061e23ba1251571439b8197f82acd50df"
+          },
+          {
+            "file": "FJ1758",
+            "sha256": "017e0c54769998fa71f65b60918a6f721bbc723e441bc22ea580284567e708a2"
+          },
+          {
+            "file": "FJ1759",
+            "sha256": "f64b3cea9f760a352cb8981f6cb577700a66392d8a8395ffb45dfebdccee7344"
+          },
+          {
+            "file": "FJ1760",
+            "sha256": "cc6db16b990c3fa607ef64f6c0482fd05cb986213d011da9641ccf50182af897"
+          },
+          {
+            "file": "FJ1762",
+            "sha256": "64a455fe3ae2f5adc06be7b407e50116f56102f9036a4eea3b6f6b7dae4b3b84"
+          },
+          {
+            "file": "FJ1767",
+            "sha256": "17b278c20399a85a9d373ba6a934f9fe61901dd9c9480107baaef2b513f22ee3"
+          },
+          {
+            "file": "FJ1769",
+            "sha256": "ab318e2ca0b27656d06edb4a3d3315669c70d7625989a3573fa66a0e586c6afc"
+          },
+          {
+            "file": "FJ1770",
+            "sha256": "727a267ac80375fd0769bf92067d88adac02aa80220a3099cd530b32ddd88a5b"
+          },
+          {
+            "file": "FJ1775",
+            "sha256": "caecdd922b67fa47e0219e2e7ae05e3efd986a2c869cf57b77ded1c615d1bfc9"
+          },
+          {
+            "file": "FJ1779",
+            "sha256": "0fa8374655959d8e815c2d95105b3471d91a86fb9aa959d37522cab85c46c528"
+          },
+          {
+            "file": "FJ1780",
+            "sha256": "dc2212c4c0c7c9e00375a7bcb24014938f45e15b068df36f6247df0cdb301881"
+          },
+          {
+            "file": "FJ1781",
+            "sha256": "6f66f4912c7519ea6a018324ef4f6d46eb266350574d05a905afeb2c88c575ed"
+          },
+          {
+            "file": "FJ1783",
+            "sha256": "2ea98ec904ba5de8229ed9aeff99c1b34f4030a080e758bdd063f8cc7e92d5f3"
+          },
+          {
+            "file": "FJ1784",
+            "sha256": "b6e11d4565f77ca8c0b815540a6a7cc77f48616f81263cb6352c183cdbd0f1da"
+          },
+          {
+            "file": "FJ1785",
+            "sha256": "87db9ae2691ad71d47210ad27a8d56353fb3e9400f68f1b1350f59cfdf4880b4"
+          },
+          {
+            "file": "FJ1786",
+            "sha256": "9f4a8e120131ee6041a48635c3b6dc74cac8d6dcd50e80ef38b2aec56a66ce38"
+          },
+          {
+            "file": "FJ1787",
+            "sha256": "9bc4568f6633e999f98ba932ac18608251aa36d689433fbbb536f72d6c4d3d6d"
+          },
+          {
+            "file": "FJ1788",
+            "sha256": "e72da8ed193cd1b514207a4056bfb41fef1fabd548090dcc4cd5108ded280fa8"
+          },
+          {
+            "file": "FJ1789",
+            "sha256": "4985721171ebf94eb7607822073dba045e42bec2428982a7befa96204b4b4c1a"
+          },
+          {
+            "file": "FJ1790",
+            "sha256": "47b2ce1a7536c8dccaeba6e14139475ce65805b2d0af6036cda4db18aabe4559"
+          },
+          {
+            "file": "FJ1791",
+            "sha256": "b8f2b6ac30aaf72f9ef0e7c00892edd7d4b27b1a6589971d25c973a8894e09f2"
+          },
+          {
+            "file": "FJ1792",
+            "sha256": "860b8fd92e2fae9dd28f782c88170fb591d00b3154da78b57098ff5119692d96"
+          },
+          {
+            "file": "FJ1795",
+            "sha256": "e3f5a0e1d1ebdf8a97329d1e71904f18d70e40038f89eb1990eb8a1f086dfc36"
+          },
+          {
+            "file": "FJ1797",
+            "sha256": "030dbec5dbfc8f29059727f18f867e962fc5debfeea4cab45883edc2c996ec6b"
+          },
+          {
+            "file": "FJ1798",
+            "sha256": "a7c633819d776ef3610be33e0c2ddf47e7da39b6da476b7876418f8245f27c25"
+          },
+          {
+            "file": "FJ1800",
+            "sha256": "34c447cb8bf5e98493cfe52911af1fa9ebd0eaf32c7c5578457666575f5d8cc0"
+          },
+          {
+            "file": "FJ1801",
+            "sha256": "f8ddd0851486a930ef02ff586badabd34cbcf31b034dd7b5ad1b6466f12d28c3"
+          },
+          {
+            "file": "FJ1806",
+            "sha256": "1581396feaf5a2afee55eac865273c126dd0862ef64e756b189b97f85bc898b5"
+          },
+          {
+            "file": "FJ1807",
+            "sha256": "6ae0c7024c63059599eedabc36fe4650e5979d99ca7d8f9b8bd2389c89d6c5a4"
+          },
+          {
+            "file": "FJ1808",
+            "sha256": "9e6fe3664aa909ce2d26683de807b627b076a1e68906f4bf4ffc59cf984e4bc4"
+          },
+          {
+            "file": "FJ1810",
+            "sha256": "3102a4f96ff71fc9c1e9686ca5e7aefe2e48bb15b3df9c731bde44f9a3dc553c"
+          },
+          {
+            "file": "FJ1814",
+            "sha256": "38ca1d48bc0518256be6ee7a947169f24a402e91a49dde23bced70fc59a6a5d3"
+          },
+          {
+            "file": "FJ1817",
+            "sha256": "b05b314182e27a015072a39847bd750a7c0899962d7d6357541cedf1358f05db"
+          },
+          {
+            "file": "FJ1822",
+            "sha256": "bbe90f2e0a971bdbde65b9da78b3dff921ed92d2de4bfb81b9629b920d41d7de"
+          },
+          {
+            "file": "FJ1826",
+            "sha256": "c468ce1835bf10dbc68f7351a99a788731418bc29b83a3ec2af6135766a69d69"
+          },
+          {
+            "file": "FJ1828",
+            "sha256": "14f9e2dbd68f455314424315b049df5a1a84c248d4c56895b8f8ab426cc40a66"
+          },
+          {
+            "file": "FJ1830",
+            "sha256": "d35574d86994e5e49e0e1ee41174a927c666735d7eb7b9cbdae2a709ae4a0bb9"
+          },
+          {
+            "file": "FJ1831",
+            "sha256": "dccbbe50f38efa0e95660b6b99ffe1e16a2baf37a29e0200d697446f5299c476"
+          },
+          {
+            "file": "FJ1833",
+            "sha256": "8f4548f67acff09574bc46bfc9c78c31ad8d4f16a34cfe28b95e19b640d2208c"
+          },
+          {
+            "file": "FJ1834",
+            "sha256": "9a52d502e5af633cb6d1cae76e5e9230e60f78ee987982c23b02776fd3adc9ea"
+          },
+          {
+            "file": "FJ1835",
+            "sha256": "d8c6c241f6e98a6b8bfa9cd97943173d18a91251a66029d9a5681fc09f691be4"
+          },
+          {
+            "file": "FJ1836",
+            "sha256": "367b62ae6f27730d3587f4776ad948ad114f9182be35e776faf7aa576d97ae41"
+          },
+          {
+            "file": "FJ1841",
+            "sha256": "473636ae8d030582d4d7a76d6fa93d2fc785a415060411fe9b93ce63738ee2bf"
+          },
+          {
+            "file": "FJ1842",
+            "sha256": "dd46c1ccde03f979fb0e23071ab5816d7a4bda05776b66604e784f735127c0c2"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "brain",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+        "fmaId": "FMA72826",
+        "name": "Right caudate nucleus",
+        "sourceName": "right caudate nucleus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA72826",
+        "bounds": {
+          "min": [
+            -0.3500939905643463,
+            7.402700424194336,
+            0.10370998084545135
+          ],
+          "max": [
+            -0.032008200883865356,
+            7.773499965667725,
+            0.7393199801445007
+          ]
+        },
+        "center": [
+          -0.19105109572410583,
+          7.58810019493103,
+          0.42151498049497604
+        ],
+        "anchor": [
+          -0.12303600460290909,
+          7.684699535369873,
+          0.422605961561203
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1802",
+            "sha256": "1139f3e7002704a0efcc1c9161ef2b84e60f28c18728e24664454451ae30bb17"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "caudate",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+        "fmaId": "FMA72827",
+        "name": "Left caudate nucleus",
+        "sourceName": "left caudate nucleus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA72827",
+        "bounds": {
+          "min": [
+            0.019033098593354225,
+            7.402600288391113,
+            0.10356602072715759
+          ],
+          "max": [
+            0.3368489742279053,
+            7.773199558258057,
+            0.7394199967384338
+          ]
+        },
+        "center": [
+          0.17794103641062975,
+          7.587899923324585,
+          0.4214930087327957
+        ],
+        "anchor": [
+          0.0999520942568779,
+          7.671600341796875,
+          0.38684195280075073
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1754",
+            "sha256": "c94a8fe0da8cd1ddb916a4f871b017a82bf1dbe5a60307cbc36baa9bf23324ec"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "caudate",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-putamen",
+        "fmaId": "FMA72828",
+        "name": "Right putamen",
+        "sourceName": "right putamen",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA72828",
+        "bounds": {
+          "min": [
+            -0.3575249910354614,
+            7.454300403594971,
+            0.2552749514579773
+          ],
+          "max": [
+            -0.17474500834941864,
+            7.715400218963623,
+            0.6836599707603455
+          ]
+        },
+        "center": [
+          -0.26613499969244003,
+          7.584850311279297,
+          0.4694674611091614
+        ],
+        "anchor": [
+          -0.2731049954891205,
+          7.584000110626221,
+          0.46894896030426025
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1823",
+            "sha256": "6461f70dee31e6f17d87e1f9d79bc92b1cdccd41b7d90bb89b6f25589d27cfc8"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "putamen",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-putamen",
+        "fmaId": "FMA72829",
+        "name": "Left putamen",
+        "sourceName": "left putamen",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA72829",
+        "bounds": {
+          "min": [
+            0.16188998520374298,
+            7.454300403594971,
+            0.25526800751686096
+          ],
+          "max": [
+            0.34444499015808105,
+            7.715400218963623,
+            0.6836799383163452
+          ]
+        },
+        "center": [
+          0.253167487680912,
+          7.584850311279297,
+          0.4694739729166031
+        ],
+        "anchor": [
+          0.25755399465560913,
+          7.586700439453125,
+          0.47297996282577515
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1776",
+            "sha256": "20838a2fc79afe34dfd532151c174b9bb6afec6e5eda961e6dff6cd505b36a51"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "putamen",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+        "fmaId": "FMA72830",
+        "name": "Right globus pallidus",
+        "sourceName": "right globus pallidus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA72830",
+        "bounds": {
+          "min": [
+            -0.303274005651474,
+            7.463100433349609,
+            0.3022480010986328
+          ],
+          "max": [
+            -0.13594000041484833,
+            7.636099815368652,
+            0.5949600338935852
+          ]
+        },
+        "center": [
+          -0.21960700303316116,
+          7.549600124359131,
+          0.448604017496109
+        ],
+        "anchor": [
+          -0.1881830096244812,
+          7.551400184631348,
+          0.435699999332428
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1805",
+            "sha256": "c89453826d4617211ca58a6ce11bc63904a571d594d3d073cfb3a53c7672a9be"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "pallidum",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+        "fmaId": "FMA72831",
+        "name": "Left globus pallidus",
+        "sourceName": "left globus pallidus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA72831",
+        "bounds": {
+          "min": [
+            0.1228330060839653,
+            7.463100433349609,
+            0.30222800374031067
+          ],
+          "max": [
+            0.29021599888801575,
+            7.636099815368652,
+            0.5950199961662292
+          ]
+        },
+        "center": [
+          0.20652450248599052,
+          7.549600124359131,
+          0.44862399995326996
+        ],
+        "anchor": [
+          0.17874599993228912,
+          7.555300235748291,
+          0.4323529899120331
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1757",
+            "sha256": "f1519d79c632403ab669d8ffa8f6c72ce50dc57bc58b3fa54b155f292db20488"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "pallidum",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+        "fmaId": "FMA72832",
+        "name": "Right amygdala",
+        "sourceName": "right amygdala",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA72832",
+        "bounds": {
+          "min": [
+            -0.34627601504325867,
+            7.319300651550293,
+            0.39133599400520325
+          ],
+          "max": [
+            -0.1758200079202652,
+            7.4468994140625,
+            0.5751200318336487
+          ]
+        },
+        "center": [
+          -0.26104801148176193,
+          7.3831000328063965,
+          0.48322801291942596
+        ],
+        "anchor": [
+          -0.25601398944854736,
+          7.372900485992432,
+          0.4786669909954071
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1829",
+            "sha256": "f53fab3de8ac6b90a2c956e8ccac9b949d9adc32b843070712f12c9ad1b18e92"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "amygdala",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+        "fmaId": "FMA72833",
+        "name": "Left amygdala",
+        "sourceName": "left amygdala",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA72833",
+        "bounds": {
+          "min": [
+            0.1624789983034134,
+            7.319900035858154,
+            0.39249497652053833
+          ],
+          "max": [
+            0.3338579833507538,
+            7.447900295257568,
+            0.5759100317955017
+          ]
+        },
+        "center": [
+          0.2481684908270836,
+          7.383900165557861,
+          0.48420250415802
+        ],
+        "anchor": [
+          0.24589000642299652,
+          7.373800277709961,
+          0.4772799611091614
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1753",
+            "sha256": "1a557cc879fa71c1e5a5681caf4e7506418c479c29171b48a959a1d5a69e1425"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "amygdala",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+        "fmaId": "FMA258714",
+        "name": "Right thalamus",
+        "sourceName": "right thalamus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA258714",
+        "bounds": {
+          "min": [
+            -0.24605399370193481,
+            7.421299934387207,
+            0.11870498955249786
+          ],
+          "max": [
+            -0.01247750036418438,
+            7.657199859619141,
+            0.4836689829826355
+          ]
+        },
+        "center": [
+          -0.1292657470330596,
+          7.539249897003174,
+          0.3011869862675667
+        ],
+        "anchor": [
+          -0.20139099657535553,
+          7.527600288391113,
+          0.3386560082435608
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1827",
+            "sha256": "a4b5be59d7cf6dc3ca1b2ae97a83ffd947e39493cc663c2cb7d65a064af91b1d"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thalamus",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+        "fmaId": "FMA258716",
+        "name": "Left thalamus",
+        "sourceName": "left thalamus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA258716",
+        "bounds": {
+          "min": [
+            -0.0009246880072169006,
+            7.420699596405029,
+            0.11806800961494446
+          ],
+          "max": [
+            0.23373599350452423,
+            7.65749979019165,
+            0.4839569926261902
+          ]
+        },
+        "center": [
+          0.11640565274865367,
+          7.53909969329834,
+          0.3010125011205673
+        ],
+        "anchor": [
+          0.19691500067710876,
+          7.52079963684082,
+          0.30950796604156494
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1782",
+            "sha256": "6e6e87e4feda05756e8748a61febdb2fe61d4ba834fd5a57d805512d9fcd82cc"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thalamus",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+        "fmaId": "FMA73303",
+        "name": "Right lateral geniculate body",
+        "sourceName": "right lateral geniculate body",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA73303",
+        "bounds": {
+          "min": [
+            -0.24525099992752075,
+            7.369499683380127,
+            0.19040100276470184
+          ],
+          "max": [
+            -0.16053900122642517,
+            7.433700084686279,
+            0.30769896507263184
+          ]
+        },
+        "center": [
+          -0.20289500057697296,
+          7.401599884033203,
+          0.24904998391866684
+        ],
+        "anchor": [
+          -0.2043670117855072,
+          7.408299446105957,
+          0.25283896923065186
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1813",
+            "sha256": "6e8ba825eda0abc96cc435380772b3734b9b0432124d78f3c41f01185f3a7614"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lateralGeniculate",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+        "fmaId": "FMA73304",
+        "name": "Left lateral geniculate body",
+        "sourceName": "left lateral geniculate body",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA73304",
+        "bounds": {
+          "min": [
+            0.16767099499702454,
+            7.368499755859375,
+            0.20237396657466888
+          ],
+          "max": [
+            0.2519899904727936,
+            7.437299728393555,
+            0.3165239691734314
+          ]
+        },
+        "center": [
+          0.20983049273490906,
+          7.402899742126465,
+          0.25944896787405014
+        ],
+        "anchor": [
+          0.2291720062494278,
+          7.399200439453125,
+          0.2607489824295044
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1766",
+            "sha256": "06bfe642952f6fbc090e4dfd7de69090ad443e0f38bfc1a5f87d5accb6e1ccfc"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lateralGeniculate",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+        "fmaId": "FMA73309",
+        "name": "Right medial geniculate body",
+        "sourceName": "right medial geniculate body",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA73309",
+        "bounds": {
+          "min": [
+            -0.18317200243473053,
+            7.359399318695068,
+            0.21044403314590454
+          ],
+          "max": [
+            -0.11798999458551407,
+            7.435999870300293,
+            0.28113502264022827
+          ]
+        },
+        "center": [
+          -0.1505809985101223,
+          7.397699594497681,
+          0.2457895278930664
+        ],
+        "anchor": [
+          -0.14594200253486633,
+          7.40410041809082,
+          0.2704769968986511
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1816",
+            "sha256": "d851d4d2363d6469fbff4c1f7009e743425bce74ec6e8ff599ee3aef4289bf42"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "medialGeniculate",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+        "fmaId": "FMA73310",
+        "name": "Left medial geniculate body",
+        "sourceName": "left medial geniculate body",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA73310",
+        "bounds": {
+          "min": [
+            0.11798899620771408,
+            7.359399318695068,
+            0.21044403314590454
+          ],
+          "max": [
+            0.18317200243473053,
+            7.435999870300293,
+            0.28113502264022827
+          ]
+        },
+        "center": [
+          0.1505804993212223,
+          7.397699594497681,
+          0.2457895278930664
+        ],
+        "anchor": [
+          0.14594200253486633,
+          7.40410041809082,
+          0.2704769968986511
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1816M",
+            "sha256": "4db95663f23f9196403d7227d8844b82a8faaaf4ff5146f8c27ec2120d97f117"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "medialGeniculate",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+        "fmaId": "FMA72924",
+        "name": "Right fornix of forebrain",
+        "sourceName": "right fornix of forebrain",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA72924",
+        "bounds": {
+          "min": [
+            -0.3212239742279053,
+            7.352900505065918,
+            0.08262798190116882
+          ],
+          "max": [
+            -0.006592429708689451,
+            7.674000263214111,
+            0.5274800062179565
+          ]
+        },
+        "center": [
+          -0.16390820196829736,
+          7.513450384140015,
+          0.3050539940595627
+        ],
+        "anchor": [
+          -0.27547499537467957,
+          7.425699234008789,
+          0.26569801568984985
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1804",
+            "sha256": "d18c04db4ad5e495310fc7f0fde79c9e2bfbcccb78e4169f7bdbe74b193b77a6"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "fornix",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+        "fmaId": "FMA72925",
+        "name": "Left fornix of forebrain",
+        "sourceName": "left fornix of forebrain",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA72925",
+        "bounds": {
+          "min": [
+            -0.006572210229933262,
+            7.353000640869141,
+            0.08259700983762741
+          ],
+          "max": [
+            0.30813100934028625,
+            7.674000263214111,
+            0.5274999737739563
+          ]
+        },
+        "center": [
+          0.1507793995551765,
+          7.513500452041626,
+          0.30504849180579185
+        ],
+        "anchor": [
+          0.26246899366378784,
+          7.425999641418457,
+          0.26817595958709717
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1756",
+            "sha256": "ecfe3a87d95ee1a7ad39bd742935dd3eeb4ab94ecdc7895d55e8b308b37e6fa4"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "fornix",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+        "fmaId": "FMA61961",
+        "name": "Anterior commissure",
+        "sourceName": "anterior commissure",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA61961",
+        "bounds": {
+          "min": [
+            -0.1291770040988922,
+            7.516300201416016,
+            0.5095800161361694
+          ],
+          "max": [
+            0.11619799584150314,
+            7.542099475860596,
+            0.5561699867248535
+          ]
+        },
+        "center": [
+          -0.006489504128694534,
+          7.529199838638306,
+          0.5328750014305115
+        ],
+        "anchor": [
+          -0.0013009299291297793,
+          7.53000020980835,
+          0.5336099863052368
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1734",
+            "sha256": "a0fc9182e8598fe9640223af8f323aa95c607bedc4f5d085f03df821d8792832"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "anteriorCommissure",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+        "fmaId": "FMA61970",
+        "name": "Commissure of fornix of forebrain",
+        "sourceName": "commissure of fornix of forebrain",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA61970",
+        "bounds": {
+          "min": [
+            -0.25186100602149963,
+            7.465699672698975,
+            0.07049598544836044
+          ],
+          "max": [
+            0.2386689931154251,
+            7.668799877166748,
+            0.3799839913845062
+          ]
+        },
+        "center": [
+          -0.006596006453037262,
+          7.567249774932861,
+          0.22523998841643333
+        ],
+        "anchor": [
+          -0.007657529786229134,
+          7.6080002784729,
+          0.2032710313796997
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1741",
+            "sha256": "ad64cdc4effe097467b438b820a50ce2eb76440ac89112705e326d45386625bc"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "fornicealCommissure",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+        "fmaId": "FMA62072",
+        "name": "Posterior commissure",
+        "sourceName": "posterior commissure",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA62072",
+        "bounds": {
+          "min": [
+            -0.08425849676132202,
+            7.434699535369873,
+            0.21017998456954956
+          ],
+          "max": [
+            0.06989699602127075,
+            7.461999416351318,
+            0.26102203130722046
+          ]
+        },
+        "center": [
+          -0.007180750370025635,
+          7.448349475860596,
+          0.235601007938385
+        ],
+        "anchor": [
+          -0.010294300504028797,
+          7.4569993019104,
+          0.23569197952747345
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1799",
+            "sha256": "1b8e46294f95f1b68d03a2ca1ce73447b210a7c2b0c3cbb8bde1e836268bfddc"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "posteriorCommissure",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+        "fmaId": "FMA86464",
+        "name": "Corpus callosum",
+        "sourceName": "corpus callosum",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA86464",
+        "bounds": {
+          "min": [
+            -0.2656150162220001,
+            7.444100379943848,
+            -0.10566601157188416
+          ],
+          "max": [
+            0.2524470090866089,
+            7.832600116729736,
+            0.8105599880218506
+          ]
+        },
+        "center": [
+          -0.006584003567695618,
+          7.638350248336792,
+          0.3524469882249832
+        ],
+        "anchor": [
+          -0.016084300354123116,
+          7.723800182342529,
+          0.32573097944259644
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1742",
+            "sha256": "3f46359c2a23499ac130bd27646309f7974d216f9d55320b503e3b0844da9a70"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "callosum",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+        "fmaId": "FMA61934",
+        "name": "Choroid plexus of cerebral hemisphere",
+        "sourceName": "choroid plexus of cerebral hemisphere",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA61934",
+        "bounds": {
+          "min": [
+            -0.380094975233078,
+            7.348700046539307,
+            0.06290599703788757
+          ],
+          "max": [
+            0.36727002263069153,
+            7.687900543212891,
+            0.4966200292110443
+          ]
+        },
+        "center": [
+          -0.006412476301193237,
+          7.518300294876099,
+          0.27976301312446594
+        ],
+        "anchor": [
+          -0.007468170020729303,
+          7.565899848937988,
+          0.23644401133060455
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1755",
+            "sha256": "221d1889dbb2d850c6da56c0cdd1b1d4581ac845dd55c96e68a594c33a1742dc"
+          },
+          {
+            "file": "FJ1803",
+            "sha256": "a950a761098cf6d80c09c7133ce0c0044598c64682c0a0825f6bbd4b23892dc3"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. The source definition groups left and right components; they are not separately labelled here. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "choroid",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+        "fmaId": "FMA74877",
+        "name": "Mammillary body",
+        "sourceName": "mammillary body",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA74877",
+        "bounds": {
+          "min": [
+            -0.04728950187563896,
+            7.383199691772461,
+            0.41685402393341064
+          ],
+          "max": [
+            0.03416629880666733,
+            7.433599948883057,
+            0.4624429941177368
+          ]
+        },
+        "center": [
+          -0.006561601534485817,
+          7.408399820327759,
+          0.43964850902557373
+        ],
+        "anchor": [
+          -0.005242209881544113,
+          7.402299880981445,
+          0.4462830424308777
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1768",
+            "sha256": "21310504243fa2108ba658a96a1a60bac752ee6308c591a86831565c40f7a331"
+          },
+          {
+            "file": "FJ1815",
+            "sha256": "661457abdb95fab49bfddaddefae5f05f5c77d501d9c370a03d29c9181094379"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. The source definition groups left and right components; they are not separately labelled here. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "mammillary",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-stria-medullaris-of-thalamus",
+        "fmaId": "FMA73414",
+        "name": "Left stria medullaris of thalamus",
+        "sourceName": "left stria medullaris of thalamus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "limbic-landmarks",
+        "nodeName": "FMA73414",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1777",
+            "sha256": "c3fb623bd7dd4e6f99ea6b71f7ab59b211f5bd86eba1a9451a2f4b6838f07ef7"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.006647559814155102,
+            7.452300071716309,
+            0.16842100024223328
+          ],
+          "max": [
+            0.03178279846906662,
+            7.609000205993652,
+            0.5359399914741516
+          ]
+        },
+        "center": [
+          0.012567619327455759,
+          7.5306501388549805,
+          0.35218049585819244
+        ],
+        "anchor": [
+          0.0025474000722169876,
+          7.59119987487793,
+          0.36391401290893555
+        ],
+        "coverageNote": "Coarse source-labelled stria medullaris envelope, not individual fibres or tractography. The source origin is not a validated midsagittal plane; slight zero-X crossing of the left source is retained, not repaired. Every ordered source triangle and position is retained. Stria terminalis is withheld for source defects. Anatomical relationships, laterality and clinical accuracy require review; no patient registration or complete limbic circuit is supplied.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "striaMedullaris",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "Left stria medullaris of thalamus · Review pending",
+          "body": "Detailed structure-specific clinical and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No acquired CT, MRI, X-ray, ultrasound, diffusion tractography or patient registration is supplied."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "Left stria medullaris of thalamus · Review pending",
+          "body": "Detailed structure-specific clinical and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No acquired CT, MRI, X-ray, ultrasound, diffusion tractography or patient registration is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-stria-medullaris-of-thalamus",
+        "fmaId": "FMA73413",
+        "name": "Right stria medullaris of thalamus",
+        "sourceName": "right stria medullaris of thalamus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "limbic-landmarks",
+        "nodeName": "FMA73413",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1824",
+            "sha256": "252737907ed1ef0c3317fff6cce455ebe56975e1ab9d87e66cb19549239000d2"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.04467859864234924,
+            7.452600002288818,
+            0.16792699694633484
+          ],
+          "max": [
+            -0.006693330127745867,
+            7.608500003814697,
+            0.535830020904541
+          ]
+        },
+        "center": [
+          -0.025685964385047555,
+          7.530550003051758,
+          0.3518785089254379
+        ],
+        "anchor": [
+          -0.016119299456477165,
+          7.59060001373291,
+          0.36721599102020264
+        ],
+        "coverageNote": "Coarse source-labelled stria medullaris envelope, not individual fibres or tractography. The source origin is not a validated midsagittal plane; slight zero-X crossing of the left source is retained, not repaired. Every ordered source triangle and position is retained. Stria terminalis is withheld for source defects. Anatomical relationships, laterality and clinical accuracy require review; no patient registration or complete limbic circuit is supplied.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "striaMedullaris",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "Right stria medullaris of thalamus · Review pending",
+          "body": "Detailed structure-specific clinical and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No acquired CT, MRI, X-ray, ultrasound, diffusion tractography or patient registration is supplied."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "Right stria medullaris of thalamus · Review pending",
+          "body": "Detailed structure-specific clinical and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No acquired CT, MRI, X-ray, ultrasound, diffusion tractography or patient registration is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:lamina-terminalis",
+        "fmaId": "FMA61975",
+        "name": "Lamina terminalis",
+        "sourceName": "lamina terminalis",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "limbic-landmarks",
+        "nodeName": "FMA61975",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1764",
+            "sha256": "8935c1c22609f2e8078ec33ac867e2633c645e98b80d1bdca789de8e3a8f010e"
+          },
+          {
+            "file": "FJ1812",
+            "sha256": "91812f9540a4f96cff9ccfcfa478ac885d7f59c0fd08ab0f05fd865e6b670713"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.020590899512171745,
+            7.395299911499023,
+            0.5233100056648254
+          ],
+          "max": [
+            0.007492519915103912,
+            7.514200210571289,
+            0.5964400172233582
+          ]
+        },
+        "center": [
+          -0.0065491897985339165,
+          7.454750061035156,
+          0.5598750114440918
+        ],
+        "anchor": [
+          -0.0054879398085176945,
+          7.460400104522705,
+          0.5632399916648865
+        ],
+        "coverageNote": "Two original lamina files touch at one source-coordinate vertex; their individual normals remain separate. This is not a reconstructed continuous sheet. Every ordered source triangle and position is retained. Stria terminalis is withheld for source defects. Anatomical relationships, laterality and clinical accuracy require review; no patient registration or complete limbic circuit is supplied.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "laminaTerminalis",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "Lamina terminalis · Review pending",
+          "body": "Detailed structure-specific clinical and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No acquired CT, MRI, X-ray, ultrasound, diffusion tractography or patient registration is supplied."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "Lamina terminalis · Review pending",
+          "body": "Detailed structure-specific clinical and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No acquired CT, MRI, X-ray, ultrasound, diffusion tractography or patient registration is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:septum-of-telencephalon",
+        "fmaId": "FMA61842",
+        "name": "Septum of telencephalon",
+        "sourceName": "septum of telencephalon",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "limbic-landmarks",
+        "nodeName": "FMA61842",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1832",
+            "sha256": "38cc30c1c449b1e171ba945320a087c95473da3ffe2a9c0965f4c4d1d28b2d25"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.11118800193071365,
+            7.518499851226807,
+            0.0930040031671524
+          ],
+          "max": [
+            0.09908740222454071,
+            7.748199939727783,
+            0.7187399864196777
+          ]
+        },
+        "center": [
+          -0.0060502998530864716,
+          7.633349895477295,
+          0.40587199479341507
+        ],
+        "anchor": [
+          -0.004321000073105097,
+          7.673699855804443,
+          0.40213799476623535
+        ],
+        "coverageNote": "The original septum-of-telencephalon definition has two components. It does not independently identify septal nuclei, septum verum or a validated septum-pellucidum subdivision. Every ordered source triangle and position is retained. Stria terminalis is withheld for source defects. Anatomical relationships, laterality and clinical accuracy require review; no patient registration or complete limbic circuit is supplied.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "septum",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "Septum of telencephalon · Review pending",
+          "body": "Detailed structure-specific clinical and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No acquired CT, MRI, X-ray, ultrasound, diffusion tractography or patient registration is supplied."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "Septum of telencephalon · Review pending",
+          "body": "Detailed structure-specific clinical and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No acquired CT, MRI, X-ray, ultrasound, diffusion tractography or patient registration is supplied."
+        }
+      }
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "917d6444fcd8fad9edd81ff4bf4bb2ae0db5a512592550845ff8ecfca9bbd177"
+}

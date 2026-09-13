@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "ebd0a7c6d4ba6ab238e6c1f897655d67f96952632eaa0478f956eba19a7e94fd"
+      "sha256": "1dc57500f40f3897ef36cd17afe0d60a152bda5f285e59e0e49cccd4e82d8e3f"
     },
     {
       "path": "app/body-explorer.css",
@@ -419,6 +419,14 @@
     {
       "path": "content/cardiac-teaching.ts",
       "sha256": "0848e6de5820400a84fee5cfdff88ad406de07774aedafc10ec7ffdedbf0a72c"
+    },
+    {
+      "path": "content/central-neural-imaging-pins.json",
+      "sha256": "3395a863ca17220821a540ae016a2d864d421d2e57e61f5ddcdae81f57d940be"
+    },
+    {
+      "path": "content/central-neural-imaging.ts",
+      "sha256": "95ebfa3cc9e0da134286ee682fc5ec7194e3c9ac81d4e8dfd00e8706311145d5"
     },
     {
       "path": "content/cerebral-arterial-pins.json",
@@ -955,6 +963,10 @@
     {
       "path": "lib/central-neural-clinical-curriculum.ts",
       "sha256": "1034631e736dd108c677f5fbd7f4242e6e2c588f9d69ebeaa8ba7de8119f51e2"
+    },
+    {
+      "path": "lib/central-neural-imaging.ts",
+      "sha256": "b6e2c570c6f595dbc728616b9296b2ca6913be549ae7277f9e86b20ca68c6810"
     },
     {
       "path": "lib/central-neuro-curriculum.ts",
@@ -1905,5 +1917,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "d1da35ec375e4f72feaad5bbeb6a6299555a0ba0245073b9be6a36e71ee643c4"
+  "sha256": "094d5b936890e64736c28cda77e43276ec444371fb0632cc113058bc79430508"
 }

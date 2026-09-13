@@ -10,7 +10,9 @@ import {footMuscleImagingGroups as groups,footMuscleImagingModes as modes,footMu
 import pins from '../content/foot-muscle-imaging-pins.json' with {type:'json'};
 import {authoringBeforeForearmMuscleImaging} from './forearm-muscle-imaging-history.mjs';
 import {authoringBeforeHandMuscleImaging} from './hand-muscle-imaging-history.mjs';
-const rawCurrent=await contentContext(),current={...rawCurrent,api:authoringBeforeHandMuscleImaging(rawCurrent)},context={...current,api:authoringBeforeForearmMuscleImaging(current)};
+import {authoringBeforeCentralNeuralImaging} from './central-neural-imaging-history.mjs';
+const latest=await contentContext();
+const rawCurrent={...latest,api:authoringBeforeCentralNeuralImaging(latest)},current={...rawCurrent,api:authoringBeforeHandMuscleImaging(rawCurrent)},context={...current,api:authoringBeforeForearmMuscleImaging(current)};
 const {api}=context,catalog=api.bodyDisplayCatalog(context.catalog);
 const original=JSON.stringify(catalog),before=authoringBeforeFootMuscleImaging(context);
 assert.equal(hash({body:catalog.structures.map(s=>({id:s.id,sections:Object.fromEntries(api.contentTabs.map(t=>[t,before.bodyLesson(s,t)]))})),shoulder:api.structures,recipes:api.dissectionProfiles}),pins.previousAllLessonsAndRecipesHash,'All preceding teaching and recipes preserved');
