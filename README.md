@@ -63,6 +63,10 @@ npm run db:generate
 
 ## Production configuration
 
+The contained 3D modules support an optional [lossless model-delivery step](docs/atlas-model-delivery.md)
+after the final build and before packaging. It retains the canonical exports and
+all anatomy while reducing transferred bytes; no new website dependency is needed.
+
 The hosted application requires:
 
 - `DB`: D1 binding for learner progress and future catalogue metadata.
