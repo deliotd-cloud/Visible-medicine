@@ -77,6 +77,24 @@ Latest specialist-chat review reports both anterior cerebellar edges accepted an
 
 ## Ordered delivery roadmap
 
+13 September — spine/pelvic muscle imaging: 192 pending CT/MRI/ultrasound topics
+now have source-bound draft notes across 64 selections and 36 groups. Current
+attachments and cautions are retained; small grouped muscles are not portrayed
+as validated per-level imaging contours. The ambiguous FMA19728 superficial
+perineal source category remains pending. All 9,717 other topics and dissection
+recipes are unchanged; no geometry, scans, masks, image assets, dependencies or
+new controls are added. Dedicated checks pass all 192 actual note renders,
+2,880 altered-identity/topic rejections, 1,101 displayed schema records and the
+full 33,444 content checks. The prior shoulder-arm imaging suite remains intact.
+Radiologist sign-off, cleared Didanix Education mappings and separate lecture
+rights remain outstanding; this is not clinical or production acceptance.
+The source-bound shared website export carries these notes without new models.
+See the coordinating spine-pelvic-imaging checkpoint for actual publication and
+verified GitHub/D recovery. Continue substantive anatomy, imaging/teaching and
+the full Education roadmap; do not retry the unchanged standalone upload or
+create a competing learner PACS. A bounded follow-up should repair the known
+Atlas navigation-test import resolution without weakening its assertions.
+
 13 September — shoulder/arm muscle imaging: 96 previously pending CT/MRI/US
 sections now have source-bound draft teaching across 32 muscle selections and
 20 anatomical groups. Cuff, deltoid, biceps/triceps and scapular/arm muscles have
