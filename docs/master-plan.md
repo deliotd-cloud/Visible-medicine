@@ -2,6 +2,32 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 13 September — orbital and neck muscle imaging
+
+Atlas `76e0d191c683f273d2399216d82a592b14438b7d` adds 112 original draft notes
+for 42 exact existing muscle selections: CT/MRI for all, ultrasound for 28 neck
+selections. Fourteen orbital US topics remain pending. Seven orbital, six neck
+and eight hyoid-related pairs retain their source identities and attachment
+cautions. Cervical rotatores and lower-priority tongue/palate/larynx topics are
+not overwritten. These are orientation notes, not scans or a complete curriculum.
+
+Checks pass 112 actual note renders, 2,128 mismatched-source/topic rejections,
+all 1,101 current schemas and preservation of the other 9,797 topics. Prior acral
+and full historical content checks, review checks, TypeScript and Atlas builds
+pass. The shared module is generated from clean committed source; all 131 model
+objects/137 paths are unchanged. Compact controls, homepage modality previews,
+Atlas list, independent entitlements and clinical holds remain intact. No new
+patient data, image, dependency or fee. Sources are factual reading references,
+not a grant to reuse publisher figures. Clinical review must cover scan-plane
+wording, small-muscle visibility, ocular motility/entrapment limits, hyoid layers
+and neurovascular relations against the actual revision. No approval is migrated.
+
+Website checks, publication and GitHub/D recovery are recorded in the dated
+orbital-neck-imaging checkpoint. Continue substantive thoracoabdominal organ and
+vessel imaging, anatomy/detail, regional dissection and cleared Didanix Education
+integration. Native MRI QA is already completed; do not restart it or retry the
+unchanged standalone archive. The complete Atlas goal remains active.
+
 ## 13 September — hand/foot bone CT/MRI teaching
 
 Atlas source `d709e70a6678b7846053f39b4e7ebae8efb79f55` adds 152 draft CT/MRI

@@ -560,6 +560,14 @@ Shoulder-and-arm muscle imaging teaching (13 September 2026) adds original brief
 
 Spine/pelvic muscle imaging teaching (13 September 2026) adds original brief synthesis and reading links to ACR/RSNA and cited primary imaging/anatomical publications. Existing original attachment teaching is reused. No publisher prose, figures, tables, scan, ultrasound image, model, protocol or dataset is redistributed; citation does not grant commercial reuse of linked material. Original notes/code retain MIT terms, and all existing model licences, attribution and source holds remain unchanged. No dependency, font, texture, paid API or mandatory service is added. See `docs/SPINE_PELVIC_MUSCLE_IMAGING.md` for source scope and radiologist-review gates.
 
+Orbital/neck muscle imaging teaching (13 September 2026) adds original brief
+orientation notes and factual reading links, with existing attachment teaching
+reused. No publisher article, figure, table, scan, model or protocol is imported;
+open access does not grant redistribution rights. Original notes/code retain MIT
+terms, and existing BodyParts3D notices/source holds remain unchanged. No new
+dependency, font, texture, paid API or mandatory fee. See
+`docs/ORBITAL_NECK_MUSCLE_IMAGING.md` for the exact draft and source scope.
+
 Run:
 
 ```bash
