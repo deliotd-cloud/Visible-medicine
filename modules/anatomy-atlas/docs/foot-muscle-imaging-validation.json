@@ -1,0 +1,30 @@
+{
+  "baselineSource": "441ce856955f71b145420330fff3e37649d7ad4e",
+  "groups": 18,
+  "sourceSelections": 36,
+  "addedDraftPlacements": 144,
+  "modalities": {
+    "ct": 36,
+    "mri": 36,
+    "ultrasound": 36,
+    "xray": 36
+  },
+  "unchangedTopics": 9765,
+  "bodySchemaRecords": 1101,
+  "actualNoteRenders": 144,
+  "rejectedSourceTopicCombinations": 2160,
+  "uniqueReferenceFacts": 35,
+  "sourceWordCounts": {
+    "ultrasound": 47,
+    "xray": 27,
+    "anatomy": 195,
+    "morphologyMRI": 76,
+    "plantarUS": 67
+  },
+  "sourceGeometryChanged": false,
+  "currentApprovalRecordsChanged": false,
+  "clinicalApproval": false,
+  "imagesImported": false,
+  "imagingConnected": false,
+  "browserOrDeviceAcceptance": false
+}

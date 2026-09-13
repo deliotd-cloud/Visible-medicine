@@ -8,8 +8,10 @@ import correction from '../public/models/bodyparts3d/pancreas/display-correction
 import {authoringBeforePelvicOrganImaging} from './pelvic-organ-imaging-history.mjs';
 import {authoringBeforeThighMuscleImaging} from './thigh-muscle-imaging-history.mjs';
 import {authoringBeforeLegMuscleImaging} from './leg-muscle-imaging-history.mjs';
+import {authoringBeforeFootMuscleImaging} from './foot-muscle-imaging-history.mjs';
 export const abdominalOrganContentHash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function authoringBeforeAbdominalOrganImaging({api,catalog}) {
+  api=authoringBeforeFootMuscleImaging({api,catalog});
   api=authoringBeforeLegMuscleImaging({api,catalog});
   api=authoringBeforeThighMuscleImaging({api,catalog});
   api=authoringBeforePelvicOrganImaging({api,catalog});

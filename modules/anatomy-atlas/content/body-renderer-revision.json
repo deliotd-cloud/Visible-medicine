@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "e4e2b95fccc2018645bede29680393a469573210eac79f629cf9d39e4c52a4ce"
+      "sha256": "7818cdecef81273bfe15655ae085e2f8a74c6b0dd89ba2792102df0d7ae6efdc"
     },
     {
       "path": "app/body-explorer.css",
@@ -475,6 +475,14 @@
     {
       "path": "content/foot-joints.ts",
       "sha256": "abd13350b6efa6b79c19ec1669a646ba794d411de09a414a21b68bf407993f1f"
+    },
+    {
+      "path": "content/foot-muscle-imaging-pins.json",
+      "sha256": "0d64ea48081d3141c72effe8e5f637d2784f75032d680f591519d0decc53f533"
+    },
+    {
+      "path": "content/foot-muscle-imaging.ts",
+      "sha256": "80aba36ae5a6dfb3313510f75d414f96c27468d00c912c22b3d87dad5dfa2ba2"
     },
     {
       "path": "content/genicular-study-pins.json",
@@ -1051,6 +1059,10 @@
     {
       "path": "lib/foot-joints.ts",
       "sha256": "3eb2ccb69d9a2d9a05f12d81474ad4171f5850e122f6415f34d585066cbbf2ee"
+    },
+    {
+      "path": "lib/foot-muscle-imaging.ts",
+      "sha256": "6c0b568ac63cf9c43d99051557191e0f8b6d38c04297ffec6a9b5fb618a58262"
     },
     {
       "path": "lib/foot-reasoning.ts",
@@ -1861,5 +1873,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "255ae0522bba380f441855f75a15027113ce2b0e0386d1441d3700ad8220f873"
+  "sha256": "9f1bdfc6002da52e291c8c2dfc3b0bc1e78288a177637c42a69d4bd53fcea42c"
 }
