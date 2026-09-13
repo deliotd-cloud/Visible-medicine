@@ -74,7 +74,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "fb81bc3a7c954450b5e81a6d9baf91aca08e7a15a4fee6a403f4a2487123a308"
+      "sha256": "6b59543f5dfad769b2000fa85cc8d6a77228b9a76c0dfde301a154fce7af54cb"
     },
     {
       "path": "app/body-scene.tsx",
@@ -1457,6 +1457,10 @@
       "sha256": "d741394acb5ba6a97b7da80688be07b4a35fa48bd07153385a7c67755d34fb61"
     },
     {
+      "path": "lib/regional-framing.ts",
+      "sha256": "d957fb0f15997af759f073c9c09f53b184745b62e354fb32b0b57f0a830128b6"
+    },
+    {
       "path": "lib/regional-motor.ts",
       "sha256": "82fa38c847c564ce12f6de1de718167408fa4757ca750e3a8221ec630fc25d0e"
     },
@@ -1901,5 +1905,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "083d229c9b7bdcb11bd7a06396cfc81a4ed18f53031f46ac138b901d56f31a9c"
+  "sha256": "d1da35ec375e4f72feaad5bbeb6a6299555a0ba0245073b9be6a36e71ee643c4"
 }

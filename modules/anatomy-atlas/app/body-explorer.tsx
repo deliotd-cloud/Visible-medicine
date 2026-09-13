@@ -98,7 +98,8 @@ import { Brand } from './brand';
 import { ReviewStatus } from './review-status';
 import { InspectionControls } from './inspection-controls';
 import { initialInspection } from '@/lib/inspection-state';
-import { handFramingBounds, initialBodySide } from '@/lib/hand-framing';
+import { initialBodySide } from '@/lib/hand-framing';
+import { regionalFramingBounds, regionalFramingRegion } from '@/lib/regional-framing';
 import {
   selectionBounds,
   selectionVisibility,
@@ -497,7 +498,8 @@ export default function BodyExplorer({
     [regionStructures, systems, hiddenIds],
   );
   const enabledIds = useMemo(() => new Set(available.map((item) => item.id)), [available]);
-  const handCloseUp = useMemo(() => handFramingBounds({
+  const framingRegion = regionalFramingRegion(initialRegion, side);
+  const regionalCloseUp = useMemo(() => regionalFramingBounds({
     region: initialRegion,
     side,
     structures: regionStructures,
@@ -1640,15 +1642,15 @@ export default function BodyExplorer({
                 <CameraViewMenu
                   value={view}
                   region={initialRegion}
-                  framingAction={initialRegion === 'hand' && !exam && side !== 'both' &&
+                  framingAction={framingRegion && available.some(s => s.region === framingRegion) && !exam &&
                     !focus && !isolated && !ghostRemoved && !showOrigins &&
                     explode === 0 && layout === 'spatial' && inspection.plane === 'off'
                     ? {
-                      label: handCloseUp ? 'Fit all sources' : 'Frame hand',
+                      label: regionalCloseUp ? 'Fit all sources' : `Frame ${framingRegion}`,
                       run: () => {
                         cameraRestore.current = null;
-                        setRegionalFraming(!handCloseUp);
-                        if (!handCloseUp) setSelectedId(null);
+                        setRegionalFraming(!regionalCloseUp);
+                        if (!regionalCloseUp) setSelectedId(null);
                         setZoom(1);
                         setReset((n) => n + 1);
                       },
@@ -1709,9 +1711,9 @@ export default function BodyExplorer({
                   exam={exam}
                   inspection={exam ? initialInspection : inspection}
                   cameraBounds={jointCloseUp}
-                  presetBounds={handCloseUp}
-                  presetKey={initialRegion === 'hand'
-                    ? `hand/${side}/${handCloseUp ? 'regional' : 'sources'}`
+                  presetBounds={regionalCloseUp}
+                  presetKey={['hand', 'foot'].includes(initialRegion)
+                    ? `${initialRegion}/${side}/${regionalCloseUp ? 'regional' : 'sources'}`
                     : undefined}
                   plate={plate && !exam}
                   cameraCapture={cameraCapture}
@@ -1834,8 +1836,10 @@ export default function BodyExplorer({
                 </Button>
               </div>
               <div className="body-canvas-caption">
-                {handCloseUp
-                  ? 'Hand close-up · Proximal vessels off-screen'
+                {regionalCloseUp
+                  ? initialRegion === 'foot'
+                    ? 'Foot close-up · Full extent in View menu'
+                    : 'Hand close-up · Proximal vessels off-screen'
                   : jointCloseUp
                   ? `${initialRegion === 'forearm' ? 'Elbow' : 'Knee'} close-up · Whole bones extend beyond the view · Pan / pinch to explore`
                   : layout === 'tray' && !exam
