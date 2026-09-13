@@ -2,6 +2,31 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 13 September — hand/foot bone CT/MRI teaching
+
+Atlas source `d709e70a6678b7846053f39b4e7ebae8efb79f55` adds 152 draft CT/MRI
+placements across 76 exact metacarpal/metatarsal/phalangeal selections (38 paired
+concepts). Digit, side, segment and joint partners come from existing anatomy.
+The two unassigned grouped foot sesamoids remain identity-only with imaging
+pending. Prior carpal/tarsal notes, all 108 hand/foot bone ultrasound topics and
+9,757 other topics/recipes are preserved. This is teaching, not acquired scans.
+
+The new suite verifies 152 actual note renders, 2,888 mismatched identity/topic
+rejections, both unchanged bundles and all 1,101 displayed schema records.
+The prior cranial suite, full 33,444 content checks, 235 review checks, TypeScript
+and Atlas build pass. The shared module is exported from clean committed source;
+all 131 model objects / 137 paths are identical to the prior website. Homepage
+modality previews, descriptive Atlas list and compact controls are unchanged.
+Website verification/publication and exact recovery belong in the dated checkpoint.
+
+Review thumb/hallux distinctions, finger tendon relationships, first-MTP/lesser
+plantar plates, Lisfranc/load wording and fifth-metatarsal developmental cautions
+against the actual revision. These short drafts do not complete the curriculum
+or supply diagnoses, protocols, registered imaging or clinical/device approval.
+No new asset/dependency/fee or patient-data use; reference articles are reading
+links, not copied figures. Continue remaining head/neck muscle and thoracoabdominal
+teaching, anatomy/detail and cleared Didanix Education work with independent rights.
+
 ## 13 September — skull, facial-bone and hyoid CT/MRI teaching
 
 Atlas source `4492d6bc47bd11f537cb6aa2bffe324ca3dc3881` adds 46 draft CT/MRI
