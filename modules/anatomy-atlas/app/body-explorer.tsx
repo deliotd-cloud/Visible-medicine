@@ -38,6 +38,7 @@ import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
 import { Slider } from '@/components/ui/slider';
 import { ExplodeStyleSelect } from './explode-style-select';
+import { RegionHeading } from './region-heading';
 import {
   Select,
   SelectContent,
@@ -1608,21 +1609,9 @@ export default function BodyExplorer({
       <div className="body-layout">
         <AnatomyControlRail>{railContent}</AnatomyControlRail>
         <section className="body-workspace" aria-label={`${title} 3D anatomy`}>
-          <div className="body-heading">
-            <div>
-              <div className="eyebrow">REFERENCE ANATOMY · REVIEW PENDING</div>
-              <h1>{title}</h1>
-              <p>
-                {whole
-                  ? 'Explore the body by region or anatomical system.'
-                  : region!.description}
-              </p>
-            </div>
-            <span className="body-count">
-              {regionStructures.length}
-              <small>structures</small>
-            </span>
-          </div>
+          <RegionHeading title={title} count={regionStructures.length}
+            compact={presentation === 'panel'}
+            description={whole ? 'Explore the body by region or anatomical system.' : region!.description}/>
           {!exam && selected && (
             <SelectionVisibilityNotice
               name={selected.name}
@@ -1724,7 +1713,7 @@ export default function BodyExplorer({
                   exam={exam}
                   inspection={exam ? initialInspection : inspection}
                   cameraBounds={jointCloseUp}
-                  fitOccupancy={initialRegion === 'head-neck' ? [0.7, 0.86] : undefined}
+                  fitOccupancy={['head-neck', 'thorax'].includes(initialRegion) ? [0.7, 0.86] : undefined}
                   presetBounds={regionalCloseUp}
                   presetKey={['hand', 'foot'].includes(initialRegion)
                     ? `${initialRegion}/${side}/${regionalCloseUp ? 'regional' : 'sources'}`

@@ -53,5 +53,5 @@ for(const fitOccupancy of [undefined,[.7,.86]])for(const exam of [false,true])fo
   assert(camera);assert.equal(camera.props.fitOccupancy,fitOccupancy);sceneCases++;
 }
 const explorer=await readFile('app/body-explorer.tsx','utf8');
-assert(explorer.includes("fitOccupancy={initialRegion === 'head-neck' ? [0.7, 0.86] : undefined}"),'Only this regional route opts in');
+assert(explorer.includes("fitOccupancy={['head-neck', 'thorax'].includes(initialRegion) ? [0.7, 0.86] : undefined}"),'Only head/neck and thorax opt in; full source fitting is retained');
 console.log(JSON.stringify({sourceSelections:all.length,sourceGroups:groups.length,cameraFits:fits,actualSceneCases:sceneCases,anteriorDistanceRatios:ratios,sourceUnchanged:true,croppedSources:0,browserOrClinicalAcceptance:false}));
