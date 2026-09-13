@@ -17,7 +17,7 @@ export function AtlasModalityPreview(){
     <div className="homepage-atlas-preview-bar"><span>Anatomy in five modalities</span><span>Explore the atlas</span></div>
     <div className="homepage-modality-mosaic">
       {atlasModalities.map(modality=><Link key={modality.id} href={modality.href} className={`homepage-modality-preview homepage-modality-preview-${modality.id}`} aria-label={`${modality.title} — ${modality.status}`}>
-        <img src={modality.image} alt={modality.alt} width={640} height={440}/>
+        <div className="homepage-modality-artwork"><img src={modality.image} alt={modality.alt} width={640} height={440}/></div>
         <span>{modality.label}<span aria-hidden="true">↗</span></span>
       </Link>)}
     </div>

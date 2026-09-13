@@ -99,3 +99,18 @@ test('homepage and Atlas overview share the same five-modality cards and honest 
   assert.ok(!home.includes('One normal study'));
   assert.ok(!home.includes('className="ct-scan"'));
 });
+
+test('homepage previews use matching image frames without an oversized 3D tile',()=>{
+  const cards=readFileSync(new URL('../components/AtlasModalityCards.tsx',import.meta.url),'utf8');
+  const preview=cards.slice(cards.indexOf('export function AtlasModalityPreview'),cards.indexOf('export function AtlasImageNotes'));
+  const css=readFileSync(new URL('../app/atlas-navigation.css',import.meta.url),'utf8');
+  assert.ok(preview.includes('atlasModalities.map'));
+  assert.ok(preview.includes('<div className="homepage-modality-artwork"><img'));
+  assert.ok(preview.includes('href={modality.href}'));
+  assert.ok(preview.includes('Reference previews · image credits'));
+  assert.match(css,/\.homepage-modality-preview\{grid-column:span 2;/);
+  assert.match(css,/\.homepage-modality-artwork\{position:relative;aspect-ratio:1\.15;/);
+  assert.ok(!/\.homepage-modality-preview[^{}]*\{[^{}]*grid-row/.test(css));
+  assert.match(css,/@media\(max-width:360px\)/);
+  assert.match(css,/@media\(prefers-reduced-motion:reduce\)\{\.homepage-modality-preview\{transition:none\}\}/);
+});

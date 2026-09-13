@@ -2,6 +2,19 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 13 September — balanced homepage modality previews
+
+Owner-requested presentation change: the homepage hero now gives 3D, CT, MRI,
+ultrasound and X-ray matching image frames and label bars. Three equal cards sit
+above a centred pair; very narrow screens use two columns with a centred fifth
+card. Subtle hover and keyboard focus styling preserve the Visible Medicine
+palette. Desktop and 390px browser checks confirm equal dimensions (within
+subpixel rounding), no card overflow and readable labels. Existing images,
+credits, destinations, availability, Atlas overview list and lower homepage
+cards are unchanged. No model, teaching content, dependency, access or clinical
+sign-off changes. The complete Atlas goal remains active. Publication and
+GitHub/D recovery evidence are recorded in the balanced-home checkpoint.
+
 ## 13 September — orbital and neck muscle imaging
 
 Atlas `76e0d191c683f273d2399216d82a592b14438b7d` adds 112 original draft notes
