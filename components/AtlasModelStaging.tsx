@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import type { AtlasStoredModel } from '@/lib/atlas-model-storage';
+import { verifyAtlasModelDownload } from '@/lib/atlas-model-download';
 import styles from './AtlasModelStaging.module.css';
 
 export function AtlasModelStaging({ models }: { models: AtlasStoredModel[] }) {
@@ -12,8 +13,9 @@ export function AtlasModelStaging({ models }: { models: AtlasStoredModel[] }) {
   const active = useRef<AbortController | null>(null);
   useEffect(() => () => active.current?.abort(), []);
   const setStatus = (sha: string, status: string) => setStates(current => ({ ...current, [sha]: status }));
-  async function run(upload: boolean) {
+  async function run(mode: 'upload' | 'check' | 'download') {
     if (active.current) return;
+    const upload = mode === 'upload';
     const controller = new AbortController();
     active.current = controller;
     setBusy(true);
@@ -39,8 +41,18 @@ export function AtlasModelStaging({ models }: { models: AtlasStoredModel[] }) {
       let verified = 0;
       for (const { model, file } of queue) {
         if (controller.signal.aborted) throw new Error('Cancelled. Existing stored models are retained.');
-        setMessage(`${upload ? 'Staging' : 'Checking'} ${verified + 1} of ${queue.length}…`);
+        setMessage(`${upload ? 'Staging' : mode === 'download' ? 'Verifying download' : 'Checking'} ${verified + 1} of ${queue.length}…`);
         const url = `/api/atlas-models/${model.sha256}`;
+        if (mode === 'download') {
+          setStatus(model.sha256, 'Downloading for verification');
+          try {
+            const response = await fetch(url, { credentials: 'same-origin', signal: controller.signal, cache: 'no-store', redirect: 'error' });
+            await verifyAtlasModelDownload(response, model, controller.signal);
+            setStatus(model.sha256, 'Full download verified');
+          } catch (error) { setStatus(model.sha256, 'Download not verified'); throw error; }
+          verified++;
+          continue;
+        }
         if (file) {
           setStatus(model.sha256, 'Uploading');
           const response = await fetch(url, { method: 'PUT', headers: { 'Content-Type': 'model/gltf-binary' }, body: file, credentials: 'same-origin', signal: controller.signal, redirect: 'error' });
@@ -58,22 +70,25 @@ export function AtlasModelStaging({ models }: { models: AtlasStoredModel[] }) {
         }
         verified++;
       }
-      setMessage('Check complete. Staging does not activate a release or change the learner Atlas.');
+      setMessage(mode === 'download' ? 'All registered model downloads match their exact bytes and fingerprints. Learner delivery remains unchanged.' : 'Check complete. Staging does not activate a release or change the learner Atlas.');
     } catch (error) {
       setMessage(controller.signal.aborted ? 'Cancelled. No stored model was deleted. Check storage before resuming.' : error instanceof Error ? error.message : 'The operation could not finish.');
     } finally { active.current = null; setBusy(false); }
   }
-  const verifiedCount = models.filter(model => states[model.sha256] === 'Verified in storage').length;
+  const verifiedCount = models.filter(model => ['Verified in storage', 'Full download verified'].includes(states[model.sha256])).length;
+  const downloadedCount = models.filter(model => states[model.sha256] === 'Full download verified').length;
   return <section className={styles.panel} aria-label="Atlas model staging">
     <p>Registered files only. This is not a scan-upload page. Patient images, segmentation masks and unregistered models must not be selected.</p>
     <div className={styles.controls}>
       <label htmlFor="atlas-model-files">Registered GLB files<input id="atlas-model-files" type="file" accept=".glb,model/gltf-binary" multiple disabled={busy} onChange={event => setFiles(Array.from(event.target.files ?? []))} /></label>
-      <button type="button" disabled={busy || !files.length} onClick={() => void run(true)}>Stage selected files</button>
-      <button type="button" disabled={busy} onClick={() => void run(false)}>Check storage</button>
+      <button type="button" disabled={busy || !files.length} onClick={() => void run('upload')}>Stage selected files</button>
+      <button type="button" disabled={busy} onClick={() => void run('check')}>Check storage</button>
+      <button type="button" disabled={busy} onClick={() => void run('download')}>Verify full downloads</button>
       {busy && <button type="button" onClick={() => active.current?.abort()}>Cancel</button>}
     </div>
     <p role="status" aria-live="polite">{message}</p>
     <p>{verifiedCount} / {models.length} models verified in this check. Current learner delivery: unchanged.</p>
+    {downloadedCount > 0 && <p>{downloadedCount} / {models.length} full downloads verified. This checks transfer integrity, not clinical accuracy or viewer acceptance.</p>}
     <details><summary>Registered model inventory</summary><ul className={styles.models}>{models.map(model => <li key={model.sha256}>
       <span>{model.paths.map(path => path.replace('/atlas-runtime/', '')).join(', ')}</span>
       <small>{(model.bytes / 1048576).toFixed(2)} MB · {states[model.sha256] ?? 'Not checked'}</small>

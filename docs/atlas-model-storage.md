@@ -1,8 +1,11 @@
 # Independent Atlas model delivery — staging phase
 
-13 September 2026. This is an implemented, locally tested staging mechanism,
-not a claim that the hosted Atlas has switched storage or that publication works.
-The live learner routes and their four static model exports are unchanged.
+13 September 2026. The administrator staging mechanism is privately deployed in
+website version 53, from `a88597fc91a4f2ecfcaea05f2363a412951546e7`.
+After the upload tab closed, a new authenticated browser check confirmed all
+59 registered models in live storage, with the expected SHA-256 and byte length.
+The live learner routes and their four static model exports remain unchanged.
+This is storage evidence, not full-download, loader or clinical acceptance.
 
 ## Why
 
@@ -44,6 +47,11 @@ Infrastructure usage is not promised to remain free at arbitrary scale.
   Patient cases, masks, independent lecture rights and clinical sign-off are
   unchanged. No new dependency was installed. The test uses already locked
   MIT-licensed Miniflare 5.20260820.0-alpha and its provided v4-options adapter.
+- The maintenance page also supplies a separate full-download check. It reads
+  actual streamed bytes within the registered limit, checks GLB headers and
+  SHA-256, rejects incomplete/oversized/error/redirected responses and supports
+  cancellation. A green HEAD result alone never counts as a full-download pass.
+  No browser credential, private case or additional dependency is introduced.
 
 ## Verification
 
@@ -52,6 +60,7 @@ Commands from the website checkout:
 ```sh
 node scripts/atlas-model-inventory.mjs --check
 node --test --experimental-strip-types tests/atlas-model-storage.test.ts
+node --test --experimental-strip-types tests/atlas-model-download.test.ts
 npm test
 npx tsc --noEmit
 npm run build
@@ -65,28 +74,32 @@ repeat writes, full/ranged/conditional reads and stored corruption. The actual
 largest model is uploaded and downloaded with an exact SHA-256 comparison.
 The test-only authorization fixture is never imported by application routes.
 
-The final website suite has 76 passing tests, TypeScript and production build
-pass. An earlier complete-suite run hit a transient local `ECONNRESET` during
+The full-download addition passes four focused test groups, and the complete
+website suite now passes 80 tests with TypeScript passing. Its production build
+and live download outcome are recorded in the dated delivery checkpoint rather
+than inferred from these tests. An earlier complete-suite run hit a transient local `ECONNRESET` during
 Miniflare dispatch; its focused and subsequent full run pass without weakening
 assertions. The Sites build helper's Windows npm resolution failed; the existing
 `npm run build` completed successfully without dependency/config changes.
 
 Actual local browser inspection verifies the staging page denies an unsigned-in
 visitor and does not render the file picker/inventory. The actual API's unsigned-in
-HEAD returns 401. Authorized browser upload, cancellation after transmission,
-deployed identity/role checks, real R2 service behavior, all-device accessibility
-and clinical acceptance are **not claimed verified** by these checks.
+HEAD returns 401. The actual deployed owner session successfully uploaded the
+registered files; a fresh 59/59 HEAD check confirms their R2 checksums and sizes.
+Live non-owner denial, cancellation after transmission, all-device accessibility
+and clinical acceptance are not established by this owner-session test.
 
 ## Required next steps — do not skip to asset removal
 
-1. Build a compact **bootstrap deployment** that preserves the current working
+1. Completed: a compact **bootstrap deployment** preserves the current working
    learner experience, introduces the staging route and carries the complete
    expected model inventory. Inspect exact source/manifest differences. Do not
-   change the public audience or add a paid plan. The current full package still
+   The public audience and paid plans were not changed. The current full package still
    has the large-upload condition; repeating it is not a scalable solution.
-2. Verify actual deployed owner/administrator access and denial for other users.
-   Use the maintenance page to stage only the registered licensed GLBs, retaining
-   originals/notices/source hashes. Recheck each object after any interruption.
+2. Owner access and all 59 registered uploads/HEAD checks are verified. Retain
+   originals/notices/source hashes; test other-user denial through legitimate
+   accounts before learner activation. No test role header or fabricated identity
+   may be introduced into production. Recheck objects after any interruption.
 3. Verify every intended object through authenticated GET (including byte hash),
    HEAD/range requests, and the actual Three.js loader before activating delivery.
    Save a revision-bound delivery receipt. Staging success alone is not this gate.
