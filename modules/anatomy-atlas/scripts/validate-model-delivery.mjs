@@ -17,6 +17,6 @@ corrupted[binStart + stream.byteOffset] ^= 255;
 await assert.rejects(validateGlbDelivery(original, corrupted));
 const sourceText = await readFile(new URL('../app/body-scene.tsx', import.meta.url), 'utf8');
 const shoulderText = await readFile(new URL('../app/anatomy-scene.tsx', import.meta.url), 'utf8');
-assert.ok(sourceText.includes('useGLTF(bundle.url, false, true)'));
-assert.ok(shoulderText.includes("useGLTF('/models/bodyparts3d/shoulder-right.glb', false, true)"));
+assert.ok(sourceText.includes('useGLTF(modelDeliveryUrl(bundle.url, props.assetBase), false, true)'));
+assert.ok(shoulderText.includes("useGLTF(props.modelUrl ?? '/models/bodyparts3d/shoulder-right.glb', false, true)"));
 console.log('Lossless delivery: deterministic output, exact installed-loader round trip, invalid/corrupt input rejection and both viewer decoder paths verified. Full model set is checked by the production build.');

@@ -12,6 +12,11 @@ The new review workspace requires trusted authenticated-user headers and D1 stor
 
 ## Integration choices
 
+For the four contained modules, [lossless delivery](WEBSITE_LOSSLESS_DELIVERY.md)
+compresses only the website build output after export/build. Canonical model and
+catalogue hashes remain unchanged; the transport has its own verified manifest.
+Repeat the preparation/check after any website rebuild and before packaging.
+
 The independent right lower-limb workbench also has a contained module build and
 export at `/atlas/lower-limb-3d`; see `LOWER_LIMB_WEBSITE_PILOT.md`. Five region
 scopes retain their source-bound navigation; study links stay in the module and
