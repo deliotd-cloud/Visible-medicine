@@ -7,3 +7,14 @@ export function modelDeliveryUrl(url: string, assetBase = ''): string {
   }
   return assetBase + url;
 }
+
+/** Relocate a generated regional study URL, retaining its exact source-bound query. */
+export function regionalStudyDeliveryUrl(url: string, region: string, assetBase = ''): string {
+  if (!assetBase) return url;
+  modelDeliveryUrl('/models/catalog.json', assetBase); // Same strict local-base rule.
+  if (!/^[a-z]+(?:-[a-z]+)*$/.test(region) ||
+      !(url === `/regions/${region}` || url.startsWith(`/regions/${region}?`))) {
+    throw new Error('Study link is outside the contained region');
+  }
+  return `${assetBase}/index.html${url.slice(`/regions/${region}`.length)}`;
+}

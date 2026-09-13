@@ -53,10 +53,12 @@ export function EyeLayerView({
   parent,
   initialSelectedId,
   initialTeachingTopic,
+  assetBase = '',
 }: {
   parent: BodyStructure;
   initialSelectedId?: string;
   initialTeachingTopic?: NestedImagingTopic;
+  assetBase?: string;
 }) {
   const layers = useMemo(() => eyeLayersFor(parent), [parent]);
   const initialSelection = layers.find((s) => s.id === initialSelectedId)?.id;
@@ -148,6 +150,7 @@ export function EyeLayerView({
     <div className="eye-layer-workbench">
       <div className="eye-layer-viewport">
         <BodyScene
+          assetBase={assetBase}
           catalog={eyeCatalog}
           structures={layers}
           selectedId={selectedId}
@@ -186,7 +189,7 @@ export function EyeLayerView({
             <Button
               size="sm"
               onClick={() => {
-                retryBodyAssets(eyeCatalog.bundles.map((b) => b.url));
+                retryBodyAssets(eyeCatalog.bundles.map((b) => b.url), assetBase);
                 setFailed(false);
                 setLoaded(false);
                 setRetry((r) => r + 1);
@@ -547,11 +550,13 @@ export default function EyeLayers({
   onClose,
   initialSelectedId,
   initialTeachingTopic,
+  assetBase = '',
 }: {
   parent: BodyStructure;
   onClose: () => void;
   initialSelectedId?: string;
   initialTeachingTopic?: NestedImagingTopic;
+  assetBase?: string;
 }) {
   return (
     <Dialog
@@ -577,6 +582,7 @@ export default function EyeLayers({
           </Button>
         </header>
         <EyeLayerView
+          assetBase={assetBase}
           key={parent.id}
           parent={parent}
           initialSelectedId={initialSelectedId}

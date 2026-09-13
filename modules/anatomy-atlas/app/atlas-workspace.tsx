@@ -394,6 +394,7 @@ export function QuizNotes({ structure }: { structure: BodyStructure }) {
 
 export function AtlasSearch({
   catalog,
+  localRegionOnly = false,
   region,
   side,
   onSelect,
@@ -402,6 +403,7 @@ export function AtlasSearch({
   onDissect,
 }: {
   catalog: BodyCatalog;
+  localRegionOnly?: boolean;
   region: string;
   side: StudySide;
   onSelect: (id: string) => void;
@@ -422,8 +424,11 @@ export function AtlasSearch({
   const launcher = useRef<HTMLButtonElement | null>(null);
   const transferringFocus = useRef(false);
   const entries = useMemo(
-    () => atlasSearchIndex(catalog, region, side),
-    [catalog, region, side],
+    () => atlasSearchIndex(catalog, region, side).filter(entry =>
+      !localRegionOnly || entry.action.type !== 'link' ||
+      entry.action.href === `/regions/${region}` ||
+      entry.action.href.startsWith(`/regions/${region}?`)),
+    [catalog, region, side, localRegionOnly],
   );
   const matches = useMemo(
     () => filterAtlasSearch(entries, query, kind),
@@ -498,9 +503,9 @@ export function AtlasSearch({
       >
         <DialogTitle>Search the atlas</DialogTitle>
         <DialogDescription>
-          Find structures, including brain and eye dissection parts, or study
-          views. Opening another region starts a fresh view; save custom work
-          first.
+          {localRegionOnly
+            ? 'Find structures, including brain and eye dissection parts, or study views in this region.'
+            : 'Find structures, including brain and eye dissection parts, or study views. Opening another region starts a fresh view; save custom work first.'}
         </DialogDescription>
         <label htmlFor={`${id}-query`}>
           Name, common name, anatomical ID or study view
@@ -529,7 +534,7 @@ export function AtlasSearch({
         >
           <option value="all">Everything</option>
           <option value="structure">Structures</option>
-          <option value="region">Body regions</option>
+          {!localRegionOnly && <option value="region">Body regions</option>}
           <option value="view">Study views in this region</option>
         </select>
         <output aria-live="polite">

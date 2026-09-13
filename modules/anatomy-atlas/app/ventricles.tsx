@@ -185,11 +185,13 @@ export function VentricularView({
   study = 'ventricles',
   initialSelectedId,
   initialTeachingTopic,
+  assetBase = '',
 }: {
   parent: BodyStructure;
   study?: ComponentStudy;
   initialSelectedId?: string;
   initialTeachingTopic?: NestedImagingTopic;
+  assetBase?: string;
 }) {
   const isBrainstem = study === 'brainstem';
   const isCerebral = study === 'cerebral';
@@ -754,6 +756,7 @@ export function VentricularView({
     <div className="eye-layer-workbench">
       <div className="eye-layer-viewport">
         <BodyScene
+          assetBase={assetBase}
           catalog={ventricleCatalog}
           structures={ventricleCatalog.structures}
           selectedId={selectedId}
@@ -802,6 +805,7 @@ export function VentricularView({
                   ventricleCatalog.bundles
                     .filter((b) => failed.includes(b.id))
                     .map((b) => b.url),
+                  assetBase,
                 );
                 setLoaded((v) => v.filter((id) => !failed.includes(id)));
                 setFailed([]);
@@ -1734,12 +1738,14 @@ function LegacyVentricles({
   initialStudy,
   initialSelectedId,
   initialTeachingTopic,
+  assetBase = '',
 }: {
   parent: BodyStructure;
   onClose: () => void;
   initialStudy?: ComponentStudy;
   initialSelectedId?: string;
   initialTeachingTopic?: NestedImagingTopic;
+  assetBase?: string;
 }) {
   const isCardiac = cardiacFor(parent).length > 0;
   const isPulmonary = pulmonaryFor(parent).length > 0;
@@ -1835,6 +1841,7 @@ function LegacyVentricles({
           </Button>
         </header>
         <VentricularView
+          assetBase={assetBase}
           key={`${parent.id}:${study}`}
           parent={parent}
           study={study}
@@ -1859,6 +1866,7 @@ export default function Ventricles(props: {
     | 'cranial-artery-components';
   initialSelectedId?: string;
   initialTeachingTopic?: NestedImagingTopic;
+  assetBase?: string;
 }) {
   const { initialStudy, ...rest } = props;
   if (

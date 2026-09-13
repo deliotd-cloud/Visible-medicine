@@ -54,6 +54,7 @@ type Props = {
   study?: 'femoral-components' | 'cranial-artery-components';
   initialSelectedId?: string;
   initialTeachingTopic?: NestedImagingTopic;
+  assetBase?: string;
 };
 const views = [
   'anterior',
@@ -79,6 +80,7 @@ export function FemoralComponentView({
   study = 'femoral-components',
   initialSelectedId,
   initialTeachingTopic,
+  assetBase = '',
 }: Props) {
   const catalog = useMemo(
     () =>
@@ -196,6 +198,7 @@ export function FemoralComponentView({
     <div className="eye-layer-workbench">
       <div className="eye-layer-viewport">
         <BodyScene
+          assetBase={assetBase}
           catalog={catalog}
           structures={parts}
           selectedId={selectedId}
@@ -237,7 +240,7 @@ export function FemoralComponentView({
             <Button
               size="sm"
               onClick={() => {
-                retryBodyAssets(catalog.bundles.map((b) => b.url));
+                retryBodyAssets(catalog.bundles.map((b) => b.url), assetBase);
                 setLoaded(false);
                 setFailed(false);
                 setHealth('starting');

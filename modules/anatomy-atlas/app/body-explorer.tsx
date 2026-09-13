@@ -162,6 +162,7 @@ import { renalFor } from '@/lib/renal';
 import { pancreaticFor } from '@/lib/pancreatic';
 import { cricothyroidFor } from '@/lib/cricothyroid';
 import { bodyDisplayCatalog } from '@/lib/body-display-catalog';
+import { modelDeliveryUrl } from '@/lib/model-delivery';
 import {
   resolveNestedTarget,
   type NestedSelection,
@@ -219,9 +220,13 @@ const initialSystems: Record<BodySystem, boolean> = {
 export default function BodyExplorer({
   initialRegion,
   studyLink = noStudyLink,
+  assetBase = '',
+  presentation = 'standalone',
 }: {
   initialRegion: string;
   studyLink?: ParsedStudyLink;
+  assetBase?: string;
+  presentation?: 'standalone' | 'panel';
 }) {
   const profile = Object.hasOwn(dissectionProfiles, initialRegion)
     ? dissectionProfiles[initialRegion]
@@ -363,7 +368,7 @@ export default function BodyExplorer({
       if (active) setError(true);
       controller.abort();
     }, 30000);
-    fetch('/models/bodyparts3d/full-body/catalog.json', {
+    fetch(modelDeliveryUrl('/models/bodyparts3d/full-body/catalog.json', assetBase), {
       signal: controller.signal,
     })
       .then((r) => {
@@ -426,7 +431,7 @@ export default function BodyExplorer({
       clearTimeout(timeout);
       controller.abort();
     };
-  }, [catalogAttempt, initialRegion, studyLink]);
+  }, [catalogAttempt, initialRegion, studyLink, assetBase]);
   const region = catalog?.regions.find((r) => r.id === initialRegion),
     whole = initialRegion === 'whole-body';
   const regionStructures = useMemo(
@@ -639,7 +644,7 @@ export default function BodyExplorer({
     setRetryError('');
     try {
       const { retryBodyAssets } = await import('./body-scene');
-      retryBodyAssets(plan.map((b) => b.url));
+      retryBodyAssets(plan.map((b) => b.url), assetBase);
       const ids = new Set(plan.map((b) => b.id));
       loadDispatch({ type: 'retry', ids: [...ids] });
       setRetries((old) => {
@@ -1232,7 +1237,7 @@ export default function BodyExplorer({
 
   const railContent = (
     <>
-      <details className="body-region-picker">
+      {presentation === 'standalone' ? <details className="body-region-picker">
         <summary>
           {title}
           <small>Change region</small>
@@ -1263,7 +1268,7 @@ export default function BodyExplorer({
           </span>
           <ChevronRight />
         </Link>
-      </details>
+      </details> : <div className="body-rail-title">{title}</div>}
       <div className="body-rail-title">Anatomical systems</div>
       <div className="body-system-bar" aria-label="Anatomical systems">
         {systemKeys.map((system) => {
@@ -1544,7 +1549,7 @@ export default function BodyExplorer({
           <span>Adult reference anatomy</span>
           <p>One source model, preserved in a common spatial frame.</p>
           <a
-            href="/models/bodyparts3d/credits.html"
+            href={modelDeliveryUrl('/models/bodyparts3d/credits.html', assetBase)}
             target="_blank"
             rel="noreferrer"
           >
@@ -1556,13 +1561,14 @@ export default function BodyExplorer({
   );
 
   return (
-    <AtlasWorkspace exam={exam}>
+    <AtlasWorkspace exam={exam} presentation={presentation}>
       <PracticeAttention answered={answered} exam={exam} />
       <header className="body-topbar">
         <Brand />
         <WorkspaceModes />
         <AtlasSearch
           catalog={catalog}
+          localRegionOnly={presentation === 'panel'}
           region={initialRegion}
           side={side as StudySide}
           onSelect={select}
@@ -1689,6 +1695,7 @@ export default function BodyExplorer({
               </div>
               {!eyeParent && !ventricleParent && (
                 <Scene
+                  assetBase={assetBase}
                   catalog={catalog}
                   structures={sceneStructures}
                   selectedId={selectedId}
@@ -1864,7 +1871,7 @@ export default function BodyExplorer({
               </div>
               <a
                 className="model-credit"
-                href="/models/bodyparts3d/credits.html"
+                href={modelDeliveryUrl('/models/bodyparts3d/credits.html', assetBase)}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -2434,6 +2441,7 @@ export default function BodyExplorer({
                       detail={structureDetail}
                     />
                     <StudyLinks
+                      assetBase={assetBase}
                       catalog={catalog}
                       selected={selected}
                       region={initialRegion}
@@ -2556,6 +2564,7 @@ export default function BodyExplorer({
       </div>
       {eyeParent && !exam && eyeParent.id === selectedId && (
         <EyeLayers
+          assetBase={assetBase}
           parent={eyeParent}
           initialSelectedId={nestedSelection?.structureId}
           initialTeachingTopic={nestedSelection?.teachingTopic}
@@ -2584,6 +2593,7 @@ export default function BodyExplorer({
         !exam && <HraRenalSpecimen onClose={closeHraRenal} />}
       {ventricleParent && !exam && ventricleParent.id === selectedId && (
         <Ventricles
+          assetBase={assetBase}
           parent={ventricleParent}
           initialStudy={
             nestedSelection?.study === 'eye'

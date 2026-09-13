@@ -8,6 +8,7 @@ import {
   type StudySide,
 } from '../lib/study-links';
 import type { BodyCatalog, BodyStructure } from './body-types';
+import { regionalStudyDeliveryUrl } from '../lib/model-delivery';
 
 export function StudyLinks({
   catalog,
@@ -15,24 +16,33 @@ export function StudyLinks({
   region,
   side,
   focusId,
+  assetBase = '',
 }: {
   catalog: BodyCatalog;
   selected: BodyStructure;
   region: string;
   side: StudySide;
   focusId: string | null;
+  assetBase?: string;
 }) {
   const [copyState, setCopyState] = useState<{
     href: string;
     copied: boolean;
   } | null>(null);
   const destinations = useMemo(
-    () => studyDestinations(catalog, selected, region, side),
-    [catalog, selected, region, side],
+    () => studyDestinations(catalog, selected, region, side)
+      .filter(destination => !assetBase || destination.region === region)
+      .map(destination => ({...destination,
+        href: regionalStudyDeliveryUrl(destination.href, region, assetBase),
+        focuses: destination.focuses.map(view => ({...view,
+          href: regionalStudyDeliveryUrl(view.href, region, assetBase)})),
+      })),
+    [catalog, selected, region, side, assetBase],
   );
-  const current =
+  const sourceLink =
     makeStudyLink(catalog, region, selected.id, side, focusId) ??
     makeStudyLink(catalog, region, selected.id, side);
+  const current = sourceLink ? regionalStudyDeliveryUrl(sourceLink, region, assetBase) : null;
   async function copyLink() {
     if (!current) return;
     try {
@@ -48,10 +58,11 @@ export function StudyLinks({
     <details className="anatomy-study-links">
       <summary>Continue this dissection</summary>
       <p>
-        Keep <strong>{selected.name}</strong> selected when moving between the
-        whole body and its available regions.
+        Keep <strong>{selected.name}</strong> selected {assetBase
+          ? 'in a linked regional study view.'
+          : 'when moving between the whole body and its available regions.'}
       </p>
-      <ul className="anatomy-study-destinations">
+      {destinations.length > 0 && <ul className="anatomy-study-destinations">
         {destinations.map((destination) => (
           <li key={destination.region}>
             <Link href={destination.href} prefetch={false}>
@@ -77,7 +88,7 @@ export function StudyLinks({
             )}
           </li>
         ))}
-      </ul>
+      </ul>}
       <p className="anatomy-study-link-note">
         Links open assembled anatomy or a named focus. Use Saved study views to
         preserve custom removals, cutaways and camera positions. Links never
