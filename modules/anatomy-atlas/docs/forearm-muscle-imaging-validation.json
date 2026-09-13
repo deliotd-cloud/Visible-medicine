@@ -1,0 +1,32 @@
+{
+  "baselineSource": "13bc0b7b2b890a4ca45990b527159cf864d2097a",
+  "groups": 21,
+  "sourceSelections": 42,
+  "addedDraftPlacements": 168,
+  "modalities": {
+    "ct": 42,
+    "mri": 42,
+    "ultrasound": 42,
+    "xray": 42
+  },
+  "unchangedTopics": 9741,
+  "bodySchemaRecords": 1101,
+  "actualNoteRenders": 168,
+  "rejectedSourceTopicCombinations": 2520,
+  "uniqueReferenceFacts": 44,
+  "sourceWordCounts": {
+    "ct": 29,
+    "mri": 30,
+    "compartments": 141,
+    "xray": 27,
+    "anatomy": 185,
+    "wristUS": 115,
+    "elbowUS": 30
+  },
+  "sourceGeometryChanged": false,
+  "currentApprovalRecordsChanged": false,
+  "clinicalApproval": false,
+  "imagesImported": false,
+  "imagingConnected": false,
+  "browserOrDeviceAcceptance": false
+}

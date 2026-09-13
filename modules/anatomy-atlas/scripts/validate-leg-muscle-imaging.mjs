@@ -9,7 +9,8 @@ import {authoringBeforeLegMuscleImaging,legImagingHash as hash} from './leg-musc
 import {legMuscleImagingGroups as groups,legMuscleImagingModes as modes,legMuscleImagingReferences as references} from '../content/leg-muscle-imaging.ts';
 import pins from '../content/leg-muscle-imaging-pins.json' with {type:'json'};
 import {authoringBeforeFootMuscleImaging} from './foot-muscle-imaging-history.mjs';
-const current=await contentContext(),context={...current,api:authoringBeforeFootMuscleImaging(current)};
+import {authoringBeforeForearmMuscleImaging} from './forearm-muscle-imaging-history.mjs';
+const current=await contentContext(),beforeForearm={...current,api:authoringBeforeForearmMuscleImaging(current)},context={...current,api:authoringBeforeFootMuscleImaging(beforeForearm)};
 const {api}=context,catalog=api.bodyDisplayCatalog(context.catalog);
 const original=JSON.stringify(catalog),before=authoringBeforeLegMuscleImaging(context);
 assert.equal(hash({body:catalog.structures.map(s=>({id:s.id,sections:Object.fromEntries(api.contentTabs.map(t=>[t,before.bodyLesson(s,t)]))})),shoulder:api.structures,recipes:api.dissectionProfiles}),pins.previousAllLessonsAndRecipesHash,'All preceding teaching and recipes preserved');

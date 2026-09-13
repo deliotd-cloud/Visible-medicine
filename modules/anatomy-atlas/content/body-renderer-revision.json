@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "7818cdecef81273bfe15655ae085e2f8a74c6b0dd89ba2792102df0d7ae6efdc"
+      "sha256": "0491aed8588af3d765686c6aadf922d2eccabfceb3cae131f420fbb5adc72f51"
     },
     {
       "path": "app/body-explorer.css",
@@ -483,6 +483,14 @@
     {
       "path": "content/foot-muscle-imaging.ts",
       "sha256": "80aba36ae5a6dfb3313510f75d414f96c27468d00c912c22b3d87dad5dfa2ba2"
+    },
+    {
+      "path": "content/forearm-muscle-imaging-pins.json",
+      "sha256": "0d8aa48f409c7dc3a9e8b9fdb1e0b54c4bcbcd85c979a8828b347782e0df2db4"
+    },
+    {
+      "path": "content/forearm-muscle-imaging.ts",
+      "sha256": "3997414ad4f60fd6a9f2689bb02aea230aa7ddaa01190640dc8638150a280005"
     },
     {
       "path": "content/genicular-study-pins.json",
@@ -1079,6 +1087,10 @@
     {
       "path": "lib/forearm-curriculum.ts",
       "sha256": "c3f357aabdccb863e967244435118cedb335dd7ee5c07df31909384d9ab35511"
+    },
+    {
+      "path": "lib/forearm-muscle-imaging.ts",
+      "sha256": "e322acc549440be5f0dbb6252785173f17eaf8ef9ca02b93a4baad6e7db56939"
     },
     {
       "path": "lib/forearm-reasoning.ts",
@@ -1873,5 +1885,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "679bc0ac8c414efaf357cbfb1976757956247994bd95b0890456dcdce6588417"
+  "sha256": "a429b4a7508411712a3ee8f19534347d94245afea49c5e59237f37bdd1820d2b"
 }
