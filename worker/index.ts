@@ -1,6 +1,7 @@
 /** Cloudflare Worker entry point for the vinext-starter template. */
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
+import { contentSecurityPolicy } from "../lib/content-security-policy";
 
 interface Env {
   ASSETS: Fetcher;
@@ -197,7 +198,7 @@ const worker = {
     // into a normal Response would detach that handle and break the upgrade.
     if (response.status === 101) return response;
     const headers = new Headers(response.headers);
-    headers.set("Content-Security-Policy", "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' ws: wss:; worker-src 'self' blob:");
+    headers.set("Content-Security-Policy", contentSecurityPolicy(url.pathname));
     headers.set("Cross-Origin-Opener-Policy", "same-origin-allow-popups");
     headers.set("Cross-Origin-Resource-Policy", "same-origin");
     headers.set("Permissions-Policy", "camera=(self), microphone=(self), geolocation=(), display-capture=(self), window-management=(self), fullscreen=(self)");

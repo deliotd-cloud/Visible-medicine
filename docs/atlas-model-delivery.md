@@ -36,3 +36,16 @@ input hashes and decoder versions. All other files remain byte-identical. The
 Atlas `--check` command recomputes these results instead of trusting the report.
 Clinical review, actual-device acceptance, cleared imaging and public launch
 remain separate gates. A size saving is not evidence of any of those approvals.
+
+## Browser security policy
+
+Production-browser testing reproduced a blocked WebAssembly decoder under the
+existing `script-src` policy. Only the four exact contained `index.html` routes
+now add `wasm-unsafe-eval`; all other policy directives and all other pages remain
+unchanged. No JavaScript `unsafe-eval`, external script host or authentication
+exception is added. The Worker continues to stream the response body and preserves
+WebSocket responses. Focused tests cover exact routes, lookalikes and unchanged
+home/learner/staff/API policies; real browser playback is a separate check.
+
+References: [MDN script-src and WebAssembly](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution),
+[Cloudflare response handling](https://developers.cloudflare.com/workers/runtime-apis/response/).
