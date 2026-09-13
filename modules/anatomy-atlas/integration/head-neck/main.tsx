@@ -7,6 +7,9 @@ import {parseRegionalModule} from './regions';
 import {parseContainedSpecimen} from './specimen-route';
 const AbdominalWall=lazy(()=>import('../../app/abdominal-wall-study'));
 const Kidneys=lazy(()=>import('../../app/hra-renal-study'));
+const BackLayers=lazy(()=>import('../../app/back-layers-study'));
+const FemalePelvis=lazy(()=>import('../../app/hra-pelvis-study'));
+const LowerLimb=lazy(()=>import('../../app/um-limb-study'));
 import './panel-host.css';
 class ModuleBoundary extends Component<{children:ReactNode},{failed:boolean}> {
   state={failed:false};
@@ -20,14 +23,20 @@ const params:StudySearchParams=Object.fromEntries([...new Set(query.keys())].map
   const values=query.getAll(key);return [key,values.length===1?values[0]:values];
 }));
 const specimen=parseContainedSpecimen(params,region);
-const backToAbdomen=()=>window.location.assign('/atlas-runtime/head-neck/index.html?region=abdomen');
+const backToRegion=()=>window.location.assign('/atlas-runtime/head-neck/index.html?region='+region);
 createRoot(document.getElementById('root')!).render(
   <ModuleBoundary>{region && specimen.status!=='invalid'
     ? specimen.status==='ready'
       ? <Suspense fallback={<p role="status">Loading the separate source specimen…</p>}>
-          {specimen.kind==='kidneys'
-            ? <Kidneys assetBase="/atlas-runtime/head-neck" initialLink={specimen.link} onClose={backToAbdomen}/>
-            : <AbdominalWall assetBase="/atlas-runtime/head-neck" initialLink={specimen.link} onClose={backToAbdomen}/>}
+          {specimen.kind==='lower-limb'
+            ? <LowerLimb assetBase="/atlas-runtime/head-neck" initialRegion="pelvis" initialLink={specimen.link} onClose={backToRegion}/>
+            : specimen.kind==='back-layers'
+            ? <BackLayers assetBase="/atlas-runtime/head-neck" initialLink={specimen.link} onClose={backToRegion}/>
+            : specimen.kind==='female-pelvis'
+            ? <FemalePelvis assetBase="/atlas-runtime/head-neck" initialLink={specimen.link} onClose={backToRegion}/>
+            : specimen.kind==='kidneys'
+            ? <Kidneys assetBase="/atlas-runtime/head-neck" initialLink={specimen.link} onClose={backToRegion}/>
+            : <AbdominalWall assetBase="/atlas-runtime/head-neck" initialLink={specimen.link} onClose={backToRegion}/>}
         </Suspense>
       : <BodyExplorer initialRegion={region} studyLink={parseStudyLink(params)} presentation="panel" assetBase="/atlas-runtime/head-neck"/>
     : <section className="module-recovery" role="alert"><h2>This region link cannot be opened</h2><p>No alternative region or structure has been selected.</p><a href="/atlas" target="_top">Return to the Atlas</a></section>}

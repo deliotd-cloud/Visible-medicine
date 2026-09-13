@@ -27,14 +27,22 @@ export function regionalStudyDeliveryUrl(url: string, region: string, assetBase 
 
 /** Keep separately licensed/source-framed specimens separate inside the host.
  * The original ref fields remain untouched for revision validation on arrival. */
+export const containedIndependentSpecimens = {
+  '/specimens/abdominal-wall': {region:'abdomen',key:'bp3d3-abdominal-wall',kind:'abdominal-wall'},
+  '/specimens/kidneys': {region:'abdomen',key:'hra-united-female-v1.10-kidneys',kind:'kidneys'},
+  '/specimens/back-layers': {region:'spine',key:'bp3d3-back-layers',kind:'back-layers'},
+  '/specimens/female-pelvis': {region:'pelvis',key:'hra-united-female-v1.10-pelvis',kind:'female-pelvis'},
+} as const;
 export function independentStudyDeliveryUrl(url: string, assetBase = ''): string {
   if (!assetBase) return url;
   modelDeliveryUrl('/models/catalog.json', assetBase);
   const parsed = new URL(url, 'https://atlas.invalid');
+  const destination=Object.hasOwn(containedIndependentSpecimens,parsed.pathname)
+    ?containedIndependentSpecimens[parsed.pathname as keyof typeof containedIndependentSpecimens]:null;
   if (!url.startsWith('/') || parsed.origin !== 'https://atlas.invalid'
-    || !['/specimens/abdominal-wall', '/specimens/kidneys'].includes(parsed.pathname)
+    || !destination
     || parsed.hash || parsed.searchParams.has('region')
     || parsed.searchParams.get('ref') !== 'independent-1'
-    || parsed.searchParams.get('refSpecimen') !== (parsed.pathname === '/specimens/kidneys' ? 'hra-united-female-v1.10-kidneys' : 'bp3d3-abdominal-wall')) throw new Error('Unsupported contained specimen link');
-  return `${assetBase}/index.html?region=abdomen${parsed.search ? '&' + parsed.search.slice(1) : ''}`;
+    || parsed.searchParams.get('refSpecimen') !== destination.key) throw new Error('Unsupported contained specimen link');
+  return `${assetBase}/index.html?region=${destination.region}${parsed.search ? '&' + parsed.search.slice(1) : ''}`;
 }

@@ -16,8 +16,10 @@ export async function headNeckModuleInputs(shared=false){
   const expected=shared?[
     ['bp3d3-abdominal-wall','CC BY-SA 2.1 JP','bodyparts3d-v3/abdominal-wall'],
     ['hra-united-female-v1.10-kidneys','CC BY 4.0','hra-renal'],
+    ['hra-united-female-v1.10-pelvis','CC BY 4.0','hra-pelvis'],
+    ['bp3d3-back-layers','CC BY-SA 2.1 JP','bodyparts3d-v3/back-layers'],
   ]:[];
-  if(independent.length!==expected.length)throw Error('Independent specimen scope needs review');
+  if(independent.length!==expected.length+(shared?5:0))throw Error('Independent specimen scope needs review');
   for(const [key,license,folder] of expected){
     const specimen=independent.find(s=>s.key===key);
     const source=JSON.parse(await readFile(join(root,'public/models',folder,'catalog.json'),'utf8'));
@@ -26,9 +28,22 @@ export async function headNeckModuleInputs(shared=false){
       || JSON.stringify(specimen.sourceFrame)!==JSON.stringify({sourceToSceneColumnMajor:source.displayTransformColumnMajor,unitsPerMillimetre:0.01})
       || JSON.stringify(specimen.surfaceIds)!==JSON.stringify(source.structures.map(s=>s.id)))throw Error('Changed independent source, frame or licence: '+key);
   }
+  if(shared){
+    const knee=JSON.parse(await readFile(join(root,'public/models/um-knee/catalog.json'),'utf8'));
+    const limb=JSON.parse(await readFile(join(root,'public/models/um-limb/catalog.json'),'utf8'));
+    const sources=[...knee.structures,...limb.structures];
+    const bundles=[knee.bundle,...limb.bundles];
+    if(knee.source.license!=='CC0-1.0'||limb.source.license!=='CC0-1.0')throw Error('Re-audit lower-limb licence');
+    for(const [key,count]of [[knee.specimenId,15],...[['hip-thigh',34],['calf',15],['foot',23],['whole',67]].map(([scope,count])=>[limb.specimenId+':'+scope,count])]){
+      const specimen=independent.find(s=>s.key===key);
+      if(!specimen||specimen.license!=='CC0-1.0'||specimen.surfaceIds.length!==count
+        ||new Set(specimen.surfaceIds).size!==count||specimen.surfaceIds.some(id=>!sources.some(s=>s.id===id))
+        ||specimen.bundles.some(b=>!bundles.some(source=>JSON.stringify(source)===JSON.stringify(b))))throw Error('Changed lower-limb source: '+key);
+    }
+  }
   const models=[];
   for(const bundle of plan.bundles){
-    if(!/^\/models\/(?:bodyparts3d\/(?:[a-zA-Z0-9_-]+\/)+|bodyparts3d-v3\/abdominal-wall\/|hra-renal\/)[a-zA-Z0-9_-]+\.glb(?:\?v=[a-f0-9]{12}(?:[a-f0-9]{52})?)?$/.test(bundle.url))throw Error('Unexpected public model path');
+    if(!/^\/models\/(?:bodyparts3d\/(?:[a-zA-Z0-9_-]+\/)+|bodyparts3d-v3\/(?:abdominal-wall|back-layers)\/|hra-(?:renal|pelvis)\/|um-(?:knee|limb)\/)[a-zA-Z0-9_-]+\.glb(?:\?v=[a-f0-9]{12}(?:[a-f0-9]{52})?)?$/.test(bundle.url))throw Error('Unexpected public model path');
     const path=bundle.url.split('?')[0].slice(1),file=join(root,'public',path);
     if(!(await lstat(file)).isFile())throw Error('Regular model files only');
     const bytes=await readFile(file);

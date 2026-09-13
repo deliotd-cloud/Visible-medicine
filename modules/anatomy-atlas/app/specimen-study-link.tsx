@@ -9,11 +9,11 @@ import { specimenTopicLabels, type SpecimenTopic } from '@/lib/specimen-links';
 import { availableSpecimenTopics } from '@/lib/um-limb-teaching';
 import type { DissectionView } from './dissection-data';
 
-export function SpecimenStudyLink({ definition, selectedId, studyId, view, basePath, reviewAvailable = true }: { definition: SpecimenDefinition; selectedId: string; studyId: string | null; view: DissectionView; basePath?: '/atlas-runtime/lower-limb/index.html'; reviewAvailable?: boolean }) {
+export function SpecimenStudyLink({ definition, selectedId, studyId, view, basePath, reviewAvailable = true }: { definition: SpecimenDefinition; selectedId: string; studyId: string | null; view: DissectionView; basePath?: '/atlas-runtime/lower-limb/index.html'|'/atlas-runtime/head-neck/index.html?region=pelvis'; reviewAvailable?: boolean }) {
   const [topic, setTopic] = useState<SpecimenTopic | null>(null);
   const topics = availableSpecimenTopics(definition, selectedId);
   const canonical = makeSpecimenLink(definition, { selectedId, studyId, view, topic });
-  const href = canonical && basePath ? basePath + canonical.slice(canonical.indexOf('?')) : canonical;
+  const href = canonical && basePath ? basePath + (basePath.includes('?')?'&':'?') + canonical.slice(canonical.indexOf('?')+1) : canonical;
   return <details className="um-knee-details"><summary>Link to this study</summary>
     <Select value={topic ?? 'model'} items={[{value:'model',label:'3D model'},...topics.map(t=>({value:t,label:specimenTopicLabels[t]+' notes'}))]} onValueChange={v => setTopic(topics.includes(v as SpecimenTopic) ? v as SpecimenTopic : null)}>
       <SelectTrigger aria-label="Study link opens"><SelectValue /></SelectTrigger>

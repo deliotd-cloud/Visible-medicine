@@ -26,6 +26,7 @@ import type {
   SpecimenSurface,
 } from '@/lib/independent-specimen';
 import type { SpecimenTopic } from '@/lib/specimen-links';
+import {modelDeliveryUrl} from '@/lib/model-delivery';
 
 export function BackLayersTeaching({
   surface,
@@ -47,8 +48,8 @@ export function BackLayersTeaching({
     />
   );
 }
-export const backLayersSupplement: SpecimenSupplement = {
-  studyLink: (definition, selectedId, studyId, view) => <IndependentStudyLinkControl definition={definition} selectedId={selectedId} studyId={studyId} view={view} />,
+export function backLayersSupplementFor(assetBase=''): SpecimenSupplement { return {
+  studyLink: (definition, selectedId, studyId, view) => <IndependentStudyLinkControl assetBase={assetBase} definition={definition} selectedId={selectedId} studyId={studyId} view={view} />,
   colors: backLayersColors,
   identification: backLayersPractice,
   learning: (surface, definition) => (
@@ -87,11 +88,11 @@ export const backLayersSupplement: SpecimenSupplement = {
           Download official original source archive (about 127 MB)
         </a>
         <br />
-        <a href="/models/bodyparts3d-v3/back-layers/back-layers.glb" download>
+        <a href={modelDeliveryUrl('/models/bodyparts3d-v3/back-layers/back-layers.glb',assetBase)} download>
           Download display model
         </a>{' '}
         ·{' '}
-        <a href="/models/bodyparts3d-v3/back-layers/NOTICE.md">
+        <a href={modelDeliveryUrl('/models/bodyparts3d-v3/back-layers/NOTICE.md',assetBase)}>
           Asset reuse notice
         </a>
       </p>
@@ -108,8 +109,9 @@ export const backLayersSupplement: SpecimenSupplement = {
       </p>
     </>
   ),
-};
-export default function BackLayersDialog({ onClose, initialLink }: { onClose: () => void; initialLink?: IndependentStudyLink }) {
+}; }
+export const backLayersSupplement=backLayersSupplementFor();
+export default function BackLayersDialog({ onClose, initialLink,assetBase='' }: { onClose: () => void; initialLink?: IndependentStudyLink;assetBase?:string }) {
   return (
     <Dialog
       open
@@ -141,7 +143,7 @@ export default function BackLayersDialog({ onClose, initialLink }: { onClose: ()
             Back to atlas
           </Button>
         </div>
-        <IndependentStudyView definition={backLayersDefinition} supplement={backLayersSupplement} link={initialLink} />
+        <IndependentStudyView assetBase={assetBase} definition={backLayersDefinition} supplement={assetBase?backLayersSupplementFor(assetBase):backLayersSupplement} link={initialLink} />
       </DialogContent>
     </Dialog>
   );

@@ -2086,8 +2086,8 @@ export default function BodyExplorer({
                       Show a target and at least one eligible alternative with
                       matching laterality (including grouped selections). Widen
                       the visible scope, try{' '}
-                      <a href="/regions/spine">Spine &amp; back</a> or{' '}
-                      <a href="/regions/thorax">Thorax</a>, or use an
+                      <Link href="/regions/spine">Spine &amp; back</Link> or{' '}
+                      <Link href="/regions/thorax">Thorax</Link>, or use an
                       identification mode.
                     </p>
                   )}
@@ -2551,6 +2551,7 @@ export default function BodyExplorer({
         ['leg', 'foot', 'thigh', 'pelvis'].includes(initialRegion) &&
         !exam && (
           <KneeSpecimen
+            assetBase={assetBase}
             initialRegion={initialRegion}
             onClose={closeKneeSpecimen}
           />
@@ -2560,10 +2561,10 @@ export default function BodyExplorer({
       )}
       {backLayersOpen &&
         ['spine', 'whole-body'].includes(initialRegion) &&
-        !exam && <BackLayersSpecimen onClose={closeBackLayers} />}
+        !exam && <BackLayersSpecimen assetBase={assetBase} onClose={closeBackLayers} />}
       {hraPelvisOpen &&
         ['pelvis', 'whole-body'].includes(initialRegion) &&
-        !exam && <HraPelvisSpecimen onClose={closeHraPelvis} />}
+        !exam && <HraPelvisSpecimen assetBase={assetBase} onClose={closeHraPelvis} />}
       {hraRenalOpen &&
         ['abdomen', 'whole-body'].includes(initialRegion) &&
         !exam && <HraRenalSpecimen assetBase={assetBase} onClose={closeHraRenal} />}

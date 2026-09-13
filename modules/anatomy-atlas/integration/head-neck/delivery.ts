@@ -15,6 +15,10 @@ import {renalRelationshipViewCatalog,renalRelationshipsFor} from '../../lib/rena
 import {pancreaticViewCatalog} from '../../lib/pancreatic';
 import {abdominalWallDefinition} from '../../lib/abdominal-wall';
 import {hraRenalDefinition} from '../../lib/hra-renal';
+import {backLayersDefinition} from '../../lib/back-layers';
+import {hraPelvisDefinition} from '../../lib/hra-pelvis';
+import {limbDefinitions} from '../../lib/um-limb-studies';
+import {femoralComponentViewCatalog} from '../../lib/femoral-components';
 import {regionalModules,type RegionalModule} from './regions';
 
 /** All selectable root structures plus every supported child/context state, not a reduced catalogue. */
@@ -35,6 +39,7 @@ export function regionalDelivery(raw:BodyCatalog,region:RegionalModule) {
         case 'cerebral': views.push(cerebralCatalog);break;
         case 'cricothyroid': views.push(cricothyroidViewCatalog(parent,true));break;
         case 'cranial-artery-components': views.push(cranialArteryComponentViewCatalog(parent));break;
+        case 'femoral-components': views.push(femoralComponentViewCatalog(parent));break;
         case 'cardiac':
           views.push(cardiacContextViewCatalog(parent));
           for(const relation of cardiacRelationshipsFor(parent))views.push(cardiacContextViewCatalog(parent,relation.id));
@@ -57,7 +62,9 @@ export function regionalDelivery(raw:BodyCatalog,region:RegionalModule) {
       }
     }
   }
-  const specimens=region==='abdomen'?[abdominalWallDefinition,hraRenalDefinition]:[];
+  const specimens=region==='abdomen'?[abdominalWallDefinition,hraRenalDefinition]
+    :region==='spine'?[backLayersDefinition]
+    :region==='pelvis'?[hraPelvisDefinition,...Object.values(limbDefinitions)]:[];
   // Distinct catalogues/frames and licences; never fit these specimens into v4.
   views.push(...specimens.map(specimen=>specimen.catalog));
   const bundles=new Map<string,BodyCatalog['bundles'][number]>();

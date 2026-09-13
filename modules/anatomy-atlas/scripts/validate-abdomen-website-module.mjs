@@ -30,7 +30,7 @@ const dictionary=href=>{
 assert.deepEqual(scope.independentSpecimens.map(s=>[s.key,s.license,s.surfaceIds.length,s.studyIds.length]),[
   ['bp3d3-abdominal-wall','CC BY-SA 2.1 JP',29,7],['hra-united-female-v1.10-kidneys','CC BY 4.0',82,9],
 ]);
-for(const other of plan.scopes.filter(s=>s!==scope))assert.equal(other.independentSpecimens.length,0);
+for(const other of plan.scopes.filter(s=>['head-neck','thorax'].includes(s.region)))assert.equal(other.independentSpecimens.length,0);
 for(const d of definitions){
   assert(d.catalog.structures.every(s=>s.regions.every(r=>r.startsWith('independent-'))));
   assert(!scope.regionalIds.some(id=>d.surfaces.some(s=>s.id===id)));
@@ -89,7 +89,7 @@ for(const d of definitions){
 assert.equal(api.parseContainedSpecimen({},'abdomen').status,'none');
 for(const href of ['/specimens/kidneys','//evil.invalid/specimens/kidneys?ref=independent-1',
   '/specimens/abdominal-wall?ref=independent-1&refSpecimen=hra-united-female-v1.10-kidneys',
-  '/specimens/back-layers?ref=independent-1&refSpecimen=bp3d3-back-layers'])assert.throws(()=>api.independentStudyDeliveryUrl(href,base));
+  '/specimens/unknown?ref=independent-1&refSpecimen=bp3d3-back-layers'])assert.throws(()=>api.independentStudyDeliveryUrl(href,base));
 
 // Actual React composition and source/notice links, with only the GPU scene
 // intercepted to inspect delivery props. This is not a browser-rendering claim.
