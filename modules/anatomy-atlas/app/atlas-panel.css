@@ -32,3 +32,8 @@
 .body-app[data-presentation='panel'][data-panel-short='true'] .shoulder-model-workspace { overflow-y:auto; }
 .body-app[data-presentation='panel'][data-panel-short='true'] .shoulder-model-workspace>.viewer-panel { flex:1 0 260px; }
 .atlas-shoulder-panel-preview { height:100dvh; min-width:0; }
+/* The containing website already identifies the region. Retain every heading
+   and source-status line, but avoid a second oversized title block. */
+.body-app[data-presentation='panel'] .body-heading { padding:6px 14px; gap:12px; }
+.body-app[data-presentation='panel'] .body-heading h1 { font-size:1.375rem; line-height:1.25; margin:2px 0; }
+.body-app[data-presentation='panel'] .body-heading > div { min-width:0; }

@@ -38,6 +38,8 @@
 }
 .eye-layer-viewport {
   position: relative;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
   min-height: 0;
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -45,14 +47,20 @@
   background: var(--background);
 }
 .eye-layer-viewport .body-scene {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  inset: auto;
+  grid-row: 2;
   min-height: 0;
   height: 100%;
 }
 .eye-layer-controls {
   min-width: 0;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* Room for the existing expanded switch hit targets and focus outlines. */
+  padding: 3px 12px;
+  scrollbar-gutter: stable;
+  overflow-wrap: anywhere;
   overscroll-behavior: contain;
   font-size: 0.875rem;
 }
@@ -73,6 +81,7 @@
   margin: 0.6rem 0;
   padding: 0;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 0.2rem;
 }
 .eye-layer-list li {
@@ -80,13 +89,18 @@
   align-items: center;
   gap: 0.5rem;
   justify-content: space-between;
+  min-width: 0;
 }
 .eye-layer-list li > button:first-child {
   justify-content: flex-start;
   flex: 1;
   min-width: 0;
   font-size: 0.875rem;
-  height: 36px;
+  height: auto;
+  min-height: 36px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: left;
 }
 .eye-layer-list [data-slot='switch'] {
   flex: none;
@@ -191,10 +205,9 @@
   padding-left: 1.2rem;
 }
 .eye-layer-scene-tools {
-  position: absolute;
-  top: 0.7rem;
-  left: 0.7rem;
-  right: 0.7rem;
+  position: relative;
+  grid-row: 1;
+  margin: 0.7rem 0.7rem 0;
   display: flex;
   gap: 0.4rem;
   flex-wrap: wrap;
@@ -209,11 +222,9 @@
   background: var(--background);
 }
 .eye-layer-layout-note {
-  position: absolute;
-  bottom: 0.5rem;
-  left: 0.75rem;
-  right: 0.75rem;
-  margin: 0;
+  position: relative;
+  grid-row: 3;
+  margin: 0.25rem 0.75rem 0.5rem;
   font-size: 0.8125rem;
   background: var(--background);
   padding: 0.25rem 0.5rem;
@@ -297,10 +308,10 @@
   }
   .eye-layer-controls {
     border-top: 1px solid var(--border);
-    padding: 0.25rem 0.4rem;
+    padding: 0.25rem 12px;
   }
   .eye-layer-list {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.25rem 0.75rem;
   }
   .eye-layer-list li > button:first-child {

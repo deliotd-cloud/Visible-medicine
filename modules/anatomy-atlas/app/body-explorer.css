@@ -1641,7 +1641,7 @@
   min-height: 38px;
   padding: 6px 2px;
 }
-.body-scene {
+.body-canvas > .body-scene {
   position: absolute !important;
   inset: 75px 0 90px !important;
   width: 100% !important;
@@ -1652,7 +1652,7 @@
   flex-basis: 580px;
 }
 @media (max-width: 700px) {
-  .body-scene {
+  .body-canvas > .body-scene {
     inset: 100px 0 94px !important;
   }
 }
@@ -3045,3 +3045,53 @@
   z-index: 50;
   background: #00263135;
 }
+/* Allocate real rows for controls instead of subtracting fixed overlay bands.
+   Wrapped controls/captions grow naturally; only the model consumes free space.
+   Do not apply the root canvas layout to nested organ/dissection dialogs. */
+.body-canvas {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto auto auto;
+  row-gap: 4px;
+  padding: 8px 0 4px;
+}
+.body-canvas > .body-view-row {
+  position: relative;
+  inset: auto;
+  grid-row: 1;
+  margin: 0 10px;
+  justify-content: flex-start;
+}
+.body-view-row > .body-zoom {
+  position: static;
+  margin-left: auto;
+  flex-direction: row;
+}
+.body-view-row > .body-zoom button {
+  width: 36px;
+  height: 38px;
+}
+.body-canvas > .body-scene {
+  position: relative !important;
+  inset: auto !important;
+  grid-row: 2;
+  min-height: 0;
+  height: 100% !important;
+}
+.body-canvas > .body-toolbar {
+  position: relative;
+  inset: auto;
+  transform: none;
+  grid-row: 3;
+  justify-self: center;
+}
+.body-canvas > .body-canvas-caption,
+.body-canvas > .model-credit {
+  position: static;
+  transform: none;
+  padding: 0 10px;
+  text-align: center;
+  overflow-wrap: anywhere;
+  line-height: 1.4;
+}
+.body-canvas > .body-canvas-caption { grid-row: 4; }
+.body-canvas > .model-credit { grid-row: 5; }

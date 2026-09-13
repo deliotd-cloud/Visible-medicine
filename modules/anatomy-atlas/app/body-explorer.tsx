@@ -1692,6 +1692,12 @@ export default function BodyExplorer({
                     <SelectItem value="left">Left side</SelectItem>
                   </SelectContent>
                 </Select>
+                <div className="body-zoom">
+                  <Button size="icon" variant="outline" aria-label="Zoom in"
+                    onClick={() => setZoomStep(s => s + 1)}><Plus /></Button>
+                  <Button size="icon" variant="outline" aria-label="Zoom out"
+                    onClick={() => setZoomStep(s => s - 1)}><Minus /></Button>
+                </div>
               </div>
               {!eyeParent && !ventricleParent && (
                 <Scene
@@ -1780,24 +1786,6 @@ export default function BodyExplorer({
                   </strong>
                 </div>
               )}
-              <div className="body-zoom">
-                <Button
-                  size="icon"
-                  variant="outline"
-                  aria-label="Zoom in"
-                  onClick={() => setZoomStep(s => s + 1)}
-                >
-                  <Plus />
-                </Button>
-                <Button
-                  size="icon"
-                  variant="outline"
-                  aria-label="Zoom out"
-                  onClick={() => setZoomStep(s => s - 1)}
-                >
-                  <Minus />
-                </Button>
-              </div>
               <div className="body-toolbar">
                 <Button
                   size="icon"
