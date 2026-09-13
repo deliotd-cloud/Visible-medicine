@@ -35,10 +35,17 @@ export function translatedBox(bounds, offset = new Vector3()) {
     new Vector3(...bounds.max),
   ).translate(offset);
 }
-/** Fit actual bounds in any orbit orientation; padding reserves label/toolbar space.
+/** Fit actual bounds in any orbit orientation. Occupancy is the fraction of the
+ * viewport available to geometry on each axis. Keep the legacy default for
+ * saved-camera scale; a working surface can reserve side-label space without
+ * also wasting the same amount above and below the anatomy.
  * @param {Box3} bounds @param {Vector3} direction @param {Vector3} up @param {number} aspect @param {number} fov
+ * @param {[number, number]} occupancy
  */
-export function fitBounds(bounds, direction, up, aspect, fov = 38) {
+export function fitBounds(bounds, direction, up, aspect, fov = 38, occupancy = [0.7, 0.7]) {
+  const [horizontal, verticalFill] = occupancy.map((value) =>
+    Number.isFinite(value) ? Math.max(0.1, Math.min(0.95, value)) : 0.7,
+  );
   const center = bounds.getCenter(new Vector3()),
     forward = direction.clone().normalize();
   const right = new Vector3().crossVectors(up, forward).normalize();
@@ -54,9 +61,9 @@ export function fitBounds(bounds, direction, up, aspect, fov = 38) {
           depth = p.dot(forward);
         const height =
           Math.max(
-            Math.abs(p.dot(vertical)),
-            Math.abs(p.dot(right)) / Math.max(0.1, aspect),
-          ) / 0.7;
+            Math.abs(p.dot(vertical)) / verticalFill,
+            Math.abs(p.dot(right)) / (Math.max(0.1, aspect) * horizontal),
+          );
         halfHeight = Math.max(halfHeight, height);
         distance = Math.max(distance, depth + height / tan);
       }

@@ -3,6 +3,7 @@ import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import { readFile } from 'node:fs/promises';
 import { build } from './workspace-component-test-build.mjs';
+import { fitBounds } from '../lib/explode-layout.mjs';
 const require = createRequire(import.meta.url), three = require('three');
 const compiled = await build({stdin:{contents:"export { FittedCamera } from './app/fitted-camera'; export { steppedCameraScale } from './lib/camera-zoom'; export * from './lib/study-camera';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'cjs'});
 let checks=0;
@@ -108,6 +109,52 @@ for(const orthographic of [false,true]) {
   const resetPosition=h.camera.position.clone();h.render();
   close(h.camera.position.distanceTo(resetPosition),0,kind+' reset remains stable');
 }
+// A tighter presentation fit must not redefine the persisted scale convention.
+// Exercise the actual camera effect, not just the new fit helper's arithmetic.
+for (const orthographic of [false, true]) {
+  const h = harness(orthographic), kind = orthographic ? 'parallel' : 'perspective';
+  const initial = h.render({fitOccupancy:[.7,.86]}).scale;
+  same(initial < 1 && initial > .7, true, kind+' tighter initial presentation');
+  close(h.render({zoomStep:1}).scale, initial*.85, kind+' presentation button step');
+  h.gesture(.6); h.orbit([.5,.3,.8]);
+  const pose = h.api.captureStudyCamera(h.camera,h.controls.target,h.props.bounds,1.5);
+  h.restore.current = structuredClone(pose);
+  const expectedPosition = h.camera.position.clone();
+  const expectedProjection = new three.Vector3(.2,.4,-.1).project(h.camera);
+  close(h.render().scale, pose.scale, kind+' unchanged legacy saved scale');
+  // Orthographic storage retains visible scale, not an optically irrelevant
+  // camera distance. Perspective storage also restores the physical position.
+  if (!orthographic) close(h.camera.position.distanceTo(expectedPosition),0,kind+' saved position restored');
+  const restoredProjection = new three.Vector3(.2,.4,-.1).project(h.camera);
+  close(restoredProjection.x,expectedProjection.x,kind+' saved screen x restored');
+  close(restoredProjection.y,expectedProjection.y,kind+' saved screen y restored');
+  close(h.render().scale, pose.scale, kind+' no refit immediately after restore');
+  close(h.render({zoomStep:2}).scale, pose.scale*.85,kind+' step after restore');
+  close(h.render({reset:1}).scale, initial, kind+' reset uses tighter default');
+  close(h.render({recenterKey:'selected'}).scale, initial, kind+' recenter uses tighter default');
+}
+// Perspective depth and orthographic extents must both stay inside the reserved
+// label margins, including very narrow/tall and short embedded canvases.
+for (const aspect of [390/600, 1, 724/190, 724/365])
+  for (const direction of [[2.5,1.2,-12],[-1.5,1,12],[-14,1.5,-1.3],[.4,.8,.2]]) {
+    const bounds = new three.Box3(new three.Vector3(-5,-3,-2),new three.Vector3(2,3,2));
+    const orbit = new three.Vector3(...direction).normalize();
+    const fit = fitBounds(bounds,orbit,new three.Vector3(0,1,0),aspect,39,[.7,.86]);
+    for (const camera of [
+      new three.PerspectiveCamera(39,aspect,.01,150),
+      new three.OrthographicCamera(-fit.halfHeight*aspect,fit.halfHeight*aspect,fit.halfHeight,-fit.halfHeight,.01,150),
+    ]) {
+      camera.position.copy(fit.center).addScaledVector(orbit,fit.distance);
+      camera.lookAt(fit.center); camera.updateMatrixWorld(); camera.updateProjectionMatrix();
+      for(const x of [bounds.min.x,bounds.max.x])
+        for(const y of [bounds.min.y,bounds.max.y])
+          for(const z of [bounds.min.z,bounds.max.z]) {
+            const projected = new three.Vector3(x,y,z).project(camera);
+            same(Math.abs(projected.x)<=.7+1e-9 && Math.abs(projected.y)<=.86+1e-9 && Math.abs(projected.z)<1,true,'presentation fit contains all corners');
+          }
+    }
+  }
+same((await readFile('app/anatomy-scene.tsx','utf8')).includes('fitOccupancy={[0.7, 0.86]}'),true,'shoulder scene opts into label-safe vertical framing');
 const {steppedCameraScale:step}=harness().api;
 for(const scale of [.001,.02,.05,.2,1,20,50,999]) {
   same(step(scale,1)<=scale,true,'plus never reverses direction');

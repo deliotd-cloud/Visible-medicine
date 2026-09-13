@@ -22,6 +22,7 @@ export function FittedCamera({
   viewKey,
   zoom,
   zoomStep = 0,
+  fitOccupancy = [0.7, 0.7],
   reset,
   locked = false,
   planar = false,
@@ -35,6 +36,7 @@ export function FittedCamera({
   viewKey: string;
   zoom: number;
   zoomStep?: number;
+  fitOccupancy?: [number, number];
   reset: number;
   locked?: boolean;
   planar?: boolean;
@@ -49,6 +51,7 @@ export function FittedCamera({
     bounds: Box3;
     aspect: number;
     fov: number;
+    occupancy: [number, number];
     recenterKey: string;
     zoom: number;
     zoomStep: number;
@@ -62,6 +65,7 @@ export function FittedCamera({
     uy = up[1],
     uz = up[2];
   const aspect = size.width / Math.max(1, size.height);
+  const [horizontalFill, verticalFill] = fitOccupancy;
   const fov = camera instanceof PerspectiveCamera ? camera.fov : 39;
   const capture = useCallback(() => {
     if (
@@ -99,6 +103,7 @@ export function FittedCamera({
         bounds: bounds.clone(),
         aspect,
         fov,
+        occupancy: [horizontalFill, verticalFill],
         recenterKey,
         zoom,
         zoomStep,
@@ -121,6 +126,7 @@ export function FittedCamera({
       camera.up,
       aspect,
       fov,
+      [horizontalFill, verticalFill],
     );
     const retainZoom =
       !isPreset &&
@@ -135,7 +141,7 @@ export function FittedCamera({
     // orientation change is not mistaken for zoom. Only genuine bounds or
     // viewport changes should adapt the framing on the next effect.
     const priorFit = retainZoom
-      ? fitBounds(retainZoom.bounds, orbit, camera.up, retainZoom.aspect, retainZoom.fov)
+      ? fitBounds(retainZoom.bounds, orbit, camera.up, retainZoom.aspect, retainZoom.fov, retainZoom.occupancy)
       : null;
     const retainedScale =
       priorFit && controls.current
@@ -187,6 +193,7 @@ export function FittedCamera({
       bounds: bounds.clone(),
       aspect,
       fov,
+      occupancy: [horizontalFill, verticalFill],
       recenterKey,
       zoom,
       zoomStep,
@@ -215,6 +222,8 @@ export function FittedCamera({
     recenterKey,
     aspect,
     fov,
+    horizontalFill,
+    verticalFill,
   ]);
   return (
     <OrbitControls
