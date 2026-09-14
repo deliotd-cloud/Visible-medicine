@@ -33,7 +33,7 @@
   },
   {
     "path": "app/abdominal-wall-study.tsx",
-    "sha256": "ac3d99616ba8b79fd57346d058821d79142ddea44d3eb373fd846852217932f1"
+    "sha256": "4d553f20904fa72629716b7c502c9bf18637d3b242fa49aa03806e54ccb528b8"
   },
   {
     "path": "app/anatomy-canvas.tsx",
@@ -65,7 +65,7 @@
   },
   {
     "path": "app/atlas-workspace.css",
-    "sha256": "c3a1128758c8e8afa6e475ce9d3f02939410a54cc63171529f8e25c01c0dc69e"
+    "sha256": "ca7ff2ef75c40548afb4fab3fd6f7dbbaf669c966dd17bf2086ccb7eef6e3151"
   },
   {
     "path": "app/atlas-workspace.tsx",
@@ -73,7 +73,7 @@
   },
   {
     "path": "app/back-layers-study.tsx",
-    "sha256": "4fbb5707a859a8268a767fc85f4fcd33a9a96fe523b78cc3fda9adff6cdbf658"
+    "sha256": "ba4c174c306d94735a0a2d7bea791e8ac21e67e21726db4c5eff1e5915ff0fec"
   },
   {
     "path": "app/body-batch.tsx",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "231e2589eb698caf52c47c795bf0d8eb8a50a909c3985616c697ef0af34cb0f3"
+    "sha256": "348b29a72d272df42e3d00e19b39758bd73cb87af95a0cd4797f5cf2cd4064f3"
   },
   {
     "path": "app/body-explorer.css",
@@ -89,7 +89,7 @@
   },
   {
     "path": "app/body-explorer.tsx",
-    "sha256": "36c50ce1cca32014392b1a16438209219e19aece16def97e3f3dcf887633fe76"
+    "sha256": "1773959c49433de178f9f90c9792fec4744b29c2f0168a082b0834d115a0f55d"
   },
   {
     "path": "app/body-scene.tsx",
@@ -149,11 +149,11 @@
   },
   {
     "path": "app/eye-layers.tsx",
-    "sha256": "479c9ed0d4d064b3c050569aef331b1c7ba6ee49432dd2b0e5375d6cda323d3d"
+    "sha256": "a2180c8fd4fcfb0e3743fc30082db8a2cccf2f4b50fc31b172af2266c891234d"
   },
   {
     "path": "app/femoral-components.tsx",
-    "sha256": "d7746718a02ba92905fcd15b54a158d21dd1c6ad544a5c9ccf33b7d470ad2f84"
+    "sha256": "c786249e890f73ebc49642c74f8feaf5a87f808f911ac10bc0c0c6534cd8f234"
   },
   {
     "path": "app/fitted-camera.tsx",
@@ -165,7 +165,7 @@
   },
   {
     "path": "app/hra-pelvis-study.tsx",
-    "sha256": "a17db7ad07b5281bfed8ae1a68c484d51e243d903f1c3258621528ef7d36f608"
+    "sha256": "a1cd1fa676174a071a8edd1358979733ecf23aec03e68ca7a2aa439ccf798cd5"
   },
   {
     "path": "app/hra-pelvis-supplement.tsx",
@@ -173,7 +173,7 @@
   },
   {
     "path": "app/hra-renal-study.tsx",
-    "sha256": "2599c938339d227868d3cb6b50b52c248ea59fd7a32cde0234d142024850520c"
+    "sha256": "03590d26e0640ad9979745b3d14a58272a253b6443f66c90fbf72fd47c1d00ab"
   },
   {
     "path": "app/imaging-comparison.css",
@@ -280,6 +280,14 @@
     "sha256": "5d6bd0ab56a110952263082e6ad15ba4b270e72f549ca541cb2cdb09d7ec2ed9"
   },
   {
+    "path": "app/study-surface.css",
+    "sha256": "7c9cdf1ba7e0be92beb8c01d37496466fa1dd291055634a7cf5889fb76e2b517"
+  },
+  {
+    "path": "app/study-surface.tsx",
+    "sha256": "635f4058e1418aa16bdb7e8a01047037ccf37682565227adefb207c2ecba9e6e"
+  },
+  {
     "path": "app/study-views.css",
     "sha256": "990575bf75078182028c3ed0c30985d842e7814623b82f99e7aa69a761a54f8e"
   },
@@ -309,7 +317,7 @@
   },
   {
     "path": "app/um-limb-study.tsx",
-    "sha256": "60dfccf4ad269840c3dc4890345d07a7f2ba8e59d7bec0df9104fbf3a165992d"
+    "sha256": "a9cb5b3d7446575a5b8f544131f14be5ce2edbd0afdc5a8125caba2b88d39181"
   },
   {
     "path": "app/upper-limb-motor.css",
@@ -325,7 +333,7 @@
   },
   {
     "path": "app/ventricles.tsx",
-    "sha256": "b49a7136a56e2a01c1e7e7ebbf0984568151ba42375cde35258faf2adbd451e1"
+    "sha256": "32616e70acc7cf9164524737b6b55c5ca689df1250c253694a3d65039fb64975"
   },
   {
     "path": "app/ventricular-relationships.css",
@@ -725,7 +733,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "affe43c6b546f55c4486fd0cc7993012aed27d34ffe04af244a8f2ddbd3b71a0"
+    "sha256": "6b5bfbd13d3ea4d79e2ca2f197f000c522366df1e2d8dbe0a8e85822f49e06cd"
   },
   {
     "path": "content/shoulder-arm-muscle-imaging-pins.json",
@@ -945,7 +953,7 @@
   },
   {
     "path": "integration/head-neck/main.tsx",
-    "sha256": "68f391574dd23bb7c3e793bea74df2e993669dab4e033c73dcba868e8b2cadfc"
+    "sha256": "d67b08012056d2a619b76c051afef5fc3cb80025e4dfa26f3345c53dc1d9b725"
   },
   {
     "path": "integration/head-neck/panel-host.css",

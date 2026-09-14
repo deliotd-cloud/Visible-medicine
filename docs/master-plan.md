@@ -2,6 +2,30 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 14 September — exploratory explosion and inline regional dissection
+
+Atlas `9af65e68e1181fd1e7b12c6c74c4319ca244170e` implements the owner's
+revised interaction. Explore includes separation styles, hide/fade, systems,
+camera and collapsed display/inspection options. Dissect retains regional layer
+recipes, removal/restoration, history, focused studies and saved views. Existing
+region navigation stays in place. Eye/brain/organ and arterial-component studies
+and independent regional specimens now replace the main viewing area rather
+than opening a modal. Direct module specimen links use the same inline surface.
+Back/Escape restores the regional view; mode switches retain nested dissection
+state and keep the learning-mode snapshots independent. First mode entry retains
+the camera direction/zoom. Separate specimen coordinate frames are not merged.
+
+Source/interface, shoulder, nested-navigation, history and review tests,
+TypeScript and all three Atlas builds pass. Desktop eye layer/Undo/Back and
+phone hip/thigh extraction, Undo, mode return and Escape were sampled. Website
+verification, publication and exact GitHub/D recovery are in the dated inline
+dissection checkpoint. Earlier mode-separation restrictions below are superseded.
+
+All 131 model objects/137 paths, 9,909 teaching topics, the homepage, modality
+catalogue and access policies remain unchanged. No new scans, dependencies,
+licences, fees or clinical approvals. The full goal remains active. The separate
+abdominal teaching WIP is preserved and excluded from this interface release.
+
 ## 14 September — distinct Explore, Dissect and Practice modes
 
 Atlas `6786ed3c723cba41a04b747d2be742c7e0a2b0ab` separates assembled
