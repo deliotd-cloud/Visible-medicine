@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from './study-surface';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { limbDefinitions, type LimbScope } from '@/lib/um-limb-studies';
 import { KneeSpecimenView } from './um-knee-study';

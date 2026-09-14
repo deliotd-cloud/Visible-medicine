@@ -1,0 +1,23 @@
+/* The study replaces the regional work area, not the website or a floating window. */
+.body-app:has(> .atlas-inline-study:not([hidden])) { display:flex; flex-direction:column; }
+.body-app > .atlas-inline-study[hidden] { display:none !important; }
+.body-app > .body-layout[hidden] { display:none !important; }
+.body-app > [data-study-surface='inline'].eye-layers-dialog {
+  position:relative; inset:auto; transform:none; width:100%; max-width:100%;
+  height:auto; flex:1; min-height:0; min-width:0; margin:0; border:0;
+  border-radius:0; box-shadow:none; padding:12px; gap:10px; overflow:hidden;
+  display:grid; grid-template-rows:auto minmax(0,1fr); outline:none;
+}
+.atlas-inline-study > .eye-layer-heading { min-width:0; }
+.atlas-inline-study .eye-layer-heading > div { min-width:0; }
+.atlas-inline-study .eye-layer-heading h2 { margin:0; }
+.atlas-inline-study .eye-layer-heading p { margin-bottom:0; }
+.atlas-inline-study .eye-layer-heading > button { flex-shrink:0; }
+.atlas-inline-study .eye-layer-workbench { min-width:0; }
+@media(max-width:700px) {
+  .body-app > [data-study-surface='inline'].eye-layers-dialog { padding:8px; gap:6px; }
+  .atlas-inline-study .eye-layer-workbench {
+    grid-template-rows:minmax(190px,1.2fr) minmax(100px,1fr);
+  }
+  .atlas-inline-study .eye-layer-heading [data-slot='dialog-description'] { font-size:.875rem; }
+}

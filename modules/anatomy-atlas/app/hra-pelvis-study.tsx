@@ -1,7 +1,7 @@
 'use client';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from './study-surface';
 import { IndependentStudyView, IndependentStudyLinkControl } from './independent-study-navigation';
 import type { IndependentStudyLink } from '@/lib/independent-study-links';
 import { hraPelvisDefinition } from '@/lib/hra-pelvis';

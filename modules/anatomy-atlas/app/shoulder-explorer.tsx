@@ -186,7 +186,7 @@ export default function ShoulderExplorer({
       visibleSystems: { skeleton: true, muscles: true, 'soft-tissue': true },
       explode: 0, layout: 'spatial' as BodyLayout, inspection: initialInspection, plate: false,
       anchorSkeleton: false, showOrigins: false, isolated: false, syncPlane: false,
-      view: 'posterior' as CameraView, zoom: 1, camera: null }),
+      view, zoom, camera: cameraCapture.current }),
   );
   const [shoulderPractice, practiceDispatch] = useReducer(
     practiceReducer,
@@ -479,7 +479,7 @@ export default function ShoulderExplorer({
               typeof config.isolateSelected !== 'boolean'
             )
               throw new Error('isolateSelected must be boolean');
-            if (config.layer !== undefined || config.explode !== undefined)
+            if (config.layer !== undefined)
               workspace.chooseMode('dissect');
             if (typeof config.view === 'string')
               setView(config.view as CameraView);
@@ -663,7 +663,7 @@ export default function ShoulderExplorer({
                       ))}
                     </div>
                   </details>
-                  <WorkspaceOnly modes={['dissect']}>
+                  <WorkspaceOnly modes={['explore', 'dissect']}>
                     <div className="shoulder-scene-options">
                       <button
                         type="button"
@@ -1029,7 +1029,7 @@ export default function ShoulderExplorer({
                     Reference plane illustration — not a scan
                   </TooltipContent>
                 </Tooltip>
-                <WorkspaceOnly modes={['dissect']} className="atlas-inline-mode">
+                <WorkspaceOnly modes={['explore', 'dissect']} className="atlas-inline-mode">
                 <span className="toolbar-divider" />
                 <div className="explode-control">
                   <ExplodeStyleSelect

@@ -2,6 +2,7 @@ import {Component,lazy,Suspense,type ReactNode} from 'react';
 import {createRoot} from 'react-dom/client';
 import '../../app/globals.css';
 import BodyExplorer from '../../app/body-explorer';
+import { InlineStudy } from '../../app/study-surface';
 import {parseStudyLink,type StudySearchParams} from '../../lib/study-links';
 import {parseRegionalModule} from './regions';
 import {parseContainedSpecimen} from './specimen-route';
@@ -27,7 +28,7 @@ const backToRegion=()=>window.location.assign('/atlas-runtime/head-neck/index.ht
 createRoot(document.getElementById('root')!).render(
   <ModuleBoundary>{region && specimen.status!=='invalid'
     ? specimen.status==='ready'
-      ? <Suspense fallback={<p role="status">Loading the separate source specimen…</p>}>
+      ? <main className="body-app"><InlineStudy><Suspense fallback={<p role="status">Loading the separate source specimen…</p>}>
           {specimen.kind==='lower-limb'
             ? <LowerLimb assetBase="/atlas-runtime/head-neck" initialRegion={region} initialLink={specimen.link} onClose={backToRegion}/>
             : specimen.kind==='back-layers'
@@ -37,7 +38,7 @@ createRoot(document.getElementById('root')!).render(
             : specimen.kind==='kidneys'
             ? <Kidneys assetBase="/atlas-runtime/head-neck" initialLink={specimen.link} onClose={backToRegion}/>
             : <AbdominalWall assetBase="/atlas-runtime/head-neck" initialLink={specimen.link} onClose={backToRegion}/>}
-        </Suspense>
+        </Suspense></InlineStudy></main>
       : <BodyExplorer initialRegion={region} studyLink={parseStudyLink(params)} presentation="panel" embedded={window.self !== window.top} assetBase="/atlas-runtime/head-neck"/>
     : <section className="module-recovery" role="alert"><h2>This region link cannot be opened</h2><p>No alternative region or structure has been selected.</p><a href="/atlas" target="_top">Return to the Atlas</a></section>}
   </ModuleBoundary>

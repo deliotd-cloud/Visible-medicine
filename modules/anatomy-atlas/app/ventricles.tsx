@@ -70,7 +70,7 @@ import {
   DialogContent,
   DialogTitle,
   DialogDescription,
-} from '@/components/ui/dialog';
+} from './study-surface';
 import { BodyScene, retryBodyAssets } from './body-scene';
 import { allBodySystems, type BodyStructure } from './body-types';
 import { initialInspection } from '@/lib/inspection-state';

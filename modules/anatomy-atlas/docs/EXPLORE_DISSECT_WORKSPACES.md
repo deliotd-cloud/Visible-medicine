@@ -2,6 +2,33 @@
 
 14 September 2026. These are modes of the same viewer, not separate models.
 
+## Revised interaction — inline regional dissection
+
+Explore now includes all three separation styles, system visibility, selection,
+hide/fade and collapsed display/inspection options. Dissect retains the regional
+layer recipes, removal/restoration history, focused studies and saved views.
+The existing region picker and website region bar choose individual body parts.
+First entry to the other learning mode preserves the camera direction/zoom;
+subsequent entries restore that mode's saved snapshot, including its separation.
+
+Eye, brain, cardiac, pulmonary, abdominal, renal and artery-component studies,
+plus independent lower-limb, abdominal-wall, back and female-pelvis specimens,
+replace the main work area. They no longer open a modal in the Atlas. Back to
+atlas or Escape returns to the retained regional scene. Modes remain available;
+Explore suspends the deeper study and Dissect resumes it. Search can replace a
+reference specimen with another nested study without stacking surfaces. Opening
+a different region still starts a fresh session. Independent source coordinates,
+laterality, source notices and clinical-review caveats remain unchanged.
+
+Direct reference-specimen links in the website module also use an inline work
+area. Standalone non-Atlas callers retain their existing presentation.
+
+`inline-dissection:test`, workspace session and updated shoulder component tests
+cover the revised semantics. Browser acceptance covers actual desktop/mobile
+rendering, layer/Undo/Back, Explore separation and returning between modes.
+The earlier verification record below describes the previous UI milestone;
+its restriction of explosion to Dissect is superseded by this section.
+
 | Mode | Controls |
 | --- | --- |
 | Explore | Assembled anatomy, camera/zoom, system visibility, search, labels, selection/isolation, Anatomy/Clinical/Imaging notes and imaging-link status |

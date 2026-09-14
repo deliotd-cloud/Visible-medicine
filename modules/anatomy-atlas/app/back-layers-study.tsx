@@ -6,7 +6,7 @@ import {
   DialogContent,
   DialogTitle,
   DialogDescription,
-} from '@/components/ui/dialog';
+} from './study-surface';
 import type { SpecimenSupplement } from './um-knee-study';
 import { IndependentStudyView, IndependentStudyLinkControl } from './independent-study-navigation';
 import type { IndependentStudyLink } from '@/lib/independent-study-links';

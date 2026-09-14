@@ -194,10 +194,10 @@ for (const selected of structures) {
     const gates = [
       ...rail.matchAll(/class="atlas-mode-panel "( hidden="")?/g),
     ].map((m) => Boolean(m[1]));
-    same(gates, [mode !== 'dissect', mode !== 'dissect', mode === 'practice', mode !== 'dissect']);
+    same(gates, [mode === 'practice', mode !== 'dissect', mode === 'practice', mode !== 'dissect']);
     const inlineGates = [...model.matchAll(/class="atlas-mode-panel atlas-inline-mode"( hidden="")?/g)]
       .map(m => Boolean(m[1]));
-    same(inlineGates, [mode !== 'dissect', mode !== 'dissect'], 'Layer/explode controls only in Dissect');
+    same(inlineGates, [mode !== 'dissect', mode === 'practice'], 'Layers in Dissect; explode in both learning modes');
   }
   context.__mode = 'explore';
   for (const [group, tabs] of Object.entries(groups))

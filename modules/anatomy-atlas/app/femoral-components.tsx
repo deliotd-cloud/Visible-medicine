@@ -20,7 +20,7 @@ import {
   DialogContent,
   DialogDescription,
   DialogTitle,
-} from '@/components/ui/dialog';
+} from './study-surface';
 import { BodyScene, retryBodyAssets } from './body-scene';
 import { allBodySystems, type BodyStructure } from './body-types';
 import { NestedTeaching } from './nested-teaching';

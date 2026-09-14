@@ -1,14 +1,5 @@
 /* Task-specific controls, with anatomy state owned by the explorer above them. */
 .atlas-inline-mode:not([hidden]) { display: contents; }
-.body-app[data-workspace-mode='explore'] .body-toolbar {
-  width: max-content;
-  max-width: calc(100% - 24px);
-}
-.body-app[data-workspace-mode='explore'] .shoulder-view-footer .viewer-toolbar {
-  width: max-content;
-  max-width: 100%;
-  margin-inline: auto;
-}
 .atlas-mode-panel[hidden] {
   display: none !important;
 }

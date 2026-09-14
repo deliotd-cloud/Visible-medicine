@@ -3,6 +3,7 @@ import { femoralComponentsFor } from '@/lib/femoral-components';
 import { cranialArteryComponentsFor } from '@/lib/cranial-artery-components';
 import './um-knee-entry.css';
 import { useWorkspaceSession } from './workspace-session';
+import { InlineStudy } from './study-surface';
 import './upper-limb-motor.css';
 import {
   useCallback,
@@ -371,7 +372,15 @@ export default function BodyExplorer({
       systems: initialRegion === 'whole-body' ? initialSystems : allBodySystems,
       explode: 0, layout: 'spatial' as BodyLayout, inspection: initialInspection, plate: false,
       ghostRemoved: false, anchorSkeleton: false, showOrigins: false, isolated: false,
-      focus: false, regionalFraming: true, view: profile.stages[0].view, zoom: 1, camera: null }),
+      focus: false, regionalFraming: true, view, zoom, camera: cameraCapture.current }),
+  );
+  const inlineStudy = workspace.mode === 'dissect' && !exam && Boolean(
+    (eyeParent && eyeParent.id === selectedId) || (ventricleParent && ventricleParent.id === selectedId) ||
+    (kneeSpecimenOpen && ['leg', 'foot', 'thigh', 'pelvis'].includes(initialRegion)) ||
+    (abdominalWallOpen && initialRegion === 'abdomen') ||
+    (backLayersOpen && ['spine', 'whole-body'].includes(initialRegion)) ||
+    (hraPelvisOpen && ['pelvis', 'whole-body'].includes(initialRegion)) ||
+    (hraRenalOpen && ['abdomen', 'whole-body'].includes(initialRegion))
   );
   useEffect(() => {
     if (eyeParent && (exam || eyeParent.id !== selectedId)) closeEyeLayers();
@@ -754,6 +763,9 @@ export default function BodyExplorer({
       )
         return;
       workspace.chooseMode('dissect');
+      // A search can replace an open reference specimen. Never render two studies.
+      setKneeSpecimenOpen(false); setAbdominalWallOpen(false); setBackLayersOpen(false);
+      setHraPelvisOpen(false); setHraRenalOpen(false);
       cameraRestore.current = cameraCapture.current
         ? copyRecoveryCamera(cameraCapture.current)
         : null;
@@ -1452,6 +1464,8 @@ export default function BodyExplorer({
             · separate specimen
           </Button>
         )}
+      </WorkspaceOnly>
+      <WorkspaceOnly modes={['explore', 'dissect']}>
         <details className="body-display-tools">
           <summary>
             Display options<small>Quick views · arrangement · surfaces</small>
@@ -1635,7 +1649,7 @@ export default function BodyExplorer({
           </Button>
         </WorkspaceOnly>
       </header>
-      <div className="body-layout">
+      <div className="body-layout" hidden={inlineStudy}>
         <AnatomyControlRail>{railContent}</AnatomyControlRail>
         <section className="body-workspace" aria-label={`${title} 3D anatomy`}>
           {!sharedHeader && <RegionHeading title={title} count={regionStructures.length}
@@ -1717,7 +1731,7 @@ export default function BodyExplorer({
                     onClick={() => setZoomStep(s => s - 1)}><Minus /></Button>
                 </div>
               </div>
-              {!eyeParent && !ventricleParent && (
+              {(
                 <Scene
                   assetBase={assetBase}
                   catalog={catalog}
@@ -1813,7 +1827,7 @@ export default function BodyExplorer({
                 >
                   <Tags />
                 </Button>
-                <WorkspaceOnly modes={['dissect']} className="atlas-inline-mode">
+                <WorkspaceOnly modes={['explore', 'dissect']} className="atlas-inline-mode">
                 <div className="body-explode">
                   <ExplodeStyleSelect
                     value={exam ? 'spatial' : layout}
@@ -2325,7 +2339,7 @@ export default function BodyExplorer({
                         <Focus />
                         Isolate & frame
                       </Button>
-                      <WorkspaceOnly modes={['dissect']} className="atlas-inline-mode">
+                      <WorkspaceOnly modes={['explore', 'dissect']} className="atlas-inline-mode">
                       <Button
                         size="sm"
                         variant="outline"
@@ -2337,7 +2351,7 @@ export default function BodyExplorer({
                         }}
                       >
                         <EyeOff />
-                        Remove
+                        {workspace.mode === 'explore' ? 'Hide' : 'Remove'}
                       </Button>
                       </WorkspaceOnly>
                       <details className="atlas-more-actions">
@@ -2575,6 +2589,7 @@ export default function BodyExplorer({
           )}
         </AnatomyInfoPanel>
       </div>
+      <InlineStudy active={inlineStudy}>
       {eyeParent && !exam && eyeParent.id === selectedId && (
         <EyeLayers
           assetBase={assetBase}
@@ -2619,6 +2634,7 @@ export default function BodyExplorer({
           onClose={closeVentricles}
         />
       )}
+      </InlineStudy>
     </AtlasWorkspace>
   );
 }

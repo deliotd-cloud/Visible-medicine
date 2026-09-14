@@ -582,6 +582,8 @@ for (const target of targets) {
   const env = {
     request: target,
     workspace: { chooseMode: mode => events.push(['mode', mode]) },
+    ...Object.fromEntries(['setKneeSpecimenOpen', 'setAbdominalWallOpen', 'setBackLayersOpen', 'setHraPelvisOpen', 'setHraRenalOpen']
+      .map(name => [name, value => events.push([name, value])])),
     launcher: { focus: () => focused++ },
     exam: false,
     catalog,
@@ -614,6 +616,8 @@ for (const target of targets) {
   execute('openNested', env);
   same(events, [
     ['mode', 'dissect'],
+    ['setKneeSpecimenOpen', false], ['setAbdominalWallOpen', false], ['setBackLayersOpen', false],
+    ['setHraPelvisOpen', false], ['setHraRenalOpen', false],
     ['parent', target.parentId],
     ['nested', target.structureId],
     [target.study === 'eye' ? 'eye' : 'brain', target.parentId],
