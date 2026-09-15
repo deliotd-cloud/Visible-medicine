@@ -6,6 +6,7 @@ import { armAttachmentInfo } from '@/lib/arm-attachments';
 import { thighAttachmentInfo } from '@/lib/thigh-attachments';
 import { neckAttachmentInfo } from '@/lib/neck-attachments';
 import { forearmAttachmentInfo } from '@/lib/forearm-attachments';
+import { legAttachmentInfo } from '@/lib/leg-attachments';
 import { armAttachmentReference } from '@/content/arm-attachments';
 import { makeStudyLink, type StudySide } from '@/lib/study-links';
 import type { BodyCatalog } from './body-types';
@@ -32,7 +33,8 @@ export function ArmAttachments({
       armAttachmentInfo(catalog, region, side, selectedId, disabled) ??
       thighAttachmentInfo(catalog, region, side, selectedId, disabled) ??
       neckAttachmentInfo(catalog, region, side, selectedId, disabled) ??
-      forearmAttachmentInfo(catalog, region, side, selectedId, disabled),
+      forearmAttachmentInfo(catalog, region, side, selectedId, disabled) ??
+      legAttachmentInfo(catalog, region, side, selectedId, disabled),
     [catalog, region, side, selectedId, disabled],
   );
   if (!info) return null;

@@ -38,7 +38,7 @@
     },
     {
       "path": "app/arm-attachments.tsx",
-      "sha256": "09e128a361d562be1139b7187c56d5f26ff9673a8dc511678757a0c24c49ec34"
+      "sha256": "24265d11786288da1fb31c55282d6077e029710085a1bf41a92c52b04692b863"
     },
     {
       "path": "app/arterial-connections.tsx",
@@ -74,7 +74,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "dca64d24cda3aa120091980b5ab834779a5dee47c1565a8ad213613adb5e054a"
+      "sha256": "6fc21af9ec61865ff7035e5747f593b53143ff53aa91017655efc054adb13b0b"
     },
     {
       "path": "app/body-scene.tsx",
@@ -627,6 +627,14 @@
     {
       "path": "content/inferior-thyroid-context-pins.json",
       "sha256": "1928f2ecce49146511325abe3fe6331291dcbbbb0ca6308f99e95be2353f07f8"
+    },
+    {
+      "path": "content/leg-attachment-pins.json",
+      "sha256": "42a6e0bfaef06211828d82a7b368c3ea3f3709e4876221ccae66f315f79dc7d4"
+    },
+    {
+      "path": "content/leg-attachments.ts",
+      "sha256": "bc23247dfe8603979bc09402595887017e4b43365bfd0c9d8d9956eb28b02494"
     },
     {
       "path": "content/leg-muscle-imaging-pins.json",
@@ -1421,6 +1429,10 @@
       "sha256": "adb043e56456f63e8f8f5f110c984f3706c8904a6267c6415260c7d0c8973fb3"
     },
     {
+      "path": "lib/leg-attachments.ts",
+      "sha256": "6196950ca893ac2afbeb3fa40ec9482fa947c0b457ec9a0040170fcdc46b0448"
+    },
+    {
       "path": "lib/leg-clinical-curriculum.ts",
       "sha256": "d5eac9266e745989f01855bb8927c8534895e287c37ed20a60fa4a2f0c13c10f"
     },
@@ -1902,7 +1914,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "b6e3132a456f5ed2aa4c6d2bca47cffd8c94709b7587e79637021fa1e302aee9"
+      "sha256": "856a695a66dd0a6674b702672e82b23981bc91959efb45645778742cbb856580"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2093,5 +2105,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "e235dab66ca4050a9d12be7dd9b841ffa7dbbcf609fb287f958d8b4b3733e24e"
+  "sha256": "8e75c4284a85d211e6ce21f11e9635794b71da1bb2c084182f7383ea2370cffd"
 }

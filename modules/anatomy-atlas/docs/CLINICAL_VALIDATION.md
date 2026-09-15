@@ -1,5 +1,11 @@
 # Clinical validation checklist
 
+[Lower-leg attachments](LEG_ATTACHMENTS.md): review 28 sided muscle/head
+selections and 46 existing bony partners, gastrocnemius head-specific origins,
+Achilles/extensor-apparatus limits, digital phalanx numbering, plantaris variation
+and tibialis-posterior main versus reported variable extensions. Bony links do
+not establish specimen-specific tendon footprints or clinical approval.
+
 [Forearm attachment relationships](FOREARM_ATTACHMENTS.md): validate the explicit
 bone partners for 42 muscle/head selections, digital numbering, separate FCU
 and pronator-teres heads, extensor-apparatus/ligament continuations and the
