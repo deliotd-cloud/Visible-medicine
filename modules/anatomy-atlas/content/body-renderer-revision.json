@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "231e2589eb698caf52c47c795bf0d8eb8a50a909c3985616c697ef0af34cb0f3"
+      "sha256": "b8e4a232630e744b54a6a86a0522b13c80e31bbe9c7511cdd48bed2c1709db16"
     },
     {
       "path": "app/body-explorer.css",
@@ -387,6 +387,14 @@
     {
       "path": "content/abdominal-arterial.ts",
       "sha256": "8d3adf0135a17a01281b5cbdf3d9cbd62167849043c6bf4948382f8cb8956ec1"
+    },
+    {
+      "path": "content/abdominal-branch-imaging-pins.json",
+      "sha256": "5daaecd50fae68d64ef88d39237b6700b9f2bac3fa84f1a4792cbc05b3228d61"
+    },
+    {
+      "path": "content/abdominal-branch-imaging.ts",
+      "sha256": "5976ad5d71b7aceedb81e4bff184ac40486c051cd0d69efb128d81c3124b6bff"
     },
     {
       "path": "content/abdominal-organ-imaging-pins.json",
@@ -887,6 +895,10 @@
     {
       "path": "lib/abdominal-arterial.ts",
       "sha256": "29a81d40909eff2d828e72bda5e2cc8660e51371e602c99cdf05fc1c5e32aa51"
+    },
+    {
+      "path": "lib/abdominal-branch-imaging.ts",
+      "sha256": "3d4c1a7604c3277cdc31b1db77adbcd15b55345848e3345b7f322a1be5eadcf3"
     },
     {
       "path": "lib/abdominal-organ-clinical-curriculum.ts",
@@ -1878,7 +1890,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "2b7c6e974de0e8d48c890ad87c8587926372351e32c602644a31364b601d8c14"
+      "sha256": "a7b5b57f77448b2f950f98dda1d657f46c3378a2d6180afbb531d82ec10eeafa"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2069,5 +2081,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "ed031490ec97ea50665759b4d16c01a8a10217cdb300a5d2d16e36279f5fec9d"
+  "sha256": "a4cf2e94152d50cb6bdb0d1f827989f4bf83680a912d370f6dfc63a43cff9d9b"
 }

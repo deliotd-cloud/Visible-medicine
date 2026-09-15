@@ -1,5 +1,6 @@
 import { centralVesselImagingLesson } from '../lib/central-vessel-imaging';
 import { thoracicBranchImagingLesson } from '../lib/thoracic-branch-imaging';
+import { abdominalBranchImagingLesson } from '../lib/abdominal-branch-imaging';
 import {
   structures as shoulderStructures,
   type ContentTab,
@@ -169,6 +170,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const abdominalBranchImaging = abdominalBranchImagingLesson(s, tab);
+  if (abdominalBranchImaging) return abdominalBranchImaging;
   const thoracicBranchImaging = thoracicBranchImagingLesson(s, tab);
   if (thoracicBranchImaging) return thoracicBranchImaging;
   const centralVesselImaging = centralVesselImagingLesson(s, tab);

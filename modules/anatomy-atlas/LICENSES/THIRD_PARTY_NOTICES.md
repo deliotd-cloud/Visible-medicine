@@ -1,5 +1,14 @@
 # Third-party notices
 
+## Abdominal branch imaging — 15 September 2026
+
+Original MIT resolver code and factual drafts add 48 placements to 34 retained
+vessels. Twenty-four publication links are reading references, not imported
+prose, figures, tables, scans or redistribution permissions. Linked sources
+include NC-ND material; none is admitted as a commercial asset. No new model,
+font, texture, package, paid API or mandatory fee is introduced. Existing credits
+and source holds remain. See [scope and review](../docs/ABDOMINAL_BRANCH_IMAGING.md).
+
 ## Thoracic branch imaging — 13 September 2026
 
 Original MIT resolver code and concise factual drafts add 50 placements to 26

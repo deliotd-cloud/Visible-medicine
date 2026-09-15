@@ -1,0 +1,3053 @@
+{
+  "sourceCommit": "193de0e4273fee3ae69cf3f4402b74b6cde5e118",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "abdomen-vessels-mesenteric",
+      "url": "/models/bodyparts3d/full-body/abdomen-vessels-mesenteric.glb",
+      "bytes": 226020,
+      "sha256": "d26bb01909128f5cd8a56fb410967a688801a22652305bb2656e04d3e7df2680",
+      "structures": 14
+    },
+    {
+      "id": "abdomen-vessels-visceral-detail",
+      "url": "/models/bodyparts3d/full-body/abdomen-vessels-visceral-detail.glb",
+      "bytes": 133144,
+      "sha256": "be90ec41dc6046b820b337d986b6a67792a33ba33216db8aecb068fed4b85173",
+      "structures": 11
+    },
+    {
+      "id": "portal-veins",
+      "url": "/models/bodyparts3d/portal-veins/portal-veins.glb?v=583069160dbd753bb7f64b62667d20134ccbf7554b9bd4cf57b0de0a5a50ee53",
+      "bytes": 76724,
+      "sha256": "583069160dbd753bb7f64b62667d20134ccbf7554b9bd4cf57b0de0a5a50ee53",
+      "structures": 5
+    },
+    {
+      "id": "hepatic-veins",
+      "url": "/models/bodyparts3d/hepatic-veins/hepatic-veins.glb?v=1f8922b93ec4c92bf6d695de9b75a00fb6f1552522125ca25861b1ed04f403cf",
+      "bytes": 256984,
+      "sha256": "1f8922b93ec4c92bf6d695de9b75a00fb6f1552522125ca25861b1ed04f403cf",
+      "structures": 3
+    },
+    {
+      "id": "inferior-epigastric-vessels",
+      "url": "/models/bodyparts3d/inferior-epigastric-vessels/inferior-epigastric-vessels.glb?v=8049ac70b0130cfe597cde159d1716f79f1b686583ea71dc91a5955f6c95925c",
+      "bytes": 526756,
+      "sha256": "8049ac70b0130cfe597cde159d1716f79f1b686583ea71dc91a5955f6c95925c",
+      "structures": 4
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "51321821be2ecf570797817581b626ed0f9b9448359ded72e9de3802fc136166",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+        "fmaId": "FMA14810",
+        "name": "Middle colic artery",
+        "sourceName": "middle colic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA14810",
+        "bounds": {
+          "min": [
+            -0.6839800477027893,
+            2.1338000297546387,
+            0.6944400072097778
+          ],
+          "max": [
+            0.6255369782447815,
+            2.6506993770599365,
+            1.2945899963378906
+          ]
+        },
+        "center": [
+          -0.029221534729003906,
+          2.3922497034072876,
+          0.9945150017738342
+        ],
+        "anchor": [
+          -0.14844399690628052,
+          2.249000310897827,
+          0.9807400703430176
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3542",
+            "sha256": "b77b34cda312ffba8034c41a5457a0ad052d28439efd228ef90724ec3c4adce4"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "middle-colic-artery",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Selected mesenteric arterial branches · draft",
+        "body": "These source-labelled colic, ileocolic and appendicular segments belong to the arterial supply of the bowel.",
+        "bullets": [
+          "Source identity: FMA14810 · 1 source component",
+          "Named source segments do not establish a continuous vascular tree, a patent lumen, normal calibre, perfusion territory or an individual patient’s anatomy. Mesenteric plexuses, lymphatic networks and many branches remain absent. Three overlapping arterial alternatives are deliberately withheld.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/gastrointestinal_system/peritoneum_tables.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+        "fmaId": "FMA14811",
+        "name": "Right colic artery",
+        "sourceName": "right colic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA14811",
+        "bounds": {
+          "min": [
+            -0.6894599795341492,
+            1.8567700386047363,
+            0.6876000165939331
+          ],
+          "max": [
+            -0.05397089943289757,
+            2.3912999629974365,
+            0.996929943561554
+          ]
+        },
+        "center": [
+          -0.37171543948352337,
+          2.1240350008010864,
+          0.8422649800777435
+        ],
+        "anchor": [
+          -0.5011640191078186,
+          2.0259997844696045,
+          0.8319999575614929
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3590",
+            "sha256": "d4099403f391139ea5716f10f441489d1f8abaa7b39a0e21596efe5457bddbd0"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "right-colic-artery",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Selected mesenteric arterial branches · draft",
+        "body": "These source-labelled colic, ileocolic and appendicular segments belong to the arterial supply of the bowel.",
+        "bullets": [
+          "Source identity: FMA14811 · 1 source component",
+          "Named source segments do not establish a continuous vascular tree, a patent lumen, normal calibre, perfusion territory or an individual patient’s anatomy. Mesenteric plexuses, lymphatic networks and many branches remain absent. Three overlapping arterial alternatives are deliberately withheld.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/gastrointestinal_system/peritoneum_tables.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
+        "fmaId": "FMA14815",
+        "name": "Ileocolic artery",
+        "sourceName": "ileocolic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA14815",
+        "bounds": {
+          "min": [
+            -0.3138050138950348,
+            1.5446600914001465,
+            0.7963600158691406
+          ],
+          "max": [
+            -0.054398197680711746,
+            1.8339098691940308,
+            0.9436999559402466
+          ]
+        },
+        "center": [
+          -0.18410160578787327,
+          1.6892849802970886,
+          0.8700299859046936
+        ],
+        "anchor": [
+          -0.1850760132074356,
+          1.7021899223327637,
+          0.8727099895477295
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3439",
+            "sha256": "a0e7715dace7a22773b5e976f415b6049fe84eeb8e91f01cb6a4582c31ced81a"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ileocolic-artery",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Selected mesenteric arterial branches · draft",
+        "body": "These source-labelled colic, ileocolic and appendicular segments belong to the arterial supply of the bowel.",
+        "bullets": [
+          "Source identity: FMA14815 · 1 source component",
+          "Named source segments do not establish a continuous vascular tree, a patent lumen, normal calibre, perfusion territory or an individual patient’s anatomy. Mesenteric plexuses, lymphatic networks and many branches remain absent. Three overlapping arterial alternatives are deliberately withheld.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/gastrointestinal_system/peritoneum_tables.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "fmaId": "FMA14818",
+        "name": "Appendicular artery",
+        "sourceName": "appendicular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA14818",
+        "bounds": {
+          "min": [
+            -0.5570880174636841,
+            0.7271197438240051,
+            0.38387396931648254
+          ],
+          "max": [
+            -0.2348489910364151,
+            1.398610234260559,
+            0.7455199956893921
+          ]
+        },
+        "center": [
+          -0.3959685042500496,
+          1.062864989042282,
+          0.5646969825029373
+        ],
+        "anchor": [
+          -0.5143510103225708,
+          1.0382500886917114,
+          0.6276699900627136
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3410",
+            "sha256": "f13009791207502aa815d5c57825048f701f7b82ed563ccd2d0369c7d1c78bdf"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "appendicular-artery",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Selected mesenteric arterial branches · draft",
+        "body": "These source-labelled colic, ileocolic and appendicular segments belong to the arterial supply of the bowel.",
+        "bullets": [
+          "Source identity: FMA14818 · 1 source component",
+          "Named source segments do not establish a continuous vascular tree, a patent lumen, normal calibre, perfusion territory or an individual patient’s anatomy. Mesenteric plexuses, lymphatic networks and many branches remain absent. Three overlapping arterial alternatives are deliberately withheld.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/gastrointestinal_system/peritoneum_tables.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+        "fmaId": "FMA14820",
+        "name": "Ascending branch of inferior branch of ileocolic artery",
+        "sourceName": "ascending branch of inferior branch of ileocolic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA14820",
+        "bounds": {
+          "min": [
+            -0.7209670543670654,
+            1.5661797523498535,
+            0.6525900363922119
+          ],
+          "max": [
+            -0.2584350109100342,
+            1.9032201766967773,
+            0.839259922504425
+          ]
+        },
+        "center": [
+          -0.4897010326385498,
+          1.7346999645233154,
+          0.7459249794483185
+        ],
+        "anchor": [
+          -0.4870989918708801,
+          1.5928802490234375,
+          0.758679986000061
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3414",
+            "sha256": "af7a27732bb6fc2b63ff7024ce36384f25ffae44952c7899a773aa1f7a2df84f"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ileocolic-ascending-branch",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Selected mesenteric arterial branches · draft",
+        "body": "These source-labelled colic, ileocolic and appendicular segments belong to the arterial supply of the bowel.",
+        "bullets": [
+          "Source identity: FMA14820 · 1 source component",
+          "Named source segments do not establish a continuous vascular tree, a patent lumen, normal calibre, perfusion territory or an individual patient’s anatomy. Mesenteric plexuses, lymphatic networks and many branches remain absent. Three overlapping arterial alternatives are deliberately withheld.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/gastrointestinal_system/peritoneum_tables.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "fmaId": "FMA14824",
+        "name": "Marginal colic artery",
+        "sourceName": "marginal colic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA14824",
+        "bounds": {
+          "min": [
+            -0.702111005783081,
+            1.3085699081420898,
+            0.5149999856948853
+          ],
+          "max": [
+            0.6869470477104187,
+            2.6558997631073,
+            1.19923996925354
+          ]
+        },
+        "center": [
+          -0.007581979036331177,
+          1.9822348356246948,
+          0.8571199774742126
+        ],
+        "anchor": [
+          0.5225780010223389,
+          1.7889001369476318,
+          0.6671399474143982
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2025",
+            "sha256": "963b07fc664a9bfdeaab8c9d813a90b415aa6c97fe89c7db5713b5600a406400"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "marginal-colic-artery",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Selected mesenteric arterial branches · draft",
+        "body": "These source-labelled colic, ileocolic and appendicular segments belong to the arterial supply of the bowel.",
+        "bullets": [
+          "Source identity: FMA14824 · 1 source component",
+          "Named source segments do not establish a continuous vascular tree, a patent lumen, normal calibre, perfusion territory or an individual patient’s anatomy. Mesenteric plexuses, lymphatic networks and many branches remain absent. Three overlapping arterial alternatives are deliberately withheld.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/gastrointestinal_system/peritoneum_tables.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
+        "fmaId": "FMA14826",
+        "name": "Left colic artery",
+        "sourceName": "left colic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA14826",
+        "bounds": {
+          "min": [
+            0.129721999168396,
+            1.7187902927398682,
+            0.766539990901947
+          ],
+          "max": [
+            0.3179999887943268,
+            1.790809988975525,
+            0.8679499626159668
+          ]
+        },
+        "center": [
+          0.2238609939813614,
+          1.7548001408576965,
+          0.8172449767589569
+        ],
+        "anchor": [
+          0.23304501175880432,
+          1.7509698867797852,
+          0.8227400183677673
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3494",
+            "sha256": "ee66dc3feb19c5b6c8500420c2e67a04f593045ddcdcfd24ac1faf1412a52bd1"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-colic-artery",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Selected mesenteric arterial branches · draft",
+        "body": "These source-labelled colic, ileocolic and appendicular segments belong to the arterial supply of the bowel.",
+        "bullets": [
+          "Source identity: FMA14826 · 1 source component",
+          "Named source segments do not establish a continuous vascular tree, a patent lumen, normal calibre, perfusion territory or an individual patient’s anatomy. Mesenteric plexuses, lymphatic networks and many branches remain absent. Three overlapping arterial alternatives are deliberately withheld.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/gastrointestinal_system/peritoneum_tables.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+        "fmaId": "FMA14828",
+        "name": "Ascending branch of left colic artery",
+        "sourceName": "ascending branch of left colic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA14828",
+        "bounds": {
+          "min": [
+            0.3044770061969757,
+            1.7703900337219238,
+            0.5408799648284912
+          ],
+          "max": [
+            0.6261420249938965,
+            2.6643004417419434,
+            0.7884800434112549
+          ]
+        },
+        "center": [
+          0.4653095155954361,
+          2.2173452377319336,
+          0.664680004119873
+        ],
+        "anchor": [
+          0.5019680261611938,
+          2.2021002769470215,
+          0.6700499653816223
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3399",
+            "sha256": "a0d0d7017082c40cdae252f18e5274abb435b05b64c835eea05bd6c0306e3dd3"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-colic-ascending-branch",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Selected mesenteric arterial branches · draft",
+        "body": "These source-labelled colic, ileocolic and appendicular segments belong to the arterial supply of the bowel.",
+        "bullets": [
+          "Source identity: FMA14828 · 1 source component",
+          "Named source segments do not establish a continuous vascular tree, a patent lumen, normal calibre, perfusion territory or an individual patient’s anatomy. Mesenteric plexuses, lymphatic networks and many branches remain absent. Three overlapping arterial alternatives are deliberately withheld.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/gastrointestinal_system/peritoneum_tables.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+        "fmaId": "FMA14829",
+        "name": "Descending branch of left colic artery",
+        "sourceName": "descending branch of left colic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA14829",
+        "bounds": {
+          "min": [
+            0.2803120017051697,
+            1.4231500625610352,
+            0.6067000031471252
+          ],
+          "max": [
+            0.6521959900856018,
+            1.807639718055725,
+            0.798289954662323
+          ]
+        },
+        "center": [
+          0.46625399589538574,
+          1.6153948903083801,
+          0.7024949789047241
+        ],
+        "anchor": [
+          0.6062909960746765,
+          1.6624597311019897,
+          0.6194999814033508
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3428",
+            "sha256": "1428965636dc55745b205ce70dd0a630eb0b6cc89d753a5bb89d1a0fbd45ac33"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-colic-descending-branch",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Selected mesenteric arterial branches · draft",
+        "body": "These source-labelled colic, ileocolic and appendicular segments belong to the arterial supply of the bowel.",
+        "bullets": [
+          "Source identity: FMA14829 · 1 source component",
+          "Named source segments do not establish a continuous vascular tree, a patent lumen, normal calibre, perfusion territory or an individual patient’s anatomy. Mesenteric plexuses, lymphatic networks and many branches remain absent. Three overlapping arterial alternatives are deliberately withheld.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/gastrointestinal_system/peritoneum_tables.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+        "fmaId": "FMA15391",
+        "name": "Inferior mesenteric vein",
+        "sourceName": "inferior mesenteric vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA15391",
+        "bounds": {
+          "min": [
+            0.053906697779893875,
+            1.0042901039123535,
+            0.6119100451469421
+          ],
+          "max": [
+            0.2706019878387451,
+            2.695500373840332,
+            0.8108199834823608
+          ]
+        },
+        "center": [
+          0.1622543428093195,
+          1.8498952388763428,
+          0.7113650143146515
+        ],
+        "anchor": [
+          0.22738000750541687,
+          1.8234198093414307,
+          0.7174199819564819
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3443",
+            "sha256": "59393e5b8a5cd62e7f2be2f8e36a7b0a41b103dd23a5eeae501e61f495c4df95"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "inferior-mesenteric-vein",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Selected mesenteric venous segments · draft",
+        "body": "The available superior/inferior mesenteric and named bowel veins form part of the portal venous drainage system.",
+        "bullets": [
+          "Source identity: FMA15391 · 1 source component",
+          "Named source segments do not establish a continuous vascular tree, a patent lumen, normal calibre, perfusion territory or an individual patient’s anatomy. Mesenteric plexuses, lymphatic networks and many branches remain absent. Three overlapping arterial alternatives are deliberately withheld.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "citations": [
+          "https://pubmed.ncbi.nlm.nih.gov/23749713/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+        "fmaId": "FMA15405",
+        "name": "Ileal vein",
+        "sourceName": "ileal vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA15405",
+        "bounds": {
+          "min": [
+            -0.5510820150375366,
+            1.3692998886108398,
+            0.6846199631690979
+          ],
+          "max": [
+            -0.3095349967479706,
+            1.5760198831558228,
+            0.7941000461578369
+          ]
+        },
+        "center": [
+          -0.4303085058927536,
+          1.4726598858833313,
+          0.7393600046634674
+        ],
+        "anchor": [
+          -0.43779098987579346,
+          1.4658502340316772,
+          0.7415000200271606
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3438",
+            "sha256": "39a8939f3720a45116fee6ce0210d1279cae4548532a7f749e2485cbd907772c"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ileal-vein",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Selected mesenteric venous segments · draft",
+        "body": "The available superior/inferior mesenteric and named bowel veins form part of the portal venous drainage system.",
+        "bullets": [
+          "Source identity: FMA15405 · 1 source component",
+          "Named source segments do not establish a continuous vascular tree, a patent lumen, normal calibre, perfusion territory or an individual patient’s anatomy. Mesenteric plexuses, lymphatic networks and many branches remain absent. Three overlapping arterial alternatives are deliberately withheld.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "citations": [
+          "https://pubmed.ncbi.nlm.nih.gov/23749713/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+        "fmaId": "FMA15406",
+        "name": "Middle colic vein",
+        "sourceName": "middle colic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA15406",
+        "bounds": {
+          "min": [
+            -0.6630609631538391,
+            2.125,
+            0.6669600009918213
+          ],
+          "max": [
+            0.6094229817390442,
+            2.64739990234375,
+            1.2694700956344604
+          ]
+        },
+        "center": [
+          -0.02681899070739746,
+          2.386199951171875,
+          0.9682150483131409
+        ],
+        "anchor": [
+          -0.13017700612545013,
+          2.2277002334594727,
+          0.9595500230789185
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3543",
+            "sha256": "001af4e63182ebd20eb8ae9b15e51d85302d56f4eb9134a78cd44e2a5047a9bf"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "middle-colic-vein",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Selected mesenteric venous segments · draft",
+        "body": "The available superior/inferior mesenteric and named bowel veins form part of the portal venous drainage system.",
+        "bullets": [
+          "Source identity: FMA15406 · 1 source component",
+          "Named source segments do not establish a continuous vascular tree, a patent lumen, normal calibre, perfusion territory or an individual patient’s anatomy. Mesenteric plexuses, lymphatic networks and many branches remain absent. Three overlapping arterial alternatives are deliberately withheld.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "citations": [
+          "https://pubmed.ncbi.nlm.nih.gov/23749713/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+        "fmaId": "FMA15407",
+        "name": "Right colic vein",
+        "sourceName": "right colic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA15407",
+        "bounds": {
+          "min": [
+            -0.7076519727706909,
+            1.8549102544784546,
+            0.6505100131034851
+          ],
+          "max": [
+            -0.07192699611186981,
+            2.390500545501709,
+            0.9406799077987671
+          ]
+        },
+        "center": [
+          -0.38978948444128036,
+          2.122705399990082,
+          0.7955949604511261
+        ],
+        "anchor": [
+          -0.5187649726867676,
+          2.025399684906006,
+          0.7954699993133545
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3591",
+            "sha256": "9bae25c069450677e645493c0b2e987c65ccaf984f7a441d126db6335601ec73"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "right-colic-vein",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Selected mesenteric venous segments · draft",
+        "body": "The available superior/inferior mesenteric and named bowel veins form part of the portal venous drainage system.",
+        "bullets": [
+          "Source identity: FMA15407 · 1 source component",
+          "Named source segments do not establish a continuous vascular tree, a patent lumen, normal calibre, perfusion territory or an individual patient’s anatomy. Mesenteric plexuses, lymphatic networks and many branches remain absent. Three overlapping arterial alternatives are deliberately withheld.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "citations": [
+          "https://pubmed.ncbi.nlm.nih.gov/23749713/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+        "fmaId": "FMA14782",
+        "name": "Anterior superior pancreaticoduodenal artery",
+        "sourceName": "anterior superior pancreaticoduodenal artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-visceral-detail",
+        "nodeName": "FMA14782",
+        "bounds": {
+          "min": [
+            -0.4665620028972626,
+            2.23140025138855,
+            0.7866600155830383
+          ],
+          "max": [
+            -0.09125980734825134,
+            2.659599542617798,
+            0.8998100161552429
+          ]
+        },
+        "center": [
+          -0.27891090512275696,
+          2.445499897003174,
+          0.8432350158691406
+        ],
+        "anchor": [
+          -0.28327399492263794,
+          2.533599853515625,
+          0.8285600543022156
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3409",
+            "sha256": "b249abf0f7ca8682a8f5116021c4a3ba627b43895f6c2aa80f4640e15a04d766"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "anterior-superior-pancreaticoduodenal-artery",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Pancreaticoduodenal arterial segments · draft",
+        "body": "Superior pancreaticoduodenal branches arise from the gastroduodenal artery; inferior branches connect with the superior mesenteric supply. Anterior and posterior branches participate in arcades around the pancreatic head and duodenum.",
+        "bullets": [
+          "Source identity: FMA14782 · 1 source component",
+          "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+        "fmaId": "FMA14784",
+        "name": "Posterior superior pancreaticoduodenal artery",
+        "sourceName": "posterior superior pancreaticoduodenal artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-visceral-detail",
+        "nodeName": "FMA14784",
+        "bounds": {
+          "min": [
+            -0.3545759916305542,
+            2.316899299621582,
+            0.5918800234794617
+          ],
+          "max": [
+            -0.1423330008983612,
+            2.6568994522094727,
+            0.8888400197029114
+          ]
+        },
+        "center": [
+          -0.2484544962644577,
+          2.4868993759155273,
+          0.7403600215911865
+        ],
+        "anchor": [
+          -0.2362920045852661,
+          2.573000431060791,
+          0.6652500033378601
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3557",
+            "sha256": "eadce1bc7a5cccc096b050e2738aac098c8194487bb8b20ab49aaa05cbfd3a0c"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "posterior-superior-pancreaticoduodenal-artery",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Pancreaticoduodenal arterial segments · draft",
+        "body": "Superior pancreaticoduodenal branches arise from the gastroduodenal artery; inferior branches connect with the superior mesenteric supply. Anterior and posterior branches participate in arcades around the pancreatic head and duodenum.",
+        "bullets": [
+          "Source identity: FMA14784 · 1 source component",
+          "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+        "fmaId": "FMA14787",
+        "name": "Dorsal pancreatic artery",
+        "sourceName": "dorsal pancreatic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-visceral-detail",
+        "nodeName": "FMA14787",
+        "bounds": {
+          "min": [
+            0.033911000937223434,
+            2.4681005477905273,
+            0.7262200117111206
+          ],
+          "max": [
+            0.10063300281763077,
+            2.777900457382202,
+            0.8198699951171875
+          ]
+        },
+        "center": [
+          0.0672720018774271,
+          2.6230005025863647,
+          0.773045003414154
+        ],
+        "anchor": [
+          0.06056250259280205,
+          2.639699697494507,
+          0.7510299682617188
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3430",
+            "sha256": "a9566e012c3698584e51737a0e00c591b1b9ad57aea3f396056d6e4c2ec126e0"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "dorsal-pancreatic-artery",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Pancreatic body and tail arterial segments · draft",
+        "body": "The dorsal, inferior, great and caudal pancreatic arterial labels distinguish supplied source segments. Splenic-artery branches contribute to pancreatic supply; origins and branching vary.",
+        "bullets": [
+          "Source identity: FMA14787 · 1 source component",
+          "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented. A small near-contact between the great and caudal source segments is retained unchanged, not reconstructed as a proven anastomosis.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+        "fmaId": "FMA14790",
+        "name": "Inferior pancreatic artery",
+        "sourceName": "inferior pancreatic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-visceral-detail",
+        "nodeName": "FMA14790",
+        "bounds": {
+          "min": [
+            0.09297589957714081,
+            2.4641003608703613,
+            0.5460399389266968
+          ],
+          "max": [
+            0.3005940020084381,
+            2.6117005348205566,
+            0.7552700042724609
+          ]
+        },
+        "center": [
+          0.19678495079278946,
+          2.537900447845459,
+          0.6506549715995789
+        ],
+        "anchor": [
+          0.19760200381278992,
+          2.540799617767334,
+          0.6514900326728821
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3444",
+            "sha256": "21e61cd0e3ccd79434af29edc1ae0bd3dc87f22f12774422d074ff854647197e"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "inferior-pancreatic-artery",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Pancreatic body and tail arterial segments · draft",
+        "body": "The dorsal, inferior, great and caudal pancreatic arterial labels distinguish supplied source segments. Splenic-artery branches contribute to pancreatic supply; origins and branching vary.",
+        "bullets": [
+          "Source identity: FMA14790 · 1 source component",
+          "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented. A small near-contact between the great and caudal source segments is retained unchanged, not reconstructed as a proven anastomosis.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+        "fmaId": "FMA14792",
+        "name": "Great pancreatic artery",
+        "sourceName": "great pancreatic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-visceral-detail",
+        "nodeName": "FMA14792",
+        "bounds": {
+          "min": [
+            0.4110329747200012,
+            2.6581006050109863,
+            0.5039299726486206
+          ],
+          "max": [
+            0.44960200786590576,
+            2.7542004585266113,
+            0.5859600305557251
+          ]
+        },
+        "center": [
+          0.4303174912929535,
+          2.706150531768799,
+          0.5449450016021729
+        ],
+        "anchor": [
+          0.4278229773044586,
+          2.7128002643585205,
+          0.5418099761009216
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3433",
+            "sha256": "94c1f1acab1e5edfadb46b7d1a02c50248b4bdaea2663acd46a5f08b8b0cc2d5"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "great-pancreatic-artery",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Pancreatic body and tail arterial segments · draft",
+        "body": "The dorsal, inferior, great and caudal pancreatic arterial labels distinguish supplied source segments. Splenic-artery branches contribute to pancreatic supply; origins and branching vary.",
+        "bullets": [
+          "Source identity: FMA14792 · 1 source component",
+          "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented. A small near-contact between the great and caudal source segments is retained unchanged, not reconstructed as a proven anastomosis.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+        "fmaId": "FMA14793",
+        "name": "Caudal pancreatic artery",
+        "sourceName": "caudal pancreatic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-visceral-detail",
+        "nodeName": "FMA14793",
+        "bounds": {
+          "min": [
+            0.2933589816093445,
+            2.603299617767334,
+            0.4548010230064392
+          ],
+          "max": [
+            0.5827100276947021,
+            2.725600481033325,
+            0.554110050201416
+          ]
+        },
+        "center": [
+          0.4380345046520233,
+          2.6644500494003296,
+          0.5044555366039276
+        ],
+        "anchor": [
+          0.4358459711074829,
+          2.6643993854522705,
+          0.49968498945236206
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3419",
+            "sha256": "e29640c2424778faa8c7540bcbfe53ffbadf962db67c86ed7255d23eff157820"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "caudal-pancreatic-artery",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Pancreatic body and tail arterial segments · draft",
+        "body": "The dorsal, inferior, great and caudal pancreatic arterial labels distinguish supplied source segments. Splenic-artery branches contribute to pancreatic supply; origins and branching vary.",
+        "bullets": [
+          "Source identity: FMA14793 · 1 source component",
+          "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented. A small near-contact between the great and caudal source segments is retained unchanged, not reconstructed as a proven anastomosis.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+        "fmaId": "FMA14805",
+        "name": "Inferior pancreaticoduodenal artery",
+        "sourceName": "inferior pancreaticoduodenal artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-visceral-detail",
+        "nodeName": "FMA14805",
+        "bounds": {
+          "min": [
+            -0.16132400929927826,
+            2.2458996772766113,
+            0.8425700664520264
+          ],
+          "max": [
+            -0.008219650015234947,
+            2.292600154876709,
+            0.9416599869728088
+          ]
+        },
+        "center": [
+          -0.0847718296572566,
+          2.26924991607666,
+          0.8921150267124176
+        ],
+        "anchor": [
+          -0.08655599504709244,
+          2.275099992752075,
+          0.9083000421524048
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3446",
+            "sha256": "619cb0ffc120396dc6ffee3b97d083e8bbcda9d4ab6dcf1ff9a13b0aaf63ac73"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "inferior-pancreaticoduodenal-artery",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Pancreaticoduodenal arterial segments · draft",
+        "body": "Superior pancreaticoduodenal branches arise from the gastroduodenal artery; inferior branches connect with the superior mesenteric supply. Anterior and posterior branches participate in arcades around the pancreatic head and duodenum.",
+        "bullets": [
+          "Source identity: FMA14805 · 1 source component",
+          "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+        "fmaId": "FMA15398",
+        "name": "Pancreaticoduodenal vein",
+        "sourceName": "pancreaticoduodenal vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-visceral-detail",
+        "nodeName": "FMA15398",
+        "bounds": {
+          "min": [
+            -0.4806689918041229,
+            2.05049991607666,
+            0.6042199730873108
+          ],
+          "max": [
+            -0.09474220126867294,
+            2.880000114440918,
+            0.9575300812721252
+          ]
+        },
+        "center": [
+          -0.28770559653639793,
+          2.465250015258789,
+          0.780875027179718
+        ],
+        "anchor": [
+          -0.32889801263809204,
+          2.550300359725952,
+          0.7823800444602966
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3545",
+            "sha256": "87919e391f53ec7e464f7379c422bc6e6bdcf022db8ea7007176e38a00cc1a3c"
+          },
+          {
+            "file": "FJ3646",
+            "sha256": "2c059c7ad26689513bbc41e13b913ed07c5bbd0696e59f85afb2a577b88f240f"
+          },
+          {
+            "file": "FJ3655",
+            "sha256": "c1d02f38a45db4b4504fcc453837fab56fb18a81178a62f5b7da9a4f6758c72f"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "pancreaticoduodenal-vein",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Pancreaticoduodenal vein source group · draft",
+        "body": "The source groups three separate mesh components under one pancreaticoduodenal-vein identity. Selection retains that grouped identity; the components are not assigned invented branch names.",
+        "bullets": [
+          "Source identity: FMA15398 · 3 source components",
+          "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "citations": [
+          "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/desc.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+        "fmaId": "FMA70479",
+        "name": "Anterior inferior pancreaticoduodenal artery",
+        "sourceName": "anterior inferior pancreaticoduodenal artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-visceral-detail",
+        "nodeName": "FMA70479",
+        "bounds": {
+          "min": [
+            -0.46177101135253906,
+            2.0715997219085693,
+            0.8191400170326233
+          ],
+          "max": [
+            -0.14678199589252472,
+            2.265899658203125,
+            0.9505200386047363
+          ]
+        },
+        "center": [
+          -0.3042765036225319,
+          2.168749690055847,
+          0.8848300278186798
+        ],
+        "anchor": [
+          -0.3165220022201538,
+          2.0961999893188477,
+          0.9012800455093384
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3401",
+            "sha256": "0c63f2577def9596880aa8d7049e074140747cbb31a1d99b02a3a4f4b7ce016e"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "anterior-inferior-pancreaticoduodenal-artery",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Pancreaticoduodenal arterial segments · draft",
+        "body": "Superior pancreaticoduodenal branches arise from the gastroduodenal artery; inferior branches connect with the superior mesenteric supply. Anterior and posterior branches participate in arcades around the pancreatic head and duodenum.",
+        "bullets": [
+          "Source identity: FMA70479 · 1 source component",
+          "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+        "fmaId": "FMA70480",
+        "name": "Posterior inferior pancreaticoduodenal artery",
+        "sourceName": "posterior inferior pancreaticoduodenal artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-visceral-detail",
+        "nodeName": "FMA70480",
+        "bounds": {
+          "min": [
+            -0.35162898898124695,
+            2.1723999977111816,
+            0.6332700252532959
+          ],
+          "max": [
+            -0.11823699623346329,
+            2.320500373840332,
+            0.9140499830245972
+          ]
+        },
+        "center": [
+          -0.23493299260735512,
+          2.246450185775757,
+          0.7736600041389465
+        ],
+        "anchor": [
+          -0.22695499658584595,
+          2.1965997219085693,
+          0.731660008430481
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3546",
+            "sha256": "3b460a67a1fce291779308e01a50fed34beb449eefdd279ae3603d7f82986cc9"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "posterior-inferior-pancreaticoduodenal-artery",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Pancreaticoduodenal arterial segments · draft",
+        "body": "Superior pancreaticoduodenal branches arise from the gastroduodenal artery; inferior branches connect with the superior mesenteric supply. Anterior and posterior branches participate in arcades around the pancreatic head and duodenum.",
+        "bullets": [
+          "Source identity: FMA70480 · 1 source component",
+          "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+        "fmaId": "FMA76574",
+        "name": "Trunk of gastroduodenal artery",
+        "sourceName": "trunk of gastroduodenal artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-visceral-detail",
+        "nodeName": "FMA76574",
+        "bounds": {
+          "min": [
+            -0.11357899755239487,
+            2.6509997844696045,
+            0.858430027961731
+          ],
+          "max": [
+            -0.05860359966754913,
+            2.7818005084991455,
+            0.9130700826644897
+          ]
+        },
+        "center": [
+          -0.086091298609972,
+          2.716400146484375,
+          0.8857500553131104
+        ],
+        "anchor": [
+          -0.08795890212059021,
+          2.704200506210327,
+          0.8912100195884705
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3432",
+            "sha256": "520c5303adfa900e6eb905722207a127678ce0b60d3f763ed6e8be183519d6fd"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "gastroduodenal-trunk",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Pancreaticoduodenal arterial segments · draft",
+        "body": "Superior pancreaticoduodenal branches arise from the gastroduodenal artery; inferior branches connect with the superior mesenteric supply. Anterior and posterior branches participate in arcades around the pancreatic head and duodenum.",
+        "bullets": [
+          "Source identity: FMA76574 · 1 source component",
+          "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-gastroepiploic-vein",
+        "fmaId": "FMA15390",
+        "name": "Left gastroepiploic vein",
+        "sourceName": "left gastroepiploic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "portal-veins",
+        "nodeName": "FMA15390",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3502",
+            "sha256": "8fbff4b304815200c09017d46d9537b0cd3f699ed13d79c0ac35bd122f24decb"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.6009610295295715,
+            2.4670000076293945,
+            0.5152599811553955
+          ],
+          "max": [
+            0.9455670118331909,
+            2.840100049972534,
+            1.218369960784912
+          ]
+        },
+        "center": [
+          0.7732640206813812,
+          2.6535500288009644,
+          0.8668149709701538
+        ],
+        "anchor": [
+          0.9265869855880737,
+          2.7102999687194824,
+          0.9137600064277649
+        ],
+        "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-gastroepiploic-vein",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Left gastroepiploic vein · Anatomy · draft",
+        "body": "The left gastroepiploic (gastro-omental) vein follows the greater-curvature side of the stomach.",
+        "bullets": [
+          "One whole source surface remains selectable. Smaller tributaries, lumens and exact junctions are not established.",
+          "Gastroepiploic and gastro-omental are alternative names. Left/right gastric names do not require every point to remain on one side of the midline.",
+          "Use Portal venous drainage to explore the available relationships; hide a covering structure or extract the selected vessel, then Undo or reset separation."
+        ],
+        "note": "Anatomical and clinical review pending. No flow, thrombosis, portal hypertension, scan appearance or patient registration is inferred.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/veins_abdomen.html",
+          "https://anatomy.ttuhscep.edu/schemes/duodenum_vid_C480.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-gastroepiploic-vein",
+        "fmaId": "FMA15397",
+        "name": "Right gastroepiploic vein",
+        "sourceName": "right gastroepiploic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "portal-veins",
+        "nodeName": "FMA15397",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3597",
+            "sha256": "c3d9e308cc410cacf95ca9336bc80ba221af8ec6a555b3111881289d326e8523"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.17116700112819672,
+            2.2836999893188477,
+            0.8794500231742859
+          ],
+          "max": [
+            0.6065019965171814,
+            2.5178000926971436,
+            1.3030799627304077
+          ]
+        },
+        "center": [
+          0.21766749769449234,
+          2.4007500410079956,
+          1.0912649929523468
+        ],
+        "anchor": [
+          0.16690999269485474,
+          2.419300079345703,
+          1.2492200136184692
+        ],
+        "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "right-gastroepiploic-vein",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Right gastroepiploic vein · Anatomy · draft",
+        "body": "The right gastroepiploic (gastro-omental) vein follows the greater-curvature side of the stomach.",
+        "bullets": [
+          "One whole source surface remains selectable. Smaller tributaries, lumens and exact junctions are not established.",
+          "Gastroepiploic and gastro-omental are alternative names. Left/right gastric names do not require every point to remain on one side of the midline.",
+          "Use Portal venous drainage to explore the available relationships; hide a covering structure or extract the selected vessel, then Undo or reset separation."
+        ],
+        "note": "Anatomical and clinical review pending. No flow, thrombosis, portal hypertension, scan appearance or patient registration is inferred.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/veins_abdomen.html",
+          "https://anatomy.ttuhscep.edu/schemes/duodenum_vid_C480.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-gastric-vein",
+        "fmaId": "FMA15399",
+        "name": "Left gastric vein",
+        "sourceName": "left gastric vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "portal-veins",
+        "nodeName": "FMA15399",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3500",
+            "sha256": "5cf36381284ef10cd55465cd827ed97bba2c7d610a20e34ea9b02dc70d605a4c"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.14354300498962402,
+            2.824199914932251,
+            0.7365000247955322
+          ],
+          "max": [
+            0.25164300203323364,
+            3.3215999603271484,
+            1.196560025215149
+          ]
+        },
+        "center": [
+          0.05404999852180481,
+          3.0728999376296997,
+          0.9665300250053406
+        ],
+        "anchor": [
+          0.147023007273674,
+          3.0327000617980957,
+          0.8527600169181824
+        ],
+        "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-gastric-vein",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Left gastric vein · Anatomy · draft",
+        "body": "The left gastric vein is associated with the lesser curvature of the stomach.",
+        "bullets": [
+          "One whole source surface remains selectable. Smaller tributaries, lumens and exact junctions are not established.",
+          "Gastroepiploic and gastro-omental are alternative names. Left/right gastric names do not require every point to remain on one side of the midline.",
+          "Use Portal venous drainage to explore the available relationships; hide a covering structure or extract the selected vessel, then Undo or reset separation."
+        ],
+        "note": "Anatomical and clinical review pending. No flow, thrombosis, portal hypertension, scan appearance or patient registration is inferred.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/veins_abdomen.html",
+          "https://anatomy.ttuhscep.edu/schemes/duodenum_vid_C480.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein",
+        "fmaId": "FMA15400",
+        "name": "Right gastric vein",
+        "sourceName": "right gastric vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "portal-veins",
+        "nodeName": "FMA15400",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3595",
+            "sha256": "a2a2bd3aadf7027de43cb57c0a33b17b3ce3a35c9f495f5fc010486c2b39494d"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.2311830073595047,
+            2.7734999656677246,
+            0.8745899796485901
+          ],
+          "max": [
+            0.007959119975566864,
+            2.944200038909912,
+            1.1354999542236328
+          ]
+        },
+        "center": [
+          -0.11161194369196892,
+          2.8588500022888184,
+          1.0050449669361115
+        ],
+        "anchor": [
+          -0.1392659991979599,
+          2.8132998943328857,
+          1.0139299631118774
+        ],
+        "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "right-gastric-vein",
+      "topics": [
+        "ct"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Right gastric vein · Anatomy · draft",
+        "body": "The right gastric vein is associated with the lesser curvature of the stomach.",
+        "bullets": [
+          "One whole source surface remains selectable. Smaller tributaries, lumens and exact junctions are not established.",
+          "Gastroepiploic and gastro-omental are alternative names. Left/right gastric names do not require every point to remain on one side of the midline.",
+          "Use Portal venous drainage to explore the available relationships; hide a covering structure or extract the selected vessel, then Undo or reset separation."
+        ],
+        "note": "Anatomical and clinical review pending. No flow, thrombosis, portal hypertension, scan appearance or patient registration is inferred.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/veins_abdomen.html",
+          "https://anatomy.ttuhscep.edu/schemes/duodenum_vid_C480.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:tributary-of-right-hepatic-vein",
+        "fmaId": "FMA15791",
+        "name": "Tributary of right hepatic vein",
+        "sourceName": "tributary of right hepatic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "hepatic-veins",
+        "nodeName": "FMA15791",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3118",
+            "sha256": "ab6f8bd812766331859f8adaa01cef1c202ebd974967ea411b17c54e9da84a5d"
+          },
+          {
+            "file": "FJ3119",
+            "sha256": "ae4707592889653dccb669e53a1356d67696c361cce28fc19c8910f8717fdb28"
+          },
+          {
+            "file": "FJ3120",
+            "sha256": "c5d056d8281c1f0447214e3a310e98da532760293b5ed1e90e934a77bfec0703"
+          },
+          {
+            "file": "FJ3121",
+            "sha256": "51942b37d2a29a6e32c3401710d6605e5958c1462922c3968cdca79b0a7fac1c"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.9984260201454163,
+            2.749500036239624,
+            0.188633993268013
+          ],
+          "max": [
+            -0.16844500601291656,
+            3.6670000553131104,
+            0.9190700054168701
+          ]
+        },
+        "center": [
+          -0.5834355130791664,
+          3.208250045776367,
+          0.5538519993424416
+        ],
+        "anchor": [
+          -0.6109169721603394,
+          3.223400115966797,
+          0.5686500072479248
+        ],
+        "coverageNote": "Whole source-labelled hepatic vein or tributary group; disconnected components remain within the original selection. Original coordinates and every source face retained. No complete venous tree, Couinaud territory, lumen or validated confluence. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "right-hepatic-tributaries",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Tributary of right hepatic vein · Anatomy · draft",
+        "body": "This source-labelled right hepatic tributary group contains four original files and seven disconnected components. They remain one selectable group, not seven newly named veins.",
+        "bullets": [
+          "Hide covering tissue or use Venous drainage → Show available veins & bones; extract the selected group and Undo or reset separation.",
+          "All original source faces are retained; no bridging, mirroring, cropping or inferred continuity. A tributary group moves together, preserving its internal spacing.",
+          "The separate liver-branches dissection retains its own source groups, including the anterior inferior tributary of the middle hepatic vein. Root and nested selections are not interchangeable."
+        ],
+        "note": "Anatomical and clinical review pending. No flow, thrombosis, venous territory, scan appearance or patient registration is inferred.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/veins_abdomen.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein",
+        "fmaId": "FMA15794",
+        "name": "Tributary of left hepatic vein",
+        "sourceName": "tributary of left hepatic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "hepatic-veins",
+        "nodeName": "FMA15794",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3097",
+            "sha256": "3173b1bb808b7c5cc3f3de44772b34c2c360ae00c5147d66a12d675d5bbe570b"
+          },
+          {
+            "file": "FJ3098",
+            "sha256": "5331851628f47c02b309eab63ab7361658b84950abb0e2d586c56ef5fc561356"
+          },
+          {
+            "file": "FJ3099",
+            "sha256": "2bd6db4021b2fa8ee4f81e60cfb3dae4a070d921707497bf9cab6b84f98dc495"
+          },
+          {
+            "file": "FJ3100",
+            "sha256": "143c288d1c524c76d1f8198182f11dc4884d78eacd8013a4c0ae5ce209116d5a"
+          },
+          {
+            "file": "FJ3101",
+            "sha256": "c7e03313693b3e232ee3e82093a20daa5ec3dea060926861b6ab2f5467be9636"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.22065800428390503,
+            3.202699899673462,
+            0.6910600066184998
+          ],
+          "max": [
+            0.3859249949455261,
+            3.7074999809265137,
+            1.2792799472808838
+          ]
+        },
+        "center": [
+          0.08263349533081055,
+          3.455099940299988,
+          0.9851699769496918
+        ],
+        "anchor": [
+          0.09680440276861191,
+          3.42330002784729,
+          0.9626200199127197
+        ],
+        "coverageNote": "Whole source-labelled hepatic vein or tributary group; disconnected components remain within the original selection. Original coordinates and every source face retained. No complete venous tree, Couinaud territory, lumen or validated confluence. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-hepatic-tributaries",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Tributary of left hepatic vein · Anatomy · draft",
+        "body": "This source-labelled left hepatic tributary group contains five original files and five disconnected components. They remain one selectable group, not five newly named veins.",
+        "bullets": [
+          "Hide covering tissue or use Venous drainage → Show available veins & bones; extract the selected group and Undo or reset separation.",
+          "All original source faces are retained; no bridging, mirroring, cropping or inferred continuity. A tributary group moves together, preserving its internal spacing.",
+          "The separate liver-branches dissection retains its own source groups, including the anterior inferior tributary of the middle hepatic vein. Root and nested selections are not interchangeable."
+        ],
+        "note": "Anatomical and clinical review pending. No flow, thrombosis, venous territory, scan appearance or patient registration is inferred.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/veins_abdomen.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+        "fmaId": "FMA20689",
+        "name": "Left inferior epigastric artery",
+        "sourceName": "left inferior epigastric artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen",
+          "pelvis"
+        ],
+        "bundle": "inferior-epigastric-vessels",
+        "nodeName": "FMA20689",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3511",
+            "sha256": "7fae27fdfcd79f3989488c0bc5f8d0766bbb5e6140269bb8d9fe9effa903a6e0"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.2179819941520691,
+            0.3065600097179413,
+            0.5916200280189514
+          ],
+          "max": [
+            0.4859220087528229,
+            2.3043999671936035,
+            1.353790044784546
+          ]
+        },
+        "center": [
+          0.351952001452446,
+          1.3054799884557724,
+          0.9727050364017487
+        ],
+        "anchor": [
+          0.35682499408721924,
+          1.284209966659546,
+          1.1275500059127808
+        ],
+        "coverageNote": "Complete original source definition, not a complete abdominal-wall vascular tree. Rectus sheath, inguinal rings, fascia and nerves are not supplied by this addition. Source surfaces do not establish joined lumens, perforator anatomy, blood flow or a safe procedural route. All original triangles and source positions retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-inferior-epigastric-artery",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Left inferior epigastric artery · Anatomy · draft",
+        "body": "The inferior epigastric artery branches from the external iliac artery and ascends into the anterior abdominal wall. It is distinct from the superficial epigastric artery, which arises from the femoral artery.",
+        "bullets": [
+          "Open Study → Abdominal wall: epigastric vessels for the source-bound vascular context.",
+          "Each selection retains one complete source definition. This does not establish complete branches, perforators, accompanying venous channels or exact junctions."
+        ],
+        "note": "Source-bound teaching draft for radiologist review. A surface is not a lumen, perfusion map, procedural landmark validation or registered patient image.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+          "https://anatomy.ttuhscep.edu/schemes/inguinal_tables.html",
+          "https://anatomy.ttuhscep.edu/schemes/abdo_wall_ing_questions/abdo_wall_12_feedback.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "Left inferior epigastric artery · Review pending",
+          "body": "Detailed pathology and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No CT, MRI, X-ray, ultrasound, acquired angiogram or patient registration is supplied."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "Left inferior epigastric artery · Review pending",
+          "body": "Detailed pathology and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No CT, MRI, X-ray, ultrasound, acquired angiogram or patient registration is supplied."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Left inferior epigastric artery · Review pending",
+          "body": "Detailed pathology and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No CT, MRI, X-ray, ultrasound, acquired angiogram or patient registration is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+        "fmaId": "FMA21164",
+        "name": "Left inferior epigastric vein",
+        "sourceName": "left inferior epigastric vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen",
+          "pelvis"
+        ],
+        "bundle": "inferior-epigastric-vessels",
+        "nodeName": "FMA21164",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3512",
+            "sha256": "e8453328cabd80812db377189df8c040b7a1d0870870293512ede8fe0174fbce"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.18112599849700928,
+            0.31365999579429626,
+            0.6147000193595886
+          ],
+          "max": [
+            0.4179069995880127,
+            2.310699939727783,
+            1.3692400455474854
+          ]
+        },
+        "center": [
+          0.299516499042511,
+          1.3121799677610397,
+          0.991970032453537
+        ],
+        "anchor": [
+          0.3196839988231659,
+          1.2683099508285522,
+          1.14028000831604
+        ],
+        "coverageNote": "Complete original source definition, not a complete abdominal-wall vascular tree. Rectus sheath, inguinal rings, fascia and nerves are not supplied by this addition. Source surfaces do not establish joined lumens, perforator anatomy, blood flow or a safe procedural route. All original triangles and source positions retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-inferior-epigastric-vein",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Left inferior epigastric vein · Anatomy · draft",
+        "body": "The inferior epigastric vein provides a deep abdominal-wall drainage route towards the external iliac vein. Compare the supplied vein and artery on the same anatomical side.",
+        "bullets": [
+          "Open Study → Abdominal wall: epigastric vessels for the source-bound vascular context.",
+          "Each selection retains one complete source definition. This does not establish complete branches, perforators, accompanying venous channels or exact junctions."
+        ],
+        "note": "Source-bound teaching draft for radiologist review. A surface is not a lumen, perfusion map, procedural landmark validation or registered patient image.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+          "https://anatomy.ttuhscep.edu/schemes/inguinal_tables.html",
+          "https://anatomy.ttuhscep.edu/schemes/abdo_wall_ing_questions/abdo_wall_12_feedback.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "Left inferior epigastric vein · Review pending",
+          "body": "Detailed pathology and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No CT, MRI, X-ray, ultrasound, acquired angiogram or patient registration is supplied."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "Left inferior epigastric vein · Review pending",
+          "body": "Detailed pathology and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No CT, MRI, X-ray, ultrasound, acquired angiogram or patient registration is supplied."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Left inferior epigastric vein · Review pending",
+          "body": "Detailed pathology and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No CT, MRI, X-ray, ultrasound, acquired angiogram or patient registration is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery",
+        "fmaId": "FMA20688",
+        "name": "Right inferior epigastric artery",
+        "sourceName": "right inferior epigastric artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen",
+          "pelvis"
+        ],
+        "bundle": "inferior-epigastric-vessels",
+        "nodeName": "FMA20688",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3604",
+            "sha256": "aa8fa354690bf56ac7bf1de05fdcb6acfd1e0c13fdb4194f38cc5eb11e4a941d"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.565276026725769,
+            0.3065600097179413,
+            0.5916399955749512
+          ],
+          "max": [
+            -0.2179650068283081,
+            2.304500102996826,
+            1.3538600206375122
+          ]
+        },
+        "center": [
+          -0.3916205167770386,
+          1.3055300563573837,
+          0.9727500081062317
+        ],
+        "anchor": [
+          -0.3631100058555603,
+          1.276900053024292,
+          1.1284099817276
+        ],
+        "coverageNote": "Complete original source definition, not a complete abdominal-wall vascular tree. Rectus sheath, inguinal rings, fascia and nerves are not supplied by this addition. Source surfaces do not establish joined lumens, perforator anatomy, blood flow or a safe procedural route. All original triangles and source positions retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "right-inferior-epigastric-artery",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Right inferior epigastric artery · Anatomy · draft",
+        "body": "The inferior epigastric artery branches from the external iliac artery and ascends into the anterior abdominal wall. It is distinct from the superficial epigastric artery, which arises from the femoral artery.",
+        "bullets": [
+          "Open Study → Abdominal wall: epigastric vessels for the source-bound vascular context.",
+          "Each selection retains one complete source definition. This does not establish complete branches, perforators, accompanying venous channels or exact junctions."
+        ],
+        "note": "Source-bound teaching draft for radiologist review. A surface is not a lumen, perfusion map, procedural landmark validation or registered patient image.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+          "https://anatomy.ttuhscep.edu/schemes/inguinal_tables.html",
+          "https://anatomy.ttuhscep.edu/schemes/abdo_wall_ing_questions/abdo_wall_12_feedback.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "Right inferior epigastric artery · Review pending",
+          "body": "Detailed pathology and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No CT, MRI, X-ray, ultrasound, acquired angiogram or patient registration is supplied."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "Right inferior epigastric artery · Review pending",
+          "body": "Detailed pathology and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No CT, MRI, X-ray, ultrasound, acquired angiogram or patient registration is supplied."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Right inferior epigastric artery · Review pending",
+          "body": "Detailed pathology and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No CT, MRI, X-ray, ultrasound, acquired angiogram or patient registration is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein",
+        "fmaId": "FMA21163",
+        "name": "Right inferior epigastric vein",
+        "sourceName": "right inferior epigastric vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen",
+          "pelvis"
+        ],
+        "bundle": "inferior-epigastric-vessels",
+        "nodeName": "FMA21163",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3605",
+            "sha256": "50c661b10157afca410a8b1cba93263449ed1d4e78fa0ef85f1c415ea1541a49"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.42350998520851135,
+            0.2670699954032898,
+            0.585070013999939
+          ],
+          "max": [
+            -0.18111300468444824,
+            2.310699939727783,
+            1.3692699670791626
+          ]
+        },
+        "center": [
+          -0.3023114949464798,
+          1.2888849675655365,
+          0.9771699905395508
+        ],
+        "anchor": [
+          -0.3193050026893616,
+          1.273710012435913,
+          1.141029953956604
+        ],
+        "coverageNote": "Complete original source definition, not a complete abdominal-wall vascular tree. Rectus sheath, inguinal rings, fascia and nerves are not supplied by this addition. Source surfaces do not establish joined lumens, perforator anatomy, blood flow or a safe procedural route. All original triangles and source positions retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "right-inferior-epigastric-vein",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Right inferior epigastric vein · Anatomy · draft",
+        "body": "The inferior epigastric vein provides a deep abdominal-wall drainage route towards the external iliac vein. Compare the supplied vein and artery on the same anatomical side.",
+        "bullets": [
+          "Open Study → Abdominal wall: epigastric vessels for the source-bound vascular context.",
+          "Each selection retains one complete source definition. This does not establish complete branches, perforators, accompanying venous channels or exact junctions."
+        ],
+        "note": "Source-bound teaching draft for radiologist review. A surface is not a lumen, perfusion map, procedural landmark validation or registered patient image.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+          "https://anatomy.ttuhscep.edu/schemes/inguinal_tables.html",
+          "https://anatomy.ttuhscep.edu/schemes/abdo_wall_ing_questions/abdo_wall_12_feedback.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "Right inferior epigastric vein · Review pending",
+          "body": "Detailed pathology and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No CT, MRI, X-ray, ultrasound, acquired angiogram or patient registration is supplied."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "Right inferior epigastric vein · Review pending",
+          "body": "Detailed pathology and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No CT, MRI, X-ray, ultrasound, acquired angiogram or patient registration is supplied."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Right inferior epigastric vein · Review pending",
+          "body": "Detailed pathology and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No CT, MRI, X-ray, ultrasound, acquired angiogram or patient registration is supplied."
+        }
+      }
+    }
+  ]
+}

@@ -1,5 +1,11 @@
 # Clinical validation checklist
 
+[Abdominal branch imaging](ABDOMINAL_BRANCH_IMAGING.md): review 48 draft
+CT/MRI/US placements for 34 retained vessels. Check colic crossings, pancreatic
+arcades, gastric venous variants, grouped hepatic tributaries and epigastric
+layers/flow limits. Preserve branch-identity caveats; 27 MRI and 27 US topics in
+this batch remain pending. No patient registration or clinical approval is added.
+
 [Thoracic branch imaging](THORACIC_BRANCH_IMAGING.md): review 50 draft CT/MRI/US
 placements for 26 retained vessels. Confirm coronary and cardiac venous courses,
 dedicated versus routine imaging, inlet side/position/contrast limits, chest-wall
