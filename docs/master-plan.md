@@ -19,11 +19,16 @@ attachment suites, inline dissection, 33,444 content checks, body/shoulder
 review checks, TypeScript and both Atlas/shared-module builds pass. All 9,909
 core teaching topics and source geometry remain unchanged.
 
-Private website83 remains the trunk release. The hip runtime is built but not
-yet exported or published; do not infer hosted availability from this source
-checkpoint. Next roll out the clean shared module through the generated/private
-delivery pipeline, preserving the 131 models/137 paths and owner-only audience.
-Record actual publication, GitHub and verified D recovery separately.
+The shared regional/whole-body module is now generated from that clean source.
+All 131 model objects and 137 delivery paths match website83 byte-for-byte.
+The other module directories, homepage, navigation and entitlements remain
+unchanged. Hip/pelvic studies use the existing compact panel in Thigh, Pelvis,
+Spine and Whole body according to actual source membership.
+
+The main task's hip rollout checkpoint records website checks, protected
+delivery, GitHub/D recovery and terminal private-publication evidence separately;
+an export alone does not prove hosted availability. The source checkpoint
+remains valid.
 
 No scan, paid service, entitlement or clinical approval is added. Browser/device
 acceptance and revision-bound radiologist sign-off remain pending. Continue the

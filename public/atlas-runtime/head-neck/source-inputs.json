@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "3d5f4416b04476ddba64bd4c0085d45a951e4d4ba7d4fb88a584cea890cbeefb"
+    "sha256": "08f1a4b1329f75d2213fb26e3e2dd352072abc0ad6d89220a3f92f4f9ad16880"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -53,7 +53,7 @@
   },
   {
     "path": "app/arm-attachments.tsx",
-    "sha256": "47cf8f0b5fa38dae62d327817ea7060e2aec13f6b3b6126fa7ad6b971742947d"
+    "sha256": "6012ffe547c274f71a4767860e92dbbb2bbcaf5aac042a8f809870aa74752c0e"
   },
   {
     "path": "app/arterial-connections.tsx",
@@ -89,7 +89,7 @@
   },
   {
     "path": "app/body-explorer.tsx",
-    "sha256": "2387962bf4b765abf1b5e360045613bb1d84a82f76bcb3d1916fae9e26acdd7f"
+    "sha256": "5280cd2f217d3bfb930eb2b05296d5ef0d9a0df1b94d8d80b842a086bc533bf1"
   },
   {
     "path": "app/body-scene.tsx",
@@ -618,6 +618,14 @@
   {
     "path": "content/hepatic-teaching.ts",
     "sha256": "793d49e8e33bc4daed5889b9bc58403a11280d39dd1d6894d0f5ff7c8fc0372d"
+  },
+  {
+    "path": "content/hip-attachment-pins.json",
+    "sha256": "e3c8b45643428cac2232a6b57ae88b5b6c75a01c2f13e2a1b88ea143636bebfe"
+  },
+  {
+    "path": "content/hip-attachments.ts",
+    "sha256": "4d8f59baf42f5c3f63f3fa59a0125f769c4c3ce8921f3f88188f3d79ec725e50"
   },
   {
     "path": "content/hip-imaging-concepts.ts",
@@ -1474,6 +1482,10 @@
   {
     "path": "lib/hepatic.ts",
     "sha256": "86a6ac1226f1ab496c3dc7aee6279da3ef662a0c3316fee10862cb8ba30fae80"
+  },
+  {
+    "path": "lib/hip-attachments.ts",
+    "sha256": "fe24425b7a26348cd338652c5d562105ed715fdb20546583a1dcf78679e46566"
   },
   {
     "path": "lib/hip-imaging.ts",
