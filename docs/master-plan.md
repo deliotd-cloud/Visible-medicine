@@ -2,6 +2,29 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 15 September — lower-leg attachment source milestone
+
+Atlas `e581676c3cef073412c5d783fb25698d8679fa88` extends the existing compact
+attachment panel to all 28 primary lower-leg muscle/head selections and 46
+existing bones. Separate gastrocnemius origins, Achilles/digital tendon limits,
+plantaris variation and main versus reported variable tibialis-posterior
+insertions remain explicit. Leg/whole-body navigation and Undo/Redo reuse the
+existing controls. No models, main teaching topics or patient data change.
+
+112 reversible plans, 524 corrupt-catalogue rejections, 56 panel renders,
+142 bone-button callbacks, 56 parent handlers and 28 actual host links pass.
+Existing arm/forearm/thigh/neck, inline dissection, 33,444 content, body/shoulder
+review checks, TypeScript and Atlas/shared-module builds pass. Source pins cover
+74 identities and five original bundles. All teaching remains draft; clinical
+sign-off and browser/device acceptance are not supplied by these tests.
+
+This website change is documentation-only: live private website80 still has the
+preceding forearm runtime. Next export the clean source-bound shared module and
+privately publish it, preserving all registered model objects and entitlements.
+Exact GitHub/D recovery is in the main task's lower-leg checkpoint. Continue
+remaining anatomy/dissection, teaching and cleared Didanix Education/light work.
+Do not restart completed MRI QA or the unchanged browser-runtime failure.
+
 ## 15 September — source-bound forearm attachment views
 
 Atlas `0f72c6993d044e8b5708076e20ef87e757c01f05` extends the existing
