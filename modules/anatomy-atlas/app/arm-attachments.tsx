@@ -7,6 +7,7 @@ import { thighAttachmentInfo } from '@/lib/thigh-attachments';
 import { neckAttachmentInfo } from '@/lib/neck-attachments';
 import { forearmAttachmentInfo } from '@/lib/forearm-attachments';
 import { legAttachmentInfo } from '@/lib/leg-attachments';
+import { acralAttachmentInfo } from '@/lib/acral-attachments';
 import { armAttachmentReference } from '@/content/arm-attachments';
 import { makeStudyLink, type StudySide } from '@/lib/study-links';
 import type { BodyCatalog } from './body-types';
@@ -34,10 +35,12 @@ export function ArmAttachments({
       thighAttachmentInfo(catalog, region, side, selectedId, disabled) ??
       neckAttachmentInfo(catalog, region, side, selectedId, disabled) ??
       forearmAttachmentInfo(catalog, region, side, selectedId, disabled) ??
-      legAttachmentInfo(catalog, region, side, selectedId, disabled),
+      legAttachmentInfo(catalog, region, side, selectedId, disabled) ??
+      acralAttachmentInfo(catalog, region, side, selectedId, disabled),
     [catalog, region, side, selectedId, disabled],
   );
   if (!info) return null;
+  const hasBones = info.rows.some(row => 'structures' in row ? row.structures.length > 0 : true);
   const reference =
     'reference' in info ? info.reference : armAttachmentReference;
   const fullHref = !info.completeHere
@@ -47,14 +50,21 @@ export function ArmAttachments({
     <details key={selectedId} className="body-study-tools body-motor-explorer">
       <summary>Muscle attachment relationships</summary>
       <p>
-        {info.selected.name} · bony attachment teaching, not a verified donor
+        {info.selected.name} · {hasBones ? 'bony' : 'non-bony'} attachment teaching, not a verified donor
         footprint.
       </p>
       <Button className="body-attachment-show" size="sm" variant="outline" onClick={onShow}>
-        {info.completeHere
+        {!hasBones ? 'Show selected muscle' : info.completeHere
           ? 'Show muscle with attachment bones'
           : 'Show muscle with available attachment bones'}
       </Button>
+      {!hasBones && <p>These attachments are non-bony. Show keeps the selected muscle without substituting attachment bones.</p>}
+      {'representation' in info.relationship && info.relationship.representation === 'group' && (
+        <p>Group-level relationships only; individual muscles and tendon slips are not separately mapped.</p>
+      )}
+      {'sesamoidUnresolved' in info.relationship && info.relationship.sesamoidUnresolved && (
+        <p>Medial and lateral sesamoids are not separately identified in this source. The grouped sesamoid mesh is not assigned to either head.</p>
+      )}
       {!info.completeHere && (
         <p>
           Some attachment bones are outside this region.{' '}

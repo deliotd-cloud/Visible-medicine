@@ -1,5 +1,15 @@
 # Third-party notices
 
+## Hand/foot attachment views — 15 September 2026
+
+Original MIT mappings connect 56 existing muscle/head/group selections to 60
+unchanged bones, reusing the authored hand/foot curriculum. TTUHSC, cited anatomy
+chapters and Kenhub pages are factual reading references, not imported articles,
+figures, tables or models. Their access/licence restrictions do not grant
+commercial reuse. No new model, font, texture, dependency, paid service or fee;
+existing BodyParts3D attribution and holds remain. See
+[scope and clinical review](../docs/ACRAL_ATTACHMENTS.md).
+
 ## Lower-leg attachment views — 15 September 2026
 
 Original MIT mappings link 28 muscle/head selections to 46 unchanged bones.

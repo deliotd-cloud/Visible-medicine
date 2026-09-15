@@ -135,6 +135,7 @@ import { thighAttachmentPlan } from '@/lib/thigh-attachments';
 import { neckAttachmentPlan } from '@/lib/neck-attachments';
 import { forearmAttachmentPlan } from '@/lib/forearm-attachments';
 import { legAttachmentPlan } from '@/lib/leg-attachments';
+import { acralAttachmentPlan } from '@/lib/acral-attachments';
 import { arterialPlan } from '../lib/arterial';
 import { VenousDrainage } from './venous-drainage';
 import { venousDrainagePlan } from '../lib/venous-drainage';
@@ -868,7 +869,8 @@ export default function BodyExplorer({
       thighAttachmentPlan(catalog, initialRegion, side, selectedId, exam) ??
       neckAttachmentPlan(catalog, initialRegion, side, selectedId, exam) ??
       forearmAttachmentPlan(catalog, initialRegion, side, selectedId, exam) ??
-      legAttachmentPlan(catalog, initialRegion, side, selectedId, exam);
+      legAttachmentPlan(catalog, initialRegion, side, selectedId, exam) ??
+      acralAttachmentPlan(catalog, initialRegion, side, selectedId, exam);
     if (!plan) return;
     dispatch(plan.action);
     setSystems((prev) => ({ ...prev, skeleton: true, muscles: true }));
@@ -883,7 +885,9 @@ export default function BodyExplorer({
     cameraRestore.current = null;
     setSelectionNotice({
       id: plan.selectedId,
-      message: plan.completeHere
+      message: 'hasBonyPartners' in plan && !plan.hasBonyPartners
+        ? 'Selected muscle shown. Its attachments are non-bony; no attachment bones were substituted.'
+        : plan.completeHere
         ? 'Muscle and attachment bones shown. Whole-bone relationships only; donor footprints are not verified.'
         : 'Muscle and available attachment bones shown. Some bones are outside this region; open whole body for the complete bony relationship set.',
     });

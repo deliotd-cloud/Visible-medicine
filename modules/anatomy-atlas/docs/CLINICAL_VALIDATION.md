@@ -1,5 +1,11 @@
 # Clinical validation checklist
 
+[Hand/foot attachments](ACRAL_ATTACHMENTS.md): validate 56 retained selections,
+60 existing bones, grouped hand muscles, digit numbering, tendon-to-tendon
+lumbricals, quadratus-plantae and ligamentous adductor origins, variable foot
+opponens identity and unresolved head-specific sesamoids. Never treat whole-bone
+links as confirmed footprints, individual group members or clinical approval.
+
 [Lower-leg attachments](LEG_ATTACHMENTS.md): review 28 sided muscle/head
 selections and 46 existing bony partners, gastrocnemius head-specific origins,
 Achilles/extensor-apparatus limits, digital phalanx numbering, plantaris variation
