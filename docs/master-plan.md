@@ -2,7 +2,32 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
-## 15 September — resumed abdominal branch teaching
+## 15 September — source-bound forearm attachment views
+
+Atlas `0f72c6993d044e8b5708076e20ef87e757c01f05` extends the existing
+collapsed attachment panel to all 42 retained forearm muscle/head selections
+with 38 existing bony partners. Separate FCU/pronator heads, FDS/FDP digital
+levels, indirect extensor/ligament insertions and the non-bony palmaris insertion
+remain explicit. Show, sided navigation, Undo/Redo and out-of-region whole-body
+continuation reuse existing controls. No models, main teaching topics,
+entitlements, private scans or clinical approvals change.
+
+168 plan replays, 566 corrupt-catalogue rejections, 84 component renders,
+194 bone-button callbacks, 84 parent handlers and 42 host links pass. Existing
+arm/thigh/neck, inline dissection, 33,444 content, body/shoulder review checks,
+TypeScript and Atlas/shared-module builds pass. Browser automation failed before
+opening a page with a missing runtime-assets path, including one fresh reset;
+no hands-on browser acceptance is claimed. The task-owned preview was stopped.
+
+This website commit is documentation-only. The new runtime export/publication
+is the next step; live website79 retains the preceding abdominal imaging
+release. Preserve the built module for source-bound export. Exact GitHub/D
+recovery is in the main task's forearm-attachment checkpoint. Continue the full
+roadmap and remaining anatomical, usability, clinical and cleared Education
+work; do not repeat completed MRI QA or retry the unchanged browser failure
+as a substitute for progress.
+
+## 15 September — resumed abdominal branch teaching (detail)
 
 Atlas `e8350cc87eb019a35148d5cc85af343ab30b4721` completes the preserved
 34-vessel abdominal draft: 48 CT/MRI/US placements (34/7/7), with exact identity
