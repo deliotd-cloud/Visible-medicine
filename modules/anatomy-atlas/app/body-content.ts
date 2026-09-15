@@ -113,6 +113,7 @@ import { limbBoneImagingLesson } from '../lib/limb-bone-imaging';
 import { thoracicBoneImagingLesson } from '../lib/thoracic-bone-imaging';
 import { abdominalOrganImagingLesson } from '../lib/abdominal-organ-imaging';
 import { pelvicOrganImagingLesson } from '../lib/pelvic-organ-imaging';
+import { craniofacialOrganImagingLesson } from '../lib/craniofacial-organ-imaging';
 import { thighMuscleImagingLesson } from '../lib/thigh-muscle-imaging';
 import { legMuscleImagingLesson } from '../lib/leg-muscle-imaging';
 import { footMuscleImagingLesson } from '../lib/foot-muscle-imaging';
@@ -240,6 +241,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   const abdominalOrganImaging = abdominalOrganImagingLesson(s, tab);
   if (abdominalOrganImaging) return abdominalOrganImaging;
   const pelvicOrganImaging = pelvicOrganImagingLesson(s, tab);
+  const craniofacialOrganImaging = craniofacialOrganImagingLesson(s, tab);
+  if (craniofacialOrganImaging) return craniofacialOrganImaging;
   if (pelvicOrganImaging) return pelvicOrganImaging;
   const thighMuscleImaging = thighMuscleImagingLesson(s, tab);
   if (thighMuscleImaging) return thighMuscleImaging;

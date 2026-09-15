@@ -1,5 +1,16 @@
 # Third-party notices
 
+## Craniofacial organ imaging drafts — 15 September 2026
+
+Original MIT resolver code and brief factual notes add 36 imaging placements
+to nine unchanged source selections. Endotext, NCBI-indexed radiology papers
+and RadiologyInfo supply reading references, not imported articles, tables,
+figures, scans or datasets. Some linked material carries NC/ND restrictions;
+readability/citation is not a commercial reuse grant. EyeWiki content is not
+used. No new model, dependency, font, texture, paid API or mandatory fee.
+Existing BodyParts3D source attribution and holds remain unchanged. See
+`docs/CRANIOFACIAL_ORGAN_IMAGING.md` and its per-reference word-count checks.
+
 ## Corpus spongiosum source and penile candidate audit — 15 September 2026
 
 BodyParts3D, © The Database Center for Life Science (DBCLS), licensed under

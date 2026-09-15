@@ -49,6 +49,8 @@ export * from './lib/thoracic-branch-imaging.ts';
 export * from './content/thoracic-branch-imaging.ts';
 export * from './lib/abdominal-branch-imaging.ts';
 export * from './content/abdominal-branch-imaging.ts';
+export * from './lib/craniofacial-organ-imaging.ts';
+export * from './content/craniofacial-organ-imaging.ts';
 export * from './content/shoulder-arm-muscle-imaging.ts';
 export * from './lib/shoulder-arm-curriculum.ts';
 export * from './lib/forearm-curriculum.ts';

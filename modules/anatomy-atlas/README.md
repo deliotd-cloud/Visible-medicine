@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Head & neck → Imaging:** [Nine craniofacial organ selections](docs/CRANIOFACIAL_ORGAN_IMAGING.md) gain concise CT/MRI/US/X-ray orientation within existing tabs, including modality limits. No new controls or images; source-bound drafts await radiologist review and a separate website rollout.
+
 **Pelvis / Whole body:** [Corpus spongiosum bulb/shaft source](docs/CORPUS_SPONGIOSUM.md) adds one selectable, reversible draft surface, with the glans and cavernous bodies explicitly excluded. Source verification is not anatomical approval; website delivery remains a separate checkpoint.
 
 **Designated imaging viewer:** [Elivion Didanix light/education integration](docs/DIDANIX_EDUCATION_INTEGRATION.md) will supply the learner DICOM/PACS experience. Keep its education deployment, identity and content access separate from clinical PACS and from independently paid lectures. The existing local CT workbench and [MRI import checker](docs/NATIVE_MRI_VIEWER.md) are private engineering/reviewer utilities, not a second learner viewer.

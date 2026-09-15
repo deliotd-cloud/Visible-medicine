@@ -1,5 +1,12 @@
 # Clinical validation checklist
 
+[Craniofacial organ imaging](CRANIOFACIAL_ORGAN_IMAGING.md): review 36 draft
+placements for pituitary, eyes, lacrimal and submandibular/sublingual glands.
+Check sellar versus routine head imaging, posterior bright-spot wording, ocular
+MRI/probe safety, gland versus drainage-system identity and mylohyoid/duct
+relationships. Modality limitations are teaching, not diagnostic exclusion.
+The corrected right-eye source and archived aggregate must remain distinct.
+
 [Corpus spongiosum bulb/shaft](CORPUS_SPONGIOSUM.md): verify donor-specific
 orientation, bulb/shaft extent, urethral relationship and missing glans boundary.
 Closed oriented topology does not prove anatomy, absence of self-intersection,

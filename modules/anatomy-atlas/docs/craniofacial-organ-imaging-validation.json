@@ -1,0 +1,35 @@
+{
+  "baselineSource": "efc5ed08bd300540861161f8f823aedb359a789d",
+  "groups": 5,
+  "sourceSelections": 9,
+  "addedDraftPlacements": 36,
+  "modalities": {
+    "ct": 9,
+    "mri": 9,
+    "ultrasound": 9,
+    "xray": 9
+  },
+  "unchangedTopics": 9882,
+  "bodySchemaRecords": 1102,
+  "actualNoteRenders": 36,
+  "rejectedSourceTopicCombinations": 684,
+  "uniqueReferenceFacts": 19,
+  "sourceWordCounts": {
+    "pituitary": 75,
+    "pituitaryLimits": 60,
+    "globe": 74,
+    "mrSafety": 42,
+    "ocularUltrasound": 33,
+    "orbit": 29,
+    "lacrimal": 62,
+    "lacrimalUs": 33,
+    "floor": 124,
+    "salivary": 108
+  },
+  "sourceGeometryChanged": false,
+  "currentApprovalRecordsChanged": false,
+  "clinicalApproval": false,
+  "imagesImported": false,
+  "imagingConnected": false,
+  "browserOrDeviceAcceptance": false
+}

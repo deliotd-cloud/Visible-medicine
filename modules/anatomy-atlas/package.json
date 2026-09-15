@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "craniofacial-organ-imaging:test": "node scripts/pin-craniofacial-organ-imaging.mjs --check && node scripts/record-craniofacial-organ-imaging-transition.mjs --check && node scripts/validate-craniofacial-organ-imaging.mjs",
     "corpus-spongiosum:test": "node scripts/pin-corpus-spongiosum-baseline.mjs --check && node scripts/export-corpus-spongiosum.mjs --check && node scripts/validate-corpus-spongiosum.mjs",
     "hip-attachments:test": "node scripts/pin-hip-attachments.mjs --check && node scripts/validate-hip-attachments.mjs",
     "forearm-attachments:test": "node scripts/pin-forearm-attachments.mjs --check && node scripts/validate-forearm-attachments.mjs",

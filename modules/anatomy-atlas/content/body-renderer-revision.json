@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "9b570afb82f6396e6e4c49b94592e56496cf88cb5dbe013c673e76e047921e9e"
+      "sha256": "f71853229361a616493e844941d61242df270712163fa456a8e5a925bf9e2552"
     },
     {
       "path": "app/body-explorer.css",
@@ -507,6 +507,14 @@
     {
       "path": "content/cranial-bone-imaging.ts",
       "sha256": "61087027fac4511522badf36e39e1958ceb4b502750285498aa11ad3e3df0b24"
+    },
+    {
+      "path": "content/craniofacial-organ-imaging-pins.json",
+      "sha256": "31862fac06154de73dc0d7a44a27b21455c65eda224bc498fe12e54ba079e757"
+    },
+    {
+      "path": "content/craniofacial-organ-imaging.ts",
+      "sha256": "3eb73bdc1d711e451c2627ce22ab91a3d8571277b2c21f9c44a7d550faf9fb6b"
     },
     {
       "path": "content/cricothyroid-teaching.ts",
@@ -1203,6 +1211,10 @@
     {
       "path": "lib/cranial-bone-imaging.ts",
       "sha256": "4b55a1d4824b5181185399093458888bf6854255c9f29a7731b0bc5410aa5848"
+    },
+    {
+      "path": "lib/craniofacial-organ-imaging.ts",
+      "sha256": "a86395f57e4bb5648969e55b522cd12d035bf23fe32ce4ef82db4e3037593fd5"
     },
     {
       "path": "lib/cricothyroid.ts",
@@ -1954,7 +1966,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "f37fb02dcdfbf29f93e3e519ac1e1c47ca809999ee328a24d80956fa66635441"
+      "sha256": "48442fbb2beb1f894250d9bd21fdb88f290bf6dd0c530320f75e342915d8b139"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2149,5 +2161,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "2d0607e52e02afc82542c01a7fdd483bd8b8c1317056efd7198d6aa4d5b90f94"
+  "sha256": "4d42cd7a2f2ca6ffeaaa9b821f1dc6f3cda55ccf026fb225a1fc3f8b736b5883"
 }
