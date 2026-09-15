@@ -1,5 +1,11 @@
 # Clinical validation checklist
 
+[Trunk attachments](TRUNK_ATTACHMENTS.md): validate 38 retained selections,
+54 bone and 14 cartilage partners, source groups, rib/cartilage numbering,
+head/part distinctions, mediated attachments and variable vertebral ranges.
+Unresolved levels are not non-bony; a composite midline entry is not split by
+Left/Right. No partner, footprint or respiratory mechanics gains approval here.
+
 [Hand/foot attachments](ACRAL_ATTACHMENTS.md): validate 56 retained selections,
 60 existing bones, grouped hand muscles, digit numbering, tendon-to-tendon
 lumbricals, quadratus-plantae and ligamentous adductor origins, variable foot

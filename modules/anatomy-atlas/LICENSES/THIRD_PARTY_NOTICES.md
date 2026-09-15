@@ -1,5 +1,16 @@
 # Third-party notices
 
+## Trunk attachment studies — 15 September 2026
+
+Original MIT mappings use 38 existing source muscle/part/group selections,
+54 bones and 14 costal cartilages, with no changed geometry or new assets.
+Existing authored curriculum and factual reading references inform the links;
+TTUHSC tables, NCBI chapters and targeted anatomy pages are not imported prose,
+figures, tables or datasets. Their licences do not grant redistribution merely
+because they are readable online. No new dependency, font, texture, service or
+mandatory fee. Existing BodyParts3D credits and source holds remain. See
+[scope and clinical review](../docs/TRUNK_ATTACHMENTS.md).
+
 ## Hand/foot attachment views — 15 September 2026
 
 Original MIT mappings connect 56 existing muscle/head/group selections to 60

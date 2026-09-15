@@ -136,6 +136,7 @@ import { neckAttachmentPlan } from '@/lib/neck-attachments';
 import { forearmAttachmentPlan } from '@/lib/forearm-attachments';
 import { legAttachmentPlan } from '@/lib/leg-attachments';
 import { acralAttachmentPlan } from '@/lib/acral-attachments';
+import { trunkAttachmentPlan } from '@/lib/trunk-attachments';
 import { arterialPlan } from '../lib/arterial';
 import { VenousDrainage } from './venous-drainage';
 import { venousDrainagePlan } from '../lib/venous-drainage';
@@ -870,10 +871,13 @@ export default function BodyExplorer({
       neckAttachmentPlan(catalog, initialRegion, side, selectedId, exam) ??
       forearmAttachmentPlan(catalog, initialRegion, side, selectedId, exam) ??
       legAttachmentPlan(catalog, initialRegion, side, selectedId, exam) ??
-      acralAttachmentPlan(catalog, initialRegion, side, selectedId, exam);
+      acralAttachmentPlan(catalog, initialRegion, side, selectedId, exam) ??
+      trunkAttachmentPlan(catalog, initialRegion, side, selectedId, exam);
     if (!plan) return;
     dispatch(plan.action);
-    setSystems((prev) => ({ ...prev, skeleton: true, muscles: true }));
+    setSystems((prev) => ({ ...prev, skeleton: true, muscles: true,
+      ...('usesConnective' in plan && plan.usesConnective ? { connective: true } : {}),
+    }));
     setInspection(initialInspection);
     setExplode(0);
     setLayout('spatial');
@@ -885,7 +889,11 @@ export default function BodyExplorer({
     cameraRestore.current = null;
     setSelectionNotice({
       id: plan.selectedId,
-      message: 'hasBonyPartners' in plan && !plan.hasBonyPartners
+      message: 'hasAttachmentPartners' in plan
+        ? plan.hasAttachmentPartners
+          ? 'Muscle and mapped attachment structures shown. Unresolved levels and parts remain unassigned; donor footprints are not verified.'
+          : 'Selected muscle shown. Attachment levels or parts are unresolved, not non-bony; no partners were substituted.'
+        : 'hasBonyPartners' in plan && !plan.hasBonyPartners
         ? 'Selected muscle shown. Its attachments are non-bony; no attachment bones were substituted.'
         : plan.completeHere
         ? 'Muscle and attachment bones shown. Whole-bone relationships only; donor footprints are not verified.'

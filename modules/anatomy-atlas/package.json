@@ -9,6 +9,7 @@
     "forearm-attachments:test": "node scripts/pin-forearm-attachments.mjs --check && node scripts/validate-forearm-attachments.mjs",
     "leg-attachments:test": "node scripts/pin-leg-attachments.mjs --check && node scripts/validate-leg-attachments.mjs",
     "acral-attachments:test": "node scripts/pin-acral-attachments.mjs --check && node scripts/validate-acral-attachments.mjs",
+    "trunk-attachments:test": "node scripts/pin-trunk-attachments.mjs --check && node scripts/validate-trunk-attachments.mjs",
     "abdominal-branch-imaging:test": "node scripts/pin-abdominal-branch-imaging.mjs --check && node scripts/validate-abdominal-branch-imaging.mjs",
     "inline-dissection:test": "node scripts/validate-inline-dissection.mjs",
     "thoracic-branch-imaging:test": "node scripts/pin-thoracic-branch-imaging.mjs --check && node scripts/validate-thoracic-branch-imaging.mjs",

@@ -38,7 +38,7 @@
     },
     {
       "path": "app/arm-attachments.tsx",
-      "sha256": "9bd8f1dda726acde9390bd9c54643d826b122938cd19696fc1c6f9492afc21d4"
+      "sha256": "47cf8f0b5fa38dae62d327817ea7060e2aec13f6b3b6126fa7ad6b971742947d"
     },
     {
       "path": "app/arterial-connections.tsx",
@@ -74,7 +74,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "aaf3bac0094eb9c51722ab4e7179b855f4d4c892caffb18eca9b40574ec934b4"
+      "sha256": "2387962bf4b765abf1b5e360045613bb1d84a82f76bcb3d1916fae9e26acdd7f"
     },
     {
       "path": "app/body-scene.tsx",
@@ -843,6 +843,14 @@
     {
       "path": "content/thoracoabdominal-organ-imaging.ts",
       "sha256": "daf1e872df2e2f1d1c183000744080a87d8fdc794e671f22d1828870265375c6"
+    },
+    {
+      "path": "content/trunk-attachment-pins.json",
+      "sha256": "773fad7cbcb02a2af0c3fc20a69a89fe6b84b17cfbaca21e5e79fe4fb2151a53"
+    },
+    {
+      "path": "content/trunk-attachments.ts",
+      "sha256": "70762bdf36972a0761d19f8f2978a557272406486bf531056c9fb5218fe3474d"
     },
     {
       "path": "content/um-bone-cartilage-clinical.ts",
@@ -1837,6 +1845,10 @@
       "sha256": "2048fd644d43721614d44b749511e3f877623873391edc227f70994f2e81ec08"
     },
     {
+      "path": "lib/trunk-attachments.ts",
+      "sha256": "eb17e94c4b4bb0c14fedb2d5ecfa6352825a7ade10c2c050a787f3c36d8a7922"
+    },
+    {
       "path": "lib/trunk-clinical-curriculum.ts",
       "sha256": "4ad74f7bf268f451f04fc6d3ba88853658fd1acf09e90aed794ec1a62d9eb4cc"
     },
@@ -1926,7 +1938,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "fd784515c6770faa44a9bd3ba6b94e9b867da9abd256bdf6875101b486ebf846"
+      "sha256": "f65b1328e89b07906bd12e118243e3665f93316779c1a955cb7b856185dd8289"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2117,5 +2129,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "c7cc71796699963e087bf21d4dc4387d019b1d6b24dbe7b47b1ea60c80f372d1"
+  "sha256": "52f590c7afdbc81d112841b7beaff87b46b21e2db50d0bace3ed6ce16200714b"
 }
