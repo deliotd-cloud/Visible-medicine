@@ -2,6 +2,41 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 15 September — bounded corpus spongiosum source checkpoint
+
+Atlas `efc5ed08bd300540861161f8f823aedb359a789d` adds one original
+BodyParts3D FJ3133 bulb/shaft surface to Pelvis and Whole body. Existing search,
+selection, fade/isolate, removal/Undo and separation controls are reused; the
+glans and cavernous bodies remain explicitly missing. Their original candidate
+files contain duplicate faces/detached components and stay offline for review,
+not silent repair or new formal holds.
+
+All 1,101 previous selection records/bundles and 9,909 topics remain unchanged.
+Current scope is 1,102 root selections / 9,918 topic slots, with three short
+new drafts and six pending topics. The source-file ledger has 1,789 referenced
+IDs, 365 review-queue pieces and the same 54 formal holds; these are not
+anatomical completeness counts. Original DBCLS CC BY 4.0 credit, source hashes,
+conversion changes and clinical-review requirements are documented.
+
+Dedicated source/geometry checks, six scope links, 66 altered-source rejections,
+1,908 search cases, existing hip attachment tests, 33,444 content checks and
+body review pass. TypeScript, Atlas and shared-module builds pass. The search
+test now uses the established workspace resolver for Node compatibility without
+weakening existing expectations.
+
+This is a SOURCE checkpoint, not a website rollout. Private website84 remains
+the published hip/pelvic-attachment version. Before enabling this new model in
+the website, register/stage and verify the extra licensed GLB with the existing
+authenticated model-delivery flow while preserving all 131 previous models /
+137 paths; then export and activate the new module/inventory. No storage or
+authentication bypass. Source backup evidence is kept in the main workspace
+checkpoint. No scan, mask, dependency, paid service or entitlement change.
+
+Radiologist/device acceptance remains pending. Continue the full regional,
+whole-body and teaching roadmap, with Didanix Education/light and independent
+case/Atlas/lecture access. Completed MRI QA and the unchanged browser-runtime
+failure are not work to repeat.
+
 ## 15 September — hip/pelvic attachment source checkpoint
 
 Atlas `4516a19b5f61b0f3118786e87ce70c831e5c10d9` adds compact studies for
