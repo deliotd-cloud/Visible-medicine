@@ -1,0 +1,4491 @@
+{
+  "sourceCommit": "e8350cc87eb019a35148d5cc85af343ab30b4721",
+  "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "hand-skeleton",
+      "url": "/models/bodyparts3d/full-body/hand-skeleton.glb",
+      "bytes": 416816,
+      "sha256": "5f61ad363b757aa0cfcf0d7be4bcedcf63cbfec9ff5728cace9d62aa0447eac1",
+      "structures": 54
+    },
+    {
+      "id": "shoulder-arm-skeleton",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+      "bytes": 1162668,
+      "sha256": "f75517af8f2d72d1fd890c20fea3375948addab8eaee42f9217dcfd5754d3649",
+      "structures": 6
+    },
+    {
+      "id": "forearm-skeleton",
+      "url": "/models/bodyparts3d/full-body/forearm-skeleton.glb",
+      "bytes": 57728,
+      "sha256": "7af54bdb11a8ae93d9236c6ed35b9a471543bc2a8a32867992a8917d22b1e0d5",
+      "structures": 4
+    },
+    {
+      "id": "forearm-muscles",
+      "url": "/models/bodyparts3d/full-body/forearm-muscles.glb",
+      "bytes": 1854940,
+      "sha256": "a99abc2a2bfe0845e80b90d18f6473e2614695c8f7acb7a26a9febb4d46a509b",
+      "structures": 34
+    },
+    {
+      "id": "forearm-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/forearm-muscles-dissection.glb",
+      "bytes": 261864,
+      "sha256": "650758b91e7a4dd4b0a743d067fe79cbf527a51e95669e9e61aa2bc3c45c57b4",
+      "structures": 8
+    }
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-index-finger",
+      "fmaId": "FMA23953",
+      "name": "Distal phalanx of left index finger",
+      "sourceName": "distal phalanx of left index finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23953",
+      "bounds": {
+        "min": [
+          3.0126099586486816,
+          -1.381489872932434,
+          1.196139931678772
+        ],
+        "max": [
+          3.1125400066375732,
+          -1.244329810142517,
+          1.367110013961792
+        ]
+      },
+      "center": [
+        3.0625749826431274,
+        -1.3129098415374756,
+        1.281624972820282
+      ],
+      "anchor": [
+        3.050759792327881,
+        -1.3065801858901978,
+        1.2914299964904785
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3183",
+          "sha256": "53cd2e02023923e93f7651aed2b7b198fdaa9e0c8c8e83167b7ba371a2467396"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-little-finger",
+      "fmaId": "FMA23959",
+      "name": "Distal phalanx of left little finger",
+      "sourceName": "distal phalanx of left little finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23959",
+      "bounds": {
+        "min": [
+          2.1889400482177734,
+          -1.233720064163208,
+          1.1841999292373657
+        ],
+        "max": [
+          2.271549940109253,
+          -1.1069097518920898,
+          1.3228399753570557
+        ]
+      },
+      "center": [
+        2.230244994163513,
+        -1.170314908027649,
+        1.2535199522972107
+      ],
+      "anchor": [
+        2.2397000789642334,
+        -1.1856402158737183,
+        1.2676199674606323
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3184",
+          "sha256": "56799202f865a5f250cf43da0619baebccde1dae3ee6cd3295e8e8171b4b6158"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-middle-finger",
+      "fmaId": "FMA23955",
+      "name": "Distal phalanx of left middle finger",
+      "sourceName": "distal phalanx of left middle finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23955",
+      "bounds": {
+        "min": [
+          2.7136099338531494,
+          -1.4663299322128296,
+          1.2808400392532349
+        ],
+        "max": [
+          2.808540105819702,
+          -1.3362902402877808,
+          1.450890064239502
+        ]
+      },
+      "center": [
+        2.761075019836426,
+        -1.4013100862503052,
+        1.3658650517463684
+      ],
+      "anchor": [
+        2.759739875793457,
+        -1.393499732017517,
+        1.382390022277832
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3186",
+          "sha256": "52a6da87eb85141fbfc47457b45704fbb360a64d30a9fe13b44edbfcdfcc7a8a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-ring-finger",
+      "fmaId": "FMA23957",
+      "name": "Distal phalanx of left ring finger",
+      "sourceName": "distal phalanx of left ring finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23957",
+      "bounds": {
+        "min": [
+          2.453000068664551,
+          -1.3518798351287842,
+          1.287559986114502
+        ],
+        "max": [
+          2.5364599227905273,
+          -1.2610101699829102,
+          1.443600058555603
+        ]
+      },
+      "center": [
+        2.494729995727539,
+        -1.3064450025558472,
+        1.3655800223350525
+      ],
+      "anchor": [
+        2.5017800331115723,
+        -1.2966901063919067,
+        1.375749945640564
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3187",
+          "sha256": "30fde420c59b5e151de258f9c358c4cc1463de8b85c60e7c4b0a4d7ff573b9ad"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-thumb",
+      "fmaId": "FMA23951",
+      "name": "Distal phalanx of left thumb",
+      "sourceName": "distal phalanx of left thumb",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23951",
+      "bounds": {
+        "min": [
+          3.108380079269409,
+          -0.807570219039917,
+          1.072409987449646
+        ],
+        "max": [
+          3.2393500804901123,
+          -0.5776898264884949,
+          1.2327299118041992
+        ]
+      },
+      "center": [
+        3.1738650798797607,
+        -0.6926300227642059,
+        1.1525699496269226
+      ],
+      "anchor": [
+        3.1494698524475098,
+        -0.7068102955818176,
+        1.1598199605941772
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3188",
+          "sha256": "cafb49c4af872d990b2cd7a3ea279e088ea596cea25ee2fdce16b8ebbb04d37c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-index-finger",
+      "fmaId": "FMA24460",
+      "name": "Distal phalanx of right index finger",
+      "sourceName": "distal phalanx of right index finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24460",
+      "bounds": {
+        "min": [
+          -3.113680124282837,
+          -1.3815399408340454,
+          1.196470022201538
+        ],
+        "max": [
+          -3.014249801635742,
+          -1.2431097030639648,
+          1.3672999143600464
+        ]
+      },
+      "center": [
+        -3.0639649629592896,
+        -1.3123248219490051,
+        1.2818849682807922
+      ],
+      "anchor": [
+        -3.047600030899048,
+        -1.3177300691604614,
+        1.280269980430603
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3193",
+          "sha256": "00d90373136e996def72c45bb2de42630f7533014b622d36bbf56c4121355e4b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-little-finger",
+      "fmaId": "FMA24463",
+      "name": "Distal phalanx of right little finger",
+      "sourceName": "distal phalanx of right little finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24463",
+      "bounds": {
+        "min": [
+          -2.2720301151275635,
+          -1.232509732246399,
+          1.1817100048065186
+        ],
+        "max": [
+          -2.1889500617980957,
+          -1.1072301864624023,
+          1.3187299966812134
+        ]
+      },
+      "center": [
+        -2.2304900884628296,
+        -1.1698699593544006,
+        1.250220000743866
+      ],
+      "anchor": [
+        -2.2409698963165283,
+        -1.1692700386047363,
+        1.2391499280929565
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3194",
+          "sha256": "0edc751d14c5260c93fcde78f868ce49521eec95085a613417a96ddfd6a8965d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-middle-finger",
+      "fmaId": "FMA24461",
+      "name": "Distal phalanx of right middle finger",
+      "sourceName": "distal phalanx of right middle finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24461",
+      "bounds": {
+        "min": [
+          -2.809119939804077,
+          -1.469329833984375,
+          1.2820500135421753
+        ],
+        "max": [
+          -2.7136499881744385,
+          -1.334689974784851,
+          1.454279899597168
+        ]
+      },
+      "center": [
+        -2.761384963989258,
+        -1.402009904384613,
+        1.3681649565696716
+      ],
+      "anchor": [
+        -2.742770195007324,
+        -1.395640254020691,
+        1.3711199760437012
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3196",
+          "sha256": "901e109df6e4a98b88dae7cdddda416c4cdd91e58093f1dc51d80ccc7c4e9b34"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-ring-finger",
+      "fmaId": "FMA24462",
+      "name": "Distal phalanx of right ring finger",
+      "sourceName": "distal phalanx of right ring finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24462",
+      "bounds": {
+        "min": [
+          -2.536139965057373,
+          -1.3513097763061523,
+          1.2871699333190918
+        ],
+        "max": [
+          -2.452810049057007,
+          -1.2599200010299683,
+          1.4438000917434692
+        ]
+      },
+      "center": [
+        -2.49447500705719,
+        -1.3056148886680603,
+        1.3654850125312805
+      ],
+      "anchor": [
+        -2.478450059890747,
+        -1.3010797500610352,
+        1.3658699989318848
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3197",
+          "sha256": "4fece0e70293449e99a1b27a0d40c9d4fedd548ff0471fa7c783e5d973cbfba3"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-thumb",
+      "fmaId": "FMA24459",
+      "name": "Distal phalanx of right thumb",
+      "sourceName": "distal phalanx of right thumb",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24459",
+      "bounds": {
+        "min": [
+          -3.239140033721924,
+          -0.808610200881958,
+          1.0713499784469604
+        ],
+        "max": [
+          -3.1026298999786377,
+          -0.5783398151397705,
+          1.2335799932479858
+        ]
+      },
+      "center": [
+        -3.1708849668502808,
+        -0.6934750080108643,
+        1.1524649858474731
+      ],
+      "anchor": [
+        -3.146090030670166,
+        -0.6867401003837585,
+        1.1562199592590332
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3198",
+          "sha256": "bfae0f42c3cffa63b93403bf6fe1b446dcf0f8fc3e1f8994544ac256830a7b3e"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-first-metacarpal-bone",
+      "fmaId": "FMA24465",
+      "name": "Left first metacarpal bone",
+      "sourceName": "left first metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24465",
+      "bounds": {
+        "min": [
+          2.7235300540924072,
+          -0.3970501720905304,
+          0.7340599894523621
+        ],
+        "max": [
+          3.096250057220459,
+          -0.025930175557732582,
+          1.0378199815750122
+        ]
+      },
+      "center": [
+        2.909890055656433,
+        -0.2114901738241315,
+        0.8859399855136871
+      ],
+      "anchor": [
+        2.888230085372925,
+        -0.1816699206829071,
+        0.8883599638938904
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3240",
+          "sha256": "f512f1433a67003297c3ca0fca775c94372313cf3c3de28774a1cd7556e08362"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-second-metacarpal-bone",
+      "fmaId": "FMA24467",
+      "name": "Left second metacarpal bone",
+      "sourceName": "left second metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24467",
+      "bounds": {
+        "min": [
+          2.618410110473633,
+          -0.8095800876617432,
+          0.6711699962615967
+        ],
+        "max": [
+          2.9261300563812256,
+          -0.13130980730056763,
+          0.9243299961090088
+        ]
+      },
+      "center": [
+        2.772270083427429,
+        -0.4704449474811554,
+        0.7977499961853027
+      ],
+      "anchor": [
+        2.8213000297546387,
+        -0.48330017924308777,
+        0.7823800444602966
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3243",
+          "sha256": "728fb5278b0e3d2ac9fb0af78ade721c5cb8764144e318a85f07ff9cdb9d7f7d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-third-metacarpal-bone",
+      "fmaId": "FMA24469",
+      "name": "Left third metacarpal bone",
+      "sourceName": "left third metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24469",
+      "bounds": {
+        "min": [
+          2.5236001014709473,
+          -0.7935101389884949,
+          0.6241000294685364
+        ],
+        "max": [
+          2.722520112991333,
+          -0.149749755859375,
+          0.928130030632019
+        ]
+      },
+      "center": [
+        2.62306010723114,
+        -0.47162994742393494,
+        0.7761150300502777
+      ],
+      "anchor": [
+        2.6117498874664307,
+        -0.4807202219963074,
+        0.7944599986076355
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3246",
+          "sha256": "fa86f28ff85a3a1e3ac6872a05912deece4d3f8489e08ea4d21b432db304938b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-fifth-metacarpal-bone",
+      "fmaId": "FMA24473",
+      "name": "Left fifth metacarpal bone",
+      "sourceName": "left fifth metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24473",
+      "bounds": {
+        "min": [
+          2.252700090408325,
+          -0.6796899437904358,
+          0.702239990234375
+        ],
+        "max": [
+          2.453939914703369,
+          -0.13241027295589447,
+          0.9441999793052673
+        ]
+      },
+      "center": [
+        2.353320002555847,
+        -0.40605010837316513,
+        0.8232199847698212
+      ],
+      "anchor": [
+        2.373500108718872,
+        -0.41370972990989685,
+        0.8138800263404846
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3252",
+          "sha256": "ca8db2999ff2d7a14a61e9cbeb83a01011a3557df844ff1c47bb7ac3eaeccdb8"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-hamate",
+      "fmaId": "FMA24449",
+      "name": "Left hamate",
+      "sourceName": "left hamate",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24449",
+      "bounds": {
+        "min": [
+          2.3659698963165283,
+          -0.1874401867389679,
+          0.6132199764251709
+        ],
+        "max": [
+          2.515700101852417,
+          0.006309814285486937,
+          0.8398199677467346
+        ]
+      },
+      "center": [
+        2.4408349990844727,
+        -0.09056518622674048,
+        0.7265199720859528
+      ],
+      "anchor": [
+        2.4443600177764893,
+        -0.05999999865889549,
+        0.7370400428771973
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3261",
+          "sha256": "665e0be6779b9bc398e0947eaf190cc4d942e030a05d1a4cfe3ce4270bf8ddbf"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+      "fmaId": "FMA23131",
+      "name": "Left humerus",
+      "sourceName": "left humerus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA23131",
+      "bounds": {
+        "min": [
+          1.400730013847351,
+          2.292099714279175,
+          0.010559005662798882
+        ],
+        "max": [
+          2.407599925994873,
+          5.365200042724609,
+          0.5022899508476257
+        ]
+      },
+      "center": [
+        1.904164969921112,
+        3.828649878501892,
+        0.2564244782552123
+      ],
+      "anchor": [
+        1.8882200717926025,
+        3.8617005348205566,
+        0.25274598598480225
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3262",
+          "sha256": "4a07066d7c7f17dfeb61797dc31c529d0d6fd3fda8136912ebd8a92ccc1ac6fc"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-pisiform",
+      "fmaId": "FMA24442",
+      "name": "Left pisiform",
+      "sourceName": "left pisiform",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24442",
+      "bounds": {
+        "min": [
+          2.3183798789978027,
+          -0.10275024175643921,
+          0.7703099846839905
+        ],
+        "max": [
+          2.4003000259399414,
+          0.012769775465130806,
+          0.8758900165557861
+        ]
+      },
+      "center": [
+        2.359339952468872,
+        -0.0449902331456542,
+        0.8231000006198883
+      ],
+      "anchor": [
+        2.328850030899048,
+        -0.05520019680261612,
+        0.8421000838279724
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3276",
+          "sha256": "6162726ac4bcb29a9ba8489570650ba8a323576b03423fb16b27bcd1e55c0658"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:bone:left-radius",
+      "fmaId": "FMA23465",
+      "name": "Left radius",
+      "sourceName": "left radius",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23465",
+      "bounds": {
+        "min": [
+          2.198359966278076,
+          0.0616302490234375,
+          0.11469299346208572
+        ],
+        "max": [
+          2.7914299964904785,
+          2.350100040435791,
+          0.7725200057029724
+        ]
+      },
+      "center": [
+        2.4948949813842773,
+        1.2058651447296143,
+        0.44360649958252907
+      ],
+      "anchor": [
+        2.561270236968994,
+        1.1699999570846558,
+        0.4131059944629669
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3277",
+          "sha256": "c41a7de7eddf5b91543fb22cf34c7dcad50241ffe1faae6ae22e1be30ca9390a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:bone:left-ulna",
+      "fmaId": "FMA23468",
+      "name": "Left ulna",
+      "sourceName": "left ulna",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23468",
+      "bounds": {
+        "min": [
+          1.9689199924468994,
+          0.050159912556409836,
+          -0.05447700619697571
+        ],
+        "max": [
+          2.4711999893188477,
+          2.5246996879577637,
+          0.7327899932861328
+        ]
+      },
+      "center": [
+        2.2200599908828735,
+        1.2874298002570868,
+        0.33915649354457855
+      ],
+      "anchor": [
+        2.191890001296997,
+        1.2612799406051636,
+        0.3485729992389679
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3286",
+          "sha256": "0e3c48a4b664ffc37ef11eb4754c6c7f4adc8fd1d3e54d1286307432c7d04bfc"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-ring-finger",
+      "fmaId": "FMA23942",
+      "name": "Middle phalanx of left ring finger",
+      "sourceName": "middle phalanx of left ring finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23942",
+      "bounds": {
+        "min": [
+          2.4278199672698975,
+          -1.3017901182174683,
+          1.06794011592865
+        ],
+        "max": [
+          2.5453200340270996,
+          -1.0631598234176636,
+          1.3054699897766113
+        ]
+      },
+      "center": [
+        2.4865700006484985,
+        -1.182474970817566,
+        1.1867050528526306
+      ],
+      "anchor": [
+        2.4808900356292725,
+        -1.1811999082565308,
+        1.1913200616836548
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3291",
+          "sha256": "5c352c5c4329997419f731995176a2e293c749bc4896de37e6feb9d8b122cfac"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-ring-finger",
+      "fmaId": "FMA24457",
+      "name": "Middle phalanx of right ring finger",
+      "sourceName": "middle phalanx of right ring finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24457",
+      "bounds": {
+        "min": [
+          -2.5429298877716064,
+          -1.3029601573944092,
+          1.0653599500656128
+        ],
+        "max": [
+          -2.4276299476623535,
+          -1.0639599561691284,
+          1.3056700229644775
+        ]
+      },
+      "center": [
+        -2.48527991771698,
+        -1.1834600567817688,
+        1.1855149865150452
+      ],
+      "anchor": [
+        -2.4890999794006348,
+        -1.178220272064209,
+        1.1903899908065796
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3292",
+          "sha256": "11af3f3453af291b20b0f4a9002c3e0906535acdc0004bd175876ddeecb9a094"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-index-finger",
+      "fmaId": "FMA23938",
+      "name": "Middle phalanx of left index finger",
+      "sourceName": "middle phalanx of left index finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23938",
+      "bounds": {
+        "min": [
+          2.94389009475708,
+          -1.290250301361084,
+          1.0125600099563599
+        ],
+        "max": [
+          3.090010166168213,
+          -1.0854699611663818,
+          1.2205700874328613
+        ]
+      },
+      "center": [
+        3.0169501304626465,
+        -1.187860131263733,
+        1.1165650486946106
+      ],
+      "anchor": [
+        3.010430097579956,
+        -1.1797497272491455,
+        1.1273499727249146
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3296",
+          "sha256": "a2f1986d020da3ec013aeefb14b11223b18ab4181f0e7f2e56d54faee672e34f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-little-finger",
+      "fmaId": "FMA23944",
+      "name": "Middle phalanx of left little finger",
+      "sourceName": "middle phalanx of left little finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23944",
+      "bounds": {
+        "min": [
+          2.1892099380493164,
+          -1.1253399848937988,
+          1.0491200685501099
+        ],
+        "max": [
+          2.302989959716797,
+          -0.9293902516365051,
+          1.2147899866104126
+        ]
+      },
+      "center": [
+        2.2460999488830566,
+        -1.027365118265152,
+        1.1319550275802612
+      ],
+      "anchor": [
+        2.267199993133545,
+        -1.0419098138809204,
+        1.1407699584960938
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3297",
+          "sha256": "536be862531dc82ab85bc0f7a49f1492574a39d613db552a1dc98b535e2c83f5"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-middle-finger",
+      "fmaId": "FMA23940",
+      "name": "Middle phalanx of left middle finger",
+      "sourceName": "middle phalanx of left middle finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23940",
+      "bounds": {
+        "min": [
+          2.6651699542999268,
+          -1.3759100437164307,
+          1.0785800218582153
+        ],
+        "max": [
+          2.8020498752593994,
+          -1.1223297119140625,
+          1.3087600469589233
+        ]
+      },
+      "center": [
+        2.733609914779663,
+        -1.2491198778152466,
+        1.1936700344085693
+      ],
+      "anchor": [
+        2.7057502269744873,
+        -1.2561999559402466,
+        1.199679970741272
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3299",
+          "sha256": "f0404230992ffcf77f1d3834c6015305abe10c2c40a84e2e920a21d9cc0743f2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-index-finger",
+      "fmaId": "FMA24455",
+      "name": "Middle phalanx of right index finger",
+      "sourceName": "middle phalanx of right index finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24455",
+      "bounds": {
+        "min": [
+          -3.0899999141693115,
+          -1.2899402379989624,
+          1.0130900144577026
+        ],
+        "max": [
+          -2.944000005722046,
+          -1.0852398872375488,
+          1.220829963684082
+        ]
+      },
+      "center": [
+        -3.0169999599456787,
+        -1.1875900626182556,
+        1.1169599890708923
+      ],
+      "anchor": [
+        -2.999540090560913,
+        -1.2109496593475342,
+        1.1353100538253784
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3303",
+          "sha256": "af5955d21314bf58ed06fc28f28467e56ce366b658372b37a5e21936ed9f2c8b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-little-finger",
+      "fmaId": "FMA24458",
+      "name": "Middle phalanx of right little finger",
+      "sourceName": "middle phalanx of right little finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24458",
+      "bounds": {
+        "min": [
+          -2.305449962615967,
+          -1.1242998838424683,
+          1.0482299327850342
+        ],
+        "max": [
+          -2.189349889755249,
+          -0.9284496903419495,
+          1.2143899202346802
+        ]
+      },
+      "center": [
+        -2.247399926185608,
+        -1.0263747870922089,
+        1.1313099265098572
+      ],
+      "anchor": [
+        -2.2532401084899902,
+        -1.0122802257537842,
+        1.1373399496078491
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3304",
+          "sha256": "4cd1972167a669afb93f288cf994101bb32083b95efbfc1696b1781560586ca0"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-middle-finger",
+      "fmaId": "FMA24456",
+      "name": "Middle phalanx of right middle finger",
+      "sourceName": "middle phalanx of right middle finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24456",
+      "bounds": {
+        "min": [
+          -2.8020200729370117,
+          -1.3754303455352783,
+          1.077989935874939
+        ],
+        "max": [
+          -2.6658802032470703,
+          -1.1219298839569092,
+          1.309340000152588
+        ]
+      },
+      "center": [
+        -2.733950138092041,
+        -1.2486801147460938,
+        1.1936649680137634
+      ],
+      "anchor": [
+        -2.7432501316070557,
+        -1.230080008506775,
+        1.1914900541305542
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3306",
+          "sha256": "60a6197d8d7dedcb1039f82613c3c9e968109a9588b89a767ba6a44202f7c830"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-thumb",
+      "fmaId": "FMA65470",
+      "name": "Proximal phalanx of left thumb",
+      "sourceName": "proximal phalanx of left thumb",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA65470",
+      "bounds": {
+        "min": [
+          2.9869399070739746,
+          -0.6447100639343262,
+          0.926289975643158
+        ],
+        "max": [
+          3.186189889907837,
+          -0.3283196985721588,
+          1.1475300788879395
+        ]
+      },
+      "center": [
+        3.0865648984909058,
+        -0.4865148812532425,
+        1.0369100272655487
+      ],
+      "anchor": [
+        3.0822501182556152,
+        -0.45986998081207275,
+        1.0437699556350708
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3318",
+          "sha256": "3b327f7169609c03540967f7f8ceba810afda27a427cb5f16ea6641ef429837a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-thumb",
+      "fmaId": "FMA24450",
+      "name": "Proximal phalanx of right thumb",
+      "sourceName": "proximal phalanx of right thumb",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24450",
+      "bounds": {
+        "min": [
+          -3.1880898475646973,
+          -0.6439300775527954,
+          0.9265300035476685
+        ],
+        "max": [
+          -2.986489772796631,
+          -0.32802000641822815,
+          1.1488299369812012
+        ]
+      },
+      "center": [
+        -3.087289810180664,
+        -0.4859750419855118,
+        1.0376799702644348
+      ],
+      "anchor": [
+        -3.0790300369262695,
+        -0.5008697509765625,
+        1.0447500944137573
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3327",
+          "sha256": "84d3df498603c91935ae8edfc341c17ad3e46b910249a98e1e3edd4ccf309e71"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:bone:right-radius",
+      "fmaId": "FMA23464",
+      "name": "Right radius",
+      "sourceName": "right radius",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23464",
+      "bounds": {
+        "min": [
+          -2.7953500747680664,
+          0.05835022032260895,
+          0.11102600395679474
+        ],
+        "max": [
+          -2.1983299255371094,
+          2.3505005836486816,
+          0.7690799832344055
+        ]
+      },
+      "center": [
+        -2.496840000152588,
+        1.2044254019856453,
+        0.44005299359560013
+      ],
+      "anchor": [
+        -2.5462300777435303,
+        1.1810302734375,
+        0.42398497462272644
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3349",
+          "sha256": "0f824e639b13ea02959734a0d9bd8d7ca67d0b51f531a138d769e1d3b22e0c98"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-first-metacarpal-bone",
+      "fmaId": "FMA24464",
+      "name": "Right first metacarpal bone",
+      "sourceName": "right first metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24464",
+      "bounds": {
+        "min": [
+          -3.0957698822021484,
+          -0.3971899449825287,
+          0.736270010471344
+        ],
+        "max": [
+          -2.7223598957061768,
+          -0.027620239183306694,
+          1.0386099815368652
+        ]
+      },
+      "center": [
+        -2.9090648889541626,
+        -0.2124050920829177,
+        0.8874399960041046
+      ],
+      "anchor": [
+        -2.914479970932007,
+        -0.24702025949954987,
+        0.8846299648284912
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3350",
+          "sha256": "92ef27746cf2c5b317b88558b42e171128f980ea16414ca6e3647d19d1594382"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-second-metacarpal-bone",
+      "fmaId": "FMA24466",
+      "name": "Right second metacarpal bone",
+      "sourceName": "right second metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24466",
+      "bounds": {
+        "min": [
+          -2.926870107650757,
+          -0.8112902641296387,
+          0.6705700159072876
+        ],
+        "max": [
+          -2.6182000637054443,
+          -0.13130980730056763,
+          0.9278700351715088
+        ]
+      },
+      "center": [
+        -2.7725350856781006,
+        -0.47130003571510315,
+        0.7992200255393982
+      ],
+      "anchor": [
+        -2.7511701583862305,
+        -0.46614015102386475,
+        0.7921000719070435
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3352",
+          "sha256": "6d4e9874925f542124ced9e041f340de5b9c8f872d6ad7e2d483e9d0ab159980"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-third-metacarpal-bone",
+      "fmaId": "FMA24468",
+      "name": "Right third metacarpal bone",
+      "sourceName": "right third metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24468",
+      "bounds": {
+        "min": [
+          -2.7234601974487305,
+          -0.7915997505187988,
+          0.623259961605072
+        ],
+        "max": [
+          -2.52485990524292,
+          -0.14737975597381592,
+          0.9273300170898438
+        ]
+      },
+      "center": [
+        -2.624160051345825,
+        -0.4694897532463074,
+        0.7752949893474579
+      ],
+      "anchor": [
+        -2.628920078277588,
+        -0.4772900342941284,
+        0.7948399186134338
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3354",
+          "sha256": "98a26b8f08e6cd3578706a65d83c2e1e432d7a206202294cd525aa287b75072b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-fifth-metacarpal-bone",
+      "fmaId": "FMA24472",
+      "name": "Right fifth metacarpal bone",
+      "sourceName": "right fifth metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24472",
+      "bounds": {
+        "min": [
+          -2.4531400203704834,
+          -0.679840087890625,
+          0.7007599472999573
+        ],
+        "max": [
+          -2.2520198822021484,
+          -0.1308099329471588,
+          0.9452000260353088
+        ]
+      },
+      "center": [
+        -2.352579951286316,
+        -0.4053250104188919,
+        0.8229799866676331
+      ],
+      "anchor": [
+        -2.342400074005127,
+        -0.4185498058795929,
+        0.8263299465179443
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3358",
+          "sha256": "23d26888c325fd6a2de2688e948de72057afaf383db13875445fe597bd2a8bfd"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-hamate",
+      "fmaId": "FMA24448",
+      "name": "Right hamate",
+      "sourceName": "right hamate",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24448",
+      "bounds": {
+        "min": [
+          -2.519279956817627,
+          -0.18706969916820526,
+          0.6140599846839905
+        ],
+        "max": [
+          -2.366000175476074,
+          0.0065301512368023396,
+          0.8393099904060364
+        ]
+      },
+      "center": [
+        -2.4426400661468506,
+        -0.09026977396570146,
+        0.7266849875450134
+      ],
+      "anchor": [
+        -2.4433600902557373,
+        -0.06616027653217316,
+        0.7440400123596191
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3367",
+          "sha256": "9c27cf5b75dd149f2469403af7ad68263e1eff29307864ae10481ac647262eba"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+      "fmaId": "FMA23130",
+      "name": "Right humerus",
+      "sourceName": "right humerus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA23130",
+      "bounds": {
+        "min": [
+          -2.40841007232666,
+          2.291999578475952,
+          0.010391006246209145
+        ],
+        "max": [
+          -1.4009000062942505,
+          5.365400314331055,
+          0.5021899938583374
+        ]
+      },
+      "center": [
+        -1.9046550393104553,
+        3.8286999464035034,
+        0.2562905000522733
+      ],
+      "anchor": [
+        -1.901360034942627,
+        3.8536999225616455,
+        0.2592269778251648
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3368",
+          "sha256": "85f5445a11ecb029b027db0b9b34933982836d442b19ff531d1ca35a3bc3a237"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-pisiform",
+      "fmaId": "FMA24441",
+      "name": "Right pisiform",
+      "sourceName": "right pisiform",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24441",
+      "bounds": {
+        "min": [
+          -2.4021999835968018,
+          -0.10325012356042862,
+          0.7724900245666504
+        ],
+        "max": [
+          -2.3195600509643555,
+          0.013250121846795082,
+          0.8765800595283508
+        ]
+      },
+      "center": [
+        -2.3608800172805786,
+        -0.04500000085681677,
+        0.8245350420475006
+      ],
+      "anchor": [
+        -2.3296401500701904,
+        -0.02854003943502903,
+        0.839139997959137
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3382",
+          "sha256": "c5b1ce6020acc6e1feff8f44a3f0b5ec717e3cb3218701fbe86644975d981684"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:bone:right-ulna",
+      "fmaId": "FMA23467",
+      "name": "Right ulna",
+      "sourceName": "right ulna",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23467",
+      "bounds": {
+        "min": [
+          -2.471790075302124,
+          0.05172973498702049,
+          -0.052008017897605896
+        ],
+        "max": [
+          -1.968809962272644,
+          2.5244994163513184,
+          0.7349400520324707
+        ]
+      },
+      "center": [
+        -2.220300018787384,
+        1.2881145756691694,
+        0.3414660170674324
+      ],
+      "anchor": [
+        -2.2308499813079834,
+        1.2578003406524658,
+        0.39101600646972656
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3391",
+          "sha256": "0aad73148e036c980ab24dfa675fcc1f109e5c60d82c12f3696420cf93cb4a98"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-carpi-ulnaris",
+      "fmaId": "FMA38507",
+      "name": "Right extensor carpi ulnaris",
+      "sourceName": "right extensor carpi ulnaris",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38507",
+      "bounds": {
+        "min": [
+          -2.374300003051758,
+          -0.28833985328674316,
+          -0.003152008168399334
+        ],
+        "max": [
+          -2.1947600841522217,
+          2.58870005607605,
+          0.7679799795150757
+        ]
+      },
+      "center": [
+        -2.2845300436019897,
+        1.1501801013946533,
+        0.3824139856733382
+      ],
+      "anchor": [
+        -2.2146401405334473,
+        1.1400799751281738,
+        0.3309970200061798
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1472",
+          "sha256": "f6aadd5b1df9440ec0c4fabf21641f72447d5190bcaf58f357e8b5a76b3f5889"
+        },
+        {
+          "file": "FJ1517",
+          "sha256": "e6a4cec704d3601a33704b40ee1f3f7bce484017dd563d1f4d2da43331b3ffce"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-carpi-ulnaris",
+      "fmaId": "FMA38508",
+      "name": "Left extensor carpi ulnaris",
+      "sourceName": "left extensor carpi ulnaris",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38508",
+      "bounds": {
+        "min": [
+          2.1947600841522217,
+          -0.28833985328674316,
+          -0.003152008168399334
+        ],
+        "max": [
+          2.374300003051758,
+          2.58870005607605,
+          0.7679900527000427
+        ]
+      },
+      "center": [
+        2.2845300436019897,
+        1.1501801013946533,
+        0.3824190222658217
+      ],
+      "anchor": [
+        2.2146401405334473,
+        1.1400799751281738,
+        0.3309970200061798
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1472M",
+          "sha256": "6c47a0290d3c5952e858227ed655b6ef1caac88661a13d15618a8364d0af765f"
+        },
+        {
+          "file": "FJ1517M",
+          "sha256": "dad2acf99146ad290d327a6d3e9e0c8fa214c26880d9f85292d4c4eb4554500f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-digitorum-superficialis",
+      "fmaId": "FMA38470",
+      "name": "Right flexor digitorum superficialis",
+      "sourceName": "right flexor digitorum superficialis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38470",
+      "bounds": {
+        "min": [
+          -3.058689832687378,
+          -1.241859793663025,
+          0.17579002678394318
+        ],
+        "max": [
+          -1.781130075454712,
+          2.530799627304077,
+          1.1784800291061401
+        ]
+      },
+      "center": [
+        -2.419909954071045,
+        0.6444699168205261,
+        0.6771350279450417
+      ],
+      "anchor": [
+        -2.424910068511963,
+        0.6462500095367432,
+        0.6656500101089478
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1475",
+          "sha256": "9b3877dcb9838ac4e37f2a1fbf0542fca888a32650285bb07278d6ba9fa968e1"
+        },
+        {
+          "file": "FJ1499",
+          "sha256": "7f148f7db90d9723dcfe6742c55afc2100b712c00992d83356373ca27a2b0dc0"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-digitorum-superficialis",
+      "fmaId": "FMA38471",
+      "name": "Left flexor digitorum superficialis",
+      "sourceName": "left flexor digitorum superficialis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38471",
+      "bounds": {
+        "min": [
+          1.781130075454712,
+          -1.241859793663025,
+          0.17579002678394318
+        ],
+        "max": [
+          3.058689832687378,
+          2.530799627304077,
+          1.1784800291061401
+        ]
+      },
+      "center": [
+        2.419909954071045,
+        0.6444699168205261,
+        0.6771350279450417
+      ],
+      "anchor": [
+        2.4249000549316406,
+        0.6462597846984863,
+        0.6656400561332703
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1475M",
+          "sha256": "9174a210f8b7ce149355545208551a4d001f6c78570256a8596d3410023fb1ec"
+        },
+        {
+          "file": "FJ1499M",
+          "sha256": "471bfecbbe7dc3b66fc843daddcac42cd12e76e4df9f982d6b779a516433c083"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-abductor-pollicis-longus",
+      "fmaId": "FMA38516",
+      "name": "Right abductor pollicis longus",
+      "sourceName": "right abductor pollicis longus",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38516",
+      "bounds": {
+        "min": [
+          -2.894289970397949,
+          -0.11250976473093033,
+          0.20049400627613068
+        ],
+        "max": [
+          -2.2754499912261963,
+          1.7077502012252808,
+          0.8177699446678162
+        ]
+      },
+      "center": [
+        -2.5848699808120728,
+        0.7976202182471752,
+        0.5091319754719734
+      ],
+      "anchor": [
+        -2.580820083618164,
+        0.7810699343681335,
+        0.4083319902420044
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1484",
+          "sha256": "35a1077de93e2bdcaaa68e688f4f31a371c3c61e35d629314507e549e5241d14"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-abductor-pollicis-longus",
+      "fmaId": "FMA38517",
+      "name": "Left abductor pollicis longus",
+      "sourceName": "left abductor pollicis longus",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38517",
+      "bounds": {
+        "min": [
+          2.2754499912261963,
+          -0.11250976473093033,
+          0.20049400627613068
+        ],
+        "max": [
+          2.894289970397949,
+          1.7077502012252808,
+          0.8177699446678162
+        ]
+      },
+      "center": [
+        2.5848699808120728,
+        0.7976202182471752,
+        0.5091319754719734
+      ],
+      "anchor": [
+        2.580820083618164,
+        0.7810699343681335,
+        0.4083319902420044
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1484M",
+          "sha256": "330a078635dd13630811d8725ab5919c0fae5b001071a6cb3b7282bcf955fc4e"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-brachioradialis",
+      "fmaId": "FMA38486",
+      "name": "Right brachioradialis",
+      "sourceName": "right brachioradialis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38486",
+      "bounds": {
+        "min": [
+          -2.8058600425720215,
+          0.09711974859237671,
+          0.058244019746780396
+        ],
+        "max": [
+          -2.081589937210083,
+          3.476099967956543,
+          0.7287799715995789
+        ]
+      },
+      "center": [
+        -2.4437249898910522,
+        1.7866098582744598,
+        0.3935119956731796
+      ],
+      "anchor": [
+        -2.5111701488494873,
+        1.7561700344085693,
+        0.4491649568080902
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1487",
+          "sha256": "0ff651a5417f240c6a5205bef5218336a61fe3474752cca1b483d02aae0b92ad"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-brachioradialis",
+      "fmaId": "FMA38487",
+      "name": "Left brachioradialis",
+      "sourceName": "left brachioradialis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38487",
+      "bounds": {
+        "min": [
+          2.081589937210083,
+          0.09711974859237671,
+          0.058244019746780396
+        ],
+        "max": [
+          2.8058600425720215,
+          3.476099967956543,
+          0.7287799715995789
+        ]
+      },
+      "center": [
+        2.4437249898910522,
+        1.7866098582744598,
+        0.3935119956731796
+      ],
+      "anchor": [
+        2.5111701488494873,
+        1.7561602592468262,
+        0.4491649568080902
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1487M",
+          "sha256": "04555d88efe99e68a2b07441c4deffa4d1e7ebafb8d3f60995dd28c0ff42f147"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-carpi-radialis-brevis",
+      "fmaId": "FMA38498",
+      "name": "Right extensor carpi radialis brevis",
+      "sourceName": "right extensor carpi radialis brevis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38498",
+      "bounds": {
+        "min": [
+          -2.7263801097869873,
+          -0.23945006728172302,
+          0.002608985872939229
+        ],
+        "max": [
+          -2.283639907836914,
+          2.787099599838257,
+          0.6574299335479736
+        ]
+      },
+      "center": [
+        -2.5050100088119507,
+        1.273824766278267,
+        0.33001945971045643
+      ],
+      "anchor": [
+        -2.534719944000244,
+        1.264149785041809,
+        0.3110640048980713
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1489",
+          "sha256": "31ccd9ec738252ec2eae88cf68068679d0663425c98b8d90dcbca18b3cbd1988"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-carpi-radialis-brevis",
+      "fmaId": "FMA38499",
+      "name": "Left extensor carpi radialis brevis",
+      "sourceName": "left extensor carpi radialis brevis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38499",
+      "bounds": {
+        "min": [
+          2.283639907836914,
+          -0.23945006728172302,
+          0.002608985872939229
+        ],
+        "max": [
+          2.7263801097869873,
+          2.787099599838257,
+          0.6574299335479736
+        ]
+      },
+      "center": [
+        2.5050100088119507,
+        1.273824766278267,
+        0.33001945971045643
+      ],
+      "anchor": [
+        2.534709930419922,
+        1.264140009880066,
+        0.3110640048980713
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1489M",
+          "sha256": "8c6a0274a546389ad6a4f615379ff0e9a020a7fb054cfd5e1e20401d4ecb06f7"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-carpi-radialis-longus",
+      "fmaId": "FMA38495",
+      "name": "Right extensor carpi radialis longus",
+      "sourceName": "right extensor carpi radialis longus",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38495",
+      "bounds": {
+        "min": [
+          -2.778630018234253,
+          -0.20856018364429474,
+          0.03205898404121399
+        ],
+        "max": [
+          -2.200860023498535,
+          3.0160999298095703,
+          0.7097899913787842
+        ]
+      },
+      "center": [
+        -2.489745020866394,
+        1.4037698730826378,
+        0.3709244877099991
+      ],
+      "anchor": [
+        -2.5908401012420654,
+        1.4127001762390137,
+        0.3451540470123291
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1490",
+          "sha256": "8b6ec821491a2eafaee8c813cfad4532beae94c354595cc3e922d8cdbb36fb32"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-carpi-radialis-longus",
+      "fmaId": "FMA38496",
+      "name": "Left extensor carpi radialis longus",
+      "sourceName": "left extensor carpi radialis longus",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38496",
+      "bounds": {
+        "min": [
+          2.2006800174713135,
+          -0.20856018364429474,
+          0.03205898404121399
+        ],
+        "max": [
+          2.778630018234253,
+          3.0160999298095703,
+          0.7097899913787842
+        ]
+      },
+      "center": [
+        2.489655017852783,
+        1.4037698730826378,
+        0.3709244877099991
+      ],
+      "anchor": [
+        2.5908401012420654,
+        1.4127099514007568,
+        0.3451550304889679
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1490M",
+          "sha256": "f0ed6a659b2a1fd0d9138d2b7ca91535f62b70b9bc16f862173fdd85f69372d2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-digiti-minimi",
+      "fmaId": "FMA38504",
+      "name": "Right extensor digiti minimi",
+      "sourceName": "right extensor digiti minimi",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38504",
+      "bounds": {
+        "min": [
+          -2.432219982147217,
+          -0.7533196806907654,
+          0.0392489992082119
+        ],
+        "max": [
+          -2.2698800563812256,
+          2.4961998462677,
+          0.9325399994850159
+        ]
+      },
+      "center": [
+        -2.351050019264221,
+        0.8714400827884674,
+        0.4858944993466139
+      ],
+      "anchor": [
+        -2.3713998794555664,
+        0.8415197730064392,
+        0.3399990200996399
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1491",
+          "sha256": "2717a761854ba7fe50d12f5ec4eca0f0728795777ae9a7ec87e019f01e3b8267"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-digiti-minimi",
+      "fmaId": "FMA38505",
+      "name": "Left extensor digiti minimi",
+      "sourceName": "left extensor digiti minimi",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38505",
+      "bounds": {
+        "min": [
+          2.2698800563812256,
+          -0.7533196806907654,
+          0.0392489992082119
+        ],
+        "max": [
+          2.432219982147217,
+          2.4961998462677,
+          0.9325500726699829
+        ]
+      },
+      "center": [
+        2.351050019264221,
+        0.8714400827884674,
+        0.4858995359390974
+      ],
+      "anchor": [
+        2.3713998794555664,
+        0.8415301442146301,
+        0.3399990200996399
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1491M",
+          "sha256": "f4126e4115bf25e98e13d5e646304ab526d500f5de28aef9167c72f7360fe702"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-digitorum",
+      "fmaId": "FMA38501",
+      "name": "Right extensor digitorum",
+      "sourceName": "right extensor digitorum",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38501",
+      "bounds": {
+        "min": [
+          -3.050539970397949,
+          -1.2201898097991943,
+          -0.04687301814556122
+        ],
+        "max": [
+          -2.224760055541992,
+          2.599599599838257,
+          1.125290036201477
+        ]
+      },
+      "center": [
+        -2.6376500129699707,
+        0.6897048950195312,
+        0.5392085090279579
+      ],
+      "anchor": [
+        -2.5513999462127686,
+        0.6782800555229187,
+        0.3536360263824463
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1492",
+          "sha256": "31f528b3ba6a8fb26177c9f1455692be3acfbb173b4c4cbf9dc3d597acb5c5ff"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-digitorum",
+      "fmaId": "FMA38502",
+      "name": "Left extensor digitorum",
+      "sourceName": "left extensor digitorum",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38502",
+      "bounds": {
+        "min": [
+          2.2247700691223145,
+          -1.2201898097991943,
+          -0.04687301814556122
+        ],
+        "max": [
+          3.050539970397949,
+          2.599599599838257,
+          1.125290036201477
+        ]
+      },
+      "center": [
+        2.637655019760132,
+        0.6897048950195312,
+        0.5392085090279579
+      ],
+      "anchor": [
+        2.5513999462127686,
+        0.6782800555229187,
+        0.3536360263824463
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1492M",
+          "sha256": "c2fa9cb48e9d70d9a180553623df0e8be92c507f323074b8b5bed41b266f47f2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-indicis",
+      "fmaId": "FMA38525",
+      "name": "Right extensor indicis",
+      "sourceName": "right extensor indicis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38525",
+      "bounds": {
+        "min": [
+          -3.076470136642456,
+          -1.3129199743270874,
+          0.45286300778388977
+        ],
+        "max": [
+          -2.29502010345459,
+          0.682570219039917,
+          1.235949993133545
+        ]
+      },
+      "center": [
+        -2.685745120048523,
+        -0.3151748776435852,
+        0.8444065004587173
+      ],
+      "anchor": [
+        -2.7257399559020996,
+        -0.33783018589019775,
+        0.6898800134658813
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1493",
+          "sha256": "b23d7087dbe581fa03e316dfed18f73ba4ccb54b16091d442ac057f9aa9c7b60"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-indicis",
+      "fmaId": "FMA38526",
+      "name": "Left extensor indicis",
+      "sourceName": "left extensor indicis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38526",
+      "bounds": {
+        "min": [
+          2.29502010345459,
+          -1.3129199743270874,
+          0.45286300778388977
+        ],
+        "max": [
+          3.076470136642456,
+          0.682570219039917,
+          1.235949993133545
+        ]
+      },
+      "center": [
+        2.685745120048523,
+        -0.3151748776435852,
+        0.8444065004587173
+      ],
+      "anchor": [
+        2.7257399559020996,
+        -0.33783018589019775,
+        0.6898800134658813
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1493M",
+          "sha256": "67cc3af9eeaf1eecc32d6816dc86f2b7343fdec0be413a9e32313ca49b846d75"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-pollicis-brevis",
+      "fmaId": "FMA38519",
+      "name": "Right extensor pollicis brevis",
+      "sourceName": "right extensor pollicis brevis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38519",
+      "bounds": {
+        "min": [
+          -3.1140201091766357,
+          -0.4156201183795929,
+          0.40904700756073
+        ],
+        "max": [
+          -2.3492300510406494,
+          0.9399499297142029,
+          0.9765300154685974
+        ]
+      },
+      "center": [
+        -2.7316250801086426,
+        0.262164905667305,
+        0.6927885115146637
+      ],
+      "anchor": [
+        -2.735219955444336,
+        0.1987902820110321,
+        0.5419700145721436
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1494",
+          "sha256": "61cfb7481e1f7dea291cf59208719b08c27191156e38ffd25e744918836d957b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-pollicis-brevis",
+      "fmaId": "FMA38520",
+      "name": "Left extensor pollicis brevis",
+      "sourceName": "left extensor pollicis brevis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38520",
+      "bounds": {
+        "min": [
+          2.3492300510406494,
+          -0.4156201183795929,
+          0.40904700756073
+        ],
+        "max": [
+          3.1140201091766357,
+          0.9399499297142029,
+          0.9765300154685974
+        ]
+      },
+      "center": [
+        2.7316250801086426,
+        0.262164905667305,
+        0.6927885115146637
+      ],
+      "anchor": [
+        2.735219955444336,
+        0.1987902820110321,
+        0.5419700145721436
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1494M",
+          "sha256": "13f92c6f30687f4b796bb9f449903d20f46b05a09418005baa8ce730cfd76352"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-pollicis-longus",
+      "fmaId": "FMA38522",
+      "name": "Right extensor pollicis longus",
+      "sourceName": "right extensor pollicis longus",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38522",
+      "bounds": {
+        "min": [
+          -3.1937899589538574,
+          -0.6696301102638245,
+          0.25689902901649475
+        ],
+        "max": [
+          -2.2462799549102783,
+          1.3508899211883545,
+          1.1337499618530273
+        ]
+      },
+      "center": [
+        -2.720034956932068,
+        0.340629905462265,
+        0.695324495434761
+      ],
+      "anchor": [
+        -2.554680109024048,
+        0.2622601389884949,
+        0.5207099914550781
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1495",
+          "sha256": "99a201417061edb3b2adc54fcd2b41eefa81c0e9e31027b43c41c328d1ade4f5"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-pollicis-longus",
+      "fmaId": "FMA38523",
+      "name": "Left extensor pollicis longus",
+      "sourceName": "left extensor pollicis longus",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38523",
+      "bounds": {
+        "min": [
+          2.2462799549102783,
+          -0.6696301102638245,
+          0.25689902901649475
+        ],
+        "max": [
+          3.1937899589538574,
+          1.3508899211883545,
+          1.1337499618530273
+        ]
+      },
+      "center": [
+        2.720034956932068,
+        0.340629905462265,
+        0.695324495434761
+      ],
+      "anchor": [
+        2.554680109024048,
+        0.2622601389884949,
+        0.5207099914550781
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1495M",
+          "sha256": "b60c5e22a80aaab2f77c88357babc1ae22bdec2d51ee7a4eef8413ffd73b0a8e"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-carpi-radialis",
+      "fmaId": "FMA38460",
+      "name": "Right flexor carpi radialis",
+      "sourceName": "right flexor carpi radialis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38460",
+      "bounds": {
+        "min": [
+          -2.7211098670959473,
+          -0.19302979111671448,
+          0.2086769938468933
+        ],
+        "max": [
+          -1.8436000347137451,
+          2.5747997760772705,
+          0.8640600442886353
+        ]
+      },
+      "center": [
+        -2.282354950904846,
+        1.190884992480278,
+        0.5363685190677643
+      ],
+      "anchor": [
+        -2.2227001190185547,
+        1.189719796180725,
+        0.6487900018692017
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1496",
+          "sha256": "8e83c638e2353bb8ba65547f4b846d89a1f393c4761806faf8e09970c9b6b6bf"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-carpi-radialis",
+      "fmaId": "FMA38461",
+      "name": "Left flexor carpi radialis",
+      "sourceName": "left flexor carpi radialis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38461",
+      "bounds": {
+        "min": [
+          1.8436000347137451,
+          -0.19302979111671448,
+          0.2086769938468933
+        ],
+        "max": [
+          2.7211098670959473,
+          2.5747997760772705,
+          0.8640699982643127
+        ]
+      },
+      "center": [
+        2.282354950904846,
+        1.190884992480278,
+        0.536373496055603
+      ],
+      "anchor": [
+        2.2227001190185547,
+        1.189719796180725,
+        0.6487900018692017
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1496M",
+          "sha256": "3ee91fd59707361cb9fd6c55fa51c677df1744a779965c987e789e2be52758a2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-digitorum-profundus",
+      "fmaId": "FMA38479",
+      "name": "Right flexor digitorum profundus",
+      "sourceName": "right flexor digitorum profundus",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38479",
+      "bounds": {
+        "min": [
+          -3.0693199634552,
+          -1.3446398973464966,
+          0.18727798759937286
+        ],
+        "max": [
+          -2.0387699604034424,
+          2.1885998249053955,
+          1.3687800168991089
+        ]
+      },
+      "center": [
+        -2.5540449619293213,
+        0.42197996377944946,
+        0.7780290022492409
+      ],
+      "anchor": [
+        -2.501420021057129,
+        0.41374024748802185,
+        0.712090015411377
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1497",
+          "sha256": "e62f8adfa454bee523974952500aa32a16f086b249a434b4bbeabc333878ac39"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-digitorum-profundus",
+      "fmaId": "FMA38480",
+      "name": "Left flexor digitorum profundus",
+      "sourceName": "left flexor digitorum profundus",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38480",
+      "bounds": {
+        "min": [
+          2.0387699604034424,
+          -1.3446398973464966,
+          0.18727798759937286
+        ],
+        "max": [
+          3.0693199634552,
+          2.1885998249053955,
+          1.3687800168991089
+        ]
+      },
+      "center": [
+        2.5540449619293213,
+        0.42197996377944946,
+        0.7780290022492409
+      ],
+      "anchor": [
+        2.501420021057129,
+        0.4137499928474426,
+        0.712090015411377
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1497M",
+          "sha256": "c3d1710b4b9465ab35cd53d18a3f00f38b37340d084c57fed2cb011d585a5013"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-pollicis-longus",
+      "fmaId": "FMA38482",
+      "name": "Right flexor pollicis longus",
+      "sourceName": "right flexor pollicis longus",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38482",
+      "bounds": {
+        "min": [
+          -3.140509843826294,
+          -0.6478399634361267,
+          0.37631797790527344
+        ],
+        "max": [
+          -2.3849499225616455,
+          1.6590899229049683,
+          1.158829927444458
+        ]
+      },
+      "center": [
+        -2.7627298831939697,
+        0.5056249797344208,
+        0.7675739526748657
+      ],
+      "anchor": [
+        -2.6068100929260254,
+        0.48973023891448975,
+        0.6404500007629395
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1498",
+          "sha256": "e0fc87382350f38acb2a5197e83dabb450ba6d823222388c8e169e30c0bbfb94"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-pollicis-longus",
+      "fmaId": "FMA38484",
+      "name": "Left flexor pollicis longus",
+      "sourceName": "left flexor pollicis longus",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38484",
+      "bounds": {
+        "min": [
+          2.3849499225616455,
+          -0.6478399634361267,
+          0.37631797790527344
+        ],
+        "max": [
+          3.140509843826294,
+          1.6590899229049683,
+          1.158829927444458
+        ]
+      },
+      "center": [
+        2.7627298831939697,
+        0.5056249797344208,
+        0.7675739526748657
+      ],
+      "anchor": [
+        2.6068100929260254,
+        0.48973023891448975,
+        0.6404500007629395
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1498M",
+          "sha256": "bca0645db90f8718edda9562da5ef5432d6df06dd4fdf7d5f5ef042d31ed8ca9"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-palmaris-longus",
+      "fmaId": "FMA38463",
+      "name": "Right palmaris longus",
+      "sourceName": "right palmaris longus",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38463",
+      "bounds": {
+        "min": [
+          -2.9061999320983887,
+          -0.6699298024177551,
+          0.216093972325325
+        ],
+        "max": [
+          -1.794279932975769,
+          2.5380005836486816,
+          0.9969199895858765
+        ]
+      },
+      "center": [
+        -2.350239932537079,
+        0.9340353906154633,
+        0.6065069809556007
+      ],
+      "anchor": [
+        -2.270009994506836,
+        0.9094500541687012,
+        0.7016000151634216
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1502",
+          "sha256": "2e033c8fbc77aa1922179eeae6d90075df9360d00882beb9b45b148074f91f8a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-palmaris-longus",
+      "fmaId": "FMA38464",
+      "name": "Left palmaris longus",
+      "sourceName": "left palmaris longus",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38464",
+      "bounds": {
+        "min": [
+          1.7942700386047363,
+          -0.6699298024177551,
+          0.216093972325325
+        ],
+        "max": [
+          2.9061999320983887,
+          2.5380005836486816,
+          0.9969199895858765
+        ]
+      },
+      "center": [
+        2.3502349853515625,
+        0.9340353906154633,
+        0.6065069809556007
+      ],
+      "anchor": [
+        2.270009994506836,
+        0.9094500541687012,
+        0.7016000151634216
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1502M",
+          "sha256": "0a10cb9a85663e719c4ae3536e7d514a1d09c66115656427bad5348da7fe13a8"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-pronator-quadratus",
+      "fmaId": "FMA38454",
+      "name": "Right pronator quadratus",
+      "sourceName": "right pronator quadratus",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38454",
+      "bounds": {
+        "min": [
+          -2.717679977416992,
+          0.20455017685890198,
+          0.5255200266838074
+        ],
+        "max": [
+          -2.2609500885009766,
+          0.7057098150253296,
+          0.7618100047111511
+        ]
+      },
+      "center": [
+        -2.4893150329589844,
+        0.4551299959421158,
+        0.6436650156974792
+      ],
+      "anchor": [
+        -2.4865899085998535,
+        0.46414002776145935,
+        0.6812300086021423
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1503",
+          "sha256": "04adea4b7060a08c9d734ea78156525b3d3983fc1da0601ac151198985e78cfd"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-pronator-quadratus",
+      "fmaId": "FMA38455",
+      "name": "Left pronator quadratus",
+      "sourceName": "left pronator quadratus",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38455",
+      "bounds": {
+        "min": [
+          2.2609500885009766,
+          0.20455017685890198,
+          0.5255100131034851
+        ],
+        "max": [
+          2.717679977416992,
+          0.7057098150253296,
+          0.7618100047111511
+        ]
+      },
+      "center": [
+        2.4893150329589844,
+        0.4551299959421158,
+        0.6436600089073181
+      ],
+      "anchor": [
+        2.486599922180176,
+        0.46414002776145935,
+        0.6812300086021423
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1503M",
+          "sha256": "906e88ed35688a080946d565f157c89fcc50dd6fb0c4304c473cfc1800132266"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-supinator",
+      "fmaId": "FMA38513",
+      "name": "Right supinator",
+      "sourceName": "right supinator",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38513",
+      "bounds": {
+        "min": [
+          -2.540940046310425,
+          1.325339913368225,
+          0.06260600686073303
+        ],
+        "max": [
+          -2.2236099243164062,
+          2.563800096511841,
+          0.405487984418869
+        ]
+      },
+      "center": [
+        -2.3822749853134155,
+        1.944570004940033,
+        0.23404699563980103
+      ],
+      "anchor": [
+        -2.380470037460327,
+        1.9462902545928955,
+        0.22518402338027954
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1505",
+          "sha256": "83c5940f2c6516ecf5b0eb69de5dc0a056177b29f7bc046b94cc20c85460ae46"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-supinator",
+      "fmaId": "FMA38514",
+      "name": "Left supinator",
+      "sourceName": "left supinator",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38514",
+      "bounds": {
+        "min": [
+          2.2236099243164062,
+          1.325339913368225,
+          0.06260600686073303
+        ],
+        "max": [
+          2.540950059890747,
+          2.563800096511841,
+          0.405487984418869
+        ]
+      },
+      "center": [
+        2.3822799921035767,
+        1.944570004940033,
+        0.23404699563980103
+      ],
+      "anchor": [
+        2.380470037460327,
+        1.9462902545928955,
+        0.22518402338027954
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1505M",
+          "sha256": "bfc240c7d0db047b5defe13bad862115bfcd7ec3cb426c40630ed1738c3cd3d5"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:humeral-head-of-right-pronator-teres",
+      "fmaId": "FMA38560",
+      "name": "Humeral head of right pronator teres",
+      "sourceName": "humeral head of right pronator teres",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles-dissection",
+      "nodeName": "FMA38560",
+      "bounds": {
+        "min": [
+          -2.5732102394104004,
+          1.1665197610855103,
+          0.17688697576522827
+        ],
+        "max": [
+          -1.8741799592971802,
+          2.6538000106811523,
+          0.5255300402641296
+        ]
+      },
+      "center": [
+        -2.2236950993537903,
+        1.9101598858833313,
+        0.35120850801467896
+      ],
+      "anchor": [
+        -2.2300100326538086,
+        1.9446502923965454,
+        0.4691610038280487
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1474",
+          "sha256": "589e18d8dd9eac471404fae1035b01476ed0021af1cb2822c8c759164a2a45ba"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:humeral-head-of-left-pronator-teres",
+      "fmaId": "FMA38561",
+      "name": "Humeral head of left pronator teres",
+      "sourceName": "humeral head of left pronator teres",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles-dissection",
+      "nodeName": "FMA38561",
+      "bounds": {
+        "min": [
+          1.8741799592971802,
+          1.1665197610855103,
+          0.17688697576522827
+        ],
+        "max": [
+          2.5732102394104004,
+          2.6538000106811523,
+          0.5255300402641296
+        ]
+      },
+      "center": [
+        2.2236950993537903,
+        1.9101598858833313,
+        0.35120850801467896
+      ],
+      "anchor": [
+        2.2300100326538086,
+        1.9446399211883545,
+        0.4691610038280487
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1474M",
+          "sha256": "441ab2758c6c7f27fc5835edc070c02b2355e5222bf3a65c728853c38b424aa7"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:ulnar-head-of-right-pronator-teres",
+      "fmaId": "FMA38562",
+      "name": "Ulnar head of right pronator teres",
+      "sourceName": "ulnar head of right pronator teres",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles-dissection",
+      "nodeName": "FMA38562",
+      "bounds": {
+        "min": [
+          -2.5631399154663086,
+          1.2774298191070557,
+          0.24059097468852997
+        ],
+        "max": [
+          -2.042649984359741,
+          2.234299898147583,
+          0.4838230013847351
+        ]
+      },
+      "center": [
+        -2.302894949913025,
+        1.7558648586273193,
+        0.36220698803663254
+      ],
+      "anchor": [
+        -2.326889991760254,
+        1.7991100549697876,
+        0.4253399670124054
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1516",
+          "sha256": "62058afdb37b3637c21f7ad15fe681acced1e36c986190a692f1733cb0a79760"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:ulnar-head-of-left-pronator-teres",
+      "fmaId": "FMA38563",
+      "name": "Ulnar head of left pronator teres",
+      "sourceName": "ulnar head of left pronator teres",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles-dissection",
+      "nodeName": "FMA38563",
+      "bounds": {
+        "min": [
+          2.042649984359741,
+          1.2774298191070557,
+          0.24059097468852997
+        ],
+        "max": [
+          2.5631399154663086,
+          2.234299898147583,
+          0.4838230013847351
+        ]
+      },
+      "center": [
+        2.302894949913025,
+        1.7558648586273193,
+        0.36220698803663254
+      ],
+      "anchor": [
+        2.326889991760254,
+        1.7991100549697876,
+        0.4253399670124054
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1516M",
+          "sha256": "f4e663154e28ab0ad13e6c4facce145b50460bf5f2bbdb7d0199867a6d735b84"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:humeral-head-of-right-flexor-carpi-ulnaris",
+      "fmaId": "FMA38617",
+      "name": "Humeral head of right flexor carpi ulnaris",
+      "sourceName": "humeral head of right flexor carpi ulnaris",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles-dissection",
+      "nodeName": "FMA38617",
+      "bounds": {
+        "min": [
+          -2.46451997756958,
+          -0.1844598352909088,
+          0.11169300228357315
+        ],
+        "max": [
+          -1.7782899141311646,
+          2.4833996295928955,
+          0.8657400608062744
+        ]
+      },
+      "center": [
+        -2.1214049458503723,
+        1.1494698971509933,
+        0.4887165315449238
+      ],
+      "anchor": [
+        -2.0889999866485596,
+        1.1641802787780762,
+        0.47693800926208496
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1473",
+          "sha256": "ccab7efb32e7b3cfc21039a138811f2972df5f2d91d23bbdbe63f13354774795"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:humeral-head-of-left-flexor-carpi-ulnaris",
+      "fmaId": "FMA38618",
+      "name": "Humeral head of left flexor carpi ulnaris",
+      "sourceName": "humeral head of left flexor carpi ulnaris",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles-dissection",
+      "nodeName": "FMA38618",
+      "bounds": {
+        "min": [
+          1.7782899141311646,
+          -0.1844598352909088,
+          0.11169300228357315
+        ],
+        "max": [
+          2.46451997756958,
+          2.4833996295928955,
+          0.8657400608062744
+        ]
+      },
+      "center": [
+        2.1214049458503723,
+        1.1494698971509933,
+        0.4887165315449238
+      ],
+      "anchor": [
+        2.0889999866485596,
+        1.1641802787780762,
+        0.47693800926208496
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1473M",
+          "sha256": "d5f425f4b708deeed63146f31f6e399d7acb180c685df4bee45204154c8fb00f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:ulnar-head-of-right-flexor-carpi-ulnaris",
+      "fmaId": "FMA38619",
+      "name": "Ulnar head of right flexor carpi ulnaris",
+      "sourceName": "ulnar head of right flexor carpi ulnaris",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles-dissection",
+      "nodeName": "FMA38619",
+      "bounds": {
+        "min": [
+          -2.295140027999878,
+          0.3047601282596588,
+          -0.026018982753157616
+        ],
+        "max": [
+          -1.8938000202178955,
+          2.4335999488830566,
+          0.6620200276374817
+        ]
+      },
+      "center": [
+        -2.0944700241088867,
+        1.3691800385713577,
+        0.31800052244216204
+      ],
+      "anchor": [
+        -2.0705599784851074,
+        1.3230602741241455,
+        0.30151602625846863
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1518",
+          "sha256": "22abf242ce9d43dd9c6e02ef297b8e5982227a7ec1c7ead965674b92b476bad2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:ulnar-head-of-left-flexor-carpi-ulnaris",
+      "fmaId": "FMA38620",
+      "name": "Ulnar head of left flexor carpi ulnaris",
+      "sourceName": "ulnar head of left flexor carpi ulnaris",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles-dissection",
+      "nodeName": "FMA38620",
+      "bounds": {
+        "min": [
+          1.8938000202178955,
+          0.3047601282596588,
+          -0.026018982753157616
+        ],
+        "max": [
+          2.295140027999878,
+          2.4335999488830566,
+          0.6620200276374817
+        ]
+      },
+      "center": [
+        2.0944700241088867,
+        1.3691800385713577,
+        0.31800052244216204
+      ],
+      "anchor": [
+        2.0705599784851074,
+        1.3230499029159546,
+        0.30151602625846863
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1518M",
+          "sha256": "d3e731fc29ac9b42f06eb0a7c49979c7568813587c2b982e6c948163c02dccb8"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ]
+}

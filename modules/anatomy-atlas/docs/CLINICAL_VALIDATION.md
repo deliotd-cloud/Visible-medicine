@@ -1,5 +1,10 @@
 # Clinical validation checklist
 
+[Forearm attachment relationships](FOREARM_ATTACHMENTS.md): validate the explicit
+bone partners for 42 muscle/head selections, digital numbering, separate FCU
+and pronator-teres heads, extensor-apparatus/ligament continuations and the
+non-bony palmaris-longus insertion. Whole bones are not measured footprints.
+
 [Abdominal branch imaging](ABDOMINAL_BRANCH_IMAGING.md): review 48 draft
 CT/MRI/US placements for 34 retained vessels. Check colic crossings, pancreatic
 arcades, gastric venous variants, grouped hepatic tributaries and epigastric

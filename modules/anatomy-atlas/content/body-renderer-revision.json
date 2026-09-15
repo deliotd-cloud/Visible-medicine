@@ -38,7 +38,7 @@
     },
     {
       "path": "app/arm-attachments.tsx",
-      "sha256": "90c591685afa32bcccb347a64927ea65aae3c8694fe8897e8441e42b1fbf2418"
+      "sha256": "09e128a361d562be1139b7187c56d5f26ff9673a8dc511678757a0c24c49ec34"
     },
     {
       "path": "app/arterial-connections.tsx",
@@ -74,7 +74,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "1773959c49433de178f9f90c9792fec4744b29c2f0168a082b0834d115a0f55d"
+      "sha256": "dca64d24cda3aa120091980b5ab834779a5dee47c1565a8ad213613adb5e054a"
     },
     {
       "path": "app/body-scene.tsx",
@@ -547,6 +547,14 @@
     {
       "path": "content/foot-muscle-imaging.ts",
       "sha256": "80aba36ae5a6dfb3313510f75d414f96c27468d00c912c22b3d87dad5dfa2ba2"
+    },
+    {
+      "path": "content/forearm-attachment-pins.json",
+      "sha256": "480a3bdf5cd98008ae11b13bc02a4d3fb5413b87ae0c7b3e4d2830031e700763"
+    },
+    {
+      "path": "content/forearm-attachments.ts",
+      "sha256": "d5c237f8ce42245e736cfbbb145e98bd9d731d1d782445e7f4efb78774f0bd66"
     },
     {
       "path": "content/forearm-muscle-imaging-pins.json",
@@ -1237,6 +1245,10 @@
       "sha256": "4678ddd09311b67e646004b61cf3b52f207b68678010d39dbe04bb37076ccdd4"
     },
     {
+      "path": "lib/forearm-attachments.ts",
+      "sha256": "e68480e831a40982ce68b4d99bfc51ebef1797c3908971bbf5987e8b8497ca85"
+    },
+    {
       "path": "lib/forearm-clinical-curriculum.ts",
       "sha256": "b32c7853733c8a32dffde18e62b49a4a035612f2199dc8a860f36108d495b0fe"
     },
@@ -1890,7 +1902,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "a7b5b57f77448b2f950f98dda1d657f46c3378a2d6180afbb531d82ec10eeafa"
+      "sha256": "b6e3132a456f5ed2aa4c6d2bca47cffd8c94709b7587e79637021fa1e302aee9"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2081,5 +2093,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "a4cf2e94152d50cb6bdb0d1f827989f4bf83680a912d370f6dfc63a43cff9d9b"
+  "sha256": "e235dab66ca4050a9d12be7dd9b841ffa7dbbcf609fb287f958d8b4b3733e24e"
 }

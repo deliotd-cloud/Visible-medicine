@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { armAttachmentInfo } from '@/lib/arm-attachments';
 import { thighAttachmentInfo } from '@/lib/thigh-attachments';
 import { neckAttachmentInfo } from '@/lib/neck-attachments';
+import { forearmAttachmentInfo } from '@/lib/forearm-attachments';
 import { armAttachmentReference } from '@/content/arm-attachments';
 import { makeStudyLink, type StudySide } from '@/lib/study-links';
 import type { BodyCatalog } from './body-types';
@@ -30,7 +31,8 @@ export function ArmAttachments({
     () =>
       armAttachmentInfo(catalog, region, side, selectedId, disabled) ??
       thighAttachmentInfo(catalog, region, side, selectedId, disabled) ??
-      neckAttachmentInfo(catalog, region, side, selectedId, disabled),
+      neckAttachmentInfo(catalog, region, side, selectedId, disabled) ??
+      forearmAttachmentInfo(catalog, region, side, selectedId, disabled),
     [catalog, region, side, selectedId, disabled],
   );
   if (!info) return null;
@@ -105,6 +107,9 @@ export function ArmAttachments({
         <a href={reference.url} target="_blank" rel="noreferrer">
           {reference.title} ↗
         </a>
+        {'references' in info && info.references.filter(url => url !== reference.url).map((url, index) => (
+          <p key={url}><a href={url} target="_blank" rel="noreferrer">Additional attachment reference {index + 1} ↗</a></p>
+        ))}
       </details>
     </details>
   );
