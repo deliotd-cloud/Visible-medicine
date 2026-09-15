@@ -21,14 +21,19 @@ links. Existing arm/forearm/thigh/leg/neck attachments, inline dissection,
 and shared-module builds pass. No model, dependency, fee, patient data,
 entitlement or clinical approval is added.
 
-This is a source checkpoint, not a hosted rollout. Private website81 remains
-the latest verified deployment from `b71b8fa92f4cd9aa8b7ab695a98ddc91964621ae`.
-The main task's hand/foot checkpoint records GitHub and exact D-drive recovery.
-Next export the newly built shared module through the established generated
-pipeline, check unchanged model inventory/protected delivery, test and publish
-privately. Do not edit generated modules manually. Browser/device acceptance
-and revision-bound radiologist review remain pending. Continue the full Atlas,
-teaching and cleared Didanix Education/light roadmap afterwards.
+The shared regional/whole-body module is now generated from that clean source.
+All 131 model objects and 137 delivery paths match website81 byte-for-byte.
+Other module directories, homepage, navigation, models and entitlements remain
+unchanged. Hand and Foot studies use the existing collapsed panel, also
+available in Whole body. No generated module was edited by hand.
+
+The main task's hand/foot rollout checkpoint records website checks, protected
+delivery, GitHub/D recovery and terminal private-publication evidence separately;
+an export alone does not prove hosted availability. The original source
+checkpoint remains valid. Browser/device acceptance and revision-bound
+radiologist review remain pending. Continue the full Atlas, teaching and cleared
+Didanix Education/light roadmap afterwards; do not repeat completed MRI QA or
+the unchanged browser-runtime failure.
 
 ## 15 September — lower-leg attachment source milestone
 
