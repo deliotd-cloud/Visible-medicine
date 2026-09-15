@@ -20,14 +20,19 @@ checks, body/shoulder review checks, TypeScript and both Atlas/shared-module
 builds pass. All 9,909 core teaching topics and source geometry remain unchanged.
 No scans, fees, dependencies, entitlements or clinical approvals are added.
 
-This is saved source, not yet a hosted rollout. Private website82 remains live
-from `a60c5bc99c53ed81ff0a2f62594dabaae403ea5b`. The main task's trunk
-source checkpoint records GitHub and exact D recovery. Next export the already
-built shared module from clean Atlas source through the existing generated
-pipeline, verify unchanged model inventory/protected delivery, test and publish
-privately. Do not edit generated modules manually. Browser/device acceptance
-and revision-bound radiologist sign-off remain pending; continue the full Atlas,
-teaching and cleared Didanix Education/light roadmap afterwards.
+The shared regional/whole-body module is now generated from that clean source.
+All 131 model objects and 137 delivery paths match website82 byte-for-byte.
+Other module directories, homepage, navigation, meshes and entitlements remain
+unchanged. Trunk studies appear in the existing compact attachment panel in
+Thorax, Abdomen, Spine and Whole body according to source membership.
+
+The main task's trunk rollout checkpoint records website checks, protected
+delivery, GitHub/D recovery and terminal private-publication evidence separately;
+an export alone does not establish hosted availability. The source checkpoint
+remains valid. Browser/device acceptance and revision-bound radiologist sign-off
+remain pending. Continue the full Atlas, teaching and cleared Didanix
+Education/light roadmap; do not repeat completed MRI QA or the unchanged
+browser-runtime failure.
 
 ## 15 September — hand/foot attachment source checkpoint
 

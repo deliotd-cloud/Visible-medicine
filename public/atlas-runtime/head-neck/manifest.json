@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "sourceCommit": "4a9a5d5a5b444522b4acd2586f71b17a42d69672",
+  "sourceCommit": "1bf124a905772ea5854aa364f24b211f4e7e9ac3",
   "region": "head-neck",
   "sourceVersion": "4.0",
   "regionalIds": [
@@ -10913,7 +10913,7 @@
     {
       "path": "index.html",
       "bytes": 914,
-      "sha256": "5bf59e372a5ede47abb5e3f0a08451b4437891293af5530890186ac2a033e92f"
+      "sha256": "ee21bceaa085445a9211f34bbc545ba55cd25180be457801118ee18a628fc7bd"
     },
     {
       "path": "BUNDLED_NOTICES.txt",
@@ -10927,13 +10927,13 @@
     },
     {
       "path": "source-inputs.json",
-      "bytes": 76096,
-      "sha256": "c4e8056a8dfbf6b8665dc92d011396280cd9c0efd652f394a4b2f92fcaec813e"
+      "bytes": 76500,
+      "sha256": "ee2ca561f29126eebb9a79c335b8fe533f3daf792baccf905f7b009a2023d680"
     },
     {
-      "path": "assets/abdominal-wall-study-DjwV6YBx.js",
+      "path": "assets/abdominal-wall-study-CCWSYsGm.js",
       "bytes": 44598,
-      "sha256": "dfbaa84a5c62fd4da94850b474354421db6a46b5ed7b6d2471c25aa2595116b0"
+      "sha256": "4ce03a0ca480556343db8627413f0ae07503de5848a8e84721e20a56845a8359"
     },
     {
       "path": "assets/anatomy-load-state-LfHAQoB7.js",
@@ -10941,9 +10941,9 @@
       "sha256": "08da2c433d3695ac87ccef46c03e114a39946445f4daad04ba37cf4971b15b79"
     },
     {
-      "path": "assets/back-layers-study-D_lqZf_-.js",
+      "path": "assets/back-layers-study-D5d_pxVx.js",
       "bytes": 74888,
-      "sha256": "ed4c5deb4df0dc8258608330f89a15070e39a14a319920f2f3383116f1b10bf6"
+      "sha256": "1797d1e4e8ef5eeb6d438560495378d6c8605a56d2f7d37f8c033d3befc15414"
     },
     {
       "path": "assets/body-scene-CGUv3Rnc.css",
@@ -10961,9 +10961,9 @@
       "sha256": "87c31bfe8303461a8afbde6251bb48df5a77645f774c8ef3ac48c292a30ec5c8"
     },
     {
-      "path": "assets/cutaway-controls-DPF2YImY.js",
+      "path": "assets/cutaway-controls-CoCtwuSG.js",
       "bytes": 4914,
-      "sha256": "42dfcfbd5ec7ace50b0c25a8fcb2c4675015d6454bf5c37283798dc4d88e0dcf"
+      "sha256": "ab813db319226073fb4aa4b180e48d7dcee52e0ad10fb873e93b968a53a8d39e"
     },
     {
       "path": "assets/eye-layers-B3CQEl2o.css",
@@ -10971,29 +10971,29 @@
       "sha256": "58f9322c6a028c52be262400337233bf1eb9350ca31aef05830a1df107bbd343"
     },
     {
-      "path": "assets/eye-layers-C3VcxS79.js",
+      "path": "assets/eye-layers-D8mXGlnv.js",
       "bytes": 11502,
-      "sha256": "8c56ff2995e80a093c157552d07fdbb11e05e4ccf73150c95d46ef8292211a33"
+      "sha256": "1ffaabc131081d9548955ac847640f10abf66a8a573fdf328e0dc44c5072a408"
     },
     {
-      "path": "assets/hra-pelvis-study-gfcZXYzb.js",
+      "path": "assets/hra-pelvis-study-CY7VcSI6.js",
       "bytes": 92800,
-      "sha256": "76fd8978396917efee2000f6782d14075e61b70f425427029c7da1ee995b34be"
+      "sha256": "5bd726050c3c84f760db80bf11ea4d4d9bde900def757488cbb03248a6725e54"
     },
     {
-      "path": "assets/hra-renal-study-Bf_JjuUz.js",
+      "path": "assets/hra-renal-study-Qr2G3bub.js",
       "bytes": 116598,
-      "sha256": "8fa3f67fcbff67ab69a1d296c37309d1eb5b8a8f634add72cade7d27d0127af2"
+      "sha256": "d39c43a2388e6f20338eee4f3cd67fbe96d8b8c308e3e95f142a464dec78c784"
     },
     {
-      "path": "assets/independent-study-navigation-DqlW7Hdc.js",
+      "path": "assets/independent-study-navigation-rn5XNnS5.js",
       "bytes": 2627,
-      "sha256": "432fba709732460f6d8a560abbba37b79c93c0b785c7ff6b498bd1608e3854c4"
+      "sha256": "1de85336000ab5498a0416ed2d63652032119f0fe3d20f4b2d773e7a3f6ad7ca"
     },
     {
-      "path": "assets/index-BfwZkp7Z.js",
-      "bytes": 1806172,
-      "sha256": "80003a6a014cb26fcfa8cf8bed4e6cca3b6f2171c289e8bbbde8ca9065afe9fc"
+      "path": "assets/index-D1ZuR5-R.js",
+      "bytes": 1907683,
+      "sha256": "5134e81ab9832772d520c86ba884b4365ddb1b7b825a5f5cd18b37851bc84e90"
     },
     {
       "path": "assets/index-Z8eNETPx.css",
@@ -11006,9 +11006,9 @@
       "sha256": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021"
     },
     {
-      "path": "assets/slider-BdEpkWPV.js",
-      "bytes": 3819908,
-      "sha256": "39742924cf32eafd6367c0dcde21adca2b3532d454488c5611dbb16fe63b85d4"
+      "path": "assets/slider-D0T1u4EB.js",
+      "bytes": 3819917,
+      "sha256": "6def074c1ff142131fdd152516190af4e21f312f78b6256ee5ba33936c8b1917"
     },
     {
       "path": "assets/slider-VO9b3koS.css",
@@ -11016,24 +11016,24 @@
       "sha256": "557f7401b9e23cc294cec02d26ccc1b01d19269ffeb4f1e2565ae018ae5e996d"
     },
     {
-      "path": "assets/um-knee-study-D9SH2fJ-.js",
-      "bytes": 517069,
-      "sha256": "8dd3246a68a067ec65d987281133d79d6c5067be932e13c3917ac22bb75d9152"
-    },
-    {
       "path": "assets/um-knee-study-DE_VvcAw.css",
       "bytes": 3863,
       "sha256": "7f1d701756afcca6313a1ea8b3bb47f578ae6066d9d6750576f1003f9c65da3b"
     },
     {
-      "path": "assets/um-limb-study-DezvEU6V.js",
-      "bytes": 2602,
-      "sha256": "9c6ab7fb17b7018e8e8802098a9a5b802647d6d82882aff80db45cbc4cfc0cd9"
+      "path": "assets/um-knee-study-wu8zdLrH.js",
+      "bytes": 517063,
+      "sha256": "81123d4172eb29975a40942ee032398a67e82a459ac2219dd4e712bfb609dd6d"
     },
     {
-      "path": "assets/ventricles-m81COFeF.js",
-      "bytes": 228943,
-      "sha256": "d13070d10d77962ec9d2df4da980f21cb2aad41516f074c63f65cdfcf4abfa89"
+      "path": "assets/um-limb-study-DPB2511f.js",
+      "bytes": 2602,
+      "sha256": "6af250111bdb6b80a30e96e4232e5df7536ca0ada2e131adb3bcbbf61663cc6e"
+    },
+    {
+      "path": "assets/ventricles-dZ2sAVlB.js",
+      "bytes": 228935,
+      "sha256": "2bf6f67a54e91dd7fcf552aabbbe14b72c24f38334bcdaa9c08ee41f0ab0dc0c"
     },
     {
       "path": "assets/ventricles-zpa0fhqb.css",
@@ -11712,8 +11712,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "bytes": 143138,
-      "sha256": "50ef021d16cc6dcf14ee6aa8d8a1ad9966e9e0bded6e8f3c8dc8616d1f9ebdc4"
+      "bytes": 143788,
+      "sha256": "3d5f4416b04476ddba64bd4c0085d45a951e4d4ba7d4fb88a584cea890cbeefb"
     },
     {
       "path": "LICENSES/CC-BY-4.0.txt",
