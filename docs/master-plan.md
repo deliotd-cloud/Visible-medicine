@@ -2,6 +2,33 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 15 September — trunk attachment source checkpoint
+
+Atlas `1bf124a905772ea5854aa364f24b211f4e7e9ac3` extends the compact
+attachment panel across all 23 existing trunk-curriculum concepts: 38 retained
+muscle/part/group selections, 54 bone and 14 costal-cartilage partners. It does
+not claim complete trunk musculature. Cartilage is selected as cartilage;
+unresolved intercostal/spinal slips do not acquire guessed bone pairs, and
+composite midline entries are not split by Left/Right. Pectoral/trapezius parts,
+diaphragm tendon/crural limits and partial erector-spinae mappings stay explicit.
+
+181 reversible plan checks, 47 regional continuation cases, 54 actual host
+links, 854 altered-source rejections, 81 panel renders, 303 partner-button
+callbacks and 76 parent handlers pass. Twelve original bundles/106 identities
+are pinned. Existing attachment suites, inline dissection, 33,444 content
+checks, body/shoulder review checks, TypeScript and both Atlas/shared-module
+builds pass. All 9,909 core teaching topics and source geometry remain unchanged.
+No scans, fees, dependencies, entitlements or clinical approvals are added.
+
+This is saved source, not yet a hosted rollout. Private website82 remains live
+from `a60c5bc99c53ed81ff0a2f62594dabaae403ea5b`. The main task's trunk
+source checkpoint records GitHub and exact D recovery. Next export the already
+built shared module from clean Atlas source through the existing generated
+pipeline, verify unchanged model inventory/protected delivery, test and publish
+privately. Do not edit generated modules manually. Browser/device acceptance
+and revision-bound radiologist sign-off remain pending; continue the full Atlas,
+teaching and cleared Didanix Education/light roadmap afterwards.
+
 ## 15 September — hand/foot attachment source checkpoint
 
 Atlas `4a9a5d5a5b444522b4acd2586f71b17a42d69672` adds compact attachment
