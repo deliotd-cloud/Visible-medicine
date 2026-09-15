@@ -2,7 +2,30 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
-## 14 September — exploratory explosion and inline regional dissection
+## 15 September — resumed abdominal branch teaching
+
+Atlas `e8350cc87eb019a35148d5cc85af343ab30b4721` completes the preserved
+34-vessel abdominal draft: 48 CT/MRI/US placements (34/7/7), with exact identity
+bindings and 24 factual reading references. The other 9,861 topics, source
+geometry, recipes and compact Explore/Dissect interface remain unchanged.
+Twenty-seven MRI and 27 US topics in this batch remain pending, not filled
+with generic text. Clinical review remains revision-bound and absent.
+
+All 48 actual note renders, 912 altered-source/topic rejections, 1,101 body
+schemas and five source bundles pass. Previous thoracic/central vessel,
+33,444 historical content, 235 review and current body-review checks pass;
+TypeScript, Atlas build and shared-module build pass. Nine stale shoulder
+export revision fields were refreshed to the already-current display document;
+all shoulder teaching and approvals are unchanged. Website source/export,
+GitHub/D recovery and private publication evidence are recorded in the main
+task's abdominal-branch checkpoint. No scans, assets, dependencies, fees or
+entitlement changes. Linked publication access is not image reuse clearance.
+
+Continue the full roadmap: remaining substantive anatomy/dissection and modality
+teaching, cleared Education links, device/security/release and radiologist gates.
+Native MRI QA is complete; do not restart it or change specialist CT-head masks.
+
+## 14 September — exploratory explosion and inline regional dissection (detail)
 
 Atlas `9af65e68e1181fd1e7b12c6c74c4319ca244170e` implements the owner's
 revised interaction. Explore includes separation styles, hide/fade, systems,

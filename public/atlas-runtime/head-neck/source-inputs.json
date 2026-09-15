@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "687953d26da9b01dbd0d1f74d987714780cee3fb07af1e0076de1c2d8514a07e"
+    "sha256": "24fe5843a9cafb156527f7911faa6ba8ef65911f49c53495d98095cfa9ce5f83"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "348b29a72d272df42e3d00e19b39758bd73cb87af95a0cd4797f5cf2cd4064f3"
+    "sha256": "fc1b454fc016b8697c7e00749e29077615ded821972b7100747a466bf50dba31"
   },
   {
     "path": "app/body-explorer.css",
@@ -398,6 +398,14 @@
   {
     "path": "content/abdominal-arterial.ts",
     "sha256": "8d3adf0135a17a01281b5cbdf3d9cbd62167849043c6bf4948382f8cb8956ec1"
+  },
+  {
+    "path": "content/abdominal-branch-imaging-pins.json",
+    "sha256": "735ff50192908a217378920c0f2875b83611ab2d579e41d9a75ea2b6fab370e1"
+  },
+  {
+    "path": "content/abdominal-branch-imaging.ts",
+    "sha256": "ec3c59407eb763814afa4a9bd749ea801a39931d0dc884fbe294a165fc083d67"
   },
   {
     "path": "content/abdominal-organ-imaging-pins.json",
@@ -982,6 +990,10 @@
   {
     "path": "lib/abdominal-arterial.ts",
     "sha256": "29a81d40909eff2d828e72bda5e2cc8660e51371e602c99cdf05fc1c5e32aa51"
+  },
+  {
+    "path": "lib/abdominal-branch-imaging.ts",
+    "sha256": "c93f1b7ea40b7d2646b51d84632b3388b32b957351370ea78b948808a99631ae"
   },
   {
     "path": "lib/abdominal-organ-clinical-curriculum.ts",
