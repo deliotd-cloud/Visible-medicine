@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "24fe5843a9cafb156527f7911faa6ba8ef65911f49c53495d98095cfa9ce5f83"
+    "sha256": "bc59d44313699c18866679fd1a7b0988d4a1e138fd27cbc0ee20b2bec2d127f6"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -53,7 +53,7 @@
   },
   {
     "path": "app/arm-attachments.tsx",
-    "sha256": "90c591685afa32bcccb347a64927ea65aae3c8694fe8897e8441e42b1fbf2418"
+    "sha256": "09e128a361d562be1139b7187c56d5f26ff9673a8dc511678757a0c24c49ec34"
   },
   {
     "path": "app/arterial-connections.tsx",
@@ -89,7 +89,7 @@
   },
   {
     "path": "app/body-explorer.tsx",
-    "sha256": "1773959c49433de178f9f90c9792fec4744b29c2f0168a082b0834d115a0f55d"
+    "sha256": "dca64d24cda3aa120091980b5ab834779a5dee47c1565a8ad213613adb5e054a"
   },
   {
     "path": "app/body-scene.tsx",
@@ -558,6 +558,14 @@
   {
     "path": "content/foot-muscle-imaging.ts",
     "sha256": "80aba36ae5a6dfb3313510f75d414f96c27468d00c912c22b3d87dad5dfa2ba2"
+  },
+  {
+    "path": "content/forearm-attachment-pins.json",
+    "sha256": "480a3bdf5cd98008ae11b13bc02a4d3fb5413b87ae0c7b3e4d2830031e700763"
+  },
+  {
+    "path": "content/forearm-attachments.ts",
+    "sha256": "d5c237f8ce42245e736cfbbb145e98bd9d731d1d782445e7f4efb78774f0bd66"
   },
   {
     "path": "content/forearm-muscle-imaging-pins.json",
@@ -1330,6 +1338,10 @@
   {
     "path": "lib/foot-vascular-anatomy.ts",
     "sha256": "4678ddd09311b67e646004b61cf3b52f207b68678010d39dbe04bb37076ccdd4"
+  },
+  {
+    "path": "lib/forearm-attachments.ts",
+    "sha256": "e68480e831a40982ce68b4d99bfc51ebef1797c3908971bbf5987e8b8497ca85"
   },
   {
     "path": "lib/forearm-clinical-curriculum.ts",

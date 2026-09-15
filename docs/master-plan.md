@@ -19,13 +19,19 @@ TypeScript and Atlas/shared-module builds pass. Browser automation failed before
 opening a page with a missing runtime-assets path, including one fresh reset;
 no hands-on browser acceptance is claimed. The task-owned preview was stopped.
 
-This website commit is documentation-only. The new runtime export/publication
-is the next step; live website79 retains the preceding abdominal imaging
-release. Preserve the built module for source-bound export. Exact GitHub/D
-recovery is in the main task's forearm-attachment checkpoint. Continue the full
+The generated shared regional/whole-body module is now exported from that exact
+clean Atlas source. All 131 existing model objects and 137 delivery paths are
+byte-identical to the preceding website79 release; only the module runtime,
+source bindings, notices and delivery-manifest revision change. The forearm
+feature is available through the existing collapsed attachment panel in forearm
+and whole-body views. No additional permanent toolbar is introduced.
+
+The main task's forearm rollout checkpoint records website verification, exact
+GitHub/D recovery and terminal private-publication evidence separately. An
+export or successful build alone does not prove it is live. Continue the full
 roadmap and remaining anatomical, usability, clinical and cleared Education
 work; do not repeat completed MRI QA or retry the unchanged browser failure
-as a substitute for progress.
+as a substitute for progress. The previous source-only checkpoint remains valid.
 
 ## 15 September — resumed abdominal branch teaching (detail)
 

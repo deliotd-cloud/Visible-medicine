@@ -1,5 +1,14 @@
 # Third-party notices
 
+## Forearm attachment views — 15 September 2026
+
+Original MIT mappings connect existing draft teaching to 42 retained muscle/head
+selections and 38 unchanged bones. Existing reading references are retained;
+TTUHSC/UAMS were used for factual cross-checks only. No protected prose, figure,
+model, texture, font or new dependency is imported. Existing BodyParts3D credits
+and holds remain. No paid service or mandatory fee.
+See [scope and clinical review](../docs/FOREARM_ATTACHMENTS.md).
+
 ## Abdominal branch imaging — 15 September 2026
 
 Original MIT resolver code and factual drafts add 48 placements to 34 retained
