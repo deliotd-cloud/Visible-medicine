@@ -9,6 +9,7 @@ import { forearmAttachmentInfo } from '@/lib/forearm-attachments';
 import { legAttachmentInfo } from '@/lib/leg-attachments';
 import { acralAttachmentInfo } from '@/lib/acral-attachments';
 import { trunkAttachmentInfo } from '@/lib/trunk-attachments';
+import { hipAttachmentInfo } from '@/lib/hip-attachments';
 import { armAttachmentReference } from '@/content/arm-attachments';
 import { makeStudyLink, type StudySide } from '@/lib/study-links';
 import type { BodyCatalog } from './body-types';
@@ -38,12 +39,13 @@ export function ArmAttachments({
       forearmAttachmentInfo(catalog, region, side, selectedId, disabled) ??
       legAttachmentInfo(catalog, region, side, selectedId, disabled) ??
       acralAttachmentInfo(catalog, region, side, selectedId, disabled) ??
-      trunkAttachmentInfo(catalog, region, side, selectedId, disabled),
+      trunkAttachmentInfo(catalog, region, side, selectedId, disabled) ??
+      hipAttachmentInfo(catalog, region, side, selectedId, disabled),
     [catalog, region, side, selectedId, disabled],
   );
   if (!info) return null;
   const hasBones = info.rows.some(row => 'structures' in row ? row.structures.length > 0 : true);
-  const trunk = 'mappingStatus' in info.relationship;
+  const mapped = 'mappingStatus' in info.relationship;
   const reference =
     'reference' in info ? info.reference : armAttachmentReference;
   const fullHref = !info.completeHere
@@ -53,20 +55,20 @@ export function ArmAttachments({
     <details key={selectedId} className="body-study-tools body-motor-explorer">
       <summary>Muscle attachment relationships</summary>
       <p>
-        {info.selected.name} · {trunk ? 'bone/cartilage and pattern' : hasBones ? 'bony' : 'non-bony'} attachment teaching, not a verified donor
+        {info.selected.name} · {mapped ? 'mapped-structure and pattern' : hasBones ? 'bony' : 'non-bony'} attachment teaching, not a verified donor
         footprint.
       </p>
       <Button className="body-attachment-show" size="sm" variant="outline" onClick={onShow}>
-        {!hasBones ? 'Show selected muscle' : trunk
+        {!hasBones ? 'Show selected muscle' : mapped
           ? 'Show muscle with mapped attachment structures' : info.completeHere
           ? 'Show muscle with attachment bones'
           : 'Show muscle with available attachment bones'}
       </Button>
-      {!hasBones && <p>{trunk
+      {!hasBones && <p>{mapped
         ? 'Attachment levels or parts are unresolved, not non-bony. Show keeps the muscle without substituting guessed partners.'
         : 'These attachments are non-bony. Show keeps the selected muscle without substituting attachment bones.'}</p>}
       {'mappingStatus' in info.relationship && info.relationship.mappingStatus === 'partial' && hasBones && <p>Only mapped partners are shown; unresolved levels and parts are not substituted.</p>}
-      {trunk && info.selected.laterality === 'midline' && <p>This source entry stays whole. Left/Right filters paired partners; it cannot split this muscle surface.</p>}
+      {mapped && info.selected.laterality === 'midline' && <p>This source entry stays whole. Left/Right filters paired partners; it cannot split this muscle surface.</p>}
       {'representation' in info.relationship && info.relationship.representation === 'group' && (
         <p>Group-level relationships only; individual muscles and tendon slips are not separately mapped.</p>
       )}
@@ -75,13 +77,13 @@ export function ArmAttachments({
       )}
       {!info.completeHere && (
         <p>
-          {trunk ? 'Some mapped attachment structures are outside this region.' : 'Some attachment bones are outside this region.'}{' '}
+          {mapped ? 'Some mapped attachment structures are outside this region.' : 'Some attachment bones are outside this region.'}{' '}
           {fullHref && (
             <Link href={fullHref} prefetch={false}>
               Open this muscle in whole body
             </Link>
           )}{' '}
-          then choose Show to see {trunk ? 'the mapped partners; unresolved attachments remain unassigned.' : 'the complete bony relationship set.'}
+          then choose Show to see {mapped ? 'the mapped partners; unresolved attachments remain unassigned.' : 'the complete bony relationship set.'}
         </p>
       )}
       <ul className="body-motor-targets">
@@ -114,14 +116,14 @@ export function ArmAttachments({
       <details>
         <summary>Scope, limits & reference</summary>
         <p>
-          {trunk ? 'Whole bone/cartilage partners are selected; these are not marked attachment coordinates.' : 'Whole bones are selected; these are not marked attachment coordinates.'}
+          {mapped ? 'Whole mapped structures are selected; these are not marked attachment coordinates.' : 'Whole bones are selected; these are not marked attachment coordinates.'}
           Tendon, fascia, capsule, labral and aponeurotic contributions are not
           exhaustively mapped. No new tissue, simulated motion, tear, or CT/MRI
           registration is generated. Specialist review pending.
         </p>
         <p>
           Show resets separation, cutaway and camera. Dissection Undo restores
-          layers/removals, not camera or system switches. Selecting a bone
+          layers/removals, not camera or system switches. Selecting an attachment structure
           restores it if hidden. Left/Right remains available.
         </p>
         <a href={reference.url} target="_blank" rel="noreferrer">

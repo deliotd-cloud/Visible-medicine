@@ -1,5 +1,15 @@
 # Third-party notices
 
+## Hip and pelvic attachment studies — 15 September 2026
+
+Original compact relationship mappings reuse the existing brief factual
+curriculum and link to TTUHSC and the cited anatomy reading references. No
+publisher prose, table, illustration, scan or dataset is imported. Linked
+StatPearls material retains its separate terms; citation is not a commercial
+reuse grant. No model, dependency, font, texture, paid API or mandatory fee is
+added. Original code/notes retain MIT terms and existing BodyParts3D CC BY 4.0
+notices and source holds remain unchanged. See `docs/HIP_ATTACHMENTS.md`.
+
 ## Trunk attachment studies — 15 September 2026
 
 Original MIT mappings use 38 existing source muscle/part/group selections,

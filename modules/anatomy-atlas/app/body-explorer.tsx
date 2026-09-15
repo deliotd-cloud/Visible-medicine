@@ -137,6 +137,7 @@ import { forearmAttachmentPlan } from '@/lib/forearm-attachments';
 import { legAttachmentPlan } from '@/lib/leg-attachments';
 import { acralAttachmentPlan } from '@/lib/acral-attachments';
 import { trunkAttachmentPlan } from '@/lib/trunk-attachments';
+import { hipAttachmentPlan } from '@/lib/hip-attachments';
 import { arterialPlan } from '../lib/arterial';
 import { VenousDrainage } from './venous-drainage';
 import { venousDrainagePlan } from '../lib/venous-drainage';
@@ -872,7 +873,8 @@ export default function BodyExplorer({
       forearmAttachmentPlan(catalog, initialRegion, side, selectedId, exam) ??
       legAttachmentPlan(catalog, initialRegion, side, selectedId, exam) ??
       acralAttachmentPlan(catalog, initialRegion, side, selectedId, exam) ??
-      trunkAttachmentPlan(catalog, initialRegion, side, selectedId, exam);
+      trunkAttachmentPlan(catalog, initialRegion, side, selectedId, exam) ??
+      hipAttachmentPlan(catalog, initialRegion, side, selectedId, exam);
     if (!plan) return;
     dispatch(plan.action);
     setSystems((prev) => ({ ...prev, skeleton: true, muscles: true,

@@ -1,5 +1,11 @@
 # Clinical validation checklist
 
+[Hip/pelvic attachments](HIP_ATTACHMENTS.md): review 36 retained selections,
+five bone and two fascial partners, greater/lesser trochanter landmarks, adductor
+portions and shared-tendon paths. IT tract is not a direct TFL-to-tibia tendon.
+Psoas levels, obturator membranes and coccyx/ligament partners remain unmapped.
+FMA19728 is not reassigned. No footprint or pelvic-floor function is approved.
+
 [Trunk attachments](TRUNK_ATTACHMENTS.md): validate 38 retained selections,
 54 bone and 14 cartilage partners, source groups, rib/cartilage numbering,
 head/part distinctions, mediated attachments and variable vertebral ranges.

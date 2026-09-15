@@ -38,7 +38,7 @@
     },
     {
       "path": "app/arm-attachments.tsx",
-      "sha256": "47cf8f0b5fa38dae62d327817ea7060e2aec13f6b3b6126fa7ad6b971742947d"
+      "sha256": "6012ffe547c274f71a4767860e92dbbb2bbcaf5aac042a8f809870aa74752c0e"
     },
     {
       "path": "app/arterial-connections.tsx",
@@ -74,7 +74,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "2387962bf4b765abf1b5e360045613bb1d84a82f76bcb3d1916fae9e26acdd7f"
+      "sha256": "5280cd2f217d3bfb930eb2b05296d5ef0d9a0df1b94d8d80b842a086bc533bf1"
     },
     {
       "path": "app/body-scene.tsx",
@@ -607,6 +607,14 @@
     {
       "path": "content/hepatic-teaching.ts",
       "sha256": "793d49e8e33bc4daed5889b9bc58403a11280d39dd1d6894d0f5ff7c8fc0372d"
+    },
+    {
+      "path": "content/hip-attachment-pins.json",
+      "sha256": "e3c8b45643428cac2232a6b57ae88b5b6c75a01c2f13e2a1b88ea143636bebfe"
+    },
+    {
+      "path": "content/hip-attachments.ts",
+      "sha256": "4d8f59baf42f5c3f63f3fa59a0125f769c4c3ce8921f3f88188f3d79ec725e50"
     },
     {
       "path": "content/hip-imaging-concepts.ts",
@@ -1381,6 +1389,10 @@
       "sha256": "86a6ac1226f1ab496c3dc7aee6279da3ef662a0c3316fee10862cb8ba30fae80"
     },
     {
+      "path": "lib/hip-attachments.ts",
+      "sha256": "fe24425b7a26348cd338652c5d562105ed715fdb20546583a1dcf78679e46566"
+    },
+    {
       "path": "lib/hip-imaging.ts",
       "sha256": "033f69852bf6b66e3a36b4f6399bc7b0e5e03b0ff1382e9f6017ecd308ef88b5"
     },
@@ -1938,7 +1950,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "f65b1328e89b07906bd12e118243e3665f93316779c1a955cb7b856185dd8289"
+      "sha256": "87c3587ff413f99bbed93cb0f93b7f01c72c9718091fe9fda9643fa1024b356c"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2129,5 +2141,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "52f590c7afdbc81d112841b7beaff87b46b21e2db50d0bace3ed6ce16200714b"
+  "sha256": "185522303c56bb5a911965b8852661469b75ffc8825c43971755a1006236ec06"
 }

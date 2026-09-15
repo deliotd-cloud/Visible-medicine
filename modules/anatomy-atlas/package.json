@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "hip-attachments:test": "node scripts/pin-hip-attachments.mjs --check && node scripts/validate-hip-attachments.mjs",
     "forearm-attachments:test": "node scripts/pin-forearm-attachments.mjs --check && node scripts/validate-forearm-attachments.mjs",
     "leg-attachments:test": "node scripts/pin-leg-attachments.mjs --check && node scripts/validate-leg-attachments.mjs",
     "acral-attachments:test": "node scripts/pin-acral-attachments.mjs --check && node scripts/validate-acral-attachments.mjs",
