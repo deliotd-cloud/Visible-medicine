@@ -1,5 +1,26 @@
 # Third-party notices
 
+## Corpus spongiosum source and penile candidate audit — 15 September 2026
+
+BodyParts3D, © The Database Center for Life Science (DBCLS), licensed under
+Creative Commons Attribution 4.0 International. Official version 4.0 IS-A
+FJ3133 is converted to a single source-preserved GLB: existing source-to-scene
+transform, exact-coordinate vertex indexing, computed normals and Float32
+storage; no smoothing, repair or invented continuation. FJ3132/FJ3134 remain
+unchanged offline audit evidence, not runtime models. Retain these credits,
+the licence and original-source links with distributions and derivatives.
+Commercial use is permitted subject to CC BY 4.0; no exclusivity is claimed.
+
+- Source: https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/README_e.html
+- Licence: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+- Terms: https://creativecommons.org/licenses/by/4.0/
+- Scope and exact source hashes: ../docs/CORPUS_SPONGIOSUM.md
+
+NCI SEER Training supplies a factual reading reference only; no illustration,
+article passage, scan or dataset is copied. Original code and brief teaching
+drafts retain MIT terms. No dependency, font, texture, paid API or mandatory
+asset fee is added. Source licence and clinical approval are distinct.
+
 ## Hip and pelvic attachment studies — 15 September 2026
 
 Original compact relationship mappings reuse the existing brief factual

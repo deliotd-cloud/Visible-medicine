@@ -1,5 +1,13 @@
 # Clinical validation checklist
 
+[Corpus spongiosum bulb/shaft](CORPUS_SPONGIOSUM.md): verify donor-specific
+orientation, bulb/shaft extent, urethral relationship and missing glans boundary.
+Closed oriented topology does not prove anatomy, absence of self-intersection,
+urethral enclosure or physiological function. FJ3132 cavernous-body and FJ3134
+glans originals have duplicate faces/detached components and remain offline.
+Review the three brief drafts; six other topics remain pending. No imaging
+registration, examination finding, intervention or clinical approval is supplied.
+
 [Hip/pelvic attachments](HIP_ATTACHMENTS.md): review 36 retained selections,
 five bone and two fascial partners, greater/lesser trochanter landmarks, adductor
 portions and shared-tendon paths. IT tract is not a direct TFL-to-tibia tendon.

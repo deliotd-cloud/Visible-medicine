@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "corpus-spongiosum:test": "node scripts/pin-corpus-spongiosum-baseline.mjs --check && node scripts/export-corpus-spongiosum.mjs --check && node scripts/validate-corpus-spongiosum.mjs",
     "hip-attachments:test": "node scripts/pin-hip-attachments.mjs --check && node scripts/validate-hip-attachments.mjs",
     "forearm-attachments:test": "node scripts/pin-forearm-attachments.mjs --check && node scripts/validate-forearm-attachments.mjs",
     "leg-attachments:test": "node scripts/pin-leg-attachments.mjs --check && node scripts/validate-leg-attachments.mjs",

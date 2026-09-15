@@ -1,5 +1,12 @@
 # Audited-source implementation — 11 September 2026
 
+Current checkpoint, 15 September: [corpus spongiosum bulb/shaft source](CORPUS_SPONGIOSUM.md)
+adds original FJ3133. The regenerated ledger has 1,102 root selections, 1,789
+referenced source IDs and 365 review-queue pieces. All 54 formal holds remain.
+FJ3132/FJ3134 remain review-required candidates, not new formal holds or runtime
+selections. Older counts below describe historical checkpoints; source-file
+coverage does not measure anatomical completeness.
+
 Latest evidence follow-up, 12 September: original IS-A and PART-OF files FJ1662,
 FJ1663 and FJ1692 have matching ordered vertex coordinates and face indices.
 Their byte hashes differ, so file identity, normals/materials, anatomical naming

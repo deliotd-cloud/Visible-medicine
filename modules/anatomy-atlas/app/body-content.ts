@@ -102,6 +102,7 @@ import { elbowArteryLesson } from '../lib/elbow-arteries';
 import { circumflexFemoralLesson } from '../lib/circumflex-femoral';
 import { cranialArteryLesson } from '../lib/cranial-arteries';
 import { deferentDuctLesson } from '../lib/deferent-ducts';
+import { corpusSpongiosumLesson } from '../lib/corpus-spongiosum';
 import { inferiorEpigastricLesson } from '../lib/inferior-epigastric-vessels';
 import { pelvicVeinLesson } from '../lib/pelvic-veins';
 import { limbicLandmarkLesson } from '../lib/limbic-landmarks';
@@ -214,6 +215,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (upperVesselImaging) return upperVesselImaging;
   const thyroid = inferiorThyroidLesson(s, tab);
   const deferent = deferentDuctLesson(s, tab);
+  const spongiosum = corpusSpongiosumLesson(s, tab);
+  if (spongiosum) return spongiosum;
   if (deferent) return deferent;
   if (thyroid) return thyroid;
   const genicular = genicularArteryLesson(s, tab);

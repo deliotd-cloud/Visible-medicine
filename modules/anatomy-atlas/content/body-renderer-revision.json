@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "b8e4a232630e744b54a6a86a0522b13c80e31bbe9c7511cdd48bed2c1709db16"
+      "sha256": "9b570afb82f6396e6e4c49b94592e56496cf88cb5dbe013c673e76e047921e9e"
     },
     {
       "path": "app/body-explorer.css",
@@ -1086,7 +1086,7 @@
     },
     {
       "path": "lib/body-display-catalog.ts",
-      "sha256": "69b28c56f29a7d7fac2a8de8c2910ba6b922f4992896932b847e70dfed2907aa"
+      "sha256": "7dc30f26c59655d222025d33f4346bd266d6ce63c4082210790786c33e56f46a"
     },
     {
       "path": "lib/body-source-additions.ts",
@@ -1179,6 +1179,10 @@
     {
       "path": "lib/content-types.ts",
       "sha256": "47ac24cbf05c1061238305589df148e3849265e33c728fce4bdc9c6912e4c3a6"
+    },
+    {
+      "path": "lib/corpus-spongiosum.ts",
+      "sha256": "c835a22f1c4ee250c94987b6703d032d97b930bf150976f4a3bfaa18268256f3"
     },
     {
       "path": "lib/cranial-arteries.ts",
@@ -1950,7 +1954,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "87c3587ff413f99bbed93cb0f93b7f01c72c9718091fe9fda9643fa1024b356c"
+      "sha256": "f37fb02dcdfbf29f93e3e519ac1e1c47ca809999ee328a24d80956fa66635441"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1987,6 +1991,10 @@
     {
       "path": "public/models/bodyparts3d/collicular-brachia/catalog.json",
       "sha256": "a607dbbdae16aff65fa35c65e181fe0aa828b3e4d09b10ba2a851d46a0a4e9d0"
+    },
+    {
+      "path": "public/models/bodyparts3d/corpus-spongiosum/catalog.json",
+      "sha256": "edfe15182492244336b7cbddad0762f80e2e282e871f710c88afd6246453ce23"
     },
     {
       "path": "public/models/bodyparts3d/cranial-arteries/catalog.json",
@@ -2141,5 +2149,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "185522303c56bb5a911965b8852661469b75ffc8825c43971755a1006236ec06"
+  "sha256": "2d0607e52e02afc82542c01a7fdd483bd8b8c1317056efd7198d6aa4d5b90f94"
 }

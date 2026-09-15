@@ -18,6 +18,7 @@ import { addSubscapularArteries } from './subscapular-arteries.ts';
 import { addCircumflexFemoralBranches } from './circumflex-femoral.ts';
 import { addCranialArteries } from './cranial-arteries.ts';
 import { addElbowArteries } from './elbow-arteries.ts';
+import { addCorpusSpongiosum } from './corpus-spongiosum.ts';
 
 const canonical = (value: unknown): string => {
   if (Array.isArray(value)) return `[${value.map(canonical).join(',')}]`;
@@ -73,7 +74,7 @@ export function bodyDisplayCatalog(catalog: BodyCatalog): BodyCatalog {
       ),
     ),
   );
-  return addElbowArteries(addCranialArteries(addCircumflexFemoralBranches(addSubscapularArteries(addLimbicLandmarks(addPelvicVeins(addInferiorEpigastricVessels(addDeferentDucts(addInferiorThyroidArteries(display)))))))));
+  return addCorpusSpongiosum(addElbowArteries(addCranialArteries(addCircumflexFemoralBranches(addSubscapularArteries(addLimbicLandmarks(addPelvicVeins(addInferiorEpigastricVessels(addDeferentDucts(addInferiorThyroidArteries(display))))))))));
 }
 
 function applyDisplayCorrection(

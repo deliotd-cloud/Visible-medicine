@@ -1,17 +1,20 @@
 import assert from 'node:assert/strict';
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-import { bodyDisplayCatalog } from '../lib/body-display-catalog.ts';
-import {
-  anatomySearchAliases,
-  structureSearchAliases,
-  normalizeAnatomySearch,
-  anatomySearchWordMatches,
-} from '../lib/anatomy-search.ts';
-import {
-  atlasSearchIndex,
+import { build } from './workspace-test-build.mjs';
+const compiled = await build({
+  stdin: {
+    contents: "export * from './lib/body-display-catalog'; export * from './lib/anatomy-search'; export * from './lib/atlas-navigation';",
+    resolveDir: process.cwd(),
+    loader: 'ts',
+  },
+  bundle: true, write: false, platform: 'node', format: 'esm',
+});
+const {
+  bodyDisplayCatalog, anatomySearchAliases, structureSearchAliases,
+  normalizeAnatomySearch, anatomySearchWordMatches, atlasSearchIndex,
   filterAtlasSearch,
-} from '../lib/atlas-navigation.ts';
+} = await import('data:text/javascript;base64,' + Buffer.from(compiled.outputFiles[0].text).toString('base64'));
 const bytes = await readFile(
   'public/models/bodyparts3d/full-body/catalog.json',
 );
@@ -135,6 +138,8 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)])
       ['vas deferens', ['FMA19235', 'FMA19236']],
       ['left ductus deferens', ['FMA19236']],
       ['right vas deferens', ['FMA19235']],
+      ['corpus spongiosum', ['FMA19617']],
+      ['FMA19617', ['FMA19617']],
       ['---', []],
       ['<script>no-result', []],
     ]) {
