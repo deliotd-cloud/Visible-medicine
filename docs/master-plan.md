@@ -2,6 +2,34 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 15 September — hip/pelvic attachment source checkpoint
+
+Atlas `4516a19b5f61b0f3118786e87ce70c831e5c10d9` adds compact studies for
+34 remaining thigh-curriculum selections and both coccygeus selections. All
+54 current thigh-curriculum selections now have attachment controls; this is
+not complete hip or pelvic-floor anatomy. Five bones and two existing IT-tract
+selections are mapped. Fascia stays connective tissue, not a direct TFL-tibia
+tendon. Psoas levels, obturator membranes and coccyx/ligament partners remain
+explicitly unmapped; uncertain FMA19728 is not reassigned.
+
+Seven original bundles/43 identities are pinned. 188 reversible plans, four
+regional continuations, 36 actual host links, 350 changed-source rejections,
+94 panel renders, 192 partner callbacks and 72 parent handlers pass. Existing
+attachment suites, inline dissection, 33,444 content checks, body/shoulder
+review checks, TypeScript and both Atlas/shared-module builds pass. All 9,909
+core teaching topics and source geometry remain unchanged.
+
+Private website83 remains the trunk release. The hip runtime is built but not
+yet exported or published; do not infer hosted availability from this source
+checkpoint. Next roll out the clean shared module through the generated/private
+delivery pipeline, preserving the 131 models/137 paths and owner-only audience.
+Record actual publication, GitHub and verified D recovery separately.
+
+No scan, paid service, entitlement or clinical approval is added. Browser/device
+acceptance and revision-bound radiologist sign-off remain pending. Continue the
+full Atlas, teaching and cleared Didanix Education/light roadmap afterwards;
+do not repeat completed MRI QA or the unchanged browser-runtime failure.
+
 ## 15 September — trunk attachment source checkpoint
 
 Atlas `1bf124a905772ea5854aa364f24b211f4e7e9ac3` extends the compact
