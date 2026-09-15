@@ -2,6 +2,34 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 15 September — hand/foot attachment source checkpoint
+
+Atlas `4a9a5d5a5b444522b4acd2586f71b17a42d69672` adds compact attachment
+views for all 20 primary hand and 36 primary foot muscle/head/group selections,
+linking 60 existing bones across 28 concepts. The existing collapsed panel and
+reversible visibility controls are reused; no extra toolbar or pop-out. Grouped
+hand muscles stay grouped, foot lumbricals remain individual and non-bony-only
+attachments show the muscle without substituting bones. Head-specific FHB
+sesamoid pathways remain qualified: unidentified grouped sesamoids are not
+assigned to a head. Source geometry and all 9,909 core topics are unchanged.
+
+Eight original bundles and 116 source identities are pinned. Checks pass for
+224 reversible plans, 818 corrupt-catalogue rejections, 112 component renders,
+252 bone-button callbacks, 112 actual parent handlers and 56 host continuation
+links. Existing arm/forearm/thigh/leg/neck attachments, inline dissection,
+33,444 content checks, body/shoulder review checks, TypeScript and both Atlas
+and shared-module builds pass. No model, dependency, fee, patient data,
+entitlement or clinical approval is added.
+
+This is a source checkpoint, not a hosted rollout. Private website81 remains
+the latest verified deployment from `b71b8fa92f4cd9aa8b7ab695a98ddc91964621ae`.
+The main task's hand/foot checkpoint records GitHub and exact D-drive recovery.
+Next export the newly built shared module through the established generated
+pipeline, check unchanged model inventory/protected delivery, test and publish
+privately. Do not edit generated modules manually. Browser/device acceptance
+and revision-bound radiologist review remain pending. Continue the full Atlas,
+teaching and cleared Didanix Education/light roadmap afterwards.
+
 ## 15 September — lower-leg attachment source milestone
 
 Atlas `e581676c3cef073412c5d783fb25698d8679fa88` extends the existing compact
