@@ -2,6 +2,36 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 15 September — craniofacial organ imaging checkpoint
+
+Atlas `7accc5eec0168eabf66340ad1dd07ecf8edea4d6` adds 36 introductory imaging
+placements across nine retained pituitary, eyeball, lacrimal and submandibular/
+sublingual gland selections. Nineteen distinct short notes cover CT/MRI
+orientation and ultrasound/plain-film limitations in the existing tabs. No new
+control, model, image, dependency, fee or clinical approval.
+
+The original corrected right eye remains distinct from its archived predecessor,
+despite their shared ID. All nine bindings and three original bundles are pinned.
+684 source/topic rejection cases, 36 actual React note renders, 1,102 exported
+content records and all 9,882 unrelated topic slots/shoulder teaching/recipes are
+verified. Corpus-spongiosum preservation, 33,444 content checks, body review,
+TypeScript and both Atlas/shared-module builds pass. Exact factual references,
+word budgets, rights boundaries and radiologist review requirements are recorded
+in Atlas `docs/CRANIOFACIAL_ORGAN_IMAGING.md`.
+
+This is source-only. Website84 still serves the hip/pelvic attachment release.
+The preceding corpus-spongiosum GLB must be staged and verified through the
+authenticated model-delivery flow before activating the combined website
+export. Existing 131 models/137 delivery paths, homepage, navigation and access
+rules are unchanged. GitHub/D recovery evidence is recorded in the main
+workspace checkpoint; builds alone do not establish hosted availability.
+
+Continue the remaining regional imaging/clinical teaching and anatomy work,
+alongside verified delivery when available. Keep the full goal, Didanix
+Education/light, independent case/Atlas/lecture rights and revision-bound
+radiologist sign-off. Do not restart completed MRI QA or retry unchanged CUA
+failure. Original scans and masks remain untouched.
+
 ## 15 September — bounded corpus spongiosum source checkpoint
 
 Atlas `efc5ed08bd300540861161f8f823aedb359a789d` adds one original
