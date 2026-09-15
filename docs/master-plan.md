@@ -18,12 +18,18 @@ review checks, TypeScript and Atlas/shared-module builds pass. Source pins cover
 74 identities and five original bundles. All teaching remains draft; clinical
 sign-off and browser/device acceptance are not supplied by these tests.
 
-This website change is documentation-only: live private website80 still has the
-preceding forearm runtime. Next export the clean source-bound shared module and
-privately publish it, preserving all registered model objects and entitlements.
-Exact GitHub/D recovery is in the main task's lower-leg checkpoint. Continue
-remaining anatomy/dissection, teaching and cleared Didanix Education/light work.
-Do not restart completed MRI QA or the unchanged browser-runtime failure.
+The shared regional/whole-body module is now generated from that clean Atlas
+source. All 131 model objects and 137 delivery paths match the preceding
+website80 release byte-for-byte. The other three module directories, homepage,
+modality navigation, original models and entitlements are unchanged. The new
+study appears in the existing collapsed panel in Leg and Whole body.
+
+The main task's lower-leg rollout checkpoint records website verification,
+GitHub/D recovery and terminal private-publication evidence separately; source
+export alone does not prove it is live. The original source checkpoint remains
+valid. Continue remaining anatomy/dissection, teaching and cleared Didanix
+Education/light work. Do not restart completed MRI QA or the unchanged
+browser-runtime failure. Browser/device and clinical acceptance remain pending.
 
 ## 15 September — source-bound forearm attachment views
 

@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "bc59d44313699c18866679fd1a7b0988d4a1e138fd27cbc0ee20b2bec2d127f6"
+    "sha256": "fac3b045b9b28383d2ba0447ac0c47a7c49d18b0e2d995cd6a014910823d1765"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -53,7 +53,7 @@
   },
   {
     "path": "app/arm-attachments.tsx",
-    "sha256": "09e128a361d562be1139b7187c56d5f26ff9673a8dc511678757a0c24c49ec34"
+    "sha256": "24265d11786288da1fb31c55282d6077e029710085a1bf41a92c52b04692b863"
   },
   {
     "path": "app/arterial-connections.tsx",
@@ -89,7 +89,7 @@
   },
   {
     "path": "app/body-explorer.tsx",
-    "sha256": "dca64d24cda3aa120091980b5ab834779a5dee47c1565a8ad213613adb5e054a"
+    "sha256": "6fc21af9ec61865ff7035e5747f593b53143ff53aa91017655efc054adb13b0b"
   },
   {
     "path": "app/body-scene.tsx",
@@ -638,6 +638,14 @@
   {
     "path": "content/inferior-thyroid-context-pins.json",
     "sha256": "1928f2ecce49146511325abe3fe6331291dcbbbb0ca6308f99e95be2353f07f8"
+  },
+  {
+    "path": "content/leg-attachment-pins.json",
+    "sha256": "42a6e0bfaef06211828d82a7b368c3ea3f3709e4876221ccae66f315f79dc7d4"
+  },
+  {
+    "path": "content/leg-attachments.ts",
+    "sha256": "bc23247dfe8603979bc09402595887017e4b43365bfd0c9d8d9956eb28b02494"
   },
   {
     "path": "content/leg-muscle-imaging-pins.json",
@@ -1514,6 +1522,10 @@
   {
     "path": "lib/laryngeal-anatomy.ts",
     "sha256": "adb043e56456f63e8f8f5f110c984f3706c8904a6267c6415260c7d0c8973fb3"
+  },
+  {
+    "path": "lib/leg-attachments.ts",
+    "sha256": "6196950ca893ac2afbeb3fa40ec9482fa947c0b457ec9a0040170fcdc46b0448"
   },
   {
     "path": "lib/leg-clinical-curriculum.ts",

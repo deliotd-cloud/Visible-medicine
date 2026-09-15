@@ -1,5 +1,15 @@
 # Third-party notices
 
+## Lower-leg attachment views — 15 September 2026
+
+Original MIT mappings link 28 muscle/head selections to 46 unchanged bones.
+Existing authored curriculum is reused; TTUHSC, cited anatomy chapters and
+Willegger/Park research supply factual reading references only. No article prose,
+figure, table, scan or dataset is imported; linked NC-ND material is not a
+commercial asset. No new model, font, texture, dependency, paid service or
+mandatory fee. Existing BodyParts3D attribution and source holds remain.
+See [scope and review](../docs/LEG_ATTACHMENTS.md).
+
 ## Forearm attachment views — 15 September 2026
 
 Original MIT mappings connect existing draft teaching to 42 retained muscle/head
