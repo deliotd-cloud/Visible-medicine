@@ -114,6 +114,7 @@ import { thoracicBoneImagingLesson } from '../lib/thoracic-bone-imaging';
 import { abdominalOrganImagingLesson } from '../lib/abdominal-organ-imaging';
 import { pelvicOrganImagingLesson } from '../lib/pelvic-organ-imaging';
 import { craniofacialOrganImagingLesson } from '../lib/craniofacial-organ-imaging';
+import { rectalDeferentImagingLesson } from '../lib/rectal-deferent-imaging';
 import { thighMuscleImagingLesson } from '../lib/thigh-muscle-imaging';
 import { legMuscleImagingLesson } from '../lib/leg-muscle-imaging';
 import { footMuscleImagingLesson } from '../lib/foot-muscle-imaging';
@@ -215,6 +216,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   const upperVesselImaging = upperVesselImagingLesson(s, tab);
   if (upperVesselImaging) return upperVesselImaging;
   const thyroid = inferiorThyroidLesson(s, tab);
+  const rectalDeferentImaging = rectalDeferentImagingLesson(s, tab);
+  if (rectalDeferentImaging) return rectalDeferentImaging;
   const deferent = deferentDuctLesson(s, tab);
   const spongiosum = corpusSpongiosumLesson(s, tab);
   if (spongiosum) return spongiosum;

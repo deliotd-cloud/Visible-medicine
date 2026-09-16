@@ -5,6 +5,7 @@ import { Matrix4, Vector3 } from 'three';
 import { sourceObjShape, sourceTriangleSet } from './source-surface-audit.mjs';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { build } from './workspace-test-build.mjs';
+import { authoringBeforeRectalDeferentImaging } from './rectal-deferent-imaging-history.mjs';
 const compiled = await build({
   stdin: {
     contents:
@@ -34,11 +35,12 @@ const raw = JSON.parse(rawBytes),
     await readFile('public/models/bodyparts3d/deferent-ducts/catalog.json'),
   );
 const catalog = api.bodyDisplayCatalog(raw);
+const beforeRectalDeferentImaging = authoringBeforeRectalDeferentImaging({api,catalog:raw});
 assert(
   !catalog.structures.some((s) => ['FMA44885', 'FMA44886'].includes(s.fmaId)),
 );
 assert.equal(raw.structures.length, 1022);
-assert.equal(catalog.structures.length, 1060);
+assert.equal(catalog.structures.length, 1102);
 assert.equal(JSON.stringify(raw), before);
 assert.equal(api.bodyDisplayCatalog(catalog), catalog);
 assert.deepEqual(
@@ -212,7 +214,7 @@ for (const s of pins.structures) {
     'clinical',
     'pathology',
   ])
-    assert.equal(api.bodyLesson(s, tab).readiness, 'pending');
+    assert.equal(beforeRectalDeferentImaging.bodyLesson(s, tab).readiness, 'pending');
   assert.equal(
     api.deferentDuctLesson({ ...s, anchor: [0, 0, 0] }, 'anatomy'),
     undefined,
@@ -228,7 +230,7 @@ for (let i = 0; i < sourceShapes.length; i++)
 console.log(
   JSON.stringify({
     sourceSelections: 2,
-    displaySelections: 1060,
+    displaySelections: 1102,
     triangles,
     links,
     rejections,

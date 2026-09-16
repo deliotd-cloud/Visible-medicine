@@ -1,0 +1,32 @@
+{
+  "baselineSource": "130fda71a2af14fbbe5c018beed52e4c1212ed45",
+  "groups": 2,
+  "sourceSelections": 3,
+  "addedDraftPlacements": 12,
+  "modalities": {
+    "ct": 3,
+    "mri": 3,
+    "ultrasound": 3,
+    "xray": 3
+  },
+  "unchangedTopics": 9906,
+  "bodySchemaRecords": 1102,
+  "actualNoteRenders": 12,
+  "rejectedSourceTopicCombinations": 228,
+  "foreignHraRectumRejected": true,
+  "uniqueReferenceFacts": 8,
+  "sourceWordCounts": {
+    "rectalModalities": 44,
+    "rectalMri": 90,
+    "lowerGi": 45,
+    "plainFilm": 88,
+    "ductAnatomy": 90,
+    "maleImaging": 94
+  },
+  "sourceGeometryChanged": false,
+  "currentApprovalRecordsChanged": false,
+  "clinicalApproval": false,
+  "imagesImported": false,
+  "imagingConnected": false,
+  "browserOrDeviceAcceptance": false
+}

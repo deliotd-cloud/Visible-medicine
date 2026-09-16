@@ -1,5 +1,13 @@
 # Clinical validation checklist
 
+[Rectal/deferent imaging](RECTAL_DEFERENT_IMAGING.md): review twelve drafts
+against the root rectum and both exact sided duct surfaces. Check rectal
+compartments, endorectal ultrasound scope, duct course/junction wording and
+plain-film limitations. Do not infer wall layers, lumen continuity, tumour
+stage, obstruction or fertility from a reference surface. Independent HRA
+female-pelvic teaching remains separate; source/teaching revision-bound
+approval is required.
+
 [Craniofacial organ imaging](CRANIOFACIAL_ORGAN_IMAGING.md): review 36 draft
 placements for pituitary, eyes, lacrimal and submandibular/sublingual glands.
 Check sellar versus routine head imaging, posterior bright-spot wording, ocular

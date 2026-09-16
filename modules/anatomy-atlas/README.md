@@ -1,5 +1,9 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Pelvis → Imaging:** [Rectum and both deferent ducts](docs/RECTAL_DEFERENT_IMAGING.md)
+gain twelve source-bound CT/MRI/US/X-ray orientation drafts in the existing tabs.
+No new controls or geometry; radiologist review and website rollout remain separate.
+
 Development: [efficient delegation, checks and handovers](docs/EFFICIENT_WORKFLOW.md)
 preserve the full roadmap and clinical/release gates while keeping routine work compact.
 

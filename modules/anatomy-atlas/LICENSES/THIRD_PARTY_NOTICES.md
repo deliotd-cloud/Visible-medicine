@@ -1,5 +1,15 @@
 # Third-party notices
 
+## Rectal/deferent imaging drafts — 16 September 2026
+
+Original resolver code and short factual teaching add twelve placements to
+three unchanged BodyParts3D selections. Reading links to ESGAR, ESUR-SPIWG,
+ACR, NCI SEER and RadiologyInfo do not import their figures, tables, scans,
+datasets or text passages. RadiologyInfo allows linking, not copying its site.
+Existing BodyParts3D CC BY 4.0 attribution/holds remain unchanged; no new
+dependency, font, texture, model, paid API or mandatory fee. See
+`docs/RECTAL_DEFERENT_IMAGING.md` for references and reuse boundaries.
+
 ## Craniofacial organ imaging drafts — 15 September 2026
 
 Original MIT resolver code and brief factual notes add 36 imaging placements

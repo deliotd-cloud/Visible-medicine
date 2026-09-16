@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "f71853229361a616493e844941d61242df270712163fa456a8e5a925bf9e2552"
+      "sha256": "d8f3737a3d3090d6602d67c0ebb27145c6bec19e9c5b333c902c8e0092c104a1"
     },
     {
       "path": "app/body-explorer.css",
@@ -763,6 +763,14 @@
     {
       "path": "content/pulmonary-teaching.ts",
       "sha256": "dec60fd4009651ed0e0f11e67763db54c367aa22968c7653dadaf128918b77b0"
+    },
+    {
+      "path": "content/rectal-deferent-imaging-pins.json",
+      "sha256": "61b579bca6028f5812619b9ee8bf5308a9ef5b74213522e48f1ce7158144ddd6"
+    },
+    {
+      "path": "content/rectal-deferent-imaging.ts",
+      "sha256": "c4f8c16e116a3a15923642ca51c2268dda8784f38754511e9aa085f9d654518f"
     },
     {
       "path": "content/renal-teaching.ts",
@@ -1677,6 +1685,10 @@
       "sha256": "4c1f3ae40872d57ba7fa1d4e10a33d5606121b57321bf80be93a7fb9691820eb"
     },
     {
+      "path": "lib/rectal-deferent-imaging.ts",
+      "sha256": "b307450ba8b29e834cb627c23df4f3169063152cdbff80f2fa9ac3deebec65da"
+    },
+    {
       "path": "lib/regional-arterial.ts",
       "sha256": "093b8479366d151f86ef993b896cbbb2e38df781ebbaf0a5234627a2909402ed"
     },
@@ -1966,7 +1978,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "48442fbb2beb1f894250d9bd21fdb88f290bf6dd0c530320f75e342915d8b139"
+      "sha256": "18b9015fdfcf56ca831e73ae089d1d26cfe5b6003d1ec00b9b32149a5ccc4318"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2161,5 +2173,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "4d42cd7a2f2ca6ffeaaa9b821f1dc6f3cda55ccf026fb225a1fc3f8b736b5883"
+  "sha256": "94c313a42e41a052db3789a32fbc3c11854043fe059e8ad63b0a88bf896ca053"
 }
