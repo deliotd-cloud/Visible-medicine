@@ -2,6 +2,25 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 16 September — efficient implementation workflow
+
+The owner approved bounded delegation: Astra High for orchestration/integration/
+review, Sol Medium for implementation/tests, Terra Medium for read-only discovery.
+Project-local Codex defaults cap workers at two; short briefs and exclusive file
+ownership avoid copying the whole conversation or competing edits. Existing
+task/composer overrides may take precedence; no global settings were changed.
+
+Atlas docs/EFFICIENT_WORKFLOW.md records risk-matched validation, escalation and
+concise handovers. A local focused-check runner retains full logs and failure
+status without flooding chat. There is no automatic coverage inference, cached
+pass, promised token-saving percentage or relaxation of clinical/licensing gates.
+
+This is development tooling/coordination only, not new anatomy or a website
+deployment. All prior source milestones and the full goal remain intact.
+Website84 remains live; pending model delivery still requires authenticated
+staging. Completed MRI QA is not work to restart. Recovery evidence is recorded
+separately in the main workspace checkpoint.
+
 ## 15 September — craniofacial organ imaging checkpoint
 
 Atlas `7accc5eec0168eabf66340ad1dd07ecf8edea4d6` adds 36 introductory imaging

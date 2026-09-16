@@ -7,3 +7,10 @@ Inspect the worktree and check for overlapping active work before editing. Do no
 Preserve private patient data and original masks. Use only the separate Didanix Education/light integration, never clinical PACS archives or identities. Atlas, imaging-case and paid-lecture entitlements are independent. Tests do not confer clinical/privacy/release approval. No public sharing or paid services without user authority.
 
 Update the shared plan and verifiable source/backup/deployment checkpoint after substantive work. Documentation-only coordination changes do not require a website rebuild or publication.
+
+The owner approved a lean delegation workflow: Astra High integrates/reviews,
+Sol Medium implements bounded changes/tests, Terra Medium handles read-only
+discovery. Use short fresh briefs, explicit settings, exclusive file ownership,
+at most two workers and no nested delegation. Keep small/coupled tasks local.
+Use risk-matched checks while iterating and full applicable release gates at
+publication; never replace clinical/privacy approval with a passing test.
