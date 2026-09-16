@@ -1,5 +1,8 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+Development: [efficient delegation, checks and handovers](docs/EFFICIENT_WORKFLOW.md)
+preserve the full roadmap and clinical/release gates while keeping routine work compact.
+
 **Head & neck → Imaging:** [Nine craniofacial organ selections](docs/CRANIOFACIAL_ORGAN_IMAGING.md) gain concise CT/MRI/US/X-ray orientation within existing tabs, including modality limits. No new controls or images; source-bound drafts await radiologist review and a separate website rollout.
 
 **Pelvis / Whole body:** [Corpus spongiosum bulb/shaft source](docs/CORPUS_SPONGIOSUM.md) adds one selectable, reversible draft surface, with the glans and cavernous bodies explicitly excluded. Source verification is not anatomical approval; website delivery remains a separate checkpoint.
