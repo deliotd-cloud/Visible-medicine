@@ -2,6 +2,35 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 16 September — rectal/deferent imaging source checkpoint
+
+Atlas `59b311f1b67ba9ddd35b4193287edaf9f45575f5` adds twelve introductory imaging
+draft placements across the existing root rectum and both deferent ducts.
+Eight distinct short notes reuse the CT/MRI/Ultrasound/X-ray tabs. No new
+control, mesh, scan, dependency or entitlement change. Independent HRA female-
+pelvic teaching is unchanged. Duct clinical/pathology remain explicitly pending.
+
+Three whole source identities and two original bundles are pinned. Feature
+checks pass: twelve actual React note renders, 228 changed-source/topic
+rejections, foreign female-pelvis rejection, all 9,906 other topic slots,
+shoulder teaching and recipes preserved. Previous craniofacial and deferent
+source regression suites, content/review checks, TypeScript and Atlas/shared-
+module builds pass. Renderer revision changes require fresh teaching review;
+technical checks are not clinical/device sign-off.
+
+Work used Sol Medium for implementation/tests, Terra Medium for independent
+source checking, and main-task integration/review. The reference audit corrected
+two plain-film citation gaps and a duct-junction ambiguity. Exact per-worker
+token savings were not measured. Existing clinical/licensing/privacy gates
+remain intact; source guide: Atlas docs/RECTAL_DEFERENT_IMAGING.md.
+
+This is source-only. Private website84 remains live. The preceding corpus-
+spongiosum model still requires authenticated staging/verification before the
+combined export is activated; no access workaround or unverified publication.
+GitHub/D recovery evidence lives in the main workspace checkpoint. Continue
+remaining substantive anatomy/teaching and verified model delivery; do not
+restart completed MRI QA or retry unchanged browser-runtime failures.
+
 ## 16 September — efficient implementation workflow
 
 The owner approved bounded delegation: Astra High for orchestration/integration/
