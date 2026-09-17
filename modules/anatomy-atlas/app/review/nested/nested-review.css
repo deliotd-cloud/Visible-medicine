@@ -1,0 +1,85 @@
+.nested-review-choice {
+  display: block;
+  padding: 0.45rem 0.6rem;
+  border-radius: 0.3rem;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+.nested-review-choice[aria-current="page"] {
+  background: var(--vm-midnight);
+  color: var(--vm-ivory);
+}
+.nested-review-id,
+.nested-review code {
+  overflow-wrap: anywhere;
+  white-space: normal;
+  font-size: 0.8rem;
+}
+.nested-review-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.nested-decision fieldset {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  margin-top: 1rem;
+  min-width: 0;
+}
+.nested-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin: 0.85rem 0;
+}
+.nested-check input {
+  margin-top: 0.35rem;
+  flex-shrink: 0;
+  accent-color: var(--vm-teal);
+}
+.nested-field,
+.nested-evidence label {
+  display: block;
+  margin: 0.8rem 0;
+}
+.nested-field textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 0.3rem;
+  padding: 0.6rem;
+  background: white;
+  resize: vertical;
+}
+.nested-evidence {
+  padding: 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 0.3rem;
+  margin: 0.8rem 0;
+}
+.nested-review [data-slot="select-trigger"] {
+  width: 100%;
+  height: auto;
+  min-height: 2.5rem;
+}
+.nested-review pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 0.8rem;
+}
+.nested-review button {
+  max-width: 100%;
+  height: auto;
+  min-height: 2.4rem;
+  white-space: normal;
+}
+.nested-review summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.nested-review textarea:focus-visible,
+.nested-review a:focus-visible,
+.nested-review input:focus-visible {
+  outline: 2px solid var(--vm-teal);
+  outline-offset: 3px;
+}

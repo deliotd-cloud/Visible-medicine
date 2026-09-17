@@ -7,6 +7,27 @@ import {
 } from "drizzle-orm/sqlite-core";
 import { sql } from "drizzle-orm";
 
+// Nested parent/study key is a canonical JSON tuple; child IDs alone are not
+// unique review scopes. No records are migrated from any other review table.
+export const nestedReviewEvents = sqliteTable(
+  "nested_review_events",
+  {
+    userId: text("user_id").notNull(),
+    nestedKey: text("nested_key").notNull(),
+    structureId: text("structure_id").notNull(),
+    track: text("track").notNull(),
+    version: integer("version").notNull(),
+    payload: text("payload").notNull(),
+    savedAt: text("saved_at").notNull(),
+  },
+  (t) => [
+    primaryKey({columns:[t.userId,t.nestedKey,t.structureId,t.track,t.version]}),
+    check("nested_review_version_range", sql`${t.version} > 0 and ${t.version} <= 2147483647`),
+    check("nested_review_track_valid", sql`${t.track} in ('geometry','teaching')`),
+    check("nested_review_payload_json", sql`json_valid(${t.payload})`),
+  ],
+);
+
 // Independent specimens are not root-body/shoulder approvals, even when a
 // source frame or a structure name is shared. Append-only, account-private.
 export const specimenReviewEvents = sqliteTable(

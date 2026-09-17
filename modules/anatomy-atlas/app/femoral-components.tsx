@@ -24,6 +24,7 @@ import {
 import { BodyScene, retryBodyAssets } from './body-scene';
 import { allBodySystems, type BodyStructure } from './body-types';
 import { NestedTeaching } from './nested-teaching';
+import { nestedReviewHref } from '@/lib/nested-review-links';
 import { CutawayControls, cutPlanes } from './cutaway-controls';
 import { initialInspection } from '@/lib/inspection-state';
 import {
@@ -518,6 +519,7 @@ export function FemoralComponentView({
                 Parent concept: {parent.fmaId}. Unnamed source part; no
                 independent clinical lesson, imaging registration or
                 branch-order claim.
+                {nestedReviewHref(parent, study, selected) && <><br/><a href={nestedReviewHref(parent, study, selected)!} target="_blank" rel="noreferrer">Review this structure</a></>}
               </p>
             )}
           </section>

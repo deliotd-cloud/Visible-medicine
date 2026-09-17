@@ -138,7 +138,7 @@
     },
     {
       "path": "app/femoral-components.tsx",
-      "sha256": "c786249e890f73ebc49642c74f8feaf5a87f808f911ac10bc0c0c6534cd8f234"
+      "sha256": "d994981c40fdc559588997ca7d0f7ed7a2d6d098fdfd37a3a94ca608eee65d8e"
     },
     {
       "path": "app/fitted-camera.tsx",
@@ -198,7 +198,7 @@
     },
     {
       "path": "app/nested-teaching.tsx",
-      "sha256": "9f6b6053e56393b3c065d7c6f083fe2992771715c8a0173cdb11e3f1ee0ab50b"
+      "sha256": "a1f8d593bd430b0770c28f7db78803701021a960113e69e64adbf048dfd71e61"
     },
     {
       "path": "app/reasoning-feedback.tsx",
@@ -783,6 +783,10 @@
     {
       "path": "content/neck-attachments.ts",
       "sha256": "c73802bb9c51b4bb575b83d08ddf6c516047512687c8e0b2b4727f301ae79a0b"
+    },
+    {
+      "path": "content/nested-review-bindings.json",
+      "sha256": "a7cbca23d7975f6266b5de1c7eced1cc821843280132bec1f326b2404635e335"
     },
     {
       "path": "content/nested-teaching-bindings.v1.json",
@@ -1681,6 +1685,10 @@
       "sha256": "3eeb1bdf3c0e1f4485360945be8ee7046a465b3837a24f29c46e4ee2a4c55687"
     },
     {
+      "path": "lib/nested-review-links.ts",
+      "sha256": "0d8d29a78763f5d3d00736fd2ae1aea0dbe6059ad50d6eb59d6b52e4f43e525f"
+    },
+    {
       "path": "lib/nested-teaching.ts",
       "sha256": "aa2423a1cc53f70f992c19b601160000d44937eda47faae422d6898902edd23d"
     },
@@ -2082,7 +2090,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "386f1902c82e23c6d47cabd4d5f75237232b25f43ca7ee79edf5ce2b8c368a7d"
+      "sha256": "b64c8fbe1ebf9c429a5bbcf82a855000f33825d9900b81772accbdd0156ae4f4"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2277,5 +2285,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "6343286373b7ae9a89a09ddbd27b7401e1ca8fa6c883a2191ed8d45cd525e45c"
+  "sha256": "198b0e086c8a69eb23b38bcca23555ad17f226c4a4a31d3225092bad5aba01de"
 }

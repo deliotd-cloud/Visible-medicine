@@ -14,6 +14,7 @@ import {
   TabsTrigger,
 } from '@/components/ui/tabs';
 import './nested-teaching.css';
+import { nestedReviewHref } from '@/lib/nested-review-links';
 
 // Match the main atlas's three information groups without importing its whole
 // workspace/search/practice graph into these lazy-loaded child viewers.
@@ -79,12 +80,16 @@ export function NestedTeaching({
   initialTopic?: NestedImagingTopic;
 }) {
   const concept = nestedTeachingFor(parent, study, selected);
+  const reviewHref = nestedReviewHref(parent, study, selected);
   if (!concept)
     return (
-      <p className="nested-teaching-unavailable">
+      <div className="nested-teaching-unavailable">
+        <p>
         Teaching is unavailable for this source binding. No alternative
         structure has been substituted.
-      </p>
+        </p>
+        {reviewHref && <a href={reviewHref} target="_blank" rel="noreferrer">Review this structure</a>}
+      </div>
     );
   const imagingTopic =
     initialTopic && concept.imaging?.[initialTopic]?.readiness === 'draft'
@@ -97,6 +102,7 @@ export function NestedTeaching({
       open={!!imagingTopic}
     >
       <summary>Learn more · anatomy, imaging, clinical &amp; quiz</summary>
+      {reviewHref && <p><a href={reviewHref} target="_blank" rel="noreferrer">Review this structure</a></p>}
       <p className="nested-teaching-status">
         Teaching draft · specialist review pending. Educational use, not
         diagnosis or treatment.

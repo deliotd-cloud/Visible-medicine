@@ -37,6 +37,7 @@ const compiled = await build({
 });
 const scope = { exports: {} };
 runInNewContext(compiled.outputFiles[0].text, {
+  URLSearchParams,
   module: scope,
   exports: scope.exports,
   require,

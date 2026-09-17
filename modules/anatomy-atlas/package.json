@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "nested-review:test": "node scripts/generate-nested-review-bindings.mjs --check && node scripts/validate-nested-review.mjs",
     "genicular-clinical:test": "node scripts/pin-genicular-clinical.mjs --check && node scripts/record-genicular-clinical-transition.mjs --check && node scripts/validate-genicular-clinical.mjs",
     "elbow-clinical:test": "node scripts/pin-elbow-clinical.mjs --check && node scripts/record-elbow-clinical-transition.mjs --check && node scripts/validate-elbow-clinical.mjs",
     "portal-hepatic-clinical:test": "node scripts/pin-portal-hepatic-clinical.mjs --check && node scripts/record-portal-hepatic-clinical-transition.mjs --check && node scripts/validate-portal-hepatic-clinical.mjs",
@@ -122,7 +123,7 @@
     "eye-layers:export": "node scripts/export-eye-layers.mjs",
     "eye-layers:test": "node scripts/validate-eye-layers.mjs",
     "dev": "vinext dev",
-    "build": "npm run reviews:revisions && npm run body-reviews:revisions && vinext build && node scripts/compress-model-delivery.mjs && node scripts/exclude-source-recovery.mjs",
+    "build": "npm run reviews:revisions && npm run body-reviews:revisions && node scripts/generate-nested-review-bindings.mjs --check && vinext build && node scripts/compress-model-delivery.mjs && node scripts/exclude-source-recovery.mjs",
     "models:delivery-check": "node scripts/compress-model-delivery.mjs --check",
     "reviews:revisions": "node scripts/review-revisions.mjs",
     "reviews:test": "node scripts/validate-review.mjs",

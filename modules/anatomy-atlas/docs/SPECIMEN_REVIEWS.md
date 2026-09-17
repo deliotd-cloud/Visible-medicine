@@ -42,4 +42,4 @@ Persistence uses the existing D1 binding with prepared, bound statements followi
 
 ## Remaining rollout
 
-Nested organ dissections still need their own explicit review adapters. Never bulk-migrate root-body or independent-specimen approval records into these scopes. Cross-specimen pending/re-review queues and reviewer-role enforcement on a future public website remain separate work. Existing source rights remain CC BY 4.0 (HRA), CC0 (UM) and CC BY-SA 2.1 Japan (version-3 assets/adaptations); review exports retain source credit/licence metadata and do not relicense these assets.
+Nested organ dissections now have separate explicit adapters (NESTED_REVIEWS.md), isolated tables and parent/study/child identities. Never bulk-migrate root-body or independent-specimen approval records into these scopes. Cross-specimen pending/re-review queues and reviewer-role enforcement on a future public website remain separate work. Existing source rights remain CC BY 4.0 (HRA), CC0 (UM) and CC BY-SA 2.1 Japan (version-3 assets/adaptations); review exports retain source credit/licence metadata and do not relicense these assets.

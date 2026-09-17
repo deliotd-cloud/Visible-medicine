@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "scope": "nested-dissection-review-software-only",
+  "nesteds": [
+    {
+      "key": "[\"vm:anatomy:body:thorax:unpaired:organ:heart\",\"cardiac\"]",
+      "selections": 4
+    },
+    {
+      "key": "[\"vm:anatomy:body:thorax:right:organ:right-lung\",\"pulmonary\"]",
+      "selections": 3
+    },
+    {
+      "key": "[\"vm:anatomy:body:thorax:left:organ:left-lung\",\"pulmonary\"]",
+      "selections": 2
+    },
+    {
+      "key": "[\"vm:anatomy:body:abdomen:unpaired:organ:liver\",\"hepatic\"]",
+      "selections": 7
+    },
+    {
+      "key": "[\"vm:anatomy:body:abdomen:unpaired:organ:pancreas\",\"pancreatic\"]",
+      "selections": 2
+    },
+    {
+      "key": "[\"vm:anatomy:body:abdomen:right:organ:right-kidney\",\"renal\"]",
+      "selections": 4
+    },
+    {
+      "key": "[\"vm:anatomy:body:abdomen:left:organ:left-kidney\",\"renal\"]",
+      "selections": 3
+    },
+    {
+      "key": "[\"vm:anatomy:body:head-neck:midline:organ:brain\",\"ventricles\"]",
+      "selections": 4
+    },
+    {
+      "key": "[\"vm:anatomy:body:head-neck:midline:organ:brain\",\"brainstem\"]",
+      "selections": 6
+    },
+    {
+      "key": "[\"vm:anatomy:body:head-neck:midline:organ:brain\",\"cerebral\"]",
+      "selections": 14
+    },
+    {
+      "key": "[\"vm:anatomy:body:head-neck:midline:organ:brain\",\"visual-pathway\"]",
+      "selections": 3
+    },
+    {
+      "key": "[\"vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage\",\"cricothyroid\"]",
+      "selections": 4
+    },
+    {
+      "key": "[\"vm:anatomy:body:head-neck:right:organ:right-eyeball\",\"eye\"]",
+      "selections": 7
+    },
+    {
+      "key": "[\"vm:anatomy:body:head-neck:left:organ:left-eyeball\",\"eye\"]",
+      "selections": 8
+    },
+    {
+      "key": "[\"vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery\",\"femoral-components\"]",
+      "selections": 2
+    },
+    {
+      "key": "[\"vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery\",\"femoral-components\"]",
+      "selections": 2
+    },
+    {
+      "key": "[\"vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery\",\"cranial-artery-components\"]",
+      "selections": 13
+    },
+    {
+      "key": "[\"vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery\",\"cranial-artery-components\"]",
+      "selections": 13
+    },
+    {
+      "key": "[\"vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery\",\"cranial-artery-components\"]",
+      "selections": 3
+    }
+  ],
+  "contexts": 104,
+  "sourceBundlesVerified": 24,
+  "teachingApprovalPrerequisitesPresent": 69,
+  "pendingTopicStates": 448,
+  "checks": [
+    "exact source/frame separation",
+    "unique parent/study/child material identities",
+    "original GLB hashes",
+    "immutable prior migrations",
+    "account isolation",
+    "origin and body-size guards",
+    "revision/checklist conflicts",
+    "server-side approval gates",
+    "imaging approval prohibited",
+    "append-only issue/history retention",
+    "optimistic concurrency",
+    "paged indexed SQLite queries",
+    "stale checks reset",
+    "strict response parsing",
+    "actual server-rendered workspace states"
+  ],
+  "clinicalApproval": false,
+  "productionRecordsRead": false,
+  "browserOrGpuTesting": false
+}

@@ -4,7 +4,7 @@
 
 [Subscapular arteries](SUBSCAPULAR_ARTERIES.md) add 2 original source selections and 1576 retained triangles. Existing arterial navigation now links each to its same-side axillary parent and circumflex scapular/thoracodorsal branches, with reversible context isolation. No guessed connecting geometry, complete collateral circuit, patient registration or clinical approval.
 
-[Compact vessel controls](VESSEL_VISIBILITY.md) separate the existing 184 artery selections and 98 vein selections behind the Vessels label. Region/side-scoped show/hide, mixed visibility and shared Undo/Redo reuse the current dissection; other tissues, camera, classification and geometry stay unchanged. No new default panel or patient-imaging event. Browser/device and clinical acceptance remain separate.
+[Compact vessel controls](VESSEL_VISIBILITY.md) separate the existing 198 artery selections and 98 vein selections behind the Vessels label. Region/side-scoped show/hide, mixed visibility and shared Undo/Redo reuse the current dissection; other tissues, camera, classification and geometry stay unchanged. No new default panel or patient-imaging event. Browser/device and clinical acceptance remain separate.
 
 [Abdominal-organ imaging](ABDOMINAL_ORGAN_IMAGING.md) adds CT/MRI/Ultrasound/X-ray orientation to eight existing liver/pancreas/gallbladder/spleen/kidney/adrenal selections: 32 draft placements with 20 distinct modality texts and six landmark/scope groups. Phase, sequence and ultrasound-coverage limitations are explicit. The corrected pancreatic parent, independent kidney specimen, internal dissections and patient scans retain separate identities; no new geometry or clinical approval is inferred.
 
@@ -12,7 +12,7 @@
 
 [Limb-bone imaging](LIMB_BONE_IMAGING.md) fills 24 pending sections across 12 exact radius/ulna/fibula/femur/tibia/patella selections: 12 X-ray, 6 CT and 6 MRI placements, using 12 distinct topic texts and six landmark notes. Existing knee CT/MRI/US lessons, geometry and controls remain unchanged. The existing Imaging tabs distinguish the whole source bone from the imaged joint; these are original referenced drafts, not scans, validated landmark segmentations or clinical approval.
 
-[Independent specimen reviews](SPECIMEN_REVIEWS.md) cover nine source/region scopes (354 scoped records / 267 distinct source IDs): HRA kidneys/female pelvis, version-3 abdominal wall/back layers and five overlapping UM lower-limb regions. [Exact study links](INDEPENDENT_STUDY_LINKS.md) open the selected structure and study, and return to its review worksheet. Source/frame/geometry/teaching/checklist revisions are bound to private append-only records; no approval transfers between scopes. Anatomy and teaching are separate, acquired-imaging approval remains unavailable, and nested-organ review adapters are pending. This inventory reads no personal review records and asserts no clinical/device sign-off or hosted rollout.
+[Independent specimen reviews](SPECIMEN_REVIEWS.md) cover nine source/region scopes (354 scoped records / 267 distinct source IDs): HRA kidneys/female pelvis, version-3 abdominal wall/back layers and five overlapping UM lower-limb regions. [Exact study links](INDEPENDENT_STUDY_LINKS.md) open the selected structure and study, and return to its review worksheet. Source/frame/geometry/teaching/checklist revisions are bound to private append-only records; no approval transfers between scopes. Anatomy and teaching are separate; acquired-imaging approval remains unavailable. [Nested review](NESTED_REVIEWS.md) now has its own isolated parent/study/child records and source-bound return links; source implementation is not hosted migration acceptance. This inventory reads no personal review records and asserts no clinical/device sign-off or hosted rollout.
 
 [Lower-limb arterial imaging](LOWER_ARTERIAL_IMAGING.md) supplies 12 existing artery selections with CT/MRI/US drafts (36 placements / 9 regional-modality texts). Six concept-specific cautions and the existing inspector keep navigation compact. Missing fibular/trunk selections, complete runoff, scans, registration and radiologist/device approval remain outstanding.
 
@@ -52,7 +52,7 @@
 
 [Wrist-bone imaging orientation](WRIST_IMAGING_TEACHING.md) adds 48 X-ray/CT/MRI drafts across sixteen existing carpal selections: five groups / fifteen distinct modality topics, with eight bone-specific cautions. The existing Imaging tabs are reused. No new surface, radiograph, CT voxel, MR signal, patient registration or clinical approval is supplied; ultrasound remains unchanged.
 
-[Arterial connections](ARTERIAL_CONNECTIONS.md) offers upstream/downstream and communicating-neighbour exploration for 143 existing source selections through 153 mapped relationships (86 concepts; 5 alternative routes, not simultaneous donor connections). A selected-artery panel stays collapsed; regional isolation is reversible and outside neighbours use source-bound whole-body links. Missing segments remain explicit; no vessel lumen, flow or patient registration is invented.
+[Arterial connections](ARTERIAL_CONNECTIONS.md) offers upstream/downstream and communicating-neighbour exploration for 157 existing source selections through 175 mapped relationships (93 concepts; 5 alternative routes, not simultaneous donor connections). A selected-artery panel stays collapsed; regional isolation is reversible and outside neighbours use source-bound whole-body links. Missing segments remain explicit; no vessel lumen, flow or patient registration is invented.
 
 [Lower-limb muscles by nerve](LOWER_LIMB_MOTOR.md) links 118 existing root-body selections through 120 typical relationships in 15 groups. Pelvis/hip, thigh, leg and foot reuse the same collapsed control as the upper limb. Source/frame checks and dissection history are retained; no nerve path or patient correspondence is invented. The independent lower-limb specimen remains separate.
 
@@ -96,7 +96,7 @@ Generated from the actual catalogue, teaching resolver, dissection profiles and 
 
 ## Delivered source scope
 
-[X-ray orientation](XRAY_TEACHING.md) is available in the existing Imaging group: 141 source-pinned body drafts now include six shoulder-bone sources plus 47 spinal sources. The 3 overlapping dedicated-shoulder drafts cover three shoulder-bone concepts separately. Other entries remain pending, including all 104 nested selections. No radiographs, calibrated projections or paid-lecture access are supplied. Old display/teaching approvals require re-review; earlier topics are preserved through exact authoring transitions.
+[X-ray orientation](XRAY_TEACHING.md) is available in the existing Imaging group: 328 source-pinned body drafts now include six shoulder-bone sources plus 47 spinal sources. The 3 overlapping dedicated-shoulder drafts cover three shoulder-bone concepts separately. Other entries remain pending, including all 104 nested selections. No radiographs, calibrated projections or paid-lecture access are supplied. Old display/teaching approvals require re-review; earlier topics are preserved through exact authoring transitions.
 
 The [cricothyroid dissection](CRICOTHYROID_DISSECTION.md) adds 4 source-defined muscle parts with 2 optional, nonselectable cartilage landmarks. It reuses the compact selection, cutaway, separation, labels and Undo/Redo controls. The source-preserving derivative explicitly omits 12 audited artifact faces; this is disclosed, not clinical approval. Introductory teaching is draft and CT/MRI/US remain pending for these parts. Cartilage is a navigation landmark, not the muscle's tissue parent.
 
@@ -108,11 +108,11 @@ The [pancreatic duct study](PANCREATIC_DISSECTION.md) separates 2 source compone
 
 The [optic chiasm and tract study](VISUAL_PATHWAY_DISSECTION.md) adds 3 selectable neural surfaces from 4 source files inside Dissect brain. It opens from below with landmarks off. Across its views, 5 existing landmarks are available: four posterior landmarks or the pituitary in the [chiasm–pituitary relationship view](VISUAL_PATHWAY_RELATIONSHIPS.md). Shared dissection controls and MRI teaching stay compact. Source seams and relationships still need anatomical review; no complete fibre pathway or patient correspondence is supplied. The original nonpublic prototype remains retained separately.
 
-- 1087 body representations, 104 body GLBs, 11 regions plus whole body.
+- 1102 body representations, 106 body GLBs, 11 regions plus whole body.
 - Dedicated shoulder: 9 representations / 11 source parts, overlapping the body catalogue.
 - Pancreatic dissection: 2 selectable duct components and 1 optional reference surface. These subdivide the corrected pancreas, not new unique anatomy.
-- Nested dissections: 15 eye components, 4 ventricular spaces, 4 brainstem/cerebellar compounds, 14 cerebral selections, 4 cardiac cavities, 5 partial lung branch groups, 7 liver branch groups, 7 renal/adrenal vascular groups and 3 chiasm/tract surfaces. Four superior temporal source parts, seven renal/adrenal groups and three chiasm/tract surfaces add coverage; other nested studies subdivide existing parents. Context reuses existing structures. These are partial source surfaces, not complete organ interiors or clinical approvals. Brief drafts are separate from the root-body inventory below. 132 public/archive GLBs are retained, including original and alternate display assets. The original catalogue counts remain unchanged.
-- 159 dissection stages and 171 focuses. These operate on supplied surfaces; they do not establish complete anatomy.
+- Nested dissections: 15 eye components, 4 ventricular spaces, 4 brainstem/cerebellar compounds, 14 cerebral selections, 4 cardiac cavities, 5 partial lung branch groups, 7 liver branch groups, 7 renal/adrenal vascular groups and 3 chiasm/tract surfaces. Four superior temporal source parts, seven renal/adrenal groups and three chiasm/tract surfaces add coverage; other nested studies subdivide existing parents. Context reuses existing structures. These are partial source surfaces, not complete organ interiors or clinical approvals. Brief drafts are separate from the root-body inventory below. 134 public/archive GLBs are retained, including original and alternate display assets. The original catalogue counts remain unchanged.
+- 159 dissection stages and 173 focuses. These operate on supplied surfaces; they do not establish complete anatomy.
 - Internal studies have optional selected-part original-position guides inside their collapsed separation controls. Guides use the source surface and the exact display displacement; flat plates, cutaways, hidden/context parts and exam mode suppress them. They are display annotations, not anatomical connections. See [scope and checks](ORIGIN_GUIDES.md).
 - Find/name identification practice; 100 draft reasoning concepts bound to 196 representations in head-neck, foot, thigh, leg, pelvis, spine, thorax, abdomen, shoulder-arm, hand, forearm. One concept per session, without contralateral repetition. See [practice scope and tests](REASONING_PRACTICE.md).
 - [Learning-resource contract](LEARNING_RESOURCE_CONTRACT.md): version 1, ct/mri/xray/ultrasound/lecture/quiz anchors; 0 configured resources / 0 correspondences. Read-only linking infrastructure, not a connected external viewer or publication approval.
@@ -123,19 +123,19 @@ Counts are representations with displayed copy, not unique lessons, complete top
 
 | Topic | Specific/source-group draft | Identity only | Pending | Generated identification |
 | --- | ---: | ---: | ---: | ---: |
-| Anatomy | 1085 | 2 | 0 | 0 |
-| Function | 1082 | 0 | 5 | 0 |
-| CT | 203 | 0 | 884 | 0 |
-| MRI | 201 | 0 | 886 | 0 |
-| X-ray | 141 | 0 | 946 | 0 |
-| Ultrasound | 118 | 0 | 969 | 0 |
-| Pathology | 1028 | 0 | 59 | 0 |
-| Clinical | 1032 | 0 | 55 | 0 |
-| Quiz notes | 56 | 0 | 0 | 1031 |
+| Anatomy | 1100 | 2 | 0 | 0 |
+| Function | 1097 | 0 | 5 | 0 |
+| CT | 758 | 0 | 344 | 0 |
+| MRI | 716 | 0 | 386 | 0 |
+| X-ray | 328 | 0 | 774 | 0 |
+| Ultrasound | 480 | 0 | 622 | 0 |
+| Pathology | 1069 | 0 | 33 | 0 |
+| Clinical | 1073 | 0 | 29 | 0 |
+| Quiz notes | 71 | 0 | 0 | 1031 |
 
 Quiz-tab notes are separate from interactive practice. [X-ray orientation](XRAY_TEACHING.md) includes the shoulder and spine plus wrist, tarsal and [limb-bone notes](LIMB_BONE_IMAGING.md). The table above is the current count; historical milestone totals elsewhere are not cumulative current coverage. Remaining entries stay pending. Imaging text is not an acquired-image viewer, segmentation or validated spatial correspondence.
 
-The opt-in [nested learning registry](NESTED_LEARNING_LINKS.md) exposes 104 exact child destinations within 1200 scope-specific representations. It supports document versions 1 and 2, while the configured production document stays version 1 with no resources. Nested parent/child source and bundle bindings can resolve into the existing dissection routes; this is not a live viewer connection or entitlement.
+The opt-in [nested learning registry](NESTED_LEARNING_LINKS.md) exposes 104 exact child destinations within 1215 scope-specific representations. It supports document versions 1 and 2, while the configured production document stays version 1 with no resources. Nested parent/child source and bundle bindings can resolve into the existing dissection routes; this is not a live viewer connection or entitlement.
 
 The ventricular study also has 3 [guided relationship presets](VENTRICULAR_RELATIONSHIPS.md), using existing source spaces and context without adding unique anatomy or another panel. Context disappears during separation; pointer handlers do not block selectable structures beneath it. Device acceptance remains pending.
 
@@ -163,7 +163,7 @@ The [liver internal-branch study](HEPATIC_DISSECTION.md) exposes 7 source groups
 
 Optional pulmonary airway context reuses 3 existing trachea/main-bronchus landmarks across 2 per-lung views. It is off by default and absent during separation, with no new model files or nested identities. Main-lung selection now discloses the missing tissue/fissure surfaces. Context is orientation, not validated airway continuity.
 
-The collapsed [Learn more section](NESTED_ANATOMY_TEACHING.md) uses 44 source-pinned concepts within 104 selectable parts, with 83 reference links. These counts are separate from the root-body table and overlap parent anatomy. 29 unnamed cranial source pieces deliberately have no independent teaching identity; every topic stays pending for them, without borrowing the parent lesson. Anatomy has 75 draft / 29 pending representations. Clinical has 69 draft / 35 pending; Pathology has 69 draft / 35 pending. Current authored imaging notes cover CT 35 draft / 69 pending, MRI 35 draft / 69 pending, and ultrasound 28 draft / 76 pending. These are introductory notes, not complete clinical coverage, scans or synchronized viewers. Model-scope self-checks test documented model limitations instead of medical recall. No clinical approvals or external resource access are implied.
+The collapsed [Learn more section](NESTED_ANATOMY_TEACHING.md) uses 44 source-pinned concepts within 104 selectable parts, with 84 reference links. These counts are separate from the root-body table and overlap parent anatomy. 29 unnamed cranial source pieces deliberately have no independent teaching identity; every topic stays pending for them, without borrowing the parent lesson. Anatomy has 75 draft / 29 pending representations. Clinical has 69 draft / 35 pending; Pathology has 69 draft / 35 pending. Current authored imaging notes cover CT 35 draft / 69 pending, MRI 35 draft / 69 pending, and ultrasound 28 draft / 76 pending. These are introductory notes, not complete clinical coverage, scans or synchronized viewers. Model-scope self-checks test documented model limitations instead of medical recall. No clinical approvals or external resource access are implied.
 
 The [cardiac chamber study](CARDIAC_CHAMBERS.md) exposes 4 existing cavity shapes and 2 atrial-wall references. These are spaces and context, not new unique anatomy or a complete dissectible heart. Ambiguous source labels are documented and not admitted to this study.
 

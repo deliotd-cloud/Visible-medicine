@@ -58,6 +58,7 @@ export { createLearningRegistry, parseLearningDocument, learningResourceKinds } 
 export { allLearningAnatomyRepresentations } from './lib/nested-learning-anatomy.ts';
 export { bodyDisplayCatalog } from './lib/body-display-catalog.ts';
 export { nestedStudyTargets } from './lib/nested-anatomy.ts';
+export { nestedReviewRows } from './lib/nested-review-material.ts';
 export { nestedTeachingFor, nestedTopicLesson } from './lib/nested-teaching.ts';
 export { nestedConcepts, nestedTeachingReferences } from './content/nested-teaching.ts';
 export { ventricularRelationshipsFor } from './lib/ventricular-relationships.ts';
@@ -124,6 +125,7 @@ const {
   allLearningAnatomyRepresentations,
   bodyDisplayCatalog,
   nestedStudyTargets,
+  nestedReviewRows,
   nestedTeachingFor,
   nestedTopicLesson,
   nestedConcepts,
@@ -513,6 +515,17 @@ for (const path of [
   'docs/pulmonary-source-audit.json',
   'content/cerebral-supplement-audit.json',
   'content/nested-teaching.ts',
+  'content/nested-review-bindings.json',
+  'lib/nested-review.ts',
+  'lib/nested-review-key.ts',
+  'lib/nested-review-links.ts',
+  'lib/nested-review-material.ts',
+  'lib/nested-review-api.ts',
+  'lib/nested-review-store.ts',
+  'lib/nested-review-client.ts',
+  'app/review/nested/page.tsx',
+  'app/review/nested/workspace.tsx',
+  'app/api/nested-review/route.ts',
   'content/cardiac-teaching.ts',
   'content/hepatic-teaching.ts',
   'content/pulmonary-teaching.ts',
@@ -1190,7 +1203,7 @@ const report = {
     revisionIdentities: Object.keys(revisions.revisions).length,
     hasPrivateReviews: false,
     status:
-      `Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot, ${catalog.structures.length} displayed root-body selections, and nine independent specimen/region scopes (354 scoped records / 267 distinct source IDs) with exact source/frame identity and two-way selection/study navigation. Independent scopes include HRA kidneys/female pelvis, version-3 back/abdominal wall and five overlapping UM limb regions. The 1,022-record archival catalogue is retained. This inventory never reads personal review records; nested organ scopes and acquired imaging remain outside those approvals.`,
+      `Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot, ${catalog.structures.length} displayed root-body selections, nine independent specimen/region scopes (354 scoped records / 267 distinct source IDs), and ${nestedReviewRows.reduce((n,r)=>n+r.surfaces.length,0)} nested selections in ${nestedReviewRows.length} parent/study scopes. Exact source/frame identity and navigation are bound; no decisions transfer across scopes. The 1,022-record archival catalogue is retained. This inventory reads no personal review records. Acquired imaging review remains unavailable; source implementation does not prove hosted migration or clinical sign-off.`,
   },
   boundaries: {
     scope: 'Current source implementation, not operations performed by this inventory script',
