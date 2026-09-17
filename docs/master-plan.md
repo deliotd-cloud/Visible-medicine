@@ -2,6 +2,39 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — renal/urethral reference revision
+
+The main task has independently re-sourced the EAU-dependent pathways in renal
+specimen trauma/RCC teaching, two nested ureteric-artery notes and four root
+urethral imaging notes. Useful clinical distinctions are retained; selected
+MRI use and specialised ultrasound limitations are clarified. Original adapted
+summaries carry author credits and article-specific permission evidence; no
+images, tables, staging scales or treatment algorithms are imported.
+
+Four replacement articles have verified CC BY 4.0 notices. Bonatti2015 has
+an explicit CC Attribution any-use notice without a stated version, recorded
+as such. An initially proposed SAJR2004 article is excluded because its own
+copyright-status warning conflicts with the generic journal-footer assumption.
+See Atlas docs/CLINICAL_REFERENCE_REVISION.md. This corrects the preliminary
+reference audit; no project-wide commercial clearance is claimed.
+
+Sol Medium completed explicit historical reconstruction and focused tests;
+Terra Medium checked additional source candidates, with main independent
+review catching the licence ambiguity and avoiding an overgeneralised case
+report. Before/after records must preserve prior immutable hashes and reject
+unrecorded drift rather than rebaseline older tests. Dated main-workspace
+checkpoint records verification, commits and GitHub/D-drive backup results.
+The 48-leaf revision guard, HRA teaching, direct nested validator, pelvic history,
+deferent/rectal checks, content/review checks, TypeScript and both builds passed.
+Two older gates remain unresolved, not waived: cranial FMA50519 nested source-pin
+failure (baseline reproduction still to verify), and standalone pelvic-imaging
+history mismatch (also present after exact prior-revision reconstruction).
+
+Source-only: website84 remains the last verified deployment. Pending model
+staging, radiologist review and independent Atlas/case/lecture access are
+unchanged. No scans, masks or clinical PACS data are touched. Full native goal
+remains active; hourly reviews remain PAUSED.
+
 ## 17 September — deferent Clinical/Pathology source increment
 
 Four introductory draft placements now fill Clinical and Pathology for the
