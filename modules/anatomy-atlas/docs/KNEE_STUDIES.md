@@ -23,3 +23,11 @@ Cartilage, menisci, cruciate/collateral ligaments, the capsule and complete neur
 ## Verification
 
 `npm run knee-studies:test` covers exact representation sets in both/left/right scopes, single-card search/navigation, source-bound deep links, removal/Undo/Redo, stable camera targeting with a hidden patella, narrower view bounds, missing/invalid-anchor fallback and no catalogue mutation. Historical recipe reconstruction checks the exact added content and preserves all previous recipes. Shared renderer/orientation, TypeScript and production checks supplement these focused tests; no GPU/browser validation is implied.
+
+17 September runner maintenance: the real dissection/library/link helper graph
+is loaded through the existing confined workspace ESM test builder. This fixes
+plain Node's inability to resolve an extensionless import added deeper in that
+graph. No application imports, assertion bodies, source/history hashes or model
+data changed. All 395 checks pass across three studies/nine side scopes, including
+eight real source-mesh label anchors. The separate regional leg validator checks
+generic-versus-dedicated camera ownership and recenter transitions.

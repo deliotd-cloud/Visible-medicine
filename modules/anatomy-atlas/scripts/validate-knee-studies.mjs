@@ -5,11 +5,20 @@ import { kneeStudySets, kneeStudyBounds } from '../lib/knee-studies.ts';
 import { closeUpLabelAnchor } from '../lib/close-up-labels.ts';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { BufferGeometry, Float32BufferAttribute } from 'three';
-import { dissectionProfiles, stageStructures, initialDissection, dissectionReducer, resolveDissection } from '../app/dissection-data.ts';
-import { studyLibrary, filterStudyLibrary } from '../lib/study-library.ts';
-import { makeStudyLink, parseStudyLink, resolveStudyLink } from '../lib/study-links.ts';
+import { build as buildHelpers } from './workspace-test-build.mjs';
 import { preKneeStudyRecipeProfiles, spinalLevelProfilesHash, kneeStudyProfilesHash } from './recipe-history.mjs';
 import { preElbowRecipeProfiles } from './elbow-study-history.mjs';
+
+// Resolve the real application helper graph with the same confined TS bundler
+// as the other regional tests; plain Node cannot resolve its extensionless imports.
+const helpers = await buildHelpers({ stdin: { contents: `
+export { dissectionProfiles, stageStructures, initialDissection, dissectionReducer, resolveDissection } from './app/dissection-data';
+export { studyLibrary, filterStudyLibrary } from './lib/study-library';
+export { makeStudyLink, parseStudyLink, resolveStudyLink } from './lib/study-links';
+`, resolveDir: process.cwd(), loader: 'ts' }, bundle: true, platform: 'node', format: 'esm', write: false });
+const { dissectionProfiles, stageStructures, initialDissection, dissectionReducer, resolveDissection,
+  studyLibrary, filterStudyLibrary, makeStudyLink, parseStudyLink, resolveStudyLink } =
+  await import('data:text/javascript;base64,' + Buffer.from(helpers.outputFiles[0].text).toString('base64'));
 
 let checks = 0;
 const same = (actual, expected, message) => { checks++; assert.deepEqual(actual, expected, message); };

@@ -39,11 +39,12 @@ checks cover adjacent behavior. The standalone foot validator's obsolete
 unsupported-region expectations were updated; positive leg/thorax behavior has
 separate full tests.
 
-The legacy `knee-studies:test` runner currently stops before assertions on an
-extensionless module import in its expanded dependency graph. It is not counted
-as passing. This change directly tests the real knee/genicular bound functions
-and their fallback interactions in the bundled leg validator; historical recipe
-validation still needs runner repair, not relaxed assertions.
+The legacy `knee-studies:test` runner initially stopped before assertions on an
+extensionless module import in its expanded dependency graph. The subsequent
+runner repair uses the existing confined helper bundler without changing any
+assertions. It now passes all 395 checks, including original recipe-history
+hashes, source mesh/label anchors, links and renderer bounds. The leg validator
+separately checks knee/genicular bound functions and their fallback interactions.
 
 Coordinating browser evidence covers desktop/mobile default/full framing,
 sides, explosion, shared-femur links and dedicated knee links. Desktop also
