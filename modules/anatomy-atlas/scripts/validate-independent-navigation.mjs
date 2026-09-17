@@ -6,6 +6,9 @@ import { createHash } from 'node:crypto';
 import vm from 'node:vm';
 import { build } from './workspace-test-build.mjs';
 import { build as componentBuild } from './workspace-component-test-build.mjs';
+// Match the application's installed Vinext link implementation in this Node
+// harness. A fake anchor would not test the actual navigation component.
+import * as frameworkLink from 'vinext/shims/link';
 const result = await build({
   stdin: {
     contents: `export * from './lib/independent-study-links';export * from './lib/specimen-review-material';export * from './lib/specimen-review';export * from './lib/specimen-review-store';export * from './lib/hra-renal';export * from './lib/hra-pelvis';export * from './lib/back-layers';export * from './lib/abdominal-wall';export * from './lib/um-limb-studies';export * from './lib/um-limb-navigation';export * from './lib/specimen-links';`,
@@ -276,7 +279,7 @@ const module = { exports: {} },
   sandbox = {
     module,
     exports: module.exports,
-    require,
+    require: name => name === 'next/link' ? frameworkLink : require(name),
     console,
     URL,
     crypto,

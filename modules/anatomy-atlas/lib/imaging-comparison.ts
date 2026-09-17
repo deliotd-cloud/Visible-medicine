@@ -117,8 +117,10 @@ export function createComparisonBridge() {
   let snapshot: ComparisonSnapshot | null = null;
   const listeners = new Set<() => void>();
   const changed = () => listeners.forEach((listener) => listener());
-  const fail = (target: Adapter) => {
-    if (owner !== target || !snapshot) return;
+  const fail = (target: Adapter, expected: ComparisonSnapshot) => {
+    // Host callbacks can synchronously publish or replace the viewer before
+    // failing. Never let superseded work erase a newer frame/access decision.
+    if (owner !== target || snapshot !== expected) return;
     snapshot = Object.freeze({
       ...snapshot,
       frame: immutableFrame({
@@ -212,11 +214,11 @@ export function createComparisonBridge() {
         }
         if (result)
           Promise.resolve(result).catch(() => {
-            if (snapshot === expected) fail(target);
+            fail(target, expected);
           });
         return true;
       } catch {
-        fail(target);
+        fail(target, expected);
         return false;
       }
     },
@@ -239,7 +241,7 @@ export function createComparisonBridge() {
           }
         };
       } catch {
-        fail(target);
+        fail(target, expected);
         return () => {};
       }
     },

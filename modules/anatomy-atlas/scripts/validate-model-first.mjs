@@ -9,6 +9,10 @@ import { build } from './workspace-component-test-build.mjs';
 import ts from 'typescript';
 import { dissectionProfiles } from '../app/dissection-data.ts';
 import { historicalRecipeProfiles } from './recipe-history.mjs';
+import {
+  modelFirstCallbackMigrations,
+  modelFirstHandlerMigrations,
+} from './model-first-migrations.mjs';
 
 const hash = (b) => createHash('sha256').update(b).digest('hex');
 const compare = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
@@ -75,6 +79,11 @@ same(
   'Pinned portable handler baseline',
 );
 same(baseline.sourceCommit, baseCommit);
+for (const [name, migration] of Object.entries(modelFirstHandlerMigrations)) {
+  check(/^[a-f0-9]{64}$/.test(migration.sha256), `${name} exact SHA-256 pin`);
+  check(migration.commits.length > 0, `${name} migration provenance`);
+  check(migration.evidence.length > 0, `${name} executable evidence`);
+}
 same(
   bindings(source).functions,
   {
@@ -117,14 +126,18 @@ same(
     // foot-joints:test; vessel-visibility:test executes the new scoped action.
     showJointPartners:
       '7bb95249076a04558f7ee3aa5aa223179979c194676f8a57efea3ced6ef88edf',
-    changeVesselVisibility:
-      '16ce4f95980e95dc04eac8f2d4875681a15079085a7b9eb0474cae8820702166',
     // Bounded dissection history: actual Undo/Redo handlers are exercised by
     // dissection-history:test, including empty-stack and practice guards.
     undoDissection:
       'c0fdb9b5834ce86baf29f0a3f23711f2dee0126bdb139c961944f5cbad85441c',
     redoDissection:
       'ad3ec5d87baeb4b2b0ecb7bb62575cdae423454acb62c2bb3a2f8e51ae0b913f',
+    ...Object.fromEntries(
+      Object.entries(modelFirstHandlerMigrations).map(([name, migration]) => [
+        name,
+        migration.sha256,
+      ]),
+    ),
   },
   'Named handlers preserved except explicit documented functional migrations',
 );
@@ -203,6 +216,14 @@ migratedCallbacks.push(
   ),
   'onValueChange/47c85b1c47a0ca99aa3cbfb9b61caa74d53dcf5c945ab3c7a766cac596813974',
 );
+for (const migration of modelFirstCallbackMigrations) {
+  for (const retired of migration.remove) {
+    const index = migratedCallbacks.indexOf(retired);
+    check(index >= 0, `${migration.commit} retired callback remains pinned`);
+    migratedCallbacks.splice(index, 1);
+  }
+  migratedCallbacks.push(...migration.add);
+}
 same(
   bindings(source).callbacks,
   migratedCallbacks.sort(compare),
@@ -302,6 +323,13 @@ const compiled = await build({
           contents:
             'export const BodyScene = () => null; export const retryBodyAssets = () => {};',
           loader: 'tsx',
+        }));
+        // The runtime session hook owns mode since 6786ed3c. Keep the loaded
+        // explorer path, but inject the requested fixture mode explicitly.
+        b.onLoad({ filter: /workspace-session\.ts$/ }, () => ({
+          contents:
+            'export function useWorkspaceSession() { return { mode: globalThis.__atlasMode, chooseMode() {} }; }',
+          loader: 'ts',
         }));
         b.onLoad({ filter: /atlas-workspace\.tsx$/ }, async () => ({
           contents: (
@@ -723,6 +751,17 @@ const result = {
   preservedNamedHandlers: Object.entries(baseline.functions).filter(
     ([name, fingerprint]) => bindings(source).functions[name] === fingerprint,
   ).length,
+  pinnedHandlerMigrations: Object.keys(modelFirstHandlerMigrations).length,
+  pinnedCallbackMigrationGroups: modelFirstCallbackMigrations.length,
+  pinnedCallbackRemovals: modelFirstCallbackMigrations.reduce(
+    (count, migration) => count + migration.remove.length,
+    0,
+  ),
+  pinnedCallbackAdditions: modelFirstCallbackMigrations.reduce(
+    (count, migration) => count + migration.add.length,
+    0,
+  ),
+  injectedWorkspaceSessionModeFixture: true,
   explicitDissectionHistoryHandlerMigration: 1,
   addedDissectionRedoHandler: 1,
   addedDissectionRedoCallback: 1,
@@ -757,7 +796,7 @@ const result = {
   clinicalValidation: false,
   browserInteractionTesting: false,
   limitations:
-    'Actual loaded explorer server markup with catalogue/selection fixtures and a GPU double; injected responsive hooks; source-handler preservation and stylesheet assertions. No pixel layout, browser focus/Escape, touch, zoom or scroll measurements are claimed.',
+    'Actual loaded explorer server markup with catalogue/selection and workspace-session mode fixtures plus a GPU double; injected responsive hooks; source-handler preservation and stylesheet assertions. No pixel layout, browser focus/Escape, touch, zoom or scroll measurements are claimed.',
 };
 await fs.writeFile(
   'docs/model-first-validation.json',

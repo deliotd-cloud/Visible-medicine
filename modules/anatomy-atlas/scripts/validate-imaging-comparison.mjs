@@ -205,6 +205,55 @@ try {
   await new Promise((resolve) => setTimeout(resolve, 0));
   assert.equal(bridge.getSnapshot().frame.status, 'error');
   asyncHandle.dispose();
+  // A host callback may publish a newer result before throwing/rejecting.
+  // Errors belong only to the exact snapshot that initiated the work.
+  let supersededCases = 0;
+  for (const operation of ['slice', 'plane', 'mount']) {
+    for (const outcome of ['ready', 'loading', 'access-denied']) {
+      for (const failure of operation === 'mount' ? ['throw', 'invalid-disposer'] : ['throw', 'reject']) {
+        const isolated = a.createComparisonBridge();
+        let control, newer;
+        const replaceThenFail = () => {
+          assert.equal(control.update({
+            ...initial, revision: 2, status: outcome,
+            anatomy: outcome === 'ready' ? entry : null, slice: 2,
+          }), true);
+          newer = isolated.getSnapshot();
+          if (failure === 'throw') throw new Error('Superseded host work');
+          if (failure === 'reject') return Promise.reject(new Error('Superseded async work'));
+          return undefined;
+        };
+        control = isolated.register({
+          ...adapter,
+          ...(operation === 'mount' ? {mount: replaceThenFail} :
+            operation === 'slice' ? {onSlice: replaceThenFail} : {onPlane: replaceThenFail}),
+        }, initial);
+        const before = isolated.getSnapshot();
+        if (operation === 'mount') isolated.mount({}, before)();
+        else isolated.request(before, operation === 'slice' ? {slice: 2} : {plane: 'coronal'});
+        await new Promise(resolve => setTimeout(resolve, 0));
+        assert.equal(isolated.getSnapshot(), newer,
+          `${operation}/${outcome}/${failure}: old failure must not overwrite newer host state`);
+        assert.equal(isolated.getSnapshot().frame.status, outcome);
+        assert.equal(isolated.request(before, {slice: 1}), false);
+        control.dispose();
+        supersededCases++;
+      }
+    }
+  }
+  // Current mount failures still fail closed; invalid disposers are not success.
+  for (const invalid of [false, true]) {
+    const isolated = a.createComparisonBridge();
+    const control = isolated.register({...adapter, mount: () => {
+      if (invalid) return undefined;
+      throw new Error('Current mount failure');
+    }}, initial);
+    isolated.mount({}, isolated.getSnapshot())();
+    assert.equal(isolated.getSnapshot().frame.status, 'error');
+    assert.equal(isolated.getSnapshot().frame.anatomy, null);
+    control.dispose();
+  }
+  assert.equal(supersededCases, 18);
   detach();
   assert.ok(notifications >= 9);
   // Exercise the installed identity bridge alongside the new comparison contract.
