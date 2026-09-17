@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
 import {readFile,writeFile} from 'node:fs/promises';
 import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
@@ -10,8 +11,9 @@ const api=await import('data:text/javascript;base64,'+Buffer.from(built.outputFi
 const catalog=api.bodyDisplayCatalog(JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json'))),snapshot=JSON.stringify(catalog);
 const pins=JSON.parse(await readFile('content/hip-attachment-pins.json'));
 const muscles=pins.entries.filter(s=>s.system==='muscles');
-assert.equal(muscles.length,36);assert.equal(pins.entries.length,43);assert.equal(pins.entries.filter(s=>s.system==='connective').length,2);
+assert.equal(muscles.length,36);assert.equal(pins.entries.length,49);assert.equal(pins.entries.filter(s=>s.system==='connective').length,2);
 assert.equal(api.hipAttachments.length,18);
+assert.equal(createHash('sha256').update(JSON.stringify(api.hipAttachments.filter(a=>a.key!=='psoas-major'))).digest('hex'),'7176e1cac4b6f8c93e48684db9fdc19553c63c80b7fc315297217b38acfd6329','Other 17 relationship records remain unchanged and ordered');
 const existingThigh=catalog.structures.filter(s=>api.thighAttachmentInfo(catalog,'whole-body','both',s.id));
 assert.deepEqual([...existingThigh.map(s=>s.fmaId),...muscles.filter(s=>s.regions.includes('thigh')).map(s=>s.fmaId)].sort(),api.thighMuscleLessons.flatMap(a=>a.fmaIds).sort());
 assert(!muscles.some(s=>s.fmaId==='FMA19728'));
@@ -32,7 +34,7 @@ const expected={
  'obturator-internus':[['FMA16586'],['FMA24474']],
  'pectineus':[['FMA16586'],['FMA24474']],
  'piriformis':[['FMA16202'],['FMA24474']],
- 'psoas-major':[[],['FMA24474']],
+ 'psoas-major':[['FMA10081','FMA13072','FMA13073','FMA13074','FMA13075','FMA13076'],['FMA24474']],
  'quadratus-femoris':[['FMA16586'],['FMA24474']],
  'tensor-fasciae-latae':[['FMA16586'],['FMA58776']],
  'coccygeus':[['FMA16586'],['FMA16202']],
@@ -133,5 +135,17 @@ for(const s of muscles)for(const exam of [false,true]){
 const budgets={};for(const a of api.hipAttachments)for(const url of a.references)budgets[url]=(budgets[url]??0)+a.fmas.length*[a.note,...a.endpoints.map(e=>e.site)].join(' ').trim().split(/\s+/).length;
 for(const [url,words]of Object.entries(budgets))assert(words<=200,url+' draft word budget '+words);
 assert.equal(JSON.stringify(catalog),snapshot);
-const report={muscles:36,bones:5,fasciae:2,relationships:18,plans,crossRegionLinks:links,hostContinuationLinks:hostLinks,rejectedCatalogs:rejections,componentSsr:renders,actualPartnerButtonClicks:partnerClicks,actualParentHandlers:handlers,referenceWords:budgets,sourceGeometryChanged:false,clinicalReview:'pending',browserAcceptance:'not-tested'};
+const psoas=api.hipAttachments.find(a=>a.key==='psoas-major');
+assert(psoas.endpoints[0].unresolved&&psoas.endpoints[0].label.includes('discs unmapped'));
+assert.equal(psoas.mappingStatus,'partial');
+for(const f of psoas.fmas){
+ const s=byFma(f),whole=api.hipAttachmentInfo(catalog,'whole-body',s.laterality,s.id);
+ assert(whole.completeHere);assert.equal(whole.rows[0].structures.length,6);
+ assert(whole.rows[0].structures.every(p=>p.structure.laterality==='midline'&&p.structure.system==='skeleton'));
+ const spine=api.hipAttachmentInfo(catalog,'spine',s.laterality,s.id),thigh=api.hipAttachmentInfo(catalog,'thigh',s.laterality,s.id);
+ assert(!spine.completeHere&&!thigh.completeHere);
+ assert(spine.rows[0].structures.every(p=>p.availableHere));assert(spine.rows[1].structures.every(p=>!p.availableHere));
+ assert(thigh.rows[0].structures.every(p=>!p.availableHere));assert(thigh.rows[1].structures.every(p=>p.availableHere));
+}
+const report={muscles:36,bones:11,fasciae:2,relationships:18,plans,crossRegionLinks:links,hostContinuationLinks:hostLinks,rejectedCatalogs:rejections,componentSsr:renders,actualPartnerButtonClicks:partnerClicks,actualParentHandlers:handlers,referenceWords:budgets,sourceGeometryChanged:false,clinicalReview:'pending',browserAcceptance:'not-tested'};
 await writeFile('docs/hip-attachments-validation.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
