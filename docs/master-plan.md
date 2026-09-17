@@ -2,6 +2,28 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — source-bound pelvic comparison focus
+
+The Atlas source now offers “Male pelvis: urethra & corpus spongiosum” in the
+existing Pelvis/Whole body Study menu: two targets with bladder, prostate and
+side-filtered hip context, no extra toolbar or imported geometry. Exact required
+records gate the view and its guide/library target lists. Existing source-bound
+links, removal/Undo and separation reset are preserved. The selected urethra
+opens its existing modality drafts; no patient scan or paid lecture is unlocked.
+
+Focused source/navigation/history checks, clinical-reference history, study
+library, guidance, content/review checks, TypeScript and builds pass. Local
+desktop/narrow-screen Chromium checks pass; physical-device/radiologist review
+remains separate. An older model-first handler-baseline failure on unchanged
+inputs remains recorded, not rebaselined. The previous nested/pelvic validation
+failures were repaired in Atlas 8ad450fc. See Atlas docs/PELVIC_URETHRAL_STUDY.md
+and the main task's dated source/backup checkpoint for exact evidence.
+
+Source-only: website84 remains last verified deployment. Corpus-spongiosum
+authenticated model staging is still required before generated website export.
+Original scans/masks, independent entitlements and clinical PACS are untouched.
+Full native goal ACTIVE; hourly review PAUSED.
+
 ## 17 September — renal/urethral reference revision
 
 The main task has independently re-sourced the EAU-dependent pathways in renal
