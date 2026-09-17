@@ -1011,6 +1011,16 @@ Hand muscle imaging teaching (13 September 2026) adds original brief factual syn
 Central-neural CT/MRI teaching (13 September 2026) adds original short factual synthesis and thirteen reading references, including RSNA/ACR, UTHealth, peer-reviewed anatomy/imaging research and StatPearls. No figures, diagrams, article prose, tables, protocols, datasets or scans are redistributed. StatPearls' NC-ND restrictions and all other linked-source terms remain separate; citations do not admit those materials as commercial assets. No model, dependency, font, texture, paid API or mandatory service is added. Original notes/code retain MIT terms and unchanged BodyParts3D CC BY 4.0 attribution remains. See `docs/CENTRAL_NEURAL_IMAGING.md` for exact scope, source binding and pending radiologist review.
 
 Head/neck vessel imaging (13 September 2026) adds original brief factual synthesis and twelve reading links to TTUHSC, UTHealth, RSNA/ACR, AIUM and cited imaging research. Linked publishers retain their rights; no prose, images, diagrams, scans, tables, protocols or datasets are redistributed, and citation is not a commercial-reuse grant. No new model, package, font, texture, paid API or mandatory service is added. Original notes/code retain MIT terms; existing BodyParts3D CC BY 4.0 attribution and source holds are unchanged. See `docs/HEAD_NECK_VESSEL_IMAGING.md` for source limits and pending radiologist review.
+# Lower-limb venous teaching (17 September 2026)
+
+Lower-limb venous imaging teaching (17 September 2026) adds original short factual
+synthesis and reading links only. No publisher prose, table, figure, scan or
+dataset is redistributed. In particular, the cited Korean Journal of Radiology
+article's CC BY-NC terms do not admit its material as commercial assets. Linked
+publishers retain their separate rights. Original notes/code retain MIT terms;
+existing BodyParts3D CC BY 4.0 credit is unchanged. No new asset, package, font,
+texture, paid API or mandatory service is added. See `docs/LOWER_VENOUS_IMAGING.md`.
+
 # Local colonic source review (17 September 2026)
 
 The optional, non-published colonic review derivative separates and recolours six

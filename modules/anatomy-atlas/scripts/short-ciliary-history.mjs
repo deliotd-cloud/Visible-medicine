@@ -2,11 +2,13 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
+import {beforeLowerVenousImaging} from './lower-venous-imaging-history.mjs';
 import record from '../content/short-ciliary-transition.json' with {type:'json'};
 import teaching from '../content/short-ciliary-teaching.transition.json' with {type:'json'};
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 const verify=()=>assert.equal(hash(record),'8031a86e4593373cc3ff12c04c2cfc4138692220c9c2d01eb6114b338f6567a8');
 export function beforeShortCiliaryTeaching(api){
+ api=beforeLowerVenousImaging(api);
  verify();assert.equal(hash(teaching),'0321886e5de0d75eff6a709008408ff91cc0cd38b546dc6902db3b4b2f10dfe8');
  assert.equal(teaching.catalogHash,record.currentCatalogHash);assert.equal(teaching.id,record.structure.id);
  assert.equal(teaching.previousAllLessonsAndRecipesHash,record.currentAllLessonsAndRecipesHash);

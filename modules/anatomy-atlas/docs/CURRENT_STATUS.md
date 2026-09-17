@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Lower-limb venous imaging](LOWER_VENOUS_IMAGING.md) fills 42 CT/MRI/ultrasound draft placements across 14 exact existing selections. Twelve modality texts and seven landmark/source-limit pairs distinguish deep/superficial routes and acquired imaging from geometry. No new controls, scans, source surfaces or clinical approvals; 9,885 other topics and all recipes remain unchanged.
+
 [Bowel component navigation](BOWEL_COMPONENTS.md) makes the existing small-/large-bowel aggregates, rectum and ileocecal junction easier to study together. The selected Dissect panel has a collapsed source-bound control with regional availability, whole-body continuation and reversible isolation. Four existing selections account for the complete source-file partitions; no new tissue, duplicated surface, lumen or clinical approval is implied.
 
 [Colonic source review](COLONIC_SOURCE_REVIEW.md) separates six existing source surfaces in a local diagnostic only, retaining all 56,878 rendered triangles and normals. Descending/sigmoid extent and fragmented taenia surfaces require review before anatomical subdivision; the compact bowel scope note states this limitation. The prototype adds no released anatomy, delivered model or clinical approval.
@@ -129,10 +131,10 @@ Counts are representations with displayed copy, not unique lessons, complete top
 | --- | ---: | ---: | ---: | ---: |
 | Anatomy | 1101 | 2 | 0 | 0 |
 | Function | 1098 | 0 | 5 | 0 |
-| CT | 782 | 0 | 321 | 0 |
-| MRI | 745 | 0 | 358 | 0 |
+| CT | 796 | 0 | 307 | 0 |
+| MRI | 759 | 0 | 344 | 0 |
 | X-ray | 344 | 0 | 759 | 0 |
-| Ultrasound | 503 | 0 | 600 | 0 |
+| Ultrasound | 517 | 0 | 586 | 0 |
 | Pathology | 1092 | 0 | 11 | 0 |
 | Clinical | 1096 | 0 | 7 | 0 |
 | Quiz notes | 71 | 0 | 1 | 1031 |

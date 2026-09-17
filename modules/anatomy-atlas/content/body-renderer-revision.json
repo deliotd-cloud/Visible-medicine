@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "b241723225393c79892e2cf3592436c36ad1a6b04da528c8e6931a81c7d1e688"
+      "sha256": "cc1aca4aa2362d2ec5484b4e76f290e70f73b110643475716ead9a285466855e"
     },
     {
       "path": "app/body-explorer.css",
@@ -811,6 +811,14 @@
     {
       "path": "content/lower-limb-motor.ts",
       "sha256": "b94da1bcd39a91f513565135cb8a4e70c64998fff05aaba8df8a83d7f156f36b"
+    },
+    {
+      "path": "content/lower-venous-imaging-pins.json",
+      "sha256": "4c981696a009e463c912b90d2ede3540ad527401220386fed3b77aeb873332d4"
+    },
+    {
+      "path": "content/lower-venous-imaging.ts",
+      "sha256": "107dc5c3938bfe14c68d717ada5e703f7f3ae05462f50612827f3eb5265bc66b"
     },
     {
       "path": "content/major-bone-imaging-pins.json",
@@ -1801,6 +1809,10 @@
       "sha256": "eb79201901dfbe170f0336888ac864308507b6c8f47d1cdf1a0fcddd7e7d295b"
     },
     {
+      "path": "lib/lower-venous-imaging.ts",
+      "sha256": "56d60e3802bfc6dd8797fa2c36048916306b0084142a4b59e07b070e0f2b7e76"
+    },
+    {
       "path": "lib/major-bone-imaging.ts",
       "sha256": "2079dabd5f918481fb54a2df8fd55311cddd180e337b8266f115d8406f09e373"
     },
@@ -2270,7 +2282,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "42ec31515fe3a4478a2c9c8650f8d2c229d5ff733d3b16950509ac712b135c67"
+      "sha256": "ab9f76c7afaa5fca7d8c6ddbea1776140dbe11a9afbc28efe96134a2f7b4c043"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2469,5 +2481,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "be8441c81748e4732c8301e9be9cc4dad9307da787a0c80267b8d8d95c87a9a0"
+  "sha256": "603fb17820fa3e2843cbd915fd8017e18998f35e7249c7d84df9d38a266bd794"
 }

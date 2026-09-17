@@ -324,6 +324,10 @@ const countsBySystem = Object.fromEntries(
 const profiles = Object.values(dissectionProfiles);
 const sourceHashes = {};
 for (const path of [
+  'lib/lower-venous-imaging.ts',
+  'content/lower-venous-imaging.ts',
+  'content/lower-venous-imaging-pins.json',
+  'content/lower-venous-imaging.transition.json',
   'docs/colonic-components-source-audit.json',
   'scripts/audit-colonic-components.mjs',
   'lib/bowel-components.ts',

@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Lower-limb venous imaging](LOWER_VENOUS_IMAGING.md) fills 42 CT/MRI/ultrasound draft placements across 14 exact existing selections. Twelve modality texts and seven landmark/source-limit pairs distinguish deep/superficial routes and acquired imaging from geometry. No new controls, scans, source surfaces or clinical approvals; 9,885 other topics and all recipes remain unchanged.
+
 [Bowel component navigation](BOWEL_COMPONENTS.md) makes the existing small-/large-bowel aggregates, rectum and ileocecal junction easier to study together. The selected Dissect panel has a collapsed source-bound control with regional availability, whole-body continuation and reversible isolation. Four existing selections account for the complete source-file partitions; no new tissue, duplicated surface, lumen or clinical approval is implied.
 
 [Colonic source review](COLONIC_SOURCE_REVIEW.md) separates six existing source surfaces in a local diagnostic only, retaining all 56,878 rendered triangles and normals. Descending/sigmoid extent and fragmented taenia surfaces require review before anatomical subdivision; the compact bowel scope note states this limitation. The prototype adds no released anatomy, delivered model or clinical approval.
