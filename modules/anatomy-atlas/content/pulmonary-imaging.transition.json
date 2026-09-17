@@ -1,0 +1,226 @@
+{
+  "sourceCommit": "d8967e7e033ecabc174c372738e687d05affaeef",
+  "baselineHash": "c20c23f10f47ddc4b2165954076c0864e22eeeb3b14d12492adaf59ae1d24626",
+  "pulmonary": [
+    {
+      "id": "pulmonary-upper-branches",
+      "study": "pulmonary",
+      "fmaIds": [
+        "FMA7333",
+        "FMA7370"
+      ],
+      "sections": {
+        "anatomy": {
+          "body": "Each lung has an upper lobe. The left lingula belongs to its upper lobe.",
+          "references": [
+            "pulmonaryLobes"
+          ],
+          "readiness": "draft"
+        },
+        "function": {
+          "body": "Lobar bronchi conduct air into the lung. Gas exchange takes place in the distal alveolar region, which is not represented by these branch meshes.",
+          "references": [
+            "pulmonaryAirways"
+          ],
+          "readiness": "draft"
+        },
+        "clinical": {
+          "body": "An upper-lobe abnormality is a location, not a diagnosis. When tuberculosis is suspected, clinical history, examination, imaging and microbiological investigation are considered together. A positive infection test does not by itself establish active pulmonary disease. These branch groups cannot show infection or determine whether someone is infectious.",
+          "references": [
+            "pulmonaryTBDiagnosis"
+          ],
+          "readiness": "draft"
+        },
+        "pathology": {
+          "body": "Upper-lobe infiltrates and cavities are recognised radiographic patterns in pulmonary tuberculosis, but lesions can occur elsewhere and appearances are not specific. Neither upper-lobe location nor a cavity confirms TB. The atlas supplies no infiltrate, cavity or diseased tissue; this example explains why anatomical location matters during interpretation.",
+          "references": [
+            "pulmonaryTBDistribution",
+            "pulmonaryTBDiagnosis"
+          ],
+          "readiness": "draft"
+        }
+      },
+      "imaging": {
+        "ct": {
+          "body": "Chest CT depicts nodules and other lung abnormalities and can be reviewed in multiple planes. Use the selected upper-lobe branches as an orientation aid when comparing an independently approved study. The coloured branch outline is not the tissue extent of a lobe, a nodule boundary or a CT attenuation value.",
+          "references": [
+            "pulmonaryChestCT"
+          ],
+          "readiness": "draft"
+        },
+        "mri": {
+          "body": "Aerated lung produces little conventional proton MR signal; tissue–air interfaces also cause rapid signal loss. Short-echo techniques can improve lung imaging, but sequence choice matters. Use upper-lobe branches for orientation only: their solid colours do not predict MR signal or guarantee that every distal branch will be resolved.",
+          "references": [
+            "pulmonaryMRIPhysics"
+          ],
+          "readiness": "draft"
+        },
+        "ultrasound": {
+          "body": "Ultrasound of aerated lung is dominated by the pleural interface and acoustic artefacts, not an open view of deep upper-lobe branches. B-lines are artefacts, not the selected vessels or bronchi. An examined window cannot assess deeper lung obscured by aeration; the model supplies neither pleura nor an ultrasound field of view.",
+          "references": [
+            "pulmonaryUltrasoundLimits"
+          ],
+          "readiness": "draft"
+        }
+      },
+      "modelLimit": "Airway and vessel files grouped by source lobe membership only. No parenchymal envelope, fissure surface, alveoli, measured lung volume or patient-scan registration.",
+      "quiz": {
+        "question": "Is the lingula a separate left middle lobe?",
+        "answer": "No. It is part of the left upper lobe.",
+        "references": [
+          "pulmonaryLobes"
+        ],
+        "basis": "primary-reference"
+      }
+    },
+    {
+      "id": "pulmonary-middle-branches",
+      "study": "pulmonary",
+      "fmaIds": [
+        "FMA7383"
+      ],
+      "sections": {
+        "anatomy": {
+          "body": "The right lung has a middle lobe; the left lung has no middle lobe.",
+          "references": [
+            "pulmonaryLobes"
+          ],
+          "readiness": "draft"
+        },
+        "function": {
+          "body": "Lobar bronchi conduct air into the lung. Gas exchange takes place in the distal alveolar region, which is not represented by these branch meshes.",
+          "references": [
+            "pulmonaryAirways"
+          ],
+          "readiness": "draft"
+        },
+        "clinical": {
+          "body": "Persistent or recurrent right-middle-lobe collapse prompts investigation of its cause. In a retrospective bronchoscopy series, findings included masses within the bronchus and compression from outside it. This illustrates the importance of the airway and its surroundings; a selected referral series does not provide an individual patient’s cancer risk.",
+          "references": [
+            "pulmonaryMiddleLobe"
+          ],
+          "readiness": "draft"
+        },
+        "pathology": {
+          "body": "Right middle lobe syndrome involves recurrent or chronic atelectasis, with mechanical and nonmechanical causes. Associated problems can include pneumonia beyond an obstruction and bronchiectasis. It is not synonymous with cancer. No collapse, airway blockage or abnormally dilated bronchus is represented by this static source group.",
+          "references": [
+            "pulmonaryMiddleLobe"
+          ],
+          "readiness": "draft"
+        }
+      },
+      "imaging": {
+        "ct": {
+          "body": "Chest CT can evaluate pneumonia, bronchiectasis and chest tumours. For a middle-lobe study, compare the airway group with the surrounding tissue on the actual examination rather than treating branches as the whole lobe. This atlas has no fissure surfaces, tissue-density information or registered CT slices to establish a collapse pattern.",
+          "references": [
+            "pulmonaryChestCT"
+          ],
+          "readiness": "draft"
+        },
+        "mri": {
+          "body": "Lung MRI appearance depends on the acquisition: parenchymal imaging, contrast-enhanced angiography and functional imaging answer different questions. This right-middle-lobe group combines airway and vascular surfaces; a single atlas colour cannot stand for their different signals. It supplies no collapse, tissue envelope, enhancement curve or proof of airway patency.",
+          "references": [
+            "pulmonaryMRIPhysics"
+          ],
+          "readiness": "draft"
+        },
+        "ultrasound": {
+          "body": "A consolidation may become directly accessible to ultrasound when it contacts the visceral pleura in the examined window. This does not make deeper middle-lobe airway branches routinely visible through aerated lung. The model supplies no consolidation or pleural contact; absence of a finding in one accessible window does not exclude a deeper lesion.",
+          "references": [
+            "pulmonaryUltrasoundLimits"
+          ],
+          "readiness": "draft"
+        }
+      },
+      "modelLimit": "Airway and vessel files grouped by source lobe membership only. No parenchymal envelope, fissure surface, alveoli, measured lung volume or patient-scan registration.",
+      "quiz": {
+        "question": "Which lung has a middle lobe?",
+        "answer": "The right lung.",
+        "references": [
+          "pulmonaryLobes"
+        ],
+        "basis": "primary-reference"
+      }
+    },
+    {
+      "id": "pulmonary-lower-branches",
+      "study": "pulmonary",
+      "fmaIds": [
+        "FMA7337",
+        "FMA7371"
+      ],
+      "sections": {
+        "anatomy": {
+          "body": "Both lungs have a lower lobe. The left has two lobes in total and the right has three.",
+          "references": [
+            "pulmonaryLobes"
+          ],
+          "readiness": "draft"
+        },
+        "function": {
+          "body": "Lobar bronchi conduct air into the lung. Gas exchange takes place in the distal alveolar region, which is not represented by these branch meshes.",
+          "references": [
+            "pulmonaryAirways"
+          ],
+          "readiness": "draft"
+        },
+        "clinical": {
+          "body": "Aspiration distribution depends partly on posture: basal lower-lobe segments are commonly involved after predominantly upright positioning; superior lower-lobe or posterior upper-lobe segments may be involved when supine. Relate this to the history, not location alone. Individual bronchopulmonary segments are not separately delineated in these lobe-level branch groups.",
+          "references": [
+            "pulmonaryAspiration"
+          ],
+          "readiness": "draft"
+        },
+        "pathology": {
+          "body": "Aspiration pneumonia is distinct from aspiration pneumonitis, a chemical lung injury often associated with inhaled gastric acid. Both can produce pulmonary opacities, so the clinical history matters. Lower-lobe location does not establish either diagnosis, and these meshes contain neither infected tissue nor a chemical-injury overlay.",
+          "references": [
+            "pulmonaryAspiration"
+          ],
+          "readiness": "draft"
+        }
+      },
+      "imaging": {
+        "ct": {
+          "body": "CT may help when suspected aspiration pneumonia remains uncertain after an inconclusive chest radiograph or when competing diagnoses need clarification. Assess the distribution of consolidation alongside the history. This partial lower-lobe branch model supplies no consolidation, dependent tissue changes or patient-specific correspondence; rotating it does not simulate aspiration.",
+          "references": [
+            "pulmonaryAspiration"
+          ],
+          "readiness": "draft"
+        },
+        "mri": {
+          "body": "Breathing changes lung position and inflation, affecting MR signal and alignment between acquisitions. Breath-holding or respiratory gating can reduce motion effects. Compare lower-lobe relationships on the actual sequences rather than treating a static branch model as a respiratory phase, perfusion map or patient-matched segmentation; its boundaries do not delineate lower-lobe tissue.",
+          "references": [
+            "pulmonaryMRIPhysics"
+          ],
+          "readiness": "draft"
+        },
+        "ultrasound": {
+          "body": "At basal chest windows, interpret accessible pleural fluid, consolidation and diaphragm motion in their acquired context. Fluid beside lung is not a pulmonary vessel, and tissue-like consolidation is not a normal branch rendering. Deep abnormalities separated from the probe by aerated lung may be inaccessible; these meshes do not provide an acoustic window or diagnose aspiration.",
+          "references": [
+            "pulmonaryUltrasoundLimits"
+          ],
+          "readiness": "draft"
+        }
+      },
+      "modelLimit": "Airway and vessel files grouped by source lobe membership only. No parenchymal envelope, fissure surface, alveoli, measured lung volume or patient-scan registration.",
+      "quiz": {
+        "question": "Does the left lung have a lower lobe?",
+        "answer": "Yes. Its two lobes are upper and lower.",
+        "references": [
+          "pulmonaryLobes"
+        ],
+        "basis": "primary-reference"
+      }
+    }
+  ],
+  "references": {
+    "pulmonaryMRIPhysics": {
+      "title": "Wild et al. · MRI of the lung: methods (2012)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3481083/"
+    },
+    "pulmonaryUltrasoundLimits": {
+      "title": "Demi et al. · New International Guidelines and Consensus on the Use of Lung Ultrasound (2023)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10086956/"
+    }
+  }
+}

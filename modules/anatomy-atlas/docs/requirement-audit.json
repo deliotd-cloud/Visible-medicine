@@ -254,7 +254,7 @@
     "app/api/nested-review/route.ts": "d4d9a00329e4bb9b6187c9c5d8e8a33a100fa0ef8a487376fb9a20ef2bf2608b",
     "content/cardiac-teaching.ts": "0848e6de5820400a84fee5cfdff88ad406de07774aedafc10ec7ffdedbf0a72c",
     "content/hepatic-teaching.ts": "793d49e8e33bc4daed5889b9bc58403a11280d39dd1d6894d0f5ff7c8fc0372d",
-    "content/pulmonary-teaching.ts": "dec60fd4009651ed0e0f11e67763db54c367aa22968c7653dadaf128918b77b0",
+    "content/pulmonary-teaching.ts": "dbc3e13276d3329269359370cdacebed04ff8d13d52da21c277e8bd169f6367c",
     "content/cerebral-teaching.ts": "ba741cc7373be4ffad1dd7a04af2605d5a033bbe6d40723196241d89d905b1a0",
     "content/nested-teaching-bindings.v1.json": "ed5b3b4968348d14e9feb65ac083b230ea80493360807fc440a0ee984070e315",
     "lib/nested-anatomy.ts": "ec289a3dbeadc13f0fca06b69e8ae10a9f4b7e06b2e5b475ce3217b521ac0082",
@@ -356,7 +356,7 @@
     "resolvedContentAndRecipeData": "1fbdb4de4b516fc3d971ae2cb92ed0fed5d7eca8362f0ff89eecb7f1ed66f8e3",
     "explicitTopicReadiness": "b2911b2f8007d9be9aa877db4e2fc3ee5602ed2fc486708f8ad165359635faea",
     "reasoningQuestionData": "523ab89c9c6313eec445979978777283e316b118328bd18ddde80a47ecfd3a32",
-    "nestedTeachingData": "ef9aba8c7dd92a02e7cf6ba5fde6eccef8539d12a1666de387687f2f771efe11"
+    "nestedTeachingData": "6f54b9c6832276c6813503e2ca933bdc133ec39018da108aac40444c481a6819"
   },
   "rendering": {
     "bodyBatching": {
@@ -1878,7 +1878,7 @@
         }
       ],
       "concepts": 44,
-      "references": 84,
+      "references": 86,
       "topics": {
         "anatomy": {
           "specificDraft": 75,
@@ -1899,9 +1899,9 @@
           "generatedIdentification": 0
         },
         "mri": {
-          "specificDraft": 35,
+          "specificDraft": 40,
           "identityOnly": 0,
-          "pending": 69,
+          "pending": 64,
           "generatedIdentification": 0
         },
         "xray": {
@@ -1911,9 +1911,9 @@
           "generatedIdentification": 0
         },
         "ultrasound": {
-          "specificDraft": 28,
+          "specificDraft": 33,
           "identityOnly": 0,
-          "pending": 76,
+          "pending": 71,
           "generatedIdentification": 0
         },
         "pathology": {

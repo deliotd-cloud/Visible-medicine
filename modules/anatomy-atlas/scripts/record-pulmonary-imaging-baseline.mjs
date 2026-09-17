@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {pulmonaryImagingApi,pulmonaryImagingBase,hash} from './pulmonary-imaging-tools.mjs';
+const api=await pulmonaryImagingApi({saved:true});
+const record={sourceCommit:pulmonaryImagingBase,conceptsHash:hash(api.nestedConcepts),referencesHash:hash(api.nestedTeachingReferences),pulmonary:api.nestedConcepts.filter(c=>c.study==='pulmonary')};
+assert.equal(record.pulmonary.length,3);for(const c of record.pulmonary)assert.deepEqual(Object.keys(c.imaging),['ct']);
+const path='content/pulmonary-imaging-baseline.json',text=JSON.stringify(record,null,2)+'\n';
+if(process.argv.includes('--check'))assert.equal((await readFile(path,'utf8')).replace(/\r\n/g,'\n'),text);
+else await writeFile(path,text,{flag:'wx'});
+console.log(JSON.stringify({source:record.sourceCommit,concepts:record.pulmonary.length,baselineHash:hash(record)}));

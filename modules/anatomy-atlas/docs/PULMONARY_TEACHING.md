@@ -1,4 +1,38 @@
-# Pulmonary clinical and CT teaching
+# Pulmonary clinical and imaging teaching
+
+## 17 September — MRI and ultrasound extension
+
+The five existing upper/middle/lower branch groups now have MRI and Ultrasound
+drafts through the same collapsed Learn more → Imaging controls. Six original
+topic texts make ten source-bound placements. Existing Anatomy, Function,
+Clinical, Pathology, CT, quizzes, source bindings and geometry remain unchanged.
+
+- MRI: low conventional lung signal, tissue–air susceptibility, acquisition
+  differences and respiratory motion. Branch colours are not signal or perfusion.
+- Ultrasound: pleural-interface artefacts, the need for an accessible window and
+  pleural contact for direct consolidation views, and basal diaphragm context.
+  Branch surfaces are not sonographically visible structures through aerated lung.
+
+References read 17 September: [Wild et al. (2012), MRI methods](https://pmc.ncbi.nlm.nih.gov/articles/PMC3481083/)
+and [Demi et al. (2023), international lung ultrasound consensus](https://pmc.ncbi.nlm.nih.gov/articles/PMC10086956/).
+The MRI source supports physical/acquisition principles, not a claim about
+current scanner availability or a recommended clinical protocol. The ultrasound
+article is CC BY-NC-ND: it is a reading reference only, not a redistributed asset.
+Only original short factual synthesis and links are included; no article text,
+tables, figures, scans or animations are copied. The MRI article is CC BY, but
+none of its media are bundled either. No new fee, dependency or patient data.
+
+`npm run pulmonary-imaging:test` replays the exact saved parent commit and proves
+that only these six fields/two references change. The existing nested suite
+retains its historical digests through an exact reversible editorial projection;
+it still checks source rejection, pending fallbacks, rendered/collapsed sections
+and source word budgets. Pins are checked, never regenerated for prose. Source
+coverage and introductory notes remain distinct from clinical approval.
+
+Actual current counts are in CURRENT_STATUS.md; verification, browser and backup
+evidence is in the main coordination checkpoint. X-ray remains pending here.
+
+## Original clinical/CT milestone (historical)
 
 Select a lung in **Thorax → Explore lung branches**, choose a branch group, then expand **Learn more**. Nine original paragraphs serve three shared concepts and five exact source representations, adding Clinical context, Pathology and CT within the existing panel. No extra toolbar, scrolling region, mesh or external service is introduced. All material is an educational draft awaiting specialist review.
 
@@ -8,7 +42,7 @@ Select a lung in **Thorax → Explore lung branches**, choose a branch group, th
 | Middle branches | FMA7383 right only | Investigation of recurrent collapse; middle lobe syndrome; CT airway/tissue distinction |
 | Lower branches | FMA7337 right / FMA7371 left | Posture-dependent aspiration distribution; pneumonia vs chemical pneumonitis; CT context |
 
-These are **partial airway/vessel groups**, not lobe parenchyma, fissures or separately delineated bronchopulmonary segments. Disease examples are neither findings in the source model nor exclusive to the selected lobe. There is no pathological geometry, scan connection, measurement, patient registration or treatment guidance. MRI and Ultrasound remain explicitly pending for every pulmonary group.
+These are **partial airway/vessel groups**, not lobe parenchyma, fissures or separately delineated bronchopulmonary segments. Disease examples are neither findings in the source model nor exclusive to the selected lobe. There is no pathological geometry, scan connection, measurement, patient registration or treatment guidance. MRI and Ultrasound were pending at this original milestone; the extension above adds their introductory notes.
 
 ## Primary evidence and rights
 

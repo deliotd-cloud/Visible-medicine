@@ -5,6 +5,7 @@ import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import { build } from './workspace-component-test-build.mjs';
 import { nestedBeforeClinicalReferenceRevision } from './clinical-reference-revision-history.mjs';
+import { nestedBeforePulmonaryImaging } from './pulmonary-imaging-history.mjs';
 
 const require = createRequire(import.meta.url);
 const React = require('react');
@@ -47,7 +48,7 @@ const api = {
   nestedConcepts: scope.exports.nestedConcepts.filter(c => c.study !== 'femoral-components'),
   nestedTeachingReferences: Object.fromEntries(Object.entries(scope.exports.nestedTeachingReferences).filter(([key]) => key !== 'femoralComponentAnatomy')),
 };
-const historicalApi = nestedBeforeClinicalReferenceRevision(api);
+const historicalApi = nestedBeforeClinicalReferenceRevision(nestedBeforePulmonaryImaging(api));
 const copy = (value) => JSON.parse(JSON.stringify(value));
 let checks = 0;
 const check = (value, message) => {
@@ -399,7 +400,7 @@ for (const target of targets) {
                     ? ['ct', 'mri', 'ultrasound']
                     : ['ultrasound']
                 : concept.study === 'pulmonary'
-                  ? ['ct']
+                  ? ['ct', 'mri', 'ultrasound']
                   : concept.id === 'cerebral-insula'
                     ? ['ct', 'mri']
                     : concept.id === 'cerebral-superior-temporal-anterior'
@@ -595,9 +596,9 @@ same(coverage.clinical, { draft: 69, pending: 2 });
 for (const tab of ['anatomy', 'function', 'quiz'])
   same(coverage[tab], { draft: 71, pending: 0 });
 same(coverage.ct, { draft: 35, pending: 36 });
-same(coverage.mri, { draft: 35, pending: 36 });
+same(coverage.mri, { draft: 40, pending: 31 });
 same(coverage.xray, { draft: 0, pending: 71 });
-same(coverage.ultrasound, { draft: 28, pending: 43 });
+same(coverage.ultrasound, { draft: 33, pending: 38 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
 const wordsBySource = {};
 const hosts = new Set([
@@ -609,6 +610,7 @@ const hosts = new Set([
   'www.cdc.gov',
   'www.brit-thoracic.org.uk',
   'pubmed.ncbi.nlm.nih.gov',
+  'pmc.ncbi.nlm.nih.gov',
   'aasldpubs.onlinelibrary.wiley.com',
   'www.aium.org',
   'www.heart.org',
@@ -663,11 +665,11 @@ for (const concept of api.nestedConcepts) {
     }
   }
 }
-same(Object.keys(wordsBySource).length, 82);
+same(Object.keys(wordsBySource).length, 84);
 same(
   new Set(Object.values(api.nestedTeachingReferences).map((ref) => ref.url))
     .size,
-  83,
+  85,
   'Do not split one source into duplicate reference keys',
 );
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {

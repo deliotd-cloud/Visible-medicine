@@ -6,7 +6,7 @@ Select either lung in Thorax or Whole body, then **Explore lung branches**. The 
 
 ## What is actually represented
 
-**Learn more** now includes [clinical, pathology and CT drafts](PULMONARY_TEACHING.md) for all five branch groups. MRI/US remain pending. This extension changes teaching only; original source counts and the historical implementation evidence below are retained.
+**Learn more** includes [Clinical, Pathology, CT, MRI and Ultrasound drafts](PULMONARY_TEACHING.md) for all five branch groups. MRI/US notes explain acquisition and visibility limits, not complete lobe or branch imaging. These extensions change teaching only; original source counts and the historical implementation evidence below are retained.
 
 **Show airway landmarks** optionally adds the existing trachea and the main bronchus on the selected side, with a compact colour key. The landmarks are nonselectable and their pointer handlers pass through to branches. They are omitted from the scene and from requested bundles during separation; reassembly restores the previous context choice. Context is off by default, so there is no extra initial model download. Main-atlas lung selection now also states the missing tissue/fissure coverage, and nested groups are labelled “Partial branch group”, not “Space representation”.
 
@@ -36,7 +36,7 @@ The two new display bundles retain all 280 original files and 114,750 triangles.
 
 `npm run pulmonary:test` verifies every transformed triangle with winding and multiplicity, actual bounds/surface anchors, finite attributes, source identity, invalid-parent rejection, bundle scoping and the real workbench callbacks using a GPU-only fixture. It covers presets, three separation mechanisms, hide/Undo, all-hidden recovery, initial selection, cross-side rejection and static markup. [Validation results](pulmonary-validation.json) are automated checks, not browser/device acceptance or clinical review.
 
-The explicit teaching-pin extension preserves all previous 41 child bindings and four parent snapshots byte-for-byte in their canonical arrays. New totals: 46 selectable nested representations / 29 concepts / 27 primary references. CT, MRI and US topics remain pending; Clinical and Pathology are also pending for these five groups. Three new conceptual self-checks are unscored drafts.
+The original teaching-pin extension preserved all previous 41 child bindings and four parent snapshots byte-for-byte in their canonical arrays. At that historical milestone: 46 selectable nested representations / 29 concepts / 27 primary references, with imaging/Clinical/Pathology pending for these five groups. The later teaching extensions linked above fill those introductory notes; use CURRENT_STATUS.md for current totals. The three conceptual self-checks remain unscored drafts.
 
 Future learning links use the existing source-pinned parent/child contract and `pulmonary` study family. They do not claim CT segmentation or registration. The production resource manifest is still empty. Independently paid lectures remain separately gated; an Atlas grant never grants a lecture or its protected section.
 
