@@ -1,5 +1,17 @@
 # Third-party notices
 
+## Local subcostal source review — 17 September 2026
+
+The optional diagnostic generator uses four complete BodyParts3D v4 subcostal
+sources and seven previously retained context sources. The generated local HTML
+contains the required DBCLS/CC BY4.0 attribution, licence links and modification
+statement, plus the full installed Three.js MIT notice. Original ordered triangles
+and supplied normals are retained with Float32 storage and the established scene
+matrix; colours and context transparency are diagnostic display changes only.
+Two opposite-side ascending-lumbar sources are excluded. No new production model,
+font, image, dependency or service is added. See
+[source and review scope](../docs/THORACOLUMBAR_VESSEL_SOURCE_REVIEW.md).
+
 ## Abdominal organ reasoning — 17 September 2026
 
 Seven original short questions cite university anatomy tables and OpenStax for

@@ -88,3 +88,79 @@ source-preserving export, identity/geometry tests, browser/side/dissection tests
 and revision-bound owner review. Do not ship all six because topology passed.
 Anatomical contact/attachments, aortic boundary terminology and clinical
 acceptance remain distinct decisions. No source is clinically approved here.
+
+## Local contextual review
+
+`node scripts/review-thoracolumbar-vessels.mjs` creates a self-contained local
+review at `.local/thoracolumbar-review/review.html`, not a production asset.
+It uses the four exact candidate files plus seven pinned existing context
+surfaces: bilateral twelfth ribs, diaphragm, descending thoracic and abdominal
+aorta, azygos and hemiazygos veins. Held ascending-lumbar identities and files
+are explicitly excluded. No network requests are needed by the generated viewer.
+
+Controls provide four camera directions, free orbit, one-candidate isolation,
+all-candidate restoration, individual context switches and visible-bounds fit.
+The seven context surfaces are faded, not moved. Each input's full SHA256,
+every ordered face-corner position and every supplied OBJ vertex normal are
+verified before rendering (only Float32 storage rounding). Browser checks also
+compare every position/normal after interaction and the unchanged source matrix.
+The original matrix is assigned directly: decomposing/recomposing it introduced
+small floating-point changes and correctly failed the first test.
+
+Actual desktop and 390px-wide browser runs verify four isolated candidates,
+seven context switches, four views, orbit, camera bounds and no horizontal
+overflow or browser errors. Evidence and screenshots are beside the local HTML.
+These are software checks and an inspected viewport, not a physical touch-device
+or clinical validation. The reviewed posterior view shows the supplied vessels
+along their corresponding twelfth-rib region; context inspection does not prove
+origins, terminal attachments, tissue separation or continuous lumens. The whole
+aortic/azygos sources remain complete even when they extend beyond that region.
+
+This step adds no root selection, dissection recipe, clinical teaching, hosted
+model or dependency. The local derivative embeds BodyParts3D CC BY4.0 credit,
+both licence links, its modification statement and the complete Three.js MIT
+notice. `PLAYWRIGHT_MODULE` may point to an existing installed Playwright module
+for generation/QA; it is not a runtime service or new paid dependency.
+
+## Triangle-intersection findings and disposition
+
+The follow-up [intersection report](subcostal-intersection-audit.json) tests all
+four self pairs, six candidate pairs and 28 candidate/context pairs. It uses
+installed MIT-licensed `three-mesh-bvh`0.8.3 with original Float64 coordinates,
+indirect indexing and resolved original zero-based OBJ face IDs. Source files
+are hash-pinned and remain unchanged. The BVH uses padded Float32 bounds and a
+floating-point triangle predicate, not exact arithmetic.
+
+The report contains1,700 face-pair hits:69 between the right artery/vein and99
+between the left artery/vein, with further results against the corresponding
+ribs, diaphragm, aortic and azygos/hemiazygos context. These are triangle contact
+or crossing results, not1,700 separate defects, intersection volumes or proof
+of vascular continuity. Separate vessels are not assumed to interpenetrate
+normally. The aortic-boundary and source-contact findings need disposition.
+
+The four self tests find zero **non-adjacent** hits after excluding all pairs
+sharing an exact coordinate vertex. This does not establish complete freedom
+from self-intersection: excluded adjacent faces could fold/overlap. Coplanar
+contact has no reliable returned intersection edge; those results are excluded
+from the reported noncoplanar intersection bounds. Strict containment without
+surface crossing is not detected.
+
+Synthetic tests cover positive crossing, separated and touching tetrahedra,
+strict containment, valid-tetrahedron self tests, positive non-adjacent
+self-crossing with exact face IDs, and a24-triangle reordered BVH fixture whose
+hit must resolve to original face17. Deterministic replay:
+`node scripts/audit-subcostal-intersections.mjs --check`. Initial recording
+refuses to replace the saved report.
+
+The local review's optional orange contact overlay marks the actual candidate
+faces implicated by this report:246 right-arterial,244 left-arterial,350
+right-venous and186 left-venous faces. It includes results against context
+currently hidden, as the on-screen explanation states. It is not a pathology
+overlay or clinical segmentation. Turning it off restores the source display;
+no faces are moved, deleted or repaired.
+
+**Disposition:** retain these four as review candidates, not newly admitted
+Atlas anatomy. Investigate local source contacts/attachments and their teaching
+limitations before admission; do not represent diagrammatic contacts as accurate
+dissection planes. This review queue does not block other regional development.
+The two wholly opposite-side ascending-lumbar sources remain separately held.

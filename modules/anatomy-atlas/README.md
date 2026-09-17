@@ -126,6 +126,8 @@ The [female pelvic Learn panel](docs/HRA_FEMALE_PELVIS.md#structure-specific-tea
 
 A [cardiac valve/subvalvar source review](docs/CARDIAC_VALVE_SOURCE_REVIEW.md) records 16 existing source files and their specific identity/mesh issues. No uncertain valve geometry is added to the live atlas; oral detail stays lower priority while wider-body development continues.
 
+A [subcostal vessel review](docs/THORACOLUMBAR_VESSEL_SOURCE_REVIEW.md) provides a reproducible local 3D inspection of four candidate vessels with rib, diaphragm and aortic/azygos context. All original triangles and normals are retained. Two opposite-side ascending lumbar sources are excluded; none of these candidates is yet added to the live atlas.
+
 **Shoulder & arm / Forearm / Hand → Dissect → Muscles by nerve** opens [17 nerve/branch groups](docs/UPPER_LIMB_MOTOR.md) linked to 102 existing muscle selections. Show a group with bones, switch sides and select muscles for their notes. The control stays collapsed; mixed supply and whole grouped surfaces are explicit. These are typical relationships, not nerve paths, patient findings or clinical approval.
 
 **Spine → select a vertebra or disc → Imaging** now adds [CT, MRI and X-ray orientation](docs/SPINE_IMAGING_TEACHING.md) for 47 existing source selections across nine concept groups. Use the same compact panel and focused level dissections. These are referenced drafts, not patient images, automatic level registration or clinical approval; missing tissues and the unresolved T12–L1 source disc stay explicit.
