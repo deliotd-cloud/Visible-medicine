@@ -1,0 +1,1899 @@
+{
+  "schemaVersion": 1,
+  "sourceUrl": "https://cdn.humanatlas.io/digital-objects/ref-organ/united-female/v1.10/assets/3d-vh-f-united.glb",
+  "sourceSha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422",
+  "sourceBytes": 374505632,
+  "metadataUrl": "https://cdn.humanatlas.io/digital-objects/ref-organ/united-female/v1.10/metadata.json",
+  "metadataSha256": "b9f137b1176c31419c68b78ac87f0926f874dad22f56d4dde7df3e2f15bab501",
+  "crosswalkUrl": "https://cdn.humanatlas.io/digital-objects/ref-organ/united-female/v1.10/assets/crosswalk.csv",
+  "crosswalkSha256": "2a367d3ad8c1cf1b083c884aed7d99fb3b504d482e1e49570ecdb4f03c84d55f",
+  "sourceLicense": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "credit": "Kristen Browne and Heidi Schlehlein. 3D Reference Organ Set for Female, v1.10. HuBMAP, 2026. Based on the NLM Visible Human Dataset.",
+  "rows": [
+    {
+      "nodeIndex": 685,
+      "nodeName": "VH_F_right_ureter",
+      "role": "existing-renal",
+      "meshIndex": 592,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFRightUreter",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "right ureter",
+        "ontologyid": "UBERON:0001222",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0001222",
+        "glb_file_of_single_organs": "VH_F_Ureter_R&lf;",
+        "node_type": "mesh"
+      },
+      "ancestry": [
+        {
+          "nodeIndex": 685,
+          "nodeName": "VH_F_right_ureter"
+        },
+        {
+          "nodeIndex": 667,
+          "nodeName": "VH_F_renal_pelvis_ureter_R"
+        },
+        {
+          "nodeIndex": 666,
+          "nodeName": "VH_F_renal_pelvis_ureter"
+        },
+        {
+          "nodeIndex": 604,
+          "nodeName": "VH_F_upper_urinary_tract"
+        },
+        {
+          "nodeIndex": 603,
+          "nodeName": "VH_F_urinary_system"
+        },
+        {
+          "nodeIndex": 0,
+          "nodeName": "VH_F"
+        }
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "crosswalk": {
+        "ontologyId": "UBERON:0001222",
+        "label": "right ureter",
+        "originalRow": "VH_F_right_ureter,UBERON:0001222,right ureter"
+      },
+      "sourceVertices": 6478,
+      "triangles": 12952,
+      "worldBoundsMm": {
+        "min": [
+          -69.73984837532043,
+          11.176318861544132,
+          -89.23738449811935
+        ],
+        "max": [
+          -34.442342817783356,
+          235.5201542377472,
+          -53.55392396450043
+        ]
+      },
+      "positionAccessorSha256": "7cf02505ad7cf0094446861b2b64e752568e6ee8afa1692939c7e272c36488bd",
+      "indexAccessorSha256": "17c5397e4d4a405e15ac0cba60c2d92d8854f6541b03ccd80be6a4ec89d9a7af",
+      "attributeAccessorSha256": {
+        "POSITION": "7cf02505ad7cf0094446861b2b64e752568e6ee8afa1692939c7e272c36488bd",
+        "NORMAL": "cc95b089c4151495d875973b9e75d71f8103777685829f2dfd1127b47bb7da3b"
+      },
+      "topology": {
+        "sourceVertices": 6478,
+        "exactUniqueVertices": 6478,
+        "unusedUniqueVertices": 0,
+        "triangles": 12952,
+        "edges": 19428,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 12952,
+            "vertices": 6478,
+            "bounds": {
+              "min": [
+                -69.73984837532043,
+                11.176318861544132,
+                -89.23738449811935
+              ],
+              "max": [
+                -34.442342817783356,
+                235.5201542377472,
+                -53.55392396450043
+              ]
+            },
+            "areaMm2": 1679.9952450264777,
+            "algebraicVolumeMm3": 830.5381670593162
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 705,
+      "nodeName": "VH_F_left_ureter",
+      "role": "existing-renal",
+      "meshIndex": 608,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLeftUreter",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "left ureter",
+        "ontologyid": "UBERON:0001223",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0001223",
+        "glb_file_of_single_organs": "VH_F_Ureter_L&lf;",
+        "node_type": "mesh"
+      },
+      "ancestry": [
+        {
+          "nodeIndex": 705,
+          "nodeName": "VH_F_left_ureter"
+        },
+        {
+          "nodeIndex": 686,
+          "nodeName": "VH_F_renal_pelvis_ureter_L"
+        },
+        {
+          "nodeIndex": 666,
+          "nodeName": "VH_F_renal_pelvis_ureter"
+        },
+        {
+          "nodeIndex": 604,
+          "nodeName": "VH_F_upper_urinary_tract"
+        },
+        {
+          "nodeIndex": 603,
+          "nodeName": "VH_F_urinary_system"
+        },
+        {
+          "nodeIndex": 0,
+          "nodeName": "VH_F"
+        }
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "crosswalk": {
+        "ontologyId": "UBERON:0001223",
+        "label": "left ureter",
+        "originalRow": "VH_F_left_ureter,UBERON:0001223,left ureter"
+      },
+      "sourceVertices": 7474,
+      "triangles": 14944,
+      "worldBoundsMm": {
+        "min": [
+          9.63280163705349,
+          9.128126315772533,
+          -87.89948374032974
+        ],
+        "max": [
+          63.1011426448822,
+          228.7796288728714,
+          -51.182616502046585
+        ]
+      },
+      "positionAccessorSha256": "0f30f436dc494a52e736c92691059ab18ac1f866c3054c5d182a32a1c2bbfa02",
+      "indexAccessorSha256": "3abb157e981cf19b2827f7cc41e8d215f10d10e72dee9b510116da43e2499eba",
+      "attributeAccessorSha256": {
+        "POSITION": "0f30f436dc494a52e736c92691059ab18ac1f866c3054c5d182a32a1c2bbfa02",
+        "NORMAL": "d71320423d77eed51822e35c3a3a0e17777db3e29ee62e60b85b0ec4c33beb2b"
+      },
+      "topology": {
+        "sourceVertices": 7474,
+        "exactUniqueVertices": 7474,
+        "unusedUniqueVertices": 0,
+        "triangles": 14944,
+        "edges": 22416,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 14944,
+            "vertices": 7474,
+            "bounds": {
+              "min": [
+                9.63280163705349,
+                9.128126315772533,
+                -87.89948374032974
+              ],
+              "max": [
+                63.1011426448822,
+                228.7796288728714,
+                -51.182616502046585
+              ]
+            },
+            "areaMm2": 1516.635093161514,
+            "algebraicVolumeMm3": 668.6659597940005
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 712,
+      "nodeName": "VH_F_ureteral_orifice_R",
+      "role": "candidate",
+      "meshIndex": 613,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFUrinaryBladder",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Right ureteral orifice",
+        "ontologyid": "FMA:15939",
+        "representation_of": "http://purl.org/sig/ont/fma/fma15939",
+        "glb_file_of_single_organs": "VH_F_Urinary_Bladder&lf;",
+        "node_type": "surface"
+      },
+      "ancestry": [
+        {
+          "nodeIndex": 712,
+          "nodeName": "VH_F_ureteral_orifice_R"
+        },
+        {
+          "nodeIndex": 711,
+          "nodeName": "VH_F_ureteral_orifice"
+        },
+        {
+          "nodeIndex": 709,
+          "nodeName": "VH_F_fundus_of_urinary_bladder_base"
+        },
+        {
+          "nodeIndex": 706,
+          "nodeName": "VH_F_urinary_bladder"
+        },
+        {
+          "nodeIndex": 603,
+          "nodeName": "VH_F_urinary_system"
+        },
+        {
+          "nodeIndex": 0,
+          "nodeName": "VH_F"
+        }
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "crosswalk": {
+        "ontologyId": "FMA:15939",
+        "label": "Right ureteral orifice",
+        "originalRow": "VH_F_ureteral_orifice_R,FMA:15939,Right ureteral orifice"
+      },
+      "sourceVertices": 106,
+      "triangles": 180,
+      "worldBoundsMm": {
+        "min": [
+          -36.559198051691055,
+          9.611086919903755,
+          -56.00558966398239
+        ],
+        "max": [
+          -33.12330320477486,
+          13.00685852766037,
+          -53.813934326171875
+        ]
+      },
+      "positionAccessorSha256": "9adb2dec03e5f3148e50724232c521b3cd99b30b1be4b6e3ca3a3378e4008ae4",
+      "indexAccessorSha256": "2caa453a4da3186ed737629c80adc15265b0e01f61e9f7a2e1e3fc3b640a990e",
+      "attributeAccessorSha256": {
+        "POSITION": "9adb2dec03e5f3148e50724232c521b3cd99b30b1be4b6e3ca3a3378e4008ae4",
+        "NORMAL": "b5cd342cb9c70a1c7d94c90f1611c8b3b8c4b3215146a035768e435ec03e94ff"
+      },
+      "topology": {
+        "sourceVertices": 106,
+        "exactUniqueVertices": 106,
+        "unusedUniqueVertices": 0,
+        "triangles": 180,
+        "edges": 285,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 30,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 1,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 180,
+            "vertices": 106,
+            "bounds": {
+              "min": [
+                -36.559198051691055,
+                9.611086919903755,
+                -56.00558966398239
+              ],
+              "max": [
+                -33.12330320477486,
+                13.00685852766037,
+                -53.813934326171875
+              ]
+            },
+            "areaMm2": 11.355922186153347,
+            "algebraicVolumeMm3": -2.769011895391721
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 713,
+      "nodeName": "VH_F_ureteral_orifice_L",
+      "role": "candidate",
+      "meshIndex": 614,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFUrinaryBladder",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Left ureteral orifice",
+        "ontologyid": "FMA:15940",
+        "representation_of": "http://purl.org/sig/ont/fma/fma15940",
+        "glb_file_of_single_organs": "VH_F_Urinary_Bladder&lf;",
+        "node_type": "surface"
+      },
+      "ancestry": [
+        {
+          "nodeIndex": 713,
+          "nodeName": "VH_F_ureteral_orifice_L"
+        },
+        {
+          "nodeIndex": 711,
+          "nodeName": "VH_F_ureteral_orifice"
+        },
+        {
+          "nodeIndex": 709,
+          "nodeName": "VH_F_fundus_of_urinary_bladder_base"
+        },
+        {
+          "nodeIndex": 706,
+          "nodeName": "VH_F_urinary_bladder"
+        },
+        {
+          "nodeIndex": 603,
+          "nodeName": "VH_F_urinary_system"
+        },
+        {
+          "nodeIndex": 0,
+          "nodeName": "VH_F"
+        }
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "crosswalk": {
+        "ontologyId": "FMA:15940",
+        "label": "Left ureteral orifice",
+        "originalRow": "VH_F_ureteral_orifice_L,FMA:15940,Left ureteral orifice"
+      },
+      "sourceVertices": 118,
+      "triangles": 194,
+      "worldBoundsMm": {
+        "min": [
+          8.18664487451315,
+          8.465146645903587,
+          -52.01484635472298
+        ],
+        "max": [
+          10.536002926528454,
+          11.849340982735157,
+          -49.04640093445778
+        ]
+      },
+      "positionAccessorSha256": "fea72c78068c5d241427f3d16803575b83c4a5430c16c47eea9174685963a6aa",
+      "indexAccessorSha256": "23fccc1678a3c8809092dda060fac4d550baf129a1eaf58aeb1a42e8f9697061",
+      "attributeAccessorSha256": {
+        "POSITION": "fea72c78068c5d241427f3d16803575b83c4a5430c16c47eea9174685963a6aa",
+        "NORMAL": "3e303d592273771f0b8b9daa88d2c57dc2b24481b374e92757f9f3da1cab783f"
+      },
+      "topology": {
+        "sourceVertices": 118,
+        "exactUniqueVertices": 118,
+        "unusedUniqueVertices": 0,
+        "triangles": 194,
+        "edges": 312,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 42,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 194,
+            "vertices": 118,
+            "bounds": {
+              "min": [
+                8.18664487451315,
+                8.465146645903587,
+                -52.01484635472298
+              ],
+              "max": [
+                10.536002926528454,
+                11.849340982735157,
+                -49.04640093445778
+              ]
+            },
+            "areaMm2": 11.699870898170452,
+            "algebraicVolumeMm3": -3.7456316148912907
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 707,
+      "nodeName": "VH_F_fundus_of_urinary_bladder_dome",
+      "role": "existing-pelvic-context",
+      "meshIndex": 609,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFUrinaryBladder",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "fundus of urinary bladder",
+        "ontologyid": "UBERON:0006082",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0006082",
+        "glb_file_of_single_organs": "VH_F_Urinary_Bladder&lf;",
+        "node_type": "surface"
+      },
+      "ancestry": [
+        {
+          "nodeIndex": 707,
+          "nodeName": "VH_F_fundus_of_urinary_bladder_dome"
+        },
+        {
+          "nodeIndex": 706,
+          "nodeName": "VH_F_urinary_bladder"
+        },
+        {
+          "nodeIndex": 603,
+          "nodeName": "VH_F_urinary_system"
+        },
+        {
+          "nodeIndex": 0,
+          "nodeName": "VH_F"
+        }
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "crosswalk": {
+        "ontologyId": "UBERON:0006082",
+        "label": "fundus of urinary bladder",
+        "originalRow": "VH_F_fundus_of_urinary_bladder_dome,UBERON:0006082,fundus of urinary bladder"
+      },
+      "sourceVertices": 6138,
+      "triangles": 11916,
+      "worldBoundsMm": {
+        "min": [
+          -40.54019972681999,
+          7.800909224897623,
+          -58.76102298498154
+        ],
+        "max": [
+          11.43630687147379,
+          26.227213442325592,
+          2.4150912649929523
+        ]
+      },
+      "positionAccessorSha256": "2e56e200aa446ff898203b6e329ef55c4e48a6128cb2bb9b57a6cc71fd281f41",
+      "indexAccessorSha256": "37029b98e3377a1a59abc0afccc1ed5e252bdf8466d93f11fbb34b334fdaa53d",
+      "attributeAccessorSha256": {
+        "POSITION": "2e56e200aa446ff898203b6e329ef55c4e48a6128cb2bb9b57a6cc71fd281f41",
+        "NORMAL": "7b9544526cd1451370bfacb38f5406b8e003623436364c73303374c5f9041ae4"
+      },
+      "topology": {
+        "sourceVertices": 6138,
+        "exactUniqueVertices": 6138,
+        "unusedUniqueVertices": 0,
+        "triangles": 11916,
+        "edges": 18052,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 356,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 11502,
+            "vertices": 5876,
+            "bounds": {
+              "min": [
+                -40.54019972681999,
+                10.57147141546011,
+                -58.76102298498154
+              ],
+              "max": [
+                11.43630687147379,
+                26.227213442325592,
+                2.4150912649929523
+              ]
+            },
+            "areaMm2": 3074.073366781409,
+            "algebraicVolumeMm3": 12118.214126666493
+          },
+          {
+            "firstFace": 11502,
+            "triangles": 414,
+            "vertices": 262,
+            "bounds": {
+              "min": [
+                -30.011452734470367,
+                7.800909224897623,
+                -55.772680789232254
+              ],
+              "max": [
+                5.3123594261705875,
+                12.224913574755192,
+                -51.074255257844925
+              ]
+            },
+            "areaMm2": 101.813157202771,
+            "algebraicVolumeMm3": -73.31204817370406
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 708,
+      "nodeName": "VH_F_urinary_bladder_neck_smooth_muscle",
+      "role": "existing-pelvic-context",
+      "meshIndex": 610,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFUrinaryBladder",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "urinary bladder neck smooth muscle",
+        "ontologyid": "UBERON:0004230",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0004230",
+        "glb_file_of_single_organs": "VH_F_Urinary_Bladder&lf;",
+        "node_type": "surface"
+      },
+      "ancestry": [
+        {
+          "nodeIndex": 708,
+          "nodeName": "VH_F_urinary_bladder_neck_smooth_muscle"
+        },
+        {
+          "nodeIndex": 706,
+          "nodeName": "VH_F_urinary_bladder"
+        },
+        {
+          "nodeIndex": 603,
+          "nodeName": "VH_F_urinary_system"
+        },
+        {
+          "nodeIndex": 0,
+          "nodeName": "VH_F"
+        }
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "crosswalk": {
+        "ontologyId": "UBERON:0004230",
+        "label": "urinary bladder neck smooth muscle",
+        "originalRow": "VH_F_urinary_bladder_neck_smooth_muscle,UBERON:0004230,urinary bladder neck smooth muscle"
+      },
+      "sourceVertices": 935,
+      "triangles": 1790,
+      "worldBoundsMm": {
+        "min": [
+          -16.07695035636425,
+          -17.99396425485611,
+          -54.93762716650963
+        ],
+        "max": [
+          -9.19598899781704,
+          -13.756226748228073,
+          -49.2430105805397
+        ]
+      },
+      "positionAccessorSha256": "15535cf021c62d15d200e516ffc940dddb0ae9608e7eba06b028ab2823470845",
+      "indexAccessorSha256": "cf2f5629793e83670c6d4b3c559a9b59501f638d1aab59c2d161c716956620f7",
+      "attributeAccessorSha256": {
+        "POSITION": "15535cf021c62d15d200e516ffc940dddb0ae9608e7eba06b028ab2823470845",
+        "NORMAL": "c70eb62975331328f744ce71ae3e578419d4c1e62b854e26f7d71e117705e1ba"
+      },
+      "topology": {
+        "sourceVertices": 935,
+        "exactUniqueVertices": 935,
+        "unusedUniqueVertices": 0,
+        "triangles": 1790,
+        "edges": 2725,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 80,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1790,
+            "vertices": 935,
+            "bounds": {
+              "min": [
+                -16.07695035636425,
+                -17.99396425485611,
+                -54.93762716650963
+              ],
+              "max": [
+                -9.19598899781704,
+                -13.756226748228073,
+                -49.2430105805397
+              ]
+            },
+            "areaMm2": 97.23934443507015,
+            "algebraicVolumeMm3": 26.610338955567048
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 709,
+      "nodeName": "VH_F_fundus_of_urinary_bladder_base",
+      "role": "existing-pelvic-context",
+      "meshIndex": 611,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFUrinaryBladder",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "fundus of urinary bladder",
+        "ontologyid": "UBERON:0006082",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0006082",
+        "glb_file_of_single_organs": "VH_F_Urinary_Bladder&lf;",
+        "node_type": "surface"
+      },
+      "ancestry": [
+        {
+          "nodeIndex": 709,
+          "nodeName": "VH_F_fundus_of_urinary_bladder_base"
+        },
+        {
+          "nodeIndex": 706,
+          "nodeName": "VH_F_urinary_bladder"
+        },
+        {
+          "nodeIndex": 603,
+          "nodeName": "VH_F_urinary_system"
+        },
+        {
+          "nodeIndex": 0,
+          "nodeName": "VH_F"
+        }
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "crosswalk": {
+        "ontologyId": "UBERON:0006082",
+        "label": "fundus of urinary bladder",
+        "originalRow": "VH_F_fundus_of_urinary_bladder_base,UBERON:0006082,fundus of urinary bladder"
+      },
+      "sourceVertices": 13071,
+      "triangles": 25526,
+      "worldBoundsMm": {
+        "min": [
+          -40.54019972681999,
+          -15.222308225929737,
+          -59.2840313911438
+        ],
+        "max": [
+          11.43630687147379,
+          20.149854943156242,
+          2.4150912649929523
+        ]
+      },
+      "positionAccessorSha256": "0b68ae4c54389a27ccfd902bacfb536ce8267ad1d66332269db5e479185e3810",
+      "indexAccessorSha256": "1aad23e48cbd09120faca3d82ec2f8474a89602351e8902a3d2ba93a382a2375",
+      "attributeAccessorSha256": {
+        "POSITION": "0b68ae4c54389a27ccfd902bacfb536ce8267ad1d66332269db5e479185e3810",
+        "NORMAL": "248de5fa52b361c740a4b527f63a4f5c67a761123fad402b8243952565dbb738"
+      },
+      "topology": {
+        "sourceVertices": 13071,
+        "exactUniqueVertices": 13071,
+        "unusedUniqueVertices": 0,
+        "triangles": 25526,
+        "edges": 38596,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 614,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 1,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 14070,
+            "vertices": 7190,
+            "bounds": {
+              "min": [
+                -40.54019972681999,
+                -15.222308225929737,
+                -59.2840313911438
+              ],
+              "max": [
+                11.43630687147379,
+                20.149854943156242,
+                2.4150912649929523
+              ]
+            },
+            "areaMm2": 4097.362075292809,
+            "algebraicVolumeMm3": 17256.039633426728
+          },
+          {
+            "firstFace": 14070,
+            "triangles": 11456,
+            "vertices": 5881,
+            "bounds": {
+              "min": [
+                -39.56637158989906,
+                -14.56361636519432,
+                -54.958149790763855
+              ],
+              "max": [
+                10.428497567772865,
+                19.8865607380867,
+                1.4800223289057612
+              ]
+            },
+            "areaMm2": 3130.1909345679555,
+            "algebraicVolumeMm3": -8063.424369166763
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 736,
+      "nodeName": "VH_F_left_uterine_artery",
+      "role": "existing-pelvic-context",
+      "meshIndex": 629,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFBloodVasculature",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Left uterine artery",
+        "ontologyid": "FMA:18831",
+        "representation_of": "http://purl.org/sig/ont/fma/fma18831",
+        "glb_file_of_single_organs": "3d-vh-f-blood-vasculature&lf;",
+        "node_type": "mesh"
+      },
+      "ancestry": [
+        {
+          "nodeIndex": 736,
+          "nodeName": "VH_F_left_uterine_artery"
+        },
+        {
+          "nodeIndex": 735,
+          "nodeName": "VH_F_uterine_artery"
+        },
+        {
+          "nodeIndex": 734,
+          "nodeName": "VH_F_blood_vasculature_of_uterus"
+        },
+        {
+          "nodeIndex": 733,
+          "nodeName": "VH_F_blood_vasculature"
+        },
+        {
+          "nodeIndex": 714,
+          "nodeName": "VH_F_circulatory_system"
+        },
+        {
+          "nodeIndex": 0,
+          "nodeName": "VH_F"
+        }
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "crosswalk": {
+        "ontologyId": "FMA:18831",
+        "label": "Left uterine artery",
+        "originalRow": "VH_F_left_uterine_artery,FMA:18831,Left uterine artery"
+      },
+      "sourceVertices": 700,
+      "triangles": 1382,
+      "worldBoundsMm": {
+        "min": [
+          -0.8386325789615512,
+          22.17555046081543,
+          -84.98939126729965
+        ],
+        "max": [
+          47.68482223153114,
+          37.51560300588608,
+          -48.879049718379974
+        ]
+      },
+      "positionAccessorSha256": "d9e5e848d178ec0ca428a4c2d6aef57df9bf8e6ad4442acccdbe219a01e98a9f",
+      "indexAccessorSha256": "ce1f237c64ad23e63669c7b57e084de7a334be95760a73234848f63e1d426975",
+      "attributeAccessorSha256": {
+        "POSITION": "d9e5e848d178ec0ca428a4c2d6aef57df9bf8e6ad4442acccdbe219a01e98a9f",
+        "NORMAL": "cb3d91162560007d5fdfe9e4528984fecd138782d8b9057cae4b18b6f72fc772"
+      },
+      "topology": {
+        "sourceVertices": 700,
+        "exactUniqueVertices": 700,
+        "unusedUniqueVertices": 0,
+        "triangles": 1382,
+        "edges": 2081,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 16,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 1,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1382,
+            "vertices": 700,
+            "bounds": {
+              "min": [
+                -0.8386325789615512,
+                22.17555046081543,
+                -84.98939126729965
+              ],
+              "max": [
+                47.68482223153114,
+                37.51560300588608,
+                -48.879049718379974
+              ]
+            },
+            "areaMm2": 504.771553711701,
+            "algebraicVolumeMm3": 248.15595227196812
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 737,
+      "nodeName": "VH_F_right_uterine_artery",
+      "role": "existing-pelvic-context",
+      "meshIndex": 630,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFBloodVasculature",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Right uterine artery",
+        "ontologyid": "FMA:18830",
+        "representation_of": "http://purl.org/sig/ont/fma/fma18830",
+        "glb_file_of_single_organs": "3d-vh-f-blood-vasculature&lf;",
+        "node_type": "mesh"
+      },
+      "ancestry": [
+        {
+          "nodeIndex": 737,
+          "nodeName": "VH_F_right_uterine_artery"
+        },
+        {
+          "nodeIndex": 735,
+          "nodeName": "VH_F_uterine_artery"
+        },
+        {
+          "nodeIndex": 734,
+          "nodeName": "VH_F_blood_vasculature_of_uterus"
+        },
+        {
+          "nodeIndex": 733,
+          "nodeName": "VH_F_blood_vasculature"
+        },
+        {
+          "nodeIndex": 714,
+          "nodeName": "VH_F_circulatory_system"
+        },
+        {
+          "nodeIndex": 0,
+          "nodeName": "VH_F"
+        }
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "crosswalk": {
+        "ontologyId": "FMA:18830",
+        "label": "Right uterine artery",
+        "originalRow": "VH_F_right_uterine_artery,FMA:18830,Right uterine artery"
+      },
+      "sourceVertices": 706,
+      "triangles": 1392,
+      "worldBoundsMm": {
+        "min": [
+          -71.33849710226059,
+          20.060759037733078,
+          -80.61664551496506
+        ],
+        "max": [
+          -25.880364701151848,
+          36.654625087976456,
+          -46.78317904472351
+        ]
+      },
+      "positionAccessorSha256": "500396691d4c659e550a03cd9ff7beaa65fa3f6f0012c5ef2fb4508a89df0212",
+      "indexAccessorSha256": "6f7216308c246fbaef9796bb96a6029eb0c37ff18f88b3e8e2a909382285c543",
+      "attributeAccessorSha256": {
+        "POSITION": "500396691d4c659e550a03cd9ff7beaa65fa3f6f0012c5ef2fb4508a89df0212",
+        "NORMAL": "fd5faa72985d3017e507c84cd1c6f981bfbf6680ea2603492bfb1e70635d97ce"
+      },
+      "topology": {
+        "sourceVertices": 706,
+        "exactUniqueVertices": 706,
+        "unusedUniqueVertices": 0,
+        "triangles": 1392,
+        "edges": 2097,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 18,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 1,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1392,
+            "vertices": 706,
+            "bounds": {
+              "min": [
+                -71.33849710226059,
+                20.060759037733078,
+                -80.61664551496506
+              ],
+              "max": [
+                -25.880364701151848,
+                36.654625087976456,
+                -46.78317904472351
+              ]
+            },
+            "areaMm2": 508.9446791284464,
+            "algebraicVolumeMm3": 236.96713305315035
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 485,
+      "nodeName": "VH_F_cervix",
+      "role": "existing-pelvic-context",
+      "meshIndex": 441,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFUterus",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "uterine cervix",
+        "ontologyid": "UBERON:0000002",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0000002",
+        "glb_file_of_single_organs": "VH_F_Uterus&lf;",
+        "node_type": "surface"
+      },
+      "ancestry": [
+        {
+          "nodeIndex": 485,
+          "nodeName": "VH_F_cervix"
+        },
+        {
+          "nodeIndex": 477,
+          "nodeName": "VH_F_uterus"
+        },
+        {
+          "nodeIndex": 426,
+          "nodeName": "VH_F_reproductive_system"
+        },
+        {
+          "nodeIndex": 0,
+          "nodeName": "VH_F"
+        }
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "crosswalk": {
+        "ontologyId": "UBERON:0000002",
+        "label": "uterine cervix",
+        "originalRow": "VH_F_cervix,UBERON:0000002,uterine cervix"
+      },
+      "sourceVertices": 1825,
+      "triangles": 3508,
+      "worldBoundsMm": {
+        "min": [
+          -24.60305206477642,
+          6.2188454903662205,
+          -86.19216829538345
+        ],
+        "max": [
+          2.6926230639219284,
+          35.15302762389183,
+          -61.90929189324379
+        ]
+      },
+      "positionAccessorSha256": "4cb91157da544959a046f2ccb041ae7068ce23bc8addb01147d16bfa33b4c5ca",
+      "indexAccessorSha256": "50e5231a2d802373c500d2538ca8fe989d56dc28a717c6c17b3946b3016a4555",
+      "attributeAccessorSha256": {
+        "POSITION": "4cb91157da544959a046f2ccb041ae7068ce23bc8addb01147d16bfa33b4c5ca",
+        "NORMAL": "fb6356c6779d794e8d85de7a15254c54a43bfe0370d0388a49194b21fffeaa82"
+      },
+      "topology": {
+        "sourceVertices": 1825,
+        "exactUniqueVertices": 1825,
+        "unusedUniqueVertices": 0,
+        "triangles": 3508,
+        "edges": 5333,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 142,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 2860,
+            "vertices": 1474,
+            "bounds": {
+              "min": [
+                -24.60305206477642,
+                6.2188454903662205,
+                -86.19216829538345
+              ],
+              "max": [
+                2.6926230639219284,
+                35.15302762389183,
+                -61.90929189324379
+              ]
+            },
+            "areaMm2": 1716.0459118605672,
+            "algebraicVolumeMm3": 6667.31324768146
+          },
+          {
+            "firstFace": 2860,
+            "triangles": 648,
+            "vertices": 351,
+            "bounds": {
+              "min": [
+                -12.399706989526749,
+                17.205972224473953,
+                -79.74448800086975
+              ],
+              "max": [
+                -8.479469455778599,
+                25.495395064353943,
+                -68.38066130876541
+              ]
+            },
+            "areaMm2": 102.71097746725034,
+            "algebraicVolumeMm3": -40.26311865216149
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    }
+  ],
+  "shared": [
+    {
+      "a": "VH_F_right_ureter",
+      "b": "VH_F_left_ureter",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_right_ureter",
+      "b": "VH_F_ureteral_orifice_R",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_right_ureter",
+      "b": "VH_F_ureteral_orifice_L",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_right_ureter",
+      "b": "VH_F_fundus_of_urinary_bladder_dome",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_right_ureter",
+      "b": "VH_F_urinary_bladder_neck_smooth_muscle",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_right_ureter",
+      "b": "VH_F_fundus_of_urinary_bladder_base",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_right_ureter",
+      "b": "VH_F_left_uterine_artery",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_right_ureter",
+      "b": "VH_F_right_uterine_artery",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_right_ureter",
+      "b": "VH_F_cervix",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_left_ureter",
+      "b": "VH_F_ureteral_orifice_R",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_left_ureter",
+      "b": "VH_F_ureteral_orifice_L",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_left_ureter",
+      "b": "VH_F_fundus_of_urinary_bladder_dome",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_left_ureter",
+      "b": "VH_F_urinary_bladder_neck_smooth_muscle",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_left_ureter",
+      "b": "VH_F_fundus_of_urinary_bladder_base",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_left_ureter",
+      "b": "VH_F_left_uterine_artery",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_left_ureter",
+      "b": "VH_F_right_uterine_artery",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_left_ureter",
+      "b": "VH_F_cervix",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_ureteral_orifice_R",
+      "b": "VH_F_ureteral_orifice_L",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_ureteral_orifice_R",
+      "b": "VH_F_fundus_of_urinary_bladder_dome",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_ureteral_orifice_R",
+      "b": "VH_F_urinary_bladder_neck_smooth_muscle",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_ureteral_orifice_R",
+      "b": "VH_F_fundus_of_urinary_bladder_base",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_ureteral_orifice_R",
+      "b": "VH_F_left_uterine_artery",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_ureteral_orifice_R",
+      "b": "VH_F_right_uterine_artery",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_ureteral_orifice_R",
+      "b": "VH_F_cervix",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_ureteral_orifice_L",
+      "b": "VH_F_fundus_of_urinary_bladder_dome",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_ureteral_orifice_L",
+      "b": "VH_F_urinary_bladder_neck_smooth_muscle",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_ureteral_orifice_L",
+      "b": "VH_F_fundus_of_urinary_bladder_base",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_ureteral_orifice_L",
+      "b": "VH_F_left_uterine_artery",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_ureteral_orifice_L",
+      "b": "VH_F_right_uterine_artery",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_ureteral_orifice_L",
+      "b": "VH_F_cervix",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_fundus_of_urinary_bladder_dome",
+      "b": "VH_F_urinary_bladder_neck_smooth_muscle",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_fundus_of_urinary_bladder_dome",
+      "b": "VH_F_fundus_of_urinary_bladder_base",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_fundus_of_urinary_bladder_dome",
+      "b": "VH_F_left_uterine_artery",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_fundus_of_urinary_bladder_dome",
+      "b": "VH_F_right_uterine_artery",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_fundus_of_urinary_bladder_dome",
+      "b": "VH_F_cervix",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_urinary_bladder_neck_smooth_muscle",
+      "b": "VH_F_fundus_of_urinary_bladder_base",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_urinary_bladder_neck_smooth_muscle",
+      "b": "VH_F_left_uterine_artery",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_urinary_bladder_neck_smooth_muscle",
+      "b": "VH_F_right_uterine_artery",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_urinary_bladder_neck_smooth_muscle",
+      "b": "VH_F_cervix",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_fundus_of_urinary_bladder_base",
+      "b": "VH_F_left_uterine_artery",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_fundus_of_urinary_bladder_base",
+      "b": "VH_F_right_uterine_artery",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_fundus_of_urinary_bladder_base",
+      "b": "VH_F_cervix",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_left_uterine_artery",
+      "b": "VH_F_right_uterine_artery",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_left_uterine_artery",
+      "b": "VH_F_cervix",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "VH_F_right_uterine_artery",
+      "b": "VH_F_cervix",
+      "exactSharedTriangles": 0
+    }
+  ],
+  "comparisons": [
+    {
+      "a": "VH_F_ureteral_orifice_R",
+      "b": "VH_F_right_ureter",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 106,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 2.763985881672489,
+        "maxMm": 3.7021729243220536,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 103.10755064764554,
+        "maxMm": 224.4020492762044,
+        "closePointBounds": null
+      },
+      "disposition": "requires-local-relationship-review"
+    },
+    {
+      "a": "VH_F_ureteral_orifice_L",
+      "b": "VH_F_left_ureter",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 118,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 13,
+        "withinOneMm": 59,
+        "medianMm": 1.0090558510607368,
+        "maxMm": 2.3260055180771766,
+        "closePointBounds": {
+          "min": [
+            9.534873999655247,
+            9.542398154735565,
+            -52.01484635472298
+          ],
+          "max": [
+            10.536002926528454,
+            10.91329101473093,
+            -51.076240837574005
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 127,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 1,
+        "withinOneMm": 1,
+        "medianMm": 99.28818782993558,
+        "maxMm": 223.60018809144935,
+        "closePointBounds": {
+          "min": [
+            10.166143998503685,
+            10.78343577682972,
+            -51.224350929260254
+          ],
+          "max": [
+            10.166143998503685,
+            10.78343577682972,
+            -51.224350929260254
+          ]
+        }
+      },
+      "disposition": "requires-local-relationship-review"
+    },
+    {
+      "a": "VH_F_ureteral_orifice_R",
+      "b": "VH_F_fundus_of_urinary_bladder_base",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 106,
+        "withinTenthMm": 7,
+        "withinQuarterMm": 7,
+        "withinOneMm": 28,
+        "medianMm": 1.3859304520073046,
+        "maxMm": 2.78564324929309,
+        "closePointBounds": {
+          "min": [
+            -36.559198051691055,
+            9.611086919903755,
+            -54.95334416627884
+          ],
+          "max": [
+            -34.12303701043129,
+            12.076644226908684,
+            -54.158322513103485
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 127,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 35.081479239525024,
+        "maxMm": 62.0205236467933,
+        "closePointBounds": null
+      },
+      "disposition": "requires-local-relationship-review"
+    },
+    {
+      "a": "VH_F_ureteral_orifice_L",
+      "b": "VH_F_fundus_of_urinary_bladder_base",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 118,
+        "withinTenthMm": 7,
+        "withinQuarterMm": 7,
+        "withinOneMm": 46,
+        "medianMm": 1.2069933109941031,
+        "maxMm": 2.3029500105374696,
+        "closePointBounds": {
+          "min": [
+            8.66294838488102,
+            8.465146645903587,
+            -51.1813722550869
+          ],
+          "max": [
+            10.428494773805141,
+            10.559420101344585,
+            -49.35451224446297
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 127,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 1,
+        "medianMm": 37.302893684166456,
+        "maxMm": 58.93302415613426,
+        "closePointBounds": null
+      },
+      "disposition": "requires-local-relationship-review"
+    },
+    {
+      "a": "VH_F_ureteral_orifice_R",
+      "b": "VH_F_fundus_of_urinary_bladder_dome",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 106,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 2.0678692550090543,
+        "maxMm": 3.921117688693529,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 37.41423382857997,
+        "maxMm": 62.20783264556249,
+        "closePointBounds": null
+      },
+      "disposition": "requires-local-relationship-review"
+    },
+    {
+      "a": "VH_F_ureteral_orifice_L",
+      "b": "VH_F_fundus_of_urinary_bladder_dome",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 118,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 48,
+        "medianMm": 1.1860719841590315,
+        "maxMm": 3.0783862242070636,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 1,
+        "medianMm": 38.001499484955964,
+        "maxMm": 60.22351946591427,
+        "closePointBounds": null
+      },
+      "disposition": "requires-local-relationship-review"
+    },
+    {
+      "a": "VH_F_right_ureter",
+      "b": "VH_F_right_uterine_artery",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 80.31496007192341,
+        "maxMm": 198.229449110183,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 118,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 14.390344365538624,
+        "maxMm": 23.78108299830169,
+        "closePointBounds": null
+      },
+      "disposition": "requires-local-relationship-review"
+    },
+    {
+      "a": "VH_F_left_ureter",
+      "b": "VH_F_left_uterine_artery",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 1,
+        "medianMm": 73.02202315383207,
+        "maxMm": 189.67010298019676,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 117,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 7.544512286689139,
+        "maxMm": 25.779951904954665,
+        "closePointBounds": null
+      },
+      "disposition": "requires-local-relationship-review"
+    },
+    {
+      "a": "VH_F_ureteral_orifice_R",
+      "b": "VH_F_ureteral_orifice_L",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 106,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 43.16246084738342,
+        "maxMm": 44.87888728624675,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 118,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 42.85514597700877,
+        "maxMm": 43.98788978223936,
+        "closePointBounds": null
+      },
+      "disposition": "requires-local-relationship-review"
+    }
+  ],
+  "nameScreen": {
+    "pattern": "levator|puborect|pubococ|iliococ|coccygeus|ureter|pudend|obturator.intern|piriformis",
+    "field": "node.name",
+    "scope": "all original GLB nodes, names only; not ontology synonyms or other datasets",
+    "nodesScreened": 1160,
+    "matches": [
+      {
+        "nodeIndex": 666,
+        "nodeName": "VH_F_renal_pelvis_ureter",
+        "meshIndex": null,
+        "metadata": null
+      },
+      {
+        "nodeIndex": 667,
+        "nodeName": "VH_F_renal_pelvis_ureter_R",
+        "meshIndex": null,
+        "metadata": null
+      },
+      {
+        "nodeIndex": 685,
+        "nodeName": "VH_F_right_ureter",
+        "meshIndex": 592,
+        "metadata": {
+          "currentUVSet": "map1",
+          "anatomical_structure_of": "#VHFRightUreter",
+          "source_spatial_entity": "#VHFemaleOrgans",
+          "label": "right ureter",
+          "ontologyid": "UBERON:0001222",
+          "representation_of": "http://purl.obolibrary.org/obo/UBERON_0001222",
+          "glb_file_of_single_organs": "VH_F_Ureter_R&lf;",
+          "node_type": "mesh"
+        }
+      },
+      {
+        "nodeIndex": 686,
+        "nodeName": "VH_F_renal_pelvis_ureter_L",
+        "meshIndex": null,
+        "metadata": null
+      },
+      {
+        "nodeIndex": 705,
+        "nodeName": "VH_F_left_ureter",
+        "meshIndex": 608,
+        "metadata": {
+          "currentUVSet": "map1",
+          "anatomical_structure_of": "#VHFLeftUreter",
+          "source_spatial_entity": "#VHFemaleOrgans",
+          "label": "left ureter",
+          "ontologyid": "UBERON:0001223",
+          "representation_of": "http://purl.obolibrary.org/obo/UBERON_0001223",
+          "glb_file_of_single_organs": "VH_F_Ureter_L&lf;",
+          "node_type": "mesh"
+        }
+      },
+      {
+        "nodeIndex": 711,
+        "nodeName": "VH_F_ureteral_orifice",
+        "meshIndex": null,
+        "metadata": null
+      },
+      {
+        "nodeIndex": 712,
+        "nodeName": "VH_F_ureteral_orifice_R",
+        "meshIndex": 613,
+        "metadata": {
+          "currentUVSet": "map1",
+          "anatomical_structure_of": "#VHFUrinaryBladder",
+          "source_spatial_entity": "#VHFemaleOrgans",
+          "label": "Right ureteral orifice",
+          "ontologyid": "FMA:15939",
+          "representation_of": "http://purl.org/sig/ont/fma/fma15939",
+          "glb_file_of_single_organs": "VH_F_Urinary_Bladder&lf;",
+          "node_type": "surface"
+        }
+      },
+      {
+        "nodeIndex": 713,
+        "nodeName": "VH_F_ureteral_orifice_L",
+        "meshIndex": 614,
+        "metadata": {
+          "currentUVSet": "map1",
+          "anatomical_structure_of": "#VHFUrinaryBladder",
+          "source_spatial_entity": "#VHFemaleOrgans",
+          "label": "Left ureteral orifice",
+          "ontologyid": "FMA:15940",
+          "representation_of": "http://purl.org/sig/ont/fma/fma15940",
+          "glb_file_of_single_organs": "VH_F_Urinary_Bladder&lf;",
+          "node_type": "surface"
+        }
+      },
+      {
+        "nodeIndex": 788,
+        "nodeName": "VH_F_internal_pudendal_vein",
+        "meshIndex": null,
+        "metadata": null
+      },
+      {
+        "nodeIndex": 789,
+        "nodeName": "VH_F_internal_pudendal_vein_L",
+        "meshIndex": 663,
+        "metadata": {
+          "currentUVSet": "map1",
+          "anatomical_structure_of": "#VHFBloodVasculature",
+          "source_spatial_entity": "#VHFemaleOrgans",
+          "label": "internal pudendal vein",
+          "ontologyid": "UBERON:0018252",
+          "representation_of": "http://purl.obolibrary.org/obo/UBERON_0018252",
+          "glb_file_of_single_organs": "3d-vh-f-blood-vasculature&lf;",
+          "node_type": "mesh"
+        }
+      },
+      {
+        "nodeIndex": 790,
+        "nodeName": "VH_F_internal_pudendal_vein_R",
+        "meshIndex": 664,
+        "metadata": {
+          "currentUVSet": "map1",
+          "anatomical_structure_of": "#VHFBloodVasculature",
+          "source_spatial_entity": "#VHFemaleOrgans",
+          "label": "internal pudendal vein",
+          "ontologyid": "UBERON:0018252",
+          "representation_of": "http://purl.obolibrary.org/obo/UBERON_0018252",
+          "glb_file_of_single_organs": "3d-vh-f-blood-vasculature&lf;",
+          "node_type": "mesh"
+        }
+      }
+    ]
+  },
+  "limitations": [
+    "Coordinates are the unchanged official source in millimetres; not patient registration.",
+    "Surface sampling is bounded at128 vertices in each direction; it is not an exhaustive intersection or continuity test.",
+    "Orifice source surfaces are not proof of an open ureterovesical lumen, intramural segment or validated tissue plane.",
+    "Ureters already occur in the separate kidney study; reusing them would not add unique anatomy.",
+    "The recorded name screen is limited to its exact pattern and original GLB names; no substitute anatomy is admitted.",
+    "Exact shared triangles were checked only among the ten selected surfaces, not the complete source or runtime inventory.",
+    "No comparison result clears a junction for runtime admission; topology and sampled distances are not anatomical sign-off."
+  ],
+  "admitted": false,
+  "clinicalApproval": false,
+  "sourceGeometryChanged": false
+}

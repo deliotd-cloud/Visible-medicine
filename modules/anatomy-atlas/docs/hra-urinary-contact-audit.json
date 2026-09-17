@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "sourceSha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422",
+  "sourceAuditSha256": "b251217d72ad5d3ffa2db9b873fcb7040d27a7acff2a9e7f844affd974ce2a62",
+  "method": "All original face pairs within padded Float64 bounds; ExtendedTriangle floating intersection predicate; source face order retained. Self tests exclude pairs sharing any exact-coordinate vertex.",
+  "syntheticChecks": {
+    "crossing": true,
+    "separated": true,
+    "coplanarOverlap": true,
+    "selfSingleTriangle": true,
+    "selfCrossing": true,
+    "selfSharedVertexExcluded": true
+  },
+  "pairs": [
+    {
+      "a": 712,
+      "b": 685,
+      "boundsCandidates": 0,
+      "excludedSharedVertexPairs": 0,
+      "intersectingFacePairs": [],
+      "count": 0
+    },
+    {
+      "a": 713,
+      "b": 705,
+      "boundsCandidates": 23,
+      "excludedSharedVertexPairs": 0,
+      "intersectingFacePairs": [],
+      "count": 0
+    },
+    {
+      "a": 712,
+      "b": 707,
+      "boundsCandidates": 0,
+      "excludedSharedVertexPairs": 0,
+      "intersectingFacePairs": [],
+      "count": 0
+    },
+    {
+      "a": 713,
+      "b": 707,
+      "boundsCandidates": 25,
+      "excludedSharedVertexPairs": 0,
+      "intersectingFacePairs": [],
+      "count": 0
+    },
+    {
+      "a": 712,
+      "b": 709,
+      "boundsCandidates": 22,
+      "excludedSharedVertexPairs": 0,
+      "intersectingFacePairs": [],
+      "count": 0
+    },
+    {
+      "a": 713,
+      "b": 709,
+      "boundsCandidates": 45,
+      "excludedSharedVertexPairs": 0,
+      "intersectingFacePairs": [
+        [
+          72,
+          24460
+        ],
+        [
+          72,
+          24461
+        ],
+        [
+          73,
+          24461
+        ],
+        [
+          74,
+          24461
+        ],
+        [
+          119,
+          14091
+        ]
+      ],
+      "count": 5
+    },
+    {
+      "a": 712,
+      "b": 713,
+      "boundsCandidates": 0,
+      "excludedSharedVertexPairs": 0,
+      "intersectingFacePairs": [],
+      "count": 0
+    },
+    {
+      "a": 712,
+      "b": 712,
+      "boundsCandidates": 27,
+      "excludedSharedVertexPairs": 969,
+      "intersectingFacePairs": [],
+      "count": 0
+    },
+    {
+      "a": 713,
+      "b": 713,
+      "boundsCandidates": 21,
+      "excludedSharedVertexPairs": 1010,
+      "intersectingFacePairs": [],
+      "count": 0
+    }
+  ],
+  "limitations": [
+    "Floating numerical predicate, not a formal exact-arithmetic intersection proof.",
+    "A hit may mean touch or crossing; not a distinct defect count or validated tissue relationship.",
+    "No volume containment or lumen continuity test; zero hits does not prove anatomical separation or normality.",
+    "Self tests exclude shared-vertex pairs and do not prove a complete self-intersection absence.",
+    "Only the listed source surfaces are tested, not the full original source inventory."
+  ],
+  "sourceGeometryChanged": false,
+  "runtimeAdmission": false,
+  "clinicalApproval": false
+}

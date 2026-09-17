@@ -1,5 +1,16 @@
 # Third-party notices
 
+## Local female urinary-junction review — 17 September 2026
+
+The optional diagnostic generator selects ten unchanged surfaces from the
+existing HRA United Female v1.10 source: two candidate orifice surfaces and eight
+already-reviewed renal/pelvic context surfaces. It embeds the existing HRA
+creator credit, original source and CC BY 4.0 links, adaptation notice and full
+installed Three.js MIT notice. Colours, two-sided display, transparency and
+optional through-surface contact highlights are diagnostic display adaptations.
+No new production anatomy, font, image, paid service or dependency is added.
+See [source evidence and admission limits](../docs/HRA_URINARY_JUNCTION_REVIEW.md).
+
 ## Thoracic organ reasoning — 17 September 2026
 
 Three original short questions cite Texas Tech's lungs/mediastina teaching page

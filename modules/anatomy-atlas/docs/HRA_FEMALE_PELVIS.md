@@ -1,5 +1,12 @@
 # Separate HRA female pelvic study
 
+17 September source-review supplement:
+[ureteric-orifice candidates and same-source urinary context](HRA_URINARY_JUNCTION_REVIEW.md).
+This local diagnostic adds no production surfaces; the existing studies and
+clinical/source holds remain intact. Current teaching totals are in the
+[41-selection context extension](FEMALE_PELVIC_CONTEXT_TEACHING.md); the initial
+and support batches described below are preserved historical baselines.
+
 ## Access and scope
 
 Open **Pelvis / Whole body → Female pelvis**, or `/specimens/female-pelvis`. The existing compact workbench provides selection, search, labels, tissue filters, view presets, hide/Undo/Redo, isolate and separation. Practice preserves the dissection and hides answer labels; it remains disabled until model readiness is confirmed. The main-atlas exam does not expose the supplemental launcher.
