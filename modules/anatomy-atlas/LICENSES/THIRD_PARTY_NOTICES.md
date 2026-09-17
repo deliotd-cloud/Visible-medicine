@@ -941,6 +941,14 @@ redistributed. Citations are not commercial asset-reuse grants. Original notes
 retain MIT terms and existing model attribution remains unchanged. No asset,
 dependency, font, paid API or mandatory service is added. See docs/CORPUS_IMAGING.md.
 
+Hip/left-shoulder bone imaging teaching (17 September 2026) adds original brief
+factual synthesis and reading links to TTUHSC El Paso and RSNA/ACR RadiologyInfo.
+These copyright-controlled references are not imported assets: no source prose,
+table, figure, diagram, scan, protocol or dataset is redistributed. Citation is
+not a commercial reuse grant. Original text/code retain MIT terms and existing
+BodyParts3D CC BY 4.0 notices remain unchanged. No dependency, model, font,
+texture, paid API or mandatory service added. See docs/MAJOR_BONE_IMAGING.md.
+
 Run:
 
 ```bash

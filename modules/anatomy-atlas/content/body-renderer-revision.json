@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "0f6a04aacd87a7bf7d5f07e435db3e69900465f00930b118a9044198f721fb1b"
+      "sha256": "86f48f4db2dd1c736bc8834d0ce02db5af476568ecca4b33e7fbab5a808ad7aa"
     },
     {
       "path": "app/body-explorer.css",
@@ -791,6 +791,14 @@
     {
       "path": "content/lower-limb-motor.ts",
       "sha256": "b94da1bcd39a91f513565135cb8a4e70c64998fff05aaba8df8a83d7f156f36b"
+    },
+    {
+      "path": "content/major-bone-imaging-pins.json",
+      "sha256": "e4153373cc1cbb0ae558759a731b15568aaa9fdf073138cf0df8d98df5274cad"
+    },
+    {
+      "path": "content/major-bone-imaging.ts",
+      "sha256": "bb3a32051e7e62e61ca8375300bd1d8ee5e6ce018402d17f8427aad1daa46ae1"
     },
     {
       "path": "content/major-organ-function-pins.json",
@@ -1745,6 +1753,10 @@
       "sha256": "eb79201901dfbe170f0336888ac864308507b6c8f47d1cdf1a0fcddd7e7d295b"
     },
     {
+      "path": "lib/major-bone-imaging.ts",
+      "sha256": "2079dabd5f918481fb54a2df8fd55311cddd180e337b8266f115d8406f09e373"
+    },
+    {
       "path": "lib/major-organ-function.ts",
       "sha256": "4f467f6ccf778ddf96bcf60b45aef4ca258d3c16e717716c4ded6f774366c01d"
     },
@@ -2202,7 +2214,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "3b4c1184fad2e5835ac51ddce04dbf2fb92be34ef33588c73fe86d52945f83f0"
+      "sha256": "c936167651dc72384703e88dcd30e2da6a0e7f3eeab04d6d5d8f1199783962cc"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2397,5 +2409,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "f3b00b853cfa125354ef1927412a53b00c9067fea5a7c276c3394f6f58fd3d10"
+  "sha256": "dbb0f0320da0e920eafa2e9b30a975f5fac6ffafc97e6fcaf3cd75084723801e"
 }

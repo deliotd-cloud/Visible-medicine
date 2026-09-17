@@ -5,7 +5,9 @@ import {hash,snapshot} from './pin-pica-clinical.mjs';
 import pins from '../content/corpus-imaging-pins.json' with {type:'json'};
 import after from '../content/corpus-imaging.transition.json' with {type:'json'};
 import clinicalPins from '../content/corpus-clinical-pins.json' with {type:'json'};
+import {authoringBeforeMajorBoneImaging} from './major-bone-imaging-history.mjs';
 export function authoringBeforeCorpusImaging({api,catalog},{deferWholeSnapshot=false}={}){
+ api=authoringBeforeMajorBoneImaging({api,catalog},{deferWholeSnapshot:true});
  assert.equal(hash(pins),'bcc4aeb265a7d0d192c0bfa0c641133de46d0294d90a2e30f22187de682dc5c8');
  assert.equal(hash(after),'7d4e94f6a20a77a2ae414ecfc4314f5a5a7d1b50a28324b6f481da90762e3475');
  assert.equal(hash(clinicalPins),'1a371a56b2c6b619c12977cdb374fbbe66bf252346c2e75c93bb9fb174b883d1');
