@@ -2,6 +2,32 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — vessel regression and next clinical gap
+
+The Atlas vessel-visibility gate now separates its original 175-artery/98-vein
+control era from four explicit later source additions, verifying all current
+198 arterial and 98 venous root selections. It rejects unrecorded growth and
+source drift, while retaining actual reducer/component/parent-handler checks.
+Its old whole-file comparisons now apply to their proper historical era;
+still-applicable current source pins remain. No runtime, geometry or accepted
+baseline was changed. See Atlas docs/VESSEL_GATE_REPAIR_20260917.md and the
+coordinating vessel-gate checkpoint for focused evidence and GitHub/D recovery.
+
+The current root-organ dispatcher audit found 82 Clinical/Pathology drafts and
+one pending selection, corpus spongiosum (bulb/shaft). This is a readiness count,
+not completeness or clinical approval. The next source-bound two-topic increment
+is specified in docs/CORPUS_CLINICAL_PLAN_20260917.md, with primary factual and
+article-specific commercial-reuse evidence. Imaging topics remain separately
+pending; no patient scan or registered relationship is implied.
+
+A local React context-provider warning reproduces on a successful plain page
+request. Its precise cause remains unproven; no vendor patch, dependency upgrade
+or warning suppression was made. See docs/PREVIEW_CONTEXT_WARNING_20260917.md.
+Website84 remains last verified deployment; model staging, physical-device
+acceptance, independent resource rights and radiologist sign-off remain separate.
+Full goal ACTIVE; hourly review PAUSED. Continue substantive regional anatomy
+and teaching after the saved clinical gap rather than repeating completed checks.
+
 ## 17 September — remaining major-organ Function drafts
 
 Thirteen further source-bound root selections now have original Function notes:
