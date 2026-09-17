@@ -65,7 +65,7 @@ export function studyLibrary(
   });
   for (const focus of profile.focuses) {
     const visible = stageStructures(scope, profile, 'free', focus.id);
-    const targets = scope.filter((item) => matchesRule(item, focus.rule));
+    const targets = visible.filter((item) => matchesRule(item, focus.rule));
     const recipe: StudyRecipe = {
       key: `focus:${focus.id}`,
       id: focus.id,

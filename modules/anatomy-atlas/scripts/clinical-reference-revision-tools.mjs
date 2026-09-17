@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import { build } from './workspace-test-build.mjs';
 import { contentContext } from './content-contract-tools.mjs';
+import { prePelvicUrethralProfiles } from './pelvic-urethral-study-history.mjs';
 
 export const clinicalReferenceRevisionHash = value =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -18,7 +19,9 @@ export function wholeBodyTeachingSnapshot(api, catalog) {
       ),
     })),
     shoulder: api.structures,
-    recipes: api.dissectionProfiles,
+    // Compare the clinical-reference era, retaining a strict guard on the only
+    // later recipe addition. This is not the current runtime recipe snapshot.
+    recipes: prePelvicUrethralProfiles(api.dissectionProfiles, {allowOlder: true}),
   };
 }
 

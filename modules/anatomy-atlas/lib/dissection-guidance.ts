@@ -74,7 +74,7 @@ export function dissectionGuidance(
   const missing = expected.filter((s) => !enabled.has(s.id));
   const added = recipe ? visible.filter((s) => !expectedSet.has(s.id)) : [];
   const targets = focus
-    ? scope.filter((s) => matchesRule(s, focus.rule))
+    ? expected.filter((s) => matchesRule(s, focus.rule))
     : null;
   const targetSet = new Set(targets?.map((s) => s.id));
   const context = focus ? expected.filter((s) => !targetSet.has(s.id)) : null;

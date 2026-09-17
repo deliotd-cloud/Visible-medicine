@@ -114,7 +114,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "935b2f8160f348332e1d78822c384b988af02c8dd681c607e4309e3608e44bb5"
+      "sha256": "47799c6dd289af969030feebc4844da45047cb05d301a21cb3041521bd95af16"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -761,6 +761,10 @@
       "sha256": "03ea9bced422d20534a6760feaa199c46a0780533360fe3d58ea2b0a98f536aa"
     },
     {
+      "path": "content/pelvic-urethral-study.ts",
+      "sha256": "bda972aa5764d853abf80b2a23596efa27d06141f789a116080d3d0bc4559afe"
+    },
+    {
       "path": "content/pelvic-vein-study.ts",
       "sha256": "3a998bf0de20529cfef1026a728316ac8a686d903645c8e16f82355645e242fd"
     },
@@ -1262,7 +1266,7 @@
     },
     {
       "path": "lib/dissection-guidance.ts",
-      "sha256": "977a15f9f92f673fcf68652d5539c88a69c1b7fd42a854e55217abdb76782d84"
+      "sha256": "31c645be4d92391051e997f156b689a37a02e2adfbc618497da7ef6e74ef6475"
     },
     {
       "path": "lib/dissection-workbench.ts",
@@ -1810,7 +1814,7 @@
     },
     {
       "path": "lib/study-library.ts",
-      "sha256": "6b1b667dbe5d811dc3b0ac4cfafe6b1bfe2ef081277265a810a0c8651b6f8eb0"
+      "sha256": "001f48bdd36107bc1171e4b708f13e9215e927c7a9e44c11474f662d0cb363e3"
     },
     {
       "path": "lib/study-links.ts",
@@ -1990,7 +1994,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "64f72ae6df023ffac6569ce9a9016856b0e6f9628e4958b32be699226e85a790"
+      "sha256": "08b6d86e27b2873f71856dcdf3152d8de5e6d62fa8b0449c0aea843d054c63c9"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2185,5 +2189,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "468fe35d5b4b776655000a93d7d4b5f35c643c35d8e17de5c41aad520d1ec085"
+  "sha256": "3dbb6ed5e9a8db132c4e3e1ccbf9b98bd1115ca908ca1be307cd25022e2f6979"
 }

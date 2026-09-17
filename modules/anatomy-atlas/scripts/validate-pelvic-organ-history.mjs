@@ -35,7 +35,7 @@ for (const structure of display.structures) {
 assert.equal(restored, 44);
 assert.equal(preserved, display.structures.length * api.contentTabs.length - 44);
 assert.strictEqual(before.structures, api.structures);
-assert.strictEqual(before.dissectionProfiles, api.dissectionProfiles);
+assert.deepEqual(before.dissectionProfiles, referenceBaseline.dissectionProfiles);
 for (const entry of pins.entries) for (const tab of entry.topics) {
   const badApi = { ...referenceBaseline, bodyLesson(s, t) {
     const result = referenceBaseline.bodyLesson(s, t);

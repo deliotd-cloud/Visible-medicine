@@ -1,4 +1,6 @@
 import type { BodyStructure, BodySystem } from './body-types';
+import { sourceCanonical } from '../lib/body-source-additions.ts';
+import { pelvicUrethralFocus } from '../content/pelvic-urethral-study.ts';
 import { neuroStudySets, neuroStudyIds } from '../lib/neuroanatomy.ts';
 import { axialStudySets } from '../lib/axial-anatomy.ts';
 import { renalStudySets, renalStudyReferences } from '../lib/renal-studies.ts';
@@ -66,6 +68,9 @@ export type DissectionFocus = {
   description?: string;
   inspect?: string;
   landmarks?: string[];
+  /** Required exact identities; contextual side bones may be absent from a side-filtered scope. */
+  requiredSources?: BodyStructure[];
+  contextSources?: BodyStructure[];
 };
 export type DissectionProfile = {
   title: string;
@@ -1298,6 +1303,9 @@ for (const region of limbicLandmarkStudy.regions) {
   dissectionProfiles[region].references.push(...limbicLandmarkReferences);
 }
 
+for (const region of ['pelvis', 'whole-body'])
+  dissectionProfiles[region].focuses.push(pelvicUrethralFocus);
+
 export function matchesRule(s: BodyStructure, rule: TissueRule): boolean {
   return (
     (!rule.systems || rule.systems.includes(s.system)) &&
@@ -1313,6 +1321,15 @@ export function stageStructures(
 ): BodyStructure[] {
   if (focusId) {
     const choice = profile.focuses.find((f) => f.id === focusId);
+    if (choice?.requiredSources) {
+      for (const expected of [...choice.requiredSources, ...(choice.contextSources ?? [])]) {
+        const found = structures.filter(s => s.id === expected.id || s.fmaId === expected.fmaId);
+        const required = choice.requiredSources.includes(expected);
+        if ((!found.length && required) || found.length > 1 ||
+          (found.length === 1 && sourceCanonical(found[0]) !== sourceCanonical(expected)))
+          return [];
+      }
+    }
     return choice
       ? structures.filter(
           (s) =>

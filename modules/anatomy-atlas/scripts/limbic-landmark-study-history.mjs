@@ -1,9 +1,11 @@
 // Exact offline reconstruction for historical tests, never an approval migration.
 import assert from 'node:assert/strict';
+import { prePelvicUrethralProfiles } from './pelvic-urethral-study-history.mjs';
 import { createHash } from 'node:crypto';
 import record from '../content/limbic-landmark-study-transition.json' with {type:'json'};
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function preLimbicLandmarkProfiles(profiles) {
+  profiles = prePelvicUrethralProfiles(profiles, {allowOlder: true});
   assert.equal(hash(record),'b36ee849770442483805604f05766d647b9d152860895d9cced1826f36c8da95');
   if(hash(profiles)!==record.after)return profiles;
   const previous=structuredClone(profiles);

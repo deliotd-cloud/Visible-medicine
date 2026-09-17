@@ -174,7 +174,7 @@ for (const [region, profile] of Object.entries(dissectionProfiles))
           if (focus) {
             same(
               guide.targets,
-              scope.filter((s) => matchesRule(s, focus.rule)),
+              expected.filter((s) => matchesRule(s, focus.rule)),
             );
             same(
               guide.context,

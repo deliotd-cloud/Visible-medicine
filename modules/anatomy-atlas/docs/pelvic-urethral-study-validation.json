@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "sourceRecords": 6,
+  "requiredSources": 4,
+  "optionalSideContextSources": 2,
+  "regions": [
+    "pelvis",
+    "whole-body"
+  ],
+  "sideCounts": {
+    "both": 6,
+    "left": 5,
+    "right": 5
+  },
+  "targetCount": 2,
+  "scopes": 6,
+  "libraryPreviews": 6,
+  "focusedDeepLinks": 32,
+  "plainDeepLinks": 32,
+  "navigationViews": 32,
+  "identityGuardRejections": 48,
+  "missingRequiredRejected": 4,
+  "missingOptionalAllowed": 2,
+  "unavailableMembershipCases": 3,
+  "emptyScopeRejected": true,
+  "missingWholeSourceRejected": true,
+  "sourceAssetHashAndNodeVerified": true,
+  "inputAndDefinitionsUnchanged": true,
+  "historyBaselineHash": "dd8a2f264c93de2e79256b26fd38f52aeefb7ebae96ca47e88010a3c4b9f901d",
+  "historyRevisionHash": "051a7432fd2dfede46e64a46ff2d211bd3a6942513c6e8c24666532d46f9fa25",
+  "strictHistoryStates": 2,
+  "strictHistoryRejections": 9,
+  "previousRecipesRetained": true,
+  "patientDataUsed": false,
+  "browserTesting": false,
+  "clinicalApproval": false,
+  "limitations": "Software validation of source-pinned display and navigation only. This is not browser/device testing, patient registration, clinical validation or radiologist approval."
+}

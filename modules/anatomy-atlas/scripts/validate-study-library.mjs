@@ -106,7 +106,7 @@ for (const [region, profile] of Object.entries(dissectionProfiles)) {
         same(recipe.visible, wanted);
         same(
           recipe.targets,
-          focus ? scope.filter((s) => matchesRule(s, focus.rule)) : null,
+          focus ? wanted.filter((s) => matchesRule(s, focus.rule)) : null,
         );
         same(
           recipe.available,
