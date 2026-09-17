@@ -4,12 +4,14 @@ import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
 import pins from '../content/major-organ-function-pins.json' with {type:'json'};
 import after from '../content/major-organ-function.transition.json' with {type:'json'};
+import {authoringBeforeCorpusClinical} from './corpus-clinical-history.mjs';
 
 export const majorOrganFunctionHash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const snapshot=(api,display)=>({body:display.structures.map(s=>({id:s.id,sections:Object.fromEntries(api.contentTabs.map(t=>[t,api.bodyLesson(s,t)]))})),shoulder:api.structures,recipes:api.dissectionProfiles});
 
 /** Remove only the newest thirteen Function edits before older history gates run. */
 export function authoringBeforeMajorOrganFunction({api,catalog},{deferWholeSnapshot=false}={}) {
+  api=authoringBeforeCorpusClinical({api,catalog},{deferWholeSnapshot:true});
   const hash=majorOrganFunctionHash;
   assert.equal(hash(pins),'655f7f276e3a5dac43811378ffc8036380ac91420a54d01c78c5fa2b26ee208a');
   assert.equal(hash(after),'3635c886868ee3eeeea1d7f4f167737cb03cbeb2a16c4884b2afbe6a25546726');

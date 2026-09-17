@@ -1,5 +1,23 @@
 # Third-party notices
 
+## Corpus-spongiosum clinical context — 17 September 2026
+
+Two original adapted teaching summaries reference NCI SEER Training Modules:
+[Penis](https://training.seer.cancer.gov/anatomy/reproductive/male/penis.html)
+and Patel AB et al., *Urethral Injuries: Diagnostic and Management Strategies
+for Critical Care and Trauma Clinicians*, J Clin Med 2023;12:1495,
+[doi:10.3390/jcm12041495](https://doi.org/10.3390/jcm12041495).
+Patel et al. retain copyright and license their article under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), expressly verified
+on page 1 of the publisher PDF. Author/source credit, article/licence links
+and adaptation notice accompany the lessons. No endorsement is implied.
+
+Only original concise teaching text is added. No figures, tables, patient images,
+publication layout, logos, treatment algorithms or procedural instructions are
+imported. No new font, model, texture, dataset, dependency or paid service is
+introduced. Existing geometry/asset notices remain in force. See
+[source audit and scope](../docs/CORPUS_CLINICAL_PLAN_20260917.md).
+
 ## Major-organ Function teaching — 17 September 2026
 
 Original educational summaries for 13 additional root selections reference

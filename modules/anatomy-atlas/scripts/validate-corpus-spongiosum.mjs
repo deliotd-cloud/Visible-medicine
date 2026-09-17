@@ -201,14 +201,9 @@ for (const s of pins.structures) {
   );
   for (const tab of ['anatomy', 'function', 'quiz'])
     assert.equal(api.bodyLesson(s, tab).readiness, 'draft');
-  for (const tab of [
-    'ct',
-    'mri',
-    'xray',
-    'ultrasound',
-    'clinical',
-    'pathology',
-  ])
+  for (const tab of ['clinical','pathology'])
+    assert.equal(api.bodyLesson(s, tab).readiness, 'draft');
+  for (const tab of ['ct','mri','xray','ultrasound'])
     assert.equal(api.bodyLesson(s, tab).readiness, 'pending');
   assert.equal(
     api.corpusSpongiosumLesson({ ...s, anchor: [0, 0, 0] }, 'anatomy'),

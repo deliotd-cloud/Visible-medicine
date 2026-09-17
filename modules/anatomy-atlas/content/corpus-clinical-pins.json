@@ -1,0 +1,168 @@
+{
+  "sourceCommit": "c1fa092997ba87e71f082af393aa8944e4e9afdb",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "corpus-spongiosum",
+      "url": "/models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb?v=f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826",
+      "bytes": 11856,
+      "sha256": "f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826",
+      "structures": 1
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "8f15dd9f3f53aea60ccfec6036ae78d4581f8f41fd33090121fa429567e63f7e",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:midline:organ:corpus-spongiosum-of-penis",
+        "fmaId": "FMA19617",
+        "name": "Corpus spongiosum · bulb/shaft source",
+        "sourceName": "corpus spongiosum of penis",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "corpus-spongiosum",
+        "nodeName": "FMA19617",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3133",
+            "sha256": "e90e440d57d2e6b0b85c622650c46bafe34c0886a6eed898062b914b5df1f14e"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.11280299723148346,
+            -0.9105299711227417,
+            0.2501530051231384
+          ],
+          "max": [
+            0.09973979741334915,
+            -0.1976899951696396,
+            1.371359944343567
+          ]
+        },
+        "center": [
+          -0.006531599909067154,
+          -0.5541099831461906,
+          0.8107564747333527
+        ],
+        "anchor": [
+          -0.024211199954152107,
+          -0.35267001390457153,
+          0.7853400111198425
+        ],
+        "coverageNote": "Original source-labelled bulb/shaft representation. The separately supplied glans and corporal surfaces are not added; this is not the complete corpus spongiosum or penis. The existing urethra is context, not a validated enclosed lumen. Original coordinates and faces retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "side": "midline",
+      "topics": [
+        "clinical",
+        "pathology",
+        "ct",
+        "mri",
+        "xray",
+        "ultrasound"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Corpus spongiosum · bulb/shaft source · Anatomy · draft",
+        "body": "The corpus spongiosum is the ventral erectile column surrounding the spongy urethra. Its distal expansion forms the glans in typical anatomy; this selected source does not include that separate glans surface.",
+        "bullets": [
+          "Compare the existing Urethra selection in Pelvis or Whole body. Whole-source proximity does not verify an enclosed or continuous lumen.",
+          "The two corpora cavernosa are anatomically distinct; they are not separate selections in this addition."
+        ],
+        "note": "Source-bound teaching draft; anatomical and radiologist review pending. Bulb/shaft representation only: the glans and paired cavernous bodies are not added. No skin, tunical layers, neurovascular supply, dynamic function or scan registration is depicted.",
+        "citations": [
+          "https://training.seer.cancer.gov/anatomy/reproductive/male/penis.html"
+        ]
+      },
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Corpus spongiosum · bulb/shaft source · Review pending",
+          "body": "Structure-specific imaging, pathology and clinical teaching remain pending.",
+          "bullets": [],
+          "note": "No patient scan, diagnostic conclusion, intervention or registered imaging correspondence is supplied."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Corpus spongiosum · bulb/shaft source · Review pending",
+          "body": "Structure-specific imaging, pathology and clinical teaching remain pending.",
+          "bullets": [],
+          "note": "No patient scan, diagnostic conclusion, intervention or registered imaging correspondence is supplied."
+        },
+        "ct": {
+          "readiness": "pending",
+          "title": "Corpus spongiosum · bulb/shaft source · Review pending",
+          "body": "Structure-specific imaging, pathology and clinical teaching remain pending.",
+          "bullets": [],
+          "note": "No patient scan, diagnostic conclusion, intervention or registered imaging correspondence is supplied."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "Corpus spongiosum · bulb/shaft source · Review pending",
+          "body": "Structure-specific imaging, pathology and clinical teaching remain pending.",
+          "bullets": [],
+          "note": "No patient scan, diagnostic conclusion, intervention or registered imaging correspondence is supplied."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "Corpus spongiosum · bulb/shaft source · Review pending",
+          "body": "Structure-specific imaging, pathology and clinical teaching remain pending.",
+          "bullets": [],
+          "note": "No patient scan, diagnostic conclusion, intervention or registered imaging correspondence is supplied."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Corpus spongiosum · bulb/shaft source · Review pending",
+          "body": "Structure-specific imaging, pathology and clinical teaching remain pending.",
+          "bullets": [],
+          "note": "No patient scan, diagnostic conclusion, intervention or registered imaging correspondence is supplied."
+        }
+      }
+    }
+  ]
+}

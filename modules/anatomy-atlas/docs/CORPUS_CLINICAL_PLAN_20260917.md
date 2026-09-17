@@ -1,6 +1,6 @@
 # Corpus-spongiosum Clinical / Pathology next increment
 
-## Verified gap, not completed content
+## Original verified gap
 
 At Atlas 0202e5dc80a2214969df6a414721f657a3538a0a, the real lesson dispatcher
 returns Clinical and Pathology drafts for 82 of 83 organ-system root selections.
@@ -51,8 +51,12 @@ text-reference decision, not whole-project legal or clinical clearance.
 Create two concise, useful original drafts with the existing compact note UI.
 Keep the exact current source identity/side/bundle binding and coverage wording;
 pin the actual pre-edit root identity and all-topic snapshot before dispatch.
-Use a separate transition rather than rewriting old accepted records. Preserve
-all other 9,916 root-topic placements, geometry, recipes and access controls.
+Use a separate transition rather than rewriting old accepted records. Initial
+scope was two replacements. Implementation review also found that the four
+pending imaging notes said Clinical/Pathology were pending: correct that shared
+sentence to imaging-only when the two drafts land. Thus record six changed
+payloads (two new drafts, four pending-copy corrections) and preserve all other
+9,912 root-topic placements, geometry, recipes and access controls.
 Normalize the new edits newest-first for earlier content-history validators.
 Update the corpus source validator's topic-readiness assertions deliberately:
 Clinical/Pathology become drafts; CT/MRI/X-ray/US remain pending unless separately
@@ -64,3 +68,14 @@ and desktop/mobile samples. Retain revision-bound radiologist sign-off and
 independent Atlas/case/lecture rights. Save verified GitHub/D recovery. Then
 continue broader regional anatomy and teaching, without redoing this audit or
 low-priority oral work simply because it is convenient.
+
+## Implementation checkpoint — 17 September
+
+Both source-bound drafts and the four imaging-copy corrections are implemented.
+The feature, previous major-organ and corpus source suites pass without changing
+earlier accepted pins or geometry. The corpus baseline helper now exports the
+complete shoulder/tab/recipe inputs its historical chain requires; no baseline
+was reset. Desktop and 390px browser checks pass for both notes, source/licence
+links, pending imaging tabs and mobile return to model. See CORPUS_CLINICAL.md,
+corpus-clinical-validation.json and the coordinating corpus-clinical checkpoint
+for final build and backup evidence. Draft status is not clinical acceptance.

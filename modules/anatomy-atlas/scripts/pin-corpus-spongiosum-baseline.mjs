@@ -4,7 +4,7 @@ import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {build} from './workspace-test-build.mjs';
 import {authoringBeforeCraniofacialOrganImaging} from './craniofacial-organ-imaging-history.mjs';
-const built=await build({stdin:{contents:"export {bodyDisplayCatalog} from './lib/body-display-catalog'; export {bodyLesson} from './app/body-content';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
+const built=await build({stdin:{contents:"export {bodyDisplayCatalog} from './lib/body-display-catalog'; export {bodyLesson} from './app/body-content'; export {structures} from './app/anatomy-data'; export {contentTabs} from './lib/content-types'; export {dissectionProfiles} from './app/dissection-data';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
 const current=await import('data:text/javascript;base64,'+Buffer.from(built.outputFiles[0].text).toString('base64'));
 const raw=JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json'));
 const api=authoringBeforeCraniofacialOrganImaging({api:current,catalog:raw}),catalog=api.bodyDisplayCatalog(raw);

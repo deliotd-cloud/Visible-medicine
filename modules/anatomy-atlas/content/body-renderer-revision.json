@@ -509,6 +509,10 @@
       "sha256": "ea4eb8d886f03cab39025dbdcbf1a4a630be83f04254cf731eab7b580222afd3"
     },
     {
+      "path": "content/corpus-clinical.ts",
+      "sha256": "1f3af47828e50ba6ef9b7a32c9f877ed1aa5e323be6bb1285bc26028fb6b4b4c"
+    },
+    {
       "path": "content/cranial-bone-imaging-pins.json",
       "sha256": "c45e8bb107ee02a976c43fd47cc77305391e112fdeaf84c51e1d2bc3f7850be0"
     },
@@ -1230,7 +1234,7 @@
     },
     {
       "path": "lib/corpus-spongiosum.ts",
-      "sha256": "c835a22f1c4ee250c94987b6703d032d97b930bf150976f4a3bfaa18268256f3"
+      "sha256": "e8160f2ae0be2de646b4cebba199b67ea8e96f98f2809c877c70022c27da4972"
     },
     {
       "path": "lib/cranial-arteries.ts",
@@ -2018,7 +2022,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "a9714878a450762b186fc18d7742bf54ebc53901fe514b296930d0b69dc23f9b"
+      "sha256": "2d0d71590d97cde7fc39f772e8d7ab549b0fff3fdf8d40c22018606fbb09e4b4"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2213,5 +2217,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "fe016cd9e6bcb64db2d06728fb737dfa375600462067712755b4ffea32357702"
+  "sha256": "11e68609507f0057df33cd0d828f7ce1fb15b2e7ce7d7a5a7d80d66eac0a85c7"
 }
