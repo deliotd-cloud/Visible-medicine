@@ -2,6 +2,24 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — upper-limb venous clinical drafts
+
+Atlas source adds12 Clinical/Pathology draft placements for paired medial brachial,
+median cubital and median antebrachial veins. Six texts distinguish deep/superficial
+systems, variable elbow connections, superficial inflammation and DVT/embolic risk.
+Existing arm/forearm panels are reused;9,906 other topics, source geometry and
+all dissection recipes remain unchanged. No procedural route or flow is inferred.
+
+Reference/reuse scope and pending radiologist acceptance are documented in Atlas
+docs/UPPER_VENOUS_CLINICAL.md. No publisher images, tables, scans, paid dependencies
+or new models are imported. The coordinating checkpoint records actual tests,
+browser coverage and exact GitHub/D recovery, not inferred clinical completion.
+
+Source-only: generated website runtime and publication84 unchanged. Existing
+model-staging, hosted review roles/migrations, cleared imaging/lecture anchors,
+device and revision-bound radiologist gates remain. Native MRI synthetic QA is
+complete and separate from these teaching drafts.
+
 ## 17 September — SCA and right MCA clinical drafts
 
 Atlas adds six source-bound Clinical/Pathology placements for the two admitted
