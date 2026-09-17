@@ -1,5 +1,7 @@
 'use client';
 
+import { labelDepthSurface } from '@/lib/label-depth';
+
 import {
   Component,
   Suspense,
@@ -236,6 +238,7 @@ function Tissue({
   return (
     <>
       <mesh
+        userData={labelDepthSurface}
         geometry={geometry}
         material={material}
         castShadow={!faded && opacity >= 0.95}

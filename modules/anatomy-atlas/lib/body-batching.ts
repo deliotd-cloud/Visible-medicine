@@ -2,6 +2,7 @@ import {
   BatchedMesh, BufferGeometry, Color, DoubleSide, Matrix4,
   MeshStandardMaterial, Vector3, type Intersection, type Raycaster,
 } from 'three';
+import { labelDepthSurface } from './label-depth.ts';
 
 // Original-resolution opaque surfaces only. Detailed/transparent/cut surfaces
 // continue through AnatomyTissue; no overview LOD or mesh simplification.
@@ -70,6 +71,7 @@ export function createBodyBatch(sources: BodyBatchSource[]) {
     }
   } catch (error) { dispose(); throw error; }
   mesh.name = 'Visible Medicine original-resolution opaque batch';
+  mesh.userData = { ...labelDepthSurface };
   // The aggregate bounds would become stale during explosion. Per-instance
   // culling stays enabled and uses the current matrices on every rendered frame.
   mesh.frustumCulled = false;

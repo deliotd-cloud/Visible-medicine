@@ -10,6 +10,7 @@ import {
 } from '../lib/screen-label-layout.ts';
 import { sceneLabelIds } from '../lib/scene-labels.ts';
 import * as labelLayout from '../lib/screen-label-layout.ts';
+import * as labelDepth from '../lib/label-depth.ts';
 import * as React from 'react';
 import * as Three from 'three';
 import { transformSync } from 'esbuild';
@@ -300,6 +301,12 @@ const entries = [
   },
 ];
 entries[0].anchor.current.position.set(-1, 0, 0);
+const fixtureScene = new Three.Scene(), fixtureOwn = new Group();
+fixtureOwn.add(entries[0].anchor.current); fixtureScene.add(fixtureOwn);
+const coveringMesh = new Three.Mesh(new Three.BoxGeometry(2,2,1), new Three.MeshStandardMaterial());
+coveringMesh.position.set(-.5,0,5); coveringMesh.userData = {...labelDepth.labelDepthSurface};
+fixtureScene.add(coveringMesh);
+let fixtureTime = 0;
 const picked = [],
   effects = [],
   observers = [];
@@ -329,6 +336,7 @@ runInNewContext(
     module: fixtureModule,
     exports: fixtureModule.exports,
     ResizeObserver: Observer,
+    performance: {now: () => fixtureTime}, setTimeout, clearTimeout,
     require: (name) => {
       if (name === 'react')
         return {
@@ -350,12 +358,13 @@ runInNewContext(
           useThree: (select) =>
             select({ size, invalidate: () => invalidations++ }),
           useFrame: (fn) => {
-            frame = fn;
+            frame = (args) => { fixtureTime += 101; fn({...args, scene: fixtureScene}); };
           },
         };
       if (name === '@react-three/drei') return { Html: 'html-overlay-fixture' };
       if (name === 'three') return Three;
       if (name === '@/lib/screen-label-layout') return labelLayout;
+      if (name === '@/lib/label-depth') return labelDepth;
       if (name === './scene-label-layer.css') return {};
       if (name === 'react/jsx-runtime') return require(name);
       throw Error('Unexpected component import: ' + name);
@@ -381,7 +390,7 @@ same(
 );
 const buttonElement = elements.find((element) => element.type === 'button');
 same(
-  buttonElement.props.children,
+  buttonElement.props.children[0],
   'Right structure',
   'Anatomical text is not relabelled to screen laterality',
 );
@@ -414,6 +423,9 @@ frame({ camera });
 same(nodes.button.dataset.side, 'left', 'Frame writes actual left side');
 same(nodes.button.disabled, false, 'Onscreen label can be selected');
 same(nodes.button.style.visibility, 'visible');
+same(nodes.button.dataset.depth, 'covered', 'Selected deep anchor gets a tissue-depth cue');
+same(nodes.path.dataset.depth, 'covered', 'Covered leader gets the dashed style hook');
+same(nodes.button.attributes['aria-description'], labelDepth.coveredLabelDescription, 'Depth explanation is accessible');
 check(
   nodes.path.attributes.d.startsWith('M ') && nodes.circle.attributes.cx,
   'Leader and anchor dot track real projection',
@@ -421,6 +433,7 @@ check(
 camera.position.set(0, 0, -10);
 camera.lookAt(0, 0, 0);
 frame({ camera });
+same(nodes.button.dataset.depth, '', 'Opposite camera clears stale depth cue');
 same(
   nodes.button.dataset.side,
   'right',

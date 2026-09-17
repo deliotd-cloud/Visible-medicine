@@ -12,6 +12,7 @@ export const reviewDisplayPaths = [
   'app/scene-label-layer.tsx',
   'app/scene-label-layer.css',
   'lib/screen-label-layout.ts',
+  'lib/label-depth.ts',
   'app/anatomy-canvas.tsx',
   'lib/anatomy-root-session.ts',
   'app/scene-recovery.tsx',

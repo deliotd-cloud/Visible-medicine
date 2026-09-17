@@ -189,6 +189,7 @@
     "renderer:test": "node scripts/validate-scene-recovery.mjs",
     "renderer-root:test": "node scripts/validate-anatomy-root.mjs",
     "labels:test": "node scripts/validate-screen-labels.mjs",
+    "label-depth:test": "node scripts/validate-label-depth.mjs",
     "model-first:test": "node scripts/validate-model-first.mjs",
     "atlas-navigation:test": "node scripts/validate-atlas-navigation.mjs",
     "anatomy-search:test": "node scripts/validate-anatomy-search.mjs",

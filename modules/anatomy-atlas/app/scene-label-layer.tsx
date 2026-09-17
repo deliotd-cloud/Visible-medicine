@@ -14,6 +14,7 @@ import {
 import { useFrame, useThree } from '@react-three/fiber';
 import { Html } from '@react-three/drei';
 import { Group, Vector3 } from 'three';
+import { createLabelDepthProbe, coveredLabelDescription } from '@/lib/label-depth';
 import {
   layoutScreenLabels,
   projectLabelAnchor,
@@ -71,6 +72,11 @@ export function SceneLabelLayer({ children }: { children: ReactNode }) {
   const points = useRef(new Map<string, SVGCircleElement>());
   const resizeObserver = useRef<ResizeObserver | null>(null);
   const world = useMemo(() => new Vector3(), []);
+  const probeDepth = useMemo(createLabelDepthProbe, []);
+  const depthFrame = useRef({ last: -Infinity, timer: null as ReturnType<typeof setTimeout> | null });
+  useLayoutEffect(() => () => {
+    if (depthFrame.current.timer !== null) clearTimeout(depthFrame.current.timer);
+  }, []);
   const register = useCallback((entry: Entry) => {
     setEntries((current) => [
       ...current.filter((item) => item.id !== entry.id),
@@ -90,8 +96,44 @@ export function SceneLabelLayer({ children }: { children: ReactNode }) {
     };
   }, [entries, size.width, size.height, invalidate]);
 
-  useFrame(({ camera }) => {
+  useFrame(({ camera, scene }) => {
     camera.updateMatrixWorld();
+    // At most ten selected-anchor probes per second, with one trailing demand
+    // frame so the final orbit/opacity/cut state cannot retain an old result.
+    const selected = entries.find(entry => entry.selected && entry.anchor.current?.parent);
+    for (const entry of entries) if (entry !== selected) {
+      const button = buttons.current.get(entry.id), line = lines.current.get(entry.id);
+      if (line) line.dataset.depth = '';
+      if (button) {
+        button.dataset.depth = '';
+        button.title = '';
+        button.setAttribute('aria-description', '');
+      }
+    }
+    const now = performance.now();
+    if (selected && now - depthFrame.current.last >= 100) {
+      depthFrame.current.last = now;
+      if (depthFrame.current.timer !== null) clearTimeout(depthFrame.current.timer);
+      depthFrame.current.timer = null;
+      scene.updateMatrixWorld(true);
+      const anchor = selected.anchor.current!;
+      anchor.getWorldPosition(world);
+      const depth = probeDepth(scene, camera, world, anchor.parent!);
+      for (const entry of entries) {
+        const button = buttons.current.get(entry.id), line = lines.current.get(entry.id);
+        if (!button || !line) continue;
+        const covered = entry === selected && depth === 'covered';
+        button.dataset.depth = covered ? 'covered' : '';
+        line.dataset.depth = covered ? 'covered' : '';
+        button.title = covered ? coveredLabelDescription : '';
+        button.setAttribute('aria-description', covered ? coveredLabelDescription : '');
+      }
+    } else if (selected && depthFrame.current.timer === null) {
+      depthFrame.current.timer = setTimeout(() => {
+        depthFrame.current.timer = null;
+        invalidate();
+      }, Math.max(1, 101 - (now - depthFrame.current.last)));
+    }
     const projected: ScreenLabel[] = [];
     for (const entry of entries) {
       const anchor = entry.anchor.current,
@@ -192,6 +234,7 @@ export function SceneLabelLayer({ children }: { children: ReactNode }) {
               key={entry.id}
               type="button"
               aria-pressed={entry.selected}
+              aria-label={entry.name}
               ref={(node) => {
                 const previous = buttons.current.get(entry.id);
                 if (previous) resizeObserver.current?.unobserve(previous);
@@ -212,6 +255,7 @@ export function SceneLabelLayer({ children }: { children: ReactNode }) {
               }}
             >
               {entry.name}
+              <span className="scene-label-depth" aria-hidden="true">Behind tissue</span>
             </button>
           ))}
         </div>

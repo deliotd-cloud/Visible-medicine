@@ -26,6 +26,18 @@
 .scene-label-leaders .selected circle {
   fill: var(--vm-ink);
 }
+.scene-label-leaders path[data-depth='covered'] {
+  stroke-dasharray: 4 3;
+}
+.scene-label-depth {
+  display: none;
+}
+.scene-label.selected[data-depth='covered'] .scene-label-depth {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: normal;
+  margin-top: 0.15rem;
+}
 /* Higher specificity than the regional/illustration variants; keep VM colours. */
 .scene-label-overlay button.scene-label {
   position: absolute;

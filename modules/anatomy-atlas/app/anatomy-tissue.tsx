@@ -2,6 +2,7 @@
 import { useEffect, useLayoutEffect, useMemo } from 'react';
 import { useThree } from '@react-three/fiber';
 import * as THREE from 'three';
+import { labelDepthSurface } from '@/lib/label-depth';
 import {
   applyMaterialInspection,
   clippedMeshRaycast,
@@ -117,6 +118,7 @@ export function AnatomyTissue({
   return (
     <>
       <mesh
+        userData={labelDepthSurface}
         geometry={geometry}
         material={material}
         raycast={ghost ? () => null : clippedMeshRaycast}
