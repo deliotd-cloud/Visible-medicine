@@ -31,11 +31,15 @@ export function StudyLinks({
   } | null>(null);
   const destinations = useMemo(
     () => studyDestinations(catalog, selected, region, side)
-      .filter(destination => !assetBase || destination.region === region)
+      .filter(destination => !assetBase || assetBase === '/atlas-runtime/head-neck' || destination.region === region)
       .map(destination => ({...destination,
-        href: regionalStudyDeliveryUrl(destination.href, region, assetBase),
+        // The shared module's Link adapter updates the containing website too.
+        // Older single-region containers must still stay in their own scope.
+        href: assetBase === '/atlas-runtime/head-neck' ? destination.href
+          : regionalStudyDeliveryUrl(destination.href, destination.region, assetBase),
         focuses: destination.focuses.map(view => ({...view,
-          href: regionalStudyDeliveryUrl(view.href, region, assetBase)})),
+          href: assetBase === '/atlas-runtime/head-neck' ? view.href
+            : regionalStudyDeliveryUrl(view.href, destination.region, assetBase)})),
       })),
     [catalog, selected, region, side, assetBase],
   );
@@ -58,7 +62,7 @@ export function StudyLinks({
     <details className="anatomy-study-links">
       <summary>Continue this dissection</summary>
       <p>
-        Keep <strong>{selected.name}</strong> selected {assetBase
+        Keep <strong>{selected.name}</strong> selected {assetBase && assetBase !== '/atlas-runtime/head-neck'
           ? 'in a linked regional study view.'
           : 'when moving between the whole body and its available regions.'}
       </p>

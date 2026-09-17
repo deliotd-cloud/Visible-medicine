@@ -10,11 +10,18 @@ export function Link({href,children,prefetch:_prefetch,...props}: AnchorHTMLAttr
   // model. The host relays only bounded study fields; the module validates them.
   if (localRegion==='whole-body' && href)
     return <a {...props} href={'/atlas/3d'+href.slice(1)} target="_top">{children}</a>;
-  // Other source-bound regional study URLs remain within the same module.
+  // Plain region navigation retains established host URLs.
   if (localRegion && href===`/regions/${localRegion}`)
     return <a {...props} href={regionalHostHref(localRegion)!} target="_top">{children}</a>;
-  if (localRegion && href)
-    return <a {...props} href={regionalStudyDeliveryUrl(href,localRegion,assetBase)}>{children}</a>;
+  if (localRegion && href) {
+    // Validate the canonical route, then carry the source-bound query through
+    // the host's bounded transport. Navigating only the frame leaves its banner
+    // and region bar describing the previous anatomy.
+    const delivered=regionalStudyDeliveryUrl(href,localRegion,assetBase);
+    const query=new URLSearchParams(delivered.split('?')[1]);
+    query.set('region',localRegion);
+    return <a {...props} href={'/atlas/3d?'+query.toString()} target="_top">{children}</a>;
+  }
   if (href === '/' || href === '/shoulder')
     return <a {...props} href={href === '/' ? '/atlas' : '/atlas/shoulder-3d'} target="_top">{children}</a>;
   if (href?.startsWith('/regions/'))
