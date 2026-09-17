@@ -2,6 +2,25 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — paired PICA clinical drafts and Practice check
+
+Atlas source adds four Clinical/Pathology placements for the two admitted PICA
+selections. Complete ordered source identities and fragmentation cautions remain;
+9,914 other topics and geometry are unchanged. Miao2020, Mercier2008 and NHS
+references support short original teaching with retained reuse/clinical limits.
+The actual source tests, browser results and GitHub/D recovery are recorded in
+the coordinating checkpoint and Atlas docs/PICA_CLINICAL.md, not inferred here.
+
+The suspected Practice/Focus interruption was not reproduced: desktop restores
+feedback and Next, while mobile intentionally omits Focus and keeps the Practice
+launcher usable with answers retained. No control was disabled to satisfy a test.
+The stale shoulder export was regenerated against existing review fingerprints;
+it changes only nine geometry/display revision strings, not source or lessons.
+
+Source-only; generated website modules and publication84 unchanged. Full goal
+ACTIVE, hourly review PAUSED. Clinical sign-off, cleared external anchors,
+authenticated staging, hosted review roles/migrations and device gates remain.
+
 ## 17 September — neck attachment reasoning drafts
 
 Atlas source adds four Practice concepts for the three scalenes and
