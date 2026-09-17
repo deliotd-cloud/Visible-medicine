@@ -37,7 +37,11 @@
 .shoulder-model-workspace > .viewer-panel {
   flex: 1 1 0;
   height: auto;
-  min-height: 240px;
+  min-width: 0;
+  min-height: min-content;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto minmax(160px, 1fr);
   margin-inline: 10px;
   border: 1px solid #c6d8d3;
   border-radius: 8px;
@@ -46,14 +50,19 @@
   overflow-y: auto;
 }
 .shoulder-model-workspace .shoulder-scene {
-  /* Old shoulder rules reserved space for controls now outside the canvas. */
-  inset: 48px 0 0 !important;
-  height: auto !important;
+  /* The metadata row grows with text; never reserve a fixed overlay band. */
+  position: relative !important;
+  inset: auto !important;
+  grid-row: 2;
+  min-width: 0;
+  min-height: 0;
+  height: 100% !important;
 }
 .shoulder-workspace .viewer-meta {
-  top: 12px;
-  left: 12px;
-  right: 12px;
+  position: static;
+  grid-row: 1;
+  margin: 12px;
+  min-width: 0;
   flex-wrap: wrap;
   gap: 6px;
   font-size: 0.75rem;
@@ -107,6 +116,8 @@
   flex-wrap: wrap;
   margin: 0;
   box-shadow: none;
+  min-width: 0;
+  container: shoulder-toolbar / inline-size;
 }
 .shoulder-view-footer .viewer-toolbar > button {
   min-width: 40px;
@@ -114,6 +125,16 @@
 }
 .shoulder-view-footer .explode-control {
   flex: 1 1 16rem;
+}
+@container shoulder-toolbar (max-width: 20rem) {
+  .explode-control:has(.vm-explode-style) {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .explode-control .vm-explode-style {
+    grid-column: 1 / -1;
+    min-width: 0;
+    max-width: none;
+  }
 }
 .shoulder-view-footer :is(.viewer-hint, .model-credit) {
   position: static;

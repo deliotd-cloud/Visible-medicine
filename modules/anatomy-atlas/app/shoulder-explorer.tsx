@@ -566,9 +566,13 @@ export default function ShoulderExplorer({
                   <div className="eyebrow">Find a structure</div>
                   <Combobox<SearchOption>
                     value={selectedSearchOption}
-                    onValueChange={(option) =>
-                      option && selectStructure(option.value)
-                    }
+                    onValueChange={(option, details) => {
+                      if (option) selectStructure(option.value);
+                      // Clearing search must not clear anatomical selection.
+                      // Let Escape dismiss the surrounding tools sheet once
+                      // the combobox popup itself is closed.
+                      else if (details.reason === 'escape-key') details.allowPropagation();
+                    }}
                     items={searchOptions}
                     itemToStringLabel={(option) => option.label}
                     itemToStringValue={(option) => option.value}
@@ -985,6 +989,7 @@ export default function ShoulderExplorer({
                         variant={isolated ? 'default' : 'ghost'}
                         disabled={mode === 'exam'}
                         aria-label="Isolate selected structure"
+                        aria-pressed={isolated}
                         onClick={() => setIsolated(!isolated)}
                       />
                     }
@@ -1002,6 +1007,7 @@ export default function ShoulderExplorer({
                         size="icon"
                         variant={showLabels ? 'secondary' : 'ghost'}
                         aria-label="Toggle labels"
+                        aria-pressed={showLabels}
                         onClick={() => setShowLabels(!showLabels)}
                         disabled={mode === 'exam'}
                       />
@@ -1018,6 +1024,7 @@ export default function ShoulderExplorer({
                         size="icon"
                         variant={syncPlane ? 'default' : 'ghost'}
                         aria-label="Toggle reference plane illustration"
+                        aria-pressed={syncPlane}
                         disabled={mode === 'exam'}
                         onClick={toggleSync}
                       />

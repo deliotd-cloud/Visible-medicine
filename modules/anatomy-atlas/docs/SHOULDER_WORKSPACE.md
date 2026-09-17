@@ -1,5 +1,50 @@
 # Shoulder model-first workspace
 
+## 17 September 2026 — reflow and embedded keyboard correction
+
+The model pane now has separate intrinsic metadata and scene rows, with a
+160px scene floor and a bounded column. Enlarged text no longer overlaps the
+model. In narrow toolbars the existing explode selector moves above the slider;
+short hosts can scroll the model pane without horizontal overflow. No new
+controls or source geometry are introduced.
+
+The three shoulder toolbar toggles expose their pressed state. The controlled
+structure search preserves anatomical selection when cleared, but now permits
+Escape to reach the surrounding tools sheet once the search popup is closed.
+Browser testing reproduced the previous swallowed-Escape failure; a source
+callback test exercises selection, clear and Escape separately.
+
+Current source verification: shoulder workspace 1,412 checks (108 markup cases,
+288 camera/layer callbacks, search callback and scoped PostCSS contracts);
+labels, renderer recovery, selection visibility, explosion styles and review
+bindings pass. The explosion validator's stale import map now uses the real
+model-delivery helper; no geometry, baseline or controller expectation was
+weakened. It covers 1,102 body entries and nine shoulder entries. TypeScript,
+production and both generated-module builds pass. Delivery verification reports
+134 unchanged source GLBs/decoded scenes. Teaching and imaging revisions are
+unchanged; display fingerprints refresh without transferring approval.
+
+All seven embedded journeys pass: shoulder at 1160x800, 600x650, 390x650 and
+320x600 with root-rem enlargement; head/neck at 1160x800 and 390x650; foot at
+600x650. Checks cover keyboard selection where applicable, all three separation
+styles at 100/0, reset, pane bounds, metadata/scene separation, and sheet
+Escape/focus return. Wide shoulder and head/neck also pass four real canvas
+orbit drags with projected-anchor/label-side/leader-endpoint checks. Seven
+shoulder structures and the selected C3 label cross sides correctly. Shoulder
+camera presets, fade-toggle state and labels on/off pass. No page errors.
+
+Local browser evidence is in the coordinating
+work/embedded-viewer-validation-20260917.json and screenshots. This uses actual compiled modules in a synthetic
+same-origin iframe host, not a deployed website. The matrix and its explicit
+limitations in that report are authoritative; do not infer a pass from a plan.
+Root-rem enlargement is not full browser zoom. Physical touch, screen-reader,
+low-GPU and clinical acceptance remain separate requirements. No private data,
+new dependency, asset, licence, access entitlement or hosted migration changed.
+
+The historical sections below describe earlier milestones; their deployment,
+backup and pending-test statements are not current status. Use WORKSPACE_MAP.md
+and its latest source checkpoint for current recovery and remaining work.
+
 ## Navigation
 
 The dedicated nine-structure shoulder now shares Explore / Dissect / Practice, Focus view and the responsive side panels used by the regional atlas. This is a layout change, not a replacement for the source-based 3D model or its orthographic plates.

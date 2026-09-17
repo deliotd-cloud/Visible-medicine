@@ -14,7 +14,7 @@ const compiled = await build({
  export * from './lib/explode-layout.mjs'; export * from './lib/study-views';
  export * from './lib/inspection-geometry'; export * from './lib/inspection-state';
  export * from './lib/anatomy-load-state'; export * from './lib/scene-labels';
- export * from './lib/origin-guides';
+ export * from './lib/origin-guides'; export * from './lib/model-delivery';
  export * from './lib/close-up-labels'; export * from './lib/body-display-catalog';
  export * from './app/anatomy-data'; export * from './app/body-types';`,
     resolveDir: process.cwd(),
@@ -469,6 +469,7 @@ const replacements = {
   '@/lib/inspection-geometry': a,
   '@/lib/inspection-state': a,
   '@/lib/origin-guides': a,
+  '@/lib/model-delivery': a,
   '@/lib/close-up-labels': a,
   './scene-orientation': { SceneOrientation: 'SceneOrientation' },
   './scene-orientation.css': {},

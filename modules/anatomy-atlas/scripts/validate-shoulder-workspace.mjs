@@ -287,7 +287,11 @@ const ast = ts.createSourceFile(
 );
 const printer = ts.createPrinter();
 const closures = {};
+let searchClosure;
 function visit(node) {
+  if (ts.isJsxElement(node) && node.openingElement.tagName.getText(ast) === 'Combobox') {
+    searchClosure = node.openingElement.attributes.properties.find(attr => attr.name?.getText(ast) === 'onValueChange').initializer.expression;
+  }
   if (
     ts.isJsxElement(node) &&
     node.openingElement.tagName.getText(ast) === 'Select'
@@ -306,6 +310,16 @@ function visit(node) {
   ts.forEachChild(node, visit);
 }
 visit(ast);
+check(searchClosure, 'Shoulder search callback found');
+const searchCallback = ts.transpileModule('var callback = ' + printer.printNode(ts.EmitHint.Unspecified, searchClosure, ast), {compilerOptions:{target:ts.ScriptTarget.ES2022}}).outputText;
+for (const reason of ['escape-key','clear-press','item-press']) {
+  for (const option of [null,{value:structures[0].id}]) {
+    const calls = [];
+    const scope = {option,details:{reason,allowPropagation:()=>calls.push(['propagate'])},selectStructure:id=>calls.push(['select',id])};
+    runInNewContext(searchCallback+';callback(option,details);',scope);
+    same(calls,option?[['select',option.value]]:reason==='escape-key'?[['propagate']]:[],'Search preserves selection and Escape propagation');
+  }
+}
 same(Object.keys(closures).sort(), ['camera', 'layer']);
 for (const [name, closure] of Object.entries(closures)) {
   const code = ts.transpileModule(
@@ -365,6 +379,32 @@ for (const [name, closure] of Object.entries(closures)) {
       }
 }
 const css = await fs.readFile('app/shoulder-workspace.css', 'utf8');
+// These contracts pin the reflow fix, not geometry or rendering internals.
+// Browser checks additionally cover the compiled cascade in constrained iframes.
+const cssAst = require('postcss').parse(css);
+function declarations(selector, container = null) {
+  const found = [];
+  cssAst.walkRules(selector, rule => {
+    const parent = rule.parent;
+    if (container ? parent.type === 'atrule' && parent.name === 'container' && parent.params === container : parent.type === 'root') found.push(rule);
+  });
+  same(found.length, 1, `One scoped rule: ${selector}`);
+  return Object.fromEntries(found[0].nodes.filter(n => n.type === 'decl').map(n => [n.prop, n.value + (n.important ? ' !important' : '')]));
+}
+for (const [selector, expected, container] of [
+  ['.shoulder-model-workspace > .viewer-panel', {'display':'grid','min-width':'0','min-height':'min-content','grid-template-columns':'minmax(0, 1fr)','grid-template-rows':'auto minmax(160px, 1fr)'}],
+  ['.shoulder-model-workspace .shoulder-scene', {'position':'relative !important','inset':'auto !important','grid-row':'2','min-height':'0','height':'100% !important'}],
+  ['.shoulder-workspace .viewer-meta', {'position':'static','grid-row':'1','min-width':'0'}],
+  ['.shoulder-view-footer .viewer-toolbar', {'min-width':'0','container':'shoulder-toolbar / inline-size'}],
+  ['.explode-control:has(.vm-explode-style)', {'grid-template-columns':'minmax(0, 1fr) auto'}, 'shoulder-toolbar (max-width: 20rem)'],
+  ['.explode-control .vm-explode-style', {'grid-column':'1 / -1','min-width':'0','max-width':'none'}, 'shoulder-toolbar (max-width: 20rem)'],
+]) {
+  const actual = declarations(selector, container);
+  for (const [property, value] of Object.entries(expected)) same(actual[property], value, `${selector}: ${property}`);
+}
+for (const [name, state] of [['Isolate selected structure','isolated'],['Toggle labels','showLabels'],['Toggle reference plane illustration','syncPlane']]) {
+  check(source.includes(`aria-label="${name}"\n                        aria-pressed={${state}}`), `Toggle exposes state: ${name}`);
+}
 for (const rule of [
   '@media (max-width: 700px)',
   '@media (max-height: 700px)',
