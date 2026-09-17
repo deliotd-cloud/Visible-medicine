@@ -39,6 +39,11 @@ Follow [CONTINUOUS_IMPROVEMENT.md](CONTINUOUS_IMPROVEMENT.md): source-bound educ
 
 ## Full UI acceptance matrix — partial milestone evidence, not complete acceptance
 
+The [regional readability pass](REGIONAL_READABILITY.md) covers five root-body
+views at default/enlarged root font, bounded keyboard journeys and four metadata
+contrast samples. It does not replace native zoom, complete keyboard order,
+screen-reader, physical-device, shoulder or nested-study acceptance below.
+
 Test the dedicated shoulder, head/neck, a small distal region, spine and whole body. Include desktop, tablet and a physical phone; keyboard-only, screen reader and 200% text sizing; a representative lower-powered GPU.
 
 1. Open the model without scrolling past tools. Open/close both sheets, change modes, use Focus view and return. Confirm no trapped focus, clipped control or unwanted page overflow.

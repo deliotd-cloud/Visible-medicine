@@ -41,24 +41,24 @@
   flex-direction: column;
 }
 .body-brand strong {
-  font-size: 15px;
+  font-size: 0.9375rem;
   letter-spacing: 0.13em;
 }
 .body-brand small {
-  font-size: 10px;
+  font-size: 0.625rem;
   letter-spacing: 0.28em;
   margin-top: 1px;
 }
 .body-brand .brand-mark {
   width: 33px;
   height: 38px;
-  font-size: 25px;
+  font-size: 1.5625rem;
 }
 .body-breadcrumb {
   display: flex;
   align-items: center;
   gap: 9px;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #7d8a80;
   flex: 1;
 }
@@ -70,7 +70,7 @@
   width: 14px;
 }
 .body-topbar > button {
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 .body-layout {
   height: calc(100dvh - 70px);
@@ -86,12 +86,12 @@
   scrollbar-width: thin;
 }
 .body-rail-title {
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 700;
   margin: 0 10px 16px;
 }
 .body-rail-subtitle {
-  font-size: 11px;
+  font-size: 0.6875rem;
   text-transform: uppercase;
   letter-spacing: 0.11em;
   color: #929b90;
@@ -105,7 +105,7 @@
   padding: 8px 10px;
   margin: 2px 0;
   border-radius: 5px;
-  font-size: 13px;
+  font-size: 0.8125rem;
   text-decoration: none;
   color: #5d6d5d;
   transition: background 0.15s;
@@ -130,7 +130,7 @@
   background: #eaf0e6;
 }
 .body-region-link small {
-  font-size: 11px;
+  font-size: 0.6875rem;
   background: #d7e5d2;
   padding: 2px 5px;
   border-radius: 4px;
@@ -145,7 +145,7 @@
   border-radius: 6px;
   color: #315a3f;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 0.75rem;
   background: #eef5e9;
 }
 .shoulder-feature > svg {
@@ -157,7 +157,7 @@
 }
 .shoulder-feature small {
   display: block;
-  font-size: 10px;
+  font-size: 0.625rem;
   color: #7d9078;
   margin-top: 4px;
   line-height: 1.4;
@@ -169,7 +169,7 @@
   border-top: 1px solid #dfe7d9;
   margin: 28px 10px 0;
   padding-top: 16px;
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: #8b9786;
   line-height: 1.5;
 }
@@ -203,34 +203,34 @@
 }
 .body-heading h1 {
   font:
-    600 31px/1.15 Georgia,
+    600 1.9375rem/1.15 Georgia,
     serif;
   letter-spacing: -0.025em;
   color: #30462f;
   margin: 6px 0;
 }
 .body-heading p {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: #83917b;
   margin: 0;
   line-height: 1.4;
 }
 .body-heading .eyebrow {
-  font-size: 10px;
+  font-size: 0.625rem;
   letter-spacing: 0.13em;
-  color: #809076;
+  color: var(--vm-muted);
 }
 .body-count {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   font:
-    500 27px Georgia,
+    500 1.6875rem Georgia,
     serif;
-  color: #8b9e80;
+  color: var(--vm-muted);
 }
 .body-count small {
-  font: 10px system-ui;
+  font: 0.625rem system-ui;
   letter-spacing: 0.04em;
   margin-top: 2px;
 }
@@ -246,7 +246,7 @@
   flex-wrap: wrap;
   gap: 12px;
   margin: 14px 0;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .body-reference-links a {
   color: #49643d;
@@ -275,12 +275,12 @@
 .body-system-bar span {
   display: flex;
   flex-direction: column;
-  font-size: 12px;
+  font-size: 0.75rem;
   flex: 1;
   font-weight: 650;
 }
 .body-system-bar small {
-  font-size: 9px;
+  font-size: 0.5625rem;
   font-weight: 500;
   color: #9aa490;
   margin-top: 3px;
@@ -309,7 +309,7 @@
   touch-action: none;
 }
 .body-canvas .scene-label {
-  font: 12px system-ui;
+  font: 0.75rem system-ui;
   white-space: nowrap;
   background: #fff7e6;
   border-bottom: 1px solid #b6a07b;
@@ -344,7 +344,7 @@
   border-radius: 6px;
 }
 .body-view-buttons button {
-  font-size: 11px;
+  font-size: 0.6875rem;
   text-transform: capitalize;
   color: #819275;
   padding: 5px 7px;
@@ -357,7 +357,7 @@
 }
 .body-view-row [data-slot='select-trigger'] {
   background: #fffffff0;
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: #748968;
   border-color: #dbe1d3;
 }
@@ -416,7 +416,7 @@
   align-items: center;
   gap: 7px;
   flex: 1;
-  font-size: 11px;
+  font-size: 0.6875rem;
   padding: 0 8px;
   border-left: 1px solid #ffffff1a;
   border-right: 1px solid #ffffff1a;
@@ -436,7 +436,7 @@
 }
 .body-explode output {
   min-width: 28px;
-  font-size: 10px;
+  font-size: 0.625rem;
   color: #b1c5a5;
 }
 .body-canvas-caption {
@@ -444,12 +444,12 @@
   bottom: 23px;
   text-align: center;
   width: 100%;
-  font-size: 10px;
+  font-size: 0.625rem;
   color: #8c9a80;
   pointer-events: none;
 }
 .body-canvas .model-credit {
-  font-size: 9px;
+  font-size: 0.5625rem;
   bottom: 7px;
   color: #96a18b;
 }
@@ -458,7 +458,7 @@
   top: 62px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #5b7350;
   background: #fffffff2;
   border: 1px solid #dbe5d1;
@@ -478,7 +478,7 @@
   place-items: center;
   text-align: center;
   color: #849079;
-  font-size: 14px;
+  font-size: 0.875rem;
   pointer-events: none;
 }
 .body-coverage {
@@ -489,7 +489,7 @@
   padding: 8px 12px;
   margin: 8px 15px 0;
   border: 1px solid #e7dfb6;
-  font-size: 11px;
+  font-size: 0.6875rem;
   line-height: 1.4;
   color: #8b804e;
   border-radius: 4px;
@@ -504,7 +504,7 @@
   gap: 10px;
   flex-wrap: wrap;
   padding: 12px 25px 15px;
-  font-size: 10px;
+  font-size: 0.625rem;
   color: #93a085;
   flex: none;
 }
@@ -528,31 +528,31 @@
   border-left: 1px solid #d9e2d2;
 }
 .body-info > .eyebrow {
-  font-size: 10px;
+  font-size: 0.625rem;
   color: #8c9b80;
   margin-bottom: 11px;
 }
 .body-info [data-slot='combobox-input-wrapper'] {
   width: 100%;
-  font-size: 13px;
+  font-size: 0.8125rem;
   border-color: #dbe4d4;
   background: #f9fbf7;
 }
 .body-info h2 {
   font:
-    600 27px/1.15 Georgia,
+    600 1.6875rem/1.15 Georgia,
     serif;
   color: #33472e;
   margin: 10px 0 15px;
   letter-spacing: -0.015em;
 }
 .body-info p {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.6;
   color: #73816a;
 }
 .body-selection-heading {
-  font-size: 10px;
+  font-size: 0.625rem;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -573,7 +573,7 @@
   margin-bottom: 22px;
 }
 .body-selection-actions button {
-  font-size: 11px;
+  font-size: 0.6875rem;
   height: 30px;
   color: #58734b;
   border-color: #d6e0cd;
@@ -589,7 +589,7 @@
   gap: 14px;
 }
 .body-content-tabs [data-slot='tabs-trigger'] {
-  font-size: 12px;
+  font-size: 0.75rem;
   padding: 0 0 10px;
   flex: none;
 }
@@ -597,16 +597,16 @@
   padding-top: 20px;
 }
 .body-content-tabs .eyebrow {
-  font-size: 10px;
+  font-size: 0.625rem;
   color: #8e9b81;
 }
 .body-content-tabs p {
   margin: 8px 0 13px;
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1.6;
 }
 .body-content-tabs ul {
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 1.6;
   color: #7c8b72;
   list-style: disc;
@@ -616,7 +616,7 @@
   margin: 7px 0;
 }
 .body-content-note {
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.55;
   padding: 12px;
   background: #f5f7ef;
@@ -631,7 +631,7 @@
   color: #a0ac91;
   border: 1px dashed #d5dfc7;
   padding: 16px;
-  font-size: 12px;
+  font-size: 0.75rem;
   margin-top: 20px;
 }
 .body-no-imaging svg {
@@ -648,13 +648,13 @@
   padding-top: 9px;
 }
 .body-facts dt {
-  font-size: 10px;
+  font-size: 0.625rem;
   color: #9aa78d;
   text-transform: uppercase;
   letter-spacing: 0.055em;
 }
 .body-facts dd {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #697f5c;
   margin-top: 5px;
   text-transform: capitalize;
@@ -687,12 +687,12 @@
 }
 .body-summary-grid strong {
   font:
-    27px Georgia,
+    1.6875rem Georgia,
     serif;
   color: #6d845f;
 }
 .body-summary-grid span {
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: #a0ac92;
   margin-top: 3px;
 }
@@ -702,7 +702,7 @@
   padding-top: 14px;
 }
 .body-structure-browser summary {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #769063;
   cursor: pointer;
   padding: 4px 0;
@@ -718,7 +718,7 @@
   gap: 8px;
   align-items: center;
   text-align: left;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #809274;
   width: 100%;
   padding: 8px 6px;
@@ -746,7 +746,7 @@
   margin-top: 24px;
   padding-top: 15px;
   color: #99a58d;
-  font-size: 10px;
+  font-size: 0.625rem;
   line-height: 1.6;
 }
 .body-exam-prompt {
@@ -767,11 +767,11 @@
   border-radius: 5px;
 }
 .body-exam-prompt > span {
-  font-size: 10px;
+  font-size: 0.625rem;
   letter-spacing: 0.1em;
 }
 .body-exam-prompt strong {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 650;
 }
 .body-answer {
@@ -798,7 +798,7 @@
   gap: 12px;
   padding: 20px;
   border: 1px dashed #cedebc;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: #8aa074;
   margin-top: 20px;
 }
@@ -812,15 +812,15 @@
   margin: 25px 0;
   display: flex;
   justify-content: space-between;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: #94a482;
 }
 .body-practice-score strong {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #75915f;
 }
 .body-info > small {
-  font-size: 11px;
+  font-size: 0.6875rem;
   line-height: 1.6;
   color: #a4af97;
 }
@@ -837,12 +837,12 @@
 }
 .body-status h1 {
   font:
-    32px Georgia,
+    2rem Georgia,
     serif;
   margin: 18px 0;
 }
 .body-status p {
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 .body-status a {
   margin-top: 15px;
@@ -852,7 +852,7 @@
   display: none;
 }
 .body-return-link {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #577a50;
   text-decoration: underline;
   margin-right: 10px;
@@ -871,46 +871,46 @@
 }
 .body-heading p {
   color: #64735e;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .body-system-bar {
   padding-bottom: 10px;
 }
 .body-system-bar small {
-  font-size: 12px;
-  color: #6e7d63;
+  font-size: 0.75rem;
+  color: var(--vm-muted);
 }
 .body-system-bar span {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .body-region-link {
-  font-size: 14px;
+  font-size: 0.875rem;
   min-height: 40px;
 }
 .body-rail-subtitle {
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .body-rail-foot {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #61715b;
 }
 .body-info p {
-  font-size: 16px;
+  font-size: 1rem;
   color: #52664b;
 }
 .body-info > .eyebrow {
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .body-validation {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #697b5b;
 }
 .body-canvas-caption {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #67765e;
 }
 .body-canvas .model-credit {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #607255;
   bottom: 5px;
 }
@@ -921,59 +921,59 @@
   bottom: 49px;
 }
 .body-view-buttons button {
-  font-size: 13px;
+  font-size: 0.8125rem;
   min-height: 32px;
 }
 .body-view-row [data-slot='select-trigger'] {
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 .body-canvas .scene-label {
-  font-size: 13px;
+  font-size: 0.8125rem;
   max-width: 200px;
   white-space: normal;
   text-align: left;
 }
 .body-content-note {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #637653;
 }
 .body-coverage {
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 .body-preset-row {
-  font-size: 13px;
+  font-size: 0.8125rem;
   gap: 12px;
 }
 .body-selection-actions button {
-  font-size: 13px;
+  font-size: 0.8125rem;
   min-height: 36px;
 }
 .body-content-tabs [data-slot='tabs-trigger'] {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .body-structure-browser button {
-  font-size: 14px;
+  font-size: 0.875rem;
   min-height: 38px;
 }
 .body-structure-browser summary {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .body-selection-heading {
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .body-facts dt,
 .body-facts dd {
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 .body-zoom button {
   min-height: 36px;
   width: 36px;
 }
 .body-topbar > button {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .body-info > small {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: #647757;
 }
 .dissection-deck {
@@ -991,7 +991,7 @@
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-bottom: 10px;
 }
 .dissection-deck-heading > svg {
@@ -1001,10 +1001,10 @@
 .dissection-deck-heading > span {
   margin-right: auto;
   color: #788970;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .dissection-deck-heading > button {
-  font-size: 13px;
+  font-size: 0.8125rem;
   height: 29px;
   padding: 0 6px;
   color: #49613c;
@@ -1022,7 +1022,7 @@
   min-width: 0;
   background: #fff;
   border-color: #bacaaf;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #35502e;
 }
 .dissection-step-row > button:first-child,
@@ -1072,7 +1072,7 @@
   background: #edf3e8;
   border: 1px solid #c8d7be;
   border-radius: 50%;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #697f5a;
 }
 .dissection-track > button.current > span {
@@ -1092,12 +1092,12 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: #647c53;
   cursor: pointer;
 }
 .dissection-options [data-slot='select-trigger'] {
-  font-size: 13px;
+  font-size: 0.8125rem;
   min-height: 32px;
   background: transparent;
   border-color: #ccd9c1;
@@ -1113,16 +1113,16 @@
   border-bottom: 1px solid #dbe4d4;
 }
 .dissection-guide > .eyebrow {
-  font-size: 12px;
+  font-size: 0.75rem;
   letter-spacing: 0.08em;
   color: #799067;
 }
 .dissection-guide > h2 {
-  font-size: 25px;
+  font-size: 1.5625rem;
   margin: 9px 0 12px;
 }
 .dissection-guide p {
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1.6;
   margin: 8px 0;
   color: #5e7154;
@@ -1135,11 +1135,11 @@
   margin: 17px 0 13px;
 }
 .dissection-inspect > strong {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: #426334;
 }
 .dissection-inspect p {
-  font-size: 14px;
+  font-size: 0.875rem;
   margin: 5px 0 0;
 }
 .dissection-landmarks {
@@ -1149,7 +1149,7 @@
   margin-bottom: 14px;
 }
 .dissection-landmarks button {
-  font-size: 13px;
+  font-size: 0.8125rem;
   padding: 7px 9px;
   border: 1px solid #c6d6ba;
   border-radius: 5px;
@@ -1166,7 +1166,7 @@
   margin-top: 11px;
 }
 .dissection-guide summary {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #4e6e3e;
   cursor: pointer;
   min-height: 27px;
@@ -1184,14 +1184,14 @@
   text-align: left;
   padding: 9px 4px;
   border-bottom: 1px solid #eaf0e3;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: #718263;
 }
 .dissection-removed button > span {
   flex: 1;
 }
 .dissection-removed small {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #3e7036;
   text-decoration: underline;
 }
@@ -1199,7 +1199,7 @@
   background: #f1f7e9;
 }
 .dissection-limits ul {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #687952;
   line-height: 1.6;
   list-style: disc;
@@ -1211,13 +1211,13 @@
 }
 .dissection-limits a {
   display: block;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: #4a743c;
   text-decoration: underline;
   margin: 8px 0;
 }
 .dissection-limits p {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 @media (max-width: 1100px) {
   .dissection-deck {
@@ -1227,7 +1227,7 @@
     gap: 6px;
   }
   .dissection-deck-heading > strong {
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
   .dissection-deck-heading > span {
     display: none;
@@ -1239,7 +1239,7 @@
     gap: 7px;
   }
   .dissection-options > label {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .dissection-options [data-slot='select-trigger'] {
     max-width: none;
@@ -1251,13 +1251,13 @@
     margin-inline: 10px;
   }
   .dissection-deck-heading > strong {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .dissection-deck-heading > button {
     min-height: 36px;
   }
   .dissection-step-row [data-slot='select-trigger'] {
-    font-size: 14px;
+    font-size: 0.875rem;
     min-height: 40px;
   }
   .dissection-track > button {
@@ -1269,34 +1269,34 @@
   .dissection-track > button > span {
     width: 26px;
     height: 26px;
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
   .dissection-options > label {
-    font-size: 14px;
+    font-size: 0.875rem;
     min-height: 40px;
   }
   .dissection-options [data-slot='select-trigger'] {
-    font-size: 14px;
+    font-size: 0.875rem;
     min-height: 40px;
   }
   .body-canvas .scene-label {
     max-width: 140px;
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .dissection-guide > h2 {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
   .dissection-guide p {
-    font-size: 16px;
+    font-size: 1rem;
   }
   .body-view-row {
     flex-wrap: wrap;
   }
   .body-coverage {
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
   .body-system-bar small {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 @media (min-width: 1500px) {
@@ -1310,10 +1310,10 @@
     padding: 11px;
   }
   .body-system-bar span {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .body-region-link {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 @media (max-width: 1150px) {
@@ -1341,7 +1341,7 @@
     display: none;
   }
   .body-system-bar span {
-    font-size: 11px;
+    font-size: 0.6875rem;
   }
   .body-preset-row {
     gap: 7px;
@@ -1351,7 +1351,7 @@
     display: none;
   }
   .body-breadcrumb {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 @media (max-width: 950px) {
@@ -1375,7 +1375,7 @@
     padding-block: 14px;
   }
   .body-heading h1 {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
   .body-heading p {
     display: none;
@@ -1391,7 +1391,7 @@
     justify-content: center;
   }
   .body-preset-row {
-    font-size: 11px;
+    font-size: 0.6875rem;
   }
   .body-system-bar {
     padding-bottom: 10px;
@@ -1411,7 +1411,7 @@
     display: none;
   }
   .body-topbar > button {
-    font-size: 11px;
+    font-size: 0.6875rem;
     padding-inline: 8px;
   }
   .body-topbar > button > svg {
@@ -1419,7 +1419,7 @@
   }
   .body-breadcrumb {
     justify-content: flex-start;
-    font-size: 12px;
+    font-size: 0.75rem;
     gap: 5px;
   }
   .body-breadcrumb > svg {
@@ -1437,10 +1437,10 @@
     padding: 18px 17px 13px;
   }
   .body-heading h1 {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
   .body-count {
-    font-size: 25px;
+    font-size: 1.5625rem;
   }
   .body-canvas {
     height: 58vh;
@@ -1454,11 +1454,11 @@
     top: 9px;
   }
   .body-view-buttons button {
-    font-size: 10px;
+    font-size: 0.625rem;
     padding: 4px 6px;
   }
   .body-view-row [data-slot='select-trigger'] {
-    font-size: 10px;
+    font-size: 0.625rem;
     padding-inline: 5px;
   }
   .body-system-bar {
@@ -1469,10 +1469,10 @@
     padding: 8px 5px;
   }
   .body-system-bar span {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .body-system-bar small {
-    font-size: 9px;
+    font-size: 0.5625rem;
   }
   .body-system-bar [data-slot='switch'] {
     scale: 0.74;
@@ -1483,13 +1483,13 @@
     padding: 27px 20px;
   }
   .body-info p {
-    font-size: 16px;
+    font-size: 1rem;
   }
   .body-info h2 {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
   .body-structure-browser button {
-    font-size: 14px;
+    font-size: 0.875rem;
     min-height: 40px;
   }
   .body-structure-browser > div {
@@ -1510,20 +1510,20 @@
   }
   .body-coverage {
     margin-inline: 11px;
-    font-size: 11px;
+    font-size: 0.6875rem;
   }
   .body-preset-row {
     padding: 12px 15px;
     gap: 12px;
   }
   .body-validation {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .body-structure-browser summary {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .body-selection-actions button {
-    font-size: 12px;
+    font-size: 0.75rem;
     min-height: 34px;
   }
 }
@@ -1558,7 +1558,7 @@
 }
 .body-region-link {
   color: var(--vm-ink);
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .body-region-link.active {
   background: #ddebe8;
@@ -1637,7 +1637,7 @@
   height: auto;
 }
 .body-content-tabs [role='tab'] {
-  font-size: 14px;
+  font-size: 0.875rem;
   min-height: 38px;
   padding: 6px 2px;
 }
@@ -1670,11 +1670,11 @@
   .body-breadcrumb {
     order: 3;
     flex-basis: 100%;
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .body-topbar > button {
     margin-left: auto;
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .body-layout {
     height: auto;
@@ -1860,7 +1860,7 @@
   outline-offset: 3px;
 }
 .dissection-guide-fold > summary {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
   color: #4e6e3e;
   cursor: pointer;
@@ -1870,29 +1870,29 @@
 }
 @media (max-width: 1150px) {
   .body-system-bar span {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .body-system-bar small {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .body-view-buttons button {
-    font-size: 12px;
+    font-size: 0.75rem;
     min-height: 32px;
   }
   .body-view-row [data-slot='select-trigger'] {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 @media (max-width: 700px) {
   .body-topbar > button,
   .body-selection-actions button {
-    font-size: 14px;
+    font-size: 0.875rem;
     min-height: 38px;
   }
   .body-coverage,
   .body-preset-row,
   .body-structure-browser button {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .body-canvas {
     min-height: 470px;
@@ -1927,7 +1927,7 @@
   border-radius: 6px;
   padding: 8px 12px;
   min-height: 44px;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--vm-ink, #002631);
   background: #fff;
 }
@@ -1946,7 +1946,7 @@
 .dissection-current-view {
   margin: 8px 0 12px;
   color: var(--vm-ink, #002631);
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.6;
   overflow-wrap: anywhere;
 }
@@ -1968,7 +1968,7 @@
 .study-library-filters label {
   display: grid;
   gap: 6px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   min-width: 0;
 }
@@ -1984,19 +1984,19 @@
   border-radius: 5px;
   background: #fff;
   color: var(--vm-ink, #002631);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
 }
 .study-library p {
   margin: 10px 0;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.6;
 }
 .study-library .study-library-help,
 .study-library .study-library-reset,
 .study-library-status {
   display: block;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.6;
   color: #425f63;
 }
@@ -2045,13 +2045,13 @@
 }
 .study-library-summary strong {
   display: block;
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1.5;
   font-weight: 600;
 }
 .study-library-summary small {
   display: block;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.5;
   color: #425f63;
   margin-top: 4px;
@@ -2059,7 +2059,7 @@
 .study-library-tag {
   flex: none;
   color: #006e64;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
 }
 .study-library-preview {
@@ -2084,10 +2084,10 @@
   border-radius: 5px;
 }
 .study-library-counts dt {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .study-library-counts dd {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   margin: 2px 0 0;
 }
@@ -2097,7 +2097,7 @@
 .study-library-members summary {
   min-height: 44px;
   padding-block: 10px;
-  font-size: 14px;
+  font-size: 0.875rem;
   cursor: pointer;
 }
 .study-library-members ul {
@@ -2111,12 +2111,12 @@
 .study-library-members li {
   padding: 6px 0;
   border-bottom: 1px solid #e6efec;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 .study-library-members small {
   display: block;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #425f63;
 }
 .study-library-actions {
@@ -2134,7 +2134,7 @@
   outline-offset: -2px;
 }
 .study-library-notice {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.6;
   color: #425f63;
 }
@@ -2143,7 +2143,7 @@
     padding: 8px;
   }
   .study-library-filters :is(input, select) {
-    font-size: 16px;
+    font-size: 1rem;
   }
   .study-library-summary {
     flex-wrap: wrap;
@@ -2157,7 +2157,7 @@
 }
 .dissection-mode-note {
   display: block;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.5;
   color: #5d7477;
   margin: 8px 0;
@@ -2196,16 +2196,16 @@
   height: 24px;
   display: grid;
   place-items: center;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .dissection-layer-track strong {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.45;
 }
 .dissection-layer-track small {
   grid-column: 2;
   color: #5d7477;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .dissection-layer-track .current {
   border-color: #098578;
@@ -2219,7 +2219,7 @@
 .dissection-preview {
   margin: 6px 0 12px;
   border-block: 1px solid #bddad6;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: #002631;
 }
 .dissection-preview summary {
@@ -2233,7 +2233,7 @@
   margin-top: 3px;
 }
 .dissection-preview p {
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 1.55;
   margin: 8px 0;
 }
@@ -2263,7 +2263,7 @@
   margin: 6px 0;
   background: #fff;
   color: #002631;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .dissection-tray-filters button {
   min-height: 44px;
@@ -2276,7 +2276,7 @@
   display: block;
   margin: 8px 0;
   line-height: 1.5;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #5d7477;
 }
 .dissection-tray-list button {
@@ -2339,7 +2339,7 @@
   color: #002631;
   background: #fff;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 .body-study-tools[open] > summary {
@@ -2358,13 +2358,13 @@
   padding: 8px 11px;
   border-radius: 6px;
   border: 1px solid #bddad6;
-  font-size: 14px;
+  font-size: 0.875rem;
   background: #fff;
   color: #002631;
 }
 .body-system-presets small {
   color: #5d7477;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .body-system-presets [aria-pressed='true'] {
   background: #002631;
@@ -2392,7 +2392,7 @@
   border: 1px solid #bddad6;
   border-radius: 6px;
   padding: 8px 12px;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #002631;
   background: #fff;
 }
@@ -2404,7 +2404,7 @@
 .body-layout-controls p {
   flex: 1 1 230px;
   margin: 0;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: #5d7477;
   line-height: 1.5;
 }
@@ -2429,7 +2429,7 @@
   border-left: 3px solid var(--vm-teal, #16c6b2);
   background: #eef8f5;
   color: var(--vm-ink, #002631);
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.6;
 }
 .related-study {
@@ -2454,11 +2454,11 @@
   min-height: 44px;
   padding: 12px 0;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
 }
 .body-info .anatomy-study-links p {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.6;
   margin: 6px 0 12px;
   color: #5d7477;
@@ -2480,7 +2480,7 @@
   color: #005f58;
   background: #eef8f5;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -2492,7 +2492,7 @@
 }
 .anatomy-study-destinations small {
   display: block;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #5d7477;
   margin-top: 4px;
 }
@@ -2500,7 +2500,7 @@
   margin: 4px 0 0 8px;
 }
 .anatomy-study-links .anatomy-study-link-note {
-  font-size: 12px;
+  font-size: 0.75rem;
   margin-top: 12px;
 }
 .anatomy-study-link-copy {
@@ -2511,7 +2511,7 @@
 }
 .anatomy-study-link-copy :is(button, a) {
   min-height: 44px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .anatomy-study-link-copy > a {
   display: inline-flex;
@@ -2521,7 +2521,7 @@
 }
 .anatomy-study-link-copy output {
   flex-basis: 100%;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.5;
   color: #5d7477;
 }
@@ -2532,7 +2532,7 @@
   background: #fff7df;
   border-radius: 6px;
   color: #59481d;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 .body-study-link-issue output {
@@ -2547,12 +2547,12 @@
   outline-offset: 2px;
 }
 .related-study h3 {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 650;
   margin: 0 0 8px;
 }
 .body-info .related-study p {
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 1.6;
   margin: 8px 0;
   color: #5d7477;
@@ -2560,7 +2560,7 @@
 .related-study label,
 .structure-navigator label {
   display: block;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.5;
   font-weight: 600;
   color: #002631;
@@ -2575,7 +2575,7 @@
   padding: 8px;
   border: 1px solid #bddad6;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #002631;
   background: #fff;
   margin: 5px 0 10px;
@@ -2587,12 +2587,12 @@
   border-radius: 6px;
   background: #002631;
   color: #fff;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .related-study-reset {
   display: block;
   margin: 8px 0;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.6;
   color: #5d7477;
 }
@@ -2600,7 +2600,7 @@
   padding: 12px 0;
   min-height: 44px;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 600;
 }
 .body-structure-browser > .structure-navigator {
@@ -2629,7 +2629,7 @@
   display: block;
   margin: 8px 0;
   color: #5d7477;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.6;
 }
 .structure-navigator-list {
@@ -2670,13 +2670,13 @@
 }
 .structure-navigator-option strong {
   display: block;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 500;
   overflow-wrap: anywhere;
 }
 .structure-navigator-option small {
   display: block;
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: #5d7477;
   margin-top: 3px;
 }
@@ -2694,7 +2694,7 @@
 .structure-navigator-selected,
 .body-structure-browser .structure-navigator-selected {
   flex: none;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 700;
   color: #006e64;
 }
@@ -2705,15 +2705,15 @@
 }
 @media (max-width: 700px) {
   .structure-navigator-option strong {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .structure-navigator-option small {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .structure-navigator input[type='search'],
   .structure-navigator select,
   .related-study select {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -2760,11 +2760,11 @@
   padding: 14px 18px;
 }
 .body-heading .eyebrow {
-  font-size: 12px;
+  font-size: 0.75rem;
   letter-spacing: 0.04em;
 }
 .body-heading h1 {
-  font-size: 28px;
+  font-size: 1.75rem;
 }
 .anatomy-control-rail {
   min-width: 0;
@@ -2776,7 +2776,7 @@
 }
 .anatomy-control-rail .body-rail-title {
   margin: 16px 0 10px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .anatomy-control-rail .body-system-bar {
   grid-template-columns: minmax(0, 1fr);
@@ -2792,7 +2792,7 @@
   display: block;
 }
 .anatomy-control-rail .body-system-bar span {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .anatomy-control-rail > details {
   margin: 12px 0 0;
@@ -2803,7 +2803,7 @@
   padding: 10px;
   min-height: 44px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--vm-ink);
   background: #fff;
   border: 0;
@@ -2813,7 +2813,7 @@
   display: block;
   margin: 2px 0 0 15px;
   color: var(--vm-muted);
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.4;
   font-weight: 400;
 }
@@ -2829,7 +2829,7 @@
 }
 .anatomy-control-rail .shoulder-feature {
   margin: 10px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .anatomy-control-rail .dissection-deck {
   margin: 0;
@@ -2882,7 +2882,7 @@
 }
 .anatomy-control-rail .body-preset-row button {
   min-height: 44px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .anatomy-control-rail .body-coverage {
   margin: 0;
@@ -2891,7 +2891,7 @@
 .anatomy-control-rail .body-rail-foot {
   margin: 0;
   padding: 10px;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .anatomy-control-rail .study-library {
   margin: 0;
@@ -2947,10 +2947,10 @@
 }
 .anatomy-controls-popup [data-slot='sheet-title'] {
   color: var(--vm-ink);
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 .anatomy-controls-popup [data-slot='sheet-description'] {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 .anatomy-controls-close {
@@ -3009,7 +3009,7 @@
   }
   .body-controls-launcher,
   .body-info-launcher {
-    font-size: 14px;
+    font-size: 0.875rem;
     padding-inline: 10px;
   }
   .body-workspace {
@@ -3019,10 +3019,10 @@
     padding: 10px 14px;
   }
   .body-heading h1 {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   .body-heading .eyebrow {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .body-canvas {
     height: auto;

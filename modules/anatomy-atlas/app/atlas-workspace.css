@@ -1,4 +1,6 @@
 /* Task-specific controls, with anatomy state owned by the explorer above them. */
+/* Text uses rem so browser font preferences are respected; default 16px sizing
+   remains unchanged. Keep spacing/model dimensions independent of text size. */
 .atlas-inline-mode:not([hidden]) { display: contents; }
 .atlas-mode-panel[hidden] {
   display: none !important;
@@ -12,6 +14,7 @@
 }
 .atlas-workspace-modes {
   display: flex;
+  flex-wrap: wrap;
   width: auto;
   flex: none;
   gap: 2px;
@@ -27,7 +30,7 @@
   min-height: 40px;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--vm-ivory);
 }
 .atlas-workspace-modes label[data-active='true'] {
@@ -55,7 +58,7 @@
   color: var(--vm-ivory);
   border-color: #38717b;
   min-height: 40px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .atlas-search-trigger {
   margin-left: auto;
@@ -86,7 +89,7 @@
   border-radius: 6px;
 }
 .atlas-search-preview p {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
   margin: 10px 0;
 }
@@ -105,12 +108,12 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 0 5px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.2;
 }
 .anatomy-control-rail .body-system-bar small {
   margin: 0;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .anatomy-control-rail .body-system-bar [data-slot='switch'] {
   scale: 1;
@@ -124,13 +127,13 @@
 .anatomy-control-rail .atlas-mode-panel > details > summary {
   min-height: 44px;
   padding: 10px;
-  font-size: 14px;
+  font-size: 0.875rem;
   cursor: pointer;
   line-height: 1.4;
 }
 .anatomy-control-rail .atlas-mode-panel > details > summary small {
   display: block;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--vm-muted);
 }
 .atlas-dissection-entry {
@@ -138,7 +141,7 @@
 }
 .atlas-dissection-entry button {
   width: 100%;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .body-view-row {
   align-items: flex-start;
@@ -148,7 +151,7 @@
 .body-view-row [data-slot='select-trigger'],
 .body-view-row > button {
   min-height: 38px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .body-view-row .atlas-camera-view {
   width: auto;
@@ -168,7 +171,7 @@
 .atlas-more-actions > summary {
   padding: 8px 2px;
   min-height: 38px;
-  font-size: 14px;
+  font-size: 0.875rem;
   cursor: pointer;
 }
 .atlas-more-actions[open] {
@@ -183,7 +186,7 @@
   height: auto;
   min-height: 38px;
   white-space: normal;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .atlas-grouped-notes [data-slot='tabs-list'] {
   display: flex;
@@ -199,7 +202,7 @@
   padding-bottom: 8px;
 }
 .atlas-grouped-notes [data-slot='tabs-trigger'] {
-  font-size: 14px;
+  font-size: 0.875rem;
   min-height: 40px;
   white-space: normal;
 }
@@ -213,7 +216,7 @@
   margin-top: 12px;
 }
 .atlas-practice-setup > h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 .atlas-practice-setup .vm-practice-options {
   margin-top: 12px;
@@ -230,23 +233,27 @@
   background: #fff;
 }
 .atlas-search-dialog [data-slot='dialog-title'] {
-  font-size: 20px;
+  font-size: 1.25rem;
   padding-right: 30px;
 }
+/* One scrolling dialog: enlarged copy must not squeeze form controls or collapse
+   the result list. Keyboard focus can scroll every result into view. */
+.atlas-search-dialog > * { flex-shrink: 0; }
 .atlas-search-dialog [data-slot='dialog-description'] {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 .atlas-search-dialog label {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .atlas-search-dialog :is(input, select) {
   width: 100%;
-  min-height: 44px;
+  min-height: max(44px, calc(1.5em + 20px));
   padding: 9px;
   border: 1px solid #aac3be;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 .atlas-search-dialog :is(input, select, button, a):focus-visible {
   outline: 3px solid var(--vm-teal);
@@ -254,7 +261,7 @@
 }
 .atlas-search-dialog output {
   color: var(--vm-muted);
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .atlas-search-results {
   min-height: 0;
@@ -274,12 +281,12 @@
 }
 .atlas-search-results strong {
   display: block;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .atlas-search-results small {
   display: block;
   margin-top: 3px;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.4;
   color: var(--vm-muted);
 }
@@ -322,7 +329,7 @@
     display: none;
   }
   .body-topbar .atlas-search-trigger {
-    font-size: 14px;
+    font-size: 0.875rem;
     padding-inline: 8px;
   }
   .body-view-row .atlas-camera-view {
@@ -330,7 +337,7 @@
   }
   .body-view-row [data-slot='select-trigger'],
   .body-view-row > button {
-    font-size: 14px;
+    font-size: 0.875rem;
     min-height: 36px;
   }
 }
