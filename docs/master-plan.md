@@ -2,6 +2,24 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — regional viewer reflow
+
+Atlas source fixes a reproduced enlarged-text layout failure: controls could
+expand the 3D grid beyond its pane and hide zoom actions. The canvas track is
+now constrained, wrapped rows retain useful model height, and a narrow explode
+toolbar reflows without adding controls. Short windows scroll the model pane.
+Normal full-height mobile layout is preserved; source geometry is unchanged.
+
+Whole body, head/neck, spine and foot passed twelve desktop/mobile/enlarged-rem
+browser journeys for keyboard structure selection, Spread/Extract/Tray and
+restoration, panel Escape/focus return, pane bounds and page overflow. These
+are emulation checks, not a complete physical-device or accessibility sign-off.
+Atlas docs/REGIONAL_LAYOUT.md and the coordinating checkpoint hold evidence.
+The remaining matrix includes shoulder, embedded-host constraints, full browser
+zoom, free-orbit labels and physical input/GPU checks. No generated website
+module was edited or deployed. Existing model-staging/reviewer/clinical gates
+remain; full goal ACTIVE and hourly review PAUSED.
+
 ## 17 September — nested review and current coverage evidence
 
 Atlas source now implements a separate review workflow for104 existing nested
