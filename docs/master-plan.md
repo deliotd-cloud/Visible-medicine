@@ -2,6 +2,19 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 18 September — final regional model staging
+
+Authenticated administrator upload and full-download verification succeeded for
+all 133 previously registered objects, including corpus spongiosum and short
+ciliary nerves. Historical browser-access blockers below are superseded.
+The prepared regional module now contains 1,104 root selections and 104 nested
+selections across 12 scopes, including an original-source anterior cardiac vein
+selection. Its exact 17,252-byte object is registered for staging only; the
+active 131-model inventory, protected-delivery policy and runtime are unchanged.
+See [final staging gate](atlas-regional-staging-20260918.md). Upload and full-byte
+verification of the complete 134-object registry must precede activation.
+Clinical sign-off remains separate and revision-bound; no patient data is added.
+
 ## 17 September — selection-preserving regional continuation
 
 The shared Atlas source now exposes available region/whole-body study links

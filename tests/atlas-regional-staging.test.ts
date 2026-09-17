@@ -11,9 +11,10 @@ const json = (file: string) => JSON.parse(readFileSync(`lib/${file}.json`, 'utf8
 const active = json('atlas-model-inventory');
 const historical = json('atlas-model-staging-candidate');
 const candidate = json('atlas-model-staging-regional-20260917');
+const cardiac = json('atlas-model-staging-regional-20260918');
 const sha = (value: string) => createHash('sha256').update(value).digest('hex');
 
-test('regional staging registers exactly the two prepared immutable objects without activating delivery', async () => {
+test('regional staging preserves prior objects and registers the final cardiac object without activating delivery', async () => {
   const before = JSON.stringify(active);
   assert.equal(candidate.purpose, 'administrator-staging-only');
   assert.equal(candidate.atlasSource, 'a5baf03bb274e2e6f3dfe078603a0b9988b1f400');
@@ -24,7 +25,17 @@ test('regional staging registers exactly the two prepared immutable objects with
     { sha256: 'f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826', bytes: 11856, paths: ['/atlas-runtime/head-neck/models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb'] },
     { sha256: '9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5', bytes: 65264, paths: ['/atlas-runtime/head-neck/models/bodyparts3d/short-ciliary/short-ciliary.glb'] },
   ]);
-  const expected = atlasStagingModels(atlasStagingModels(active.models, historical.models), candidate.models);
+  assert.equal(cardiac.purpose, 'administrator-staging-only');
+  assert.equal(cardiac.atlasSource, '6fe69ab68bd76d3648c0725eedabdba8ab778823');
+  assert.equal(cardiac.candidateManifestSha256, '431654af2230c2930d9923db53593b841b48c054e1234c280fb98ce35a3cf938');
+  assert.equal(cardiac.proposedInventorySha256, '9dac1e4c6f72ff816a885515ce8397d5311cf6ef48e355cffd9785e32ee5a38f');
+  assert.equal(cardiac.activeInventorySha256, candidate.activeInventorySha256);
+  assert.deepEqual(cardiac.models, [
+    { sha256: 'ff72014e957d661a16892581db9e371482541302e4a3203ba3e84cac9f5f1928', bytes: 17252, paths: ['/atlas-runtime/head-neck/models/bodyparts3d/anterior-cardiac-vein/anterior-cardiac-vein.glb'] },
+  ]);
+  const prior = atlasStagingModels(atlasStagingModels(active.models, historical.models), candidate.models);
+  const expected = atlasStagingModels(prior, cardiac.models);
+  for (const model of prior) assert.deepEqual(expected.find(m => m.sha256 === model.sha256), model);
   // Execute the actual registration module with only its imports supplied;
   // testing a hand-built union alone would miss broken production wiring.
   const source = ts.transpileModule(readFileSync('lib/atlas-model-staging.ts', 'utf8'), {
@@ -35,6 +46,7 @@ test('regional staging registers exactly the two prepared immutable objects with
     './atlas-model-inventory.json': active,
     './atlas-model-staging-candidate.json': historical,
     './atlas-model-staging-regional-20260917.json': candidate,
+    './atlas-model-staging-regional-20260918.json': cardiac,
     './atlas-model-staging-registry': { atlasStagingModels },
   };
   new Function('require', 'exports', source)((name: string) => {
@@ -42,13 +54,13 @@ test('regional staging registers exactly the two prepared immutable objects with
     return imports[name];
   }, exports);
   assert.deepEqual(exports.atlasRegisteredStagingModels, expected);
-  assert.equal(expected.length, 133);
-  assert.equal(expected.flatMap(m => m.paths).length, 139);
+  assert.equal(expected.length, 134);
+  assert.equal(expected.flatMap(m => m.paths).length, 140);
   assert.equal(active.models.length, 131);
   assert.equal(candidate.models.reduce((n: number, m: AtlasStoredModel) => n + m.bytes, 0), 77120);
   for (const mode of ['upload', 'check', 'download'] as const) assert.strictEqual(atlasStagingCheckModels(mode, expected, active.models), expected);
   assert.strictEqual(atlasStagingCheckModels('delivery', expected, active.models), active.models);
-  for (const model of candidate.models) for (const path of model.paths) {
+  for (const model of [...candidate.models, ...cardiac.models]) for (const path of model.paths) {
     assert.throws(() => resolveAtlasDeliveryModel(new URL(path, 'https://atlas.test'), active.models));
   }
   for (const model of active.models) for (const path of model.paths) {

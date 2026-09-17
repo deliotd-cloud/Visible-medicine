@@ -1,6 +1,7 @@
 import activeInventory from './atlas-model-inventory.json';
 import candidateInventory from './atlas-model-staging-candidate.json';
 import regionalCandidate from './atlas-model-staging-regional-20260917.json';
+import cardiacCandidate from './atlas-model-staging-regional-20260918.json';
 import { atlasStagingModels } from './atlas-model-staging-registry';
 
 // Candidate catalogue copied exactly from this saved, audited website revision.
@@ -10,9 +11,12 @@ export const ATLAS_STAGING_CANDIDATE = {
   inventorySha256: '091481333b4d5a89fc1a3d05f38db397d125e8009280100b0c69c72e61a79b4b',
 } as const;
 
-// Preserve the historical catalogue; this addition registers two exact new
+// Preserve the historical catalogues; additions register exact new
 // objects for staff upload only. Active delivery never imports this registry.
 export const atlasRegisteredStagingModels = atlasStagingModels(
-  atlasStagingModels(activeInventory.models, candidateInventory.models),
-  regionalCandidate.models,
+  atlasStagingModels(
+    atlasStagingModels(activeInventory.models, candidateInventory.models),
+    regionalCandidate.models,
+  ),
+  cardiacCandidate.models,
 );
