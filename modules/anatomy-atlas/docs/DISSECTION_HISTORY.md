@@ -8,6 +8,11 @@ The most recent **40 actual changes** are retained in memory. Repeated unchanged
 
 ## Implementation and checks
 
+Changing side now [revalidates focused studies](DISSECTION_SIDE_SCOPE.md).
+Compatible history is retained, but focus snapshots with no supplied targets
+on the new side are removed from both stacks. An incompatible current focus
+returns to assembled anatomy, without adding a tissue-history entry.
+
 `app/dissection-data.ts` keeps past/current/future visibility snapshots. Snapshots contain exactly stage, focus and removed/restored IDs, never recursively nested history. Reducer updates are immutable; past/future stacks are capped. `app/body-explorer.tsx` supplies the guarded actions to `app/dissection-controls.tsx`. Existing labelled buttons, focus behaviour and responsive wrapping are reused.
 
 `npm run dissection-history:test` exercises actual reducer replay across all 36 region/side scopes, source-bound visibility, every existing recipe, removal/restoration, saved-view visibility, no-op handling, branching, the 40-change cap and frozen-input immutability. It executes the actual explorer handler bodies and checks actual toolbar server-rendered markup for available/empty history and practice mode. The original handler baseline is retained with exactly the separately verified Undo/Redo migration; other handlers and callbacks remain pinned. This is software verification, not browser/touch or clinical acceptance.

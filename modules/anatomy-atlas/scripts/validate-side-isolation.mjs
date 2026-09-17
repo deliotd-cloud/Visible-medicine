@@ -28,16 +28,19 @@ for(const side of ['both','left','right'])for(const value of ['both','left','rig
  for(const isolated of [false,true])for(const focus of [false,true])for(const selectedId of [null,'left-structure','right-structure']){
   const state={side,isolated,focus,selectedId,inspection:{...initialInspection,plane:'axial',position:30},practiceActions:[],hiddenIds:['removed-structure'],history:{past:['prior-stage'],future:['redo-stage']},zoom:1.4,explode:.3};
   const before=structuredClone(state);
-  const ctx={value,initialInspection:structuredClone(initialInspection),
+  const scopeActions=[];
+  const ctx={value,initialInspection:structuredClone(initialInspection),catalog:null,profile:{},initialRegion:'head-neck',
+   dissectionScopeAction:(catalog,profile,region,side)=>({type:'scope',side}),dispatch:action=>scopeActions.push(JSON.parse(JSON.stringify(action))),
    setSide:v=>state.side=v,setSelectedId:v=>state.selectedId=v,setFocus:v=>state.focus=v,setIsolated:v=>state.isolated=v,setInspection:v=>state.inspection=v,
    practiceDispatch:action=>state.practiceActions.push(JSON.parse(JSON.stringify(action)))};
   runInNewContext(code,ctx);
   if(value){
+   assert.deepEqual(scopeActions,[{type:'scope',side:value}],'Revalidate focus and history for the requested side');
    assert.equal(state.side,value);assert.equal(state.selectedId,null);assert.equal(state.focus,false);assert.equal(state.isolated,false);
    assert.deepEqual(state.inspection,initialInspection);assert.deepEqual(state.practiceActions,[{type:'dismiss'}]);
    for(const key of ['hiddenIds','history','zoom','explode'])assert.deepEqual(state[key],before[key]);
   }else assert.deepEqual(state,before,'Empty select event must preserve state');
   transitions++;
  }
-const report={transitions,actualLateralityHandlerExecuted:true,examControlDisabled:true,selectionFocusIsolationClearedTogether:true,hiddenHistoryAndCameraValuesPreserved:true,browserAcceptance:false,clinicalAcceptance:false};
+const report={transitions,actualLateralityHandlerExecuted:true,examControlDisabled:true,selectionFocusIsolationClearedTogether:true,scopeReconciliationDispatched:true,otherHandlerStatePreserved:true,browserAcceptance:false,clinicalAcceptance:false};
 await writeFile('docs/side-isolation-validation.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

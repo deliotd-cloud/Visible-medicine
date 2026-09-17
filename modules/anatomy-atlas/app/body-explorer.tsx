@@ -87,6 +87,7 @@ import {
   type DissectionView,
 } from './dissection-data';
 import { DissectionControls, DissectionGuide } from './dissection-controls';
+import { dissectionScopeAction } from '@/lib/dissection-scope';
 import {
   dissectionGuidance,
   dissectionLandmarks,
@@ -1766,6 +1767,7 @@ export default function BodyExplorer({
                   value={side}
                   onValueChange={(value) => {
                     if (value) {
+                      dispatch(dissectionScopeAction(catalog, profile, initialRegion, value));
                       setSide(value);
                       setInspection(initialInspection);
                       practiceDispatch({ type: 'dismiss' });

@@ -328,6 +328,8 @@ for (const path of [
   'app/body-education-link.ts',
   'integration/shoulder/education-api.ts',
   'lib/regional-framing.ts',
+  'lib/dissection-scope.ts',
+  'app/dissection-data.ts',
   'app/body-explorer.tsx',
   'lib/lower-venous-imaging.ts',
   'lib/iliac-venous-imaging.ts',

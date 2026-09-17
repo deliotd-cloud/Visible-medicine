@@ -1379,6 +1379,7 @@ export const initialDissection: DissectionState = {
   future: [],
 };
 export type DissectionAction =
+  | { type: 'scope'; availableFocusIds: string[] }
   | { type: 'load-view'; hiddenIds: string[] }
   | { type: 'stage'; id: string }
   | { type: 'focus'; id: string }
@@ -1410,6 +1411,21 @@ export function dissectionReducer(
 ): DissectionState {
   const { history, future } = state;
   const snapshot = dissectionSnapshot(state);
+  if (action.type === 'scope') {
+    const allowed = new Set(action.availableFocusIds);
+    const compatible = (s: DissectionSnapshot) =>
+      s.focusId === null || allowed.has(s.focusId);
+    const past = history.filter(compatible), next = future.filter(compatible);
+    if (compatible(state) && past.length === history.length && next.length === future.length)
+      return state;
+    // Side changes are not undoable tissue edits. Keep compatible history, but
+    // never resurrect a focused recipe with no supplied targets on this side.
+    return {
+      ...dissectionSnapshot(compatible(state) ? state : initialDissection),
+      history: past,
+      future: next,
+    };
+  }
   if (action.type === 'undo') {
     const prior = history.at(-1);
     return prior

@@ -78,7 +78,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "13fe822b8a3c23dc58e615a3c5d415596ba988b77b63fc04485c4361367825df"
+      "sha256": "9fb5c82d5f97118a1894ac2a554964eb29dcb080b1572a633e83b80d97e95782"
     },
     {
       "path": "app/body-scene.tsx",
@@ -122,7 +122,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "2e97f2d4244eca1370904faa4f006f0c0d90737d5f3c2d555e4e10305749a749"
+      "sha256": "dda785abad228be58120a5207bf0bb4a2c8ca06cfc3e32c11b75f678e0ba44af"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -1521,6 +1521,10 @@
       "sha256": "31c645be4d92391051e997f156b689a37a02e2adfbc618497da7ef6e74ef6475"
     },
     {
+      "path": "lib/dissection-scope.ts",
+      "sha256": "6e47c630ce09ec51fe7b5e1156d85a49c25eded02e044775ee053e7096fbe0ff"
+    },
+    {
       "path": "lib/dissection-workbench.ts",
       "sha256": "7b12978528d0c08743aa4d4fbe8e08df7f787596576978c39ffdc003227215be"
     },
@@ -2549,5 +2553,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "b24b55061b79668a220b888e366bde9694ecac72de75f34c5c592982fc4b8c56"
+  "sha256": "7872146889605cf935d1c8baf61c3a05b42a801a085ad50670d98a68c8ecb232"
 }
