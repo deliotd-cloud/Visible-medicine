@@ -2,6 +2,23 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — neck clinical and CT/MRI drafts
+
+Atlas adds sixteen source-bound draft placements using six topic texts: Clinical,
+Pathology, CT and MRI for the three supplied left longus colli parts, plus Clinical
+and Pathology for paired inferior thyroid arteries. Part-specific cautions prevent
+assigning the upper tendon example to every part. Existing panels remain; no
+patient images, model geometry, source identities or new controls are added.
+The other 9,902 topics and dissection recipes remain unchanged.
+
+Primary sources and reuse limits are in Atlas docs/NECK_TEACHING.md. Non-commercial
+publisher media are not bundled. These are orientation/clinical drafts requiring
+revision-bound owner radiologist review, not diagnoses or registered imaging.
+
+Source-only: website modules and publication 84 unchanged. Actual verification and
+GitHub/D recovery are recorded in the coordinating checkpoint; model-staging,
+hosted review, cleared real case/lecture and clinical/device gates remain open.
+
 ## 17 September — regional vascular clinical drafts
 
 Atlas source adds ten draft placements for six existing arterial selections:
