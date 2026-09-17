@@ -131,6 +131,8 @@ import { ArterialConnections } from './arterial-connections';
 import { BoneJoints } from './bone-joints';
 import { boneJointPlan } from '@/lib/bone-joints';
 import { ArmAttachments } from './arm-attachments';
+import { BowelComponents } from './bowel-components';
+import { bowelComponentPlan } from '@/lib/bowel-components';
 import { armAttachmentPlan } from '@/lib/arm-attachments';
 import { thighAttachmentPlan } from '@/lib/thigh-attachments';
 import { neckAttachmentPlan } from '@/lib/neck-attachments';
@@ -875,6 +877,27 @@ export default function BodyExplorer({
     if (!action) return;
     if (action.kind === 'focus') changeFocus(action.id);
     else changeStage(action.id);
+  }
+  function showBowelComponents(key: string) {
+    if (!catalog || !selectedId || exam) return;
+    const plan = bowelComponentPlan(catalog, initialRegion, side, selectedId, key, exam);
+    if (!plan) return;
+    dispatch(plan.action);
+    setSystems((prev) => ({ ...prev, organs: true }));
+    setView('anterior');
+    setInspection(initialInspection);
+    setExplode(0);
+    setLayout('spatial');
+    setPlate(false);
+    setGhostRemoved(false);
+    setFocus(false);
+    setIsolated(false);
+    setZoom(1);
+    cameraRestore.current = null;
+    setSelectionNotice({ id: plan.selectedId, message: plan.completeHere
+      ? 'Supplied bowel components shown once each. Source grouping does not establish a continuous lumen or complete anatomy.'
+      : 'Available bowel components shown. Some are outside this region; use whole body to compare the supplied set.' });
+    setReset((n) => n + 1);
   }
   function showMuscleAttachments() {
     if (!catalog || !selectedId || exam) return;
@@ -2523,6 +2546,15 @@ export default function BodyExplorer({
                       region={initialRegion}
                       side={side as StudySide}
                       focusId={dissection.focusId}
+                    />
+                    <BowelComponents
+                      catalog={catalog}
+                      region={initialRegion}
+                      side={side}
+                      selectedId={selected.id}
+                      disabled={exam}
+                      onSelect={select}
+                      onShow={showBowelComponents}
                     />
                     <ArmAttachments
                       catalog={catalog}

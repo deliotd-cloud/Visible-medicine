@@ -324,6 +324,9 @@ const countsBySystem = Object.fromEntries(
 const profiles = Object.values(dissectionProfiles);
 const sourceHashes = {};
 for (const path of [
+  'lib/bowel-components.ts',
+  'app/bowel-components.tsx',
+  'content/bowel-component-pins.json',
   'lib/vessel-visibility.ts',
   'app/vessel-system-control.tsx',
   'app/vessel-system-control.css',

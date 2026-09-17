@@ -1,0 +1,73 @@
+{
+  "results": [
+    {
+      "label": "abdomen-1440",
+      "selected": "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
+      "largeGroupAvailable": [
+        "FMA7201",
+        "FMA11338"
+      ],
+      "wholeHref": "/atlas/3d?study=1&structure=vm%3Aanatomy%3Abody%3Aabdomen%3Aunpaired%3Aorgan%3Alarge-intestine&side=both&source=5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+      "undo": true,
+      "smallGroupNavigation": true
+    },
+    {
+      "label": "pelvis-1440",
+      "selected": "vm:anatomy:body:pelvis:unpaired:organ:rectum",
+      "largeGroupAvailable": [
+        "FMA14544"
+      ],
+      "wholeHref": "/atlas/3d?study=1&structure=vm%3Aanatomy%3Abody%3Apelvis%3Aunpaired%3Aorgan%3Arectum&side=both&source=d2876cb12fa3f6c71170d18bd6813f96783c47fe12ddf68263bf12e0cae98629",
+      "undo": true,
+      "smallGroupNavigation": false
+    },
+    {
+      "label": "whole-body-1440",
+      "selected": "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
+      "largeGroupAvailable": [
+        "FMA7201",
+        "FMA14544",
+        "FMA11338"
+      ],
+      "undo": true,
+      "smallGroupNavigation": true
+    },
+    {
+      "label": "abdomen-390",
+      "selected": "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
+      "largeGroupAvailable": [
+        "FMA7201",
+        "FMA11338"
+      ],
+      "wholeHref": "/atlas/3d?study=1&structure=vm%3Aanatomy%3Abody%3Aabdomen%3Aunpaired%3Aorgan%3Alarge-intestine&side=both&source=5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+      "undo": true,
+      "smallGroupNavigation": true
+    },
+    {
+      "label": "pelvis-390",
+      "selected": "vm:anatomy:body:pelvis:unpaired:organ:rectum",
+      "largeGroupAvailable": [
+        "FMA14544"
+      ],
+      "wholeHref": "/atlas/3d?study=1&structure=vm%3Aanatomy%3Abody%3Apelvis%3Aunpaired%3Aorgan%3Arectum&side=both&source=d2876cb12fa3f6c71170d18bd6813f96783c47fe12ddf68263bf12e0cae98629",
+      "undo": true,
+      "smallGroupNavigation": false
+    },
+    {
+      "label": "whole-body-390",
+      "selected": "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
+      "largeGroupAvailable": [
+        "FMA7201",
+        "FMA14544",
+        "FMA11338"
+      ],
+      "undo": true,
+      "smallGroupNavigation": true
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "productionModule": true,
+  "physicalDeviceAcceptance": false,
+  "clinicalApproval": false
+}

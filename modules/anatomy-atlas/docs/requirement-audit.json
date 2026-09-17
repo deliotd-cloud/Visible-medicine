@@ -2,6 +2,9 @@
   "schemaVersion": 1,
   "method": "Offline source and displayed-copy inventory; no clinical or browser certification.",
   "sourceHashes": {
+    "lib/bowel-components.ts": "23b87d1fcf1e4ab6614650cebd87da6411f9443e92c073858a5b0ac068a7dc31",
+    "app/bowel-components.tsx": "5253cd62f9191e65804a1b2e252d29ddd6e0f714fd298913c5dd57299584496c",
+    "content/bowel-component-pins.json": "5c34d492f10406151508b9a7531cc80314c7c8d8f09fc518dc1e99a0e985fae6",
     "lib/vessel-visibility.ts": "672b08f4d060497d4c83341d8ecdf03b4e7f3a997ee61cc2c4dfff82c20d3f70",
     "app/vessel-system-control.tsx": "339c5d43af81240d1ce2ca3a032983b4134b32c14d8911efe19b8bd6edb8787c",
     "app/vessel-system-control.css": "0d243cb0d5bc45c30581450639de643c18bf16ec8a3d5012c312395284142de3",

@@ -74,7 +74,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "877a151385810f1171ba058b8d4749c25834ae3add9ade8da86c882f3d0fbf78"
+      "sha256": "b1598636badc2dbf8808f712ecc4b1690717782eb6598c6407ced9cfb8742e4c"
     },
     {
       "path": "app/body-scene.tsx",
@@ -87,6 +87,10 @@
     {
       "path": "app/bone-joints.tsx",
       "sha256": "dbeb74df1bf96ac7a6a9bd41c18393cff89d9efe268135d406e15f4bd6e60032"
+    },
+    {
+      "path": "app/bowel-components.tsx",
+      "sha256": "5253cd62f9191e65804a1b2e252d29ddd6e0f714fd298913c5dd57299584496c"
     },
     {
       "path": "app/brand.tsx",
@@ -451,6 +455,10 @@
     {
       "path": "content/back-layers-teaching.ts",
       "sha256": "6aa0130d732e155fa225829952e2ebba1702a650699b4cf9feaabde942bdfb41"
+    },
+    {
+      "path": "content/bowel-component-pins.json",
+      "sha256": "5c34d492f10406151508b9a7531cc80314c7c8d8f09fc518dc1e99a0e985fae6"
     },
     {
       "path": "content/brain-imaging-teaching.ts",
@@ -1297,6 +1305,10 @@
       "sha256": "6ac746a3f09fd982dbbb7b24f6c6cc2f61d88b35742d9ac7686632dead421389"
     },
     {
+      "path": "lib/bowel-components.ts",
+      "sha256": "23b87d1fcf1e4ab6614650cebd87da6411f9443e92c073858a5b0ac068a7dc31"
+    },
+    {
       "path": "lib/brachial-veins.ts",
       "sha256": "d675f79d288ce1eb799e4c58a7d14fe5894257274ef302ce96e3a2990bda5b2c"
     },
@@ -2074,7 +2086,7 @@
     },
     {
       "path": "lib/study-navigation.ts",
-      "sha256": "06a698101f61afff433d243f56399d3b0a0bba226ced37138fd8c0ff2b86b398"
+      "sha256": "d7b3b950dc4372821ba9e3f74f1de10622804b48b422197a4ccb07538bc9c0ad"
     },
     {
       "path": "lib/study-views.ts",
@@ -2457,5 +2469,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "dbc59f769750bd274cf0b855cb77a6fba5d8ea7ef42b41d6e742be151c92d27e"
+  "sha256": "87582f77012e438fedf5884465467793794c2bd98d7cf1d4487af7f22ae143d5"
 }

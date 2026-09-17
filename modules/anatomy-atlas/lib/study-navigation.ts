@@ -34,6 +34,10 @@ export function relatedStudyViews(
       if (!target && !explicitContext) return [];
       const targets = scope.filter((item) => matchesRule(item, focus.rule));
       if (!targets.length) return [];
+      const visibleIds = stageStructures(scope, profile, 'free', focus.id).map(item => item.id);
+      // A source-bound recipe may reject stale, missing or duplicated inputs.
+      // Do not offer a relationship that would open an empty/incompatible view.
+      if (!visibleIds.includes(selected.id)) return [];
       const targetIds = new Set(targets.map((item) => item.id));
       return [
         {
@@ -46,9 +50,7 @@ export function relatedStudyViews(
               !targetIds.has(item.id) &&
               focus.context?.some((rule) => matchesRule(item, rule)),
           ),
-          visibleIds: stageStructures(scope, profile, 'free', focus.id).map(
-            (item) => item.id,
-          ),
+          visibleIds,
         },
       ];
     })

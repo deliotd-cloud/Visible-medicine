@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
+import {build} from './workspace-test-build.mjs';
 import {
   relatedStudyViews,
   structureNavigationIndex,
@@ -16,7 +17,9 @@ import {
 } from '../app/dissection-data.ts';
 
 const raw = await readFile('public/models/bodyparts3d/full-body/catalog.json');
-const catalog = JSON.parse(raw);
+const compiled=await build({stdin:{contents:"export {bodyDisplayCatalog} from './lib/body-display-catalog';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
+const {bodyDisplayCatalog}=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+const catalog = bodyDisplayCatalog(JSON.parse(raw));
 const before = JSON.stringify(catalog);
 const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
 let assertions = 0;
@@ -56,7 +59,8 @@ for (const [region, profile] of Object.entries(dissectionProfiles)) {
         (focus) =>
           (matchesRule(item, focus.rule) ||
             focus.context?.some((rule) => matchesRule(item, rule))) &&
-          scope.some((s) => matchesRule(s, focus.rule)),
+          scope.some((s) => matchesRule(s, focus.rule)) &&
+          stageStructures(scope,profile,'free',focus.id).some(s=>s.id===item.id),
       );
       same(
         new Set(views.map((view) => view.focusId)),
@@ -86,7 +90,7 @@ for (const [region, profile] of Object.entries(dissectionProfiles)) {
         );
         check(
           view.visibleIds.includes(item.id),
-          'Retained selection must be included by the opened recipe',
+          `Retained selection must be included by the opened recipe: ${region}/${side}/${focus.id}/${item.id}`,
         );
         check(
           [...view.targets, ...view.context].every((s) => scope.includes(s)),
@@ -159,6 +163,21 @@ for (const [region, profile] of Object.entries(dissectionProfiles)) {
       memberships,
     });
   }
+}
+// Actual guarded recipe: a stale/missing required surface must not be advertised.
+const guardedProfile=dissectionProfiles['whole-body'];
+const guardedFocus=guardedProfile.focuses.find(f=>f.id==='pelvis-urethral-context');
+check(guardedFocus?.requiredSources?.length>0);
+const selectedHip=catalog.structures.find(s=>s.id==='vm:anatomy:body:pelvis:right:bone:right-hip-bone');
+check(relatedStudyViews(catalog.structures,guardedProfile,selectedHip.id).some(v=>v.focusId===guardedFocus.id),'Current corrected display source admits the recipe');
+for(const kind of ['stale','missing','duplicate']){
+ const scope=structuredClone(catalog.structures),required=guardedFocus.requiredSources[0];
+ const index=scope.findIndex(s=>s.id===required.id);check(index>=0);
+ if(kind==='stale')scope[index].sources[0].sha256='0'.repeat(64);
+ if(kind==='missing')scope.splice(index,1);
+ if(kind==='duplicate')scope.push({...scope[index],id:scope[index].id+':duplicate'});
+ same(stageStructures(scope,guardedProfile,'free',guardedFocus.id),[]);
+ check(!relatedStudyViews(scope,guardedProfile,selectedHip.id).some(v=>v.focusId===guardedFocus.id),'Unavailable source-bound recipes are not offered: '+kind);
 }
 for (let count = 0; count <= catalog.structures.length; count++) {
   for (const index of [-1, 0, Math.floor(count / 2), count - 1, count + 2]) {
