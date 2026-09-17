@@ -1,12 +1,12 @@
 {
   "passed": true,
-  "checks": 17511,
+  "checks": 19504,
   "bodyRepresentations": 17,
   "sourceComponents": 32,
   "lessonGroups": 10,
   "explicitTopicEdits": 34,
   "combinedPinnedCurriculumSections": 2928,
-  "sourceIndexChecks": 32,
+  "sourceIndexChecks": 0,
   "negativeCases": 34,
   "historicalMilestoneReadiness": {
     "anatomy": {
@@ -31,6 +31,12 @@
       "draft": 11,
       "identity-only": 0,
       "pending": 1011,
+      "generated-identification": 0
+    },
+    "xray": {
+      "draft": 6,
+      "identity-only": 0,
+      "pending": 1016,
       "generated-identification": 0
     },
     "ultrasound": {
@@ -63,6 +69,6 @@
   "clinicalApproval": false,
   "scanContentAdded": false,
   "browserTesting": false,
-  "copyAndRecipeHash": "bbd29c160fb64b177f53979e52fd63e8786b1eb9772622683f92957256fbc022",
+  "copyAndRecipeHash": "678e6ef59369a1eb74a1875aeb6134ed7c37fe97c0da7a286948ce2564c2c21c",
   "limitations": "Original head/neck organ clinical drafts; unequal eyeball sets and independently labelled tear passages remain exact. No complete retinal/ocular-layer dissection, validated lumen, paediatric anatomy, physiological simulation, diagnosis, procedure, patient scan or clinical approval."
 }

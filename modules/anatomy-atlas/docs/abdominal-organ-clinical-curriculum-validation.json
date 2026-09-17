@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "checks": 17415,
+  "checks": 19459,
   "bodyRepresentations": 17,
   "sourceComponents": 135,
   "lessonGroups": 14,
@@ -33,6 +33,12 @@
       "pending": 1011,
       "generated-identification": 0
     },
+    "xray": {
+      "draft": 6,
+      "identity-only": 0,
+      "pending": 1016,
+      "generated-identification": 0
+    },
     "ultrasound": {
       "draft": 11,
       "identity-only": 0,
@@ -63,6 +69,6 @@
   "clinicalApproval": false,
   "scanContentAdded": false,
   "browserTesting": false,
-  "copyAndRecipeHash": "4110627b411bf10b4a928f381e49ef76c82804455bd45d8d666bb2305a8ad422",
+  "copyAndRecipeHash": "678e6ef59369a1eb74a1875aeb6134ed7c37fe97c0da7a286948ce2564c2c21c",
   "limitations": "Original abdominal organ clinical drafts; aggregate liver/bowel boundaries, duct identities, paired sides and cross-region IDs remain exact. Not validated internal tissue, luminal patency, disease simulation, patient scans, procedural guidance or clinical approval."
 }
