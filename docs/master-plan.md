@@ -2,6 +2,24 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — SCA and right MCA clinical drafts
+
+Atlas adds six source-bound Clinical/Pathology placements for the two admitted
+superior cerebellar arteries and right middle cerebral artery. Original side,
+PART-OF/ISA membership, ordered source identity and component fragmentation are
+preserved; 9,912 other topics and all source geometry are unchanged. These are
+introductory drafts, not complete vascular teaching or radiologist approval.
+
+UAMS, Kase1993, American Stroke Association and NHS references support original
+short notes, with no copied tables, figures or scans. The source constraints and
+claim/reference mapping are in Atlas docs/SCA_MCA_CLINICAL.md. Exact verification
+and GitHub/D recovery evidence belongs in the coordinating checkpoint.
+
+Source-only: generated website modules and publication84 are unchanged. Cleared
+case/lecture anchors, authenticated staging, hosted review roles/migrations,
+physical-device acceptance and revision-bound clinical sign-off remain required.
+Native MRI synthetic QA is already complete and is not repeated by this change.
+
 ## 17 September — paired PICA clinical drafts and Practice check
 
 Atlas source adds four Clinical/Pathology placements for the two admitted PICA
