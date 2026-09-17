@@ -202,6 +202,17 @@ export const hraPelvisStudies: SpecimenStudy[] = [
     'Same-source ureter with ipsilateral uterine vessels and bladder/cervix context. These partial surfaces do not establish operative tissue planes, patency or a registered scan.',
   )),
 ];
+// Frame the native pelvic region, not the complete length of the reused ureters.
+// Bounds are original display coordinates; this never clips or transforms meshes.
+const pelvicExtent = {
+  min: [0, 1, 2].map(axis => Math.min(...raw.structures.map(s => s.bounds.min[axis]))) as Vec3,
+  max: [0, 1, 2].map(axis => Math.max(...raw.structures.map(s => s.bounds.max[axis]))) as Vec3,
+};
+const pelvicMargin = pelvicExtent.min.map((v, axis) => (pelvicExtent.max[axis] - v) * 0.05);
+export const hraPelvisCloseUp = {
+  min: pelvicExtent.min.map((v, axis) => v - pelvicMargin[axis]) as Vec3,
+  max: pelvicExtent.max.map((v, axis) => v + pelvicMargin[axis]) as Vec3,
+};
 export const hraPelvisDefinition: SpecimenDefinition = {
   key: raw.specimenId,
   label: 'Female pelvis',
@@ -210,7 +221,7 @@ export const hraPelvisDefinition: SpecimenDefinition = {
   catalog: hraPelvisCatalog,
   studies: hraPelvisStudies,
   initialStudy: 'overview',
-  closeUp: null,
+  closeUp: hraPelvisCloseUp,
   omittedFaces: 0,
   limitations:
     'Partial separate HRA reference. Six disputed/overlapping sources are withheld; no complete female skeleton, pelvic floor, nerves, pregnancy model or scan registration.',

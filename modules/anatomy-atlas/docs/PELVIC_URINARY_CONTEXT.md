@@ -29,6 +29,24 @@ renal review cannot approve its pelvic context, or vice versa.
 
 ## Interaction correction
 
+The regional camera now encloses the exact union of all 41 native pelvic bounds,
+with a 5% margin per axis. This improves the pelvic context scale despite the
+long reused ureters. All meshes remain complete, at source coordinates; upper
+ureter portions can extend beyond the viewport. This is not a cut surface or
+an anatomical boundary. The existing **Display options → Regional close-up**
+switch restores the full visible-model view when turned off. Close-up pauses
+during separation, fading and selected-structure Frame; identification practice
+retains its own framing and restores the prior dissection on exit. Original
+study memberships and teaching remain unchanged. Initial camera framing changes,
+not the initial 18-surface selection.
+
+Labels in a close-up use an actual source vertex within the regional bounds
+when the usual anchor lies outside; they are not clamped to a point in empty
+space. `npm run pelvic-closeup:test` verifies both ureter anchors against the
+original display-buffer vertices, native bounds/margins, exact saved recipe and
+source preservation, and rejection of changed camera contracts. It does not
+approve anatomy or identify a new landmark.
+
 Browser testing found that Undo could restore a preset and then unexpectedly
 return to the initial overview. The shared study selector conditionally removed
 its disabled Custom dissection option; the installed selector reconciled the

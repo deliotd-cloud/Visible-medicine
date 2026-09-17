@@ -65,6 +65,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
   const onFailure = useCallback((id: string) => setFailed((p) => p.includes(id) ? p : [...p, id]), []);
   const selected = kneeSpecimen.structures.find((s) => s.id === selectedId);
   const active = activeSpecimenStudy(specimen, hidden);
+  const closeUpBounds = jointCloseUp && !focus && explode === 0 && !isolated ? specimen.closeUp : null;
   const visible = kneeStructures.filter((s) => !hidden.includes(s.id));
   const required = kneeCatalog.bundles.filter((b) => visible.some((s) => s.bundle === b.id));
   const pending = required.filter((b) => !loaded.includes(b.id) && !failed.includes(b.id));
@@ -117,7 +118,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
           illustrated={illustrated} landmarks={visible.filter((s) => s.system !== 'skeleton').map((s) => s.id)}
           explode={explode} layout={layout} anchorSkeleton={false} showOrigins={showOrigins} originStyle="selected-guide"
           labels={labels} view={view} zoom={zoom} zoomStep={zoomStep} reset={reset} focus={focus} exam={false}
-          inspection={initialInspection} cameraBounds={jointCloseUp && explode === 0 && !isolated ? specimen.closeUp : null}
+          inspection={initialInspection} cameraBounds={closeUpBounds}
           plate={false} appearance={appearance} retries={Object.fromEntries(kneeCatalog.bundles.map((b) => [b.id, retry]))}
           onSelect={select} onLoaded={onLoaded} onFailure={onFailure} onRendererHealth={setHealth} />
         {!!pending.length && !errors.length && <output className="eye-layer-status">Loading {specimen.label.toLowerCase()} specimen… ({required.length - pending.length}/{required.length} groups)</output>}
@@ -126,7 +127,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
         }}>Retry</Button></div>}
         {!visible.length && <div className="eye-layer-status">All tissues are hidden. <Button size="sm" onClick={showAll}>Show all</Button></div>}
       </div>
-      <p className="um-knee-scene-caption">{explode > 0 ? supplement ? 'Separated teaching view — not tissue motion or a surgical plane. Return to 0% for source positions.' : 'Separated teaching view — not joint motion. Return to 0% for source positions.' : 'Source positions · Drag to rotate · Scroll or pinch to zoom'}</p>
+      <p className="um-knee-scene-caption">{explode > 0 ? supplement ? 'Separated teaching view — not tissue motion or a surgical plane. Return to 0% for source positions.' : 'Separated teaching view — not joint motion. Return to 0% for source positions.' : closeUpBounds ? 'Source positions · Regional close-up · Long structures continue beyond this view. Drag to rotate; scroll or pinch to zoom.' : 'Source positions · Drag to rotate · Scroll or pinch to zoom'}</p>
     </section>
     <aside className="eye-layer-controls um-knee-controls" aria-label={`${specimen.label} specimen controls`}>
       <label className="um-knee-label" htmlFor="um-knee-study">Study</label>
@@ -190,7 +191,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
       </details>
       <details className="um-knee-details"><summary>Display options</summary>
         {specimen.closeUp && <><label className="um-knee-toggle">Regional close-up<Switch checked={jointCloseUp} onCheckedChange={(v) => { setJointCloseUp(v); setFocus(false); }} /></label>
-        <p>Close-up pauses while separated or fading others, so displaced tissues remain in view.</p></>}
+        <p>Turn off for the full visible model. Close-up pauses while separated, fading others or framing a selected structure; geometry is unchanged.</p></>}
         <label className="um-knee-toggle">Illustrated surfaces<Switch checked={illustrated} onCheckedChange={setIllustrated} /></label>
         <label className="um-knee-toggle">Selected origin guide<Switch checked={showOrigins} onCheckedChange={setShowOrigins} disabled={layout === 'tray'} /></label>
       </details>

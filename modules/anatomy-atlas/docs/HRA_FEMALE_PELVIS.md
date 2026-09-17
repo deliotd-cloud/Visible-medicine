@@ -18,6 +18,11 @@ and support batches described below are preserved historical baselines.
 
 Open **Pelvis / Whole body → Female pelvis**, or `/specimens/female-pelvis`. The existing compact workbench provides selection, search, labels, tissue filters, view presets, hide/Undo/Redo, isolate and separation. Practice preserves the dissection and hides answer labels; it remains disabled until model readiness is confirmed. The main-atlas exam does not expose the supplemental launcher.
 
+The source-derived regional close-up centres the native pelvic region without
+cutting long structures. Turn it off under **Display options** for the full
+visible model. Selected-structure Frame, fading and separation suspend the
+close-up; shapes and source positions remain unchanged.
+
 Eleven studies: the original reproductive overview; all 41 native pelvic surfaces; uterus/cervix; left adnexa; right adnexa; supporting surfaces; uterine vessel context; bladder/uterus/rectum; plus ureters with pelvic organs and separate left/right ureter context views. Context appears only when requested. The initial view still contains 18 reproductive surfaces.
 
 All **43 selections have source-bound introductory Anatomy/Function drafts**: the existing 41 pelvic lessons plus two reused ureter lessons. The original pelvic set spans 28 concepts and 178 extended draft placements, as documented in the [context teaching extension](FEMALE_PELVIC_CONTEXT_TEACHING.md). Incomplete modality topics remain explicitly pending. Source-identification rounds use up to ten eligible visible selections. These are not validated exams.
