@@ -125,12 +125,12 @@ Counts are representations with displayed copy, not unique lessons, complete top
 | --- | ---: | ---: | ---: | ---: |
 | Anatomy | 1100 | 2 | 0 | 0 |
 | Function | 1097 | 0 | 5 | 0 |
-| CT | 758 | 0 | 344 | 0 |
-| MRI | 716 | 0 | 386 | 0 |
+| CT | 761 | 0 | 341 | 0 |
+| MRI | 719 | 0 | 383 | 0 |
 | X-ray | 328 | 0 | 774 | 0 |
 | Ultrasound | 480 | 0 | 622 | 0 |
-| Pathology | 1086 | 0 | 16 | 0 |
-| Clinical | 1088 | 0 | 14 | 0 |
+| Pathology | 1091 | 0 | 11 | 0 |
+| Clinical | 1093 | 0 | 9 | 0 |
 | Quiz notes | 71 | 0 | 0 | 1031 |
 
 Quiz-tab notes are separate from interactive practice. [X-ray orientation](XRAY_TEACHING.md) includes the shoulder and spine plus wrist, tarsal and [limb-bone notes](LIMB_BONE_IMAGING.md). The table above is the current count; historical milestone totals elsewhere are not cumulative current coverage. Remaining entries stay pending. Imaging text is not an acquired-image viewer, segmentation or validated spatial correspondence.

@@ -898,6 +898,14 @@ Existing MIT application/teaching terms and model attribution remain unchanged;
 no new asset, dependency, font, texture, paid API or mandatory fee. Claim scope
 and outstanding radiologist review: docs/REGIONAL_VASCULAR_CLINICAL.md.
 
+Neck teaching (17 September 2026) adds original brief synthesis with Suh/Eoh/Shin
+2018, Yalçin2006 and Ruan2015 reading links. Suh's CC BY-NC4.0 media and Yalçin's
+publisher material are not imported; Ruan's CC BY4.0 paper is credited without
+importing case images. No copied prose, tables, figures, scans or datasets.
+Original MIT teaching/code and existing source-model notices remain unchanged.
+No new dependency, model, font, texture, paid API or mandatory service is added.
+See docs/NECK_TEACHING.md for claim scope and pending radiologist acceptance.
+
 Run:
 
 ```bash

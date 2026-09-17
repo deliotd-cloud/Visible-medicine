@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "fed40f0ef7e09414bc9633324537de003f2bfe8f7513b26c4214d5cbf4517ba9"
+      "sha256": "e02bc79eb76b46d11c650bc22243daf130162c560eba74983d4c9ac790a9812d"
     },
     {
       "path": "app/body-explorer.css",
@@ -783,6 +783,14 @@
     {
       "path": "content/neck-attachments.ts",
       "sha256": "c73802bb9c51b4bb575b83d08ddf6c516047512687c8e0b2b4727f301ae79a0b"
+    },
+    {
+      "path": "content/neck-teaching-pins.json",
+      "sha256": "41a3d3c5de3675b47392b7683a64d41e8c012114772c2a459e4b4d0ce61f69fe"
+    },
+    {
+      "path": "content/neck-teaching.ts",
+      "sha256": "587364471b352822e6fb1debb036890906655d8cec61ac2ee70975b7eeb0c561"
     },
     {
       "path": "content/nested-review-bindings.json",
@@ -1713,6 +1721,10 @@
       "sha256": "54a5522156c7c96a9b939aa7c18b67362938d3d3bdc4b5441d248ede00e16d89"
     },
     {
+      "path": "lib/neck-teaching.ts",
+      "sha256": "2e279a80cea07a6803924260f0347aa988ff61fe1f8b34f845234bab6bdafc22"
+    },
+    {
       "path": "lib/nested-anatomy.ts",
       "sha256": "3eeb1bdf3c0e1f4485360945be8ee7046a465b3837a24f29c46e4ee2a4c55687"
     },
@@ -2138,7 +2150,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "5cd84b79ba7b8c14869912d92dfc4fe18e22da9f30e804bb2a1f5807918205ad"
+      "sha256": "59f355266955794aa7839faac858e2dda87f3e514e4f2e914a866ee598e9d974"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2333,5 +2345,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "f6e75339cdd3ebeb94c26934ec6e8f756156eaba4805daaef23d94462c40f037"
+  "sha256": "4bdf8a4a7f1b41a26231d947ecc057f4086c25a62dd0473a5f020369ecf9eed3"
 }
