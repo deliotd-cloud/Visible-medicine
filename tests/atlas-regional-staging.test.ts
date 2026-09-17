@@ -1,0 +1,59 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import ts from 'typescript';
+import { atlasStagingModels, atlasStagingCheckModels } from '../lib/atlas-model-staging-registry.ts';
+import { resolveAtlasDeliveryModel } from '../lib/atlas-model-delivery.ts';
+import type { AtlasStoredModel } from '../lib/atlas-model-storage.ts';
+
+const json = (file: string) => JSON.parse(readFileSync(`lib/${file}.json`, 'utf8'));
+const active = json('atlas-model-inventory');
+const historical = json('atlas-model-staging-candidate');
+const candidate = json('atlas-model-staging-regional-20260917');
+const sha = (value: string) => createHash('sha256').update(value).digest('hex');
+
+test('regional staging registers exactly the two prepared immutable objects without activating delivery', async () => {
+  const before = JSON.stringify(active);
+  assert.equal(candidate.purpose, 'administrator-staging-only');
+  assert.equal(candidate.atlasSource, 'a5baf03bb274e2e6f3dfe078603a0b9988b1f400');
+  assert.equal(candidate.candidateManifestSha256, 'bc8b31c36b3533bb996d7c4feccc84991e268f81cf7f7bebb4f7ed59ea06218e');
+  assert.equal(candidate.proposedInventorySha256, 'a74532b7b64b61221f14ddefb02c267296376397c19da5553772996fdcaebba4');
+  assert.equal(sha(JSON.stringify(active, null, 2) + '\n'), candidate.activeInventorySha256);
+  assert.deepEqual(candidate.models, [
+    { sha256: 'f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826', bytes: 11856, paths: ['/atlas-runtime/head-neck/models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb'] },
+    { sha256: '9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5', bytes: 65264, paths: ['/atlas-runtime/head-neck/models/bodyparts3d/short-ciliary/short-ciliary.glb'] },
+  ]);
+  const expected = atlasStagingModels(atlasStagingModels(active.models, historical.models), candidate.models);
+  // Execute the actual registration module with only its imports supplied;
+  // testing a hand-built union alone would miss broken production wiring.
+  const source = ts.transpileModule(readFileSync('lib/atlas-model-staging.ts', 'utf8'), {
+    compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.CommonJS, esModuleInterop: true },
+  }).outputText;
+  const exports: { atlasRegisteredStagingModels?: AtlasStoredModel[] } = {};
+  const imports: Record<string, unknown> = {
+    './atlas-model-inventory.json': active,
+    './atlas-model-staging-candidate.json': historical,
+    './atlas-model-staging-regional-20260917.json': candidate,
+    './atlas-model-staging-registry': { atlasStagingModels },
+  };
+  new Function('require', 'exports', source)((name: string) => {
+    assert(Object.hasOwn(imports, name), `Unexpected registry import: ${name}`);
+    return imports[name];
+  }, exports);
+  assert.deepEqual(exports.atlasRegisteredStagingModels, expected);
+  assert.equal(expected.length, 133);
+  assert.equal(expected.flatMap(m => m.paths).length, 139);
+  assert.equal(active.models.length, 131);
+  assert.equal(candidate.models.reduce((n: number, m: AtlasStoredModel) => n + m.bytes, 0), 77120);
+  for (const mode of ['upload', 'check', 'download'] as const) assert.strictEqual(atlasStagingCheckModels(mode, expected, active.models), expected);
+  assert.strictEqual(atlasStagingCheckModels('delivery', expected, active.models), active.models);
+  for (const model of candidate.models) for (const path of model.paths) {
+    assert.throws(() => resolveAtlasDeliveryModel(new URL(path, 'https://atlas.test'), active.models));
+  }
+  for (const model of active.models) for (const path of model.paths) {
+    assert.equal(resolveAtlasDeliveryModel(new URL(path, 'https://atlas.test'), active.models).sha256, model.sha256);
+  }
+  assert.equal(JSON.stringify(active), before);
+  assert.match(readFileSync('lib/atlas-delivery-policy.ts', 'utf8'), /audience: 'administrator-review'/);
+});

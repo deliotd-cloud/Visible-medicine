@@ -2,6 +2,14 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — regional stage-only registration
+
+The two prepared model hashes are registered for administrator staging only;
+the historical candidate and active 131-model delivery remain unchanged.
+See [registration and activation gates](atlas-regional-staging-20260917.md).
+Hosted upload/full-byte verification must precede regional runtime activation.
+Publication and recovery outcomes are recorded in the coordinating checkpoint.
+
 ## 17 September — complete regional upgrade prepared, not activated
 
 Atlas source a5baf03b has a verified offline regional module candidate containing
