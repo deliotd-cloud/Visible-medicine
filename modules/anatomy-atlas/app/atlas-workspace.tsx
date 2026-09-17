@@ -9,6 +9,7 @@ import {
   useRef,
   useId,
   type ReactNode,
+  type KeyboardEventHandler,
 } from 'react';
 import Link from 'next/link';
 import { Search, Maximize2, Minimize2 } from 'lucide-react';
@@ -76,12 +77,14 @@ export function AtlasWorkspace({
   className = '',
   presentation = 'standalone',
   session,
+  onKeyDown,
 }: {
   children: ReactNode;
   exam: boolean;
   className?: string;
   presentation?: 'standalone' | 'panel';
   session?: { mode: WorkspaceMode; chooseMode: (mode: WorkspaceMode) => void };
+  onKeyDown?: KeyboardEventHandler<HTMLElement>;
 }) {
   const boundary = useRef<HTMLElement | null>(null);
   const [measured, setMeasured] = useState(() => atlasPanelLayout(0, 0));
@@ -155,6 +158,7 @@ export function AtlasWorkspace({
     >
       <Root
         ref={boundary}
+        onKeyDown={onKeyDown}
         aria-label={presentation === 'panel' ? '3D anatomy module' : undefined}
         className={className ? `body-app ${className}` : 'body-app'}
         data-presentation={presentation}

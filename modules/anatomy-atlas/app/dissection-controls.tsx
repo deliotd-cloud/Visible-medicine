@@ -117,7 +117,8 @@ export function DissectionControls({
           onClick={onUndo}
           disabled={disabled || !state.history.length}
           aria-label="Undo last dissection change"
-          title="Undo a dissection step or removal; camera and display settings are separate"
+          aria-keyshortcuts="Control+Z Meta+Z"
+          title="Undo a dissection step or removal (Ctrl/Cmd+Z); camera and display settings are separate"
         >
           <Undo2 />
           Undo
@@ -128,7 +129,8 @@ export function DissectionControls({
           onClick={onRedo}
           disabled={disabled || !state.future.length}
           aria-label="Redo last undone dissection change"
-          title="Reapply the last undone dissection step or removal"
+          aria-keyshortcuts="Control+Shift+Z Meta+Shift+Z Control+Y"
+          title="Reapply the last undone dissection change (Ctrl/Cmd+Shift+Z or Ctrl+Y)"
         >
           <Redo2 />
           Redo

@@ -54,7 +54,7 @@
     },
     {
       "path": "app/atlas-workspace.tsx",
-      "sha256": "09cca795f30bea2587ac8ba9e0f79b09ebb70efb1666e036dcdeeab30d34a5e5"
+      "sha256": "b4e017078a9e425833828f2a80ce935960a8e5c88d301c399fbeb0d93cf0aa74"
     },
     {
       "path": "app/back-layers-study.tsx",
@@ -78,7 +78,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "24f310fb0f2dd41d573ea050c551b0edd0f45e2a956d1902605a60a5abb2d7a5"
+      "sha256": "82c6aa170222703faf7227cfa53fc508d2ec0e3c6043084a4ea645baf46d730a"
     },
     {
       "path": "app/body-scene.tsx",
@@ -118,7 +118,7 @@
     },
     {
       "path": "app/dissection-controls.tsx",
-      "sha256": "2e043eb1d6a2ee5a8cad6d5ec1017d309196b30ef5f69a3f5549801a55b49e77"
+      "sha256": "9b53856f546a6efa89854a694189cfe74b8c97c151d88305ca9e92e736aab24f"
     },
     {
       "path": "app/dissection-data.ts",
@@ -998,7 +998,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "0fd45b480ae4e713a6e0a5942743cd90d4c084a10d43a8a842d203a8d9202dc7"
+      "sha256": "3f25868c60d1e7bad38b2622157ee25e4eb9b37322eec4a85ae1759d5b630f50"
     },
     {
       "path": "content/sca-mca-clinical-pins.json",
@@ -1563,6 +1563,10 @@
     {
       "path": "lib/dissection-scope.ts",
       "sha256": "6e47c630ce09ec51fe7b5e1156d85a49c25eded02e044775ee053e7096fbe0ff"
+    },
+    {
+      "path": "lib/dissection-shortcuts.ts",
+      "sha256": "04fedf666837a73a61f7f6655b4a642ead8841c81622c712f521fc3481230828"
     },
     {
       "path": "lib/dissection-workbench.ts",
@@ -2406,7 +2410,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "45d5d1b5951b0b2c7a46e544d8ad0e71bacd826ac97c29048bb845e102889d88"
+      "sha256": "c233be1be6d9d5fb13780e209acff86cc20ebef9d6d42d28817cf49f04006fcd"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2605,5 +2609,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "74b48ca5f1e33c9dd697f1c3ee5a06fcdc3baac4b2a89b0583f78f4b04de5486"
+  "sha256": "f28a5311ff9aa28146a9616ad6b5fad62f0d78847a950dcb3bead3e363cc2a99"
 }

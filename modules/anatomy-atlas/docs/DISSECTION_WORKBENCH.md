@@ -11,6 +11,24 @@ This milestone strengthens shoulder-style removal, exploration and restoration i
 5. Select and remove individual structures to customise a view. In the study guide, expand **Removed from this view**, search by name/source name/FMA identity/side, or filter by system. Restore one result or all matching results. A group restoration is one undoable dissection change; it does not alter unrelated removed entries.
 6. Reassemble, use Undo (up to forty dissection snapshots), or save the current configuration using the existing device-local study views. Camera/system preferences are not part of dissection Undo history.
 
+### Keyboard history — 17 September 2026
+
+In a regional/whole-body **Dissect** workspace, use **Ctrl/Cmd+Z** to undo and
+**Ctrl/Cmd+Shift+Z** to redo; **Ctrl+Y** also redoes. Keyboard focus must be
+inside the Atlas workspace. These invoke the existing history actions and do
+not rewind camera, separation or display settings. Existing button tooltips
+and accessible shortcut metadata expose the commands; no extra toolbar is added.
+
+Text inputs, editable content, select/combobox controls, dialogs, separate
+internal/reference studies, Explore and Practice are excluded. Held-key repeat,
+IME composition and already-consumed events are ignored. An unavailable action
+does not consume the key. Events outside this Atlas or inside another nested
+workspace are not handled. The separate shoulder pilot is unchanged.
+
+`npm run dissection-shortcuts:test` checks chord/state guards; browser acceptance
+and saved-source evidence belong to the coordinating checkpoint. These shortcuts
+do not add anatomy, alter source identities or imply clinical/device acceptance.
+
 ## Regional coverage
 
 | Region | Layer steps, including assembled/bones | Independent windows | Focused views |

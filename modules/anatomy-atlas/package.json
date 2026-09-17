@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "dissection-shortcuts:test": "node --test scripts/test-dissection-shortcuts.mjs",
     "cubital-studies:test": "node scripts/pin-cubital-studies.mjs --check && node scripts/record-cubital-studies.mjs --check && node scripts/validate-cubital-studies.mjs",
     "regional-branch-imaging:test": "node scripts/pin-regional-branch-imaging.mjs --check && node scripts/record-regional-branch-imaging.mjs --check && node scripts/validate-regional-branch-imaging.mjs",
     "genicular-imaging:test": "node scripts/pin-genicular-imaging.mjs --check && node scripts/record-genicular-imaging.mjs --check && node scripts/validate-genicular-imaging.mjs",

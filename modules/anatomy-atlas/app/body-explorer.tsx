@@ -127,6 +127,7 @@ import {
 } from '@/lib/atlas-practice';
 import { ReasoningFeedback } from './reasoning-feedback';
 import { StudyViews } from './study-views';
+import { handleDissectionHistoryKey } from '@/lib/dissection-shortcuts';
 import { StructureNavigator } from './structure-navigator';
 import { RelatedStudy } from './related-study';
 import { UpperLimbMotorExplorer } from './upper-limb-motor';
@@ -1670,7 +1671,12 @@ export default function BodyExplorer({
   );
 
   return (
-    <AtlasWorkspace exam={exam} presentation={presentation} session={workspace}>
+    <AtlasWorkspace exam={exam} presentation={presentation} session={workspace}
+      onKeyDown={event => handleDissectionHistoryKey(event, {
+        enabled: workspace.mode === 'dissect' && !exam && !inlineStudy,
+        canUndo: dissection.history.length > 0,
+        canRedo: dissection.future.length > 0,
+      }, undoDissection, redoDissection)}>
       <PracticeAttention answered={answered} exam={exam} />
       <header className="body-topbar" data-shared-header={sharedHeader}>
         {sharedHeader ? <RegionHeading title={title} count={regionStructures.length}
