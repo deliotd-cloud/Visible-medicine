@@ -1,5 +1,15 @@
 # Third-party notices
 
+## Exact-triangle picking — 17 September 2026
+
+`three-mesh-bvh` 0.8.3, already installed transitively, is now pinned as a direct
+runtime dependency. Copyright (c) 2018 Garrett Johnson, MIT. The exact-version
+[upstream licence](https://raw.githubusercontent.com/gkjohnson/three-mesh-bvh/v0.8.3/LICENSE)
+matches the installed LICENSE; redistribution retains its copyright and permission
+notice in the generated bundled notices. No service, paid runtime, model, font,
+texture or anatomical dataset is added. The acceleration metadata preserves
+source vertex/index arrays and does not replace the underlying anatomy licence.
+
 ## Short ciliary source group — 17 September 2026
 
 Original BodyParts3D v4 IS-A files FJ1319/FJ1370, FMA7041 / BP6623,

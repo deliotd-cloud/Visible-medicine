@@ -34,7 +34,7 @@
     },
     {
       "path": "app/anatomy-tissue.tsx",
-      "sha256": "abc1fa5632e775cad472d06691e594d76cd0804fdbe9d3536d0637d47bbda7b6"
+      "sha256": "e2a281af72d26bcd13f0a575476cacbb7d4233a0d485971867f69f91387f323c"
     },
     {
       "path": "app/arm-attachments.tsx",
@@ -922,7 +922,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "af2fd9f176466a05c5473f4ddf4769165f9e1ef53438a8560b30228d977b417f"
+      "sha256": "0fd45b480ae4e713a6e0a5942743cd90d4c084a10d43a8a842d203a8d9202dc7"
     },
     {
       "path": "content/sca-mca-clinical-pins.json",
@@ -1674,7 +1674,7 @@
     },
     {
       "path": "lib/inspection-geometry.ts",
-      "sha256": "b91829e161c1f14b605e35ff32d49cfcb800a122eee23362c2f38aab70431b58"
+      "sha256": "b1262f894eb05a4ab8a4c136d8b12bc5a179869f4e87140f96cc226b1f7b48b1"
     },
     {
       "path": "lib/inspection-state.ts",
@@ -2153,6 +2153,10 @@
       "sha256": "3eb810cb78de5a7fed03d7a103deeea1f5567ebc1e7d4ba6c755d13285b4d954"
     },
     {
+      "path": "lib/tissue-picking.ts",
+      "sha256": "d8687a5538d6721a64928065df70b4a2b454dc478929a3ef1e67d8118c2628fd"
+    },
+    {
       "path": "lib/trunk-attachments.ts",
       "sha256": "eb17e94c4b4bb0c14fedb2d5ecfa6352825a7ade10c2c050a787f3c36d8a7922"
     },
@@ -2246,11 +2250,11 @@
     },
     {
       "path": "package-lock.json",
-      "sha256": "e55a3718d0786a13a27301297f39bf8f54ae0de2cb4bf5f6e7c65ff399ec5f22"
+      "sha256": "a5b607301ca60d2bb4327b68afad1cbe6dd5303efc9c11d0f4de59d870a5e7e0"
     },
     {
       "path": "package.json",
-      "sha256": "68993bf0699b3ec9eb8f92c544eba91f8dce5f7ddb6cd2b7d9bf6d9adaa91616"
+      "sha256": "42ec31515fe3a4478a2c9c8650f8d2c229d5ff733d3b16950509ac712b135c67"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2449,5 +2453,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "e11746480815a06e57af607d33b81ff48b288b7705685675bd5f19631e9cd8db"
+  "sha256": "030750dee1b06cde6864999ffadce4a1b3e28a6501f938902cfb607e50ff10e3"
 }

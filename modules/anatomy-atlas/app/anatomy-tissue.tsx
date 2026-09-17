@@ -3,6 +3,7 @@ import { useEffect, useLayoutEffect, useMemo } from 'react';
 import { useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 import { labelDepthSurface } from '@/lib/label-depth';
+import { tissuePicking } from '@/lib/tissue-picking';
 import {
   applyMaterialInspection,
   clippedMeshRaycast,
@@ -33,6 +34,8 @@ export function AnatomyTissue({
   clippingPlanes?: THREE.Plane[];
 }) {
   const invalidate = useThree((s) => s.invalidate);
+  // Reserve the bounded cache for the measured dense-muscle picking bottleneck.
+  useEffect(() => ghost || !muscle ? undefined : tissuePicking.retain(geometry), [geometry, ghost, muscle]);
   const { material, contour } = useMemo(() => {
     geometry.computeBoundingBox();
     const size = geometry.boundingBox!.getSize(new THREE.Vector3()),

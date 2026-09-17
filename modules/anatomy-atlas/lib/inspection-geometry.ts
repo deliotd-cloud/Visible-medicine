@@ -12,6 +12,7 @@ import {
   sectionLevel,
   type InspectionState,
 } from './inspection-state';
+import { tissuePicking } from './tissue-picking';
 
 /** World-space plane, translated with a structure so explode preserves the assembled cut. */
 export function sectionPlanes(
@@ -67,7 +68,7 @@ export function clippedMeshRaycast(
   const material = this.material as Material;
   if (!material || Array.isArray(material) || material.opacity < 0.2) return;
   const candidates: Intersection[] = [];
-  Mesh.prototype.raycast.call(this, raycaster, candidates);
+  tissuePicking.raycast(this, raycaster, candidates);
   for (const hit of candidates)
     if (pointRetained(hit.point, material.clippingPlanes ?? [])) hits.push(hit);
 }

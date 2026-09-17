@@ -40,6 +40,8 @@ export async function build(options) {
                 root,
                 'node_modules/three/build/three.module.js',
               );
+            else if (args.path === 'three-mesh-bvh')
+              target = resolve(root, 'node_modules/three-mesh-bvh/src/index.js');
             else if (args.path.startsWith('@/'))
               target = resolve(root, args.path.slice(2));
             else if (args.path.startsWith('.') || isAbsolute(args.path))
