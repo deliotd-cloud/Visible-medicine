@@ -13,7 +13,9 @@ export default async function ThreeDAtlas({searchParams}:{searchParams:Promise<R
   if(!region)notFound();
   const studySuffix=atlasStudySuffix(params);
   if(studySuffix===null)notFound();
-  if(!region.href.startsWith('/atlas/3d'))redirect(region.href);
+  // A source-bound study must reach the module before identity validation.
+  // Plain navigation keeps the established dedicated regional pages.
+  if(!studySuffix&&!region.href.startsWith('/atlas/3d'))redirect(region.href);
   const source=`/atlas-runtime/head-neck/index.html?region=${region.id}${studySuffix}`;
   return <main className="shoulder-module-page">
     <header className="shoulder-module-bar">

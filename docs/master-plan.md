@@ -2,6 +2,17 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — selection-preserving regional continuation
+
+The shared Atlas source now exposes available region/whole-body study links
+through its existing collapsed panel. These update the top-level website route
+as well as the selected anatomy. The generic 3D page retains source-bearing study
+requests for dedicated regions; plain navigation keeps the established pages.
+Source revision, scope and side validation remain in the module, with bounded
+host transport and unchanged independent access rights. The newer module awaits
+the existing two-model staging gate; website route support alone does not activate
+that runtime. Evidence/recovery are in the coordinating cross-region checkpoint.
+
 ## 17 September — regional stage-only registration
 
 The two prepared model hashes are registered for administrator staging only;
