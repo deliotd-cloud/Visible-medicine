@@ -2,6 +2,29 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — individual intrinsic-laryngeal teaching
+
+Seven existing muscle selections now have source-specific Anatomy and Function
+drafts instead of one shared group paragraph. Posterior/lateral cricoarytenoids,
+transverse arytenoid and oblique arytenoids have distinct attachment/action
+explanations, preserving the existing study window and static mesh limitations.
+No new controls, nerve geometry, simulated phonation, scans or entitlements are
+introduced. TTUHSC provides a factual cross-check (no copied assets); Montoya
+et al. 2019 supplies CC BY4.0 motor context with attribution/adaptation notice.
+
+The bounded transition replaces14 draft payloads without claiming14 newly
+completed topics; 9,904 other placements and all recipes remain unchanged.
+Actual desktop/mobile checks cover all28 note renders and reference access.
+Atlas docs/LARYNGEAL_MUSCLE_TEACHING.md and
+docs/LARYNGEAL_MUSCLE_REFERENCES_20260917.md record source and review boundaries;
+the coordinating LARYNGEAL-TEACHING-CHECKPOINT-20260917.md records final tests,
+builds and verified recovery copies. Final clinical sign-off remains required.
+
+Website84 is still the last verified deployment. Authenticated model staging,
+physical-device acceptance and separate Atlas/case/lecture rights remain gates.
+Full goal ACTIVE, hourly review PAUSED; continue broader substantive anatomy and
+Education integration rather than repeating completed slices or MRI synthetic QA.
+
 ## 17 September — clearer pelvic landing view
 
 The local Atlas pelvis viewer now opens with a closer camera framing and uses
