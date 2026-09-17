@@ -2,6 +2,25 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — complete regional upgrade prepared, not activated
+
+Atlas source a5baf03b has a verified offline regional module candidate containing
+all recent source and teaching/UI improvements: 12 scopes, 1,103 whole-body root
+selections and 104 nested selections. Existing 131 unique website models / 137
+paths are retained exactly; the proposed combined registry is 133 / 139. Only
+the already-admitted corpus-spongiosum and short-ciliary models require new
+storage (77,120 bytes total). Audit-only pulmonary files are not release inputs.
+
+The current website runtime, active inventory, access policy and private audience
+are unchanged. Register the two hashes for administrator staging first, upload
+and verify actual complete bytes through a legitimate authenticated session,
+then activate the generated module and matching inventory/policy with the existing
+protected-delivery process. No storage or clinical approval is inferred from
+the local candidate. Browser control initialization still fails; an alternative
+browser reaches sign-in only. Do not bypass authentication or retry unchanged
+failures. Atlas docs/WEBSITE_UPGRADE_PREPARATION.md and the coordinating checkpoint
+hold the exact export, candidate browser evidence, bindings and recovery paths.
+
 ## 17 September — neck clinical and CT/MRI drafts
 
 Atlas adds sixteen source-bound draft placements using six topic texts: Clinical,
