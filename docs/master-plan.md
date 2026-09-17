@@ -2,6 +2,30 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — remaining major-organ Function drafts
+
+Thirteen further source-bound root selections now have original Function notes:
+pancreas, stomach, small/large intestine, gallbladder, paired kidneys, bladder,
+esophagus, trachea, spleen and paired adrenals. They use the existing notes panel,
+adding no controls or geometry. Primary NIH/NCI text references, institutional
+credits and original-source links are retained; no images, logos or patient data
+are imported. Root surfaces, nested detail and the independent unregistered HRA
+renal specimen remain explicitly distinguished. These are introductory drafts,
+not a claim of comprehensive organ teaching or physiological simulation.
+
+The new immutable transition preserves all other 9,905 root-topic placements.
+The previous heart/lung/liver records and accepted hashes remain unchanged;
+history checks normalize newer content before checking that earlier milestone.
+See Atlas docs/MAJOR_ORGAN_FUNCTION.md and its validation report, with exact
+browser/build/backup evidence in the coordinating major-function checkpoint.
+
+Revision-bound radiologist review, physical-device acceptance and authenticated
+model staging remain separate gates. Atlas, case and paid-lecture rights remain
+independent. This is a source update, not publication: website84 remains the last
+verified deployment. Continue the full anatomy/Education roadmap, including the
+remaining vessel-visibility regression and wider regional teaching; do not repeat
+completed native MRI synthetic QA. Full goal ACTIVE; hourly review PAUSED.
+
 ## 17 September — loading gate and major-organ gap audit
 
 The Atlas loading suite no longer mistakes the current memoized retry-question
