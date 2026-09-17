@@ -126,9 +126,9 @@ Counts are representations with displayed copy, not unique lessons, complete top
 | Anatomy | 1100 | 2 | 0 | 0 |
 | Function | 1097 | 0 | 5 | 0 |
 | CT | 782 | 0 | 320 | 0 |
-| MRI | 739 | 0 | 363 | 0 |
+| MRI | 745 | 0 | 357 | 0 |
 | X-ray | 344 | 0 | 758 | 0 |
-| Ultrasound | 497 | 0 | 605 | 0 |
+| Ultrasound | 503 | 0 | 599 | 0 |
 | Pathology | 1092 | 0 | 10 | 0 |
 | Clinical | 1095 | 0 | 7 | 0 |
 | Quiz notes | 71 | 0 | 0 | 1031 |

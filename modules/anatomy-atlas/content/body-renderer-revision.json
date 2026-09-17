@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "86f48f4db2dd1c736bc8834d0ce02db5af476568ecca4b33e7fbab5a808ad7aa"
+      "sha256": "4871da3cfe0fff551d5fc9b5f13016be842ef28fe74f6ff7f0a9dc51c39f3161"
     },
     {
       "path": "app/body-explorer.css",
@@ -499,6 +499,14 @@
     {
       "path": "content/collicular-brachia-teaching.ts",
       "sha256": "f805f4ab67d5d0ae82a0e2bd9116d0e2a7b31f837d05d349dd8cfabd1172428d"
+    },
+    {
+      "path": "content/connective-imaging-pins.json",
+      "sha256": "904dba861d0d5ec45cd8bca9b2e8cf2457fbd9b295f4d692628d5fd4dcf28697"
+    },
+    {
+      "path": "content/connective-imaging.ts",
+      "sha256": "92070b2ee9dc0c0a4ced431486f5cdc2f1964955fecb15f37ceb578470be095c"
     },
     {
       "path": "content/core-organ-function-pins.json",
@@ -1347,6 +1355,10 @@
     {
       "path": "lib/connective-curriculum.ts",
       "sha256": "7ad26feb11b3ebfc29561d4e34acb1186b777fad526ed5ce096d7dd3abcc7f00"
+    },
+    {
+      "path": "lib/connective-imaging.ts",
+      "sha256": "ea8a9e4ebf5707022a4d84d2391b18daedb2bbd5a0bd87abc74fee61d1218ad3"
     },
     {
       "path": "lib/content-types.ts",
@@ -2214,7 +2226,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "c936167651dc72384703e88dcd30e2da6a0e7f3eeab04d6d5d8f1199783962cc"
+      "sha256": "dbbb11d8817a2819afc748f82be2bf5cd6d21cd2cd165d5197400407df73be79"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2409,5 +2421,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "dbb0f0320da0e920eafa2e9b30a975f5fac6ffafc97e6fcaf3cd75084723801e"
+  "sha256": "675846fe7515656140849f4e7859b3a62dae6614e1f5bbf64f5b33af97274507"
 }

@@ -4,7 +4,9 @@ import {isDeepStrictEqual} from 'node:util';
 import {hash,snapshot} from './pin-pica-clinical.mjs';
 import pins from '../content/major-bone-imaging-pins.json' with {type:'json'};
 import after from '../content/major-bone-imaging.transition.json' with {type:'json'};
+import {authoringBeforeConnectiveImaging} from './connective-imaging-history.mjs';
 export function authoringBeforeMajorBoneImaging({api,catalog},{deferWholeSnapshot=false}={}){
+ api=authoringBeforeConnectiveImaging({api,catalog},{deferWholeSnapshot:true});
  assert.equal(hash(pins),'680ee6a38b743979f94da78b9d65d7fc9f271366b06a1ec34032168c1a6a40d3');
  assert.equal(hash(after),'073cc2147c8447a0f9c9450b46bb5cae69f1b4c8ff49e52eabcbce96f475c00a');
  assert.equal(after.parentCommit,pins.sourceCommit);assert.equal(after.previousAllLessonsAndRecipesHash,pins.previousAllLessonsAndRecipesHash);

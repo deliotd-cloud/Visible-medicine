@@ -112,6 +112,7 @@ import { cranialBoundaryClinicalLesson } from '../lib/cranial-boundary-clinical'
 import { costalCartilageImagingLesson } from '../lib/costal-cartilage-imaging';
 import { corpusImagingLesson } from '../lib/corpus-imaging';
 import { majorBoneImagingLesson } from '../lib/major-bone-imaging';
+import { connectiveImagingLesson } from '../lib/connective-imaging';
 import { inferiorThyroidLesson } from '../lib/inferior-thyroid-arteries';
 import { subscapularArteryLesson } from '../lib/subscapular-arteries';
 import { elbowArteryLesson } from '../lib/elbow-arteries';
@@ -193,6 +194,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   const neckTeaching = neckTeachingLesson(s, tab);
   const majorBoneImaging = majorBoneImagingLesson(s, tab);
+  const connectiveImaging = connectiveImagingLesson(s, tab);
+  if (connectiveImaging) return connectiveImaging;
   if (majorBoneImaging) return majorBoneImaging;
   const corpusImaging = corpusImagingLesson(s, tab);
   if (corpusImaging) return corpusImaging;

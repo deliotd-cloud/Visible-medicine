@@ -949,6 +949,14 @@ not a commercial reuse grant. Original text/code retain MIT terms and existing
 BodyParts3D CC BY 4.0 notices remain unchanged. No dependency, model, font,
 texture, paid API or mandatory service added. See docs/MAJOR_BONE_IMAGING.md.
 
+Membrane/retinaculum imaging teaching (17 September2026) adds original brief
+factual synthesis and reading links to McGinley2004, Fester2002, He2023, Durkee2003,
+Mesgarzadeh1989 and Calleja Cancho1989. Public reading access is not a commercial
+asset licence; no publisher prose passages, figures, tables, diagrams, scans,
+protocols or datasets are bundled. Original text/code retain MIT terms and
+existing BodyParts3D CC BY4.0 attribution remains. No new model, dependency,
+font, texture, paid API or mandatory service added. See docs/CONNECTIVE_IMAGING.md.
+
 Run:
 
 ```bash

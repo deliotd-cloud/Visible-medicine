@@ -7,7 +7,8 @@ import {authoringBeforeMajorBoneImaging} from './major-bone-imaging-history.mjs'
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import pins from '../content/major-bone-imaging-pins.json' with {type:'json'};
 import after from '../content/major-bone-imaging.transition.json' with {type:'json'};
-const c=await context(),{api,display}=c,before=authoringBeforeMajorBoneImaging(c),original=JSON.stringify(display);
+import {authoringBeforeConnectiveImaging} from './connective-imaging-history.mjs';
+const current=await context(),c={...current,api:authoringBeforeConnectiveImaging(current)}, {api,display}=c,before=authoringBeforeMajorBoneImaging(c),original=JSON.stringify(display);
 assert.equal(hash(snapshot(api,display)),after.currentAllLessonsAndRecipesHash);
 assert.equal(hash(snapshot(before,display)),pins.previousAllLessonsAndRecipesHash);
 assert.equal(authoringBeforeMajorBoneImaging({...c,api:before}),before);
