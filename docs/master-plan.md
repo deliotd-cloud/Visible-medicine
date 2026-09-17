@@ -2,6 +2,24 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — comparison lifecycle reliability
+
+Atlas source now prevents errors from superseded CT/MRI comparison operations
+overwriting a newer frame, loading state or access denial. Eighteen re-entrant
+failure combinations and current-failure checks pass with synthetic fixtures;
+no live case, spatial registration or entitlement is introduced. The independent
+navigation test now loads the installed Vinext link implementation, preserving
+actual component coverage. See Atlas docs/IMAGING_REENTRANCY_20260917.md and the
+coordinating checkpoint for exact checks, remaining failures and recovery.
+
+The next verified content gap is the generic Function fallback for heart,
+bilateral lungs and liver. A bounded source-bound teaching brief with primary
+references is saved in the main task as work/NEXT-ORGAN-FUNCTION-20260917.md;
+it is not implemented or clinically signed off yet. Native MRI QA is already
+complete within its documented synthetic scope; Didanix Education/light remains
+the learner-viewer target. Website84 remains last verified deployment, pending
+model staging is unchanged, native goal ACTIVE and hourly review PAUSED.
+
 ## 17 September — source-bound pelvic comparison focus
 
 The Atlas source now offers “Male pelvis: urethra & corpus spongiosum” in the
