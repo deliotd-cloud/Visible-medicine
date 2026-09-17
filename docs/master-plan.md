@@ -2,6 +2,33 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — loading gate and major-organ gap audit
+
+The Atlas loading suite no longer mistakes the current memoized retry-question
+counter for a wiring failure. It executes the real initializer and rejects four
+broken variants, retaining load/recovery/practice checks and the raw-catalog
+baseline. No runtime, source geometry or accepted hash changed. See Atlas
+docs/LOADING_GATE_REPAIR_20260917.md and its regenerated validation report.
+
+An actual-dispatch audit at Atlas 55086d1e found 13 remaining major-organ roots
+with generic one-line Function notes despite draft status. The next coherent
+content increment covers digestive, renal/urinary, tracheal, splenic and adrenal
+function with primary NIH text references, exact source binding and current
+root/nested/independent-specimen limits. See docs/MAJOR_ORGAN_FUNCTION_PLAN.md.
+This is a verified gap/reference plan, not a claim that those notes are written.
+No new interface controls or imported media are needed. The other 70 organ
+entries are not certified complete by this audit.
+
+The older organ-history gate now passes with its original accepted hashes:
+the serializer consistently uses historical tabs, shoulder content and recipes
+instead of mixing eras. All 26 source-index observations and 10 negative cases
+pass, and the new core-organ Function regression also passes. See Atlas
+docs/ORGAN_HISTORY_REPAIR_20260917.md. The vessel-visibility gate remains separate
+follow-up work; these focused checks are not an all-suite pass.
+The coordinating checkpoint records final results and exact GitHub/D recovery.
+Website84 remains the last verified deployment; full goal ACTIVE, hourly review
+PAUSED, and clinical/source-staging/independent-entitlement gates remain intact.
+
 ## 17 September — core-organ Function teaching
 
 Four exact Atlas root selections (heart, right/left lungs and liver) now have
