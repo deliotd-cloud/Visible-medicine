@@ -2,6 +2,23 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — regional vascular clinical drafts
+
+Atlas source adds ten draft placements for six existing arterial selections:
+paired subscapular, descending lateral circumflex femoral and inferior epigastric
+arteries. Five topic texts address branch variation, reconstructive context and
+reported injury/bleeding. Existing compact teaching panels are reused; all 9,908
+other topics, source geometry and dissection recipes remain unchanged.
+
+Inferior epigastric vein Pathology remains pending for better specific evidence;
+arterial claims are not transferred to veins. Existing epigastric Clinical notes
+are preserved. Reference/reuse scope and radiologist review requirements are in
+Atlas docs/REGIONAL_VASCULAR_CLINICAL.md. No publisher media or patient data added.
+
+Source-only: website runtime/publication 84 unchanged. Actual test, browser and
+GitHub/D recovery evidence is recorded in the coordinating checkpoint. No
+clinical/device/hosted acceptance is inferred; existing release gates remain.
+
 ## 17 September — upper-limb venous clinical drafts
 
 Atlas source adds12 Clinical/Pathology draft placements for paired medial brachial,
