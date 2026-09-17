@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {context,hash,snapshot} from './pin-pica-clinical.mjs';
+import {beforeCubitalStudies} from './cubital-study-history.mjs';
 import {beforeRegionalBranchImaging} from './regional-branch-imaging-history.mjs';
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {build} from './workspace-test-build.mjs';
@@ -9,7 +10,7 @@ import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 import pins from '../content/regional-branch-imaging-pins.json' with {type:'json'};
 import after from '../content/regional-branch-imaging.transition.json' with {type:'json'};
 import {regionalBranchImagingSelections,regionalBranchImagingTopics,regionalBranchImagingReferences} from '../content/regional-branch-imaging.ts';
-const {api,display}=await context({current:true}),before=beforeRegionalBranchImaging(api);
+const current=await context({current:true}),api=beforeCubitalStudies(current.api),display=current.display,before=beforeRegionalBranchImaging(api);
 assert.equal(hash(snapshot(api,display)),after.currentAllLessonsAndRecipesHash);
 assert.equal(hash(snapshot(before,display)),pins.previousAllLessonsAndRecipesHash);
 // Independent application replay from the saved parent, not just self-consistent fixtures.

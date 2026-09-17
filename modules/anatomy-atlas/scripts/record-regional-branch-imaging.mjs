@@ -1,8 +1,9 @@
 import assert from 'node:assert/strict';
 import {readFile,writeFile,access} from 'node:fs/promises';
 import {context,hash,snapshot} from './pin-pica-clinical.mjs';
+import {beforeCubitalStudies} from './cubital-study-history.mjs';
 import pins from '../content/regional-branch-imaging-pins.json' with {type:'json'};
-const {api,display}=await context({current:true}),prior=new Map();
+const current=await context({current:true}),api=beforeCubitalStudies(current.api),display=current.display,prior=new Map();
 const entries=pins.entries.map(e=>({id:e.identity.id,sections:Object.fromEntries(e.topics.map(t=>{const lesson=api.bodyLesson(e.identity,t);assert.equal(lesson.readiness,'draft');assert.equal(e.previous[t].readiness,'pending');prior.set(e.identity.id+'|'+t,e.previous[t]);return[t,hash(lesson)];}))}));
 const before={...api,bodyLesson:(s,t)=>prior.get(s.id+'|'+t)??api.bodyLesson(s,t)};
 assert.equal(hash(snapshot(before,display)),pins.previousAllLessonsAndRecipesHash,'Unrelated teaching/recipes changed');

@@ -7,8 +7,8 @@
     "integration/shoulder/education-api.ts": "4f2017f78d81c821c64ecd85ff3a60bb442cf3bc207b62da0718bc1f7a13afe0",
     "lib/regional-framing.ts": "4d492111fb7ceb7514e574b74557ba4ae242b64336e70c31d741d2921b677966",
     "lib/dissection-scope.ts": "6e47c630ce09ec51fe7b5e1156d85a49c25eded02e044775ee053e7096fbe0ff",
-    "app/dissection-data.ts": "dda785abad228be58120a5207bf0bb4a2c8ca06cfc3e32c11b75f678e0ba44af",
-    "app/body-explorer.tsx": "9fb5c82d5f97118a1894ac2a554964eb29dcb080b1572a633e83b80d97e95782",
+    "app/dissection-data.ts": "37c47f21aec2ffead30c273661d023493467273f2845c520ffdc7bdc6db20dc5",
+    "app/body-explorer.tsx": "24f310fb0f2dd41d573ea050c551b0edd0f45e2a956d1902605a60a5abb2d7a5",
     "lib/lower-venous-imaging.ts": "56d60e3802bfc6dd8797fa2c36048916306b0084142a4b59e07b070e0f2b7e76",
     "lib/iliac-venous-imaging.ts": "67be90455b641db01288ce8a4fe837f2f20082b0b713840835971bd42c4ef4f2",
     "lib/forearm-arterial-imaging.ts": "aec224f8e9bc14efd9e358d5a9ec85debdf3d9f2f1c2223ba5ee6cf4c0f2905c",
@@ -17,6 +17,10 @@
     "lib/genicular-imaging.ts": "2bf7b934b7178723d6f4d258899ebc99a4c6f098bf4d3c4bc3f83778bba8fcf5",
     "lib/regional-branch-imaging.ts": "6ac9b5db250917a4229d9ebd22166ea6e3ef7cc340649c7cd942bdd2ead9f697",
     "content/regional-branch-imaging.ts": "e7f36ff635614115799848acca5324a73bd06c23eed1bc47fec21abd93cc7bd5",
+    "content/cubital-studies.ts": "d64d5fc98ed1a8f91d3143b41e7945f013beaeb232d90e54ef0fb8f285bb1986",
+    "content/cubital-study-pins.json": "e787db76a21b7c3844a74f86e72b61d380345fccd72503030863d97d43b631c0",
+    "content/cubital-study-transition.json": "f552e224d32ed03fb55729885a032fa30ffdf989d09f4aae39c44460f34feeae",
+    "lib/cubital-studies.ts": "11b9e624adc0c5034ad0b6f31d0399e5f1854d65230d1e30803e6fbebbb6b33d",
     "content/regional-branch-imaging-pins.json": "9fdb5451f4228321d8fe7af815397f01c283ed3d2dcf4178966ba2c0f1e59f68",
     "content/regional-branch-imaging.transition.json": "bbef84372c8fa9d7bbfc0c2b2bd4e653e0456c8828c8b98ccc575258a73f9038",
     "content/genicular-imaging.ts": "c95faad0c2c4fe2a5fcc5c6f04e2f1dda92abf1452c9305d4b27c59647f5e259",
@@ -67,7 +71,7 @@
     "lib/venous-drainage.ts": "461295771de1b34288fb3db0b87833d1398b60f81eb88b4a410b18bed608524c",
     "public/models/bodyparts3d/portal-veins/catalog.json": "2ce331f3cecbd67a2fe75f873c79d0c187b67fc4131b34cab8a44833c4a37ae8",
     "docs/portal-vein-source-audit.json": "506b3aca1b61897dcb4f625c189e243a423957c0438f08baa42ae53a742ef5aa",
-    "lib/limb-vascular-studies.ts": "2c05685f1bf069244fe8c02d04c91a25424de136e554425e421cda82e8630770",
+    "lib/limb-vascular-studies.ts": "c55445f250d3037ab7874c49d56d55eb88bf9cd7acf5e3ba9a5a5905f6c519e6",
     "lib/arm-vascular-studies.ts": "24996e2997a84263322436050fc7765ae97ca178595b09f34a21b23736ec6c51",
     "content/arm-vascular-studies.ts": "4def11852e5843a9ee57a298d4f69758f0b7bd2451f627a951985ca90bb15d0d",
     "content/arm-vascular-study-pins.json": "534d166d46212fedb3316c8113162f7e18ab70fe0adea43501af475796b92374",
@@ -345,7 +349,7 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "922273a7d28a5cc822fbc6f59160803a16c28613647a32809efb50ad713030b0",
+    "resolvedContentAndRecipeData": "e3898ceb5b089aeb9ca267cc25737e005d150beb4dc9b6091d1748643aa68206",
     "explicitTopicReadiness": "b2911b2f8007d9be9aa877db4e2fc3ee5602ed2fc486708f8ad165359635faea",
     "reasoningQuestionData": "3052d88e4b5e2c1dd55f34d37989a4d847e91e41d5707a48a6a876c2d15fb883",
     "nestedTeachingData": "ef9aba8c7dd92a02e7cf6ba5fde6eccef8539d12a1666de387687f2f771efe11"
@@ -1608,7 +1612,7 @@
     "pulmonaryBranchTypeOptionalBundles": 2,
     "ventricularRelationshipPresets": 3,
     "stages": 159,
-    "focuses": 174
+    "focuses": 176
   },
   "practice": {
     "identificationModes": [

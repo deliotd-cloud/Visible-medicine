@@ -1,0 +1,155 @@
+{
+  "sourceCommit": "c442b24d83b7dae377f937a0a3e4411a4cffef3a",
+  "before": "13d112b3447a1afd262a3ef4cc9efe4c569382165457ce6bfacb24f3e6ffd1b7",
+  "after": "aea978c4956477af450dcfb19a69ddd44fb23e18ee9082041347fb1d848f2a90",
+  "patches": [
+    {
+      "region": "whole-body",
+      "added": [
+        {
+          "id": "cubital-muscle-arterial",
+          "title": "Elbow: muscles & arteries",
+          "rule": {
+            "fmaIds": [
+              "FMA38486",
+              "FMA38487",
+              "FMA38560",
+              "FMA38561",
+              "FMA38562",
+              "FMA38563",
+              "FMA37668",
+              "FMA37669",
+              "FMA38513",
+              "FMA38514",
+              "FMA22691",
+              "FMA22692",
+              "FMA22733",
+              "FMA22734",
+              "FMA22797",
+              "FMA22798"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA23130",
+                "FMA23131",
+                "FMA23464",
+                "FMA23465",
+                "FMA23467",
+                "FMA23468",
+                "FMA37684",
+                "FMA37685",
+                "FMA37686",
+                "FMA37687"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare anterior elbow muscles and the supplied brachial, radial and ulnar arteries. Choose Left or Right for one elbow; the whole-body scope brings arm and forearm sources together.",
+          "inspect": "Brachialis and supinator form the anatomical floor context. Compare them with the biceps heads, brachioradialis and pronator teres heads. Select and hide a covering muscle, then Undo to restore it. The biceps tendon is not independently segmented; source proximity does not prove arterial continuity. Whole surfaces extend beyond the close-up; pan or separate to inspect them. Nerves, skin, fascia and bicipital aponeurosis are not supplied. This is not a complete cubital fossa, verified vessel junction, puncture guide or registered scan. Return separation to 0% for original source positions. Anatomical review is pending.",
+          "landmarks": [
+            "brachial artery$",
+            "brachialis$",
+            "supinator$",
+            "brachioradialis$"
+          ]
+        },
+        {
+          "id": "cubital-superficial-veins",
+          "title": "Elbow: superficial veins",
+          "rule": {
+            "fmaIds": [
+              "FMA22964",
+              "FMA22965",
+              "FMA13325",
+              "FMA13326",
+              "FMA22909",
+              "FMA22910"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA23130",
+                "FMA23131",
+                "FMA23464",
+                "FMA23465",
+                "FMA23467",
+                "FMA23468",
+                "FMA38486",
+                "FMA38487",
+                "FMA38560",
+                "FMA38561",
+                "FMA38562",
+                "FMA38563",
+                "FMA37668",
+                "FMA37669",
+                "FMA38513",
+                "FMA38514",
+                "FMA37684",
+                "FMA37685",
+                "FMA37686",
+                "FMA37687"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Inspect the supplied median cubital, cephalic and basilic veins against the same elbow muscle and bone context. Arteries are set aside to distinguish this superficial venous view.",
+          "inspect": "Superficial cubital venous connections vary; the named median cubital connection is not universal. These source surfaces are one available set, not a complete venous network or a map of safe access. Select a vein to read its existing notes, or extract it and Undo a removal. Whole surfaces extend beyond the close-up; pan or separate to inspect them. Nerves, skin, fascia and bicipital aponeurosis are not supplied. This is not a complete cubital fossa, verified vessel junction, puncture guide or registered scan. Return separation to 0% for original source positions. Anatomical review is pending.",
+          "landmarks": [
+            "median cubital vein$",
+            "cephalic vein$",
+            "basilic vein$"
+          ]
+        }
+      ],
+      "referencesBefore": [
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/thigh_tables.html",
+        "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/schemes/inguinal_tables.html",
+        "https://anatomy.ttuhscep.edu/schemes/abdo_wall_ing_questions/abdo_wall_12_feedback.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/veins_pelvis_perineum.html",
+        "https://anatomy.ttuhscep.edu/reproductive_system/pelvicwall_tables.html",
+        "https://pubmed.ncbi.nlm.nih.gov/17373712/",
+        "https://nba.uth.tmc.edu/neuroanatomy/L11/Lab11p09_index.html",
+        "https://publish.uwo.ca/~jkiernan/brndiss.htm",
+        "https://link.springer.com/article/10.1007/s00701-026-06791-w"
+      ],
+      "referencesAfter": [
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/thigh_tables.html",
+        "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/schemes/inguinal_tables.html",
+        "https://anatomy.ttuhscep.edu/schemes/abdo_wall_ing_questions/abdo_wall_12_feedback.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/veins_pelvis_perineum.html",
+        "https://anatomy.ttuhscep.edu/reproductive_system/pelvicwall_tables.html",
+        "https://pubmed.ncbi.nlm.nih.gov/17373712/",
+        "https://nba.uth.tmc.edu/neuroanatomy/L11/Lab11p09_index.html",
+        "https://publish.uwo.ca/~jkiernan/brndiss.htm",
+        "https://link.springer.com/article/10.1007/s00701-026-06791-w",
+        "https://anatomy.ttuhscep.edu/schemes/axilla_ans.html",
+        "https://pubmed.ncbi.nlm.nih.gov/23131916/"
+      ]
+    }
+  ]
+}

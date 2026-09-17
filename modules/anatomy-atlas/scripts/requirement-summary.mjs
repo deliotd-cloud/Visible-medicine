@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Anterior elbow studies](CUBITAL_STUDIES.md) bring 32 existing arm/forearm selections together in two focused whole-body views: muscles/arteries and superficial veins. Source-derived elbow close-ups, side filters, removal, extraction and Undo reuse existing controls. Whole surfaces remain unchanged; nerves, fascia, bicipital aponeurosis and verified vessel junctions are not supplied. No procedure, patient registration or clinical approval is implied.
+
 [Regional branch imaging](REGIONAL_BRANCH_IMAGING.md) adds eight CT/MRI/Ultrasound draft placements across four existing descending lateral circumflex femoral and subscapular arteries. Specialised angiography and selected perforator evidence are distinguished from ordinary scans and reference geometry. Existing panels and all other content remain; no new model, image, procedure or clinical approval.
 
 [Genicular imaging](GENICULAR_IMAGING.md) adds eighteen CT/MRI/Ultrasound draft placements across ten existing arterial selections. CBCT is distinguished from routine CT; MRI guidance is limited to the inferior medial pair and ultrasound observations to three branch pairs. Unsupported sections remain pending. Existing panels, geometry and recipes are unchanged; no images, procedures or clinical approval are supplied.

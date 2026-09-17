@@ -1095,3 +1095,11 @@ Attribution 4.0 International. Its standalone review page also includes the
 installed Three.js MIT licence. No OpenStax illustrations or text extracts are
 redistributed; that source is linked for anatomical comparison only. See
 `docs/COLONIC_SOURCE_REVIEW.md`. No new paid dependency or model release is added.
+# Anterior elbow studies — 17 September 2026
+
+Two original study recipes reuse 32 existing BodyParts3D CC BY 4.0 selections.
+Attribution, source geometry and distribution obligations remain unchanged.
+TTUHSC cubital-fossa teaching and Mikuni et al. 2013 (PMID 23131916) are factual
+references only: no publisher media, copied prose, abstract, table or diagram
+is bundled or assumed commercially licensed. See `docs/CUBITAL_STUDIES.md`.
+No new dependency, font, texture, model, patient scan or paid service was added.

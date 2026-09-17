@@ -18,6 +18,7 @@ import { acralBoneStudySets, acralBoneReferences } from '../lib/acral-bone-studi
 import { spinalLevelStudySets, spinalLevelReferences } from '../lib/spinal-level-studies.ts';
 import { kneeStudySets, kneeStudyReferences } from '../lib/knee-studies.ts';
 import { elbowStudySets, elbowStudyReferences } from '../content/elbow-studies.ts';
+import { cubitalStudies, cubitalReferences } from '../content/cubital-studies.ts';
 import { tentoriumStudySets } from '../content/tentorium-studies.ts';
 import {
   longusColliStudySets,
@@ -1312,6 +1313,15 @@ for (const region of limbicLandmarkStudy.regions) {
 
 for (const region of ['pelvis', 'whole-body'])
   dissectionProfiles[region].focuses.push(pelvicUrethralFocus);
+
+for (const study of cubitalStudies) {
+  dissectionProfiles['whole-body'].focuses.push({
+    id: study.id, title: study.title, rule: { fmaIds: study.targetFmaIds },
+    context: study.context, includeSkeleton: false, view: study.view,
+    description: study.description, inspect: study.inspect, landmarks: study.landmarks,
+  });
+}
+dissectionProfiles['whole-body'].references.push(...cubitalReferences);
 
 export function matchesRule(s: BodyStructure, rule: TissueRule): boolean {
   return (

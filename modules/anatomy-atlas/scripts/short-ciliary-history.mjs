@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
 import {beforeLowerVenousImaging} from './lower-venous-imaging-history.mjs';
+import {preCubitalProfiles} from './cubital-study-history.mjs';
 import record from '../content/short-ciliary-transition.json' with {type:'json'};
 import teaching from '../content/short-ciliary-teaching.transition.json' with {type:'json'};
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
@@ -19,6 +20,7 @@ export function beforeShortCiliaryTeaching(api){
  return {...api,bodyLesson,bodyContent(s,t){const {readiness:_readiness,...content}=bodyLesson(s,t);return content;}};
 }
 export function preShortCiliaryProfiles(profiles){
+ profiles=preCubitalProfiles(profiles);
  verify();const additions=profiles['head-neck'].focuses.filter(f=>f.id===record.addedFocus.id);
  if(!additions.length)return profiles; // Historical caller still checks its immutable hash.
  assert.deepEqual(additions,[record.addedFocus]);assert.equal(hash(profiles),record.currentRecipesHash);

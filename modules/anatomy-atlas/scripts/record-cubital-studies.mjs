@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {dissectionProfiles} from '../app/dissection-data.ts';
+import {cubitalStudies,cubitalReferences} from '../content/cubital-studies.ts';
+const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
+const previous=structuredClone(dissectionProfiles),region='whole-body',ids=cubitalStudies.map(s=>s.id);
+const added=previous[region].focuses.filter(s=>ids.includes(s.id));assert.equal(added.length,2);
+assert(!previous[region].stages.some(s=>ids.includes(s.id)));
+previous[region].focuses=previous[region].focuses.filter(s=>!ids.includes(s.id));
+const referencesAfter=structuredClone(previous[region].references);
+assert.deepEqual(referencesAfter.slice(-cubitalReferences.length),cubitalReferences);
+previous[region].references=referencesAfter.slice(0,-cubitalReferences.length);
+assert.equal(hash(previous),'13d112b3447a1afd262a3ef4cc9efe4c569382165457ce6bfacb24f3e6ffd1b7','All previous recipes unchanged');
+const record={sourceCommit:'c442b24d83b7dae377f937a0a3e4411a4cffef3a',before:hash(previous),after:hash(dissectionProfiles),patches:[{region,added,referencesBefore:previous[region].references,referencesAfter}]};
+const text=JSON.stringify(record,null,2)+'\n',path='content/cubital-study-transition.json';
+if(process.argv.includes('--check'))assert.equal((await readFile(path,'utf8')).replace(/\r\n/g,'\n'),text);else await writeFile(path,text,{flag:'wx'});
+console.log(JSON.stringify({before:record.before,after:record.after,recordHash:hash(record)}));

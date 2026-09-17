@@ -78,7 +78,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "9fb5c82d5f97118a1894ac2a554964eb29dcb080b1572a633e83b80d97e95782"
+      "sha256": "24f310fb0f2dd41d573ea050c551b0edd0f45e2a956d1902605a60a5abb2d7a5"
     },
     {
       "path": "app/body-scene.tsx",
@@ -122,7 +122,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "dda785abad228be58120a5207bf0bb4a2c8ca06cfc3e32c11b75f678e0ba44af"
+      "sha256": "37c47f21aec2ffead30c273661d023493467273f2845c520ffdc7bdc6db20dc5"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -583,6 +583,14 @@
     {
       "path": "content/cricothyroid-teaching.ts",
       "sha256": "43e6e81da3b782aaefb0f806e57517edee327e1a24b9eaa748896aef93c033db"
+    },
+    {
+      "path": "content/cubital-studies.ts",
+      "sha256": "d64d5fc98ed1a8f91d3143b41e7945f013beaeb232d90e54ef0fb8f285bb1986"
+    },
+    {
+      "path": "content/cubital-study-pins.json",
+      "sha256": "e787db76a21b7c3844a74f86e72b61d380345fccd72503030863d97d43b631c0"
     },
     {
       "path": "content/deep-venous-clinical-pins.json",
@@ -1513,6 +1521,10 @@
       "sha256": "1e7d88df1c8f24a4b33b520637d00bdf64d498a5017c332a6ce4d2a1cc0828b9"
     },
     {
+      "path": "lib/cubital-studies.ts",
+      "sha256": "11b9e624adc0c5034ad0b6f31d0399e5f1854d65230d1e30803e6fbebbb6b33d"
+    },
+    {
       "path": "lib/cubital-veins.ts",
       "sha256": "1877da3b251cae1816573786fe271a94306571f606fb8410386a326efe3e30e6"
     },
@@ -1874,7 +1886,7 @@
     },
     {
       "path": "lib/limb-vascular-studies.ts",
-      "sha256": "2c05685f1bf069244fe8c02d04c91a25424de136e554425e421cda82e8630770"
+      "sha256": "c55445f250d3037ab7874c49d56d55eb88bf9cd7acf5e3ba9a5a5905f6c519e6"
     },
     {
       "path": "lib/limbic-landmarks.ts",
@@ -2390,7 +2402,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "e0905d5af15518687c8b1d4c10fbc958a2bd84deae74b86513402d0e4c841d32"
+      "sha256": "45d5d1b5951b0b2c7a46e544d8ad0e71bacd826ac97c29048bb845e102889d88"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2589,5 +2601,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "48e41ceca8c9e29abebf9cf5af220da25b9d7fd740699f4c8e843b004206bb9e"
+  "sha256": "f56fd67cd25ffea61250490e756bfcafe411a5524ca507154e07ffa023900f9e"
 }

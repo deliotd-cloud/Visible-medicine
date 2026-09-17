@@ -16,6 +16,8 @@ export * from './lib/atlas-practice';
 export * from './lib/anatomy-load-state';
 export * from './lib/knee-studies';
 export * from './lib/elbow-studies';
+export * from './lib/cubital-studies';
+export * from './lib/body-presentation-parts';
 export * from './lib/genicular-study';`,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
 const api=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
 const catalog=api.bodyDisplayCatalog(JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json','utf8')));
@@ -29,8 +31,8 @@ function expressions(text) {
   assert.equal(found.length,names.length,'All actual explorer derivations located exactly once');
   return ts.transpile(found.join('\n')+'\nreturn {'+names.join(',')+'};',{target:ts.ScriptTarget.ES2022});
 }
-const inputNames=['regionStructures','systems','profile','dissection','hiddenIds','loaded','failed','initialRegion','exam','focus','isolated','ghostRemoved','showOrigins','explode','layout','inspection','catalog','focusedStudy','practiceSampling','practiceMode','practiceResult','displayReady','practice'];
-const apiNames=['dissectionGuidance','matchesRule','practicePool','practiceCanStart','practiceQuestionCount','anatomyLoadSummary','missedPracticeIds','practiceRenderIds','requestedAnatomyBundles','kneeStudyBounds','elbowStudyBounds','genicularStudyBounds'];
+const inputNames=['regionStructures','presentationStructures','systems','profile','dissection','hiddenIds','loaded','failed','initialRegion','exam','focus','isolated','ghostRemoved','showOrigins','explode','layout','inspection','catalog','focusedStudy','practiceSampling','practiceMode','practiceResult','displayReady','practice'];
+const apiNames=['dissectionGuidance','matchesRule','practicePool','practiceCanStart','practiceQuestionCount','anatomyLoadSummary','missedPracticeIds','practiceRenderIds','requestedAnatomyBundles','kneeStudyBounds','elbowStudyBounds','genicularStudyBounds','cubitalStudyBounds'];
 function runner(text,cache=true) {
   const fn=new Function(...inputNames,...apiNames,'useMemo',expressions(text));
   let index=0,cells=[],calls={};
@@ -51,6 +53,10 @@ for(const region of Object.keys(api.dissectionProfiles))for(const side of ['both
   const profile=api.dissectionProfiles[region];
   const loaded=[...new Set(regionStructures.map(s=>s.bundle))];
   const input={regionStructures,systems:{...api.allBodySystems},profile,dissection:api.initialDissection,hiddenIds:[],loaded,failed:[],initialRegion:region,exam:false,focus:false,isolated:false,ghostRemoved:false,showOrigins:false,explode:0,layout:'spatial',inspection:{plane:'off'},catalog,focusedStudy:undefined,practiceSampling:'all',practiceMode:'reason',practiceResult:[],displayReady:true,practice:api.initialPractice};
+  // The old optimization baseline predates presentation-only source records.
+  // Replay that contract with identity presentation, then separately exercise
+  // today's actual presentation records against fresh current calculations.
+  input.presentationStructures=regionStructures;
   const before=runner(original),after=runner(source),uncached=runner(source,false);
   function check() {
     const actual=after.render(input),expected=before.render(input);
@@ -101,7 +107,16 @@ for(const region of Object.keys(api.dissectionProfiles))for(const side of ['both
     input.failed=[loaded[0]];check();input.failed=[];
     input.practice=api.initialPractice;input.exam=false;check();invalidations+=4;
   }
-  after.discard();check();scopes++;
+  after.discard();check();
+  input.presentationStructures=regionStructures.map(s=>api.bodyPresentationStructure(s,side));
+  for(const explode of [0,30,100]){
+    input.explode=explode;
+    const actual=after.render(input);
+    assert.equal(serial(actual),serial(uncached.render(input)),'Actual presentation records survive cache reuse/discard');
+    assert.deepEqual(actual.sceneStructures,input.presentationStructures);
+    comparisons++;
+  }
+  scopes++;
 }
 assert.equal(JSON.stringify(catalog),untouched,'Source records never mutated');
 const report={baselineSource:baseline,scopes,comparisons,presentationRenders:repeatedRenders,heavyHelperCallsOnPresentation:0,changedInputChecks:invalidations,...timing,sourceRecords:catalog.structures.length,anatomyChanged:false,clinicalApproval:false,browserInteractionTesting:false,limitations:'Memo semantics/dependency replay and local CPU sample, not WebGL, browser, touch, clinical acceptance or a performance guarantee.'};

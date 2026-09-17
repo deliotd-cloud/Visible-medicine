@@ -1,16 +1,16 @@
 {
   "baselineSource": "6b1385e522a90cda5f76aa5fc7e587673991c910",
   "scopes": 36,
-  "comparisons": 1044,
+  "comparisons": 1152,
   "presentationRenders": 432,
   "heavyHelperCallsOnPresentation": 0,
   "changedInputChecks": 864,
   "twelveWholeBodyDerivations": {
-    "beforeMs": 64.922,
-    "afterMs": 0.534,
+    "beforeMs": 124.079,
+    "afterMs": 0.409,
     "measurement": "Node execution of actual extracted explorer derivations; not browser frame rate or INP"
   },
-  "sourceRecords": 1101,
+  "sourceRecords": 1103,
   "anatomyChanged": false,
   "clinicalApproval": false,
   "browserInteractionTesting": false,

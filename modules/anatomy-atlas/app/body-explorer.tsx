@@ -41,6 +41,7 @@ import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
 import { Slider } from '@/components/ui/slider';
 import { ExplodeStyleSelect } from './explode-style-select';
+import { cubitalStudyBounds } from '@/lib/cubital-studies';
 import { RegionHeading } from './region-heading';
 import {
   Select,
@@ -583,7 +584,8 @@ export default function BodyExplorer({
     return (
       kneeStudyBounds(input) ??
       elbowStudyBounds({ ...input, catalog }) ??
-      genicularStudyBounds({ ...input, catalog })
+      genicularStudyBounds({ ...input, catalog }) ??
+      cubitalStudyBounds({ ...input, catalog })
     );
   }, [
     catalog,
@@ -1426,7 +1428,7 @@ export default function BodyExplorer({
       <WorkspaceOnly modes={['dissect']}>
         <details className="body-study-tools" open>
           <summary>
-            Dissection <small>{stage?.title ?? 'Custom view'}</small>
+            Dissection <small>{focusedStudy?.title ?? stage?.title ?? 'Custom view'}</small>
           </summary>
           <DissectionControls
             profile={profile}
@@ -1944,7 +1946,7 @@ export default function BodyExplorer({
                     ? 'Forearm close-up · Upper-arm context may extend off-screen · Full extent in View menu'
                     : 'Hand close-up · Proximal vessels off-screen'
                   : jointCloseUp
-                  ? `${initialRegion === 'forearm' ? 'Elbow' : 'Knee'} close-up · Whole bones extend beyond the view · Pan / pinch to explore`
+                  ? `${initialRegion === 'forearm' || initialRegion === 'whole-body' ? 'Elbow' : 'Knee'} close-up · Whole surfaces extend beyond the view · Pan / pinch to explore`
                   : layout === 'tray' && !exam
                     ? explode === 100
                       ? 'Arranged view · Pan / pinch to zoom · Choose a direction · Not anatomical positions'
@@ -2655,7 +2657,7 @@ export default function BodyExplorer({
               <WorkspaceOnly modes={['dissect']}>
                 <details className="dissection-guide-fold">
                   <summary>
-                    Study guide · {stage?.title ?? 'Custom view'}
+                    Study guide · {focusedStudy?.title ?? stage?.title ?? 'Custom view'}
                   </summary>
                   {studyGuide}
                 </details>
