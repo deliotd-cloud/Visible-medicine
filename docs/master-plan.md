@@ -2,6 +2,28 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — portal tributary and hepatic outflow teaching
+
+Eight existing portal/hepatic sources now have16 distinct Clinical/Pathology
+drafts. Gastric drainage routes, splenic-side hypertension, gastro-oesophageal
+collaterals and hepatic venous outflow are distinguished in the existing note
+panel. Right/left hepatic tributary groups retain their original disconnected
+components and are not promoted to complete trees or separately named veins.
+No geometry, patient images, diagnostic simulation, new controls or permissions.
+
+Arora2015, Kotecha2026 and Porrello2023 provide bounded CC BY4.0 reference
+context with credits/adaptation/licence links. No source figures, treatment
+protocols or procedures are imported. Atlas docs/PORTAL_HEPATIC_CLINICAL.md and
+PORTAL_HEPATIC_REFERENCES_20260917.md record scope; the coordinating checkpoint
+records final verification and recovery. All other9,902 topic placements,
+recipes, source geometry and independent Atlas/case/lecture rights are preserved.
+
+The full goal remains ACTIVE and hourly review PAUSED. Website84 is still the
+last verified deployment; nothing is published by this teaching increment.
+Authenticated model staging, physical-device checks and the owner's revision-
+bound radiologist sign-off remain separate release gates. Continue the wider
+atlas roadmap, not completed native MRI or prior camera checks.
+
 ## 17 September — source-bound deep lower-limb venous teaching
 
 Six existing anterior/posterior tibial and profunda femoris selections now have
