@@ -4,9 +4,11 @@ import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
 import pins from '../content/rectal-deferent-imaging-pins.json' with {type:'json'};
 import after from '../content/rectal-deferent-imaging.transition.json' with {type:'json'};
+import {authoringBeforeDeferentClinical} from './deferent-clinical-history.mjs';
 
 export const rectalDeferentImagingHash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 export function authoringBeforeRectalDeferentImaging({api,catalog}) {
+  api=authoringBeforeDeferentClinical({api,catalog});
   const hash=rectalDeferentImagingHash;
   assert.equal(hash(pins),'0361154e0406108f965ed83466a21ddc5f6468d5eefe93fc8524236604ceeb10');
   assert.equal(hash(after),'e160a2dad29e76c5e5a254744a18ca5a55ebcfe96589e2de8d80e1950e2385ae');

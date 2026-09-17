@@ -1,5 +1,19 @@
 # Third-party notices
 
+## Deferent-duct clinical drafts — 17 September 2026
+
+Original resolver code and two short teaching notes add four placements to
+unchanged BodyParts3D selections. Anatomical source: National Cancer Institute,
+SEER Duct System; source for congenital absence: MedlinePlus, National Library
+of Medicine; transport context: NIH NICHD About Vasectomy. Direct reading links
+and reuse-policy evidence are in docs/DEFERENT_CLINICAL.md. MedlinePlus Genetics
+summaries are public domain; this does not cover its licensed images or medical
+encyclopaedia. NCI text reuse requests source credit, retained here and in the
+guide. No publisher passage, table, image, scan, logo or dataset is imported.
+No new dependency, model, font, texture, subscription or mandatory fee is added.
+EAU guidance is excluded from this increment under its restrictive reuse terms;
+older EAU references elsewhere remain subject to a separate commercial-use audit.
+
 ## Rectal/deferent imaging drafts — 16 September 2026
 
 Original resolver code and short factual teaching add twelve placements to

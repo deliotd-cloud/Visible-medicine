@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "d8f3737a3d3090d6602d67c0ebb27145c6bec19e9c5b333c902c8e0092c104a1"
+      "sha256": "57846ace00c21b80a865652b7d16cfc65c89a838fc3a44e4d33115caab84bf42"
     },
     {
       "path": "app/body-explorer.css",
@@ -519,6 +519,14 @@
     {
       "path": "content/cricothyroid-teaching.ts",
       "sha256": "43e6e81da3b782aaefb0f806e57517edee327e1a24b9eaa748896aef93c033db"
+    },
+    {
+      "path": "content/deferent-clinical-pins.json",
+      "sha256": "57278b5842bd9e28e037f4a24530f037337881680bcc15828c5e08f2642e9494"
+    },
+    {
+      "path": "content/deferent-clinical.ts",
+      "sha256": "27a7bc0a7b413baa952fba022db20b39af2760bea1238056b6d8bde44f73e7c6"
     },
     {
       "path": "content/deferent-duct-study.ts",
@@ -1239,6 +1247,10 @@
     {
       "path": "lib/deep-neck-curriculum.ts",
       "sha256": "9b88d3f73c59d7447893bfc73e2b8217cda07ecb0940638d32722b066b95d53e"
+    },
+    {
+      "path": "lib/deferent-clinical.ts",
+      "sha256": "7a95522398b7b3bac652c8c225f9d50efa7b1c17769f44a557909f59a725066c"
     },
     {
       "path": "lib/deferent-ducts.ts",
@@ -1978,7 +1990,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "18b9015fdfcf56ca831e73ae089d1d26cfe5b6003d1ec00b9b32149a5ccc4318"
+      "sha256": "6bf11b8713746fdb9b8deda17440ceb01dd2c4d89d73f896b22733998433c1d1"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2173,5 +2185,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "94c313a42e41a052db3789a32fbc3c11854043fe059e8ad63b0a88bf896ca053"
+  "sha256": "31b76f0aa50e62572a70ffbd0ac4e6a28e38c49e901ceb9b438de881fdcced2f"
 }

@@ -1,5 +1,14 @@
 # Clinical validation checklist
 
+[Deferent Clinical/Pathology](DEFERENT_CLINICAL.md): review the four paired
+draft placements against exact left/right source identity and donor-specific
+course. Verify ureteric crossing/junction wording, transport versus production,
+CBAVD/CFTR association and the limits of normal surfaces. Hidden/unprovided
+geometry is not disease; no lumen, fertility, genotype, vasectomy outcome or
+patient registration can be inferred. Detailed inflammatory/traumatic and
+postoperative teaching is not completed by these introductory notes. Approval
+must identify the actual teaching/source/renderer revision.
+
 [Rectal/deferent imaging](RECTAL_DEFERENT_IMAGING.md): review twelve drafts
 against the root rectum and both exact sided duct surfaces. Check rectal
 compartments, endorectal ultrasound scope, duct course/junction wording and
