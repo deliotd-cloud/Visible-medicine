@@ -1,0 +1,1551 @@
+{
+  "sourceUrl": "https://cdn.humanatlas.io/digital-objects/ref-organ/united-female/v1.10/assets/3d-vh-f-united.glb",
+  "sourceSha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422",
+  "sourceBytes": 374505632,
+  "metadataSha256": "b9f137b1176c31419c68b78ac87f0926f874dad22f56d4dde7df3e2f15bab501",
+  "crosswalkSha256": "2a367d3ad8c1cf1b083c884aed7d99fb3b504d482e1e49570ecdb4f03c84d55f",
+  "sourceGroup": {
+    "nodeIndex": 995,
+    "nodeName": "Yao_lymph_node",
+    "metadata": null
+  },
+  "rows": [
+    {
+      "nodeIndex": 996,
+      "nodeName": "Yao_afferent_lymphatic_vessel",
+      "meshIndex": 816,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLymphNode",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "afferent lymphatic vessel",
+        "ontologyid": "UBERON:0010396",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0010396",
+        "glb_file_of_single_organs": "NIH_F_Lymph_Node&lf;",
+        "node_type": "mesh"
+      },
+      "crosswalk": {
+        "ontologyId": "UBERON:0010396",
+        "label": "afferent lymphatic vessel",
+        "originalRow": "Yao_afferent_lymphatic_vessel,UBERON:0010396,afferent lymphatic vessel"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "triangles": 4526,
+      "sourceVertices": 2266,
+      "worldBoundsMm": {
+        "min": [
+          12.864789925515652,
+          216.88324213027954,
+          -16.88273623585701
+        ],
+        "max": [
+          22.04342745244503,
+          220.90762853622437,
+          -9.625537320971489
+        ]
+      },
+      "indexAccessorSha256": "bfc2ae88e4ec77cc2942c211c6b954cec6628919f80a06840fc8c825f967df19",
+      "attributeAccessorSha256": {
+        "POSITION": "bdb0a8ecef1dbe82cbd1d84fc497e637cb25c9a5d8aefb435c2ce7d5095cd9bf",
+        "NORMAL": "2cae2a5d0c69eb284e96eb60aaae2b3fb1b17c1813a13c72bee856276b333c00"
+      },
+      "originalMaterial": {
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7843,
+            0.5215,
+            0.4823,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.249303535
+        },
+        "name": "lymph_mat"
+      },
+      "topology": {
+        "sourceVertices": 2266,
+        "exactUniqueVertices": 2266,
+        "unusedUniqueVertices": 0,
+        "triangles": 4526,
+        "edges": 6791,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 4,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 1,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 2466,
+            "vertices": 1234,
+            "bounds": {
+              "min": [
+                19.951200112700462,
+                216.88324213027954,
+                -12.00893148779869
+              ],
+              "max": [
+                22.04342745244503,
+                218.87458860874176,
+                -9.625537320971489
+              ]
+            },
+            "areaMm2": 14.676100228805874,
+            "algebraicVolumeMm3": 0.8178212259650091
+          },
+          {
+            "firstFace": 2542,
+            "triangles": 1984,
+            "vertices": 992,
+            "bounds": {
+              "min": [
+                12.864789925515652,
+                219.6858525276184,
+                -16.88273623585701
+              ],
+              "max": [
+                14.553899876773357,
+                220.90762853622437,
+                -14.274394139647484
+              ]
+            },
+            "areaMm2": 9.455163452325015,
+            "algebraicVolumeMm3": 0.5215326033578727
+          },
+          {
+            "firstFace": 2466,
+            "triangles": 76,
+            "vertices": 40,
+            "bounds": {
+              "min": [
+                21.587762981653214,
+                217.31513738632202,
+                -9.742052294313908
+              ],
+              "max": [
+                21.645937114953995,
+                217.3372209072113,
+                -9.719612076878548
+              ]
+            },
+            "areaMm2": 0.001604823109456823,
+            "algebraicVolumeMm3": 1.4746901544928688e-7
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 997,
+      "nodeName": "Yao_capsule_of_lymph_node",
+      "meshIndex": 817,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLymphNode",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "capsule of lymph node",
+        "ontologyid": "UBERON:0002194",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0002194",
+        "glb_file_of_single_organs": "NIH_F_Lymph_Node&lf;",
+        "node_type": "mesh"
+      },
+      "crosswalk": {
+        "ontologyId": "UBERON:0002194",
+        "label": "capsule of lymph node",
+        "originalRow": "Yao_capsule_of_lymph_node,UBERON:0002194,capsule of lymph node"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "triangles": 9442,
+      "sourceVertices": 4744,
+      "worldBoundsMm": {
+        "min": [
+          10.07393840700388,
+          218.3326631784439,
+          -17.587807029485703
+        ],
+        "max": [
+          29.705533757805824,
+          227.6698648929596,
+          -5.990335717797279
+        ]
+      },
+      "indexAccessorSha256": "e8c6d4769c14a366cd1978504c643279668717ddfaf7b682194045255184120a",
+      "attributeAccessorSha256": {
+        "POSITION": "a6f75d47e9aa35002c79d4ebd3d059467e8d4b137a0969a81349ed305c0629a6",
+        "NORMAL": "3d3a875e36a5a858cb3b46018cee89e60b1155d2804f053ce8e53e3c652a93cd"
+      },
+      "originalMaterial": {
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7843,
+            0.5215,
+            0.4823,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.249303535
+        },
+        "name": "lymph_mat"
+      },
+      "topology": {
+        "sourceVertices": 4744,
+        "exactUniqueVertices": 4744,
+        "unusedUniqueVertices": 0,
+        "triangles": 9442,
+        "edges": 14187,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 48,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": -1,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 9442,
+            "vertices": 4744,
+            "bounds": {
+              "min": [
+                10.07393840700388,
+                218.3326631784439,
+                -17.587807029485703
+              ],
+              "max": [
+                29.705533757805824,
+                227.6698648929596,
+                -5.990335717797279
+              ]
+            },
+            "areaMm2": 540.2203384955243,
+            "algebraicVolumeMm3": 937.7331518485776
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 998,
+      "nodeName": "Yao_follicles",
+      "meshIndex": 818,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLymphNode",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "lymph node follicle",
+        "ontologyid": "UBERON:0010748",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0010748",
+        "glb_file_of_single_organs": "NIH_F_Lymph_Node&lf;",
+        "node_type": "mesh"
+      },
+      "crosswalk": {
+        "ontologyId": "UBERON:0010748",
+        "label": "lymph node follicle",
+        "originalRow": "Yao_follicles,UBERON:0010748,lymph node follicle"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "triangles": 5758,
+      "sourceVertices": 2907,
+      "worldBoundsMm": {
+        "min": [
+          11.301240883767605,
+          218.9473658800125,
+          -16.929933801293373
+        ],
+        "max": [
+          28.27063575387001,
+          226.82006657123566,
+          -6.892683450132608
+        ]
+      },
+      "indexAccessorSha256": "b34307ba593a331b2a7e003cda4c61a0afec82b5b4efc7ef979a8f3c2bfe1129",
+      "attributeAccessorSha256": {
+        "POSITION": "18b7a6aabebfb568f40ecb83c7aaaad16628614c1065bad8492bc53f5ee8c373",
+        "NORMAL": "2dd0e266929d5975b0e346b279263938c2d4894b45ff6734ecde910c238fc297"
+      },
+      "originalMaterial": {
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.1764,
+            0.2862,
+            0.3333,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.249303535
+        },
+        "name": "lymph_cortex_mat"
+      },
+      "topology": {
+        "sourceVertices": 2907,
+        "exactUniqueVertices": 2907,
+        "unusedUniqueVertices": 0,
+        "triangles": 5758,
+        "edges": 8637,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 28,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 886,
+            "vertices": 445,
+            "bounds": {
+              "min": [
+                23.542622104287148,
+                219.83088552951813,
+                -13.574988581240177
+              ],
+              "max": [
+                27.4000633507967,
+                222.35088050365448,
+                -6.960899569094181
+              ]
+            },
+            "areaMm2": 47.014301278695854,
+            "algebraicVolumeMm3": 16.20638172554168
+          },
+          {
+            "firstFace": 1492,
+            "triangles": 744,
+            "vertices": 374,
+            "bounds": {
+              "min": [
+                15.587243251502514,
+                218.9473658800125,
+                -13.158991001546383
+              ],
+              "max": [
+                19.4464772939682,
+                222.14777767658234,
+                -6.911742500960827
+              ]
+            },
+            "areaMm2": 49.43561951454722,
+            "algebraicVolumeMm3": 18.960016699014684
+          },
+          {
+            "firstFace": 3380,
+            "triangles": 500,
+            "vertices": 252,
+            "bounds": {
+              "min": [
+                11.301240883767605,
+                219.54597532749176,
+                -12.321035377681255
+              ],
+              "max": [
+                14.411058276891708,
+                222.31701016426086,
+                -8.90982337296009
+              ]
+            },
+            "areaMm2": 28.087417817176018,
+            "algebraicVolumeMm3": 11.295941984024138
+          },
+          {
+            "firstFace": 4974,
+            "triangles": 434,
+            "vertices": 219,
+            "bounds": {
+              "min": [
+                13.636063784360886,
+                219.69272196292877,
+                -16.022898256778717
+              ],
+              "max": [
+                17.15935580432415,
+                222.48725593090057,
+                -12.961656786501408
+              ]
+            },
+            "areaMm2": 26.939991764622288,
+            "algebraicVolumeMm3": 11.2209206602776
+          },
+          {
+            "firstFace": 2236,
+            "triangles": 406,
+            "vertices": 205,
+            "bounds": {
+              "min": [
+                13.380289077758789,
+                220.79113125801086,
+                -8.628394454717636
+              ],
+              "max": [
+                15.215310268104076,
+                223.3942300081253,
+                -6.892683450132608
+              ]
+            },
+            "areaMm2": 11.370323016154074,
+            "algebraicVolumeMm3": 3.0428676980474925
+          },
+          {
+            "firstFace": 2642,
+            "triangles": 370,
+            "vertices": 187,
+            "bounds": {
+              "min": [
+                27.104023844003677,
+                223.06105494499207,
+                -13.806235045194626
+              ],
+              "max": [
+                28.27063575387001,
+                224.74440932273865,
+                -12.40695733577013
+              ]
+            },
+            "areaMm2": 5.80207002620613,
+            "algebraicVolumeMm3": 1.0758349305886379
+          },
+          {
+            "firstFace": 3012,
+            "triangles": 368,
+            "vertices": 186,
+            "bounds": {
+              "min": [
+                20.79695649445057,
+                219.61013972759247,
+                -14.557144604623318
+              ],
+              "max": [
+                23.681115359067917,
+                221.50561213493347,
+                -11.324398219585419
+              ]
+            },
+            "areaMm2": 20.184304644058113,
+            "algebraicVolumeMm3": 7.29067575851626
+          },
+          {
+            "firstFace": 5408,
+            "triangles": 350,
+            "vertices": 177,
+            "bounds": {
+              "min": [
+                18.66927184164524,
+                221.10073268413544,
+                -16.929933801293373
+              ],
+              "max": [
+                21.41594886779785,
+                223.72493147850037,
+                -14.875008724629879
+              ]
+            },
+            "areaMm2": 17.79480264855326,
+            "algebraicVolumeMm3": 6.467935973612554
+          },
+          {
+            "firstFace": 886,
+            "triangles": 328,
+            "vertices": 166,
+            "bounds": {
+              "min": [
+                20.81337943673134,
+                219.15800869464874,
+                -10.2095240727067
+              ],
+              "max": [
+                23.091115057468414,
+                221.60254418849945,
+                -7.741920650005341
+              ]
+            },
+            "areaMm2": 17.15016530899355,
+            "algebraicVolumeMm3": 6.1615783060765
+          },
+          {
+            "firstFace": 4398,
+            "triangles": 326,
+            "vertices": 165,
+            "bounds": {
+              "min": [
+                22.679070010781288,
+                221.91546857357025,
+                -16.19250886142254
+              ],
+              "max": [
+                25.33286064863205,
+                225.13751685619354,
+                -14.464814215898514
+              ]
+            },
+            "areaMm2": 18.73944973542645,
+            "algebraicVolumeMm3": 6.20792366479434
+          },
+          {
+            "firstFace": 3880,
+            "triangles": 280,
+            "vertices": 142,
+            "bounds": {
+              "min": [
+                18.341664224863052,
+                219.7442203760147,
+                -14.887482859194279
+              ],
+              "max": [
+                20.571565255522728,
+                221.8760997056961,
+                -12.517415918409824
+              ]
+            },
+            "areaMm2": 15.309481815037946,
+            "algebraicVolumeMm3": 5.3668686785536766
+          },
+          {
+            "firstFace": 1214,
+            "triangles": 278,
+            "vertices": 141,
+            "bounds": {
+              "min": [
+                27.373837307095528,
+                222.31684625148773,
+                -10.992872528731823
+              ],
+              "max": [
+                28.055353090167046,
+                222.96255826950073,
+                -10.042659938335419
+              ]
+            },
+            "areaMm2": 1.5105696224214957,
+            "algebraicVolumeMm3": 0.14944642334026254
+          },
+          {
+            "firstFace": 4724,
+            "triangles": 250,
+            "vertices": 127,
+            "bounds": {
+              "min": [
+                20.651234313845634,
+                225.32793879508972,
+                -15.655534341931343
+              ],
+              "max": [
+                22.50407077372074,
+                226.82006657123566,
+                -13.739792630076408
+              ]
+            },
+            "areaMm2": 9.450673322504526,
+            "algebraicVolumeMm3": 2.6271138029151686
+          },
+          {
+            "firstFace": 4160,
+            "triangles": 238,
+            "vertices": 121,
+            "bounds": {
+              "min": [
+                24.343518540263176,
+                225.8235067129135,
+                -14.877703040838242
+              ],
+              "max": [
+                25.330284610390663,
+                226.80620849132538,
+                -13.694998808205128
+              ]
+            },
+            "areaMm2": 3.4079449673478477,
+            "algebraicVolumeMm3": 0.5710655717322755
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 999,
+      "nodeName": "Yao_efferent_lymph_node",
+      "meshIndex": 819,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLymphNode",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "efferent lymphatic vessel",
+        "ontologyid": "UBERON:0010397",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0010397",
+        "glb_file_of_single_organs": "NIH_F_Lymph_Node&lf;",
+        "node_type": "mesh"
+      },
+      "crosswalk": {
+        "ontologyId": "UBERON:0010397",
+        "label": "efferent lymphatic vessel",
+        "originalRow": "Yao_efferent_lymph_node,UBERON:0010397,efferent lymphatic vessel"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "triangles": 4154,
+      "sourceVertices": 2077,
+      "worldBoundsMm": {
+        "min": [
+          15.757035464048386,
+          223.1111079454422,
+          -14.197447337210178
+        ],
+        "max": [
+          24.724282324314117,
+          228.21658849716187,
+          -5.278727971017361
+        ]
+      },
+      "indexAccessorSha256": "a7836969e8f606e520c8a6de181d7fb864ce67e03947ba62266cefd53e8c4db4",
+      "attributeAccessorSha256": {
+        "POSITION": "0390177164f54a7562661dfe7cc943c1f94f529065975d374729ebc9407c5bac",
+        "NORMAL": "1c344f6087fb3a080d4962b040e53116e5bb670667da6f9848b9cece65d92860"
+      },
+      "originalMaterial": {
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7843,
+            0.5215,
+            0.4823,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.249303535
+        },
+        "name": "lymph_mat"
+      },
+      "topology": {
+        "sourceVertices": 2077,
+        "exactUniqueVertices": 2077,
+        "unusedUniqueVertices": 0,
+        "triangles": 4154,
+        "edges": 6231,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 4154,
+            "vertices": 2077,
+            "bounds": {
+              "min": [
+                15.757035464048386,
+                223.1111079454422,
+                -14.197447337210178
+              ],
+              "max": [
+                24.724282324314117,
+                228.21658849716187,
+                -5.278727971017361
+              ]
+            },
+            "areaMm2": 115.57972434687517,
+            "algebraicVolumeMm3": 30.883165438404927
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 1000,
+      "nodeName": "Yao_medulla_of_lymph_node",
+      "meshIndex": 820,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLymphNode",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "medulla of lymph node",
+        "ontologyid": "UBERON:0002007",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0002007",
+        "glb_file_of_single_organs": "NIH_F_Lymph_Node&lf;",
+        "node_type": "mesh"
+      },
+      "crosswalk": {
+        "ontologyId": "UBERON:0002007",
+        "label": "medulla of lymph node",
+        "originalRow": "Yao_medulla_of_lymph_node,UBERON:0002007,medulla of lymph node"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "triangles": 88388,
+      "sourceVertices": 43881,
+      "worldBoundsMm": {
+        "min": [
+          10.672998614609241,
+          219.35847401618958,
+          -17.13092438876629
+        ],
+        "max": [
+          29.203366488218307,
+          227.03899443149567,
+          -6.3169836066663265
+        ]
+      },
+      "indexAccessorSha256": "847ae5367cce64f1c240851dbf5fef7ba2fc2f81ef6f22496e8245a5ec190b71",
+      "attributeAccessorSha256": {
+        "POSITION": "175bfdd973b414faa49db23373b16484f684a01d4a9e8753b779f1c00e029ad4",
+        "NORMAL": "a80962006fe6b45a0db3e7ffc55888bc17f3c3546a926b0316062759b6cdd26a"
+      },
+      "originalMaterial": {
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.3137,
+            0.3333,
+            0.3137,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.249303535
+        },
+        "name": "lymph_medulla_mat"
+      },
+      "topology": {
+        "sourceVertices": 43881,
+        "exactUniqueVertices": 43881,
+        "unusedUniqueVertices": 0,
+        "triangles": 88388,
+        "edges": 132499,
+        "duplicateFaces": 63,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 72,
+        "nonManifoldEdges": 118,
+        "nonManifoldVertices": 213,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": -230,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 88360,
+            "vertices": 43865,
+            "bounds": {
+              "min": [
+                10.672998614609241,
+                219.35847401618958,
+                -17.13092438876629
+              ],
+              "max": [
+                29.203366488218307,
+                227.03899443149567,
+                -6.3169836066663265
+              ]
+            },
+            "areaMm2": 842.3137519736223,
+            "algebraicVolumeMm3": 282.18925034617655
+          },
+          {
+            "firstFace": 765,
+            "triangles": 26,
+            "vertices": 15,
+            "bounds": {
+              "min": [
+                17.44263619184494,
+                220.07900476455688,
+                -9.131643921136856
+              ],
+              "max": [
+                17.766503617167473,
+                220.23288905620575,
+                -8.97789653390646
+              ]
+            },
+            "areaMm2": 0.09575636009979728,
+            "algebraicVolumeMm3": 0.001990475564232418
+          },
+          {
+            "firstFace": 1880,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                19.235868006944656,
+                220.82087397575378,
+                -12.791574001312256
+              ],
+              "max": [
+                19.272278994321823,
+                220.88901698589325,
+                -12.744405306875706
+              ]
+            },
+            "areaMm2": 0.00038756024683126746,
+            "algebraicVolumeMm3": 0
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 1001,
+      "nodeName": "Yao_paracortex",
+      "meshIndex": 821,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLymphNode",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "lymph node T cell domain",
+        "ontologyid": "UBERON:0010417",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0010417",
+        "glb_file_of_single_organs": "NIH_F_Lymph_Node&lf;",
+        "node_type": "mesh"
+      },
+      "crosswalk": {
+        "ontologyId": "UBERON:0010417",
+        "label": "lymph node T cell domain",
+        "originalRow": "Yao_paracortex,UBERON:0010417,lymph node T cell domain"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "triangles": 10910,
+      "sourceVertices": 5451,
+      "worldBoundsMm": {
+        "min": [
+          10.820607654750347,
+          219.33379769325256,
+          -16.346199437975883
+        ],
+        "max": [
+          28.372086584568024,
+          225.83110630512238,
+          -6.309530697762966
+        ]
+      },
+      "indexAccessorSha256": "7cbdd0267d5d49f2890651b76f062d5ac704630fb581a9d65b70f20d3b28e2c4",
+      "attributeAccessorSha256": {
+        "POSITION": "ceb7d3dc9f0b221df47845ccc0bd0ad02f3af69ff0c02859c126af25c24947a5",
+        "NORMAL": "f3ebf432d89ea49fbc9b2adb352ae1350d1750795286ce7daf57eb41de8d4d09"
+      },
+      "originalMaterial": {
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.0666,
+            0.1254,
+            0.0666,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.249303535
+        },
+        "name": "lymph_paracortex_mat"
+      },
+      "topology": {
+        "sourceVertices": 5451,
+        "exactUniqueVertices": 5451,
+        "unusedUniqueVertices": 0,
+        "triangles": 10910,
+        "edges": 16365,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": -4,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 10910,
+            "vertices": 5451,
+            "bounds": {
+              "min": [
+                10.820607654750347,
+                219.33379769325256,
+                -16.346199437975883
+              ],
+              "max": [
+                28.372086584568024,
+                225.83110630512238,
+                -6.309530697762966
+              ]
+            },
+            "areaMm2": 381.157560668398,
+            "algebraicVolumeMm3": 294.15127335333705
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 1002,
+      "nodeName": "Yao_blood_vasculature",
+      "meshIndex": 822,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLymphNode",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Lymph vasculature",
+        "ontologyid": "UBERON:0004536",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0004536",
+        "glb_file_of_single_organs": "NIH_F_Lymph_Node&lf;",
+        "node_type": "mesh"
+      },
+      "crosswalk": {
+        "ontologyId": "UBERON:0004536",
+        "label": "Lymph vasculature",
+        "originalRow": "Yao_blood_vasculature,UBERON:0004536,Lymph vasculature"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "triangles": 131485,
+      "sourceVertices": 63986,
+      "worldBoundsMm": {
+        "min": [
+          10.741128586232662,
+          219.04060244560242,
+          -16.916481778025627
+        ],
+        "max": [
+          29.142465442419052,
+          226.7126739025116,
+          -5.074875429272652
+        ]
+      },
+      "indexAccessorSha256": "f78bdf84362c015d76ccf215486a43a45738808b0b8745111886e14fe41623af",
+      "attributeAccessorSha256": {
+        "POSITION": "79c0f53d3398e49efa552ca3c191c8cb21850f6c7a3cbda56c86a68dd8bfee06",
+        "NORMAL": "4ab4b46f1ab3ddc9edb047370f20f60888b19f32d833c5e01e30264764c11df1"
+      },
+      "originalMaterial": {
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.2581639
+        },
+        "name": "Arteries_Mat"
+      },
+      "topology": {
+        "sourceVertices": 63986,
+        "exactUniqueVertices": 63986,
+        "unusedUniqueVertices": 0,
+        "triangles": 131485,
+        "edges": 196742,
+        "duplicateFaces": 308,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 296,
+        "nonManifoldEdges": 636,
+        "nonManifoldVertices": 1200,
+        "inconsistentWindingEdges": 1,
+        "eulerCharacteristic": -1271,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 131153,
+            "vertices": 63800,
+            "bounds": {
+              "min": [
+                10.741128586232662,
+                219.04060244560242,
+                -16.916481778025627
+              ],
+              "max": [
+                29.142465442419052,
+                226.7126739025116,
+                -5.074875429272652
+              ]
+            },
+            "areaMm2": 1029.4965065518502,
+            "algebraicVolumeMm3": 57.981329870683965
+          },
+          {
+            "firstFace": 10552,
+            "triangles": 142,
+            "vertices": 73,
+            "bounds": {
+              "min": [
+                18.163060769438744,
+                220.72741389274597,
+                -11.839611455798149
+              ],
+              "max": [
+                19.315939396619797,
+                221.7441201210022,
+                -11.36717014014721
+              ]
+            },
+            "areaMm2": 0.7173850485572899,
+            "algebraicVolumeMm3": 0.01621364003871549
+          },
+          {
+            "firstFace": 57586,
+            "triangles": 46,
+            "vertices": 25,
+            "bounds": {
+              "min": [
+                25.03090724349022,
+                223.5732227563858,
+                -13.077528215944767
+              ],
+              "max": [
+                25.269631296396255,
+                224.29034113883972,
+                -12.305695563554764
+              ]
+            },
+            "areaMm2": 0.2776843009795123,
+            "algebraicVolumeMm3": 0.0042583373156710085
+          },
+          {
+            "firstFace": 5437,
+            "triangles": 34,
+            "vertices": 19,
+            "bounds": {
+              "min": [
+                25.841377675533295,
+                223.80024194717407,
+                -11.54433935880661
+              ],
+              "max": [
+                26.145868003368378,
+                224.33635592460632,
+                -11.175739578902721
+              ]
+            },
+            "areaMm2": 0.20741202315661905,
+            "algebraicVolumeMm3": 0.003120623677583553
+          },
+          {
+            "firstFace": 19861,
+            "triangles": 18,
+            "vertices": 11,
+            "bounds": {
+              "min": [
+                14.64808452874422,
+                223.2334464788437,
+                -13.198034837841988
+              ],
+              "max": [
+                14.73271381109953,
+                223.63761067390442,
+                -12.99033872783184
+              ]
+            },
+            "areaMm2": 0.007036578092431713,
+            "algebraicVolumeMm3": -2.2534296231965475e-8
+          },
+          {
+            "firstFace": 8087,
+            "triangles": 14,
+            "vertices": 9,
+            "bounds": {
+              "min": [
+                25.139683857560158,
+                222.34882414340973,
+                -12.503392063081264
+              ],
+              "max": [
+                25.37566050887108,
+                222.78350591659546,
+                -12.388885021209717
+              ]
+            },
+            "areaMm2": 0.0389964880430176,
+            "algebraicVolumeMm3": 0.00017413077217290742
+          },
+          {
+            "firstFace": 2468,
+            "triangles": 12,
+            "vertices": 8,
+            "bounds": {
+              "min": [
+                24.02464859187603,
+                223.43021631240845,
+                -9.227363392710686
+              ],
+              "max": [
+                24.133004248142242,
+                223.6301749944687,
+                -8.985993452370167
+              ]
+            },
+            "areaMm2": 0.060860294275960514,
+            "algebraicVolumeMm3": 0.0008988704287428277
+          },
+          {
+            "firstFace": 20207,
+            "triangles": 12,
+            "vertices": 8,
+            "bounds": {
+              "min": [
+                14.484567567706108,
+                222.66337275505066,
+                -13.362505473196507
+              ],
+              "max": [
+                14.566602185368538,
+                222.9510098695755,
+                -13.279111124575138
+              ]
+            },
+            "areaMm2": 0.0008771483389752149,
+            "algebraicVolumeMm3": 1.7069594969127195e-9
+          },
+          {
+            "firstFace": 20361,
+            "triangles": 12,
+            "vertices": 8,
+            "bounds": {
+              "min": [
+                14.381703920662403,
+                222.30158746242523,
+                -13.467337936162949
+              ],
+              "max": [
+                14.464120380580425,
+                222.59120643138885,
+                -13.383385725319386
+              ]
+            },
+            "areaMm2": 0.00034417826289318546,
+            "algebraicVolumeMm3": 1.0496159846991523e-10
+          },
+          {
+            "firstFace": 2787,
+            "triangles": 10,
+            "vertices": 7,
+            "bounds": {
+              "min": [
+                25.27163363993168,
+                221.11178934574127,
+                -10.43560728430748
+              ],
+              "max": [
+                25.435209274291992,
+                221.2808132171631,
+                -10.165717452764511
+              ]
+            },
+            "areaMm2": 0.046829485145691935,
+            "algebraicVolumeMm3": 0.0003130662851445853
+          },
+          {
+            "firstFace": 19842,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                14.793558046221733,
+                223.7403839826584,
+                -13.056018389761448
+              ],
+              "max": [
+                14.850263483822346,
+                223.94344210624695,
+                -13.010203838348389
+              ]
+            },
+            "areaMm2": 0.007288105675365449,
+            "algebraicVolumeMm3": -4.235164736271502e-22
+          },
+          {
+            "firstFace": 20030,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                14.610128477215767,
+                223.10271859169006,
+                -13.235404156148434
+              ],
+              "max": [
+                14.64808452874422,
+                223.2334464788437,
+                -13.198034837841988
+              ]
+            },
+            "areaMm2": 0.0001533385788165591,
+            "algebraicVolumeMm3": 1.263586003381627e-10
+          },
+          {
+            "firstFace": 8478,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                19.406575709581375,
+                220.62236070632935,
+                -10.854218155145645
+              ],
+              "max": [
+                19.43686418235302,
+                220.7290530204773,
+                -10.789019986987114
+              ]
+            },
+            "areaMm2": 0.005267152818181367,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 20193,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                14.566602185368538,
+                222.9510098695755,
+                -13.279111124575138
+              ],
+              "max": [
+                14.610128477215767,
+                223.10271859169006,
+                -13.235404156148434
+              ]
+            },
+            "areaMm2": 0.00021191131066337665,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 20690,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                14.260663650929928,
+                221.87656164169312,
+                -13.590623624622822
+              ],
+              "max": [
+                14.314564876258373,
+                222.0643162727356,
+                -13.544666580855846
+              ]
+            },
+            "areaMm2": 0.000779793420161552,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 8634,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                19.53299529850483,
+                220.75431048870087,
+                -10.950805619359016
+              ],
+              "max": [
+                19.55336518585682,
+                220.7915037870407,
+                -10.926783084869385
+              ]
+            },
+            "areaMm2": 0.0009035871335923688,
+            "algebraicVolumeMm3": 6.617444900424221e-23
+          },
+          {
+            "firstFace": 9300,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                25.759266689419746,
+                223.19476306438446,
+                -13.105371035635471
+              ],
+              "max": [
+                25.793828070163727,
+                223.2605367898941,
+                -13.053853064775467
+              ]
+            },
+            "areaMm2": 0.0012697583572606774,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 10583,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                18.76782439649105,
+                220.57951986789703,
+                -11.443335562944412
+              ],
+              "max": [
+                18.79214309155941,
+                220.60810029506683,
+                -11.373226530849934
+              ]
+            },
+            "areaMm2": 0.002098497324029679,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 11681,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                19.50238272547722,
+                220.6738293170929,
+                -12.026774697005749
+              ],
+              "max": [
+                19.528741016983986,
+                220.70349752902985,
+                -11.966106481850147
+              ]
+            },
+            "areaMm2": 0.001808730583650408,
+            "algebraicVolumeMm3": 0
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    }
+  ],
+  "shared": [
+    {
+      "a": "Yao_afferent_lymphatic_vessel",
+      "b": "Yao_capsule_of_lymph_node",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "Yao_afferent_lymphatic_vessel",
+      "b": "Yao_follicles",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "Yao_afferent_lymphatic_vessel",
+      "b": "Yao_efferent_lymph_node",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "Yao_afferent_lymphatic_vessel",
+      "b": "Yao_medulla_of_lymph_node",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "Yao_afferent_lymphatic_vessel",
+      "b": "Yao_paracortex",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "Yao_afferent_lymphatic_vessel",
+      "b": "Yao_blood_vasculature",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "Yao_capsule_of_lymph_node",
+      "b": "Yao_follicles",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "Yao_capsule_of_lymph_node",
+      "b": "Yao_efferent_lymph_node",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "Yao_capsule_of_lymph_node",
+      "b": "Yao_medulla_of_lymph_node",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "Yao_capsule_of_lymph_node",
+      "b": "Yao_paracortex",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "Yao_capsule_of_lymph_node",
+      "b": "Yao_blood_vasculature",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "Yao_follicles",
+      "b": "Yao_efferent_lymph_node",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "Yao_follicles",
+      "b": "Yao_medulla_of_lymph_node",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "Yao_follicles",
+      "b": "Yao_paracortex",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "Yao_follicles",
+      "b": "Yao_blood_vasculature",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "Yao_efferent_lymph_node",
+      "b": "Yao_medulla_of_lymph_node",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "Yao_efferent_lymph_node",
+      "b": "Yao_paracortex",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "Yao_efferent_lymph_node",
+      "b": "Yao_blood_vasculature",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "Yao_medulla_of_lymph_node",
+      "b": "Yao_paracortex",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "Yao_medulla_of_lymph_node",
+      "b": "Yao_blood_vasculature",
+      "exactSharedTriangles": 0
+    },
+    {
+      "a": "Yao_paracortex",
+      "b": "Yao_blood_vasculature",
+      "exactSharedTriangles": 0
+    }
+  ],
+  "identityCautions": [
+    "The assembly title and mesenteric placement do not establish a female-donor or patient-derived lymph node.",
+    "Yao_blood_vasculature has a blood-named node but a Lymph vasculature crosswalk label; preserve both without silently choosing one.",
+    "Yao_efferent_lymph_node maps to an efferent vessel; preserve source node name separately from teaching terminology."
+  ],
+  "admitted": false,
+  "clinicalApproval": false,
+  "patientRegistration": false,
+  "sourceGeometryChanged": false
+}
