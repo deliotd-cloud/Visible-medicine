@@ -52,13 +52,21 @@ for (const group of api.specimenReviewRows)
       null,
     );
     const other = api.specimenReviewRows.find((r) => r.key !== group.key);
-    assert.equal(await api.specimenReviewMaterial(other.key, row.id), null);
+    const otherMaterial = await api.specimenReviewMaterial(other.key, row.id);
+    const sharedUreter = ['right','left'].some(side => row.id === 'vm:reference:hra-united-female-v1-10:kidneys:'+side+'-ureter');
+    if (sharedUreter && [group.key, other.key].every(key => ['hra-united-female-v1.10-kidneys','hra-united-female-v1.10-pelvis'].includes(key))) {
+      assert(otherMaterial);
+      assert.notEqual(otherMaterial.context.materialHash,c.materialHash);
+      assert.notEqual(otherMaterial.context.revisions.geometry,c.revisions.geometry);
+      for(const track of api.specimenReviewTracks)
+        assert(api.specimenApprovalProblems(api.blankSpecimenReview(c,track),otherMaterial.context,track).length);
+    } else assert(otherMaterial === null, 'Foreign source must not acquire review material');
   }
-assert.equal(contexts, 354);
-assert.equal(hashes.size, 354);
+assert.equal(contexts, 356);
+assert.equal(hashes.size, 356);
 // Includes the saved pelvic organ/vascular/sacral drafts added after the support
 // milestone. Reviewable draft coverage is not a clinical approval.
-assert.equal(teachingReady, 319);
+assert.equal(teachingReady, 321);
 for (const key of ["", "__proto__", "body-display-catalog", "shoulder-pilot"])
   assert.equal(await api.specimenReviewMaterial(key, "unknown"), null);
 const group = api.specimenReviewRows[0],

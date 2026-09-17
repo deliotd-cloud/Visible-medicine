@@ -1247,7 +1247,7 @@ const report = {
     revisionIdentities: Object.keys(revisions.revisions).length,
     hasPrivateReviews: false,
     status:
-      `Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot, ${catalog.structures.length} displayed root-body selections, nine independent specimen/region scopes (354 scoped records / 267 distinct source IDs), and ${nestedReviewRows.reduce((n,r)=>n+r.surfaces.length,0)} nested selections in ${nestedReviewRows.length} parent/study scopes. Exact source/frame identity and navigation are bound; no decisions transfer across scopes. The 1,022-record archival catalogue is retained. This inventory reads no personal review records. Acquired imaging review remains unavailable; source implementation does not prove hosted migration or clinical sign-off.`,
+      `Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot, ${catalog.structures.length} displayed root-body selections, nine independent specimen/region scopes (356 scoped records / 267 distinct source IDs), and ${nestedReviewRows.reduce((n,r)=>n+r.surfaces.length,0)} nested selections in ${nestedReviewRows.length} parent/study scopes. Exact source/frame identity and navigation are bound; no decisions transfer across scopes. The 1,022-record archival catalogue is retained. This inventory reads no personal review records. Acquired imaging review remains unavailable; source implementation does not prove hosted migration or clinical sign-off.`,
   },
   boundaries: {
     scope: 'Current source implementation, not operations performed by this inventory script',

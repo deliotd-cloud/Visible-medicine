@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "scope": "independent-reference-navigation-and-review-software-only",
-  "sourceStudies": 32,
-  "studySelectionRoundTrips": 875,
+  "sourceStudies": 35,
+  "studySelectionRoundTrips": 899,
   "invalidOrChangedSourceRejections": 116,
   "reviewScopes": [
     {
@@ -11,7 +11,7 @@
     },
     {
       "key": "hra-united-female-v1.10-pelvis",
-      "selections": 41
+      "selections": 43
     },
     {
       "key": "bp3d3-abdominal-wall",
@@ -42,10 +42,10 @@
       "selections": 67
     }
   ],
-  "reviewSelectionLinks": 354,
+  "reviewSelectionLinks": 356,
   "distinctSourceIds": 267,
-  "distinctReviewFingerprints": 354,
-  "scenePropChecks": 32,
+  "distinctReviewFingerprints": 356,
+  "scenePropChecks": 35,
   "verifiedModelBundles": 9,
   "historicalPreservation": {
     "before": "3d3909597ce063f3b928c0fff47a1398c6cb5294",

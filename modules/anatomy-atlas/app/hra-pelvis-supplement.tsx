@@ -2,7 +2,6 @@
 import type { SpecimenSupplement } from './um-knee-study';
 import { modelDeliveryUrl } from '@/lib/model-delivery';
 import { SpecimenLearning } from './um-limb-learning';
-import { hraPelvicReferenceTitles } from '@/content/hra-pelvic-teaching';
 import {
   hraPelvisSource,
   hraPelvisColors,
@@ -10,6 +9,7 @@ import {
 import {
   hraPelvicTeaching,
   hraPelvicPractice,
+  hraPelvicContextReferenceTitles,
 } from '@/lib/hra-pelvis-teaching';
 export function createHraPelvisSupplement({ assetBase, studyLink }: { assetBase?: string; studyLink?: SpecimenSupplement['studyLink'] } = {}): SpecimenSupplement {
   return {
@@ -18,6 +18,7 @@ export function createHraPelvisSupplement({ assetBase, studyLink }: { assetBase?
   identification: hraPelvicPractice,
   tissueGroups: [
     { id: 'organ', name: 'Organ regions', color: '#b77980' },
+    { id: 'collecting', name: 'Ureters', color: '#d6b477' },
     { id: 'ligament', name: 'Support surfaces', color: '#c5b68f' },
     { id: 'artery', name: 'Arteries', color: '#bf514d' },
     { id: 'vein', name: 'Veins', color: '#597dba' },
@@ -28,7 +29,7 @@ export function createHraPelvisSupplement({ assetBase, studyLink }: { assetBase?
       definition={definition}
       selected={selected}
       resolveLesson={hraPelvicTeaching}
-      referenceTitles={hraPelvicReferenceTitles}
+      referenceTitles={hraPelvicContextReferenceTitles}
     />
   ),
   sourceDetails: (
@@ -44,7 +45,8 @@ export function createHraPelvisSupplement({ assetBase, studyLink }: { assetBase?
         </a>
       </p>
       <p>
-        41 source surfaces; every retained triangle remains. Open boundaries and
+        41 pelvic surfaces and two existing ureters from the same HRA source;
+        every retained triangle remains. Open boundaries and
         separate inner/outer shells are not filled, welded or reconstructed.
         Colours are teaching styles, not histology.
       </p>
@@ -54,6 +56,11 @@ export function createHraPelvisSupplement({ assetBase, studyLink }: { assetBase?
         alternatives. No automatic relabelling or repair.
       </p>
       <p>
+        The two ureters retain their renal-study IDs, geometry and draft teaching.
+        Candidate ureteric-orifice patches are excluded. No bladder connection,
+        continuous lumen or operative crossing has been validated.
+      </p>
+      <p>
         This is a separate reference assembly, not complete female anatomy or
         the same subject as the main body. No pelvic floor, nerves, pregnancy
         model, continuous lumen, operative plane or CT/MRI registration is
@@ -61,9 +68,10 @@ export function createHraPelvisSupplement({ assetBase, studyLink }: { assetBase?
       </p>
       <p>
         <a href={modelDeliveryUrl('/models/hra-pelvis/pelvis.glb', assetBase)} download>
-          Display model
+          Pelvic display model
         </a>{' '}
         · <a href={modelDeliveryUrl('/models/hra-pelvis/NOTICE.md', assetBase)}>Asset reuse notice</a>
+        {' '}· <a href={modelDeliveryUrl('/models/hra-renal/NOTICE.md', assetBase)}>Ureter source notice</a>
       </p>
       <p>
         Clinical/imaging notes are draft and incomplete; your radiologist’s

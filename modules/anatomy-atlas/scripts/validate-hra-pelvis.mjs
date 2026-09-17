@@ -190,8 +190,9 @@ const {
 } = api;
 const all = def.surfaces.map((s) => s.id),
   before = JSON.stringify(def);
-assert.equal(def.studies.length, 8);
-assert.equal(adapter.eligibleIds(def, all).length, 41);
+assert.equal(def.studies.length, 11);
+assert.equal(def.surfaces.length, 43);
+assert.equal(adapter.eligibleIds(def, all).length, 43);
 assert.equal(def.surfaces.filter((s) => !hraPelvicTeaching(def, s)).length, 0);
 for (const study of def.studies) {
   const state = reduceSpecimen(
@@ -291,12 +292,13 @@ const component = await componentBuild({
   ],
 });
 const require = createRequire(import.meta.url),
+  actualLink = await import('vinext/shims/link'),
   React = require('react'),
   mod = { exports: {} },
   context = {
     module: mod,
     exports: mod.exports,
-    require,
+    require: id => id === 'next/link' ? { __esModule: true, ...actualLink } : require(id),
     URL,
     URLSearchParams,
     console,
@@ -313,6 +315,7 @@ const html = render('KneeSpecimenView', {
 });
 for (const text of [
   'Organ regions',
+  'Ureters',
   'Support surfaces',
   'Arteries',
   'Veins',
@@ -344,7 +347,8 @@ assert.equal(deliveryUrl('/models/hra-pelvis/pelvis.glb', assetBase), assetBase 
 for (const bundle of def.catalog.bundles) {
   assert.equal(deliveryUrl(bundle.url,assetBase),assetBase+bundle.url);
   assert.equal(deliveryUrl(bundle.url),bundle.url);
-  assert.equal(new URL(deliveryUrl(bundle.url,assetBase),'https://example.test').pathname,assetBase+'/models/hra-pelvis/pelvis.glb');
+  const expectedPath = bundle.id === raw.bundles[0].id ? '/models/hra-pelvis/pelvis.glb' : '/models/hra-renal/kidneys.glb';
+  assert.equal(new URL(deliveryUrl(bundle.url,assetBase),'https://example.test').pathname,assetBase+expectedPath);
   assert.equal(new URL(bundle.url,'https://example.test').searchParams.get('v'),bundle.sha256.slice(0,12));
 }
 assert.equal(deliveryUrl('/models/hra-pelvis/pelvis.glb?v='+raw.bundles[0].sha256,assetBase),assetBase+'/models/hra-pelvis/pelvis.glb?v='+raw.bundles[0].sha256);
@@ -378,8 +382,9 @@ console.log(
     delivered: 41,
     withheld: 6,
     triangles,
-    studies: 8,
-    draftTeaching: 41,
+    reusedUreters: 2,
+    studies: 11,
+    draftTeaching: 43,
     pendingTeaching: 0,
     originalVerified: !!originalPath,
     decodedMeshes: proof.meshes,

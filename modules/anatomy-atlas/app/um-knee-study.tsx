@@ -85,8 +85,15 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
   }
   function select(id: string) { dispatch({ type: 'select', id }); setFocus(false); }
   function historyStep(type: 'undo' | 'redo') { dispatch({ type }); assembledDisplay(); }
+  function showAll() {
+    const all = kneeSpecimenStudies.find((s) => s.id === 'all');
+    const target = all?.selectedId ?? kneeStructures[0]?.id;
+    if (!target) return;
+    dispatch({ type: 'show-only', ids: kneeStructures.map((s) => s.id), selectedId: target });
+    assembledDisplay(); setView(all?.view ?? 'anterior');
+  }
   function resetAll() {
-    preset('all'); setQuery(''); setLayout('extract'); setJointCloseUp(!!specimen.closeUp);
+    showAll(); setQuery(''); setLayout('extract'); setJointCloseUp(!!specimen.closeUp);
     setLabels(true); setShowOrigins(false); setIllustrated(true);
   }
   if (practice) return <SpecimenIdentification assetBase={assetBase} definition={specimen} initial={practice} visibleIds={visible.map(s => s.id)} initialView={view} adapter={practiceAdapter}
@@ -117,7 +124,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
         {!!errors.length && <div className="eye-layer-status" role="alert">Some specimen tissues could not load. <Button size="sm" onClick={() => {
           retryBodyAssets(kneeCatalog.bundles.map((b) => b.url), assetBase); setLoaded([]); setFailed([]); setRetry((n) => n + 1);
         }}>Retry</Button></div>}
-        {!visible.length && <div className="eye-layer-status">All tissues are hidden. <Button size="sm" onClick={() => preset('all')}>Show all</Button></div>}
+        {!visible.length && <div className="eye-layer-status">All tissues are hidden. <Button size="sm" onClick={showAll}>Show all</Button></div>}
       </div>
       <p className="um-knee-scene-caption">{explode > 0 ? supplement ? 'Separated teaching view — not tissue motion or a surgical plane. Return to 0% for source positions.' : 'Separated teaching view — not joint motion. Return to 0% for source positions.' : 'Source positions · Drag to rotate · Scroll or pinch to zoom'}</p>
     </section>
@@ -126,7 +133,8 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
       <Select value={active?.id ?? 'custom'} items={[{value:'custom',label:'Custom dissection'},...kneeSpecimenStudies.map(s=>({value:s.id,label:s.title}))]} onValueChange={(v) => { if (v) preset(v); }}>
         <SelectTrigger id="um-knee-study" aria-label={`${specimen.label} dissection study`}><SelectValue /></SelectTrigger>
         <SelectContent>
-          {!active && <SelectItem value="custom" disabled>Custom dissection</SelectItem>}
+          {/* Keep registered option indices stable as Undo enters/leaves a custom view. */}
+          <SelectItem value="custom" disabled>Custom dissection</SelectItem>
           {kneeSpecimenStudies.map((s) => <SelectItem key={s.id} value={s.id}>{s.title}</SelectItem>)}
         </SelectContent>
       </Select>

@@ -189,9 +189,9 @@ for (const group of api.specimenReviewRows)
     }
     byId.set(row.id, p.context);
   }
-assert.equal(scopeLinks, 354);
+assert.equal(scopeLinks, 356); // Two existing ureter IDs now also have pelvic-context links.
 assert.equal(sourceIds.size, 267);
-assert.equal(fingerprints.size, 354);
+assert.equal(fingerprints.size, 356);
 // This is the original navigation milestone's preservation claim, not a ban
 // on subsequent source-bound teaching/UI work. Compare its two immutable commits;
 // all navigation, model hashes and component checks here still use current code.

@@ -1,6 +1,8 @@
 import raw from '../public/models/hra-pelvis/catalog.json' with { type: 'json' };
 import type { BodyCatalog, BodyStructure, Vec3 } from '../app/body-types';
 import type { DissectionView } from '../app/dissection-data';
+import renalRaw from '../public/models/hra-renal/catalog.json' with { type: 'json' };
+import { hraRenalCatalog, hraRenalSurfaces } from './hra-renal';
 import type {
   SpecimenDefinition,
   SpecimenSurface,
@@ -8,9 +10,17 @@ import type {
 } from './independent-specimen';
 
 export const hraPelvisSource = raw.source;
-export const hraPelvisSurfaces = raw.structures as SpecimenSurface[];
+// Reuse only the two already-admitted ureters, in the exact shared source frame.
+// No new model, donor alignment, source-local ID or orifice admission is created.
+const ureters = hraRenalSurfaces.filter(s => ['VH_F_right_ureter', 'VH_F_left_ureter'].includes(s.sourceName));
+if (ureters.length !== 2 || raw.source.sha256 !== renalRaw.source.sha256
+  || raw.source.version !== renalRaw.source.version
+  || raw.sourceFrame !== renalRaw.sourceFrame
+  || JSON.stringify(raw.displayTransformColumnMajor) !== JSON.stringify(renalRaw.displayTransformColumnMajor))
+  throw Error('Pelvic urinary context requires the same verified HRA source/frame');
+export const hraPelvisSurfaces = [...raw.structures, ...ureters] as SpecimenSurface[];
 export const hraPelvisColors = Object.fromEntries(
-  raw.structures.map((s) => [s.id, s.color]),
+  [...raw.structures, ...ureters].map((s) => [s.id, s.color]),
 );
 export const hraPelvisCatalog: BodyCatalog = {
   version: 1,
@@ -21,7 +31,7 @@ export const hraPelvisCatalog: BodyCatalog = {
     sourceToSceneColumnMajor: raw.displayTransformColumnMajor,
     unitsPerMillimetre: 0.01,
   },
-  structures: raw.structures.map(
+  structures: [...raw.structures.map(
     (s): BodyStructure => ({
       ...s,
       fmaId: s.fmaId ?? '',
@@ -48,8 +58,8 @@ export const hraPelvisCatalog: BodyCatalog = {
       },
       validation: { status: 'unvalidated', anatomicalReview: false },
     }),
-  ),
-  bundles: raw.bundles,
+  ), ...hraRenalCatalog.structures.filter(s => ureters.some(u => u.id === s.id))],
+  bundles: [...raw.bundles, ...renalRaw.bundles],
   regions: [],
   excluded: [],
   coverage: {
@@ -122,7 +132,7 @@ export const hraPelvisStudies: SpecimenStudy[] = [
   study(
     'all',
     'All supplied pelvic surfaces',
-    surfaces.map((s) => s.slug),
+    raw.structures.map((s) => s.slug),
     'body-of-uterus',
     'anterior',
     '41 selected source surfaces, including optional pelvic context. This is not a complete female body or a single-patient scan.',
@@ -139,7 +149,7 @@ export const hraPelvisStudies: SpecimenStudy[] = [
     study(
       'adnexa-' + side,
       (side === 'left' ? 'Left' : 'Right') + ' adnexa',
-      surfaces
+      raw.structures
         .filter(
           (s) =>
             (s.laterality === side && s.tissue !== 'skeleton') ||
@@ -179,6 +189,18 @@ export const hraPelvisStudies: SpecimenStudy[] = [
     'right',
     'Compare native source positions. Bladder dome/base have separate source-local keys despite sharing one ontology term. Source geometry is not registered to the male body or patient imaging.',
   ),
+  study(
+    'urinary', 'Ureters & pelvic organs',
+    [...urinary, 'left-ureter', 'right-ureter', 'cervix', ...vessels],
+    'left-ureter', 'anterior',
+    'Existing ureters with bladder, cervix and uterine vessels in their shared HRA source frame. Ureteric-orifice candidates are excluded; no continuous lumen, validated insertion or surgical crossing is claimed.',
+  ),
+  ...(['left', 'right'] as const).map(side => study(
+    'urinary-' + side, (side === 'left' ? 'Left' : 'Right') + ' ureter & pelvic context',
+    [...urinary, side + '-ureter', 'cervix', side + '-uterine-artery', side + '-uterine-vein'],
+    side + '-ureter', 'posterior',
+    'Same-source ureter with ipsilateral uterine vessels and bladder/cervix context. These partial surfaces do not establish operative tissue planes, patency or a registered scan.',
+  )),
 ];
 export const hraPelvisDefinition: SpecimenDefinition = {
   key: raw.specimenId,

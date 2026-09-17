@@ -17,7 +17,7 @@ export default function HraPelvisDialog({ onClose, initialLink,assetBase='' }: {
     <DialogContent className="eye-layers-dialog um-knee-dialog" showCloseButton={false}>
       <div className="eye-layer-heading">
         <div><DialogTitle>Female pelvis · separate reference</DialogTitle>
-          <DialogDescription>41 source surfaces · HRA v1.10 · CC BY 4.0 · Review pending</DialogDescription></div>
+          <DialogDescription>41 pelvic surfaces + 2 ureters · HRA v1.10 · CC BY 4.0 · Review pending</DialogDescription></div>
         <Button variant="outline" size="sm" onClick={onClose}><ArrowLeft />Back to atlas</Button>
       </div>
       <IndependentStudyView assetBase={assetBase} definition={hraPelvisDefinition} supplement={assetBase?hraPelvisSupplementFor(assetBase):hraPelvisSupplement} link={initialLink} />

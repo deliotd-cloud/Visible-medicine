@@ -1,12 +1,11 @@
 import { hraRenalDefinition } from "./hra-renal";
 import { hraRenalTeaching } from "./hra-renal-teaching";
 import { hraPelvisDefinition } from "./hra-pelvis";
-import { hraPelvicTeaching } from "./hra-pelvis-teaching";
+import { hraPelvicTeaching, hraPelvicContextReferenceTitles } from "./hra-pelvis-teaching";
 import renal from "../public/models/hra-renal/catalog.json";
 import pelvis from "../public/models/hra-pelvis/catalog.json";
 import renderer from "../content/body-renderer-revision.json";
 import { hraRenalReferenceTitles } from "../content/hra-renal-teaching";
-import { hraPelvicReferenceTitles } from "../content/hra-pelvic-teaching";
 import { specimenTopics } from "./specimen-links";
 import { canonicalSpecimenValue } from "./specimen-links";
 import { makeIndependentStudyLink, independentStudyRoutes } from './independent-study-links';
@@ -47,9 +46,9 @@ const registry: Adapter[] = [
   },
   {
     definition: hraPelvisDefinition,
-    raw: pelvis,
+    raw: { ...pelvis, companionRenal: renal },
     lesson: hraPelvicTeaching,
-    titles: hraPelvicReferenceTitles,
+    titles: hraPelvicContextReferenceTitles,
     path: "/specimens/female-pelvis",
   },
   { definition:abdominalWallDefinition, raw:{...abdominal,sourceFrame:independentStudyRoutes.find(r=>r.key===abdominal.specimenId)!.frame},

@@ -52,7 +52,9 @@ const counts = {
 for (const s of def.surfaces) {
   const lesson = lessonFor(def, s);
   if (!bindings[s.id]) {
-    assert.equal(lesson, null);
+    // Only the two exact existing renal ureters extend the pelvic context.
+    assert(['VH_F_right_ureter', 'VH_F_left_ureter'].includes(s.sourceName));
+    assert(lesson?.anatomy && lesson?.function);
     continue;
   }
   assert.equal(lesson.anatomy, concepts[bindings[s.id]].anatomy);
@@ -185,12 +187,13 @@ const component = await componentBuild({
   ],
 });
 const require = createRequire(import.meta.url),
+  actualLink = await import('vinext/shims/link'),
   React = require('react'),
   mod = { exports: {} },
   context = {
     module: mod,
     exports: mod.exports,
-    require,
+    require: id => id === 'next/link' ? { __esModule: true, ...actualLink } : require(id),
     URL,
     console,
     process: { env: { NODE_ENV: 'test' } },
@@ -248,7 +251,8 @@ console.log(
     distinctConcepts: Object.keys(concepts).length,
     topicDrafts: counts,
     totalExtendedDrafts: Object.values(counts).reduce((a, b) => a + b, 0),
-    pendingSelections: def.surfaces.length - rows.length,
+    reusedRenalLessons: 2,
+    pendingSelections: def.surfaces.filter(s => !lessonFor(def,s)).length,
     selfChecks: rows.length,
     preservedEarlierLessons: Object.keys(oldApi.hraPelvicLessonBindings).length,
     renderedTopics,

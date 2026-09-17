@@ -4,6 +4,9 @@ import type {
 } from './independent-specimen';
 import type { SpecimenLesson } from '../content/um-limb-teaching';
 import { hraPelvicSurfaceMatches, hraPelvisMatches } from './hra-pelvis';
+import { hraRenalDefinition } from './hra-renal';
+import { hraRenalTeaching } from './hra-renal-teaching';
+import { hraRenalReferenceTitles } from '../content/hra-renal-teaching';
 import {
   identificationFromPool,
   type SpecimenPracticeAdapter,
@@ -11,7 +14,10 @@ import {
 import {
   authoredHraPelvicLesson,
   hraPelvicLessonBindings,
+  hraPelvicReferenceTitles,
 } from '../content/hra-pelvic-teaching';
+
+export const hraPelvicContextReferenceTitles = { ...hraPelvicReferenceTitles, ...hraRenalReferenceTitles };
 
 export function hraPelvicTeaching(
   definition: SpecimenDefinition,
@@ -19,6 +25,8 @@ export function hraPelvicTeaching(
 ): SpecimenLesson | null {
   if (!hraPelvicSurfaceMatches(definition, surface)) return null;
   const concept = hraPelvicLessonBindings[surface.id];
+  if (!concept && ['VH_F_right_ureter', 'VH_F_left_ureter'].includes(surface.sourceName))
+    return hraRenalTeaching(hraRenalDefinition, surface);
   return concept ? authoredHraPelvicLesson(concept) : null;
 }
 function eligibleIds(d: SpecimenDefinition, ids: string[]) {

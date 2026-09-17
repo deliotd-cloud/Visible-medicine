@@ -23,6 +23,14 @@ const raw = JSON.parse(await readFile(join(root,'public/models/hra-pelvis/catalo
 if (raw.structures.length !== 41 || raw.bundles.length !== 1 || raw.clinicalApproval !== false) throw Error('Re-audit changed source scope');
 if (hash(await readFile(join(root,'public/models/hra-pelvis/pelvis.glb'))) !== raw.bundles[0].sha256) throw Error('Model integrity failure');
 for (const path of ['models/hra-pelvis/pelvis.glb','models/hra-pelvis/catalog.json','models/hra-pelvis/NOTICE.md']) copies.push([join(root,'public',path),path]);
+const renal = JSON.parse(await readFile(join(root,'public/models/hra-renal/catalog.json'),'utf8'));
+if (renal.structures.length !== 82 || renal.bundles.length !== 1 || renal.clinicalApproval !== false
+  || renal.source.sha256 !== raw.source.sha256 || renal.sourceFrame !== raw.sourceFrame
+  || JSON.stringify(renal.displayTransformColumnMajor) !== JSON.stringify(raw.displayTransformColumnMajor)) throw Error('Re-audit changed urinary context source/frame');
+if (hash(await readFile(join(root,'public/models/hra-renal/kidneys.glb'))) !== renal.bundles[0].sha256) throw Error('Ureter bundle integrity failure');
+const ureters = renal.structures.filter(s=>['VH_F_right_ureter','VH_F_left_ureter'].includes(s.sourceName));
+if (ureters.length !== 2 || new Set(ureters.map(s=>s.id)).size !== 2) throw Error('Unexpected exposed urinary context');
+for (const path of ['models/hra-renal/kidneys.glb','models/hra-renal/catalog.json','models/hra-renal/NOTICE.md']) copies.push([join(root,'public',path),path]);
 for (const path of ['LICENSE','LICENSES/THIRD_PARTY_NOTICES.md','LICENSES/CC-BY-4.0.txt']) copies.push([join(root,path),path]);
 const records = [];
 for (const [from,name] of copies) {
@@ -33,8 +41,12 @@ for (const [from,name] of copies) {
   records.push({path:name,bytes:bytes.length,sha256:hash(bytes)});
 }
 await writeFile(join(target,'manifest.json'),JSON.stringify({
-  schemaVersion:1,sourceCommit,region:'independent-female-pelvis',structures:41,
-  studies:8,draftTeachingSelections:41,patientDataIncluded:false,clinicalApproved:false,
+  schemaVersion:1,sourceCommit,region:'independent-female-pelvis',structures:43,
+  nativePelvicSelections:41,reusedRenalSelections:2,studies:11,draftTeachingSelections:43,patientDataIncluded:false,clinicalApproved:false,
+  exposedStructureIds:[...raw.structures,...ureters].map(s=>s.id),
+  reusedRenalSourceIds:ureters.map(s=>s.id),
+  renalBundleSelections:82,otherRenalSelectionsSelectableInPelvicUI:false,
+  fullRenalBundleAndCatalogIncluded:true,
   standaloneReviewConnection:false,imagingConnection:false,files:records,
 },null,2)+'\n');
 console.log(JSON.stringify({sourceCommit,files:records.length,bytes:records.reduce((n,f)=>n+f.bytes,0),patientDataIncluded:false}));
