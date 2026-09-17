@@ -151,8 +151,9 @@ import {
 } from '@/lib/study-links';
 import { relatedStudyViews } from '@/lib/study-navigation';
 import type { StudyCamera, StudyView } from '@/lib/study-views';
-import { kneeStudyBounds } from '@/lib/knee-studies';
+import { kneeStudyBounds, kneeStudySets } from '@/lib/knee-studies';
 import { genicularStudyBounds } from '@/lib/genicular-study';
+import { genicularStudy } from '@/content/genicular-study';
 import { elbowStudyBounds } from '@/lib/elbow-studies';
 import { limbVascularStudyReady } from '@/lib/limb-vascular-studies';
 import { longusColliStudyReady } from '@/lib/longus-colli';
@@ -547,18 +548,10 @@ export default function BodyExplorer({
   );
   const enabledIds = useMemo(() => new Set(available.map((item) => item.id)), [available]);
   const framingRegion = regionalFramingRegion(initialRegion, side);
-  const regionalCloseUp = useMemo(() => regionalFramingBounds({
-    region: initialRegion,
-    side,
-    structures: regionStructures,
-    visibleIds: available.map((s) => s.id),
-    selectedId,
-    enabled: regionalFraming && !exam && !focus && !isolated &&
-      !ghostRemoved && !showOrigins && explode === 0 &&
-      layout === 'spatial' && inspection.plane === 'off',
-  }), [initialRegion, side, regionStructures, available, selectedId,
-    regionalFraming, exam, focus, isolated, ghostRemoved, showOrigins,
-    explode, layout, inspection.plane]);
+  const cameraRecipeId = dissection.focusId ?? dissection.stageId;
+  const dedicatedCameraRecipe = initialRegion === 'leg' &&
+    (kneeStudySets.some(study => study.id === cameraRecipeId) ||
+      genicularStudy.id === cameraRecipeId);
   const jointCloseUp = useMemo(() => {
     const input = {
       region: initialRegion,
@@ -596,6 +589,19 @@ export default function BodyExplorer({
     layout,
     inspection.plane,
   ]);
+  const regionalCloseUp = useMemo(() => regionalFramingBounds({
+    region: initialRegion,
+    side,
+    structures: regionStructures,
+    visibleIds: available.map((s) => s.id),
+    selectedId,
+    // A dedicated dissection study owns its camera ROI and caption.
+    enabled: regionalFraming && !dedicatedCameraRecipe && !jointCloseUp && !exam && !focus && !isolated &&
+      !ghostRemoved && !showOrigins && explode === 0 &&
+      layout === 'spatial' && inspection.plane === 'off',
+  }), [initialRegion, side, regionStructures, available, selectedId,
+    regionalFraming, dedicatedCameraRecipe, jointCloseUp, exam, focus, isolated, ghostRemoved, showOrigins,
+    explode, layout, inspection.plane]);
   const guidance = useMemo(
     () => dissectionGuidance(
       regionStructures,
@@ -1698,7 +1704,7 @@ export default function BodyExplorer({
                 <CameraViewMenu
                   value={view}
                   region={initialRegion}
-                  framingAction={framingRegion && available.some(s => s.region === framingRegion) && !exam &&
+                  framingAction={framingRegion && available.some(s => s.region === framingRegion) && !dedicatedCameraRecipe && !jointCloseUp && !exam &&
                     !focus && !isolated && !ghostRemoved && !showOrigins &&
                     explode === 0 && layout === 'spatial' && inspection.plane === 'off'
                     ? {
@@ -1776,8 +1782,8 @@ export default function BodyExplorer({
                   inspection={exam ? initialInspection : inspection}
                   cameraBounds={jointCloseUp}
                   presetBounds={regionalCloseUp}
-                  presetKey={['hand', 'foot', 'pelvis', 'thorax'].includes(initialRegion)
-                    ? `${initialRegion}/${side}/${regionalCloseUp ? 'regional' : 'sources'}`
+                  presetKey={['hand', 'foot', 'pelvis', 'thorax', 'leg'].includes(initialRegion)
+                    ? `${initialRegion}/${side}/${initialRegion === 'leg' && jointCloseUp ? `study:${cameraRecipeId}` : regionalCloseUp ? 'regional' : 'sources'}`
                     : undefined}
                   plate={plate && !exam}
                   cameraCapture={cameraCapture}
@@ -1891,6 +1897,8 @@ export default function BodyExplorer({
                     ? 'Pelvis close-up · Full extent in View menu'
                     : initialRegion === 'thorax'
                     ? 'Thorax close-up · Shared vessels may extend off-screen · Full extent in View menu'
+                    : initialRegion === 'leg'
+                    ? 'Knee & leg close-up · Shared thigh structures may extend off-screen · Full extent in View menu'
                     : 'Hand close-up · Proximal vessels off-screen'
                   : jointCloseUp
                   ? `${initialRegion === 'forearm' ? 'Elbow' : 'Knee'} close-up · Whole bones extend beyond the view · Pan / pinch to explore`

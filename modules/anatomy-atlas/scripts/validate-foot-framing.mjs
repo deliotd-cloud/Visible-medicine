@@ -37,7 +37,7 @@ for (const side of ['both','right','left']) {
   assert(allBox.containsBox(coreBox));
   assert(coreBox.getSize(new Vector3()).length()<allBox.getSize(new Vector3()).length());
   assert(structures.some(s=>s.kind==='tendon'||s.sourceName.toLowerCase().includes('calcaneal tendon')),'Include real Achilles source in the test');
-  for (const change of [{region:'leg'},{side:'unknown'},{enabled:false},{visibleIds:[]},{structures:[]}])
+  for (const change of [{region:'forearm'},{side:'unknown'},{enabled:false},{visibleIds:[]},{structures:[]}])
     assert.equal(api.regionalFramingBounds({...input,...change}),null);
   const skeleton=primary.filter(s=>s.system==='skeleton');
   const boneBox=box(api.regionalFramingBounds({...input,visibleIds:skeleton.map(s=>s.id)}));
@@ -71,7 +71,7 @@ for(const side of ['both','right','left']) {
     assert.deepEqual(api.regionalFramingBounds({...input,selectedId}),api.handFramingBounds({...input,selectedId}));
 }
 assert.equal(api.regionalFramingRegion('hand','both'),null);
-for(const region of catalog.regions.filter(r=>!['hand','foot','pelvis'].includes(r.id))) {
+for(const region of catalog.regions.filter(r=>!['hand','foot','pelvis','thorax','leg'].includes(r.id))) {
   assert.equal(api.initialBodySide(region.id),'both');
   assert.equal(api.regionalFramingRegion(region.id,'right'),null);
 }
