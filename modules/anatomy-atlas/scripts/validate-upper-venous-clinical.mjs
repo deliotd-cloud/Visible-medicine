@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {authoringBeforeRegionalVascularClinical} from './regional-vascular-clinical-history.mjs';
 import {readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {build} from './workspace-test-build.mjs';
@@ -7,7 +8,7 @@ import {authoringBeforeUpperVenousClinical} from './upper-venous-clinical-histor
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import pins from '../content/upper-venous-clinical-pins.json' with {type:'json'};
 import after from '../content/upper-venous-clinical.transition.json' with {type:'json'};
-const c=await context(),{api,display}=c,before=authoringBeforeUpperVenousClinical(c),original=JSON.stringify(display);
+const live=await context(),c={...live,api:authoringBeforeRegionalVascularClinical(live)}, {api,display}=c,before=authoringBeforeUpperVenousClinical(c),original=JSON.stringify(display);
 assert.equal(hash(snapshot(api,display)),after.currentAllLessonsAndRecipesHash);
 assert.equal(hash(snapshot(before,display)),pins.previousAllLessonsAndRecipesHash);
 assert.equal(authoringBeforeUpperVenousClinical({...c,api:before}),before);

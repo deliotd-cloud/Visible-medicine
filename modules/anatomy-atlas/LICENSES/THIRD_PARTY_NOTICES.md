@@ -890,6 +890,14 @@ Application MIT and unchanged BodyParts3D CC BY4.0 notices remain. No new asset,
 dependency, font, texture, paid API or mandatory service. Claim scope and pending
 radiologist sign-off: docs/UPPER_VENOUS_CLINICAL.md.
 
+Regional vascular clinical teaching (17 September 2026) adds original brief factual
+notes with five primary reference links. No publisher prose, figures, tables,
+scans or datasets are redistributed. In particular, Cho2025 is CC BY-NC4.0 and
+its media are not admitted as commercial assets. Citation is not a reuse grant.
+Existing MIT application/teaching terms and model attribution remain unchanged;
+no new asset, dependency, font, texture, paid API or mandatory fee. Claim scope
+and outstanding radiologist review: docs/REGIONAL_VASCULAR_CLINICAL.md.
+
 Run:
 
 ```bash

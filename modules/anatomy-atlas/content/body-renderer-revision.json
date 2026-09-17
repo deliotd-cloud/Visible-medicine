@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "3d625aef6f045038916b87baa00ddafb4bb45321f1bb5f2ab894992fe435fdaf"
+      "sha256": "fed40f0ef7e09414bc9633324537de003f2bfe8f7513b26c4214d5cbf4517ba9"
     },
     {
       "path": "app/body-explorer.css",
@@ -855,6 +855,14 @@
     {
       "path": "content/rectal-deferent-imaging.ts",
       "sha256": "c4f8c16e116a3a15923642ca51c2268dda8784f38754511e9aa085f9d654518f"
+    },
+    {
+      "path": "content/regional-vascular-clinical-pins.json",
+      "sha256": "40b986e14425839098bfd2dae24f9c5d7a604205b32c8814908a63f6c85c8a07"
+    },
+    {
+      "path": "content/regional-vascular-clinical.ts",
+      "sha256": "a13e3d27e86dd9334a68781343db060cd1e9ecab45df992c796d67e3cbec054b"
     },
     {
       "path": "content/renal-teaching.ts",
@@ -1849,6 +1857,10 @@
       "sha256": "82fa38c847c564ce12f6de1de718167408fa4757ca750e3a8221ec630fc25d0e"
     },
     {
+      "path": "lib/regional-vascular-clinical.ts",
+      "sha256": "e5b28caaf9fff1bdca15a72ddc429aef010cc498b9ecab4d64db3c10070c3b88"
+    },
+    {
       "path": "lib/regional-vessel-curriculum.ts",
       "sha256": "b9bb8d5bdc6b706dbbdcd1c59ae3316db60730304830454bd4463d9a2de6b869"
     },
@@ -2126,7 +2138,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "44713a47faf11f7d5713d5b0e5bd63f810c6958677e9ccf66ffca17ae2e926c2"
+      "sha256": "5cd84b79ba7b8c14869912d92dfc4fe18e22da9f30e804bb2a1f5807918205ad"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2321,5 +2333,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "1f9766c96e802b34fb4f89b8a2ca387cff86ab6e2a22f0beb72d584296308ba1"
+  "sha256": "f6e75339cdd3ebeb94c26934ec6e8f756156eaba4805daaef23d94462c40f037"
 }
