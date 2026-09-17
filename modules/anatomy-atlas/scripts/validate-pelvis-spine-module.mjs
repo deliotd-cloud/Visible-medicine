@@ -23,7 +23,9 @@ for(const[d,region,kind]of definitions){
     const params=dictionary(api.independentStudyDeliveryUrl(original,base));assert.equal(params.region,region);
     const route=api.parseContainedSpecimen(params,region);assert.equal(route.status,'ready');assert.equal(route.kind,kind);
     const resolved=await api.resolveIndependentStudyLink(route.link,d);assert.equal(resolved.status,'ready');assert.equal(resolved.selectedId,selectedId);assert.equal(resolved.view,study.view);
-    if(study.id)assert.deepEqual(new Set(d.surfaces.filter(s=>!resolved.state.hidden.includes(s.id)).map(s=>s.id)),new Set(study.ids));
+    assert.deepEqual(new Set(d.surfaces.filter(s=>!resolved.state.hidden.includes(s.id)).map(s=>s.id)),new Set(study.ids));
+    assert.equal(resolved.structureOnly,study.id===null);assert(!resolved.state.hidden.includes(selectedId));
+    assert.deepEqual(resolved.state.history,[]);assert.deepEqual(resolved.state.future,[]);
     for(const other of ['head-neck','thorax','abdomen',region==='spine'?'pelvis':'spine',null]){assert.equal(api.parseContainedSpecimen(params,other).status,'invalid');rejections++;}
     for(const patch of [{refSource:'0'.repeat(64)},{refRevision:'0'.repeat(64)},{refFrame:'patient-lps'},{ref:[params.ref,params.ref]},{structure:selectedId},{specimen:'um-limb-1'}]){
       const rejected=api.parseContainedSpecimen({...params,...patch},region);
@@ -48,7 +50,9 @@ for(const d of Object.values(api.limbDefinitions)){
 }
 const components=await componentBuild({stdin:{contents:`export {IndependentStudyView} from './app/independent-study-navigation';export {KneeSpecimenView} from './app/um-knee-study';export {SpecimenStudyLink} from './app/specimen-study-link';export {backLayersSupplementFor} from './app/back-layers-study';export {hraPelvisSupplementFor} from './app/hra-pelvis-study';`,resolveDir:root,loader:'tsx'},bundle:true,write:false,format:'cjs',platform:'node',plugins:[{name:'observe-scene',setup(b){b.onLoad({filter:/body-scene\.tsx$/},()=>({loader:'js',contents:'export function BodyScene(props){globalThis.sceneProps=props;return null;}export function retryBodyAssets(){}'}));}}]});
 const require=createRequire(import.meta.url),React=require('react'),render=require('react-dom/server').renderToStaticMarkup,module={exports:{}};
-const sandbox={module,exports:module.exports,require,console,URL,URLSearchParams,crypto,TextEncoder,TextDecoder,structuredClone,setTimeout,clearTimeout};runInNewContext(components.outputFiles[0].text,sandbox);
+const bridgeBuild=await componentBuild({entryPoints:['integration/head-neck/framework.tsx'],bundle:true,write:false,format:'cjs',platform:'node'}),bridge={exports:{}};
+runInNewContext(bridgeBuild.outputFiles[0].text,{module:bridge,exports:bridge.exports,require,URL,URLSearchParams});
+const sandbox={module,exports:module.exports,require:id=>id==='next/link'?{__esModule:true,default:bridge.exports.Link}:require(id),console,URL,URLSearchParams,crypto,TextEncoder,TextDecoder,structuredClone,setTimeout,clearTimeout};runInNewContext(components.outputFiles[0].text,sandbox);
 const ui=module.exports;let renders=0;
 for(const[d,,kind]of definitions){
   const supplement=(kind==='back-layers'?ui.backLayersSupplementFor:ui.hraPelvisSupplementFor)(base);

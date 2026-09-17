@@ -10,6 +10,7 @@ if(execFileSync('git',['status','--porcelain'],{cwd:root,encoding:'utf8'}).trim(
 const sourceCommit=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim();
 const build=join(root,'.sites-runtime/head-neck-module');
 const inputs=JSON.parse(await readFile(join(build,'source-inputs.json'),'utf8'));
+if(!inputs.some(i=>i.path==='scripts/independent-source-contract.mjs'))throw Error('Missing independent source contract binding');
 for(const required of ['app/body-explorer.tsx','app/body-scene.tsx','app/eye-layers.tsx','app/ventricles.tsx','app/femoral-components.tsx','app/atlas-workspace.tsx','app/study-links.tsx','app/abdominal-wall-study.tsx','app/hra-renal-study.tsx','app/independent-study-navigation.tsx','lib/model-delivery.ts','integration/head-neck/main.tsx','integration/head-neck/specimen-route.ts','integration/head-neck/delivery.ts','integration/head-neck/regions.ts','integration/head-neck/companions.mjs',...regionalCompanions.map(([source])=>source)]){
   if(!inputs.some(i=>i.path===required))throw Error('Missing source binding: '+required);
 }

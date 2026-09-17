@@ -201,12 +201,20 @@ export async function resolveIndependentStudyLink(
     bundle = d.catalog.bundles.find((b) => b.id === selected?.bundle);
   if (!selected || !bundle || bundle.sha256 !== r.source)
     return rejected('The exact source structure or display model changed.');
-  const study = d.studies.find((s) => s.id === (r.studyId ?? 'all'));
-  if (!study || !study.ids.includes(selected.id))
+  const study = r.studyId === null ? null : d.studies.find((s) => s.id === r.studyId);
+  if (r.studyId !== null && (!study || !study.ids.includes(selected.id)))
     return rejected('The requested structure is not in this study.');
+  // A structure-only link is not the historical named "all" recipe: a
+  // composite specimen may admit context surfaces outside that retained recipe.
+  // Use only this definition's exact source-bound surfaces, never another donor.
+  const context = study
+    ? reduceSpecimen(d, initialSpecimen(d), specimenAction(d, study.id)!)
+    : reduceSpecimen(d, initialSpecimen(d), {
+        type: 'show-only', ids: d.surfaces.map(s => s.id), selectedId: selected.id,
+      });
   const state = reduceSpecimen(
     d,
-    reduceSpecimen(d, initialSpecimen(d), specimenAction(d, study.id)!),
+    context,
     { type: 'select', id: selected.id },
   );
   return {

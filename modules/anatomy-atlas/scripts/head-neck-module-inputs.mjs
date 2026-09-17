@@ -3,6 +3,7 @@ import {fileURLToPath} from 'node:url';
 import {join} from 'node:path';
 import {createHash} from 'node:crypto';
 import {build} from './workspace-test-build.mjs';
+import {assertHraPelvisSourceContract} from './independent-source-contract.mjs';
 export const root=fileURLToPath(new URL('../',import.meta.url));
 export const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 export async function headNeckModuleInputs(shared=false){
@@ -22,10 +23,9 @@ export async function headNeckModuleInputs(shared=false){
   const expected=shared?[
     ['bp3d3-abdominal-wall','CC BY-SA 2.1 JP','bodyparts3d-v3/abdominal-wall'],
     ['hra-united-female-v1.10-kidneys','CC BY 4.0','hra-renal'],
-    ['hra-united-female-v1.10-pelvis','CC BY 4.0','hra-pelvis'],
     ['bp3d3-back-layers','CC BY-SA 2.1 JP','bodyparts3d-v3/back-layers'],
   ]:[];
-  if(independent.length!==expected.length+(shared?5:0))throw Error('Independent specimen scope needs review');
+  if(independent.length!==expected.length+(shared?6:0))throw Error('Independent specimen scope needs review');
   for(const [key,license,folder] of expected){
     const specimen=independent.find(s=>s.key===key);
     const source=JSON.parse(await readFile(join(root,'public/models',folder,'catalog.json'),'utf8'));
@@ -35,6 +35,9 @@ export async function headNeckModuleInputs(shared=false){
       || JSON.stringify(specimen.surfaceIds)!==JSON.stringify(source.structures.map(s=>s.id)))throw Error('Changed independent source, frame or licence: '+key);
   }
   if(shared){
+    const pelvis=JSON.parse(await readFile(join(root,'public/models/hra-pelvis/catalog.json'),'utf8'));
+    const renal=JSON.parse(await readFile(join(root,'public/models/hra-renal/catalog.json'),'utf8'));
+    assertHraPelvisSourceContract(independent.find(s=>s.key===pelvis.specimenId),pelvis,renal);
     const knee=JSON.parse(await readFile(join(root,'public/models/um-knee/catalog.json'),'utf8'));
     const limb=JSON.parse(await readFile(join(root,'public/models/um-limb/catalog.json'),'utf8'));
     const sources=[...knee.structures,...limb.structures];

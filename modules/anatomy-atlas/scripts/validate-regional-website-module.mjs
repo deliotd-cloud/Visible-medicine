@@ -8,12 +8,23 @@ import {headNeckModuleInputs,root} from './head-neck-module-inputs.mjs';
 const compiled=await build({stdin:{contents:"export * from './lib/model-delivery';export * from './lib/study-links';export * from './integration/head-neck/regions';export {bodyDisplayCatalog} from './lib/body-display-catalog';",resolveDir:root,loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
 const api=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
 const {plan,models}=await headNeckModuleInputs(true);
-const retained=[['head-neck',290,75],['thorax',157,9],['abdomen',106,16],['pelvis',81,4],['spine',115,0]];
+// Three separately source-audited additions since the original 1,101-root module.
+const additions=[
+  ['head-neck','vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve','9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5',65264],
+  ['thorax','vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein','ff72014e957d661a16892581db9e371482541302e4a3203ba3e84cac9f5f1928',17252],
+  ['pelvis','vm:anatomy:body:pelvis:midline:organ:corpus-spongiosum-of-penis','f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826',11856],
+];
+for(const [region,id,hash,bytes] of additions){
+  assert(plan.scopes.find(s=>s.region===region).regionalIds.includes(id));
+  assert(plan.scopes.find(s=>s.region==='whole-body').regionalIds.includes(id));
+  assert.equal(models.filter(m=>m.sha256===hash&&m.bytes===bytes).length,1);
+}
+const retained=[['head-neck',291,75],['thorax',158,9],['abdomen',106,16],['pelvis',82,4],['spine',115,0]];
 assert.deepEqual(plan.scopes.slice(0,5).map(s=>[s.region,s.regionalIds.length,s.nestedTargets.length]),retained);
-assert.deepEqual(plan.scopes.slice(5).map(s=>[s.region,s.regionalIds.length,s.nestedTargets.length]),[['shoulder-arm',115,0],['forearm',86,0],['hand',124,0],['thigh',95,4],['leg',76,4],['foot',122,0],['whole-body',1101,104]]);
-assert.equal(models.length,130);assert.equal(models.reduce((n,m)=>n+m.bytes,0),198121124);
+assert.deepEqual(plan.scopes.slice(5).map(s=>[s.region,s.regionalIds.length,s.nestedTargets.length]),[['shoulder-arm',115,0],['forearm',86,0],['hand',124,0],['thigh',95,4],['leg',76,4],['foot',122,0],['whole-body',1104,104]]);
+assert.equal(models.length,133);assert.equal(models.reduce((n,m)=>n+m.bytes,0),198215496);
 const oldModels=new Map(plan.scopes.slice(0,5).flatMap(s=>s.bundles).map(b=>[b.url,b]));
-assert.equal(oldModels.size,93);assert.equal([...oldModels.values()].reduce((n,b)=>n+b.bytes,0),176559252);
+assert.equal(oldModels.size,96);assert.equal([...oldModels.values()].reduce((n,b)=>n+b.bytes,0),176653624);
 const raw=JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json',import.meta.url),'utf8'));
 const original=JSON.stringify(raw),catalog=api.bodyDisplayCatalog(raw),base='/atlas-runtime/head-neck';
 let links=0;
@@ -31,7 +42,7 @@ for(const scope of plan.scopes){
     assert.equal(api.parseStudyLink({...params,structure:[params.structure,params.structure]}).status,'invalid');links++;
   }
 }
-assert.equal(links,2684);assert.equal(JSON.stringify(raw),original);
+assert.equal(links,2690);assert.equal(JSON.stringify(raw),original);
 for(const query of ['region=','region=not-a-region','region=__proto__','region=THORAX','region=head-neck&region=thorax','region=thorax&region=thorax','region=../thorax'])assert.equal(api.parseRegionalModule(new URLSearchParams(query)),null);
 assert.equal(api.parseRegionalModule(new URLSearchParams()),'head-neck');
 assert.throws(()=>api.regionalStudyDeliveryUrl('/regions/thorax?region=head-neck','thorax',base),/routing field/);

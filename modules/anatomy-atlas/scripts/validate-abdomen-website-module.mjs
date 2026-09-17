@@ -102,7 +102,9 @@ const components=await componentBuild({stdin:{contents:`
   b.onLoad({filter:/body-scene\.tsx$/},()=>({loader:'js',contents:'export function BodyScene(props){globalThis.sceneProps=props;return null;}export function retryBodyAssets(){}'}));
 }}]});
 const require=createRequire(new URL('../package.json',import.meta.url)),React=require('react'),render=require('react-dom/server').renderToStaticMarkup;
-const module={exports:{}},sandbox={module,exports:module.exports,require,console,URL,URLSearchParams,crypto,TextEncoder,TextDecoder,structuredClone,setTimeout,clearTimeout};
+const bridgeBuild=await componentBuild({entryPoints:['integration/head-neck/framework.tsx'],bundle:true,write:false,format:'cjs',platform:'node'}),bridge={exports:{}};
+runInNewContext(bridgeBuild.outputFiles[0].text,{module:bridge,exports:bridge.exports,require,URL,URLSearchParams});
+const module={exports:{}},sandbox={module,exports:module.exports,require:id=>id==='next/link'?{__esModule:true,default:bridge.exports.Link}:require(id),console,URL,URLSearchParams,crypto,TextEncoder,TextDecoder,structuredClone,setTimeout,clearTimeout};
 runInNewContext(components.outputFiles[0].text,sandbox);
 const ui=module.exports;
 let renders=0;
