@@ -1775,7 +1775,7 @@ export default function BodyExplorer({
                   inspection={exam ? initialInspection : inspection}
                   cameraBounds={jointCloseUp}
                   presetBounds={regionalCloseUp}
-                  presetKey={['hand', 'foot'].includes(initialRegion)
+                  presetKey={['hand', 'foot', 'pelvis'].includes(initialRegion)
                     ? `${initialRegion}/${side}/${regionalCloseUp ? 'regional' : 'sources'}`
                     : undefined}
                   plate={plate && !exam}
@@ -1886,6 +1886,8 @@ export default function BodyExplorer({
                 {regionalCloseUp
                   ? initialRegion === 'foot'
                     ? 'Foot close-up · Full extent in View menu'
+                    : initialRegion === 'pelvis'
+                    ? 'Pelvis close-up · Full extent in View menu'
                     : 'Hand close-up · Proximal vessels off-screen'
                   : jointCloseUp
                   ? `${initialRegion === 'forearm' ? 'Elbow' : 'Knee'} close-up · Whole bones extend beyond the view · Pan / pinch to explore`

@@ -71,7 +71,7 @@ for(const side of ['both','right','left']) {
     assert.deepEqual(api.regionalFramingBounds({...input,selectedId}),api.handFramingBounds({...input,selectedId}));
 }
 assert.equal(api.regionalFramingRegion('hand','both'),null);
-for(const region of catalog.regions.filter(r=>!['hand','foot'].includes(r.id))) {
+for(const region of catalog.regions.filter(r=>!['hand','foot','pelvis'].includes(r.id))) {
   assert.equal(api.initialBodySide(region.id),'both');
   assert.equal(api.regionalFramingRegion(region.id,'right'),null);
 }

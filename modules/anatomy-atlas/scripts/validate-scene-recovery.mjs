@@ -3,6 +3,7 @@ import fs from 'node:fs/promises';
 /* oxlint-disable typescript/unbound-method -- Tests retain original method identities and invoke retired methods with an explicit receiver. */
 import assert from 'node:assert/strict';
 import { historicalRecipeProfiles } from './recipe-history.mjs';
+import { reviewDisplayPaths } from './review-revision-evidence.mjs';
 import { createHash } from 'node:crypto';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
@@ -636,13 +637,18 @@ const css = await fs.readFile('app/scene-recovery.css', 'utf8');
 check(css.includes('visibility: hidden'));
 check(css.includes('pointer-events: none'));
 check(css.includes('var(--vm-teal)'));
-const revisions = await fs.readFile('scripts/review-revisions.mjs', 'utf8');
+const revisions = JSON.parse(await fs.readFile('content/review-revisions.json', 'utf8'));
 for (const path of [
   'app/scene-recovery.tsx',
   'app/scene-recovery.css',
   'lib/renderer-health.ts',
-])
-  check(revisions.includes(path));
+]) {
+  check(reviewDisplayPaths.includes(path), `${path} must be part of the actual review generator`);
+  const entries = revisions.display.filter(([entry]) => entry === path);
+  same(entries.length, 1, `${path} must have one saved review binding`);
+  same(entries[0][1], hash((await fs.readFile(path, 'utf8')).replace(/\r\n/g, '\n')),
+    `${path} binding must match current source`);
+}
 const result = {
   passed: true,
   checks,

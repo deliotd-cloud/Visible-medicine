@@ -1,10 +1,29 @@
 import { handFramingBounds } from './hand-framing';
 import { selectionBounds } from './selection-visibility';
 
+const pelvisSacrumId = 'vm:anatomy:body:spine:midline:bone:sacrum';
+const neutralLateralities = new Set(['midline', 'unpaired', 'unspecified']);
+
 export function regionalFramingRegion(region: string, side: string) {
   if (region === 'hand' && ['left', 'right'].includes(side)) return 'hand';
   if (region === 'foot' && ['left', 'right', 'both'].includes(side)) return 'foot';
+  if (region === 'pelvis' && ['left', 'right', 'both'].includes(side)) return 'pelvis';
   return null;
+}
+
+function pelvisFramingMember(
+  structure: Parameters<typeof handFramingBounds>[0]['structures'][number],
+  side: string,
+) {
+  if (!structure.regions.includes('pelvis')) return false;
+  const primary = structure.region === 'pelvis';
+  const sacrum = structure.id === pelvisSacrumId &&
+    structure.fmaId === 'FMA16202' &&
+    structure.system === 'skeleton' &&
+    structure.laterality === 'midline';
+  const onSide = side === 'both' || structure.laterality === side ||
+    neutralLateralities.has(structure.laterality);
+  return (primary || sacrum) && onSide;
 }
 
 /** Camera-only regional framing; never remove or reposition a source. */
@@ -12,9 +31,20 @@ export function regionalFramingBounds(input: Parameters<typeof handFramingBounds
   // Preserve the previously verified hand preset and unilateral landing policy.
   if (input.region === 'hand') return handFramingBounds(input);
   const { region, side, structures, visibleIds, selectedId, enabled } = input;
-  if (!enabled || regionalFramingRegion(region, side) !== 'foot') return null;
+  const framingRegion = regionalFramingRegion(region, side);
+  if (!enabled || !['foot', 'pelvis'].includes(framingRegion ?? '')) return null;
   const visible = new Set(visibleIds);
   const selected = structures.find((s) => s.id === selectedId);
+  if (region === 'pelvis') {
+    // Stale links, hidden or contralateral selections and long participating
+    // sources all fall back to their complete source-space fit.
+    if (selectedId !== null &&
+      (!selected || !visible.has(selected.id) || !pelvisFramingMember(selected, side)))
+      return null;
+    return selectionBounds(structures.filter((s) =>
+      visible.has(s.id) && pelvisFramingMember(s, side),
+    ));
+  }
   // Calf vessels and the calcaneal tendon retain their full source extent when
   // selected. A foot-region membership does not turn those into cropped meshes.
   if (selected && (selected.region !== 'foot' || !visible.has(selected.id)))

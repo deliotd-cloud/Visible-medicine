@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "pelvis-framing:test": "node scripts/validate-pelvis-framing.mjs",
     "major-organ-function:test": "node scripts/pin-major-organ-function.mjs --check && node scripts/record-major-organ-function-transition.mjs --check && node scripts/validate-major-organ-function.mjs",
     "corpus-clinical:test": "node scripts/pin-corpus-clinical.mjs --check && node scripts/record-corpus-clinical-transition.mjs --check && node scripts/validate-corpus-clinical.mjs",
     "core-organ-function:test": "node scripts/pin-core-organ-function.mjs --check && node scripts/record-core-organ-function-transition.mjs --check && node scripts/validate-core-organ-function.mjs",
