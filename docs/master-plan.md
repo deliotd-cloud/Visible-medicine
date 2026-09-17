@@ -2,6 +2,36 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — deferent Clinical/Pathology source increment
+
+Four introductory draft placements now fill Clinical and Pathology for the
+existing left/right deferent ducts, separately bound to their complete source
+identities. They cover localisation/transport, congenital absence and CFTR
+association, with explicit limits on inference from a surface model. No new
+control, geometry, scan, dependency or entitlement. Detailed variants and
+inflammatory/postoperative teaching still require separate work and review.
+
+Sol Medium implemented bindings/tests; Terra Medium audited factual references
+and reuse terms; the main task reviewed, integrated and built. Visible NCI,
+MedlinePlus/NLM and NICHD credits accompany original short summaries. EAU
+guidance was excluded from this increment after its commercial/derivative terms
+were screened. Older EAU references in renal/pelvic teaching are the next
+focused provenance audit, not an assertion that reading links alone infringe.
+
+Feature evidence: four actual React note renders, 148 rejected source/side/
+topic mutations, 9,914 unrelated topics preserved, strict before/after hashes.
+The preceding imaging suite and 33 clinical-history helper contracts pass;
+TypeScript and Atlas/shared-module builds pass. Review-binding, source commits
+and verified GitHub/D recovery evidence are recorded in the main workspace
+checkpoint. Atlas docs/DEFERENT_CLINICAL.md states exact scope and sources.
+
+This is source-only, not website or clinical release. Website84 remains the
+last verified deployment; pending model staging still requires authenticated
+verification. User radiologist approval must identify the actual source and
+teaching/renderer revision. Didanix Education/light and independent Atlas,
+case and lecture access remain unchanged. Existing full native goal is active;
+the owner's hourly review is PAUSED and must not be reactivated.
+
 ## 16 September — rectal/deferent imaging source checkpoint
 
 Atlas `59b311f1b67ba9ddd35b4193287edaf9f45575f5` adds twelve introductory imaging
