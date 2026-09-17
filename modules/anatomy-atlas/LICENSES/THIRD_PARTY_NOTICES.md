@@ -1,5 +1,14 @@
 # Third-party notices
 
+## Costal cartilage imaging — 17 September 2026
+
+Original short teaching cites Malghem et al. (2001) and Nummela et al. (2022).
+No publisher prose, figures, scans, tables or datasets are redistributed. Reading
+links do not confer asset reuse rights. Nummela's publisher CC BY4.0 was verified;
+Malghem's media are not admitted. Existing BodyParts3D attribution and original
+project MIT terms remain. No new dependency or fee-bearing service.
+See `docs/COSTAL_CARTILAGE_IMAGING.md` for scope and review requirements.
+
 ## Cranial boundary clinical teaching — 17 September 2026
 
 Three original short notes cite Soffar (2021), Helie (1995) and Hoz (2026).

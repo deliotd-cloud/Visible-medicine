@@ -599,6 +599,10 @@ The expanded importer uses both official IS-A (skeletal, muscular and nerve defi
 
 ## Imaging and clinical limits
 
+[Costal cartilage imaging](docs/COSTAL_CARTILAGE_IMAGING.md) adds source-bound
+CT/MRI/Ultrasound/X-ray drafts for14 numbered cartilage selections, with visibility
+and static-model limitations explicit. Clinical review remains required.
+
 Tentorium and lamina terminalis Clinical drafts reuse the existing compact
 panels; source coverage and review limits are in
 [cranial boundary teaching](docs/CRANIAL_BOUNDARY_CLINICAL.md).

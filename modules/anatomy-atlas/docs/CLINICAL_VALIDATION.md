@@ -1,5 +1,11 @@
 # Clinical validation checklist
 
+[Costal cartilage imaging](COSTAL_CARTILAGE_IMAGING.md): review14 first–seventh
+bilateral source labels and56 draft modality placements. Check cartilage/rib
+distinction, X-ray visibility, CT contour/cleft context, MR signal interpretation
+and dynamic-US limitations. No static-model instability or diagnostic accuracy
+is claimed. Both source anatomy and teaching need revision-bound acceptance.
+
 [Cranial boundary clinical drafts](CRANIAL_BOUNDARY_CLINICAL.md): review lesion
 attachment/extension and the limits of enhancement as a sign of tentorial
 involvement; review lamina variation without inferring pathology from a normal

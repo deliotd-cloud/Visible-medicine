@@ -96,7 +96,7 @@ Generated from the actual catalogue, teaching resolver, dissection profiles and 
 
 ## Delivered source scope
 
-[X-ray orientation](XRAY_TEACHING.md) is available in the existing Imaging group: 328 source-pinned body drafts now include six shoulder-bone sources plus 47 spinal sources. The 3 overlapping dedicated-shoulder drafts cover three shoulder-bone concepts separately. Other entries remain pending, including all 104 nested selections. No radiographs, calibrated projections or paid-lecture access are supplied. Old display/teaching approvals require re-review; earlier topics are preserved through exact authoring transitions.
+[X-ray orientation](XRAY_TEACHING.md) is available in the existing Imaging group: 342 source-pinned body drafts now include six shoulder-bone sources plus 47 spinal sources. The 3 overlapping dedicated-shoulder drafts cover three shoulder-bone concepts separately. Other entries remain pending, including all 104 nested selections. No radiographs, calibrated projections or paid-lecture access are supplied. Old display/teaching approvals require re-review; earlier topics are preserved through exact authoring transitions.
 
 The [cricothyroid dissection](CRICOTHYROID_DISSECTION.md) adds 4 source-defined muscle parts with 2 optional, nonselectable cartilage landmarks. It reuses the compact selection, cutaway, separation, labels and Undo/Redo controls. The source-preserving derivative explicitly omits 12 audited artifact faces; this is disclosed, not clinical approval. Introductory teaching is draft and CT/MRI/US remain pending for these parts. Cartilage is a navigation landmark, not the muscle's tissue parent.
 
@@ -125,10 +125,10 @@ Counts are representations with displayed copy, not unique lessons, complete top
 | --- | ---: | ---: | ---: | ---: |
 | Anatomy | 1100 | 2 | 0 | 0 |
 | Function | 1097 | 0 | 5 | 0 |
-| CT | 763 | 0 | 339 | 0 |
-| MRI | 719 | 0 | 383 | 0 |
-| X-ray | 328 | 0 | 774 | 0 |
-| Ultrasound | 482 | 0 | 620 | 0 |
+| CT | 777 | 0 | 325 | 0 |
+| MRI | 733 | 0 | 369 | 0 |
+| X-ray | 342 | 0 | 760 | 0 |
+| Ultrasound | 496 | 0 | 606 | 0 |
 | Pathology | 1092 | 0 | 10 | 0 |
 | Clinical | 1095 | 0 | 7 | 0 |
 | Quiz notes | 71 | 0 | 0 | 1031 |

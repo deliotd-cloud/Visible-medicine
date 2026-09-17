@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "f9822ea385a6083a19918811e830a1d578923bf83be2dfb79b0b35a39f97f7e5"
+      "sha256": "c036ea6a51a432e62cf6b3b3f958d96472412000d9b399b4ee2e3080924240b2"
     },
     {
       "path": "app/body-explorer.css",
@@ -511,6 +511,14 @@
     {
       "path": "content/corpus-clinical.ts",
       "sha256": "1f3af47828e50ba6ef9b7a32c9f877ed1aa5e323be6bb1285bc26028fb6b4b4c"
+    },
+    {
+      "path": "content/costal-cartilage-imaging-pins.json",
+      "sha256": "8f1822b41913232b7599eca84644a8c94dd346b4f0610d6e793c4d38d7b7abd9"
+    },
+    {
+      "path": "content/costal-cartilage-imaging.ts",
+      "sha256": "e9640bfbc9f79aabc5455717d3e69d2ce3849942d0800409336b2d6be9db00bd"
     },
     {
       "path": "content/cranial-bone-imaging-pins.json",
@@ -1335,6 +1343,10 @@
     {
       "path": "lib/corpus-spongiosum.ts",
       "sha256": "e8160f2ae0be2de646b4cebba199b67ea8e96f98f2809c877c70022c27da4972"
+    },
+    {
+      "path": "lib/costal-cartilage-imaging.ts",
+      "sha256": "14f28cf5cf952d8d87c58c534a9c04820b095f3b0d356cbdfb3cda7d6dd732ab"
     },
     {
       "path": "lib/cranial-arteries.ts",
@@ -2178,7 +2190,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "04ea03f4e8623f8ce103f6a8d057fd06ee970f0fb0c314366e7b664e2096c26c"
+      "sha256": "32373357f78078b248c12a69b8f3c814911f46337124593c552ac9070495a7f5"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2373,5 +2385,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "1da44052d90776d2a3832d45a95994ab17ec9150accca13c50de8936a44ddb9f"
+  "sha256": "559448a9b6f571e0fecf28fd3852079d899b98a12495f5527cb08f1801849be8"
 }

@@ -7,7 +7,8 @@ import {authoringBeforeCranialBoundaryClinical} from './cranial-boundary-clinica
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import pins from '../content/cranial-boundary-clinical-pins.json' with {type:'json'};
 import after from '../content/cranial-boundary-clinical.transition.json' with {type:'json'};
-const c=await context(),{api,display}=c,before=authoringBeforeCranialBoundaryClinical(c),original=JSON.stringify(display);
+import {authoringBeforeCostalCartilageImaging} from './costal-cartilage-imaging-history.mjs';
+const live=await context(),c={...live,api:authoringBeforeCostalCartilageImaging(live)}, {api,display}=c,before=authoringBeforeCranialBoundaryClinical(c),original=JSON.stringify(display);
 assert.equal(hash(snapshot(api,display)),after.currentAllLessonsAndRecipesHash);
 assert.equal(hash(snapshot(before,display)),pins.previousAllLessonsAndRecipesHash);
 assert.equal(authoringBeforeCranialBoundaryClinical({...c,api:before}),before);
