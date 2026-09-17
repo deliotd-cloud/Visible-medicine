@@ -8,6 +8,7 @@ export function regionalFramingRegion(region: string, side: string) {
   if (region === 'hand' && ['left', 'right'].includes(side)) return 'hand';
   if (region === 'foot' && ['left', 'right', 'both'].includes(side)) return 'foot';
   if (region === 'pelvis' && ['left', 'right', 'both'].includes(side)) return 'pelvis';
+  if (region === 'thorax' && ['left', 'right', 'both'].includes(side)) return 'thorax';
   return null;
 }
 
@@ -32,9 +33,21 @@ export function regionalFramingBounds(input: Parameters<typeof handFramingBounds
   if (input.region === 'hand') return handFramingBounds(input);
   const { region, side, structures, visibleIds, selectedId, enabled } = input;
   const framingRegion = regionalFramingRegion(region, side);
-  if (!enabled || !['foot', 'pelvis'].includes(framingRegion ?? '')) return null;
+  if (!enabled || !['foot', 'pelvis', 'thorax'].includes(framingRegion ?? '')) return null;
   const visible = new Set(visibleIds);
   const selected = structures.find((s) => s.id === selectedId);
+  if (region === 'thorax') {
+    // Frame complete chest sources and all nonvascular context (including the
+    // thoracic spine). Shared cervical/abdominal/shoulder vessels remain loaded
+    // at their original positions; selecting one restores the full-source fit.
+    const member = (s: typeof structures[number]) =>
+      s.regions.includes('thorax') &&
+      (s.region === 'thorax' || s.system !== 'vessels') &&
+      (side === 'both' || s.laterality === side || neutralLateralities.has(s.laterality));
+    if (selectedId !== null &&
+      (!selected || !visible.has(selected.id) || !member(selected))) return null;
+    return selectionBounds(structures.filter((s) => visible.has(s.id) && member(s)));
+  }
   if (region === 'pelvis') {
     // Stale links, hidden or contralateral selections and long participating
     // sources all fall back to their complete source-space fit.

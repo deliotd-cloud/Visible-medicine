@@ -166,6 +166,24 @@ for (const orthographic of [false, true]) {
   close(h.render({presetBounds:null,recenterKey:'hand/full',reset:5}).scale,1,kind+' full-source action restores fit');
   close(h.controls.target.distanceTo(h.props.bounds.getCenter(new three.Vector3())),0,kind+' full-source center restored');
 }
+// Thorax core -> shared vessel must refit on the key transition alone, without
+// a reset. Test the actual camera effect for both projection modes.
+for (const orthographic of [false, true]) {
+  const h=harness(orthographic),kind=orthographic?'parallel':'perspective';
+  const bounds=new three.Box3(new three.Vector3(-1.879,1.486,-.533),new three.Vector3(1.879,7.378,1.694));
+  const core=new three.Box3(new three.Vector3(-1.879,1.858,-.501),new three.Vector3(1.879,5.955,1.694));
+  const full=structuredClone(h.render({bounds,fitOccupancy:[.7,.9],recenterKey:'thorax/both/sources'}));
+  const closeUp=structuredClone(h.render({presetBounds:core,recenterKey:'thorax/both/regional'}));
+  same(closeUp.scale<full.scale,true,kind+' thorax is enlarged');
+  close(h.controls.target.distanceTo(core.getCenter(new three.Vector3())),0,kind+' thorax core centered');
+  close(h.render({presetBounds:null,recenterKey:'thorax/both/sources'}).scale,full.scale,kind+' shared vessel refits without reset');
+  close(h.controls.target.distanceTo(bounds.getCenter(new three.Vector3())),0,kind+' shared vessel full center');
+  close(h.render().scale,full.scale,kind+' fit all stays full');
+  close(h.render({presetBounds:core,recenterKey:'thorax/both/regional'}).scale,closeUp.scale,kind+' frame thorax restores detail');
+  h.restore.current=full;
+  close(h.render({reset:1}).scale,full.scale,kind+' saved full camera overrides thorax default');
+  close(h.render().scale,full.scale,kind+' saved full camera remains stable');
+}
 // Perspective depth and orthographic extents must both stay inside the reserved
 // label margins, including very narrow/tall and short embedded canvases.
 for (const aspect of [390/600, 1, 724/190, 724/365])
