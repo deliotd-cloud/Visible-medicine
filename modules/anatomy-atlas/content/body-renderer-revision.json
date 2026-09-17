@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "e02bc79eb76b46d11c650bc22243daf130162c560eba74983d4c9ac790a9812d"
+      "sha256": "a169509f6b2f19d4895f13ee582e0129a97066eab55dc2f7e1abd6b937c26982"
     },
     {
       "path": "app/body-explorer.css",
@@ -975,6 +975,14 @@
     {
       "path": "content/thoracoabdominal-organ-imaging.ts",
       "sha256": "daf1e872df2e2f1d1c183000744080a87d8fdc794e671f22d1828870265375c6"
+    },
+    {
+      "path": "content/thyroid-imaging-pins.json",
+      "sha256": "b39ea65048bc0b9dca76085aaca7407832a32c3794c990b771977a0b8f27754b"
+    },
+    {
+      "path": "content/thyroid-imaging.ts",
+      "sha256": "d518d47f775d876c802fb804251458e5b72ab328ef2ddbbf2daf5d750684f980"
     },
     {
       "path": "content/trunk-attachment-pins.json",
@@ -2057,6 +2065,10 @@
       "sha256": "2048fd644d43721614d44b749511e3f877623873391edc227f70994f2e81ec08"
     },
     {
+      "path": "lib/thyroid-imaging.ts",
+      "sha256": "3eb810cb78de5a7fed03d7a103deeea1f5567ebc1e7d4ba6c755d13285b4d954"
+    },
+    {
       "path": "lib/trunk-attachments.ts",
       "sha256": "eb17e94c4b4bb0c14fedb2d5ecfa6352825a7ade10c2c050a787f3c36d8a7922"
     },
@@ -2154,7 +2166,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "d1550a347dd9d7418160e70af331c42c00ac28b9ae9c413056dd9d1deff604b4"
+      "sha256": "95caa30cd112261e9bcde3a8001d0d25f65db8197473c0877e212df48bb29906"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2349,5 +2361,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "5b4d00a6172fe745ca7a039f1b677c42f59712ad30313453127b4cf7bfe482de"
+  "sha256": "8d83e768528a94dcf1713c5e50c359fa3091b31446798351268c18b17e639cd8"
 }

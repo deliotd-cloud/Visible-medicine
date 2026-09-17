@@ -906,6 +906,15 @@ Original MIT teaching/code and existing source-model notices remain unchanged.
 No new dependency, model, font, texture, paid API or mandatory service is added.
 See docs/NECK_TEACHING.md for claim scope and pending radiologist acceptance.
 
+Inferior thyroid CT/ultrasound teaching (17 September 2026) adds original brief
+factual synthesis and reading links to Bhardwaj et al. (2023), Garcia and Rech
+(2015), and Ruan et al. (2015). The CTA paper's CC BY-NC4.0 material is not bundled;
+the Wiley publication retains its rights; the Ruan report is CC BY4.0. None
+supplies project images, diagrams, text passages, tables, measurements, patient
+scans or datasets. Citation is not an asset-reuse licence. Original text/code
+retain MIT terms and existing BodyParts3D attribution remains. No new dependency,
+font, model, texture, paid API or mandatory service. See docs/THYROID_IMAGING.md.
+
 Run:
 
 ```bash

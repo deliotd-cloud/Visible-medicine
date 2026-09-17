@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {authoringBeforeThyroidImaging} from './thyroid-imaging-history.mjs';
 import {readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {build} from './workspace-test-build.mjs';
@@ -7,7 +8,7 @@ import {authoringBeforeNeckTeaching} from './neck-teaching-history.mjs';
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import pins from '../content/neck-teaching-pins.json' with {type:'json'};
 import after from '../content/neck-teaching.transition.json' with {type:'json'};
-const c=await context(),{api,display}=c,before=authoringBeforeNeckTeaching(c),original=JSON.stringify(display);
+const live=await context(),c={...live,api:authoringBeforeThyroidImaging(live)},{api,display}=c,before=authoringBeforeNeckTeaching(c),original=JSON.stringify(display);
 assert.equal(hash(snapshot(api,display)),after.currentAllLessonsAndRecipesHash);
 assert.equal(hash(snapshot(before,display)),pins.previousAllLessonsAndRecipesHash);
 assert.equal(authoringBeforeNeckTeaching({...c,api:before}),before);

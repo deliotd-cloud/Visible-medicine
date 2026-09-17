@@ -190,6 +190,7 @@
     "renderer-root:test": "node scripts/validate-anatomy-root.mjs",
     "labels:test": "node scripts/validate-screen-labels.mjs",
     "label-depth:test": "node scripts/validate-label-depth.mjs",
+    "thyroid-imaging:test": "node scripts/pin-thyroid-imaging.mjs --check && node scripts/record-thyroid-imaging-transition.mjs --check && node scripts/validate-thyroid-imaging.mjs",
     "model-first:test": "node scripts/validate-model-first.mjs",
     "atlas-navigation:test": "node scripts/validate-atlas-navigation.mjs",
     "anatomy-search:test": "node scripts/validate-anatomy-search.mjs",

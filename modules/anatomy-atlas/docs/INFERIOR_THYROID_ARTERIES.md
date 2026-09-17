@@ -19,7 +19,7 @@ The source addition is atomic and bound to six pre-existing arterial context rec
 
 ## Teaching and clinical review
 
-Original brief Anatomy/Function/self-check drafts use the [TTUHSC El Paso anterior-neck reference](https://anatomy.ttuhscep.edu/nervous_system/antneck_tables.html). No passage, table or diagram is redistributed. The typical parent is the thyrocervical trunk; a link is not a validated source junction or continuous lumen. Clinical, Pathology, CT, MRI, X-ray and Ultrasound remain explicitly pending.
+Original brief Anatomy/Function/self-check drafts use the [TTUHSC El Paso anterior-neck reference](https://anatomy.ttuhscep.edu/nervous_system/antneck_tables.html). No passage, table or diagram is redistributed. The typical parent is the thyrocervical trunk; a link is not a validated source junction or continuous lumen. Subsequent [Clinical/Pathology drafts](NECK_TEACHING.md) and [CT/Ultrasound drafts](THYROID_IMAGING.md) are source-bound and await radiologist review. MRI and X-ray remain explicitly pending.
 
 Complete **source definition** does not mean complete **anatomical vessel**. Thyroid/parathyroid tissue, recurrent laryngeal nerves, all glandular branches, lumens and territories are not supplied by this addition. Specialist review must assess identity, course/extent, artefacts, proximity to retained neck sources, misleading surface contacts and the draft copy. This is not an operative view, perfusion map, embolisation/ligation target, CT angiogram or registered patient scan. Real browser/mobile/clinical review is separate from automated checks. Sign-off must reference this exact source, renderer and content revision.
 
