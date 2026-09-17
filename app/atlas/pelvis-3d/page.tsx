@@ -15,7 +15,7 @@ export default function PelvisModulePage(){
     <iframe className="shoulder-module-frame" src="/atlas-runtime/head-neck/index.html?region=pelvis" title="Interactive pelvis: explore, dissect and practise" referrerPolicy="same-origin" allowFullScreen/>
     <details className="shoulder-module-notes">
       <summary>Coverage, sources &amp; imaging links</summary>
-      <p>81 regional selections and four nested deep-femoral source parts. Use the existing dissection, search, isolation and separation tools. Source-piece counts do not mean complete pelvic anatomy.</p>
+      <p>82 regional selections and four nested deep-femoral source parts. Use the existing dissection, search, isolation and separation tools. Source-piece counts do not mean complete pelvic anatomy.</p>
       <p>Female pelvis opens as a separate 41-surface reference with eight studies; six disputed source groups remain withheld. Hip and thigh opens the independent right lower limb, with all five scopes, 67 unique surfaces and 26 study views. These specimens are not registered to the main body or to each other.</p>
       <p>No scan or spatial registration is connected. Imaging teaching is draft. Future imaging uses Didanix Education after clearance and mapping; lecture access remains separate.</p>
       <p>BodyParts3D v4 and HRA use CC BY 4.0; the independent Universiti Malaya lower limb uses CC0 1.0. Existing source defects, grouped surfaces and missing tissue remain disclosed. No clinical approval is implied.</p>

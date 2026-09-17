@@ -14,13 +14,14 @@ const candidate = json('atlas-model-staging-regional-20260917');
 const cardiac = json('atlas-model-staging-regional-20260918');
 const sha = (value: string) => createHash('sha256').update(value).digest('hex');
 
-test('regional staging preserves prior objects and registers the final cardiac object without activating delivery', async () => {
+test('regional staging preserves immutable candidates after explicit administrator-review runtime integration', async () => {
   const before = JSON.stringify(active);
   assert.equal(candidate.purpose, 'administrator-staging-only');
   assert.equal(candidate.atlasSource, 'a5baf03bb274e2e6f3dfe078603a0b9988b1f400');
   assert.equal(candidate.candidateManifestSha256, 'bc8b31c36b3533bb996d7c4feccc84991e268f81cf7f7bebb4f7ed59ea06218e');
   assert.equal(candidate.proposedInventorySha256, 'a74532b7b64b61221f14ddefb02c267296376397c19da5553772996fdcaebba4');
-  assert.equal(sha(JSON.stringify(active, null, 2) + '\n'), candidate.activeInventorySha256);
+  assert.equal(candidate.activeInventorySha256, '9f686f1a2c9909bba2b46b1b76805aa8168287c4aa4d0f420e942b3fb7c90e2c');
+  assert.equal(sha(JSON.stringify(active, null, 2) + '\n'), cardiac.proposedInventorySha256);
   assert.deepEqual(candidate.models, [
     { sha256: 'f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826', bytes: 11856, paths: ['/atlas-runtime/head-neck/models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb'] },
     { sha256: '9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5', bytes: 65264, paths: ['/atlas-runtime/head-neck/models/bodyparts3d/short-ciliary/short-ciliary.glb'] },
@@ -56,12 +57,13 @@ test('regional staging preserves prior objects and registers the final cardiac o
   assert.deepEqual(exports.atlasRegisteredStagingModels, expected);
   assert.equal(expected.length, 134);
   assert.equal(expected.flatMap(m => m.paths).length, 140);
-  assert.equal(active.models.length, 131);
+  assert.equal(active.models.length, 134);
+  assert.deepEqual(expected, active.models.map((m: AtlasStoredModel) => ({...m, paths:[...m.paths].sort()})), 'Every registered candidate now belongs to the explicit review inventory; registration alone never promotes it');
   assert.equal(candidate.models.reduce((n: number, m: AtlasStoredModel) => n + m.bytes, 0), 77120);
   for (const mode of ['upload', 'check', 'download'] as const) assert.strictEqual(atlasStagingCheckModels(mode, expected, active.models), expected);
   assert.strictEqual(atlasStagingCheckModels('delivery', expected, active.models), active.models);
   for (const model of [...candidate.models, ...cardiac.models]) for (const path of model.paths) {
-    assert.throws(() => resolveAtlasDeliveryModel(new URL(path, 'https://atlas.test'), active.models));
+    assert.equal(resolveAtlasDeliveryModel(new URL(path, 'https://atlas.test'), active.models).sha256, model.sha256);
   }
   for (const model of active.models) for (const path of model.paths) {
     assert.equal(resolveAtlasDeliveryModel(new URL(path, 'https://atlas.test'), active.models).sha256, model.sha256);

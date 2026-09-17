@@ -50,15 +50,15 @@ export const atlasModules: AtlasModule[] = [
   {
     slug: 'head-neck-3d', title: 'Head and neck 3D anatomy', region: 'Head & neck',
     modality: '3D', orientation: 'Rotatable',
-    description: 'Explore 290 regional selections plus nested eye, brain, ventricular and vessel dissections, with source-bound draft teaching.',
-    structures: 290, images: 0, status: 'available',
+    description: 'Explore 291 regional selections plus nested eye, brain, ventricular and vessel dissections, with source-bound draft teaching.',
+    structures: 291, images: 0, status: 'available',
     systems: ['Bones', 'Muscles', 'Organs', 'Nervous', 'Vessels', 'Connective'], reviewed: 'Private integration pilot · Review pending',
   },
   {
     slug:'thorax-3d', title:'Thorax 3D anatomy', region:'Thorax',
     modality:'3D', orientation:'Rotatable',
-    description:'Explore 157 chest selections, deeper cardiac and lung studies, chest-wall dissection and draft imaging notes.',
-    structures:157, images:0, status:'available',
+    description:'Explore 158 chest selections, deeper cardiac and lung studies, chest-wall dissection and draft imaging notes.',
+    structures:158, images:0, status:'available',
     systems:['Bones','Muscles','Heart','Lungs','Vessels','Connective'], reviewed:'Private integration pilot · Review pending',
   },
   {
@@ -72,7 +72,7 @@ export const atlasModules: AtlasModule[] = [
     slug:'pelvis-3d', title:'Pelvis 3D anatomy', region:'Pelvis',
     modality:'3D', orientation:'Rotatable',
     description:'Explore pelvic structures and deep-femoral source parts; open separate female-pelvis and hip/thigh dissections.',
-    structures:81, images:0, status:'available',
+    structures:82, images:0, status:'available',
     systems:['Bones','Muscles','Organs','Vessels','Connective'], reviewed:'Private integration pilot · Review pending',
   },
   {

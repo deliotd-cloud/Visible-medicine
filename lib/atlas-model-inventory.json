@@ -23,9 +23,9 @@
     },
     {
       "module": "head-neck",
-      "sourceCommit": "4516a19b5f61b0f3118786e87ce70c831e5c10d9",
-      "manifestSha256": "795b233d58c09d2955f67e8aedf268773acb628fd642527785d5a7312d29424f",
-      "modelPaths": 130
+      "sourceCommit": "6fe69ab68bd76d3648c0725eedabdba8ab778823",
+      "manifestSha256": "431654af2230c2930d9923db53593b841b48c054e1234c280fb98ce35a3cf938",
+      "modelPaths": 133
     }
   ],
   "models": [
@@ -558,6 +558,13 @@
       ]
     },
     {
+      "sha256": "9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5",
+      "bytes": 65264,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/short-ciliary/short-ciliary.glb"
+      ]
+    },
+    {
       "sha256": "9b17997e1211d794777fb1b6fbb6e84252445ae15f1b2cc811c80efad8a8e514",
       "bytes": 150304,
       "paths": [
@@ -911,6 +918,13 @@
       ]
     },
     {
+      "sha256": "f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826",
+      "bytes": 11856,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb"
+      ]
+    },
+    {
       "sha256": "f75517af8f2d72d1fd890c20fea3375948addab8eaee42f9217dcfd5754d3649",
       "bytes": 1162668,
       "paths": [
@@ -943,6 +957,13 @@
       "bytes": 1707728,
       "paths": [
         "/atlas-runtime/head-neck/models/bodyparts3d/brainstem/brainstem.glb"
+      ]
+    },
+    {
+      "sha256": "ff72014e957d661a16892581db9e371482541302e4a3203ba3e84cac9f5f1928",
+      "bytes": 17252,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/anterior-cardiac-vein/anterior-cardiac-vein.glb"
       ]
     },
     {

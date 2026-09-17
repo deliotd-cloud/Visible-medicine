@@ -6,7 +6,7 @@ test('pelvis and spine expose complete contained scopes without imaging or revie
   const runtime=new URL('../public/atlas-runtime/head-neck/',import.meta.url);
   const manifest=JSON.parse(await readFile(new URL('manifest.json',runtime),'utf8'));
   const frame=await readFile(new URL('../components/SiteFrame.tsx',import.meta.url),'utf8');
-  for(const[region,roots,nested,specimens]of [['pelvis',81,4,6],['spine',115,0,1]] as const){
+  for(const[region,roots,nested,specimens]of [['pelvis',82,4,6],['spine',115,0,1]] as const){
     const entries=atlasModules.filter(m=>m.slug===region+'-3d');assert.equal(entries.length,1);assert.equal(entries[0].structures,roots);assert.equal(entries[0].images,0);
     const scope=manifest.regionalScopes.find((s:{region:string})=>s.region===region);assert(scope);
     assert.equal(new Set(scope.regionalIds).size,roots);assert.equal(scope.nestedTargets.length,nested);assert.equal(scope.independentSpecimens.length,specimens);

@@ -2,7 +2,20 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
-## 18 September — final regional model staging
+## 18 September — integrated regional review candidate
+
+The stage-only website update was privately published as version 87; authenticated
+upload of the anterior cardiac vein succeeded, followed by complete byte/header/
+SHA256 verification of all 134 registered objects. This is transfer evidence, not
+clinical validation. The exact prepared regional runtime is now integrated for
+administrator review, with 134 immutable models / 140 paths and an updated policy
+fingerprint. All 131 prior models and the other three modules are retained.
+The previous generated regional directory is preserved in the coordinating
+workspace for recovery. See [regional integration](atlas-regional-integration-20260918.md).
+Website publication/acceptance of this integration is tracked separately below;
+no clinical, learner, case, scan, mask or lecture entitlement is granted.
+
+## 18 September — final regional model staging (completed before integration)
 
 Authenticated administrator upload and full-download verification succeeded for
 all 133 previously registered objects, including corpus spongiosum and short

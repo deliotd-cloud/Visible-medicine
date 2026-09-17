@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "sourceCommit": "4516a19b5f61b0f3118786e87ce70c831e5c10d9",
+  "sourceCommit": "6fe69ab68bd76d3648c0725eedabdba8ab778823",
   "region": "head-neck",
   "sourceVersion": "4.0",
   "regionalIds": [
@@ -293,7 +293,8 @@
     "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
     "vm:anatomy:body:head-neck:right:vessel:right-superior-cerebellar-artery",
     "vm:anatomy:body:head-neck:left:vessel:left-superior-cerebellar-artery",
-    "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery"
+    "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+    "vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve"
   ],
   "nestedTargets": [
     {
@@ -897,7 +898,7 @@
       "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086"
     }
   ],
-  "structures": 290,
+  "structures": 291,
   "nestedSelections": 75,
   "regionalScopes": [
     {
@@ -1192,7 +1193,8 @@
         "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
         "vm:anatomy:body:head-neck:right:vessel:right-superior-cerebellar-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-superior-cerebellar-artery",
-        "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery"
+        "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+        "vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve"
       ],
       "nestedTargets": [
         {
@@ -2037,6 +2039,13 @@
           "structures": 3
         },
         {
+          "id": "short-ciliary",
+          "url": "/models/bodyparts3d/short-ciliary/short-ciliary.glb?v=9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5",
+          "bytes": 65264,
+          "sha256": "9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5",
+          "structures": 1
+        },
+        {
           "id": "tentorium-partial",
           "url": "/models/bodyparts3d/tentorium/tentorium.glb?v=b7b35094243dab53b9681c98d5123aa4b93a881fb0e48de4a8d7f32186007d4c",
           "bytes": 396152,
@@ -2220,7 +2229,8 @@
         "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
         "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
-        "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery"
+        "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery",
+        "vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein"
       ],
       "nestedTargets": [
         {
@@ -2298,6 +2308,13 @@
       ],
       "independentSpecimens": [],
       "bundles": [
+        {
+          "id": "anterior-cardiac-vein",
+          "url": "/models/bodyparts3d/anterior-cardiac-vein/anterior-cardiac-vein.glb?v=ff72014e957d661a16892581db9e371482541302e4a3203ba3e84cac9f5f1928",
+          "bytes": 17252,
+          "sha256": "ff72014e957d661a16892581db9e371482541302e4a3203ba3e84cac9f5f1928",
+          "structures": 1
+        },
         {
           "id": "cardiac",
           "url": "/models/bodyparts3d/cardiac/cardiac.glb?v=64d93898db3b6cb4dbea452508799c98cbe65b361eba2f17658ecae532a01f67",
@@ -3180,7 +3197,8 @@
         "vm:anatomy:body:pelvis:right:vessel:right-internal-pudendal-vein",
         "vm:anatomy:body:pelvis:right:vessel:right-lateral-sacral-vein",
         "vm:anatomy:body:pelvis:right:vessel:right-obturator-vein",
-        "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein"
+        "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein",
+        "vm:anatomy:body:pelvis:midline:organ:corpus-spongiosum-of-penis"
       ],
       "nestedTargets": [
         {
@@ -3262,7 +3280,9 @@
             "vm:reference:hra-united-female-v1-10:pelvis:right-uterine-artery",
             "vm:reference:hra-united-female-v1-10:pelvis:left-uterine-vein",
             "vm:reference:hra-united-female-v1-10:pelvis:right-uterine-vein",
-            "vm:reference:hra-united-female-v1-10:pelvis:sacrum"
+            "vm:reference:hra-united-female-v1-10:pelvis:sacrum",
+            "vm:reference:hra-united-female-v1-10:kidneys:right-ureter",
+            "vm:reference:hra-united-female-v1-10:kidneys:left-ureter"
           ],
           "studyIds": [
             "overview",
@@ -3272,7 +3292,10 @@
             "adnexa-right",
             "supports",
             "vessels",
-            "neighbours"
+            "neighbours",
+            "urinary",
+            "urinary-left",
+            "urinary-right"
           ],
           "sourceFrame": {
             "sourceToSceneColumnMajor": [
@@ -3302,6 +3325,13 @@
               "sha256": "f18f1f0e3c6e8c0562b6b66864a8d786ffdb9e6a688da9288550fad6e491b866",
               "bytes": 3796080,
               "structures": 41
+            },
+            {
+              "id": "hra-united-female-v1.10-kidneys",
+              "url": "/models/hra-renal/kidneys.glb?v=bd5d2affb912",
+              "sha256": "bd5d2affb912f135c8c8da7e7892fbc906ebae017ed7042e900646c2b6332cfc",
+              "bytes": 3557552,
+              "structures": 82
             }
           ]
         },
@@ -3753,6 +3783,13 @@
       ],
       "bundles": [
         {
+          "id": "corpus-spongiosum",
+          "url": "/models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb?v=f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826",
+          "bytes": 11856,
+          "sha256": "f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826",
+          "structures": 1
+        },
+        {
           "id": "deferent-ducts",
           "url": "/models/bodyparts3d/deferent-ducts/deferent-ducts.glb?v=53d2cdcb86c04d78671705b34f5b82c0130427735c8c7986553b3a042d8c7544",
           "bytes": 39612,
@@ -3884,6 +3921,13 @@
           "sha256": "f18f1f0e3c6e8c0562b6b66864a8d786ffdb9e6a688da9288550fad6e491b866",
           "bytes": 3796080,
           "structures": 41
+        },
+        {
+          "id": "hra-united-female-v1.10-kidneys",
+          "url": "/models/hra-renal/kidneys.glb?v=bd5d2affb912",
+          "sha256": "bd5d2affb912f135c8c8da7e7892fbc906ebae017ed7042e900646c2b6332cfc",
+          "bytes": 3557552,
+          "structures": 82
         },
         {
           "id": "um-knee",
@@ -7967,7 +8011,10 @@
         "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
         "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
         "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
-        "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery"
+        "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery",
+        "vm:anatomy:body:pelvis:midline:organ:corpus-spongiosum-of-penis",
+        "vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve",
+        "vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein"
       ],
       "nestedTargets": [
         {
@@ -8944,7 +8991,9 @@
             "vm:reference:hra-united-female-v1-10:pelvis:right-uterine-artery",
             "vm:reference:hra-united-female-v1-10:pelvis:left-uterine-vein",
             "vm:reference:hra-united-female-v1-10:pelvis:right-uterine-vein",
-            "vm:reference:hra-united-female-v1-10:pelvis:sacrum"
+            "vm:reference:hra-united-female-v1-10:pelvis:sacrum",
+            "vm:reference:hra-united-female-v1-10:kidneys:right-ureter",
+            "vm:reference:hra-united-female-v1-10:kidneys:left-ureter"
           ],
           "studyIds": [
             "overview",
@@ -8954,7 +9003,10 @@
             "adnexa-right",
             "supports",
             "vessels",
-            "neighbours"
+            "neighbours",
+            "urinary",
+            "urinary-left",
+            "urinary-right"
           ],
           "sourceFrame": {
             "sourceToSceneColumnMajor": [
@@ -8984,6 +9036,13 @@
               "sha256": "f18f1f0e3c6e8c0562b6b66864a8d786ffdb9e6a688da9288550fad6e491b866",
               "bytes": 3796080,
               "structures": 41
+            },
+            {
+              "id": "hra-united-female-v1.10-kidneys",
+              "url": "/models/hra-renal/kidneys.glb?v=bd5d2affb912",
+              "sha256": "bd5d2affb912f135c8c8da7e7892fbc906ebae017ed7042e900646c2b6332cfc",
+              "bytes": 3557552,
+              "structures": 82
             }
           ]
         },
@@ -9127,6 +9186,13 @@
           "structures": 48
         },
         {
+          "id": "anterior-cardiac-vein",
+          "url": "/models/bodyparts3d/anterior-cardiac-vein/anterior-cardiac-vein.glb?v=ff72014e957d661a16892581db9e371482541302e4a3203ba3e84cac9f5f1928",
+          "bytes": 17252,
+          "sha256": "ff72014e957d661a16892581db9e371482541302e4a3203ba3e84cac9f5f1928",
+          "structures": 1
+        },
+        {
           "id": "brachial-veins",
           "url": "/models/bodyparts3d/brachial-veins/brachial-veins.glb?v=e603953fca42e17c45f3daa91d3c53bedc0ccf83b70b18b864f9dc72d6bbe265",
           "bytes": 100360,
@@ -9167,6 +9233,13 @@
           "bytes": 13044,
           "sha256": "40dd8f7f7b9a6bc79be1fdc6282ed50965c7f07d853a4db981dd7203477185c8",
           "structures": 2
+        },
+        {
+          "id": "corpus-spongiosum",
+          "url": "/models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb?v=f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826",
+          "bytes": 11856,
+          "sha256": "f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826",
+          "structures": 1
         },
         {
           "id": "cranial-arteries",
@@ -9946,6 +10019,13 @@
           "structures": 7
         },
         {
+          "id": "short-ciliary",
+          "url": "/models/bodyparts3d/short-ciliary/short-ciliary.glb?v=9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5",
+          "bytes": 65264,
+          "sha256": "9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5",
+          "structures": 1
+        },
+        {
           "id": "subscapular-arteries",
           "url": "/models/bodyparts3d/subscapular-arteries/subscapular-arteries.glb?v=6e7ccebe78f6a8c89b556e5e1256d755801725590c4625bebd3fecd6d93f04b3",
           "bytes": 31116,
@@ -9992,7 +10072,7 @@
       "license": "CC-BY-4.0"
     }
   ],
-  "sharedRegionalStructures": 1101,
+  "sharedRegionalStructures": 1104,
   "patientDataIncluded": false,
   "clinicalApproved": false,
   "standaloneReviewConnection": false,
@@ -10011,6 +10091,13 @@
       "bytes": 7625848,
       "sha256": "f8fa3e2a955ae43d74b359dfc9ad14487381ed496fecfeca9d47aa6a0024a7c4",
       "structures": 48
+    },
+    {
+      "id": "anterior-cardiac-vein",
+      "url": "/models/bodyparts3d/anterior-cardiac-vein/anterior-cardiac-vein.glb?v=ff72014e957d661a16892581db9e371482541302e4a3203ba3e84cac9f5f1928",
+      "bytes": 17252,
+      "sha256": "ff72014e957d661a16892581db9e371482541302e4a3203ba3e84cac9f5f1928",
+      "structures": 1
     },
     {
       "id": "brachial-veins",
@@ -10053,6 +10140,13 @@
       "bytes": 13044,
       "sha256": "40dd8f7f7b9a6bc79be1fdc6282ed50965c7f07d853a4db981dd7203477185c8",
       "structures": 2
+    },
+    {
+      "id": "corpus-spongiosum",
+      "url": "/models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb?v=f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826",
+      "bytes": 11856,
+      "sha256": "f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826",
+      "structures": 1
     },
     {
       "id": "cranial-arteries",
@@ -10832,6 +10926,13 @@
       "structures": 7
     },
     {
+      "id": "short-ciliary",
+      "url": "/models/bodyparts3d/short-ciliary/short-ciliary.glb?v=9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5",
+      "bytes": 65264,
+      "sha256": "9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5",
+      "structures": 1
+    },
+    {
       "id": "subscapular-arteries",
       "url": "/models/bodyparts3d/subscapular-arteries/subscapular-arteries.glb?v=6e7ccebe78f6a8c89b556e5e1256d755801725590c4625bebd3fecd6d93f04b3",
       "bytes": 31116,
@@ -10913,27 +11014,27 @@
     {
       "path": "index.html",
       "bytes": 914,
-      "sha256": "ab41c77d171deb622d39bd3af569530ad51de2de96ac5f1f6371fe96db57d5f7"
+      "sha256": "28e962e4119677eab615ed536c9a430aa3736b8d182c7abbd76f0e45b7f08fce"
     },
     {
       "path": "BUNDLED_NOTICES.txt",
-      "bytes": 35742,
-      "sha256": "260b66752938347bbc129af4e6ffc4e42fdcd55315327bbca4cdce5e94687db8"
+      "bytes": 36869,
+      "sha256": "b90af1a3e16dc02257f591b59d2b272999803b72a806f837d7f57a124ab3e567"
     },
     {
       "path": "bundled-dependencies.json",
-      "bytes": 1778,
-      "sha256": "029de5bbef94680bda7d80568b6948065b3946c17cbd6ce0b3b16fc4627a777d"
+      "bytes": 1862,
+      "sha256": "8e45c58afb2e186197756b89be8dff8985d9ca9915865d4a7343c574ccd00841"
     },
     {
       "path": "source-inputs.json",
-      "bytes": 76898,
-      "sha256": "ec7a0e295f6ed2aecec04e938475bd48860d7c1af7fd88c339952dfad6613678"
+      "bytes": 93832,
+      "sha256": "acafb7c06e9cc78b6d66818672bfa899d276bc9845fdac0986b594c67fbcbd4f"
     },
     {
-      "path": "assets/abdominal-wall-study-Dc5MUWJs.js",
+      "path": "assets/abdominal-wall-study-d2l9k124.js",
       "bytes": 44598,
-      "sha256": "d40b5ebf5e3a4b358a83511aac01e7790c3b846662efe0eb82de69d781a4a9ab"
+      "sha256": "2d4101abc8f567c8534c9173cccd77aba76fb1fbba57e3ebe25303dd3e02214d"
     },
     {
       "path": "assets/anatomy-load-state-LfHAQoB7.js",
@@ -10941,19 +11042,19 @@
       "sha256": "08da2c433d3695ac87ccef46c03e114a39946445f4daad04ba37cf4971b15b79"
     },
     {
-      "path": "assets/back-layers-study-DyouxF08.js",
+      "path": "assets/back-layers-study-DPx27s2c.js",
       "bytes": 74888,
-      "sha256": "f76364c5ab082272e3c64d46bcd958ea9730b1c930cae912dd9c3da102404b10"
+      "sha256": "2d9c7c3b177a1d8a639ff622eb68a401d7bf25089d932f9c90b951fd6b52bba2"
     },
     {
-      "path": "assets/body-scene-CGUv3Rnc.css",
-      "bytes": 2193,
-      "sha256": "dde88f89e2ce955558fd6e9551a8796969da6d9d91be0bed8a70bc0482e09416"
+      "path": "assets/body-scene-CfqFU1I5.css",
+      "bytes": 2419,
+      "sha256": "4ac51013048f632723c45c47b0409bbfc5b3e6347edc99866b4abe02ebbbfa6d"
     },
     {
-      "path": "assets/body-scene-DKz80v4k.js",
-      "bytes": 1023538,
-      "sha256": "d0a560b8f636dcf81db154c546d5c9e9f16fa2df337eafbaf6f51fc14e8017b8"
+      "path": "assets/body-scene-WR2rITT3.js",
+      "bytes": 1070157,
+      "sha256": "e698c819b49d981d48ef49164724505aa433e94e8a60fc6827432a0fa0cf0c80"
     },
     {
       "path": "assets/cutaway-controls-4N0ICIXO.css",
@@ -10961,9 +11062,9 @@
       "sha256": "87c31bfe8303461a8afbde6251bb48df5a77645f774c8ef3ac48c292a30ec5c8"
     },
     {
-      "path": "assets/cutaway-controls-DrYQL7ot.js",
-      "bytes": 4914,
-      "sha256": "5b06b72f7fa576663b74cd1680079785ca3c7d9e56e247da092d5f9621cb9ff9"
+      "path": "assets/cutaway-controls-fqQ97CVJ.js",
+      "bytes": 112032,
+      "sha256": "fa546e78d76b97102ca6411ae38de8bf81f8e6e2f64bb72030a1bfe9f8d33439"
     },
     {
       "path": "assets/eye-layers-B3CQEl2o.css",
@@ -10971,34 +11072,39 @@
       "sha256": "58f9322c6a028c52be262400337233bf1eb9350ca31aef05830a1df107bbd343"
     },
     {
-      "path": "assets/eye-layers-BJCYqkGL.js",
+      "path": "assets/eye-layers-DD4GKqYf.js",
       "bytes": 11502,
-      "sha256": "354eb4dd432a3f5de6cf561471d1619551af3414058ed1e434e201fd45c361d4"
+      "sha256": "7491141e759c6916a29ef804160cbc675238e20b4cd904c4025808dd42d036c3"
     },
     {
-      "path": "assets/hra-pelvis-study-DRGpHyqf.js",
-      "bytes": 92800,
-      "sha256": "a2a69dd4982db63ae299cfe84b2eb4ab16784c2c8798ebb8728a19962e390e83"
+      "path": "assets/hra-pelvis-study-BYr5RuXu.js",
+      "bytes": 94863,
+      "sha256": "84150b6cbfe3d756353143945cd4916b3575513714a241d9db94b1ead0797fe9"
     },
     {
-      "path": "assets/hra-renal-study-BJjX_H-b.js",
-      "bytes": 116598,
-      "sha256": "884304baa1e069fd7b7e2a3cd6a9cd1f727e9d84a73cc9e46ebb17c83aadfbff"
+      "path": "assets/hra-renal-study-CvjyVuXS.js",
+      "bytes": 3440,
+      "sha256": "5a9c9037173063b87bf14f705c7c5e2249bbeb7fc85efeb59b7bf0087581ef98"
     },
     {
-      "path": "assets/independent-study-navigation-Juu5WyyS.js",
+      "path": "assets/hra-renal-teaching-CTUKfAKC.js",
+      "bytes": 114242,
+      "sha256": "c4c8c7da3c2a38b4808de2370f157ee5edd75d93fd7c88d2ef1e70d72d540916"
+    },
+    {
+      "path": "assets/independent-study-navigation-DK6PfpLJ.js",
       "bytes": 2627,
-      "sha256": "c99280f3eb5b09a2537d40f6f9819b392d8dfc52750e89540a13541fbd03c8d2"
+      "sha256": "960e87b799b11dcbd8a613724991dffcdb762857f6ccbfca878fb95b8b2996b6"
     },
     {
-      "path": "assets/index-fpgP7s1E.js",
-      "bytes": 1950424,
-      "sha256": "c699836d7986ae57a5ab867f7fd1ef4098cc60e6b68b82a1a067f323c34cb012"
+      "path": "assets/index-CnvCW2U_.css",
+      "bytes": 285741,
+      "sha256": "0644c2c3591280e77749d4dbcbf8f449d3214cedea3385a5511d9a33adf352b1"
     },
     {
-      "path": "assets/index-Z8eNETPx.css",
-      "bytes": 284169,
-      "sha256": "4f0211734fc6ca696ce2306a70e4f825a35ce02bd9bff2394142eb06c63ef20e"
+      "path": "assets/index-E6K6lq1x.js",
+      "bytes": 2008768,
+      "sha256": "652684801398327a054022d21fb3c30761d153e0b9195ba22bd523372d6be6cc"
     },
     {
       "path": "assets/rolldown-runtime-hePW80VL.js",
@@ -11006,9 +11112,9 @@
       "sha256": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021"
     },
     {
-      "path": "assets/slider-CZ62lbat.js",
-      "bytes": 3819926,
-      "sha256": "5079c41f1028ff411ce6fcbe036f5c0df5267198843396ee44156f8e02c45212"
+      "path": "assets/slider-BVy2mK3b.js",
+      "bytes": 4546144,
+      "sha256": "5cdb9d0c5b206157339752bd2146b181321958c77f08648a8f9f2614774c1088"
     },
     {
       "path": "assets/slider-VO9b3koS.css",
@@ -11016,9 +11122,9 @@
       "sha256": "557f7401b9e23cc294cec02d26ccc1b01d19269ffeb4f1e2565ae018ae5e996d"
     },
     {
-      "path": "assets/um-knee-study-DEJF_h5u.js",
-      "bytes": 517068,
-      "sha256": "458c1d4557e8b15cdd0b578b1b41b329ca71f4c66726eba8c53b6f093db17da9"
+      "path": "assets/um-knee-study-B0gxv-a3.js",
+      "bytes": 517392,
+      "sha256": "f210b55673deb0365a2737bcb280940b710642483e0be21e411fbff4e4fd7890"
     },
     {
       "path": "assets/um-knee-study-DE_VvcAw.css",
@@ -11026,19 +11132,19 @@
       "sha256": "7f1d701756afcca6313a1ea8b3bb47f578ae6066d9d6750576f1003f9c65da3b"
     },
     {
-      "path": "assets/um-limb-study-V28rH77q.js",
+      "path": "assets/um-limb-study-BZEMjUfR.js",
       "bytes": 2602,
-      "sha256": "18835070485ddee5b7dcaf1016e27ad0a41bdc9aa3201732a89869b8954c5ebb"
-    },
-    {
-      "path": "assets/ventricles-CnVVJHe-.js",
-      "bytes": 228946,
-      "sha256": "34528949f152806840ad582cb543b359d340051199cdefa479a8899dc105d653"
+      "sha256": "d32c0a715cfbd0acc0dfbb93bf870062df1c3c82c19ebf4a3777b75c5628842d"
     },
     {
       "path": "assets/ventricles-zpa0fhqb.css",
       "bytes": 975,
       "sha256": "402aa99d0fb2bc759da951e478aa67b937ead0e2edb2d0e83a9e793c0e3669c9"
+    },
+    {
+      "path": "assets/ventricles-zzv-hnjx.js",
+      "bytes": 229111,
+      "sha256": "56a4fdaa5a7106484572e75766382f645fe180e793db81995e926e58138f0977"
     },
     {
       "path": "models/bodyparts3d-v3/abdominal-wall/abdominal-wall.glb",
@@ -11049,6 +11155,11 @@
       "path": "models/bodyparts3d-v3/back-layers/back-layers.glb",
       "bytes": 7625848,
       "sha256": "f8fa3e2a955ae43d74b359dfc9ad14487381ed496fecfeca9d47aa6a0024a7c4"
+    },
+    {
+      "path": "models/bodyparts3d/anterior-cardiac-vein/anterior-cardiac-vein.glb",
+      "bytes": 17252,
+      "sha256": "ff72014e957d661a16892581db9e371482541302e4a3203ba3e84cac9f5f1928"
     },
     {
       "path": "models/bodyparts3d/brachial-veins/brachial-veins.glb",
@@ -11079,6 +11190,11 @@
       "path": "models/bodyparts3d/collicular-brachia/collicular-brachia.glb",
       "bytes": 13044,
       "sha256": "40dd8f7f7b9a6bc79be1fdc6282ed50965c7f07d853a4db981dd7203477185c8"
+    },
+    {
+      "path": "models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb",
+      "bytes": 11856,
+      "sha256": "f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826"
     },
     {
       "path": "models/bodyparts3d/cranial-arteries/cranial-arteries.glb",
@@ -11636,6 +11752,11 @@
       "sha256": "410fb0c4179785c91d018e549cd0ffbdd48c8e9919620dc0f32cdac3559c6a3e"
     },
     {
+      "path": "models/bodyparts3d/short-ciliary/short-ciliary.glb",
+      "bytes": 65264,
+      "sha256": "9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5"
+    },
+    {
       "path": "models/bodyparts3d/subscapular-arteries/subscapular-arteries.glb",
       "bytes": 31116,
       "sha256": "6e7ccebe78f6a8c89b556e5e1256d755801725590c4625bebd3fecd6d93f04b3"
@@ -11712,8 +11833,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "bytes": 144379,
-      "sha256": "08f1a4b1329f75d2213fb26e3e2dd352072abc0ad6d89220a3f92f4f9ad16880"
+      "bytes": 173401,
+      "sha256": "d6cf3ee06c2de4ab6e725088e4ed4348f4a32ff10cbe3a89db3fb94b03297d08"
     },
     {
       "path": "LICENSES/CC-BY-4.0.txt",
