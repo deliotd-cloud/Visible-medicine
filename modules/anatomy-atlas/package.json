@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "short-ciliary:test": "node scripts/export-short-ciliary.mjs --check && node scripts/record-short-ciliary-transition.mjs --check && node scripts/validate-short-ciliary.mjs",
     "costal-cartilage-imaging:test": "node scripts/pin-costal-cartilage-imaging.mjs --check && node scripts/record-costal-cartilage-imaging-transition.mjs --check && node scripts/validate-costal-cartilage-imaging.mjs",
     "cranial-boundary-clinical:test": "node scripts/pin-cranial-boundary-clinical.mjs --check && node scripts/record-cranial-boundary-clinical-transition.mjs --check && node scripts/validate-cranial-boundary-clinical.mjs",
     "pica-clinical:test": "node scripts/pin-pica-clinical.mjs --check && node scripts/record-pica-clinical-transition.mjs --check && node scripts/validate-pica-clinical.mjs",

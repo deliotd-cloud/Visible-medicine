@@ -1,4 +1,5 @@
 import type { BodyCatalog, BodyStructure } from '../app/body-types';
+import { bodySideMatches } from './body-presentation-parts.ts';
 import {
   dissectionProfiles,
   stageStructures,
@@ -125,9 +126,7 @@ export function bodyStudyScope(
   return catalog.structures.filter(
     (item) =>
       (region === 'whole-body' || item.regions.includes(region)) &&
-      (side === 'both' ||
-        item.laterality === side ||
-        ['midline', 'unpaired', 'unspecified'].includes(item.laterality)),
+      bodySideMatches(item, side),
   );
 }
 

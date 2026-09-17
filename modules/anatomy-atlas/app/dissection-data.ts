@@ -1109,6 +1109,13 @@ dissectionProfiles.pelvis.stages.push(
   ),
 );
 dissectionProfiles['head-neck'].focuses.push({
+  id: 'short-ciliary-context',
+  title: 'Short ciliary source & orbital context',
+  includeSkeleton: false,
+  rule: { fmaIds: ['FMA7041', 'FMA53549', 'FMA53550', 'FMA52673', 'FMA52674', 'FMA82734', 'FMA82735', 'FMA12514', 'FMA12515', 'FMA49054', 'FMA49055'] },
+  view: 'superior',
+});
+dissectionProfiles['head-neck'].focuses.push({
   id: 'ocular',
   title: 'Eyeballs & orbital muscle subset',
   rule: {

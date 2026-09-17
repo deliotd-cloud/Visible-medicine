@@ -1,4 +1,5 @@
 import type { BodyCatalog, BodyStructure } from '../app/body-types';
+import { bodySideMatches } from './body-presentation-parts.ts';
 import {
   cranialArteryComponentCatalog,
   cranialArteryComponentsFor,
@@ -181,12 +182,7 @@ export function nestedStudyTargets(catalog: BodyCatalog): NestedTarget[] {
 }
 
 export function nestedSideMatches(structure: BodyStructure, side: string) {
-  return (
-    ['both', 'left', 'right'].includes(side) &&
-    (side === 'both' ||
-      structure.laterality === side ||
-      ['midline', 'unpaired', 'unspecified'].includes(structure.laterality))
-  );
+  return bodySideMatches(structure, side);
 }
 
 /** Resolve fresh canonical data; never trust a cached search result or URL. */

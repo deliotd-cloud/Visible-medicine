@@ -1,27 +1,27 @@
 {
   "passed": true,
-  "assertions": 303882,
-  "links": 14127,
-  "focusedLinks": 8808,
-  "destinationsTested": 6864,
+  "assertions": 308295,
+  "links": 14194,
+  "focusedLinks": 8863,
+  "destinationsTested": 6909,
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
-      "structures": 1101,
-      "testedLinks": 1924
+      "structures": 1103,
+      "testedLinks": 1932
     },
     {
       "region": "whole-body",
       "side": "left",
-      "structures": 631,
-      "testedLinks": 1109
+      "structures": 633,
+      "testedLinks": 1116
     },
     {
       "region": "whole-body",
       "side": "right",
-      "structures": 631,
-      "testedLinks": 1102
+      "structures": 633,
+      "testedLinks": 1109
     },
     {
       "region": "shoulder-arm",
@@ -170,38 +170,38 @@
     {
       "region": "pelvis",
       "side": "both",
-      "structures": 81,
-      "testedLinks": 177
+      "structures": 82,
+      "testedLinks": 184
     },
     {
       "region": "pelvis",
       "side": "left",
-      "structures": 44,
-      "testedLinks": 95
+      "structures": 45,
+      "testedLinks": 101
     },
     {
       "region": "pelvis",
       "side": "right",
-      "structures": 46,
-      "testedLinks": 101
+      "structures": 47,
+      "testedLinks": 107
     },
     {
       "region": "head-neck",
       "side": "both",
-      "structures": 290,
-      "testedLinks": 856
+      "structures": 291,
+      "testedLinks": 868
     },
     {
       "region": "head-neck",
       "side": "left",
-      "structures": 169,
-      "testedLinks": 528
+      "structures": 170,
+      "testedLinks": 535
     },
     {
       "region": "head-neck",
       "side": "right",
-      "structures": 168,
-      "testedLinks": 521
+      "structures": 169,
+      "testedLinks": 528
     },
     {
       "region": "spine",
@@ -224,7 +224,7 @@
   ],
   "sourceGeometryChanged": false,
   "catalogueSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
-  "displaySelections": 1101,
+  "displaySelections": 1103,
   "actualInstalledRuntimeDuplicateParsingTested": true,
   "browserInteractionTesting": false,
   "clinicalValidation": false,

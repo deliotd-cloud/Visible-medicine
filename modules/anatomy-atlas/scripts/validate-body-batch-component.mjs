@@ -5,6 +5,7 @@ import { dirname } from 'node:path';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import { build } from './workspace-component-test-build.mjs';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 const require=createRequire(import.meta.url), React=require('react'), THREE=require('three');
 const compiled=await build({stdin:{contents:"export { Bundle } from './app/body-scene'; export { bodyPresentationOffset, arrangeBodyStructures, extractionOffsets } from './lib/body-arrangement';",resolveDir:process.cwd(),loader:'tsx'},bundle:true,write:false,platform:'node',format:'cjs',plugins:[{name:'expose-bundle-for-test',setup(api){api.onLoad({filter:/body-scene\.tsx$/},async args=>({contents:(await readFile(args.path,'utf8'))+'\nexport { Bundle };',loader:'tsx',resolveDir:dirname(args.path)}));}}]});
 const geometry=new THREE.BoxGeometry();geometry.clearGroups();geometry.deleteAttribute('uv');
@@ -23,6 +24,11 @@ const mod={exports:{}}, document={body:{style:{cursor:''}}};
 runInNewContext(compiled.outputFiles[0].text,{module:mod,exports:mod.exports,Float32Array,Uint16Array,Uint32Array,document,
  require:id=>id==='react'?hooks:id==='@react-three/fiber'?{useThree:selector=>selector(state)}:id==='@react-three/drei'?{useGLTF:()=>({scene}),Line:'Line'}:require(id)});
 const selected=[];
+// Real compound source nodes must already be present when Bundle memoizes its map.
+const shortSource=JSON.parse(await readFile('public/models/bodyparts3d/short-ciliary/catalog.json','utf8'));
+const shortBytes=await readFile('public/models/bodyparts3d/short-ciliary/short-ciliary.glb');
+const shortLoaded=await new GLTFLoader().parseAsync(shortBytes.buffer.slice(shortBytes.byteOffset,shortBytes.byteOffset+shortBytes.byteLength),'');
+const shortNodes=new Map();shortLoaded.scene.traverse(m=>{if(m.isMesh){const mesh=new THREE.Mesh(m.geometry);mesh.name=m.name;scene.add(mesh);shortNodes.set(m.name,m.geometry);}});
 const props={catalog:{structures:items},structures:items,selectedId:null,exam:false,hiddenIds:[],isolated:false,contextIds:[],appearance:{},inspection:{plane:'off',position:50,flipped:false,opacity:{},keepSelectedSolid:true},labels:true,landmarks:[],illustrated:true,showOrigins:false,onLoaded(){},onSelect:id=>selected.push(id)};
 const input={bundle:{id:'test',url:'/test.glb'},items,props,offsets:new Map(items.map((s,i)=>[s.id,new THREE.Vector3(i*2,0,0)])),frame:new THREE.Box3(new THREE.Vector3(-2,-2,-2),new THREE.Vector3(20,2,2)),labelIds:items.map(s=>s.id),renderedCount:1000,originGuide:null};
 const nodes=n=>!n||typeof n!=='object'?[]:Array.isArray(n)?n.flatMap(nodes):[n,...nodes(n.props?.children)];
@@ -54,5 +60,19 @@ input.renderedCount=149;tree=render();assert.equal(findBatch(tree),undefined);as
 capability=false;input.renderedCount=1000;tree=render();assert.equal(findBatch(tree),undefined);assert.equal(tissues(tree).length,8);
 capability=true;tree=render();const replacement=findBatch(tree).props.object;assert.notEqual(replacement,original);assert.equal(replacement.instanceCount,8);
 let replacementDisposals=0;replacement.geometry.addEventListener('dispose',()=>replacementDisposals++);slots.forEach(s=>s?.cleanup?.());assert.equal(replacementDisposals,1);assert.equal(disposals,1);
+// A fresh hook lifecycle exercises both individual and batched compound views.
+slots=[];
+const compound=shortSource.structures[0];let partTransitions=0;
+for(const view of [compound,...compound.presentationParts,compound]){
+  const projected={...items[0],nodeName:view.nodeName,bounds:view.bounds,center:view.center,anchor:view.anchor};
+  props.structures=[projected,...items.slice(1)];input.items=props.structures;props.exam=false;props.labels=true;props.selectedId=projected.id;
+  tree=render();const tissue=tissues(tree).find(n=>n.props.selected);assert(tissue);assert.equal(tissue.props.geometry,shortNodes.get(view.nodeName));
+  const label=tree.find(n=>n.type?.name==='SceneLabel'&&n.props.id===projected.id);assert.deepEqual(label.props.position,view.anchor);
+  props.selectedId=null;tree=render();const mesh=findBatch(tree).props.object;
+  const expected=shortNodes.get(view.nodeName).attributes.position.array;
+  assert.deepEqual(Array.from(mesh.geometry.attributes.position.array.slice(0,expected.length)),Array.from(expected),'Batch uses projected node, not canonical bilateral source');
+  assert.equal(mesh.getVisibleAt(0),true);findBatch(tree).props.onClick({batchId:0,stopPropagation(){}});assert.equal(selected.at(-1),projected.id);partTransitions++;
+}
+slots.forEach(s=>s?.cleanup?.());assert.equal(partTransitions,4);
 assert.equal(geometry.attributes.position.count,24);geometry.dispose();
 console.log(JSON.stringify({passed:true,actualBundleTransitions:transitions,pickingAndHover:true,sourceIdentityStable:true,geometryAllocationStable:true,cutOpacityContextExamAndDeviceFallback:true,cleanup:true,browserTesting:false}));

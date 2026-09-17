@@ -1,4 +1,5 @@
 'use client';
+import { bodySideMatches, bodyPresentationStructure, bodyPresentationRevision } from '@/lib/body-presentation-parts';
 import { femoralComponentsFor } from '@/lib/femoral-components';
 import { cranialArteryComponentsFor } from '@/lib/cranial-artery-components';
 import './um-knee-entry.css';
@@ -483,9 +484,7 @@ export default function BodyExplorer({
       catalog?.structures.filter(
         (s) =>
           (whole || s.regions.includes(initialRegion)) &&
-          (side === 'both' ||
-            s.laterality === side ||
-            ['midline', 'unpaired', 'unspecified'].includes(s.laterality)),
+          bodySideMatches(s, side),
       ) ?? [],
     [catalog, whole, initialRegion, side],
   );
@@ -508,9 +507,16 @@ export default function BodyExplorer({
     [stage, focusedStudy, resolved, systems],
   );
   const selected = catalog?.structures.find((s) => s.id === selectedId) ?? null;
+  // Spatial view records are deliberately separate from canonical teaching,
+  // review, practice identity and imaging-link records.
+  const presentationStructures = useMemo(
+    () => regionStructures.map(s => bodyPresentationStructure(s, side)),
+    [regionStructures, side],
+  );
+  const presentationSelected = presentationStructures.find(s => s.id === selectedId);
   const selectionFrame = useMemo(
-    () => selectionBounds(regionStructures),
-    [regionStructures],
+    () => selectionBounds(presentationStructures),
+    [presentationStructures],
   );
   const selectedVisibility =
     !exam && selected && regionStructures.some((s) => s.id === selected.id)
@@ -518,7 +524,7 @@ export default function BodyExplorer({
           system: selected.system,
           enabled: systems[selected.system],
           removed: hiddenIds.includes(selected.id),
-          bounds: selected.bounds,
+          bounds: presentationSelected!.bounds,
           frame: selectionFrame,
           inspection,
         })
@@ -592,14 +598,14 @@ export default function BodyExplorer({
   const regionalCloseUp = useMemo(() => regionalFramingBounds({
     region: initialRegion,
     side,
-    structures: regionStructures,
+    structures: presentationStructures,
     visibleIds: available.map((s) => s.id),
     selectedId,
     // A dedicated dissection study owns its camera ROI and caption.
     enabled: regionalFraming && !dedicatedCameraRecipe && !jointCloseUp && !exam && !focus && !isolated &&
       !ghostRemoved && !showOrigins && explode === 0 &&
       layout === 'spatial' && inspection.plane === 'off',
-  }), [initialRegion, side, regionStructures, available, selectedId,
+  }), [initialRegion, side, presentationStructures, available, selectedId,
     regionalFraming, dedicatedCameraRecipe, jointCloseUp, exam, focus, isolated, ghostRemoved, showOrigins,
     explode, layout, inspection.plane]);
   const guidance = useMemo(
@@ -661,9 +667,9 @@ export default function BodyExplorer({
   );
   const sceneStructures = useMemo(
     () => exam
-      ? regionStructures.filter((s) => practiceRenderIds(practice).includes(s.id))
-      : regionStructures,
-    [exam, regionStructures, practice],
+      ? presentationStructures.filter((s) => practiceRenderIds(practice).includes(s.id))
+      : presentationStructures,
+    [exam, presentationStructures, practice],
   );
   const required = useMemo(
     () => requestedAnatomyBundles(sceneStructures, systems, hiddenIds, ghostRemoved && !exam),
@@ -1219,7 +1225,7 @@ export default function BodyExplorer({
   const studyRevision = `${catalog.sourceVersion}/${catalog.bundles
     .map((b) => `${b.id}:${b.sha256}`)
     .sort()
-    .join('|')}`;
+    .join('|')}/parts:${bodyPresentationRevision(catalog.structures)}`;
   const studyScope = {
     kind: 'body' as const,
     region: initialRegion,

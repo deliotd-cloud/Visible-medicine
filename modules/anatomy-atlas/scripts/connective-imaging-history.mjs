@@ -4,7 +4,9 @@ import {isDeepStrictEqual} from 'node:util';
 import {hash,snapshot} from './pin-pica-clinical.mjs';
 import pins from '../content/connective-imaging-pins.json' with {type:'json'};
 import after from '../content/connective-imaging.transition.json' with {type:'json'};
+import {preShortCiliaryAuthoring} from './short-ciliary-history.mjs';
 export function authoringBeforeConnectiveImaging({api,catalog},{deferWholeSnapshot=false}={}){
+ api=preShortCiliaryAuthoring(api,catalog);
  assert.equal(hash(pins),'65a5da7d1e1169ebc017e44fd5546f583d6698b35438421ddce1c5cf60548665');
  assert.equal(hash(after),'6744477577b004662be55935f25a36d6fd67ad36f4117c0fc84b9c8a5284c07d');
  assert.equal(after.parentCommit,pins.sourceCommit);assert.equal(after.previousAllLessonsAndRecipesHash,pins.previousAllLessonsAndRecipesHash);

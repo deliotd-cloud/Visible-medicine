@@ -24,7 +24,7 @@ const api = await import(
 const rows = api.bodyReviewSummaries;
 // Current retained display scope (including subsequent admitted source parts).
 // Every row still exercises exact source, topics and unsubmitted review state.
-assert.equal(rows.length, 1102);
+assert.equal(rows.length, 1103); // Includes the source-bound FMA7041 compound, not its two presentation parts.
 assert.equal(new Set(rows.map((s) => s.id)).size, rows.length);
 let links = 0,
   topics = 0;
@@ -51,8 +51,8 @@ for (const row of rows) {
   }
   packets.push(packet);
 }
-assert.equal(topics, 9918);
-assert.equal(links, 1102);
+assert.equal(topics, 9927);
+assert.equal(links, 1103);
 assert.equal(new Set(packets.map((p) => p.materialHash)).size, rows.length);
 const selected = packets.find((p) =>
   p.source.structure.regions.includes('forearm'),

@@ -23,6 +23,15 @@ export type BodyStructure = {
   anchor: Vec3;
   sourceTree: string;
   sources: Array<{ file: string; sha256: string }>;
+  /** Audited source-file display parts, not additional anatomical/FMA identities. */
+  presentationParts?: Array<{
+    source: { file: string; sha256: string };
+    displaySide: 'left' | 'right';
+    nodeName: string;
+    bounds: { min: Vec3; max: Vec3 };
+    center: Vec3;
+    anchor: Vec3;
+  }>;
   coverageNote: string | null;
   representation?: {
     coverage: 'partial';

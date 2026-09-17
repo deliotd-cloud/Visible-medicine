@@ -151,9 +151,11 @@ function Bundle({
     });
     return map;
   }, [scene]);
-  const batchSources = useMemo(() => props.catalog.structures
+  // Use the same side-projected geometry as labels, picking and individual
+  // tissue draws. The canonical catalogue may contain a bilateral aggregate.
+  const batchSources = useMemo(() => props.structures
     .filter(s => s.bundle === bundle.id && s.system !== 'muscles' && geometries.has(s.nodeName))
-    .map(s => ({ id: s.id, geometry: geometries.get(s.nodeName)! })), [props.catalog, bundle.id, geometries]);
+    .map(s => ({ id: s.id, geometry: geometries.get(s.nodeName)! })), [props.structures, bundle.id, geometries]);
   const batch = useBodyBatch(batchSources, renderedCount);
   const display = items.map(s => {
     const selected = !props.exam && s.id === props.selectedId;

@@ -1,4 +1,5 @@
 import type { BodyCatalog, BodyStructure } from '../app/body-types';
+import { validBodyPresentationParts } from './body-presentation-parts.ts';
 
 export const sourceCanonical = (v: unknown): string =>
   Array.isArray(v)
@@ -34,6 +35,7 @@ export function applyBodySourceAddition(
       'Additional anatomy source binding changed; review required',
     );
   };
+  if (!source.structures.every(validBodyPresentationParts)) reject();
   if (
     catalog.sourceVersion !== source.sourceVersion ||
     catalog.license !== source.license ||

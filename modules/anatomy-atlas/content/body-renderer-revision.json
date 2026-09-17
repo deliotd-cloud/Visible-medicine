@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "4871da3cfe0fff551d5fc9b5f13016be842ef28fe74f6ff7f0a9dc51c39f3161"
+      "sha256": "b241723225393c79892e2cf3592436c36ad1a6b04da528c8e6931a81c7d1e688"
     },
     {
       "path": "app/body-explorer.css",
@@ -74,15 +74,15 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "faaae7b6ccecb3e98b4c8ca5098fc37bcb49d90f5cc975970ea7295e7e70dfde"
+      "sha256": "a302f84fe413d7dcb230195e7efb2c9fce52dcdf12c42a30f8f9c7234ce2f7d2"
     },
     {
       "path": "app/body-scene.tsx",
-      "sha256": "75dd165d1a39d1f22d3a93a21dbb6e52b32fbd6683523f910909a07e7e7662aa"
+      "sha256": "bef3d3d67aa39d8ebe924ca5e0b42d3f82198d61538a02c6be30d8dfd23f1301"
     },
     {
       "path": "app/body-types.ts",
-      "sha256": "84a4b5fa3180d6be2669b3146a862b1c4ba9f6419d103f3b64f9c5bc1b793e9f"
+      "sha256": "22ca77fb0b3e20471db8cb5bd7c250149c7f6f9ba391f74c69a897b05f72f87f"
     },
     {
       "path": "app/bone-joints.tsx",
@@ -114,7 +114,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "47799c6dd289af969030feebc4844da45047cb05d301a21cb3041521bd95af16"
+      "sha256": "2e97f2d4244eca1370904faa4f006f0c0d90737d5f3c2d555e4e10305749a749"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -1266,11 +1266,15 @@
     },
     {
       "path": "lib/body-display-catalog.ts",
-      "sha256": "7dc30f26c59655d222025d33f4346bd266d6ce63c4082210790786c33e56f46a"
+      "sha256": "f537a25bead6547f0b4b755bf29de1dcacaa9a9ab106c4c6a72b5ae6d283829c"
+    },
+    {
+      "path": "lib/body-presentation-parts.ts",
+      "sha256": "bb62c2e2a36300d1ba8e214e58b92a40300b958d426ba59ad5d8c1a3a4fa20e0"
     },
     {
       "path": "lib/body-source-additions.ts",
-      "sha256": "4f2fd863be487fa704443c2585b941d8fe8f9a534a8c613ff155334a28084708"
+      "sha256": "3e19f6a5c2bc36facfea90dd886cb0cb0447ef47cae5eb0c5b951ebcca095948"
     },
     {
       "path": "lib/body-system-presets.ts",
@@ -1798,7 +1802,7 @@
     },
     {
       "path": "lib/nested-anatomy.ts",
-      "sha256": "3eeb1bdf3c0e1f4485360945be8ee7046a465b3837a24f29c46e4ee2a4c55687"
+      "sha256": "ec289a3dbeadc13f0fca06b69e8ae10a9f4b7e06b2e5b475ce3217b521ac0082"
     },
     {
       "path": "lib/nested-review-links.ts",
@@ -1993,6 +1997,10 @@
       "sha256": "d08344cef574acc33d4527f0161a99b10fd42364c53fa8cdc2877a055bcec8f6"
     },
     {
+      "path": "lib/short-ciliary.ts",
+      "sha256": "684d2a32fb0c7d18a383837162c85bcebdbb979e774a47a78402db9d9ea58796"
+    },
+    {
       "path": "lib/shoulder-arm-curriculum.ts",
       "sha256": "1f3ed2b25a8dd8ee8f80291f92bc79760c70aaeeb86e6d2bf77ca63082714f4e"
     },
@@ -2042,7 +2050,7 @@
     },
     {
       "path": "lib/study-links.ts",
-      "sha256": "99c428f199b6f27dd0598bb2ac4cfa0ed2cedc29766f1f563a642aaeaee6f2c3"
+      "sha256": "01a25ef3beb3e435c43e8de937338dce538251522216a5ac69060bf700c915d6"
     },
     {
       "path": "lib/study-navigation.ts",
@@ -2226,7 +2234,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "2e46dc9ecc7bfa4dd0b47b5fac608b1558c8a56f8eab5e2ba941d10aab524382"
+      "sha256": "c169791fc4e10df7b488e80d08287c8f57368374764dea8963275ede05879300"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2373,6 +2381,10 @@
       "sha256": "8549a481da385d6751e049478f156cdcdf014d804a922420f19ef6fe948d5d9d"
     },
     {
+      "path": "public/models/bodyparts3d/short-ciliary/catalog.json",
+      "sha256": "ddad34e031b761c168b44b07d22986f76278a0a2f2bca04c6274f0d9bf382ea1"
+    },
+    {
       "path": "public/models/bodyparts3d/subscapular-arteries/catalog.json",
       "sha256": "2d8a47fb5a9a1e856a071d404690d862348c405aac81620c320ce088a8d7d89f"
     },
@@ -2421,5 +2433,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "ed2af24f3b44f61f07a8edc78627c3d595134f6c436a8011ca97695550c3b53a"
+  "sha256": "97197e0355257bcae192f5afec1e27d9c6deaba430118eca65b103c024b8826d"
 }

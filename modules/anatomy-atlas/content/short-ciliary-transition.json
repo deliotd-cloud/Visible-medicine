@@ -1,0 +1,230 @@
+{
+  "parentCommit": "055e0c1b6e4bc738097c2c59e6dc4c865e5b621f",
+  "structure": {
+    "id": "vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve",
+    "fmaId": "FMA7041",
+    "name": "Short ciliary nerve · source group",
+    "sourceName": "short ciliary nerve",
+    "system": "nerves",
+    "category": "nerve",
+    "laterality": "unspecified",
+    "region": "head-neck",
+    "regions": [
+      "head-neck"
+    ],
+    "bundle": "short-ciliary",
+    "nodeName": "FMA7041",
+    "sourceTree": "isa",
+    "sources": [
+      {
+        "file": "FJ1319",
+        "sha256": "7f45ad84f0874a8aeb62085affb9e9303057bea8b46068cc0b3e7e341a1258e7"
+      },
+      {
+        "file": "FJ1370",
+        "sha256": "8e8853c389c874fa12b5db73c008755eb5a98a3fe9ce7457757c809ef0c9ded9"
+      }
+    ],
+    "presentationParts": [
+      {
+        "source": {
+          "file": "FJ1319",
+          "sha256": "7f45ad84f0874a8aeb62085affb9e9303057bea8b46068cc0b3e7e341a1258e7"
+        },
+        "displaySide": "left",
+        "nodeName": "FMA7041_FJ1319",
+        "bounds": {
+          "min": [
+            0.23125700652599335,
+            7.21589994430542,
+            0.8174899816513062
+          ],
+          "max": [
+            0.32208600640296936,
+            7.257599830627441,
+            0.9706000089645386
+          ]
+        },
+        "center": [
+          0.27667150646448135,
+          7.236749887466431,
+          0.8940449953079224
+        ],
+        "anchor": [
+          0.2773379981517792,
+          7.2322998046875,
+          0.9024800062179565
+        ]
+      },
+      {
+        "source": {
+          "file": "FJ1370",
+          "sha256": "8e8853c389c874fa12b5db73c008755eb5a98a3fe9ce7457757c809ef0c9ded9"
+        },
+        "displaySide": "right",
+        "nodeName": "FMA7041_FJ1370",
+        "bounds": {
+          "min": [
+            -0.3350659906864166,
+            7.21589994430542,
+            0.8175600171089172
+          ],
+          "max": [
+            -0.24433700740337372,
+            7.257800102233887,
+            0.9706000089645386
+          ]
+        },
+        "center": [
+          -0.28970149904489517,
+          7.236850023269653,
+          0.8940800130367279
+        ],
+        "anchor": [
+          -0.2888390123844147,
+          7.2342000007629395,
+          0.8957200050354004
+        ]
+      }
+    ],
+    "bounds": {
+      "min": [
+        -0.3350659906864166,
+        7.21589994430542,
+        0.8174899816513062
+      ],
+      "max": [
+        0.32208600640296936,
+        7.257800102233887,
+        0.9706000089645386
+      ]
+    },
+    "center": [
+      -0.006489992141723633,
+      7.236850023269653,
+      0.8940449953079224
+    ],
+    "anchor": [
+      0.23125700652599335,
+      7.255000114440918,
+      0.8238499760627747
+    ],
+    "coverageNote": "Bilateral source-defined group: one original file on each side, with two topological components per file. Components and visible projections are not a normal nerve count or complete ocular autonomic pathway. Laterality filters show the audited source-file presentation without asserting new sided FMA identities. Fibre continuity, precise globe entry and clinical anatomy require review.",
+    "provenance": {
+      "method": "licensed-source-mesh",
+      "license": "CC-BY-4.0",
+      "sourceVersion": "4.0",
+      "recovered": false
+    },
+    "validation": {
+      "status": "unvalidated",
+      "anatomicalReview": false
+    }
+  },
+  "bundle": {
+    "id": "short-ciliary",
+    "url": "/models/bodyparts3d/short-ciliary/short-ciliary.glb?v=9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5",
+    "bytes": 65264,
+    "sha256": "9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5",
+    "structures": 1
+  },
+  "addedFocus": {
+    "id": "short-ciliary-context",
+    "title": "Short ciliary source & orbital context",
+    "includeSkeleton": false,
+    "rule": {
+      "fmaIds": [
+        "FMA7041",
+        "FMA53549",
+        "FMA53550",
+        "FMA52673",
+        "FMA52674",
+        "FMA82734",
+        "FMA82735",
+        "FMA12514",
+        "FMA12515",
+        "FMA49054",
+        "FMA49055"
+      ]
+    },
+    "view": "superior"
+  },
+  "previousCatalogHash": "e64bd5667582d402593a5819e60c5199884a05d75432d85df5557a9f5ee8e6d7",
+  "currentCatalogHash": "3f0d20c36112cb559fb2d223b005aa00690fc951887ca48497c6e0b1f858af85",
+  "previousRecipesHash": "051a7432fd2dfede46e64a46ff2d211bd3a6942513c6e8c24666532d46f9fa25",
+  "currentRecipesHash": "13d112b3447a1afd262a3ef4cc9efe4c569382165457ce6bfacb24f3e6ffd1b7",
+  "previousAllLessonsAndRecipesHash": "9e5ee241abce59e7fbb25a0afb9cf46e4ffe877b9e53858a165efdee309cf8fb",
+  "currentAllLessonsAndRecipesHash": "2535ba0c0e4ffebf6692cb355388feae0854a2365f13889bcb1814e0d6f830b8",
+  "topics": {
+    "anatomy": {
+      "readiness": "draft",
+      "title": "Short ciliary nerve · Source anatomy · draft",
+      "body": "This source-defined bilateral group supplies one original mesh file on each side. Use the laterality filter to inspect either file beside the available ganglion and orbital context; Both sides restores the complete source group.",
+      "bullets": [
+        "One unsided FMA identity is retained. Display-side metadata does not create separately validated left/right anatomical concepts.",
+        "Each file contains two topological components; visible projections and connected components do not establish normal nerve count or a complete ocular autonomic pathway.",
+        "Reassemble before comparing relationships. Near contact does not prove fibre continuity, precise globe entry, an operative plane or patient correspondence."
+      ],
+      "note": "Original-source orientation draft; revision-bound radiologist review required.",
+      "citations": [
+        "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/README_e.html"
+      ]
+    },
+    "function": {
+      "readiness": "pending",
+      "title": "Short ciliary nerve · source group · Review pending",
+      "body": "Structure-specific functional, clinical, pathology, imaging and assessment teaching remains to be authored and reviewed.",
+      "bullets": [],
+      "note": "No scan registration, individual-nerve imaging visibility or procedural guidance is established by this source model."
+    },
+    "ct": {
+      "readiness": "pending",
+      "title": "Short ciliary nerve · source group · Review pending",
+      "body": "Structure-specific functional, clinical, pathology, imaging and assessment teaching remains to be authored and reviewed.",
+      "bullets": [],
+      "note": "No scan registration, individual-nerve imaging visibility or procedural guidance is established by this source model."
+    },
+    "mri": {
+      "readiness": "pending",
+      "title": "Short ciliary nerve · source group · Review pending",
+      "body": "Structure-specific functional, clinical, pathology, imaging and assessment teaching remains to be authored and reviewed.",
+      "bullets": [],
+      "note": "No scan registration, individual-nerve imaging visibility or procedural guidance is established by this source model."
+    },
+    "xray": {
+      "readiness": "pending",
+      "title": "Short ciliary nerve · source group · Review pending",
+      "body": "Structure-specific functional, clinical, pathology, imaging and assessment teaching remains to be authored and reviewed.",
+      "bullets": [],
+      "note": "No scan registration, individual-nerve imaging visibility or procedural guidance is established by this source model."
+    },
+    "ultrasound": {
+      "readiness": "pending",
+      "title": "Short ciliary nerve · source group · Review pending",
+      "body": "Structure-specific functional, clinical, pathology, imaging and assessment teaching remains to be authored and reviewed.",
+      "bullets": [],
+      "note": "No scan registration, individual-nerve imaging visibility or procedural guidance is established by this source model."
+    },
+    "pathology": {
+      "readiness": "pending",
+      "title": "Short ciliary nerve · source group · Review pending",
+      "body": "Structure-specific functional, clinical, pathology, imaging and assessment teaching remains to be authored and reviewed.",
+      "bullets": [],
+      "note": "No scan registration, individual-nerve imaging visibility or procedural guidance is established by this source model."
+    },
+    "clinical": {
+      "readiness": "pending",
+      "title": "Short ciliary nerve · source group · Review pending",
+      "body": "Structure-specific functional, clinical, pathology, imaging and assessment teaching remains to be authored and reviewed.",
+      "bullets": [],
+      "note": "No scan registration, individual-nerve imaging visibility or procedural guidance is established by this source model."
+    },
+    "quiz": {
+      "readiness": "pending",
+      "title": "Short ciliary nerve · source group · Review pending",
+      "body": "Structure-specific functional, clinical, pathology, imaging and assessment teaching remains to be authored and reviewed.",
+      "bullets": [],
+      "note": "No scan registration, individual-nerve imaging visibility or procedural guidance is established by this source model."
+    }
+  }
+}

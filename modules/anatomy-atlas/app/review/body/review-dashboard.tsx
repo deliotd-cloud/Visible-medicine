@@ -356,6 +356,15 @@ export function BodyReviewDetails({
         <code>{material.source.bundle.sha256}</code>
         <p>Worksheet material fingerprint (not an approval or signature)</p>
         <code>{material.materialHash}</code>
+        {s.presentationParts && <details>
+          <summary>Source-file display parts · not separate FMA identities</summary>
+          <p>Both sides uses the complete group. Unilateral views use only the corresponding original file. Verify this mapping and its displayed bounds before sign-off.</p>
+          <ul>{s.presentationParts.map(p => <li key={p.nodeName}>
+            {p.displaySide} display · {p.source.file} · node <code>{p.nodeName}</code>
+            <code>{p.source.sha256}</code>
+            <p>Scene bounds: {p.bounds.min.join(', ')} to {p.bounds.max.join(', ')}. Label anchor: {p.anchor.join(', ')}.</p>
+          </li>)}</ul>
+        </details>}
         <ul>
           {s.sources.map((p) => (
             <li key={p.file}>

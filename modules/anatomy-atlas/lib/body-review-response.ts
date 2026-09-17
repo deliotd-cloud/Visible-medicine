@@ -1,4 +1,6 @@
 import type { BodyReviewMaterial } from './body-review-material';
+import type { BodyStructure } from '../app/body-types';
+import { validBodyPresentationParts } from './body-presentation-parts';
 const object = (v: unknown): v is Record<string, unknown> =>
   !!v && typeof v === 'object' && !Array.isArray(v);
 const strings = (v: unknown): v is string[] =>
@@ -53,6 +55,12 @@ export function parseBodyReviewResponse(
     )
   )
     return null;
+  if (s.presentationParts !== undefined) {
+    if (!Array.isArray(s.presentationParts)) return null;
+    try {
+      if (!validBodyPresentationParts(s as unknown as BodyStructure)) return null;
+    } catch { return null; }
+  }
   const tabs = [
     'anatomy',
     'function',

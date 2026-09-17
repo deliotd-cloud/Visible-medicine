@@ -10,7 +10,7 @@
     "public/models/bodyparts3d/eye-layers/catalog.json": "3ae1d1b11eced1383b6de87df09fc8cbe9d24291b2144ae82b0a057d4e96daea",
     "public/models/bodyparts3d/eye-layers/display-correction.json": "61e09e972a1d301e56ebae9f1af90ffe9136309eda0242df1a03f84c6ad85dd2",
     "public/models/bodyparts3d/pancreas/display-correction.json": "a7add6d985798dedd1dd78c3879b2fc91f8a6cacc126d2a526f7ba8c4b03fc1a",
-    "lib/body-display-catalog.ts": "7dc30f26c59655d222025d33f4346bd266d6ce63c4082210790786c33e56f46a",
+    "lib/body-display-catalog.ts": "f537a25bead6547f0b4b755bf29de1dcacaa9a9ab106c4c6a72b5ae6d283829c",
     "lib/brachial-veins.ts": "d675f79d288ce1eb799e4c58a7d14fe5894257274ef302ce96e3a2990bda5b2c",
     "lib/tentorium.ts": "974332c66ba542c04d602721c3bfe810723ecfdb0e2f8796d33b7c545f55eeab",
     "lib/deep-leg-veins.ts": "2faa7dd187bc9bd00b48b4de00acea4ebdbd12d8f07a827ff3a63f8a214ed2a2",
@@ -35,7 +35,7 @@
     "content/limb-vascular-study-pins.json": "2d0508aa622e396af8aa7412403c0ccf58bccc06ea4d5d1f9c6c9310d96c4876",
     "public/models/bodyparts3d/deep-leg-veins/catalog.json": "bc3c1c7418d8fe31ef94b6fb8b74d20fe54d8e0f2e67aef4df3c1182b68d137a",
     "docs/deep-leg-vein-source-audit.json": "2ed4267b0ceae5448673eaf0743ed79a995fc7f879dac26c81e24109c7b201ec",
-    "lib/body-source-additions.ts": "4f2fd863be487fa704443c2585b941d8fe8f9a534a8c613ff155334a28084708",
+    "lib/body-source-additions.ts": "3e19f6a5c2bc36facfea90dd886cb0cb0447ef47cae5eb0c5b951ebcca095948",
     "content/tentorium-studies.ts": "7dc07b8f6ff0b466a9f184923860c80a249dde8f39edd0f1b27b86f01e5494d0",
     "public/models/bodyparts3d/tentorium/catalog.json": "42f4720ad54a07d7e1f89c5eeb13e68673f4c8242aae353c7f4435bb48a7645e",
     "docs/tentorium-source-audit.json": "af827465754ee6b882bbcab1f771117dfa2eb028394405b5d43d297465285c64",
@@ -209,7 +209,7 @@
     "content/pulmonary-teaching.ts": "dec60fd4009651ed0e0f11e67763db54c367aa22968c7653dadaf128918b77b0",
     "content/cerebral-teaching.ts": "ba741cc7373be4ffad1dd7a04af2605d5a033bbe6d40723196241d89d905b1a0",
     "content/nested-teaching-bindings.v1.json": "ed5b3b4968348d14e9feb65ac083b230ea80493360807fc440a0ee984070e315",
-    "lib/nested-anatomy.ts": "3eeb1bdf3c0e1f4485360945be8ee7046a465b3837a24f29c46e4ee2a4c55687",
+    "lib/nested-anatomy.ts": "ec289a3dbeadc13f0fca06b69e8ae10a9f4b7e06b2e5b475ce3217b521ac0082",
     "lib/nested-teaching.ts": "aa2423a1cc53f70f992c19b601160000d44937eda47faae422d6898902edd23d",
     "app/nested-teaching.tsx": "a1f8d593bd430b0770c28f7db78803701021a960113e69e64adbf048dfd71e61",
     "app/nested-teaching.css": "d912bfc774cc744511a4c0e87a0a35f6b693def9f4bddc25b6f010f07dfa83bc",
@@ -226,7 +226,7 @@
     "public/models/bodyparts3d/cardiac/great-vessel-context.json": "fac546e54237db4bed783d583b01c583f423a35a74bd759727d519074de0af85",
     "app/ventricles.tsx": "32616e70acc7cf9164524737b6b55c5ca689df1250c253694a3d65039fb64975",
     "app/ventricular-relationships.css": "a0aa30cb8500f11382ddd18120660c8e4df68b60369e3b6c487f98b12f0fe743",
-    "app/body-scene.tsx": "75dd165d1a39d1f22d3a93a21dbb6e52b32fbd6683523f910909a07e7e7662aa",
+    "app/body-scene.tsx": "bef3d3d67aa39d8ebe924ca5e0b42d3f82198d61538a02c6be30d8dfd23f1301",
     "app/body-batch.tsx": "05b63136f4d8af290da9d4c190256bd1e17b6339842070b04c26b63238e0ae72",
     "lib/body-batching.ts": "00d9a45646ac3b21e4372b50bf5388ef94e617a8ab843959bb97e41f2e452291",
     "docs/body-batching-baseline.json": "4cebcd07c28d91aa748afb1385f51ef9d33803feb84e98df64681582ce8177fd",
@@ -305,8 +305,8 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "da7aaa5d29280a7dae2ca9492d1400c638b53a1300a184778d7be2dea78a9e1f",
-    "explicitTopicReadiness": "be830682ed9c4f5c21ef1467c5c99ecec31b46d449926cd398805f97eac6c159",
+    "resolvedContentAndRecipeData": "f6d645726cf63dfb827fae25a2c48b7f898a40a5ac89077786e0ccf90588a50a",
+    "explicitTopicReadiness": "08fbd0d44079068218b03657f9b20f174b4c2ac83c323e2b58918a6d58b1a3ae",
     "reasoningQuestionData": "6aa090bb8f9142fd266af59df995b4c2c7b7f8bef425318c34ebf7332cb69899",
     "nestedTeachingData": "ef9aba8c7dd92a02e7cf6ba5fde6eccef8539d12a1666de387687f2f771efe11"
   },
@@ -1415,15 +1415,20 @@
         "fmaId": "FMA19617",
         "bundle": "corpus-spongiosum",
         "clinicalApproval": false
+      },
+      {
+        "fmaId": "FMA7041",
+        "bundle": "short-ciliary",
+        "clinicalApproval": false
       }
     ],
-    "bodyRepresentations": 1102,
-    "bodyBundles": 106,
-    "bodyBundleBytes": 104302060,
+    "bodyRepresentations": 1103,
+    "bodyBundles": 107,
+    "bodyBundleBytes": 104367324,
     "systems": {
       "skeleton": 203,
       "muscles": 372,
-      "nerves": 58,
+      "nerves": 59,
       "organs": 83,
       "vessels": 296,
       "connective": 90
@@ -1432,7 +1437,7 @@
       {
         "id": "head-neck",
         "name": "Head & neck",
-        "entries": 290
+        "entries": 291
       },
       {
         "id": "thorax",
@@ -1563,7 +1568,7 @@
     "pulmonaryBranchTypeOptionalBundles": 2,
     "ventricularRelationshipPresets": 3,
     "stages": 159,
-    "focuses": 173
+    "focuses": 174
   },
   "practice": {
     "identificationModes": [
@@ -1596,7 +1601,7 @@
       1,
       2
     ],
-    "availableRepresentations": 1215,
+    "availableRepresentations": 1216,
     "nestedRepresentations": 104,
     "supportedKinds": [
       "ct",
@@ -1621,7 +1626,7 @@
     "classificationLimit": "Explicit readiness from authoring branches; not inferred from titles and not clinical approval. Legacy shoulder topics are draft; new X-ray authoring explicitly distinguishes draft and pending.",
     "body": {
       "anatomy": {
-        "specificDraft": 1100,
+        "specificDraft": 1101,
         "identityOnly": 2,
         "pending": 0,
         "generatedIdentification": 0
@@ -1629,49 +1634,49 @@
       "function": {
         "specificDraft": 1097,
         "identityOnly": 0,
-        "pending": 5,
+        "pending": 6,
         "generatedIdentification": 0
       },
       "ct": {
         "specificDraft": 782,
         "identityOnly": 0,
-        "pending": 320,
+        "pending": 321,
         "generatedIdentification": 0
       },
       "mri": {
         "specificDraft": 745,
         "identityOnly": 0,
-        "pending": 357,
+        "pending": 358,
         "generatedIdentification": 0
       },
       "xray": {
         "specificDraft": 344,
         "identityOnly": 0,
-        "pending": 758,
+        "pending": 759,
         "generatedIdentification": 0
       },
       "ultrasound": {
         "specificDraft": 503,
         "identityOnly": 0,
-        "pending": 599,
+        "pending": 600,
         "generatedIdentification": 0
       },
       "pathology": {
         "specificDraft": 1092,
         "identityOnly": 0,
-        "pending": 10,
+        "pending": 11,
         "generatedIdentification": 0
       },
       "clinical": {
         "specificDraft": 1095,
         "identityOnly": 0,
-        "pending": 7,
+        "pending": 8,
         "generatedIdentification": 0
       },
       "quiz": {
         "specificDraft": 71,
         "identityOnly": 0,
-        "pending": 0,
+        "pending": 1,
         "generatedIdentification": 1031
       }
     },
@@ -1943,7 +1948,7 @@
     "byRegion": {
       "head-neck": {
         "anatomy": {
-          "specificDraft": 290,
+          "specificDraft": 291,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
@@ -1951,49 +1956,49 @@
         "function": {
           "specificDraft": 288,
           "identityOnly": 0,
-          "pending": 2,
+          "pending": 3,
           "generatedIdentification": 0
         },
         "ct": {
           "specificDraft": 140,
           "identityOnly": 0,
-          "pending": 150,
+          "pending": 151,
           "generatedIdentification": 0
         },
         "mri": {
           "specificDraft": 138,
           "identityOnly": 0,
-          "pending": 152,
+          "pending": 153,
           "generatedIdentification": 0
         },
         "xray": {
           "specificDraft": 31,
           "identityOnly": 0,
-          "pending": 259,
+          "pending": 260,
           "generatedIdentification": 0
         },
         "ultrasound": {
           "specificDraft": 60,
           "identityOnly": 0,
-          "pending": 230,
+          "pending": 231,
           "generatedIdentification": 0
         },
         "pathology": {
           "specificDraft": 285,
           "identityOnly": 0,
-          "pending": 5,
+          "pending": 6,
           "generatedIdentification": 0
         },
         "clinical": {
           "specificDraft": 286,
           "identityOnly": 0,
-          "pending": 4,
+          "pending": 5,
           "generatedIdentification": 0
         },
         "quiz": {
           "specificDraft": 11,
           "identityOnly": 0,
-          "pending": 0,
+          "pending": 1,
           "generatedIdentification": 279
         }
       },
@@ -2565,8 +2570,8 @@
       "png": 4,
       "svg": 2,
       "md": 8,
-      "glb": 134,
-      "json": 47,
+      "glb": 135,
+      "json": 48,
       "zip": 1,
       "html": 1,
       "tsv": 1
@@ -2580,7 +2585,7 @@
   "review": {
     "revisionIdentities": 9,
     "hasPrivateReviews": false,
-    "status": "Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot, 1102 displayed root-body selections, nine independent specimen/region scopes (354 scoped records / 267 distinct source IDs), and 104 nested selections in 19 parent/study scopes. Exact source/frame identity and navigation are bound; no decisions transfer across scopes. The 1,022-record archival catalogue is retained. This inventory reads no personal review records. Acquired imaging review remains unavailable; source implementation does not prove hosted migration or clinical sign-off."
+    "status": "Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot, 1103 displayed root-body selections, nine independent specimen/region scopes (354 scoped records / 267 distinct source IDs), and 104 nested selections in 19 parent/study scopes. Exact source/frame identity and navigation are bound; no decisions transfer across scopes. The 1,022-record archival catalogue is retained. This inventory reads no personal review records. Acquired imaging review remains unavailable; source implementation does not prove hosted migration or clinical sign-off."
   },
   "boundaries": {
     "scope": "Current source implementation, not operations performed by this inventory script",

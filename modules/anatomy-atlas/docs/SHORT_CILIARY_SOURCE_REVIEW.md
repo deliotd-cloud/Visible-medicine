@@ -1,9 +1,12 @@
 # Short ciliary nerve: original-source review
 
 17 September 2026. Research checkpoint against Atlas `44444d490c6862c1362a650d560a85b2ea90b8db`.
-**Not admitted, not deployed, not clinically approved.** This review supports the
+At that research checkpoint: **not admitted, not deployed, not clinically approved.** This review supports the
 next anatomy addition; it does not replace source/review bindings or authorize a
 complete ocular autonomic pathway.
+
+Subsequent source-only implementation is described in `SHORT_CILIARY.md`. The
+research evidence below remains unchanged; it is not a clinical approval.
 
 ## Source identity and licence
 

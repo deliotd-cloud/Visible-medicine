@@ -1,5 +1,19 @@
 # Third-party notices
 
+## Short ciliary source group — 17 September 2026
+
+Original BodyParts3D v4 IS-A files FJ1319/FJ1370, FMA7041 / BP6623,
+are included under the current archive's CC BY 4.0 terms. BodyParts3D,
+© The Database Center for Life Science licensed under CC Attribution 4.0
+International. [Archive and licence](https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/README_e.html),
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+The common coordinate transform, Float32 storage and shading normals are the
+only geometric adaptations. Aggregate and file-specific nodes are alternative
+display representations, not three separately owned anatomical structures.
+Original OBJ bytes are retained in content/sources/short-ciliary. No copied
+publisher illustration, scan, font, texture, new dependency or paid service.
+See docs/SHORT_CILIARY_SOURCE_REVIEW.md; anatomical/clinical acceptance is pending.
+
 ## Costal cartilage imaging — 17 September 2026
 
 Original short teaching cites Malghem et al. (2001) and Nummela et al. (2022).
