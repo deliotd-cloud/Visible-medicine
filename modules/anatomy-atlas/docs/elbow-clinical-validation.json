@@ -1,0 +1,64 @@
+{
+  "baselineSource": "b921502e0a62f8e343cc4cd0628acf362f8f2daf",
+  "sourceSelections": 14,
+  "changedPlacements": 84,
+  "addedDraftPlacements": 28,
+  "pendingCopyOnlyPlacements": 56,
+  "previousPendingPlacements": 84,
+  "families": {
+    "inferiorUlnarCollateral": {
+      "drafts": 4,
+      "pendingCopies": 8
+    },
+    "superiorUlnarCollateral": {
+      "drafts": 4,
+      "pendingCopies": 8
+    },
+    "radialCollateral": {
+      "drafts": 4,
+      "pendingCopies": 8
+    },
+    "middleCollateral": {
+      "drafts": 4,
+      "pendingCopies": 8
+    },
+    "radialRecurrent": {
+      "drafts": 4,
+      "pendingCopies": 8
+    },
+    "anteriorUlnarRecurrent": {
+      "drafts": 4,
+      "pendingCopies": 8
+    },
+    "posteriorUlnarRecurrent": {
+      "drafts": 4,
+      "pendingCopies": 8
+    }
+  },
+  "topics": {
+    "clinical": 14,
+    "pathology": 14,
+    "ct": 14,
+    "mri": 14,
+    "xray": 14,
+    "ultrasound": 14
+  },
+  "unchangedTopics": 9834,
+  "bodySchemaRecords": 1102,
+  "actualNoteRenders": 28,
+  "rejectedChangedIdentitySourceAndTopicCases": 1120,
+  "strictBeforeHash": "94b9f1884836d72e7019d2a9f2e8c2f39b7f375178c357c625a36c2f26762eb6",
+  "strictAfterHash": "8f832c8de5b729de34f99d62d2b38f1e296b773e0273731362de3ef164cb53b4",
+  "sourceBundle": {
+    "id": "elbow-arteries",
+    "bytes": 353176,
+    "sha256": "f8c7361dd6d9f089937df2d879c9851cc2346353bafe2600da871a04f8a0060d",
+    "structures": 14
+  },
+  "sourceGeometryChanged": false,
+  "studyRecipesChanged": false,
+  "currentApprovalRecordsChanged": false,
+  "clinicalApproval": false,
+  "imagesOrPatientDataImported": false,
+  "browserOrDeviceAcceptance": false
+}

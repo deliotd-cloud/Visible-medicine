@@ -1,5 +1,21 @@
 # Third-party notices
 
+## Elbow arterial clinical teaching — 17 September 2026
+
+Original short adaptations credit Habarta J, Jordan M, Meffert R, Huflage H,
+Schmalzl J (2022), *Surgical management of a traumatic elbow dislocation with
+disruption of the brachial artery*, https://doi.org/10.1007/s11678-022-00686-9;
+and Goretti C, Pari C, Puzzo A, Rizqallah Y, Bonanno MG, Belluati A (2020),
+*Injury of the brachial artery accompanying simple closed elbow dislocation:
+a case report*, https://doi.org/10.23750/abm.v91i14-S.8507. Both articles have
+explicit CC BY4.0 grants: https://creativecommons.org/licenses/by/4.0/ .
+Every draft provides credit, source/licence links and adaptation notice; no
+endorsement implied. No publication figures, cases, scans, tables, procedures
+or protocols are included. UAMS is a factual reading link, not a grant to reuse
+its diagrams or prose. No new model, font, texture, package, paid API or mandatory
+fee. Existing mesh rights remain separate. See
+`docs/ELBOW_CLINICAL_REFERENCES_20260917.md` for admitted and excluded sources.
+
 ## Portal/hepatic venous clinical teaching — 17 September 2026
 
 Original short adaptations credit Arora A, Rajesh S, Meenakshi YS, Sureka B,

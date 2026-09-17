@@ -104,6 +104,7 @@ import { genicularArteryLesson } from '../lib/genicular-arteries';
 import { inferiorThyroidLesson } from '../lib/inferior-thyroid-arteries';
 import { subscapularArteryLesson } from '../lib/subscapular-arteries';
 import { elbowArteryLesson } from '../lib/elbow-arteries';
+import { elbowClinicalLesson } from '../lib/elbow-clinical';
 import { circumflexFemoralLesson } from '../lib/circumflex-femoral';
 import { cranialArteryLesson } from '../lib/cranial-arteries';
 import { deferentDuctLesson } from '../lib/deferent-ducts';
@@ -199,6 +200,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (shoulderArmImaging) return shoulderArmImaging;
   const chestWallImaging = chestWallMuscleImagingLesson(s, tab);
   if (chestWallImaging) return chestWallImaging;
+  const elbowClinical = elbowClinicalLesson(s, tab);
+  if (elbowClinical) return elbowClinical;
   const elbow = elbowArteryLesson(s, tab);
   if (elbow) return elbow;
   const cranial = cranialArteryLesson(s, tab);

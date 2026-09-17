@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "c97bc6c7660bf1ac6084fa0c4ca7c25ad444b51d02a797ac2af1712e62ea73c2"
+      "sha256": "9899597e326281caa85da20c6d7b6274a499bba2daa3edfbb3efbe93e451a9db"
     },
     {
       "path": "app/body-explorer.css",
@@ -555,6 +555,14 @@
     {
       "path": "content/elbow-arterial.ts",
       "sha256": "9550d3887134e04f289cb3d7e39ab710340e0fcfec59c64419441fa4f4779c6e"
+    },
+    {
+      "path": "content/elbow-clinical-pins.json",
+      "sha256": "ac5932374e250c1b111f31ad0c12567e19eb2710a34e237314f807ef73de8898"
+    },
+    {
+      "path": "content/elbow-clinical.ts",
+      "sha256": "9b3a1ef8d411d89155e2719007d4eda5df217a4b358074c7d154ebaac2b4ed83"
     },
     {
       "path": "content/elbow-studies.ts",
@@ -1326,7 +1334,11 @@
     },
     {
       "path": "lib/elbow-arteries.ts",
-      "sha256": "03fd24faf169b0cbccf32802d082351b9beac605d7692d7836ea84f1d4cac96e"
+      "sha256": "6b2b82e4cf22e9a07af4d29e7109769c30ae14b5d4cc994f4a23dfe01ce4c73c"
+    },
+    {
+      "path": "lib/elbow-clinical.ts",
+      "sha256": "d7154e7c04f7ea0d6e4c394b3fa15eab23dcbc30197f2975457648a8b66ff950"
     },
     {
       "path": "lib/elbow-studies.ts",
@@ -2058,7 +2070,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "ae61f7bd713f813108f3d362ec8c561b0b932312eb770bd6d35abcf7bf90b7d4"
+      "sha256": "836785f8774a7103a49f7cb78b175121b7db7078cbbdd1f4eca4c8bca59d9788"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2253,5 +2265,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "a88d28047c1a7ae2fe91dde3751bb38d74237af67949a25e1c9c91e2c60030d3"
+  "sha256": "5af77f2429e1ba067f0e98f39d01b63d38128e2f339ece6b81b9d647387bae0e"
 }

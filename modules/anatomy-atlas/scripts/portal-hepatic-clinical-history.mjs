@@ -2,6 +2,7 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
+import {authoringBeforeElbowClinical} from './elbow-clinical-history.mjs';
 import pins from '../content/portal-hepatic-clinical-pins.json' with {type:'json'};
 import after from '../content/portal-hepatic-clinical.transition.json' with {type:'json'};
 
@@ -10,6 +11,7 @@ const snapshot=(api,display)=>({body:display.structures.map(s=>({id:s.id,section
 
 /** Remove only the newest eight-source portal/hepatic Clinical/Pathology edits. */
 export function authoringBeforePortalHepaticClinical({api,catalog},{deferWholeSnapshot=false}={}){
+  api=authoringBeforeElbowClinical({api,catalog},{deferWholeSnapshot:true});
   const hash=portalHepaticClinicalHash;
   assert.equal(hash(pins),'dca558a370b2765260781d02819375f72ad42628d97372ec5d4704f12c777284');
   assert.equal(hash(after),'3f355dbba7d7f7d72aeed59a03f181aded6e3df0cd74ae601c3797781ce53de6');

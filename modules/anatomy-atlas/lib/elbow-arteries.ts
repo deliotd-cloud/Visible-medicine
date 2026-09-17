@@ -69,7 +69,9 @@ export function elbowArteryLesson(
   return {
     readiness: 'pending',
     title: `${s.name} · Review pending`,
-    body: 'Structure-specific imaging, pathology and clinical teaching has not yet been authored and reviewed for this new source selection.',
+    body: ['ct', 'mri', 'xray', 'ultrasound'].includes(tab)
+      ? 'Structure-specific imaging teaching has not yet been authored and reviewed for this source selection. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.'
+      : 'Structure-specific imaging, pathology and clinical teaching has not yet been authored and reviewed for this new source selection.',
     bullets: [],
     note: 'No scan or diagnostic finding is supplied.',
   };
