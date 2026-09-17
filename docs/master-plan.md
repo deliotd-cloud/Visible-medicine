@@ -2,6 +2,27 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — source-bound deep lower-limb venous teaching
+
+Six existing anterior/posterior tibial and profunda femoris selections now have
+12 Clinical/Pathology drafts, distinguishing calf and deep thigh context.
+The notes connect anatomical identification with acquired ultrasound evidence,
+DVT and post-thrombotic interpretation, while keeping static source surfaces
+distinct from patient findings. No new toolbar, mesh, scan, treatment protocol
+or access right is introduced. NHLBI text and Akram et al.2023 CC BY4.0 supply
+the bounded reference context; third-party animation and NC media are excluded.
+
+The immutable transition preserves all other9,906 placements and recipes.
+Atlas docs/DEEP_VENOUS_CLINICAL.md and DEEP_VENOUS_REFERENCES_20260917.md record
+scope and source restrictions; the coordinating DEEP-VENOUS-CLINICAL checkpoint
+records final test, browser, build and GitHub/D recovery evidence. Draft status
+is not clinical approval. Final revision-bound radiologist review remains yours.
+
+Website84 remains the last verified deployment. Authenticated model staging,
+physical-device acceptance and independent Atlas/case/lecture rights remain
+separate gates. Goal ACTIVE; hourly review PAUSED. Continue the wider atlas
+roadmap without repeating completed native MRI or regional camera checks.
+
 ## 17 September — individual intrinsic-laryngeal teaching
 
 Seven existing muscle selections now have source-specific Anatomy and Function
