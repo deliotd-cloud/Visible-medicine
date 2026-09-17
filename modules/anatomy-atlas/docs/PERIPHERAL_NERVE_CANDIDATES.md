@@ -4,6 +4,11 @@ No candidate below is imported. This bounded search is not proof that no suitabl
 
 ## SPARC whole-body nerve paths: new retained source
 
+17 September: [the exact upstream nerve-file lineage](SPARC_NERVE_LINEAGE.md)
+is verified. Its published workflow is a viewer/export pipeline, not evidence
+of nerve-coordinate creation. Contributor/source provenance, rather than another
+identical retrieval, is the next useful gate; no live geometry is admitted.
+
 [Dataset 307 v8](https://discover.pennsieve.io/datasets/307) provides actual downloadable nerve-path and spinal-scaffold files. Five originals are hash-verified on D:, outside the website. The [detailed audit](SPARC_NERVE_SOURCE_REVIEW.md) distinguishes 964 named path groups from validated anatomy, records eight repeated ontology IDs and seven zero-length elements, and keeps its generic estimated frame separate. No live admission or nerve surfaces inferred. Next assess component provenance and an explicitly separate schematic prototype; do not repeat the completed retrieval or merge it with BodyParts3D. Metadata-only screening of dataset 521 found microscopic excised vagus data, not a gross whole-body route.
 
 ## Scanned brachial plexus: retain as a lead

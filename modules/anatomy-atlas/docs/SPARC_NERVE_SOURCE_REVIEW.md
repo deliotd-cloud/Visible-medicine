@@ -2,6 +2,13 @@
 
 Status: **originals retained and structurally audited; no live admission**. This is a useful new source lead, not closure of the peripheral-nerve gap. No application, catalogue, teaching record, source mesh, clinical decision or imaging frame changed.
 
+**17 September lineage update:** the exact retained nerve file is now matched
+byte-for-byte to its upstream PMR workflow input. The inspected four-node
+workflow loads existing EXF files and exports their visualization; it does not
+establish nerve-coordinate authorship. See [exact lineage and remaining evidence](SPARC_NERVE_LINEAGE.md).
+Do not repeat that workflow retrieval or run it as a substitute for component
+provenance. The commercial-rights and anatomical-review gates remain unresolved.
+
 ## Source and scope
 
 [Pennsieve dataset 307, version 8](https://discover.pennsieve.io/datasets/307), [DOI 10.26275/bbvg-gj86](https://doi.org/10.26275/bbvg-gj86), credits Elias Soltani, Liam K Fisher, David P Nickerson, Peter Hunter and Nat Castaneda Ruan. It supplies a generic whole-body scaffold with estimated nerve landmarks, not a subject-specific scanned dissection. Its public overview identifies Anatomography-derived vasculature. Dataset licence: CC BY 4.0. That statement alone does not resolve every upstream component's terms.
