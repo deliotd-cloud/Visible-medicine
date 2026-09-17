@@ -324,6 +324,8 @@ const countsBySystem = Object.fromEntries(
 const profiles = Object.values(dissectionProfiles);
 const sourceHashes = {};
 for (const path of [
+  'lib/regional-framing.ts',
+  'app/body-explorer.tsx',
   'lib/lower-venous-imaging.ts',
   'lib/iliac-venous-imaging.ts',
   'lib/forearm-arterial-imaging.ts',

@@ -3,6 +3,9 @@ import { selectionBounds } from './selection-visibility';
 
 const pelvisSacrumId = 'vm:anatomy:body:spine:midline:bone:sacrum';
 const neutralLateralities = new Set(['midline', 'unpaired', 'unspecified']);
+// These supplied whole veins reach into the upper arm. This is only a camera
+// exception, not a claim that their distal parts are outside the forearm.
+const forearmLongVeins = new Set(['FMA13325', 'FMA13326', 'FMA22909', 'FMA22910']);
 
 export function regionalFramingRegion(region: string, side: string) {
   if (region === 'hand' && ['left', 'right'].includes(side)) return 'hand';
@@ -10,6 +13,7 @@ export function regionalFramingRegion(region: string, side: string) {
   if (region === 'pelvis' && ['left', 'right', 'both'].includes(side)) return 'pelvis';
   if (region === 'thorax' && ['left', 'right', 'both'].includes(side)) return 'thorax';
   if (region === 'leg' && ['left', 'right', 'both'].includes(side)) return 'leg';
+  if (region === 'forearm' && ['left', 'right', 'both'].includes(side)) return 'forearm';
   return null;
 }
 
@@ -34,9 +38,23 @@ export function regionalFramingBounds(input: Parameters<typeof handFramingBounds
   if (input.region === 'hand') return handFramingBounds(input);
   const { region, side, structures, visibleIds, selectedId, enabled } = input;
   const framingRegion = regionalFramingRegion(region, side);
-  if (!enabled || !['foot', 'pelvis', 'thorax', 'leg'].includes(framingRegion ?? '')) return null;
+  if (!enabled || !['foot', 'pelvis', 'thorax', 'leg', 'forearm'].includes(framingRegion ?? '')) return null;
   const visible = new Set(visibleIds);
   const selected = structures.find((s) => s.id === selectedId);
+  if (region === 'forearm') {
+    const member = (s: typeof structures[number]) =>
+      s.region === 'forearm' && s.regions.includes('forearm') &&
+      (side === 'both' || s.laterality === side || neutralLateralities.has(s.laterality)) &&
+      !(s.system === 'vessels' && forearmLongVeins.has(s.fmaId));
+    // Use complete tissue envelopes, including brachioradialis and distal
+    // tendons. Never infer a cutting plane or alter the supplied geometry.
+    // Keep smaller peripheral vessels in full, even outside muscle envelopes.
+    // Long cephalic/basilic veins and shared arm sources remain loaded. A
+    // selection outside this set restores the full-source camera fit.
+    if (selectedId !== null &&
+      (!selected || !visible.has(selected.id) || !member(selected))) return null;
+    return selectionBounds(structures.filter(s => visible.has(s.id) && member(s)));
+  }
   if (region === 'leg') {
     // Keep the full supplied lower-leg envelopes, including distal tendons.
     // Shared whole femora, thigh vessels and iliotibial tracts stay loaded;

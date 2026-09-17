@@ -26,6 +26,7 @@
     "pelvis-framing:test": "node scripts/validate-pelvis-framing.mjs",
     "thorax-framing:test": "node scripts/validate-thorax-framing.mjs",
     "leg-framing:test": "node scripts/validate-leg-framing.mjs",
+    "forearm-framing:test": "node scripts/validate-forearm-framing.mjs",
     "connective-imaging:test": "node scripts/pin-connective-imaging.mjs --check && node scripts/record-connective-imaging-transition.mjs --check && node scripts/validate-connective-imaging.mjs",
     "major-bone-imaging:test": "node scripts/pin-major-bone-imaging.mjs --check && node scripts/record-major-bone-imaging-transition.mjs --check && node scripts/validate-major-bone-imaging.mjs",
     "corpus-imaging:test": "node scripts/pin-corpus-imaging.mjs --check && node scripts/record-corpus-imaging-transition.mjs --check && node scripts/validate-corpus-imaging.mjs",
