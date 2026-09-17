@@ -20,6 +20,7 @@ import { addCranialArteries } from './cranial-arteries.ts';
 import { addElbowArteries } from './elbow-arteries.ts';
 import { addCorpusSpongiosum } from './corpus-spongiosum.ts';
 import { addShortCiliary } from './short-ciliary';
+import { addAnteriorCardiacVein } from './anterior-cardiac-vein';
 
 const canonical = (value: unknown): string => {
   if (Array.isArray(value)) return `[${value.map(canonical).join(',')}]`;
@@ -75,7 +76,7 @@ export function bodyDisplayCatalog(catalog: BodyCatalog): BodyCatalog {
       ),
     ),
   );
-  return addShortCiliary(addCorpusSpongiosum(addElbowArteries(addCranialArteries(addCircumflexFemoralBranches(addSubscapularArteries(addLimbicLandmarks(addPelvicVeins(addInferiorEpigastricVessels(addDeferentDucts(addInferiorThyroidArteries(display)))))))))));
+  return addAnteriorCardiacVein(addShortCiliary(addCorpusSpongiosum(addElbowArteries(addCranialArteries(addCircumflexFemoralBranches(addSubscapularArteries(addLimbicLandmarks(addPelvicVeins(addInferiorEpigastricVessels(addDeferentDucts(addInferiorThyroidArteries(display))))))))))));
 }
 
 function applyDisplayCorrection(

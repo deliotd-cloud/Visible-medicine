@@ -227,6 +227,12 @@ const api = await import(
   'data:text/javascript;base64,' +
     Buffer.from(compiled.outputFiles[0].text).toString('base64')
 );
+// The later, source-bound CT authoring supersedes the original pending copy.
+// Preserve exact current teaching hashes rather than asserting obsolete text.
+const imagingPins = await read('content/thoracic-branch-imaging-pins.json');
+const imagingTransition = await read('content/thoracic-branch-imaging.transition.json');
+same(hash(JSON.stringify(imagingPins)), '0f63534f228382dbf196f4dd2c732f9824bd0727752da8a198fb27ab764234ad');
+same(hash(JSON.stringify(imagingTransition)), 'e44a7a602db8b26ba1ae4081280a5647715fe106d6a117d0068ab8e6dbc1abd6');
 same(
   api.thoracicGroups.flatMap((g) => g.fmaIds).sort(compare),
   [...thoracicAdmissions].sort(compare),
@@ -241,8 +247,13 @@ for (const s of additions) {
     same(c.citations, group.references);
     check(c.bullets.includes(group.caution));
   }
-  for (const tab of ['ct', 'mri', 'ultrasound'])
-    check(api.bodyContent(s, tab).body.includes('No imaging study'));
+  for (const tab of ['ct', 'mri', 'ultrasound']) {
+    const pin = imagingPins.entries.find(e => e.identity.id === s.id && e.topics.includes(tab));
+    if (pin) {
+      same(s, pin.identity);
+      same(hash(JSON.stringify(api.bodyLesson(s, tab))), imagingTransition.entries.find(e => e.id === s.id).sections[tab]);
+    } else check(api.bodyContent(s, tab).body.includes('No imaging study'));
+  }
   const e = api.bodyLinkEntries(catalog).find((e) => e.id === s.id);
   check(e);
   same(e.sources, s.sources);
@@ -297,7 +308,10 @@ for (const study of api.thoracicStudySets)
           api.resolveDissection(scope, profile, removed).visible,
           visible.filter((v) => v.id !== s.id),
         );
-        same(api.dissectionReducer(removed, { type: 'undo' }), state);
+        const undone = api.dissectionReducer(removed, { type: 'undo' });
+        same({ ...undone, future: [] }, state);
+        same(undone.future.length, 1, 'Undo retains one redo snapshot');
+        same(api.dissectionReducer(undone, { type: 'redo' }), removed);
         same(
           api.resolveDissection(
             scope,

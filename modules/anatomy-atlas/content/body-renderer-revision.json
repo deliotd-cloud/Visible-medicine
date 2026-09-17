@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "9272fd554880f0512aa28ba03a44af0b4dbe38a7b9522be52ab55c8f5b9eacd4"
+      "sha256": "2767349ec64b5eda71026e4673c4189ae2ca7b3c78b7ad35c1a0b6aa29e4c4ab"
     },
     {
       "path": "app/body-education-link.ts",
@@ -122,7 +122,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "48a96b4792af37b74ffe222f4cd6d0b15d4d6a3763612e98d7017e87dffdcdb1"
+      "sha256": "837e58561e85698e32b4150123aafe13f560fb6d1283387f0d18f30b245a7640"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -1006,7 +1006,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "3f25868c60d1e7bad38b2622157ee25e4eb9b37322eec4a85ae1759d5b630f50"
+      "sha256": "0e915ebf3e4203a79a70ff954e41964e0d43689610b7b26160f26cd103059ca6"
     },
     {
       "path": "content/sca-mca-clinical-pins.json",
@@ -1317,6 +1317,10 @@
       "sha256": "3f1e5ef5ebb26101f4aa5cfeccf39a95915732047f1c84c80b14eba9c6469586"
     },
     {
+      "path": "lib/anterior-cardiac-vein.ts",
+      "sha256": "0939ed061d5c679afddeab4191b9e3eef6d2373aa934a39b7f949d0bc09dfb32"
+    },
+    {
       "path": "lib/arm-attachments.ts",
       "sha256": "f70787aa889aca46e4735fd9b90638fdd29a65b829b6c8b273753c85b610257c"
     },
@@ -1374,7 +1378,7 @@
     },
     {
       "path": "lib/body-display-catalog.ts",
-      "sha256": "f537a25bead6547f0b4b755bf29de1dcacaa9a9ab106c4c6a72b5ae6d283829c"
+      "sha256": "1c210b92d686ea0c36a097e9a7a91f6a0c88c6a0d236e40726ba582256908241"
     },
     {
       "path": "lib/body-presentation-parts.ts",
@@ -2166,7 +2170,7 @@
     },
     {
       "path": "lib/screen-label-layout.ts",
-      "sha256": "582954bead639cca40c003730b83d74b6188122c5415d0efdcac13bf4c340d26"
+      "sha256": "bdbc34219c70803768ececed8aa2f952ec18c9cbeae85d77cd29af458debef04"
     },
     {
       "path": "lib/selection-visibility.ts",
@@ -2422,7 +2426,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "eebd2e1846a4495602a38c42d6b49977712a5ecbc5f3c8b89dca0fa4427f54d9"
+      "sha256": "3afe88c5efa6c570868f04b1c26e1b8f08e5a870e26a04dc95cd80c1f9fe01a4"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2431,6 +2435,10 @@
     {
       "path": "public/models/bodyparts3d-v3/back-layers/catalog.json",
       "sha256": "23ba69e7268a03c8ab722313326bb7ffc3ac13aa49c0036c043993b38e0e9242"
+    },
+    {
+      "path": "public/models/bodyparts3d/anterior-cardiac-vein/catalog.json",
+      "sha256": "930539839a9b2a1c4a83f13309277aff6b90018cc2554b76010f3c4d3c351e2d"
     },
     {
       "path": "public/models/bodyparts3d/brachial-veins/catalog.json",
@@ -2621,5 +2629,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "f7b466eeea36dcc040abe2ffde9e900f80df3a4846868a64c53cede874c992a1"
+  "sha256": "9ef43bdd99b0c05d7a69480f82203f54d6bd9ba84e9cb72ccb4c4c61a45c991d"
 }

@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {cardiacVeinApi,hash,cardiacVeinBase} from './anterior-cardiac-vein-tools.mjs';
+import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
+const api=await cardiacVeinApi(),old=await exactSourceHistoryApi(cardiacVeinBase),raw=JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json'));
+const before=old.bodyDisplayCatalog(raw),after=api.bodyDisplayCatalog(raw),structure=after.structures.find(s=>s.fmaId==='FMA76767'),bundle=after.bundles.find(b=>b.id===structure.bundle);
+assert.deepEqual({...after,structures:after.structures.filter(s=>s.id!==structure.id),bundles:after.bundles.filter(b=>b.id!==bundle.id)},before);
+const added=api.dissectionProfiles.thorax.focuses.filter(f=>f.id==='cardiac-venous-surfaces');assert.equal(added.length,1);
+const profiles=structuredClone(api.dissectionProfiles);profiles.thorax.focuses=profiles.thorax.focuses.filter(f=>f.id!==added[0].id);assert.deepEqual(profiles,old.dissectionProfiles);
+const record={sourceCommit:cardiacVeinBase,beforeCatalog:hash(before),afterCatalog:hash(after),beforeProfiles:hash(profiles),afterProfiles:hash(api.dissectionProfiles),structure,bundle,focus:added[0]};
+const path='content/anterior-cardiac-vein-transition.json',text=JSON.stringify(record,null,2)+'\n';
+if(process.argv.includes('--check'))assert.equal((await readFile(path,'utf8')).replace(/\r\n/g,'\n'),text);else await writeFile(path,text,{flag:'wx'});
+console.log(JSON.stringify({hash:hash(record),beforeCatalog:record.beforeCatalog,afterCatalog:record.afterCatalog}));

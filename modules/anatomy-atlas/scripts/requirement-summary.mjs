@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Anterior cardiac vein](ANTERIOR_CARDIAC_VEIN.md) adds one source-defined group from two original files (730 retained triangles), with a compact cardiac-venous Study and draft Anatomy/Function/self-check. All previous 1,103 root records, bundles, recipes and 9,927 topics are preserved. Apparent vessel/heart contact is not a validated junction or drainage pathway; other teaching, clinical approval and website model staging remain pending.
+
 [Anterior elbow studies](CUBITAL_STUDIES.md) bring 32 existing arm/forearm selections together in two focused whole-body views: muscles/arteries and superficial veins. Source-derived elbow close-ups, side filters, removal, extraction and Undo reuse existing controls. Whole surfaces remain unchanged; nerves, fascia, bicipital aponeurosis and verified vessel junctions are not supplied. No procedure, patient registration or clinical approval is implied.
 
 [Regional branch imaging](REGIONAL_BRANCH_IMAGING.md) adds eight CT/MRI/Ultrasound draft placements across four existing descending lateral circumflex femoral and subscapular arteries. Specialised angiography and selected perforator evidence are distinguished from ordinary scans and reference geometry. Existing panels and all other content remain; no new model, image, procedure or clinical approval.

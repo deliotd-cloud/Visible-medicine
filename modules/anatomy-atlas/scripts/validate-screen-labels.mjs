@@ -82,6 +82,20 @@ function validate(labels, width, height) {
   return result;
 }
 
+// Small extracted structures can sit inside the label rail itself. Protect
+// their anchor with clearance when a free vertical slot exists, on either side.
+for (const width of [240, 370, 880]) for (const side of ['left', 'right']) {
+  for (const y of [14, 250, 486]) {
+    const input = [{id:'extracted',x:side==='left'?50:width-50,y,width:screenLabelMaxWidth(width),height:64,selected:true}];
+    const [placed] = validate(input,width,500);
+    check(placed && (placed.top+placed.height<=y-12 || placed.top>=y+12), 'Extracted anchor remains outside its label');
+  }
+  const middle={id:'middle',x:side==='left'?50:width-50,y:250,width:screenLabelMaxWidth(width),height:64,selected:true};
+  const crowded=validate([{...middle,id:'first',y:120,selected:false},middle],width,500);
+  const selected=crowded.find(p=>p.id==='middle');
+  check(selected && (selected.top+selected.height<=250-12 || selected.top>=250+12), 'Anchor clears a neighbouring label without overlap or side swapping');
+}
+
 for (const width of [240, 320, 360, 736, 1024, 1600])
   for (const height of [120, 240, 400, 720])
     for (const textHeight of [28, 44, 66, 100])

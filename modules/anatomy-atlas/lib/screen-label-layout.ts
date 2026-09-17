@@ -132,6 +132,27 @@ export function layoutScreenLabels(
       tops[i] = Math.min(tops[i], bottom - accepted[i].height);
       bottom = tops[i] - gap;
     }
+    // An extracted or panned structure can enter a label gutter. Do not cover
+    // its own anchor when this column has room above/below it. Preserve screen
+    // side, selected-label priority, vertical order and all neighbouring boxes.
+    // This protects an anchor, not a projected whole-tissue occlusion proof.
+    for (let i = 0; i < accepted.length; i++) {
+      const label = accepted[i];
+      const left = side === 'left' ? labelGutter : width - labelGutter - label.width;
+      const clearance = 12;
+      if (label.x < left - clearance || label.x > left + label.width + clearance)
+        continue;
+      const low = i ? tops[i - 1] + accepted[i - 1].height + gap : labelGutter;
+      const high = (i + 1 < accepted.length ? tops[i + 1] - gap : height - labelGutter) - label.height;
+      const clear = (top: number) =>
+        top + label.height <= label.y - clearance || top >= label.y + clearance;
+      if (clear(tops[i])) continue;
+      const options = [label.y - label.height - clearance, label.y + clearance]
+        .map(top => Math.max(low, Math.min(high, top)))
+        .filter(top => top >= low && top <= high && clear(top))
+        .sort((a, b) => Math.abs(a - tops[i]) - Math.abs(b - tops[i]));
+      if (options.length) tops[i] = options[0];
+    }
     accepted.forEach((label, i) => {
       const left =
         side === 'left' ? labelGutter : width - labelGutter - label.width;

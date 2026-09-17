@@ -1122,3 +1122,14 @@ TTUHSC cubital-fossa teaching and Mikuni et al. 2013 (PMID 23131916) are factual
 references only: no publisher media, copied prose, abstract, table or diagram
 is bundled or assumed commercially licensed. See `docs/CUBITAL_STUDIES.md`.
 No new dependency, font, texture, model, patient scan or paid service was added.
+# Anterior cardiac vein source addition — 17 September 2026
+
+FMA76767/BP8603 uses original BodyParts3D 4.0 ISA FJ2725 and FJ2730 under
+CC BY 4.0. BodyParts3D, © The Database Center for Life Science licensed under
+CC Attribution 4.0 International. Source licence:
+https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+Original indexed surfaces are transformed into the established display frame
+and stored in Float32 GLB; shading normals are recomputed. No repair, bridging,
+mirroring or new tissue. See docs/ANTERIOR_CARDIAC_VEIN.md and its pinned source
+audit. Teaching references are links with original factual synthesis only;
+publisher media/prose and patient data are not imported. All anatomy is unvalidated.

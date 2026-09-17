@@ -115,6 +115,7 @@ import { majorBoneImagingLesson } from '../lib/major-bone-imaging';
 import { connectiveImagingLesson } from '../lib/connective-imaging';
 import { inferiorThyroidLesson } from '../lib/inferior-thyroid-arteries';
 import { shortCiliaryLesson } from '../lib/short-ciliary';
+import { anteriorCardiacVeinLesson } from '../lib/anterior-cardiac-vein';
 import { subscapularArteryLesson } from '../lib/subscapular-arteries';
 import { elbowArteryLesson } from '../lib/elbow-arteries';
 import { elbowClinicalLesson } from '../lib/elbow-clinical';
@@ -201,6 +202,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const anteriorCardiacVein = anteriorCardiacVeinLesson(s, tab);
+  if (anteriorCardiacVein) return anteriorCardiacVein;
   const shortCiliary = shortCiliaryLesson(s, tab);
   if (shortCiliary) return shortCiliary;
   const neckTeaching = neckTeachingLesson(s, tab);

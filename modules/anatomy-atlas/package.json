@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "anterior-cardiac-vein:test": "node scripts/export-anterior-cardiac-vein.mjs --check && node scripts/record-anterior-cardiac-vein-baseline.mjs --check && node scripts/record-anterior-cardiac-vein.mjs --check && node scripts/validate-anterior-cardiac-vein.mjs",
     "portal-hepatic-study:test": "node scripts/pin-portal-hepatic-study.mjs --check && node scripts/record-portal-hepatic-study.mjs --check && node scripts/validate-portal-hepatic-study.mjs",
     "pelvic-closeup:test": "node scripts/validate-pelvic-closeup.mjs",
     "pelvic-urinary-context:test": "node scripts/validate-pelvic-urinary-context.mjs",

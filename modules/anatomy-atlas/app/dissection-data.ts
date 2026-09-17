@@ -1110,6 +1110,14 @@ dissectionProfiles.pelvis.stages.push(
     'Compare the source positions; do not infer a complete pelvic floor, organ-wall layering, sphincters or reproductive tract.',
   ),
 );
+dissectionProfiles.thorax.focuses.push({
+  id: 'cardiac-venous-surfaces',
+  title: 'Cardiac veins & heart surface',
+  includeSkeleton: false,
+  rule: { fmaIds: ['FMA76767', 'FMA7088', 'FMA3802', 'FMA4707', 'FMA4713'] },
+  view: 'anterior',
+  description: 'Compare anterior, great and middle cardiac vein sources. Remove the heart to inspect covered surfaces; Undo restores it. Rotate posteriorly for the middle cardiac vein. Contacts are not proven drainage junctions or dissection planes.',
+});
 dissectionProfiles['head-neck'].focuses.push({
   id: 'short-ciliary-context',
   title: 'Short ciliary source & orbital context',

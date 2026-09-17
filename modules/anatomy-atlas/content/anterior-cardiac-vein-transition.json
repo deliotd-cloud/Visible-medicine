@@ -1,0 +1,89 @@
+{
+  "sourceCommit": "430c9abbf66b14d9e485acdf2502ab33e42379a7",
+  "beforeCatalog": "3f0d20c36112cb559fb2d223b005aa00690fc951887ca48497c6e0b1f858af85",
+  "afterCatalog": "bb3518cfdc995729f0e9c528d8e4071cb6ebc71852dcb92ded6c5bdebda70830",
+  "beforeProfiles": "efbd7db51e9f4042490f5f98975e39d93c1a7928b260f8a0c54b4d81d8c5d6d7",
+  "afterProfiles": "aa27b708e45761434747088856955abfe1320c11ba5720e2e6dcaa96e51f2e2a",
+  "structure": {
+    "id": "vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein",
+    "fmaId": "FMA76767",
+    "name": "Anterior cardiac vein · source group",
+    "sourceName": "anterior cardiac vein",
+    "system": "vessels",
+    "category": "vessel",
+    "laterality": "unspecified",
+    "region": "thorax",
+    "regions": [
+      "thorax"
+    ],
+    "bundle": "anterior-cardiac-vein",
+    "nodeName": "FMA76767",
+    "sourceTree": "isa",
+    "sources": [
+      {
+        "file": "FJ2725",
+        "sha256": "48063a8e366f2ad5c6745d9d20c31afc216a68561d5b4826de256444190f7634"
+      },
+      {
+        "file": "FJ2730",
+        "sha256": "bb15f6552044e7e9dbf7035fc0836b0ee10e1a46a22a0b2cc90c4eb711c11141"
+      }
+    ],
+    "bounds": {
+      "min": [
+        -0.035955000668764114,
+        4.229499816894531,
+        1.0874899625778198
+      ],
+      "max": [
+        0.29523301124572754,
+        4.429800033569336,
+        1.2661999464035034
+      ]
+    },
+    "center": [
+      0.1296390052884817,
+      4.329649925231934,
+      1.1768449544906616
+    ],
+    "anchor": [
+      0.12833400070667267,
+      4.34119987487793,
+      1.2211400270462036
+    ],
+    "coverageNote": "Two original surfaces retained as one source-defined group. The visible branches are not a normal vein count, a complete venous tree or independently named veins. Apparent contact with the heart, right coronary artery or the other component does not prove lumen continuity, drainage openings or a dissection plane. Reassemble before comparing source relationships.",
+    "provenance": {
+      "method": "licensed-source-mesh",
+      "license": "CC-BY-4.0",
+      "sourceVersion": "4.0",
+      "recovered": false
+    },
+    "validation": {
+      "status": "unvalidated",
+      "anatomicalReview": false
+    }
+  },
+  "bundle": {
+    "id": "anterior-cardiac-vein",
+    "url": "/models/bodyparts3d/anterior-cardiac-vein/anterior-cardiac-vein.glb?v=ff72014e957d661a16892581db9e371482541302e4a3203ba3e84cac9f5f1928",
+    "bytes": 17252,
+    "sha256": "ff72014e957d661a16892581db9e371482541302e4a3203ba3e84cac9f5f1928",
+    "structures": 1
+  },
+  "focus": {
+    "id": "cardiac-venous-surfaces",
+    "title": "Cardiac veins & heart surface",
+    "includeSkeleton": false,
+    "rule": {
+      "fmaIds": [
+        "FMA76767",
+        "FMA7088",
+        "FMA3802",
+        "FMA4707",
+        "FMA4713"
+      ]
+    },
+    "view": "anterior",
+    "description": "Compare anterior, great and middle cardiac vein sources. Remove the heart to inspect covered surfaces; Undo restores it. Rotate posteriorly for the middle cardiac vein. Contacts are not proven drainage junctions or dissection planes."
+  }
+}

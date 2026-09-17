@@ -4,6 +4,7 @@ import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
 import {beforeLowerVenousImaging} from './lower-venous-imaging-history.mjs';
 import {preCubitalProfiles} from './cubital-study-history.mjs';
+import {preAnteriorCardiacVeinAuthoring} from './anterior-cardiac-vein-history.mjs';
 import record from '../content/short-ciliary-transition.json' with {type:'json'};
 import teaching from '../content/short-ciliary-teaching.transition.json' with {type:'json'};
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
@@ -27,6 +28,7 @@ export function preShortCiliaryProfiles(profiles){
  const prior=structuredClone(profiles);prior['head-neck'].focuses=prior['head-neck'].focuses.filter(f=>f.id!==record.addedFocus.id);assert.equal(hash(prior),record.previousRecipesHash);return prior;
 }
 export function preShortCiliaryAuthoring(api,catalog){
+ api=preAnteriorCardiacVeinAuthoring(api,catalog);
  verify();const display=api.bodyDisplayCatalog(catalog),matches=display.structures.filter(s=>s.id===record.structure.id||s.fmaId===record.structure.fmaId);
  if(!matches.length)return api;
  assert.deepEqual(matches,[record.structure]);assert.equal(hash(display),record.currentCatalogHash);
