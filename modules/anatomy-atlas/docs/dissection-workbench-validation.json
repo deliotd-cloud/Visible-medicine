@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "checks": 134144,
+  "checks": 134210,
   "catalogueStructures": 1022,
   "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
   "regions": [
@@ -8,13 +8,13 @@
       "region": "whole-body",
       "layerSteps": 0,
       "studyWindows": 7,
-      "focusedViews": 7
+      "focusedViews": 16
     },
     {
       "region": "shoulder-arm",
       "layerSteps": 4,
       "studyWindows": 3,
-      "focusedViews": 6
+      "focusedViews": 8
     },
     {
       "region": "forearm",
@@ -32,13 +32,13 @@
       "region": "thigh",
       "layerSteps": 6,
       "studyWindows": 2,
-      "focusedViews": 7
+      "focusedViews": 8
     },
     {
       "region": "leg",
       "layerSteps": 4,
       "studyWindows": 6,
-      "focusedViews": 10
+      "focusedViews": 13
     },
     {
       "region": "foot",
@@ -56,25 +56,25 @@
       "region": "abdomen",
       "layerSteps": 3,
       "studyWindows": 15,
-      "focusedViews": 21
+      "focusedViews": 22
     },
     {
       "region": "pelvis",
       "layerSteps": 4,
       "studyWindows": 3,
-      "focusedViews": 4
+      "focusedViews": 7
     },
     {
       "region": "head-neck",
       "layerSteps": 4,
       "studyWindows": 24,
-      "focusedViews": 30
+      "focusedViews": 32
     },
     {
       "region": "spine",
       "layerSteps": 5,
       "studyWindows": 11,
-      "focusedViews": 13
+      "focusedViews": 14
     }
   ],
   "sourceGeometryChanged": false,

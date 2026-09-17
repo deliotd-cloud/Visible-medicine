@@ -1726,6 +1726,7 @@ export default function BodyExplorer({
                       practiceDispatch({ type: 'dismiss' });
                       setSelectedId(null);
                       setFocus(false);
+                      setIsolated(false);
                     }
                   }}
                 >
