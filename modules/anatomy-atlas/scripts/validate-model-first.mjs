@@ -736,8 +736,31 @@ for (const [width, height] of dimensions) {
   const canvas = declarations('.body-canvas', width, height);
   same(canvas.height, 'auto');
   same(canvas.flex, height <= 580 ? '1 0 300px' : '1 1 0');
-  same(canvas['min-height'], width <= 700 ? '280px' : '300px');
+  // Enlarged controls need intrinsic rows, not a fixed canvas floor that clips
+  // actions. The actual browser reflow/keyboard matrix is recorded separately.
+  same(canvas['min-height'], 'min-content');
+  same(canvas['grid-template-columns'], 'minmax(0, 1fr)');
+  same(canvas['grid-template-rows'], 'auto minmax(160px, 1fr) auto auto auto');
+  same(canvas['min-width'], '0');
+  same(declarations('.body-workspace', width, height)['overflow-y'], 'auto');
+  same(declarations('.body-canvas > .body-toolbar', width, height).container,
+    'anatomy-toolbar / inline-size');
 }
+const compactToolbar = [];
+stylesheet.walkAtRules('container', rule => {
+  if (rule.params === 'anatomy-toolbar (max-width: 20rem)') compactToolbar.push(rule);
+});
+same(compactToolbar.length, 1);
+const compactRules = Object.fromEntries(compactToolbar[0].nodes.map(rule => [
+  rule.selector, Object.fromEntries(rule.nodes.map(d => [d.prop, d.value])),
+]));
+same(compactRules['.body-explode:has(.vm-explode-style)']['grid-template-columns'], 'minmax(0, 1fr) auto');
+same(compactRules['.body-explode .vm-explode-style']['grid-column'], '1 / -1');
+same(compactRules['.body-explode .vm-explode-style']['min-width'], '0');
+const launchers = declarations('.body-layout > :is(.body-controls-launcher, .body-info-launcher)', 320, 640);
+same(launchers['min-width'], '0');
+same(launchers['max-width'], 'calc(100% - 28px)');
+same(launchers['white-space'], 'normal');
 const result = {
   passed: true,
   checks,

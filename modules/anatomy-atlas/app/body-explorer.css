@@ -3095,3 +3095,43 @@
 }
 .body-canvas > .body-canvas-caption { grid-row: 4; }
 .body-canvas > .model-credit { grid-row: 5; }
+
+/* Intrinsic control widths must not enlarge the model's grid track at text zoom.
+   Let wrapped rows set the minimum height, with local scrolling only when needed. */
+.body-workspace {
+  overflow-y: auto;
+}
+.body-canvas {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto minmax(160px, 1fr) auto auto auto;
+  min-width: 0;
+  min-height: min-content;
+}
+.body-canvas > .body-view-row,
+.body-canvas > .body-scene,
+.body-canvas > .body-toolbar {
+  min-width: 0;
+}
+.body-canvas > .body-view-row > [data-slot='select-trigger'] {
+  max-width: 100%;
+}
+.body-canvas > .body-toolbar {
+  container: anatomy-toolbar / inline-size;
+}
+.body-layout > :is(.body-controls-launcher, .body-info-launcher) {
+  min-width: 0;
+  max-width: calc(100% - 28px);
+  height: auto;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+@container anatomy-toolbar (max-width: 20rem) {
+  .body-explode:has(.vm-explode-style) {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .body-explode .vm-explode-style {
+    grid-column: 1 / -1;
+    max-width: none;
+    min-width: 0;
+  }
+}
