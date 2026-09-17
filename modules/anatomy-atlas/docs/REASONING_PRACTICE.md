@@ -1,5 +1,32 @@
 # Source-bound anatomical reasoning pilot
 
+## Thoracic organs — 17 September 2026
+
+Three original draft questions add trachea, oesophagus and thymus to Apply anatomy.
+The current bank contains126 concepts /238 exact source representations. Thorax
+has10 concepts including the prior seven muscle concepts. All preceding123
+questions are hash-pinned unchanged; no source geometry or other teaching changes.
+
+These three unpaired organs retain complete ordered partof identities:
+FMA7394/FJ2541, FMA7131/FJ2563 and FMA9607/FJ3150+FJ3151. They offer three choices
+in thorax-only practice; whole-body adds one curated abdominal alternative for
+four choices. No unavailable structure is invented to fill an answer slot. The
+existing loading, scope, side, focus, retry, answer-once and feedback gates apply.
+
+[Texas Tech lungs and mediastina](https://anatomy.ttuhscep.edu/schemes/lungs_ans.html)
+supports the airway/alimentary relationships and thymic immune function. The short
+original prompts and explanations remain below200 words total for this source;
+no publisher questions, media, tables or scans are copied. No new asset,
+dependency, fee or entitlement is introduced. Geometry, cellular function, lumen
+patency and patient-specific imaging are not validated by these questions.
+Revision-bound radiologist and educator acceptance remain pending.
+
+The focused reasoning validator checks complete official source membership,
+unchanged earlier questions, all three views of thorax and whole body, exclusion
+when unloaded or isolated, actual feedback rendering and answer/skip behavior.
+Browser and recovery outcomes are recorded separately in the coordinating
+checkpoint; source implementation is not publication or clinical approval.
+
 ## Abdominal organs — 17 September 2026
 
 Seven original draft questions extend the existing Apply anatomy mode to stomach,

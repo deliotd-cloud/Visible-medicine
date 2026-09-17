@@ -88,9 +88,11 @@ same(api.reasoningConcepts.slice(104,116).map(c => c.key), [
 same(precedingConcepts.length, 104);
 same(hash(JSON.stringify(precedingConcepts)), '6aa090bb8f9142fd266af59df995b4c2c7b7f8bef425318c34ebf7332cb69899', 'All preceding 104 concepts remain unchanged and ordered');
 same(hash(JSON.stringify(api.reasoningConcepts.slice(0,116))), 'c78bf5e2c3eee38966910f94ad97dbbf898ae73999b52e8e7a6a71db5aaa3520', 'All preceding 116 concepts remain unchanged and ordered');
-same(api.reasoningConcepts.slice(116).map(c => c.key), ['abdominal-stomach','abdominal-gallbladder','abdominal-spleen','abdominal-cystic-duct','abdominal-common-hepatic-duct','abdominal-ileocecal-junction','abdominal-appendix']);
-same(api.reasoningConcepts.length, 123);
-same(bound.length, 235);
+same(api.reasoningConcepts.slice(116,123).map(c => c.key), ['abdominal-stomach','abdominal-gallbladder','abdominal-spleen','abdominal-cystic-duct','abdominal-common-hepatic-duct','abdominal-ileocecal-junction','abdominal-appendix']);
+same(hash(JSON.stringify(api.reasoningConcepts.slice(0,123))), '3052d88e4b5e2c1dd55f34d37989a4d847e91e41d5707a48a6a876c2d15fb883', 'All preceding 123 concepts remain unchanged and ordered');
+same(api.reasoningConcepts.slice(123).map(c => c.key), ['thoracic-trachea','thoracic-esophagus','thoracic-thymus']);
+same(api.reasoningConcepts.length, 126);
+same(bound.length, 238);
 same(bound.filter((s) => s.region === 'shoulder-arm').length, 26);
 same(bound.filter((s) => s.region === 'forearm').length, 18);
 same(bound.filter((s) => s.region === 'hand').length, 20);
@@ -99,9 +101,9 @@ same(bound.filter((s) => s.region === 'leg').length, 28);
 same(bound.filter((s) => s.region === 'foot').length, 16);
 same(bound.filter((s) => s.region === 'head-neck').length, 48);
 same(bound.filter((s) => s.region === 'spine').length, 24);
-same(bound.filter((s) => s.region === 'thorax').length, 10);
+same(bound.filter((s) => s.region === 'thorax').length, 13);
 same(bound.filter((s) => s.region === 'abdomen').length, 9);
-same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 123);
+same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 126);
 same(hash(JSON.stringify(precedingConcepts.filter(c => !c.key.startsWith('neck-')))),
   'caafb323ca7d5a04971f91ad369d68c3a8da5e43839b39d8cd76192d1497bad2',
   'All 100 preceding concepts remain unchanged and in order');
@@ -296,7 +298,7 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
       same(session, null, 'No unbound regional question is invented');
     if (!session) continue;
     const expected = { 'whole-body': 20, 'head-neck': 20, 'shoulder-arm': 13, forearm: 9,
-      hand: 10, thigh: 18, pelvis: 8, leg: 14, foot: 8, spine: 12, thorax: 7, abdomen: 9 }[region];
+      hand: 10, thigh: 18, pelvis: 8, leg: 14, foot: 8, spine: 12, thorax: 10, abdomen: 9 }[region];
     same(session.questions.length, expected);
     same(
       new Set(session.questions.map((q) => q.reasoning.key)).size,
@@ -358,7 +360,7 @@ for (const count of [1, 5, 10, 20, 100, NaN, Infinity, -10]) {
   same(
     create(all, { count }).questions.length,
     Math.min(
-      123,
+      126,
       Math.max(1, Math.min(20, Math.floor(Number.isFinite(count) ? count : 5))),
     ),
   );
@@ -370,22 +372,22 @@ for (const value of [NaN, Infinity, -Infinity, -1, 0, 1, 20])
   );
 same(create(all, { id: 0 }), null);
 same(create(all, { id: 1.5 }), null);
-const newConcepts = api.reasoningConcepts.filter(c => c.key.startsWith('trunk-') || c.key.startsWith('neck-') || c.key.startsWith('limb-') || c.key.startsWith('abdominal-'));
+const newConcepts = api.reasoningConcepts.filter(c => c.key.startsWith('trunk-') || c.key.startsWith('neck-') || c.key.startsWith('limb-') || c.key.startsWith('abdominal-') || c.key.startsWith('thoracic-'));
 const referenceWords = {};
-same(newConcepts.length, 43);
+same(newConcepts.length, 46);
 const limbConcepts = newConcepts.filter(c => c.key.startsWith('limb-'));
 const organConcepts = newConcepts.filter(c => c.sourceTissue === 'organ');
-same(organConcepts.length, 7);
+same(organConcepts.length, 10);
 const liveDisplay = api.bodyDisplayCatalog(catalog);
 for (const concept of organConcepts) {
   const target = liveDisplay.structures.find(s => api.reasoningConceptFor(s)?.key === concept.key);
   check(target && target.laterality === 'unpaired' && target.system === 'organs');
-  for (const region of ['whole-body', 'abdomen']) for (const side of ['both','left','right']) {
+  for (const region of ['whole-body', concept.region]) for (const side of ['both','left','right']) {
     const scope = liveDisplay.structures.filter(s => (region === 'whole-body' || s.regions.includes(region)) &&
       (side === 'both' || s.laterality === side || ['unpaired','midline','unspecified'].includes(s.laterality)));
     const session = create(scope, {retryIds:[target.id]}, liveDisplay.bundles.map(b => b.id));
     same(session.questions.length, 1, 'Actual display catalogue admits one source-bound organ question');
-    same(session.questions[0].choices.length, 4, 'Three distinct curated alternatives remain in each view');
+    same(session.questions[0].choices.length, region === 'thorax' ? 3 : 4, 'Only actual curated alternatives in this view are offered');
     for(const id of session.questions[0].choices) same(liveDisplay.structures.find(s => s.id === id).system,'organs');
     same(create(scope, {retryIds:[target.id]}, liveDisplay.bundles.filter(b => b.id !== target.bundle).map(b=>b.id)),null);
   }
@@ -429,7 +431,7 @@ for (const concept of newConcepts) {
 }
 for (const [url, words] of Object.entries(referenceWords)) check(words <= 200, `Brief original synthesis per reference: ${url} (${words})`);
 const groupedTargets = bound.filter(s => s.laterality === 'midline');
-same(bound.filter(s => s.sourceTree === 'partof').map(s => s.fmaId).sort(), ['FMA13373', 'FMA13374', 'FMA7148', 'FMA7202']);
+same(bound.filter(s => s.sourceTree === 'partof').map(s => s.fmaId).sort(), ['FMA13373', 'FMA13374', 'FMA7131', 'FMA7148', 'FMA7202', 'FMA7394', 'FMA9607']);
 same(groupedTargets.map(s => s.fmaId).sort(), ['FMA13295', 'FMA9756', 'FMA9757', 'FMA9758'].sort());
 same(create(groupedTargets).questions.length, 4, 'Four genuine grouped/unpaired targets work together');
 for (const group of groupedTargets) {

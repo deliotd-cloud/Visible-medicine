@@ -1,5 +1,13 @@
 # Third-party notices
 
+## Thoracic organ reasoning — 17 September 2026
+
+Three original short questions cite Texas Tech's lungs/mediastina teaching page
+as a factual reference only. No publisher questions, illustrations, tables or
+scans are included. Existing BodyParts3D attribution and code terms are retained;
+no new dependency, model, image, font or paid service. See
+[reasoning scope and references](../docs/REASONING_PRACTICE.md).
+
 ## Abdominal connective imaging — 17 September 2026
 
 Four original short CT/ultrasound topic texts cite published anatomical/imaging

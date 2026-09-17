@@ -8,6 +8,7 @@ import { headNeckReasoningConcepts } from './head-neck-reasoning';
 import { trunkReasoningConcepts } from './trunk-reasoning';
 import { limbRelationshipsReasoningConcepts } from './limb-relationships-reasoning';
 import { abdominalOrganReasoningConcepts } from './abdominal-organ-reasoning';
+import { thoracicOrganReasoningConcepts } from './thoracic-organ-reasoning';
 // "midline" retains the exact catalogue tag, including bilateral source groups.
 type ReasoningBinding = { fma: string; side: 'right' | 'left' | 'midline' | 'unpaired' } & (
   | { file: string; files?: never }
@@ -343,6 +344,7 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
   ...trunkReasoningConcepts,
   ...limbRelationshipsReasoningConcepts,
   ...abdominalOrganReasoningConcepts,
+  ...thoracicOrganReasoningConcepts,
 ];
 export function reasoningConceptFor(s: BodyStructure) {
   if (
