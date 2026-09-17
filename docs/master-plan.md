@@ -2,6 +2,25 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — shoulder reflow and embedded keyboard correction
+
+Atlas source separates shoulder metadata from the scene, reflows its explode
+selector in narrow toolbars, and exposes the existing toggle states. It also
+fixes swallowed Escape in the controlled shoulder search without clearing the
+anatomical selection. No new toolbar controls or anatomical geometry.
+
+Current compiled modules are checked in local bounded iframe hosts; exact
+browser coverage, source tests and GitHub/D recovery belong in the main task's
+checkpoint and Atlas docs/SHOULDER_WORKSPACE.md. A plan entry is not evidence of
+publication or clinical completion. The website's generated runtime is untouched.
+Website84 remains last verified deployment; hosted review migrations/roles,
+authenticated model staging, full browser zoom/physical-device acceptance and
+the owner's revision-bound clinical sign-off remain separate gates.
+
+Full existing goal ACTIVE; hourly review PAUSED. Continue substantive regional
+anatomy/teaching and cleared imaging/lecture integration after this usability
+checkpoint; do not repeat completed native MRI synthetic QA.
+
 ## 17 September — regional viewer reflow
 
 Atlas source fixes a reproduced enlarged-text layout failure: controls could
