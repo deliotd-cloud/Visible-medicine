@@ -2,6 +2,23 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — neck attachment reasoning drafts
+
+Atlas source adds four Practice concepts for the three scalenes and
+sternocleidomastoid, bound to eight existing sided selections. Same-side loaded
+alternatives, no contralateral repetition, answer-once and delayed explanation
+guards remain. All preceding100 concepts are hash-pinned unchanged; the current
+bank is104 concepts/204 representations, not204 unique questions. Existing
+Quiz-note coverage is a separate inventory.
+
+UAMS/Iowa factual references and a Texas Tech landmark cross-check support short
+original drafts; no university figures/tables, new meshes or private data are
+imported. Exact source tests, browser coverage and GitHub/D recovery evidence
+are recorded in the coordinating checkpoint and Atlas docs/REASONING_PRACTICE.md.
+No new top-level UI or entitlement is added. Clinical/educator approval remains
+pending. Website generated modules remain unchanged; source saved is not deployed.
+Full goal ACTIVE, hourly review PAUSED; website84 is last verified publication.
+
 ## 17 September — shoulder reflow and embedded keyboard correction
 
 Atlas source separates shoulder metadata from the scene, reflows its explode
