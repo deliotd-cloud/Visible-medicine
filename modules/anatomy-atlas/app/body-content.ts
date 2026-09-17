@@ -110,6 +110,7 @@ import { neckTeachingLesson } from '../lib/neck-teaching';
 import { thyroidImagingLesson } from '../lib/thyroid-imaging';
 import { cranialBoundaryClinicalLesson } from '../lib/cranial-boundary-clinical';
 import { costalCartilageImagingLesson } from '../lib/costal-cartilage-imaging';
+import { corpusImagingLesson } from '../lib/corpus-imaging';
 import { inferiorThyroidLesson } from '../lib/inferior-thyroid-arteries';
 import { subscapularArteryLesson } from '../lib/subscapular-arteries';
 import { elbowArteryLesson } from '../lib/elbow-arteries';
@@ -190,6 +191,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   const neckTeaching = neckTeachingLesson(s, tab);
+  const corpusImaging = corpusImagingLesson(s, tab);
+  if (corpusImaging) return corpusImaging;
   const costalCartilage = costalCartilageImagingLesson(s, tab);
   if (costalCartilage) return costalCartilage;
   const cranialBoundary = cranialBoundaryClinicalLesson(s, tab);

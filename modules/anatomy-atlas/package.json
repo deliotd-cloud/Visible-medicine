@@ -20,6 +20,7 @@
     "deep-venous-clinical:test": "node scripts/pin-deep-venous-clinical.mjs --check && node scripts/record-deep-venous-clinical-transition.mjs --check && node scripts/validate-deep-venous-clinical.mjs",
     "pelvis-framing:test": "node scripts/validate-pelvis-framing.mjs",
     "thorax-framing:test": "node scripts/validate-thorax-framing.mjs",
+    "corpus-imaging:test": "node scripts/pin-corpus-imaging.mjs --check && node scripts/record-corpus-imaging-transition.mjs --check && node scripts/validate-corpus-imaging.mjs",
     "major-organ-function:test": "node scripts/pin-major-organ-function.mjs --check && node scripts/record-major-organ-function-transition.mjs --check && node scripts/validate-major-organ-function.mjs",
     "corpus-clinical:test": "node scripts/pin-corpus-clinical.mjs --check && node scripts/record-corpus-clinical-transition.mjs --check && node scripts/validate-corpus-clinical.mjs",
     "laryngeal-muscle-teaching:test": "node scripts/pin-laryngeal-muscle-teaching.mjs --check && node scripts/record-laryngeal-muscle-teaching-transition.mjs --check && node scripts/validate-laryngeal-muscle-teaching.mjs",

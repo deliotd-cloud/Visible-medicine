@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "c036ea6a51a432e62cf6b3b3f958d96472412000d9b399b4ee2e3080924240b2"
+      "sha256": "0f6a04aacd87a7bf7d5f07e435db3e69900465f00930b118a9044198f721fb1b"
     },
     {
       "path": "app/body-explorer.css",
@@ -511,6 +511,14 @@
     {
       "path": "content/corpus-clinical.ts",
       "sha256": "1f3af47828e50ba6ef9b7a32c9f877ed1aa5e323be6bb1285bc26028fb6b4b4c"
+    },
+    {
+      "path": "content/corpus-imaging-pins.json",
+      "sha256": "83c27111df8b3e83caa764d8040316b2bf352b102d1911f5840d8f6077b05884"
+    },
+    {
+      "path": "content/corpus-imaging.ts",
+      "sha256": "c6e45f351156738a2175bd3b759e38b948bd4d63c4719ace21a96cb8c027229b"
     },
     {
       "path": "content/costal-cartilage-imaging-pins.json",
@@ -1339,6 +1347,10 @@
     {
       "path": "lib/core-organ-function.ts",
       "sha256": "6ecbd0d421c6caa5ffd3f02edadf8cfdbf49ef7bbab20ea3926054544c896925"
+    },
+    {
+      "path": "lib/corpus-imaging.ts",
+      "sha256": "c5f100e44a819ebe7f532d1960c90be3936c084dad7e1651a9af9e34af1acea9"
     },
     {
       "path": "lib/corpus-spongiosum.ts",
@@ -2190,7 +2202,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "8f4dcc7f1f0efe5d5936107e75fb9ec0e82768142ea0dd99be1fa41a0bb13c27"
+      "sha256": "3b4c1184fad2e5835ac51ddce04dbf2fb92be34ef33588c73fe86d52945f83f0"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2385,5 +2397,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "bc1adbe80abad346f56581549fa9cc3037ae00dc42715e5af4047f20748dcfc2"
+  "sha256": "f3b00b853cfa125354ef1927412a53b00c9067fea5a7c276c3394f6f58fd3d10"
 }

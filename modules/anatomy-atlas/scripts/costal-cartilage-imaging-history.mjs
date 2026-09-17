@@ -4,7 +4,9 @@ import {isDeepStrictEqual} from 'node:util';
 import {hash,snapshot} from './pin-pica-clinical.mjs';
 import pins from '../content/costal-cartilage-imaging-pins.json' with {type:'json'};
 import after from '../content/costal-cartilage-imaging.transition.json' with {type:'json'};
+import {authoringBeforeCorpusImaging} from './corpus-imaging-history.mjs';
 export function authoringBeforeCostalCartilageImaging({api,catalog},{deferWholeSnapshot=false}={}){
+ api=authoringBeforeCorpusImaging({api,catalog},{deferWholeSnapshot:true});
  assert.equal(hash(pins),'20fc459efdfdf66d0d4965c270b042b65b8c84683df1da71a5c0dc1ab2b4f0fb');
  assert.equal(hash(after),'3b6a569265570f4e1dc9d7cfc483ae2c6e092d0b5da89dce370c62276ebd924c');
  assert.equal(after.parentCommit,pins.sourceCommit);assert.equal(after.previousAllLessonsAndRecipesHash,pins.previousAllLessonsAndRecipesHash);

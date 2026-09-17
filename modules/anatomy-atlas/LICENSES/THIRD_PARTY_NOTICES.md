@@ -933,6 +933,14 @@ scans or datasets. Citation is not an asset-reuse licence. Original text/code
 retain MIT terms and existing BodyParts3D attribution remains. No new dependency,
 font, model, texture, paid API or mandatory service. See docs/THYROID_IMAGING.md.
 
+Corpus-spongiosum MRI/ultrasound teaching (17 September 2026) adds original brief
+factual notes and reading links to Satragno et al. (1989), the AIUM penile
+ultrasound practice parameter (2023) and NCI SEER. Publisher/AIUM copyright is
+retained; no article text, figure, table, scan, diagram, logo or dataset is
+redistributed. Citations are not commercial asset-reuse grants. Original notes
+retain MIT terms and existing model attribution remains unchanged. No asset,
+dependency, font, paid API or mandatory service is added. See docs/CORPUS_IMAGING.md.
+
 Run:
 
 ```bash

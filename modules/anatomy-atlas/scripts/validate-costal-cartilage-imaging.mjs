@@ -7,7 +7,8 @@ import {authoringBeforeCostalCartilageImaging} from './costal-cartilage-imaging-
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import pins from '../content/costal-cartilage-imaging-pins.json' with {type:'json'};
 import after from '../content/costal-cartilage-imaging.transition.json' with {type:'json'};
-const c=await context(),{api,display}=c,before=authoringBeforeCostalCartilageImaging(c),original=JSON.stringify(display);
+import {authoringBeforeCorpusImaging} from './corpus-imaging-history.mjs';
+const raw=await context(),c={...raw,api:authoringBeforeCorpusImaging(raw)}, {api,display}=c,before=authoringBeforeCostalCartilageImaging(c),original=JSON.stringify(display);
 assert.equal(hash(snapshot(api,display)),after.currentAllLessonsAndRecipesHash);
 assert.equal(hash(snapshot(before,display)),pins.previousAllLessonsAndRecipesHash);
 assert.equal(authoringBeforeCostalCartilageImaging({...c,api:before}),before);

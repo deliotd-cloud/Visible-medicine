@@ -1,5 +1,9 @@
 # Corpus spongiosum Clinical / Pathology drafts
 
+Later addition (17 September): MRI and Ultrasound now have separate source-bound
+drafts described in [CORPUS_IMAGING.md](CORPUS_IMAGING.md). CT and X-ray remain
+pending. The historical clinical transition and verification below are retained.
+
 ## Scope
 
 The existing FMA19617 corpus-spongiosum bulb/shaft selection now has concise Clinical and Pathology drafts in the existing note panel. The Clinical draft relates the ventral erectile column to the separately selectable urethra and flags post-trauma symptoms that warrant clinical assessment. The Pathology draft introduces bulbar/anterior urethral injury, adjacent spongiosal involvement and possible later scar-related narrowing while distinguishing posterior pelvic-fracture injury.
