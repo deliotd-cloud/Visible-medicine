@@ -2,6 +2,33 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — nested review and current coverage evidence
+
+Atlas source now implements a separate review workflow for104 existing nested
+child destinations in19 parent/study scopes. Exact source tokens bind parent,
+child, both bundle revisions and source coordinates. Geometry and teaching have
+separate private append-only decisions; no shoulder, root-body or independent
+specimen approvals transfer. Imaging review is explicitly unavailable.
+Compact context links open the worksheet and return to the exact dissection.
+Saved-history conflict handling preserves unsaved edits.
+
+The generated source inventory and stale coverage documents are refreshed:
+1,102 root-body representations,106 body bundles; nested and independent study
+counts are overlapping scopes, not extra unique body anatomy. Introductory draft
+counts are not clinical-completeness percentages. No source geometry, scans,
+lecture rights or existing reviews changed.
+
+Atlas docs/NESTED_REVIEWS.md and the main coordinating checkpoint record exact
+verification and GitHub/D recovery. New migration0003 is source-only until
+approved hosted application; no production/private review records were read.
+Website84 remains last verified deployment. Public reviewer-role enforcement,
+authenticated model staging, physical-device acceptance and the owner's
+revision-bound clinical sign-off remain separate gates.
+
+Full goal ACTIVE, hourly review PAUSED. Continue regional anatomy/functionality
+and the broader device/interaction matrix; do not repeat completed native MRI
+synthetic QA or assume saved source is deployed.
+
 ## 17 September — genicular arterial clinical teaching
 
 Ten existing knee arterial selections gain20 source-bound Clinical/Pathology
