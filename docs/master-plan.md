@@ -2,6 +2,28 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — clearer pelvic landing view
+
+The local Atlas pelvis viewer now opens with a closer camera framing and uses
+the existing View menu to switch between Frame pelvis and Fit all sources.
+Visible pelvic-core structures and the sacrum stay in view, with neutral/midline
+anatomy retained on either side. Selecting a long vessel or other outside-core
+source restores the full-source fit. No source mesh, coordinate, dissection rule,
+data entitlement or clinical record is altered, and no new toolbar is added.
+
+Desktop/mobile checks cover the reversible menu, both unilateral views, explode
+suspension, source-bound long-vessel links and horizontal fit. Source-space tests
+cover 72 camera projections, side/visibility/identity guards and unchanged hand/
+foot behavior. Atlas docs/PELVIS_FRAMING.md and the coordinating
+PELVIS-FRAMING-CHECKPOINT-20260917.md record checks and GitHub/D recovery.
+The renderer regression now checks actual generated recovery-file bindings rather
+than looking for strings in an old wrapper script; no accepted baseline changed.
+
+Website84 remains the last verified deployment; authenticated source-model
+staging and revision-bound radiologist/device acceptance remain separate gates.
+Full goal ACTIVE and hourly review PAUSED. Continue substantial regional teaching
+and imaging/Education integration, without repeating finished camera or MRI QA.
+
 ## 17 September — corpus-spongiosum clinical teaching
 
 The existing partial bulb/shaft source now has original Clinical and Pathology
