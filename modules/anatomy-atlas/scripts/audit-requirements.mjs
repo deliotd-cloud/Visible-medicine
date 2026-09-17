@@ -324,6 +324,8 @@ const countsBySystem = Object.fromEntries(
 const profiles = Object.values(dissectionProfiles);
 const sourceHashes = {};
 for (const path of [
+  'docs/colonic-components-source-audit.json',
+  'scripts/audit-colonic-components.mjs',
   'lib/bowel-components.ts',
   'app/bowel-components.tsx',
   'content/bowel-component-pins.json',

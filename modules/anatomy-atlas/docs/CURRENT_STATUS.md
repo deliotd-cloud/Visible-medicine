@@ -2,6 +2,8 @@
 
 [Bowel component navigation](BOWEL_COMPONENTS.md) makes the existing small-/large-bowel aggregates, rectum and ileocecal junction easier to study together. The selected Dissect panel has a collapsed source-bound control with regional availability, whole-body continuation and reversible isolation. Four existing selections account for the complete source-file partitions; no new tissue, duplicated surface, lumen or clinical approval is implied.
 
+[Colonic source review](COLONIC_SOURCE_REVIEW.md) separates six existing source surfaces in a local diagnostic only, retaining all 56,878 rendered triangles and normals. Descending/sigmoid extent and fragmented taenia surfaces require review before anatomical subdivision; the compact bowel scope note states this limitation. The prototype adds no released anatomy, delivered model or clinical approval.
+
 [Descending lateral circumflex femoral branches](CIRCUMFLEX_FEMORAL.md) add 2 original source selections and 10464 retained triangles. Both lateral circumflex parents already exist inside deep-femoral aggregates and are not duplicated. Existing arterial navigation distinguishes routes through grouped parents from direct branches or absent segments; all 1080 prior source records remain unchanged. Draft teaching is not clinical approval, continuous-lumen proof or patient registration.
 
 [Subscapular arteries](SUBSCAPULAR_ARTERIES.md) add 2 original source selections and 1576 retained triangles. Existing arterial navigation now links each to its same-side axillary parent and circumflex scapular/thoracodorsal branches, with reversible context isolation. No guessed connecting geometry, complete collateral circuit, patient registration or clinical approval.

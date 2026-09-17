@@ -1,0 +1,7206 @@
+{
+  "version": 1,
+  "baseline": "a915f17a6ef525f0fec0c20ec9d404578c3c6e3c",
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "parentId": "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
+  "parentBundle": {
+    "id": "abdomen-organs",
+    "sha256": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124"
+  },
+  "parts": [
+    {
+      "fma": "FMA14545",
+      "name": "ascending colon",
+      "file": "FJ2566",
+      "role": "colon",
+      "colour": "#e2aa91",
+      "sourceTree": "partof",
+      "sourceSha256": "8c156d4b6c70b181ae7d5b181913f693948c38558a530996dbad0158993fb653",
+      "canonicalGeometrySha256": "7a60ff57a6fd067cdf2c85476761e554f732f0220b3d5946a0f73831dc9447b9",
+      "aliases": [
+        {
+          "tree": "isa",
+          "fma": "FMA14545",
+          "name": "ascending colon"
+        },
+        {
+          "tree": "partof",
+          "fma": "FMA14545",
+          "name": "ascending colon"
+        }
+      ],
+      "topology": {
+        "sourceVertices": 1812,
+        "exactUniqueVertices": 1657,
+        "unusedUniqueVertices": 0,
+        "triangles": 3310,
+        "edges": 4965,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 3310,
+            "vertices": 1657,
+            "bounds": {
+              "min": [
+                -126.783,
+                -145.57,
+                868.352
+              ],
+              "max": [
+                -63.8983,
+                -90.7304,
+                1054.01
+              ]
+            },
+            "areaMm2": 27168.911147388768,
+            "algebraicVolumeMm3": 254293.93457213405
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "sceneBounds": {
+        "min": [
+          -1.2678300142288208,
+          0.6835198998451233,
+          0.40730398893356323
+        ],
+        "max": [
+          -0.6389830112457275,
+          2.54010009765625,
+          0.9557000994682312
+        ]
+      },
+      "centre": [
+        -0.9534065127372742,
+        1.6118099987506866,
+        0.6815020442008972
+      ],
+      "triangles": 3310
+    },
+    {
+      "fma": "FMA14546",
+      "name": "transverse colon",
+      "file": "FJ2572",
+      "role": "colon",
+      "colour": "#d9bb7d",
+      "sourceTree": "partof",
+      "sourceSha256": "66c493a453400d704e39950bbf468e70182c1e68090ac8a85099bfece42c9d35",
+      "canonicalGeometrySha256": "e273cfcaa03210951960b5ceaf91af58b668731516d92d1e6f619d4d8fd99703",
+      "aliases": [
+        {
+          "tree": "isa",
+          "fma": "FMA14546",
+          "name": "transverse colon"
+        },
+        {
+          "tree": "partof",
+          "fma": "FMA14546",
+          "name": "transverse colon"
+        }
+      ],
+      "topology": {
+        "sourceVertices": 1923,
+        "exactUniqueVertices": 1738,
+        "unusedUniqueVertices": 0,
+        "triangles": 3472,
+        "edges": 5208,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 3472,
+            "vertices": 1738,
+            "bounds": {
+              "min": [
+                -88.7506,
+                -196.931,
+                993.442
+              ],
+              "max": [
+                96.6096,
+                -106.834,
+                1064.73
+              ]
+            },
+            "areaMm2": 28102.740590628568,
+            "algebraicVolumeMm3": 239361.35908159104
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "sceneBounds": {
+        "min": [
+          -0.8875060081481934,
+          1.934420108795166,
+          0.568340003490448
+        ],
+        "max": [
+          0.9660959839820862,
+          2.6472997665405273,
+          1.4693100452423096
+        ]
+      },
+      "centre": [
+        0.03929498791694641,
+        2.2908599376678467,
+        1.0188250243663788
+      ],
+      "triangles": 3472
+    },
+    {
+      "fma": "FMA14547",
+      "name": "descending colon",
+      "file": "FJ2567",
+      "role": "colon",
+      "colour": "#c6a6bb",
+      "sourceTree": "partof",
+      "sourceSha256": "01227dde6807b83e2d2a4d1771765e5cb9f33d54719dbd1771b7245a5f7f7a4b",
+      "canonicalGeometrySha256": "c1595a95dc58f54c25fd150b2eb27811532a4ba3ad50ca474860aa17152ec580",
+      "aliases": [
+        {
+          "tree": "isa",
+          "fma": "FMA14547",
+          "name": "descending colon"
+        },
+        {
+          "tree": "partof",
+          "fma": "FMA14547",
+          "name": "descending colon"
+        }
+      ],
+      "topology": {
+        "sourceVertices": 3039,
+        "exactUniqueVertices": 2796,
+        "unusedUniqueVertices": 0,
+        "triangles": 5588,
+        "edges": 8382,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 5588,
+            "vertices": 2796,
+            "bounds": {
+              "min": [
+                -17.9165,
+                -141.825,
+                822.321
+              ],
+              "max": [
+                117.482,
+                -50.2812,
+                1061.31
+              ]
+            },
+            "areaMm2": 46020.21821600904,
+            "algebraicVolumeMm3": 459463.2347493797
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "sceneBounds": {
+        "min": [
+          -0.17916500568389893,
+          0.22320984303951263,
+          0.002812004182487726
+        ],
+        "max": [
+          1.174820065498352,
+          2.613100528717041,
+          0.9182499647140503
+        ]
+      },
+      "centre": [
+        0.49782752990722656,
+        1.4181551858782768,
+        0.460530984448269
+      ],
+      "triangles": 5588
+    },
+    {
+      "fma": "FMA15042",
+      "name": "taenia mesocolica",
+      "file": "FJ2569",
+      "role": "taenia",
+      "colour": "#2da19c",
+      "sourceTree": "partof",
+      "sourceSha256": "9566e92b9c5c2a265c752200709f45d3deaacf32e8a62e4c41f0f3866b569107",
+      "canonicalGeometrySha256": "06ab5cdd5e934c086dc4f0c71bd2fdc9f7205340f1a0a1de464ae832ceeaa44c",
+      "aliases": [
+        {
+          "tree": "isa",
+          "fma": "FMA15042",
+          "name": "taenia mesocolica"
+        },
+        {
+          "tree": "partof",
+          "fma": "FMA15042",
+          "name": "taenia mesocolica"
+        }
+      ],
+      "topology": {
+        "sourceVertices": 15282,
+        "exactUniqueVertices": 7016,
+        "unusedUniqueVertices": 0,
+        "triangles": 13342,
+        "edges": 20011,
+        "duplicateFaces": 161,
+        "collapsedFaces": 2,
+        "degenerateFaces": 2,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 3,
+        "nonManifoldVertices": 3,
+        "inconsistentWindingEdges": 1,
+        "eulerCharacteristic": 347,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 12828,
+            "vertices": 6380,
+            "bounds": {
+              "min": [
+                -83.8716,
+                -161.39,
+                864.082
+              ],
+              "max": [
+                85.963,
+                -63.8695,
+                1051.07
+              ]
+            },
+            "areaMm2": 10296.731207355335,
+            "algebraicVolumeMm3": 6782.476528730836
+          },
+          {
+            "firstFace": 782,
+            "triangles": 12,
+            "vertices": 8,
+            "bounds": {
+              "min": [
+                -67.3729,
+                -110.205,
+                887.467
+              ],
+              "max": [
+                -67.1847,
+                -109.885,
+                887.724
+              ]
+            },
+            "areaMm2": 0.15448991666996953,
+            "algebraicVolumeMm3": 0.0035052902500002535
+          },
+          {
+            "firstFace": 318,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -73.0351,
+                -109.597,
+                882.409
+              ],
+              "max": [
+                -73.0334,
+                -109.595,
+                882.412
+              ]
+            },
+            "areaMm2": 0.000014568162969194898,
+            "algebraicVolumeMm3": -3.7166666667199063e-9
+          },
+          {
+            "firstFace": 1575,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -71.2027,
+                -100.375,
+                908.693
+              ],
+              "max": [
+                -71.2006,
+                -100.373,
+                908.696
+              ]
+            },
+            "areaMm2": 0.000017181010989234164,
+            "algebraicVolumeMm3": 4.800000000077758e-9
+          },
+          {
+            "firstFace": 2332,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -80.8242,
+                -98.4135,
+                953.255
+              ],
+              "max": [
+                -80.8224,
+                -98.4114,
+                953.257
+              ]
+            },
+            "areaMm2": 0.000010647921805801998,
+            "algebraicVolumeMm3": 2.4049999999488536e-9
+          },
+          {
+            "firstFace": 2340,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -80.6888,
+                -98.4072,
+                954.169
+              ],
+              "max": [
+                -80.6291,
+                -98.3414,
+                954.249
+              ]
+            },
+            "areaMm2": 0.012540353368286197,
+            "algebraicVolumeMm3": 0.00010177864166667471
+          },
+          {
+            "firstFace": 3023,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -72.3009,
+                -103.394,
+                991.608
+              ],
+              "max": [
+                -72.2988,
+                -103.391,
+                991.611
+              ]
+            },
+            "areaMm2": 0.000018530555878372345,
+            "algebraicVolumeMm3": 5.550000000048948e-9
+          },
+          {
+            "firstFace": 3085,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -76.4665,
+                -98.5798,
+                994.468
+              ],
+              "max": [
+                -76.4643,
+                -98.5773,
+                994.471
+              ]
+            },
+            "areaMm2": 0.000017476894864303856,
+            "algebraicVolumeMm3": 5.148333333457718e-9
+          },
+          {
+            "firstFace": 3101,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -76.5356,
+                -98.8925,
+                995.578
+              ],
+              "max": [
+                -76.3626,
+                -98.7274,
+                995.717
+              ]
+            },
+            "areaMm2": 0.049380910695378095,
+            "algebraicVolumeMm3": 0.0006260107850002101
+          },
+          {
+            "firstFace": 3768,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -71.7722,
+                -104.5,
+                1001.3
+              ],
+              "max": [
+                -71.6101,
+                -104.33,
+                1001.48
+              ]
+            },
+            "areaMm2": 0.07014843596731263,
+            "algebraicVolumeMm3": 0.0012915846666670856
+          },
+          {
+            "firstFace": 3860,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                2.25123,
+                -80.6719,
+                869.153
+              ],
+              "max": [
+                2.25295,
+                -80.67,
+                869.156
+              ]
+            },
+            "areaMm2": 0.000012461062751384914,
+            "algebraicVolumeMm3": 3.0433333332495218e-9
+          },
+          {
+            "firstFace": 6120,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                40.0329,
+                -107.24,
+                872.455
+              ],
+              "max": [
+                40.125,
+                -107.127,
+                872.551
+              ]
+            },
+            "areaMm2": 0.026536279383621936,
+            "algebraicVolumeMm3": 0.00031045211666670355
+          },
+          {
+            "firstFace": 7294,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                46.5242,
+                -107.707,
+                875.404
+              ],
+              "max": [
+                46.5267,
+                -107.704,
+                875.407
+              ]
+            },
+            "areaMm2": 0.000018249424511979874,
+            "algebraicVolumeMm3": 5.0333333333748805e-9
+          },
+          {
+            "firstFace": 8989,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                74.6886,
+                -101.833,
+                899.517
+              ],
+              "max": [
+                74.6907,
+                -101.831,
+                899.519
+              ]
+            },
+            "areaMm2": 0.000012360675956871572,
+            "algebraicVolumeMm3": 2.9333333332597707e-9
+          },
+          {
+            "firstFace": 9705,
+            "triangles": 8,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                39.5755,
+                -147.732,
+                1035.87
+              ],
+              "max": [
+                39.5774,
+                -147.73,
+                1035.87
+              ]
+            },
+            "areaMm2": 0.000006400000000029854,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 12632,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                75.2043,
+                -97.6144,
+                1017.65
+              ],
+              "max": [
+                75.2072,
+                -97.6117,
+                1017.65
+              ]
+            },
+            "areaMm2": 0.000010440000000030918,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 12762,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                63.8708,
+                -104.747,
+                1039.38
+              ],
+              "max": [
+                64.0036,
+                -104.659,
+                1039.64
+              ]
+            },
+            "areaMm2": 0.04636847564851527,
+            "algebraicVolumeMm3": 0.0005623294999998417
+          },
+          {
+            "firstFace": 364,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                -72.5245,
+                -108.513,
+                882.761
+              ],
+              "max": [
+                -72.3986,
+                -108.328,
+                882.851
+              ]
+            },
+            "areaMm2": 0.03203976371874316,
+            "algebraicVolumeMm3": 0.0002607990833333422
+          },
+          {
+            "firstFace": 4038,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                0.556061,
+                -76.8012,
+                870.655
+              ],
+              "max": [
+                0.755905,
+                -76.5664,
+                870.765
+              ]
+            },
+            "areaMm2": 0.05136975135116644,
+            "algebraicVolumeMm3": 0.0004519262534666053
+          },
+          {
+            "firstFace": 4250,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                -0.571462,
+                -74.036,
+                871.568
+              ],
+              "max": [
+                -0.416277,
+                -73.786,
+                871.653
+              ]
+            },
+            "areaMm2": 0.045750170826815345,
+            "algebraicVolumeMm3": 0.000392830974583545
+          },
+          {
+            "firstFace": 11763,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                70.2522,
+                -100.894,
+                1006.06
+              ],
+              "max": [
+                70.4334,
+                -100.753,
+                1006.26
+              ]
+            },
+            "areaMm2": 0.07095157735363819,
+            "algebraicVolumeMm3": 0.00103984099999996
+          },
+          {
+            "firstFace": 432,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                -69.8879,
+                -115.03,
+                884.573
+              ],
+              "max": [
+                -69.7841,
+                -114.861,
+                884.721
+              ]
+            },
+            "areaMm2": 0.03904380012457268,
+            "algebraicVolumeMm3": 0.00036557413333335994
+          },
+          {
+            "firstFace": 519,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                -68.9072,
+                -113.42,
+                885.266
+              ],
+              "max": [
+                -68.8533,
+                -113.355,
+                885.365
+              ]
+            },
+            "areaMm2": 0.008813567686906745,
+            "algebraicVolumeMm3": 3.8585000001830256e-7
+          },
+          {
+            "firstFace": 774,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                -67.5412,
+                -110.883,
+                887.057
+              ],
+              "max": [
+                -67.4396,
+                -110.786,
+                887.196
+              ]
+            },
+            "areaMm2": 0.023962861362272568,
+            "algebraicVolumeMm3": 0.00016552595000001238
+          },
+          {
+            "firstFace": 869,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                -66.8849,
+                -108.707,
+                888.316
+              ],
+              "max": [
+                -66.7549,
+                -108.613,
+                888.537
+              ]
+            },
+            "areaMm2": 0.032928576103303034,
+            "algebraicVolumeMm3": 0.00022594826666676933
+          },
+          {
+            "firstFace": 3591,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                -76.4019,
+                -99.3291,
+                998.651
+              ],
+              "max": [
+                -76.2789,
+                -99.2344,
+                998.751
+              ]
+            },
+            "areaMm2": 0.01865672311390781,
+            "algebraicVolumeMm3": 0.00011292425999994241
+          },
+          {
+            "firstFace": 3742,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                3.24858,
+                -83.0367,
+                867.871
+              ],
+              "max": [
+                3.33398,
+                -82.9714,
+                868.001
+              ]
+            },
+            "areaMm2": 0.01860287426020556,
+            "algebraicVolumeMm3": 0.00011014335833332852
+          },
+          {
+            "firstFace": 3928,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                -75.7063,
+                -99.9165,
+                1003.72
+              ],
+              "max": [
+                -75.5855,
+                -99.8187,
+                1003.92
+              ]
+            },
+            "areaMm2": 0.02923584442637831,
+            "algebraicVolumeMm3": 0.00012076626666663744
+          },
+          {
+            "firstFace": 8281,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                7.37092,
+                -161.309,
+                1028.06
+              ],
+              "max": [
+                7.50885,
+                -161.145,
+                1028.2
+              ]
+            },
+            "areaMm2": 0.03709433331679942,
+            "algebraicVolumeMm3": 0.00031619980000024387
+          },
+          {
+            "firstFace": 9101,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                74.9765,
+                -99.069,
+                902.146
+              ],
+              "max": [
+                75.0816,
+                -98.9327,
+                902.263
+              ]
+            },
+            "areaMm2": 0.027223597470072518,
+            "algebraicVolumeMm3": 0.00021438603166682024
+          },
+          {
+            "firstFace": 104,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -75.9598,
+                -114.635,
+                879.94
+              ],
+              "max": [
+                -75.9492,
+                -114.626,
+                879.948
+              ]
+            },
+            "areaMm2": 0.00012552123326304565,
+            "algebraicVolumeMm3": 3.308722450212111e-24
+          },
+          {
+            "firstFace": 141,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -75.2876,
+                -113.776,
+                880.491
+              ],
+              "max": [
+                -75.2504,
+                -113.751,
+                880.534
+              ]
+            },
+            "areaMm2": 0.0014573586243617237,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 143,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -75.7262,
+                -114.286,
+                880.145
+              ],
+              "max": [
+                -75.7058,
+                -114.269,
+                880.162
+              ]
+            },
+            "areaMm2": 0.00042654730101222865,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 163,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -75.1535,
+                -113.496,
+                880.622
+              ],
+              "max": [
+                -75.0681,
+                -113.439,
+                880.669
+              ]
+            },
+            "areaMm2": 0.004463143791097067,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 181,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -74.5231,
+                -112.494,
+                881.009
+              ],
+              "max": [
+                -74.4451,
+                -112.487,
+                881.155
+              ]
+            },
+            "areaMm2": 0.0073696108533606456,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 548,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -71.4742,
+                -106.443,
+                884.13
+              ],
+              "max": [
+                -71.3982,
+                -106.368,
+                884.19
+              ]
+            },
+            "areaMm2": 0.006760539105725004,
+            "algebraicVolumeMm3": -3.3881317890172014e-21
+          },
+          {
+            "firstFace": 583,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -68.7772,
+                -113.131,
+                885.421
+              ],
+              "max": [
+                -68.716,
+                -113.081,
+                885.499
+              ]
+            },
+            "areaMm2": 0.0045427751132967546,
+            "algebraicVolumeMm3": 2.117582368135751e-22
+          },
+          {
+            "firstFace": 607,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -68.6449,
+                -112.842,
+                885.707
+              ],
+              "max": [
+                -68.5861,
+                -112.697,
+                885.793
+              ]
+            },
+            "areaMm2": 0.013028219235567342,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 704,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -68.1889,
+                -111.956,
+                886.149
+              ],
+              "max": [
+                -68.0726,
+                -111.874,
+                886.235
+              ]
+            },
+            "areaMm2": 0.006726596947199149,
+            "algebraicVolumeMm3": 3.3881317890172014e-21
+          },
+          {
+            "firstFace": 843,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -67.0355,
+                -109.047,
+                888.118
+              ],
+              "max": [
+                -66.9605,
+                -108.97,
+                888.187
+              ]
+            },
+            "areaMm2": 0.00736862768770208,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 846,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -67.3077,
+                -110.018,
+                887.405
+              ],
+              "max": [
+                -67.2495,
+                -109.952,
+                887.452
+              ]
+            },
+            "areaMm2": 0.0046531996432569575,
+            "algebraicVolumeMm3": -8.470329472543003e-22
+          },
+          {
+            "firstFace": 886,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -66.509,
+                -107.638,
+                889.357
+              ],
+              "max": [
+                -66.5083,
+                -107.625,
+                889.369
+              ]
+            },
+            "areaMm2": 0.0001521742422363229,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 1101,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -66.2318,
+                -101.039,
+                896.83
+              ],
+              "max": [
+                -66.2213,
+                -101.022,
+                896.832
+              ]
+            },
+            "areaMm2": 0.00013082897232634483,
+            "algebraicVolumeMm3": 1.4475660719677984e-24
+          },
+          {
+            "firstFace": 1107,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -66.3533,
+                -100.677,
+                897.535
+              ],
+              "max": [
+                -66.3335,
+                -100.647,
+                897.542
+              ]
+            },
+            "areaMm2": 0.0005173505001450638,
+            "algebraicVolumeMm3": 1.9852334701272664e-23
+          },
+          {
+            "firstFace": 1397,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -74.488,
+                -95.6989,
+                906.982
+              ],
+              "max": [
+                -74.4763,
+                -95.6933,
+                906.995
+              ]
+            },
+            "areaMm2": 0.00015101550417128553,
+            "algebraicVolumeMm3": 8.271806125530277e-24
+          },
+          {
+            "firstFace": 1518,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -68.9474,
+                -99.905,
+                904.682
+              ],
+              "max": [
+                -68.8648,
+                -99.8527,
+                904.821
+              ]
+            },
+            "areaMm2": 0.00858385681763267,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 1944,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -81.2427,
+                -98.4199,
+                933.722
+              ],
+              "max": [
+                -81.2369,
+                -98.415,
+                933.725
+              ]
+            },
+            "areaMm2": 0.000023727766435292997,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 2005,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -77.4886,
+                -103.35,
+                938.381
+              ],
+              "max": [
+                -77.4732,
+                -103.333,
+                938.388
+              ]
+            },
+            "areaMm2": 0.0002184675719644846,
+            "algebraicVolumeMm3": -3.308722450212111e-24
+          },
+          {
+            "firstFace": 2150,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -78.5852,
+                -104.745,
+                947.883
+              ],
+              "max": [
+                -78.4746,
+                -104.684,
+                948.01
+              ]
+            },
+            "areaMm2": 0.01051623808402574,
+            "algebraicVolumeMm3": 1.6940658945086007e-21
+          },
+          {
+            "firstFace": 2318,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -80.9783,
+                -98.6077,
+                952.445
+              ],
+              "max": [
+                -80.9735,
+                -98.6024,
+                952.448
+              ]
+            },
+            "areaMm2": 0.000028126883936688332,
+            "algebraicVolumeMm3": 2.0679515313825692e-25
+          },
+          {
+            "firstFace": 2330,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -80.9492,
+                -98.5689,
+                952.64
+              ],
+              "max": [
+                -80.9298,
+                -98.5599,
+                952.663
+              ]
+            },
+            "areaMm2": 0.0004544858123203718,
+            "algebraicVolumeMm3": -6.617444900424222e-24
+          },
+          {
+            "firstFace": 2365,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -80.6429,
+                -98.3521,
+                954.388
+              ],
+              "max": [
+                -80.6029,
+                -98.3206,
+                954.419
+              ]
+            },
+            "areaMm2": 0.0017717019166874099,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 2371,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -80.5683,
+                -98.4172,
+                954.941
+              ],
+              "max": [
+                -80.5094,
+                -98.3955,
+                955.014
+              ]
+            },
+            "areaMm2": 0.004103832935548119,
+            "algebraicVolumeMm3": -6.352747104407253e-22
+          },
+          {
+            "firstFace": 2375,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -80.5725,
+                -98.3892,
+                955.292
+              ],
+              "max": [
+                -80.545,
+                -98.3688,
+                955.313
+              ]
+            },
+            "areaMm2": 0.000676675642829588,
+            "algebraicVolumeMm3": -6.617444900424221e-23
+          },
+          {
+            "firstFace": 2376,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -80.389,
+                -98.4267,
+                955.377
+              ],
+              "max": [
+                -80.3663,
+                -98.4171,
+                955.399
+              ]
+            },
+            "areaMm2": 0.00041899454698170066,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 2383,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -80.4742,
+                -98.4314,
+                955.85
+              ],
+              "max": [
+                -80.4662,
+                -98.4255,
+                955.856
+              ]
+            },
+            "areaMm2": 0.000056556255179894636,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 2466,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -80.3489,
+                -98.5828,
+                956.915
+              ],
+              "max": [
+                -80.2755,
+                -98.5364,
+                956.957
+              ]
+            },
+            "areaMm2": 0.003349061402898988,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 2468,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -80.265,
+                -98.5065,
+                957.149
+              ],
+              "max": [
+                -80.2453,
+                -98.4974,
+                957.175
+              ]
+            },
+            "areaMm2": 0.0005257788319236773,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 2480,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -80.3381,
+                -98.6466,
+                957.839
+              ],
+              "max": [
+                -80.2306,
+                -98.5839,
+                957.973
+              ]
+            },
+            "areaMm2": 0.010461772751210904,
+            "algebraicVolumeMm3": 2.117582368135751e-21
+          },
+          {
+            "firstFace": 2522,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -76.4769,
+                -103.736,
+                959.001
+              ],
+              "max": [
+                -76.4736,
+                -103.705,
+                959.029
+              ]
+            },
+            "areaMm2": 0.0008439538198274852,
+            "algebraicVolumeMm3": 1.3234889800848443e-23
+          },
+          {
+            "firstFace": 2971,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -72.5866,
+                -103.291,
+                987.861
+              ],
+              "max": [
+                -72.5843,
+                -103.27,
+                987.885
+              ]
+            },
+            "areaMm2": 0.00048325252198019305,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 2973,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -72.4513,
+                -103.296,
+                988.62
+              ],
+              "max": [
+                -72.4503,
+                -103.289,
+                988.627
+              ]
+            },
+            "areaMm2": 0.000047521574047721326,
+            "algebraicVolumeMm3": 1.0339757656912846e-25
+          },
+          {
+            "firstFace": 2976,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -72.442,
+                -103.228,
+                989.157
+              ],
+              "max": [
+                -72.4405,
+                -103.223,
+                989.161
+              ]
+            },
+            "areaMm2": 0.000020481699147820613,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 3015,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -72.4054,
+                -103.284,
+                990.026
+              ],
+              "max": [
+                -72.3924,
+                -103.232,
+                990.067
+              ]
+            },
+            "areaMm2": 0.0020628427715195805,
+            "algebraicVolumeMm3": -6.617444900424221e-23
+          },
+          {
+            "firstFace": 3018,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -72.4141,
+                -103.25,
+                990.374
+              ],
+              "max": [
+                -72.4123,
+                -103.243,
+                990.381
+              ]
+            },
+            "areaMm2": 0.0000464246701655564,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 3021,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -72.329,
+                -103.312,
+                990.922
+              ],
+              "max": [
+                -72.3249,
+                -103.295,
+                990.936
+              ]
+            },
+            "areaMm2": 0.000222190301318605,
+            "algebraicVolumeMm3": -2.0679515313825692e-24
+          },
+          {
+            "firstFace": 3031,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -72.345,
+                -103.385,
+                991.932
+              ],
+              "max": [
+                -72.3353,
+                -103.352,
+                991.954
+              ]
+            },
+            "areaMm2": 0.0007241978251808518,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 3035,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -76.3776,
+                -98.2677,
+                991.997
+              ],
+              "max": [
+                -76.3211,
+                -98.2289,
+                992.034
+              ]
+            },
+            "areaMm2": 0.00048199789045085483,
+            "algebraicVolumeMm3": -4.9465400630671055e-22
+          },
+          {
+            "firstFace": 3072,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -72.3233,
+                -103.472,
+                992.614
+              ],
+              "max": [
+                -72.3132,
+                -103.44,
+                992.634
+              ]
+            },
+            "areaMm2": 0.0006489366147784003,
+            "algebraicVolumeMm3": -2.6469779601696886e-23
+          },
+          {
+            "firstFace": 3074,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -76.39,
+                -98.3647,
+                992.715
+              ],
+              "max": [
+                -76.3008,
+                -98.3204,
+                992.847
+              ]
+            },
+            "areaMm2": 0.005181640437399485,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 3076,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -76.4295,
+                -98.4772,
+                993.65
+              ],
+              "max": [
+                -76.4085,
+                -98.4644,
+                993.669
+              ]
+            },
+            "areaMm2": 0.00042745374907707907,
+            "algebraicVolumeMm3": 1.3234889800848443e-23
+          },
+          {
+            "firstFace": 3080,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -72.4213,
+                -103.707,
+                994.236
+              ],
+              "max": [
+                -72.414,
+                -103.664,
+                994.271
+              ]
+            },
+            "areaMm2": 0.0014608509232618568,
+            "algebraicVolumeMm3": 5.293955920339377e-23
+          },
+          {
+            "firstFace": 3082,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -76.4553,
+                -98.66,
+                994.01
+              ],
+              "max": [
+                -76.34,
+                -98.6106,
+                994.143
+              ]
+            },
+            "areaMm2": 0.012048107185153702,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 3311,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                11.9462,
+                -97.611,
+                865.451
+              ],
+              "max": [
+                11.9795,
+                -97.5935,
+                865.477
+              ]
+            },
+            "areaMm2": 0.0005923623405473858,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 3367,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -76.4964,
+                -98.7901,
+                995.959
+              ],
+              "max": [
+                -76.4858,
+                -98.7832,
+                995.968
+              ]
+            },
+            "areaMm2": 0.00010518243389471945,
+            "algebraicVolumeMm3": 8.271806125530277e-25
+          },
+          {
+            "firstFace": 3372,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -76.4777,
+                -98.9007,
+                996.64
+              ],
+              "max": [
+                -76.4496,
+                -98.8727,
+                996.659
+              ]
+            },
+            "areaMm2": 0.0007319466994942308,
+            "algebraicVolumeMm3": 1.8611563782443123e-23
+          },
+          {
+            "firstFace": 3478,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                19.2716,
+                -105.209,
+                865.866
+              ],
+              "max": [
+                19.2893,
+                -105.196,
+                865.88
+              ]
+            },
+            "areaMm2": 0.0002910879935692322,
+            "algebraicVolumeMm3": -2.150669592637872e-23
+          },
+          {
+            "firstFace": 3598,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -72.1609,
+                -104.238,
+                999.082
+              ],
+              "max": [
+                -72.1497,
+                -104.225,
+                999.102
+              ]
+            },
+            "areaMm2": 0.000251866075523905,
+            "algebraicVolumeMm3": -6.617444900424222e-24
+          },
+          {
+            "firstFace": 3603,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -72.0799,
+                -104.282,
+                999.804
+              ],
+              "max": [
+                -72.0258,
+                -104.23,
+                999.875
+              ]
+            },
+            "areaMm2": 0.0030747172504118373,
+            "algebraicVolumeMm3": -1.0587911840678754e-22
+          },
+          {
+            "firstFace": 3605,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -76.2526,
+                -99.328,
+                999.243
+              ],
+              "max": [
+                -76.228,
+                -99.3176,
+                999.264
+              ]
+            },
+            "areaMm2": 0.00047143059934603857,
+            "algebraicVolumeMm3": 2.6469779601696886e-23
+          },
+          {
+            "firstFace": 3609,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -76.2627,
+                -99.54,
+                1000.75
+              ],
+              "max": [
+                -76.2484,
+                -99.5194,
+                1000.75
+              ]
+            },
+            "areaMm2": 0.000010379999999852124,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 3707,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                3.45009,
+                -83.6375,
+                867.729
+              ],
+              "max": [
+                3.47174,
+                -83.6283,
+                867.755
+              ]
+            },
+            "areaMm2": 0.0005527053616558186,
+            "algebraicVolumeMm3": 2.6469779601696886e-23
+          },
+          {
+            "firstFace": 3762,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -71.9878,
+                -104.353,
+                1000.36
+              ],
+              "max": [
+                -71.8951,
+                -104.304,
+                1000.42
+              ]
+            },
+            "areaMm2": 0.005890209470804597,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 3777,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -76.1283,
+                -99.58,
+                1001.16
+              ],
+              "max": [
+                -76.0843,
+                -99.5587,
+                1001.21
+              ]
+            },
+            "areaMm2": 0.002198320619384569,
+            "algebraicVolumeMm3": -1.522012327097571e-22
+          },
+          {
+            "firstFace": 3780,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -76.0218,
+                -99.6119,
+                1001.71
+              ],
+              "max": [
+                -76.0139,
+                -99.6075,
+                1001.72
+              ]
+            },
+            "areaMm2": 0.00003312084539968599,
+            "algebraicVolumeMm3": -4.1359030627651384e-25
+          },
+          {
+            "firstFace": 3783,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -75.8551,
+                -99.7437,
+                1002.81
+              ],
+              "max": [
+                -75.8239,
+                -99.7279,
+                1002.84
+              ]
+            },
+            "areaMm2": 0.0009588468649392502,
+            "algebraicVolumeMm3": -7.940933880509066e-23
+          },
+          {
+            "firstFace": 3788,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                24.8752,
+                -107.824,
+                864.77
+              ],
+              "max": [
+                24.9643,
+                -107.764,
+                864.826
+              ]
+            },
+            "areaMm2": 0.0025715858570142616,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 3857,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                2.13711,
+                -80.7163,
+                868.94
+              ],
+              "max": [
+                2.22429,
+                -80.5905,
+                868.959
+              ]
+            },
+            "areaMm2": 0.0030140745436422855,
+            "algebraicVolumeMm3": 8.470329472543003e-22
+          },
+          {
+            "firstFace": 3889,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                1.55687,
+                -79.2719,
+                869.618
+              ],
+              "max": [
+                1.55938,
+                -79.271,
+                869.621
+              ]
+            },
+            "areaMm2": 0.000006193385907441622,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 3893,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                1.3166,
+                -78.6842,
+                869.952
+              ],
+              "max": [
+                1.31882,
+                -78.6698,
+                869.972
+              ]
+            },
+            "areaMm2": 0.00028673557152189024,
+            "algebraicVolumeMm3": 4.1359030627651384e-24
+          },
+          {
+            "firstFace": 3899,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                1.89013,
+                -80.0026,
+                869.277
+              ],
+              "max": [
+                1.89418,
+                -79.9895,
+                869.291
+              ]
+            },
+            "areaMm2": 0.00017013390626457423,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 3920,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -75.7681,
+                -99.806,
+                1003.36
+              ],
+              "max": [
+                -75.7321,
+                -99.7893,
+                1003.4
+              ]
+            },
+            "areaMm2": 0.0014952418165621708,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 3932,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -75.6921,
+                -99.8267,
+                1004.25
+              ],
+              "max": [
+                -75.6848,
+                -99.8229,
+                1004.26
+              ]
+            },
+            "areaMm2": 0.00007132712247102734,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 3935,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -75.641,
+                -99.9311,
+                1004.46
+              ],
+              "max": [
+                -75.5516,
+                -99.917,
+                1004.6
+              ]
+            },
+            "areaMm2": 0.00694359447459289,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 3937,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -75.5101,
+                -99.9854,
+                1005
+              ],
+              "max": [
+                -75.4616,
+                -99.953,
+                1005.03
+              ]
+            },
+            "areaMm2": 0.0021338400168693845,
+            "algebraicVolumeMm3": -4.235164736271502e-22
+          },
+          {
+            "firstFace": 3939,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -75.4882,
+                -100.127,
+                1005.33
+              ],
+              "max": [
+                -75.3879,
+                -100.068,
+                1005.39
+              ]
+            },
+            "areaMm2": 0.006802292914154876,
+            "algebraicVolumeMm3": 8.470329472543003e-22
+          },
+          {
+            "firstFace": 4023,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                0.800317,
+                -77.3234,
+                870.516
+              ],
+              "max": [
+                0.818971,
+                -77.3127,
+                870.531
+              ]
+            },
+            "areaMm2": 0.00015955745198854512,
+            "algebraicVolumeMm3": -1.3234889800848443e-23
+          },
+          {
+            "firstFace": 4025,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                0.855027,
+                -77.2029,
+                870.477
+              ],
+              "max": [
+                0.881228,
+                -77.0994,
+                870.596
+              ]
+            },
+            "areaMm2": 0.012590378825850686,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 4037,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                0.406363,
+                -76.2682,
+                870.876
+              ],
+              "max": [
+                0.43742,
+                -76.253,
+                870.91
+              ]
+            },
+            "areaMm2": 0.001070382774845877,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 4044,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                0.577406,
+                -76.526,
+                870.92
+              ],
+              "max": [
+                0.584847,
+                -76.5181,
+                870.926
+              ]
+            },
+            "areaMm2": 0.00006919860863678675,
+            "algebraicVolumeMm3": 2.7917345673664684e-24
+          },
+          {
+            "firstFace": 4066,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -75.4064,
+                -100.031,
+                1005.56
+              ],
+              "max": [
+                -75.3803,
+                -100.019,
+                1005.59
+              ]
+            },
+            "areaMm2": 0.0006918318075962017,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 4171,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                19.6298,
+                -98.9629,
+                869.858
+              ],
+              "max": [
+                19.6533,
+                -98.929,
+                869.865
+              ]
+            },
+            "areaMm2": 0.0005585166000232202,
+            "algebraicVolumeMm3": -9.926167350636332e-24
+          },
+          {
+            "firstFace": 4221,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                10.4067,
+                -86.6087,
+                870.025
+              ],
+              "max": [
+                10.5327,
+                -86.525,
+                870.097
+              ]
+            },
+            "areaMm2": 0.00957522447629521,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 4224,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                10.6176,
+                -87.0203,
+                870.019
+              ],
+              "max": [
+                10.6681,
+                -86.9788,
+                870.068
+              ]
+            },
+            "areaMm2": 0.003112754238755875,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 4261,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -0.219725,
+                -74.7939,
+                871.364
+              ],
+              "max": [
+                -0.160366,
+                -74.6374,
+                871.454
+              ]
+            },
+            "areaMm2": 0.014494268138045179,
+            "algebraicVolumeMm3": -5.929230630780102e-21
+          },
+          {
+            "firstFace": 4269,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -0.030213,
+                -75.213,
+                871.233
+              ],
+              "max": [
+                0.06569,
+                -75.09,
+                871.296
+              ]
+            },
+            "areaMm2": 0.009321502842039746,
+            "algebraicVolumeMm3": 2.541098841762901e-21
+          },
+          {
+            "firstFace": 4321,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                31.9398,
+                -110.807,
+                866.247
+              ],
+              "max": [
+                32.0124,
+                -110.761,
+                866.289
+              ]
+            },
+            "areaMm2": 0.003233827721141348,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 4323,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                32.091,
+                -110.859,
+                866.328
+              ],
+              "max": [
+                32.2367,
+                -110.77,
+                866.401
+              ]
+            },
+            "areaMm2": 0.01487107935726376,
+            "algebraicVolumeMm3": -6.776263578034403e-21
+          },
+          {
+            "firstFace": 4441,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                10.2949,
+                -86.1376,
+                870.071
+              ],
+              "max": [
+                10.4004,
+                -86.0722,
+                870.128
+              ]
+            },
+            "areaMm2": 0.008523255390147904,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 4670,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -2.5423,
+                -67.199,
+                872.038
+              ],
+              "max": [
+                -2.50512,
+                -67.1075,
+                872.076
+              ]
+            },
+            "areaMm2": 0.0037345617031325994,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 4673,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -2.43348,
+                -67.9308,
+                872.119
+              ],
+              "max": [
+                -2.43066,
+                -67.9289,
+                872.123
+              ]
+            },
+            "areaMm2": 0.00000860348324821282,
+            "algebraicVolumeMm3": 3.2311742677852644e-26
+          },
+          {
+            "firstFace": 4753,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                26.3818,
+                -103.551,
+                870.12
+              ],
+              "max": [
+                26.3916,
+                -103.545,
+                870.127
+              ]
+            },
+            "areaMm2": 0.00008278598915238377,
+            "algebraicVolumeMm3": -6.617444900424222e-24
+          },
+          {
+            "firstFace": 4766,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                8.04985,
+                -79.3939,
+                871.058
+              ],
+              "max": [
+                8.06697,
+                -79.3914,
+                871.092
+              ]
+            },
+            "areaMm2": 0.0004357863427284858,
+            "algebraicVolumeMm3": 1.4889251025954498e-23
+          },
+          {
+            "firstFace": 4826,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -1.65444,
+                -64.7363,
+                872.199
+              ],
+              "max": [
+                -1.6319,
+                -64.7169,
+                872.214
+              ]
+            },
+            "areaMm2": 0.0005137020809626871,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 4916,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -1.37497,
+                -64.5595,
+                872.212
+              ],
+              "max": [
+                -1.34723,
+                -64.5337,
+                872.23
+              ]
+            },
+            "areaMm2": 0.000764603618731108,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 4920,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -0.978395,
+                -64.2852,
+                872.311
+              ],
+              "max": [
+                -0.969449,
+                -64.2765,
+                872.315
+              ]
+            },
+            "areaMm2": 0.00006771371932371562,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 4942,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -73.3184,
+                -101.554,
+                1016.67
+              ],
+              "max": [
+                -73.21,
+                -101.492,
+                1016.75
+              ]
+            },
+            "areaMm2": 0.00910956821150426,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 5007,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -70.4677,
+                -115.168,
+                1028.6
+              ],
+              "max": [
+                -70.3529,
+                -115.093,
+                1028.68
+              ]
+            },
+            "areaMm2": 0.013216726305723842,
+            "algebraicVolumeMm3": 6.776263578034403e-21
+          },
+          {
+            "firstFace": 5012,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -70.4312,
+                -115.982,
+                1029.12
+              ],
+              "max": [
+                -70.3299,
+                -115.919,
+                1029.18
+              ]
+            },
+            "areaMm2": 0.00820433351103347,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 5106,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -0.432866,
+                -64.1065,
+                872.452
+              ],
+              "max": [
+                -0.373976,
+                -64.058,
+                872.493
+              ]
+            },
+            "areaMm2": 0.003581756625942563,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 5114,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                0.505073,
+                -64.0107,
+                872.622
+              ],
+              "max": [
+                0.517704,
+                -63.9972,
+                872.635
+              ]
+            },
+            "areaMm2": 0.0002319992294801857,
+            "algebraicVolumeMm3": 6.617444900424222e-24
+          },
+          {
+            "firstFace": 5138,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                5.64112,
+                -72.6582,
+                873.044
+              ],
+              "max": [
+                5.64605,
+                -72.6553,
+                873.048
+              ]
+            },
+            "areaMm2": 0.000018070883237964752,
+            "algebraicVolumeMm3": -2.0679515313825692e-25
+          },
+          {
+            "firstFace": 5260,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -68.7574,
+                -114.635,
+                1028.39
+              ],
+              "max": [
+                -68.7465,
+                -114.625,
+                1028.4
+              ]
+            },
+            "areaMm2": 0.00015925451327990738,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 5265,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -68.7,
+                -115.411,
+                1029.11
+              ],
+              "max": [
+                -68.6944,
+                -115.387,
+                1029.13
+              ]
+            },
+            "areaMm2": 0.0004893433252890968,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 5268,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -68.6911,
+                -116.236,
+                1029.63
+              ],
+              "max": [
+                -68.6768,
+                -116.181,
+                1029.68
+              ]
+            },
+            "areaMm2": 0.002889469690096697,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 5279,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -68.48,
+                -117.464,
+                1030.32
+              ],
+              "max": [
+                -68.4733,
+                -117.429,
+                1030.35
+              ]
+            },
+            "areaMm2": 0.0009817238104468178,
+            "algebraicVolumeMm3": -2.6469779601696886e-23
+          },
+          {
+            "firstFace": 5280,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -68.3879,
+                -117.745,
+                1030.48
+              ],
+              "max": [
+                -68.3806,
+                -117.708,
+                1030.51
+              ]
+            },
+            "areaMm2": 0.0010473547632003683,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 5484,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                3.68037,
+                -67.2451,
+                873.065
+              ],
+              "max": [
+                3.80506,
+                -67.1044,
+                873.083
+              ]
+            },
+            "areaMm2": 0.011823806408471263,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 5486,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                3.79252,
+                -67.3706,
+                873.246
+              ],
+              "max": [
+                3.79873,
+                -67.3679,
+                873.255
+              ]
+            },
+            "areaMm2": 0.000029891883329686607,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 5488,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                3.96975,
+                -68.0691,
+                873.196
+              ],
+              "max": [
+                4.1044,
+                -67.9389,
+                873.231
+              ]
+            },
+            "areaMm2": 0.01174173532332137,
+            "algebraicVolumeMm3": -2.117582368135751e-21
+          },
+          {
+            "firstFace": 5533,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -68.5998,
+                -111.055,
+                1025.82
+              ],
+              "max": [
+                -68.5766,
+                -110.969,
+                1025.88
+              ]
+            },
+            "areaMm2": 0.005218077232100274,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 5534,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -68.6534,
+                -111.267,
+                1025.91
+              ],
+              "max": [
+                -68.6488,
+                -111.263,
+                1025.92
+              ]
+            },
+            "areaMm2": 0.00005036278387861313,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 5536,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -68.6948,
+                -111.602,
+                1026.33
+              ],
+              "max": [
+                -68.5975,
+                -111.505,
+                1026.42
+              ]
+            },
+            "areaMm2": 0.004960430728275994,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 5541,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -68.7867,
+                -111.994,
+                1026.55
+              ],
+              "max": [
+                -68.7413,
+                -111.965,
+                1026.57
+              ]
+            },
+            "areaMm2": 0.0014887962385759027,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 5594,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -68.7667,
+                -114.132,
+                1028.15
+              ],
+              "max": [
+                -68.7618,
+                -114.105,
+                1028.18
+              ]
+            },
+            "areaMm2": 0.0007599346090283421,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 5598,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -68.633,
+                -114.874,
+                1028.74
+              ],
+              "max": [
+                -68.6284,
+                -114.85,
+                1028.77
+              ]
+            },
+            "areaMm2": 0.0006680091616132268,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 6033,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -68.4769,
+                -114.336,
+                1035.67
+              ],
+              "max": [
+                -68.46,
+                -114.305,
+                1035.69
+              ]
+            },
+            "areaMm2": 0.0006309051037987992,
+            "algebraicVolumeMm3": -1.9852334701272664e-23
+          },
+          {
+            "firstFace": 7302,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                46.8082,
+                -107.69,
+                875.552
+              ],
+              "max": [
+                46.8279,
+                -107.673,
+                875.567
+              ]
+            },
+            "areaMm2": 0.00043348717397384236,
+            "algebraicVolumeMm3": -3.970466940254533e-23
+          },
+          {
+            "firstFace": 7578,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -15.1194,
+                -154.403,
+                1024.13
+              ],
+              "max": [
+                -15.0829,
+                -154.387,
+                1024.2
+              ]
+            },
+            "areaMm2": 0.0005994672634925514,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 7692,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -19.0742,
+                -154.152,
+                1031.35
+              ],
+              "max": [
+                -18.9622,
+                -154.087,
+                1031.45
+              ]
+            },
+            "areaMm2": 0.009632062344075043,
+            "algebraicVolumeMm3": 1.6940658945086007e-21
+          },
+          {
+            "firstFace": 8390,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                9.17242,
+                -161.382,
+                1028.18
+              ],
+              "max": [
+                9.22401,
+                -161.331,
+                1028.2
+              ]
+            },
+            "areaMm2": 0.0015177430147748539,
+            "algebraicVolumeMm3": 2.9116757561866574e-22
+          },
+          {
+            "firstFace": 8637,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                14.4971,
+                -159.706,
+                1028.73
+              ],
+              "max": [
+                14.5752,
+                -159.656,
+                1028.78
+              ]
+            },
+            "areaMm2": 0.005786124025628686,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 8642,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                15.6211,
+                -159.718,
+                1028.76
+              ],
+              "max": [
+                15.7187,
+                -159.627,
+                1028.88
+              ]
+            },
+            "areaMm2": 0.008810317369990554,
+            "algebraicVolumeMm3": -5.082197683525802e-21
+          },
+          {
+            "firstFace": 8731,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                18.9386,
+                -155.214,
+                1024.67
+              ],
+              "max": [
+                18.9983,
+                -155.114,
+                1024.69
+              ]
+            },
+            "areaMm2": 0.006016194810674915,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 8856,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                23.581,
+                -159.338,
+                1029.08
+              ],
+              "max": [
+                23.7104,
+                -159.25,
+                1029.17
+              ]
+            },
+            "areaMm2": 0.009755723604125568,
+            "algebraicVolumeMm3": -3.3881317890172014e-21
+          },
+          {
+            "firstFace": 8955,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                76.7354,
+                -105.547,
+                897.536
+              ],
+              "max": [
+                76.8142,
+                -105.431,
+                897.547
+              ]
+            },
+            "areaMm2": 0.0041248020170703585,
+            "algebraicVolumeMm3": 3.1763735522036263e-22
+          },
+          {
+            "firstFace": 9107,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                74.9659,
+                -99.2676,
+                901.929
+              ],
+              "max": [
+                75.0179,
+                -99.1831,
+                902.002
+              ]
+            },
+            "areaMm2": 0.0052035114394152196,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 9659,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                38.6019,
+                -148.638,
+                1035.12
+              ],
+              "max": [
+                38.7064,
+                -148.559,
+                1035.23
+              ]
+            },
+            "areaMm2": 0.0069678273830757,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 9781,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                78.817,
+                -91.406,
+                922.03
+              ],
+              "max": [
+                78.8357,
+                -91.3714,
+                922.104
+              ]
+            },
+            "areaMm2": 0.0026114010893800504,
+            "algebraicVolumeMm3": -4.235164736271502e-22
+          },
+          {
+            "firstFace": 9784,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                78.8175,
+                -91.3267,
+                922.616
+              ],
+              "max": [
+                78.8235,
+                -91.3097,
+                922.636
+              ]
+            },
+            "areaMm2": 0.0003170887888273916,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 9842,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                78.7526,
+                -91.0133,
+                924.468
+              ],
+              "max": [
+                78.7726,
+                -90.9527,
+                924.575
+              ]
+            },
+            "areaMm2": 0.006553545427055047,
+            "algebraicVolumeMm3": -2.117582368135751e-22
+          },
+          {
+            "firstFace": 10092,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                42.9104,
+                -144.098,
+                1038.23
+              ],
+              "max": [
+                43.0913,
+                -143.957,
+                1038.34
+              ]
+            },
+            "areaMm2": 0.0307034718214312,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 10154,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                43.6092,
+                -143.208,
+                1038.77
+              ],
+              "max": [
+                43.7091,
+                -143.121,
+                1038.88
+              ]
+            },
+            "areaMm2": 0.006377237336025069,
+            "algebraicVolumeMm3": -5.929230630780102e-21
+          },
+          {
+            "firstFace": 10157,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                43.9354,
+                -142.747,
+                1039.08
+              ],
+              "max": [
+                44.0665,
+                -142.642,
+                1039.15
+              ]
+            },
+            "areaMm2": 0.009767583109981843,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 10197,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                44.268,
+                -142.303,
+                1039.27
+              ],
+              "max": [
+                44.3307,
+                -142.295,
+                1039.37
+              ]
+            },
+            "areaMm2": 0.004612200017341284,
+            "algebraicVolumeMm3": -1.0587911840678754e-22
+          },
+          {
+            "firstFace": 10266,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                45.1538,
+                -141.155,
+                1039.94
+              ],
+              "max": [
+                45.273,
+                -141.072,
+                1040.11
+              ]
+            },
+            "areaMm2": 0.02071673786674068,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 11251,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                81.8868,
+                -89.8585,
+                963.358
+              ],
+              "max": [
+                81.8963,
+                -89.851,
+                963.364
+              ]
+            },
+            "areaMm2": 0.0000890863536131764,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 11440,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                53.8084,
+                -122.448,
+                1043.39
+              ],
+              "max": [
+                53.8099,
+                -122.443,
+                1043.39
+              ]
+            },
+            "areaMm2": 0.000007499999999993464,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 11543,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                54.3842,
+                -120.927,
+                1044.03
+              ],
+              "max": [
+                54.3935,
+                -120.917,
+                1044.03
+              ]
+            },
+            "areaMm2": 0.00006300000000006305,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 11554,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                56.2821,
+                -126.765,
+                1048.03
+              ],
+              "max": [
+                56.2991,
+                -126.743,
+                1048.04
+              ]
+            },
+            "areaMm2": 0.00033190534795321823,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 11690,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                70.6356,
+                -101.013,
+                1004.66
+              ],
+              "max": [
+                70.6557,
+                -100.959,
+                1004.7
+              ]
+            },
+            "areaMm2": 0.0020582328439732837,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 11692,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                70.6102,
+                -101.033,
+                1004.99
+              ],
+              "max": [
+                70.6686,
+                -100.909,
+                1005.06
+              ]
+            },
+            "areaMm2": 0.00916409964153038,
+            "algebraicVolumeMm3": -2.117582368135751e-21
+          },
+          {
+            "firstFace": 11699,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                70.4668,
+                -100.838,
+                1005.64
+              ],
+              "max": [
+                70.4826,
+                -100.778,
+                1005.68
+              ]
+            },
+            "areaMm2": 0.002444178440701021,
+            "algebraicVolumeMm3": -3.1763735522036263e-22
+          },
+          {
+            "firstFace": 11771,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                70.22,
+                -100.651,
+                1006.78
+              ],
+              "max": [
+                70.2223,
+                -100.64,
+                1006.79
+              ]
+            },
+            "areaMm2": 0.00008509553454783666,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 11774,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                70.1242,
+                -100.669,
+                1007.24
+              ],
+              "max": [
+                70.1348,
+                -100.643,
+                1007.26
+              ]
+            },
+            "areaMm2": 0.00048543901779681215,
+            "algebraicVolumeMm3": -6.617444900424222e-24
+          },
+          {
+            "firstFace": 11784,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                56.3487,
+                -117.462,
+                1044.48
+              ],
+              "max": [
+                56.534,
+                -117.373,
+                1044.61
+              ]
+            },
+            "areaMm2": 0.023055898196318814,
+            "algebraicVolumeMm3": 2.117582368135751e-22
+          },
+          {
+            "firstFace": 11787,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                56.5549,
+                -117.163,
+                1044.48
+              ],
+              "max": [
+                56.7393,
+                -117.073,
+                1044.62
+              ]
+            },
+            "areaMm2": 0.02456584589707651,
+            "algebraicVolumeMm3": -6.776263578034403e-21
+          },
+          {
+            "firstFace": 11900,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                69.7595,
+                -100.324,
+                1009.53
+              ],
+              "max": [
+                69.8499,
+                -100.196,
+                1009.62
+              ]
+            },
+            "areaMm2": 0.010192366314550871,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 11931,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                57.4365,
+                -115.602,
+                1044.36
+              ],
+              "max": [
+                57.4726,
+                -115.501,
+                1044.41
+              ]
+            },
+            "areaMm2": 0.005342956774128258,
+            "algebraicVolumeMm3": -2.117582368135751e-22
+          },
+          {
+            "firstFace": 11989,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                76.5504,
+                -96.5237,
+                997.592
+              ],
+              "max": [
+                76.6579,
+                -96.4965,
+                997.724
+              ]
+            },
+            "areaMm2": 0.007069835098956796,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 12309,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                70.218,
+                -101.776,
+                1023.75
+              ],
+              "max": [
+                70.231,
+                -101.729,
+                1023.79
+              ]
+            },
+            "areaMm2": 0.0018203085892215653,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 12349,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                61.0648,
+                -107.983,
+                1042.81
+              ],
+              "max": [
+                61.0938,
+                -107.948,
+                1042.83
+              ]
+            },
+            "areaMm2": 0.0011201692907771774,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 12418,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                70.0711,
+                -101.604,
+                1024.42
+              ],
+              "max": [
+                70.0827,
+                -101.571,
+                1024.44
+              ]
+            },
+            "areaMm2": 0.0006404754796239295,
+            "algebraicVolumeMm3": -9.926167350636332e-24
+          },
+          {
+            "firstFace": 12430,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                69.6969,
+                -101.365,
+                1025.53
+              ],
+              "max": [
+                69.75,
+                -101.312,
+                1025.68
+              ]
+            },
+            "areaMm2": 0.00801141707128409,
+            "algebraicVolumeMm3": -1.6940658945086007e-21
+          },
+          {
+            "firstFace": 12520,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                62.4661,
+                -106.329,
+                1041.49
+              ],
+              "max": [
+                62.4883,
+                -106.303,
+                1041.51
+              ]
+            },
+            "areaMm2": 0.0007079772312720248,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 12526,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                62.3279,
+                -106.396,
+                1041.75
+              ],
+              "max": [
+                62.3582,
+                -106.357,
+                1041.77
+              ]
+            },
+            "areaMm2": 0.0013137045367962194,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 12766,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                64.1777,
+                -104.435,
+                1039.04
+              ],
+              "max": [
+                64.2415,
+                -104.4,
+                1039.19
+              ]
+            },
+            "areaMm2": 0.005795524825244566,
+            "algebraicVolumeMm3": 2.541098841762901e-21
+          },
+          {
+            "firstFace": 12768,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                64.4742,
+                -104.087,
+                1038.58
+              ],
+              "max": [
+                64.5493,
+                -104.053,
+                1038.72
+              ]
+            },
+            "areaMm2": 0.0055289803544636695,
+            "algebraicVolumeMm3": 2.117582368135751e-21
+          },
+          {
+            "firstFace": 12837,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                75.2548,
+                -98.1636,
+                1019.11
+              ],
+              "max": [
+                75.4042,
+                -98.0733,
+                1019.2
+              ]
+            },
+            "areaMm2": 0.015440966466854127,
+            "algebraicVolumeMm3": -1.0164395367051604e-20
+          },
+          {
+            "firstFace": 12850,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                75.479,
+                -98.2379,
+                1020.07
+              ],
+              "max": [
+                75.4862,
+                -98.2315,
+                1020.07
+              ]
+            },
+            "areaMm2": 0.00003935999999999844,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 12930,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                63.2937,
+                -106.08,
+                1048.28
+              ],
+              "max": [
+                63.3546,
+                -106.042,
+                1048.37
+              ]
+            },
+            "areaMm2": 0.0036480423805074326,
+            "algebraicVolumeMm3": 2.6469779601696886e-22
+          },
+          {
+            "firstFace": 12952,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                63.0276,
+                -106.429,
+                1048.46
+              ],
+              "max": [
+                63.0637,
+                -106.39,
+                1048.5
+              ]
+            },
+            "areaMm2": 0.001923533106030839,
+            "algebraicVolumeMm3": 7.940933880509066e-23
+          },
+          {
+            "firstFace": 13053,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                64.2155,
+                -104.354,
+                1047.31
+              ],
+              "max": [
+                64.2578,
+                -104.319,
+                1047.34
+              ]
+            },
+            "areaMm2": 0.0018326568036584304,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 13057,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                64.3994,
+                -104.067,
+                1047.13
+              ],
+              "max": [
+                64.4018,
+                -104.064,
+                1047.13
+              ]
+            },
+            "areaMm2": 0.000006599999999993395,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 13120,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                66.1815,
+                -101.917,
+                1044.91
+              ],
+              "max": [
+                66.2416,
+                -101.878,
+                1044.95
+              ]
+            },
+            "areaMm2": 0.0034738874031826185,
+            "algebraicVolumeMm3": -8.470329472543003e-22
+          },
+          {
+            "firstFace": 13158,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                65.0426,
+                -103.037,
+                1046.31
+              ],
+              "max": [
+                65.0561,
+                -103.021,
+                1046.33
+              ]
+            },
+            "areaMm2": 0.0002948297983583489,
+            "algebraicVolumeMm3": -1.3234889800848443e-23
+          },
+          {
+            "firstFace": 13164,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                65.2131,
+                -102.927,
+                1046.26
+              ],
+              "max": [
+                65.2275,
+                -102.915,
+                1046.27
+              ]
+            },
+            "areaMm2": 0.00022379678281872622,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 13262,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                69.4665,
+                -99.3335,
+                1039.5
+              ],
+              "max": [
+                69.5527,
+                -99.303,
+                1039.63
+              ]
+            },
+            "areaMm2": 0.003302961822759671,
+            "algebraicVolumeMm3": -1.376428539288238e-21
+          },
+          {
+            "firstFace": 13264,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                69.2371,
+                -99.6228,
+                1040.04
+              ],
+              "max": [
+                69.3987,
+                -99.5972,
+                1040.17
+              ]
+            },
+            "areaMm2": 0.015059616335944387,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 13277,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                67.3498,
+                -100.974,
+                1043.38
+              ],
+              "max": [
+                67.4506,
+                -100.94,
+                1043.52
+              ]
+            },
+            "areaMm2": 0.006561463848861826,
+            "algebraicVolumeMm3": -1.2705494208814505e-21
+          },
+          {
+            "firstFace": 13279,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                66.7389,
+                -101.458,
+                1044.28
+              ],
+              "max": [
+                66.7779,
+                -101.437,
+                1044.32
+              ]
+            },
+            "areaMm2": 0.0015574687284169541,
+            "algebraicVolumeMm3": 5.293955920339377e-23
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "sceneBounds": {
+        "min": [
+          -0.8387159705162048,
+          0.6408197283744812,
+          0.13869498670101166
+        ],
+        "max": [
+          0.8596299886703491,
+          2.510699510574341,
+          1.1138999462127686
+        ]
+      },
+      "centre": [
+        0.010457009077072144,
+        1.575759619474411,
+        0.6262974664568901
+      ],
+      "triangles": 13342
+    },
+    {
+      "fma": "FMA15043",
+      "name": "taenia omentalis",
+      "file": "FJ2570",
+      "role": "taenia",
+      "colour": "#5676a4",
+      "sourceTree": "partof",
+      "sourceSha256": "9574b2cbadd22a230c1450101f27ba566d11e2f8c0c3c63329a082b39d89a807",
+      "canonicalGeometrySha256": "2aab69c1a1385a9198d88318881a380014e204376b259cd692fc6b93fdbef491",
+      "aliases": [
+        {
+          "tree": "isa",
+          "fma": "FMA15043",
+          "name": "taenia omentalis"
+        },
+        {
+          "tree": "partof",
+          "fma": "FMA15043",
+          "name": "taenia omentalis"
+        }
+      ],
+      "topology": {
+        "sourceVertices": 12767,
+        "exactUniqueVertices": 8027,
+        "unusedUniqueVertices": 0,
+        "triangles": 15922,
+        "edges": 23883,
+        "duplicateFaces": 16,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 66,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 15714,
+            "vertices": 7851,
+            "bounds": {
+              "min": [
+                -124.642,
+                -195.539,
+                833.384
+              ],
+              "max": [
+                116.72,
+                -50.9893,
+                1055.87
+              ]
+            },
+            "areaMm2": 11698.224941118378,
+            "algebraicVolumeMm3": 6945.863262559366
+          },
+          {
+            "firstFace": 10193,
+            "triangles": 18,
+            "vertices": 11,
+            "bounds": {
+              "min": [
+                53.1006,
+                -178.904,
+                1027.94
+              ],
+              "max": [
+                53.4434,
+                -178.647,
+                1028.16
+              ]
+            },
+            "areaMm2": 0.21330740520202715,
+            "algebraicVolumeMm3": 0.007095857666664825
+          },
+          {
+            "firstFace": 15811,
+            "triangles": 18,
+            "vertices": 11,
+            "bounds": {
+              "min": [
+                101.457,
+                -110.044,
+                1040.42
+              ],
+              "max": [
+                101.827,
+                -109.762,
+                1040.86
+              ]
+            },
+            "areaMm2": 0.34827687413690445,
+            "algebraicVolumeMm3": 0.015723198333327172
+          },
+          {
+            "firstFace": 10093,
+            "triangles": 14,
+            "vertices": 9,
+            "bounds": {
+              "min": [
+                51.0378,
+                -180.433,
+                1027.02
+              ],
+              "max": [
+                51.3684,
+                -180.164,
+                1027.24
+              ]
+            },
+            "areaMm2": 0.06642341916896834,
+            "algebraicVolumeMm3": 0.0005447438333329452
+          },
+          {
+            "firstFace": 9026,
+            "triangles": 10,
+            "vertices": 7,
+            "bounds": {
+              "min": [
+                34.5429,
+                -189.65,
+                1022.06
+              ],
+              "max": [
+                34.6665,
+                -189.546,
+                1022.24
+              ]
+            },
+            "areaMm2": 0.03946391638752561,
+            "algebraicVolumeMm3": 0.00040743500000000005
+          },
+          {
+            "firstFace": 9999,
+            "triangles": 10,
+            "vertices": 7,
+            "bounds": {
+              "min": [
+                49.5126,
+                -181.667,
+                1026.48
+              ],
+              "max": [
+                49.7943,
+                -181.264,
+                1026.65
+              ]
+            },
+            "areaMm2": 0.166177242642524,
+            "algebraicVolumeMm3": 0.003343334000001135
+          },
+          {
+            "firstFace": 6032,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -6.17528,
+                -192.497,
+                1021.71
+              ],
+              "max": [
+                -6.17324,
+                -192.494,
+                1021.71
+              ]
+            },
+            "areaMm2": 0.000007720000000037699,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 6257,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -6.00633,
+                -192.538,
+                1021.67
+              ],
+              "max": [
+                -5.75775,
+                -192.336,
+                1021.79
+              ]
+            },
+            "areaMm2": 0.07088462096493912,
+            "algebraicVolumeMm3": 0.0009170026333329769
+          },
+          {
+            "firstFace": 9112,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                36.3439,
+                -190.015,
+                1023.09
+              ],
+              "max": [
+                36.5117,
+                -189.826,
+                1023.23
+              ]
+            },
+            "areaMm2": 0.06356497603080423,
+            "algebraicVolumeMm3": 0.0010889013333333524
+          },
+          {
+            "firstFace": 10308,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                53.6189,
+                -178.495,
+                1028.23
+              ],
+              "max": [
+                53.8802,
+                -178.279,
+                1028.43
+              ]
+            },
+            "areaMm2": 0.1171264493455865,
+            "algebraicVolumeMm3": 0.002711266000001174
+          },
+          {
+            "firstFace": 10644,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                58.8141,
+                -173.006,
+                1030.83
+              ],
+              "max": [
+                58.9509,
+                -172.878,
+                1031
+              ]
+            },
+            "areaMm2": 0.04378886790547276,
+            "algebraicVolumeMm3": 0.0005944085000008716
+          },
+          {
+            "firstFace": 10857,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                111.273,
+                -103.364,
+                896.203
+              ],
+              "max": [
+                111.274,
+                -103.362,
+                896.205
+              ]
+            },
+            "areaMm2": 0.000007656854249665987,
+            "algebraicVolumeMm3": 1.3333333333713805e-9
+          },
+          {
+            "firstFace": 10924,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                111.852,
+                -103.193,
+                897.743
+              ],
+              "max": [
+                111.966,
+                -103.064,
+                897.866
+              ]
+            },
+            "areaMm2": 0.04016659927459396,
+            "algebraicVolumeMm3": 0.0005834719999996664
+          },
+          {
+            "firstFace": 11497,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                68.8651,
+                -163.936,
+                1036.71
+              ],
+              "max": [
+                68.9925,
+                -163.761,
+                1036.97
+              ]
+            },
+            "areaMm2": 0.0927282528623744,
+            "algebraicVolumeMm3": 0.0017543580000004106
+          },
+          {
+            "firstFace": 11623,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                114.39,
+                -102.099,
+                909.201
+              ],
+              "max": [
+                114.575,
+                -101.945,
+                909.355
+              ]
+            },
+            "areaMm2": 0.0479299720318368,
+            "algebraicVolumeMm3": 0.00045943366666694797
+          },
+          {
+            "firstFace": 11647,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                114.429,
+                -102.154,
+                909.443
+              ],
+              "max": [
+                114.625,
+                -101.947,
+                909.668
+              ]
+            },
+            "areaMm2": 0.11474555902354504,
+            "algebraicVolumeMm3": 0.0027971243333335494
+          },
+          {
+            "firstFace": 11988,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                115.84,
+                -102.28,
+                919.156
+              ],
+              "max": [
+                115.944,
+                -102.157,
+                919.323
+              ]
+            },
+            "areaMm2": 0.04571170423362318,
+            "algebraicVolumeMm3": 0.0006923418333334401
+          },
+          {
+            "firstFace": 11617,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                114.425,
+                -102.025,
+                908.882
+              ],
+              "max": [
+                114.523,
+                -101.974,
+                909.04
+              ]
+            },
+            "areaMm2": 0.01775464085179975,
+            "algebraicVolumeMm3": 0.00008707833333333405
+          },
+          {
+            "firstFace": 6133,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                32.0598,
+                -69.6718,
+                836.197
+              ],
+              "max": [
+                32.2036,
+                -69.5209,
+                836.362
+              ]
+            },
+            "areaMm2": 0.03875639616533843,
+            "algebraicVolumeMm3": 0.0003193066733332583
+          },
+          {
+            "firstFace": 8279,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                20.5967,
+                -193.552,
+                1021.34
+              ],
+              "max": [
+                20.7658,
+                -193.353,
+                1021.42
+              ]
+            },
+            "areaMm2": 0.038447379957574954,
+            "algebraicVolumeMm3": 0.00030985933333303744
+          },
+          {
+            "firstFace": 11588,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                69.3948,
+                -163.504,
+                1037.06
+              ],
+              "max": [
+                69.5135,
+                -163.42,
+                1037.15
+              ]
+            },
+            "areaMm2": 0.009064742574827991,
+            "algebraicVolumeMm3": 0.000027694333333315603
+          },
+          {
+            "firstFace": 5890,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -11.3417,
+                -191.79,
+                1022.27
+              ],
+              "max": [
+                -11.293,
+                -191.743,
+                1022.3
+              ]
+            },
+            "areaMm2": 0.0019826698565300824,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 6029,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -6.71021,
+                -192.449,
+                1021.76
+              ],
+              "max": [
+                -6.65312,
+                -192.418,
+                1021.82
+              ]
+            },
+            "areaMm2": 0.003476178688462392,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 8190,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                19.4553,
+                -193.935,
+                1021.31
+              ],
+              "max": [
+                19.4728,
+                -193.927,
+                1021.33
+              ]
+            },
+            "areaMm2": 0.0003299387215848733,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 9559,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                41.8873,
+                -186.965,
+                1024.75
+              ],
+              "max": [
+                41.9122,
+                -186.938,
+                1024.78
+              ]
+            },
+            "areaMm2": 0.0009945149571521275,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 9735,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                45.3487,
+                -183.749,
+                1025.54
+              ],
+              "max": [
+                45.3612,
+                -183.711,
+                1025.57
+              ]
+            },
+            "areaMm2": 0.000999387832624183,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 10104,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                50.8867,
+                -180.53,
+                1027.07
+              ],
+              "max": [
+                50.9072,
+                -180.519,
+                1027.09
+              ]
+            },
+            "areaMm2": 0.00040928260407667184,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 10431,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                56.1035,
+                -176.191,
+                1029.39
+              ],
+              "max": [
+                56.1133,
+                -176.173,
+                1029.4
+              ]
+            },
+            "areaMm2": 0.0002313113918507946,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 10856,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                111.226,
+                -103.414,
+                895.999
+              ],
+              "max": [
+                111.248,
+                -103.396,
+                896.017
+              ]
+            },
+            "areaMm2": 0.0005592584375764846,
+            "algebraicVolumeMm3": 2.6469779601696886e-23
+          },
+          {
+            "firstFace": 10923,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                111.794,
+                -103.178,
+                897.587
+              ],
+              "max": [
+                111.889,
+                -103.048,
+                897.622
+              ]
+            },
+            "areaMm2": 0.005132489649275763,
+            "algebraicVolumeMm3": 1.6940658945086007e-21
+          },
+          {
+            "firstFace": 10987,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                111.92,
+                -103.211,
+                897.964
+              ],
+              "max": [
+                112.022,
+                -103.068,
+                898.008
+              ]
+            },
+            "areaMm2": 0.009831942890395432,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 11093,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                112.67,
+                -102.89,
+                900.123
+              ],
+              "max": [
+                112.707,
+                -102.871,
+                900.164
+              ]
+            },
+            "areaMm2": 0.0015433385889015018,
+            "algebraicVolumeMm3": -5.293955920339377e-23
+          },
+          {
+            "firstFace": 11934,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                71.8079,
+                -159.267,
+                1038.58
+              ],
+              "max": [
+                71.8538,
+                -159.203,
+                1038.6
+              ]
+            },
+            "areaMm2": 0.002698596998441627,
+            "algebraicVolumeMm3": 5.293955920339377e-23
+          },
+          {
+            "firstFace": 12525,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                115.647,
+                -101.55,
+                930.664
+              ],
+              "max": [
+                115.778,
+                -101.422,
+                930.822
+              ]
+            },
+            "areaMm2": 0.016113118878728985,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 12527,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                115.52,
+                -101.559,
+                931.761
+              ],
+              "max": [
+                115.524,
+                -101.548,
+                931.765
+              ]
+            },
+            "areaMm2": 0.00005039841267359957,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 15513,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                96.1204,
+                -117.546,
+                1051.39
+              ],
+              "max": [
+                96.1799,
+                -117.45,
+                1051.42
+              ]
+            },
+            "areaMm2": 0.00576308788411179,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 15518,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                96.3175,
+                -117.424,
+                1051.34
+              ],
+              "max": [
+                96.352,
+                -117.392,
+                1051.36
+              ]
+            },
+            "areaMm2": 0.0010772376710828195,
+            "algebraicVolumeMm3": 0
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "sceneBounds": {
+        "min": [
+          -1.2464200258255005,
+          0.3338397145271301,
+          0.009892997331917286
+        ],
+        "max": [
+          1.167199969291687,
+          2.5586998462677,
+          1.4553899765014648
+        ]
+      },
+      "centre": [
+        -0.03961002826690674,
+        1.4462697803974152,
+        0.7326414869166911
+      ],
+      "triangles": 15922
+    },
+    {
+      "fma": "FMA15044",
+      "name": "taenia libera",
+      "file": "FJ2568",
+      "role": "taenia",
+      "colour": "#a86764",
+      "sourceTree": "partof",
+      "sourceSha256": "0cb3bccddc08f3121e0e25355c88f68f484ea07d5d8815733b7b49eefd9dbcda",
+      "canonicalGeometrySha256": "a0c52d6ec53dce73a1f02b75b8f6727b32cb5904f4df8da32366b49ed4edf8f7",
+      "aliases": [
+        {
+          "tree": "isa",
+          "fma": "FMA15044",
+          "name": "taenia libera"
+        },
+        {
+          "tree": "partof",
+          "fma": "FMA15044",
+          "name": "taenia libera"
+        }
+      ],
+      "topology": {
+        "sourceVertices": 15598,
+        "exactUniqueVertices": 7846,
+        "unusedUniqueVertices": 0,
+        "triangles": 15244,
+        "edges": 22866,
+        "duplicateFaces": 109,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 224,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 14950,
+            "vertices": 7457,
+            "bounds": {
+              "min": [
+                -102.497,
+                -176.023,
+                826.6
+              ],
+              "max": [
+                98.6019,
+                -60.747,
+                1029.1
+              ]
+            },
+            "areaMm2": 11032.444742801976,
+            "algebraicVolumeMm3": 7280.187870997413
+          },
+          {
+            "firstFace": 14459,
+            "triangles": 12,
+            "vertices": 8,
+            "bounds": {
+              "min": [
+                73.5848,
+                -132.329,
+                1025.83
+              ],
+              "max": [
+                73.8263,
+                -132.154,
+                1026.02
+              ]
+            },
+            "areaMm2": 0.10462599693416776,
+            "algebraicVolumeMm3": 0.002101470333333915
+          },
+          {
+            "firstFace": 2018,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -101.877,
+                -132.217,
+                934.928
+              ],
+              "max": [
+                -101.838,
+                -132.17,
+                934.976
+              ]
+            },
+            "areaMm2": 0.005363774334615911,
+            "algebraicVolumeMm3": 0.00002870100000002002
+          },
+          {
+            "firstFace": 12698,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                97.0296,
+                -126.366,
+                947.645
+              ],
+              "max": [
+                97.0331,
+                -126.361,
+                947.647
+              ]
+            },
+            "areaMm2": 0.0000234449100767957,
+            "algebraicVolumeMm3": 6.31666666678344e-9
+          },
+          {
+            "firstFace": 14476,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                73.9044,
+                -131.919,
+                1026.08
+              ],
+              "max": [
+                74.0376,
+                -131.826,
+                1026.17
+              ]
+            },
+            "areaMm2": 0.012302769621474113,
+            "algebraicVolumeMm3": 0.00006631333333334809
+          },
+          {
+            "firstFace": 4253,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                -13.5726,
+                -71.0817,
+                837.144
+              ],
+              "max": [
+                -13.4815,
+                -70.9961,
+                837.219
+              ]
+            },
+            "areaMm2": 0.01126951688549194,
+            "algebraicVolumeMm3": 0.0000542543416666211
+          },
+          {
+            "firstFace": 4257,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                -13.561,
+                -70.9367,
+                837.183
+              ],
+              "max": [
+                -13.4694,
+                -70.7952,
+                837.291
+              ]
+            },
+            "areaMm2": 0.02372897100383781,
+            "algebraicVolumeMm3": 0.0001312926550000227
+          },
+          {
+            "firstFace": 5247,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                -87.5339,
+                -132.8,
+                1016.44
+              ],
+              "max": [
+                -87.4267,
+                -132.703,
+                1016.53
+              ]
+            },
+            "areaMm2": 0.020391857079280463,
+            "algebraicVolumeMm3": 0.00013814266666658563
+          },
+          {
+            "firstFace": 12277,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                62.625,
+                -147.239,
+                1012.84
+              ],
+              "max": [
+                62.7347,
+                -147.1,
+                1012.93
+              ]
+            },
+            "areaMm2": 0.02319597368022044,
+            "algebraicVolumeMm3": 0.000165222166666507
+          },
+          {
+            "firstFace": 3079,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                -97.1805,
+                -128.906,
+                978.564
+              ],
+              "max": [
+                -97.0764,
+                -128.743,
+                978.741
+              ]
+            },
+            "areaMm2": 0.045004112556857184,
+            "algebraicVolumeMm3": 0.00047239465000003953
+          },
+          {
+            "firstFace": 4832,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                -88.1103,
+                -131.834,
+                1015.3
+              ],
+              "max": [
+                -87.952,
+                -131.724,
+                1015.43
+              ]
+            },
+            "areaMm2": 0.031343281393662985,
+            "algebraicVolumeMm3": 0.00023886433333346078
+          },
+          {
+            "firstFace": 6362,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                -81.3827,
+                -132.346,
+                1013.73
+              ],
+              "max": [
+                -81.3057,
+                -132.248,
+                1013.89
+              ]
+            },
+            "areaMm2": 0.023012920403560615,
+            "algebraicVolumeMm3": 0.00015133516666666186
+          },
+          {
+            "firstFace": 11143,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                91.2105,
+                -128.793,
+                916.045
+              ],
+              "max": [
+                91.2985,
+                -128.654,
+                916.207
+              ]
+            },
+            "areaMm2": 0.0333491420657889,
+            "algebraicVolumeMm3": 0.0002959118000001415
+          },
+          {
+            "firstFace": 227,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -93.4134,
+                -137.117,
+                889.981
+              ],
+              "max": [
+                -93.4082,
+                -137.11,
+                889.986
+              ]
+            },
+            "areaMm2": 0.00002675593392108589,
+            "algebraicVolumeMm3": -8.271806125530277e-25
+          },
+          {
+            "firstFace": 732,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -83.4232,
+                -128.435,
+                879.724
+              ],
+              "max": [
+                -83.3558,
+                -128.395,
+                879.783
+              ]
+            },
+            "areaMm2": 0.003589577674319838,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 783,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -84.2058,
+                -135.64,
+                888.561
+              ],
+              "max": [
+                -84.2014,
+                -135.637,
+                888.566
+              ]
+            },
+            "areaMm2": 0.000024299794237719293,
+            "algebraicVolumeMm3": 5.428372769879244e-25
+          },
+          {
+            "firstFace": 925,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -91.6392,
+                -135.362,
+                899.608
+              ],
+              "max": [
+                -91.5731,
+                -135.303,
+                899.753
+              ]
+            },
+            "areaMm2": 0.009104421920147768,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 951,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -82.1657,
+                -126.245,
+                879.307
+              ],
+              "max": [
+                -82.0776,
+                -126.181,
+                879.356
+              ]
+            },
+            "areaMm2": 0.0037407834326531756,
+            "algebraicVolumeMm3": 4.235164736271502e-22
+          },
+          {
+            "firstFace": 1080,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -81.5862,
+                -125.172,
+                879.164
+              ],
+              "max": [
+                -81.4886,
+                -125.1,
+                879.214
+              ]
+            },
+            "areaMm2": 0.005791259569391347,
+            "algebraicVolumeMm3": -2.541098841762901e-21
+          },
+          {
+            "firstFace": 1250,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -81.2818,
+                -124.62,
+                879.09
+              ],
+              "max": [
+                -81.2664,
+                -124.612,
+                879.112
+              ]
+            },
+            "areaMm2": 0.00015316657598731152,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 1326,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -80.3905,
+                -122.65,
+                878.789
+              ],
+              "max": [
+                -80.3604,
+                -122.627,
+                878.812
+              ]
+            },
+            "areaMm2": 0.0008227603174686848,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 1345,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -79.515,
+                -130.009,
+                884.681
+              ],
+              "max": [
+                -79.4908,
+                -129.977,
+                884.713
+              ]
+            },
+            "areaMm2": 0.001136333824190105,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 1388,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -79.5252,
+                -120.303,
+                878.734
+              ],
+              "max": [
+                -79.4798,
+                -120.272,
+                878.776
+              ]
+            },
+            "areaMm2": 0.0018998410591378955,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 1393,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -79.9669,
+                -121.667,
+                878.702
+              ],
+              "max": [
+                -79.9637,
+                -121.665,
+                878.705
+              ]
+            },
+            "areaMm2": 0.000009059801322342525,
+            "algebraicVolumeMm3": -5.169878828456423e-26
+          },
+          {
+            "firstFace": 1479,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -78.5146,
+                -128.145,
+                884.235
+              ],
+              "max": [
+                -78.4408,
+                -128.033,
+                884.255
+              ]
+            },
+            "areaMm2": 0.00609660068234931,
+            "algebraicVolumeMm3": -1.164670302474663e-21
+          },
+          {
+            "firstFace": 1608,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -77.8541,
+                -127.028,
+                883.981
+              ],
+              "max": [
+                -77.7151,
+                -126.934,
+                884.049
+              ]
+            },
+            "areaMm2": 0.01570556771339422,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 1610,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -77.6775,
+                -126.717,
+                883.959
+              ],
+              "max": [
+                -77.5851,
+                -126.589,
+                883.981
+              ]
+            },
+            "areaMm2": 0.005876049547956137,
+            "algebraicVolumeMm3": -1.164670302474663e-21
+          },
+          {
+            "firstFace": 1755,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -102.444,
+                -131.096,
+                928.345
+              ],
+              "max": [
+                -102.388,
+                -130.997,
+                928.366
+              ]
+            },
+            "areaMm2": 0.0017393714381906996,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 1757,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -102.465,
+                -131.023,
+                928.661
+              ],
+              "max": [
+                -102.453,
+                -130.97,
+                928.701
+              ]
+            },
+            "areaMm2": 0.00211212973086782,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 1836,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -102.065,
+                -132.434,
+                931.069
+              ],
+              "max": [
+                -102.009,
+                -132.362,
+                931.215
+              ]
+            },
+            "areaMm2": 0.01176164835387111,
+            "algebraicVolumeMm3": -1.2705494208814505e-21
+          },
+          {
+            "firstFace": 1853,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -101.963,
+                -132.419,
+                931.903
+              ],
+              "max": [
+                -101.919,
+                -132.4,
+                931.943
+              ]
+            },
+            "areaMm2": 0.0014299094376906227,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 1899,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -102.307,
+                -130.769,
+                931.815
+              ],
+              "max": [
+                -102.292,
+                -130.672,
+                931.954
+              ]
+            },
+            "areaMm2": 0.013293840002037274,
+            "algebraicVolumeMm3": 3.1763735522036263e-22
+          },
+          {
+            "firstFace": 1903,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -102.308,
+                -130.669,
+                932.121
+              ],
+              "max": [
+                -102.303,
+                -130.657,
+                932.127
+              ]
+            },
+            "areaMm2": 0.00007891767862746648,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 1929,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -75.2234,
+                -115.573,
+                880.123
+              ],
+              "max": [
+                -75.1932,
+                -115.566,
+                880.171
+              ]
+            },
+            "areaMm2": 0.0009457650501041785,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 1937,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -76.2514,
+                -115.179,
+                880.011
+              ],
+              "max": [
+                -76.2447,
+                -115.174,
+                880.016
+              ]
+            },
+            "areaMm2": 0.0000394367848587834,
+            "algebraicVolumeMm3": -5.169878828456423e-25
+          },
+          {
+            "firstFace": 2016,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -101.974,
+                -132.122,
+                934.718
+              ],
+              "max": [
+                -101.963,
+                -132.107,
+                934.744
+              ]
+            },
+            "areaMm2": 0.00040901833699884336,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 2026,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -101.866,
+                -132.121,
+                935.461
+              ],
+              "max": [
+                -101.808,
+                -132.097,
+                935.517
+              ]
+            },
+            "areaMm2": 0.002707219976286161,
+            "algebraicVolumeMm3": 4.235164736271502e-22
+          },
+          {
+            "firstFace": 2056,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -73.946,
+                -116.411,
+                881.285
+              ],
+              "max": [
+                -73.9321,
+                -116.374,
+                881.339
+              ]
+            },
+            "areaMm2": 0.001933263830937366,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 2060,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -73.6664,
+                -117.084,
+                881.635
+              ],
+              "max": [
+                -73.6492,
+                -117.073,
+                881.664
+              ]
+            },
+            "areaMm2": 0.00021066086489973925,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 2062,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -73.6346,
+                -116.881,
+                881.689
+              ],
+              "max": [
+                -73.6305,
+                -116.868,
+                881.702
+              ]
+            },
+            "areaMm2": 0.0001609227765114042,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 2067,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -73.5591,
+                -117.338,
+                881.972
+              ],
+              "max": [
+                -73.5409,
+                -117.271,
+                882.039
+              ]
+            },
+            "areaMm2": 0.004194330269541608,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 2078,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -73.3863,
+                -117.928,
+                882.103
+              ],
+              "max": [
+                -73.3817,
+                -117.897,
+                882.135
+              ]
+            },
+            "areaMm2": 0.0009479244906645694,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 2084,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -73.7801,
+                -119.557,
+                882.575
+              ],
+              "max": [
+                -73.7671,
+                -119.54,
+                882.582
+              ]
+            },
+            "areaMm2": 0.00014267883515089988,
+            "algebraicVolumeMm3": -9.926167350636332e-24
+          },
+          {
+            "firstFace": 2090,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -73.4723,
+                -118.665,
+                882.413
+              ],
+              "max": [
+                -73.4688,
+                -118.647,
+                882.427
+              ]
+            },
+            "areaMm2": 0.00024826536206253534,
+            "algebraicVolumeMm3": -4.1359030627651384e-24
+          },
+          {
+            "firstFace": 2282,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -95.3335,
+                -132.062,
+                935.099
+              ],
+              "max": [
+                -95.2749,
+                -132.015,
+                935.144
+              ]
+            },
+            "areaMm2": 0.0032147613659473263,
+            "algebraicVolumeMm3": 3.1763735522036263e-22
+          },
+          {
+            "firstFace": 2315,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -95.2435,
+                -132.11,
+                937.563
+              ],
+              "max": [
+                -95.2377,
+                -132.104,
+                937.567
+              ]
+            },
+            "areaMm2": 0.000036055512754629486,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 2503,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -100.954,
+                -129.245,
+                948.12
+              ],
+              "max": [
+                -100.945,
+                -129.198,
+                948.16
+              ]
+            },
+            "areaMm2": 0.0018985915832514628,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 2551,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -100.301,
+                -130.522,
+                951.651
+              ],
+              "max": [
+                -100.208,
+                -130.459,
+                951.719
+              ]
+            },
+            "areaMm2": 0.001608766608310476,
+            "algebraicVolumeMm3": -2.812414082680294e-22
+          },
+          {
+            "firstFace": 2567,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -100.728,
+                -128.86,
+                951.451
+              ],
+              "max": [
+                -100.728,
+                -128.852,
+                951.459
+              ]
+            },
+            "areaMm2": 0.00006299999999949318,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 2575,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -100.555,
+                -128.755,
+                952.935
+              ],
+              "max": [
+                -100.549,
+                -128.746,
+                952.953
+              ]
+            },
+            "areaMm2": 0.0001358823020119485,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 2577,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -100.321,
+                -130.432,
+                952.464
+              ],
+              "max": [
+                -100.28,
+                -130.41,
+                952.555
+              ]
+            },
+            "areaMm2": 0.004015227266289948,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 2604,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -99.9131,
+                -130.416,
+                954.973
+              ],
+              "max": [
+                -99.876,
+                -130.396,
+                955.009
+              ]
+            },
+            "areaMm2": 0.0013659524735529405,
+            "algebraicVolumeMm3": 1.0587911840678754e-22
+          },
+          {
+            "firstFace": 2915,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -97.8562,
+                -131.107,
+                973.494
+              ],
+              "max": [
+                -97.8552,
+                -131.102,
+                973.499
+              ]
+            },
+            "areaMm2": 0.00002450999795999761,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 3031,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -97.557,
+                -130.794,
+                976.126
+              ],
+              "max": [
+                -97.553,
+                -130.783,
+                976.142
+              ]
+            },
+            "areaMm2": 0.0001738180945713203,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 3050,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -97.0152,
+                -130.49,
+                978.72
+              ],
+              "max": [
+                -96.9908,
+                -130.48,
+                978.745
+              ]
+            },
+            "areaMm2": 0.0005394710372201522,
+            "algebraicVolumeMm3": 2.6469779601696886e-23
+          },
+          {
+            "firstFace": 3052,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -96.9821,
+                -130.437,
+                978.904
+              ],
+              "max": [
+                -96.9192,
+                -130.408,
+                978.971
+              ]
+            },
+            "areaMm2": 0.0032292123188170855,
+            "algebraicVolumeMm3": -2.6469779601696886e-22
+          },
+          {
+            "firstFace": 3237,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -95.5989,
+                -129.977,
+                985.973
+              ],
+              "max": [
+                -95.4986,
+                -129.917,
+                986.025
+              ]
+            },
+            "areaMm2": 0.006448114961755472,
+            "algebraicVolumeMm3": 1.6940658945086007e-21
+          },
+          {
+            "firstFace": 3239,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -95.5248,
+                -129.925,
+                986.122
+              ],
+              "max": [
+                -95.4788,
+                -129.902,
+                986.216
+              ]
+            },
+            "areaMm2": 0.0044906712972592605,
+            "algebraicVolumeMm3": -4.235164736271502e-22
+          },
+          {
+            "firstFace": 3262,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -90.3978,
+                -130.597,
+                981.299
+              ],
+              "max": [
+                -90.3213,
+                -130.428,
+                981.383
+              ]
+            },
+            "areaMm2": 0.016403835244548685,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 3306,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -95.1539,
+                -128.514,
+                989.026
+              ],
+              "max": [
+                -95.1366,
+                -128.46,
+                989.122
+              ]
+            },
+            "areaMm2": 0.005237583660430239,
+            "algebraicVolumeMm3": 5.293955920339377e-22
+          },
+          {
+            "firstFace": 3317,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -94.6191,
+                -130.089,
+                990.584
+              ],
+              "max": [
+                -94.5826,
+                -130.071,
+                990.612
+              ]
+            },
+            "areaMm2": 0.0009936566459307784,
+            "algebraicVolumeMm3": 5.293955920339377e-23
+          },
+          {
+            "firstFace": 3384,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -94.5515,
+                -130.129,
+                991.473
+              ],
+              "max": [
+                -94.5233,
+                -130.114,
+                991.496
+              ]
+            },
+            "areaMm2": 0.0004209166188224964,
+            "algebraicVolumeMm3": -6.617444900424222e-24
+          },
+          {
+            "firstFace": 3455,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -93.9905,
+                -130.353,
+                995.813
+              ],
+              "max": [
+                -93.9277,
+                -130.299,
+                995.905
+              ]
+            },
+            "areaMm2": 0.005070088619542244,
+            "algebraicVolumeMm3": 4.235164736271502e-22
+          },
+          {
+            "firstFace": 3457,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -93.8646,
+                -130.361,
+                996.581
+              ],
+              "max": [
+                -93.8467,
+                -130.343,
+                996.627
+              ]
+            },
+            "areaMm2": 0.0010797393666980494,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 3654,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -86.5581,
+                -130.803,
+                1001.54
+              ],
+              "max": [
+                -86.501,
+                -130.775,
+                1001.57
+              ]
+            },
+            "areaMm2": 0.0016415807138250474,
+            "algebraicVolumeMm3": 4.235164736271502e-22
+          },
+          {
+            "firstFace": 3694,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -86.2708,
+                -130.712,
+                1002.24
+              ],
+              "max": [
+                -86.2271,
+                -130.663,
+                1002.25
+              ]
+            },
+            "areaMm2": 0.001247802372172561,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 3713,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -90.6287,
+                -130,
+                1009.4
+              ],
+              "max": [
+                -90.5526,
+                -129.963,
+                1009.47
+              ]
+            },
+            "areaMm2": 0.005034449448551308,
+            "algebraicVolumeMm3": 8.470329472543003e-22
+          },
+          {
+            "firstFace": 3782,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -9.83498,
+                -75.8295,
+                835.483
+              ],
+              "max": [
+                -9.78929,
+                -75.8046,
+                835.55
+              ]
+            },
+            "areaMm2": 0.00156552565412101,
+            "algebraicVolumeMm3": 1.5881867761018131e-22
+          },
+          {
+            "firstFace": 3796,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -12.4798,
+                -72.6309,
+                836.212
+              ],
+              "max": [
+                -12.4237,
+                -72.5814,
+                836.363
+              ]
+            },
+            "areaMm2": 0.007541377655053923,
+            "algebraicVolumeMm3": 2.541098841762901e-21
+          },
+          {
+            "firstFace": 3811,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -12.1343,
+                -73.4148,
+                836.227
+              ],
+              "max": [
+                -12.0276,
+                -73.2897,
+                836.239
+              ]
+            },
+            "areaMm2": 0.004421496436287505,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 3816,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -11.7749,
+                -73.7835,
+                836.141
+              ],
+              "max": [
+                -11.694,
+                -73.73,
+                836.216
+              ]
+            },
+            "areaMm2": 0.005953754500729234,
+            "algebraicVolumeMm3": -8.470329472543003e-22
+          },
+          {
+            "firstFace": 3910,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -15.3057,
+                -74.6763,
+                842.011
+              ],
+              "max": [
+                -15.2829,
+                -74.6551,
+                842.025
+              ]
+            },
+            "areaMm2": 0.0005000895495809402,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 4233,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -14.1963,
+                -69.4207,
+                837.888
+              ],
+              "max": [
+                -14.1705,
+                -69.4038,
+                837.917
+              ]
+            },
+            "areaMm2": 0.0008567489027711407,
+            "algebraicVolumeMm3": -2.6469779601696886e-23
+          },
+          {
+            "firstFace": 4234,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -14.4149,
+                -69.3038,
+                837.999
+              ],
+              "max": [
+                -14.3189,
+                -69.1773,
+                838.022
+              ]
+            },
+            "areaMm2": 0.003204618019108995,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 4237,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -14.5324,
+                -68.892,
+                838.161
+              ],
+              "max": [
+                -14.5263,
+                -68.8697,
+                838.18
+              ]
+            },
+            "areaMm2": 0.00040530367935689526,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 4238,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -14.4005,
+                -68.9796,
+                838.054
+              ],
+              "max": [
+                -14.3765,
+                -68.9585,
+                838.078
+              ]
+            },
+            "areaMm2": 0.000746271151861089,
+            "algebraicVolumeMm3": -1.3234889800848443e-23
+          },
+          {
+            "firstFace": 4240,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -13.7649,
+                -70.641,
+                837.332
+              ],
+              "max": [
+                -13.7355,
+                -70.6075,
+                837.345
+              ]
+            },
+            "areaMm2": 0.000865619870612859,
+            "algebraicVolumeMm3": -1.0587911840678754e-22
+          },
+          {
+            "firstFace": 4241,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -13.8906,
+                -70.3414,
+                837.506
+              ],
+              "max": [
+                -13.8564,
+                -70.3066,
+                837.521
+              ]
+            },
+            "areaMm2": 0.0010627590197682113,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 4242,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -13.7464,
+                -70.455,
+                837.392
+              ],
+              "max": [
+                -13.7109,
+                -70.4116,
+                837.414
+              ]
+            },
+            "areaMm2": 0.0015455822066763195,
+            "algebraicVolumeMm3": -2.4649982254080225e-22
+          },
+          {
+            "firstFace": 4245,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -14.0909,
+                -69.9492,
+                837.669
+              ],
+              "max": [
+                -14.0547,
+                -69.8935,
+                837.673
+              ]
+            },
+            "areaMm2": 0.0010104028909801183,
+            "algebraicVolumeMm3": -3.970466940254533e-23
+          },
+          {
+            "firstFace": 4247,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -14.0778,
+                -69.7122,
+                837.724
+              ],
+              "max": [
+                -14.0516,
+                -69.6926,
+                837.755
+              ]
+            },
+            "areaMm2": 0.0007726031478703032,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 4250,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -14.2274,
+                -69.6686,
+                837.846
+              ],
+              "max": [
+                -14.1665,
+                -69.5731,
+                837.872
+              ]
+            },
+            "areaMm2": 0.005834569733278377,
+            "algebraicVolumeMm3": -8.470329472543003e-22
+          },
+          {
+            "firstFace": 4252,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -13.1468,
+                -71.7322,
+                836.913
+              ],
+              "max": [
+                -13.0848,
+                -71.6698,
+                836.962
+              ]
+            },
+            "areaMm2": 0.004589382255990414,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 4472,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -89.6017,
+                -130.295,
+                1012.25
+              ],
+              "max": [
+                -89.5769,
+                -130.274,
+                1012.32
+              ]
+            },
+            "areaMm2": 0.0019867705353166305,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 4752,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -14.7738,
+                -68.1524,
+                838.587
+              ],
+              "max": [
+                -14.7117,
+                -68.062,
+                838.606
+              ]
+            },
+            "areaMm2": 0.004021795187486698,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 4754,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -14.8668,
+                -67.6315,
+                838.817
+              ],
+              "max": [
+                -14.8226,
+                -67.5698,
+                838.828
+              ]
+            },
+            "areaMm2": 0.0015739886824232452,
+            "algebraicVolumeMm3": -5.293955920339377e-23
+          },
+          {
+            "firstFace": 4757,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -14.6674,
+                -68.5949,
+                838.348
+              ],
+              "max": [
+                -14.6291,
+                -68.5557,
+                838.368
+              ]
+            },
+            "areaMm2": 0.001059413555511528,
+            "algebraicVolumeMm3": 2.6469779601696886e-23
+          },
+          {
+            "firstFace": 4759,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -14.6577,
+                -68.4463,
+                838.412
+              ],
+              "max": [
+                -14.5914,
+                -68.357,
+                838.446
+              ]
+            },
+            "areaMm2": 0.0054258266079926405,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 4811,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -88.9557,
+                -130.788,
+                1013.73
+              ],
+              "max": [
+                -88.9506,
+                -130.78,
+                1013.74
+              ]
+            },
+            "areaMm2": 0.00008646386528487334,
+            "algebraicVolumeMm3": 3.017558396722957e-25
+          },
+          {
+            "firstFace": 4816,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -88.5107,
+                -131.293,
+                1014.54
+              ],
+              "max": [
+                -88.4961,
+                -131.288,
+                1014.56
+              ]
+            },
+            "areaMm2": 0.000246196750587717,
+            "algebraicVolumeMm3": -4.963083675318166e-24
+          },
+          {
+            "firstFace": 4819,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -88.3492,
+                -131.433,
+                1014.69
+              ],
+              "max": [
+                -88.3324,
+                -131.333,
+                1014.81
+              ]
+            },
+            "areaMm2": 0.01146888089395586,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 5152,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -84.2185,
+                -130.497,
+                1008.35
+              ],
+              "max": [
+                -84.117,
+                -130.306,
+                1008.43
+              ]
+            },
+            "areaMm2": 0.020115920187745228,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 5154,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -84.1105,
+                -130.57,
+                1008.55
+              ],
+              "max": [
+                -84.0838,
+                -130.552,
+                1008.57
+              ]
+            },
+            "areaMm2": 0.0006116245253447552,
+            "algebraicVolumeMm3": 3.970466940254533e-23
+          },
+          {
+            "firstFace": 5238,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -87.648,
+                -132.527,
+                1016.11
+              ],
+              "max": [
+                -87.5832,
+                -132.489,
+                1016.15
+              ]
+            },
+            "areaMm2": 0.0027098523945016857,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 5250,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -87.4109,
+                -133.357,
+                1016.92
+              ],
+              "max": [
+                -87.3476,
+                -133.299,
+                1016.99
+              ]
+            },
+            "areaMm2": 0.005569788340684348,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 5255,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -87.4243,
+                -133.201,
+                1016.78
+              ],
+              "max": [
+                -87.3656,
+                -133.138,
+                1016.84
+              ]
+            },
+            "areaMm2": 0.004958954414997558,
+            "algebraicVolumeMm3": -4.235164736271502e-22
+          },
+          {
+            "firstFace": 5300,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -85.7782,
+                -136.799,
+                1018.54
+              ],
+              "max": [
+                -85.7647,
+                -136.777,
+                1018.56
+              ]
+            },
+            "areaMm2": 0.0003838921202627871,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 5432,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -15.7247,
+                -64.1884,
+                840.498
+              ],
+              "max": [
+                -15.7072,
+                -64.164,
+                840.505
+              ]
+            },
+            "areaMm2": 0.0004201695010346531,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 5646,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -80.6003,
+                -136.925,
+                1014.38
+              ],
+              "max": [
+                -80.4849,
+                -136.796,
+                1014.41
+              ]
+            },
+            "areaMm2": 0.008100371191495344,
+            "algebraicVolumeMm3": 2.541098841762901e-21
+          },
+          {
+            "firstFace": 5649,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -80.4313,
+                -137.323,
+                1014.55
+              ],
+              "max": [
+                -80.3354,
+                -137.182,
+                1014.56
+              ]
+            },
+            "areaMm2": 0.006563287865849964,
+            "algebraicVolumeMm3": -8.470329472543003e-22
+          },
+          {
+            "firstFace": 5655,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -80.208,
+                -137.791,
+                1014.52
+              ],
+              "max": [
+                -80.1871,
+                -137.768,
+                1014.53
+              ]
+            },
+            "areaMm2": 0.0005015904803719564,
+            "algebraicVolumeMm3": 5.293955920339377e-23
+          },
+          {
+            "firstFace": 5967,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -58.3274,
+                -159.918,
+                1007.71
+              ],
+              "max": [
+                -58.2478,
+                -159.876,
+                1007.79
+              ]
+            },
+            "areaMm2": 0.006601647058873054,
+            "algebraicVolumeMm3": 1.9058241313221758e-21
+          },
+          {
+            "firstFace": 6036,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -81.9778,
+                -130.893,
+                1012.55
+              ],
+              "max": [
+                -81.9523,
+                -130.865,
+                1012.62
+              ]
+            },
+            "areaMm2": 0.0015530930461502201,
+            "algebraicVolumeMm3": 2.8234431575194703e-22
+          },
+          {
+            "firstFace": 6038,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -75.1259,
+                -141.458,
+                1013.43
+              ],
+              "max": [
+                -75.1024,
+                -141.44,
+                1013.45
+              ]
+            },
+            "areaMm2": 0.0005194462532373936,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 8443,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                63.4671,
+                -134.655,
+                853.084
+              ],
+              "max": [
+                63.4972,
+                -134.64,
+                853.111
+              ]
+            },
+            "areaMm2": 0.0008021720139733824,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 10442,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                89.5987,
+                -133.685,
+                895.912
+              ],
+              "max": [
+                89.6842,
+                -133.632,
+                895.979
+              ]
+            },
+            "areaMm2": 0.0025274601282665983,
+            "algebraicVolumeMm3": 5.624828165360588e-22
+          },
+          {
+            "firstFace": 10445,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                89.6947,
+                -133.744,
+                896.466
+              ],
+              "max": [
+                89.7166,
+                -133.732,
+                896.492
+              ]
+            },
+            "areaMm2": 0.0004080159923323305,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 10911,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                45.9419,
+                -160.443,
+                1003.43
+              ],
+              "max": [
+                46.0296,
+                -160.372,
+                1003.55
+              ]
+            },
+            "areaMm2": 0.0015536524997665877,
+            "algebraicVolumeMm3": 8.470329472543003e-22
+          },
+          {
+            "firstFace": 11629,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                61.2963,
+                -157.743,
+                1006.55
+              ],
+              "max": [
+                61.332,
+                -157.694,
+                1006.57
+              ]
+            },
+            "areaMm2": 0.0017764296805700868,
+            "algebraicVolumeMm3": 5.293955920339377e-23
+          },
+          {
+            "firstFace": 12177,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                90.6241,
+                -126.591,
+                947.351
+              ],
+              "max": [
+                90.6273,
+                -126.584,
+                947.357
+              ]
+            },
+            "areaMm2": 0.000036572257245074514,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 12179,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                90.6613,
+                -126.69,
+                947.682
+              ],
+              "max": [
+                90.693,
+                -126.675,
+                947.715
+              ]
+            },
+            "areaMm2": 0.0010274432393087567,
+            "algebraicVolumeMm3": 7.940933880509066e-23
+          },
+          {
+            "firstFace": 12182,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                90.5211,
+                -126.818,
+                948.966
+              ],
+              "max": [
+                90.5377,
+                -126.809,
+                948.984
+              ]
+            },
+            "areaMm2": 0.00031408919115471324,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 12184,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                90.3503,
+                -126.706,
+                949.419
+              ],
+              "max": [
+                90.3586,
+                -126.698,
+                949.433
+              ]
+            },
+            "areaMm2": 0.00012719080155431967,
+            "algebraicVolumeMm3": 8.271806125530277e-25
+          },
+          {
+            "firstFace": 12411,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                89.663,
+                -127.582,
+                955.074
+              ],
+              "max": [
+                89.6835,
+                -127.559,
+                955.098
+              ]
+            },
+            "areaMm2": 0.00038936915645707725,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 12465,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                63.0709,
+                -146.679,
+                1013.02
+              ],
+              "max": [
+                63.0846,
+                -146.669,
+                1013.04
+              ]
+            },
+            "areaMm2": 0.00024037437467381358,
+            "algebraicVolumeMm3": -2.6469779601696886e-23
+          },
+          {
+            "firstFace": 13038,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                95.8368,
+                -127.134,
+                955.474
+              ],
+              "max": [
+                95.8381,
+                -127.128,
+                955.477
+              ]
+            },
+            "areaMm2": 0.00001774147682657664,
+            "algebraicVolumeMm3": 1.0339757656912846e-25
+          },
+          {
+            "firstFace": 13467,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                72.5172,
+                -145.138,
+                1015.53
+              ],
+              "max": [
+                72.5258,
+                -145.133,
+                1015.54
+              ]
+            },
+            "areaMm2": 0.00006453712110086001,
+            "algebraicVolumeMm3": -4.446095792472524e-24
+          },
+          {
+            "firstFace": 13624,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                68.5619,
+                -139.898,
+                1017.92
+              ],
+              "max": [
+                68.5887,
+                -139.868,
+                1017.94
+              ]
+            },
+            "areaMm2": 0.0009647817577068068,
+            "algebraicVolumeMm3": -6.617444900424221e-23
+          },
+          {
+            "firstFace": 13627,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                68.7564,
+                -139.567,
+                1018.25
+              ],
+              "max": [
+                68.8964,
+                -139.485,
+                1018.38
+              ]
+            },
+            "areaMm2": 0.016802304527650875,
+            "algebraicVolumeMm3": -3.3881317890172014e-21
+          },
+          {
+            "firstFace": 13629,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                68.9777,
+                -139.203,
+                1018.45
+              ],
+              "max": [
+                68.9896,
+                -139.188,
+                1018.46
+              ]
+            },
+            "areaMm2": 0.00021642414375485383,
+            "algebraicVolumeMm3": 1.3234889800848443e-23
+          },
+          {
+            "firstFace": 14205,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                81.9921,
+                -130.63,
+                1004.55
+              ],
+              "max": [
+                82.0038,
+                -130.604,
+                1004.56
+              ]
+            },
+            "areaMm2": 0.0002847874470543806,
+            "algebraicVolumeMm3": 1.6543612251060553e-24
+          },
+          {
+            "firstFace": 14465,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                73.5246,
+                -132.374,
+                1025.83
+              ],
+              "max": [
+                73.5946,
+                -132.301,
+                1026.01
+              ]
+            },
+            "areaMm2": 0.01657021737939039,
+            "algebraicVolumeMm3": 0
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "sceneBounds": {
+        "min": [
+          -1.0249700546264648,
+          0.26599976420402527,
+          0.10747001320123672
+        ],
+        "max": [
+          0.98601895570755,
+          2.2909996509552,
+          1.2602299451828003
+        ]
+      },
+      "centre": [
+        -0.019475549459457397,
+        1.2784997075796127,
+        0.6838499791920185
+      ],
+      "triangles": 15244
+    }
+  ],
+  "sharedTriangles": [
+    {
+      "a": "FJ2566",
+      "b": "FJ2572",
+      "identicalTriangles": 0
+    },
+    {
+      "a": "FJ2566",
+      "b": "FJ2567",
+      "identicalTriangles": 0
+    },
+    {
+      "a": "FJ2566",
+      "b": "FJ2569",
+      "identicalTriangles": 0
+    },
+    {
+      "a": "FJ2566",
+      "b": "FJ2570",
+      "identicalTriangles": 0
+    },
+    {
+      "a": "FJ2566",
+      "b": "FJ2568",
+      "identicalTriangles": 0
+    },
+    {
+      "a": "FJ2572",
+      "b": "FJ2567",
+      "identicalTriangles": 0
+    },
+    {
+      "a": "FJ2572",
+      "b": "FJ2569",
+      "identicalTriangles": 0
+    },
+    {
+      "a": "FJ2572",
+      "b": "FJ2570",
+      "identicalTriangles": 0
+    },
+    {
+      "a": "FJ2572",
+      "b": "FJ2568",
+      "identicalTriangles": 0
+    },
+    {
+      "a": "FJ2567",
+      "b": "FJ2569",
+      "identicalTriangles": 0
+    },
+    {
+      "a": "FJ2567",
+      "b": "FJ2570",
+      "identicalTriangles": 0
+    },
+    {
+      "a": "FJ2567",
+      "b": "FJ2568",
+      "identicalTriangles": 0
+    },
+    {
+      "a": "FJ2569",
+      "b": "FJ2570",
+      "identicalTriangles": 0
+    },
+    {
+      "a": "FJ2569",
+      "b": "FJ2568",
+      "identicalTriangles": 0
+    },
+    {
+      "a": "FJ2570",
+      "b": "FJ2568",
+      "identicalTriangles": 0
+    }
+  ],
+  "preservation": {
+    "parentTriangles": 56878,
+    "partitionTriangles": 56878,
+    "positionsWindingNormalsExact": true,
+    "parentCatalogueUnchanged": true,
+    "renderTriangleSha256": "83ab4c80abfba5ffd0d7334504b97aabd26db347e8916735639244de01b42f62",
+    "method": "Exact oriented source-position membership; original parent attributes copied, not regenerated."
+  },
+  "prototype": {
+    "path": ".local/colonic-components-prototype/colonic-components.glb",
+    "bytes": 1046316,
+    "sha256": "61c6e4ea95a4c7c348013a07104561dda84c79c73a4f40e38933ddf4265cc36a",
+    "public": false,
+    "registered": false
+  },
+  "licence": {
+    "license": "CC-BY-4.0",
+    "url": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+    "checked": "2026-09-17",
+    "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+    "changes": "Existing source aggregate separated into six labelled, coloured diagnostic surfaces; original positions, winding and normals retained."
+  },
+  "boundaries": {
+    "clinicalApproval": false,
+    "anatomicalExtentValidated": false,
+    "sourceNamesAreNotClinicalSegmentation": true,
+    "sigmoidSeparatelyIdentified": false,
+    "wallLayersOrLumenValidated": false,
+    "selfIntersectionProvedAbsent": false,
+    "nearCoincidenceAssessed": false,
+    "publicModelChanged": false,
+    "patientDataIncluded": false
+  }
+}

@@ -57,6 +57,7 @@ for(const s of entries)for(const region of [...s.regions,'whole-body']){
  const render=p=>require('react-dom/server').renderToStaticMarkup(React.createElement(mod.exports.BowelComponents,p));
  const html=render(props),info=api.bowelComponentInfo(catalog,region,'both',s.id);renders++;
  assert(html.includes('Bowel components')&&html.includes('Radiologist review pending'));assert(!/<details[^>]*\bopen=/.test(html));
+ assert.equal(html.includes('descending/sigmoid boundary needs review'),info.groups.some(g=>g.key==='large'));
  assert.equal(html.includes('Open this selection in whole body'),info.groups.some(g=>!g.completeHere));assert.equal(render({...props,disabled:true}),'');
  direct=true;const tree=mod.exports.BowelComponents(props);direct=false;
  for(const g of info.groups)for(const r of g.rows){

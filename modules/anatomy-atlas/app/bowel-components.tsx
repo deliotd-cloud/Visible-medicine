@@ -22,6 +22,7 @@ export function BowelComponents({catalog,region,side,selectedId,disabled,onSelec
   {whole&&<p>Some components are outside this region. <Link href={whole} prefetch={false}>Open this selection in whole body</Link>, then choose Show.</p>}
   <details><summary>Scope & controls</summary>
    <p>Source-file coverage is not complete anatomical segmentation. The junction is not a validated cecum or valve. Bowel walls, lumen, sphincters and surgical planes are not supplied by this grouping. Radiologist review pending.</p>
+   {info.groups.some(g=>g.key==='large')&&<p>The large-intestine source has three colon surfaces and three fragmented taenia surfaces. Its “descending colon” file includes a curved distal section; the descending/sigmoid boundary needs review. Separate segments and continuous muscle bands are not validated.</p>}
    <p>Show resets cutaway, separation and camera, and enables Organs. Dissection Undo restores layers and removals, not the camera or system switch. Selecting a listed structure restores it if hidden. These unpaired source surfaces stay whole in Left/Right views.</p>
   </details>
  </details>;

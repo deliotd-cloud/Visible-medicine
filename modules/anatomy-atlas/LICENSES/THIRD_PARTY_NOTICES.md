@@ -1011,3 +1011,13 @@ Hand muscle imaging teaching (13 September 2026) adds original brief factual syn
 Central-neural CT/MRI teaching (13 September 2026) adds original short factual synthesis and thirteen reading references, including RSNA/ACR, UTHealth, peer-reviewed anatomy/imaging research and StatPearls. No figures, diagrams, article prose, tables, protocols, datasets or scans are redistributed. StatPearls' NC-ND restrictions and all other linked-source terms remain separate; citations do not admit those materials as commercial assets. No model, dependency, font, texture, paid API or mandatory service is added. Original notes/code retain MIT terms and unchanged BodyParts3D CC BY 4.0 attribution remains. See `docs/CENTRAL_NEURAL_IMAGING.md` for exact scope, source binding and pending radiologist review.
 
 Head/neck vessel imaging (13 September 2026) adds original brief factual synthesis and twelve reading links to TTUHSC, UTHealth, RSNA/ACR, AIUM and cited imaging research. Linked publishers retain their rights; no prose, images, diagrams, scans, tables, protocols or datasets are redistributed, and citation is not a commercial-reuse grant. No new model, package, font, texture, paid API or mandatory service is added. Original notes/code retain MIT terms; existing BodyParts3D CC BY 4.0 attribution and source holds are unchanged. See `docs/HEAD_NECK_VESSEL_IMAGING.md` for source limits and pending radiologist review.
+# Local colonic source review (17 September 2026)
+
+The optional, non-published colonic review derivative separates and recolours six
+existing BodyParts3D 4.0 source surfaces without changing original rendered
+positions, winding or shading normals. It retains the established CC BY 4.0
+credit: BodyParts3D, © The Database Center for Life Science licensed under CC
+Attribution 4.0 International. Its standalone review page also includes the
+installed Three.js MIT licence. No OpenStax illustrations or text extracts are
+redistributed; that source is linked for anatomical comparison only. See
+`docs/COLONIC_SOURCE_REVIEW.md`. No new paid dependency or model release is added.

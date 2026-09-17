@@ -2,8 +2,10 @@
   "schemaVersion": 1,
   "method": "Offline source and displayed-copy inventory; no clinical or browser certification.",
   "sourceHashes": {
+    "docs/colonic-components-source-audit.json": "7924f19ab0451a6ae4afb99c8d33cada8ad74a9a430dd2ad03435b491aeafe30",
+    "scripts/audit-colonic-components.mjs": "4ed148f3639fcffbb0673b6cd29eadcc2d9dacf28cfee8c06b66c1db552f9fdf",
     "lib/bowel-components.ts": "23b87d1fcf1e4ab6614650cebd87da6411f9443e92c073858a5b0ac068a7dc31",
-    "app/bowel-components.tsx": "5253cd62f9191e65804a1b2e252d29ddd6e0f714fd298913c5dd57299584496c",
+    "app/bowel-components.tsx": "c2bdbd593a4daf5ef891b487ae85431c7ddb9545ab4bb72f6520d7eac8bcbe07",
     "content/bowel-component-pins.json": "5c34d492f10406151508b9a7531cc80314c7c8d8f09fc518dc1e99a0e985fae6",
     "lib/vessel-visibility.ts": "672b08f4d060497d4c83341d8ecdf03b4e7f3a997ee61cc2c4dfff82c20d3f70",
     "app/vessel-system-control.tsx": "339c5d43af81240d1ce2ca3a032983b4134b32c14d8911efe19b8bd6edb8787c",

@@ -1,0 +1,27 @@
+{
+  "prototypeSha256": "61c6e4ea95a4c7c348013a07104561dda84c79c73a4f40e38933ddf4265cc36a",
+  "parts": 6,
+  "presets": [
+    "anterior",
+    "posterior",
+    "left",
+    "right"
+  ],
+  "leftRightSourceAxesVerified": true,
+  "isolated": [
+    "FMA14545",
+    "FMA14546",
+    "FMA14547",
+    "FMA15042",
+    "FMA15043",
+    "FMA15044"
+  ],
+  "orbit": true,
+  "restoreAll": true,
+  "spreadAndRestore": true,
+  "expandedBoundsFitDesktopAndMobile": true,
+  "mobileWidth": 390,
+  "noHorizontalOverflow": true,
+  "browserErrors": [],
+  "clinicalApproval": false
+}

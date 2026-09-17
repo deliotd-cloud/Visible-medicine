@@ -27,6 +27,13 @@ leaflets, wall layers, sphincters and a validated lumen are not supplied. The
 strict reasoning matcher still does not treat a reduced aggregate as the complete
 official source group. The prior large-intestine reasoning question remains held.
 
+The subsequent [colonic surface review](COLONIC_SOURCE_REVIEW.md) preserves all
+56,878 rendered parent triangles but holds finer anatomical subdivision: the
+source-labelled descending colon includes a curved distal portion, and the three
+taenia source files are fragmented. This limitation appears only in the existing
+collapsed Scope & controls section for the large-bowel group. It does not add
+extra controls, new anatomy or unvalidated segmentation to the public viewer.
+
 ## Compact navigation and safety
 
 - A single collapsed section appears only for these four exact supplied selections.
