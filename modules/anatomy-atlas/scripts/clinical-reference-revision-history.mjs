@@ -2,6 +2,7 @@
 import assert from 'node:assert/strict';
 import { isDeepStrictEqual } from 'node:util';
 import { prePelvicUrethralProfiles } from './pelvic-urethral-study-history.mjs';
+import { authoringBeforeCoreOrganFunction } from './core-organ-function-history.mjs';
 import baseline from '../content/clinical-reference-revision.baseline.json' with { type: 'json' };
 import transition from '../content/clinical-reference-revision.transition.json' with { type: 'json' };
 import {
@@ -37,6 +38,7 @@ verifyRecords();
 
 /** Restore only the four revised urethral body lessons. */
 export function authoringBeforeClinicalReferenceRevision({ api, catalog }) {
+  api = authoringBeforeCoreOrganFunction({ api, catalog }, {deferWholeSnapshot: true});
   const recipes = prePelvicUrethralProfiles(api.dissectionProfiles, {allowOlder: true});
   if (recipes !== api.dissectionProfiles) api = {...api, dissectionProfiles: recipes};
   const identity = baseline.selected.pelvic.identity;

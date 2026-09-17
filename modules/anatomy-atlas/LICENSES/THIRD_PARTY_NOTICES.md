@@ -1,5 +1,21 @@
 # Third-party notices
 
+## Core-organ Function teaching — 17 September 2026
+
+Short original factual summaries for the heart, paired lungs and liver reference
+NHLBI, NCI, NIDDK and MedlinePlus/NLM educational webpages. Named source credits and direct reading links
+are retained with the notes. No formatted publication, article passage, diagram,
+animation, photograph, logo or scan is imported. NHLBI's separately copyrighted
+Nucleus Medical Media illustrations/animations are explicitly excluded. No
+endorsement is implied. Page-specific references, policy links and scope are in
+[CORE_ORGAN_FUNCTION_REFERENCES.md](../docs/CORE_ORGAN_FUNCTION_REFERENCES.md).
+MedlinePlus medical-test facts are used for albumin synthesis, not its separately
+licensed encyclopedia or imagery. No diagnostic test instructions are reproduced.
+
+No model, texture, font, dataset, dependency, subscription, paid API or mandatory
+service is added. Original text/code and existing BodyParts3D notices retain
+their existing terms; this increment is not a project-wide legal/clinical audit.
+
 ## Renal/urethral reference revision — 17 September 2026
 
 Original short summaries replace selected EAU-dependent renal trauma, renal

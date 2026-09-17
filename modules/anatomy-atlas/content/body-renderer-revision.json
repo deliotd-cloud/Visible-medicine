@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "57846ace00c21b80a865652b7d16cfc65c89a838fc3a44e4d33115caab84bf42"
+      "sha256": "c04a9c2c0411019982d752df80417dff448639cb3003f7cfe853f9ad9d99d090"
     },
     {
       "path": "app/body-explorer.css",
@@ -499,6 +499,14 @@
     {
       "path": "content/collicular-brachia-teaching.ts",
       "sha256": "f805f4ab67d5d0ae82a0e2bd9116d0e2a7b31f837d05d349dd8cfabd1172428d"
+    },
+    {
+      "path": "content/core-organ-function-pins.json",
+      "sha256": "7029a74519f083e854c8f06461e25885b6d21e4710749353c8a6d7704f50aaac"
+    },
+    {
+      "path": "content/core-organ-function.ts",
+      "sha256": "ea4eb8d886f03cab39025dbdcbf1a4a630be83f04254cf731eab7b580222afd3"
     },
     {
       "path": "content/cranial-bone-imaging-pins.json",
@@ -1207,6 +1215,10 @@
     {
       "path": "lib/content-types.ts",
       "sha256": "47ac24cbf05c1061238305589df148e3849265e33c728fce4bdc9c6912e4c3a6"
+    },
+    {
+      "path": "lib/core-organ-function.ts",
+      "sha256": "6ecbd0d421c6caa5ffd3f02edadf8cfdbf49ef7bbab20ea3926054544c896925"
     },
     {
       "path": "lib/corpus-spongiosum.ts",
@@ -1994,7 +2006,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "08b6d86e27b2873f71856dcdf3152d8de5e6d62fa8b0449c0aea843d054c63c9"
+      "sha256": "75935fbd372046ac6728bc10677940ed5926ec526b303171f46489876fc95fb4"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2189,5 +2201,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "9bef0dab90f622395f89366c2b88d70cf4fde5c88448582c7830a0c3c4b2df2b"
+  "sha256": "8044cf9981051521fe03a77f4eff18b358f8ffdd3bb3296de68b7d203ae55047"
 }

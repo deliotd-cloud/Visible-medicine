@@ -3,6 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { build } from './workspace-test-build.mjs';
 import { contentContext } from './content-contract-tools.mjs';
 import { prePelvicUrethralProfiles } from './pelvic-urethral-study-history.mjs';
+import { authoringBeforeCoreOrganFunction } from './core-organ-function-history.mjs';
 
 export const clinicalReferenceRevisionHash = value =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -10,6 +11,9 @@ export const clinicalReferenceRevisionHash = value =>
 const detached = value => JSON.parse(JSON.stringify(value));
 
 export function wholeBodyTeachingSnapshot(api, catalog) {
+  // Newest editorial changes must be removed before this older era's recipe
+  // normalization and immutable whole-body gate.
+  api = authoringBeforeCoreOrganFunction({api, catalog}, {deferWholeSnapshot: true});
   const display = api.bodyDisplayCatalog(catalog);
   return {
     body: display.structures.map(structure => ({
