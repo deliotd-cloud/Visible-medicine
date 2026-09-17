@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {execFileSync} from 'node:child_process';
+import {context,hash,snapshot} from './pin-pica-clinical.mjs';
+import baseline from '../content/short-ciliary-transition.json' with {type:'json'};
+const {api,display}=await context({current:true});
+assert.equal(hash(baseline),'8031a86e4593373cc3ff12c04c2cfc4138692220c9c2d01eb6114b338f6567a8');
+assert.equal(hash(display),baseline.currentCatalogHash);
+const identity=display.structures.find(s=>s.id===baseline.structure.id);
+assert.deepEqual(identity,baseline.structure);
+const topics=api.contentTabs.filter(t=>t!=='anatomy');
+const previous={...api,bodyLesson:(s,t)=>s.id===identity.id&&topics.includes(t)?structuredClone(baseline.topics[t]):api.bodyLesson(s,t)};
+assert.equal(hash(snapshot(previous,display)),baseline.currentAllLessonsAndRecipesHash,'Unrelated teaching/recipes changed');
+const result={parentCommit:'3c1082f14475f7ad3b32315c3f7bed8f2db1c8d6',catalogHash:hash(display),previousAllLessonsAndRecipesHash:baseline.currentAllLessonsAndRecipesHash,currentAllLessonsAndRecipesHash:hash(snapshot(api,display)),id:identity.id,sections:Object.fromEntries(topics.map(t=>{const lesson=api.bodyLesson(identity,t);assert.equal(lesson.readiness,['function','clinical'].includes(t)?'draft':'pending');assert.equal(baseline.topics[t].readiness,'pending');return [t,hash(lesson)];}))};
+const file='content/short-ciliary-teaching.transition.json',text=JSON.stringify(result,null,2)+'\n';
+if(process.argv.includes('--check'))assert.equal((await readFile(file,'utf8')).replace(/\r\n/g,'\n'),text);
+else{assert.equal(execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),result.parentCommit);let flag='wx';if(process.argv.includes('--refresh-uncommitted')){let untracked=false;try{execFileSync('git',['ls-files','--error-unmatch',file],{stdio:'pipe'});}catch(e){assert.equal(e.status,1);untracked=true;}assert(untracked,'Never overwrite tracked history');flag='w';}await writeFile(file,text,{flag});}
+console.log(JSON.stringify({transitionHash:hash(result),draftedTopics:2,pendingWordingClarifications:6,unchangedTopics:display.structures.length*9-8}));

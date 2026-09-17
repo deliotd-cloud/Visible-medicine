@@ -57,9 +57,10 @@ introduced.
 
 ## Remaining work
 
-Anatomy currently contains a source-orientation draft. The other eight teaching
-tabs deliberately remain pending; they are not counted as completed clinical
-content. Add referenced Function/Clinical/Pathology/imaging/assessment drafts
+Anatomy contains a source-orientation draft. Referenced Function and Clinical
+drafts now describe pupil/accommodation context and localisation limits; see
+`SHORT_CILIARY_TEACHING.md`. The other six teaching tabs deliberately remain
+pending; they are not counted as completed clinical content. Add supported drafts
 without treating mesh components as a normal nerve count or asserting continuous
 fibre routes. The owner's revision-bound radiologist review must assess actual
 shape, relationships, incompleteness and wording. Real-device, staging/hosted,
