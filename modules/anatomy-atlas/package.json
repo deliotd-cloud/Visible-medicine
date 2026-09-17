@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "iliac-arterial-imaging:test": "node scripts/pin-iliac-arterial-imaging.mjs --check && node scripts/record-iliac-arterial-imaging.mjs --check && node scripts/validate-iliac-arterial-imaging.mjs",
     "forearm-arterial-imaging:test": "node scripts/pin-forearm-arterial-imaging.mjs --check && node scripts/record-forearm-arterial-imaging.mjs --check && node scripts/validate-forearm-arterial-imaging.mjs",
     "iliac-venous-imaging:test": "node scripts/pin-iliac-venous-imaging.mjs --check && node scripts/record-iliac-venous-imaging.mjs --check && node scripts/validate-iliac-venous-imaging.mjs",
     "lower-venous-imaging:test": "node scripts/pin-lower-venous-imaging.mjs --check && node scripts/record-lower-venous-imaging.mjs --check && node scripts/validate-lower-venous-imaging.mjs",

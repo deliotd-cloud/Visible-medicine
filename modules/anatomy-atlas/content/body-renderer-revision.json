@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "029dfc7b7a265df15d84008ecaac8092dcb9b1118a75e4c17b340cbcdfb9a71d"
+      "sha256": "ff396dc4d272a7e55742973e5bba16b00bd3f496c610267d6bedb86780a1e5a2"
     },
     {
       "path": "app/body-education-link.ts",
@@ -739,6 +739,14 @@
     {
       "path": "content/hra-renal-teaching.ts",
       "sha256": "71062f6e1be8255d660575d45ec19099b644d9383a8d0318a3e013ce5f952ac6"
+    },
+    {
+      "path": "content/iliac-arterial-imaging-pins.json",
+      "sha256": "6abb3fc545c8810c55ad12acb14c55cde194874e6d181193a38f33a0a257a6a9"
+    },
+    {
+      "path": "content/iliac-arterial-imaging.ts",
+      "sha256": "1977792c07f8410c98babe944a55ceb0a08741273a34cc19187cad61a6fdda67"
     },
     {
       "path": "content/iliac-venous-imaging-pins.json",
@@ -1701,6 +1709,10 @@
       "sha256": "83c90dd94edad6ae87c34ac31ee25af0f2896d27ce47fd41e2465b4fe7ef408f"
     },
     {
+      "path": "lib/iliac-arterial-imaging.ts",
+      "sha256": "88f5f3395a81f9712cbccc5dfdf5c111a03013012ecca26597383ac6662ec17d"
+    },
+    {
       "path": "lib/iliac-venous-imaging.ts",
       "sha256": "67be90455b641db01288ce8a4fe837f2f20082b0b713840835971bd42c4ef4f2"
     },
@@ -2326,7 +2338,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "1733c53003a3e2ad9736819586cfbc13fa744a7dad73d7c9a057093f9aae7f23"
+      "sha256": "441d50b15079b0b7e09bd3b2f167cfac76eda45c21328d9615900aede6350e40"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2525,5 +2537,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "2d633c3a91f8fc94d4cd155325627266cae816e65f4162191628009fcbbfa110"
+  "sha256": "845ff21188987552f268d740877b01c354586844e15d6766b6aa1398925cb160"
 }
