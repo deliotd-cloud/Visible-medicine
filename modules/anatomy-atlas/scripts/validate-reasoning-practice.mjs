@@ -77,20 +77,23 @@ const create = (
   random = () => 0.314159,
 ) => api.createPracticeSession(scope, bundles, options(extra), random);
 const bound = all.filter(api.reasoningConceptFor);
-same(api.reasoningConcepts.length, 100);
-same(bound.length, 196);
+same(api.reasoningConcepts.length, 104);
+same(bound.length, 204);
 same(bound.filter((s) => s.region === 'shoulder-arm').length, 20);
 same(bound.filter((s) => s.region === 'forearm').length, 12);
 same(bound.filter((s) => s.region === 'hand').length, 20);
 same(bound.filter((s) => s.region === 'thigh').length, 24);
 same(bound.filter((s) => s.region === 'leg').length, 28);
 same(bound.filter((s) => s.region === 'foot').length, 16);
-same(bound.filter((s) => s.region === 'head-neck').length, 40);
+same(bound.filter((s) => s.region === 'head-neck').length, 48);
 same(bound.filter((s) => s.region === 'spine').length, 24);
 same(bound.filter((s) => s.region === 'thorax').length, 10);
 same(bound.filter((s) => s.region === 'abdomen').length, 2);
-same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 100);
-same(hash(JSON.stringify(api.reasoningConcepts.filter(c => !c.key.startsWith('trunk-')))),
+same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 104);
+same(hash(JSON.stringify(api.reasoningConcepts.filter(c => !c.key.startsWith('neck-')))),
+  'caafb323ca7d5a04971f91ad369d68c3a8da5e43839b39d8cd76192d1497bad2',
+  'All 100 preceding concepts remain unchanged and in order');
+same(hash(JSON.stringify(api.reasoningConcepts.filter(c => !c.key.startsWith('trunk-') && !c.key.startsWith('neck-')))),
   '309529bda0dd03063b56bfb2af9272fba105d083f8cad728008d1095c92cc9d1',
   'All 80 previously authored concepts remain unchanged');
 same(
@@ -342,7 +345,7 @@ for (const count of [1, 5, 10, 20, 100, NaN, Infinity, -10]) {
   same(
     create(all, { count }).questions.length,
     Math.min(
-      100,
+      104,
       Math.max(1, Math.min(20, Math.floor(Number.isFinite(count) ? count : 5))),
     ),
   );
@@ -354,9 +357,18 @@ for (const value of [NaN, Infinity, -Infinity, -1, 0, 1, 20])
   );
 same(create(all, { id: 0 }), null);
 same(create(all, { id: 1.5 }), null);
-const newConcepts = api.reasoningConcepts.filter(c => c.key.startsWith('trunk-'));
+const newConcepts = api.reasoningConcepts.filter(c => c.key.startsWith('trunk-') || c.key.startsWith('neck-'));
 const referenceWords = {};
-same(newConcepts.length, 20);
+same(newConcepts.length, 24);
+const neckConcepts = newConcepts.filter(c => c.key.startsWith('neck-'));
+same(neckConcepts.length, 4);
+for (const side of ['left', 'right']) {
+  const scope = bound.filter(s => s.laterality === side && api.reasoningConceptFor(s).key.startsWith('neck-'));
+  const session = create(scope);
+  same(session.questions.length, 4, 'All four neck concepts playable on each actual source side');
+  for (const q of session.questions) same(q.choices.length, 4, 'All four same-side neck choices loaded');
+  for (const target of scope) same(create([target]), null, 'No lone-neck-target fallback');
+}
 for (const concept of newConcepts) {
   for (const ref of concept.references) referenceWords[ref.url] = (referenceWords[ref.url] ?? 0) + (concept.prompt + ' ' + concept.explanation).split(/\s+/).length;
   const identities = bound.filter(s => api.reasoningConceptFor(s).key === concept.key);
@@ -669,18 +681,7 @@ const report = {
   negativeIdentityCases: negativeCases,
   concepts: api.reasoningConcepts.length,
   exactRepresentations: bound.length,
-  regionalConcepts: {
-    'shoulder-arm': 10,
-    forearm: 6,
-    hand: 10,
-    thigh: 12,
-    leg: 14,
-    foot: 8,
-    'head-neck': 20,
-    spine: 12,
-    thorax: 7,
-    abdomen: 1,
-  },
+  regionalConcepts: Object.fromEntries([...new Set(api.reasoningConcepts.map(c => c.region))].map(region => [region, api.reasoningConcepts.filter(c => c.region === region).length])),
   multiPartRepresentations: bound.filter((s) => s.sources.length > 1).length,
   sharedRegionConcepts: { pelvis: 2, abdomen: 1, thigh: 1 },
   sharedRegionNote: 'Membership does not guarantee question eligibility without a curated visible alternative; psoas remains unavailable in thigh-only reasoning.',

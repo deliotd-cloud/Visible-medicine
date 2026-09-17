@@ -2,7 +2,39 @@
 
 Open **Practice → Practice options → Apply anatomy · draft** in a body region. Spine & back, Thorax and Abdomen now join the existing head/neck and limb regions. Whole-body practice uses concepts whose targets and alternatives are loaded and visible. Pelvis shares two gluteal concepts; Abdomen currently offers external oblique and the shared lumbar rotator, not a complete abdominal-wall set. Narrow scopes with no valid alternative show an explicit unavailable state. No new top-level control or note tab was added.
 
-One hundred original draft concepts bind to 196 existing representations: the previous 80 concepts/160 sided selections plus 20 trunk/back concepts/36 selections. The extension has sixteen paired concepts and four explicitly midline-tagged concepts (diaphragm and three bilateral intercostal groups). Nine representations have multiple files; complete official source membership and retained order are required. Pectoralis major alone explicitly uses the `partof` source tree; earlier bindings still default to `isa`. No label matching, relabelled sides, inferred nerves or new meshes are introduced. Existing 80 question records remain hash-pinned unchanged.
+One hundred and four original draft concepts bind to 204 existing representations: the previous 100 concepts/196 selections plus four neck concepts/eight sided selections. The preceding trunk extension has sixteen paired concepts and four explicitly midline-tagged concepts (diaphragm and three bilateral intercostal groups). Nine representations have multiple files; complete official source membership and retained order are required. Pectoralis major alone explicitly uses the `partof` source tree; earlier bindings still default to `isa`. No label matching, relabelled sides, inferred nerves or new meshes are introduced. All preceding 100 question records remain hash-pinned unchanged and in order.
+
+## Neck attachment extension — 17 September 2026
+
+Four new original draft questions distinguish anterior/middle/posterior scalene
+and sternocleidomastoid. Eight exact existing isa/FMA/side/file/head-neck
+bindings retain their complete official membership. The other three same-side
+muscles are curated alternatives; a target cannot become a one-choice question
+when its alternatives are hidden or unavailable. No mesh, procedure, simulated
+movement, new panel or validated competency claim is added.
+
+Factual references were opened and checked directly: [UAMS head/neck muscle
+anatomy](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-head-and-neck/)
+and the [University of Iowa neck anatomy table](https://iowaprotocols.medicine.uiowa.edu/protocols/posterolateral-neck-dissection-and-anatomy).
+The [Texas Tech first-rib reference](https://anatomy.ttuhscep.edu/anatomytables/bones_alpha.html)
+cross-checks the tubercle landmark. The questions distinguish tubercle versus
+posterior first-rib attachment, second-rib attachment and the mastoid route.
+No fixed vertebral origin/root ranges are taught where reference tables differ.
+
+Only short original prompts/explanations and factual links are included:
+103 words attributable to the new UAMS-linked records and98 to Iowa. These
+public university pages are not commercial grants for their figures or tables;
+no illustrations, source tables, article text, patient data or question banks
+are imported or relicensed. Existing notices and commercial obligations remain.
+
+The existing validator now checks104 concepts/204 representations, all four neck
+concepts on each side, exact identity mutations, answer-once/skip feedback and
+the unchanged preceding100-concept hash. Regional counts are computed from the
+actual registry, not hard-coded report totals. Local browser evidence is recorded
+in the coordinating checkpoint and work/neck-reasoning-browser-20260917.json;
+do not infer a browser pass from source counts alone. All new questions retain
+draft status pending the owner's anatomical/educator review. This is not complete
+neck teaching or evidence of clinical, physical-device or hosted acceptance.
 
 Shoulder/arm: supraspinatus, infraspinatus, subscapularis, teres minor/major, serratus anterior, brachialis, coracobrachialis and the long heads of biceps/triceps. Forearm: pronator quadratus, supinator, brachioradialis, extensor carpi radialis longus, flexor carpi radialis and flexor pollicis longus. These sixteen earlier question records are hash-pinned unchanged by the hand extension.
 

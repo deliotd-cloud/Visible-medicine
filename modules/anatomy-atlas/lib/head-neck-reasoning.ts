@@ -12,11 +12,71 @@ const vocalisReference = [
     url: 'https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-head-and-neck/',
   },
 ];
+const neckAttachmentReference = [{
+  title: 'University of Iowa: posterior neck muscle anatomy',
+  url: 'https://iowaprotocols.medicine.uiowa.edu/protocols/posterolateral-neck-dissection-and-anatomy',
+}];
 
 // Original drafts, not a copied question bank. Multi-part identities bind all
 // retained source files in order, without assuming symmetric segmentation.
 // Source selections do not simulate gaze, swallowing, voice or nerve function.
 export const headNeckReasoningConcepts: readonly ReasoningConcept[] = [
+  {
+    key: 'neck-anterior-scalene',
+    region: 'head-neck',
+    bindings: [
+      { fma: 'FMA13393', side: 'left', file: 'FJ1570' },
+      { fma: 'FMA13392', side: 'right', file: 'FJ1592' },
+    ],
+    prompt: 'Which neck muscle reaches the scalene tubercle of rib one, rather than the first-rib surface behind the subclavian artery?',
+    explanation: 'Anterior scalene attaches at the scalene tubercle. Middle scalene also reaches rib one, but behind the artery; posterior scalene reaches rib two. These landmarks do not define a safe procedural route.',
+    distractors: ['neck-middle-scalene', 'neck-posterior-scalene', 'neck-sternocleidomastoid'],
+    references: vocalisReference.map(ref => ({ ...ref, title: 'UAMS: neck muscle attachments' })),
+    readiness: 'draft',
+    revision: 1,
+  },
+  {
+    key: 'neck-middle-scalene',
+    region: 'head-neck',
+    bindings: [
+      { fma: 'FMA13391', side: 'left', file: 'FJ1571' },
+      { fma: 'FMA13390', side: 'right', file: 'FJ1593' },
+    ],
+    prompt: 'Among these neck muscles, which attaches to rib one behind its subclavian-artery groove, rather than at the scalene tubercle?',
+    explanation: 'Middle scalene has this posterior first-rib attachment. Anterior scalene reaches the tubercle, while posterior scalene reaches rib two. Shared rib-elevation actions alone would not distinguish the two first-rib muscles.',
+    distractors: ['neck-anterior-scalene', 'neck-posterior-scalene', 'neck-sternocleidomastoid'],
+    references: neckAttachmentReference,
+    readiness: 'draft',
+    revision: 1,
+  },
+  {
+    key: 'neck-posterior-scalene',
+    region: 'head-neck',
+    bindings: [
+      { fma: 'FMA13389', side: 'left', file: 'FJ1572' },
+      { fma: 'FMA13388', side: 'right', file: 'FJ1594' },
+    ],
+    prompt: 'Which of these scalene muscles usually ends on rib two, distinguishing it from the two scalenes attached to rib one?',
+    explanation: 'Posterior scalene reaches rib two. Anterior and middle scalene reach rib one at different sites. This distinguishes the usual attachment pattern, not an individual patient variant or simulated respiratory movement.',
+    distractors: ['neck-anterior-scalene', 'neck-middle-scalene', 'neck-sternocleidomastoid'],
+    references: neckAttachmentReference,
+    readiness: 'draft',
+    revision: 1,
+  },
+  {
+    key: 'neck-sternocleidomastoid',
+    region: 'head-neck',
+    bindings: [
+      { fma: 'FMA13409', side: 'left', file: 'FJ1573' },
+      { fma: 'FMA13408', side: 'right', file: 'FJ1595' },
+    ],
+    prompt: 'Which muscle connects the manubrium and medial clavicle to the mastoid region and helps turn the face towards the opposite side when acting unilaterally?',
+    explanation: 'Sternocleidomastoid combines these attachments with contralateral rotation. The scalene alternatives attach to upper ribs, not the mastoid region. Its source mesh remains one selection; separate heads are not inferred.',
+    distractors: ['neck-anterior-scalene', 'neck-middle-scalene', 'neck-posterior-scalene'],
+    references: vocalisReference.map(ref => ({ ...ref, title: 'UAMS: sternocleidomastoid anatomy' })),
+    readiness: 'draft',
+    revision: 1,
+  },
   {
     key: 'head-medial-rectus',
     region: 'head-neck',

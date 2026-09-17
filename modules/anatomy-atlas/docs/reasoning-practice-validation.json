@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "checks": 10611,
-  "negativeIdentityCases": 3000,
-  "concepts": 100,
-  "exactRepresentations": 196,
+  "checks": 10941,
+  "negativeIdentityCases": 3120,
+  "concepts": 104,
+  "exactRepresentations": 204,
   "regionalConcepts": {
     "shoulder-arm": 10,
     "forearm": 6,
@@ -11,10 +11,10 @@
     "thigh": 12,
     "leg": 14,
     "foot": 8,
-    "head-neck": 20,
+    "head-neck": 24,
     "spine": 12,
-    "thorax": 7,
-    "abdomen": 1
+    "abdomen": 1,
+    "thorax": 7
   },
   "multiPartRepresentations": 9,
   "sharedRegionConcepts": {
@@ -25,6 +25,8 @@
   "sharedRegionNote": "Membership does not guarantee question eligibility without a curated visible alternative; psoas remains unavailable in thigh-only reasoning.",
   "groupedOrMidlineRepresentations": 4,
   "newReferenceWords": {
+    "https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-head-and-neck/": 103,
+    "https://iowaprotocols.medicine.uiowa.edu/protocols/posterolateral-neck-dissection-and-anatomy": 98,
     "https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/mml/psmj.htm": 43,
     "https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/mml/rota.htm": 48,
     "https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/mml/ili.htm": 40,
@@ -45,7 +47,7 @@
     "catalog": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
     "officialElementIndex": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf",
     "officialPartofElementIndex": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea",
-    "questions": "caafb323ca7d5a04971f91ad369d68c3a8da5e43839b39d8cd76192d1497bad2"
+    "questions": "6aa090bb8f9142fd266af59df995b4c2c7b7f8bef425318c34ebf7332cb69899"
   },
   "verification": [
     "Official complete FMA/file membership",
