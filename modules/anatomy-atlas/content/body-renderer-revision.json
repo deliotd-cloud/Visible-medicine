@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "239bfab17bdafde7857cb2c1b6db050be8b67066b62fe05c751bd02cfa78e976"
+      "sha256": "ff46d5bfd13937476ca7fe5f887902c28ba8d7fb0404413494c9fef93759b050"
     },
     {
       "path": "app/body-explorer.css",
@@ -671,6 +671,14 @@
     {
       "path": "content/inferior-thyroid-context-pins.json",
       "sha256": "1928f2ecce49146511325abe3fe6331291dcbbbb0ca6308f99e95be2353f07f8"
+    },
+    {
+      "path": "content/laryngeal-muscle-teaching-pins.json",
+      "sha256": "b0935e1a49d5c122ac90981b04d229f8af9848eb6d467723d004a36701995bba"
+    },
+    {
+      "path": "content/laryngeal-muscle-teaching.ts",
+      "sha256": "546ae11608072f7ee5f284fae0834e6d8e3d048fb166f57f880205264d057e95"
     },
     {
       "path": "content/leg-attachment-pins.json",
@@ -1525,6 +1533,10 @@
       "sha256": "adb043e56456f63e8f8f5f110c984f3706c8904a6267c6415260c7d0c8973fb3"
     },
     {
+      "path": "lib/laryngeal-muscle-teaching.ts",
+      "sha256": "e88a795a04301517a83347da1604b61ea9a56227a4bcf0961cc8acf4165d8425"
+    },
+    {
       "path": "lib/leg-attachments.ts",
       "sha256": "6196950ca893ac2afbeb3fa40ec9482fa947c0b457ec9a0040170fcdc46b0448"
     },
@@ -2022,7 +2034,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "d8fad3a3bea09537b5ec95ef6af1e79aefdf5908ec721295a536f0e436111c8e"
+      "sha256": "c5a6a74dc4923345b87fca12007ccf74049e2d7501739338fffcce7b27672b07"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2217,5 +2229,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "6af4180569d68996f9a77fe6cff3d6a455aa8bc2c8926c01ac631473c2560d79"
+  "sha256": "da9947cab8e10717d1fa06d54a264d9e44019251e5d789ffa3100b2e2c31868a"
 }

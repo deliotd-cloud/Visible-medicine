@@ -1,5 +1,23 @@
 # Third-party notices
 
+## Intrinsic laryngeal muscle teaching — 17 September 2026
+
+Four families across seven exact source selections receive original concise
+Anatomy/Function notes. TTUHSC El Paso's Larynx and Neck table is a linked factual
+cross-check only; no table text/layout or illustration is reproduced and no
+open licence for that site's expressive material is claimed. Motor context is
+adapted from Montoya S, Portanova A, Bhatt AA, *A radiologic review of hoarse voice
+from anatomic and neurologic perspectives*, Insights Imaging10:108 (2019),
+https://doi.org/10.1186/s13244-019-0786-7, under the article's CC BY4.0 grant.
+Author/title/DOI credit, https://creativecommons.org/licenses/by/4.0/ and an
+original-summary adaptation notice appear with each draft; no endorsement is
+implied. No article figure, scan, table, protocol or treatment advice is included.
+
+Existing BodyParts3D licensing/credits and source holds remain. No new model,
+font, texture, package, paid API or mandatory fee is added. Original app code
+retains its existing licence; this text-reference decision is not project-wide
+legal or clinical clearance. See docs/LARYNGEAL_MUSCLE_REFERENCES_20260917.md.
+
 ## Corpus-spongiosum clinical context — 17 September 2026
 
 Two original adapted teaching summaries reference NCI SEER Training Modules:

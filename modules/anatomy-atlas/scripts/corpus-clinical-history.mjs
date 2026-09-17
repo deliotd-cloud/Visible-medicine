@@ -2,6 +2,7 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
+import {authoringBeforeLaryngealMuscleTeaching} from './laryngeal-muscle-teaching-history.mjs';
 import pins from '../content/corpus-clinical-pins.json' with {type:'json'};
 import after from '../content/corpus-clinical.transition.json' with {type:'json'};
 
@@ -10,6 +11,7 @@ const snapshot=(api,display)=>({body:display.structures.map(s=>({id:s.id,section
 
 /** Remove only the newest corpus-spongiosum clinical and fallback-copy edits. */
 export function authoringBeforeCorpusClinical({api,catalog},{deferWholeSnapshot=false}={}){
+  api=authoringBeforeLaryngealMuscleTeaching({api,catalog},{deferWholeSnapshot:true});
   const hash=corpusClinicalHash;
   assert.equal(hash(pins),'1a371a56b2c6b619c12977cdb374fbbe66bf252346c2e75c93bb9fb174b883d1');
   assert.equal(hash(after),'67507c9c7f9d97f3e09b4c43784a4b6cf5a3a018cf46269940e9a9ceed99a263');

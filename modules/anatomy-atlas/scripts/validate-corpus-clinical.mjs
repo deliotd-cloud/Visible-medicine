@@ -7,10 +7,11 @@ import ts from 'typescript';
 import {build} from './workspace-test-build.mjs';
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {authoringBeforeCorpusClinical,corpusClinicalHash as hash} from './corpus-clinical-history.mjs';
+import {authoringBeforeLaryngealMuscleTeaching} from './laryngeal-muscle-teaching-history.mjs';
 import pins from '../content/corpus-clinical-pins.json' with {type:'json'};
 import after from '../content/corpus-clinical.transition.json' with {type:'json'};
 
-const context=await contentContext(),{api}=context,catalog=api.bodyDisplayCatalog(context.catalog),original=JSON.stringify(catalog),before=authoringBeforeCorpusClinical(context);
+const newest=await contentContext(),context={...newest,api:authoringBeforeLaryngealMuscleTeaching(newest)},{api}=context,catalog=api.bodyDisplayCatalog(context.catalog),original=JSON.stringify(catalog),before=authoringBeforeCorpusClinical(context);
 const featureBuilt=await build({stdin:{contents:"export * from './lib/corpus-spongiosum'; export * from './content/corpus-clinical';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
 const feature=await import('data:text/javascript;base64,'+Buffer.from(featureBuilt.outputFiles[0].text).toString('base64'));
 assert.equal(authoringBeforeCorpusClinical({...context,api:before}),before,'All-before state must be idempotent');

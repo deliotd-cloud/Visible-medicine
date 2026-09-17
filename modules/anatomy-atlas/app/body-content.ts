@@ -1,4 +1,5 @@
 import { centralVesselImagingLesson } from '../lib/central-vessel-imaging';
+import { laryngealMuscleTeachingLesson } from '../lib/laryngeal-muscle-teaching';
 import { thoracicBranchImagingLesson } from '../lib/thoracic-branch-imaging';
 import { abdominalBranchImagingLesson } from '../lib/abdominal-branch-imaging';
 import {
@@ -408,6 +409,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (handVesselClinical) return handVesselClinical;
   const lowerLimbVesselClinical = lowerLimbVesselClinicalLesson(s, tab);
   if (lowerLimbVesselClinical) return lowerLimbVesselClinical;
+  const laryngealMuscleTeaching = laryngealMuscleTeachingLesson(s, tab);
+  if (laryngealMuscleTeaching) return laryngealMuscleTeaching;
   const axial =
     axialGroupFor(s.fmaId) ??
     headDetailGroupFor(s.fmaId) ??
