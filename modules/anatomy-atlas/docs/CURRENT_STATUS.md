@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Genicular imaging](GENICULAR_IMAGING.md) adds eighteen CT/MRI/Ultrasound draft placements across ten existing arterial selections. CBCT is distinguished from routine CT; MRI guidance is limited to the inferior medial pair and ultrasound observations to three branch pairs. Unsupported sections remain pending. Existing panels, geometry and recipes are unchanged; no images, procedures or clinical approval are supplied.
+
 [Iliotibial and long-plantar imaging](TRACT_PLANTAR_IMAGING.md) adds six MRI/Ultrasound draft placements across four existing selections. Local scan coverage and fine attachment anatomy remain distinct from broad donor surfaces. Long-plantar Ultrasound, CT and X-ray remain pending. Existing tabs, other teaching, geometry and dissection recipes are unchanged; no scans or clinical approval are supplied.
 
 [Iliac arterial imaging](ILIAC_ARTERIAL_IMAGING.md) adds sixteen CT/MRI/Ultrasound draft placements across six existing common, external and internal iliac selections. Eight modality texts and three anatomical orientation notes reuse the current inspector. Internal-iliac Ultrasound and X-ray remain pending; other teaching, geometry and dissection recipes are unchanged. No scans, patient registration, access grant or clinical approval is supplied.
@@ -143,10 +145,10 @@ Counts are representations with displayed copy, not unique lessons, complete top
 | --- | ---: | ---: | ---: | ---: |
 | Anatomy | 1101 | 2 | 0 | 0 |
 | Function | 1098 | 0 | 5 | 0 |
-| CT | 817 | 0 | 286 | 0 |
-| MRI | 779 | 0 | 324 | 0 |
+| CT | 827 | 0 | 276 | 0 |
+| MRI | 781 | 0 | 322 | 0 |
 | X-ray | 344 | 0 | 759 | 0 |
-| Ultrasound | 536 | 0 | 567 | 0 |
+| Ultrasound | 542 | 0 | 561 | 0 |
 | Pathology | 1092 | 0 | 11 | 0 |
 | Clinical | 1096 | 0 | 7 | 0 |
 | Quiz notes | 71 | 0 | 1 | 1031 |

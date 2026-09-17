@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "15d2707f8b6eab880d2552e99ce4b317b8454570dbd8bf78c2172ae5468b06cf"
+      "sha256": "1a84d6a813ca956be15153f957ff0e328ed898e4ffcea1f196a59a5521ed4a82"
     },
     {
       "path": "app/body-education-link.ts",
@@ -683,6 +683,14 @@
     {
       "path": "content/genicular-clinical.ts",
       "sha256": "64b316c9ceaafa17e35b2c0c7e7bcc645ddce32822cbc809b2e3f77e477da27a"
+    },
+    {
+      "path": "content/genicular-imaging-pins.json",
+      "sha256": "365a921cf5fa507c682f067df6762dd6759e21c4c686442129bc3f2e3103e9f2"
+    },
+    {
+      "path": "content/genicular-imaging.ts",
+      "sha256": "c95faad0c2c4fe2a5fcc5c6f04e2f1dda92abf1452c9305d4b27c59647f5e259"
     },
     {
       "path": "content/genicular-study-pins.json",
@@ -1633,6 +1641,10 @@
       "sha256": "848eb6e257cde820b951877862f81cc16b4892151b4e1df6b628c4fbaab9e829"
     },
     {
+      "path": "lib/genicular-imaging.ts",
+      "sha256": "2bf7b934b7178723d6f4d258899ebc99a4c6f098bf4d3c4bc3f83778bba8fcf5"
+    },
+    {
       "path": "lib/genicular-study.ts",
       "sha256": "b1654af910c5ac0581a48a76946d71398634bd2d513de778e4e9b92e7bf425cf"
     },
@@ -2366,7 +2378,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "cbb1ddb807a78d2a9f35b8183a0d92f19c3555fee0e44dad0ee15f51dad9312e"
+      "sha256": "3161074d85aa273c869122a860398cf9a89a7a1070d21784494880986a722def"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2565,5 +2577,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "23f4ccc2ef72b5a12f2db7e4a537d1d9883faedeb9b419931c5f2f42a07a2d48"
+  "sha256": "0dea9337e8f4b98aeb78555bf7e5443ce8cc5f01cf1b1338c1b9efc8ba2abd73"
 }

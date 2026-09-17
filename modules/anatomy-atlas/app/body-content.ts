@@ -134,6 +134,7 @@ import { forearmArterialImagingLesson } from '../lib/forearm-arterial-imaging';
 import { iliacArterialImagingLesson } from '../lib/iliac-arterial-imaging';
 import { tractPlantarImagingLesson } from '../lib/tract-plantar-imaging';
 import { abdominalConnectiveImagingLesson } from '../lib/abdominal-connective-imaging';
+import { genicularImagingLesson } from '../lib/genicular-imaging';
 import { limbBoneImagingLesson } from '../lib/limb-bone-imaging';
 import { thoracicBoneImagingLesson } from '../lib/thoracic-bone-imaging';
 import { abdominalOrganImagingLesson } from '../lib/abdominal-organ-imaging';
@@ -290,6 +291,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (deferent) return deferent;
   if (thyroid) return thyroid;
   const genicularClinical = genicularClinicalLesson(s, tab);
+  const genicularImaging = genicularImagingLesson(s, tab);
+  if (genicularImaging) return genicularImaging;
   if (genicularClinical) return genicularClinical;
   const genicular = genicularArteryLesson(s, tab);
   if (genicular) return genicular;

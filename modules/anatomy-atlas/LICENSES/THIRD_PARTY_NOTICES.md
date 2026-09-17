@@ -1060,6 +1060,18 @@ Existing BodyParts3D CC BY 4.0 credit remains; original code/notes retain MIT te
 No dependency, paid service, font, texture or mesh is added. Reference scope and
 population/technique limits: `docs/ILIAC_VENOUS_IMAGING.md`.
 
+# Genicular imaging factual notes (17 September 2026)
+
+Original brief factual notes cite Callese TE et al. (2023),
+doi:10.1007/s00270-023-03411-3, and Sinno E et al. (2020),
+doi:10.1186/s40634-020-00288-w (articles CC BY 4.0), plus Han KH et al. (2019),
+doi:10.17085/apm.2019.14.1.67 (article CC BY-NC 4.0). The latter is a reference
+only, **not a redistributed or commercially licensed asset**. No publisher
+article prose, abstracts, tables, images, PDFs, diagrams or scans are included.
+Existing BodyParts3D attribution is retained; original code/factual notes are
+MIT. No new asset, font, dependency or mandatory fee. Detailed claim/reference
+limits and clinical gates: `docs/GENICULAR_IMAGING.md`.
+
 # Local colonic source review (17 September 2026)
 
 The optional, non-published colonic review derivative separates and recolours six
