@@ -28,6 +28,11 @@ The full-body path copies 47,583,840 geometry-buffer bytes, plus small instance 
 
 ## Verification and acceptance
 
+The [17 September browser baseline](BROWSER_DRAW_BASELINE.md) supplements the
+historical CPU estimates above with six actual desktop native/fallback runs.
+It confirms reduced native API submissions and idle demand rendering, not FPS,
+visual equivalence, production input latency or physical-device acceptance.
+
 `node scripts/validate-body-batching.mjs --check-report` verifies 550 actual surfaces: all 992,437 vertex positions/normals and 5,941,338 indices (1,980,446 triangles) are retained exactly in batch storage. Original hashes remain unchanged after update/disposal. Real Three raycasts match individual meshes for displaced test surfaces, stable identities, hidden selections and context pass-through. Regenerate the report with `--write-report` only after reviewing a changed catalogue/implementation.
 
 `node scripts/validate-body-batch-component.mjs` executes the actual Bundle and batching hook with a controlled React lifecycle: selection/hover, labels, all separation layouts, cut/opacity/ghost fallback, context, exam answer picking, unsupported devices, detailed-view transitions and resource disposal. It checks allocation stability, not simulated GPU output. Existing inspection, screen-side labels, selection visibility, anatomy loading, explode styles, orientation, origin guides and knee study tests also pass.

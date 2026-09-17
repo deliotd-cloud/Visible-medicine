@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-17",
+  "atlasSource": "08ab1698272390ae1d6c2050a8b2e03d4b807cad",
+  "rendererRevision": "e11746480815a06e57af607d33b81ff48b288b7705685675bd5f19631e9cd8db",
+  "environment": "Local development preview localhost:3191; warm cached anatomy; no CPU/network throttling; one ordered run per case.",
+  "trace": {
+    "lcpMs": 544,
+    "cls": 0,
+    "ttfbMs": 85,
+    "lcpElement": "Visible Medicine logo, not the WebGL anatomy",
+    "rawTraceSaved": false,
+    "saveLimitation": "DevTools connector did not permit trace output within the requested workspace path; inline trace summary retained."
+  },
+  "results": [
+    {
+      "name": "whole-body-native",
+      "url": "/",
+      "viewport": [
+        1440,
+        949
+      ],
+      "canvas": [
+        882,
+        576
+      ],
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "gpu": "ANGLE (AMD, AMD Radeon RX 7900 XTX (0x0000744C) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "multiDrawAvailable": true,
+      "activeSystems": [
+        "Show Bones",
+        "Keep selected structure opaque"
+      ],
+      "actions": 24,
+      "observedActions": 24,
+      "renderedFrames": 24,
+      "elapsedMs": 3438.2999999970198,
+      "nativeSubmissionCallsMedian": 28,
+      "logicalSubdrawsMedian": 203,
+      "multiDrawCallsMedian": 5,
+      "submissionSpanMedianMs": 0.3999999910593033,
+      "submissionSpanP95Ms": 0.5,
+      "clickToFirstSubmissionMedianMs": 36.5,
+      "clickToFirstSubmissionP95Ms": 172.8999999910593,
+      "idleWindowMs": 700,
+      "idleRenderedFrames": 0,
+      "heapUsedBytes": 286921667,
+      "notes": "Instrumented local development renderer. Native submissions, not GPU-completion time or FPS. Timed synthetic button activations, not INP. Heap excludes driver/GPU memory. No network load comparison."
+    },
+    {
+      "name": "whole-body-forced-fallback",
+      "url": "/",
+      "viewport": [
+        1440,
+        949
+      ],
+      "canvas": [
+        882,
+        576
+      ],
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "gpu": "ANGLE (AMD, AMD Radeon RX 7900 XTX (0x0000744C) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "multiDrawAvailable": false,
+      "activeSystems": [
+        "Show Bones",
+        "Keep selected structure opaque"
+      ],
+      "actions": 24,
+      "observedActions": 24,
+      "renderedFrames": 24,
+      "elapsedMs": 3551.2000000029802,
+      "nativeSubmissionCallsMedian": 203,
+      "logicalSubdrawsMedian": 203,
+      "multiDrawCallsMedian": 0,
+      "submissionSpanMedianMs": 0.5999999940395355,
+      "submissionSpanP95Ms": 0.7000000029802322,
+      "clickToFirstSubmissionMedianMs": 43.599999994039536,
+      "clickToFirstSubmissionP95Ms": 195.70000000298023,
+      "idleWindowMs": 700,
+      "idleRenderedFrames": 0,
+      "heapUsedBytes": 227810209,
+      "notes": "Instrumented local development renderer. Native submissions, not GPU-completion time or FPS. Timed synthetic button activations, not INP. Heap excludes driver/GPU memory. No network load comparison."
+    },
+    {
+      "name": "head-neck-native",
+      "url": "/regions/head-neck",
+      "viewport": [
+        1440,
+        949
+      ],
+      "canvas": [
+        882,
+        576
+      ],
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "gpu": "ANGLE (AMD, AMD Radeon RX 7900 XTX (0x0000744C) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "multiDrawAvailable": true,
+      "activeSystems": [
+        "Show Bones",
+        "Show Muscles",
+        "Show Organs",
+        "Show Nervous",
+        "Show Vessels",
+        "Show Connective",
+        "Keep selected structure opaque"
+      ],
+      "actions": 24,
+      "observedActions": 24,
+      "renderedFrames": 24,
+      "elapsedMs": 3190.7000000029802,
+      "nativeSubmissionCallsMedian": 155,
+      "logicalSubdrawsMedian": 291,
+      "multiDrawCallsMedian": 7,
+      "submissionSpanMedianMs": 0.7999999970197678,
+      "submissionSpanP95Ms": 1.2999999970197678,
+      "clickToFirstSubmissionMedianMs": 30,
+      "clickToFirstSubmissionP95Ms": 127.29999999701977,
+      "idleWindowMs": 700,
+      "idleRenderedFrames": 0,
+      "heapUsedBytes": 257822737,
+      "notes": "Instrumented local development renderer. Native submissions, not GPU-completion time or FPS. Timed synthetic button activations, not INP. Heap excludes driver/GPU memory. No network load comparison."
+    },
+    {
+      "name": "head-neck-forced-fallback",
+      "url": "/regions/head-neck",
+      "viewport": [
+        1440,
+        949
+      ],
+      "canvas": [
+        882,
+        576
+      ],
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "gpu": "ANGLE (AMD, AMD Radeon RX 7900 XTX (0x0000744C) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "multiDrawAvailable": false,
+      "activeSystems": [
+        "Show Bones",
+        "Show Muscles",
+        "Show Organs",
+        "Show Nervous",
+        "Show Vessels",
+        "Show Connective",
+        "Keep selected structure opaque"
+      ],
+      "actions": 24,
+      "observedActions": 24,
+      "renderedFrames": 24,
+      "elapsedMs": 3246.6000000089407,
+      "nativeSubmissionCallsMedian": 291,
+      "logicalSubdrawsMedian": 291,
+      "multiDrawCallsMedian": 0,
+      "submissionSpanMedianMs": 0.9000000059604645,
+      "submissionSpanP95Ms": 1.2999999970197678,
+      "clickToFirstSubmissionMedianMs": 36,
+      "clickToFirstSubmissionP95Ms": 143.8999999910593,
+      "idleWindowMs": 700,
+      "idleRenderedFrames": 0,
+      "heapUsedBytes": 273310601,
+      "notes": "Instrumented local development renderer. Native submissions, not GPU-completion time or FPS. Timed synthetic button activations, not INP. Heap excludes driver/GPU memory. No network load comparison."
+    },
+    {
+      "name": "whole-body-all-native",
+      "url": "/",
+      "viewport": [
+        1440,
+        949
+      ],
+      "canvas": [
+        882,
+        576
+      ],
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "gpu": "ANGLE (AMD, AMD Radeon RX 7900 XTX (0x0000744C) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "multiDrawAvailable": true,
+      "activeSystems": [
+        "Show Bones",
+        "Show Muscles",
+        "Show Organs",
+        "Show Nervous",
+        "Show Vessels",
+        "Show Connective",
+        "Keep selected structure opaque"
+      ],
+      "actions": 24,
+      "observedActions": 24,
+      "renderedFrames": 24,
+      "elapsedMs": 3697.199999988079,
+      "nativeSubmissionCallsMedian": 560,
+      "logicalSubdrawsMedian": 1103,
+      "multiDrawCallsMedian": 31,
+      "submissionSpanMedianMs": 2.4000000059604645,
+      "submissionSpanP95Ms": 3.7000000029802322,
+      "clickToFirstSubmissionMedianMs": 54.5,
+      "clickToFirstSubmissionP95Ms": 249.29999999701977,
+      "idleWindowMs": 700,
+      "idleRenderedFrames": 0,
+      "heapUsedBytes": 682608098,
+      "notes": "Instrumented local development renderer. Native submissions, not GPU-completion time or FPS. Timed synthetic button activations, not INP. Heap excludes driver/GPU memory. No network load comparison."
+    },
+    {
+      "name": "whole-body-all-forced-fallback",
+      "url": "/",
+      "viewport": [
+        1440,
+        949
+      ],
+      "canvas": [
+        882,
+        576
+      ],
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "gpu": "ANGLE (AMD, AMD Radeon RX 7900 XTX (0x0000744C) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "multiDrawAvailable": false,
+      "activeSystems": [
+        "Show Bones",
+        "Show Muscles",
+        "Show Organs",
+        "Show Nervous",
+        "Show Vessels",
+        "Show Connective",
+        "Keep selected structure opaque"
+      ],
+      "actions": 24,
+      "observedActions": 24,
+      "renderedFrames": 24,
+      "elapsedMs": 3763,
+      "nativeSubmissionCallsMedian": 1103,
+      "logicalSubdrawsMedian": 1103,
+      "multiDrawCallsMedian": 0,
+      "submissionSpanMedianMs": 3.4000000059604645,
+      "submissionSpanP95Ms": 3.7000000029802322,
+      "clickToFirstSubmissionMedianMs": 69.40000000596046,
+      "clickToFirstSubmissionP95Ms": 299.6000000089407,
+      "idleWindowMs": 700,
+      "idleRenderedFrames": 0,
+      "heapUsedBytes": 582852641,
+      "notes": "Instrumented local development renderer. Native submissions, not GPU-completion time or FPS. Timed synthetic button activations, not INP. Heap excludes driver/GPU memory. No network load comparison."
+    }
+  ],
+  "sourceGeometryChanged": false,
+  "applicationCodeChanged": false,
+  "productionPerformance": false,
+  "physicalMobileTested": false,
+  "clinicalApproval": false
+}
