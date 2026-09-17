@@ -1,5 +1,24 @@
 # Third-party notices
 
+## Portal/hepatic venous clinical teaching — 17 September 2026
+
+Original short adaptations credit Arora A, Rajesh S, Meenakshi YS, Sureka B,
+Bansal K, Sarin SK, *Spectrum of hepatofugal collateral pathways in portal
+hypertension: an illustrated radiological review*, Insights Imaging6:559–572
+(2015), https://doi.org/10.1007/s13244-015-0419-8; Kotecha K et al., *Gastric
+venous congestion after pancreatic surgery: A systematic review, metanalysis
+and suggested protocol for assessment and management*, Langenbecks Arch
+Surg411:159(2026), https://doi.org/10.1007/s00423-026-04049-8; and Porrello G,
+Mamone G, Miraglia R, *Budd-Chiari Syndrome Imaging Diagnosis: State of the Art
+and Future Perspectives*, Diagnostics13:2256(2023),
+https://doi.org/10.3390/diagnostics13132256. All three article-specific grants
+are CC BY4.0: https://creativecommons.org/licenses/by/4.0/. Adaptation/credit/
+DOI/licence links are visible with each draft. No endorsement is implied.
+No figures, tables, patient cases, scans, protocols or treatment instructions
+are included. No new model, font, texture, dependency, paid API or mandatory
+service is introduced; existing app/model terms remain. See
+docs/PORTAL_HEPATIC_REFERENCES_20260917.md for audit scope and exclusions.
+
 ## Deep lower-limb vein clinical teaching — 17 September 2026
 
 Six existing selections receive original short Clinical/Pathology drafts.

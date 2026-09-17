@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "f93feebeacfe198b26ca272919c1e499cfc9edbf757b396d0c433d9c835918f5"
+      "sha256": "c97bc6c7660bf1ac6084fa0c4ca7c25ad444b51d02a797ac2af1712e62ea73c2"
     },
     {
       "path": "app/body-explorer.css",
@@ -807,6 +807,14 @@
     {
       "path": "content/pelvic-vein-teaching.ts",
       "sha256": "d5233edff610e402a54b02313d9e1011dec9f9a38f220250a7dc543a2dc4756c"
+    },
+    {
+      "path": "content/portal-hepatic-clinical-pins.json",
+      "sha256": "3de44ba2dfb2c2084e24df547d5ded9e53f622a386f14a1add022ffb2ee9e9ee"
+    },
+    {
+      "path": "content/portal-hepatic-clinical.ts",
+      "sha256": "6e3c1cbc688a2fdd33514c00fefecd4f9d0bab5572b5aebd7ad661f928ce3767"
     },
     {
       "path": "content/pulmonary-teaching.ts",
@@ -1733,6 +1741,10 @@
       "sha256": "f60869bc7638505d9bac15c67c5fff0ced89a32f059151056785d1d86526aa10"
     },
     {
+      "path": "lib/portal-hepatic-clinical.ts",
+      "sha256": "944376d0ecd370f4e4b700e25ddf94951d078d0968026a31d2d635c76c441828"
+    },
+    {
       "path": "lib/portal-veins.ts",
       "sha256": "ea4d982449805f6546b8c8bd856ee8b30cead28f6bd144134170de9f96ae8853"
     },
@@ -2046,7 +2058,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "24abe4dd144747f19a872537fb98d06799bd20344244139b88658e467909b6ab"
+      "sha256": "ae61f7bd713f813108f3d362ec8c561b0b932312eb770bd6d35abcf7bf90b7d4"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2241,5 +2253,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "bf4de4c8dfd32a8e58dcaa508deddfd8b21c3b66852b1c3307509cb0f43420f0"
+  "sha256": "a88d28047c1a7ae2fe91dde3751bb38d74237af67949a25e1c9c91e2c60030d3"
 }

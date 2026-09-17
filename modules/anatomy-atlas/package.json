@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "portal-hepatic-clinical:test": "node scripts/pin-portal-hepatic-clinical.mjs --check && node scripts/record-portal-hepatic-clinical-transition.mjs --check && node scripts/validate-portal-hepatic-clinical.mjs",
     "deep-venous-clinical:test": "node scripts/pin-deep-venous-clinical.mjs --check && node scripts/record-deep-venous-clinical-transition.mjs --check && node scripts/validate-deep-venous-clinical.mjs",
     "pelvis-framing:test": "node scripts/validate-pelvis-framing.mjs",
     "major-organ-function:test": "node scripts/pin-major-organ-function.mjs --check && node scripts/record-major-organ-function-transition.mjs --check && node scripts/validate-major-organ-function.mjs",

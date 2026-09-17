@@ -1,0 +1,71 @@
+{
+  "parentCommit": "b1240f9c9a47ab641ffe0f5297cf99a59c84f7af",
+  "previousAllLessonsAndRecipesHash": "6bb9dbc2ea42453a7c90abd5fe257107d28a3d28dbd011153e6446d3ae7ea137",
+  "currentAllLessonsAndRecipesHash": "94b9f1884836d72e7019d2a9f2e8c2f39b7f375178c357c625a36c2f26762eb6",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:splenic-vein",
+      "family": "splenic",
+      "sections": {
+        "clinical": "9109d7b30f37efd4037dfa946f0be20dea80263f7ef17b4a49bdbdb614a09f24",
+        "pathology": "8296e4f6d5982a13bf5a56b5802c7cd8ee99947cb7c3d620a4745614641f0cb7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-gastroepiploic-vein",
+      "family": "gastroLeft",
+      "sections": {
+        "clinical": "e231e1298384cd0e8a5760dce1cf1bd1145757be9828f66a9315266b970744e0",
+        "pathology": "a3d21d889626a3bf149a2eae62bc50a7c4f0b19dad08354ddefa5d797a36d5cf"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-gastroepiploic-vein",
+      "family": "gastroRight",
+      "sections": {
+        "clinical": "6b9530338291112ef6a9c66bd116fe4d943e2413002b4e18cfa0bd45922d0cd8",
+        "pathology": "8a52a028079c0ba7317483776a2212604c182047d5e368b4e4c68131f249f0c7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-gastric-vein",
+      "family": "gastricLeft",
+      "sections": {
+        "clinical": "7e3780ece1653ad947b584a93d77d0c5dc91b68126dfc08f0da7ab9f8f40708b",
+        "pathology": "5877d128cdb86752f6bd1f72223cf2d4ac6cf8b93fd974e9bae84a9a59423c09"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein",
+      "family": "gastricRight",
+      "sections": {
+        "clinical": "6179f3c2e9ffc2d85d9a7008dea73f9d2cd23cb17199891013c27b89bf4e648c",
+        "pathology": "a2bea3dc4e907f2f5c62b9b06a290c187a0eb4810770298a038ca9407e171789"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:middle-hepatic-vein",
+      "family": "hepaticMiddle",
+      "sections": {
+        "clinical": "9f3caa8f7d2736e2791d3577c1bf714695675e0cfc16ee1d8fcc10b97b99b0b3",
+        "pathology": "6f25367043f5e29bb35ab91351dd8dfcca5cac7185646265736fcabd8b4b8bc8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:tributary-of-right-hepatic-vein",
+      "family": "hepaticRight",
+      "sections": {
+        "clinical": "84c7e6cbe3b95db55d341534e3def6e9c27e414b97ce51d42026c1ff9907f868",
+        "pathology": "7ca78aa17315bb019dd4628ec66f6aa745e295c795fa82032126eaba3f6f6485"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein",
+      "family": "hepaticLeft",
+      "sections": {
+        "clinical": "1372dc7eb5687d00fd285309b37541df2756feb02459884df19da133942aff69",
+        "pathology": "fefcbb73d71b3a3b7fef4ab85ce585e1dd440930a41733129cf2104739a7d745"
+      }
+    }
+  ]
+}

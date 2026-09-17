@@ -95,6 +95,7 @@ import { brachialVeinLesson } from '../lib/brachial-veins';
 import { tentoriumLesson } from '../lib/tentorium';
 import { deepLegVeinLesson } from '../lib/deep-leg-veins';
 import { deepVenousClinicalLesson } from '../lib/deep-venous-clinical';
+import { portalHepaticClinicalLesson } from '../lib/portal-hepatic-clinical';
 import { portalVeinLesson } from '../lib/portal-veins';
 import { hepaticVeinLesson } from '../lib/hepatic-veins';
 import { longusColliLesson } from '../lib/longus-colli';
@@ -244,6 +245,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (hepaticVein) return hepaticVein;
   const portalVein = portalVeinLesson(s, tab);
   if (portalVein) return portalVein;
+  const portalHepaticClinical = portalHepaticClinicalLesson(s, tab);
+  if (portalHepaticClinical) return portalHepaticClinical;
   const tarsalImaging = tarsalImagingLesson(s, tab);
   if (tarsalImaging) return tarsalImaging;
   const limbBoneImaging = limbBoneImagingLesson(s, tab);

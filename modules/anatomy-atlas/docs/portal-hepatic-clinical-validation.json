@@ -1,0 +1,47 @@
+{
+  "baselineSource": "b1240f9c9a47ab641ffe0f5297cf99a59c84f7af",
+  "sourceSelections": 8,
+  "changedPlacements": 16,
+  "addedDraftPlacements": 16,
+  "previousPendingPlacements": 16,
+  "families": {
+    "splenic": 2,
+    "gastroLeft": 2,
+    "gastroRight": 2,
+    "gastricLeft": 2,
+    "gastricRight": 2,
+    "hepaticMiddle": 2,
+    "hepaticRight": 2,
+    "hepaticLeft": 2
+  },
+  "topics": {
+    "clinical": 8,
+    "pathology": 8
+  },
+  "unchangedTopics": 9902,
+  "bodySchemaRecords": 1102,
+  "actualNoteRenders": 16,
+  "rejectedChangedIdentitySourceAndTopicCases": 652,
+  "strictBeforeHash": "6bb9dbc2ea42453a7c90abd5fe257107d28a3d28dbd011153e6446d3ae7ea137",
+  "strictAfterHash": "94b9f1884836d72e7019d2a9f2e8c2f39b7f375178c357c625a36c2f26762eb6",
+  "sourceBundles": [
+    {
+      "id": "portal-veins",
+      "bytes": 76724,
+      "sha256": "583069160dbd753bb7f64b62667d20134ccbf7554b9bd4cf57b0de0a5a50ee53",
+      "structures": 5
+    },
+    {
+      "id": "hepatic-veins",
+      "bytes": 256984,
+      "sha256": "1f8922b93ec4c92bf6d695de9b75a00fb6f1552522125ca25861b1ed04f403cf",
+      "structures": 3
+    }
+  ],
+  "sourceGeometryChanged": false,
+  "studyRecipesChanged": false,
+  "currentApprovalRecordsChanged": false,
+  "clinicalApproval": false,
+  "imagesOrPatientDataImported": false,
+  "browserOrDeviceAcceptance": false
+}
