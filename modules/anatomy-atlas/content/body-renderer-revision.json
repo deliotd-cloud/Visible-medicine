@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "ff396dc4d272a7e55742973e5bba16b00bd3f496c610267d6bedb86780a1e5a2"
+      "sha256": "27fa9ddf214a040e8b70360e033e3eccb80c7e65c5fe7c0ceff9d888afef9001"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1075,6 +1075,14 @@
     {
       "path": "content/thyroid-imaging.ts",
       "sha256": "d518d47f775d876c802fb804251458e5b72ab328ef2ddbbf2daf5d750684f980"
+    },
+    {
+      "path": "content/tract-plantar-imaging-pins.json",
+      "sha256": "9a9ebc2bcba1c77914492012642ec3046f365e7a407631b1ddb4ed4e7aa5f68b"
+    },
+    {
+      "path": "content/tract-plantar-imaging.ts",
+      "sha256": "fb13e2afca6544f011c51b2ecb028fd4e5ef5d12f77f7c50f8ee82072a46e214"
     },
     {
       "path": "content/trunk-attachment-pins.json",
@@ -2241,6 +2249,10 @@
       "sha256": "d8687a5538d6721a64928065df70b4a2b454dc478929a3ef1e67d8118c2628fd"
     },
     {
+      "path": "lib/tract-plantar-imaging.ts",
+      "sha256": "76274b8dbd47b35d9f446830e292687705c72b330a4eed9a0573fb508b2cce82"
+    },
+    {
       "path": "lib/trunk-attachments.ts",
       "sha256": "eb17e94c4b4bb0c14fedb2d5ecfa6352825a7ade10c2c050a787f3c36d8a7922"
     },
@@ -2338,7 +2350,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "441d50b15079b0b7e09bd3b2f167cfac76eda45c21328d9615900aede6350e40"
+      "sha256": "a62432b6ed3223f527667a9603a4220121832e01b50dab2c6fb77841e8bda9b8"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2537,5 +2549,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "845ff21188987552f268d740877b01c354586844e15d6766b6aa1398925cb160"
+  "sha256": "b24b55061b79668a220b888e366bde9694ecac72de75f34c5c592982fc4b8c56"
 }

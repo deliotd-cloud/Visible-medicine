@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Iliotibial and long-plantar imaging](TRACT_PLANTAR_IMAGING.md) adds six MRI/Ultrasound draft placements across four existing selections. Local scan coverage and fine attachment anatomy remain distinct from broad donor surfaces. Long-plantar Ultrasound, CT and X-ray remain pending. Existing tabs, other teaching, geometry and dissection recipes are unchanged; no scans or clinical approval are supplied.
+
 [Iliac arterial imaging](ILIAC_ARTERIAL_IMAGING.md) adds sixteen CT/MRI/Ultrasound draft placements across six existing common, external and internal iliac selections. Eight modality texts and three anatomical orientation notes reuse the current inspector. Internal-iliac Ultrasound and X-ray remain pending; other teaching, geometry and dissection recipes are unchanged. No scans, patient registration, access grant or clinical approval is supplied.
 
 [Regional and whole-body Education connection](BODY_EDUCATION_CONNECTION.md) exposes the existing imaging bridge to a trusted same-origin Didanix Education host, using current source identities and existing learner controls. Region, side, Practice and separate dissection changes pause linking and cancel pending reveals. Synthetic CT/MRI/X-ray/Ultrasound tests do not connect a real case, grant access or establish registration. Cleared media, independent server entitlements and clinical acceptance remain required.
@@ -142,9 +144,9 @@ Counts are representations with displayed copy, not unique lessons, complete top
 | Anatomy | 1101 | 2 | 0 | 0 |
 | Function | 1098 | 0 | 5 | 0 |
 | CT | 814 | 0 | 289 | 0 |
-| MRI | 775 | 0 | 328 | 0 |
+| MRI | 779 | 0 | 324 | 0 |
 | X-ray | 344 | 0 | 759 | 0 |
-| Ultrasound | 533 | 0 | 570 | 0 |
+| Ultrasound | 535 | 0 | 568 | 0 |
 | Pathology | 1092 | 0 | 11 | 0 |
 | Clinical | 1096 | 0 | 7 | 0 |
 | Quiz notes | 71 | 0 | 1 | 1031 |
