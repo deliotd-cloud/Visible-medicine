@@ -4,12 +4,70 @@ import { execFileSync } from 'node:child_process';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import ts from 'typescript';
+import * as frameworkLink from 'vinext/shims/link';
 import { build } from './workspace-test-build.mjs';
 import { build as componentBuild } from './workspace-component-test-build.mjs';
 const bundled = await build({ stdin: { contents: "export * from './lib/vessel-visibility'; export * from './lib/anatomy-vessels'; export * from './app/dissection-data'; export {bodyDisplayCatalog} from './lib/body-display-catalog';", loader: 'ts', resolveDir: process.cwd() }, bundle: true, write: false, platform: 'node', format: 'esm' });
 const api = await import('data:text/javascript;base64,' + Buffer.from(bundled.outputFiles[0].text).toString('base64'));
 const catalog = api.bodyDisplayCatalog(JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json')));
 const catalogBefore = JSON.stringify(catalog);
+const gitShow=(commit,path)=>execFileSync('git',['show',`${commit}:${path}`],{maxBuffer:8e6});
+const gitJson=(commit,path)=>JSON.parse(gitShow(commit,path).toString());
+const controlParent='e5521766d4035044bd2b057818d6153783a4294e',controlCommit='f271f3f';
+const historicalSourcePaths=[
+  'public/models/bodyparts3d/brachial-veins/catalog.json',
+  'public/models/bodyparts3d/deep-leg-veins/catalog.json',
+  'public/models/bodyparts3d/portal-veins/catalog.json',
+  'public/models/bodyparts3d/hepatic-veins/catalog.json',
+  'public/models/bodyparts3d/cubital-veins/catalog.json',
+  'public/models/bodyparts3d/genicular-arteries/catalog.json',
+  'public/models/bodyparts3d/inferior-thyroid-arteries/catalog.json',
+  'public/models/bodyparts3d/inferior-epigastric-vessels/catalog.json',
+  'public/models/bodyparts3d/pelvic-veins/catalog.json',
+];
+const historicalVessels=[
+  ...gitJson(controlCommit,'public/models/bodyparts3d/full-body/catalog.json').structures,
+  ...historicalSourcePaths.flatMap(path=>gitJson(controlCommit,path).structures),
+].filter(s=>s.system==='vessels');
+const admittedEraSpecs=[
+  {name:'subscapular',commit:'489c25f',path:'public/models/bodyparts3d/subscapular-arteries/catalog.json',count:2,auditSha256:'a598c4e0355de55da4fbdbe73a96f75ad1c0ae8e83641b982a0dbe3613f867e8'},
+  {name:'circumflex-femoral',commit:'82ffc96',path:'public/models/bodyparts3d/circumflex-femoral/catalog.json',count:2,auditSha256:'2371bfb1d42d70621ad056059c70d734bba090171d104696e2af6acb05c19678'},
+  {name:'cranial',commit:'8385c16',path:'public/models/bodyparts3d/cranial-arteries/catalog.json',count:5,auditSha256:'6af13b26ae304a52b20915ba2990fe1497d30f089944836dce712c279272cd9a'},
+  {name:'elbow',commit:'bda1330',path:'public/models/bodyparts3d/elbow-arteries/catalog.json',count:14,auditSha256:'161f22c01b4667002d197e244ebefdb8eb1287405e354f1eb981a2c9345bba49'},
+];
+const admittedEras=await Promise.all(admittedEraSpecs.map(async spec=>({...spec,canonical:gitJson(spec.commit,spec.path),current:JSON.parse(await readFile(spec.path,'utf8'))})));
+function verifyVesselSourceHistory(display,eras=admittedEras){
+  const admittedIds=new Set();
+  for(const era of eras){
+    assert.equal(era.canonical.structures.length,era.count,`${era.name} historical count changed`);
+    assert.equal(era.canonical.auditSha256,era.auditSha256,`${era.name} historical audit changed`);
+    assert.deepEqual(era.current,era.canonical,`${era.name} source record differs from its admitted commit`);
+    for(const source of era.canonical.structures){
+      assert.equal(source.system,'vessels');assert.equal(api.vesselKind(source),'artery');
+      assert(!admittedIds.has(source.id),`Duplicate admitted vessel ${source.id}`);admittedIds.add(source.id);
+      const matches=display.structures.filter(candidate=>candidate.id===source.id);
+      assert.equal(matches.length,1,`Missing or duplicate admitted vessel ${source.id}`);
+      assert.deepEqual(matches[0],source,`Admitted vessel identity/source changed: ${source.id}`);
+    }
+  }
+  const vesselRecords=display.structures.filter(s=>s.system==='vessels');
+  assert.deepEqual(vesselRecords.filter(s=>!admittedIds.has(s.id)),historicalVessels,'Unknown vessel growth or f271 vessel drift');
+  const historicalGroups=api.vesselVisibilityGroups(historicalVessels,historicalVessels.map(s=>s.id));
+  assert.deepEqual(historicalGroups.map(g=>[g.kind,g.total]),[['artery',175],['vein',98]]);
+  const currentGroups=api.vesselVisibilityGroups(vesselRecords,vesselRecords.map(s=>s.id));
+  assert.deepEqual(currentGroups.map(g=>[g.kind,g.total]),[['artery',198],['vein',98]]);
+  return {historicalGroups,currentGroups,admittedIds};
+}
+const sourceHistory=verifyVesselSourceHistory(catalog);
+let negativeMutations=0;
+const unknownGrowth=structuredClone(catalog);unknownGrowth.structures.push({...historicalVessels[0],id:'vm:test:unknown-vessel-growth'});
+assert.throws(()=>verifyVesselSourceHistory(unknownGrowth));negativeMutations++;
+const changedIdentity=structuredClone(catalog);const admittedId=admittedEras[0].canonical.structures[0].id;changedIdentity.structures.find(s=>s.id===admittedId).sources[0].sha256='0'.repeat(64);
+assert.throws(()=>verifyVesselSourceHistory(changedIdentity));negativeMutations++;
+const changedAdmission=structuredClone(admittedEras);changedAdmission[0].current.structures[0].sourceName='unrecorded source identity';
+assert.throws(()=>verifyVesselSourceHistory(catalog,changedAdmission));negativeMutations++;
+const missingAdmission=structuredClone(catalog);missingAdmission.structures=missingAdmission.structures.filter(s=>s.id!==admittedId);
+assert.throws(()=>verifyVesselSourceHistory(missingAdmission));negativeMutations++;
 const {dissectionReducer: reduce, resolveDissection: resolve, initialDissection: initial} = api;
 const snap = ({stageId,focusId,removed,restored}) => ({stageId,focusId,removed,restored});
 let scopes=0, plans=0, componentCallbacks=0, parentCallbacks=0;
@@ -44,7 +102,7 @@ for (const [region, profile] of Object.entries(api.dissectionProfiles)) for (con
 }
 assert.equal(JSON.stringify(catalog),catalogBefore);
 const all=catalog.structures.map(s=>s.id), groups=api.vesselVisibilityGroups(catalog.structures,all);
-assert.deepEqual(groups.map(g=>[g.kind,g.total]),[['artery',184],['vein',98]]);
+assert.deepEqual(groups,sourceHistory.currentGroups);
 assert(groups.every(g=>g.shown===g.total));
 assert.deepEqual(groups.map(g=>g.kind),['artery','vein']);
 const artery=catalog.structures.find(s=>s.system==='vessels'&&api.vesselKind(s)==='artery');
@@ -65,7 +123,9 @@ assert.deepEqual(reduce(restored,{type:'remove-many',ids:[artery.id]}).restored,
 const require=createRequire(import.meta.url), React=require('react');
 const built=await componentBuild({entryPoints:['app/vessel-system-control.tsx'],bundle:true,write:false,format:'cjs',platform:'node'});
 const mod={exports:{}};
-runInNewContext(built.outputFiles[0].text,{module:mod,exports:mod.exports,require,console,process:{env:{NODE_ENV:'test'}}});
+// The app resolves next/link through Vinext; exercise that installed shim in
+// this server-render harness rather than requiring an absent Next package.
+runInNewContext(built.outputFiles[0].text,{module:mod,exports:mod.exports,require:id=>id==='next/link'?frameworkLink:require(id),console,process:{env:{NODE_ENV:'test'}}});
 const render=(Component,props)=>require('react-dom/server').renderToStaticMarkup(React.createElement(Component,props));
 const props={structures:catalog.structures,visibleIds:mixed,enabled:true,disabled:false,canUndo:true,canRedo:false,onVisibility(){},onEnabled(){},onUndo(){},onRedo(){}};
 const closed=render(mod.exports.VesselSystemControl,props);
@@ -100,24 +160,16 @@ for(const exam of [false,true])for(const enabled of [false,true]) {
   assert.equal(actions.length,!exam&&enabled?1:0);parentCallbacks++;
   if(actions.length)assert.deepEqual(actions[0].ids,api.vesselVisibilityAction(catalog.structures,all,'artery',false,false).ids);
 }
-// Preserve the UI-pass baseline, permitting only the subsequent source-bound lesson extension.
-const normalize=text=>text.replaceAll('\r\n','\n');
-const previousLessons=normalize(execFileSync('git',['show','e5521766d4035044bd2b057818d6153783a4294e:app/body-content.ts'],{maxBuffer:8e6}).toString());
-const expectedLessons=previousLessons
-  .replace("import { inferiorThyroidLesson } from '../lib/inferior-thyroid-arteries';", "import { inferiorThyroidLesson } from '../lib/inferior-thyroid-arteries';\nimport { subscapularArteryLesson } from '../lib/subscapular-arteries';")
-  .replace('export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {', 'export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {\n  const subscapular = subscapularArteryLesson(s, tab);\n  if (subscapular) return subscapular;');
-const expectedWithCircumflex=expectedLessons
-  .replace("import { subscapularArteryLesson } from '../lib/subscapular-arteries';", "import { subscapularArteryLesson } from '../lib/subscapular-arteries';\nimport { circumflexFemoralLesson } from '../lib/circumflex-femoral';")
-  .replace('export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {', 'export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {\n  const circumflex = circumflexFemoralLesson(s, tab);\n  if (circumflex) return circumflex;');
-assert.notEqual(expectedLessons,previousLessons);
-assert.notEqual(expectedWithCircumflex,expectedLessons);
-const expectedWithCranial=expectedWithCircumflex
-  .replace("import { circumflexFemoralLesson } from '../lib/circumflex-femoral';", "import { circumflexFemoralLesson } from '../lib/circumflex-femoral';\nimport { cranialArteryLesson } from '../lib/cranial-arteries';")
-  .replace('export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {', 'export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {\n  const cranial = cranialArteryLesson(s, tab);\n  if (cranial) return cranial;');
-assert.notEqual(expectedWithCranial,expectedWithCircumflex);
-assert.equal(normalize(await readFile('app/body-content.ts','utf8')),expectedWithCranial);
-for(const path of ['app/body-scene.tsx','lib/anatomy-vessels.ts','package-lock.json','public/models/bodyparts3d/full-body/catalog.json','content/abdominal-organ-imaging.ts'])
-  assert.deepEqual(await readFile(path),execFileSync('git',['show','e5521766d4035044bd2b057818d6153783a4294e:'+path],{maxBuffer:8e6}));
-const report={scopes,plans,groups,componentCallbacks,parentCallbacks,defaultCollapsed:true,sourcePreserved:true,clinicalApproval:false,browserTesting:false};
+// The UI pass changed no teaching. Check that statement inside the immutable
+// e552 -> f271 era; later source-bound lessons are intentionally out of scope.
+const historicalPreserved=['app/body-scene.tsx','app/body-content.ts','lib/anatomy-vessels.ts','package-lock.json','public/models/bodyparts3d/full-body/catalog.json','content/abdominal-organ-imaging.ts'];
+for(const path of historicalPreserved)assert.deepEqual(gitShow(controlCommit,path),gitShow(controlParent,path),`${path} changed in the accepted UI-control era`);
+const currentPreserved=['lib/anatomy-vessels.ts','package-lock.json','public/models/bodyparts3d/full-body/catalog.json','content/abdominal-organ-imaging.ts'];
+for(const path of currentPreserved)assert.deepEqual(await readFile(path),gitShow(controlParent,path),`${path} drifted after the accepted UI-control era`);
+assert.deepEqual(await readFile('lib/vessel-visibility.ts'),gitShow(controlCommit,'lib/vessel-visibility.ts'));
+const badHistorical=historicalPreserved.map(path=>[path,gitShow(controlCommit,path)]);badHistorical.find(([path])=>path==='app/body-content.ts')[1]=Buffer.from('mutated lesson');
+assert.throws(()=>{for(const [path,bytes] of badHistorical)assert.deepEqual(bytes,gitShow(controlParent,path),`${path} changed`);});negativeMutations++;
+const sourceEras=admittedEras.map(({name,commit,count,auditSha256,canonical})=>({name,commit,count,auditSha256,ids:canonical.structures.map(s=>s.id)}));
+const report={scopes,plans,groups,componentCallbacks,parentCallbacks,defaultCollapsed:true,currentRuntimeCovered:true,currentRawCatalogPreserved:true,historicalControlEra:{parent:controlParent,commit:controlCommit,lessonAndFileBytesPreserved:true,groups:sourceHistory.historicalGroups},sourceEras,negativeMutations,clinicalApproval:false,browserTesting:false};
 await writeFile('docs/vessel-visibility-validation.json',JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify(report));
