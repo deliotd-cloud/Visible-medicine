@@ -31,13 +31,33 @@ const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
     sections: Object.fromEntries(
-      api.contentTabs.map((t) => [t, a.bodyContent(s, t)]),
+      a.contentTabs.map((t) => [t, a.bodyContent(s, t)]),
     ),
   })),
-  shoulder: api.structures,
-  dissectionProfiles: api.dissectionProfiles,
+  shoulder: a.structures,
+  dissectionProfiles: a.dissectionProfiles,
 });
-same(curriculumHash(copy(previous)), before.copyAndRecipeHash);
+const historicalCopy = copy(previous);
+same(curriculumHash(historicalCopy), before.copyAndRecipeHash);
+const mixedCurrentTabs = {
+  ...historicalCopy,
+  body: catalog.structures.map((s) => ({
+    id: s.id,
+    sections: Object.fromEntries(
+      api.contentTabs.map((t) => [t, previous.bodyContent(s, t)]),
+    ),
+  })),
+};
+check(
+  curriculumHash(mixedCurrentTabs) !== before.copyAndRecipeHash,
+  'Current tab enumeration must not satisfy the historical snapshot',
+);
+check(
+  curriculumHash({ ...historicalCopy, shoulder: api.structures }) !==
+    before.copyAndRecipeHash,
+  'Current shoulder teaching must not satisfy the historical snapshot',
+);
+const historicalSerializationNegativeCases = 2;
 same(
   curriculumHash(await copyBeforeShoulderArmCurriculum(context)),
   baseline.copyAndRecipeHash,
@@ -303,7 +323,7 @@ const report = {
   explicitTopicEdits: 46,
   combinedPinnedCurriculumSections: 764,
   sourceIndexChecks,
-  negativeCases: negatives.length,
+  negativeCases: negatives.length + historicalSerializationNegativeCases,
   bodyReadinessAtOrganMilestone: {
     anatomy: counts('anatomy'),
     function: counts('function'),

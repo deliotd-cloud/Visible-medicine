@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import { createHash } from 'node:crypto';
+import { runInNewContext } from 'node:vm';
+import ts from 'typescript';
 import { build } from './workspace-test-build.mjs';
 let assertions = 0;
 const same = (a, b, message) => {
@@ -283,7 +285,8 @@ same(
 );
 // Runtime wiring assertions, not browser simulations: handlers independently gate
 // model picks, answer/skip and advancement, while exit remains available.
-const explorer = (await fs.readFile('app/body-explorer.tsx', 'utf8')).replace(
+const explorerSource = await fs.readFile('app/body-explorer.tsx', 'utf8');
+const explorer = explorerSource.replace(
   /\s+/g,
   ' ',
 );
@@ -304,13 +307,52 @@ check(
     'if (exam || practiceBlocked || (retry && !retryCount)) return;',
   ),
 );
-// Retry readiness uses the actual question count, including concept-aware
-// deduplication, rather than the older raw representation-ID count.
-check(
-  explorer.includes(
-    'const retryCount = practiceQuestionCount( practiceEligible, practiceMode, retryIds, );',
-  ),
-);
+// Execute the actual memo initializer: formatting and memoization are not
+// regressions. Verify its current dependencies, empty retry guard and delegation
+// to concept-aware counting (which may differ from representation-ID count).
+const ast = ts.createSourceFile('body.tsx', explorerSource, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
+const retryInitializers = [];
+function visitRetry(node) {
+  if (ts.isVariableDeclaration(node) && ts.isIdentifier(node.name) && node.name.text === 'retryCount') {
+    check(node.initializer, 'Retry count has an initializer');
+    retryInitializers.push(node.initializer.getText(ast));
+  }
+  ts.forEachChild(node, visitRetry);
+}
+visitRetry(ast);
+same(retryInitializers.length, 1, 'One real retry-count initializer');
+function verifyRetryInitializer(source) {
+  const js = ts.transpileModule('const actual = (' + source + '); actual;', {
+    compilerOptions: {target: ts.ScriptTarget.ES2022},
+  }).outputText;
+  for (const practiceMode of ['find', 'name']) for (const retryIds of [[], ['first', 'second', 'third']]) {
+    const practiceEligible = [{id:'first'}, {id:'second'}, {id:'third'}];
+    let calls = 0, memos = 0;
+    const count = runInNewContext(js, {
+      practiceEligible, practiceMode, retryIds,
+      useMemo(callback, dependencies) {
+        memos++;
+        same([...dependencies], [practiceEligible, practiceMode, retryIds], 'All changing inputs invalidate memo');
+        return callback();
+      },
+      practiceQuestionCount(...args) {
+        calls++;
+        same(args, [practiceEligible, practiceMode, retryIds], 'Use eligible pool, mode and explicit missed IDs');
+        return 2; // Three representations can describe only two question concepts.
+      },
+    });
+    same(count, retryIds.length ? 2 : 0, 'Use question count, not raw IDs or all available questions');
+    same(calls, retryIds.length ? 1 : 0, 'No missed IDs must not count the whole pool');
+    same(memos, 1, 'Execute the actual memo once');
+  }
+}
+verifyRetryInitializer(retryInitializers[0]);
+for (const broken of [
+  'useMemo(() => retryIds.length, [practiceEligible, practiceMode, retryIds])',
+  'useMemo(() => practiceQuestionCount(practiceEligible, practiceMode, retryIds), [practiceEligible, practiceMode, retryIds])',
+  'useMemo(() => retryIds.length ? practiceQuestionCount(practiceEligible, practiceMode) : 0, [practiceEligible, practiceMode, retryIds])',
+  'useMemo(() => retryIds.length ? practiceQuestionCount(practiceEligible, practiceMode, retryIds) : 0, [practiceEligible, practiceMode])',
+]) assert.throws(() => verifyRetryInitializer(broken), /AssertionError/, 'Reject a broken retry-count wiring fixture');
 check(explorer.includes('loadStatus.loaded.length'));
 check(!explorer.includes('required.length - pending.length'));
 check(explorer.includes('structures={sceneStructures}'));
@@ -345,13 +387,15 @@ const result = {
   recipeScopes,
   renderScopes,
   sessions,
+  executedRetryMemoCases: 4,
+  rejectedRetryMemoMutations: 4,
   rows,
   catalogSha256: hash(raw),
   sourceGeometryChanged: false,
   clinicalValidation: false,
   browserInteractionTesting: false,
   limitations:
-    'Pure runtime-helper tests plus static handler/markup wiring checks. No browser fetch failure injection, WebGL/context-loss, touch or assistive-technology acceptance is claimed.',
+    'Historical raw-catalog runtime-helper matrix, current static handler/markup checks and execution of the real retry-count memo initializer with a counting-helper stub. No browser fetch failure injection, WebGL/context-loss, touch or assistive-technology acceptance is claimed.',
 };
 await fs.writeFile(
   'docs/anatomy-loading-validation.json',

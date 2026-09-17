@@ -1,46 +1,48 @@
 {
   "passed": true,
-  "assertions": 113527,
+  "assertions": 118434,
   "scopes": 36,
-  "recipeScopes": 954,
-  "renderScopes": 15264,
-  "sessions": 1905,
+  "recipeScopes": 996,
+  "renderScopes": 15936,
+  "sessions": 1977,
+  "executedRetryMemoCases": 4,
+  "rejectedRetryMemoMutations": 4,
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
       "structures": 1022,
-      "recipes": 16
+      "recipes": 23
     },
     {
       "region": "whole-body",
       "side": "left",
       "structures": 590,
-      "recipes": 16
+      "recipes": 23
     },
     {
       "region": "whole-body",
       "side": "right",
       "structures": 589,
-      "recipes": 16
+      "recipes": 23
     },
     {
       "region": "shoulder-arm",
       "side": "both",
       "structures": 91,
-      "recipes": 13
+      "recipes": 15
     },
     {
       "region": "shoulder-arm",
       "side": "left",
       "structures": 46,
-      "recipes": 13
+      "recipes": 15
     },
     {
       "region": "shoulder-arm",
       "side": "right",
       "structures": 46,
-      "recipes": 13
+      "recipes": 15
     },
     {
       "region": "forearm",
@@ -154,55 +156,55 @@
       "region": "abdomen",
       "side": "both",
       "structures": 94,
-      "recipes": 39
+      "recipes": 40
     },
     {
       "region": "abdomen",
       "side": "left",
       "structures": 76,
-      "recipes": 39
+      "recipes": 40
     },
     {
       "region": "abdomen",
       "side": "right",
       "structures": 74,
-      "recipes": 39
+      "recipes": 40
     },
     {
       "region": "pelvis",
       "side": "both",
       "structures": 65,
-      "recipes": 11
+      "recipes": 14
     },
     {
       "region": "pelvis",
       "side": "left",
       "structures": 37,
-      "recipes": 11
+      "recipes": 14
     },
     {
       "region": "pelvis",
       "side": "right",
       "structures": 37,
-      "recipes": 11
+      "recipes": 14
     },
     {
       "region": "head-neck",
       "side": "both",
       "structures": 275,
-      "recipes": 59
+      "recipes": 60
     },
     {
       "region": "head-neck",
       "side": "left",
       "structures": 160,
-      "recipes": 59
+      "recipes": 60
     },
     {
       "region": "head-neck",
       "side": "right",
       "structures": 160,
-      "recipes": 59
+      "recipes": 60
     },
     {
       "region": "spine",
@@ -227,5 +229,5 @@
   "sourceGeometryChanged": false,
   "clinicalValidation": false,
   "browserInteractionTesting": false,
-  "limitations": "Pure runtime-helper tests plus static handler/markup wiring checks. No browser fetch failure injection, WebGL/context-loss, touch or assistive-technology acceptance is claimed."
+  "limitations": "Historical raw-catalog runtime-helper matrix, current static handler/markup checks and execution of the real retry-count memo initializer with a counting-helper stub. No browser fetch failure injection, WebGL/context-loss, touch or assistive-technology acceptance is claimed."
 }
