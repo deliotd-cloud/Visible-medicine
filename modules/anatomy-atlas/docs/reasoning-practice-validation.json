@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "checks": 10941,
-  "negativeIdentityCases": 3120,
-  "concepts": 104,
-  "exactRepresentations": 204,
+  "checks": 12743,
+  "negativeIdentityCases": 3516,
+  "concepts": 116,
+  "exactRepresentations": 228,
   "regionalConcepts": {
-    "shoulder-arm": 10,
-    "forearm": 6,
+    "shoulder-arm": 13,
+    "forearm": 9,
     "hand": 10,
-    "thigh": 12,
+    "thigh": 18,
     "leg": 14,
     "foot": 8,
     "head-neck": 24,
@@ -18,7 +18,7 @@
   },
   "multiPartRepresentations": 9,
   "sharedRegionConcepts": {
-    "pelvis": 2,
+    "pelvis": 8,
     "abdomen": 1,
     "thigh": 1
   },
@@ -41,13 +41,17 @@
     "https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/mml/pcmn.htm": 83,
     "https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/mml/tth.htm": 41,
     "https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/mml/dph.htm": 38,
-    "https://anatomy.ttuhscep.edu/cardiovascular_system/thorax_wall_tables.html": 112
+    "https://anatomy.ttuhscep.edu/cardiovascular_system/thorax_wall_tables.html": 112,
+    "https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/mml/delt.htm": 114,
+    "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html": 103,
+    "https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-lower-limb/": 135,
+    "https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/labs/le/glut_post_th/g3.html": 83
   },
   "sourceHashes": {
     "catalog": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
     "officialElementIndex": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf",
     "officialPartofElementIndex": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea",
-    "questions": "6aa090bb8f9142fd266af59df995b4c2c7b7f8bef425318c34ebf7332cb69899"
+    "questions": "c78bf5e2c3eee38966910f94ad97dbbf898ae73999b52e8e7a6a71db5aaa3520"
   },
   "verification": [
     "Official complete FMA/file membership",

@@ -6,6 +6,7 @@ import { legReasoningConcepts } from './leg-reasoning';
 import { footReasoningConcepts } from './foot-reasoning';
 import { headNeckReasoningConcepts } from './head-neck-reasoning';
 import { trunkReasoningConcepts } from './trunk-reasoning';
+import { limbRelationshipsReasoningConcepts } from './limb-relationships-reasoning';
 // "midline" retains the exact catalogue tag, including bilateral source groups.
 type ReasoningBinding = { fma: string; side: 'right' | 'left' | 'midline' } & (
   | { file: string; files?: never }
@@ -337,6 +338,7 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
   ...footReasoningConcepts,
   ...headNeckReasoningConcepts,
   ...trunkReasoningConcepts,
+  ...limbRelationshipsReasoningConcepts,
 ];
 export function reasoningConceptFor(s: BodyStructure) {
   if (

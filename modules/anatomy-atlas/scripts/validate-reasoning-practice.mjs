@@ -77,29 +77,38 @@ const create = (
   random = () => 0.314159,
 ) => api.createPracticeSession(scope, bundles, options(extra), random);
 const bound = all.filter(api.reasoningConceptFor);
-same(api.reasoningConcepts.length, 104);
-same(bound.length, 204);
-same(bound.filter((s) => s.region === 'shoulder-arm').length, 20);
-same(bound.filter((s) => s.region === 'forearm').length, 12);
+const precedingConcepts = api.reasoningConcepts.slice(0, 104);
+same(api.reasoningConcepts.slice(104).map(c => c.key), [
+  'limb-deltoid-clavicular', 'limb-deltoid-acromial', 'limb-deltoid-spinal',
+  'limb-abductor-pollicis-longus', 'limb-extensor-pollicis-brevis', 'limb-extensor-pollicis-longus',
+  'limb-iliacus', 'limb-piriformis', 'limb-obturator-internus', 'limb-quadratus-femoris',
+  'limb-gemellus-superior', 'limb-gemellus-inferior',
+], 'Only the twelve reviewed concepts are appended');
+same(precedingConcepts.length, 104);
+same(hash(JSON.stringify(precedingConcepts)), '6aa090bb8f9142fd266af59df995b4c2c7b7f8bef425318c34ebf7332cb69899', 'All preceding 104 concepts remain unchanged and ordered');
+same(api.reasoningConcepts.length, 116);
+same(bound.length, 228);
+same(bound.filter((s) => s.region === 'shoulder-arm').length, 26);
+same(bound.filter((s) => s.region === 'forearm').length, 18);
 same(bound.filter((s) => s.region === 'hand').length, 20);
-same(bound.filter((s) => s.region === 'thigh').length, 24);
+same(bound.filter((s) => s.region === 'thigh').length, 36);
 same(bound.filter((s) => s.region === 'leg').length, 28);
 same(bound.filter((s) => s.region === 'foot').length, 16);
 same(bound.filter((s) => s.region === 'head-neck').length, 48);
 same(bound.filter((s) => s.region === 'spine').length, 24);
 same(bound.filter((s) => s.region === 'thorax').length, 10);
 same(bound.filter((s) => s.region === 'abdomen').length, 2);
-same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 104);
-same(hash(JSON.stringify(api.reasoningConcepts.filter(c => !c.key.startsWith('neck-')))),
+same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 116);
+same(hash(JSON.stringify(precedingConcepts.filter(c => !c.key.startsWith('neck-')))),
   'caafb323ca7d5a04971f91ad369d68c3a8da5e43839b39d8cd76192d1497bad2',
   'All 100 preceding concepts remain unchanged and in order');
-same(hash(JSON.stringify(api.reasoningConcepts.filter(c => !c.key.startsWith('trunk-') && !c.key.startsWith('neck-')))),
+same(hash(JSON.stringify(precedingConcepts.filter(c => !c.key.startsWith('trunk-') && !c.key.startsWith('neck-')))),
   '309529bda0dd03063b56bfb2af9272fba105d083f8cad728008d1095c92cc9d1',
   'All 80 previously authored concepts remain unchanged');
 same(
   hash(
     JSON.stringify(
-      api.reasoningConcepts.filter((c) =>
+      precedingConcepts.filter((c) =>
         ['shoulder-arm', 'forearm'].includes(c.region),
       ),
     ),
@@ -110,7 +119,7 @@ same(
 same(
   hash(
     JSON.stringify(
-      api.reasoningConcepts.filter((c) =>
+      precedingConcepts.filter((c) =>
         ['shoulder-arm', 'forearm', 'hand'].includes(c.region),
       ),
     ),
@@ -121,7 +130,7 @@ same(
 same(
   hash(
     JSON.stringify(
-      api.reasoningConcepts.filter(
+      precedingConcepts.filter(
         (c) => !['leg', 'foot', 'head-neck'].includes(c.region) && !c.key.startsWith('trunk-'),
       ),
     ),
@@ -132,7 +141,7 @@ same(
 same(
   hash(
     JSON.stringify(
-      api.reasoningConcepts.filter((c) => c.region !== 'head-neck' && !c.key.startsWith('trunk-')),
+      precedingConcepts.filter((c) => c.region !== 'head-neck' && !c.key.startsWith('trunk-')),
     ),
   ),
   '719a8996a39b802df8cd26153fc29d8df53ada101c31426713486e8264089ec3',
@@ -282,8 +291,8 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
     )
       same(session, null, 'No unbound regional question is invented');
     if (!session) continue;
-    const expected = { 'whole-body': 20, 'head-neck': 20, 'shoulder-arm': 10, forearm: 6,
-      hand: 10, thigh: 12, pelvis: 2, leg: 14, foot: 8, spine: 12, thorax: 7, abdomen: 2 }[region];
+    const expected = { 'whole-body': 20, 'head-neck': 20, 'shoulder-arm': 13, forearm: 9,
+      hand: 10, thigh: 18, pelvis: 8, leg: 14, foot: 8, spine: 12, thorax: 7, abdomen: 2 }[region];
     same(session.questions.length, expected);
     same(
       new Set(session.questions.map((q) => q.reasoning.key)).size,
@@ -345,7 +354,7 @@ for (const count of [1, 5, 10, 20, 100, NaN, Infinity, -10]) {
   same(
     create(all, { count }).questions.length,
     Math.min(
-      104,
+      116,
       Math.max(1, Math.min(20, Math.floor(Number.isFinite(count) ? count : 5))),
     ),
   );
@@ -357,9 +366,22 @@ for (const value of [NaN, Infinity, -Infinity, -1, 0, 1, 20])
   );
 same(create(all, { id: 0 }), null);
 same(create(all, { id: 1.5 }), null);
-const newConcepts = api.reasoningConcepts.filter(c => c.key.startsWith('trunk-') || c.key.startsWith('neck-'));
+const newConcepts = api.reasoningConcepts.filter(c => c.key.startsWith('trunk-') || c.key.startsWith('neck-') || c.key.startsWith('limb-'));
 const referenceWords = {};
-same(newConcepts.length, 24);
+same(newConcepts.length, 36);
+const limbConcepts = newConcepts.filter(c => c.key.startsWith('limb-'));
+same(limbConcepts.length, 12);
+for (const concept of limbConcepts) for (const side of ['left', 'right']) {
+  const target = bound.find(s => s.laterality === side && api.reasoningConceptFor(s).key === concept.key);
+  for (const region of ['whole-body', ...(concept.sourceRegions ?? [concept.region])]) {
+    const scope = all.filter(s => s.laterality === side && (region === 'whole-body' || s.regions.includes(region)));
+    const session = create(scope, { retryIds: [target.id] });
+    same(session.questions.length, 1, 'New target playable in each declared region and side');
+    same(session.questions[0].choices.length, 4, 'Three curated same-side alternatives in each scope');
+    same(create([target]), null, 'No lone-target fallback');
+    same(create(scope, {retryIds: [target.id]}, loaded.filter(id => id !== target.bundle)), null, 'Unloaded target excluded');
+  }
+}
 const neckConcepts = newConcepts.filter(c => c.key.startsWith('neck-'));
 same(neckConcepts.length, 4);
 for (const side of ['left', 'right']) {
@@ -683,7 +705,7 @@ const report = {
   exactRepresentations: bound.length,
   regionalConcepts: Object.fromEntries([...new Set(api.reasoningConcepts.map(c => c.region))].map(region => [region, api.reasoningConcepts.filter(c => c.region === region).length])),
   multiPartRepresentations: bound.filter((s) => s.sources.length > 1).length,
-  sharedRegionConcepts: { pelvis: 2, abdomen: 1, thigh: 1 },
+  sharedRegionConcepts: { pelvis: 8, abdomen: 1, thigh: 1 },
   sharedRegionNote: 'Membership does not guarantee question eligibility without a curated visible alternative; psoas remains unavailable in thigh-only reasoning.',
   groupedOrMidlineRepresentations: groupedTargets.length,
   newReferenceWords: referenceWords,

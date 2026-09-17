@@ -1,8 +1,45 @@
 # Source-bound anatomical reasoning pilot
 
-Open **Practice → Practice options → Apply anatomy · draft** in a body region. Spine & back, Thorax and Abdomen now join the existing head/neck and limb regions. Whole-body practice uses concepts whose targets and alternatives are loaded and visible. Pelvis shares two gluteal concepts; Abdomen currently offers external oblique and the shared lumbar rotator, not a complete abdominal-wall set. Narrow scopes with no valid alternative show an explicit unavailable state. No new top-level control or note tab was added.
+Open **Practice → Practice options → Apply anatomy · draft** in a body region. Spine & back, Thorax and Abdomen join the head/neck and limb regions. Whole-body practice uses concepts whose targets and alternatives are loaded and visible. Pelvis shares eight hip/gluteal concepts; Abdomen currently offers external oblique and the shared lumbar rotator, not a complete abdominal-wall set. Narrow scopes with no valid alternative show an explicit unavailable state. No new top-level control or note tab was added.
 
-One hundred and four original draft concepts bind to 204 existing representations: the previous 100 concepts/196 selections plus four neck concepts/eight sided selections. The preceding trunk extension has sixteen paired concepts and four explicitly midline-tagged concepts (diaphragm and three bilateral intercostal groups). Nine representations have multiple files; complete official source membership and retained order are required. Pectoralis major alone explicitly uses the `partof` source tree; earlier bindings still default to `isa`. No label matching, relabelled sides, inferred nerves or new meshes are introduced. All preceding 100 question records remain hash-pinned unchanged and in order.
+One hundred and sixteen original draft concepts bind to 228 existing representations. The latest extension adds12 concepts/24 sided selections; all preceding104 records remain hash-pinned unchanged and ordered. The preceding trunk extension has sixteen paired concepts and four explicitly midline-tagged concepts (diaphragm and three bilateral intercostal groups). Nine representations have multiple files; complete official source membership and retained order are required. Pectoralis major alone explicitly uses the `partof` source tree; earlier bindings still default to `isa`. No label matching, relabelled sides, inferred nerves or new meshes are introduced.
+
+## Limb relationships extension — 17 September 2026
+
+The three deltoid parts, abductor pollicis longus, both long forearm thumb
+extensors, iliacus and five deep hip rotators now have original reasoning
+questions. The hip set distinguishes piriformis, obturator internus, quadratus
+femoris and both gemelli. Each binds two existing, exact isa/FMA/side/file
+records. The six hip concepts retain ordered `['thigh','pelvis']` membership;
+pelvic practice now has eight concepts, not just the two gluteal questions.
+No new panel, model, anatomical landmark, motion or surgical simulation is added.
+
+References read directly: [Loyola deltoid](https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/mml/delt.htm),
+[Texas Tech upper limb](https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html),
+[UAMS lower limb](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-lower-limb/),
+and [Loyola deep gluteal relationships](https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/labs/le/glut_post_th/g3.html).
+The new prompts/explanations contain respectively114,103,135 and83 words
+attributed to those pages. These links support factual teaching, not permission
+to redistribute the source tables, publisher questions or images. Only original
+prose and links are included. No new dependency, font, model or texture licence.
+
+Questions use the full distinguishing relationship, not an isolated shared
+action: a tuberosity origin alone does not distinguish inferior gemellus
+from quadratus femoris. Deltoid parts remain parts, and explanation of movement
+does not imply validated model kinematics. Typical tendon routes do not prove
+every tendon slip or patient-specific nerve relationship is represented.
+
+Tests require all12 concepts on both sides, four same-side choices in every
+declared region and whole body, and rejection of unavailable targets. Existing
+hash, exact-source, response-once and delayed-feedback guards remain. The
+identification validator now uses the runtime's `bodyDisplayCatalog`, preserving
+the archived catalogue hash and checking its immutability: source-added focus
+targets such as tentorium were absent from its stale raw-catalogue fixture.
+This is a test-fixture repair, not a change to identification behavior.
+
+Browser results and source/GitHub/D recovery are recorded in the coordinating
+checkpoint. Drafts require the owner's revision-bound radiologist/educator
+review; availability is not validated competency, clinical or device acceptance.
 
 ## Neck attachment extension — 17 September 2026
 
@@ -27,7 +64,7 @@ public university pages are not commercial grants for their figures or tables;
 no illustrations, source tables, article text, patient data or question banks
 are imported or relicensed. Existing notices and commercial obligations remain.
 
-The existing validator now checks104 concepts/204 representations, all four neck
+The neck extension originally checked104 concepts/204 representations, all four neck
 concepts on each side, exact identity mutations, answer-once/skip feedback and
 the unchanged preceding100-concept hash. Regional counts are computed from the
 actual registry, not hard-coded report totals. Local browser evidence is recorded

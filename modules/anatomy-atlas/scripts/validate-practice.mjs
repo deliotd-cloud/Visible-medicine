@@ -15,7 +15,7 @@ const same = (a, b, m) => {
 const compiled = await build({
   stdin: {
     contents:
-      "export * from './lib/anatomy-practice'; export * from './app/dissection-data'; export { structures as shoulderStructures, quizQuestions } from './app/anatomy-data';",
+      "export * from './lib/anatomy-practice'; export * from './app/dissection-data'; export { structures as shoulderStructures, quizQuestions } from './app/anatomy-data'; export { bodyDisplayCatalog } from './lib/body-display-catalog';",
     resolveDir: fileURLToPath(new URL('../', import.meta.url)),
     loader: 'ts',
   },
@@ -31,7 +31,11 @@ const api = await import(
 const bytes = await fs.readFile(
   'public/models/bodyparts3d/full-body/catalog.json',
 );
-const catalog = JSON.parse(bytes),
+const sourceCatalog = JSON.parse(bytes);
+const sourceSnapshot = JSON.stringify(sourceCatalog);
+// Match the runtime's source-bound additions/corrections, retaining the raw
+// catalogue digest below. New focus targets do not exist in archived ingestion.
+const catalog = api.bodyDisplayCatalog(sourceCatalog),
   loaded = catalog.bundles.map((b) => b.id);
 const digest = createHash('sha256').update(bytes).digest('hex');
 same(
@@ -255,6 +259,7 @@ for (const [region, profile] of Object.entries(api.dissectionProfiles))
     }
   }
 same(JSON.stringify(catalog), hashBefore, 'Catalogue input not mutated');
+same(JSON.stringify(sourceCatalog), sourceSnapshot, 'Archived ingestion input not mutated');
 // All-visible mode must make even the smallest geometry reachable across seeds.
 const fixtures = Array.from({ length: 70 }, (_, i) => ({
   ...catalog.structures[0],
