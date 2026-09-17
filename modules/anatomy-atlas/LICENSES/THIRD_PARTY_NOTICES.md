@@ -1,5 +1,23 @@
 # Third-party notices
 
+## Renal/urethral reference revision — 17 September 2026
+
+Original short summaries replace selected EAU-dependent renal trauma, renal
+tumour, ureteric-injury and urethral-imaging teaching. They draw independently
+on Coccolini et al. (2019), Withey et al. (2026), de'Angelis et al. (2023) and
+Frankiewicz et al. (2024), each with article-level CC BY 4.0 permission. Author
+credit, adapted-summary indication, reading links and licence links accompany
+the revised notes. Bonatti et al. (2015) explicitly permits any use under
+Creative Commons Attribution with credit, but the accessible article notice
+does not specify a version; it is not represented as CC BY 4.0.
+
+Exact titles, DOI links, permission evidence, scope and exclusions:
+[CLINICAL_REFERENCE_REVISION.md](../docs/CLINICAL_REFERENCE_REVISION.md).
+No scans, images, tables, staging systems, publisher passages or algorithms
+were copied. No dependency, font, model, paid service or fee was added. Earlier
+source citations remain in offline historical evidence. This scoped revision
+does not establish project-wide clearance or author endorsement.
+
 ## Deferent-duct clinical drafts — 17 September 2026
 
 Original resolver code and two short teaching notes add four placements to

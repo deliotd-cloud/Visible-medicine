@@ -22,7 +22,8 @@ export const pelvicOrganReferences = {
   scrotalMr:
     'https://acsearch.acr.org/list/GetAppendix?PanelName=Urologic&TopicId=304',
   urethra:
-    'https://uroweb.org/guidelines/urethral-strictures/chapter/diagnostic-evaluation',
+    'https://link.springer.com/article/10.1007/s00345-023-04760-x',
+  ccBy4: 'https://creativecommons.org/licenses/by/4.0/',
   xray: 'https://www.radiologyinfo.org/en/info/abdominrad',
   glands:
     'https://training.seer.cancer.gov/anatomy/reproductive/male/glands.html',
@@ -73,7 +74,8 @@ export const pelvicOrganLandmarkReferences: Record<
 };
 type Topic = {
   body: string;
-  bullets: [string, string];
+  // Two teaching bullets, with an optional third attribution line.
+  bullets: [string, string] | [string, string, string];
   references: (keyof typeof pelvicOrganReferences)[];
 };
 const plainFilm: Topic = {
@@ -220,36 +222,38 @@ export const pelvicOrganImagingTopics: Record<
   },
   urethra: {
     ct: {
-      body: 'A routine pelvic CT is not a dedicated urethrogram. The selected source helps orient the outlet, not establish urethral lumen length or patency.',
+      body: 'Routine pelvic CT and dedicated urethrography are different examinations. This surface orients the outlet but establishes neither luminal length nor patency.',
       bullets: [
         'Do not equate CT urography with urethrography.',
         'No injury or narrowing is simulated.',
+        'Summary adapted from Frankiewicz et al. (2024), CC BY 4.0.',
       ],
-      references: ['ct', 'urethra'],
+      references: ['ct', 'urethra', 'ccBy4'],
     },
     mri: {
-      body: 'MRI can provide supplementary detail in selected urethral problems. Its role differs from contrast urethrography and requires the acquired images, not this surface.',
+      body: 'MR urethrography can supplement luminal assessment with surrounding-tissue detail in selected problems. Interpretation requires acquired images, not this reference surface.',
       bullets: [
         'The atlas does not measure fibrosis or stenosis length.',
         'No routine acquisition recommendation is made here.',
+        'Summary adapted from Frankiewicz et al. (2024), CC BY 4.0.',
       ],
-      references: ['urethra'],
+      references: ['urethra', 'ccBy4'],
     },
     ultrasound: {
-      body: 'Sonourethrography is a specialised urethral examination, not simply a standard bladder ultrasound. It can assess the anterior urethra and surrounding tissue.',
+      body: 'Specialised sonourethrography assesses the anterior urethra and surrounding tissue, unlike routine bladder ultrasound. Posterior assessment is more limited and results are operator dependent.',
       bullets: [
-        'No distension or tissue stiffness is represented.',
-        'The source has no validated sonographic wall layers.',
+        'No distension, stiffness or validated wall layers are modelled.',
+        'Summary adapted from Frankiewicz et al. (2024), CC BY 4.0.',
       ],
-      references: ['urethra'],
+      references: ['urethra', 'ccBy4'],
     },
     xray: {
-      body: 'Retrograde urethrography and voiding cystourethrography are contrast examinations with different views of the urethra. Plain-film visibility is not equivalent.',
+      body: 'Retrograde urethrography and voiding cystourethrography depict the urethral passage with contrast, unlike plain radiographs. Projection and positioning can affect apparent stricture length.',
       bullets: [
-        'A two-dimensional projection can distort apparent length.',
         'This model does not simulate contrast injection or voiding.',
+        'Summary adapted from Frankiewicz et al. (2024), CC BY 4.0.',
       ],
-      references: ['urethra'],
+      references: ['urethra', 'ccBy4'],
     },
   },
   testis: {

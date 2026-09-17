@@ -17,7 +17,7 @@ const previous = await compile(execFileSync('git', ['show', beforeCommit + ':con
 assert.equal(def.surfaces.length, 82); assert.equal(Object.keys(concepts).length, 12); assert.equal(Object.keys(families).length, 9);
 assert.equal(new Set(Object.values(families).flatMap(f => Object.values(f).map(t => t.body))).size, 44);
 const knownURLs = new Set(Object.values(references).map(r => r.url));
-assert.equal(knownURLs.size, 11);
+assert.equal(knownURLs.size, 13);
 for (const invalid of ['unknown', '__proto__', 'constructor', 'toString']) {
   assert.equal(authoredHraRenalClinical(invalid), null); assert.equal(authoredHraRenalLesson(invalid), null);
 }

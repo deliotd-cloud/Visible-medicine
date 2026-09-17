@@ -50,7 +50,7 @@ for(const {identity:s,topics} of pins.entries)for(const mutate of [
 assert.equal(rejected,228);
 for(const {identity:s} of pins.entries)for(const t of ['anatomy','function','pathology','clinical','quiz','foreign'])assert.equal(api.rectalDeferentImagingLesson(s,t),undefined);
 const first=pins.entries[0].identity;
-assert.throws(()=>authoringBeforeRectalDeferentImaging({...context,api:{...api,bodyLesson(s,t){const lesson=api.bodyLesson(s,t);return s.id===first.id&&t==='ct'?{...lesson,body:'unrecorded'}:lesson;}}}),/Unrecorded rectal\/deferent imaging change|Current full teaching\/recipe snapshot changed/);
+assert.throws(()=>authoringBeforeRectalDeferentImaging({...context,api:{...api,bodyLesson(s,t){const lesson=api.bodyLesson(s,t);return s.id===first.id&&t==='ct'?{...lesson,body:'unrecorded'}:lesson;}}}),/Unrecorded rectal\/deferent imaging change|Current full teaching\/recipe snapshot changed|Unrecorded whole-body teaching change/);
 for(const b of pins.bundles)assert.equal(createHash('sha256').update(await readFile('public'+b.url.split('?')[0])).digest('hex'),b.sha256);
 const budgets={},unique=new Map();
 for(const entry of Object.values(groups).flatMap(g=>Object.values(g.focus)))unique.set(JSON.stringify(entry),entry);

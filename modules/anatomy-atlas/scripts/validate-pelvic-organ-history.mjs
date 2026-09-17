@@ -5,11 +5,13 @@ import { fileURLToPath } from 'node:url';
 import { build } from './workspace-test-build.mjs';
 import { contentContext, contentRoot } from './content-contract-tools.mjs';
 import { authoringBeforePelvicOrganImaging, pelvicOrganContentHash as hash } from './pelvic-organ-imaging-history.mjs';
+import { authoringBeforeClinicalReferenceRevision } from './clinical-reference-revision-history.mjs';
 import pins from '../content/pelvic-organ-imaging-pins.json' with { type: 'json' };
 import after from '../content/pelvic-organ-imaging.transition.json' with { type: 'json' };
 
 const context = await contentContext(), { api, catalog } = context;
 const display = api.bodyDisplayCatalog(catalog), original = JSON.stringify(catalog);
+const referenceBaseline = authoringBeforeClinicalReferenceRevision(context);
 const before = authoringBeforePelvicOrganImaging(context);
 let restored = 0, preserved = 0, rejected = 0;
 for (const structure of display.structures) {
@@ -35,11 +37,14 @@ assert.equal(preserved, display.structures.length * api.contentTabs.length - 44)
 assert.strictEqual(before.structures, api.structures);
 assert.strictEqual(before.dissectionProfiles, api.dissectionProfiles);
 for (const entry of pins.entries) for (const tab of entry.topics) {
-  const badApi = { ...api, bodyLesson(s, t) {
-    const result = api.bodyLesson(s, t);
+  const badApi = { ...referenceBaseline, bodyLesson(s, t) {
+    const result = referenceBaseline.bodyLesson(s, t);
     return s.id === entry.identity.id && t === tab ? { ...result, body: result.body + ' altered' } : result;
   }};
-  assert.throws(() => authoringBeforePelvicOrganImaging({ api: badApi, catalog }), /Unrecorded pelvic-organ imaging change/);
+  assert.throws(
+    () => authoringBeforePelvicOrganImaging({ api: badApi, catalog }),
+    /Unrecorded pelvic-organ imaging change|Unrecorded whole-body teaching change|Unrecorded clinical reference revision/,
+  );
   rejected++;
 }
 for (const mutate of [

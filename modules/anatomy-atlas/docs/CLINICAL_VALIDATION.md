@@ -1,5 +1,14 @@
 # Clinical validation checklist
 
+[Renal/urethral reference revision](CLINICAL_REFERENCE_REVISION.md): review
+re-authored capsule/haematoma compartments, CT phase distinctions, selected
+renal-trauma MRI use, renal venous-extension MRI, ureteric perfusion/injury and
+specialised urethral imaging. Verify source scope rather than transferring
+guideline recommendations to an unregistered surface model. Ultrasound's
+posterior/operator limitations are included; no procedure or treatment algorithm
+is supplied. Revision-bound review is required even where the factual intent
+is similar to the previous text. Licensing evidence is not clinical acceptance.
+
 [Deferent Clinical/Pathology](DEFERENT_CLINICAL.md): review the four paired
 draft placements against exact left/right source identity and donor-specific
 course. Verify ureteric crossing/junction wording, transport versus production,

@@ -1,0 +1,1548 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Exact pre-revision factual teaching projection; no source admission, clinical approval or licence expansion",
+  "sourceCommit": "3584fc178a408b42caf430b9084e55198a0d18c6",
+  "selected": {
+    "hra": {
+      "references": {
+        "trauma": {
+          "title": "EAU · Urological trauma, renal imaging",
+          "url": "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+        },
+        "rcc": {
+          "title": "EAU · Renal cell carcinoma, diagnostic evaluation",
+          "url": "https://uroweb.org/guidelines/renal-cell-carcinoma/chapter/diagnostic-evaluation"
+        }
+      },
+      "topicFamilies": {
+        "capsule": {
+          "clinical": {
+            "readiness": "draft",
+            "body": "Locate a collection relative to the renal capsule and the surrounding perirenal compartment; these are different boundaries.",
+            "references": [
+              "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+            ]
+          },
+          "pathology": {
+            "readiness": "draft",
+            "body": "Subcapsular and perirenal haematomas occupy different compartments. The source capsule is not a haematoma model or an injury grade.",
+            "references": [
+              "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+            ]
+          },
+          "ct": {
+            "readiness": "draft",
+            "body": "In trauma, CT assesses the extent of haematoma and associated parenchymal or vascular injury. A normal-looking surface model cannot exclude injury.",
+            "references": [
+              "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+            ]
+          },
+          "mri": {
+            "readiness": "draft",
+            "body": "MRI can depict renal trauma but practical constraints limit its acute-trauma role. This model supplies neither blood-product signal nor an acquisition protocol.",
+            "references": [
+              "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+            ]
+          },
+          "ultrasound": {
+            "readiness": "draft",
+            "body": "A negative FAST examination does not exclude renal injury; it does not provide the same renal injury characterisation as CT.",
+            "references": [
+              "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+            ]
+          }
+        },
+        "hilum": {
+          "clinical": {
+            "readiness": "draft",
+            "body": "Distinguish vascular involvement from involvement of the urinary collecting system. A central renal mass may require evaluation of both.",
+            "references": [
+              "https://uroweb.org/guidelines/renal-cell-carcinoma/chapter/diagnostic-evaluation"
+            ]
+          },
+          "pathology": {
+            "readiness": "draft",
+            "body": "A lesion near the hilum is not automatically urothelial cancer: establish its tissue of origin and extent.",
+            "references": [
+              "https://uroweb.org/guidelines/renal-cell-carcinoma/chapter/diagnostic-evaluation",
+              "https://www.cancer.gov/types/kidney/patient/transitional-cell-treatment-pdq"
+            ]
+          },
+          "ct": {
+            "readiness": "draft",
+            "body": "Different CT phases answer different questions: arterial imaging assesses vessels, nephrographic imaging parenchyma, and delayed imaging urinary tract injury.",
+            "references": [
+              "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+            ]
+          },
+          "mri": {
+            "readiness": "draft",
+            "body": "MR urography evaluates the urinary tract; renal MRI also assesses surrounding tissues. The hilum surface alone represents neither a lumen nor a vascular map.",
+            "references": [
+              "https://www.radiologyinfo.org/en/info/urography"
+            ]
+          }
+        }
+      },
+      "concepts": {
+        "capsule": {
+          "family": "capsule",
+          "limit": "Capsules are supplied; perirenal fat and renal fascia are not. Separation does not expose a validated surgical or haematoma plane.",
+          "question": "Does removing this capsule also remove renal fascia?",
+          "answer": "No. They are different anatomical boundaries, and renal fascia is not supplied here.",
+          "refs": [
+            "trauma"
+          ]
+        },
+        "hilum": {
+          "family": "hilum",
+          "limit": "The labelled hilum is a source surface, not a solid organ, complete pedicle or validated hilar dissection. The left renal vein is held.",
+          "question": "Can this hilar surface establish a complete venous–arterial–pelvic arrangement?",
+          "answer": "No. Its extent and neighbouring partial surfaces require review; the left vein is absent from the display.",
+          "refs": [
+            "rcc"
+          ]
+        }
+      },
+      "authored": {
+        "capsule": {
+          "modelLimit": "Capsules are supplied; perirenal fat and renal fascia are not. Separation does not expose a validated surgical or haematoma plane. Teaching draft; radiologist review pending. No patient images, scan registration or separately paid lecture access.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Locate a collection relative to the renal capsule and the surrounding perirenal compartment; these are different boundaries.",
+              "references": [
+                "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Subcapsular and perirenal haematomas occupy different compartments. The source capsule is not a haematoma model or an injury grade.",
+              "references": [
+                "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+              ]
+            },
+            "ct": {
+              "readiness": "draft",
+              "body": "In trauma, CT assesses the extent of haematoma and associated parenchymal or vascular injury. A normal-looking surface model cannot exclude injury.",
+              "references": [
+                "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI can depict renal trauma but practical constraints limit its acute-trauma role. This model supplies neither blood-product signal nor an acquisition protocol.",
+              "references": [
+                "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+              ]
+            },
+            "ultrasound": {
+              "readiness": "draft",
+              "body": "A negative FAST examination does not exclude renal injury; it does not provide the same renal injury characterisation as CT.",
+              "references": [
+                "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does removing this capsule also remove renal fascia?",
+            "answer": "No. They are different anatomical boundaries, and renal fascia is not supplied here.",
+            "references": [
+              "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+            ]
+          }
+        },
+        "hilum": {
+          "modelLimit": "The labelled hilum is a source surface, not a solid organ, complete pedicle or validated hilar dissection. The left renal vein is held. Teaching draft; radiologist review pending. No patient images, scan registration or separately paid lecture access.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Distinguish vascular involvement from involvement of the urinary collecting system. A central renal mass may require evaluation of both.",
+              "references": [
+                "https://uroweb.org/guidelines/renal-cell-carcinoma/chapter/diagnostic-evaluation"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "A lesion near the hilum is not automatically urothelial cancer: establish its tissue of origin and extent.",
+              "references": [
+                "https://uroweb.org/guidelines/renal-cell-carcinoma/chapter/diagnostic-evaluation",
+                "https://www.cancer.gov/types/kidney/patient/transitional-cell-treatment-pdq"
+              ]
+            },
+            "ct": {
+              "readiness": "draft",
+              "body": "Different CT phases answer different questions: arterial imaging assesses vessels, nephrographic imaging parenchyma, and delayed imaging urinary tract injury.",
+              "references": [
+                "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MR urography evaluates the urinary tract; renal MRI also assesses surrounding tissues. The hilum surface alone represents neither a lumen nor a vascular map.",
+              "references": [
+                "https://www.radiologyinfo.org/en/info/urography"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Can this hilar surface establish a complete venous–arterial–pelvic arrangement?",
+            "answer": "No. Its extent and neighbouring partial surfaces require review; the left vein is absent from the display.",
+            "references": [
+              "https://uroweb.org/guidelines/renal-cell-carcinoma/chapter/diagnostic-evaluation"
+            ]
+          }
+        }
+      }
+    },
+    "nested": {
+      "references": {
+        "renalUreterInjury": {
+          "title": "EAU · Urological trauma guideline, ureteral injury (§4.2)",
+          "url": "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+        }
+      },
+      "concept": {
+        "id": "renal-ureteric-arteries",
+        "study": "renal",
+        "fmaIds": [
+          "FMA70492",
+          "FMA70493"
+        ],
+        "sections": {
+          "anatomy": {
+            "body": "The renal artery gives ureteric branches. The selected source label describes a ureteric arterial segment, not a segment of kidney tissue.",
+            "references": [
+              "hepaticArteries"
+            ],
+            "readiness": "draft"
+          },
+          "function": {
+            "body": "These branches contribute arterial supply to the upper ureter.",
+            "references": [
+              "hepaticArteries"
+            ],
+            "readiness": "draft"
+          },
+          "clinical": {
+            "body": "Do not equate this small group with the ureter’s entire arterial supply. Its relationship with a kidney does not establish intrarenal branching or a complete vascular route.",
+            "references": [
+              "hepaticArteries"
+            ],
+            "readiness": "draft"
+          },
+          "pathology": {
+            "body": "Loss of ureteric blood supply can cause ischaemic injury, including after an operation. This arterial group illustrates only part of that supply. Its shape cannot establish tissue viability, the extent of injury or the likelihood of a later complication.",
+            "references": [
+              "renalUreterInjury"
+            ],
+            "readiness": "draft"
+          }
+        },
+        "imaging": {
+          "ct": {
+            "body": "CT urography investigates suspected ureteric injury; delayed contrast leakage can reveal urinary extravasation. That is a finding in the urinary tract, not arterial contrast escape. The selected ureteric arterial segment is not a ureter lumen, CT phase or injury map.",
+            "references": [
+              "renalUreterInjury"
+            ],
+            "readiness": "draft"
+          },
+          "mri": {
+            "body": "MR urography evaluates the urinary tract, whereas MR angiography examines vessels such as the renal arteries. Keep the ureter and its arterial supply distinct. Neither technique is represented by this surface, and visibility of this small branch is not established.",
+            "references": [
+              "renalUrinaryImaging"
+            ],
+            "readiness": "draft"
+          },
+          "ultrasound": {
+            "body": "Kidney ultrasound can assess position, obstruction and other structural abnormalities. Such an examination is not a demonstration of every ureteric arterial branch. This small source group supplies no ultrasound image, flow measurement or evidence of ureteric perfusion.",
+            "references": [
+              "renalUrinaryImaging"
+            ],
+            "readiness": "draft"
+          }
+        },
+        "modelLimit": "A source-labelled vascular group, not a complete circulation or validated lumen. Kidney association is study navigation; adrenal vessels are not kidney tissue. Source positions are retained, but endpoints, variants and patient correspondence are unvalidated. Cortex, medulla, calyces and pelvis are absent. The left inferior suprarenal artery is withheld because of a source defect.",
+        "quiz": {
+          "question": "Does this selection show the entire blood supply of the ureter?",
+          "answer": "No. It shows only the supplied renal arterial group; other arterial sources and continuous junctions are not established.",
+          "references": [],
+          "basis": "model-scope"
+        }
+      }
+    },
+    "pelvic": {
+      "references": {
+        "urethra": "https://uroweb.org/guidelines/urethral-strictures/chapter/diagnostic-evaluation"
+      },
+      "topics": {
+        "ct": {
+          "body": "A routine pelvic CT is not a dedicated urethrogram. The selected source helps orient the outlet, not establish urethral lumen length or patency.",
+          "bullets": [
+            "Do not equate CT urography with urethrography.",
+            "No injury or narrowing is simulated."
+          ],
+          "references": [
+            "ct",
+            "urethra"
+          ]
+        },
+        "mri": {
+          "body": "MRI can provide supplementary detail in selected urethral problems. Its role differs from contrast urethrography and requires the acquired images, not this surface.",
+          "bullets": [
+            "The atlas does not measure fibrosis or stenosis length.",
+            "No routine acquisition recommendation is made here."
+          ],
+          "references": [
+            "urethra"
+          ]
+        },
+        "ultrasound": {
+          "body": "Sonourethrography is a specialised urethral examination, not simply a standard bladder ultrasound. It can assess the anterior urethra and surrounding tissue.",
+          "bullets": [
+            "No distension or tissue stiffness is represented.",
+            "The source has no validated sonographic wall layers."
+          ],
+          "references": [
+            "urethra"
+          ]
+        },
+        "xray": {
+          "body": "Retrograde urethrography and voiding cystourethrography are contrast examinations with different views of the urethra. Plain-film visibility is not equivalent.",
+          "bullets": [
+            "A two-dimensional projection can distort apparent length.",
+            "This model does not simulate contrast injection or voiding."
+          ],
+          "references": [
+            "urethra"
+          ]
+        }
+      },
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:unpaired:organ:urethra",
+        "fmaId": "FMA19667",
+        "name": "Urethra",
+        "sourceName": "urethra",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "pelvis-organs-gaps",
+        "nodeName": "FMA19667",
+        "bounds": {
+          "min": [
+            -0.0160824004560709,
+            -0.9143102765083313,
+            0.29952698945999146
+          ],
+          "max": [
+            0.0031363300513476133,
+            -0.07487975805997849,
+            1.3417400121688843
+          ]
+        },
+        "center": [
+          -0.006473035202361643,
+          -0.4945950172841549,
+          0.8206335008144379
+        ],
+        "anchor": [
+          -0.009616579860448837,
+          -0.29971984028816223,
+          0.7556800246238708
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3148",
+            "sha256": "987ce1b01511f6ea323ba5a7a7438ba3df72d0cdc853985e08ca2965feb63c93"
+          }
+        ],
+        "coverageNote": "Selected adult-male urinary/reproductive source representation; no complete tract or wall-layer dissection is implied. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "lessons": {
+        "ct": {
+          "readiness": "draft",
+          "title": "Urethra · CT orientation · draft",
+          "body": "A routine pelvic CT is not a dedicated urethrogram. The selected source helps orient the outlet, not establish urethral lumen length or patency.",
+          "bullets": [
+            "Follow the bladder outlet inferiorly through the male reference anatomy. This is not a female urethral model.",
+            "Do not equate CT urography with urethrography.",
+            "No injury or narrowing is simulated.",
+            "Single source representation: named urethral segments, sphincters, lumen and tissue fibrosis are not separately validated."
+          ],
+          "citations": [
+            "https://www.niddk.nih.gov/health-information/diagnostic-tests/urinary-tract-imaging",
+            "https://www.radiologyinfo.org/en/info/bodyct",
+            "https://uroweb.org/guidelines/urethral-strictures/chapter/diagnostic-evaluation"
+          ],
+          "note": "Anatomy/radiology review pending. Compare reference positions with separation at zero. No patient images, scan registration or paid-lecture access. Confirm organ, side, patient anatomy, sequence and contrast technique before future image comparison. This is orientation teaching, not a diagnosis, acquisition protocol or treatment recommendation."
+        },
+        "mri": {
+          "readiness": "draft",
+          "title": "Urethra · MRI orientation · draft",
+          "body": "MRI can provide supplementary detail in selected urethral problems. Its role differs from contrast urethrography and requires the acquired images, not this surface.",
+          "bullets": [
+            "Follow the bladder outlet inferiorly through the male reference anatomy. This is not a female urethral model.",
+            "The atlas does not measure fibrosis or stenosis length.",
+            "No routine acquisition recommendation is made here.",
+            "Single source representation: named urethral segments, sphincters, lumen and tissue fibrosis are not separately validated."
+          ],
+          "citations": [
+            "https://www.niddk.nih.gov/health-information/diagnostic-tests/urinary-tract-imaging",
+            "https://uroweb.org/guidelines/urethral-strictures/chapter/diagnostic-evaluation"
+          ],
+          "note": "Anatomy/radiology review pending. Compare reference positions with separation at zero. No patient images, scan registration or paid-lecture access. Confirm organ, side, patient anatomy, sequence and contrast technique before future image comparison. This is orientation teaching, not a diagnosis, acquisition protocol or treatment recommendation."
+        },
+        "ultrasound": {
+          "readiness": "draft",
+          "title": "Urethra · Ultrasound orientation · draft",
+          "body": "Sonourethrography is a specialised urethral examination, not simply a standard bladder ultrasound. It can assess the anterior urethra and surrounding tissue.",
+          "bullets": [
+            "Follow the bladder outlet inferiorly through the male reference anatomy. This is not a female urethral model.",
+            "No distension or tissue stiffness is represented.",
+            "The source has no validated sonographic wall layers.",
+            "Single source representation: named urethral segments, sphincters, lumen and tissue fibrosis are not separately validated."
+          ],
+          "citations": [
+            "https://www.niddk.nih.gov/health-information/diagnostic-tests/urinary-tract-imaging",
+            "https://uroweb.org/guidelines/urethral-strictures/chapter/diagnostic-evaluation"
+          ],
+          "note": "Anatomy/radiology review pending. Compare reference positions with separation at zero. No patient images, scan registration or paid-lecture access. Confirm organ, side, patient anatomy, sequence and contrast technique before future image comparison. This is orientation teaching, not a diagnosis, acquisition protocol or treatment recommendation."
+        },
+        "xray": {
+          "readiness": "draft",
+          "title": "Urethra · X-ray orientation · draft",
+          "body": "Retrograde urethrography and voiding cystourethrography are contrast examinations with different views of the urethra. Plain-film visibility is not equivalent.",
+          "bullets": [
+            "Follow the bladder outlet inferiorly through the male reference anatomy. This is not a female urethral model.",
+            "A two-dimensional projection can distort apparent length.",
+            "This model does not simulate contrast injection or voiding.",
+            "Single source representation: named urethral segments, sphincters, lumen and tissue fibrosis are not separately validated."
+          ],
+          "citations": [
+            "https://www.niddk.nih.gov/health-information/diagnostic-tests/urinary-tract-imaging",
+            "https://uroweb.org/guidelines/urethral-strictures/chapter/diagnostic-evaluation"
+          ],
+          "note": "Anatomy/radiology review pending. Compare reference positions with separation at zero. No patient images, scan registration or paid-lecture access. Confirm organ, side, patient anatomy, sequence and contrast technique before future image comparison. This is orientation teaching, not a diagnosis, acquisition protocol or treatment recommendation."
+        }
+      }
+    }
+  },
+  "selectedHash": "44fbb318ccf5f985754c243e5243369676799e42cf27068a92189a30a1b1858b",
+  "fullSource": {
+    "hra": {
+      "references": {
+        "trauma": {
+          "title": "EAU · Urological trauma, renal imaging",
+          "url": "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+        },
+        "rcc": {
+          "title": "EAU · Renal cell carcinoma, diagnostic evaluation",
+          "url": "https://uroweb.org/guidelines/renal-cell-carcinoma/chapter/diagnostic-evaluation"
+        },
+        "urothelial": {
+          "title": "NCI · Renal pelvis and ureter cancer",
+          "url": "https://www.cancer.gov/types/kidney/patient/transitional-cell-treatment-pdq"
+        },
+        "venous": {
+          "title": "NCI · Renal cell cancer and venous extension",
+          "url": "https://www.cancer.gov/types/kidney/hp/kidney-treatment-pdq"
+        },
+        "artery": {
+          "title": "NIDDK · Renal artery stenosis",
+          "url": "https://www.niddk.nih.gov/health-information/kidney-disease/renal-artery-stenosis"
+        },
+        "urography": {
+          "title": "ACR/RSNA · Urography",
+          "url": "https://www.radiologyinfo.org/en/info/urography"
+        },
+        "stones": {
+          "title": "ACR/RSNA · Kidney and bladder stones",
+          "url": "https://www.radiologyinfo.org/en/info/stones-renal"
+        },
+        "infection": {
+          "title": "IDKD · Urinary infection and obstruction (chapter 20)",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK543798/"
+        },
+        "renalMRI": {
+          "title": "IDKD · Renal MRI and inflammatory disease (chapter 23)",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK543809/"
+        },
+        "column": {
+          "title": "Algin et al. · Columns of Bertin: imaging findings (2014)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4261443/"
+        },
+        "papilla": {
+          "title": "Jung et al. · Renal papillary necrosis at CT/urography (2006)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17102053/"
+        }
+      },
+      "topicFamilies": {
+        "capsule": {
+          "clinical": {
+            "readiness": "draft",
+            "body": "Locate a collection relative to the renal capsule and the surrounding perirenal compartment; these are different boundaries.",
+            "references": [
+              "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+            ]
+          },
+          "pathology": {
+            "readiness": "draft",
+            "body": "Subcapsular and perirenal haematomas occupy different compartments. The source capsule is not a haematoma model or an injury grade.",
+            "references": [
+              "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+            ]
+          },
+          "ct": {
+            "readiness": "draft",
+            "body": "In trauma, CT assesses the extent of haematoma and associated parenchymal or vascular injury. A normal-looking surface model cannot exclude injury.",
+            "references": [
+              "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+            ]
+          },
+          "mri": {
+            "readiness": "draft",
+            "body": "MRI can depict renal trauma but practical constraints limit its acute-trauma role. This model supplies neither blood-product signal nor an acquisition protocol.",
+            "references": [
+              "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+            ]
+          },
+          "ultrasound": {
+            "readiness": "draft",
+            "body": "A negative FAST examination does not exclude renal injury; it does not provide the same renal injury characterisation as CT.",
+            "references": [
+              "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+            ]
+          }
+        },
+        "hilum": {
+          "clinical": {
+            "readiness": "draft",
+            "body": "Distinguish vascular involvement from involvement of the urinary collecting system. A central renal mass may require evaluation of both.",
+            "references": [
+              "https://uroweb.org/guidelines/renal-cell-carcinoma/chapter/diagnostic-evaluation"
+            ]
+          },
+          "pathology": {
+            "readiness": "draft",
+            "body": "A lesion near the hilum is not automatically urothelial cancer: establish its tissue of origin and extent.",
+            "references": [
+              "https://uroweb.org/guidelines/renal-cell-carcinoma/chapter/diagnostic-evaluation",
+              "https://www.cancer.gov/types/kidney/patient/transitional-cell-treatment-pdq"
+            ]
+          },
+          "ct": {
+            "readiness": "draft",
+            "body": "Different CT phases answer different questions: arterial imaging assesses vessels, nephrographic imaging parenchyma, and delayed imaging urinary tract injury.",
+            "references": [
+              "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+            ]
+          },
+          "mri": {
+            "readiness": "draft",
+            "body": "MR urography evaluates the urinary tract; renal MRI also assesses surrounding tissues. The hilum surface alone represents neither a lumen nor a vascular map.",
+            "references": [
+              "https://www.radiologyinfo.org/en/info/urography"
+            ]
+          }
+        },
+        "parenchyma": {
+          "clinical": {
+            "readiness": "draft",
+            "body": "Assess parenchymal abnormalities together with the collecting system and surrounding tissues; infection can extend beyond the kidney.",
+            "references": [
+              "https://www.ncbi.nlm.nih.gov/books/NBK543798/"
+            ]
+          },
+          "pathology": {
+            "readiness": "draft",
+            "body": "Pyelonephritis may be focal or diffuse and can be complicated by abscess. Diagrammatic cortex/medulla colours are not evidence of inflammation.",
+            "references": [
+              "https://www.ncbi.nlm.nih.gov/books/NBK543798/"
+            ]
+          },
+          "ct": {
+            "readiness": "draft",
+            "body": "Pyelonephritis may produce wedge-shaped or striated reduced enhancement. A striated nephrogram is not specific to infection.",
+            "references": [
+              "https://www.ncbi.nlm.nih.gov/books/NBK543798/",
+              "https://www.ncbi.nlm.nih.gov/books/NBK543809/"
+            ]
+          },
+          "mri": {
+            "readiness": "draft",
+            "body": "T1/T2, dynamic enhancement and diffusion provide complementary renal information. Restricted diffusion alone does not distinguish infection from tumour.",
+            "references": [
+              "https://www.ncbi.nlm.nih.gov/books/NBK543809/"
+            ]
+          },
+          "ultrasound": {
+            "readiness": "draft",
+            "body": "Renal size, echogenicity, corticomedullary distinction and collecting-system dilatation can be assessed. Ultrasound can miss early infection or small complications.",
+            "references": [
+              "https://www.ncbi.nlm.nih.gov/books/NBK543798/"
+            ]
+          }
+        },
+        "column": {
+          "clinical": {
+            "readiness": "draft",
+            "body": "A prominent column of Bertin can mimic a renal mass. Establish continuity with cortical tissue before interpreting a central projection.",
+            "references": [
+              "https://pmc.ncbi.nlm.nih.gov/articles/PMC4261443/"
+            ]
+          },
+          "pathology": {
+            "readiness": "draft",
+            "body": "A hypertrophied column is a pseudotumour, not itself a neoplasm. This source is not labelled hypertrophied and shows no diagnosed mass.",
+            "references": [
+              "https://pmc.ncbi.nlm.nih.gov/articles/PMC4261443/"
+            ]
+          },
+          "ct": {
+            "readiness": "draft",
+            "body": "A cortical pseudotumour typically follows cortical attenuation and enhancement. Do not infer either measurement from this model’s colour.",
+            "references": [
+              "https://pmc.ncbi.nlm.nih.gov/articles/PMC4261443/"
+            ]
+          },
+          "mri": {
+            "readiness": "draft",
+            "body": "Compare the suspected column with cortex across sequences and enhancement phases; matching behaviour supports a cortical pseudotumour.",
+            "references": [
+              "https://pmc.ncbi.nlm.nih.gov/articles/PMC4261443/"
+            ]
+          },
+          "ultrasound": {
+            "readiness": "draft",
+            "body": "Columns may resemble cortical echogenicity and vascularity, but atypical appearances occur. A single echogenicity observation is not definitive.",
+            "references": [
+              "https://pmc.ncbi.nlm.nih.gov/articles/PMC4261443/"
+            ]
+          }
+        },
+        "papilla": {
+          "clinical": {
+            "readiness": "draft",
+            "body": "Papillary necrosis has several causes, including diabetes, analgesic overuse, sickle-cell disease, infection and obstruction; anatomy alone does not establish the cause.",
+            "references": [
+              "https://pubmed.ncbi.nlm.nih.gov/17102053/"
+            ]
+          },
+          "pathology": {
+            "readiness": "draft",
+            "body": "Papillary injury can lead to sloughing, calyceal distortion or downstream obstruction. Source-part boundaries and missing mesh connections are not sloughed papillae.",
+            "references": [
+              "https://pubmed.ncbi.nlm.nih.gov/17102053/"
+            ]
+          },
+          "ct": {
+            "readiness": "draft",
+            "body": "Excreted contrast can outline papillary clefts or a sloughed papilla; filling defects and papillary blunting are possible findings, not features simulated here.",
+            "references": [
+              "https://pubmed.ncbi.nlm.nih.gov/17102053/"
+            ]
+          }
+        },
+        "collecting": {
+          "clinical": {
+            "readiness": "draft",
+            "body": "Separate pelvicalyceal dilatation from its cause. Stones are one potential cause; clinical and imaging assessment must establish whether drainage is obstructed.",
+            "references": [
+              "https://www.radiologyinfo.org/en/info/stones-renal",
+              "https://www.ncbi.nlm.nih.gov/books/NBK543798/"
+            ]
+          },
+          "pathology": {
+            "readiness": "draft",
+            "body": "Urothelial malignancy arises in the urinary lining and differs from a renal parenchymal tumour. These calyx/pelvis surfaces contain no tumour or histological layers.",
+            "references": [
+              "https://www.cancer.gov/types/kidney/patient/transitional-cell-treatment-pdq"
+            ]
+          },
+          "ct": {
+            "readiness": "draft",
+            "body": "CT urography evaluates the collecting system and surrounding anatomy. Contrast outlining a cavity is not the same as parenchymal enhancement.",
+            "references": [
+              "https://www.radiologyinfo.org/en/info/urography"
+            ]
+          },
+          "mri": {
+            "readiness": "draft",
+            "body": "T2-weighted and contrast-enhanced urographic images can assess urinary spaces. A filling defect is an indirect finding, not proof of a stone.",
+            "references": [
+              "https://www.ncbi.nlm.nih.gov/books/NBK543809/"
+            ]
+          },
+          "xray": {
+            "readiness": "draft",
+            "body": "Intravenous urography uses iodinated contrast to outline the urinary tract. It is a contrast examination, not equivalent to a plain abdominal radiograph.",
+            "references": [
+              "https://www.radiologyinfo.org/en/info/urography"
+            ]
+          },
+          "ultrasound": {
+            "readiness": "draft",
+            "body": "Ultrasound can identify collecting-system dilatation and help detect stones. Dilatation alone does not describe tissue histology or the full cause of obstruction.",
+            "references": [
+              "https://www.radiologyinfo.org/en/info/stones-renal",
+              "https://www.ncbi.nlm.nih.gov/books/NBK543798/"
+            ]
+          }
+        },
+        "ureter": {
+          "clinical": {
+            "readiness": "draft",
+            "body": "A ureteric stone can impede renal drainage. Follow the outflow pathway rather than attributing an upstream abnormality only to renal parenchyma.",
+            "references": [
+              "https://www.radiologyinfo.org/en/info/stones-renal"
+            ]
+          },
+          "pathology": {
+            "readiness": "draft",
+            "body": "The ureteric lining can develop urothelial cancer. Wall disease is distinct from an intraluminal calculus; neither is represented by the source shell.",
+            "references": [
+              "https://www.cancer.gov/types/kidney/patient/transitional-cell-treatment-pdq"
+            ]
+          },
+          "ct": {
+            "readiness": "draft",
+            "body": "CT can localise a calculus and assess its effect on drainage. Urographic evaluation adds information about the urinary tract and adjacent tissues.",
+            "references": [
+              "https://www.radiologyinfo.org/en/info/stones-renal",
+              "https://www.radiologyinfo.org/en/info/urography"
+            ]
+          },
+          "mri": {
+            "readiness": "draft",
+            "body": "A ureteric calculus may appear indirectly as a filling defect on urographic images. MRI signal or a defect alone does not establish stone composition.",
+            "references": [
+              "https://www.ncbi.nlm.nih.gov/books/NBK543809/"
+            ]
+          },
+          "xray": {
+            "readiness": "draft",
+            "body": "Contrast urography depicts the ureteric passage. Superimposed 2D projection anatomy must not be mistaken for this freely rotated 3D source view.",
+            "references": [
+              "https://www.radiologyinfo.org/en/info/urography"
+            ]
+          },
+          "ultrasound": {
+            "readiness": "draft",
+            "body": "Ultrasound can help assess stones and their obstructive effects. The long source ureter does not imply its entire course is visible in one ultrasound window.",
+            "references": [
+              "https://www.radiologyinfo.org/en/info/stones-renal"
+            ]
+          }
+        },
+        "artery": {
+          "clinical": {
+            "readiness": "draft",
+            "body": "Renal arterial narrowing may contribute to renovascular hypertension and impaired renal perfusion. A visible reference artery does not establish normal flow.",
+            "references": [
+              "https://www.niddk.nih.gov/health-information/kidney-disease/renal-artery-stenosis"
+            ]
+          },
+          "pathology": {
+            "readiness": "draft",
+            "body": "Atherosclerosis and fibromuscular dysplasia are causes of renal artery stenosis. No plaque, dysplasia or measured stenosis is modelled.",
+            "references": [
+              "https://www.niddk.nih.gov/health-information/kidney-disease/renal-artery-stenosis"
+            ]
+          },
+          "ct": {
+            "readiness": "draft",
+            "body": "CTA evaluates renal arterial anatomy using contrast-enhanced CT. The reference surface has no patient-specific lumen measurements or accessory-artery completeness guarantee.",
+            "references": [
+              "https://www.niddk.nih.gov/health-information/kidney-disease/renal-artery-stenosis"
+            ]
+          },
+          "mri": {
+            "readiness": "draft",
+            "body": "MRA evaluates renal arteries without x-ray radiation. This mesh contains no angiographic signal, flow measurement or individual contrast-safety assessment.",
+            "references": [
+              "https://www.niddk.nih.gov/health-information/kidney-disease/renal-artery-stenosis"
+            ]
+          },
+          "ultrasound": {
+            "readiness": "draft",
+            "body": "Duplex combines structural imaging with Doppler flow assessment. Colour assigned to the mesh is not Doppler flow direction or a velocity criterion.",
+            "references": [
+              "https://www.niddk.nih.gov/health-information/kidney-disease/renal-artery-stenosis"
+            ]
+          },
+          "xray": {
+            "readiness": "draft",
+            "body": "Catheter angiography uses contrast and x-rays to depict arteries. It is not a plain radiograph or a simulated procedure in this atlas.",
+            "references": [
+              "https://www.niddk.nih.gov/health-information/kidney-disease/renal-artery-stenosis"
+            ]
+          }
+        },
+        "vein": {
+          "clinical": {
+            "readiness": "draft",
+            "body": "Renal cancer may extend into renal veins and towards the vena cava. Evaluate extent using acquired imaging, not reference-mesh length.",
+            "references": [
+              "https://www.cancer.gov/types/kidney/hp/kidney-treatment-pdq"
+            ]
+          },
+          "pathology": {
+            "readiness": "draft",
+            "body": "Venous tumour extension is distinct from a missing or fragmented source surface. The held left-vein mesh is not evidence of thrombosis.",
+            "references": [
+              "https://www.cancer.gov/types/kidney/hp/kidney-treatment-pdq"
+            ]
+          },
+          "ct": {
+            "readiness": "draft",
+            "body": "Contrast-enhanced CT assesses venous involvement in renal masses. This source does not demonstrate venous patency, tumour enhancement or thrombus.",
+            "references": [
+              "https://uroweb.org/guidelines/renal-cell-carcinoma/chapter/diagnostic-evaluation"
+            ]
+          },
+          "mri": {
+            "readiness": "draft",
+            "body": "MRI can clarify venous tumour extension when its cranial extent is uncertain on CT. No complete caval pathway is supplied in this specimen.",
+            "references": [
+              "https://uroweb.org/guidelines/renal-cell-carcinoma/chapter/diagnostic-evaluation"
+            ]
+          }
+        }
+      },
+      "concepts": {
+        "capsule": {
+          "family": "capsule",
+          "limit": "Capsules are supplied; perirenal fat and renal fascia are not. Separation does not expose a validated surgical or haematoma plane.",
+          "question": "Does removing this capsule also remove renal fascia?",
+          "answer": "No. They are different anatomical boundaries, and renal fascia is not supplied here.",
+          "refs": [
+            "trauma"
+          ]
+        },
+        "hilum": {
+          "family": "hilum",
+          "limit": "The labelled hilum is a source surface, not a solid organ, complete pedicle or validated hilar dissection. The left renal vein is held.",
+          "question": "Can this hilar surface establish a complete venous–arterial–pelvic arrangement?",
+          "answer": "No. Its extent and neighbouring partial surfaces require review; the left vein is absent from the display.",
+          "refs": [
+            "rcc"
+          ]
+        },
+        "cortex": {
+          "family": "parenchyma",
+          "limit": "Only the right outer-cortex surface is admitted. The absent left counterpart is a source hold, not cortical thinning or disease.",
+          "question": "Does the absent left outer cortex indicate atrophy?",
+          "answer": "No. That mesh was withheld for geometry defects; no patient cortical thickness is measured.",
+          "refs": [
+            "infection"
+          ]
+        },
+        "column": {
+          "family": "column",
+          "limit": "Only the left renal-column group is admitted. It is not a diagnosed hypertrophied column, and the defective right group remains held.",
+          "question": "Is a prominent cortical column necessarily a neoplasm?",
+          "answer": "No. Cortical tissue can mimic a mass; continuity and matching imaging behaviour are relevant, but this mesh supplies no measured signal.",
+          "refs": [
+            "column"
+          ]
+        },
+        "pyramid": {
+          "family": "parenchyma",
+          "limit": "Each lettered pyramid is a source part, not a vascular territory, scan segment or microscopic nephron reconstruction.",
+          "question": "Do the pyramid letters specify arterial territories?",
+          "answer": "No. The letters identify source parts; no perfusion territories have been validated.",
+          "refs": [
+            "infection"
+          ]
+        },
+        "papilla": {
+          "family": "papilla",
+          "limit": "Eleven left papillary parts and ten left minor-calyx parts are supplied. Letters and proximity do not validate one-to-one drainage.",
+          "question": "Can source part A be assumed to drain into calyx A?",
+          "answer": "No. A matching letter is not a verified anatomical correspondence, particularly with unequal source-part counts.",
+          "refs": [
+            "papilla"
+          ]
+        },
+        "minor-calyx": {
+          "family": "collecting",
+          "limit": "Minor-calyx parts may contain separate source shells. No validated papillary pairing, continuous wall or patent lumen is inferred.",
+          "question": "Does a visible gap between a papilla and calyx demonstrate obstruction?",
+          "answer": "No. Source boundaries are incomplete and drainage connections have not been validated.",
+          "refs": [
+            "stones"
+          ]
+        },
+        "major-calyx": {
+          "family": "collecting",
+          "limit": "Three right and four left major-calyx source parts are retained. Their labels do not define universal branching or segmental drainage.",
+          "question": "Are these major-calyx counts a universal template?",
+          "answer": "No. They describe this source assembly, not normal variation in every individual.",
+          "refs": [
+            "urography"
+          ]
+        },
+        "pelvis": {
+          "family": "collecting",
+          "limit": "The renal pelvis is a collecting-region surface, not a segmented urine volume, pressure model or validated ureteropelvic junction.",
+          "question": "Does expanding the renal pelvis with Explode demonstrate hydronephrosis?",
+          "answer": "No. Explode translates source geometry; it does not dilate tissue or simulate urinary obstruction.",
+          "refs": [
+            "stones"
+          ]
+        },
+        "ureter": {
+          "family": "ureter",
+          "limit": "Long source ureters are supplied without validated bladder insertions, wall layers, peristalsis or complete luminal continuity.",
+          "question": "Does a continuous-looking ureter mesh prove urinary patency?",
+          "answer": "No. Reference surface geometry cannot establish flow, obstruction or individual wall disease.",
+          "refs": [
+            "stones"
+          ]
+        },
+        "artery": {
+          "family": "artery",
+          "limit": "Two partial renal arterial sources are supplied. Accessory vessels, branch territories, lumen calibre and perfusion are not validated.",
+          "question": "Can mesh width be used to grade renal artery stenosis?",
+          "answer": "No. Stenosis assessment requires patient imaging and appropriate measurements; the atlas is an unregistered reference.",
+          "refs": [
+            "artery"
+          ]
+        },
+        "vein": {
+          "family": "vein",
+          "limit": "Only the right renal vein is admitted; the left source is held for geometry defects. No full cava or venous drainage network is supplied.",
+          "question": "Does the missing left renal vein imply occlusion?",
+          "answer": "No. Its exclusion reflects a source-quality hold, not a clinical diagnosis.",
+          "refs": [
+            "venous"
+          ]
+        }
+      }
+    },
+    "nested": {
+      "references": {
+        "renalUreterInjury": {
+          "title": "EAU · Urological trauma guideline, ureteral injury (§4.2)",
+          "url": "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines"
+        },
+        "renalUrinaryImaging": {
+          "title": "NIDDK · Urinary tract imaging",
+          "url": "https://www.niddk.nih.gov/health-information/diagnostic-tests/urinary-tract-imaging"
+        },
+        "renalVenousCompression": {
+          "title": "Kolber et al. · Nutcracker syndrome: diagnosis and therapy (2021)",
+          "url": "https://cdt.amegroups.org/article/view/49808/html"
+        },
+        "renalAdrenalHaemorrhage": {
+          "title": "Elhassan et al. · Approach to the patient with adrenal hemorrhage (2023)",
+          "url": "https://academic.oup.com/jcem/article/108/4/995/6834810"
+        },
+        "renalAdrenalVeinImaging": {
+          "title": "Ota et al. · Right adrenal vein CT/MR comparison (2016; abstract)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26108640/"
+        }
+      },
+      "concepts": [
+        {
+          "id": "renal-ureteric-arteries",
+          "study": "renal",
+          "fmaIds": [
+            "FMA70492",
+            "FMA70493"
+          ],
+          "sections": {
+            "anatomy": {
+              "body": "The renal artery gives ureteric branches. The selected source label describes a ureteric arterial segment, not a segment of kidney tissue.",
+              "references": [
+                "hepaticArteries"
+              ],
+              "readiness": "draft"
+            },
+            "function": {
+              "body": "These branches contribute arterial supply to the upper ureter.",
+              "references": [
+                "hepaticArteries"
+              ],
+              "readiness": "draft"
+            },
+            "clinical": {
+              "body": "Do not equate this small group with the ureter’s entire arterial supply. Its relationship with a kidney does not establish intrarenal branching or a complete vascular route.",
+              "references": [
+                "hepaticArteries"
+              ],
+              "readiness": "draft"
+            },
+            "pathology": {
+              "body": "Loss of ureteric blood supply can cause ischaemic injury, including after an operation. This arterial group illustrates only part of that supply. Its shape cannot establish tissue viability, the extent of injury or the likelihood of a later complication.",
+              "references": [
+                "renalUreterInjury"
+              ],
+              "readiness": "draft"
+            }
+          },
+          "imaging": {
+            "ct": {
+              "body": "CT urography investigates suspected ureteric injury; delayed contrast leakage can reveal urinary extravasation. That is a finding in the urinary tract, not arterial contrast escape. The selected ureteric arterial segment is not a ureter lumen, CT phase or injury map.",
+              "references": [
+                "renalUreterInjury"
+              ],
+              "readiness": "draft"
+            },
+            "mri": {
+              "body": "MR urography evaluates the urinary tract, whereas MR angiography examines vessels such as the renal arteries. Keep the ureter and its arterial supply distinct. Neither technique is represented by this surface, and visibility of this small branch is not established.",
+              "references": [
+                "renalUrinaryImaging"
+              ],
+              "readiness": "draft"
+            },
+            "ultrasound": {
+              "body": "Kidney ultrasound can assess position, obstruction and other structural abnormalities. Such an examination is not a demonstration of every ureteric arterial branch. This small source group supplies no ultrasound image, flow measurement or evidence of ureteric perfusion.",
+              "references": [
+                "renalUrinaryImaging"
+              ],
+              "readiness": "draft"
+            }
+          },
+          "modelLimit": "A source-labelled vascular group, not a complete circulation or validated lumen. Kidney association is study navigation; adrenal vessels are not kidney tissue. Source positions are retained, but endpoints, variants and patient correspondence are unvalidated. Cortex, medulla, calyces and pelvis are absent. The left inferior suprarenal artery is withheld because of a source defect.",
+          "quiz": {
+            "question": "Does this selection show the entire blood supply of the ureter?",
+            "answer": "No. It shows only the supplied renal arterial group; other arterial sources and continuous junctions are not established.",
+            "references": [],
+            "basis": "model-scope"
+          }
+        },
+        {
+          "id": "renal-inferior-suprarenal-artery",
+          "study": "renal",
+          "fmaIds": [
+            "FMA69265"
+          ],
+          "sections": {
+            "anatomy": {
+              "body": "The inferior suprarenal artery usually arises from the renal artery and approaches the adrenal gland.",
+              "references": [
+                "hepaticArteries"
+              ],
+              "readiness": "draft"
+            },
+            "function": {
+              "body": "It contributes arterial inflow to the adrenal gland alongside other suprarenal arterial sources.",
+              "references": [
+                "hepaticArteries"
+              ],
+              "readiness": "draft"
+            },
+            "clinical": {
+              "body": "Keep adrenal arterial inflow separate from adrenal venous drainage when comparing these structures. This model does not establish all adrenal arterial sources.",
+              "references": [
+                "hepaticArteries"
+              ],
+              "readiness": "draft"
+            },
+            "pathology": {
+              "body": "Adrenal haemorrhage may occur with trauma, severe illness or an underlying tumour. The gland has several arterial sources; a haemorrhage cannot automatically be attributed to its inferior suprarenal artery. This single branch is not a complete bleeding-source map.",
+              "references": [
+                "renalAdrenalHaemorrhage"
+              ],
+              "readiness": "draft"
+            }
+          },
+          "imaging": {
+            "ct": {
+              "body": "Acute adrenal haemorrhage can produce a high-attenuation gland lesion and surrounding stranding on CT. These are tissue and surrounding-space findings, not features of a normal arterial surface. Identifying this branch does not identify the origin of bleeding.",
+              "references": [
+                "renalAdrenalHaemorrhage"
+              ],
+              "readiness": "draft"
+            },
+            "mri": {
+              "body": "MRI can characterise adrenal blood products and help assess an underlying enhancing mass. Signal changes with the age of haemorrhage and the sequence used. The arterial model contains no blood-product signal, enhancement or adrenal lesion.",
+              "references": [
+                "renalAdrenalHaemorrhage"
+              ],
+              "readiness": "draft"
+            }
+          },
+          "modelLimit": "A source-labelled vascular group, not a complete circulation or validated lumen. Kidney association is study navigation; adrenal vessels are not kidney tissue. Source positions are retained, but endpoints, variants and patient correspondence are unvalidated. Cortex, medulla, calyces and pelvis are absent. The left inferior suprarenal artery is withheld because of a source defect.",
+          "quiz": {
+            "question": "Why is there no matching left inferior suprarenal artery in this study?",
+            "answer": "The left source contains a geometry defect and was withheld. Its absence is a model limitation, not normal anatomical absence.",
+            "references": [],
+            "basis": "model-scope"
+          }
+        },
+        {
+          "id": "renal-veins",
+          "study": "renal",
+          "fmaIds": [
+            "FMA14335",
+            "FMA14336"
+          ],
+          "sections": {
+            "anatomy": {
+              "body": "Renal veins drain to the inferior vena cava. The left crosses the aorta; the right is shorter.",
+              "references": [
+                "hepaticVeins"
+              ],
+              "readiness": "draft"
+            },
+            "function": {
+              "body": "They return blood from the kidneys.",
+              "references": [
+                "hepaticVeins"
+              ],
+              "readiness": "draft"
+            },
+            "clinical": {
+              "body": "An aortic crossing alone does not establish compression or a clinical diagnosis.",
+              "references": [
+                "hepaticVeins"
+              ],
+              "readiness": "draft"
+            },
+            "pathology": {
+              "body": "Left-sided example: nutcracker syndrome involves symptomatic left renal venous compression, classically between the superior mesenteric artery and aorta. Compression anatomy alone is not the syndrome. This is not the usual right renal vein arrangement, and neither modelled vein establishes disease.",
+              "references": [
+                "renalVenousCompression"
+              ],
+              "readiness": "draft"
+            }
+          },
+          "imaging": {
+            "ct": {
+              "body": "For suspected left renal venous compression, CT assesses the aortomesenteric relationship, vein calibre and possible collateral pathways. Findings require clinical interpretation. Do not measure a diagnostic angle or stenosis ratio from this atlas, particularly with structures separated.",
+              "references": [
+                "renalVenousCompression"
+              ],
+              "readiness": "draft"
+            },
+            "mri": {
+              "body": "MRI can evaluate the left renal vein and adjacent or collateral veins without ionising radiation. Sequence choice affects visibility. This left-sided teaching example does not establish a right-sided equivalent, a patient-specific venous variant or a registered MRI correspondence.",
+              "references": [
+                "renalVenousCompression"
+              ],
+              "readiness": "draft"
+            },
+            "ultrasound": {
+              "body": "Doppler evaluation of suspected left renal venous compression compares flow velocities near the hilum and the compressed segment; body position influences findings. Atlas blue identifies a vein, not Doppler direction, velocity or patency. No diagnostic waveform or pressure gradient is supplied.",
+              "references": [
+                "renalVenousCompression"
+              ],
+              "readiness": "draft"
+            }
+          },
+          "modelLimit": "A source-labelled vascular group, not a complete circulation or validated lumen. Kidney association is study navigation; adrenal vessels are not kidney tissue. Source positions are retained, but endpoints, variants and patient correspondence are unvalidated. Cortex, medulla, calyces and pelvis are absent. The left inferior suprarenal artery is withheld because of a source defect.",
+          "quiz": {
+            "question": "Which major vessel receives renal venous drainage?",
+            "answer": "The inferior vena cava.",
+            "references": [
+              "hepaticVeins"
+            ],
+            "basis": "primary-reference"
+          }
+        },
+        {
+          "id": "renal-suprarenal-veins",
+          "study": "renal",
+          "fmaIds": [
+            "FMA14343",
+            "FMA14349"
+          ],
+          "sections": {
+            "anatomy": {
+              "body": "The right suprarenal vein usually drains to the cava; the left to the left renal vein.",
+              "references": [
+                "hepaticVeins"
+              ],
+              "readiness": "draft"
+            },
+            "function": {
+              "body": "They drain the adrenal glands.",
+              "references": [
+                "hepaticVeins"
+              ],
+              "readiness": "draft"
+            },
+            "clinical": {
+              "body": "Paired structures need not have identical connections. Junctions and variants require review.",
+              "references": [
+                "hepaticVeins"
+              ],
+              "readiness": "draft"
+            },
+            "pathology": {
+              "body": "Adrenal haemorrhage provides a reason to consider venous outflow as well as arterial inflow: numerous small arteries drain through a more limited venous route. Haemorrhage alone does not prove thrombosis of the selected vein; no diseased adrenal tissue is represented.",
+              "references": [
+                "renalAdrenalHaemorrhage"
+              ],
+              "readiness": "draft"
+            }
+          },
+          "imaging": {
+            "ct": {
+              "body": "Right-sided reference example: a study before adrenal venous sampling used dynamic CT to map the right adrenal vein and its variants. Visibility depended on the examination. These results do not validate this mesh, the left vein or a catheter route.",
+              "references": [
+                "renalAdrenalVeinImaging"
+              ],
+              "readiness": "draft"
+            },
+            "mri": {
+              "body": "In the same right-adrenal-vein study, a dedicated non-contrast MR sequence depicted the vein in many, but not all, patients. This is not a guarantee for routine MRI or the left adrenal vein. The atlas supplies no sequence-specific signal or sampling plan.",
+              "references": [
+                "renalAdrenalVeinImaging"
+              ],
+              "readiness": "draft"
+            }
+          },
+          "modelLimit": "A source-labelled vascular group, not a complete circulation or validated lumen. Kidney association is study navigation; adrenal vessels are not kidney tissue. Source positions are retained, but endpoints, variants and patient correspondence are unvalidated. Cortex, medulla, calyces and pelvis are absent. The left inferior suprarenal artery is withheld because of a source defect.",
+          "quiz": {
+            "question": "Where does the left suprarenal vein usually drain?",
+            "answer": "Into the left renal vein.",
+            "references": [
+              "hepaticVeins"
+            ],
+            "basis": "primary-reference"
+          }
+        }
+      ]
+    },
+    "pelvic": {
+      "references": {
+        "ct": "https://www.radiologyinfo.org/en/info/bodyct",
+        "urography": "https://www.radiologyinfo.org/en/info/urography",
+        "urinary": "https://www.niddk.nih.gov/health-information/diagnostic-tests/urinary-tract-imaging",
+        "pelvicUs": "https://www.radiologyinfo.org/en/info/pelvus",
+        "prostateMr": "https://www.radiologyinfo.org/en/info/mr_prostate",
+        "prostateUs": "https://www.radiologyinfo.org/en/info/us-prostate",
+        "scrotalUs": "https://www.radiologyinfo.org/en/info/us-scrotal",
+        "scrotalMr": "https://acsearch.acr.org/list/GetAppendix?PanelName=Urologic&TopicId=304",
+        "urethra": "https://uroweb.org/guidelines/urethral-strictures/chapter/diagnostic-evaluation",
+        "xray": "https://www.radiologyinfo.org/en/info/abdominrad",
+        "glands": "https://training.seer.cancer.gov/anatomy/reproductive/male/glands.html"
+      },
+      "topics": {
+        "bladder": {
+          "ct": {
+            "body": "CT urography depicts the urinary tract in its surrounding anatomy. Confirm whether the bladder contains excreted contrast before comparing its appearance with a reference surface.",
+            "bullets": [
+              "Contrast within urine is different from tissue enhancement.",
+              "The atlas has no calibrated density or contrast phase."
+            ],
+            "references": [
+              "urography"
+            ]
+          },
+          "mri": {
+            "body": "MR urography can depict the bladder and upstream urinary tract. Identify the acquired sequence before relating an apparent boundary to this envelope.",
+            "bullets": [
+              "Displayed model colour is not MR signal.",
+              "This surface cannot establish wall invasion or normal histology."
+            ],
+            "references": [
+              "urography"
+            ]
+          },
+          "ultrasound": {
+            "body": "Transabdominal pelvic ultrasound uses the bladder as an accessible fluid-filled structure. Filling is relevant to the examination and changes the appearance being compared.",
+            "bullets": [
+              "The model has no known distension or post-void state.",
+              "An atlas size is not a patient bladder-volume measurement."
+            ],
+            "references": [
+              "pelvicUs"
+            ]
+          },
+          "xray": {
+            "body": "A KUB radiograph is not a complete bladder-wall study. Keep plain films distinct from examinations that deliberately opacify the urinary tract.",
+            "bullets": [
+              "Contrast technique must be identified in future linked images.",
+              "No contrast study or urine leakage is simulated here."
+            ],
+            "references": [
+              "xray",
+              "urinary"
+            ]
+          }
+        },
+        "prostate": {
+          "ct": {
+            "body": "CT provides pelvic context, but the atlas gland boundary is not a zonal map. Ultrasound and MRI are the commonly used dedicated prostate examinations.",
+            "bullets": [
+              "Separate gland position from lesion characterisation.",
+              "This reference gives no patient-specific gland volume."
+            ],
+            "references": [
+              "ct",
+              "prostateMr"
+            ]
+          },
+          "mri": {
+            "body": "Prostate MRI combines anatomical information with diffusion and, in multiparametric studies, perfusion assessment. A surface model cannot reproduce these tissue measurements.",
+            "bullets": [
+              "Compare the gland beneath the bladder and in front of the rectum.",
+              "No PI-RADS score or cancer probability is assigned by this atlas."
+            ],
+            "references": [
+              "prostateMr"
+            ]
+          },
+          "ultrasound": {
+            "body": "Transrectal ultrasound provides a close acoustic view of the prostate. Probe-based orientation must be identified independently of the atlas camera.",
+            "bullets": [
+              "Selecting the gland does not represent a biopsy target.",
+              "A shared organ name is not image-to-model registration."
+            ],
+            "references": [
+              "prostateUs"
+            ]
+          },
+          "xray": {
+            "body": "Plain radiographs have limited internal soft-tissue detail. Use this model for regional orientation, not as proof that the selected organ or its internal borders are visible on a film.",
+            "bullets": [
+              "A projection overlaps structures at different depths.",
+              "Atlas transparency does not generate calibrated X-ray attenuation."
+            ],
+            "references": [
+              "xray"
+            ]
+          }
+        },
+        "seminalVesicle": {
+          "ct": {
+            "body": "Identify each seminal vesicle separately from the bladder and prostate when orienting pelvic cross-sections. The selected gland surface does not prove a visible or patent ejaculatory duct.",
+            "bullets": [
+              "Check the selected side before comparison.",
+              "An apparently touching model surface is not tissue invasion."
+            ],
+            "references": [
+              "ct",
+              "glands"
+            ]
+          },
+          "mri": {
+            "body": "Use the paired seminal vesicles as neighbouring landmarks when reviewing prostate MRI. Keep whole-gland orientation distinct from assessment of tumour extension.",
+            "bullets": [
+              "No MR signal or restricted diffusion is represented.",
+              "This source envelope cannot confirm or exclude invasion."
+            ],
+            "references": [
+              "prostateMr",
+              "glands"
+            ]
+          },
+          "ultrasound": {
+            "body": "Male pelvic ultrasound can evaluate the seminal vesicles as well as the prostate. Distinguish the paired gland from the adjacent urinary bladder.",
+            "bullets": [
+              "A selected surface does not establish internal duct patency.",
+              "Do not infer secretory function from the model."
+            ],
+            "references": [
+              "pelvicUs",
+              "glands"
+            ]
+          },
+          "xray": {
+            "body": "Plain radiographs have limited internal soft-tissue detail. Use this model for regional orientation, not as proof that the selected organ or its internal borders are visible on a film.",
+            "bullets": [
+              "A projection overlaps structures at different depths.",
+              "Atlas transparency does not generate calibrated X-ray attenuation."
+            ],
+            "references": [
+              "xray"
+            ]
+          }
+        },
+        "ureter": {
+          "ct": {
+            "body": "CT urography follows the ureters between kidneys and bladder. Relate cross-sections along the same side instead of matching an isolated circular profile by proximity.",
+            "bullets": [
+              "Identify contrast use and acquisition phase.",
+              "The atlas does not simulate an opacified lumen."
+            ],
+            "references": [
+              "urography"
+            ]
+          },
+          "mri": {
+            "body": "MR urography offers urinary-tract anatomy without an X-ray projection. Sequence and contrast choices affect what is visible; model colour predicts neither.",
+            "bullets": [
+              "Follow the same ureter across adjacent images.",
+              "No flow, drainage or obstruction measurement is provided."
+            ],
+            "references": [
+              "urography"
+            ]
+          },
+          "ultrasound": {
+            "body": "Urinary ultrasound may provide selected views rather than a continuous picture of a ureter. The model must not be treated as proof that the whole tube is sonographically visible.",
+            "bullets": [
+              "Acoustic access depends on surrounding tissue and bowel gas.",
+              "Missing visibility is not itself proof of absent anatomy."
+            ],
+            "references": [
+              "pelvicUs"
+            ]
+          },
+          "xray": {
+            "body": "KUB refers to the kidney–ureter–bladder region, not automatic delineation of both ureters. Contrast urography and a plain film are different examinations.",
+            "bullets": [
+              "Do not infer a complete lumen from a regional label.",
+              "No calculus or fluoroscopic passage is generated here."
+            ],
+            "references": [
+              "xray",
+              "urinary"
+            ]
+          }
+        },
+        "urethra": {
+          "ct": {
+            "body": "A routine pelvic CT is not a dedicated urethrogram. The selected source helps orient the outlet, not establish urethral lumen length or patency.",
+            "bullets": [
+              "Do not equate CT urography with urethrography.",
+              "No injury or narrowing is simulated."
+            ],
+            "references": [
+              "ct",
+              "urethra"
+            ]
+          },
+          "mri": {
+            "body": "MRI can provide supplementary detail in selected urethral problems. Its role differs from contrast urethrography and requires the acquired images, not this surface.",
+            "bullets": [
+              "The atlas does not measure fibrosis or stenosis length.",
+              "No routine acquisition recommendation is made here."
+            ],
+            "references": [
+              "urethra"
+            ]
+          },
+          "ultrasound": {
+            "body": "Sonourethrography is a specialised urethral examination, not simply a standard bladder ultrasound. It can assess the anterior urethra and surrounding tissue.",
+            "bullets": [
+              "No distension or tissue stiffness is represented.",
+              "The source has no validated sonographic wall layers."
+            ],
+            "references": [
+              "urethra"
+            ]
+          },
+          "xray": {
+            "body": "Retrograde urethrography and voiding cystourethrography are contrast examinations with different views of the urethra. Plain-film visibility is not equivalent.",
+            "bullets": [
+              "A two-dimensional projection can distort apparent length.",
+              "This model does not simulate contrast injection or voiding."
+            ],
+            "references": [
+              "urethra"
+            ]
+          }
+        },
+        "testis": {
+          "ct": {
+            "body": "For a palpable scrotal abnormality, ultrasound is the usual initial examination; CT is not a substitute for dedicated scrotal assessment.",
+            "bullets": [
+              "A pelvic CT may not include the entire scrotum.",
+              "Do not infer a normal selected organ from an incomplete field of view."
+            ],
+            "references": [
+              "scrotalUs",
+              "ct"
+            ]
+          },
+          "mri": {
+            "body": "MRI may be a problem-solving examination for a palpable scrotal abnormality. It does not replace initial ultrasound merely because it offers more sequences.",
+            "bullets": [
+              "Confirm that the acquired examination includes the selected testis.",
+              "No intratesticular signal or enhancement is modelled."
+            ],
+            "references": [
+              "scrotalMr"
+            ]
+          },
+          "ultrasound": {
+            "body": "Scrotal ultrasound distinguishes an abnormality within the testis from one outside it. Doppler adds blood-flow information to the greyscale examination.",
+            "bullets": [
+              "Compare with the opposite testis using acquired images.",
+              "A coloured mesh is not a Doppler perfusion map."
+            ],
+            "references": [
+              "scrotalUs"
+            ]
+          },
+          "xray": {
+            "body": "Plain radiographs have limited internal soft-tissue detail. Use this model for regional orientation, not as proof that the selected organ or its internal borders are visible on a film.",
+            "bullets": [
+              "A projection overlaps structures at different depths.",
+              "Atlas transparency does not generate calibrated X-ray attenuation."
+            ],
+            "references": [
+              "xray"
+            ]
+          }
+        },
+        "epididymis": {
+          "ct": {
+            "body": "For a palpable scrotal abnormality, ultrasound is the usual initial examination; CT is not a substitute for dedicated scrotal assessment.",
+            "bullets": [
+              "A pelvic CT may not include the entire scrotum.",
+              "Do not infer a normal selected organ from an incomplete field of view."
+            ],
+            "references": [
+              "scrotalUs",
+              "ct"
+            ]
+          },
+          "mri": {
+            "body": "If scrotal MRI is obtained for problem solving, distinguish an extratesticular epididymal finding from the adjacent testis. This surface cannot supply tissue characterisation.",
+            "bullets": [
+              "A separate mesh is not evidence of a separate lesion.",
+              "No independently verified head, body or tail is provided."
+            ],
+            "references": [
+              "scrotalMr"
+            ]
+          },
+          "ultrasound": {
+            "body": "The epididymis is evaluated alongside the testis on scrotal ultrasound. Location and Doppler findings complement greyscale appearance.",
+            "bullets": [
+              "Keep epididymal findings distinct from intratesticular findings.",
+              "No cyst, inflammation or measured hyperaemia is simulated."
+            ],
+            "references": [
+              "scrotalUs"
+            ]
+          },
+          "xray": {
+            "body": "Plain radiographs have limited internal soft-tissue detail. Use this model for regional orientation, not as proof that the selected organ or its internal borders are visible on a film.",
+            "bullets": [
+              "A projection overlaps structures at different depths.",
+              "Atlas transparency does not generate calibrated X-ray attenuation."
+            ],
+            "references": [
+              "xray"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "fullSourceHash": "a001643acc7ca9813ce7543c9a32ee9fa9a2962ae9d079dcbe114c3f018fc78c",
+  "wholeBodyHash": "730b2c0284bb49072ad201da8792b772045824dcff3e89fb016a47d55c4dd746"
+}

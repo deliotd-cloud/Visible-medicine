@@ -4,6 +4,7 @@ import { readFile } from 'node:fs/promises';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import { build } from './workspace-component-test-build.mjs';
+import { nestedBeforeClinicalReferenceRevision } from './clinical-reference-revision-history.mjs';
 
 const require = createRequire(import.meta.url);
 const React = require('react');
@@ -45,6 +46,7 @@ const api = {
   nestedConcepts: scope.exports.nestedConcepts.filter(c => c.study !== 'femoral-components'),
   nestedTeachingReferences: Object.fromEntries(Object.entries(scope.exports.nestedTeachingReferences).filter(([key]) => key !== 'femoralComponentAnatomy')),
 };
+const historicalApi = nestedBeforeClinicalReferenceRevision(api);
 const copy = (value) => JSON.parse(JSON.stringify(value));
 let checks = 0;
 const check = (value, message) => {
@@ -69,7 +71,7 @@ const initial = JSON.stringify(catalog);
 same(targets.length, 71);
 same(api.nestedConcepts.length, 42);
 same(new Set(api.nestedConcepts.map((c) => c.id)).size, 42);
-const priorConcepts = api.nestedConcepts.filter((c) => c.study !== 'cricothyroid' && c.id !== 'inferior-collicular-brachia');
+const priorConcepts = historicalApi.nestedConcepts.filter((c) => c.study !== 'cricothyroid' && c.id !== 'inferior-collicular-brachia');
 same(priorConcepts.length, 40);
 const allPins = JSON.parse(await readFile('content/nested-teaching-bindings.v1.json'));
 same(allPins.bindings.length, 71);
@@ -144,7 +146,7 @@ const renalConceptIds = [
   'renal-suprarenal-veins',
 ];
 same(
-  api.nestedConcepts.filter((c) => c.study === 'renal').map((c) => c.id),
+  historicalApi.nestedConcepts.filter((c) => c.study === 'renal').map((c) => c.id),
   renalConceptIds,
 );
 // Captured from validated v108 source 649dfc3d, before this cerebral extension.
@@ -169,7 +171,7 @@ const addedDuctReferences = new Set([
 same(
   digest(
     Object.fromEntries(
-      Object.entries(api.nestedTeachingReferences).filter(
+      Object.entries(historicalApi.nestedTeachingReferences).filter(
         ([key]) => !addedDuctReferences.has(key),
       ),
     ),
@@ -228,7 +230,7 @@ same(
 );
 same(
   digest(
-    api.nestedConcepts
+    historicalApi.nestedConcepts
       .filter((c) => c.study === 'renal')
       .map((c) => ({
         id: c.id,
@@ -276,7 +278,7 @@ same(
 );
 same(
   digest(
-    api.nestedConcepts
+    historicalApi.nestedConcepts
       .filter((c) =>
         ['cerebral-insula', 'cerebral-superior-temporal-anterior'].includes(
           c.id,
@@ -298,7 +300,7 @@ same(
 );
 same(
   digest(
-    api.nestedConcepts
+    historicalApi.nestedConcepts
       .filter((c) => c.study === 'pulmonary')
       .map((c) => ({
         id: c.id,
@@ -315,7 +317,7 @@ same(
 );
 same(
   digest(
-    api.nestedConcepts
+    historicalApi.nestedConcepts
       .filter((c) => c.study === 'hepatic')
       .map((c) => ({
         id: c.id,
@@ -332,7 +334,7 @@ same(
 );
 same(
   digest(
-    api.nestedConcepts
+    historicalApi.nestedConcepts
       .filter((c) => c.study === 'cardiac')
       .map((c) => ({
         id: c.id,
@@ -623,6 +625,8 @@ const hosts = new Set([
   'meshb.nlm.nih.gov',
   'meshb-prev.nlm.nih.gov',
   'nba.uth.tmc.edu',
+  'link.springer.com',
+  'creativecommons.org',
 ]);
 for (const concept of api.nestedConcepts) {
   check(concept.modelLimit.trim());
@@ -651,8 +655,10 @@ for (const concept of api.nestedConcepts) {
       check(source?.title && source.url);
       const url = new URL(source.url);
       check(url.protocol === 'https:' && hosts.has(url.hostname));
-      wordsBySource[ref] =
-        (wordsBySource[ref] ?? 0) + section.body.trim().split(/\s+/).length;
+      // Licence text establishes reuse terms; it is not a factual clinical source.
+      if (ref !== 'renalReuseLicense')
+        wordsBySource[ref] =
+          (wordsBySource[ref] ?? 0) + section.body.trim().split(/\s+/).length;
     }
   }
 }
@@ -660,7 +666,7 @@ same(Object.keys(wordsBySource).length, 82);
 same(
   new Set(Object.values(api.nestedTeachingReferences).map((ref) => ref.url))
     .size,
-  82,
+  83,
   'Do not split one source into duplicate reference keys',
 );
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {

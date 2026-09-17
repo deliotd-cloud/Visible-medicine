@@ -2,8 +2,12 @@ import type { NestedConcept, NestedSection } from './nested-teaching';
 
 export const renalTeachingReferences = {
   renalUreterInjury: {
-    title: 'EAU · Urological trauma guideline, ureteral injury (§4.2)',
-    url: 'https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines',
+    title: "de'Angelis et al. · WSES iatrogenic urinary tract injuries (2023; CC BY 4.0)",
+    url: 'https://link.springer.com/article/10.1186/s13017-023-00513-8',
+  },
+  renalReuseLicense: {
+    title: 'Creative Commons Attribution 4.0 licence',
+    url: 'https://creativecommons.org/licenses/by/4.0/',
   },
   renalUrinaryImaging: {
     title: 'NIDDK · Urinary tract imaging',
@@ -27,9 +31,9 @@ export const renalTeachingReferences = {
 // Reuse existing abdominal-table keys; one source must have one word budget.
 const renalArteries = 'hepaticArteries';
 const renalVeins = 'hepaticVeins';
-const draft = (body: string, reference: string): NestedSection => ({
+const draft = (body: string, ...references: string[]): NestedSection => ({
   body,
-  references: [reference],
+  references,
   readiness: 'draft',
 });
 const limit =
@@ -53,14 +57,16 @@ export const renalConcepts: NestedConcept[] = [
         renalArteries,
       ),
       pathology: draft(
-        'Loss of ureteric blood supply can cause ischaemic injury, including after an operation. This arterial group illustrates only part of that supply. Its shape cannot establish tissue viability, the extent of injury or the likelihood of a later complication.',
+        "Preservation of periureteric blood supply matters in surgical injury and reconstruction: devascularisation threatens tissue viability through ischaemia. This group shows only part of that supply, not postoperative viability or complication risk. Summary adapted from de'Angelis et al. (2023), CC BY 4.0.",
         'renalUreterInjury',
+        'renalReuseLicense',
       ),
     },
     imaging: {
       ct: draft(
-        'CT urography investigates suspected ureteric injury; delayed contrast leakage can reveal urinary extravasation. That is a finding in the urinary tract, not arterial contrast escape. The selected ureteric arterial segment is not a ureter lumen, CT phase or injury map.',
+        "Nephrographic and excretory CT urography assess suspected postoperative ureteric injury. Contrast leaking from the urinary tract differs from arterial bleeding. This arterial surface is neither a ureteric lumen nor a CT finding. Summary adapted from de'Angelis et al. (2023), CC BY 4.0.",
         'renalUreterInjury',
+        'renalReuseLicense',
       ),
       mri: draft(
         'MR urography evaluates the urinary tract, whereas MR angiography examines vessels such as the renal arteries. Keep the ureter and its arterial supply distinct. Neither technique is represented by this surface, and visibility of this small branch is not established.',

@@ -1,0 +1,37 @@
+{
+  "baselineCommit": "3584fc178a408b42caf430b9084e55198a0d18c6",
+  "changedLeaves": 48,
+  "reconstructedWholeBodyHash": "730b2c0284bb49072ad201da8792b772045824dcff3e89fb016a47d55c4dd746",
+  "currentWholeBodyHash": "4e942ce8f3f02ad198d35f554cda97ad113c0f4eb05afb5e342717b35d156549",
+  "sourceWordCounts": {
+    "https://link.springer.com/article/10.1007/s13244-015-0385-1": 101,
+    "https://link.springer.com/article/10.1186/s13017-019-0274-x": 106,
+    "https://link.springer.com/article/10.1007/s00261-026-05660-5": 130,
+    "https://www.cancer.gov/types/kidney/patient/transitional-cell-treatment-pdq": 78,
+    "https://www.radiologyinfo.org/en/info/urography": 109,
+    "https://www.ncbi.nlm.nih.gov/books/NBK543798/": 115,
+    "https://www.ncbi.nlm.nih.gov/books/NBK543809/": 79,
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC4261443/": 94,
+    "https://pubmed.ncbi.nlm.nih.gov/17102053/": 64,
+    "https://www.radiologyinfo.org/en/info/stones-renal": 111,
+    "https://www.niddk.nih.gov/health-information/kidney-disease/renal-artery-stenosis": 122,
+    "https://www.cancer.gov/types/kidney/hp/kidney-treatment-pdq": 41,
+    "https://link.springer.com/article/10.1186/s13017-023-00513-8": 83,
+    "https://www.radiologyinfo.org/en/info/bodyct": 44,
+    "https://link.springer.com/article/10.1007/s00345-023-04760-x": 173
+  },
+  "legacyPelvicGate": {
+    "command": "node scripts/validate-pelvic-organ-imaging.mjs",
+    "expected": "c2c0a4aa4b435ea86c1aaa3799b86773ddaff9c09109e8a057ab14f4f92bcda8",
+    "actualAfterExactRevisionRollback": "784c75e9e91de126356be4da97dcecb3551595425e66b12883cc1bdf3f1c5566",
+    "preExistingMismatch": true
+  },
+  "legacyNestedPinGate": {
+    "command": "npm run nested-teaching:test",
+    "failingSource": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1700",
+    "changedRevisionScope": "renal-ureteric-arteries only"
+  },
+  "sourceGeometryChanged": false,
+  "clinicalApproval": false,
+  "imagesImported": false
+}

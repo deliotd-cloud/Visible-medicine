@@ -3,10 +3,12 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import pins from '../content/pelvic-organ-imaging-pins.json' with { type: 'json' };
 import after from '../content/pelvic-organ-imaging.transition.json' with { type: 'json' };
+import { authoringBeforeClinicalReferenceRevision } from './clinical-reference-revision-history.mjs';
 
 export const pelvicOrganContentHash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 export function authoringBeforePelvicOrganImaging({ api, catalog }) {
+  api = authoringBeforeClinicalReferenceRevision({ api, catalog });
   assert.equal(pelvicOrganContentHash(pins), '648dfc588e6cccd45b114ac74d867b9dcf8514ab5f48f4daea0869e3ef292341');
   assert.equal(pelvicOrganContentHash(after), '6b818fad3e3cf6693463b0efc25f23c2f310f6da3f18eef16d4164ac9a67533b');
   const display = api.bodyDisplayCatalog(catalog), prior = new Map();

@@ -4,9 +4,11 @@ import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
 import pins from '../content/deferent-clinical-pins.json' with {type:'json'};
 import after from '../content/deferent-clinical.transition.json' with {type:'json'};
+import {authoringBeforeClinicalReferenceRevision} from './clinical-reference-revision-history.mjs';
 
 export const deferentClinicalHash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 export function authoringBeforeDeferentClinical({api,catalog}) {
+  api=authoringBeforeClinicalReferenceRevision({api,catalog});
   const hash=deferentClinicalHash;
   assert.equal(hash(pins),'761af9526c4f86ec1fb7e7822f89fe1979b4276a20ab8b3bb5a86902b3cf1eea');
   assert.equal(hash(after),'2ac896dc902eecdd732ae7fa4a4a9858fca1b6a6debd204e22dd8185ca18f43f');

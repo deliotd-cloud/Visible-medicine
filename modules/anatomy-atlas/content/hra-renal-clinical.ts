@@ -1,10 +1,12 @@
 import type { SpecimenClinicalLesson, SpecimenTopicDraft } from './um-limb-clinical';
 
-// Original short synthesis, reviewed against the linked sources on 2026-09-12.
+// Original short synthesis; renal trauma/RCC references revised 2026-09-17.
 // Reading references only: no scan, illustration, table, protocol or passage imported.
 export const hraRenalClinicalReferences = {
-  trauma: { title: 'EAU · Urological trauma, renal imaging', url: 'https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines' },
-  rcc: { title: 'EAU · Renal cell carcinoma, diagnostic evaluation', url: 'https://uroweb.org/guidelines/renal-cell-carcinoma/chapter/diagnostic-evaluation' },
+  trauma: { title: 'Coccolini et al. · Kidney and uro-trauma: WSES-AAST guidelines (2019; CC BY 4.0)', url: 'https://link.springer.com/article/10.1186/s13017-019-0274-x' },
+  rcc: { title: 'Withey et al. · Multimodality staging of renal cell carcinoma (2026; CC BY 4.0)', url: 'https://link.springer.com/article/10.1007/s00261-026-05660-5' },
+  haematoma: { title: 'Bonatti et al. · MDCT of blunt renal trauma (2015; CC Attribution, version unspecified)', url: 'https://link.springer.com/article/10.1007/s13244-015-0385-1' },
+  ccBy4: { title: 'Creative Commons Attribution 4.0 licence', url: 'https://creativecommons.org/licenses/by/4.0/' },
   urothelial: { title: 'NCI · Renal pelvis and ureter cancer', url: 'https://www.cancer.gov/types/kidney/patient/transitional-cell-treatment-pdq' },
   venous: { title: 'NCI · Renal cell cancer and venous extension', url: 'https://www.cancer.gov/types/kidney/hp/kidney-treatment-pdq' },
   artery: { title: 'NIDDK · Renal artery stenosis', url: 'https://www.niddk.nih.gov/health-information/kidney-disease/renal-artery-stenosis' },
@@ -16,22 +18,30 @@ export const hraRenalClinicalReferences = {
   papilla: { title: 'Jung et al. · Renal papillary necrosis at CT/urography (2006)', url: 'https://pubmed.ncbi.nlm.nih.gov/17102053/' },
 } as const;
 type Ref = keyof typeof hraRenalClinicalReferences;
-const refs = (...keys: Ref[]) => keys.map(k => hraRenalClinicalReferences[k].url);
-const draft = (body: string, ...keys: Ref[]): SpecimenTopicDraft => ({ readiness: 'draft', body, references: refs(...keys) });
+const sourceCredits: Partial<Record<Ref, string>> = {
+  trauma: 'Summary adapted from Coccolini et al. (2019), CC BY 4.0.',
+  rcc: 'Summary adapted from Withey et al. (2026), CC BY 4.0.',
+  haematoma: 'Summary adapted from Bonatti et al. (2015), CC Attribution; version unspecified.',
+};
+const refs = (...keys: Ref[]) => [...new Set([
+  ...keys.map(k => hraRenalClinicalReferences[k].url),
+  ...(keys.some(k => k === 'trauma' || k === 'rcc') ? [hraRenalClinicalReferences.ccBy4.url] : []),
+])];
+const draft = (body: string, ...keys: Ref[]): SpecimenTopicDraft => ({ readiness: 'draft', body: [body, ...keys.flatMap(k => sourceCredits[k] ? [sourceCredits[k]] : [])].join(' '), references: refs(...keys) });
 type Topics = SpecimenClinicalLesson['topics'];
 
 export const hraRenalTopicFamilies = {
   capsule: {
-    clinical: draft('Locate a collection relative to the renal capsule and the surrounding perirenal compartment; these are different boundaries.', 'trauma'),
-    pathology: draft('Subcapsular and perirenal haematomas occupy different compartments. The source capsule is not a haematoma model or an injury grade.', 'trauma'),
-    ct: draft('In trauma, CT assesses the extent of haematoma and associated parenchymal or vascular injury. A normal-looking surface model cannot exclude injury.', 'trauma'),
-    mri: draft('MRI can depict renal trauma but practical constraints limit its acute-trauma role. This model supplies neither blood-product signal nor an acquisition protocol.', 'trauma'),
-    ultrasound: draft('A negative FAST examination does not exclude renal injury; it does not provide the same renal injury characterisation as CT.', 'trauma'),
+    clinical: draft('Localise a collection inside or outside the capsule: the subcapsular space lies against parenchyma, whereas the perirenal compartment surrounds the capsule.', 'haematoma'),
+    pathology: draft('A subcapsular haematoma may indent the kidney; perirenal blood occupies surrounding fat. Neither collection nor an injury grade is represented by this capsule mesh.', 'haematoma'),
+    ct: draft('CT depicts traumatic haematoma alongside parenchymal, vascular and collecting-system injury. An intact reference surface cannot exclude any of these findings in a patient.', 'haematoma'),
+    mri: draft('MRI can help when CT is equivocal or during follow-up; it is not the default acute renal-trauma examination. This surface contains no blood-product signal or scan protocol.', 'trauma'),
+    ultrasound: draft('FAST may miss renal injury. A negative examination does not rule it out, and FAST cannot substitute for the renal characterisation provided by CT.', 'trauma'),
   },
   hilum: {
-    clinical: draft('Distinguish vascular involvement from involvement of the urinary collecting system. A central renal mass may require evaluation of both.', 'rcc'),
-    pathology: draft('A lesion near the hilum is not automatically urothelial cancer: establish its tissue of origin and extent.', 'rcc', 'urothelial'),
-    ct: draft('Different CT phases answer different questions: arterial imaging assesses vessels, nephrographic imaging parenchyma, and delayed imaging urinary tract injury.', 'trauma'),
+    clinical: draft('Assess vessels and the collecting system separately around a central renal mass; involvement of one does not establish involvement of the other.', 'rcc'),
+    pathology: draft('Hilar location alone does not identify tumour type. Distinguish a parenchymal renal tumour from malignancy of the urinary lining, and assess spread independently.', 'rcc', 'urothelial'),
+    ct: draft('Arterial and nephrographic CT phases assess vascular and parenchymal injury; delayed urographic images assess urinary leakage. A single reference surface supplies none of those phases.', 'trauma'),
     mri: draft('MR urography evaluates the urinary tract; renal MRI also assesses surrounding tissues. The hilum surface alone represents neither a lumen nor a vascular map.', 'urography'),
   },
   parenchyma: {
@@ -80,14 +90,14 @@ export const hraRenalTopicFamilies = {
   vein: {
     clinical: draft('Renal cancer may extend into renal veins and towards the vena cava. Evaluate extent using acquired imaging, not reference-mesh length.', 'venous'),
     pathology: draft('Venous tumour extension is distinct from a missing or fragmented source surface. The held left-vein mesh is not evidence of thrombosis.', 'venous'),
-    ct: draft('Contrast-enhanced CT assesses venous involvement in renal masses. This source does not demonstrate venous patency, tumour enhancement or thrombus.', 'rcc'),
-    mri: draft('MRI can clarify venous tumour extension when its cranial extent is uncertain on CT. No complete caval pathway is supplied in this specimen.', 'rcc'),
+    ct: draft('Contrast-enhanced CT helps map venous extension of a renal tumour. This mesh has no enhancement, thrombus or measured venous patency.', 'rcc'),
+    mri: draft('When CT leaves the upper extent of venous tumour thrombus unclear, MRI can resolve that uncertainty. The specimen does not contain a complete caval pathway.', 'rcc'),
   },
 } as const satisfies Record<string, Topics>;
 
 type Concept = { family: keyof typeof hraRenalTopicFamilies; limit: string; question: string; answer: string; refs: Ref[] };
 export const hraRenalClinicalConcepts = {
-  capsule: { family: 'capsule', limit: 'Capsules are supplied; perirenal fat and renal fascia are not. Separation does not expose a validated surgical or haematoma plane.', question: 'Does removing this capsule also remove renal fascia?', answer: 'No. They are different anatomical boundaries, and renal fascia is not supplied here.', refs: ['trauma'] },
+  capsule: { family: 'capsule', limit: 'Capsules are supplied; perirenal fat and renal fascia are not. Separation does not expose a validated surgical or haematoma plane.', question: 'Does removing this capsule also remove renal fascia?', answer: 'No. They are different anatomical boundaries, and renal fascia is not supplied here.', refs: ['haematoma'] },
   hilum: { family: 'hilum', limit: 'The labelled hilum is a source surface, not a solid organ, complete pedicle or validated hilar dissection. The left renal vein is held.', question: 'Can this hilar surface establish a complete venous–arterial–pelvic arrangement?', answer: 'No. Its extent and neighbouring partial surfaces require review; the left vein is absent from the display.', refs: ['rcc'] },
   cortex: { family: 'parenchyma', limit: 'Only the right outer-cortex surface is admitted. The absent left counterpart is a source hold, not cortical thinning or disease.', question: 'Does the absent left outer cortex indicate atrophy?', answer: 'No. That mesh was withheld for geometry defects; no patient cortical thickness is measured.', refs: ['infection'] },
   column: { family: 'column', limit: 'Only the left renal-column group is admitted. It is not a diagnosed hypertrophied column, and the defective right group remains held.', question: 'Is a prominent cortical column necessarily a neoplasm?', answer: 'No. Cortical tissue can mimic a mass; continuity and matching imaging behaviour are relevant, but this mesh supplies no measured signal.', refs: ['column'] },
