@@ -325,6 +325,10 @@ const profiles = Object.values(dissectionProfiles);
 const sourceHashes = {};
 for (const path of [
   'lib/lower-venous-imaging.ts',
+  'lib/iliac-venous-imaging.ts',
+  'content/iliac-venous-imaging.ts',
+  'content/iliac-venous-imaging-pins.json',
+  'content/iliac-venous-imaging.transition.json',
   'content/lower-venous-imaging.ts',
   'content/lower-venous-imaging-pins.json',
   'content/lower-venous-imaging.transition.json',

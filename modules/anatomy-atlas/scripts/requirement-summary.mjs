@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Iliac-vein imaging](ILIAC_VENOUS_IMAGING.md) adds 18 CT/MRI/Ultrasound draft placements across six exact common/external/internal iliac selections. Nine modality texts retain source grouping and distinguish acquired findings from anatomy, with explicit study-population limits. No geometry, controls, imaging assets or clinical approvals are added; 9,909 other topics and all recipes remain unchanged.
+
 [Lower-limb venous imaging](LOWER_VENOUS_IMAGING.md) fills 42 CT/MRI/ultrasound draft placements across 14 exact existing selections. Twelve modality texts and seven landmark/source-limit pairs distinguish deep/superficial routes and acquired imaging from geometry. No new controls, scans, source surfaces or clinical approvals; 9,885 other topics and all recipes remain unchanged.
 
 [Bowel component navigation](BOWEL_COMPONENTS.md) makes the existing small-/large-bowel aggregates, rectum and ileocecal junction easier to study together. The selected Dissect panel has a collapsed source-bound control with regional availability, whole-body continuation and reversible isolation. Four existing selections account for the complete source-file partitions; no new tissue, duplicated surface, lumen or clinical approval is implied.

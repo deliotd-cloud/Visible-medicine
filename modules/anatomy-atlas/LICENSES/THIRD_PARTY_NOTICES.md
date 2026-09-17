@@ -1021,6 +1021,16 @@ publishers retain their separate rights. Original notes/code retain MIT terms;
 existing BodyParts3D CC BY 4.0 credit is unchanged. No new asset, package, font,
 texture, paid API or mandatory service is added. See `docs/LOWER_VENOUS_IMAGING.md`.
 
+# Iliac-vein imaging teaching (17 September 2026)
+
+Iliac-vein imaging teaching (17 September 2026) adds original short factual notes
+and six reading links only. University/publisher articles retain their separate
+rights; no figures, tables, article prose, scans, cadaver images or datasets are
+redistributed. Public access is not treated as a commercial asset licence.
+Existing BodyParts3D CC BY 4.0 credit remains; original code/notes retain MIT terms.
+No dependency, paid service, font, texture or mesh is added. Reference scope and
+population/technique limits: `docs/ILIAC_VENOUS_IMAGING.md`.
+
 # Local colonic source review (17 September 2026)
 
 The optional, non-published colonic review derivative separates and recolours six
