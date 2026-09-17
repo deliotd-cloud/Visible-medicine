@@ -103,6 +103,7 @@ import { cubitalVeinLesson } from '../lib/cubital-veins';
 import { genicularArteryLesson } from '../lib/genicular-arteries';
 import { genicularClinicalLesson } from '../lib/genicular-clinical';
 import { picaClinicalLesson } from '../lib/pica-clinical';
+import { scaMcaClinicalLesson } from '../lib/sca-mca-clinical';
 import { inferiorThyroidLesson } from '../lib/inferior-thyroid-arteries';
 import { subscapularArteryLesson } from '../lib/subscapular-arteries';
 import { elbowArteryLesson } from '../lib/elbow-arteries';
@@ -208,6 +209,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (elbow) return elbow;
   const picaClinical = picaClinicalLesson(s, tab);
   if (picaClinical) return picaClinical;
+  const scaMcaClinical = scaMcaClinicalLesson(s, tab);
+  if (scaMcaClinical) return scaMcaClinical;
   const cranial = cranialArteryLesson(s, tab);
   if (cranial) return cranial;
   const circumflex = circumflexFemoralLesson(s, tab);

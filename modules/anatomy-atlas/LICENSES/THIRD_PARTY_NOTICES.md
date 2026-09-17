@@ -874,6 +874,14 @@ No publisher images, tables, article passages, patient cases or source datasets
 are imported. No new asset licence or fee-bearing dependency is introduced.
 See docs/PICA_CLINICAL.md; clinical review remains pending.
 
+Superior cerebellar/right MCA clinical teaching (17 September 2026) adds original
+brief factual notes linked to UAMS, Kase et al. (1993), the American Stroke
+Association and NHS. These citations are not commercial reuse grants: no article
+prose, tables, illustrations, scans or datasets are imported. Original application
+MIT terms and existing BodyParts3D CC BY4.0 attribution remain unchanged. No new
+asset, dependency, font, texture, paid API or mandatory fee. See
+docs/SCA_MCA_CLINICAL.md for claim scope and outstanding radiologist review.
+
 Run:
 
 ```bash

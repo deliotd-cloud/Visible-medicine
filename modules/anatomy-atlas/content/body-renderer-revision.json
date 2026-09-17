@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "6105e59add0fe7c2aa630b760ff0131b8f44074428ffbbde35a72cd6c98a1532"
+      "sha256": "f7a8979be95985c85dc238aa64a487effbe7caa44b680927ac8a1e8b29e15ed6"
     },
     {
       "path": "app/body-explorer.css",
@@ -863,6 +863,14 @@
     {
       "path": "content/review-revisions.json",
       "sha256": "5de33b18948d6389c7f351534498dfdce599876128391cd3376c69022068093b"
+    },
+    {
+      "path": "content/sca-mca-clinical-pins.json",
+      "sha256": "dad3b1addb1dba6e2237eeb13829ce5eb229dcf42e924d89f4f13e19dc6f879d"
+    },
+    {
+      "path": "content/sca-mca-clinical.ts",
+      "sha256": "147c5f95e7d9d588dd678adb02c1c3dd32cc581cf89a704896ff1c4c8f0790d1"
     },
     {
       "path": "content/shoulder-arm-muscle-imaging-pins.json",
@@ -1861,6 +1869,10 @@
       "sha256": "f7e8e770641815046c9444d1d62ef510424e0e8a9d0e165ca18b1379a6a9dafe"
     },
     {
+      "path": "lib/sca-mca-clinical.ts",
+      "sha256": "e54c3ebdaa8619e712bbca4f9099e48a77e4a9cfaba4387859dda741421c868b"
+    },
+    {
       "path": "lib/scapular-arm-clinical-curriculum.ts",
       "sha256": "42f314f6fe2c53aa7b7b4791fe456670e9474ba1dfb325bc26d58a12d35f8c6b"
     },
@@ -2102,7 +2114,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "f7de9c84eb55edb005efb142f59aeb55c8bc20b542e37168634591886a89252f"
+      "sha256": "9037aef1def0f26beb139ab444f20a034a2a0a58583757504cc0bb500bfef9aa"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2297,5 +2309,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "a6c151ea38e108dfc387c000657de86083a72bcbf105b0d2aca4df8ab7621e41"
+  "sha256": "c618516205d65234fc35174871bebdaaca19f3e570347eaf3790f6bd387b938d"
 }
