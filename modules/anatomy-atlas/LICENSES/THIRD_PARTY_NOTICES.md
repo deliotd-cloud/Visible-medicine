@@ -863,6 +863,17 @@ terms, and existing BodyParts3D notices/source holds remain unchanged. No new
 dependency, font, texture, paid API or mandatory fee. See
 `docs/ORBITAL_NECK_MUSCLE_IMAGING.md` for the exact draft and source scope.
 
+PICA clinical teaching (17 September 2026) adds brief original factual summaries
+and reading links. Miao HL, Zhang DY, Wang T, Jiao XT, Jiao LQ (2020),
+"Clinical Importance of the Posterior Inferior Cerebellar Artery",
+DOI10.7150/ijms.49137, https://www.medsci.org/v17p3005.htm,
+© authors, CC BY4.0 (https://creativecommons.org/licenses/by/4.0/), is credited
+for clinical context; the new text is condensed and reworded. Mercier et al.
+(2008), PMID20557786, and NHS stroke symptoms are factual references only.
+No publisher images, tables, article passages, patient cases or source datasets
+are imported. No new asset licence or fee-bearing dependency is introduced.
+See docs/PICA_CLINICAL.md; clinical review remains pending.
+
 Run:
 
 ```bash

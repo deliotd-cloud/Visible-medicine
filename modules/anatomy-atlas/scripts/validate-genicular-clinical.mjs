@@ -9,8 +9,9 @@ import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {authoringBeforeGenicularClinical,genicularClinicalHash as hash} from './genicular-clinical-history.mjs';
 import pins from '../content/genicular-clinical-pins.json' with {type:'json'};
 import after from '../content/genicular-clinical.transition.json' with {type:'json'};
+import {authoringBeforePicaClinical} from './pica-clinical-history.mjs';
 
-const context=await contentContext(),{api}=context,catalog=api.bodyDisplayCatalog(context.catalog),original=JSON.stringify(catalog),before=authoringBeforeGenicularClinical(context);
+const latest=await contentContext(),context={...latest,api:authoringBeforePicaClinical(latest)},{api}=context,catalog=api.bodyDisplayCatalog(context.catalog),original=JSON.stringify(catalog),before=authoringBeforeGenicularClinical(context);
 const featureBuilt=await build({stdin:{contents:"export * from './lib/genicular-clinical'; export * from './content/genicular-clinical';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'}),feature=await import('data:text/javascript;base64,'+Buffer.from(featureBuilt.outputFiles[0].text).toString('base64'));
 assert.equal(authoringBeforeGenicularClinical({...context,api:before}),before,'All-before state must be idempotent');const snapshot=a=>({body:catalog.structures.map(s=>({id:s.id,sections:Object.fromEntries(a.contentTabs.map(t=>[t,a.bodyLesson(s,t)]))})),shoulder:a.structures,recipes:a.dissectionProfiles});assert.equal(hash(snapshot(before)),pins.previousAllLessonsAndRecipesHash,'Strict immutable before hash');assert.equal(hash(snapshot(api)),after.currentAllLessonsAndRecipesHash,'Strict immutable after hash');
 const records=api.bodyContentRecords(catalog),registry=new Map([...context.shoulder,...records].map(record=>[record.representationScope+'|'+record.id,record]));const validate=await contentValidator(registry);for(const record of records)assert(validate(record));assert.equal(records.length,1102);

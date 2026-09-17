@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "42c48200e59c6b2a58b0cc7cd0326bd07c7eadf56d145ce0bff031f747681002"
+      "sha256": "6105e59add0fe7c2aa630b760ff0131b8f44074428ffbbde35a72cd6c98a1532"
     },
     {
       "path": "app/body-explorer.css",
@@ -827,6 +827,14 @@
     {
       "path": "content/pelvic-vein-teaching.ts",
       "sha256": "d5233edff610e402a54b02313d9e1011dec9f9a38f220250a7dc543a2dc4756c"
+    },
+    {
+      "path": "content/pica-clinical-pins.json",
+      "sha256": "9062459d73e0f82ae5487d2323c2680017ba78ea99231789564520eb8d1a1676"
+    },
+    {
+      "path": "content/pica-clinical.ts",
+      "sha256": "d3c74eb672d1f295dffc2379d8f399efe52de6164f7db9cb73fef167d6c21196"
     },
     {
       "path": "content/portal-hepatic-clinical-pins.json",
@@ -1769,6 +1777,10 @@
       "sha256": "4531ad654cf9f49c11dbdf11adb275b13fb0e97785b7c22a3b74c569386dc7c1"
     },
     {
+      "path": "lib/pica-clinical.ts",
+      "sha256": "99a3a11731b5beb2cac3211d7be53ede42c4277470d73e0e3c85e9a993995f24"
+    },
+    {
       "path": "lib/portal-drainage.ts",
       "sha256": "f60869bc7638505d9bac15c67c5fff0ced89a32f059151056785d1d86526aa10"
     },
@@ -2090,7 +2102,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "b64c8fbe1ebf9c429a5bbcf82a855000f33825d9900b81772accbdd0156ae4f4"
+      "sha256": "f7de9c84eb55edb005efb142f59aeb55c8bc20b542e37168634591886a89252f"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2285,5 +2297,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "993bbdeb4c8d467bced95e6a07f8b1ed419b6690157d91034d2f6e5282be4202"
+  "sha256": "a6c151ea38e108dfc387c000657de86083a72bcbf105b0d2aca4df8ab7621e41"
 }
