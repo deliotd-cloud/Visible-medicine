@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "f7a8979be95985c85dc238aa64a487effbe7caa44b680927ac8a1e8b29e15ed6"
+      "sha256": "3d625aef6f045038916b87baa00ddafb4bb45321f1bb5f2ab894992fe435fdaf"
     },
     {
       "path": "app/body-explorer.css",
@@ -1019,6 +1019,14 @@
     {
       "path": "content/upper-limb-motor.ts",
       "sha256": "05b57ea3be22d5a02db6e89b3db90625377b2bfb125bd70bb19058ccb8c551d7"
+    },
+    {
+      "path": "content/upper-venous-clinical-pins.json",
+      "sha256": "4bc51fe63ee56a30bcb39973c85ab36902d419b09c953abaea2262a69b39ab24"
+    },
+    {
+      "path": "content/upper-venous-clinical.ts",
+      "sha256": "90c5c3989d54eb388c1082924c109126d8c4cff5dcb6b2a7fd9f1981b303d3d6"
     },
     {
       "path": "content/upper-vessel-imaging-pins.json",
@@ -2069,6 +2077,10 @@
       "sha256": "47e14e09fc1f013975b29b4ca5d713ee450032f242b48272c01b4d641a6d9c0d"
     },
     {
+      "path": "lib/upper-venous-clinical.ts",
+      "sha256": "55a780a698191c1097b3e32911695b35419e58144382cf62c0b0eac1b340b58b"
+    },
+    {
       "path": "lib/upper-vessel-imaging.ts",
       "sha256": "909442b69744592d9593863a250ba90d962c9b684e60585eba91475d26d7fef6"
     },
@@ -2114,7 +2126,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "9037aef1def0f26beb139ab444f20a034a2a0a58583757504cc0bb500bfef9aa"
+      "sha256": "44713a47faf11f7d5713d5b0e5bd63f810c6958677e9ccf66ffca17ae2e926c2"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2309,5 +2321,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "c618516205d65234fc35174871bebdaaca19f3e570347eaf3790f6bd387b938d"
+  "sha256": "1f9766c96e802b34fb4f89b8a2ca387cff86ab6e2a22f0beb72d584296308ba1"
 }

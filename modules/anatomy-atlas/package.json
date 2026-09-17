@@ -8,6 +8,7 @@
   "scripts": {
     "pica-clinical:test": "node scripts/pin-pica-clinical.mjs --check && node scripts/record-pica-clinical-transition.mjs --check && node scripts/validate-pica-clinical.mjs",
     "sca-mca-clinical:test": "node scripts/pin-sca-mca-clinical.mjs --check && node scripts/record-sca-mca-clinical-transition.mjs --check && node scripts/validate-sca-mca-clinical.mjs",
+    "upper-venous-clinical:test": "node scripts/pin-upper-venous-clinical.mjs --check && node scripts/record-upper-venous-clinical-transition.mjs --check && node scripts/validate-upper-venous-clinical.mjs",
     "nested-review:test": "node scripts/generate-nested-review-bindings.mjs --check && node scripts/validate-nested-review.mjs",
     "genicular-clinical:test": "node scripts/pin-genicular-clinical.mjs --check && node scripts/record-genicular-clinical-transition.mjs --check && node scripts/validate-genicular-clinical.mjs",
     "elbow-clinical:test": "node scripts/pin-elbow-clinical.mjs --check && node scripts/record-elbow-clinical-transition.mjs --check && node scripts/validate-elbow-clinical.mjs",

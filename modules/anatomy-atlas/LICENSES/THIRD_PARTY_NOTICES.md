@@ -882,6 +882,14 @@ MIT terms and existing BodyParts3D CC BY4.0 attribution remain unchanged. No new
 asset, dependency, font, texture, paid API or mandatory fee. See
 docs/SCA_MCA_CLINICAL.md for claim scope and outstanding radiologist review.
 
+Upper-limb venous clinical teaching (17 September 2026) adds short original
+factual notes linked to UAMS, Mikuni et al. (2013), ACR/RSNA RadiologyInfo and NHS.
+No publisher prose, figures, tables, procedures, patient images or datasets are
+redistributed; citations do not grant commercial reuse of the linked materials.
+Application MIT and unchanged BodyParts3D CC BY4.0 notices remain. No new asset,
+dependency, font, texture, paid API or mandatory service. Claim scope and pending
+radiologist sign-off: docs/UPPER_VENOUS_CLINICAL.md.
+
 Run:
 
 ```bash
