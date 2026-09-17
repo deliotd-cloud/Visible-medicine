@@ -2,6 +2,7 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
+import {authoringBeforeGenicularClinical} from './genicular-clinical-history.mjs';
 import pins from '../content/elbow-clinical-pins.json' with {type:'json'};
 import after from '../content/elbow-clinical.transition.json' with {type:'json'};
 
@@ -10,6 +11,7 @@ const snapshot=(api,display)=>({body:display.structures.map(s=>({id:s.id,section
 
 /** Remove only the newest elbow Clinical/Pathology drafts and imaging-copy edits. */
 export function authoringBeforeElbowClinical({api,catalog},{deferWholeSnapshot=false}={}){
+  api=authoringBeforeGenicularClinical({api,catalog},{deferWholeSnapshot:true});
   const hash=elbowClinicalHash;
   assert.equal(hash(pins),'971f7b3563a6042e54b36a17087ad5a0f40ea7f1a00612f03a081a8c3827f602');
   assert.equal(hash(after),'da7862c118ee6e00ad290177f56b5162b4d343a9d825272374eefbe5b74e5cbe');

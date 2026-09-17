@@ -1,0 +1,56 @@
+{
+  "baselineSource": "52aa75e8711d4663dcd854dd429bbdb65199f981",
+  "sourceSelections": 10,
+  "changedPlacements": 60,
+  "addedDraftPlacements": 20,
+  "pendingCopyOnlyPlacements": 40,
+  "previousPendingPlacements": 60,
+  "families": {
+    "middle": {
+      "drafts": 4,
+      "pendingCopies": 8
+    },
+    "medialSuperior": {
+      "drafts": 4,
+      "pendingCopies": 8
+    },
+    "lateralSuperior": {
+      "drafts": 4,
+      "pendingCopies": 8
+    },
+    "medialInferior": {
+      "drafts": 4,
+      "pendingCopies": 8
+    },
+    "lateralInferior": {
+      "drafts": 4,
+      "pendingCopies": 8
+    }
+  },
+  "topics": {
+    "clinical": 10,
+    "pathology": 10,
+    "ct": 10,
+    "mri": 10,
+    "xray": 10,
+    "ultrasound": 10
+  },
+  "unchangedTopics": 9858,
+  "bodySchemaRecords": 1102,
+  "actualNoteRenders": 20,
+  "rejectedChangedIdentitySourceAndTopicCases": 800,
+  "strictBeforeHash": "8f832c8de5b729de34f99d62d2b38f1e296b773e0273731362de3ef164cb53b4",
+  "strictAfterHash": "336d3d8b08a39393f8cbabeeaa6edd4dfd1a442db30257ec19c48c91b22c7dac",
+  "sourceBundle": {
+    "id": "genicular-arteries",
+    "bytes": 403484,
+    "sha256": "a62ea69e56014790059ecd85cf9281bebb93280220b5a5677954c85b01ef5e9a",
+    "structures": 10
+  },
+  "sourceGeometryChanged": false,
+  "studyRecipesChanged": false,
+  "currentApprovalRecordsChanged": false,
+  "clinicalApproval": false,
+  "imagesOrPatientDataImported": false,
+  "browserOrDeviceAcceptance": false
+}

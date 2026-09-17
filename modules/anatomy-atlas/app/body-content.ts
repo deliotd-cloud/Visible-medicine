@@ -101,6 +101,7 @@ import { hepaticVeinLesson } from '../lib/hepatic-veins';
 import { longusColliLesson } from '../lib/longus-colli';
 import { cubitalVeinLesson } from '../lib/cubital-veins';
 import { genicularArteryLesson } from '../lib/genicular-arteries';
+import { genicularClinicalLesson } from '../lib/genicular-clinical';
 import { inferiorThyroidLesson } from '../lib/inferior-thyroid-arteries';
 import { subscapularArteryLesson } from '../lib/subscapular-arteries';
 import { elbowArteryLesson } from '../lib/elbow-arteries';
@@ -234,6 +235,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (spongiosum) return spongiosum;
   if (deferent) return deferent;
   if (thyroid) return thyroid;
+  const genicularClinical = genicularClinicalLesson(s, tab);
+  if (genicularClinical) return genicularClinical;
   const genicular = genicularArteryLesson(s, tab);
   if (genicular) return genicular;
   const cubitalVein = cubitalVeinLesson(s, tab);

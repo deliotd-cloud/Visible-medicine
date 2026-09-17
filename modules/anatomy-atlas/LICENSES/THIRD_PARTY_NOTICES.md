@@ -1,5 +1,19 @@
 # Third-party notices
 
+## Genicular arterial clinical teaching — 17 September 2026
+
+Original abbreviated adaptations credit Brown JM, Vandeveer ZT, Cadoret D,
+Morrison JJ, Jahangiri Y (2025), https://doi.org/10.3390/jcm14062106;
+Callese TE, Cusumano L, Redwood KD et al. (2023),
+https://doi.org/10.1007/s00270-023-03411-3; and Glanz L (2020),
+https://doi.org/10.1016/j.ijscr.2020.02.050. Each article has an explicit
+CC BY4.0 grant: https://creativecommons.org/licenses/by/4.0/ . Every draft
+contains attribution, source/licence links and adaptation notice. No endorsement.
+No source figures (including the review's reprinted Elsevier schematic), patient
+cases, scans, tables, procedures or treatment protocols included. No new model,
+font, texture, dependency, paid API or mandatory fee. Source-mesh rights remain
+separate. See `docs/GENICULAR_CLINICAL_REFERENCES_20260917.md` for exact scope.
+
 ## Elbow arterial clinical teaching — 17 September 2026
 
 Original short adaptations credit Habarta J, Jordan M, Meffert R, Huflage H,

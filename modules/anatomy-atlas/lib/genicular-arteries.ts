@@ -61,7 +61,9 @@ export function genicularArteryLesson(
   return {
     readiness: 'pending',
     title: `${s.name} · Review pending`,
-    body: 'Structure-specific clinical, pathology and imaging teaching is awaiting validation.',
+    body: ['ct', 'mri', 'xray', 'ultrasound'].includes(tab)
+      ? 'Structure-specific imaging teaching is awaiting validation. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.'
+      : 'Structure-specific clinical, pathology and imaging teaching is awaiting validation.',
     bullets: [],
     note: 'No patient CT/MRI/ultrasound, angiogram, embolisation target or intervention guidance is supplied.',
   };

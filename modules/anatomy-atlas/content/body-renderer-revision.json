@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "9899597e326281caa85da20c6d7b6274a499bba2daa3edfbb3efbe93e451a9db"
+      "sha256": "42c48200e59c6b2a58b0cc7cd0326bd07c7eadf56d145ce0bff031f747681002"
     },
     {
       "path": "app/body-explorer.css",
@@ -615,6 +615,14 @@
     {
       "path": "content/forearm-muscle-imaging.ts",
       "sha256": "3997414ad4f60fd6a9f2689bb02aea230aa7ddaa01190640dc8638150a280005"
+    },
+    {
+      "path": "content/genicular-clinical-pins.json",
+      "sha256": "f2a6a81d0079672bc863d7080c2848ffa049db7cb465c9309adce5548f4e22ff"
+    },
+    {
+      "path": "content/genicular-clinical.ts",
+      "sha256": "64b316c9ceaafa17e35b2c0c7e7bcc645ddce32822cbc809b2e3f77e477da27a"
     },
     {
       "path": "content/genicular-study-pins.json",
@@ -1414,7 +1422,11 @@
     },
     {
       "path": "lib/genicular-arteries.ts",
-      "sha256": "2476e9f6b6224fb55b25abe3d48a7cb1ab83c7048e6072dc28b4ffac7b2a3494"
+      "sha256": "c9c38677221dc5076d3aa0f55f4ec08b53e307234cc78426b765c93cf4c39322"
+    },
+    {
+      "path": "lib/genicular-clinical.ts",
+      "sha256": "848eb6e257cde820b951877862f81cc16b4892151b4e1df6b628c4fbaab9e829"
     },
     {
       "path": "lib/genicular-study.ts",
@@ -2070,7 +2082,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "836785f8774a7103a49f7cb78b175121b7db7078cbbdd1f4eca4c8bca59d9788"
+      "sha256": "386f1902c82e23c6d47cabd4d5f75237232b25f43ca7ee79edf5ce2b8c368a7d"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2265,5 +2277,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "5af77f2429e1ba067f0e98f39d01b63d38128e2f339ece6b81b9d647387bae0e"
+  "sha256": "6343286373b7ae9a89a09ddbd27b7401e1ca8fa6c883a2191ed8d45cd525e45c"
 }
