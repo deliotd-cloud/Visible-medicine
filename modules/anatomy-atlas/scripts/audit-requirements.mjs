@@ -326,6 +326,10 @@ const sourceHashes = {};
 for (const path of [
   'lib/lower-venous-imaging.ts',
   'lib/iliac-venous-imaging.ts',
+  'lib/forearm-arterial-imaging.ts',
+  'content/forearm-arterial-imaging.ts',
+  'content/forearm-arterial-imaging-pins.json',
+  'content/forearm-arterial-imaging.transition.json',
   'content/iliac-venous-imaging.ts',
   'content/iliac-venous-imaging-pins.json',
   'content/iliac-venous-imaging.transition.json',

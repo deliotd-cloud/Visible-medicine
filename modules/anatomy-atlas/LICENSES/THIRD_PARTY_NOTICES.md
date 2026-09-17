@@ -1021,6 +1021,15 @@ publishers retain their separate rights. Original notes/code retain MIT terms;
 existing BodyParts3D CC BY 4.0 credit is unchanged. No new asset, package, font,
 texture, paid API or mandatory service is added. See `docs/LOWER_VENOUS_IMAGING.md`.
 
+# Forearm arterial imaging teaching (17 September 2026)
+
+Forearm arterial imaging teaching (17 September 2026) uses original short factual
+notes and six reading links. No publisher table, figure, article prose, scan,
+cadaver material or dataset is redistributed; public readability is not treated
+as commercial media permission. Existing BodyParts3D CC BY4.0 attribution remains
+and original notes/code retain MIT terms. No dependency, font, texture, new mesh,
+paid service or mandatory fee is added. See `docs/FOREARM_ARTERIAL_IMAGING.md`.
+
 # Iliac-vein imaging teaching (17 September 2026)
 
 Iliac-vein imaging teaching (17 September 2026) adds original short factual notes

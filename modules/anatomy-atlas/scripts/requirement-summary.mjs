@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Forearm arterial imaging](FOREARM_ARTERIAL_IMAGING.md) adds 16 evidence-backed draft placements to six radial/ulnar/anterior-interosseous selections. Eight modality texts distinguish acquired calibre and flow from source geometry. Anterior-interosseous MRI, common/recurrent branch imaging and X-ray remain pending; 9,911 other topics/recipes are unchanged. No new model, control, imaging asset or clinical approval.
+
 [Iliac-vein imaging](ILIAC_VENOUS_IMAGING.md) adds 18 CT/MRI/Ultrasound draft placements across six exact common/external/internal iliac selections. Nine modality texts retain source grouping and distinguish acquired findings from anatomy, with explicit study-population limits. No geometry, controls, imaging assets or clinical approvals are added; 9,909 other topics and all recipes remain unchanged.
 
 [Lower-limb venous imaging](LOWER_VENOUS_IMAGING.md) fills 42 CT/MRI/ultrasound draft placements across 14 exact existing selections. Twelve modality texts and seven landmark/source-limit pairs distinguish deep/superficial routes and acquired imaging from geometry. No new controls, scans, source surfaces or clinical approvals; 9,885 other topics and all recipes remain unchanged.

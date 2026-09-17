@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "d00f264e52c6465083ac19a4ebaed30f8a005c3f762c4595c86b753d5a8b130a"
+      "sha256": "029dfc7b7a265df15d84008ecaac8092dcb9b1118a75e4c17b340cbcdfb9a71d"
     },
     {
       "path": "app/body-explorer.css",
@@ -639,6 +639,14 @@
     {
       "path": "content/foot-muscle-imaging.ts",
       "sha256": "80aba36ae5a6dfb3313510f75d414f96c27468d00c912c22b3d87dad5dfa2ba2"
+    },
+    {
+      "path": "content/forearm-arterial-imaging-pins.json",
+      "sha256": "eae339a9d4868bfeff7310c35bc8391cb200c6a32893456ffae1758132c3cb51"
+    },
+    {
+      "path": "content/forearm-arterial-imaging.ts",
+      "sha256": "feb1c5eae4e47db86bd955e104019d15c875ba65bf470cc1e24db0ef66f997bf"
     },
     {
       "path": "content/forearm-attachment-pins.json",
@@ -1545,6 +1553,10 @@
       "sha256": "4678ddd09311b67e646004b61cf3b52f207b68678010d39dbe04bb37076ccdd4"
     },
     {
+      "path": "lib/forearm-arterial-imaging.ts",
+      "sha256": "aec224f8e9bc14efd9e358d5a9ec85debdf3d9f2f1c2223ba5ee6cf4c0f2905c"
+    },
+    {
       "path": "lib/forearm-attachments.ts",
       "sha256": "e68480e831a40982ce68b4d99bfc51ebef1797c3908971bbf5987e8b8497ca85"
     },
@@ -2294,7 +2306,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "8f010ad69bfad3e5bc16ae74aaa3a03c1a4483e2e61d516fb8c001d273881c9a"
+      "sha256": "e686d4f6c4aaa5451a13e40d7bb5af8e398870756722caf0469aaaefd0985c08"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2493,5 +2505,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "35d8fc61d6701bd869ddeb31f3957c2a8b43ed12418569edcdce3fd01542974c"
+  "sha256": "64a1a956b411e0d8886a6ee0f32690bd95a149ca57ac0d862373bd3d1ede20be"
 }

@@ -130,6 +130,7 @@ import { upperVesselImagingLesson } from '../lib/upper-vessel-imaging';
 import { lowerArterialImagingLesson } from '../lib/lower-arterial-imaging';
 import { lowerVenousImagingLesson } from '../lib/lower-venous-imaging';
 import { iliacVenousImagingLesson } from '../lib/iliac-venous-imaging';
+import { forearmArterialImagingLesson } from '../lib/forearm-arterial-imaging';
 import { limbBoneImagingLesson } from '../lib/limb-bone-imaging';
 import { thoracicBoneImagingLesson } from '../lib/thoracic-bone-imaging';
 import { abdominalOrganImagingLesson } from '../lib/abdominal-organ-imaging';
@@ -255,6 +256,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (lowerVenousImaging) return lowerVenousImaging;
   const iliacVenousImaging = iliacVenousImagingLesson(s, tab);
   if (iliacVenousImaging) return iliacVenousImaging;
+  const forearmArterialImaging = forearmArterialImagingLesson(s, tab);
+  if (forearmArterialImaging) return forearmArterialImaging;
   const headNeckVesselImaging = headNeckVesselImagingLesson(s, tab);
   if (headNeckVesselImaging) return headNeckVesselImaging;
   const centralNeuralImaging = centralNeuralImagingLesson(s, tab);
