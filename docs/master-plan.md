@@ -2,6 +2,28 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — corpus-spongiosum clinical teaching
+
+The existing partial bulb/shaft source now has original Clinical and Pathology
+drafts covering its urethral relationship, limited anterior trauma context and
+possible later narrowing. NCI and article-specific CC BY 4.0 references/credits
+are visible in the existing compact note panel. No images, scans, geometry,
+procedural recommendations or new access rights are added. Four imaging notes
+remain pending and no longer incorrectly describe Clinical/Pathology as pending.
+
+Immutable before/after checks preserve all other 9,912 root-topic placements.
+Feature, predecessor and original corpus-source regressions pass; desktop/mobile
+notes, links and pending imaging tabs are checked. The coordinating
+CORPUS-CLINICAL-CHECKPOINT-20260917.md records final builds and GitHub/D recovery.
+See Atlas docs/CORPUS_CLINICAL.md for scope, sources and verification boundaries.
+
+Website84 remains the last verified deployment. Authenticated model staging,
+revision-bound radiologist sign-off and physical-device acceptance remain open.
+Full goal ACTIVE; hourly review PAUSED. Next regional usability investigation:
+improve pelvis camera framing through existing controls without altering sources
+or cropping selected long vessels. No new nerve-source admission is established
+by the existing held SPARC audit; do not repeat unchanged source searches.
+
 ## 17 September — vessel regression and next clinical gap
 
 The Atlas vessel-visibility gate now separates its original 175-artery/98-vein
