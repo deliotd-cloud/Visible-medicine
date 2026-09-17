@@ -4,6 +4,7 @@ import {readFile,writeFile,mkdir,copyFile,lstat,realpath,readdir,constants} from
 import {resolve,relative,isAbsolute,dirname,basename} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
+import {assertHraPelvisSourceContract} from './independent-source-contract.mjs';
 
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const modules = ['shoulder','female-pelvis','lower-limb','head-neck'];
@@ -71,14 +72,38 @@ export async function planRegionalUpgrade({website,candidate}){
   const scopes=replacement.manifest.regionalScopes;
   assert(Array.isArray(scopes)&&scopes.length>0&&new Set(scopes.map(s=>s.region)).size===scopes.length,'Invalid regional scope list');
   assert(Array.isArray(old.manifest.regionalScopes)&&old.manifest.regionalScopes.length>0);
+  let pelvisSources;
+  const assertIndependentTransition=async(prior,next)=>{
+    if(JSON.stringify(next)===JSON.stringify(prior))return;
+    if(prior.key!=='hra-united-female-v1.10-pelvis'){
+      assert.equal(JSON.stringify(next),JSON.stringify(prior),'Existing nested/specimen source changed or missing');return;
+    }
+    pelvisSources??=Promise.all(['hra-pelvis','hra-renal'].map(async folder=>
+      JSON.parse((await checkedFile(candidate,`models/${folder}/catalog.json`)).bytes)));
+    const [pelvis,renal]=await pelvisSources;
+    assert.equal(prior.studyIds.length,8,'Only the reviewed eight-study pelvic base may expand');
+    assert.equal(new Set(prior.studyIds).size,8);
+    assert.equal(pelvis.bundles.length,1);assert.equal(renal.bundles.length,1);
+    assertHraPelvisSourceContract(next,pelvis,renal);
+    const ureterIds=renal.structures.filter(s=>['VH_F_right_ureter','VH_F_left_ureter'].includes(s.sourceName)).map(s=>s.id);
+    const expected={...prior,
+      surfaceIds:[...prior.surfaceIds,...ureterIds],
+      studyIds:[...prior.studyIds,'urinary','urinary-left','urinary-right'],
+      bundles:[...prior.bundles,...renal.bundles]};
+    assert.deepEqual(next,expected,'Pelvic independent source changed beyond the reviewed urinary addition');
+    assert.equal(new Set(next.studyIds).size,11);
+  };
   for(const prior of old.manifest.regionalScopes){
     const next=scopes.find(s=>s.region===prior.region);assert(next,'Existing region missing');
     assert.equal(next.sourceVersion,prior.sourceVersion);assert.equal(next.license,prior.license);
     assert(Array.isArray(next.regionalIds)&&new Set(next.regionalIds).size===next.regionalIds.length);
     for(const id of prior.regionalIds)assert(next.regionalIds.includes(id),'Existing regional anatomy missing');
-    for(const key of ['nestedTargets','independentSpecimens']){
-      assert(Array.isArray(next[key]));
-      for(const item of prior[key])assert(next[key].some(n=>JSON.stringify(n)===JSON.stringify(item)),'Existing nested/specimen source changed or missing');
+    assert(Array.isArray(next.nestedTargets));
+    for(const item of prior.nestedTargets)assert(next.nestedTargets.some(n=>JSON.stringify(n)===JSON.stringify(item)),'Existing nested/specimen source changed or missing');
+    assert(Array.isArray(next.independentSpecimens));
+    for(const item of prior.independentSpecimens){
+      const matches=next.independentSpecimens.filter(n=>n.key===item.key);assert.equal(matches.length,1,'Existing nested/specimen source changed or missing');
+      await assertIndependentTransition(item,matches[0]);
     }
   }
   for(const previous of old.models)assert(replacement.models.some(m=>m.path===previous.path&&m.sha256===previous.sha256&&m.bytes===previous.bytes),'Existing geometry changed or missing; requires separate review: '+previous.path);

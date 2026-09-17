@@ -45,3 +45,21 @@ does not include the newly added anterior cardiac vein and does not activate
 the newer runtime. Preserve the current delivery/access policy until that model
 is registered, staged and verified, then follow protected integration/release
 checks. No scans, specialist masks, role changes or clinical approval are supplied.
+
+## Complete candidate prepared
+
+The upgrade comparator now accepts only the reviewed pelvic additive transition:
+41 ordered native surfaces to43 with the two verified ureters; eight retained
+studies plus precisely the three urinary studies; original pelvic bundle plus
+the exact renal bundle. All other fields remain identical. Unchanged pelvic
+records and ordinary specimens still pass exact equality, including future
+upgrades after this transition. Nested sources and all old model bytes are retained.
+Twenty-six preparation tests cover success, mutation rejection and no-write gates.
+
+Clean runtime source `6fe69ab68bd76d3648c0725eedabdba8ab778823` exports195 listed
+files. The offline combined website proposal preserves131 models/137 paths and
+contains134 models/140 paths. Three additions total94,372 bytes; only the new
+17,252-byte cardiac model still needs staging. Readiness reports deliberately
+remain unapproved/unactivated. Right/left ureter direct links were checked in
+actual Chrome, including mobile at355 CSS pixels and removal/Undo on desktop;
+the selected anatomy rendered and mobile had no horizontal overflow.
