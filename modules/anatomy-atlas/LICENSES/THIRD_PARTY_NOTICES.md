@@ -1,5 +1,13 @@
 # Third-party notices
 
+## Abdominal connective imaging — 17 September 2026
+
+Four original short CT/ultrasound topic texts cite published anatomical/imaging
+research as factual references only. No publisher scans, figures, abstracts,
+tables or slides are copied into the Atlas. Existing BodyParts3D attribution and
+project-code terms remain; no new media, dependency or paid service is added.
+See [reference and review scope](../docs/ABDOMINAL_CONNECTIVE_IMAGING.md).
+
 ## Local subcostal source review — 17 September 2026
 
 The optional diagnostic generator uses four complete BodyParts3D v4 subcostal
