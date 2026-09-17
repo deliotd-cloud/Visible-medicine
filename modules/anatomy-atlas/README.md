@@ -599,6 +599,10 @@ The expanded importer uses both official IS-A (skeletal, muscular and nerve defi
 
 ## Imaging and clinical limits
 
+Tentorium and lamina terminalis Clinical drafts reuse the existing compact
+panels; source coverage and review limits are in
+[cranial boundary teaching](docs/CRANIAL_BOUNDARY_CLINICAL.md).
+
 The [shoulder/arm muscle curriculum](docs/SHOULDER_ARM_CURRICULUM.md) adds original draft attachment, action and motor-supply notes to 32 existing regional/whole-body representations without more interface controls. It does not add nerve meshes or certify muscle attachment footprints. Run `npm run shoulder-arm-curriculum:test` for exact content/identity preservation checks.
 
 CT, MRI and ultrasound tabs currently contain draft teaching text, not scan data. `lib/imaging-sync.ts` now provides a runtime-validated selection adapter contract; no imaging viewer is connected by default. The reference-plane illustration is independent of that connection. There is no patient registration or working DICOM spatial synchronisation. Source coordinates must never be assumed to match a patient's frame of reference. See [Imaging link](docs/IMAGING_LINK.md).

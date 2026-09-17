@@ -1,5 +1,14 @@
 # Third-party notices
 
+## Cranial boundary clinical teaching — 17 September 2026
+
+Three original short notes cite Soffar (2021), Helie (1995) and Hoz (2026).
+References are reading links only: no publisher text, figures, tables, scans or
+measurement datasets are redistributed. Citation is not a commercial asset
+licence. No new dependency, font, texture, model or paid service is added.
+MIT applies to original project code/text; existing BodyParts3D CC BY 4.0 notices
+remain. See `docs/CRANIAL_BOUNDARY_CLINICAL.md` for claim and review boundaries.
+
 ## Genicular arterial clinical teaching — 17 September 2026
 
 Original abbreviated adaptations credit Brown JM, Vandeveer ZT, Cadoret D,

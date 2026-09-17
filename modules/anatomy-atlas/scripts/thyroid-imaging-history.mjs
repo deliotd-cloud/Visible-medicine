@@ -4,7 +4,9 @@ import {isDeepStrictEqual} from 'node:util';
 import {hash,snapshot} from './pin-pica-clinical.mjs';
 import pins from '../content/thyroid-imaging-pins.json' with {type:'json'};
 import after from '../content/thyroid-imaging.transition.json' with {type:'json'};
+import {authoringBeforeCranialBoundaryClinical} from './cranial-boundary-clinical-history.mjs';
 export function authoringBeforeThyroidImaging({api,catalog},{deferWholeSnapshot=false}={}){
+ api=authoringBeforeCranialBoundaryClinical({api,catalog},{deferWholeSnapshot:true});
  assert.equal(hash(pins),'3f03d95adeb7a1c8defdd138837fdcea750742dc6cde23c96f69b804f83a6759');
  assert.equal(hash(after),'edba16dcc4f4dd14daf34b91bc9e96d1f2e63ed86f73f81aa1436031b8915bd8');
  assert.equal(after.parentCommit,pins.sourceCommit);assert.equal(after.previousAllLessonsAndRecipesHash,pins.previousAllLessonsAndRecipesHash);

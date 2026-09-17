@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "cranial-boundary-clinical:test": "node scripts/pin-cranial-boundary-clinical.mjs --check && node scripts/record-cranial-boundary-clinical-transition.mjs --check && node scripts/validate-cranial-boundary-clinical.mjs",
     "pica-clinical:test": "node scripts/pin-pica-clinical.mjs --check && node scripts/record-pica-clinical-transition.mjs --check && node scripts/validate-pica-clinical.mjs",
     "sca-mca-clinical:test": "node scripts/pin-sca-mca-clinical.mjs --check && node scripts/record-sca-mca-clinical-transition.mjs --check && node scripts/validate-sca-mca-clinical.mjs",
     "upper-venous-clinical:test": "node scripts/pin-upper-venous-clinical.mjs --check && node scripts/record-upper-venous-clinical-transition.mjs --check && node scripts/validate-upper-venous-clinical.mjs",

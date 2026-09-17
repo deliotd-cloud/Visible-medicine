@@ -1,5 +1,12 @@
 # Clinical validation checklist
 
+[Cranial boundary clinical drafts](CRANIAL_BOUNDARY_CLINICAL.md): review lesion
+attachment/extension and the limits of enhancement as a sign of tentorial
+involvement; review lamina variation without inferring pathology from a normal
+cohort. Validate the right-only tentorial fragment and two-piece lamina separately
+from the teaching. No complete notch, continuous membrane or safe operative route
+is supplied. Existing lamina CT/MRI stay unchanged; Pathology remains pending.
+
 [Renal/urethral reference revision](CLINICAL_REFERENCE_REVISION.md): review
 re-authored capsule/haematoma compartments, CT phase distinctions, selected
 renal-trauma MRI use, renal venous-extension MRI, ureteric perfusion/injury and

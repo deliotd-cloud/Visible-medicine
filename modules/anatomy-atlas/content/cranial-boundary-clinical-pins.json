@@ -1,0 +1,204 @@
+{
+  "sourceCommit": "a8a711c40fe20ebacf880e028354ab4e71cb8651",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "tentorium-partial",
+      "url": "/models/bodyparts3d/tentorium/tentorium.glb?v=b7b35094243dab53b9681c98d5123aa4b93a881fb0e48de4a8d7f32186007d4c",
+      "bytes": 396152,
+      "sha256": "b7b35094243dab53b9681c98d5123aa4b93a881fb0e48de4a8d7f32186007d4c",
+      "structures": 1
+    },
+    {
+      "id": "limbic-landmarks",
+      "url": "/models/bodyparts3d/limbic-landmarks/limbic-landmarks.glb?v=9b17997e1211d794777fb1b6fbb6e84252445ae15f1b2cc811c80efad8a8e514",
+      "bytes": 150304,
+      "sha256": "9b17997e1211d794777fb1b6fbb6e84252445ae15f1b2cc811c80efad8a8e514",
+      "structures": 4
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "d1c4bcd5d141df302aa43dbb3509915373d776bd2197f8d59e2e143f711e0f7c",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:connective:tentorium-source-portion",
+        "fmaId": "FMA83966",
+        "name": "Tentorium cerebelli (right-sided source only)",
+        "sourceName": "tentorium cerebelli",
+        "system": "connective",
+        "category": "membrane",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "tentorium-partial",
+        "nodeName": "FMA83966",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1843",
+            "sha256": "bd212fe0b2800bcb8c3ea350099f5bc563d438d8efd5409761fff47e8b150533"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.6332809925079346,
+            7.075300216674805,
+            -0.441795289516449
+          ],
+          "max": [
+            -0.02330159954726696,
+            7.416500091552734,
+            0.43292298913002014
+          ]
+        },
+        "center": [
+          -0.32829129602760077,
+          7.2459001541137695,
+          -0.0044361501932144165
+        ],
+        "anchor": [
+          -0.33515098690986633,
+          7.240300178527832,
+          -0.0015529999509453773
+        ],
+        "representation": {
+          "coverage": "partial",
+          "sourceLaterality": "unspecified",
+          "displayLaterality": "right",
+          "description": "The source names the whole tentorium, but all supplied vertices are right of midline. Right is the displayed portion, not a claim that the tentorium is a paired structure."
+        },
+        "coverageNote": "Incomplete right-sided source surface, not the complete bilateral tentorium. The left fold, complete notch boundary, dural venous sinuses and attachment footprints are not supplied. No mirrored counterpart or patient registration.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:lamina-terminalis",
+        "fmaId": "FMA61975",
+        "name": "Lamina terminalis",
+        "sourceName": "lamina terminalis",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "limbic-landmarks",
+        "nodeName": "FMA61975",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1764",
+            "sha256": "8935c1c22609f2e8078ec33ac867e2633c645e98b80d1bdca789de8e3a8f010e"
+          },
+          {
+            "file": "FJ1812",
+            "sha256": "91812f9540a4f96cff9ccfcfa478ac885d7f59c0fd08ab0f05fd865e6b670713"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.020590899512171745,
+            7.395299911499023,
+            0.5233100056648254
+          ],
+          "max": [
+            0.007492519915103912,
+            7.514200210571289,
+            0.5964400172233582
+          ]
+        },
+        "center": [
+          -0.0065491897985339165,
+          7.454750061035156,
+          0.5598750114440918
+        ],
+        "anchor": [
+          -0.0054879398085176945,
+          7.460400104522705,
+          0.5632399916648865
+        ],
+        "coverageNote": "Two original lamina files touch at one source-coordinate vertex; their individual normals remain separate. This is not a reconstructed continuous sheet. Every ordered source triangle and position is retained. Stria terminalis is withheld for source defects. Anatomical relationships, laterality and clinical accuracy require review; no patient registration or complete limbic circuit is supplied.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "clinical"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Lamina terminalis · Review pending",
+          "body": "Detailed structure-specific clinical and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No acquired CT, MRI, X-ray, ultrasound, diffusion tractography or patient registration is supplied."
+        }
+      }
+    }
+  ]
+}

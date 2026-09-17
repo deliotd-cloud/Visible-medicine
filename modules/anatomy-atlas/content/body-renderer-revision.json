@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "a169509f6b2f19d4895f13ee582e0129a97066eab55dc2f7e1abd6b937c26982"
+      "sha256": "f9822ea385a6083a19918811e830a1d578923bf83be2dfb79b0b35a39f97f7e5"
     },
     {
       "path": "app/body-explorer.css",
@@ -519,6 +519,14 @@
     {
       "path": "content/cranial-bone-imaging.ts",
       "sha256": "61087027fac4511522badf36e39e1958ceb4b502750285498aa11ad3e3df0b24"
+    },
+    {
+      "path": "content/cranial-boundary-clinical-pins.json",
+      "sha256": "5b96f1e7c224b32a86722624edd0d873ec3840bd3c062bc342dac74a95368f55"
+    },
+    {
+      "path": "content/cranial-boundary-clinical.ts",
+      "sha256": "a8e3ba710d2d1e33777bc2413bb6747ed379351dd781ca526a6a881d4214a35e"
     },
     {
       "path": "content/craniofacial-organ-imaging-pins.json",
@@ -1349,6 +1357,10 @@
       "sha256": "4b55a1d4824b5181185399093458888bf6854255c9f29a7731b0bc5410aa5848"
     },
     {
+      "path": "lib/cranial-boundary-clinical.ts",
+      "sha256": "b753047c94c9ad6e63c58e9a7cfad519dd3cb2d1e6bbae3d10bc358fbf88c963"
+    },
+    {
       "path": "lib/craniofacial-organ-imaging.ts",
       "sha256": "a86395f57e4bb5648969e55b522cd12d035bf23fe32ce4ef82db4e3037593fd5"
     },
@@ -2166,7 +2178,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "95caa30cd112261e9bcde3a8001d0d25f65db8197473c0877e212df48bb29906"
+      "sha256": "04ea03f4e8623f8ce103f6a8d057fd06ee970f0fb0c314366e7b664e2096c26c"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2361,5 +2373,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "8d83e768528a94dcf1713c5e50c359fa3091b31446798351268c18b17e639cd8"
+  "sha256": "1da44052d90776d2a3832d45a95994ab17ec9150accca13c50de8936a44ddb9f"
 }
