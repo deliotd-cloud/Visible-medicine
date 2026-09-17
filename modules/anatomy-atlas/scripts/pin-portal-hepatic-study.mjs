@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {portalHepaticStudyFmaIds} from '../content/portal-hepatic-study.ts';
+const hash=b=>createHash('sha256').update(b).digest('hex');
+const raw=await readFile('public/models/bodyparts3d/full-body/catalog.json');
+assert.equal(hash(raw),'109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7');
+const catalog=JSON.parse(raw),entries=catalog.structures.filter(s=>portalHepaticStudyFmaIds.includes(s.fmaId));
+assert.equal(entries.length,5);assert.equal(new Set(entries.map(s=>s.fmaId)).size,5);
+assert(entries.every(s=>s.regions.includes('abdomen')));
+const bundles=catalog.bundles.filter(b=>entries.some(s=>s.bundle===b.id));assert.equal(bundles.length,2);
+for(const b of bundles)assert.equal(hash(await readFile('public'+b.url.split('?')[0])),b.sha256);
+const record={sourceCommit:'8387d8817ac16e99d4e55844f89ee6b4ed13d8f3',sourceVersion:catalog.sourceVersion,license:catalog.license,coordinateSystem:catalog.coordinateSystem,entries,bundles};
+const text=JSON.stringify(record,null,2)+'\n',path='content/portal-hepatic-study-pins.json';
+if(process.argv.includes('--check'))assert.equal((await readFile(path,'utf8')).replace(/\r\n/g,'\n'),text);else await writeFile(path,text,{flag:'wx'});
+console.log(JSON.stringify({sourceSelections:5,unchangedBundles:2,geometryWritten:false}));

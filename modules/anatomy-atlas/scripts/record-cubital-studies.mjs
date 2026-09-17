@@ -1,9 +1,11 @@
 import assert from 'node:assert/strict';
 import {readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {dissectionProfiles} from '../app/dissection-data.ts';
+import {dissectionProfiles as currentProfiles} from '../app/dissection-data.ts';
+import {prePortalHepaticProfiles} from './portal-hepatic-study-history.mjs';
 import {cubitalStudies,cubitalReferences} from '../content/cubital-studies.ts';
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
+const dissectionProfiles=prePortalHepaticProfiles(currentProfiles);
 const previous=structuredClone(dissectionProfiles),region='whole-body',ids=cubitalStudies.map(s=>s.id);
 const added=previous[region].focuses.filter(s=>ids.includes(s.id));assert.equal(added.length,2);
 assert(!previous[region].stages.some(s=>ids.includes(s.id)));

@@ -19,6 +19,7 @@ import { spinalLevelStudySets, spinalLevelReferences } from '../lib/spinal-level
 import { kneeStudySets, kneeStudyReferences } from '../lib/knee-studies.ts';
 import { elbowStudySets, elbowStudyReferences } from '../content/elbow-studies.ts';
 import { cubitalStudies, cubitalReferences } from '../content/cubital-studies.ts';
+import { portalHepaticStudy, portalHepaticStudyReferences } from '../content/portal-hepatic-study.ts';
 import { tentoriumStudySets } from '../content/tentorium-studies.ts';
 import {
   longusColliStudySets,
@@ -1322,6 +1323,15 @@ for (const study of cubitalStudies) {
   });
 }
 dissectionProfiles['whole-body'].references.push(...cubitalReferences);
+
+dissectionProfiles.abdomen.focuses.push({
+  id: portalHepaticStudy.id, title: portalHepaticStudy.title,
+  rule: {fmaIds: portalHepaticStudy.targetFmaIds}, context: portalHepaticStudy.context,
+  includeSkeleton: false, view: portalHepaticStudy.view,
+  description: portalHepaticStudy.description, inspect: portalHepaticStudy.inspect,
+  landmarks: portalHepaticStudy.landmarks,
+});
+dissectionProfiles.abdomen.references.push(...portalHepaticStudyReferences);
 
 export function matchesRule(s: BodyStructure, rule: TissueRule): boolean {
   return (

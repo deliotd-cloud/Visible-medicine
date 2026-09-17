@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {dissectionProfiles} from '../app/dissection-data.ts';
+import {portalHepaticStudy,portalHepaticStudyReferences} from '../content/portal-hepatic-study.ts';
+const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
+const previous=structuredClone(dissectionProfiles),region='abdomen';
+const added=previous[region].focuses.filter(s=>s.id===portalHepaticStudy.id);assert.equal(added.length,1);
+assert(!previous[region].stages.some(s=>s.id===portalHepaticStudy.id));
+previous[region].focuses=previous[region].focuses.filter(s=>s.id!==portalHepaticStudy.id);
+const referencesAfter=structuredClone(previous[region].references);
+assert.deepEqual(referencesAfter.slice(-portalHepaticStudyReferences.length),portalHepaticStudyReferences);
+previous[region].references=referencesAfter.slice(0,-portalHepaticStudyReferences.length);
+assert.equal(hash(previous),'aea978c4956477af450dcfb19a69ddd44fb23e18ee9082041347fb1d848f2a90','All previous recipes unchanged');
+const record={sourceCommit:'8387d8817ac16e99d4e55844f89ee6b4ed13d8f3',before:hash(previous),after:hash(dissectionProfiles),patches:[{region,added,referencesBefore:previous[region].references,referencesAfter}]};
+const text=JSON.stringify(record,null,2)+'\n',path='content/portal-hepatic-study-transition.json';
+if(process.argv.includes('--check'))assert.equal((await readFile(path,'utf8')).replace(/\r\n/g,'\n'),text);else await writeFile(path,text,{flag:'wx'});
+console.log(JSON.stringify({before:record.before,after:record.after,recordHash:hash(record)}));

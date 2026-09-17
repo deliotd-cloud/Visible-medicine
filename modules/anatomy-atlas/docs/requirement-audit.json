@@ -7,7 +7,7 @@
     "integration/shoulder/education-api.ts": "4f2017f78d81c821c64ecd85ff3a60bb442cf3bc207b62da0718bc1f7a13afe0",
     "lib/regional-framing.ts": "4d492111fb7ceb7514e574b74557ba4ae242b64336e70c31d741d2921b677966",
     "lib/dissection-scope.ts": "6e47c630ce09ec51fe7b5e1156d85a49c25eded02e044775ee053e7096fbe0ff",
-    "app/dissection-data.ts": "37c47f21aec2ffead30c273661d023493467273f2845c520ffdc7bdc6db20dc5",
+    "app/dissection-data.ts": "48a96b4792af37b74ffe222f4cd6d0b15d4d6a3763612e98d7017e87dffdcdb1",
     "app/body-explorer.tsx": "82c6aa170222703faf7227cfa53fc508d2ec0e3c6043084a4ea645baf46d730a",
     "lib/lower-venous-imaging.ts": "56d60e3802bfc6dd8797fa2c36048916306b0084142a4b59e07b070e0f2b7e76",
     "lib/iliac-venous-imaging.ts": "67be90455b641db01288ce8a4fe837f2f20082b0b713840835971bd42c4ef4f2",
@@ -21,6 +21,10 @@
     "content/cubital-study-pins.json": "e787db76a21b7c3844a74f86e72b61d380345fccd72503030863d97d43b631c0",
     "content/cubital-study-transition.json": "f552e224d32ed03fb55729885a032fa30ffdf989d09f4aae39c44460f34feeae",
     "lib/cubital-studies.ts": "11b9e624adc0c5034ad0b6f31d0399e5f1854d65230d1e30803e6fbebbb6b33d",
+    "content/portal-hepatic-study.ts": "be65b83468eb1d9f15a91ebcf2c3426ceafc5ebd6560c9e285aac91dffa88b54",
+    "content/portal-hepatic-study-pins.json": "9866bd13b8284542e2cb110192b58860ed7237545f6f34b3518aaac02a8a849c",
+    "content/portal-hepatic-study-transition.json": "15e00c708a0fb32116276b34727d8cc827c951d912ac33f9f215b0980cc96a9c",
+    "lib/portal-hepatic-study.ts": "6861ca9b91562c8212cf456a5921c20dbbe1c9aedf73048a2bdbbbb71ad44188",
     "content/regional-branch-imaging-pins.json": "9fdb5451f4228321d8fe7af815397f01c283ed3d2dcf4178966ba2c0f1e59f68",
     "content/regional-branch-imaging.transition.json": "bbef84372c8fa9d7bbfc0c2b2bd4e653e0456c8828c8b98ccc575258a73f9038",
     "content/genicular-imaging.ts": "c95faad0c2c4fe2a5fcc5c6f04e2f1dda92abf1452c9305d4b27c59647f5e259",
@@ -71,7 +75,7 @@
     "lib/venous-drainage.ts": "461295771de1b34288fb3db0b87833d1398b60f81eb88b4a410b18bed608524c",
     "public/models/bodyparts3d/portal-veins/catalog.json": "2ce331f3cecbd67a2fe75f873c79d0c187b67fc4131b34cab8a44833c4a37ae8",
     "docs/portal-vein-source-audit.json": "506b3aca1b61897dcb4f625c189e243a423957c0438f08baa42ae53a742ef5aa",
-    "lib/limb-vascular-studies.ts": "c55445f250d3037ab7874c49d56d55eb88bf9cd7acf5e3ba9a5a5905f6c519e6",
+    "lib/limb-vascular-studies.ts": "839e0f97333de9f713427709b85658c0941e31f504706e148de1a587257bdb59",
     "lib/arm-vascular-studies.ts": "24996e2997a84263322436050fc7765ae97ca178595b09f34a21b23736ec6c51",
     "content/arm-vascular-studies.ts": "4def11852e5843a9ee57a298d4f69758f0b7bd2451f627a951985ca90bb15d0d",
     "content/arm-vascular-study-pins.json": "534d166d46212fedb3316c8113162f7e18ab70fe0adea43501af475796b92374",
@@ -349,7 +353,7 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "e3898ceb5b089aeb9ca267cc25737e005d150beb4dc9b6091d1748643aa68206",
+    "resolvedContentAndRecipeData": "1fbdb4de4b516fc3d971ae2cb92ed0fed5d7eca8362f0ff89eecb7f1ed66f8e3",
     "explicitTopicReadiness": "b2911b2f8007d9be9aa877db4e2fc3ee5602ed2fc486708f8ad165359635faea",
     "reasoningQuestionData": "523ab89c9c6313eec445979978777283e316b118328bd18ddde80a47ecfd3a32",
     "nestedTeachingData": "ef9aba8c7dd92a02e7cf6ba5fde6eccef8539d12a1666de387687f2f771efe11"
@@ -1612,7 +1616,7 @@
     "pulmonaryBranchTypeOptionalBundles": 2,
     "ventricularRelationshipPresets": 3,
     "stages": 159,
-    "focuses": 176
+    "focuses": 177
   },
   "practice": {
     "identificationModes": [

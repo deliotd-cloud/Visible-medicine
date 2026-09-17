@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "portal-hepatic-study:test": "node scripts/pin-portal-hepatic-study.mjs --check && node scripts/record-portal-hepatic-study.mjs --check && node scripts/validate-portal-hepatic-study.mjs",
     "pelvic-closeup:test": "node scripts/validate-pelvic-closeup.mjs",
     "pelvic-urinary-context:test": "node scripts/validate-pelvic-urinary-context.mjs",
     "dissection-shortcuts:test": "node --test scripts/test-dissection-shortcuts.mjs",

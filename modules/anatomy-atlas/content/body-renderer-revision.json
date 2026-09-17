@@ -122,7 +122,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "37c47f21aec2ffead30c273661d023493467273f2845c520ffdc7bdc6db20dc5"
+      "sha256": "48a96b4792af37b74ffe222f4cd6d0b15d4d6a3763612e98d7017e87dffdcdb1"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -963,6 +963,14 @@
     {
       "path": "content/portal-hepatic-clinical.ts",
       "sha256": "6e3c1cbc688a2fdd33514c00fefecd4f9d0bab5572b5aebd7ad661f928ce3767"
+    },
+    {
+      "path": "content/portal-hepatic-study-pins.json",
+      "sha256": "9866bd13b8284542e2cb110192b58860ed7237545f6f34b3518aaac02a8a849c"
+    },
+    {
+      "path": "content/portal-hepatic-study.ts",
+      "sha256": "be65b83468eb1d9f15a91ebcf2c3426ceafc5ebd6560c9e285aac91dffa88b54"
     },
     {
       "path": "content/pulmonary-teaching.ts",
@@ -1890,7 +1898,7 @@
     },
     {
       "path": "lib/limb-vascular-studies.ts",
-      "sha256": "c55445f250d3037ab7874c49d56d55eb88bf9cd7acf5e3ba9a5a5905f6c519e6"
+      "sha256": "839e0f97333de9f713427709b85658c0941e31f504706e148de1a587257bdb59"
     },
     {
       "path": "lib/limbic-landmarks.ts",
@@ -2055,6 +2063,10 @@
     {
       "path": "lib/portal-hepatic-clinical.ts",
       "sha256": "944376d0ecd370f4e4b700e25ddf94951d078d0968026a31d2d635c76c441828"
+    },
+    {
+      "path": "lib/portal-hepatic-study.ts",
+      "sha256": "6861ca9b91562c8212cf456a5921c20dbbe1c9aedf73048a2bdbbbb71ad44188"
     },
     {
       "path": "lib/portal-veins.ts",
@@ -2410,7 +2422,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "92f2aa8ba69cb23a017374f61978f108626b34669194543c551c66053d108c00"
+      "sha256": "0a3f0637381ab77ae118c90361b585500fd395ba99e6bc11613f60498d1fd38f"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2609,5 +2621,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "57589ca891fec90aaf1d9b708256550df054aebaac626a463ea8a47957592ee0"
+  "sha256": "59cb45833c7533dc27ce5fb4a5cc5de23ce71f30d3096c52582b828dc54ae365"
 }

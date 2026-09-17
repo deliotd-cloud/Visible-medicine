@@ -1,31 +1,31 @@
 {
   "passed": true,
-  "assertions": 56658,
+  "assertions": 57538,
   "scopes": 36,
-  "groups": 215,
-  "sourceRecipes": 285,
+  "groups": 219,
+  "sourceRecipes": 289,
   "combinedGroups": 70,
   "markupCases": 24,
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
-      "groups": 23,
-      "recipes": 23,
+      "groups": 25,
+      "recipes": 25,
       "combinedGroups": 0
     },
     {
       "region": "whole-body",
       "side": "left",
-      "groups": 23,
-      "recipes": 23,
+      "groups": 25,
+      "recipes": 25,
       "combinedGroups": 0
     },
     {
       "region": "whole-body",
       "side": "right",
-      "groups": 23,
-      "recipes": 23,
+      "groups": 25,
+      "recipes": 25,
       "combinedGroups": 0
     },
     {
@@ -178,22 +178,22 @@
     {
       "region": "abdomen",
       "side": "both",
-      "groups": 27,
-      "recipes": 37,
+      "groups": 28,
+      "recipes": 38,
       "combinedGroups": 10
     },
     {
       "region": "abdomen",
       "side": "left",
-      "groups": 27,
-      "recipes": 37,
+      "groups": 28,
+      "recipes": 38,
       "combinedGroups": 10
     },
     {
       "region": "abdomen",
       "side": "right",
-      "groups": 27,
-      "recipes": 37,
+      "groups": 28,
+      "recipes": 38,
       "combinedGroups": 10
     },
     {
@@ -220,22 +220,22 @@
     {
       "region": "head-neck",
       "side": "both",
-      "groups": 37,
-      "recipes": 56,
+      "groups": 38,
+      "recipes": 57,
       "combinedGroups": 19
     },
     {
       "region": "head-neck",
       "side": "left",
-      "groups": 37,
-      "recipes": 56,
+      "groups": 38,
+      "recipes": 57,
       "combinedGroups": 19
     },
     {
       "region": "head-neck",
       "side": "right",
-      "groups": 37,
-      "recipes": 56,
+      "groups": 38,
+      "recipes": 57,
       "combinedGroups": 19
     },
     {
@@ -264,5 +264,5 @@
   "clinicalValidation": false,
   "browserInteractionTesting": false,
   "sourceCatalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
-  "dissectionProfilesSha256": "051a7432fd2dfede46e64a46ff2d211bd3a6942513c6e8c24666532d46f9fa25"
+  "dissectionProfilesSha256": "efbd7db51e9f4042490f5f98975e39d93c1a7928b260f8a0c54b4d81d8c5d6d7"
 }

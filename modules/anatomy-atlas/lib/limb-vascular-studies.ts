@@ -9,6 +9,7 @@ import { inferiorEpigastricStudyReady } from './inferior-epigastric-vessels.ts';
 import { pelvicVeinStudyReady } from './pelvic-veins.ts';
 import { limbicLandmarkStudyReady } from './limbic-landmarks.ts';
 import { cubitalStudyReady } from './cubital-studies.ts';
+import { portalHepaticStudyReady } from './portal-hepatic-study.ts';
 
 /** Guard only this family; existing study families retain their own admissions. */
 export function limbVascularStudyReady(
@@ -18,6 +19,7 @@ export function limbVascularStudyReady(
 ) {
   if (!inferiorEpigastricStudyReady(catalog, region, recipeId)) return false;
   if (!cubitalStudyReady(catalog, region, recipeId)) return false;
+  if (!portalHepaticStudyReady(catalog, region, recipeId)) return false;
   if (!pelvicVeinStudyReady(catalog, region, recipeId)) return false;
   if (!limbicLandmarkStudyReady(catalog, region, recipeId)) return false;
   if (!armVascularStudyReady(catalog, region, recipeId)) return false;

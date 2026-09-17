@@ -1,27 +1,27 @@
 {
   "passed": true,
-  "assertions": 308295,
-  "links": 14194,
-  "focusedLinks": 8863,
-  "destinationsTested": 6909,
+  "assertions": 314863,
+  "links": 14311,
+  "focusedLinks": 8980,
+  "destinationsTested": 6922,
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
       "structures": 1103,
-      "testedLinks": 1932
+      "testedLinks": 1984
     },
     {
       "region": "whole-body",
       "side": "left",
       "structures": 633,
-      "testedLinks": 1116
+      "testedLinks": 1142
     },
     {
       "region": "whole-body",
       "side": "right",
       "structures": 633,
-      "testedLinks": 1109
+      "testedLinks": 1135
     },
     {
       "region": "shoulder-arm",
@@ -153,19 +153,19 @@
       "region": "abdomen",
       "side": "both",
       "structures": 106,
-      "testedLinks": 336
+      "testedLinks": 341
     },
     {
       "region": "abdomen",
       "side": "left",
       "structures": 83,
-      "testedLinks": 273
+      "testedLinks": 277
     },
     {
       "region": "abdomen",
       "side": "right",
       "structures": 81,
-      "testedLinks": 267
+      "testedLinks": 271
     },
     {
       "region": "pelvis",

@@ -1,0 +1,58 @@
+{
+  "sourceCommit": "8387d8817ac16e99d4e55844f89ee6b4ed13d8f3",
+  "before": "aea978c4956477af450dcfb19a69ddd44fb23e18ee9082041347fb1d848f2a90",
+  "after": "efbd7db51e9f4042490f5f98975e39d93c1a7928b260f8a0c54b4d81d8c5d6d7",
+  "patches": [
+    {
+      "region": "abdomen",
+      "added": [
+        {
+          "id": "portal-hepatic-outflow",
+          "title": "Liver: portal inflow & venous outflow",
+          "rule": {
+            "fmaIds": [
+              "FMA50735",
+              "FMA14338",
+              "FMA14339"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA7197",
+                "FMA10951"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Compare the portal vein with the supplied right and left hepatic veins, liver and inferior vena cava. Choose Both sides to keep both hepatic veins in view.",
+          "inspect": "Portal blood enters the liver; hepatic veins provide venous outflow toward the vena cava. Select the liver and Remove it to reveal covered vessels, then Undo to restore context. Extract selected separates one surface; return separation to 0% for original positions. These whole source surfaces do not prove connected lumens, flow or segment boundaries. The middle hepatic vein, complete tributaries, sinusoids and arterial inflow are not shown in this study. This is not a portal-triad dissection, procedural plan or registered scan. Clinical review is pending.",
+          "landmarks": [
+            "hepatic portal vein$",
+            "right hepatic vein$",
+            "left hepatic vein$",
+            "inferior vena cava$"
+          ]
+        }
+      ],
+      "referencesBefore": [
+        "https://anatomy.ttuhscep.edu/anatomytables/viscera_abdomen.html",
+        "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/schemes/inguinal_tables.html",
+        "https://anatomy.ttuhscep.edu/schemes/abdo_wall_ing_questions/abdo_wall_12_feedback.html"
+      ],
+      "referencesAfter": [
+        "https://anatomy.ttuhscep.edu/anatomytables/viscera_abdomen.html",
+        "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/schemes/inguinal_tables.html",
+        "https://anatomy.ttuhscep.edu/schemes/abdo_wall_ing_questions/abdo_wall_12_feedback.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/veins_abdomen.html"
+      ]
+    }
+  ]
+}

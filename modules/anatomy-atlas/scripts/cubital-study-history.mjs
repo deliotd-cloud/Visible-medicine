@@ -2,8 +2,10 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import record from '../content/cubital-study-transition.json' with {type:'json'};
+import {prePortalHepaticProfiles} from './portal-hepatic-study-history.mjs';
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function preCubitalProfiles(profiles){
+ profiles=prePortalHepaticProfiles(profiles);
  assert.equal(hash(record),'81c3d5b56128840a173dce7c6b335e47a0456b91ec40dcec58fd44c08e8a5b14');
  const ids=record.patches[0].added.map(s=>s.id);
  if(!Object.values(profiles).some(p=>p.focuses.some(f=>ids.includes(f.id))))return profiles;
