@@ -2,6 +2,27 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — elbow arterial clinical teaching
+
+Fourteen existing bilateral elbow arteries gain28 source-bound Clinical/Pathology
+drafts in the existing note panel. Seven families distinguish arm-side collateral
+and forearm-side recurrent pathways without presenting a diagram as evidence of
+perfusion, injury or a complete collateral network. The56 CT/MRI/X-ray/US topics
+remain pending; only their stale combined-placeholder wording is corrected.
+All other9,834 body topic placements, shoulder data, recipes and geometry are
+preserved by the declared transition. No controls, models or entitlements added.
+
+Habarta2022 and Goretti2020 provide credited CC BY4.0 clinical context, with no
+figures, scans, patient details, treatment algorithms or procedures imported.
+Atlas docs/ELBOW_CLINICAL_REFERENCES_20260917.md records reference scope;
+docs/ELBOW_CLINICAL.md and the coordinating checkpoint record verification.
+Do not infer completion from this plan entry alone; inspect final test evidence.
+
+The goal remains ACTIVE and hourly review PAUSED. Website84 remains the last
+verified deployment; no publication is requested by this source increment.
+Revision-bound radiologist sign-off, physical-device checks and authenticated
+model staging remain separate gates. Native MRI synthetic QA is already complete.
+
 ## 17 September — portal tributary and hepatic outflow teaching
 
 Eight existing portal/hepatic sources now have16 distinct Clinical/Pathology
