@@ -2,6 +2,27 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — genicular arterial clinical teaching
+
+Ten existing knee arterial selections gain20 source-bound Clinical/Pathology
+drafts in the existing panel, distinguishing the deep middle-genicular route
+from superior/inferior medial/lateral routes. Original disconnected middle-source
+components remain intact; no bridge, flow simulation or intervention target.
+Forty imaging placeholders are clarified but remain pending. The declared
+transition preserves9,858 other body placements, shoulder data, recipes and
+geometry. No new controls or access rights.
+
+Brown2025, Callese2023 and Glanz2020 supply credited CC BY4.0 context; no figures,
+scans, patient cases, rates or procedural algorithms imported. Atlas
+docs/GENICULAR_CLINICAL_REFERENCES_20260917.md records reuse/clinical limits;
+the coordinating checkpoint records final tests and GitHub/D recovery. This
+plan entry alone does not establish completed validation or publication.
+
+Full goal ACTIVE, hourly review PAUSED. Website84 remains last verified deployed
+version. Clinical sign-off, authenticated model staging and physical-device
+acceptance remain separate. Broader roadmap priorities should be reassessed
+after this regional increment; do not repeat completed native MRI synthetic QA.
+
 ## 17 September — elbow arterial clinical teaching
 
 Fourteen existing bilateral elbow arteries gain28 source-bound Clinical/Pathology
