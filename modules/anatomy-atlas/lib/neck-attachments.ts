@@ -3,6 +3,7 @@ import {neckAttachments,neckAttachmentBones,neckAttachmentReferences} from '../c
 import {sourceCanonical} from './body-source-additions';
 import type {BodyCatalog} from '../app/body-types';
 import type {DissectionAction} from '../app/dissection-data';
+import {longusColliAttachmentInfo,longusColliAttachmentPlan} from './longus-colli-attachments';
 const records=new Map(pins.entries.map(s=>[s.id,sourceCanonical(s)]));
 const canonical=sourceCanonical;
 const inRegion=(s:{regions:string[]},r:string)=>r==='whole-body'||s.regions.includes(r);
@@ -14,7 +15,7 @@ function sourceValid(catalog:BodyCatalog){
   });
 }
 /** Shared midline partners and sided scapulae; no inferred mirror or attachment point. */
-export function neckAttachmentInfo(catalog:BodyCatalog,region:string,side:string,selectedId:string,exam=false){
+function pairedNeckAttachmentInfo(catalog:BodyCatalog,region:string,side:string,selectedId:string,exam=false){
   if(exam||!['both','left','right'].includes(side)||!['spine','shoulder-arm','whole-body'].includes(region))return null;
   const selected=catalog.structures.find(s=>s.id===selectedId);
   const relationship=selected&&neckAttachments.find(a=>a.fmas.includes(selected.fmaId));
@@ -27,8 +28,11 @@ export function neckAttachmentInfo(catalog:BodyCatalog,region:string,side:string
   })}));
   return {selected,relationship,rows,completeHere:rows.every(r=>r.structures.every(s=>s.availableHere)),reference:neckAttachmentReferences[relationship.reference],note:relationship.note};
 }
-export function neckAttachmentPlan(...args:Parameters<typeof neckAttachmentInfo>):{action:DissectionAction;selectedId:string;completeHere:boolean}|null{
-  const info=neckAttachmentInfo(...args);if(!info)return null;
+export function neckAttachmentInfo(...args:Parameters<typeof pairedNeckAttachmentInfo>){
+  return pairedNeckAttachmentInfo(...args)??longusColliAttachmentInfo(...args);
+}
+export function neckAttachmentPlan(...args:Parameters<typeof neckAttachmentInfo>):{action:DissectionAction;selectedId:string;completeHere:boolean;view?:'anterior'}|null{
+  const info=pairedNeckAttachmentInfo(...args);if(!info)return longusColliAttachmentPlan(...args);
   const [catalog,region]=args;
   // Both muscle homologues and paired bones remain available to the side switch;
   // midline bones are kept once. Never import outside-region partners on Show.

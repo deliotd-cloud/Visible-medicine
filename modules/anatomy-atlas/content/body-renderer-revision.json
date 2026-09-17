@@ -74,7 +74,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "a302f84fe413d7dcb230195e7efb2c9fce52dcdf12c42a30f8f9c7234ce2f7d2"
+      "sha256": "64e91221810280979f2592e445b7736a3d0fc0e48ff5aad9d8382438551df986"
     },
     {
       "path": "app/body-scene.tsx",
@@ -771,6 +771,10 @@
     {
       "path": "content/limbic-landmark-study.ts",
       "sha256": "61af256e33919e18b87b456e57fff9f8020832fbf7e36a3c3154f42375e5c948"
+    },
+    {
+      "path": "content/longus-colli-attachments.ts",
+      "sha256": "ce22faa4316e6ee72582720efa87fc717820c0410fbe7303c8b6102579382afc"
     },
     {
       "path": "content/longus-colli-studies.ts",
@@ -1757,6 +1761,10 @@
       "sha256": "d31ea68bd362db13907de78743f138c8f7cae518895303cefc03370a821c650f"
     },
     {
+      "path": "lib/longus-colli-attachments.ts",
+      "sha256": "b7db37460903142d2d8924bc62100b77c02836df7bd063681df316fcbebc6cf6"
+    },
+    {
       "path": "lib/longus-colli.ts",
       "sha256": "2835bfa751ca5dd37ba8b895839f48c1a4e019b6c8bd8d6120cecf04912fdf99"
     },
@@ -1794,7 +1802,7 @@
     },
     {
       "path": "lib/neck-attachments.ts",
-      "sha256": "0e18bd97d301e46e21e5a48ee5a97d67823c7d0814bc4861e0b325cf05adc521"
+      "sha256": "2271d7856889efa4c9f42ff25df9754167f10303250e0f9330588e3412e115ff"
     },
     {
       "path": "lib/neck-clinical-curriculum.ts",
@@ -2441,5 +2449,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "4c4475cbab5574cd329a9621a281beb9d3f3399bd03fa55b812c47f136aa0215"
+  "sha256": "2e9bcb24a35ef73b5704722b4047323ca3933a23617b4130fccf8543e0c60967"
 }

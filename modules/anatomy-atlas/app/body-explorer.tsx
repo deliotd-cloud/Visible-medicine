@@ -889,6 +889,7 @@ export default function BodyExplorer({
       hipAttachmentPlan(catalog, initialRegion, side, selectedId, exam);
     if (!plan) return;
     dispatch(plan.action);
+    if ('view' in plan && plan.view === 'anterior') setView(plan.view);
     setSystems((prev) => ({ ...prev, skeleton: true, muscles: true,
       ...('usesConnective' in plan && plan.usesConnective ? { connective: true } : {}),
     }));

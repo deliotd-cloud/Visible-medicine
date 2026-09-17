@@ -1,5 +1,11 @@
 # Neck and upper-back attachment navigation
 
+17 September extension: [left longus colli parts](LONGUS_COLLI_ATTACHMENTS.md)
+reuse this panel under their own exact admission contract. There are now 21
+supported muscle selections and 12 relationships; the original paired mappings
+and pins described below remain unchanged. Current validation counts are in
+`neck-attachments-validation.json`, not the historical 13 September totals below.
+
 13 September 2026. The existing collapsed muscle-attachment panel now supports
 18 existing selections: bilateral rectus capitis anterior/lateralis/posterior
 major/posterior minor, obliquus capitis superior/inferior, longus capitis,
