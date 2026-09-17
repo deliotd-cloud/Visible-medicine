@@ -1,5 +1,25 @@
 # Third-party notices
 
+## Deep lower-limb vein clinical teaching — 17 September 2026
+
+Six existing selections receive original short Clinical/Pathology drafts.
+Source: National Heart, Lung, and Blood Institute; National Institutes of Health;
+U.S. Department of Health and Human Services:
+https://www.nhlbi.nih.gov/health/deep-vein-thrombosis. Its public-domain text
+policy has third-party exceptions; no logo, formatted product or media is used.
+The linked Nucleus Medical Media animation is all-rights-reserved and excluded.
+
+Ultrasound interpretation context is an original adapted summary of Akram F,
+Fan BE, Tan CW, Teoh WC, Prandoni P, Yap ES, *The clinical application of venous
+ultrasound in diagnosis and follow-up of lower extremity deep vein thrombosis
+(DVT): a case-based discussion*, Thrombosis Journal21:110(2023),
+https://doi.org/10.1186/s12959-023-00550-y, under
+https://creativecommons.org/licenses/by/4.0/. Credit, adaptation notice and links
+appear with each draft. No endorsement, patient cases, images, tables, scans,
+treatment instructions or protocols are included. Existing model rights remain;
+no model, dependency, font, texture, paid API or mandatory fee is added.
+See docs/DEEP_VENOUS_REFERENCES_20260917.md for the bounded audit and exclusions.
+
 ## Intrinsic laryngeal muscle teaching — 17 September 2026
 
 Four families across seven exact source selections receive original concise

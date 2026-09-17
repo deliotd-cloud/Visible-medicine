@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "ff46d5bfd13937476ca7fe5f887902c28ba8d7fb0404413494c9fef93759b050"
+      "sha256": "f93feebeacfe198b26ca272919c1e499cfc9edbf757b396d0c433d9c835918f5"
     },
     {
       "path": "app/body-explorer.css",
@@ -531,6 +531,14 @@
     {
       "path": "content/cricothyroid-teaching.ts",
       "sha256": "43e6e81da3b782aaefb0f806e57517edee327e1a24b9eaa748896aef93c033db"
+    },
+    {
+      "path": "content/deep-venous-clinical-pins.json",
+      "sha256": "37d56c9087a81591788a26d0a82eaec67904937caed39691405a1f57eafb0e82"
+    },
+    {
+      "path": "content/deep-venous-clinical.ts",
+      "sha256": "de527730010b98e5f6de2f648b216bf920a55fac4af1b2b596791d24b39ed61f"
     },
     {
       "path": "content/deferent-clinical-pins.json",
@@ -1285,6 +1293,10 @@
       "sha256": "9b88d3f73c59d7447893bfc73e2b8217cda07ecb0940638d32722b066b95d53e"
     },
     {
+      "path": "lib/deep-venous-clinical.ts",
+      "sha256": "9b15045023874855edec38a605c858e869f82cd801c88791e740704f62ac75a0"
+    },
+    {
       "path": "lib/deferent-clinical.ts",
       "sha256": "7a95522398b7b3bac652c8c225f9d50efa7b1c17769f44a557909f59a725066c"
     },
@@ -2034,7 +2046,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "c5a6a74dc4923345b87fca12007ccf74049e2d7501739338fffcce7b27672b07"
+      "sha256": "24abe4dd144747f19a872537fb98d06799bd20344244139b88658e467909b6ab"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2229,5 +2241,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "da9947cab8e10717d1fa06d54a264d9e44019251e5d789ffa3100b2e2c31868a"
+  "sha256": "bf4de4c8dfd32a8e58dcaa508deddfd8b21c3b66852b1c3307509cb0f43420f0"
 }
