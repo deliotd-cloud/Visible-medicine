@@ -2,14 +2,12 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
-import {beforeRegionalBranchImaging} from './regional-branch-imaging-history.mjs';
-import pins from '../content/genicular-imaging-pins.json' with {type:'json'};
-import transition from '../content/genicular-imaging.transition.json' with {type:'json'};
+import pins from '../content/regional-branch-imaging-pins.json' with {type:'json'};
+import transition from '../content/regional-branch-imaging.transition.json' with {type:'json'};
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
-export function beforeGenicularImaging(api){
- api=beforeRegionalBranchImaging(api);
- assert.equal(hash(pins),'30535ada8d2c0feb61d08a6c6b459b884ce06c0ddd31dbea9ef07b53086c16d0');
- assert.equal(hash(transition),'57af91c534e9bb3305c29646e5266c6de307c16a98d144ab8ff216c269217fa2');
+export function beforeRegionalBranchImaging(api){
+ assert.equal(hash(pins),'afd513145094b736a2203aad49efbe16a56cc66808b9292a36aceb79b4b17dcb');
+ assert.equal(hash(transition),'80142843caa8d2a671dbc7695035d7e9fca16f28fbd9f8b70a569ae7f6b45ee3');
  assert.equal(transition.parentCommit,pins.sourceCommit);
  assert.equal(transition.previousAllLessonsAndRecipesHash,pins.previousAllLessonsAndRecipesHash);
  const prior=new Map();let old=0,current=0;
@@ -19,11 +17,11 @@ export function beforeGenicularImaging(api){
   for(const t of e.topics){
    const lesson=api.bodyLesson(e.identity,t);assert.equal(e.previous[t].readiness,'pending');
    if(isDeepStrictEqual(lesson,e.previous[t]))old++;
-   else{assert.equal(hash(lesson),transition.entries[i].sections[t],'Unrecorded genicular teaching');current++;}
+   else{assert.equal(hash(lesson),transition.entries[i].sections[t],'Unrecorded regional-branch teaching');current++;}
    prior.set(e.identity.id+'|'+t,{identity:e.identity,lesson:e.previous[t]});
   }
  }
- assert.equal(prior.size,18);assert(old===18||current===18,'Mixed genicular teaching history');if(old===18)return api;
+ assert.equal(prior.size,8);assert(old===8||current===8,'Mixed regional-branch teaching history');if(old===8)return api;
  const bodyLesson=(s,t)=>{const e=prior.get(s.id+'|'+t);return e&&isDeepStrictEqual(s,e.identity)?structuredClone(e.lesson):api.bodyLesson(s,t);};
  return {...api,bodyLesson,bodyContent(s,t){const {readiness:_readiness,...content}=bodyLesson(s,t);return content;}};
 }

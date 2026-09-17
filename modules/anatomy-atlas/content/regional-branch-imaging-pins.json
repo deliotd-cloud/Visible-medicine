@@ -1,0 +1,368 @@
+{
+  "sourceCommit": "3c2e2625f3a3571789c4595287e809ad2a68aee9",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "subscapular-arteries",
+      "url": "/models/bodyparts3d/subscapular-arteries/subscapular-arteries.glb?v=6e7ccebe78f6a8c89b556e5e1256d755801725590c4625bebd3fecd6d93f04b3",
+      "bytes": 31116,
+      "sha256": "6e7ccebe78f6a8c89b556e5e1256d755801725590c4625bebd3fecd6d93f04b3",
+      "structures": 2
+    },
+    {
+      "id": "circumflex-femoral",
+      "url": "/models/bodyparts3d/circumflex-femoral/circumflex-femoral.glb?v=265bddde64b37086b7f953515b1fd0a24543b0c9b210adc6e3837b22dc9bae69",
+      "bytes": 191180,
+      "sha256": "265bddde64b37086b7f953515b1fd0a24543b0c9b210adc6e3837b22dc9bae69",
+      "structures": 2
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "7252770cbe1a815974d7293e9b88f61b99dc26665521313bc533b39770cb2771",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thigh:right:vessel:descending-branch-of-right-lateral-circumflex-femoral-artery",
+        "fmaId": "FMA21422",
+        "name": "Descending branch of right lateral circumflex femoral artery",
+        "sourceName": "descending branch of right lateral circumflex femoral artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "leg"
+        ],
+        "bundle": "circumflex-femoral",
+        "nodeName": "FMA21422",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2057",
+            "sha256": "b9a4618409103711ee922dac578f542734951f4bc65fa1368b12bdec331bc930"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -1.2125300168991089,
+            -3.88742995262146,
+            0.4131210148334503
+          ],
+          "max": [
+            -0.7521529793739319,
+            -0.2701700031757355,
+            0.7236400246620178
+          ]
+        },
+        "center": [
+          -0.9823414981365204,
+          -2.0787999778985977,
+          0.5683805197477341
+        ],
+        "anchor": [
+          -1.142109990119934,
+          -2.0904700756073,
+          0.4591220021247864
+        ],
+        "coverageNote": "Complete IS-A descending-branch surface. The lateral circumflex parent is contained within the existing deep-femoral aggregate, not separately selectable; it is not a direct deep-femoral branch claim. Original coordinates and faces retained; no junction, continuous lumen or complete collateral supply is validated. Radiologist review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "descending-circumflex",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "Descending branch of right lateral circumflex femoral artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No acquired scan, diagnostic interpretation or intervention guidance is supplied."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "Descending branch of right lateral circumflex femoral artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No acquired scan, diagnostic interpretation or intervention guidance is supplied."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Descending branch of right lateral circumflex femoral artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No acquired scan, diagnostic interpretation or intervention guidance is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thigh:left:vessel:descending-branch-of-left-lateral-circumflex-femoral-artery",
+        "fmaId": "FMA21423",
+        "name": "Descending branch of left lateral circumflex femoral artery",
+        "sourceName": "descending branch of left lateral circumflex femoral artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "leg"
+        ],
+        "bundle": "circumflex-femoral",
+        "nodeName": "FMA21423",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2063",
+            "sha256": "095e3e9d4ef41d5b56b165998622bf54ca7998dc123ca09cf1c14a0a48b414fb"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.752161979675293,
+            -3.887389898300171,
+            0.4131599962711334
+          ],
+          "max": [
+            1.2125099897384644,
+            -0.27015000581741333,
+            0.723580002784729
+          ]
+        },
+        "center": [
+          0.9823359847068787,
+          -2.078769952058792,
+          0.5683699995279312
+        ],
+        "anchor": [
+          1.1404199600219727,
+          -2.0895700454711914,
+          0.4561690092086792
+        ],
+        "coverageNote": "Complete IS-A descending-branch surface. The lateral circumflex parent is contained within the existing deep-femoral aggregate, not separately selectable; it is not a direct deep-femoral branch claim. Original coordinates and faces retained; no junction, continuous lumen or complete collateral supply is validated. Radiologist review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "descending-circumflex",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "Descending branch of left lateral circumflex femoral artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No acquired scan, diagnostic interpretation or intervention guidance is supplied."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "Descending branch of left lateral circumflex femoral artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No acquired scan, diagnostic interpretation or intervention guidance is supplied."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Descending branch of left lateral circumflex femoral artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No acquired scan, diagnostic interpretation or intervention guidance is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
+        "fmaId": "FMA22678",
+        "name": "Right subscapular artery",
+        "sourceName": "right subscapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "subscapular-arteries",
+        "nodeName": "FMA22678",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2298",
+            "sha256": "41050856a7c2cbb79984a78346a0e3dc13e271758a04012f2283fee2182a2f29"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -1.419819951057434,
+            4.794000148773193,
+            0.33651599287986755
+          ],
+          "max": [
+            -1.2893999814987183,
+            4.94890022277832,
+            0.4222390055656433
+          ]
+        },
+        "center": [
+          -1.3546099662780762,
+          4.871450185775757,
+          0.37937749922275543
+        ],
+        "anchor": [
+          -1.347350001335144,
+          4.877500057220459,
+          0.39108601212501526
+        ],
+        "coverageNote": "Complete IS-A subscapular artery surface, distinct from the broader PART-OF aggregate containing existing branches. Original coordinates and faces retained; no source junction, continuous lumen, complete collateral network or supply territory is validated. Radiologist review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "subscapular",
+      "topics": [
+        "ct"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "Right subscapular artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnostic interpretation or intervention guidance is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery",
+        "fmaId": "FMA22679",
+        "name": "Left subscapular artery",
+        "sourceName": "left subscapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "subscapular-arteries",
+        "nodeName": "FMA22679",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2246",
+            "sha256": "4dc93c063b9d87ab85699bfeb9f856cb39faf12d2859b0e4184ba64de6c9ef87"
+          }
+        ],
+        "bounds": {
+          "min": [
+            1.2898600101470947,
+            4.7941999435424805,
+            0.3365879952907562
+          ],
+          "max": [
+            1.4196499586105347,
+            4.948699951171875,
+            0.42217200994491577
+          ]
+        },
+        "center": [
+          1.3547549843788147,
+          4.871449947357178,
+          0.379380002617836
+        ],
+        "anchor": [
+          1.3433200120925903,
+          4.870800018310547,
+          0.3914330005645752
+        ],
+        "coverageNote": "Complete IS-A subscapular artery surface, distinct from the broader PART-OF aggregate containing existing branches. Original coordinates and faces retained; no source junction, continuous lumen, complete collateral network or supply territory is validated. Radiologist review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "subscapular",
+      "topics": [
+        "ct"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "Left subscapular artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnostic interpretation or intervention guidance is supplied."
+        }
+      }
+    }
+  ]
+}

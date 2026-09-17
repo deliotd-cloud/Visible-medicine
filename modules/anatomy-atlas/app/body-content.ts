@@ -135,6 +135,7 @@ import { iliacArterialImagingLesson } from '../lib/iliac-arterial-imaging';
 import { tractPlantarImagingLesson } from '../lib/tract-plantar-imaging';
 import { abdominalConnectiveImagingLesson } from '../lib/abdominal-connective-imaging';
 import { genicularImagingLesson } from '../lib/genicular-imaging';
+import { regionalBranchImagingLesson } from '../lib/regional-branch-imaging';
 import { limbBoneImagingLesson } from '../lib/limb-bone-imaging';
 import { thoracicBoneImagingLesson } from '../lib/thoracic-bone-imaging';
 import { abdominalOrganImagingLesson } from '../lib/abdominal-organ-imaging';
@@ -250,6 +251,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (regionalVascularClinical) return regionalVascularClinical;
   const cranial = cranialArteryLesson(s, tab);
   if (cranial) return cranial;
+  const regionalBranchImaging = regionalBranchImagingLesson(s, tab);
+  if (regionalBranchImaging) return regionalBranchImaging;
   const circumflex = circumflexFemoralLesson(s, tab);
   if (circumflex) return circumflex;
   const subscapular = subscapularArteryLesson(s, tab);

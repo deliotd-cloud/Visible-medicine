@@ -1060,6 +1060,19 @@ Existing BodyParts3D CC BY 4.0 credit remains; original code/notes retain MIT te
 No dependency, paid service, font, texture or mesh is added. Reference scope and
 population/technique limits: `docs/ILIAC_VENOUS_IMAGING.md`.
 
+# Regional-branch imaging factual notes (17 September 2026)
+
+Eight original CT/MRI/Ultrasound placements cite Szafarenko et al.
+(doi:10.5603/fm.106134), Shen et al. (doi:10.3348/kjr.2021.0696), Guo et al.
+(doi:10.7507/1002-1892.201810025) and Barrett et al.
+(doi:10.1016/j.oraloncology.2021.105682). These are external factual references,
+not redistributed publisher assets. No article prose, abstracts, media, tables,
+PDFs or scans are copied/adapted. Shen's article is CC BY-NC 4.0; no commercial
+asset is licensed under those terms or included from it. Original code/notes
+retain MIT terms and the unchanged BodyParts3D bundles retain CC BY 4.0 credits.
+No dependency, model, texture, font or paid service added. Detailed reuse and
+study-scope limits: `docs/REGIONAL_BRANCH_IMAGING.md`.
+
 # Genicular imaging factual notes (17 September 2026)
 
 Original brief factual notes cite Callese TE et al. (2023),

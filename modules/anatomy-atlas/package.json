@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "regional-branch-imaging:test": "node scripts/pin-regional-branch-imaging.mjs --check && node scripts/record-regional-branch-imaging.mjs --check && node scripts/validate-regional-branch-imaging.mjs",
     "genicular-imaging:test": "node scripts/pin-genicular-imaging.mjs --check && node scripts/record-genicular-imaging.mjs --check && node scripts/validate-genicular-imaging.mjs",
     "abdominal-connective-imaging:test": "node scripts/pin-abdominal-connective-imaging.mjs --check && node scripts/record-abdominal-connective-imaging.mjs --check && node scripts/validate-abdominal-connective-imaging.mjs",
     "tract-plantar-imaging:test": "node scripts/pin-tract-plantar-imaging.mjs --check && node scripts/record-tract-plantar-imaging.mjs --check && node scripts/validate-tract-plantar-imaging.mjs",

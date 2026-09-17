@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "1a84d6a813ca956be15153f957ff0e328ed898e4ffcea1f196a59a5521ed4a82"
+      "sha256": "9272fd554880f0512aa28ba03a44af0b4dbe38a7b9522be52ab55c8f5b9eacd4"
     },
     {
       "path": "app/body-education-link.ts",
@@ -967,6 +967,14 @@
     {
       "path": "content/rectal-deferent-imaging.ts",
       "sha256": "c4f8c16e116a3a15923642ca51c2268dda8784f38754511e9aa085f9d654518f"
+    },
+    {
+      "path": "content/regional-branch-imaging-pins.json",
+      "sha256": "9fdb5451f4228321d8fe7af815397f01c283ed3d2dcf4178966ba2c0f1e59f68"
+    },
+    {
+      "path": "content/regional-branch-imaging.ts",
+      "sha256": "e7f36ff635614115799848acca5324a73bd06c23eed1bc47fec21abd93cc7bd5"
     },
     {
       "path": "content/regional-vascular-clinical-pins.json",
@@ -2065,6 +2073,10 @@
       "sha256": "833268e839a6f4b978fee73d96361a712a5520030397e43198a1ae078faaeecb"
     },
     {
+      "path": "lib/regional-branch-imaging.ts",
+      "sha256": "6ac9b5db250917a4229d9ebd22166ea6e3ef7cc340649c7cd942bdd2ead9f697"
+    },
+    {
       "path": "lib/regional-connective-clinical-curriculum.ts",
       "sha256": "d741394acb5ba6a97b7da80688be07b4a35fa48bd07153385a7c67755d34fb61"
     },
@@ -2378,7 +2390,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "3161074d85aa273c869122a860398cf9a89a7a1070d21784494880986a722def"
+      "sha256": "e0905d5af15518687c8b1d4c10fbc958a2bd84deae74b86513402d0e4c841d32"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2577,5 +2589,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "0dea9337e8f4b98aeb78555bf7e5443ce8cc5f01cf1b1338c1b9efc8ba2abd73"
+  "sha256": "48e41ceca8c9e29abebf9cf5af220da25b9d7fd740699f4c8e843b004206bb9e"
 }

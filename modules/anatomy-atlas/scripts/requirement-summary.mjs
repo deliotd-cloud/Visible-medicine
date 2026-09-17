@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Regional branch imaging](REGIONAL_BRANCH_IMAGING.md) adds eight CT/MRI/Ultrasound draft placements across four existing descending lateral circumflex femoral and subscapular arteries. Specialised angiography and selected perforator evidence are distinguished from ordinary scans and reference geometry. Existing panels and all other content remain; no new model, image, procedure or clinical approval.
+
 [Genicular imaging](GENICULAR_IMAGING.md) adds eighteen CT/MRI/Ultrasound draft placements across ten existing arterial selections. CBCT is distinguished from routine CT; MRI guidance is limited to the inferior medial pair and ultrasound observations to three branch pairs. Unsupported sections remain pending. Existing panels, geometry and recipes are unchanged; no images, procedures or clinical approval are supplied.
 
 [Iliotibial and long-plantar imaging](TRACT_PLANTAR_IMAGING.md) adds six MRI/Ultrasound draft placements across four existing selections. Local scan coverage and fine attachment anatomy remain distinct from broad donor surfaces. Long-plantar Ultrasound, CT and X-ray remain pending. Existing tabs, other teaching, geometry and dissection recipes are unchanged; no scans or clinical approval are supplied.
