@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "c04a9c2c0411019982d752df80417dff448639cb3003f7cfe853f9ad9d99d090"
+      "sha256": "239bfab17bdafde7857cb2c1b6db050be8b67066b62fe05c751bd02cfa78e976"
     },
     {
       "path": "app/body-explorer.css",
@@ -731,6 +731,14 @@
     {
       "path": "content/lower-limb-motor.ts",
       "sha256": "b94da1bcd39a91f513565135cb8a4e70c64998fff05aaba8df8a83d7f156f36b"
+    },
+    {
+      "path": "content/major-organ-function-pins.json",
+      "sha256": "9d5f9c179ce3eb5daa4a7e21dd2da83fa7e531051a969841f465d295d6d39561"
+    },
+    {
+      "path": "content/major-organ-function.ts",
+      "sha256": "6a38862dceedfb4d17a8610b954efa1d4a6a1925528091515bc2cabe0fd13c45"
     },
     {
       "path": "content/neck-attachment-pins.json",
@@ -1585,6 +1593,10 @@
       "sha256": "eb79201901dfbe170f0336888ac864308507b6c8f47d1cdf1a0fcddd7e7d295b"
     },
     {
+      "path": "lib/major-organ-function.ts",
+      "sha256": "4f467f6ccf778ddf96bcf60b45aef4ca258d3c16e717716c4ded6f774366c01d"
+    },
+    {
       "path": "lib/mesenteric-anatomy.ts",
       "sha256": "922f748bf87850c9e344943ae9980bfc65701a7d8cf3f97c80ec8ab01d28a6a1"
     },
@@ -2006,7 +2018,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "75935fbd372046ac6728bc10677940ed5926ec526b303171f46489876fc95fb4"
+      "sha256": "a9714878a450762b186fc18d7742bf54ebc53901fe514b296930d0b69dc23f9b"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2201,5 +2213,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "8044cf9981051521fe03a77f4eff18b358f8ffdd3bb3296de68b7d203ae55047"
+  "sha256": "fe016cd9e6bcb64db2d06728fb737dfa375600462067712755b4ffea32357702"
 }

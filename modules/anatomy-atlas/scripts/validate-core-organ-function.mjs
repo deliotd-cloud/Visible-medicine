@@ -7,6 +7,7 @@ import ts from 'typescript';
 import {build} from './workspace-test-build.mjs';
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {authoringBeforeCoreOrganFunction,coreOrganFunctionHash as hash} from './core-organ-function-history.mjs';
+import {authoringBeforeMajorOrganFunction} from './major-organ-function-history.mjs';
 import {authoringBeforeClinicalReferenceRevision} from './clinical-reference-revision-history.mjs';
 import pins from '../content/core-organ-function-pins.json' with {type:'json'};
 import after from '../content/core-organ-function.transition.json' with {type:'json'};
@@ -14,11 +15,11 @@ import after from '../content/core-organ-function.transition.json' with {type:'j
 const context=await contentContext(),{api}=context,catalog=api.bodyDisplayCatalog(context.catalog),original=JSON.stringify(catalog);
 const featureBuilt=await build({stdin:{contents:"export * from './lib/core-organ-function'; export * from './content/core-organ-function';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
 const feature=await import('data:text/javascript;base64,'+Buffer.from(featureBuilt.outputFiles[0].text).toString('base64'));
-const before=authoringBeforeCoreOrganFunction(context),older=authoringBeforeClinicalReferenceRevision(context);
+const coreEra=authoringBeforeMajorOrganFunction(context),before=authoringBeforeCoreOrganFunction({...context,api:coreEra}),older=authoringBeforeClinicalReferenceRevision(context);
 assert.equal(authoringBeforeCoreOrganFunction({...context,api:before}),before,'All-before state must be idempotent');
 const snapshot=a=>({body:catalog.structures.map(s=>({id:s.id,sections:Object.fromEntries(a.contentTabs.map(t=>[t,a.bodyLesson(s,t)]))})),shoulder:a.structures,recipes:a.dissectionProfiles});
 assert.equal(hash(snapshot(before)),pins.previousAllLessonsAndRecipesHash,'Strict immutable before hash');
-assert.equal(hash(snapshot(api)),after.currentAllLessonsAndRecipesHash,'Strict immutable after hash');
+assert.equal(hash(snapshot(coreEra)),after.currentAllLessonsAndRecipesHash,'Strict immutable after hash');
 for(const entry of pins.entries)assert.deepEqual(older.bodyLesson(entry.identity,'function'),entry.previous.function,'Older history must see the normalized pre-feature lesson');
 const records=api.bodyContentRecords(catalog),registry=new Map([...context.shoulder,...records].map(record=>[record.representationScope+'|'+record.id,record]));
 const validate=await contentValidator(registry);for(const record of records)assert(validate(record));
@@ -31,7 +32,7 @@ const callbackJs=ts.transpile('const renderNote='+callback,{target:ts.ScriptTarg
 let changed=0,unchanged=0,rejected=0,rendered=0;
 const placements=new Map(pins.entries.map(entry=>[entry.identity.id+'|function',entry]));
 for(const s of catalog.structures)for(const tab of api.contentTabs){
-  const entry=placements.get(s.id+'|'+tab),now=api.bodyLesson(s,tab),old=before.bodyLesson(s,tab);
+  const entry=placements.get(s.id+'|'+tab),now=coreEra.bodyLesson(s,tab),old=before.bodyLesson(s,tab);
   if(!entry){assert.deepEqual(now,old);unchanged++;continue;}
   changed++;assert.equal(old.readiness,'draft');assert.deepEqual(old,entry.previous.function);assert.equal(now.readiness,'draft');assert.deepEqual(now,feature.coreOrganFunctionLesson(s,tab));
   assert.equal(now.bullets.length,4);assert.equal(new Set(now.citations).size,now.citations.length);

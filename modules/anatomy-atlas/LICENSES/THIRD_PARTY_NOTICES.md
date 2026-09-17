@@ -1,5 +1,21 @@
 # Third-party notices
 
+## Major-organ Function teaching — 17 September 2026
+
+Original educational summaries for 13 additional root selections reference
+NIDDK, NCI/SEER and NHLBI text pages. Named institutional credit and direct
+reading links are retained. No source figure, image, video, formatted publication,
+logo, third-party media or patient scan is imported. The topic-to-reference map
+and text-reuse limits are documented in
+[MAJOR_ORGAN_FUNCTION_PLAN.md](../docs/MAJOR_ORGAN_FUNCTION_PLAN.md).
+NHLBI's Nucleus Medical Media illustrations/animations remain expressly excluded.
+The NCI and NIDDK pages are factual references for introductory physiology,
+not imported disease-management guidance. No endorsement is implied.
+
+No new asset, font, texture, dataset, dependency, paid service, API call or
+mandatory fee is introduced. Existing model and code notices remain unchanged.
+This limited text audit is not whole-project commercial or clinical clearance.
+
 ## Core-organ Function teaching — 17 September 2026
 
 Short original factual summaries for the heart, paired lungs and liver reference

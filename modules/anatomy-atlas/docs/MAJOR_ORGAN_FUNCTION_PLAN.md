@@ -1,6 +1,9 @@
 # Remaining major-organ Function teaching — 17 September 2026
 
-This is a verified next-work plan, not implemented teaching or clinical approval.
+Implementation status: all 13 Function placements below are now implemented as
+source-bound drafts; see [implementation and validation](MAJOR_ORGAN_FUNCTION.md).
+The original pre-edit audit and reference decisions follow. This is not clinical
+approval or a claim that every organ topic is comprehensive.
 Main task ran the actual display-catalog/lesson dispatcher at Atlas source
 55086d1e206385b75febbed6c7f7b9634d652a60. Of 83 organ-system selections,
 13 still reach the generic single-sentence `Function` fallback with no specific
@@ -38,6 +41,7 @@ source in its lesson. Do not copy pictures, diagrams, videos, logos or layouts.
 
 - [NIDDK digestive system](https://www.niddk.nih.gov/health-information/digestive-diseases/digestive-system-how-it-works): peristaltic transport; gastric mixing and controlled onward emptying; intestinal digestion/absorption versus colonic water recovery and stool movement; pancreatic digestive secretions; gallbladder bile storage/release. Preserve bile production as a liver function. This page was last reviewed December 2017; avoid extending it into treatment advice.
 - [NCI SEER pancreas](https://training.seer.cancer.gov/anatomy/endocrine/glands/pancreas.html): distinguish duct-delivered exocrine enzymes from endocrine islet insulin/glucagon. Do not imply all endocrine cells or functions are represented by these two hormones or visible source meshes.
+- [NCI Dictionary: gallbladder](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/gallbladder): independently checked during wording review to retain the existing concentrating function as well as storage. Text facts only, with NCI credit; no media or dictionary database is imported.
 - [NIDDK kidneys](https://www.niddk.nih.gov/health-information/kidney-disease/kidneys-how-they-work): glomerular filtration versus tubular handling, fluid/electrolyte/acid balance and endocrine roles. Do not infer equal left/right function, filtration rates or patient physiology from shape.
 - [NIDDK urinary tract](https://www.niddk.nih.gov/health-information/urologic-diseases/urinary-tract-how-it-works): storage versus coordinated voiding involving bladder wall, outlet and neural control. Do not claim the surface establishes patency, continence or quantitative capacity.
 - [NHLBI respiratory system](https://www.nhlbi.nih.gov/health/lungs/respiratory-system): tracheal air conduction in the route to bronchi/lungs, distinct from alveolar gas exchange. Do not copy its expressly copyrighted Nucleus Medical Media graphics/animations.
