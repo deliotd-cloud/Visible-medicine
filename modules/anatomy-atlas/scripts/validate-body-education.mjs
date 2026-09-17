@@ -1,0 +1,46 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {build} from './workspace-test-build.mjs';
+import {contentContext} from './content-contract-tools.mjs';
+const compiled=await build({stdin:{contents:`export * from './lib/root-education-api'; export * from './lib/anatomy-link-registry'; export * from './lib/imaging-sync';`,resolveDir:process.cwd(),loader:'ts'},bundle:true,platform:'node',format:'esm',write:false});
+const api=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+const context=await contentContext(),catalog=context.api.bodyDisplayCatalog(context.catalog),entries=api.bodyLinkEntries(catalog);
+const anatomy=entries.map(e=>({scope:'body',structureId:e.id,sources:e.sources}));
+const right=catalog.structures.find(s=>s.fmaId==='FMA23464'),left=catalog.structures.find(s=>s.fmaId==='FMA23465');assert(right&&left);
+const hash='a'.repeat(64),tick=()=>new Promise(r=>setTimeout(r,0));let checks=0;
+const same=(a,b)=>{checks++;assert.deepEqual(a,b);};
+const anchors={ct:{type:'volume',id:'anchor',seriesId:'series',frameId:'frame',annotationId:'label',geometry:'partial-mask'},mri:{type:'volume',id:'anchor',seriesId:'series',frameId:'frame',annotationId:'label',geometry:'point'},xray:{type:'projection',id:'anchor',imageId:'image',annotationId:'label',projectionId:'projection'},ultrasound:{type:'ultrasound',id:'anchor',clipId:'clip',annotationId:'label',viewId:'view',frameIndex:0,timeMs:null}};
+for(const [kind,anchor] of Object.entries(anchors)){
+ let allowed=new Set([right.id]),disabled=false,enabled=false,selected=[],revealed=[],incoming,status=[],release;
+ const target={},handle=api.installRootEducationApi(target,'body',anatomy,{canNavigate:()=>!disabled,canAccessAnatomy:a=>allowed.has(a.structureId)}),facade=target.visibleMedicineBodyEducation;
+ const resource={id:'vm:resource:synthetic-body',revision:1,kind,title:'Synthetic port test',ageGroup:'adult',laterality:'bilateral',regionIds:['forearm'],material:{sha256:hash,origin:'synthetic'},anchors:[anchor]};
+ const links=[right,left].map((s,i)=>({id:'vm:link:body-'+i,revision:1,anatomy:{scope:'body',structureId:s.id,sources:s.sources},resourceId:resource.id,resourceRevision:1,materialSha256:hash,anchorId:'anchor',relation:'exact'}));
+ const locator=i=>({version:1,linkId:links[i].id,linkRevision:1,resourceId:resource.id,resourceRevision:1,anchorId:'anchor'});
+ const policy={canNavigate:()=>true,canAccessAnatomy:()=>true,canAccess:()=>true,resourceCleared:()=>true,correspondenceCleared:()=>true};
+ const listener=api.imagingBridge.subscribe(()=>{enabled=false;});
+ const detach=api.imagingBridge.attachAtlas(api.createAtlasReceiver(()=>({enabled,disabled,entries,allowedIds:[...allowed],onSelect:id=>selected.push(id)}),()=>{}));
+ const viewer={getStudy:()=>({resourceId:resource.id,revision:1,materialSha256:hash}),canNavigate:()=>true,async reveal(match,guard){if(release)await release.promise;if(guard.isCurrent())revealed.push(match);},subscribeSelection:fn=>{incoming=fn;return()=>{};},subscribeContext:()=>()=>{}};
+ const document={schemaVersion:1,resources:[resource],links};
+ const connection=facade.connect({document,policy,viewer,onStatus:s=>status.push(s)});
+ same(incoming({messageId:'off',locator:locator(0)}).status,'paused');connection.setEnabled(true);enabled=true;
+ same(incoming({messageId:'right',locator:locator(0)}).status,'selected');same(selected,[right.id]);
+ same(incoming({messageId:'wrong-side',locator:locator(1)}).status,'paused');
+ api.imagingBridge.publish(entries.find(e=>e.id===right.id));await tick();same(revealed.length,1);same(revealed[0].anchor.type,anchor.type);same('reference' in revealed[0],false);
+ let done;release={promise:new Promise(r=>{done=r;})};api.imagingBridge.publish(entries.find(e=>e.id===right.id));
+ allowed=new Set([left.id]);handle.pause();same(enabled,false);done();await tick();same(revealed.length,1);
+ same(incoming({messageId:'new-side-paused',locator:locator(1)}).status,'paused');connection.setEnabled(true);enabled=true;
+ same(incoming({messageId:'new-side',locator:locator(1)}).status,'selected');same(selected.at(-1),left.id);
+ disabled=true;handle.pause();connection.setEnabled(true);enabled=true;same(incoming({messageId:'practice',locator:locator(1)}).status,'paused');
+ disabled=false;handle.pause();same(enabled,false);same(incoming({messageId:'after-practice',locator:locator(1)}).status,'paused');
+ connection.dispose();const bad=structuredClone(document);bad.links[0].anatomy.sources[0].sha256='b'.repeat(64);
+ assert.throws(()=>facade.connect({document:bad,policy,viewer}),/Invalid|source|Unknown/i);checks++;
+ handle.dispose();assert.throws(()=>facade.connect({document,policy,viewer}),/removed/);checks++;
+ same(api.imagingBridge.getAdapter(),null);same(Object.hasOwn(target,'visibleMedicineBodyEducation'),false);detach();listener();
+}
+// The component must wire the verified root catalogue and pause separate views.
+const component=await readFile('app/body-explorer.tsx','utf8');
+assert(component.includes('entries: linkEntries, allowedIds: educationAllowedIds'));
+assert(component.includes('disabled: exam || inlineStudy, contextKey: `${initialRegion}/${side}`'));
+assert(component.includes("enabled: presentation === 'panel'"));
+const report={checks,modalities:Object.keys(anchors),trustedAnatomyRecords:anatomy.length,syntheticOnly:true,clinicalApproval:false,browserAcceptance:false};
+await writeFile('docs/body-education-validation.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

@@ -324,6 +324,9 @@ const countsBySystem = Object.fromEntries(
 const profiles = Object.values(dissectionProfiles);
 const sourceHashes = {};
 for (const path of [
+  'lib/root-education-api.ts',
+  'app/body-education-link.ts',
+  'integration/shoulder/education-api.ts',
   'lib/regional-framing.ts',
   'app/body-explorer.tsx',
   'lib/lower-venous-imaging.ts',

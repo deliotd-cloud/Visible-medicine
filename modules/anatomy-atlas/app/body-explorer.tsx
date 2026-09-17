@@ -76,6 +76,7 @@ import { resolveComponentImagingTarget } from '@/lib/component-imaging-navigatio
 import type { NestedImagingTopic } from '@/content/nested-teaching';
 import { bodyLinkEntries } from '@/lib/anatomy-link-registry';
 import { ImagingLink, useImagingLink } from './imaging-link';
+import { useBodyEducationLink } from './body-education-link';
 import { ImagingComparisonWorkspace } from './imaging-comparison';
 import {
   dissectionProfiles,
@@ -742,13 +743,19 @@ export default function BodyExplorer({
   const imagingLink = useImagingLink({
     entries: linkEntries,
     allowedIds: regionStructures.map((s) => s.id),
-    disabled: exam,
+    disabled: exam || inlineStudy,
     onSelect: (id) => {
       applySelection(id);
       setInspection(initialInspection);
     },
   });
   const publishSelection = imagingLink.publish;
+  const educationAllowedIds = useMemo(() => regionStructures.map(s => s.id), [regionStructures]);
+  useBodyEducationLink({
+    entries: linkEntries, allowedIds: educationAllowedIds,
+    disabled: exam || inlineStudy, contextKey: `${initialRegion}/${side}`,
+    enabled: presentation === 'panel',
+  });
   const select = useCallback(
     (id: string) => {
       if (exam || !regionStructures.some((item) => item.id === id)) return;

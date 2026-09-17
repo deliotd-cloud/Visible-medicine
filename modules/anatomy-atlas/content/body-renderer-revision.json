@@ -69,12 +69,16 @@
       "sha256": "029dfc7b7a265df15d84008ecaac8092dcb9b1118a75e4c17b340cbcdfb9a71d"
     },
     {
+      "path": "app/body-education-link.ts",
+      "sha256": "47a0a195899e3efedc743b7923c9a52f4a8c1943da5613285fc7a398e4448c40"
+    },
+    {
       "path": "app/body-explorer.css",
       "sha256": "1a2ada8b05154e3c0d3e870004edb941259da1f62b321f389387ba1688ca98e0"
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "580fb79190676fff32fe02b1c1dddbe1e8274ee23fa4bff4752900193b4167b9"
+      "sha256": "13fe822b8a3c23dc58e615a3c5d415596ba988b77b63fc04485c4361367825df"
     },
     {
       "path": "app/body-scene.tsx",
@@ -1493,6 +1497,10 @@
       "sha256": "a0ebba94b72fbff9bc081ec4889f69cd8bcd829bd294d8b8c6c8b91348a868c2"
     },
     {
+      "path": "lib/didanix-atlas-adapter.ts",
+      "sha256": "0c2f8cd70e64e1c0f88f09f2fb4a5665db99fa7c6c889537d9c9d44b5b1b939d"
+    },
+    {
       "path": "lib/dissection-guidance.ts",
       "sha256": "31c645be4d92391051e997f156b689a37a02e2adfbc618497da7ef6e74ef6475"
     },
@@ -1751,6 +1759,14 @@
     {
       "path": "lib/laryngeal-muscle-teaching.ts",
       "sha256": "e88a795a04301517a83347da1604b61ea9a56227a4bcf0961cc8acf4165d8425"
+    },
+    {
+      "path": "lib/learning-resource-types.ts",
+      "sha256": "f1140958921da01500d519ad3249aa5114f9c31ab19709b29bbf51675ccab161"
+    },
+    {
+      "path": "lib/learning-resources.ts",
+      "sha256": "284d1a62cc44fd113a03c442b744546cdf1b7b93db5c9223c8b72f65cb2c2730"
     },
     {
       "path": "lib/leg-attachments.ts",
@@ -2045,6 +2061,10 @@
       "sha256": "f7e8e770641815046c9444d1d62ef510424e0e8a9d0e165ca18b1379a6a9dafe"
     },
     {
+      "path": "lib/root-education-api.ts",
+      "sha256": "f7ad2030bb5834874cda9f1382312117d73fed2a99d6b17bd3d548472884f8ad"
+    },
+    {
       "path": "lib/sca-mca-clinical.ts",
       "sha256": "e54c3ebdaa8619e712bbca4f9099e48a77e4a9cfaba4387859dda741421c868b"
     },
@@ -2306,7 +2326,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "1541a80b1a4e0e3747a754f72db8347e38407c7fb9c69cc97fb8f007fc24a800"
+      "sha256": "1733c53003a3e2ad9736819586cfbc13fa744a7dad73d7c9a057093f9aae7f23"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2505,5 +2525,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "012047f56cc30ff4cf665d0231b6988a3a096c8c84d8ed3fb559a8d6e0f5a9b9"
+  "sha256": "2d633c3a91f8fc94d4cd155325627266cae816e65f4162191628009fcbbfa110"
 }

@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Regional and whole-body Education connection](BODY_EDUCATION_CONNECTION.md) exposes the existing imaging bridge to a trusted same-origin Didanix Education host, using current source identities and existing learner controls. Region, side, Practice and separate dissection changes pause linking and cancel pending reveals. Synthetic CT/MRI/X-ray/Ultrasound tests do not connect a real case, grant access or establish registration. Cleared media, independent server entitlements and clinical acceptance remain required.
+
 [Forearm framing](FOREARM_FRAMING.md) fits complete regional tissue and shorter vessel sources without changing meshes or adding controls. Long vessels and upper-arm context remain loaded; selecting them restores full-source framing. Existing elbow study views retain priority. Physical-device and clinical acceptance remain separate.
 
 [Forearm arterial imaging](FOREARM_ARTERIAL_IMAGING.md) adds 16 evidence-backed draft placements to six radial/ulnar/anterior-interosseous selections. Eight modality texts distinguish acquired calibre and flow from source geometry. Anterior-interosseous MRI, common/recurrent branch imaging and X-ray remain pending; 9,911 other topics/recipes are unchanged. No new model, control, imaging asset or clinical approval.
