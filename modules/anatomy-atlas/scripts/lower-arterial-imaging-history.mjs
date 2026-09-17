@@ -4,9 +4,10 @@ import { createHash } from 'node:crypto';
 import pins from '../content/lower-arterial-imaging-pins.json' with { type: 'json' };
 import after from '../content/lower-arterial-imaging.transition.json' with { type: 'json' };
 import { authoringBeforeLimbBoneImaging } from './limb-bone-imaging-history.mjs';
+import { restoreLowerArterialSourceHistory } from './lower-arterial-source-history.mjs';
 export const lowerArterialContentHash = (v) =>
   createHash('sha256').update(JSON.stringify(v)).digest('hex');
-export function authoringBeforeLowerArterialImaging({ api, catalog }) {
+export function unreconciledLowerArterialHistory({ api, catalog }) {
   api = authoringBeforeLimbBoneImaging({ api, catalog });
   assert.equal(
     lowerArterialContentHash(pins),
@@ -49,4 +50,7 @@ export function authoringBeforeLowerArterialImaging({ api, catalog }) {
       return section;
     },
   };
+}
+export function authoringBeforeLowerArterialImaging({api,catalog}) {
+  return restoreLowerArterialSourceHistory(unreconciledLowerArterialHistory({api,catalog}),catalog);
 }

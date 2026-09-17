@@ -51,13 +51,13 @@ The offline history adapter accepts only the complete recorded before/after
 state; mixed or unrecorded edits fail. It does not migrate clinical approvals.
 Generated results are in `lower-venous-imaging-validation.json`.
 
-An additional legacy lower-arterial validator still fails its broad historical
-snapshot: its original catalogue has 1,078 records whereas the reconstructed
-pre-short-ciliary catalogue has 1,102, with intervening pelvic source/teaching
-changes also present. Its fixture/assertion is not changed or waived. Independent
-Git replay of this batch's parent (`2abd41c1`) proves all prior teaching and
-recipes exactly equal the restored baseline. This older reconstruction defect
-remains a separate test-infrastructure task, not a passing regression claim.
+The extra legacy lower-arterial snapshot failure discovered during this batch
+has an [exact history repair](LOWER_ARTERIAL_HISTORY_REPAIR.md): 24 later source
+selections and 46 later pelvic lessons are projected out only for the old
+comparison. The original fixture/assertion is unchanged and now passes.
+Independent Git replay of this batch's parent (`2abd41c1`) also proves all prior
+teaching and recipes exactly equal the restored baseline. These checks do not
+claim that every legacy suite passes or replace clinical review.
 
 The user-facing notes reuse the existing CT/MRI/Ultrasound panel and retain
 separation-at-zero, no-registration and independent case/Atlas/lecture-access

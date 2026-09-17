@@ -6,6 +6,7 @@ import { runInNewContext } from 'node:vm';
 import ts from 'typescript';
 import { contentContext, contentValidator } from './content-contract-tools.mjs';
 import { authoringBeforeLimbBoneImaging } from './limb-bone-imaging-history.mjs';
+import { restoreLowerArterialSourceHistory } from './lower-arterial-source-history.mjs';
 import {
   authoringBeforeLowerArterialImaging,
   lowerArterialContentHash as hash,
@@ -20,13 +21,13 @@ const context = await contentContext(),
 const catalog = api.bodyDisplayCatalog(context.catalog),
   initial = JSON.stringify(catalog);
 const before = authoringBeforeLowerArterialImaging({ api, catalog });
-const preBone = authoringBeforeLimbBoneImaging({ api, catalog });
+const preBone = restoreLowerArterialSourceHistory(authoringBeforeLimbBoneImaging({ api, catalog }),catalog,{arterialStage:'draft'});
 const pins = JSON.parse(
   await readFile('content/lower-arterial-imaging-pins.json'),
 );
 assert.equal(
   hash({
-    body: catalog.structures.map((s) => ({
+    body: before.bodyDisplayCatalog(context.catalog).structures.map((s) => ({
       id: s.id,
       sections: Object.fromEntries(
         api.contentTabs.map((t) => [t, before.bodyLesson(s, t)]),
