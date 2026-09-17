@@ -28,8 +28,18 @@ const catalog = scope.exports.bodyDisplayCatalog(
     await readFile('public/models/bodyparts3d/full-body/catalog.json'),
   ),
 );
-// Femoral source partitions have a separate immutable supplemental pin file.
-const targets = scope.exports.nestedStudyTargets(catalog).filter(t => t.study !== 'femoral-components');
+// Femoral lessons have separate supplemental pins. Unnamed cranial source
+// partitions deliberately have no independent teaching (the component suite
+// verifies that parent lessons are not inherited). Neither belongs to this
+// immutable 71-binding corpus; never exclude arbitrary unmatched targets.
+assert.equal(
+  nestedConcepts.some(c => c.study === 'cranial-artery-components'),
+  false,
+  'Cranial component teaching requires an explicit source-pinning workflow',
+);
+const targets = scope.exports.nestedStudyTargets(catalog).filter(
+  t => !['femoral-components', 'cranial-artery-components'].includes(t.study),
+);
 const bindings = targets.map((target) => {
   const matches = nestedConcepts.filter(
     (c) =>

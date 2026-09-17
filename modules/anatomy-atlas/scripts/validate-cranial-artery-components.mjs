@@ -4,6 +4,9 @@ import { readFile } from 'node:fs/promises';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import { build } from './workspace-component-test-build.mjs';
+// The application resolves next/link through Vinext. Use that installed
+// implementation here as well; do not replace links with empty test stubs.
+import * as frameworkLink from 'vinext/shims/link';
 const require = createRequire(import.meta.url),
   React = require('react');
 const copy = (v) => JSON.parse(JSON.stringify(v));
@@ -75,7 +78,8 @@ const scope = { exports: {} },
     exports: scope.exports,
     URL,
     URLSearchParams,
-    require: (id) => (id === 'react' ? shim : require(id)),
+    require: (id) =>
+      id === 'react' ? shim : id === 'next/link' ? frameworkLink : require(id),
   };
 runInNewContext(compiled.outputFiles[0].text, env);
 const api = scope.exports,
@@ -89,7 +93,15 @@ const root = api.bodyDisplayCatalog(
     ),
   ),
   before = JSON.stringify(root);
-same(root.structures.length, 1101);
+// The later, separately audited corpus-spongiosum supplement added one root
+// selection, not a cranial fragment. Preserve the original count excluding
+// exactly that source-bound record; do not tolerate arbitrary catalog growth.
+const supplemental = JSON.parse(
+  await readFile('public/models/bodyparts3d/corpus-spongiosum/catalog.json', 'utf8'),
+);
+same(root.structures.filter(s => s.bundle === 'corpus-spongiosum'), supplemental.structures);
+same(supplemental.structures.length, 1);
+same(root.structures.filter(s => s.bundle !== 'corpus-spongiosum').length, 1101);
 const targets = api.nestedStudyTargets(root).filter((t) => t.study === study);
 same(targets.length, 29);
 same(new Set(targets.map((t) => t.structureId)).size, 29);
@@ -377,7 +389,7 @@ console.log(
     checks,
     parents: 3,
     parts: 29,
-    rootStructures: 1101,
+    rootStructures: root.structures.length,
     nestedTargets: 104,
     clinicalApproval: false,
     browserOrGPUAcceptance: false,

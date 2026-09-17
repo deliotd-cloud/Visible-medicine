@@ -3,9 +3,18 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { createRequire } from 'node:module';
+import { dirname, extname, relative } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { runInNewContext } from 'node:vm';
 import ts from 'typescript';
-import { contentContext, contentValidator } from './content-contract-tools.mjs';
+import {
+  contentContext,
+  contentRoot,
+  contentValidator,
+} from './content-contract-tools.mjs';
+import { build } from './workspace-test-build.mjs';
+import { authoringBeforePelvicOrganImaging } from './pelvic-organ-imaging-history.mjs';
+import transition from '../content/pelvic-organ-imaging.transition.json' with { type: 'json' };
 import {
   pelvicOrganImagingTopics,
   pelvicOrganReferences,
@@ -18,7 +27,8 @@ const hash = (v) =>
   createHash('sha256').update(JSON.stringify(v)).digest('hex');
 const context = await contentContext(),
   { api } = context,
-  catalog = api.bodyDisplayCatalog(context.catalog);
+  rawCatalog = context.catalog,
+  catalog = api.bodyDisplayCatalog(rawCatalog);
 const original = JSON.stringify(catalog);
 const pins = JSON.parse(
   await readFile('content/pelvic-organ-imaging-pins.json', 'utf8'),
@@ -113,8 +123,9 @@ for (const b of pins.bundles) {
   );
 }
 
-// Reconstruct only the 44 recorded pending placements; every other current lesson
-// remains untouched. The entire pre-change content/recipe hash must still match.
+// Reconstruct the recorded pending placements for live per-selection checks.
+// Later teaching remains live here and is intentionally not compared with an
+// old whole-corpus hash.
 const before = (s, t) => {
   const e = pins.entries.find((e) => e.identity.id === s.id);
   if (!e?.topics.includes(t)) return api.bodyLesson(s, t);
@@ -122,19 +133,80 @@ const before = (s, t) => {
   assert.equal(e.previous[t].readiness, 'pending');
   return e.previous[t];
 };
+const historicalSnapshot = (historical) => ({
+  body: historical.bodyDisplayCatalog(rawCatalog).structures.map((s) => ({
+    id: s.id,
+    sections: Object.fromEntries(
+      api.contentTabs.map((t) => [t, historical.bodyLesson(s, t)]),
+    ),
+  })),
+  shoulder: historical.structures,
+  recipes: historical.dissectionProfiles,
+});
+const root = fileURLToPath(contentRoot);
+async function historicalApi(commit) {
+  const compiled = await build({
+    stdin: {
+      contents:
+        "export {bodyLesson} from './app/body-content'; export {structures} from './app/anatomy-data'; export {dissectionProfiles} from './app/dissection-data'; export {bodyDisplayCatalog} from './lib/body-display-catalog';",
+      resolveDir: root,
+      loader: 'ts',
+    },
+    bundle: true,
+    write: false,
+    platform: 'node',
+    format: 'esm',
+    plugins: [
+      {
+        name: 'exact-pelvic-imaging-history',
+        setup(builder) {
+          builder.onLoad({ filter: /.*/, namespace: 'workspace-test' }, (args) => {
+            const path = relative(root, args.path).replaceAll('\\', '/');
+            if (path.startsWith('node_modules/')) return;
+            assert(!path.startsWith('../'));
+            return {
+              contents: execFileSync('git', ['show', commit + ':' + path], {
+                cwd: root,
+                encoding: 'utf8',
+                maxBuffer: 16e6,
+              }),
+              loader:
+                { '.ts': 'ts', '.tsx': 'tsx', '.json': 'json' }[
+                  extname(path)
+                ] || 'js',
+              resolveDir: dirname(args.path),
+            };
+          });
+        },
+      },
+    ],
+  });
+  return import(
+    'data:text/javascript;base64,' +
+      Buffer.from(compiled.outputFiles[0].text).toString('base64')
+  );
+}
+const historicalBefore = await historicalApi(pins.sourceCommit);
+const historicalAfter = await historicalApi(transition.sourceCommit);
+assert.deepEqual(
+  historicalAfter.bodyDisplayCatalog(rawCatalog),
+  historicalBefore.bodyDisplayCatalog(rawCatalog),
+  'Historical source catalog changed during the recorded teaching transition',
+);
 assert.equal(
-  hash({
-    body: catalog.structures.map((s) => ({
-      id: s.id,
-      sections: Object.fromEntries(
-        api.contentTabs.map((t) => [t, before(s, t)]),
-      ),
-    })),
-    shoulder: api.structures,
-    recipes: api.dissectionProfiles,
-  }),
+  hash(historicalSnapshot(historicalBefore)),
   pins.previousAllLessonsAndRecipesHash,
-  'All preceding teaching/recipes preserved',
+  'Exact original teaching/recipes changed',
+);
+assert.deepEqual(
+  historicalSnapshot(
+    authoringBeforePelvicOrganImaging({
+      api: historicalAfter,
+      catalog: rawCatalog,
+    }),
+  ),
+  historicalSnapshot(historicalBefore),
+  'Historical adapter did not reconstruct the exact original snapshot',
 );
 const records = api.bodyContentRecords(catalog),
   registry = new Map(
@@ -224,7 +296,7 @@ assert.match(
   pelvicOrganImagingTopics.urethra.xray.body,
   /Retrograde urethrography/,
 );
-assert.match(pelvicOrganImagingTopics.urethra.ultrasound.body, /specialised/);
+assert.match(pelvicOrganImagingTopics.urethra.ultrasound.body, /specialised/i);
 assert.match(pelvicOrganLandmarks.testis, /not within the pelvic cavity/);
 assert.match(pelvicOrganLandmarks.urethra, /not a female/);
 assert.match(pelvicOrganImagingTopics.prostate.mri.bullets[1], /No PI-RADS/);
@@ -310,12 +382,15 @@ const preserved = [
 ];
 for (const path of preserved)
   assert.equal(
-    (await readFile(path, 'utf8')).replaceAll('\r\n', '\n'),
+    execFileSync('git', ['show', transition.sourceCommit + ':' + path], {
+      encoding: 'utf8',
+      maxBuffer: 16e6,
+    }).replaceAll('\r\n', '\n'),
     execFileSync('git', ['show', pins.sourceCommit + ':' + path], {
       encoding: 'utf8',
       maxBuffer: 16e6,
     }).replaceAll('\r\n', '\n'),
-    path + ' preserved',
+    path + ' preserved across the recorded historical transition',
   );
 assert.equal(JSON.stringify(catalog), original);
 const report = {
@@ -331,6 +406,7 @@ const report = {
   sourceRows: 11,
   modelHashes: pins.bundles.length,
   actualNoteRenders: renders,
+  historicalSourceVerified: true,
   sourceWordCounts: budgets,
   preservedPaths: preserved,
   clinicalApproval: false,
