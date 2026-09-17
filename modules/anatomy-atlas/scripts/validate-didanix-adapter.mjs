@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {runInNewContext} from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import {build} from './workspace-test-build.mjs';
 const result=await build({stdin:{contents:"export * from './lib/didanix-atlas-adapter'; export * from './lib/imaging-sync'; export * from './lib/learning-resources'; export * from './lib/learning-entitlements'; export * from './integration/shoulder/education-api';",resolveDir:fileURLToPath(new URL('../',import.meta.url)),loader:'ts'},bundle:true,platform:'node',format:'esm',write:false});
@@ -72,5 +73,59 @@ const xr=api.createImagingBridge().registerAdapter({id:'xray',label:'X-ray',moda
  assert.throws(()=>facade.connect(options));checks++;
  link.dispose();uninstall();check(!Object.hasOwn(target,'visibleMedicineShoulderEducation'));same(api.imagingBridge.getAdapter(),null);
  const reinstall=api.installShoulderEducationApi(target);reinstall();
+}
+// A cached host facade must never resurrect an uninstalled interface, including
+// synchronous callbacks during connection setup and back/forward restoration.
+const emptyDocument={schemaVersion:1,resources:[],links:[]};
+const deniedPolicy={canNavigate:()=>false,canAccessAnatomy:()=>false,canAccess:()=>false,resourceCleared:()=>false,correspondenceCleared:()=>false};
+const idleViewer=()=>({getStudy:()=>null,canNavigate:()=>false,async reveal(){throw Error('Must not open');},subscribeSelection:()=>()=>{},subscribeContext:()=>()=>{}});
+const idleOptions=()=>({document:emptyDocument,policy:deniedPolicy,viewer:idleViewer()});
+{
+ const foreign=runInNewContext('({schemaVersion:1,resources:[],links:[]})');
+ const target={},uninstall=api.installShoulderEducationApi(target),facade=target.visibleMedicineShoulderEducation;
+ const link=facade.connect({...idleOptions(),document:foreign});same(link.choices(),[]);link.dispose();
+ const custom=runInNewContext('(new (class Document {schemaVersion=1;resources=[];links=[];})())');
+ assert.throws(()=>facade.connect({...idleOptions(),document:custom}),/Invalid/);checks++;
+ let invoked=false;const accessor={schemaVersion:1,resources:[],get links(){invoked=true;return [];}};
+ assert.throws(()=>facade.connect({...idleOptions(),document:accessor}),/Invalid/);checks++;same(invoked,false);
+ assert.throws(()=>facade.connect({...idleOptions(),document:{...foreign,extra:true}}),/Invalid/);checks++;
+ uninstall();
+ const f=fixture('mri');f.adapter.setEnabled(true);
+ const locator=runInNewContext('('+JSON.stringify(f.locator)+')');same(f.send('cross-realm',locator).status,'selected');f.adapter.dispose();
+}
+{
+ const target={},uninstall=api.installShoulderEducationApi(target),old=target.visibleMedicineShoulderEducation;
+ uninstall();assert.throws(()=>old.connect(idleOptions()),/removed/);checks++;
+ const removeNew=api.installShoulderEducationApi(target),current=target.visibleMedicineShoulderEducation;
+ uninstall();same(target.visibleMedicineShoulderEducation,current);
+ assert.throws(()=>old.connect(idleOptions()),/removed/);checks++;
+ const link=current.connect(idleOptions());link.dispose();removeNew();same(api.imagingBridge.getAdapter(),null);
+}
+{
+ const target={},uninstall=api.installShoulderEducationApi(target),facade=target.visibleMedicineShoulderEducation;
+ let cleaned=0;const viewer={...idleViewer(),subscribeSelection:()=>()=>{cleaned++;},subscribeContext:()=>()=>{cleaned++;}};
+ assert.throws(()=>facade.connect({...idleOptions(),viewer,onStatus:s=>{if(s==='paused')uninstall();}}),/removed/);checks++;
+ same(cleaned,2);same(api.imagingBridge.getAdapter(),null);check(!Object.hasOwn(target,'visibleMedicineShoulderEducation'));
+ assert.throws(()=>facade.connect(idleOptions()),/removed/);checks++;
+}
+{
+ const target={},uninstall=api.installShoulderEducationApi(target),facade=target.visibleMedicineShoulderEducation;
+ let cleaned=0;const viewer={...idleViewer(),subscribeSelection:()=>()=>{cleaned++;},subscribeContext:()=>{throw Error('Context setup failed');}};
+ assert.throws(()=>facade.connect({...idleOptions(),viewer}),/Context setup failed/);checks++;
+ same(cleaned,1);same(api.imagingBridge.getAdapter(),null);
+ const link=facade.connect(idleOptions());link.dispose();uninstall();
+}
+{
+ const target={},uninstall=api.installShoulderEducationApi(target),facade=target.visibleMedicineShoulderEducation;
+ let rejected=false;const link=facade.connect({...idleOptions(),onStatus:()=>{try{facade.connect(idleOptions());}catch(e){rejected=/attaching|Disconnect/.test(e.message);}}});
+ check(rejected,'Reentrant connection cannot acquire a second adapter');link.dispose();uninstall();
+}
+{
+ const target={},uninstall=api.installShoulderEducationApi(target),facade=target.visibleMedicineShoulderEducation;
+ const viewer={...idleViewer(),subscribeSelection:()=>()=>{throw Error('Cleanup failed');}};
+ facade.connect({...idleOptions(),viewer});assert.throws(uninstall,/Cleanup failed/);checks++;
+ same(api.imagingBridge.getAdapter(),null);check(!Object.hasOwn(target,'visibleMedicineShoulderEducation'));
+ assert.throws(()=>facade.connect(idleOptions()),/removed/);checks++;
+ const next=api.installShoulderEducationApi(target);uninstall();check(Object.hasOwn(target,'visibleMedicineShoulderEducation'));next();
 }
 console.log(JSON.stringify({passed:true,checks,syntheticOnly:true,browserTested:false,clinicalApproved:false}));

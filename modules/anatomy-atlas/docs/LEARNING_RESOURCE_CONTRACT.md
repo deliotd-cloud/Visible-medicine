@@ -8,6 +8,11 @@ Implemented infrastructure, not a connected radiology viewer or publication appr
 
 Each resource has an opaque product resource ID, positive revision, kind, title, age group, laterality, regional membership, material digest/origin and its typed anchors. Names/titles are display metadata, not identity. Acquired images, synthetic images and authored lessons remain explicitly distinguished. These labels do not prove rights or medical correctness.
 
+Plain records may originate in another JavaScript realm, such as the trusted
+same-origin website hosting the Atlas iframe. Class instances, accessor fields,
+unexpected keys and arbitrary prototype chains remain rejected. Realm
+compatibility does not grant trust, clearance or resource access.
+
 | Kind | Stable anchor fields |
 | --- | --- |
 | CT / MRI | Series ID, educational frame ID, annotation ID and representation type: mask, partial-mask, curve, point or region. A CT frame is not assumed to be an MRI frame. |

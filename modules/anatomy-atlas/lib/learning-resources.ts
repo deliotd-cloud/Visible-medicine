@@ -55,7 +55,16 @@ function record(
 ): value is Record<string, unknown> {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return false;
   const prototype = Object.getPrototypeOf(value);
-  if (prototype !== Object.prototype && prototype !== null) return false;
+  if (prototype !== Object.prototype && prototype !== null) {
+    // The trusted same-origin host and Atlas iframe have different Object
+    // prototypes. Accept another realm's plain Object, not a class instance or
+    // arbitrary prototype chain. Inspect descriptors without invoking getters.
+    const constructor = Object.getOwnPropertyDescriptor(prototype, 'constructor')?.value;
+    if (Object.getPrototypeOf(prototype) !== null ||
+      typeof constructor !== 'function' ||
+      Function.prototype.toString.call(constructor) !== Function.prototype.toString.call(Object))
+      return false;
+  }
   const actual = Reflect.ownKeys(value);
   return (
     actual.length === keys.length &&
