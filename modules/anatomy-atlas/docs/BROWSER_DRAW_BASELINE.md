@@ -56,6 +56,10 @@ No path-policy bypass was attempted.
 
 ## Next decisions
 
+The subsequent [production interaction baseline](PRODUCTION_INTERACTION_BASELINE.md)
+identifies repeatable dense-anatomy hover cost. It supersedes the instruction to
+start production profiling below, not the broader device or clinical gates.
+
 Preserve the existing batching and demand rendering. Do not simplify anatomy,
 remove useful controls or retune device thresholds from this narrow benchmark.
 Next measure production-mode interaction profiles, especially pointer picking and
