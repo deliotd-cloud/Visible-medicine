@@ -2,6 +2,33 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 17 September — core-organ Function teaching
+
+Four exact Atlas root selections (heart, right/left lungs and liver) now have
+source-bound Function drafts in the existing notes panel. They explain linked
+circulation, ventilation versus gas transfer, and hepatic nutrient/bile/albumin
+roles, preserving aggregate exclusions and acknowledging existing nested detail.
+No new controls, geometry, scans, simulation or resource rights are added.
+
+The main task verified primary NHLBI/NCI/NIDDK/MedlinePlus references and their
+specific text-reuse boundaries; source credits/links accompany original prose.
+Copyrighted media and logos are excluded. All other 9,914 root-topic placements
+are preserved by strict before/after snapshots. Desktop and 390px Chromium
+sampling confirms all four notes, reference access and mobile return-to-model.
+See Atlas docs/CORE_ORGAN_FUNCTION.md, its reference audit and the coordinating
+core-function checkpoint for exact test/build/backup results and remaining gates.
+
+The older organ-curriculum history gate still fails its accepted hash. An exact
+reconstruction of the saved pre-feature snapshot reproduces the same failure;
+neither that gate nor its accepted hash was changed. It remains follow-up work,
+alongside the previously recorded loading-text and vessel-count checks.
+
+Draft only: radiologist sign-off, physical-device acceptance and model staging
+remain separate. Website84 is still the last verified hosted runtime; this plan
+does not claim publication. Goal ACTIVE, hourly review PAUSED. Continue wider
+major-organ teaching and the established full anatomy/Education roadmap without
+repeating completed native MRI QA or adding a competing learner PACS.
+
 ## 17 September — comparison lifecycle reliability
 
 Atlas source now prevents errors from superseded CT/MRI comparison operations
