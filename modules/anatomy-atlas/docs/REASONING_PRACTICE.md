@@ -1,8 +1,65 @@
 # Source-bound anatomical reasoning pilot
 
-Open **Practice → Practice options → Apply anatomy · draft** in a body region. Spine & back, Thorax and Abdomen join the head/neck and limb regions. Whole-body practice uses concepts whose targets and alternatives are loaded and visible. Pelvis shares eight hip/gluteal concepts; Abdomen currently offers external oblique and the shared lumbar rotator, not a complete abdominal-wall set. Narrow scopes with no valid alternative show an explicit unavailable state. No new top-level control or note tab was added.
+## Abdominal organs — 17 September 2026
 
-One hundred and sixteen original draft concepts bind to 228 existing representations. The latest extension adds12 concepts/24 sided selections; all preceding104 records remain hash-pinned unchanged and ordered. The preceding trunk extension has sixteen paired concepts and four explicitly midline-tagged concepts (diaphragm and three bilateral intercostal groups). Nine representations have multiple files; complete official source membership and retained order are required. Pectoralis major alone explicitly uses the `partof` source tree; earlier bindings still default to `isa`. No label matching, relabelled sides, inferred nerves or new meshes are introduced.
+Seven original draft questions extend the existing Apply anatomy mode to stomach,
+gallbladder, spleen, cystic duct, common hepatic duct, ileocecal junction and appendix.
+Abdomen now has nine available concepts with all relevant structures loaded (two
+previous muscle concepts plus seven organs); whole-body practice shares the same
+questions without duplication. The total is 123 concepts / 235 exact source
+representations. The earlier totals below are historical milestones.
+
+Organs must be explicitly authored as organ/system pairs; the default contract
+remains muscle-only. Unpaired is the exact source tag, not a midline or inferred
+left/right label. The appendix retains ordered abdomen/pelvis membership but is
+not offered alone in pelvic practice without a valid available alternative.
+All seven questions have three curated organ alternatives in abdomen and whole
+body, including sided views that retain unpaired organs. Loading, visibility,
+answer-once, retry and delayed explanation/reference gates remain unchanged.
+
+References were read directly: [Texas Tech abdominal viscera](https://anatomy.ttuhscep.edu/anatomytables/viscera_abdomen.html)
+(197 words in new prompts/explanations), [UAMS abdominal viscera](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/viscera-tables/visceral-structures-of-the-abdomen/)
+(101 words), and [OpenStax intestinal anatomy](https://openstax.org/books/anatomy-and-physiology/pages/23-5-the-small-and-large-intestines)
+(50 words). Only original short synthesis and reference links are included, not
+publisher questions, illustrations, media or scans. Existing asset licences and
+independent lecture/case entitlements are unchanged. No new dependency or fee.
+
+The proposed large-intestine question was withheld: this catalogue's six retained
+files omit FJ2571 and FJ2599 from the official eight-file partof definition. The
+test caught that mismatch; no membership exception was added to make it pass.
+This does not remove the existing model or label it clinically complete.
+
+Tests preserve the exact ordered hash of all preceding 116 concepts and exercise
+the actual display catalogue, all seven new targets, four choices, source/scope
+rejection, absence of unavailable questions and feedback only after answering.
+The drafts teach typical relationships, not luminal continuity, biliary variants,
+valve function, diagnostic competence or patient registration. Owner radiologist
+and educator review remain required at the new renderer/content revision.
+
+Verification for this extension: 13,656 reasoning checks (3,624 negative identity
+cases), 56,435 general practice checks, content-contract and revision-bound review
+tests pass. Production and contained-module builds and TypeScript pass. Four
+actual production-module browser journeys exercise all seven questions in abdomen
+and whole body at 1440px and 390px widths: correct, wrong and skipped answers,
+delayed explanations and reference links, completed results and return to Explore.
+See [browser evidence](abdominal-reasoning-browser-20260917.json). Desktop uses
+keyboard answers; mobile viewport uses pointer answers. This is not physical-device
+or screen-reader acceptance. The first harness missed closing the mobile drawer;
+a later keyboard-only mobile run lost answer focus. Final runs use the real
+Return to model control and mobile pointer interaction, without app-state injection.
+
+Closed Practice selects now show their full labels rather than internal values
+(`reason`, `landmarks`, or a bare number); the four browser journeys assert these
+labels. No new panel, selection algorithm or source geometry was introduced.
+The content-contract check exposed a stale shoulder export from an earlier renderer
+revision; regeneration changed only its nine geometry-review fingerprints, not
+teaching, geometry files, identities or approval status. The complete contract then
+passed. Website runtime activation remains behind the existing two-model upload
+and byte-verification gate; these source changes are not a new hosted release.
+
+Open **Practice → Practice options → Apply anatomy · draft** in a body region. Spine & back, Thorax and Abdomen join the head/neck and limb regions. Whole-body practice uses concepts whose targets and alternatives are loaded and visible. Pelvis shares eight hip/gluteal concepts; Abdomen offers seven organs alongside external oblique and the shared lumbar rotator, not a complete abdominal curriculum. Narrow scopes with no valid alternative show an explicit unavailable state. No new top-level control or note tab was added.
+
+Before the organ extension, 116 original draft concepts bound to 228 existing representations. The limb extension added12 concepts/24 sided selections; all preceding104 records remain hash-pinned unchanged and ordered. The preceding trunk extension has sixteen paired concepts and four explicitly midline-tagged concepts (diaphragm and three bilateral intercostal groups). Nine muscle representations have multiple files; complete official source membership and retained order are required. Pectoralis major explicitly uses the `partof` source tree, now also used by stomach and gallbladder; other bindings default to `isa`. No label matching, relabelled sides, inferred nerves or new meshes are introduced.
 
 ## Limb relationships extension — 17 September 2026
 

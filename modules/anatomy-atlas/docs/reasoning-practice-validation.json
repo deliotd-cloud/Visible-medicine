@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "checks": 12743,
-  "negativeIdentityCases": 3516,
-  "concepts": 116,
-  "exactRepresentations": 228,
+  "checks": 13656,
+  "negativeIdentityCases": 3624,
+  "concepts": 123,
+  "exactRepresentations": 235,
   "regionalConcepts": {
     "shoulder-arm": 13,
     "forearm": 9,
@@ -13,7 +13,7 @@
     "foot": 8,
     "head-neck": 24,
     "spine": 12,
-    "abdomen": 1,
+    "abdomen": 8,
     "thorax": 7
   },
   "multiPartRepresentations": 9,
@@ -45,13 +45,16 @@
     "https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/mml/delt.htm": 114,
     "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html": 103,
     "https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-lower-limb/": 135,
-    "https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/labs/le/glut_post_th/g3.html": 83
+    "https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/labs/le/glut_post_th/g3.html": 83,
+    "https://anatomy.ttuhscep.edu/anatomytables/viscera_abdomen.html": 197,
+    "https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/viscera-tables/visceral-structures-of-the-abdomen/": 101,
+    "https://openstax.org/books/anatomy-and-physiology/pages/23-5-the-small-and-large-intestines": 50
   },
   "sourceHashes": {
     "catalog": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
     "officialElementIndex": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf",
     "officialPartofElementIndex": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea",
-    "questions": "c78bf5e2c3eee38966910f94ad97dbbf898ae73999b52e8e7a6a71db5aaa3520"
+    "questions": "3052d88e4b5e2c1dd55f34d37989a4d847e91e41d5707a48a6a876c2d15fb883"
   },
   "verification": [
     "Official complete FMA/file membership",

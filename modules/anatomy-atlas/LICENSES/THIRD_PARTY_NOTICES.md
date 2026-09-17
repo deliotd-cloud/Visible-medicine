@@ -1,5 +1,14 @@
 # Third-party notices
 
+## Abdominal organ reasoning — 17 September 2026
+
+Seven original short questions cite university anatomy tables and OpenStax for
+factual relationships. No publisher questions, figures, scans or other media are
+redistributed; source access is not asset-reuse permission. Existing BodyParts3D
+attribution and original project-code terms remain. No model, font, texture,
+dependency or paid service is added. See docs/REASONING_PRACTICE.md for reference
+scope, source exclusions and revision-bound clinical review requirements.
+
 ## Exact-triangle picking — 17 September 2026
 
 `three-mesh-bvh` 0.8.3, already installed transitively, is now pinned as a direct

@@ -213,9 +213,9 @@
     "lib/nested-teaching.ts": "aa2423a1cc53f70f992c19b601160000d44937eda47faae422d6898902edd23d",
     "app/nested-teaching.tsx": "a1f8d593bd430b0770c28f7db78803701021a960113e69e64adbf048dfd71e61",
     "app/nested-teaching.css": "d912bfc774cc744511a4c0e87a0a35f6b693def9f4bddc25b6f010f07dfa83bc",
-    "package-lock.json": "e55a3718d0786a13a27301297f39bf8f54ae0de2cb4bf5f6e7c65ff399ec5f22",
+    "package-lock.json": "a5b607301ca60d2bb4327b68afad1cbe6dd5303efc9c11d0f4de59d870a5e7e0",
     "content/schema/anatomy-structure.schema.json": "a3fbecdb471cbed32b1f82dea579ae9c15e2a66b3a3edde61f1c452dfeb0e7c5",
-    "content/review-revisions.json": "af2fd9f176466a05c5473f4ddf4769165f9e1ef53438a8560b30228d977b417f",
+    "content/review-revisions.json": "0fd45b480ae4e713a6e0a5942743cd90d4c084a10d43a8a842d203a8d9202dc7",
     "content/learning-resources.v1.json": "799fec602114a944b4f675d341b445982dac56786cca9b5800d52db7d95899e5",
     "lib/learning-resource-types.ts": "f1140958921da01500d519ad3249aa5114f9c31ab19709b29bbf51675ccab161",
     "lib/learning-resources.ts": "c7f645c22edf98045e0bc4e559bf18d8eb83871db6848efa94a1c2de0961c1c1",
@@ -307,7 +307,7 @@
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
     "resolvedContentAndRecipeData": "4b86b4fab97237a3c30fc083ae20f3a9ed133e899571debf9fd40902bf48eeb9",
     "explicitTopicReadiness": "5964618da39c753a23a119b831fc7517e0c3d9b0d3b8a71eafecdee27f78d1aa",
-    "reasoningQuestionData": "c78bf5e2c3eee38966910f94ad97dbbf898ae73999b52e8e7a6a71db5aaa3520",
+    "reasoningQuestionData": "3052d88e4b5e2c1dd55f34d37989a4d847e91e41d5707a48a6a876c2d15fb883",
     "nestedTeachingData": "ef9aba8c7dd92a02e7cf6ba5fde6eccef8539d12a1666de387687f2f771efe11"
   },
   "rendering": {
@@ -1576,8 +1576,8 @@
       "name"
     ],
     "reasoning": {
-      "concepts": 116,
-      "exactRepresentations": 228,
+      "concepts": 123,
+      "exactRepresentations": 235,
       "regions": [
         "head-neck",
         "foot",

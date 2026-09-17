@@ -1658,7 +1658,7 @@ export default function BodyExplorer({
             onValueChange={(value) => value && setPracticeCount(Number(value))}
           >
             <SelectTrigger disabled={exam} aria-label="Practice session length">
-              <SelectValue />
+              <SelectValue>{practiceCount} questions</SelectValue>
             </SelectTrigger>
             <SelectContent>
               {[5, 10, 20].map((n) => (
@@ -2110,7 +2110,13 @@ export default function BodyExplorer({
                       id="practice-answer-mode"
                       aria-label="Practice answer mode"
                     >
-                      <SelectValue />
+                      <SelectValue>
+                        {practiceMode === 'reason'
+                          ? 'Apply anatomy · draft'
+                          : practiceMode === 'name'
+                            ? 'Name isolated structure'
+                            : 'Find on model'}
+                      </SelectValue>
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="find">Find on model</SelectItem>
@@ -2140,7 +2146,13 @@ export default function BodyExplorer({
                       id="practice-target-selection"
                       aria-label="Practice target selection"
                     >
-                      <SelectValue />
+                      <SelectValue>
+                        {practiceSampling === 'landmarks'
+                          ? 'Major landmarks'
+                          : practiceSampling === 'all'
+                            ? 'All visible anatomy'
+                            : 'Current focus targets only'}
+                      </SelectValue>
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="landmarks">Major landmarks</SelectItem>

@@ -74,7 +74,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "64e91221810280979f2592e445b7736a3d0fc0e48ff5aad9d8382438551df986"
+      "sha256": "877a151385810f1171ba058b8d4749c25834ae3add9ade8da86c882f3d0fbf78"
     },
     {
       "path": "app/body-scene.tsx",
@@ -1137,6 +1137,10 @@
       "sha256": "8449bb428287cfd19b1d5976bd575a4f4d82d4d98d7b68db3628879adc228737"
     },
     {
+      "path": "lib/abdominal-organ-reasoning.ts",
+      "sha256": "b8912daea3a16c92ae8e8bda65c2d2877e7002d390ac6130dfc45a53e6a312b8"
+    },
+    {
       "path": "lib/abdominal-vessel-clinical-curriculum.ts",
       "sha256": "0321c4e1be5ee654e112159bdcefec115038c4a3917126163ae8c15ed80ead33"
     },
@@ -1934,7 +1938,7 @@
     },
     {
       "path": "lib/reasoning-questions.ts",
-      "sha256": "e806888c01f6391c3411a1659f84fbe2ab9e013bf3daa667be7b0de7794c69a4"
+      "sha256": "c6ffea69e9c8ac71ad854539211a8329375dc5920ee5cfd3968c5d56be14e3a8"
     },
     {
       "path": "lib/rectal-deferent-imaging.ts",
@@ -2453,5 +2457,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "030750dee1b06cde6864999ffadce4a1b3e28a6501f938902cfb607e50ff10e3"
+  "sha256": "dbc59f769750bd274cf0b855cb77a6fba5d8ea7ef42b41d6e742be151c92d27e"
 }
