@@ -20,6 +20,7 @@ import { kneeStudySets, kneeStudyReferences } from '../lib/knee-studies.ts';
 import { elbowStudySets, elbowStudyReferences } from '../content/elbow-studies.ts';
 import { cubitalStudies, cubitalReferences } from '../content/cubital-studies.ts';
 import { portalHepaticStudy, portalHepaticStudyReferences } from '../content/portal-hepatic-study.ts';
+import { handIntrinsicStudies } from '../content/hand-intrinsic-studies.ts';
 import { tentoriumStudySets } from '../content/tentorium-studies.ts';
 import {
   longusColliStudySets,
@@ -1340,6 +1341,14 @@ dissectionProfiles.abdomen.focuses.push({
   landmarks: portalHepaticStudy.landmarks,
 });
 dissectionProfiles.abdomen.references.push(...portalHepaticStudyReferences);
+
+for (const study of handIntrinsicStudies) {
+  dissectionProfiles.hand.focuses.push({
+    id: study.id, title: study.title, rule: {fmaIds: study.targetFmaIds},
+    context: study.context, includeSkeleton: false, view: study.view,
+    description: study.description, inspect: study.inspect, landmarks: study.landmarks,
+  });
+}
 
 export function matchesRule(s: BodyStructure, rule: TissueRule): boolean {
   return (

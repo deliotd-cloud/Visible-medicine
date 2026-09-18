@@ -1,27 +1,27 @@
 {
   "passed": true,
-  "assertions": 314863,
-  "links": 14311,
-  "focusedLinks": 8980,
-  "destinationsTested": 6922,
+  "assertions": 317055,
+  "links": 14389,
+  "focusedLinks": 9052,
+  "destinationsTested": 6994,
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
-      "structures": 1103,
-      "testedLinks": 1984
+      "structures": 1104,
+      "testedLinks": 1986
     },
     {
       "region": "whole-body",
       "side": "left",
-      "structures": 633,
-      "testedLinks": 1142
+      "structures": 634,
+      "testedLinks": 1144
     },
     {
       "region": "whole-body",
       "side": "right",
-      "structures": 633,
-      "testedLinks": 1135
+      "structures": 634,
+      "testedLinks": 1137
     },
     {
       "region": "shoulder-arm",
@@ -63,19 +63,19 @@
       "region": "hand",
       "side": "both",
       "structures": 124,
-      "testedLinks": 686
+      "testedLinks": 712
     },
     {
       "region": "hand",
       "side": "left",
       "structures": 61,
-      "testedLinks": 338
+      "testedLinks": 351
     },
     {
       "region": "hand",
       "side": "right",
       "structures": 63,
-      "testedLinks": 348
+      "testedLinks": 361
     },
     {
       "region": "thigh",
@@ -134,20 +134,20 @@
     {
       "region": "thorax",
       "side": "both",
-      "structures": 157,
-      "testedLinks": 548
+      "structures": 158,
+      "testedLinks": 555
     },
     {
       "region": "thorax",
       "side": "left",
-      "structures": 104,
-      "testedLinks": 370
+      "structures": 105,
+      "testedLinks": 376
     },
     {
       "region": "thorax",
       "side": "right",
-      "structures": 103,
-      "testedLinks": 369
+      "structures": 104,
+      "testedLinks": 376
     },
     {
       "region": "abdomen",
@@ -224,7 +224,7 @@
   ],
   "sourceGeometryChanged": false,
   "catalogueSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
-  "displaySelections": 1103,
+  "displaySelections": 1104,
   "actualInstalledRuntimeDuplicateParsingTested": true,
   "browserInteractionTesting": false,
   "clinicalValidation": false,

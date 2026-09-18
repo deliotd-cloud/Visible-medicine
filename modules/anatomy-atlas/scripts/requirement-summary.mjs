@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Hand intrinsic-muscle studies](HAND_INTRINSIC_STUDIES.md) adds two hand-only comparisons using fourteen existing muscle selections and ten metacarpal context selections. Existing compact Study controls, side filters, removal/undo and focused identification are reused; grouped muscles remain grouped, with no new anatomy, scan, procedure or clinical approval.
+
 [Shoulder arterial MRI](SHOULDER_ARTERIAL_MRI.md) adds six source-bound drafts across paired posterior circumflex humeral, circumflex scapular and suprascapular arteries. Small-study findings are explicitly limited; other9,930 topics, geometry and recipes are unchanged. No acquired scans, diagnostic protocol, registration or clinical approval is added.
 
 [Distal palmar MRI](DISTAL_PALMAR_MRI.md) adds six source-bound drafts for paired palmar-metacarpal, princeps-pollicis and radialis-indicis selections. Three short modality texts distinguish specialised MRA from routine MRI. Grouped source components, all other9,930 topics and recipes remain unchanged; no acquired images, registration or clinical approval are added.

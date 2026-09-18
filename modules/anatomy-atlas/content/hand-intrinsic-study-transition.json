@@ -1,0 +1,83 @@
+{
+  "sourceCommit": "884f97dd204fe404c91ee34fc4b0b86b43ffaae0",
+  "before": "aa27b708e45761434747088856955abfe1320c11ba5720e2e6dcaa96e51f2e2a",
+  "after": "27898de6032ee4973b1603bb782dd93e2c472c6e6d828c2762e51b59d7794165",
+  "added": [
+    {
+      "id": "hand-intrinsic-thenar-adductor",
+      "title": "Hand: thenar & adductor source groups",
+      "rule": {
+        "fmaIds": [
+          "FMA37386",
+          "FMA37387",
+          "FMA37390",
+          "FMA37391",
+          "FMA46121",
+          "FMA46122",
+          "FMA46123",
+          "FMA46124"
+        ]
+      },
+      "context": [
+        {
+          "fmaIds": [
+            "FMA24464",
+            "FMA24465"
+          ]
+        }
+      ],
+      "includeSkeleton": false,
+      "view": "anterior",
+      "description": "Compare the supplied abductor pollicis brevis, opponens pollicis and two adductor pollicis head surfaces with first-metacarpal context. Choose Left or Right for one hand.",
+      "inspect": "Select a labelled surface and Remove it, then Undo to restore it. Extract selected can separate that whole surface without changing the source geometry. These are unchanged, separately selectable source surfaces; proximity does not establish attachments, layers or movement. No tendon, aponeurosis, retinaculum, nerve or complete hand dissection is supplied by this study. Return separation to 0% for original source positions. Anatomical review is pending.",
+      "landmarks": [
+        "abductor pollicis brevis$",
+        "opponens pollicis$",
+        "oblique head of .*adductor pollicis$",
+        "transverse head of .*adductor pollicis$"
+      ]
+    },
+    {
+      "id": "hand-intrinsic-interosseous-lumbrical",
+      "title": "Hand: interosseous & lumbrical source groups",
+      "rule": {
+        "fmaIds": [
+          "FMA42398",
+          "FMA42399",
+          "FMA42402",
+          "FMA42403",
+          "FMA42404",
+          "FMA42405"
+        ]
+      },
+      "context": [
+        {
+          "fmaIds": [
+            "FMA24464",
+            "FMA24465",
+            "FMA24466",
+            "FMA24467",
+            "FMA24468",
+            "FMA24469",
+            "FMA24470",
+            "FMA24471",
+            "FMA24472",
+            "FMA24473"
+          ]
+        }
+      ],
+      "includeSkeleton": false,
+      "view": "anterior",
+      "description": "Compare the supplied grouped lumbrical, palmar interosseous and dorsal interosseous surfaces with metacarpal context. Choose Left or Right for one hand.",
+      "inspect": "Each target is one grouped source surface on its side; individual numbered muscles are not separately supplied. Select a group and Remove it, then Undo to restore it. These are unchanged, separately selectable source surfaces; proximity does not establish attachments, layers or movement. No tendon, aponeurosis, retinaculum, nerve or complete hand dissection is supplied by this study. Return separation to 0% for original source positions. Anatomical review is pending.",
+      "landmarks": [
+        "set of lumbricals of .* hand$",
+        "set of palmar interossei of .* hand$",
+        "set of dorsal interossei of .* hand$"
+      ]
+    }
+  ],
+  "unchangedTopics": 9936,
+  "catalogHash": "bb3518cfdc995729f0e9c528d8e4071cb6ebc71852dcb92ded6c5bdebda70830",
+  "shoulderHash": "8172669d3d9e1a89446104715c0e2047fe60857ba2cb39f19af16f2e0fc86ab0"
+}

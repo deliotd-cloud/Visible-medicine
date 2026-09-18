@@ -1,28 +1,28 @@
 {
   "passed": true,
-  "assertions": 134142,
+  "assertions": 136484,
   "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
-      "structures": 1103,
-      "selectionsWithGroups": 354,
-      "memberships": 423
+      "structures": 1104,
+      "selectionsWithGroups": 367,
+      "memberships": 476
     },
     {
       "region": "whole-body",
       "side": "right",
-      "structures": 633,
-      "selectionsWithGroups": 201,
-      "memberships": 238
+      "structures": 634,
+      "selectionsWithGroups": 208,
+      "memberships": 265
     },
     {
       "region": "whole-body",
       "side": "left",
-      "structures": 633,
-      "selectionsWithGroups": 210,
-      "memberships": 245
+      "structures": 634,
+      "selectionsWithGroups": 217,
+      "memberships": 272
     },
     {
       "region": "shoulder-arm",
@@ -71,21 +71,21 @@
       "side": "both",
       "structures": 124,
       "selectionsWithGroups": 100,
-      "memberships": 238
+      "memberships": 264
     },
     {
       "region": "hand",
       "side": "right",
       "structures": 63,
       "selectionsWithGroups": 51,
-      "memberships": 123
+      "memberships": 136
     },
     {
       "region": "hand",
       "side": "left",
       "structures": 61,
       "selectionsWithGroups": 49,
-      "memberships": 115
+      "memberships": 128
     },
     {
       "region": "thigh",
@@ -153,44 +153,44 @@
     {
       "region": "thorax",
       "side": "both",
-      "structures": 157,
-      "selectionsWithGroups": 128,
-      "memberships": 157
+      "structures": 158,
+      "selectionsWithGroups": 129,
+      "memberships": 163
     },
     {
       "region": "thorax",
       "side": "right",
-      "structures": 103,
-      "selectionsWithGroups": 81,
-      "memberships": 104
+      "structures": 104,
+      "selectionsWithGroups": 82,
+      "memberships": 110
     },
     {
       "region": "thorax",
       "side": "left",
-      "structures": 104,
-      "selectionsWithGroups": 82,
-      "memberships": 104
+      "structures": 105,
+      "selectionsWithGroups": 83,
+      "memberships": 109
     },
     {
       "region": "abdomen",
       "side": "both",
       "structures": 106,
       "selectionsWithGroups": 91,
-      "memberships": 200
+      "memberships": 205
     },
     {
       "region": "abdomen",
       "side": "right",
       "structures": 81,
       "selectionsWithGroups": 67,
-      "memberships": 156
+      "memberships": 160
     },
     {
       "region": "abdomen",
       "side": "left",
       "structures": 83,
       "selectionsWithGroups": 69,
-      "memberships": 160
+      "memberships": 164
     },
     {
       "region": "pelvis",

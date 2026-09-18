@@ -10,6 +10,7 @@ import { pelvicVeinStudyReady } from './pelvic-veins.ts';
 import { limbicLandmarkStudyReady } from './limbic-landmarks.ts';
 import { cubitalStudyReady } from './cubital-studies.ts';
 import { portalHepaticStudyReady } from './portal-hepatic-study.ts';
+import { handIntrinsicStudyReady } from './hand-intrinsic-studies.ts';
 
 /** Guard only this family; existing study families retain their own admissions. */
 export function limbVascularStudyReady(
@@ -17,6 +18,7 @@ export function limbVascularStudyReady(
   region: string,
   recipeId: string | null,
 ) {
+  if (!handIntrinsicStudyReady(catalog, region, recipeId)) return false;
   if (!inferiorEpigastricStudyReady(catalog, region, recipeId)) return false;
   if (!cubitalStudyReady(catalog, region, recipeId)) return false;
   if (!portalHepaticStudyReady(catalog, region, recipeId)) return false;

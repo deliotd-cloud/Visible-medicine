@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Hand intrinsic-muscle studies](HAND_INTRINSIC_STUDIES.md) adds two hand-only comparisons using fourteen existing muscle selections and ten metacarpal context selections. Existing compact Study controls, side filters, removal/undo and focused identification are reused; grouped muscles remain grouped, with no new anatomy, scan, procedure or clinical approval.
+
 [Shoulder arterial MRI](SHOULDER_ARTERIAL_MRI.md) adds six source-bound drafts across paired posterior circumflex humeral, circumflex scapular and suprascapular arteries. Small-study findings are explicitly limited; other9,930 topics, geometry and recipes are unchanged. No acquired scans, diagnostic protocol, registration or clinical approval is added.
 
 [Distal palmar MRI](DISTAL_PALMAR_MRI.md) adds six source-bound drafts for paired palmar-metacarpal, princeps-pollicis and radialis-indicis selections. Three short modality texts distinguish specialised MRA from routine MRI. Grouped source components, all other9,930 topics and recipes remain unchanged; no acquired images, registration or clinical approval are added.
@@ -146,7 +148,7 @@ The [optic chiasm and tract study](VISUAL_PATHWAY_DISSECTION.md) adds 3 selectab
 - Dedicated shoulder: 9 representations / 11 source parts, overlapping the body catalogue.
 - Pancreatic dissection: 2 selectable duct components and 1 optional reference surface. These subdivide the corrected pancreas, not new unique anatomy.
 - Nested dissections: 15 eye components, 4 ventricular spaces, 4 brainstem/cerebellar compounds, 14 cerebral selections, 4 cardiac cavities, 5 partial lung branch groups, 7 liver branch groups, 7 renal/adrenal vascular groups and 3 chiasm/tract surfaces. Four superior temporal source parts, seven renal/adrenal groups and three chiasm/tract surfaces add coverage; other nested studies subdivide existing parents. Context reuses existing structures. These are partial source surfaces, not complete organ interiors or clinical approvals. Brief drafts are separate from the root-body inventory below. 136 public/archive GLBs are retained, including original and alternate display assets. The original catalogue counts remain unchanged.
-- 159 dissection stages and 178 focuses. These operate on supplied surfaces; they do not establish complete anatomy.
+- 159 dissection stages and 180 focuses. These operate on supplied surfaces; they do not establish complete anatomy.
 - Internal studies have optional selected-part original-position guides inside their collapsed separation controls. Guides use the source surface and the exact display displacement; flat plates, cutaways, hidden/context parts and exam mode suppress them. They are display annotations, not anatomical connections. See [scope and checks](ORIGIN_GUIDES.md).
 - Find/name identification practice; 126 draft reasoning concepts bound to 238 representations in head-neck, foot, thigh, leg, pelvis, spine, thorax, abdomen, shoulder-arm, hand, forearm. Each concept occurs at most once per session, without contralateral repetition. See [practice scope and tests](REASONING_PRACTICE.md).
 - [Learning-resource contract](LEARNING_RESOURCE_CONTRACT.md): version 1, ct/mri/xray/ultrasound/lecture/quiz anchors; 0 configured resources / 0 correspondences. Read-only linking infrastructure, not a connected external viewer or publication approval.

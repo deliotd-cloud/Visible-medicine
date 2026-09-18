@@ -4,8 +4,10 @@ import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
 import pins from '../content/shoulder-arterial-mri-pins.json' with {type:'json'};
 import transition from '../content/shoulder-arterial-mri-transition.json' with {type:'json'};
+import {beforeHandIntrinsicStudies} from './hand-intrinsic-study-history.mjs';
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function beforeShoulderArterialMri(api){
+ api=beforeHandIntrinsicStudies(api);
  assert.equal(hash(pins),'0fc63c05e5775aabddc017ad243a68a06905b397bdd51488fe5c48bb81267176');
  assert.equal(hash(transition),'cc222ed6ce2404695ed986d4945ebeb101717e4539a2e95ef460d350db9c1902');
  assert.equal(transition.parentCommit,pins.sourceCommit);assert.equal(transition.previousAllLessonsAndRecipesHash,pins.previousAllLessonsAndRecipesHash);

@@ -78,7 +78,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "82c6aa170222703faf7227cfa53fc508d2ec0e3c6043084a4ea645baf46d730a"
+      "sha256": "d7e917f3640c088d8a22edc69dda0cf697c3dfec05a6acc1d34c12b492545050"
     },
     {
       "path": "app/body-scene.tsx",
@@ -126,7 +126,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "837e58561e85698e32b4150123aafe13f560fb6d1283387f0d18f30b245a7640"
+      "sha256": "59477305d1d845fabcc3b3b0b8cfc4d8f7ca7fe1b9e5a092060ac5a6e0f133f7"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -719,6 +719,14 @@
     {
       "path": "content/genicular-study.ts",
       "sha256": "e3990bacdac2466a03bfec56e5fc8eecc0767b1f474d5b161e16cb84d5a1cfaa"
+    },
+    {
+      "path": "content/hand-intrinsic-studies.ts",
+      "sha256": "52e2b0d6e28648493f16f9fffb2fa56b5d54f2889c76d866f22bb49041979b85"
+    },
+    {
+      "path": "content/hand-intrinsic-study-pins.json",
+      "sha256": "c07c384a943ac8341d8da2ca6098b13a5ee179c45991300374d9e09f16096d98"
     },
     {
       "path": "content/hand-joint-pins.json",
@@ -1753,6 +1761,10 @@
       "sha256": "918695d2987684a77a65c749ee199e8c4331b72f514a2d8f7050103217696bad"
     },
     {
+      "path": "lib/hand-intrinsic-studies.ts",
+      "sha256": "5cc77244b513326f9c219e1f26b9d5401d9128f77cd9f8e6433cca01b04dc76b"
+    },
+    {
       "path": "lib/hand-joints.ts",
       "sha256": "0672bed057e57c516d59e9f7af23587f25317116b572ea35195a25bac25ef6a4"
     },
@@ -1962,7 +1974,7 @@
     },
     {
       "path": "lib/limb-vascular-studies.ts",
-      "sha256": "839e0f97333de9f713427709b85658c0941e31f504706e148de1a587257bdb59"
+      "sha256": "7d06c1a6aa6389e851927ca22f137b9bf9fb7d89ad89ed0b261720e98047a0e0"
     },
     {
       "path": "lib/limbic-landmarks.ts",
@@ -2498,7 +2510,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "1e39615752eba73cfe69f97b1dd18fc8cfee9c1b26daaf834f3080eb3d797bfd"
+      "sha256": "1257c8baf4328472043e7ece00655ffe438cb53297dd1d8e7aed6cfd0f960d02"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2701,5 +2713,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "356eb3a022c49e7a6575471f9439ddcd12329de4da77135d484b8699c8089c33"
+  "sha256": "aaee3901db63b4cf8ab856cc7f67f7eb302752b84f887029ed9e7eb973c217d6"
 }

@@ -1,9 +1,9 @@
 {
   "passed": true,
-  "assertions": 57538,
+  "assertions": 58144,
   "scopes": 36,
-  "groups": 219,
-  "sourceRecipes": 289,
+  "groups": 222,
+  "sourceRecipes": 292,
   "combinedGroups": 70,
   "markupCases": 24,
   "rows": [
@@ -73,22 +73,22 @@
     {
       "region": "hand",
       "side": "both",
-      "groups": 20,
-      "recipes": 31,
+      "groups": 22,
+      "recipes": 33,
       "combinedGroups": 11
     },
     {
       "region": "hand",
       "side": "left",
-      "groups": 20,
-      "recipes": 31,
+      "groups": 22,
+      "recipes": 33,
       "combinedGroups": 11
     },
     {
       "region": "hand",
       "side": "right",
-      "groups": 20,
-      "recipes": 31,
+      "groups": 22,
+      "recipes": 33,
       "combinedGroups": 11
     },
     {
@@ -157,22 +157,22 @@
     {
       "region": "thorax",
       "side": "both",
-      "groups": 15,
-      "recipes": 19,
+      "groups": 16,
+      "recipes": 20,
       "combinedGroups": 4
     },
     {
       "region": "thorax",
       "side": "left",
-      "groups": 15,
-      "recipes": 19,
+      "groups": 16,
+      "recipes": 20,
       "combinedGroups": 4
     },
     {
       "region": "thorax",
       "side": "right",
-      "groups": 15,
-      "recipes": 19,
+      "groups": 16,
+      "recipes": 20,
       "combinedGroups": 4
     },
     {
@@ -264,5 +264,5 @@
   "clinicalValidation": false,
   "browserInteractionTesting": false,
   "sourceCatalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
-  "dissectionProfilesSha256": "efbd7db51e9f4042490f5f98975e39d93c1a7928b260f8a0c54b4d81d8c5d6d7"
+  "dissectionProfilesSha256": "27898de6032ee4973b1603bb782dd93e2c472c6e6d828c2762e51b59d7794165"
 }

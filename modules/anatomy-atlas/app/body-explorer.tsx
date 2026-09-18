@@ -1950,7 +1950,7 @@ export default function BodyExplorer({
                     ? 'Knee & leg close-up · Shared thigh structures may extend off-screen · Full extent in View menu'
                     : initialRegion === 'forearm'
                     ? 'Forearm close-up · Upper-arm context may extend off-screen · Full extent in View menu'
-                    : 'Hand close-up · Proximal vessels off-screen'
+                    : 'Hand close-up · Full extent in View menu'
                   : jointCloseUp
                   ? `${initialRegion === 'forearm' || initialRegion === 'whole-body' ? 'Elbow' : 'Knee'} close-up · Whole surfaces extend beyond the view · Pan / pinch to explore`
                   : layout === 'tray' && !exam
