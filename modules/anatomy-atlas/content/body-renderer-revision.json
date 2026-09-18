@@ -126,7 +126,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "59477305d1d845fabcc3b3b0b8cfc4d8f7ca7fe1b9e5a092060ac5a6e0f133f7"
+      "sha256": "51b7d1bcf10d98e02d2016d648d92748fe01a5b7baf5c4d016a1d9c587a7cefb"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -891,6 +891,14 @@
     {
       "path": "content/lower-limb-motor.ts",
       "sha256": "b94da1bcd39a91f513565135cb8a4e70c64998fff05aaba8df8a83d7f156f36b"
+    },
+    {
+      "path": "content/lower-neck-study-pins.json",
+      "sha256": "1e6dab5b8cad36ddd54c6734c2ae0f8f3370f366390e631ff1e3fb8da4990843"
+    },
+    {
+      "path": "content/lower-neck-study.ts",
+      "sha256": "792618b31ed43df22c4bff4c1ff8a1649166a6353044a9b4ae75289bfe79cb0d"
     },
     {
       "path": "content/lower-venous-imaging-pins.json",
@@ -1974,7 +1982,7 @@
     },
     {
       "path": "lib/limb-vascular-studies.ts",
-      "sha256": "7d06c1a6aa6389e851927ca22f137b9bf9fb7d89ad89ed0b261720e98047a0e0"
+      "sha256": "62429b8d856a823caab84e391b034f7fc1f06e4193d3c7a517d7b966c6a4ed65"
     },
     {
       "path": "lib/limbic-landmarks.ts",
@@ -2003,6 +2011,10 @@
     {
       "path": "lib/lower-limb-vessel-clinical-curriculum.ts",
       "sha256": "eb79201901dfbe170f0336888ac864308507b6c8f47d1cdf1a0fcddd7e7d295b"
+    },
+    {
+      "path": "lib/lower-neck-study.ts",
+      "sha256": "13e3a214881916a0ab260743cc6a9e7aa77edd33ff2ca5add220e46d4cfa1b4d"
     },
     {
       "path": "lib/lower-venous-imaging.ts",
@@ -2510,7 +2522,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "1257c8baf4328472043e7ece00655ffe438cb53297dd1d8e7aed6cfd0f960d02"
+      "sha256": "0e5bc432e856cd58e3f3e721f3d252b2b816d4a1ebaa5742e48156c8ff3399d3"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2713,5 +2725,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "aaee3901db63b4cf8ab856cc7f67f7eb302752b84f887029ed9e7eb973c217d6"
+  "sha256": "293db6d5ed2802c69aec19c22af00510553ebfc03c59ace1aec45b5a9a6eff5f"
 }

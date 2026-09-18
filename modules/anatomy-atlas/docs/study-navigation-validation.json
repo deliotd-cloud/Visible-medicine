@@ -1,28 +1,28 @@
 {
   "passed": true,
-  "assertions": 136484,
+  "assertions": 137348,
   "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
       "structures": 1104,
-      "selectionsWithGroups": 367,
-      "memberships": 476
+      "selectionsWithGroups": 377,
+      "memberships": 494
     },
     {
       "region": "whole-body",
       "side": "right",
       "structures": 634,
-      "selectionsWithGroups": 208,
-      "memberships": 265
+      "selectionsWithGroups": 213,
+      "memberships": 274
     },
     {
       "region": "whole-body",
       "side": "left",
       "structures": 634,
-      "selectionsWithGroups": 217,
-      "memberships": 272
+      "selectionsWithGroups": 222,
+      "memberships": 281
     },
     {
       "region": "shoulder-arm",
@@ -217,22 +217,22 @@
       "region": "head-neck",
       "side": "both",
       "structures": 291,
-      "selectionsWithGroups": 224,
-      "memberships": 367
+      "selectionsWithGroups": 226,
+      "memberships": 385
     },
     {
       "region": "head-neck",
       "side": "right",
       "structures": 169,
-      "selectionsWithGroups": 129,
-      "memberships": 205
+      "selectionsWithGroups": 130,
+      "memberships": 214
     },
     {
       "region": "head-neck",
       "side": "left",
       "structures": 170,
-      "selectionsWithGroups": 128,
-      "memberships": 211
+      "selectionsWithGroups": 129,
+      "memberships": 220
     },
     {
       "region": "spine",

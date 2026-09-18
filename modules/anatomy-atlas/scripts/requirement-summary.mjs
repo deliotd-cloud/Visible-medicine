@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Lower-neck study](LOWER_NECK_STUDY.md) combines fourteen existing vessel/scalene targets with four muscle context surfaces in Head & neck and Whole body. Both sides, focused practice, removal/undo and source-bound links reuse existing controls. Whole surfaces remain unchanged; no sheath, nerve plexus, procedural corridor, scan registration or clinical approval is supplied.
+
 [Hand intrinsic-muscle studies](HAND_INTRINSIC_STUDIES.md) adds two hand-only comparisons using fourteen existing muscle selections and ten metacarpal context selections. Existing compact Study controls, side filters, removal/undo and focused identification are reused; grouped muscles remain grouped, with no new anatomy, scan, procedure or clinical approval.
 
 [Shoulder arterial MRI](SHOULDER_ARTERIAL_MRI.md) adds six source-bound drafts across paired posterior circumflex humeral, circumflex scapular and suprascapular arteries. Small-study findings are explicitly limited; other9,930 topics, geometry and recipes are unchanged. No acquired scans, diagnostic protocol, registration or clinical approval is added.

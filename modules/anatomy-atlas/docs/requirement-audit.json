@@ -7,7 +7,7 @@
     "integration/shoulder/education-api.ts": "4f2017f78d81c821c64ecd85ff3a60bb442cf3bc207b62da0718bc1f7a13afe0",
     "lib/regional-framing.ts": "4d492111fb7ceb7514e574b74557ba4ae242b64336e70c31d741d2921b677966",
     "lib/dissection-scope.ts": "6e47c630ce09ec51fe7b5e1156d85a49c25eded02e044775ee053e7096fbe0ff",
-    "app/dissection-data.ts": "59477305d1d845fabcc3b3b0b8cfc4d8f7ca7fe1b9e5a092060ac5a6e0f133f7",
+    "app/dissection-data.ts": "51b7d1bcf10d98e02d2016d648d92748fe01a5b7baf5c4d016a1d9c587a7cefb",
     "app/body-explorer.tsx": "d7e917f3640c088d8a22edc69dda0cf697c3dfec05a6acc1d34c12b492545050",
     "lib/lower-venous-imaging.ts": "56d60e3802bfc6dd8797fa2c36048916306b0084142a4b59e07b070e0f2b7e76",
     "lib/iliac-venous-imaging.ts": "67be90455b641db01288ce8a4fe837f2f20082b0b713840835971bd42c4ef4f2",
@@ -75,7 +75,7 @@
     "lib/venous-drainage.ts": "461295771de1b34288fb3db0b87833d1398b60f81eb88b4a410b18bed608524c",
     "public/models/bodyparts3d/portal-veins/catalog.json": "2ce331f3cecbd67a2fe75f873c79d0c187b67fc4131b34cab8a44833c4a37ae8",
     "docs/portal-vein-source-audit.json": "506b3aca1b61897dcb4f625c189e243a423957c0438f08baa42ae53a742ef5aa",
-    "lib/limb-vascular-studies.ts": "7d06c1a6aa6389e851927ca22f137b9bf9fb7d89ad89ed0b261720e98047a0e0",
+    "lib/limb-vascular-studies.ts": "62429b8d856a823caab84e391b034f7fc1f06e4193d3c7a517d7b966c6a4ed65",
     "lib/arm-vascular-studies.ts": "24996e2997a84263322436050fc7765ae97ca178595b09f34a21b23736ec6c51",
     "content/arm-vascular-studies.ts": "4def11852e5843a9ee57a298d4f69758f0b7bd2451f627a951985ca90bb15d0d",
     "content/arm-vascular-study-pins.json": "534d166d46212fedb3316c8113162f7e18ab70fe0adea43501af475796b92374",
@@ -353,7 +353,7 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "514d16b9f790dc05f501a0119122879d8ac49609c36473a93c1ac0489f40e226",
+    "resolvedContentAndRecipeData": "9da3880fb7ad1df337b70481dd78cbd9409c048232cfbe02ca083fc020e9553e",
     "explicitTopicReadiness": "1786281cc93c11552fc7f3b641a1986f2ef6a507871ec026d49f975dcfed822c",
     "reasoningQuestionData": "523ab89c9c6313eec445979978777283e316b118328bd18ddde80a47ecfd3a32",
     "nestedTeachingData": "6f54b9c6832276c6813503e2ca933bdc133ec39018da108aac40444c481a6819"
@@ -1621,7 +1621,7 @@
     "pulmonaryBranchTypeOptionalBundles": 2,
     "ventricularRelationshipPresets": 3,
     "stages": 159,
-    "focuses": 180
+    "focuses": 182
   },
   "practice": {
     "identificationModes": [

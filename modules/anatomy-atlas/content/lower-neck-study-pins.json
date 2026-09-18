@@ -1,0 +1,1060 @@
+{
+  "sourceCommit": "2d68ad0aa45aa270f2b0a114be82003ea6d1b9c8",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "entries": [
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-omohyoid",
+      "fmaId": "FMA13349",
+      "name": "Left omohyoid",
+      "sourceName": "left omohyoid",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-muscles",
+      "nodeName": "FMA13349",
+      "bounds": {
+        "min": [
+          0.11320900171995163,
+          5.178699970245361,
+          -0.23548299074172974
+        ],
+        "max": [
+          1.0450999736785889,
+          6.272299766540527,
+          0.7225900292396545
+        ]
+      },
+      "center": [
+        0.5791544876992702,
+        5.725499868392944,
+        0.2435535192489624
+      ],
+      "anchor": [
+        0.6046810150146484,
+        5.577199935913086,
+        0.32055604457855225
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1565",
+          "sha256": "1552449f945343885869b8495474e44963c906ce559abf2f508506f784357b59"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-scalenus-anterior",
+      "fmaId": "FMA13393",
+      "name": "Left scalenus anterior",
+      "sourceName": "left scalenus anterior",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-muscles",
+      "nodeName": "FMA13393",
+      "bounds": {
+        "min": [
+          0.21012501418590546,
+          5.342800140380859,
+          0.2888610064983368
+        ],
+        "max": [
+          0.5501620173454285,
+          6.209599494934082,
+          0.46829596161842346
+        ]
+      },
+      "center": [
+        0.38014351576566696,
+        5.776199817657471,
+        0.3785784840583801
+      ],
+      "anchor": [
+        0.37602001428604126,
+        5.780099868774414,
+        0.39251700043678284
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1570",
+          "sha256": "7cffc2140b07a8966c1bf36937f3e260b4b565b8151ecfa2f683b72bcd5f546d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-scalenus-medius",
+      "fmaId": "FMA13391",
+      "name": "Left scalenus medius",
+      "sourceName": "left scalenus medius",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-muscles",
+      "nodeName": "FMA13391",
+      "bounds": {
+        "min": [
+          0.20902100205421448,
+          5.432199478149414,
+          0.21364302933216095
+        ],
+        "max": [
+          0.5427790284156799,
+          6.486099720001221,
+          0.36007797718048096
+        ]
+      },
+      "center": [
+        0.3759000152349472,
+        5.959149599075317,
+        0.28686050325632095
+      ],
+      "anchor": [
+        0.3698440194129944,
+        5.947400093078613,
+        0.2874400317668915
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1571",
+          "sha256": "87f401434568a449ee7ac71d8d372998611f5eed4190e8273e31cf252fccfbcd"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-scalenus-posterior",
+      "fmaId": "FMA13389",
+      "name": "Left scalenus posterior",
+      "sourceName": "left scalenus posterior",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-muscles",
+      "nodeName": "FMA13389",
+      "bounds": {
+        "min": [
+          0.23622101545333862,
+          5.413700103759766,
+          0.06075599789619446
+        ],
+        "max": [
+          0.7275430560112,
+          6.029599666595459,
+          0.3143240213394165
+        ]
+      },
+      "center": [
+        0.4818820357322693,
+        5.721649885177612,
+        0.18754000961780548
+      ],
+      "anchor": [
+        0.46903499960899353,
+        5.719100475311279,
+        0.20082001388072968
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1572",
+          "sha256": "227a19a0ccceb88b370c8fe5af637ccb491bcb2c1f1898cd101c24e93fa82ae7"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-sternocleidomastoid",
+      "fmaId": "FMA13409",
+      "name": "Left sternocleidomastoid",
+      "sourceName": "left sternocleidomastoid",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-muscles",
+      "nodeName": "FMA13409",
+      "bounds": {
+        "min": [
+          0.005796629935503006,
+          5.019899845123291,
+          -0.1260889768600464
+        ],
+        "max": [
+          0.6166549921035767,
+          7.030200004577637,
+          1.068060040473938
+        ]
+      },
+      "center": [
+        0.31122581101953983,
+        6.025049924850464,
+        0.4709855318069458
+      ],
+      "anchor": [
+        0.30642998218536377,
+        6.015999794006348,
+        0.4588710069656372
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1573",
+          "sha256": "2035124d82e26f8e2ba9985925a746d0fd1fd94535d6ca7eed4b622f60bf5363"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-omohyoid",
+      "fmaId": "FMA13348",
+      "name": "Right omohyoid",
+      "sourceName": "right omohyoid",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-muscles",
+      "nodeName": "FMA13348",
+      "bounds": {
+        "min": [
+          -1.0586400032043457,
+          5.178699970245361,
+          -0.23607900738716125
+        ],
+        "max": [
+          -0.12741400301456451,
+          6.272299766540527,
+          0.7226200103759766
+        ]
+      },
+      "center": [
+        -0.5930270031094551,
+        5.725499868392944,
+        0.24327050149440765
+      ],
+      "anchor": [
+        -0.6286460161209106,
+        5.575799465179443,
+        0.31089895963668823
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1586",
+          "sha256": "2ec30a6720efb6eaf451bc141c61d2419b33027b2f10c5b00378f54861be0605"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-scalenus-anterior",
+      "fmaId": "FMA13392",
+      "name": "Right scalenus anterior",
+      "sourceName": "right scalenus anterior",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-muscles",
+      "nodeName": "FMA13392",
+      "bounds": {
+        "min": [
+          -0.5631909966468811,
+          5.343299388885498,
+          0.28804197907447815
+        ],
+        "max": [
+          -0.22326499223709106,
+          6.20989990234375,
+          0.4680580198764801
+        ]
+      },
+      "center": [
+        -0.3932279944419861,
+        5.776599645614624,
+        0.3780499994754791
+      ],
+      "anchor": [
+        -0.37499499320983887,
+        5.789499282836914,
+        0.38975799083709717
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1592",
+          "sha256": "a8e09cc9dcc353437edeafeb78873c3f4d9727fcd9187d0f43dd57a3e72efb83"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-scalenus-medius",
+      "fmaId": "FMA13390",
+      "name": "Right scalenus medius",
+      "sourceName": "right scalenus medius",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-muscles",
+      "nodeName": "FMA13390",
+      "bounds": {
+        "min": [
+          -0.5559110045433044,
+          5.431800365447998,
+          0.21341003477573395
+        ],
+        "max": [
+          -0.2214769870042801,
+          6.486099720001221,
+          0.3597709536552429
+        ]
+      },
+      "center": [
+        -0.38869399577379227,
+        5.958950042724609,
+        0.28659049421548843
+      ],
+      "anchor": [
+        -0.39165401458740234,
+        5.971199989318848,
+        0.277353972196579
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1593",
+          "sha256": "d601c1bf83da406115bc5605305b04ef8f4a37518e3d8528ca35e93fde0f4140"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-scalenus-posterior",
+      "fmaId": "FMA13388",
+      "name": "Right scalenus posterior",
+      "sourceName": "right scalenus posterior",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-muscles",
+      "nodeName": "FMA13388",
+      "bounds": {
+        "min": [
+          -0.7407209873199463,
+          5.413199424743652,
+          0.060773011296987534
+        ],
+        "max": [
+          -0.2489279955625534,
+          6.029399394989014,
+          0.31419602036476135
+        ]
+      },
+      "center": [
+        -0.49482449144124985,
+        5.721299409866333,
+        0.18748451583087444
+      ],
+      "anchor": [
+        -0.4923139810562134,
+        5.708899974822998,
+        0.19425399601459503
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1594",
+          "sha256": "babdc76481ea863c4f1d5599fbc843da667780a2d7a5abe2c30a4c82374c9f11"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-sternocleidomastoid",
+      "fmaId": "FMA13408",
+      "name": "Right sternocleidomastoid",
+      "sourceName": "right sternocleidomastoid",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-muscles",
+      "nodeName": "FMA13408",
+      "bounds": {
+        "min": [
+          -0.6304000020027161,
+          5.019699573516846,
+          -0.1274610161781311
+        ],
+        "max": [
+          0.6140499711036682,
+          7.031899452209473,
+          1.0690699815750122
+        ]
+      },
+      "center": [
+        -0.008175015449523926,
+        6.025799512863159,
+        0.47080448269844055
+      ],
+      "anchor": [
+        -0.23635299503803253,
+        6.007099628448486,
+        0.5803200006484985
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1595",
+          "sha256": "287ce88ff3321e41d83b34bb0c30f66ab273aceac9fd0a6c693af4532d0e0681"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-subclavian-artery",
+      "fmaId": "FMA3953",
+      "name": "Right subclavian artery",
+      "sourceName": "right subclavian artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "bundle": "thorax-vessels-recovery",
+      "nodeName": "FMA3953",
+      "bounds": {
+        "min": [
+          -0.8217599987983704,
+          5.309399604797363,
+          0.44354599714279175
+        ],
+        "max": [
+          -0.0974728986620903,
+          5.530300140380859,
+          0.6222100257873535
+        ]
+      },
+      "center": [
+        -0.45961644873023033,
+        5.419849872589111,
+        0.5328780114650726
+      ],
+      "anchor": [
+        -0.458391010761261,
+        5.453499794006348,
+        0.5169299840927124
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3579",
+          "sha256": "1fb9231343dce90a8d62061c63e0102eb72d117f131eda7876abfeb0060b6ad3"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-subclavian-artery",
+      "fmaId": "FMA4694",
+      "name": "Left subclavian artery",
+      "sourceName": "left subclavian artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "bundle": "thorax-vessels-recovery",
+      "nodeName": "FMA4694",
+      "bounds": {
+        "min": [
+          0.17685699462890625,
+          5.073100566864014,
+          0.368478000164032
+        ],
+        "max": [
+          0.865464985370636,
+          5.564599514007568,
+          0.5563400387763977
+        ]
+      },
+      "center": [
+        0.5211609899997711,
+        5.318850040435791,
+        0.46240901947021484
+      ],
+      "anchor": [
+        0.6160910129547119,
+        5.413900375366211,
+        0.5066100358963013
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3479",
+          "sha256": "f6af4efb94e1ce94519c94684b1d0a0736272e5a0ed2677a63627e0ebfc228b1"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-subclavian-vein",
+      "fmaId": "FMA4755",
+      "name": "Right subclavian vein",
+      "sourceName": "right subclavian vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "bundle": "thorax-vessels-recovery",
+      "nodeName": "FMA4755",
+      "bounds": {
+        "min": [
+          -0.8682869672775269,
+          5.277299880981445,
+          0.5849699974060059
+        ],
+        "max": [
+          -0.22342300415039062,
+          5.515500545501709,
+          0.717930018901825
+        ]
+      },
+      "center": [
+        -0.5458549857139587,
+        5.396400213241577,
+        0.6514500081539154
+      ],
+      "anchor": [
+        -0.5808529853820801,
+        5.366500377655029,
+        0.6452600359916687
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3587",
+          "sha256": "3ed476e466dbc681e284005f910b546a97ac24999236cae1ec7487149da7bb53"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-subclavian-vein",
+      "fmaId": "FMA4763",
+      "name": "Left subclavian vein",
+      "sourceName": "left subclavian vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "bundle": "thorax-vessels-recovery",
+      "nodeName": "FMA4763",
+      "bounds": {
+        "min": [
+          0.19380800426006317,
+          5.251899242401123,
+          0.554419994354248
+        ],
+        "max": [
+          0.9425779581069946,
+          5.5346999168396,
+          0.7107599377632141
+        ]
+      },
+      "center": [
+        0.5681929811835289,
+        5.393299579620361,
+        0.6325899660587311
+      ],
+      "anchor": [
+        0.5884230136871338,
+        5.4121994972229,
+        0.6234800219535828
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3486",
+          "sha256": "22b351bd5e1e76488e150f433bfc59a44c3a27a567f5eb5c9a6be5b2b21be5c6"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
+      "fmaId": "FMA3941",
+      "name": "Right common carotid artery",
+      "sourceName": "right common carotid artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "bundle": "head-neck-vessels-recovery",
+      "nodeName": "FMA3941",
+      "bounds": {
+        "min": [
+          -0.21257899701595306,
+          5.294200420379639,
+          0.5538300275802612
+        ],
+        "max": [
+          -0.08614440262317657,
+          5.733799934387207,
+          0.6754799485206604
+        ]
+      },
+      "center": [
+        -0.14936169981956482,
+        5.514000177383423,
+        0.6146549880504608
+      ],
+      "anchor": [
+        -0.1452919989824295,
+        5.530099868774414,
+        0.5932700634002686
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3564",
+          "sha256": "423585ec439b07b0f64878f904afca52d4866e1e0dc54c2ace31953d9b6156cf"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
+      "fmaId": "FMA4058",
+      "name": "Left common carotid artery",
+      "sourceName": "left common carotid artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "bundle": "head-neck-vessels-recovery",
+      "nodeName": "FMA4058",
+      "bounds": {
+        "min": [
+          0.10820800065994263,
+          5.07390022277832,
+          0.46006301045417786
+        ],
+        "max": [
+          0.22933000326156616,
+          5.736800670623779,
+          0.6222400069236755
+        ]
+      },
+      "center": [
+        0.1687690019607544,
+        5.40535044670105,
+        0.5411515086889267
+      ],
+      "anchor": [
+        0.18002599477767944,
+        5.409000396728516,
+        0.5512999892234802
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3483",
+          "sha256": "19f38e57365867279705090994fff228177163c1920ad0f8f9b15f830a42bc1d"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-internal-jugular-vein",
+      "fmaId": "FMA4754",
+      "name": "Right internal jugular vein",
+      "sourceName": "right internal jugular vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "bundle": "head-neck-vessels-recovery",
+      "nodeName": "FMA4754",
+      "bounds": {
+        "min": [
+          -0.31139999628067017,
+          5.404799938201904,
+          0.6288700103759766
+        ],
+        "max": [
+          -0.21712099015712738,
+          5.817399978637695,
+          0.7207499742507935
+        ]
+      },
+      "center": [
+        -0.2642604932188988,
+        5.6110999584198,
+        0.674809992313385
+      ],
+      "anchor": [
+        -0.27468299865722656,
+        5.610999584197998,
+        0.705590009689331
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3585",
+          "sha256": "528ab41e57d31335c0deb9bb804c4e83b9bc22cf912d8de247a88ad9893325f1"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-internal-jugular-vein",
+      "fmaId": "FMA4762",
+      "name": "Left internal jugular vein",
+      "sourceName": "left internal jugular vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "bundle": "head-neck-vessels-recovery",
+      "nodeName": "FMA4762",
+      "bounds": {
+        "min": [
+          0.18107500672340393,
+          5.374100208282471,
+          0.6170099377632141
+        ],
+        "max": [
+          0.3090539872646332,
+          5.804300308227539,
+          0.7211399674415588
+        ]
+      },
+      "center": [
+        0.24506449699401855,
+        5.589200258255005,
+        0.6690749526023865
+      ],
+      "anchor": [
+        0.21520499885082245,
+        5.592700004577637,
+        0.6498100161552429
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3485",
+          "sha256": "ec17bca2370898fd34c6e518d9ad62998819544058d41a34838580f7e554f0bd"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "id": "head-neck-muscles",
+      "url": "/models/bodyparts3d/full-body/head-neck-muscles.glb",
+      "bytes": 8566352,
+      "sha256": "ad355b54f865461f5433bd1062bb206bde1967f6d4dc003840e7788800a69adb",
+      "structures": 72
+    },
+    {
+      "id": "thorax-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/thorax-vessels-recovery.glb",
+      "bytes": 1131748,
+      "sha256": "0c82e1cb2960c6f2474f2b4759974adab5871d8074a2f4e3712e1c3a37a48ca7",
+      "structures": 25
+    },
+    {
+      "id": "head-neck-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/head-neck-vessels-recovery.glb",
+      "bytes": 608992,
+      "sha256": "800d583a96a6df8fdd2b5fff86c6e719a90e897d6c3c89bbb1a3bd71b0e89cbb",
+      "structures": 16
+    }
+  ]
+}

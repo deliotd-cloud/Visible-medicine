@@ -21,6 +21,7 @@ import { elbowStudySets, elbowStudyReferences } from '../content/elbow-studies.t
 import { cubitalStudies, cubitalReferences } from '../content/cubital-studies.ts';
 import { portalHepaticStudy, portalHepaticStudyReferences } from '../content/portal-hepatic-study.ts';
 import { handIntrinsicStudies } from '../content/hand-intrinsic-studies.ts';
+import { lowerNeckStudy } from '../content/lower-neck-study.ts';
 import { tentoriumStudySets } from '../content/tentorium-studies.ts';
 import {
   longusColliStudySets,
@@ -1347,6 +1348,16 @@ for (const study of handIntrinsicStudies) {
     id: study.id, title: study.title, rule: {fmaIds: study.targetFmaIds},
     context: study.context, includeSkeleton: false, view: study.view,
     description: study.description, inspect: study.inspect, landmarks: study.landmarks,
+  });
+}
+
+for (const region of lowerNeckStudy.regions) {
+  dissectionProfiles[region].focuses.push({
+    id: lowerNeckStudy.id, title: lowerNeckStudy.title,
+    rule: {fmaIds: lowerNeckStudy.targetFmaIds}, context: lowerNeckStudy.context,
+    includeSkeleton: false, view: lowerNeckStudy.view,
+    description: lowerNeckStudy.description, inspect: lowerNeckStudy.inspect,
+    landmarks: lowerNeckStudy.landmarks,
   });
 }
 

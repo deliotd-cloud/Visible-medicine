@@ -1,0 +1,104 @@
+{
+  "sourceCommit": "2d68ad0aa45aa270f2b0a114be82003ea6d1b9c8",
+  "before": "27898de6032ee4973b1603bb782dd93e2c472c6e6d828c2762e51b59d7794165",
+  "after": "2cf821c31a5bdf75a44a171e73721d6e803e2a3ef5c386754640dc0198891881",
+  "added": {
+    "head-neck": [
+      {
+        "id": "lower-neck-vessels-scalenes",
+        "title": "Lower neck: vessels & scalenes",
+        "rule": {
+          "fmaIds": [
+            "FMA3941",
+            "FMA4058",
+            "FMA4754",
+            "FMA4762",
+            "FMA3953",
+            "FMA4694",
+            "FMA4755",
+            "FMA4763",
+            "FMA13392",
+            "FMA13393",
+            "FMA13390",
+            "FMA13391",
+            "FMA13388",
+            "FMA13389"
+          ]
+        },
+        "context": [
+          {
+            "fmaIds": [
+              "FMA13408",
+              "FMA13409",
+              "FMA13348",
+              "FMA13349"
+            ]
+          }
+        ],
+        "includeSkeleton": false,
+        "view": "anterior",
+        "description": "Compare the supplied bilateral common-carotid, internal-jugular, subclavian and scalene source surfaces with sternocleidomastoid and omohyoid context. Start anteriorly, then rotate the unchanged source frame.",
+        "inspect": "Select a labelled surface and Remove it, then Undo to restore it. Extract selected separates that whole source surface; return separation to 0% to restore its original source position. This is source orientation only, not proof of a complete neck, operative planes, vascular patency or branching, or CT/ultrasound registration. Nerves, skeleton and a cervical-sheath model are not supplied by this study. Anatomical review is pending.",
+        "landmarks": [
+          "common carotid artery$",
+          "internal jugular vein$",
+          "subclavian artery$",
+          "subclavian vein$",
+          "scalenus anterior$",
+          "scalenus medius$",
+          "scalenus posterior$"
+        ]
+      }
+    ],
+    "whole-body": [
+      {
+        "id": "lower-neck-vessels-scalenes",
+        "title": "Lower neck: vessels & scalenes",
+        "rule": {
+          "fmaIds": [
+            "FMA3941",
+            "FMA4058",
+            "FMA4754",
+            "FMA4762",
+            "FMA3953",
+            "FMA4694",
+            "FMA4755",
+            "FMA4763",
+            "FMA13392",
+            "FMA13393",
+            "FMA13390",
+            "FMA13391",
+            "FMA13388",
+            "FMA13389"
+          ]
+        },
+        "context": [
+          {
+            "fmaIds": [
+              "FMA13408",
+              "FMA13409",
+              "FMA13348",
+              "FMA13349"
+            ]
+          }
+        ],
+        "includeSkeleton": false,
+        "view": "anterior",
+        "description": "Compare the supplied bilateral common-carotid, internal-jugular, subclavian and scalene source surfaces with sternocleidomastoid and omohyoid context. Start anteriorly, then rotate the unchanged source frame.",
+        "inspect": "Select a labelled surface and Remove it, then Undo to restore it. Extract selected separates that whole source surface; return separation to 0% to restore its original source position. This is source orientation only, not proof of a complete neck, operative planes, vascular patency or branching, or CT/ultrasound registration. Nerves, skeleton and a cervical-sheath model are not supplied by this study. Anatomical review is pending.",
+        "landmarks": [
+          "common carotid artery$",
+          "internal jugular vein$",
+          "subclavian artery$",
+          "subclavian vein$",
+          "scalenus anterior$",
+          "scalenus medius$",
+          "scalenus posterior$"
+        ]
+      }
+    ]
+  },
+  "unchangedTopics": 9936,
+  "catalogHash": "bb3518cfdc995729f0e9c528d8e4071cb6ebc71852dcb92ded6c5bdebda70830",
+  "shoulderHash": "8172669d3d9e1a89446104715c0e2047fe60857ba2cb39f19af16f2e0fc86ab0"
+}
