@@ -1,0 +1,211 @@
+{
+  "version": 1,
+  "original": {
+    "id": "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
+    "fmaId": "FMA50737",
+    "name": "Celiac artery",
+    "sourceName": "celiac artery",
+    "system": "vessels",
+    "category": "vessel",
+    "laterality": "unspecified",
+    "region": "abdomen",
+    "regions": [
+      "abdomen"
+    ],
+    "bundle": "abdomen-vessels-recovery",
+    "nodeName": "FMA50737",
+    "bounds": {
+      "min": [
+        0.011040699668228626,
+        2.7765002250671387,
+        0.5759400129318237
+      ],
+      "max": [
+        0.12240300327539444,
+        2.898399591445923,
+        0.8078700304031372
+      ]
+    },
+    "center": [
+      0.06672185147181153,
+      2.8374499082565308,
+      0.6919050216674805
+    ],
+    "anchor": [
+      0.0719733014702797,
+      2.86579966545105,
+      0.7196300029754639
+    ],
+    "sourceTree": "isa",
+    "sources": [
+      {
+        "file": "FJ1846",
+        "sha256": "7aae236dac488ac875ae9f62b59d84ce6f0d85cb80098ef12346cac59f5a609f"
+      },
+      {
+        "file": "FJ2013",
+        "sha256": "5ab733ce7f017e7d9c033936f2008b682eb73dacd742e8ea53cb77a8a28d4492"
+      }
+    ],
+    "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+    "provenance": {
+      "method": "licensed-source-mesh",
+      "license": "CC-BY-4.0",
+      "sourceVersion": "4.0",
+      "recovered": true
+    },
+    "validation": {
+      "status": "unvalidated",
+      "anatomicalReview": false
+    }
+  },
+  "replacement": {
+    "id": "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
+    "fmaId": "FMA50737",
+    "name": "Celiac artery",
+    "sourceName": "celiac artery",
+    "system": "vessels",
+    "category": "vessel",
+    "laterality": "unspecified",
+    "region": "abdomen",
+    "regions": [
+      "abdomen"
+    ],
+    "bundle": "celiac-display-corrected",
+    "nodeName": "FMA50737",
+    "bounds": {
+      "min": [
+        0.011040699668228626,
+        2.7765002250671387,
+        0.5759400129318237
+      ],
+      "max": [
+        0.12240300327539444,
+        2.898399591445923,
+        0.8078700304031372
+      ]
+    },
+    "center": [
+      0.06672185147181153,
+      2.8374499082565308,
+      0.6919050216674805
+    ],
+    "anchor": [
+      0.0719733014702797,
+      2.86579966545105,
+      0.7196300029754639
+    ],
+    "sourceTree": "isa",
+    "sources": [
+      {
+        "file": "FJ1846",
+        "sha256": "7aae236dac488ac875ae9f62b59d84ce6f0d85cb80098ef12346cac59f5a609f"
+      },
+      {
+        "file": "FJ2013",
+        "sha256": "5ab733ce7f017e7d9c033936f2008b682eb73dacd742e8ea53cb77a8a28d4492"
+      }
+    ],
+    "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+    "provenance": {
+      "method": "licensed-source-mesh",
+      "license": "CC-BY-4.0",
+      "sourceVersion": "4.0",
+      "recovered": true
+    },
+    "validation": {
+      "status": "unvalidated",
+      "anatomicalReview": false
+    }
+  },
+  "originalBundle": {
+    "id": "abdomen-vessels-recovery",
+    "url": "/models/bodyparts3d/full-body/abdomen-vessels-recovery.glb",
+    "bytes": 477592,
+    "sha256": "e41d66684de08fd9bd7dfca340acb63cbf7714eb09a3ea9594184f497c509abe",
+    "structures": 14
+  },
+  "bundle": {
+    "id": "celiac-display-corrected",
+    "url": "/models/bodyparts3d/celiac-display/celiac-display.glb?v=4f431242839c255ae2320b4004c537a4c2defb7d0cd7b51fdea60f7ba3c09e8f",
+    "bytes": 5604,
+    "sha256": "4f431242839c255ae2320b4004c537a4c2defb7d0cd7b51fdea60f7ba3c09e8f",
+    "structures": 1
+  },
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "modification": {
+    "adaptation": "exact-duplicate-render-copy-removal-v1",
+    "retainedSourceRecords": [
+      {
+        "file": "FJ1846",
+        "sha256": "7aae236dac488ac875ae9f62b59d84ce6f0d85cb80098ef12346cac59f5a609f"
+      },
+      {
+        "file": "FJ2013",
+        "sha256": "5ab733ce7f017e7d9c033936f2008b682eb73dacd742e8ea53cb77a8a28d4492"
+      }
+    ],
+    "retainedTriangles": 238,
+    "omittedDuplicateRenderTriangles": 238,
+    "originalRenderTriangles": 476,
+    "positionsNormalsBoundsAndWindingPreserved": true,
+    "geometryRepair": false,
+    "clinicalApproval": false,
+    "reason": "The two source files and both rendered geometry halves are exact equivalents; one render copy is retained without geometry editing."
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
+  }
+}

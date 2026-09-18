@@ -94,6 +94,19 @@ Authored visibility recipes, display-only ghosting, original contour/hatching sh
 
 ## Recovery extension — 2026-09-06
 
+## Exact celiac-artery display adaptation — 2026-09-18
+
+The separately versioned `celiac-display/celiac-display.glb` retains one of two
+proven identical render copies of FMA50737 (238 triangles instead of 476).
+Original source records FJ1846 and FJ2013, their hashes, the raw catalogue and
+original bundle remain intact. Positions, normals, winding and bounds are
+preserved exactly; no tolerance-based deduplication or invented anatomy is used.
+This adaptation remains BodyParts3D, © The Database Center for Life Science,
+licensed under CC Attribution 4.0 International. Source metadata and adaptation
+details accompany the generated file. No clinical approval is conferred.
+
+### Historical recovery extension
+
 The paragraph below records the first recovery pass. The following gap pass added **62 further v4 entries**, bringing the current total to **823 in 61 bundles (88.63 MB)**. All additional meshes remain under the same explicit **CC BY 4.0** grant, with source hashes in the catalogue. The v3 CC BY-SA 2.1 Japan archive was researched but **not distributed or mixed into the model**. No new share-alike obligation, dependency, font, texture or paid service was introduced. See `docs/GAP_FILLING.md` for the source/adaptation ledger and held alternatives.
 
 159 further concepts from the same official archives bring the library to 761 entries in 53 GLB bundles (86.2 MB). Exact additions, hashes and regions are in `content/recovery-manifest.json` and the public catalogue. In addition to existing adaptations, recovered vascular/rectal components are separated from heart, liver and large-intestine display aggregates to avoid duplicate rendering; their source coordinates and aggregate public IDs are preserved. All entries are explicitly unvalidated. No generated anatomy, new textures, fonts, third-party model collection or paid service was added. The official CC BY 4.0 grant was rechecked during this extension. Z-Anatomy was not imported because its upstream attribution list includes non-commercial components requiring asset-level clearance; see `docs/ANATOMY_RECOVERY.md`.

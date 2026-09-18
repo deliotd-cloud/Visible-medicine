@@ -9,7 +9,7 @@
   },
   {
     "path": "LICENSES/BODYPARTS3D_FULL_BODY.md",
-    "sha256": "3d8d22ddf1bf0998f81b400d639b9ce83d9feca323627a72459078aff0669204"
+    "sha256": "71d06b15964d053a5901a5d4125a719feae87618b9b42c7c3808a796169146b2"
   },
   {
     "path": "LICENSES/CC-BY-4.0.txt",
@@ -141,7 +141,7 @@
   },
   {
     "path": "app/dissection-data.ts",
-    "sha256": "59477305d1d845fabcc3b3b0b8cfc4d8f7ca7fe1b9e5a092060ac5a6e0f133f7"
+    "sha256": "51b7d1bcf10d98e02d2016d648d92748fe01a5b7baf5c4d016a1d9c587a7cefb"
   },
   {
     "path": "app/dissection-orientation.tsx",
@@ -904,6 +904,14 @@
     "sha256": "b94da1bcd39a91f513565135cb8a4e70c64998fff05aaba8df8a83d7f156f36b"
   },
   {
+    "path": "content/lower-neck-study-pins.json",
+    "sha256": "1e6dab5b8cad36ddd54c6734c2ae0f8f3370f366390e631ff1e3fb8da4990843"
+  },
+  {
+    "path": "content/lower-neck-study.ts",
+    "sha256": "792618b31ed43df22c4bff4c1ff8a1649166a6353044a9b4ae75289bfe79cb0d"
+  },
+  {
     "path": "content/lower-venous-imaging-pins.json",
     "sha256": "4c981696a009e463c912b90d2ede3540ad527401220386fed3b77aeb873332d4"
   },
@@ -1313,7 +1321,7 @@
   },
   {
     "path": "integration/head-neck/companions.mjs",
-    "sha256": "c0f7336a698469e1d90a686a9a5abd5501c405130e699eedc1d0304b4c5ee8e1"
+    "sha256": "eeeb3bc7ba5048100af858286dc0166da6f37e4cc9957d72ac90de16a0211863"
   },
   {
     "path": "integration/head-neck/credits.html",
@@ -1361,7 +1369,7 @@
   },
   {
     "path": "lib/abdominal-arterial.ts",
-    "sha256": "29a81d40909eff2d828e72bda5e2cc8660e51371e602c99cdf05fc1c5e32aa51"
+    "sha256": "23f20b2c03f6b4e2fbe13d47de0af0ba0ad25e36dc8baae4439b43448531fe03"
   },
   {
     "path": "lib/abdominal-branch-imaging.ts",
@@ -1529,7 +1537,7 @@
   },
   {
     "path": "lib/body-display-catalog.ts",
-    "sha256": "1c210b92d686ea0c36a097e9a7a91f6a0c88c6a0d236e40726ba582256908241"
+    "sha256": "b5dc9cf1cf661bda6a232cfaeccf8473c6eba19da2975107d91e29ac21bcdef8"
   },
   {
     "path": "lib/body-presentation-parts.ts",
@@ -1597,7 +1605,7 @@
   },
   {
     "path": "lib/central-vessel-imaging.ts",
-    "sha256": "92cc59bf3f16daddd09b9e1261a23454e679f3a36f6c6c317564173c6dc08558"
+    "sha256": "d350763dc2518e42b158d907e8289e7b7e50bc45c53314a25160c0924d4fa4bb"
   },
   {
     "path": "lib/cerebral-arterial.ts",
@@ -2069,7 +2077,7 @@
   },
   {
     "path": "lib/limb-vascular-studies.ts",
-    "sha256": "7d06c1a6aa6389e851927ca22f137b9bf9fb7d89ad89ed0b261720e98047a0e0"
+    "sha256": "62429b8d856a823caab84e391b034f7fc1f06e4193d3c7a517d7b966c6a4ed65"
   },
   {
     "path": "lib/limbic-landmarks.ts",
@@ -2098,6 +2106,10 @@
   {
     "path": "lib/lower-limb-vessel-clinical-curriculum.ts",
     "sha256": "eb79201901dfbe170f0336888ac864308507b6c8f47d1cdf1a0fcddd7e7d295b"
+  },
+  {
+    "path": "lib/lower-neck-study.ts",
+    "sha256": "13e3a214881916a0ab260743cc6a9e7aa77edd33ff2ca5add220e46d4cfa1b4d"
   },
   {
     "path": "lib/lower-venous-imaging.ts",
@@ -2646,6 +2658,14 @@
   {
     "path": "public/models/bodyparts3d/cardiac/great-vessel-context.json",
     "sha256": "fac546e54237db4bed783d583b01c583f423a35a74bd759727d519074de0af85"
+  },
+  {
+    "path": "public/models/bodyparts3d/celiac-display/README.md",
+    "sha256": "348ccc4db232320685b406e6356381432fa76d56ae4e3ed635a2125f262ed26a"
+  },
+  {
+    "path": "public/models/bodyparts3d/celiac-display/display-correction.json",
+    "sha256": "d71a1bccdbd2c18e1d5a9f6537170e1acbb66c832fa6fbee68e25c7a0ad3ca82"
   },
   {
     "path": "public/models/bodyparts3d/cerebral/catalog.json",

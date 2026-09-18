@@ -7,9 +7,9 @@ test('regional export binds the reviewed hand studies and MRI drafts without rep
   const base='public/atlas-runtime/head-neck/';
   const bytes=readFileSync(base+'manifest.json');
   const sha=(b: string|Buffer)=>createHash('sha256').update(b).digest('hex');
-  assert.equal(sha(bytes),'74d70714d59b54161ef48a2eaa1f8cdd790beffc03c63e4fae2673d3a2ff36c9');
+  assert.equal(sha(bytes),'aeba9e5d13de4e1ee1d27d11a74c5090b990865b14eae657707b2b104c99eb61');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'2d68ad0aa45aa270f2b0a114be82003ea6d1b9c8');
+  assert.equal(manifest.sourceCommit,'3305cb9a28206db86e7f9b0171323d88a3cfa01b');
   assert.equal(manifest.patientDataIncluded,false);assert.equal(manifest.clinicalApproved,false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,hash] of Object.entries({
@@ -23,5 +23,6 @@ test('regional export binds the reviewed hand studies and MRI drafts without rep
   const runtime=scripts.map(f=>{const b=readFileSync(base+f.path);assert.equal(sha(b),f.sha256);return b.toString();}).join('\n');
   for(const label of ['hand-intrinsic-thenar-adductor','hand-intrinsic-interosseous-lumbrical','Full extent in View menu'])assert(runtime.includes(label));
   const inventory=JSON.parse(readFileSync('lib/atlas-model-inventory.json','utf8'));
-  assert.equal(sha(JSON.stringify(inventory.models)),'972cd41676713abf3aa458055783ce95bcfac41596bf5ec411911f9a1717aa10');
+  const priorModels=inventory.models.filter((m:{sha256:string})=>m.sha256!=='4f431242839c255ae2320b4004c537a4c2defb7d0cd7b51fdea60f7ba3c09e8f');
+  assert.equal(sha(JSON.stringify(priorModels)),'972cd41676713abf3aa458055783ce95bcfac41596bf5ec411911f9a1717aa10');
 });

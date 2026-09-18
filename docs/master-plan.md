@@ -2,6 +2,15 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 18 September — celiac and lower-neck regional integration
+
+The corrected celiac model passed authenticated upload and complete-byte checking
+of all135 staged objects. The generated regional viewer now incorporates the
+saved lower-neck study and correction from Atlas3305cb9a. All134previous models,
+141previous paths and other viewers remain; the new total is135models/142paths.
+See [integration evidence](atlas-celiac-neck-20260918.md). Private publication,
+recovery and clinical acceptance remain separately evidenced.
+
 ## 18 September — celiac display correction staging
 
 Register the exact corrected celiac object for administrator upload only.

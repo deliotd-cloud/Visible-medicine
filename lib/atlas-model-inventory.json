@@ -23,9 +23,9 @@
     },
     {
       "module": "head-neck",
-      "sourceCommit": "2d68ad0aa45aa270f2b0a114be82003ea6d1b9c8",
-      "manifestSha256": "74d70714d59b54161ef48a2eaa1f8cdd790beffc03c63e4fae2673d3a2ff36c9",
-      "modelPaths": 133
+      "sourceCommit": "3305cb9a28206db86e7f9b0171323d88a3cfa01b",
+      "manifestSha256": "aeba9e5d13de4e1ee1d27d11a74c5090b990865b14eae657707b2b104c99eb61",
+      "modelPaths": 134
     }
   ],
   "models": [
@@ -287,6 +287,13 @@
       "bytes": 10012,
       "paths": [
         "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-nerves-inventory.glb"
+      ]
+    },
+    {
+      "sha256": "4f431242839c255ae2320b4004c537a4c2defb7d0cd7b51fdea60f7ba3c09e8f",
+      "bytes": 5604,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/celiac-display/celiac-display.glb"
       ]
     },
     {

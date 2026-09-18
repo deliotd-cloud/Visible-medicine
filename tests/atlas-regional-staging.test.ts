@@ -23,16 +23,17 @@ test('regional staging preserves immutable candidates after explicit administrat
   assert.equal(candidate.proposedInventorySha256, 'a74532b7b64b61221f14ddefb02c267296376397c19da5553772996fdcaebba4');
   assert.equal(candidate.activeInventorySha256, '9f686f1a2c9909bba2b46b1b76805aa8168287c4aa4d0f420e942b3fb7c90e2c');
   // Teaching/UI companions can advance without rewriting the immutable staging receipt.
-  assert.equal(sha(JSON.stringify(active, null, 2) + '\n'), '77f5958918eeea3535517e4f9b49c06b35540b3f810223732ded8e299710f7c0');
+  assert.equal(sha(JSON.stringify(active, null, 2) + '\n'), '23385abb9c34947b4118efa3106eea53e3f955c3fa163feae7f2484550dfb0ed');
+  const priorActiveModels=active.models.filter((m: AtlasStoredModel)=>m.sha256!==celiac.models[0].sha256);
   const pelvicAlias = '/atlas-runtime/female-pelvis/models/hra-renal/kidneys.glb';
   const renal = active.models.find((m: AtlasStoredModel) => m.paths.includes(pelvicAlias));
   assert.equal(renal.sha256, 'bd5d2affb912f135c8c8da7e7892fbc906ebae017ed7042e900646c2b6332cfc');
   assert.equal(renal.bytes, 3557552);
   assert.equal(active.models.flatMap((m: AtlasStoredModel) => m.paths).filter((p: string) => p === pelvicAlias).length, 1);
-  const previousModels = active.models.map((m: AtlasStoredModel) => ({...m, paths:m.paths.filter(p => p !== pelvicAlias)}));
+  const previousModels = priorActiveModels.map((m: AtlasStoredModel) => ({...m, paths:m.paths.filter(p => p !== pelvicAlias)}));
   assert.equal(sha(JSON.stringify(previousModels)), '5047d0652bcadd1772f60e2928ae53e228d9359d99488056e39777c4a7cdedb6', 'Removing exactly the new alias reproduces every previously verified model identity, byte count and path');
-  assert.equal(sha(JSON.stringify(active.models)), '972cd41676713abf3aa458055783ce95bcfac41596bf5ec411911f9a1717aa10');
-  assert.equal(sha(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8')), '74d70714d59b54161ef48a2eaa1f8cdd790beffc03c63e4fae2673d3a2ff36c9');
+  assert.equal(sha(JSON.stringify(priorActiveModels)), '972cd41676713abf3aa458055783ce95bcfac41596bf5ec411911f9a1717aa10');
+  assert.equal(sha(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8')), 'aeba9e5d13de4e1ee1d27d11a74c5090b990865b14eae657707b2b104c99eb61');
   assert.deepEqual(candidate.models, [
     { sha256: 'f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826', bytes: 11856, paths: ['/atlas-runtime/head-neck/models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb'] },
     { sha256: '9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5', bytes: 65264, paths: ['/atlas-runtime/head-neck/models/bodyparts3d/short-ciliary/short-ciliary.glb'] },
@@ -57,7 +58,10 @@ test('regional staging preserves immutable candidates after explicit administrat
     models: [{sha256:'4f431242839c255ae2320b4004c537a4c2defb7d0cd7b51fdea60f7ba3c09e8f',bytes:5604,paths:['/atlas-runtime/head-neck/models/bodyparts3d/celiac-display/celiac-display.glb']}],
   });
   for (const model of existing) assert.deepEqual(expected.find(m => m.sha256 === model.sha256), model);
-  for (const path of celiac.models[0].paths) assert.throws(() => resolveAtlasDeliveryModel(new URL(path, 'https://atlas.test'), active.models), 'Staging must not activate the new model');
+  for (const path of celiac.models[0].paths) {
+    assert.throws(() => resolveAtlasDeliveryModel(new URL(path, 'https://atlas.test'), priorActiveModels), 'Staging alone did not activate the model in the prior inventory');
+    assert.equal(resolveAtlasDeliveryModel(new URL(path, 'https://atlas.test'), active.models).sha256, celiac.models[0].sha256);
+  }
   for (const model of prior) assert.deepEqual(expected.find(m => m.sha256 === model.sha256), model);
   // Execute the actual registration module with only its imports supplied;
   // testing a hand-built union alone would miss broken production wiring.
@@ -80,7 +84,7 @@ test('regional staging preserves immutable candidates after explicit administrat
   assert.deepEqual(exports.atlasRegisteredStagingModels, expected);
   assert.equal(expected.length, 135);
   assert.equal(expected.flatMap(m => m.paths).length, 142);
-  assert.equal(active.models.length, 134);
+  assert.equal(active.models.length, 135);
   assert.deepEqual(existing, active.models.map((m: AtlasStoredModel) => ({...m, paths:[...m.paths].sort()})), 'Every previous object remains active; the new correction is staging-only');
   assert.equal(candidate.models.reduce((n: number, m: AtlasStoredModel) => n + m.bytes, 0), 77120);
   for (const mode of ['upload', 'check', 'download'] as const) assert.strictEqual(atlasStagingCheckModels(mode, expected, active.models), expected);
