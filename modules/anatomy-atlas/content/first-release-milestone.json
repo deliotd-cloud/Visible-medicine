@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "milestone": "Focused first release",
+  "scope": {
+    "included": "A whole-body overview using the existing regions, with a detailed, reliable and reviewed subset for the first release.",
+    "deferred": "The full Atlas remains the long-term goal; this milestone does not redefine later anatomy, teaching or imaging coverage.",
+    "imagingBoundary": "Imaging starts with CT head through Didanix Education/light only after data clearance and segmentation validation. Clinical PACS is out of scope."
+  },
+  "historicalBaseline": {
+    "atlasRevision": "26b7c097278b8789b84bf9f540a0f26d6161173e",
+    "websiteRevision": "b4514b336868b7cedca25f33b61ed428355c4726",
+    "publication": "private94",
+    "candidateApproval": false,
+    "note": "Historical baseline only; it is not evidence that a release candidate is approved."
+  },
+  "candidate": {
+    "atlasRevision": "26b7c097278b8789b84bf9f540a0f26d6161173e",
+    "websiteRevision": "b4514b336868b7cedca25f33b61ed428355c4726",
+    "note": "Starting review baseline for gate evaluation, not a frozen shipping candidate; matching revisions do not by themselves establish approval and all gates remain pending."
+  },
+  "releaseAuthority": {
+    "status": "external-verification-required",
+    "note": "Gate records are attestations. Release and clinical authority remain with the designated people and processes outside this tool."
+  },
+  "gates": [
+    {
+      "id": "scope",
+      "status": "pending",
+      "owner": "shared",
+      "criterion": "The candidate presents the whole-body overview and existing regions while clearly identifying the detailed, reliable and reviewed first-release subset.",
+      "action": "Agree the included subset and record revision-bound evidence that deferred coverage is explicit.",
+      "attestation": null
+    },
+    {
+      "id": "viewer",
+      "status": "pending",
+      "owner": "agent",
+      "criterion": "Core viewer journeys for the overview and included subset work reliably at the candidate revisions on supported desktop and mobile layouts.",
+      "action": "Run the applicable viewer, navigation, selection and visual checks and attach their revision-bound results.",
+      "attestation": null
+    },
+    {
+      "id": "teaching",
+      "status": "pending",
+      "owner": "shared",
+      "criterion": "Included teaching is source-bound, understandable and reviewed without presenting draft clinical material as accepted.",
+      "action": "Complete content checks and obtain the required human review for the exact candidate revisions.",
+      "attestation": null
+    },
+    {
+      "id": "imaging",
+      "status": "pending",
+      "owner": "radiologist",
+      "criterion": "The first CT-head pathway uses Didanix Education/light only, with documented data clearance and segmentation validation, a tested exact structure to cleared case/location to Atlas-return journey, and explicit approximate-versus-registered positioning for the exact candidate revisions.",
+      "action": "Keep clinical PACS out of scope and record radiologist-reviewed clearance and segmentation evidence before passing.",
+      "attestation": null
+    },
+    {
+      "id": "access",
+      "status": "pending",
+      "owner": "agent",
+      "criterion": "Case, Atlas and lecture entry remain independently available with server-side enforcement tested for allowed, denied, expired and signed-out access, appropriate protected boundaries and no clinical PACS dependency.",
+      "action": "Verify each entry path and its access boundary against the exact website candidate revision.",
+      "attestation": null
+    },
+    {
+      "id": "assurance",
+      "status": "pending",
+      "owner": "shared",
+      "criterion": "Revision-bound evidence covers radiologist sign-off for the reviewed clinical subset, commercial asset notices, privacy, no blocker or major defects, device and accessibility review, recovery and rollback readiness, and explicit owner release authorization without extending approval to deferred scope.",
+      "action": "Record each responsible reviewer's identity, timestamp and evidence references tied to both exact candidate revisions, including explicit owner release authorization.",
+      "attestation": null
+    }
+  ]
+}

@@ -1,0 +1,1707 @@
+{
+  "schemaVersion": 1,
+  "purpose": "First-release review pilot; not a release allowlist",
+  "approval": false,
+  "clinicalRecordsRead": false,
+  "limits": [
+    "This index reads public source material only; it does not inspect, replace or submit private clinical decisions.",
+    "Readiness describes authored drafts, not clinically approved teaching. A pilot pass never approves an entire region.",
+    "Review paths target the standalone Atlas source app; hosted website routes and displayed revisions must be verified separately.",
+    "Root shoulder selections are not the dedicated shoulder-pilot review scope. Internal space surfaces are not tissue walls.",
+    "Imaging wording can be reviewed, but acquired-image approval remains unavailable until cleared mappings exist.",
+    "Re-run --check before review; changes require a regenerated index and the existing revision-aware review workflow."
+  ],
+  "entries": [
+    {
+      "kind": "root",
+      "fmaId": "FMA13395",
+      "name": "Right scapula",
+      "laterality": "right",
+      "structureId": "vm:anatomy:upper-limb:shoulder:right:bone:scapula",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "context": {
+        "catalogScope": "body-display-catalog",
+        "structureId": "vm:anatomy:upper-limb:shoulder:right:bone:scapula",
+        "checklistVersion": "body-review-1",
+        "structureName": "Right scapula",
+        "materialHash": "3a87e43c8802edc6f41ca870a8160ef293b09ac1136f2d26234df3f2c45a0ac2",
+        "sourceHash": "859abcdc5879b6a55e6c9b14e5300adcc715aabe1239e50fe495d986a5ea180b",
+        "teachingHash": "48094f2bd65c6eb3cdc6592b25adc627dac3cffd8908faa9becd0a5a703f6069",
+        "rendererHash": "5f229dfe2b9e0fb03a49f7ec50e95c0530eb03a059e689757eb8ba2747502bf0",
+        "checklists": {
+          "geometry": [
+            {
+              "id": "identity",
+              "label": "Confirm source identity, laterality and grouped-part boundaries."
+            },
+            {
+              "id": "shape",
+              "label": "Inspect anatomical shape, surfaces, landmarks and attachments where represented."
+            },
+            {
+              "id": "relations",
+              "label": "Check local relationships, missing tissues, source defects and model limitations."
+            },
+            {
+              "id": "views",
+              "label": "Inspect labels and selection from anterior, posterior, lateral and rotated views."
+            },
+            {
+              "id": "dissection",
+              "label": "Check isolation, cutaway, separation, removal and exact reassembly on actual devices."
+            },
+            {
+              "id": "scope",
+              "label": "Record the specific educational scope reviewed; do not imply complete anatomy or operative safety."
+            }
+          ],
+          "teaching": [
+            {
+              "id": "drafts",
+              "label": "Check every currently available draft topic and its supporting references."
+            },
+            {
+              "id": "clinical",
+              "label": "Verify anatomical/functional and clinical/pathology wording against the intended learner level."
+            },
+            {
+              "id": "modalities",
+              "label": "Review any available modality text separately from actual scan registration."
+            },
+            {
+              "id": "pending",
+              "label": "Identify pending/identity-only/generated topics; these are not covered as completed authored teaching."
+            },
+            {
+              "id": "assessment",
+              "label": "Check authored Quiz notes where supplied; the separate interactive question bank is outside this approval."
+            },
+            {
+              "id": "scope",
+              "label": "Document omissions, corrections and the precise scope of the available draft copy."
+            }
+          ],
+          "imaging": [
+            {
+              "id": "rights",
+              "label": "Verify acquired-image teaching rights and de-identification."
+            },
+            {
+              "id": "frame",
+              "label": "Confirm patient/reference identity, laterality, units, orientation and series/frame metadata."
+            },
+            {
+              "id": "registration",
+              "label": "Validate registration landmarks, transform and measured error."
+            },
+            {
+              "id": "mapping",
+              "label": "Verify both-direction structure/image mapping and failure handling."
+            },
+            {
+              "id": "interpretation",
+              "label": "Review acquired-image annotations and interpretation with a radiologist."
+            }
+          ]
+        },
+        "blockers": {
+          "geometry": [],
+          "teaching": [],
+          "imaging": [
+            "No validated acquired-image series or spatial registration is connected. Imaging approval is unavailable."
+          ]
+        },
+        "teachingTabs": [
+          "anatomy",
+          "function",
+          "ct",
+          "mri",
+          "xray",
+          "ultrasound",
+          "pathology",
+          "clinical",
+          "quiz"
+        ],
+        "revisions": {
+          "geometry": "d782b4cfe8f31ce1e8e4e05815d83329da1f86dd7c4e6178e5e1485e0590fc66",
+          "teaching": "619bf7e580b2a1463c77e8989dd5301a0b06a7cbc0928495c153c7109ca0be9b",
+          "imaging": null
+        }
+      },
+      "topicReadiness": [
+        {
+          "tab": "anatomy",
+          "readiness": "draft"
+        },
+        {
+          "tab": "function",
+          "readiness": "draft"
+        },
+        {
+          "tab": "ct",
+          "readiness": "draft"
+        },
+        {
+          "tab": "mri",
+          "readiness": "draft"
+        },
+        {
+          "tab": "xray",
+          "readiness": "draft"
+        },
+        {
+          "tab": "ultrasound",
+          "readiness": "draft"
+        },
+        {
+          "tab": "pathology",
+          "readiness": "draft"
+        },
+        {
+          "tab": "clinical",
+          "readiness": "draft"
+        },
+        {
+          "tab": "quiz",
+          "readiness": "draft"
+        }
+      ],
+      "atlasLink": "/regions/shoulder-arm?study=1&structure=vm%3Aanatomy%3Aupper-limb%3Ashoulder%3Aright%3Abone%3Ascapula&side=both&source=f75517af8f2d72d1fd890c20fea3375948addab8eaee42f9217dcfd5754d3649",
+      "reviewPath": "/review/body?structure=vm%3Aanatomy%3Aupper-limb%3Ashoulder%3Aright%3Abone%3Ascapula",
+      "decision": "not-recorded-in-this-index"
+    },
+    {
+      "kind": "root",
+      "fmaId": "FMA13396",
+      "name": "Left scapula",
+      "laterality": "left",
+      "structureId": "vm:anatomy:body:shoulder-arm:left:bone:left-scapula",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "context": {
+        "catalogScope": "body-display-catalog",
+        "structureId": "vm:anatomy:body:shoulder-arm:left:bone:left-scapula",
+        "checklistVersion": "body-review-1",
+        "structureName": "Left scapula",
+        "materialHash": "fed06ccad70ef1d4514b5100428920deb4af1dc2b9cf2ed4c51c4ebb986c2fd8",
+        "sourceHash": "b8607b45de8d4df22ca1ab3ddfdab45640ff536b1f9f2f0a1c3c5b42f05f0633",
+        "teachingHash": "d7445ceb37dbe74173f8672baa593415b63dc87bab781e358046f275bb5afec1",
+        "rendererHash": "5f229dfe2b9e0fb03a49f7ec50e95c0530eb03a059e689757eb8ba2747502bf0",
+        "checklists": {
+          "geometry": [
+            {
+              "id": "identity",
+              "label": "Confirm source identity, laterality and grouped-part boundaries."
+            },
+            {
+              "id": "shape",
+              "label": "Inspect anatomical shape, surfaces, landmarks and attachments where represented."
+            },
+            {
+              "id": "relations",
+              "label": "Check local relationships, missing tissues, source defects and model limitations."
+            },
+            {
+              "id": "views",
+              "label": "Inspect labels and selection from anterior, posterior, lateral and rotated views."
+            },
+            {
+              "id": "dissection",
+              "label": "Check isolation, cutaway, separation, removal and exact reassembly on actual devices."
+            },
+            {
+              "id": "scope",
+              "label": "Record the specific educational scope reviewed; do not imply complete anatomy or operative safety."
+            }
+          ],
+          "teaching": [
+            {
+              "id": "drafts",
+              "label": "Check every currently available draft topic and its supporting references."
+            },
+            {
+              "id": "clinical",
+              "label": "Verify anatomical/functional and clinical/pathology wording against the intended learner level."
+            },
+            {
+              "id": "modalities",
+              "label": "Review any available modality text separately from actual scan registration."
+            },
+            {
+              "id": "pending",
+              "label": "Identify pending/identity-only/generated topics; these are not covered as completed authored teaching."
+            },
+            {
+              "id": "assessment",
+              "label": "Check authored Quiz notes where supplied; the separate interactive question bank is outside this approval."
+            },
+            {
+              "id": "scope",
+              "label": "Document omissions, corrections and the precise scope of the available draft copy."
+            }
+          ],
+          "imaging": [
+            {
+              "id": "rights",
+              "label": "Verify acquired-image teaching rights and de-identification."
+            },
+            {
+              "id": "frame",
+              "label": "Confirm patient/reference identity, laterality, units, orientation and series/frame metadata."
+            },
+            {
+              "id": "registration",
+              "label": "Validate registration landmarks, transform and measured error."
+            },
+            {
+              "id": "mapping",
+              "label": "Verify both-direction structure/image mapping and failure handling."
+            },
+            {
+              "id": "interpretation",
+              "label": "Review acquired-image annotations and interpretation with a radiologist."
+            }
+          ]
+        },
+        "blockers": {
+          "geometry": [],
+          "teaching": [],
+          "imaging": [
+            "No validated acquired-image series or spatial registration is connected. Imaging approval is unavailable."
+          ]
+        },
+        "teachingTabs": [
+          "anatomy",
+          "function",
+          "ct",
+          "mri",
+          "xray",
+          "pathology",
+          "clinical"
+        ],
+        "revisions": {
+          "geometry": "898a69448077d4ea3d6fd5a9e8ad0a779568d33a4e1862e927582c5cdc323f5f",
+          "teaching": "cd2767dd03d991d92e6bb828184eb286acd89321604b856299ef439c5175f325",
+          "imaging": null
+        }
+      },
+      "topicReadiness": [
+        {
+          "tab": "anatomy",
+          "readiness": "draft"
+        },
+        {
+          "tab": "function",
+          "readiness": "draft"
+        },
+        {
+          "tab": "ct",
+          "readiness": "draft"
+        },
+        {
+          "tab": "mri",
+          "readiness": "draft"
+        },
+        {
+          "tab": "xray",
+          "readiness": "draft"
+        },
+        {
+          "tab": "ultrasound",
+          "readiness": "pending"
+        },
+        {
+          "tab": "pathology",
+          "readiness": "draft"
+        },
+        {
+          "tab": "clinical",
+          "readiness": "draft"
+        },
+        {
+          "tab": "quiz",
+          "readiness": "generated-identification"
+        }
+      ],
+      "atlasLink": "/regions/shoulder-arm?study=1&structure=vm%3Aanatomy%3Abody%3Ashoulder-arm%3Aleft%3Abone%3Aleft-scapula&side=both&source=f75517af8f2d72d1fd890c20fea3375948addab8eaee42f9217dcfd5754d3649",
+      "reviewPath": "/review/body?structure=vm%3Aanatomy%3Abody%3Ashoulder-arm%3Aleft%3Abone%3Aleft-scapula",
+      "decision": "not-recorded-in-this-index"
+    },
+    {
+      "kind": "root",
+      "fmaId": "FMA32544",
+      "name": "Right supraspinatus",
+      "laterality": "right",
+      "structureId": "vm:anatomy:upper-limb:shoulder:right:muscle:supraspinatus",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "context": {
+        "catalogScope": "body-display-catalog",
+        "structureId": "vm:anatomy:upper-limb:shoulder:right:muscle:supraspinatus",
+        "checklistVersion": "body-review-1",
+        "structureName": "Right supraspinatus",
+        "materialHash": "b9a929a657161b6d4029a1faca580c36fc6f739895fe536091850a9047edef04",
+        "sourceHash": "82ba5e7e7c6b1f0f55d4356ff70aedfa427dd90e1a50aff7f2c4aba5ce268723",
+        "teachingHash": "16bc023a0e1c854f1aa2314153a71f84ca1283390fe575113634684f05be3de5",
+        "rendererHash": "5f229dfe2b9e0fb03a49f7ec50e95c0530eb03a059e689757eb8ba2747502bf0",
+        "checklists": {
+          "geometry": [
+            {
+              "id": "identity",
+              "label": "Confirm source identity, laterality and grouped-part boundaries."
+            },
+            {
+              "id": "shape",
+              "label": "Inspect anatomical shape, surfaces, landmarks and attachments where represented."
+            },
+            {
+              "id": "relations",
+              "label": "Check local relationships, missing tissues, source defects and model limitations."
+            },
+            {
+              "id": "views",
+              "label": "Inspect labels and selection from anterior, posterior, lateral and rotated views."
+            },
+            {
+              "id": "dissection",
+              "label": "Check isolation, cutaway, separation, removal and exact reassembly on actual devices."
+            },
+            {
+              "id": "scope",
+              "label": "Record the specific educational scope reviewed; do not imply complete anatomy or operative safety."
+            }
+          ],
+          "teaching": [
+            {
+              "id": "drafts",
+              "label": "Check every currently available draft topic and its supporting references."
+            },
+            {
+              "id": "clinical",
+              "label": "Verify anatomical/functional and clinical/pathology wording against the intended learner level."
+            },
+            {
+              "id": "modalities",
+              "label": "Review any available modality text separately from actual scan registration."
+            },
+            {
+              "id": "pending",
+              "label": "Identify pending/identity-only/generated topics; these are not covered as completed authored teaching."
+            },
+            {
+              "id": "assessment",
+              "label": "Check authored Quiz notes where supplied; the separate interactive question bank is outside this approval."
+            },
+            {
+              "id": "scope",
+              "label": "Document omissions, corrections and the precise scope of the available draft copy."
+            }
+          ],
+          "imaging": [
+            {
+              "id": "rights",
+              "label": "Verify acquired-image teaching rights and de-identification."
+            },
+            {
+              "id": "frame",
+              "label": "Confirm patient/reference identity, laterality, units, orientation and series/frame metadata."
+            },
+            {
+              "id": "registration",
+              "label": "Validate registration landmarks, transform and measured error."
+            },
+            {
+              "id": "mapping",
+              "label": "Verify both-direction structure/image mapping and failure handling."
+            },
+            {
+              "id": "interpretation",
+              "label": "Review acquired-image annotations and interpretation with a radiologist."
+            }
+          ]
+        },
+        "blockers": {
+          "geometry": [],
+          "teaching": [],
+          "imaging": [
+            "No validated acquired-image series or spatial registration is connected. Imaging approval is unavailable."
+          ]
+        },
+        "teachingTabs": [
+          "anatomy",
+          "function",
+          "ct",
+          "mri",
+          "ultrasound",
+          "pathology",
+          "clinical",
+          "quiz"
+        ],
+        "revisions": {
+          "geometry": "ef18941be499f44c4a37ea49725be279fccfd6087fcf5e5690e0f884715417a0",
+          "teaching": "af50bc76b7758ad77ea6845cba3e9abb45aab5928fc810ce26ab252b1c6a10cf",
+          "imaging": null
+        }
+      },
+      "topicReadiness": [
+        {
+          "tab": "anatomy",
+          "readiness": "draft"
+        },
+        {
+          "tab": "function",
+          "readiness": "draft"
+        },
+        {
+          "tab": "ct",
+          "readiness": "draft"
+        },
+        {
+          "tab": "mri",
+          "readiness": "draft"
+        },
+        {
+          "tab": "xray",
+          "readiness": "pending"
+        },
+        {
+          "tab": "ultrasound",
+          "readiness": "draft"
+        },
+        {
+          "tab": "pathology",
+          "readiness": "draft"
+        },
+        {
+          "tab": "clinical",
+          "readiness": "draft"
+        },
+        {
+          "tab": "quiz",
+          "readiness": "draft"
+        }
+      ],
+      "atlasLink": "/regions/shoulder-arm?study=1&structure=vm%3Aanatomy%3Aupper-limb%3Ashoulder%3Aright%3Amuscle%3Asupraspinatus&side=both&source=01c2e96da438f1761a3e6d6121f54e04c866073d396111ec6e018b0cc689a3e8",
+      "reviewPath": "/review/body?structure=vm%3Aanatomy%3Aupper-limb%3Ashoulder%3Aright%3Amuscle%3Asupraspinatus",
+      "decision": "not-recorded-in-this-index"
+    },
+    {
+      "kind": "root",
+      "fmaId": "FMA32545",
+      "name": "Left supraspinatus",
+      "laterality": "left",
+      "structureId": "vm:anatomy:body:shoulder-arm:left:muscle:left-supraspinatus",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "context": {
+        "catalogScope": "body-display-catalog",
+        "structureId": "vm:anatomy:body:shoulder-arm:left:muscle:left-supraspinatus",
+        "checklistVersion": "body-review-1",
+        "structureName": "Left supraspinatus",
+        "materialHash": "5bb429ea22764cb9b67582a01da10e269bfd111700fc86ddba1afa944189eee2",
+        "sourceHash": "bcd440320a87a68eafc1431a5f26f8a8cb95d9bcba4b93bf070ee08e74bd8697",
+        "teachingHash": "6143975c9698f6ae77177200d3c3e843727e8f0e2e8257dc01c165dfd6f2067c",
+        "rendererHash": "5f229dfe2b9e0fb03a49f7ec50e95c0530eb03a059e689757eb8ba2747502bf0",
+        "checklists": {
+          "geometry": [
+            {
+              "id": "identity",
+              "label": "Confirm source identity, laterality and grouped-part boundaries."
+            },
+            {
+              "id": "shape",
+              "label": "Inspect anatomical shape, surfaces, landmarks and attachments where represented."
+            },
+            {
+              "id": "relations",
+              "label": "Check local relationships, missing tissues, source defects and model limitations."
+            },
+            {
+              "id": "views",
+              "label": "Inspect labels and selection from anterior, posterior, lateral and rotated views."
+            },
+            {
+              "id": "dissection",
+              "label": "Check isolation, cutaway, separation, removal and exact reassembly on actual devices."
+            },
+            {
+              "id": "scope",
+              "label": "Record the specific educational scope reviewed; do not imply complete anatomy or operative safety."
+            }
+          ],
+          "teaching": [
+            {
+              "id": "drafts",
+              "label": "Check every currently available draft topic and its supporting references."
+            },
+            {
+              "id": "clinical",
+              "label": "Verify anatomical/functional and clinical/pathology wording against the intended learner level."
+            },
+            {
+              "id": "modalities",
+              "label": "Review any available modality text separately from actual scan registration."
+            },
+            {
+              "id": "pending",
+              "label": "Identify pending/identity-only/generated topics; these are not covered as completed authored teaching."
+            },
+            {
+              "id": "assessment",
+              "label": "Check authored Quiz notes where supplied; the separate interactive question bank is outside this approval."
+            },
+            {
+              "id": "scope",
+              "label": "Document omissions, corrections and the precise scope of the available draft copy."
+            }
+          ],
+          "imaging": [
+            {
+              "id": "rights",
+              "label": "Verify acquired-image teaching rights and de-identification."
+            },
+            {
+              "id": "frame",
+              "label": "Confirm patient/reference identity, laterality, units, orientation and series/frame metadata."
+            },
+            {
+              "id": "registration",
+              "label": "Validate registration landmarks, transform and measured error."
+            },
+            {
+              "id": "mapping",
+              "label": "Verify both-direction structure/image mapping and failure handling."
+            },
+            {
+              "id": "interpretation",
+              "label": "Review acquired-image annotations and interpretation with a radiologist."
+            }
+          ]
+        },
+        "blockers": {
+          "geometry": [],
+          "teaching": [],
+          "imaging": [
+            "No validated acquired-image series or spatial registration is connected. Imaging approval is unavailable."
+          ]
+        },
+        "teachingTabs": [
+          "anatomy",
+          "function",
+          "ct",
+          "mri",
+          "ultrasound",
+          "pathology",
+          "clinical"
+        ],
+        "revisions": {
+          "geometry": "d237ea1e3634f649115886ab8acbfa8eb2753221c5f704cb63be8cd0d982cb75",
+          "teaching": "7ac8252ea0c56d7b8245c80d54d509ae701197abf611f416322291bdc1e41df7",
+          "imaging": null
+        }
+      },
+      "topicReadiness": [
+        {
+          "tab": "anatomy",
+          "readiness": "draft"
+        },
+        {
+          "tab": "function",
+          "readiness": "draft"
+        },
+        {
+          "tab": "ct",
+          "readiness": "draft"
+        },
+        {
+          "tab": "mri",
+          "readiness": "draft"
+        },
+        {
+          "tab": "xray",
+          "readiness": "pending"
+        },
+        {
+          "tab": "ultrasound",
+          "readiness": "draft"
+        },
+        {
+          "tab": "pathology",
+          "readiness": "draft"
+        },
+        {
+          "tab": "clinical",
+          "readiness": "draft"
+        },
+        {
+          "tab": "quiz",
+          "readiness": "generated-identification"
+        }
+      ],
+      "atlasLink": "/regions/shoulder-arm?study=1&structure=vm%3Aanatomy%3Abody%3Ashoulder-arm%3Aleft%3Amuscle%3Aleft-supraspinatus&side=both&source=01c2e96da438f1761a3e6d6121f54e04c866073d396111ec6e018b0cc689a3e8",
+      "reviewPath": "/review/body?structure=vm%3Aanatomy%3Abody%3Ashoulder-arm%3Aleft%3Amuscle%3Aleft-supraspinatus",
+      "decision": "not-recorded-in-this-index"
+    },
+    {
+      "kind": "root",
+      "fmaId": "FMA24474",
+      "name": "Right femur",
+      "laterality": "right",
+      "structureId": "vm:anatomy:body:thigh:right:bone:right-femur",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "context": {
+        "catalogScope": "body-display-catalog",
+        "structureId": "vm:anatomy:body:thigh:right:bone:right-femur",
+        "checklistVersion": "body-review-1",
+        "structureName": "Right femur",
+        "materialHash": "7b68fb492acd876313cdf6f51442b93c89203a540c9abd3d92eb4c6c6fbad924",
+        "sourceHash": "fb898aa1d0e0ab13f69c56e073642bb107dda9828121dce778f10abe1ebd150f",
+        "teachingHash": "3d5e0d9427094588ab691017c5a9ee7dd3359b9c162b686d9fc0b6c98f4701f0",
+        "rendererHash": "5f229dfe2b9e0fb03a49f7ec50e95c0530eb03a059e689757eb8ba2747502bf0",
+        "checklists": {
+          "geometry": [
+            {
+              "id": "identity",
+              "label": "Confirm source identity, laterality and grouped-part boundaries."
+            },
+            {
+              "id": "shape",
+              "label": "Inspect anatomical shape, surfaces, landmarks and attachments where represented."
+            },
+            {
+              "id": "relations",
+              "label": "Check local relationships, missing tissues, source defects and model limitations."
+            },
+            {
+              "id": "views",
+              "label": "Inspect labels and selection from anterior, posterior, lateral and rotated views."
+            },
+            {
+              "id": "dissection",
+              "label": "Check isolation, cutaway, separation, removal and exact reassembly on actual devices."
+            },
+            {
+              "id": "scope",
+              "label": "Record the specific educational scope reviewed; do not imply complete anatomy or operative safety."
+            }
+          ],
+          "teaching": [
+            {
+              "id": "drafts",
+              "label": "Check every currently available draft topic and its supporting references."
+            },
+            {
+              "id": "clinical",
+              "label": "Verify anatomical/functional and clinical/pathology wording against the intended learner level."
+            },
+            {
+              "id": "modalities",
+              "label": "Review any available modality text separately from actual scan registration."
+            },
+            {
+              "id": "pending",
+              "label": "Identify pending/identity-only/generated topics; these are not covered as completed authored teaching."
+            },
+            {
+              "id": "assessment",
+              "label": "Check authored Quiz notes where supplied; the separate interactive question bank is outside this approval."
+            },
+            {
+              "id": "scope",
+              "label": "Document omissions, corrections and the precise scope of the available draft copy."
+            }
+          ],
+          "imaging": [
+            {
+              "id": "rights",
+              "label": "Verify acquired-image teaching rights and de-identification."
+            },
+            {
+              "id": "frame",
+              "label": "Confirm patient/reference identity, laterality, units, orientation and series/frame metadata."
+            },
+            {
+              "id": "registration",
+              "label": "Validate registration landmarks, transform and measured error."
+            },
+            {
+              "id": "mapping",
+              "label": "Verify both-direction structure/image mapping and failure handling."
+            },
+            {
+              "id": "interpretation",
+              "label": "Review acquired-image annotations and interpretation with a radiologist."
+            }
+          ]
+        },
+        "blockers": {
+          "geometry": [],
+          "teaching": [],
+          "imaging": [
+            "No validated acquired-image series or spatial registration is connected. Imaging approval is unavailable."
+          ]
+        },
+        "teachingTabs": [
+          "anatomy",
+          "function",
+          "ct",
+          "mri",
+          "xray",
+          "pathology",
+          "clinical"
+        ],
+        "revisions": {
+          "geometry": "7fd0f23dfde89a214c5d70d95418a37eeccbeed2e101c2292111d6338350e4ab",
+          "teaching": "f9f7fefd5b0803105fb1269f1cb488edf976319bab345aa2c2fddca633d7e71b",
+          "imaging": null
+        }
+      },
+      "topicReadiness": [
+        {
+          "tab": "anatomy",
+          "readiness": "draft"
+        },
+        {
+          "tab": "function",
+          "readiness": "draft"
+        },
+        {
+          "tab": "ct",
+          "readiness": "draft"
+        },
+        {
+          "tab": "mri",
+          "readiness": "draft"
+        },
+        {
+          "tab": "xray",
+          "readiness": "draft"
+        },
+        {
+          "tab": "ultrasound",
+          "readiness": "pending"
+        },
+        {
+          "tab": "pathology",
+          "readiness": "draft"
+        },
+        {
+          "tab": "clinical",
+          "readiness": "draft"
+        },
+        {
+          "tab": "quiz",
+          "readiness": "generated-identification"
+        }
+      ],
+      "atlasLink": "/regions/thigh?study=1&structure=vm%3Aanatomy%3Abody%3Athigh%3Aright%3Abone%3Aright-femur&side=both&source=27bd799bd85387beea9fab40cbe2f83a5e780983170db4dfd1d2e0eda8fd2b59",
+      "reviewPath": "/review/body?structure=vm%3Aanatomy%3Abody%3Athigh%3Aright%3Abone%3Aright-femur",
+      "decision": "not-recorded-in-this-index"
+    },
+    {
+      "kind": "root",
+      "fmaId": "FMA24475",
+      "name": "Left femur",
+      "laterality": "left",
+      "structureId": "vm:anatomy:body:thigh:left:bone:left-femur",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "context": {
+        "catalogScope": "body-display-catalog",
+        "structureId": "vm:anatomy:body:thigh:left:bone:left-femur",
+        "checklistVersion": "body-review-1",
+        "structureName": "Left femur",
+        "materialHash": "a469f87ad583237a668aa868eeb1aed7b2e906eb3b51cf38398be729bdc442ef",
+        "sourceHash": "af7730b35878e6d0014ded8f7bddb0836204d59f5d01dbdcacc2e143ca3edd23",
+        "teachingHash": "6f93b71ce4405a5c50a84ec7573c4b7dafc66c37bab8b34f8f719f38c8ff06fb",
+        "rendererHash": "5f229dfe2b9e0fb03a49f7ec50e95c0530eb03a059e689757eb8ba2747502bf0",
+        "checklists": {
+          "geometry": [
+            {
+              "id": "identity",
+              "label": "Confirm source identity, laterality and grouped-part boundaries."
+            },
+            {
+              "id": "shape",
+              "label": "Inspect anatomical shape, surfaces, landmarks and attachments where represented."
+            },
+            {
+              "id": "relations",
+              "label": "Check local relationships, missing tissues, source defects and model limitations."
+            },
+            {
+              "id": "views",
+              "label": "Inspect labels and selection from anterior, posterior, lateral and rotated views."
+            },
+            {
+              "id": "dissection",
+              "label": "Check isolation, cutaway, separation, removal and exact reassembly on actual devices."
+            },
+            {
+              "id": "scope",
+              "label": "Record the specific educational scope reviewed; do not imply complete anatomy or operative safety."
+            }
+          ],
+          "teaching": [
+            {
+              "id": "drafts",
+              "label": "Check every currently available draft topic and its supporting references."
+            },
+            {
+              "id": "clinical",
+              "label": "Verify anatomical/functional and clinical/pathology wording against the intended learner level."
+            },
+            {
+              "id": "modalities",
+              "label": "Review any available modality text separately from actual scan registration."
+            },
+            {
+              "id": "pending",
+              "label": "Identify pending/identity-only/generated topics; these are not covered as completed authored teaching."
+            },
+            {
+              "id": "assessment",
+              "label": "Check authored Quiz notes where supplied; the separate interactive question bank is outside this approval."
+            },
+            {
+              "id": "scope",
+              "label": "Document omissions, corrections and the precise scope of the available draft copy."
+            }
+          ],
+          "imaging": [
+            {
+              "id": "rights",
+              "label": "Verify acquired-image teaching rights and de-identification."
+            },
+            {
+              "id": "frame",
+              "label": "Confirm patient/reference identity, laterality, units, orientation and series/frame metadata."
+            },
+            {
+              "id": "registration",
+              "label": "Validate registration landmarks, transform and measured error."
+            },
+            {
+              "id": "mapping",
+              "label": "Verify both-direction structure/image mapping and failure handling."
+            },
+            {
+              "id": "interpretation",
+              "label": "Review acquired-image annotations and interpretation with a radiologist."
+            }
+          ]
+        },
+        "blockers": {
+          "geometry": [],
+          "teaching": [],
+          "imaging": [
+            "No validated acquired-image series or spatial registration is connected. Imaging approval is unavailable."
+          ]
+        },
+        "teachingTabs": [
+          "anatomy",
+          "function",
+          "ct",
+          "mri",
+          "xray",
+          "pathology",
+          "clinical"
+        ],
+        "revisions": {
+          "geometry": "e4fd63dedfc9f895ee17599f5e55829e6377e290a6e5c8c757124f2d66690b36",
+          "teaching": "20e08eb28183e9beb82206f5a6d34b5ff611378a75c721882008335b5f80f100",
+          "imaging": null
+        }
+      },
+      "topicReadiness": [
+        {
+          "tab": "anatomy",
+          "readiness": "draft"
+        },
+        {
+          "tab": "function",
+          "readiness": "draft"
+        },
+        {
+          "tab": "ct",
+          "readiness": "draft"
+        },
+        {
+          "tab": "mri",
+          "readiness": "draft"
+        },
+        {
+          "tab": "xray",
+          "readiness": "draft"
+        },
+        {
+          "tab": "ultrasound",
+          "readiness": "pending"
+        },
+        {
+          "tab": "pathology",
+          "readiness": "draft"
+        },
+        {
+          "tab": "clinical",
+          "readiness": "draft"
+        },
+        {
+          "tab": "quiz",
+          "readiness": "generated-identification"
+        }
+      ],
+      "atlasLink": "/regions/thigh?study=1&structure=vm%3Aanatomy%3Abody%3Athigh%3Aleft%3Abone%3Aleft-femur&side=both&source=27bd799bd85387beea9fab40cbe2f83a5e780983170db4dfd1d2e0eda8fd2b59",
+      "reviewPath": "/review/body?structure=vm%3Aanatomy%3Abody%3Athigh%3Aleft%3Abone%3Aleft-femur",
+      "decision": "not-recorded-in-this-index"
+    },
+    {
+      "kind": "root",
+      "fmaId": "FMA50737",
+      "name": "Celiac artery",
+      "laterality": "unspecified",
+      "structureId": "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
+      "regions": [
+        "abdomen"
+      ],
+      "context": {
+        "catalogScope": "body-display-catalog",
+        "structureId": "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
+        "checklistVersion": "body-review-1",
+        "structureName": "Celiac artery",
+        "materialHash": "834e0f26520e620f16fa3ae1831cdc7182cb98a370f1c97e0868ba8b86806ba1",
+        "sourceHash": "b8c70d7b7fc8844d20c4f0b1ad37e9cf4d032620d00a6d6b442364b1858e352a",
+        "teachingHash": "ef4f22c96e9dea5beb25d77cd236d82d40e13821b4a37bc0769a3bd21a07a913",
+        "rendererHash": "5f229dfe2b9e0fb03a49f7ec50e95c0530eb03a059e689757eb8ba2747502bf0",
+        "checklists": {
+          "geometry": [
+            {
+              "id": "identity",
+              "label": "Confirm source identity, laterality and grouped-part boundaries."
+            },
+            {
+              "id": "shape",
+              "label": "Inspect anatomical shape, surfaces, landmarks and attachments where represented."
+            },
+            {
+              "id": "relations",
+              "label": "Check local relationships, missing tissues, source defects and model limitations."
+            },
+            {
+              "id": "views",
+              "label": "Inspect labels and selection from anterior, posterior, lateral and rotated views."
+            },
+            {
+              "id": "dissection",
+              "label": "Check isolation, cutaway, separation, removal and exact reassembly on actual devices."
+            },
+            {
+              "id": "scope",
+              "label": "Record the specific educational scope reviewed; do not imply complete anatomy or operative safety."
+            }
+          ],
+          "teaching": [
+            {
+              "id": "drafts",
+              "label": "Check every currently available draft topic and its supporting references."
+            },
+            {
+              "id": "clinical",
+              "label": "Verify anatomical/functional and clinical/pathology wording against the intended learner level."
+            },
+            {
+              "id": "modalities",
+              "label": "Review any available modality text separately from actual scan registration."
+            },
+            {
+              "id": "pending",
+              "label": "Identify pending/identity-only/generated topics; these are not covered as completed authored teaching."
+            },
+            {
+              "id": "assessment",
+              "label": "Check authored Quiz notes where supplied; the separate interactive question bank is outside this approval."
+            },
+            {
+              "id": "scope",
+              "label": "Document omissions, corrections and the precise scope of the available draft copy."
+            }
+          ],
+          "imaging": [
+            {
+              "id": "rights",
+              "label": "Verify acquired-image teaching rights and de-identification."
+            },
+            {
+              "id": "frame",
+              "label": "Confirm patient/reference identity, laterality, units, orientation and series/frame metadata."
+            },
+            {
+              "id": "registration",
+              "label": "Validate registration landmarks, transform and measured error."
+            },
+            {
+              "id": "mapping",
+              "label": "Verify both-direction structure/image mapping and failure handling."
+            },
+            {
+              "id": "interpretation",
+              "label": "Review acquired-image annotations and interpretation with a radiologist."
+            }
+          ]
+        },
+        "blockers": {
+          "geometry": [],
+          "teaching": [],
+          "imaging": [
+            "No validated acquired-image series or spatial registration is connected. Imaging approval is unavailable."
+          ]
+        },
+        "teachingTabs": [
+          "anatomy",
+          "function",
+          "ct",
+          "mri",
+          "ultrasound",
+          "pathology",
+          "clinical"
+        ],
+        "revisions": {
+          "geometry": "59cb89741efef2c72c75d7ab2b5f4612507c6a019515dd11d14f1593680afb53",
+          "teaching": "a7da6762c741cf4e4ca4d05db03ff85922f661f24fd38a8a2b9c62eb79f853dc",
+          "imaging": null
+        }
+      },
+      "topicReadiness": [
+        {
+          "tab": "anatomy",
+          "readiness": "draft"
+        },
+        {
+          "tab": "function",
+          "readiness": "draft"
+        },
+        {
+          "tab": "ct",
+          "readiness": "draft"
+        },
+        {
+          "tab": "mri",
+          "readiness": "draft"
+        },
+        {
+          "tab": "xray",
+          "readiness": "pending"
+        },
+        {
+          "tab": "ultrasound",
+          "readiness": "draft"
+        },
+        {
+          "tab": "pathology",
+          "readiness": "draft"
+        },
+        {
+          "tab": "clinical",
+          "readiness": "draft"
+        },
+        {
+          "tab": "quiz",
+          "readiness": "generated-identification"
+        }
+      ],
+      "atlasLink": "/regions/abdomen?study=1&structure=vm%3Aanatomy%3Abody%3Aabdomen%3Aunspecified%3Avessel%3Aceliac-artery&side=both&source=4f431242839c255ae2320b4004c537a4c2defb7d0cd7b51fdea60f7ba3c09e8f",
+      "reviewPath": "/review/body?structure=vm%3Aanatomy%3Abody%3Aabdomen%3Aunspecified%3Avessel%3Aceliac-artery",
+      "decision": "not-recorded-in-this-index"
+    },
+    {
+      "kind": "root",
+      "fmaId": "FMA7088",
+      "name": "Heart",
+      "laterality": "unpaired",
+      "structureId": "vm:anatomy:body:thorax:unpaired:organ:heart",
+      "regions": [
+        "thorax"
+      ],
+      "context": {
+        "catalogScope": "body-display-catalog",
+        "structureId": "vm:anatomy:body:thorax:unpaired:organ:heart",
+        "checklistVersion": "body-review-1",
+        "structureName": "Heart",
+        "materialHash": "eb4ef6c601f5a4d6a16418b286f48189f93ec9abdbb4a7fc462fab436929d201",
+        "sourceHash": "2c4d8feca5e46e76bee66cf887db7015eef6c67371c1e32a60f984721c61b9a4",
+        "teachingHash": "9a5bf77571725ca5336995d97af40b12aa8b02df4814b89ed56282fde0af016d",
+        "rendererHash": "5f229dfe2b9e0fb03a49f7ec50e95c0530eb03a059e689757eb8ba2747502bf0",
+        "checklists": {
+          "geometry": [
+            {
+              "id": "identity",
+              "label": "Confirm source identity, laterality and grouped-part boundaries."
+            },
+            {
+              "id": "shape",
+              "label": "Inspect anatomical shape, surfaces, landmarks and attachments where represented."
+            },
+            {
+              "id": "relations",
+              "label": "Check local relationships, missing tissues, source defects and model limitations."
+            },
+            {
+              "id": "views",
+              "label": "Inspect labels and selection from anterior, posterior, lateral and rotated views."
+            },
+            {
+              "id": "dissection",
+              "label": "Check isolation, cutaway, separation, removal and exact reassembly on actual devices."
+            },
+            {
+              "id": "scope",
+              "label": "Record the specific educational scope reviewed; do not imply complete anatomy or operative safety."
+            }
+          ],
+          "teaching": [
+            {
+              "id": "drafts",
+              "label": "Check every currently available draft topic and its supporting references."
+            },
+            {
+              "id": "clinical",
+              "label": "Verify anatomical/functional and clinical/pathology wording against the intended learner level."
+            },
+            {
+              "id": "modalities",
+              "label": "Review any available modality text separately from actual scan registration."
+            },
+            {
+              "id": "pending",
+              "label": "Identify pending/identity-only/generated topics; these are not covered as completed authored teaching."
+            },
+            {
+              "id": "assessment",
+              "label": "Check authored Quiz notes where supplied; the separate interactive question bank is outside this approval."
+            },
+            {
+              "id": "scope",
+              "label": "Document omissions, corrections and the precise scope of the available draft copy."
+            }
+          ],
+          "imaging": [
+            {
+              "id": "rights",
+              "label": "Verify acquired-image teaching rights and de-identification."
+            },
+            {
+              "id": "frame",
+              "label": "Confirm patient/reference identity, laterality, units, orientation and series/frame metadata."
+            },
+            {
+              "id": "registration",
+              "label": "Validate registration landmarks, transform and measured error."
+            },
+            {
+              "id": "mapping",
+              "label": "Verify both-direction structure/image mapping and failure handling."
+            },
+            {
+              "id": "interpretation",
+              "label": "Review acquired-image annotations and interpretation with a radiologist."
+            }
+          ]
+        },
+        "blockers": {
+          "geometry": [],
+          "teaching": [],
+          "imaging": [
+            "No validated acquired-image series or spatial registration is connected. Imaging approval is unavailable."
+          ]
+        },
+        "teachingTabs": [
+          "anatomy",
+          "function",
+          "ct",
+          "mri",
+          "ultrasound",
+          "pathology",
+          "clinical"
+        ],
+        "revisions": {
+          "geometry": "2b0272f193c74a4669871104d6be2caa03122719e00a0e101d2e1deee1d10fe6",
+          "teaching": "c0802fdb826aeadb86cbc991185f46a7b37f87f016d1cf05c0dc76df36058594",
+          "imaging": null
+        }
+      },
+      "topicReadiness": [
+        {
+          "tab": "anatomy",
+          "readiness": "draft"
+        },
+        {
+          "tab": "function",
+          "readiness": "draft"
+        },
+        {
+          "tab": "ct",
+          "readiness": "draft"
+        },
+        {
+          "tab": "mri",
+          "readiness": "draft"
+        },
+        {
+          "tab": "xray",
+          "readiness": "pending"
+        },
+        {
+          "tab": "ultrasound",
+          "readiness": "draft"
+        },
+        {
+          "tab": "pathology",
+          "readiness": "draft"
+        },
+        {
+          "tab": "clinical",
+          "readiness": "draft"
+        },
+        {
+          "tab": "quiz",
+          "readiness": "generated-identification"
+        }
+      ],
+      "atlasLink": "/regions/thorax?study=1&structure=vm%3Aanatomy%3Abody%3Athorax%3Aunpaired%3Aorgan%3Aheart&side=both&source=612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+      "reviewPath": "/review/body?structure=vm%3Aanatomy%3Abody%3Athorax%3Aunpaired%3Aorgan%3Aheart",
+      "decision": "not-recorded-in-this-index"
+    },
+    {
+      "kind": "root",
+      "fmaId": "FMA50801",
+      "name": "Brain",
+      "laterality": "midline",
+      "structureId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "regions": [
+        "head-neck"
+      ],
+      "context": {
+        "catalogScope": "body-display-catalog",
+        "structureId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "checklistVersion": "body-review-1",
+        "structureName": "Brain",
+        "materialHash": "1b8e2a06e28ba361b15eb267fc84d4bc5f0e50cf10b3102d19f88e34997f1a6b",
+        "sourceHash": "a7f17adfd51a8eb18d6f15a0bc2f3cbdeb82ffa078b3f461db8ee50046c67071",
+        "teachingHash": "fb5b8b9708c9f0bd8c8d74d5e009d4f4ad191260703dbe030784696bf56722e6",
+        "rendererHash": "5f229dfe2b9e0fb03a49f7ec50e95c0530eb03a059e689757eb8ba2747502bf0",
+        "checklists": {
+          "geometry": [
+            {
+              "id": "identity",
+              "label": "Confirm source identity, laterality and grouped-part boundaries."
+            },
+            {
+              "id": "shape",
+              "label": "Inspect anatomical shape, surfaces, landmarks and attachments where represented."
+            },
+            {
+              "id": "relations",
+              "label": "Check local relationships, missing tissues, source defects and model limitations."
+            },
+            {
+              "id": "views",
+              "label": "Inspect labels and selection from anterior, posterior, lateral and rotated views."
+            },
+            {
+              "id": "dissection",
+              "label": "Check isolation, cutaway, separation, removal and exact reassembly on actual devices."
+            },
+            {
+              "id": "scope",
+              "label": "Record the specific educational scope reviewed; do not imply complete anatomy or operative safety."
+            }
+          ],
+          "teaching": [
+            {
+              "id": "drafts",
+              "label": "Check every currently available draft topic and its supporting references."
+            },
+            {
+              "id": "clinical",
+              "label": "Verify anatomical/functional and clinical/pathology wording against the intended learner level."
+            },
+            {
+              "id": "modalities",
+              "label": "Review any available modality text separately from actual scan registration."
+            },
+            {
+              "id": "pending",
+              "label": "Identify pending/identity-only/generated topics; these are not covered as completed authored teaching."
+            },
+            {
+              "id": "assessment",
+              "label": "Check authored Quiz notes where supplied; the separate interactive question bank is outside this approval."
+            },
+            {
+              "id": "scope",
+              "label": "Document omissions, corrections and the precise scope of the available draft copy."
+            }
+          ],
+          "imaging": [
+            {
+              "id": "rights",
+              "label": "Verify acquired-image teaching rights and de-identification."
+            },
+            {
+              "id": "frame",
+              "label": "Confirm patient/reference identity, laterality, units, orientation and series/frame metadata."
+            },
+            {
+              "id": "registration",
+              "label": "Validate registration landmarks, transform and measured error."
+            },
+            {
+              "id": "mapping",
+              "label": "Verify both-direction structure/image mapping and failure handling."
+            },
+            {
+              "id": "interpretation",
+              "label": "Review acquired-image annotations and interpretation with a radiologist."
+            }
+          ]
+        },
+        "blockers": {
+          "geometry": [],
+          "teaching": [],
+          "imaging": [
+            "No validated acquired-image series or spatial registration is connected. Imaging approval is unavailable."
+          ]
+        },
+        "teachingTabs": [
+          "anatomy",
+          "function",
+          "ct",
+          "mri",
+          "pathology",
+          "clinical"
+        ],
+        "revisions": {
+          "geometry": "0ba9493241c42ffd41f7f1444b2438a8ae755dc08e0e16240e4c1a4a9962b5c7",
+          "teaching": "2231f2da80e982d5c39f910e2a7c48973fbf8c0191f55b75c8eb83b65521e173",
+          "imaging": null
+        }
+      },
+      "topicReadiness": [
+        {
+          "tab": "anatomy",
+          "readiness": "draft"
+        },
+        {
+          "tab": "function",
+          "readiness": "draft"
+        },
+        {
+          "tab": "ct",
+          "readiness": "draft"
+        },
+        {
+          "tab": "mri",
+          "readiness": "draft"
+        },
+        {
+          "tab": "xray",
+          "readiness": "pending"
+        },
+        {
+          "tab": "ultrasound",
+          "readiness": "pending"
+        },
+        {
+          "tab": "pathology",
+          "readiness": "draft"
+        },
+        {
+          "tab": "clinical",
+          "readiness": "draft"
+        },
+        {
+          "tab": "quiz",
+          "readiness": "generated-identification"
+        }
+      ],
+      "atlasLink": "/regions/head-neck?study=1&structure=vm%3Aanatomy%3Abody%3Ahead-neck%3Amidline%3Aorgan%3Abrain&side=both&source=f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "reviewPath": "/review/body?structure=vm%3Aanatomy%3Abody%3Ahead-neck%3Amidline%3Aorgan%3Abrain",
+      "decision": "not-recorded-in-this-index"
+    },
+    {
+      "kind": "nested",
+      "fmaId": "FMA78454",
+      "name": "Third ventricle",
+      "laterality": "midline",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "study": "ventricles",
+      "structureId": "vm:anatomy:body:head-neck:midline:space:third-ventricle",
+      "context": {
+        "catalogScope": "nested-dissection",
+        "nestedKey": "[\"vm:anatomy:body:head-neck:midline:organ:brain\",\"ventricles\"]",
+        "sourceFrame": "bodyparts3d:4.0:0a3a8b065445d573419e3948b2d4bbcc28d1c7b506514dc5f99a20a4e7007a56",
+        "structureId": "vm:anatomy:body:head-neck:midline:space:third-ventricle",
+        "checklistVersion": "nested-review-1",
+        "structureName": "Third ventricle",
+        "sourceHash": "42c6605324fd5b3abbab49cc82838aec993bee789efec217d6e2998000f950f3",
+        "teachingHash": "0379f4d97c4006e347a2c4029b621be73852adff08f92ff35eb8acf4595cea52",
+        "rendererHash": "5f229dfe2b9e0fb03a49f7ec50e95c0530eb03a059e689757eb8ba2747502bf0",
+        "teachingTabs": [
+          "anatomy",
+          "function",
+          "ct",
+          "mri",
+          "pathology",
+          "clinical",
+          "self-check"
+        ],
+        "materialHash": "580e96febc166411c4712be55561fd10e329ad18ae33189e8ae2ded9eac80782",
+        "checklists": {
+          "geometry": [
+            {
+              "id": "identity",
+              "label": "Confirm this exact parent, dissection study, child source, laterality, grouped parts and source frame."
+            },
+            {
+              "id": "shape",
+              "label": "Inspect this child's shape, retained source boundaries, landmarks and relationships in the actual nested 3D study."
+            },
+            {
+              "id": "relations",
+              "label": "Review neighbouring surfaces and source holds. Do not infer missing tissues, lumens or drainage connections."
+            },
+            {
+              "id": "dissection",
+              "label": "Check labels, rotation, isolation, separation and exact reassembly on the intended devices."
+            },
+            {
+              "id": "scope",
+              "label": "Record the specific educational scope, omissions and limitations; this is not patient or operative anatomy certification."
+            }
+          ],
+          "teaching": [
+            {
+              "id": "copy",
+              "label": "Read every available topic and its source references, including modality descriptions."
+            },
+            {
+              "id": "limits",
+              "label": "Check model-specific cautions, laterality, clinical/pathology wording and all pending topics."
+            },
+            {
+              "id": "assessment",
+              "label": "Check the supplied self-check question and answer. Interactive identification practice is outside this sign-off."
+            },
+            {
+              "id": "scope",
+              "label": "Record learner level and exact scope. Text review does not validate acquired scans, registration or separate lectures."
+            }
+          ],
+          "imaging": [
+            {
+              "id": "rights",
+              "label": "Verify acquired-image rights, de-identification and patient/reference identity."
+            },
+            {
+              "id": "frame",
+              "label": "Validate series/frame metadata, orientation, units, measured registration error and both-direction mappings."
+            }
+          ]
+        },
+        "blockers": {
+          "geometry": [],
+          "teaching": [],
+          "imaging": [
+            "No validated acquired-image series or spatial registration is connected. Imaging review is unavailable."
+          ]
+        },
+        "revisions": {
+          "geometry": "b1fce532b93b47cf2ed611913822c77b6efbcf2ec913eed13780ed92e1f85ca0",
+          "teaching": "08bafabdb16d46b37fdbd9825d60031284d74e55b8774e2c01b7d029a6438f15",
+          "imaging": null
+        }
+      },
+      "topicReadiness": [
+        {
+          "tab": "anatomy",
+          "readiness": "draft"
+        },
+        {
+          "tab": "function",
+          "readiness": "draft"
+        },
+        {
+          "tab": "ct",
+          "readiness": "draft"
+        },
+        {
+          "tab": "mri",
+          "readiness": "draft"
+        },
+        {
+          "tab": "xray",
+          "readiness": "pending"
+        },
+        {
+          "tab": "ultrasound",
+          "readiness": "pending"
+        },
+        {
+          "tab": "pathology",
+          "readiness": "draft"
+        },
+        {
+          "tab": "clinical",
+          "readiness": "draft"
+        }
+      ],
+      "atlasLink": "/regions/head-neck?study=2&structure=vm%3Aanatomy%3Abody%3Ahead-neck%3Amidline%3Aorgan%3Abrain&side=both&source=f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335&detail=ventricles&part=vm%3Aanatomy%3Abody%3Ahead-neck%3Amidline%3Aspace%3Athird-ventricle&partSource=e99326a0fd0b0bdc0a64d2a1adbb7a63c758af6f765199b8febe851e62b9eab1",
+      "reviewPath": "/review/nested?parent=vm%3Aanatomy%3Abody%3Ahead-neck%3Amidline%3Aorgan%3Abrain&study=ventricles&structure=vm%3Aanatomy%3Abody%3Ahead-neck%3Amidline%3Aspace%3Athird-ventricle&source=42c6605324fd5b3abbab49cc82838aec993bee789efec217d6e2998000f950f3",
+      "decision": "not-recorded-in-this-index"
+    },
+    {
+      "kind": "nested",
+      "fmaId": "FMA9466",
+      "name": "Cavity of left ventricle",
+      "laterality": "left",
+      "parentId": "vm:anatomy:body:thorax:unpaired:organ:heart",
+      "study": "cardiac",
+      "structureId": "vm:anatomy:body:thorax:left:organ:cavity-of-left-ventricle",
+      "context": {
+        "catalogScope": "nested-dissection",
+        "nestedKey": "[\"vm:anatomy:body:thorax:unpaired:organ:heart\",\"cardiac\"]",
+        "sourceFrame": "bodyparts3d:4.0:0a3a8b065445d573419e3948b2d4bbcc28d1c7b506514dc5f99a20a4e7007a56",
+        "structureId": "vm:anatomy:body:thorax:left:organ:cavity-of-left-ventricle",
+        "checklistVersion": "nested-review-1",
+        "structureName": "Cavity of left ventricle",
+        "sourceHash": "e28904b36b030da08854713cf68648cc58566dea834366d7985831f7061c4c15",
+        "teachingHash": "3b2bf68393441410e3392fd233c493a22d2c432852e18b315fa7cb3ad94fe8c5",
+        "rendererHash": "5f229dfe2b9e0fb03a49f7ec50e95c0530eb03a059e689757eb8ba2747502bf0",
+        "teachingTabs": [
+          "anatomy",
+          "function",
+          "ct",
+          "mri",
+          "ultrasound",
+          "pathology",
+          "clinical",
+          "self-check"
+        ],
+        "materialHash": "999f6038ade586865d3a748b382dab507c2c445861b4dccb9cbdae955a85af69",
+        "checklists": {
+          "geometry": [
+            {
+              "id": "identity",
+              "label": "Confirm this exact parent, dissection study, child source, laterality, grouped parts and source frame."
+            },
+            {
+              "id": "shape",
+              "label": "Inspect this child's shape, retained source boundaries, landmarks and relationships in the actual nested 3D study."
+            },
+            {
+              "id": "relations",
+              "label": "Review neighbouring surfaces and source holds. Do not infer missing tissues, lumens or drainage connections."
+            },
+            {
+              "id": "dissection",
+              "label": "Check labels, rotation, isolation, separation and exact reassembly on the intended devices."
+            },
+            {
+              "id": "scope",
+              "label": "Record the specific educational scope, omissions and limitations; this is not patient or operative anatomy certification."
+            }
+          ],
+          "teaching": [
+            {
+              "id": "copy",
+              "label": "Read every available topic and its source references, including modality descriptions."
+            },
+            {
+              "id": "limits",
+              "label": "Check model-specific cautions, laterality, clinical/pathology wording and all pending topics."
+            },
+            {
+              "id": "assessment",
+              "label": "Check the supplied self-check question and answer. Interactive identification practice is outside this sign-off."
+            },
+            {
+              "id": "scope",
+              "label": "Record learner level and exact scope. Text review does not validate acquired scans, registration or separate lectures."
+            }
+          ],
+          "imaging": [
+            {
+              "id": "rights",
+              "label": "Verify acquired-image rights, de-identification and patient/reference identity."
+            },
+            {
+              "id": "frame",
+              "label": "Validate series/frame metadata, orientation, units, measured registration error and both-direction mappings."
+            }
+          ]
+        },
+        "blockers": {
+          "geometry": [],
+          "teaching": [],
+          "imaging": [
+            "No validated acquired-image series or spatial registration is connected. Imaging review is unavailable."
+          ]
+        },
+        "revisions": {
+          "geometry": "827ec4e3910287d18afc4c85ef8f4e9baec513b8150c1a1cc95700b68ec08580",
+          "teaching": "baf4008919f4a97946737b8d8c44a2b55df7c4b15737a3cfd8e0cf03b4604b30",
+          "imaging": null
+        }
+      },
+      "topicReadiness": [
+        {
+          "tab": "anatomy",
+          "readiness": "draft"
+        },
+        {
+          "tab": "function",
+          "readiness": "draft"
+        },
+        {
+          "tab": "ct",
+          "readiness": "draft"
+        },
+        {
+          "tab": "mri",
+          "readiness": "draft"
+        },
+        {
+          "tab": "xray",
+          "readiness": "pending"
+        },
+        {
+          "tab": "ultrasound",
+          "readiness": "draft"
+        },
+        {
+          "tab": "pathology",
+          "readiness": "draft"
+        },
+        {
+          "tab": "clinical",
+          "readiness": "draft"
+        }
+      ],
+      "atlasLink": "/regions/thorax?study=2&structure=vm%3Aanatomy%3Abody%3Athorax%3Aunpaired%3Aorgan%3Aheart&side=both&source=612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316&detail=cardiac&part=vm%3Aanatomy%3Abody%3Athorax%3Aleft%3Aorgan%3Acavity-of-left-ventricle&partSource=64d93898db3b6cb4dbea452508799c98cbe65b361eba2f17658ecae532a01f67",
+      "reviewPath": "/review/nested?parent=vm%3Aanatomy%3Abody%3Athorax%3Aunpaired%3Aorgan%3Aheart&study=cardiac&structure=vm%3Aanatomy%3Abody%3Athorax%3Aleft%3Aorgan%3Acavity-of-left-ventricle&source=e28904b36b030da08854713cf68648cc58566dea834366d7985831f7061c4c15",
+      "decision": "not-recorded-in-this-index"
+    }
+  ]
+}

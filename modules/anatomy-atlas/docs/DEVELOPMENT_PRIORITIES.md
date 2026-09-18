@@ -1,5 +1,12 @@
 # Development priorities
 
+18 September — the owner approved the [first-release checklist](FIRST_RELEASE_CHECKLIST.md)
+as a finite launch milestone within the unchanged full goal. Prioritise candidate
+integration, representative viewer acceptance, the [clinical review pilot](FIRST_RELEASE_REVIEW_PILOT.md),
+one cleared CT-head/Didanix Education connection and independent access/recovery
+gates. Do not equate authored drafts or passing software tests with radiologist
+approval, and do not silently promote a private prototype to a learner release.
+
 18 September — [named-space practice](NESTED_PRACTICE.md) adds identification
 rounds to the existing cardiac and brain-ventricle component studies. Eight
 source-bound space representations use the shared answer-once engine; unnamed
