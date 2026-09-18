@@ -2,6 +2,15 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 18 September — hand dissection studies and arterial MRI drafts
+
+The regional viewer now incorporates source `2d68ad0a`: two source-bound hand
+muscle study focuses, twelve distal-palmar/shoulder arterial MRI draft placements,
+and a corrected hand close-up caption. All 134 models / 141 paths, other viewer
+exports and independent access rights remain unchanged. See
+[integration evidence](atlas-hand-mri-20260918.md). Clinical and cleared imaging
+review remain pending; deployment and recovery are verified separately.
+
 ## 18 September — keyboard camera across all viewers
 
 All four generated viewers now incorporate the source-verified keyboard camera
