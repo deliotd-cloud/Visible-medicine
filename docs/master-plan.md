@@ -2,6 +2,14 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 18 September — celiac display correction staging
+
+Register the exact corrected celiac object for administrator upload only.
+Current134models/141paths and runtime remain unchanged. The prepared regional
+update includes the lower-neck study; authenticated upload and full-byte
+verification precede activation. See [staging gate](atlas-celiac-staging-20260918.md).
+No clinical approval, patient release or additional learner entitlement is implied.
+
 ## 18 September — hand dissection studies and arterial MRI drafts
 
 The regional viewer now incorporates source `2d68ad0a`: two source-bound hand
