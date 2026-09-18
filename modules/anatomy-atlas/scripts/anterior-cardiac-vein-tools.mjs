@@ -1,5 +1,6 @@
 import {build} from './workspace-test-build.mjs';
 import {createHash} from 'node:crypto';
+import {beforePalmarArterialImaging} from './palmar-arterial-imaging-history.mjs';
 export const cardiacVeinBase='430c9abbf66b14d9e485acdf2502ab33e42379a7';
 export const hash=v=>createHash('sha256').update(typeof v==='string'||Buffer.isBuffer(v)?v:JSON.stringify(v)).digest('hex');
 export async function cardiacVeinApi(){
@@ -7,6 +8,8 @@ export async function cardiacVeinApi(){
  return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
 }
 export function priorCardiacVeinState(api,raw){
+ // Reconstruct only the recorded later teaching, retaining the immutable source baseline.
+ api=beforePalmarArterialImaging(api);
  const catalog=api.bodyDisplayCatalog(raw),old=catalog.structures.filter(s=>s.fmaId!=='FMA76767');
  const profiles=structuredClone(api.dissectionProfiles);profiles.thorax.focuses=profiles.thorax.focuses.filter(f=>f.id!=='cardiac-venous-surfaces');
  const lessons=old.flatMap(s=>['anatomy','function','ct','mri','ultrasound','xray','pathology','clinical','quiz'].map(tab=>[s.id,tab,api.bodyLesson(s,tab)]));

@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "2767349ec64b5eda71026e4673c4189ae2ca7b3c78b7ad35c1a0b6aa29e4c4ab"
+      "sha256": "8e549604717e2b60891ace0087fa495053aad53e61c4c603d404134586435fde"
     },
     {
       "path": "app/body-education-link.ts",
@@ -923,6 +923,14 @@
     {
       "path": "content/orbital-neck-muscle-imaging.ts",
       "sha256": "5eb532c3b631fb996071bb5736139d2400f55712b8fded8e81a8c7f78c3910fe"
+    },
+    {
+      "path": "content/palmar-arterial-imaging-pins.json",
+      "sha256": "cf81abd900c15e1a598c4c1e1e2a7e9fa3fb7c0e1e3e13142fc32eb0ebef77aa"
+    },
+    {
+      "path": "content/palmar-arterial-imaging.ts",
+      "sha256": "07fb960a774eca06b0fa0bf0891782acb848793d4a23ba52ecb2c089a25c6d65"
     },
     {
       "path": "content/pancreatic-teaching.ts",
@@ -2025,6 +2033,10 @@
       "sha256": "b333566888bf13805da9559004fbfbfa6596095a65d7ca8772de8259ca974ff6"
     },
     {
+      "path": "lib/palmar-arterial-imaging.ts",
+      "sha256": "31350adb7f3f211ba2399a8e9e1f62d433c9c87f4394521bdb10444db41df080"
+    },
+    {
       "path": "lib/pancreatic-anatomy.ts",
       "sha256": "8517037505ebb927ba2e6aab55cb7e23fe406327b3a27ba21d6906260241ba91"
     },
@@ -2426,7 +2438,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "04c78fe217d21f4cf23ef0e5da7dc59f3713bfee74347f1723368309a3441f5c"
+      "sha256": "23c22d2b7c0f0bc59fd58635f84d44e064a143ddd11f11d1db4fc072ede06b0b"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2629,5 +2641,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "ffa13e8847658e51d531c778820a4054b8f7049b46e429d8aaeae45544bc4e1a"
+  "sha256": "a6550ab8043848d88d03805ea283e1b4fe6a87513acbf7df18ee5a44264ee9c6"
 }

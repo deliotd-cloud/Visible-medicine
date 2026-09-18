@@ -353,8 +353,8 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "dc1b4e7a008d0cb02a17d5443cdc6a5f6dae88d05f7c55fb41d1cc857a634704",
-    "explicitTopicReadiness": "2df79ca6e98f7522341ed3b29062cf530cc23b1c02319a10e40ab6a09b0fc1c4",
+    "resolvedContentAndRecipeData": "61dae01e55e27766778b86ae380df634ccd76444ad9b53f9354512956dd001d0",
+    "explicitTopicReadiness": "bb6a4e59eabe409590119d807ced5003e7875ca3b16732462dc2d6dfa00c60a7",
     "reasoningQuestionData": "523ab89c9c6313eec445979978777283e316b118328bd18ddde80a47ecfd3a32",
     "nestedTeachingData": "6f54b9c6832276c6813503e2ca933bdc133ec39018da108aac40444c481a6819"
   },
@@ -1691,15 +1691,15 @@
         "generatedIdentification": 0
       },
       "ct": {
-        "specificDraft": 832,
+        "specificDraft": 834,
         "identityOnly": 0,
-        "pending": 272,
+        "pending": 270,
         "generatedIdentification": 0
       },
       "mri": {
-        "specificDraft": 783,
+        "specificDraft": 805,
         "identityOnly": 0,
-        "pending": 321,
+        "pending": 299,
         "generatedIdentification": 0
       },
       "xray": {
@@ -2349,15 +2349,15 @@
           "generatedIdentification": 0
         },
         "ct": {
-          "specificDraft": 80,
+          "specificDraft": 82,
           "identityOnly": 0,
-          "pending": 44,
+          "pending": 42,
           "generatedIdentification": 0
         },
         "mri": {
-          "specificDraft": 80,
+          "specificDraft": 102,
           "identityOnly": 0,
-          "pending": 44,
+          "pending": 22,
           "generatedIdentification": 0
         },
         "xray": {

@@ -3,12 +3,14 @@ import {readFile} from 'node:fs/promises';
 import {isDeepStrictEqual} from 'node:util';
 import {cardiacVeinApi,hash} from './anterior-cardiac-vein-tools.mjs';
 import {beforeAnteriorCardiacTeaching} from './anterior-cardiac-teaching-history.mjs';
+import {beforePalmarArterialImaging} from './palmar-arterial-imaging-history.mjs';
 import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 import {snapshot} from './pin-pica-clinical.mjs';
 import pins from '../content/anterior-cardiac-teaching-pins.json' with {type:'json'};
 import transition from '../content/anterior-cardiac-teaching-transition.json' with {type:'json'};
 
-const api=await cardiacVeinApi(),raw=JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json'));
+// Check the exact historical cardiac transition after undoing only the declared later layer.
+const api=beforePalmarArterialImaging(await cardiacVeinApi()),raw=JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json'));
 const display=api.bodyDisplayCatalog(raw),before=beforeAnteriorCardiacTeaching(api),saved=await exactSourceHistoryApi(pins.sourceCommit),savedDisplay=saved.bodyDisplayCatalog(raw);
 assert.deepEqual(savedDisplay,display);
 assert.equal(hash(snapshot(saved,savedDisplay)),pins.previousAllLessonsAndRecipesHash);

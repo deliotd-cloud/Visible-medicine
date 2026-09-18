@@ -2,9 +2,11 @@ import assert from 'node:assert/strict';
 import {access,readFile,writeFile} from 'node:fs/promises';
 import {context,hash,snapshot} from './pin-pica-clinical.mjs';
 import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
+import {beforePalmarArterialImaging} from './palmar-arterial-imaging-history.mjs';
 import pins from '../content/anterior-cardiac-teaching-pins.json' with {type:'json'};
 
-const current=await context({current:true}),api=current.api,display=current.display;
+// This historical transition remains pinned; the later palmar suite checks its own live payloads.
+const current=await context({current:true}),api=beforePalmarArterialImaging(current.api),display=current.display;
 const savedApi=await exactSourceHistoryApi(pins.sourceCommit);
 const raw=JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json'));
 const savedDisplay=savedApi.bodyDisplayCatalog(raw);

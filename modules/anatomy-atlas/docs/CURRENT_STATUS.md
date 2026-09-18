@@ -151,8 +151,8 @@ Counts are representations with displayed copy, not unique lessons, complete top
 | --- | ---: | ---: | ---: | ---: |
 | Anatomy | 1102 | 2 | 0 | 0 |
 | Function | 1099 | 0 | 5 | 0 |
-| CT | 832 | 0 | 272 | 0 |
-| MRI | 783 | 0 | 321 | 0 |
+| CT | 834 | 0 | 270 | 0 |
+| MRI | 805 | 0 | 299 | 0 |
 | X-ray | 344 | 0 | 760 | 0 |
 | Ultrasound | 544 | 0 | 560 | 0 |
 | Pathology | 1092 | 0 | 12 | 0 |

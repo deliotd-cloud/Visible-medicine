@@ -19,6 +19,7 @@
     "tract-plantar-imaging:test": "node scripts/pin-tract-plantar-imaging.mjs --check && node scripts/record-tract-plantar-imaging.mjs --check && node scripts/validate-tract-plantar-imaging.mjs",
     "iliac-arterial-imaging:test": "node scripts/pin-iliac-arterial-imaging.mjs --check && node scripts/record-iliac-arterial-imaging.mjs --check && node scripts/validate-iliac-arterial-imaging.mjs",
     "forearm-arterial-imaging:test": "node scripts/pin-forearm-arterial-imaging.mjs --check && node scripts/record-forearm-arterial-imaging.mjs --check && node scripts/validate-forearm-arterial-imaging.mjs",
+    "palmar-arterial-imaging:test": "node scripts/pin-palmar-arterial-imaging.mjs --check && node scripts/record-palmar-arterial-imaging.mjs --check && node scripts/validate-palmar-arterial-imaging.mjs",
     "iliac-venous-imaging:test": "node scripts/pin-iliac-venous-imaging.mjs --check && node scripts/record-iliac-venous-imaging.mjs --check && node scripts/validate-iliac-venous-imaging.mjs",
     "lower-venous-imaging:test": "node scripts/pin-lower-venous-imaging.mjs --check && node scripts/record-lower-venous-imaging.mjs --check && node scripts/validate-lower-venous-imaging.mjs",
     "short-ciliary:test": "node scripts/export-short-ciliary.mjs --check && node scripts/record-short-ciliary-transition.mjs --check && node scripts/validate-short-ciliary.mjs",

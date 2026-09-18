@@ -1144,3 +1144,14 @@ Candilio page does not establish an exact reuse licence, so no media-reuse
 permission is inferred. Existing BodyParts3D CC BY 4.0 attribution is unchanged;
 no new dependency, font, asset or mandatory fee is added. Claim and reuse limits:
 `docs/ANTERIOR_CARDIAC_TEACHING.md`. These are drafts, not clinical approval.
+
+# Palmar arterial imaging teaching — 18 September 2026
+
+Original short factual synthesis cites Kaplanoglu/Beton (2017,
+doi:10.1007/s00276-016-1750-6), Salehi Ravesh et al. (2021, PMID 33582146),
+Kransdorf et al. (1998, PMID 9524324), and Hashem et al. (2018,
+doi:10.1177/1753193418764289). These are reference links, not imported text,
+figures, scans, tables or datasets. Public abstract or PMC access does not grant
+assumed commercial media rights. BodyParts3D CC BY 4.0 credits remain unchanged.
+No asset, dependency, font or mandatory fee is added. Claim/reuse boundaries:
+`docs/PALMAR_ARTERIAL_IMAGING.md`. Clinical acceptance remains pending.
