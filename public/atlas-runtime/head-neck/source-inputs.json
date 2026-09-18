@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "d6cf3ee06c2de4ab6e725088e4ed4348f4a32ff10cbe3a89db3fb94b03297d08"
+    "sha256": "2fc56b43ef24333aad96541ddab0da250f4a80584c6b0b65e556b2f1f42f5231"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -41,7 +41,7 @@
   },
   {
     "path": "app/anatomy-control-rail.tsx",
-    "sha256": "96d369bb985f63234368d8e7909aa8998abc3eaefde37eb173b19fd84ed9b30b"
+    "sha256": "313212905758d13825c51738df4b7fa374dce6822414c97b701dff98ecd232d9"
   },
   {
     "path": "app/anatomy-data.ts",
@@ -65,7 +65,7 @@
   },
   {
     "path": "app/atlas-workspace.css",
-    "sha256": "6b49d32c2ec416300bbb1b039020ede8527e748502087dbf35b0e8830df0c464"
+    "sha256": "074cff234b18ef420d1861b1c45e93dcaa67ae2a05b0fcc19fccaa32f736a4c0"
   },
   {
     "path": "app/atlas-workspace.tsx",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "2767349ec64b5eda71026e4673c4189ae2ca7b3c78b7ad35c1a0b6aa29e4c4ab"
+    "sha256": "8e549604717e2b60891ace0087fa495053aad53e61c4c603d404134586435fde"
   },
   {
     "path": "app/body-education-link.ts",
@@ -936,6 +936,14 @@
     "sha256": "5eb532c3b631fb996071bb5736139d2400f55712b8fded8e81a8c7f78c3910fe"
   },
   {
+    "path": "content/palmar-arterial-imaging-pins.json",
+    "sha256": "cf81abd900c15e1a598c4c1e1e2a7e9fa3fb7c0e1e3e13142fc32eb0ebef77aa"
+  },
+  {
+    "path": "content/palmar-arterial-imaging.ts",
+    "sha256": "07fb960a774eca06b0fa0bf0891782acb848793d4a23ba52ecb2c089a25c6d65"
+  },
+  {
     "path": "content/pancreatic-teaching.ts",
     "sha256": "9e8a890f18d9dc9fb5105e854340db4623e762a0785dd4c08b8e5f4d80773817"
   },
@@ -1017,7 +1025,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "0e915ebf3e4203a79a70ff954e41964e0d43689610b7b26160f26cd103059ca6"
+    "sha256": "e38992ad088f7cd071db87a551f4fde67c3383b27510d19053cbf1e19d9d77a3"
   },
   {
     "path": "content/sca-mca-clinical-pins.json",
@@ -1413,7 +1421,7 @@
   },
   {
     "path": "lib/anterior-cardiac-vein.ts",
-    "sha256": "0939ed061d5c679afddeab4191b9e3eef6d2373aa934a39b7f949d0bc09dfb32"
+    "sha256": "65e542313743aa1b81e0bd6b131dd3bd9492830043631504ee59e4ff7cd5ff49"
   },
   {
     "path": "lib/arm-attachments.ts",
@@ -2118,6 +2126,10 @@
   {
     "path": "lib/origin-guides.ts",
     "sha256": "b333566888bf13805da9559004fbfbfa6596095a65d7ca8772de8259ca974ff6"
+  },
+  {
+    "path": "lib/palmar-arterial-imaging.ts",
+    "sha256": "31350adb7f3f211ba2399a8e9e1f62d433c9c87f4394521bdb10444db41df080"
   },
   {
     "path": "lib/pancreatic-anatomy.ts",

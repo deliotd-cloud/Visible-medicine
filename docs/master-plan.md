@@ -2,6 +2,15 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 18 September — regional teaching and compact sheets
+
+The saved Atlas cardiac and palmar imaging drafts and compact information sheets
+are integrated from source `7ef51462`. All 134 model objects / 140 paths, the other
+three modules and historical staging receipts are unchanged. This remains an
+administrator-review update with independent Atlas/case/lecture permissions and
+no patient data or clinical approval. See [integration evidence](atlas-teaching-ui-20260918.md);
+publication and recovery outcomes are recorded in the coordinating checkpoint.
+
 ## 18 September — integrated regional review candidate
 
 The stage-only website update was privately published as version 87; authenticated
