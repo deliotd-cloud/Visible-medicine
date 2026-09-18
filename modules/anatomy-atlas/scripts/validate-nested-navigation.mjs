@@ -72,6 +72,10 @@ const shim = {
   },
   useContext: (value) => (active ? workspace : React.useContext(value)),
   useMemo: (fn, deps) => (active ? fn() : React.useMemo(fn, deps)),
+  // This harness checks navigation callbacks/SSR, not DOM effects. Actual
+  // preview focus effects are exercised by test-search-preview-focus.mjs and
+  // the browser acceptance record.
+  useEffect: (fn, deps) => (active ? undefined : React.useEffect(fn, deps)),
   useId: () => (active ? 'nested-search-test' : React.useId()),
 };
 const uiModule = { exports: {} },

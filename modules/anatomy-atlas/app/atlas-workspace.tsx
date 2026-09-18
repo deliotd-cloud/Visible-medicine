@@ -432,6 +432,10 @@ export function AtlasSearch({
   const [preview, setPreview] = useState<AtlasSearchEntry | null>(null);
   const launcher = useRef<HTMLButtonElement | null>(null);
   const transferringFocus = useRef(false);
+  const previewOrigin = useRef<HTMLButtonElement | null>(null);
+  const previewConfirmation = useRef<HTMLButtonElement | null>(null);
+  const dialogRoot = useRef<HTMLDivElement | null>(null);
+  const restorePreviewFocus = useRef(false);
   const entries = useMemo(
     () => atlasSearchIndex(catalog, region, side).filter(entry =>
       !localRegionOnly || entry.action.type !== 'link' ||
@@ -444,7 +448,31 @@ export function AtlasSearch({
     [entries, query, kind],
   );
   const {primary,related}=groupAtlasSearchResults(matches,query,kind);
-  const activate = (entry: AtlasSearchEntry, confirmed = false) => {
+  useEffect(() => {
+    if (!open || workspace.exam) {
+      restorePreviewFocus.current = false;
+      previewOrigin.current = null;
+      return;
+    }
+    if (!preview && !restorePreviewFocus.current) return;
+    const intended = preview
+      ? previewConfirmation.current
+      : previewOrigin.current;
+    const target = intended?.isConnected ? intended : dialogRoot.current;
+    restorePreviewFocus.current = false;
+    if (!preview) previewOrigin.current = null;
+    if (target?.isConnected) target.focus({ preventScroll: true });
+  }, [open, preview, workspace.exam]);
+  const clearPreview = (restoreFocus = false) => {
+    restorePreviewFocus.current = restoreFocus;
+    if (!restoreFocus) previewOrigin.current = null;
+    setPreview(null);
+  };
+  const activate = (
+    entry: AtlasSearchEntry,
+    confirmed = false,
+    origin: HTMLButtonElement | null = null,
+  ) => {
     if (workspace.exam) return;
     if (
       !entries.some(
@@ -458,6 +486,8 @@ export function AtlasSearch({
       (entry.action.type === 'window' || entry.action.type === 'focus') &&
       !confirmed
     ) {
+      previewOrigin.current = origin;
+      restorePreviewFocus.current = false;
       setPreview(entry);
       return;
     }
@@ -481,14 +511,14 @@ export function AtlasSearch({
       else onFocus(entry.action.id);
     }
     setOpen(false);
-    setPreview(null);
+    clearPreview();
   };
   const renderEntry=(entry:AtlasSearchEntry)=>entry.action.type==='link'?(
     <Link prefetch={false} key={entry.key} href={entry.action.href} onClick={()=>setOpen(false)}>
       <strong>{entry.label}</strong><small>{entry.detail}</small>
     </Link>
   ):(
-    <button type="button" key={entry.key} onClick={()=>activate(entry)}>
+    <button type="button" key={entry.key} onClick={(event)=>activate(entry,false,event?.currentTarget ?? null)}>
       <strong>{entry.label}</strong><small>{entry.detail}</small>
     </button>
   );
@@ -498,7 +528,7 @@ export function AtlasSearch({
       onOpenChange={(value) => {
         setOpen(value);
         if (value) transferringFocus.current = false;
-        setPreview(null);
+        clearPreview();
       }}
     >
       <DialogTrigger
@@ -514,6 +544,7 @@ export function AtlasSearch({
         <Search /> Search atlas
       </DialogTrigger>
       <DialogContent
+        ref={dialogRoot}
         className="atlas-search-dialog"
         // A newly opened sheet owns focus; returning to Search would steal it.
         // Inline desktop panels and ordinary dismissal still return to Search.
@@ -536,7 +567,7 @@ export function AtlasSearch({
           onChange={(event) => {
             setQuery(event.target.value);
             setLimit(12);
-            setPreview(null);
+            clearPreview();
           }}
           placeholder="e.g. Achilles, peroneus, CN IV, FMA…"
         />
@@ -547,7 +578,7 @@ export function AtlasSearch({
           onChange={(event) => {
             setKind(event.target.value as typeof kind);
             setLimit(12);
-            setPreview(null);
+            clearPreview();
           }}
         >
           <option value="all">Everything</option>
@@ -571,10 +602,10 @@ export function AtlasSearch({
               This opens a clean study view. Custom removals, system choices,
               cutaway and separation will reset. Saved views are not changed.
             </p>
-            <Button onClick={() => activate(preview, true)}>
+            <Button ref={previewConfirmation} onClick={() => activate(preview, true)}>
               Open study view
             </Button>
-            <Button variant="ghost" onClick={() => setPreview(null)}>
+            <Button variant="ghost" onClick={() => clearPreview(true)}>
               Keep current view
             </Button>
           </section>

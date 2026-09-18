@@ -1,5 +1,66 @@
 # First-release viewer acceptance evidence
 
+## 19 September: private 96 head/neck keyboard sample
+
+Website `5e8ff425b5386c9531f44566695c4a3862849b04`, Atlas source
+`cd2d9027a4022bf174a0679e1910edd8c72d3ab8`; external Chrome on Windows,
+desktop keyboard and an inspected 1230-by-1456 screenshot. No zoom/device
+emulation or screen reader was used.
+
+- Opened Search with Enter: focus entered its search field. Tab reached the
+  search-scope selector. Selecting Brain (FMA50801) via Enter closed Search,
+  updated the study panel and, after closing transition, returned focus to Search.
+- ArrowRight on the information tablist moved focus to Clinical; Enter selected
+  it. In Focus view, Details opened the info sheet with focus on Close. Shift+Tab
+  wrapped to Return to model; Escape returned to the actual Details launcher.
+- Systems & tools opened by Enter. Space toggled Bones off, and Return to model
+  closed the sheet. The selected Brain remained available. The model canvas
+  accepted arrow-key input, and Tab moved to the Brain label without a trap.
+  A later rotation screenshot timed out; do not infer a verified numerical
+  camera angle or complete keyboard-camera visual acceptance from this sample.
+- Study-preview defect reproduced: Enter on the Deep-brain overview study-window
+  search result hid the results and moved focus to the dialog root, not either
+  confirmation action. The confirmation was present, but keyboard users lost
+  their position. Cancel did not apply the study. A source fix must explicitly
+  focus confirmation and restore the originating result on cancellation, while
+  preserving existing query/filter and new-sheet handoff behavior.
+
+This sample does not complete any release gate. Real touch, text zoom, screen
+reader, all regional journeys and independent access-denial checks remain due.
+
+### Corrected study-preview focus: generated candidate
+
+Atlas `ff5e396557bcf669d53ea608a38730873cfa3d66` was built and exported locally.
+All 198 exported files were checked against manifest byte counts and SHA256
+before loopback-only serving. Manifest SHA256:
+`9f8bd47e1a5b64993b0350175ab689b0a2c335ecc6a74ca925019b4cbd110e6b`.
+This is source/browser acceptance, **not a website deployment**.
+
+Actual Chrome keyboard checks passed:
+
+- Both Deep-brain overview window and compartment previews focus Open study
+  view. Cancelling the window returns to its exact search result.
+- In related results for “brain”, Choroid plexus & fornix focuses confirmation;
+  cancellation restores its exact result and the enclosing native disclosure
+  remains open. Search query/filter state is retained.
+- Editing the query dismisses preview without stealing input focus. Changing
+  Search within by ArrowDown dismisses preview and retains the select's focus.
+- Confirming a window in Focus view closes Search, opens the correct deep-brain
+  dissection (22 enabled) and gives focus to Close systems & tools, not Search.
+- Inspected desktop confirmation screenshot: primary action has a clear focus
+  ring. At a requested 390-by-844 viewport override, explanatory text and both
+  actions fit; keyboard cancel still restores the exact result. Override reset.
+
+The local test tab/server were closed and port 57673 had no listener afterwards.
+No source geometry, teaching content, saved views, permissions or patient data
+were changed. Renderer/review fingerprints were refreshed without approvals.
+
+Regression coverage includes actual component callback/effect execution with a
+controlled focus boundary, plus the existing navigation/renderer/visibility/review
+suites. The navigation harness needed an explicit effect boundary after adding
+the new effect; its callback and SSR assertions were preserved and rerun. Browser
+checks above, not synthetic focus nodes, establish actual DOM focus behavior.
+
 ## 19 September 2026: private version 95, desktop samples
 
 Tested website `a43c9c2e2d67245ef3a7b91edcfa1c96f1fa43b5`, generated from
