@@ -9,6 +9,7 @@ import {
 } from '@react-three/fiber';
 import * as THREE from 'three';
 import { AnatomyRootSession } from '@/lib/anatomy-root-session';
+import './camera-keyboard.css';
 
 type Props = Pick<
   RenderProps<HTMLCanvasElement>,

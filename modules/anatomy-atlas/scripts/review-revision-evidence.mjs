@@ -20,6 +20,8 @@ export const reviewDisplayPaths = [
   'lib/renderer-health.ts',
   'app/anatomy-tissue.tsx',
   'app/fitted-camera.tsx',
+  'lib/camera-keyboard.ts',
+  'app/camera-keyboard.css',
   'app/shoulder-explorer.tsx',
   'app/shoulder-workspace.css',
   'app/atlas-workspace.tsx',

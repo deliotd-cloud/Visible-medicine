@@ -14,6 +14,7 @@ import {
 } from '@/lib/study-camera';
 import type { StudyCamera } from '@/lib/study-views';
 import { steppedCameraScale } from '@/lib/camera-zoom';
+import { bindCameraKeyboard } from '@/lib/camera-keyboard';
 
 export function FittedCamera({
   bounds,
@@ -47,7 +48,7 @@ export function FittedCamera({
   cameraCapture?: RefObject<StudyCamera | null>;
   cameraRestore?: RefObject<StudyCamera | null>;
 }) {
-  const { camera, size, invalidate } = useThree();
+  const { camera, size, invalidate, gl } = useThree();
   const controls = useRef<Controls>(null);
   const previous = useRef<{
     key: string;
@@ -236,6 +237,13 @@ export function FittedCamera({
     verticalFill,
     presetBounds,
   ]);
+  useEffect(() => {
+    if (!gl?.domElement || locked || planar) return;
+    return bindCameraKeyboard(gl.domElement, () => controls.current, () => {
+      capture();
+      invalidate();
+    });
+  }, [gl, locked, planar, capture, invalidate]);
   return (
     <OrbitControls
       ref={controls}

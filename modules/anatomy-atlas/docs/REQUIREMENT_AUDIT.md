@@ -39,6 +39,12 @@ Follow [CONTINUOUS_IMPROVEMENT.md](CONTINUOUS_IMPROVEMENT.md): source-bound educ
 
 ## Full UI acceptance matrix — partial milestone evidence, not complete acceptance
 
+The [keyboard rotation pass](KEYBOARD_ROTATION.md) adds focused-canvas arrow
+rotation and Shift fine steps to shared free-orbit viewers. Current thorax and
+whole-body browser samples, a focus-treatment screenshot, angular-limit tests
+and locked-tray rejection are recorded in the coordination checkpoint. This
+does not complete screen-reader or physical-device acceptance.
+
 The [regional readability pass](REGIONAL_READABILITY.md) covers five root-body
 views at default/enlarged root font, bounded keyboard journeys and four metadata
 contrast samples. It does not replace native zoom, complete keyboard order,

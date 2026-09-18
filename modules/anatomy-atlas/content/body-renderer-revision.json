@@ -22,7 +22,7 @@
     },
     {
       "path": "app/anatomy-canvas.tsx",
-      "sha256": "489db0808c92a29f1141c04a7731829d347f73ffc1589ee131d5173228f40472"
+      "sha256": "667fc0843d6057dd50766eea3ba6ae7aac72332913332aae233f2ee87bc91547"
     },
     {
       "path": "app/anatomy-control-rail.tsx",
@@ -101,6 +101,10 @@
       "sha256": "4fdee83b0c6af9419bab378a59eee0a2c326e7f2176979804d7bb7e39faff3c5"
     },
     {
+      "path": "app/camera-keyboard.css",
+      "sha256": "546be3cb74dc907c2652d4b177352303d123275bfed6b6946c740750467cefb8"
+    },
+    {
       "path": "app/cerebral-layers.tsx",
       "sha256": "8c4fdcbbb15717997f991641b9a9c8ab93987686c0dd9496e2643de9d0486215"
     },
@@ -150,7 +154,7 @@
     },
     {
       "path": "app/fitted-camera.tsx",
-      "sha256": "c429693a45c6862f12e75f47fdf6da4a23f21d4887c9002c2cb5b21d8835afa2"
+      "sha256": "4d659d330d43f3482043c9fc3d9992993b4bef88b194645dfd3472f80184c203"
     },
     {
       "path": "app/globals.css",
@@ -1030,7 +1034,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "e6f3ce8813041a187cf16d448e531be13a6b3fb1b10a196a65ab0384e4592ec2"
+      "sha256": "857c5554613df8121f8a6d44725fe7a13ce4d498d3cd1adcf116fd4e55a9266e"
     },
     {
       "path": "content/sca-mca-clinical-pins.json",
@@ -1435,6 +1439,10 @@
     {
       "path": "lib/brainstem.ts",
       "sha256": "c1672c0d2e21d0fb3b752b6cb001a970b071fa492b218a9c788a476754fc24a9"
+    },
+    {
+      "path": "lib/camera-keyboard.ts",
+      "sha256": "49fc891102a943037311097439e4b80ac5c7eb0a18d1c0468672c39f888f8047"
     },
     {
       "path": "lib/camera-orientation.ts",
@@ -2466,7 +2474,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "82d5e5cb62b3acb595ddbe719077d2c37e4172bef821dd8a0bd9d0c66c24903b"
+      "sha256": "3b54694fe0c3c8097661492280d56f121e7a6c94652f4d8868548535ea204aaa"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2669,5 +2677,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "1caec69ad4d3fbc91c7a4abcd9b11c7e84b13dec8469435b2ede6d4bf34aa181"
+  "sha256": "0310aeb603460ffc4c2883461cbc8ba53d1bc019c44bd0429c17daa9def1c15d"
 }
