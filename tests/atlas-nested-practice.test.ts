@@ -8,9 +8,9 @@ test('regional practice export preserves every model and binds the tested named-
   const base = 'public/atlas-runtime/head-neck/';
   const sha = (b: string | Buffer) => createHash('sha256').update(b).digest('hex');
   const bytes = readFileSync(base + 'manifest.json');
-  assert.equal(sha(bytes), '0822c89521e509d79ae9542b757dd15c9929696bdb1fa38f239336b9830efe44');
+  assert.equal(sha(bytes), '1564ad71c59150afc30e3e09bb7dcf5595cdf0f50efce96499ddd38642487c3b');
   const manifest = JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit, '924e0dd79eb1d96ab89a61f35d6e34ddb6475026');
+  assert.equal(manifest.sourceCommit, 'cd2d9027a4022bf174a0679e1910edd8c72d3ab8');
   assert.equal(manifest.patientDataIncluded, false);
   assert.equal(manifest.clinicalApproved, false);
   assert.equal(manifest.imagingConnection, false);
@@ -18,6 +18,7 @@ test('regional practice export preserves every model and binds the tested named-
   assert.equal(manifest.regionalScopes.length, 12);
   const inputs = JSON.parse(readFileSync(base + 'source-inputs.json', 'utf8')) as {path:string;sha256:string}[];
   for (const [path, hash] of Object.entries({
+    'app/dissection-controls.tsx': '520127bb748b4c8e2e1cd05f7e97937d73d86a8add37f8023315bbb214330e6d',
     'app/nested-practice.tsx': '84d0e01eb8aa81a7c045b243b4bd426ca898a27dbf0070cf8cb9e73e0eb590a7',
     'app/nested-practice.css': '8e0c687cecb73a74e65f6a574ad0858237d9f61680732eafb140c760779f1591',
     'lib/nested-practice.ts': 'e61db487c33d4c8aaeb737e0122b376abeb5f5bb4df49d99370285eb85d65a82',
@@ -27,6 +28,7 @@ test('regional practice export preserves every model and binds the tested named-
     const data = readFileSync(base + f.path); assert.equal(sha(data), f.sha256); return data.toString();
   }).join('\n');
   for (const text of ['Find the named space', 'Name the isolated space', 'Practice identification']) assert(runtime.includes(text), text);
+  assert(runtime.includes('Enabled by the current layers and system filters; models may still be loading or unavailable.'));
   const prior = JSON.parse(execFileSync('git', ['show', 'b4514b336868b7cedca25f33b61ed428355c4726:lib/atlas-model-inventory.json'], {encoding:'utf8'}));
   const current = JSON.parse(readFileSync('lib/atlas-model-inventory.json', 'utf8'));
   assert.deepEqual(current.models, prior.models);

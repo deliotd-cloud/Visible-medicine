@@ -4,6 +4,15 @@ Last consolidated: 12 September 2026. This is the shared roadmap and decision lo
 
 ## 18 September — first-release milestone and named-space practice
 
+19 September correction: the regional dissection count now says **enabled**,
+not visible, because failed or still-loading models remain part of the chosen
+layer/system scope. Actual control markup was tested in pending, ready and failed
+states; renderer/review revisions and the unsigned pilot were refreshed. Source
+`cd2d9027` is integrated through the generated export; all135 models/142 paths and
+other viewers remain unchanged. This is a presentation correction, not clinical
+approval, extra coverage or a changed entitlement. Publication/QA/recovery remain
+separately recorded in the main coordination checkpoint.
+
 The owner accepted a finite first-release checklist within the unchanged wider
 Atlas goal. The canonical detailed checklist is in the Atlas source checkout,
 `docs/FIRST_RELEASE_CHECKLIST.md`, with the initial 11-selection clinical review
