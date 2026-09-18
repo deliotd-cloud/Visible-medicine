@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "6e066c9dc3858155254aa006204254aea284d9c7252d0a0a71d73eefd13db0f4"
+      "sha256": "5df356430aeb0cb4c9c2509b4cff068da83e7e2708822514a12ef99b2690cf68"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1063,6 +1063,14 @@
     {
       "path": "content/shoulder-arm-muscle-imaging.ts",
       "sha256": "f1362fbc88cebd958073b476b3aa44eae847091fe265e9194971ae5e4360d0c3"
+    },
+    {
+      "path": "content/shoulder-arterial-mri-pins.json",
+      "sha256": "7eeb5ef24a0a87fc42606f6b0a620adabf5ef79b666e8907b3f245887761fae9"
+    },
+    {
+      "path": "content/shoulder-arterial-mri.ts",
+      "sha256": "e9ea55d29364250ae5aab7bcc77f6dec9a80de3cc26b2f3ceb085a3fd4e90d16"
     },
     {
       "path": "content/shoulder-xray-bindings.json",
@@ -2253,6 +2261,10 @@
       "sha256": "b2d3a2a32e40fa2bfc6e6b454cd5023583506000627fde80173a28b0a3b9624f"
     },
     {
+      "path": "lib/shoulder-arterial-mri.ts",
+      "sha256": "d2cec74d690c470be73e01e68093413526a8b20650d300fc208bfbf0908c455f"
+    },
+    {
       "path": "lib/shoulder-clinical-curriculum.ts",
       "sha256": "dab771a8dee5c917271d3354d350922bea85d985583c863cf1ff1f4b6481b18b"
     },
@@ -2486,7 +2498,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "511ba3a439c0c8032f485f899d09048a620ee8347483c7ccb17bf9aa81a08765"
+      "sha256": "1e39615752eba73cfe69f97b1dd18fc8cfee9c1b26daaf834f3080eb3d797bfd"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2689,5 +2701,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "62bac93c7eede12b060cd025efbcca90e9bc61d36d6f9ec88c78f2cfa9bdec30"
+  "sha256": "356eb3a022c49e7a6575471f9439ddcd12329de4da77135d484b8699c8089c33"
 }

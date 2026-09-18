@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "shoulder-arterial-mri:test": "node scripts/pin-shoulder-arterial-mri.mjs --check && node scripts/record-shoulder-arterial-mri.mjs --check && node scripts/validate-shoulder-arterial-mri.mjs",
     "distal-palmar-mri:test": "node scripts/pin-distal-palmar-mri.mjs --check && node scripts/record-distal-palmar-mri.mjs --check && node scripts/validate-distal-palmar-mri.mjs",
     "camera-keyboard:test": "node --experimental-strip-types --test scripts/test-camera-keyboard.mjs",
     "anterior-cardiac-vein:test": "node scripts/export-anterior-cardiac-vein.mjs --check && node scripts/record-anterior-cardiac-vein-baseline.mjs --check && node scripts/record-anterior-cardiac-vein.mjs --check && node scripts/validate-anterior-cardiac-vein.mjs",

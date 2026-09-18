@@ -2,23 +2,22 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {context,hash,snapshot} from './pin-pica-clinical.mjs';
 import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
-import {beforeDistalPalmarMri} from './distal-palmar-mri-history.mjs';
 import {beforeShoulderArterialMri} from './shoulder-arterial-mri-history.mjs';
 import {build} from './workspace-test-build.mjs';
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
-import pins from '../content/distal-palmar-mri-pins.json' with {type:'json'};
-import transition from '../content/distal-palmar-mri-transition.json' with {type:'json'};
-import {distalPalmarMriTopics,distalPalmarMriSelections,distalPalmarMriReference} from '../content/distal-palmar-mri.ts';
-const {api:rawApi,display}=await context({current:true}),api=beforeShoulderArterialMri(rawApi),before=beforeDistalPalmarMri(api);
+import pins from '../content/shoulder-arterial-mri-pins.json' with {type:'json'};
+import transition from '../content/shoulder-arterial-mri-transition.json' with {type:'json'};
+import {shoulderArterialMriTopics,shoulderArterialMriSelections,shoulderArterialMriReferences} from '../content/shoulder-arterial-mri.ts';
+const {api,display}=await context({current:true}),before=beforeShoulderArterialMri(api);
 assert.equal(hash(snapshot(api,display)),transition.currentAllLessonsAndRecipesHash);
 assert.equal(hash(snapshot(before,display)),pins.previousAllLessonsAndRecipesHash);
 const saved=await exactSourceHistoryApi(pins.sourceCommit),raw=JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json'));
 assert.deepEqual(saved.bodyDisplayCatalog(raw),display);assert.deepEqual(snapshot(saved,display),snapshot(before,display));
-assert.equal(beforeDistalPalmarMri(before),before);
-const built=await build({stdin:{contents:"export {distalPalmarMriLesson} from './lib/distal-palmar-mri';export {bodyReviewMaterial} from './lib/body-review-material';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
-const {distalPalmarMriLesson:lesson,bodyReviewMaterial}=await import('data:text/javascript;base64,'+Buffer.from(built.outputFiles[0].text).toString('base64'));
-const expected={FMA22864:['FJ2289'],FMA22865:['FJ2237'],FMA22905:['FJ2371','FJ2372'],FMA22907:['FJ2338','FJ2339'],FMA22777:['FJ2342','FJ2363'],FMA22778:['FJ2314','FJ2332']};
-assert.deepEqual(Object.fromEntries(distalPalmarMriSelections.map(e=>[e.fmaId,e.files])),expected);
+assert.equal(beforeShoulderArterialMri(before),before);
+const built=await build({stdin:{contents:"export {shoulderArterialMriLesson} from './lib/shoulder-arterial-mri';export {bodyReviewMaterial} from './lib/body-review-material';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
+const {shoulderArterialMriLesson:lesson,bodyReviewMaterial}=await import('data:text/javascript;base64,'+Buffer.from(built.outputFiles[0].text).toString('base64'));
+const expected={FMA22685:['FJ2291','FJ2292'],FMA22687:['FJ2239','FJ2240'],FMA23180:['FJ2273'],FMA23181:['FJ2221'],FMA10698:['FJ2303'],FMA10681:['FJ2251']};
+assert.deepEqual(Object.fromEntries(shoulderArterialMriSelections.map(e=>[e.fmaId,e.files])),expected);
 assert.equal(pins.entries.length,6);const selected=new Map(pins.entries.map(e=>[e.identity.id,e]));
 const contracts=await contentContext(),records=contracts.api.bodyContentRecords(display);
 const validate=await contentValidator(new Map([...contracts.shoulder,...records].map(r=>[r.representationScope+'|'+r.id,r])));
@@ -28,8 +27,8 @@ for(const s of display.structures)for(const tab of api.contentTabs){
  if(!e||tab!=='mri'){assert.deepEqual(now,prior);assert.equal(lesson(s,tab),undefined);unchanged++;continue;}
  changed++;assert.deepEqual(s,e.identity);assert.equal(prior.readiness,'pending');assert.equal(now.readiness,'draft');
  assert.deepEqual(now,lesson(s,tab));assert.deepEqual(prior,e.previous.mri);assert.equal(hash(now),transition.entries.find(x=>x.id===s.id).sections.mri);
- assert.equal(now.body,distalPalmarMriTopics[e.group].body);assert.deepEqual(now.citations,[distalPalmarMriReference]);
- assert(now.bullets.includes(distalPalmarMriTopics[e.group].scope));assert.match(now.note,/revision-bound radiologist/);
+ assert.equal(now.body,shoulderArterialMriTopics[e.group].body);assert.deepEqual(now.citations,[shoulderArterialMriReferences[e.group]]);
+ assert(now.bullets.includes(shoulderArterialMriTopics[e.group].scope));assert.match(now.note,/revision-bound radiologist/);
  assert.match(now.note,/paid-lecture access remain independent/);assert.match(now.note,/not routine MRI/);
  const {readiness:_readiness,...rendered}=now;assert.deepEqual(api.bodyContent(s,tab),rendered);
  const record=records.find(r=>r.id===s.id);assert(validate(record));assert.equal(record.validation.clinicalApproval,'not-included');assert.deepEqual(record.content.mri,now);
@@ -47,10 +46,10 @@ for(const e of pins.entries){
  for(const mutate of [s=>s.sources.pop(),s=>{delete s.sources;},s=>s.regions.push('foreign'),s=>s.sources.push(s.sources[0])]){const bad=structuredClone(e.identity);mutate(bad);assert.equal(lesson(bad,'mri'),undefined);rejected++;}
  if(e.identity.sources.length>1){const bad=structuredClone(e.identity);bad.sources.reverse();assert.equal(lesson(bad,'mri'),undefined);rejected++;}
 }
-const first=pins.entries[0];assert.throws(()=>beforeDistalPalmarMri({...api,bodyLesson:(s,t)=>s.id===first.identity.id&&t==='mri'?first.previous.mri:api.bodyLesson(s,t)}),/Mixed/);
-assert.throws(()=>beforeDistalPalmarMri({...api,bodyLesson:(s,t)=>s.id===first.identity.id&&t==='mri'?{...api.bodyLesson(s,t),body:'foreign'}:api.bodyLesson(s,t)}),/Unrecorded/);
+const first=pins.entries[0];assert.throws(()=>beforeShoulderArterialMri({...api,bodyLesson:(s,t)=>s.id===first.identity.id&&t==='mri'?first.previous.mri:api.bodyLesson(s,t)}),/Mixed/);
+assert.throws(()=>beforeShoulderArterialMri({...api,bodyLesson:(s,t)=>s.id===first.identity.id&&t==='mri'?{...api.bodyLesson(s,t),body:'foreign'}:api.bodyLesson(s,t)}),/Unrecorded/);
 // Count duplicated left/right factual prose conservatively. Scope warnings are
 // original statements of this atlas's own source/representation limits.
-const researchWords=pins.entries.reduce((n,e)=>n+distalPalmarMriTopics[e.group].body.trim().split(/\s+/).length,0);
-assert(researchWords<=170);assert.equal(new URL(distalPalmarMriReference).protocol,'https:');
+const researchWords=pins.entries.reduce((n,e)=>n+shoulderArterialMriTopics[e.group].body.trim().split(/\s+/).length,0);
+for(const ref of new Set(Object.values(shoulderArterialMriReferences))){const count=pins.entries.filter(e=>shoulderArterialMriReferences[e.group]===ref).reduce((n,e)=>n+shoulderArterialMriTopics[e.group].body.trim().split(/\s+/).length,0);assert(count<=160);assert.equal(new URL(ref).protocol,'https:');}
 console.log(JSON.stringify({changed,unchanged,rejectedIdentityMutations:rejected,researchWords,geometryChanged:false,recipesChanged:false,clinicalApproval:false}));

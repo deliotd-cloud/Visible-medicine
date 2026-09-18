@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Shoulder arterial MRI](SHOULDER_ARTERIAL_MRI.md) adds six source-bound drafts across paired posterior circumflex humeral, circumflex scapular and suprascapular arteries. Small-study findings are explicitly limited; other9,930 topics, geometry and recipes are unchanged. No acquired scans, diagnostic protocol, registration or clinical approval is added.
+
 [Distal palmar MRI](DISTAL_PALMAR_MRI.md) adds six source-bound drafts for paired palmar-metacarpal, princeps-pollicis and radialis-indicis selections. Three short modality texts distinguish specialised MRA from routine MRI. Grouped source components, all other9,930 topics and recipes remain unchanged; no acquired images, registration or clinical approval are added.
 
 [Lesser-toe X-ray orientation](LESSER_TOE_XRAY.md) adds24 source-bound drafts for existing proximal, middle and distal phalanges of digits2–5. Three modality texts retain digit-specific landmarks; existing CT/MRI drafts, all other9,912 topics, source geometry and recipes are unchanged. Grouped sesamoids remain held. No scans, fracture simulation, new controls or clinical approval are supplied.
@@ -158,7 +160,7 @@ Counts are representations with displayed copy, not unique lessons, complete top
 | Anatomy | 1102 | 2 | 0 | 0 |
 | Function | 1099 | 0 | 5 | 0 |
 | CT | 834 | 0 | 270 | 0 |
-| MRI | 811 | 0 | 293 | 0 |
+| MRI | 817 | 0 | 287 | 0 |
 | X-ray | 378 | 0 | 726 | 0 |
 | Ultrasound | 554 | 0 | 550 | 0 |
 | Pathology | 1092 | 0 | 12 | 0 |

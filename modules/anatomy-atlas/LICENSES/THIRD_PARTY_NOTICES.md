@@ -1,5 +1,13 @@
 # Third-party notices
 
+## Shoulder arterial MRI teaching — 18 September 2026
+
+Three short original paired teaching summaries cite Mochizuki1994 and Pan2024
+as factual references only. No publisher media, tables, abstracts or scans are
+imported and no reuse permission for their images is inferred. Existing models
+and their attribution are unchanged; no dependency, font, texture or service is
+added. See [evidence and reuse scope](../docs/SHOULDER_ARTERIAL_MRI.md).
+
 ## Local female urinary-junction review — 17 September 2026
 
 The optional diagnostic generator selects ten unchanged surfaces from the
