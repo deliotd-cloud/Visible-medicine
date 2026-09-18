@@ -33,7 +33,7 @@ thigh check; neither substitutes for the complete matrix.
 
 Still required: whole-body and every included region's common journey; both
 sides and dense multi-label overlap; full intermediate/max/reassembly combinations;
-slow/missing-model retry and WebGL/context recovery in a browser; real phone/tablet
+broader retry/failure cases and WebGL/context recovery in a browser; real phone/tablet
 touch; 200% text zoom; screen-reader/focus navigation; independent specimen checks;
 signed-out, denied and expired access. Previous narrow iframe tests are responsive
 layout evidence only. No global viewer gate is passed by these samples.
@@ -42,3 +42,46 @@ Known navigation issue: static public Atlas header displays Sign in even when
 authenticated workspace displays Profile. Preserve independent access enforcement
 when addressing it. No diagnosis, clinical approval, shipping allowlist or new
 entitlement is supplied by this evidence. See `FIRST_RELEASE_CHECKLIST.md`.
+
+## 19 September: controlled model-download failure and retry
+
+The same version-95 regional export was served on loopback only, without editing
+its code or assets. Before serving, all 198 manifest-listed files were checked
+against their exact byte lengths and SHA256. Manifest SHA256:
+`0822c89521e509d79ae9542b757dd15c9929696bdb1fa38f239336b9830efe44`.
+
+The local test server deliberately returned HTTP 503 for the first request for
+`models/bodyparts3d/full-body/thigh-muscles-dissection.glb`; its second request
+returned the exact verified original after a five-second delay. No live-site
+request was intercepted, no source file changed, and no scans were served.
+
+Observed in real external Chrome:
+
+1. Missing anatomy produced a warning and Retry missing anatomy control. The
+   remaining model loaded; this was not a test-double or static markup check.
+2. Before retry, changed to thigh dissection stage 2, selected left femur
+   FMA24475, changed camera to Posterior and Spread separation to 10%.
+3. Retry showed a disabled Retrying control; local server evidence recorded
+   exactly the failed first request and delayed successful second request.
+4. On completion, warning/retry control disappeared and rectus-femoris labels
+   returned. Screenshot inspection confirmed rendered anatomy, posterior view,
+   left-femur selection, 10% separation and stage 2 retained. Undo remained
+   available; Undo/Redo then returned to stages 1/2 respectively.
+5. Closed the local test tab, stopped its exact process and confirmed the
+   loopback port no longer listened. The live Atlas was untouched.
+
+The temporary harness and process evidence are retained in the main coordination
+workspace at `work/serve-model-retry-qa-20260919.mjs` and its recovery checkpoint.
+This sample covers one asynchronous GLB fetch failure, retry and delayed success.
+It does not prove hardware/WebGL-context recovery, retry during active practice,
+malformed geometry handling, all bundles, touch or nonvisual acceptance.
+
+### Confirmed presentation issue to correct
+
+During the failed load, the dissection heading still said **89 visible** because
+it counts enabled structures, including those in the failed bundle. The warning
+was present, but that count's wording overstates loaded/rendered anatomy.
+`app/dissection-controls.tsx` receives `visibleCount={available.length}` from
+`app/body-explorer.tsx`; distinguish enabled from loaded/failed status without
+changing independent visibility filters, layer recipes or history semantics.
+This issue remains open; passing retry behaviour does not resolve it.
