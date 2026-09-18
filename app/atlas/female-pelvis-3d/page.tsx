@@ -21,9 +21,9 @@ export default function FemalePelvisModulePage() {
     <iframe className="shoulder-module-frame" src="/atlas-runtime/female-pelvis/index.html" title="Interactive female pelvic reference: explore, dissect and practise" referrerPolicy="same-origin" allowFullScreen />
     <details className="shoulder-module-notes">
       <summary>Coverage, sources &amp; imaging links</summary>
-      <p>41 source surfaces and eight study views, with introductory draft teaching for all 41 selections. Rotate, search, fade, set aside, separate tissues and practise identification. Imaging-topic coverage remains partial and clinical review is pending. Source boundaries and six withheld groups remain unchanged.</p>
+      <p>43 selections across 11 study views: 41 pelvic surfaces and two ureters from the same source specimen and coordinate frame, with introductory draft teaching for all 43 selections. Rotate, search, fade, set aside, separate tissues and practise identification. Imaging-topic coverage remains partial and clinical review is pending. Source boundaries and six withheld groups remain unchanged.</p>
       <p>This separate reference is not complete female anatomy: no pelvic floor or nerve network is included. No scan or spatial registration is connected. CT, MRI, X-ray and ultrasound will connect through Didanix Education only after mapping and access checks; lecture access remains separate.</p>
-      <p><a href="/atlas-runtime/female-pelvis/models/hra-pelvis/NOTICE.md" target="_blank" rel="noopener noreferrer">HRA / HuBMAP model credit, changes and CC BY 4.0 reuse terms</a> · <a href="/atlas-runtime/female-pelvis/BUNDLED_NOTICES.txt" target="_blank" rel="noopener noreferrer">Software licences</a></p>
+      <p><a href="/atlas-runtime/female-pelvis/models/hra-pelvis/NOTICE.md" target="_blank" rel="noopener noreferrer">HRA / HuBMAP pelvic model credit and CC BY 4.0 reuse terms</a> · <a href="/atlas-runtime/female-pelvis/models/hra-renal/NOTICE.md" target="_blank" rel="noopener noreferrer">Ureter source credit and reuse terms</a> · <a href="/atlas-runtime/female-pelvis/BUNDLED_NOTICES.txt" target="_blank" rel="noopener noreferrer">Software licences</a></p>
     </details>
   </main>;
 }

@@ -22,9 +22,16 @@ test('regional staging preserves immutable candidates after explicit administrat
   assert.equal(candidate.proposedInventorySha256, 'a74532b7b64b61221f14ddefb02c267296376397c19da5553772996fdcaebba4');
   assert.equal(candidate.activeInventorySha256, '9f686f1a2c9909bba2b46b1b76805aa8168287c4aa4d0f420e942b3fb7c90e2c');
   // Teaching/UI companions can advance without rewriting the immutable staging receipt.
-  assert.equal(sha(JSON.stringify(active, null, 2) + '\n'), '434be08b1f927895791c4540cc8751725e638c80262a980f493a729cd42bdb02');
-  assert.equal(sha(JSON.stringify(active.models)), '5047d0652bcadd1772f60e2928ae53e228d9359d99488056e39777c4a7cdedb6', 'All 134 model identities, bytes and paths remain exactly as previously verified');
-  assert.equal(sha(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8')), '59ae18f57df2daf5e7a5f69c327e839392bfc907e32141a2f7a6a34552999d95');
+  assert.equal(sha(JSON.stringify(active, null, 2) + '\n'), 'c0ec8284a7b01b71b9a40b86258fe137fcd9e0d7d2c8b6200c8d1028463b9cf8');
+  const pelvicAlias = '/atlas-runtime/female-pelvis/models/hra-renal/kidneys.glb';
+  const renal = active.models.find((m: AtlasStoredModel) => m.paths.includes(pelvicAlias));
+  assert.equal(renal.sha256, 'bd5d2affb912f135c8c8da7e7892fbc906ebae017ed7042e900646c2b6332cfc');
+  assert.equal(renal.bytes, 3557552);
+  assert.equal(active.models.flatMap((m: AtlasStoredModel) => m.paths).filter((p: string) => p === pelvicAlias).length, 1);
+  const previousModels = active.models.map((m: AtlasStoredModel) => ({...m, paths:m.paths.filter(p => p !== pelvicAlias)}));
+  assert.equal(sha(JSON.stringify(previousModels)), '5047d0652bcadd1772f60e2928ae53e228d9359d99488056e39777c4a7cdedb6', 'Removing exactly the new alias reproduces every previously verified model identity, byte count and path');
+  assert.equal(sha(JSON.stringify(active.models)), '972cd41676713abf3aa458055783ce95bcfac41596bf5ec411911f9a1717aa10');
+  assert.equal(sha(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8')), '73f9404e4967330974dcb5c0533bd8e98636a2eff2309afbd8e5f34b3b72611b');
   assert.deepEqual(candidate.models, [
     { sha256: 'f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826', bytes: 11856, paths: ['/atlas-runtime/head-neck/models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb'] },
     { sha256: '9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5', bytes: 65264, paths: ['/atlas-runtime/head-neck/models/bodyparts3d/short-ciliary/short-ciliary.glb'] },
@@ -59,7 +66,7 @@ test('regional staging preserves immutable candidates after explicit administrat
   }, exports);
   assert.deepEqual(exports.atlasRegisteredStagingModels, expected);
   assert.equal(expected.length, 134);
-  assert.equal(expected.flatMap(m => m.paths).length, 140);
+  assert.equal(expected.flatMap(m => m.paths).length, 141);
   assert.equal(active.models.length, 134);
   assert.deepEqual(expected, active.models.map((m: AtlasStoredModel) => ({...m, paths:[...m.paths].sort()})), 'Every registered candidate now belongs to the explicit review inventory; registration alone never promotes it');
   assert.equal(candidate.models.reduce((n: number, m: AtlasStoredModel) => n + m.bytes, 0), 77120);

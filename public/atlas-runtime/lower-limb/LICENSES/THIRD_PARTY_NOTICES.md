@@ -1,5 +1,418 @@
 # Third-party notices
 
+## Local female urinary-junction review — 17 September 2026
+
+The optional diagnostic generator selects ten unchanged surfaces from the
+existing HRA United Female v1.10 source: two candidate orifice surfaces and eight
+already-reviewed renal/pelvic context surfaces. It embeds the existing HRA
+creator credit, original source and CC BY 4.0 links, adaptation notice and full
+installed Three.js MIT notice. Colours, two-sided display, transparency and
+optional through-surface contact highlights are diagnostic display adaptations.
+No new production anatomy, font, image, paid service or dependency is added.
+See [source evidence and admission limits](../docs/HRA_URINARY_JUNCTION_REVIEW.md).
+
+## Thoracic organ reasoning — 17 September 2026
+
+Three original short questions cite Texas Tech's lungs/mediastina teaching page
+as a factual reference only. No publisher questions, illustrations, tables or
+scans are included. Existing BodyParts3D attribution and code terms are retained;
+no new dependency, model, image, font or paid service. See
+[reasoning scope and references](../docs/REASONING_PRACTICE.md).
+
+## Abdominal connective imaging — 17 September 2026
+
+Four original short CT/ultrasound topic texts cite published anatomical/imaging
+research as factual references only. No publisher scans, figures, abstracts,
+tables or slides are copied into the Atlas. Existing BodyParts3D attribution and
+project-code terms remain; no new media, dependency or paid service is added.
+See [reference and review scope](../docs/ABDOMINAL_CONNECTIVE_IMAGING.md).
+
+## Local subcostal source review — 17 September 2026
+
+The optional diagnostic generator uses four complete BodyParts3D v4 subcostal
+sources and seven previously retained context sources. The generated local HTML
+contains the required DBCLS/CC BY4.0 attribution, licence links and modification
+statement, plus the full installed Three.js MIT notice. Original ordered triangles
+and supplied normals are retained with Float32 storage and the established scene
+matrix; colours and context transparency are diagnostic display changes only.
+Two opposite-side ascending-lumbar sources are excluded. No new production model,
+font, image, dependency or service is added. See
+[source and review scope](../docs/THORACOLUMBAR_VESSEL_SOURCE_REVIEW.md).
+
+## Abdominal organ reasoning — 17 September 2026
+
+Seven original short questions cite university anatomy tables and OpenStax for
+factual relationships. No publisher questions, figures, scans or other media are
+redistributed; source access is not asset-reuse permission. Existing BodyParts3D
+attribution and original project-code terms remain. No model, font, texture,
+dependency or paid service is added. See docs/REASONING_PRACTICE.md for reference
+scope, source exclusions and revision-bound clinical review requirements.
+
+## Exact-triangle picking — 17 September 2026
+
+`three-mesh-bvh` 0.8.3, already installed transitively, is now pinned as a direct
+runtime dependency. Copyright (c) 2018 Garrett Johnson, MIT. The exact-version
+[upstream licence](https://raw.githubusercontent.com/gkjohnson/three-mesh-bvh/v0.8.3/LICENSE)
+matches the installed LICENSE; redistribution retains its copyright and permission
+notice in the generated bundled notices. No service, paid runtime, model, font,
+texture or anatomical dataset is added. The acceleration metadata preserves
+source vertex/index arrays and does not replace the underlying anatomy licence.
+
+## Short ciliary source group — 17 September 2026
+
+Original BodyParts3D v4 IS-A files FJ1319/FJ1370, FMA7041 / BP6623,
+are included under the current archive's CC BY 4.0 terms. BodyParts3D,
+© The Database Center for Life Science licensed under CC Attribution 4.0
+International. [Archive and licence](https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/README_e.html),
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+The common coordinate transform, Float32 storage and shading normals are the
+only geometric adaptations. Aggregate and file-specific nodes are alternative
+display representations, not three separately owned anatomical structures.
+Original OBJ bytes are retained in content/sources/short-ciliary. No copied
+publisher illustration, scan, font, texture, new dependency or paid service.
+See docs/SHORT_CILIARY_SOURCE_REVIEW.md; anatomical/clinical acceptance is pending.
+
+## Costal cartilage imaging — 17 September 2026
+
+Original short teaching cites Malghem et al. (2001) and Nummela et al. (2022).
+No publisher prose, figures, scans, tables or datasets are redistributed. Reading
+links do not confer asset reuse rights. Nummela's publisher CC BY4.0 was verified;
+Malghem's media are not admitted. Existing BodyParts3D attribution and original
+project MIT terms remain. No new dependency or fee-bearing service.
+See `docs/COSTAL_CARTILAGE_IMAGING.md` for scope and review requirements.
+
+## Cranial boundary clinical teaching — 17 September 2026
+
+Three original short notes cite Soffar (2021), Helie (1995) and Hoz (2026).
+References are reading links only: no publisher text, figures, tables, scans or
+measurement datasets are redistributed. Citation is not a commercial asset
+licence. No new dependency, font, texture, model or paid service is added.
+MIT applies to original project code/text; existing BodyParts3D CC BY 4.0 notices
+remain. See `docs/CRANIAL_BOUNDARY_CLINICAL.md` for claim and review boundaries.
+
+## Genicular arterial clinical teaching — 17 September 2026
+
+Original abbreviated adaptations credit Brown JM, Vandeveer ZT, Cadoret D,
+Morrison JJ, Jahangiri Y (2025), https://doi.org/10.3390/jcm14062106;
+Callese TE, Cusumano L, Redwood KD et al. (2023),
+https://doi.org/10.1007/s00270-023-03411-3; and Glanz L (2020),
+https://doi.org/10.1016/j.ijscr.2020.02.050. Each article has an explicit
+CC BY4.0 grant: https://creativecommons.org/licenses/by/4.0/ . Every draft
+contains attribution, source/licence links and adaptation notice. No endorsement.
+No source figures (including the review's reprinted Elsevier schematic), patient
+cases, scans, tables, procedures or treatment protocols included. No new model,
+font, texture, dependency, paid API or mandatory fee. Source-mesh rights remain
+separate. See `docs/GENICULAR_CLINICAL_REFERENCES_20260917.md` for exact scope.
+
+## Elbow arterial clinical teaching — 17 September 2026
+
+Original short adaptations credit Habarta J, Jordan M, Meffert R, Huflage H,
+Schmalzl J (2022), *Surgical management of a traumatic elbow dislocation with
+disruption of the brachial artery*, https://doi.org/10.1007/s11678-022-00686-9;
+and Goretti C, Pari C, Puzzo A, Rizqallah Y, Bonanno MG, Belluati A (2020),
+*Injury of the brachial artery accompanying simple closed elbow dislocation:
+a case report*, https://doi.org/10.23750/abm.v91i14-S.8507. Both articles have
+explicit CC BY4.0 grants: https://creativecommons.org/licenses/by/4.0/ .
+Every draft provides credit, source/licence links and adaptation notice; no
+endorsement implied. No publication figures, cases, scans, tables, procedures
+or protocols are included. UAMS is a factual reading link, not a grant to reuse
+its diagrams or prose. No new model, font, texture, package, paid API or mandatory
+fee. Existing mesh rights remain separate. See
+`docs/ELBOW_CLINICAL_REFERENCES_20260917.md` for admitted and excluded sources.
+
+## Portal/hepatic venous clinical teaching — 17 September 2026
+
+Original short adaptations credit Arora A, Rajesh S, Meenakshi YS, Sureka B,
+Bansal K, Sarin SK, *Spectrum of hepatofugal collateral pathways in portal
+hypertension: an illustrated radiological review*, Insights Imaging6:559–572
+(2015), https://doi.org/10.1007/s13244-015-0419-8; Kotecha K et al., *Gastric
+venous congestion after pancreatic surgery: A systematic review, metanalysis
+and suggested protocol for assessment and management*, Langenbecks Arch
+Surg411:159(2026), https://doi.org/10.1007/s00423-026-04049-8; and Porrello G,
+Mamone G, Miraglia R, *Budd-Chiari Syndrome Imaging Diagnosis: State of the Art
+and Future Perspectives*, Diagnostics13:2256(2023),
+https://doi.org/10.3390/diagnostics13132256. All three article-specific grants
+are CC BY4.0: https://creativecommons.org/licenses/by/4.0/. Adaptation/credit/
+DOI/licence links are visible with each draft. No endorsement is implied.
+No figures, tables, patient cases, scans, protocols or treatment instructions
+are included. No new model, font, texture, dependency, paid API or mandatory
+service is introduced; existing app/model terms remain. See
+docs/PORTAL_HEPATIC_REFERENCES_20260917.md for audit scope and exclusions.
+
+## Deep lower-limb vein clinical teaching — 17 September 2026
+
+Six existing selections receive original short Clinical/Pathology drafts.
+Source: National Heart, Lung, and Blood Institute; National Institutes of Health;
+U.S. Department of Health and Human Services:
+https://www.nhlbi.nih.gov/health/deep-vein-thrombosis. Its public-domain text
+policy has third-party exceptions; no logo, formatted product or media is used.
+The linked Nucleus Medical Media animation is all-rights-reserved and excluded.
+
+Ultrasound interpretation context is an original adapted summary of Akram F,
+Fan BE, Tan CW, Teoh WC, Prandoni P, Yap ES, *The clinical application of venous
+ultrasound in diagnosis and follow-up of lower extremity deep vein thrombosis
+(DVT): a case-based discussion*, Thrombosis Journal21:110(2023),
+https://doi.org/10.1186/s12959-023-00550-y, under
+https://creativecommons.org/licenses/by/4.0/. Credit, adaptation notice and links
+appear with each draft. No endorsement, patient cases, images, tables, scans,
+treatment instructions or protocols are included. Existing model rights remain;
+no model, dependency, font, texture, paid API or mandatory fee is added.
+See docs/DEEP_VENOUS_REFERENCES_20260917.md for the bounded audit and exclusions.
+
+## Intrinsic laryngeal muscle teaching — 17 September 2026
+
+Four families across seven exact source selections receive original concise
+Anatomy/Function notes. TTUHSC El Paso's Larynx and Neck table is a linked factual
+cross-check only; no table text/layout or illustration is reproduced and no
+open licence for that site's expressive material is claimed. Motor context is
+adapted from Montoya S, Portanova A, Bhatt AA, *A radiologic review of hoarse voice
+from anatomic and neurologic perspectives*, Insights Imaging10:108 (2019),
+https://doi.org/10.1186/s13244-019-0786-7, under the article's CC BY4.0 grant.
+Author/title/DOI credit, https://creativecommons.org/licenses/by/4.0/ and an
+original-summary adaptation notice appear with each draft; no endorsement is
+implied. No article figure, scan, table, protocol or treatment advice is included.
+
+Existing BodyParts3D licensing/credits and source holds remain. No new model,
+font, texture, package, paid API or mandatory fee is added. Original app code
+retains its existing licence; this text-reference decision is not project-wide
+legal or clinical clearance. See docs/LARYNGEAL_MUSCLE_REFERENCES_20260917.md.
+
+## Corpus-spongiosum clinical context — 17 September 2026
+
+Two original adapted teaching summaries reference NCI SEER Training Modules:
+[Penis](https://training.seer.cancer.gov/anatomy/reproductive/male/penis.html)
+and Patel AB et al., *Urethral Injuries: Diagnostic and Management Strategies
+for Critical Care and Trauma Clinicians*, J Clin Med 2023;12:1495,
+[doi:10.3390/jcm12041495](https://doi.org/10.3390/jcm12041495).
+Patel et al. retain copyright and license their article under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), expressly verified
+on page 1 of the publisher PDF. Author/source credit, article/licence links
+and adaptation notice accompany the lessons. No endorsement is implied.
+
+Only original concise teaching text is added. No figures, tables, patient images,
+publication layout, logos, treatment algorithms or procedural instructions are
+imported. No new font, model, texture, dataset, dependency or paid service is
+introduced. Existing geometry/asset notices remain in force. See
+[source audit and scope](../docs/CORPUS_CLINICAL_PLAN_20260917.md).
+
+## Major-organ Function teaching — 17 September 2026
+
+Original educational summaries for 13 additional root selections reference
+NIDDK, NCI/SEER and NHLBI text pages. Named institutional credit and direct
+reading links are retained. No source figure, image, video, formatted publication,
+logo, third-party media or patient scan is imported. The topic-to-reference map
+and text-reuse limits are documented in
+[MAJOR_ORGAN_FUNCTION_PLAN.md](../docs/MAJOR_ORGAN_FUNCTION_PLAN.md).
+NHLBI's Nucleus Medical Media illustrations/animations remain expressly excluded.
+The NCI and NIDDK pages are factual references for introductory physiology,
+not imported disease-management guidance. No endorsement is implied.
+
+No new asset, font, texture, dataset, dependency, paid service, API call or
+mandatory fee is introduced. Existing model and code notices remain unchanged.
+This limited text audit is not whole-project commercial or clinical clearance.
+
+## Core-organ Function teaching — 17 September 2026
+
+Short original factual summaries for the heart, paired lungs and liver reference
+NHLBI, NCI, NIDDK and MedlinePlus/NLM educational webpages. Named source credits and direct reading links
+are retained with the notes. No formatted publication, article passage, diagram,
+animation, photograph, logo or scan is imported. NHLBI's separately copyrighted
+Nucleus Medical Media illustrations/animations are explicitly excluded. No
+endorsement is implied. Page-specific references, policy links and scope are in
+[CORE_ORGAN_FUNCTION_REFERENCES.md](../docs/CORE_ORGAN_FUNCTION_REFERENCES.md).
+MedlinePlus medical-test facts are used for albumin synthesis, not its separately
+licensed encyclopedia or imagery. No diagnostic test instructions are reproduced.
+
+No model, texture, font, dataset, dependency, subscription, paid API or mandatory
+service is added. Original text/code and existing BodyParts3D notices retain
+their existing terms; this increment is not a project-wide legal/clinical audit.
+
+## Renal/urethral reference revision — 17 September 2026
+
+Original short summaries replace selected EAU-dependent renal trauma, renal
+tumour, ureteric-injury and urethral-imaging teaching. They draw independently
+on Coccolini et al. (2019), Withey et al. (2026), de'Angelis et al. (2023) and
+Frankiewicz et al. (2024), each with article-level CC BY 4.0 permission. Author
+credit, adapted-summary indication, reading links and licence links accompany
+the revised notes. Bonatti et al. (2015) explicitly permits any use under
+Creative Commons Attribution with credit, but the accessible article notice
+does not specify a version; it is not represented as CC BY 4.0.
+
+Exact titles, DOI links, permission evidence, scope and exclusions:
+[CLINICAL_REFERENCE_REVISION.md](../docs/CLINICAL_REFERENCE_REVISION.md).
+No scans, images, tables, staging systems, publisher passages or algorithms
+were copied. No dependency, font, model, paid service or fee was added. Earlier
+source citations remain in offline historical evidence. This scoped revision
+does not establish project-wide clearance or author endorsement.
+
+## Deferent-duct clinical drafts — 17 September 2026
+
+Original resolver code and two short teaching notes add four placements to
+unchanged BodyParts3D selections. Anatomical source: National Cancer Institute,
+SEER Duct System; source for congenital absence: MedlinePlus, National Library
+of Medicine; transport context: NIH NICHD About Vasectomy. Direct reading links
+and reuse-policy evidence are in docs/DEFERENT_CLINICAL.md. MedlinePlus Genetics
+summaries are public domain; this does not cover its licensed images or medical
+encyclopaedia. NCI text reuse requests source credit, retained here and in the
+guide. No publisher passage, table, image, scan, logo or dataset is imported.
+No new dependency, model, font, texture, subscription or mandatory fee is added.
+EAU guidance is excluded from this increment under its restrictive reuse terms;
+older EAU references elsewhere remain subject to a separate commercial-use audit.
+
+## Rectal/deferent imaging drafts — 16 September 2026
+
+Original resolver code and short factual teaching add twelve placements to
+three unchanged BodyParts3D selections. Reading links to ESGAR, ESUR-SPIWG,
+ACR, NCI SEER and RadiologyInfo do not import their figures, tables, scans,
+datasets or text passages. RadiologyInfo allows linking, not copying its site.
+Existing BodyParts3D CC BY 4.0 attribution/holds remain unchanged; no new
+dependency, font, texture, model, paid API or mandatory fee. See
+`docs/RECTAL_DEFERENT_IMAGING.md` for references and reuse boundaries.
+
+## Craniofacial organ imaging drafts — 15 September 2026
+
+Original MIT resolver code and brief factual notes add 36 imaging placements
+to nine unchanged source selections. Endotext, NCBI-indexed radiology papers
+and RadiologyInfo supply reading references, not imported articles, tables,
+figures, scans or datasets. Some linked material carries NC/ND restrictions;
+readability/citation is not a commercial reuse grant. EyeWiki content is not
+used. No new model, dependency, font, texture, paid API or mandatory fee.
+Existing BodyParts3D source attribution and holds remain unchanged. See
+`docs/CRANIOFACIAL_ORGAN_IMAGING.md` and its per-reference word-count checks.
+
+## Corpus spongiosum source and penile candidate audit — 15 September 2026
+
+BodyParts3D, © The Database Center for Life Science (DBCLS), licensed under
+Creative Commons Attribution 4.0 International. Official version 4.0 IS-A
+FJ3133 is converted to a single source-preserved GLB: existing source-to-scene
+transform, exact-coordinate vertex indexing, computed normals and Float32
+storage; no smoothing, repair or invented continuation. FJ3132/FJ3134 remain
+unchanged offline audit evidence, not runtime models. Retain these credits,
+the licence and original-source links with distributions and derivatives.
+Commercial use is permitted subject to CC BY 4.0; no exclusivity is claimed.
+
+- Source: https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/README_e.html
+- Licence: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+- Terms: https://creativecommons.org/licenses/by/4.0/
+- Scope and exact source hashes: ../docs/CORPUS_SPONGIOSUM.md
+
+NCI SEER Training supplies a factual reading reference only; no illustration,
+article passage, scan or dataset is copied. Original code and brief teaching
+drafts retain MIT terms. No dependency, font, texture, paid API or mandatory
+asset fee is added. Source licence and clinical approval are distinct.
+
+## Hip and pelvic attachment studies — 15 September 2026
+
+Original compact relationship mappings reuse the existing brief factual
+curriculum and link to TTUHSC and the cited anatomy reading references. No
+publisher prose, table, illustration, scan or dataset is imported. Linked
+StatPearls material retains its separate terms; citation is not a commercial
+reuse grant. No model, dependency, font, texture, paid API or mandatory fee is
+added. Original code/notes retain MIT terms and existing BodyParts3D CC BY 4.0
+notices and source holds remain unchanged. See `docs/HIP_ATTACHMENTS.md`.
+
+## Trunk attachment studies — 15 September 2026
+
+Original MIT mappings use 38 existing source muscle/part/group selections,
+54 bones and 14 costal cartilages, with no changed geometry or new assets.
+Existing authored curriculum and factual reading references inform the links;
+TTUHSC tables, NCBI chapters and targeted anatomy pages are not imported prose,
+figures, tables or datasets. Their licences do not grant redistribution merely
+because they are readable online. No new dependency, font, texture, service or
+mandatory fee. Existing BodyParts3D credits and source holds remain. See
+[scope and clinical review](../docs/TRUNK_ATTACHMENTS.md).
+
+## Hand/foot attachment views — 15 September 2026
+
+Original MIT mappings connect 56 existing muscle/head/group selections to 60
+unchanged bones, reusing the authored hand/foot curriculum. TTUHSC, cited anatomy
+chapters and Kenhub pages are factual reading references, not imported articles,
+figures, tables or models. Their access/licence restrictions do not grant
+commercial reuse. No new model, font, texture, dependency, paid service or fee;
+existing BodyParts3D attribution and holds remain. See
+[scope and clinical review](../docs/ACRAL_ATTACHMENTS.md).
+
+## Lower-leg attachment views — 15 September 2026
+
+Original MIT mappings link 28 muscle/head selections to 46 unchanged bones.
+Existing authored curriculum is reused; TTUHSC, cited anatomy chapters and
+Willegger/Park research supply factual reading references only. No article prose,
+figure, table, scan or dataset is imported; linked NC-ND material is not a
+commercial asset. No new model, font, texture, dependency, paid service or
+mandatory fee. Existing BodyParts3D attribution and source holds remain.
+See [scope and review](../docs/LEG_ATTACHMENTS.md).
+
+## Forearm attachment views — 15 September 2026
+
+Original MIT mappings connect existing draft teaching to 42 retained muscle/head
+selections and 38 unchanged bones. Existing reading references are retained;
+TTUHSC/UAMS were used for factual cross-checks only. No protected prose, figure,
+model, texture, font or new dependency is imported. Existing BodyParts3D credits
+and holds remain. No paid service or mandatory fee.
+See [scope and clinical review](../docs/FOREARM_ATTACHMENTS.md).
+
+## Abdominal branch imaging — 15 September 2026
+
+Original MIT resolver code and factual drafts add 48 placements to 34 retained
+vessels. Twenty-four publication links are reading references, not imported
+prose, figures, tables, scans or redistribution permissions. Linked sources
+include NC-ND material; none is admitted as a commercial asset. No new model,
+font, texture, package, paid API or mandatory fee is introduced. Existing credits
+and source holds remain. See [scope and review](../docs/ABDOMINAL_BRANCH_IMAGING.md).
+
+## Thoracic branch imaging — 13 September 2026
+
+Original MIT resolver code and concise factual drafts add 50 placements to 26
+existing vessels. Nineteen publication links are reading references, not imported
+figures, scans, article text, tables, models or redistribution permissions.
+No new asset, dependency, paid API or mandatory fee is introduced. All source
+credits and holds remain. See [scope and review](../docs/THORACIC_BRANCH_IMAGING.md).
+
+## Central vessel imaging teaching — 13 September 2026
+
+Original MIT resolver code and concise factual drafts add 79 placements for 29
+existing vessels. Twenty-seven publication/society links are reading references,
+not imported articles, figures, scans, models or redistribution permissions.
+No new dependency, asset, paid API or mandatory service is introduced. Existing
+source credits, licences and holds remain. See [scope and review](../docs/CENTRAL_VESSEL_IMAGING.md).
+
+## Chest and abdominal organ imaging teaching — 13 September 2026
+
+Original MIT resolver code and concise factual drafts add 42 teaching placements
+for 15 existing selections. Nineteen publication/society reading references are
+not imported articles, diagrams, scans, tables or datasets and do not grant
+redistribution rights. No model, texture, font, dependency, paid API or mandatory
+service is introduced. All existing asset notices and source holds remain.
+See [scope, reading references and review](../docs/THORACOABDOMINAL_ORGAN_IMAGING.md).
+
+## Hand and foot bone CT/MRI teaching — 13 September 2026
+
+Original MIT resolver code and concise factual drafts extend 76 existing bone
+selections. Ten primary-publication reading references are not imported figures,
+articles, tables, scans, datasets or redistribution permissions. No dependency,
+font, texture, model, paid API or mandatory service is introduced. Existing
+model credits and change notices remain intact. The grouped foot-sesamoid
+identities remain unresolved. See [scope and review](../docs/ACRAL_BONE_IMAGING.md).
+
+## Skull, facial-bone and hyoid CT/MRI teaching — 13 September 2026
+
+Original concise factual notes and MIT resolver code add 46 draft placements
+to 23 existing bone selections. Ten primary publications are reading references,
+not imported articles, figures, tables, scans, diagrams or anatomical datasets.
+No dependency, font, texture, model, paid API or mandatory service is added.
+Existing BodyParts3D attribution and change notices remain unchanged. Reference
+access is not permission to redistribute publisher images. See
+[scope, references and pending clinical review](../docs/CRANIAL_BONE_IMAGING.md).
+
+## Neck/upper-back attachment relationships — 13 September 2026
+
+Original MIT interaction code and concise factual labels connect 18 existing
+muscle selections to 13 existing bones. UAMS/TTUHSC and two primary anatomical
+studies are reading references, not imported tables, figures or datasets. No
+new dependency, font, mesh, texture, private scan, paid API or service is added.
+Existing BodyParts3D CC BY 4.0 attribution/change notices remain unchanged.
+See [scope, sources and pending review](../docs/NECK_ATTACHMENT_RELATIONSHIPS.md).
+
 ## Chest/abdominal muscle imaging teaching — 13 September 2026
 
 Original concise factual drafts extend 12 existing source selections. The 13
@@ -528,6 +941,94 @@ The dental/orbital extension adds 32 official BodyParts3D v4 source definitions/
 
 Female pelvic support teaching (12 September 2026) adds original brief factual synthesis and citation links to Texas Tech anatomy, ESHRE and ESUR guidance. No reference diagrams, articles, tables, clinical datasets or quoted passages are imported. Those sources retain their own rights; citing them grants no redistribution licence. No package, model, font, texture or paid service is added. The HRA model and its CC BY 4.0 notice remain unchanged. See `docs/FEMALE_PELVIC_SUPPORT_TEACHING.md`.
 
+Shoulder-and-arm muscle imaging teaching (13 September 2026) adds original brief synthesis and reading links to ESSR, ACR/RSNA and named anatomy/imaging publications. Existing authored attachment notes are reused. No publisher prose, figure, scan, table, model, dataset, acquisition protocol or question bank is redistributed; reading references do not grant commercial reuse of linked material. Original notes/code retain MIT terms and existing BodyParts3D CC BY 4.0 notices remain. No dependency, font, texture, paid API or mandatory service is added. See `docs/SHOULDER_ARM_MUSCLE_IMAGING.md` for the exact draft scope and radiologist-review requirements.
+
+Spine/pelvic muscle imaging teaching (13 September 2026) adds original brief synthesis and reading links to ACR/RSNA and cited primary imaging/anatomical publications. Existing original attachment teaching is reused. No publisher prose, figures, tables, scan, ultrasound image, model, protocol or dataset is redistributed; citation does not grant commercial reuse of linked material. Original notes/code retain MIT terms, and all existing model licences, attribution and source holds remain unchanged. No dependency, font, texture, paid API or mandatory service is added. See `docs/SPINE_PELVIC_MUSCLE_IMAGING.md` for source scope and radiologist-review gates.
+
+Orbital/neck muscle imaging teaching (13 September 2026) adds original brief
+orientation notes and factual reading links, with existing attachment teaching
+reused. No publisher article, figure, table, scan, model or protocol is imported;
+open access does not grant redistribution rights. Original notes/code retain MIT
+terms, and existing BodyParts3D notices/source holds remain unchanged. No new
+dependency, font, texture, paid API or mandatory fee. See
+`docs/ORBITAL_NECK_MUSCLE_IMAGING.md` for the exact draft and source scope.
+
+PICA clinical teaching (17 September 2026) adds brief original factual summaries
+and reading links. Miao HL, Zhang DY, Wang T, Jiao XT, Jiao LQ (2020),
+"Clinical Importance of the Posterior Inferior Cerebellar Artery",
+DOI10.7150/ijms.49137, https://www.medsci.org/v17p3005.htm,
+© authors, CC BY4.0 (https://creativecommons.org/licenses/by/4.0/), is credited
+for clinical context; the new text is condensed and reworded. Mercier et al.
+(2008), PMID20557786, and NHS stroke symptoms are factual references only.
+No publisher images, tables, article passages, patient cases or source datasets
+are imported. No new asset licence or fee-bearing dependency is introduced.
+See docs/PICA_CLINICAL.md; clinical review remains pending.
+
+Superior cerebellar/right MCA clinical teaching (17 September 2026) adds original
+brief factual notes linked to UAMS, Kase et al. (1993), the American Stroke
+Association and NHS. These citations are not commercial reuse grants: no article
+prose, tables, illustrations, scans or datasets are imported. Original application
+MIT terms and existing BodyParts3D CC BY4.0 attribution remain unchanged. No new
+asset, dependency, font, texture, paid API or mandatory fee. See
+docs/SCA_MCA_CLINICAL.md for claim scope and outstanding radiologist review.
+
+Upper-limb venous clinical teaching (17 September 2026) adds short original
+factual notes linked to UAMS, Mikuni et al. (2013), ACR/RSNA RadiologyInfo and NHS.
+No publisher prose, figures, tables, procedures, patient images or datasets are
+redistributed; citations do not grant commercial reuse of the linked materials.
+Application MIT and unchanged BodyParts3D CC BY4.0 notices remain. No new asset,
+dependency, font, texture, paid API or mandatory service. Claim scope and pending
+radiologist sign-off: docs/UPPER_VENOUS_CLINICAL.md.
+
+Regional vascular clinical teaching (17 September 2026) adds original brief factual
+notes with five primary reference links. No publisher prose, figures, tables,
+scans or datasets are redistributed. In particular, Cho2025 is CC BY-NC4.0 and
+its media are not admitted as commercial assets. Citation is not a reuse grant.
+Existing MIT application/teaching terms and model attribution remain unchanged;
+no new asset, dependency, font, texture, paid API or mandatory fee. Claim scope
+and outstanding radiologist review: docs/REGIONAL_VASCULAR_CLINICAL.md.
+
+Neck teaching (17 September 2026) adds original brief synthesis with Suh/Eoh/Shin
+2018, Yalçin2006 and Ruan2015 reading links. Suh's CC BY-NC4.0 media and Yalçin's
+publisher material are not imported; Ruan's CC BY4.0 paper is credited without
+importing case images. No copied prose, tables, figures, scans or datasets.
+Original MIT teaching/code and existing source-model notices remain unchanged.
+No new dependency, model, font, texture, paid API or mandatory service is added.
+See docs/NECK_TEACHING.md for claim scope and pending radiologist acceptance.
+
+Inferior thyroid CT/ultrasound teaching (17 September 2026) adds original brief
+factual synthesis and reading links to Bhardwaj et al. (2023), Garcia and Rech
+(2015), and Ruan et al. (2015). The CTA paper's CC BY-NC4.0 material is not bundled;
+the Wiley publication retains its rights; the Ruan report is CC BY4.0. None
+supplies project images, diagrams, text passages, tables, measurements, patient
+scans or datasets. Citation is not an asset-reuse licence. Original text/code
+retain MIT terms and existing BodyParts3D attribution remains. No new dependency,
+font, model, texture, paid API or mandatory service. See docs/THYROID_IMAGING.md.
+
+Corpus-spongiosum MRI/ultrasound teaching (17 September 2026) adds original brief
+factual notes and reading links to Satragno et al. (1989), the AIUM penile
+ultrasound practice parameter (2023) and NCI SEER. Publisher/AIUM copyright is
+retained; no article text, figure, table, scan, diagram, logo or dataset is
+redistributed. Citations are not commercial asset-reuse grants. Original notes
+retain MIT terms and existing model attribution remains unchanged. No asset,
+dependency, font, paid API or mandatory service is added. See docs/CORPUS_IMAGING.md.
+
+Hip/left-shoulder bone imaging teaching (17 September 2026) adds original brief
+factual synthesis and reading links to TTUHSC El Paso and RSNA/ACR RadiologyInfo.
+These copyright-controlled references are not imported assets: no source prose,
+table, figure, diagram, scan, protocol or dataset is redistributed. Citation is
+not a commercial reuse grant. Original text/code retain MIT terms and existing
+BodyParts3D CC BY 4.0 notices remain unchanged. No dependency, model, font,
+texture, paid API or mandatory service added. See docs/MAJOR_BONE_IMAGING.md.
+
+Membrane/retinaculum imaging teaching (17 September2026) adds original brief
+factual synthesis and reading links to McGinley2004, Fester2002, He2023, Durkee2003,
+Mesgarzadeh1989 and Calleja Cancho1989. Public reading access is not a commercial
+asset licence; no publisher prose passages, figures, tables, diagrams, scans,
+protocols or datasets are bundled. Original text/code retain MIT terms and
+existing BodyParts3D CC BY4.0 attribution remains. No new model, dependency,
+font, texture, paid API or mandatory service added. See docs/CONNECTIVE_IMAGING.md.
+
 Run:
 
 ```bash
@@ -549,3 +1050,129 @@ Hand muscle imaging teaching (13 September 2026) adds original brief factual syn
 Central-neural CT/MRI teaching (13 September 2026) adds original short factual synthesis and thirteen reading references, including RSNA/ACR, UTHealth, peer-reviewed anatomy/imaging research and StatPearls. No figures, diagrams, article prose, tables, protocols, datasets or scans are redistributed. StatPearls' NC-ND restrictions and all other linked-source terms remain separate; citations do not admit those materials as commercial assets. No model, dependency, font, texture, paid API or mandatory service is added. Original notes/code retain MIT terms and unchanged BodyParts3D CC BY 4.0 attribution remains. See `docs/CENTRAL_NEURAL_IMAGING.md` for exact scope, source binding and pending radiologist review.
 
 Head/neck vessel imaging (13 September 2026) adds original brief factual synthesis and twelve reading links to TTUHSC, UTHealth, RSNA/ACR, AIUM and cited imaging research. Linked publishers retain their rights; no prose, images, diagrams, scans, tables, protocols or datasets are redistributed, and citation is not a commercial-reuse grant. No new model, package, font, texture, paid API or mandatory service is added. Original notes/code retain MIT terms; existing BodyParts3D CC BY 4.0 attribution and source holds are unchanged. See `docs/HEAD_NECK_VESSEL_IMAGING.md` for source limits and pending radiologist review.
+# Lower-limb venous teaching (17 September 2026)
+
+Lower-limb venous imaging teaching (17 September 2026) adds original short factual
+synthesis and reading links only. No publisher prose, table, figure, scan or
+dataset is redistributed. In particular, the cited Korean Journal of Radiology
+article's CC BY-NC terms do not admit its material as commercial assets. Linked
+publishers retain their separate rights. Original notes/code retain MIT terms;
+existing BodyParts3D CC BY 4.0 credit is unchanged. No new asset, package, font,
+texture, paid API or mandatory service is added. See `docs/LOWER_VENOUS_IMAGING.md`.
+
+# Forearm arterial imaging teaching (17 September 2026)
+
+Forearm arterial imaging teaching (17 September 2026) uses original short factual
+notes and six reading links. No publisher table, figure, article prose, scan,
+cadaver material or dataset is redistributed; public readability is not treated
+as commercial media permission. Existing BodyParts3D CC BY4.0 attribution remains
+and original notes/code retain MIT terms. No dependency, font, texture, new mesh,
+paid service or mandatory fee is added. See `docs/FOREARM_ARTERIAL_IMAGING.md`.
+
+# Iliac-vein imaging teaching (17 September 2026)
+
+Iliac-vein imaging teaching (17 September 2026) adds original short factual notes
+and six reading links only. University/publisher articles retain their separate
+rights; no figures, tables, article prose, scans, cadaver images or datasets are
+redistributed. Public access is not treated as a commercial asset licence.
+Existing BodyParts3D CC BY 4.0 credit remains; original code/notes retain MIT terms.
+No dependency, paid service, font, texture or mesh is added. Reference scope and
+population/technique limits: `docs/ILIAC_VENOUS_IMAGING.md`.
+
+# Regional-branch imaging factual notes (17 September 2026)
+
+Eight original CT/MRI/Ultrasound placements cite Szafarenko et al.
+(doi:10.5603/fm.106134), Shen et al. (doi:10.3348/kjr.2021.0696), Guo et al.
+(doi:10.7507/1002-1892.201810025) and Barrett et al.
+(doi:10.1016/j.oraloncology.2021.105682). These are external factual references,
+not redistributed publisher assets. No article prose, abstracts, media, tables,
+PDFs or scans are copied/adapted. Shen's article is CC BY-NC 4.0; no commercial
+asset is licensed under those terms or included from it. Original code/notes
+retain MIT terms and the unchanged BodyParts3D bundles retain CC BY 4.0 credits.
+No dependency, model, texture, font or paid service added. Detailed reuse and
+study-scope limits: `docs/REGIONAL_BRANCH_IMAGING.md`.
+
+# Genicular imaging factual notes (17 September 2026)
+
+Original brief factual notes cite Callese TE et al. (2023),
+doi:10.1007/s00270-023-03411-3, and Sinno E et al. (2020),
+doi:10.1186/s40634-020-00288-w (articles CC BY 4.0), plus Han KH et al. (2019),
+doi:10.17085/apm.2019.14.1.67 (article CC BY-NC 4.0). The latter is a reference
+only, **not a redistributed or commercially licensed asset**. No publisher
+article prose, abstracts, tables, images, PDFs, diagrams or scans are included.
+Existing BodyParts3D attribution is retained; original code/factual notes are
+MIT. No new asset, font, dependency or mandatory fee. Detailed claim/reference
+limits and clinical gates: `docs/GENICULAR_IMAGING.md`.
+
+# Local colonic source review (17 September 2026)
+
+The optional, non-published colonic review derivative separates and recolours six
+existing BodyParts3D 4.0 source surfaces without changing original rendered
+positions, winding or shading normals. It retains the established CC BY 4.0
+credit: BodyParts3D, © The Database Center for Life Science licensed under CC
+Attribution 4.0 International. Its standalone review page also includes the
+installed Three.js MIT licence. No OpenStax illustrations or text extracts are
+redistributed; that source is linked for anatomical comparison only. See
+`docs/COLONIC_SOURCE_REVIEW.md`. No new paid dependency or model release is added.
+# Anterior elbow studies — 17 September 2026
+
+Two original study recipes reuse 32 existing BodyParts3D CC BY 4.0 selections.
+Attribution, source geometry and distribution obligations remain unchanged.
+TTUHSC cubital-fossa teaching and Mikuni et al. 2013 (PMID 23131916) are factual
+references only: no publisher media, copied prose, abstract, table or diagram
+is bundled or assumed commercially licensed. See `docs/CUBITAL_STUDIES.md`.
+No new dependency, font, texture, model, patient scan or paid service was added.
+# Anterior cardiac vein source addition — 17 September 2026
+
+FMA76767/BP8603 uses original BodyParts3D 4.0 ISA FJ2725 and FJ2730 under
+CC BY 4.0. BodyParts3D, © The Database Center for Life Science licensed under
+CC Attribution 4.0 International. Source licence:
+https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+Original indexed surfaces are transformed into the established display frame
+and stored in Float32 GLB; shading normals are recomputed. No repair, bridging,
+mirroring or new tissue. See docs/ANTERIOR_CARDIAC_VEIN.md and its pinned source
+audit. Teaching references are links with original factual synthesis only;
+publisher media/prose and patient data are not imported. All anatomy is unvalidated.
+
+# Anterior cardiac vein CT/clinical teaching — 18 September 2026
+
+Original short factual drafts cite Jongbloed et al. 2005 (PMID 15734621),
+von Lüdinghausen 2003 (PMID 12645157), and Candilio et al. 2014
+(doi:10.1186/s13019-014-0184-7). References are links only; no publisher prose,
+abstract, figure, table, PDF, patient scan or dataset is bundled. The retrieved
+Candilio page does not establish an exact reuse licence, so no media-reuse
+permission is inferred. Existing BodyParts3D CC BY 4.0 attribution is unchanged;
+no new dependency, font, asset or mandatory fee is added. Claim and reuse limits:
+`docs/ANTERIOR_CARDIAC_TEACHING.md`. These are drafts, not clinical approval.
+
+# Palmar arterial imaging teaching — 18 September 2026
+
+Original short factual synthesis cites Kaplanoglu/Beton (2017,
+doi:10.1007/s00276-016-1750-6), Salehi Ravesh et al. (2021, PMID 33582146),
+Kransdorf et al. (1998, PMID 9524324), and Hashem et al. (2018,
+doi:10.1177/1753193418764289). These are reference links, not imported text,
+figures, scans, tables or datasets. Public abstract or PMC access does not grant
+assumed commercial media rights. BodyParts3D CC BY 4.0 credits remain unchanged.
+No asset, dependency, font or mandatory fee is added. Claim/reuse boundaries:
+`docs/PALMAR_ARTERIAL_IMAGING.md`. Clinical acceptance remains pending.
+
+# Metatarsal surface imaging teaching — 18 September 2026
+
+Original brief factual notes link to AO Surgery Reference metatarsal/midfoot
+assessment, Reijnierse and Griffith (2023, PMID38020514), Banal et al. (2009,
+PMID19567620) and Yesilaras et al. (2014, PMID24342871). These are reading
+references, not imported assets. In particular, the Reijnierse article's
+CC BY-NC-ND terms are not a commercial image/adaptation licence; no publisher
+figures, prose, tables, PDFs or scans are included. Existing BodyParts3D CC BY4.0
+credits remain; original code/notes retain project terms. No new dependency,
+model, font, texture, patient data or mandatory fee. See
+`docs/METATARSAL_SURFACE_IMAGING.md`; clinical sign-off remains outstanding.
+
+# Lesser-toe X-ray teaching — 18 September 2026
+
+Original brief factual notes cite AO Surgery Reference's lesser-toe definition
+and foot-phalange examination pages. These are references, not a publisher-media
+licence. No images, figures, tables, article text or scans are imported or adapted.
+Established digit-specific anatomical references and BodyParts3D CC BY4.0 credits
+are retained. No dependency, asset, font, dataset or mandatory fee is added.
+See `docs/LESSER_TOE_XRAY.md` for claim scope and revision-bound clinical review.

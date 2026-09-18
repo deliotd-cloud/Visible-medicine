@@ -5,26 +5,26 @@
   "sources": [
     {
       "module": "shoulder",
-      "sourceCommit": "9af65e68e1181fd1e7b12c6c74c4319ca244170e",
-      "manifestSha256": "edc30c1b854322e0b5578ff3b6ac54748bd4c791189c161003e82e3397752426",
+      "sourceCommit": "84e8d083c0bfc7cd41542f5fa0cbb7e172ac2e02",
+      "manifestSha256": "9e9b955cfc99189b22ba462480184c712b1715b5b125436b896fa83bc6c9b604",
       "modelPaths": 1
     },
     {
       "module": "female-pelvis",
-      "sourceCommit": "6fe99634045ab1e7df6828ff67fcd75d0ae8f724",
-      "manifestSha256": "1feafd76db1fbfaf6df84537ebce7a6ffd79fea0270ec62fe8f7a74bc994b7a4",
-      "modelPaths": 1
+      "sourceCommit": "84e8d083c0bfc7cd41542f5fa0cbb7e172ac2e02",
+      "manifestSha256": "ce64af2fd913be42c856beaf25cb2f48996ec69394e28b75a595ed98415a1bb4",
+      "modelPaths": 2
     },
     {
       "module": "lower-limb",
-      "sourceCommit": "6fe99634045ab1e7df6828ff67fcd75d0ae8f724",
-      "manifestSha256": "12cc8b097fa077b3b95e4e0416ed7fdf7f0fe2ee4400ac7e5545b40530b77f8c",
+      "sourceCommit": "84e8d083c0bfc7cd41542f5fa0cbb7e172ac2e02",
+      "manifestSha256": "f9bf6d620ac4bbdbb9c2e2f47b005cdaa78aff8f6f3feabf5b08400b4f63d246",
       "modelPaths": 5
     },
     {
       "module": "head-neck",
-      "sourceCommit": "717fa28a3c345dca935e2b9476890b91fbcbb488",
-      "manifestSha256": "59ae18f57df2daf5e7a5f69c327e839392bfc907e32141a2f7a6a34552999d95",
+      "sourceCommit": "84e8d083c0bfc7cd41542f5fa0cbb7e172ac2e02",
+      "manifestSha256": "73f9404e4967330974dcb5c0533bd8e98636a2eff2309afbd8e5f34b3b72611b",
       "modelPaths": 133
     }
   ],
@@ -701,6 +701,7 @@
       "sha256": "bd5d2affb912f135c8c8da7e7892fbc906ebae017ed7042e900646c2b6332cfc",
       "bytes": 3557552,
       "paths": [
+        "/atlas-runtime/female-pelvis/models/hra-renal/kidneys.glb",
         "/atlas-runtime/head-neck/models/hra-renal/kidneys.glb"
       ]
     },

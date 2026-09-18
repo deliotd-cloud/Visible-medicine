@@ -13,7 +13,7 @@ test('registered inventory matches every module file and preserves existing deli
   const inventory = JSON.parse(readFileSync('lib/atlas-model-inventory.json', 'utf8'));
   assert.equal(inventory.learnerDelivery, 'existing-static-assets');
   assert.equal(inventory.models.length, 134);
-  assert.equal(inventory.sources.reduce((sum: number, item: { modelPaths: number }) => sum + item.modelPaths, 0), 140);
+  assert.equal(inventory.sources.reduce((sum: number, item: { modelPaths: number }) => sum + item.modelPaths, 0), 141);
 });
 
 test('single byte ranges reject ambiguity and never escape the registered size', () => {

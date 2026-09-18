@@ -2,6 +2,16 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 18 September — keyboard camera across all viewers
+
+All four generated viewers now incorporate the source-verified keyboard camera
+from Atlas `84e8d083`. The dedicated female reference catches up with the saved
+43-selection / 11-study pelvic specimen, including two same-source ureters.
+All 134 immutable models are preserved, with one additional route to an existing
+object (141 routes total). See [integration evidence](atlas-keyboard-modules-20260918.md).
+Access remains administrator review; clinical approval and imaging/lecture
+entitlements are unchanged. Release/recovery outcomes are tracked separately.
+
 ## 18 September — foot teaching and focused search
 
 The generated regional module now incorporates Atlas source `717fa28a`: 20

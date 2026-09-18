@@ -36,8 +36,8 @@ export const atlasModules: AtlasModule[] = [
   {
     slug:'female-pelvis-3d', title:'Female pelvis 3D anatomy', region:'Pelvis',
     modality:'3D', orientation:'Rotatable',
-    description:'Explore 41 source surfaces in eight pelvic study views, with dissection and draft teaching. Separate reference; clinical review pending.',
-    structures:41, images:0, status:'available',
+    description:'Explore 43 selections in 11 pelvic study views: 41 pelvic surfaces and two source-matched ureters. Separate reference with dissection and draft teaching; clinical review pending.',
+    structures:43, images:0, status:'available',
     systems:['Organs','Support surfaces','Vessels','Bone context'], reviewed:'Private integration pilot · Review pending',
   },
   {
