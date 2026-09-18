@@ -4,6 +4,15 @@ Last consolidated: 12 September 2026. This is the shared roadmap and decision lo
 
 ## 18 September — first-release milestone and named-space practice
 
+19 September keyboard correction: source `e6ce513f` is integrated through the
+generated regional export. Search study previews focus their confirmation action;
+cancellation restores the exact result, including expanded related studies. Query
+and filter edits retain focus; confirmed studies hand focus to their tools sheet.
+Actual source Chrome desktop/phone-width checks and regression tests passed;
+all135 models/142 paths and the other viewers are unchanged. This is neither
+clinical approval nor physical-device/screen-reader acceptance. Publication and
+recovery evidence remain in the main coordination checkpoint.
+
 19 September correction: the regional dissection count now says **enabled**,
 not visible, because failed or still-loading models remain part of the chosen
 layer/system scope. Actual control markup was tested in pending, ready and failed
