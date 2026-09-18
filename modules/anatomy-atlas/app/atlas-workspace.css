@@ -1,4 +1,34 @@
 /* Task-specific controls, with anatomy state owned by the explorer above them. */
+/* Compact information sheets keep warnings and full names visible. Reduce
+   repeated vertical spacing, not lesson text or reachable controls. This scope
+   also supports desktop focus mode without changing the normal desktop rail. */
+.anatomy-controls-popup[data-side='right'] > [data-slot='sheet-header'] {
+  padding-bottom: 8px;
+}
+.anatomy-info-content.body-info .body-selection-notice {
+  margin: 4px 0 8px;
+  padding: 6px 8px;
+}
+.anatomy-info-content .body-selection-heading {
+  margin-top: 10px;
+}
+.anatomy-info-content .body-selection-heading + h2 {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  margin: 6px 0 10px;
+  overflow-wrap: anywhere;
+}
+.anatomy-info-content .body-selection-actions {
+  margin-bottom: 8px;
+}
+.anatomy-info-content .body-selection-actions button,
+.anatomy-info-content .atlas-more-actions > summary,
+.anatomy-info-content .atlas-grouped-notes [data-slot='tabs-trigger'] {
+  min-height: 44px;
+}
+.anatomy-info-content .atlas-grouped-notes [data-slot='tabs-content'] {
+  padding-top: 8px;
+}
 /* Text uses rem so browser font preferences are respected; default 16px sizing
    remains unchanged. Keep spacing/model dimensions independent of text size. */
 .atlas-inline-mode:not([hidden]) { display: contents; }

@@ -87,7 +87,7 @@ function AnatomySidePanel({
             <SheetTitle>{label}</SheetTitle>
             <SheetDescription>
               {info
-                ? 'Search structures, read notes or review practice. Close to return to the model.'
+                ? 'Read notes or practise. Close to return to the model.'
                 : 'Choose anatomy or a dissection view, then close to return to the model.'}
             </SheetDescription>
           </SheetHeader>

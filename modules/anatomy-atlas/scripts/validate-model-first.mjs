@@ -79,6 +79,30 @@ same(
   'Pinned portable handler baseline',
 );
 same(baseline.sourceCommit, baseCommit);
+// These exact migrations already existed at the owner's pre-compact checkpoint;
+// pin that source rather than treating them as part of this information-sheet change.
+const preCompactCommit = '81474bedcdc36609c17a54d31389ae98aec1ef93';
+const preCompactBindings = bindings(execFileSync(
+  'git', ['show', `${preCompactCommit}:app/body-explorer.tsx`],
+  { maxBuffer: 2e6 },
+).toString());
+const preCompactHandlerMigrations = {
+  showBowelComponents: {
+    sha256: 'addac4133bd8449481b250f3f30e2a060a5ed7512839c249aeb7e8ee4bbaafdc',
+    commit: 'a915f17a', evidence: 'node scripts/validate-bowel-components.mjs',
+  },
+  showMuscleAttachments: {
+    sha256: 'ee178be165d493b71aa09bdd5d72376b4f5c88edfeb26b61fdc907764196534e',
+    commit: '4516a19b', evidence: 'node scripts/validate-hip-attachments.mjs',
+  },
+};
+for (const [name, migration] of Object.entries(preCompactHandlerMigrations)) {
+  check(/^[a-f0-9]{64}$/.test(migration.sha256), `${name} exact SHA-256 pin`);
+  check(migration.commit.length > 0, `${name} migration provenance`);
+  check(migration.evidence.length > 0, `${name} executable evidence`);
+  same(preCompactBindings.functions[name], migration.sha256,
+    `${name} existed before the compact information-sheet change`);
+}
 for (const [name, migration] of Object.entries(modelFirstHandlerMigrations)) {
   check(/^[a-f0-9]{64}$/.test(migration.sha256), `${name} exact SHA-256 pin`);
   check(migration.commits.length > 0, `${name} migration provenance`);
@@ -138,6 +162,9 @@ same(
         migration.sha256,
       ]),
     ),
+    ...Object.fromEntries(Object.entries(preCompactHandlerMigrations).map(
+      ([name, migration]) => [name, migration.sha256],
+    )),
   },
   'Named handlers preserved except explicit documented functional migrations',
 );
@@ -224,6 +251,46 @@ for (const migration of modelFirstCallbackMigrations) {
   }
   migratedCallbacks.push(...migration.add);
 }
+const preCompactCallbackMigrations = [
+  {
+    commit: 'a915f17a',
+    remove: [],
+    add: [
+      'onSelect/610c7aa707c1e7792cda3854a7ec79d0a63ef3319881a1625f5f6eae7a2cf70d',
+      'onShow/7ac58ea2360e0f2d8b176728297bfe8589dc9cda635209bc81fa0869ee688094',
+    ],
+    evidence: 'node scripts/validate-bowel-components.mjs',
+  },
+  {
+    commit: 'aba5a903',
+    remove: [
+      'onValueChange/e6d67f4df82980e11afe3c505d3cf79662bb4688e3c54dd9838a1237f5a38f36',
+    ],
+    add: [
+      'onValueChange/4a35f21841955e565cc610d1dc83172110704ac14bbbd63d123306921a663f6e',
+    ],
+    evidence: 'node scripts/validate-dissection-scope.mjs',
+  },
+  {
+    commit: 'ef7c5104',
+    remove: [],
+    add: [
+      'onKeyDown/5d3845091af3e5fd8299d1189dca0463708887af3ba55642ee60ddc72ad7b721',
+    ],
+    evidence: 'node scripts/test-dissection-shortcuts.mjs',
+  },
+];
+for (const migration of preCompactCallbackMigrations) {
+  check(migration.evidence.length > 0, `${migration.commit} executable evidence`);
+  for (const retired of migration.remove) {
+    const index = migratedCallbacks.indexOf(retired);
+    check(index >= 0, `${migration.commit} retired callback remains pinned`);
+    migratedCallbacks.splice(index, 1);
+  }
+  migratedCallbacks.push(...migration.add);
+}
+same(preCompactBindings.callbacks, [...migratedCallbacks].sort(compare),
+  'Callback migrations existed before the compact information-sheet change');
 same(
   bindings(source).callbacks,
   migratedCallbacks.sort(compare),
@@ -587,6 +654,11 @@ const walk = (node, test, found = []) => {
   }
   return found;
 };
+const textContent = (node) => {
+  if (typeof node === 'string' || typeof node === 'number') return String(node);
+  if (!React.isValidElement(node)) return '';
+  return React.Children.toArray(node.props.children).map(textContent).join('');
+};
 let panelCases = 0;
 for (const info of [false, true])
   for (const practice of [false, true]) {
@@ -628,6 +700,15 @@ for (const info of [false, true])
     tree.props.onOpenChange(true);
     tree = render();
     same(tree.props.open, true);
+    const label = info ? (practice ? 'Practice' : 'Structure info') : 'Systems & tools';
+    const description = info
+      ? 'Read notes or practise. Close to return to the model.'
+      : 'Choose anatomy or a dissection view, then close to return to the model.';
+    check(textContent(tree).includes(description), `${label} description`);
+    if (info) check(!textContent(tree).includes('Search structures'),
+      'Information sheet omits the repeated search instruction');
+    same(walk(tree, (n) => n.props['aria-label'] ===
+      `Close ${label.toLowerCase()}`).length, 1, `${label} accessible close`);
     same(walk(tree, (n) => n.props.keepMounted === true).length, 1);
     same(walk(tree, (n) => n === child).length, 1, 'Single controls instance');
     same(
@@ -713,6 +794,19 @@ function declarations(selector, width, height) {
   });
   return values;
 }
+same(declarations(
+  ".anatomy-controls-popup[data-side='right'] > [data-slot='sheet-header']",
+  390, 844,
+)['padding-bottom'], '8px');
+same(declarations(
+  '.anatomy-info-content.body-info .body-selection-notice', 390, 844,
+).padding, '6px 8px');
+for (const selector of [
+  '.anatomy-info-content .body-selection-actions button',
+  '.anatomy-info-content .atlas-more-actions > summary',
+  ".anatomy-info-content .atlas-grouped-notes [data-slot='tabs-trigger']",
+]) same(declarations(selector, 390, 844)['min-height'], '44px',
+  `${selector} compact-sheet touch target`);
 for (const [width, height] of dimensions) {
   const app = declarations('.body-app', width, height),
     layout = declarations('.body-layout', width, height);
@@ -770,20 +864,23 @@ const result = {
   archivalStructures: catalog.structures.length,
   nestedLauncherMarkupCases,
   panelCases,
+  compactInfoDescriptionCases: 2,
+  preservedToolsDescriptionCases: 2,
+  compactInfoTouchTargetSelectors: 3,
   stylesheetViewportCases: dimensions.length,
   preservedNamedHandlers: Object.entries(baseline.functions).filter(
     ([name, fingerprint]) => bindings(source).functions[name] === fingerprint,
   ).length,
-  pinnedHandlerMigrations: Object.keys(modelFirstHandlerMigrations).length,
-  pinnedCallbackMigrationGroups: modelFirstCallbackMigrations.length,
+  pinnedHandlerMigrations: Object.keys(modelFirstHandlerMigrations).length + 2,
+  pinnedCallbackMigrationGroups: modelFirstCallbackMigrations.length + 3,
   pinnedCallbackRemovals: modelFirstCallbackMigrations.reduce(
     (count, migration) => count + migration.remove.length,
     0,
-  ),
+  ) + 1,
   pinnedCallbackAdditions: modelFirstCallbackMigrations.reduce(
     (count, migration) => count + migration.add.length,
     0,
-  ),
+  ) + 4,
   injectedWorkspaceSessionModeFixture: true,
   explicitDissectionHistoryHandlerMigration: 1,
   addedDissectionRedoHandler: 1,
