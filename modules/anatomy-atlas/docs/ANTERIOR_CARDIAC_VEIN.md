@@ -54,7 +54,9 @@ and von Lüdinghausen's [human myocardial venous drainage study](https://pubmed.
 Only factual synthesis and links are used; no publisher illustrations, tables,
 abstract prose, patient images or article files are bundled. The combined original
 factual teaching is under 200 words per reference; model-use cautions are ours.
-Other modality/clinical topics remain pending. No dependency, font, texture,
+CT and Clinical were subsequently drafted on 18 September; see
+`ANTERIOR_CARDIAC_TEACHING.md` for references, limits and exact transition checks.
+MRI, ultrasound, X-ray and Pathology remain pending. No dependency, font, texture,
 paid service or new hosting obligation is introduced. Actual host costs cannot
 be guaranteed indefinitely.
 
@@ -64,7 +66,9 @@ be guaranteed indefinitely.
 unchanged previous records/bundles/9,927 teaching topics/recipes, source-binding
 rejection, links, side filtering and reversible removal. It is software/source
 evidence, not clinical acceptance. Source review and app browser checks are
-recorded in the coordinating checkpoint. Website activation still requires its
-existing authenticated model-staging/release gate; this addition also needs its
-17,252-byte model staged and verified before integration. No private scans or
-specialist masks are changed, and no release approval is implied.
+recorded in the coordinating checkpoint. The 17,252-byte model was subsequently
+staged, fully hash-verified and integrated into private website version 88 on
+18 September (website source 72732e52); the historical staging requirement is
+therefore satisfied for that exact release. Later teaching changes need a new
+generated runtime before they appear there. No private scans or specialist
+masks are changed; private administrator availability is not clinical approval.

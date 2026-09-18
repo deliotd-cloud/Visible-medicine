@@ -1,0 +1,154 @@
+{
+  "sourceCommit": "bab4b00235ca44529003644d4bc41ade2b50606b",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundle": {
+    "id": "anterior-cardiac-vein",
+    "url": "/models/bodyparts3d/anterior-cardiac-vein/anterior-cardiac-vein.glb?v=ff72014e957d661a16892581db9e371482541302e4a3203ba3e84cac9f5f1928",
+    "bytes": 17252,
+    "sha256": "ff72014e957d661a16892581db9e371482541302e4a3203ba3e84cac9f5f1928",
+    "structures": 1
+  },
+  "previousAllLessonsAndRecipesHash": "70268b6dca93314f88d4e156a2f0ab81f3aa2d433812454cb1f9e673bf001b95",
+  "entry": {
+    "identity": {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein",
+      "fmaId": "FMA76767",
+      "name": "Anterior cardiac vein · source group",
+      "sourceName": "anterior cardiac vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unspecified",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "anterior-cardiac-vein",
+      "nodeName": "FMA76767",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2725",
+          "sha256": "48063a8e366f2ad5c6745d9d20c31afc216a68561d5b4826de256444190f7634"
+        },
+        {
+          "file": "FJ2730",
+          "sha256": "bb15f6552044e7e9dbf7035fc0836b0ee10e1a46a22a0b2cc90c4eb711c11141"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.035955000668764114,
+          4.229499816894531,
+          1.0874899625778198
+        ],
+        "max": [
+          0.29523301124572754,
+          4.429800033569336,
+          1.2661999464035034
+        ]
+      },
+      "center": [
+        0.1296390052884817,
+        4.329649925231934,
+        1.1768449544906616
+      ],
+      "anchor": [
+        0.12833400070667267,
+        4.34119987487793,
+        1.2211400270462036
+      ],
+      "coverageNote": "Two original surfaces retained as one source-defined group. The visible branches are not a normal vein count, a complete venous tree or independently named veins. Apparent contact with the heart, right coronary artery or the other component does not prove lumen continuity, drainage openings or a dissection plane. Reassemble before comparing source relationships.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    "topics": [
+      "ct",
+      "mri",
+      "xray",
+      "ultrasound",
+      "pathology",
+      "clinical"
+    ],
+    "previous": {
+      "ct": {
+        "readiness": "pending",
+        "title": "Anterior cardiac vein · source group · Review pending",
+        "body": "Structure-specific imaging and clinical teaching remain to be authored and reviewed.",
+        "bullets": [],
+        "note": "No patient scan, validated imaging visibility, diagnosis, intervention or registered correspondence is supplied."
+      },
+      "mri": {
+        "readiness": "pending",
+        "title": "Anterior cardiac vein · source group · Review pending",
+        "body": "Structure-specific imaging and clinical teaching remain to be authored and reviewed.",
+        "bullets": [],
+        "note": "No patient scan, validated imaging visibility, diagnosis, intervention or registered correspondence is supplied."
+      },
+      "xray": {
+        "readiness": "pending",
+        "title": "Anterior cardiac vein · source group · Review pending",
+        "body": "Structure-specific imaging and clinical teaching remain to be authored and reviewed.",
+        "bullets": [],
+        "note": "No patient scan, validated imaging visibility, diagnosis, intervention or registered correspondence is supplied."
+      },
+      "ultrasound": {
+        "readiness": "pending",
+        "title": "Anterior cardiac vein · source group · Review pending",
+        "body": "Structure-specific imaging and clinical teaching remain to be authored and reviewed.",
+        "bullets": [],
+        "note": "No patient scan, validated imaging visibility, diagnosis, intervention or registered correspondence is supplied."
+      },
+      "pathology": {
+        "readiness": "pending",
+        "title": "Anterior cardiac vein · source group · Review pending",
+        "body": "Structure-specific imaging and clinical teaching remain to be authored and reviewed.",
+        "bullets": [],
+        "note": "No patient scan, validated imaging visibility, diagnosis, intervention or registered correspondence is supplied."
+      },
+      "clinical": {
+        "readiness": "pending",
+        "title": "Anterior cardiac vein · source group · Review pending",
+        "body": "Structure-specific imaging and clinical teaching remain to be authored and reviewed.",
+        "bullets": [],
+        "note": "No patient scan, validated imaging visibility, diagnosis, intervention or registered correspondence is supplied."
+      }
+    }
+  }
+}

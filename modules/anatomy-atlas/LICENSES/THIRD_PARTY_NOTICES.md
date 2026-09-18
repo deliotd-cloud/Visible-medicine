@@ -1133,3 +1133,14 @@ and stored in Float32 GLB; shading normals are recomputed. No repair, bridging,
 mirroring or new tissue. See docs/ANTERIOR_CARDIAC_VEIN.md and its pinned source
 audit. Teaching references are links with original factual synthesis only;
 publisher media/prose and patient data are not imported. All anatomy is unvalidated.
+
+# Anterior cardiac vein CT/clinical teaching — 18 September 2026
+
+Original short factual drafts cite Jongbloed et al. 2005 (PMID 15734621),
+von Lüdinghausen 2003 (PMID 12645157), and Candilio et al. 2014
+(doi:10.1186/s13019-014-0184-7). References are links only; no publisher prose,
+abstract, figure, table, PDF, patient scan or dataset is bundled. The retrieved
+Candilio page does not establish an exact reuse licence, so no media-reuse
+permission is inferred. Existing BodyParts3D CC BY 4.0 attribution is unchanged;
+no new dependency, font, asset or mandatory fee is added. Claim and reuse limits:
+`docs/ANTERIOR_CARDIAC_TEACHING.md`. These are drafts, not clinical approval.

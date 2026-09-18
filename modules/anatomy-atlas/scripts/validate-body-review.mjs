@@ -24,7 +24,7 @@ const api = await import(
 const rows = api.bodyReviewSummaries;
 // Current retained display scope (including subsequent admitted source parts).
 // Every row still exercises exact source, topics and unsubmitted review state.
-assert.equal(rows.length, 1103); // Includes the source-bound FMA7041 compound, not its two presentation parts.
+assert.equal(rows.length, 1104); // Includes FMA7041 and FMA76767 source groups, not individual mesh components.
 assert.equal(new Set(rows.map((s) => s.id)).size, rows.length);
 let links = 0,
   topics = 0;
@@ -51,8 +51,13 @@ for (const row of rows) {
   }
   packets.push(packet);
 }
-assert.equal(topics, 9927);
-assert.equal(links, 1103);
+assert.equal(topics, 9936);
+assert.equal(links, 1104);
+const anteriorCardiac = packets.find(p => p.source.structure.fmaId === 'FMA76767');
+assert(anteriorCardiac);
+assert.equal(anteriorCardiac.structureId, 'vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein');
+assert.equal(anteriorCardiac.source.bundle.sha256, 'ff72014e957d661a16892581db9e371482541302e4a3203ba3e84cac9f5f1928');
+assert.deepEqual(anteriorCardiac.source.structure.sources.map(s => s.file), ['FJ2725', 'FJ2730']);
 assert.equal(new Set(packets.map((p) => p.materialHash)).size, rows.length);
 const selected = packets.find((p) =>
   p.source.structure.regions.includes('forearm'),

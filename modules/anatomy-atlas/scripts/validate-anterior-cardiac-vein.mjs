@@ -37,7 +37,8 @@ for(const side of ['both','left','right']){
  for(const region of ['thorax','whole-body']){const url=api.makeStudyLink(catalog,region,s.id,side,region==='thorax'?focus.id:null);assert(url);const request=api.parseStudyLink(Object.fromEntries(new URL(url,'https://local.invalid').searchParams));const resolved=api.resolveStudyLink(catalog,region,request);assert.equal(resolved.status,'ready');assert.deepEqual(resolved.selected,s);assert.equal(resolved.focusId,region==='thorax'?focus.id:null);if(region==='thorax'){assert.equal(resolved.view,focus.view);assert.deepEqual([...resolved.visibleIds].sort(),ids(visible));}links++;}
 }
 for(const tab of ['anatomy','function','quiz']){const lesson=api.bodyLesson(s,tab);assert.equal(lesson.readiness,'draft');assert.equal(lesson.citations.length,2);assert(lesson.note.includes('radiologist review'));}
-for(const tab of ['ct','mri','xray','ultrasound','clinical','pathology'])assert.equal(api.bodyLesson(s,tab).readiness,'pending');
+for(const tab of ['ct','clinical'])assert.equal(api.bodyLesson(s,tab).readiness,'draft');
+for(const tab of ['mri','xray','ultrasound','pathology'])assert.equal(api.bodyLesson(s,tab).readiness,'pending');
 const altered=structuredClone(s);altered.sources[0].sha256='0'.repeat(64);assert.equal(api.anteriorCardiacVeinLesson(altered,'anatomy'),undefined);
 const review=await api.bodyReviewMaterial(s.id);assert.equal(review.approval,false);assert.deepEqual(review.source.structure,s);
 const result={sourceCommit:cardiacVeinBase,rootSelections:1104,addedSelections:1,sourceFiles:2,originalTriangles:730,previousSelectionsUnchanged:1103,previousTopicsUnchanged:9927,priorRecipesAndBundlesUnchanged:true,sourceBindingRejections:mutations,historyActions,links,sourceGeometryVerified:true,clinicalApproval:false,browserAcceptance:false};
