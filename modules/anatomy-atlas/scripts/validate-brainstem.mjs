@@ -12,6 +12,7 @@ import { sourceObjShape } from './source-surface-audit.mjs';
 import { sourceTopology } from './source-topology.mjs';
 import { build } from './workspace-component-test-build.mjs';
 const require = createRequire(import.meta.url);
+const actualLink = await import('vinext/shims/link');
 let checks = 0;
 const check = (v, message) => {
   checks++;
@@ -370,9 +371,13 @@ const React = require('react'),
   uiEnv = {
     module: uiModule,
     exports: uiModule.exports,
-    require,
+    require: (id) =>
+      id === 'next/link' ? { __esModule: true, ...actualLink } : require(id),
     console,
     process: { env: { NODE_ENV: 'test' } },
+    structuredClone,
+    URL,
+    URLSearchParams,
   };
 runInNewContext(compiled.outputFiles[0].text, uiEnv);
 for (const study of ['brainstem', 'ventricles']) {

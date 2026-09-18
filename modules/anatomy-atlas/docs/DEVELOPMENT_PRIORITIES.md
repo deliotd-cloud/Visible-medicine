@@ -1,5 +1,13 @@
 # Development priorities
 
+18 September — [named-space practice](NESTED_PRACTICE.md) adds identification
+rounds to the existing cardiac and brain-ventricle component studies. Eight
+source-bound space representations use the shared answer-once engine; unnamed
+parts and context are excluded. Source holds, clinical/educator acceptance and
+actual scan/lecture integration remain separate. The bounded
+[upper-limb source screen](UPPER_JOINT_SOURCE_SCREEN_20260918.md) admitted no
+new geometry; do not repeat those candidates without new rights/source evidence.
+
 13 September — [neck/upper-back attachment navigation](NECK_ATTACHMENT_RELATIONSHIPS.md) adds 18 existing selections and grouped origin/insertion bones to the compact control. Shared midline versus paired partners, source/region guards, whole-body continuation and Undo remain explicit. No source geometry or donor footprint is invented. The old Atlas navigation test now resolves its real TypeScript helpers hermetically without weaker assertions. Continue other substantive anatomy/teaching and cleared Education work; do not repeat these relationships as new progress. Clinical/device and resource-clearance gates remain.
 
 Latest regional interaction (12 September): [thigh-to-knee attachments](THIGH_ATTACHMENT_RELATIONSHIPS.md) extends the same compact muscle control to 20 existing selections, distinguishing the quadriceps extensor chain and keeping regional/sided identity intact. This completes the bounded navigation addition, not anatomical completeness or donor footprint mapping; do not repeat these same relationships as new progress. Continue substantive remaining non-oral anatomy/function and approved-resource integration. The first renal-US review packet is prepared locally with licence evidence but is held for owner clinical/privacy decisions; do not repeat its audit while waiting.

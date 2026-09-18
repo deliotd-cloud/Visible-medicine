@@ -1,5 +1,11 @@
 # Atlas requirement and acceptance audit
 
+18 September: [named-space identification](NESTED_PRACTICE.md) now covers the
+four cardiac cavities and four brain ventricular spaces in their existing
+component viewers. Other nested scopes remain outside this practice admission;
+formative results are not validated exams or clinical approval. Geometry and
+teaching-topic totals are unchanged. Publication is recorded separately.
+
 Use [CURRENT_STATUS.md](CURRENT_STATUS.md) for generated current counts, rather than milestone totals. The atlas is not a completed anatomical curriculum, complete human model, clinically approved product or connected radiology viewer. Reproduce the JSON and human summary with `npm run requirements:audit -- --check`.
 
 Earlier cumulative status paragraphs are preserved in [the historical audit](REQUIREMENT_AUDIT_HISTORY_2026-09-09.md). They describe earlier revisions, not current acceptance. Old browser screenshots do not accept the latest compact layout.

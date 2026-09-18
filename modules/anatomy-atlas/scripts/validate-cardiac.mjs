@@ -13,6 +13,7 @@ import { sourceTopology } from './source-topology.mjs';
 import { build } from './workspace-component-test-build.mjs';
 const require = createRequire(import.meta.url),
   React = require('react');
+const actualLink = await import('vinext/shims/link');
 const clone = (v) => JSON.parse(JSON.stringify(v));
 let checks = 0;
 const same = (a, b, message) => {
@@ -77,12 +78,28 @@ const shim = {
   },
   useMemo: (fn, deps) => (active ? fn() : React.useMemo(fn, deps)),
   useCallback: (fn, deps) => (active ? fn : React.useCallback(fn, deps)),
+  useRef: (value) => {
+    if (!active) return React.useRef(value);
+    const i = cursor++;
+    if (!(i in slots)) slots[i] = { current: value };
+    return slots[i];
+  },
+  useLayoutEffect: (fn, deps) =>
+    active ? undefined : React.useLayoutEffect(fn, deps),
 };
 const scope = { exports: {} };
 runInNewContext(compiled.outputFiles[0].text, {
   module: scope,
   exports: scope.exports,
-  require: (id) => (id === 'react' ? shim : require(id)),
+  require: (id) =>
+    id === 'react'
+      ? shim
+      : id === 'next/link'
+        ? { __esModule: true, ...actualLink }
+        : require(id),
+  structuredClone,
+  URL,
+  URLSearchParams,
 });
 const api = scope.exports,
   manifest = api.cardiacCatalog;
@@ -254,7 +271,10 @@ const pins = JSON.parse(
   await readFile('content/nested-teaching-bindings.v1.json'),
 );
 const previousBindings = pins.bindings.filter((b) =>
-  ['eye', 'ventricles', 'brainstem', 'cerebral'].includes(b.study),
+  // This immutable 37-row snapshot predates the separately bound collicular
+  // brachia. Keep its original hashes; current additions have their own tests.
+  ['eye', 'ventricles', 'brainstem', 'cerebral'].includes(b.study) &&
+  !['FMA73464', 'FMA73463'].includes(b.structure.fmaId),
 );
 const previousParents = pins.parents.filter((p) =>
   previousBindings.some((b) => b.parentId === p.id),
@@ -369,7 +389,9 @@ for (const initialStudy of [undefined, 'brainstem', 'cardiac']) {
   slots = [];
   cursor = 0;
   active = true;
-  const dialog = api.DialogView({ parent, onClose() {}, initialStudy });
+  const wrapper = api.DialogView({ parent, onClose() {}, initialStudy });
+  const dialog =
+    typeof wrapper.type === 'function' ? wrapper.type(wrapper.props) : wrapper;
   active = false;
   check(text(dialog).includes('Heart · chamber spaces'));
   check(

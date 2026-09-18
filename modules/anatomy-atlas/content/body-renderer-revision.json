@@ -205,6 +205,14 @@
       "sha256": "79a6abdd556a0eb06af9192fff1ef4b3c5e48fa4e4560cf4788b3d46d1969cdf"
     },
     {
+      "path": "app/nested-practice.css",
+      "sha256": "8e0c687cecb73a74e65f6a574ad0858237d9f61680732eafb140c760779f1591"
+    },
+    {
+      "path": "app/nested-practice.tsx",
+      "sha256": "84d0e01eb8aa81a7c045b243b4bd426ca898a27dbf0070cf8cb9e73e0eb590a7"
+    },
+    {
       "path": "app/nested-teaching.css",
       "sha256": "d912bfc774cc744511a4c0e87a0a35f6b693def9f4bddc25b6f010f07dfa83bc"
     },
@@ -334,7 +342,7 @@
     },
     {
       "path": "app/ventricles.tsx",
-      "sha256": "32616e70acc7cf9164524737b6b55c5ca689df1250c253694a3d65039fb64975"
+      "sha256": "76edb842c6899ec10354ec032356640ca2fc1500c89183bd41ce4dd02cb35046"
     },
     {
       "path": "app/ventricular-relationships.css",
@@ -2061,6 +2069,10 @@
       "sha256": "ec289a3dbeadc13f0fca06b69e8ae10a9f4b7e06b2e5b475ce3217b521ac0082"
     },
     {
+      "path": "lib/nested-practice.ts",
+      "sha256": "e61db487c33d4c8aaeb737e0122b376abeb5f5bb4df49d99370285eb85d65a82"
+    },
+    {
       "path": "lib/nested-review-links.ts",
       "sha256": "0d8d29a78763f5d3d00736fd2ae1aea0dbe6059ad50d6eb59d6b52e4f43e525f"
     },
@@ -2522,7 +2534,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "d18033429dbe7349b9aeab7cb0d6725c1cbf13509d99382f1646dc48513bb541"
+      "sha256": "a0c5ced600bad20a9ecea8233eb80689c22ae64882ab088322cc6fb3c958f3cb"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2729,5 +2741,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "b43b941c5fcab795a20855a7f435094e1bbd10c05b5d1d0a28f788b16ad41a4c"
+  "sha256": "5f229dfe2b9e0fb03a49f7ec50e95c0530eb03a059e689757eb8ba2747502bf0"
 }

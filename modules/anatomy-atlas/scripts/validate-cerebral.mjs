@@ -13,6 +13,7 @@ import { sourceObjShape } from './source-surface-audit.mjs';
 import { sourceTopology } from './source-topology.mjs';
 import { build } from './workspace-component-test-build.mjs';
 const require = createRequire(import.meta.url);
+const actualLink = await import('vinext/shims/link');
 execFileSync(
   process.execPath,
   ['scripts/audit-cerebral-supplements.mjs', '--check'],
@@ -508,9 +509,13 @@ const React = require('react'),
   uiEnv = {
     module: uiModule,
     exports: uiModule.exports,
-    require,
+    require: (id) =>
+      id === 'next/link' ? { __esModule: true, ...actualLink } : require(id),
     console,
     process: { env: { NODE_ENV: 'test' } },
+    structuredClone,
+    URL,
+    URLSearchParams,
   };
 runInNewContext(compiled.outputFiles[0].text, uiEnv);
 for (const study of ['cerebral', 'brainstem', 'ventricles']) {
@@ -521,7 +526,7 @@ for (const study of ['cerebral', 'brainstem', 'ventricles']) {
   same(switches.filter((tag) => tag.includes('aria-label="Show original position"')).length, 1);
   same(
     switches.filter((tag) => !tag.includes('aria-label="Show original position"')).length,
-    study === 'cerebral' ? 14 : 4,
+    study === 'cerebral' ? 14 : study === 'brainstem' ? 6 : 4,
   );
   for (const text of study === 'cerebral'
     ? [
@@ -543,9 +548,12 @@ for (const study of ['cerebral', 'brainstem', 'ventricles']) {
   const scene = uiEnv.__scene;
   same(
     scene.structures.length,
-    study === 'cerebral' ? 16 : study === 'brainstem' ? 5 : 9,
+    study === 'cerebral' ? 16 : study === 'brainstem' ? 7 : 9,
   );
-  same(scene.landmarks.length, study === 'cerebral' ? 14 : 4);
+  same(
+    scene.landmarks.length,
+    study === 'cerebral' ? 14 : study === 'brainstem' ? 6 : 4,
+  );
   if (study === 'cerebral')
     for (const group of cerebralGroups) {
       const pair = layers.filter((s) => s.group === group.id);

@@ -2,7 +2,14 @@
 import FemoralComponents from './femoral-components';
 import { femoralComponentsFor } from '@/lib/femoral-components';
 import { cranialArteryComponentsFor } from '@/lib/cranial-artery-components';
-import { useCallback, useMemo, useReducer, useState } from 'react';
+import {
+  useCallback,
+  useLayoutEffect,
+  useMemo,
+  useReducer,
+  useRef,
+  useState,
+} from 'react';
 import { cardiacCirculationFor } from '@/lib/cardiac-circulation';
 import {
   pulmonaryRolesAvailable,
@@ -72,7 +79,14 @@ import {
   DialogDescription,
 } from './study-surface';
 import { BodyScene, retryBodyAssets } from './body-scene';
-import { allBodySystems, type BodyStructure } from './body-types';
+import {
+  allBodySystems,
+  type BodyCatalog,
+  type BodyStructure,
+} from './body-types';
+import { NestedPractice } from './nested-practice';
+import { nestedPracticePool } from '@/lib/nested-practice';
+import type { PracticeMode } from '@/lib/anatomy-practice';
 import { initialInspection } from '@/lib/inspection-state';
 import {
   selectionBounds,
@@ -501,6 +515,12 @@ export function VentricularView({
     [failed, setFailed] = useState<string[]>([]),
     [retry, setRetry] = useState(0);
   const [health, setHealth] = useState<RendererHealth>('starting');
+  const [practiceMode, setPracticeMode] = useState<PracticeMode>('find');
+  const [practiceSnapshot, setPracticeSnapshot] = useState<BodyStructure[] | null>(
+    null,
+  );
+  const practiceLauncher = useRef<HTMLElement>(null);
+  const restorePracticeFocus = useRef(false);
   const [relationshipId, setRelationshipId] = useState<string | null>(null);
   const [circulationIndex, setCirculationIndex] = useState<number | null>(null);
   const circulationSteps = useMemo(
@@ -608,6 +628,16 @@ export function VentricularView({
     (id) => !loaded.includes(id) && !failed.includes(id),
   );
   const hasFailed = required.some((id) => failed.includes(id));
+  const practicePool = useMemo(
+    () => nestedPracticePool(parent, study, layers, loaded, hidden),
+    [parent, study, layers, loaded, hidden],
+  );
+  useLayoutEffect(() => {
+    if (!practiceSnapshot && restorePracticeFocus.current) {
+      restorePracticeFocus.current = false;
+      practiceLauncher.current?.focus();
+    }
+  }, [practiceSnapshot]);
   const appearance = useMemo(
     () =>
       Object.fromEntries(
@@ -751,6 +781,18 @@ export function VentricularView({
         source binding has changed. This dissection is unavailable pending
         review.
       </p>
+    );
+  if (practiceSnapshot)
+    return (
+      <NestedPractice
+        assetBase={assetBase}
+        catalog={ventricleCatalog as BodyCatalog}
+        structures={practiceSnapshot}
+        study={study}
+        mode={practiceMode}
+        view={view}
+        onClose={() => setPracticeSnapshot(null)}
+      />
     );
   return (
     <div className="eye-layer-workbench">
@@ -918,6 +960,71 @@ export function VentricularView({
             </SelectContent>
           </Select>
         </div>
+        {(study === 'cardiac' || study === 'ventricles') && (
+          <details className="nested-practice-launcher">
+            <summary ref={practiceLauncher}>Practice identification</summary>
+            <p>
+              Named source spaces visible in this view only. Context and chamber
+              walls are excluded.
+            </p>
+            <Select
+              value={practiceMode}
+              onValueChange={(value) => {
+                if (value === 'find' || value === 'name') setPracticeMode(value);
+              }}
+            >
+              <SelectTrigger aria-label="Nested practice answer mode">
+                <SelectValue>
+                  {practiceMode === 'find' ? 'Find the named space' : 'Name the isolated space'}
+                </SelectValue>
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="find">Find the named space</SelectItem>
+                <SelectItem value="name">Name the isolated space</SelectItem>
+              </SelectContent>
+            </Select>
+            <Button
+              size="sm"
+              variant="outline"
+              disabled={
+                isolated ||
+                inspection.plane !== 'off' ||
+                health !== 'ready' ||
+                hasFailed ||
+                practicePool.length < 2
+              }
+              onClick={() => {
+                if (
+                  isolated ||
+                  inspection.plane !== 'off' ||
+                  health !== 'ready' ||
+                  hasFailed ||
+                  practicePool.length < 2
+                )
+                  return;
+                restorePracticeFocus.current = true;
+                setPracticeSnapshot(practicePool);
+              }}
+            >
+              Start practice ({Math.min(5, practicePool.length)})
+            </Button>
+            {isolated ? (
+              <p role="status">Turn off Fade others before starting practice.</p>
+            ) : inspection.plane !== 'off' ? (
+              <p role="status">Restore the whole view before starting practice.</p>
+            ) : health !== 'ready' ? (
+              <p role="status">Practice is available when the 3D view is ready.</p>
+            ) : hasFailed ? (
+              <p role="status">Retry the failed anatomy before starting practice.</p>
+            ) : practicePool.length < 2 ? (
+              <p role="status">
+                Show and load at least two eligible named spaces to practise.
+              </p>
+            ) : (
+              <p>Up to five spaces per round. The camera may reframe on return.</p>
+            )}
+          </details>
+        )}
         {isPulmonary && canFilterPulmonary && (
           <div className="eye-layer-presets">
             <label htmlFor="pulmonary-branch-type">Branch type</label>

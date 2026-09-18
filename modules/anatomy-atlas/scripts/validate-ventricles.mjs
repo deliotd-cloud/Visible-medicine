@@ -12,6 +12,7 @@ import { sourceObjShape } from './source-surface-audit.mjs';
 import { sourceTopology } from './source-topology.mjs';
 import { build } from './workspace-component-test-build.mjs';
 const require = createRequire(import.meta.url);
+const actualLink = await import('vinext/shims/link');
 const library = await build({
   entryPoints: ['lib/ventricles.ts'],
   bundle: true,
@@ -294,7 +295,11 @@ check(env.cameraRestore.current !== env.cameraCapture.current);
 runInNewContext(`(${close})();`, env);
 same(chosen, null);
 same(focused, 1);
-check(source.includes('!eyeParent && !ventricleParent &&'));
+check(
+  source.includes("const inlineStudy = workspace.mode === 'dissect' && !exam && Boolean(") &&
+    source.includes('eyeParent && eyeParent.id === selectedId') &&
+    source.includes('ventricleParent && ventricleParent.id === selectedId'),
+);
 check(
   source.includes(
     'ventricleParent && !exam && ventricleParent.id === selectedId',
@@ -314,9 +319,20 @@ function findLauncherGuard(n) {
 findLauncherGuard(ast);
 check(launcherGuard, 'Find the real nested launcher condition');
 for (const exam of [false, true]) {
-  for (let mask = 0; mask < 32; mask++) {
+  const resolvers = [
+    'ventriclesFor',
+    'cardiacFor',
+    'pulmonaryFor',
+    'hepaticFor',
+    'renalFor',
+    'pancreaticFor',
+    'cricothyroidFor',
+    'femoralComponentsFor',
+    'cranialArteryComponentsFor',
+  ];
+  for (let mask = 0; mask < 2 ** resolvers.length; mask++) {
     const context = { exam, selected: parent };
-    ['ventriclesFor', 'cardiacFor', 'pulmonaryFor', 'hepaticFor', 'renalFor'].forEach((name, i) => {
+    resolvers.forEach((name, i) => {
       context[name] = () => mask & (1 << i) ? [parent] : [];
     });
     same(runInNewContext(launcherGuard, context), !exam && mask !== 0);
@@ -351,9 +367,13 @@ const testModule = { exports: {} };
 runInNewContext(compiled.outputFiles[0].text, {
   module: testModule,
   exports: testModule.exports,
-  require,
+  require: (id) =>
+    id === 'next/link' ? { __esModule: true, ...actualLink } : require(id),
   console,
   process: { env: { NODE_ENV: 'test' } },
+  structuredClone,
+  URL,
+  URLSearchParams,
 });
 const html = require('react-dom/server').renderToStaticMarkup(
   React.createElement(testModule.exports.VentricularView, { parent }),
