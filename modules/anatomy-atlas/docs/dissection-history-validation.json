@@ -1,10 +1,11 @@
 {
   "passed": true,
-  "checks": 106419,
+  "checks": 108710,
   "scopes": 36,
-  "replayedTransitions": 2124,
+  "replayedTransitions": 2148,
   "historyLimit": 40,
   "handlerCases": 6,
+  "systemHistoryCases": 2,
   "markupCases": 6,
   "handlerHashes": {
     "undoDissection": "c0fdb9b5834ce86baf29f0a3f23711f2dee0126bdb139c961944f5cbad85441c",
@@ -14,8 +15,10 @@
   "newActionClearsRedo": true,
   "snapshotsExcludeHistory": true,
   "examAndEmptyHistoryGuards": true,
+  "systemChoicesIndependentOfHistory": true,
+  "systemHiddenLabelsExcludedByProductionHelpers": true,
   "sourceGeometryChanged": false,
   "clinicalValidation": false,
   "browserInteractionTesting": false,
-  "limitations": "In-memory dissection steps and manual visibility only; not camera, source meshes, system switches, saved-bookmark history, clinical correctness or browser/device acceptance."
+  "limitations": "In-memory dissection steps plus actual Undo/Redo handlers and production render/label filtering; not browser interaction, camera, source meshes, saved-bookmark history, clinical correctness or device acceptance."
 }

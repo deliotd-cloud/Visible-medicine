@@ -11,6 +11,9 @@ import {
   dissectionReducer,
   resolveDissection,
 } from '../app/dissection-data.ts';
+import { allBodySystems } from '../app/body-types.ts';
+import { renderedAnatomyStructures } from '../lib/anatomy-load-state.ts';
+import { sceneLabelIds } from '../lib/scene-labels.ts';
 import { historicalRecipeProfiles } from './recipe-history.mjs';
 
 const hash = (value) => createHash('sha256').update(value).digest('hex');
@@ -187,10 +190,17 @@ function visit(n) {
 visit(ast);
 same(bindings, { onUndo: 'undoDissection', onRedo: 'redoDissection' });
 const calls = [];
+let handlerSystems = structuredClone(allBodySystems),
+  systemUpdates = 0;
 const env = {
   exam: false,
   dissection: { history: [{}], future: [{}] },
   dispatch: (value) => calls.push(['dispatch', value.type]),
+  setSystems: (update) => {
+    systemUpdates++;
+    handlerSystems =
+      typeof update === 'function' ? update(handlerSystems) : update;
+  },
   ...Object.fromEntries(
     ['setSelectedId', 'setFocus', 'setIsolated', 'setZoom'].map((name) => [
       name,
@@ -229,6 +239,64 @@ for (const [name, direction, stack] of [
   same(calls, [], 'Empty history does not clear selection or change zoom');
   handlerCases += 3;
 }
+
+// Run the production handlers against the real reducer while systems remain
+// separate React state, then use the renderer's production visibility and label
+// helpers. This catches an Undo/Redo handler that starts changing systems and a
+// restored structure that leaks a label while its system is still switched off.
+const thighProfile = dissectionProfiles.thigh;
+const thighScope = catalog.structures.filter((s) => s.regions.includes('thigh'));
+const muscle = thighScope.find((s) => s.system === 'muscles');
+check(muscle, 'Thigh scope supplies a muscle for the history/system regression');
+env.dissection = apply(initialDissection, { type: 'remove', id: muscle.id });
+handlerSystems = { ...allBodySystems, muscles: false };
+systemUpdates = 0;
+env.dispatch = (action) => {
+  calls.push(['dispatch', action.type]);
+  env.dissection = dissectionReducer(env.dissection, action);
+};
+calls.length = 0;
+env.handlers.undoDissection();
+same(calls[0], ['dispatch', 'undo']);
+same(systemUpdates, 0, 'Undo does not write independent system choices');
+same(handlerSystems.muscles, false, 'Undo preserves the disabled muscle system');
+const undoResolved = resolveDissection(thighScope, thighProfile, env.dissection);
+check(
+  undoResolved.visible.some((item) => item.id === muscle.id),
+  'Undo restores the removed muscle in dissection state',
+);
+const undoRendered = renderedAnatomyStructures(
+  undoResolved.visible,
+  handlerSystems,
+  undoResolved.removed.map((item) => item.id),
+  false,
+);
+check(
+  !undoRendered.some((item) => item.id === muscle.id),
+  'The restored muscle remains hidden by its independent system choice',
+);
+same(
+  sceneLabelIds(
+    muscle.id,
+    [muscle.id],
+    undoRendered.map((item) => item.id),
+    false,
+  ),
+  [],
+  'Production label selection excludes restored anatomy in a disabled system',
+);
+calls.length = 0;
+env.handlers.redoDissection();
+same(calls[0], ['dispatch', 'redo']);
+same(systemUpdates, 0, 'Redo does not write independent system choices');
+same(handlerSystems.muscles, false, 'Redo preserves the disabled muscle system');
+check(
+  resolveDissection(thighScope, thighProfile, env.dissection).removed.some(
+    (item) => item.id === muscle.id,
+  ),
+  'Redo reapplies the muscle removal without enabling its system',
+);
+const systemHistoryCases = 2;
 
 // Actual toolbar markup. This is SSR, not browser/touch acceptance.
 const toolbarSource = await readFile('app/dissection-controls.tsx', 'utf8');
@@ -340,6 +408,7 @@ const report = {
   replayedTransitions: transitions,
   historyLimit: 40,
   handlerCases,
+  systemHistoryCases,
   markupCases,
   handlerHashes: Object.fromEntries(
     Object.entries(handlers).map(([name, text]) => [name, hash(text)]),
@@ -348,11 +417,13 @@ const report = {
   newActionClearsRedo: true,
   snapshotsExcludeHistory: true,
   examAndEmptyHistoryGuards: true,
+  systemChoicesIndependentOfHistory: true,
+  systemHiddenLabelsExcludedByProductionHelpers: true,
   sourceGeometryChanged: false,
   clinicalValidation: false,
   browserInteractionTesting: false,
   limitations:
-    'In-memory dissection steps and manual visibility only; not camera, source meshes, system switches, saved-bookmark history, clinical correctness or browser/device acceptance.',
+    'In-memory dissection steps plus actual Undo/Redo handlers and production render/label filtering; not browser interaction, camera, source meshes, saved-bookmark history, clinical correctness or device acceptance.',
 };
 await writeFile(
   'docs/dissection-history-validation.json',
