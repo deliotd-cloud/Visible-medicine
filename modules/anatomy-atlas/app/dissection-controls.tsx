@@ -110,7 +110,9 @@ export function DissectionControls({
       <div className="dissection-deck-heading">
         <Layers3 />
         <strong>Dissection workspace</strong>
-        <span>{visibleCount} visible</span>
+        <span title="Enabled by the current layers and system filters; models may still be loading or unavailable.">
+          {visibleCount} enabled
+        </span>
         <Button
           size="sm"
           variant="ghost"

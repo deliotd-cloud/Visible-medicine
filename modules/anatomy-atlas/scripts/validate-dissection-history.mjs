@@ -396,6 +396,24 @@ for (const disabled of [false, true])
     }
     markupCases++;
   }
+// Enabled count is a visibility choice, not proof that meshes have loaded.
+// Render real controls in pending, ready and failed states; the wording must
+// never describe unavailable anatomy as visible.
+for (const load of [
+  { loaded: [], failed: [] },
+  { loaded: ['test-bundle'], failed: [] },
+  { loaded: [], failed: ['test-bundle'] },
+]) {
+  const html = renderToStaticMarkup(
+    React.createElement(module.exports.DissectionControls, {
+      ...props, ...load, state: initialDissection, visibleCount: 89,
+    }),
+  );
+  check(/89(?:<!-- -->)? enabled/.test(html), 'Count describes enabled anatomy in every load state');
+  check(!/89(?:<!-- -->)? visible/.test(html), 'Count never promises loaded geometry');
+  check(html.includes('models may still be loading or unavailable'), 'Count explanation retains the load boundary');
+  markupCases++;
+}
 same(
   JSON.stringify(catalog),
   JSON.stringify(JSON.parse(raw)),

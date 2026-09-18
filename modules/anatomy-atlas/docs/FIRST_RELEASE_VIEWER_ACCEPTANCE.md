@@ -84,4 +84,9 @@ was present, but that count's wording overstates loaded/rendered anatomy.
 `app/dissection-controls.tsx` receives `visibleCount={available.length}` from
 `app/body-explorer.tsx`; distinguish enabled from loaded/failed status without
 changing independent visibility filters, layer recipes or history semantics.
-This issue remains open; passing retry behaviour does not resolve it.
+Source correction now labels this count **enabled**, with an explanation that
+models may still be loading or unavailable. Actual control markup is checked in
+pending, ready and failed states. Rendering/review fingerprints and the unsigned
+pilot index are refreshed; no clinical approval is inherited. Website publication
+and the post-correction browser check are recorded separately in coordination
+evidence, not inferred from this source change.
