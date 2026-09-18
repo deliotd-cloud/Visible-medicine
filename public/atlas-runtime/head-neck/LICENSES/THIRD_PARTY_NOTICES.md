@@ -1155,3 +1155,24 @@ figures, scans, tables or datasets. Public abstract or PMC access does not grant
 assumed commercial media rights. BodyParts3D CC BY 4.0 credits remain unchanged.
 No asset, dependency, font or mandatory fee is added. Claim/reuse boundaries:
 `docs/PALMAR_ARTERIAL_IMAGING.md`. Clinical acceptance remains pending.
+
+# Metatarsal surface imaging teaching — 18 September 2026
+
+Original brief factual notes link to AO Surgery Reference metatarsal/midfoot
+assessment, Reijnierse and Griffith (2023, PMID38020514), Banal et al. (2009,
+PMID19567620) and Yesilaras et al. (2014, PMID24342871). These are reading
+references, not imported assets. In particular, the Reijnierse article's
+CC BY-NC-ND terms are not a commercial image/adaptation licence; no publisher
+figures, prose, tables, PDFs or scans are included. Existing BodyParts3D CC BY4.0
+credits remain; original code/notes retain project terms. No new dependency,
+model, font, texture, patient data or mandatory fee. See
+`docs/METATARSAL_SURFACE_IMAGING.md`; clinical sign-off remains outstanding.
+
+# Lesser-toe X-ray teaching — 18 September 2026
+
+Original brief factual notes cite AO Surgery Reference's lesser-toe definition
+and foot-phalange examination pages. These are references, not a publisher-media
+licence. No images, figures, tables, article text or scans are imported or adapted.
+Established digit-specific anatomical references and BodyParts3D CC BY4.0 credits
+are retained. No dependency, asset, font, dataset or mandatory fee is added.
+See `docs/LESSER_TOE_XRAY.md` for claim scope and revision-bound clinical review.

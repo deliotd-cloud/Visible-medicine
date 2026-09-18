@@ -2,6 +2,16 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 18 September — foot teaching and focused search
+
+The generated regional module now incorporates Atlas source `717fa28a`: 20
+metatarsal X-ray/ultrasound draft placements, 24 lesser-toe X-ray drafts and
+collapsed secondary study-search results. Existing CT/MRI, all 134 models /
+140 paths and the other three modules are preserved. See
+[integration evidence](atlas-foot-search-20260918.md). Access remains private
+administrator review with independent Atlas/case/lecture rights. Publication,
+verification and recovery outcomes are recorded in the coordinating checkpoint.
+
 ## 18 September — regional teaching and compact sheets
 
 The saved Atlas cardiac and palmar imaging drafts and compact information sheets
