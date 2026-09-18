@@ -3,6 +3,7 @@ import {createHash} from 'node:crypto';
 import {readFile} from 'node:fs/promises';
 import {context,hash,snapshot} from './pin-pica-clinical.mjs';
 import {beforePalmarArterialImaging} from './palmar-arterial-imaging-history.mjs';
+import {beforeMetatarsalSurfaceImaging} from './metatarsal-surface-imaging-history.mjs';
 import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {build} from './workspace-test-build.mjs';
@@ -18,7 +19,7 @@ assert.equal(palmarArterialSelections.length,22);assert.equal(palmarArterialSele
 assert.deepEqual(palmarArterialSelections.filter(s=>s.topics.includes('ct')).map(s=>s.fmaId),['FMA22835','FMA22837']);
 assert(palmarArterialSelections.every(s=>s.topics.includes('mri')));
 
-const {api,display}=await context({current:true}),before=beforePalmarArterialImaging(api);
+const {api:rawApi,display}=await context({current:true}),api=beforeMetatarsalSurfaceImaging(rawApi),before=beforePalmarArterialImaging(api);
 assert.equal(hash(snapshot(api,display)),transition.currentAllLessonsAndRecipesHash);assert.equal(hash(snapshot(before,display)),pins.previousAllLessonsAndRecipesHash);
 const raw=JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json'));
 const savedApi=await exactSourceHistoryApi(pins.sourceCommit),savedDisplay=savedApi.bodyDisplayCatalog(raw);

@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Metatarsal X-ray and ultrasound](METATARSAL_SURFACE_IMAGING.md) adds twenty source-bound draft placements across ten existing first–fifth metatarsals, using six original modality texts and established digit-specific landmarks. All other 9,916 topics, geometry and dissection recipes remain unchanged. Grouped foot sesamoids retain their identity hold. Existing compact panels are reused; no scans, publisher media, registration or clinical approval are supplied.
+
 [Anterior cardiac vein](ANTERIOR_CARDIAC_VEIN.md) adds one source-defined group from two original files (730 retained triangles), with a compact cardiac-venous Study and draft Anatomy/Function/self-check. All previous 1,103 root records, bundles, recipes and 9,927 topics are preserved. Apparent vessel/heart contact is not a validated junction or drainage pathway; other teaching, clinical approval and website model staging remain pending.
 
 [Anterior elbow studies](CUBITAL_STUDIES.md) bring 32 existing arm/forearm selections together in two focused whole-body views: muscles/arteries and superficial veins. Source-derived elbow close-ups, side filters, removal, extraction and Undo reuse existing controls. Whole surfaces remain unchanged; nerves, fascia, bicipital aponeurosis and verified vessel junctions are not supplied. No procedure, patient registration or clinical approval is implied.
@@ -122,7 +124,7 @@ Generated from the actual catalogue, teaching resolver, dissection profiles and 
 
 ## Delivered source scope
 
-[X-ray orientation](XRAY_TEACHING.md) is available in the existing Imaging group: 344 source-pinned body drafts now include six shoulder-bone sources plus 47 spinal sources. The 3 overlapping dedicated-shoulder drafts cover three shoulder-bone concepts separately. Other entries remain pending, including all 104 nested selections. No radiographs, calibrated projections or paid-lecture access are supplied. Old display/teaching approvals require re-review; earlier topics are preserved through exact authoring transitions.
+[X-ray orientation](XRAY_TEACHING.md) is available in the existing Imaging group: 354 source-pinned body drafts now include six shoulder-bone sources plus 47 spinal sources. The 3 overlapping dedicated-shoulder drafts cover three shoulder-bone concepts separately. Other entries remain pending, including all 104 nested selections. No radiographs, calibrated projections or paid-lecture access are supplied. Old display/teaching approvals require re-review; earlier topics are preserved through exact authoring transitions.
 
 The [cricothyroid dissection](CRICOTHYROID_DISSECTION.md) adds 4 source-defined muscle parts with 2 optional, nonselectable cartilage landmarks. It reuses the compact selection, cutaway, separation, labels and Undo/Redo controls. The source-preserving derivative explicitly omits 12 audited artifact faces; this is disclosed, not clinical approval. Introductory teaching is draft and CT/MRI/US remain pending for these parts. Cartilage is a navigation landmark, not the muscle's tissue parent.
 
@@ -153,8 +155,8 @@ Counts are representations with displayed copy, not unique lessons, complete top
 | Function | 1099 | 0 | 5 | 0 |
 | CT | 834 | 0 | 270 | 0 |
 | MRI | 805 | 0 | 299 | 0 |
-| X-ray | 344 | 0 | 760 | 0 |
-| Ultrasound | 544 | 0 | 560 | 0 |
+| X-ray | 354 | 0 | 750 | 0 |
+| Ultrasound | 554 | 0 | 550 | 0 |
 | Pathology | 1092 | 0 | 12 | 0 |
 | Clinical | 1097 | 0 | 7 | 0 |
 | Quiz notes | 72 | 0 | 1 | 1031 |

@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "8e549604717e2b60891ace0087fa495053aad53e61c4c603d404134586435fde"
+      "sha256": "d0614a46fb17f3f524df3b4318c86abeec914998b2720c044be8acca5a5777e1"
     },
     {
       "path": "app/body-education-link.ts",
@@ -887,6 +887,14 @@
     {
       "path": "content/major-organ-function.ts",
       "sha256": "6a38862dceedfb4d17a8610b954efa1d4a6a1925528091515bc2cabe0fd13c45"
+    },
+    {
+      "path": "content/metatarsal-surface-imaging-pins.json",
+      "sha256": "323e74b613713ea121e23a19ee35739d5731b0f28ca8647cff90ca61c8b40b1d"
+    },
+    {
+      "path": "content/metatarsal-surface-imaging.ts",
+      "sha256": "79229d3004f83592a077527209bccd403ef9e61e9e127881110b4a909e247267"
     },
     {
       "path": "content/neck-attachment-pins.json",
@@ -1957,6 +1965,10 @@
       "sha256": "922f748bf87850c9e344943ae9980bfc65701a7d8cf3f97c80ec8ab01d28a6a1"
     },
     {
+      "path": "lib/metatarsal-surface-imaging.ts",
+      "sha256": "44a87bbfd9cc3afc86ace0443d7406991d2f6ca957f1feb0fb919630b132ae5a"
+    },
+    {
       "path": "lib/model-delivery.ts",
       "sha256": "465d37a26064d03c7f559c4fe1524820349f46549858374af6a3bd9dd5807ed1"
     },
@@ -2438,7 +2450,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "23c22d2b7c0f0bc59fd58635f84d44e064a143ddd11f11d1db4fc072ede06b0b"
+      "sha256": "e67c7cc3a7bd278f7709cd9c0864cb4a75bfb3c0e1a20a1ecc0963e51b5daafe"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2641,5 +2653,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "e6c126db67a168e5d3f330857097f49afba4068d9bf96184a892e3a7e10952a0"
+  "sha256": "fe3ee94d650fbbe2979f3179abc4c90df66295371c30d4b9fe6b9db304bafa34"
 }

@@ -133,6 +133,7 @@ import { lowerVenousImagingLesson } from '../lib/lower-venous-imaging';
 import { iliacVenousImagingLesson } from '../lib/iliac-venous-imaging';
 import { forearmArterialImagingLesson } from '../lib/forearm-arterial-imaging';
 import { palmarArterialImagingLesson } from '../lib/palmar-arterial-imaging';
+import { metatarsalSurfaceImagingLesson } from '../lib/metatarsal-surface-imaging';
 import { iliacArterialImagingLesson } from '../lib/iliac-arterial-imaging';
 import { tractPlantarImagingLesson } from '../lib/tract-plantar-imaging';
 import { abdominalConnectiveImagingLesson } from '../lib/abdominal-connective-imaging';
@@ -271,6 +272,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (forearmArterialImaging) return forearmArterialImaging;
   const palmarArterialImaging = palmarArterialImagingLesson(s, tab);
   if (palmarArterialImaging) return palmarArterialImaging;
+  const metatarsalSurfaceImaging = metatarsalSurfaceImagingLesson(s, tab);
+  if (metatarsalSurfaceImaging) return metatarsalSurfaceImaging;
   const iliacArterialImaging = iliacArterialImagingLesson(s, tab);
   if (iliacArterialImaging) return iliacArterialImaging;
   const tractPlantarImaging = tractPlantarImagingLesson(s, tab);

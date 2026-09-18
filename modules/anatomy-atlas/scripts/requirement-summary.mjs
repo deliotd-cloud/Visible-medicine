@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Metatarsal X-ray and ultrasound](METATARSAL_SURFACE_IMAGING.md) adds twenty source-bound draft placements across ten existing first–fifth metatarsals, using six original modality texts and established digit-specific landmarks. All other 9,916 topics, geometry and dissection recipes remain unchanged. Grouped foot sesamoids retain their identity hold. Existing compact panels are reused; no scans, publisher media, registration or clinical approval are supplied.
+
 [Anterior cardiac vein](ANTERIOR_CARDIAC_VEIN.md) adds one source-defined group from two original files (730 retained triangles), with a compact cardiac-venous Study and draft Anatomy/Function/self-check. All previous 1,103 root records, bundles, recipes and 9,927 topics are preserved. Apparent vessel/heart contact is not a validated junction or drainage pathway; other teaching, clinical approval and website model staging remain pending.
 
 [Anterior elbow studies](CUBITAL_STUDIES.md) bring 32 existing arm/forearm selections together in two focused whole-body views: muscles/arteries and superficial veins. Source-derived elbow close-ups, side filters, removal, extraction and Undo reuse existing controls. Whole surfaces remain unchanged; nerves, fascia, bicipital aponeurosis and verified vessel junctions are not supplied. No procedure, patient registration or clinical approval is implied.
