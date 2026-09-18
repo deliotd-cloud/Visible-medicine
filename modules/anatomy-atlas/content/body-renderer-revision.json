@@ -54,7 +54,7 @@
     },
     {
       "path": "app/atlas-workspace.tsx",
-      "sha256": "b4e017078a9e425833828f2a80ce935960a8e5c88d301c399fbeb0d93cf0aa74"
+      "sha256": "747fd1deae5d1cb630e72341e5e86486672b2e495dabe42d5baf5a28e8b362ba"
     },
     {
       "path": "app/back-layers-study.tsx",
@@ -1022,7 +1022,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "e38992ad088f7cd071db87a551f4fde67c3383b27510d19053cbf1e19d9d77a3"
+      "sha256": "e6f3ce8813041a187cf16d448e531be13a6b3fb1b10a196a65ab0384e4592ec2"
     },
     {
       "path": "content/sca-mca-clinical-pins.json",
@@ -1363,6 +1363,10 @@
     {
       "path": "lib/atlas-practice.ts",
       "sha256": "cee0a9436adbfa68d784d40fbf464d0b685c297b502128db20609db95b26fd68"
+    },
+    {
+      "path": "lib/atlas-search-presentation.ts",
+      "sha256": "71682234fe74adaa984fe507ea8bc0bb5ddb82b799d04c20d88ff2a262e3847b"
     },
     {
       "path": "lib/axial-anatomy.ts",
@@ -2653,5 +2657,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "fe3ee94d650fbbe2979f3179abc4c90df66295371c30d4b9fe6b9db304bafa34"
+  "sha256": "c0d2a0209fe7e8eded04780f425f21b2613e3cbd2505ec794fef27327ff9bcb3"
 }

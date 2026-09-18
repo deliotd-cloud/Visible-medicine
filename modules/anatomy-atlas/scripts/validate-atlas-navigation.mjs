@@ -10,6 +10,7 @@ import { build as buildHelpers } from './workspace-test-build.mjs';
 const helpers = await buildHelpers({
   stdin: {
     contents: `export * from './lib/atlas-navigation.ts';
+export {groupAtlasSearchResults} from './lib/atlas-search-presentation.ts';
 export * from './lib/study-links.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';
 export { studyLibrary } from './lib/study-library.ts';`,
@@ -21,6 +22,7 @@ export { studyLibrary } from './lib/study-library.ts';`,
 const {
   atlasSearchIndex,
   filterAtlasSearch,
+  groupAtlasSearchResults,
   cameraDirections,
   directionLabel,
   bodyStudyScope,
@@ -88,6 +90,14 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)])
       }
     }
     const sample = scope[0];
+    const matches=filterAtlasSearch(index,sample.fmaId);
+    const groups=groupAtlasSearchResults(matches,sample.fmaId);
+    same(new Set([...groups.primary,...groups.related]).size,matches.length);
+    check([...groups.primary,...groups.related].every(entry=>matches.includes(entry)),'Presentation retains original entry/action identities');
+    check(groups.related.every(entry=>entry.kind==='view'));
+    check(groups.primary.some(entry=>entry.key===`structure:${sample.id}`));
+    same(groupAtlasSearchResults(matches,'').primary,matches);
+    same(groupAtlasSearchResults(matches,sample.fmaId,'view').related,[]);
     check(
       filterAtlasSearch(index, sample.fmaId).some(
         (e) => e.key === `structure:${sample.id}`,
@@ -313,6 +323,38 @@ const stale = walk(tree, (n) => n.type === 'button' && n.key === entry.key)[0];
 context.exam = true;
 stale.props.onClick();
 same(calls, [], 'Exam disables search mutations');
+
+// Related recipe matches remain reachable but do not overwhelm an exact-ID hit.
+context.exam=false;
+const footIndex=atlasSearchIndex(catalog,'foot','both');
+const footMatches=filterAtlasSearch(footIndex,'FMA24510');
+const footGroups=groupAtlasSearchResults(footMatches,'FMA24510');
+same(footGroups.primary.length,1);
+check(footGroups.related.length>0);
+same(footGroups.primary[0].kind,'structure');
+const footProps={...props,region:'foot'};
+states=[true,'FMA24510','all',12,null];calls.length=0;
+tree=render(api.AtlasSearch,footProps);
+const related=walk(tree,n=>n.type==='details'&&Object.hasOwn(n.props,'data-search-related'))[0];
+check(related,'Contextual studies are in a discoverable disclosure');
+same(related.props.open,undefined,'Initially closed native disclosure');
+check(walk(related,n=>n.type==='summary').length===1,'Keyboard-operable native summary');
+const contextualEntry=footGroups.related[0];
+walk(related,n=>n.type==='button'&&n.key===contextualEntry.key)[0].props.onClick();
+same(calls,[],'Related result still requires confirmation before resetting dissection');
+tree=render(api.AtlasSearch,footProps);
+walk(tree,n=>n.props.children==='Keep current view')[0].props.onClick();
+same(calls,[],'Cancel preserves current dissection');
+states=[true,'FMA24510','view',12,null];
+tree=render(api.AtlasSearch,footProps);
+same(walk(tree,n=>n.type==='details'&&Object.hasOwn(n.props,'data-search-related')).length,0,'Explicit study-only search is not collapsed');
+same(groupAtlasSearchResults(footMatches,'!!!').related,[]);
+same(groupAtlasSearchResults([], 'FMA24510'),{primary:[],related:[]});
+const directTitle=[{...footGroups.primary[0],label:'Plantar arch'}, {...contextualEntry,label:'Plantar arch study'}];
+same(groupAtlasSearchResults(directTitle,'plantar arch').related,[],'Direct study title hits stay primary');
+same(groupAtlasSearchResults(footGroups.related,'FMA24510').related,[],'No extra disclosure when studies are the only results');
+same(groupAtlasSearchResults(footMatches,'a'.repeat(256)+'extra'),groupAtlasSearchResults(footMatches,'a'.repeat(256)));
+same(JSON.stringify(catalog),original,'Presentation never mutates anatomical source data');
 const result = {
   passed: true,
   checks,

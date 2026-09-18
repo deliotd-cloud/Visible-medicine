@@ -1,4 +1,6 @@
 'use client';
+
+import {groupAtlasSearchResults} from '../lib/atlas-search-presentation';
 import {
   createContext,
   useCallback,
@@ -441,6 +443,7 @@ export function AtlasSearch({
     () => filterAtlasSearch(entries, query, kind),
     [entries, query, kind],
   );
+  const {primary,related}=groupAtlasSearchResults(matches,query,kind);
   const activate = (entry: AtlasSearchEntry, confirmed = false) => {
     if (workspace.exam) return;
     if (
@@ -480,6 +483,15 @@ export function AtlasSearch({
     setOpen(false);
     setPreview(null);
   };
+  const renderEntry=(entry:AtlasSearchEntry)=>entry.action.type==='link'?(
+    <Link prefetch={false} key={entry.key} href={entry.action.href} onClick={()=>setOpen(false)}>
+      <strong>{entry.label}</strong><small>{entry.detail}</small>
+    </Link>
+  ):(
+    <button type="button" key={entry.key} onClick={()=>activate(entry)}>
+      <strong>{entry.label}</strong><small>{entry.detail}</small>
+    </button>
+  );
   return (
     <Dialog
       open={open && !workspace.exam}
@@ -544,8 +556,10 @@ export function AtlasSearch({
           <option value="view">Study views in this region</option>
         </select>
         <output aria-live="polite">
-          {matches.length} results
-          {matches.length > limit ? ` · showing ${limit}` : ''}
+          {related.length
+            ? `${primary.length} direct result${primary.length===1?'':'s'} · ${related.length} related study view${related.length===1?'':'s'}`
+            : `${matches.length} results`}
+          {primary.length > limit ? ` · showing ${limit}${related.length?' direct results':''}` : ''}
         </output>
         {preview && (
           <section
@@ -566,35 +580,26 @@ export function AtlasSearch({
           </section>
         )}
         <div className="atlas-search-results" hidden={!!preview}>
-          {matches.slice(0, limit).map((entry) =>
-            entry.action.type === 'link' ? (
-              <Link
-                prefetch={false}
-                key={entry.key}
-                href={entry.action.href}
-                onClick={() => setOpen(false)}
-              >
-                <strong>{entry.label}</strong>
-                <small>{entry.detail}</small>
-              </Link>
-            ) : (
-              <button
-                type="button"
-                key={entry.key}
-                onClick={() => activate(entry)}
-              >
-                <strong>{entry.label}</strong>
-                <small>{entry.detail}</small>
-              </button>
-            ),
-          )}
+          {primary.slice(0, limit).map(renderEntry)}
           {!matches.length && (
             <p>No matches. Try another name or anatomical ID.</p>
           )}
-          {matches.length > limit && (
+          {primary.length > limit && (
             <Button variant="outline" onClick={() => setLimit((n) => n + 24)}>
               Show more results
             </Button>
+          )}
+          {related.length>0&&(
+            <details key={`${query}|${kind}`} className="rounded-lg border px-3" data-search-related>
+              <summary className="min-h-11 cursor-pointer py-3 text-sm font-medium">
+                Study views containing this anatomy ({related.length})
+              </summary>
+              <p className="mb-3 text-sm">Matches may be background anatomy rather than the study’s focus. Opening a study resets custom dissection; you can review it first.</p>
+              <div className="atlas-search-results">
+                {related.slice(0,limit).map(renderEntry)}
+                {related.length>limit&&<Button variant="outline" onClick={()=>setLimit(n=>n+24)}>Show more related study views</Button>}
+              </div>
+            </details>
           )}
         </div>
       </DialogContent>
