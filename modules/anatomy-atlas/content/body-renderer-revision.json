@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "d0614a46fb17f3f524df3b4318c86abeec914998b2720c044be8acca5a5777e1"
+      "sha256": "29709108c904d8a0ca4c9f68f0afea23b83e10211c0b5b820f4606ae5feb83ea"
     },
     {
       "path": "app/body-education-link.ts",
@@ -811,6 +811,14 @@
     {
       "path": "content/leg-muscle-imaging.ts",
       "sha256": "da36f669814e010c544f116244e7b6a98e6ab7e0f019397a2fb94e1376542289"
+    },
+    {
+      "path": "content/lesser-toe-xray-pins.json",
+      "sha256": "9c599bbcd87dc82b8e52e72c9141d23f2c9ffa1fb6d43bbdd2a32b120d6a9221"
+    },
+    {
+      "path": "content/lesser-toe-xray.ts",
+      "sha256": "139e76cb574d0a0342f472ef68fc53547aef47fba638becba42377d2b2176b9d"
     },
     {
       "path": "content/limb-bone-imaging-pins.json",
@@ -1893,6 +1901,10 @@
       "sha256": "d94d6ea36a8962684935ed07bc235852095b624abc189dd7611d5551cd30022b"
     },
     {
+      "path": "lib/lesser-toe-xray.ts",
+      "sha256": "11b54c8bbea1f5cc664b709d9e1714fad8cf67e948bbd2cc649f701ea912e62a"
+    },
+    {
       "path": "lib/limb-arterial.ts",
       "sha256": "42608e39680c2188aff69a6c017556dd848900f8f7c26c89a87cd6269128b59a"
     },
@@ -2454,7 +2466,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "e67c7cc3a7bd278f7709cd9c0864cb4a75bfb3c0e1a20a1ecc0963e51b5daafe"
+      "sha256": "82d5e5cb62b3acb595ddbe719077d2c37e4172bef821dd8a0bd9d0c66c24903b"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2657,5 +2669,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "c0d2a0209fe7e8eded04780f425f21b2613e3cbd2505ec794fef27327ff9bcb3"
+  "sha256": "1caec69ad4d3fbc91c7a4abcd9b11c7e84b13dec8469435b2ede6d4bf34aa181"
 }

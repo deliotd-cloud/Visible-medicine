@@ -3,6 +3,7 @@ import {createHash} from 'node:crypto';
 import {readFile} from 'node:fs/promises';
 import {context,hash,snapshot} from './pin-pica-clinical.mjs';
 import {beforeMetatarsalSurfaceImaging} from './metatarsal-surface-imaging-history.mjs';
+import {beforeLesserToeXray} from './lesser-toe-xray-history.mjs';
 import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {build} from './workspace-test-build.mjs';
@@ -25,7 +26,7 @@ assert(metatarsalSurfaceSelections.every(s=>s.topics.length===2&&s.topics[0]==='
 assert.deepEqual(metatarsalSurfaceSelections.map(s=>s.group),['first','first','central','central','central','central','central','central','fifth','fifth']);
 assert.equal(metatarsalSurfaceScopeNote,'Draft orientation for revision-bound radiologist review. No radiograph, ultrasound examination, patient registration or clinical approval is loaded. Atlas, imaging-case and paid-lecture access remain independent.');
 
-const {api,display}=await context({current:true}),before=beforeMetatarsalSurfaceImaging(api);
+const {api:rawApi,display}=await context({current:true}),api=beforeLesserToeXray(rawApi),before=beforeMetatarsalSurfaceImaging(api);
 assert.equal(transition.parentCommit,pins.sourceCommit);
 assert.equal(transition.previousAllLessonsAndRecipesHash,pins.previousAllLessonsAndRecipesHash);
 assert.equal(transition.entries.length,pins.entries.length);

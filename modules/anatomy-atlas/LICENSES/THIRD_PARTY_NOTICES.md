@@ -1167,3 +1167,12 @@ figures, prose, tables, PDFs or scans are included. Existing BodyParts3D CC BY4.
 credits remain; original code/notes retain project terms. No new dependency,
 model, font, texture, patient data or mandatory fee. See
 `docs/METATARSAL_SURFACE_IMAGING.md`; clinical sign-off remains outstanding.
+
+# Lesser-toe X-ray teaching — 18 September 2026
+
+Original brief factual notes cite AO Surgery Reference's lesser-toe definition
+and foot-phalange examination pages. These are references, not a publisher-media
+licence. No images, figures, tables, article text or scans are imported or adapted.
+Established digit-specific anatomical references and BodyParts3D CC BY4.0 credits
+are retained. No dependency, asset, font, dataset or mandatory fee is added.
+See `docs/LESSER_TOE_XRAY.md` for claim scope and revision-bound clinical review.
