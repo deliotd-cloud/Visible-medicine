@@ -2,6 +2,22 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+## 18 September — first-release milestone and named-space practice
+
+The owner accepted a finite first-release checklist within the unchanged wider
+Atlas goal. The canonical detailed checklist is in the Atlas source checkout,
+`docs/FIRST_RELEASE_CHECKLIST.md`, with the initial 11-selection clinical review
+pilot and CT-head handoff alongside it. Scope, viewer, teaching, imaging, access
+and assurance gates all remain pending; software passes cannot approve anatomy.
+The CT-head task retains its outstanding midbrain correction and accepted edges.
+
+The regional module now incorporates source `924e0dd7`, adding source-bound
+cardiac/ventricular identification practice with two modes and preserved dissection
+state. All135 model objects/142 paths and the other three viewers remain exact.
+See [integration evidence](atlas-nested-practice-20260918.md). Publication, recovery,
+browser acceptance and clinical sign-off are tracked separately. No new patient
+data, learner access, review database connection or lecture entitlement is added.
+
 ## 18 September — celiac and lower-neck regional integration
 
 The corrected celiac model passed authenticated upload and complete-byte checking

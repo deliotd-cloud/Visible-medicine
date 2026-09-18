@@ -216,6 +216,14 @@
     "sha256": "70a60f780e8d20643267526ca460805c1f8cae1c77e83b2fcf553e413ed350e4"
   },
   {
+    "path": "app/nested-practice.css",
+    "sha256": "8e0c687cecb73a74e65f6a574ad0858237d9f61680732eafb140c760779f1591"
+  },
+  {
+    "path": "app/nested-practice.tsx",
+    "sha256": "84d0e01eb8aa81a7c045b243b4bd426ca898a27dbf0070cf8cb9e73e0eb590a7"
+  },
+  {
     "path": "app/nested-teaching.css",
     "sha256": "d912bfc774cc744511a4c0e87a0a35f6b693def9f4bddc25b6f010f07dfa83bc"
   },
@@ -345,7 +353,7 @@
   },
   {
     "path": "app/ventricles.tsx",
-    "sha256": "32616e70acc7cf9164524737b6b55c5ca689df1250c253694a3d65039fb64975"
+    "sha256": "76edb842c6899ec10354ec032356640ca2fc1500c89183bd41ce4dd02cb35046"
   },
   {
     "path": "app/ventricular-relationships.css",
@@ -2154,6 +2162,10 @@
   {
     "path": "lib/nested-anatomy.ts",
     "sha256": "ec289a3dbeadc13f0fca06b69e8ae10a9f4b7e06b2e5b475ce3217b521ac0082"
+  },
+  {
+    "path": "lib/nested-practice.ts",
+    "sha256": "e61db487c33d4c8aaeb737e0122b376abeb5f5bb4df49d99370285eb85d65a82"
   },
   {
     "path": "lib/nested-review-links.ts",
