@@ -4,9 +4,11 @@ import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
 import pins from '../content/lesser-toe-xray-pins.json' with {type:'json'};
 import transition from '../content/lesser-toe-xray-transition.json' with {type:'json'};
+import {beforeDistalPalmarMri} from './distal-palmar-mri-history.mjs';
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 export function beforeLesserToeXray(api){
+ api=beforeDistalPalmarMri(api);
  assert.equal(hash(pins),'5bb38162ef509d8ea378c664c50733eda4c0867791e06e9b9dafd2306dba8d60');
  assert.equal(hash(transition),'9c972d47abf24aa2772514b0bbf545c78dff52b1f52e246a201e45861325199f');
  assert.equal(transition.parentCommit,pins.sourceCommit);assert.equal(transition.previousAllLessonsAndRecipesHash,pins.previousAllLessonsAndRecipesHash);

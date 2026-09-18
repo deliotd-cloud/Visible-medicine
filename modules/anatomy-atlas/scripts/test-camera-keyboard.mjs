@@ -110,6 +110,13 @@ test('actual FittedCamera installs/cleans input, captures rotated saves and excl
   render({});assert.equal(surface.handlers.size,1);
   const before=JSON.stringify(capture.current),initial=invalidations;
   surface.key('ArrowRight');assert.notEqual(JSON.stringify(capture.current),before);assert(invalidations>initial);
+  // Non-camera UI changes can recreate bounds/callback identities. The actual
+  // fit effect must retain the live orbit instead of restoring its preset.
+  const rotated=camera.position.clone(),target=controls.target.clone(),pose=structuredClone(capture.current);
+  render({});near(camera.position.distanceTo(rotated),0);near(controls.target.distanceTo(target),0);
+  render({bounds:props.bounds.clone()});near(camera.position.distanceTo(rotated),0);
+  for(const field of ['direction','up','pan'])capture.current[field].forEach((v,i)=>near(v,pose[field][i]));
+  near(capture.current.scale,pose.scale);assert.equal(surface.handlers.size,1);
   for(const mode of [{locked:true},{locked:false,planar:true}]){
     render(mode);assert.equal(surface.handlers.size,0);assert.equal(surface.getAttribute('tabindex'),null);
     const pose=JSON.stringify(capture.current);surface.key('ArrowRight');assert.equal(JSON.stringify(capture.current),pose);

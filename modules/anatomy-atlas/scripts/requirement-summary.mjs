@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Distal palmar MRI](DISTAL_PALMAR_MRI.md) adds six source-bound drafts for paired palmar-metacarpal, princeps-pollicis and radialis-indicis selections. Three short modality texts distinguish specialised MRA from routine MRI. Grouped source components, all other9,930 topics and recipes remain unchanged; no acquired images, registration or clinical approval are added.
+
 [Lesser-toe X-ray orientation](LESSER_TOE_XRAY.md) adds24 source-bound drafts for existing proximal, middle and distal phalanges of digits2–5. Three modality texts retain digit-specific landmarks; existing CT/MRI drafts, all other9,912 topics, source geometry and recipes are unchanged. Grouped sesamoids remain held. No scans, fracture simulation, new controls or clinical approval are supplied.
 
 [Metatarsal X-ray and ultrasound](METATARSAL_SURFACE_IMAGING.md) adds twenty source-bound draft placements across ten existing first–fifth metatarsals, using six original modality texts and established digit-specific landmarks. All other 9,916 topics, geometry and dissection recipes remain unchanged. Grouped foot sesamoids retain their identity hold. Existing compact panels are reused; no scans, publisher media, registration or clinical approval are supplied.

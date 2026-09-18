@@ -135,6 +135,7 @@ import { forearmArterialImagingLesson } from '../lib/forearm-arterial-imaging';
 import { palmarArterialImagingLesson } from '../lib/palmar-arterial-imaging';
 import { metatarsalSurfaceImagingLesson } from '../lib/metatarsal-surface-imaging';
 import { lesserToeXrayLesson } from '../lib/lesser-toe-xray';
+import { distalPalmarMriLesson } from '../lib/distal-palmar-mri';
 import { iliacArterialImagingLesson } from '../lib/iliac-arterial-imaging';
 import { tractPlantarImagingLesson } from '../lib/tract-plantar-imaging';
 import { abdominalConnectiveImagingLesson } from '../lib/abdominal-connective-imaging';
@@ -277,6 +278,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (metatarsalSurfaceImaging) return metatarsalSurfaceImaging;
   const lesserToeXray = lesserToeXrayLesson(s, tab);
   if (lesserToeXray) return lesserToeXray;
+  const distalPalmarMri = distalPalmarMriLesson(s, tab);
+  if (distalPalmarMri) return distalPalmarMri;
   const iliacArterialImaging = iliacArterialImagingLesson(s, tab);
   if (iliacArterialImaging) return iliacArterialImaging;
   const tractPlantarImaging = tractPlantarImagingLesson(s, tab);

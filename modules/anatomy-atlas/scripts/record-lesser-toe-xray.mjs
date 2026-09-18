@@ -3,8 +3,9 @@ import {access,readFile,writeFile} from 'node:fs/promises';
 import {context,hash,snapshot} from './pin-pica-clinical.mjs';
 import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 import pins from '../content/lesser-toe-xray-pins.json' with {type:'json'};
+import {beforeDistalPalmarMri} from './distal-palmar-mri-history.mjs';
 
-const {api,display}=await context({current:true});
+const {api:rawApi,display}=await context({current:true}),api=beforeDistalPalmarMri(rawApi);
 const raw=JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json'));
 const savedApi=await exactSourceHistoryApi(pins.sourceCommit),savedDisplay=savedApi.bodyDisplayCatalog(raw);
 assert.deepEqual(savedDisplay,display);assert.equal(hash(snapshot(savedApi,savedDisplay)),pins.previousAllLessonsAndRecipesHash);

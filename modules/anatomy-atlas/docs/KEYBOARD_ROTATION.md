@@ -26,3 +26,10 @@ saved-view and browser checks are recorded in the dated coordination checkpoint.
 These are not screen-reader or physical-device certification. Anatomy content,
 assets and licences are unchanged; renderer fingerprints advance conservatively
 and no previous clinical approval is transferred.
+
+The integration regression also recreates equal bounds and callback identities
+after keyboard rotation and verifies that the actual fit effect retains camera
+position, target and captured pose (within floating-point tolerance). Hosted
+pelvic sampling retained lateral orientation when opening/dismissing the Study
+menu and toggling labels. Selecting a study deliberately reapplies its framing;
+the menu alone does not request a preset reset.

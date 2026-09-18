@@ -4,13 +4,14 @@ import {createHash} from 'node:crypto';
 import {context,hash,snapshot} from './pin-pica-clinical.mjs';
 import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 import {beforeLesserToeXray} from './lesser-toe-xray-history.mjs';
+import {beforeDistalPalmarMri} from './distal-palmar-mri-history.mjs';
 import {build} from './workspace-test-build.mjs';
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import pins from '../content/lesser-toe-xray-pins.json' with {type:'json'};
 import transition from '../content/lesser-toe-xray-transition.json' with {type:'json'};
 import {lesserToeXraySelections,lesserToeXrayTopics,lesserToeXrayReferences,lesserToeXrayScopeNote} from '../content/lesser-toe-xray.ts';
 
-const {api,display}=await context({current:true}),before=beforeLesserToeXray(api);
+const {api:rawApi,display}=await context({current:true}),api=beforeDistalPalmarMri(rawApi),before=beforeLesserToeXray(api);
 assert.equal(hash(snapshot(api,display)),transition.currentAllLessonsAndRecipesHash);
 assert.equal(hash(snapshot(before,display)),pins.previousAllLessonsAndRecipesHash);
 const saved=await exactSourceHistoryApi(pins.sourceCommit),raw=JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json'));
