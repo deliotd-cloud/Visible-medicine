@@ -1,5 +1,12 @@
 # Full source inventory and third recovery milestone
 
+**18 September 2026 source adjudication:** [celiac-trunk candidate](CELIAC_TRUNK_SOURCE_REVIEW.md)
+FMA14812/FJ3421 is **not an anatomical gap to fill**: its geometry nearly coincides
+with the displayed FMA50737 celiac artery despite different source filenames.
+Do not add it as another structure. This historical inventory is not an admission
+allow-list; the latest audit screened 1,104 roots, 104 reachable nested selections
+and dedicated shoulder sources. Earlier milestone counts below remain historical.
+
 **Current extension:** the [pancreatic/epiglottic milestone](PANCREATIC_DETAIL.md) reaches **954 entries** with twelve admissions and one new raphe hold; the preceding [mesenteric milestone](MESENTERIC_DETAIL.md) added seventeen entries and three near-overlap holds. The current source inventory includes all original archive/geometry evidence and classifications; previous milestone summaries below remain historical.
 
 This document records the 859-entry inventory milestone. Subsequent evidence is described in [Deep brain](DEEP_BRAIN.md), the 892-entry [connective/deep-spinal milestone](AXIAL_DETAIL.md), the 924-entry [dental/orbital milestone](HEAD_DETAIL.md), and the **925-entry [intestinal-junction correction](INTESTINAL_JUNCTION.md)**. `content/source-inventory.json` is regenerated against the current catalogue. Historical counts below describe this milestone, not the latest whole-body total. The two bowel-parent adaptations have explicit preservation exceptions; the earlier pinned baseline files are unchanged.
