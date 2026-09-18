@@ -1,6 +1,7 @@
 import pins from '../content/central-vessel-imaging-pins.json' with {type:'json'};
 import {centralVesselImagingGroups,centralVesselImagingReferences,type CentralVesselImagingModality} from '../content/central-vessel-imaging';
 import {sourceCanonical} from './body-source-additions';
+import {celiacTeachingIdentity} from './body-display-catalog';
 import type {BodyStructure} from '../app/body-types';
 import type {ContentTab} from '../app/anatomy-data';
 import type {ContentLesson} from './content-types';
@@ -10,7 +11,7 @@ const names={ct:'CT',mri:'MRI',ultrasound:'Ultrasound'};
 export function centralVesselImagingLesson(s:BodyStructure,tab:ContentTab):ContentLesson|undefined {
   if(!Object.hasOwn(names,tab))return undefined;
   const binding=bound.get(s.id);
-  if(!binding||sourceCanonical(s)!==binding.signature)return undefined;
+  if(!binding||sourceCanonical(celiacTeachingIdentity(s))!==binding.signature)return undefined;
   const modality=tab as CentralVesselImagingModality,focus=centralVesselImagingGroups[binding.group].focus[modality];
   if(!focus)return undefined;
   const limitation=binding.anatomy.bullets?.find(b=>!b.startsWith('Source identity:'));

@@ -1,0 +1,135 @@
+{
+  "sourceCommit": "6b96e836942a7c124e6caf947e3920dc898687fd",
+  "beforeCatalog": "bb3518cfdc995729f0e9c528d8e4071cb6ebc71852dcb92ded6c5bdebda70830",
+  "afterCatalog": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "correctionHash": "8b801d5fb264792cad38518bccb55f0a51459feca0908b0da990c74a57b54229",
+  "unchangedTopics": 9936,
+  "allTopicsHash": "79056ced72900abddff25b76b4e7a91ea2b7ccb295c36a588e6986e05acabb4a",
+  "profilesHash": "2cf821c31a5bdf75a44a171e73721d6e803e2a3ef5c386754640dc0198891881",
+  "shoulderHash": "8172669d3d9e1a89446104715c0e2047fe60857ba2cb39f19af16f2e0fc86ab0",
+  "original": {
+    "id": "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
+    "fmaId": "FMA50737",
+    "name": "Celiac artery",
+    "sourceName": "celiac artery",
+    "system": "vessels",
+    "category": "vessel",
+    "laterality": "unspecified",
+    "region": "abdomen",
+    "regions": [
+      "abdomen"
+    ],
+    "bundle": "abdomen-vessels-recovery",
+    "nodeName": "FMA50737",
+    "bounds": {
+      "min": [
+        0.011040699668228626,
+        2.7765002250671387,
+        0.5759400129318237
+      ],
+      "max": [
+        0.12240300327539444,
+        2.898399591445923,
+        0.8078700304031372
+      ]
+    },
+    "center": [
+      0.06672185147181153,
+      2.8374499082565308,
+      0.6919050216674805
+    ],
+    "anchor": [
+      0.0719733014702797,
+      2.86579966545105,
+      0.7196300029754639
+    ],
+    "sourceTree": "isa",
+    "sources": [
+      {
+        "file": "FJ1846",
+        "sha256": "7aae236dac488ac875ae9f62b59d84ce6f0d85cb80098ef12346cac59f5a609f"
+      },
+      {
+        "file": "FJ2013",
+        "sha256": "5ab733ce7f017e7d9c033936f2008b682eb73dacd742e8ea53cb77a8a28d4492"
+      }
+    ],
+    "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+    "provenance": {
+      "method": "licensed-source-mesh",
+      "license": "CC-BY-4.0",
+      "sourceVersion": "4.0",
+      "recovered": true
+    },
+    "validation": {
+      "status": "unvalidated",
+      "anatomicalReview": false
+    }
+  },
+  "replacement": {
+    "id": "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
+    "fmaId": "FMA50737",
+    "name": "Celiac artery",
+    "sourceName": "celiac artery",
+    "system": "vessels",
+    "category": "vessel",
+    "laterality": "unspecified",
+    "region": "abdomen",
+    "regions": [
+      "abdomen"
+    ],
+    "bundle": "celiac-display-corrected",
+    "nodeName": "FMA50737",
+    "bounds": {
+      "min": [
+        0.011040699668228626,
+        2.7765002250671387,
+        0.5759400129318237
+      ],
+      "max": [
+        0.12240300327539444,
+        2.898399591445923,
+        0.8078700304031372
+      ]
+    },
+    "center": [
+      0.06672185147181153,
+      2.8374499082565308,
+      0.6919050216674805
+    ],
+    "anchor": [
+      0.0719733014702797,
+      2.86579966545105,
+      0.7196300029754639
+    ],
+    "sourceTree": "isa",
+    "sources": [
+      {
+        "file": "FJ1846",
+        "sha256": "7aae236dac488ac875ae9f62b59d84ce6f0d85cb80098ef12346cac59f5a609f"
+      },
+      {
+        "file": "FJ2013",
+        "sha256": "5ab733ce7f017e7d9c033936f2008b682eb73dacd742e8ea53cb77a8a28d4492"
+      }
+    ],
+    "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+    "provenance": {
+      "method": "licensed-source-mesh",
+      "license": "CC-BY-4.0",
+      "sourceVersion": "4.0",
+      "recovered": true
+    },
+    "validation": {
+      "status": "unvalidated",
+      "anatomicalReview": false
+    }
+  },
+  "bundle": {
+    "id": "celiac-display-corrected",
+    "url": "/models/bodyparts3d/celiac-display/celiac-display.glb?v=4f431242839c255ae2320b4004c537a4c2defb7d0cd7b51fdea60f7ba3c09e8f",
+    "bytes": 5604,
+    "sha256": "4f431242839c255ae2320b4004c537a4c2defb7d0cd7b51fdea60f7ba3c09e8f",
+    "structures": 1
+  }
+}

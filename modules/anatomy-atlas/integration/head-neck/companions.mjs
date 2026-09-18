@@ -2,6 +2,7 @@
 // contain audit-only models and original archives not needed by this delivery.
 export const regionalCompanions = [
   ['public/models/bodyparts3d/full-body/catalog.json', 'models/bodyparts3d/full-body/catalog.json'],
+  ...['README.md','display-correction.json'].map(name => [`public/models/bodyparts3d/celiac-display/${name}`, `models/bodyparts3d/celiac-display/${name}`]),
   ...['dark', 'light'].map(t => [`public/brand/visible-medicine-lockup-${t}.png`, `brand/visible-medicine-lockup-${t}.png`]),
   ...['LICENSE', 'LICENSES/THIRD_PARTY_NOTICES.md', 'LICENSES/CC-BY-4.0.txt', 'LICENSES/BODYPARTS3D.md', 'LICENSES/BODYPARTS3D_FULL_BODY.md', 'LICENSES/bodyparts3d-license-evidence.html'].map(p => [p, p]),
   ['integration/head-neck/credits.html', 'models/bodyparts3d/credits.html'],

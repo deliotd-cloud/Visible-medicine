@@ -1,5 +1,6 @@
 import correction from '../public/models/bodyparts3d/eye-layers/display-correction.json' with { type: 'json' };
 import pancreaticCorrection from '../public/models/bodyparts3d/pancreas/display-correction.json' with { type: 'json' };
+import celiacCorrection from '../public/models/bodyparts3d/celiac-display/display-correction.json' with { type: 'json' };
 import type { BodyCatalog, BodyStructure } from '../app/body-types';
 import { addBrachialVeins } from './brachial-veins.ts';
 import { addTentorium } from './tentorium.ts';
@@ -44,6 +45,17 @@ type DisplayCorrection = {
 export const eyeDisplayCorrection = correction as unknown as DisplayCorrection;
 export const pancreasDisplayCorrection =
   pancreaticCorrection as unknown as DisplayCorrection;
+export const celiacDisplayCorrection = celiacCorrection as unknown as DisplayCorrection;
+/** Apply only this exact correction; do not add unrelated anatomy to legacy callers. */
+export function applyCeliacDisplayCorrection(catalog: BodyCatalog): BodyCatalog {
+  return applyDisplayCorrection(catalog, celiacDisplayCorrection);
+}
+/** Exact teaching-copy continuity only. Not an imaging/approval binding migration. */
+export function celiacTeachingIdentity(s: BodyStructure): BodyStructure {
+  return canonical(s) === canonical(celiacDisplayCorrection.replacement)
+    ? celiacDisplayCorrection.original
+    : s;
+}
 /** Teaching-copy continuity only; never reuse this for imaging or entitlement bindings. */
 export function isPancreasDisplayRecord(s: BodyStructure) {
   return (
@@ -64,7 +76,7 @@ export function bodyDisplayCatalog(catalog: BodyCatalog): BodyCatalog {
             addDeepLegVeins(
               addTentorium(
                 addBrachialVeins(
-                  [pancreasDisplayCorrection, eyeDisplayCorrection].reduce(
+                  [pancreasDisplayCorrection, eyeDisplayCorrection, celiacDisplayCorrection].reduce(
                     applyDisplayCorrection,
                     catalog,
                   ),

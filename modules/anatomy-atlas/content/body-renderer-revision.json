@@ -1274,7 +1274,7 @@
     },
     {
       "path": "lib/abdominal-arterial.ts",
-      "sha256": "29a81d40909eff2d828e72bda5e2cc8660e51371e602c99cdf05fc1c5e32aa51"
+      "sha256": "23f20b2c03f6b4e2fbe13d47de0af0ba0ad25e36dc8baae4439b43448531fe03"
     },
     {
       "path": "lib/abdominal-branch-imaging.ts",
@@ -1442,7 +1442,7 @@
     },
     {
       "path": "lib/body-display-catalog.ts",
-      "sha256": "1c210b92d686ea0c36a097e9a7a91f6a0c88c6a0d236e40726ba582256908241"
+      "sha256": "b5dc9cf1cf661bda6a232cfaeccf8473c6eba19da2975107d91e29ac21bcdef8"
     },
     {
       "path": "lib/body-presentation-parts.ts",
@@ -1510,7 +1510,7 @@
     },
     {
       "path": "lib/central-vessel-imaging.ts",
-      "sha256": "92cc59bf3f16daddd09b9e1261a23454e679f3a36f6c6c317564173c6dc08558"
+      "sha256": "d350763dc2518e42b158d907e8289e7b7e50bc45c53314a25160c0924d4fa4bb"
     },
     {
       "path": "lib/cerebral-arterial.ts",
@@ -2522,7 +2522,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "0e5bc432e856cd58e3f3e721f3d252b2b816d4a1ebaa5742e48156c8ff3399d3"
+      "sha256": "d18033429dbe7349b9aeab7cb0d6725c1cbf13509d99382f1646dc48513bb541"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2551,6 +2551,10 @@
     {
       "path": "public/models/bodyparts3d/cardiac/great-vessel-context.json",
       "sha256": "fac546e54237db4bed783d583b01c583f423a35a74bd759727d519074de0af85"
+    },
+    {
+      "path": "public/models/bodyparts3d/celiac-display/display-correction.json",
+      "sha256": "d71a1bccdbd2c18e1d5a9f6537170e1acbb66c832fa6fbee68e25c7a0ad3ca82"
     },
     {
       "path": "public/models/bodyparts3d/cerebral/catalog.json",
@@ -2725,5 +2729,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "293db6d5ed2802c69aec19c22af00510553ebfc03c59ace1aec45b5a9a6eff5f"
+  "sha256": "b43b941c5fcab795a20855a7f435094e1bbd10c05b5d1d0a28f788b16ad41a4c"
 }
