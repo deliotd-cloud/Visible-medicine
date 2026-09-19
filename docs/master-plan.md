@@ -4,6 +4,14 @@ Last consolidated: 12 September 2026. This is the shared roadmap and decision lo
 
 ## 18 September — first-release milestone and named-space practice
 
+19 September account navigation: desktop/mobile account labels now receive only
+a boolean from the existing request-verified identity. They no longer infer sign-in
+from being on a workspace URL. Root rendering is request-scoped; no new session
+store, roles, entitlement, personal-data serialization or clinical approval.
+Regression coverage renders the actual layout/frame/header for signed-in and
+anonymous requests on public, Atlas and workspace routes. Hosted verification
+and publication are separately recorded in the coordination checkpoint.
+
 19 September keyboard correction: source `e6ce513f` is integrated through the
 generated regional export. Search study previews focus their confirmation action;
 cancellation restores the exact result, including expanded related studies. Query

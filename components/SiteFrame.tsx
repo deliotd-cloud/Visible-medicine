@@ -72,7 +72,7 @@ function WorkspaceContextBar({ pathname }: { pathname: string }) {
   );
 }
 
-export function SiteFrame({ children }: { children: ReactNode }) {
+export function SiteFrame({ children, signedIn }: { children: ReactNode; signedIn: boolean }) {
   const pathname = usePathname();
   const anatomyPanel = pathname === '/atlas/3d' || pathname === '/atlas/shoulder-3d' || pathname === '/atlas/female-pelvis-3d' || pathname === '/atlas/lower-limb-3d' || pathname === '/atlas/head-neck-3d' || pathname === '/atlas/thorax-3d' || pathname === '/atlas/abdomen-3d' || pathname === '/atlas/pelvis-3d' || pathname === '/atlas/spine-3d';
   const immersive = isImmersiveRoute(pathname);
@@ -83,7 +83,7 @@ export function SiteFrame({ children }: { children: ReactNode }) {
   return (
     <div id="visible-medicine-site-content" className={anatomyPanel ? 'anatomy-site-frame' : immersive ? "immersive-site-frame" : workspace ? "workspace-site-frame" : "public-site-frame"}>
       <a className="skip-link" href="#main-content">Skip to content</a>
-      {standardSite && <><SiteHeader workspace={workspace} /><div className="intended-use-strip"><span>Education &amp; research only</span><p>No diagnosis, reporting, patient care or clinical decision-making.</p><a href="/intended-use">Read intended use →</a></div></>}
+      {standardSite && <><SiteHeader signedIn={signedIn} /><div className="intended-use-strip"><span>Education &amp; research only</span><p>No diagnosis, reporting, patient care or clinical decision-making.</p><a href="/intended-use">Read intended use →</a></div></>}
       {workspace && <WorkspaceContextBar pathname={pathname} />}
       {workspace && pathname.startsWith("/workspace") && <nav className="institution-app-nav" aria-label="Institution workspace navigation">{institutionLinks.map(([label, href]) => { const active = href === "/workspace" ? pathname === href : pathname === href || pathname.startsWith(`${href}/`); return <Link aria-current={active ? "page" : undefined} href={href} key={href}>{label}</Link>; })}</nav>}
       <div id="main-content" tabIndex={-1}>{children}</div>

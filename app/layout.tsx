@@ -3,11 +3,14 @@ import { Geist_Mono } from "next/font/google";
 import { SiteFrame } from "../components/SiteFrame";
 import { SplashScreen } from "../components/SplashScreen";
 import { SPLASH_BOOTSTRAP_SCRIPT } from "../lib/splash-intro";
+import { getChatGPTUser } from "./chatgpt-auth";
 import "./globals.css";
 import "./atlas-navigation.css";
 
 const geistMono = Geist_Mono({ variable: "--font-atlas-mono", subsets: ["latin"] });
 const siteOrigin = process.env.SITE_ORIGIN ?? "https://visiblemedicine.com";
+// Only a request-scoped boolean enters the client frame; no identity or rights.
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   applicationName: "Visible Medicine",
@@ -38,7 +41,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const signedIn = (await getChatGPTUser()) !== null;
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -46,7 +50,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
       <body className={geistMono.variable}>
         <SplashScreen />
-        <SiteFrame>{children}</SiteFrame>
+        <SiteFrame signedIn={signedIn}>{children}</SiteFrame>
       </body>
     </html>
   );
