@@ -12,8 +12,10 @@ async function postStudio(payload: Record<string, unknown>) {
   return result;
 }
 
-function ActionForm({ children, onSubmit, submitLabel, draftKey }: { children: ReactNode; onSubmit: (form: FormData) => Promise<void>; submitLabel: string; draftKey?: string }) {
+function ActionForm({ children, onSubmit, submitLabel, draftKey, onValuesChange }: { children: ReactNode; onSubmit: (form: FormData) => Promise<void>; submitLabel: string; draftKey?: string; onValuesChange?: (values: FormData) => void }) {
   const formRef = useRef<HTMLFormElement>(null);
+  const valuesChanged = useRef(onValuesChange);
+  useEffect(() => { valuesChanged.current = onValuesChange; }, [onValuesChange]);
   const [busy, setBusy] = useState(false); const [dirty, setDirty] = useState(false); const [message, setMessage] = useState(""); const [error, setError] = useState("");
   useEffect(() => {
     if (!draftKey || !formRef.current) return;
@@ -26,7 +28,7 @@ function ActionForm({ children, onSubmit, submitLabel, draftKey }: { children: R
         if (element instanceof HTMLInputElement && element.type === "checkbox") element.checked = Array.isArray(value) ? value.includes(element.value) : value === "true";
         else if (!Array.isArray(value)) element.value = value;
       }
-      const recoveredNotice = window.setTimeout(() => setMessage("Recovered an unsent device-local draft."), 0);
+      const recoveredNotice = window.setTimeout(() => { if (formRef.current) valuesChanged.current?.(new FormData(formRef.current)); setMessage("Recovered an unsent device-local draft."); }, 0);
       return () => window.clearTimeout(recoveredNotice);
     } catch { localStorage.removeItem(`visible-medicine-studio-draft:${draftKey}`); }
   }, [draftKey]);
@@ -37,6 +39,7 @@ function ActionForm({ children, onSubmit, submitLabel, draftKey }: { children: R
   }, [dirty]);
   function preserveDraft() {
     setDirty(true);
+    if (formRef.current) valuesChanged.current?.(new FormData(formRef.current));
     if (!draftKey || !formRef.current) return;
     const values: Record<string, string | string[]> = {};
     const form = new FormData(formRef.current);
@@ -50,7 +53,7 @@ function ActionForm({ children, onSubmit, submitLabel, draftKey }: { children: R
 
 export function CreateCourseForm() {
   const router = useRouter();
-  return <ActionForm submitLabel="Create course" onSubmit={async (form) => { const result = await postStudio({ action: "create-course", title: form.get("title"), code: form.get("code"), description: form.get("description") }); router.push(`/studio/courses/${encodeURIComponent(result.courseId!)}`); router.refresh(); }}><div className="two-fields"><label><span>Course title</span><input name="title" required /></label><label><span>Course code</span><input name="code" placeholder="RAD-101" /></label></div><label><span>Educational description</span><textarea name="description" required minLength={20} /></label></ActionForm>;
+  return <ActionForm draftKey="new-course" submitLabel="Create course and add content" onSubmit={async (form) => { const result = await postStudio({ action: "create-course", title: form.get("title"), code: form.get("code"), description: form.get("description") }); router.push(`/studio/courses/${encodeURIComponent(result.courseId!)}`); router.refresh(); }}><label><span>Course title</span><input name="title" required /></label><label><span>Short description</span><textarea name="description" required minLength={20} /><small>At least 20 characters describing what learners will learn.</small></label><details><summary>Optional course code</summary><label><span>Course code</span><input name="code" placeholder="Generated automatically if left blank" /></label></details></ActionForm>;
 }
 
 export function CreateCourseFromTemplateForm() {
@@ -77,19 +80,21 @@ export function DuplicateWorkbookButton({ workbookId }: { workbookId: string }) 
 
 export function CreateWorkbookForm({ course }: { course: StudioCourse }) {
   const router = useRouter();
-  return <ActionForm submitLabel="Create workbook draft" onSubmit={async (form) => { const result = await postStudio({ action: "create-workbook", courseId: course.id, title: form.get("title"), mode: form.get("mode"), durationMinutes: Number(form.get("durationMinutes")) }); router.push(`/studio/workbooks/${encodeURIComponent(result.workbookId!)}`); router.refresh(); }}><label><span>Workbook title</span><input name="title" required /></label><div className="two-fields"><label><span>Mode</span><select name="mode"><option value="teaching">Teaching</option><option value="assessment">Assessment</option></select></label><label><span>Assessment duration (minutes)</span><input name="durationMinutes" type="number" min="0" max="480" defaultValue="60" /></label></div></ActionForm>;
+  const [mode, setMode] = useState("teaching");
+  return <ActionForm draftKey={`new-workbook:${course.id}`} onValuesChange={(form) => setMode(String(form.get("mode") ?? "teaching"))} submitLabel="Add and open editor" onSubmit={async (form) => { const result = await postStudio({ action: "create-workbook", courseId: course.id, title: form.get("title"), mode: form.get("mode"), durationMinutes: Number(form.get("durationMinutes")) }); router.push(`/studio/workbooks/${encodeURIComponent(result.workbookId!)}/builder`); router.refresh(); }}><label><span>Content title</span><input name="title" required /></label><label><span>Content type</span><select name="mode"><option value="teaching">Imaging teaching — cases, slides and Atlas references</option><option value="assessment">Case-based quiz / exam</option></select></label><label hidden={mode !== "assessment"}><span>Assessment duration (minutes)</span><input name="durationMinutes" type="number" min="10" max="480" defaultValue="60" disabled={mode !== "assessment"} /></label><p className="form-help">Creates a private draft. Add cleared cases and content in the editor.</p></ActionForm>;
 }
 
 export function ReleaseDraftForm({ course, workbooks, release }: { course: StudioCourse; workbooks: StudioWorkbook[]; release?: StudioRelease }) {
   const router = useRouter();
-  return <ActionForm draftKey={`release:${release?.id ?? course.id}`} submitLabel={release ? "Save release draft" : "Create release draft"} onSubmit={async (form) => { await postStudio({ action: "save-release", releaseId: release?.id, expectedVersion: release?.version, courseId: course.id, title: form.get("title"), slug: form.get("slug"), summary: form.get("summary"), level: form.get("level"), duration: form.get("duration"), outcomes: String(form.get("outcomes") ?? "").split(/\r?\n/).filter(Boolean), publisherName: form.get("publisherName"), publisherKind: form.get("publisherKind"), visibility: form.get("visibility"), accessModel: form.get("accessModel"), priceMinor: Math.round(Number(form.get("price")) * 100), currency: form.get("currency"), enrolmentOpen: form.get("enrolmentOpen") === "on", workbookIds: form.getAll("workbookIds") }); router.refresh(); }}>
-    <div className="two-fields"><label><span>Catalogue title</span><input name="title" defaultValue={release?.title ?? course.title} required /></label><label><span>URL slug</span><input name="slug" defaultValue={release?.slug ?? ""} placeholder="cross-sectional-neuro" required /></label></div>
+  const [access, setAccess] = useState(release?.accessModel ?? "invitation");
+  return <ActionForm draftKey={`release:${release?.id ?? course.id}`} onValuesChange={(form) => setAccess(String(form.get("accessModel") ?? "invitation"))} submitLabel={release ? "Save release draft" : "Create release draft"} onSubmit={async (form) => { await postStudio({ action: "save-release", releaseId: release?.id, expectedVersion: release?.version, courseId: course.id, title: form.get("title"), slug: form.get("slug"), summary: form.get("summary"), level: form.get("level"), duration: form.get("duration"), outcomes: String(form.get("outcomes") ?? "").split(/\r?\n/).filter(Boolean), publisherName: form.get("publisherName"), publisherKind: form.get("publisherKind"), visibility: form.get("visibility"), accessModel: form.get("accessModel"), priceMinor: Math.round(Number(form.get("price")) * 100), currency: form.get("currency"), enrolmentOpen: form.get("enrolmentOpen") === "on", workbookIds: form.getAll("workbookIds") }); router.refresh(); }}>
+    <label><span>Catalogue title</span><input name="title" defaultValue={release?.title ?? course.title} required /></label><details><summary>Page address</summary><label><span>URL slug</span><input name="slug" defaultValue={release?.slug ?? (course.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "course")} required /></label></details>
     <label><span>Course summary</span><textarea name="summary" defaultValue={release?.summary ?? course.description} minLength={30} required /></label>
     <div className="two-fields"><label><span>Level</span><input name="level" defaultValue={release?.level ?? "Intermediate"} /></label><label><span>Duration</span><input name="duration" defaultValue={release?.duration ?? "Self-paced"} /></label></div>
     <label><span>Learning outcomes · one per line</span><textarea name="outcomes" defaultValue={release?.outcomes.join("\n") ?? ""} required /></label>
     <fieldset><legend>Release workbooks</legend>{workbooks.map((workbook) => <label className="studio-check" key={workbook.id}><input type="checkbox" name="workbookIds" value={workbook.id} defaultChecked={release?.workbookIds.includes(workbook.id)} /><span><b>{workbook.title}</b>{workbook.mode} · {workbook.status} · {workbook.caseCount} cases</span></label>)}</fieldset>
     <div className="three-fields"><label><span>Publisher</span><input name="publisherName" defaultValue={release?.publisher ?? ""} placeholder="Institution name" /></label><label><span>Publisher label</span><select name="publisherKind" defaultValue={release?.publisherKind ?? "institution"}><option value="institution">Institution</option><option value="official">Visible Medicine official</option></select></label><label><span>Visibility</span><select name="visibility" defaultValue={release?.visibility ?? "private"}><option value="private">Private</option><option value="unlisted">Unlisted</option><option value="public">Public catalogue</option></select></label></div>
-    <div className="three-fields"><label><span>Access</span><select name="accessModel" defaultValue={release?.accessModel ?? "invitation"}><option value="free">Free self-enrolment</option><option value="invitation">Invitation</option><option value="institution">Institution membership</option><option value="paid">Paid</option></select></label><label><span>Price</span><input name="price" type="number" min="0" step="0.01" defaultValue={(release?.priceMinor ?? 0) / 100} /></label><label><span>Currency</span><input name="currency" maxLength={3} defaultValue={release?.currency ?? "GBP"} /></label></div>
+    <label><span>Access</span><select name="accessModel" defaultValue={release?.accessModel ?? "invitation"}><option value="free">Free self-enrolment</option><option value="invitation">Invitation</option><option value="institution">Institution membership</option><option value="paid">Paid</option></select></label><div className="two-fields" hidden={access !== "paid"}><label><span>Price</span><input name="price" type="number" min="0" step="0.01" defaultValue={(release?.priceMinor ?? 0) / 100} disabled={access !== "paid"} /></label><label><span>Currency</span><input name="currency" maxLength={3} defaultValue={release?.currency ?? "GBP"} disabled={access !== "paid"} /></label></div>
     <label className="studio-check"><input name="enrolmentOpen" type="checkbox" defaultChecked={release?.enrolmentOpen ?? true} /><span><b>Open enrolment</b>Allow the configured access route once this release is published.</span></label>
   </ActionForm>;
 }

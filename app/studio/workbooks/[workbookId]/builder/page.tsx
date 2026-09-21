@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { EducationRuntime } from "@/components/EducationRuntime";
 import { requireChatGPTUser } from "../../../../chatgpt-auth";
+import { getStudioSnapshot } from "@/lib/education-platform";
+import { notFound } from "next/navigation";
 import "../../../../learn/runtime.css";
 
 export const dynamic = "force-dynamic";
@@ -21,13 +23,17 @@ export default async function StudioWorkbookBuilderPage({
     "",
   );
   const returnPath = `/studio/workbooks/${encodeURIComponent(workbookId)}/builder`;
-  await requireChatGPTUser(returnPath);
+  const user = await requireChatGPTUser(returnPath);
+  const snapshot = await getStudioSnapshot({ userId: `edu:${user.userId}`, externalSubject: `sites:${user.userId}`, email: user.email, displayName: user.displayName });
+  const workbook = snapshot.workbooks.find((item) => item.id === workbookId);
+  if (!workbook) notFound();
   return (
     <EducationRuntime
       workbookId={workbookId}
       initialView="authoring"
       accessMode="authoring"
-      returnTo={`/studio/workbooks/${encodeURIComponent(workbookId)}`}
+      returnTo={`/studio/courses/${encodeURIComponent(workbook.courseId)}`}
+      courseOutline={{ title: workbook.courseTitle, items: snapshot.workbooks.filter((item) => item.courseId === workbook.courseId).map(({ id, title }) => ({ id, title })) }}
     />
   );
 }

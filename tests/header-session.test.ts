@@ -31,20 +31,50 @@ const { SiteFrame } = compile('components/SiteFrame.tsx', {
   './SiteHeader': { SiteHeader }, './SiteFooter': { SiteFooter: () => null },
 });
 
-test('actual desktop and mobile header links use session, never route as identity', () => {
-  for (const route of ['/', '/atlas/head-neck-3d', '/my-learning', '/account', '/account/settings', '/account-entry']) {
+function occurrences(value: string, fragment: string) {
+  return value.split(fragment).length - 1;
+}
+
+test('public routes retain the full site header and request-scoped account link', () => {
+  for (const route of ['/', '/atlas/head-neck-3d', '/courses', '/account-entry']) {
     pathname = route;
     for (const signedIn of [true, false]) {
       const html = renderToStaticMarkup(React.createElement(SiteFrame, { signedIn }, 'content'));
-      const desktop = html.match(/<a class="account-entry-link"[^>]*>[^<]*<\/a>/)?.[0];
-      assert.ok(desktop);
-      assert.ok(desktop.includes(`href="${signedIn ? '/account' : '/account-entry'}"`));
-      assert.ok(desktop.endsWith(`>${signedIn ? 'Profile' : 'Sign in'}</a>`));
+      assert.match(html, /<header class="topbar platform-header public-platform-header">/);
+      assert.match(html, /<nav class="nav-links public-primary-nav" aria-label="Primary navigation">/);
+      assert.ok(html.includes('class="workspace-switcher"'), 'public workspace switcher remains available');
+      assert.ok(html.includes(`class="account-entry-link" href="${signedIn ? '/account' : '/account-entry'}"`));
       assert.ok(html.includes(signedIn ? '>Profile and account<span' : '>Sign in or create account<span'));
-      const active = signedIn ? route === '/account' || route.startsWith('/account/') : route === '/account-entry';
-      assert.equal(desktop.includes('aria-current="page"'), active, `${signedIn}: ${route}`);
     }
   }
+});
+
+test('workspace routes render one compact header without duplicate site navigation', () => {
+  for (const route of ['/my-learning', '/studio/workspace', '/studio/courses/course-1', '/workspace', '/account', '/account/settings']) {
+    pathname = route;
+    for (const signedIn of [true, false]) {
+      const html = renderToStaticMarkup(React.createElement(SiteFrame, { signedIn }, 'content'));
+      assert.equal(occurrences(html, '<header'), 1, route);
+      assert.equal(occurrences(html, 'class="workspace-context-header"'), 1, route);
+      assert.ok(!html.includes('public-platform-header'), route);
+      assert.ok(!html.includes('aria-label="Primary navigation"'), route);
+      assert.ok(!html.includes('class="workspace-switcher"'), route);
+      const account = html.match(/<a class="account-entry-link"[^>]*>[^<]*<\/a>/)?.[0];
+      assert.ok(account);
+      assert.ok(account.includes(`href="${signedIn ? '/account' : '/account-entry'}"`));
+      assert.ok(account.endsWith(`>${signedIn ? 'Profile' : 'Sign in'}</a>`));
+      const active = signedIn ? route === '/account' || route.startsWith('/account/') : route === '/account-entry';
+      assert.equal(account.includes('aria-current="page"'), active, `${signedIn}: ${route}`);
+    }
+  }
+});
+
+test('account workspace is not presented as the Learn workspace', () => {
+  pathname = '/account/settings';
+  const html = renderToStaticMarkup(React.createElement(SiteFrame, { signedIn: true }, 'content'));
+  assert.match(html, /<summary>Account <span aria-hidden="true">⌄<\/span><\/summary>/);
+  assert.ok(!html.includes('aria-current="page" href="/my-learning"'));
+  assert.ok(html.includes('aria-current="page" href="/account"'));
 });
 
 test('actual root layout supplies only request-scoped boolean with no identity leakage', async () => {

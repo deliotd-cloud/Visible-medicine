@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { requireChatGPTUser } from "../../chatgpt-auth";
 import { StudioShell } from "@/components/StudioShell";
 import { StudioWorkbookTable } from "@/components/StudioWorkbookTable";
@@ -11,7 +10,7 @@ export const metadata: Metadata = { title: "Studio workbooks", robots: { index: 
 export default async function StudioWorkbooksPage() {
   const user = await requireChatGPTUser("/studio/workbooks");
   const snapshot = await getStudioSnapshot({ userId: `edu:${user.userId}`, externalSubject: `sites:${user.userId}`, email: user.email, displayName: user.displayName });
-  return <StudioShell snapshot={snapshot} eyebrow="Workbooks" title="Workbooks hold the cases." description="Search, review and continue each workbook here, then enter the focused image workspace only for case and teaching content." actions={<Link className="primary-button" href="/studio/courses">New workbook <span>→</span></Link>}>
+  return <StudioShell snapshot={snapshot} eyebrow="Library" title="Workbook library" description="Find existing teaching and assessment work, open it directly in the builder, or inspect its governed state.">
     <StudioWorkbookTable workbooks={snapshot.workbooks} />
   </StudioShell>;
 }

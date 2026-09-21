@@ -69,6 +69,7 @@ type EducationRuntimeProps = {
   initialView?: WorkspaceView;
   accessMode?: "delivery" | "authoring";
   returnTo?: string;
+  courseOutline?: { title: string; items: Array<{ id: string; title: string }> };
 };
 type ActionPayload = Record<string, string | number | boolean | object | null>;
 type PendingAnswerDraft = {
@@ -434,6 +435,7 @@ export function EducationRuntime({
   initialView,
   accessMode = "delivery",
   returnTo = "",
+  courseOutline,
 }: EducationRuntimeProps = {}) {
   const [data, setData] = useState<AppSnapshot | null>(null);
   const [view, setView] = useState<WorkspaceView>(
@@ -4116,6 +4118,7 @@ export function EducationRuntime({
           postAction={postAction}
           focusWorkbookId={accessMode === "authoring" ? requestedWorkbookId : ""}
           returnTo={returnTo}
+          courseOutline={courseOutline}
         />
       )}
       {view === "question-bank" && <QuestionBankWorkspace />}
@@ -6447,6 +6450,7 @@ function WorkbookBuilder({
   postAction,
   focusWorkbookId = "",
   returnTo = "",
+  courseOutline,
 }: {
   data: AppSnapshot;
   busy: boolean;
@@ -6456,6 +6460,7 @@ function WorkbookBuilder({
   ) => Promise<AppSnapshot | null>;
   focusWorkbookId?: string;
   returnTo?: string;
+  courseOutline?: EducationRuntimeProps["courseOutline"];
 }) {
   const focusedWorkbook = focusWorkbookId
     ? data.workbooks.find((workbook) => workbook.id === focusWorkbookId)
@@ -6508,6 +6513,8 @@ function WorkbookBuilder({
   const [teachingDesignOpen, setTeachingDesignOpen] = useState(
     focusedWorkbook?.mode === "teaching",
   );
+  const [editorPanel, setEditorPanel] = useState<"cases" | "teaching" | "details" | "preview" | "review">("cases");
+  const saveDraftButton = useRef<HTMLButtonElement>(null);
   const [caseQuery, setCaseQuery] = useState("");
   const [caseFilter, setCaseFilter] = useState<"all" | "radiology" | "pathology" | "mixed">("all");
   const [introductionPreviewOpen, setIntroductionPreviewOpen] = useState(false);
@@ -6526,6 +6533,27 @@ function WorkbookBuilder({
           })))
       : [],
   );
+  const draftSignature = JSON.stringify({ title, mode, duration, dualDisplayAllowed, selectedCases, pollDrafts, teachingBlocks, questionDrafts });
+  const [savedDraftSignature, setSavedDraftSignature] = useState(draftSignature);
+  const editorIdentity = useRef(editingWorkbookId);
+  useEffect(() => {
+    if (editorIdentity.current === editingWorkbookId) return;
+    editorIdentity.current = editingWorkbookId;
+    setSavedDraftSignature(draftSignature);
+  }, [editingWorkbookId, draftSignature]);
+  const editorDirty = draftSignature !== savedDraftSignature;
+  useEffect(() => {
+    if (!editorDirty) return;
+    const warn = (event: BeforeUnloadEvent) => event.preventDefault();
+    const checkLink = (event: MouseEvent) => {
+      const link = event.target instanceof Element ? event.target.closest("a[href]") : null;
+      if (!(link instanceof HTMLAnchorElement) || link.target === "_blank" || event.ctrlKey || event.metaKey || event.shiftKey || link.hash && link.pathname === location.pathname) return;
+      if (link && !window.confirm("You have unsaved content changes. Leave without saving?")) { event.preventDefault(); event.stopPropagation(); }
+    };
+    window.addEventListener("beforeunload", warn);
+    document.addEventListener("click", checkLink, true);
+    return () => { window.removeEventListener("beforeunload", warn); document.removeEventListener("click", checkLink, true); };
+  }, [editorDirty]);
   const publishedWorkbooks = data.workbooks.filter(
     (workbook) => workbook.status === "published",
   );
@@ -6549,6 +6577,7 @@ function WorkbookBuilder({
     ["administrator", "instructor"].includes(role),
   );
   function applyTemplate() {
+    if ((teachingBlocks.length || pollDrafts.length) && !window.confirm("Replace the current teaching blocks with this template? Unsaved edits to those blocks will be replaced.")) return;
     const firstCaseId = selectedCases[0] ?? data.cases[0]?.id ?? "";
     if (templateId === "timed-assessment") {
       setMode("assessment");
@@ -6655,6 +6684,7 @@ function WorkbookBuilder({
     setQuestionDrafts([]);
   }
   function editWorkbook(workbook: AppSnapshot["workbooks"][number]) {
+    if (editorDirty && !window.confirm("Reload the saved draft and discard your unsaved edits?")) return;
     const detail = data.draftWorkbookDetails.find(
       (item) => item.workbookId === workbook.id,
     );
@@ -6845,7 +6875,8 @@ function WorkbookBuilder({
     );
   }
   return (
-    <section className="management-page builder-page">
+    <section className="management-page builder-page focused-course-editor" data-editor-panel={editorPanel}>
+      <fieldset className="editor-busy-guard" disabled={busy}>
       {introductionPreviewOpen && introductionDrafts.length > 0 && (
         <WorkbookIntroduction
           slides={introductionDrafts}
@@ -6861,7 +6892,7 @@ function WorkbookBuilder({
       <div className="page-heading">
         <span>
           <small>Education authoring</small>
-          <h1>Workbook builder</h1>
+          <h1>{focusedWorkbook?.title || "Content editor"}</h1>
           <p>
             Create a guided teaching workbook or a governed exam from the same
             publication-cleared case library.
@@ -6872,7 +6903,16 @@ function WorkbookBuilder({
           <small>Published versions never change existing attempts</small>
         </div>
       </div>
-      <div className="mode-cards">
+      <nav className="content-editor-toolbar" aria-label="Content editor">
+        <div>
+          <button type="button" aria-pressed={["cases", "teaching", "details"].includes(editorPanel)} onClick={() => setEditorPanel("cases")}>Content</button>
+          <button type="button" aria-pressed={editorPanel === "preview"} onClick={() => setEditorPanel("preview")}>Preview</button>
+          <button type="button" aria-pressed={editorPanel === "review"} onClick={() => setEditorPanel("review")}>Review</button>
+        </div>
+        <span role="status">{editorDirty ? "Unsaved changes" : "No unsaved changes"}</span>
+        <button type="button" disabled={busy || !reviewReady} onClick={() => saveDraftButton.current?.click()}>{busy ? "Saving…" : "Save draft"}</button>
+      </nav>
+      <div className="mode-cards" hidden={editorPanel !== "details"}>
         <button
           className={mode === "teaching" ? "active" : ""}
           disabled={Boolean(editingWorkbookId) && mode !== "teaching"}
@@ -6919,7 +6959,7 @@ function WorkbookBuilder({
             </small>
           </span>
           {focusWorkbookId
-            ? <Link href={returnTo || `/studio/workbooks/${encodeURIComponent(editingWorkbookId)}`}>Return to workbook</Link>
+            ? <Link href={returnTo || `/studio/workbooks/${encodeURIComponent(editingWorkbookId)}`}>{returnTo.startsWith("/studio/courses/") ? "Back to course" : "Return to workbook"}</Link>
             : <button type="button" onClick={resetEditor}>Cancel editing</button>}
         </div>
       )}
@@ -6933,7 +6973,7 @@ function WorkbookBuilder({
           <span className="status-pill amber">Address before resubmission</span>
         </div>
       )}
-      <section className="management-card workbook-template-bar">
+      <details className="editor-template-disclosure" hidden={editorPanel !== "details"}><summary>Templates — optional starting content</summary><section className="management-card workbook-template-bar">
         <span>
           <small>Fast start</small>
           <strong>Workbook templates</strong>
@@ -6945,9 +6985,17 @@ function WorkbookBuilder({
           <option value="timed-assessment">Timed assessment</option>
         </select>
         <button type="button" disabled={!selectedCases.length} title={!selectedCases.length ? "Select at least one case before applying a case-linked template" : undefined} onClick={applyTemplate}>Apply template</button>
-      </section>
+      </section></details>
       <div className="builder-grid">
-        <section className="management-card builder-form">
+        <nav className="content-editor-outline" aria-label="Content outline">
+          {courseOutline && <div className="editor-course-outline"><strong>{courseOutline.title}</strong>{courseOutline.items.map((item) => <Link key={item.id} href={`/studio/workbooks/${encodeURIComponent(item.id)}/builder`} aria-current={item.id === focusWorkbookId ? "page" : undefined}>{item.title}</Link>)}</div>}
+          <p>EDIT CONTENT</p>
+          <button type="button" aria-pressed={editorPanel === "cases"} onClick={() => setEditorPanel("cases")}>Imaging cases <span>{selected.length}</span></button>
+          {mode === "teaching" && <button type="button" aria-pressed={editorPanel === "teaching"} onClick={() => { setTeachingDesignOpen(true); setEditorPanel("teaching"); }}>Slides &amp; teaching <span>{teachingBlocks.length}</span></button>}
+          <button type="button" aria-pressed={editorPanel === "details"} onClick={() => setEditorPanel("details")}>Title &amp; settings</button>
+          <div className="editor-check-summary"><strong>{reviewReadinessChecks.filter((check) => check.ready).length}/{reviewReadinessChecks.length} checks ready</strong><button type="button" onClick={() => setEditorPanel("review")}>View checks</button></div>
+        </nav>
+        <section className="management-card builder-form" hidden={editorPanel !== "details"}>
           <div className="card-heading">
             <span>
               <small>Step 1</small>
@@ -7048,7 +7096,7 @@ function WorkbookBuilder({
             </span>
           </div>
         </section>
-        <section className="management-card case-picker">
+        <section className="management-card case-picker" hidden={editorPanel !== "cases"}>
           <div className="card-heading">
             <span>
               <small>Step 2</small>
@@ -7173,6 +7221,7 @@ function WorkbookBuilder({
         {mode === "teaching" && (
           <details
             className="teaching-design-disclosure builder-teaching-step"
+            hidden={editorPanel !== "teaching"}
             open={teachingDesignOpen}
             onToggle={(event) => setTeachingDesignOpen(event.currentTarget.open)}
           >
@@ -7191,14 +7240,14 @@ function WorkbookBuilder({
               <button type="button" disabled={!introductionDrafts.length} onClick={() => { setIntroductionPreviewIndex(0); setIntroductionPreviewOpen(true); }}>Preview learner introduction</button>
             </div>
             <TeachingContentComposer cases={data.cases} selectedCaseIds={selectedCases} drafts={teachingBlocks} setDrafts={setTeachingBlocks} />
-            <PollAuthoringPanel cases={data.cases} selectedCaseIds={selectedCases} drafts={pollDrafts} setDrafts={setPollDrafts} />
+            <details className="editor-optional-polls"><summary>Live polls — optional ({pollDrafts.length})</summary><PollAuthoringPanel cases={data.cases} selectedCaseIds={selectedCases} drafts={pollDrafts} setDrafts={setPollDrafts} /></details>
           </details>
         )}
-        <aside className="management-card publish-preview">
+        <aside className="management-card publish-preview" hidden={editorPanel !== "review" && editorPanel !== "preview"}>
           <div className="card-heading">
             <span>
-              <small>{mode === "teaching" ? "Step 4" : "Step 3"}</small>
-              <h2>Review & create</h2>
+              <small>{editorPanel === "preview" ? "Learner outline" : "Before independent review"}</small>
+              <h2>{editorPanel === "preview" ? "Preview content" : "Review & save"}</h2>
             </span>
           </div>
           <div className={`preview-panel ${mode}`}>
@@ -7220,7 +7269,8 @@ function WorkbookBuilder({
               ))}
             </ol>
           </div>
-          <section className={`review-readiness ${reviewReady ? "ready" : "attention"}`} aria-label="Authoring readiness">
+          {editorPanel === "preview" && <div className="editor-preview-actions"><p>This outline reflects your edits. Slide preview opens the introduction as learners will see it. Imaging cases remain in the cleared library.</p>{mode === "teaching" && <button type="button" disabled={!introductionDrafts.length} onClick={() => { setIntroductionPreviewIndex(0); setIntroductionPreviewOpen(true); }}>Preview slides</button>}</div>}
+          <section hidden={editorPanel !== "review"} className={`review-readiness ${reviewReady ? "ready" : "attention"}`} aria-label="Authoring readiness">
             <header>
               <strong>{reviewReady ? "Ready to save" : "Authoring checks"}</strong>
               <span>{reviewReadinessChecks.filter((check) => check.ready).length} / {reviewReadinessChecks.length}</span>
@@ -7237,15 +7287,16 @@ function WorkbookBuilder({
               Peer review remains a separate step after this draft is saved.
             </small>
           </section>
-          <div className="version-note">
+          <details className="version-note" hidden={editorPanel !== "review"}><summary>Version and publication rules</summary>
             <strong>Versioning rule</strong>
             <p>
               Creation produces an editable draft. Publishing pins cases,
               question/note versions, viewer core and display policy into an
               integrity receipt.
             </p>
-          </div>
+          </details>
           <button
+            ref={saveDraftButton}
             className="primary-button"
             disabled={
               busy ||
@@ -7304,6 +7355,7 @@ function WorkbookBuilder({
                   ? "Workbook draft revision saved"
                   : `${mode === "assessment" ? "Exam" : "Teaching"} workbook draft created`,
               ).then((updated) => {
+                if (updated) setSavedDraftSignature(draftSignature);
                 if (updated && !focusWorkbookId) {
                   resetEditor();
                 }
@@ -7316,7 +7368,7 @@ function WorkbookBuilder({
           </button>
         </aside>
       </div>
-      <section className="management-card existing-workbooks">
+      <details className="editor-version-history" hidden={editorPanel !== "review"}><summary>Review actions &amp; version history</summary><section className="management-card existing-workbooks">
         <div className="card-heading">
           <span>
             <small>Version register</small>
@@ -7370,7 +7422,8 @@ function WorkbookBuilder({
                         onClick={() => editWorkbook(workbook)}
                       >Edit draft</button>
                       <button
-                        disabled={busy}
+                        disabled={busy || (workbook.id === editingWorkbookId && (editorDirty || !reviewReady))}
+                        title={workbook.id === editingWorkbookId && editorDirty ? "Save your changes before requesting review" : undefined}
                         onClick={() => {
                           if (window.confirm("Send this workbook to a separate education colleague for peer review?"))
                             void postAction({ action: "request-workbook-review", id: workbook.id }, "Workbook sent for independent peer review");
@@ -7504,6 +7557,7 @@ function WorkbookBuilder({
           ))}
         </div>
       </section>
+      </details>
       {canManageAssignments && !focusWorkbookId && (
         <details className="access-governance-disclosure">
         <summary>
@@ -7679,6 +7733,7 @@ function WorkbookBuilder({
         </div>
         </details>
       )}
+      </fieldset>
     </section>
   );
 }

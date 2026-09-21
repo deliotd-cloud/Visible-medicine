@@ -4,6 +4,16 @@ Last consolidated: 12 September 2026. This is the shared roadmap and decision lo
 
 ## 18 September — first-release milestone and named-space practice
 
+21 September Studio simplification: the owner approved the workspace audit.
+[Interface implementation and remaining authoring types](studio-simplification.md)
+records the compact single-header workspace, course-centred navigation, direct
+editing, progressive Content/Preview/Review panels and unsaved/busy safeguards.
+No server permission, published version, patient asset or Atlas source is changed.
+Standalone lecture/Atlas/quiz authoring remains substantive follow-on work with
+separate validation and immutable publication, not a loosened assessment contract.
+Continue that authoring expansion alongside the intact Atlas goal after this
+interface checkpoint. Clinical and six first-release gates remain pending.
+
 21 September laryngeal imaging: source `9b9a1ffca58eb9f921354eccbebeabcb9965d556`
 is integrated through the generated regional export. Six existing epiglottis,
 thyroid-cartilage and cricoid-cartilage CT/MRI topics receive source-bound drafts.
