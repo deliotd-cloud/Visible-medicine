@@ -4,8 +4,10 @@ import {context,hash,snapshot} from './pin-pica-clinical.mjs';
 import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 import pins from '../content/shoulder-arterial-mri-pins.json' with {type:'json'};
 import {beforeHandIntrinsicStudies} from './hand-intrinsic-study-history.mjs';
-const {api:rawApi,display}=await context({current:true}),api=beforeHandIntrinsicStudies(rawApi);
+import {beforeCeliacDisplay} from './celiac-display-history.mjs';
+const {api:rawApi}=await context({current:true});
 const raw=JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json'));
+const api=beforeCeliacDisplay(beforeHandIntrinsicStudies(rawApi),raw),display=api.bodyDisplayCatalog(raw);
 const savedApi=await exactSourceHistoryApi(pins.sourceCommit),savedDisplay=savedApi.bodyDisplayCatalog(raw);
 assert.deepEqual(savedDisplay,display);assert.equal(hash(snapshot(savedApi,savedDisplay)),pins.previousAllLessonsAndRecipesHash);
 const prior=new Map(),entries=pins.entries.map(e=>{

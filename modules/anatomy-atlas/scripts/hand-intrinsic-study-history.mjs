@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import record from '../content/hand-intrinsic-study-transition.json' with {type:'json'};
 import {preLowerNeckProfiles} from './lower-neck-study-history.mjs';
+import {beforeLaryngealImaging} from './laryngeal-imaging-history.mjs';
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function preHandIntrinsicProfiles(profiles){
  profiles=preLowerNeckProfiles(profiles);
@@ -15,6 +16,7 @@ export function preHandIntrinsicProfiles(profiles){
  assert.equal(hash(prior),record.before,'Previous recipes must remain exact');return prior;
 }
 export function beforeHandIntrinsicStudies(api){
+ api=beforeLaryngealImaging(api);
  const profiles=preHandIntrinsicProfiles(api.dissectionProfiles);
  return profiles===api.dissectionProfiles?api:{...api,dissectionProfiles:profiles};
 }

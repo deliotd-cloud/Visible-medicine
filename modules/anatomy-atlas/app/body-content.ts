@@ -1,4 +1,5 @@
 import { centralVesselImagingLesson } from '../lib/central-vessel-imaging';
+import { laryngealImagingLesson } from '../lib/laryngeal-imaging';
 import { laryngealMuscleTeachingLesson } from '../lib/laryngeal-muscle-teaching';
 import { thoracicBranchImagingLesson } from '../lib/thoracic-branch-imaging';
 import { abdominalBranchImagingLesson } from '../lib/abdominal-branch-imaging';
@@ -207,6 +208,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const laryngealImaging = laryngealImagingLesson(s, tab);
+  if (laryngealImaging) return laryngealImaging;
   const anteriorCardiacVein = anteriorCardiacVeinLesson(s, tab);
   if (anteriorCardiacVein) return anteriorCardiacVein;
   const shortCiliary = shortCiliaryLesson(s, tab);

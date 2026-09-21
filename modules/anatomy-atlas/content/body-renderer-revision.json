@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "5df356430aeb0cb4c9c2509b4cff068da83e7e2708822514a12ef99b2690cf68"
+      "sha256": "a6b1754ec253ed4fd6034db3349cd166a5e74f51fa71f9a2ca931c136bdda3cf"
     },
     {
       "path": "app/body-education-link.ts",
@@ -815,6 +815,14 @@
     {
       "path": "content/inferior-thyroid-context-pins.json",
       "sha256": "1928f2ecce49146511325abe3fe6331291dcbbbb0ca6308f99e95be2353f07f8"
+    },
+    {
+      "path": "content/laryngeal-imaging-pins.json",
+      "sha256": "97af73448c9063517468aee21c881a6df3b2fc2f4fd8e6a004c98a58a3607338"
+    },
+    {
+      "path": "content/laryngeal-imaging.ts",
+      "sha256": "bfcced54a94c0b349fdbd433dbdb015dd9b654c2a434d58fb12da85e2a04efad"
     },
     {
       "path": "content/laryngeal-muscle-teaching-pins.json",
@@ -1925,6 +1933,10 @@
       "sha256": "adb043e56456f63e8f8f5f110c984f3706c8904a6267c6415260c7d0c8973fb3"
     },
     {
+      "path": "lib/laryngeal-imaging.ts",
+      "sha256": "145628e9fd451edca4ef20f0f6dcadb8eb0d0680a5ce1214ef9560751cbdf189"
+    },
+    {
       "path": "lib/laryngeal-muscle-teaching.ts",
       "sha256": "e88a795a04301517a83347da1604b61ea9a56227a4bcf0961cc8acf4165d8425"
     },
@@ -2741,5 +2753,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "6ed7d54d41092a581baf43f34cf9d010c366530f8639eb163f7305e43132e2b5"
+  "sha256": "d6529919d0737b903af39b5f2d0f1ba71fc05f9e5d7ae62b5497b8fac2a3c1f8"
 }
