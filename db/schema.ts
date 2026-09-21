@@ -103,6 +103,22 @@ export const assessmentVersions = sqliteTable("assessment_versions", {
   id: text("id").primaryKey(), workbookId: text("workbook_id").notNull().references(() => workbooks.id), version: integer("version").notNull(), integrityHash: text("integrity_hash").notNull(), manifestJson: text("manifest_json"), viewerCoreVersion: text("viewer_core_version").notNull(), publishedAt: text("published_at").notNull(), status: text("status").notNull(), dualDisplayAllowed: integer("dual_display_allowed", { mode: "boolean" }).notNull().default(false),
 }, (table) => [uniqueIndex("idx_assessment_workbook_version").on(table.workbookId, table.version)]);
 
+export const lectureDrafts = sqliteTable("lecture_drafts", {
+  workbookId: text("workbook_id").primaryKey().references(() => workbooks.id),
+  slidesJson: text("slides_json").notNull(), reviewHash: text("review_hash"), updatedAt: text("updated_at").notNull(),
+});
+export const lectureReviews = sqliteTable("lecture_reviews", {
+  id: text("id").primaryKey(), workbookId: text("workbook_id").notNull().references(() => workbooks.id),
+  workbookVersion: integer("workbook_version").notNull(), contentHash: text("content_hash").notNull(),
+  reviewerId: text("reviewer_id").notNull().references(() => users.id), decision: text("decision").notNull(),
+  comment: text("comment").notNull(), createdAt: text("created_at").notNull(),
+}, table => [index("idx_lecture_reviews_revision").on(table.workbookId,table.workbookVersion,table.createdAt)]);
+export const lectureVersions = sqliteTable("lecture_versions", {
+  id: text("id").primaryKey(), workbookId: text("workbook_id").notNull().references(() => workbooks.id),
+  version: integer("version").notNull(), integrityHash: text("integrity_hash").notNull(),
+  manifestJson: text("manifest_json").notNull(), publishedAt: text("published_at").notNull(),
+}, table => [uniqueIndex("idx_lecture_workbook_version").on(table.workbookId,table.version)]);
+
 export const enrolments = sqliteTable("enrolments", {
   id: text("id").primaryKey(), userId: text("user_id").notNull().references(() => users.id), courseId: text("course_id").notNull().references(() => courses.id), status: text("status").notNull(), enrolledAt: text("enrolled_at").notNull(),
 }, (table) => [uniqueIndex("idx_enrolments_user_course").on(table.userId, table.courseId)]);

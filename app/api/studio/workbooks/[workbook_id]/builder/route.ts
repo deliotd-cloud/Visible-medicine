@@ -11,6 +11,7 @@ import {
   reviewWorkbook,
   updateWorkbookDraft,
 } from "@/lib/repository";
+import { isLectureWorkbook } from "@/lib/lecture-repository";
 
 export const dynamic = "force-dynamic";
 
@@ -58,6 +59,8 @@ export async function POST(
     // the user's active organization and deliberately returns a generic 404 for
     // workbooks outside that boundary.
     await getAuthoringAppSnapshot(auth, workbookId);
+    if(await isLectureWorkbook(workbookId))
+      throw new DomainError("Use the lecture editor for this content type.",409);
 
     const body = await readEducationJson(request, 64_000);
     const action = typeof body.action === "string" ? body.action : "";

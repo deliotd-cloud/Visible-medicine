@@ -9,10 +9,14 @@ Last consolidated: 12 September 2026. This is the shared roadmap and decision lo
 records the compact single-header workspace, course-centred navigation, direct
 editing, progressive Content/Preview/Review panels and unsaved/busy safeguards.
 No server permission, published version, patient asset or Atlas source is changed.
-Standalone lecture/Atlas/quiz authoring remains substantive follow-on work with
-separate validation and immutable publication, not a loosened assessment contract.
-Continue that authoring expansion alongside the intact Atlas goal after this
-interface checkpoint. Clinical and six first-release gates remain pending.
+The following checkpoint implements a separate plain-text lecture mode with
+draft-save, slide ordering, preview, independent revision-bound review, immutable
+publication and protected learner playback. The focused editor needs no imaging
+case and keeps one course outline, not duplicate workspace sidebars. See the same
+implementation record for limits and additive migration evidence. PowerPoint/media
+import, progress/resume, revision cloning, Atlas-only activities and standalone
+quizzes remain follow-on work; existing assessment validation is unchanged.
+The broader Atlas goal and all six clinical/first-release gates remain pending.
 
 21 September laryngeal imaging: source `9b9a1ffca58eb9f921354eccbebeabcb9965d556`
 is integrated through the generated regional export. Six existing epiglottis,

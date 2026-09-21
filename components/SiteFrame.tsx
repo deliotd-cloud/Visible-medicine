@@ -44,7 +44,7 @@ function workspaceIsActive(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-function WorkspaceContextBar({ pathname, signedIn }: { pathname: string; signedIn: boolean }) {
+export function WorkspaceContextBar({ pathname, signedIn }: { pathname: string; signedIn: boolean }) {
   const current = workspaceLinks.find(([, href]) => workspaceIsActive(pathname, href))?.[0] ?? "Account";
   const accountHref = signedIn ? "/account" : "/account-entry";
   return (

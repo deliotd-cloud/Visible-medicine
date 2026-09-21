@@ -556,7 +556,7 @@ export async function createStudioWorkbook(auth: AuthContext, input: Record<stri
   const title = boundedText(input.title, 160);
   const mode = boundedText(input.mode, 20);
   const duration = Math.max(0, Math.min(480, Number(input.durationMinutes ?? 0)));
-  if (title.length < 4 || !new Set(["teaching", "assessment"]).has(mode)) throw new EducationPlatformError("Add a workbook title and choose teaching or assessment mode.", 422);
+  if (title.length < 4 || !new Set(["teaching", "assessment", "lecture"]).has(mode)) throw new EducationPlatformError("Add a content title and choose lecture, imaging teaching or assessment mode.", 422);
   const courseModule = await env.DB.prepare(`SELECT id FROM modules WHERE course_id=? ORDER BY position LIMIT 1`).bind(courseId).first<{ id: string }>();
   if (!courseModule) throw new EducationPlatformError("This course has no authoring module.", 409);
   const id = `workbook:${crypto.randomUUID()}`;

@@ -25,23 +25,46 @@ Owner approved the read-only workspace audit and requested implementation.
 No schema, database, course record, case, review decision, asset, dependency,
 entitlement or Atlas source change is part of this interface checkpoint.
 
-## Remaining authoring expansion (not silently represented as implemented)
+## Standalone lecture authoring
 
-The existing workbook contract is case-based. Standalone lectures/presentations,
-Atlas-only activities and standalone quizzes need explicit content types and
-delivery/review support; they must not use fabricated cases or relaxed assessment
-validation. The current creation choices truthfully describe imaging teaching and
-case-based quizzes/exams.
+The next checkpoint adds an explicit `lecture` mode; no fabricated imaging cases
+or relaxed teaching/assessment contracts. In a course, choose **Lecture /
+presentation**, then use **Content > Preview > Review** in the focused editor.
+The course outline and slide outline share one editor rather than nesting a
+fourth navigation sidebar. Details and source references remain collapsed.
 
-Next add an isolated lecture workbook mode with workbook-keyed slides, explicit
-draft validation, independent review, immutable publication manifest and protected
-learner playback without a viewer/case requirement. Preserve current teaching and
-assessment case requirements, media clearance, conflicts, revisions and independent
-course/Atlas/lecture access. Test draft/save/reload, empty/invalid slide rejection,
-reviewer separation, exact published revisions, entitlement denial and playback.
-Then implement independently valid Atlas activities and standalone quizzes, and
-map their learner-facing Course > Sections > Lessons hierarchy without relabelling
-existing records as types they do not support.
+- Add, reorder and remove plain-text slides; save incomplete drafts and reload.
+  Edits survive panel changes, successful saves retain the selected slide, and
+  conflicts preserve unsaved content. Leaving a dirty draft prompts the author.
+- Preview with next/previous controls, arrow keys and a collapsible slide outline.
+  Unpublished content is explicitly labelled draft, even after saving.
+- Request independent review only for a complete saved revision. The author
+  cannot approve their own lecture. Publication verifies the exact approved hash
+  and stores an immutable manifest; published content cannot be edited in place.
+- Learner playback requires existing course enrolment and a valid individual or
+  cohort allocation. Revoked, expired, prerequisite-blocked and Atlas-only access
+  do not unlock a lecture. Staff preview is restricted to their organisation and
+  Studio entitlement; course URLs also verify release membership.
+- Slides are plain text with an optional HTTPS source link, not copied images,
+  HTML or embedded external content. No new dependency or anatomical asset.
+  Maximum 80 slides, 48 KB serialized slide content, 5,000 characters per body.
+  Streamed API input is bounded; server validation is authoritative.
+
+Migration `0007_glamorous_luke_cage.sql` adds only lecture drafts, reviews and
+publication tables/indexes. Runtime bootstrap uses matching additive statements.
+Existing course, case and Atlas records are not rewritten. The synthetic migration
+test applies the preceding migrations, preserves existing rows and checks foreign
+keys; repository tests execute actual SQL with an in-memory D1 adapter.
+
+### Remaining authoring expansion
+
+PowerPoint/media import, lecture progress/resume, revision cloning, independent
+Atlas-only activities and standalone quizzes are **not** implemented by this
+checkpoint. Existing duplicate-course/workbook actions copy empty structure, not
+lecture slides or approvals; the lecture route does not expose the case-only
+duplicate control. Content/media licensing, de-identification and clinical review
+remain required before release. Independent access gates must remain intact when
+adding future content types and imaging links.
 
 ## Evidence and limits
 

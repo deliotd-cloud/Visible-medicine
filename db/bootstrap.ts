@@ -10,6 +10,7 @@ import {
 } from "@/lib/education-user-provisioning";
 import { identityProviderForSubject } from "@/lib/account-policy";
 import { backfillKnownAssessmentManifests } from "@/lib/assessment-manifest-store";
+import { LECTURE_SCHEMA } from "@/db/lecture";
 
 const SCHEMA = [
   `CREATE TABLE IF NOT EXISTS users (id TEXT PRIMARY KEY, external_subject TEXT NOT NULL UNIQUE, email TEXT NOT NULL, display_name TEXT NOT NULL, roles TEXT NOT NULL, created_at TEXT NOT NULL, last_seen_at TEXT NOT NULL)`,
@@ -112,6 +113,7 @@ const SCHEMA = [
   `CREATE INDEX IF NOT EXISTS idx_criterion_marks_label_revision ON criterion_marks(criterion_label, revision)`,
   `CREATE INDEX IF NOT EXISTS idx_ingestion_status_created ON ingestion_jobs(status, created_at)`,
   `CREATE INDEX IF NOT EXISTS idx_audit_target ON audit_events(target_type, target_id)`,
+  ...LECTURE_SCHEMA,
 ];
 
 let initialized = false;
