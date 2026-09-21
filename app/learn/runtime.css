@@ -6516,10 +6516,15 @@ body:has(.runtime-theme) > .site-footer { display: none; }
 .focused-course-editor .teaching-design-guidance p { font-size: 13px; }
 @media (max-width: 760px) {
   .focused-course-editor.management-page { padding: 14px; }
+  .focused-course-editor .page-heading small,
+  .focused-course-editor .page-heading p,
+  .focused-course-editor .draft-edit-banner { display: none; }
+  .focused-course-editor .page-heading h1 { margin: 0; font-size: 23px; }
   .content-editor-toolbar { flex-wrap: wrap; gap: 8px; }
-  .content-editor-toolbar > span { margin-left: 0; flex: 1; }
-  .content-editor-toolbar > div { width: 100%; }
-  .content-editor-toolbar > div button { flex: 1; }
+  .content-editor-toolbar > span { margin-left: 0; flex-basis: 100%; order: 3; font-size: 11px; }
+  .content-editor-toolbar > div { flex: 1; }
+  .content-editor-toolbar > div button { flex: 1; font-size: 12px; padding-inline: 8px; }
+  .content-editor-toolbar > button { padding-inline: 10px; font-size: 12px; }
   .focused-course-editor .builder-grid { grid-template-columns: minmax(0,1fr); }
   .content-editor-outline { position: static; flex-direction: row; flex-wrap: wrap; gap: 6px; }
   .content-editor-outline > p { display: none; }
