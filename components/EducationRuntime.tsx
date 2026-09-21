@@ -6998,7 +6998,7 @@ function WorkbookBuilder({
         <section className="management-card builder-form" hidden={editorPanel !== "details"}>
           <div className="card-heading">
             <span>
-              <small>Step 1</small>
+              <small>Settings</small>
               <h2>Workbook details</h2>
             </span>
             <span
@@ -7099,7 +7099,7 @@ function WorkbookBuilder({
         <section className="management-card case-picker" hidden={editorPanel !== "cases"}>
           <div className="card-heading">
             <span>
-              <small>Step 2</small>
+              <small>Case library</small>
               <h2>Select cases</h2>
             </span>
             <span className="status-pill">Published library</span>
@@ -7227,14 +7227,14 @@ function WorkbookBuilder({
           >
             <summary>
               <span>
-                <small>Step 3 · Teaching design</small>
+                <small>Teaching content</small>
                 <strong>Introduction slides, case content & live polls</strong>
               </span>
               <span className="status-pill">
                 {introductionDrafts.length} slides · {teachingBlocks.length - introductionDrafts.length} blocks · {pollDrafts.length} polls
               </span>
             </summary>
-            {!selectedCases.length && <p className="builder-prerequisite" role="status">Select at least one case in Step 2 to unlock case-linked content and polls.</p>}
+            {!selectedCases.length && <p className="builder-prerequisite" role="status">Select an imaging case to add case-linked slides, teaching content and polls.</p>}
             <div className="teaching-design-guidance">
               <p>Add an optional pre-imaging slide deck, then the case-linked learning content needed beside the viewer.</p>
               <button type="button" disabled={!introductionDrafts.length} onClick={() => { setIntroductionPreviewIndex(0); setIntroductionPreviewOpen(true); }}>Preview learner introduction</button>

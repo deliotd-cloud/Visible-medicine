@@ -5126,7 +5126,8 @@
   overflow: auto;
   padding: 6px;
 }
-.picker-list > label {
+.picker-list > label,
+.case-picker-row > label {
   display: grid;
   grid-template-columns: auto 34px 1fr auto;
   align-items: center;
@@ -5137,7 +5138,9 @@
   border-radius: 6px;
 }
 .picker-list > label:hover,
-.picker-list > label.selected {
+.picker-list > label.selected,
+.case-picker-row > label:hover,
+.case-picker-row > label.selected {
   color: var(--text);
   background: rgba(40, 198, 168, 0.05);
   border-color: var(--hairline);
@@ -6497,6 +6500,10 @@ body:has(.runtime-theme) > .site-footer { display: none; }
 .focused-course-editor .builder-grid > .builder-teaching-step { grid-column: 2; grid-row: 1; min-width: 0; }
 .focused-course-editor .builder-grid > .publish-preview { position: static; }
 .focused-course-editor .case-picker .picker-list { max-height: 60vh; overflow-y: auto; }
+.focused-course-editor .case-picker-row > label { min-height: 62px; gap: 12px; cursor: pointer; }
+.focused-course-editor .picker-list strong { font-size: 14px; }
+.focused-course-editor .picker-list small { font-size: 12px; line-height: 1.5; }
+.focused-course-editor .case-picker-row input[type="checkbox"] { width: 18px; height: 18px; }
 .focused-course-editor .builder-summary { margin-top: 14px; }
 .editor-template-disclosure { margin: 0 0 16px 210px; }
 .editor-template-disclosure > summary, .editor-optional-polls > summary, .editor-version-history > summary, .focused-course-editor .version-note > summary { cursor: pointer; padding: 12px 0; font-size: 13px; }
