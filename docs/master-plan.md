@@ -4,6 +4,16 @@ Last consolidated: 12 September 2026. This is the shared roadmap and decision lo
 
 ## 18 September — first-release milestone and named-space practice
 
+21 September laryngeal imaging: source `9b9a1ffca58eb9f921354eccbebeabcb9965d556`
+is integrated through the generated regional export. Six existing epiglottis,
+thyroid-cartilage and cricoid-cartilage CT/MRI topics receive source-bound drafts.
+All other 9,930 topics, 135 model objects / 142 paths and other three viewers are
+preserved. Review fingerprints and the unsigned pilot are current; no clinical
+approval, scan, paid asset, new control or access grant. Standalone review-host
+publication remains separate; do not treat its older live revision as this one.
+The discarded splash concept is not included. Publication/recovery evidence is
+recorded in the main task's laryngeal checkpoint.
+
 19 September account navigation: desktop/mobile account labels now receive only
 a boolean from the existing request-verified identity. They no longer infer sign-in
 from being on a workspace URL. Root rendering is request-scoped; no new session

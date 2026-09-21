@@ -1184,3 +1184,13 @@ licence. No images, figures, tables, article text or scans are imported or adapt
 Established digit-specific anatomical references and BodyParts3D CC BY4.0 credits
 are retained. No dependency, asset, font, dataset or mandatory fee is added.
 See `docs/LESSER_TOE_XRAY.md` for claim scope and revision-bound clinical review.
+
+# Laryngeal imaging teaching — 19 September 2026
+
+Original factual orientation notes reference RSNA RadioGraphics (2019,
+doi:10.1148/rg.2019180076), Choi et al. (2014, PMCID PMC4266916, CC BY 4.0),
+and PMID6804409. These are reading references, not imported publisher prose,
+images, contours, tables, PDFs or datasets. No commercial image rights are
+inferred from online access. Existing BodyParts3D CC BY 4.0 credits remain.
+No new asset, dependency, font or mandatory fee. See `docs/LARYNGEAL_IMAGING.md`;
+revision-bound clinical acceptance is still required.
