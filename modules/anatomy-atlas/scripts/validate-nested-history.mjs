@@ -50,6 +50,12 @@ let active = false,
   slots = [];
 const shim = {
   ...React,
+  useRef(value) {
+    if (!active) return React.useRef(value);
+    const i = cursor++;
+    if (!(i in slots)) slots[i] = { current: value };
+    return slots[i];
+  },
   useState(value) {
     if (!active) return React.useState(value);
     const i = cursor++;
@@ -74,12 +80,19 @@ const shim = {
   },
   useMemo: (fn, deps) => (active ? fn() : React.useMemo(fn, deps)),
   useCallback: (fn, deps) => (active ? fn : React.useCallback(fn, deps)),
+  useLayoutEffect: (fn, deps) =>
+    active ? undefined : React.useLayoutEffect(fn, deps),
 };
 const scope = { exports: {} };
+const Link = ({ children, ...props }) =>
+  React.createElement('a', props, children);
 runInNewContext(compiled.outputFiles[0].text, {
   module: scope,
   exports: scope.exports,
-  require: (id) => (id === 'react' ? shim : require(id)),
+  structuredClone,
+  URLSearchParams,
+  require: (id) =>
+    id === 'react' ? shim : id === 'next/link' ? Link : require(id),
 });
 const api = scope.exports;
 const catalog = api.bodyDisplayCatalog(

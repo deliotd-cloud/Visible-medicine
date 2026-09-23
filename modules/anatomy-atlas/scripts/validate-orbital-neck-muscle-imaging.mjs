@@ -8,7 +8,8 @@ import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {authoringBeforeOrbitalNeckMuscleImaging,orbitalNeckMuscleImagingHash as hash} from './orbital-neck-muscle-imaging-history.mjs';
 import pins from '../content/orbital-neck-muscle-imaging-pins.json' with {type:'json'};
 import {authoringBeforeThoracoabdominalOrganImaging} from './thoracoabdominal-organ-imaging-history.mjs';
-const newest=await contentContext(),context={...newest,api:authoringBeforeThoracoabdominalOrganImaging(newest)},{api}=context,catalog=api.bodyDisplayCatalog(context.catalog);
+import {beforeCorpusSpongiosumSource} from './corpus-spongiosum-source-history.mjs';
+const newest=await contentContext(),context={...newest,api:beforeCorpusSpongiosumSource(authoringBeforeThoracoabdominalOrganImaging(newest),newest.catalog)},{api}=context,catalog=api.bodyDisplayCatalog(context.catalog);
 const {orbitalNeckMuscleImagingGroups:groups,orbitalNeckMuscleImagingModes:modes,orbitalNeckMuscleImagingReferences:references}=api;
 const original=JSON.stringify(catalog),before=authoringBeforeOrbitalNeckMuscleImaging(newest);
 assert.equal(hash({body:catalog.structures.map(s=>({id:s.id,sections:Object.fromEntries(api.contentTabs.map(t=>[t,before.bodyLesson(s,t)]))})),shoulder:api.structures,recipes:api.dissectionProfiles}),pins.previousAllLessonsAndRecipesHash,'All preceding teaching and recipes preserved');
@@ -66,7 +67,7 @@ for(const {identity:s} of pins.entries)for(const mutate of [
 ]) {const bad=structuredClone(s);mutate(bad);for(const tab of pins.entries.find(e=>e.identity.id===s.id).topics){assert.equal(api.orbitalNeckMuscleImagingLesson(bad,tab),undefined);assert.equal(api.bodyLesson(bad,tab).readiness,'pending');rejected++;}}
 assert.equal(rejected,2128);
 const first=pins.entries[0].identity;
-assert.throws(()=>authoringBeforeOrbitalNeckMuscleImaging({...newest,api:{...newest.api,bodyLesson(s,t){const lesson=newest.api.bodyLesson(s,t);return s.id===first.id&&t==='ct'?{...lesson,body:'unrecorded'}:lesson;}}}),/Unrecorded orbital\/neck muscle imaging change/);
+assert.throws(()=>authoringBeforeOrbitalNeckMuscleImaging({...newest,api:{...newest.api,bodyLesson(s,t){const lesson=newest.api.bodyLesson(s,t);return s.id===first.id&&t==='ct'?{...lesson,body:'unrecorded'}:lesson;}}}),/Unrecorded orbital\/neck muscle imaging change|Unrecorded whole-body teaching change after clinical reference revision/);
 for(const b of pins.bundles)assert.equal(createHash('sha256').update(await readFile('public'+b.url.split('?')[0])).digest('hex'),b.sha256);
 const budgets={},unique=new Map();
 for(const entry of [...Object.values(modes),...Object.values(groups).flatMap(g=>Object.values(g.focus))])unique.set(JSON.stringify(entry),entry);

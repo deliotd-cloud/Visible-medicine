@@ -9,6 +9,8 @@ import {authoringBeforeThoracoabdominalOrganImaging,thoracoabdominalOrganImaging
 import {authoringBeforeThoracoabdominalOrganXray} from './thoracoabdominal-organ-xray-history.mjs';
 import pins from '../content/thoracoabdominal-organ-imaging-pins.json' with {type:'json'};
 import {authoringBeforeCentralVesselImaging} from './central-vessel-imaging-history.mjs';
+import {beforeCorpusSpongiosumSource} from './corpus-spongiosum-source-history.mjs';
+import corpusPins from '../content/corpus-imaging-pins.json' with {type:'json'};
 const newest=await contentContext();
 if(process.argv.includes('--xray-focused')){
   const restored=authoringBeforeThoracoabdominalOrganXray(newest);
@@ -32,7 +34,27 @@ if(process.argv.includes('--xray-focused')){
   console.log(JSON.stringify({xrayDrafts:selected.length,exactSource:true,otherThoracoabdominalXrayPending:true,clinicalApproval:false}));
   process.exit(0);
 }
-const context={...newest,api:authoringBeforeCentralVesselImaging(newest)},{api}=context,catalog=api.bodyDisplayCatalog(context.catalog);
+const unprojected=authoringBeforeCentralVesselImaging(newest);
+const context={...newest,api:beforeCorpusSpongiosumSource(unprojected,newest.catalog)},{api}=context,catalog=api.bodyDisplayCatalog(context.catalog);
+const corpus=corpusPins.entries[0].identity,corpusBundle=corpusPins.bundles[0];
+const liveDisplay=unprojected.bodyDisplayCatalog(newest.catalog);
+assert.deepEqual(liveDisplay.structures.filter(s=>s.id===corpus.id),[corpus]);
+assert.deepEqual(liveDisplay.bundles.filter(b=>b.id===corpusBundle.id),[corpusBundle]);
+assert.equal(catalog.structures.some(s=>s.id===corpus.id),false);
+assert.equal(catalog.bundles.some(b=>b.id===corpusBundle.id),false);
+for(const mutate of [
+  d=>d.structures.find(s=>s.id===corpus.id).bounds.min[0]+=.01,
+  d=>d.bundles.find(b=>b.id===corpusBundle.id).sha256='foreign',
+  d=>d.structures[0].anchor[0]+=.01,
+]){
+  const damaged=structuredClone(liveDisplay);mutate(damaged);
+  assert.throws(()=>beforeCorpusSpongiosumSource({...unprojected,bodyDisplayCatalog:()=>damaged},newest.catalog),/Unrecorded source-era display change/);
+}
+assert.throws(()=>beforeCorpusSpongiosumSource({...unprojected,bodyLesson(s,t){
+  const lesson=unprojected.bodyLesson(s,t);
+  return s.id===corpus.id&&t==='anatomy'?{...lesson,body:'foreign'}:lesson;
+}},newest.catalog),/Unrecorded later corpus teaching change/);
+assert.equal(beforeCorpusSpongiosumSource(api,newest.catalog),api);
 const {thoracoabdominalOrganImagingGroups:groups,thoracoabdominalOrganImagingReferences:references}=api;
 const original=JSON.stringify(catalog),before=authoringBeforeThoracoabdominalOrganImaging(newest);
 assert.equal(hash({body:catalog.structures.map(s=>({id:s.id,sections:Object.fromEntries(api.contentTabs.map(t=>[t,before.bodyLesson(s,t)]))})),shoulder:api.structures,recipes:api.dissectionProfiles}),pins.previousAllLessonsAndRecipesHash,'All preceding teaching and recipes preserved');
@@ -76,7 +98,7 @@ for(const {identity:s,topics} of pins.entries)for(const mutate of [
 ]) {const bad=structuredClone(s);mutate(bad);for(const tab of topics){assert.equal(api.thoracoabdominalOrganImagingLesson(bad,tab),undefined);assert.equal(api.bodyLesson(bad,tab).readiness,'pending');rejected++;}}
 assert.equal(rejected,798);
 const first=pins.entries[0].identity;
-assert.throws(()=>authoringBeforeThoracoabdominalOrganImaging({...newest,api:{...newest.api,bodyLesson(s,t){const lesson=newest.api.bodyLesson(s,t);return s.id===first.id&&t==='ct'?{...lesson,body:'unrecorded'}:lesson;}}}),/Unrecorded thoracoabdominal organ imaging change/);
+assert.throws(()=>authoringBeforeThoracoabdominalOrganImaging({...newest,api:{...newest.api,bodyLesson(s,t){const lesson=newest.api.bodyLesson(s,t);return s.id===first.id&&t==='ct'?{...lesson,body:'unrecorded'}:lesson;}}}),/Unrecorded thoracoabdominal organ imaging change|Unrecorded whole-body teaching change after clinical reference revision/);
 for(const b of pins.bundles)assert.equal(createHash('sha256').update(await readFile('public'+b.url.split('?')[0])).digest('hex'),b.sha256);
 const budgets={},unique=new Map();
 for(const entry of Object.values(groups).flatMap(g=>Object.values(g.focus)))unique.set(JSON.stringify(entry),entry);
