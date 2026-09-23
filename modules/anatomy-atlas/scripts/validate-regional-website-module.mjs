@@ -22,9 +22,12 @@ for(const [region,id,hash,bytes] of additions){
 const retained=[['head-neck',291,75],['thorax',158,9],['abdomen',106,16],['pelvis',82,4],['spine',115,0]];
 assert.deepEqual(plan.scopes.slice(0,5).map(s=>[s.region,s.regionalIds.length,s.nestedTargets.length]),retained);
 assert.deepEqual(plan.scopes.slice(5).map(s=>[s.region,s.regionalIds.length,s.nestedTargets.length]),[['shoulder-arm',115,0],['forearm',86,0],['hand',124,0],['thigh',95,4],['leg',76,4],['foot',122,0],['whole-body',1104,104]]);
-assert.equal(models.length,133);assert.equal(models.reduce((n,m)=>n+m.bytes,0),198215496);
+// The source-reviewed celiac display correction is a separate retained model,
+// already present in the current website inventory; do not count it as a new
+// forearm teaching asset.
+assert.equal(models.length,134);assert.equal(models.reduce((n,m)=>n+m.bytes,0),198221100);
 const oldModels=new Map(plan.scopes.slice(0,5).flatMap(s=>s.bundles).map(b=>[b.url,b]));
-assert.equal(oldModels.size,96);assert.equal([...oldModels.values()].reduce((n,b)=>n+b.bytes,0),176653624);
+assert.equal(oldModels.size,97);assert.equal([...oldModels.values()].reduce((n,b)=>n+b.bytes,0),176659228);
 const raw=JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json',import.meta.url),'utf8'));
 const original=JSON.stringify(raw),catalog=api.bodyDisplayCatalog(raw),base='/atlas-runtime/head-neck';
 let links=0;
