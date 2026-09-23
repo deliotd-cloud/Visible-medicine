@@ -1,0 +1,9 @@
+# Forearm superficial-vein MRI drafts in the regional Atlas
+
+23 September 2026. The generated shared regional and whole-body viewer is refreshed from Atlas source `c3bbeb492cd14cc0f01bc2a85e6303291aab5414`. Its complete `head-neck` runtime export contains the four bilateral cephalic/basilic MRI orientation drafts added in Atlas `bf44ae1`; a subsequent Atlas commit corrected only an older regional-export model-count test. No viewer module was hand-edited.
+
+The candidate manifest SHA-256 is `bb29670f83f8503152f62ad15d24a6afda2423c4027aa5c7be76a06da6342ba1`. The complete four-module inventory SHA-256 is `c3f17706ba2d1443dc63e817568086df98143218061d0cb526a229b31bfdfe82`. The offline planner compared all current manifests and candidate companions/notices and found **135 original model objects, 142 paths, zero additions and zero new model bytes**. The source geometry, other three runtime modules, independent Atlas/case/lecture entitlements and administrator-review delivery audience remain unchanged.
+
+Only the scoped MRI notes are draft teaching. CT remains pending for these four selections, and the website gains no patient scan, registration, diagnostic protocol, clinical approval or wider audience. This is not a radiologist review of the displayed copy or real-device acceptance. The standalone Atlas review host is a separate older revision; do not direct sign-off there as if it matched this generated website module.
+
+Validation for this integration: five existing Atlas regional/module source checks plus the repaired historical model-count assertion; exact exported-source input and model hashes; local upgrade planner; website focused protected-delivery and source-preservation checks; the full website test suite, TypeScript and production build. Delivery packaging and native private deployment are separately recorded in the main coordination task checkpoint, not inferred from these checks.
