@@ -10,12 +10,54 @@ import {
   readContentJson,
 } from './content-contract-tools.mjs';
 import { authoringBeforeSpineImaging } from './spine-imaging-history.mjs';
+import { authoringBeforeSpineUltrasound } from './spine-ultrasound-history.mjs';
 import { authoringBeforeHipImaging } from './hip-imaging-history.mjs';
 import { authoringBeforeWristImaging } from './wrist-imaging-history.mjs';
 
 const context = await contentContext(),
   { api, catalog, body, registry } = context;
-const previous = authoringBeforeSpineImaging(context);
+const ultrasoundFmas = new Set([
+  'FMA12519', 'FMA12520', 'FMA12521', 'FMA12522', 'FMA12523',
+  'FMA12524', 'FMA12525', 'FMA9165', 'FMA10081', 'FMA13072',
+  'FMA13076', 'FMA16202', 'FMA25058', 'FMA10458', 'FMA16037',
+]);
+if (process.argv.includes('--ultrasound-focused')) {
+  const historical = authoringBeforeSpineUltrasound(context);
+  const pinned = await readContentJson('content/spine-imaging-pins.json');
+  assert.equal(ultrasoundFmas.size, 15);
+  assert.equal(pinned.entries.filter(({ identity }) => ultrasoundFmas.has(identity.fmaId)).length, 15);
+  const expectedIds = new Set(pinned.entries
+    .filter(({ identity }) => ultrasoundFmas.has(identity.fmaId))
+    .map(({ identity }) => identity.id));
+  let drafts = 0;
+  for (const s of catalog.structures) {
+    const lesson = api.spineImagingLesson(s, 'ultrasound');
+    const exported = body.find((record) => record.id === s.id).content.ultrasound;
+    if (!expectedIds.has(s.id)) {
+      assert.equal(lesson, undefined);
+      continue;
+    }
+    drafts++;
+    assert.deepEqual(exported, lesson);
+    assert.equal(lesson.readiness, 'draft');
+    assert.equal(historical.bodyLesson(s, 'ultrasound').readiness, 'pending');
+    assert.match(lesson.title, /Ultrasound orientation · draft$/);
+    assert(lesson.bullets.some((line) => line.includes('Non-visibility does not establish')));
+    assert(lesson.bullets.some((line) => line.includes('Neonatal and early-infant')));
+    assert(lesson.citations.some((url) => url.includes('aium.org')));
+    assert(lesson.citations.some((url) => url.includes('acr.org')));
+    const changed = structuredClone(s);
+    changed.name += ' changed';
+    assert.equal(api.spineImagingLesson(changed, 'ultrasound'), undefined);
+  }
+  assert.equal(drafts, 15);
+  console.log(JSON.stringify({ ultrasoundDrafts: drafts, exactIdentity: true, otherRecordsUnchanged: true }));
+  process.exit(0);
+}
+const previous = authoringBeforeSpineImaging({
+  ...context,
+  api: authoringBeforeSpineUltrasound(context),
+});
 // Remove the separately verified later hip transition for this historical comparison.
 const afterSpine = authoringBeforeHipImaging(context);
 const afterHip = authoringBeforeWristImaging(context);
@@ -69,13 +111,15 @@ same(new Set(pins.entries.map((e) => e.group)).size, 9);
 same(pins.entries.filter((e) => e.identity.category === 'bone').length, 25);
 same(pins.entries.filter((e) => e.identity.category !== 'bone').length, 22);
 const byId = new Map(pins.entries.map((e) => [e.identity.id, e]));
+same(ultrasoundFmas.size, 15);
 const topics = new Set(),
   validate = await contentValidator(registry);
 for (const s of catalog.structures) {
   const record = body.find((r) => r.id === s.id);
   for (const tab of api.contentTabs) {
     const lesson = api.spineImagingLesson(s, tab);
-    if (!byId.has(s.id) || !before.tabs.includes(tab)) {
+    const ultrasoundTarget = tab === 'ultrasound' && ultrasoundFmas.has(s.fmaId);
+    if (!byId.has(s.id) || (!before.tabs.includes(tab) && !ultrasoundTarget)) {
       same(lesson, undefined);
       same(afterSpine.bodyLesson(s, tab), previous.bodyLesson(s, tab));
       unchangedSections++;
@@ -96,6 +140,13 @@ for (const s of catalog.structures) {
     check(lesson.note.includes('review pending'));
     check(lesson.note.includes('No patient images'));
     check(lesson.note.includes('paid-lecture access'));
+    if (ultrasoundTarget) {
+      check(lesson.title.includes('Ultrasound orientation'));
+      check(lesson.bullets.some((b) => b.includes('Non-visibility does not establish')));
+      check(lesson.bullets.some((b) => b.includes('Neonatal and early-infant')));
+      check(lesson.citations.some((url) => url.includes('aium.org')));
+      check(lesson.citations.some((url) => url.includes('acr.org')));
+    }
     for (const url of lesson.citations) same(new URL(url).protocol, 'https:');
     const expected = structuredClone(lesson);
     lesson.bullets.push('mutation');
@@ -113,9 +164,9 @@ for (const s of catalog.structures) {
     });
   }
 }
-same(sections, 141);
-same(topics.size, 27);
-same(unchangedSections, 9057);
+same(sections, 156);
+same(topics.size, 36);
+same(unchangedSections, 9042);
 same(
   Object.fromEntries(
     before.tabs.map((t) => [
@@ -208,7 +259,7 @@ for (const { identity: s } of pins.entries) {
   ]) {
     const changed = structuredClone(s);
     mutate(changed);
-    for (const tab of before.tabs) {
+    for (const tab of [...before.tabs, ...(ultrasoundFmas.has(s.fmaId) ? ['ultrasound'] : [])]) {
       same(api.spineImagingLesson(changed, tab), undefined);
       rejectedBindings++;
     }
@@ -241,7 +292,9 @@ assert.throws(
         },
       },
     }),
-  /Unrecorded spinal imaging edit/,
+  // The older whole-body gate may reject the injected edit before the spine
+  // transition verifier sees it; either rejection preserves the source hold.
+  /Unrecorded spinal imaging edit|Unrecorded whole-body teaching change/,
 );
 checks++;
 assert.throws(
@@ -267,6 +320,13 @@ check(
 );
 check(find('FMA25058').anchor[1] < find('FMA12520').anchor[1]);
 check(find('FMA25058').anchor[1] > find('FMA12521').anchor[1]);
+for (const { identity: s } of pins.entries) {
+  same(
+    api.spineImagingLesson(s, 'ultrasound')?.readiness,
+    ultrasoundFmas.has(s.fmaId) ? 'draft' : undefined,
+    'Ultrasound placement is limited to the exact 15 source identities',
+  );
+}
 
 // Render the actual existing body-note callback, not a lookalike test component.
 const require = createRequire(import.meta.url),
@@ -298,7 +358,7 @@ const js = ts.transpile(`(${callback})(topic)`, {
   target: ts.ScriptTarget.ES2022,
 });
 for (const { identity: selected } of pins.entries)
-  for (const topic of before.tabs) {
+  for (const topic of [...before.tabs, ...(ultrasoundFmas.has(selected.fmaId) ? ['ultrasound'] : [])]) {
     const html = renderToStaticMarkup(
       runInNewContext(js, {
         React,

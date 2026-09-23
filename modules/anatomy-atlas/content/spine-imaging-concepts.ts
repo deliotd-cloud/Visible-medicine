@@ -43,6 +43,12 @@ export const spineImagingGroups = {
   lumbarDisc: ['FMA16033', 'FMA16034', 'FMA16035', 'FMA16036', 'FMA16037'],
 } as const;
 export type SpineImagingGroup = keyof typeof spineImagingGroups;
+// A deliberately narrow ultrasound placement, separate from the 47 CT/MRI/X-ray pins.
+export const spineUltrasoundFmaIds = [
+  'FMA12519', 'FMA12520', 'FMA12521', 'FMA12522', 'FMA12523',
+  'FMA12524', 'FMA12525', 'FMA9165', 'FMA10081', 'FMA13072',
+  'FMA13076', 'FMA16202', 'FMA25058', 'FMA10458', 'FMA16037',
+] as const;
 export const spineImagingReferences = {
   upper:
     'https://surgeryreference.aofoundation.org/spine/trauma/occipitocervical/further-reading/patient-examination-radiological-evaluation-xr-ct-mri',
@@ -54,6 +60,9 @@ export const spineImagingReferences = {
   mrAnatomy: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/',
   sacralStudy: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC9456416/',
   disc: 'https://orthoinfo.aaos.org/globalassets/pdfs/herniated-disk.pdf',
+  adultUltrasound: 'https://www.aium.org/resources/official-statements/view/nonoperative-spinal-paraspinal-ultrasound-in-adults',
+  ultrasoundBone: 'https://www.radiologyinfo.org/en/info/musculous',
+  infantUltrasound: 'https://www.acr.org/-/media/ACR/Files/Practice-Parameters/US-NeonatalSpine.pdf',
 } as const;
 type Reference = keyof typeof spineImagingReferences;
 type Topic = {
@@ -61,7 +70,7 @@ type Topic = {
   bullets: readonly string[];
   references: readonly Reference[];
 };
-export type SpineImagingModality = 'ct' | 'mri' | 'xray';
+export type SpineImagingModality = 'ct' | 'mri' | 'xray' | 'ultrasound';
 const topic = (
   body: string,
   bullets: readonly string[],
@@ -69,7 +78,7 @@ const topic = (
 ): Topic => ({ body, bullets, references });
 export const spineImagingTopics: Record<
   SpineImagingGroup,
-  Record<SpineImagingModality, Topic>
+  Record<Exclude<SpineImagingModality, 'ultrasound'>, Topic>
 > = {
   atlas: {
     ct: topic(
@@ -321,4 +330,54 @@ export const spineImagingTopics: Record<
       'disc',
     ),
   },
+};
+
+// Ultrasound is local acoustic-window orientation, not a scan derived from the mesh.
+// The shared limitations are added by spineImagingLesson for each selected level.
+export const spineUltrasoundTopics: Record<SpineImagingGroup, Topic> = {
+  atlas: topic(
+    'At C1, orient to the superficial posterior arch and neighbouring soft tissues when an acoustic window is available; the dens and canal are not established by this surface view.',
+    ['The C1 ring in the atlas is a source landmark, not an ultrasound image of the craniovertebral junction.'],
+    'adultUltrasound', 'ultrasoundBone', 'infantUltrasound',
+  ),
+  axis: topic(
+    'At C2, a visible posterior bony contour can help local orientation, but it does not depict the dens interior or establish the state of the upper cervical canal.',
+    ['Do not transfer C1–C2 relationships from the separated atlas to a probe position or patient image.'],
+    'adultUltrasound', 'ultrasoundBone', 'infantUltrasound',
+  ),
+  cervical: topic(
+    'Use a superficial posterior cervical bony landmark only for local ultrasound orientation; the adult vertebral body, canal and disc are not fully assessed through it.',
+    ['Soft-tissue or procedure-guidance uses depend on the clinical question and the actual acoustic window.'],
+    'adultUltrasound', 'ultrasoundBone', 'infantUltrasound',
+  ),
+  thoracic: topic(
+    'Thoracic posterior bone and ribs can serve as superficial ultrasound landmarks, while bone and adjacent air restrict deeper acoustic views.',
+    ['A visible contour does not characterize the vertebral body interior, canal contents or adjacent disc.'],
+    'adultUltrasound', 'ultrasoundBone', 'infantUltrasound',
+  ),
+  lumbar: topic(
+    'Posterior lumbar bony surfaces may orient an ultrasound probe, including in selected procedural contexts; this does not evaluate the adult disc or central nerves.',
+    ['The source position and cutaway do not reproduce a patient acoustic window or guide a needle.'],
+    'adultUltrasound', 'ultrasoundBone', 'infantUltrasound',
+  ),
+  sacrum: topic(
+    'The superficial sacral contour can provide a local ultrasound landmark, but the whole-source sacrum does not reproduce an acoustic view of its foramina or canal.',
+    ['Do not infer sacral integrity or the location of a patient neural structure from the visible mesh.'],
+    'adultUltrasound', 'ultrasoundBone', 'infantUltrasound',
+  ),
+  cervicalDisc: topic(
+    'Use the neighbouring cervical levels for orientation; adult ultrasound does not provide a validated diagnostic view of this intervertebral disc.',
+    ['The whole-disc mesh has no ultrasound echoes, acoustic window or patient-level registration.'],
+    'adultUltrasound', 'ultrasoundBone', 'infantUltrasound',
+  ),
+  thoracicDisc: topic(
+    'Use the neighbouring thoracic endplates as source landmarks; adult ultrasound does not establish this disc’s structure or relation to the canal.',
+    ['Rib and posterior bone shadowing restrict the window; a missing echo cannot establish disc loss.'],
+    'adultUltrasound', 'ultrasoundBone', 'infantUltrasound',
+  ),
+  lumbarDisc: topic(
+    'Use L5 and the sacrum as source landmarks for the lumbosacral interval; adult ultrasound does not diagnose the disc or central nerves.',
+    ['Confirm patient vertebral numbering independently; the fifth-lumbar source label is not scan registration.'],
+    'adultUltrasound', 'ultrasoundBone', 'infantUltrasound',
+  ),
 };

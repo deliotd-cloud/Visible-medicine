@@ -1,6 +1,8 @@
 import pins from '../content/spine-imaging-pins.json' with { type: 'json' };
 import {
   spineImagingTopics,
+  spineUltrasoundTopics,
+  spineUltrasoundFmaIds,
   spineImagingReferences,
   type SpineImagingGroup,
   type SpineImagingModality,
@@ -27,7 +29,8 @@ const bound = new Map(
     { signature: canonical(p.identity), group: p.group as SpineImagingGroup },
   ]),
 );
-const names = { ct: 'CT', mri: 'MRI', xray: 'X-ray' };
+const names = { ct: 'CT', mri: 'MRI', xray: 'X-ray', ultrasound: 'Ultrasound' };
+const ultrasoundIds = new Set<string>(spineUltrasoundFmaIds);
 const levelNotes: Record<string, string> = {
   FMA25058:
     'This source-labelled axis disc lies below C2; there is no C1–C2 intervertebral disc.',
@@ -53,17 +56,24 @@ export function spineImagingLesson(
   s: BodyStructure,
   tab: ContentTab,
 ): ContentLesson | undefined {
-  if (!['ct', 'mri', 'xray'].includes(tab)) return undefined;
+  if (!['ct', 'mri', 'xray', 'ultrasound'].includes(tab)) return undefined;
   const match = bound.get(s.id);
   if (!match || canonical(s) !== match.signature) return undefined;
+  if (tab === 'ultrasound' && !ultrasoundIds.has(s.fmaId)) return undefined;
   const modality = tab as SpineImagingModality,
-    value = spineImagingTopics[match.group][modality];
+    value = modality === 'ultrasound'
+      ? spineUltrasoundTopics[match.group]
+      : spineImagingTopics[match.group][modality];
   return {
     readiness: 'draft',
     title: `${s.name} · ${names[modality]} orientation · draft`,
     body: value.body,
     bullets: [
       ...value.bullets,
+      ...(modality === 'ultrasound' ? [
+        'In adults, sound is limited by bone: a superficial contour is not a reliable view of vertebral interiors, canal contents or intervertebral discs. Non-visibility does not establish normality, absence or pathology.',
+        'Neonatal and early-infant spinal canal sonography is a different, indication-dependent examination through incompletely ossified posterior elements; do not transfer that capability to adults.',
+      ] : []),
       ...(levelNotes[s.fmaId] ? [levelNotes[s.fmaId]] : []),
       'Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements.',
     ],

@@ -5,6 +5,8 @@ import { contentContext } from './content-contract-tools.mjs';
 import { prePelvicUrethralProfiles } from './pelvic-urethral-study-history.mjs';
 import { authoringBeforeCoreOrganFunction } from './core-organ-function-history.mjs';
 import { beforeForearmVenousImaging } from './forearm-venous-imaging-history.mjs';
+import { authoringBeforeThoracoabdominalOrganXray } from './thoracoabdominal-organ-xray-history.mjs';
+import { authoringBeforeSpineUltrasound } from './spine-ultrasound-history.mjs';
 
 export const clinicalReferenceRevisionHash = value =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -14,6 +16,8 @@ const detached = value => JSON.parse(JSON.stringify(value));
 export function wholeBodyTeachingSnapshot(api, catalog) {
   // Newest editorial changes must be removed before this older era's recipe
   // normalization and immutable whole-body gate.
+  api = authoringBeforeThoracoabdominalOrganXray({ api, catalog }).api;
+  api = authoringBeforeSpineUltrasound({ api, catalog });
   api = beforeForearmVenousImaging(api);
   api = authoringBeforeCoreOrganFunction({api, catalog}, {deferWholeSnapshot: true});
   const display = api.bodyDisplayCatalog(catalog);

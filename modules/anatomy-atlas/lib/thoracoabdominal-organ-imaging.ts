@@ -5,7 +5,7 @@ import type {BodyStructure} from '../app/body-types';
 import type {ContentTab} from '../app/anatomy-data';
 import type {ContentLesson} from './content-types';
 const bound=new Map(pins.entries.map(e=>[e.identity.id,{signature:sourceCanonical(e.identity),group:e.group,anatomy:e.anatomy}]));
-const names={ct:'CT',mri:'MRI',ultrasound:'Ultrasound'};
+const names={ct:'CT',mri:'MRI',xray:'X-ray',ultrasound:'Ultrasound'};
 /** Exact retained source selections only, not same-name specimens or patient masks. */
 export function thoracoabdominalOrganImagingLesson(s:BodyStructure,tab:ContentTab):ContentLesson|undefined {
   if(!Object.hasOwn(names,tab))return undefined;

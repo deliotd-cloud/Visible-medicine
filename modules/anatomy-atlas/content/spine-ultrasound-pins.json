@@ -1,0 +1,28 @@
+{
+  "sourceCommit": "c3bbeb492cd14cc0f01bc2a85e6303291aab5414",
+  "parentPinsHash": "a455b8ec9be49820f02c728c49cabbcebc6eb4504c64d1ce2d7766cfc844e7a6",
+  "tab": "ultrasound",
+  "previousLesson": {
+    "readiness": "pending",
+    "title": "Ultrasound content pending",
+    "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+    "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+  },
+  "entries": [
+    {"id":"vm:anatomy:body:spine:midline:bone:atlas","fmaId":"FMA12519"},
+    {"id":"vm:anatomy:body:spine:midline:bone:axis","fmaId":"FMA12520"},
+    {"id":"vm:anatomy:body:spine:midline:bone:third-cervical-vertebra","fmaId":"FMA12521"},
+    {"id":"vm:anatomy:body:spine:midline:bone:fourth-cervical-vertebra","fmaId":"FMA12522"},
+    {"id":"vm:anatomy:body:spine:midline:bone:fifth-cervical-vertebra","fmaId":"FMA12523"},
+    {"id":"vm:anatomy:body:spine:midline:bone:sixth-cervical-vertebra","fmaId":"FMA12524"},
+    {"id":"vm:anatomy:body:spine:midline:bone:seventh-cervical-vertebra","fmaId":"FMA12525"},
+    {"id":"vm:anatomy:body:spine:midline:bone:first-thoracic-vertebra","fmaId":"FMA9165"},
+    {"id":"vm:anatomy:body:spine:midline:bone:twelfth-thoracic-vertebra","fmaId":"FMA10081"},
+    {"id":"vm:anatomy:body:spine:midline:bone:first-lumbar-vertebra","fmaId":"FMA13072"},
+    {"id":"vm:anatomy:body:spine:midline:bone:fifth-lumbar-vertebra","fmaId":"FMA13076"},
+    {"id":"vm:anatomy:body:spine:midline:bone:sacrum","fmaId":"FMA16202"},
+    {"id":"vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-axis","fmaId":"FMA25058"},
+    {"id":"vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-first-thoracic-vertebra","fmaId":"FMA10458"},
+    {"id":"vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra","fmaId":"FMA16037"}
+  ]
+}

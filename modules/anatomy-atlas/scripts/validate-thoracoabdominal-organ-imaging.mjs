@@ -6,9 +6,33 @@ import {runInNewContext} from 'node:vm';
 import ts from 'typescript';
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {authoringBeforeThoracoabdominalOrganImaging,thoracoabdominalOrganImagingHash as hash} from './thoracoabdominal-organ-imaging-history.mjs';
+import {authoringBeforeThoracoabdominalOrganXray} from './thoracoabdominal-organ-xray-history.mjs';
 import pins from '../content/thoracoabdominal-organ-imaging-pins.json' with {type:'json'};
 import {authoringBeforeCentralVesselImaging} from './central-vessel-imaging-history.mjs';
-const newest=await contentContext(),context={...newest,api:authoringBeforeCentralVesselImaging(newest)},{api}=context,catalog=api.bodyDisplayCatalog(context.catalog);
+const newest=await contentContext();
+if(process.argv.includes('--xray-focused')){
+  const restored=authoringBeforeThoracoabdominalOrganXray(newest);
+  const {api}=newest,display=api.bodyDisplayCatalog(newest.catalog),groups=api.thoracoabdominalOrganImagingGroups;
+  const selected=pins.entries.filter(e=>groups[e.group].focus.xray);
+  assert.deepEqual(selected.map(e=>e.identity.fmaId).sort(),['FMA11338','FMA14542','FMA7088','FMA7131','FMA7148','FMA7200','FMA7201','FMA7309','FMA7310','FMA7394','FMA9607'].sort());
+  for(const {identity,group} of pins.entries){
+    assert.deepEqual(display.structures.find(s=>s.id===identity.id),identity);
+    const draft=api.thoracoabdominalOrganImagingLesson(identity,'xray');
+    if(!groups[group].focus.xray){assert.equal(draft,undefined);continue;}
+    assert.equal(draft.readiness,'draft');
+    assert.deepEqual(api.bodyLesson(identity,'xray'),draft);
+    assert.equal(restored.api.bodyLesson(identity,'xray').readiness,'pending');
+    const {readiness:_readiness,...shown}=draft;
+    assert.deepEqual(api.bodyContent(identity,'xray'),shown);
+    assert(draft.citations.every(url=>url.startsWith('https://')));
+    const changed=structuredClone(identity);changed.name+=' altered';
+    assert.equal(api.thoracoabdominalOrganImagingLesson(changed,'xray'),undefined);
+  }
+  assert.match(groups.appendix.focus.xray.pitfall,/usually not appropriate for suspected appendicitis/);
+  console.log(JSON.stringify({xrayDrafts:selected.length,exactSource:true,otherThoracoabdominalXrayPending:true,clinicalApproval:false}));
+  process.exit(0);
+}
+const context={...newest,api:authoringBeforeCentralVesselImaging(newest)},{api}=context,catalog=api.bodyDisplayCatalog(context.catalog);
 const {thoracoabdominalOrganImagingGroups:groups,thoracoabdominalOrganImagingReferences:references}=api;
 const original=JSON.stringify(catalog),before=authoringBeforeThoracoabdominalOrganImaging(newest);
 assert.equal(hash({body:catalog.structures.map(s=>({id:s.id,sections:Object.fromEntries(api.contentTabs.map(t=>[t,before.bodyLesson(s,t)]))})),shoulder:api.structures,recipes:api.dissectionProfiles}),pins.previousAllLessonsAndRecipesHash,'All preceding teaching and recipes preserved');
@@ -22,7 +46,8 @@ function visit(n){if(ts.isArrowFunction(n)&&n.body.getText(ast).includes('const 
 visit(ast);assert(callback);
 const callbackJs=ts.transpile('const renderNote='+callback,{target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.React});
 for(const s of catalog.structures)for(const tab of api.contentTabs) {
-  const topic=api.thoracoabdominalOrganImagingLesson(s,tab),now=api.bodyLesson(s,tab);
+  // The newer X-ray extension is verified separately by --xray-focused.
+  const topic=tab==='xray'?undefined:api.thoracoabdominalOrganImagingLesson(s,tab),now=api.bodyLesson(s,tab);
   if(!topic){assert.deepEqual(now,before.bodyLesson(s,tab));unchanged++;continue;}
   changed++;assert.equal(before.bodyLesson(s,tab).readiness,'pending');assert.equal(now.readiness,'draft');assert.deepEqual(now,topic);
   const record=records.find(r=>r.id===s.id);assert.deepEqual(record.content[tab],topic);assert.equal(record.validation.clinicalApproval,'not-included');

@@ -4,6 +4,8 @@ import { isDeepStrictEqual } from 'node:util';
 import { prePelvicUrethralProfiles } from './pelvic-urethral-study-history.mjs';
 import { authoringBeforeCoreOrganFunction } from './core-organ-function-history.mjs';
 import { beforeForearmVenousImaging } from './forearm-venous-imaging-history.mjs';
+import { authoringBeforeThoracoabdominalOrganXray } from './thoracoabdominal-organ-xray-history.mjs';
+import { authoringBeforeSpineUltrasound } from './spine-ultrasound-history.mjs';
 import baseline from '../content/clinical-reference-revision.baseline.json' with { type: 'json' };
 import transition from '../content/clinical-reference-revision.transition.json' with { type: 'json' };
 import {
@@ -39,6 +41,8 @@ verifyRecords();
 
 /** Restore only the four revised urethral body lessons. */
 export function authoringBeforeClinicalReferenceRevision({ api, catalog }) {
+  api = authoringBeforeThoracoabdominalOrganXray({ api, catalog }).api;
+  api = authoringBeforeSpineUltrasound({ api, catalog });
   api = beforeForearmVenousImaging(api);
   api = authoringBeforeCoreOrganFunction({ api, catalog }, {deferWholeSnapshot: true});
   const recipes = prePelvicUrethralProfiles(api.dissectionProfiles, {allowOlder: true});
