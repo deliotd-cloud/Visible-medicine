@@ -32,6 +32,7 @@
     "lesser-toe-xray:test": "node scripts/pin-lesser-toe-xray.mjs --check && node scripts/record-lesser-toe-xray.mjs --check && node scripts/validate-lesser-toe-xray.mjs",
     "iliac-venous-imaging:test": "node scripts/pin-iliac-venous-imaging.mjs --check && node scripts/record-iliac-venous-imaging.mjs --check && node scripts/validate-iliac-venous-imaging.mjs",
     "lower-venous-imaging:test": "node scripts/pin-lower-venous-imaging.mjs --check && node scripts/record-lower-venous-imaging.mjs --check && node scripts/validate-lower-venous-imaging.mjs",
+    "forearm-venous-imaging:test": "node scripts/pin-forearm-venous-imaging.mjs --check && node scripts/record-forearm-venous-imaging.mjs --check && node scripts/validate-forearm-venous-imaging.mjs",
     "short-ciliary:test": "node scripts/export-short-ciliary.mjs --check && node scripts/record-short-ciliary-transition.mjs --check && node scripts/validate-short-ciliary.mjs",
     "short-ciliary-teaching:test": "node scripts/record-short-ciliary-teaching.mjs --check && node scripts/validate-short-ciliary-teaching.mjs",
     "costal-cartilage-imaging:test": "node scripts/pin-costal-cartilage-imaging.mjs --check && node scripts/record-costal-cartilage-imaging-transition.mjs --check && node scripts/validate-costal-cartilage-imaging.mjs",

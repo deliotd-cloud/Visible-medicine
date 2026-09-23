@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "a6b1754ec253ed4fd6034db3349cd166a5e74f51fa71f9a2ca931c136bdda3cf"
+      "sha256": "e7e85fd11c92f6467dc4c235ec3efa05ca57e4709fe930eb507c95509e91cbcd"
     },
     {
       "path": "app/body-education-link.ts",
@@ -703,6 +703,14 @@
     {
       "path": "content/forearm-muscle-imaging.ts",
       "sha256": "3997414ad4f60fd6a9f2689bb02aea230aa7ddaa01190640dc8638150a280005"
+    },
+    {
+      "path": "content/forearm-venous-imaging-pins.json",
+      "sha256": "81dd9bcdf0dae7cfcac45d099a960d69d5ff39598a815b8103798382e685c490"
+    },
+    {
+      "path": "content/forearm-venous-imaging.ts",
+      "sha256": "4b003f2e5d91186b05429989a28f9b4162e9364043736fa5e9d0199b59da0332"
     },
     {
       "path": "content/genicular-clinical-pins.json",
@@ -1753,6 +1761,10 @@
       "sha256": "2313c21bd2efed6048baad038739009cbd0fcad1eb2b2aed55fb009563bf6f99"
     },
     {
+      "path": "lib/forearm-venous-imaging.ts",
+      "sha256": "2866e1bef3a871d47e8107c2ef3783661548e1a518018c3c03fb52ceadb978cb"
+    },
+    {
       "path": "lib/forearm-vessel-clinical-curriculum.ts",
       "sha256": "980f819d092940968360e5dbfe58fc23e8ade5343b50f97c5e4970f38af91fc7"
     },
@@ -2546,7 +2558,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "cdbabdfb3990b9b13a6340b289765a1836334bfcfd89a659deb6c4ee75e71bb0"
+      "sha256": "31622069465177a6360e3ee9b5c712be6bf67ef5727ca8592e9d5e7a1f0627bf"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2753,5 +2765,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "d6529919d0737b903af39b5f2d0f1ba71fc05f9e5d7ae62b5497b8fac2a3c1f8"
+  "sha256": "2dd17e628ced01f21f01cc5331afe34fc4badf49e285543138c047554a4b9056"
 }

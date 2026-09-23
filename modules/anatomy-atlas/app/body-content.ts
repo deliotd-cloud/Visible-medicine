@@ -131,6 +131,7 @@ import { tarsalImagingLesson } from '../lib/tarsal-imaging';
 import { upperVesselImagingLesson } from '../lib/upper-vessel-imaging';
 import { lowerArterialImagingLesson } from '../lib/lower-arterial-imaging';
 import { lowerVenousImagingLesson } from '../lib/lower-venous-imaging';
+import { forearmVenousImagingLesson } from '../lib/forearm-venous-imaging';
 import { iliacVenousImagingLesson } from '../lib/iliac-venous-imaging';
 import { forearmArterialImagingLesson } from '../lib/forearm-arterial-imaging';
 import { palmarArterialImagingLesson } from '../lib/palmar-arterial-imaging';
@@ -272,6 +273,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (lowerArterialImaging) return lowerArterialImaging;
   const lowerVenousImaging = lowerVenousImagingLesson(s, tab);
   if (lowerVenousImaging) return lowerVenousImaging;
+  const forearmVenousImaging = forearmVenousImagingLesson(s, tab);
+  if (forearmVenousImaging) return forearmVenousImaging;
   const iliacVenousImaging = iliacVenousImagingLesson(s, tab);
   if (iliacVenousImaging) return iliacVenousImaging;
   const forearmArterialImaging = forearmArterialImagingLesson(s, tab);
