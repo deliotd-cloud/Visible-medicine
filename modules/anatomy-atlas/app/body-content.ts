@@ -2,6 +2,7 @@ import { centralVesselImagingLesson } from '../lib/central-vessel-imaging';
 import { mainBronchusXrayLesson } from '../lib/main-bronchus-xray';
 import { properDigitalTeachingLesson } from '../lib/proper-digital-teaching';
 import { spinalDiscFunctionLesson } from '../lib/spinal-disc-function';
+import { laryngealMuscleImagingLesson } from '../lib/laryngeal-muscle-imaging';
 import { lacrimalDrainageImagingLesson } from '../lib/lacrimal-drainage-imaging';
 import { laryngealImagingLesson } from '../lib/laryngeal-imaging';
 import { laryngealMuscleTeachingLesson } from '../lib/laryngeal-muscle-teaching';
@@ -213,6 +214,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const laryngealMuscle = laryngealMuscleImagingLesson(s, tab);
+  if (laryngealMuscle) return laryngealMuscle;
   const spinalDisc = spinalDiscFunctionLesson(s, tab);
   if (spinalDisc) return spinalDisc;
   const properDigital = properDigitalTeachingLesson(s, tab);

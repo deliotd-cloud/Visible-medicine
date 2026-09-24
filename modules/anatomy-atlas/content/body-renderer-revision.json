@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "0d06f249fae82ab8d4f93122e8a5dadb540bf9e486862fda8343505f2705178a"
+      "sha256": "64b753333f473de90ce382f3af40cb212bfa0ce65975b9c021cfe127823cddde"
     },
     {
       "path": "app/body-education-link.ts",
@@ -863,6 +863,10 @@
     {
       "path": "content/laryngeal-imaging.ts",
       "sha256": "bfcced54a94c0b349fdbd433dbdb015dd9b654c2a434d58fb12da85e2a04efad"
+    },
+    {
+      "path": "content/laryngeal-muscle-imaging.ts",
+      "sha256": "0a9c09e86550b6253c4796ef1f91cfc743d3029d098f2ebdd66bb34c40b9b7cb"
     },
     {
       "path": "content/laryngeal-muscle-teaching-pins.json",
@@ -2041,6 +2045,10 @@
       "sha256": "145628e9fd451edca4ef20f0f6dcadb8eb0d0680a5ce1214ef9560751cbdf189"
     },
     {
+      "path": "lib/laryngeal-muscle-imaging.ts",
+      "sha256": "2a00cc7372638c9cbf096f62327fb4e387e75db6cca4897cdb21f37bb18bcade"
+    },
+    {
       "path": "lib/laryngeal-muscle-teaching.ts",
       "sha256": "e88a795a04301517a83347da1604b61ea9a56227a4bcf0961cc8acf4165d8425"
     },
@@ -2666,7 +2674,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "a11bbce2d07d36fb87b2de411e7c0253f678cb49ae4ea50679e729e2229bb2de"
+      "sha256": "6b5564e3f54f5ea812bb3bd2312c8994ab96052799818f2494e869504e2b68ee"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2877,5 +2885,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "c1d9f8d641f03d0dc2c4257921fdab393269d770d642d05f3b0ef3ba06d10265"
+  "sha256": "7491246329eabcc1808b03b4bf7235a1258c1659089a857a1878dae021554baa"
 }

@@ -1,5 +1,13 @@
 # Current atlas status
 
+[Intrinsic laryngeal muscle imaging](LARYNGEAL_MUSCLE_IMAGING.md) adds 14 CT/MRI
+orientation drafts for seven exact retained sources, using existing panels.
+Eight family/modality concepts distinguish expected anatomical locations from
+routine visibility and cadaveric research. Other 9,922 topics, geometry and
+recipes remain unchanged. Clinical sign-off and acquired-image registration
+are not implied. Source-only pending generated website integration; website
+`c9d149f` remains the verified private publication. Older entries are historical.
+
 [Spine history verification](SPINE_IMAGING_TEACHING.md#historical-verification-repair--24-september-2026)
 now passes while retaining original evidence and current teaching checks. Twelve
 later lacrimal CT/MRI topics explained the old whole-snapshot mismatch; disc

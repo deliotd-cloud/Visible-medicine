@@ -1,0 +1,27 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+import {contentContext} from './content-contract-tools.mjs';
+import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
+import {wholeBodyTeachingSnapshot} from './exact-clinical-reference-history.mjs';
+const parentCommit='2c77186ba09a21ab07f2e05ac5dc6be04fa4b50e';
+const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
+const checking=process.argv.includes('--check');
+if(!checking)assert.equal(execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),parentCommit);
+const api=checking?await exactSourceHistoryApi(parentCommit):(await contentContext()).api;
+const raw=JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json'));
+const display=api.bodyDisplayCatalog(raw);
+const existing=JSON.parse(await readFile('content/laryngeal-muscle-teaching-pins.json'));
+const entries=existing.entries.map(({identity,family})=>{
+  assert.deepEqual(display.structures.find(s=>s.id===identity.id),identity);
+  const previous=Object.fromEntries(['ct','mri'].map(t=>[t,api.bodyLesson(identity,t)]));
+  for(const lesson of Object.values(previous))assert.equal(lesson.readiness,'pending');
+  return {identity,family,previous};
+});
+assert.deepEqual(['posterior','lateral','transverse','oblique'].map(f=>entries.filter(e=>e.family===f).length),[2,2,1,2]);
+const pins={parentCommit,originalPinsHash:hash(existing),catalogHash:hash(display),previousAllLessonsAndRecipesHash:hash(wholeBodyTeachingSnapshot(api,raw)),entries};
+const path='content/laryngeal-muscle-imaging.before.json',text=JSON.stringify(pins,null,2)+'\n';
+if(checking)assert.equal((await readFile(path,'utf8')).replace(/\r\n/g,'\n'),text);
+else await writeFile(path,text,{flag:'wx'});
+console.log(JSON.stringify({source:parentCommit,selections:entries.length,topics:14,pinsHash:hash(pins),beforeHash:pins.previousAllLessonsAndRecipesHash}));

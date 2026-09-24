@@ -48,6 +48,8 @@ export * from './lib/main-bronchus-xray.ts';
 export * from './lib/proper-digital-teaching.ts';
 export * from './content/proper-digital-teaching.ts';
 export * from './lib/spinal-disc-function.ts';
+export * from './lib/laryngeal-muscle-imaging.ts';
+export * from './content/laryngeal-muscle-imaging.ts';
 export * from './content/spinal-disc-function.ts';
 export * from './lib/central-vessel-imaging.ts';
 export * from './content/central-vessel-imaging.ts';
