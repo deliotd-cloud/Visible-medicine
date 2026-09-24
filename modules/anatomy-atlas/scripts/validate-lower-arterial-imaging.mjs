@@ -21,7 +21,7 @@ const context = await contentContext(),
 const catalog = api.bodyDisplayCatalog(context.catalog),
   initial = JSON.stringify(catalog);
 const before = authoringBeforeLowerArterialImaging({ api, catalog });
-const preBone = restoreLowerArterialSourceHistory(authoringBeforeLimbBoneImaging({ api, catalog }),catalog,{arterialStage:'draft'});
+const preBone = restoreLowerArterialSourceHistory(authoringBeforeLimbBoneImaging({ api, catalog }),catalog,{arterialStage:'draft',deferWholeSnapshot:true});
 const pins = JSON.parse(
   await readFile('content/lower-arterial-imaging-pins.json'),
 );

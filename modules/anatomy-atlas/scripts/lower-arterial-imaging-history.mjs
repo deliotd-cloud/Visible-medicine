@@ -52,5 +52,7 @@ export function unreconciledLowerArterialHistory({ api, catalog }) {
   };
 }
 export function authoringBeforeLowerArterialImaging({api,catalog}) {
-  return restoreLowerArterialSourceHistory(unreconciledLowerArterialHistory({api,catalog}),catalog);
+  // Earlier and later authoring transitions surround this source checkpoint.
+  // Their full snapshot is checked by the outer curriculum contract.
+  return restoreLowerArterialSourceHistory(unreconciledLowerArterialHistory({api,catalog}),catalog,{deferWholeSnapshot:true});
 }
