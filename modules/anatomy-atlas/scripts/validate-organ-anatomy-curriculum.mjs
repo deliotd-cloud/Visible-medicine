@@ -99,7 +99,17 @@ for (const e of before.entries) {
   check(section.bullets[1].includes(e.files.length + ' source component'));
   check(section.note.includes('clinical review pending'));
   check(section.note.includes('not physiological motion'));
-  if (s.coverageNote) check(section.note.includes(s.coverageNote));
+  if (s.coverageNote) {
+    if (e.fmaId === 'FMA7197') {
+      check(
+        section.note.includes(
+          'The liver display aggregate excludes the separately selectable hepatic artery proper, right hepatic vein and left hepatic vein surfaces. Source coordinates are unchanged; segment boundaries and clinical accuracy are unvalidated.',
+        ),
+      );
+      assert.equal((section.note.match(/Source coordinates are unchanged/g) ?? []).length, 1);
+      assert(!section.note.includes(s.coverageNote));
+    } else check(section.note.includes(s.coverageNote));
+  }
   check(
     api
       .organAnatomyLesson(

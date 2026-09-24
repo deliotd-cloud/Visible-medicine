@@ -1,5 +1,33 @@
 # First-release viewer acceptance evidence
 
+## 24 September: head-and-neck explode presentation sample
+
+The owner-private head-and-neck Atlas was sampled in a temporary in-app
+browser tab at 1280 × 720 after private version 111 publication. Its loaded
+bytes were not independently attested. The tab was closed after the check.
+
+- The page listed 291 structures. Changing Spread to Tray set separation to
+  100% and displayed the explicit non-anatomical-position warning. A screenshot
+  showed the entire dense tray in very small rows; individual surfaces were
+  difficult to inspect at this width. At 50%, the UI warned that overlap was
+  possible, and the screenshot showed a more compact, partially separated
+  model. Dense Tray readability is an open presentation issue; a selected-
+  structure or system-filtered sample was not tested.
+- Reset returned Tray to Spread and 0%. Search selected left
+  sternocleidomastoid (FMA13409). In the anterior camera, its selected label
+  stayed on the right side of the image, where the selected screen-space
+  structure appeared, at 0%, 50% and 100% Spread separation.
+- Reset returned the model to an apparently assembled view with 0% shown.
+  This screenshot comparison does not measure exact source-coordinate
+  reassembly. The model and separated parts also became small within the
+  canvas as separation increased; zoom/filter guidance or framing merits
+  follow-up rather than claiming the current overview is readable.
+
+Only this mouse-driven camera/selection path was sampled. Opposite-side
+labels, posterior rotation, Extract selected, all views, real touch,
+keyboard-only use, assistive technology and clinical anatomy remain untested.
+The viewer release gate stays pending.
+
 ## 24 September: owner-private version 111 Thorax respiratory focus sample
 
 The private `/atlas/thorax-3d` page was sampled in a temporary in-app browser

@@ -236,6 +236,10 @@ export const organAnatomyLessons: readonly OrganAnatomyDefinition[] = [
   },
 ];
 const byFma = new Map(organAnatomyLessons.map((l) => [l.fmaId, l]));
+const liverSourceCoverageNote =
+  'Display aggregate excludes the separately selectable hepatic artery proper surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable right hepatic vein surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable left hepatic vein surface. Source coordinates are unchanged.';
+const liverAnatomyCoverageNote =
+  'The liver display aggregate excludes the separately selectable hepatic artery proper, right hepatic vein and left hepatic vein surfaces. Source coordinates are unchanged; segment boundaries and clinical accuracy are unvalidated.';
 export function organAnatomyLesson(
   s: BodyStructure,
   tab: ContentTab,
@@ -263,7 +267,9 @@ export function organAnatomyLesson(
     ],
     note: [
       'Independent anatomical and clinical review pending. Explode and clipping controls are teaching aids, not physiological motion, acquired imaging or procedure guidance.',
-      s.coverageNote,
+      s.fmaId === 'FMA7197' && s.coverageNote === liverSourceCoverageNote
+        ? liverAnatomyCoverageNote
+        : s.coverageNote,
     ]
       .filter(Boolean)
       .join(' '),

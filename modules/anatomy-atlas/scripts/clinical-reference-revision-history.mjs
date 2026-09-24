@@ -6,6 +6,7 @@ import { authoringBeforeCoreOrganFunction } from './core-organ-function-history.
 import { beforeForearmVenousImaging } from './forearm-venous-imaging-history.mjs';
 import { authoringBeforeThoracoabdominalOrganXray } from './thoracoabdominal-organ-xray-history.mjs';
 import { authoringBeforeSpineUltrasound } from './spine-ultrasound-history.mjs';
+import { preLiverAnatomyCoverage } from './liver-anatomy-coverage-history.mjs';
 import baseline from '../content/clinical-reference-revision.baseline.json' with { type: 'json' };
 import transition from '../content/clinical-reference-revision.transition.json' with { type: 'json' };
 import {
@@ -45,6 +46,7 @@ export function authoringBeforeClinicalReferenceRevision({ api, catalog }) {
   api = authoringBeforeSpineUltrasound({ api, catalog });
   api = beforeForearmVenousImaging(api);
   api = authoringBeforeCoreOrganFunction({ api, catalog }, {deferWholeSnapshot: true});
+  api = preLiverAnatomyCoverage(api, catalog);
   const recipes = prePelvicUrethralProfiles(api.dissectionProfiles, {allowOlder: true});
   if (recipes !== api.dissectionProfiles) api = {...api, dissectionProfiles: recipes};
   const identity = baseline.selected.pelvic.identity;
