@@ -1,5 +1,39 @@
 # First-release viewer acceptance evidence
 
+## 24 September: pulmonary-vein panel, responsive controls and local recovery
+
+Local Atlas source `0d2d5dd5a0530f9c726e46e49d0367a1730336bd` was sampled in
+the in-app browser at 390 × 844 and the restored default 1280 × 720 viewport.
+This is local runtime evidence, not hosted-byte or clinical acceptance.
+
+- A long-running development server returned a missing popliteal pin-module
+  error on region navigation although the file existed and its direct endpoint
+  returned 200. Its process predated the file update. Restarting only that
+  verified Atlas development process cleared the error: a fresh Thorax tab
+  loaded 158 selections, and its actual region link opened Abdomen with 106
+  selections and completed model loading. No source file was replaced or deleted.
+- Search found the left inferior pulmonary vein (FMA49913). Imaging → Ultrasound
+  showed the new TEE note, grouped-source limitation, citations, draft status and
+  "No imaging study loaded". The selected topic survived responsive reflow.
+- At 390 × 844, document width and scroll width were both 390. Details opened
+  the information drawer; Close returned focus to Details. The close control
+  (32 × 32 at x340/y8) and Return to model (313 × 44 at x53/y786) were reachable.
+  This is pointer/responsive evidence, not a real touch-device test.
+- Extract selected was available from the compact bottom toolbar without
+  opening another window. Choosing it set 100%; changing to 50% updated the
+  slider, and returning to 0% showed the assembled-anatomy caption. This checks
+  UI state, not numerical source-coordinate reassembly.
+- Sampled anterior and posterior screenshots placed the selected left vein's
+  label on the corresponding screen side. Occlusion was explicitly labelled
+  "Behind tissue". Only this selection and these camera directions were checked.
+
+The viewport override was reset. Dense deep anatomy is still occluded without
+isolation/dissection; captions/credits may require vertical scrolling on a phone.
+No zero-scroll, complete label matrix, 200% text zoom, screen-reader, real touch,
+pathology, registration or radiologist sign-off is claimed. The viewer gate stays
+pending. Restart a stale local server only after checking exact ownership and
+file existence; do not regenerate immutable anatomy pins to satisfy its cache.
+
 ## 24 September: local selected-entry Tray inspection
 
 A temporary in-app browser tab at 1280 × 720 loaded the freshly exported
