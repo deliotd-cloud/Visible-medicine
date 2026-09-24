@@ -21,6 +21,12 @@ for (const side of ['both','right','left']) {
   const input={region:'foot',side,structures,visibleIds:structures.map(s=>s.id),selectedId:null,enabled:true};
   const core=api.regionalFramingBounds(input);
   assert(core);
+  assert.equal(api.regionalFramingBounds({...input,selectedId:'missing-foot-structure'}),null,'Stale foot selection must restore full-source fit');
+  if (side!=='both') {
+    const opposite= catalog.structures.find(s=>s.region==='foot'&&s.laterality!==side&&['left','right'].includes(s.laterality));
+    assert(opposite,'Opposite-side foot source exists');
+    assert.equal(api.regionalFramingBounds({...input,structures:[...structures,opposite],visibleIds:[...input.visibleIds,opposite.id],selectedId:opposite.id}),null,'Opposite-side foot selection must restore full-source fit');
+  }
   const coreBox=box(core),allBox=new Box3();
   const primary=structures.filter(s=>s.region==='foot');
   for (const s of structures) {
@@ -71,7 +77,7 @@ for(const side of ['both','right','left']) {
     assert.deepEqual(api.regionalFramingBounds({...input,selectedId}),api.handFramingBounds({...input,selectedId}));
 }
 assert.equal(api.regionalFramingRegion('hand','both'),null);
-for(const region of catalog.regions.filter(r=>!['hand','foot','pelvis','thorax','leg'].includes(r.id))) {
+for(const region of catalog.regions.filter(r=>!['hand','foot','pelvis','thorax','leg','forearm'].includes(r.id))) {
   assert.equal(api.initialBodySide(region.id),'both');
   assert.equal(api.regionalFramingRegion(region.id,'right'),null);
 }

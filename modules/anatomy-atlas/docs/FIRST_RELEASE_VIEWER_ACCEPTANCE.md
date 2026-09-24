@@ -1,5 +1,45 @@
 # First-release viewer acceptance evidence
 
+## 24 September: ankle-and-foot in-page dissection sample
+
+The owner-only private Atlas was inspected in a temporary in-app browser tab on
+Windows at a 1280 × 720 desktop viewport, using pointer controls and the browser
+accessibility tree. The tab was closed after inspection. The site was reported
+as private version 109 in the saved publication checkpoint, but this browser
+sample did **not** independently attest its loaded asset bytes to that version.
+No real touch device, screen reader, 200% text zoom or clinical review was used.
+
+- Whole body opened with 1,104 structures. Ankle & foot then loaded 122 source
+  selections and the plantar camera. The desktop screenshot showed the compact
+  system rail, model canvas and study panel without evident horizontal overflow
+  at this single viewport.
+- Dissect exposed a five-step layer sequence. Removing plantar layer 1 reduced
+  enabled selections from 122 to 116 and exposed four first-layer labels.
+  Undo restored the assembled stage and 122 enabled selections. This checks
+  one step and one undo, not the full five-step sequence or redo correctness.
+- Tray selected arranged separation at 100% and displayed the warning that
+  separated positions are not anatomical. An inspected screenshot showed
+  distinct rows of separated structures. Reset returned to Spread at 0% and
+  the assembled plantar view. Intermediate Tray spacing and exact reassembly
+  coordinates were not measured.
+- Searching `calcaneus` returned exact left FMA24498 and right FMA24497
+  selections. Selecting the left calcaneus populated a draft-marked panel with
+  its identity, laterality and BodyParts3D source. Its label appeared on the
+  screen-right side of the plantar image, attached by a leader to the projected
+  left calcaneus, with a “Behind tissue” warning. This is consistent with
+  screen-position labelling; it does not validate the bone shape or all camera
+  angles. The model occupied a relatively small portion of the canvas at this
+  viewport, so detailed visual-readability acceptance remains open.
+
+The in-app browser's Ctrl-plus shortcut did not produce a verifiable zoom-state
+change, so **no 200% reflow result is claimed**. The foot sample narrows the
+regional matrix only; the viewer gate remains pending.
+
+A subsequent source-only fix makes a stale or opposite-side foot selection
+restore full-source camera framing. Its focused and renderer/visibility/search
+checks pass, but this browser sample preceded that fix. The corrected behavior
+has not yet been retested in the hosted viewer.
+
 ## 24 September: phone-width layout sample (desktop Chrome override)
 
 The authenticated private custom-domain whole-body page was inspected in Chrome

@@ -90,7 +90,10 @@ export function regionalFramingBounds(input: Parameters<typeof handFramingBounds
   }
   // Calf vessels and the calcaneal tendon retain their full source extent when
   // selected. A foot-region membership does not turn those into cropped meshes.
-  if (selected && (selected.region !== 'foot' || !visible.has(selected.id)))
+  if (selectedId !== null &&
+    (!selected || selected.region !== 'foot' ||
+      (side !== 'both' && selected.laterality !== side) ||
+      !visible.has(selected.id)))
     return null;
   return selectionBounds(structures.filter((s) =>
     s.region === 'foot' && (side === 'both' || s.laterality === side) && visible.has(s.id),
