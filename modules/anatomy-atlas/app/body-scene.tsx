@@ -45,6 +45,7 @@ import { SceneRecovery, RendererMonitor } from './scene-recovery';
 import type { RendererHealth } from '@/lib/renderer-health';
 import { selectedOriginGuide, type OriginGuide } from '@/lib/origin-guides';
 import { SceneOrientation } from './scene-orientation';
+import { cameraOrientation, orientationBasis, orientationText } from '@/lib/camera-orientation';
 import { modelDeliveryUrl } from '@/lib/model-delivery';
 import './scene-orientation.css';
 
@@ -486,6 +487,19 @@ export function BodyScene(props: Props) {
   );
   const orthographic = props.plate || layout === 'tray';
   const orientationOutput = useMemo(() => createRef<HTMLSpanElement>(), []);
+  const keyboardOrientationOutput = useMemo(() => createRef<HTMLOutputElement>(), []);
+  const orientationAxes = useMemo(
+    () => orientationBasis(props.catalog.coordinateSystem),
+    [props.catalog.coordinateSystem],
+  );
+  const onKeyboardRotate = (cameraFrom: THREE.Vector3, azimuth: number, polar: number) => {
+    const node = keyboardOrientationOutput.current;
+    if (!node || props.exam) return;
+    const direction = orientationText(cameraOrientation(cameraFrom, orientationAxes));
+    const degrees = (angle: number) => Math.round(angle * 180 / Math.PI);
+    // oxlint-disable-next-line react/react-compiler -- This read-only live status is an imperative DOM sink for Three camera input.
+    node.textContent = `View from: ${direction}. Orbit angle: ${degrees(azimuth)}° around, ${degrees(polar)}° from above.`;
+  };
   return (
     <SceneRecovery
       className="body-scene"
@@ -509,6 +523,9 @@ export function BodyScene(props: Props) {
             <p className="anatomy-live-orientation" aria-live="off">
               View from: <span ref={orientationOutput}>unavailable</span>
             </p>
+          )}
+          {!props.exam && (
+            <output ref={keyboardOrientationOutput} className="sr-only" aria-live="polite" aria-atomic="true" />
           )}
         <Canvas
           onFailure={() => onHealth('failed')}
@@ -575,6 +592,7 @@ export function BodyScene(props: Props) {
             recenterKey={focusId ?? props.presetKey ?? ''}
             cameraCapture={props.cameraCapture}
             cameraRestore={props.cameraRestore}
+            onKeyboardRotate={onKeyboardRotate}
           />
         </Canvas>
         </div>

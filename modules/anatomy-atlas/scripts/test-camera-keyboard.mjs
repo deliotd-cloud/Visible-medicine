@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {createRequire} from 'node:module';
+import {readFile} from 'node:fs/promises';
 import {runInNewContext} from 'node:vm';
 import {bindCameraKeyboard} from '../lib/camera-keyboard.ts';
 import {build} from './workspace-component-test-build.mjs';
@@ -72,11 +73,13 @@ test('focus, modifier, composition, editable-target and rotation-lock guards do 
 
 test('angle limits, invalid inputs, damping and lifecycle restoration',()=>{
   const camera=new PerspectiveCamera();camera.position.set(0,0,5);
-  const controls=new OrbitControls(camera),surface=new Surface();
+  const controls=new OrbitControls(camera),surface=new Surface();let changed=0;
   surface.setAttribute('tabindex','-1');surface.setAttribute('role','img');
-  const release=bindCameraKeyboard(surface,()=>controls,()=>{});
+  const release=bindCameraKeyboard(surface,()=>controls,()=>changed++);
   controls.minAzimuthAngle=-.1;controls.maxAzimuthAngle=.1;
   surface.key('ArrowRight');near(controls.getAzimuthalAngle(),.1);
+  const atLimit=changed;assert.equal(surface.key('ArrowRight').defaultPrevented,true);
+  assert.equal(changed,atLimit,'Clamped key does not report a rotation');
   surface.key('ArrowLeft');surface.key('ArrowLeft');near(controls.getAzimuthalAngle(),-.1);
   controls.minPolarAngle=1;controls.maxPolarAngle=2;
   for(let i=0;i<20;i++)surface.key('ArrowUp');near(controls.getPolarAngle(),1);
@@ -100,7 +103,9 @@ test('actual FittedCamera installs/cleans input, captures rotated saves and excl
     if(name==='@react-three/drei')return{OrbitControls:'OrbitControls'};
     return require(name);
   }});
-  const capture={current:null},props={bounds:new Box3(new Vector3(-1,-2,-.5),new Vector3(1,2,.5)),direction:[0,0,1],viewKey:'anterior',zoom:1,reset:0,cameraCapture:capture};
+  const announcements=[];
+  const capture={current:null},props={bounds:new Box3(new Vector3(-1,-2,-.5),new Vector3(1,2,.5)),direction:[0,0,1],viewKey:'anterior',zoom:1,reset:0,cameraCapture:capture,
+    onKeyboardRotate:(from,azimuth,polar)=>announcements.push({from:from.clone(),azimuth,polar})};
   const render=changes=>{
     for(const clean of cleanups)clean();cleanups=[];index=0;effects=[];Object.assign(props,changes);
     const element=mod.exports.FittedCamera(props);element.props.ref.current=controls;
@@ -110,6 +115,12 @@ test('actual FittedCamera installs/cleans input, captures rotated saves and excl
   render({});assert.equal(surface.handlers.size,1);
   const before=JSON.stringify(capture.current),initial=invalidations;
   surface.key('ArrowRight');assert.notEqual(JSON.stringify(capture.current),before);assert(invalidations>initial);
+  assert.equal(announcements.length,1);
+  near(announcements[0].from.distanceTo(camera.getWorldDirection(new Vector3()).negate()),0);
+  const coarse=announcements[0].azimuth;
+  surface.key('ArrowRight',{shiftKey:true});assert.equal(announcements.length,2);
+  near(announcements[1].azimuth-coarse,Math.PI/90);
+  controls.dispatchEvent({type:'change'});assert.equal(announcements.length,2,'Pointer orbit change does not announce');
   // Non-camera UI changes can recreate bounds/callback identities. The actual
   // fit effect must retain the live orbit instead of restoring its preset.
   const rotated=camera.position.clone(),target=controls.target.clone(),pose=structuredClone(capture.current);
@@ -124,4 +135,32 @@ test('actual FittedCamera installs/cleans input, captures rotated saves and excl
   render({locked:false,planar:false});assert.equal(surface.handlers.size,1);
   render({});assert.equal(surface.handlers.size,1); // no accumulated listeners after updates
   for(const clean of cleanups)clean();assert.equal(surface.handlers.size,0);
+});
+
+test('BodyScene keeps visual rotation silent and writes a keyboard-only polite orientation status',async()=>{
+  const compiled=await build({stdin:{contents:"export { BodyScene } from './app/body-scene'; export { FittedCamera } from './app/fitted-camera';",resolveDir:process.cwd(),loader:'tsx'},bundle:true,write:false,platform:'node',format:'cjs'});
+  const React=require('react'),mod={exports:{}};
+  runInNewContext(compiled.outputFiles[0].text,{module:mod,exports:mod.exports,require(name){
+    if(name==='react')return{...React,useMemo:fn=>fn(),useLayoutEffect:fn=>fn(),useEffect:()=>{}};
+    return require(name);
+  }});
+  const catalog=JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json'));
+  const props={catalog,structures:[],selectedId:null,systems:{skeleton:true,muscles:true,organs:true,nerves:true,vessels:true,connective:true},
+    isolated:false,hiddenIds:[],ghostRemoved:false,illustrated:true,landmarks:[],explode:0,layout:'spatial',anchorSkeleton:false,
+    showOrigins:false,labels:true,view:'anterior',zoom:1,reset:0,focus:false,exam:false,
+    inspection:{plane:'off',position:50,flipped:false,opacity:{},keepSelectedSolid:true},plate:false,
+    onSelect(){},onLoaded(){},onFailure(){},onRendererHealth(){}};
+  const nodes=n=>!n||typeof n!=='object'?[]:Array.isArray(n)?n.flatMap(nodes):[n,...nodes(n.props?.children)];
+  const scene=mod.exports.BodyScene(props),tree=scene.props.children(()=>{}),all=nodes(tree);
+  const heading=all.find(n=>n.props?.className==='anatomy-live-orientation');
+  const status=all.find(n=>n.type==='output'&&n.props?.className==='sr-only');
+  const fitted=all.find(n=>n.type===mod.exports.FittedCamera);
+  assert.equal(heading.props['aria-live'],'off');
+  assert.equal(status.props['aria-live'],'polite');assert.equal(status.props['aria-atomic'],'true');
+  let announced='';status.props.ref.current={get textContent(){return announced;},set textContent(value){announced=value;}};
+  fitted.props.onKeyboardRotate(new Vector3(0,0,1),Math.PI/18,Math.PI/2);
+  assert.match(announced,/^View from: .+ Orbit angle: 10° around, 90° from above\.$/);
+  fitted.props.onKeyboardRotate(new Vector3(0,0,1),Math.PI/15,Math.PI/2);
+  assert.match(announced,/Orbit angle: 12° around/,'Fine rotation updates the live status');
+  assert.equal(mod.exports.BodyScene({...props,exam:true}).props.children(()=>{}).props['data-orientation'],false);
 });

@@ -1,5 +1,9 @@
 # Anatomy atlas backup — 12 September 2026
 
+## 24 September 2026 — Keyboard-only orientation feedback
+
+Atlas source `77e20b8139ec2894abcb3d17552afb1b4c2b0a2a` (tree `5a0c090da5d0594773af28a18657d103c5d7da0e`) adds a restrained polite status for keyboard-originated 3D camera rotation. Pointer orbit remains silent; a clamped key does not announce a change. Focused camera, orientation, renderer, selection-visibility, TypeScript and lint checks passed. No model geometry, clinical approval, scan or website publication is introduced by this Atlas backup. The module subtree matches the source tree exactly.
+
 ## 24 September 2026 — Reset-control scope clarification
 
 Atlas source `b8be7207ea5bb4b01d33c28f5b5ccf242da02abe` (tree `c0e85f3b2fd70a59fbdd12076e957d37de72e851`) clarifies the reset icon's accessible name and hover/assistive help. It resets camera, layout, cutaway, focus, isolation and separation while preserving system visibility and removed anatomy. The handler and anatomy are unchanged. Focused reset, dissection-history and selection-visibility tests plus TypeScript passed; no hosted publication, device acceptance or clinical approval is implied. The module subtree is intended to match the source tree exactly.

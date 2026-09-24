@@ -46,6 +46,7 @@ export function bindCameraKeyboard(
     if (!Number.isFinite(next)) return;
     event.preventDefault(); // Only the focused model consumes rotation arrows.
     event.stopPropagation();
+    if (Math.abs(next - current) < 1e-10) return; // A clamped key did not rotate the view.
     const damping = controls.enableDamping;
     try {
       // Keyboard steps are immediate, including with reduced-motion preferences.

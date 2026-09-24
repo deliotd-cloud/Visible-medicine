@@ -31,6 +31,7 @@ export function FittedCamera({
   recenterKey = '',
   cameraCapture,
   cameraRestore,
+  onKeyboardRotate,
 }: {
   bounds: Box3;
   direction: number[];
@@ -47,6 +48,7 @@ export function FittedCamera({
   recenterKey?: string;
   cameraCapture?: RefObject<StudyCamera | null>;
   cameraRestore?: RefObject<StudyCamera | null>;
+  onKeyboardRotate?: (cameraFrom: Vector3, azimuth: number, polar: number) => void;
 }) {
   const { camera, size, invalidate, gl } = useThree();
   const controls = useRef<Controls>(null);
@@ -242,8 +244,15 @@ export function FittedCamera({
     return bindCameraKeyboard(gl.domElement, () => controls.current, () => {
       capture();
       invalidate();
+      if (onKeyboardRotate && controls.current) {
+        onKeyboardRotate(
+          camera.getWorldDirection(new Vector3()).negate(),
+          controls.current.getAzimuthalAngle(),
+          controls.current.getPolarAngle(),
+        );
+      }
     });
-  }, [gl, locked, planar, capture, invalidate]);
+  }, [gl, locked, planar, capture, invalidate, camera, onKeyboardRotate]);
   return (
     <OrbitControls
       ref={controls}
