@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+24 September paired popliteal viewer integration: runtime binds Atlas `f54d633`.
+Leg/Whole body gain the paired artery–vein focus; Search preserves the current
+view on explicit rejection and close-up captions follow study identity. All 136
+models / 143 protected paths and independent access gates remain unchanged.
+See [integration boundaries](atlas-popliteal-viewer-20260924.md); use the main
+checkpoint for publication/recovery. Full clinical, imaging and device gates
+remain open. Continue the complete regional roadmap after publication.
+
 24 September contextual dissection Undo: shared viewer binds Atlas `15029f9`.
 An exact last single-structure Hide/Remove can be undone in the existing selection
 notice, with current scope/practice guards and panel-only reveal. All 136 models /

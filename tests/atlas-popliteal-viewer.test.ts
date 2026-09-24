@@ -3,22 +3,27 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import test from 'node:test';
 
-test('regional export includes tested contextual Undo and panel-only reveal',()=>{
+test('regional export binds paired popliteal studies and guarded Search handoff',()=>{
   const base='public/atlas-runtime/head-neck/';
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
   assert.equal(manifest.sourceCommit,'f54d6339e8c7820c2fe37b5161f548776e3c873e');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({
-    'app/body-selection-notice.tsx':'a0b5d8d77eb6c4124877e19e279f3b5b3067586e673138cbfb78c85c3c2fcb46',
-    'lib/contextual-dissection-undo.ts':'628154c5b1ef24e0a1a8f69544fbfeefbd84ab5b950955515a0ca6886d4e93ef',
+    'app/atlas-workspace.tsx':'7c5f17294b5153dff356868b565ddfab676dcbcbc2a0f8239bc83c1df7657ffc',
     'app/body-explorer.tsx':'cad7a3f51095947efe350ce80d08e6e5e57faf7de8e9519f9aeedc3b4ada66bd',
-    'app/body-explorer.css':'d2bd732a4275471f962f696b2cd4d5901c54f86f95d8f2a4135d31f56237c24b',
+    'content/popliteal-vessel-study-pins.json':'d0f4f1875c2f3a9b281a90c8d6675f063c7427d4648cda7b3961106ad71eb1f8',
+    'content/popliteal-vessel-study.ts':'abc5e21efacfde75edb96b34e3a7e218968983d323f078f5381fe3c950a366f3',
+    'lib/popliteal-vessel-study.ts':'836b58cea4a797392e18e38975091ebb8e8918d8302c6e1ab0ee9caa5463f14b',
+    'lib/study-close-up-label.ts':'1ad423aaaff68a9c40c8fd33af58bc2f8457460cb70b4d6922e2856dac025438',
   }))assert.deepEqual(inputs.filter(input=>input.path===path),[{path,sha256}]);
   const runtime=(manifest.files as {path:string;sha256:string}[]).filter(file=>file.path.endsWith('.js')).map(file=>{
     const bytes=readFileSync(base+file.path);
     assert.equal(createHash('sha256').update(bytes).digest('hex'),file.sha256);
     return bytes.toString();
   }).join('\n');
-  for(const marker of ['body-selection-undo','Undo hiding','Undo removal of','preventScroll','aria-atomic'])assert.ok(runtime.includes(marker),marker);
+  for(const marker of ['knee-popliteal-vessel-pair','Knee: popliteal artery and vein',
+    'This study could not be opened with the current source data.',
+    'This result is no longer available in the current atlas view.',
+    'Whole surfaces extend beyond the view'])assert.ok(runtime.includes(marker),marker);
   for(const flag of ['patientDataIncluded','clinicalApproved','imagingConnection','standaloneReviewConnection'])assert.equal(manifest[flag],false);
 });

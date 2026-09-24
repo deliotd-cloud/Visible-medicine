@@ -10,13 +10,13 @@ const modules = {
   shoulder:'9e9b955cfc99189b22ba462480184c712b1715b5b125436b896fa83bc6c9b604',
   'female-pelvis':'ce64af2fd913be42c856beaf25cb2f48996ec69394e28b75a595ed98415a1bb4',
   'lower-limb':'f9bf6d620ac4bbdbb9c2e2f47b005cdaa78aff8f6f3feabf5b08400b4f63d246',
-  'head-neck':'c9c25b983482587a139150736a6564cb9b034e0562241610fe560cafa9d5c554',
+  'head-neck':'e3ad04c47e25781cf4ebba1333c83167e982ff0cdb933dc9db2ab33eaca521e0',
 };
 for(const [module,manifestHash] of Object.entries(modules)) test(`${module} exports the source-verified keyboard camera and focus-only hint`,()=>{
   const base = `public/atlas-runtime/${module}/`;
   const bytes = readFileSync(base+'manifest.json');
   assert.equal(createHash('sha256').update(bytes).digest('hex'),manifestHash);
-  assert.equal(JSON.parse(bytes.toString()).sourceCommit,module==='head-neck'?'15029f9075b6a252d0b594e6e8229bea2bf01d94':source);
+  assert.equal(JSON.parse(bytes.toString()).sourceCommit,module==='head-neck'?'f54d6339e8c7820c2fe37b5161f548776e3c873e':source);
   const inputs = JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({
     'lib/camera-keyboard.ts':module==='head-neck'

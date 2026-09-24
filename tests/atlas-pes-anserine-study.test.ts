@@ -8,12 +8,12 @@ test('sided pes anserinus studies reach the shared viewer without geometry or ac
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json'),manifest=JSON.parse(bytes.toString());
-  assert.equal(sha(bytes),'c9c25b983482587a139150736a6564cb9b034e0562241610fe560cafa9d5c554');
-  assert.equal(manifest.sourceCommit,'15029f9075b6a252d0b594e6e8229bea2bf01d94');
+  assert.equal(sha(bytes),'e3ad04c47e25781cf4ebba1333c83167e982ff0cdb933dc9db2ab33eaca521e0');
+  assert.equal(manifest.sourceCommit,'f54d6339e8c7820c2fe37b5161f548776e3c873e');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256]of Object.entries({
-    'app/dissection-data.ts':'d3e0910115090f048057fcf47cecd2a27666c0248dd31e8d67f4d068e08739bc',
+    'app/dissection-data.ts':'e4612894eda280188f24aa96ea4095795ead893ff5509a4e07d0389a5623e6e4',
     'content/pes-anserine-study.ts':'5de0780dc9640509da5cc0231b70e6186030e5b858821b0f2b4ea34d8d023388',
   }))assert.deepEqual(inputs.filter(input=>input.path===path),[{path,sha256}]);
   assert.ok(!inputs.some(input=>/native-mr|local-mr-study|\.vmmr|patient[-_/]?data/i.test(input.path)));

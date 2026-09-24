@@ -9,9 +9,9 @@ const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
 
 test('regional export presents source-bound superficial forearm veins without clinical or imaging approval',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'c9c25b983482587a139150736a6564cb9b034e0562241610fe560cafa9d5c554');
+  assert.equal(sha(manifestBytes),'e3ad04c47e25781cf4ebba1333c83167e982ff0cdb933dc9db2ab33eaca521e0');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'15029f9075b6a252d0b594e6e8229bea2bf01d94');
+  assert.equal(manifest.sourceCommit,'f54d6339e8c7820c2fe37b5161f548776e3c873e');
   for(const flag of ['patientDataIncluded','clinicalApproved','imagingConnection','standaloneReviewConnection'])
     assert.equal(manifest[flag],false,flag);
 
@@ -20,7 +20,7 @@ test('regional export presents source-bound superficial forearm veins without cl
     'content/forearm-superficial-vein-runtime-pins.json':'cb864bdb2d08c8585091a9c7a0cad37392d8b7aff374910d16ea01478a0916e6',
     'content/forearm-superficial-vein-study.ts':'6ad60f58f4131df71d35580d086729b27c39cd4d2f0819a5464df43293960053',
     'lib/forearm-superficial-veins.ts':'07dde747d85a1a4fff95b1f19e62f4f1bc6a17c7696b91d60a842d9b6e499105',
-    'lib/limb-vascular-studies.ts':'9338230911c7db7967b947ec5afade816bcad861e68cc15129e5b5487a49f63e',
+    'lib/limb-vascular-studies.ts':'c11a2af74ae392407af1663c955c3b318b1de9ebbcb8dff23bd5fb96c9ad3e3c',
   }))assert.equal(inputs.find(row=>row.path===path)?.sha256,expected,path);
   assert.ok(!inputs.some(row=>/native-mr|local-mr-study|\.vmmr/i.test(row.path)),'private native MRI checker excluded');
 
