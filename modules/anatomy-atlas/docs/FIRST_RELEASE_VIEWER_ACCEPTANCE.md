@@ -1,5 +1,27 @@
 # First-release viewer acceptance evidence
 
+## 24 September: owner-private version 111 Thorax respiratory focus sample
+
+The private `/atlas/thorax-3d` page was sampled in a temporary in-app browser
+tab at 1280 × 720 after Sites reported version 111 as succeeded. The browser
+sample did **not** independently attest loaded asset bytes. The tab was closed.
+
+- Thorax displayed 158 source selections. In Dissect, Study windows & focuses
+  listed three new respiratory study choices alongside the prior choices:
+  Respiratory wall layers & diaphragm (4), Intercostal layer comparison (3),
+  and Diaphragm source surface (1).
+- Previewing Intercostal layer comparison stated that 155 selections would be
+  hidden and 3 retained, with fixed-source and clinical caveats. Opening it
+  showed 3 enabled selections; a desktop screenshot showed paired source wall
+  surfaces without evident horizontal overflow at this one viewport.
+- Undo restored the assembled 158 enabled selections; Redo was available but
+  was not itself exercised. This is one focus/undo path, not a complete camera,
+  device, anatomy or accessibility acceptance sweep.
+
+Real touch, keyboard-only, 200% zoom, screen reader, all Thorax focus views,
+hosted asset-byte attestation and revision-bound radiologist review remain open.
+The first-release viewer gate remains pending.
+
 ## 24 September: abdomen and nested liver branch sample
 
 The owner-only private site was sampled in a temporary in-app browser tab at
