@@ -15,10 +15,10 @@ test('thorax is discoverable as a 3D pilot, not a patient-imaging collection',as
 test('thorax shares audited assets while retaining its own root and nested identities',async()=>{
   const manifest=JSON.parse(await readFile(new URL('../public/atlas-runtime/head-neck/manifest.json',import.meta.url),'utf8'));
   const scope=manifest.regionalScopes.find((s:{region:string})=>s.region==='thorax');assert(scope);
-  assert.equal(new Set(scope.regionalIds).size,158);assert.equal(scope.nestedTargets.length,9);
-  assert.deepEqual([...new Set(scope.nestedTargets.map((t:{study:string})=>t.study))].sort(),['cardiac','pulmonary']);
+  assert.equal(new Set(scope.regionalIds).size,158);assert.equal(scope.nestedTargets.length,11);
+  assert.deepEqual([...new Set(scope.nestedTargets.map((t:{study:string})=>t.study))].sort(),['cardiac','coronary-venous','pulmonary']);
   for(const b of scope.bundles)assert(manifest.modelBundles.some((m:{url:string;sha256:string;bytes:number})=>m.url===b.url&&m.sha256===b.sha256&&m.bytes===b.bytes));
-  assert.equal(new Set(manifest.modelBundles.map((b:{url:string})=>b.url)).size,134);
+  assert.equal(new Set(manifest.modelBundles.map((b:{url:string})=>b.url)).size,135);
   for(const key of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[key],false);
 });
 

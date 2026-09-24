@@ -7,9 +7,9 @@ test('regional export carries the four source-bound forearm MR drafts without a 
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'edb5264f4bba4725f8694302305a6a7819c28ac1cefe5be7c8aff25fc9c135c2');
+  assert.equal(sha(manifestBytes),'a39c8b154e77da5170a7669d9c68532a65ffea2b3b242962a7775a38fbead784');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'c9000cf68cf91f899ff48e930306dfc02f371b19');
+  assert.equal(manifest.sourceCommit,'201f8c9d075c1eda29e1dd93e94b458a44563d62');
   for(const field of ['patientDataIncluded','clinicalApproved','imagingConnection','standaloneReviewConnection'])assert.equal(manifest[field],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,expected] of Object.entries({
@@ -23,6 +23,6 @@ test('regional export carries the four source-bound forearm MR drafts without a 
   for(const phrase of ['Dedicated upper-limb MR venography','Basilic-vein visibility in upper-limb MR venography','This does not establish visibility on a routine forearm MRI','Source limit: This is one archived source selection'])assert(runtime.includes(phrase),phrase);
   const inventory=JSON.parse(readFileSync('lib/atlas-model-inventory.json','utf8'));
   assert.equal(inventory.sources.find((source:{module:string})=>source.module==='head-neck')?.manifestSha256,sha(manifestBytes));
-  assert.equal(inventory.models.length,135);
-  assert.equal(inventory.models.flatMap((model:{paths:string[]})=>model.paths).length,142);
+  assert.equal(inventory.models.length,136);
+  assert.equal(inventory.models.flatMap((model:{paths:string[]})=>model.paths).length,143);
 });

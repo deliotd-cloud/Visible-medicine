@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "sourceCommit": "c9000cf68cf91f899ff48e930306dfc02f371b19",
+  "sourceCommit": "201f8c9d075c1eda29e1dd93e94b458a44563d62",
   "region": "head-neck",
   "sourceVersion": "4.0",
   "regionalIds": [
@@ -2236,6 +2236,22 @@
         {
           "parentId": "vm:anatomy:body:thorax:unpaired:organ:heart",
           "parentHash": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+          "study": "coronary-venous",
+          "title": "Coronary venous source parts",
+          "structureId": "vm:anatomy:body:thorax:unpaired:vessel:coronary-sinus",
+          "sourceHash": "4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12"
+        },
+        {
+          "parentId": "vm:anatomy:body:thorax:unpaired:organ:heart",
+          "parentHash": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+          "study": "coronary-venous",
+          "title": "Coronary venous source parts",
+          "structureId": "vm:anatomy:body:thorax:unpaired:vessel:small-cardiac-vein",
+          "sourceHash": "4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12"
+        },
+        {
+          "parentId": "vm:anatomy:body:thorax:unpaired:organ:heart",
+          "parentHash": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
           "study": "cardiac",
           "title": "Cardiac chamber spaces",
           "structureId": "vm:anatomy:body:thorax:right:organ:cavity-of-right-atrium",
@@ -2321,6 +2337,13 @@
           "bytes": 587588,
           "sha256": "64d93898db3b6cb4dbea452508799c98cbe65b361eba2f17658ecae532a01f67",
           "structures": 6
+        },
+        {
+          "id": "coronary-venous",
+          "url": "/models/bodyparts3d/coronary-venous/coronary-venous.glb?v=4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12",
+          "bytes": 40996,
+          "sha256": "4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12",
+          "structures": 2
         },
         {
           "id": "abdomen-vessels-recovery",
@@ -8027,6 +8050,22 @@
         {
           "parentId": "vm:anatomy:body:thorax:unpaired:organ:heart",
           "parentHash": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+          "study": "coronary-venous",
+          "title": "Coronary venous source parts",
+          "structureId": "vm:anatomy:body:thorax:unpaired:vessel:coronary-sinus",
+          "sourceHash": "4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12"
+        },
+        {
+          "parentId": "vm:anatomy:body:thorax:unpaired:organ:heart",
+          "parentHash": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+          "study": "coronary-venous",
+          "title": "Coronary venous source parts",
+          "structureId": "vm:anatomy:body:thorax:unpaired:vessel:small-cardiac-vein",
+          "sourceHash": "4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12"
+        },
+        {
+          "parentId": "vm:anatomy:body:thorax:unpaired:organ:heart",
+          "parentHash": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
           "study": "cardiac",
           "title": "Cardiac chamber spaces",
           "structureId": "vm:anatomy:body:thorax:right:organ:cavity-of-right-atrium",
@@ -9249,6 +9288,13 @@
           "structures": 2
         },
         {
+          "id": "coronary-venous",
+          "url": "/models/bodyparts3d/coronary-venous/coronary-venous.glb?v=4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12",
+          "bytes": 40996,
+          "sha256": "4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12",
+          "structures": 2
+        },
+        {
           "id": "corpus-spongiosum",
           "url": "/models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb?v=f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826",
           "bytes": 11856,
@@ -10163,6 +10209,13 @@
       "structures": 2
     },
     {
+      "id": "coronary-venous",
+      "url": "/models/bodyparts3d/coronary-venous/coronary-venous.glb?v=4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12",
+      "bytes": 40996,
+      "sha256": "4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12",
+      "structures": 2
+    },
+    {
       "id": "corpus-spongiosum",
       "url": "/models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb?v=f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826",
       "bytes": 11856,
@@ -11035,7 +11088,7 @@
     {
       "path": "index.html",
       "bytes": 914,
-      "sha256": "e5f0a0ae17aeebee478b1366b53d0fce6bce6348e717a8efaf9da86660d329a4"
+      "sha256": "1bfcb91a83efa19a450aee0edbb8e967192fbaed2ef2c31d9051f7690f1e24e0"
     },
     {
       "path": "BUNDLED_NOTICES.txt",
@@ -11049,13 +11102,13 @@
     },
     {
       "path": "source-inputs.json",
-      "bytes": 99958,
-      "sha256": "0167555cb1d3c0139bff8d594e07ad21f35a5fd7481df35f7b1ec6f37f517d7d"
+      "bytes": 100387,
+      "sha256": "7bcfcfe4bb98d769966f900cce7ee5331f8e075200dc4820b747a0eacc3bafa9"
     },
     {
-      "path": "assets/abdominal-wall-study-DNOGucwj.js",
-      "bytes": 44593,
-      "sha256": "6139692e9876e89ffe0bc9d701214a24d13cedc8eb40a486ea8e047ae8c86f65"
+      "path": "assets/abdominal-wall-study-qCxcLZdX.js",
+      "bytes": 44598,
+      "sha256": "5d21933221acc063df1e7ffbde2c7820d6f0510068e01083da71a8406ff78f06"
     },
     {
       "path": "assets/anatomy-load-state-LfHAQoB7.js",
@@ -11063,9 +11116,9 @@
       "sha256": "08da2c433d3695ac87ccef46c03e114a39946445f4daad04ba37cf4971b15b79"
     },
     {
-      "path": "assets/back-layers-study-Ce4wcstk.js",
-      "bytes": 74883,
-      "sha256": "5464108f8b54250c6451348be80082fcb169becfa5c0c03a81eee7dbaa4c90fb"
+      "path": "assets/back-layers-study-D5fnAQEl.js",
+      "bytes": 74888,
+      "sha256": "bf52211dc6076ccfb6bc1f75ba4596a4f7b002c78fa68223b304f72caf645540"
     },
     {
       "path": "assets/body-scene-DIlRXyfo.css",
@@ -11083,9 +11136,9 @@
       "sha256": "87c31bfe8303461a8afbde6251bb48df5a77645f774c8ef3ac48c292a30ec5c8"
     },
     {
-      "path": "assets/cutaway-controls-C1vJIBof.js",
-      "bytes": 112037,
-      "sha256": "3d19bd0fd45d988566f43002ebe145b2edcc497a46674396c53618507d52f246"
+      "path": "assets/cutaway-controls-Balk3LYE.js",
+      "bytes": 119080,
+      "sha256": "edb0fac9d912e5c5388459dbe244261516fd5fc7e61e2e5f755b0be1bcbdf73e"
     },
     {
       "path": "assets/eye-layers-B3CQEl2o.css",
@@ -11093,34 +11146,34 @@
       "sha256": "58f9322c6a028c52be262400337233bf1eb9350ca31aef05830a1df107bbd343"
     },
     {
-      "path": "assets/eye-layers-DOz_M8tm.js",
+      "path": "assets/eye-layers-BDexAmWp.js",
       "bytes": 11502,
-      "sha256": "063ed95dd06fb2704c181d46d6ec172b62c4965342e75e62bba0566994e64f92"
+      "sha256": "fcaeccefa380b72e6367d44e5a36a8b892c332b66ef9239f3d5d7045d99921aa"
     },
     {
-      "path": "assets/hra-pelvis-study-Ckh07o-g.js",
-      "bytes": 94858,
-      "sha256": "bdf3e78068cd85927b81623beba8dc048d96aeba57fe7b9ff235cf8358427e51"
+      "path": "assets/hra-pelvis-study-hN6txoCm.js",
+      "bytes": 94863,
+      "sha256": "87543c542ca0c32b54d2666589d91846679ff39dce7e6b007b5432a6b0a57a36"
     },
     {
-      "path": "assets/hra-renal-study-BReL-qz3.js",
-      "bytes": 3435,
-      "sha256": "7a05334921289ab7317e6624200a17a34a42878fded499dde4429d75f7d04f20"
+      "path": "assets/hra-renal-study-Cq39bbZe.js",
+      "bytes": 3440,
+      "sha256": "3978d89d988c0dbe1a51bdf9e3de6a7beb2f2c0fea845531841767b5ad193d39"
     },
     {
-      "path": "assets/hra-renal-teaching-CO9dExQ8.js",
+      "path": "assets/hra-renal-teaching-BLyUWefd.js",
       "bytes": 114242,
-      "sha256": "f19d8aa1db25565f2ed73d1c6b16b1f387e953eac3f19ca5a9954f039f32f6d5"
+      "sha256": "8ee48b2e82708c567d8787dd680ddb8b8618877c63e576b828986ab0071e3eaa"
     },
     {
-      "path": "assets/independent-study-navigation-CF9xc4oG.js",
+      "path": "assets/independent-study-navigation-6IFmKCGs.js",
       "bytes": 2627,
-      "sha256": "428c083afb90d2d832aa424c4b7a880d7c2ce0fc0efa23791d54df79529d50c0"
+      "sha256": "7ca9369f861c9a9547353cfe533296a587ccc4b2c2adec30e3d12bb775f1c4ac"
     },
     {
-      "path": "assets/index-DOirTwM0.js",
-      "bytes": 2011809,
-      "sha256": "d40e17887abba3cc3b49fa44c1c6aa96871af9f05d27546a79b031b09a663191"
+      "path": "assets/index-B8JXPmIi.js",
+      "bytes": 2017299,
+      "sha256": "a424da5b4ee93383ea1fdae3f5d9d911cd606e98d327f5cda8a16ce4637f5462"
     },
     {
       "path": "assets/index-Ds5WN-no.css",
@@ -11133,14 +11186,14 @@
       "sha256": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021"
     },
     {
+      "path": "assets/slider-rI8JXoUJ.js",
+      "bytes": 4815402,
+      "sha256": "4e14baa7ab215407efe1c82725ed7482513f11c417e65e2a3927ceec5061e4ae"
+    },
+    {
       "path": "assets/slider-VO9b3koS.css",
       "bytes": 5425,
       "sha256": "557f7401b9e23cc294cec02d26ccc1b01d19269ffeb4f1e2565ae018ae5e996d"
-    },
-    {
-      "path": "assets/slider-WTaTXozU.js",
-      "bytes": 4803832,
-      "sha256": "22adc1e2f62c1995aa0e373a95ec3392baba441bc4a6e5ab4b5370a112d783fa"
     },
     {
       "path": "assets/um-knee-study-DE_VvcAw.css",
@@ -11148,14 +11201,14 @@
       "sha256": "7f1d701756afcca6313a1ea8b3bb47f578ae6066d9d6750576f1003f9c65da3b"
     },
     {
-      "path": "assets/um-knee-study-DvVPZSuS.js",
-      "bytes": 517397,
-      "sha256": "ad9d7d5708b72bb4426b93c823c46f7bc0e7885ef9265009ce50ca052c1761b0"
+      "path": "assets/um-knee-study-KT_-dSZi.js",
+      "bytes": 517396,
+      "sha256": "13dc5b2745bf20494ef1705ac4b594fa638c7e357a0ef8610331d58507c96822"
     },
     {
-      "path": "assets/um-limb-study-DY97DjaJ.js",
+      "path": "assets/um-limb-study-BG2Smy2w.js",
       "bytes": 2602,
-      "sha256": "8d23aabca3d6d53d5f8afe7bc291beca8886e9a071eefdbcaa8953fb511e70ca"
+      "sha256": "0a5421bc97af7c6a6d6d672f85cdd50d9a125a88347a63df0007eaedf4b22d0f"
     },
     {
       "path": "assets/ventricles-CfdrTivY.css",
@@ -11163,9 +11216,9 @@
       "sha256": "3afed59416d5b658434fa6dd284a3af3ff3868bdf2412b57c6f882f616e0b385"
     },
     {
-      "path": "assets/ventricles-DAOPeb19.js",
-      "bytes": 236160,
-      "sha256": "e7d5ed234c5330701eef515dd23f0d57348f3ffe41dca0d4c617eaf842ccabe6"
+      "path": "assets/ventricles-DvkWVdXY.js",
+      "bytes": 237976,
+      "sha256": "f29ce18519b46b842499936c3b86960b04ba6cb1f363e4ce2a34afbaf3ba21fb"
     },
     {
       "path": "models/bodyparts3d-v3/abdominal-wall/abdominal-wall.glb",
@@ -11216,6 +11269,11 @@
       "path": "models/bodyparts3d/collicular-brachia/collicular-brachia.glb",
       "bytes": 13044,
       "sha256": "40dd8f7f7b9a6bc79be1fdc6282ed50965c7f07d853a4db981dd7203477185c8"
+    },
+    {
+      "path": "models/bodyparts3d/coronary-venous/coronary-venous.glb",
+      "bytes": 40996,
+      "sha256": "4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12"
     },
     {
       "path": "models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb",
