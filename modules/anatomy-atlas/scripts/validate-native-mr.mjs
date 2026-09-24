@@ -10,7 +10,7 @@ const require = createRequire(import.meta.url),
 const Link = { __esModule: true, ...(await import('vinext/shims/link')) };
 const compiled = await build({
   stdin: {
-    contents: `export * from './lib/local-mr-study'; export {readLocalStudy} from './lib/local-imaging-study'; export {default as Workbench,LoadedNativeMr} from './app/native-mr-workbench';`,
+    contents: `export * from './lib/local-mr-study'; export * from './lib/native-mr-position'; export {readLocalStudy} from './lib/local-imaging-study'; export {default as Workbench,LoadedNativeMr} from './app/native-mr-workbench';`,
     resolveDir: process.cwd(),
     loader: 'tsx',
   },
@@ -88,11 +88,15 @@ runInNewContext(compiled.outputFiles[0].text, {
   DataView,
   FileReader: ControlledFileReader,
   TextDecoder,
-  crypto: { subtle: { digest(...args) {
-    const pending = webcrypto.subtle.digest(...args);
-    pendingDigests.push(pending);
-    return pending;
-  } } },
+  crypto: {
+    subtle: {
+      digest(...args) {
+        const pending = webcrypto.subtle.digest(...args);
+        pendingDigests.push(pending);
+        return pending;
+      },
+    },
+  },
   console,
   FormData: class {
     constructor(form) {
@@ -216,6 +220,41 @@ const p = api.nativeMrPoint(obliqueStudy, 1, 2, 1);
   check(Math.abs(p.lps[i] - n) < 1e-9),
 );
 same(api.nativeMrEdges(obliqueStudy), ['RA', 'LP', 'I', 'S']);
+const obliquePositions = api.nativeMrPositions(obliqueStudy);
+obliquePositions.forEach(({ position }, index) =>
+  check(Math.abs(position - (10 * a + 3.6 * index)) < 1e-9),
+);
+same(
+  obliquePositions.map(({ previousSpacing, nextSpacing }) =>
+    [previousSpacing, nextSpacing].map((n) =>
+      n === null ? null : Number(n.toFixed(3)),
+    ),
+  ),
+  [
+    [null, 3.6],
+    [3.6, 3.6],
+    [3.6, null],
+  ],
+);
+obliquePositions.forEach(({ previousGap, nextGap }) => {
+  if (previousGap !== null) check(Math.abs(previousGap - 0.6) < 1e-9);
+  if (nextGap !== null) check(Math.abs(nextGap - 0.6) < 1e-9);
+});
+const overlapPositions = api.nativeMrPositions({
+  ...obliqueStudy,
+  thickness: 4,
+});
+check(Math.abs(overlapPositions[1].previousGap + 0.4) < 1e-9);
+check(Math.abs(overlapPositions[1].nextGap + 0.4) < 1e-9);
+const slightOffset = structuredClone(oblique);
+slightOffset.positions[1][0] += 0.002 * a;
+slightOffset.positions[1][1] -= 0.002 * a;
+const offsetStudy = await api.readNativeMr(encode(slightOffset));
+const offsetPositions = api.nativeMrPositions(offsetStudy);
+check(Math.abs(offsetPositions[1].previousSpacing - 3.602) < 1e-9);
+check(Math.abs(offsetPositions[1].nextSpacing - 3.598) < 1e-9);
+check(Math.abs(offsetPositions[1].previousGap - 0.602) < 1e-9);
+check(Math.abs(offsetPositions[1].nextGap - 0.598) < 1e-9);
 for (const change of [
   (h) => (h.modality = 'CT'),
   (h) => (h.units = 'HU'),
@@ -268,10 +307,16 @@ const html = renderToStaticMarkup(
 );
 check(html.includes('Native MRI slice'));
 check(html.includes('not interpolated'));
+check(html.includes('Acquired MRI position') && html.includes('projected LPS'));
+check(html.includes('Acquired slice 2 of 3; projected LPS 33.600 mm'));
+check(html.includes('Nominal thickness 3.000 mm'));
 check(!html.includes('<details open'));
 check(html.includes('Unreviewed'));
 check(html.includes('Stored signal'));
-check(html.includes('role="alert"') && html.includes('Source provenance is unverified'));
+check(
+  html.includes('role="alert"') &&
+    html.includes('Source provenance is unverified'),
+);
 check(
   html.indexOf('class="native-mr-provenance"') >= 0 &&
     html.indexOf('class="native-mr-provenance"') <
@@ -340,6 +385,23 @@ find((n) => n.props?.['aria-label'] === 'Native MRI slice').props.onChange({
   target: { value: '2' },
 });
 same(slots[0], 2);
+const positionSelect = () =>
+  find((n) => n.props?.['aria-label'] === 'Acquired MRI position');
+same(positionSelect().type, 'select');
+same(positionSelect().props.value, 2);
+positionSelect().props.onChange({ target: { value: '0' } });
+same(slots[0], 0);
+positionSelect().props.onChange({ target: { value: '1.5' } });
+same(slots[0], 0);
+positionSelect().props.onChange({ target: { value: '3' } });
+same(slots[0], 0);
+positionSelect().props.onChange({ target: { value: '1' } });
+same(slots[0], 1);
+check(
+  walk(tree()).some(
+    (n) => n.type === 'p' && n.props?.className === 'native-mr-gap',
+  ),
+);
 find((n) => n.type === 'form').props.onSubmit({
   preventDefault() {},
   currentTarget: { fields: { low: '10', high: '5' } },
@@ -370,20 +432,24 @@ find((n) => n.props?.children === 'Close local MRI').props.onClick();
 same(closed, 1);
 // Exercise the actual import callbacks with controlled FileReader events.
 function opener() {
-  active = true; cursor = 0;
+  active = true;
+  cursor = 0;
   captureWorkbenchCleanup = true;
   const result = api.Workbench();
-  captureWorkbenchCleanup = false; active = false;
+  captureWorkbenchCleanup = false;
+  active = false;
   return result;
 }
-const openerControl = predicate => {
+const openerControl = (predicate) => {
   const result = walk(opener()).find(predicate);
   assert(result, 'Expected real import control');
   return result;
 };
 slots = [];
-const importChange = openerControl(n => n.props?.type === 'file').props.onChange;
-const loadFile = file => importChange({ target: { files: [file], value: 'synthetic' } });
+const importChange = openerControl((n) => n.props?.type === 'file').props
+  .onChange;
+const loadFile = (file) =>
+  importChange({ target: { files: [file], value: 'synthetic' } });
 const settle = async () => {
   // Cross-realm file promises and WebCrypto each enqueue their own continuations.
   for (let turn = 0; turn < 4; turn++) {
@@ -394,59 +460,91 @@ const settle = async () => {
 loadFile({ size: packet.byteLength });
 const cancelledReader = readers.at(-1);
 check(slots[1]);
-openerControl(n => n.props?.children === 'Cancel').props.onClick();
+openerControl((n) => n.props?.children === 'Cancel').props.onClick();
 same(cancelledReader.aborts, 1);
 same([slots[0], slots[1], slots[2]], [null, false, '']);
-cancelledReader.finish(packet); await settle();
+cancelledReader.finish(packet);
+await settle();
 same([slots[0], slots[1], slots[2]], [null, false, '']);
-const signedPacket = encode(signed, Int16Array.from({ length: 36 }, (_, i) => i - 18));
+const signedPacket = encode(
+  signed,
+  Int16Array.from({ length: 36 }, (_, i) => i - 18),
+);
 loadFile({ size: packet.byteLength });
 const replacedReader = readers.at(-1);
 loadFile({ size: signedPacket.byteLength });
 const nextReader = readers.at(-1);
 same(replacedReader.aborts, 1);
 nextReader.finish(signedPacket);
-await settle(); same(slots[0].range, [-18, 17]);
-replacedReader.fail(Error('Synthetic late read failure')); await settle();
-same(slots[0].range, [-18, 17]); same([slots[1], slots[2]], [false, '']);
-const closeLoaded = openerControl(n => n.type === api.LoadedNativeMr).props.close;
+await settle();
+same(slots[0].range, [-18, 17]);
+replacedReader.fail(Error('Synthetic late read failure'));
+await settle();
+same(slots[0].range, [-18, 17]);
+same([slots[1], slots[2]], [false, '']);
+const closeLoaded = openerControl((n) => n.type === api.LoadedNativeMr).props
+  .close;
 // A retained input callback can race a close; close must abort that read too.
 loadFile({ size: packet.byteLength });
 const closedReader = readers.at(-1);
 closeLoaded();
 same(closedReader.aborts, 1);
-closedReader.finish(packet); await settle();
+closedReader.finish(packet);
+await settle();
 same([slots[0], slots[1], slots[2]], [null, false, '']);
-loadFile({ size: packet.byteLength, startError: Error('Synthetic read start failure') });
+loadFile({
+  size: packet.byteLength,
+  startError: Error('Synthetic read start failure'),
+});
 await settle();
 same(slots[4].current, null);
-check(slots[2].includes('Cannot read this MRI packet') && slots[2].includes('Source provenance is not checked'));
+check(
+  slots[2].includes('Cannot read this MRI packet') &&
+    slots[2].includes('Source provenance is not checked'),
+);
 loadFile({ size: signedPacket.byteLength });
 const afterStartError = readers.at(-1);
-afterStartError.finish(signedPacket); await settle();
-same(slots[0].range, [-18, 17]); same([slots[1], slots[2]], [false, '']);
+afterStartError.finish(signedPacket);
+await settle();
+same(slots[0].range, [-18, 17]);
+same([slots[1], slots[2]], [false, '']);
 // A fabricated packet can be internally consistent, including its claimed source hash.
 // Admission must keep the source-provenance warning visible and assistive-announced.
 const fabricated = fixture();
 fabricated.sourceSha256 = 'f'.repeat(64);
-const fabricatedPacket = encode(fabricated, Uint16Array.from({ length: 36 }, (_, i) => 100 + i));
+const fabricatedPacket = encode(
+  fabricated,
+  Uint16Array.from({ length: 36 }, (_, i) => 100 + i),
+);
 loadFile({ size: fabricatedPacket.byteLength });
-readers.at(-1).finish(fabricatedPacket); await settle();
+readers.at(-1).finish(fabricatedPacket);
+await settle();
 same(slots[0].sourceSha256, fabricated.sourceSha256);
-const fabricatedLoaded = openerControl(n => n.type === api.LoadedNativeMr);
-const fabricatedHtml = renderToStaticMarkup(React.createElement(api.LoadedNativeMr, fabricatedLoaded.props));
-check(fabricatedHtml.includes('role="alert"') && fabricatedHtml.includes('Source provenance is unverified'));
-check(fabricatedHtml.includes('does not authenticate the source') && fabricatedHtml.includes('privacy or clinical clearance'));
-openerControl(n => n.type === api.LoadedNativeMr).props.close();
+const fabricatedLoaded = openerControl((n) => n.type === api.LoadedNativeMr);
+const fabricatedHtml = renderToStaticMarkup(
+  React.createElement(api.LoadedNativeMr, fabricatedLoaded.props),
+);
+check(
+  fabricatedHtml.includes('role="alert"') &&
+    fabricatedHtml.includes('Source provenance is unverified'),
+);
+check(
+  fabricatedHtml.includes('does not authenticate the source') &&
+    fabricatedHtml.includes('privacy or clinical clearance'),
+);
+openerControl((n) => n.type === api.LoadedNativeMr).props.close();
 const priorReaders = readers.length;
 loadFile({ size: api.LOCAL_MR_MAX_BYTES + 1 });
-same(readers.length, priorReaders); check(slots[2].includes('128 MiB')); same(slots[0], null);
+same(readers.length, priorReaders);
+check(slots[2].includes('128 MiB'));
+same(slots[0], null);
 loadFile({ size: packet.byteLength });
 const unmountedReader = readers.at(-1);
 workbenchCleanup();
 same(unmountedReader.aborts, 1);
 const unmountedState = [slots[0], slots[1], slots[2]];
-unmountedReader.fail(Error('Synthetic late unmounted failure')); await settle();
+unmountedReader.fail(Error('Synthetic late unmounted failure'));
+await settle();
 same([slots[0], slots[1], slots[2]], unmountedState);
 let privateFrames = 0;
 const arg = (name) => {

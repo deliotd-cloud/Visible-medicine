@@ -10,6 +10,7 @@ import {
   renderNativeMr,
   type NativeMrStudy,
 } from '@/lib/local-mr-study';
+import { nativeMrPositions } from '@/lib/native-mr-position';
 import './local-imaging-workbench.css';
 import './native-mr-workbench.css';
 
@@ -79,7 +80,16 @@ export function LoadedNativeMr({
   const edges = nativeMrEdges(study);
   const step = (delta: number) =>
     setSlice((n) => Math.min(slices - 1, Math.max(0, n + delta)));
-  const gap = study.centreSpacing - study.thickness;
+  const positions = nativeMrPositions(study);
+  const selectedPosition = positions[slice];
+  const interval = (spacing: number | null, gap: number | null) => {
+    if (spacing === null || gap === null) return 'none';
+    const coverage =
+      Math.abs(gap) < 0.01
+        ? 'near-contiguous nominal coverage'
+        : `${Math.abs(gap).toFixed(2)} mm ${gap > 0 ? 'gap, not interpolated' : 'nominal overlap'}`;
+    return `${spacing.toFixed(3)} mm centre spacing; ${coverage}`;
+  };
   return (
     <main className="native-mr-loaded">
       <p role="alert" className="native-mr-provenance">
@@ -213,7 +223,7 @@ export function LoadedNativeMr({
               step={1}
               value={slice}
               aria-label="Native MRI slice"
-              aria-valuetext={`${slice + 1} of ${slices}`}
+              aria-valuetext={`Acquired slice ${slice + 1} of ${slices}; projected LPS ${selectedPosition.position.toFixed(3)} mm`}
               onChange={(e) => setSlice(Number(e.target.value))}
             />
           </label>
@@ -225,10 +235,35 @@ export function LoadedNativeMr({
             Next
           </Button>
         </header>
+        <label className="native-mr-gap">
+          Acquired position along source LPS slice normal
+          <select
+            className="native-mr-position-select"
+            aria-label="Acquired MRI position"
+            value={slice}
+            onChange={(e) => {
+              const index = Number(e.target.value);
+              if (Number.isInteger(index) && index >= 0 && index < slices)
+                setSlice(index);
+            }}
+          >
+            {positions.map(({ index, position }) => (
+              <option key={index} value={index}>
+                Slice {index + 1} — {position.toFixed(3)} mm
+              </option>
+            ))}
+          </select>
+        </label>
         <p className="native-mr-gap">
-          {Math.abs(gap) < 0.01
-            ? 'Near-contiguous native sampling'
-            : `Approx. ${Math.abs(gap).toFixed(2)} mm ${gap > 0 ? 'gap between acquisitions — not interpolated' : 'nominal slice overlap'}`}
+          Current acquired slice {slice + 1} / {slices}: projected LPS{' '}
+          {selectedPosition.position.toFixed(3)} mm. Nominal thickness{' '}
+          {study.thickness.toFixed(3)} mm. Previous:{' '}
+          {interval(
+            selectedPosition.previousSpacing,
+            selectedPosition.previousGap,
+          )}
+          . Next:{' '}
+          {interval(selectedPosition.nextSpacing, selectedPosition.nextGap)}.
         </p>
         <div className="native-mr-frame" ref={frame}>
           <div
@@ -415,9 +450,8 @@ export default function NativeMrWorkbench() {
           <h2>Check a prepared MRI import</h2>
           <p>
             Internal packet-format and body-integrity checker. Source provenance
-            remains unverified. Didanix Education is the
-            designated learner DICOM/PACS viewer; this is not its replacement or
-            release.
+            remains unverified. Didanix Education is the designated learner
+            DICOM/PACS viewer; this is not its replacement or release.
           </p>
           <p>
             Explore acquired slices with source orientation and stored signal

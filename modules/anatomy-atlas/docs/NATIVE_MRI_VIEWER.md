@@ -10,6 +10,7 @@ The native image occupies the main working area with a slice slider and Previous
 - Source-derived edge letters indicate directions toward the screen edges, including compound oblique labels. They do not classify sequence, body-part laterality or a standardised radiological orientation. No mirror/rotation is applied.
 - Physical in-plane pixel aspect is preserved when fitting the image. Display range and greyscale inversion do not modify source samples. No CT HU windows or calibrated quantitative-MRI interpretation are supplied.
 - Actual native origins determine coordinates; the UI distinguishes centre spacing, nominal slice thickness, acquisition gaps and nominal overlap. There is no interpolation across acquisitions and no MPR reconstruction or 3D tissue claim.
+- The acquired-position control lists only existing frames. Its millimetre value is each native plane origin projected onto the cross-product slice normal in LPS coordinates; it is not a superior/inferior coordinate for an oblique series. The selected frame shows its own projected position and separate previous/next centre spacing and nominal gap or overlap. The native select supports keyboard navigation. Neither the list nor a selection creates an intermediate plane.
 - Closing clears the loaded React state; cancelling, closing or replacing an import aborts its active `FileReader` and invalidates late results. File contents remain in memory for this browser session. The module has no upload, telemetry, browser-storage or server-persistence path. Garbage-collection timing and secure memory erasure are not guaranteed.
 - Clinical and privacy approval remain false, and atlas registration is null. No segmentations, diagnostic conclusions, normality labels, approval buttons, paywall changes or lecture entitlements are introduced.
 - A loaded packet carries a persistent visible warning, announced to assistive technology, that source provenance is unverified. Passing the local check means only that the packet format and body integrity are internally consistent; the checker cannot authenticate where the data came from or grant privacy or clinical clearance.
@@ -35,6 +36,22 @@ Dimensions: at most2048×2048×512, at least two slices, constrained further by 
 Coordinate basis: [DICOM PS3.3 Image Plane Module](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.6.2.html). Column index uses the first orientation vector and column spacing; row index uses the second vector and row spacing. LPS positive directions are left, posterior and superior. Both indices refer to voxel centres.
 
 ## Verification and remaining acceptance
+
+### Acquisition-position navigation follow-up, 24 September 2026
+
+The synthetic oblique packet was loaded in a local browser on desktop and at
+390 × 844 mobile emulation. Five acquired positions appeared at 40, 42, 44, 46
+and 48 mm along this fixture's source LPS normal. Keyboard selection changed
+from slice 3 to slice 2 and updated the existing slice slider, signal, LPS
+sample coordinate and adjacent-gap text together. The synthetic packet's
+1 mm nominal thickness and 2 mm centre spacing display a 1 mm gap, explicitly
+not interpolated. At phone width the source-provenance alert remained visible,
+the position control was at least 44 CSS px high, and the page had no horizontal
+overflow. The altered source was not published; no private scan was used.
+Focused synthetic/component checks, TypeScript and the imaging-link suite pass.
+This is not physical-device, screen-reader, complete-series, privacy or
+clinical acceptance. The position is a projection along the packet's own normal,
+not a patient-specific atlas correspondence or a generated MRI plane.
 
 ### Browser follow-up, 13 September 2026
 

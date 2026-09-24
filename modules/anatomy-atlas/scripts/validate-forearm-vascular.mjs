@@ -347,7 +347,7 @@ for (const id of ['FMA22806', 'FMA77144', 'FMA22809', 'FMA22799'])
 const compiled = await build({
   stdin: {
     contents:
-      "export * from './lib/forearm-vascular-anatomy';export * from './app/dissection-data';export * from './app/body-content';export * from './lib/anatomy-practice';export * from './lib/anatomy-link-registry';export * from './lib/study-links';",
+      "export * from './lib/forearm-vascular-anatomy';export * from './app/dissection-data';export * from './app/body-content';export * from './lib/anatomy-practice';export * from './lib/anatomy-link-registry';export * from './lib/study-links';export {bodyDisplayCatalog} from './lib/body-display-catalog';",
     resolveDir: fileURLToPath(new URL('../', import.meta.url)),
     loader: 'ts',
   },
@@ -362,6 +362,7 @@ const api = await import(
 );
 same(api.forearmVascularGroups.length, 2);
 same(api.forearmVascularStudySets.length, 3);
+const displayCatalog = api.bodyDisplayCatalog(catalog);
 for (const s of additions) {
   const group = api.forearmVascularGroupFor(s.fmaId);
   check(group);
@@ -372,8 +373,21 @@ for (const s of additions) {
     check(info.title.includes('draft'));
     check(info.bullets.includes(group.caution));
   }
-  for (const tab of ['ct', 'mri', 'ultrasound'])
-    check(api.bodyContent(s, tab).body.includes('No imaging study'));
+  // CT orientation was added later for these exact four source identities;
+  // MRI and ultrasound remain pending. Preserve that distinction rather than
+  // treating a newer source-bound CT draft as an absent imaging study.
+  const display = displayCatalog.structures.find((entry) => entry.fmaId === s.fmaId);
+  check(display);
+  const ct = api.bodyLesson(display, 'ct');
+  same(ct.readiness, 'draft');
+  check(ct.title.includes('CT arterial orientation'));
+  check(ct.note.includes('No patient images, registration'));
+  check(ct.citations.length > 0);
+  for (const tab of ['mri', 'ultrasound']) {
+    const pending = api.bodyLesson(display, tab);
+    same(pending.readiness, 'pending');
+    check(pending.body.includes('No imaging study'));
+  }
   const link = api.bodyLinkEntries(catalog).find((e) => e.id === s.id);
   same(link.sources, s.sources);
   same(link.reference.kind, 'surface-bounds-centre');
@@ -411,7 +425,10 @@ for (const study of api.forearmVascularStudySets)
         api.resolveDissection(scope, profile, removed).visible,
         visible.filter((v) => v.id !== s.id),
       );
-      same(api.dissectionReducer(removed, { type: 'undo' }), state);
+      const undone = api.dissectionReducer(removed, { type: 'undo' });
+      same(api.resolveDissection(scope, profile, undone).visible, visible);
+      same(undone.future.length, 1);
+      same(api.dissectionReducer(undone, { type: 'redo' }), removed);
       same(
         api.resolveDissection(
           scope,
