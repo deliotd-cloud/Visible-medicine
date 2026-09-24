@@ -45,6 +45,8 @@ export * from './lib/thoracoabdominal-organ-imaging.ts';
 export * from './content/thoracoabdominal-organ-imaging.ts';
 export * from './content/main-bronchus-xray.ts';
 export * from './lib/main-bronchus-xray.ts';
+export * from './lib/proper-digital-teaching.ts';
+export * from './content/proper-digital-teaching.ts';
 export * from './lib/central-vessel-imaging.ts';
 export * from './content/central-vessel-imaging.ts';
 export * from './lib/thoracic-branch-imaging.ts';

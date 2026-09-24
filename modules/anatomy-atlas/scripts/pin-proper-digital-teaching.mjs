@@ -1,0 +1,25 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+import {contentContext} from './content-contract-tools.mjs';
+import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
+import {wholeBodyTeachingSnapshot} from './exact-clinical-reference-history.mjs';
+const parentCommit='facf4a46d8a9380c890af16495a2c609ad74f5f3';
+const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
+const checking=process.argv.includes('--check');
+if(!checking)assert.equal(execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),parentCommit);
+const api=checking?await exactSourceHistoryApi(parentCommit):(await contentContext()).api;
+const raw=JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json'));
+const display=api.bodyDisplayCatalog(raw);
+const existing=JSON.parse(await readFile('content/palmar-arterial-imaging-pins.json'));
+const entries=existing.entries.filter(e=>e.group==='proper-digital').map(({identity})=>{
+ assert.deepEqual(display.structures.find(s=>s.id===identity.id),identity);
+ return {identity,previous:Object.fromEntries(['anatomy','function'].map(t=>[t,api.bodyLesson(identity,t)]))};
+});
+assert.equal(entries.length,10);assert.equal(entries.filter(e=>e.identity.laterality==='right').length,6);
+const pins={parentCommit,originalPinsHash:hash(existing),catalogHash:hash(display),previousAllLessonsAndRecipesHash:hash(wholeBodyTeachingSnapshot(api,raw)),entries};
+const file='content/proper-digital-teaching.before.json',text=JSON.stringify(pins,null,2)+'\n';
+if(checking)assert.equal((await readFile(file,'utf8')).replace(/\r\n/g,'\n'),text);
+else await writeFile(file,text,{flag:'wx'});
+console.log(JSON.stringify({source:parentCommit,selections:10,topics:20,pinsHash:hash(pins),beforeHash:pins.previousAllLessonsAndRecipesHash}));

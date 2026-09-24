@@ -1,5 +1,6 @@
 import { centralVesselImagingLesson } from '../lib/central-vessel-imaging';
 import { mainBronchusXrayLesson } from '../lib/main-bronchus-xray';
+import { properDigitalTeachingLesson } from '../lib/proper-digital-teaching';
 import { lacrimalDrainageImagingLesson } from '../lib/lacrimal-drainage-imaging';
 import { laryngealImagingLesson } from '../lib/laryngeal-imaging';
 import { laryngealMuscleTeachingLesson } from '../lib/laryngeal-muscle-teaching';
@@ -211,6 +212,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const properDigital = properDigitalTeachingLesson(s, tab);
+  if (properDigital) return properDigital;
   const mainBronchusXray = mainBronchusXrayLesson(s, tab);
   if (mainBronchusXray) return mainBronchusXray;
   const laryngealImaging = laryngealImagingLesson(s, tab);

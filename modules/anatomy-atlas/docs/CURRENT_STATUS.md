@@ -1,5 +1,18 @@
 # Current atlas status
 
+[Proper digital artery teaching](PROPER_DIGITAL_TEACHING.md) replaces twenty
+generic Anatomy/Function placements with named finger/border orientation and
+arterial supply notes across the ten existing hand selections (six right, four
+left). All other 9,916 topics, source geometry and recipes remain unchanged.
+Clinical, pathology and imaging drafts are preserved; no missing artery is
+invented. Revision-bound radiologist review remains pending.
+
+Website `ae5cb2c` now privately publishes the shared viewer from Atlas `facf4a4`,
+including the Search handoff correction below. All 136 protected model objects
+and 143 paths are retained. The main task's Search handoff website checkpoint
+records 185 website tests and verified GitHub/D recovery. This is publication,
+not hosted-device or clinical acceptance; older integration-pending notes are historical.
+
 [Renal segmental source review](RENAL_SEGMENTAL_SOURCE_REVIEW.md) audits five
 additional source-labelled branches against 1,104 root and seven nested renal
 selections. Two source-bound review figures expose unresolved parent continuity

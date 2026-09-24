@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "proper-digital-teaching:test": "node scripts/record-proper-digital-teaching.mjs --check && node scripts/validate-proper-digital-teaching.mjs",
     "renal-segmental:audit": "node scripts/audit-renal-segmental-source.mjs --check",
     "renal-segmental:review": "node scripts/render-renal-segmental-review.mjs --check",
     "practice-panel-navigation:test": "node scripts/test-practice-panel-navigation.mjs",

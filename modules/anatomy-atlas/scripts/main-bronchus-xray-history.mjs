@@ -3,9 +3,13 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import pins from '../content/thoracoabdominal-organ-imaging-pins.json' with {type:'json'};
 import transition from '../content/main-bronchus-xray.transition.json' with {type:'json'};
+import {beforeProperDigitalTeaching} from './proper-digital-teaching-history.mjs';
 export const mainBronchusXrayHash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const hash=mainBronchusXrayHash;
 export function authoringBeforeMainBronchusXray(context){
+  const originalApi=context.api;
+  const replayApi=beforeProperDigitalTeaching(originalApi);
+  if(replayApi!==originalApi)context={...context,api:replayApi};
   const {api}=context;
   assert.equal(hash(transition),'92d3e8c0decffccca088ddd5a97df1ab54f54cbb16a0efdb81d59610dee3dfe1');
   assert.equal(transition.parentCommit,'977ac4160e27f0762c497741e6a2250aa3f4749e');

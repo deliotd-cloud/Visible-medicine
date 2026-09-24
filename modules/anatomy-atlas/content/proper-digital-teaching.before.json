@@ -1,0 +1,858 @@
+{
+  "parentCommit": "facf4a46d8a9380c890af16495a2c609ad74f5f3",
+  "originalPinsHash": "dd76c97a4730bf481d6e9f9b3b70cff270616622638587e04610720782a81439",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "previousAllLessonsAndRecipesHash": "98423327a4a07b5b03ea2c15edd9cb4e4948d234f34ea22babd190ca7b4d385b",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+        "fmaId": "FMA22858",
+        "name": "Lateral proper palmar digital artery of right middle finger",
+        "sourceName": "lateral proper palmar digital artery of right middle finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA22858",
+        "bounds": {
+          "min": [
+            -2.83381986618042,
+            -1.4439300298690796,
+            0.9220399260520935
+          ],
+          "max": [
+            -2.7455499172210693,
+            -0.693040132522583,
+            1.4452400207519531
+          ]
+        },
+        "center": [
+          -2.7896848917007446,
+          -1.0684850811958313,
+          1.1836399734020233
+        ],
+        "anchor": [
+          -2.7890799045562744,
+          -1.1083800792694092,
+          1.1019700765609741
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2365",
+            "sha256": "6e9286403da0fc1082440c54318f0b87189fac08fdba5c6d27ae0e68738864cb"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Proper palmar digital source branches · draft",
+          "body": "Proper palmar digital arteries supply the fingers. The supplied subset includes six right and four left source identities, not a complete paired set.",
+          "bullets": [
+            "Source identity: FMA22858 · 1 source component",
+            "Unvalidated source-labelled arteries, not a verified continuous vascular tree. Branch count, numbering, origins, endpoints, calibre, lumen, connections and variants require specialist review. No perfusion, surgical plane or patient registration is simulated. Missing counterparts and digital nerves are not invented.",
+            "Use Study windows & focuses to preview and open its local study view."
+          ],
+          "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Proper palmar digital source branches · draft",
+          "body": "Use source labels and neighbouring landmarks to compare the available finger arterial segments; absent medial-side counterparts are not mirrored into existence.",
+          "bullets": [
+            "Unvalidated source-labelled arteries, not a verified continuous vascular tree. Branch count, numbering, origins, endpoints, calibre, lumen, connections and variants require specialist review. No perfusion, surgical plane or patient registration is simulated. Missing counterparts and digital nerves are not invented."
+          ],
+          "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+        "fmaId": "FMA22860",
+        "name": "Lateral proper palmar digital artery of left middle finger",
+        "sourceName": "lateral proper palmar digital artery of left middle finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA22860",
+        "bounds": {
+          "min": [
+            2.7455801963806152,
+            -1.4439202547073364,
+            0.922059953212738
+          ],
+          "max": [
+            2.8338699340820312,
+            -0.6930499076843262,
+            1.445039987564087
+          ]
+        },
+        "center": [
+          2.7897250652313232,
+          -1.0684850811958313,
+          1.1835499703884125
+        ],
+        "anchor": [
+          2.792019844055176,
+          -1.117110013961792,
+          1.1070799827575684
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2334",
+            "sha256": "71c5f734e80b8abb196f16533a851caa043a11981f6d1f65b738bb6e2d337a7f"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Proper palmar digital source branches · draft",
+          "body": "Proper palmar digital arteries supply the fingers. The supplied subset includes six right and four left source identities, not a complete paired set.",
+          "bullets": [
+            "Source identity: FMA22860 · 1 source component",
+            "Unvalidated source-labelled arteries, not a verified continuous vascular tree. Branch count, numbering, origins, endpoints, calibre, lumen, connections and variants require specialist review. No perfusion, surgical plane or patient registration is simulated. Missing counterparts and digital nerves are not invented.",
+            "Use Study windows & focuses to preview and open its local study view."
+          ],
+          "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Proper palmar digital source branches · draft",
+          "body": "Use source labels and neighbouring landmarks to compare the available finger arterial segments; absent medial-side counterparts are not mirrored into existence.",
+          "bullets": [
+            "Unvalidated source-labelled arteries, not a verified continuous vascular tree. Branch count, numbering, origins, endpoints, calibre, lumen, connections and variants require specialist review. No perfusion, surgical plane or patient registration is simulated. Missing counterparts and digital nerves are not invented."
+          ],
+          "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
+        "fmaId": "FMA23050",
+        "name": "Medial proper palmar digital artery of right index finger",
+        "sourceName": "medial proper palmar digital artery of right index finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA23050",
+        "bounds": {
+          "min": [
+            -3.0375499725341797,
+            -1.3739800453186035,
+            0.8994799852371216
+          ],
+          "max": [
+            -2.7474799156188965,
+            -0.693040132522583,
+            1.3233000040054321
+          ]
+        },
+        "center": [
+          -2.892514944076538,
+          -1.0335100889205933,
+          1.1113899946212769
+        ],
+        "anchor": [
+          -2.9048900604248047,
+          -1.0935498476028442,
+          1.020379900932312
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2364",
+            "sha256": "14031e155e3e5eba135551165f830141a66510b79d6834ea37e4715356e50f3e"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Proper palmar digital source branches · draft",
+          "body": "Proper palmar digital arteries supply the fingers. The supplied subset includes six right and four left source identities, not a complete paired set.",
+          "bullets": [
+            "Source identity: FMA23050 · 1 source component",
+            "Unvalidated source-labelled arteries, not a verified continuous vascular tree. Branch count, numbering, origins, endpoints, calibre, lumen, connections and variants require specialist review. No perfusion, surgical plane or patient registration is simulated. Missing counterparts and digital nerves are not invented.",
+            "Use Study windows & focuses to preview and open its local study view."
+          ],
+          "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Proper palmar digital source branches · draft",
+          "body": "Use source labels and neighbouring landmarks to compare the available finger arterial segments; absent medial-side counterparts are not mirrored into existence.",
+          "bullets": [
+            "Unvalidated source-labelled arteries, not a verified continuous vascular tree. Branch count, numbering, origins, endpoints, calibre, lumen, connections and variants require specialist review. No perfusion, surgical plane or patient registration is simulated. Missing counterparts and digital nerves are not invented."
+          ],
+          "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
+        "fmaId": "FMA23051",
+        "name": "Medial proper palmar digital artery of left index finger",
+        "sourceName": "medial proper palmar digital artery of left index finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA23051",
+        "bounds": {
+          "min": [
+            2.7474398612976074,
+            -1.3738898038864136,
+            0.8994399905204773
+          ],
+          "max": [
+            3.037400007247925,
+            -0.6930902004241943,
+            1.3232200145721436
+          ]
+        },
+        "center": [
+          2.892419934272766,
+          -1.033490002155304,
+          1.1113300025463104
+        ],
+        "anchor": [
+          2.910109758377075,
+          -1.10198974609375,
+          1.0281000137329102
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2333",
+            "sha256": "c2466e29e2cdaa7e0fa35c6daff5faf53e8160455bdf64718ca1bebd1f926449"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Proper palmar digital source branches · draft",
+          "body": "Proper palmar digital arteries supply the fingers. The supplied subset includes six right and four left source identities, not a complete paired set.",
+          "bullets": [
+            "Source identity: FMA23051 · 1 source component",
+            "Unvalidated source-labelled arteries, not a verified continuous vascular tree. Branch count, numbering, origins, endpoints, calibre, lumen, connections and variants require specialist review. No perfusion, surgical plane or patient registration is simulated. Missing counterparts and digital nerves are not invented.",
+            "Use Study windows & focuses to preview and open its local study view."
+          ],
+          "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Proper palmar digital source branches · draft",
+          "body": "Use source labels and neighbouring landmarks to compare the available finger arterial segments; absent medial-side counterparts are not mirrored into existence.",
+          "bullets": [
+            "Unvalidated source-labelled arteries, not a verified continuous vascular tree. Branch count, numbering, origins, endpoints, calibre, lumen, connections and variants require specialist review. No perfusion, surgical plane or patient registration is simulated. Missing counterparts and digital nerves are not invented."
+          ],
+          "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
+        "fmaId": "FMA23052",
+        "name": "Medial proper palmar digital artery of right ring finger",
+        "sourceName": "medial proper palmar digital artery of right ring finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA23052",
+        "bounds": {
+          "min": [
+            -2.480959892272949,
+            -1.3338098526000977,
+            0.9697300791740417
+          ],
+          "max": [
+            -2.386229991912842,
+            -0.6275702118873596,
+            1.428200125694275
+          ]
+        },
+        "center": [
+          -2.4335949420928955,
+          -0.9806900322437286,
+          1.1989651024341583
+        ],
+        "anchor": [
+          -2.4278199672698975,
+          -1.0293700695037842,
+          1.1241199970245361
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2369",
+            "sha256": "ba390a7db51b3e7f842bd5c07be10c61ee7c81693cd145aac59b7256adc8b765"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Proper palmar digital source branches · draft",
+          "body": "Proper palmar digital arteries supply the fingers. The supplied subset includes six right and four left source identities, not a complete paired set.",
+          "bullets": [
+            "Source identity: FMA23052 · 1 source component",
+            "Unvalidated source-labelled arteries, not a verified continuous vascular tree. Branch count, numbering, origins, endpoints, calibre, lumen, connections and variants require specialist review. No perfusion, surgical plane or patient registration is simulated. Missing counterparts and digital nerves are not invented.",
+            "Use Study windows & focuses to preview and open its local study view."
+          ],
+          "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Proper palmar digital source branches · draft",
+          "body": "Use source labels and neighbouring landmarks to compare the available finger arterial segments; absent medial-side counterparts are not mirrored into existence.",
+          "bullets": [
+            "Unvalidated source-labelled arteries, not a verified continuous vascular tree. Branch count, numbering, origins, endpoints, calibre, lumen, connections and variants require specialist review. No perfusion, surgical plane or patient registration is simulated. Missing counterparts and digital nerves are not invented."
+          ],
+          "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+        "fmaId": "FMA23054",
+        "name": "Lateral proper palmar digital artery of right little finger",
+        "sourceName": "lateral proper palmar digital artery of right little finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA23054",
+        "bounds": {
+          "min": [
+            -2.400559902191162,
+            -1.2205902338027954,
+            0.9698500037193298
+          ],
+          "max": [
+            -2.2515599727630615,
+            -0.627260148525238,
+            1.3116400241851807
+          ]
+        },
+        "center": [
+          -2.326059937477112,
+          -0.9239251911640167,
+          1.1407450139522552
+        ],
+        "anchor": [
+          -2.3207900524139404,
+          -0.9369800090789795,
+          1.0925101041793823
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2368",
+            "sha256": "13679f85cb1d46e03c053ca94c1d6bfc519b107bb88bf4fb5b7972dff5767168"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Proper palmar digital source branches · draft",
+          "body": "Proper palmar digital arteries supply the fingers. The supplied subset includes six right and four left source identities, not a complete paired set.",
+          "bullets": [
+            "Source identity: FMA23054 · 1 source component",
+            "Unvalidated source-labelled arteries, not a verified continuous vascular tree. Branch count, numbering, origins, endpoints, calibre, lumen, connections and variants require specialist review. No perfusion, surgical plane or patient registration is simulated. Missing counterparts and digital nerves are not invented.",
+            "Use Study windows & focuses to preview and open its local study view."
+          ],
+          "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Proper palmar digital source branches · draft",
+          "body": "Use source labels and neighbouring landmarks to compare the available finger arterial segments; absent medial-side counterparts are not mirrored into existence.",
+          "bullets": [
+            "Unvalidated source-labelled arteries, not a verified continuous vascular tree. Branch count, numbering, origins, endpoints, calibre, lumen, connections and variants require specialist review. No perfusion, surgical plane or patient registration is simulated. Missing counterparts and digital nerves are not invented."
+          ],
+          "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+        "fmaId": "FMA23055",
+        "name": "Lateral proper palmar digital artery of left little finger",
+        "sourceName": "lateral proper palmar digital artery of left little finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA23055",
+        "bounds": {
+          "min": [
+            2.2515599727630615,
+            -1.2205102443695068,
+            0.9698500037193298
+          ],
+          "max": [
+            2.4004499912261963,
+            -0.6272497773170471,
+            1.311479926109314
+          ]
+        },
+        "center": [
+          2.326004981994629,
+          -0.923880010843277,
+          1.140664964914322
+        ],
+        "anchor": [
+          2.3224599361419678,
+          -0.9341302514076233,
+          1.0909899473190308
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2336",
+            "sha256": "7823fa45ffc3aaa59381d011f51e951a5288f316af664a4dc156eae26021cf87"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Proper palmar digital source branches · draft",
+          "body": "Proper palmar digital arteries supply the fingers. The supplied subset includes six right and four left source identities, not a complete paired set.",
+          "bullets": [
+            "Source identity: FMA23055 · 1 source component",
+            "Unvalidated source-labelled arteries, not a verified continuous vascular tree. Branch count, numbering, origins, endpoints, calibre, lumen, connections and variants require specialist review. No perfusion, surgical plane or patient registration is simulated. Missing counterparts and digital nerves are not invented.",
+            "Use Study windows & focuses to preview and open its local study view."
+          ],
+          "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Proper palmar digital source branches · draft",
+          "body": "Use source labels and neighbouring landmarks to compare the available finger arterial segments; absent medial-side counterparts are not mirrored into existence.",
+          "bullets": [
+            "Unvalidated source-labelled arteries, not a verified continuous vascular tree. Branch count, numbering, origins, endpoints, calibre, lumen, connections and variants require specialist review. No perfusion, surgical plane or patient registration is simulated. Missing counterparts and digital nerves are not invented."
+          ],
+          "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
+        "fmaId": "FMA85112",
+        "name": "Medial proper palmar digital artery of right middle finger",
+        "sourceName": "medial proper palmar digital artery of right middle finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA85112",
+        "bounds": {
+          "min": [
+            -2.745840072631836,
+            -1.4371600151062012,
+            0.9333000183105469
+          ],
+          "max": [
+            -2.549530029296875,
+            -0.6927899122238159,
+            1.4368600845336914
+          ]
+        },
+        "center": [
+          -2.6476850509643555,
+          -1.0649749636650085,
+          1.1850800514221191
+        ],
+        "anchor": [
+          -2.6526999473571777,
+          -1.120059847831726,
+          1.1186200380325317
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2367",
+            "sha256": "6539d2130fed7f64fcea3c85a75bfc8ee195b6bc45d8fa06633fa5f66a17efa3"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Proper palmar digital source branches · draft",
+          "body": "Proper palmar digital arteries supply the fingers. The supplied subset includes six right and four left source identities, not a complete paired set.",
+          "bullets": [
+            "Source identity: FMA85112 · 1 source component",
+            "Unvalidated source-labelled arteries, not a verified continuous vascular tree. Branch count, numbering, origins, endpoints, calibre, lumen, connections and variants require specialist review. No perfusion, surgical plane or patient registration is simulated. Missing counterparts and digital nerves are not invented.",
+            "Use Study windows & focuses to preview and open its local study view."
+          ],
+          "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Proper palmar digital source branches · draft",
+          "body": "Use source labels and neighbouring landmarks to compare the available finger arterial segments; absent medial-side counterparts are not mirrored into existence.",
+          "bullets": [
+            "Unvalidated source-labelled arteries, not a verified continuous vascular tree. Branch count, numbering, origins, endpoints, calibre, lumen, connections and variants require specialist review. No perfusion, surgical plane or patient registration is simulated. Missing counterparts and digital nerves are not invented."
+          ],
+          "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+        "fmaId": "FMA85115",
+        "name": "Lateral proper palmar digital artery of right ring finger",
+        "sourceName": "lateral proper palmar digital artery of right ring finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA85115",
+        "bounds": {
+          "min": [
+            -2.564070224761963,
+            -1.334089994430542,
+            0.9334399700164795
+          ],
+          "max": [
+            -2.542220115661621,
+            -0.6924102902412415,
+            1.4273300170898438
+          ]
+        },
+        "center": [
+          -2.553145170211792,
+          -1.0132501423358917,
+          1.1803849935531616
+        ],
+        "anchor": [
+          -2.5565099716186523,
+          -1.075100064277649,
+          1.0954300165176392
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2366",
+            "sha256": "08748e77df60eee2f5219230e2944a1e96ffd3ea4f506cf6a9c20dec6c6ca488"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Proper palmar digital source branches · draft",
+          "body": "Proper palmar digital arteries supply the fingers. The supplied subset includes six right and four left source identities, not a complete paired set.",
+          "bullets": [
+            "Source identity: FMA85115 · 1 source component",
+            "Unvalidated source-labelled arteries, not a verified continuous vascular tree. Branch count, numbering, origins, endpoints, calibre, lumen, connections and variants require specialist review. No perfusion, surgical plane or patient registration is simulated. Missing counterparts and digital nerves are not invented.",
+            "Use Study windows & focuses to preview and open its local study view."
+          ],
+          "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Proper palmar digital source branches · draft",
+          "body": "Use source labels and neighbouring landmarks to compare the available finger arterial segments; absent medial-side counterparts are not mirrored into existence.",
+          "bullets": [
+            "Unvalidated source-labelled arteries, not a verified continuous vascular tree. Branch count, numbering, origins, endpoints, calibre, lumen, connections and variants require specialist review. No perfusion, surgical plane or patient registration is simulated. Missing counterparts and digital nerves are not invented."
+          ],
+          "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+        "fmaId": "FMA85116",
+        "name": "Lateral proper palmar digital artery of left ring finger",
+        "sourceName": "lateral proper palmar digital artery of left ring finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA85116",
+        "bounds": {
+          "min": [
+            2.5423200130462646,
+            -1.3341400623321533,
+            0.9337600469589233
+          ],
+          "max": [
+            2.5642199516296387,
+            -0.6926098465919495,
+            1.4271899461746216
+          ]
+        },
+        "center": [
+          2.5532699823379517,
+          -1.0133749544620514,
+          1.1804749965667725
+        ],
+        "anchor": [
+          2.5578999519348145,
+          -1.0740399360656738,
+          1.0950900316238403
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2335",
+            "sha256": "bba9cde99bda6f51dd49338bc8a53a155969096519d271938797076d665ebb50"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Proper palmar digital source branches · draft",
+          "body": "Proper palmar digital arteries supply the fingers. The supplied subset includes six right and four left source identities, not a complete paired set.",
+          "bullets": [
+            "Source identity: FMA85116 · 1 source component",
+            "Unvalidated source-labelled arteries, not a verified continuous vascular tree. Branch count, numbering, origins, endpoints, calibre, lumen, connections and variants require specialist review. No perfusion, surgical plane or patient registration is simulated. Missing counterparts and digital nerves are not invented.",
+            "Use Study windows & focuses to preview and open its local study view."
+          ],
+          "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Proper palmar digital source branches · draft",
+          "body": "Use source labels and neighbouring landmarks to compare the available finger arterial segments; absent medial-side counterparts are not mirrored into existence.",
+          "bullets": [
+            "Unvalidated source-labelled arteries, not a verified continuous vascular tree. Branch count, numbering, origins, endpoints, calibre, lumen, connections and variants require specialist review. No perfusion, surgical plane or patient registration is simulated. Missing counterparts and digital nerves are not invented."
+          ],
+          "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html"
+          ]
+        }
+      }
+    }
+  ]
+}

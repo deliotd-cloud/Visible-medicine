@@ -6,10 +6,11 @@ import ts from 'typescript';
 import pins from '../content/thoracoabdominal-organ-imaging-pins.json' with {type:'json'};
 import transition from '../content/main-bronchus-xray.transition.json' with {type:'json'};
 import {contentContext} from './content-contract-tools.mjs';
+import {beforeProperDigitalTeaching} from './proper-digital-teaching-history.mjs';
 import {wholeBodyTeachingSnapshot} from './exact-clinical-reference-history.mjs';
 import {authoringBeforeMainBronchusXray,mainBronchusXrayHash as hash} from './main-bronchus-xray-history.mjs';
 
-const context=await contentContext(),{api,catalog}=context;
+const live=await contentContext(),context={...live,api:beforeProperDigitalTeaching(live.api)},{api,catalog}=context;
 const display=api.bodyDisplayCatalog(catalog),before=authoringBeforeMainBronchusXray(context);
 assert.equal(hash(display),transition.catalogHash,'Source geometry/display changed');
 assert.equal(hash(wholeBodyTeachingSnapshot(before.api,catalog)),transition.previousAllLessonsAndRecipesHash,'Other teaching or dissection recipes changed');
