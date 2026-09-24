@@ -1,5 +1,14 @@
 # Third-party notices
 
+## Popliteal artery–vein study — 24 September 2026
+
+The paired study uses existing attributed BodyParts3D surfaces only. Brief
+original orientation instructions cite TTUHSC El Paso's lower-limb artery and
+vein tables as factual references; no publisher illustrations or table text
+are copied. No new model, dependency, font file, texture, scan or paid service
+is introduced. Source validation remains pending; see
+[study and verification scope](../docs/POPLITEAL_VESSEL_STUDY.md).
+
 ## Dorsal penile source review — 24 September 2026
 
 Five unchanged BodyParts3D v4 IS-A OBJ sources are retained under

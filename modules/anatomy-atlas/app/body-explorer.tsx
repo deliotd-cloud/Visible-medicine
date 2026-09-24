@@ -164,6 +164,8 @@ import { relatedStudyViews } from '@/lib/study-navigation';
 import type { StudyCamera, StudyView } from '@/lib/study-views';
 import { kneeStudyBounds, kneeStudySets } from '@/lib/knee-studies';
 import { genicularStudyBounds } from '@/lib/genicular-study';
+import { poplitealVesselStudyBounds } from '@/lib/popliteal-vessel-study';
+import { poplitealVesselStudy } from '@/content/popliteal-vessel-study';
 import { genicularStudy } from '@/content/genicular-study';
 import { elbowStudyBounds } from '@/lib/elbow-studies';
 import { elbowStudySets } from '@/content/elbow-studies';
@@ -573,7 +575,7 @@ export default function BodyExplorer({
   const cameraRecipeId = dissection.focusId ?? dissection.stageId;
   const dedicatedCameraRecipe = (initialRegion === 'leg' &&
     (kneeStudySets.some(study => study.id === cameraRecipeId) ||
-      genicularStudy.id === cameraRecipeId)) ||
+      genicularStudy.id === cameraRecipeId || poplitealVesselStudy.id === cameraRecipeId)) ||
     (initialRegion === 'forearm' && elbowStudySets.some(study => study.id === cameraRecipeId));
   const jointCloseUp = useMemo(() => {
     const input = {
@@ -595,6 +597,7 @@ export default function BodyExplorer({
       kneeStudyBounds(input) ??
       elbowStudyBounds({ ...input, catalog }) ??
       genicularStudyBounds({ ...input, catalog }) ??
+      poplitealVesselStudyBounds({ ...input, catalog }) ??
       cubitalStudyBounds({ ...input, catalog })
     );
   }, [

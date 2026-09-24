@@ -37,6 +37,7 @@ import {
 } from '../content/longus-colli-studies.ts';
 import { limbVascularStudySets, limbVascularReferences } from '../content/limb-vascular-studies.ts';
 import { genicularStudy, genicularStudyReferences } from '../content/genicular-study.ts';
+import { poplitealVesselStudy, poplitealVesselReferences, poplitealVesselBindings } from '../content/popliteal-vessel-study.ts';
 import { deferentDuctStudy, deferentDuctReferences } from '../content/deferent-duct-study.ts';
 import { inferiorEpigastricStudy, inferiorEpigastricReferences } from '../content/inferior-epigastric-study.ts';
 import { pelvicVeinStudy, pelvicVeinReferences } from '../content/pelvic-vein-study.ts';
@@ -1377,6 +1378,19 @@ for (const region of genicularStudy.regions) {
     landmarks: genicularStudy.landmarks,
   });
   dissectionProfiles[region].references.push(...genicularStudyReferences);
+}
+
+for (const region of poplitealVesselStudy.regions) {
+  dissectionProfiles[region].focuses.push({
+    id: poplitealVesselStudy.id, title: poplitealVesselStudy.title,
+    rule: { fmaIds: poplitealVesselStudy.targetFmaIds }, context: poplitealVesselStudy.context,
+    includeSkeleton: false, view: poplitealVesselStudy.view,
+    description: poplitealVesselStudy.description, inspect: poplitealVesselStudy.inspect,
+    landmarks: poplitealVesselStudy.landmarks,
+    requiredSourceBindings: poplitealVesselBindings,
+    sideFilteredSourceBindings: true,
+  });
+  dissectionProfiles[region].references.push(...poplitealVesselReferences);
 }
 
 for (const region of deferentDuctStudy.regions) {

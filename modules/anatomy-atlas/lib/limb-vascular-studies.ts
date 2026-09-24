@@ -3,6 +3,7 @@ import { limbVascularStudySets } from '../content/limb-vascular-studies.ts';
 import { sourceCanonical } from './body-source-additions.ts';
 import type { BodyCatalog } from '../app/body-types';
 import { genicularStudyReady } from './genicular-study.ts';
+import { poplitealVesselStudyReady } from './popliteal-vessel-study.ts';
 import { deferentDuctStudyReady } from './deferent-ducts.ts';
 import { armVascularStudyReady } from './arm-vascular-studies.ts';
 import { inferiorEpigastricStudyReady } from './inferior-epigastric-vessels.ts';
@@ -30,6 +31,7 @@ export function limbVascularStudyReady(
   if (!limbicLandmarkStudyReady(catalog, region, recipeId)) return false;
   if (!armVascularStudyReady(catalog, region, recipeId)) return false;
   if (!genicularStudyReady(catalog, region, recipeId)) return false;
+  if (!poplitealVesselStudyReady(catalog, region, recipeId)) return false;
   if (!deferentDuctStudyReady(catalog, region, recipeId)) return false;
   const study = limbVascularStudySets.find((s) => s.id === recipeId);
   if (!study) return true;

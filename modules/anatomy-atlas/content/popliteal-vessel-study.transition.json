@@ -1,0 +1,544 @@
+{
+  "parentCommit": "8bb434cdb42eac4925dc60a4fe9841ad6a62f211",
+  "id": "knee-popliteal-vessel-pair",
+  "regions": [
+    "leg",
+    "whole-body"
+  ],
+  "beforeHash": "e539625ae07979d395fd9b46efa1a880bb2b4a33522efba9f0dd3ffc2f4a234b",
+  "afterHash": "bd67a7cb92160f3fe2f4339309874c2a368ffd68bc8c4d39272e3cd97523e0c0",
+  "patches": [
+    {
+      "region": "leg",
+      "additions": [
+        {
+          "id": "knee-popliteal-vessel-pair",
+          "title": "Knee: popliteal artery and vein",
+          "rule": {
+            "fmaIds": [
+              "FMA77380",
+              "FMA77381",
+              "FMA44328",
+              "FMA44329"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA24474",
+                "FMA24475",
+                "FMA24477",
+                "FMA24478",
+                "FMA24480",
+                "FMA24481",
+                "FMA24486",
+                "FMA24487",
+                "FMA22591",
+                "FMA22592"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Compare the supplied popliteal artery and vein surfaces behind each knee with popliteus and whole knee bones. Choose Left or Right to inspect one side.",
+          "inspect": "Rotate to compare the same-side artery and vein surfaces; their displayed order may change with the view. Hide popliteus or a bone to inspect covered surfaces, then Undo. Extract selected separates a whole source surface; return separation to 0% before judging source positions. This is not a fixed vessel order, a compression or patency test, flow study, complete popliteal-fossa dissection, nerve or fascia map, or patient registration. Source boundaries and relationships await revision-bound radiologist review.",
+          "landmarks": [
+            "popliteal artery$",
+            "popliteal vein$",
+            "popliteus$",
+            "patella$"
+          ],
+          "requiredSourceBindings": [
+            {
+              "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
+              "fmaId": "FMA77380",
+              "laterality": "right",
+              "bundle": "leg-vessels-recovery",
+              "nodeName": "FMA77380",
+              "sources": [
+                {
+                  "file": "FJ2170",
+                  "sha256": "4bc14302e06ca2162a6df730a7d9f8549b5e6e9b919ce34e35bbdbeec1b088b0"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
+              "fmaId": "FMA77381",
+              "laterality": "left",
+              "bundle": "leg-vessels-recovery",
+              "nodeName": "FMA77381",
+              "sources": [
+                {
+                  "file": "FJ2086",
+                  "sha256": "20dac622c09e02e45fa95b6f3c2eba7e932fdc3eef507ac19d0d78ed71ef241c"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-vein",
+              "fmaId": "FMA44328",
+              "laterality": "right",
+              "bundle": "leg-vessels-recovery",
+              "nodeName": "FMA44328",
+              "sources": [
+                {
+                  "file": "FJ2171",
+                  "sha256": "b54fb1bed98c0159e1c8501d3211d43080a085fb498d5c992015afc49e1e3dbc"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-vein",
+              "fmaId": "FMA44329",
+              "laterality": "left",
+              "bundle": "leg-vessels-recovery",
+              "nodeName": "FMA44329",
+              "sources": [
+                {
+                  "file": "FJ2117",
+                  "sha256": "92082063ece4916d1b8c3a17b6d135c36edf3ab75dd5b7e9604e71a6d58fa2ee"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thigh:right:bone:right-femur",
+              "fmaId": "FMA24474",
+              "laterality": "right",
+              "bundle": "thigh-skeleton",
+              "nodeName": "FMA24474",
+              "sources": [
+                {
+                  "file": "FJ3365",
+                  "sha256": "5eff0f92905dd45bd0e79b1de0144dc15988c73c683468163255ba1452d58037"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thigh:left:bone:left-femur",
+              "fmaId": "FMA24475",
+              "laterality": "left",
+              "bundle": "thigh-skeleton",
+              "nodeName": "FMA24475",
+              "sources": [
+                {
+                  "file": "FJ3259",
+                  "sha256": "d291cc3619c32c68edb9d29e0b755634c2cb85e3db89f0d0b63a316f879ef86d"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:right:bone:right-tibia",
+              "fmaId": "FMA24477",
+              "laterality": "right",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24477",
+              "sources": [
+                {
+                  "file": "FJ3387",
+                  "sha256": "01879d7310938e82eecc02e1115332497e94085ff5cc1fa8eeee47ad1f5d3578"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:bone:left-tibia",
+              "fmaId": "FMA24478",
+              "laterality": "left",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24478",
+              "sources": [
+                {
+                  "file": "FJ3282",
+                  "sha256": "40e55d7d28f060be61815603ee5eb1c0ba4c2e93af6fed6b5db7ca88d4ed82ef"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:right:bone:right-fibula",
+              "fmaId": "FMA24480",
+              "laterality": "right",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24480",
+              "sources": [
+                {
+                  "file": "FJ3366",
+                  "sha256": "d03fee02cf8eefad1ecfcb9246e3f43ad3c4615c21ce08dc5e2b6901c6395a86"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:bone:left-fibula",
+              "fmaId": "FMA24481",
+              "laterality": "left",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24481",
+              "sources": [
+                {
+                  "file": "FJ3260",
+                  "sha256": "b5fbb694e1d881033ec8318b97c41e9d9bedc89a8df9845573b1aac528829331"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:right:bone:right-patella",
+              "fmaId": "FMA24486",
+              "laterality": "right",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24486",
+              "sources": [
+                {
+                  "file": "FJ3381",
+                  "sha256": "b513b8cb6b37e3eb4211fd35a4469efdf79de37887a0af8c582efc836a6f6307"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:bone:left-patella",
+              "fmaId": "FMA24487",
+              "laterality": "left",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24487",
+              "sources": [
+                {
+                  "file": "FJ3275",
+                  "sha256": "768362d04f0f91cea9a28f4aeae9d9f63f3c82450b68d185fa4afefe75d75cc1"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:right:muscle:right-popliteus",
+              "fmaId": "FMA22591",
+              "laterality": "right",
+              "bundle": "leg-muscles",
+              "nodeName": "FMA22591",
+              "sources": [
+                {
+                  "file": "FJ1430",
+                  "sha256": "78f5d5b80867116a0bbf59575efb8de3ed681030875a577bc00d310012df80fd"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:muscle:left-popliteus",
+              "fmaId": "FMA22592",
+              "laterality": "left",
+              "bundle": "leg-muscles",
+              "nodeName": "FMA22592",
+              "sources": [
+                {
+                  "file": "FJ1430M",
+                  "sha256": "96ece008a2edf30338e1b53611c86de64f2cc329af84fe5d54e9375469c3babd"
+                }
+              ]
+            }
+          ],
+          "sideFilteredSourceBindings": true
+        }
+      ],
+      "referencesBefore": [
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/leg_tables.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/joints_lowerlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5381851/",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html"
+      ],
+      "referencesAfter": [
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/leg_tables.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/joints_lowerlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5381851/",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/veins_lowerlimb.html"
+      ]
+    },
+    {
+      "region": "whole-body",
+      "additions": [
+        {
+          "id": "knee-popliteal-vessel-pair",
+          "title": "Knee: popliteal artery and vein",
+          "rule": {
+            "fmaIds": [
+              "FMA77380",
+              "FMA77381",
+              "FMA44328",
+              "FMA44329"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA24474",
+                "FMA24475",
+                "FMA24477",
+                "FMA24478",
+                "FMA24480",
+                "FMA24481",
+                "FMA24486",
+                "FMA24487",
+                "FMA22591",
+                "FMA22592"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Compare the supplied popliteal artery and vein surfaces behind each knee with popliteus and whole knee bones. Choose Left or Right to inspect one side.",
+          "inspect": "Rotate to compare the same-side artery and vein surfaces; their displayed order may change with the view. Hide popliteus or a bone to inspect covered surfaces, then Undo. Extract selected separates a whole source surface; return separation to 0% before judging source positions. This is not a fixed vessel order, a compression or patency test, flow study, complete popliteal-fossa dissection, nerve or fascia map, or patient registration. Source boundaries and relationships await revision-bound radiologist review.",
+          "landmarks": [
+            "popliteal artery$",
+            "popliteal vein$",
+            "popliteus$",
+            "patella$"
+          ],
+          "requiredSourceBindings": [
+            {
+              "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
+              "fmaId": "FMA77380",
+              "laterality": "right",
+              "bundle": "leg-vessels-recovery",
+              "nodeName": "FMA77380",
+              "sources": [
+                {
+                  "file": "FJ2170",
+                  "sha256": "4bc14302e06ca2162a6df730a7d9f8549b5e6e9b919ce34e35bbdbeec1b088b0"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
+              "fmaId": "FMA77381",
+              "laterality": "left",
+              "bundle": "leg-vessels-recovery",
+              "nodeName": "FMA77381",
+              "sources": [
+                {
+                  "file": "FJ2086",
+                  "sha256": "20dac622c09e02e45fa95b6f3c2eba7e932fdc3eef507ac19d0d78ed71ef241c"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-vein",
+              "fmaId": "FMA44328",
+              "laterality": "right",
+              "bundle": "leg-vessels-recovery",
+              "nodeName": "FMA44328",
+              "sources": [
+                {
+                  "file": "FJ2171",
+                  "sha256": "b54fb1bed98c0159e1c8501d3211d43080a085fb498d5c992015afc49e1e3dbc"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-vein",
+              "fmaId": "FMA44329",
+              "laterality": "left",
+              "bundle": "leg-vessels-recovery",
+              "nodeName": "FMA44329",
+              "sources": [
+                {
+                  "file": "FJ2117",
+                  "sha256": "92082063ece4916d1b8c3a17b6d135c36edf3ab75dd5b7e9604e71a6d58fa2ee"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thigh:right:bone:right-femur",
+              "fmaId": "FMA24474",
+              "laterality": "right",
+              "bundle": "thigh-skeleton",
+              "nodeName": "FMA24474",
+              "sources": [
+                {
+                  "file": "FJ3365",
+                  "sha256": "5eff0f92905dd45bd0e79b1de0144dc15988c73c683468163255ba1452d58037"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thigh:left:bone:left-femur",
+              "fmaId": "FMA24475",
+              "laterality": "left",
+              "bundle": "thigh-skeleton",
+              "nodeName": "FMA24475",
+              "sources": [
+                {
+                  "file": "FJ3259",
+                  "sha256": "d291cc3619c32c68edb9d29e0b755634c2cb85e3db89f0d0b63a316f879ef86d"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:right:bone:right-tibia",
+              "fmaId": "FMA24477",
+              "laterality": "right",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24477",
+              "sources": [
+                {
+                  "file": "FJ3387",
+                  "sha256": "01879d7310938e82eecc02e1115332497e94085ff5cc1fa8eeee47ad1f5d3578"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:bone:left-tibia",
+              "fmaId": "FMA24478",
+              "laterality": "left",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24478",
+              "sources": [
+                {
+                  "file": "FJ3282",
+                  "sha256": "40e55d7d28f060be61815603ee5eb1c0ba4c2e93af6fed6b5db7ca88d4ed82ef"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:right:bone:right-fibula",
+              "fmaId": "FMA24480",
+              "laterality": "right",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24480",
+              "sources": [
+                {
+                  "file": "FJ3366",
+                  "sha256": "d03fee02cf8eefad1ecfcb9246e3f43ad3c4615c21ce08dc5e2b6901c6395a86"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:bone:left-fibula",
+              "fmaId": "FMA24481",
+              "laterality": "left",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24481",
+              "sources": [
+                {
+                  "file": "FJ3260",
+                  "sha256": "b5fbb694e1d881033ec8318b97c41e9d9bedc89a8df9845573b1aac528829331"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:right:bone:right-patella",
+              "fmaId": "FMA24486",
+              "laterality": "right",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24486",
+              "sources": [
+                {
+                  "file": "FJ3381",
+                  "sha256": "b513b8cb6b37e3eb4211fd35a4469efdf79de37887a0af8c582efc836a6f6307"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:bone:left-patella",
+              "fmaId": "FMA24487",
+              "laterality": "left",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24487",
+              "sources": [
+                {
+                  "file": "FJ3275",
+                  "sha256": "768362d04f0f91cea9a28f4aeae9d9f63f3c82450b68d185fa4afefe75d75cc1"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:right:muscle:right-popliteus",
+              "fmaId": "FMA22591",
+              "laterality": "right",
+              "bundle": "leg-muscles",
+              "nodeName": "FMA22591",
+              "sources": [
+                {
+                  "file": "FJ1430",
+                  "sha256": "78f5d5b80867116a0bbf59575efb8de3ed681030875a577bc00d310012df80fd"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:muscle:left-popliteus",
+              "fmaId": "FMA22592",
+              "laterality": "left",
+              "bundle": "leg-muscles",
+              "nodeName": "FMA22592",
+              "sources": [
+                {
+                  "file": "FJ1430M",
+                  "sha256": "96ece008a2edf30338e1b53611c86de64f2cc329af84fe5d54e9375469c3babd"
+                }
+              ]
+            }
+          ],
+          "sideFilteredSourceBindings": true
+        }
+      ],
+      "referencesBefore": [
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/thigh_tables.html",
+        "https://anatomy.ttuhscep.edu/schemes/lungs_ans.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html",
+        "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/schemes/inguinal_tables.html",
+        "https://anatomy.ttuhscep.edu/schemes/abdo_wall_ing_questions/abdo_wall_12_feedback.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/veins_pelvis_perineum.html",
+        "https://anatomy.ttuhscep.edu/reproductive_system/pelvicwall_tables.html",
+        "https://pubmed.ncbi.nlm.nih.gov/17373712/",
+        "https://nba.uth.tmc.edu/neuroanatomy/L11/Lab11p09_index.html",
+        "https://publish.uwo.ca/~jkiernan/brndiss.htm",
+        "https://link.springer.com/article/10.1007/s00701-026-06791-w",
+        "https://anatomy.ttuhscep.edu/schemes/axilla_ans.html",
+        "https://pubmed.ncbi.nlm.nih.gov/23131916/",
+        "https://anatomy.ttuhscep.edu/nervous_system/eye_tables.html",
+        "https://anatomy.ttuhscep.edu/nervous_system/eye.html"
+      ],
+      "referencesAfter": [
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/thigh_tables.html",
+        "https://anatomy.ttuhscep.edu/schemes/lungs_ans.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html",
+        "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/veins_lowerlimb.html",
+        "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/schemes/inguinal_tables.html",
+        "https://anatomy.ttuhscep.edu/schemes/abdo_wall_ing_questions/abdo_wall_12_feedback.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/veins_pelvis_perineum.html",
+        "https://anatomy.ttuhscep.edu/reproductive_system/pelvicwall_tables.html",
+        "https://pubmed.ncbi.nlm.nih.gov/17373712/",
+        "https://nba.uth.tmc.edu/neuroanatomy/L11/Lab11p09_index.html",
+        "https://publish.uwo.ca/~jkiernan/brndiss.htm",
+        "https://link.springer.com/article/10.1007/s00701-026-06791-w",
+        "https://anatomy.ttuhscep.edu/schemes/axilla_ans.html",
+        "https://pubmed.ncbi.nlm.nih.gov/23131916/",
+        "https://anatomy.ttuhscep.edu/nervous_system/eye_tables.html",
+        "https://anatomy.ttuhscep.edu/nervous_system/eye.html"
+      ]
+    }
+  ],
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "teachingAndPriorRecipesHash": "b6364f7fb88ff9a0c2e16deadc1f276b49eac6b8b7605c9a1ecdc7818e344dd4"
+}

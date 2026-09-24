@@ -23,7 +23,7 @@ const hash = (v) => createHash('sha256').update(v).digest('hex');
 assert.equal(hash(JSON.stringify(preGenicularStudyProfiles(a.dissectionProfiles))), 'afba80ef8e232d6dd21f9b4c00b73284db7dcb7a8778c520fd4096d9990e9176');
 const changed = structuredClone(a.dissectionProfiles);
 changed.hand.title = 'changed';
-assert.notEqual(hash(JSON.stringify(preGenicularStudyProfiles(changed))), 'afba80ef8e232d6dd21f9b4c00b73284db7dcb7a8778c520fd4096d9990e9176');
+assert.throws(() => preGenicularStudyProfiles(changed), /Unrecorded/, 'Foreign profile edits must fail exact historical replay');
 const id = 'knee-genicular-arteries', ids = (items) => items.map((s) => s.id).sort();
 let scopes = 0, links = 0, rejections = 0, labels = 0, handlers = 0, renders = 0;
 const expected = ['FMA22562','FMA22563','FMA22586','FMA22587','FMA22588','FMA22589','FMA43890','FMA43891','FMA43892','FMA43893','FMA77380','FMA77381','FMA24474','FMA24475','FMA24477','FMA24478','FMA24480','FMA24481','FMA24486','FMA24487','FMA22591','FMA22592'];

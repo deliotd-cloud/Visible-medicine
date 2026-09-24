@@ -78,7 +78,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "ebe9126a898abfa0f8b658a4a9fd19dbe03eb342b8cc1cde875a40ba8ebb4565"
+      "sha256": "e879c265a45ef3d1becf99fcc9a9f2cd82d18d23c1aa0cab8bd4011a8dc645f2"
     },
     {
       "path": "app/body-scene.tsx",
@@ -130,7 +130,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "d3e0910115090f048057fcf47cecd2a27666c0248dd31e8d67f4d068e08739bc"
+      "sha256": "e4612894eda280188f24aa96ea4095795ead893ff5509a4e07d0389a5623e6e4"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -1089,6 +1089,14 @@
       "sha256": "d3c74eb672d1f295dffc2379d8f399efe52de6164f7db9cb73fef167d6c21196"
     },
     {
+      "path": "content/popliteal-vessel-study-pins.json",
+      "sha256": "d0f4f1875c2f3a9b281a90c8d6675f063c7427d4648cda7b3961106ad71eb1f8"
+    },
+    {
+      "path": "content/popliteal-vessel-study.ts",
+      "sha256": "abc5e21efacfde75edb96b34e3a7e218968983d323f078f5381fe3c950a366f3"
+    },
+    {
       "path": "content/portal-hepatic-clinical-pins.json",
       "sha256": "3de44ba2dfb2c2084e24df547d5ded9e53f622a386f14a1add022ffb2ee9e9ee"
     },
@@ -1146,7 +1154,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "5faf58d44185a649b1d2cf7d826ed66c90445b3daa8ba401626670a367ca02a9"
+      "sha256": "9fa1551567fec05633deb2f7e0ac9c0e2006c6fe649a1cb562252d199fcb75ba"
     },
     {
       "path": "content/sca-mca-clinical-pins.json",
@@ -2126,7 +2134,7 @@
     },
     {
       "path": "lib/limb-vascular-studies.ts",
-      "sha256": "9338230911c7db7967b947ec5afade816bcad861e68cc15129e5b5487a49f63e"
+      "sha256": "c11a2af74ae392407af1663c955c3b318b1de9ebbcb8dff23bd5fb96c9ad3e3c"
     },
     {
       "path": "lib/limbic-landmarks.ts",
@@ -2303,6 +2311,10 @@
     {
       "path": "lib/pica-clinical.ts",
       "sha256": "99a3a11731b5beb2cac3211d7be53ede42c4277470d73e0e3c85e9a993995f24"
+    },
+    {
+      "path": "lib/popliteal-vessel-study.ts",
+      "sha256": "836b58cea4a797392e18e38975091ebb8e8918d8302c6e1ab0ee9caa5463f14b"
     },
     {
       "path": "lib/portal-drainage.ts",
@@ -2686,7 +2698,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "c69843355ad5065676c0029109f59a789ead7ebde012776de8a18a5361ed14c3"
+      "sha256": "81bb900af4fcfb7b3acf2225219ec35df03739baf13a5c303369f096168278aa"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2897,5 +2909,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "b9c97b5954e6abb78b3c3808d3aae3d1211b3886256cae036d3946d712a97485"
+  "sha256": "150ee163ce0b744186546b27697f2a86c6e7929a5c188552ba68d031b3c51733"
 }

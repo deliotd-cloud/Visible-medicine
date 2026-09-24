@@ -1,5 +1,14 @@
 # Current atlas status
 
+[Popliteal artery–vein study](POPLITEAL_VESSEL_STUDY.md) combines existing vessels
+and knee context in Leg and Whole body through one searchable focus. Exact-source
+guards, side filtering, steady close-up bounds, real mesh label anchors and
+Remove/Undo/Redo pass focused tests. Browser Search found the new study, but
+fresh navigation was blocked after a development reload error; completed-build
+desktop/mobile visual acceptance remains open. No model bytes, teaching topics,
+entitlements or hosted publication change. Continue verification/integration and
+the full regional roadmap; clinical and imaging gates remain open.
+
 [Dorsal penile vascular source review](DORSAL_PENILE_SOURCE_REVIEW.md) retains
 five exact original meshes for three missing candidate structures and a
 three-view source projection. Complete definitions, current-catalogue overlap
