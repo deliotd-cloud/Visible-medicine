@@ -51,3 +51,8 @@ docs/tibial-recurrent-source-disposition.json -text
 # Byte-pinned renal candidate audit and projection evidence.
 docs/renal-segmental-source-audit.json -text
 docs/reviews/renal-segmental-*.json -text
+# Exact dorsal penile candidate sources and reproducible review evidence.
+content/prototypes/dorsal-penile-source-condition/*.obj -text -diff
+content/prototypes/dorsal-penile-source-condition/*.json -text
+docs/dorsal-penile-source-audit.json -text
+docs/reviews/dorsal-penile-source.json -text

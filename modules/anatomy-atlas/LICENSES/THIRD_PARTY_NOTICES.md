@@ -1,5 +1,19 @@
 # Third-party notices
 
+## Dorsal penile source review — 24 September 2026
+
+Five unchanged BodyParts3D v4 IS-A OBJ sources are retained under
+`content/prototypes/dorsal-penile-source-condition`, with archive integrity and
+SHA-256 evidence. BodyParts3D, © The Database Center for Life Science licensed
+under CC Attribution 4.0 International.
+[Source licence](https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html).
+The review figure uses colour, opacity and orthographic projection of those
+surfaces and the existing corpus-spongiosum source. No source coordinates or
+faces were altered. Attribution must accompany redistributed originals and
+adaptations. No external illustration, patient data, font file, texture, new
+dependency or paid service is included. This is unadmitted review material,
+not clinically approved anatomy. See [review scope](../docs/DORSAL_PENILE_SOURCE_REVIEW.md).
+
 ## Proper digital artery teaching — 24 September 2026
 
 Original source-bound Anatomy/Function drafts use factual anatomy from the

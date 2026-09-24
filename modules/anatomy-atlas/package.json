@@ -7,6 +7,8 @@
   },
   "scripts": {
     "contextual-undo:test": "node scripts/test-contextual-dissection-undo.mjs",
+    "dorsal-penile:audit": "node scripts/audit-dorsal-penile-sources.mjs --check",
+    "dorsal-penile:review": "node scripts/render-dorsal-penile-review.mjs --check",
     "laryngeal-muscle-imaging:test": "node scripts/record-laryngeal-muscle-imaging.mjs --check && node scripts/validate-laryngeal-muscle-imaging.mjs",
     "proper-digital-teaching:test": "node scripts/record-proper-digital-teaching.mjs --check && node scripts/validate-proper-digital-teaching.mjs",
     "spinal-disc-function:test": "node scripts/record-spinal-disc-function.mjs --check && node scripts/validate-spinal-disc-function.mjs",

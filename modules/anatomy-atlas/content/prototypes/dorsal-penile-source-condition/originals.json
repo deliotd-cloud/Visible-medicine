@@ -1,0 +1,380 @@
+{
+  "sourceCommit": "15029f9075b6a252d0b594e6e8229bea2bf01d94",
+  "sourceArchive": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "supplementalEvidence": [
+    {
+      "path": "docs/tibial-recurrent-source-disposition.json",
+      "sha256": "a3cfc40af9ce85df44a60a272f50803bb20b459079d9c4a941d5d6124ade2042"
+    },
+    {
+      "path": "docs/limbic-landmark-source-audit.json",
+      "sha256": "2b29686d350ca29d88c67c7a44c3e143033deea35f15df0a66b90c758a82f69c"
+    },
+    {
+      "path": "docs/pelvic-vein-source-audit.json",
+      "sha256": "ffb300bcd1f2cd8c2a9684c133ed5d82a1043d7bda99a78f377854c9168ebf26"
+    },
+    {
+      "path": "docs/collicular-brachia-source-audit.json",
+      "sha256": "376863798d350db47711e802a9f5a0180b9d1c99f0972bbec769e6588e5c5b9a"
+    },
+    {
+      "path": "docs/deep-leg-vein-source-audit.json",
+      "sha256": "2ed4267b0ceae5448673eaf0743ed79a995fc7f879dac26c81e24109c7b201ec"
+    }
+  ],
+  "definitions": [
+    {
+      "id": "FMA21354",
+      "name": "deep dorsal vein of penis",
+      "representation": "BP5794",
+      "files": [
+        "FJ2056"
+      ],
+      "tree": "isa"
+    },
+    {
+      "id": "FMA20819",
+      "name": "left dorsal artery of penis",
+      "representation": "BP10315",
+      "files": [
+        "FJ3496",
+        "FJ3497"
+      ],
+      "tree": "isa"
+    },
+    {
+      "id": "FMA20818",
+      "name": "right dorsal artery of penis",
+      "representation": "BP10299",
+      "files": [
+        "FJ3592",
+        "FJ3593"
+      ],
+      "tree": "isa"
+    }
+  ],
+  "sources": [
+    {
+      "file": "FJ2056",
+      "sha256": "458cd369acba2bcf710f1b17ac9bb480eda2c78a1e92af00d445aac32222b11e",
+      "bytes": 145533,
+      "crc32": 3394186569,
+      "triangles": 2356,
+      "components": 1,
+      "closedOrientedManifold": true,
+      "duplicateFaces": 0,
+      "collapsedFaces": 0,
+      "min": [
+        -5.05181,
+        -178.961,
+        714.18
+      ],
+      "max": [
+        5.05933,
+        -102.314,
+        794.057
+      ],
+      "topology": {
+        "sourceVertices": 1228,
+        "exactUniqueVertices": 1180,
+        "unusedUniqueVertices": 0,
+        "triangles": 2356,
+        "edges": 3534,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 2356,
+            "vertices": 1180,
+            "bounds": {
+              "min": [
+                -5.05181,
+                -178.961,
+                714.18
+              ],
+              "max": [
+                5.05933,
+                -102.314,
+                794.057
+              ]
+            },
+            "areaMm2": 803.4470313956656,
+            "algebraicVolumeMm3": 337.8159012213417
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3496",
+      "sha256": "1b4d70552c98d420addcf287eb2f6c9dc7b1006ba92354e365a7c84df6da161f",
+      "bytes": 337645,
+      "crc32": 3220541620,
+      "triangles": 5076,
+      "components": 1,
+      "closedOrientedManifold": true,
+      "duplicateFaces": 0,
+      "collapsedFaces": 0,
+      "min": [
+        3.46258,
+        -194.161,
+        738.47
+      ],
+      "max": [
+        26.3155,
+        -66.2522,
+        789.206
+      ],
+      "topology": {
+        "sourceVertices": 2867,
+        "exactUniqueVertices": 2540,
+        "unusedUniqueVertices": 0,
+        "triangles": 5076,
+        "edges": 7614,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 5076,
+            "vertices": 2540,
+            "bounds": {
+              "min": [
+                3.46258,
+                -194.161,
+                738.47
+              ],
+              "max": [
+                26.3155,
+                -66.2522,
+                789.206
+              ]
+            },
+            "areaMm2": 888.7382396981826,
+            "algebraicVolumeMm3": 303.8779872816177
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3497",
+      "sha256": "0e3c93a0732166e02071650ff6d6e960c3158450ec31659dfd81a6e546380280",
+      "bytes": 87241,
+      "crc32": 1819816162,
+      "triangles": 1456,
+      "components": 1,
+      "closedOrientedManifold": true,
+      "duplicateFaces": 0,
+      "collapsedFaces": 0,
+      "min": [
+        3.0819,
+        -189.703,
+        733.076
+      ],
+      "max": [
+        8.24257,
+        -134.576,
+        788.002
+      ],
+      "topology": {
+        "sourceVertices": 758,
+        "exactUniqueVertices": 730,
+        "unusedUniqueVertices": 0,
+        "triangles": 1456,
+        "edges": 2184,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1456,
+            "vertices": 730,
+            "bounds": {
+              "min": [
+                3.0819,
+                -189.703,
+                733.076
+              ],
+              "max": [
+                8.24257,
+                -134.576,
+                788.002
+              ]
+            },
+            "areaMm2": 253.66946215053335,
+            "algebraicVolumeMm3": 62.69897373236222
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3592",
+      "sha256": "2838f39a2e390ca721688a821fe85b33b43146ff9543cb6c7c4efb25be73315d",
+      "bytes": 339898,
+      "crc32": 1429915478,
+      "triangles": 5108,
+      "components": 1,
+      "closedOrientedManifold": true,
+      "duplicateFaces": 0,
+      "collapsedFaces": 0,
+      "min": [
+        -26.3142,
+        -193.941,
+        738.457
+      ],
+      "max": [
+        -3.11594,
+        -66.248,
+        789.298
+      ],
+      "topology": {
+        "sourceVertices": 2838,
+        "exactUniqueVertices": 2556,
+        "unusedUniqueVertices": 0,
+        "triangles": 5108,
+        "edges": 7662,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 5108,
+            "vertices": 2556,
+            "bounds": {
+              "min": [
+                -26.3142,
+                -193.941,
+                738.457
+              ],
+              "max": [
+                -3.11594,
+                -66.248,
+                789.298
+              ]
+            },
+            "areaMm2": 896.1951253861271,
+            "algebraicVolumeMm3": 307.1594613878018
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3593",
+      "sha256": "09290f12acef49f0b63728057030c7be6bc131ed32af57d7a731bdb9a189c21c",
+      "bytes": 92611,
+      "crc32": 2296843798,
+      "triangles": 1542,
+      "components": 1,
+      "closedOrientedManifold": true,
+      "duplicateFaces": 0,
+      "collapsedFaces": 0,
+      "min": [
+        -8.30149,
+        -189.435,
+        733.401
+      ],
+      "max": [
+        -3.03463,
+        -134.526,
+        787.78
+      ],
+      "topology": {
+        "sourceVertices": 792,
+        "exactUniqueVertices": 773,
+        "unusedUniqueVertices": 0,
+        "triangles": 1542,
+        "edges": 2313,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1542,
+            "vertices": 773,
+            "bounds": {
+              "min": [
+                -8.30149,
+                -189.435,
+                733.401
+              ],
+              "max": [
+                -3.03463,
+                -134.526,
+                787.78
+              ]
+            },
+            "areaMm2": 271.94395926227963,
+            "algebraicVolumeMm3": 71.32257880713122
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    }
+  ],
+  "admitted": false,
+  "clinicalApproved": false
+}

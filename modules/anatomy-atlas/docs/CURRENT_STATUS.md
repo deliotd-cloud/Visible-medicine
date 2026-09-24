@@ -1,5 +1,14 @@
 # Current atlas status
 
+[Dorsal penile vascular source review](DORSAL_PENILE_SOURCE_REVIEW.md) retains
+five exact original meshes for three missing candidate structures and a
+three-view source projection. Complete definitions, current-catalogue overlap
+and component/contact diagnostics are available for adjudication; no learner
+geometry is admitted and clinical review remains pending. Website `fd6a9f1`
+already integrates contextual Undo from Atlas `15029f9`; the older pending-
+integration statements below are historical. Continue substantive regional
+coverage while preserving the full goal and imaging/privacy/entitlement gates.
+
 [Contextual Undo](CONTEXTUAL_DISSECTION_UNDO.md) restores a just-hidden/removed
 structure directly from the existing regional/whole-body information panel.
 History/side/practice guards and panel-only reveal pass focused tests and sampled

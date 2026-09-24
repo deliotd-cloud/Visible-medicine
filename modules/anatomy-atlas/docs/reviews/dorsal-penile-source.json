@@ -1,0 +1,89 @@
+{
+  "originalsReportSha256": "082cd414f2088fb5cdb7643f66e0ea285842e6045698535c42c2f3ce505cb2d9",
+  "sources": [
+    {
+      "file": "FJ3133",
+      "sha256": "e90e440d57d2e6b0b85c622650c46bafe34c0886a6eed898062b914b5df1f14e",
+      "label": "Existing bulb/shaft source (context only)",
+      "color": "#819294",
+      "opacity": 0.19
+    },
+    {
+      "file": "FJ2056",
+      "sha256": "458cd369acba2bcf710f1b17ac9bb480eda2c78a1e92af00d445aac32222b11e",
+      "label": "FMA21354 / FJ2056: deep dorsal vein of penis",
+      "color": "#286fa3",
+      "opacity": 1
+    },
+    {
+      "file": "FJ3496",
+      "sha256": "1b4d70552c98d420addcf287eb2f6c9dc7b1006ba92354e365a7c84df6da161f",
+      "label": "FMA20819 / FJ3496: left dorsal artery of penis",
+      "color": "#b64f22",
+      "opacity": 1
+    },
+    {
+      "file": "FJ3497",
+      "sha256": "0e3c93a0732166e02071650ff6d6e960c3158450ec31659dfd81a6e546380280",
+      "label": "FMA20819 / FJ3497: left dorsal artery of penis",
+      "color": "#df9d25",
+      "opacity": 1
+    },
+    {
+      "file": "FJ3592",
+      "sha256": "2838f39a2e390ca721688a821fe85b33b43146ff9543cb6c7c4efb25be73315d",
+      "label": "FMA20818 / FJ3592: right dorsal artery of penis",
+      "color": "#873f81",
+      "opacity": 1
+    },
+    {
+      "file": "FJ3593",
+      "sha256": "09290f12acef49f0b63728057030c7be6bc131ed32af57d7a731bdb9a189c21c",
+      "label": "FMA20818 / FJ3593: right dorsal artery of penis",
+      "color": "#b47aaa",
+      "opacity": 1
+    }
+  ],
+  "panes": [
+    {
+      "axes": "X/Z",
+      "minMm": [
+        -26.3142,
+        708.947
+      ],
+      "maxMm": [
+        26.3155,
+        794.057
+      ],
+      "pixelsPerMm": 5.440018799201033
+    },
+    {
+      "axes": "Y/Z",
+      "minMm": [
+        -194.161,
+        708.947
+      ],
+      "maxMm": [
+        -66.248,
+        794.057
+      ],
+      "pixelsPerMm": 3.1896679774534253
+    },
+    {
+      "axes": "X/Y",
+      "minMm": [
+        -26.3142,
+        -194.161
+      ],
+      "maxMm": [
+        26.3155,
+        -66.248
+      ],
+      "pixelsPerMm": 3.6196477293160196
+    }
+  ],
+  "imageSha256": "25b8cebb71ea5a899f386e66b78984954b2fb834315ca8a18785c02c78f8f44d",
+  "geometryModified": false,
+  "admitted": false,
+  "clinicalApproved": false
+}
