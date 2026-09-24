@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+24 September main-bronchus X-ray integration: shared runtime binds Atlas
+`3936240`, adding sided orientation drafts through the existing Imaging panel.
+No new controls, geometry or entitlements; all 136 models / 143 protected paths
+are retained. See [integration boundaries](atlas-main-bronchus-xray-20260924.md)
+and the main-task checkpoint for actual publication/recovery evidence. Continue
+source-led regional coverage; clinical/device and full-roadmap gates remain open.
+
 24 September posterior-mediastinal integration: the shared runtime now binds
 Atlas `b2cc6a7`, adding the existing-source study to Thorax and Whole body without
 new controls or model bytes. All 136 models / 143 protected paths and independent

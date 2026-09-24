@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "9d5986174b5f04f2acc1a46ea58969e591f183e3b18eeb76a9b71af05c7f9570"
+    "sha256": "5e0cec83aec73fbc32446ac5fb8ef4e7323112c19ee7b691fcd2183ab382ec7d"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "9d76eeeb84725aebaea54519adec90b268034c34ca70501c60eebb98d3e0babd"
+    "sha256": "7b9a596b61ea495833f721fd3d9e8e91c55f8e6acb60f699107f2c25dd596e0b"
   },
   {
     "path": "app/body-education-link.ts",
@@ -974,6 +974,10 @@
   {
     "path": "content/lower-venous-imaging.ts",
     "sha256": "107dc5c3938bfe14c68d717ada5e703f7f3ae05462f50612827f3eb5265bc66b"
+  },
+  {
+    "path": "content/main-bronchus-xray.ts",
+    "sha256": "20f0d740967f88c06c28a09d1ea7f9becae8fd3299756c178c8898d46294f683"
   },
   {
     "path": "content/major-bone-imaging-pins.json",
@@ -2226,6 +2230,10 @@
   {
     "path": "lib/lower-venous-imaging.ts",
     "sha256": "56d60e3802bfc6dd8797fa2c36048916306b0084142a4b59e07b070e0f2b7e76"
+  },
+  {
+    "path": "lib/main-bronchus-xray.ts",
+    "sha256": "5d5530f56c2a54843cb284f7ff83b03c5de5f651d9031aa870526acb2afcf9d6"
   },
   {
     "path": "lib/major-bone-imaging.ts",

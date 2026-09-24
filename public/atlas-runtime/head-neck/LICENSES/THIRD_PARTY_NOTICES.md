@@ -1,5 +1,27 @@
 # Third-party notices
 
+## Main-bronchus X-ray teaching — 24 September 2026
+
+Two original short draft summaries link to King's College London's chest X-ray
+teaching and Dr Graham Lloyd-Jones's Radiology Masterclass airway page as factual
+references. No publisher images, annotations, tables, course material, screenshots
+or scans are copied. Existing BodyParts3D geometry and attribution are unchanged;
+no dependency, font, texture or paid service is added. See
+[scope and source bindings](../docs/MAIN_BRONCHUS_XRAY.md).
+
+## Tibial recurrent source review — 24 September 2026
+
+The two diagnostic figures in `docs/reviews/tibial-recurrent-*.png` are
+orthographic projections of original BodyParts3D v4 source coordinates.
+BodyParts3D, © The Database Center for Life Science licensed under CC Attribution
+4.0 International. [Source and licence](https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html).
+Adaptations are colour, opacity, projection and clipping of context only; the
+candidate surfaces are untrimmed. These figures are pending-review evidence,
+not clinically approved anatomical illustrations. No new live model, font file,
+texture, dependency or paid service is included. UAMS is cited for factual
+context only; none of its illustrations or table text is copied. See
+[review and admission limits](../docs/TIBIAL_RECURRENT_SOURCE_REVIEW.md).
+
 ## Pancreatic validator TypeScript loader — 24 September 2026
 
 `tsx` 4.23.13 is pinned as a development-only test loader. Copyright (c)

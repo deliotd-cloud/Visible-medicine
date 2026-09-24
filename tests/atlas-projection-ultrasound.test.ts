@@ -28,7 +28,7 @@ const ultrasoundIds=[
 
 test('regional runtime carries 11 exact thoracoabdominal X-ray and 15 spine ultrasound drafts',()=>{
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-  assert.equal(manifest.sourceCommit,'b2cc6a7e20241d41d5a0748ea26de78c98ee8728');
+  assert.equal(manifest.sourceCommit,'3936240789d920b4c8965efeeeb1a21b10e0695f');
   assert.equal(new Set(xrayIds).size,11);
   assert.equal(new Set(ultrasoundIds).size,15);
   const regionalIds=new Set((manifest.regionalScopes as {regionalIds:string[]}[]).flatMap(scope=>scope.regionalIds));
@@ -61,7 +61,7 @@ test('regional runtime carries 11 exact thoracoabdominal X-ray and 15 spine ultr
 
 test('exact right and left main bronchus selections carry external ultrasound draft limits',()=>{
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-  assert.equal(manifest.sourceCommit,'b2cc6a7e20241d41d5a0748ea26de78c98ee8728');
+  assert.equal(manifest.sourceCommit,'3936240789d920b4c8965efeeeb1a21b10e0695f');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   assert.equal(inputs.find(input=>input.path==='content/thoracoabdominal-organ-imaging.ts')?.sha256,
     'dac7b927e8a04344886c3f2e7e139d7286d7e910258ac9a60d741f8b6b1ca184');
