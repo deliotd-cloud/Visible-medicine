@@ -2,6 +2,14 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+24 September source-only viewer update: the shared regional/whole-body runtime
+has been regenerated from Atlas `c0bdec4e799a2f0ee944ca74501e8e21684d74d1`.
+Selected anatomical labels now announce current selection rather than an
+unsupported toggle state. All 134 model bundles, 12 regional scopes and
+independent entitlements are unchanged; website publication and actual
+screen-reader review are separate. See [source integration and limits](atlas-scene-label-selection-20260924.md).
+The six first-release gates and radiologist sign-off remain pending.
+
 24 September latest source-only viewer integration: the shared regional/whole-body runtime is regenerated from Atlas `77e20b8139ec2894abcb3d17552afb1b4c2b0a2a`. Reset scope is explicitly described to assistive users and keyboard-originated rotation has a polite view-orientation status. The 134 shared model entries and regional scopes are unchanged. This is not yet private website publication or assistive-technology acceptance; see [scope and checks](atlas-viewer-keyboard-accessibility-20260924.md). All six first-release gates and radiologist sign-off remain pending.
 
 24 September source integration: the shared regional/whole-body

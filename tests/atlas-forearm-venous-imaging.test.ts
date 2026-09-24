@@ -7,9 +7,9 @@ test('regional export carries the four source-bound forearm MR drafts without a 
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'119c13ef1ee689eb459ba4c8a9287e41e93f1edf2a4449f37e354c4e619d30ec');
+  assert.equal(sha(manifestBytes),'4a9d70cc39d7b1734749b88aa258365997d5cbe27bc3ffe30b61a5d19dfade3b');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'77e20b8139ec2894abcb3d17552afb1b4c2b0a2a');
+  assert.equal(manifest.sourceCommit,'c0bdec4e799a2f0ee944ca74501e8e21684d74d1');
   for(const field of ['patientDataIncluded','clinicalApproved','imagingConnection','standaloneReviewConnection'])assert.equal(manifest[field],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,expected] of Object.entries({
