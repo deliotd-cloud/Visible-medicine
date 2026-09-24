@@ -27,6 +27,12 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Main-bronchus external ultrasound limits](THORACOABDOMINAL_ORGAN_IMAGING.md) add two exact-source draft notes for the right and left main bronchi. Routine transthoracic pleural artefacts are not direct bronchial-lumen images; endobronchial/endoscopic ultrasound is outside this lesson. No scan, mesh, registration or clinical approval is added.
+
+[Forearm superficial-vein MRI orientation](FOREARM_VENOUS_IMAGING.md) adds four draft topics for the bilateral cephalic and basilic veins. The other 9,932 topics, original geometry and dissection recipes are unchanged; CT remains pending. MR-venography evidence is not extrapolated to routine MRI, patient mapping, access planning or a registered scan. Revision-bound radiologist review and website/host integration remain separate.
+
+[Laryngeal CT/MRI orientation](LARYNGEAL_IMAGING.md) fills six draft topics for the existing epiglottis, thyroid cartilage and cricoid cartilage. All other 9,930 topics, source geometry and dissection recipes remain unchanged. Existing hyoid notes are preserved; small ligament imaging stays pending. No acquired scans, registration, protocol or clinical approval is added; website integration is separately tracked.
+
 [Celiac-artery display correction](CELIAC_DISPLAY_CORRECTION.md) removes one proven duplicate render copy (476 to 238 triangles), preserving exact shape/normals/bounds, both source records, all 1,104 selection identities and all 9,936 teaching topics. A new asset revision is used; the raw catalogue and original model remain intact. Old source-bound links do not silently transfer, and clinical review remains pending.
 
 [Lower-neck study](LOWER_NECK_STUDY.md) combines fourteen existing vessel/scalene targets with four muscle context surfaces in Head & neck and Whole body. Both sides, focused practice, removal/undo and source-bound links reuse existing controls. Whole surfaces remain unchanged; no sheath, nerve plexus, procedural corridor, scan registration or clinical approval is supplied.

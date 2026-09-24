@@ -7,6 +7,7 @@ export const thoracoabdominalOrganImagingReferences={
   airwayUS:'https://pmc.ncbi.nlm.nih.gov/articles/PMC11897443/',
   lungMRI:'https://pmc.ncbi.nlm.nih.gov/articles/PMC3481083/',
   lungUS:'https://pmc.ncbi.nlm.nih.gov/articles/PMC10086956/',
+  externalLungUS:'https://onlinelibrary.wiley.com/doi/10.1002/ajum.12163',
   esophagus:'https://pmc.ncbi.nlm.nih.gov/articles/PMC2713885/',
   thymus:'https://pmc.ncbi.nlm.nih.gov/articles/PMC5296624/',
   thymusMRI:'https://pmc.ncbi.nlm.nih.gov/articles/PMC10742587/',
@@ -73,10 +74,12 @@ export const thoracoabdominalOrganImagingGroups:Record<string,Group>={
   'right-main-bronchus':{fmaId:'FMA7395',region:'thorax',laterality:'right',focus:{
     ct:fact('Trace the right main bronchus from carina towards the early upper-lobe branch. Confirm each branch on consecutive images.','This proximal selection is not the entire right airway tree.','airway'),
     mri:fact('Identify the proximal right airway by its carinal connection and surrounding landmarks on the actual series.','MRI resolution and motion may limit small branches; never infer a patent distal tree from this surface.','airway'),
+    ultrasound:fact('For external transthoracic ultrasound, orient to the right pleural interface and the available intercostal window. Aerated lung and rib shadows restrict the view of the deeper main bronchus.','Pleural artefacts are not direct views of the bronchial lumen. This atlas surface cannot establish right bronchial patency or distal branches; this lesson does not cover endobronchial or endoscopic ultrasound.','externalLungUS'),
   }},
   'left-main-bronchus':{fmaId:'FMA7396',region:'thorax',laterality:'left',focus:{
     ct:fact('Follow the left main bronchus beneath the aortic arch towards the left hilum using reformats.','Its oblique course can be misjudged on a single axial section.','airway'),
     mri:fact('Use the carina and left hilar relationships to establish the airway course across planes.','A single dark structure is insufficient for identification or assessment of luminal continuity.','airway'),
+    ultrasound:fact('For external transthoracic ultrasound, use the left pleural interface and accessible intercostal window as orientation. Air in the lung and rib shadows restrict the view of the deeper main bronchus.','Pleural artefacts do not directly image the bronchial lumen. This atlas surface cannot establish left bronchial patency or distal branches; endobronchial and endoscopic ultrasound are outside this lesson.','externalLungUS'),
   }},
   stomach:{fmaId:'FMA7148',region:'abdomen',laterality:'unpaired',focus:{
     xray:fact('On a plain abdominal film, orient the gastric air bubble beneath the left hemidiaphragm when present. Contrast fluoroscopy can outline the stomach lumen and its passage to the duodenum.','Gas and contents vary; a bubble is not a complete gastric outline. Plain films do not resolve the wall or mucosa.','abdominalXray','upperGI'),

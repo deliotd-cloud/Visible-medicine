@@ -24,20 +24,33 @@ Function, Pathology, Clinical and Quiz content, not complete imaging lectures.
 | Appendix | 14542 | Base-to-tip tracing, variable position, associated findings and nonvisualisation |
 | Ileocecal junction | 11338 | Ileum-to-caecum continuity; separate appendix and unresolved source valve aliases |
 
-External ultrasound topics for esophagus and both main bronchi remain pending.
-This is not a claim that specialised endoscopic ultrasound cannot assess them.
+The original increment left external ultrasound topics for oesophagus and both
+main bronchi pending. This is not a claim that specialised endoscopic ultrasound
+cannot assess them.
 No endoscopic probe model, procedure lesson or validated sonographic study is
 supplied by this increment. The other US entries explicitly distinguish direct
 tissue visibility from acoustic artefacts and limited windows.
 
+On 24 September 2026, two later draft LIMITATION lessons were added for the
+exact pinned right and left main bronchi, FMA7395 and FMA7396. They address
+external transthoracic ultrasound only: air and rib shadows restrict the
+acoustic window, and pleural artefacts are not direct bronchial-lumen images.
+Neither the external scan nor the Atlas surface establishes bronchial patency
+or distal branches. Endobronchial and endoscopic ultrasound remain outside
+this lesson. The oesophageal ultrasound topic remains pending. The original
+42-topic pins and earlier transition are unchanged; the two additions have
+their own exact-source transition and historical reconstruction.
+
 ## Sources and commercial-use boundary
 
-The 19 publication/society links in
+The publication/society links in
 `content/thoracoabdominal-organ-imaging.ts` are factual reading references, not
 assets admitted for redistribution. All new prose is brief, original synthesis;
 no articles, illustrations, screenshots, tables, scans or patient examples are
 copied. Search-index excerpts supplied the factual verification where PMC's
 direct page request returned a browser check; that page check was not bypassed.
+The later bronchus limitation drafts add one reading reference: the
+[College of Intensive Care Medicine Ultrasound SIG recommendations](https://onlinelibrary.wiley.com/doi/10.1002/ajum.12163).
 Existing anatomical context and cautions are retained verbatim from the local
 pre-change lessons, with their existing references. The new resolver is original
 MIT code. Model, dependency, font and texture inventories are unchanged; no paid
@@ -66,8 +79,11 @@ older histories remain fixed and private approvals are never migrated.
 server renders, 798 altered-source/topic rejections, all 1,101 displayed schema
 records and preservation of the other 9,867 topics plus existing dissection
 recipes. It hashes all six affected bundles and checks draft status, citations,
-immutability and the three pending US topics. These checks do not prove clinical
+immutability and the originally pending US topics. These checks do not prove clinical
 accuracy or GPU, touch-device, real-DICOM or end-to-end Education acceptance.
+The later bronchus drafts are checked with
+`npm run main-bronchus-external-ultrasound:test`; the original validator now
+reports 14 ultrasound drafts and only the oesophageal topic pending.
 The dated coordination checkpoint records actual build, publication and recovery
 results separately. No new default control or extra scrolling layer is added.
 

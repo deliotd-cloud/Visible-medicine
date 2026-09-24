@@ -10,7 +10,7 @@ const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 const {api,catalog:raw}=await contentContext(),catalog=api.bodyDisplayCatalog(raw);
 // This immutable pin records the original CT/MRI/ultrasound transition. Later X-ray drafts
 // reuse the exact source identities and are checked against the prior pending topic separately.
-const entries=catalog.structures.flatMap(identity=>{const group=Object.entries(groups).find(([,g])=>g.fmaId===identity.fmaId)?.[0];return group?[{identity,group,topics:Object.keys(groups[group].focus).filter(topic=>topic!=='xray')}]:[];});
+const entries=catalog.structures.flatMap(identity=>{const group=Object.entries(groups).find(([,g])=>g.fmaId===identity.fmaId)?.[0];return group?[{identity,group,topics:Object.keys(groups[group].focus).filter(topic=>topic!=='xray'&&!((identity.fmaId==='FMA7395'||identity.fmaId==='FMA7396')&&topic==='ultrasound'))}]:[];});
 assert.equal(entries.length,15);assert.equal(Object.keys(groups).length,15);
 for(const e of entries){const g=groups[e.group];assert.equal(e.identity.system,'organs');assert.equal(e.identity.category,'organ');assert(e.identity.regions.includes(g.region));assert.equal(e.identity.laterality,g.laterality);}
 assert.equal(entries.reduce((n,e)=>n+e.topics.length,0),42);

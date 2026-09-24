@@ -1,0 +1,22 @@
+{
+  "parentCommit": "3607b31a26058c46375fad12c5a6a9fcbddcb913",
+  "originalPinsHash": "9d46c99c354a9188aab72a21a5d011f95c638cdb86f41457e9068e58c0cdd252",
+  "previous": {
+    "readiness": "pending",
+    "title": "Ultrasound content pending",
+    "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+    "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+  },
+  "entries": [
+    {
+      "id": "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+      "fmaId": "FMA7395",
+      "draftHash": "1a1932cc4763e6ea5f201ec237ce6779283cbb1f7c76ead27b0cc4a441c0cc80"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
+      "fmaId": "FMA7396",
+      "draftHash": "61832a7037d58f7cd8ac68f78f037046b995bce5f09ca9c4d0fb8a26e5e58565"
+    }
+  ]
+}

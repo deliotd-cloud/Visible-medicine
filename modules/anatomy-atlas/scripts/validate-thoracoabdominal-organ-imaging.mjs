@@ -68,7 +68,8 @@ function visit(n){if(ts.isArrowFunction(n)&&n.body.getText(ast).includes('const 
 visit(ast);assert(callback);
 const callbackJs=ts.transpile('const renderNote='+callback,{target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.React});
 for(const s of catalog.structures)for(const tab of api.contentTabs) {
-  // The newer X-ray extension is verified separately by --xray-focused.
+  // Later X-ray and main-bronchus external ultrasound extensions have separate transitions.
+  if(tab==='ultrasound'&&['FMA7395','FMA7396'].includes(s.fmaId))continue;
   const topic=tab==='xray'?undefined:api.thoracoabdominalOrganImagingLesson(s,tab),now=api.bodyLesson(s,tab);
   if(!topic){assert.deepEqual(now,before.bodyLesson(s,tab));unchanged++;continue;}
   changed++;assert.equal(before.bodyLesson(s,tab).readiness,'pending');assert.equal(now.readiness,'draft');assert.deepEqual(now,topic);
@@ -83,10 +84,10 @@ for(const s of catalog.structures)for(const tab of api.contentTabs) {
   const old=before.bodyLesson(s,tab);old.body='changed';assert.equal(before.bodyLesson(s,tab).readiness,'pending');assert.notEqual(before.bodyLesson(s,tab).body,'changed');
   rendered++;
 }
-assert.equal(Object.keys(groups).length,15);assert.equal(changed,42);assert.equal(unchanged,9867);assert.equal(rendered,42);
+assert.equal(Object.keys(groups).length,15);assert.equal(changed,42);assert.equal(unchanged,9865);assert.equal(rendered,42);
 for(const [region,count] of [['thorax',8],['abdomen',7]])assert.equal(pins.entries.filter(e=>groups[e.group].region===region).length,count);
 const unresolved=pins.entries.filter(e=>!groups[e.group].focus.ultrasound).map(e=>e.identity);
-assert.deepEqual(unresolved.map(s=>s.fmaId).sort(),['FMA7131','FMA7395','FMA7396']);
+assert.deepEqual(unresolved.map(s=>s.fmaId).sort(),['FMA7131']);
 for(const s of unresolved){assert.equal(api.thoracoabdominalOrganImagingLesson(s,'ultrasound'),undefined);assert.equal(api.bodyLesson(s,'ultrasound').readiness,'pending');}
 assert.match(groups['left-lung'].focus.ct.body,/lingula.*upper lobe/);
 assert.match(groups.thymus.focus.mri.body,/younger thymus.*lack/);
@@ -105,5 +106,5 @@ for(const entry of Object.values(groups).flatMap(g=>Object.values(g.focus)))uniq
 for(const f of unique.values())for(const key of f.references){assert(references[key]?.startsWith('https://'));budgets[key]=(budgets[key]||0)+((f.body+' '+f.pitfall).match(/\S+/g)?.length||0);}
 for(const [key,count]of Object.entries(budgets))assert(count<=200,key+' reference word count '+count);
 assert.equal(JSON.stringify(catalog),original);
-const report={baselineSource:pins.sourceCommit,groups:15,sourceSelections:15,addedDraftPlacements:changed,modalities:{ct:15,mri:15,ultrasound:12},unchangedTopics:unchanged,ultrasoundPending:unresolved.map(s=>s.fmaId),bodySchemaRecords:records.length,actualNoteRenders:rendered,rejectedSourceTopicCombinations:rejected,uniqueReferenceFacts:unique.size,sourceWordCounts:budgets,sourceGeometryChanged:false,currentApprovalRecordsChanged:false,clinicalApproval:false,imagesImported:false,imagingConnected:false,browserOrDeviceAcceptance:false};
+const report={baselineSource:pins.sourceCommit,groups:15,sourceSelections:15,originalDraftPlacements:changed,laterMainBronchusUltrasoundDrafts:2,currentDraftPlacements:changed+2,modalities:{ct:15,mri:15,ultrasound:14},unchangedTopics:unchanged,ultrasoundPending:unresolved.map(s=>s.fmaId),bodySchemaRecords:records.length,actualNoteRenders:rendered,rejectedSourceTopicCombinations:rejected,uniqueReferenceFacts:unique.size,sourceWordCounts:budgets,sourceGeometryChanged:false,currentApprovalRecordsChanged:false,clinicalApproval:false,imagesImported:false,imagingConnected:false,browserOrDeviceAcceptance:false};
 await writeFile('docs/thoracoabdominal-organ-imaging-validation.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

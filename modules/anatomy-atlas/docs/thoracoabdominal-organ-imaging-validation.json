@@ -2,22 +2,22 @@
   "baselineSource": "76e0d191c683f273d2399216d82a592b14438b7d",
   "groups": 15,
   "sourceSelections": 15,
-  "addedDraftPlacements": 42,
+  "originalDraftPlacements": 42,
+  "laterMainBronchusUltrasoundDrafts": 2,
+  "currentDraftPlacements": 44,
   "modalities": {
     "ct": 15,
     "mri": 15,
-    "ultrasound": 12
+    "ultrasound": 14
   },
-  "unchangedTopics": 9867,
+  "unchangedTopics": 9865,
   "ultrasoundPending": [
-    "FMA7131",
-    "FMA7395",
-    "FMA7396"
+    "FMA7131"
   ],
   "bodySchemaRecords": 1101,
   "actualNoteRenders": 42,
   "rejectedSourceTopicCombinations": 798,
-  "uniqueReferenceFacts": 53,
+  "uniqueReferenceFacts": 55,
   "sourceWordCounts": {
     "chestXray": 199,
     "chestProjection": 53,
@@ -34,6 +34,7 @@
     "thymusXray": 46,
     "thymus": 74,
     "thymusMRI": 37,
+    "externalLungUS": 116,
     "abdominalXray": 197,
     "stomachCT": 41,
     "stomachMRI": 39,

@@ -4,10 +4,12 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import pins from '../content/thoracoabdominal-organ-imaging-pins.json' with { type: 'json' };
 import transition from '../content/thoracoabdominal-organ-xray.transition.json' with { type: 'json' };
+import { authoringBeforeMainBronchusExternalUltrasound } from './main-bronchus-external-ultrasound-history.mjs';
 
 const hash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 export function authoringBeforeThoracoabdominalOrganXray(context) {
+  context = authoringBeforeMainBronchusExternalUltrasound(context);
   const { api } = context;
   assert.equal(hash(transition), '7d341e6ffc5f66ac4829b21b2a7098636c09424a4a51c3c76decdfb61e479609');
   assert.equal(transition.originalPinsHash, hash(pins));

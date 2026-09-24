@@ -4,8 +4,10 @@ import {authoringBeforeCentralVesselImaging} from './central-vessel-imaging-hist
 import {createHash} from 'node:crypto';
 import pins from '../content/thoracoabdominal-organ-imaging-pins.json' with {type:'json'};
 import after from '../content/thoracoabdominal-organ-imaging.transition.json' with {type:'json'};
+import { authoringBeforeMainBronchusExternalUltrasound } from './main-bronchus-external-ultrasound-history.mjs';
 export const thoracoabdominalOrganImagingHash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 export function authoringBeforeThoracoabdominalOrganImaging(context) {
+  context=authoringBeforeMainBronchusExternalUltrasound(context);
   const {catalog}=context,api=authoringBeforeCentralVesselImaging(context);
   assert.equal(thoracoabdominalOrganImagingHash(pins),'9d46c99c354a9188aab72a21a5d011f95c638cdb86f41457e9068e58c0cdd252');
   assert.equal(thoracoabdominalOrganImagingHash(after),'acf291e3901f0f097a1d38dfd9dabdb1c8c2ced02167147ebd606797272420a7');
