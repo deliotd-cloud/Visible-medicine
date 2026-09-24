@@ -54,6 +54,34 @@ No new paid service, API or mandatory fee is introduced; third-party hosting/sto
 
 ## Engineering checks
 
+### Historical replay correction — 24 September 2026
+
+The standalone validator now separates exact historical evidence from current
+scoped rollback. The former partial rollback retained later, unrelated teaching
+and was therefore not a valid whole-curriculum snapshot; the mismatch was also
+reproduced on the source preceding the proper-digital Anatomy/Function update.
+No captured baseline or transition hash has been replaced.
+
+The original before tree (`7b41c46`), hand milestone (`c778002`) and original
+content-contract tree (`71b2736`) are compiled from Git with their original
+eight-tab schema and catalog bytes. Old recipes are hashed directly, without
+applying newer recipe migrations. Historical readiness counts come only from
+the historical milestone, not from today's expanded teaching.
+
+Separately, live checks retain the 42 source identities, 84 Clinical/Pathology
+sections, source warnings, draft/export equality and held states. Mutation tests
+first require a full-catalog unmodified scoped replay to pass across every
+current tab, then reject each single-field edit by checking its entire affected
+lesson, including readiness, against the unmodified result. This prevents an
+unrelated historical failure from falsely satisfying every negative test. The
+live fingerprint is a transition-test control, not a new clinical approval or
+replacement immutable content baseline. The broad content contract and focused
+new-teaching suites remain separate requirements.
+
+The real hand rollback stage is exposed for these focused negative tests. The
+complete later-milestone chain still runs before the control and live scope
+comparisons, but is not recomputed for each isolated hand-stage mutation.
+
 Run `npm run hand-vessel-clinical-curriculum:test -- --source`. The default command uses committed evidence; the source option checks retained official index rows. Checks cover exact identities/components, grouped and asymmetric sets, mismatch rejection, fresh arrays, source-warning retention, runtime/export equality, held states and unrelated content. They do not validate clinical/spatial correctness.
 
 The immutable before snapshot is pinned to 7b41c4682faa34183c0071cac1e10e936ec9d443. The 84-topic transition brings cumulative pinned changes to 3,552. The forearm validator uses historical projection only for its old unrelated/readiness assertions; direct current/export checks remain current.

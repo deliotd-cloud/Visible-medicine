@@ -1,5 +1,16 @@
 # Current atlas status
 
+[Hand clinical-history verification](HAND_VESSEL_CLINICAL_CURRICULUM.md#historical-replay-correction--24-september-2026)
+now distinguishes exact recorded Git snapshots from current scoped transitions.
+Original hashes remain intact; all 84 historical hand sections are checked
+directly, and negative tests require a passing unmodified control. No runtime,
+geometry, teaching or approval was changed by this verification repair. The
+proper-digital notes below still await generated website integration.
+The hand suite passes 21,081 checks (57 negatives / 56 source components);
+the broad content contract passes 33,445 checks. The proper-digital focused
+suite and exact previous-source reconstruction also pass; clinical approval
+and hosted availability are not inferred from these engineering checks.
+
 [Proper digital artery teaching](PROPER_DIGITAL_TEACHING.md) replaces twenty
 generic Anatomy/Function placements with named finger/border orientation and
 arterial supply notes across the ten existing hand selections (six right, four

@@ -1,4 +1,7 @@
 import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
+import { exactSourceHistoryApi } from './exact-source-history-api.mjs';
 import { authoringBeforeLowerLimbVesselClinical } from './lower-limb-vessel-clinical-curriculum-transition.mjs';
 import { readFile, writeFile } from 'node:fs/promises';
 import {
@@ -6,10 +9,9 @@ import {
   contentRoot,
   readContentJson,
 } from './content-contract-tools.mjs';
-import { authoringBeforeHandVesselClinical } from './hand-vessel-clinical-curriculum-transition.mjs';
+import { authoringBeforeHandVesselClinical, rollbackHandVesselClinical } from './hand-vessel-clinical-curriculum-transition.mjs';
 import {
   curriculumHash,
-  copyBeforeShoulderArmCurriculum,
 } from './curriculum-transition.mjs';
 let checks = 0;
 const same = (a, b, l) => {
@@ -40,11 +42,35 @@ const copy = (a) => ({
   shoulder: a.structures,
   dissectionProfiles: a.dissectionProfiles,
 });
-same(curriculumHash(copy(previous)), before.copyAndRecipeHash);
-same(
-  curriculumHash(await copyBeforeShoulderArmCurriculum(context)),
-  baseline.copyAndRecipeHash,
-);
+// Scoped rollback helpers deliberately preserve later, unrelated teaching.
+// They are not whole historical snapshots. Replay the immutable source trees
+// for whole-copy evidence; retain the live scoped checks below independently.
+const historicalCommit = 'c77800231a528cee535172f143e236ebac9b603a';
+const originalTabs = ['anatomy', 'function', 'ct', 'mri', 'ultrasound', 'pathology', 'clinical', 'quiz'];
+same(before.sourceCommit, '7b41c4682faa34183c0071cac1e10e936ec9d443');
+same(baseline.sourceCommit, '71b27369829e1cc0351d8926886fecb7057b165f');
+const gitBytes = (commit, path) => execFileSync('git', ['show', commit + ':' + path], { cwd: contentRoot, maxBuffer: 16e6 });
+const sha = (bytes) => createHash('sha256').update(bytes).digest('hex');
+for (const commit of [before.sourceCommit, historicalCommit, baseline.sourceCommit])
+  same(sha(gitBytes(commit, 'public/models/bodyparts3d/full-body/catalog.json')), baseline.catalogHash, 'Exact historical catalog');
+same(sha(await readFile(new URL('public/models/bodyparts3d/full-body/catalog.json', contentRoot))), baseline.catalogHash);
+const originalBefore = await exactSourceHistoryApi(before.sourceCommit, 'curriculum');
+const historicalMilestone = await exactSourceHistoryApi(historicalCommit, 'curriculum');
+const originalBaseline = await exactSourceHistoryApi(baseline.sourceCommit, 'copy');
+const transition = await readContentJson('content/hand-vessel-clinical-curriculum.transition.json');
+same(JSON.parse(gitBytes(historicalCommit, 'content/hand-vessel-clinical-curriculum.before.json')), before);
+same(JSON.parse(gitBytes(historicalCommit, 'content/hand-vessel-clinical-curriculum.transition.json')), transition);
+for (const captured of transition.entries) {
+  const structure = catalog.structures.find((s) => s.id === captured.id);
+  check(structure, 'Historical transition identity retained');
+  for (const tab of ['pathology', 'clinical'])
+    same(sha(JSON.stringify(historicalMilestone.bodyLesson(structure, tab))), captured.sections[tab], 'Exact historical hand section: ' + captured.id + '/' + tab);
+}
+same(originalBefore.contentTabs, originalTabs);
+same(historicalMilestone.contentTabs, originalTabs);
+// Exact old recipes need no modern recipe rollback.
+same(sha(JSON.stringify(copy(originalBefore))), before.copyAndRecipeHash, 'Unchanged original hand baseline hash');
+same(sha(JSON.stringify(copy({ ...originalBaseline, contentTabs: originalTabs }))), baseline.copyAndRecipeHash, 'Unchanged original content hash');
 // Independently observed official source rows, not inferred from runtime lessons.
 /** @type {Record<string, string[]>} */
 const omittedByFma = {};
@@ -468,13 +494,40 @@ const negatives = [
   ['FMA23130', 'clinical', 'body'],
   ['FMA13395', 'clinical', 'body'],
 ];
+// Establish a passing control first: an unrelated historical replay failure
+// must never make every mutation look successfully rejected. This fingerprint
+// includes readiness and every current tab, not just displayed copy.
+const scopedSnapshot = (a) => curriculumHash({
+  body: catalog.structures.map((s) => ({
+    id: s.id,
+    sections: Object.fromEntries(api.contentTabs.map((t) => [t, a.bodyLesson(s, t)])),
+  })),
+  shoulder: a.structures,
+  dissectionProfiles: a.dissectionProfiles,
+});
+const unmodifiedScopedHash = scopedSnapshot(previous);
+const verifyScopedReplay = async (candidate, probe) => {
+  // Later milestones were already replayed above. Exercise the actual hand
+  // stage here without rerunning the entire historical curriculum 57 times.
+  const replayed = await rollbackHandVesselClinical(context, candidate);
+  if (probe) {
+    // Each negative alters exactly one lesson. Compare that complete lesson,
+    // including readiness, rather than rehashing all untouched sections.
+    const [fmaId, tab] = probe;
+    assert.deepEqual(replayed.bodyLesson(entry(fmaId), tab), previous.bodyLesson(entry(fmaId), tab), 'Unrecorded scoped teaching/readiness change');
+  } else {
+    assert.equal(scopedSnapshot(replayed), unmodifiedScopedHash, 'Unrecorded scoped teaching/readiness change');
+  }
+};
+await verifyScopedReplay(milestone);
+checks++;
 for (const [f, t, field] of negatives) {
   const changed = {
-    ...api,
+    ...milestone,
     bodyLesson: (s, tab) =>
       s.fmaId === f && tab === t
         ? {
-            ...api.bodyLesson(s, tab),
+            ...milestone.bodyLesson(s, tab),
             [field]:
               field === 'readiness'
                 ? ids.includes(f)
@@ -482,28 +535,14 @@ for (const [f, t, field] of negatives) {
                   : 'draft'
                 : 'unrecorded',
           }
-        : api.bodyLesson(s, tab),
+        : milestone.bodyLesson(s, tab),
     bodyContent: (s, tab) =>
       s.fmaId === f && tab === t && field === 'body'
-        ? { ...api.bodyContent(s, tab), body: 'unrecorded' }
-        : api.bodyContent(s, tab),
+        ? { ...milestone.bodyContent(s, tab), body: 'unrecorded' }
+        : milestone.bodyContent(s, tab),
   };
   await assert.rejects(
-    async () => {
-      // Readiness is omitted from the displayed-copy hash: test held states directly.
-      for (const held of ['FMA45097', 'FMA45098', 'FMA61970', 'FMA19728'])
-        for (const tab of tabs)
-          assert.equal(
-            changed.bodyLesson(entry(held), tab).readiness,
-            'pending',
-          );
-      assert.equal(
-        curriculumHash(
-          await copyBeforeShoulderArmCurriculum({ ...context, api: changed }),
-        ),
-        baseline.copyAndRecipeHash,
-      );
-    },
+    () => verifyScopedReplay(changed, [f, t]),
     f + ' / ' + t + ' / ' + field,
   );
   checks++;
@@ -514,7 +553,7 @@ const counts = (t) =>
       (r) => [
         r,
         catalog.structures.filter(
-          (s) => milestone.bodyLesson(s, t).readiness === r,
+          (s) => historicalMilestone.bodyLesson(s, t).readiness === r,
         ).length,
       ],
     ),
@@ -563,8 +602,19 @@ const report = {
   combinedPinnedCurriculumSections: 3552,
   sourceIndexChecks,
   negativeCases: negatives.length,
+  unmodifiedNegativeControlPassed: true,
+  historicalEvidence: {
+    beforeCommit: before.sourceCommit,
+    milestoneCommit: historicalCommit,
+    originalBaselineCommit: baseline.sourceCommit,
+    beforeCopyHash: before.copyAndRecipeHash,
+    originalCopyHash: baseline.copyAndRecipeHash,
+    exactGitReplay: true,
+    recordedMilestoneSectionsVerified: 84,
+    historicalTabs: originalTabs,
+  },
   historicalMilestoneReadiness: Object.fromEntries(
-    api.contentTabs.map((t) => [t, counts(t)]),
+    historicalMilestone.contentTabs.map((t) => [t, counts(t)]),
   ),
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,

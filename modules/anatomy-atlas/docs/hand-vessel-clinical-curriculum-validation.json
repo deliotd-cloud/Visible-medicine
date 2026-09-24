@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "checks": 18900,
+  "checks": 21081,
   "bodyRepresentations": 42,
   "sourceComponents": 56,
   "lessonGroups": 12,
@@ -8,6 +8,26 @@
   "combinedPinnedCurriculumSections": 3552,
   "sourceIndexChecks": 56,
   "negativeCases": 57,
+  "unmodifiedNegativeControlPassed": true,
+  "historicalEvidence": {
+    "beforeCommit": "7b41c4682faa34183c0071cac1e10e936ec9d443",
+    "milestoneCommit": "c77800231a528cee535172f143e236ebac9b603a",
+    "originalBaselineCommit": "71b27369829e1cc0351d8926886fecb7057b165f",
+    "beforeCopyHash": "6dc6c26cb89bbc9db015601fe7a5b616aeffcb7cffebab3df38210540c21d9c4",
+    "originalCopyHash": "0e7c9052aca8cd17b1a1d26bf5bc8e0d2a1bf34b2c3d98b39ee9d13ada3d297c",
+    "exactGitReplay": true,
+    "recordedMilestoneSectionsVerified": 84,
+    "historicalTabs": [
+      "anatomy",
+      "function",
+      "ct",
+      "mri",
+      "ultrasound",
+      "pathology",
+      "clinical",
+      "quiz"
+    ]
+  },
   "historicalMilestoneReadiness": {
     "anatomy": {
       "draft": 1020,
@@ -63,6 +83,6 @@
   "clinicalApproval": false,
   "scanContentAdded": false,
   "browserTesting": false,
-  "copyAndRecipeHash": "fd50acb85998726b79cf3ecb646acf9897117b50f6768e5ea65bd6c89dfb629c",
+  "copyAndRecipeHash": "825b5ec3aba9798038a1ae5c63b47fea3ade897212cea6df3f7b5753ca1ab22d",
   "limitations": "Original primary-hand vessel drafts; exact source trees, categories, sides, ordered components and cross-region memberships retained. No new geometry, validated lumen, measured flow, procedural route, scan or clinical approval."
 }

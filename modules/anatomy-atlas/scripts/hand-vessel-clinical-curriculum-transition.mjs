@@ -6,8 +6,13 @@ const hash = (v) =>
   createHash('sha256').update(JSON.stringify(v)).digest('hex');
 /** Offline historical comparison only. Runtime/export always use current teaching. */
 export async function authoringBeforeHandVesselClinical(context) {
-  const { catalog } = context;
   const api = await authoringBeforeLowerLimbVesselClinical(context);
+  return rollbackHandVesselClinical(context, api);
+}
+
+/** Test the hand transition independently after the later milestones replay once. */
+export async function rollbackHandVesselClinical(context, api) {
+  const { catalog } = context;
   const before = await readContentJson(
     'content/hand-vessel-clinical-curriculum.before.json',
   );
