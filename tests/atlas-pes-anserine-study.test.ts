@@ -4,33 +4,28 @@ import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import test from 'node:test';
 
-test('proper digital artery teaching reaches the shared viewer without new models or access',()=>{
+test('sided pes anserinus studies reach the shared viewer without geometry or access changes',()=>{
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
-  const bytes=readFileSync(base+'manifest.json');
+  const bytes=readFileSync(base+'manifest.json'),manifest=JSON.parse(bytes.toString());
   assert.equal(sha(bytes),'092b067ac64f9bb74fcc55b3a9a0fe0b4598a39365b04ec73db0a91059e7b447');
-  const manifest=JSON.parse(bytes.toString());
   assert.equal(manifest.sourceCommit,'52f6789aac9bc2af51b7f08e8c669714e47f608a');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
-  for(const [path,sha256] of Object.entries({
-    'app/body-content.ts':'64b753333f473de90ce382f3af40cb212bfa0ce65975b9c021cfe127823cddde',
-    'content/proper-digital-teaching.ts':'e3d3bfd651987ba881c3b7a11dc6a0a07ef9135c73554d43de2a74b839952012',
-    'lib/proper-digital-teaching.ts':'9e072b27456a485d71364eb35fcca7939b64d7af7049b07933d15ec548c63c71',
+  for(const [path,sha256]of Object.entries({
+    'app/dissection-data.ts':'d3e0910115090f048057fcf47cecd2a27666c0248dd31e8d67f4d068e08739bc',
+    'content/pes-anserine-study.ts':'5de0780dc9640509da5cc0231b70e6186030e5b858821b0f2b4ea34d8d023388',
   }))assert.deepEqual(inputs.filter(input=>input.path===path),[{path,sha256}]);
   assert.ok(!inputs.some(input=>/native-mr|local-mr-study|\.vmmr|patient[-_/]?data/i.test(input.path)));
   const runtime=(manifest.files as {path:string;sha256:string}[]).filter(f=>f.path.endsWith('.js')).map(f=>{
     const data=readFileSync(base+f.path);assert.equal(sha(data),f.sha256);return data.toString();
   }).join('\n');
-  for(const marker of ['FMA22858','FMA22860','FMA23050','FMA23051','FMA23052','FMA23054','FMA23055','FMA85112','FMA85115','FMA85116',
-    'A common palmar digital artery is a proximal trunk that divides into proper branches running along named digits.',
-    'Radial and ulnar here describe anatomical source labels, unchanged by camera rotation',
-    'Proper palmar digital arteries contribute to palmar digit supply and to the distal dorsal surface and nail bed.',
-    'The ten retained selections are incomplete bilateral coverage.',
-    'Case, Atlas and lecture access remain independent.',
-    'https://anatomy.ttuhscep.edu/musculoskeletal_system/hand_tables.html',
-  ])assert.ok(runtime.includes(marker),marker);
-  const previous=JSON.parse(execFileSync('git',['show','ae5cb2cb278b4596c04caacc64a5b3ebd1a69c10:lib/atlas-model-inventory.json'],{encoding:'utf8'}));
+  for(const marker of ['right-pes-anserinus-muscle-convergence','left-pes-anserinus-muscle-convergence',
+    'Right pes anserinus: muscle convergence','Left pes anserinus: muscle convergence',
+    'Remove one, then Undo to restore it.','return separation to 0% to restore source positions.',
+    'do not establish insertion order or tendon continuity, graft planning, or scan registration.',
+    'https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html'])assert.ok(runtime.includes(marker),marker);
+  const previous=JSON.parse(execFileSync('git',['show','7bed5b927ececa54d6f43168c204d0a77304dd55:lib/atlas-model-inventory.json'],{encoding:'utf8'}));
   const current=JSON.parse(readFileSync('lib/atlas-model-inventory.json','utf8'));
   assert.deepEqual(current.models,previous.models);
   assert.deepEqual(current.sources.filter((s:{module:string})=>s.module!=='head-neck'),previous.sources.filter((s:{module:string})=>s.module!=='head-neck'));

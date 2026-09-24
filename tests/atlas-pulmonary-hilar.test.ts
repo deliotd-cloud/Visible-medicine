@@ -8,13 +8,13 @@ test('shared runtime carries both source-pinned pulmonary-hilar studies without 
   const base='public/atlas-runtime/head-neck/';
   const sha=(data:Buffer)=>createHash('sha256').update(data).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'2c171f52f4c643511dc7649ded35e9db86a87e7b7975e5988705621fab1edb2a');
+  assert.equal(sha(bytes),'092b067ac64f9bb74fcc55b3a9a0fe0b4598a39365b04ec73db0a91059e7b447');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'b2ecd5081cbba447515a3dbfbf38e3d0ca1da96a');
+  assert.equal(manifest.sourceCommit,'52f6789aac9bc2af51b7f08e8c669714e47f608a');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({
-    'app/dissection-data.ts':'9c9197e97e610300c747d86a4a5c11d809fc208aef490f924bef8302e421b9fc',
+    'app/dissection-data.ts':'d3e0910115090f048057fcf47cecd2a27666c0248dd31e8d67f4d068e08739bc',
     'content/thoracic-hilar-study.ts':'29337537b45c066543ef0ee4010c4d6dfe2ca985b09726f3fc894535c34c4ac8',
   }))assert.deepEqual(inputs.filter(input=>input.path===path),[{path,sha256}]);
   assert.ok(!inputs.some(input=>/native-mr|local-mr-study|\.vmmr|patient[-_/]?data/i.test(input.path)));

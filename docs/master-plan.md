@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+24 September pes anserinus convergence: the shared viewer binds Atlas `52f6789`,
+adding two sided whole-body dissection views through existing controls. All 136
+models / 143 protected paths and independent entitlements remain unchanged.
+See [integration boundaries](atlas-pes-anserine-study-20260924.md) and the main
+checkpoint for publication/recovery. Continue substantive regional development;
+clinical, imaging and device gates remain open.
+
 24 September laryngeal muscle CT/MRI teaching: the shared viewer binds Atlas
 `b2ecd50`, adding fourteen orientation drafts through existing panels. All 136
 models / 143 protected paths and independent entitlements remain unchanged.
