@@ -1,5 +1,11 @@
 # Visible Medicine — shared delivery plan
 
+24 September contained review correction: the shared viewer source is now
+Atlas `05b799f`, suppressing unavailable standalone review destinations while
+retaining teaching and standalone review. All 136 model hashes/143 paths are
+unchanged. See [source integration](atlas-contained-review-20260924.md) and the
+main-task checkpoint for actual publication; no clinical approval is implied.
+
 24 September regional catch-up: the shared viewer now binds Atlas `ab08134`,
 including coronary venous parts, saved regional focus views and corrected V1
 search. The signed-in staging page verified all 136 actual model downloads
