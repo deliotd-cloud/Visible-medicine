@@ -1,0 +1,80 @@
+{
+  "auditSha256": "78d221460bddf648d3f1ef5eab3183fb594e3a515b93a0e8c70beeea848ace26",
+  "sourceId": "FMA43908",
+  "sourceFile": "FJ2066",
+  "target": "3d8dfa081ffe9d4df00bfbb16104702aa3a5ff153bbd6e77cb2b49ef82538401",
+  "context": [
+    {
+      "id": "vm:anatomy:body:thigh:left:bone:left-femur",
+      "sources": [
+        {
+          "file": "FJ3259",
+          "sha256": "d291cc3619c32c68edb9d29e0b755634c2cb85e3db89f0d0b63a316f879ef86d"
+        }
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:bone:left-tibia",
+      "sources": [
+        {
+          "file": "FJ3282",
+          "sha256": "40e55d7d28f060be61815603ee5eb1c0ba4c2e93af6fed6b5db7ca88d4ed82ef"
+        }
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:bone:left-fibula",
+      "sources": [
+        {
+          "file": "FJ3260",
+          "sha256": "b5fbb694e1d881033ec8318b97c41e9d9bedc89a8df9845573b1aac528829331"
+        }
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:bone:left-patella",
+      "sources": [
+        {
+          "file": "FJ3275",
+          "sha256": "768362d04f0f91cea9a28f4aeae9d9f63f3c82450b68d185fa4afefe75d75cc1"
+        }
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-artery",
+      "sources": [
+        {
+          "file": "FJ2065",
+          "sha256": "c6388ae15cdf1b00cbbbb6007784022a7c03d1e349b780193488f1f804150c1e"
+        }
+      ]
+    }
+  ],
+  "imageSha256": "ae0e8e490ae9198594cdb747a02f53abbeef2f3e595df69f736c07876ab7966d",
+  "projection": {
+    "panes": [
+      {
+        "x": 20,
+        "axis": 0,
+        "label": "Left knee: source X/Z projection",
+        "min": 20,
+        "max": 150
+      },
+      {
+        "x": 570,
+        "axis": 1,
+        "label": "Left knee: source Y/Z projection",
+        "min": -160,
+        "max": -30
+      }
+    ],
+    "zRangeMm": [
+      260,
+      460
+    ],
+    "candidateClipped": false,
+    "sourceFacesModified": false
+  },
+  "geometryModified": false,
+  "clinicalApproved": false
+}

@@ -10,10 +10,10 @@ import {
 const archive = await loadSourceHolds(),
   h = await loadCurrentSourceHolds();
 assert.deepEqual(h.evidence, archive.evidence);
-assert.equal(h.supplemental.length, 7);
+assert.equal(h.supplemental.length, 9);
 assert.equal(
   h.supplemental.reduce((n, s) => n + s.files.length, 0),
-  11,
+  13,
 );
 let aliases = 0,
   subsets = 0;
@@ -111,8 +111,8 @@ await assert.rejects(
 );
 console.log(
   JSON.stringify({
-    supplementalConcepts: 7,
-    heldSourceFiles: 11,
+    supplementalConcepts: 9,
+    heldSourceFiles: 13,
     subsets,
     aliases,
     archiveUnchanged: true,

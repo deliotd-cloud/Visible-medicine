@@ -45,3 +45,6 @@ content/sources/short-ciliary/*.obj -text -diff
 content/sources/anterior-cardiac-vein/*.obj -text -diff
 docs/anterior-cardiac-vein-source-audit.json -text
 docs/penile-source-audit.json -text
+# Immutable knee-source audit and admission disposition must survive checkout.
+docs/tibial-recurrent-source-audit.json -text
+docs/tibial-recurrent-source-disposition.json -text

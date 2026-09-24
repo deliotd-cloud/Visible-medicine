@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "status": "held-pending-identity-and-extent-review",
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "sourceAudit": {
+    "path": "docs/tibial-recurrent-source-audit.json",
+    "sha256": "78d221460bddf648d3f1ef5eab3183fb594e3a515b93a0e8c70beeea848ace26"
+  },
+  "groups": [
+    {
+      "id": "FMA43908",
+      "name": "left anterior tibial recurrent artery",
+      "side": "left",
+      "status": "held",
+      "reason": "Complete source-labelled artery includes a broad anterior-knee loop/network whose extent as an isolated anterior tibial recurrent artery has not been adjudicated. Hold the whole definition pending revision-bound radiologist identity/extent review; no trimming, relabelling, mirroring or subset admission.",
+      "files": [
+        {
+          "file": "FJ2066",
+          "sha256": "3d8dfa081ffe9d4df00bfbb16104702aa3a5ff153bbd6e77cb2b49ef82538401"
+        }
+      ]
+    },
+    {
+      "id": "FMA43907",
+      "name": "right anterior tibial recurrent artery",
+      "side": "right",
+      "status": "held",
+      "reason": "Complete source-labelled artery includes a broad anterior-knee loop/network whose extent as an isolated anterior tibial recurrent artery has not been adjudicated. Hold the whole definition pending revision-bound radiologist identity/extent review; no trimming, relabelling, mirroring or subset admission.",
+      "files": [
+        {
+          "file": "FJ2131",
+          "sha256": "23b75315a955162b26d754722f364c75073b52fdd7c4d7c079f94f74aba9ca2d"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "FMA43908",
+      "sourceBounds": {
+        "min": [
+          49.9995,
+          -123.643,
+          294.279
+        ],
+        "max": [
+          111.91,
+          -74.7977,
+          413.483
+        ]
+      },
+      "zExtentMm": 119.20400000000001,
+      "interpretation": "Loop/network extent requires review; technical topology and proximity do not establish isolated branch identity."
+    },
+    {
+      "id": "FMA43907",
+      "sourceBounds": {
+        "min": [
+          -111.915,
+          -123.64,
+          294.276
+        ],
+        "max": [
+          -50.0022,
+          -74.7847,
+          413.492
+        ]
+      },
+      "zExtentMm": 119.21600000000001,
+      "interpretation": "Loop/network extent requires review; technical topology and proximity do not establish isolated branch identity."
+    }
+  ],
+  "references": [
+    {
+      "url": "https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/artery-tables/arteries-of-the-lower-limb/",
+      "accessed": "2026-09-24",
+      "use": "Factual context: anterior tibial recurrent artery arises from anterior tibial artery and participates in the genicular anastomosis. No figures or table text copied."
+    }
+  ],
+  "geometryModified": false,
+  "admissionApproved": false,
+  "clinicalApproval": false
+}

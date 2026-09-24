@@ -187,6 +187,8 @@
     "inventory:test": "node scripts/validate-inventory.mjs",
     "source-holds:audit": "node scripts/audit-source-holds.mjs",
     "source-holds:test": "node scripts/validate-source-holds.mjs",
+    "current-source-holds:test": "node scripts/validate-current-source-holds.mjs",
+    "tibial-recurrent-holds:test": "node scripts/test-tibial-recurrent-holds.mjs",
     "source-geometry:audit": "node scripts/audit-source-geometry-screen.mjs",
     "source-geometry:test": "node scripts/validate-source-geometry-screen.mjs",
     "candidate-spatial:audit": "node scripts/audit-candidate-spatial.mjs",

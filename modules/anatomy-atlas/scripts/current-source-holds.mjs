@@ -6,10 +6,12 @@ import { collicularBrachiaSources } from './collicular-brachia-sources.mjs';
 import { deepLegVeinSources } from './deep-leg-vein-sources.mjs';
 import { pelvicVeinSources } from './pelvic-vein-sources.mjs';
 import { limbicLandmarkSources } from './limbic-landmark-sources.mjs';
+import { tibialRecurrentSources } from './tibial-recurrent-sources.mjs';
 
 const hash = (b) => createHash('sha256').update(b).digest('hex');
 const key = (tree, id) => `${tree}/${id}`;
 const reports = [
+  { path:'docs/tibial-recurrent-source-disposition.json', sha256:'a3cfc40af9ce85df44a60a272f50803bb20b459079d9c4a941d5d6124ade2042', rows:'groups', sources:tibialRecurrentSources },
   { path:'docs/limbic-landmark-source-audit.json', sha256:'2b29686d350ca29d88c67c7a44c3e143033deea35f15df0a66b90c758a82f69c', rows:'groups', sources:limbicLandmarkSources },
   { path:'docs/pelvic-vein-source-audit.json', sha256:'ffb300bcd1f2cd8c2a9684c133ed5d82a1043d7bda99a78f377854c9168ebf26', rows:'groups', sources:pelvicVeinSources },
   {

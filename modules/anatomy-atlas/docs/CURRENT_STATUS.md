@@ -1,5 +1,14 @@
 # Current atlas status
 
+[Tibial recurrent source review](TIBIAL_RECURRENT_SOURCE_REVIEW.md) holds two
+newly inspected official source definitions pending radiologist identity/extent
+review. They are technically closed meshes but include broad anterior-knee
+loops. Current export policy blocks both and source-sharing aliases; all 1,104
+displayed definitions remain unchanged. Two source-bound review figures and an
+exactly replayed audit preserve the evidence. This is not an anatomy admission
+or website publication. The native MRI local import-QA role remains complete;
+the full Atlas roadmap and clinical/device/imaging gates remain open.
+
 [Male pelvic visceral subset](PELVIC_VISCERAL_STUDY.md) adds one compact Pelvis and Whole body focus using the four already supplied bladder, prostate, rectum and urethra surfaces. It preserves their source IDs/positions and existing controls, with no complete pelvic-floor, continuous-lumen, imaging-registration or clinical-approval claim. Focused source/dissection checks and a bounded desktop interaction pass; the separate older composite content-history digest remains open.
 
 [Central airway source study](CENTRAL_AIRWAY_STUDY.md) changes the Thorax focus from a broad name pattern to three exact source-bound trachea and main-bronchus identities. Both-side and side-filtered focus behaviour, missing/changed/duplicate source rejection, and prior-recipe preservation are checked. The separate airway window, source geometry and clinical status are unchanged; this is not lumen, carinal/lobar-tree or patient registration evidence. Website publication is tracked separately.
