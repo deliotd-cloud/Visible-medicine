@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+24 September deep-brain website integration: the shared runtime now includes
+the saved six source-bound formative topics from Atlas `0989aa6`, using existing
+Practice controls and preserving all 136 models / 143 protected paths.
+See [integration boundaries](atlas-deep-brain-practice-20260924.md) and the main
+checkpoint for publication/recovery evidence. No clinical or access approval.
+The following source-only entry is the preceding milestone.
+
 24 September Atlas source-only deep-brain practice: `0989aa6` adds six formative
 concepts / twelve exact source bindings in the existing Apply anatomy mode.
 Previous 126 questions remain unchanged; current bank is 132 concepts / 250
