@@ -1,6 +1,7 @@
 // Exact offline reversal. Runtime retains the source-bound focus in both scopes.
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
+import {hasPesAnserineProfiles,prePesAnserineProfiles} from './pes-anserine-study-history.mjs';
 
 const hash = (value) => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 export const prePosteriorMediastinalProfilesHash = '4bc5b531e04448fb36afa7394cf318f3761012cbd921366d0bfb8a0a99244ce9';
@@ -10,6 +11,7 @@ const id = 'posterior-mediastinal-conduits';
 const regions = ['thorax', 'whole-body'];
 
 export function prePosteriorMediastinalProfiles(profiles) {
+  if(hasPesAnserineProfiles(profiles))profiles=prePesAnserineProfiles(profiles);
   const currentHash = hash(profiles);
   if (currentHash === prePosteriorMediastinalProfilesHash) return structuredClone(profiles);
   assert.equal(currentHash, afterHash, 'Unrecorded posterior-mediastinal recipe edit');

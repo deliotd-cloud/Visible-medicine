@@ -1267,3 +1267,10 @@ or datasets. No commercial asset rights are inferred from public/indexed access.
 Existing BodyParts3D CC BY 4.0 attribution remains unchanged. No dependency,
 font, texture, new mesh or fee is added. See `docs/LARYNGEAL_MUSCLE_IMAGING.md`
 for exact scope and outstanding radiologist validation.
+# Pes anserinus convergence study
+
+The paired whole-body study reuses eight existing BodyParts3D surfaces and their
+retained CC BY 4.0 attribution. Its original short anatomical summaries cite
+https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html. No publisher
+table, artwork or image is imported; reference access grants no asset licence.
+No new dependency, dataset, font, texture or mandatory fee is introduced.

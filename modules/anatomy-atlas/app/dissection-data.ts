@@ -5,6 +5,7 @@ import { thoraxCentralAirwayBindings, thoraxCentralAirwayStudy } from '../conten
 import { mediastinalOrganBindings, mediastinalOrganStudy } from '../content/mediastinal-organ-study.ts';
 import { posteriorMediastinalBindings, posteriorMediastinalStudy } from '../content/posterior-mediastinal-study.ts';
 import { thoracicHilarBindings, thoracicHilarReferences, thoracicHilarStudies } from '../content/thoracic-hilar-study.ts';
+import { pesAnserineBindings, pesAnserineReferences, pesAnserineStudies } from '../content/pes-anserine-study.ts';
 import { infrahyoidMuscleBindings, infrahyoidContextBindings, infrahyoidLayerStudies } from '../content/infrahyoid-layer-study.ts';
 import { pelvicUrethralFocus } from '../content/pelvic-urethral-study.ts';
 import { ophthalmicNerveStudies, ophthalmicNerveTargetBindings, ophthalmicNerveContextBindings, ophthalmicNerveReferences } from '../content/ophthalmic-nerve-studies.ts';
@@ -1198,6 +1199,22 @@ for (const region of ['thorax', 'whole-body'] as const) {
       dissectionProfiles[region].references.push(reference);
   }
 }
+for (const study of pesAnserineStudies) {
+  dissectionProfiles['whole-body'].focuses.push({
+    id: study.id,
+    title: study.title,
+    rule: { fmaIds: [...study.targetFmaIds] },
+    context: [{ fmaIds: [...study.contextFmaIds] }],
+    includeSkeleton: false,
+    view: study.view,
+    description: study.description,
+    inspect: study.inspect,
+    requiredSourceBindings: pesAnserineBindings.filter((binding) =>
+      [...study.targetFmaIds, ...study.contextFmaIds].some((fmaId) => fmaId === binding.fmaId),
+    ),
+  });
+}
+dissectionProfiles['whole-body'].references.push(...pesAnserineReferences);
 for (const region of ['thorax', 'whole-body'] as const) {
   dissectionProfiles[region].focuses.push({
     id: posteriorMediastinalStudy.id,

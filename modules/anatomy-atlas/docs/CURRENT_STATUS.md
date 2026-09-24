@@ -1,5 +1,12 @@
 # Current atlas status
 
+[Pes anserinus convergence](PES_ANSERINE_STUDY.md) adds right/left whole-body
+relationship views using three existing muscles and the same-side tibia. Search,
+selection, Remove/Undo and existing separation controls are reused. Source
+memberships, geometry and all teaching topics are unchanged; no separately
+segmented tendons or clinical approval are implied. Source-only pending website
+integration; website `7bed5b9` remains the verified private publication.
+
 [Intrinsic laryngeal muscle imaging](LARYNGEAL_MUSCLE_IMAGING.md) adds 14 CT/MRI
 orientation drafts for seven exact retained sources, using existing panels.
 Eight family/modality concepts distinguish expected anatomical locations from

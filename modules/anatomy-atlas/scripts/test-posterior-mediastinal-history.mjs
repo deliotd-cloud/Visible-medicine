@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { dissectionProfiles } from '../app/dissection-data.ts';
+import {prePesAnserineProfiles} from './pes-anserine-study-history.mjs';
 import {
   prePosteriorMediastinalProfiles,
   prePosteriorMediastinalProfilesHash,
@@ -25,7 +26,7 @@ for (const mutate of [
   (profile) => { profile.thorax.focuses.push(structuredClone(profile.thorax.focuses.find((focus) => focus.id === id))); },
   (profile) => { profile['whole-body'].focuses = profile['whole-body'].focuses.filter((focus) => focus.id !== id); },
 ]) {
-  const changed = structuredClone(dissectionProfiles);
+  const changed = prePesAnserineProfiles(dissectionProfiles);
   mutate(changed);
   const snapshot = JSON.stringify(changed);
   assert.throws(() => prePosteriorMediastinalProfiles(changed), /Unrecorded posterior-mediastinal recipe edit/);
