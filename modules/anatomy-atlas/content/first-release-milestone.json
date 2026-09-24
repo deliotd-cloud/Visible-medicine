@@ -14,30 +14,30 @@
     "note": "Historical baseline only; it is not evidence that a release candidate is approved."
   },
   "candidate": {
-    "atlasRevision": "472430073dc171910463936610428930c76b0a01",
-    "websiteRevision": "5e67bc8185960e22e25c4bc28da063779ccf3598",
+    "atlasRevision": "c74d62649740638b45a4b1a29713c92c50cdbddf",
+    "websiteRevision": "579a0c7907555276fffa88a6b17b991f5e3b60a7",
     "delivery": {
       "website": {
-        "sourceRevision": "5e67bc8185960e22e25c4bc28da063779ccf3598",
-        "deployedRevision": "5e67bc8185960e22e25c4bc28da063779ccf3598",
-        "versionNumber": 110,
-        "versionId": "appgprj_6a8b1e2c3d348191be844899e57ccbc6~appgver_7f77354acad481919f09f5534653865c",
-        "deploymentId": "appgdep_6ab4aa5175288191a016a3d4d90c680c",
+        "sourceRevision": "579a0c7907555276fffa88a6b17b991f5e3b60a7",
+        "deployedRevision": "579a0c7907555276fffa88a6b17b991f5e3b60a7",
+        "versionNumber": 111,
+        "versionId": "appgprj_6a8b1e2c3d348191be844899e57ccbc6~appgver_9795d54116cc819187520abc9cc254ad",
+        "deploymentId": "appgdep_6ab4b1a13ed8819198fcfcb265886d83",
         "status": "succeeded",
         "audience": "owner-only",
         "evidence": [
-          "D:\\VisibleMedicine-Atlas-Recovery\\website-foot-framing-20260924.publication.json"
+          "D:\\VisibleMedicine-Atlas-Recovery\\website-thorax-respiratory-20260924.publication.json"
         ]
       },
       "sharedViewer": {
-        "atlasRevision": "472430073dc171910463936610428930c76b0a01",
-        "manifestSha256": "bbcc2f7ff57391c7251e1d2185167966f65cbeb7e1faca5dc2929760320ebbd6",
-        "inventorySha256": "92ab0c894caf72a282b5e1189b77c854b94aad3d1970f6a5210feca9edabfe1b",
+        "atlasRevision": "c74d62649740638b45a4b1a29713c92c50cdbddf",
+        "manifestSha256": "13e74819746eaead1688bbc7c2f9d33f335b5d4a27fa88636ff9e92ca1296e02",
+        "inventorySha256": "bf18d0f5968a301fe227fc479c47e281b55a880c90a4967d623abb012a9d1bd6",
         "modelCount": 135,
         "pathCount": 142
       },
       "validation": {
-        "atlasRevision": "472430073dc171910463936610428930c76b0a01",
+        "atlasRevision": "c74d62649740638b45a4b1a29713c92c50cdbddf",
         "status": "source-checked-only"
       },
       "clinicalApproval": {
