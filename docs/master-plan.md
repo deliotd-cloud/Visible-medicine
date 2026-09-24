@@ -1,5 +1,18 @@
 # Visible Medicine — shared delivery plan
 
+24 September source-only Thorax study integration: the generated shared
+regional/whole-body runtime now binds Atlas `c74d62649740638b45a4b1a29713c92c50cdbddf`.
+Three concise, source-guarded respiratory-layer focus views use existing
+intercostal and diaphragm meshes with reversible visibility. They depict fixed,
+unreviewed source surfaces, not breathing mechanics or subdivided rib spaces.
+All 134 shared GLBs have identical paths, sizes and hashes; all 12 scopes and
+the 135-model/142-path protected inventory remain. Independent access policy
+stays administrator-review. This source integration does not itself establish a
+new private publication, actual browser interaction or clinical approval.
+Study scope is in the Atlas source at `docs/THORAX_RESPIRATORY_STUDY.md`; the
+main coordination checkpoint records recovery. All six first-release gates
+remain open.
+
 24 September source-only foot viewer integration: the shared regional/whole-body
 runtime has been regenerated from Atlas `472430073dc171910463936610428930c76b0a01`.
 Stale or opposite-side foot selections now restore full-source camera framing.

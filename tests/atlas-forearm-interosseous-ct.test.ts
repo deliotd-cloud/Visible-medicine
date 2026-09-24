@@ -14,9 +14,9 @@ const selections=[
 
 test('shared regional export retains four exact interosseous CT draft bindings and source limits',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'bbcc2f7ff57391c7251e1d2185167966f65cbeb7e1faca5dc2929760320ebbd6');
+  assert.equal(sha(manifestBytes),'13e74819746eaead1688bbc7c2f9d33f335b5d4a27fa88636ff9e92ca1296e02');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'472430073dc171910463936610428930c76b0a01');
+  assert.equal(manifest.sourceCommit,'c74d62649740638b45a4b1a29713c92c50cdbddf');
   for(const flag of ['patientDataIncluded','clinicalApproved','imagingConnection','standaloneReviewConnection'])
     assert.equal(manifest[flag],false,flag);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
@@ -49,7 +49,9 @@ test('shared regional export retains four exact interosseous CT draft bindings a
     ['[`FMA22807`,`FMA22808`]','common-interosseous'],
     ['[`FMA268667`,`FMA268669`]','recurrent-interosseous'],
   ])assert.ok(teaching.includes(`fmas:${fmas},group:\`${group}\`,topics:[\`ct\`]`),`${group} CT-only draft topic`);
-  assert.ok(teaching.includes('readiness:`draft`,title:`${e.name} · ${uA[t]} arterial orientation · draft`'),'source-bound draft resolver');
+  const modalities=[...teaching.matchAll(/([\w$]+)=\{ct:`CT`,mri:`MRI`,ultrasound:`Ultrasound`\}/g)];
+  assert.ok(modalities.length>0,'arterial orientation modality labels');
+  assert.ok(modalities.some(modality=>teaching.includes('readiness:`draft`,title:`${e.name} · ${'+modality[1]+'[t]} arterial orientation · draft`')),'source-bound draft resolver');
   assert.ok(teaching.includes('The review does not establish that this exact short branch is visible in every CT acquisition.'),'common branch visibility limit');
   assert.ok(teaching.includes('does not demonstrate reliable depiction of this specific small recurrent branch.'),'recurrent branch visibility limit');
   assert.ok(teaching.includes('Do not read a missing or indistinct branch on CT as proof of absence, injury or occlusion.'),'no diagnostic inference');
