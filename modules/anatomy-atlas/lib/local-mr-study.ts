@@ -48,6 +48,9 @@ export async function readNativeMr(
     bodySize % 2
   )
     fail();
+  // The preparer writes zero alignment bytes. Reject unclaimed payload outside
+  // the JSON header and hashed scalar body, even though this gap is at most 7 B.
+  if (bytes.subarray(16 + headerSize, start).some((byte) => byte !== 0)) fail();
   const h = JSON.parse(
     new TextDecoder('utf-8', { fatal: true }).decode(
       bytes.subarray(16, 16 + headerSize),

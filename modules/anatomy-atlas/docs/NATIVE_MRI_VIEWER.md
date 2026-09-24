@@ -7,6 +7,7 @@ Route: `/review/mri-import`, under the existing local CT workspace's collapsed P
 The native image occupies the main working area with a slice slider and Previous/Next controls. A narrow sidebar holds Close and collapsed brightness/contrast and geometry/review sections; on smaller screens these become compact controls above the image. No introductory marketing page or extra permanently open settings panel is added.
 
 - Click/tap a source sample to inspect stored signal and LPS coordinates. Arrow keys move by one in-plane sample; Page Up/Down changes the acquired slice. Keyboard activation does not create a synthetic pointer position. The crosshair stays at the chosen in-plane index when moving through slices.
+- Signal, sample indices and their matching LPS coordinate share one polite live readout, so keyboard sample/slice changes announce the same source-space point. Screen-reader behaviour still needs direct device review.
 - Source-derived edge letters indicate directions toward the screen edges, including compound oblique labels. They do not classify sequence, body-part laterality or a standardised radiological orientation. No mirror/rotation is applied.
 - Physical in-plane pixel aspect is preserved when fitting the image. Display range and greyscale inversion do not modify source samples. No CT HU windows or calibrated quantitative-MRI interpretation are supplied.
 - Actual native origins determine coordinates; the UI distinguishes centre spacing, nominal slice thickness, acquisition gaps and nominal overlap. There is no interpolation across acquisitions and no MPR reconstruction or 3D tissue claim.
@@ -27,7 +28,7 @@ The target directory must exist and the target file must not. Never put patient 
 
 ## Binary contract
 
-Eight-byte ASCII `VMMR0001`, then little-endian uint32 JSON-header length and body length. UTF-8 JSON begins at byte16; scalar body starts at the next eight-byte boundary. Total file size must exactly match and cannot exceed128 MiB. Header maximum128 KiB. The body is native int16/uint16 with column fastest, then row, then slice. The JSON includes a SHA-256 body fingerprint and a claimed source NIfTI fingerprint; the local body check detects corruption or mismatch against the header, not a trusted source signature.
+Eight-byte ASCII `VMMR0001`, then little-endian uint32 JSON-header length and body length. UTF-8 JSON begins at byte16; scalar body starts at the next eight-byte boundary. All intervening alignment bytes must be zero; they cannot carry unclaimed content outside the JSON header and hashed scalar body. Total file size must exactly match and cannot exceed128 MiB. Header maximum128 KiB. The body is native int16/uint16 with column fastest, then row, then slice. The JSON includes a SHA-256 body fingerprint and a claimed source NIfTI fingerprint; the local body check detects corruption or mismatch against the header, not a trusted source signature.
 
 Schema `vm-native-mr/1` accepts only the documented top-level keys: schema, release, modality, privacyCertified, clinicalApproved, atlasRegistration, units, order, scalarType, dimensions, spacing, directions, positions, thickness, window, sourceSha256, bodySha256. Release must be `NOT_FOR_PUBLICATION`; units `stored-MR-signal`. No raw patient fields, filenames, raw UIDs, sequence descriptions or arbitrary free-text labels are copied into this contract. The source fingerprint is a claim supplied by the packet, not independently authenticated by this checker. A fabricated packet can carry self-consistent hashes without establishing source provenance.
 
@@ -36,6 +37,20 @@ Dimensions: at most2048×2048×512, at least two slices, constrained further by 
 Coordinate basis: [DICOM PS3.3 Image Plane Module](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.6.2.html). Column index uses the first orientation vector and column spacing; row index uses the second vector and row spacing. LPS positive directions are left, posterior and superior. Both indices refer to voxel centres.
 
 ## Verification and remaining acceptance
+
+### Packet-boundary and live-readout follow-up, 24 September 2026
+
+The local parser now rejects any non-zero alignment byte between the JSON
+header and hashed scalar body. Synthetic tests mutate both ends of the padding
+while keeping the body fingerprint unchanged; the unmodified zero-padded packet
+still loads. This closes an unclaimed-content gap, not source authentication or
+de-identification. The single polite, atomic readout now contains signal,
+sample indices and the matching LPS point; component tests check it after
+keyboard slice and sample changes. The native-MRI validator passed 122 checks,
+the CT checker 78, volume-viewer 200, and the Didanix adapter, imaging
+comparison, independent navigation and TypeScript checks passed. No private
+packet was imported. Actual screen-reader announcement, device rendering,
+long-duration memory behaviour and clinical/privacy acceptance remain open.
 
 ### Local-only boundary regression, 24 September 2026
 

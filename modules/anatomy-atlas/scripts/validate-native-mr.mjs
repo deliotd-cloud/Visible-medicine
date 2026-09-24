@@ -192,6 +192,20 @@ function encode(
 }
 const packet = encode(),
   study = await api.readNativeMr(packet);
+const packetBytes = new Uint8Array(packet);
+const headerEnd = 16 + new DataView(packet).getUint32(8, true);
+const bodyStart = Math.ceil(headerEnd / 8) * 8;
+check(bodyStart > headerEnd);
+check(packetBytes.subarray(headerEnd, bodyStart).every((byte) => byte === 0));
+for (const index of new Set([headerEnd, bodyStart - 1])) {
+  const hiddenPayload = packet.slice(0);
+  new Uint8Array(hiddenPayload)[index] = 0x41;
+  check(
+    hash(new Uint8Array(hiddenPayload).subarray(bodyStart)) ===
+      hash(packetBytes.subarray(bodyStart)),
+  );
+  await fails(() => api.readNativeMr(hiddenPayload));
+}
 same(study.dimensions, [4, 3, 3]);
 same(api.nativeMrPoint(study, 1, 2, 1), { lps: [46, 43, 33.6], signal: 21 });
 same(api.nativeMrEdges(study), ['A', 'P', 'L', 'R']);
@@ -327,6 +341,7 @@ check(html.includes('Nominal thickness 3.000 mm'));
 check(!html.includes('<details open'));
 check(html.includes('Unreviewed'));
 check(html.includes('Stored signal'));
+check(html.includes('aria-live="polite" aria-atomic="true"'));
 check(
   html.includes('role="alert"') &&
     html.includes('Source provenance is unverified'),
@@ -368,10 +383,19 @@ const find = (predicate) => {
   assert(result, 'Expected real component control');
   return result;
 };
+const plainText = (node) =>
+  Array.isArray(node)
+    ? node.map(plainText).join('')
+    : node && typeof node === 'object'
+      ? plainText(node.props?.children)
+      : String(node ?? '');
+const readout = () => plainText(find((n) => n.type === 'output'));
 let closed = 0;
 slots = [];
+check(readout().includes('Stored signal 18 · column 3, row 2 · LPS mm: 48.00, 46.00, 33.60'));
 find((n) => n.props?.['aria-label'] === 'Next native slice').props.onClick();
 same(slots[0], 2);
+check(readout().includes('Stored signal 30 · column 3, row 2 · LPS mm: 48.00, 46.00, 37.20'));
 check(
   find((n) => n.props?.['aria-label'] === 'Next native slice').props.disabled,
 );
@@ -384,6 +408,7 @@ target().props.onKeyDown({ key: 'PageUp', preventDefault() {} });
 same(slots[0], 0);
 target().props.onKeyDown({ key: 'ArrowLeft', preventDefault() {} });
 same(slots[1], [1, 1]);
+check(readout().includes('Stored signal 5 · column 2, row 2 · LPS mm: 48.00, 43.00, 30.00'));
 target().props.onClick({
   detail: 1,
   clientX: 200,

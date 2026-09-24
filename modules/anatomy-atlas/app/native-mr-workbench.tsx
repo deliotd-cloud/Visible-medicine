@@ -347,11 +347,10 @@ export function LoadedNativeMr({
           )}
         </div>
         <footer>
-          <output aria-live="polite">
+          <output aria-live="polite" aria-atomic="true">
             Stored signal {point.signal} · column {pixel[0] + 1}, row{' '}
-            {pixel[1] + 1}
+            {pixel[1] + 1} · LPS mm: {point.lps.map((n) => n.toFixed(2)).join(', ')}
           </output>
-          <span>LPS mm: {point.lps.map((n) => n.toFixed(2)).join(', ')}</span>
         </footer>
       </section>
     </main>
