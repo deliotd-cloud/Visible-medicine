@@ -1932,11 +1932,16 @@ export default function BodyExplorer({
                 <Button
                   size="icon"
                   variant="ghost"
-                  aria-label="Reset camera and separation"
+                  aria-label="Reset camera, layout, cutaway, focus, isolation, and separation"
+                  aria-describedby="reset-view-help"
+                  title="Restore the default view. System visibility and removed structures are preserved."
                   onClick={resetView}
                 >
                   <RotateCcw />
                 </Button>
+                <span id="reset-view-help" className="sr-only">
+                  System visibility and removed structures remain unchanged.
+                </span>
               </div>
               <div className="body-canvas-caption">
                 {regionalCloseUp

@@ -1,5 +1,9 @@
 # Anatomy atlas backup — 12 September 2026
 
+## 24 September 2026 — Reset-control scope clarification
+
+Atlas source `b8be7207ea5bb4b01d33c28f5b5ccf242da02abe` (tree `c0e85f3b2fd70a59fbdd12076e957d37de72e851`) clarifies the reset icon's accessible name and hover/assistive help. It resets camera, layout, cutaway, focus, isolation and separation while preserving system visibility and removed anatomy. The handler and anatomy are unchanged. Focused reset, dissection-history and selection-visibility tests plus TypeScript passed; no hosted publication, device acceptance or clinical approval is implied. The module subtree is intended to match the source tree exactly.
+
 ## 12 September 2026 — Thigh-to-knee attachment exploration
 
 Source `90b117d210e59ecc12d05bb0f9831fa5b04640cc`, parent `acf8acb3a2fc6e4fc698583865cb506b3f7b55c9`, tree `5507343cf44fd4fa4a5c46448f875c35d3fd5f67`. Thirteen source paths extend the shoulder's collapsed attachment control to 20 existing thigh muscle/head selections and ten existing bones. Quadriceps tibial continuation is explicitly indirect; the source-bound plans respect region/side, preserve selected-muscle identity and support shared Undo/Redo. No new geometry, scans, dependencies, image admission, entitlements or clinical approvals.
