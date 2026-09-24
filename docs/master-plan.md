@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+24 September posterior-mediastinal integration: the shared runtime now binds
+Atlas `b2cc6a7`, adding the existing-source study to Thorax and Whole body without
+new controls or model bytes. All 136 models / 143 protected paths and independent
+access gates are preserved. See [integration boundaries](atlas-posterior-mediastinal-20260924.md)
+and the main-task checkpoint for actual publication/recovery. Clinical/device
+review and the full roadmap remain open; continue source-led regional coverage.
+
 24 September pulmonary-hilar integration: the shared regional/whole-body runtime
 now binds Atlas `e6af825`, adding source-bound right and left lung-root studies
 in Thorax and Whole body Dissect through existing controls. All 136 models and
