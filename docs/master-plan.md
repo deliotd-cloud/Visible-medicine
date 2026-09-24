@@ -1,5 +1,15 @@
 # Visible Medicine — shared delivery plan
 
+24 September source-only lacrimal-drainage teaching integration: the generated
+shared regional/whole-body viewer now binds Atlas `a9d30e273ed3a936ece1e3fb31210dd7e1e39168`.
+Six exact-source canaliculus, lacrimal-sac and nasolacrimal-duct selections
+receive 12 draft CT/MRI orientation notes; Ultrasound and X-ray remain pending.
+No images, source geometry, registration, clinical approval or independent
+entitlement change is included. The offline transition preserved 135 model
+hashes, 142 paths and 12 scopes with zero new model bytes. This source
+integration is not publication until separately verified. Broad historical
+content-contract and curriculum replay debt remains unwaived.
+
 24 September dense-Tray viewer integration: the shared regional/whole-body
 runtime now binds Atlas `79fe6f3785721160c7af7aeb8951b5cbd71c395b`.
 An explicitly framed, available selection remains framed when entering the
