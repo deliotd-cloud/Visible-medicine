@@ -1,5 +1,15 @@
 # Visible Medicine — shared delivery plan
 
+24 September Atlas source-only practice navigation: active questions now focus
+and reveal their prompt; answers and skips focus feedback, without scrolling the
+outer model page. Desktop and a 390 × 844 browser viewport were sampled; this is
+not screen-reader or physical-device acceptance. See Atlas
+`docs/PRACTICE_PANEL_NAVIGATION.md` and the main practice-navigation checkpoint
+for tests and exact recovery state. Generate a new shared module before claiming
+this fix on the hosted website; private v122 is unchanged. No anatomy, teaching,
+licence, entitlement or clinical approval changes. Next: existing-source hilar
+relationship studies and continued regional coverage, alongside open review gates.
+
 24 September deep-brain website integration: the shared runtime now includes
 the saved six source-bound formative topics from Atlas `0989aa6`, using existing
 Practice controls and preserving all 136 models / 143 protected paths.
