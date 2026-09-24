@@ -1,4 +1,5 @@
 import { centralVesselImagingLesson } from '../lib/central-vessel-imaging';
+import { lacrimalDrainageImagingLesson } from '../lib/lacrimal-drainage-imaging';
 import { laryngealImagingLesson } from '../lib/laryngeal-imaging';
 import { laryngealMuscleTeachingLesson } from '../lib/laryngeal-muscle-teaching';
 import { thoracicBranchImagingLesson } from '../lib/thoracic-branch-imaging';
@@ -348,6 +349,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   const pelvicOrganImaging = pelvicOrganImagingLesson(s, tab);
   const craniofacialOrganImaging = craniofacialOrganImagingLesson(s, tab);
   if (craniofacialOrganImaging) return craniofacialOrganImaging;
+  const lacrimalDrainageImaging = lacrimalDrainageImagingLesson(s, tab);
+  if (lacrimalDrainageImaging) return lacrimalDrainageImaging;
   if (pelvicOrganImaging) return pelvicOrganImaging;
   const thighMuscleImaging = thighMuscleImagingLesson(s, tab);
   if (thighMuscleImaging) return thighMuscleImaging;

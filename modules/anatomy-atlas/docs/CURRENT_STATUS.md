@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Lacrimal drainage CT/MRI orientation](LACRIMAL_DRAINAGE_IMAGING.md) adds 12 source-pinned draft placements for six existing paired canaliculus, sac and nasolacrimal-duct selections. Ultrasound and X-ray remain pending. The focused transition check preserves 9,924 other teaching slots and unchanged source geometry. No routine-scan lumen, patency, patient registration, clinical approval or imported image is claimed. Broader historical curriculum replay remains a separate failing baseline and is not waived.
+
 [Main-bronchus external ultrasound limits](THORACOABDOMINAL_ORGAN_IMAGING.md) add two exact-source draft notes for the right and left main bronchi. Routine transthoracic pleural artefacts are not direct bronchial-lumen images; endobronchial/endoscopic ultrasound is outside this lesson. No scan, mesh, registration or clinical approval is added.
 
 [Forearm superficial-vein MRI orientation](FOREARM_VENOUS_IMAGING.md) adds four draft topics for the bilateral cephalic and basilic veins. The other 9,932 topics, original geometry and dissection recipes are unchanged; CT remains pending. MR-venography evidence is not extrapolated to routine MRI, patient mapping, access planning or a registered scan. Revision-bound radiologist review and website/host integration remain separate.

@@ -62,6 +62,7 @@
     "rectal-deferent-imaging:test": "node scripts/pin-rectal-deferent-imaging.mjs --check && node scripts/record-rectal-deferent-imaging-transition.mjs --check && node scripts/validate-rectal-deferent-imaging.mjs",
     "deferent-clinical:test": "node scripts/pin-deferent-clinical.mjs --check && node scripts/record-deferent-clinical-transition.mjs --check && node scripts/validate-deferent-clinical.mjs",
     "craniofacial-organ-imaging:test": "node scripts/pin-craniofacial-organ-imaging.mjs --check && node scripts/record-craniofacial-organ-imaging-transition.mjs --check && node scripts/validate-craniofacial-organ-imaging.mjs",
+    "lacrimal-drainage-imaging:test": "node scripts/pin-lacrimal-drainage-imaging.mjs --check && node scripts/record-lacrimal-drainage-imaging-transition.mjs --check && node scripts/validate-lacrimal-drainage-imaging.mjs",
     "corpus-spongiosum:test": "node scripts/pin-corpus-spongiosum-baseline.mjs --check && node scripts/export-corpus-spongiosum.mjs --check && node scripts/validate-corpus-spongiosum.mjs",
     "hip-attachments:test": "node scripts/pin-hip-attachments.mjs --check && node scripts/validate-hip-attachments.mjs",
     "forearm-attachments:test": "node scripts/pin-forearm-attachments.mjs --check && node scripts/validate-forearm-attachments.mjs",
