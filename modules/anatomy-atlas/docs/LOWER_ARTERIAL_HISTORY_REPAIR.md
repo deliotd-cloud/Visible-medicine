@@ -27,8 +27,9 @@ It excludes only the recorded later source selections/bundles from that view
 and restores only the 46 recorded lesson pairs. All earlier source identities,
 shoulder lessons and recipes remain exact. Both pending and authored phases of
 the original 36 arterial topics are separately validated and retained; unknown,
-mixed or changed inputs fail. The original validator uses the reconstructed
-catalogue for its historical checksum and still exercises all current records.
+mixed or changed inputs fail. The arterial imaging validator now computes its
+historical checksum directly from the pinned original Git tree, while checking
+the current 36 placements and absent lessons for unselected records separately.
 
 This adapter is imported only by scripts. **No tissue or teaching is removed
 from the current atlas, and no clinical approval is migrated.**
@@ -38,12 +39,12 @@ from the current atlas, and no clinical approval is migrated.**
 Run from the Atlas checkout:
 
 ```sh
-node scripts/record-lower-arterial-source-history.mjs --check
 node scripts/validate-lower-arterial-source-history.mjs
 node scripts/validate-lower-arterial-imaging.mjs
+npm run content:test
 ```
 
-The new regression independently replays the original Git source, proves exact
+The source-history regression independently replays the original Git source, proves exact
 catalogue and full-curriculum equality, checks idempotence and defensive copies,
 and rejects ten invalid source/lesson/recipe states. It confirms current teaching
 is unchanged. The original arterial validator retains its original hash and
@@ -51,6 +52,9 @@ checks 36 placements, 288 identity negatives and 36 real note render callbacks.
 Results are in `lower-arterial-source-history-validation.json`; execution logs,
 GitHub and D-drive recovery are recorded in the coordinating checkpoint.
 
+The separate source-history recorder's `--check` remains red because an older
+main-bronchus helper calls a missing `thoracoabdominalOrganImagingLesson` API.
+That is not masked by these passing validators and needs a bounded repair.
 This is a repair for this specific historical boundary, not evidence that every
 legacy suite passes or that content has clinical approval. Future anatomy/copy
 changes must have their own source-bound transition rather than relaxing hashes.

@@ -5,8 +5,7 @@ import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import ts from 'typescript';
 import { contentContext, contentValidator } from './content-contract-tools.mjs';
-import { authoringBeforeLimbBoneImaging } from './limb-bone-imaging-history.mjs';
-import { restoreLowerArterialSourceHistory } from './lower-arterial-source-history.mjs';
+import { exactSourceHistoryApi } from './exact-source-history-api.mjs';
 import {
   authoringBeforeLowerArterialImaging,
   lowerArterialContentHash as hash,
@@ -21,26 +20,27 @@ const context = await contentContext(),
 const catalog = api.bodyDisplayCatalog(context.catalog),
   initial = JSON.stringify(catalog);
 const before = authoringBeforeLowerArterialImaging({ api, catalog });
-const preBone = restoreLowerArterialSourceHistory(authoringBeforeLimbBoneImaging({ api, catalog }),catalog,{arterialStage:'draft',deferWholeSnapshot:true});
 const pins = JSON.parse(
   await readFile('content/lower-arterial-imaging-pins.json'),
 );
+assert.equal(pins.sourceCommit, 'b5725a6b8cf2fa9028b93a9e3853d864bc874bc3');
+const original = await exactSourceHistoryApi(pins.sourceCommit);
+const originalCatalog = original.bodyDisplayCatalog(context.catalog);
 assert.equal(
   hash({
-    body: before.bodyDisplayCatalog(context.catalog).structures.map((s) => ({
+    body: originalCatalog.structures.map((s) => ({
       id: s.id,
       sections: Object.fromEntries(
-        api.contentTabs.map((t) => [t, before.bodyLesson(s, t)]),
+        original.contentTabs.map((t) => [t, original.bodyLesson(s, t)]),
       ),
     })),
-    shoulder: api.structures,
-    recipes: before.dissectionProfiles,
+    shoulder: original.structures,
+    recipes: original.dissectionProfiles,
   }),
   pins.previousAllLessonsAndRecipesHash,
   'All earlier body/shoulder teaching and recipes retained',
 );
 assert.equal(pins.sourceVersion, catalog.sourceVersion);
-assert.equal(pins.sourceCommit, 'b5725a6b8cf2fa9028b93a9e3853d864bc874bc3');
 assert.deepEqual(pins.coordinateSystem, catalog.coordinateSystem);
 for (const b of pins.bundles) {
   assert.deepEqual(
@@ -91,7 +91,6 @@ for (const s of catalog.structures)
       lesson = api.lowerArterialImagingLesson(s, tab);
     if (!entry?.topics.includes(tab)) {
       assert.equal(lesson, undefined);
-      assert.deepEqual(preBone.bodyLesson(s, tab), before.bodyLesson(s, tab));
       unchanged++;
       continue;
     }
