@@ -17,9 +17,9 @@ const selections=[
 
 test('head-neck export binds six exact lacrimal drainage selections to CT and MRI drafts only',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'b43ceba86a8e0c609b4c83496d2bbb78435ec083dd09b769d87448010c06a3a1');
+  assert.equal(sha(manifestBytes),'9146bc4550c20b2e4e3e3cdfec61da7003a93e240da0c0df17777ab78e2967d9');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'a9d30e273ed3a936ece1e3fb31210dd7e1e39168');
+  assert.equal(manifest.sourceCommit,'4e35cae205387f1416cbf4ab98cb9f02ab9b0646');
   for(const flag of ['patientDataIncluded','clinicalApproved','imagingConnection','standaloneReviewConnection'])
     assert.equal(manifest[flag],false,flag);
 
@@ -53,14 +53,17 @@ test('head-neck export binds six exact lacrimal drainage selections to CT and MR
     ['[`FMA59545`,`FMA59546`]','sac'],
     ['[`FMA59555`,`FMA59556`]','duct'],
   ])assert.ok(runtime.includes(`${group}:{fmas:${fmas},limit:`),`${group} bilateral source group`);
-  const groups=runtime.slice(runtime.indexOf('canaliculus:{fmas:[`FMA59582`'),runtime.indexOf(',$v=new Map('));
+  const groupsStart=runtime.indexOf('canaliculus:{fmas:[`FMA59582`');
+  const groupsEnd=runtime.indexOf(',ry=new Map(',groupsStart);
+  assert.ok(groupsStart>=0&&groupsEnd>groupsStart,'bounded lacrimal teaching group');
+  const groups=runtime.slice(groupsStart,groupsEnd);
   assert.match(groups,/focus:\{ct:\{body:/);
   assert.equal((groups.match(/focus:\{ct:\{body:/g)||[]).length,3,'each group has CT');
   assert.equal((groups.match(/mri:\{body:/g)||[]).length,3,'each group has MRI');
   assert.doesNotMatch(groups,/ultrasound:\{body:|xray:\{body:/,'Ultrasound and X-ray remain pending');
   assert.match(runtime,/\{ct:`CT`,mri:`MRI`\};function \w+\(\w+,\w+\)\{if\(!Object\.hasOwn\(\w+,\w+\)\)return/,'resolver accepts CT and MRI only');
   assert.match(runtime,/if\(!\w+\|\|\w+\(\w+\)!==\w+\.signature\)return/,'resolver rejects altered source identities');
-  assert.ok(runtime.includes('readiness:`draft`,title:`${e.name} · ${ey[r]} orientation · draft`'),'review remains draft');
+  assert.match(runtime,/readiness:`draft`,title:`\$\{e\.name\} · \$\{\w+\[r\]\} orientation · draft`/,'review remains draft');
   for(const phrase of [
     'Even specialised dacryocystography has limited canalicular detail',
     'The source envelope cannot be registered to a patient sac',
@@ -74,7 +77,7 @@ test('head-neck export binds six exact lacrimal drainage selections to CT and MR
   ])assert.ok(runtime.includes(phrase),phrase);
 
   const inventoryBytes=readFileSync('lib/atlas-model-inventory.json');
-  assert.equal(sha(inventoryBytes),'3bf87845650919940d520d158e4c06abaeaef0e474e0fbb235688490908b4ab1');
+  assert.equal(sha(inventoryBytes),'b4b91927b37958f446aadb50e83d6a5698b01cf78bcd65fc8f344cf59d13072b');
   const inventory=JSON.parse(inventoryBytes.toString());
   assert.equal(inventory.sources.find((source:{module:string})=>source.module==='head-neck')?.manifestSha256,sha(manifestBytes));
   assert.equal(inventory.models.length,135);

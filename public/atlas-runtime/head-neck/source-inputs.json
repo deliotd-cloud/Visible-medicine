@@ -141,7 +141,7 @@
   },
   {
     "path": "app/dissection-data.ts",
-    "sha256": "6c48bb72d93082810d3351d8a1e8669836368c83f411031ab5a439bf4520b895"
+    "sha256": "f9a5b4c6b786901b64428da3759df33c7f4c4d1786b666f94a9f20b6416b7be2"
   },
   {
     "path": "app/dissection-orientation.tsx",
@@ -718,6 +718,14 @@
   {
     "path": "content/forearm-muscle-imaging.ts",
     "sha256": "3997414ad4f60fd6a9f2689bb02aea230aa7ddaa01190640dc8638150a280005"
+  },
+  {
+    "path": "content/forearm-superficial-vein-runtime-pins.json",
+    "sha256": "cb864bdb2d08c8585091a9c7a0cad37392d8b7aff374910d16ea01478a0916e6"
+  },
+  {
+    "path": "content/forearm-superficial-vein-study.ts",
+    "sha256": "6ad60f58f4131df71d35580d086729b27c39cd4d2f0819a5464df43293960053"
   },
   {
     "path": "content/forearm-venous-imaging-pins.json",
@@ -1868,6 +1876,10 @@
     "sha256": "da658e0b8a66f22bb31cabf49a0505b7f1bca71967afc5ead2b342aff93408b2"
   },
   {
+    "path": "lib/forearm-superficial-veins.ts",
+    "sha256": "07dde747d85a1a4fff95b1f19e62f4f1bc6a17c7696b91d60a842d9b6e499105"
+  },
+  {
     "path": "lib/forearm-vascular-anatomy.ts",
     "sha256": "2313c21bd2efed6048baad038739009cbd0fcad1eb2b2aed55fb009563bf6f99"
   },
@@ -2129,7 +2141,7 @@
   },
   {
     "path": "lib/limb-vascular-studies.ts",
-    "sha256": "62429b8d856a823caab84e391b034f7fc1f06e4193d3c7a517d7b966c6a4ed65"
+    "sha256": "9338230911c7db7967b947ec5afade816bcad861e68cc15129e5b5487a49f63e"
   },
   {
     "path": "lib/limbic-landmarks.ts",

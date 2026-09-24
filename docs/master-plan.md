@@ -1,5 +1,16 @@
 # Visible Medicine — shared delivery plan
 
+24 September source-only forearm study integration: the generated shared
+regional/whole-body viewer now binds Atlas `4e35cae205387f1416cbf4ab98cb9f02ab9b0646`.
+The new superficial-forearm-vein focus uses eight separately supplied,
+source-pinned surfaces and existing bone context. It explicitly disclaims a
+joined lumen, flow, venepuncture guidance and patient registration. The
+separate private native-MRI checker was not exported. The offline transition
+retained all 135 models, 142 paths and 12 scopes with zero new model bytes;
+administrator-only draft policy remains. This source integration is not a
+new private-site publication, anatomical validation or clinical approval.
+See [the integration record](atlas-forearm-superficial-veins-20260924.md).
+
 24 September source-only lacrimal-drainage teaching integration: the generated
 shared regional/whole-body viewer now binds Atlas `a9d30e273ed3a936ece1e3fb31210dd7e1e39168`.
 Six exact-source canaliculus, lacrimal-sac and nasolacrimal-duct selections
