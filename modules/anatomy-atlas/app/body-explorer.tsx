@@ -1113,7 +1113,10 @@ export default function BodyExplorer({
     setLayout(next);
     setPlate(next === 'tray');
     setExplode(next === 'spatial' ? 0 : 100);
-    setFocus(false);
+    // A deliberately framed selection should stay inspectable when the dense
+    // catalogue opens; changing presentation must not silently hide entries.
+    if (!(next === 'tray' && focus && selectedId && enabledIds.has(selectedId)))
+      setFocus(false);
     setIsolated(false);
     setZoom(1);
     setReset((n) => n + 1);
@@ -1928,6 +1931,20 @@ export default function BodyExplorer({
                   />
                   <output>{explode}%</output>
                 </div>
+                {layout === 'tray' && selectedId && enabledIds.has(selectedId) && (
+                  <Button
+                    size="icon"
+                    variant={focus ? 'secondary' : 'ghost'}
+                    aria-label={focus ? 'Show full tray' : 'Frame selected tray entry'}
+                    title={focus ? 'Show every entry in the tray' : 'Zoom to the selected entry without hiding others'}
+                    onClick={() => {
+                      setFocus((value) => !value);
+                      setZoom(1);
+                    }}
+                  >
+                    <Focus />
+                  </Button>
+                )}
                 </WorkspaceOnly>
                 <Button
                   size="icon"
@@ -1960,7 +1977,9 @@ export default function BodyExplorer({
                   ? `${initialRegion === 'forearm' || initialRegion === 'whole-body' ? 'Elbow' : 'Knee'} close-up · Whole surfaces extend beyond the view · Pan / pinch to explore`
                   : layout === 'tray' && !exam
                     ? explode === 100
-                      ? 'Arranged view · Pan / pinch to zoom · Choose a direction · Not anatomical positions'
+                      ? focus && selectedId && enabledIds.has(selectedId)
+                        ? 'Selected entry framed · Others remain in the tray · Turn off Frame selection for the overview · Not anatomical positions'
+                        : 'Arranged view · Pan / pinch to zoom · Choose a direction · Not anatomical positions'
                       : `Arrangement in progress · ${explode}% · Overlap is possible before 100%`
                     : layout === 'extract' && !exam
                       ? !selectedId ||

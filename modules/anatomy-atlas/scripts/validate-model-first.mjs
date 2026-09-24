@@ -112,10 +112,11 @@ same(
   bindings(source).functions,
   {
     ...baseline.functions,
-    // f3b561f: same-style no-op plus extract at 100%; actual behavior is
-    // independently exercised by explode-styles:test, not silently rebaselined.
+    // Preserve an explicitly framed, enabled selection on entry to the dense
+    // Tray. explode-styles:test executes the handler and proves camera-only
+    // framing without dropping any entry; other transitions still reset focus.
     changeLayout:
-      'af5bb73784d6a9a0eca09aed29c761a01cc419de4c8d2df6d57003525f4a4f85',
+      '15395f7a6df327bf0812d6f2bd5b8730843b949622226fe65f14d0e778e929e1',
     // Selection recovery is independently executed by selection-visibility:test.
     revealSelection:
       '1cea695fbb227711161f4179f516ad6de36aa6c937b5605b96d819dc585e82eb',
@@ -291,6 +292,9 @@ for (const migration of preCompactCallbackMigrations) {
 }
 same(preCompactBindings.callbacks, [...migratedCallbacks].sort(compare),
   'Callback migrations existed before the compact information-sheet change');
+// Conditional Tray entry/overview framing leaves all entries present;
+// explode-styles:test executes this exact callback in both directions.
+migratedCallbacks.push('onClick/ff0cb1ea980e4313d0740aa8fe952f6993695f1b7c5668597f0675264694b560');
 same(
   bindings(source).callbacks,
   migratedCallbacks.sort(compare),

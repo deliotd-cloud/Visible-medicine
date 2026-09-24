@@ -1,5 +1,35 @@
 # First-release viewer acceptance evidence
 
+## 24 September: local selected-entry Tray inspection
+
+A temporary in-app browser tab at 1280 × 720 loaded the freshly exported
+regional module from Atlas `79fe6f3785721160c7af7aeb8951b5cbd71c395b`
+through a local static server. The tab and server were closed after the
+sample. This is source-candidate UI evidence, not a hosted-byte attestation.
+
+- Head & neck reported 291 structures. Search selected left
+  sternocleidomastoid (FMA13409). The existing Frame selection action enlarged
+  the muscle in the assembled view. Switching Spread to Tray retained the
+  explicit frame at 100% arranged separation, showed a distinct selected
+  source surface with neighbouring entries still present, and displayed the
+  non-anatomical-position caveat. The selected label remained attached to the
+  framed entry in the sampled anterior direction.
+- The conditional Show full tray button returned to the complete small
+  291-entry overview without clearing the selection. The same button became
+  Frame selected tray entry and restored the close-up in one click. The panel
+  still reported the selection as enabled. No system or hidden-entry count was
+  changed in this sample.
+- CPU/component checks independently passed the exact layout handler and
+  frame toggle, equal source offsets and entry count between full/framed Tray,
+  selected bounds fitting, the 100% aligned projected clearance calculation,
+  selection visibility, camera orientation, renderer recovery and TypeScript.
+
+The full 291-entry overview is still intrinsically dense at this viewport;
+the new close-up makes an individual entry inspectable rather than claiming
+the entire tray is readable at once. Intermediate separation, arbitrary
+orbit, opposite-side labels, real touch, 200% zoom, screen reader and clinical
+geometry were not accepted. The viewer release gate remains pending.
+
 ## 24 September: head-and-neck explode presentation sample
 
 The owner-private head-and-neck Atlas was sampled in a temporary in-app

@@ -17,6 +17,7 @@ const compiled = await build({
  export * from './lib/anatomy-load-state'; export * from './lib/scene-labels';
  export * from './lib/origin-guides'; export * from './lib/model-delivery';
  export * from './lib/close-up-labels'; export * from './lib/body-display-catalog';
+ export * from './lib/camera-orientation';
  export * from './app/anatomy-data'; export * from './app/body-types';`,
     resolveDir: process.cwd(),
     loader: 'ts',
@@ -431,6 +432,9 @@ for (const kind of ['body', 'shoulder']) {
           ...setters,
           layout,
           exam,
+          focus: false,
+          selectedId: null,
+          enabledIds: new Set(),
           mode: exam ? 'exam' : 'study',
         });
         if (exam || next === layout)
@@ -456,6 +460,59 @@ for (const kind of ['body', 'shoulder']) {
           );
         }
       }
+  if (kind === 'body') {
+    for (const [selectedId, enabled, expectedFocus] of [
+      ['a', true, undefined],
+      ['a', false, false],
+      [null, false, false],
+    ]) {
+      const state = {};
+      const setters = Object.fromEntries(
+        ['Layout', 'Plate', 'Explode', 'Focus', 'Isolated', 'Zoom', 'Reset']
+          .map((name) => [`set${name}`, (value) => {
+            state[name] = typeof value === 'function' ? value(4) : value;
+          }]),
+      );
+      runInNewContext(code + ';changeLayout("tray");', {
+        ...setters,
+        layout: 'spatial',
+        exam: false,
+        focus: true,
+        selectedId,
+        enabledIds: new Set(enabled ? ['a'] : []),
+      });
+      same(state.Focus, expectedFocus, 'Tray keeps only an explicitly framed visible selection');
+      same(state.Isolated, false, 'Tray always restores surrounding entries');
+    }
+  }
+}
+{
+  const source = await readFile('app/body-explorer.tsx', 'utf8');
+  const file = ts.createSourceFile('explorer.tsx', source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
+  let trayFrameClick;
+  function find(node) {
+    if (ts.isJsxOpeningElement(node)) {
+      const label = node.attributes.properties.find((attribute) =>
+        ts.isJsxAttribute(attribute) && attribute.name.text === 'aria-label');
+      if (label?.initializer?.getText(file).includes('Show full tray')) {
+        const click = node.attributes.properties.find((attribute) =>
+          ts.isJsxAttribute(attribute) && attribute.name.text === 'onClick');
+        trayFrameClick = click?.initializer?.expression?.getText(file);
+      }
+    }
+    ts.forEachChild(node, find);
+  }
+  find(file);
+  check(trayFrameClick, 'Tray has a conditional selected-entry frame control');
+  for (const previous of [false, true]) {
+    let nextFocus, zoom;
+    runInNewContext(`(${trayFrameClick})()`, {
+      setFocus: (update) => { nextFocus = update(previous); },
+      setZoom: (value) => { zoom = value; },
+    });
+    same(nextFocus, !previous, 'Tray frame control toggles between entry and overview');
+    same(zoom, 1, 'Tray frame control restores neutral zoom');
+  }
 }
 const replacements = {
   '@react-three/fiber': {},
@@ -472,6 +529,7 @@ const replacements = {
   '@/lib/origin-guides': a,
   '@/lib/model-delivery': a,
   '@/lib/close-up-labels': a,
+  '@/lib/camera-orientation': a,
   './scene-orientation': { SceneOrientation: 'SceneOrientation' },
   './scene-orientation.css': {},
   '@/components/ui/button': { Button: 'Button' },
@@ -593,6 +651,28 @@ for (const kind of ['body', 'shoulder'])
         );
       sceneCases++;
     }
+{
+  const scope = catalog.structures.filter((item) => item.regions.includes('head-neck'));
+  const props = {
+    ...base, catalog, structures: scope, selectedId: scope[0].id,
+    view: 'anterior', explode: 100, layout: 'tray', exam: false,
+    plate: true, hiddenIds: [], landmarks: [], inspection: a.initialInspection,
+  };
+  const overview = flatten(bodyScene(props));
+  const framed = flatten(bodyScene({ ...props, focus: true }));
+  const camera = (tree) => tree.find((element) => element.type === 'FittedCamera');
+  const model = (tree) => tree.find((element) => element.props?.offsets instanceof Map);
+  const overviewOffsets = model(overview).props.offsets;
+  const framedOffsets = model(framed).props.offsets;
+  same(framedOffsets.size, overviewOffsets.size, 'Framing a tray entry does not remove anatomy');
+  for (const item of scope)
+    vector(framedOffsets.get(item.id), overviewOffsets.get(item.id));
+  check(camera(framed).props.bounds.equals(
+    a.translatedBox(scope[0].bounds, framedOffsets.get(scope[0].id)),
+  ), 'Explicit tray focus fits the translated selected entry');
+  check(!camera(overview).props.bounds.equals(camera(framed).props.bounds),
+    'Full tray and selected-entry frames remain distinct');
+}
 same(
   JSON.stringify({ catalog, manifest, shoulder: a.structures }),
   original,

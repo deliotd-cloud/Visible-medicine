@@ -14,30 +14,30 @@
     "note": "Historical baseline only; it is not evidence that a release candidate is approved."
   },
   "candidate": {
-    "atlasRevision": "5c0c77d2ef9e02ba5c2b316f3bf2781f951a603b",
-    "websiteRevision": "dda992067d7d882046669f12f4840d1500e035f7",
+    "atlasRevision": "79fe6f3785721160c7af7aeb8951b5cbd71c395b",
+    "websiteRevision": "b944a439563fb8922432e6a549f1175465503571",
     "delivery": {
       "website": {
-        "sourceRevision": "dda992067d7d882046669f12f4840d1500e035f7",
-        "deployedRevision": "dda992067d7d882046669f12f4840d1500e035f7",
-        "versionNumber": 112,
-        "versionId": "appgprj_6a8b1e2c3d348191be844899e57ccbc6~appgver_8dc207f3f67c81918046248a71c87e17",
-        "deploymentId": "appgdep_6ab4bb3f400c8191ae7a8993ec3545db",
+        "sourceRevision": "b944a439563fb8922432e6a549f1175465503571",
+        "deployedRevision": "b944a439563fb8922432e6a549f1175465503571",
+        "versionNumber": 113,
+        "versionId": "appgprj_6a8b1e2c3d348191be844899e57ccbc6~appgver_590c4102fa8c81918aa49a1cad9208b3",
+        "deploymentId": "appgdep_6ab4c102b51c819197edbd31072178ae",
         "status": "succeeded",
         "audience": "owner-only",
         "evidence": [
-          "D:\\VisibleMedicine-Atlas-Recovery\\website-liver-display-20260924.publication.json"
+          "D:\\VisibleMedicine-Atlas-Recovery\\website-tray-framing-20260924.publication.json"
         ]
       },
       "sharedViewer": {
-        "atlasRevision": "5c0c77d2ef9e02ba5c2b316f3bf2781f951a603b",
-        "manifestSha256": "1cf10a1ede317f995ee2913a2f36e8daca21250d044f9c81177e16d8f2fb8b8b",
-        "inventorySha256": "b561ae0380ed48e943462f6c8c3bc9b172f17b1a1390936971278501a35faf93",
+        "atlasRevision": "79fe6f3785721160c7af7aeb8951b5cbd71c395b",
+        "manifestSha256": "4410c5208d2c1773f39986504b77347601d3165a8c10384d6ad882fd00ebb7be",
+        "inventorySha256": "b060791e3c488e5b780c170f7b8a09b877fa6fcb64c938051a0788eaf814ab5a",
         "modelCount": 135,
         "pathCount": 142
       },
       "validation": {
-        "atlasRevision": "5c0c77d2ef9e02ba5c2b316f3bf2781f951a603b",
+        "atlasRevision": "79fe6f3785721160c7af7aeb8951b5cbd71c395b",
         "status": "source-checked-only"
       },
       "clinicalApproval": {
@@ -45,7 +45,7 @@
         "records": []
       }
     },
-    "note": "Current privately deployed review candidate, not a frozen learner release. The shared viewer and validation-only Atlas source are distinguished even though both currently bind the same revision. All six gates and clinical sign-off remain pending."
+    "note": "Current privately deployed review candidate, not a frozen learner release. The shared viewer and schema-bound validation source both bind the Atlas code revision; later QA documentation is recorded separately. All six gates and clinical sign-off remain pending."
   },
   "releaseAuthority": {
     "status": "external-verification-required",
