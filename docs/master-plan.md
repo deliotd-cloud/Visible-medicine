@@ -1,5 +1,16 @@
 # Visible Medicine — shared delivery plan
 
+24 September source-only Liver display-note integration: the generated shared
+regional/whole-body runtime now binds Atlas `5c0c77d2ef9e02ba5c2b316f3bf2781f951a603b`.
+The abdomen Liver panel combines repeated source-coordinate caveats into one
+concise draft warning; no anatomical geometry, CT/MRI registration or clinical
+approval changes. The offline transition check preserved all 135 model hashes,
+142 model paths and 12 scopes, with no new model bytes or patient data. This
+source update is not a private-site publication until separately verified.
+The broad historical organ-copy digest validator still has independently
+reproduced pre-existing drift; current regional export checks pass. All six
+first-release gates and radiologist sign-off remain pending.
+
 24 September source-only Thorax study integration: the generated shared
 regional/whole-body runtime now binds Atlas `c74d62649740638b45a4b1a29713c92c50cdbddf`.
 Three concise, source-guarded respiratory-layer focus views use existing
