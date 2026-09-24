@@ -82,17 +82,17 @@ export function LoadedNativeMr({
   const gap = study.centreSpacing - study.thickness;
   return (
     <main className="native-mr-loaded">
+      <p role="alert" className="native-mr-provenance">
+        Source provenance is unverified. This local check only checks packet
+        format and body integrity; it does not authenticate the source or
+        establish privacy or clinical clearance.
+      </p>
       <aside
         className="local-study-tools native-mr-tools"
         aria-label="MRI controls"
       >
         <strong>MRI import check</strong>
         <span className="local-draft-badge">Unreviewed · local only</span>
-        <p role="alert" className="native-mr-hint">
-          Source provenance is unverified. This local check only checks packet
-          format and body integrity; it does not authenticate the source or
-          establish privacy or clinical clearance.
-        </p>
         <p className="native-mr-hint">
           Internal preparation check, not the learner PACS viewer. No
           reconstructed slices or atlas registration.

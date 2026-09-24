@@ -110,4 +110,27 @@ temporary loopback browser tab, the initial checker page visibly used the
 corrected wording. No file was imported in that browser check, so loaded-state
 visual behavior, real cancellation, and clinical/privacy acceptance remain open.
 
+### Loaded-state visibility and real-reader cancellation, 24 September 2026
+
+A subsequent narrow-screen review found that the loaded-state provenance alert
+was hidden by the ≤750 px sidebar rule, despite being present in the accessible
+markup. It is now a full-width strip above the controls and image. In a local
+browser at an emulated 390×844 touch viewport, an entirely synthetic 632-byte
+packet loaded and the alert computed as visible at x=0, width=390 px; the page
+had no horizontal overflow. This checks the corrected loaded state, not a
+physical phone or screen-reader announcement. A CSS `zoom: 2` probe kept the
+alert visible without horizontal overflow but required vertical scrolling; it
+is not a full 200% browser/device acceptance pass.
+
+In the same browser, a synthetic 96 MiB invalid file triggered a real
+`FileReader` read. Cancel was available while `readyState` was loading, invoked
+`abort()` in that state, and returned to the empty importer without a stale
+image or error after 350 ms. This is one deterministic in-flight cancellation
+sample, not a large-file memory, long-duration race, secure-erasure or clinical
+acceptance result. No private packet, source scan or patient data was used.
+The native-MRI validator passed 86 checks; the unchanged CT checker passed 78,
+and imaging-link, Didanix adapter, comparison, volume-viewer and independent-
+navigation software checks plus TypeScript passed. These checks do not confer
+source provenance, privacy clearance or radiologist approval.
+
 Next: use Didanix Education's agreed integration contract for reviewed anatomical landmarks and imaging-to-atlas concept links, then genuine same-study segmentation/registration where available. `.vmmr` is a private QA format only; do not require Didanix to ingest it, build another DICOM pipeline, or continue extending this utility as the learner viewer. Do not enable spatial 3D↔MRI correspondence from generic anatomical similarity. CT-head midbrain/cerebellar edits remain with the CT-head task. Ultrasound admission and independent lecture entitlements retain their separate review gates.

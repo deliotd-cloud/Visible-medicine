@@ -273,6 +273,11 @@ check(html.includes('Unreviewed'));
 check(html.includes('Stored signal'));
 check(html.includes('role="alert"') && html.includes('Source provenance is unverified'));
 check(
+  html.indexOf('class="native-mr-provenance"') >= 0 &&
+    html.indexOf('class="native-mr-provenance"') <
+      html.indexOf('aria-label="MRI controls"'),
+);
+check(
   renderToStaticMarkup(React.createElement(api.Workbench)).includes(
     'accept=".vmmr"',
   ),

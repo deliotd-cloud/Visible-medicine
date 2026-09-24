@@ -1,8 +1,19 @@
 .native-mr-loaded {
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr);
   height: calc(100dvh - 72px);
   min-height: 420px;
+}
+.native-mr-provenance {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #d2dc1670;
+  background: #12313b;
+  color: var(--vm-ivory);
+  font-size: 0.875rem;
+  line-height: 1.4;
 }
 .native-mr-tools {
   min-width: 0;
@@ -84,6 +95,10 @@
     flex-direction: column;
     height: calc(100dvh - 96px);
     min-height: 500px;
+  }
+  .native-mr-provenance {
+    flex: 0 0 auto;
+    padding: 0.45rem 0.75rem;
   }
   .native-mr-tools {
     flex-direction: row;
