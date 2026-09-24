@@ -290,6 +290,92 @@ for (const [region, profile] of Object.entries(dissectionProfiles))
       recipes: recipes.length,
     });
   }
+// These original levator-ani source alternatives remain held. Pin every
+// FMA/file pairing, then reject their admission to either pelvic window.
+const heldPelvicSources = new Map([
+  ['FMA45854', ['FJ2550']],
+  ['FMA45855', ['FJ1457M', 'FJ2545']],
+  ['FMA45856', ['FJ2551']],
+  ['FMA45857', ['FJ1458M', 'FJ2546']],
+  ['FMA45858', ['FJ2549']],
+  ['FMA45859', ['FJ1453M', 'FJ2544']],
+]);
+const heldFiles = new Set([...heldPelvicSources.values()].flat());
+const sourceIndex = (
+  await readFile('LICENSES/bodyparts3d-v4-index/isa_element_parts.txt', 'utf8')
+).split(/\r?\n/);
+for (const [fma, files] of heldPelvicSources)
+  for (const file of files)
+    check(
+      sourceIndex.some(
+        (line) => line.startsWith(`${fma}\t`) && line.endsWith(`\t${file}`),
+      ),
+      `Original held source pair ${fma}/${file} must remain identifiable`,
+    );
+const noHeldPelvicSource = (structures) =>
+  structures.every(
+    (s) =>
+      !heldPelvicSources.has(s.fmaId) &&
+      !s.sources.some((source) => heldFiles.has(source.file)),
+  );
+check(noHeldPelvicSource(catalog.structures));
+const pelvicProfile = dissectionProfiles.pelvis;
+for (const side of ['both', 'left', 'right']) {
+  const scope = catalog.structures.filter(
+    (s) =>
+      s.regions.includes('pelvis') &&
+      (side === 'both' ||
+        s.laterality === side ||
+        ['unpaired', 'midline', 'unspecified'].includes(s.laterality)),
+  );
+  for (const stageId of ['pelvic-window', 'pelvic-organs']) {
+    const state = { ...initialDissection, stageId };
+    const resolved = resolveDissection(scope, pelvicProfile, state);
+    const guide = dissectionGuidance(
+      scope,
+      pelvicProfile,
+      state,
+      ids(resolved.visible),
+      [],
+      allLoaded,
+      [],
+    );
+    same(guide.recipe?.id, stageId);
+    same(ids(guide.expected), ids(resolved.visible));
+    for (const selectable of [
+      resolved.visible,
+      guide.expected,
+      guide.visible,
+      guide.members.map((member) => member.structure),
+      guide.landmarks.map((landmark) => landmark.structure),
+    ])
+      check(noHeldPelvicSource(selectable), `${stageId}/${side} exposes a held source`);
+  }
+}
+check(
+  pelvicProfile.limitations.some((text) =>
+    text.includes('Levator-ani candidates are held for source adjudication'),
+  ),
+);
+check(
+  pelvicProfile.limitations.some((text) =>
+    text.includes('do not constitute a complete pelvic floor'),
+  ),
+);
+check(
+  pelvicProfile.stages.some(
+    (stage) =>
+      stage.id === 'pelvic-window' &&
+      stage.inspect.includes('complete pelvic-floor or pelvic-organ model'),
+  ),
+);
+check(
+  pelvicProfile.stages.some(
+    (stage) =>
+      stage.id === 'pelvic-organs' &&
+      stage.inspect.includes('do not infer a complete pelvic floor'),
+  ),
+);
 // Execute the actual camera handler with spies, not a reimplementation.
 const explorer = await readFile('app/body-explorer.tsx', 'utf8');
 const ast = ts.createSourceFile(
@@ -374,12 +460,12 @@ const scratch = await mkdtemp(
     ),
   ),
   file = join(scratch, 'render.cjs');
-let render;
+let render, renderGuide;
 try {
   await build({
     stdin: {
       contents:
-        "import {createElement} from 'react'; import {renderToStaticMarkup} from 'react-dom/server'; import {DissectionOrientation} from './app/dissection-orientation'; export const render=(props)=>renderToStaticMarkup(createElement(DissectionOrientation,props));",
+        "import {createElement} from 'react'; import {renderToStaticMarkup} from 'react-dom/server'; import {DissectionOrientation} from './app/dissection-orientation'; import {DissectionGuide} from './app/dissection-controls'; export const render=(props)=>renderToStaticMarkup(createElement(DissectionOrientation,props)); export const renderGuide=(props)=>renderToStaticMarkup(createElement(DissectionGuide,props));",
       resolveDir: process.cwd(),
       loader: 'ts',
     },
@@ -389,7 +475,7 @@ try {
     outfile: file,
     external: ['react', 'react/*', 'react-dom', 'react-dom/*'],
   });
-  render = createRequire(import.meta.url)(file).render;
+  ({ render, renderGuide } = createRequire(import.meta.url)(file));
 } finally {
   await unlink(file).catch((e) => {
     if (e.code !== 'ENOENT') throw e;
@@ -449,6 +535,45 @@ for (const [region, profile] of Object.entries(dissectionProfiles)) {
     same(render({ ...props, disabled: true }), '');
     markupCases++;
   }
+}
+for (const stageId of ['pelvic-window', 'pelvic-organs']) {
+  const stage = pelvicProfile.stages.find((item) => item.id === stageId);
+  check(stage);
+  const state = { ...initialDissection, stageId };
+  const scope = catalog.structures.filter((s) => s.regions.includes('pelvis'));
+  const shown = stageStructures(scope, pelvicProfile, stageId);
+  const guide = dissectionGuidance(
+    scope,
+    pelvicProfile,
+    state,
+    ids(shown),
+    [],
+    allLoaded,
+    [],
+  );
+  const noAction = () => {
+    throw Error('Rendering must not act on the model');
+  };
+  const html = renderGuide({
+    guidance: guide,
+    side: 'both',
+    view: stage.view,
+    onOrient: noAction,
+    onRecipe: noAction,
+    profile: pelvicProfile,
+    stage,
+    removed: [],
+    onRestore: noAction,
+    onRestoreMany: noAction,
+    onSelect: noAction,
+    customized: false,
+  });
+  check(html.includes('Levator-ani candidates are held for source adjudication'));
+  check(html.includes('do not constitute a complete pelvic floor'));
+  check(html.includes(stage.inspect));
+  for (const fma of heldPelvicSources.keys()) check(!html.includes(fma));
+  for (const file of heldFiles) check(!html.includes(file));
+  markupCases++;
 }
 check(explorer.includes('onOrient={reorientDissection}'));
 check(explorer.includes('onRecipe={openGuidanceRecipe}'));

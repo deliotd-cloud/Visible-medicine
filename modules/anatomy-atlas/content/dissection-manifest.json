@@ -1,7 +1,7 @@
 {
   "version": 1,
   "reviewStatus": "draft-unvalidated",
-  "displayCatalogSha256": "daa38c78ebc35b1e20e34228ad4220bc95fe05064dc6221d6f6781f76c4efe22",
+  "displayCatalogSha256": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
   "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
   "profiles": [
     {
@@ -32,7 +32,9 @@
         "https://pubmed.ncbi.nlm.nih.gov/17373712/",
         "https://nba.uth.tmc.edu/neuroanatomy/L11/Lab11p09_index.html",
         "https://publish.uwo.ca/~jkiernan/brndiss.htm",
-        "https://link.springer.com/article/10.1007/s00701-026-06791-w"
+        "https://link.springer.com/article/10.1007/s00701-026-06791-w",
+        "https://anatomy.ttuhscep.edu/schemes/axilla_ans.html",
+        "https://pubmed.ncbi.nlm.nih.gov/23131916/"
       ],
       "stages": [
         {
@@ -1144,7 +1146,10 @@
             "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery",
+            "vm:anatomy:body:pelvis:midline:organ:corpus-spongiosum-of-penis",
+            "vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve",
+            "vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein"
           ]
         },
         {
@@ -1845,7 +1850,8 @@
             "vm:anatomy:body:head-neck:right:organ:right-lacrimal-sac",
             "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac",
             "vm:anatomy:body:pelvis:left:organ:left-deferent-duct",
-            "vm:anatomy:body:pelvis:right:organ:right-deferent-duct"
+            "vm:anatomy:body:pelvis:right:organ:right-deferent-duct",
+            "vm:anatomy:body:pelvis:midline:organ:corpus-spongiosum-of-penis"
           ]
         },
         {
@@ -1924,7 +1930,8 @@
             "vm:anatomy:body:head-neck:left:organ:left-stria-medullaris-of-thalamus",
             "vm:anatomy:body:head-neck:right:organ:right-stria-medullaris-of-thalamus",
             "vm:anatomy:body:head-neck:midline:organ:lamina-terminalis",
-            "vm:anatomy:body:head-neck:midline:organ:septum-of-telencephalon"
+            "vm:anatomy:body:head-neck:midline:organ:septum-of-telencephalon",
+            "vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve"
           ]
         },
         {
@@ -2663,7 +2670,8 @@
             "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery",
+            "vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein"
           ]
         },
         {
@@ -3689,7 +3697,8 @@
             "vm:anatomy:body:pelvis:right:vessel:right-internal-pudendal-vein",
             "vm:anatomy:body:pelvis:right:vessel:right-lateral-sacral-vein",
             "vm:anatomy:body:pelvis:right:vessel:right-obturator-vein",
-            "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein"
+            "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein",
+            "vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein"
           ]
         },
         {
@@ -4300,6 +4309,600 @@
             "vm:anatomy:body:head-neck:right:organ:right-stria-medullaris-of-thalamus",
             "vm:anatomy:body:head-neck:midline:organ:lamina-terminalis",
             "vm:anatomy:body:head-neck:midline:organ:septum-of-telencephalon"
+          ]
+        },
+        {
+          "id": "pelvis-urethral-context",
+          "title": "Male pelvis: urethra & corpus spongiosum",
+          "rule": {
+            "fmaIds": [
+              "FMA19667",
+              "FMA19617"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA15900",
+                "FMA9600",
+                "FMA16586",
+                "FMA16587"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Compare the urethra and bulb/shaft source with the bladder, prostate and hip bones.",
+          "inspect": "Select either target to read its available anatomy and imaging notes. Remove a covering structure and use Undo to restore it; return separation to 0% to compare source positions. Co-display does not establish an enclosed or continuous lumen, patient registration or a procedural approach. The glans and paired cavernous bodies are not included. Radiologist review is pending.",
+          "landmarks": [
+            "urethra$",
+            "corpus spongiosum",
+            "prostate$",
+            "urinary bladder$"
+          ],
+          "requiredSources": [
+            {
+              "id": "vm:anatomy:body:pelvis:midline:organ:corpus-spongiosum-of-penis",
+              "fmaId": "FMA19617",
+              "name": "Corpus spongiosum · bulb/shaft source",
+              "sourceName": "corpus spongiosum of penis",
+              "system": "organs",
+              "category": "organ",
+              "laterality": "midline",
+              "region": "pelvis",
+              "regions": [
+                "pelvis"
+              ],
+              "bundle": "corpus-spongiosum",
+              "nodeName": "FMA19617",
+              "sourceTree": "isa",
+              "sources": [
+                {
+                  "file": "FJ3133",
+                  "sha256": "e90e440d57d2e6b0b85c622650c46bafe34c0886a6eed898062b914b5df1f14e"
+                }
+              ],
+              "bounds": {
+                "min": [
+                  -0.11280299723148346,
+                  -0.9105299711227417,
+                  0.2501530051231384
+                ],
+                "max": [
+                  0.09973979741334915,
+                  -0.1976899951696396,
+                  1.371359944343567
+                ]
+              },
+              "center": [
+                -0.006531599909067154,
+                -0.5541099831461906,
+                0.8107564747333527
+              ],
+              "anchor": [
+                -0.024211199954152107,
+                -0.35267001390457153,
+                0.7853400111198425
+              ],
+              "coverageNote": "Original source-labelled bulb/shaft representation. The separately supplied glans and corporal surfaces are not added; this is not the complete corpus spongiosum or penis. The existing urethra is context, not a validated enclosed lumen. Original coordinates and faces retained; clinical review pending.",
+              "provenance": {
+                "method": "licensed-source-mesh",
+                "license": "CC-BY-4.0",
+                "sourceVersion": "4.0",
+                "recovered": false
+              },
+              "validation": {
+                "status": "unvalidated",
+                "anatomicalReview": false
+              }
+            },
+            {
+              "id": "vm:anatomy:body:pelvis:unpaired:organ:urinary-bladder",
+              "fmaId": "FMA15900",
+              "name": "Urinary bladder",
+              "sourceName": "urinary bladder",
+              "system": "organs",
+              "category": "organ",
+              "laterality": "unpaired",
+              "region": "pelvis",
+              "regions": [
+                "pelvis"
+              ],
+              "bundle": "pelvis-organs",
+              "nodeName": "FMA15900",
+              "bounds": {
+                "min": [
+                  -0.3414659798145294,
+                  -0.10268005728721619,
+                  0.06525298953056335
+                ],
+                "max": [
+                  0.3262379765510559,
+                  0.2998901307582855,
+                  0.7824000716209412
+                ]
+              },
+              "center": [
+                -0.007614001631736755,
+                0.09860503673553467,
+                0.42382653057575226
+              ],
+              "anchor": [
+                0.054224301129579544,
+                0.25124022364616394,
+                0.4553859829902649
+              ],
+              "sourceTree": "partof",
+              "sources": [
+                {
+                  "file": "FJ3149",
+                  "sha256": "b49f40d01bf28550094a7d17901e33e7066039f3a0fb8cf44d79fff2472f9926"
+                }
+              ],
+              "coverageNote": null,
+              "provenance": {
+                "method": "licensed-source-mesh",
+                "license": "CC-BY-4.0",
+                "sourceVersion": "4.0",
+                "recovered": false
+              },
+              "validation": {
+                "status": "unvalidated",
+                "anatomicalReview": false
+              }
+            },
+            {
+              "id": "vm:anatomy:body:pelvis:unpaired:organ:prostate",
+              "fmaId": "FMA9600",
+              "name": "Prostate",
+              "sourceName": "prostate",
+              "system": "organs",
+              "category": "organ",
+              "laterality": "unpaired",
+              "region": "pelvis",
+              "regions": [
+                "pelvis"
+              ],
+              "bundle": "pelvis-organs-recovery",
+              "nodeName": "FMA9600",
+              "bounds": {
+                "min": [
+                  -0.17826201021671295,
+                  -0.2791699171066284,
+                  0.14504897594451904
+                ],
+                "max": [
+                  0.16457800567150116,
+                  -0.07560974359512329,
+                  0.46460801362991333
+                ]
+              },
+              "center": [
+                -0.006842002272605896,
+                -0.17738983035087585,
+                0.3048284947872162
+              ],
+              "anchor": [
+                -0.008279549889266491,
+                -0.09260009974241257,
+                0.31331297755241394
+              ],
+              "sourceTree": "partof",
+              "sources": [
+                {
+                  "file": "FJ3139",
+                  "sha256": "f20448e74cf6b6096248361bc4f618c1d7f4c1acac77f785abc43e40835b13cb"
+                }
+              ],
+              "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+              "provenance": {
+                "method": "licensed-source-mesh",
+                "license": "CC-BY-4.0",
+                "sourceVersion": "4.0",
+                "recovered": true
+              },
+              "validation": {
+                "status": "unvalidated",
+                "anatomicalReview": false
+              }
+            },
+            {
+              "id": "vm:anatomy:body:pelvis:unpaired:organ:urethra",
+              "fmaId": "FMA19667",
+              "name": "Urethra",
+              "sourceName": "urethra",
+              "system": "organs",
+              "category": "organ",
+              "laterality": "unpaired",
+              "region": "pelvis",
+              "regions": [
+                "pelvis"
+              ],
+              "bundle": "pelvis-organs-gaps",
+              "nodeName": "FMA19667",
+              "bounds": {
+                "min": [
+                  -0.0160824004560709,
+                  -0.9143102765083313,
+                  0.29952698945999146
+                ],
+                "max": [
+                  0.0031363300513476133,
+                  -0.07487975805997849,
+                  1.3417400121688843
+                ]
+              },
+              "center": [
+                -0.006473035202361643,
+                -0.4945950172841549,
+                0.8206335008144379
+              ],
+              "anchor": [
+                -0.009616579860448837,
+                -0.29971984028816223,
+                0.7556800246238708
+              ],
+              "sourceTree": "isa",
+              "sources": [
+                {
+                  "file": "FJ3148",
+                  "sha256": "987ce1b01511f6ea323ba5a7a7438ba3df72d0cdc853985e08ca2965feb63c93"
+                }
+              ],
+              "coverageNote": "Selected adult-male urinary/reproductive source representation; no complete tract or wall-layer dissection is implied. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+              "provenance": {
+                "method": "licensed-source-mesh",
+                "license": "CC-BY-4.0",
+                "sourceVersion": "4.0",
+                "recovered": true
+              },
+              "validation": {
+                "status": "unvalidated",
+                "anatomicalReview": false
+              }
+            }
+          ],
+          "contextSources": [
+            {
+              "id": "vm:anatomy:body:pelvis:right:bone:right-hip-bone",
+              "fmaId": "FMA16586",
+              "name": "Right hip bone",
+              "sourceName": "right hip bone",
+              "system": "skeleton",
+              "category": "bone",
+              "laterality": "right",
+              "region": "pelvis",
+              "regions": [
+                "pelvis",
+                "thigh"
+              ],
+              "bundle": "pelvis-skeleton",
+              "nodeName": "FMA16586",
+              "bounds": {
+                "min": [
+                  -1.4487199783325195,
+                  -0.4784698486328125,
+                  -0.4888122081756592
+                ],
+                "max": [
+                  -0.0279029980301857,
+                  1.5786901712417603,
+                  0.8901899456977844
+                ]
+              },
+              "center": [
+                -0.7383114881813526,
+                0.5501101613044739,
+                0.20068886876106262
+              ],
+              "anchor": [
+                -0.6408339738845825,
+                0.5218298435211182,
+                0.20818497240543365
+              ],
+              "sourceTree": "isa",
+              "sources": [
+                {
+                  "file": "FJ3152",
+                  "sha256": "99de26e5435a8397b6f39b44ada75319d5e8fa1433e1ea38fdd8de9e079ed9a9"
+                }
+              ],
+              "coverageNote": null,
+              "provenance": {
+                "method": "licensed-source-mesh",
+                "license": "CC-BY-4.0",
+                "sourceVersion": "4.0",
+                "recovered": false
+              },
+              "validation": {
+                "status": "unvalidated",
+                "anatomicalReview": false
+              }
+            },
+            {
+              "id": "vm:anatomy:body:pelvis:left:bone:left-hip-bone",
+              "fmaId": "FMA16587",
+              "name": "Left hip bone",
+              "sourceName": "left hip bone",
+              "system": "skeleton",
+              "category": "bone",
+              "laterality": "left",
+              "region": "pelvis",
+              "regions": [
+                "pelvis",
+                "thigh"
+              ],
+              "bundle": "pelvis-skeleton",
+              "nodeName": "FMA16587",
+              "bounds": {
+                "min": [
+                  0.02750309929251671,
+                  -0.480490118265152,
+                  -0.4868505895137787
+                ],
+                "max": [
+                  1.4475399255752563,
+                  1.5809003114700317,
+                  0.8909500241279602
+                ]
+              },
+              "center": [
+                0.7375215124338865,
+                0.5502050966024399,
+                0.20204971730709076
+              ],
+              "anchor": [
+                0.6407599449157715,
+                0.5112402439117432,
+                0.24853698909282684
+              ],
+              "sourceTree": "isa",
+              "sources": [
+                {
+                  "file": "FJ3288",
+                  "sha256": "bfc8b489fee0945cd1d387cf64bd3691af8e033fa72f9fccae45cfd55ac88694"
+                }
+              ],
+              "coverageNote": null,
+              "provenance": {
+                "method": "licensed-source-mesh",
+                "license": "CC-BY-4.0",
+                "sourceVersion": "4.0",
+                "recovered": false
+              },
+              "validation": {
+                "status": "unvalidated",
+                "anatomicalReview": false
+              }
+            }
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:pelvis:right:bone:right-hip-bone",
+            "vm:anatomy:body:pelvis:left:bone:left-hip-bone",
+            "vm:anatomy:body:pelvis:unpaired:organ:urinary-bladder",
+            "vm:anatomy:body:pelvis:unpaired:organ:prostate",
+            "vm:anatomy:body:pelvis:unpaired:organ:urethra",
+            "vm:anatomy:body:pelvis:midline:organ:corpus-spongiosum-of-penis"
+          ]
+        },
+        {
+          "id": "cubital-muscle-arterial",
+          "title": "Elbow: muscles & arteries",
+          "rule": {
+            "fmaIds": [
+              "FMA38486",
+              "FMA38487",
+              "FMA38560",
+              "FMA38561",
+              "FMA38562",
+              "FMA38563",
+              "FMA37668",
+              "FMA37669",
+              "FMA38513",
+              "FMA38514",
+              "FMA22691",
+              "FMA22692",
+              "FMA22733",
+              "FMA22734",
+              "FMA22797",
+              "FMA22798"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA23130",
+                "FMA23131",
+                "FMA23464",
+                "FMA23465",
+                "FMA23467",
+                "FMA23468",
+                "FMA37684",
+                "FMA37685",
+                "FMA37686",
+                "FMA37687"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare anterior elbow muscles and the supplied brachial, radial and ulnar arteries. Choose Left or Right for one elbow; the whole-body scope brings arm and forearm sources together.",
+          "inspect": "Brachialis and supinator form the anatomical floor context. Compare them with the biceps heads, brachioradialis and pronator teres heads. Select and hide a covering muscle, then Undo to restore it. The biceps tendon is not independently segmented; source proximity does not prove arterial continuity. Whole surfaces extend beyond the close-up; pan or separate to inspect them. Nerves, skin, fascia and bicipital aponeurosis are not supplied. This is not a complete cubital fossa, verified vessel junction, puncture guide or registered scan. Return separation to 0% for original source positions. Anatomical review is pending.",
+          "landmarks": [
+            "brachial artery$",
+            "brachialis$",
+            "supinator$",
+            "brachioradialis$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+            "vm:anatomy:body:forearm:left:bone:left-radius",
+            "vm:anatomy:body:forearm:left:bone:left-ulna",
+            "vm:anatomy:body:forearm:right:bone:right-radius",
+            "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+            "vm:anatomy:body:forearm:right:bone:right-ulna",
+            "vm:anatomy:body:shoulder-arm:right:muscle:right-brachialis",
+            "vm:anatomy:body:shoulder-arm:left:muscle:left-brachialis",
+            "vm:anatomy:body:forearm:right:muscle:right-brachioradialis",
+            "vm:anatomy:body:forearm:left:muscle:left-brachioradialis",
+            "vm:anatomy:body:forearm:right:muscle:right-supinator",
+            "vm:anatomy:body:forearm:left:muscle:left-supinator",
+            "vm:anatomy:body:shoulder-arm:right:muscle:short-head-of-right-biceps-brachii",
+            "vm:anatomy:body:shoulder-arm:left:muscle:short-head-of-left-biceps-brachii",
+            "vm:anatomy:body:shoulder-arm:right:muscle:long-head-of-right-biceps-brachii",
+            "vm:anatomy:body:shoulder-arm:left:muscle:long-head-of-left-biceps-brachii",
+            "vm:anatomy:body:forearm:right:muscle:humeral-head-of-right-pronator-teres",
+            "vm:anatomy:body:forearm:left:muscle:humeral-head-of-left-pronator-teres",
+            "vm:anatomy:body:forearm:right:muscle:ulnar-head-of-right-pronator-teres",
+            "vm:anatomy:body:forearm:left:muscle:ulnar-head-of-left-pronator-teres",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-brachial-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery"
+          ]
+        },
+        {
+          "id": "cubital-superficial-veins",
+          "title": "Elbow: superficial veins",
+          "rule": {
+            "fmaIds": [
+              "FMA22964",
+              "FMA22965",
+              "FMA13325",
+              "FMA13326",
+              "FMA22909",
+              "FMA22910"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA23130",
+                "FMA23131",
+                "FMA23464",
+                "FMA23465",
+                "FMA23467",
+                "FMA23468",
+                "FMA38486",
+                "FMA38487",
+                "FMA38560",
+                "FMA38561",
+                "FMA38562",
+                "FMA38563",
+                "FMA37668",
+                "FMA37669",
+                "FMA38513",
+                "FMA38514",
+                "FMA37684",
+                "FMA37685",
+                "FMA37686",
+                "FMA37687"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Inspect the supplied median cubital, cephalic and basilic veins against the same elbow muscle and bone context. Arteries are set aside to distinguish this superficial venous view.",
+          "inspect": "Superficial cubital venous connections vary; the named median cubital connection is not universal. These source surfaces are one available set, not a complete venous network or a map of safe access. Select a vein to read its existing notes, or extract it and Undo a removal. Whole surfaces extend beyond the close-up; pan or separate to inspect them. Nerves, skin, fascia and bicipital aponeurosis are not supplied. This is not a complete cubital fossa, verified vessel junction, puncture guide or registered scan. Return separation to 0% for original source positions. Anatomical review is pending.",
+          "landmarks": [
+            "median cubital vein$",
+            "cephalic vein$",
+            "basilic vein$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+            "vm:anatomy:body:forearm:left:bone:left-radius",
+            "vm:anatomy:body:forearm:left:bone:left-ulna",
+            "vm:anatomy:body:forearm:right:bone:right-radius",
+            "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+            "vm:anatomy:body:forearm:right:bone:right-ulna",
+            "vm:anatomy:body:shoulder-arm:right:muscle:right-brachialis",
+            "vm:anatomy:body:shoulder-arm:left:muscle:left-brachialis",
+            "vm:anatomy:body:forearm:right:muscle:right-brachioradialis",
+            "vm:anatomy:body:forearm:left:muscle:left-brachioradialis",
+            "vm:anatomy:body:forearm:right:muscle:right-supinator",
+            "vm:anatomy:body:forearm:left:muscle:left-supinator",
+            "vm:anatomy:body:shoulder-arm:right:muscle:short-head-of-right-biceps-brachii",
+            "vm:anatomy:body:shoulder-arm:left:muscle:short-head-of-left-biceps-brachii",
+            "vm:anatomy:body:shoulder-arm:right:muscle:long-head-of-right-biceps-brachii",
+            "vm:anatomy:body:shoulder-arm:left:muscle:long-head-of-left-biceps-brachii",
+            "vm:anatomy:body:forearm:right:muscle:humeral-head-of-right-pronator-teres",
+            "vm:anatomy:body:forearm:left:muscle:humeral-head-of-left-pronator-teres",
+            "vm:anatomy:body:forearm:right:muscle:ulnar-head-of-right-pronator-teres",
+            "vm:anatomy:body:forearm:left:muscle:ulnar-head-of-left-pronator-teres",
+            "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein"
+          ]
+        },
+        {
+          "id": "lower-neck-vessels-scalenes",
+          "title": "Lower neck: vessels & scalenes",
+          "rule": {
+            "fmaIds": [
+              "FMA3941",
+              "FMA4058",
+              "FMA4754",
+              "FMA4762",
+              "FMA3953",
+              "FMA4694",
+              "FMA4755",
+              "FMA4763",
+              "FMA13392",
+              "FMA13393",
+              "FMA13390",
+              "FMA13391",
+              "FMA13388",
+              "FMA13389"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA13408",
+                "FMA13409",
+                "FMA13348",
+                "FMA13349"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the supplied bilateral common-carotid, internal-jugular, subclavian and scalene source surfaces with sternocleidomastoid and omohyoid context. Start anteriorly, then rotate the unchanged source frame.",
+          "inspect": "Select a labelled surface and Remove it, then Undo to restore it. Extract selected separates that whole source surface; return separation to 0% to restore its original source position. This is source orientation only, not proof of a complete neck, operative planes, vascular patency or branching, or CT/ultrasound registration. Nerves, skeleton and a cervical-sheath model are not supplied by this study. Anatomical review is pending.",
+          "landmarks": [
+            "common carotid artery$",
+            "internal jugular vein$",
+            "subclavian artery$",
+            "subclavian vein$",
+            "scalenus anterior$",
+            "scalenus medius$",
+            "scalenus posterior$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:left:muscle:left-omohyoid",
+            "vm:anatomy:body:head-neck:left:muscle:left-scalenus-anterior",
+            "vm:anatomy:body:head-neck:left:muscle:left-scalenus-medius",
+            "vm:anatomy:body:head-neck:left:muscle:left-scalenus-posterior",
+            "vm:anatomy:body:head-neck:left:muscle:left-sternocleidomastoid",
+            "vm:anatomy:body:head-neck:right:muscle:right-omohyoid",
+            "vm:anatomy:body:head-neck:right:muscle:right-scalenus-anterior",
+            "vm:anatomy:body:head-neck:right:muscle:right-scalenus-medius",
+            "vm:anatomy:body:head-neck:right:muscle:right-scalenus-posterior",
+            "vm:anatomy:body:head-neck:right:muscle:right-sternocleidomastoid",
+            "vm:anatomy:body:thorax:right:vessel:right-subclavian-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-subclavian-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-subclavian-vein",
+            "vm:anatomy:body:thorax:left:vessel:left-subclavian-vein",
+            "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-internal-jugular-vein",
+            "vm:anatomy:body:head-neck:left:vessel:left-internal-jugular-vein"
           ]
         }
       ]
@@ -8950,6 +9553,109 @@
             "vm:anatomy:body:hand:right:bone:right-trapezium",
             "vm:anatomy:body:hand:right:bone:right-trapezoid"
           ]
+        },
+        {
+          "id": "hand-intrinsic-thenar-adductor",
+          "title": "Hand: thenar & adductor source groups",
+          "rule": {
+            "fmaIds": [
+              "FMA37386",
+              "FMA37387",
+              "FMA37390",
+              "FMA37391",
+              "FMA46121",
+              "FMA46122",
+              "FMA46123",
+              "FMA46124"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA24464",
+                "FMA24465"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the supplied abductor pollicis brevis, opponens pollicis and two adductor pollicis head surfaces with first-metacarpal context. Choose Left or Right for one hand.",
+          "inspect": "Select a labelled surface and Remove it, then Undo to restore it. Extract selected can separate that whole surface without changing the source geometry. These are unchanged, separately selectable source surfaces; proximity does not establish attachments, layers or movement. No tendon, aponeurosis, retinaculum, nerve or complete hand dissection is supplied by this study. Return separation to 0% for original source positions. Anatomical review is pending.",
+          "landmarks": [
+            "abductor pollicis brevis$",
+            "opponens pollicis$",
+            "oblique head of .*adductor pollicis$",
+            "transverse head of .*adductor pollicis$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:hand:left:bone:left-first-metacarpal-bone",
+            "vm:anatomy:body:hand:right:bone:right-first-metacarpal-bone",
+            "vm:anatomy:body:hand:right:muscle:right-abductor-pollicis-brevis",
+            "vm:anatomy:body:hand:left:muscle:left-abductor-pollicis-brevis",
+            "vm:anatomy:body:hand:right:muscle:right-opponens-pollicis",
+            "vm:anatomy:body:hand:left:muscle:left-opponens-pollicis",
+            "vm:anatomy:body:hand:right:muscle:oblique-head-of-right-adductor-pollicis",
+            "vm:anatomy:body:hand:left:muscle:oblique-head-of-left-adductor-pollicis",
+            "vm:anatomy:body:hand:right:muscle:transverse-head-of-right-adductor-pollicis",
+            "vm:anatomy:body:hand:left:muscle:transverse-head-of-left-adductor-pollicis"
+          ]
+        },
+        {
+          "id": "hand-intrinsic-interosseous-lumbrical",
+          "title": "Hand: interosseous & lumbrical source groups",
+          "rule": {
+            "fmaIds": [
+              "FMA42398",
+              "FMA42399",
+              "FMA42402",
+              "FMA42403",
+              "FMA42404",
+              "FMA42405"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA24464",
+                "FMA24465",
+                "FMA24466",
+                "FMA24467",
+                "FMA24468",
+                "FMA24469",
+                "FMA24470",
+                "FMA24471",
+                "FMA24472",
+                "FMA24473"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the supplied grouped lumbrical, palmar interosseous and dorsal interosseous surfaces with metacarpal context. Choose Left or Right for one hand.",
+          "inspect": "Each target is one grouped source surface on its side; individual numbered muscles are not separately supplied. Select a group and Remove it, then Undo to restore it. These are unchanged, separately selectable source surfaces; proximity does not establish attachments, layers or movement. No tendon, aponeurosis, retinaculum, nerve or complete hand dissection is supplied by this study. Return separation to 0% for original source positions. Anatomical review is pending.",
+          "landmarks": [
+            "set of lumbricals of .* hand$",
+            "set of palmar interossei of .* hand$",
+            "set of dorsal interossei of .* hand$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:hand:left:bone:left-first-metacarpal-bone",
+            "vm:anatomy:body:hand:left:bone:left-second-metacarpal-bone",
+            "vm:anatomy:body:hand:left:bone:left-third-metacarpal-bone",
+            "vm:anatomy:body:hand:left:bone:left-fourth-metacarpal-bone",
+            "vm:anatomy:body:hand:left:bone:left-fifth-metacarpal-bone",
+            "vm:anatomy:body:hand:right:bone:right-first-metacarpal-bone",
+            "vm:anatomy:body:hand:right:bone:right-second-metacarpal-bone",
+            "vm:anatomy:body:hand:right:bone:right-third-metacarpal-bone",
+            "vm:anatomy:body:hand:right:bone:right-fourth-metacarpal-bone",
+            "vm:anatomy:body:hand:right:bone:right-fifth-metacarpal-bone",
+            "vm:anatomy:body:hand:right:muscle:set-of-lumbricals-of-right-hand",
+            "vm:anatomy:body:hand:left:muscle:set-of-lumbricals-of-left-hand",
+            "vm:anatomy:body:hand:right:muscle:set-of-palmar-interossei-of-right-hand",
+            "vm:anatomy:body:hand:left:muscle:set-of-palmar-interossei-of-left-hand",
+            "vm:anatomy:body:hand:right:muscle:set-of-dorsal-interossei-of-right-hand",
+            "vm:anatomy:body:hand:left:muscle:set-of-dorsal-interossei-of-left-hand"
+          ]
         }
       ]
     },
@@ -12958,7 +13664,8 @@
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
             "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery",
+            "vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein"
           ]
         },
         {
@@ -13135,7 +13842,8 @@
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
             "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery",
+            "vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein"
           ]
         },
         {
@@ -13309,7 +14017,8 @@
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
             "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery",
+            "vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein"
           ]
         },
         {
@@ -13563,7 +14272,8 @@
             "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
             "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery",
+            "vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein"
           ]
         },
         {
@@ -14188,7 +14898,8 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
             "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+            "vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein"
           ]
         },
         {
@@ -14305,6 +15016,29 @@
             "vm:anatomy:body:thorax:midline:bone:xiphoid-process",
             "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
             "vm:anatomy:body:thorax:left:organ:left-main-bronchus"
+          ]
+        },
+        {
+          "id": "cardiac-venous-surfaces",
+          "title": "Cardiac veins & heart surface",
+          "includeSkeleton": false,
+          "rule": {
+            "fmaIds": [
+              "FMA76767",
+              "FMA7088",
+              "FMA3802",
+              "FMA4707",
+              "FMA4713"
+            ]
+          },
+          "view": "anterior",
+          "description": "Compare anterior, great and middle cardiac vein sources. Remove the heart to inspect covered surfaces; Undo restores it. Rotate posteriorly for the middle cardiac vein. Contacts are not proven drainage junctions or dissection planes.",
+          "visibleStructureIds": [
+            "vm:anatomy:body:thorax:unpaired:organ:heart",
+            "vm:anatomy:body:thorax:right:vessel:trunk-of-right-coronary-artery",
+            "vm:anatomy:body:thorax:unspecified:vessel:great-cardiac-vein",
+            "vm:anatomy:body:thorax:unspecified:vessel:middle-cardiac-vein",
+            "vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein"
           ]
         },
         {
@@ -14498,7 +15232,8 @@
         "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
         "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
         "https://anatomy.ttuhscep.edu/schemes/inguinal_tables.html",
-        "https://anatomy.ttuhscep.edu/schemes/abdo_wall_ing_questions/abdo_wall_12_feedback.html"
+        "https://anatomy.ttuhscep.edu/schemes/abdo_wall_ing_questions/abdo_wall_12_feedback.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/veins_abdomen.html"
       ],
       "stages": [
         {
@@ -16213,6 +16948,42 @@
             "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery",
             "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein"
           ]
+        },
+        {
+          "id": "portal-hepatic-outflow",
+          "title": "Liver: portal inflow & venous outflow",
+          "rule": {
+            "fmaIds": [
+              "FMA50735",
+              "FMA14338",
+              "FMA14339"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA7197",
+                "FMA10951"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Compare the portal vein with the supplied right and left hepatic veins, liver and inferior vena cava. Choose Both sides to keep both hepatic veins in view.",
+          "inspect": "Portal blood enters the liver; hepatic veins provide venous outflow toward the vena cava. Select the liver and Remove it to reveal covered vessels, then Undo to restore context. Extract selected separates one surface; return separation to 0% for original positions. These whole source surfaces do not prove connected lumens, flow or segment boundaries. The middle hepatic vein, complete tributaries, sinusoids and arterial inflow are not shown in this study. This is not a portal-triad dissection, procedural plan or registered scan. Clinical review is pending.",
+          "landmarks": [
+            "hepatic portal vein$",
+            "right hepatic vein$",
+            "left hepatic vein$",
+            "inferior vena cava$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:unpaired:organ:liver",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+            "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein"
+          ]
         }
       ]
     },
@@ -16321,7 +17092,8 @@
             "vm:anatomy:body:pelvis:right:vessel:right-internal-pudendal-vein",
             "vm:anatomy:body:pelvis:right:vessel:right-lateral-sacral-vein",
             "vm:anatomy:body:pelvis:right:vessel:right-obturator-vein",
-            "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein"
+            "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein",
+            "vm:anatomy:body:pelvis:midline:organ:corpus-spongiosum-of-penis"
           ]
         },
         {
@@ -16422,7 +17194,8 @@
             "vm:anatomy:body:pelvis:right:vessel:right-internal-pudendal-vein",
             "vm:anatomy:body:pelvis:right:vessel:right-lateral-sacral-vein",
             "vm:anatomy:body:pelvis:right:vessel:right-obturator-vein",
-            "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein"
+            "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein",
+            "vm:anatomy:body:pelvis:midline:organ:corpus-spongiosum-of-penis"
           ]
         },
         {
@@ -16522,7 +17295,8 @@
             "vm:anatomy:body:pelvis:right:vessel:right-internal-pudendal-vein",
             "vm:anatomy:body:pelvis:right:vessel:right-lateral-sacral-vein",
             "vm:anatomy:body:pelvis:right:vessel:right-obturator-vein",
-            "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein"
+            "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein",
+            "vm:anatomy:body:pelvis:midline:organ:corpus-spongiosum-of-penis"
           ]
         },
         {
@@ -16670,7 +17444,8 @@
             "vm:anatomy:body:pelvis:unpaired:organ:urethra",
             "vm:anatomy:body:abdomen:unpaired:organ:appendix",
             "vm:anatomy:body:pelvis:left:organ:left-deferent-duct",
-            "vm:anatomy:body:pelvis:right:organ:right-deferent-duct"
+            "vm:anatomy:body:pelvis:right:organ:right-deferent-duct",
+            "vm:anatomy:body:pelvis:midline:organ:corpus-spongiosum-of-penis"
           ]
         }
       ],
@@ -16898,6 +17673,380 @@
             "vm:anatomy:body:pelvis:right:vessel:right-lateral-sacral-vein",
             "vm:anatomy:body:pelvis:right:vessel:right-obturator-vein",
             "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein"
+          ]
+        },
+        {
+          "id": "pelvis-urethral-context",
+          "title": "Male pelvis: urethra & corpus spongiosum",
+          "rule": {
+            "fmaIds": [
+              "FMA19667",
+              "FMA19617"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA15900",
+                "FMA9600",
+                "FMA16586",
+                "FMA16587"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Compare the urethra and bulb/shaft source with the bladder, prostate and hip bones.",
+          "inspect": "Select either target to read its available anatomy and imaging notes. Remove a covering structure and use Undo to restore it; return separation to 0% to compare source positions. Co-display does not establish an enclosed or continuous lumen, patient registration or a procedural approach. The glans and paired cavernous bodies are not included. Radiologist review is pending.",
+          "landmarks": [
+            "urethra$",
+            "corpus spongiosum",
+            "prostate$",
+            "urinary bladder$"
+          ],
+          "requiredSources": [
+            {
+              "id": "vm:anatomy:body:pelvis:midline:organ:corpus-spongiosum-of-penis",
+              "fmaId": "FMA19617",
+              "name": "Corpus spongiosum · bulb/shaft source",
+              "sourceName": "corpus spongiosum of penis",
+              "system": "organs",
+              "category": "organ",
+              "laterality": "midline",
+              "region": "pelvis",
+              "regions": [
+                "pelvis"
+              ],
+              "bundle": "corpus-spongiosum",
+              "nodeName": "FMA19617",
+              "sourceTree": "isa",
+              "sources": [
+                {
+                  "file": "FJ3133",
+                  "sha256": "e90e440d57d2e6b0b85c622650c46bafe34c0886a6eed898062b914b5df1f14e"
+                }
+              ],
+              "bounds": {
+                "min": [
+                  -0.11280299723148346,
+                  -0.9105299711227417,
+                  0.2501530051231384
+                ],
+                "max": [
+                  0.09973979741334915,
+                  -0.1976899951696396,
+                  1.371359944343567
+                ]
+              },
+              "center": [
+                -0.006531599909067154,
+                -0.5541099831461906,
+                0.8107564747333527
+              ],
+              "anchor": [
+                -0.024211199954152107,
+                -0.35267001390457153,
+                0.7853400111198425
+              ],
+              "coverageNote": "Original source-labelled bulb/shaft representation. The separately supplied glans and corporal surfaces are not added; this is not the complete corpus spongiosum or penis. The existing urethra is context, not a validated enclosed lumen. Original coordinates and faces retained; clinical review pending.",
+              "provenance": {
+                "method": "licensed-source-mesh",
+                "license": "CC-BY-4.0",
+                "sourceVersion": "4.0",
+                "recovered": false
+              },
+              "validation": {
+                "status": "unvalidated",
+                "anatomicalReview": false
+              }
+            },
+            {
+              "id": "vm:anatomy:body:pelvis:unpaired:organ:urinary-bladder",
+              "fmaId": "FMA15900",
+              "name": "Urinary bladder",
+              "sourceName": "urinary bladder",
+              "system": "organs",
+              "category": "organ",
+              "laterality": "unpaired",
+              "region": "pelvis",
+              "regions": [
+                "pelvis"
+              ],
+              "bundle": "pelvis-organs",
+              "nodeName": "FMA15900",
+              "bounds": {
+                "min": [
+                  -0.3414659798145294,
+                  -0.10268005728721619,
+                  0.06525298953056335
+                ],
+                "max": [
+                  0.3262379765510559,
+                  0.2998901307582855,
+                  0.7824000716209412
+                ]
+              },
+              "center": [
+                -0.007614001631736755,
+                0.09860503673553467,
+                0.42382653057575226
+              ],
+              "anchor": [
+                0.054224301129579544,
+                0.25124022364616394,
+                0.4553859829902649
+              ],
+              "sourceTree": "partof",
+              "sources": [
+                {
+                  "file": "FJ3149",
+                  "sha256": "b49f40d01bf28550094a7d17901e33e7066039f3a0fb8cf44d79fff2472f9926"
+                }
+              ],
+              "coverageNote": null,
+              "provenance": {
+                "method": "licensed-source-mesh",
+                "license": "CC-BY-4.0",
+                "sourceVersion": "4.0",
+                "recovered": false
+              },
+              "validation": {
+                "status": "unvalidated",
+                "anatomicalReview": false
+              }
+            },
+            {
+              "id": "vm:anatomy:body:pelvis:unpaired:organ:prostate",
+              "fmaId": "FMA9600",
+              "name": "Prostate",
+              "sourceName": "prostate",
+              "system": "organs",
+              "category": "organ",
+              "laterality": "unpaired",
+              "region": "pelvis",
+              "regions": [
+                "pelvis"
+              ],
+              "bundle": "pelvis-organs-recovery",
+              "nodeName": "FMA9600",
+              "bounds": {
+                "min": [
+                  -0.17826201021671295,
+                  -0.2791699171066284,
+                  0.14504897594451904
+                ],
+                "max": [
+                  0.16457800567150116,
+                  -0.07560974359512329,
+                  0.46460801362991333
+                ]
+              },
+              "center": [
+                -0.006842002272605896,
+                -0.17738983035087585,
+                0.3048284947872162
+              ],
+              "anchor": [
+                -0.008279549889266491,
+                -0.09260009974241257,
+                0.31331297755241394
+              ],
+              "sourceTree": "partof",
+              "sources": [
+                {
+                  "file": "FJ3139",
+                  "sha256": "f20448e74cf6b6096248361bc4f618c1d7f4c1acac77f785abc43e40835b13cb"
+                }
+              ],
+              "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+              "provenance": {
+                "method": "licensed-source-mesh",
+                "license": "CC-BY-4.0",
+                "sourceVersion": "4.0",
+                "recovered": true
+              },
+              "validation": {
+                "status": "unvalidated",
+                "anatomicalReview": false
+              }
+            },
+            {
+              "id": "vm:anatomy:body:pelvis:unpaired:organ:urethra",
+              "fmaId": "FMA19667",
+              "name": "Urethra",
+              "sourceName": "urethra",
+              "system": "organs",
+              "category": "organ",
+              "laterality": "unpaired",
+              "region": "pelvis",
+              "regions": [
+                "pelvis"
+              ],
+              "bundle": "pelvis-organs-gaps",
+              "nodeName": "FMA19667",
+              "bounds": {
+                "min": [
+                  -0.0160824004560709,
+                  -0.9143102765083313,
+                  0.29952698945999146
+                ],
+                "max": [
+                  0.0031363300513476133,
+                  -0.07487975805997849,
+                  1.3417400121688843
+                ]
+              },
+              "center": [
+                -0.006473035202361643,
+                -0.4945950172841549,
+                0.8206335008144379
+              ],
+              "anchor": [
+                -0.009616579860448837,
+                -0.29971984028816223,
+                0.7556800246238708
+              ],
+              "sourceTree": "isa",
+              "sources": [
+                {
+                  "file": "FJ3148",
+                  "sha256": "987ce1b01511f6ea323ba5a7a7438ba3df72d0cdc853985e08ca2965feb63c93"
+                }
+              ],
+              "coverageNote": "Selected adult-male urinary/reproductive source representation; no complete tract or wall-layer dissection is implied. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+              "provenance": {
+                "method": "licensed-source-mesh",
+                "license": "CC-BY-4.0",
+                "sourceVersion": "4.0",
+                "recovered": true
+              },
+              "validation": {
+                "status": "unvalidated",
+                "anatomicalReview": false
+              }
+            }
+          ],
+          "contextSources": [
+            {
+              "id": "vm:anatomy:body:pelvis:right:bone:right-hip-bone",
+              "fmaId": "FMA16586",
+              "name": "Right hip bone",
+              "sourceName": "right hip bone",
+              "system": "skeleton",
+              "category": "bone",
+              "laterality": "right",
+              "region": "pelvis",
+              "regions": [
+                "pelvis",
+                "thigh"
+              ],
+              "bundle": "pelvis-skeleton",
+              "nodeName": "FMA16586",
+              "bounds": {
+                "min": [
+                  -1.4487199783325195,
+                  -0.4784698486328125,
+                  -0.4888122081756592
+                ],
+                "max": [
+                  -0.0279029980301857,
+                  1.5786901712417603,
+                  0.8901899456977844
+                ]
+              },
+              "center": [
+                -0.7383114881813526,
+                0.5501101613044739,
+                0.20068886876106262
+              ],
+              "anchor": [
+                -0.6408339738845825,
+                0.5218298435211182,
+                0.20818497240543365
+              ],
+              "sourceTree": "isa",
+              "sources": [
+                {
+                  "file": "FJ3152",
+                  "sha256": "99de26e5435a8397b6f39b44ada75319d5e8fa1433e1ea38fdd8de9e079ed9a9"
+                }
+              ],
+              "coverageNote": null,
+              "provenance": {
+                "method": "licensed-source-mesh",
+                "license": "CC-BY-4.0",
+                "sourceVersion": "4.0",
+                "recovered": false
+              },
+              "validation": {
+                "status": "unvalidated",
+                "anatomicalReview": false
+              }
+            },
+            {
+              "id": "vm:anatomy:body:pelvis:left:bone:left-hip-bone",
+              "fmaId": "FMA16587",
+              "name": "Left hip bone",
+              "sourceName": "left hip bone",
+              "system": "skeleton",
+              "category": "bone",
+              "laterality": "left",
+              "region": "pelvis",
+              "regions": [
+                "pelvis",
+                "thigh"
+              ],
+              "bundle": "pelvis-skeleton",
+              "nodeName": "FMA16587",
+              "bounds": {
+                "min": [
+                  0.02750309929251671,
+                  -0.480490118265152,
+                  -0.4868505895137787
+                ],
+                "max": [
+                  1.4475399255752563,
+                  1.5809003114700317,
+                  0.8909500241279602
+                ]
+              },
+              "center": [
+                0.7375215124338865,
+                0.5502050966024399,
+                0.20204971730709076
+              ],
+              "anchor": [
+                0.6407599449157715,
+                0.5112402439117432,
+                0.24853698909282684
+              ],
+              "sourceTree": "isa",
+              "sources": [
+                {
+                  "file": "FJ3288",
+                  "sha256": "bfc8b489fee0945cd1d387cf64bd3691af8e033fa72f9fccae45cfd55ac88694"
+                }
+              ],
+              "coverageNote": null,
+              "provenance": {
+                "method": "licensed-source-mesh",
+                "license": "CC-BY-4.0",
+                "sourceVersion": "4.0",
+                "recovered": false
+              },
+              "validation": {
+                "status": "unvalidated",
+                "anatomicalReview": false
+              }
+            }
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:pelvis:right:bone:right-hip-bone",
+            "vm:anatomy:body:pelvis:left:bone:left-hip-bone",
+            "vm:anatomy:body:pelvis:unpaired:organ:urinary-bladder",
+            "vm:anatomy:body:pelvis:unpaired:organ:prostate",
+            "vm:anatomy:body:pelvis:unpaired:organ:urethra",
+            "vm:anatomy:body:pelvis:midline:organ:corpus-spongiosum-of-penis"
           ]
         }
       ]
@@ -17222,7 +18371,8 @@
             "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
             "vm:anatomy:body:head-neck:right:vessel:right-superior-cerebellar-artery",
             "vm:anatomy:body:head-neck:left:vessel:left-superior-cerebellar-artery",
-            "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery"
+            "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+            "vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve"
           ]
         },
         {
@@ -17532,7 +18682,8 @@
             "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
             "vm:anatomy:body:head-neck:right:vessel:right-superior-cerebellar-artery",
             "vm:anatomy:body:head-neck:left:vessel:left-superior-cerebellar-artery",
-            "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery"
+            "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+            "vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve"
           ]
         },
         {
@@ -17841,7 +18992,8 @@
             "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
             "vm:anatomy:body:head-neck:right:vessel:right-superior-cerebellar-artery",
             "vm:anatomy:body:head-neck:left:vessel:left-superior-cerebellar-artery",
-            "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery"
+            "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+            "vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve"
           ]
         },
         {
@@ -17919,7 +19071,8 @@
             "vm:anatomy:body:head-neck:left:organ:left-stria-medullaris-of-thalamus",
             "vm:anatomy:body:head-neck:right:organ:right-stria-medullaris-of-thalamus",
             "vm:anatomy:body:head-neck:midline:organ:lamina-terminalis",
-            "vm:anatomy:body:head-neck:midline:organ:septum-of-telencephalon"
+            "vm:anatomy:body:head-neck:midline:organ:septum-of-telencephalon",
+            "vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve"
           ]
         },
         {
@@ -17988,7 +19141,8 @@
             "vm:anatomy:body:head-neck:right:organ:right-eyeball",
             "vm:anatomy:body:head-neck:left:organ:left-eyeball",
             "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
-            "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve"
+            "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve",
+            "vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve"
           ]
         },
         {
@@ -19493,6 +20647,40 @@
           ]
         },
         {
+          "id": "short-ciliary-context",
+          "title": "Short ciliary source & orbital context",
+          "includeSkeleton": false,
+          "rule": {
+            "fmaIds": [
+              "FMA7041",
+              "FMA53549",
+              "FMA53550",
+              "FMA52673",
+              "FMA52674",
+              "FMA82734",
+              "FMA82735",
+              "FMA12514",
+              "FMA12515",
+              "FMA49054",
+              "FMA49055"
+            ]
+          },
+          "view": "superior",
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:left:muscle:left-lateral-rectus",
+            "vm:anatomy:body:head-neck:right:muscle:right-lateral-rectus",
+            "vm:anatomy:body:head-neck:left:nerve:communicating-branch-of-left-nasociliary-nerve-with-left-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:left:nerve:left-long-ciliary-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:communicating-branch-of-right-nasociliary-nerve-with-right-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:right:nerve:right-long-ciliary-nerve",
+            "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+            "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+            "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve"
+          ]
+        },
+        {
           "id": "ocular",
           "title": "Eyeballs & orbital muscle subset",
           "rule": {
@@ -20667,6 +21855,71 @@
             "vm:anatomy:body:head-neck:right:organ:right-stria-medullaris-of-thalamus",
             "vm:anatomy:body:head-neck:midline:organ:lamina-terminalis",
             "vm:anatomy:body:head-neck:midline:organ:septum-of-telencephalon"
+          ]
+        },
+        {
+          "id": "lower-neck-vessels-scalenes",
+          "title": "Lower neck: vessels & scalenes",
+          "rule": {
+            "fmaIds": [
+              "FMA3941",
+              "FMA4058",
+              "FMA4754",
+              "FMA4762",
+              "FMA3953",
+              "FMA4694",
+              "FMA4755",
+              "FMA4763",
+              "FMA13392",
+              "FMA13393",
+              "FMA13390",
+              "FMA13391",
+              "FMA13388",
+              "FMA13389"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA13408",
+                "FMA13409",
+                "FMA13348",
+                "FMA13349"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the supplied bilateral common-carotid, internal-jugular, subclavian and scalene source surfaces with sternocleidomastoid and omohyoid context. Start anteriorly, then rotate the unchanged source frame.",
+          "inspect": "Select a labelled surface and Remove it, then Undo to restore it. Extract selected separates that whole source surface; return separation to 0% to restore its original source position. This is source orientation only, not proof of a complete neck, operative planes, vascular patency or branching, or CT/ultrasound registration. Nerves, skeleton and a cervical-sheath model are not supplied by this study. Anatomical review is pending.",
+          "landmarks": [
+            "common carotid artery$",
+            "internal jugular vein$",
+            "subclavian artery$",
+            "subclavian vein$",
+            "scalenus anterior$",
+            "scalenus medius$",
+            "scalenus posterior$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:left:muscle:left-omohyoid",
+            "vm:anatomy:body:head-neck:left:muscle:left-scalenus-anterior",
+            "vm:anatomy:body:head-neck:left:muscle:left-scalenus-medius",
+            "vm:anatomy:body:head-neck:left:muscle:left-scalenus-posterior",
+            "vm:anatomy:body:head-neck:left:muscle:left-sternocleidomastoid",
+            "vm:anatomy:body:head-neck:right:muscle:right-omohyoid",
+            "vm:anatomy:body:head-neck:right:muscle:right-scalenus-anterior",
+            "vm:anatomy:body:head-neck:right:muscle:right-scalenus-medius",
+            "vm:anatomy:body:head-neck:right:muscle:right-scalenus-posterior",
+            "vm:anatomy:body:head-neck:right:muscle:right-sternocleidomastoid",
+            "vm:anatomy:body:thorax:right:vessel:right-subclavian-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-subclavian-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-subclavian-vein",
+            "vm:anatomy:body:thorax:left:vessel:left-subclavian-vein",
+            "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-internal-jugular-vein",
+            "vm:anatomy:body:head-neck:left:vessel:left-internal-jugular-vein"
           ]
         }
       ]
