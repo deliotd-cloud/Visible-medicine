@@ -1,5 +1,12 @@
 # Current atlas status
 
+[Renal segmental source review](RENAL_SEGMENTAL_SOURCE_REVIEW.md) audits five
+additional source-labelled branches against 1,104 root and seven nested renal
+selections. Two source-bound review figures expose unresolved parent continuity
+and kidney-relative extents. All five remain outside the learner catalogue;
+no connecting geometry, perfusion territory or clinical approval is invented.
+Audit and figure replay pass. Runtime, teaching and website are unchanged.
+
 [Search study handoff](SEARCH_STUDY_HANDOFF.md) now opens confirmed study windows
 and focuses with the model unobstructed, instead of opening the tools drawer.
 Search regains keyboard focus; explicit Dissect and direct structure selection

@@ -1,0 +1,89 @@
+{
+  "auditSha256": "5048193c716e778b7f7322a270719dfe43e2339b2fe1cde071da8c31102125e5",
+  "side": "right",
+  "candidates": [
+    {
+      "tree": "isa",
+      "id": "FMA86340",
+      "name": "superior segmental branch of right renal artery",
+      "side": "right",
+      "files": [
+        "FJ2042"
+      ],
+      "sha256": "019d40403d4ddab2541d1b7bf958bdc445e1125a930103542289b4f228448d0e"
+    },
+    {
+      "tree": "isa",
+      "id": "FMA86346",
+      "name": "inferior segmental branch of right renal artery",
+      "side": "right",
+      "files": [
+        "FJ2043"
+      ],
+      "sha256": "96c2bf296bc2184d15487da7802c4c4e1baedb12d0487bd2147b8b7426082a1e"
+    },
+    {
+      "tree": "isa",
+      "id": "FMA86348",
+      "name": "posterior segmental branch of right renal artery",
+      "side": "right",
+      "files": [
+        "FJ2045"
+      ],
+      "sha256": "82ae9891b1b85971f4b2222f6e189ca8f9a3aeabed7da2c8a5e1d12f110f404e"
+    }
+  ],
+  "context": [
+    {
+      "id": "vm:anatomy:body:abdomen:right:organ:right-kidney",
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ3147",
+          "sha256": "e21e2ebd5224b1cbf8caabbf4fa788d894819a328a006dcdb2eb8aa6eee5875a"
+        }
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2038",
+          "sha256": "2bf3da140369524e15335694773718b4e83b254234bc3e8376a4708565276045"
+        }
+      ]
+    }
+  ],
+  "panes": [
+    {
+      "axis": "X/Z",
+      "sourceHorizontalMm": [
+        -111.388,
+        12.7113
+      ],
+      "sourceVerticalMm": [
+        966.812,
+        1073.08
+      ],
+      "pixelsPerMm": 4.206308979986188
+    },
+    {
+      "axis": "Y/Z",
+      "sourceHorizontalMm": [
+        -119.561,
+        -50.6222
+      ],
+      "sourceVerticalMm": [
+        966.812,
+        1073.08
+      ],
+      "pixelsPerMm": 4.573342868972789
+    }
+  ],
+  "imageSha256": "98e013c98ecb465909522fbd98bc697bca3fb181bbe6eb9b4dec8ab26172ab23",
+  "candidateClipped": false,
+  "geometryModified": false,
+  "admissionApproved": false,
+  "clinicalApproved": false
+}

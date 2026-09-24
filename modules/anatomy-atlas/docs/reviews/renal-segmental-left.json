@@ -1,0 +1,79 @@
+{
+  "auditSha256": "5048193c716e778b7f7322a270719dfe43e2339b2fe1cde071da8c31102125e5",
+  "side": "left",
+  "candidates": [
+    {
+      "tree": "isa",
+      "id": "FMA86341",
+      "name": "superior segmental branch of left renal artery",
+      "side": "left",
+      "files": [
+        "FJ2052"
+      ],
+      "sha256": "0ae6c8a0f9ef5eac23c3242c69b3a8a62793f8bd886cc2c6b3a62caf933e7791"
+    },
+    {
+      "tree": "isa",
+      "id": "FMA86347",
+      "name": "inferior segmental branch of left renal artery",
+      "side": "left",
+      "files": [
+        "FJ2049"
+      ],
+      "sha256": "93b11902d5f25dee5ec0cd036177931581e986e96e678eb219f754db244a99c1"
+    }
+  ],
+  "context": [
+    {
+      "id": "vm:anatomy:body:abdomen:left:organ:left-kidney",
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ3145",
+          "sha256": "b52066a987f767ad9e5c3092958bf5dd760d9f05f1497d1fc7f7ff11539bdfd2"
+        }
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2046",
+          "sha256": "b1a9ce8a37cd9c89fbf4c90a68a554184bf2919dbad391c552c0f4c8dd788845"
+        }
+      ]
+    }
+  ],
+  "panes": [
+    {
+      "axis": "X/Z",
+      "sourceHorizontalMm": [
+        3.6509,
+        90.383
+      ],
+      "sourceVerticalMm": [
+        984.494,
+        1090.44
+      ],
+      "pixelsPerMm": 4.587242557529306
+    },
+    {
+      "axis": "Y/Z",
+      "sourceHorizontalMm": [
+        -120.307,
+        -59.5914
+      ],
+      "sourceVerticalMm": [
+        984.494,
+        1090.44
+      ],
+      "pixelsPerMm": 4.587242557529306
+    }
+  ],
+  "imageSha256": "e17301f7fede505dca84f861622981dccb80a3c36aa3c73454e0c16fd0e0b679",
+  "candidateClipped": false,
+  "geometryModified": false,
+  "admissionApproved": false,
+  "clinicalApproved": false
+}

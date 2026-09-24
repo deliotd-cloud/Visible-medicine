@@ -6,6 +6,8 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "renal-segmental:audit": "node scripts/audit-renal-segmental-source.mjs --check",
+    "renal-segmental:review": "node scripts/render-renal-segmental-review.mjs --check",
     "practice-panel-navigation:test": "node scripts/test-practice-panel-navigation.mjs",
     "search-preview-focus:test": "node scripts/test-search-preview-focus.mjs",
     "nested-practice:test": "node scripts/test-nested-practice.mjs && node scripts/test-nested-practice-component.mjs",
