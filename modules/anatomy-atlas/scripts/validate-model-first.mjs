@@ -292,6 +292,20 @@ for (const migration of preCompactCallbackMigrations) {
 }
 same(preCompactBindings.callbacks, [...migratedCallbacks].sort(compare),
   'Callback migrations existed before the compact information-sheet change');
+// The coronary venous launcher predates the current panel/navigation edits.
+// Admit only its exact callback, observed once in that committed source and
+// once in the current source; execute the current handler below.
+const coronaryCallback =
+  'onClick/d1295bd1a55b5b79dca24bb9d7bb58569d087cb6bd626a2b812c51bde2b676c4';
+const coronarySource = execFileSync('git', [
+  'show',
+  '23bb61d97371fd343202ae60fd7c21af8b9b4854:app/body-explorer.tsx',
+], { maxBuffer: 2e6 }).toString();
+same(bindings(coronarySource).callbacks.filter(value => value === coronaryCallback).length,
+  1, 'Coronary launcher existed once at immutable 23bb61d');
+same(bindings(source).callbacks.filter(value => value === coronaryCallback).length,
+  1, 'Current coronary launcher retains the exact callback');
+migratedCallbacks.push(coronaryCallback);
 // Conditional Tray entry/overview framing leaves all entries present;
 // explode-styles:test executes this exact callback in both directions.
 migratedCallbacks.push('onClick/ff0cb1ea980e4313d0740aa8fe952f6993695f1b7c5668597f0675264694b560');
@@ -309,6 +323,33 @@ const explorerAst = ts.createSourceFile(
   true,
   ts.ScriptKind.TSX,
 );
+const coronaryCallbacks = [];
+function findCoronaryCallback(node) {
+  if (ts.isJsxAttribute(node) && node.name.text === 'onClick' &&
+    ts.isJsxExpression(node.initializer) && node.initializer.expression &&
+    `onClick/${hash(printer.printNode(ts.EmitHint.Unspecified, node.initializer, explorerAst))}` === coronaryCallback)
+    coronaryCallbacks.push(node.initializer.expression.getText(explorerAst));
+  ts.forEachChild(node, findCoronaryCallback);
+}
+findCoronaryCallback(explorerAst);
+same(coronaryCallbacks.length, 1, 'One executable current coronary launcher');
+const capturedCamera = { position: [1, 2, 3] }, copiedCamera = { position: [1, 2, 3] };
+const cameraRestore = { current: 'stale' }, cameraCapture = { current: capturedCamera };
+const nestedReturnFocus = { current: null }, launcher = { id: 'coronary-launcher' };
+const coronaryVenousLauncher = { current: launcher }, selected = { id: 'heart-parent' };
+const coronaryEvents = [];
+runInNewContext(`(${coronaryCallbacks[0]})()`, {
+  cameraRestore, cameraCapture, nestedReturnFocus, coronaryVenousLauncher, selected,
+  copyRecoveryCamera: camera => { same(camera, capturedCamera); return copiedCamera; },
+  setNestedSelection: value => coronaryEvents.push(['nested', value]),
+  setManualHeartStudy: value => coronaryEvents.push(['study', value]),
+  setVentricleParent: value => coronaryEvents.push(['parent', value]),
+});
+same(cameraRestore.current, copiedCamera, 'Coronary launcher stores a camera copy');
+same(nestedReturnFocus.current, launcher, 'Coronary launcher retains return focus');
+same(coronaryEvents, [
+  ['nested', null], ['study', 'coronary-venous'], ['parent', selected],
+], 'Coronary launcher clears nested selection and selects its parent study');
 const explodeCallbacks = [];
 function findExplodeCallback(node) {
   if (

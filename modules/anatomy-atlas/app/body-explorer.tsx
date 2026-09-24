@@ -4,11 +4,13 @@ import { femoralComponentsFor } from '@/lib/femoral-components';
 import { cranialArteryComponentsFor } from '@/lib/cranial-artery-components';
 import './um-knee-entry.css';
 import { useWorkspaceSession } from './workspace-session';
+import { PracticePanelNavigation } from './practice-panel-navigation';
 import { InlineStudy } from './study-surface';
 import './upper-limb-motor.css';
 import {
   useCallback,
   useEffect,
+  useId,
   useMemo,
   useReducer,
   useRef,
@@ -370,6 +372,7 @@ export default function BodyExplorer({
     initialPractice,
   );
   const practiceSerial = useRef(0);
+  const practicePromptId = useId();
   const [practiceMode, setPracticeMode] = useState<PracticeMode>('find');
   const [practiceSampling, setPracticeSampling] =
     useState<PracticeSampling>('landmarks');
@@ -2026,6 +2029,7 @@ export default function BodyExplorer({
           )}
           {exam ? (
             <>
+              <PracticePanelNavigation sessionId={practice.id} index={question} answered={answered} />
               <output className="sr-only" aria-live="polite" aria-atomic="true">
                 {`Question ${question + 1} of ${examTargets.length}. ${
                   answered
@@ -2042,10 +2046,10 @@ export default function BodyExplorer({
                   ? 'APPLY ANATOMY · DRAFT'
                   : 'IDENTIFICATION PRACTICE'}
               </div>
-              <h2>
+              <h2 data-practice-question tabIndex={-1} aria-label={`Question ${question + 1} of ${examTargets.length}`} aria-describedby={practicePromptId}>
                 {question + 1} / {examTargets.length}
               </h2>
-              <p>
+              <p id={practicePromptId}>
                 {practice.mode === 'reason'
                   ? practice.questions[question].reasoning?.prompt
                   : practice.mode === 'name'
@@ -2064,6 +2068,8 @@ export default function BodyExplorer({
               )}
               {answered ? (
                 <div
+                  data-practice-feedback
+                  tabIndex={-1}
                   className={`body-answer ${answer === target?.id ? 'correct' : ''}`}
                 >
                   <Check />
