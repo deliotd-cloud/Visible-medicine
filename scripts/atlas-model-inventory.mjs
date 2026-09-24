@@ -9,11 +9,11 @@ const modules = ['shoulder', 'female-pelvis', 'lower-limb', 'head-neck'];
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const records = new Map();
 const sources = [];
-for (const module of modules) {
-  const directory = realpathSync(resolve(root, 'public/atlas-runtime', module));
+for (const moduleName of modules) {
+  const directory = realpathSync(resolve(root, 'public/atlas-runtime', moduleName));
   const manifestBytes = readFileSync(resolve(directory, 'manifest.json'));
   const manifest = JSON.parse(manifestBytes);
-  assert.equal(manifest.patientDataIncluded, false, `${module}: private-data declaration`);
+  assert.equal(manifest.patientDataIncluded, false, `${moduleName}: private-data declaration`);
   assert.match(manifest.sourceCommit, /^[a-f0-9]{40}$/);
   assert.ok(manifest.files.some(file => file.path === 'LICENSES/THIRD_PARTY_NOTICES.md'));
   const paths = new Set();
@@ -22,15 +22,15 @@ for (const module of modules) {
   for (const file of manifest.files) {
     assert.match(file.path, /^[a-zA-Z0-9_./-]+$/);
     assert.ok(!file.path.split('/').some(part => part === '..' || part === '.' || !part));
-    assert.ok(!paths.has(file.path), `${module}: duplicate ${file.path}`);
+    assert.ok(!paths.has(file.path), `${moduleName}: duplicate ${file.path}`);
     paths.add(file.path);
     const path = resolve(directory, file.path);
     assert.ok(lstatSync(path).isFile() && !lstatSync(path).isSymbolicLink());
     const within = relative(directory, realpathSync(path));
     assert.ok(within && !within.startsWith(`..${sep}`) && within !== '..');
     const bytes = readFileSync(path);
-    assert.equal(bytes.length, file.bytes, `${module}/${file.path}: length`);
-    assert.equal(hash(bytes), file.sha256, `${module}/${file.path}: digest`);
+    assert.equal(bytes.length, file.bytes, `${moduleName}/${file.path}: length`);
+    assert.equal(hash(bytes), file.sha256, `${moduleName}/${file.path}: digest`);
     if (!file.path.endsWith('.glb')) continue;
     assert.ok(file.path.startsWith('models/'));
     assert.equal(bytes.toString('ascii', 0, 4), 'glTF');
@@ -39,12 +39,12 @@ for (const module of modules) {
     assert.ok(bytes.length <= 32 * 1024 * 1024, 'Review upload limit before admitting larger models');
     const record = records.get(file.sha256) ?? { sha256: file.sha256, bytes: file.bytes, paths: [] };
     assert.equal(record.bytes, file.bytes);
-    record.paths.push(`/atlas-runtime/${module}/${file.path}`);
+    record.paths.push(`/atlas-runtime/${moduleName}/${file.path}`);
     records.set(file.sha256, record);
     models++;
   }
   assert.ok(models > 0);
-  sources.push({ module, sourceCommit: manifest.sourceCommit, manifestSha256: hash(manifestBytes), modelPaths: models });
+  sources.push({ module: moduleName, sourceCommit: manifest.sourceCommit, manifestSha256: hash(manifestBytes), modelPaths: models });
 }
 const inventory = {
   schemaVersion: 1,

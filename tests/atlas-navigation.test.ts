@@ -105,7 +105,9 @@ test('homepage previews use matching image frames without an oversized 3D tile',
   const preview=cards.slice(cards.indexOf('export function AtlasModalityPreview'),cards.indexOf('export function AtlasImageNotes'));
   const css=readFileSync(new URL('../app/atlas-navigation.css',import.meta.url),'utf8');
   assert.ok(preview.includes('atlasModalities.map'));
-  assert.ok(preview.includes('<div className="homepage-modality-artwork"><img'));
+  assert.ok(cards.includes("import Image from 'next/image'"));
+  assert.equal([...cards.matchAll(/<Image\s+src=\{modality\.image\}[^>]*\bunoptimized\s*\/>/g)].length,2,'both Atlas preview surfaces use static files without image transformations');
+  assert.ok(preview.includes('<div className="homepage-modality-artwork"><Image src={modality.image} alt={modality.alt} width={640} height={440} unoptimized/>'));
   assert.ok(preview.includes('href={modality.href}'));
   assert.ok(preview.includes('Reference previews · image credits'));
   assert.match(css,/\.homepage-modality-preview\{grid-column:span 2;/);

@@ -5,9 +5,10 @@ import { createRequire } from 'node:module';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import ts from 'typescript';
+import type { AppSnapshot } from '../lib/repository';
 
 const require = createRequire(import.meta.url);
-const Link = ({ children, ...props }: any) => React.createElement('a', props, children);
+const Link = ({ children, ...props }: React.PropsWithChildren<React.AnchorHTMLAttributes<HTMLAnchorElement>>) => React.createElement('a', props, children);
 
 function compileWorkbookBuilder(react: typeof React = React) {
   const source = readFileSync(new URL('../components/EducationRuntime.tsx', import.meta.url), 'utf8')
@@ -15,7 +16,7 @@ function compileWorkbookBuilder(react: typeof React = React) {
   const code = ts.transpileModule(source, { compilerOptions: {
     jsx: ts.JsxEmit.ReactJSX, module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, esModuleInterop: true,
   } }).outputText;
-  const module = { exports: {} as Record<string, any> };
+  const loadedModule = { exports: {} as Record<string, unknown> };
   const mocks: Record<string, unknown> = {
     react,
     'next/link': Link,
@@ -27,10 +28,10 @@ function compileWorkbookBuilder(react: typeof React = React) {
     '@/lib/latest-view-request': { createLatestViewRequest: () => ({ begin: () => ({ finish: () => true }) }) },
   };
   new Function('require', 'module', 'exports', code)(
-    (name: string) => name in mocks ? mocks[name] : require(name), module, module.exports,
+    (name: string) => name in mocks ? mocks[name] : require(name), loadedModule, loadedModule.exports,
   );
-  assert.equal(typeof module.exports.WorkbookBuilder, 'function', 'transpile-only export exposes the actual component');
-  return module.exports.WorkbookBuilder;
+  assert.equal(typeof loadedModule.exports.WorkbookBuilder, 'function', 'transpile-only export exposes the actual component');
+  return loadedModule.exports.WorkbookBuilder as (props: Record<string, unknown>) => React.ReactElement;
 }
 
 const educationCase = {
@@ -55,7 +56,7 @@ function snapshot(workbook = draftWorkbook) {
     learners: [],
     workbookAssignments: [],
     cohorts: [],
-  } as any;
+  } as unknown as AppSnapshot;
 }
 
 test('focused editor defaults to the mounted case picker with other panels hidden', () => {
@@ -113,7 +114,11 @@ test('a focused published workbook is read-only and exposes no editor controls',
   assert.ok(!html.includes('<textarea'));
 });
 
-type ElementNode = React.ReactElement<Record<string, any>>;
+type ElementNode = React.ReactElement<Record<string, unknown> & {
+  children?: React.ReactNode;
+  onClick: () => void;
+  onChange: (event: { target: { value: string } }) => void;
+}>;
 function childrenOf(node: unknown): unknown[] {
   if (!React.isValidElement(node)) return [];
   return React.Children.toArray((node as ElementNode).props.children);
@@ -152,7 +157,7 @@ function hookHarness() {
   return {
     react,
     refs,
-    render(Component: any, props: any) { stateIndex = 0; refIndex = 0; return Component(props) as ElementNode; },
+    render(Component: (props: Record<string, unknown>) => React.ReactElement, props: Record<string, unknown>) { stateIndex = 0; refIndex = 0; return Component(props) as ElementNode; },
   };
 }
 

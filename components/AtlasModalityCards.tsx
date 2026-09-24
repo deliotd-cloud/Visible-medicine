@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import {atlasModalities} from '../lib/atlas-navigation';
 
 /** One source of destinations, images and availability for home and Atlas. */
@@ -6,7 +7,7 @@ export function AtlasModalityCards({headingLevel=2,layout='grid'}:{headingLevel?
   const Heading=headingLevel===3?'h3':'h2';
   return <ul className={layout==='list'?'atlas-modality-list':'atlas-modality-grid'} aria-label="Choose an atlas modality">
     {atlasModalities.map(modality=><li key={modality.id}><Link className="atlas-modality-card" href={modality.href}>
-      <div className={`atlas-modality-image atlas-modality-image-${modality.id}`}><img src={modality.image} alt={modality.alt} width={640} height={440} loading="lazy"/><span>{modality.label}</span></div>
+      <div className={`atlas-modality-image atlas-modality-image-${modality.id}`}><Image src={modality.image} alt={modality.alt} width={640} height={440} loading="lazy" unoptimized/><span>{modality.label}</span></div>
       <div className="atlas-modality-copy"><span className="atlas-availability">{modality.status}</span><Heading>{modality.title}<span aria-hidden="true">↗</span></Heading><p>{layout==='list'?modality.overview:modality.description}</p><small>{modality.caption}</small></div>
     </Link></li>)}
   </ul>;
@@ -17,7 +18,7 @@ export function AtlasModalityPreview(){
     <div className="homepage-atlas-preview-bar"><span>Anatomy in five modalities</span><span>Explore the atlas</span></div>
     <div className="homepage-modality-mosaic">
       {atlasModalities.map(modality=><Link key={modality.id} href={modality.href} className={`homepage-modality-preview homepage-modality-preview-${modality.id}`} aria-label={`${modality.title} — ${modality.status}`}>
-        <div className="homepage-modality-artwork"><img src={modality.image} alt={modality.alt} width={640} height={440}/></div>
+        <div className="homepage-modality-artwork"><Image src={modality.image} alt={modality.alt} width={640} height={440} unoptimized/></div>
         <span>{modality.label}<span aria-hidden="true">↗</span></span>
       </Link>)}
     </div>

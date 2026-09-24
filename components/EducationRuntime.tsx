@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import type {
   PointerEvent as ReactPointerEvent,
   WheelEvent as ReactWheelEvent,
@@ -509,6 +509,12 @@ export function EducationRuntime({
   const [localizerRequests] = useState(createLatestViewRequest);
   const [savedViewReads] = useState(createLatestViewRequest);
   const [savedViewWrites] = useState(createLatestViewRequest);
+  const chooseCase = useCallback((caseId: string) => {
+    localizerRequests.cancel();
+    setLocalizerBusy(false);
+    setActiveCaseId(caseId);
+    setMixedAsset("radiology");
+  }, [localizerRequests]);
   const [pollBundle, setPollBundle] = useState<TeachingPollBundle>({
     polls: [],
     permissions: { manage: false, answer: false },
@@ -861,7 +867,7 @@ export function EducationRuntime({
     }
     window.addEventListener("keydown", keyboardNavigation);
     return () => window.removeEventListener("keydown", keyboardNavigation);
-  }, [activeCaseId, companionMode, data, manualMarkups.length, view]);
+  }, [activeCaseId, chooseCase, companionMode, data, manualMarkups.length, view]);
   useEffect(() => {
     if (!cine) return;
     const timer = setInterval(
@@ -939,18 +945,27 @@ export function EducationRuntime({
     : JSON.stringify([savedViewContext, activeSeries, frameIndex, activePlane,
         viewerLayout, activeTool, cine, zoom, panOffset.x, panOffset.y]);
 
+  const [previousLocalizerContext, setPreviousLocalizerContext] = useState(localizerContext);
+  if (localizerContext !== previousLocalizerContext) {
+    setPreviousLocalizerContext(localizerContext);
+    setLocalizerBusy(false);
+  }
+  const [previousSavedViewContext, setPreviousSavedViewContext] = useState(savedViewContext);
+  if (savedViewContext !== previousSavedViewContext) {
+    setPreviousSavedViewContext(savedViewContext);
+    setPresentations([]);
+    setBookmarks([]);
+    setSavedViewBusy(false);
+  }
+
   useLayoutEffect(() => {
     localizerRequests.setContext(localizerContext);
-    setLocalizerBusy(false);
     return () => localizerRequests.setContext(null);
   }, [localizerContext, localizerRequests]);
 
   useLayoutEffect(() => {
     savedViewReads.setContext(savedViewContext);
     savedViewWrites.setContext(savedViewContext);
-    setPresentations([]);
-    setBookmarks([]);
-    setSavedViewBusy(false);
     return () => {
       savedViewReads.setContext(null);
       savedViewWrites.setContext(null);
@@ -1649,13 +1664,6 @@ export function EducationRuntime({
     // Connectivity is the trigger; refs hold the latest pending drafts without retry-loop churn.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [online]);
-
-  function chooseCase(caseId: string) {
-    localizerRequests.cancel();
-    setLocalizerBusy(false);
-    setActiveCaseId(caseId);
-    setMixedAsset("radiology");
-  }
 
   function setViewerLayout(layout: ViewerLayout) {
     localizerRequests.cancel();

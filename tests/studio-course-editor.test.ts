@@ -13,14 +13,14 @@ function compile(path: string, mocks: Record<string, unknown>) {
   const code = ts.transpileModule(source, { compilerOptions: {
     jsx: ts.JsxEmit.ReactJSX, module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, esModuleInterop: true,
   } }).outputText;
-  const module = { exports: {} as Record<string, any> };
+  const loadedModule = { exports: {} as Record<string, unknown> };
   new Function('require', 'module', 'exports', code)(
-    (name: string) => name in mocks ? mocks[name] : require(name), module, module.exports,
+    (name: string) => name in mocks ? mocks[name] : require(name), loadedModule, loadedModule.exports,
   );
-  return module.exports;
+  return loadedModule.exports as Record<string, (props: Record<string, unknown>) => React.ReactElement>;
 }
 
-const Link = ({ children, ...props }: any) => React.createElement('a', props, children);
+const Link = ({ children, ...props }: React.PropsWithChildren<React.AnchorHTMLAttributes<HTMLAnchorElement>>) => React.createElement('a', props, children);
 const router = { pushes: [] as string[], push(value: string) { this.pushes.push(value); }, refresh() {} };
 const templates = [{ id: 'blank', name: 'Blank course' }];
 
@@ -137,8 +137,8 @@ test('course and content creation navigate straight to their editors with encode
   globalThis.FormData = FixtureFormData as unknown as typeof FormData;
   globalThis.fetch = (async () => ({ ok: true, json: async () => responses.shift() })) as unknown as typeof fetch;
   try {
-    for (const element of [forms.CreateCourseForm(), forms.CreateWorkbookForm({ course })]) {
-      const renderedForm = element.type(element.props);
+    for (const element of [forms.CreateCourseForm({}), forms.CreateWorkbookForm({ course })]) {
+      const renderedForm = (element.type as (props: Record<string, unknown>) => React.ReactElement<{ onSubmit: (event: { preventDefault: () => void; currentTarget: Record<string, never> }) => Promise<void> }>)(element.props as Record<string, unknown>);
       await renderedForm.props.onSubmit({ preventDefault() {}, currentTarget: {} });
     }
   } finally {

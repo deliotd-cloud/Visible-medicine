@@ -13,23 +13,24 @@ function compile(path: string, mocks: Record<string, unknown>) {
   const code = ts.transpileModule(source, { compilerOptions: {
     jsx: ts.JsxEmit.ReactJSX, module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, esModuleInterop: true,
   } }).outputText;
-  const module = { exports: {} as Record<string, any> };
+  const loadedModule = { exports: {} as Record<string, unknown> };
   new Function('require', 'module', 'exports', code)(
-    (name: string) => name in mocks ? mocks[name] : require(name), module, module.exports,
+    (name: string) => name in mocks ? mocks[name] : require(name), loadedModule, loadedModule.exports,
   );
-  return module.exports;
+  return loadedModule.exports;
 }
-const Link = ({ children, ...props }: any) => React.createElement('a', props, children);
+const Link = ({ children, ...props }: React.PropsWithChildren<React.AnchorHTMLAttributes<HTMLAnchorElement>>) => React.createElement('a', props, children);
 const navigation = { usePathname: () => pathname };
 const { SiteHeader } = compile('components/SiteHeader.tsx', {
   'next/link': Link, 'next/navigation': navigation,
   './BrandLockup': { BrandLockup: () => React.createElement('span', null, 'Visible Medicine') },
   '../lib/atlas-navigation': { atlasModalities: [] },
-});
+}) as { SiteHeader: React.ComponentType<{ signedIn: boolean }> };
 const { SiteFrame } = compile('components/SiteFrame.tsx', {
   'next/link': Link, 'next/navigation': navigation,
   './SiteHeader': { SiteHeader }, './SiteFooter': { SiteFooter: () => null },
-});
+}) as { SiteFrame: React.ComponentType<React.PropsWithChildren<{ signedIn: boolean }>> };
+type TreeNode = React.ReactElement<{ children: TreeNode[]; signedIn?: boolean }>;
 
 function occurrences(value: string, fragment: string) {
   return value.split(fragment).length - 1;
@@ -87,13 +88,13 @@ test('actual root layout supplies only request-scoped boolean with no identity l
     '../lib/splash-intro': { SPLASH_BOOTSTRAP_SCRIPT: '' },
     './chatgpt-auth': { getChatGPTUser: async () => { calls++; return user; } },
     './globals.css': {}, './atlas-navigation.css': {},
-  });
+  }) as { default: (props: { children: React.ReactNode }) => Promise<React.ReactElement<{ children: React.ReactNode }>>; dynamic: string };
   assert.equal(dynamic, 'force-dynamic');
   pathname = '/atlas/head-neck-3d';
   for (const value of [null, { userId: 'fixture-private-id', email: 'fixture-private@example.invalid', displayName: 'Private fixture' }, null]) {
     user = value;
     const tree = await Layout({ children: 'content' });
-    const frame = tree.props.children[1].props.children[1];
+    const frame = (tree as TreeNode).props.children[1].props.children[1];
     assert.deepEqual(Object.keys(frame.props).sort(), ['children', 'signedIn']);
     assert.equal(frame.props.signedIn, value !== null);
     const html = renderToStaticMarkup(tree);
