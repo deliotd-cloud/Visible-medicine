@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { build } from './workspace-test-build.mjs';
 import { preOphthalmicNerveProfiles } from './ophthalmic-nerve-study-history.mjs';
+import { preThoracicHilarProfiles } from './thoracic-hilar-study-history.mjs';
 
 const compiled = await build({
   stdin: { contents: `export { dissectionProfiles, stageStructures, initialDissection, dissectionReducer, resolveDissection } from './app/dissection-data';
@@ -18,7 +19,9 @@ const catalog = bodyDisplayCatalog(JSON.parse(await readFile('public/models/body
 const previous = preOphthalmicNerveProfiles(dissectionProfiles);
 for (const region of ['head-neck', 'whole-body'])
   assert(!previous[region].focuses.some(focus => focus.id.startsWith('v1-')));
-const alteredHistory = structuredClone(dissectionProfiles);
+// Test the V1-era rejection against its exact prior snapshot, after separately
+// validating/reversing the newer pulmonary-hilar addition.
+const alteredHistory = preThoracicHilarProfiles(dissectionProfiles);
 alteredHistory['head-neck'].focuses.find(focus => focus.id === 'v1-nasociliary-subset').title += ' changed';
 assert.throws(() => preOphthalmicNerveProfiles(alteredHistory), /Unrecorded V1 recipe edit/);
 const allBindings = [...ophthalmicNerveTargetBindings, ...ophthalmicNerveContextBindings];

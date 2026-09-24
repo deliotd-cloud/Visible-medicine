@@ -1,6 +1,7 @@
 // Offline exact replay of the V1 recipe addition. Runtime retains both views.
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
+import { preThoracicHilarProfiles } from './thoracic-hilar-study-history.mjs';
 
 const hash = (value) => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const beforeHash = '548809597e83d01b279b6f176a4f1b76da3ed2268796ea467e93a7ab64950187';
@@ -15,6 +16,8 @@ const references = [
 const regions = ['head-neck', 'whole-body'];
 
 export function preOphthalmicNerveProfiles(profiles) {
+  if (profiles.thorax.focuses.some(focus => focus.id === 'right-pulmonary-hilum'))
+    profiles = preThoracicHilarProfiles(profiles);
   if (hash(profiles) === correctedHash) {
     // Replay the recorded initial V1 version only for historical verification.
     // Its omission statement was wrong: the two supra-orbital sources exist.
