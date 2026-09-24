@@ -1,31 +1,31 @@
 {
   "passed": true,
-  "assertions": 59347,
+  "assertions": 60773,
   "scopes": 36,
-  "groups": 228,
-  "sourceRecipes": 298,
+  "groups": 235,
+  "sourceRecipes": 305,
   "combinedGroups": 70,
   "markupCases": 24,
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
-      "groups": 26,
-      "recipes": 26,
+      "groups": 29,
+      "recipes": 29,
       "combinedGroups": 0
     },
     {
       "region": "whole-body",
       "side": "left",
-      "groups": 26,
-      "recipes": 26,
+      "groups": 29,
+      "recipes": 29,
       "combinedGroups": 0
     },
     {
       "region": "whole-body",
       "side": "right",
-      "groups": 26,
-      "recipes": 26,
+      "groups": 29,
+      "recipes": 29,
       "combinedGroups": 0
     },
     {
@@ -157,22 +157,22 @@
     {
       "region": "thorax",
       "side": "both",
-      "groups": 19,
-      "recipes": 23,
+      "groups": 20,
+      "recipes": 24,
       "combinedGroups": 4
     },
     {
       "region": "thorax",
       "side": "left",
-      "groups": 19,
-      "recipes": 23,
+      "groups": 20,
+      "recipes": 24,
       "combinedGroups": 4
     },
     {
       "region": "thorax",
       "side": "right",
-      "groups": 19,
-      "recipes": 23,
+      "groups": 20,
+      "recipes": 24,
       "combinedGroups": 4
     },
     {
@@ -199,43 +199,43 @@
     {
       "region": "pelvis",
       "side": "both",
-      "groups": 10,
-      "recipes": 10,
+      "groups": 11,
+      "recipes": 11,
       "combinedGroups": 0
     },
     {
       "region": "pelvis",
       "side": "left",
-      "groups": 10,
-      "recipes": 10,
+      "groups": 11,
+      "recipes": 11,
       "combinedGroups": 0
     },
     {
       "region": "pelvis",
       "side": "right",
-      "groups": 10,
-      "recipes": 10,
+      "groups": 11,
+      "recipes": 11,
       "combinedGroups": 0
     },
     {
       "region": "head-neck",
       "side": "both",
-      "groups": 39,
-      "recipes": 58,
+      "groups": 41,
+      "recipes": 60,
       "combinedGroups": 19
     },
     {
       "region": "head-neck",
       "side": "left",
-      "groups": 39,
-      "recipes": 58,
+      "groups": 41,
+      "recipes": 60,
       "combinedGroups": 19
     },
     {
       "region": "head-neck",
       "side": "right",
-      "groups": 39,
-      "recipes": 58,
+      "groups": 41,
+      "recipes": 60,
       "combinedGroups": 19
     },
     {
@@ -264,5 +264,5 @@
   "clinicalValidation": false,
   "browserInteractionTesting": false,
   "sourceCatalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
-  "dissectionProfilesSha256": "5234ceb0e33ef2eb3548cc603623c114facb83c8ee91b80c2c926fc4e3acb868"
+  "dissectionProfilesSha256": "548809597e83d01b279b6f176a4f1b76da3ed2268796ea467e93a7ab64950187"
 }

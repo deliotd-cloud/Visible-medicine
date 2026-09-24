@@ -3,6 +3,7 @@ import { sourceCanonical } from '../lib/body-source-additions.ts';
 import { thoraxRespiratoryBindings, thoraxRespiratoryStudies } from '../content/thorax-respiratory-study.ts';
 import { thoraxCentralAirwayBindings, thoraxCentralAirwayStudy } from '../content/thorax-central-airway-study.ts';
 import { mediastinalOrganBindings, mediastinalOrganStudy } from '../content/mediastinal-organ-study.ts';
+import { infrahyoidMuscleBindings, infrahyoidContextBindings, infrahyoidLayerStudies } from '../content/infrahyoid-layer-study.ts';
 import { pelvicUrethralFocus } from '../content/pelvic-urethral-study.ts';
 import { neuroStudySets, neuroStudyIds } from '../lib/neuroanatomy.ts';
 import { axialStudySets } from '../lib/axial-anatomy.ts';
@@ -87,7 +88,7 @@ export type DissectionFocus = {
     nodeName: string;
     sources: readonly { file: string; sha256: string }[];
   }[];
-  /** Only the central-airway focus accepts an absent opposite-side source in a side-filtered scope. */
+  /** An exact bilateral focus may omit opposite-side bindings in a side-filtered scope. */
   sideFilteredSourceBindings?: boolean;
 };
 export type DissectionProfile = {
@@ -1448,6 +1449,23 @@ for (const region of lowerNeckStudy.regions) {
     description: lowerNeckStudy.description, inspect: lowerNeckStudy.inspect,
     landmarks: lowerNeckStudy.landmarks,
   });
+}
+
+for (const region of ['head-neck', 'whole-body'] as const) {
+  for (const study of infrahyoidLayerStudies) {
+    dissectionProfiles[region].focuses.push({
+      id: study.id, title: study.title,
+      rule: { fmaIds: [...study.targetFmaIds] },
+      context: [{ fmaIds: [...study.contextFmaIds] }],
+      includeSkeleton: false, view: 'anterior',
+      description: study.description, inspect: study.inspect,
+      requiredSourceBindings: [
+        ...infrahyoidMuscleBindings.filter((binding) => study.targetFmaIds.some((fmaId) => fmaId === binding.fmaId)),
+        ...infrahyoidContextBindings,
+      ],
+      sideFilteredSourceBindings: true,
+    });
+  }
 }
 
 export function matchesRule(s: BodyStructure, rule: TissueRule): boolean {

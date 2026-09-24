@@ -1,6 +1,7 @@
 // Offline recipe replay only. Runtime keeps the authored focus.
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
+import { preInfrahyoidLayerProfiles } from './infrahyoid-layer-study-history.mjs';
 
 const hash = (value) =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -16,6 +17,8 @@ const preThoraxCheckpointHash =
   'dc6ea9198a24ac28e02df8729d9d06543eada6786a6ebd2d6b139f626043a4be';
 
 export function preMediastinalOrganProfiles(profiles) {
+  if (profiles['head-neck'].focuses.some((focus) => focus.id === 'infrahyoid-superficial-pair'))
+    profiles = preInfrahyoidLayerProfiles(profiles);
   const currentHash = hash(profiles);
   if ([beforeHash, preThoraxCheckpointHash].includes(currentHash))
     return structuredClone(profiles);

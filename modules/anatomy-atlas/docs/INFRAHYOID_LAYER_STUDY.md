@@ -1,0 +1,9 @@
+# Infrahyoid layer comparison — draft
+
+Head & neck and Whole body Dissect each have two collapsed, searchable focuses: **Infrahyoid · superficial layer** (bilateral sternohyoid and omohyoid) and **Infrahyoid · deep layer** (bilateral sternothyroid and thyrohyoid). The hyoid bone and thyroid cartilage stay as orientation landmarks. The [infrahyoid anatomy review](https://www.ncbi.nlm.nih.gov/books/NBK541063/) describes these conventional superficial/deep groups; this app uses that classification as teaching text, not as proof that the supplied meshes define a fascial plane.
+
+The ten selections are existing BodyParts3D v4 exterior surfaces pinned in `content/infrahyoid-layer-study.ts` to their exact FMA, FJ, bundle, laterality and source hashes. Source licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); retain BodyParts3D attribution. No model, scan, texture, dependency, spatial registration or new viewer control is added. An exact binding mismatch hides the whole focus. Side filters retain only that side's muscles plus the midline landmarks. Remove and Undo use the existing dissection mechanism.
+
+The layer labels do not validate muscle boundaries or attachments, innervation, fascia, thyroid tissue, swallowing motion, airway clearance, procedural planes or patient-image correspondence. The existing generic hyoid-associated focus remains available; these two views provide a narrower layer comparison. The owner radiologist must review this source revision and any associated clinical text before approval.
+
+Checks: `npm run infrahyoid-layer-study:test`, `npm run mediastinal-organ-study:test`, `npm run dissection-history:test`, `node scripts/validate-dissection.mjs`, `npm run source-holds:test`, `npm run source-geometry:test`, renderer/visibility tests, TypeScript, build and bounded browser interaction. These are software checks, not clinical validation.

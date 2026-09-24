@@ -126,7 +126,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "2665d2a2464437d0a857411816f14eda285734e2a1103731d9fbbd18a96075be"
+      "sha256": "784a9d2c61e4349323af2130f42bcc705a5ee0694b3b6bddbabaa1b4b3629822"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -839,6 +839,10 @@
     {
       "path": "content/inferior-thyroid-context-pins.json",
       "sha256": "1928f2ecce49146511325abe3fe6331291dcbbbb0ca6308f99e95be2353f07f8"
+    },
+    {
+      "path": "content/infrahyoid-layer-study.ts",
+      "sha256": "fc769248ed0ebe18572288b09793ebc37810d959ab333cde18a58e1f38d10e02"
     },
     {
       "path": "content/lacrimal-drainage-imaging-pins.json",
@@ -2618,7 +2622,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "5fa133f6e6c3c7531d34e8c1c1a7e70392b69ad01452f99e119e661e4fad00c7"
+      "sha256": "b41a7db8051f94123fe6f9e5256321a0467334cf58907a43d8c5216f81201a84"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2829,5 +2833,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "0037ce83c55c0a2322813b594126eb4c0f0d0d53e2a40196968bb0df6788ea00"
+  "sha256": "84a53d544c42baff4bc89dd6babafaf6de6fcd1fe02178fb59b7e43c68c0a03f"
 }

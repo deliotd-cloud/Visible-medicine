@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import { build } from './workspace-test-build.mjs';
 import { preMediastinalOrganProfiles } from './mediastinal-organ-study-history.mjs';
+import { preInfrahyoidLayerProfiles } from './infrahyoid-layer-study-history.mjs';
 import { historicalRecipeProfiles } from './recipe-history.mjs';
 
 const compiled = await build({
@@ -137,7 +138,7 @@ assert.equal(
   hash(historicalRecipeProfiles(dissectionProfiles)),
   'd127268c45678a49ff8eeae4c5622172d4549497aca33d5b3b19507557d83e9c',
 );
-const altered = structuredClone(dissectionProfiles);
+const altered = preInfrahyoidLayerProfiles(dissectionProfiles);
 altered.thorax.focuses.find((candidate) => candidate.id === id).title += ' changed';
 assert.throws(() => preMediastinalOrganProfiles(altered), /Unrecorded mediastinal recipe edit/);
 for (const term of [
