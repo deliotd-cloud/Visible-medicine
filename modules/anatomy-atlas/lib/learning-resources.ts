@@ -120,6 +120,7 @@ function anatomy(value: unknown): value is AnatomyRepresentation {
       'brainstem',
       'cerebral',
       'cardiac',
+      'coronary-venous',
       'pulmonary',
       'hepatic',
       'renal',

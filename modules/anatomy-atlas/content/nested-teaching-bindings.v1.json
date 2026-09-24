@@ -2466,6 +2466,136 @@
   ],
   "bindings": [
     {
+      "conceptId": "coronary-sinus",
+      "study": "coronary-venous",
+      "sourceHash": "4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12",
+      "parentId": "vm:anatomy:body:thorax:unpaired:organ:heart",
+      "parentHash": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+      "structure": {
+        "id": "vm:anatomy:body:thorax:unpaired:vessel:coronary-sinus",
+        "fmaId": "FMA4706",
+        "name": "Coronary sinus",
+        "sourceName": "coronary sinus",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unpaired",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "coronary-venous",
+        "nodeName": "FMA4706",
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2655",
+            "sha256": "6cc76de968f59ae4244f5990fc00023a1ad137e500eea7e3ab02740a9505e030"
+          }
+        ],
+        "parentId": "vm:anatomy:body:thorax:unpaired:organ:heart",
+        "bounds": {
+          "min": [
+            -0.05522400140762329,
+            3.9749999046325684,
+            0.31108298897743225
+          ],
+          "max": [
+            0.4326930046081543,
+            4.166800022125244,
+            0.6556500196456909
+          ]
+        },
+        "center": [
+          0.1887345016002655,
+          4.070899963378906,
+          0.4833665043115616
+        ],
+        "anchor": [
+          0.15570899844169617,
+          4.021100044250488,
+          0.47132501006126404
+        ],
+        "coverageNote": "One original coronary sinus source surface. No opening, connected lumen, flow or patient correspondence is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "small-cardiac-vein",
+      "study": "coronary-venous",
+      "sourceHash": "4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12",
+      "parentId": "vm:anatomy:body:thorax:unpaired:organ:heart",
+      "parentHash": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+      "structure": {
+        "id": "vm:anatomy:body:thorax:unpaired:vessel:small-cardiac-vein",
+        "fmaId": "FMA4714",
+        "name": "Small cardiac vein · source group",
+        "sourceName": "small cardiac vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unpaired",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "coronary-venous",
+        "nodeName": "FMA4714",
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2724",
+            "sha256": "419e6a37e1fd0b0e7468654b6b58e561229a94f9641f5b04506271659017b2d4"
+          },
+          {
+            "file": "FJ2731",
+            "sha256": "ac26ffa55a72b44913d761c6b922f6c000f9a229f29740ab765e5ef5fe43f9c5"
+          }
+        ],
+        "parentId": "vm:anatomy:body:thorax:unpaired:organ:heart",
+        "bounds": {
+          "min": [
+            -0.20840099453926086,
+            3.865999937057495,
+            0.6435700058937073
+          ],
+          "max": [
+            0.05994899943470955,
+            4.411300182342529,
+            1.1043100357055664
+          ]
+        },
+        "center": [
+          -0.07422599755227566,
+          4.138650059700012,
+          0.8739400207996368
+        ],
+        "anchor": [
+          -0.1895579993724823,
+          4.0971999168396,
+          1.0046700239181519
+        ],
+        "coverageNote": "Two original source files retained as one small cardiac vein selection, not two independently named branches. No complete tree, junction, lumen, flow or patient correspondence is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
       "conceptId": "cardiac-right-atrium",
       "study": "cardiac",
       "sourceHash": "64d93898db3b6cb4dbea452508799c98cbe65b361eba2f17658ecae532a01f67",

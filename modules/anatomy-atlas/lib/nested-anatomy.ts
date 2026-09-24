@@ -10,6 +10,7 @@ import { ventricleCatalog, ventriclesFor } from './ventricles.ts';
 import { brainstemCatalog, brainstemFor } from './brainstem.ts';
 import { cerebralCatalog, cerebralFor } from './cerebral.ts';
 import { cardiacCatalog, cardiacFor } from './cardiac.ts';
+import { coronaryVenousCatalog, coronaryVenousFor } from './coronary-venous.ts';
 import { pulmonaryCatalog, pulmonaryFor } from './pulmonary.ts';
 import { hepaticCatalog, hepaticFor } from './hepatic.ts';
 import { renalCatalog, renalFor } from './renal.ts';
@@ -28,6 +29,7 @@ export type NestedStudy =
   | 'brainstem'
   | 'cerebral'
   | 'cardiac'
+  | 'coronary-venous'
   | 'pulmonary'
   | 'hepatic'
   | 'renal'
@@ -93,6 +95,12 @@ const studies = [
     title: 'Lung branch groups',
     catalog: pulmonaryCatalog,
     layers: pulmonaryFor,
+  },
+  {
+    study: 'coronary-venous',
+    title: 'Coronary venous source parts',
+    catalog: coronaryVenousCatalog,
+    layers: coronaryVenousFor,
   },
   {
     study: 'cardiac',

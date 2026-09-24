@@ -98,7 +98,7 @@ const raw = JSON.parse(
 const catalog = api.bodyDisplayCatalog(raw),
   before = JSON.stringify(catalog);
 const targets = nestedStudyTargets(catalog);
-same(targets.length, 104);
+same(targets.length, 106);
 same(
   Object.fromEntries(
     [
@@ -107,6 +107,7 @@ same(
       'brainstem',
       'cerebral',
       'cardiac',
+      'coronary-venous',
       'pulmonary',
       'hepatic',
       'renal',
@@ -123,6 +124,7 @@ same(
     brainstem: 6,
     cerebral: 14,
     cardiac: 4,
+    'coronary-venous': 2,
     pulmonary: 5,
     hepatic: 7,
     renal: 7,
@@ -133,7 +135,7 @@ same(
     'cranial-artery-components': 29,
   },
 );
-same(new Set(targets.map((t) => t.structureId)).size, 104);
+same(new Set(targets.map((t) => t.structureId)).size, 106);
 const parse = (href) => {
   const url = new URL(href, 'https://atlas.invalid');
   return { url, parsed: parseStudyLink(Object.fromEntries(url.searchParams)) };
@@ -144,7 +146,7 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
   for (const side of ['both', 'left', 'right']) {
     const index = atlasSearchIndex(catalog, region, side);
     const nested = index.filter((e) => e.key.startsWith('nested:'));
-    same(nested.length, 104);
+    same(nested.length, 106);
     for (const target of targets) {
       const entry = nested.find(
         (e) => e.key === `nested:${target.study}:${target.structureId}`,
@@ -292,7 +294,7 @@ for (const target of targets) {
     initialSelectedId: target.structureId,
     study: target.study,
   };
-  require('react-dom/server').renderToStaticMarkup(
+  const selectedMarkup = require('react-dom/server').renderToStaticMarkup(
     React.createElement(
       ['femoral-components', 'cranial-artery-components'].includes(target.study) ? api.FemoralComponentView : target.study === 'eye' ? api.EyeLayerView : api.VentricularView,
       props,
@@ -305,6 +307,13 @@ for (const target of targets) {
     'Search-selected child is not buried behind an opaque shell',
   );
   same(uiEnv.__scene.explode, 0);
+  if (target.study === 'coronary-venous') {
+    check(selectedMarkup.includes('Venous source surface'), 'Coronary selection must use venous surface classification');
+    check(!selectedMarkup.includes('Space representation'), 'Coronary selection must not use chamber-space classification');
+    check(!uiEnv.__scene.structures.some((s) => s.id === target.parentId), 'Heart aggregate must be absent from nested scene');
+    same(uiEnv.__scene.structures.length, 2);
+    same([...uiEnv.__scene.contextIds], []);
+  }
   check(!uiEnv.__scene.hiddenIds.includes(target.structureId));
   check(uiEnv.__scene.landmarks.includes(target.structureId));
   for (const invalid of ['missing', target.parentId]) {
@@ -601,6 +610,7 @@ for (const target of targets) {
     applySelection: (id) => events.push(['parent', id]),
     setNestedSelection: (value) =>
       events.push(['nested', value?.structureId ?? null]),
+    setManualHeartStudy: () => {},
     setEyeParent: (value) => events.push(['eye', value?.id ?? null]),
     setVentricleParent: (value) => events.push(['brain', value?.id ?? null]),
     requestAnimationFrame: (fn) => fn(),

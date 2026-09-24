@@ -73,6 +73,7 @@ export function parseStudyLink(params: StudySearchParams): ParsedStudyLink {
           detail !== 'brainstem' &&
           detail !== 'cerebral' &&
           detail !== 'cardiac' &&
+          detail !== 'coronary-venous' &&
           detail !== 'pulmonary' &&
           detail !== 'hepatic' &&
           detail !== 'renal' &&

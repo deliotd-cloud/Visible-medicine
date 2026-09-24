@@ -101,12 +101,12 @@ const catalog = api.bodyDisplayCatalog(
   ),
 );
 // Separate artery workbench callbacks are covered by validate-femoral-components
-// and validate-cranial-artery-components; preserve this original 14-case corpus.
+// and validate-cranial-artery-components; the guarded coronary-venous view extends this corpus.
 const targets = api.nestedStudyTargets(catalog).filter(t => !['femoral-components', 'cranial-artery-components'].includes(t.study));
 const cases = [
   ...new Map(targets.map((t) => [`${t.study}/${t.parentId}`, t])).values(),
 ];
-same(cases.length, 14);
+same(cases.length, 15);
 const nodes = (n) =>
   !n || typeof n !== 'object'
     ? []
@@ -219,6 +219,13 @@ for (const target of cases) {
   render();
   check(button('Undo layers').disabled);
   check(button('Redo layers').disabled);
+  if (target.study === 'coronary-venous') {
+    same(scene().view, 'posterior');
+    same(scene().structures.length, 2);
+    same(scene().contextIds, []);
+    check(!scene().structures.some((s) => s.id === parent.id));
+    check(text(tree).includes('two original files as one group'));
+  }
   if (target.study === 'cricothyroid') {
     same(scene().view, 'anterior');
     same(scene().contextIds.length, 2);

@@ -127,6 +127,13 @@ import {
   cardiacPresets,
   cardiacReference,
 } from '@/lib/cardiac';
+import {
+  coronaryVenousCatalog,
+  coronaryVenousFor,
+  coronaryVenousPresets,
+  coronaryVenousNotes,
+  coronaryVenousReferences,
+} from '@/lib/coronary-venous';
 import { ventricularRelationshipsFor } from '@/lib/ventricular-relationships';
 import {
   hepaticBiliaryRelationshipsFor,
@@ -188,6 +195,7 @@ export type BrainStudy =
 export type ComponentStudy =
   | BrainStudy
   | 'cardiac'
+  | 'coronary-venous'
   | 'pulmonary'
   | 'hepatic'
   | 'pancreatic'
@@ -210,6 +218,7 @@ export function VentricularView({
   const isBrainstem = study === 'brainstem';
   const isCerebral = study === 'cerebral';
   const isCardiac = study === 'cardiac';
+  const isCoronaryVenous = study === 'coronary-venous';
   const isPulmonary = study === 'pulmonary';
   const [requestedPulmonaryRole, setPulmonaryRole] =
     useState<PulmonaryRole>('all');
@@ -226,6 +235,8 @@ export function VentricularView({
   const lungCatalog = useMemo(() => pulmonaryViewCatalog(parent), [parent]);
   const baseCatalog = isCricothyroid
     ? cricothyroidCatalog
+    : isCoronaryVenous
+      ? coronaryVenousCatalog
     : isPancreatic
       ? pancreaticCatalog
       : isVisual
@@ -243,6 +254,8 @@ export function VentricularView({
     () =>
       isCricothyroid
         ? cricothyroidFor(parent)
+        : isCoronaryVenous
+          ? coronaryVenousFor(parent)
         : isPancreatic
           ? pancreaticFor(parent)
           : isVisual
@@ -263,6 +276,7 @@ export function VentricularView({
     [
       parent,
       isCricothyroid,
+      isCoronaryVenous,
       isPancreatic,
       isBrainstem,
       isCerebral,
@@ -297,6 +311,8 @@ export function VentricularView({
     () =>
       isCricothyroid
         ? cricothyroidPresets(layers)
+        : isCoronaryVenous
+          ? coronaryVenousPresets(layers)
         : isPancreatic
           ? pancreaticPresets(layers)
           : isVisual
@@ -353,6 +369,7 @@ export function VentricularView({
                           },
     [
       isCricothyroid,
+      isCoronaryVenous,
       isPancreatic,
       isBrainstem,
       isCerebral,
@@ -373,6 +390,8 @@ export function VentricularView({
         right: 'Right muscle parts',
         left: 'Left muscle parts',
       }
+    : isCoronaryVenous
+      ? { all: 'Both source parts', sinus: 'Coronary sinus', small: 'Small cardiac vein' }
     : isPancreatic
       ? {
           all: 'Both duct sources',
@@ -453,6 +472,8 @@ export function VentricularView({
                       };
   const title = isCricothyroid
     ? 'Cricothyroid'
+    : isCoronaryVenous
+      ? 'Coronary venous'
     : isPancreatic
       ? 'Pancreatic'
       : isVisual
@@ -472,6 +493,8 @@ export function VentricularView({
                     : 'Ventricular';
   const notes = isCricothyroid
     ? cricothyroidNotes
+    : isCoronaryVenous
+      ? coronaryVenousNotes
     : isPancreatic
       ? pancreaticNotes
       : isVisual
@@ -506,7 +529,7 @@ export function VentricularView({
     [layout, setLayout] = useState<BodyLayout>('extract');
   const [showOrigins, setShowOrigins] = useState(false);
   const [view, setView] = useState<DissectionView>(
-      isVisual ? 'inferior' : 'anterior',
+      isVisual ? 'inferior' : isCoronaryVenous ? 'posterior' : 'anterior',
     ),
     [reset, setReset] = useState(0);
   const [focus, setFocus] = useState(false),
@@ -537,6 +560,8 @@ export function VentricularView({
     () =>
       isCricothyroid
         ? cricothyroidViewCatalog(parent, context && explode === 0)
+        : isCoronaryVenous
+          ? coronaryVenousCatalog
         : isPancreatic
           ? pancreaticViewCatalog(parent, context && explode === 0)
           : isVisual
@@ -571,6 +596,7 @@ export function VentricularView({
                     : baseCatalog,
     [
       isCricothyroid,
+      isCoronaryVenous,
       isPancreatic,
       isCardiac,
       isPulmonary,
@@ -767,6 +793,8 @@ export function VentricularView({
         The{' '}
         {isCricothyroid
           ? 'thyroid cartilage'
+          : isCoronaryVenous
+            ? 'heart'
           : isPancreatic
             ? 'pancreas'
             : isRenal
@@ -1147,6 +1175,8 @@ export function VentricularView({
                     ? s.name.replace(/^Cavity of (.)/, (_, first: string) =>
                         first.toUpperCase(),
                       ) + ' space'
+                    : isCoronaryVenous
+                      ? s.name
                     : s.name.replace(' ventricle', '')}
                 </Button>
                 <Switch
@@ -1204,7 +1234,7 @@ export function VentricularView({
           >
             Reassemble
           </Button>
-          {(!isPulmonary || airwayContext.length > 0) && (
+          {!isCoronaryVenous && (!isPulmonary || airwayContext.length > 0) && (
             <Button
               size="sm"
               variant={context ? 'default' : 'outline'}
@@ -1246,7 +1276,12 @@ export function VentricularView({
             </Button>
           )}
         </div>
-        {isCricothyroid ? (
+        {isCoronaryVenous ? (
+          <section className="ventricular-relationship" aria-label="Coronary venous source guide">
+            <p>Two source-labelled venous selections. The small cardiac vein keeps two original files as one group. The heart aggregate is hidden in this study, including after Undo and reassembly.</p>
+            <p>Surface proximity does not establish a joined lumen, opening, drainage junction or flow.</p>
+          </section>
+        ) : isCricothyroid ? (
           <section
             className="ventricular-relationship"
             aria-label="Cricothyroid source guide"
@@ -1537,8 +1572,10 @@ export function VentricularView({
             <h3>{selected.name}</h3>
             <span className="eye-layer-source-id">
               {selected.fmaId} ·{' '}
-              {isCricothyroid
-                ? 'Muscle-part source'
+              {isCoronaryVenous
+                ? 'Venous source surface'
+                : isCricothyroid
+                  ? 'Muscle-part source'
                 : isPancreatic
                   ? 'Duct source'
                   : isVisual
@@ -1596,7 +1633,12 @@ export function VentricularView({
         )}
         <details className="eye-layer-limits">
           <summary>Learning and limitations</summary>
-          {isCricothyroid ? (
+          {isCoronaryVenous ? (
+            <>
+              <p>Coronary sinus FMA4706 is one original source surface. Small cardiac vein FMA4714 is one selection containing two original files. The two small-vein files are not named branches.</p>
+              <p>Only source-labelled surface anatomy is shown. No opening, joined lumen, flow, procedure route, scan registration or clinical finding is validated.</p>
+            </>
+          ) : isCricothyroid ? (
             <>
               <p>
                 Straight and oblique source parts are shown on each side. This
@@ -1763,7 +1805,9 @@ export function VentricularView({
           <p>
             No CT/MRI correspondence, diagnostic measurement or clinical
             approval is provided.{' '}
-            {isCricothyroid ? (
+            {isCoronaryVenous ? (
+              'The main heart aggregate is excluded from this study at every visibility state.'
+            ) : isCricothyroid ? (
               'Cartilage landmarks are optional orientation surfaces. Separation is a teaching layout, not muscle action.'
             ) : isRenal ? (
               'The kidney surface is optional orientation context; it does not define the vascular lumen or tissue territories.'
@@ -1783,7 +1827,9 @@ export function VentricularView({
               </>
             )}
           </p>
-          {(isCricothyroid
+          {(isCoronaryVenous
+            ? coronaryVenousReferences
+            : isCricothyroid
             ? cricothyroidReferences
             : isPancreatic
               ? pancreaticReferences
@@ -1805,7 +1851,9 @@ export function VentricularView({
           ).map((href, i) => (
             <p key={href}>
               <a href={href} target="_blank" rel="noreferrer">
-                {isCricothyroid
+                {isCoronaryVenous
+                  ? 'Cardiac venous anatomy'
+                  : isCricothyroid
                   ? 'Laryngeal anatomy'
                   : isPancreatic
                     ? 'NCI pancreatic anatomy'
@@ -1855,13 +1903,16 @@ function LegacyVentricles({
   assetBase?: string;
 }) {
   const isCardiac = cardiacFor(parent).length > 0;
+  const isCoronaryVenous = coronaryVenousFor(parent).length === 2;
   const isPulmonary = pulmonaryFor(parent).length > 0;
   const isHepatic = hepaticFor(parent).length > 0;
   const isRenal = renalFor(parent).length > 0;
   const isPancreatic = pancreaticFor(parent).length > 0;
   const isCricothyroid = cricothyroidFor(parent).length > 0;
   const startingStudy =
-    isCricothyroid || initialStudy === 'cricothyroid'
+    isCoronaryVenous && initialStudy === 'coronary-venous'
+      ? 'coronary-venous'
+      : isCricothyroid || initialStudy === 'cricothyroid'
       ? 'cricothyroid'
       : isPancreatic || initialStudy === 'pancreatic'
         ? 'pancreatic'
@@ -1874,6 +1925,7 @@ function LegacyVentricles({
               : isCardiac
                 ? 'cardiac'
                 : initialStudy === 'cardiac' ||
+                    initialStudy === 'coronary-venous' ||
                     initialStudy === 'pulmonary' ||
                     initialStudy === 'hepatic' ||
                     initialStudy === 'renal'
@@ -1901,14 +1953,29 @@ function LegacyVentricles({
                       ? 'Liver · internal branch dissection'
                       : isPulmonary
                         ? `${parent.name} · branch dissection`
-                        : isCardiac
-                          ? 'Heart · chamber spaces'
+                      : isCardiac
+                          ? study === 'coronary-venous'
+                            ? 'Heart · coronary venous parts'
+                            : 'Heart · chamber spaces'
                           : 'Brain · source dissection'}
             </DialogTitle>
             <DialogDescription>
               Source-based anatomy studies. Clinical validation pending.
             </DialogDescription>
           </div>
+          {isCardiac && isCoronaryVenous && (
+            <Select value={study} onValueChange={(value) => {
+              if (value === 'cardiac' || value === 'coronary-venous') setStudy(value);
+            }}>
+              <SelectTrigger aria-label="Heart dissection study">
+                <SelectValue>{study === 'coronary-venous' ? 'Coronary venous parts' : 'Chamber spaces'}</SelectValue>
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="cardiac">Chamber spaces</SelectItem>
+                <SelectItem value="coronary-venous">Coronary venous parts</SelectItem>
+              </SelectContent>
+            </Select>
+          )}
           {!isCardiac &&
             !isPulmonary &&
             !isHepatic &&

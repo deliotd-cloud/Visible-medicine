@@ -174,6 +174,7 @@ import {
 import { eyeLayersFor } from '@/lib/eye-layers';
 import { ventriclesFor } from '@/lib/ventricles';
 import { cardiacFor } from '@/lib/cardiac';
+import { coronaryVenousFor } from '@/lib/coronary-venous';
 import { pulmonaryFor } from '@/lib/pulmonary';
 import { hepaticFor } from '@/lib/hepatic';
 import { renalFor } from '@/lib/renal';
@@ -343,10 +344,13 @@ export default function BodyExplorer({
   const [ventricleParent, setVentricleParent] = useState<BodyStructure | null>(
     null,
   );
+  const [manualHeartStudy, setManualHeartStudy] = useState<'coronary-venous' | null>(null);
   const ventricleLauncher = useRef<HTMLButtonElement | null>(null);
+  const coronaryVenousLauncher = useRef<HTMLButtonElement | null>(null);
   const closeVentricles = useCallback(() => {
     setVentricleParent(null);
     setNestedSelection(null);
+    setManualHeartStudy(null);
     const returnTo = nestedReturnFocus.current;
     nestedReturnFocus.current = null;
     requestAnimationFrame(() =>
@@ -2443,6 +2447,24 @@ export default function BodyExplorer({
                           </Button>
                         </div>
                       )}
+                    {!exam && coronaryVenousFor(selected).length === 2 && (
+                      <div className="body-selection-actions">
+                        <Button
+                          ref={coronaryVenousLauncher}
+                          size="sm"
+                          variant="outline"
+                          onClick={() => {
+                            cameraRestore.current = copyRecoveryCamera(cameraCapture.current);
+                            setNestedSelection(null);
+                            setManualHeartStudy('coronary-venous');
+                            nestedReturnFocus.current = coronaryVenousLauncher.current;
+                            setVentricleParent(selected);
+                          }}
+                        >
+                          <Layers3 /> Explore coronary venous parts
+                        </Button>
+                      </div>
+                    )}
                     </WorkspaceOnly>
                     <div className="body-selection-actions">
                       <Button
@@ -2754,7 +2776,7 @@ export default function BodyExplorer({
           initialStudy={
             nestedSelection?.study === 'eye'
               ? undefined
-              : nestedSelection?.study
+              : nestedSelection?.study ?? manualHeartStudy ?? undefined
           }
           initialSelectedId={nestedSelection?.structureId}
           initialTeachingTopic={nestedSelection?.teachingTopic}

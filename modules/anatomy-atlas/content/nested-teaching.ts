@@ -24,6 +24,7 @@ import {
   cardiacTeaching,
   cardiacTeachingReferences,
 } from './cardiac-teaching.ts';
+import { coronaryVenousConcepts, coronaryVenousTeachingReferences } from './coronary-venous-teaching.ts';
 import {
   hepaticTeaching,
   hepaticTeachingReferences,
@@ -71,6 +72,7 @@ export const nestedTeachingReferences: Record<
   ...pancreaticTeachingReferences,
   ...cricothyroidTeachingReferences,
   ...cardiacTeachingReferences,
+  ...coronaryVenousTeachingReferences,
   ...hepaticTeachingReferences,
   ...pulmonaryTeachingReferences,
   ...cerebralTeachingReferences,
@@ -214,6 +216,7 @@ const quiz = (
 // Original, concise teaching drafts. These are conceptual lessons shared by
 // explicitly pinned source representations, not patient-specific findings.
 export const nestedConcepts: NestedConcept[] = [
+  ...coronaryVenousConcepts,
   ...femoralComponentConcepts,
   ...collicularBrachiaConcepts,
   ...cricothyroidConcepts,

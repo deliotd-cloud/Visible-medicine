@@ -15,6 +15,7 @@ export type NestedLearningStudy =
   | 'brainstem'
   | 'cerebral'
   | 'cardiac'
+  | 'coronary-venous'
   | 'pulmonary'
   | 'hepatic'
   | 'renal'

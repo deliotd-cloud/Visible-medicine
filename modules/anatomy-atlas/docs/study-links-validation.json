@@ -1,8 +1,8 @@
 {
   "passed": true,
-  "assertions": 323142,
-  "links": 14509,
-  "focusedLinks": 9172,
+  "assertions": 321933,
+  "links": 14416,
+  "focusedLinks": 9079,
   "destinationsTested": 7078,
   "rows": [
     {
@@ -135,19 +135,19 @@
       "region": "thorax",
       "side": "both",
       "structures": 158,
-      "testedLinks": 563
+      "testedLinks": 524
     },
     {
       "region": "thorax",
       "side": "left",
       "structures": 105,
-      "testedLinks": 384
+      "testedLinks": 357
     },
     {
       "region": "thorax",
       "side": "right",
       "structures": 104,
-      "testedLinks": 384
+      "testedLinks": 357
     },
     {
       "region": "abdomen",

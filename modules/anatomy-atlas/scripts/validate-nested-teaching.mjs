@@ -45,8 +45,8 @@ runInNewContext(compiled.outputFiles[0].text, {
 });
 const api = {
   ...scope.exports,
-  nestedConcepts: scope.exports.nestedConcepts.filter(c => c.study !== 'femoral-components'),
-  nestedTeachingReferences: Object.fromEntries(Object.entries(scope.exports.nestedTeachingReferences).filter(([key]) => key !== 'femoralComponentAnatomy')),
+  nestedConcepts: scope.exports.nestedConcepts.filter(c => c.study !== 'femoral-components' && c.study !== 'coronary-venous'),
+  nestedTeachingReferences: Object.fromEntries(Object.entries(scope.exports.nestedTeachingReferences).filter(([key]) => !['femoralComponentAnatomy', 'coronaryVenousAnatomy', 'coronaryVenousHeart'].includes(key))),
 };
 const historicalApi = nestedBeforeClinicalReferenceRevision(nestedBeforePulmonaryImaging(api));
 const copy = (value) => JSON.parse(JSON.stringify(value));
@@ -68,14 +68,16 @@ const catalog = api.bodyDisplayCatalog(
 // lessons and their UI/source guards are covered in validate-femoral-components.
 // Unnamed cranial source partitions have no independent teaching concepts;
 // their absence of inherited lessons is tested in validate-cranial-artery-components.
-const targets = api.nestedStudyTargets(catalog).filter(t => !['femoral-components', 'cranial-artery-components'].includes(t.study));
+const targets = api.nestedStudyTargets(catalog).filter(t => !['femoral-components', 'cranial-artery-components', 'coronary-venous'].includes(t.study));
 const initial = JSON.stringify(catalog);
 same(targets.length, 71);
 same(api.nestedConcepts.length, 42);
 same(new Set(api.nestedConcepts.map((c) => c.id)).size, 42);
 const priorConcepts = historicalApi.nestedConcepts.filter((c) => c.study !== 'cricothyroid' && c.id !== 'inferior-collicular-brachia');
 same(priorConcepts.length, 40);
-const allPins = JSON.parse(await readFile('content/nested-teaching-bindings.v1.json'));
+const savedPins = JSON.parse(await readFile('content/nested-teaching-bindings.v1.json'));
+same(savedPins.bindings.filter((b) => b.study === 'coronary-venous').length, 2);
+const allPins = { ...savedPins, bindings: savedPins.bindings.filter((b) => b.study !== 'coronary-venous') };
 same(allPins.bindings.length, 71);
 same(allPins.parents.length, 11);
 const legacyPins = {

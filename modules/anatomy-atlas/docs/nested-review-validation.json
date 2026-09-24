@@ -3,6 +3,10 @@
   "scope": "nested-dissection-review-software-only",
   "nesteds": [
     {
+      "key": "[\"vm:anatomy:body:thorax:unpaired:organ:heart\",\"coronary-venous\"]",
+      "selections": 2
+    },
+    {
       "key": "[\"vm:anatomy:body:thorax:unpaired:organ:heart\",\"cardiac\"]",
       "selections": 4
     },
@@ -79,10 +83,10 @@
       "selections": 3
     }
   ],
-  "contexts": 104,
-  "sourceBundlesVerified": 24,
+  "contexts": 106,
+  "sourceBundlesVerified": 25,
   "teachingApprovalPrerequisitesPresent": 69,
-  "pendingTopicStates": 438,
+  "pendingTopicStates": 442,
   "checks": [
     "exact source/frame separation",
     "unique parent/study/child material identities",

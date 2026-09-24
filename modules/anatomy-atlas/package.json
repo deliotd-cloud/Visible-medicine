@@ -16,6 +16,7 @@
     "distal-palmar-mri:test": "node scripts/pin-distal-palmar-mri.mjs --check && node scripts/record-distal-palmar-mri.mjs --check && node scripts/validate-distal-palmar-mri.mjs",
     "camera-keyboard:test": "node --experimental-strip-types --test scripts/test-camera-keyboard.mjs",
     "anterior-cardiac-vein:test": "node scripts/export-anterior-cardiac-vein.mjs --check && node scripts/record-anterior-cardiac-vein-baseline.mjs --check && node scripts/record-anterior-cardiac-vein.mjs --check && node scripts/validate-anterior-cardiac-vein.mjs",
+    "coronary-venous:test": "node scripts/validate-coronary-venous-source.mjs && node scripts/export-coronary-venous.mjs --check && node --import tsx scripts/validate-coronary-venous.mjs",
     "anterior-cardiac-teaching:test": "node scripts/pin-anterior-cardiac-teaching.mjs --check && node scripts/record-anterior-cardiac-teaching.mjs --check && node scripts/validate-anterior-cardiac-teaching.mjs",
     "portal-hepatic-study:test": "node scripts/pin-portal-hepatic-study.mjs --check && node scripts/record-portal-hepatic-study.mjs --check && node scripts/validate-portal-hepatic-study.mjs",
     "pelvic-closeup:test": "node scripts/validate-pelvic-closeup.mjs",

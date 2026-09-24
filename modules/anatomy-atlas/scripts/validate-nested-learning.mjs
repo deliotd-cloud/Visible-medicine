@@ -58,14 +58,14 @@ const reject = (fn, message) => {
   checks++;
   assert.throws(fn, message);
 };
-same(legacy.length, 1096); // Current 1,087 root selections plus nine shoulder entries.
-same(anatomy.length, 1200);
+same(legacy.length, 1113); // Current root and shoulder bindings; no coronary root addition.
+same(anatomy.length, 1219);
 same(
   anatomy.filter((t) => t.scope !== 'nested'),
   legacy,
   'Current body and shoulder bindings unchanged by the nested extension',
 );
-same(nested.length, 104);
+same(nested.length, 106);
 same(
   nested.map((t) => t.structureId).sort(),
   targets.map((t) => t.structureId).sort(),
@@ -293,7 +293,9 @@ for (const entry of nested) {
   }
 }
 
-const sample = nested[0];
+// Keep the historical cardiac mutation probe stable when the new heart study sorts first.
+const sample = nested.find((entry) => entry.nested.study === 'cardiac');
+check(sample, 'Existing cardiac source-bound sample remains available');
 for (const mutate of [
   (e) => delete e.nested,
   (e) => (e.scope = 'body'),
@@ -349,7 +351,7 @@ changedParent.bundles.find(
     b.id ===
     current.structures.find((s) => s.id === sample.nested.parentId).bundle,
 ).sha256 = 'c'.repeat(64);
-same(api.nestedLearningSelection(changedParent, sample), null);
+reject(() => api.nestedLearningSelection(changedParent, sample), 'Changed parent bundle fails closed at the display-source guard');
 
 // Eligibility is re-evaluated on all three lookup directions, including nested ones.
 const gatedLink = links.find((l) => l.resourceId.endsWith(':lecture'));
