@@ -1223,3 +1223,14 @@ images, contours, tables, PDFs or datasets. No commercial image rights are
 inferred from online access. Existing BodyParts3D CC BY 4.0 credits remain.
 No new asset, dependency, font or mandatory fee. See `docs/LARYNGEAL_IMAGING.md`;
 revision-bound clinical acceptance is still required.
+## Renal segmental source-review figures — 24 September 2026
+
+`docs/reviews/renal-segmental-*.png` are orthographic projections of original
+BodyParts3D v4 source meshes, with annotation and colour added for review.
+BodyParts3D, © The Database Center for Life Science licensed under CC Attribution
+4.0 International: https://creativecommons.org/licenses/by/4.0/.
+Official terms: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html.
+Source definitions and original-file SHA-256/CRC/byte pins are retained in
+`docs/renal-segmental-source-audit.json`; context and image pins are beside each
+figure. No font file, scan, texture or external illustration is distributed.
+These diagnostic figures do not grant clinical approval or admit the candidates.

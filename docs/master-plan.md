@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+24 September Search study handoff: shared viewer binds Atlas `facf4a4`, including
+the verified `93695c0` correction that leaves confirmed studies unobstructed.
+Explicit tools/details remain available; all 136 models / 143 protected paths
+and independent access gates are unchanged. See [integration boundaries](atlas-search-study-handoff-20260924.md)
+and the main task checkpoint for publication/recovery. Renal candidate sources
+remain unadmitted; continue regional coverage and the full roadmap.
+
 24 September main-bronchus X-ray integration: shared runtime binds Atlas
 `3936240`, adding sided orientation drafts through the existing Imaging panel.
 No new controls, geometry or entitlements; all 136 models / 143 protected paths

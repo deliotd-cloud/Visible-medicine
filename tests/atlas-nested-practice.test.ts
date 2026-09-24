@@ -8,9 +8,9 @@ test('regional practice export preserves every model and binds the tested named-
   const base = 'public/atlas-runtime/head-neck/';
   const sha = (b: string | Buffer) => createHash('sha256').update(b).digest('hex');
   const bytes = readFileSync(base + 'manifest.json');
-  assert.equal(sha(bytes), '8d85d93a9e8bd35b500018c306de8a96f851808bbd8bd8313974bd52be72c527');
+  assert.equal(sha(bytes), 'e21d3f8a844ac1260ee9b272ce1f0fc2124911b24e5846b327bcada42289540b');
   const manifest = JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit, '3936240789d920b4c8965efeeeb1a21b10e0695f');
+  assert.equal(manifest.sourceCommit, 'facf4a46d8a9380c890af16495a2c609ad74f5f3');
   assert.equal(manifest.patientDataIncluded, false);
   assert.equal(manifest.clinicalApproved, false);
   assert.equal(manifest.imagingConnection, false);
@@ -18,7 +18,7 @@ test('regional practice export preserves every model and binds the tested named-
   assert.equal(manifest.regionalScopes.length, 12);
   const inputs = JSON.parse(readFileSync(base + 'source-inputs.json', 'utf8')) as {path:string;sha256:string}[];
   for (const [path, hash] of Object.entries({
-    'app/atlas-workspace.tsx': 'a0655723c65162737065b13e10ce6bb0d9790eead79ae5f44433acdc812117fe',
+    'app/atlas-workspace.tsx': '3dd894bf9b2fcbe800c1cebd9c8cc1ef752857060c8c13387d0d43066aec0313',
     'app/dissection-controls.tsx': '520127bb748b4c8e2e1cd05f7e97937d73d86a8add37f8023315bbb214330e6d',
     'app/nested-practice.tsx': '84d0e01eb8aa81a7c045b243b4bd426ca898a27dbf0070cf8cb9e73e0eb590a7',
     'app/nested-practice.css': '8e0c687cecb73a74e65f6a574ad0858237d9f61680732eafb140c760779f1591',
