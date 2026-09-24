@@ -1,5 +1,33 @@
 # Spine imaging orientation
 
+## Historical verification repair — 24 September 2026
+
+The full spine check now distinguishes complete historical Git snapshots from
+scoped rollback adapters. The latter correctly retain unrelated later teaching
+and cannot stand in for an old whole-curriculum snapshot. Direct comparison with
+the original `59a567c7fb76c954cf3d91eeec62124e207bbbf9` source identified twelve
+retained later CT/MRI notes: bilateral lacrimal canaliculi, nasolacrimal ducts and
+lacrimal sacs. No dissection recipe difference was found. The recently added
+22 spinal-disc Function notes were not the cause of the old hash mismatch.
+
+The validator preserves all captured expected hashes. It reconstructs original
+pre-spine, post-spine and post-hip snapshots from their exact source commits;
+verifies historical catalogs and the original recorded 141 spinal replacements;
+and separately retains current export, unchanged-section, identity rejection,
+detached-data, source-row and live note-render checks. Original source commits:
+`59a567c7fb76c954cf3d91eeec62124e207bbbf9`,
+`fa1ce62ee804e439ca55e987b79a16ce64a41cac`,
+`56e9dc9e0e16f6cfbf3087a5af01aefde50e30d1`.
+Captured spine records are also checked directly against
+`3143a76c24b541473792adb430bf37de5c17d645`.
+
+The repaired check passes 25,422 assertions, 156 current note renders, 2,808
+altered-identity rejections, 9,042 unchanged scoped sections and 141 exact
+historical replacements. No runtime, geometry, teaching, entitlement or approval
+is edited by this repair. Clinical/device/imaging gates remain open. Statements
+below describe the original imaging milestone; subsequent ultrasound and other
+teaching additions remain in place.
+
 Open **Spine → select a vertebra or disc → Imaging → CT / MRI / X-ray**. The existing six level studies and all ordinary spinal selections share the same compact notes panel. No new permanent control, page height or scan viewer is added.
 
 ## Scope

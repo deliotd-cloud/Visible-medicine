@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
+import { exactSourceHistoryApi } from './exact-source-history-api.mjs';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import ts from 'typescript';
@@ -12,7 +14,6 @@ import {
 import { authoringBeforeSpineImaging } from './spine-imaging-history.mjs';
 import { authoringBeforeSpineUltrasound } from './spine-ultrasound-history.mjs';
 import { authoringBeforeHipImaging } from './hip-imaging-history.mjs';
-import { authoringBeforeWristImaging } from './wrist-imaging-history.mjs';
 
 const context = await contentContext(),
   { api, catalog, body, registry } = context;
@@ -60,7 +61,6 @@ const previous = authoringBeforeSpineImaging({
 });
 // Remove the separately verified later hip transition for this historical comparison.
 const afterSpine = authoringBeforeHipImaging(context);
-const afterHip = authoringBeforeWristImaging(context);
 const pins = await readContentJson('content/spine-imaging-pins.json');
 const before = await readContentJson('content/spine-imaging.before.json');
 let checks = 0,
@@ -76,6 +76,42 @@ const check = (a, note) => {
   checks++;
   assert(a, note);
 };
+// Scoped transition adapters retain unrelated later teaching; they are not
+// complete old snapshots. Verify original whole-copy evidence from its Git tree
+// while retaining the live transition/export/identity comparisons below.
+const historicalSpineCommit = '3143a76c24b541473792adb430bf37de5c17d645';
+const hipBefore = await readContentJson('content/hip-imaging.before.json');
+const wristBefore = await readContentJson('content/wrist-imaging.before.json');
+const transition = await readContentJson('content/spine-imaging.transition.json');
+const gitBytes = (commit, path) => execFileSync('git', ['show', commit + ':' + path], { maxBuffer: 16e6 });
+const sha = (bytes) => createHash('sha256').update(bytes).digest('hex');
+const catalogHash = '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7';
+same(before.sourceCommit, '59a567c7fb76c954cf3d91eeec62124e207bbbf9');
+same(hipBefore.sourceCommit, 'fa1ce62ee804e439ca55e987b79a16ce64a41cac');
+same(wristBefore.sourceCommit, '56e9dc9e0e16f6cfbf3087a5af01aefde50e30d1');
+for (const commit of [before.sourceCommit, hipBefore.sourceCommit, wristBefore.sourceCommit, historicalSpineCommit])
+  same(sha(gitBytes(commit, 'public/models/bodyparts3d/full-body/catalog.json')), catalogHash, 'Exact historical catalog');
+same(JSON.parse(gitBytes(historicalSpineCommit, 'content/spine-imaging.before.json')), before);
+same(JSON.parse(gitBytes(historicalSpineCommit, 'content/spine-imaging.transition.json')), transition);
+const originalBefore = await exactSourceHistoryApi(before.sourceCommit, 'curriculum');
+const originalAfterSpine = await exactSourceHistoryApi(hipBefore.sourceCommit, 'curriculum');
+const originalAfterHip = await exactSourceHistoryApi(wristBefore.sourceCommit, 'curriculum');
+const historicalSnapshot = (a) => ({
+  body: catalog.structures.map((s) => ({ id: s.id, sections: Object.fromEntries(a.contentTabs.map((t) => [t, a.bodyLesson(s, t)])) })),
+  shoulder: a.structures,
+  recipes: a.dissectionProfiles,
+});
+for (const original of [originalBefore, originalAfterSpine, originalAfterHip]) same(original.contentTabs, api.contentTabs);
+same(sha(JSON.stringify(historicalSnapshot(originalAfterSpine))), hipBefore.allLessonsAndRecipesHash, 'Original post-spine whole snapshot');
+same(sha(JSON.stringify(historicalSnapshot(originalAfterHip))), wristBefore.allLessonsAndRecipesHash, 'Original post-hip whole snapshot');
+let historicalSections = 0;
+for (const entry of before.entries) for (const tab of before.tabs) {
+  const recorded = transition.entries.find(e => e.id === entry.identity.id);
+  same(originalBefore.bodyLesson(entry.identity, tab), entry.sections[tab], 'Original pre-spine lesson');
+  same(sha(JSON.stringify(originalAfterSpine.bodyLesson(entry.identity, tab))), recorded.sections[tab], 'Original recorded spinal replacement');
+  historicalSections++;
+}
+same(historicalSections, 141);
 same(
   createHash('sha256')
     .update(
@@ -83,11 +119,11 @@ same(
         body: catalog.structures.map((s) => ({
           id: s.id,
           sections: Object.fromEntries(
-            api.contentTabs.map((t) => [t, previous.bodyLesson(s, t)]),
+            originalBefore.contentTabs.map((t) => [t, originalBefore.bodyLesson(s, t)]),
           ),
         })),
-        shoulder: api.structures,
-        recipes: previous.dissectionProfiles,
+        shoulder: originalBefore.structures,
+        recipes: originalBefore.dissectionProfiles,
       }),
     )
     .digest('hex'),
@@ -172,7 +208,7 @@ same(
     before.tabs.map((t) => [
       t,
       catalog.structures.filter(
-        (s) => previous.bodyLesson(s, t).readiness === 'draft',
+        (s) => originalBefore.bodyLesson(s, t).readiness === 'draft',
       ).length,
     ]),
   ),
@@ -182,7 +218,7 @@ same(
   Object.fromEntries(
     before.tabs.map((t) => [
       t,
-      catalog.structures.filter((s) => afterHip.bodyLesson(s, t).readiness === 'draft').length,
+      catalog.structures.filter((s) => originalAfterHip.bodyLesson(s, t).readiness === 'draft').length,
     ]),
   ),
   { ct: 90, mri: 92, xray: 53 },
@@ -396,6 +432,7 @@ console.log(
     rejectedBindings,
     sourceRowsVerified: pins.entries.length,
     actualNoteRenders: renders,
+    exactHistoricalSections: historicalSections,
     clinicalApproval: 'not-included',
   }),
 );

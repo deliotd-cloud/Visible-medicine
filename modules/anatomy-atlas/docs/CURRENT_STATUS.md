@@ -1,5 +1,14 @@
 # Current atlas status
 
+[Spine history verification](SPINE_IMAGING_TEACHING.md#historical-verification-repair--24-september-2026)
+now passes while retaining original evidence and current teaching checks. Twelve
+later lacrimal CT/MRI topics explained the old whole-snapshot mismatch; disc
+Function content was not responsible. The repaired suite verifies 156 current
+renders, 2,808 identity rejections and 141 original replacements across 25,422
+checks. This is verification-only: no runtime, source geometry or approval changes.
+Website `c9d149f` privately publishes Atlas `5efeed6`, including the 22 disc
+Function drafts, with verified GitHub/D recovery. Older entries below are historical.
+
 [Spinal-disc Function teaching](SPINAL_DISC_FUNCTION.md) adds source-bound drafts
 for 22 retained discs, with distinct cervical, thoracic and lumbar explanations.
 All other 9,914 topics and geometry/recipes are preserved. Focused tests verify

@@ -1,5 +1,11 @@
 # Spinal-disc Function teaching
 
+Update, 24 September: the old full spine-imaging history check described below
+has been repaired without changing captured expected hashes. It now uses exact
+Git snapshots for historical whole-curriculum claims while preserving current
+scoped checks. The twelve mismatching topics were later lacrimal CT/MRI notes,
+not these disc Function drafts. See [repair evidence](SPINE_IMAGING_TEACHING.md#historical-verification-repair--24-september-2026).
+
 Twenty-two retained whole-disc selections now receive source-bound Function
 drafts: six cervical, eleven thoracic and five lumbar. Three regional explanations
 replace the generic fallback through the existing information panel; no new
