@@ -23,6 +23,8 @@ let active = false,
   cursor = 0,
   slots = [],
   checks = 0;
+let captureWorkbenchCleanup = false,
+  workbenchCleanup;
 const hooks = {
   ...React,
   useState(value) {
@@ -43,10 +45,36 @@ const hooks = {
   },
   useEffect(fn, deps) {
     if (!active) return React.useEffect(fn, deps);
+    if (captureWorkbenchCleanup) workbenchCleanup = fn();
   },
 };
 const scope = { exports: {} };
 const pendingDigests = [];
+const readers = [];
+class ControlledFileReader {
+  result = null;
+  error = null;
+  aborts = 0;
+  constructor() {
+    readers.push(this);
+  }
+  readAsArrayBuffer(file) {
+    this.file = file;
+    if (file.startError) throw file.startError;
+  }
+  abort() {
+    this.aborts++;
+    this.onabort?.();
+  }
+  finish(bytes) {
+    this.result = bytes;
+    this.onload?.();
+  }
+  fail(error) {
+    this.error = error;
+    this.onerror?.();
+  }
+}
 runInNewContext(compiled.outputFiles[0].text, {
   module: scope,
   exports: scope.exports,
@@ -58,6 +86,7 @@ runInNewContext(compiled.outputFiles[0].text, {
   Int16Array,
   Uint8ClampedArray,
   DataView,
+  FileReader: ControlledFileReader,
   TextDecoder,
   crypto: { subtle: { digest(...args) {
     const pending = webcrypto.subtle.digest(...args);
@@ -333,10 +362,12 @@ same(slots[4], '');
 same(slots[1], [3, 2]);
 find((n) => n.props?.children === 'Close local MRI').props.onClick();
 same(closed, 1);
-// Exercise the actual import callbacks with deliberately delayed local reads.
+// Exercise the actual import callbacks with controlled FileReader events.
 function opener() {
   active = true; cursor = 0;
-  const result = api.Workbench(); active = false;
+  captureWorkbenchCleanup = true;
+  const result = api.Workbench();
+  captureWorkbenchCleanup = false; active = false;
   return result;
 }
 const openerControl = predicate => {
@@ -344,7 +375,9 @@ const openerControl = predicate => {
   assert(result, 'Expected real import control');
   return result;
 };
-const loadFile = file => openerControl(n => n.props?.type === 'file').props.onChange({ target: { files: [file], value: 'synthetic' } });
+slots = [];
+const importChange = openerControl(n => n.props?.type === 'file').props.onChange;
+const loadFile = file => importChange({ target: { files: [file], value: 'synthetic' } });
 const settle = async () => {
   // Cross-realm file promises and WebCrypto each enqueue their own continuations.
   for (let turn = 0; turn < 4; turn++) {
@@ -352,26 +385,51 @@ const settle = async () => {
     await Promise.all(pendingDigests);
   }
 };
-slots = [];
-let finishOldRead;
-loadFile({ size: packet.byteLength, arrayBuffer: () => new Promise(resolve => { finishOldRead = resolve; }) });
+loadFile({ size: packet.byteLength });
+const cancelledReader = readers.at(-1);
 check(slots[1]);
 openerControl(n => n.props?.children === 'Cancel').props.onClick();
+same(cancelledReader.aborts, 1);
 same([slots[0], slots[1], slots[2]], [null, false, '']);
-finishOldRead(packet); await settle();
+cancelledReader.finish(packet); await settle();
 same([slots[0], slots[1], slots[2]], [null, false, '']);
-let rejectOldRead;
-loadFile({ size: packet.byteLength, arrayBuffer: () => new Promise((_, reject) => { rejectOldRead = reject; }) });
-openerControl(n => n.props?.children === 'Cancel').props.onClick();
 const signedPacket = encode(signed, Int16Array.from({ length: 36 }, (_, i) => i - 18));
-loadFile({ size: signedPacket.byteLength, arrayBuffer: async () => signedPacket });
+loadFile({ size: packet.byteLength });
+const replacedReader = readers.at(-1);
+loadFile({ size: signedPacket.byteLength });
+const nextReader = readers.at(-1);
+same(replacedReader.aborts, 1);
+nextReader.finish(signedPacket);
 await settle(); same(slots[0].range, [-18, 17]);
-rejectOldRead(Error('Synthetic cancelled read')); await settle();
+replacedReader.fail(Error('Synthetic late read failure')); await settle();
+same(slots[0].range, [-18, 17]); same([slots[1], slots[2]], [false, '']);
+const closeLoaded = openerControl(n => n.type === api.LoadedNativeMr).props.close;
+// A retained input callback can race a close; close must abort that read too.
+loadFile({ size: packet.byteLength });
+const closedReader = readers.at(-1);
+closeLoaded();
+same(closedReader.aborts, 1);
+closedReader.finish(packet); await settle();
+same([slots[0], slots[1], slots[2]], [null, false, '']);
+loadFile({ size: packet.byteLength, startError: Error('Synthetic read start failure') });
+await settle();
+same(slots[4].current, null);
+check(slots[2].includes('Cannot verify this MRI'));
+loadFile({ size: signedPacket.byteLength });
+const afterStartError = readers.at(-1);
+afterStartError.finish(signedPacket); await settle();
 same(slots[0].range, [-18, 17]); same([slots[1], slots[2]], [false, '']);
 openerControl(n => n.type === api.LoadedNativeMr).props.close();
-let readOversize = false;
-loadFile({ size: api.LOCAL_MR_MAX_BYTES + 1, arrayBuffer() { readOversize = true; throw Error('Must reject before reading'); } });
-check(!readOversize); check(slots[2].includes('128 MiB')); same(slots[0], null);
+const priorReaders = readers.length;
+loadFile({ size: api.LOCAL_MR_MAX_BYTES + 1 });
+same(readers.length, priorReaders); check(slots[2].includes('128 MiB')); same(slots[0], null);
+loadFile({ size: packet.byteLength });
+const unmountedReader = readers.at(-1);
+workbenchCleanup();
+same(unmountedReader.aborts, 1);
+const unmountedState = [slots[0], slots[1], slots[2]];
+unmountedReader.fail(Error('Synthetic late unmounted failure')); await settle();
+same([slots[0], slots[1], slots[2]], unmountedState);
 let privateFrames = 0;
 const arg = (name) => {
   const i = process.argv.indexOf(name);

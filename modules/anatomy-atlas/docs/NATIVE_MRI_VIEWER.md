@@ -10,7 +10,7 @@ The native image occupies the main working area with a slice slider and Previous
 - Source-derived edge letters indicate directions toward the screen edges, including compound oblique labels. They do not classify sequence, body-part laterality or a standardised radiological orientation. No mirror/rotation is applied.
 - Physical in-plane pixel aspect is preserved when fitting the image. Display range and greyscale inversion do not modify source samples. No CT HU windows or calibrated quantitative-MRI interpretation are supplied.
 - Actual native origins determine coordinates; the UI distinguishes centre spacing, nominal slice thickness, acquisition gaps and nominal overlap. There is no interpolation across acquisitions and no MPR reconstruction or 3D tissue claim.
-- Closing clears the loaded React state; cancelling invalidates an in-flight result. File contents remain in memory for this browser session. The module has no upload, telemetry, browser-storage or server-persistence path. Garbage-collection timing and secure memory erasure are not guaranteed.
+- Closing clears the loaded React state; cancelling, closing or replacing an import aborts its active `FileReader` and invalidates late results. File contents remain in memory for this browser session. The module has no upload, telemetry, browser-storage or server-persistence path. Garbage-collection timing and secure memory erasure are not guaranteed.
 - Clinical and privacy approval remain false, and atlas registration is null. No segmentations, diagnostic conclusions, normality labels, approval buttons, paywall changes or lecture entitlements are introduced.
 
 ## Local preparation
@@ -75,6 +75,17 @@ cancellation, large-file memory behaviour and those other gates remain open.
 The page title now identifies MRI import checking rather than a 3D anatomy page.
 Publication and exact source/recovery state belong in the coordinating task's
 dated checkpoint; do not assume the hosted standalone utility is current.
+
+### Source follow-up, 24 September 2026
+
+The private import control now reads through `FileReader` so Cancel, Close,
+replacement and unmount call `abort()` on an active read. Generation checks
+continue to reject late success or failure events, including after a synchronous
+read-start error. Controlled callback validation passes 81 checks, including
+abort invocation, stale events and a later successful import; TypeScript passes.
+This is source and synthetic callback evidence. Actual browser cancellation,
+large-file memory behaviour, secure erasure and clinical/privacy acceptance
+remain unverified.
 
 ```text
 node scripts/validate-native-mr.mjs

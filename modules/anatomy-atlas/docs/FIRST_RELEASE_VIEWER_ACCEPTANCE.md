@@ -1,5 +1,24 @@
 # First-release viewer acceptance evidence
 
+## 24 September: phone-width layout sample (desktop Chrome override)
+
+The authenticated private custom-domain whole-body page was inspected in Chrome
+with a temporary 390 × 844 CSS-pixel viewport override, then restored to its
+original desktop viewport and Explore state. This is responsive-layout evidence,
+**not** a physical phone, real touch, 200% text zoom or clinical acceptance.
+At the narrow viewport, the outer page reported 390 px `innerWidth` and 390 px
+document `scrollWidth`; there was no measured horizontal page overflow. An
+inspected screenshot showed a compact region selector, Explore/Dissect/Practice,
+search, model canvas, zoom controls and separate Systems & tools/Structure info
+buttons. The model and document still require vertical scrolling.
+
+Opening Systems & tools focused its Close control. The screenshot and accessibility
+tree showed six compact system switches, collapsed display/depth/imaging/coverage
+sections and a Return to model control in a scrollable sheet. Closing it restored
+the viewer, and the temporary viewport override was reset. This samples one
+whole-body state only; it does not establish every regional sheet, keyboard path,
+screen-reader behavior, touch interaction or 200% reflow.
+
 ## 24 September: current private-site whole-body separation sample
 
 The Sites connector reported private version 106 from website source

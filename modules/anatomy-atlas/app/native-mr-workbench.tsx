@@ -323,20 +323,29 @@ export default function NativeMrWorkbench() {
     [busy, setBusy] = useState(false),
     [error, setError] = useState('');
   const generation = useRef(0);
+  const activeReader = useRef<FileReader | null>(null);
+  const abortRead = () => {
+    const reader = activeReader.current;
+    activeReader.current = null;
+    reader?.abort();
+  };
   useEffect(
     () => () => {
       generation.current++;
+      abortRead();
     },
     [],
   );
   const close = () => {
     generation.current++;
+    abortRead();
     setStudy(null);
     setBusy(false);
     setError('');
   };
   const load = async (file?: File) => {
     const current = ++generation.current;
+    abortRead();
     setStudy(null);
     setError('');
     setBusy(false);
@@ -347,7 +356,35 @@ export default function NativeMrWorkbench() {
     }
     setBusy(true);
     try {
-      const result = await readNativeMr(await file.arrayBuffer());
+      const bytes = await new Promise<ArrayBuffer>((resolve, reject) => {
+        const reader = new FileReader();
+        activeReader.current = reader;
+        reader.onload = () => {
+          if (activeReader.current === reader) activeReader.current = null;
+          if (current !== generation.current) {
+            reject(new Error('MRI read was cancelled'));
+          } else if (reader.result instanceof ArrayBuffer) {
+            resolve(reader.result);
+          } else {
+            reject(new Error('MRI read did not return binary data'));
+          }
+        };
+        reader.onerror = () => {
+          if (activeReader.current === reader) activeReader.current = null;
+          reject(reader.error ?? new Error('MRI read failed'));
+        };
+        reader.onabort = () => {
+          if (activeReader.current === reader) activeReader.current = null;
+          reject(new Error('MRI read was cancelled'));
+        };
+        try {
+          reader.readAsArrayBuffer(file);
+        } catch (error) {
+          if (activeReader.current === reader) activeReader.current = null;
+          reject(error);
+        }
+      });
+      const result = await readNativeMr(bytes);
       if (current === generation.current) setStudy(result);
     } catch {
       if (current === generation.current)
