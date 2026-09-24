@@ -17,9 +17,9 @@ const selections=[
 
 test('head-neck export binds six exact lacrimal drainage selections to CT and MRI drafts only',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'2aac6cc6d22b201663985f18ced448ae15a654403464d1a7db0f7f69d564f7ed');
+  assert.equal(sha(manifestBytes),'edb5264f4bba4725f8694302305a6a7819c28ac1cefe5be7c8aff25fc9c135c2');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'98e3c2a218e27b04ef72b47952821b163dd37c41');
+  assert.equal(manifest.sourceCommit,'c9000cf68cf91f899ff48e930306dfc02f371b19');
   for(const flag of ['patientDataIncluded','clinicalApproved','imagingConnection','standaloneReviewConnection'])
     assert.equal(manifest[flag],false,flag);
 
@@ -54,8 +54,8 @@ test('head-neck export binds six exact lacrimal drainage selections to CT and MR
     ['[`FMA59555`,`FMA59556`]','duct'],
   ])assert.ok(runtime.includes(`${group}:{fmas:${fmas},limit:`),`${group} bilateral source group`);
   const groupsStart=runtime.indexOf('canaliculus:{fmas:[`FMA59582`');
-  const groupsEnd=runtime.indexOf(',ry=new Map(',groupsStart);
-  assert.ok(groupsStart>=0&&groupsEnd>groupsStart,'bounded lacrimal teaching group');
+  const groupsEnd=runtime.indexOf('=new Map(',groupsStart);
+  assert.ok(groupsStart>=0&&groupsEnd>groupsStart&&groupsEnd-groupsStart<4000,'bounded lacrimal teaching group');
   const groups=runtime.slice(groupsStart,groupsEnd);
   assert.match(groups,/focus:\{ct:\{body:/);
   assert.equal((groups.match(/focus:\{ct:\{body:/g)||[]).length,3,'each group has CT');
@@ -77,7 +77,7 @@ test('head-neck export binds six exact lacrimal drainage selections to CT and MR
   ])assert.ok(runtime.includes(phrase),phrase);
 
   const inventoryBytes=readFileSync('lib/atlas-model-inventory.json');
-  assert.equal(sha(inventoryBytes),'fca0ddc51cc1ca3643a6b78d93e4b96eea44b3cbd7a39932315b5e981f70eb17');
+  assert.equal(sha(inventoryBytes),'85167c7ff6ee2742392caa4e6ea13aa620c9184d39f316f28e6bfd60ff9e2bd0');
   const inventory=JSON.parse(inventoryBytes.toString());
   assert.equal(inventory.sources.find((source:{module:string})=>source.module==='head-neck')?.manifestSha256,sha(manifestBytes));
   assert.equal(inventory.models.length,135);

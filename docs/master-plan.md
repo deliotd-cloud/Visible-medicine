@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+24 September source-only central-airway and hepatic-inflow integration: the
+generated shared regional/whole-body viewer now binds Atlas `c9000cf68cf91f899ff48e930306dfc02f371b19`.
+The exact-source Thorax airway focus and eight sided hepatic CT/MRI draft
+placements add no model, scan, patient registration or clinical approval.
+The offline plan preserved 12 scopes, 135 models and 142 protected paths with
+zero new model bytes. This is not a private publication until separately
+verified. See [the integration record](atlas-central-airway-hepatic-20260924.md).
+
 24 September source-only Thorax side-disclosure integration: the generated
 regional/whole-body viewer now binds Atlas `98e3c2a218e27b04ef72b47952821b163dd37c41`.
 Three respiratory study prompts explain that their midline-labelled compound
