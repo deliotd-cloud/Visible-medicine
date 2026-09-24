@@ -34,6 +34,24 @@ a percentage saving. Lower model cost and lower token count are different.
 
 ## Brief and handover
 
+### Dispatch contract
+
+Use these explicit tool settings when dispatching a bounded task:
+
+- Implementation/tests: `model: "gpt-6-sol"`, `reasoning_effort: "medium"`.
+- Read-only discovery: `model: "gpt-5.6-terra"`, `reasoning_effort: "medium"`.
+- For either worker, use `fork_turns: "none"` with the complete short brief below;
+  include applicable instructions and reference paths, not the full chat history.
+
+The coordinator keeps a small working queue: ready, assigned (owner and exact
+files), awaiting integration, verified, or blocked (specific missing input).
+Finish and review an in-flight deliverable before opening another dependent one.
+Delegate only when the coordinator has useful independent work to do concurrently.
+If a worker slot is unavailable, continue safe local work; do not repeatedly retry
+spawning, poll unchanged state, or create a separate user task as a workaround.
+Never claim a configured default changed the current main model or reasoning
+effort. Keep explicit dispatch settings even when matching project defaults.
+
 Give each worker a fresh bounded context, not the accumulated chat:
 
 1. Objective, acceptance criteria and exact source/checkpoint.

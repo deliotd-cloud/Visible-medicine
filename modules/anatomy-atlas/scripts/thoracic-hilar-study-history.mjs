@@ -1,6 +1,7 @@
 // Exact offline reversal; these focus views remain present in the live runtime.
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
+import {prePosteriorMediastinalProfiles} from './posterior-mediastinal-study-history.mjs';
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 export const preHilarProfilesHash='a436232c1b4589a13e84b8681ed29f71cc562e217079241679a2d51cf5199f46';
 const afterHash='4bc5b531e04448fb36afa7394cf318f3761012cbd921366d0bfb8a0a99244ce9';
@@ -10,6 +11,9 @@ const reference='https://anatomy.ttuhscep.edu/schemes/lungs_ans.html';
 const regions=['thorax','whole-body'];
 
 export function preThoracicHilarProfiles(profiles){
+  if(profiles.thorax.focuses.some(focus=>focus.id==='posterior-mediastinal-conduits') ||
+     profiles['whole-body'].focuses.some(focus=>focus.id==='posterior-mediastinal-conduits'))
+    profiles=prePosteriorMediastinalProfiles(profiles);
   if(hash(profiles)===preHilarProfilesHash)return structuredClone(profiles);
   assert.equal(hash(profiles),afterHash,'Unrecorded pulmonary-hilar recipe edit');
   const previous=structuredClone(profiles);

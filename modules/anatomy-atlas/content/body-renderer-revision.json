@@ -126,7 +126,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "2a2fadbda3e838a9f9e77502bf386fc0a871a0d0f36e3e9998aced91ebcb7139"
+      "sha256": "9c9197e97e610300c747d86a4a5c11d809fc208aef490f924bef8302e421b9fc"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -1087,6 +1087,10 @@
     {
       "path": "content/portal-hepatic-study.ts",
       "sha256": "be65b83468eb1d9f15a91ebcf2c3426ceafc5ebd6560c9e285aac91dffa88b54"
+    },
+    {
+      "path": "content/posterior-mediastinal-study.ts",
+      "sha256": "d07a11bda4ab63ad6ba2098efa80d5afa676aece071352599385b37549516924"
     },
     {
       "path": "content/pulmonary-teaching.ts",
@@ -2638,7 +2642,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "3138a817a9e93ca4b0da2a9032e0c762745f59342b58110860b805ddce162c4f"
+      "sha256": "cca20aac01335b997c2d33595bd05b3c2696cf725b453ce1b3584361cb258704"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2849,5 +2853,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "bc00c7c7eb877acf9791b75aa5e6d7d3545be4edbb03170a9cbe1355839f5109"
+  "sha256": "c95986f2c31827fb600c454401bf97e3fd41b30cbd3992d1b79a2978383b454e"
 }

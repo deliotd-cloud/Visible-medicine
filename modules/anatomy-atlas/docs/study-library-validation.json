@@ -1,31 +1,31 @@
 {
   "passed": true,
-  "assertions": 62280,
+  "assertions": 62684,
   "scopes": 36,
-  "groups": 243,
-  "sourceRecipes": 313,
+  "groups": 245,
+  "sourceRecipes": 315,
   "combinedGroups": 70,
   "markupCases": 24,
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
-      "groups": 33,
-      "recipes": 33,
+      "groups": 34,
+      "recipes": 34,
       "combinedGroups": 0
     },
     {
       "region": "whole-body",
       "side": "left",
-      "groups": 33,
-      "recipes": 33,
+      "groups": 34,
+      "recipes": 34,
       "combinedGroups": 0
     },
     {
       "region": "whole-body",
       "side": "right",
-      "groups": 33,
-      "recipes": 33,
+      "groups": 34,
+      "recipes": 34,
       "combinedGroups": 0
     },
     {
@@ -157,22 +157,22 @@
     {
       "region": "thorax",
       "side": "both",
-      "groups": 22,
-      "recipes": 26,
+      "groups": 23,
+      "recipes": 27,
       "combinedGroups": 4
     },
     {
       "region": "thorax",
       "side": "left",
-      "groups": 22,
-      "recipes": 26,
+      "groups": 23,
+      "recipes": 27,
       "combinedGroups": 4
     },
     {
       "region": "thorax",
       "side": "right",
-      "groups": 22,
-      "recipes": 26,
+      "groups": 23,
+      "recipes": 27,
       "combinedGroups": 4
     },
     {
@@ -264,5 +264,5 @@
   "clinicalValidation": false,
   "browserInteractionTesting": false,
   "sourceCatalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
-  "dissectionProfilesSha256": "4bc5b531e04448fb36afa7394cf318f3761012cbd921366d0bfb8a0a99244ce9"
+  "dissectionProfilesSha256": "f767da8224dc3d729fb46c383a3714cd7a704c91f0b73d83084bcc92bc2c50ff"
 }

@@ -3,6 +3,7 @@ import { sourceCanonical } from '../lib/body-source-additions.ts';
 import { thoraxRespiratoryBindings, thoraxRespiratoryStudies } from '../content/thorax-respiratory-study.ts';
 import { thoraxCentralAirwayBindings, thoraxCentralAirwayStudy } from '../content/thorax-central-airway-study.ts';
 import { mediastinalOrganBindings, mediastinalOrganStudy } from '../content/mediastinal-organ-study.ts';
+import { posteriorMediastinalBindings, posteriorMediastinalStudy } from '../content/posterior-mediastinal-study.ts';
 import { thoracicHilarBindings, thoracicHilarReferences, thoracicHilarStudies } from '../content/thoracic-hilar-study.ts';
 import { infrahyoidMuscleBindings, infrahyoidContextBindings, infrahyoidLayerStudies } from '../content/infrahyoid-layer-study.ts';
 import { pelvicUrethralFocus } from '../content/pelvic-urethral-study.ts';
@@ -1196,6 +1197,18 @@ for (const region of ['thorax', 'whole-body'] as const) {
     if (!dissectionProfiles[region].references.includes(reference))
       dissectionProfiles[region].references.push(reference);
   }
+}
+for (const region of ['thorax', 'whole-body'] as const) {
+  dissectionProfiles[region].focuses.push({
+    id: posteriorMediastinalStudy.id,
+    title: posteriorMediastinalStudy.title,
+    rule: { fmaIds: [...posteriorMediastinalStudy.fmaIds] },
+    includeSkeleton: false,
+    view: posteriorMediastinalStudy.view,
+    description: posteriorMediastinalStudy.description,
+    inspect: posteriorMediastinalStudy.inspect,
+    requiredSourceBindings: posteriorMediastinalBindings,
+  });
 }
 dissectionProfiles.thorax.references.push(
   'https://anatomy.ttuhscep.edu/anatomytables/muscles_thorax.html',
