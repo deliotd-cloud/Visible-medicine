@@ -2,15 +2,27 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+24 September source integration: the shared regional/whole-body
+runtime is regenerated from Atlas `853ffd63d76c635da8975d0d351295f75ba0d1e2`.
+Four exact-pinned common/recurrent interosseous artery selections now carry CT
+orientation drafts; MRI, X-ray and ultrasound remain pending for those four.
+There is no new mesh, scan, patient registration or clinical approval. The
+135-model / 142-path protected inventory and independent access rights remain.
+See [source and verification limits](atlas-forearm-interosseous-ct-20260924.md).
+At this source checkpoint, private Sites version 106 still served the older website source. Later publication is recorded separately. All first-release gates and revision-bound radiologist
+sign-off remain pending; the complete Atlas goal is unchanged.
+
 24 September latest source-only integration: the generated shared regional and
 whole-body runtime now binds Atlas `d47c45757fda1bf2f5726bf32ce4660b4175e447`.
 Two exact-source main-bronchus external-ultrasound limitation drafts are added;
 the 134 regional model entries retain identical paths, sizes and hashes, and the
 site's four-module inventory remains 135 objects / 142 protected paths. See
 [scope and verification limits](atlas-main-bronchus-ultrasound-20260924.md).
-The currently published private Sites version 105 remains source `caa5744` and
-does not include this integration until a separate publication succeeds. All
-six first-release gates and radiologist sign-off remain pending.
+At the initial source-only checkpoint, private Sites version 105 was source
+`caa5744` and did not yet include the bronchus notes. A later verified private
+Sites version 106 published website source `dd11143` with them; see the main
+task's `work/WEBSITE-BRONCHUS-INTEGRATION-CHECKPOINT-20260924.md`. All six
+first-release gates and radiologist sign-off remain pending.
 
 24 September earlier assurance follow-up: the website's authored-code lint debt
 was repaired without changing Atlas exports, models, clinical content or access
