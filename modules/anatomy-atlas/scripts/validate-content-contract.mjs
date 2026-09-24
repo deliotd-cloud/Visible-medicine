@@ -1,8 +1,12 @@
 import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { readFile, writeFile } from 'node:fs/promises';
+import { dirname, extname, relative } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { copyBeforeShoulderArmCurriculum } from './curriculum-transition.mjs';
 import { reviewDocumentBeforeSearch } from './review-history.mjs';
+import { build } from './workspace-test-build.mjs';
 import {
   contentContext,
   contentRoot,
@@ -31,6 +35,11 @@ const validate = await contentValidator(registry);
 const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
+same(
+  baseline.sourceCommit,
+  '71b27369829e1cc0351d8926886fecb7057b165f',
+  'Recorded original content source commit',
+);
 const clone = (value) => structuredClone(value);
 for (const [path, expected] of [
   [
@@ -55,12 +64,76 @@ same(
   baseline.reviewRevisionsHash,
   'Original review baseline retained through the exact search-display revision transition',
 );
-const oldCopy = await copyBeforeShoulderArmCurriculum(context);
-same(
-  sha(JSON.stringify(oldCopy)),
-  baseline.copyAndRecipeHash,
-  'The 3634 pinned curriculum sections and exact orbital-motor recipe addition are separately verified; all earlier copy/recipes remain preserved',
+// The baseline predates later authored lessons. Replay its exact recorded source
+// tree for the whole-curriculum proof; the current replay below still checks
+// the individually pinned shoulder/arm and forearm transitions.
+const root = fileURLToPath(contentRoot);
+const historical = await build({
+  stdin: {
+    contents: `export { bodyContent } from './app/body-content';
+export { structures } from './app/anatomy-data';
+export { dissectionProfiles } from './app/dissection-data';`,
+    resolveDir: root,
+    loader: 'ts',
+  },
+  bundle: true,
+  write: false,
+  platform: 'node',
+  format: 'esm',
+  plugins: [
+    {
+      name: 'exact-content-contract-baseline',
+      setup(builder) {
+        builder.onLoad({ filter: /.*/, namespace: 'workspace-test' }, (args) => {
+          const path = relative(root, args.path).replaceAll('\\', '/');
+          assert(!path.startsWith('../') && path !== '..');
+          if (path.startsWith('node_modules/')) return;
+          return {
+            contents: execFileSync(
+              'git',
+              ['show', `${baseline.sourceCommit}:${path}`],
+              { cwd: root, encoding: 'utf8', maxBuffer: 16e6 },
+            ),
+            loader:
+              { '.ts': 'ts', '.tsx': 'tsx', '.json': 'json' }[extname(path)] ||
+              'js',
+            resolveDir: dirname(args.path),
+          };
+        });
+      },
+    },
+  ],
+});
+const original = await import(
+  'data:text/javascript;base64,' +
+    Buffer.from(historical.outputFiles[0].text).toString('base64')
 );
+const originalTabs = [
+  'anatomy',
+  'function',
+  'ct',
+  'mri',
+  'ultrasound',
+  'pathology',
+  'clinical',
+  'quiz',
+];
+const originalCopy = {
+  body: catalog.structures.map((entry) => ({
+    id: entry.id,
+    sections: Object.fromEntries(
+      originalTabs.map((tab) => [tab, original.bodyContent(entry, tab)]),
+    ),
+  })),
+  shoulder: original.structures,
+  dissectionProfiles: original.dissectionProfiles,
+};
+same(
+  sha(JSON.stringify(originalCopy)),
+  baseline.copyAndRecipeHash,
+  'Original copy and recipes from the exact recorded Git tree',
+);
+await copyBeforeShoulderArmCurriculum(context);
 same(shoulder.length, 9);
 same(body.length, 1022);
 same(registry.size, 1031, 'Keys are scope plus identity, not identity alone');
@@ -373,7 +446,8 @@ const report = {
   boundNodes: nodes.size,
   glbAssetsVerified: assets.size,
   rejectionCases: negative.length + 3,
-  unrelatedDisplayedCopyAndRecipesPreserved: true,
+  originalCopyAndRecipesVerifiedFromRecordedGitTree: true,
+  currentPinnedCurriculumTransitionsChecked: true,
   explicitlyUpdatedBodySections: 3634,
   additionalSpinalImagingSections: catalog.structures.reduce(
     (n, s) =>
