@@ -64,6 +64,9 @@ are separate evidence, not a substitute for final desktop/mobile visual QA.
 Before release, reload the completed build, verify that Open study view replaces
 the previous focus, and inspect sided camera framing, labels and Remove/Undo.
 
+Follow-up: [sampled local browser QA](STUDY_CLOSE_UP_CAPTIONS.md) verified study
+opening, paired labels, left-vessel selection/Remove/Undo and mobile laterality.
+It also corrected the whole-body caption. Full device acceptance remains open.
 No hosted publication or clinical approval is claimed by this source change.
 
 ## References and reuse

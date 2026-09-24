@@ -38,6 +38,8 @@ and independent entitlements are unchanged. Current review fingerprints and
 the shoulder export are regenerated for the changed shared presentation code;
 no private clinical decisions are read, migrated or approved.
 
-The local browser still shows an earlier intermediate Vite missing-file error
-after a bounded reload check. Fresh-browser verification of the popliteal study
-and this feedback remains outstanding; no hosted publication is claimed.
+The initial bounded check still showed an intermediate Vite missing-file error.
+A later local browser pass successfully opened the popliteal study; see
+[sampled browser QA](STUDY_CLOSE_UP_CAPTIONS.md). Rejection feedback itself has
+controlled component coverage, not live fault-injection coverage. No hosted
+publication is claimed.

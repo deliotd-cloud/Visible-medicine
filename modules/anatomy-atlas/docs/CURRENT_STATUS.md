@@ -1,5 +1,11 @@
 # Current atlas status
 
+[Study close-up captions and browser QA](STUDY_CLOSE_UP_CAPTIONS.md): the
+whole-body popliteal study opens, renders and supports selection/Remove/Undo in
+the local browser. A misleading Elbow caption is corrected to Knee by recipe
+identity. Narrow-screen laterality works; full device/clinical acceptance and
+website integration remain pending.
+
 [Study activation feedback](SEARCH_ACTIVATION_FEEDBACK.md) keeps Search open
 with an accessible notice when a source guard rejects a study. Mode and panels
 remain unchanged; successful handoffs retain the existing uncluttered behavior.

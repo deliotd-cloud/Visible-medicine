@@ -166,6 +166,7 @@ import { kneeStudyBounds, kneeStudySets } from '@/lib/knee-studies';
 import { genicularStudyBounds } from '@/lib/genicular-study';
 import { poplitealVesselStudyBounds } from '@/lib/popliteal-vessel-study';
 import { poplitealVesselStudy } from '@/content/popliteal-vessel-study';
+import { studyCloseUpLabel } from '@/lib/study-close-up-label';
 import { genicularStudy } from '@/content/genicular-study';
 import { elbowStudyBounds } from '@/lib/elbow-studies';
 import { elbowStudySets } from '@/content/elbow-studies';
@@ -1987,7 +1988,7 @@ export default function BodyExplorer({
                     ? 'Forearm close-up · Upper-arm context may extend off-screen · Full extent in View menu'
                     : 'Hand close-up · Full extent in View menu'
                   : jointCloseUp
-                  ? `${initialRegion === 'forearm' || initialRegion === 'whole-body' ? 'Elbow' : 'Knee'} close-up · Whole surfaces extend beyond the view · Pan / pinch to explore`
+                  ? `${studyCloseUpLabel(cameraRecipeId)} close-up · Whole surfaces extend beyond the view · Pan / pinch to explore`
                   : layout === 'tray' && !exam
                     ? explode === 100
                       ? focus && selectedId && enabledIds.has(selectedId)
