@@ -73,14 +73,18 @@ export function NestedTeaching({
   study,
   selected,
   initialTopic,
+  reviewAvailable = true,
 }: {
   parent: BodyStructure;
   study: NestedStudy;
   selected: BodyStructure;
   initialTopic?: NestedImagingTopic;
+  reviewAvailable?: boolean;
 }) {
   const concept = nestedTeachingFor(parent, study, selected);
-  const reviewHref = nestedReviewHref(parent, study, selected);
+  const reviewHref = reviewAvailable
+    ? nestedReviewHref(parent, study, selected)
+    : null;
   if (!concept)
     return (
       <div className="nested-teaching-unavailable">

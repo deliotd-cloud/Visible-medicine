@@ -481,6 +481,7 @@ export function EyeLayerView({
               parent={parent}
               study="eye"
               selected={selected}
+              reviewAvailable={!assetBase}
               initialTopic={
                 selected.id === initialSelection
                   ? initialTeachingTopic

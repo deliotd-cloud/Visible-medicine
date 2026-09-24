@@ -508,6 +508,7 @@ export function FemoralComponentView({
                 parent={parent}
                 study="femoral-components"
                 selected={selected}
+                reviewAvailable={!assetBase}
                 initialTopic={
                   selected.id === initialSelection
                     ? initialTeachingTopic
@@ -519,7 +520,7 @@ export function FemoralComponentView({
                 Parent concept: {parent.fmaId}. Unnamed source part; no
                 independent clinical lesson, imaging registration or
                 branch-order claim.
-                {nestedReviewHref(parent, study, selected) && <><br/><a href={nestedReviewHref(parent, study, selected)!} target="_blank" rel="noreferrer">Review this structure</a></>}
+                {!assetBase && nestedReviewHref(parent, study, selected) && <><br/><a href={nestedReviewHref(parent, study, selected)!} target="_blank" rel="noreferrer">Review this structure</a></>}
               </p>
             )}
           </section>

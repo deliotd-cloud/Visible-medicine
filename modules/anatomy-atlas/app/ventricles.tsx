@@ -1623,6 +1623,7 @@ export function VentricularView({
               parent={parent}
               study={study}
               selected={selected}
+              reviewAvailable={!assetBase}
               initialTopic={
                 selected.id === initialSelection
                   ? initialTeachingTopic
