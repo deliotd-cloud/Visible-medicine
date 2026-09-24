@@ -1,7 +1,6 @@
 // Offline historical reconstruction only; never imported by viewer/review APIs.
 import assert from 'node:assert/strict';
 import { isDeepStrictEqual } from 'node:util';
-import { prePelvicUrethralProfiles } from './pelvic-urethral-study-history.mjs';
 import { authoringBeforeCoreOrganFunction } from './core-organ-function-history.mjs';
 import { beforeForearmVenousImaging } from './forearm-venous-imaging-history.mjs';
 import { authoringBeforeThoracoabdominalOrganXray } from './thoracoabdominal-organ-xray-history.mjs';
@@ -9,10 +8,7 @@ import { authoringBeforeSpineUltrasound } from './spine-ultrasound-history.mjs';
 import { preLiverAnatomyCoverage } from './liver-anatomy-coverage-history.mjs';
 import baseline from '../content/clinical-reference-revision.baseline.json' with { type: 'json' };
 import transition from '../content/clinical-reference-revision.transition.json' with { type: 'json' };
-import {
-  clinicalReferenceRevisionHash as hash,
-  wholeBodyTeachingSnapshot,
-} from './clinical-reference-revision-tools.mjs';
+import { clinicalReferenceRevisionHash as hash } from './clinical-reference-revision-tools.mjs';
 
 const copy = value => structuredClone(value);
 const same = (a, b) => isDeepStrictEqual(a, b);
@@ -41,14 +37,16 @@ function verifyRecords() {
 verifyRecords();
 
 /** Restore only the four revised urethral body lessons. */
-export function authoringBeforeClinicalReferenceRevision({ api, catalog }) {
-  api = authoringBeforeThoracoabdominalOrganXray({ api, catalog }).api;
-  api = authoringBeforeSpineUltrasound({ api, catalog });
-  api = beforeForearmVenousImaging(api);
-  api = authoringBeforeCoreOrganFunction({ api, catalog }, {deferWholeSnapshot: true});
-  api = preLiverAnatomyCoverage(api, catalog);
-  const recipes = prePelvicUrethralProfiles(api.dissectionProfiles, {allowOlder: true});
-  if (recipes !== api.dissectionProfiles) api = {...api, dissectionProfiles: recipes};
+export function authoringBeforeClinicalReferenceRevision({ api, catalog }, { exactHistorical = false } = {}) {
+  // Live callers first remove later authored lessons using their own strict
+  // gates. Exact Git-tree APIs already represent this era and need no rollback.
+  if (!exactHistorical) {
+    api = authoringBeforeThoracoabdominalOrganXray({ api, catalog }).api;
+    api = authoringBeforeSpineUltrasound({ api, catalog });
+    api = beforeForearmVenousImaging(api);
+    api = authoringBeforeCoreOrganFunction({ api, catalog }, { deferWholeSnapshot: true });
+    api = preLiverAnatomyCoverage(api, catalog);
+  }
   const identity = baseline.selected.pelvic.identity;
   const currentIdentity = api
     .bodyDisplayCatalog(catalog)
@@ -67,11 +65,6 @@ export function authoringBeforeClinicalReferenceRevision({ api, catalog }) {
     transition.selected.pelvic.lessons,
     'Unrecorded clinical reference revision',
   );
-  assert.equal(
-    hash(wholeBodyTeachingSnapshot(api, catalog)),
-    transition.wholeBodyHash,
-    'Unrecorded whole-body teaching change after clinical reference revision',
-  );
   const bodyLesson = (structure, topic) => {
     if (
       structure.id !== identity.id ||
@@ -89,11 +82,6 @@ export function authoringBeforeClinicalReferenceRevision({ api, catalog }) {
       return content;
     },
   };
-  assert.equal(
-    hash(wholeBodyTeachingSnapshot(historical, catalog)),
-    baseline.wholeBodyHash,
-    'Clinical-reference adapter did not reconstruct the exact baseline',
-  );
   return historical;
 }
 

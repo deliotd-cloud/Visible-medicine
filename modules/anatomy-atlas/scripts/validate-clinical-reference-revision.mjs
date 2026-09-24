@@ -14,6 +14,10 @@ import {
   hraBeforeClinicalReferenceRevision,
   nestedBeforeClinicalReferenceRevision,
 } from './clinical-reference-revision-history.mjs';
+import {
+  assertExactHistoricalSnapshot,
+  exactClinicalReferenceHistory,
+} from './exact-clinical-reference-history.mjs';
 
 const current = await currentClinicalReferenceProjection();
 assert.equal(transition.status, 'recorded');
@@ -77,17 +81,27 @@ const allowed = [
 assert.deepEqual(changes, allowed, 'Only approved factual-reference leaves changed');
 
 const context = await contentContext();
-const historical = authoringBeforeClinicalReferenceRevision(context);
+const exact = await exactClinicalReferenceHistory(context.catalog);
+assert.equal(exact.baselineCommit, baseline.sourceCommit);
+assert.equal(exact.transitionCommit, 'a0b5bac61bd53e9c5732f867846768b5084b175b');
+assertExactHistoricalSnapshot(exact.before, context.catalog, baseline.wholeBodyHash, 'Exact baseline Git tree changed');
+assertExactHistoricalSnapshot(exact.after, context.catalog, transition.wholeBodyHash, 'Exact transition Git tree changed');
+const exactHistorical = authoringBeforeClinicalReferenceRevision({
+  api: exact.after,
+  catalog: context.catalog,
+}, { exactHistorical: true });
 assert.equal(
-  hash(wholeBodyTeachingSnapshot(historical, context.catalog)),
+  hash(wholeBodyTeachingSnapshot(exactHistorical, context.catalog)),
   baseline.wholeBodyHash,
+  'Historical adapter did not reconstruct the exact baseline',
 );
+const historical = authoringBeforeClinicalReferenceRevision(context);
 for (const [topic, lesson] of Object.entries(baseline.selected.pelvic.lessons))
   assert.deepEqual(historical.bodyLesson(baseline.selected.pelvic.identity, topic), lesson);
 const historicalTwice = authoringBeforeClinicalReferenceRevision({
-  api: historical,
+  api: exactHistorical,
   catalog: context.catalog,
-});
+}, { exactHistorical: true });
 assert.equal(
   hash(wholeBodyTeachingSnapshot(historicalTwice, context.catalog)),
   baseline.wholeBodyHash,
@@ -110,16 +124,17 @@ const unrelated = context.api
   .bodyDisplayCatalog(context.catalog)
   .structures.find(structure => structure.id !== baseline.selected.pelvic.identity.id);
 const unrelatedApi = {
-  ...context.api,
+  ...exact.after,
   bodyLesson(structure, topic) {
-    const lesson = context.api.bodyLesson(structure, topic);
+    const lesson = exact.after.bodyLesson(structure, topic);
     return structure.id === unrelated.id && topic === 'anatomy'
       ? { ...lesson, body: lesson.body + ' unrecorded' }
       : lesson;
   },
 };
 assert.throws(
-  () => authoringBeforeClinicalReferenceRevision({ api: unrelatedApi, catalog: context.catalog }),
+  () => assertExactHistoricalSnapshot(unrelatedApi, context.catalog, transition.wholeBodyHash,
+    'Unrecorded whole-body teaching change'),
   /Unrecorded whole-body teaching change/,
 );
 

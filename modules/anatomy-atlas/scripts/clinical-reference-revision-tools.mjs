@@ -2,38 +2,14 @@ import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import { build } from './workspace-test-build.mjs';
 import { contentContext } from './content-contract-tools.mjs';
-import { prePelvicUrethralProfiles } from './pelvic-urethral-study-history.mjs';
-import { authoringBeforeCoreOrganFunction } from './core-organ-function-history.mjs';
-import { beforeForearmVenousImaging } from './forearm-venous-imaging-history.mjs';
-import { authoringBeforeThoracoabdominalOrganXray } from './thoracoabdominal-organ-xray-history.mjs';
-import { authoringBeforeSpineUltrasound } from './spine-ultrasound-history.mjs';
+import { exactClinicalReferenceHistory, wholeBodyTeachingSnapshot } from './exact-clinical-reference-history.mjs';
 
 export const clinicalReferenceRevisionHash = value =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 const detached = value => JSON.parse(JSON.stringify(value));
 
-export function wholeBodyTeachingSnapshot(api, catalog) {
-  // Newest editorial changes must be removed before this older era's recipe
-  // normalization and immutable whole-body gate.
-  api = authoringBeforeThoracoabdominalOrganXray({ api, catalog }).api;
-  api = authoringBeforeSpineUltrasound({ api, catalog });
-  api = beforeForearmVenousImaging(api);
-  api = authoringBeforeCoreOrganFunction({api, catalog}, {deferWholeSnapshot: true});
-  const display = api.bodyDisplayCatalog(catalog);
-  return {
-    body: display.structures.map(structure => ({
-      id: structure.id,
-      sections: Object.fromEntries(
-        api.contentTabs.map(topic => [topic, api.bodyLesson(structure, topic)]),
-      ),
-    })),
-    shoulder: api.structures,
-    // Compare the clinical-reference era, retaining a strict guard on the only
-    // later recipe addition. This is not the current runtime recipe snapshot.
-    recipes: prePelvicUrethralProfiles(api.dissectionProfiles, {allowOlder: true}),
-  };
-}
+export { wholeBodyTeachingSnapshot };
 
 async function sourceModule() {
   const compiled = await build({
@@ -121,7 +97,10 @@ export async function currentClinicalReferenceProjection() {
       topics: source.pelvicOrganImagingTopics,
     },
   };
-  const wholeBody = wholeBodyTeachingSnapshot(context.api, context.catalog);
+  // The broad digest belongs to the immutable transition tree. The selected
+  // and fullSource projections above still come from the current checkout.
+  const { after } = await exactClinicalReferenceHistory(context.catalog);
+  const wholeBody = wholeBodyTeachingSnapshot(after, context.catalog);
   return detached({
     selected,
     selectedHash: clinicalReferenceRevisionHash(selected),

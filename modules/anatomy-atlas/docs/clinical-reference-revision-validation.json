@@ -23,7 +23,7 @@
   "legacyPelvicGate": {
     "command": "node scripts/validate-pelvic-organ-imaging.mjs",
     "expected": "c2c0a4aa4b435ea86c1aaa3799b86773ddaff9c09109e8a057ab14f4f92bcda8",
-    "actualAfterExactRevisionRollback": "784c75e9e91de126356be4da97dcecb3551595425e66b12883cc1bdf3f1c5566",
+    "actualAfterExactRevisionRollback": "b29752855473f5a5dd23ff3454bc3de4db5f8f7bcb319a3d9b50b54b1b89fa0d",
     "preExistingMismatch": true
   },
   "legacyNestedPinGate": {
