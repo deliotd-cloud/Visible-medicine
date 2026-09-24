@@ -14,30 +14,30 @@
     "note": "Historical baseline only; it is not evidence that a release candidate is approved."
   },
   "candidate": {
-    "atlasRevision": "d47c45757fda1bf2f5726bf32ce4660b4175e447",
-    "websiteRevision": "dd11143e689051f58f8fc6a1df53a781940a46f4",
+    "atlasRevision": "853ffd63d76c635da8975d0d351295f75ba0d1e2",
+    "websiteRevision": "9cbc3fd9c7ba8946e1a3078d7e84547481b2d1e4",
     "delivery": {
       "website": {
-        "sourceRevision": "dd11143e689051f58f8fc6a1df53a781940a46f4",
-        "deployedRevision": "dd11143e689051f58f8fc6a1df53a781940a46f4",
-        "versionNumber": 106,
-        "versionId": "appgprj_6a8b1e2c3d348191be844899e57ccbc6~appgver_a10994754b988191bbf08ce1865d45d9",
-        "deploymentId": "appgdep_6ab47af63fdc819193296cac22bbe5da",
+        "sourceRevision": "9cbc3fd9c7ba8946e1a3078d7e84547481b2d1e4",
+        "deployedRevision": "9cbc3fd9c7ba8946e1a3078d7e84547481b2d1e4",
+        "versionNumber": 107,
+        "versionId": "appgprj_6a8b1e2c3d348191be844899e57ccbc6~appgver_9905b5a7d8108191a6bdcd8f079378e0",
+        "deploymentId": "appgdep_6ab48fd0bae88191937139c7cc17173b",
         "status": "succeeded",
         "audience": "owner-only",
         "evidence": [
-          "D:\\VisibleMedicine-Atlas-Recovery\\website-bronchus-us-20260924.publication.json"
+          "D:\\VisibleMedicine-Atlas-Recovery\\website-forearm-interosseous-ct-20260924.publication.json"
         ]
       },
       "sharedViewer": {
-        "atlasRevision": "d47c45757fda1bf2f5726bf32ce4660b4175e447",
-        "manifestSha256": "74bfb4acce3481e39368ec025a2042cd2dfe7ed2eb294bde29364c38fd97d65c",
-        "inventorySha256": "002859db72da5cabfa0ad56b2cd0df37a513492c8cdf990b558702f5a6a074f0",
+        "atlasRevision": "853ffd63d76c635da8975d0d351295f75ba0d1e2",
+        "manifestSha256": "529fde04c63dde04c3097e9dc64d43dfca5976f2ea536c16f689756e8f7c9293",
+        "inventorySha256": "fab230faa8565b7cd5d5fd6b96056568abbf874f271237a476de5c8db9a5dfe0",
         "modelCount": 135,
         "pathCount": 142
       },
       "validation": {
-        "atlasRevision": "d47c45757fda1bf2f5726bf32ce4660b4175e447",
+        "atlasRevision": "853ffd63d76c635da8975d0d351295f75ba0d1e2",
         "status": "source-checked-only"
       },
       "clinicalApproval": {
