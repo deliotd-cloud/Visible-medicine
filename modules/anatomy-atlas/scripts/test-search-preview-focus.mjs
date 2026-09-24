@@ -65,7 +65,9 @@ const find=(tree,predicate,label)=>{
 const calls=[];
 context={
   mode:'explore',exam:false,focusView:false,panelLayout:null,
-  chooseMode:mode=>calls.push(['mode',mode]),showInfo:()=>calls.push(['info']),
+  chooseMode:mode=>calls.push(['mode',mode]),
+  setPanelOpen:(info,open)=>calls.push(['panel',info,open]),
+  showInfo:()=>calls.push(['info']),
 };
 const props={
   catalog,region:'head-neck',side:'both',
@@ -88,7 +90,8 @@ function attachAndCommit({confirmation=true}={}){
   return root;
 }
 function reset(query='Deep-brain overview',kind='view'){
-  states=[true,query,kind,12,null];refs=[];calls.length=0;context.exam=false;document.activeElement=null;
+  states=[true,query,kind,12,null];refs=[];calls.length=0;
+  context.exam=false;context.focusView=false;context.panelLayout=null;document.activeElement=null;
   render();
 }
 function resultButton(entry=previewCases[0]){
@@ -138,27 +141,39 @@ render();const fallback=attachAndCommit({confirmation:false});
 assert.equal(document.activeElement,fallback,'missing origin uses the dialog root fallback');
 
 // Closing, confirmed handoff and exam entry must not trigger the
-// preview-restoration effect. Base UI's established finalFocus policy remains
-// independently covered by the navigation suite.
+// preview-restoration effect.
 reset();openPreview();
 const focusedOnClose=document.activeElement;
 tree.props.onOpenChange(false);render();attachAndCommit({confirmation:false});
 assert.equal(document.activeElement,focusedOnClose,'dialog close does not run preview restoration');
 
-reset();openPreview();
-const focusedOnHandoff=document.activeElement;
-find(tree,node=>text(node)==='Open study view','confirmed handoff').props.onClick();
-render();attachAndCommit({confirmation:false});
-assert.equal(document.activeElement,focusedOnHandoff,'confirmed handoff does not run preview restoration');
-assert.deepEqual(calls.slice(-2),[['mode','dissect'],['window','deep-brain']]);
+for(const entry of previewCases){
+  for(const layout of ['desktop','collapsed','focus view']){
+    reset(entry.label);
+    context.focusView=layout==='focus view';
+    context.panelLayout=layout==='collapsed'?{tools:true,info:true}:null;
+    openPreview(entry);
+    const focusedOnHandoff=document.activeElement;
+    const launcher=new FocusNode('Search atlas');
+    find(tree,node=>node.props.render?.props?.className==='atlas-search-trigger','Search launcher').props.render.props.ref.current=launcher;
+    find(tree,node=>text(node)==='Open study view','confirmed handoff').props.onClick();
+    render();attachAndCommit({confirmation:false});
+    assert.equal(document.activeElement,focusedOnHandoff,`${entry.action.type} ${layout} handoff does not run preview restoration`);
+    assert.equal(find(tree,node=>node.props.className==='atlas-search-dialog','dialog popup').props.finalFocus(),launcher,`${entry.action.type} ${layout} restores Search launcher on dialog close`);
+    assert.deepEqual(calls,[['mode','dissect'],[entry.action.type,entry.action.id],['panel',false,false],['panel',true,false]],`${entry.action.type} ${layout} leaves both panels closed`);
+  }
+}
 
 reset();openPreview();
 const focusedOnExam=document.activeElement;context.exam=true;render();attachAndCommit({confirmation:false});
 assert.equal(document.activeElement,focusedOnExam,'exam transition does not move focus');
+const examCalls=calls.length;
+find(tree,node=>text(node)==='Open study view','stale exam confirmation').props.onClick();
+assert.equal(calls.length,examCalls,'exam blocks stale study confirmation');
 
 console.log(JSON.stringify({
   passed:true,component:'AtlasSearch',actualComponentCallbacks:true,
   activeElementAssertions:true,browserAcceptance:false,
-  cases:['window/focus entry and cancel','query/filter invalidation','missing-origin fallback','close/confirmed handoff/exam'],
+  cases:['window/focus entry and cancel','query/filter invalidation','missing-origin fallback','desktop/collapsed/focus-view handoff','close/exam'],
   limitations:'Controlled hooks and focusable-node document boundary; not a browser DOM, native details-state, or visual test.',
 }));

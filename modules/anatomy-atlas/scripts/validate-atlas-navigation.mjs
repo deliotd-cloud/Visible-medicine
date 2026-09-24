@@ -268,6 +268,7 @@ context = {
   mode: 'explore',
   exam: false,
   chooseMode: (mode) => calls.push(['mode', mode]),
+  setPanelOpen: (info, open) => calls.push(['panel', info, open]),
   showInfo: () => calls.push(['info']),
 };
 const props = {
@@ -310,6 +311,8 @@ for (const type of ['select', 'window', 'focus']) {
     same(calls, [
       ['mode', 'dissect'],
       [type, entry.action.id],
+      ['panel', false, false],
+      ['panel', true, false],
     ]);
   }
   same(states[0], false, 'Search closes after confirmed action');

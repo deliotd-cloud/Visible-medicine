@@ -357,6 +357,7 @@ const workspace = {
   exam: false,
   chooseMode: (mode) => calls.push(['mode', mode]),
   showInfo: () => calls.push(['info']),
+  setPanelOpen: (info, open) => calls.push(['panel', info, open]),
   focusView: false,
   panelLayout: null,
 };
@@ -453,10 +454,10 @@ for (const layout of [
       tree = renderSearch();
       walk(tree, n => n.props.children === 'Open study view')[0].props.onClick();
     }
-    same(calls, type === 'select' ? [['select', entry.action.id], ['info']] : [['mode', 'dissect'], [type, entry.action.id]]);
+    same(calls, type === 'select' ? [['select', entry.action.id], ['info']] : [['mode', 'dissect'], [type, entry.action.id], ['panel', false, false], ['panel', true, false]]);
     same(states[0], false);
     const popup = walk(tree, n => n.props.className === 'atlas-search-dialog')[0];
-    same(popup.props.finalFocus(), layout[type === 'select' ? 'info' : 'tools'] ? false : searchLauncher, `${layout.name}/${type}`);
+    same(popup.props.finalFocus(), type === 'select' && layout.info ? false : searchLauncher, `${layout.name}/${type}`);
     tree.props.onOpenChange(true);
     same(popup.props.finalFocus(), searchLauncher, 'Reopening clears the prior handover');
     tree.props.onOpenChange(false);

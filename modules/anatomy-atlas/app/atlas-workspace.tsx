@@ -504,11 +504,12 @@ export function AtlasSearch({
       entry.action.type === 'window' ||
       entry.action.type === 'focus'
     ) {
-      transferringFocus.current = workspace.focusView ||
-        (workspace.panelLayout ?? atlasPanelLayout(window.innerWidth, window.innerHeight)).tools;
+      transferringFocus.current = false;
       workspace.chooseMode('dissect');
       if (entry.action.type === 'window') onWindow(entry.action.id);
       else onFocus(entry.action.id);
+      workspace.setPanelOpen(false, false);
+      workspace.setPanelOpen(true, false);
     }
     setOpen(false);
     clearPreview();
@@ -546,8 +547,8 @@ export function AtlasSearch({
       <DialogContent
         ref={dialogRoot}
         className="atlas-search-dialog"
-        // A newly opened sheet owns focus; returning to Search would steal it.
-        // Inline desktop panels and ordinary dismissal still return to Search.
+        // A newly opened structure sheet owns focus; confirmed studies leave
+        // both panels closed and return focus to Search on every layout.
         finalFocus={() => (transferringFocus.current ? false : launcher.current)}
       >
         <DialogTitle>Search the atlas</DialogTitle>

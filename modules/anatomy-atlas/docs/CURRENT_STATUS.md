@@ -1,5 +1,12 @@
 # Current atlas status
 
+[Search study handoff](SEARCH_STUDY_HANDOFF.md) now opens confirmed study windows
+and focuses with the model unobstructed, instead of opening the tools drawer.
+Search regains keyboard focus; explicit Dissect and direct structure selection
+retain their tools/details actions. Focused checks and actual 1087×854 / 390×844
+browser checks pass. No model, source teaching, licence or entitlement changes.
+Website integration is pending; the full goal and clinical/device gates remain.
+
 [Main-bronchus X-ray orientation](MAIN_BRONCHUS_XRAY.md) adds two exact-source,
 unsigned draft topics for the right/left main bronchi. The other 9,934 topics,
 all geometry and dissection recipes are unchanged. Local browser checks show
