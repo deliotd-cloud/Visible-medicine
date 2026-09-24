@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+24 September spinal-disc Function teaching: the shared viewer binds Atlas
+`5efeed6`, adding 22 regional whole-disc drafts through the existing panel.
+All 136 models / 143 protected paths and independent entitlements remain
+unchanged. See [integration boundaries](atlas-spinal-disc-function-20260924.md)
+and the main-task checkpoint for publication/recovery. Continue the full
+regional roadmap; clinical, imaging and device gates remain open.
+
 24 September proper-digital teaching: the shared viewer binds Atlas `bff0cbb`,
 adding twenty source-specific Anatomy/Function drafts for ten existing finger
 arteries through the existing panel. All 136 model objects / 143 protected paths
