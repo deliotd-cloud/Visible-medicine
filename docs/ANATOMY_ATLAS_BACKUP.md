@@ -1,5 +1,9 @@
 # Anatomy atlas backup — 12 September 2026
 
+## 24 September 2026 — First-release candidate binding
+
+Atlas source `6638e57` records the privately deployed website version 108 (`3ebd67a`) and its generated viewer from Atlas `77e20b8`. The six first-release gates remain pending and clinical approval is not recorded. This is a recovery and coordination update, not learner-release authorization.
+
 ## 24 September 2026 — Keyboard-only orientation feedback
 
 Atlas source `77e20b8139ec2894abcb3d17552afb1b4c2b0a2a` (tree `5a0c090da5d0594773af28a18657d103c5d7da0e`) adds a restrained polite status for keyboard-originated 3D camera rotation. Pointer orbit remains silent; a clamped key does not announce a change. Focused camera, orientation, renderer, selection-visibility, TypeScript and lint checks passed. No model geometry, clinical approval, scan or website publication is introduced by this Atlas backup. The module subtree matches the source tree exactly.
