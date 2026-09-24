@@ -1,5 +1,9 @@
 # Anatomy atlas backup — 12 September 2026
 
+## 24 September 2026 — Private v109 candidate binding
+
+Atlas coordination source `3a066cb` binds the privately deployed website v109 / source `643515b` to shared viewer source `c0bdec4`. The head-neck manifest and protected inventory fingerprints were updated, with the same 135 model objects and 142 protected paths. Eleven release-readiness tests pass; the unsigned pilot is current. All six first-release gates and radiologist sign-off remain pending. This commit changes no viewer runtime, anatomy, patient material or access policy, and the mirrored Atlas module subtree matches the source exactly.
+
 ## 24 September 2026 — Scene-label selection semantics
 
 Atlas source `c0bdec4e799a2f0ee944ca74501e8e21684d74d1` marks a selected 3D label as current rather than as a pressed toggle, because activating it selects but cannot deselect. The shared regional/whole-body component, its exact-handler fixture and label guidance changed; meshes, teaching, access and review decisions did not. The label, renderer and selection-visibility suites and TypeScript passed. Targeted lint still reports two pre-existing warnings on untouched component lines. Browser screen-reader and clinical acceptance remain pending. The module subtree is mirrored exactly; the website stays private v108 until a separate generated integration and publication is verified.
