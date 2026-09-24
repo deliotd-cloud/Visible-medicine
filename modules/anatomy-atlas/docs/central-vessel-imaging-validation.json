@@ -8,7 +8,7 @@
     "mri": 29,
     "ultrasound": 21
   },
-  "unchangedTopics": 9830,
+  "unchangedTopics": 9839,
   "ultrasoundPending": [
     "FMA87217",
     "FMA4838",
@@ -19,7 +19,7 @@
     "FMA49913",
     "FMA14768"
   ],
-  "bodySchemaRecords": 1101,
+  "bodySchemaRecords": 1102,
   "actualNoteRenders": 79,
   "rejectedSourceTopicCombinations": 1501,
   "uniqueReferenceFacts": 72,
@@ -57,5 +57,12 @@
   "clinicalApproval": false,
   "imagesImported": false,
   "imagingConnected": false,
-  "browserOrDeviceAcceptance": false
+  "browserOrDeviceAcceptance": false,
+  "historicalReplay": {
+    "transitionCommit": "270ef68dc7499672549ee3967b485f61eecf3139",
+    "changedTopics": 79,
+    "unchangedTopics": 9830,
+    "originalBaselineHash": "de8c41fb18b49b0e3ff04b72f146341950b29fb6f8ddd02710358caa81f8eb1a",
+    "originalCatalogAndRecipesUnchanged": true
+  }
 }

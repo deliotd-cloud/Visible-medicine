@@ -1,5 +1,10 @@
 # Current atlas status
 
+[Central-vessel historical verification](CENTRAL_VESSEL_HISTORY_REPAIR.md) now
+separates the immutable source-era snapshot from live scoped transition checks.
+The original baseline hash and 79 replacements are preserved; runtime teaching,
+geometry and approvals are unchanged. Pulmonary-vein website integration is next.
+
 [Pulmonary-vein ultrasound orientation](PULMONARY_VEIN_ULTRASOUND.md) fills four
 pending topics with distinct right/left superior/inferior echo drafts, citing
 official TTE/TEE references. Other 9,932 topics, all geometry and existing controls

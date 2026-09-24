@@ -18,14 +18,18 @@ echo acquisition, clinical-validation or patient-registration test.
 
 The broad content contract (33,445 checks), laryngeal-history validator,
 TypeScript, targeted lint, review/renderer fingerprints and shared build pass.
-The older central-vessel history validator still fails its baseline snapshot:
+The older central-vessel history validator initially failed its baseline snapshot:
 expected `de8c41fb18b49b0e3ff04b72f146341950b29fb6f8ddd02710358caa81f8eb1a`,
 actual `4f64f24137c13afd151a2cd33b47028bb39fc86e6c6dd197d7e68c0a9d96f9f2`.
 The same result is reproduced after restoring the exact previous all-topic/recipe
 snapshot (`d5ce1738cbd115d4304926a4772d2eb5e3e16ff0040894975cb2bfc6fbd40f10`).
 Comparison with its original Git source identifies older lacrimal CT/MRI,
 corpus-spongiosum and recipe history differences, not these four ultrasound
-topics. The old expected hash is preserved; this historical audit remains open.
+topics. [The historical audit is now repaired](CENTRAL_VESSEL_HISTORY_REPAIR.md):
+exact original Git trees prove the unchanged baseline and all 79 recorded
+replacements, separately from current export/rendering/identity checks. The old
+expected hash is preserved. The public test also unwinds later recorded topics
+before checking the original 79-placement pin; it does not overwrite that pin.
 
 No scan is loaded by these notes. Atlas, imaging-case and lecture entitlements
 remain independent. Generated website integration and hosted checks are pending.

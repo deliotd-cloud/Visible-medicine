@@ -4,10 +4,16 @@ import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {build} from './workspace-test-build.mjs';
 import {contentContext} from './content-contract-tools.mjs';
+import {authoringBeforeThoracicBranchImaging} from './thoracic-branch-imaging-history.mjs';
 const compiled=await build({stdin:{contents:"export * from './content/central-vessel-imaging.ts';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
-const {centralVesselImagingGroups:groups}=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+const source=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
-const {api,catalog:raw}=await contentContext(),catalog=api.bodyDisplayCatalog(raw);
+const context=await contentContext(),raw=context.catalog;
+// --check validates the original recorded placements after strictly unwinding
+// later teaching. Creation still requires the exact original source commit.
+const api=process.argv.includes('--check')?authoringBeforeThoracicBranchImaging(context):context.api;
+const groups=process.argv.includes('--check')?api.centralVesselImagingGroups:source.centralVesselImagingGroups;
+const catalog=api.bodyDisplayCatalog(raw);
 const entries=catalog.structures.flatMap(identity=>{const group=Object.entries(groups).find(([,g])=>g.fmaId===identity.fmaId)?.[0];return group?[{identity,group,topics:Object.keys(groups[group].focus)}]:[];});
 assert.equal(entries.length,29);assert.equal(Object.keys(groups).length,29);
 for(const e of entries){const g=groups[e.group];assert.equal(e.identity.system,'vessels');assert.equal(e.identity.category,'vessel');assert(e.identity.regions.includes(g.region));assert.equal(e.identity.laterality,g.laterality);}
@@ -17,7 +23,7 @@ for(const b of bundles)assert.equal(createHash('sha256').update(await readFile('
 const path='content/central-vessel-imaging-pins.json',sourceCommit='6d8c900b4f80843ca7568e4222ffb49d0d22e1f1';
 const base={sourceCommit,sourceVersion:catalog.sourceVersion,license:catalog.license,coordinateSystem:catalog.coordinateSystem,bundles};
 if(process.argv.includes('--check')){
- const saved=JSON.parse(await readFile(path));assert.deepEqual(saved.entries.map(({previous,anatomy,...e})=>e),entries);
+ const saved=JSON.parse(await readFile(path));assert.deepEqual(saved.entries.map(({previous:_previous,anatomy:_anatomy,...e})=>e),entries);
  for(const k of Object.keys(base))assert.deepEqual(saved[k],base[k]);
  for(const e of saved.entries)assert.deepEqual(e.anatomy,api.bodyLesson(e.identity,'anatomy'));
 }else{
