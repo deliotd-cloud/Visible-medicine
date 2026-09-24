@@ -13,6 +13,7 @@ const study = createRegionalMotorStudy({
   bindings: thoraxMotorBindings,
   nerves: thoraxMotorNerves,
   references: thoraxMotorReferences,
+  wholeBodyAlias: { name: 'whole-body', sourceRegion: 'thorax' },
 });
 export const thoraxMotorGroups = study.groups;
 export const thoraxMotorPlan = study.plan;

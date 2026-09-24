@@ -33,14 +33,20 @@ const shown = bodyDisplayCatalog(catalog);
 const expected = ['FMA13295', 'FMA9756', 'FMA9757', 'FMA9758'];
 assert.deepEqual(bindings.map((b) => b.fmaId).sort(), expected);
 assert.deepEqual(Object.keys(nerves), ['phrenic', 'intercostal']);
-assert.equal(groups(shown, 'whole-body').length, 0);
-assert.equal(plan(shown, 'whole-body', 'both', 'phrenic'), null);
+assert.equal(upperLimbMotorGroups(shown, 'whole-body').length, 0);
+assert.equal(lowerLimbMotorGroups(shown, 'whole-body').length, 0);
 for (const region of ['head-neck', 'abdomen', 'pelvis', 'upper-arm', 'thigh'])
   assert.deepEqual(groups(shown, region), []);
 
 const ids = (g) => g.targets.map((t) => t.structure.fmaId).sort();
+const thoraxScope = shown.structures.filter((s) => s.regions.includes('thorax') && ['muscles', 'skeleton'].includes(s.system));
+assert.equal(thoraxScope.length, 52);
+const thoraxBones = thoraxScope.filter((s) => s.system === 'skeleton').map((s) => s.id);
 for (const side of ['both', 'right', 'left']) {
   const found = groups(shown, 'thorax', side);
+  const whole = groups(shown, 'whole-body', side);
+  assert.deepEqual(whole, found);
+  assert.deepEqual(limbMotorGroups(shown, 'whole-body', side), found);
   assert.deepEqual(found.map((g) => g.key), ['phrenic', 'intercostal']);
   assert.deepEqual(ids(found[0]), ['FMA13295']);
   assert.deepEqual(ids(found[1]), ['FMA9756', 'FMA9757', 'FMA9758']);
@@ -66,6 +72,20 @@ for (const side of ['both', 'right', 'left']) {
     assert.deepEqual(resolve(region, profiles.thorax, reduce(next, { type: 'undo' })), resolve(region, profiles.thorax, prior));
     assert.deepEqual(reduce(reduce(next, { type: 'undo' }), { type: 'redo' }), next);
     assert.equal(plan(shown, 'thorax', side, group.key, true), null);
+    const wholeRecipe = plan(shown, 'whole-body', side, group.key);
+    assert.deepEqual(limbMotorPlan(shown, 'whole-body', side, group.key), wholeRecipe);
+    assert.equal(wholeRecipe.selectedId, recipe.selectedId);
+    const keep = new Set([...groups(shown, 'whole-body', 'both').find((g) => g.key === group.key).targets.map((t) => t.structure.id), ...thoraxBones]);
+    assert.deepEqual(wholeRecipe.action.hiddenIds, shown.structures.filter((s) => !keep.has(s.id)).map((s) => s.id));
+    const wholePrior = reduce(initial, { type: 'stage', id: profiles['whole-body'].stages[0].id });
+    const wholeNext = reduce(wholePrior, wholeRecipe.action);
+    for (const switched of ['both', 'right', 'left']) {
+      const scope = shown.structures.filter((s) => switched === 'both' || s.laterality === switched || ['midline', 'unpaired', 'unspecified'].includes(s.laterality));
+      assert.deepEqual(resolve(scope, profiles['whole-body'], wholeNext).visible.map((s) => s.id), scope.filter((s) => keep.has(s.id)).map((s) => s.id));
+    }
+    assert.deepEqual(resolve(shown.structures, profiles['whole-body'], reduce(wholeNext, { type: 'undo' })), resolve(shown.structures, profiles['whole-body'], wholePrior));
+    assert.deepEqual(reduce(reduce(wholeNext, { type: 'undo' }), { type: 'redo' }), wholeNext);
+    assert.equal(plan(shown, 'whole-body', side, group.key, true), null);
   }
 }
 
@@ -82,11 +102,35 @@ for (const mutate of [
 ]) {
   const bad = structuredClone(catalog);
   mutate(bad);
-  assert.deepEqual(groups(bad, 'thorax'), []);
-  assert.equal(plan(bad, 'thorax', 'both', 'phrenic'), null);
+  for (const region of ['thorax', 'whole-body']) {
+    assert.deepEqual(groups(bad, region), []);
+    assert.equal(plan(bad, region, 'both', 'phrenic'), null);
+  }
+  rejected++;
+}
+for (const source of thoraxScope) {
+  const bad = structuredClone(catalog);
+  bad.structures.find((s) => s.id === source.id).name += ' changed';
+  assert.deepEqual(groups(bad, 'whole-body'), []);
+  assert.equal(plan(bad, 'whole-body', 'both', 'phrenic'), null);
+  rejected++;
+}
+for (const bundleId of new Set(thoraxScope.map((s) => s.bundle))) {
+  const bad = structuredClone(catalog);
+  bad.bundles.find((b) => b.id === bundleId).sha256 = 'changed';
+  assert.deepEqual(groups(bad, 'whole-body'), []);
+  rejected++;
+}
+{
+  const bad = structuredClone(catalog);
+  const duplicate = structuredClone(bad.structures.find((s) => s.fmaId === 'FMA13295'));
+  duplicate.regions = ['head-neck'];
+  bad.structures.push(duplicate);
+  assert.deepEqual(groups(bad, 'whole-body'), []);
   rejected++;
 }
 assert.deepEqual(groups(shown, 'thorax', 'invalid'), []);
+assert.deepEqual(groups(shown, 'whole-body', 'invalid'), []);
 for (const region of ['shoulder', 'upper-arm', 'forearm', 'hand', 'pelvis', 'thigh', 'leg', 'foot'])
   for (const side of ['both', 'right', 'left'])
     assert.deepEqual(limbMotorGroups(shown, region, side), [
@@ -107,6 +151,9 @@ const props = { catalog: shown, region: 'thorax', side: 'left', selectedId: null
 const html = render(mod.exports.UpperLimbMotorExplorer, props);
 assert(html.includes('Muscles by nerve'));
 assert(!/<details[^>]*\bopen=/.test(html));
+const wholeHtml = render(mod.exports.UpperLimbMotorExplorer, { ...props, region: 'whole-body' });
+assert(wholeHtml.includes('Muscles by nerve'));
+assert(!/<details[^>]*\bopen=/.test(wholeHtml));
 assert.equal(render(mod.exports.UpperLimbMotorExplorer, { ...props, disabled: true }), '');
 for (const group of groups(shown, 'thorax', 'left')) {
   const detail = render(mod.exports.UpperLimbMotorDetails, { ...props, group });
@@ -125,16 +172,16 @@ function visit(node) {
 visit(ast);
 assert(handler);
 const script = ts.transpile(handler + ';exploreMotorGroup("phrenic");', { target: ts.ScriptTarget.ES2022 });
-for (const exam of [false, true]) {
+for (const region of ['thorax', 'whole-body']) for (const exam of [false, true]) {
   const calls = [];
   const record = (name) => (value) => calls.push([name, value]);
-  const env = { catalog: shown, initialRegion: 'thorax', side: 'left', exam, limbMotorPlan, initialInspection: { enabled: false }, cameraRestore: { current: 'old' }, dispatch: record('dispatch') };
+  const env = { catalog: shown, initialRegion: region, side: 'left', exam, limbMotorPlan, initialInspection: { enabled: false }, cameraRestore: { current: 'old' }, dispatch: record('dispatch') };
   for (const name of ['setSystems', 'setInspection', 'setExplode', 'setLayout', 'setPlate', 'setGhostRemoved', 'setFocus', 'setIsolated', 'setZoom', 'setSelectedId', 'setSelectionNotice', 'setReset']) env[name] = record(name);
   runInNewContext(script, env);
   if (exam) assert.deepEqual(calls, []);
   else {
     assert.equal(calls.filter((c) => c[0] === 'dispatch').length, 1);
-    assert.equal(calls.find((c) => c[0] === 'setSelectedId')[1], plan(shown, 'thorax', 'left', 'phrenic').selectedId);
+    assert.equal(calls.find((c) => c[0] === 'setSelectedId')[1], plan(shown, region, 'left', 'phrenic').selectedId);
     assert.equal(env.cameraRestore.current, null);
   }
 }

@@ -45,26 +45,29 @@ export function createRegionalMotorStudy(definition: {
     { label: string; note: string; references: readonly string[] }
   >;
   references: Record<string, string>;
+  /** Explicit display alias; validation still uses the pinned source region. */
+  wholeBodyAlias?: { name: 'whole-body'; sourceRegion: string };
 }) {
-  const { pins, regions, bindings, nerves, references } = definition;
+  const { pins, regions, bindings, nerves, references, wholeBodyAlias } = definition;
   const byId = new Map(pins.entries.map((s) => [s.id, canonical(s)]));
   const bundleById = new Map(pins.bundles.map((b) => [b.id, canonical(b)]));
   function sourceScope(
     catalog: BodyCatalog,
     region: string,
   ): BodyStructure[] | null {
+    const sourceRegion = region === wholeBodyAlias?.name ? wholeBodyAlias.sourceRegion : region;
     if (
-      !regions.includes(region) ||
+      !sourceRegion || !regions.includes(sourceRegion) ||
       catalog.sourceVersion !== pins.sourceVersion ||
       catalog.license !== pins.license ||
       canonical(catalog.coordinateSystem) !== canonical(pins.coordinateSystem)
     )
       return null;
-    const expected = pins.entries.filter((s) => s.regions.includes(region));
+    const expected = pins.entries.filter((s) => s.regions.includes(sourceRegion));
     const expectedIds = new Set(expected.map((s) => s.id));
     const entries = catalog.structures.filter(
       (s) =>
-        s.regions.includes(region) &&
+        s.regions.includes(sourceRegion) &&
         ['muscles', 'skeleton'].includes(s.system),
     );
     if (
@@ -131,7 +134,7 @@ export function createRegionalMotorStudy(definition: {
       action: {
         type: 'load-view',
         hiddenIds: catalog.structures
-          .filter((s) => s.regions.includes(region) && !keep.has(s.id))
+          .filter((s) => (region === wholeBodyAlias?.name || s.regions.includes(region)) && !keep.has(s.id))
           .map((s) => s.id),
       },
       selectedId: visible.targets[0].structure.id,
