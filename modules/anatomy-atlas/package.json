@@ -115,6 +115,7 @@
     "arterial-connections:test": "node scripts/pin-lower-limb-arterial.mjs --check && node scripts/pin-upper-limb-arterial.mjs --check && node scripts/validate-lower-limb-arterial.mjs && node scripts/validate-lower-limb-arterial.mjs --upper",
     "hip-imaging:test": "node scripts/pin-hip-imaging.mjs --check && node scripts/validate-hip-imaging.mjs",
     "lower-limb-motor:test": "node scripts/pin-lower-limb-motor.mjs --check && node scripts/validate-lower-limb-motor.mjs",
+    "thorax-motor:test": "node scripts/pin-thorax-motor.mjs --check && node scripts/validate-thorax-motor.mjs",
     "body-decisions:test": "node scripts/body-renderer-revisions.mjs --check && node scripts/validate-body-decisions.mjs",
     "body-reviews:revisions": "node scripts/body-renderer-revisions.mjs",
     "body-review:test": "node scripts/validate-body-review.mjs",
