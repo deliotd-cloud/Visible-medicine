@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+24 September pulmonary-vein ultrasound integration: shared viewer binds Atlas
+`0d2d5dd`, adding four distinct echo orientation drafts to existing panels.
+All 136 models / 143 protected paths and independent access gates are preserved.
+See [integration boundaries](atlas-pulmonary-vein-ultrasound-20260924.md); the
+main-task checkpoint records publication/recovery. Clinical, registration and
+device sign-off remain open. Continue the full regional roadmap after publishing.
+
 24 September paired popliteal viewer integration: runtime binds Atlas `f54d633`.
 Leg/Whole body gain the paired artery–vein focus; Search preserves the current
 view on explicit rejection and close-up captions follow study identity. All 136

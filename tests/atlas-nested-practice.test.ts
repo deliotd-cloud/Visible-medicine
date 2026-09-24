@@ -8,9 +8,9 @@ test('regional practice export preserves every model and binds the tested named-
   const base = 'public/atlas-runtime/head-neck/';
   const sha = (b: string | Buffer) => createHash('sha256').update(b).digest('hex');
   const bytes = readFileSync(base + 'manifest.json');
-  assert.equal(sha(bytes), 'e3ad04c47e25781cf4ebba1333c83167e982ff0cdb933dc9db2ab33eaca521e0');
+  assert.equal(sha(bytes), 'cd6f0eb90b80dc32fff3aebdea348c30d9f33a2ed1291324be530d8619ae0834');
   const manifest = JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit, 'f54d6339e8c7820c2fe37b5161f548776e3c873e');
+  assert.equal(manifest.sourceCommit, '0d2d5dd5a0530f9c726e46e49d0367a1730336bd');
   assert.equal(manifest.patientDataIncluded, false);
   assert.equal(manifest.clinicalApproved, false);
   assert.equal(manifest.imagingConnection, false);

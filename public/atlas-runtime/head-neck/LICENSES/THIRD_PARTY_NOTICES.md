@@ -1,5 +1,14 @@
 # Third-party notices
 
+## Pulmonary-vein ultrasound teaching — 24 September 2026
+
+Four original orientation drafts cite the ASE 2019 comprehensive TTE and
+ASE/SCA 2013 comprehensive TEE publications as factual references. No images,
+figures, tables, videos or verbatim passages are incorporated. These citations
+do not grant reuse rights to the publications themselves. Existing attributed
+BodyParts3D surfaces are unchanged; no new external asset, dependency or service
+is introduced. See [reference and review scope](../docs/PULMONARY_VEIN_ULTRASOUND.md).
+
 ## Popliteal artery–vein study — 24 September 2026
 
 The paired study uses existing attributed BodyParts3D surfaces only. Brief
