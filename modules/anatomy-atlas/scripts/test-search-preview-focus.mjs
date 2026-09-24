@@ -6,7 +6,7 @@ import {runInNewContext} from 'node:vm';
 import {build} from './workspace-component-test-build.mjs';
 
 const require=createRequire(import.meta.url),React=require('react');
-let active=false,states=[],stateCursor=0,refs=[],refCursor=0,effects=[],context;
+let active=false,states=[],stateCursor=0,refs=[],refCursor=0,effects=[];
 const shim={
   ...React,
   useState(initial){
@@ -63,7 +63,7 @@ const find=(tree,predicate,label)=>{
   const node=walk(tree,predicate)[0];assert(node,label);return node;
 };
 const calls=[];
-context={
+const context={
   mode:'explore',exam:false,focusView:false,panelLayout:null,
   chooseMode:mode=>calls.push(['mode',mode]),
   setPanelOpen:(info,open)=>calls.push(['panel',info,open]),
@@ -160,9 +160,57 @@ for(const entry of previewCases){
     render();attachAndCommit({confirmation:false});
     assert.equal(document.activeElement,focusedOnHandoff,`${entry.action.type} ${layout} handoff does not run preview restoration`);
     assert.equal(find(tree,node=>node.props.className==='atlas-search-dialog','dialog popup').props.finalFocus(),launcher,`${entry.action.type} ${layout} restores Search launcher on dialog close`);
-    assert.deepEqual(calls,[['mode','dissect'],[entry.action.type,entry.action.id],['panel',false,false],['panel',true,false]],`${entry.action.type} ${layout} leaves both panels closed`);
+    assert.deepEqual(calls,[[entry.action.type,entry.action.id],['mode','dissect'],['panel',false,false],['panel',true,false]],`${entry.action.type} ${layout} changes mode and panels only after activation`);
   }
 }
+
+// Explicit source-guard rejection is not a successful handoff. Keep the query,
+// preview, workspace mode and panels; announce the failure without extra UI.
+for(const entry of previewCases){
+  const callback=entry.action.type==='focus'?'onFocus':'onWindow';
+  const original=props[callback];
+  for(const layout of ['desktop','collapsed','focus view']){
+    reset(entry.label);
+    context.focusView=layout==='focus view';
+    context.panelLayout=layout==='collapsed'?{tools:true,info:true}:null;
+    props[callback]=id=>{calls.push([entry.action.type,id]);return false;};
+    const {origin}=openPreview(entry);
+    find(tree,node=>text(node)==='Open study view','rejected confirmation').props.onClick();
+    render();attachAndCommit();
+    assert.equal(tree.props.open,true,'rejection retains the Search dialog');
+    assert.equal(states[1],entry.label,'rejection retains the query');
+    assert.equal(states[4].key,entry.key,'rejection retains the preview');
+    assert.deepEqual(calls,[[entry.action.type,entry.action.id]],'no mode or panel mutation on rejection');
+    assert.match(text(find(tree,node=>node.props.role==='alert','accessible failure')),/Your view has been kept/);
+    find(tree,node=>text(node)==='Keep current view','cancel rejected preview').props.onClick();
+    render();attachAndCommit({confirmation:false});
+    assert.equal(document.activeElement,origin,'cancel remains keyboard-accessible');
+    assert.equal(walk(tree,node=>node.props.role==='alert').length,0,'cancellation clears the issue');
+  }
+  for(const result of [true,undefined]){
+    reset(entry.label);
+    props[callback]=id=>{calls.push([entry.action.type,id]);return result;};
+    openPreview(entry);
+    find(tree,node=>text(node)==='Open study view','accepted confirmation').props.onClick();
+    render();attachAndCommit({confirmation:false});
+    assert.equal(tree.props.open,false,'success and legacy void handlers close Search');
+    assert.deepEqual(calls,[[entry.action.type,entry.action.id],['mode','dissect'],['panel',false,false],['panel',true,false]]);
+  }
+  props[callback]=original;
+}
+
+// A preview can become stale while a catalogue/scope update arrives.
+reset();openPreview();
+const originalRegion=props.region;
+props.region='hand';render();attachAndCommit();
+find(tree,node=>text(node)==='Open study view','stale confirmation').props.onClick();
+render();attachAndCommit();
+assert.equal(tree.props.open,true);assert.deepEqual(calls,[]);
+assert.match(text(find(tree,node=>node.props.role==='alert','stale-result notice')),/no longer available/);
+find(tree,node=>node.type==='input'&&node.props.type==='search','edit after failure').props.onChange({target:{value:'finger'}});
+render();attachAndCommit({confirmation:false});
+assert.equal(walk(tree,node=>node.props.role==='alert').length,0);
+props.region=originalRegion;
 
 reset();openPreview();
 const focusedOnExam=document.activeElement;context.exam=true;render();attachAndCommit({confirmation:false});
@@ -174,6 +222,6 @@ assert.equal(calls.length,examCalls,'exam blocks stale study confirmation');
 console.log(JSON.stringify({
   passed:true,component:'AtlasSearch',actualComponentCallbacks:true,
   activeElementAssertions:true,browserAcceptance:false,
-  cases:['window/focus entry and cancel','query/filter invalidation','missing-origin fallback','desktop/collapsed/focus-view handoff','close/exam'],
+  cases:['window/focus entry and cancel','query/filter invalidation','missing-origin fallback','desktop/collapsed/focus-view handoff','six source-guard rejections','success/legacy-void callbacks','stale-result recovery','close/exam'],
   limitations:'Controlled hooks and focusable-node document boundary; not a browser DOM, native details-state, or visual test.',
 }));

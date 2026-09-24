@@ -1,5 +1,11 @@
 # Current atlas status
 
+[Study activation feedback](SEARCH_ACTIVATION_FEEDBACK.md) keeps Search open
+with an accessible notice when a source guard rejects a study. Mode and panels
+remain unchanged; successful handoffs retain the existing uncluttered behavior.
+Controlled component/focus checks pass. No anatomy or teaching changes;
+fresh-browser popliteal/feedback QA and website integration remain outstanding.
+
 [Popliteal artery–vein study](POPLITEAL_VESSEL_STUDY.md) combines existing vessels
 and knee context in Leg and Whole body through one searchable focus. Exact-source
 guards, side filtering, steady close-up bounds, real mesh label anchors and

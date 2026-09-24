@@ -454,7 +454,7 @@ for (const layout of [
       tree = renderSearch();
       walk(tree, n => n.props.children === 'Open study view')[0].props.onClick();
     }
-    same(calls, type === 'select' ? [['select', entry.action.id], ['info']] : [['mode', 'dissect'], [type, entry.action.id], ['panel', false, false], ['panel', true, false]]);
+    same(calls, type === 'select' ? [['select', entry.action.id], ['info']] : [[type, entry.action.id], ['mode', 'dissect'], ['panel', false, false], ['panel', true, false]]);
     same(states[0], false);
     const popup = walk(tree, n => n.props.className === 'atlas-search-dialog')[0];
     same(popup.props.finalFocus(), type === 'select' && layout.info ? false : searchLauncher, `${layout.name}/${type}`);

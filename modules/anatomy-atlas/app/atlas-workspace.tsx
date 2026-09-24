@@ -416,8 +416,8 @@ export function AtlasSearch({
   region: string;
   side: StudySide;
   onSelect: (id: string) => void;
-  onWindow: (id: string) => void;
-  onFocus: (id: string) => void;
+  onWindow: (id: string) => boolean | void;
+  onFocus: (id: string) => boolean | void;
   onDissect: (
     target: import('@/lib/nested-anatomy').NestedRequest,
     launcher: HTMLButtonElement | null,
@@ -430,6 +430,7 @@ export function AtlasSearch({
     [kind, setKind] = useState<AtlasSearchEntry['kind'] | 'all'>('all'),
     [limit, setLimit] = useState(12);
   const [preview, setPreview] = useState<AtlasSearchEntry | null>(null);
+  const [activationIssue, setActivationIssue] = useState<string | null>(null);
   const launcher = useRef<HTMLButtonElement | null>(null);
   const transferringFocus = useRef(false);
   const previewOrigin = useRef<HTMLButtonElement | null>(null);
@@ -464,6 +465,7 @@ export function AtlasSearch({
     if (target?.isConnected) target.focus({ preventScroll: true });
   }, [open, preview, workspace.exam]);
   const clearPreview = (restoreFocus = false) => {
+    setActivationIssue(null);
     restorePreviewFocus.current = restoreFocus;
     if (!restoreFocus) previewOrigin.current = null;
     setPreview(null);
@@ -480,14 +482,17 @@ export function AtlasSearch({
           current.key === entry.key &&
           JSON.stringify(current.action) === JSON.stringify(entry.action),
       )
-    )
+    ) {
+      setActivationIssue('This result is no longer available in the current atlas view. Your view has been kept; search again or choose another result.');
       return;
+    }
     if (
       (entry.action.type === 'window' || entry.action.type === 'focus') &&
       !confirmed
     ) {
       previewOrigin.current = origin;
       restorePreviewFocus.current = false;
+      setActivationIssue(null);
       setPreview(entry);
       return;
     }
@@ -505,9 +510,14 @@ export function AtlasSearch({
       entry.action.type === 'focus'
     ) {
       transferringFocus.current = false;
+      const opened = entry.action.type === 'window'
+        ? onWindow(entry.action.id)
+        : onFocus(entry.action.id);
+      if (opened === false) {
+        setActivationIssue('This study could not be opened with the current source data. Your view has been kept. Choose another study or reload the atlas.');
+        return;
+      }
       workspace.chooseMode('dissect');
-      if (entry.action.type === 'window') onWindow(entry.action.id);
-      else onFocus(entry.action.id);
       workspace.setPanelOpen(false, false);
       workspace.setPanelOpen(true, false);
     }
@@ -593,6 +603,7 @@ export function AtlasSearch({
             : `${matches.length} results`}
           {primary.length > limit ? ` · showing ${limit}${related.length?' direct results':''}` : ''}
         </output>
+        {activationIssue && <p role="alert">{activationIssue}</p>}
         {preview && (
           <section
             className="atlas-search-preview"

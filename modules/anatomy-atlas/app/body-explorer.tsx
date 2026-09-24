@@ -827,7 +827,7 @@ export default function BodyExplorer({
       exam ||
       (id !== 'free' && !profile.stages.some((item) => item.id === id))
     )
-      return;
+      return false;
     cameraRestore.current = null;
     setInspection(initialInspection);
     if (layout === 'tray') setPlate(false);
@@ -843,6 +843,7 @@ export default function BodyExplorer({
       profile.stages.find((s) => s.id === id)?.view ?? profile.stages[0].view,
     );
     setReset((n) => n + 1);
+    return true;
   }
   function changeFocus(id: string) {
     if (exam || !profile.focuses.some((item) => item.id === id)) return false;
