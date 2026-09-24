@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+24 September laryngeal muscle CT/MRI teaching: the shared viewer binds Atlas
+`b2ecd50`, adding fourteen orientation drafts through existing panels. All 136
+models / 143 protected paths and independent entitlements remain unchanged.
+See [integration boundaries](atlas-laryngeal-muscle-imaging-20260924.md) and the
+main-task checkpoint for actual publication/recovery. Continue regional coverage;
+clinical, imaging and device gates remain open.
+
 24 September spinal-disc Function teaching: the shared viewer binds Atlas
 `5efeed6`, adding 22 regional whole-disc drafts through the existing panel.
 All 136 models / 143 protected paths and independent entitlements remain

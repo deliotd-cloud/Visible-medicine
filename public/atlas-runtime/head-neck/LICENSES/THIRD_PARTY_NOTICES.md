@@ -1256,3 +1256,14 @@ public access does not grant assumed commercial asset rights. Existing
 BodyParts3D CC BY 4.0 credit is unchanged. No model, dependency, font, texture,
 dataset or mandatory fee is added. See `docs/SPINAL_DISC_FUNCTION.md` for source
 scope and outstanding revision-bound radiologist review.
+
+## Intrinsic laryngeal muscle imaging — 24 September 2026
+
+Original brief factual summaries cite TTUHSC El Paso's larynx/neck anatomy table,
+Romo and Curtin (AJNR 1999, PMID 10219413 / PMCID PMC7056085), and Kishimoto et al.
+(Journal of Anatomy 2021, doi:10.1111/joa.13451 / PMCID PMC8349453). These are
+reading references, not imported publisher prose, images, scans, tables, PDFs
+or datasets. No commercial asset rights are inferred from public/indexed access.
+Existing BodyParts3D CC BY 4.0 attribution remains unchanged. No dependency,
+font, texture, new mesh or fee is added. See `docs/LARYNGEAL_MUSCLE_IMAGING.md`
+for exact scope and outstanding radiologist validation.

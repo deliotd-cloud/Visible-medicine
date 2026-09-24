@@ -4,38 +4,36 @@ import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import test from 'node:test';
 
-test('regional spinal disc Function drafts reach the shared viewer without geometry or access changes',()=>{
+test('laryngeal muscle CT/MRI drafts reach the shared viewer without new geometry or access',()=>{
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
-  const bytes=readFileSync(base+'manifest.json');
+  const bytes=readFileSync(base+'manifest.json'),manifest=JSON.parse(bytes.toString());
   assert.equal(sha(bytes),'2c171f52f4c643511dc7649ded35e9db86a87e7b7975e5988705621fab1edb2a');
-  const manifest=JSON.parse(bytes.toString());
   assert.equal(manifest.sourceCommit,'b2ecd5081cbba447515a3dbfbf38e3d0ca1da96a');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
-  for(const [path,sha256] of Object.entries({
+  for(const [path,sha256]of Object.entries({
     'app/body-content.ts':'64b753333f473de90ce382f3af40cb212bfa0ce65975b9c021cfe127823cddde',
-    'content/spinal-disc-function.ts':'1d7d5f9883edea19a2339dd0c7da90d711ea9df6c3dfede922dd380ca307d4ef',
-    'lib/spinal-disc-function.ts':'402ffd000cf3566b9bee54b71bf3e6a135846ce5a0b77245f94b6deae0fd3607',
+    'content/laryngeal-muscle-imaging.ts':'0a9c09e86550b6253c4796ef1f91cfc743d3029d098f2ebdd66bb34c40b9b7cb',
+    'lib/laryngeal-muscle-imaging.ts':'2a00cc7372638c9cbf096f62327fb4e387e75db6cca4897cdb21f37bb18bcade',
   }))assert.deepEqual(inputs.filter(input=>input.path===path),[{path,sha256}]);
   assert.ok(!inputs.some(input=>/native-mr|local-mr-study|\.vmmr|patient[-_/]?data/i.test(input.path)));
   const runtime=(manifest.files as {path:string;sha256:string}[]).filter(f=>f.path.endsWith('.js')).map(f=>{
     const data=readFileSync(base+f.path);assert.equal(sha(data),f.sha256);return data.toString();
   }).join('\n');
   for(const marker of [
-    'This source-labelled cervical disc participates in load transfer during neck movement.',
-    'This source-labelled thoracic disc contributes to load transfer within the thoracic column.',
-    'This source-labelled lumbar disc helps distribute loads between vertebral bodies.',
-    'one source level remains unresolved.',
-    'Source names do not automatically assign a two-vertebra patient imaging interval.',
-    'Revision-bound radiologist review is pending.',
-    'Case, Atlas and lecture access remain independent.',
-    'https://anatomy.ttuhscep.edu/anatomytables/joints_back.html',
-    'https://pmc.ncbi.nlm.nih.gov/articles/PMC2078298/',
-    'https://pmc.ncbi.nlm.nih.gov/articles/PMC7311578/',
-    'https://pubmed.ncbi.nlm.nih.gov/8951017/',
+    'The posterior cricoarytenoid can be visible behind the cricoid;',
+    'On MRI, locate the expected lateral cricoarytenoid region',
+    'On MRI, orient to the expected transverse bridge behind both arytenoids;',
+    'On MRI, consider the expected oblique route between opposite arytenoids;',
+    'High-resolution cadaveric MRI supports anatomical research, not routine in-vivo visibility of each muscle.',
+    'No imaging study loaded. This source surface is not registered to a CT or MRI acquisition.',
+    'Atlas, case and paid-lecture access remain independent.',
+    'https://anatomy.ttuhscep.edu/schemes/larynx_tables.html',
+    'https://pmc.ncbi.nlm.nih.gov/articles/PMC7056085/',
+    'https://pmc.ncbi.nlm.nih.gov/articles/PMC8349453/',
   ])assert.ok(runtime.includes(marker),marker);
-  const previous=JSON.parse(execFileSync('git',['show','f7a09832ded47c0405ef378ad1d6a3f4ff223964:lib/atlas-model-inventory.json'],{encoding:'utf8'}));
+  const previous=JSON.parse(execFileSync('git',['show','c9d149f603b5254a9b20744b6633cd4980133dbb:lib/atlas-model-inventory.json'],{encoding:'utf8'}));
   const current=JSON.parse(readFileSync('lib/atlas-model-inventory.json','utf8'));
   assert.deepEqual(current.models,previous.models);
   assert.deepEqual(current.sources.filter((s:{module:string})=>s.module!=='head-neck'),previous.sources.filter((s:{module:string})=>s.module!=='head-neck'));

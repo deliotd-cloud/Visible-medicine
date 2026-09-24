@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "b86a1d9b2bf7995bc411b5a82448457a53d2cb9eb62a7b2cd563bc50e968d207"
+    "sha256": "a6ae72d46f6b577974fa7f6f009005768963ce06a81ee70b30626a05e1b6c6c5"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "0d06f249fae82ab8d4f93122e8a5dadb540bf9e486862fda8343505f2705178a"
+    "sha256": "64b753333f473de90ce382f3af40cb212bfa0ce65975b9c021cfe127823cddde"
   },
   {
     "path": "app/body-education-link.ts",
@@ -874,6 +874,10 @@
   {
     "path": "content/laryngeal-imaging.ts",
     "sha256": "bfcced54a94c0b349fdbd433dbdb015dd9b654c2a434d58fb12da85e2a04efad"
+  },
+  {
+    "path": "content/laryngeal-muscle-imaging.ts",
+    "sha256": "0a9c09e86550b6253c4796ef1f91cfc743d3029d098f2ebdd66bb34c40b9b7cb"
   },
   {
     "path": "content/laryngeal-muscle-teaching-pins.json",
@@ -2134,6 +2138,10 @@
   {
     "path": "lib/laryngeal-imaging.ts",
     "sha256": "145628e9fd451edca4ef20f0f6dcadb8eb0d0680a5ce1214ef9560751cbdf189"
+  },
+  {
+    "path": "lib/laryngeal-muscle-imaging.ts",
+    "sha256": "2a00cc7372638c9cbf096f62327fb4e387e75db6cca4897cdb21f37bb18bcade"
   },
   {
     "path": "lib/laryngeal-muscle-teaching.ts",
