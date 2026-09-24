@@ -8,12 +8,12 @@ const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
 
 test('shared viewer binds reset wording and keyboard-only orientation status to exact Atlas source',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'edb5264f4bba4725f8694302305a6a7819c28ac1cefe5be7c8aff25fc9c135c2');
+  assert.equal(sha(manifestBytes),'3d035346c7fc15596f9020810206629b375af0919fb8dcae6f45329e3b322c48');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'c9000cf68cf91f899ff48e930306dfc02f371b19');
+  assert.equal(manifest.sourceCommit,'ab0813470c036940969b8de9555bc2179a054331');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,expected] of Object.entries({
-    'app/body-explorer.tsx':'592e34b5b88dd53099bc12c61b36893bd51e0be8401601805eb01e4c7d8486bf',
+    'app/body-explorer.tsx':'070daaef3bf15338176ad48b3ecc24a57f6e41a7c134e4a6d5cf99f3cd0c4151',
     'app/body-scene.tsx':'a45ed62ff777f5850fc6a30cd2dd9234a17d4b163d905495acc2fc357d1d4132',
     'app/fitted-camera.tsx':'25af90a65131b77375c437a62b69288a95aeee6a224b417e7d595c5c72cc6c54',
     'lib/camera-keyboard.ts':'d26c359d9ccd7820c15099e36f7f6712d7e4a6ecbdc12fa3dc3d83ec8091acf2',

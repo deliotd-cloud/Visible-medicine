@@ -1,5 +1,15 @@
 # Visible Medicine — shared delivery plan
 
+24 September regional catch-up: the shared viewer now binds Atlas `ab08134`,
+including coronary venous parts, saved regional focus views and corrected V1
+search. The signed-in staging page verified all 136 actual model downloads
+before explicit source activation. All 135 previous hashes/142 paths are
+preserved; only the audited 40,996-byte coronary bundle is added. Access remains
+administrator-review and patient data/native MRI remain excluded. See
+[integration evidence and boundaries](atlas-regional-catchup-20260924.md).
+Use the main-task checkpoint for actual publication and recovery outcomes;
+no clinical or public release is implied.
+
 24 September source-only central-airway and hepatic-inflow integration: the
 generated shared regional/whole-body viewer now binds Atlas `c9000cf68cf91f899ff48e930306dfc02f371b19`.
 The exact-source Thorax airway focus and eight sided hepatic CT/MRI draft

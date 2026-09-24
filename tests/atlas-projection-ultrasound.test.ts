@@ -28,7 +28,7 @@ const ultrasoundIds=[
 
 test('regional runtime carries 11 exact thoracoabdominal X-ray and 15 spine ultrasound drafts',()=>{
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-  assert.equal(manifest.sourceCommit,'c9000cf68cf91f899ff48e930306dfc02f371b19');
+  assert.equal(manifest.sourceCommit,'ab0813470c036940969b8de9555bc2179a054331');
   assert.equal(new Set(xrayIds).size,11);
   assert.equal(new Set(ultrasoundIds).size,15);
   const regionalIds=new Set((manifest.regionalScopes as {regionalIds:string[]}[]).flatMap(scope=>scope.regionalIds));
@@ -61,7 +61,7 @@ test('regional runtime carries 11 exact thoracoabdominal X-ray and 15 spine ultr
 
 test('exact right and left main bronchus selections carry external ultrasound draft limits',()=>{
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-  assert.equal(manifest.sourceCommit,'c9000cf68cf91f899ff48e930306dfc02f371b19');
+  assert.equal(manifest.sourceCommit,'ab0813470c036940969b8de9555bc2179a054331');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   assert.equal(inputs.find(input=>input.path==='content/thoracoabdominal-organ-imaging.ts')?.sha256,
     'dac7b927e8a04344886c3f2e7e139d7286d7e910258ac9a60d741f8b6b1ca184');
@@ -94,9 +94,9 @@ test('draft export keeps clinical, access and model boundaries',()=>{
     assert.equal(manifest[flag],false,flag);
   const inventory=JSON.parse(readFileSync('lib/atlas-model-inventory.json','utf8'));
   const previous=JSON.parse(original('lib/atlas-model-inventory.json').toString());
-  assert.deepEqual(inventory.models,previous.models);
-  assert.equal(inventory.models.length,135);
-  assert.equal(inventory.models.flatMap((model:{paths:string[]})=>model.paths).length,142);
+  assert.deepEqual(inventory.models.filter((m:{sha256:string})=>m.sha256!=='4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12'),previous.models);
+  assert.equal(inventory.models.length,136);
+  assert.equal(inventory.models.flatMap((model:{paths:string[]})=>model.paths).length,143);
   assert.deepEqual(inventory.sources.filter((source:{module:string})=>source.module!=='head-neck'),
     previous.sources.filter((source:{module:string})=>source.module!=='head-neck'));
   for(const path of ['lib/atlas-delivery-access.ts','lib/lecture-repository.ts','lib/atlas-navigation.ts'])

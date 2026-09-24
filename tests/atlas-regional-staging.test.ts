@@ -25,8 +25,9 @@ test('regional staging preserves immutable candidates after explicit administrat
   assert.equal(candidate.proposedInventorySha256, 'a74532b7b64b61221f14ddefb02c267296376397c19da5553772996fdcaebba4');
   assert.equal(candidate.activeInventorySha256, '9f686f1a2c9909bba2b46b1b76805aa8168287c4aa4d0f420e942b3fb7c90e2c');
   // Teaching/UI companions can advance without rewriting the immutable staging receipt.
-  assert.equal(sha(readFileSync('lib/atlas-model-inventory.json', 'utf8')), '85167c7ff6ee2742392caa4e6ea13aa620c9184d39f316f28e6bfd60ff9e2bd0');
-  const priorActiveModels=active.models.filter((m: AtlasStoredModel)=>m.sha256!==celiac.models[0].sha256);
+  assert.equal(sha(readFileSync('lib/atlas-model-inventory.json', 'utf8')), 'f6fb595e068138c04809dceeb843914124d47749c686e193d6c2d4ec9a7e4730');
+  const beforeCoronary=active.models.filter((m: AtlasStoredModel)=>m.sha256!==coronary.models[0].sha256);
+  const priorActiveModels=beforeCoronary.filter((m: AtlasStoredModel)=>m.sha256!==celiac.models[0].sha256);
   const pelvicAlias = '/atlas-runtime/female-pelvis/models/hra-renal/kidneys.glb';
   const renal = active.models.find((m: AtlasStoredModel) => m.paths.includes(pelvicAlias));
   assert.equal(renal.sha256, 'bd5d2affb912f135c8c8da7e7892fbc906ebae017ed7042e900646c2b6332cfc');
@@ -35,7 +36,7 @@ test('regional staging preserves immutable candidates after explicit administrat
   const previousModels = priorActiveModels.map((m: AtlasStoredModel) => ({...m, paths:m.paths.filter(p => p !== pelvicAlias)}));
   assert.equal(sha(JSON.stringify(previousModels)), '5047d0652bcadd1772f60e2928ae53e228d9359d99488056e39777c4a7cdedb6', 'Removing exactly the new alias reproduces every previously verified model identity, byte count and path');
   assert.equal(sha(JSON.stringify(priorActiveModels)), '972cd41676713abf3aa458055783ce95bcfac41596bf5ec411911f9a1717aa10');
-  assert.equal(sha(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8')), 'edb5264f4bba4725f8694302305a6a7819c28ac1cefe5be7c8aff25fc9c135c2');
+  assert.equal(sha(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8')), '3d035346c7fc15596f9020810206629b375af0919fb8dcae6f45329e3b322c48');
   assert.deepEqual(candidate.models, [
     { sha256: 'f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826', bytes: 11856, paths: ['/atlas-runtime/head-neck/models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb'] },
     { sha256: '9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5', bytes: 65264, paths: ['/atlas-runtime/head-neck/models/bodyparts3d/short-ciliary/short-ciliary.glb'] },
@@ -73,8 +74,13 @@ test('regional staging preserves immutable candidates after explicit administrat
   const coronaryBytes=execFileSync('git',['show',`${coronary.websiteCandidate}:public${coronary.models[0].paths[0]}`]);
   assert.equal(coronaryBytes.length,coronary.models[0].bytes);
   assert.equal(sha(coronaryBytes),coronary.models[0].sha256);
-  assert.throws(()=>resolveAtlasDeliveryModel(new URL(coronary.models[0].paths[0],'https://atlas.test'),active.models),
-    'Staging registration must not activate a viewer model path');
+  const bridge=JSON.parse(execFileSync('git',['show','67c7437f399d6cdfaec27d575619f151dcedc53a:lib/atlas-model-inventory.json']).toString());
+  assert.equal(sha(JSON.stringify(bridge,null,2)+'\n'),coronary.activeInventorySha256);
+  assert.deepEqual(beforeCoronary,bridge.models,'Every bridge object and path remains unchanged');
+  assert.throws(()=>resolveAtlasDeliveryModel(new URL(coronary.models[0].paths[0],'https://atlas.test'),bridge.models),
+    'Historical staging bridge did not activate the viewer path');
+  assert.deepEqual(resolveAtlasDeliveryModel(new URL(coronary.models[0].paths[0],'https://atlas.test'),active.models),coronary.models[0],
+    'Explicit reviewed integration, not staging registration, activates the model path');
   for (const model of existing) assert.deepEqual(expected.find(m => m.sha256 === model.sha256), model);
   for (const path of celiac.models[0].paths) {
     assert.throws(() => resolveAtlasDeliveryModel(new URL(path, 'https://atlas.test'), priorActiveModels), 'Staging alone did not activate the model in the prior inventory');
@@ -103,8 +109,8 @@ test('regional staging preserves immutable candidates after explicit administrat
   assert.deepEqual(exports.atlasRegisteredStagingModels, expected);
   assert.equal(expected.length, 136);
   assert.equal(expected.flatMap(m => m.paths).length, 143);
-  assert.equal(active.models.length, 135);
-  assert.deepEqual(existing, active.models.map((m: AtlasStoredModel) => ({...m, paths:[...m.paths].sort()})), 'Every previous object remains active; the new correction is staging-only');
+  assert.equal(active.models.length, 136);
+  assert.deepEqual(existing, active.models.map((m: AtlasStoredModel) => ({...m, paths:[...m.paths].sort()})), 'Every previous object remains active after explicit coronary integration');
   assert.equal(candidate.models.reduce((n: number, m: AtlasStoredModel) => n + m.bytes, 0), 77120);
   for (const mode of ['upload', 'check', 'download'] as const) assert.strictEqual(atlasStagingCheckModels(mode, expected, active.models), expected);
   assert.strictEqual(atlasStagingCheckModels('delivery', expected, active.models), active.models);

@@ -23,9 +23,9 @@
     },
     {
       "module": "head-neck",
-      "sourceCommit": "c9000cf68cf91f899ff48e930306dfc02f371b19",
-      "manifestSha256": "edb5264f4bba4725f8694302305a6a7819c28ac1cefe5be7c8aff25fc9c135c2",
-      "modelPaths": 134
+      "sourceCommit": "ab0813470c036940969b8de9555bc2179a054331",
+      "manifestSha256": "3d035346c7fc15596f9020810206629b375af0919fb8dcae6f45329e3b322c48",
+      "modelPaths": 135
     }
   ],
   "models": [
@@ -280,6 +280,13 @@
       "bytes": 98216,
       "paths": [
         "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-organs-gaps.glb"
+      ]
+    },
+    {
+      "sha256": "4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12",
+      "bytes": 40996,
+      "paths": [
+        "/atlas-runtime/head-neck/models/bodyparts3d/coronary-venous/coronary-venous.glb"
       ]
     },
     {

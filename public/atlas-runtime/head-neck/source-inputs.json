@@ -93,7 +93,7 @@
   },
   {
     "path": "app/body-explorer.tsx",
-    "sha256": "592e34b5b88dd53099bc12c61b36893bd51e0be8401601805eb01e4c7d8486bf"
+    "sha256": "070daaef3bf15338176ad48b3ecc24a57f6e41a7c134e4a6d5cf99f3cd0c4151"
   },
   {
     "path": "app/body-scene.tsx",
@@ -141,7 +141,7 @@
   },
   {
     "path": "app/dissection-data.ts",
-    "sha256": "137b80b711edf348fd9533ee99f98ce97c02475aa792d8e5c6b0b2605b35d274"
+    "sha256": "69de94011698f8419b3ffa2b5ffbe1eb9df15fe17c3e3d941ace1087b42c8e1e"
   },
   {
     "path": "app/dissection-orientation.tsx",
@@ -185,7 +185,7 @@
   },
   {
     "path": "app/hra-renal-study.tsx",
-    "sha256": "03590d26e0640ad9979745b3d14a58272a253b6443f66c90fbf72fd47c1d00ab"
+    "sha256": "80eed76f9ea02589327c29f56ad74d66eb1d58759578f03abab6e6cad775db6a"
   },
   {
     "path": "app/imaging-comparison.css",
@@ -325,7 +325,7 @@
   },
   {
     "path": "app/um-knee-study.tsx",
-    "sha256": "b021611bd3009f11a13a5ff9416151262fbe72ff010e83833df45fa8ec16d730"
+    "sha256": "19083348d081b30481c5011c8b50e199b23c0dc4a98612a54d0e13a536bd585c"
   },
   {
     "path": "app/um-limb-learning.tsx",
@@ -353,7 +353,7 @@
   },
   {
     "path": "app/ventricles.tsx",
-    "sha256": "76edb842c6899ec10354ec032356640ca2fc1500c89183bd41ce4dd02cb35046"
+    "sha256": "c89ff9e95b6b5c993f19b3899318fada0501e493a78106e4e6b21a897552a1ca"
   },
   {
     "path": "app/ventricular-relationships.css",
@@ -558,6 +558,10 @@
   {
     "path": "content/core-organ-function.ts",
     "sha256": "ea4eb8d886f03cab39025dbdcbf1a4a630be83f04254cf731eab7b580222afd3"
+  },
+  {
+    "path": "content/coronary-venous-teaching.ts",
+    "sha256": "ccae64c4d3c441cf681e756456f91fb62f3987f9939dbd1d11fb6c547f393155"
   },
   {
     "path": "content/corpus-clinical.ts",
@@ -848,6 +852,10 @@
     "sha256": "1928f2ecce49146511325abe3fe6331291dcbbbb0ca6308f99e95be2353f07f8"
   },
   {
+    "path": "content/infrahyoid-layer-study.ts",
+    "sha256": "fc769248ed0ebe18572288b09793ebc37810d959ab333cde18a58e1f38d10e02"
+  },
+  {
     "path": "content/lacrimal-drainage-imaging-pins.json",
     "sha256": "0274e9775d804df06979cd9984a9f27083e22b2eb4aeee8ba1f3de1a46f54826"
   },
@@ -980,6 +988,10 @@
     "sha256": "6a38862dceedfb4d17a8610b954efa1d4a6a1925528091515bc2cabe0fd13c45"
   },
   {
+    "path": "content/mediastinal-organ-study.ts",
+    "sha256": "4307af9d54321db061a743e24faab1838487c220b3cc110528bf860002200767"
+  },
+  {
     "path": "content/metatarsal-surface-imaging-pins.json",
     "sha256": "323e74b613713ea121e23a19ee35739d5731b0f28ca8647cff90ca61c8b40b1d"
   },
@@ -1005,15 +1017,19 @@
   },
   {
     "path": "content/nested-review-bindings.json",
-    "sha256": "a7cbca23d7975f6266b5de1c7eced1cc821843280132bec1f326b2404635e335"
+    "sha256": "ae98b0279003f76f48f2409c51fefc563ce461670284ce36897dd28fa01690f3"
   },
   {
     "path": "content/nested-teaching-bindings.v1.json",
-    "sha256": "ed5b3b4968348d14e9feb65ac083b230ea80493360807fc440a0ee984070e315"
+    "sha256": "eee2e2c777674822b19d6f2d4dc7c3481b45e123915bfae565ab02bdba6a86fa"
   },
   {
     "path": "content/nested-teaching.ts",
-    "sha256": "7fd9bcf969c9fbd7aa8407c70ba01f0e716301048bb9dd048e99e036e25e3e19"
+    "sha256": "7bfb61c51a22046b50c5c411ba09223a5d0536b7adfef07990dd54b6caabbbd8"
+  },
+  {
+    "path": "content/ophthalmic-nerve-studies.ts",
+    "sha256": "4dad953a18972048d20d756a4358a52fb3742f4fefe6502e747df7900822581a"
   },
   {
     "path": "content/orbital-neck-muscle-imaging-pins.json",
@@ -1113,7 +1129,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "75ca66808ca5086cc65d756ebf9c257c20fc421d06f3a6d8eb75cf5bb57467ed"
+    "sha256": "34627fe3045625e662add1a88f7cc774573731188de0816212b449ac6aa85d18"
   },
   {
     "path": "content/sca-mca-clinical-pins.json",
@@ -1268,6 +1284,14 @@
     "sha256": "140b9bcd802fdf31e5498bc822b9691022fdcb7898730da22406fdd00b128888"
   },
   {
+    "path": "content/thorax-motor-pins.json",
+    "sha256": "ebd0fd6ca7d90f9229b47f181dda0640efeba20a08982fd2fa805fcf1b4c164e"
+  },
+  {
+    "path": "content/thorax-motor.ts",
+    "sha256": "41385b323720bd070e82a6b78dacf2adb1defc039636d154760a74ca1f42cbda"
+  },
+  {
     "path": "content/thorax-respiratory-study.ts",
     "sha256": "4631768eb5bf6e210231e0e3e9e3ba43a2fd6eccb23fda415c2964c964e9c0ba"
   },
@@ -1381,7 +1405,7 @@
   },
   {
     "path": "integration/head-neck/delivery.ts",
-    "sha256": "44256992d6342c247e7d42a1f1bb110c5ca590a88da4a619a087114678e28e7c"
+    "sha256": "a021cf6806b205834848faf3e1283827a402257922a2c94fd3a4b71799fc185e"
   },
   {
     "path": "integration/head-neck/framework.tsx",
@@ -1517,7 +1541,7 @@
   },
   {
     "path": "lib/anatomy-search.ts",
-    "sha256": "b67d5f0eb9d8aa96e16edf91fafbbea322913887912e4140d7697caefaa3fa92"
+    "sha256": "2c469d5d892b6bfbfe2c11211f2bc421a6664e3c5b0286cf017ac1b43f25d1a7"
   },
   {
     "path": "lib/anatomy-vessels.ts",
@@ -1541,7 +1565,7 @@
   },
   {
     "path": "lib/atlas-navigation.ts",
-    "sha256": "57d816744ec19ea2e2656f4cf307a653cedd49239a05e3afc4f33e67b125d7e6"
+    "sha256": "a8d79020c9d9283dfc50f7055b7c8015746a8f13962267c41f63accb200cdb39"
   },
   {
     "path": "lib/atlas-note-navigation.ts",
@@ -1702,6 +1726,10 @@
   {
     "path": "lib/core-organ-function.ts",
     "sha256": "6ecbd0d421c6caa5ffd3f02edadf8cfdbf49ef7bbab20ea3926054544c896925"
+  },
+  {
+    "path": "lib/coronary-venous.ts",
+    "sha256": "7fe9f98f5ea4ac4e7e9a76cd25016b5461393ba3f25e52b7b2fc8215c64cd62e"
   },
   {
     "path": "lib/corpus-imaging.ts",
@@ -2009,7 +2037,7 @@
   },
   {
     "path": "lib/hra-renal.ts",
-    "sha256": "83c90dd94edad6ae87c34ac31ee25af0f2896d27ce47fd41e2465b4fe7ef408f"
+    "sha256": "3b6d1e2cb4366a340f99ead5c92a94707ad583f12f4cf6699adaa90dcc1c945c"
   },
   {
     "path": "lib/iliac-arterial-imaging.ts",
@@ -2085,11 +2113,11 @@
   },
   {
     "path": "lib/learning-resource-types.ts",
-    "sha256": "f1140958921da01500d519ad3249aa5114f9c31ab19709b29bbf51675ccab161"
+    "sha256": "c08858a0b3bdcc0467d815d71a129428c3b311c1eaf318a544e1f091b1833778"
   },
   {
     "path": "lib/learning-resources.ts",
-    "sha256": "284d1a62cc44fd113a03c442b744546cdf1b7b93db5c9223c8b72f65cb2c2730"
+    "sha256": "e2e191c19df1f7bfebd31d429c6320430845d145ac1f9c604a011827eb482da4"
   },
   {
     "path": "lib/leg-attachments.ts",
@@ -2137,7 +2165,7 @@
   },
   {
     "path": "lib/limb-motor.ts",
-    "sha256": "853ccb6495673a5e33b1bac74bffc28ee5285f06903dd60f53d74fc507880426"
+    "sha256": "c8a648d04913eed4addbd9c7bc0cd01ddd6e76625459cc0bbd6a956bc39423f6"
   },
   {
     "path": "lib/limb-relationships-reasoning.ts",
@@ -2221,7 +2249,7 @@
   },
   {
     "path": "lib/nested-anatomy.ts",
-    "sha256": "ec289a3dbeadc13f0fca06b69e8ae10a9f4b7e06b2e5b475ce3217b521ac0082"
+    "sha256": "b9368085e520b5228f43391825729ee39b98995522b5db39ef2e8627cfcf28d1"
   },
   {
     "path": "lib/nested-practice.ts",
@@ -2377,7 +2405,7 @@
   },
   {
     "path": "lib/regional-motor.ts",
-    "sha256": "82fa38c847c564ce12f6de1de718167408fa4757ca750e3a8221ec630fc25d0e"
+    "sha256": "4c5b7715e7a175c16e9694f4aa0e7925d2c753fd5e167c4e2c567df3017fa4b9"
   },
   {
     "path": "lib/regional-vascular-clinical.ts",
@@ -2489,11 +2517,11 @@
   },
   {
     "path": "lib/study-library.ts",
-    "sha256": "001f48bdd36107bc1171e4b708f13e9215e927c7a9e44c11474f662d0cb363e3"
+    "sha256": "88b6f0937a24eca205f2f65b878dc2b33958ecbc241949579af62ab563f2cfc1"
   },
   {
     "path": "lib/study-links.ts",
-    "sha256": "01a25ef3beb3e435c43e8de937338dce538251522216a5ac69060bf700c915d6"
+    "sha256": "70ec07874a09584d15f7d2a264061988b561972ff62ed2f8f38207b36d886b6f"
   },
   {
     "path": "lib/study-navigation.ts",
@@ -2578,6 +2606,10 @@
   {
     "path": "lib/thoracoabdominal-organ-imaging.ts",
     "sha256": "c503474a75696b55f6bf6bd13bb01b85a60b79c1bc63e0740eb522d81966f720"
+  },
+  {
+    "path": "lib/thorax-motor.ts",
+    "sha256": "6e5f15f9c9f7e73457e2ac7502bddf6971b743bcd8ab2e35b86b6466bb42777b"
   },
   {
     "path": "lib/thyroid-imaging.ts",
@@ -2750,6 +2782,10 @@
   {
     "path": "public/models/bodyparts3d/collicular-brachia/catalog.json",
     "sha256": "a607dbbdae16aff65fa35c65e181fe0aa828b3e4d09b10ba2a851d46a0a4e9d0"
+  },
+  {
+    "path": "public/models/bodyparts3d/coronary-venous/catalog.json",
+    "sha256": "996d8ca712b12dc3c2b9df4a6bad372838aeca64f017574be244ffa0b129abfe"
   },
   {
     "path": "public/models/bodyparts3d/corpus-spongiosum/catalog.json",

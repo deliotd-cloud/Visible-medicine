@@ -8,7 +8,7 @@ const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
 test('head and neck delivery preserves the complete audited regional and nested scope',async()=>{
   const manifest=JSON.parse(await readFile(new URL('manifest.json',runtime),'utf8'));
   assert.match(manifest.sourceCommit,/^[a-f0-9]{40}$/);
-  assert.equal(manifest.sourceCommit,'c9000cf68cf91f899ff48e930306dfc02f371b19');
+  assert.equal(manifest.sourceCommit,'ab0813470c036940969b8de9555bc2179a054331');
   const inputs=JSON.parse(await readFile(new URL('source-inputs.json',runtime),'utf8')) as {path:string;sha256:string}[];
   assert.equal(inputs.find(input=>input.path==='lib/regional-framing.ts')?.sha256,'284ced594686b8d0ba77ebadc0081c5ea93c500733f01897d4334822fa2e1823','export includes the foot framing fallback source');
   assert.equal(manifest.region,'head-neck');assert.equal(manifest.structures,291);assert.equal(manifest.nestedSelections,75);
@@ -30,8 +30,8 @@ test('head and neck delivery preserves the complete audited regional and nested 
     const bytes=await readFile(new URL(file.path,runtime));assert.equal(bytes.length,file.bytes);assert.equal(sha(bytes),file.sha256);
   }
   assert.equal(manifest.schemaVersion,2);
-  assert.deepEqual(manifest.regionalScopes.map((s:{region:string;regionalIds:string[];nestedTargets:unknown[]})=>[s.region,s.regionalIds.length,s.nestedTargets.length]),[['head-neck',291,75],['thorax',158,9],['abdomen',106,16],['pelvis',82,4],['spine',115,0],['shoulder-arm',115,0],['forearm',86,0],['hand',124,0],['thigh',95,4],['leg',76,4],['foot',122,0],['whole-body',1104,104]]);
-  assert.equal(found.filter(p=>p.endsWith('.glb')).length,134);
+  assert.deepEqual(manifest.regionalScopes.map((s:{region:string;regionalIds:string[];nestedTargets:unknown[]})=>[s.region,s.regionalIds.length,s.nestedTargets.length]),[['head-neck',291,75],['thorax',158,11],['abdomen',106,16],['pelvis',82,4],['spine',115,0],['shoulder-arm',115,0],['forearm',86,0],['hand',124,0],['thigh',95,4],['leg',76,4],['foot',122,0],['whole-body',1104,106]]);
+  assert.equal(found.filter(p=>p.endsWith('.glb')).length,135);
   for(const bundle of manifest.modelBundles){
     const bytes=await readFile(new URL(bundle.url.split('?')[0].slice(1),runtime));
     assert.equal(sha(bytes),bundle.sha256);assert.equal(bytes.length,bundle.bytes);

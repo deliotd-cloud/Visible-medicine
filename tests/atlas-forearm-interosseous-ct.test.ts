@@ -14,9 +14,9 @@ const selections=[
 
 test('shared regional export retains four exact interosseous CT draft bindings and source limits',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'edb5264f4bba4725f8694302305a6a7819c28ac1cefe5be7c8aff25fc9c135c2');
+  assert.equal(sha(manifestBytes),'3d035346c7fc15596f9020810206629b375af0919fb8dcae6f45329e3b322c48');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'c9000cf68cf91f899ff48e930306dfc02f371b19');
+  assert.equal(manifest.sourceCommit,'ab0813470c036940969b8de9555bc2179a054331');
   for(const flag of ['patientDataIncluded','clinicalApproved','imagingConnection','standaloneReviewConnection'])
     assert.equal(manifest[flag],false,flag);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
@@ -59,6 +59,6 @@ test('shared regional export retains four exact interosseous CT draft bindings a
 
   const inventory=JSON.parse(readFileSync('lib/atlas-model-inventory.json','utf8'));
   assert.equal(inventory.sources.find((source:{module:string})=>source.module==='head-neck')?.manifestSha256,sha(manifestBytes));
-  assert.equal(inventory.models.length,135);
-  assert.equal(inventory.models.flatMap((model:{paths:string[]})=>model.paths).length,142);
+  assert.equal(inventory.models.length,136);
+  assert.equal(inventory.models.flatMap((model:{paths:string[]})=>model.paths).length,143);
 });
