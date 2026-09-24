@@ -23,6 +23,7 @@ import {
   studyRecipeActive,
 } from '../lib/study-library.ts';
 import { thoraxRespiratoryBindings, thoraxRespiratoryStudies } from '../content/thorax-respiratory-study.ts';
+import { thoraxCentralAirwayBindings, thoraxCentralAirwayStudy } from '../content/thorax-central-airway-study.ts';
 
 const hash = (text) => createHash('sha256').update(text).digest('hex');
 const raw = await readFile('public/models/bodyparts3d/full-body/catalog.json');
@@ -94,6 +95,54 @@ for (const study of thoraxRespiratoryStudies) {
   same(dissectionReducer(guided, { type: 'undo' }).focusId, previous.focusId);
   same(dissectionReducer(dissectionReducer(guided, { type: 'undo' }), { type: 'redo' }).focusId, study.id);
 }
+const airwayStudy = thoraxCentralAirwayStudy;
+const airwayFocus = thoraxProfile.focuses.filter((entry) => entry.id === airwayStudy.id);
+same(airwayFocus.length, 1, 'One central-airway focus retains its stable ID');
+same(airwayFocus[0].rule, { fmaIds: [...airwayStudy.fmaIds] },
+  'Central airway selection uses exact FMA identities, not a name pattern');
+same([airwayFocus[0].description, airwayFocus[0].inspect],
+  [airwayStudy.description, airwayStudy.inspect], 'Central airway limits reach the learner');
+check(airwayFocus[0].inspect.includes('do not establish a lumen, carina or lobar tree') &&
+  airwayFocus[0].inspect.includes('patient registration'),
+  'Central airway prompt does not imply internal anatomy or patient alignment');
+const airwayTargets = thoraxScope.filter((s) => airwayStudy.fmaIds.includes(s.fmaId));
+same(airwayTargets.length, 3, 'Three existing source-bound airway targets');
+for (const expected of thoraxCentralAirwayBindings) {
+  const found = airwayTargets.filter((s) => s.id === expected.id || s.fmaId === expected.fmaId);
+  same(found.length, 1, `Unique central airway identity ${expected.fmaId}`);
+  same({ ...sourceBinding(found[0]), laterality: found[0].laterality }, expected,
+    `Pinned central airway source and laterality ${expected.fmaId}`);
+}
+same(ids(stageStructures(thoraxScope, thoraxProfile, 'free', airwayStudy.id)), ids(airwayTargets),
+  'Both-sides focus retains only the trachea and two supplied main-bronchus surfaces');
+for (const side of ['left', 'right']) {
+  const sideScope = thoraxScope.filter((s) =>
+    s.laterality === side || ['midline', 'unpaired', 'unspecified'].includes(s.laterality));
+  const expected = airwayTargets.filter((s) => s.laterality === side || s.laterality === 'unpaired');
+  same(ids(stageStructures(sideScope, thoraxProfile, 'free', airwayStudy.id)), ids(expected),
+    `Side-filtered airway focus retains trachea and ${side} main bronchus`);
+  const sideBronchus = expected.find((s) => s.laterality === side);
+  same(stageStructures(sideScope.filter((s) => s !== sideBronchus), thoraxProfile, 'free', airwayStudy.id), [],
+    `Missing ${side} bronchus cannot masquerade as an opposite-side filter`);
+}
+for (const target of airwayTargets) {
+  const changed = thoraxScope.map((s) => s.id === target.id
+    ? { ...s, sources: [{ ...s.sources[0], sha256: '0'.repeat(64) }] } : s);
+  same(stageStructures(changed, thoraxProfile, 'free', airwayStudy.id), [],
+    `Changed source hash fails closed for ${target.fmaId}`);
+  same(stageStructures(thoraxScope.filter((s) => s.id !== target.id), thoraxProfile, 'free', airwayStudy.id), [],
+    `Missing source fails closed for ${target.fmaId}`);
+  same(stageStructures([...thoraxScope, target], thoraxProfile, 'free', airwayStudy.id), [],
+    `Duplicate source fails closed for ${target.fmaId}`);
+  same(stageStructures(thoraxScope.map((s) => s.id === target.id
+    ? { ...s, laterality: 'unspecified' } : s), thoraxProfile, 'free', airwayStudy.id), [],
+    `Changed source laterality fails closed for ${target.fmaId}`);
+}
+same(stageStructures(thoraxScope.filter((s) => s.laterality === 'unpaired'),
+  thoraxProfile, 'free', airwayStudy.id), [],
+  'Trachea alone cannot masquerade as a complete side-filtered study');
+same(studyLibraryAction(thoraxScope, thoraxProfile, `focus:${airwayStudy.id}`, false),
+  { kind: 'focus', id: airwayStudy.id });
 same(
   hash(raw),
   '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7',

@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import { build } from './workspace-test-build.mjs';
+import { preCentralAirwayProfiles } from './central-airway-history.mjs';
 
 const hash = value => createHash('sha256').update(value).digest('hex');
 const pins = JSON.parse(await readFile('content/forearm-superficial-vein-pins.json'));
@@ -92,7 +93,7 @@ assert.equal(focuses.length, 1);
 assert.equal(focuses[0].title, study.title);
 assert.deepEqual(focuses[0].rule, {fmaIds: study.targetFmaIds});
 assert.deepEqual(focuses[0].context, study.context);
-const priorProfiles = structuredClone(api.dissectionProfiles);
+const priorProfiles = preCentralAirwayProfiles(api.dissectionProfiles);
 priorProfiles.forearm.focuses = priorProfiles.forearm.focuses.filter(f => f.id !== study.id);
 assert.deepEqual(priorProfiles.forearm.references.slice(-2), [
   'https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/README_e.html',

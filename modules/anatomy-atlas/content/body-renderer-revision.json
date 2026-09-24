@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "e7e85fd11c92f6467dc4c235ec3efa05ca57e4709fe930eb507c95509e91cbcd"
+      "sha256": "9d76eeeb84725aebaea54519adec90b268034c34ca70501c60eebb98d3e0babd"
     },
     {
       "path": "app/body-education-link.ts",
@@ -78,11 +78,11 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "d7e917f3640c088d8a22edc69dda0cf697c3dfec05a6acc1d34c12b492545050"
+      "sha256": "592e34b5b88dd53099bc12c61b36893bd51e0be8401601805eb01e4c7d8486bf"
     },
     {
       "path": "app/body-scene.tsx",
-      "sha256": "bef3d3d67aa39d8ebe924ca5e0b42d3f82198d61538a02c6be30d8dfd23f1301"
+      "sha256": "a45ed62ff777f5850fc6a30cd2dd9234a17d4b163d905495acc2fc357d1d4132"
     },
     {
       "path": "app/body-types.ts",
@@ -126,7 +126,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "51b7d1bcf10d98e02d2016d648d92748fe01a5b7baf5c4d016a1d9c587a7cefb"
+      "sha256": "137b80b711edf348fd9533ee99f98ce97c02475aa792d8e5c6b0b2605b35d274"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -154,7 +154,7 @@
     },
     {
       "path": "app/fitted-camera.tsx",
-      "sha256": "4d659d330d43f3482043c9fc3d9992993b4bef88b194645dfd3472f80184c203"
+      "sha256": "25af90a65131b77375c437a62b69288a95aeee6a224b417e7d595c5c72cc6c54"
     },
     {
       "path": "app/globals.css",
@@ -242,7 +242,7 @@
     },
     {
       "path": "app/scene-label-layer.tsx",
-      "sha256": "acc22f03e90b46a9c67cafe31ba3fa6f59020cb2a3fe83f32c4ebd8a294b7d9f"
+      "sha256": "68796097e03fc0d08473294ad0d3c3ca89947894233bfde0d28f31b5940406b4"
     },
     {
       "path": "app/scene-orientation.css",
@@ -681,12 +681,16 @@
       "sha256": "80aba36ae5a6dfb3313510f75d414f96c27468d00c912c22b3d87dad5dfa2ba2"
     },
     {
+      "path": "content/forearm-arterial-ct-pins.json",
+      "sha256": "2631968bf877c2b0fda7a01bfd5925cf25c16f0fb804de54668051ad274a6e0f"
+    },
+    {
       "path": "content/forearm-arterial-imaging-pins.json",
       "sha256": "eae339a9d4868bfeff7310c35bc8391cb200c6a32893456ffae1758132c3cb51"
     },
     {
       "path": "content/forearm-arterial-imaging.ts",
-      "sha256": "feb1c5eae4e47db86bd955e104019d15c875ba65bf470cc1e24db0ef66f997bf"
+      "sha256": "8786e98000b58eb6e256d6ccc73f3b653f3ffe714103a59822722f207b9ef791"
     },
     {
       "path": "content/forearm-attachment-pins.json",
@@ -703,6 +707,14 @@
     {
       "path": "content/forearm-muscle-imaging.ts",
       "sha256": "3997414ad4f60fd6a9f2689bb02aea230aa7ddaa01190640dc8638150a280005"
+    },
+    {
+      "path": "content/forearm-superficial-vein-runtime-pins.json",
+      "sha256": "cb864bdb2d08c8585091a9c7a0cad37392d8b7aff374910d16ea01478a0916e6"
+    },
+    {
+      "path": "content/forearm-superficial-vein-study.ts",
+      "sha256": "6ad60f58f4131df71d35580d086729b27c39cd4d2f0819a5464df43293960053"
     },
     {
       "path": "content/forearm-venous-imaging-pins.json",
@@ -823,6 +835,14 @@
     {
       "path": "content/inferior-thyroid-context-pins.json",
       "sha256": "1928f2ecce49146511325abe3fe6331291dcbbbb0ca6308f99e95be2353f07f8"
+    },
+    {
+      "path": "content/lacrimal-drainage-imaging-pins.json",
+      "sha256": "0274e9775d804df06979cd9984a9f27083e22b2eb4aeee8ba1f3de1a46f54826"
+    },
+    {
+      "path": "content/lacrimal-drainage-imaging.ts",
+      "sha256": "f416f0caadde905b7ab573f48589ec20d5f30c128d411c470c44ec70da63bed4"
     },
     {
       "path": "content/laryngeal-imaging-pins.json",
@@ -1193,6 +1213,14 @@
       "sha256": "dac7b927e8a04344886c3f2e7e139d7286d7e910258ac9a60d741f8b6b1ca184"
     },
     {
+      "path": "content/thorax-central-airway-study.ts",
+      "sha256": "140b9bcd802fdf31e5498bc822b9691022fdcb7898730da22406fdd00b128888"
+    },
+    {
+      "path": "content/thorax-respiratory-study.ts",
+      "sha256": "4631768eb5bf6e210231e0e3e9e3ba43a2fd6eccb23fda415c2964c964e9c0ba"
+    },
+    {
       "path": "content/thyroid-imaging-pins.json",
       "sha256": "b39ea65048bc0b9dca76085aaca7407832a32c3794c990b771977a0b8f27754b"
     },
@@ -1498,7 +1526,7 @@
     },
     {
       "path": "lib/camera-keyboard.ts",
-      "sha256": "49fc891102a943037311097439e4b80ac5c7eb0a18d1c0468672c39f888f8047"
+      "sha256": "d26c359d9ccd7820c15099e36f7f6712d7e4a6ecbdc12fa3dc3d83ec8091acf2"
     },
     {
       "path": "lib/camera-orientation.ts",
@@ -1734,7 +1762,7 @@
     },
     {
       "path": "lib/forearm-arterial-imaging.ts",
-      "sha256": "aec224f8e9bc14efd9e358d5a9ec85debdf3d9f2f1c2223ba5ee6cf4c0f2905c"
+      "sha256": "a28a38a3d8b2e21ae8dc2f80aafb559867932e05d162da7ad20bb5a5887d7ca3"
     },
     {
       "path": "lib/forearm-attachments.ts",
@@ -1755,6 +1783,10 @@
     {
       "path": "lib/forearm-reasoning.ts",
       "sha256": "da658e0b8a66f22bb31cabf49a0505b7f1bca71967afc5ead2b342aff93408b2"
+    },
+    {
+      "path": "lib/forearm-superficial-veins.ts",
+      "sha256": "07dde747d85a1a4fff95b1f19e62f4f1bc6a17c7696b91d60a842d9b6e499105"
     },
     {
       "path": "lib/forearm-vascular-anatomy.ts",
@@ -1941,6 +1973,10 @@
       "sha256": "906cc9824891e2bb39be431274990ab7895891aa7add7784fa0824e19a5c674b"
     },
     {
+      "path": "lib/lacrimal-drainage-imaging.ts",
+      "sha256": "a5affcd8c2058488514ece3349cbbd36f803b1053b0273e81526c022103d55ce"
+    },
+    {
       "path": "lib/laryngeal-anatomy.ts",
       "sha256": "adb043e56456f63e8f8f5f110c984f3706c8904a6267c6415260c7d0c8973fb3"
     },
@@ -2014,7 +2050,7 @@
     },
     {
       "path": "lib/limb-vascular-studies.ts",
-      "sha256": "62429b8d856a823caab84e391b034f7fc1f06e4193d3c7a517d7b966c6a4ed65"
+      "sha256": "9338230911c7db7967b947ec5afade816bcad861e68cc15129e5b5487a49f63e"
     },
     {
       "path": "lib/limbic-landmarks.ts",
@@ -2138,7 +2174,7 @@
     },
     {
       "path": "lib/organ-anatomy-curriculum.ts",
-      "sha256": "63c06b99751bf64b47dfbec6c362021d4f1b4e734d905dbc3f14ed188962e15a"
+      "sha256": "78279373aa15a8a239f133514cbb47ebb4e86657d77e299ac630603cafcedf1a"
     },
     {
       "path": "lib/organ-curriculum.ts",
@@ -2242,7 +2278,7 @@
     },
     {
       "path": "lib/regional-framing.ts",
-      "sha256": "4d492111fb7ceb7514e574b74557ba4ae242b64336e70c31d741d2921b677966"
+      "sha256": "284ced594686b8d0ba77ebadc0081c5ea93c500733f01897d4334822fa2e1823"
     },
     {
       "path": "lib/regional-motor.ts",
@@ -2554,11 +2590,11 @@
     },
     {
       "path": "package-lock.json",
-      "sha256": "a5b607301ca60d2bb4327b68afad1cbe6dd5303efc9c11d0f4de59d870a5e7e0"
+      "sha256": "7143e44eb0cb9e11c3f42c4a66d7bdef6f5c89334378d6cc23dcb37f43a1f350"
     },
     {
       "path": "package.json",
-      "sha256": "b1592677551d2e8027388f6082e46961b4ebd82b5b79f3d025561b121eb86d41"
+      "sha256": "b0c705ded3864f2c96d27e38f4ac6e69eece1288e8093c4e8611ad2443edb240"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2765,5 +2801,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "9bd9ea34a5047691412cd41e0e36e735f7a1d04a95225c3905b589b8b9d73b94"
+  "sha256": "83d17887d09fbc8323147a936e2b59fef6ad67f7cb73e6879f95da8c1562335d"
 }

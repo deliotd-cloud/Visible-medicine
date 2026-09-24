@@ -1,6 +1,7 @@
 import type { BodyStructure, BodySystem } from './body-types';
 import { sourceCanonical } from '../lib/body-source-additions.ts';
 import { thoraxRespiratoryBindings, thoraxRespiratoryStudies } from '../content/thorax-respiratory-study.ts';
+import { thoraxCentralAirwayBindings, thoraxCentralAirwayStudy } from '../content/thorax-central-airway-study.ts';
 import { pelvicUrethralFocus } from '../content/pelvic-urethral-study.ts';
 import { neuroStudySets, neuroStudyIds } from '../lib/neuroanatomy.ts';
 import { axialStudySets } from '../lib/axial-anatomy.ts';
@@ -80,10 +81,13 @@ export type DissectionFocus = {
   requiredSourceBindings?: readonly {
     id: string;
     fmaId: string;
+    laterality?: string;
     bundle: string;
     nodeName: string;
     sources: readonly { file: string; sha256: string }[];
   }[];
+  /** Only the central-airway focus accepts an absent opposite-side source in a side-filtered scope. */
+  sideFilteredSourceBindings?: boolean;
 };
 export type DissectionProfile = {
   title: string;
@@ -982,7 +986,7 @@ for (const [region, id, title, systems, pattern, view] of [
     'central-airways',
     'Central airway source segments',
     ['organs'],
-    'trachea|main bronchus',
+    null,
     'anterior',
   ],
   [
@@ -1010,10 +1014,24 @@ for (const [region, id, title, systems, pattern, view] of [
     'anterior',
   ],
 ] as const) {
+  if (id === thoraxCentralAirwayStudy.id) {
+    dissectionProfiles.thorax.focuses.push({
+      id: thoraxCentralAirwayStudy.id,
+      title: thoraxCentralAirwayStudy.title,
+      rule: { fmaIds: [...thoraxCentralAirwayStudy.fmaIds] },
+      includeSkeleton: false,
+      view: thoraxCentralAirwayStudy.view,
+      description: thoraxCentralAirwayStudy.description,
+      inspect: thoraxCentralAirwayStudy.inspect,
+      requiredSourceBindings: thoraxCentralAirwayBindings,
+      sideFilteredSourceBindings: true,
+    });
+    continue;
+  }
   dissectionProfiles[region].focuses.push({
     id,
     title,
-    rule: { systems: [...systems], pattern },
+    rule: { systems: [...systems], pattern: pattern ?? undefined },
     view,
   });
 }
@@ -1416,12 +1434,20 @@ export function stageStructures(
   if (focusId) {
     const choice = profile.focuses.find((f) => f.id === focusId);
     if (choice?.requiredSourceBindings) {
+      const scopedSides = new Set(structures.map((s) => s.laterality));
+      if (choice.sideFilteredSourceBindings &&
+        !scopedSides.has('left') && !scopedSides.has('right')) return [];
       for (const expected of choice.requiredSourceBindings) {
         const found = structures.filter((s) => s.id === expected.id || s.fmaId === expected.fmaId);
+        if (found.length === 0 && choice.sideFilteredSourceBindings &&
+          (expected.laterality === 'left' || expected.laterality === 'right') &&
+          !scopedSides.has(expected.laterality)) continue;
         if (found.length !== 1 ||
+          (expected.laterality && found[0].laterality !== expected.laterality) ||
           sourceCanonical({
             id: found[0].id, fmaId: found[0].fmaId, bundle: found[0].bundle,
             nodeName: found[0].nodeName, sources: found[0].sources,
+            ...(expected.laterality ? { laterality: found[0].laterality } : {}),
           }) !== sourceCanonical(expected)) return [];
       }
     }

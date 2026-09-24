@@ -15021,53 +15021,60 @@
           "id": "central-airways",
           "title": "Central airway source segments",
           "rule": {
-            "systems": [
-              "organs"
-            ],
-            "pattern": "trachea|main bronchus"
+            "fmaIds": [
+              "FMA7394",
+              "FMA7395",
+              "FMA7396"
+            ]
           },
+          "includeSkeleton": false,
           "view": "anterior",
+          "description": "Compare the supplied trachea and proximal right and left main bronchus exterior surfaces.",
+          "inspect": "Select and rotate each source segment. These surfaces do not establish a lumen, carina or lobar tree, continuity between segments, or patient registration. Source boundaries and relationships require revision-bound radiologist review.",
+          "requiredSourceBindings": [
+            {
+              "id": "vm:anatomy:body:thorax:unpaired:organ:trachea",
+              "fmaId": "FMA7394",
+              "laterality": "unpaired",
+              "bundle": "thorax-organs",
+              "nodeName": "FMA7394",
+              "sources": [
+                {
+                  "file": "FJ2541",
+                  "sha256": "f4c8cd3c70d212b09db6319e3b218b35aecfa02f53678d6886484a31aaa11cd9"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+              "fmaId": "FMA7395",
+              "laterality": "right",
+              "bundle": "thorax-organs-inventory",
+              "nodeName": "FMA7395",
+              "sources": [
+                {
+                  "file": "FJ2539",
+                  "sha256": "0e1e4dc8c326263c21819c3c48a3e2e41e72fa92425983876d4902fa5dcc3074"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
+              "fmaId": "FMA7396",
+              "laterality": "left",
+              "bundle": "thorax-organs-inventory",
+              "nodeName": "FMA7396",
+              "sources": [
+                {
+                  "file": "FJ2450",
+                  "sha256": "7c4ac571448fb3d0c3c1095874bf17a60853bf12457d842a11dd2c62c0994946"
+                }
+              ]
+            }
+          ],
+          "sideFilteredSourceBindings": true,
           "visibleStructureIds": [
-            "vm:anatomy:body:spine:midline:bone:tenth-thoracic-vertebra",
-            "vm:anatomy:body:spine:midline:bone:eleventh-thoracic-vertebra",
-            "vm:anatomy:body:spine:midline:bone:twelfth-thoracic-vertebra",
-            "vm:anatomy:body:spine:midline:bone:first-thoracic-vertebra",
-            "vm:anatomy:body:spine:midline:bone:second-thoracic-vertebra",
-            "vm:anatomy:body:spine:midline:bone:third-thoracic-vertebra",
-            "vm:anatomy:body:spine:midline:bone:fourth-thoracic-vertebra",
-            "vm:anatomy:body:spine:midline:bone:fifth-thoracic-vertebra",
-            "vm:anatomy:body:spine:midline:bone:sixth-thoracic-vertebra",
-            "vm:anatomy:body:spine:midline:bone:seventh-thoracic-vertebra",
-            "vm:anatomy:body:spine:midline:bone:eighth-thoracic-vertebra",
-            "vm:anatomy:body:spine:midline:bone:ninth-thoracic-vertebra",
-            "vm:anatomy:body:thorax:left:bone:left-tenth-rib",
-            "vm:anatomy:body:thorax:left:bone:left-eleventh-rib",
-            "vm:anatomy:body:thorax:left:bone:left-twelfth-rib",
-            "vm:anatomy:body:thorax:left:bone:left-first-rib",
-            "vm:anatomy:body:thorax:left:bone:left-second-rib",
-            "vm:anatomy:body:thorax:left:bone:left-third-rib",
-            "vm:anatomy:body:thorax:left:bone:left-fourth-rib",
-            "vm:anatomy:body:thorax:left:bone:left-fifth-rib",
-            "vm:anatomy:body:thorax:left:bone:left-sixth-rib",
-            "vm:anatomy:body:thorax:left:bone:left-seventh-rib",
-            "vm:anatomy:body:thorax:left:bone:left-eighth-rib",
-            "vm:anatomy:body:thorax:left:bone:left-ninth-rib",
-            "vm:anatomy:body:thorax:right:bone:right-tenth-rib",
-            "vm:anatomy:body:thorax:right:bone:right-eleventh-rib",
-            "vm:anatomy:body:thorax:right:bone:right-twelfth-rib",
-            "vm:anatomy:body:thorax:right:bone:right-first-rib",
-            "vm:anatomy:body:thorax:right:bone:right-second-rib",
-            "vm:anatomy:body:thorax:right:bone:right-third-rib",
-            "vm:anatomy:body:thorax:right:bone:right-fourth-rib",
-            "vm:anatomy:body:thorax:right:bone:right-fifth-rib",
-            "vm:anatomy:body:thorax:right:bone:right-sixth-rib",
-            "vm:anatomy:body:thorax:right:bone:right-seventh-rib",
-            "vm:anatomy:body:thorax:right:bone:right-eighth-rib",
-            "vm:anatomy:body:thorax:right:bone:right-ninth-rib",
             "vm:anatomy:body:thorax:unpaired:organ:trachea",
-            "vm:anatomy:body:thorax:midline:bone:manubrium",
-            "vm:anatomy:body:thorax:midline:bone:body-of-sternum",
-            "vm:anatomy:body:thorax:midline:bone:xiphoid-process",
             "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
             "vm:anatomy:body:thorax:left:organ:left-main-bronchus"
           ]
@@ -15109,7 +15116,7 @@
           "includeSkeleton": false,
           "view": "anterior",
           "description": "Show the three supplied intercostal identities and diaphragm together.",
-          "inspect": "Rotate and select each named surface. Hide one, compare the remainder, then Undo to restore the source view. These unreviewed compound source surfaces show fixed positions, not rib-space subdivisions, contraction, or breathing motion. Anatomical relationships require revision-bound radiologist review.",
+          "inspect": "Rotate and select each named surface. Hide one, compare the remainder, then Undo to restore the source view. Left and right filters retain the same midline-labelled compound source surfaces; neither filter isolates a side. These unreviewed surfaces show fixed positions, not rib-space subdivisions, contraction, or breathing motion. Anatomical relationships require revision-bound radiologist review.",
           "requiredSourceBindings": [
             {
               "id": "vm:anatomy:body:thorax:midline:muscle:external-intercostal-muscle",
@@ -15192,7 +15199,7 @@
           "includeSkeleton": false,
           "view": "anterior",
           "description": "Compare external, internal and innermost intercostal source meshes without the diaphragm.",
-          "inspect": "Select a named layer, hide it to expose another, and Undo to restore the prior source view. Their supplied meshes do not distinguish individual rib spaces. These unreviewed compound source surfaces show fixed positions, not rib-space subdivisions, contraction, or breathing motion. Anatomical relationships require revision-bound radiologist review.",
+          "inspect": "Select a named layer, hide it to expose another, and Undo to restore the prior source view. Their supplied meshes do not distinguish individual rib spaces. Left and right filters retain the same midline-labelled compound source surfaces; neither filter isolates a side. These unreviewed surfaces show fixed positions, not rib-space subdivisions, contraction, or breathing motion. Anatomical relationships require revision-bound radiologist review.",
           "requiredSourceBindings": [
             {
               "id": "vm:anatomy:body:thorax:midline:muscle:external-intercostal-muscle",
@@ -15259,8 +15266,8 @@
           },
           "includeSkeleton": false,
           "view": "inferior",
-          "description": "Isolate the supplied diaphragm as one source identity.",
-          "inspect": "Compare its fixed source position with the overview. Undo restores the preceding state. The source does not separate muscular and tendinous parts. These unreviewed compound source surfaces show fixed positions, not rib-space subdivisions, contraction, or breathing motion. Anatomical relationships require revision-bound radiologist review.",
+          "description": "Isolate the supplied diaphragm as one source identity; neither hemidiaphragm is separately selectable.",
+          "inspect": "Compare its fixed source position with the overview. Undo restores the preceding state. The source does not separate muscular and tendinous parts or either hemidiaphragm. Left and right filters retain the same midline-labelled compound source surfaces; neither filter isolates a side. These unreviewed surfaces show fixed positions, not rib-space subdivisions, contraction, or breathing motion. Anatomical relationships require revision-bound radiologist review.",
           "requiredSourceBindings": [
             {
               "id": "vm:anatomy:body:thorax:midline:muscle:diaphragm",

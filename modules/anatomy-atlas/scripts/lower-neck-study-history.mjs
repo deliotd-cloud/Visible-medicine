@@ -4,10 +4,11 @@ import {createHash} from 'node:crypto';
 import record from '../content/lower-neck-study-transition.json' with {type:'json'};
 import { preThoraxRespiratoryProfiles, thoraxRespiratoryProfilesHash } from './thorax-respiratory-history.mjs';
 import { preForearmSuperficialVeinProfiles } from './forearm-superficial-vein-study-history.mjs';
+import { preCentralAirwayProfiles } from './central-airway-history.mjs';
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function preLowerNeckProfiles(profiles){
  assert.equal(hash(record),'0a2efb94a26640e754261b5f85249a3b8da89b80e83ddd476f8058c4022ed05e');
- profiles=preForearmSuperficialVeinProfiles(profiles);
+ profiles=preForearmSuperficialVeinProfiles(preCentralAirwayProfiles(profiles));
  if(hash(profiles)===thoraxRespiratoryProfilesHash)profiles=preThoraxRespiratoryProfiles(profiles);
  const id='lower-neck-vessels-scalenes';
  if(!Object.values(profiles).some(p=>p.focuses.some(f=>f.id===id)))return profiles;
