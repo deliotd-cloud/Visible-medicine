@@ -7,6 +7,7 @@ import { runInNewContext } from 'node:vm';
 import { Matrix4 } from 'three';
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import Link from 'vinext/shims/link';
 import { loadSourceHolds } from './load-source-holds.mjs';
 import { sourceObjShape } from './source-surface-audit.mjs';
 import { sourceTopology } from './source-topology.mjs';
@@ -75,14 +76,29 @@ const shim = {
       },
     ];
   },
+  useRef: (value) => {
+    if (!active) return React.useRef(value);
+    const i = cursor++;
+    if (!(i in slots)) slots[i] = { current: value };
+    return slots[i];
+  },
   useMemo: (fn, deps) => (active ? fn() : React.useMemo(fn, deps)),
   useCallback: (fn, deps) => (active ? fn : React.useCallback(fn, deps)),
+  useLayoutEffect: (fn, deps) => {
+    if (!active) return React.useLayoutEffect(fn, deps);
+  },
 };
 const scope = { exports: {} };
 runInNewContext(compiled.outputFiles[0].text, {
   module: scope,
   exports: scope.exports,
-  require: (id) => (id === 'react' ? shim : require(id)),
+  URLSearchParams,
+  require: (id) =>
+    id === 'react'
+      ? shim
+      : id === 'next/link'
+        ? { __esModule: true, default: Link }
+        : require(id),
 });
 
 function triangleBag(geometry, bag = new Map()) {
@@ -199,9 +215,18 @@ for (const s of source.structures) {
 }
 same(triangles, 13600);
 same(api.pulmonaryAirwayFor(null), []);
-// Portable original46 snapshot, excluding explicitly extended future families.
+// Preserve the original 46 bindings while pinning the later brainstem extension separately.
 const oldPins = JSON.parse(
   await readFile('content/nested-teaching-bindings.v1.json'),
+);
+const addedBrachia = oldPins.bindings.filter(
+  (b) => b.conceptId === 'inferior-collicular-brachia',
+);
+same(addedBrachia.length, 2);
+same(
+  hash(JSON.stringify(addedBrachia)),
+  'ba99f161450d918e71793eb1d467e5add7d5896ca028d45d198efbff01ca3e9f',
+  'Later source-bound brachia retain both exact identities',
 );
 const oldBindings = oldPins.bindings.filter((b) =>
   [
@@ -211,7 +236,7 @@ const oldBindings = oldPins.bindings.filter((b) =>
     'cerebral',
     'cardiac',
     'pulmonary',
-  ].includes(b.study),
+  ].includes(b.study) && b.conceptId !== 'inferior-collicular-brachia',
 );
 const oldParents = oldPins.parents.filter((p) =>
   oldBindings.some((b) => b.parentId === p.id),

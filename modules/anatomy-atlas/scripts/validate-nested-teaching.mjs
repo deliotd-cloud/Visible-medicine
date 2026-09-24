@@ -83,8 +83,15 @@ const legacyPins = {
   parents: allPins.parents.filter((p) => p.id !== api.cricothyroid.parent.id),
   bindings: allPins.bindings.filter((b) => b.study !== 'cricothyroid' && b.conceptId !== 'inferior-collicular-brachia'),
 };
+const hepaticVascularIds = new Set(['hepatic-arterial', 'hepatic-portal']);
+// Project only the four new modality fields out before checking the v121 digest.
+const beforeHepaticVascularImaging = priorConcepts.map((c) => {
+  if (!hepaticVascularIds.has(c.id)) return c;
+  const { ct: _newCT, mri: _newMRI, ...previousImaging } = c.imaging;
+  return { ...c, imaging: previousImaging };
+});
 // Only these four explicitly authored modality fields extend the complete v121 baseline.
-const beforeDuctImaging = priorConcepts.map((c) => {
+const beforeDuctImaging = beforeHepaticVascularImaging.map((c) => {
   if (c.id === 'pancreatic-ductal-system') {
     const { imaging: _newImaging, ...previous } = c;
     return previous;
@@ -160,6 +167,7 @@ same(
   'All v121 teaching, identities, quizzes and limits retained outside four added modality fields',
 );
 const addedDuctReferences = new Set([
+  'hepaticLIRADSPhases',
   'femoralComponentAnatomy',
   'auditoryBrachium',
   'pancreaticImagingDiagnosis',
@@ -367,6 +375,7 @@ const coverage = Object.fromEntries(
 );
 const seen = new Set();
 const answerKeys = new Set();
+let hepaticVascularPlacements = 0;
 function elements(node) {
   if (!node || typeof node !== 'object') return [];
   if (Array.isArray(node)) return node.flatMap(elements);
@@ -377,6 +386,15 @@ for (const target of targets) {
   const selected = target.structure;
   const concept = api.nestedTeachingFor(parent, target.study, selected);
   check(concept, selected.id);
+  if (hepaticVascularIds.has(concept.id)) {
+    hepaticVascularPlacements++;
+    same(Object.keys(concept.imaging).sort(), ['ct', 'mri', 'ultrasound']);
+    for (const topic of ['ct', 'mri']) {
+      same(concept.imaging[topic].references, ['hepaticLIRADSPhases']);
+      check(concept.imaging[topic].body.includes(topic === 'ct' ? 'CT' : 'MRI'));
+      check(concept.imaging[topic].body.includes('phase'));
+    }
+  }
   seen.add(concept.id);
   check(concept.fmaIds.includes(selected.fmaId));
   const expectedImaging =
@@ -398,6 +416,8 @@ for (const target of targets) {
                   ? ['ct', 'mri', 'ultrasound']
                   : concept.id === 'hepatic-biliary'
                     ? ['ct', 'mri', 'ultrasound']
+                    : hepaticVascularIds.has(concept.id)
+                      ? ['ct', 'mri', 'ultrasound']
                     : ['ultrasound']
                 : concept.study === 'pulmonary'
                   ? ['ct', 'mri', 'ultrasound']
@@ -586,6 +606,7 @@ for (const target of targets) {
   );
 }
 same(seen.size, 42);
+same(hepaticVascularPlacements, 4, 'Four exact right/left source placements carry both new modalities');
 same(
   answerKeys.size,
   71,
@@ -595,8 +616,8 @@ same(coverage.pathology, { draft: 69, pending: 2 });
 same(coverage.clinical, { draft: 69, pending: 2 });
 for (const tab of ['anatomy', 'function', 'quiz'])
   same(coverage[tab], { draft: 71, pending: 0 });
-same(coverage.ct, { draft: 35, pending: 36 });
-same(coverage.mri, { draft: 40, pending: 31 });
+same(coverage.ct, { draft: 39, pending: 32 });
+same(coverage.mri, { draft: 44, pending: 27 });
 same(coverage.xray, { draft: 0, pending: 71 });
 same(coverage.ultrasound, { draft: 33, pending: 38 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
@@ -615,6 +636,7 @@ const hosts = new Set([
   'www.aium.org',
   'www.heart.org',
   'www.radiologyinfo.org',
+  'edge.sitecorecloud.io',
   'jcmr-online.biomedcentral.com',
   'www.asecho.org',
   'anatomy.ttuhscep.edu',
@@ -665,11 +687,11 @@ for (const concept of api.nestedConcepts) {
     }
   }
 }
-same(Object.keys(wordsBySource).length, 84);
+same(Object.keys(wordsBySource).length, 85);
 same(
   new Set(Object.values(api.nestedTeachingReferences).map((ref) => ref.url))
     .size,
-  85,
+  86,
   'Do not split one source into duplicate reference keys',
 );
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {

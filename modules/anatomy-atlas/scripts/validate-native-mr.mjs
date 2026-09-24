@@ -18,7 +18,15 @@ const compiled = await build({
   write: false,
   format: 'cjs',
   platform: 'node',
+  metafile: true,
 });
+for (const sourcePath of Object.keys(compiled.metafile.inputs)) {
+  assert.doesNotMatch(
+    sourcePath.replaceAll('\\', '/'),
+    /(?:^|\/)(?:imaging-link|imaging-comparison|learning-resources?|learning-resource-types|didanix-selection-adapter)\.[cm]?[jt]sx?$/,
+    'The private MRI import checker must not bundle an Atlas/Education bridge',
+  );
+}
 let active = false,
   cursor = 0,
   slots = [],
@@ -51,6 +59,11 @@ const hooks = {
 const scope = { exports: {} };
 const pendingDigests = [];
 const readers = [];
+const forbiddenEffects = [];
+const forbidden = (name) => {
+  forbiddenEffects.push(name);
+  throw Error(`Unexpected native MRI side effect: ${name}`);
+};
 class ControlledFileReader {
   result = null;
   error = null;
@@ -106,14 +119,15 @@ runInNewContext(compiled.outputFiles[0].text, {
       return this.fields[name];
     }
   },
-  fetch() {
-    throw Error('Unexpected upload');
-  },
-  localStorage: {
-    setItem() {
-      throw Error('Unexpected persistence');
-    },
-  },
+  fetch: () => forbidden('fetch'),
+  localStorage: new Proxy({}, {
+    get: (_, name) => forbidden(`localStorage.${String(name)}`),
+  }),
+  sessionStorage: new Proxy({}, {
+    get: (_, name) => forbidden(`sessionStorage.${String(name)}`),
+  }),
+  indexedDB: { open: () => forbidden('indexedDB.open') },
+  navigator: { sendBeacon: () => forbidden('navigator.sendBeacon') },
 });
 const api = scope.exports,
   hash = (b) => createHash('sha256').update(b).digest('hex');
@@ -478,6 +492,7 @@ same(replacedReader.aborts, 1);
 nextReader.finish(signedPacket);
 await settle();
 same(slots[0].range, [-18, 17]);
+check(!Object.hasOwn(slots[0], 'atlasRegistration'));
 replacedReader.fail(Error('Synthetic late read failure'));
 await settle();
 same(slots[0].range, [-18, 17]);
@@ -546,6 +561,7 @@ const unmountedState = [slots[0], slots[1], slots[2]];
 unmountedReader.fail(Error('Synthetic late unmounted failure'));
 await settle();
 same([slots[0], slots[1], slots[2]], unmountedState);
+same(forbiddenEffects, []);
 let privateFrames = 0;
 const arg = (name) => {
   const i = process.argv.indexOf(name);

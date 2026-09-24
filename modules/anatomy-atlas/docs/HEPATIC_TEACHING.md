@@ -1,14 +1,27 @@
 # Liver branch clinical and imaging teaching
 
+## Arterial and portal CT/MRI orientation drafts — 24 September 2026
+
+The right and left hepatic arterial concepts (FMA14778/FMA14779) and right and
+left portal concepts (FMA15414/FMA15415) each now render a short CT and MRI
+orientation draft: four authored modality paragraphs across eight sided
+placements. The [ACR LI-RADS v2018 CT/MRI phase definitions](https://edge.sitecorecloud.io/americancoldf5f-acrorgf92a-productioncb02-3650/media/ACR/Files/RADS/LI-RADS/LI-RADS-CT-MRI-2018-Core.pdf)
+provide the distinction between arterial and portal venous enhancement. CT
+attenuation and MRI signal are described separately. These notes give no
+acquisition protocol or diagnostic interpretation; no scan, registered volume,
+contrast data, new model or clinical approval is supplied. Anatomy, Function,
+Clinical, Pathology and Ultrasound paragraphs and exact source pins remain
+unchanged. The coverage table and totals below record the earlier milestone.
+
 ## Biliary CT extension — 10 September 2026
 
 The [duct-imaging extension](DUCT_IMAGING_TEACHING.md) adds one shared CT note for the right and left intrahepatic bile-duct source groups. Their MRI/US notes and all existing teaching remain unchanged. No scan, source geometry, stone, stricture, connection or clinical approval is supplied. Earlier coverage below describes historical milestones; consult [current status](CURRENT_STATUS.md).
 
-## Delivered scope
+## Earlier delivered scope (before the 24 September extension)
 
 In **Abdomen → Liver → Explore liver branches**, select a group and expand **Learn more · anatomy, clinical & quiz**. The existing three information groups contain 15 new short, referenced paragraphs shared by seven exact-source targets. The model-first layout, collapsed disclosure, search, dissection and unscored self-check remain unchanged.
 
-| Concept | Source targets | Added drafts | Still pending |
+| Concept | Source targets | Earlier drafts | Pending at that earlier milestone |
 | --- | --- | --- | --- |
 | Hepatic arterial branches | Right FMA14778 / left FMA14779 | Clinical, Pathology, Ultrasound | CT, MRI |
 | Portal branches | Right FMA15414 / left FMA15415 | Clinical, Pathology, Ultrasound | CT, MRI |

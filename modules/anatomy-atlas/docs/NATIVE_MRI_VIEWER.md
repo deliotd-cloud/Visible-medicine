@@ -37,6 +37,18 @@ Coordinate basis: [DICOM PS3.3 Image Plane Module](https://dicom.nema.org/medica
 
 ## Verification and remaining acceptance
 
+### Local-only boundary regression, 24 September 2026
+
+The compiled-component synthetic check now guards the private import route's
+module graph against an Atlas/Education bridge, rejects registration-bearing
+packets, and traps `fetch`, Web Storage, IndexedDB and `sendBeacon` during valid,
+replaced, cancelled and closed packet flows. The admitted study has no
+`atlasRegistration` field, and the test confirms no trapped call occurred.
+This is a scoped regression check of the tested component path, not a browser
+network/privacy audit, a claim of secure erasure, or Didanix readiness. The
+checker remains a local QA utility; acquired MRI teaching belongs in Didanix
+Education/light after separate clearance and adapter validation.
+
 ### Acquisition-position navigation follow-up, 24 September 2026
 
 The synthetic oblique packet was loaded in a local browser on desktop and at

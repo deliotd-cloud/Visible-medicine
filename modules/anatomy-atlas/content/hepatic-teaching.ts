@@ -1,6 +1,10 @@
 import type { NestedImagingTopic, NestedSection } from './nested-teaching';
 
 export const hepaticTeachingReferences = {
+  hepaticLIRADSPhases: {
+    title: 'ACR · LI-RADS v2018 CT/MRI Core, phase definitions',
+    url: 'https://edge.sitecorecloud.io/americancoldf5f-acrorgf92a-productioncb02-3650/media/ACR/Files/RADS/LI-RADS/LI-RADS-CT-MRI-2018-Core.pdf',
+  },
   hepaticBiliaryCT: {
     title: 'ACR / RSNA · Gallstones: imaging evaluation',
     url: 'https://www.radiologyinfo.org/en/info/gallstones',
@@ -59,6 +63,14 @@ export const hepaticTeaching = {
       'hepaticArterialComplications',
     ),
     imaging: {
+      ct: draft(
+        'On contrast-enhanced liver CT, hepatic arterial branches are enhanced in the arterial phase, before antegrade hepatic venous enhancement. Use these right and left source branches to orient the arterial route; their colour and shape contain no CT attenuation or phase information.',
+        'hepaticLIRADSPhases',
+      ),
+      mri: draft(
+        'On dynamic contrast-enhanced liver MRI, arterial-phase enhancement is assessed as signal intensity, distinct from the portal venous phase. Locate these arterial source branches for orientation only; the model supplies no MRI signal or registered patient image.',
+        'hepaticLIRADSPhases',
+      ),
       ultrasound: draft(
         'A liver vascular ultrasound can examine intrahepatic arteries with Doppler to document flow characteristics and direction. Identify this arterial branch group separately from portal veins and ducts. Atlas colours identify structures; they are not Doppler signals, waveforms or proof of patency.',
         'hepaticDoppler',
@@ -75,6 +87,14 @@ export const hepaticTeaching = {
       'hepaticPortalPressure',
     ),
     imaging: {
+      ct: draft(
+        'On contrast-enhanced liver CT, the portal venous phase shows fully enhanced portal veins and usually peak liver parenchymal enhancement. Follow the right and left portal source branches for orientation; these surfaces contain no CT attenuation or phase information.',
+        'hepaticLIRADSPhases',
+      ),
+      mri: draft(
+        'On dynamic contrast-enhanced liver MRI, the portal venous phase shows enhanced portal veins and hepatic veins enhanced by antegrade flow. Compare this portal route with arterial-phase anatomy; the static source branches provide no MRI signal or registered patient volume.',
+        'hepaticLIRADSPhases',
+      ),
       ultrasound: draft(
         'Ultrasound assessment follows the main portal vein and, where visible, its right and left branches. Doppler documents flow direction as well as flow characteristics. Compare branch identity here; the static surfaces cannot demonstrate a flow reversal, thrombosis or portal-pressure measurement.',
         'hepaticDoppler',
