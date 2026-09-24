@@ -2,6 +2,8 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+24 September latest source-only viewer integration: the shared regional/whole-body runtime is regenerated from Atlas `77e20b8139ec2894abcb3d17552afb1b4c2b0a2a`. Reset scope is explicitly described to assistive users and keyboard-originated rotation has a polite view-orientation status. The 134 shared model entries and regional scopes are unchanged. This is not yet private website publication or assistive-technology acceptance; see [scope and checks](atlas-viewer-keyboard-accessibility-20260924.md). All six first-release gates and radiologist sign-off remain pending.
+
 24 September source integration: the shared regional/whole-body
 runtime is regenerated from Atlas `853ffd63d76c635da8975d0d351295f75ba0d1e2`.
 Four exact-pinned common/recurrent interosseous artery selections now carry CT
