@@ -11,6 +11,7 @@ export const centralVesselImagingReferences={
   pulmonaryMR:'https://pmc.ncbi.nlm.nih.gov/articles/PMC3500786/',
   pulmonaryVeins:'https://pmc.ncbi.nlm.nih.gov/articles/PMC7715996/',
   echo:'https://www.asecho.org/wp-content/uploads/2019/01/2019_Comprehensive-TTE.pdf',
+  echoTEE:'https://www.asecho.org/wp-content/uploads/2014/05/2013_Performing-Comprehensive-TEE.pdf',
   ivc:'https://pmc.ncbi.nlm.nih.gov/articles/PMC8405820/',
   ivcUS:'https://pmc.ncbi.nlm.nih.gov/articles/PMC10730449/',
   mesentericCT:'https://pmc.ncbi.nlm.nih.gov/articles/PMC4263800/',
@@ -76,15 +77,19 @@ export const centralVesselImagingGroups:Record<string,Group>={
   }},
   'right-superior-pulmonary-vein':{fmaId:'FMA49914',region:'thorax',laterality:'right',focus:{
     ct:fact('Trace right upper and usual middle-lobe venous drainage towards the superior right-sided ostium of the left atrium.','Middle-lobe drainage and accessory ostia vary; do not equate source pieces with vein count.','pulmonaryVeins'),mri:pulmonaryVeinMRI,
+    ultrasound:fact('An apical TTE left-atrial view may show right upper pulmonary venous inflow. TEE has a distinct mid-esophageal right-pulmonary-vein view.','Seeing the superior vein does not identify the right inferior vein or establish all atrial openings.','echo','echoTEE'),
   }},
   'left-superior-pulmonary-vein':{fmaId:'FMA49916',region:'thorax',laterality:'left',focus:{
     ct:fact('Follow upper-lobe and lingular venous drainage towards the upper left atrial connection.','A shared left-sided ostium is a possible variant; inspect actual connections.','pulmonaryVeins'),mri:pulmonaryVeinMRI,
+    ultrasound:fact('The mid-esophageal TEE left-atrial-appendage/left-upper-vein view can place the left superior vein beside the appendage; they are distinct structures.','This grouped source selection is not a count of branches or ostia.','echoTEE'),
   }},
   'right-inferior-pulmonary-vein':{fmaId:'FMA49911',region:'thorax',laterality:'right',focus:{
     ct:fact('Trace right lower-lobe drainage medially to its posterior-inferior left atrial connection.','Location alone cannot distinguish a vein from the neighbouring artery without continuity.','pulmonaryVeins'),mri:pulmonaryVeinMRI,
+    ultrasound:fact('In the mid-esophageal right-pulmonary-vein TEE view, seek the inferior right vein separately from its superior neighbour.','An apical TTE vein signal or visible superior vein does not confirm this inferior selection.','echo','echoTEE'),
   }},
   'left-inferior-pulmonary-vein':{fmaId:'FMA49913',region:'thorax',laterality:'left',focus:{
     ct:fact('Follow left lower-lobe venous return towards the lower left atrial connection.','Do not assume four separate ostia simply because four named selections exist.','pulmonaryVeins'),mri:pulmonaryVeinMRI,
+    ultrasound:fact('A left-pulmonary-vein TEE view provides left atrial orientation; confirm the inferior vein separately from the superior left-vein region on acquired images.','Multiple source files do not establish separate veins or ostia; seeing the superior vein does not confirm inferior identification.','echoTEE'),
   }},
   'abdominal-aorta':{fmaId:'FMA3789',region:'abdomen',laterality:'midline',focus:{
     ct:fact('Follow the aorta from the hiatus to the iliac bifurcation, locating visceral and renal origins. Review true cross-sections rather than an oblique diameter.','The donor outline is not a patient calibre reference or aneurysm measurement.','aortaMeasure'),

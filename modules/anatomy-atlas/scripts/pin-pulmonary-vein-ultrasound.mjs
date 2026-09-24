@@ -1,0 +1,24 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
+import {wholeBodyTeachingSnapshot} from './exact-clinical-reference-history.mjs';
+const parentCommit='f54d6339e8c7820c2fe37b5161f548776e3c873e';
+const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
+const api=await exactSourceHistoryApi(parentCommit);
+const raw=JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json'));
+const display=api.bodyDisplayCatalog(raw);
+const original=JSON.parse(await readFile('content/central-vessel-imaging-pins.json'));
+const fmas=['FMA49914','FMA49916','FMA49911','FMA49913'];
+const entries=fmas.map(fma=>{
+  const matches=display.structures.filter(s=>s.fmaId===fma);assert.equal(matches.length,1);
+  const identity=matches[0],pin=original.entries.find(e=>e.identity.id===identity.id);
+  assert.deepEqual(identity,pin.identity);
+  const previous=api.bodyLesson(identity,'ultrasound');assert.equal(previous.readiness,'pending');
+  return {identity,group:pin.group,previous};
+});
+const pins={parentCommit,catalogHash:hash(display),previousAllLessonsAndRecipesHash:hash(wholeBodyTeachingSnapshot(api,raw)),entries};
+const text=JSON.stringify(pins,null,2)+'\n',path='content/pulmonary-vein-ultrasound.before.json';
+if(process.argv.includes('--check'))assert.equal((await readFile(path,'utf8')).replace(/\r\n/g,'\n'),text);
+else await writeFile(path,text,{flag:'wx'});
+console.log(JSON.stringify({selections:entries.length,pinsHash:hash(pins),beforeHash:pins.previousAllLessonsAndRecipesHash}));

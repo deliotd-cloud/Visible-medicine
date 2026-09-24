@@ -4,8 +4,10 @@ import {createHash} from 'node:crypto';
 import pins from '../content/laryngeal-muscle-imaging.before.json' with {type:'json'};
 import transition from '../content/laryngeal-muscle-imaging.transition.json' with {type:'json'};
 import {hasPesAnserineProfiles,prePesAnserineProfiles} from './pes-anserine-study-history.mjs';
+import {beforePulmonaryVeinUltrasound} from './pulmonary-vein-ultrasound-history.mjs';
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function beforeLaryngealMuscleImaging(api){
+  api=beforePulmonaryVeinUltrasound(api);
   if(hasPesAnserineProfiles(api.dissectionProfiles))api={...api,dissectionProfiles:prePesAnserineProfiles(api.dissectionProfiles)};
   assert.equal(hash(pins),'2eb8b64869ada10a5d6db7a8d432de4ba0534b89752ed6fdee394c4969801fc6');
   assert.equal(hash(transition),'f8cee667c86802d1fe62672a0d27132565783a48e4067648fd60fb0cd9f887c2');

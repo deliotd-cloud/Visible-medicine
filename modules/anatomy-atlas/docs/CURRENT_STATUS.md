@@ -1,5 +1,11 @@
 # Current atlas status
 
+[Pulmonary-vein ultrasound orientation](PULMONARY_VEIN_ULTRASOUND.md) fills four
+pending topics with distinct right/left superior/inferior echo drafts, citing
+official TTE/TEE references. Other 9,932 topics, all geometry and existing controls
+are unchanged. Source/rendering/history checks cover the addition; radiologist
+sign-off, generated website integration and hosted verification remain open.
+
 [Study close-up captions and browser QA](STUDY_CLOSE_UP_CAPTIONS.md): the
 whole-body popliteal study opens, renders and supports selection/Remove/Undo in
 the local browser. A misleading Elbow caption is corrected to Knee by recipe
