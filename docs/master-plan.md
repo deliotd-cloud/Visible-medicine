@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+24 September proper-digital teaching: the shared viewer binds Atlas `bff0cbb`,
+adding twenty source-specific Anatomy/Function drafts for ten existing finger
+arteries through the existing panel. All 136 model objects / 143 protected paths
+and independent entitlements remain unchanged. See [integration boundaries](atlas-proper-digital-teaching-20260924.md)
+and the main-task checkpoint for verified publication/recovery. Continue the full
+regional anatomy/teaching roadmap; clinical, imaging and device gates remain open.
+
 24 September Search study handoff: shared viewer binds Atlas `facf4a4`, including
 the verified `93695c0` correction that leaves confirmed studies unobstructed.
 Explicit tools/details remain available; all 136 models / 143 protected paths

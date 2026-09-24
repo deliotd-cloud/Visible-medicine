@@ -1,5 +1,15 @@
 # Third-party notices
 
+## Proper digital artery teaching — 24 September 2026
+
+Original source-bound Anatomy/Function drafts use factual anatomy from the
+Texas Tech University Health Sciences Center El Paso Hand anatomy table:
+https://anatomy.ttuhscep.edu/musculoskeletal_system/hand_tables.html.
+The table, illustrations, photos and course assets are not copied or licensed
+for redistribution by this citation. No new geometry, font, texture, scan,
+dependency or service is included. The ten existing BodyParts3D v4 source
+identities retain their CC BY 4.0 attribution and unvalidated status.
+
 ## Main-bronchus X-ray teaching — 24 September 2026
 
 Two original short draft summaries link to King's College London's chest X-ray

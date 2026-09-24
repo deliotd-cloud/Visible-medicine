@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "4bb6eb96d256b7505126912078deba16f841e4bab24771c72e460d7e7af905ee"
+    "sha256": "6f0ba97780cc1eb230c26f343bf8712e08ee1133c22febaba7f1a94dd60c7942"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "7b9a596b61ea495833f721fd3d9e8e91c55f8e6acb60f699107f2c25dd596e0b"
+    "sha256": "bf90af235dbccb925c6bffc396f0d783e8dc9a493fab64d10fc649feb9f93c1e"
   },
   {
     "path": "app/body-education-link.ts",
@@ -1108,6 +1108,10 @@
     "sha256": "d07a11bda4ab63ad6ba2098efa80d5afa676aece071352599385b37549516924"
   },
   {
+    "path": "content/proper-digital-teaching.ts",
+    "sha256": "e3d3bfd651987ba881c3b7a11dc6a0a07ef9135c73554d43de2a74b839952012"
+  },
+  {
     "path": "content/pulmonary-teaching.ts",
     "sha256": "dbc3e13276d3329269359370cdacebed04ff8d13d52da21c277e8bd169f6367c"
   },
@@ -1141,7 +1145,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "e7110f22621d805fca3abdb1542632bf3cf0eef65f9138d8b9e638c39581262b"
+    "sha256": "5faf58d44185a649b1d2cf7d826ed66c90445b3daa8ba401626670a367ca02a9"
   },
   {
     "path": "content/sca-mca-clinical-pins.json",
@@ -2386,6 +2390,10 @@
   {
     "path": "lib/portal-veins.ts",
     "sha256": "ea4d982449805f6546b8c8bd856ee8b30cead28f6bd144134170de9f96ae8853"
+  },
+  {
+    "path": "lib/proper-digital-teaching.ts",
+    "sha256": "9e072b27456a485d71364eb35fcca7939b64d7af7049b07933d15ec548c63c71"
   },
   {
     "path": "lib/pulmonary-context.ts",

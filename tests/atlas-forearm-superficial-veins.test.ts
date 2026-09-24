@@ -9,9 +9,9 @@ const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
 
 test('regional export presents source-bound superficial forearm veins without clinical or imaging approval',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'e21d3f8a844ac1260ee9b272ce1f0fc2124911b24e5846b327bcada42289540b');
+  assert.equal(sha(manifestBytes),'e9b3f3c39860b04e3980855058174559cf31a8c773a380923d94de331f9859e2');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'facf4a46d8a9380c890af16495a2c609ad74f5f3');
+  assert.equal(manifest.sourceCommit,'bff0cbb95f66c333846497d48b6503df07bd1ad3');
   for(const flag of ['patientDataIncluded','clinicalApproved','imagingConnection','standaloneReviewConnection'])
     assert.equal(manifest[flag],false,flag);
 
