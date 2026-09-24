@@ -14,3 +14,9 @@ The exact-source pins retain each original selection, file hash, bundle, coordin
 Only original concise factual wording and links are included. No publisher figures, prose passages, scans or datasets are imported. Radiologist review must verify the six identities, orientation, small-structure visibility limits and wording against the actual content revision. Software tests do not constitute clinical or device acceptance.
 
 Run `npm run lacrimal-drainage-imaging:test` and `npx tsc --noEmit` for the focused contract and TypeScript checks.
+
+## Bounded browser review, 24 September
+
+The exported `a9d30e2` regional module was served only on loopback and opened in a temporary in-app browser tab. Selecting the right lacrimal sac displayed its draft CT and MRI notes with source and review warnings; Ultrasound displayed `CONTENT PENDING` and `No imaging study loaded`. The temporary tab and server were closed. This is a single pointer/browser sample, not physical-device, screen-reader, radiologist, patient-imaging or full six-selection acceptance. The new exact-source tests cover all six programmatically.
+
+The older umbrella curriculum replay still fails at its historical whole-body teaching digest, and the broad content-contract test reports stale review-evidence hashes on unrelated viewer files. Neither was repinned or waived for this addition; focused transition, source-holds, source-geometry and TypeScript checks passed.
