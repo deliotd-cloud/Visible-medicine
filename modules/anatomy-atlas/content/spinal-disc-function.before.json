@@ -1,0 +1,1548 @@
+{
+  "parentCommit": "bff0cbb95f66c333846497d48b6503df07bd1ad3",
+  "originalPinsHash": "a455b8ec9be49820f02c728c49cabbcebc6eb4504c64d1ce2d7766cfc844e7a6",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "previousAllLessonsAndRecipesHash": "e835bea0f6d2f570b0e2fad6d666b481a62b011596422880744ba414a65368b8",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-axis",
+        "fmaId": "FMA25058",
+        "name": "Intervertebral disk of axis",
+        "sourceName": "intervertebral disk of axis",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA25058",
+        "bounds": {
+          "min": [
+            -0.1344040036201477,
+            6.414499282836914,
+            0.19221298396587372
+          ],
+          "max": [
+            0.11683999747037888,
+            6.5093994140625,
+            0.37253403663635254
+          ]
+        },
+        "center": [
+          -0.008782003074884415,
+          6.461949348449707,
+          0.28237351030111313
+        ],
+        "anchor": [
+          -0.02172050066292286,
+          6.480300426483154,
+          0.29006898403167725
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3202",
+            "sha256": "10b24dc45678b68734e84e2d10c749c5b53b4ed3c39c04d2052bdebc02301840"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "cervicalDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-cervical-vertebra",
+        "fmaId": "FMA13896",
+        "name": "Intervertebral disk of third cervical vertebra",
+        "sourceName": "intervertebral disk of third cervical vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13896",
+        "bounds": {
+          "min": [
+            -0.1197109967470169,
+            6.268899917602539,
+            0.22661903500556946
+          ],
+          "max": [
+            0.10661400109529495,
+            6.330699443817139,
+            0.38691002130508423
+          ]
+        },
+        "center": [
+          -0.006548497825860977,
+          6.299799680709839,
+          0.30676452815532684
+        ],
+        "anchor": [
+          0.0048338198103010654,
+          6.315899848937988,
+          0.3078949749469757
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3213",
+            "sha256": "1792fb233867a50a88c0b087391886dfb63f62eede857920736367c0d0c9e91d"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "cervicalDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-cervical-vertebra",
+        "fmaId": "FMA13897",
+        "name": "Intervertebral disk of fourth cervical vertebra",
+        "sourceName": "intervertebral disk of fourth cervical vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13897",
+        "bounds": {
+          "min": [
+            -0.13390199840068817,
+            6.087099552154541,
+            0.24215202033519745
+          ],
+          "max": [
+            0.12067300081253052,
+            6.193299770355225,
+            0.4128350019454956
+          ]
+        },
+        "center": [
+          -0.006614498794078827,
+          6.140199661254883,
+          0.3274935111403465
+        ],
+        "anchor": [
+          -0.004538619890809059,
+          6.158599853515625,
+          0.33474501967430115
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3218",
+            "sha256": "a1820438c3e0dd6361807a4a7380861df4134f48df2d869630e678ff71ec226d"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "cervicalDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-cervical-vertebra",
+        "fmaId": "FMA13898",
+        "name": "Intervertebral disk of fifth cervical vertebra",
+        "sourceName": "intervertebral disk of fifth cervical vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13898",
+        "bounds": {
+          "min": [
+            -0.1480959951877594,
+            5.925699234008789,
+            0.25521400570869446
+          ],
+          "max": [
+            0.13479000329971313,
+            6.033299446105957,
+            0.41979798674583435
+          ]
+        },
+        "center": [
+          -0.006652995944023132,
+          5.979499340057373,
+          0.3375059962272644
+        ],
+        "anchor": [
+          -0.0017197600100189447,
+          5.95989990234375,
+          0.31486502289772034
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3219",
+            "sha256": "9614a560acb98669f69bf67a15321e73495e7decf71fa4e4e3941fc494b443d4"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "cervicalDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-sixth-cervical-vertebra",
+        "fmaId": "FMA13899",
+        "name": "Intervertebral disk of sixth cervical vertebra",
+        "sourceName": "intervertebral disk of sixth cervical vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13899",
+        "bounds": {
+          "min": [
+            -0.1482599973678589,
+            5.771800518035889,
+            0.235229030251503
+          ],
+          "max": [
+            0.1335499882698059,
+            5.867499828338623,
+            0.4030120074748993
+          ]
+        },
+        "center": [
+          -0.007355004549026489,
+          5.819650173187256,
+          0.31912051886320114
+        ],
+        "anchor": [
+          -0.030222799628973007,
+          5.799399375915527,
+          0.3185559809207916
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3220",
+            "sha256": "6aa2490d85cc76e1f9c29a4d187e36c54d3faa1091b42d1ebc54d45ae1d96194"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "cervicalDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-cervical-vertebra",
+        "fmaId": "FMA13900",
+        "name": "Intervertebral disk of seventh cervical vertebra",
+        "sourceName": "intervertebral disk of seventh cervical vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13900",
+        "bounds": {
+          "min": [
+            -0.16331200301647186,
+            5.599999904632568,
+            0.19775299727916718
+          ],
+          "max": [
+            0.14938999712467194,
+            5.716700553894043,
+            0.37612298130989075
+          ]
+        },
+        "center": [
+          -0.006961002945899963,
+          5.658350229263306,
+          0.28693798929452896
+        ],
+        "anchor": [
+          0.003953089937567711,
+          5.680699348449707,
+          0.2878810167312622
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3221",
+            "sha256": "d76e5f07cea767b03ee7138fde4781a546f5bbb490de023b1992a5fa206d1322"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "cervicalDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-first-thoracic-vertebra",
+        "fmaId": "FMA10458",
+        "name": "Intervertebral disk of first thoracic vertebra",
+        "sourceName": "intervertebral disk of first thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA10458",
+        "bounds": {
+          "min": [
+            -0.1706399917602539,
+            5.419000148773193,
+            0.1390869915485382
+          ],
+          "max": [
+            0.15535800158977509,
+            5.547500133514404,
+            0.33781898021698
+          ]
+        },
+        "center": [
+          -0.00764099508523941,
+          5.483250141143799,
+          0.2384529858827591
+        ],
+        "anchor": [
+          -0.007474320009350777,
+          5.463499546051025,
+          0.23867301642894745
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3222",
+            "sha256": "b7387340fcd82362f86af387a7fe21a9a2e9ab9f4549ec539fc519112b4296d5"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thoracicDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-thoracic-vertebra",
+        "fmaId": "FMA13495",
+        "name": "Intervertebral disk of second thoracic vertebra",
+        "sourceName": "intervertebral disk of second thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13495",
+        "bounds": {
+          "min": [
+            -0.16608400642871857,
+            5.207399845123291,
+            0.05354400724172592
+          ],
+          "max": [
+            0.15304699540138245,
+            5.356199741363525,
+            0.28266197443008423
+          ]
+        },
+        "center": [
+          -0.00651850551366806,
+          5.281799793243408,
+          0.16810299083590508
+        ],
+        "anchor": [
+          -0.011264699511229992,
+          5.320699691772461,
+          0.1755940318107605
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3223",
+            "sha256": "108dd5e9e772425ec890afc92d633de4c345c6ff3ad7cb4e31c744b407742777"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thoracicDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-thoracic-vertebra",
+        "fmaId": "FMA13500",
+        "name": "Intervertebral disk of third thoracic vertebra",
+        "sourceName": "intervertebral disk of third thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13500",
+        "bounds": {
+          "min": [
+            -0.1554419994354248,
+            4.997299671173096,
+            -0.043102990835905075
+          ],
+          "max": [
+            0.1420619934797287,
+            5.144000053405762,
+            0.21583396196365356
+          ]
+        },
+        "center": [
+          -0.006690002977848053,
+          5.070649862289429,
+          0.08636548556387424
+        ],
+        "anchor": [
+          -0.005978099536150694,
+          5.04189920425415,
+          0.06791000068187714
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3224",
+            "sha256": "99e4ff2970050012f88b9a70e5bb9f3cd647bd3091a53238aa1619a65d591ed5"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thoracicDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-thoracic-vertebra",
+        "fmaId": "FMA13501",
+        "name": "Intervertebral disk of fourth thoracic vertebra",
+        "sourceName": "intervertebral disk of fourth thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13501",
+        "bounds": {
+          "min": [
+            -0.15493899583816528,
+            4.780300140380859,
+            -0.1231670007109642
+          ],
+          "max": [
+            0.14234700798988342,
+            4.913299560546875,
+            0.16735900938510895
+          ]
+        },
+        "center": [
+          -0.00629599392414093,
+          4.846799850463867,
+          0.022096004337072372
+        ],
+        "anchor": [
+          -0.009149219840765,
+          4.875799655914307,
+          0.019243011251091957
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3203",
+            "sha256": "3c1e8acf2db66d447c91e29e1df800cc9eed605fc7adcc7b70d2aeb585f24287"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thoracicDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-thoracic-vertebra",
+        "fmaId": "FMA13502",
+        "name": "Intervertebral disk of fifth thoracic vertebra",
+        "sourceName": "intervertebral disk of fifth thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13502",
+        "bounds": {
+          "min": [
+            -0.15923400223255157,
+            4.545000076293945,
+            -0.1644349992275238
+          ],
+          "max": [
+            0.14632199704647064,
+            4.650000095367432,
+            0.15302497148513794
+          ]
+        },
+        "center": [
+          -0.006456002593040466,
+          4.5975000858306885,
+          -0.005705013871192932
+        ],
+        "anchor": [
+          -0.004380839876830578,
+          4.567800521850586,
+          -0.0011119842529296875
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3204",
+            "sha256": "70238a6e88e8bf340459cc030536bd591ea8eb55b60694e526b39b0a5ff141d0"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thoracicDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-sixth-thoracic-vertebra",
+        "fmaId": "FMA13503",
+        "name": "Intervertebral disk of sixth thoracic vertebra",
+        "sourceName": "intervertebral disk of sixth thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13503",
+        "bounds": {
+          "min": [
+            -0.17654100060462952,
+            4.270899772644043,
+            -0.19393499195575714
+          ],
+          "max": [
+            0.16352199018001556,
+            4.391400337219238,
+            0.1619889885187149
+          ]
+        },
+        "center": [
+          -0.006509505212306976,
+          4.331150054931641,
+          -0.015973001718521118
+        ],
+        "anchor": [
+          -0.011805299669504166,
+          4.364100456237793,
+          -0.00856700912117958
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3205",
+            "sha256": "678096eb026ccb41a9d9c9feb36336859543aba2e2b4130d2852d69da5a56bb0"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thoracicDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-thoracic-vertebra",
+        "fmaId": "FMA13504",
+        "name": "Intervertebral disk of seventh thoracic vertebra",
+        "sourceName": "intervertebral disk of seventh thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13504",
+        "bounds": {
+          "min": [
+            -0.17618998885154724,
+            4.009499549865723,
+            -0.1715650111436844
+          ],
+          "max": [
+            0.16288700699806213,
+            4.131800651550293,
+            0.19492599368095398
+          ]
+        },
+        "center": [
+          -0.006651490926742554,
+          4.070650100708008,
+          0.011680491268634796
+        ],
+        "anchor": [
+          -0.006233209744095802,
+          4.031099796295166,
+          0.0002700042678043246
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3206",
+            "sha256": "ea58f9563a87ea209a665232bef9924be84b89c5614ddcc0bc2bb51dfaea6068"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thoracicDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eighth-thoracic-vertebra",
+        "fmaId": "FMA13505",
+        "name": "Intervertebral disk of eighth thoracic vertebra",
+        "sourceName": "intervertebral disk of eighth thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13505",
+        "bounds": {
+          "min": [
+            -0.18475200235843658,
+            3.747199773788452,
+            -0.11617698520421982
+          ],
+          "max": [
+            0.17160700261592865,
+            3.893699884414673,
+            0.24182502925395966
+          ]
+        },
+        "center": [
+          -0.006572499871253967,
+          3.8204498291015625,
+          0.06282402202486992
+        ],
+        "anchor": [
+          -0.008365740068256855,
+          3.835400342941284,
+          0.03666599094867706
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3207",
+            "sha256": "7df1bee7ad9edd0e0405b052c62a16472f9f954c45203eb5a5f75fd311841a1b"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thoracicDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-ninth-thoracic-vertebra",
+        "fmaId": "FMA13506",
+        "name": "Intervertebral disk of ninth thoracic vertebra",
+        "sourceName": "intervertebral disk of ninth thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13506",
+        "bounds": {
+          "min": [
+            -0.19579099118709564,
+            3.471099853515625,
+            -0.06414798647165298
+          ],
+          "max": [
+            0.1826220005750656,
+            3.6254003047943115,
+            0.2963169813156128
+          ]
+        },
+        "center": [
+          -0.006584495306015015,
+          3.5482500791549683,
+          0.1160844974219799
+        ],
+        "anchor": [
+          -0.017035100609064102,
+          3.5726001262664795,
+          0.11290401220321655
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3208",
+            "sha256": "0e56e370d55f029013aab8d837822c21c5ab1bdbbb98109a740d669eb15ee075"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thoracicDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-tenth-thoracic-vertebra",
+        "fmaId": "FMA13507",
+        "name": "Intervertebral disk of tenth thoracic vertebra",
+        "sourceName": "intervertebral disk of tenth thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13507",
+        "bounds": {
+          "min": [
+            -0.19966499507427216,
+            3.1991002559661865,
+            -0.003185005160048604
+          ],
+          "max": [
+            0.18669599294662476,
+            3.353100538253784,
+            0.37794196605682373
+          ]
+        },
+        "center": [
+          -0.0064845010638237,
+          3.2761003971099854,
+          0.18737848044838756
+        ],
+        "anchor": [
+          -0.008348490111529827,
+          3.257700204849243,
+          0.18977096676826477
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3209",
+            "sha256": "84ebc4e0ab44c57246f189d0ccf5fe212d1f4ec9f64eb8f8c5a7143adba4b5b8"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thoracicDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eleventh-thoracic-vertebra",
+        "fmaId": "FMA13508",
+        "name": "Intervertebral disk of eleventh thoracic vertebra",
+        "sourceName": "intervertebral disk of eleventh thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13508",
+        "bounds": {
+          "min": [
+            -0.20772799849510193,
+            2.916099786758423,
+            0.06986900418996811
+          ],
+          "max": [
+            0.19428600370883942,
+            3.082399845123291,
+            0.47012197971343994
+          ]
+        },
+        "center": [
+          -0.006720997393131256,
+          2.999249815940857,
+          0.269995491951704
+        ],
+        "anchor": [
+          -0.003259439952671528,
+          2.9774999618530273,
+          0.2717849612236023
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3210",
+            "sha256": "8f2a670e4c8271c8ac6c1195cd324e1d5e69255b937e759c99c6ee90279bc21f"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thoracicDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-first-lumbar-vertebra",
+        "fmaId": "FMA16033",
+        "name": "Intervertebral disk of first lumbar vertebra",
+        "sourceName": "intervertebral disk of first lumbar vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "abdomen"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA16033",
+        "bounds": {
+          "min": [
+            -0.2189520001411438,
+            2.3256006240844727,
+            0.24532097578048706
+          ],
+          "max": [
+            0.2059819996356964,
+            2.485699415206909,
+            0.6230300068855286
+          ]
+        },
+        "center": [
+          -0.006485000252723694,
+          2.405650019645691,
+          0.4341754913330078
+        ],
+        "anchor": [
+          -0.0340925008058548,
+          2.4264001846313477,
+          0.42872703075408936
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3212",
+            "sha256": "5bcf1493e5210294ed340c9d3146cf28f8961a255cc9bbcbe38526342baefcc1"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lumbarDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-lumbar-vertebra",
+        "fmaId": "FMA16034",
+        "name": "Intervertebral disk of second lumbar vertebra",
+        "sourceName": "intervertebral disk of second lumbar vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "abdomen"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA16034",
+        "bounds": {
+          "min": [
+            -0.2296990007162094,
+            2.011199951171875,
+            0.28129303455352783
+          ],
+          "max": [
+            0.2164900004863739,
+            2.125699996948242,
+            0.6599099636077881
+          ]
+        },
+        "center": [
+          -0.006604500114917755,
+          2.0684499740600586,
+          0.47060149908065796
+        ],
+        "anchor": [
+          -0.013001500628888607,
+          2.0218000411987305,
+          0.44735297560691833
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3214",
+            "sha256": "804fa1c4aaa0812343a5f1235efc5c0920e034296286071849c93b761084cbd6"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lumbarDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-lumbar-vertebra",
+        "fmaId": "FMA16035",
+        "name": "Intervertebral disk of third lumbar vertebra",
+        "sourceName": "intervertebral disk of third lumbar vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "abdomen"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA16035",
+        "bounds": {
+          "min": [
+            -0.23009701073169708,
+            1.6329400539398193,
+            0.2457839995622635
+          ],
+          "max": [
+            0.2171669900417328,
+            1.8070696592330933,
+            0.628529965877533
+          ]
+        },
+        "center": [
+          -0.006465010344982147,
+          1.7200048565864563,
+          0.4371569827198982
+        ],
+        "anchor": [
+          -0.0027886598836630583,
+          1.709320068359375,
+          0.425262987613678
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3215",
+            "sha256": "22ae331178c3562580008f500eecbb045a8c88a800e7452914c461ae2ea3e23c"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lumbarDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra",
+        "fmaId": "FMA16036",
+        "name": "Intervertebral disk of fourth lumbar vertebra",
+        "sourceName": "intervertebral disk of fourth lumbar vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "abdomen"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA16036",
+        "bounds": {
+          "min": [
+            -0.2525309920310974,
+            1.3062798976898193,
+            0.14254997670650482
+          ],
+          "max": [
+            0.2389870136976242,
+            1.5359301567077637,
+            0.5276699662208557
+          ]
+        },
+        "center": [
+          -0.006771989166736603,
+          1.4211050271987915,
+          0.33510997146368027
+        ],
+        "anchor": [
+          0.0067594097927212715,
+          1.3867297172546387,
+          0.3067079782485962
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3216",
+            "sha256": "2aee68b19ac9da829a6d2571ea4673b9a23b2e33e99b86edd41317464e6a7582"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lumbarDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra",
+        "fmaId": "FMA16037",
+        "name": "Intervertebral disk of fifth lumbar vertebra",
+        "sourceName": "intervertebral disk of fifth lumbar vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "abdomen"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA16037",
+        "bounds": {
+          "min": [
+            -0.24355000257492065,
+            0.9482598900794983,
+            0.039459992200136185
+          ],
+          "max": [
+            0.2299250066280365,
+            1.2377099990844727,
+            0.4107849895954132
+          ]
+        },
+        "center": [
+          -0.006812497973442078,
+          1.0929849445819855,
+          0.2251224908977747
+        ],
+        "anchor": [
+          -0.00801675021648407,
+          1.148590087890625,
+          0.2523840367794037
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3217",
+            "sha256": "a70ad77646a204454af2c355efca1375c59e392981679ffc85913b8d18979214"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lumbarDisc",
+      "previous": {
+        "function": {
+          "readiness": "draft",
+          "title": "Whole intervertebral disc · draft",
+          "body": "Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.",
+          "note": "22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html"
+          ]
+        }
+      }
+    }
+  ]
+}

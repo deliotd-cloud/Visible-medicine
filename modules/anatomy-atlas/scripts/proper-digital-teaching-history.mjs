@@ -3,8 +3,10 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import pins from '../content/proper-digital-teaching.before.json' with {type:'json'};
 import transition from '../content/proper-digital-teaching.transition.json' with {type:'json'};
+import {beforeSpinalDiscFunction} from './spinal-disc-function-history.mjs';
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function beforeProperDigitalTeaching(api){
+ api=beforeSpinalDiscFunction(api);
  assert.equal(hash(pins),'d695e407a86e7b3cdaf635fb9a7a089ed5b4a1f734b3ebd8789597e50305d689');
  assert.equal(hash(transition),'fbf954169ed47c65936165ae74dfbd5958f28dc3d323c1cee301e21596948b2e');
  assert.equal(transition.parentCommit,pins.parentCommit);assert.equal(transition.pinsHash,hash(pins));

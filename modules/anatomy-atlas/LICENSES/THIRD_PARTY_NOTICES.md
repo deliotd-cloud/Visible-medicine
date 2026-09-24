@@ -1244,3 +1244,15 @@ Source definitions and original-file SHA-256/CRC/byte pins are retained in
 `docs/renal-segmental-source-audit.json`; context and image pins are beside each
 figure. No font file, scan, texture or external illustration is distributed.
 These diagnostic figures do not grant clinical approval or admit the candidates.
+
+## Spinal-disc Function references — 24 September 2026
+
+Original brief factual summaries cite TTUHSC El Paso's back-joint table,
+Skrzypiec et al. (2007, PMCID PMC2078298), Wilke et al. (2020,
+doi:10.3389/fbioe.2020.00614), and Adams et al. (1996, PMID 8951017, abstract).
+These are reading references, not imported publisher prose, tables, artwork,
+PDFs or scans. The TTUHSC table and cervical paper retain their copyright;
+public access does not grant assumed commercial asset rights. Existing
+BodyParts3D CC BY 4.0 credit is unchanged. No model, dependency, font, texture,
+dataset or mandatory fee is added. See `docs/SPINAL_DISC_FUNCTION.md` for source
+scope and outstanding revision-bound radiologist review.

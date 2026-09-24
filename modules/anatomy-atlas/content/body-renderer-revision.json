@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "bf90af235dbccb925c6bffc396f0d783e8dc9a493fab64d10fc649feb9f93c1e"
+      "sha256": "0d06f249fae82ab8d4f93122e8a5dadb540bf9e486862fda8343505f2705178a"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1167,6 +1167,10 @@
     {
       "path": "content/shoulder-xray-bindings.json",
       "sha256": "f3e544bf002d4bf8ab0101f5e300e207fff74296f156378667ecc7fe3de10975"
+    },
+    {
+      "path": "content/spinal-disc-function.ts",
+      "sha256": "1d7d5f9883edea19a2339dd0c7da90d711ea9df6c3dfede922dd380ca307d4ef"
     },
     {
       "path": "content/spine-imaging-concepts.ts",
@@ -2437,6 +2441,10 @@
       "sha256": "cd17bce6dedd162d374e0cf9e96a12d435294fb1ce81341c8a7c13af0d2c0f53"
     },
     {
+      "path": "lib/spinal-disc-function.ts",
+      "sha256": "402ffd000cf3566b9bee54b71bf3e6a135846ce5a0b77245f94b6deae0fd3607"
+    },
+    {
       "path": "lib/spinal-level-studies.ts",
       "sha256": "f41576f081a47a2df247c8ec95bcb295c1a0b4461cb7c432a597ae9d7c10ddee"
     },
@@ -2658,7 +2666,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "323c3502a09b4d002b16512ede356d9764d21e26e745e7249528253f583dc8b1"
+      "sha256": "a11bbce2d07d36fb87b2de411e7c0253f678cb49ae4ea50679e729e2229bb2de"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2869,5 +2877,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "74c386f0e53e8bfd6ea4482306b8851d8e465cc464e1f7c6f28d463098225a25"
+  "sha256": "c1d9f8d641f03d0dc2c4257921fdab393269d770d642d05f3b0ef3ba06d10265"
 }

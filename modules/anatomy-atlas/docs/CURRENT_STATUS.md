@@ -1,5 +1,14 @@
 # Current atlas status
 
+[Spinal-disc Function teaching](SPINAL_DISC_FUNCTION.md) adds source-bound drafts
+for 22 retained discs, with distinct cervical, thoracic and lumbar explanations.
+All other 9,914 topics and geometry/recipes are preserved. Focused tests verify
+22 viewer-note renders and reject 374 altered identities. The unresolved source
+level remains unadmitted; no patient-level registration or approval is implied.
+This update is source-only pending generated website integration. The website
+already publishes the earlier proper-digital notes from Atlas `bff0cbb` in
+website `f7a0983`; older publication statements below are historical.
+
 [Hand clinical-history verification](HAND_VESSEL_CLINICAL_CURRICULUM.md#historical-replay-correction--24-september-2026)
 now distinguishes exact recorded Git snapshots from current scoped transitions.
 Original hashes remain intact; all 84 historical hand sections are checked
