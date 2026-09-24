@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {writeFile} from 'node:fs/promises';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+import {contentContext} from './content-contract-tools.mjs';
+import {wholeBodyTeachingSnapshot} from './exact-clinical-reference-history.mjs';
+const parentCommit='8b73216dd8f4b4e8b40eb0ba77fe9dde1bca569f';
+assert.equal(execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),parentCommit);
+const {api,catalog}=await contentContext(),display=api.bodyDisplayCatalog(catalog);
+const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
+const entries=display.structures.flatMap(identity=>{
+ const group=Object.entries(api.orbitalNeckMuscleImagingGroups).find(([,g])=>g.family==='orbital'&&g.fmaIds.includes(identity.fmaId))?.[0];
+ if(!group)return [];
+ const previous=api.bodyLesson(identity,'ultrasound');
+ assert.equal(previous.readiness,'pending');
+ return [{identity,group,previous}];
+});
+assert.equal(entries.length,14);
+const pins={parentCommit,catalogHash:hash(display),previousAllLessonsAndRecipesHash:hash(wholeBodyTeachingSnapshot(api,catalog)),entries};
+await writeFile('content/orbital-ultrasound.before.json',JSON.stringify(pins,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({topics:entries.length,pinsHash:hash(pins)}));

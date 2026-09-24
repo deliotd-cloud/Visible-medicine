@@ -1,6 +1,7 @@
 import pins from '../content/orbital-neck-muscle-imaging-pins.json' with {type:'json'};
 import {orbitalNeckMuscleImagingGroups,orbitalNeckMuscleImagingModes,orbitalNeckMuscleImagingReferences,type OrbitalNeckMuscleImagingModality} from '../content/orbital-neck-muscle-imaging';
 import {sourceCanonical} from './body-source-additions';
+import {orbitalUltrasoundMode} from '../content/orbital-neck-muscle-imaging';
 import type {BodyStructure} from '../app/body-types';
 import type {ContentTab} from '../app/anatomy-data';
 import type {ContentLesson} from './content-types';
@@ -12,7 +13,7 @@ export function orbitalNeckMuscleImagingLesson(structure:BodyStructure,tab:Conte
   const binding=bound.get(structure.id);
   if(!binding||sourceCanonical(structure)!==binding.signature)return undefined;
   const modality=tab as OrbitalNeckMuscleImagingModality,group=orbitalNeckMuscleImagingGroups[binding.group];
-  const mode=orbitalNeckMuscleImagingModes[modality],focus=group.focus[modality];
+  const mode=group.family==='orbital'&&modality==='ultrasound'?orbitalUltrasoundMode:orbitalNeckMuscleImagingModes[modality],focus=group.focus[modality];
   if(!focus)return undefined;
   return {
     readiness:'draft',title:`${structure.name} · ${names[modality]} orientation · draft`,

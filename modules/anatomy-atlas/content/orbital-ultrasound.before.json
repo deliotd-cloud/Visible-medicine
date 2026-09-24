@@ -1,0 +1,903 @@
+{
+  "parentCommit": "8b73216dd8f4b4e8b40eb0ba77fe9dde1bca569f",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "previousAllLessonsAndRecipesHash": "7dded1826dcf553f3eb6d764a1a25a67e827fd58f44290ba25d78b6121f78b12",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-inferior-oblique",
+        "fmaId": "FMA49051",
+        "name": "Left inferior oblique",
+        "sourceName": "left inferior oblique",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49051",
+        "bounds": {
+          "min": [
+            0.12558099627494812,
+            7.031500339508057,
+            0.9047900438308716
+          ],
+          "max": [
+            0.4191780090332031,
+            7.195000171661377,
+            1.1631300449371338
+          ]
+        },
+        "center": [
+          0.2723795026540756,
+          7.113250255584717,
+          1.0339600443840027
+        ],
+        "anchor": [
+          0.29078200459480286,
+          7.04949951171875,
+          1.040890097618103
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1294",
+            "sha256": "fc7dd40ee970cbbeae8ee147d0e7638e94fb166d28d4b1e1e62314f19395d6a8"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "inferior-oblique",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-inferior-rectus",
+        "fmaId": "FMA49047",
+        "name": "Left inferior rectus",
+        "sourceName": "left inferior rectus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49047",
+        "bounds": {
+          "min": [
+            0.12114999443292618,
+            7.042199611663818,
+            0.6904499530792236
+          ],
+          "max": [
+            0.34292301535606384,
+            7.269000053405762,
+            1.1000500917434692
+          ]
+        },
+        "center": [
+          0.232036504894495,
+          7.15559983253479,
+          0.8952500224113464
+        ],
+        "anchor": [
+          0.22043699026107788,
+          7.126199722290039,
+          0.8682800531387329
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1295",
+            "sha256": "7e5c20a2e78d0d606c370a626b299d6fa9183c5be487a04dd5c760ee6ec8d801"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "inferior-rectus",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-lateral-rectus",
+        "fmaId": "FMA49055",
+        "name": "Left lateral rectus",
+        "sourceName": "left lateral rectus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49055",
+        "bounds": {
+          "min": [
+            0.16356898844242096,
+            7.13170051574707,
+            0.6910800337791443
+          ],
+          "max": [
+            0.427962988615036,
+            7.30709981918335,
+            1.0872700214385986
+          ]
+        },
+        "center": [
+          0.2957659885287285,
+          7.21940016746521,
+          0.8891750276088715
+        ],
+        "anchor": [
+          0.33296000957489014,
+          7.228899955749512,
+          0.8812500238418579
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1304",
+            "sha256": "214943158bb5b523bd981c0040f49df1210e7d3afa6a5df861dac2b5d4436549"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lateral-rectus",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-levator-palpebrae-superioris",
+        "fmaId": "FMA49049",
+        "name": "Left levator palpebrae superioris",
+        "sourceName": "left levator palpebrae superioris",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49049",
+        "bounds": {
+          "min": [
+            0.11840200424194336,
+            7.208799839019775,
+            0.6957100033760071
+          ],
+          "max": [
+            0.41971197724342346,
+            7.36959981918335,
+            1.1537699699401855
+          ]
+        },
+        "center": [
+          0.2690569907426834,
+          7.2891998291015625,
+          0.9247399866580963
+        ],
+        "anchor": [
+          0.2724649906158447,
+          7.331200122833252,
+          0.9014500379562378
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1306",
+            "sha256": "114bfa94da75435db3d4afadafe060c57e0345c78e2174068ef4698a61d72e49"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "levator-palpebrae-superioris",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-medial-rectus",
+        "fmaId": "FMA49057",
+        "name": "Left medial rectus",
+        "sourceName": "left medial rectus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49057",
+        "bounds": {
+          "min": [
+            0.11240100115537643,
+            7.124100208282471,
+            0.70933997631073
+          ],
+          "max": [
+            0.2123749852180481,
+            7.300300121307373,
+            1.1117900609970093
+          ]
+        },
+        "center": [
+          0.16238799318671227,
+          7.212200164794922,
+          0.9105650186538696
+        ],
+        "anchor": [
+          0.16784100234508514,
+          7.213799953460693,
+          0.9095799326896667
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1308",
+            "sha256": "98d6d7cb6842243dceacbea4c494b1554d719b7fbb76e2c90020f126beb4defe"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "medial-rectus",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-superior-oblique",
+        "fmaId": "FMA49053",
+        "name": "Left superior oblique",
+        "sourceName": "left superior oblique",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49053",
+        "bounds": {
+          "min": [
+            0.11307000368833542,
+            7.233100414276123,
+            0.7210800051689148
+          ],
+          "max": [
+            0.39283502101898193,
+            7.346899509429932,
+            1.1550899744033813
+          ]
+        },
+        "center": [
+          0.2529525123536587,
+          7.289999961853027,
+          0.9380849897861481
+        ],
+        "anchor": [
+          0.2669000029563904,
+          7.293799877166748,
+          0.9565600752830505
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1322",
+            "sha256": "3a84379998b92f3c359c41426dba02b79c9fe648cfb9e3e835ce63677c9f8e9a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superior-oblique",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-superior-rectus",
+        "fmaId": "FMA49045",
+        "name": "Left superior rectus",
+        "sourceName": "left superior rectus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49045",
+        "bounds": {
+          "min": [
+            0.12585800886154175,
+            7.258000373840332,
+            0.7107299566268921
+          ],
+          "max": [
+            0.35514700412750244,
+            7.326099872589111,
+            1.1161500215530396
+          ]
+        },
+        "center": [
+          0.2405025064945221,
+          7.292050123214722,
+          0.9134399890899658
+        ],
+        "anchor": [
+          0.22472400963306427,
+          7.292800426483154,
+          0.9017900228500366
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1323",
+            "sha256": "e79c60ca4e54078df13c609d739a09f8e83c7fddebcc79a4f03f785c006423a1"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superior-rectus",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-inferior-oblique",
+        "fmaId": "FMA49050",
+        "name": "Right inferior oblique",
+        "sourceName": "right inferior oblique",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49050",
+        "bounds": {
+          "min": [
+            -0.4323759973049164,
+            7.031400203704834,
+            0.9047099351882935
+          ],
+          "max": [
+            -0.13864700496196747,
+            7.195000171661377,
+            1.1630700826644897
+          ]
+        },
+        "center": [
+          -0.2855115011334419,
+          7.1132001876831055,
+          1.0338900089263916
+        ],
+        "anchor": [
+          -0.30253899097442627,
+          7.049699783325195,
+          1.044029951095581
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1345",
+            "sha256": "b5508969b711e3c7bbfff0fdffc7567157326ee0e88b28416326513e06263c41"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "inferior-oblique",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-inferior-rectus",
+        "fmaId": "FMA49046",
+        "name": "Right inferior rectus",
+        "sourceName": "right inferior rectus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49046",
+        "bounds": {
+          "min": [
+            -0.35603001713752747,
+            7.042199611663818,
+            0.6904000043869019
+          ],
+          "max": [
+            -0.1339620053768158,
+            7.269100189208984,
+            1.100000023841858
+          ]
+        },
+        "center": [
+          -0.24499601125717163,
+          7.155649900436401,
+          0.8952000141143799
+        ],
+        "anchor": [
+          -0.2266799956560135,
+          7.126800537109375,
+          0.8730499148368835
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1346",
+            "sha256": "f961776090739a493c006f8933c8ded45365a86a92bdbfee2fb8dc0e35b651bc"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "inferior-rectus",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-lateral-rectus",
+        "fmaId": "FMA49054",
+        "name": "Right lateral rectus",
+        "sourceName": "right lateral rectus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49054",
+        "bounds": {
+          "min": [
+            -0.4411109983921051,
+            7.131800651550293,
+            0.6909599900245667
+          ],
+          "max": [
+            -0.1765809953212738,
+            7.307199478149414,
+            1.0873199701309204
+          ]
+        },
+        "center": [
+          -0.30884599685668945,
+          7.2195000648498535,
+          0.8891399800777435
+        ],
+        "anchor": [
+          -0.33801600337028503,
+          7.241999626159668,
+          0.8782000541687012
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1355",
+            "sha256": "0e1019c51724d672a6673e97f81f3e57f41f568d5ef5d68cf024096215165797"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lateral-rectus",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-levator-palpebrae-superioris",
+        "fmaId": "FMA49048",
+        "name": "Right levator palpebrae superioris",
+        "sourceName": "right levator palpebrae superioris",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49048",
+        "bounds": {
+          "min": [
+            -0.4329740107059479,
+            7.208600044250488,
+            0.695580005645752
+          ],
+          "max": [
+            -0.13164199888706207,
+            7.369699478149414,
+            1.15378999710083
+          ]
+        },
+        "center": [
+          -0.282308004796505,
+          7.289149761199951,
+          0.924685001373291
+        ],
+        "anchor": [
+          -0.28552699089050293,
+          7.337299823760986,
+          0.9223300218582153
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1357",
+            "sha256": "430068a4d8fc68e5e96b725c8e09849f757ccdc090ab6cec84341d945c22b9c5"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "levator-palpebrae-superioris",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-medial-rectus",
+        "fmaId": "FMA49056",
+        "name": "Right medial rectus",
+        "sourceName": "right medial rectus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49056",
+        "bounds": {
+          "min": [
+            -0.22549200057983398,
+            7.124000072479248,
+            0.7094399929046631
+          ],
+          "max": [
+            -0.1253570020198822,
+            7.300500392913818,
+            1.1117700338363647
+          ]
+        },
+        "center": [
+          -0.1754245012998581,
+          7.212250232696533,
+          0.9106050133705139
+        ],
+        "anchor": [
+          -0.17976200580596924,
+          7.217700004577637,
+          0.9125300645828247
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1359",
+            "sha256": "ad4c08e84c570715c5cdc24faf0bdb9bc54030b7fe6131a10e27e0c43e0588a1"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "medial-rectus",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-superior-oblique",
+        "fmaId": "FMA49052",
+        "name": "Right superior oblique",
+        "sourceName": "right superior oblique",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49052",
+        "bounds": {
+          "min": [
+            -0.4058050215244293,
+            7.233199596405029,
+            0.7207300066947937
+          ],
+          "max": [
+            -0.12636598944664001,
+            7.346899509429932,
+            1.1550999879837036
+          ]
+        },
+        "center": [
+          -0.26608550548553467,
+          7.2900495529174805,
+          0.9379149973392487
+        ],
+        "anchor": [
+          -0.28172898292541504,
+          7.292900562286377,
+          0.9547999501228333
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1373",
+            "sha256": "90d01a639fd51a3cb956e17dbb581f6d51e037cfacdcfccf21716e8a57f50c6e"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superior-oblique",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-superior-rectus",
+        "fmaId": "FMA49044",
+        "name": "Right superior rectus",
+        "sourceName": "right superior rectus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA49044",
+        "bounds": {
+          "min": [
+            -0.3682989776134491,
+            7.257900238037109,
+            0.7105600237846375
+          ],
+          "max": [
+            -0.1387930065393448,
+            7.326200008392334,
+            1.1161599159240723
+          ]
+        },
+        "center": [
+          -0.25354599207639694,
+          7.292050123214722,
+          0.9133599698543549
+        ],
+        "anchor": [
+          -0.24859501421451569,
+          7.293699741363525,
+          0.9136300683021545
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1374",
+            "sha256": "ae2a718964765d9492e871dd9d2d41246bf8b9f9f01b3c2e4f612bd72e165013"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superior-rectus",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    }
+  ]
+}

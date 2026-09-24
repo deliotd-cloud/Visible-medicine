@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "orbital-ultrasound:test": "node scripts/record-orbital-ultrasound.mjs --check && node scripts/validate-orbital-ultrasound.mjs",
     "pulmonary-vein-ultrasound:test": "node scripts/record-pulmonary-vein-ultrasound.mjs --check && node scripts/validate-pulmonary-vein-ultrasound.mjs",
     "contextual-undo:test": "node scripts/test-contextual-dissection-undo.mjs",
     "dorsal-penile:audit": "node scripts/audit-dorsal-penile-sources.mjs --check",

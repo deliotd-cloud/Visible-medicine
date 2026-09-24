@@ -3,6 +3,8 @@ import {orbitalMuscleLessons} from '../lib/orbital-curriculum';
 import {neckMuscleLessons} from '../lib/neck-curriculum';
 import {swallowingMuscleLessons} from '../lib/swallowing-curriculum';
 export const orbitalNeckMuscleImagingReferences={
+  orbitalUS:'https://pmc.ncbi.nlm.nih.gov/articles/PMC4250497/',
+  obliqueUS:'https://pubmed.ncbi.nlm.nih.gov/3062525/',
   orbitMRI:'https://pmc.ncbi.nlm.nih.gov/articles/PMC7342734/',
   orbitCT:'https://pmc.ncbi.nlm.nih.gov/articles/PMC9581877/',
   orbitTrauma:'https://pmc.ncbi.nlm.nih.gov/articles/PMC3729297/',
@@ -22,6 +24,7 @@ type Fact={text:string;references:readonly Reference[]};
 export type OrbitalNeckMuscleImagingModality='ct'|'mri'|'ultrasound';
 type Focus=Partial<Record<OrbitalNeckMuscleImagingModality,Fact>>;
 const fact=(text:string,...references:Reference[]):Fact=>({text,references});
+export const orbitalUltrasoundMode= fact('Image-orientation teaching only, not instructions for scanning an eye. Dedicated ophthalmic acquisition and safety require an appropriate clinical protocol. Plane and gaze affect apparent muscle dimensions; this atlas provides no ultrasound reflectivity or normal measurement thresholds.','orbitalUS');
 export const orbitalNeckMuscleImagingModes:Record<OrbitalNeckMuscleImagingModality,Fact>={
   ct:fact('Use the actual acquisition and multiplanar reformats to follow the muscle between landmarks. Compare soft-tissue and bone windows where relevant; the coloured reference surface contains no attenuation, enhancement or fracture information.'),
   mri:fact('Check coverage and orientation before comparing anatomical and fluid-sensitive sequences. Assess signal, surrounding fat and continuity on the actual series; a fixed donor surface is not a signal map or a normal-size threshold.'),
@@ -29,30 +32,37 @@ export const orbitalNeckMuscleImagingModes:Record<OrbitalNeckMuscleImagingModali
 };
 const focuses:Record<string,Focus>={
   'medial-rectus':{
+    ultrasound:fact('Orient to the nasal side of the globe. Rectus muscle is relatively less echogenic than surrounding orbital fat; compare its long-axis course with a transverse section.','orbitalUS'),
     ct:fact('Follow the medial orbital muscle separately from the adjacent ethmoid wall. Compare belly and tendon involvement; enlargement alone does not identify its cause.','orbitCT'),
     mri:fact('Axial images show the nasal-side course well; corroborate it on coronal images. Keep the muscle separate from the more posterior optic nerve.','orbitMRI'),
   },
   'lateral-rectus':{
+    ultrasound:fact('Identify the temporal-side rectus independently of medial rectus. Gaze and section direction affect its appearance; an unmatched plane is not evidence of a size difference.','orbitalUS'),
     ct:fact('Trace the temporal-side muscle from apex towards globe. Assess its tendon and surrounding fat independently; do not infer abducens function from its contour.','orbitCT'),
     mri:fact('Follow the lateral course on axial images and compare coronal sections at matched levels. Different gaze positions change muscle geometry.','orbitMRI','pulley'),
   },
   'superior-rectus':{
+    ultrasound:fact('Superior rectus lies below levator. A longitudinal superior-muscle complex may include both; do not label the entire combined profile as superior rectus alone.','orbitalUS'),
     ct:fact('Distinguish the superior rectus–levator complex from adjacent orbital fat. Limited separation on CT does not make the two muscles one anatomical structure.','orbitCT'),
     mri:fact('Sagittal images help separate superior rectus below from levator above. Confirm which structure reaches the globe rather than the upper eyelid.','orbitMRI'),
   },
   'inferior-rectus':{
+    ultrasound:fact('Identify the rectus below the globe. Long-axis and transverse sections depict different profiles of the same muscle; use its course, not a single apparent diameter.','orbitalUS'),
     ct:fact('Review the muscle above the orbital floor and its surrounding fat. Muscle shape alone does not establish entrapment or explain restricted eye movement.','orbitTrauma'),
     mri:fact('Follow the inferior rectus longitudinally on sagittal images; check coronal relationships to the globe and floor. Separate the neighbouring inferior oblique.','orbitMRI'),
   },
   'superior-oblique':{
+    ultrasound:fact('Relate a candidate oblique profile to the superomedial course and trochlear turn shown in Anatomy. Standardized echography has depicted oblique muscles and tendons in a small myositis series; that does not validate routine normal visibility or the atlas tendon boundary.','obliqueUS'),
     ct:fact('Follow the superomedial muscle towards the trochlear region. Do not interpret its reflected tendon as a straight apex-to-globe rectus course.'),
     mri:fact('Trace the anterior trochlear turn and reflected tendon across planes. Dedicated high-resolution imaging may show detail unresolved on routine orbital MRI.','orbitMRI'),
   },
   'inferior-oblique':{
+    ultrasound:fact('Use the anterior medial origin and course below the globe to distinguish inferior oblique from an apex-based rectus. Published echographic depiction in a small myositis series is not a normal-appearance standard, proof of tendon continuity or a diagnosis from this surface.','obliqueUS'),
     ct:fact('Start at the anterior medial orbital floor, not the common tendinous ring. Trace the oblique course below the globe on successive planes.'),
     mri:fact('Look beneath the globe and inferior rectus for its transverse-oblique course. Do not force this anteriorly originating muscle into an apex-based pattern.','orbitMRI'),
   },
   'levator-palpebrae-superioris':{
+    ultrasound:fact('The thin levator lies above superior rectus and can be difficult to separate echographically. A combined superior-complex measurement is not an isolated levator measurement.','orbitalUS'),
     ct:fact('Review the superior muscle complex with the eyelid target in mind. CT may not resolve levator, its aponeurosis and adjacent small eyelid layers separately.','orbitCT'),
     mri:fact('Sagittal imaging helps follow levator towards the upper lid, above superior rectus. Microscopy-coil detail is not guaranteed with a routine head coil.','orbitMRI'),
   },
