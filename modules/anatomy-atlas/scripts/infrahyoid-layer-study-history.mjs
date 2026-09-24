@@ -1,6 +1,7 @@
 // Offline exact recipe replay. The authored focus remains in the runtime.
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
+import { preOphthalmicNerveProfiles } from './ophthalmic-nerve-study-history.mjs';
 
 const hash = (value) => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const beforeHash = '32d547014691a309b584843574b9df034ef3b3234a35a20bf52b70ba2ed33fb2';
@@ -10,6 +11,8 @@ const ids = ['infrahyoid-superficial-pair', 'infrahyoid-deep-pair'];
 const regions = ['head-neck', 'whole-body'];
 
 export function preInfrahyoidLayerProfiles(profiles) {
+  if (profiles['head-neck'].focuses.some((focus) => focus.id === 'v1-frontal-lacrimal-subset'))
+    profiles = preOphthalmicNerveProfiles(profiles);
   if (hash(profiles) === beforeHash) return structuredClone(profiles);
   assert.equal(hash(profiles), afterHash, 'Unrecorded infrahyoid recipe edit');
   const previous = structuredClone(profiles);

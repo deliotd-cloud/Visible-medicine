@@ -5,6 +5,7 @@ import { thoraxCentralAirwayBindings, thoraxCentralAirwayStudy } from '../conten
 import { mediastinalOrganBindings, mediastinalOrganStudy } from '../content/mediastinal-organ-study.ts';
 import { infrahyoidMuscleBindings, infrahyoidContextBindings, infrahyoidLayerStudies } from '../content/infrahyoid-layer-study.ts';
 import { pelvicUrethralFocus } from '../content/pelvic-urethral-study.ts';
+import { ophthalmicNerveStudies, ophthalmicNerveTargetBindings, ophthalmicNerveContextBindings, ophthalmicNerveReferences } from '../content/ophthalmic-nerve-studies.ts';
 import { neuroStudySets, neuroStudyIds } from '../lib/neuroanatomy.ts';
 import { axialStudySets } from '../lib/axial-anatomy.ts';
 import { renalStudySets, renalStudyReferences } from '../lib/renal-studies.ts';
@@ -1466,6 +1467,24 @@ for (const region of ['head-neck', 'whole-body'] as const) {
       sideFilteredSourceBindings: true,
     });
   }
+}
+
+for (const region of ['head-neck', 'whole-body'] as const) {
+  for (const study of ophthalmicNerveStudies) {
+    dissectionProfiles[region].focuses.push({
+      id: study.id, title: study.title,
+      rule: { fmaIds: [...study.targetFmaIds] },
+      context: [{ fmaIds: [...study.contextFmaIds] }],
+      includeSkeleton: false, view: study.view,
+      description: study.description, inspect: study.inspect,
+      requiredSourceBindings: [
+        ...ophthalmicNerveTargetBindings.filter(binding => study.targetFmaIds.some(fmaId => fmaId === binding.fmaId)),
+        ...ophthalmicNerveContextBindings.filter(binding => study.contextFmaIds.some(fmaId => fmaId === binding.fmaId)),
+      ],
+      sideFilteredSourceBindings: true,
+    });
+  }
+  dissectionProfiles[region].references.push(...ophthalmicNerveReferences);
 }
 
 export function matchesRule(s: BodyStructure, rule: TissueRule): boolean {

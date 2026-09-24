@@ -19,13 +19,14 @@ to fill slots or send every decision back through the same full investigation.
 No nested delegation. Only the main task commits, integrates, backs up or
 publishes; specialist ownership and existing authorization still apply.
 
-The project .codex/config.toml sets Astra High and Sol Medium defaults with a
+The project .codex/config.toml sets GPT-6 Astra High and GPT-6 Sol Medium defaults with a
 two-worker limit; equivalent copies live in the main coordination folder and
 website checkout. No account-wide setting, permissions or authentication change.
 Existing task/composer overrides can take precedence; a file edit does not
 retroactively switch the running turn. Explicitly request model and effort when
-spawning workers, and verify the actual tool result. If the composer still shows
-Ultra, select High there for the main task.
+spawning workers, and verify the actual tool result. Use a lighter read-only
+worker only for a bounded scan that benefits from parallelism. If the composer
+still shows Ultra, select High there for the main task.
 
 Configuration syntax checked against [official subagent documentation](https://learn.chatgpt.com/docs/agent-configuration/subagents).
 This is our project allocation policy, not a guarantee of equal performance or
@@ -39,6 +40,26 @@ Give each worker a fresh bounded context, not the accumulated chat:
 2. Allowed files; exclusive ownership; interfaces other workers must preserve.
 3. Applicable instructions and required references, plus explicit exclusions.
 4. Checks to run once, how to report evidence and when to escalate.
+
+Reusable worker brief (fill in the actual paths, commit and checks; omit any
+field that does not apply):
+
+```text
+Objective: One bounded deliverable and its acceptance criterion.
+Baseline: Exact repository, commit, and relevant source/checkpoint.
+Ownership: Files this worker alone may edit; other workers' files are off limits.
+Acceptance: Named behavior, negative cases, and focused commands to run once.
+Boundaries: No scans, masks, identifiers, unreviewed assets or approval claims;
+            list any additional product-specific exclusions.
+Handoff: Changed paths, pass/fail evidence, unresolved risks and next action
+         in about 200 words. No commit, push, deployment or nested delegation.
+```
+
+The coordinator chooses zero to two independent tasks, keeps dependent steps
+local, reviews the actual returned diffs and safety gates, runs any integration
+checks, then alone commits and verifies GitHub and D-drive recovery. A worker
+should stop with evidence when its bounded task needs a source or clinical
+decision; it must not broaden ownership or weaken a test to report success.
 
 Workers return changed paths, evidence/log locations, failures/limits and next
 action in about 200 words (longer only for material risks). Main reviews the

@@ -92,5 +92,5 @@ for (const region of ['head-neck', 'whole-body']) {
 assert.equal(hash(previous), '32d547014691a309b584843574b9df034ef3b3234a35a20bf52b70ba2ed33fb2');
 const altered = structuredClone(dissectionProfiles);
 altered['head-neck'].focuses.find((focus) => focus.id === 'infrahyoid-deep-pair').title += ' changed';
-assert.throws(() => preInfrahyoidLayerProfiles(altered), /Unrecorded infrahyoid recipe edit/);
+assert.throws(() => preInfrahyoidLayerProfiles(altered), /Unrecorded (V1|infrahyoid) recipe edit/);
 console.log(JSON.stringify({ passed: true, exactSources: 10, regions: 2, layers: 2, sideScopes: 12, clinicalValidation: false }));
