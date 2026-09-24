@@ -1,5 +1,12 @@
 # First clinical review pilot
 
+24 September source refresh: the unsigned 11-selection index was regenerated after
+the current viewer and teaching revisions. All 11 imaging tracks remain blocked,
+`approval` remains false, and no private reviewer record was read or changed.
+The index is a fresh review starting point, not a carried-over sign-off. Run
+`node scripts/prepare-first-release-review.mjs --check` before using it and
+verify the displayed website candidate separately.
+
 This small sample calibrates the first-release review, not the final shipped
 anatomy set. It uses existing review workspaces and source/teaching/renderer
 fingerprints; no clinical decisions have been created, read or inferred here.

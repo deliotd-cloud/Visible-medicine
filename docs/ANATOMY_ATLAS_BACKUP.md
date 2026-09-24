@@ -1,5 +1,9 @@
 # Anatomy atlas backup — 12 September 2026
 
+## 24 September 2026 — Unsigned first-release review index refreshed
+
+Atlas source `a59a0dd` regenerates the 11-selection pilot index against current renderer/teaching revisions. Eleven imaging tracks remain blocked, `approval` stays false, and no private reviewer record was read or modified. This is a source-only coordination update; the live website remains private v108. The mirrored Atlas module subtree matches the source exactly.
+
 ## 24 September 2026 — First-release candidate binding
 
 Atlas source `6638e57` records the privately deployed website version 108 (`3ebd67a`) and its generated viewer from Atlas `77e20b8`. The six first-release gates remain pending and clinical approval is not recorded. This is a recovery and coordination update, not learner-release authorization.
