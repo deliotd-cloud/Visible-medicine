@@ -89,15 +89,19 @@
   },
   {
     "path": "app/body-explorer.css",
-    "sha256": "1a2ada8b05154e3c0d3e870004edb941259da1f62b321f389387ba1688ca98e0"
+    "sha256": "d2bd732a4275471f962f696b2cd4d5901c54f86f95d8f2a4135d31f56237c24b"
   },
   {
     "path": "app/body-explorer.tsx",
-    "sha256": "254aa0e533013de064a73dc1f15a45500eb0edea6c79a6efd2095f63b63b361b"
+    "sha256": "ebe9126a898abfa0f8b658a4a9fd19dbe03eb342b8cc1cde875a40ba8ebb4565"
   },
   {
     "path": "app/body-scene.tsx",
     "sha256": "a45ed62ff777f5850fc6a30cd2dd9234a17d4b163d905495acc2fc357d1d4132"
+  },
+  {
+    "path": "app/body-selection-notice.tsx",
+    "sha256": "a0b5d8d77eb6c4124877e19e279f3b5b3067586e673138cbfb78c85c3c2fcb46"
   },
   {
     "path": "app/body-types.ts",
@@ -1754,6 +1758,10 @@
   {
     "path": "lib/content-types.ts",
     "sha256": "47ac24cbf05c1061238305589df148e3849265e33c728fce4bdc9c6912e4c3a6"
+  },
+  {
+    "path": "lib/contextual-dissection-undo.ts",
+    "sha256": "628154c5b1ef24e0a1a8f69544fbfeefbd84ab5b950955515a0ca6886d4e93ef"
   },
   {
     "path": "lib/core-organ-function.ts",

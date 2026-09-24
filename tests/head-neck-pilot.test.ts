@@ -8,7 +8,7 @@ const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
 test('head and neck delivery preserves the complete audited regional and nested scope',async()=>{
   const manifest=JSON.parse(await readFile(new URL('manifest.json',runtime),'utf8'));
   assert.match(manifest.sourceCommit,/^[a-f0-9]{40}$/);
-  assert.equal(manifest.sourceCommit,'52f6789aac9bc2af51b7f08e8c669714e47f608a');
+  assert.equal(manifest.sourceCommit,'15029f9075b6a252d0b594e6e8229bea2bf01d94');
   const inputs=JSON.parse(await readFile(new URL('source-inputs.json',runtime),'utf8')) as {path:string;sha256:string}[];
   assert.equal(inputs.find(input=>input.path==='lib/regional-framing.ts')?.sha256,'284ced594686b8d0ba77ebadc0081c5ea93c500733f01897d4334822fa2e1823','export includes the foot framing fallback source');
   assert.equal(manifest.region,'head-neck');assert.equal(manifest.structures,291);assert.equal(manifest.nestedSelections,75);

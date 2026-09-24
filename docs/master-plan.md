@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+24 September contextual dissection Undo: shared viewer binds Atlas `15029f9`.
+An exact last single-structure Hide/Remove can be undone in the existing selection
+notice, with current scope/practice guards and panel-only reveal. All 136 models /
+143 protected paths, teaching and independent access gates are unchanged. See
+[integration boundaries](atlas-contextual-undo-20260924.md) and the main-task
+checkpoint for actual publication/recovery. Continue the full regional roadmap;
+clinical, imaging and device gates remain open.
+
 24 September pes anserinus convergence: the shared viewer binds Atlas `52f6789`,
 adding two sided whole-body dissection views through existing controls. All 136
 models / 143 protected paths and independent entitlements remain unchanged.
