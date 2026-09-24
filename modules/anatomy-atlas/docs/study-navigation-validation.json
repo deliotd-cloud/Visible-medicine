@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "assertions": 137636,
+  "assertions": 137924,
   "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
   "rows": [
     {
@@ -50,21 +50,21 @@
       "side": "both",
       "structures": 86,
       "selectionsWithGroups": 84,
-      "memberships": 160
+      "memberships": 172
     },
     {
       "region": "forearm",
       "side": "right",
       "structures": 43,
       "selectionsWithGroups": 42,
-      "memberships": 80
+      "memberships": 86
     },
     {
       "region": "forearm",
       "side": "left",
       "structures": 43,
       "selectionsWithGroups": 42,
-      "memberships": 80
+      "memberships": 86
     },
     {
       "region": "hand",

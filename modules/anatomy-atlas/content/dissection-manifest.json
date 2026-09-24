@@ -5874,7 +5874,9 @@
       "references": [
         "https://anatomy.elpaso.ttuhsc.edu/schemes/forearm_tables.html",
         "https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/joint-tables/joints-and-ligaments-of-the-upper-limb/",
-        "https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-upper-limb/"
+        "https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-upper-limb/",
+        "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/README_e.html",
+        "https://pubmed.ncbi.nlm.nih.gov/23131916/"
       ],
       "stages": [
         {
@@ -7184,6 +7186,56 @@
             "vm:anatomy:body:forearm:right:bone:right-ulna",
             "vm:anatomy:body:forearm:right:muscle:right-supinator",
             "vm:anatomy:body:forearm:left:muscle:left-supinator"
+          ]
+        },
+        {
+          "id": "forearm-superficial-veins",
+          "title": "Superficial forearm veins",
+          "rule": {
+            "fmaIds": [
+              "FMA13325",
+              "FMA13326",
+              "FMA22909",
+              "FMA22910",
+              "FMA22964",
+              "FMA22965",
+              "FMA22968",
+              "FMA22969"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA23464",
+                "FMA23465",
+                "FMA23467",
+                "FMA23468"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the supplied cephalic, basilic, median cubital and median antebrachial vein surfaces across the forearm, with the radius and ulna for orientation. Choose Left or Right to simplify the view.",
+          "inspect": "Select a named vein to read its existing notes. Isolate a surface, or remove one and use Undo to restore it; return separation to 0% for original source positions. The median cubital surfaces occupy a short elbow region while the other supplied surfaces extend farther along the forearm. Their proximity does not establish a joined lumen, blood flow or a universal venous pattern. Skin, nerves and validated access anatomy are absent; this is not a venepuncture guide or patient registration. Anatomical review is pending.",
+          "landmarks": [
+            "cephalic vein$",
+            "basilic vein$",
+            "median cubital vein$",
+            "median antebrachial vein$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:forearm:left:bone:left-radius",
+            "vm:anatomy:body:forearm:left:bone:left-ulna",
+            "vm:anatomy:body:forearm:right:bone:right-radius",
+            "vm:anatomy:body:forearm:right:bone:right-ulna",
+            "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein"
           ]
         }
       ]
@@ -13496,7 +13548,9 @@
         "Intercostal layers are compound meshes and cannot be removed rib-space by rib-space."
       ],
       "references": [
-        "https://anatomy.ttuhscep.edu/schemes/thorax_wall_tables.html"
+        "https://anatomy.ttuhscep.edu/schemes/thorax_wall_tables.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_thorax.html",
+        "https://www.ncbi.nlm.nih.gov/books/NBK538321/"
       ],
       "stages": [
         {
@@ -15039,6 +15093,190 @@
             "vm:anatomy:body:thorax:unspecified:vessel:great-cardiac-vein",
             "vm:anatomy:body:thorax:unspecified:vessel:middle-cardiac-vein",
             "vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein"
+          ]
+        },
+        {
+          "id": "respiratory-wall-overview",
+          "title": "Respiratory wall layers & diaphragm",
+          "rule": {
+            "fmaIds": [
+              "FMA9756",
+              "FMA9757",
+              "FMA9758",
+              "FMA13295"
+            ]
+          },
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Show the three supplied intercostal identities and diaphragm together.",
+          "inspect": "Rotate and select each named surface. Hide one, compare the remainder, then Undo to restore the source view. These unreviewed compound source surfaces show fixed positions, not rib-space subdivisions, contraction, or breathing motion. Anatomical relationships require revision-bound radiologist review.",
+          "requiredSourceBindings": [
+            {
+              "id": "vm:anatomy:body:thorax:midline:muscle:external-intercostal-muscle",
+              "fmaId": "FMA9756",
+              "bundle": "thorax-muscles",
+              "nodeName": "FMA9756",
+              "sources": [
+                {
+                  "file": "FJ1451",
+                  "sha256": "588de751687a05ae711f9b8d65f78ddac891994158fa4a94ea2ca48d36dc1b61"
+                },
+                {
+                  "file": "FJ1451M",
+                  "sha256": "d4c021ba00dbe2bd3c7e722cb5982df7659d7d68fe6f4ec980588bfd65d31214"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:midline:muscle:internal-intercostal-muscle",
+              "fmaId": "FMA9757",
+              "bundle": "thorax-muscles",
+              "nodeName": "FMA9757",
+              "sources": [
+                {
+                  "file": "FJ1455",
+                  "sha256": "aa71a14eb5d50c91569fb348ccf3747438bf0e5a4a8cd73784f7ae9ad2f801e3"
+                },
+                {
+                  "file": "FJ1455M",
+                  "sha256": "d92760297b5c8ceacf1013460e372abcb05f97192ffc514758d74ac0b73af373"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:midline:muscle:innermost-intercostal-muscle",
+              "fmaId": "FMA9758",
+              "bundle": "thorax-muscles",
+              "nodeName": "FMA9758",
+              "sources": [
+                {
+                  "file": "FJ1454",
+                  "sha256": "8e9a5c48482ba61dfe2ed19ced05121093a7bf3f8c6e0ac7d0c0b8ebe8bce45d"
+                },
+                {
+                  "file": "FJ1454M",
+                  "sha256": "7458ea18bdf836da68b0220da5421cddb1bb653da909d998dea14db3d5ef00c5"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:midline:muscle:diaphragm",
+              "fmaId": "FMA13295",
+              "bundle": "thorax-muscles",
+              "nodeName": "FMA13295",
+              "sources": [
+                {
+                  "file": "FJ3131",
+                  "sha256": "db97e5f8f8d46928ea54b42fb50789e8f5523ef973cc744b2c2f17930fc33dc8"
+                }
+              ]
+            }
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:thorax:midline:muscle:external-intercostal-muscle",
+            "vm:anatomy:body:thorax:midline:muscle:innermost-intercostal-muscle",
+            "vm:anatomy:body:thorax:midline:muscle:internal-intercostal-muscle",
+            "vm:anatomy:body:thorax:midline:muscle:diaphragm"
+          ]
+        },
+        {
+          "id": "respiratory-intercostal-comparison",
+          "title": "Intercostal layer comparison",
+          "rule": {
+            "fmaIds": [
+              "FMA9756",
+              "FMA9757",
+              "FMA9758"
+            ]
+          },
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare external, internal and innermost intercostal source meshes without the diaphragm.",
+          "inspect": "Select a named layer, hide it to expose another, and Undo to restore the prior source view. Their supplied meshes do not distinguish individual rib spaces. These unreviewed compound source surfaces show fixed positions, not rib-space subdivisions, contraction, or breathing motion. Anatomical relationships require revision-bound radiologist review.",
+          "requiredSourceBindings": [
+            {
+              "id": "vm:anatomy:body:thorax:midline:muscle:external-intercostal-muscle",
+              "fmaId": "FMA9756",
+              "bundle": "thorax-muscles",
+              "nodeName": "FMA9756",
+              "sources": [
+                {
+                  "file": "FJ1451",
+                  "sha256": "588de751687a05ae711f9b8d65f78ddac891994158fa4a94ea2ca48d36dc1b61"
+                },
+                {
+                  "file": "FJ1451M",
+                  "sha256": "d4c021ba00dbe2bd3c7e722cb5982df7659d7d68fe6f4ec980588bfd65d31214"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:midline:muscle:internal-intercostal-muscle",
+              "fmaId": "FMA9757",
+              "bundle": "thorax-muscles",
+              "nodeName": "FMA9757",
+              "sources": [
+                {
+                  "file": "FJ1455",
+                  "sha256": "aa71a14eb5d50c91569fb348ccf3747438bf0e5a4a8cd73784f7ae9ad2f801e3"
+                },
+                {
+                  "file": "FJ1455M",
+                  "sha256": "d92760297b5c8ceacf1013460e372abcb05f97192ffc514758d74ac0b73af373"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:midline:muscle:innermost-intercostal-muscle",
+              "fmaId": "FMA9758",
+              "bundle": "thorax-muscles",
+              "nodeName": "FMA9758",
+              "sources": [
+                {
+                  "file": "FJ1454",
+                  "sha256": "8e9a5c48482ba61dfe2ed19ced05121093a7bf3f8c6e0ac7d0c0b8ebe8bce45d"
+                },
+                {
+                  "file": "FJ1454M",
+                  "sha256": "7458ea18bdf836da68b0220da5421cddb1bb653da909d998dea14db3d5ef00c5"
+                }
+              ]
+            }
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:thorax:midline:muscle:external-intercostal-muscle",
+            "vm:anatomy:body:thorax:midline:muscle:innermost-intercostal-muscle",
+            "vm:anatomy:body:thorax:midline:muscle:internal-intercostal-muscle"
+          ]
+        },
+        {
+          "id": "respiratory-diaphragm",
+          "title": "Diaphragm source surface",
+          "rule": {
+            "fmaIds": [
+              "FMA13295"
+            ]
+          },
+          "includeSkeleton": false,
+          "view": "inferior",
+          "description": "Isolate the supplied diaphragm as one source identity.",
+          "inspect": "Compare its fixed source position with the overview. Undo restores the preceding state. The source does not separate muscular and tendinous parts. These unreviewed compound source surfaces show fixed positions, not rib-space subdivisions, contraction, or breathing motion. Anatomical relationships require revision-bound radiologist review.",
+          "requiredSourceBindings": [
+            {
+              "id": "vm:anatomy:body:thorax:midline:muscle:diaphragm",
+              "fmaId": "FMA13295",
+              "bundle": "thorax-muscles",
+              "nodeName": "FMA13295",
+              "sources": [
+                {
+                  "file": "FJ3131",
+                  "sha256": "db97e5f8f8d46928ea54b42fb50789e8f5523ef973cc744b2c2f17930fc33dc8"
+                }
+              ]
+            }
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:thorax:midline:muscle:diaphragm"
           ]
         },
         {

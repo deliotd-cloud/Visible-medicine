@@ -1,9 +1,9 @@
 {
   "passed": true,
-  "assertions": 322586,
-  "links": 14485,
-  "focusedLinks": 9148,
-  "destinationsTested": 7054,
+  "assertions": 323142,
+  "links": 14509,
+  "focusedLinks": 9172,
+  "destinationsTested": 7078,
   "rows": [
     {
       "region": "whole-body",
@@ -45,19 +45,19 @@
       "region": "forearm",
       "side": "both",
       "structures": 86,
-      "testedLinks": 282
+      "testedLinks": 294
     },
     {
       "region": "forearm",
       "side": "left",
       "structures": 43,
-      "testedLinks": 141
+      "testedLinks": 147
     },
     {
       "region": "forearm",
       "side": "right",
       "structures": 43,
-      "testedLinks": 141
+      "testedLinks": 147
     },
     {
       "region": "hand",

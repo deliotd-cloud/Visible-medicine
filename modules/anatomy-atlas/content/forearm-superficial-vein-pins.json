@@ -1,0 +1,41 @@
+{
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+  "cubitalCatalogSha256": "623c140cea4f9273a4b0f0233274e617c2d705138a19cb4d7dc69e48054ff2be",
+  "recordSha256": {
+    "FMA13325": "34029a3610286f3ec3832b2d2ca35fd6126b9328c281592055feca4389e1231d",
+    "FMA13326": "2214d5afbcd08590b1fa78d650e6e6a8d583dfa910b43c68d1273c5aaadf246e",
+    "FMA22909": "dacafe8d78e28fe84edb16f7318a2a1914d86bcca01b07eec52f7f3a72ce944d",
+    "FMA22910": "efbad2d5bc98c1596a5a998981fe8209280173e6c15f57575db7151159c75ee0",
+    "FMA22964": "8fb583dcfbdc2246259ad4cf4d1dcbead94afbe8e31060b0f0a91638f4727007",
+    "FMA22965": "c33170adb3a8eb7e587f325d62d77c6aa70aa25a93eabb226efd3bd274c3aebf",
+    "FMA22968": "4da80875c5db954872ec0367a93fb0055e537969cbeab6912f972e8f581ddc2d",
+    "FMA22969": "82c1c83559d97fe7bffe7d71a6910ee8c691082663eb54a2a551163e7701a43d",
+    "FMA23464": "23a5db0d13bf6476832c51a68cf3f56c26283c0e1da10e91567966b255b64276",
+    "FMA23465": "a155f63c8d3f36bd873310f9a41d98da26cfd25039728af3ab9ae881a0f93d97",
+    "FMA23467": "d345fa809b4206ebd422dd5a508355eabb183381942da342d1a2ffe554645999",
+    "FMA23468": "aa71752ec27f12fb42bedd6393a535e3d0d44b9efd6f20cb50d9e2b0740374e0"
+  },
+  "targets": [
+    ["FMA13325", "right", "forearm-vessels-recovery", "FJ2272", "b57bd07b9e940b76500243e88b2d0f32fac59fff6ddea84419b254c82a6256f8"],
+    ["FMA13326", "left", "forearm-vessels-recovery", "FJ2220", "1a3062828e09478913a2d9df9ef4e092c7b7bf8a5f4bd68b1603eb79e79273e2"],
+    ["FMA22909", "right", "forearm-vessels-recovery", "FJ2270", "9340492869064c52e522a426c4c2bdb73f0ccfc8392dee56f01a8186f6187ba5"],
+    ["FMA22910", "left", "forearm-vessels-recovery", "FJ2218", "09bb227be0f517e81168edb3fa4eb7cdcdf2157355ca86be7366277b3859f9ca"],
+    ["FMA22964", "right", "cubital-veins", "FJ2287", "82a121207952ed3f38b387186dbccef17f76fd6f2e90b080dc045796430a30f4"],
+    ["FMA22965", "left", "cubital-veins", "FJ2235", "8ce3f9edc945531083041cf949011ebd8810c48b0e213399d90946267783cb87"],
+    ["FMA22968", "right", "cubital-veins", "FJ2286", "d7f83f57d6c7d22577bf5b5fa8c9f93dab356539dc36c509cff80395ceca75a5"],
+    ["FMA22969", "left", "cubital-veins", "FJ2234", "572c2360da079d2a3eab28eb92e0a99ca268fe6550ff03d24a772391304f37fa"]
+  ],
+  "context": [
+    ["FMA23464", "right", "forearm-skeleton", "FJ3349", "0f824e639b13ea02959734a0d9bd8d7ca67d0b51f531a138d769e1d3b22e0c98"],
+    ["FMA23465", "left", "forearm-skeleton", "FJ3277", "c41a7de7eddf5b91543fb22cf34c7dcad50241ffe1faae6ae22e1be30ca9390a"],
+    ["FMA23467", "right", "forearm-skeleton", "FJ3391", "0aad73148e036c980ab24dfa675fcc1f109e5c60d82c12f3696420cf93cb4a98"],
+    ["FMA23468", "left", "forearm-skeleton", "FJ3286", "0e3c48a4b664ffc37ef11eb4754c6c7f4adc8fd1d3e54d1286307432c7d04bfc"]
+  ],
+  "bundles": [
+    ["forearm-vessels-recovery", "8a9c9b62561c8b952147b91fcf0a9c2a01d6f7fe38737259e4eb8d76ece0904f"],
+    ["cubital-veins", "8e31545af2568c7f31a327ccbefa0a85cb054a422e1091fd06676b2b39127321"],
+    ["forearm-skeleton", "7af54bdb11a8ae93d9236c6ed35b9a471543bc2a8a32867992a8917d22b1e0d5"]
+  ]
+}

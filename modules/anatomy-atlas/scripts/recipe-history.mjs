@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { preElbowRecipeProfiles } from './elbow-study-history.mjs';
 import { preThoraxRespiratoryProfiles } from './thorax-respiratory-history.mjs';
+import { preForearmSuperficialVeinProfiles } from './forearm-superficial-vein-study-history.mjs';
 
 export const preOrbitalMotorProfilesHash =
   'd127268c45678a49ff8eeae4c5622172d4549497aca33d5b3b19507557d83e9c';
@@ -216,6 +217,7 @@ export function preRenalRecipeProfiles(profiles) {
  * No broad prefix exclusion, baseline repinning or silent future-edit allowance.
  */
 export function historicalRecipeProfiles(profiles) {
+  profiles = preForearmSuperficialVeinProfiles(profiles);
   profiles = preThoraxRespiratoryProfiles(profiles);
   profiles = preRenalRecipeProfiles(profiles);
   if (hash(profiles) === preOrbitalMotorProfilesHash)
