@@ -126,7 +126,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "137b80b711edf348fd9533ee99f98ce97c02475aa792d8e5c6b0b2605b35d274"
+      "sha256": "2665d2a2464437d0a857411816f14eda285734e2a1103731d9fbbd18a96075be"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -170,7 +170,7 @@
     },
     {
       "path": "app/hra-renal-study.tsx",
-      "sha256": "03590d26e0640ad9979745b3d14a58272a253b6443f66c90fbf72fd47c1d00ab"
+      "sha256": "80eed76f9ea02589327c29f56ad74d66eb1d58759578f03abab6e6cad775db6a"
     },
     {
       "path": "app/imaging-comparison.css",
@@ -314,7 +314,7 @@
     },
     {
       "path": "app/um-knee-study.tsx",
-      "sha256": "b021611bd3009f11a13a5ff9416151262fbe72ff010e83833df45fa8ec16d730"
+      "sha256": "19083348d081b30481c5011c8b50e199b23c0dc4a98612a54d0e13a536bd585c"
     },
     {
       "path": "app/um-limb-learning.tsx",
@@ -550,7 +550,7 @@
     },
     {
       "path": "content/coronary-venous-teaching.ts",
-      "sha256": "bbc9df0c43bb8f556851815a85fb7d45d3722e40d6d8b86fa5cb2f2628e4fb16"
+      "sha256": "ccae64c4d3c441cf681e756456f91fb62f3987f9939dbd1d11fb6c547f393155"
     },
     {
       "path": "content/corpus-clinical.ts",
@@ -973,6 +973,10 @@
       "sha256": "6a38862dceedfb4d17a8610b954efa1d4a6a1925528091515bc2cabe0fd13c45"
     },
     {
+      "path": "content/mediastinal-organ-study.ts",
+      "sha256": "4307af9d54321db061a743e24faab1838487c220b3cc110528bf860002200767"
+    },
+    {
       "path": "content/metatarsal-surface-imaging-pins.json",
       "sha256": "323e74b613713ea121e23a19ee35739d5731b0f28ca8647cff90ca61c8b40b1d"
     },
@@ -1219,6 +1223,14 @@
     {
       "path": "content/thorax-central-airway-study.ts",
       "sha256": "140b9bcd802fdf31e5498bc822b9691022fdcb7898730da22406fdd00b128888"
+    },
+    {
+      "path": "content/thorax-motor-pins.json",
+      "sha256": "ebd0fd6ca7d90f9229b47f181dda0640efeba20a08982fd2fa805fcf1b4c164e"
+    },
+    {
+      "path": "content/thorax-motor.ts",
+      "sha256": "41385b323720bd070e82a6b78dacf2adb1defc039636d154760a74ca1f42cbda"
     },
     {
       "path": "content/thorax-respiratory-study.ts",
@@ -1922,7 +1934,7 @@
     },
     {
       "path": "lib/hra-renal.ts",
-      "sha256": "83c90dd94edad6ae87c34ac31ee25af0f2896d27ce47fd41e2465b4fe7ef408f"
+      "sha256": "3b6d1e2cb4366a340f99ead5c92a94707ad583f12f4cf6699adaa90dcc1c945c"
     },
     {
       "path": "lib/iliac-arterial-imaging.ts",
@@ -2050,7 +2062,7 @@
     },
     {
       "path": "lib/limb-motor.ts",
-      "sha256": "853ccb6495673a5e33b1bac74bffc28ee5285f06903dd60f53d74fc507880426"
+      "sha256": "c8a648d04913eed4addbd9c7bc0cd01ddd6e76625459cc0bbd6a956bc39423f6"
     },
     {
       "path": "lib/limb-relationships-reasoning.ts",
@@ -2290,7 +2302,7 @@
     },
     {
       "path": "lib/regional-motor.ts",
-      "sha256": "82fa38c847c564ce12f6de1de718167408fa4757ca750e3a8221ec630fc25d0e"
+      "sha256": "4c5b7715e7a175c16e9694f4aa0e7925d2c753fd5e167c4e2c567df3017fa4b9"
     },
     {
       "path": "lib/regional-vascular-clinical.ts",
@@ -2493,6 +2505,10 @@
       "sha256": "c503474a75696b55f6bf6bd13bb01b85a60b79c1bc63e0740eb522d81966f720"
     },
     {
+      "path": "lib/thorax-motor.ts",
+      "sha256": "6e5f15f9c9f7e73457e2ac7502bddf6971b743bcd8ab2e35b86b6466bb42777b"
+    },
+    {
       "path": "lib/thyroid-imaging.ts",
       "sha256": "3eb810cb78de5a7fed03d7a103deeea1f5567ebc1e7d4ba6c755d13285b4d954"
     },
@@ -2602,7 +2618,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "aadc6d581954f179a9ec37c1d3451e35f423e4534081bed952afeffbf8ce83a3"
+      "sha256": "5fa133f6e6c3c7531d34e8c1c1a7e70392b69ad01452f99e119e661e4fad00c7"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2813,5 +2829,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "1d9ff5df21f42ec284b75188d662497d8127f0a1f6ab5436c0960eda6b400cae"
+  "sha256": "0037ce83c55c0a2322813b594126eb4c0f0d0d53e2a40196968bb0df6788ea00"
 }

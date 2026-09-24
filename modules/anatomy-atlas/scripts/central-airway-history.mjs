@@ -2,6 +2,7 @@
 // source-bound, side-aware replacement. Never changes runtime recipes.
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
+import { preMediastinalOrganProfiles } from './mediastinal-organ-study-history.mjs';
 
 const hash = (value) => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const beforeHash = 'd5211963440f98d0e51b24884642e3d0c27848d1fba7d68f5360f1a1eae250e0';
@@ -16,6 +17,8 @@ const oldFocus = {
 };
 
 export function preCentralAirwayProfiles(profiles) {
+  if (profiles.thorax.focuses.some((focus) => focus.id === 'mediastinal-conduits-thymus'))
+    profiles = preMediastinalOrganProfiles(profiles);
   // The pelvic focus is newer than this checkpoint. Reverse its exact two
   // recipes and orientation copy for every caller of this historical helper.
   if (hash(profiles) === '1a6c020cad6f3bb3e50f4e1d014a191273d9b66d3eaf6503211f0f2df3ba4c8f') {

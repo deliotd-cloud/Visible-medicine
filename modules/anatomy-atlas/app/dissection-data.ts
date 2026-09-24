@@ -2,6 +2,7 @@ import type { BodyStructure, BodySystem } from './body-types';
 import { sourceCanonical } from '../lib/body-source-additions.ts';
 import { thoraxRespiratoryBindings, thoraxRespiratoryStudies } from '../content/thorax-respiratory-study.ts';
 import { thoraxCentralAirwayBindings, thoraxCentralAirwayStudy } from '../content/thorax-central-airway-study.ts';
+import { mediastinalOrganBindings, mediastinalOrganStudy } from '../content/mediastinal-organ-study.ts';
 import { pelvicUrethralFocus } from '../content/pelvic-urethral-study.ts';
 import { neuroStudySets, neuroStudyIds } from '../lib/neuroanatomy.ts';
 import { axialStudySets } from '../lib/axial-anatomy.ts';
@@ -1163,6 +1164,16 @@ for (const study of thoraxRespiratoryStudies) {
     ),
   });
 }
+dissectionProfiles.thorax.focuses.push({
+  id: mediastinalOrganStudy.id,
+  title: mediastinalOrganStudy.title,
+  rule: { fmaIds: [...mediastinalOrganStudy.fmaIds] },
+  includeSkeleton: false,
+  view: mediastinalOrganStudy.view,
+  description: mediastinalOrganStudy.description,
+  inspect: mediastinalOrganStudy.inspect,
+  requiredSourceBindings: mediastinalOrganBindings,
+});
 dissectionProfiles.thorax.references.push(
   'https://anatomy.ttuhscep.edu/anatomytables/muscles_thorax.html',
   'https://www.ncbi.nlm.nih.gov/books/NBK538321/',

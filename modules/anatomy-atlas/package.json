@@ -198,6 +198,7 @@
     "learning-resources:test": "node scripts/validate-learning-resources.mjs",
     "dissection-workbench:test": "node scripts/validate-dissection-workbench.mjs",
     "dissection-history:test": "node scripts/validate-dissection-history.mjs",
+    "mediastinal-organ-study:test": "node scripts/validate-mediastinal-organ-study.mjs",
     "arrangement:test": "node scripts/validate-body-arrangement.mjs",
     "explode-styles:test": "node scripts/validate-explode-styles.mjs",
     "junction:test": "node scripts/validate-junction.mjs && node scripts/validate-junction-study.mjs",
