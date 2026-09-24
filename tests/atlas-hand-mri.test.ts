@@ -7,9 +7,9 @@ test('regional export binds the reviewed hand studies and MRI drafts without rep
   const base='public/atlas-runtime/head-neck/';
   const bytes=readFileSync(base+'manifest.json');
   const sha=(b: string|Buffer)=>createHash('sha256').update(b).digest('hex');
-  assert.equal(sha(bytes),'4a9d70cc39d7b1734749b88aa258365997d5cbe27bc3ffe30b61a5d19dfade3b');
+  assert.equal(sha(bytes),'bbcc2f7ff57391c7251e1d2185167966f65cbeb7e1faca5dc2929760320ebbd6');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'c0bdec4e799a2f0ee944ca74501e8e21684d74d1');
+  assert.equal(manifest.sourceCommit,'472430073dc171910463936610428930c76b0a01');
   assert.equal(manifest.patientDataIncluded,false);assert.equal(manifest.clinicalApproved,false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,hash] of Object.entries({

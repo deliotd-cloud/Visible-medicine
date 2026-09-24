@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+24 September source-only foot viewer integration: the shared regional/whole-body
+runtime has been regenerated from Atlas `472430073dc171910463936610428930c76b0a01`.
+Stale or opposite-side foot selections now restore full-source camera framing.
+All 134 shared model bundles, 12 regional scopes and independent access rules
+are retained. This is not yet website publication, clinical approval or a
+real-device acceptance pass. See [source scope and checks](atlas-foot-framing-fallback-20260924.md).
+All six first-release gates remain pending.
+
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
 24 September source-only viewer update: the shared regional/whole-body runtime
