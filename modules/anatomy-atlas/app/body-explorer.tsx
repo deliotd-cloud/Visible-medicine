@@ -5,6 +5,8 @@ import { cranialArteryComponentsFor } from '@/lib/cranial-artery-components';
 import './um-knee-entry.css';
 import { useWorkspaceSession } from './workspace-session';
 import { PracticePanelNavigation } from './practice-panel-navigation';
+import { BodySelectionNotice } from './body-selection-notice';
+import { lastSingleRemoval } from '@/lib/contextual-dissection-undo';
 import { InlineStudy } from './study-surface';
 import './upper-limb-motor.css';
 import {
@@ -2275,15 +2277,16 @@ export default function BodyExplorer({
                 </details>
                 {selected && <QuizNotes structure={selected} />}
               </WorkspaceOnly>
-              <output
-                className="body-selection-notice"
-                aria-live="polite"
-                aria-atomic="true"
-              >
-                {selected
+              <BodySelectionNotice
+                message={selected
                   ? `${selectionNotice?.id === selected.id ? selectionNotice.message : `${selected.name} selected.`} ${structureDetail(selected)}. ${selectedVisibility?.reasons.join('. ') || ''}`
                   : 'No structure selected.'}
-              </output>
+                removed={!exam && (workspace.mode === 'explore' || workspace.mode === 'dissect')
+                  ? lastSingleRemoval(dissection, regionStructures)
+                  : null}
+                mode={workspace.mode === 'explore' ? 'explore' : 'dissect'}
+                onUndo={undoDissection}
+              />
               <WorkspaceOnly modes={['practice']}>
                 {practiceResult && (
                   <section

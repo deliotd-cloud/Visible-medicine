@@ -1,5 +1,12 @@
 # Current atlas status
 
+[Contextual Undo](CONTEXTUAL_DISSECTION_UNDO.md) restores a just-hidden/removed
+structure directly from the existing regional/whole-body information panel.
+History/side/practice guards and panel-only reveal pass focused tests and sampled
+desktop/mobile-browser checks. Geometry and teaching are unchanged. Website
+`03a0d89` remains published; this source improvement awaits generated integration.
+Earlier source-only publication statements below are historical.
+
 [Pes anserinus convergence](PES_ANSERINE_STUDY.md) adds right/left whole-body
 relationship views using three existing muscles and the same-side tibia. Search,
 selection, Remove/Undo and existing separation controls are reused. Source

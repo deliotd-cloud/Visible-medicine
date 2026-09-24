@@ -2432,6 +2432,27 @@
   font-size: 0.75rem;
   line-height: 1.6;
 }
+.body-selection-notice output {
+  overflow-wrap: anywhere;
+}
+.body-selection-undo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  margin-left: 8px;
+  padding: 0 8px;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.body-selection-notice:focus-visible,
+.body-selection-undo:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
 .related-study {
   margin: 16px 0 20px;
   padding: 14px;
