@@ -3,6 +3,8 @@
 const targets = [
   ['right-frontal-nerve', 'FMA52639', 'right', 'FJ1341', '1d9f4f0ed3196ceb32439608452ef9849f631e1adce9920a6e31bc517bf2f714'],
   ['left-frontal-nerve', 'FMA52640', 'left', 'FJ1290', '66c53668aa92b73c55ce5fcfe6476e6665eedf923c8ea02290cdf3456296e0e9'],
+  ['right-supra-orbital-nerve', 'FMA52656', 'right', 'FJ1376', '18a71e5cefbb6c68e1daf6147fedfa0943ee3044725ea7eccbe5ca62db4c15e4'],
+  ['left-supra-orbital-nerve', 'FMA52657', 'left', 'FJ1325', 'c37ecf086b1049ac3b8acbd0b50ac5eb4c14a58e3a7c56b9d952f463b183853a'],
   ['right-supratrochlear-nerve', 'FMA52643', 'right', 'FJ1377', 'd11bfb0864f689cc996e2e41c91ce975e3c1dee33c947e2668cce82c03c663d2'],
   ['left-supratrochlear-nerve', 'FMA52644', 'left', 'FJ1326', 'f8a3b51c6408d43a35ccf8a773e4bdd5b5872d562402a9834c34c5dc0b3d9c25'],
   ['right-lacrimal-nerve', 'FMA52629', 'right', 'FJ1351', '0e563e908e3c1e6ea08e3233e8e90c37b6fd029b165a0e6c41d37f985b538f22'],
@@ -45,13 +47,13 @@ const inspect = 'Choose Both, Left or Right. Select a source surface, Remove it 
 export const ophthalmicNerveStudies = [
   {
     id: 'v1-frontal-lacrimal-subset', title: 'V1 · frontal & lacrimal source subset',
-    targetFmaIds: fmas(0, 6), contextFmaIds: contextFmas(0, 2), view: 'superior',
-    description: 'Compare the source-labelled frontal, supratrochlear and lacrimal nerves with the lacrimal glands as separate orbital context. A supraorbital nerve surface is not supplied in this admitted subset.',
+    targetFmaIds: fmas(0, 8), contextFmaIds: contextFmas(0, 2), view: 'superior',
+    description: 'Compare the source-labelled frontal, supra-orbital, supratrochlear and lacrimal nerves with the lacrimal glands as separate orbital context. These surfaces do not establish branch continuity or sensory territories.',
     inspect,
   },
   {
     id: 'v1-nasociliary-subset', title: 'V1 · nasociliary source subset',
-    targetFmaIds: fmas(6, 18), contextFmaIds: contextFmas(2, 4), view: 'superior',
+    targetFmaIds: fmas(8, 20), contextFmaIds: contextFmas(2, 4), view: 'superior',
     description: 'Compare the source-labelled nasociliary, ethmoidal, infratrochlear, long ciliary and ciliary-ganglion communicating branches. The paired ciliary ganglia are context, not proof of a connected or functioning pathway.',
     inspect,
   },

@@ -15,6 +15,7 @@ import {
   structureSearchAliases,
   normalizeAnatomySearch,
   anatomySearchWordMatches,
+  joinAnatomyHyphens,
 } from './anatomy-search.ts';
 
 export type WorkspaceMode = 'explore' | 'dissect' | 'practice';
@@ -175,21 +176,27 @@ export function filterAtlasSearch(
   return entries
     .flatMap((entry) => {
       if (kind !== 'all' && entry.kind !== kind) return [];
-      const keywords = normalizeAnatomySearch(entry.keywords);
+      const keywords = normalizeAnatomySearch(
+        `${entry.keywords} ${joinAnatomyHyphens(entry.keywords)}`,
+      );
       if (!words.every((word) => anatomySearchWordMatches(keywords, word)))
         return [];
       const label = normalizeAnatomySearch(entry.label);
+      const joinedLabel = normalizeAnatomySearch(joinAnatomyHyphens(entry.label));
       // Exact names/IDs, then aliases, then label matches, then contextual matches.
       const rank = !needle
         ? 0
         : label === needle ||
+            joinedLabel === needle ||
             (/^fma\d+$/.test(needle) && keywords.split(' ').includes(needle))
           ? 0
           : entry.aliases?.some(
                 (alias) => normalizeAnatomySearch(alias) === needle,
               )
             ? 1
-            : words.every((word) => anatomySearchWordMatches(label, word))
+            : words.every((word) =>
+                  anatomySearchWordMatches(`${label} ${joinedLabel}`, word),
+                )
               ? 2
               : 3;
       return [{ entry, rank }];

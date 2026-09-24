@@ -42,6 +42,19 @@ const check = (ok, message) => {
 const ids = (entries) => entries.map((entry) => entry.id);
 const keys = (cards) =>
   cards.flatMap((card) => card.recipes.map((recipe) => recipe.key));
+// Real catalogue spellings must remain discoverable with or without their
+// internal hyphen. Use the existing broader windows, independently of V1 copy.
+const headSearchCards = studyLibrary(
+  catalog.structures.filter((s) => s.regions.includes('head-neck')),
+  dissectionProfiles['head-neck'],
+);
+for (const query of ['supraorbital', 'supra-orbital', 'supra\u2010orbital', 'supra\u2011orbital', 'SuPrAoRbItAl']) {
+  const titles = filterStudyLibrary(headSearchCards, query).map((card) => card.title);
+  check(titles.includes('Cranial neural window'), `${query} finds retained nerve sources`);
+  check(titles.includes('Orbital anatomy subset'), `${query} finds orbital source context`);
+}
+same(filterStudyLibrary(headSearchCards, 'supraorbital-no-such-nerve'), [],
+  'Hyphen equivalence does not invent a structure match');
 const thoraxBundle = catalog.bundles.filter((bundle) => bundle.id === 'thorax-muscles');
 same(thoraxBundle.length, 1, 'One pinned thorax muscle bundle');
 same(thoraxBundle[0].sha256, '3bbf7759e54e34272175de042ef4e26c24412b9f073a2f8eea3ce4fe79ebb682');

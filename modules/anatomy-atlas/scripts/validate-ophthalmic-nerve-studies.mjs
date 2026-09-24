@@ -22,9 +22,13 @@ const alteredHistory = structuredClone(dissectionProfiles);
 alteredHistory['head-neck'].focuses.find(focus => focus.id === 'v1-nasociliary-subset').title += ' changed';
 assert.throws(() => preOphthalmicNerveProfiles(alteredHistory), /Unrecorded V1 recipe edit/);
 const allBindings = [...ophthalmicNerveTargetBindings, ...ophthalmicNerveContextBindings];
-assert.equal(ophthalmicNerveTargetBindings.length, 18);
+assert.equal(ophthalmicNerveTargetBindings.length, 20);
 assert.equal(ophthalmicNerveContextBindings.length, 4);
 assert.equal(new Set(allBindings.map(binding => binding.fmaId)).size, allBindings.length);
+assert.deepEqual(ophthalmicNerveTargetBindings.slice(2, 4).map(binding => binding.fmaId),
+  ['FMA52656', 'FMA52657']);
+assert.deepEqual(ophthalmicNerveStudies[0].targetFmaIds,
+  ophthalmicNerveTargetBindings.slice(0, 8).map(binding => binding.fmaId));
 for (const binding of allBindings) {
   const matches = catalog.structures.filter(structure => structure.id === binding.id || structure.fmaId === binding.fmaId);
   assert.equal(matches.length, 1, `Unique admitted source ${binding.fmaId}`);

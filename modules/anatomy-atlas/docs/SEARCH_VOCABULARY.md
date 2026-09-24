@@ -23,6 +23,15 @@ Exact labels/IDs rank first, then exact aliases, then name matches, then broader
 
 The existing small search dialog, result limit, kind filter, study-view confirmation and exam lock remain. Typing changes neither the scene nor dissection; no new permanent toolbar, network search, query-history storage or paid service is added. Queries stay limited to 256 characters. An input consisting only of punctuation returns no matches rather than the whole catalogue.
 
+## Internal hyphens, 24 September 2026
+
+The global search and Dissect study library accept optional internal hyphens:
+`supraorbital`, `supra-orbital` and their common Unicode hyphen variants locate
+the existing source-labelled supra-orbital nerves and their study views.
+Global search keeps its spaced vocabulary too, so `shoulder-blade` still finds
+the existing scapula alias. Source names, identities, side-sensitive navigation,
+and cranial-nerve number distinctions are preserved.
+
 ## References and rights
 
 The deferent-duct aliases were checked on 11 September 2026 against the original source rows and [NCI/SEER Duct System](https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html). These aliases bind only the two admitted whole source records; no epididymis, ejaculatory duct or additional nerve is inferred.

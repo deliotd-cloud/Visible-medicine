@@ -196,6 +196,11 @@ const cranialNumbers: Record<string, string> = {
   xi: '11',
   xii: '12',
 };
+/** Optional internal hyphens affect search only, never source identities. */
+export function joinAnatomyHyphens(value: string): string {
+  return value.replace(/(?<=\p{L})[-\u2010\u2011](?=\p{L})/gu, '');
+}
+
 /** Unicode/spacing variants are search equivalents, never changes to labels. */
 export function normalizeAnatomySearch(value: string): string {
   return value

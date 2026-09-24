@@ -6,6 +6,7 @@ import {
   type DissectionState,
 } from '../app/dissection-data.ts';
 import { dissectionSections } from './dissection-workbench.ts';
+import { joinAnatomyHyphens } from './anatomy-search.ts';
 
 export type StudyRecipe = {
   key: string;
@@ -30,6 +31,13 @@ export type StudyLibrarySort =
   | 'small-first'
   | 'large-first'
   | 'name';
+
+// Source labels retain their authored spelling. Search treats a letter-to-letter
+// hyphen as optional (for example supra-orbital / supraorbital), without merging
+// separate words or stripping identifier punctuation.
+function searchableStudyText(value: string): string {
+  return joinAnatomyHyphens(value.toLowerCase());
+}
 
 /** Catalogue membership is not rendered visibility or a clinical relationship.
  * Only equivalent authored rules with matching ID/title/view can share a card;
@@ -114,10 +122,8 @@ export function filterStudyLibrary(
   kind: StudyRecipe['kind'] | 'all' = 'all',
   sort: StudyLibrarySort = 'authored',
 ) {
-  const words = query
-    .slice(0, 256)
+  const words = searchableStudyText(query.slice(0, 256))
     .trim()
-    .toLowerCase()
     .split(/\s+/)
     .filter(Boolean);
   return cards
@@ -129,20 +135,20 @@ export function filterStudyLibrary(
           !recipe.visible.some((item) => item.system === system)
         )
           return false;
-        const text = [
-          recipe.title,
-          recipe.id,
-          recipe.description,
-          ...recipe.visible.flatMap((item) => [
-            item.id,
-            item.name,
-            item.sourceName,
-            item.fmaId,
-            item.laterality,
-          ]),
-        ]
-          .join(' ')
-          .toLowerCase();
+        const text = searchableStudyText(
+          [
+            recipe.title,
+            recipe.id,
+            recipe.description,
+            ...recipe.visible.flatMap((item) => [
+              item.id,
+              item.name,
+              item.sourceName,
+              item.fmaId,
+              item.laterality,
+            ]),
+          ].join(' '),
+        );
         return words.every((word) => text.includes(word));
       });
       return recipes.length ? [{ ...card, recipes }] : [];
