@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+24 September Atlas source-only deep-brain practice: `0989aa6` adds six formative
+concepts / twelve exact source bindings in the existing Apply anatomy mode.
+Previous 126 questions remain unchanged; current bank is 132 concepts / 250
+representations. Focused and broad content/review checks and a six-question
+local browser journey passed. No new anatomy asset, scan, approval or entitlement.
+Hosted private v121 still uses Atlas `05b799f`; integrate this addition through
+the normal generated-module pipeline before claiming it available there.
+
 24 September contained review correction: the shared viewer source is now
 Atlas `05b799f`, suppressing unavailable standalone review destinations while
 retaining teaching and standalone review. All 136 model hashes/143 paths are
