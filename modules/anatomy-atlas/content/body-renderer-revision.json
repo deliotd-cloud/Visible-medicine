@@ -1118,7 +1118,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "34627fe3045625e662add1a88f7cc774573731188de0816212b449ac6aa85d18"
+      "sha256": "e7110f22621d805fca3abdb1542632bf3cf0eef65f9138d8b9e638c39581262b"
     },
     {
       "path": "content/sca-mca-clinical-pins.json",
@@ -1687,6 +1687,10 @@
     {
       "path": "lib/cubital-veins.ts",
       "sha256": "1877da3b251cae1816573786fe271a94306571f606fb8410386a326efe3e30e6"
+    },
+    {
+      "path": "lib/deep-brain-reasoning.ts",
+      "sha256": "0f18416cece4e887ff8916abf70667b6e9fcbbceff558863782e4e2038616a5f"
     },
     {
       "path": "lib/deep-leg-veins.ts",
@@ -2282,7 +2286,7 @@
     },
     {
       "path": "lib/reasoning-questions.ts",
-      "sha256": "67836f031e0da3b898f16253f749235c90959da74f7f03d36b73e56eb545a4d6"
+      "sha256": "6607e3b7beb311e0de5caf248c566ab010c480f38819d59e781109bf5cebcdae"
     },
     {
       "path": "lib/rectal-deferent-imaging.ts",
@@ -2837,5 +2841,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "fd40051eaa4e600980e9c105eda74ffd5e1e44a66433c02fad4d1ba910e829f7"
+  "sha256": "140bc6f59c40a45cc54b451065b7da366fe326f2c8c3c66054adee1619dcb724"
 }

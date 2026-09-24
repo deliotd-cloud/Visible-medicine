@@ -90,20 +90,21 @@ same(hash(JSON.stringify(precedingConcepts)), '6aa090bb8f9142fd266af59df995b4c2c
 same(hash(JSON.stringify(api.reasoningConcepts.slice(0,116))), 'c78bf5e2c3eee38966910f94ad97dbbf898ae73999b52e8e7a6a71db5aaa3520', 'All preceding 116 concepts remain unchanged and ordered');
 same(api.reasoningConcepts.slice(116,123).map(c => c.key), ['abdominal-stomach','abdominal-gallbladder','abdominal-spleen','abdominal-cystic-duct','abdominal-common-hepatic-duct','abdominal-ileocecal-junction','abdominal-appendix']);
 same(hash(JSON.stringify(api.reasoningConcepts.slice(0,123))), '3052d88e4b5e2c1dd55f34d37989a4d847e91e41d5707a48a6a876c2d15fb883', 'All preceding 123 concepts remain unchanged and ordered');
-same(api.reasoningConcepts.slice(123).map(c => c.key), ['thoracic-trachea','thoracic-esophagus','thoracic-thymus']);
-same(api.reasoningConcepts.length, 126);
-same(bound.length, 238);
+same(api.reasoningConcepts.slice(123,126).map(c => c.key), ['thoracic-trachea','thoracic-esophagus','thoracic-thymus']);
+same(hash(JSON.stringify(api.reasoningConcepts.slice(0,126))), '523ab89c9c6313eec445979978777283e316b118328bd18ddde80a47ecfd3a32', 'All preceding 126 concepts remain unchanged and ordered');
+same(api.reasoningConcepts.length, 132);
+same(bound.length, 250);
 same(bound.filter((s) => s.region === 'shoulder-arm').length, 26);
 same(bound.filter((s) => s.region === 'forearm').length, 18);
 same(bound.filter((s) => s.region === 'hand').length, 20);
 same(bound.filter((s) => s.region === 'thigh').length, 36);
 same(bound.filter((s) => s.region === 'leg').length, 28);
 same(bound.filter((s) => s.region === 'foot').length, 16);
-same(bound.filter((s) => s.region === 'head-neck').length, 48);
+same(bound.filter((s) => s.region === 'head-neck').length, 60);
 same(bound.filter((s) => s.region === 'spine').length, 24);
 same(bound.filter((s) => s.region === 'thorax').length, 13);
 same(bound.filter((s) => s.region === 'abdomen').length, 9);
-same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 126);
+same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 132);
 same(hash(JSON.stringify(precedingConcepts.filter(c => !c.key.startsWith('neck-')))),
   'caafb323ca7d5a04971f91ad369d68c3a8da5e43839b39d8cd76192d1497bad2',
   'All 100 preceding concepts remain unchanged and in order');
@@ -162,6 +163,7 @@ for (const concept of api.reasoningConcepts) {
   same(concept.revision, 1);
   const grouped = ['trunk-diaphragm', 'trunk-external-intercostal', 'trunk-internal-intercostal', 'trunk-innermost-intercostal'].includes(concept.key);
   const organ = concept.sourceTissue === 'organ';
+  const neuralOrgan = concept.sourceTissue === 'neural-organ';
   same(concept.bindings.length, grouped || organ ? 1 : 2);
   same([...new Set(concept.bindings.map(b => b.side))].sort(), organ ? ['unpaired'] : grouped ? ['midline'] : ['left', 'right']);
   same(new Set(concept.distractors).size, 3);
@@ -188,6 +190,8 @@ for (const concept of api.reasoningConcepts) {
     );
     const s = bound.find((s) => s.fmaId === binding.fma);
     check(s && s.laterality === binding.side);
+    same(s.system, neuralOrgan ? 'nerves' : organ ? 'organs' : 'muscles');
+    same(s.category, neuralOrgan || organ ? 'organ' : 'muscle');
     same(s.region, concept.region);
     same(s.sourceTree, concept.sourceTree ?? 'isa');
     same(s.regions, concept.sourceRegions ?? [concept.region]);
@@ -205,6 +209,7 @@ for (const concept of api.reasoningConcepts) {
       { fmaId: 'FMA000000' },
       { laterality: s.laterality === 'unpaired' ? 'midline' : 'unpaired' },
       { system: s.system === 'organs' ? 'muscles' : 'organs' },
+      ...(neuralOrgan ? [{ system: 'muscles' }, { category: 'nerve' }] : []),
       { category: 'unknown' },
       { sourceTree: s.sourceTree === 'partof' ? 'isa' : 'partof' },
       { region: concept.region === 'thorax' ? 'abdomen' : 'thorax' },
@@ -360,7 +365,7 @@ for (const count of [1, 5, 10, 20, 100, NaN, Infinity, -10]) {
   same(
     create(all, { count }).questions.length,
     Math.min(
-      126,
+      132,
       Math.max(1, Math.min(20, Math.floor(Number.isFinite(count) ? count : 5))),
     ),
   );
@@ -379,6 +384,50 @@ const limbConcepts = newConcepts.filter(c => c.key.startsWith('limb-'));
 const organConcepts = newConcepts.filter(c => c.sourceTissue === 'organ');
 same(organConcepts.length, 10);
 const liveDisplay = api.bodyDisplayCatalog(catalog);
+const deepConcepts = api.reasoningConcepts.slice(126);
+same(deepConcepts.map(c => c.key), [
+  'deep-brain-caudate', 'deep-brain-putamen', 'deep-brain-pallidum',
+  'deep-brain-thalamus', 'deep-brain-lateral-geniculate', 'deep-brain-medial-geniculate',
+]);
+same(deepConcepts.every(c => c.sourceTissue === 'neural-organ'), true);
+const deepDisplay = liveDisplay.structures.filter(s => api.reasoningConceptFor(s)?.key.startsWith('deep-brain-'));
+same(deepDisplay.length, 12, 'Actual display catalogue retains all twelve exact neural-organ bindings');
+const deepBoth = create(deepDisplay);
+same(deepBoth?.questions.length, 6, 'Both-side deep-brain session has six concepts');
+same(new Set(deepBoth.questions.map(q => q.reasoning.key)).size, 6, 'Contralateral versions do not repeat');
+for (const side of ['left', 'right']) {
+  const sideSession = create(deepDisplay.filter(s => s.laterality === side));
+  same(sideSession?.questions.length, 6, 'Each side alone admits all six concepts');
+  same(sideSession.questions.every(q => q.choices.length === 4), true);
+}
+for (const concept of deepConcepts) {
+  if (concept.key.includes('geniculate')) check(!concept.distractors.includes('deep-brain-thalamus'), 'Avoid parent thalamus as a geniculate distractor');
+  for (const side of ['left', 'right']) {
+    const target = deepDisplay.find(s => s.laterality === side && api.reasoningConceptFor(s)?.key === concept.key);
+    check(target && target.system === 'nerves' && target.category === 'organ' && target.sourceTree === 'isa');
+    for (const region of ['whole-body', 'head-neck']) {
+      const scope = liveDisplay.structures.filter(s =>
+        (region === 'whole-body' || s.regions.includes(region)) && s.laterality === side);
+      const session = create(scope, { retryIds: [target.id] }, liveDisplay.bundles.map(b => b.id));
+      same(session?.questions.length, 1, 'Deep-brain question playable in display scope');
+      const q = session.questions[0];
+      same(q.choices.length, 4, 'Three actual same-side alternatives');
+      for (const id of q.choices) {
+        const choice = scope.find(s => s.id === id);
+        check(choice && choice.system === 'nerves' && choice.category === 'organ' && choice.laterality === side);
+        check(id === target.id || concept.distractors.includes(api.reasoningConceptFor(choice)?.key));
+      }
+      same(create(scope.filter(s => s.id !== target.id), { retryIds: [target.id] }), null, 'Hidden target excluded');
+      same(create(scope, { retryIds: [target.id] }, liveDisplay.bundles.map(b => b.id).filter(id => id !== target.bundle)), null, 'Unloaded target excluded');
+      same(create([target]), null, 'Isolated target cannot give away its answer');
+      same(create(scope, { sampling: 'focus', focusIds: [target.id], retryIds: [target.id] }), null, 'Focus without alternatives excluded');
+      same(create(scope, { sampling: 'focus', focusIds: q.choices, retryIds: [target.id] })?.questions.length, 1, 'Focused visible choices remain playable');
+      const threeIds = [target.id, ...q.choices.filter(id => id !== target.id).slice(0, 2)];
+      same(create(scope, { sampling: 'focus', focusIds: threeIds, retryIds: [target.id] })?.questions[0].choices.length, 3, 'Partial focus offers only its two visible alternatives');
+    }
+    same(create(liveDisplay.structures.filter(s => s.regions.includes('thorax')), { retryIds: [target.id] }), null, 'Other region excludes deep-brain target');
+  }
+}
 for (const concept of organConcepts) {
   const target = liveDisplay.structures.find(s => api.reasoningConceptFor(s)?.key === concept.key);
   check(target && target.laterality === 'unpaired' && target.system === 'organs');
@@ -415,7 +464,7 @@ for (const side of ['left', 'right']) {
   for (const q of session.questions) same(q.choices.length, 4, 'All four same-side neck choices loaded');
   for (const target of scope) same(create([target]), null, 'No lone-neck-target fallback');
 }
-for (const concept of newConcepts) {
+for (const concept of [...newConcepts, ...deepConcepts]) {
   for (const ref of concept.references) referenceWords[ref.url] = (referenceWords[ref.url] ?? 0) + (concept.prompt + ' ' + concept.explanation).split(/\s+/).length;
   const identities = bound.filter(s => api.reasoningConceptFor(s).key === concept.key);
   const oneQuestion = create(all, { retryIds: identities.map(s => s.id) });

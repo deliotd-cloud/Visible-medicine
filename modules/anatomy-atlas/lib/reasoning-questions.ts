@@ -9,6 +9,7 @@ import { trunkReasoningConcepts } from './trunk-reasoning';
 import { limbRelationshipsReasoningConcepts } from './limb-relationships-reasoning';
 import { abdominalOrganReasoningConcepts } from './abdominal-organ-reasoning';
 import { thoracicOrganReasoningConcepts } from './thoracic-organ-reasoning';
+import { deepBrainReasoningConcepts } from './deep-brain-reasoning';
 // "midline" retains the exact catalogue tag, including bilateral source groups.
 type ReasoningBinding = { fma: string; side: 'right' | 'left' | 'midline' | 'unpaired' } & (
   | { file: string; files?: never }
@@ -17,7 +18,7 @@ type ReasoningBinding = { fma: string; side: 'right' | 'left' | 'midline' | 'unp
 export interface ReasoningConcept {
   key: string;
   // Omission preserves every existing muscle binding; organs are explicit only.
-  sourceTissue?: 'organ';
+  sourceTissue?: 'organ' | 'neural-organ';
   region:
     | 'shoulder-arm'
     | 'forearm'
@@ -345,6 +346,7 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
   ...limbRelationshipsReasoningConcepts,
   ...abdominalOrganReasoningConcepts,
   ...thoracicOrganReasoningConcepts,
+  ...deepBrainReasoningConcepts,
 ];
 export function reasoningConceptFor(s: BodyStructure) {
   if (
@@ -353,8 +355,8 @@ export function reasoningConceptFor(s: BodyStructure) {
     return undefined;
   return reasoningConcepts.find(
     (c) =>
-      s.system === (c.sourceTissue === 'organ' ? 'organs' : 'muscles') &&
-      s.category === (c.sourceTissue === 'organ' ? 'organ' : 'muscle') &&
+      s.system === (c.sourceTissue === 'organ' ? 'organs' : c.sourceTissue === 'neural-organ' ? 'nerves' : 'muscles') &&
+      s.category === (c.sourceTissue === 'organ' || c.sourceTissue === 'neural-organ' ? 'organ' : 'muscle') &&
       s.sourceTree === (c.sourceTree ?? 'isa') &&
       s.region === c.region &&
       s.regions.length === (c.sourceRegions ?? [c.region]).length &&

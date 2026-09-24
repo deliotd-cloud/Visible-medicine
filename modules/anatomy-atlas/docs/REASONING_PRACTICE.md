@@ -1,5 +1,14 @@
 # Source-bound anatomical reasoning pilot
 
+## Deep-brain structures — 24 September 2026
+
+Six original draft concepts add caudate, putamen, pallidum, thalamus and the
+two geniculate bodies, using twelve exact bilateral source representations.
+The current bank is **132 concepts / 250 representations**; prior counts below
+are historical. All preceding 126 questions remain ordered and unchanged.
+The existing Apply anatomy mode, focused/sided choices, delayed explanations
+and missed-answer retry are reused. See [scope, sources and review limits](DEEP_BRAIN_REASONING.md).
+
 ## Thoracic organs — 17 September 2026
 
 Three original draft questions add trachea, oesophagus and thymus to Apply anatomy.
