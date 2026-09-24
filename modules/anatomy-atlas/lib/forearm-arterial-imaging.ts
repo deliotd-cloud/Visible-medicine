@@ -1,10 +1,11 @@
 import pins from '../content/forearm-arterial-imaging-pins.json' with {type:'json'};
+import ctPins from '../content/forearm-arterial-ct-pins.json' with {type:'json'};
 import {forearmArterialSelections,forearmArterialTopics,forearmArterialReferences,type ForearmArterialGroup,type ForearmArterialModality} from '../content/forearm-arterial-imaging';
 import {sourceCanonical} from './body-source-additions';
 import type {BodyStructure} from '../app/body-types';
 import type {ContentTab} from '../app/anatomy-data';
 import type {ContentLesson} from './content-types';
-const bindings=new Map(pins.entries.map(e=>[e.identity.id,{identity:sourceCanonical(e.identity),group:e.group as ForearmArterialGroup}]));
+const bindings=new Map([...pins.entries,...ctPins.entries].map(e=>[e.identity.id,{identity:sourceCanonical(e.identity),group:e.group as ForearmArterialGroup}]));
 const names={ct:'CT',mri:'MRI',ultrasound:'Ultrasound'};
 /** Exact source identity only; neither a patient registration nor an access grant. */
 export function forearmArterialImagingLesson(s:BodyStructure,tab:ContentTab):ContentLesson|undefined{

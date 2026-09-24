@@ -20,8 +20,9 @@ hand membership. One source file is not proof of continuous lumen, complete
 branches or palmar arches. No source geometry or classification changes.
 
 Common/recurrent interosseous selections are different identities, not aliases
-for the anterior artery. Their imaging remains pending, as do anterior-
-interosseous MRI and X-ray. No generic placeholder is counted as new teaching.
+for the anterior artery. At this 17 September checkpoint their imaging remained
+pending; the CT-only extension below supersedes that status. Anterior-
+interosseous MRI and X-ray remain pending. No generic placeholder is counted as new teaching.
 All prior Anatomy/Function/Clinical/Pathology/Quiz material is retained;9,911
 other body topics, dedicated shoulder material and dissection recipes unchanged.
 
@@ -63,3 +64,32 @@ patient coordinate transform is added. Cleared scans, sequence-specific landmark
 and validated correspondence remain separate work with Didanix Education.
 Actual builds, viewport evidence and GitHub/D recovery belong in the coordinating
 checkpoint. The existing authenticated model-staging release gate is unchanged.
+
+## CT-only common and recurrent interosseous extension
+
+24 September 2026. Four more existing, displayed source selections now have
+introductory CT orientation drafts. MRI, X-ray and ultrasound for these four
+remain pending. This extension has its own exact source pins and teaching
+transition from `96c7c6fde704292744eb7a2160b25e1b488f6e10`; the earlier
+six-selection records are preserved byte for byte.
+
+| Selection | Right FMA / file | Left FMA / file | New topic |
+| --- | --- | --- | --- |
+| Common interosseous artery | FMA22807 / FJ2275 | FMA22808 / FJ2223 | CT draft |
+| Recurrent interosseous artery | FMA268667 / FJ2297 | FMA268669 / FJ2245 | CT draft |
+
+The [Friedman et al. 2025 RSNA upper-extremity CTA review](https://pubmed.ncbi.nlm.nih.gov/39745868/) ([accessible full article](https://pmc.ncbi.nlm.nih.gov/articles/PMC11736060/)) describes the usual ulnar-to-common-interosseous and anterior/posterior branching pattern. Its lower-arm CTA figure labels a generic interosseous artery. It does not verify routine CT visibility of each exact short common segment or of the smaller recurrent branch. The recurrent draft is therefore a conditional orientation note, not a claim that the review depicts or validates that branch. The [TTUHSC artery table](https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html) supports the anatomical names and relationships only.
+
+The recurrent source selection is distinct from the posterior interosseous
+trunk, which is not independently supplied. Neither source mesh establishes a
+continuous lumen, complete branching, collateral circulation, flow, injury,
+patency or procedure planning. A branch that is indistinct on a particular CT
+cannot be declared absent or injured from this lesson. No scan, patient data,
+publisher figure or article prose is redistributed. Existing independent
+case/Atlas/lecture access and revision-bound radiologist sign-off still apply.
+
+`npm run forearm-arterial-imaging:test` verifies the four exact CT transitions,
+unchanged modality slots, original sixteen placements, historical replay from
+the pinned source commit, content contracts, review state and identity mutation
+rejection. Validation remains educational source control, not clinical approval
+or browser acceptance.
