@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+24 September pulmonary-hilar integration: the shared regional/whole-body runtime
+now binds Atlas `e6af825`, adding source-bound right and left lung-root studies
+in Thorax and Whole body Dissect through existing controls. All 136 models and
+143 protected paths remain unchanged; no scan, entitlement or clinical approval
+is added. See [source and verification boundaries](atlas-pulmonary-hilar-20260924.md)
+and the main-task checkpoint for actual publication/recovery. Continue source-led
+regional coverage and the full roadmap while specialist clinical/device gates remain.
+
 24 September shared practice navigation integration: the generated runtime now
 binds Atlas `007d0dd`, preserving all 136 models and 143 protected paths.
 See [source and verification boundaries](atlas-practice-navigation-20260924.md).
