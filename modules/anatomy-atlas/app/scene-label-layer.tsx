@@ -233,7 +233,7 @@ export function SceneLabelLayer({ children }: { children: ReactNode }) {
             <button
               key={entry.id}
               type="button"
-              aria-pressed={entry.selected}
+              aria-current={entry.selected ? 'true' : undefined}
               aria-label={entry.name}
               ref={(node) => {
                 const previous = buttons.current.get(entry.id);

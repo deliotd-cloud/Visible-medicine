@@ -10,6 +10,8 @@ The two columns are spaced independently in anchor-height order using the render
 
 Leader lines and anchor dots are screen overlays and never intercept model picking. Buttons keep native keyboard selection and stop propagation to orbit/underlying selection. Hidden, ghosted, isolated-away, clipped, exam and unloaded structures retain their existing eligibility guards. Offscreen/behind-camera anchors have hidden, disabled labels. No depth-occlusion or surgical-retraction accuracy is claimed.
 
+A selected label is marked `aria-current="true"`, not `aria-pressed`: activating a label selects that structure and does not toggle it off. Unselected labels expose neither state. This corrects the control announcement in the shared regional and whole-body scene without changing selection, visibility, geometry or layout. The component fixture checks both states and the exact-ID click; actual screen-reader behavior still needs device review.
+
 The shoulder retains its preset landmark choices but also labels the selected visible structure. The whole-body/regional landmark limit remains eight total. Labels still disappear in exam mode. Display fingerprints include the new layer, CSS and projection helper, expiring previous shoulder display reviews without changing teaching content or introducing imaging data.
 
 ## Verification

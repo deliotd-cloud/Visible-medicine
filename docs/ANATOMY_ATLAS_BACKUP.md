@@ -1,5 +1,9 @@
 # Anatomy atlas backup — 12 September 2026
 
+## 24 September 2026 — Scene-label selection semantics
+
+Atlas source `c0bdec4e799a2f0ee944ca74501e8e21684d74d1` marks a selected 3D label as current rather than as a pressed toggle, because activating it selects but cannot deselect. The shared regional/whole-body component, its exact-handler fixture and label guidance changed; meshes, teaching, access and review decisions did not. The label, renderer and selection-visibility suites and TypeScript passed. Targeted lint still reports two pre-existing warnings on untouched component lines. Browser screen-reader and clinical acceptance remain pending. The module subtree is mirrored exactly; the website stays private v108 until a separate generated integration and publication is verified.
+
 ## 24 September 2026 — Unsigned first-release review index refreshed
 
 Atlas source `a59a0dd` regenerates the 11-selection pilot index against current renderer/teaching revisions. Eleven imaging tracks remain blocked, `approval` stays false, and no private reviewer record was read or modified. This is a source-only coordination update; the live website remains private v108. The mirrored Atlas module subtree matches the source exactly.

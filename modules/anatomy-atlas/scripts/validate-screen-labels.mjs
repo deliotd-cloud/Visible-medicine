@@ -313,6 +313,13 @@ const entries = [
     anchor: { current: new Group() },
     onSelect: (id) => picked.push(id),
   },
+  {
+    id: 'other-structure',
+    name: 'Other structure',
+    selected: false,
+    anchor: { current: new Group() },
+    onSelect: (id) => picked.push(id),
+  },
 ];
 entries[0].anchor.current.position.set(-1, 0, 0);
 const fixtureScene = new Three.Scene(), fixtureOwn = new Group();
@@ -408,7 +415,10 @@ same(
   'Right structure',
   'Anatomical text is not relabelled to screen laterality',
 );
-same(buttonElement.props['aria-pressed'],true,'Selected anatomy is exposed as a pressed label button');
+const labelButtons = elements.filter((element) => element.type === 'button');
+same(buttonElement.props['aria-current'], 'true', 'Selected anatomy is marked current, not a toggle');
+same(labelButtons[1].props['aria-current'], undefined, 'Unselected anatomy is not marked current');
+check(labelButtons.every((button) => !Object.hasOwn(button.props, 'aria-pressed')), 'Labels do not promise a toggle action');
 const nodes = {};
 // Effects before late Html refs mirror the separate DOM root mounting later.
 const cleanups = effects.map((effect) => effect());
