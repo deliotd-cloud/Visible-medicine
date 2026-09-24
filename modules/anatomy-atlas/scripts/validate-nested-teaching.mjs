@@ -46,7 +46,7 @@ runInNewContext(compiled.outputFiles[0].text, {
 const api = {
   ...scope.exports,
   nestedConcepts: scope.exports.nestedConcepts.filter(c => c.study !== 'femoral-components' && c.study !== 'coronary-venous'),
-  nestedTeachingReferences: Object.fromEntries(Object.entries(scope.exports.nestedTeachingReferences).filter(([key]) => !['femoralComponentAnatomy', 'coronaryVenousAnatomy', 'coronaryVenousHeart'].includes(key))),
+  nestedTeachingReferences: Object.fromEntries(Object.entries(scope.exports.nestedTeachingReferences).filter(([key]) => !['femoralComponentAnatomy', 'coronaryVenousAnatomy', 'coronaryVenousHeart', 'coronarySinusImaging', 'smallCardiacVariation'].includes(key))),
 };
 const historicalApi = nestedBeforeClinicalReferenceRevision(nestedBeforePulmonaryImaging(api));
 const copy = (value) => JSON.parse(JSON.stringify(value));

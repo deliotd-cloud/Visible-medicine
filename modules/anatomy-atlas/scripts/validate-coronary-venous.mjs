@@ -10,7 +10,7 @@ import { bodyDisplayCatalog } from '../lib/body-display-catalog.ts';
 import { nestedStudyTargets, resolveNestedTarget } from '../lib/nested-anatomy.ts';
 import { initialVentricles, reduceVentricles } from '../lib/ventricles.ts';
 import { makeStudyLink, parseStudyLink, resolveStudyLink } from '../lib/study-links.ts';
-import { nestedTeachingFor, nestedTopicLesson } from '../lib/nested-teaching.ts';
+import { nestedTeachingFor, nestedTopicLesson, nestedTeachingReferences } from '../lib/nested-teaching.ts';
 import { nestedLearningAnatomyRepresentations, nestedLearningSelection } from '../lib/nested-learning-anatomy.ts';
 
 const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
@@ -116,7 +116,18 @@ for (const target of targets) {
   }
   const lesson = nestedTeachingFor(parent, target.study, target.structure);
   assert(lesson);
-  for (const tab of ['anatomy', 'function']) assert.equal(nestedTopicLesson(lesson, tab).readiness, 'draft');
-  for (const tab of ['clinical', 'pathology', 'ct', 'mri', 'xray', 'ultrasound']) assert.equal(nestedTopicLesson(lesson, tab).readiness, 'pending');
+  for (const tab of ['anatomy', 'function', 'clinical', 'pathology', 'ct', 'mri']) {
+    const topic = nestedTopicLesson(lesson, tab);
+    assert.equal(topic.readiness, 'draft');
+    assert(topic.body.length > 80 && topic.citations?.length, `${target.structureId} ${tab} needs cited teaching`);
+  }
+  for (const tab of ['xray', 'ultrasound']) assert.equal(nestedTopicLesson(lesson, tab).readiness, 'pending');
+  for (const tab of ['clinical', 'pathology', 'ct', 'mri']) {
+    const topic = nestedTopicLesson(lesson, tab);
+    assert(topic.citations.some((url) => url === 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4195839/' || url === 'https://pubmed.ncbi.nlm.nih.gov/15232770/'));
+    assert(!/dose|injection rate|catheter path|safe access|can diagnose|this model shows (?:a )?(?:shunt|disease)/i.test(topic.body), 'Keep drafts non-prescriptive and non-diagnostic');
+  }
 }
-console.log(JSON.stringify({ passed: true, selections: 2, originalSourceFiles: 3, triangles, visibilityStates: history.length, oneVisibleOwner: true, staleLinksRejected: true, priorCavities: 4, clinicalApproval: false }));
+for (const key of ['coronarySinusImaging', 'smallCardiacVariation']) assert(nestedTeachingReferences[key]?.url);
+assert.deepEqual(children.map((s) => s.validation.anatomicalReview), [false, false]);
+console.log(JSON.stringify({ passed: true, selections: 2, originalSourceFiles: 3, triangles, visibilityStates: history.length, oneVisibleOwner: true, staleLinksRejected: true, priorCavities: 4, draftTopics: ['anatomy', 'function', 'clinical', 'pathology', 'ct', 'mri'], pendingTopics: ['xray', 'ultrasound'], clinicalApproval: false }));
