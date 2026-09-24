@@ -1,5 +1,26 @@
 # First-release viewer acceptance evidence
 
+## 25 September: compact Search label and keyboard path
+
+At 320 × 568, the standalone Abdomen header previously wrapped brand, Search
+and modes onto three rows. The Search trigger now omits only the redundant
+visible word “atlas” at widths up to 380px. It retains `aria-label="Search atlas"`
+and a decorative icon; modes, brand, font size and warnings are unchanged.
+The live local header now occupies two rows (115px); document width and scroll
+width are both 320px. The full visible label returns at 390px and desktop.
+
+After hot reload, keyboard Enter on Search opened the dialog with its input
+focused; Escape returned focus to Search. Before the edit, keyboard search and
+selection of the left renal artery opened its details with Close focused.
+The Search component harness also checks full naming and exam disabling;
+existing focus/activation tests, TypeScript, targeted lint and the shared
+regional production build pass. The existing large-chunk build warning remains.
+
+This is local browser evidence, not hosted acceptance or a screen-reader test.
+The short viewport still scrolls to some lower model controls; no zero-scroll
+or 200% text-resize claim is made. Temporary viewport changes were reset to
+1280 × 720. No anatomy, teaching, entitlement or source asset changed.
+
 ## 24 September: pulmonary-vein panel, responsive controls and local recovery
 
 Local Atlas source `0d2d5dd5a0530f9c726e46e49d0367a1730336bd` was sampled in

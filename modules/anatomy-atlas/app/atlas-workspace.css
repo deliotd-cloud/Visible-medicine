@@ -371,6 +371,12 @@
     min-height: 36px;
   }
 }
+/* Keep brand + a named Search action on one row at small phone widths.
+   Only redundant visible context is omitted; the accessible name stays full.
+   No fixed header height: enlarged text can still wrap without clipping. */
+@media (max-width: 380px) {
+  .body-topbar .atlas-search-context { display: none; }
+}
 .body-app[data-focus-view='true'] .body-layout {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   grid-template-rows: auto minmax(0, 1fr);

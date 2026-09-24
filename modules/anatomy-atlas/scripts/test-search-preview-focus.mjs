@@ -219,6 +219,16 @@ const examCalls=calls.length;
 find(tree,node=>text(node)==='Open study view','stale exam confirmation').props.onClick();
 assert.equal(calls.length,examCalls,'exam blocks stale study confirmation');
 
+// Narrow-screen presentation must retain the complete accessible action name.
+reset();
+const launcherTrigger=find(tree,node=>node.props.render?.props.className==='atlas-search-trigger','search launcher');
+assert.equal(launcherTrigger.props.render.props['aria-label'],'Search atlas');
+assert.equal(text(launcherTrigger),'Search atlas');
+assert.equal(text(find(launcherTrigger,node=>node.props.className==='atlas-search-context','optional visual context')),' atlas');
+assert.equal(walk(launcherTrigger,node=>node.props['aria-hidden']==='true').length,1,'decorative search icon is hidden from assistive technology');
+context.exam=true;render();
+assert.equal(find(tree,node=>node.props.render?.props.className==='atlas-search-trigger','exam launcher').props.render.props.disabled,true);
+
 console.log(JSON.stringify({
   passed:true,component:'AtlasSearch',actualComponentCallbacks:true,
   activeElementAssertions:true,browserAcceptance:false,

@@ -548,11 +548,13 @@ export function AtlasSearch({
             ref={launcher}
             variant="outline"
             className="atlas-search-trigger"
+            aria-label="Search atlas"
             disabled={workspace.exam}
           />
         }
       >
-        <Search /> Search atlas
+        <Search aria-hidden="true" />
+        <span>Search<span className="atlas-search-context"> atlas</span></span>
       </DialogTrigger>
       <DialogContent
         ref={dialogRoot}
