@@ -31,7 +31,14 @@ if(process.argv.includes('--xray-focused')){
     assert.equal(api.thoracoabdominalOrganImagingLesson(changed,'xray'),undefined);
   }
   assert.match(groups.appendix.focus.xray.pitfall,/usually not appropriate for suspected appendicitis/);
-  console.log(JSON.stringify({xrayDrafts:selected.length,exactSource:true,otherThoracoabdominalXrayPending:true,clinicalApproval:false}));
+  const laterBronchi = pins.entries.filter(e=>['FMA7395','FMA7396'].includes(e.identity.fmaId));
+  assert.equal(laterBronchi.length,2);
+  for(const {identity} of laterBronchi){
+    assert.deepEqual(api.bodyLesson(identity,'xray'),api.mainBronchusXrayLesson(identity,'xray'));
+    assert.equal(api.bodyLesson(identity,'xray').readiness,'draft');
+    assert.equal(restored.api.bodyLesson(identity,'xray').readiness,'pending');
+  }
+  console.log(JSON.stringify({originalXrayDrafts:selected.length,laterMainBronchusXrayDrafts:laterBronchi.length,exactSource:true,clinicalApproval:false}));
   process.exit(0);
 }
 const unprojected=authoringBeforeCentralVesselImaging(newest);

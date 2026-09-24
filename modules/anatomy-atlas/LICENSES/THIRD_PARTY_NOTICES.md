@@ -1,5 +1,14 @@
 # Third-party notices
 
+## Main-bronchus X-ray teaching — 24 September 2026
+
+Two original short draft summaries link to King's College London's chest X-ray
+teaching and Dr Graham Lloyd-Jones's Radiology Masterclass airway page as factual
+references. No publisher images, annotations, tables, course material, screenshots
+or scans are copied. Existing BodyParts3D geometry and attribution are unchanged;
+no dependency, font, texture or paid service is added. See
+[scope and source bindings](../docs/MAIN_BRONCHUS_XRAY.md).
+
 ## Tibial recurrent source review — 24 September 2026
 
 The two diagnostic figures in `docs/reviews/tibial-recurrent-*.png` are

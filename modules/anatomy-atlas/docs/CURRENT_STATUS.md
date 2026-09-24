@@ -1,5 +1,12 @@
 # Current atlas status
 
+[Main-bronchus X-ray orientation](MAIN_BRONCHUS_XRAY.md) adds two exact-source,
+unsigned draft topics for the right/left main bronchi. The other 9,934 topics,
+all geometry and dissection recipes are unchanged. Local browser checks show
+both notes in the existing Imaging → X-ray panel; no radiograph, registration,
+diagnostic certification or entitlement is supplied. Website integration is a
+separate step; the full goal and radiologist review remain open.
+
 [Tibial recurrent source review](TIBIAL_RECURRENT_SOURCE_REVIEW.md) holds two
 newly inspected official source definitions pending radiologist identity/extent
 review. They are technically closed meshes but include broad anterior-knee
