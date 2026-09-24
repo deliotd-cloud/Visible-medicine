@@ -1,5 +1,15 @@
 # Visible Medicine — shared delivery plan
 
+24 September source-only Thorax side-disclosure integration: the generated
+regional/whole-body viewer now binds Atlas `98e3c2a218e27b04ef72b47952821b163dd37c41`.
+Three respiratory study prompts explain that their midline-labelled compound
+surfaces remain under either side filter; a hemidiaphragm is not separately
+selectable. This is a clarification of unreviewed source geometry, not a new
+model, scan, breathing simulation or clinical approval. The offline transition
+preserved 135 models, 142 paths and 12 scopes, with zero new model bytes.
+Private publication must be verified separately. See
+[the integration record](atlas-thorax-side-disclosure-20260924.md).
+
 24 September source-only forearm study integration: the generated shared
 regional/whole-body viewer now binds Atlas `4e35cae205387f1416cbf4ab98cb9f02ab9b0646`.
 The new superficial-forearm-vein focus uses eight separately supplied,

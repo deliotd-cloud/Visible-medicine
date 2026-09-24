@@ -7,23 +7,18 @@ import {ATLAS_DELIVERY_POLICY} from '../lib/atlas-delivery-policy.ts';
 const base='public/atlas-runtime/head-neck/';
 const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
 
-test('regional export presents source-bound superficial forearm veins without clinical or imaging approval',()=>{
+test('shared Thorax focus discloses compound midline source limits under either side filter',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
   assert.equal(sha(manifestBytes),'2aac6cc6d22b201663985f18ced448ae15a654403464d1a7db0f7f69d564f7ed');
   const manifest=JSON.parse(manifestBytes.toString());
   assert.equal(manifest.sourceCommit,'98e3c2a218e27b04ef72b47952821b163dd37c41');
   for(const flag of ['patientDataIncluded','clinicalApproved','imagingConnection','standaloneReviewConnection'])
     assert.equal(manifest[flag],false,flag);
-
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
-  for(const [path,expected] of Object.entries({
-    'content/forearm-superficial-vein-runtime-pins.json':'cb864bdb2d08c8585091a9c7a0cad37392d8b7aff374910d16ea01478a0916e6',
-    'content/forearm-superficial-vein-study.ts':'6ad60f58f4131df71d35580d086729b27c39cd4d2f0819a5464df43293960053',
-    'lib/forearm-superficial-veins.ts':'07dde747d85a1a4fff95b1f19e62f4f1bc6a17c7696b91d60a842d9b6e499105',
-    'lib/limb-vascular-studies.ts':'9338230911c7db7967b947ec5afade816bcad861e68cc15129e5b5487a49f63e',
-  }))assert.equal(inputs.find(row=>row.path===path)?.sha256,expected,path);
-  assert.ok(!inputs.some(row=>/native-mr|local-mr-study|\.vmmr/i.test(row.path)),'private native MRI checker excluded');
-
+  assert.equal(inputs.find(row=>row.path==='content/thorax-respiratory-study.ts')?.sha256,
+    '4631768eb5bf6e210231e0e3e9e3ba43a2fd6eccb23fda415c2964c964e9c0ba');
+  assert.ok(!inputs.some(row=>/native-mr|local-mr-study|\.vmmr/i.test(row.path)),
+    'private MRI checker remains outside the regional export');
   const scripts=(manifest.files as {path:string;sha256:string}[]).filter(file=>file.path.endsWith('.js'));
   const runtime=scripts.map(file=>{
     const bytes=readFileSync(base+file.path);
@@ -31,16 +26,17 @@ test('regional export presents source-bound superficial forearm veins without cl
     return bytes.toString();
   }).join('\n');
   for(const phrase of [
-    'Superficial forearm veins',
-    'Choose Left or Right to simplify the view',
-    'Their proximity does not establish a joined lumen',
-    'this is not a venepuncture guide or patient registration',
-    'Anatomical review is pending',
-    'FMA13325','FMA13326','FMA22909','FMA22910',
-    'FMA22964','FMA22965','FMA22968','FMA22969',
+    'respiratory-wall-overview',
+    'respiratory-intercostal-comparison',
+    'respiratory-diaphragm',
+    'Left and right filters retain the same midline-labelled compound source surfaces; neither filter isolates a side.',
+    'neither hemidiaphragm is separately selectable',
+    'not rib-space subdivisions, contraction, or breathing motion',
+    'Anatomical relationships require revision-bound radiologist review',
   ])assert.ok(runtime.includes(phrase),phrase);
-
-  const inventory=JSON.parse(readFileSync('lib/atlas-model-inventory.json','utf8'));
+  const inventoryBytes=readFileSync('lib/atlas-model-inventory.json');
+  assert.equal(sha(inventoryBytes),'fca0ddc51cc1ca3643a6b78d93e4b96eea44b3cbd7a39932315b5e981f70eb17');
+  const inventory=JSON.parse(inventoryBytes.toString());
   assert.equal(inventory.sources.find((source:{module:string})=>source.module==='head-neck')?.manifestSha256,sha(manifestBytes));
   assert.equal(inventory.models.length,135);
   assert.equal(inventory.models.flatMap((model:{paths:string[]})=>model.paths).length,142);

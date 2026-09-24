@@ -27,7 +27,7 @@ test('thorax respiratory source studies are available in the shared viewer',asyn
   const manifest=JSON.parse(await readFile(new URL('manifest.json',runtime),'utf8'));
   const inputs=JSON.parse(await readFile(new URL('source-inputs.json',runtime),'utf8')) as {path:string;sha256:string}[];
   assert.equal(inputs.find(input=>input.path==='content/thorax-respiratory-study.ts')?.sha256,
-    '26347ed6eae588638a76ed3feb6e492bcc9542a346bef8dc3d848ff66cf2740d');
+    '4631768eb5bf6e210231e0e3e9e3ba43a2fd6eccb23fda415c2964c964e9c0ba');
   const slider=(manifest.files as {path:string;sha256:string}[]).find(file=>/^assets\/slider-.*\.js$/.test(file.path));
   assert.ok(slider);
   const bytes=await readFile(new URL(slider.path,runtime));
