@@ -1,5 +1,11 @@
 # Visible Medicine — shared delivery plan
 
+24 September shared practice navigation integration: the generated runtime now
+binds Atlas `007d0dd`, preserving all 136 models and 143 protected paths.
+See [source and verification boundaries](atlas-practice-navigation-20260924.md).
+Use the main-task checkpoint for actual publication/recovery; no clinical or
+access approval is implied. The following source-only entry is historical.
+
 24 September Atlas source-only practice navigation: active questions now focus
 and reveal their prompt; answers and skips focus feedback, without scrolling the
 outer model page. Desktop and a 390 × 844 browser viewport were sampled; this is
