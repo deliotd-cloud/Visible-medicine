@@ -9,9 +9,9 @@ const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
 
 test('central airway and hepatic teaching export retains exact inputs, pins and review access',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'a39c8b154e77da5170a7669d9c68532a65ffea2b3b242962a7775a38fbead784');
+  assert.equal(sha(manifestBytes),'edb5264f4bba4725f8694302305a6a7819c28ac1cefe5be7c8aff25fc9c135c2');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'201f8c9d075c1eda29e1dd93e94b458a44563d62');
+  assert.equal(manifest.sourceCommit,'c9000cf68cf91f899ff48e930306dfc02f371b19');
   for(const flag of ['patientDataIncluded','clinicalApproved','imagingConnection','standaloneReviewConnection'])
     assert.equal(manifest[flag],false,flag);
   assert.equal(manifest.regionalScopes.length,12);
@@ -67,11 +67,11 @@ test('central airway and hepatic teaching export retains exact inputs, pins and 
     for(let offset=teachingCode.indexOf(marker);offset>=0;offset=teachingCode.indexOf(marker,offset+marker.length))
       starts.push(offset);
     assert.equal(starts.length,2,`${conceptId}: right and left source-bound placements`);
-    const found:(string|undefined)[]=starts.map((start:number):string|undefined=>{
+    const found:(typeof fmas[number]|undefined)[]=starts.map((start:number):typeof fmas[number]|undefined=>{
       const row:string=teachingCode.slice(start,start+1500);
       assert.ok(row.includes('sourceHash:`4cf393e8b9bce6637f139b6e85d47be0098aac52103bbacfba3cc399747d9857`'));
       assert.ok(row.includes('parentHash:`5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124`'));
-      return fmas.find((fma:string)=>row.includes(`fmaId:\`${fma}\``));
+      return fmas.find(fma=>row.includes(`fmaId:\`${fma}\``));
     });
     assert.deepEqual(found.sort(),[...fmas].sort(),`${conceptId}: exact sided FMA targets`);
   }
@@ -84,11 +84,11 @@ test('central airway and hepatic teaching export retains exact inputs, pins and 
   ])assert.ok(runtime.includes(phrase),phrase);
 
   const inventoryBytes=readFileSync('lib/atlas-model-inventory.json');
-  assert.equal(sha(inventoryBytes),'7b45168985215b85cc91dc6c3899bd26ef5911c46c801e51422a3bf5c7e7536a');
+  assert.equal(sha(inventoryBytes),'85167c7ff6ee2742392caa4e6ea13aa620c9184d39f316f28e6bfd60ff9e2bd0');
   const inventory=JSON.parse(inventoryBytes.toString());
   assert.equal(inventory.sources.find((source:{module:string})=>source.module==='head-neck')?.manifestSha256,sha(manifestBytes));
-  assert.equal(inventory.models.length,136);
-  assert.equal(inventory.models.flatMap((model:{paths:string[]})=>model.paths).length,143);
+  assert.equal(inventory.models.length,135);
+  assert.equal(inventory.models.flatMap((model:{paths:string[]})=>model.paths).length,142);
   assert.equal(ATLAS_DELIVERY_POLICY.audience,'administrator-review');
   assert.equal(ATLAS_DELIVERY_POLICY.manifestRevision,sha(inventoryBytes));
   assert.equal('approvedRevision' in ATLAS_DELIVERY_POLICY,false);

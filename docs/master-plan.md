@@ -1,16 +1,5 @@
 # Visible Medicine — shared delivery plan
 
-24 September coronary venous source integration: the generated shared regional
-and whole-body viewer binds committed Atlas `201f8c9d075c1eda29e1dd93e94b458a44563d62`.
-The guarded Heart action exposes coronary sinus and small cardiac vein as two
-source-labelled selections; the latter remains a two-file group. The offline
-transition preserves all 135 original models and 142 protected paths, then adds
-one 40,996-byte licensed GLB (136 models, 143 paths). Owner-only website
-publication, protected storage verification, physical-device QA and
-revision-bound radiologist approval remain separate gates. No scan, MRI checker,
-patient registration or independent entitlement change is included. See
-[the integration record](atlas-coronary-venous-20260924.md).
-
 24 September source-only central-airway and hepatic-inflow integration: the
 generated shared regional/whole-body viewer now binds Atlas `c9000cf68cf91f899ff48e930306dfc02f371b19`.
 The exact-source Thorax airway focus and eight sided hepatic CT/MRI draft

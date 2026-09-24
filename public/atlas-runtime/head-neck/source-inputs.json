@@ -93,7 +93,7 @@
   },
   {
     "path": "app/body-explorer.tsx",
-    "sha256": "070daaef3bf15338176ad48b3ecc24a57f6e41a7c134e4a6d5cf99f3cd0c4151"
+    "sha256": "592e34b5b88dd53099bc12c61b36893bd51e0be8401601805eb01e4c7d8486bf"
   },
   {
     "path": "app/body-scene.tsx",
@@ -353,7 +353,7 @@
   },
   {
     "path": "app/ventricles.tsx",
-    "sha256": "c89ff9e95b6b5c993f19b3899318fada0501e493a78106e4e6b21a897552a1ca"
+    "sha256": "76edb842c6899ec10354ec032356640ca2fc1500c89183bd41ce4dd02cb35046"
   },
   {
     "path": "app/ventricular-relationships.css",
@@ -558,10 +558,6 @@
   {
     "path": "content/core-organ-function.ts",
     "sha256": "ea4eb8d886f03cab39025dbdcbf1a4a630be83f04254cf731eab7b580222afd3"
-  },
-  {
-    "path": "content/coronary-venous-teaching.ts",
-    "sha256": "bbc9df0c43bb8f556851815a85fb7d45d3722e40d6d8b86fa5cb2f2628e4fb16"
   },
   {
     "path": "content/corpus-clinical.ts",
@@ -1009,15 +1005,15 @@
   },
   {
     "path": "content/nested-review-bindings.json",
-    "sha256": "ae98b0279003f76f48f2409c51fefc563ce461670284ce36897dd28fa01690f3"
+    "sha256": "a7cbca23d7975f6266b5de1c7eced1cc821843280132bec1f326b2404635e335"
   },
   {
     "path": "content/nested-teaching-bindings.v1.json",
-    "sha256": "eee2e2c777674822b19d6f2d4dc7c3481b45e123915bfae565ab02bdba6a86fa"
+    "sha256": "ed5b3b4968348d14e9feb65ac083b230ea80493360807fc440a0ee984070e315"
   },
   {
     "path": "content/nested-teaching.ts",
-    "sha256": "7bfb61c51a22046b50c5c411ba09223a5d0536b7adfef07990dd54b6caabbbd8"
+    "sha256": "7fd9bcf969c9fbd7aa8407c70ba01f0e716301048bb9dd048e99e036e25e3e19"
   },
   {
     "path": "content/orbital-neck-muscle-imaging-pins.json",
@@ -1117,7 +1113,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "34627fe3045625e662add1a88f7cc774573731188de0816212b449ac6aa85d18"
+    "sha256": "75ca66808ca5086cc65d756ebf9c257c20fc421d06f3a6d8eb75cf5bb57467ed"
   },
   {
     "path": "content/sca-mca-clinical-pins.json",
@@ -1385,7 +1381,7 @@
   },
   {
     "path": "integration/head-neck/delivery.ts",
-    "sha256": "a021cf6806b205834848faf3e1283827a402257922a2c94fd3a4b71799fc185e"
+    "sha256": "44256992d6342c247e7d42a1f1bb110c5ca590a88da4a619a087114678e28e7c"
   },
   {
     "path": "integration/head-neck/framework.tsx",
@@ -1706,10 +1702,6 @@
   {
     "path": "lib/core-organ-function.ts",
     "sha256": "6ecbd0d421c6caa5ffd3f02edadf8cfdbf49ef7bbab20ea3926054544c896925"
-  },
-  {
-    "path": "lib/coronary-venous.ts",
-    "sha256": "7fe9f98f5ea4ac4e7e9a76cd25016b5461393ba3f25e52b7b2fc8215c64cd62e"
   },
   {
     "path": "lib/corpus-imaging.ts",
@@ -2093,11 +2085,11 @@
   },
   {
     "path": "lib/learning-resource-types.ts",
-    "sha256": "c08858a0b3bdcc0467d815d71a129428c3b311c1eaf318a544e1f091b1833778"
+    "sha256": "f1140958921da01500d519ad3249aa5114f9c31ab19709b29bbf51675ccab161"
   },
   {
     "path": "lib/learning-resources.ts",
-    "sha256": "e2e191c19df1f7bfebd31d429c6320430845d145ac1f9c604a011827eb482da4"
+    "sha256": "284d1a62cc44fd113a03c442b744546cdf1b7b93db5c9223c8b72f65cb2c2730"
   },
   {
     "path": "lib/leg-attachments.ts",
@@ -2229,7 +2221,7 @@
   },
   {
     "path": "lib/nested-anatomy.ts",
-    "sha256": "b9368085e520b5228f43391825729ee39b98995522b5db39ef2e8627cfcf28d1"
+    "sha256": "ec289a3dbeadc13f0fca06b69e8ae10a9f4b7e06b2e5b475ce3217b521ac0082"
   },
   {
     "path": "lib/nested-practice.ts",
@@ -2501,7 +2493,7 @@
   },
   {
     "path": "lib/study-links.ts",
-    "sha256": "70ec07874a09584d15f7d2a264061988b561972ff62ed2f8f38207b36d886b6f"
+    "sha256": "01a25ef3beb3e435c43e8de937338dce538251522216a5ac69060bf700c915d6"
   },
   {
     "path": "lib/study-navigation.ts",
@@ -2758,10 +2750,6 @@
   {
     "path": "public/models/bodyparts3d/collicular-brachia/catalog.json",
     "sha256": "a607dbbdae16aff65fa35c65e181fe0aa828b3e4d09b10ba2a851d46a0a4e9d0"
-  },
-  {
-    "path": "public/models/bodyparts3d/coronary-venous/catalog.json",
-    "sha256": "996d8ca712b12dc3c2b9df4a6bad372838aeca64f017574be244ffa0b129abfe"
   },
   {
     "path": "public/models/bodyparts3d/corpus-spongiosum/catalog.json",

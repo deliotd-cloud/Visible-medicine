@@ -9,9 +9,9 @@ const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
 
 test('regional export presents source-bound superficial forearm veins without clinical or imaging approval',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'a39c8b154e77da5170a7669d9c68532a65ffea2b3b242962a7775a38fbead784');
+  assert.equal(sha(manifestBytes),'edb5264f4bba4725f8694302305a6a7819c28ac1cefe5be7c8aff25fc9c135c2');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'201f8c9d075c1eda29e1dd93e94b458a44563d62');
+  assert.equal(manifest.sourceCommit,'c9000cf68cf91f899ff48e930306dfc02f371b19');
   for(const flag of ['patientDataIncluded','clinicalApproved','imagingConnection','standaloneReviewConnection'])
     assert.equal(manifest[flag],false,flag);
 
@@ -42,8 +42,8 @@ test('regional export presents source-bound superficial forearm veins without cl
 
   const inventory=JSON.parse(readFileSync('lib/atlas-model-inventory.json','utf8'));
   assert.equal(inventory.sources.find((source:{module:string})=>source.module==='head-neck')?.manifestSha256,sha(manifestBytes));
-  assert.equal(inventory.models.length,136);
-  assert.equal(inventory.models.flatMap((model:{paths:string[]})=>model.paths).length,143);
+  assert.equal(inventory.models.length,135);
+  assert.equal(inventory.models.flatMap((model:{paths:string[]})=>model.paths).length,142);
   assert.equal(ATLAS_DELIVERY_POLICY.audience,'administrator-review');
   assert.equal('approvedRevision' in ATLAS_DELIVERY_POLICY,false);
 });
