@@ -6,7 +6,7 @@ import type { SpecimenSupplement } from './um-knee-study';
 import { IndependentStudyView, IndependentStudyLinkControl } from './independent-study-navigation';
 import type { IndependentStudyLink } from '@/lib/independent-study-links';
 import { SpecimenLearning } from './um-limb-learning';
-import { hraRenalDefinition, hraRenalSource, hraRenalColors } from '@/lib/hra-renal';
+import { hraRenalDefinition, hraRenalSource, hraRenalColors, hraRenalCollectingSequence } from '@/lib/hra-renal';
 import { hraRenalTeaching, hraRenalPractice } from '@/lib/hra-renal-teaching';
 import { hraRenalReferenceTitles } from '@/content/hra-renal-teaching';
 import { modelDeliveryUrl } from '@/lib/model-delivery';
@@ -25,6 +25,18 @@ export function hraRenalSupplementFor(assetBase = ''): SpecimenSupplement { retu
     { id: 'vein', name: 'Vein', color: '#597dba' },
   ],
   learning: (selected, definition) => <SpecimenLearning definition={definition} selected={selected} resolveLesson={hraRenalTeaching} referenceTitles={hraRenalReferenceTitles} />,
+  studySupplement: (definition, studyId) => {
+    const sequence = hraRenalCollectingSequence(definition, studyId);
+    if (!sequence) return null;
+    return <details className="um-knee-details">
+      <summary>{sequence.side === 'left' ? 'Left' : 'Right'} collecting sequence · concept guide</summary>
+      <p>Typical collecting route: collecting ducts open at a renal papilla → minor calyx → major calyx → renal pelvis → ureter. Concept sequence only; source-part letters, proximity and contact do not establish an individual drainage path or continuous lumen. No flow is simulated.</p>
+      <ol>{sequence.stages.map(stage => <li key={stage.concept}>
+        {stage.label} · {stage.count} supplied source {stage.count === 1 ? 'part' : 'parts'}{stage.inView ? ' in this study' : ' outside this collecting-only view'}
+        <details><summary>{stage.label} source IDs</summary><ul>{stage.ids.map(id => <li key={id}><code>{id}</code></li>)}</ul></details>
+      </li>)}</ol>
+    </details>;
+  },
   sourceDetails: <>
     <p>{hraRenalSource.credit}</p>
     <p><a href={hraRenalSource.metadataUrl} target="_blank" rel="noreferrer">Official release metadata</a> · <a href={hraRenalSource.licenseUrl} target="_blank" rel="noreferrer">CC BY 4.0</a></p>

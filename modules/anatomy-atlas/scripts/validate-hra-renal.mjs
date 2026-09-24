@@ -51,11 +51,27 @@ const proof = await validateGlbDelivery(bytes, await compressGlb(bytes));
 assert.equal(proof.meshes, 82);
 const compiled = await build({ stdin: { contents: "export * from './lib/hra-renal.ts'; export * from './lib/hra-renal-teaching.ts'; export * from './lib/independent-specimen.ts'; export * from './lib/specimen-identification.ts'; export * from './lib/body-arrangement.ts'; export {Vector3} from 'three';", resolveDir: process.cwd(), loader: 'ts' }, bundle: true, write: false, format: 'esm', platform: 'node' });
 const api = await import('data:text/javascript;base64,' + Buffer.from(compiled.outputFiles[0].text).toString('base64'));
-const { hraRenalDefinition: def, hraRenalTeaching: teaching, hraRenalPractice: adapter, initialSpecimen, reduceSpecimen, specimenAction, filterSpecimen, reduceIdentification, bodyPresentationOffset, extractionOffsets, arrangeBodyStructures, Vector3 } = api;
+const { hraRenalDefinition: def, hraRenalTeaching: teaching, hraRenalPractice: adapter, hraRenalCollectingSequence: collectingSequence, initialSpecimen, reduceSpecimen, specimenAction, filterSpecimen, reduceIdentification, bodyPresentationOffset, extractionOffsets, arrangeBodyStructures, Vector3 } = api;
 const all = def.surfaces.map(s => s.id), before = JSON.stringify(def);
 assert.equal(def.studies.length, 9);
 assert.equal(def.studies.find(s => s.id === 'internal-right').ids.length, 34);
 assert.equal(def.studies.find(s => s.id === 'internal-left').ids.length, 37);
+for (const [side, counts] of [['left', [11, 10, 4, 1, 1]], ['right', [10, 10, 3, 1, 1]]]) {
+  const sequence = collectingSequence(def, 'collecting-' + side);
+  assert.equal(sequence.side, side);
+  assert.deepEqual(sequence.stages.map(stage => stage.concept), ['papilla', 'minor-calyx', 'major-calyx', 'pelvis', 'ureter']);
+  assert.deepEqual(sequence.stages.map(stage => stage.count), counts);
+  assert.deepEqual(sequence.stages.map(stage => stage.inView), [false, true, true, true, false]);
+  const studyIds = def.studies.find(study => study.id === 'collecting-' + side).ids;
+  assert.deepEqual(sequence.stages.filter(stage => stage.inView).flatMap(stage => stage.ids).sort(), [...studyIds].sort());
+  for (const stage of sequence.stages) {
+    const exactSourceIds = raw.structures.filter(surface => surface.laterality === side && surface.concept === stage.concept).map(surface => surface.id);
+    assert.deepEqual(stage.ids, exactSourceIds);
+    assert(stage.ids.every(id => !Object.keys(raw.heldNodes).includes(raw.structures.find(surface => surface.id === id)?.sourceName)));
+  }
+}
+for (const study of def.studies.filter(study => !study.id.startsWith('collecting-'))) assert.equal(collectingSequence(def, study.id), null);
+assert.equal(collectingSequence(def, null), null);
 assert.equal(adapter.eligibleIds(def, all).length, 13);
 assert(def.surfaces.every(s => teaching(def, s)));
 assert.equal(new Set(def.surfaces.map(s => teaching(def, s).anatomy)).size, 12);
@@ -108,7 +124,11 @@ for (const field of ['id', 'sourceName', 'nodeName', 'laterality', 'sourceOntolo
 for (const mutate of [d => d.key = 'foreign', d => d.source.license = 'MIT', d => d.source.version = 'v0', d => d.catalog.bundles[0].url = '/foreign.glb', d => d.catalog.bundles[0].sha256 = '0'.repeat(64), d => d.catalog.coordinateSystem.sourceToSceneColumnMajor[0] *= -1, d => d.surfaces[0].sources[0].sha256 = 'foreign', d => d.surfaces[0].bounds.min[0] += 1, d => d.studies[0].ids.pop()]) {
   const bad = JSON.parse(before); mutate(bad);
   assert.equal(teaching(bad, bad.surfaces[0]), null); assert.equal(adapter.createRound(bad, all), null);
+  assert.equal(collectingSequence(bad, 'collecting-left'), null);
 }
+const heldBoundary = JSON.parse(before);
+heldBoundary.surfaces[0].sourceName = Object.keys(raw.heldNodes)[0];
+assert.equal(collectingSequence(heldBoundary, 'collecting-left'), null);
 assert.equal(adapter.createRound(def, [...all, all[0]]), null);
 assert.equal(adapter.createRound(def, [...all, 'foreign']), null);
 assert.equal(JSON.stringify(def), before);
@@ -134,17 +154,38 @@ runInNewContext('(' + close.getText(ast) + ')()', { setHraRenalOpen: v => calls.
 assert.deepEqual(calls, [false, 'focus']);
 const component = await componentBuild({ stdin: { contents: "export { KneeSpecimenView } from './app/um-knee-study.tsx'; export { SpecimenIdentification } from './app/um-limb-learning.tsx'; export { hraRenalSupplement } from './app/hra-renal-study.tsx';", resolveDir: process.cwd(), loader: 'tsx' }, bundle: true, write: false, format: 'cjs', platform: 'node', plugins: [{ name: 'scene-boundary', setup(t) { t.onLoad({ filter: /body-scene\.tsx$/ }, () => ({ loader: 'js', contents: 'export function BodyScene(props){globalThis.sceneProps=props;return null;} export function retryBodyAssets(){}' })); } }] });
 const require = createRequire(import.meta.url), React = require('react'), mod = { exports: {} };
-const context = { module: mod, exports: mod.exports, require, URL, URLSearchParams, console, process: { env: { NODE_ENV: 'test' } } };
+const testRequire = specifier => specifier === 'next/link'
+  ? ({ href, children, ...props }) => React.createElement('a', { href, ...props }, children)
+  : require(specifier);
+const context = { module: mod, exports: mod.exports, require: testRequire, URL, URLSearchParams, console, process: { env: { NODE_ENV: 'test' } } };
 runInNewContext(component.outputFiles[0].text, context);
 const render = (name, props) => require('react-dom/server').renderToStaticMarkup(React.createElement(mod.exports[name], props));
 for (const study of def.studies) {
   const state = reduceSpecimen(def, initialSpecimen(def), specimenAction(def, study.id));
   const html = render('KneeSpecimenView', { specimen: def, initialNavigation: { state, view: study.view }, supplement: mod.exports.hraRenalSupplement });
   for (const text of ['Capsules', 'Pyramids', 'Papillae', 'Cortex &amp; columns', 'Practise identification', 'CC BY 4.0', '/models/hra-renal/NOTICE.md']) assert(html.includes(text), text);
+  if (study.id.startsWith('collecting-')) {
+    const sequence = collectingSequence(def, study.id);
+    assert(html.includes(`${sequence.side === 'left' ? 'Left' : 'Right'} collecting sequence · concept guide`));
+    assert.match(html, /<details class="um-knee-details"><summary>(Left|Right) collecting sequence/);
+    for (const stage of sequence.stages) {
+      assert(html.includes(`${stage.label} · ${stage.count} supplied source`));
+      for (const id of stage.ids) assert(html.includes(`<code>${id}</code>`));
+    }
+    assert(html.includes('outside this collecting-only view'));
+    assert(html.includes('do not establish an individual drainage path'));
+  } else assert(!html.includes('collecting sequence · concept guide'));
   assert.equal(context.sceneProps.catalog.sourceVersion, def.key);
   assert.deepEqual(context.sceneProps.hiddenIds, state.hidden);
   assert.equal(context.sceneProps.explode, 0); assert.equal(context.sceneProps.cameraBounds, null);
 }
+const kneeHtml = render('KneeSpecimenView', {});
+assert(!kneeHtml.includes('collecting sequence · concept guide'));
+const badRenderDefinition = JSON.parse(before);
+badRenderDefinition.source.version = 'unverified';
+const badRenderState = reduceSpecimen(badRenderDefinition, initialSpecimen(badRenderDefinition), specimenAction(badRenderDefinition, 'collecting-left'));
+const badRenderHtml = render('KneeSpecimenView', { specimen: badRenderDefinition, initialNavigation: { state: badRenderState, view: 'anterior' }, supplement: mod.exports.hraRenalSupplement });
+assert(!badRenderHtml.includes('collecting sequence · concept guide'));
 const html = render('SpecimenIdentification', { definition: def, initial: adapter.createRound(def, all, () => .5), visibleIds: all, initialView: 'anterior', onClose() {}, adapter });
 assert(html.includes('Answering is paused until the model is ready.'));
 assert.equal(context.sceneProps.labels, false); assert.equal(context.sceneProps.showOrigins, false); assert.equal(context.sceneProps.explode, 0);

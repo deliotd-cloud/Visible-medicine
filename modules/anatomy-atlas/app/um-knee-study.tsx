@@ -43,6 +43,7 @@ export type SpecimenSupplement = {
   sourceDetails: ReactNode;
   identification?: SpecimenPracticeAdapter;
   studyLink?: (definition: SpecimenDefinition, selectedId: string, studyId: string | null, view: DissectionView) => ReactNode;
+  studySupplement?: (definition: SpecimenDefinition, studyId: string | null) => ReactNode;
 };
 export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation, supplement, assetBase, studyLink }: { specimen?: SpecimenDefinition; initialNavigation?: Pick<ResolvedSpecimenNavigation, 'selectedId' | 'state' | 'structureOnly' | 'view' | 'topic'> & { focusSelection?: boolean }; supplement?: SpecimenSupplement; assetBase?: string; studyLink?: SpecimenSupplement['studyLink'] } = {}) {
   const kneeSpecimen = { structures: specimen.surfaces, source: specimen.source };
@@ -140,6 +141,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
         </SelectContent>
       </Select>
       <p className="um-knee-guide">{active?.note ?? 'Your custom tissue selection. Undo restores the previous dissection step.'}</p>
+      {supplement?.studySupplement?.(specimen, active?.id ?? null)}
       <div className="eye-layer-actions">
         <Button size="sm" variant="outline" disabled={!history.length} onClick={() => historyStep('undo')}><Undo2 />Undo</Button>
         <Button size="sm" variant="outline" disabled={!future.length} onClick={() => historyStep('redo')}><Redo2 />Redo</Button>

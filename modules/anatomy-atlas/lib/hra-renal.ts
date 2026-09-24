@@ -57,3 +57,26 @@ export const hraRenalMatches = (d: SpecimenDefinition) => canonical(d) === pin;
 export function hraRenalSurfaceMatches(d: SpecimenDefinition, s: SpecimenSurface) {
   return hraRenalMatches(d) && d.surfaces.some(candidate => canonical(candidate) === canonical(s));
 }
+
+const collectingConcepts = [
+  { concept: 'papilla', label: 'Papilla', count: { left: 11, right: 10 }, inView: false },
+  { concept: 'minor-calyx', label: 'Minor calyx', count: { left: 10, right: 10 }, inView: true },
+  { concept: 'major-calyx', label: 'Major calyx', count: { left: 4, right: 3 }, inView: true },
+  { concept: 'pelvis', label: 'Renal pelvis', count: { left: 1, right: 1 }, inView: true },
+  { concept: 'ureter', label: 'Ureter', count: { left: 1, right: 1 }, inView: false },
+] as const;
+
+// Concept order only. Source letters and positions do not define drainage connections.
+export function hraRenalCollectingSequence(definition: SpecimenDefinition, studyId: string | null) {
+  if (!hraRenalMatches(definition) || (studyId !== 'collecting-left' && studyId !== 'collecting-right')) return null;
+  const side = studyId === 'collecting-left' ? 'left' : 'right';
+  const study = definition.studies.find(item => item.id === studyId);
+  if (!study) return null;
+  const stages = collectingConcepts.map(({ concept, label, count, inView }) => {
+    const ids = raw.structures.filter(surface => surface.laterality === side && surface.concept === concept).map(surface => surface.id);
+    return { concept, label, count: ids.length, ids, inView };
+  });
+  if (stages.some((stage, index) => stage.count !== collectingConcepts[index].count[side]
+    || stage.ids.some(id => study.ids.includes(id) !== stage.inView))) return null;
+  return { side, stages };
+}
