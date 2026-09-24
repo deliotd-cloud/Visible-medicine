@@ -5,7 +5,9 @@ import nextTs from 'eslint-config-next/typescript';
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
-  globalIgnores(['.next/**', 'out/**', 'build/**', 'next-env.d.ts']),
+  // Atlas runtime bundles and local rollback copies are generated, hash-checked
+  // artifacts. Lint their authored sources instead of parsing minified output.
+  globalIgnores(['.next/**', 'out/**', 'build/**', 'next-env.d.ts', 'public/atlas-runtime/**', 'work/**']),
 ]);
 
 export default eslintConfig;

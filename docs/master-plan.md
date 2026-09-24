@@ -2,6 +2,8 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
+24 September modality-literacy integration: the generated shared regional/whole-body viewer is prepared from Atlas `0aac0fc6663741effea3a48963e1b931f6f5002a` with 11 thoracoabdominal X-ray and 15 spine ultrasound draft topics. All 135 model objects/142 paths and the other three contained viewers remain unchanged. [Source and validation limits](atlas-modality-literacy-20260924.md) distinguish local integration from private publication, clinical approval, real imaging and browser/device acceptance. All six first-release gates remain pending.
+
 23 September forearm venous MRI orientation: the generated shared regional/whole-body viewer now binds Atlas `c3bbeb492cd14cc0f01bc2a85e6303291aab5414` with four cephalic/basilic MRI drafts. All 135 model objects and 142 delivery paths, the other three viewer exports, protected administrator-review audience and independent entitlements are retained. CT for those four veins remains pending. [Source and validation limits](atlas-forearm-venous-20260923.md) distinguish generated integration from private publication, browser/device acceptance and revision-bound radiologist sign-off. All six release gates remain pending.
 
 ## 18 September — first-release milestone and named-space practice
