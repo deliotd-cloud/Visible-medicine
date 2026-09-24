@@ -16,6 +16,25 @@ const oldFocus = {
 };
 
 export function preCentralAirwayProfiles(profiles) {
+  // The pelvic focus is newer than this checkpoint. Reverse its exact two
+  // recipes and orientation copy for every caller of this historical helper.
+  if (hash(profiles) === '1a6c020cad6f3bb3e50f4e1d014a191273d9b66d3eaf6503211f0f2df3ba4c8f') {
+    const previous = structuredClone(profiles);
+    const focusId = 'pelvis-visceral-subset';
+    for (const region of ['pelvis', 'whole-body']) {
+      const added = previous[region].focuses.filter((focus) => focus.id === focusId);
+      assert.equal(added.length, 1, 'Exactly one pelvic-visceral focus per region');
+      assert.equal(hash(added[0]), '3e3c42c93458c5d88f7e3174aa6f1ee4715a8c487a63f69fe6dea70c1f9dab3e', 'Exact pelvic-visceral focus');
+      previous[region].focuses = previous[region].focuses.filter((focus) => focus.id !== focusId);
+    }
+    assert.equal(previous.pelvis.orientation,
+      'Posterior stages expose the gluteal layers. The muscle window is sparse; the separate pelvic-organ window and focused studies show selected supplied organs, not a complete pelvic-organ set.',
+      'Exact pelvic orientation update');
+    previous.pelvis.orientation =
+      'Posterior stages expose the gluteal layers. The organ window shows only the supplied bladder, not a complete pelvic-organ set.';
+    assert.equal(hash(previous), afterHash, 'Every earlier recipe retained');
+    profiles = previous;
+  }
   const matches = profiles.thorax.focuses
     .map((focus, index) => ({ focus, index }))
     .filter(({ focus }) => focus.id === oldFocus.id);

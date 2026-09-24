@@ -1,0 +1,11 @@
+# Male pelvic visceral subset — draft study
+
+The Pelvis and Whole body Dissect libraries now offer one focus that retains four separately selectable BodyParts3D 4.0 source surfaces: urinary bladder (`FMA15900`), prostate (`FMA9600`), rectum (`FMA14544`) and urethra (`FMA19667`). Their existing v4 positions, source identities and CC BY 4.0 attribution are retained. The study adds no mesh, interpolation, joined lumen, texture or dependency. Source hashes are bound in `app/dissection-data.ts` and checked by `scripts/validate-pelvic-visceral-study.mjs`.
+
+This is a selective **adult-male reference**, not a complete pelvis or a staged surgical dissection. The supplied surfaces do not establish organ-wall layers, sphincters, pelvic floor, fascial planes, attachment sites, continuous urethral lumen, functional flow or patient-specific relationships. The left view is a study camera preset, not proof of radiological orientation or a registered CT/MRI plane. Removing a surface and Undo change visibility only; 0% separation restores the source positions.
+
+The focus uses the existing collapsed Study picker and structure panel, with no permanent new control. Its source-bound preview states the limitations before opening. The exact prior dissection recipes are reconstructed by the guarded offline history helper; no recorded hash was rewritten.
+
+Verification at this source revision: the focused validator, full-body dissection, dissection workbench/history/guidance, source holds, source geometry, renderer, selection visibility and TypeScript passed. A local desktop browser sample showed four labels, exact Urethra selection, removal and Undo restoration. This does not validate anatomy, actual mobile or assistive-device behaviour. Revision-bound radiologist review must check identity, laterality, geometry and educational wording before any clinical/learner approval. No CT/MRI/X-ray/US alignment, scan, mask or lecture entitlement is included.
+
+The separate `content:test` suite still fails an older lower-arterial composite-history checksum after these changes. Its current-source/past-recipe comparison remains to be repaired without replacing the immutable pin or suppressing the failure; see the main task checkpoint for the exact result.

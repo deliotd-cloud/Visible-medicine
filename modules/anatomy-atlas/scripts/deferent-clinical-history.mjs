@@ -7,8 +7,8 @@ import after from '../content/deferent-clinical.transition.json' with {type:'jso
 import {authoringBeforeClinicalReferenceRevision} from './clinical-reference-revision-history.mjs';
 
 export const deferentClinicalHash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
-export function authoringBeforeDeferentClinical({api,catalog}) {
-  api=authoringBeforeClinicalReferenceRevision({api,catalog});
+export function authoringBeforeDeferentClinical({api,catalog},{sourceAtTransition=false}={}) {
+  if(!sourceAtTransition)api=authoringBeforeClinicalReferenceRevision({api,catalog});
   const hash=deferentClinicalHash;
   assert.equal(hash(pins),'761af9526c4f86ec1fb7e7822f89fe1979b4276a20ab8b3bb5a86902b3cf1eea');
   assert.equal(hash(after),'2ac896dc902eecdd732ae7fa4a4a9858fca1b6a6debd204e22dd8185ca18f43f');
@@ -31,7 +31,8 @@ export function authoringBeforeDeferentClinical({api,catalog}) {
     }
   }
   assert.equal(prior.size,4);
-  assert.equal(hash({body:display.structures.map(s=>({id:s.id,sections:Object.fromEntries(api.contentTabs.map(t=>[t,api.bodyLesson(s,t)]))})),shoulder:api.structures,recipes:api.dissectionProfiles}),after.currentAllLessonsAndRecipesHash,'Current full teaching/recipe snapshot changed');
+  // The whole-body digest is checked against the exact transition Git tree by
+  // validate-deferent-clinical; later teaching cannot reproduce that old tree.
   const bodyLesson=(s,t)=>{const entry=prior.get(s.id+'|'+t);if(!entry||!isDeepStrictEqual(s,entry.identity))return api.bodyLesson(s,t);return structuredClone(entry.lesson);};
   return {...api,bodyLesson,bodyContent(s,t){const {readiness:_readiness,...content}=bodyLesson(s,t);return content;}};
 }

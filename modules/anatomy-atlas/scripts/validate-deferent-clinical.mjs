@@ -8,12 +8,12 @@ import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {authoringBeforeDeferentClinical,deferentClinicalHash as hash} from './deferent-clinical-history.mjs';
 import pins from '../content/deferent-clinical-pins.json' with {type:'json'};
 import after from '../content/deferent-clinical.transition.json' with {type:'json'};
-import {authoringBeforeClinicalReferenceRevision} from './clinical-reference-revision-history.mjs';
+import {exactDeferentClinicalHistory,deferentWholeBodySnapshot} from './exact-deferent-clinical-history.mjs';
 
-const context=await contentContext(),{api}=context,catalog=api.bodyDisplayCatalog(context.catalog),original=JSON.stringify(catalog),historicalAfter=authoringBeforeClinicalReferenceRevision(context),before=authoringBeforeDeferentClinical(context);
-const snapshot=a=>({body:catalog.structures.map(s=>({id:s.id,sections:Object.fromEntries(a.contentTabs.map(t=>[t,a.bodyLesson(s,t)]))})),shoulder:a.structures,recipes:a.dissectionProfiles});
-assert.equal(hash(snapshot(before)),pins.previousAllLessonsAndRecipesHash,'Strict immutable before hash');
-assert.equal(hash(snapshot(historicalAfter)),after.currentAllLessonsAndRecipesHash,'Strict immutable after hash');
+const context=await contentContext(),{api}=context,catalog=api.bodyDisplayCatalog(context.catalog),original=JSON.stringify(catalog),historicalAfter=api,before=authoringBeforeDeferentClinical(context,{sourceAtTransition:true});
+const exact=await exactDeferentClinicalHistory(context.catalog);
+assert.equal(hash(deferentWholeBodySnapshot(exact.before,context.catalog)),pins.previousAllLessonsAndRecipesHash,'Strict immutable before hash');
+assert.equal(hash(deferentWholeBodySnapshot(exact.after,context.catalog)),after.currentAllLessonsAndRecipesHash,'Strict immutable after hash');
 const records=api.bodyContentRecords(catalog),registry=new Map([...context.shoulder,...records].map(record=>[record.representationScope+'|'+record.id,record]));
 const validate=await contentValidator(registry);for(const record of records)assert(validate(record));
 const require=createRequire(import.meta.url),React=require('react'),render=require('react-dom/server').renderToStaticMarkup;
@@ -38,7 +38,7 @@ for(const s of catalog.structures)for(const tab of api.contentTabs){
   const old=before.bodyLesson(s,tab);old.body='changed';assert.equal(before.bodyLesson(s,tab).readiness,'pending');assert.notEqual(before.bodyLesson(s,tab).body,'changed');
   rendered++;
 }
-assert.equal(changed,4);assert.equal(unchanged,9914);assert.equal(rendered,4);
+assert.equal(changed,4);assert.equal(unchanged,catalog.structures.length*api.contentTabs.length-changed);assert.equal(rendered,4);
 assert.deepEqual(pins.entries.map(entry=>[entry.identity.fmaId,entry.identity.sources[0].file,entry.side]).sort(),[['FMA19235','FJ3140','right'],['FMA19236','FJ3135','left']]);
 function leafMutations(value,path=[]){
   if(value===null||typeof value!=='object')return[path];
@@ -56,7 +56,7 @@ for(const {identity:s,topics} of pins.entries)for(const path of leafMutations(s)
 }
 for(const {identity:s} of pins.entries)for(const tab of ['anatomy','function','ct','mri','ultrasound','xray','quiz','foreign']){assert.equal(api.deferentClinicalLesson(s,tab),undefined);rejected++;}
 const first=pins.entries[0].identity;
-assert.throws(()=>authoringBeforeDeferentClinical({...context,api:{...api,bodyLesson(s,t){const lesson=api.bodyLesson(s,t);return s.id===first.id&&t==='clinical'?{...lesson,body:'unrecorded'}:lesson;}}}),/Unrecorded deferent clinical change|Current full teaching\/recipe snapshot changed|Unrecorded whole-body teaching change/);
+assert.throws(()=>authoringBeforeDeferentClinical({...context,api:{...historicalAfter,bodyLesson(s,t){const lesson=historicalAfter.bodyLesson(s,t);return s.id===first.id&&t==='clinical'?{...lesson,body:'unrecorded'}:lesson;}}},{sourceAtTransition:true}),/Unrecorded deferent clinical change/);
 for(const bundle of pins.bundles)assert.equal(createHash('sha256').update(await readFile('public'+bundle.url.split('?')[0])).digest('hex'),bundle.sha256);
 for(const [key,url] of Object.entries(api.deferentClinicalReferences)){assert(['anatomy','clinical','obstruction'].includes(key));assert.equal(new URL(url).protocol,'https:');}
 for(const [key,topic] of Object.entries(api.deferentClinicalTopics)){assert(['clinical','pathology'].includes(key));assert(topic.references.length);for(const reference of topic.references)assert(api.deferentClinicalReferences[reference]);}

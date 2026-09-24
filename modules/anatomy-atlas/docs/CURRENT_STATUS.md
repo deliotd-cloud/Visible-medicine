@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Male pelvic visceral subset](PELVIC_VISCERAL_STUDY.md) adds one compact Pelvis and Whole body focus using the four already supplied bladder, prostate, rectum and urethra surfaces. It preserves their source IDs/positions and existing controls, with no complete pelvic-floor, continuous-lumen, imaging-registration or clinical-approval claim. Focused source/dissection checks and a bounded desktop interaction pass; the separate older composite content-history digest remains open.
+
 [Central airway source study](CENTRAL_AIRWAY_STUDY.md) changes the Thorax focus from a broad name pattern to three exact source-bound trachea and main-bronchus identities. Both-side and side-filtered focus behaviour, missing/changed/duplicate source rejection, and prior-recipe preservation are checked. The separate airway window, source geometry and clinical status are unchanged; this is not lumen, carinal/lobar-tree or patient registration evidence. Website publication is tracked separately.
 
 [Lacrimal drainage CT/MRI orientation](LACRIMAL_DRAINAGE_IMAGING.md) adds 12 source-pinned draft placements for six existing paired canaliculus, sac and nasolacrimal-duct selections. Ultrasound and X-ray remain pending. The focused transition check preserves 9,924 other teaching slots and unchanged source geometry. No routine-scan lumen, patency, patient registration, clinical approval or imported image is claimed. Broader historical curriculum replay remains a separate failing baseline and is not waived.

@@ -689,7 +689,7 @@ export const dissectionProfiles: Record<string, DissectionProfile> = {
   pelvis: {
     title: 'Pelvic & gluteal exposure',
     orientation:
-      'Posterior stages expose the gluteal layers. The organ window shows only the supplied bladder, not a complete pelvic-organ set.',
+      'Posterior stages expose the gluteal layers. The muscle window is sparse; the separate pelvic-organ window and focused studies show selected supplied organs, not a complete pelvic-organ set.',
     limitations: [
       'Levator-ani candidates are held for source adjudication; pelvic fascia and pelvic plexuses remain absent. The limited male reproductive subset includes prostate, testes, epididymides and seminal vesicles.',
       'Coccygeus and the source-labelled superficial perineal muscle do not constitute a complete pelvic floor.',
@@ -1381,6 +1381,27 @@ for (const region of limbicLandmarkStudy.regions) {
 
 for (const region of ['pelvis', 'whole-body'])
   dissectionProfiles[region].focuses.push(pelvicUrethralFocus);
+
+// Exact BodyParts3D v4 source surfaces; this is a selective male-pelvis
+// visibility recipe, not a new segmentation or a surgical depth step.
+const pelvicVisceralFocus: DissectionFocus = {
+  id: 'pelvis-visceral-subset',
+  title: 'Male pelvis: bladder, prostate, rectum & urethra',
+  rule: { fmaIds: ['FMA15900', 'FMA9600', 'FMA14544', 'FMA19667'] },
+  includeSkeleton: false,
+  view: 'left',
+  description: 'Compare the four supplied male-pelvis organ surfaces in their source positions. This focus is a selected subset, not a complete pelvic-organ or pelvic-floor model.',
+  inspect: 'Select a structure to inspect its source label. Remove an obscuring structure and use Undo to restore it; return separation to 0% for the source positions. Co-display does not establish organ-wall layers, sphincters, an enclosed or continuous lumen, attachments, or a complete pelvic floor. This male-only source subset remains a draft awaiting revision-bound radiologist review.',
+  landmarks: ['urinary bladder$', 'prostate$', 'rectum$', 'urethra$'],
+  requiredSourceBindings: [
+    { id: 'vm:anatomy:body:pelvis:unpaired:organ:urinary-bladder', fmaId: 'FMA15900', laterality: 'unpaired', bundle: 'pelvis-organs', nodeName: 'FMA15900', sources: [{ file: 'FJ3149', sha256: 'b49f40d01bf28550094a7d17901e33e7066039f3a0fb8cf44d79fff2472f9926' }] },
+    { id: 'vm:anatomy:body:pelvis:unpaired:organ:prostate', fmaId: 'FMA9600', laterality: 'unpaired', bundle: 'pelvis-organs-recovery', nodeName: 'FMA9600', sources: [{ file: 'FJ3139', sha256: 'f20448e74cf6b6096248361bc4f618c1d7f4c1acac77f785abc43e40835b13cb' }] },
+    { id: 'vm:anatomy:body:pelvis:unpaired:organ:rectum', fmaId: 'FMA14544', laterality: 'unpaired', bundle: 'pelvis-organs-recovery', nodeName: 'FMA14544', sources: [{ file: 'FJ2571', sha256: 'aaedd56539179e2091b3217d11fd42c298ed01a971463725f6c32372289c6819' }] },
+    { id: 'vm:anatomy:body:pelvis:unpaired:organ:urethra', fmaId: 'FMA19667', laterality: 'unpaired', bundle: 'pelvis-organs-gaps', nodeName: 'FMA19667', sources: [{ file: 'FJ3148', sha256: '987ce1b01511f6ea323ba5a7a7438ba3df72d0cdc853985e08ca2965feb63c93' }] },
+  ],
+};
+for (const region of ['pelvis', 'whole-body'])
+  dissectionProfiles[region].focuses.push(pelvicVisceralFocus);
 
 for (const study of cubitalStudies) {
   dissectionProfiles['whole-body'].focuses.push({
