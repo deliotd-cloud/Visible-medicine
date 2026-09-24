@@ -1,5 +1,15 @@
 # Visible Medicine — shared delivery plan
 
+24 September dense-Tray viewer integration: the shared regional/whole-body
+runtime now binds Atlas `79fe6f3785721160c7af7aeb8951b5cbd71c395b`.
+An explicitly framed, available selection remains framed when entering the
+same-scale Tray; a conditional control switches between that close-up and the
+full tray without hiding entries. A local 1280 × 720 pointer sample exercised
+the head-and-neck path; it was not a real-device/accessibility or clinical
+acceptance pass. The exact transition preserves 135 model hashes, 142 paths,
+all 12 scopes, and zero new model bytes. The broad historical organ-copy
+validator debt remains separate. All six first-release gates remain pending.
+
 24 September source-only Liver display-note integration: the generated shared
 regional/whole-body runtime now binds Atlas `5c0c77d2ef9e02ba5c2b316f3bf2781f951a603b`.
 The abdomen Liver panel combines repeated source-coordinate caveats into one

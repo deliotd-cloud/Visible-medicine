@@ -7,8 +7,8 @@ test('regional export includes the exact laryngeal drafts and preserves clinical
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json'),manifest=JSON.parse(bytes.toString());
-  assert.equal(sha(bytes),'1cf10a1ede317f995ee2913a2f36e8daca21250d044f9c81177e16d8f2fb8b8b');
-  assert.equal(manifest.sourceCommit,'5c0c77d2ef9e02ba5c2b316f3bf2781f951a603b');
+  assert.equal(sha(bytes),'4410c5208d2c1773f39986504b77347601d3165a8c10384d6ad882fd00ebb7be');
+  assert.equal(manifest.sourceCommit,'79fe6f3785721160c7af7aeb8951b5cbd71c395b');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,expected] of Object.entries({

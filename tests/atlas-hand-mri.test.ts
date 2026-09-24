@@ -7,9 +7,9 @@ test('regional export binds the reviewed hand studies and MRI drafts without rep
   const base='public/atlas-runtime/head-neck/';
   const bytes=readFileSync(base+'manifest.json');
   const sha=(b: string|Buffer)=>createHash('sha256').update(b).digest('hex');
-  assert.equal(sha(bytes),'1cf10a1ede317f995ee2913a2f36e8daca21250d044f9c81177e16d8f2fb8b8b');
+  assert.equal(sha(bytes),'4410c5208d2c1773f39986504b77347601d3165a8c10384d6ad882fd00ebb7be');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'5c0c77d2ef9e02ba5c2b316f3bf2781f951a603b');
+  assert.equal(manifest.sourceCommit,'79fe6f3785721160c7af7aeb8951b5cbd71c395b');
   assert.equal(manifest.patientDataIncluded,false);assert.equal(manifest.clinicalApproved,false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,hash] of Object.entries({
@@ -17,7 +17,7 @@ test('regional export binds the reviewed hand studies and MRI drafts without rep
     'lib/hand-intrinsic-studies.ts':'5cc77244b513326f9c219e1f26b9d5401d9128f77cd9f8e6433cca01b04dc76b',
     'content/distal-palmar-mri.ts':'174ad897535a6fbf3f56f66ce4781198bb26b19395cb70bbcad47acb209a8885',
     'content/shoulder-arterial-mri.ts':'e9ea55d29364250ae5aab7bcc77f6dec9a80de3cc26b2f3ceb085a3fd4e90d16',
-    'app/body-explorer.tsx':'54c6bf0d949ddf927f5f3744c9e471893a5ac93eb8ad76b32f28ff5385bcfc34',
+    'app/body-explorer.tsx':'592e34b5b88dd53099bc12c61b36893bd51e0be8401601805eb01e4c7d8486bf',
   }))assert.equal(inputs.find(f=>f.path===path)?.sha256,hash);
   const scripts=manifest.files.filter((f:{path:string})=>f.path.endsWith('.js')) as {path:string;sha256:string}[];
   const runtime=scripts.map(f=>{const b=readFileSync(base+f.path);assert.equal(sha(b),f.sha256);return b.toString();}).join('\n');
