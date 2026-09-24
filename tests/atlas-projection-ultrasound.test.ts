@@ -28,7 +28,7 @@ const ultrasoundIds=[
 
 test('regional runtime carries 11 exact thoracoabdominal X-ray and 15 spine ultrasound drafts',()=>{
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-  assert.equal(manifest.sourceCommit,'0aac0fc6663741effea3a48963e1b931f6f5002a');
+  assert.equal(manifest.sourceCommit,'d47c45757fda1bf2f5726bf32ce4660b4175e447');
   assert.equal(new Set(xrayIds).size,11);
   assert.equal(new Set(ultrasoundIds).size,15);
   const regionalIds=new Set((manifest.regionalScopes as {regionalIds:string[]}[]).flatMap(scope=>scope.regionalIds));
@@ -37,7 +37,7 @@ test('regional runtime carries 11 exact thoracoabdominal X-ray and 15 spine ultr
   // These are the exact source pins, lessons and resolvers used by the generated runtime.
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,expected] of Object.entries({
-    'content/thoracoabdominal-organ-imaging.ts':'a4a06ff48a418cf79cb7c1ef232422b363a0568902a19dbe93f539704cbd7923',
+    'content/thoracoabdominal-organ-imaging.ts':'dac7b927e8a04344886c3f2e7e139d7286d7e910258ac9a60d741f8b6b1ca184',
     'content/thoracoabdominal-organ-imaging-pins.json':'e8c92ef7101f083c10c75c0b109c5bcd58197fe5a307ffd8203fcfee8d66a129',
     'lib/thoracoabdominal-organ-imaging.ts':'c503474a75696b55f6bf6bd13bb01b85a60b79c1bc63e0740eb522d81966f720',
     'content/spine-imaging-concepts.ts':'c38defc6224bfa043651d3f338bc9dc389e2e6b700a8f8f95ec719af01258855',
@@ -57,6 +57,35 @@ test('regional runtime carries 11 exact thoracoabdominal X-ray and 15 spine ultr
     'X-ray teaching pending','Ultrasound content pending',
   ])assert.ok(runtime.includes(phrase),phrase);
   for(const id of [...xrayIds,...ultrasoundIds])assert.ok(runtime.includes(id),id);
+});
+
+test('exact right and left main bronchus selections carry external ultrasound draft limits',()=>{
+  const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
+  assert.equal(manifest.sourceCommit,'d47c45757fda1bf2f5726bf32ce4660b4175e447');
+  const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
+  assert.equal(inputs.find(input=>input.path==='content/thoracoabdominal-organ-imaging.ts')?.sha256,
+    'dac7b927e8a04344886c3f2e7e139d7286d7e910258ac9a60d741f8b6b1ca184');
+  const runtime=(manifest.files as {path:string;sha256:string}[])
+    .filter(file=>file.path.endsWith('.js'))
+    .map(file=>{const bytes=readFileSync(base+file.path);assert.equal(sha(bytes),file.sha256,file.path);return bytes.toString();})
+    .join('\n');
+  const rightStart=runtime.indexOf('"right-main-bronchus":{fmaId:`FMA7395`');
+  const leftStart=runtime.indexOf('"left-main-bronchus":{fmaId:`FMA7396`',rightStart);
+  const nextStart=runtime.indexOf('stomach:{fmaId:',leftStart);
+  assert.ok(rightStart>=0 && leftStart>rightStart && nextStart>leftStart,'exact bronchus source bindings');
+  const right=runtime.slice(rightStart,leftStart),left=runtime.slice(leftStart,nextStart);
+  assert.ok(right.includes('For external transthoracic ultrasound, orient to the right pleural interface'), 'right external ultrasound note');
+  assert.ok(right.includes('Pleural artefacts are not direct views of the bronchial lumen.'), 'right lumen limit');
+  assert.ok(right.includes('this lesson does not cover endobronchial or endoscopic ultrasound.'), 'right procedure exclusion');
+  assert.ok(left.includes('For external transthoracic ultrasound, use the left pleural interface'), 'left external ultrasound note');
+  assert.ok(left.includes('Pleural artefacts do not directly image the bronchial lumen.'), 'left lumen limit');
+  assert.ok(left.includes('endobronchial and endoscopic ultrasound are outside this lesson.'), 'left procedure exclusion');
+  for(const note of [right,left]){
+    assert.doesNotMatch(note,/ultrasound (?:confirms|establishes|demonstrates) (?:bronchial )?patency/i);
+    assert.doesNotMatch(note,/endobronchial ultrasound (?:shows|guides|diagnoses)/i);
+  }
+  for(const flag of ['clinicalApproved','patientDataIncluded','imagingConnection','standaloneReviewConnection'])
+    assert.equal(manifest[flag],false,flag);
 });
 
 test('draft export keeps clinical, access and model boundaries',()=>{

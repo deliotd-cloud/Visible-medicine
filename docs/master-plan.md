@@ -2,13 +2,24 @@
 
 Last consolidated: 12 September 2026. This is the shared roadmap and decision log for the website and anatomy atlas, not a replacement for specialist evidence or complete chat transcripts.
 
-24 September source-only assurance follow-up: the website's authored-code lint debt
+24 September latest source-only integration: the generated shared regional and
+whole-body runtime now binds Atlas `d47c45757fda1bf2f5726bf32ce4660b4175e447`.
+Two exact-source main-bronchus external-ultrasound limitation drafts are added;
+the 134 regional model entries retain identical paths, sizes and hashes, and the
+site's four-module inventory remains 135 objects / 142 protected paths. See
+[scope and verification limits](atlas-main-bronchus-ultrasound-20260924.md).
+The currently published private Sites version 105 remains source `caa5744` and
+does not include this integration until a separate publication succeeds. All
+six first-release gates and radiologist sign-off remain pending.
+
+24 September earlier assurance follow-up: the website's authored-code lint debt
 was repaired without changing Atlas exports, models, clinical content or access
 rules. Static modality previews use the existing Image component in unoptimized
 mode, preserving direct asset delivery without new image transformations. Full
-tests, typecheck, lint and build pass. This source revision is not the current
-private Sites version 104 until independently packaged and published; a local
-browser preview was unavailable, so no visual acceptance is inferred.
+tests, typecheck, lint and build passed at source `caa5744`; it was subsequently
+published as private Sites version 105. A local browser preview was unavailable;
+the bounded live DOM/loading sample is recorded in the main task checkpoint,
+not as visual or clinical acceptance.
 
 24 September modality-literacy integration: the generated shared regional/whole-body viewer is prepared from Atlas `0aac0fc6663741effea3a48963e1b931f6f5002a` with 11 thoracoabdominal X-ray and 15 spine ultrasound draft topics. All 135 model objects/142 paths and the other three contained viewers remain unchanged. [Source and validation limits](atlas-modality-literacy-20260924.md) distinguish local integration from private publication, clinical approval, real imaging and browser/device acceptance. All six first-release gates remain pending.
 
