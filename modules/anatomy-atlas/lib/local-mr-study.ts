@@ -23,6 +23,86 @@ const vector = (v: unknown): v is Vec3 =>
 const dot = (a: Vec3, b: Vec3) => a.reduce((sum, v, i) => sum + v * b[i], 0);
 const sha = (v: unknown) => typeof v === 'string' && /^[a-f0-9]{64}$/.test(v);
 
+// JSON.parse keeps the last duplicate member. Check decoded names in every
+// object first, so escaped spellings cannot override a privacy or hash claim.
+const parseUniqueHeader = (json: string) => {
+  let cursor = 0;
+  const whitespace = () => {
+    while (/^[\t\n\r ]$/.test(json[cursor] ?? '')) cursor++;
+  };
+  const string = (): string => {
+    if (json[cursor] !== '"') fail();
+    const start = cursor++;
+    while (cursor < json.length) {
+      const char = json[cursor++];
+      if (char === '"') return JSON.parse(json.slice(start, cursor));
+      if (char === '\\') cursor++; // Skip the escaped character, including a quote.
+    }
+    return fail();
+  };
+  const numberToken = /-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?/y;
+  const value = (depth: number): void => {
+    if (depth > 128) fail();
+    whitespace();
+    if (json[cursor] === '{') {
+      cursor++;
+      whitespace();
+      const names = new Set<string>();
+      if (json[cursor] === '}') {
+        cursor++;
+        return;
+      }
+      while (true) {
+        whitespace();
+        const name = string();
+        if (names.has(name))
+          throw new Error('Duplicate private MRI JSON header property');
+        names.add(name);
+        whitespace();
+        if (json[cursor++] !== ':') fail();
+        value(depth + 1);
+        whitespace();
+        const end = json[cursor++];
+        if (end === '}') return;
+        if (end !== ',') fail();
+      }
+    }
+    if (json[cursor] === '[') {
+      cursor++;
+      whitespace();
+      if (json[cursor] === ']') {
+        cursor++;
+        return;
+      }
+      while (true) {
+        value(depth + 1);
+        whitespace();
+        const end = json[cursor++];
+        if (end === ']') return;
+        if (end !== ',') fail();
+      }
+    }
+    if (json[cursor] === '"') {
+      string();
+      return;
+    }
+    for (const literal of ['true', 'false', 'null']) {
+      if (json.startsWith(literal, cursor)) {
+        cursor += literal.length;
+        return;
+      }
+    }
+    numberToken.lastIndex = cursor;
+    const number = numberToken.exec(json);
+    if (!number) return fail();
+    cursor = numberToken.lastIndex;
+  };
+  value(0);
+  whitespace();
+  if (cursor !== json.length) fail();
+  return JSON.parse(json);
+};
+
 /** Separate from CT admission. No registration, reslicing, persistence or network. */
 export async function readNativeMr(
   buffer: ArrayBuffer,
@@ -51,7 +131,7 @@ export async function readNativeMr(
   // The preparer writes zero alignment bytes. Reject unclaimed payload outside
   // the JSON header and hashed scalar body, even though this gap is at most 7 B.
   if (bytes.subarray(16 + headerSize, start).some((byte) => byte !== 0)) fail();
-  const h = JSON.parse(
+  const h = parseUniqueHeader(
     new TextDecoder('utf-8', { fatal: true }).decode(
       bytes.subarray(16, 16 + headerSize),
     ),

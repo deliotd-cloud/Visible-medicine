@@ -38,6 +38,21 @@ Coordinate basis: [DICOM PS3.3 Image Plane Module](https://dicom.nema.org/medica
 
 ## Verification and remaining acceptance
 
+### Duplicate JSON-header key boundary, 24 September 2026
+
+Before interpreting a `.vmmr` header, the local parser now scans JSON object
+members at every depth and rejects repeated decoded property names, including
+equivalent `\u`-escaped spellings. It then retains `JSON.parse` for complete
+JSON syntax validation and the existing exact schema/geometry/hash checks.
+This prevents last-key-wins conflicts in privacy, geometry or fingerprint
+claims without adding any accepted field or changing valid preparer output.
+Synthetic checks cover top-level and nested duplicates, escaped equivalents,
+malformed input, and a valid JSON string containing property-looking text;
+the latter remains rejected by the unchanged unknown-field rule when used as
+an extra header field. The native-MRI validator passed 132 checks with no
+private packet. This is format-boundary hardening, not provenance,
+de-identification, clinical approval or registration.
+
 ### Packet-boundary and live-readout follow-up, 24 September 2026
 
 The local parser now rejects any non-zero alignment byte between the JSON

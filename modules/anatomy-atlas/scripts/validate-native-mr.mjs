@@ -146,6 +146,10 @@ const fails = async (fn) => {
   checks++;
   await assert.rejects(fn);
 };
+const failsDuplicate = async (fn) => {
+  checks++;
+  await assert.rejects(fn, /Duplicate private MRI JSON header property/);
+};
 const ab = (b) => b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength);
 function fixture() {
   return {
@@ -195,6 +199,19 @@ const packet = encode(),
 const packetBytes = new Uint8Array(packet);
 const headerEnd = 16 + new DataView(packet).getUint32(8, true);
 const bodyStart = Math.ceil(headerEnd / 8) * 8;
+const rawHeader = Buffer.from(packetBytes.subarray(16, headerEnd)).toString('utf8');
+function withRawHeader(headerText) {
+  const header = Buffer.from(headerText, 'utf8');
+  const body = packetBytes.subarray(bodyStart);
+  const start = Math.ceil((16 + header.length) / 8) * 8;
+  const bytes = Buffer.alloc(start + body.length);
+  bytes.write('VMMR0001');
+  bytes.writeUInt32LE(header.length, 8);
+  bytes.writeUInt32LE(body.length, 12);
+  header.copy(bytes, 16);
+  Buffer.from(body).copy(bytes, start);
+  return ab(bytes);
+}
 check(bodyStart > headerEnd);
 check(packetBytes.subarray(headerEnd, bodyStart).every((byte) => byte === 0));
 for (const index of new Set([headerEnd, bodyStart - 1])) {
@@ -206,6 +223,37 @@ for (const index of new Set([headerEnd, bodyStart - 1])) {
   );
   await fails(() => api.readNativeMr(hiddenPayload));
 }
+// JSON.parse alone silently accepts these last-key-wins conflicts. The scan
+// rejects decoded duplicate names at any depth before schema interpretation.
+await failsDuplicate(() => api.readNativeMr(withRawHeader(
+  rawHeader.replace('"privacyCertified":false', '"privacyCertified":true,"privacyCertified":false'),
+)));
+await failsDuplicate(() => api.readNativeMr(withRawHeader(
+  rawHeader.replace('"dimensions":[4,3,3]', '"dimensions":[5,3,3],"dimensions":[4,3,3]'),
+)));
+await failsDuplicate(() => api.readNativeMr(withRawHeader(
+  rawHeader.replace('"bodySha256":', '"bodySha256":"' + '0'.repeat(64) + '","bodySha256":'),
+)));
+await failsDuplicate(() => api.readNativeMr(withRawHeader(
+  rawHeader.replace('"privacyCertified":false', '"privacy\\u0043ertified":true,"privacyCertified":false'),
+)));
+await failsDuplicate(() => api.readNativeMr(withRawHeader(
+  rawHeader.replace('"window":[0,35]', '"window":{"low":0,"low":1}'),
+)));
+await failsDuplicate(() => api.readNativeMr(withRawHeader(
+  rawHeader.replace('"positions":[[50,40,30]', '"positions":[{"x":50,"\\u0078":51},[50,40,30]'),
+)));
+// A key-looking sequence inside a valid JSON string is data, not a property.
+// The enclosing unknown field still fails the unchanged packet schema gate.
+await assert.rejects(() => api.readNativeMr(withRawHeader(
+  rawHeader.slice(0, -1) + ',"note":' + JSON.stringify('{"privacyCertified":true,"privacyCertified":false}') + '}',
+)), /Invalid or unsupported private MRI packet/);
+checks++;
+for (const malformed of [
+  rawHeader.replace('"modality":"MR"', '"modality":"M\\xR"'),
+  rawHeader.replace('"modality":"MR"', '"modality":"MR'),
+  rawHeader.replace('"modality":"MR",', '"modality":"MR",,'),
+]) await fails(() => api.readNativeMr(withRawHeader(malformed)));
 same(study.dimensions, [4, 3, 3]);
 same(api.nativeMrPoint(study, 1, 2, 1), { lps: [46, 43, 33.6], signal: 21 });
 same(api.nativeMrEdges(study), ['A', 'P', 'L', 'R']);
