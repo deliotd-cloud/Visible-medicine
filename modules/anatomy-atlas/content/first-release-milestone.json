@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "milestone": "Focused first release",
   "scope": {
     "included": "A whole-body overview using the existing regions, with a detailed, reliable and reviewed subset for the first release.",
@@ -14,9 +14,38 @@
     "note": "Historical baseline only; it is not evidence that a release candidate is approved."
   },
   "candidate": {
-    "atlasRevision": "26b7c097278b8789b84bf9f540a0f26d6161173e",
-    "websiteRevision": "b4514b336868b7cedca25f33b61ed428355c4726",
-    "note": "Starting review baseline for gate evaluation, not a frozen shipping candidate; matching revisions do not by themselves establish approval and all gates remain pending."
+    "atlasRevision": "d47c45757fda1bf2f5726bf32ce4660b4175e447",
+    "websiteRevision": "dd11143e689051f58f8fc6a1df53a781940a46f4",
+    "delivery": {
+      "website": {
+        "sourceRevision": "dd11143e689051f58f8fc6a1df53a781940a46f4",
+        "deployedRevision": "dd11143e689051f58f8fc6a1df53a781940a46f4",
+        "versionNumber": 106,
+        "versionId": "appgprj_6a8b1e2c3d348191be844899e57ccbc6~appgver_a10994754b988191bbf08ce1865d45d9",
+        "deploymentId": "appgdep_6ab47af63fdc819193296cac22bbe5da",
+        "status": "succeeded",
+        "audience": "owner-only",
+        "evidence": [
+          "D:\\VisibleMedicine-Atlas-Recovery\\website-bronchus-us-20260924.publication.json"
+        ]
+      },
+      "sharedViewer": {
+        "atlasRevision": "d47c45757fda1bf2f5726bf32ce4660b4175e447",
+        "manifestSha256": "74bfb4acce3481e39368ec025a2042cd2dfe7ed2eb294bde29364c38fd97d65c",
+        "inventorySha256": "002859db72da5cabfa0ad56b2cd0df37a513492c8cdf990b558702f5a6a074f0",
+        "modelCount": 135,
+        "pathCount": 142
+      },
+      "validation": {
+        "atlasRevision": "d47c45757fda1bf2f5726bf32ce4660b4175e447",
+        "status": "source-checked-only"
+      },
+      "clinicalApproval": {
+        "status": "none-recorded",
+        "records": []
+      }
+    },
+    "note": "Current privately deployed review candidate, not a frozen learner release. The shared viewer and validation-only Atlas source are distinguished even though both currently bind the same revision. All six gates and clinical sign-off remain pending."
   },
   "releaseAuthority": {
     "status": "external-verification-required",

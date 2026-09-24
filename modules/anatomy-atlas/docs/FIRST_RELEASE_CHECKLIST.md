@@ -93,3 +93,14 @@ approval store. `node scripts/release-readiness.mjs` reports it without writes.
 pending or its documented evidence does not match the candidate. Even a complete
 record requires authoritative clinical/access/release evidence to be checked by
 the responsible people; the checker does not authenticate reviewers or grant access.
+
+The schema-v2 candidate records separately the exact website source/deployed
+revision and private Sites version, the Atlas revision embedded in the shared
+viewer export, and the Atlas revision used for source validation. It also pins
+the viewer manifest and protected-model inventory fingerprints and states whether
+any revision-bound clinical approval has actually been recorded. These are
+cross-checkable identifiers, not proof that the source was clinically reviewed,
+the deployment was independently audited, or a real device passed the matrix.
+The earlier baseline remains in `historicalBaseline`; it is not the current
+candidate. A source or deployment change requires a new candidate binding and
+new evidence for every gate that depends on the changed bytes.

@@ -8,11 +8,41 @@ import { evaluateReleaseReadiness, REQUIRED_GATE_IDS, runReleaseReadiness } from
 
 const A = "a".repeat(40);
 const W = "b".repeat(40);
+const HASH = "c".repeat(64);
+
+function clinicalRecord() {
+  return {
+    atlasRevision: A,
+    websiteRevision: W,
+    reviewer: "Named radiologist",
+    timestamp: "2026-09-18T12:00:00Z",
+    scope: "Reviewed first-release subset",
+    evidence: ["evidence/clinical-review.json"],
+  };
+}
 
 function manifest(status = "pending") {
   return {
-    schemaVersion: 1,
-    candidate: { atlasRevision: A, websiteRevision: W },
+    schemaVersion: 2,
+    candidate: {
+      atlasRevision: A,
+      websiteRevision: W,
+      delivery: {
+        website: {
+          sourceRevision: W,
+          deployedRevision: W,
+          versionNumber: 106,
+          versionId: "appgver_106",
+          deploymentId: "appgdep_106",
+          status: "succeeded",
+          audience: "owner-only",
+          evidence: ["evidence/website-deployment.json"],
+        },
+        sharedViewer: { atlasRevision: A, manifestSha256: HASH, inventorySha256: HASH, modelCount: 135, pathCount: 142 },
+        validation: { atlasRevision: A, status: "source-checked-only" },
+        clinicalApproval: { status: "none-recorded", records: [] },
+      },
+    },
     releaseAuthority: { status: "external-verification-required" },
     gates: REQUIRED_GATE_IDS.map((id) => ({
       id,
@@ -60,11 +90,11 @@ test("rejects missing, duplicate and unexpected gates", () => {
 
 test("rejects malformed candidate revisions and unknown states", () => {
   const fixture = manifest();
-  fixture.schemaVersion = 2;
+  fixture.schemaVersion = 1;
   fixture.candidate.atlasRevision = "26b7c097";
   fixture.gates[0].status = "approved";
   const errors = evaluateReleaseReadiness(fixture).errors.join("\n");
-  assert.match(errors, /schemaVersion must be 1/);
+  assert.match(errors, /schemaVersion must be 2/);
   assert.match(errors, /exact 40-character hexadecimal revision/);
   assert.match(errors, /unknown status: approved/);
 });
@@ -89,12 +119,13 @@ test("pass requires evidence, reviewer and timestamp", () => {
   assert.match(errors, /scope pass requires at least one evidence reference/);
   assert.match(errors, /viewer pass requires a named reviewer/);
   assert.match(errors, /teaching pass requires an ISO UTC timestamp/);
-  assert.match(errors, /imaging evidence\[0\] must be a syntactically valid, non-placeholder reference/);
+  assert.match(errors, /imaging pass evidence\[0\] must be a syntactically valid, non-placeholder reference/);
   assert.match(errors, /access pass requires an ISO UTC timestamp/);
 });
 
 test("a fully documented fixture is ready but retains external authority boundary", async () => {
   const fixture = manifest("pass");
+  fixture.candidate.delivery.clinicalApproval = { status: "revision-bound-recorded", records: [clinicalRecord()] };
   const result = evaluateReleaseReadiness(fixture);
   assert.equal(result.valid, true);
   assert.equal(result.ready, true);
@@ -108,6 +139,73 @@ test("a fully documented fixture is ready but retains external authority boundar
   } finally {
     await rm(cwd, { recursive: true, force: true });
   }
+});
+
+test("all six pass attestations remain unready without clinical approval", () => {
+  const result = evaluateReleaseReadiness(manifest("pass"));
+  assert.equal(result.valid, true);
+  assert.equal(result.ready, false);
+});
+
+test("rejects missing delivery and mismatched deployed or Atlas revisions", () => {
+  const missing = manifest();
+  delete missing.candidate.delivery;
+  assert.match(evaluateReleaseReadiness(missing).errors.join("\n"), /candidate.delivery must be an object/);
+
+  const fixture = manifest();
+  fixture.candidate.delivery.website.sourceRevision = "d".repeat(40);
+  fixture.candidate.delivery.website.deployedRevision = "d".repeat(40);
+  fixture.candidate.delivery.sharedViewer.atlasRevision = "d".repeat(40);
+  fixture.candidate.delivery.validation.atlasRevision = "d".repeat(40);
+  const errors = evaluateReleaseReadiness(fixture).errors.join("\n");
+  assert.match(errors, /website.sourceRevision does not match/);
+  assert.match(errors, /website.deployedRevision does not match/);
+  assert.match(errors, /sharedViewer.atlasRevision does not match/);
+  assert.match(errors, /validation.atlasRevision does not match/);
+});
+
+test("rejects malformed delivery identifiers, inventory and status", () => {
+  const fixture = manifest();
+  const { website, sharedViewer, validation } = fixture.candidate.delivery;
+  website.versionNumber = 0;
+  website.versionId = "TBD";
+  website.deploymentId = "";
+  website.status = "queued";
+  website.audience = "public";
+  website.evidence = ["TODO evidence"];
+  sharedViewer.manifestSha256 = "short";
+  sharedViewer.inventorySha256 = "z".repeat(64);
+  sharedViewer.modelCount = 0;
+  sharedViewer.pathCount = 1.5;
+  validation.status = "clinically-approved";
+  const errors = evaluateReleaseReadiness(fixture).errors.join("\n");
+  for (const field of ["versionNumber", "versionId", "deploymentId", "website.status", "website.audience", "website evidence[0]", "manifestSha256", "inventorySha256", "modelCount", "pathCount", "validation.status"]) {
+    assert.ok(errors.includes(field), `expected error for ${field}: ${errors}`);
+  }
+});
+
+test("rejects false or stale clinical approval claims", () => {
+  const emptyClaim = manifest();
+  emptyClaim.candidate.delivery.clinicalApproval.status = "revision-bound-recorded";
+  assert.match(evaluateReleaseReadiness(emptyClaim).errors.join("\n"), /requires at least one record/);
+
+  const fixture = manifest("pass");
+  fixture.candidate.delivery.clinicalApproval = { status: "revision-bound-recorded", records: [clinicalRecord()] };
+  const record = fixture.candidate.delivery.clinicalApproval.records[0];
+  record.atlasRevision = "d".repeat(40);
+  record.websiteRevision = "e".repeat(40);
+  record.reviewer = "TODO";
+  record.timestamp = "yesterday";
+  record.scope = "pending";
+  record.evidence = ["placeholder"];
+  const errors = evaluateReleaseReadiness(fixture).errors.join("\n");
+  for (const field of ["atlasRevision does not match", "websiteRevision does not match", "reviewer must be named", "timestamp must be an ISO UTC timestamp", "scope must be concrete", "evidence[0]"]) {
+    assert.ok(errors.includes(field), `expected error for ${field}: ${errors}`);
+  }
+
+  const contradictory = manifest();
+  contradictory.candidate.delivery.clinicalApproval.records = [clinicalRecord()];
+  assert.match(evaluateReleaseReadiness(contradictory).errors.join("\n"), /none-recorded requires empty records/);
 });
 
 function runCli(args, cwd) {
