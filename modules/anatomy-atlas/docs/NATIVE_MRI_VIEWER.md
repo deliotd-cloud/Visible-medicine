@@ -12,6 +12,7 @@ The native image occupies the main working area with a slice slider and Previous
 - Actual native origins determine coordinates; the UI distinguishes centre spacing, nominal slice thickness, acquisition gaps and nominal overlap. There is no interpolation across acquisitions and no MPR reconstruction or 3D tissue claim.
 - Closing clears the loaded React state; cancelling, closing or replacing an import aborts its active `FileReader` and invalidates late results. File contents remain in memory for this browser session. The module has no upload, telemetry, browser-storage or server-persistence path. Garbage-collection timing and secure memory erasure are not guaranteed.
 - Clinical and privacy approval remain false, and atlas registration is null. No segmentations, diagnostic conclusions, normality labels, approval buttons, paywall changes or lecture entitlements are introduced.
+- A loaded packet carries a persistent visible warning, announced to assistive technology, that source provenance is unverified. Passing the local check means only that the packet format and body integrity are internally consistent; the checker cannot authenticate where the data came from or grant privacy or clinical clearance.
 
 ## Local preparation
 
@@ -25,9 +26,9 @@ The target directory must exist and the target file must not. Never put patient 
 
 ## Binary contract
 
-Eight-byte ASCII `VMMR0001`, then little-endian uint32 JSON-header length and body length. UTF-8 JSON begins at byte16; scalar body starts at the next eight-byte boundary. Total file size must exactly match and cannot exceed128 MiB. Header maximum128 KiB. The body is native int16/uint16 with column fastest, then row, then slice. The JSON includes a SHA-256 body fingerprint and the source NIfTI fingerprint; hashes detect corruption, not trusted clinical signatures.
+Eight-byte ASCII `VMMR0001`, then little-endian uint32 JSON-header length and body length. UTF-8 JSON begins at byte16; scalar body starts at the next eight-byte boundary. Total file size must exactly match and cannot exceed128 MiB. Header maximum128 KiB. The body is native int16/uint16 with column fastest, then row, then slice. The JSON includes a SHA-256 body fingerprint and a claimed source NIfTI fingerprint; the local body check detects corruption or mismatch against the header, not a trusted source signature.
 
-Schema `vm-native-mr/1` accepts only the documented top-level keys: schema, release, modality, privacyCertified, clinicalApproved, atlasRegistration, units, order, scalarType, dimensions, spacing, directions, positions, thickness, window, sourceSha256, bodySha256. Release must be `NOT_FOR_PUBLICATION`; units `stored-MR-signal`. No raw patient fields, filenames, raw UIDs, sequence descriptions or arbitrary free-text labels are copied into this contract.
+Schema `vm-native-mr/1` accepts only the documented top-level keys: schema, release, modality, privacyCertified, clinicalApproved, atlasRegistration, units, order, scalarType, dimensions, spacing, directions, positions, thickness, window, sourceSha256, bodySha256. Release must be `NOT_FOR_PUBLICATION`; units `stored-MR-signal`. No raw patient fields, filenames, raw UIDs, sequence descriptions or arbitrary free-text labels are copied into this contract. The source fingerprint is a claim supplied by the packet, not independently authenticated by this checker. A fabricated packet can carry self-consistent hashes without establishing source provenance.
 
 Dimensions: at most2048×2048×512, at least two slices, constrained further by byte limits. Directions must be orthonormal, in-plane spacing positive, native origins finite and advancing along the cross-product normal. Mixed/near-nonuniform spacing or in-plane drift outside0.01 mm tolerance is rejected by this pilot. Individual origins are retained instead of replaced by an idealised uniform affine. Lossless DICOM decoding, source de-identification and input provenance remain upstream responsibilities. The earlier preparer supports only a narrow classic-MR profile; this is not a general DICOM viewer.
 
@@ -93,8 +94,20 @@ node scripts/validate-local-imaging.mjs
 node scripts/validate-native-mr.mjs --packet <PRIVATE.vmmr> --source-packet <PRIVATE original packet directory>
 ```
 
-Synthetic checks cover unsigned/signed signals, non-square pixels, rotated and genuinely oblique coordinates, direction labels, display mapping/inversion, native bounds, corrupted/unsupported packets, CT/MRI mutual rejection, SSR and real component callbacks (slice controls, keyboard, signal selection, display errors/reset and close). Optional PRIVATE validation checks every native frame hash and renders each slice without publishing or logging its pixels. Test browser APIs/hooks are controlled in the callback harness, not a live browser.
+Synthetic checks cover unsigned/signed signals, non-square pixels, rotated and genuinely oblique coordinates, direction labels, display mapping/inversion, native bounds, corrupted/unsupported packets, CT/MRI mutual rejection, a fabricated self-consistent packet admitted with the persistent source-provenance warning, SSR and real component callbacks (slice controls, keyboard, signal selection, display errors/reset and close). Optional PRIVATE validation compares every native frame hash with the supplied private packet and renders each slice without publishing or logging its pixels; that comparison is not independent source authentication. Test browser APIs/hooks are controlled in the callback harness, not a live browser.
 
 TypeScript and the production build are additional engineering checks, not browser/GPU/device or clinical acceptance. The radiologist must confirm orientation/sequence/laterality, inspect the complete source series and pixels for privacy, compare against a source viewer, and approve teaching use. Mobile layout, text zoom, actual canvas rendering, loading cancellation/races and memory limits still require real-browser/device testing. No such acceptance is claimed from SSR or synthetic tests.
+
+### Provenance wording follow-up, 24 September 2026
+
+The local checker now labels its result as packet-format and body-integrity
+checking, not source authentication. A persistent alert on the loaded view says
+that provenance, privacy clearance and clinical clearance are unverified. A
+fabricated packet with self-consistent hashes is intentionally admitted as a
+packet while retaining that warning; a damaged body remains rejected. The
+synthetic/component validator passed 85 checks and TypeScript passed. In a
+temporary loopback browser tab, the initial checker page visibly used the
+corrected wording. No file was imported in that browser check, so loaded-state
+visual behavior, real cancellation, and clinical/privacy acceptance remain open.
 
 Next: use Didanix Education's agreed integration contract for reviewed anatomical landmarks and imaging-to-atlas concept links, then genuine same-study segmentation/registration where available. `.vmmr` is a private QA format only; do not require Didanix to ingest it, build another DICOM pipeline, or continue extending this utility as the learner viewer. Do not enable spatial 3D↔MRI correspondence from generic anatomical similarity. CT-head midbrain/cerebellar edits remain with the CT-head task. Ultrasound admission and independent lecture entitlements retain their separate review gates.

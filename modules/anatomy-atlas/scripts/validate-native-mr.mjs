@@ -271,6 +271,7 @@ check(html.includes('not interpolated'));
 check(!html.includes('<details open'));
 check(html.includes('Unreviewed'));
 check(html.includes('Stored signal'));
+check(html.includes('role="alert"') && html.includes('Source provenance is unverified'));
 check(
   renderToStaticMarkup(React.createElement(api.Workbench)).includes(
     'accept=".vmmr"',
@@ -414,11 +415,23 @@ same([slots[0], slots[1], slots[2]], [null, false, '']);
 loadFile({ size: packet.byteLength, startError: Error('Synthetic read start failure') });
 await settle();
 same(slots[4].current, null);
-check(slots[2].includes('Cannot verify this MRI'));
+check(slots[2].includes('Cannot read this MRI packet') && slots[2].includes('Source provenance is not checked'));
 loadFile({ size: signedPacket.byteLength });
 const afterStartError = readers.at(-1);
 afterStartError.finish(signedPacket); await settle();
 same(slots[0].range, [-18, 17]); same([slots[1], slots[2]], [false, '']);
+// A fabricated packet can be internally consistent, including its claimed source hash.
+// Admission must keep the source-provenance warning visible and assistive-announced.
+const fabricated = fixture();
+fabricated.sourceSha256 = 'f'.repeat(64);
+const fabricatedPacket = encode(fabricated, Uint16Array.from({ length: 36 }, (_, i) => 100 + i));
+loadFile({ size: fabricatedPacket.byteLength });
+readers.at(-1).finish(fabricatedPacket); await settle();
+same(slots[0].sourceSha256, fabricated.sourceSha256);
+const fabricatedLoaded = openerControl(n => n.type === api.LoadedNativeMr);
+const fabricatedHtml = renderToStaticMarkup(React.createElement(api.LoadedNativeMr, fabricatedLoaded.props));
+check(fabricatedHtml.includes('role="alert"') && fabricatedHtml.includes('Source provenance is unverified'));
+check(fabricatedHtml.includes('does not authenticate the source') && fabricatedHtml.includes('privacy or clinical clearance'));
 openerControl(n => n.type === api.LoadedNativeMr).props.close();
 const priorReaders = readers.length;
 loadFile({ size: api.LOCAL_MR_MAX_BYTES + 1 });

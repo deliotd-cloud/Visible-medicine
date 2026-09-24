@@ -88,6 +88,11 @@ export function LoadedNativeMr({
       >
         <strong>MRI import check</strong>
         <span className="local-draft-badge">Unreviewed · local only</span>
+        <p role="alert" className="native-mr-hint">
+          Source provenance is unverified. This local check only checks packet
+          format and body integrity; it does not authenticate the source or
+          establish privacy or clinical clearance.
+        </p>
         <p className="native-mr-hint">
           Internal preparation check, not the learner PACS viewer. No
           reconstructed slices or atlas registration.
@@ -389,7 +394,7 @@ export default function NativeMrWorkbench() {
     } catch {
       if (current === generation.current)
         setError(
-          'Cannot verify this MRI. Choose a prepared .vmmr packet; raw DICOM, NIfTI and CT files are not supported here.',
+          'Cannot read this MRI packet. Choose a prepared .vmmr packet with valid format and body integrity; raw DICOM, NIfTI and CT files are not supported here. Source provenance is not checked.',
         );
     } finally {
       if (current === generation.current) setBusy(false);
@@ -409,7 +414,8 @@ export default function NativeMrWorkbench() {
         <main className="local-study-open">
           <h2>Check a prepared MRI import</h2>
           <p>
-            Internal source-validation utility. Didanix Education is the
+            Internal packet-format and body-integrity checker. Source provenance
+            remains unverified. Didanix Education is the
             designated learner DICOM/PACS viewer; this is not its replacement or
             release.
           </p>
@@ -437,7 +443,7 @@ export default function NativeMrWorkbench() {
           </label>
           {busy && (
             <>
-              <output aria-live="polite">Verifying local MRI…</output>
+              <output aria-live="polite">Checking local MRI packet…</output>
               <Button onClick={close}>Cancel</Button>
             </>
           )}
