@@ -215,6 +215,24 @@ export function preRenalRecipeProfiles(profiles) {
  * No broad prefix exclusion, baseline repinning or silent future-edit allowance.
  */
 export function historicalRecipeProfiles(profiles) {
+  const respiratoryIds = [
+    'respiratory-wall-overview', 'respiratory-intercostal-comparison',
+    'respiratory-diaphragm',
+  ];
+  assert.equal(hash(profiles),
+    'e036bb888c17565f87c7601d41877a4e1334ce7dfc11230ad6c5d6ea7bf21533',
+    'Unrecorded current recipe edit');
+  profiles = structuredClone(profiles);
+  assert.equal(hash({
+    focuses: profiles.thorax.focuses.filter((s) => respiratoryIds.includes(s.id)),
+    references: profiles.thorax.references.slice(-2),
+  }), '81d8a90fa658f4efe3ebe97228555b214033b9d7aec178ee33c434f53f04b70e',
+  'Exact respiratory study addition');
+  profiles.thorax.focuses = profiles.thorax.focuses.filter((s) => !respiratoryIds.includes(s.id));
+  profiles.thorax.references = profiles.thorax.references.slice(0, -2);
+  assert.equal(hash(profiles),
+    '2cf821c31a5bdf75a44a171e73721d6e803e2a3ef5c386754640dc0198891881',
+    'Every earlier recipe retained');
   profiles = preRenalRecipeProfiles(profiles);
   if (hash(profiles) === preOrbitalMotorProfilesHash)
     return structuredClone(profiles);

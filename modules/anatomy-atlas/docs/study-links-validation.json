@@ -1,9 +1,9 @@
 {
   "passed": true,
-  "assertions": 321101,
-  "links": 14461,
-  "focusedLinks": 9124,
-  "destinationsTested": 7030,
+  "assertions": 322586,
+  "links": 14485,
+  "focusedLinks": 9148,
+  "destinationsTested": 7054,
   "rows": [
     {
       "region": "whole-body",
@@ -135,19 +135,19 @@
       "region": "thorax",
       "side": "both",
       "structures": 158,
-      "testedLinks": 555
+      "testedLinks": 563
     },
     {
       "region": "thorax",
       "side": "left",
       "structures": 105,
-      "testedLinks": 376
+      "testedLinks": 384
     },
     {
       "region": "thorax",
       "side": "right",
       "structures": 104,
-      "testedLinks": 376
+      "testedLinks": 384
     },
     {
       "region": "abdomen",

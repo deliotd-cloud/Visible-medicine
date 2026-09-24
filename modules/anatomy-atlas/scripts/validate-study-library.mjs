@@ -22,6 +22,7 @@ import {
   studyLibraryAction,
   studyRecipeActive,
 } from '../lib/study-library.ts';
+import { thoraxRespiratoryBindings, thoraxRespiratoryStudies } from '../content/thorax-respiratory-study.ts';
 
 const hash = (text) => createHash('sha256').update(text).digest('hex');
 const raw = await readFile('public/models/bodyparts3d/full-body/catalog.json');
@@ -40,6 +41,49 @@ const check = (ok, message) => {
 const ids = (entries) => entries.map((entry) => entry.id);
 const keys = (cards) =>
   cards.flatMap((card) => card.recipes.map((recipe) => recipe.key));
+const thoraxBundle = catalog.bundles.filter((bundle) => bundle.id === 'thorax-muscles');
+same(thoraxBundle.length, 1, 'One pinned thorax muscle bundle');
+same(thoraxBundle[0].sha256, '3bbf7759e54e34272175de042ef4e26c24412b9f073a2f8eea3ce4fe79ebb682');
+same(thoraxBundle[0].structures, 8);
+const thoraxScope = catalog.structures.filter((s) => s.regions.includes('thorax'));
+const sourceBinding = (s) => ({
+  id: s.id, fmaId: s.fmaId, bundle: s.bundle,
+  nodeName: s.nodeName, sources: s.sources,
+});
+for (const expected of thoraxRespiratoryBindings) {
+  const found = thoraxScope.filter((s) => s.id === expected.id || s.fmaId === expected.fmaId);
+  same(found.length, 1, `Unique ${expected.fmaId}`);
+  same(sourceBinding(found[0]), expected, `Pinned identity, bundle and source files: ${expected.fmaId}`);
+}
+const thoraxProfile = dissectionProfiles.thorax;
+let guided = initialDissection;
+for (const study of thoraxRespiratoryStudies) {
+  const focus = thoraxProfile.focuses.filter((entry) => entry.id === study.id);
+  same(focus.length, 1);
+  const expected = thoraxScope.filter((s) => study.fmaIds.includes(s.fmaId));
+  same(ids(stageStructures(thoraxScope, thoraxProfile, 'free', study.id)), ids(expected));
+  for (const side of ['left', 'right']) {
+    const sideScope = thoraxScope.filter((s) =>
+      s.laterality === side || ['midline', 'unpaired', 'unspecified'].includes(s.laterality));
+    same(ids(stageStructures(sideScope, thoraxProfile, 'free', study.id)), ids(expected),
+      'Midline compound source remains available under either side filter');
+  }
+  same(studyLibraryAction(thoraxScope, thoraxProfile, `focus:${study.id}`, false), { kind: 'focus', id: study.id });
+  const mutated = thoraxScope.map((s) => s.fmaId === study.fmaIds[0]
+    ? { ...s, bundle: 'wrong-bundle' } : s);
+  same(stageStructures(mutated, thoraxProfile, 'free', study.id), [], 'Changed source binding fails closed');
+  same(studyLibraryAction(mutated, thoraxProfile, `focus:${study.id}`, false), null);
+  const required = thoraxScope.find((s) => s.fmaId === study.fmaIds[0]);
+  same(stageStructures(thoraxScope.filter((s) => s !== required), thoraxProfile, 'free', study.id), [],
+    'Missing required source fails closed');
+  same(stageStructures([...thoraxScope, required], thoraxProfile, 'free', study.id), [],
+    'Duplicate required source fails closed');
+  const previous = guided;
+  guided = dissectionReducer(guided, { type: 'focus', id: study.id });
+  same(ids(resolveDissection(thoraxScope, thoraxProfile, guided).visible), ids(expected));
+  same(dissectionReducer(guided, { type: 'undo' }).focusId, previous.focusId);
+  same(dissectionReducer(dissectionReducer(guided, { type: 'undo' }), { type: 'redo' }).focusId, study.id);
+}
 same(
   hash(raw),
   '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7',

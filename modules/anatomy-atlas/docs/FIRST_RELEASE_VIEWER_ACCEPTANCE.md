@@ -1,5 +1,39 @@
 # First-release viewer acceptance evidence
 
+## 24 September: abdomen and nested liver branch sample
+
+The owner-only private site was sampled in a temporary in-app browser tab at
+1280 × 720 using pointer controls, an inspected screenshot and the browser
+accessibility tree. Publication records identify the current site as private
+version 110, but this browser sample did **not** independently attest loaded
+asset bytes to that version. The tab was closed after the check.
+
+- Abdomen loaded 106 source selections (5 bones, 6 muscles, 17 organs, 69
+  vessels and 9 connective; nervous structures were explicitly unavailable).
+  The single desktop screenshot showed a compact control rail and no evident
+  horizontal overflow; detailed geometry and touch readability were not judged.
+- In-page Dissect exposed three stages: 106 assembled, 104 with the available
+  wall removed, and 5 in the skeletal framework. Only the second stage was
+  applied. Its screenshot revealed the liver, stomach and large intestine;
+  the interface stated that missing skin and fascia were not simulated.
+- Selecting Liver (FMA7197) retained the second stage and displayed draft
+  source identity, a segment-boundary limitation and the nested liver-branch
+  entry point. The liver branch study opened within the same page, exposing
+  seven labelled arterial, portal, biliary and venous branch groups with an
+  explicit incomplete-tree/segment-map warning.
+- Hiding the left hepatic arterial branch removed its visible label and changed
+  the study preset to Custom selection. Undo restored the branch label and
+  All internal branches preset. Back to atlas retained stage 2 and the Liver
+  selection. This is one switch/undo/return path, not a complete nested-study
+  or GLB-geometry acceptance sweep.
+
+The liver Anatomy panel repeats the same source-coordinate caveat separately
+for three excluded vessel surfaces. This is a presentation-clutter finding,
+not an anatomical defect; a concise combined note would be easier to scan.
+Real touch, keyboard-only navigation, 200% zoom, screen reader, all abdominal
+camera angles, CT/MRI registration and clinical validation remain open. The
+viewer release gate is unchanged.
+
 ## 24 September: ankle-and-foot in-page dissection sample
 
 The owner-only private Atlas was inspected in a temporary in-app browser tab on

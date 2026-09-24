@@ -1,5 +1,6 @@
 import type { BodyStructure, BodySystem } from './body-types';
 import { sourceCanonical } from '../lib/body-source-additions.ts';
+import { thoraxRespiratoryBindings, thoraxRespiratoryStudies } from '../content/thorax-respiratory-study.ts';
 import { pelvicUrethralFocus } from '../content/pelvic-urethral-study.ts';
 import { neuroStudySets, neuroStudyIds } from '../lib/neuroanatomy.ts';
 import { axialStudySets } from '../lib/axial-anatomy.ts';
@@ -75,6 +76,13 @@ export type DissectionFocus = {
   /** Required exact identities; contextual side bones may be absent from a side-filtered scope. */
   requiredSources?: BodyStructure[];
   contextSources?: BodyStructure[];
+  requiredSourceBindings?: readonly {
+    id: string;
+    fmaId: string;
+    bundle: string;
+    nodeName: string;
+    sources: readonly { file: string; sha256: string }[];
+  }[];
 };
 export type DissectionProfile = {
   title: string;
@@ -1120,6 +1128,26 @@ dissectionProfiles.thorax.focuses.push({
   view: 'anterior',
   description: 'Compare anterior, great and middle cardiac vein sources. Remove the heart to inspect covered surfaces; Undo restores it. Rotate posteriorly for the middle cardiac vein. Contacts are not proven drainage junctions or dissection planes.',
 });
+// These focus-only views use the existing Undo/Redo visibility history. Guard
+// each target against a changed mesh source before offering any of the views.
+for (const study of thoraxRespiratoryStudies) {
+  dissectionProfiles.thorax.focuses.push({
+    id: study.id,
+    title: study.title,
+    rule: { fmaIds: [...study.fmaIds] },
+    includeSkeleton: false,
+    view: study.view,
+    description: study.description,
+    inspect: study.inspect,
+    requiredSourceBindings: thoraxRespiratoryBindings.filter((binding) =>
+      study.fmaIds.some((fmaId) => fmaId === binding.fmaId),
+    ),
+  });
+}
+dissectionProfiles.thorax.references.push(
+  'https://anatomy.ttuhscep.edu/anatomytables/muscles_thorax.html',
+  'https://www.ncbi.nlm.nih.gov/books/NBK538321/',
+);
 dissectionProfiles['head-neck'].focuses.push({
   id: 'short-ciliary-context',
   title: 'Short ciliary source & orbital context',
@@ -1376,6 +1404,16 @@ export function stageStructures(
 ): BodyStructure[] {
   if (focusId) {
     const choice = profile.focuses.find((f) => f.id === focusId);
+    if (choice?.requiredSourceBindings) {
+      for (const expected of choice.requiredSourceBindings) {
+        const found = structures.filter((s) => s.id === expected.id || s.fmaId === expected.fmaId);
+        if (found.length !== 1 ||
+          sourceCanonical({
+            id: found[0].id, fmaId: found[0].fmaId, bundle: found[0].bundle,
+            nodeName: found[0].nodeName, sources: found[0].sources,
+          }) !== sourceCanonical(expected)) return [];
+      }
+    }
     if (choice?.requiredSources) {
       for (const expected of [...choice.requiredSources, ...(choice.contextSources ?? [])]) {
         const found = structures.filter(s => s.id === expected.id || s.fmaId === expected.fmaId);

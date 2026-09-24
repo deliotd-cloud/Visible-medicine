@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "assertions": 137348,
+  "assertions": 137636,
   "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
   "rows": [
     {
@@ -155,21 +155,21 @@
       "side": "both",
       "structures": 158,
       "selectionsWithGroups": 129,
-      "memberships": 163
+      "memberships": 171
     },
     {
       "region": "thorax",
       "side": "right",
       "structures": 104,
       "selectionsWithGroups": 82,
-      "memberships": 110
+      "memberships": 118
     },
     {
       "region": "thorax",
       "side": "left",
       "structures": 105,
       "selectionsWithGroups": 83,
-      "memberships": 109
+      "memberships": 117
     },
     {
       "region": "abdomen",
