@@ -43,7 +43,7 @@ for(const region of ['pelvis','thigh','leg','foot']){
 for(const bad of ['__proto__','shoulder-arm','head-neck','whole-body','../foot','foot&specimen=x'])assert.throws(()=>api.containedLimbStudyBase(bad));
 const whole=plan.scopes.find(s=>s.region==='whole-body');
 assert.equal(whole.regionalIds.length,1104);assert.equal(new Set(whole.regionalIds).size,1104);
-assert.equal(whole.nestedTargets.length,104);
+assert.equal(whole.nestedTargets.length,106);
 assert.deepEqual(whole.independentSpecimens.map(s=>s.key),['bp3d3-back-layers','hra-united-female-v1.10-pelvis','hra-united-female-v1.10-kidneys']);
 for(const scope of plan.scopes)assert.equal(api.regionalHostHref(scope.region),api.regionalModules[scope.region].website);
 for(const bad of ['__proto__','constructor','not-a-region'])assert.equal(api.regionalHostHref(bad),null);
@@ -51,4 +51,4 @@ assert.equal(api.regionalStudyDeliveryUrl('/?study=body-1','whole-body',base),ba
 for(const bad of ['/regions/whole-body?study=x','//evil/','/?region=foot','/regions/hand'])assert.throws(()=>api.regionalStudyDeliveryUrl(bad,'whole-body',base));
 const main=await readFile(new URL('../integration/head-neck/main.tsx',import.meta.url),'utf8');
 assert(main.includes('initialRegion={region}'));assert(!main.includes('regionNavigation='));
-console.log(JSON.stringify({containedLimbRegions:4,sourceBoundStudyLinks:links,rejectedRoutesAndRevisions:rejections,actualStudyRenders:renders,wholeBodyRoot:1104,wholeBodyNested:104,additionalPermanentControls:0,clinicalApproval:false}));
+console.log(JSON.stringify({containedLimbRegions:4,sourceBoundStudyLinks:links,rejectedRoutesAndRevisions:rejections,actualStudyRenders:renders,wholeBodyRoot:1104,wholeBodyNested:106,additionalPermanentControls:0,clinicalApproval:false}));

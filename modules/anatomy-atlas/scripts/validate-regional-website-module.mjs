@@ -19,15 +19,26 @@ for(const [region,id,hash,bytes] of additions){
   assert(plan.scopes.find(s=>s.region==='whole-body').regionalIds.includes(id));
   assert.equal(models.filter(m=>m.sha256===hash&&m.bytes===bytes).length,1);
 }
-const retained=[['head-neck',291,75],['thorax',158,9],['abdomen',106,16],['pelvis',82,4],['spine',115,0]];
+const retained=[['head-neck',291,75],['thorax',158,11],['abdomen',106,16],['pelvis',82,4],['spine',115,0]];
 assert.deepEqual(plan.scopes.slice(0,5).map(s=>[s.region,s.regionalIds.length,s.nestedTargets.length]),retained);
-assert.deepEqual(plan.scopes.slice(5).map(s=>[s.region,s.regionalIds.length,s.nestedTargets.length]),[['shoulder-arm',115,0],['forearm',86,0],['hand',124,0],['thigh',95,4],['leg',76,4],['foot',122,0],['whole-body',1104,104]]);
+assert.deepEqual(plan.scopes.slice(5).map(s=>[s.region,s.regionalIds.length,s.nestedTargets.length]),[['shoulder-arm',115,0],['forearm',86,0],['hand',124,0],['thigh',95,4],['leg',76,4],['foot',122,0],['whole-body',1104,106]]);
 // The source-reviewed celiac display correction is a separate retained model,
 // already present in the current website inventory; do not count it as a new
 // forearm teaching asset.
-assert.equal(models.length,134);assert.equal(models.reduce((n,m)=>n+m.bytes,0),198221100);
+assert.equal(models.length,135);assert.equal(models.reduce((n,m)=>n+m.bytes,0),198262096);
+const venousHash='4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12';
+const venousPath='models/bodyparts3d/coronary-venous/coronary-venous.glb';
+assert.equal(models.filter(m=>m.path===venousPath&&m.sha256===venousHash&&m.bytes===40996).length,1);
+for(const region of ['thorax','whole-body']){
+  const targets=plan.scopes.find(s=>s.region===region).nestedTargets.filter(t=>t.study==='coronary-venous');
+  assert.deepEqual(targets.map(t=>t.structureId),[
+    'vm:anatomy:body:thorax:unpaired:vessel:coronary-sinus',
+    'vm:anatomy:body:thorax:unpaired:vessel:small-cardiac-vein',
+  ]);
+  assert(targets.every(t=>t.parentId==='vm:anatomy:body:thorax:unpaired:organ:heart'&&t.sourceHash===venousHash));
+}
 const oldModels=new Map(plan.scopes.slice(0,5).flatMap(s=>s.bundles).map(b=>[b.url,b]));
-assert.equal(oldModels.size,97);assert.equal([...oldModels.values()].reduce((n,b)=>n+b.bytes,0),176659228);
+assert.equal(oldModels.size,98);assert.equal([...oldModels.values()].reduce((n,b)=>n+b.bytes,0),176700224);
 const raw=JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json',import.meta.url),'utf8'));
 const original=JSON.stringify(raw),catalog=api.bodyDisplayCatalog(raw),base='/atlas-runtime/head-neck';
 let links=0;
@@ -45,7 +56,7 @@ for(const scope of plan.scopes){
     assert.equal(api.parseStudyLink({...params,structure:[params.structure,params.structure]}).status,'invalid');links++;
   }
 }
-assert.equal(links,2690);assert.equal(JSON.stringify(raw),original);
+assert.equal(links,2694);assert.equal(JSON.stringify(raw),original);
 for(const query of ['region=','region=not-a-region','region=__proto__','region=THORAX','region=head-neck&region=thorax','region=thorax&region=thorax','region=../thorax'])assert.equal(api.parseRegionalModule(new URLSearchParams(query)),null);
 assert.equal(api.parseRegionalModule(new URLSearchParams()),'head-neck');
 assert.throws(()=>api.regionalStudyDeliveryUrl('/regions/thorax?region=head-neck','thorax',base),/routing field/);

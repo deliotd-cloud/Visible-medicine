@@ -9,6 +9,7 @@ import {visualContextViewCatalog,visualRelationshipsFor} from '../../lib/visual-
 import {cricothyroidViewCatalog} from '../../lib/cricothyroid';
 import {cranialArteryComponentViewCatalog} from '../../lib/cranial-artery-components';
 import {cardiacContextViewCatalog,cardiacRelationshipsFor} from '../../lib/cardiac-context';
+import {coronaryVenousCatalog} from '../../lib/coronary-venous';
 import {pulmonaryContextViewCatalog} from '../../lib/pulmonary-context';
 import {hepaticBiliaryViewCatalog,hepaticBiliaryRelationshipsFor} from '../../lib/hepatic-biliary-context';
 import {renalRelationshipViewCatalog,renalRelationshipsFor} from '../../lib/renal-relationships';
@@ -44,6 +45,7 @@ export function regionalDelivery(raw:BodyCatalog,region:RegionalModule) {
           views.push(cardiacContextViewCatalog(parent));
           for(const relation of cardiacRelationshipsFor(parent))views.push(cardiacContextViewCatalog(parent,relation.id));
           break;
+        case 'coronary-venous': views.push(coronaryVenousCatalog);break;
         case 'pulmonary': views.push(pulmonaryContextViewCatalog(parent,true,'all'));break;
         case 'hepatic':
           views.push(hepaticBiliaryViewCatalog(parent,true));
