@@ -1,4 +1,4 @@
-/* oxlint-disable react-hooks/rules-of-hooks -- Controlled callbacks, not browser/GPU acceptance. */
+/* oxlint-disable react-hooks/rules-of-hooks, react-hooks/exhaustive-deps -- Controlled harness callbacks forward the tested component's dependency arrays; not browser/GPU acceptance. */
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { createRequire } from 'node:module';
@@ -93,15 +93,24 @@ const root = api.bodyDisplayCatalog(
     ),
   ),
   before = JSON.stringify(root);
-// The later, separately audited corpus-spongiosum supplement added one root
-// selection, not a cranial fragment. Preserve the original count excluding
-// exactly that source-bound record; do not tolerate arbitrary catalog growth.
-const supplemental = JSON.parse(
-  await readFile('public/models/bodyparts3d/corpus-spongiosum/catalog.json', 'utf8'),
+// Later, separately audited source additions are not cranial fragments. Match
+// their complete records and retain the original count for everything else.
+const laterAdditions = [
+  'corpus-spongiosum',
+  'short-ciliary',
+  'anterior-cardiac-vein',
+];
+for (const bundle of laterAdditions) {
+  const source = JSON.parse(
+    await readFile(`public/models/bodyparts3d/${bundle}/catalog.json`, 'utf8'),
+  );
+  same(source.structures.length, 1);
+  same(root.structures.filter((s) => s.bundle === bundle), source.structures);
+}
+same(
+  root.structures.filter((s) => !laterAdditions.includes(s.bundle)).length,
+  1101,
 );
-same(root.structures.filter(s => s.bundle === 'corpus-spongiosum'), supplemental.structures);
-same(supplemental.structures.length, 1);
-same(root.structures.filter(s => s.bundle !== 'corpus-spongiosum').length, 1101);
 const targets = api.nestedStudyTargets(root).filter((t) => t.study === study);
 same(targets.length, 29);
 same(new Set(targets.map((t) => t.structureId)).size, 29);

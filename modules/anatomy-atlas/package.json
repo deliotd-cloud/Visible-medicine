@@ -136,7 +136,7 @@
     "gingiva:prototype": "node scripts/export-gingiva-prototype.mjs",
     "gingiva:test": "node scripts/export-gingiva-prototype.mjs --check && node scripts/validate-gingiva-source.mjs",
     "pancreatic-dissection:export": "node scripts/export-pancreatic.mjs",
-    "pancreatic-dissection:test": "node scripts/export-pancreatic.mjs --check && node scripts/validate-pancreatic-dissection.mjs",
+    "pancreatic-dissection:test": "node scripts/export-pancreatic.mjs --check && node --import tsx scripts/validate-pancreatic-dissection.mjs",
     "cardiac-context:audit": "node scripts/audit-cardiac-context.mjs",
     "cardiac-context:test": "node scripts/validate-cardiac-context.mjs",
     "nested-cutaway:test": "node scripts/validate-nested-cutaway.mjs",
@@ -364,6 +364,7 @@
     "oxlint": "1.76.0",
     "oxlint-tsgolint": "7.0.2001",
     "tailwindcss": "4.2.1",
+    "tsx": "4.23.13",
     "typescript": "5.9.3",
     "vite": "^8.2.2",
     "wrangler": "^4.129.0"

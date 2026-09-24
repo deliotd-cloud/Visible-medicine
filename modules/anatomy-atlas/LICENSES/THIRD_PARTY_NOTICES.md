@@ -1,5 +1,12 @@
 # Third-party notices
 
+## Pancreatic validator TypeScript loader — 24 September 2026
+
+`tsx` 4.23.13 is pinned as a development-only test loader. Copyright (c)
+Hiroki Osame, MIT. Its installed `node_modules/tsx/LICENSE` contains the full
+permission and warranty notice. It is not part of the production anatomy runtime
+or an anatomical source licence.
+
 ## Shoulder arterial MRI teaching — 18 September 2026
 
 Three short original paired teaching summaries cite Mochizuki1994 and Pan2024

@@ -1,5 +1,67 @@
 # First-release viewer acceptance evidence
 
+## 24 September: current private-site whole-body separation sample
+
+The Sites connector reported private version 106 from website source
+`dd11143e689051f58f8fc6a1df53a781940a46f4`, with
+`https://visiblemedicine.com` as its current live custom domain. In authenticated
+external Chrome on Windows, that domain opened `/atlas/3d` with the whole-body
+regional viewer and 1,104 structures. This is a bounded desktop pointer/AX and
+screenshot sample. A direct browser request for the viewer manifest was blocked
+by Chrome, so the observed custom-domain tab was **not independently byte-bound**
+to version 106; the separate Sites source/version readback supplies publication
+provenance, not browser-asset attestation.
+
+- Explore and Dissect switched in-page without opening another window. Dissect
+  exposed 203 currently enabled bone structures, reassembly, guided controls
+  and separate reference specimens; it did not silently turn on other systems.
+- Spread accepted 0%, 50% and 100%. AX state showed the exact values and the
+  non-anatomical-position warning at nonzero separation. Inspected screenshots
+  showed skeletal parts separating at 50% and further at 100%; 0% reassembled
+  the figure. Explore was restored before leaving the user-owned tab.
+- The layout kept compact system switches alongside the model and the study
+  panel alongside it at the observed desktop viewport. No structure was selected,
+  and no label-side, search, camera orbit or dissection-history behavior was
+  inferred from the whole-body sample.
+
+The same authenticated Chrome tab then navigated to Head & neck (291 structures)
+and completed its 30-group load. Search returned the exact left maxilla
+FMA53650 and right maxilla FMA53649. Selecting each populated a draft-marked
+information panel with the correct identity and laterality. Inspected anterior
+screenshots placed the left-maxilla label on screen-right and the right-maxilla
+label on screen-left, matching the projected structures rather than the words
+"left"/"right". In posterior view the selected right-maxilla label moved to
+screen-right with a dotted leader and a "Behind tissue" warning. The original
+whole-body Explore page was restored after the check. This is a single paired
+bone sample, not dense multi-label clearance, every camera angle or anatomical
+accuracy validation.
+
+This does not pass the viewer gate. Other regions, all explode mechanisms,
+actual phone/tablet touch, 200% text, screen-reader navigation, GPU/context-loss
+recovery and a direct current-runtime asset readback remain pending.
+
+### Source-level matrix follow-up (same day)
+
+The focused runner passed 13 common interaction aliases: inline dissection,
+workbench/history, explode styles, renderer recovery, labels/depth, Atlas and
+independent navigation, selection visibility, and nested practice/history/
+navigation. It also passed shoulder workbench, model-first presentation, load/
+retry and pelvic close-up. Run logs are local under
+`.local/test-logs/2026-09-24T01-31-22.426Z-54636-92d0aa77.log` and
+`.local/test-logs/2026-09-24T01-33-57.631Z-39536-9d3eeaef.log`.
+Pancreatic dissection and nested cutaway first failed because their test
+harnesses lacked an explicit TypeScript loader and Vinext link shim, not because
+an observed viewer interaction failed. After repairing the harnesses, both
+named checks passed (90 and 6,081 checks). The dedicated cranial artery
+component check then exposed an outdated root-count hold; it now admits only
+three exact source-catalogued post-baseline additions while retaining the
+1,101-root original corpus hold and 29 cranial part checks. The final three-
+alias run passed; its log is
+`.local/test-logs/2026-09-24T01-42-55.589Z-53620-32c2a166.log`.
+Regenerated loading/workbench validation counts were retained rather than
+mistaking stale records for current coverage. These suites use scene/component
+doubles and CPU geometry; none proves browser/GPU/device/clinical acceptance.
+
 ## 24 September: private version 104 separation-control sample
 
 Website `be32dd864c549619b53a73d84d0d6a0c36257d5a`, generated from Atlas
