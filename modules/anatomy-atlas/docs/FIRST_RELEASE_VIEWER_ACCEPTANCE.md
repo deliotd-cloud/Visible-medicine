@@ -1,5 +1,35 @@
 # First-release viewer acceptance evidence
 
+## 24 September: private version 104 separation-control sample
+
+Website `be32dd864c549619b53a73d84d0d6a0c36257d5a`, generated from Atlas
+`0aac0fc6663741effea3a48963e1b931f6f5002a`; authenticated external Chrome
+on Windows, desktop pointer/AX controls. This was a temporary QA tab on the
+owner-only private site. No device emulation, real touch or screen reader was used.
+
+- Whole body loaded with 1,104 structures and a 0% Spread control. Selecting
+  Tray changed the control to 100% arranged separation and a warning that the
+  positions are not anatomical. Reset restored Spread at 0%. This was an AX
+  state check; a GPU screenshot of the arranged canvas timed out.
+- Hip & thigh loaded with 95 structures. Spread accepted 50%, 100% and 0%; an
+  inspected desktop screenshot at 50% showed the model and the explicit
+  non-anatomical-position warning. A search selected the exact right femur
+  FMA24474 and displayed its draft identity/laterality/source in the panel.
+- With that selection, Extract selected opened at 100%, accepted 50% and 0%,
+  and at zero stated that anatomy was assembled. Tray opened at 100%; reset
+  restored Spread and 0%, retaining the selected right femur. These are control
+  and state observations, not verified pixel positions at every endpoint.
+- The source `explode-styles:test` initially failed because its injected scene
+  harness lacked the existing `label-depth` import. The harness now uses the
+  real library; it passes 404,150 CPU/component checks for 1,104 body entries.
+  `dissection-history:test` also passes 108,719 checks. Neither test is a browser,
+  GPU, clinical or physical-device acceptance result.
+
+The temporary QA tab was closed. Canvas screenshots at maximum separation
+timed out, so maximum visual clearance, all orbit angles, dense labels, other
+regions, context-loss recovery and physical-device/accessibility journeys remain
+unverified. No viewer release gate is marked complete.
+
 ## 19 September: private 96 head/neck keyboard sample
 
 Website `5e8ff425b5386c9531f44566695c4a3862849b04`, Atlas source

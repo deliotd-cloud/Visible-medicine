@@ -4,6 +4,7 @@ import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import { transformSync } from 'esbuild';
 import * as React from 'react';
+import * as labelDepth from '../lib/label-depth.ts';
 import ts from 'typescript';
 import { build } from './workspace-test-build.mjs';
 
@@ -487,6 +488,7 @@ const replacements = {
   '@/lib/body-batching': { bodyBatchActive: () => false },
   '@/lib/neuroanatomy': {},
   '@/lib/scene-labels': a,
+  '@/lib/label-depth': labelDepth,
   '@/lib/anatomy-vessels': {},
   '@/lib/anatomy-load-state': a,
 };
