@@ -100,7 +100,7 @@ assert.deepEqual(priorProfiles.forearm.references.slice(-2), [
 ]);
 priorProfiles.forearm.references.splice(-2);
 const priorProfileHash = hash(JSON.stringify(priorProfiles));
-assert.equal(priorProfileHash, 'e036bb888c17565f87c7601d41877a4e1334ce7dfc11230ad6c5d6ea7bf21533', 'Earlier recipes must retain their source identity');
+assert.equal(priorProfileHash, 'a0f0ce94880dbb1ce5285da9f51aef4d8b73a3477a3423a1f065a57b03c3a7fd', 'Earlier recipes match the reviewed Thorax side-disclosure revision');
 const expected = new Set(allPins.map(row => row[0]));
 let scopes = 0;
 for (const side of ['both', 'left', 'right']) {

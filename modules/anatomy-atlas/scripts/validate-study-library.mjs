@@ -61,6 +61,16 @@ for (const study of thoraxRespiratoryStudies) {
   const focus = thoraxProfile.focuses.filter((entry) => entry.id === study.id);
   same(focus.length, 1);
   const expected = thoraxScope.filter((s) => study.fmaIds.includes(s.fmaId));
+  check(expected.length > 0 && expected.every((s) => s.laterality === 'midline'),
+    'Respiratory targets remain midline-labelled compound source records');
+  check(study.inspect.includes('Left and right filters retain the same midline-labelled compound source surfaces; neither filter isolates a side.'),
+    'Every respiratory prompt discloses the side-filter limitation');
+  same([focus[0].description, focus[0].inspect], [study.description, study.inspect],
+    'The learner-facing focus carries the pinned respiratory disclosure');
+  if (study.id === 'respiratory-diaphragm')
+    check(study.description.includes('neither hemidiaphragm is separately selectable') &&
+      study.inspect.includes('does not separate muscular and tendinous parts or either hemidiaphragm'),
+    'Diaphragm prompt discloses the missing hemidiaphragm split');
   same(ids(stageStructures(thoraxScope, thoraxProfile, 'free', study.id)), ids(expected));
   for (const side of ['left', 'right']) {
     const sideScope = thoraxScope.filter((s) =>

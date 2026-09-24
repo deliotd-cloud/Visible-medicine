@@ -14,30 +14,30 @@
     "note": "Historical baseline only; it is not evidence that a release candidate is approved."
   },
   "candidate": {
-    "atlasRevision": "a9d30e273ed3a936ece1e3fb31210dd7e1e39168",
-    "websiteRevision": "15ff09d2a2f8d28a16ebcc529959b72b451943b8",
+    "atlasRevision": "4e35cae205387f1416cbf4ab98cb9f02ab9b0646",
+    "websiteRevision": "50bb5d06b662674f11d3edf5aa1a5128918c3c65",
     "delivery": {
       "website": {
-        "sourceRevision": "15ff09d2a2f8d28a16ebcc529959b72b451943b8",
-        "deployedRevision": "15ff09d2a2f8d28a16ebcc529959b72b451943b8",
-        "versionNumber": 114,
-        "versionId": "appgprj_6a8b1e2c3d348191be844899e57ccbc6~appgver_309f0e180afc8191baa9f738eeada173",
-        "deploymentId": "appgdep_6ab4c91744e88191aca6aec6eba00798",
+        "sourceRevision": "50bb5d06b662674f11d3edf5aa1a5128918c3c65",
+        "deployedRevision": "50bb5d06b662674f11d3edf5aa1a5128918c3c65",
+        "versionNumber": 115,
+        "versionId": "appgprj_6a8b1e2c3d348191be844899e57ccbc6~appgver_baddb38635448191911f81f260f0664c",
+        "deploymentId": "appgdep_6ab4d7fb048881919d4ee1eb31b25fd8",
         "status": "succeeded",
         "audience": "owner-only",
         "evidence": [
-          "D:\\VisibleMedicine-Atlas-Recovery\\website-lacrimal-20260924.publication.json"
+          "D:\\VisibleMedicine-Atlas-Recovery\\website-forearm-focus-20260924.publication.json"
         ]
       },
       "sharedViewer": {
-        "atlasRevision": "a9d30e273ed3a936ece1e3fb31210dd7e1e39168",
-        "manifestSha256": "b43ceba86a8e0c609b4c83496d2bbb78435ec083dd09b769d87448010c06a3a1",
-        "inventorySha256": "3bf87845650919940d520d158e4c06abaeaef0e474e0fbb235688490908b4ab1",
+        "atlasRevision": "4e35cae205387f1416cbf4ab98cb9f02ab9b0646",
+        "manifestSha256": "9146bc4550c20b2e4e3e3cdfec61da7003a93e240da0c0df17777ab78e2967d9",
+        "inventorySha256": "b4b91927b37958f446aadb50e83d6a5698b01cf78bcd65fc8f344cf59d13072b",
         "modelCount": 135,
         "pathCount": 142
       },
       "validation": {
-        "atlasRevision": "a9d30e273ed3a936ece1e3fb31210dd7e1e39168",
+        "atlasRevision": "4e35cae205387f1416cbf4ab98cb9f02ab9b0646",
         "status": "source-checked-only"
       },
       "clinicalApproval": {

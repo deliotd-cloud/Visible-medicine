@@ -18,9 +18,9 @@ export const thoraxRespiratoryBindings = [
   ] },
 ] as const;
 
-const caution = 'These unreviewed compound source surfaces show fixed positions, not rib-space subdivisions, contraction, or breathing motion. Anatomical relationships require revision-bound radiologist review.';
+const caution = 'Left and right filters retain the same midline-labelled compound source surfaces; neither filter isolates a side. These unreviewed surfaces show fixed positions, not rib-space subdivisions, contraction, or breathing motion. Anatomical relationships require revision-bound radiologist review.';
 export const thoraxRespiratoryStudies = [
   { id: 'respiratory-wall-overview', title: 'Respiratory wall layers & diaphragm', fmaIds: ['FMA9756', 'FMA9757', 'FMA9758', 'FMA13295'], view: 'anterior', description: 'Show the three supplied intercostal identities and diaphragm together.', inspect: `Rotate and select each named surface. Hide one, compare the remainder, then Undo to restore the source view. ${caution}` },
   { id: 'respiratory-intercostal-comparison', title: 'Intercostal layer comparison', fmaIds: ['FMA9756', 'FMA9757', 'FMA9758'], view: 'anterior', description: 'Compare external, internal and innermost intercostal source meshes without the diaphragm.', inspect: `Select a named layer, hide it to expose another, and Undo to restore the prior source view. Their supplied meshes do not distinguish individual rib spaces. ${caution}` },
-  { id: 'respiratory-diaphragm', title: 'Diaphragm source surface', fmaIds: ['FMA13295'], view: 'inferior', description: 'Isolate the supplied diaphragm as one source identity.', inspect: `Compare its fixed source position with the overview. Undo restores the preceding state. The source does not separate muscular and tendinous parts. ${caution}` },
+  { id: 'respiratory-diaphragm', title: 'Diaphragm source surface', fmaIds: ['FMA13295'], view: 'inferior', description: 'Isolate the supplied diaphragm as one source identity; neither hemidiaphragm is separately selectable.', inspect: `Compare its fixed source position with the overview. Undo restores the preceding state. The source does not separate muscular and tendinous parts or either hemidiaphragm. ${caution}` },
 ] as const;

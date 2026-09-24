@@ -5,7 +5,10 @@ respiratory-wall identities, the three intercostal identities together, and the
 diaphragm alone. Selecting or hiding a source surface uses the existing
 visibility controls; Undo and Redo restore prior study states. Left and right
 filters both retain these records because the source labels each compound
-surface `midline`, rather than providing separate sided entries.
+surface `midline`, rather than providing separate sided entries. Each study's
+learner-facing inspect prompt says the filters show the same compound surfaces
+and cannot isolate a side. The diaphragm description and inspect prompt also
+state that neither hemidiaphragm is separately selectable.
 
 | Identity | Retained source files |
 | --- | --- |
@@ -19,6 +22,12 @@ availability checks exact target ID, FMA ID, bundle ID, node name and source-fil
 hashes. The study-library test also pins the bundle hash and checks missing,
 duplicate and changed target records. There is no new mesh, transformation,
 intercostal-space division, diaphragm subdivision or breathing animation.
+The study-library validator now checks that all four targets remain labelled
+`midline` and that the side-filter and hemidiaphragm limitations reach the
+learner-facing focus text.
+The exact recipe-history digests were updated for this three-prompt wording
+revision. Removing the three respiratory focuses still restores the unchanged
+pre-Thorax profile digest; the forearm study's exact addition remains unchanged.
 
 The prompts are short identification and comparison drafts. The source surfaces
 and their spatial relationships are not anatomically validated; revision-bound
