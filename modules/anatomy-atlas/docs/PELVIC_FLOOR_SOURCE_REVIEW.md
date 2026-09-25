@@ -12,15 +12,39 @@ in X/Z, Y/Z and X/Y projections. Scale and framing stay fixed within a sheet.
 X=0 is a source-coordinate plane, not a validated patient/anatomical midline.
 Names are the upstream source labels. Colours distinguish files, not tissues.
 
-| Source definition | Original components | Review sheet |
-| --- | --- | --- |
-| FMA45854, right pubococcygeus | FJ2550 | [Open projections](reviews/pelvic-floor/isa-FMA45854.png) |
-| FMA45855, left pubococcygeus | FJ1457M, FJ2545 | [Open projections](reviews/pelvic-floor/isa-FMA45855.png) |
-| FMA45856, right puborectalis | FJ2551 | [Open projections](reviews/pelvic-floor/isa-FMA45856.png) |
-| FMA45857, left puborectalis | FJ1458M, FJ2546 | [Open projections](reviews/pelvic-floor/isa-FMA45857.png) |
-| FMA45858, right iliococcygeus | FJ2549 | [Open projections](reviews/pelvic-floor/isa-FMA45858.png) |
-| FMA45859, left iliococcygeus | FJ1453M, FJ2544 | [Open projections](reviews/pelvic-floor/isa-FMA45859.png) |
-| FMA46442, tendinous arch of levator ani | FJ1465, FJ1465M, FJ2552, FJ2553 | [Open projections](reviews/pelvic-floor/isa-FMA46442.png) |
+| Source definition | Original components | Isolated components | Pelvic context |
+| --- | --- | --- | --- |
+| FMA45854, right pubococcygeus | FJ2550 | [Open](reviews/pelvic-floor/isa-FMA45854.png) | [Open](reviews/pelvic-floor-context/isa-FMA45854.png) |
+| FMA45855, left pubococcygeus | FJ1457M, FJ2545 | [Open](reviews/pelvic-floor/isa-FMA45855.png) | [Open](reviews/pelvic-floor-context/isa-FMA45855.png) |
+| FMA45856, right puborectalis | FJ2551 | [Open](reviews/pelvic-floor/isa-FMA45856.png) | [Open](reviews/pelvic-floor-context/isa-FMA45856.png) |
+| FMA45857, left puborectalis | FJ1458M, FJ2546 | [Open](reviews/pelvic-floor/isa-FMA45857.png) | [Open](reviews/pelvic-floor-context/isa-FMA45857.png) |
+| FMA45858, right iliococcygeus | FJ2549 | [Open](reviews/pelvic-floor/isa-FMA45858.png) | [Open](reviews/pelvic-floor-context/isa-FMA45858.png) |
+| FMA45859, left iliococcygeus | FJ1453M, FJ2544 | [Open](reviews/pelvic-floor/isa-FMA45859.png) | [Open](reviews/pelvic-floor-context/isa-FMA45859.png) |
+| FMA46442, tendinous arch of levator ani | FJ1465, FJ1465M, FJ2552, FJ2553 | [Open](reviews/pelvic-floor/isa-FMA46442.png) | [Open](reviews/pelvic-floor-context/isa-FMA46442.png) |
+
+## Context addendum
+
+The contextual sheets place the unmodified candidates beside the existing right
+and left hip bones (FMA16586/FMA16587), sacrum (FMA16202), and bilateral obturator
+internus (FMA22324/FMA22325). Every sheet uses one common frame and scale, without
+alignment, reflection or mesh correction. The first row shows bony context; the
+second adds obturator internus. Translucency deliberately exposes every layer,
+not the true depth order. These source-axis projections are not radiological
+views, attachment maps or proof that neighbouring structures meet correctly.
+
+There is no separately identified coccyx in the selected catalogue context; this
+does not establish absence of a coccygeal extension in the sacrum source. Fascia,
+organs and explicit attachment landmarks are not supplied by this context set.
+The pre-existing context surfaces remain unvalidated themselves.
+
+[Exact context sources](reviews/pelvic-floor-context/sources.json) reproduce the
+held measurement revision below and bind five original OBJ hashes, complete
+source definitions, catalogue identities and current hold evidence. Their SHA-256
+is `ac9d781a0dd5470a1ae40125809118bb038207cd62f2ba90ec7a45ea9588910d`.
+[Context projection evidence](reviews/pelvic-floor-context/projections.json)
+records the shared frame and image hashes. Four additional tests cover changed
+source/hold identities, corrupt bytes, unchanged coordinates and common framing;
+all seven contextual images regenerate byte for byte.
 
 ## What the measurements clarify
 
@@ -76,6 +100,8 @@ From the Atlas checkout, with the original OBJ cache in `../work/bodyparts3d`:
 ```sh
 npm run pelvic-floor:test
 npm run pelvic-floor:review
+npm run pelvic-floor-context:test
+npm run pelvic-floor-context:review
 npm run source-holds:test
 npm run source-geometry:test
 node scripts/validate-dissection-guidance.mjs
@@ -83,6 +109,7 @@ node scripts/validate-dissection-guidance.mjs
 
 The review check is offline and reproduces all seven images and both JSON files.
 To create an absent packet, run `node scripts/render-pelvic-floor-review.mjs`.
+Create the separate contextual packet with `node scripts/render-pelvic-floor-context.mjs`.
 Existing mismatched output is never overwritten. Missing/changed source bytes,
 component lists, archive evidence or hold status fail closed. Distance sampling
 uses at most 128 source vertices in each direction against the opposite surface;
