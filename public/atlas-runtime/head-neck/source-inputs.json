@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "406217ceb0263d96409061d91ad4bf8278f673b875f99d4abbb914c3a41b287e"
+    "sha256": "0304012447f0d50d89c37feb41bbf9137ae4701baddc94c89d1f01dc54cc6bec"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "eeb30dc9fbd8646dd016c2644e617abfd370f5b48d98fdcdcef2a9e2fbd10fe2"
+    "sha256": "cbeea7d702b85b87dec6a536a10bc2f64ed35c8695674ee514fe989477f008a4"
   },
   {
     "path": "app/body-education-link.ts",
@@ -684,6 +684,10 @@
     "sha256": "5289bca1081ec5e42e3e1cadcb8bcd63616fca38837b93460389db918489a5b1"
   },
   {
+    "path": "content/epigastric-vein-pathology.ts",
+    "sha256": "6afb107f31de04311a005ffa98ed8cf011dcdc7c3198cdf8c9c8ed70641c80a3"
+  },
+  {
     "path": "content/eye-imaging-teaching.ts",
     "sha256": "f9a837eb80e98b6a922144c8354dd9c949638f39113450350c06db762d04b20f"
   },
@@ -1193,7 +1197,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "2aff0b005693efb33b928d4459e46a3a082433fadd551284b01bf457bd3d1c33"
+    "sha256": "8cd881bb4d00769c18b372ccde39ada5338d7b005a86f6e1cc8979e5526f05b0"
   },
   {
     "path": "content/sca-mca-clinical-pins.json",
@@ -1922,6 +1926,10 @@
   {
     "path": "lib/elbow-studies.ts",
     "sha256": "dace97bb58a6ef824a49f1fe3874a049cd3aa6f148204670a8c535f121b75589"
+  },
+  {
+    "path": "lib/epigastric-vein-pathology.ts",
+    "sha256": "bb96582a47f415ce7800119d0917925a8b2cafa8d2bd5aa81040f2bb2ba1b9b5"
   },
   {
     "path": "lib/explode-layout.mjs",

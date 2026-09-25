@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+25 September inferior epigastric vein teaching: generated Atlas `64c1afa` adds
+two source-bound Pathology drafts with explicit single-case and laterality
+limits. No new models, controls, patient media or access changes. See
+[scope and checks](atlas-epigastric-vein-pathology-20260925.md). The main
+checkpoint records browser/publication/recovery evidence separately; all
+clinical/privacy/device/imaging gates remain open.
+
 25 September Search selection continuity: generated Atlas `0cdca34` corrects
 Practice→Search returning to Explore with the selected structure hidden.
 Selection now follows workspace restoration and resolves removal against the
