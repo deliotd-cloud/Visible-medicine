@@ -38,10 +38,16 @@ assert.equal(
 );
 const corrupt = structuredClone(a.dissectionProfiles);
 corrupt.hand.title = 'changed';
-assert.notEqual(
-  hash(preLimbVascularRecipeProfiles(corrupt)),
-  hash(oldProfiles),
+// The newer exact popliteal rollback rejects this deliberately corrupted
+// snapshot before earlier history can return it. Rejection is the required
+// safety result; never bypass that guard to recover an unknown profile.
+assert.throws(
+  () => preLimbVascularRecipeProfiles(corrupt),
+  (error) => error instanceof assert.AssertionError &&
+    error.message.includes('Unrecorded popliteal vessel study edit'),
 );
+assert.equal(corrupt.hand.title, 'changed', 'Rejected input is not rewritten');
+assert.equal(JSON.stringify(catalog), before, 'Replay does not alter the catalog');
 const ids = (s) => s.map((s) => s.id).sort(),
   sizes = {
     'calf-anterior-vessels': 16,

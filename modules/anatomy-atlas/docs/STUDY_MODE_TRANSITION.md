@@ -49,15 +49,22 @@ assistive-technology, anatomical or clinical sign-off. Source-only verification
 does not prove the hosted website has this correction; publication is recorded
 separately in the main task's recovery checkpoint.
 
-## Outstanding validation repair
+## Validation repair resolved
 
-`limb-vascular-studies:test` currently stops in the older popliteal recipe rollback
+`limb-vascular-studies:test` initially stopped in the older popliteal recipe rollback
 at `scripts/popliteal-vessel-study-history.mjs:10`: supplied hash
 `2c8cf675b38d3d81e6ce7bd89c192fcd748c200e2207d9bb99d3c171bc39b94b`
 does not match recorded `afterHash`
 `bd67a7cb92160f3fe2f4339309874c2a368ffd68bc8c4d39272e3cd97523e0c0`.
 The relevant tracked recipe, transition and rollback inputs are unchanged from
-the pre-fix commit `d732f0b519f5e9a61fca4460cd6e57dc918d9755`. This is not a pass
-for that suite. Before publication, derive the missing historical transition/order
-from exact Git evidence and repair replay without replacing original expected
-hashes. Current source-guard transition tests remain separate from that history.
+the pre-fix commit `d732f0b519f5e9a61fca4460cd6e57dc918d9755`. Further diagnosis
+proved this was the validator's deliberate `hand.title = 'changed'` clone, not a
+missing anatomy transition. Canonical profiles already match the recorded
+`afterHash` and replay to the original limb baseline. Popliteal commit
+`13b7342273789a3ad100571dd46bcb8b71b9bd00` added strict rejection deeper in that
+replay chain; the negative test still expected an unequal returned snapshot.
+
+The validator now requires the specific assertion rejection and checks that the
+rejected input and catalog are not rewritten. No rollback guard, record, expected
+hash, recipe, geometry or clinical gate is changed. The full suite is rerun before
+integration; publication evidence is recorded separately.
