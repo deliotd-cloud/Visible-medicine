@@ -4,6 +4,9 @@ import {createHash} from 'node:crypto';
 import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
 import ts from 'typescript';
+import {execFileSync} from 'node:child_process';
+import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
+import {wholeBodyTeachingSnapshot} from './exact-clinical-reference-history.mjs';
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {authoringBeforeOrbitalNeckMuscleImaging,orbitalNeckMuscleImagingHash as hash} from './orbital-neck-muscle-imaging-history.mjs';
 import pins from '../content/orbital-neck-muscle-imaging-pins.json' with {type:'json'};
@@ -12,7 +15,36 @@ import {beforeCorpusSpongiosumSource} from './corpus-spongiosum-source-history.m
 const newest=await contentContext(),context={...newest,api:beforeCorpusSpongiosumSource(authoringBeforeThoracoabdominalOrganImaging(newest),newest.catalog)},{api}=context,catalog=api.bodyDisplayCatalog(context.catalog);
 const {orbitalNeckMuscleImagingGroups:groups,orbitalNeckMuscleImagingModes:modes,orbitalNeckMuscleImagingReferences:references}=api;
 const original=JSON.stringify(catalog),before=authoringBeforeOrbitalNeckMuscleImaging(newest);
-assert.equal(hash({body:catalog.structures.map(s=>({id:s.id,sections:Object.fromEntries(api.contentTabs.map(t=>[t,before.bodyLesson(s,t)]))})),shoulder:api.structures,recipes:api.dissectionProfiles}),pins.previousAllLessonsAndRecipesHash,'All preceding teaching and recipes preserved');
+// Scoped rewind helpers retain unrelated later teaching. Use the original Git
+// trees for the complete old snapshot, and keep the live checks below separate.
+const transitionCommit='76e0d191c683f273d2399216d82a592b14438b7d';
+const gitBytes=(commit,path)=>execFileSync('git',['show',commit+':'+path],{maxBuffer:16e6});
+const transition=JSON.parse(await readFile('content/orbital-neck-muscle-imaging.transition.json','utf8'));
+assert.deepEqual(JSON.parse(gitBytes(transitionCommit,'content/orbital-neck-muscle-imaging-pins.json')),pins);
+assert.deepEqual(JSON.parse(gitBytes(transitionCommit,'content/orbital-neck-muscle-imaging.transition.json')),transition);
+const rawBefore=JSON.parse(gitBytes(pins.sourceCommit,'public/models/bodyparts3d/full-body/catalog.json'));
+const rawAfter=JSON.parse(gitBytes(transitionCommit,'public/models/bodyparts3d/full-body/catalog.json'));
+assert.deepEqual(rawAfter,rawBefore,'Original raw geometry catalog unchanged');
+const historicalBefore=await exactSourceHistoryApi(pins.sourceCommit);
+const historicalAfter=await exactSourceHistoryApi(transitionCommit);
+const oldDisplay=historicalBefore.bodyDisplayCatalog(rawBefore);
+assert.deepEqual(historicalAfter.bodyDisplayCatalog(rawAfter),oldDisplay);
+assert.deepEqual(historicalBefore.contentTabs,api.contentTabs);
+assert.deepEqual(historicalAfter.contentTabs,api.contentTabs);
+assert.equal(hash(wholeBodyTeachingSnapshot(historicalBefore,rawBefore)),pins.previousAllLessonsAndRecipesHash,'All original preceding teaching and recipes preserved');
+assert.deepEqual(historicalAfter.structures,historicalBefore.structures);
+assert.deepEqual(historicalAfter.dissectionProfiles,historicalBefore.dissectionProfiles);
+const recorded=new Map(pins.entries.flatMap(e=>e.topics.map(t=>[e.identity.id+'|'+t,{entry:e,tab:t}])));
+let historicalChanged=0,historicalUnchanged=0;
+for(const s of oldDisplay.structures)for(const t of api.contentTabs){
+ const entry=recorded.get(s.id+'|'+t),previous=historicalBefore.bodyLesson(s,t),next=historicalAfter.bodyLesson(s,t);
+ if(!entry){assert.deepEqual(next,previous,'Original unrelated topic preserved');historicalUnchanged++;continue;}
+ assert.deepEqual(s,entry.entry.identity);assert.deepEqual(previous,entry.entry.previous[t]);
+ assert.equal(hash(next),transition.entries.find(e=>e.id===s.id).sections[t]);
+ assert.deepEqual(api.bodyLesson(s,t),next,'Live normalized lesson matches original transition');
+ historicalChanged++;
+}
+assert.equal(historicalChanged,112);assert.equal(historicalUnchanged,9797);
 const records=api.bodyContentRecords(catalog),registry=new Map([...context.shoulder,...records].map(r=>[r.representationScope+'|'+r.id,r]));
 const validate=await contentValidator(registry);
 for(const r of records)assert(validate(r));
@@ -64,7 +96,7 @@ assert.equal(pins.entries.some(e=>['FMA81752','FMA81753'].includes(e.identity.fm
 for(const {identity:s} of pins.entries)for(const mutate of [
   x=>x.system='muscular',x=>x.category='organ',x=>x.laterality=x.laterality==='left'?'right':'left',x=>x.id=pins.entries.find(e=>e.identity.id!==s.id).identity.id,
   x=>x.id+='foreign',x=>x.name+='foreign',x=>x.fmaId='FMA000',x=>x.laterality='foreign',x=>x.region='foot',x=>x.regions.push('foot'),x=>x.sourceName+='foreign',x=>x.sourceTree='foreign',x=>x.sources[0].sha256='changed',x=>x.sources[0].file='changed',x=>x.bundle='foreign',x=>x.nodeName='foreign',x=>x.anchor[0]+=.01,x=>x.bounds.min[0]+=.01,x=>x.validation={status:'unvalidated',anatomicalReview:true},
-]) {const bad=structuredClone(s);mutate(bad);for(const tab of pins.entries.find(e=>e.identity.id===s.id).topics){assert.equal(api.orbitalNeckMuscleImagingLesson(bad,tab),undefined);assert.equal(api.bodyLesson(bad,tab).readiness,'pending');rejected++;}}
+]) {const bad=structuredClone(s);mutate(bad);for(const tab of pins.entries.find(e=>e.identity.id===s.id).topics){assert.equal(api.orbitalNeckMuscleImagingLesson(bad,tab),undefined);assert.equal(newest.api.bodyLesson(bad,tab).readiness,'pending');rejected++;}}
 assert.equal(rejected,2128);
 const first=pins.entries[0].identity;
 assert.throws(()=>authoringBeforeOrbitalNeckMuscleImaging({...newest,api:{...newest.api,bodyLesson(s,t){const lesson=newest.api.bodyLesson(s,t);return s.id===first.id&&t==='ct'?{...lesson,body:'unrecorded'}:lesson;}}}),/Unrecorded orbital\/neck muscle imaging change|Unrecorded whole-body teaching change after clinical reference revision/);
@@ -75,5 +107,6 @@ for(const f of unique.values())for(const key of f.references){assert(references[
 for(const [key,count]of Object.entries(budgets))assert(count<=200,key+' reference word count '+count);
 assert.equal(JSON.stringify(catalog),original);
 const report={baselineSource:pins.sourceCommit,groups:Object.keys(groups).length,sourceSelections:pins.entries.length,addedDraftPlacements:changed,modalities:{ct:42,mri:42,ultrasound:28},unchangedTopics:unchanged,ultrasoundPending:unresolved.map(s=>s.fmaId),bodySchemaRecords:records.length,actualNoteRenders:rendered,rejectedSourceTopicCombinations:rejected,uniqueReferenceFacts:unique.size,sourceWordCounts:budgets,sourceGeometryChanged:false,currentApprovalRecordsChanged:false,clinicalApproval:false,imagesImported:false,imagingConnected:false,browserOrDeviceAcceptance:false};
+report.historicalReplay={baselineSource:pins.sourceCommit,transitionCommit,changedTopics:historicalChanged,unchangedTopics:historicalUnchanged,originalPinsUnchanged:true,exactGitTrees:true};
 await writeFile('docs/orbital-neck-muscle-imaging-validation.json',JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify(report));

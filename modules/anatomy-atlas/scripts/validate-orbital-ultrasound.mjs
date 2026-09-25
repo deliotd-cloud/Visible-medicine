@@ -44,7 +44,7 @@ for(const s of display.structures)for(const topic of api.contentTabs){
 assert.equal(changed,14);assert.equal(unchanged,9922);assert.equal(rendered,14);assert.equal(bodies.size,7);
 for(const {identity}of pins.entries)for(const mutate of [
  s=>s.id+='x',s=>s.fmaId='FMA0',s=>s.name+='x',s=>s.sourceName+='x',s=>s.laterality=s.laterality==='left'?'right':'left',s=>s.region='hand',s=>s.regions.push('hand'),s=>s.system='nervous',s=>s.category='bone',s=>s.sourceTree='partof',s=>s.sources[0].file='FJ0',s=>s.sources[0].sha256='x',s=>s.bundle='x',s=>s.nodeName='x',s=>s.anchor[0]+=.1,s=>s.bounds.min[0]+=.1,s=>s.validation={status:'unvalidated',anatomicalReview:true},
-]){const bad=structuredClone(identity);mutate(bad);assert.equal(api.orbitalNeckMuscleImagingLesson(bad,'ultrasound'),undefined);rejected++;}
+]){const bad=structuredClone(identity);mutate(bad);assert.equal(api.orbitalNeckMuscleImagingLesson(bad,'ultrasound'),undefined);assert.equal(api.bodyLesson(bad,'ultrasound').readiness,'pending');rejected++;}
 const first=pins.entries[0];
 assert.throws(()=>beforeOrbitalUltrasound({...api,bodyLesson(s,t){return s.id===first.identity.id&&t==='ultrasound'?first.previous:api.bodyLesson(s,t);}}),/Mixed/);
 assert.throws(()=>beforeOrbitalUltrasound({...api,bodyLesson(s,t){return s.id===first.identity.id&&t==='ultrasound'?{...api.bodyLesson(s,t),body:'foreign'}:api.bodyLesson(s,t);}}),/Unrecorded/);

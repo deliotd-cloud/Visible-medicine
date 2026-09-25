@@ -49,5 +49,13 @@
   "clinicalApproval": false,
   "imagesImported": false,
   "imagingConnected": false,
-  "browserOrDeviceAcceptance": false
+  "browserOrDeviceAcceptance": false,
+  "historicalReplay": {
+    "baselineSource": "d709e70a6678b7846053f39b4e7ebae8efb79f55",
+    "transitionCommit": "76e0d191c683f273d2399216d82a592b14438b7d",
+    "changedTopics": 112,
+    "unchangedTopics": 9797,
+    "originalPinsUnchanged": true,
+    "exactGitTrees": true
+  }
 }

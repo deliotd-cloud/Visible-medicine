@@ -1,6 +1,33 @@
 # Orbital muscle ultrasound orientation — draft
 
-## Saved work in progress — owner pause, 25 September
+## Verification resumed — 25 September
+
+The preceding-baseline failure was reproduced using teaching compiled from the
+exact pre-addition Git commit. The old validator compared a partial history
+rewind, which retains unrelated later teaching, with a complete original
+snapshot. It now replays the original before/after Git trees, preserves both
+immutable pin files and checks all 112 original additions plus 9,797 unchanged
+topics. Live rendering and 2,128 source-mutation rejections still pass. Invalid
+source mutation tests exercise the runtime instead of asking strict history
+replay to accept a fabricated source identity.
+
+The fourteen new ultrasound drafts pass 14 actual note renders, 238 identity
+rejections and preservation of 9,922 other topics. TypeScript, targeted lint,
+review tests and the shared production build pass. Current renderer/review
+fingerprints were regenerated to reflect the compact Search header and teaching
+changes; this does not issue or transfer clinical approval.
+The regenerated nine-record shoulder export passes the broad content contract
+(33,445 checks); review-gate checks pass (235). These are code/data checks, not
+clinical acceptance. No private review record, source scan or mask was touched.
+
+A local 1280 × 720 browser sample selected left levator (FMA49049) and right
+superior oblique (FMA49052), showing their distinct Ultrasound notes, references,
+review warnings and no connected study. The Imaging/Ultrasound tab remained
+selected between structures. This was desktop content QA, not new mobile,
+screen-reader, clinical or hosted-byte acceptance. Generated website integration
+is still pending. No original source geometry or clinical approval was changed.
+
+## Historical pause checkpoint
 
 Focused orbital checks pass: 14 changed topics, 9,922 unchanged topics,
 14 actual note renders and 238 identity rejections. TypeScript and the

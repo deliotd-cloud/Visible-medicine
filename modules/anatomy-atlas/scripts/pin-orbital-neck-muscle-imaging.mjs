@@ -16,7 +16,7 @@ for(const b of bundles)assert.equal(createHash('sha256').update(await readFile('
 const path='content/orbital-neck-muscle-imaging-pins.json',sourceCommit='d709e70a6678b7846053f39b4e7ebae8efb79f55';
 const base={sourceCommit,sourceVersion:catalog.sourceVersion,license:catalog.license,coordinateSystem:catalog.coordinateSystem,bundles,entries};
 if(process.argv.includes('--check')){
- const saved=JSON.parse(await readFile(path));assert.deepEqual(saved.entries.map(({previous,...e})=>e),entries);
+ const saved=JSON.parse(await readFile(path));assert.deepEqual(saved.entries.map(({previous:_previous,...e})=>e),entries);
  for(const k of ['sourceCommit','sourceVersion','license','coordinateSystem','bundles'])assert.deepEqual(saved[k],base[k]);
 }else{
  assert.equal(execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),sourceCommit);
