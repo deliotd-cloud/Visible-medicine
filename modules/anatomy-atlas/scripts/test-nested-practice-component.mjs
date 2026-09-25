@@ -6,9 +6,10 @@ import {build} from './workspace-component-test-build.mjs';
 const require=createRequire(import.meta.url), React=require('react');
 const actualLink=await import('vinext/shims/link');
 const built=await build({stdin:{contents:`export {NestedPractice} from './app/nested-practice'; export {VentricularView} from './app/ventricles'; export {cardiacCatalog} from './lib/cardiac'; export {ventricleCatalog} from './lib/ventricles'; export {nestedPracticePool} from './lib/nested-practice';`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'cjs',write:false,plugins:[{name:'gpu-boundary',setup(b){b.onLoad({filter:/body-scene\.tsx$/},()=>({contents:'export const BodyScene=()=>null; export const retryBodyAssets=()=>{};',loader:'tsx'}));}}]});
-let slots=[],cursor=0,checks=0;
+let slots=[],cursor=0,checks=0,effectSlots=[],effectCursor=0,pendingEffects=[];
 const state=value=>{const i=cursor++;if(!(i in slots))slots[i]=typeof value==='function'?value():value;return [slots[i],next=>{slots[i]=typeof next==='function'?next(slots[i]):next;}];};
-const shim={...React,useState:state,useReducer:(reduce,arg,init)=>{const [value,set]=state(()=>init?init(arg):arg);return [value,action=>set(previous=>reduce(previous,action))];},useRef:value=>state(()=>({current:value}))[0],useMemo:fn=>fn(),useCallback:fn=>fn,useLayoutEffect:()=>{},useEffect:()=>{}};
+const layoutEffect=(fn,deps)=>{const i=effectCursor++;const prior=effectSlots[i];if(!prior||!deps||deps.some((value,index)=>!Object.is(value,prior[index])))pendingEffects.push(fn);effectSlots[i]=deps;};
+const shim={...React,useState:state,useReducer:(reduce,arg,init)=>{const [value,set]=state(()=>init?init(arg):arg);return [value,action=>set(previous=>reduce(previous,action))];},useRef:value=>state(()=>({current:value}))[0],useMemo:fn=>fn(),useCallback:fn=>fn,useLayoutEffect:layoutEffect,useEffect:()=>{}};
 const scope={exports:{}};
 runInNewContext(built.outputFiles[0].text,{module:scope,exports:scope.exports,require:id=>id==='react'?shim:id==='next/link'?{__esModule:true,...actualLink}:require(id),structuredClone,requestAnimationFrame:fn=>fn()});
 const api=scope.exports, clone=v=>JSON.parse(JSON.stringify(v));
@@ -16,10 +17,26 @@ const same=(a,b,m)=>{checks++;assert.deepEqual(clone(a),clone(b),m);};
 const check=(v,m)=>{checks++;assert(v,m);};
 const nodes=n=>!n||typeof n!=='object'?[]:Array.isArray(n)?n.flatMap(nodes):[n,...nodes(n.props?.children)];
 const text=n=>typeof n==='string'||typeof n==='number'?String(n):!n?'':Array.isArray(n)?n.map(text).join(''):text(n.props?.children);
+const document={activeElement:null};
+let focusNodes=new Map();
+const mount=()=>{slots=[];effectSlots=[];focusNodes=new Map();document.activeElement=null;};
+const renderComponent=fn=>{
+  cursor=0;effectCursor=0;pendingEffects=[];
+  const tree=fn();
+  for(const node of nodes(tree))if(node.props?.ref&&typeof node.props.ref==='object') {
+    const key=node.type==='h3'?'heading':node.type==='output'?'feedback':null;
+    if(!key)continue;
+    if(!focusNodes.has(key))focusNodes.set(key,{focusCount:0,focus(){this.focusCount++;document.activeElement=this;}});
+    node.props.ref.current=focusNodes.get(key);
+  }
+  for(const effect of pendingEffects)effect();
+  return tree;
+};
+const focused=key=>check(document.activeElement===focusNodes.get(key),`${key} receives focus`);
 for(const [study,catalog] of [['cardiac',api.cardiacCatalog],['ventricles',api.ventricleCatalog]])for(const mode of ['name','find']) {
-  slots=[];let tree,closed=0;
+  mount();let tree,closed=0;
   const structures=api.nestedPracticePool(catalog.parent,study,catalog.structures,catalog.bundles.map(b=>b.id),[]);
-  const render=()=>{cursor=0;tree=api.NestedPractice({catalog,structures,study,mode,view:'anterior',onClose:()=>closed++});};
+  const render=()=>{tree=renderComponent(()=>api.NestedPractice({catalog,structures,study,mode,view:'anterior',onClose:()=>closed++}));};
   const scene=()=>nodes(tree).find(n=>n.props?.onRendererHealth)?.props;
   const button=label=>nodes(tree).find(n=>n.props?.onClick&&text(n)===label)?.props;
   const choices=()=>nodes(tree).filter(n=>n.props?.onClick&&structures.some(s=>s.name===text(n)));
@@ -68,8 +85,41 @@ for(const [study,catalog] of [['cardiac',api.cardiacCatalog],['ventricles',api.v
   button('Return to dissection').onClick();same(closed,1,'Return callback');
 }
 for(const [study,catalog] of [['cardiac',api.cardiacCatalog],['ventricles',api.ventricleCatalog]]) {
-  slots=[];let tree;
-  const render=()=>{cursor=0;tree=api.VentricularView({parent:catalog.parent,study});};
+  mount();let tree;
+  const structures=api.nestedPracticePool(catalog.parent,study,catalog.structures,catalog.bundles.map(b=>b.id),[]);
+  const render=()=>{tree=renderComponent(()=>api.NestedPractice({catalog,structures,study,mode:'name',view:'anterior',onClose:()=>{}}));};
+  const scene=()=>nodes(tree).find(n=>n.props?.onRendererHealth)?.props;
+  const button=label=>nodes(tree).find(n=>n.props?.onClick&&text(n)===label)?.props;
+  render();focused('heading');
+  const headingFocusCount=focusNodes.get('heading').focusCount;
+  for(const b of catalog.bundles)scene().onLoaded(b.id);
+  scene().onRendererHealth('ready');render();
+  same(focusNodes.get('heading').focusCount,headingFocusCount,'Loading completion does not refocus heading');
+  const correct=scene().structures[0];
+  document.activeElement={label:'answer button'};
+  button(correct.name).onClick();render();focused('feedback');
+  same(nodes(tree).find(n=>n.props?.ref?.current===focusNodes.get('feedback'))?.props.tabIndex,-1,'Feedback can receive programmatic focus');
+  check(text(tree).includes('Correct: '+correct.name),'Named answer feedback rendered');
+  const feedbackFocusCount=focusNodes.get('feedback').focusCount;
+  document.activeElement={label:'next button'};
+  scene().onRendererHealth('lost');render();
+  scene().onRendererHealth('ready');render();
+  same(focusNodes.get('feedback').focusCount,feedbackFocusCount,'Health updates do not refocus answered feedback');
+  check(document.activeElement.label==='next button','Health updates leave the active control focused');
+  button('Next space').onClick();render();focused('heading');
+  document.activeElement={label:'skip button'};
+  button('Skip & reveal').onClick();render();focused('feedback');
+  check(text(tree).includes('Answer: '),'Skip reveals feedback');
+  button('Next space').onClick();render();focused('heading');
+  for(let i=2;i<4;i++) {
+    button('Skip & reveal').onClick();render();focused('feedback');
+    button(i===3?'Finish round':'Next space').onClick();render();focused('heading');
+  }
+  check(text(tree).includes('Practice complete'),'Round completion rendered');
+}
+for(const [study,catalog] of [['cardiac',api.cardiacCatalog],['ventricles',api.ventricleCatalog]]) {
+  mount();let tree;
+  const render=()=>{tree=renderComponent(()=>api.VentricularView({parent:catalog.parent,study}));};
   const scene=()=>nodes(tree).find(n=>n.props?.onRendererHealth)?.props;
   const button=label=>nodes(tree).find(n=>n.props?.onClick&&text(n)===label)?.props;
   const start=()=>nodes(tree).find(n=>n.props?.onClick&&text(n).startsWith('Start practice ('))?.props;

@@ -57,6 +57,7 @@ export function NestedPractice({
   const [failed, setFailed] = useState<string[]>([]);
   const [retry, setRetry] = useState(0);
   const heading = useRef<HTMLHeadingElement>(null);
+  const feedback = useRef<HTMLOutputElement>(null);
   useLayoutEffect(() => {
     heading.current?.focus();
   }, [practice.id, practice.index, practice.status]);
@@ -75,6 +76,9 @@ export function NestedPractice({
   const target = structures.find((structure) => structure.id === question?.target);
   const answered = practice.responses.length > practice.index;
   const currentResponse = practice.responses[practice.index];
+  useLayoutEffect(() => {
+    if (answered && practice.status !== 'complete') feedback.current?.focus();
+  }, [answered, practice.id, practice.index, practice.status]);
   const appearance = useMemo(
     () =>
       Object.fromEntries(
@@ -226,7 +230,7 @@ export function NestedPractice({
             ) : (
               <p>Select the named surface in the model.</p>
             )}
-            <p role="status">
+            <output ref={feedback} tabIndex={-1} className="block">
               {!ready
                 ? 'Answering is paused until the model is ready.'
                 : answered
@@ -234,7 +238,7 @@ export function NestedPractice({
                     ? `Correct: ${target.name}.`
                     : `Answer: ${target.name}.`
                   : 'Choose once, or skip to reveal the answer.'}
-            </p>
+            </output>
             {answered ? (
               <Button onClick={next} disabled={!ready}>
                 {practice.index + 1 === practice.questions.length ? 'Finish round' : 'Next space'}

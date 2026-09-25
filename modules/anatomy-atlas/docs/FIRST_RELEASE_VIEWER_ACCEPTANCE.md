@@ -1,5 +1,33 @@
 # First-release viewer acceptance evidence
 
+## 25 September: nested practice answer focus
+
+Local head/neck → Search `ventricle` → Fourth ventricle was followed using actual
+Tab/Shift+Tab/Enter navigation. Opening the nested study focused its region;
+Back to dissection restored Practice identification, and Back to atlas restored
+Search. Selection remained Fourth ventricle. Find mode still requires a visual
+surface choice; Name the isolated space exposes keyboard-operable answer buttons.
+
+A real defect was reproduced: submitting a named answer disabled the focused
+button and left `document.activeElement` on BODY. Shared cardiac/ventricular
+practice now focuses a semantic `output` feedback element after answer or skip.
+One Tab reaches Next space/Finish round; advancing focuses the next heading and
+completion focuses Practice complete. Renderer updates do not repeatedly refocus
+feedback. No scoring, question pool, source/load guard or parent-state change.
+
+Desktop 1280×720: a four-question keyboard round, Skip, Finish, Retry missed and
+return paths passed. At 390×844, document width remained390; focused feedback and
+Next were scrolled into the control panel (sample feedback715–737px, Next737–769px).
+The viewport was reset afterwards. The final semantic-output implementation was
+rechecked: OUTPUT feedback → Tab to Next → H3 heading. No console errors were
+captured in the earlier full journey. The temporary test tabs were closed.
+
+`nested-practice:test` adds controlled DOM-focus/effect cases for both cardiac and
+ventricular practice, including answers, skips, next/completion and no focus theft
+on loading/renderer changes. This is not native screen-reader, real touchscreen,
+200% text zoom or clinical acceptance. Isolated naming remains a visual task, not
+a nonvisual anatomy examination. Those wider release gates remain open.
+
 ## 25 September: compact Search label and keyboard path
 
 At 320 × 568, the standalone Abdomen header previously wrapped brand, Search
