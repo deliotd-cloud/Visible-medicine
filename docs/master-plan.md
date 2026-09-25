@@ -1,5 +1,11 @@
 # Visible Medicine — shared delivery plan
 
+25 September nested practice continuity: answering/skipping preserves keyboard
+position at feedback, then Next/Finish and the next heading. No additional UI,
+model, teaching or access changes. See [scope and verification](atlas-nested-answer-focus-20260925.md).
+The main-task checkpoint records publication/recovery separately; continue the
+full roadmap with clinical, privacy and device gates intact.
+
 25 September study-mode continuity: regional Search now restores the destination
 workspace before applying an accepted study, retaining its recipe and framing
 when launched from Explore. No new controls, anatomy or access changes. See
