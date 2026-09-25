@@ -1,5 +1,16 @@
 # First-release viewer acceptance evidence
 
+## 25 September: browser practice recovery acceptance sample
+
+The current published regional runtime retains study state after a controlled
+missing-model retry and preserves quiz questions/feedback/scores through real
+software-triggered WebGL context loss, restoration and Restart 3D view. Answer
+and Next controls are disabled while unavailable; Exit remains usable. See
+[exact setup, observations and limits](PRACTICE_RECOVERY_BROWSER_20260925.md).
+The test also isolates an initial iframe observer error to a no-Atlas control.
+This is desktop/one-region evidence, not hardware-reset, mobile, all-mode or
+clinical certification; the overall viewer release gate remains pending.
+
 ## 25 September: regional practice return-state repair
 
 Local Atlas `9e534da` plus this change: Thorax → Dissect → Expose deeper chest
