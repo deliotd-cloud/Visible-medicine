@@ -1,5 +1,5 @@
 'use client';
-import { useCallback, useEffect, useMemo, useReducer, useRef, useState, type ReactNode } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useReducer, useRef, useState, type ReactNode } from 'react';
 import { ArrowLeft, Focus, RotateCcw, Tags, Undo2, Redo2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
@@ -9,6 +9,7 @@ import { Dialog, DialogContent, DialogDescription, DialogTitle } from '@/compone
 import { BodyScene, retryBodyAssets } from './body-scene';
 import { allBodySystems } from './body-types';
 import { ExplodeStyleSelect } from './explode-style-select';
+import { restoreSpecimenRemovalFocus, restoreSpecimenHistoryFocus } from './specimen-removal-focus';
 import type { DissectionView } from './dissection-data';
 import type { BodyLayout } from '@/lib/body-arrangement';
 import { initialInspection } from '@/lib/inspection-state';
@@ -61,6 +62,19 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
   const [practice, setPractice] = useState<IdentificationState | null>(null);
   const practiceLauncher = useRef<HTMLButtonElement | null>(null);
   const restorePracticeFocus = useRef(false);
+  const removalFocusOrigin = useRef<HTMLButtonElement | null>(null);
+  const undoButton = useRef<HTMLButtonElement | null>(null);
+  const redoButton = useRef<HTMLButtonElement | null>(null);
+  const historyFocusOrigin = useRef<HTMLButtonElement | null>(null);
+  useLayoutEffect(() => {
+    const trigger = removalFocusOrigin.current;
+    removalFocusOrigin.current = null;
+    restoreSpecimenRemovalFocus(trigger, undoButton.current);
+    const historyTrigger = historyFocusOrigin.current;
+    historyFocusOrigin.current = null;
+    restoreSpecimenHistoryFocus(historyTrigger,
+      historyTrigger === undoButton.current ? redoButton.current : undoButton.current);
+  }, [state]);
   const [loaded, setLoaded] = useState<string[]>([]), [failed, setFailed] = useState<string[]>([]), [retry, setRetry] = useState(0);
   const onLoaded = useCallback((id: string) => { setLoaded((p) => p.includes(id) ? p : [...p, id]); setFailed((p) => p.filter((v) => v !== id)); }, []);
   const onFailure = useCallback((id: string) => setFailed((p) => p.includes(id) ? p : [...p, id]), []);
@@ -86,7 +100,10 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
     setView(kneeSpecimenStudies.find((s) => s.id === value)!.view);
   }
   function select(id: string) { dispatch({ type: 'select', id }); setFocus(false); }
-  function historyStep(type: 'undo' | 'redo') { dispatch({ type }); assembledDisplay(); }
+  function historyStep(type: 'undo' | 'redo', trigger?: HTMLButtonElement) {
+    if (trigger && trigger.ownerDocument.activeElement === trigger) historyFocusOrigin.current = trigger;
+    dispatch({ type }); assembledDisplay();
+  }
   function showAll() {
     const all = kneeSpecimenStudies.find((s) => s.id === 'all');
     const target = all?.selectedId ?? kneeStructures[0]?.id;
@@ -143,8 +160,8 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
       <p className="um-knee-guide">{active?.note ?? 'Your custom tissue selection. Undo restores the previous dissection step.'}</p>
       {supplement?.studySupplement?.(specimen, active?.id ?? null)}
       <div className="eye-layer-actions">
-        <Button size="sm" variant="outline" disabled={!history.length} onClick={() => historyStep('undo')}><Undo2 />Undo</Button>
-        <Button size="sm" variant="outline" disabled={!future.length} onClick={() => historyStep('redo')}><Redo2 />Redo</Button>
+        <Button ref={undoButton} size="sm" variant="outline" disabled={!history.length} onClick={(event) => historyStep('undo', event.currentTarget)}><Undo2 />Undo</Button>
+        <Button ref={redoButton} size="sm" variant="outline" disabled={!future.length} onClick={(event) => historyStep('redo', event.currentTarget)}><Redo2 />Redo</Button>
         <span aria-live="polite">{visible.length}/{kneeStructures.length} visible</span>
       </div>
       {!supplement && <SpecimenMotorExplorer definition={specimen} selectedId={selectedId} onSelect={select} onExplore={nerve => {
@@ -160,7 +177,11 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
           <div className="eye-layer-actions">
             <Button size="sm" variant="outline" aria-pressed={isolated} onClick={() => { setIsolated((v) => !v); setFocus(false); }}>{isolated ? 'Show others' : 'Fade others'}</Button>
             <Button size="sm" variant="outline" disabled={!ready} onClick={() => { setFocus(true); setReset((n) => n + 1); }}><Focus />Frame</Button>
-            <Button size="sm" variant="outline" onClick={() => { dispatch({ type: 'visibility', id: selected.id, visible: false }); setFocus(false); }}>Set aside</Button>
+            <Button size="sm" variant="outline" onClick={(event) => {
+              if (event.currentTarget.ownerDocument.activeElement === event.currentTarget)
+                removalFocusOrigin.current = event.currentTarget;
+              dispatch({ type: 'visibility', id: selected.id, visible: false }); setFocus(false);
+            }}>Set aside</Button>
           </div>
           {supplement ? <>{supplement.learning(selected, specimen)}{supplement.studyLink?.(specimen,selected.id,active?.id ?? null,view)}</> : <>
             <SpecimenLearning definition={specimen} selected={selected} initialTopic={selected.id === initialNavigation?.selectedId ? initialNavigation.topic : null} />
