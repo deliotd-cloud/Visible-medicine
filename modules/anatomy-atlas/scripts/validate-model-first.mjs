@@ -108,6 +108,52 @@ for (const [name, migration] of Object.entries(modelFirstHandlerMigrations)) {
   check(migration.commits.length > 0, `${name} migration provenance`);
   check(migration.evidence.length > 0, `${name} executable evidence`);
 }
+// Search confirmation gained an explicit accepted/rejected result in e36cd877.
+// Replay both exact Git revisions; retain the former hash as evidence instead
+// of rebasing the portable baseline onto today's implementation.
+const stageFeedbackCommit = 'e36cd877c00f57c5a3a60998dfbb6c0df770ce7c';
+const stageBefore = bindings(execFileSync('git',
+  ['show', `${stageFeedbackCommit}^:app/body-explorer.tsx`], { maxBuffer: 2e6 }).toString());
+const stageAfter = bindings(execFileSync('git',
+  ['show', `${stageFeedbackCommit}:app/body-explorer.tsx`], { maxBuffer: 2e6 }).toString());
+same(stageBefore.functions.changeStage,
+  'fb9a7f674da920c75b726868d4fe994cb7bc77fdff0c4891f94f9ec4bc138cdd');
+same(stageAfter.functions.changeStage,
+  'c0507a33e617b231b93bacbcd775efc0c693b6184b3fae74b55871d25ddd81f1');
+same(stageAfter, {
+  ...stageBefore,
+  functions: { ...stageBefore.functions, changeStage: stageAfter.functions.changeStage },
+}, 'Search feedback changed only the stage handler, not other handlers/callbacks');
+// Execute today's stage handler: a rejected search must not alter the model.
+const stageAst = ts.createSourceFile('body.tsx', source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
+let stageNode;
+const findStage = node => {
+  if (ts.isFunctionDeclaration(node) && node.name?.text === 'changeStage') stageNode = node;
+  ts.forEachChild(node, findStage);
+};
+findStage(stageAst);
+check(stageNode, 'Current stage handler exists');
+const stageCode = ts.transpile(printer.printNode(ts.EmitHint.Unspecified, stageNode, stageAst));
+for (const [exam, id, accepted] of [[false, 'assembled', true], [false, 'free', true],
+  [false, 'invalid', false], [true, 'assembled', false], [true, 'free', false]]) {
+  const calls = [], camera = { saved: true }, cameraRestore = { current: camera };
+  const setters = Object.fromEntries(['setInspection', 'setPlate', 'setLayout', 'dispatch',
+    'setSystems', 'setSelectedId', 'setFocus', 'setIsolated', 'setExplode', 'setZoom',
+    'setView', 'setReset'].map(name => [name, value => calls.push([name, value])]));
+  const result = runInNewContext(stageCode + '; changeStage(id);', {
+    exam, id, profile: { stages: [{ id: 'assembled', view: 'anterior' }] },
+    cameraRestore, initialInspection: {}, layout: 'tray', allBodySystems: {}, ...setters,
+  });
+  same(result, accepted, `Stage acceptance: ${id}, exam=${exam}`);
+  same(cameraRestore.current, accepted ? null : camera, 'Rejected stage retains saved camera');
+  if (!accepted) same(calls, [], 'Rejected stage makes no state changes');
+  else {
+    same(JSON.parse(JSON.stringify(calls.find(([name]) => name === 'dispatch')[1])),
+      id === 'free' ? { type: 'free' } : { type: 'stage', id });
+    check(calls.some(([name, value]) => name === 'setExplode' && value === 0));
+    check(calls.some(([name, value]) => name === 'setPlate' && value === false));
+  }
+}
 same(
   bindings(source).functions,
   {
@@ -134,7 +180,7 @@ same(
     // invalid/source-changed recipes. limb-vascular-studies:test executes all
     // three handlers; limbic-landmarks:test covers the current source guard.
     changeStage:
-      'fb9a7f674da920c75b726868d4fe994cb7bc77fdff0c4891f94f9ec4bc138cdd',
+      stageAfter.functions.changeStage,
     changeFocus:
       'b39d4aac46b371a7092cd176d85be01ad20151eb56f2dfc4fa5d8e0dce73b8ff',
     openRelatedStudy:
@@ -309,6 +355,20 @@ migratedCallbacks.push(coronaryCallback);
 // Conditional Tray entry/overview framing leaves all entries present;
 // explode-styles:test executes this exact callback in both directions.
 migratedCallbacks.push('onClick/ff0cb1ea980e4313d0740aa8fe952f6993695f1b7c5668597f0675264694b560');
+// Contextual Undo reuses the existing guarded handler at one additional site.
+// Preserve multiplicity: converting callbacks to a Set would conceal removals.
+const contextualUndoCommit = '15029f9075b6a252d0b594e6e8229bea2bf01d94';
+const undoBefore = bindings(execFileSync('git',
+  ['show', `${contextualUndoCommit}^:app/body-explorer.tsx`], { maxBuffer: 2e6 }).toString());
+const undoAfter = bindings(execFileSync('git',
+  ['show', `${contextualUndoCommit}:app/body-explorer.tsx`], { maxBuffer: 2e6 }).toString());
+const contextualUndoCallback =
+  'onUndo/264f0af4a85c26e0e12899dc9c9ff0ee9198afb82192533289be2e3329a9c468';
+same(undoAfter, {
+  functions: undoBefore.functions,
+  callbacks: [...undoBefore.callbacks, contextualUndoCallback].sort(compare),
+}, 'Contextual Undo adds exactly one callback without changing named handlers');
+migratedCallbacks.push(contextualUndoCallback);
 same(
   bindings(source).callbacks,
   migratedCallbacks.sort(compare),

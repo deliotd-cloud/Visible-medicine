@@ -1,5 +1,8 @@
 # Responsive scene sizing — 25 September 2026
 
+Follow-up: [exact handler/callback history repair](MODEL-FIRST-HISTORY-REPAIR-20260925.md)
+records the missing migrations; the failure below describes the initial QA run.
+
 Base: `962a0c6b3342f9820d6f62e3e3c0138892ba9406`. Local viewer, not hosted acceptance.
 
 ## Observed issue and correction
