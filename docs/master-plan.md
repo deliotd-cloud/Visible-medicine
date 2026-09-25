@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+25 September camera/reassembly integration: generated Atlas `541bc97` retains
+orthographic framing across resize and clarifies Tray reassembly captions.
+Hand, foot and whole-body interaction samples pass; all models and independent
+access gates are unchanged. See [scope and limitations](atlas-camera-resize-20260925.md).
+Continue named femoral-component clinical drafts and the full roadmap; no clinical,
+privacy, registration or device sign-off is implied.
+
 25 September pelvic detail/teaching integration: generated Atlas `0cd2125`
 retains close-up framing for fourteen fully contained hip muscles and adds
 eleven source-bound pelvic-vein imaging drafts to existing panels. All models,
