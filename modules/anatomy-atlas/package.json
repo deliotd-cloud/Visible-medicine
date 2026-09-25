@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "hand-bone-xray:test": "node scripts/record-hand-bone-xray.mjs --check && node scripts/validate-hand-bone-xray.mjs",
     "hip-abductor-xray:test": "node scripts/record-hip-abductor-xray.mjs --check && node scripts/validate-hip-abductor-xray.mjs",
     "source-display-notes:test": "node scripts/test-source-display-notes.mjs",
     "pelvic-floor-context:test": "node --test scripts/test-pelvic-floor-context.mjs scripts/test-pelvic-floor-context-projections.mjs",

@@ -7,10 +7,11 @@ The index is a fresh review starting point, not a carried-over sign-off. Run
 `node scripts/prepare-first-release-review.mjs --check` before using it and
 verify the displayed website candidate separately.
 
-This refresh follows the nested answer-focus publication: renderer fingerprint
-`26f0cd726250058566535252a13c035d02b9b13ee422c9c2994ae8d35e4c1fb8`.
-Website `2c927b7` contains that renderer from Atlas `689835f`. Standalone review
-links below still require their own route/revision check; publication does not
+The hand-bone X-ray candidate refresh uses renderer fingerprint
+`54fef1b1dfe6b2ae293db8be6340c05924c67d96e98e586e437a6ccca403ec1c`.
+Website `2c927b7` still contains the earlier renderer from Atlas `689835f`; do not
+use this candidate packet as proof of that displayed website revision. Standalone
+review links below require their own route/revision check; publication does not
 submit or approve the worksheet. Selection identities and review scope are unchanged.
 
 This small sample calibrates the first-release review, not the final shipped

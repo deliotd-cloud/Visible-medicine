@@ -8,15 +8,29 @@ import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {authoringBeforeAcralBoneImaging,acralBoneImagingHash as hash} from './acral-bone-imaging-history.mjs';
 import pins from '../content/acral-bone-imaging-pins.json' with {type:'json'};
 import {authoringBeforeOrbitalNeckMuscleImaging} from './orbital-neck-muscle-imaging-history.mjs';
-const newest=await contentContext(),context={...newest,api:authoringBeforeOrbitalNeckMuscleImaging(newest)},{api}=context,catalog=api.bodyDisplayCatalog(context.catalog);
+import {beforeCorpusSpongiosumSource} from './corpus-spongiosum-source-history.mjs';
+import {prePelvicUrethralProfiles} from './pelvic-urethral-study-history.mjs';
+import {build} from './workspace-component-test-build.mjs';
+const newest=await contentContext();
+// The immutable acral snapshot predates this source and its two regional focuses.
+// Reuse their exact recorded guards; never remove arbitrary live anatomy/recipes.
+const sourceEra=api=>{
+  api=beforeCorpusSpongiosumSource(api,newest.catalog);
+  return {...api,dissectionProfiles:prePelvicUrethralProfiles(api.dissectionProfiles)};
+};
+const context={...newest,api:sourceEra(authoringBeforeOrbitalNeckMuscleImaging(newest))},{api}=context,catalog=api.bodyDisplayCatalog(context.catalog);
 const {acralBoneImagingGroups:groups,acralBoneImagingModes:modes,acralBoneImagingReferences:references}=api;
-const original=JSON.stringify(catalog),before=authoringBeforeAcralBoneImaging(newest);
+const original=JSON.stringify(catalog),before=sourceEra(authoringBeforeAcralBoneImaging(newest));
 assert.equal(hash({body:catalog.structures.map(s=>({id:s.id,sections:Object.fromEntries(api.contentTabs.map(t=>[t,before.bodyLesson(s,t)]))})),shoulder:api.structures,recipes:api.dissectionProfiles}),pins.previousAllLessonsAndRecipesHash,'All preceding teaching and recipes preserved');
 const records=api.bodyContentRecords(catalog),registry=new Map([...context.shoulder,...records].map(r=>[r.representationScope+'|'+r.id,r]));
 const validate=await contentValidator(registry);
 for(const r of records)assert(validate(r));
 let changed=0,unchanged=0,rejected=0,rendered=0;
 const require=createRequire(import.meta.url),React=require('react'),render=require('react-dom/server').renderToStaticMarkup;
+const built=await build({stdin:{contents:"export {SourceDisplayNotes} from './app/source-display-notes';",resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'cjs',write:false});
+const scope={exports:{}};
+runInNewContext(built.outputFiles[0].text,{module:scope,exports:scope.exports,require});
+const {SourceDisplayNotes}=scope.exports;
 const source=await readFile('app/body-explorer.tsx','utf8'),ast=ts.createSourceFile('body.tsx',source,ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX);
 let callback;
 function visit(n){if(ts.isArrowFunction(n)&&n.body.getText(ast).includes('const content = bodyContent(selected, value);')){assert(!callback);callback=n.getText(ast);}ts.forEachChild(n,visit);}
@@ -30,7 +44,7 @@ for(const s of catalog.structures)for(const tab of api.contentTabs) {
   assert.equal(now.readiness,'draft');assert.deepEqual(now,topic);
   const record=records.find(r=>r.id===s.id);assert.deepEqual(record.content[tab],topic);assert.equal(record.validation.clinicalApproval,'not-included');
   assert.equal(new Set(topic.citations).size,topic.citations.length);
-  const jsx=runInNewContext(callbackJs+';renderNote(topic)',{React,topic:tab,bodyContent:api.bodyContent,selected:s,WorkspaceModeButton:({children})=>React.createElement('button',null,children),ComponentImagingNotes:()=>null,ScanLine:()=>null,catalog,side:'both',exam:false,openNested(){throw Error('No automatic specimen navigation');}});
+  const jsx=runInNewContext(callbackJs+';renderNote(topic)',{React,topic:tab,bodyContent:api.bodyContent,selected:s,SourceDisplayNotes,WorkspaceModeButton:({children})=>React.createElement('button',null,children),ComponentImagingNotes:()=>null,ScanLine:()=>null,catalog,side:'both',exam:false,openNested(){throw Error('No automatic specimen navigation');}});
   const html=render(jsx);
   assert(html.includes(render(React.createElement('p',null,now.body))));
   for(const bullet of now.bullets)assert(html.includes(render(React.createElement('li',null,bullet))));
