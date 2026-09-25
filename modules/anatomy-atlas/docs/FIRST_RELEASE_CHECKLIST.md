@@ -21,6 +21,28 @@ release authority. Do not fill approval fields on the owner's behalf. A failure
 must be corrected or the affected feature removed from the proposed release
 scope with a documented owner decision; never silently waive an exit criterion.
 
+### Delivery-record drift check
+
+The recorded review candidate was refreshed to private website version 149,
+website `2c651aa` and embedded Atlas `749a4d1` on 25 September. It is a dated
+snapshot, not a frozen learner release or a claim to track live cloud changes.
+All six gates and clinical approval remain pending. Later coordination-only
+Atlas commits do not change the embedded runtime revision.
+
+Before using the candidate for review, run the read-only check from the Atlas:
+
+```sh
+node scripts/check-release-delivery.mjs <website-checkout> content/release-delivery/specimen-reassembly-20260925.json
+node --test scripts/test-release-delivery.mjs scripts/test-release-readiness.mjs
+```
+
+This compares the clean website Git checkout with exact viewer/inventory bytes,
+embedded Atlas revision, protected model/path counts and the saved native
+publication/version response. A stale or mismatched record fails; nothing is
+automatically rebased and no approvals are copied. The response snapshot cannot
+prove current cloud state, audience, payload integrity or reviewer authenticity.
+Confirm those through their existing authoritative checks when preparing release.
+
 ## First work package (started)
 
 1. Save this scope and a fail-closed readiness record. No gate is marked complete

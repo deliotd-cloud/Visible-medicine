@@ -14,30 +14,30 @@
     "note": "Historical baseline only; it is not evidence that a release candidate is approved."
   },
   "candidate": {
-    "atlasRevision": "c9000cf68cf91f899ff48e930306dfc02f371b19",
-    "websiteRevision": "bb06aec09dd53c14eda5d269d440bf0f35aac166",
+    "atlasRevision": "749a4d1fb3c522087b3fdedb502b9c84f500278f",
+    "websiteRevision": "2c651aa97dcfd35c54f566509462a20a87b4f522",
     "delivery": {
       "website": {
-        "sourceRevision": "bb06aec09dd53c14eda5d269d440bf0f35aac166",
-        "deployedRevision": "bb06aec09dd53c14eda5d269d440bf0f35aac166",
-        "versionNumber": 117,
-        "versionId": "appgprj_6a8b1e2c3d348191be844899e57ccbc6~appgver_ba3f59da2a8c8191bf4ca4af94190bca",
-        "deploymentId": "appgdep_6ab4ea58096481918616faa53695227e",
+        "sourceRevision": "2c651aa97dcfd35c54f566509462a20a87b4f522",
+        "deployedRevision": "2c651aa97dcfd35c54f566509462a20a87b4f522",
+        "versionNumber": 149,
+        "versionId": "appgprj_6a8b1e2c3d348191be844899e57ccbc6~appgver_ffa4dc13e978819187e5c3b6eda1c00a",
+        "deploymentId": "appgdep_6ab6c9483a888191af219d4b1e6b49b6",
         "status": "succeeded",
         "audience": "owner-only",
         "evidence": [
-          "D:\\VisibleMedicine-Atlas-Recovery\\website-central-airway-hepatic-20260924.publication.json"
+          "content/release-delivery/specimen-reassembly-20260925.json"
         ]
       },
       "sharedViewer": {
-        "atlasRevision": "c9000cf68cf91f899ff48e930306dfc02f371b19",
-        "manifestSha256": "edb5264f4bba4725f8694302305a6a7819c28ac1cefe5be7c8aff25fc9c135c2",
-        "inventorySha256": "85167c7ff6ee2742392caa4e6ea13aa620c9184d39f316f28e6bfd60ff9e2bd0",
-        "modelCount": 135,
-        "pathCount": 142
+        "atlasRevision": "749a4d1fb3c522087b3fdedb502b9c84f500278f",
+        "manifestSha256": "cee184c035509d8bcf61953f02e507118aee961351af888c713a316f36d52454",
+        "inventorySha256": "307725070b615c9a8f4c09c251574de6a90289a289723abbef21a0833e052d9f",
+        "modelCount": 136,
+        "pathCount": 143
       },
       "validation": {
-        "atlasRevision": "c9000cf68cf91f899ff48e930306dfc02f371b19",
+        "atlasRevision": "749a4d1fb3c522087b3fdedb502b9c84f500278f",
         "status": "source-checked-only"
       },
       "clinicalApproval": {
@@ -45,7 +45,7 @@
         "records": []
       }
     },
-    "note": "Current privately deployed review candidate, not a frozen learner release. The shared viewer and schema-bound validation source both bind the Atlas code revision; later QA documentation is recorded separately. All six gates and clinical sign-off remain pending."
+    "note": "Recorded private review candidate as of the attached publication response, not a frozen learner release or a continuously current cloud-state assertion. The shared viewer and validation bind the Atlas code revision; later coordination-only commits are separate. All six gates and clinical sign-off remain pending."
   },
   "releaseAuthority": {
     "status": "external-verification-required",

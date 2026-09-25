@@ -1,0 +1,18 @@
+{
+  "scope": "Native Sites response snapshot; not a live-state or clinical approval assertion",
+  "deployment": {
+    "id": "appgdep_6ab6c9483a888191af219d4b1e6b49b6",
+    "project_id": "appgprj_6a8b1e2c3d348191be844899e57ccbc6",
+    "version_id": "appgprj_6a8b1e2c3d348191be844899e57ccbc6~appgver_ffa4dc13e978819187e5c3b6eda1c00a",
+    "status": "succeeded",
+    "url": "https://visible-medicine.deliotd.chatgpt.site",
+    "updated_at": "2026-09-25T19:20:02.040592+00:00"
+  },
+  "version": {
+    "id": "appgprj_6a8b1e2c3d348191be844899e57ccbc6~appgver_ffa4dc13e978819187e5c3b6eda1c00a",
+    "project_id": "appgprj_6a8b1e2c3d348191be844899e57ccbc6",
+    "version_number": 149,
+    "source": { "commit_sha": "2c651aa97dcfd35c54f566509462a20a87b4f522" },
+    "deployment_id": "appgdep_6ab6c9483a888191af219d4b1e6b49b6"
+  }
+}
