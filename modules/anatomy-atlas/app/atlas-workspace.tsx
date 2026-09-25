@@ -502,8 +502,9 @@ export function AtlasSearch({
     } else if (entry.action.type === 'select') {
       transferringFocus.current = workspace.focusView ||
         (workspace.panelLayout ?? atlasPanelLayout(window.innerWidth, window.innerHeight)).info;
-      onSelect(entry.action.id);
       if (workspace.mode === 'practice') workspace.chooseMode('explore');
+      // Restore the learning view first so it cannot hide the new selection.
+      onSelect(entry.action.id);
       workspace.showInfo();
     } else if (
       entry.action.type === 'window' ||

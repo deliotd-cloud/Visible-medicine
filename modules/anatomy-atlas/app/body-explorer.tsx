@@ -748,14 +748,21 @@ export default function BodyExplorer({
       setSelectedId(id);
       setSelectionNotice({
         id,
-        message: `${s.name} selected.${hiddenIds.includes(id) ? ' Restored to the dissection.' : ''}${!systems[s.system] ? ` ${bodySystems[s.system].name} enabled.` : ''}`,
+        message: `${s.name} selected.`,
       });
       setSystems((prev) =>
         prev[s.system] ? prev : { ...prev, [s.system]: true },
       );
-      if (hiddenIds.includes(id)) dispatch({ type: 'restore', id });
+      // A workspace restore can be queued earlier in this same event. Resolve
+      // against that restored state, not the prior render's removed IDs. Leave
+      // already-visible selections unchanged so Undo/Redo history is preserved.
+      setDissection(current =>
+        resolveDissection(regionStructures, profile, current).removed.some(item => item.id === id)
+          ? dissectionReducer(current, { type: 'restore', id })
+          : current,
+      );
     },
-    [regionStructures, hiddenIds, systems, exam],
+    [regionStructures, profile, exam],
   );
   const linkEntries = useMemo(
     () => (catalog ? bodyLinkEntries(catalog) : []),
