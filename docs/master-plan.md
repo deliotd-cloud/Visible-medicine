@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+25 September pelvic reasoning: generated Atlas `e7e6b19` adds eight draft concepts
+across twelve existing organ identities in the current Practice interface. All132
+prior concepts, models and independent access remain unchanged. See
+[scope and checks](atlas-pelvic-reasoning-20260925.md). Publication/browser/recovery
+evidence belongs in the main checkpoint; clinical/privacy/device/imaging gates
+remain open. Continue substantive Atlas work independently of final imaging.
+
 25 September mediastinal X-ray teaching: generated Atlas `acc99b3` adds five
 source-bound drafts in existing Imaging panels, without new controls, models,
 patient data or entitlement changes. See [scope and checks](atlas-mediastinal-xray-20260925.md).
