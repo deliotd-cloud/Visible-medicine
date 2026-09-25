@@ -1994,7 +1994,9 @@ export default function BodyExplorer({
                       ? focus && selectedId && enabledIds.has(selectedId)
                         ? 'Selected entry framed · Others remain in the tray · Turn off Frame selection for the overview · Not anatomical positions'
                         : 'Arranged view · Pan / pinch to zoom · Choose a direction · Not anatomical positions'
-                      : `Arrangement in progress · ${explode}% · Overlap is possible before 100%`
+                      : explode === 0
+                        ? 'Assembled anatomy · Increase separation to arrange in the tray'
+                        : `Arranging · ${explode}% · Non-anatomical positions · Overlap possible`
                     : layout === 'extract' && !exam
                       ? !selectedId ||
                         !available.some((item) => item.id === selectedId)

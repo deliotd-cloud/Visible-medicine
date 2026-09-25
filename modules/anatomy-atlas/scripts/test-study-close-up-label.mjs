@@ -40,4 +40,21 @@ for(const {studies,label} of [
     cases++;
   }
 }
+// Exercise the actual viewer expression, including stage-preserving reassembly.
+for (const focus of [false, true]) for (const selectedId of [null, 'visible', 'hidden']) {
+  const state = {regionalCloseUp:null, jointCloseUp:null, layout:'tray', exam:false,
+    focus, selectedId, enabledIds:new Set(['visible'])};
+  assert.equal(runInNewContext(js,{...state,explode:0}),
+    'Assembled anatomy · Increase separation to arrange in the tray');
+  cases++;
+  for (const explode of [1,40,99]) {
+    assert.equal(runInNewContext(js,{...state,explode}),
+      `Arranging · ${explode}% · Non-anatomical positions · Overlap possible`);
+    cases++;
+  }
+  const complete = runInNewContext(js,{...state,explode:100});
+  assert(complete.includes('Not anatomical positions'));
+  assert.equal(complete.startsWith('Selected entry framed'), focus && selectedId === 'visible');
+  cases++;
+}
 console.log(JSON.stringify({passed:true,cases,actualViewerCaption:true,geometryChanged:false}));
