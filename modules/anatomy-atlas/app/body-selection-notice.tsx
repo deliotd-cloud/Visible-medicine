@@ -2,6 +2,16 @@
 
 import { useLayoutEffect, useRef } from 'react';
 
+/** Preserve focus before a focused Remove/Hide button is unmounted. */
+export function focusRemovalFeedback(trigger: HTMLElement) {
+  if (!trigger.isConnected || trigger.ownerDocument.activeElement !== trigger) return;
+  const panel = trigger.closest<HTMLElement>('.body-info');
+  const popup = trigger.closest<HTMLElement>('.anatomy-controls-popup');
+  if (!panel || popup?.hasAttribute('data-closed')) return;
+  const feedback = panel.querySelector<HTMLElement>('.body-selection-notice');
+  if (feedback?.isConnected) feedback.focus({ preventScroll: true });
+}
+
 /** Reveal feedback inside the open panel without moving the model or focus. */
 export function revealRemovalNotice(target: HTMLElement | null) {
   if (!target?.isConnected) return;

@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "checks": 3778,
+  "checks": 3780,
   "markupCases": 105,
   "supplementalSelectionCases": 33,
   "displayStructures": 1104,
@@ -44,6 +44,7 @@
   "explicitExplosionReplacementCallbacks": 1,
   "explicitSelectionRecoveryHandler": 1,
   "explicitSelectionRecoveryCallbacks": 3,
+  "explicitRemovalFocusCallbackMigration": 1,
   "regions": 11,
   "wholeBody": true,
   "sourceGeometryChanged": false,

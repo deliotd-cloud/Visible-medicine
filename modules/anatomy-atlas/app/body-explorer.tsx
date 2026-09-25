@@ -5,7 +5,7 @@ import { cranialArteryComponentsFor } from '@/lib/cranial-artery-components';
 import './um-knee-entry.css';
 import { useWorkspaceSession } from './workspace-session';
 import { PracticePanelNavigation } from './practice-panel-navigation';
-import { BodySelectionNotice } from './body-selection-notice';
+import { BodySelectionNotice, focusRemovalFeedback } from './body-selection-notice';
 import { lastSingleRemoval } from '@/lib/contextual-dissection-undo';
 import { InlineStudy } from './study-surface';
 import './upper-limb-motor.css';
@@ -2497,7 +2497,8 @@ export default function BodyExplorer({
                       <Button
                         size="sm"
                         variant="outline"
-                        onClick={() => {
+                        onClick={(event) => {
+                          focusRemovalFeedback(event.currentTarget);
                           dispatch({ type: 'remove', id: selected.id });
                           setSelectedId(null);
                           setFocus(false);

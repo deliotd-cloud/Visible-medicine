@@ -369,6 +369,19 @@ same(undoAfter, {
   callbacks: [...undoBefore.callbacks, contextualUndoCallback].sort(compare),
 }, 'Contextual Undo adds exactly one callback without changing named handlers');
 migratedCallbacks.push(contextualUndoCallback);
+// Focused Remove/Hide controls unmount with the selection. Preserve focus in
+// their persistent notice first; contextual-undo:test executes the exact callback
+// and helper guards. Retire exactly one old callback, not the original baseline.
+const removalBefore = bindings(execFileSync('git',
+  ['show', '7b5fae0ffd35a1d2d5e28af62f725ec3c797098e:app/body-explorer.tsx'],
+  { maxBuffer: 2e6 }).toString());
+same(removalBefore.callbacks, [...migratedCallbacks].sort(compare),
+  'All pre-focus callbacks match the saved source');
+const oldRemoval = 'onClick/46d9e1366ee39c7bb44cc2fdc3399774c7ec19014cb3a4c8a53f97ab071bc04f';
+same(migratedCallbacks.filter(value => value === oldRemoval).length, 1,
+  'Exactly one selected-structure removal is migrated');
+migratedCallbacks.splice(migratedCallbacks.indexOf(oldRemoval), 1,
+  'onClick/ba64cb8c59b952c356a59b0f65f692c4f3f2bcdbb2d1ecfb2f7a0a2048844b8c');
 same(
   bindings(source).callbacks,
   migratedCallbacks.sort(compare),
@@ -1014,6 +1027,7 @@ const result = {
   explicitExplosionReplacementCallbacks: 1,
   explicitSelectionRecoveryHandler: 1,
   explicitSelectionRecoveryCallbacks: 3,
+  explicitRemovalFocusCallbackMigration: 1,
   regions: 11,
   wholeBody: true,
   sourceGeometryChanged: false,

@@ -23,7 +23,7 @@ const reactForDirectComponentCall = {
 };
 const compiled = await build({
   stdin: {
-    contents: "export { initialDissection, dissectionReducer } from './app/dissection-data'; export { lastSingleRemoval } from './lib/contextual-dissection-undo'; export { BodySelectionNotice, revealRemovalNotice } from './app/body-selection-notice';",
+    contents: "export { initialDissection, dissectionReducer } from './app/dissection-data'; export { lastSingleRemoval } from './lib/contextual-dissection-undo'; export { BodySelectionNotice, revealRemovalNotice, focusRemovalFeedback } from './app/body-selection-notice';",
     resolveDir: process.cwd(),
     loader: 'tsx',
   },
@@ -39,14 +39,61 @@ runInNewContext(compiled.outputFiles[0].text, {
   require: id => id === 'react' ? reactForDirectComponentCall : require(id),
   structuredClone,
 });
-const { initialDissection, dissectionReducer: reduce, lastSingleRemoval, BodySelectionNotice, revealRemovalNotice } = compiledModule.exports;
+const { initialDissection, dissectionReducer: reduce, lastSingleRemoval, BodySelectionNotice, revealRemovalNotice, focusRemovalFeedback } = compiledModule.exports;
 const items = [
   { id: 'left', name: 'Radial artery', side: 'left' },
   { id: 'right', name: 'Radial artery', side: 'right' },
   { id: 'ulna', name: 'Ulna', side: 'left' },
 ];
+test('removal focus moves only from the focused trigger into its own open panel', () => {
+  for (const scenario of ['desktop', 'popup', 'other-focus', 'closed', 'detached', 'missing-panel', 'missing-notice', 'detached-notice']) {
+    const calls=[];
+    const feedback={isConnected:scenario!=='detached-notice',focus:options=>calls.push(options)};
+    const panel={querySelector:selector=>{
+      assert.equal(selector,'.body-selection-notice');
+      return scenario==='missing-notice'?null:feedback;
+    }};
+    const popup={hasAttribute:attribute=>{
+      assert.equal(attribute,'data-closed');return scenario==='closed';
+    }};
+    const trigger={isConnected:scenario!=='detached',ownerDocument:{activeElement:null},closest:selector=>
+      selector==='.body-info'?(scenario==='missing-panel'?null:panel):
+      selector==='.anatomy-controls-popup'&&['popup','closed'].includes(scenario)?popup:null};
+    trigger.ownerDocument.activeElement=scenario==='other-focus'?{}:trigger;
+    focusRemovalFeedback(trigger);
+    assert.equal(calls.length,['desktop','popup'].includes(scenario)?1:0,scenario);
+    if(calls.length)assert.equal(calls[0].preventScroll,true);
+  }
+});
 const action = (state, type, values = {}) => reduce(state, { type, ...values });
 const candidate = (state, scope = items) => lastSingleRemoval(state, scope);
+
+test('actual Hide/Remove callback preserves focus before removal and selection unmount', async () => {
+  const source = await readFile(new URL('../app/body-explorer.tsx', import.meta.url), 'utf8');
+  const file = ts.createSourceFile('body-explorer.tsx', source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
+  const callbacks = [];
+  const visit = node => {
+    if (ts.isJsxAttribute(node) && node.name.text === 'onClick' &&
+      ts.isJsxExpression(node.initializer) && node.initializer.expression?.getText(file).includes('focusRemovalFeedback'))
+      callbacks.push(node.initializer.expression.getText(file));
+    ts.forEachChild(node, visit);
+  };
+  visit(file);
+  assert.equal(callbacks.length, 1, 'one shared Hide/Remove callback');
+  const trigger = { id: 'focused-remove' }, calls = [];
+  runInNewContext(`(${callbacks[0]})({ currentTarget: trigger })`, {
+    trigger, selected: { id: 'stomach' },
+    focusRemovalFeedback: node => { assert.equal(node, trigger); calls.push(['focus']); },
+    dispatch: value => calls.push(['dispatch', value.type, value.id]),
+    setSelectedId: value => calls.push(['selection', value]),
+    setFocus: value => calls.push(['focus-mode', value]),
+    setIsolated: value => calls.push(['isolation', value]),
+  });
+  assert.deepEqual(calls, [
+    ['focus'], ['dispatch', 'remove', 'stomach'], ['selection', null],
+    ['focus-mode', false], ['isolation', false],
+  ]);
+});
 
 test('one reducer removal resolves by ID, preserving item identity and input state', () => {
   const state = action(initialDissection, 'remove', { id: 'right' });
