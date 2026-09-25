@@ -30,14 +30,19 @@ validator passes 9,234 checks; its historical corpus has X-ray 5 draft/66 pendin
 Content contract, body-review bindings, TypeScript, targeted lint and production
 build pass. This is code/render evidence, not browser/device or clinical approval.
 
-The older `pulmonary-imaging:test` currently fails its full-corpus historical
-hash check. The same mismatch is reproduced using the unchanged Git parent:
+During the X-ray milestone, the older `pulmonary-imaging:test` failed its
+full-corpus historical hash check. The mismatch also reproduced at its Git parent:
 actual `a68ae58c46b88d51e1b85efb8725d57fb24d95427cda6a29d1d63c590c776d33`,
 expected `1daf5d8c8cefd0b8e6d910c7e1c72c91f869e018e0ac1d88f1eb6679a134e5ff`.
-No old expected hash was updated. The new exact X-ray rollback preserves those
-older expectations; the pre-existing full-corpus replay needs a separate repair.
-Do not describe this as an all-tests-passing milestone. Publication and recovery
-status are recorded separately in the main coordination checkpoint.
+No old expected hash was updated. The subsequent repair replays exact Git parent
+`d8967e7e033ecabc174c372738e687d05affaeef` and original child
+`430c9abbf66b14d9e485acdf2502ab33e42379a7`. Original full-corpus concepts,
+references, source pins and 10 changed/665 unchanged lesson assertions still run;
+today's pulmonary content/source identities are checked separately. Six negative
+cases reject changed lessons, references or historical corpus. The old imaging,
+new X-ray and nested-teaching suites now pass; their original baseline/transition
+records remain byte-identical. This is historical-test repair, not approval or a
+runtime change. Publication/recovery evidence is in the main checkpoint.
 
 ## 17 September — MRI and ultrasound extension
 
