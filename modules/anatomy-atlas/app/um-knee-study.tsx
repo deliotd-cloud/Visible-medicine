@@ -9,7 +9,7 @@ import { Dialog, DialogContent, DialogDescription, DialogTitle } from '@/compone
 import { BodyScene, retryBodyAssets } from './body-scene';
 import { allBodySystems } from './body-types';
 import { ExplodeStyleSelect } from './explode-style-select';
-import { restoreSpecimenRemovalFocus, restoreSpecimenHistoryFocus } from './specimen-removal-focus';
+import { restoreSpecimenRemovalFocus, restoreSpecimenHistoryFocus, focusSpecimenSeparation } from './specimen-removal-focus';
 import type { DissectionView } from './dissection-data';
 import type { BodyLayout } from '@/lib/body-arrangement';
 import { initialInspection } from '@/lib/inspection-state';
@@ -195,7 +195,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
         <Slider value={[explode]} min={0} max={100} step={5} disabled={!ready || !visible.length || (layout === 'extract' && !selected)}
           aria-valuetext={`${explode}%`}
           onValueChange={(v) => { const n = Array.isArray(v) ? v[0] : v; if (Number.isFinite(n)) { setExplode(n); setFocus(false); } }} aria-label={`${specimen.label} tissue separation`} />
-        {explode > 0 && <Button size="sm" variant="ghost" onClick={() => setExplode(0)}>Return to source positions</Button>}
+        {explode > 0 && <Button size="sm" variant="ghost" onClick={(event) => { focusSpecimenSeparation(event.currentTarget); setExplode(0); }}>Return to source positions</Button>}
       </div>
       <details className="um-knee-details" open>
         <summary>Tissues & search</summary>

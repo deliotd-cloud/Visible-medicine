@@ -12,7 +12,7 @@ const require = createRequire(import.meta.url);
 const ts = require('typescript');
 const built = await build({
   stdin: {
-    contents: "export { restoreSpecimenRemovalFocus, restoreSpecimenHistoryFocus } from './app/specimen-removal-focus'; export { initialSpecimen, reduceSpecimen } from './lib/independent-specimen';",
+    contents: "export { restoreSpecimenRemovalFocus, restoreSpecimenHistoryFocus, focusSpecimenSeparation } from './app/specimen-removal-focus'; export { initialSpecimen, reduceSpecimen } from './lib/independent-specimen';",
     resolveDir: process.cwd(), loader: 'tsx',
   },
   bundle: true, platform: 'node', format: 'cjs', write: false,
@@ -21,7 +21,7 @@ const moduleScope = { exports: {} };
 runInNewContext(built.outputFiles[0].text, {
   module: moduleScope, exports: moduleScope.exports, require,
 });
-const { restoreSpecimenRemovalFocus, restoreSpecimenHistoryFocus, initialSpecimen, reduceSpecimen } = moduleScope.exports;
+const { restoreSpecimenRemovalFocus, restoreSpecimenHistoryFocus, focusSpecimenSeparation, initialSpecimen, reduceSpecimen } = moduleScope.exports;
 
 function fixture({ active = 'body', removed = true, undoConnected = true,
   undoDisabled = false, panelConnected = true, panelPresent = true,
@@ -144,6 +144,47 @@ function visit(node) {
   ts.forEachChild(node, visit);
 }
 visit(parsed);
+
+test('reassembly hands focus to the enabled separation input without scrolling', () => {
+  for (const invalid of [null, 'unfocused', 'detached-trigger', 'missing-panel', 'missing-slider', 'detached-slider', 'disabled-slider', 'foreign-document']) {
+    const doc = { activeElement: null }, calls = [];
+    const slider = { isConnected: invalid !== 'detached-slider', disabled: invalid === 'disabled-slider',
+      ownerDocument: invalid === 'foreign-document' ? {} : doc,
+      focus(options) { calls.push(options); doc.activeElement = slider; } };
+    const trigger = { isConnected: invalid !== 'detached-trigger', ownerDocument: doc,
+      closest(selector) {
+        assert.equal(selector, '.um-knee-separation');
+        return invalid === 'missing-panel' ? null : { querySelector(selector) {
+          assert.equal(selector, 'input[type="range"]');
+          return invalid === 'missing-slider' ? null : slider;
+        } };
+      } };
+    doc.activeElement = invalid === 'unfocused' ? {} : trigger;
+    focusSpecimenSeparation(trigger);
+    assert.equal(calls.length, invalid === null ? 1 : 0, invalid ?? 'valid');
+    if (!invalid) { assert.equal(doc.activeElement, slider); assert.equal(calls[0].preventScroll, true); }
+  }
+});
+
+test('the actual reassembly button transfers focus before its removal', () => {
+  const handlers = [];
+  function find(node) {
+    if (ts.isJsxAttribute(node) && node.name.text === 'onClick' &&
+        ts.isJsxExpression(node.initializer) &&
+        node.initializer.expression?.getText(parsed).includes('focusSpecimenSeparation')) {
+      assert.match(node.parent.parent.parent.getText(parsed), /Return to source positions/);
+      handlers.push(node.initializer.expression.getText(parsed));
+    }
+    ts.forEachChild(node, find);
+  }
+  find(parsed); assert.equal(handlers.length, 1);
+  const trigger = {}, order = [];
+  runInNewContext(`(${handlers[0]})({currentTarget:trigger})`, {
+    trigger, focusSpecimenSeparation: target => { assert.equal(target, trigger); order.push('focus'); },
+    setExplode: value => { assert.equal(value, 0); order.push('reassemble'); },
+  });
+  assert.deepEqual(order, ['focus', 'reassemble']);
+});
 
 test('Set aside captures only its own focused trigger before the visibility dispatch', () => {
   assert.equal(callbacks.length, 1, 'one Set aside callback owns focus capture');

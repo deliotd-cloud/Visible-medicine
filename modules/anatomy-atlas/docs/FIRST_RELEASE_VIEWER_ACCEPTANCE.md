@@ -1,5 +1,37 @@
 # First-release viewer acceptance evidence
 
+## 25 September: back-specimen reassembly focus
+
+Local Atlas `a22e4d3` plus the shared reassembly-focus change was tested through
+the in-app browser at 1280×720 and 390×844. Spine → Dissect → Back layers opens
+the independent source specimen in-page and focuses its region. Search `atlas`,
+Tab through Clear search to the result, and Space selected C1. Learn → Imaging
+→ X-ray was reachable by keyboard; arrows move tab focus and Enter activates.
+The new C1 note, AO/OpenStax references, draft status and absent-image warning
+were present. Desktop document width remained1280; narrow width remained390.
+
+Fade others, Frame and the separation slider were exercised at 0%, 100% and5%.
+Changing separation leaves selected framing, as currently designed; at100%
+the C1 label followed the extracted reference surface and the separated-view
+warning was visible. This is visual/control evidence, not measured source
+reassembly or a comprehensive spatial/anatomical assessment.
+
+**Observed and fixed:** keyboard activation of Return to source positions
+removed the focused button, leaving BODY focused. The shared specimen control
+now focuses its enabled separation input before resetting to0%. Browser repeat
+showed INPUT labelled Back layers tissue separation at0%; ArrowRight then moved
+to5%. At390×844 the restored slider/control was inside the controls panel
+(control y664–668; panel y549–836), with no horizontal page overflow.
+
+Set aside moved focus to Undo and cleared selection; Undo restored Atlas.
+Back to atlas restored the desktop Back layers launcher. With the mobile drawer
+closed, the existing intentional fallback focused the active Dissect radio.
+No browser errors were captured. Viewport override was reset and test tab closed.
+The shared fix adds no control and does not change geometry, study history,
+teaching, scan links or access. Ten focused tests cover callback order, previous
+removal/history paths, missing/disabled/disconnected targets, other-document and
+unrelated focus. This is not real-touch, screen-reader or200% text-zoom acceptance.
+
 ## 25 September: short-viewport forearm search and return
 
 Local Atlas `689835f` was sampled in the in-app browser at 640 × 360. Search

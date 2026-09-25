@@ -32,3 +32,13 @@ export function restoreSpecimenHistoryFocus(
   if (!trigger?.isConnected || !trigger.disabled) return;
   focusHistoryTarget(trigger, alternate);
 }
+
+/** Reassembly removes its button. Move its current focus to the nearby slider
+ * before unmounting, without scrolling or taking focus from another control. */
+export function focusSpecimenSeparation(trigger: HTMLButtonElement) {
+  if (!trigger.isConnected || trigger.ownerDocument.activeElement !== trigger) return;
+  const slider = trigger.closest('.um-knee-separation')
+    ?.querySelector<HTMLInputElement>('input[type="range"]');
+  if (!slider?.isConnected || slider.disabled || slider.ownerDocument !== trigger.ownerDocument) return;
+  slider.focus({ preventScroll: true });
+}
