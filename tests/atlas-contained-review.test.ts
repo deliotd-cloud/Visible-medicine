@@ -7,9 +7,9 @@ import test from 'node:test';
 test('contained review correction ships exact tested inputs without changing model delivery',()=>{
   const base='public/atlas-runtime/head-neck/';
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(createHash('sha256').update(bytes).digest('hex'),'970d25c893ba04868bae14be02a296d4b04d475801e7ce17104b06db8f672fe7');
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),'7a9a7688193dbe83b990a3d1db62de486b629d8abbc71db73bc0bfa7986b6a8e');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'e7e6b197e0cd25c1a9160b69f93fbe673192c755');
+  assert.equal(manifest.sourceCommit,'2b23603b4d7c9978d763b49053ae26eb2fa8b8c3');
   assert.equal(manifest.standaloneReviewConnection,false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({

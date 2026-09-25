@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+25 September lamina terminalis teaching: the generated Atlas adds a Pathology
+draft in the existing panel and retires the obsolete Clinical pending sentence.
+No model, control, patient data or independent access changes. See
+[scope and checks](atlas-lamina-pathology-20260925.md). The older cranial teaching
+history test is repaired with its original snapshots intact. The main checkpoint
+records publication/recovery separately; clinical/privacy/device/imaging gates
+remain open. Continue substantive Atlas work independently of final imaging.
+
 25 September pelvic reasoning: generated Atlas `e7e6b19` adds eight draft concepts
 across twelve existing organ identities in the current Practice interface. All132
 prior concepts, models and independent access remain unchanged. See
