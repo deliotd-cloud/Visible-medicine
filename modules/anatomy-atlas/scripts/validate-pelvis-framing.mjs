@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
 import { build } from './workspace-test-build.mjs';
 import { contentContext } from './content-contract-tools.mjs';
 import { Box3, PerspectiveCamera, Vector3 } from 'three';
@@ -8,6 +9,10 @@ const compiled = await build({stdin:{contents:`
 export * from './lib/regional-framing';
 export * from './lib/hand-framing';`,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
 const api = await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+const priorCompiled = await build({stdin:{contents:execFileSync('git',
+  ['show','e2ce70e58fc2c5790af42fffa69bffabc613925e:lib/regional-framing.ts'],{encoding:'utf8'}),
+  resolveDir:process.cwd()+'/lib',loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
+const prior = await import('data:text/javascript;base64,'+Buffer.from(priorCompiled.outputFiles[0].text).toString('base64'));
 const context = await contentContext();
 const catalog = context.api.bodyDisplayCatalog(context.catalog);
 const before = JSON.stringify(catalog);
@@ -19,7 +24,9 @@ const member = (s,side) => s.regions.includes('pelvis') &&
     s.system === 'skeleton' && s.laterality === 'midline')) &&
   (side === 'both' || s.laterality === side || neutral.has(s.laterality));
 
-assert.equal(catalog.structures.length,1102,'Use the actual augmented display catalog');
+// Existing short-ciliary and anterior-cardiac admissions increased the display
+// total since this validator was introduced; neither changes pelvic geometry.
+assert.equal(catalog.structures.length,1104,'Use the actual augmented display catalog');
 assert.equal(api.initialBodySide('pelvis'),'both');
 const pelvis = catalog.structures.filter(s=>s.regions.includes('pelvis'));
 const sacrum = pelvis.find(s=>s.id===sacrumId);
@@ -55,7 +62,7 @@ for(const id of outsideIds) {
 }
 
 const results=[];
-let cameraFits=0, outsideSelectionFallbacks=0, wrongSideFallbacks=0;
+let cameraFits=0, outsideSelectionFallbacks=0, wrongSideFallbacks=0, containedMuscleSelections=0;
 for(const side of ['both','right','left']) {
   assert.equal(api.regionalFramingRegion('pelvis',side),'pelvis');
   const expected=pelvis.filter(s=>member(s,side));
@@ -76,6 +83,46 @@ for(const side of ['both','right','left']) {
   assert(coreBox.containsBox(box(sacrum.bounds)),side+' core contains the visible midline sacrum');
   assert(expected.some(s=>s.laterality==='midline'));
   assert(expected.some(s=>s.laterality==='unpaired'));
+
+  const sharedMuscles=pelvis.filter(s=>s.system==='muscles' && !member(s,side));
+  const retained=[];
+  for(const muscle of sharedMuscles) {
+    const onSide=side==='both'||muscle.laterality===side||neutral.has(muscle.laterality);
+    const contained=onSide&&coreBox.containsBox(box(muscle.bounds));
+    const result=api.regionalFramingBounds({...input,selectedId:muscle.id});
+    assert.deepEqual(result,contained?core:null,muscle.id+' whole envelope controls camera retention');
+    if(!onSide) assert.equal(api.regionalFramingBounds({...input,selectedId:muscle.id,
+      visibleIds:[...input.visibleIds,muscle.id]}),null,'Even explicitly visible contralateral muscle cannot keep preset');
+    if(contained) {
+      retained.push(muscle.name);
+      containedMuscleSelections++;
+      assert.equal(api.regionalFramingBounds({...input,selectedId:muscle.id,
+        visibleIds:input.visibleIds.filter(id=>id!==muscle.id)}),null,'Hidden shared muscle cannot keep preset');
+      for(let axis=0;axis<3;axis++)for(const endpoint of ['min','max']) {
+        const changed=structuredClone(muscle);
+        changed.bounds[endpoint][axis]=core[endpoint][axis]+(endpoint==='min'?-0.001:0.001);
+        assert.equal(api.regionalFramingBounds({...input,selectedId:muscle.id,
+          structures:pelvis.map(s=>s.id===muscle.id?changed:s)}),null,'Any source envelope overflow restores full fit');
+      }
+      for(const mutation of [
+        {system:'organs'}, {regions:['thigh']},
+        {bounds:{min:[NaN,0,0],max:[1,1,1]}},
+        {bounds:{min:[0,0,0],max:[Infinity,1,1]}},
+        {bounds:{min:[1,1,1],max:[0,0,0]}},
+        {bounds:{min:[],max:[]}},
+      ]) {
+        const changed={...muscle,...mutation};
+        assert.equal(api.regionalFramingBounds({...input,selectedId:muscle.id,
+          structures:pelvis.map(s=>s.id===muscle.id?changed:s)}),null,'Reject invalid shared-muscle framing context');
+      }
+    }
+  }
+  const families=['gemellus superior','gemellus inferior','iliacus','obturator internus',
+    'obturator externus','piriformis','quadratus femoris'];
+  const sides=side==='both'?['Right','Left']:[side==='right'?'Right':'Left'];
+  assert.deepEqual(retained.sort((a,b)=>a.localeCompare(b)),
+    sides.flatMap(name=>families.map(f=>`${name} ${f}`)).sort((a,b)=>a.localeCompare(b)),
+    'Exactly seven existing paired muscle families retain unchanged pelvic bounds');
 
   for(const id of outsideIds) {
     const source=pelvis.find(s=>s.id===id);
@@ -115,7 +162,7 @@ for(const side of ['both','right','left']) {
     camera.up.copy(up);camera.lookAt(regional.center);camera.updateMatrixWorld();
     for(const x of [coreBox.min.x,coreBox.max.x])for(const y of [coreBox.min.y,coreBox.max.y])for(const z of [coreBox.min.z,coreBox.max.z]) {
       const p=new Vector3(x,y,z).project(camera);
-      assert(Math.abs(p.x)<.95&&Math.abs(p.y)<.95&&p.z>-1&&p.z<1,`${side}/${name}/${aspect} pelvis bounds fit`);
+      assert(Math.abs(p.x)<.95&&Math.abs(p.y)<.95&&p.z>-1&&p.z<1,`${side}/${String(name)}/${aspect} pelvis bounds fit`);
     }
     if(name==='anterior') {
       assert(regional.distance<full.distance,side+' pelvis detail is enlarged');
@@ -133,5 +180,18 @@ for(const side of ['right','left'])
   assert.deepEqual(api.regionalFramingBounds({region:'pelvis',side,structures:[unspecifiedProbe],visibleIds:[unspecifiedProbe.id],selectedId:unspecifiedProbe.id,enabled:true}),unspecifiedProbe.bounds);
 
 assert.equal(api.regionalFramingRegion('pelvis','unknown'),null);
+let unchangedRegionalCases=0;
+for(const region of ['hand','foot','thorax','leg','forearm']) {
+  const structures=catalog.structures.filter(s=>s.regions.includes(region));
+  for(const side of ['both','left','right'])for(const enabled of [true,false]) {
+    const visibleIds=structures.filter(s=>side==='both'||s.laterality===side||neutral.has(s.laterality)).map(s=>s.id);
+    for(const selectedId of [null,'missing',...structures.map(s=>s.id)]) {
+      const input={region,side,structures,visibleIds,selectedId,enabled};
+      assert.deepEqual(api.regionalFramingBounds(input),prior.regionalFramingBounds(input),
+        `${region}/${side}/${selectedId} unchanged against immutable previous implementation`);
+      unchangedRegionalCases++;
+    }
+  }
+}
 assert.equal(JSON.stringify(catalog),before,'No source-coordinate, mesh, identity or catalog mutation');
-console.log(JSON.stringify({sourceCatalogSelections:catalog.structures.length,pelvisRegionMembers:pelvis.length,results,cameraFits,outsideSelectionFallbacks,wrongSideFallbacks,sourceUnchanged:true,anatomicalValidation:false,clinicalAcceptance:false,browserAcceptance:false}));
+console.log(JSON.stringify({sourceCatalogSelections:catalog.structures.length,pelvisRegionMembers:pelvis.length,results,cameraFits,outsideSelectionFallbacks,wrongSideFallbacks,containedMuscleSelections,unchangedRegionalCases,sourceUnchanged:true,anatomicalValidation:false,clinicalAcceptance:false,browserAcceptance:false}));

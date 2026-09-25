@@ -79,14 +79,26 @@ export function regionalFramingBounds(input: Parameters<typeof handFramingBounds
     return selectionBounds(structures.filter((s) => visible.has(s.id) && member(s)));
   }
   if (region === 'pelvis') {
-    // Stale links, hidden or contralateral selections and long participating
-    // sources all fall back to their complete source-space fit.
-    if (selectedId !== null &&
-      (!selected || !visible.has(selected.id) || !pelvisFramingMember(selected, side)))
-      return null;
-    return selectionBounds(structures.filter((s) =>
+    const core = selectionBounds(structures.filter((s) =>
       visible.has(s.id) && pelvisFramingMember(s, side),
     ));
+    // Shared hip muscles can be catalogued primarily under thigh yet fit fully
+    // inside this preset. Retain the exact existing camera bounds only when the
+    // complete visible muscle envelope fits; never crop or expand a source.
+    const containedMuscle = selected?.system === 'muscles' &&
+      selected.regions.includes('pelvis') &&
+      (side === 'both' || selected.laterality === side || neutralLateralities.has(selected.laterality)) &&
+      core !== null && selected.bounds.min.length === 3 && selected.bounds.max.length === 3 &&
+      selected.bounds.min.every((min, axis) => Number.isFinite(min) &&
+        Number.isFinite(selected.bounds.max[axis]) && min <= selected.bounds.max[axis] &&
+        min >= core.min[axis] && selected.bounds.max[axis] <= core.max[axis]);
+    // Stale, hidden, contralateral or non-contained selections retain the
+    // complete source-space fallback, including long vessels and whole femora.
+    if (selectedId !== null &&
+      (!selected || !visible.has(selected.id) ||
+        (!pelvisFramingMember(selected, side) && !containedMuscle)))
+      return null;
+    return core;
   }
   // Calf vessels and the calcaneal tendon retain their full source extent when
   // selected. A foot-region membership does not turn those into cropped meshes.

@@ -13,7 +13,7 @@ const structures = catalog.structures.filter(s=>s.regions.includes('thorax'));
 const neutral = new Set(['midline','unpaired','unspecified']);
 const box = b=>new Box3(new Vector3(...b.min),new Vector3(...b.max));
 const union = items=>items.reduce((result,s)=>result.union(box(s.bounds)),new Box3());
-assert.equal(structures.length,157);
+assert.equal(structures.length,158,'Includes the existing anterior cardiac vein admission');
 // These source groups are retained in full, not reduced to a chest silhouette.
 const spine = structures.filter(s=>s.region==='spine');
 assert.equal(spine.filter(s=>s.system==='skeleton').length,12);
@@ -44,7 +44,7 @@ for(const side of ['both','left','right']) {
     const other=structures.find(s=>s.laterality!==side&&['left','right'].includes(s.laterality));
     assert.equal(frame({...input,visibleIds:[...input.visibleIds,other.id],selectedId:other.id}),null);
   }
-  for(const system of [...new Set(visible.map(s=>s.system))]) {
+  for(const system of new Set(visible.map(s=>s.system))) {
     const only=visible.filter(s=>s.system===system);
     const subset=core.filter(s=>s.system===system);
     const result=frame({...input,visibleIds:only.map(s=>s.id)});

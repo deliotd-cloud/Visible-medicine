@@ -8,6 +8,7 @@ import {Box3,PerspectiveCamera,Vector3} from 'three';
 import {fitBounds} from '../lib/explode-layout.mjs';
 import {kneeStudySets,kneeStudyBounds} from '../lib/knee-studies.ts';
 import {genicularStudy} from '../content/genicular-study.ts';
+import {poplitealVesselStudy} from '../content/popliteal-vessel-study.ts';
 
 const compiled=await build({stdin:{contents:`export * from './lib/regional-framing'; export * from './lib/genicular-study';`,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
 const {regionalFramingBounds:frame,regionalFramingRegion,genicularStudyBounds}=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
@@ -36,7 +37,7 @@ for(const side of ['both','left','right']){
   const other=structures.find(s=>s.region==='leg'&&s.laterality!==side);
   assert.equal(frame({...input,selectedId:other.id,visibleIds:[...input.visibleIds,other.id]}),null);
  }
- for(const system of [...new Set(visible.map(s=>s.system))]){
+ for(const system of new Set(visible.map(s=>s.system))){
   const only=visible.filter(s=>s.system===system),members=core.filter(s=>s.system===system),b=union(members);
   assert.deepEqual(frame({...input,visibleIds:only.map(s=>s.id)}),members.length?{min:b.min.toArray(),max:b.max.toArray()}:null);
  }
@@ -64,7 +65,7 @@ function visit(n){if(ts.isCallExpression(n)&&n.expression.getText(ast)==='region
 visit(ast);assert(enabled);assert(dedicated);assert(presetKey);
 for(const side of ['both','left','right'])for(const regionalCloseUp of [null,{min:[0,0,0],max:[1,1,1]}])
  assert.equal(runInNewContext(presetKey,{initialRegion:'leg',side,regionalCloseUp,jointCloseUp:null,cameraRecipeId:null}),`leg/${side}/${regionalCloseUp?'regional':'sources'}`,'Interactive fallback must change recenter key, not just bounds');
-for(const cameraRecipeId of [...kneeStudySets.map(s=>s.id),genicularStudy.id]){
+for(const cameraRecipeId of [...kneeStudySets.map(s=>s.id),genicularStudy.id,poplitealVesselStudy.id]){
  const input={initialRegion:'leg',side:'both',regionalCloseUp:null,cameraRecipeId};
  assert.equal(runInNewContext(presetKey,{...input,jointCloseUp:{min:[0,0,0],max:[1,1,1]}}),`leg/both/study:${cameraRecipeId}`);
  assert.equal(runInNewContext(presetKey,{...input,jointCloseUp:null}),'leg/both/sources','Rejected ROI must trigger recenter');
@@ -73,12 +74,12 @@ const normal={regionalFraming:true,dedicatedCameraRecipe:false,jointCloseUp:null
 assert.equal(runInNewContext(enabled,normal),true);
 const guards=[{regionalFraming:false},{dedicatedCameraRecipe:true},{jointCloseUp:{min:[0,0,0],max:[1,1,1]}},{exam:true},{focus:true},{isolated:true},{ghostRemoved:true},{showOrigins:true},{explode:1},{layout:'tray'},{layout:'extract'},{inspection:{plane:'axial'}}];
 for(const change of guards)assert.equal(runInNewContext(enabled,{...normal,...change}),false);
-for(const cameraRecipeId of [...kneeStudySets.map(s=>s.id),genicularStudy.id]){
- const dedicatedCameraRecipe=runInNewContext(dedicated,{initialRegion:'leg',cameraRecipeId,kneeStudySets,genicularStudy});
+for(const cameraRecipeId of [...kneeStudySets.map(s=>s.id),genicularStudy.id,poplitealVesselStudy.id]){
+ const dedicatedCameraRecipe=runInNewContext(dedicated,{initialRegion:'leg',cameraRecipeId,kneeStudySets,genicularStudy,poplitealVesselStudy});
  assert.equal(dedicatedCameraRecipe,true);
  assert.equal(runInNewContext(enabled,{...normal,dedicatedCameraRecipe,jointCloseUp:null}),false,'Rejected dedicated ROI must fall back to full sources, not generic preset');
 }
-for(const cameraRecipeId of [null,'free','superficial'])assert.equal(runInNewContext(dedicated,{initialRegion:'leg',cameraRecipeId,kneeStudySets,genicularStudy}),false);
+for(const cameraRecipeId of [null,'free','superficial'])assert.equal(runInNewContext(dedicated,{initialRegion:'leg',cameraRecipeId,kneeStudySets,genicularStudy,poplitealVesselStudy}),false);
 let dedicatedStudyChecks=0;
 for(const side of ['both','left','right'])for(const study of [...kneeStudySets,genicularStudy]){
  const allowed=new Set([...study.targetFmaIds,...study.context.flatMap(rule=>rule.fmaIds??[])]);
@@ -88,7 +89,7 @@ for(const side of ['both','left','right'])for(const study of [...kneeStudySets,g
  assert(getBounds(input),'Dedicated knee ROI resolves unchanged');
  const extra=structures.find(s=>!allowed.has(s.fmaId)&&(side==='both'||s.laterality===side));
  assert.equal(getBounds({...input,visibleIds:[...input.visibleIds,extra.id]}),null,'Restoring anatomy outside recipe rejects ROI');
- const dedicatedCameraRecipe=runInNewContext(dedicated,{initialRegion:'leg',cameraRecipeId:study.id,kneeStudySets,genicularStudy});
+ const dedicatedCameraRecipe=runInNewContext(dedicated,{initialRegion:'leg',cameraRecipeId:study.id,kneeStudySets,genicularStudy,poplitealVesselStudy});
  assert.equal(frame({region:'leg',side,structures,visibleIds:[...input.visibleIds,extra.id],selectedId:null,enabled:runInNewContext(enabled,{...normal,dedicatedCameraRecipe,jointCloseUp:null})}),null);
  dedicatedStudyChecks++;
 }
