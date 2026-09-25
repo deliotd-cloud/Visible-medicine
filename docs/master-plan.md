@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+25 September named femoral teaching integration: generated Atlas `eb863d0`
+adds source-bound Clinical/Pathology drafts within existing detail panels.
+Unnamed remainders and imaging stay pending; all models, private audience and
+independent access remain unchanged. See [scope and limitations](atlas-femoral-clinical-20260925.md).
+Continue substantive regional coverage and the full roadmap; radiologist,
+privacy, registration and device gates remain open.
+
 25 September camera/reassembly integration: generated Atlas `541bc97` retains
 orthographic framing across resize and clarifies Tray reassembly captions.
 Hand, foot and whole-body interaction samples pass; all models and independent

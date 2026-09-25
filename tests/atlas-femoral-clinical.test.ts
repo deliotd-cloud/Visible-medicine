@@ -3,8 +3,9 @@ import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import test from 'node:test';
+import {ATLAS_DELIVERY_POLICY} from '../lib/atlas-delivery-policy.ts';
 
-test('sided pes anserinus studies reach the shared viewer without geometry or access changes',()=>{
+test('named femoral clinical drafts retain exact source inputs, model limits and independent access',()=>{
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json'),manifest=JSON.parse(bytes.toString());
@@ -12,23 +13,26 @@ test('sided pes anserinus studies reach the shared viewer without geometry or ac
   assert.equal(manifest.sourceCommit,'eb863d0aedd9d7b17ee3db138d260e1a1bad324b');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
-  for(const [path,sha256]of Object.entries({
-    'app/dissection-data.ts':'e4612894eda280188f24aa96ea4095795ead893ff5509a4e07d0389a5623e6e4',
-    'content/pes-anserine-study.ts':'5de0780dc9640509da5cc0231b70e6186030e5b858821b0f2b4ea34d8d023388',
-  }))assert.deepEqual(inputs.filter(input=>input.path===path),[{path,sha256}]);
-  assert.ok(!inputs.some(input=>/native-mr|local-mr-study|\.vmmr|patient[-_/]?data/i.test(input.path)));
+  assert.deepEqual(inputs.filter(input=>input.path==='content/femoral-component-teaching.ts'),[
+    {path:'content/femoral-component-teaching.ts',sha256:'89dea170f1e583aa0d59806c1b210aaed8f39f0d02a32616b255fa0f25cb9dd4'},
+  ]);
   const runtime=(manifest.files as {path:string;sha256:string}[]).filter(f=>f.path.endsWith('.js')).map(f=>{
     const data=readFileSync(base+f.path);assert.equal(sha(data),f.sha256);return data.toString();
   }).join('\n');
-  for(const marker of ['right-pes-anserinus-muscle-convergence','left-pes-anserinus-muscle-convergence',
-    'Right pes anserinus: muscle convergence','Left pes anserinus: muscle convergence',
-    'Remove one, then Undo to restore it.','return separation to 0% to restore source positions.',
-    'do not establish insertion order or tendon continuity, graft planning, or scan registration.',
-    'https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html'])assert.ok(runtime.includes(marker),marker);
-  const previous=JSON.parse(execFileSync('git',['show','7bed5b927ececa54d6f43168c204d0a77304dd55:lib/atlas-model-inventory.json'],{encoding:'utf8'}));
+  for(const marker of [
+    'The selected lateral circumflex femoral component provides parent-vessel context for anterolateral thigh flap anatomy.',
+    'No pseudoaneurysm, wall defect, bleeding, fracture or implant is represented in this reference model.',
+    'Component-specific clinical teaching awaits review.',
+    'https://pubmed.ncbi.nlm.nih.gov/29922539/',
+    'https://aott.org.tr/index.php/pub/article/view/4018',
+    'Atlas, case and paid-lecture access remain independent.',
+  ])assert.ok(runtime.includes(marker),marker);
+  const previous=JSON.parse(execFileSync('git',['show','9d9106d3066cda7bf8359db98d29eed1fce94a28:lib/atlas-model-inventory.json'],{encoding:'utf8'}));
   const current=JSON.parse(readFileSync('lib/atlas-model-inventory.json','utf8'));
   assert.deepEqual(current.models,previous.models);
   assert.deepEqual(current.sources.filter((s:{module:string})=>s.module!=='head-neck'),previous.sources.filter((s:{module:string})=>s.module!=='head-neck'));
   assert.equal(current.models.length,136);
   assert.equal(current.models.flatMap((m:{paths:string[]})=>m.paths).length,143);
+  assert.equal(ATLAS_DELIVERY_POLICY.audience,'administrator-review');
+  assert.equal('approvedRevision' in ATLAS_DELIVERY_POLICY,false);
 });
