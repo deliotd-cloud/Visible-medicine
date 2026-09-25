@@ -33,14 +33,15 @@ and hallux regressions, TypeScript, focused lint and shared-module production
 build. The unsigned 11-selection review index was refreshed; no sign-offs were
 created. Browser acceptance and website integration are not claimed here.
 
-Known older test failure: `validate-cranial-boundary-clinical.mjs` fails at the
+Historical diagnostic: `validate-cranial-boundary-clinical.mjs` failed at the
 costal-cartilage historical snapshot, before its own assertions. The immutable
 parent commit reproduces the same expected/actual mismatch after exact replay;
 see `lamina-parent-history-diagnostic.json`. Reproduce with
 `node scripts/check-lamina-parent-history.mjs` from this revision. The new content
 test independently proves equality of every other topic/recipe to that parent.
-This diagnostic does not waive or replace the older test; repairing its replay
-chain remains outstanding, with its original expected hash retained.
+This diagnostic does not waive or replace the older test. Its replay composition
+is repaired separately in `CRANIAL_HISTORY_REPAIR.md`, retaining the original
+expected hashes and failure evidence.
 
 No clinical approval is granted. Patient-image correlation, final imaging links,
 specialist segmentation acceptance and this teaching revision's radiologist
