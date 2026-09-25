@@ -13,6 +13,8 @@ export async function contentContext() {
       contents: `export * from './lib/content-export.ts';
 export { bodyDisplayCatalog } from './lib/body-display-catalog.ts';
 export * from './lib/content-types.ts';
+export * from './lib/pelvic-veins.ts';
+export * from './content/pelvic-vein-teaching.ts';
 export * from './app/body-content.ts';
 export * from './lib/spine-imaging.ts';
 export * from './lib/hip-imaging.ts';

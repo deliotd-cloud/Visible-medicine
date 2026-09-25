@@ -3,8 +3,10 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import pins from '../content/orbital-ultrasound.before.json' with {type:'json'};
 import transition from '../content/orbital-ultrasound.transition.json' with {type:'json'};
+import {beforePelvicTributaryImaging} from './pelvic-tributary-imaging-history.mjs';
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function beforeOrbitalUltrasound(api){
+ api=beforePelvicTributaryImaging(api);
  assert.equal(hash(pins),'1b3a483a274bb0ba6d6a4b2c3e91115df7a2755acea0a7e2d22e2772195fbdd1');
  assert.equal(hash(transition),'8ddf885be2b34c663f1200739c279ea3ed411133b52e7773da6eed9c978f77e8');
  assert.equal(pins.parentCommit,'8b73216dd8f4b4e8b40eb0ba77fe9dde1bca569f');
