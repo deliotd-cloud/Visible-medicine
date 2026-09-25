@@ -4,10 +4,11 @@ import {createHash} from 'node:crypto';
 import {context,hash,snapshot} from './pin-pica-clinical.mjs';
 import {beforeShortCiliaryTeaching} from './short-ciliary-history.mjs';
 import {beforeLowerVenousImaging} from './lower-venous-imaging-history.mjs';
+import {shortCiliaryHistoryContext} from './cranial-history-context.mjs';
 import {build} from './workspace-test-build.mjs';
 import baseline from '../content/short-ciliary-transition.json' with {type:'json'};
 import after from '../content/short-ciliary-teaching.transition.json' with {type:'json'};
-const live=await context({current:true}),api=beforeLowerVenousImaging(live.api),display=live.display,before=beforeShortCiliaryTeaching(api),identity=baseline.structure;
+const live=await context({current:true}),api=beforeLowerVenousImaging(shortCiliaryHistoryContext(live.api,live.catalog)),display=api.bodyDisplayCatalog(live.catalog),before=beforeShortCiliaryTeaching(api),identity=baseline.structure;
 assert.equal(hash(display),baseline.currentCatalogHash);assert.equal(hash(snapshot(api,display)),after.currentAllLessonsAndRecipesHash);
 assert.equal(hash(snapshot(before,display)),baseline.currentAllLessonsAndRecipesHash);assert.equal(beforeShortCiliaryTeaching(before),before);
 const compiled=await build({stdin:{contents:"export {shortCiliaryLesson} from './lib/short-ciliary';export {bodyReviewMaterial} from './lib/body-review-material';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
@@ -39,6 +40,6 @@ assert.throws(()=>beforeShortCiliaryTeaching({...api,bodyLesson:(s,t)=>t==='func
 assert.throws(()=>beforeShortCiliaryTeaching({...api,bodyLesson:(s,t)=>t==='function'&&s.id===identity.id?baseline.topics[t]:api.bodyLesson(s,t)}),/Mixed/);
 const bundle=baseline.bundle,bytes=await readFile('public'+bundle.url.split('?')[0]);assert.equal(bytes.length,bundle.bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),bundle.sha256);
 const review=await bodyReviewMaterial(identity.id);assert.equal(review.approval,false);assert.deepEqual(review.source.structure,identity);
-for(const t of ['function','clinical']){const {tab,...topic}=review.topics.find(p=>p.tab===t);assert.deepEqual(topic,api.bodyLesson(identity,t));}
+for(const t of ['function','clinical']){const {tab:_tab,...topic}=review.topics.find(p=>p.tab===t);assert.deepEqual(topic,api.bodyLesson(identity,t));}
 const report={source:after.parentCommit,draftedTopics:changed,pendingWordingClarifications:pendingClarifications,unchangedTopics:unchanged,rejectedIdentityMutations:rejected,beforeHash:after.previousAllLessonsAndRecipesHash,afterHash:after.currentAllLessonsAndRecipesHash,geometryChanged:false,reviewIncludesDrafts:true,clinicalApproval:false,browserAcceptance:false};
 await writeFile('docs/short-ciliary-teaching-validation.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "cbeea7d702b85b87dec6a536a10bc2f64ed35c8695674ee514fe989477f008a4"
+      "sha256": "3630c9d05da8c0850e8e201eab0386e0033dfa20e8ea8cd837ab1eda6da9408f"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1195,6 +1195,10 @@
     {
       "path": "content/sca-mca-clinical.ts",
       "sha256": "147c5f95e7d9d588dd678adb02c1c3dd32cc581cf89a704896ff1c4c8f0790d1"
+    },
+    {
+      "path": "content/short-ciliary-pathology.ts",
+      "sha256": "6cc88d0a6b9620920c2a3a8326a6784610087ae1fa00dcc30cd8a0e542629f91"
     },
     {
       "path": "content/short-ciliary-teaching.ts",
@@ -2497,6 +2501,10 @@
       "sha256": "d08344cef574acc33d4527f0161a99b10fd42364c53fa8cdc2877a055bcec8f6"
     },
     {
+      "path": "lib/short-ciliary-pathology.ts",
+      "sha256": "bf74dbc970a46d4a93745acb2771e9420ed4a3fbadb9b28298589ba3fdef215f"
+    },
+    {
       "path": "lib/short-ciliary.ts",
       "sha256": "66d24af31dbc035fd4df5ac322ca881f2182aaae2aa7865ae992a71960f99f88"
     },
@@ -2977,5 +2985,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "b7dc621f3075306de103e465923a4d4b33811dff209acdc158d6d6dab7c1ef05"
+  "sha256": "e4adac5dc587d3f5875708ff6ace9d9a7a46ce927098333a0da4b2bfe98ca463"
 }

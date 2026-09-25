@@ -1,10 +1,12 @@
 // Strict test-only replay; never changes runtime teaching or clinical approval.
 import assert from 'node:assert/strict';
+import {beforeShortCiliaryPathology} from './short-ciliary-pathology-history.mjs';
 import {createHash} from 'node:crypto';
 import before from '../content/epigastric-vein-pathology.before.json' with {type:'json'};
 import transition from '../content/epigastric-vein-pathology.transition.json' with {type:'json'};
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function beforeEpigastricVeinPathology(api){
+  api=beforeShortCiliaryPathology(api);
   assert.equal(hash(before),'ce2c4920a302f7a5b89faa668a9a0ccbef39a3ce9983d033b38f3b04e31923a2');
   assert.equal(hash(transition),'96b0d661d1877d316b9e76db809e38533a789021830698cbd9b177ded640b246');
   assert.equal(before.parentCommit,'0cdca340b7a4b67b387389a0fa794e5d36d547e7');

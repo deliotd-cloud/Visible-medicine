@@ -1,0 +1,139 @@
+{
+  "parentCommit": "0931b2da1151f04a2b6f0f623252879588178e08",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "sourceHash": "546309ce41b3d4e1b55a78b58b777ffea49625c3a8c4f0c411122ce5d0f5a200",
+  "previousAllLessonsAndRecipesHash": "ab4d1b48a9d25461bee492cf633cb67cda32c8ffc34c8df68bd61be1b2a6769b",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve",
+        "fmaId": "FMA7041",
+        "name": "Short ciliary nerve · source group",
+        "sourceName": "short ciliary nerve",
+        "system": "nerves",
+        "category": "nerve",
+        "laterality": "unspecified",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "short-ciliary",
+        "nodeName": "FMA7041",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1319",
+            "sha256": "7f45ad84f0874a8aeb62085affb9e9303057bea8b46068cc0b3e7e341a1258e7"
+          },
+          {
+            "file": "FJ1370",
+            "sha256": "8e8853c389c874fa12b5db73c008755eb5a98a3fe9ce7457757c809ef0c9ded9"
+          }
+        ],
+        "presentationParts": [
+          {
+            "source": {
+              "file": "FJ1319",
+              "sha256": "7f45ad84f0874a8aeb62085affb9e9303057bea8b46068cc0b3e7e341a1258e7"
+            },
+            "displaySide": "left",
+            "nodeName": "FMA7041_FJ1319",
+            "bounds": {
+              "min": [
+                0.23125700652599335,
+                7.21589994430542,
+                0.8174899816513062
+              ],
+              "max": [
+                0.32208600640296936,
+                7.257599830627441,
+                0.9706000089645386
+              ]
+            },
+            "center": [
+              0.27667150646448135,
+              7.236749887466431,
+              0.8940449953079224
+            ],
+            "anchor": [
+              0.2773379981517792,
+              7.2322998046875,
+              0.9024800062179565
+            ]
+          },
+          {
+            "source": {
+              "file": "FJ1370",
+              "sha256": "8e8853c389c874fa12b5db73c008755eb5a98a3fe9ce7457757c809ef0c9ded9"
+            },
+            "displaySide": "right",
+            "nodeName": "FMA7041_FJ1370",
+            "bounds": {
+              "min": [
+                -0.3350659906864166,
+                7.21589994430542,
+                0.8175600171089172
+              ],
+              "max": [
+                -0.24433700740337372,
+                7.257800102233887,
+                0.9706000089645386
+              ]
+            },
+            "center": [
+              -0.28970149904489517,
+              7.236850023269653,
+              0.8940800130367279
+            ],
+            "anchor": [
+              -0.2888390123844147,
+              7.2342000007629395,
+              0.8957200050354004
+            ]
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.3350659906864166,
+            7.21589994430542,
+            0.8174899816513062
+          ],
+          "max": [
+            0.32208600640296936,
+            7.257800102233887,
+            0.9706000089645386
+          ]
+        },
+        "center": [
+          -0.006489992141723633,
+          7.236850023269653,
+          0.8940449953079224
+        ],
+        "anchor": [
+          0.23125700652599335,
+          7.255000114440918,
+          0.8238499760627747
+        ],
+        "coverageNote": "Bilateral source-defined group: one original file on each side, with two topological components per file. Components and visible projections are not a normal nerve count or complete ocular autonomic pathway. Laterality filters show the audited source-file presentation without asserting new sided FMA identities. Fibre continuity, precise globe entry and clinical anatomy require review.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "pathology",
+      "previous": {
+        "readiness": "pending",
+        "title": "Short ciliary nerve · source group · Review pending",
+        "body": "Structure-specific teaching for this topic remains to be authored and reviewed.",
+        "bullets": [],
+        "note": "No scan registration, individual-nerve imaging visibility or procedural guidance is established by this source model."
+      }
+    }
+  ]
+}
