@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "2343b8b61f7dfd1cf5f419a376bd19850ee09f9238eff7412215e5b25cca41bc"
+      "sha256": "d4d6585369422bdb9731246e16045d907a07086bcc7f326d6cc412dd6fc03822"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1015,6 +1015,10 @@
     {
       "path": "content/mediastinal-organ-study.ts",
       "sha256": "4307af9d54321db061a743e24faab1838487c220b3cc110528bf860002200767"
+    },
+    {
+      "path": "content/mediastinal-xray.ts",
+      "sha256": "8ae8c1235315cb5b78c63332e90a52667e54c8a695d909fd8753aed905e9b9e6"
     },
     {
       "path": "content/metatarsal-surface-imaging-pins.json",
@@ -2217,6 +2221,10 @@
       "sha256": "4f467f6ccf778ddf96bcf60b45aef4ca258d3c16e717716c4ded6f774366c01d"
     },
     {
+      "path": "lib/mediastinal-xray.ts",
+      "sha256": "975fc201ee76040704827e669e2a438dcd5517823c02b673459b4ed29241e615"
+    },
+    {
       "path": "lib/mesenteric-anatomy.ts",
       "sha256": "922f748bf87850c9e344943ae9980bfc65701a7d8cf3f97c80ec8ab01d28a6a1"
     },
@@ -2738,7 +2746,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "13b5c65325278ccfa13230d47485e778662eea24e3428c4b0e8bb9ac900cdc25"
+      "sha256": "a7ae320987a641c400a2850f20ad1e86afcceea5e4d93e5171f6ff9601281405"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2949,5 +2957,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "a41d71d1db34ff270510b636eaa0ad0a46151f35a32803c663e276f922f3bba0"
+  "sha256": "36ad8cb478be07844cdd7aabb123957bf4bc2a0498a2f7646883b66b1e203b72"
 }

@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "mediastinal-xray:test": "node scripts/record-mediastinal-xray.mjs --check && node scripts/validate-mediastinal-xray.mjs",
     "practice-return-view:test": "node scripts/test-practice-return-view.mjs",
     "hallux-xray:test": "node scripts/record-hallux-xray.mjs --check && node scripts/validate-hallux-xray.mjs",
     "hand-bone-xray:test": "node scripts/record-hand-bone-xray.mjs --check && node scripts/validate-hand-bone-xray.mjs",

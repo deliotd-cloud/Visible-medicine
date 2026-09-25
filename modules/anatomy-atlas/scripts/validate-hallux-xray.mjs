@@ -10,6 +10,7 @@ import transition from '../content/hallux-xray.transition.json' with {type:'json
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {wholeBodyTeachingSnapshot} from './exact-clinical-reference-history.mjs';
 import {beforeHalluxXray} from './hallux-xray-history.mjs';
+import {beforeMediastinalXray} from './mediastinal-xray-history.mjs';
 import {build} from './workspace-component-test-build.mjs';
 
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -27,7 +28,9 @@ function assertBoneTeaching(s,lesson){
   assert.match(s.name,expected.name);
   for(const pattern of expected.body)assert.match(lesson.body,pattern,s.fmaId+' has the wrong ray/level teaching');
 }
-const live=await contentContext(),{api,catalog}=live,display=api.bodyDisplayCatalog(catalog);
+// Replay only the independently pinned later mediastinal addition; all original
+// hallux baselines and live hallux rendering/source-mutation checks remain intact.
+const live=await contentContext(),catalog=live.catalog,api=beforeMediastinalXray(live.api),display=api.bodyDisplayCatalog(catalog);
 assert.equal(beforeRecord.parentCommit,'2902cc420d3a4730c3472a0c501fb83ba2bbdc98');
 assert.equal(transition.parentCommit,beforeRecord.parentCommit);
 assert.equal(transition.beforeHash,hash(beforeRecord));

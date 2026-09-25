@@ -1,4 +1,5 @@
 import { centralVesselImagingLesson } from '../lib/central-vessel-imaging';
+import { mediastinalXrayLesson } from '../lib/mediastinal-xray';
 import { mainBronchusXrayLesson } from '../lib/main-bronchus-xray';
 import { hipAbductorXrayLesson } from '../lib/hip-abductor-xray';
 import { handBoneXrayLesson } from '../lib/hand-bone-xray';
@@ -251,6 +252,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (thoracicBranchImaging) return thoracicBranchImaging;
   const centralVesselImaging = centralVesselImagingLesson(s, tab);
   if (centralVesselImaging) return centralVesselImaging;
+  const mediastinalXray = mediastinalXrayLesson(s, tab);
+  if (mediastinalXray) return mediastinalXray;
   const thoracoabdominalOrganImaging = thoracoabdominalOrganImagingLesson(s, tab);
   if (thoracoabdominalOrganImaging) return thoracoabdominalOrganImaging;
   const orbitalNeckMuscleImaging = orbitalNeckMuscleImagingLesson(s, tab);

@@ -1,0 +1,328 @@
+{
+  "parentCommit": "5e3667fe3c9f012cbc21e679ba2e834f527dcc3f",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "originalPinsHash": "a857867b80d31d01ab55c688264010759dce0a0a802a6a7cd76b9f7d68b467c4",
+  "previousAllLessonsAndRecipesHash": "143355531f471744c4cf09e1c7b2f81fe67224e41a12e9d779ddf91c60ee542c",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
+        "fmaId": "FMA3736",
+        "name": "Ascending aorta",
+        "sourceName": "ascending aorta",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA3736",
+        "bounds": {
+          "min": [
+            -0.0682218000292778,
+            4.340600490570068,
+            0.5666200518608093
+          ],
+          "max": [
+            0.28943002223968506,
+            4.819000244140625,
+            0.8743899464607239
+          ]
+        },
+        "center": [
+          0.11060411110520363,
+          4.579800367355347,
+          0.7205049991607666
+        ],
+        "anchor": [
+          0.22574399411678314,
+          4.614399433135986,
+          0.726830005645752
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3413",
+            "sha256": "764f23e432a9308e0780c586f9d1638db1fbcc52a5019ae61817b4b1de323870"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ascending-aorta",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
+        "fmaId": "FMA3768",
+        "name": "Arch of aorta",
+        "sourceName": "arch of aorta",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA3768",
+        "bounds": {
+          "min": [
+            -0.06830459833145142,
+            4.819000244140625,
+            -0.0015510177472606301
+          ],
+          "max": [
+            0.3483780026435852,
+            5.170899868011475,
+            0.8716299533843994
+          ]
+        },
+        "center": [
+          0.1400367021560669,
+          4.99495005607605,
+          0.4350394678185694
+        ],
+        "anchor": [
+          0.13091500103473663,
+          4.957399845123291,
+          0.4406839609146118
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3411",
+            "sha256": "9eeb5e5a627e8145f03961c661c9c66d8fdc55ed1234d04b84212b87a21d902c"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "aortic-arch",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:unspecified:vessel:descending-thoracic-aorta",
+        "fmaId": "FMA87217",
+        "name": "Descending thoracic aorta",
+        "sourceName": "descending thoracic aorta",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA87217",
+        "bounds": {
+          "min": [
+            0.015932898968458176,
+            3.288599967956543,
+            0.04117400944232941
+          ],
+          "max": [
+            0.29951199889183044,
+            4.997399806976318,
+            0.49786102771759033
+          ]
+        },
+        "center": [
+          0.1577224489301443,
+          4.142999887466431,
+          0.26951751857995987
+        ],
+        "anchor": [
+          0.1419690102338791,
+          4.165999889373779,
+          0.25322502851486206
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1931",
+            "sha256": "b213c8178b48f9afae695254f7bcfb3e08d5781878a76724c353e7e6ea6269be"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "descending-aorta",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:unspecified:vessel:superior-vena-cava",
+        "fmaId": "FMA4720",
+        "name": "Superior vena cava",
+        "sourceName": "superior vena cava",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4720",
+        "bounds": {
+          "min": [
+            -0.2663489878177643,
+            4.748100757598877,
+            0.5358699560165405
+          ],
+          "max": [
+            -0.04109429940581322,
+            5.098100662231445,
+            0.7727600336074829
+          ]
+        },
+        "center": [
+          -0.15372164361178875,
+          4.923100709915161,
+          0.6543149948120117
+        ],
+        "anchor": [
+          -0.06418830156326294,
+          4.938199520111084,
+          0.6031400561332703
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3645",
+            "sha256": "5cc007c2ea51255df641225630e83ddbf3e5c4545dffe4814b098c9199ceb26c"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superior-cava",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:unspecified:vessel:azygos-vein",
+        "fmaId": "FMA4838",
+        "name": "Azygos vein",
+        "sourceName": "azygos vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4838",
+        "bounds": {
+          "min": [
+            -0.18150199949741364,
+            2.737499952316284,
+            0.09845699369907379
+          ],
+          "max": [
+            -0.05621640384197235,
+            4.913000583648682,
+            0.6302899718284607
+          ]
+        },
+        "center": [
+          -0.118859201669693,
+          3.825250267982483,
+          0.36437348276376724
+        ],
+        "anchor": [
+          -0.14386799931526184,
+          3.819399356842041,
+          0.22390297055244446
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3416",
+            "sha256": "88b374af13155c62ea5bcaad554a699d1d95e23948eeb810b62edb7467789dde"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "azygos",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      }
+    }
+  ]
+}
