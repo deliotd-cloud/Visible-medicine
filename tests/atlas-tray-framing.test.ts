@@ -9,15 +9,15 @@ const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
 
 test('generated regional viewer exposes selected-entry Tray framing without widening access',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'7a9a7688193dbe83b990a3d1db62de486b629d8abbc71db73bc0bfa7986b6a8e');
+  assert.equal(sha(manifestBytes),'162e12a35c6e34b4b4c9f0306690fbae882be2f42de302676bca932d2920787c');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'2b23603b4d7c9978d763b49053ae26eb2fa8b8c3');
+  assert.equal(manifest.sourceCommit,'0cdca340b7a4b67b387389a0fa794e5d36d547e7');
   for(const flag of ['clinicalApproved','patientDataIncluded','imagingConnection','standaloneReviewConnection'])
     assert.equal(manifest[flag],false,flag);
 
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   assert.equal(inputs.find(input=>input.path==='app/body-explorer.tsx')?.sha256,
-    '99d1b8bb12d137bf5d89eaab489560c7fa7464197d07411843a210b6e5fdf1e0');
+    '1a24c0ece43111d220f385d2b730c580b34eb161e3c4622aa3a8705ba82350be');
   const file=(manifest.files as {path:string;sha256:string}[])
     .find(file=>file.path.startsWith('assets/index-')&&file.path.endsWith('.js'));
   assert.ok(file,'regional viewer bundle');
@@ -31,7 +31,7 @@ test('generated regional viewer exposes selected-entry Tray framing without wide
   assert.ok(runtime.includes('Selected entry framed · Others remain in the tray · Turn off Frame selection for the overview · Not anatomical positions'));
 
   const inventoryBytes=readFileSync('lib/atlas-model-inventory.json');
-  assert.equal(sha(inventoryBytes),'adecdec3339d26310d510090aadbad2b340802a4ff35445e93939744b024869c');
+  assert.equal(sha(inventoryBytes),'4bf75e0e44c765672d2dd0692d73a73e4d484e3f9b1232e58b3fd7935304d876');
   const inventory=JSON.parse(inventoryBytes.toString());
   assert.deepEqual(inventory.sources.find((source:{module:string})=>source.module==='head-neck'),{
     module:'head-neck',sourceCommit:manifest.sourceCommit,manifestSha256:sha(manifestBytes),modelPaths:135,

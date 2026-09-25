@@ -1,5 +1,14 @@
 # Visible Medicine — shared delivery plan
 
+25 September Search selection continuity: generated Atlas `0cdca34` corrects
+Practice→Search returning to Explore with the selected structure hidden.
+Selection now follows workspace restoration and resolves removal against the
+restored state, preserving unrelated edits/history. No new controls, models,
+teaching, patient images or access rights. See
+[scope and checks](atlas-search-selection-20260925.md). Publication/recovery is
+recorded in the main checkpoint; all clinical/privacy/device/imaging gates remain
+open. Continue regional usability independently of final CT/MRI segmentation.
+
 25 September lamina terminalis teaching: the generated Atlas adds a Pathology
 draft in the existing panel and retires the obsolete Clinical pending sentence.
 No model, control, patient data or independent access changes. See
