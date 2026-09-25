@@ -9,9 +9,9 @@ const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
 
 test('central airway and hepatic teaching export retains exact inputs, pins and review access',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'cd6f0eb90b80dc32fff3aebdea348c30d9f33a2ed1291324be530d8619ae0834');
+  assert.equal(sha(manifestBytes),'6b368a0f7c2165c10b60a6f03c11436cd4f3a8a5eae5d406d7998aa8eca3b5b3');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'0d2d5dd5a0530f9c726e46e49d0367a1730336bd');
+  assert.equal(manifest.sourceCommit,'dbe9e9260ded964de8b6e79fff4798c13f4b8c55');
   for(const flag of ['patientDataIncluded','clinicalApproved','imagingConnection','standaloneReviewConnection'])
     assert.equal(manifest[flag],false,flag);
   assert.equal(manifest.regionalScopes.length,12);
@@ -84,7 +84,7 @@ test('central airway and hepatic teaching export retains exact inputs, pins and 
   ])assert.ok(runtime.includes(phrase),phrase);
 
   const inventoryBytes=readFileSync('lib/atlas-model-inventory.json');
-  assert.equal(sha(inventoryBytes),'5eddb97ed2b0375f6ac9feb7f0c47f050f7ea804f0a2b0b7625cc1c52a582b11');
+  assert.equal(sha(inventoryBytes),'24a00affbce4e48a66277533cb50501ebd1a0132e028501c40013e2be5358f47');
   const inventory=JSON.parse(inventoryBytes.toString());
   assert.equal(inventory.sources.find((source:{module:string})=>source.module==='head-neck')?.manifestSha256,sha(manifestBytes));
   assert.equal(inventory.models.length,136);

@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+25 September orbital ultrasound / compact Search integration: shared viewer binds
+Atlas `dbe9e92`, adding fourteen source-linked orbital orientation drafts and the
+narrow-screen Search label refinement. All 136 models / 143 protected paths and
+independent access gates remain unchanged. See [integration boundaries](atlas-orbital-ultrasound-20260925.md);
+the main-task checkpoint records publication and recovery. Clinical, registration
+and device sign-off remain open; continue the full regional roadmap.
+
 24 September pulmonary-vein ultrasound integration: shared viewer binds Atlas
 `0d2d5dd`, adding four distinct echo orientation drafts to existing panels.
 All 136 models / 143 protected paths and independent access gates are preserved.

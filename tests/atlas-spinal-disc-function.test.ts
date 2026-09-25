@@ -8,9 +8,9 @@ test('regional spinal disc Function drafts reach the shared viewer without geome
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'cd6f0eb90b80dc32fff3aebdea348c30d9f33a2ed1291324be530d8619ae0834');
+  assert.equal(sha(bytes),'6b368a0f7c2165c10b60a6f03c11436cd4f3a8a5eae5d406d7998aa8eca3b5b3');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'0d2d5dd5a0530f9c726e46e49d0367a1730336bd');
+  assert.equal(manifest.sourceCommit,'dbe9e9260ded964de8b6e79fff4798c13f4b8c55');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({

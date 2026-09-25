@@ -1,5 +1,14 @@
 # Third-party notices
 
+## Orbital-muscle ultrasound teaching — 25 September 2026
+
+Original orientation prose cites Chandra et al. (2014) and Wan et al. (1988)
+as factual reading references. No publisher images, tables, protocols or
+verbatim passages are included. Citations do not convey redistribution rights
+to those publications. Existing attributed BodyParts3D meshes are unchanged;
+no new external asset or fee-bearing service is introduced. See
+[reference and review scope](../docs/ORBITAL_ULTRASOUND.md).
+
 ## Pulmonary-vein ultrasound teaching — 24 September 2026
 
 Four original orientation drafts cite the ASE 2019 comprehensive TTE and
