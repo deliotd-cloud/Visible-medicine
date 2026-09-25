@@ -1,0 +1,264 @@
+{
+  "parentCommit": "885ea54f69991f0e2d265bcde0e6580ecdb13653",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "originalPinsHash": "923a0e35e632ee658a05803f7c1840b89ee65afecd92da4d7ea51d94209c628e",
+  "previousAllLessonsAndRecipesHash": "8529c51a97914ccbb52db7ba87bafa952319845372b2efdc6eec76cedd10ed84",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thigh:right:muscle:right-gluteus-medius",
+        "fmaId": "FMA22330",
+        "name": "Right gluteus medius",
+        "sourceName": "right gluteus medius",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "pelvis"
+        ],
+        "bundle": "thigh-muscles",
+        "nodeName": "FMA22330",
+        "bounds": {
+          "min": [
+            -1.4973598718643188,
+            -0.11257018893957138,
+            -0.3306579887866974
+          ],
+          "max": [
+            -0.5959630012512207,
+            1.5090301036834717,
+            0.5199800133705139
+          ]
+        },
+        "center": [
+          -1.0466614365577698,
+          0.6982299573719501,
+          0.09466101229190826
+        ],
+        "anchor": [
+          -1.0653600692749023,
+          0.7126098871231079,
+          -0.024039993062615395
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1419",
+            "sha256": "e2e06899b8a61640b32086432ec4b577b2bf2db6f044d469c01bdceb38bd3831"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thigh:left:muscle:left-gluteus-medius",
+        "fmaId": "FMA22331",
+        "name": "Left gluteus medius",
+        "sourceName": "left gluteus medius",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "pelvis"
+        ],
+        "bundle": "thigh-muscles",
+        "nodeName": "FMA22331",
+        "bounds": {
+          "min": [
+            0.5959630012512207,
+            -0.11257018893957138,
+            -0.3306579887866974
+          ],
+          "max": [
+            1.4973499774932861,
+            1.5090301036834717,
+            0.5199800133705139
+          ]
+        },
+        "center": [
+          1.0466564893722534,
+          0.6982299573719501,
+          0.09466101229190826
+        ],
+        "anchor": [
+          1.0653600692749023,
+          0.7126001119613647,
+          -0.024039993062615395
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1419M",
+            "sha256": "37f92300b952b93099dd8dd417b154b1af7484fd28780d990ff21e0e7684af84"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thigh:right:muscle:right-gluteus-minimus",
+        "fmaId": "FMA22332",
+        "name": "Right gluteus minimus",
+        "sourceName": "right gluteus minimus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "pelvis"
+        ],
+        "bundle": "thigh-muscles",
+        "nodeName": "FMA22332",
+        "bounds": {
+          "min": [
+            -1.4513698816299438,
+            -0.16719970107078552,
+            -0.03628101199865341
+          ],
+          "max": [
+            -0.6770839691162109,
+            1.232550024986267,
+            0.5227699875831604
+          ]
+        },
+        "center": [
+          -1.0642269253730774,
+          0.5326751619577408,
+          0.2432444877922535
+        ],
+        "anchor": [
+          -1.0668200254440308,
+          0.5003997683525085,
+          0.25555703043937683
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1420",
+            "sha256": "61ebd1c4cd97adb69324aa74325c05425dbf37f83862a34c6a2f7400c3c017cd"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thigh:left:muscle:left-gluteus-minimus",
+        "fmaId": "FMA22333",
+        "name": "Left gluteus minimus",
+        "sourceName": "left gluteus minimus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "pelvis"
+        ],
+        "bundle": "thigh-muscles",
+        "nodeName": "FMA22333",
+        "bounds": {
+          "min": [
+            0.6770839691162109,
+            -0.16719970107078552,
+            -0.03628101199865341
+          ],
+          "max": [
+            1.4513698816299438,
+            1.232550024986267,
+            0.5227699875831604
+          ]
+        },
+        "center": [
+          1.0642269253730774,
+          0.5326751619577408,
+          0.2432444877922535
+        ],
+        "anchor": [
+          1.0668200254440308,
+          0.5003899931907654,
+          0.25555703043937683
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1420M",
+            "sha256": "d4fd7a31338758607094164c2d8e3a39f8cd1f5baee7624a0391a7ddd8168272"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      }
+    }
+  ]
+}

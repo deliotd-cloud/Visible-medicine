@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "64b753333f473de90ce382f3af40cb212bfa0ce65975b9c021cfe127823cddde"
+      "sha256": "8106395e71ca14b674769d438b6a97034095b263cf73aad46530874b0fe79b15"
     },
     {
       "path": "app/body-education-link.ts",
@@ -803,6 +803,10 @@
     {
       "path": "content/hepatic-teaching.ts",
       "sha256": "0c93b76eba32feb4e5c1d0f139fccd416645dad6419b1e59bb97b043c534a654"
+    },
+    {
+      "path": "content/hip-abductor-xray.ts",
+      "sha256": "cbec6faa8e72189f423c3a76fdddb876b9fb1eb8579aa02629f03c187663a691"
     },
     {
       "path": "content/hip-attachment-pins.json",
@@ -1981,6 +1985,10 @@
       "sha256": "86a6ac1226f1ab496c3dc7aee6279da3ef662a0c3316fee10862cb8ba30fae80"
     },
     {
+      "path": "lib/hip-abductor-xray.ts",
+      "sha256": "1c5829f35585e0097025bac08f8159ea519a119ee7ae493235b5b2fc4c94be8a"
+    },
+    {
       "path": "lib/hip-attachments.ts",
       "sha256": "fe24425b7a26348cd338652c5d562105ed715fdb20546583a1dcf78679e46566"
     },
@@ -2714,7 +2722,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "d82251c38212513ffb68b198089ae19583feb3260c956e7b567430e2ccd0e1cc"
+      "sha256": "5c00dec6117e5e4fbaff67be4580d6575bdfbf07a748ba19c1ae278b89401136"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2925,5 +2933,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "04a3b3a6f5e87076125fd3bf2dd6004c7c733e1b58f6d71988414ae9c06f8ba4"
+  "sha256": "609f8fd091431d39ef31c2cb6190c5765890b04476a915679e6699df75192110"
 }

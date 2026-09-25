@@ -1,5 +1,6 @@
 import { centralVesselImagingLesson } from '../lib/central-vessel-imaging';
 import { mainBronchusXrayLesson } from '../lib/main-bronchus-xray';
+import { hipAbductorXrayLesson } from '../lib/hip-abductor-xray';
 import { properDigitalTeachingLesson } from '../lib/proper-digital-teaching';
 import { spinalDiscFunctionLesson } from '../lib/spinal-disc-function';
 import { laryngealMuscleImagingLesson } from '../lib/laryngeal-muscle-imaging';
@@ -382,6 +383,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (wristImaging) return wristImaging;
   const hipImaging = hipImagingLesson(s, tab);
   if (hipImaging) return hipImaging;
+  const hipAbductorXray = hipAbductorXrayLesson(s, tab);
+  if (hipAbductorXray) return hipAbductorXray;
   const spineImaging = spineImagingLesson(s, tab);
   if (spineImaging) return spineImaging;
   const xray = bodyXrayLesson(s, tab);
