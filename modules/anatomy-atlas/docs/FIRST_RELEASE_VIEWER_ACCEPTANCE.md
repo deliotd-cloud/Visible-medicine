@@ -1,5 +1,22 @@
 # First-release viewer acceptance evidence
 
+## 25 September: short-viewport forearm search and return
+
+Local Atlas `689835f` was sampled in the in-app browser at 640 × 360. Search
+opened with the input focused; filtering `left radius`, then Tab twice, focused
+the FMA23465 result and scrolled it into view (y287–348 within the dialog).
+Enter selected Left radius and opened Structure info with its Close control
+focused. Escape returned focus to Structure info; the selected model label
+remained Left radius. Document width and scroll width were both640. Dialog
+content and lower model controls require vertical scrolling at this height.
+The viewport override was reset and the temporary tab closed.
+
+The attempted Ctrl-plus shortcut did not change viewport, device-pixel ratio or
+root font metrics (1280 × 720, DPR1, 16px before and after). Consequently this is
+**short-viewport reflow evidence only**, not 200% browser/text enlargement.
+Native zoom, real touch and screen-reader acceptance remain unverified. No
+product code or clinical content was changed based on this sample.
+
 ## 25 September: nested practice answer focus
 
 Local head/neck → Search `ventricle` → Fourth ventricle was followed using actual
