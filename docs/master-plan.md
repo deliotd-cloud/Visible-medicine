@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+25 September pulmonary X-ray integration: five existing branch-group selections
+gain orientation drafts within the existing Imaging panel, without new controls,
+models, patient data or access changes. See [scope and limitations](atlas-pulmonary-xray-20260925.md).
+The main-task checkpoint records verified publication/recovery separately.
+Continue regional anatomy/teaching and the full imaging roadmap; draft content
+does not grant clinical or patient-data release approval.
+
 25 September hip-abductor teaching integration: generated Atlas `77eaf75`
 adds four source-bound X-ray orientation drafts, preserving CT/MRI/US content,
 models, compact UI and independent access. Historical hip verification is repaired
