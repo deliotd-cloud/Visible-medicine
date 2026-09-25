@@ -6,6 +6,8 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "pelvic-floor:test": "node --test scripts/test-pelvic-floor-review.mjs scripts/test-pelvic-floor-projections.mjs",
+    "pelvic-floor:review": "node scripts/render-pelvic-floor-review.mjs --check",
     "orbital-ultrasound:test": "node scripts/record-orbital-ultrasound.mjs --check && node scripts/validate-orbital-ultrasound.mjs",
     "pulmonary-vein-ultrasound:test": "node scripts/record-pulmonary-vein-ultrasound.mjs --check && node scripts/validate-pulmonary-vein-ultrasound.mjs",
     "contextual-undo:test": "node scripts/test-contextual-dissection-undo.mjs",

@@ -1,0 +1,1258 @@
+{
+  "schemaVersion": 1,
+  "source": "BodyParts3D v4 original cached OBJ",
+  "coordinateSpace": "original source coordinates; no transform",
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ],
+    "geometryScreenSha256": "80a31dc88bc8e85561e5f3702b7697485ea547a4a85c7b3264ceb24291c66cd7"
+  },
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "licenseUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+  "groups": [
+    {
+      "tree": "isa",
+      "id": "FMA45854",
+      "name": "right pubococcygeus",
+      "files": [
+        "FJ2550"
+      ],
+      "holdReason": "Pelvic-floor alternatives/cross-midline bounds require adjudication.",
+      "disposition": "held-pending-radiologist-adjudication",
+      "clinicalApproval": false
+    },
+    {
+      "tree": "isa",
+      "id": "FMA45855",
+      "name": "left pubococcygeus",
+      "files": [
+        "FJ1457M",
+        "FJ2545"
+      ],
+      "holdReason": "Pelvic-floor alternatives/cross-midline bounds require adjudication.",
+      "disposition": "held-pending-radiologist-adjudication",
+      "clinicalApproval": false
+    },
+    {
+      "tree": "isa",
+      "id": "FMA45856",
+      "name": "right puborectalis",
+      "files": [
+        "FJ2551"
+      ],
+      "holdReason": "Pelvic-floor alternatives/cross-midline bounds require adjudication.",
+      "disposition": "held-pending-radiologist-adjudication",
+      "clinicalApproval": false
+    },
+    {
+      "tree": "isa",
+      "id": "FMA45857",
+      "name": "left puborectalis",
+      "files": [
+        "FJ1458M",
+        "FJ2546"
+      ],
+      "holdReason": "Pelvic-floor alternatives/cross-midline bounds require adjudication.",
+      "disposition": "held-pending-radiologist-adjudication",
+      "clinicalApproval": false
+    },
+    {
+      "tree": "isa",
+      "id": "FMA45858",
+      "name": "right iliococcygeus",
+      "files": [
+        "FJ2549"
+      ],
+      "holdReason": "Pelvic-floor alternatives/cross-midline bounds require adjudication.",
+      "disposition": "held-pending-radiologist-adjudication",
+      "clinicalApproval": false
+    },
+    {
+      "tree": "isa",
+      "id": "FMA45859",
+      "name": "left iliococcygeus",
+      "files": [
+        "FJ1453M",
+        "FJ2544"
+      ],
+      "holdReason": "Pelvic-floor alternatives/cross-midline bounds require adjudication.",
+      "disposition": "held-pending-radiologist-adjudication",
+      "clinicalApproval": false
+    },
+    {
+      "tree": "isa",
+      "id": "FMA46442",
+      "name": "tendinous arch of levator ani",
+      "files": [
+        "FJ1465",
+        "FJ1465M",
+        "FJ2552",
+        "FJ2553"
+      ],
+      "holdReason": "Pelvic-floor alternatives require adjudication.",
+      "disposition": "held-pending-radiologist-adjudication",
+      "clinicalApproval": false
+    }
+  ],
+  "files": [
+    {
+      "tree": "isa",
+      "file": "FJ2550",
+      "bytes": 364094,
+      "crc32": 2316578153,
+      "sha256": "7621e58ec06b0bd01e66d84e8d3f9d7245c1a892bdf44e514cc7a8694df8d574",
+      "geometrySha256": "72a8f8827ae7f4e1272800687059bf54d9b28edd4636abce8b1e25679b3f7df4",
+      "vertices": 3498,
+      "triangles": 4616,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          -35.4065,
+          -100.53,
+          767.246
+        ],
+        "max": [
+          28.2547,
+          -10.482,
+          814.623
+        ]
+      },
+      "sourceXDistribution": {
+        "negative": 3348,
+        "zero": 0,
+        "positive": 150
+      },
+      "sourceXSurface": {
+        "referencedVertices": 3498,
+        "unreferencedVertices": 0,
+        "referencedXDistribution": {
+          "negative": 3348,
+          "zero": 0,
+          "positive": 150
+        },
+        "triangles": {
+          "entirelyNegative": {
+            "count": 4566,
+            "surfaceAreaMm2": 5873.097730270324
+          },
+          "entirelyPositive": {
+            "count": 50,
+            "surfaceAreaMm2": 0.3103585418657629
+          },
+          "crossingPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "onPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          }
+        },
+        "totalSurfaceAreaMm2": 5873.40808881219
+      },
+      "disposition": "held-pending-radiologist-adjudication",
+      "clinicalApproval": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1457M",
+      "bytes": 348032,
+      "crc32": 4234311330,
+      "sha256": "8ed11be992637e9e9a13c19191767cdda90f0f822444c3571e8f3784c7c43940",
+      "geometrySha256": "8c4357cc1f8a8188010200dbf8c4a56db0032d8d150f783ef377520d7ad9ab90",
+      "vertices": 3296,
+      "triangles": 4616,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          3.16466,
+          -100.53,
+          767.231
+        ],
+        "max": [
+          35.4065,
+          -10.482,
+          814.623
+        ]
+      },
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 3296
+      },
+      "sourceXSurface": {
+        "referencedVertices": 3296,
+        "unreferencedVertices": 0,
+        "referencedXDistribution": {
+          "negative": 0,
+          "zero": 0,
+          "positive": 3296
+        },
+        "triangles": {
+          "entirelyNegative": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "entirelyPositive": {
+            "count": 4616,
+            "surfaceAreaMm2": 5871.879251312773
+          },
+          "crossingPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "onPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          }
+        },
+        "totalSurfaceAreaMm2": 5871.879251312773
+      },
+      "disposition": "held-pending-radiologist-adjudication",
+      "clinicalApproval": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2545",
+      "bytes": 327718,
+      "crc32": 2689520987,
+      "sha256": "1ef611b58e0beba262d31c1015ade4a5e5ad0bd6cdbc08d3fd68be8d3444d393",
+      "geometrySha256": "439b309e2b5831d6ef71fd1a310b8309d2c4b60a559532df40b9f8dce57725c9",
+      "vertices": 2937,
+      "triangles": 4670,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          3.16191,
+          -100.419,
+          767.159
+        ],
+        "max": [
+          35.3417,
+          -10.4693,
+          814.51
+        ]
+      },
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 2937
+      },
+      "sourceXSurface": {
+        "referencedVertices": 2937,
+        "unreferencedVertices": 0,
+        "referencedXDistribution": {
+          "negative": 0,
+          "zero": 0,
+          "positive": 2937
+        },
+        "triangles": {
+          "entirelyNegative": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "entirelyPositive": {
+            "count": 4670,
+            "surfaceAreaMm2": 5843.046049943518
+          },
+          "crossingPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "onPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          }
+        },
+        "totalSurfaceAreaMm2": 5843.046049943518
+      },
+      "disposition": "held-pending-radiologist-adjudication",
+      "clinicalApproval": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2551",
+      "bytes": 367735,
+      "crc32": 3885179437,
+      "sha256": "e6fd6ceaabdfdab3c0af96815aede5e76d16bc59c52da4dd393c5b6f42239a81",
+      "geometrySha256": "ee7bf5ddb337c15b06a226fa585c84cab615a8ec3ed93b8111faecd4b41868bb",
+      "vertices": 4164,
+      "triangles": 3638,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          -32.4661,
+          -102.803,
+          763.008
+        ],
+        "max": [
+          24.6095,
+          -21.3057,
+          791.816
+        ]
+      },
+      "sourceXDistribution": {
+        "negative": 3744,
+        "zero": 0,
+        "positive": 420
+      },
+      "sourceXSurface": {
+        "referencedVertices": 4164,
+        "unreferencedVertices": 0,
+        "referencedXDistribution": {
+          "negative": 3744,
+          "zero": 0,
+          "positive": 420
+        },
+        "triangles": {
+          "entirelyNegative": {
+            "count": 3488,
+            "surfaceAreaMm2": 4819.909819254562
+          },
+          "entirelyPositive": {
+            "count": 150,
+            "surfaceAreaMm2": 1.6499137536814645
+          },
+          "crossingPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "onPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          }
+        },
+        "totalSurfaceAreaMm2": 4821.559733008243
+      },
+      "disposition": "held-pending-radiologist-adjudication",
+      "clinicalApproval": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1458M",
+      "bytes": 342998,
+      "crc32": 2009420610,
+      "sha256": "9a1b0ccb5c9221adc38d914567bf9ec7ca060787e923bced5aa608040c21926a",
+      "geometrySha256": "86d1e56368806c8ca8dfedb021322dfb090d75db07544a81454bde491ee0f659",
+      "vertices": 3817,
+      "triangles": 3634,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          3.21461,
+          -102.803,
+          763.102
+        ],
+        "max": [
+          32.6258,
+          -21.3057,
+          791.816
+        ]
+      },
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 3817
+      },
+      "sourceXSurface": {
+        "referencedVertices": 3817,
+        "unreferencedVertices": 0,
+        "referencedXDistribution": {
+          "negative": 0,
+          "zero": 0,
+          "positive": 3817
+        },
+        "triangles": {
+          "entirelyNegative": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "entirelyPositive": {
+            "count": 3634,
+            "surfaceAreaMm2": 4824.219842094089
+          },
+          "crossingPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "onPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          }
+        },
+        "totalSurfaceAreaMm2": 4824.219842094089
+      },
+      "disposition": "held-pending-radiologist-adjudication",
+      "clinicalApproval": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2546",
+      "bytes": 304204,
+      "crc32": 129947194,
+      "sha256": "c128924a00c0eb58eb0ee74249cf9a63a1b962e5e91133c0f958d268f019fb72",
+      "geometrySha256": "b6f0c00758b5fc7200af4dba3454c179962e7d775a75d5453c364fe53658cefc",
+      "vertices": 3163,
+      "triangles": 3618,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          3.23087,
+          -102.805,
+          763.045
+        ],
+        "max": [
+          32.6242,
+          -21.3865,
+          791.788
+        ]
+      },
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 3163
+      },
+      "sourceXSurface": {
+        "referencedVertices": 3163,
+        "unreferencedVertices": 0,
+        "referencedXDistribution": {
+          "negative": 0,
+          "zero": 0,
+          "positive": 3163
+        },
+        "triangles": {
+          "entirelyNegative": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "entirelyPositive": {
+            "count": 3618,
+            "surfaceAreaMm2": 4808.679879132531
+          },
+          "crossingPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "onPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          }
+        },
+        "totalSurfaceAreaMm2": 4808.679879132531
+      },
+      "disposition": "held-pending-radiologist-adjudication",
+      "clinicalApproval": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2549",
+      "bytes": 325824,
+      "crc32": 4215895704,
+      "sha256": "b5733ded901a2785ed87a12451f77118f4ca3e72abba87d1900a5fd758f23ccc",
+      "geometrySha256": "bbe75123c0394f41f977d26e579f3729ecf888f056243d34d685f7c2d7530058",
+      "vertices": 3319,
+      "triangles": 3864,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          -49.1884,
+          -88.1942,
+          776.094
+        ],
+        "max": [
+          44.3877,
+          -15.0529,
+          821.722
+        ]
+      },
+      "sourceXDistribution": {
+        "negative": 3231,
+        "zero": 0,
+        "positive": 88
+      },
+      "sourceXSurface": {
+        "referencedVertices": 3319,
+        "unreferencedVertices": 0,
+        "referencedXDistribution": {
+          "negative": 3231,
+          "zero": 0,
+          "positive": 88
+        },
+        "triangles": {
+          "entirelyNegative": {
+            "count": 3834,
+            "surfaceAreaMm2": 4953.932183557365
+          },
+          "entirelyPositive": {
+            "count": 30,
+            "surfaceAreaMm2": 0.2766569516941483
+          },
+          "crossingPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "onPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          }
+        },
+        "totalSurfaceAreaMm2": 4954.208840509059
+      },
+      "disposition": "held-pending-radiologist-adjudication",
+      "clinicalApproval": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1453M",
+      "bytes": 321290,
+      "crc32": 1703451372,
+      "sha256": "32c66e9739f2a0074be36918181d288dad7c79e781d0ca680212d10e85a01429",
+      "geometrySha256": "f9202cb805b29cd9089b1b7a064f3c2aed32461bcdf367a5e0839cf98f3cb9d6",
+      "vertices": 3288,
+      "triangles": 3862,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          0.657022,
+          -88.4009,
+          776.036
+        ],
+        "max": [
+          49.1884,
+          -15.0662,
+          821.722
+        ]
+      },
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 3288
+      },
+      "sourceXSurface": {
+        "referencedVertices": 3288,
+        "unreferencedVertices": 0,
+        "referencedXDistribution": {
+          "negative": 0,
+          "zero": 0,
+          "positive": 3288
+        },
+        "triangles": {
+          "entirelyNegative": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "entirelyPositive": {
+            "count": 3862,
+            "surfaceAreaMm2": 4955.001532437473
+          },
+          "crossingPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "onPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          }
+        },
+        "totalSurfaceAreaMm2": 4955.001532437473
+      },
+      "disposition": "held-pending-radiologist-adjudication",
+      "clinicalApproval": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2544",
+      "bytes": 296272,
+      "crc32": 2654709741,
+      "sha256": "9f6862a86ca831359adb98d87ef2b051433827727f2c4b51c4fbf59c8212b84c",
+      "geometrySha256": "6ad1f4c1d15f696aa155f9d2197fe1ab505103f01efb6a403bec986cff80555e",
+      "vertices": 2898,
+      "triangles": 3846,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          0.676444,
+          -88.0783,
+          776.097
+        ],
+        "max": [
+          49.0794,
+          -15.0949,
+          821.629
+        ]
+      },
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 2898
+      },
+      "sourceXSurface": {
+        "referencedVertices": 2898,
+        "unreferencedVertices": 0,
+        "referencedXDistribution": {
+          "negative": 0,
+          "zero": 0,
+          "positive": 2898
+        },
+        "triangles": {
+          "entirelyNegative": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "entirelyPositive": {
+            "count": 3846,
+            "surfaceAreaMm2": 4941.558505742615
+          },
+          "crossingPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "onPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          }
+        },
+        "totalSurfaceAreaMm2": 4941.558505742615
+      },
+      "disposition": "held-pending-radiologist-adjudication",
+      "clinicalApproval": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1465",
+      "bytes": 47990,
+      "crc32": 110561038,
+      "sha256": "d708ce55831bbb0954e193439539f36f0055b1f46d73bfea23d238f68958a3cc",
+      "geometrySha256": "dfee9dc8a9257cf172138409ccec9cc08fd8806ff4c287835ad8e26a5bdf3653",
+      "vertices": 454,
+      "triangles": 722,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          -49.0718,
+          -102.46,
+          786.678
+        ],
+        "max": [
+          -23.7635,
+          -36.2938,
+          820.334
+        ]
+      },
+      "sourceXDistribution": {
+        "negative": 454,
+        "zero": 0,
+        "positive": 0
+      },
+      "sourceXSurface": {
+        "referencedVertices": 454,
+        "unreferencedVertices": 0,
+        "referencedXDistribution": {
+          "negative": 454,
+          "zero": 0,
+          "positive": 0
+        },
+        "triangles": {
+          "entirelyNegative": {
+            "count": 722,
+            "surfaceAreaMm2": 934.0418581583896
+          },
+          "entirelyPositive": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "crossingPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "onPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          }
+        },
+        "totalSurfaceAreaMm2": 934.0418581583896
+      },
+      "disposition": "held-pending-radiologist-adjudication",
+      "clinicalApproval": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1465M",
+      "bytes": 47560,
+      "crc32": 2322559233,
+      "sha256": "af0914273b298fc93267504b4a14672de1f0f56b197cbcec59c9446845847024",
+      "geometrySha256": "5da7337b32fb929a9c835879019ed56959200e9252879abdb1d743e60fa71bf8",
+      "vertices": 454,
+      "triangles": 722,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          23.7635,
+          -102.46,
+          786.678
+        ],
+        "max": [
+          49.0718,
+          -36.2938,
+          820.334
+        ]
+      },
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 454
+      },
+      "sourceXSurface": {
+        "referencedVertices": 454,
+        "unreferencedVertices": 0,
+        "referencedXDistribution": {
+          "negative": 0,
+          "zero": 0,
+          "positive": 454
+        },
+        "triangles": {
+          "entirelyNegative": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "entirelyPositive": {
+            "count": 722,
+            "surfaceAreaMm2": 934.0424370672563
+          },
+          "crossingPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "onPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          }
+        },
+        "totalSurfaceAreaMm2": 934.0424370672563
+      },
+      "disposition": "held-pending-radiologist-adjudication",
+      "clinicalApproval": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2552",
+      "bytes": 46449,
+      "crc32": 21984913,
+      "sha256": "4737618e8f21b301c79f7fe5dfc0ee74a360d7dadc172590d0a6a411b415808f",
+      "geometrySha256": "74afa32fcb633fa7cd9c7aa24a4a6ccc178a99c347f38b9f986788c5f2820e84",
+      "vertices": 440,
+      "triangles": 710,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          23.826,
+          -102.428,
+          786.718
+        ],
+        "max": [
+          49.0786,
+          -36.3927,
+          820.279
+        ]
+      },
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 440
+      },
+      "sourceXSurface": {
+        "referencedVertices": 440,
+        "unreferencedVertices": 0,
+        "referencedXDistribution": {
+          "negative": 0,
+          "zero": 0,
+          "positive": 440
+        },
+        "triangles": {
+          "entirelyNegative": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "entirelyPositive": {
+            "count": 710,
+            "surfaceAreaMm2": 927.5501873409228
+          },
+          "crossingPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "onPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          }
+        },
+        "totalSurfaceAreaMm2": 927.5501873409228
+      },
+      "disposition": "held-pending-radiologist-adjudication",
+      "clinicalApproval": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2553",
+      "bytes": 46895,
+      "crc32": 1688668148,
+      "sha256": "16b089edb9ee8093de2d05ba3baa976d0c8e3fd38036b90d3bf89a3caf6489c8",
+      "geometrySha256": "cb400fe68987121f03e3e651784cfcc71997a96aa74dce23fdcfaf37444785e9",
+      "vertices": 434,
+      "triangles": 722,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          -49.1063,
+          -102.46,
+          786.648
+        ],
+        "max": [
+          -23.7588,
+          -36.2938,
+          820.334
+        ]
+      },
+      "sourceXDistribution": {
+        "negative": 434,
+        "zero": 0,
+        "positive": 0
+      },
+      "sourceXSurface": {
+        "referencedVertices": 434,
+        "unreferencedVertices": 0,
+        "referencedXDistribution": {
+          "negative": 434,
+          "zero": 0,
+          "positive": 0
+        },
+        "triangles": {
+          "entirelyNegative": {
+            "count": 722,
+            "surfaceAreaMm2": 932.4898582345762
+          },
+          "entirelyPositive": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "crossingPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          },
+          "onPlane": {
+            "count": 0,
+            "surfaceAreaMm2": 0
+          }
+        },
+        "totalSurfaceAreaMm2": 932.4898582345762
+      },
+      "disposition": "held-pending-radiologist-adjudication",
+      "clinicalApproval": false
+    }
+  ],
+  "comparisons": [
+    {
+      "tree": "isa",
+      "id": "FMA45855",
+      "a": "FJ1457M",
+      "b": "FJ2545",
+      "method": "bidirectional-sampled-original-source-coordinate-surfaces",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinTenthMm": 97,
+        "withinQuarterMm": 125,
+        "withinOneMm": 127,
+        "medianMm": 0.04438460126984076,
+        "maxMm": 0.29957056533422216,
+        "closePointBounds": {
+          "min": [
+            3.95193,
+            -99.9892,
+            767.601
+          ],
+          "max": [
+            35.2391,
+            -10.9694,
+            813.039
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 128,
+        "withinTenthMm": 121,
+        "withinQuarterMm": 128,
+        "withinOneMm": 128,
+        "medianMm": 0.02461248178286797,
+        "maxMm": 0.17560906801876194,
+        "closePointBounds": {
+          "min": [
+            3.49485,
+            -100.302,
+            769.084
+          ],
+          "max": [
+            34.8495,
+            -10.4956,
+            814.008
+          ]
+        }
+      },
+      "sampledProximityFlag": true,
+      "anatomicalEquivalence": "not-determined",
+      "disposition": "held-pending-radiologist-adjudication"
+    },
+    {
+      "tree": "isa",
+      "id": "FMA45857",
+      "a": "FJ1458M",
+      "b": "FJ2546",
+      "method": "bidirectional-sampled-original-source-coordinate-surfaces",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 105,
+        "withinQuarterMm": 124,
+        "withinOneMm": 127,
+        "medianMm": 0.037546747741148134,
+        "maxMm": 1.1468440158034976,
+        "closePointBounds": {
+          "min": [
+            3.23046,
+            -102.45,
+            763.995
+          ],
+          "max": [
+            32.6258,
+            -21.3756,
+            791.763
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 127,
+        "withinTenthMm": 116,
+        "withinQuarterMm": 127,
+        "withinOneMm": 127,
+        "medianMm": 0.017958989308503398,
+        "maxMm": 0.2046972539274128,
+        "closePointBounds": {
+          "min": [
+            3.2606,
+            -102.584,
+            763.749
+          ],
+          "max": [
+            32.5024,
+            -21.4975,
+            791.563
+          ]
+        }
+      },
+      "sampledProximityFlag": true,
+      "anatomicalEquivalence": "not-determined",
+      "disposition": "held-pending-radiologist-adjudication"
+    },
+    {
+      "tree": "isa",
+      "id": "FMA45859",
+      "a": "FJ1453M",
+      "b": "FJ2544",
+      "method": "bidirectional-sampled-original-source-coordinate-surfaces",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinTenthMm": 96,
+        "withinQuarterMm": 120,
+        "withinOneMm": 126,
+        "medianMm": 0.05409956430580996,
+        "maxMm": 1.0473727416732066,
+        "closePointBounds": {
+          "min": [
+            1.03369,
+            -88.1942,
+            777.42
+          ],
+          "max": [
+            49.1884,
+            -15.1147,
+            820.088
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 126,
+        "withinTenthMm": 111,
+        "withinQuarterMm": 126,
+        "withinOneMm": 126,
+        "medianMm": 0.035000252351411854,
+        "maxMm": 0.2086991167479516,
+        "closePointBounds": {
+          "min": [
+            0.772666,
+            -84.9899,
+            777.148
+          ],
+          "max": [
+            48.7727,
+            -15.962,
+            820.72
+          ]
+        }
+      },
+      "sampledProximityFlag": true,
+      "anatomicalEquivalence": "not-determined",
+      "disposition": "held-pending-radiologist-adjudication"
+    },
+    {
+      "tree": "isa",
+      "id": "FMA46442",
+      "a": "FJ1465",
+      "b": "FJ1465M",
+      "method": "bidirectional-sampled-original-source-coordinate-surfaces",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 66.74513338341605,
+        "maxMm": 92.00566374685854,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 66.74513338341605,
+        "maxMm": 92.00566374685854,
+        "closePointBounds": null
+      },
+      "sampledProximityFlag": false,
+      "anatomicalEquivalence": "not-determined",
+      "disposition": "held-pending-radiologist-adjudication"
+    },
+    {
+      "tree": "isa",
+      "id": "FMA46442",
+      "a": "FJ1465",
+      "b": "FJ2552",
+      "method": "bidirectional-sampled-original-source-coordinate-surfaces",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 66.81432089582292,
+        "maxMm": 92.06823678039024,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 110,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 63.41618939182644,
+        "maxMm": 92.0418266515827,
+        "closePointBounds": null
+      },
+      "sampledProximityFlag": false,
+      "anatomicalEquivalence": "not-determined",
+      "disposition": "held-pending-radiologist-adjudication"
+    },
+    {
+      "tree": "isa",
+      "id": "FMA46442",
+      "a": "FJ1465",
+      "b": "FJ2553",
+      "method": "bidirectional-sampled-original-source-coordinate-surfaces",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 114,
+        "withinTenthMm": 105,
+        "withinQuarterMm": 114,
+        "withinOneMm": 114,
+        "medianMm": 0.010326113043534304,
+        "maxMm": 0.2217438955440258,
+        "closePointBounds": {
+          "min": [
+            -48.9113,
+            -102.46,
+            786.845
+          ],
+          "max": [
+            -23.9125,
+            -36.4488,
+            820.334
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 109,
+        "withinTenthMm": 101,
+        "withinQuarterMm": 108,
+        "withinOneMm": 109,
+        "medianMm": 0.011539549825657445,
+        "maxMm": 0.4040028797333999,
+        "closePointBounds": {
+          "min": [
+            -48.9134,
+            -102.46,
+            786.987
+          ],
+          "max": [
+            -23.7635,
+            -36.5088,
+            820.334
+          ]
+        }
+      },
+      "sampledProximityFlag": true,
+      "anatomicalEquivalence": "not-determined",
+      "disposition": "held-pending-radiologist-adjudication"
+    },
+    {
+      "tree": "isa",
+      "id": "FMA46442",
+      "a": "FJ1465M",
+      "b": "FJ2552",
+      "method": "bidirectional-sampled-original-source-coordinate-surfaces",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 114,
+        "withinTenthMm": 89,
+        "withinQuarterMm": 114,
+        "withinOneMm": 114,
+        "medianMm": 0.04968546656678427,
+        "maxMm": 0.16277204337280468,
+        "closePointBounds": {
+          "min": [
+            23.9125,
+            -102.46,
+            786.845
+          ],
+          "max": [
+            48.9112,
+            -36.4488,
+            820.334
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 110,
+        "withinTenthMm": 105,
+        "withinQuarterMm": 109,
+        "withinOneMm": 110,
+        "medianMm": 0.02390958673182755,
+        "maxMm": 0.3056966511300471,
+        "closePointBounds": {
+          "min": [
+            23.826,
+            -102.428,
+            786.76
+          ],
+          "max": [
+            48.949,
+            -36.3927,
+            820.279
+          ]
+        }
+      },
+      "sampledProximityFlag": true,
+      "anatomicalEquivalence": "not-determined",
+      "disposition": "held-pending-radiologist-adjudication"
+    },
+    {
+      "tree": "isa",
+      "id": "FMA46442",
+      "a": "FJ1465M",
+      "b": "FJ2553",
+      "method": "bidirectional-sampled-original-source-coordinate-surfaces",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 66.74513338341605,
+        "maxMm": 92.0077029142669,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 109,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 63.816071121074195,
+        "maxMm": 92.00566374685854,
+        "closePointBounds": null
+      },
+      "sampledProximityFlag": false,
+      "anatomicalEquivalence": "not-determined",
+      "disposition": "held-pending-radiologist-adjudication"
+    },
+    {
+      "tree": "isa",
+      "id": "FMA46442",
+      "a": "FJ2552",
+      "b": "FJ2553",
+      "method": "bidirectional-sampled-original-source-coordinate-surfaces",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 110,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 63.41618939182644,
+        "maxMm": 92.04535380322456,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 109,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 63.86535659917667,
+        "maxMm": 92.06823678039024,
+        "closePointBounds": null
+      },
+      "sampledProximityFlag": false,
+      "anatomicalEquivalence": "not-determined",
+      "disposition": "held-pending-radiologist-adjudication"
+    }
+  ],
+  "summary": {
+    "definitions": 7,
+    "components": 13,
+    "comparisons": 9,
+    "admissions": 0
+  },
+  "xMeasurement": "Per-component original-coordinate X bounds, referenced/unreferenced vertex counts, referenced vertex X counts, and source triangle surface areas in mm². Entirely negative includes plane-touching faces with negative vertices only; entirely positive similarly includes plane-touching faces with positive vertices only; crossing requires both negative and positive vertices; on-plane means every vertex has X=0. These are disjoint categories, not volumes or validated anatomical sides.",
+  "comparisonLimit": "Distances sample source vertices against the other source surface in both directions; they do not establish anatomical equivalence, continuity or completeness.",
+  "disposition": "held-pending-radiologist-adjudication",
+  "clinicalApproval": false,
+  "admissionsChanged": false
+}

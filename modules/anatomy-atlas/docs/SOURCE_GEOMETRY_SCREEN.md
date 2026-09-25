@@ -1,5 +1,11 @@
 # Remaining-source geometry screen
 
+25 September follow-up: the [pelvic-floor review packet](PELVIC_FLOOR_SOURCE_REVIEW.md)
+adds seven source-projection sheets, component comparisons and face-aware X
+measurements. It distinguishes tiny opposite-X surfaces from a broad continuous
+extension. All original screen evidence and importer holds remain unchanged;
+the packet grants no admission or clinical approval.
+
 This is preparatory anatomy work, not a visible mesh release. The atlas remains at 1,022 body representations, 86 body mesh bundles and the separate shoulder model. Teaching, subscriptions, UI and imaging-link permissions are unchanged.
 
 ## Evidence added

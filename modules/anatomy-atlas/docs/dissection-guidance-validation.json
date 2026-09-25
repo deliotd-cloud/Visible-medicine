@@ -1,29 +1,29 @@
 {
   "passed": true,
-  "assertions": 1591662,
+  "assertions": 1630102,
   "scopes": 36,
-  "recipeScopes": 1041,
-  "variants": 20820,
-  "actions": 22000,
+  "recipeScopes": 1098,
+  "variants": 21960,
+  "actions": 23020,
   "markupCases": 74,
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
       "structures": 1022,
-      "recipes": 27
+      "recipes": 37
     },
     {
       "region": "whole-body",
       "side": "left",
       "structures": 590,
-      "recipes": 27
+      "recipes": 37
     },
     {
       "region": "whole-body",
       "side": "right",
       "structures": 589,
-      "recipes": 27
+      "recipes": 37
     },
     {
       "region": "shoulder-arm",
@@ -101,19 +101,19 @@
       "region": "leg",
       "side": "both",
       "structures": 60,
-      "recipes": 23
+      "recipes": 24
     },
     {
       "region": "leg",
       "side": "left",
       "structures": 30,
-      "recipes": 23
+      "recipes": 24
     },
     {
       "region": "leg",
       "side": "right",
       "structures": 30,
-      "recipes": 23
+      "recipes": 24
     },
     {
       "region": "foot",
@@ -137,19 +137,19 @@
       "region": "thorax",
       "side": "both",
       "structures": 153,
-      "recipes": 27
+      "recipes": 31
     },
     {
       "region": "thorax",
       "side": "left",
       "structures": 102,
-      "recipes": 27
+      "recipes": 31
     },
     {
       "region": "thorax",
       "side": "right",
       "structures": 101,
-      "recipes": 27
+      "recipes": 31
     },
     {
       "region": "abdomen",
@@ -191,19 +191,19 @@
       "region": "head-neck",
       "side": "both",
       "structures": 275,
-      "recipes": 62
+      "recipes": 66
     },
     {
       "region": "head-neck",
       "side": "left",
       "structures": 160,
-      "recipes": 62
+      "recipes": 66
     },
     {
       "region": "head-neck",
       "side": "right",
       "structures": 160,
-      "recipes": 62
+      "recipes": 66
     },
     {
       "region": "spine",
@@ -225,7 +225,7 @@
     }
   ],
   "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
-  "profilesSha256": "1a6c020cad6f3bb3e50f4e1d014a191273d9b66d3eaf6503211f0f2df3ba4c8f",
+  "profilesSha256": "bd67a7cb92160f3fe2f4339309874c2a368ffd68bc8c4d39272e3cd97523e0c0",
   "geometryChanged": false,
   "clinicalValidation": false,
   "browserInteractionTesting": false,
