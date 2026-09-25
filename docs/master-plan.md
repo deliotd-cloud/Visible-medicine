@@ -1,5 +1,11 @@
 # Visible Medicine — shared delivery plan
 
+25 September hand-bone X-ray integration: generated Atlas `2902cc4` adds
+38 source-bound orientation drafts to existing panels. No models, controls,
+private data or independent access rights change. See [scope and limits](atlas-hand-bone-xray-20260925.md).
+Publication/recovery are recorded in the main checkpoint. Continue the full
+roadmap; clinical, privacy, registration and device gates remain open.
+
 25 September nested practice continuity: answering/skipping preserves keyboard
 position at feedback, then Next/Finish and the next heading. No additional UI,
 model, teaching or access changes. See [scope and verification](atlas-nested-answer-focus-20260925.md).

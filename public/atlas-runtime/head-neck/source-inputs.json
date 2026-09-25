@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "8106395e71ca14b674769d438b6a97034095b263cf73aad46530874b0fe79b15"
+    "sha256": "428200a0cda18d6c6e777ecbe340f3f4ad84ec779e57de060ee96075b9a28dd2"
   },
   {
     "path": "app/body-education-link.ts",
@@ -778,6 +778,10 @@
   {
     "path": "content/genicular-study.ts",
     "sha256": "e3990bacdac2466a03bfec56e5fc8eecc0767b1f474d5b161e16cb84d5a1cfaa"
+  },
+  {
+    "path": "content/hand-bone-xray.ts",
+    "sha256": "624460d95748280d06636823375e34fb2779e68f235f6064198268d9430bee6d"
   },
   {
     "path": "content/hand-intrinsic-studies.ts",
@@ -2002,6 +2006,10 @@
   {
     "path": "lib/genicular-study.ts",
     "sha256": "b1654af910c5ac0581a48a76946d71398634bd2d513de778e4e9b92e7bf425cf"
+  },
+  {
+    "path": "lib/hand-bone-xray.ts",
+    "sha256": "3c2149eca9c8bcaa380f10feb48363dfaff58828c6400c5f88c8011c0a0417ef"
   },
   {
     "path": "lib/hand-clinical-curriculum.ts",
