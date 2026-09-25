@@ -10,6 +10,7 @@ import { limbRelationshipsReasoningConcepts } from './limb-relationships-reasoni
 import { abdominalOrganReasoningConcepts } from './abdominal-organ-reasoning';
 import { thoracicOrganReasoningConcepts } from './thoracic-organ-reasoning';
 import { deepBrainReasoningConcepts } from './deep-brain-reasoning';
+import { pelvicOrganReasoningConcepts } from './pelvic-organ-reasoning';
 // "midline" retains the exact catalogue tag, including bilateral source groups.
 type ReasoningBinding = { fma: string; side: 'right' | 'left' | 'midline' | 'unpaired' } & (
   | { file: string; files?: never }
@@ -29,7 +30,8 @@ export interface ReasoningConcept {
     | 'head-neck'
     | 'spine'
     | 'thorax'
-    | 'abdomen';
+    | 'abdomen'
+    | 'pelvis';
   // Exact ordered source memberships for a cross-region representation.
   // Omission retains the original single-region contract.
   sourceRegions?: readonly string[];
@@ -347,6 +349,7 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
   ...abdominalOrganReasoningConcepts,
   ...thoracicOrganReasoningConcepts,
   ...deepBrainReasoningConcepts,
+  ...pelvicOrganReasoningConcepts,
 ];
 export function reasoningConceptFor(s: BodyStructure) {
   if (

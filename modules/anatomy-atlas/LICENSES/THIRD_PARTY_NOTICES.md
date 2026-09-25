@@ -1334,3 +1334,12 @@ retained CC BY 4.0 attribution. Its original short anatomical summaries cite
 https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html. No publisher
 table, artwork or image is imported; reference access grants no asset licence.
 No new dependency, dataset, font, texture or mandatory fee is introduced.
+
+## Pelvic organ reasoning — 25 September 2026
+
+Eight original short draft questions/explanations cite the UAMS pelvic/perineal
+viscera table and NIDDK urinary-tract teaching page (links and scope in
+`docs/PELVIC_ORGAN_REASONING.md`). No publisher prose, question bank, illustration,
+table, scan or dataset is imported; reading access is not an asset licence.
+Existing BodyParts3D CC BY 4.0 attribution remains unchanged. No new dependency,
+mesh, font, texture or mandatory fee is added. Clinical review remains pending.

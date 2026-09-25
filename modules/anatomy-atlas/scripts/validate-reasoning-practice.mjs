@@ -16,6 +16,7 @@ const compiled = await build({
     contents: `export * from './lib/atlas-practice';
 export * from './lib/reasoning-questions';
 export * from './lib/body-display-catalog';
+export { copyRecoveryCamera } from './lib/renderer-health';
 export { ReasoningFeedback } from './app/reasoning-feedback';
 export * as base from './lib/anatomy-practice';`,
     resolveDir: fileURLToPath(root),
@@ -92,8 +93,9 @@ same(api.reasoningConcepts.slice(116,123).map(c => c.key), ['abdominal-stomach',
 same(hash(JSON.stringify(api.reasoningConcepts.slice(0,123))), '3052d88e4b5e2c1dd55f34d37989a4d847e91e41d5707a48a6a876c2d15fb883', 'All preceding 123 concepts remain unchanged and ordered');
 same(api.reasoningConcepts.slice(123,126).map(c => c.key), ['thoracic-trachea','thoracic-esophagus','thoracic-thymus']);
 same(hash(JSON.stringify(api.reasoningConcepts.slice(0,126))), '523ab89c9c6313eec445979978777283e316b118328bd18ddde80a47ecfd3a32', 'All preceding 126 concepts remain unchanged and ordered');
-same(api.reasoningConcepts.length, 132);
-same(bound.length, 250);
+same(hash(JSON.stringify(api.reasoningConcepts.slice(0,132))), '256305e55245d7595c03cc888c3bb8a4918debd6bf6055419860cf66555c892e', 'All preceding 132 concepts remain unchanged and ordered');
+same(api.reasoningConcepts.length, 140);
+same(bound.length, 262);
 same(bound.filter((s) => s.region === 'shoulder-arm').length, 26);
 same(bound.filter((s) => s.region === 'forearm').length, 18);
 same(bound.filter((s) => s.region === 'hand').length, 20);
@@ -103,8 +105,9 @@ same(bound.filter((s) => s.region === 'foot').length, 16);
 same(bound.filter((s) => s.region === 'head-neck').length, 60);
 same(bound.filter((s) => s.region === 'spine').length, 24);
 same(bound.filter((s) => s.region === 'thorax').length, 13);
-same(bound.filter((s) => s.region === 'abdomen').length, 9);
-same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 132);
+same(bound.filter((s) => s.region === 'abdomen').length, 11);
+same(bound.filter((s) => s.region === 'pelvis').length, 10);
+same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 140);
 same(hash(JSON.stringify(precedingConcepts.filter(c => !c.key.startsWith('neck-')))),
   'caafb323ca7d5a04971f91ad369d68c3a8da5e43839b39d8cd76192d1497bad2',
   'All 100 preceding concepts remain unchanged and in order');
@@ -164,8 +167,9 @@ for (const concept of api.reasoningConcepts) {
   const grouped = ['trunk-diaphragm', 'trunk-external-intercostal', 'trunk-internal-intercostal', 'trunk-innermost-intercostal'].includes(concept.key);
   const organ = concept.sourceTissue === 'organ';
   const neuralOrgan = concept.sourceTissue === 'neural-organ';
-  same(concept.bindings.length, grouped || organ ? 1 : 2);
-  same([...new Set(concept.bindings.map(b => b.side))].sort(), organ ? ['unpaired'] : grouped ? ['midline'] : ['left', 'right']);
+  const pairedOrgan = ['pelvic-testis', 'pelvic-epididymis', 'pelvic-seminal-vesicle', 'pelvic-ureter'].includes(concept.key);
+  same(concept.bindings.length, grouped || (organ && !pairedOrgan) ? 1 : 2);
+  same([...new Set(concept.bindings.map(b => b.side))].sort((a, b) => a.localeCompare(b)), organ && !pairedOrgan ? ['unpaired'] : grouped ? ['midline'] : ['left', 'right']);
   same(new Set(concept.distractors).size, 3);
   check(!concept.distractors.includes(concept.key));
   check(concept.prompt.length > 40 && concept.explanation.length > 40);
@@ -303,7 +307,7 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
       same(session, null, 'No unbound regional question is invented');
     if (!session) continue;
     const expected = { 'whole-body': 20, 'head-neck': 20, 'shoulder-arm': 13, forearm: 9,
-      hand: 10, thigh: 18, pelvis: 8, leg: 14, foot: 8, spine: 12, thorax: 10, abdomen: 9 }[region];
+      hand: 10, thigh: 18, pelvis: 16, leg: 14, foot: 8, spine: 12, thorax: 10, abdomen: 9 }[region];
     same(session.questions.length, expected);
     same(
       new Set(session.questions.map((q) => q.reasoning.key)).size,
@@ -365,7 +369,7 @@ for (const count of [1, 5, 10, 20, 100, NaN, Infinity, -10]) {
   same(
     create(all, { count }).questions.length,
     Math.min(
-      132,
+      140,
       Math.max(1, Math.min(20, Math.floor(Number.isFinite(count) ? count : 5))),
     ),
   );
@@ -384,7 +388,65 @@ const limbConcepts = newConcepts.filter(c => c.key.startsWith('limb-'));
 const organConcepts = newConcepts.filter(c => c.sourceTissue === 'organ');
 same(organConcepts.length, 10);
 const liveDisplay = api.bodyDisplayCatalog(catalog);
-const deepConcepts = api.reasoningConcepts.slice(126);
+const pelvicConcepts = api.reasoningConcepts.slice(132);
+same(pelvicConcepts.map(c => c.key), [
+  'pelvic-bladder', 'pelvic-prostate', 'pelvic-rectum', 'pelvic-urethra',
+  'pelvic-testis', 'pelvic-epididymis', 'pelvic-seminal-vesicle', 'pelvic-ureter',
+]);
+const pelvicDisplay = liveDisplay.structures.filter(s => api.reasoningConceptFor(s)?.key.startsWith('pelvic-'));
+same(pelvicDisplay.length, 12, 'Twelve actual display identities, not fabricated organ geometry');
+same(pelvicDisplay.map(s => s.fmaId).sort(), ['FMA15900','FMA9600','FMA14544','FMA19667','FMA7211','FMA7212','FMA18256','FMA18257','FMA19387','FMA19388','FMA15571','FMA15572'].sort());
+same(create(pelvicDisplay)?.questions.length, 8, 'Eight concepts, without contralateral duplicates');
+for (const side of ['both', 'left', 'right']) {
+  const scope = pelvicDisplay.filter(s => side === 'both' || s.laterality === side || s.laterality === 'unpaired');
+  const session = create(scope);
+  same(session?.questions.length, 8, 'Either source side plus unpaired organs supports all eight questions');
+  same(new Set(session.questions.map(q => q.reasoning.key)).size, 8);
+  same(session.questions.every(q => q.choices.length === 4), true);
+}
+for (const target of pelvicDisplay) {
+  const concept = api.reasoningConceptFor(target);
+  same(concept.sourceTissue, 'organ');
+  same(target.category, 'organ');
+  for (const region of ['whole-body', 'pelvis']) {
+    const scope = liveDisplay.structures.filter(s => region === 'whole-body' || s.regions.includes(region));
+    const session = create(scope, { retryIds: [target.id] }, liveDisplay.bundles.map(b => b.id));
+    same(session?.questions.length, 1, 'Every pelvic organ playable in regional and whole-body display scope');
+    const question = session.questions[0];
+    same(question.choices.length, 4);
+    for (const id of question.choices) {
+      const choice = scope.find(s => s.id === id);
+      same(choice.system, 'organs');
+      same(choice.laterality, target.laterality);
+      check(id === target.id || concept.distractors.includes(api.reasoningConceptFor(choice)?.key));
+    }
+    same(create(scope.filter(s => s.id !== target.id), { retryIds: [target.id] }), null, 'Hidden target excluded');
+    same(create(scope, { retryIds: [target.id] }, liveDisplay.bundles.map(b => b.id).filter(id => id !== target.bundle)), null, 'Unloaded target excluded');
+    same(create([target]), null, 'No isolated-organ answer giveaway');
+    same(create(scope, { sampling: 'focus', focusIds: [target.id], retryIds: [target.id] }), null);
+    const partialIds = [target.id, ...question.choices.filter(id => id !== target.id).slice(0, 1)];
+    same(create(scope, { sampling: 'focus', focusIds: partialIds, retryIds: [target.id] })?.questions[0].choices.length, 2, 'Focus uses only its loaded visible alternative');
+    for (const chosen of [...question.choices, null]) {
+      same(renderToStaticMarkup(createElement(api.ReasoningFeedback, { session })), '', 'Feedback is hidden until answer or skip');
+      const answered = api.practiceReducer(session, { type: 'answer', sessionId: session.id, index: 0, chosen });
+      same(api.practiceScore(answered), Number(chosen === target.id));
+      const markup = renderToStaticMarkup(createElement(api.ReasoningFeedback, { session: answered }));
+      check(markup.includes(concept.references[0].url), 'Actual pelvic feedback renders source link');
+      check(markup.includes(concept.explanation), 'Actual pelvic feedback renders exact original explanation');
+      same(api.practiceReducer(answered, { type: 'answer', sessionId: session.id, index: 0, chosen: target.id }), answered, 'Cannot answer twice');
+    }
+  }
+  same(create(liveDisplay.structures.filter(s => s.regions.includes('thorax')), { retryIds: [target.id] }), null);
+  if (concept.key === 'pelvic-ureter') {
+    same(target.region, 'abdomen');
+    same(target.regions, ['abdomen', 'pelvis'], 'Ureter remains cross-region, not relabelled as pelvis-only');
+    same(create(liveDisplay.structures.filter(s => s.regions.includes('abdomen')), { retryIds: [target.id] }), null, 'Abdomen alone has no curated same-side ureter alternative');
+  }
+  for (const other of pelvicDisplay.filter(s => s.id !== target.id)) {
+    same(api.reasoningConceptFor({ ...target, sources: other.sources }), undefined, 'Wrong pelvic surface cannot inherit another question');
+  }
+}
+const deepConcepts = api.reasoningConcepts.slice(126,132);
 same(deepConcepts.map(c => c.key), [
   'deep-brain-caudate', 'deep-brain-putamen', 'deep-brain-pallidum',
   'deep-brain-thalamus', 'deep-brain-lateral-geniculate', 'deep-brain-medial-geniculate',
@@ -464,7 +526,7 @@ for (const side of ['left', 'right']) {
   for (const q of session.questions) same(q.choices.length, 4, 'All four same-side neck choices loaded');
   for (const target of scope) same(create([target]), null, 'No lone-neck-target fallback');
 }
-for (const concept of [...newConcepts, ...deepConcepts]) {
+for (const concept of [...newConcepts, ...deepConcepts, ...pelvicConcepts]) {
   for (const ref of concept.references) referenceWords[ref.url] = (referenceWords[ref.url] ?? 0) + (concept.prompt + ' ' + concept.explanation).split(/\s+/).length;
   const identities = bound.filter(s => api.reasoningConceptFor(s).key === concept.key);
   const oneQuestion = create(all, { retryIds: identities.map(s => s.id) });
@@ -480,7 +542,7 @@ for (const concept of [...newConcepts, ...deepConcepts]) {
 }
 for (const [url, words] of Object.entries(referenceWords)) check(words <= 200, `Brief original synthesis per reference: ${url} (${words})`);
 const groupedTargets = bound.filter(s => s.laterality === 'midline');
-same(bound.filter(s => s.sourceTree === 'partof').map(s => s.fmaId).sort(), ['FMA13373', 'FMA13374', 'FMA7131', 'FMA7148', 'FMA7202', 'FMA7394', 'FMA9607']);
+same(bound.filter(s => s.sourceTree === 'partof').map(s => s.fmaId).sort(), ['FMA13373', 'FMA13374', 'FMA15571', 'FMA15572', 'FMA15900', 'FMA7131', 'FMA7148', 'FMA7202', 'FMA7394', 'FMA9600', 'FMA9607']);
 same(groupedTargets.map(s => s.fmaId).sort(), ['FMA13295', 'FMA9756', 'FMA9757', 'FMA9758'].sort());
 same(create(groupedTargets).questions.length, 4, 'Four genuine grouped/unpaired targets work together');
 for (const group of groupedTargets) {
@@ -684,12 +746,14 @@ for (const mode of ['find', 'name', 'reason'])
       );
     }
 for (const mode of ['find', 'name', 'reason'])
-  for (const practicePaused of [false, true]) {
+  for (const practicePaused of [false, true]) for (const finalQuestion of [false, true]) {
     const calls = [];
     handler('nextQuestion', {
       practicePaused,
-      practice: { mode, id: 7 },
+      practice: { mode, id: 7, questions: Array(finalQuestion ? 3 : 4).fill({}) },
       question: 2,
+      answered: true,
+      restorePracticeView: () => calls.push('restore-study-view'),
       practiceDispatch: (a) => calls.push(a),
       setZoom: (z) => calls.push(z),
       setReset: (f) => calls.push(f(10)),
@@ -700,9 +764,9 @@ for (const mode of ['find', 'name', 'reason'])
         ? []
         : [
             { type: 'next', sessionId: 7, index: 2 },
-            ...(mode === 'find' ? [] : [1, 11]),
+            ...(finalQuestion ? ['restore-study-view'] : mode === 'find' ? [] : [1, 11]),
           ],
-      'Next respects pause and resets reasoning camera',
+      'Next respects pause, restores completed study view, otherwise resets reasoning camera',
     );
   }
 for (const gate of ['ready', 'exam', 'blocked', 'no-retry']) {
@@ -721,6 +785,11 @@ for (const gate of ['ready', 'exam', 'blocked', 'no-retry']) {
     focusTargetIds: [],
     createPracticeSession: api.createPracticeSession,
     layout: 'tray',
+    selectedId: target.id, isolated: true, focus: true, explode: 35,
+    plate: true, zoom: 1.4, view: 'posterior',
+    practiceReturnView: { current: null },
+    cameraCapture: { current: null }, cameraRestore: { current: null },
+    copyRecoveryCamera: api.copyRecoveryCamera,
     practiceDispatch: (a) => calls.push(['dispatch', a]),
   };
   for (const key of [
@@ -739,6 +808,7 @@ for (const gate of ['ready', 'exam', 'blocked', 'no-retry']) {
   if (gate !== 'ready') {
     same(calls, []);
     same(env.practiceSerial.current, 100);
+    same(env.practiceReturnView.current, null, 'Blocked starts do not replace saved view');
   } else {
     const started = calls.find((c) => c[0] === 'dispatch')[1].session;
     same(started.mode, 'reason');
@@ -750,6 +820,10 @@ for (const gate of ['ready', 'exam', 'blocked', 'no-retry']) {
     );
     check(calls.some((c) => c[0] === 'setExplode' && c[1] === 0));
     check(calls.some((c) => c[0] === 'setPlate' && c[1] === false));
+    same(env.practiceReturnView.current, {
+      selectedId: target.id, isolated: true, focus: true, explode: 35,
+      layout: 'tray', plate: true, zoom: 1.4, view: 'posterior', camera: null,
+    }, 'Actual start handler preserves the study view before hiding answers');
   }
 }
 check(modeSelector, 'Actual practice selector found');
@@ -778,8 +852,8 @@ const report = {
   exactRepresentations: bound.length,
   regionalConcepts: Object.fromEntries([...new Set(api.reasoningConcepts.map(c => c.region))].map(region => [region, api.reasoningConcepts.filter(c => c.region === region).length])),
   multiPartRepresentations: bound.filter((s) => s.sources.length > 1).length,
-  sharedRegionConcepts: { pelvis: 8, abdomen: 1, thigh: 1 },
-  sharedRegionNote: 'Membership does not guarantee question eligibility without a curated visible alternative; psoas remains unavailable in thigh-only reasoning.',
+  sharedRegionConcepts: { pelvis: 9, abdomen: 1, thigh: 1 },
+  sharedRegionNote: 'Membership does not guarantee question eligibility without a curated visible alternative; psoas remains unavailable in thigh-only reasoning and ureters in abdomen-only reasoning.',
   groupedOrMidlineRepresentations: groupedTargets.length,
   newReferenceWords: referenceWords,
   sourceHashes: {
