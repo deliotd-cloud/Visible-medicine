@@ -1,5 +1,10 @@
 # Deep-femoral source component dissection
 
+25 September update: [named component clinical drafts](FEMORAL-COMPONENT-CLINICAL-20260925.md)
+add limited Clinical/Pathology context for the lateral circumflex components.
+The unnamed remainder and acquired-imaging sections remain pending. Older
+implementation counts and pending-status descriptions below are historical.
+
 From **Thigh**, **Pelvis**, **Leg** or **Whole body**, select a deep femoral artery and choose **Explore artery components**. Each side opens its own lateral circumflex source and a clearly labelled source remainder. Search also finds the components and opens source-bound study links. There are four nested selections across two parent views, not four new whole arteries.
 
 ## Controls and representation

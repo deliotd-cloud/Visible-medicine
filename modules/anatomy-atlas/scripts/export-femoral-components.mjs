@@ -10,6 +10,25 @@ import { sourceTopology } from './source-topology.mjs';
 
 const hash = b => createHash('sha256').update(b).digest('hex');
 const {catalog, records, policy, evidence, supplementalEvidence} = await loadCurrentSourceHolds();
+// This audit records the source policy at the femoral export revision. Current
+// holds are still loaded and checked above, including later tibial evidence;
+// later reports must not rewrite the recorded historical reproduction.
+const historicalSupplementalEvidence = [
+  {path:'docs/limbic-landmark-source-audit.json',sha256:'2b29686d350ca29d88c67c7a44c3e143033deea35f15df0a66b90c758a82f69c'},
+  {path:'docs/pelvic-vein-source-audit.json',sha256:'ffb300bcd1f2cd8c2a9684c133ed5d82a1043d7bda99a78f377854c9168ebf26'},
+  {path:'docs/collicular-brachia-source-audit.json',sha256:'376863798d350db47711e802a9f5a0180b9d1c99f0972bbec769e6588e5c5b9a'},
+  {path:'docs/deep-leg-vein-source-audit.json',sha256:'2ed4267b0ceae5448673eaf0743ed79a995fc7f879dac26c81e24109c7b201ec'},
+];
+const historicalPaths = new Set(historicalSupplementalEvidence.map(entry=>entry.path));
+assert.deepEqual(
+  supplementalEvidence.filter(entry=>historicalPaths.has(entry.path)),
+  historicalSupplementalEvidence,
+  'Historical femoral supplemental evidence changed',
+);
+assert(
+  supplementalEvidence.some(entry=>entry.path==='docs/tibial-recurrent-source-disposition.json'),
+  'Current tibial recurrent source disposition must be validated',
+);
 const parents = ['FMA20796','FMA20797'].map(id => catalog.structures.find(s => s.fmaId === id));
 assert(parents.every(Boolean));
 assert.deepEqual(parents.map(p => p.sources.map(s => s.file)), [['FJ2137','FJ2158'],['FJ2069','FJ2078']]);
@@ -80,9 +99,9 @@ const roundtrip=(await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byte
 for(const before of scene.children){const after=roundtrip.getObjectByName(before.name);assert.equal(hash(JSON.stringify(meshFaces(after))),hash(JSON.stringify(meshFaces(before))));assert.equal(hash(JSON.stringify(Array.from(after.geometry.attributes.normal.array))),hash(JSON.stringify(Array.from(before.geometry.attributes.normal.array))));}
 const artifact={id:'femoral-components',url:`/models/bodyparts3d/femoral-components/femoral-components.glb?v=${hash(bytes)}`,bytes:bytes.length,sha256:hash(bytes),structures:4};
 const result={version:1,sourceVersion:catalog.sourceVersion,license:catalog.license,credit:catalog.credit,coordinateSystem:catalog.coordinateSystem,parents,parentBundles,structures,bundles:[artifact],selectableIds:structures.map(s=>s.id),contextIds:[],regions:catalog.regions.filter(r=>r.id==='thigh'),coverage:{nerves:'Not included',organs:'Not included',vessels:'Source partition only; incomplete branch network and unverified junctions'},excluded:[],clinicalApproval:false};
-const audit={schemaVersion:1,sourceCommit:'82ffc964f8830b375e089f154ae7ca0599c5fe44',evidence,supplementalEvidence,proofs,artifact,modification:'Re-export of an exact triangle partition from existing root surfaces. Original source coordinates, faces and winding retained with established transform/Float32; normals recomputed. No new anatomy, fitting, mirroring, bridging or face deletion.',clinicalApproval:false};
+const audit={schemaVersion:1,sourceCommit:'82ffc964f8830b375e089f154ae7ca0599c5fe44',evidence,supplementalEvidence:historicalSupplementalEvidence,proofs,artifact,modification:'Re-export of an exact triangle partition from existing root surfaces. Original source coordinates, faces and winding retained with established transform/Float32; normals recomputed. No new anatomy, fitting, mirroring, bridging or face deletion.',clinicalApproval:false};
 const out='public/models/bodyparts3d/femoral-components',sourceOut='content/sources/femoral-components';
 const outputs=[[out+'/catalog.json',JSON.stringify(result,null,2)+'\n'],['docs/femoral-component-source-audit.json',JSON.stringify(audit,null,2)+'\n'],[out+'/femoral-components.glb',bytes],...retained.map(s=>[sourceOut+'/'+s.file+'.obj',s.bytes])];
-if(process.argv.includes('--check')) {for(const [path,value]of outputs)assert.equal(hash(await readFile(path)),hash(value));}
+if(process.argv.includes('--check')) {for(const [path,value]of outputs)assert.equal(hash(await readFile(path)),hash(value),`Export output changed: ${path}`);}
 else {await mkdir(out);await mkdir(sourceOut);for(const[path,value]of outputs)await writeFile(path,value,{flag:'wx'});}
 console.log(JSON.stringify({parts:structures.length,parents:parents.length,triangles:proofs.reduce((n,p)=>n+p.triangles,0),...artifact,exactRenderedFacePartition:true,clinicalApproval:false}));

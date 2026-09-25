@@ -80,7 +80,13 @@ const scope = { exports: {} },
   env = {
     module: scope,
     exports: scope.exports,
-    require: (id) => (id === 'react' ? shim : require(id)),
+    URLSearchParams,
+    require: (id) =>
+      id === 'react'
+        ? shim
+        : id === 'next/link'
+          ? ({ children, ...props }) => React.createElement('a', props, children)
+          : require(id),
   };
 runInNewContext(compiled.outputFiles[0].text, env);
 const api = scope.exports,
@@ -94,13 +100,36 @@ same(
 );
 const root = api.bodyDisplayCatalog(JSON.parse(rootBytes)),
   before = JSON.stringify(root);
-same(root.structures.length, 1101);
+same(root.structures.length, 1104);
 const targets = api
   .nestedStudyTargets(root)
   .filter((t) => t.study === 'femoral-components');
 same(targets.length, 4);
-same(api.nestedStudyTargets(root).length, 104);
+same(api.nestedStudyTargets(root).length, 106);
 const catalog = api.femoralComponentCatalog;
+same(catalog.clinicalApproval, false);
+const lateralIdentity = {
+  right: {
+    name: 'Right lateral circumflex femoral artery',
+    fmaId: 'FMA20801',
+    sourceFile: 'FJ2158',
+  },
+  left: {
+    name: 'Left lateral circumflex femoral artery',
+    fmaId: 'FMA20802',
+    sourceFile: 'FJ2078',
+  },
+};
+const clinicalSources = {
+  clinical: 'femoralComponentVariation',
+  pathology: 'femoralComponentInjury',
+};
+const elements = (node) =>
+  !node || typeof node !== 'object'
+    ? []
+    : Array.isArray(node)
+      ? node.flatMap(elements)
+      : [node, ...elements(node.props?.children)];
 for (const b of catalog.bundles) {
   const bytes = await readFile(
     'public' + new URL(b.url, 'https://atlas.invalid').pathname,
@@ -148,6 +177,10 @@ for (const parent of parents) {
     same(api.femoralComponentViewCatalog(bad).bundles, []);
   }
   for (const part of parts) {
+    same(part.validation, {
+      status: 'unvalidated',
+      anatomicalReview: false,
+    });
     const t = targets.find((t) => t.structureId === part.id);
     same(api.resolveNestedTarget(root, parent.id, t, parent.laterality), t);
     same(
@@ -172,12 +205,51 @@ for (const parent of parents) {
         : 'femoral-lateral-source',
     );
     same(lesson.quiz.basis, 'model-scope');
-    same(lesson.sections.clinical.readiness, 'pending');
+    same(
+      lesson.modelLimit,
+      part.role === 'remainder'
+        ? 'Uses the aggregate FMA reference only for provenance; the component ID and single-file binding identify this partial representation. Do not infer complete deep-femoral anatomy.'
+        : 'One source-labelled component within the existing deep-femoral aggregate. Clinical boundaries and vessel junctions are unvalidated; no complete branch network is implied.',
+    );
+    if (part.role === 'lateral-circumflex') {
+      const identity = lateralIdentity[parent.laterality];
+      same(part.name, identity.name);
+      same(part.fmaId, identity.fmaId);
+      same(part.sources.map((source) => source.file), [identity.sourceFile]);
+      same(part.laterality, parent.laterality);
+      same(part.parentId, parent.id);
+      for (const [topic, reference] of Object.entries(clinicalSources)) {
+        const section = lesson.sections[topic];
+        const source = api.nestedTeachingReferences[reference];
+        check(source?.title && source?.url, `${topic} primary reference`);
+        check(new URL(source.url).protocol === 'https:');
+        same(section.readiness, 'draft');
+        same(section.references, [reference]);
+        check(section.body.trim().length > 0);
+        const resolved = api.nestedTopicLesson(lesson, topic);
+        same(resolved.readiness, 'draft');
+        same(resolved.body, section.body);
+        same(resolved.citations, [source.url]);
+      }
+    } else {
+      for (const topic of Object.keys(clinicalSources)) {
+        const section = lesson.sections[topic];
+        same(section.readiness, 'pending');
+        same(section.references, []);
+        const resolved = api.nestedTopicLesson(lesson, topic);
+        same(resolved.readiness, 'pending');
+        same(resolved.citations, []);
+      }
+    }
     for (const tab of ['ct', 'mri', 'xray', 'ultrasound'])
       same(api.nestedTopicLesson(lesson, tab).readiness, 'pending');
     for (const mutate of [
       (s) => (s.role = 'foreign'),
       (s) => (s.id = parent.id),
+      (s) => (s.name = 'foreign'),
+      (s) => (s.fmaId = 'FMA0'),
+      (s) => (s.laterality = s.laterality === 'left' ? 'right' : 'left'),
+      (s) => (s.sources[0].file = 'foreign'),
       (s) => (s.sources[0].sha256 = 'x'),
       (s) => s.anchor[0]++,
       (s) => (s.parentId = parents.find((p) => p.id !== parent.id).id),
@@ -198,6 +270,29 @@ for (const parent of parents) {
     });
     same(ui.type, 'details');
     check(!ui.props.open);
+    const renderedSections = elements(ui).filter(
+      (node) => node.type === 'section' &&
+        node.props?.className === 'nested-teaching-section',
+    );
+    for (const [topic, reference] of Object.entries(clinicalSources)) {
+      const resolved = api.nestedTopicLesson(lesson, topic);
+      const sectionNode = renderedSections.find(
+        (node) => node.props['aria-label'] === resolved.title,
+      );
+      check(sectionNode, `${part.name} ${topic} section rendered`);
+      const markup = require('react-dom/server').renderToStaticMarkup(sectionNode);
+      check(markup.includes(resolved.body));
+      if (part.role === 'lateral-circumflex') {
+        const source = api.nestedTeachingReferences[reference];
+        check(markup.includes('Teaching references'));
+        check(markup.includes(source.title));
+        check(markup.includes(source.url.replaceAll('&', '&amp;')));
+        check(!markup.includes('Content pending'));
+      } else {
+        check(markup.includes('Content pending'));
+        check(!markup.includes('Teaching references'));
+      }
+    }
   }
   const originalHash = catalog.bundles[0].sha256;
   catalog.bundles[0].sha256 = '0'.repeat(64);
@@ -391,8 +486,8 @@ console.log(
     checks,
     parents: 2,
     components: 4,
-    rootStructures: 1101,
-    nestedTargets: 104,
+    rootStructures: 1104,
+    nestedTargets: 106,
     clinicalApproval: false,
     browserOrGPUAcceptance: false,
     imagingResourcesAdded: 0,

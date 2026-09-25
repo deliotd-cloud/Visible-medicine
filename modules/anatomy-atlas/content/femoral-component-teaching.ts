@@ -5,6 +5,14 @@ export const femoralComponentReferences = {
     title: 'UAMS · Arteries of the lower limb',
     url: 'https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/artery-tables/arteries-of-the-lower-limb/',
   },
+  femoralComponentVariation: {
+    title: 'Artero et al. (2018) · Bilateral thigh-flap vascular variation',
+    url: 'https://pubmed.ncbi.nlm.nih.gov/29922539/',
+  },
+  femoralComponentInjury: {
+    title: 'Cho et al. (2025) · Descending circumflex branch injury case report',
+    url: 'https://aott.org.tr/index.php/pub/article/view/4018',
+  },
 };
 const pending = {
   body: 'Component-specific clinical teaching awaits review. This source partition is not an angiogram or a complete vascular network.',
@@ -27,8 +35,16 @@ export const femoralComponentConcepts: NestedConcept[] = [
         references: ['femoralComponentAnatomy'],
         readiness: 'draft',
       },
-      clinical: pending,
-      pathology: pending,
+      clinical: {
+        body: 'The selected lateral circumflex femoral component provides parent-vessel context for anterolateral thigh flap anatomy. Clinical and cadaver observations found that cutaneous branches of its descending branch could travel through muscle on one side but through a septum on the other. The opposite thigh is therefore not a reliable template. Those perforators are not separately mapped here; this surface cannot define a flap territory or harvest route.',
+        references: ['femoralComponentVariation'],
+        readiness: 'draft',
+      },
+      pathology: {
+        body: 'Injury to a descending branch of the lateral circumflex femoral artery has been reported with pseudoaneurysm after intertrochanteric fracture fixation. This is branch-level clinical context, not evidence of a lesion in the selected parent component. A single case cannot establish frequency or prove a general injury mechanism. No pseudoaneurysm, wall defect, bleeding, fracture or implant is represented in this reference model.',
+        references: ['femoralComponentInjury'],
+        readiness: 'draft',
+      },
     },
     modelLimit:
       'One source-labelled component within the existing deep-femoral aggregate. Clinical boundaries and vessel junctions are unvalidated; no complete branch network is implied.',
