@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "0304012447f0d50d89c37feb41bbf9137ae4701baddc94c89d1f01dc54cc6bec"
+    "sha256": "1e3cc24c804e0d2a6bba4c37c7d4f7c292cefad0542dc6ed00020c23b9ce14ff"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "cbeea7d702b85b87dec6a536a10bc2f64ed35c8695674ee514fe989477f008a4"
+    "sha256": "3630c9d05da8c0850e8e201eab0386e0033dfa20e8ea8cd837ab1eda6da9408f"
   },
   {
     "path": "app/body-education-link.ts",
@@ -1206,6 +1206,10 @@
   {
     "path": "content/sca-mca-clinical.ts",
     "sha256": "147c5f95e7d9d588dd678adb02c1c3dd32cc581cf89a704896ff1c4c8f0790d1"
+  },
+  {
+    "path": "content/short-ciliary-pathology.ts",
+    "sha256": "6cc88d0a6b9620920c2a3a8326a6784610087ae1fa00dcc30cd8a0e542629f91"
   },
   {
     "path": "content/short-ciliary-teaching.ts",
@@ -2590,6 +2594,10 @@
   {
     "path": "lib/selection-visibility.ts",
     "sha256": "d08344cef574acc33d4527f0161a99b10fd42364c53fa8cdc2877a055bcec8f6"
+  },
+  {
+    "path": "lib/short-ciliary-pathology.ts",
+    "sha256": "bf74dbc970a46d4a93745acb2771e9420ed4a3fbadb9b28298589ba3fdef215f"
   },
   {
     "path": "lib/short-ciliary.ts",

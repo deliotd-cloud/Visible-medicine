@@ -1,5 +1,11 @@
 # Visible Medicine — shared delivery plan
 
+25 September short ciliary pathology: generated Atlas `ce2037f` adds one
+source-bound draft with three primary references and explicit evidence limits.
+Models, clinical approvals and access unchanged. Desktop/mobile teaching and
+return navigation checked; see [scope](atlas-short-ciliary-pathology-20260925.md).
+Publication/recovery is recorded in the main checkpoint; release gates remain open.
+
 25 September study text readability: generated Atlas `0931b2d` improves shared
 system labels, teaching text and Browse structures using existing brand colours.
 No controls, geometry, clinical content or access changes. See

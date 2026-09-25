@@ -1364,3 +1364,12 @@ the article's media. Existing BodyParts3D CC BY 4.0 attribution remains unchange
 No new dependency, model, font, texture or mandatory fee is introduced. The
 single-case evidence and right-sided case are explicitly identified; clinical
 review remains pending.
+
+## Short ciliary nerve pathology — 25 September 2026
+
+Original factual draft cites Purcell et al. (1977), Yoo et al. (2021) and Ebrahim
+et al. (2009); links and inspected-source scope are in
+`docs/SHORT_CILIARY_PATHOLOGY.md`. No publisher prose, article media, scans or
+datasets imported. Reading access is not an asset licence. Existing BodyParts3D
+CC BY 4.0 attribution is unchanged. No dependency, font, texture, model or
+mandatory fee added. Evidence limitations are explicit; clinical review pending.
