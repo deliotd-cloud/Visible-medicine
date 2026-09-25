@@ -3095,6 +3095,10 @@
   position: relative !important;
   inset: auto !important;
   grid-row: 2;
+  /* WebGL's previous drawing-buffer size must not become the grid's intrinsic
+     minimum after a viewport change. The track supplies the scene size; size
+     containment leaves labels/focus outlines visible (no paint clipping). */
+  contain: size;
   min-height: 0;
   height: 100% !important;
 }
