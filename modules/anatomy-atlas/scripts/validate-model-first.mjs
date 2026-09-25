@@ -133,6 +133,36 @@ const findStage = node => {
 };
 findStage(stageAst);
 check(stageNode, 'Current stage handler exists');
+// Only the guarded pre-apply callback is new in these two handlers. Project it
+// away and require the complete former function body and signature to retain
+// their historical exact fingerprints; the baseline itself is never rewritten.
+for (const [name, oldHash] of [
+  ['changeStage', stageAfter.functions.changeStage],
+  ['changeFocus', 'b39d4aac46b371a7092cd176d85be01ad20151eb56f2dfc4fa5d8e0dce73b8ff'],
+]) {
+  let node;
+  const find = current => {
+    if (ts.isFunctionDeclaration(current) && current.name?.text === name) node = current;
+    ts.forEachChild(current, find);
+  };
+  find(stageAst);
+  check(node, `${name} current handler exists`);
+  same(node.parameters.length, 2, `${name} has the optional prepare parameter`);
+  same(printer.printNode(ts.EmitHint.Unspecified, node.parameters[1], stageAst),
+    'beforeApply?: () => void', `${name} prepare signature`);
+  const statements = [...node.body.statements];
+  const prepareAt = name === 'changeStage' ? 1 : 3;
+  check(statements.slice(0, prepareAt).every(ts.isIfStatement),
+    `${name} all guards precede preparation`);
+  same(printer.printNode(ts.EmitHint.Unspecified, statements[prepareAt], stageAst),
+    'beforeApply?.();', `${name} prepares exactly after all guards`);
+  const projected = ts.factory.updateFunctionDeclaration(node, node.modifiers,
+    node.asteriskToken, node.name, node.typeParameters, [node.parameters[0]],
+    node.type, ts.factory.updateBlock(node.body,
+      [...statements.slice(0,prepareAt), ...statements.slice(prepareAt+1)]));
+  same(hash(printer.printNode(ts.EmitHint.Unspecified, projected, stageAst)), oldHash,
+    `${name} old signature and all prior statements remain exact`);
+}
 const stageCode = ts.transpile(printer.printNode(ts.EmitHint.Unspecified, stageNode, stageAst));
 for (const [exam, id, accepted] of [[false, 'assembled', true], [false, 'free', true],
   [false, 'invalid', false], [true, 'assembled', false], [true, 'free', false]]) {
@@ -180,9 +210,9 @@ same(
     // invalid/source-changed recipes. limb-vascular-studies:test executes all
     // three handlers; limbic-landmarks:test covers the current source guard.
     changeStage:
-      stageAfter.functions.changeStage,
+      '97f3354686b2dd95ad97cba2054559276b498b0b5d07d1a6080c7e2b6ec6f383',
     changeFocus:
-      'b39d4aac46b371a7092cd176d85be01ad20151eb56f2dfc4fa5d8e0dce73b8ff',
+      'cc74e559b61179458fbfbf2cca4990cad52478afb2c42bbbc6d32368cb579ef1',
     openRelatedStudy:
       'bbefb9f74080439dc8d039d7a5c7f93e955b2918dc1c17f1747c149ddb929c57',
     // Separate source-bound relationship actions, not replacement anatomy or

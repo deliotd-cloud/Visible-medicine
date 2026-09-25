@@ -824,12 +824,13 @@ export default function BodyExplorer({
     },
     [exam, catalog, regionStructures, side, applySelection, workspace],
   );
-  function changeStage(id: string) {
+  function changeStage(id: string, beforeApply?: () => void) {
     if (
       exam ||
       (id !== 'free' && !profile.stages.some((item) => item.id === id))
     )
       return false;
+    beforeApply?.();
     cameraRestore.current = null;
     setInspection(initialInspection);
     if (layout === 'tray') setPlate(false);
@@ -847,10 +848,11 @@ export default function BodyExplorer({
     setReset((n) => n + 1);
     return true;
   }
-  function changeFocus(id: string) {
+  function changeFocus(id: string, beforeApply?: () => void) {
     if (exam || !profile.focuses.some((item) => item.id === id)) return false;
     if (!limbVascularStudyReady(catalog, initialRegion, id)) return false;
     if (!longusColliStudyReady(catalog, initialRegion, id, side)) return false;
+    beforeApply?.();
     cameraRestore.current = null;
     setInspection(initialInspection);
     if (layout === 'tray') setPlate(false);

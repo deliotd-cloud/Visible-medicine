@@ -416,8 +416,8 @@ export function AtlasSearch({
   region: string;
   side: StudySide;
   onSelect: (id: string) => void;
-  onWindow: (id: string) => boolean | void;
-  onFocus: (id: string) => boolean | void;
+  onWindow: (id: string, beforeApply?: () => void) => boolean | void;
+  onFocus: (id: string, beforeApply?: () => void) => boolean | void;
   onDissect: (
     target: import('@/lib/nested-anatomy').NestedRequest,
     launcher: HTMLButtonElement | null,
@@ -510,14 +510,21 @@ export function AtlasSearch({
       entry.action.type === 'focus'
     ) {
       transferringFocus.current = false;
+      let prepared = false;
+      const prepareDissection = () => {
+        // The parent validates first, then restores the destination workspace
+        // before applying the requested study. Restoring afterwards loses it.
+        workspace.chooseMode('dissect');
+        prepared = true;
+      };
       const opened = entry.action.type === 'window'
-        ? onWindow(entry.action.id)
-        : onFocus(entry.action.id);
+        ? onWindow(entry.action.id, prepareDissection)
+        : onFocus(entry.action.id, prepareDissection);
       if (opened === false) {
         setActivationIssue('This study could not be opened with the current source data. Your view has been kept. Choose another study or reload the atlas.');
         return;
       }
-      workspace.chooseMode('dissect');
+      if (!prepared) workspace.chooseMode('dissect');
       workspace.setPanelOpen(false, false);
       workspace.setPanelOpen(true, false);
     }

@@ -27,6 +27,7 @@
     "renal-segmental:review": "node scripts/render-renal-segmental-review.mjs --check",
     "practice-panel-navigation:test": "node scripts/test-practice-panel-navigation.mjs",
     "search-preview-focus:test": "node scripts/test-search-preview-focus.mjs",
+    "study-mode-transition:test": "node scripts/test-study-mode-transition.mjs",
     "nested-practice:test": "node scripts/test-nested-practice.mjs && node scripts/test-nested-practice-component.mjs",
     "celiac-display:test": "node scripts/build-celiac-display-correction.mjs --check && node scripts/validate-celiac-display-correction.mjs && node scripts/record-celiac-display-transition.mjs --check && node scripts/validate-celiac-display-integration.mjs && node scripts/validate-celiac-display-history.mjs",
     "lower-neck-study:test": "node scripts/pin-lower-neck-study.mjs --check && node scripts/record-lower-neck-study.mjs --check && node scripts/validate-lower-neck-study.mjs && node scripts/validate-lower-neck-history.mjs",
