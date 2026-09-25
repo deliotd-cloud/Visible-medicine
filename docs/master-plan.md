@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+25 September shared specimen focus integration: generated Atlas `885ea54`
+keeps keyboard position through Set aside and exhausted Undo/Redo using existing
+controls. Source/browser checks cover knee and foot samples; no anatomy, teaching,
+model inventory or independent access changes. See [scope and limitations](atlas-specimen-focus-20260925.md).
+Continue independent regional anatomy/teaching while imaging revisions remain
+under specialist review; do not treat the imaging hold as a whole-project pause.
+
 25 September compact source-note integration: generated Atlas `68f77a6`
 reduces repeated technical source notices while leaving clinical warnings visible.
 Existing models, teaching, citations and independent access are unchanged. See
