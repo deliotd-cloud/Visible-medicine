@@ -616,6 +616,7 @@
   margin: 7px 0;
 }
 .body-content-note {
+  overflow-wrap: anywhere;
   font-size: 0.75rem;
   line-height: 1.55;
   padding: 12px;
@@ -623,6 +624,23 @@
   border-left: 2px solid #bccdaa;
   color: #89977c;
   margin: 16px 0;
+}
+.body-source-details {
+  margin-top: 0.65rem;
+  font-size: 0.875rem;
+}
+.body-source-details summary {
+  cursor: pointer;
+  line-height: 1.5;
+  padding-block: 0.3rem;
+}
+.body-source-details summary:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+.body-source-details p {
+  margin: 0.5rem 0 0;
+  font-size: inherit;
 }
 .body-no-imaging {
   display: flex;

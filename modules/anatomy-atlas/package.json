@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "source-display-notes:test": "node scripts/test-source-display-notes.mjs",
     "pelvic-floor-context:test": "node --test scripts/test-pelvic-floor-context.mjs scripts/test-pelvic-floor-context-projections.mjs",
     "pelvic-floor-context:review": "node scripts/render-pelvic-floor-context.mjs --check",
     "pelvic-floor:test": "node --test scripts/test-pelvic-floor-review.mjs scripts/test-pelvic-floor-projections.mjs",

@@ -74,11 +74,11 @@
     },
     {
       "path": "app/body-explorer.css",
-      "sha256": "35116a602687a48636448f225237df4ad5d2ca39ada5211cf8390fbd6d62d0a9"
+      "sha256": "2cafcdb00ef8ae09842cf1b64cd6ae115c254882c49c86829ba3d9d052142c48"
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "82baa2c48a9c1bcada70f1e3b615668ef9432b75120253895558b76a3e676867"
+      "sha256": "e62b3b74cbbd348d3589c4b6d43d972970129b34a8ad7b4e0a66648a35f861ba"
     },
     {
       "path": "app/body-scene.tsx",
@@ -275,6 +275,10 @@
     {
       "path": "app/selection-visibility.css",
       "sha256": "2a5d482d10cbc725100ce98cac41267d759e64f123d79b218b664096b9aebb58"
+    },
+    {
+      "path": "app/source-display-notes.tsx",
+      "sha256": "57b83b84c0c2cc4fe005b57d798e61bc4fc74bbb5e89a11bd014fbdf2f8ba183"
     },
     {
       "path": "app/specimen-structure-search.tsx",
@@ -1154,7 +1158,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "8d69aa582c4b79925a3f22cb1b615ddf11336dd88824047ad17c5b1aff78b3a3"
+      "sha256": "7a5fb623f1c7a1c241b93894b5ed270641344df5729925456c4315ea09a53558"
     },
     {
       "path": "content/sca-mca-clinical-pins.json",
@@ -2461,6 +2465,10 @@
       "sha256": "dab771a8dee5c917271d3354d350922bea85d985583c863cf1ff1f4b6481b18b"
     },
     {
+      "path": "lib/source-display-notes.ts",
+      "sha256": "b8c5fee2d8b91950d1951ea733e519b8fe7dec3e92e0fad22dd7a36df54871a2"
+    },
+    {
       "path": "lib/specimen-identification.ts",
       "sha256": "6f82c800c9c3572913f02db1cec19102a6fceb2604981d37ea98b716edb7b12a"
     },
@@ -2702,7 +2710,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "0a88d3b1f22b63f6f95068901c12616004b724b0b178f0a0fd7ab6ebc3912bf7"
+      "sha256": "d82251c38212513ffb68b198089ae19583feb3260c956e7b567430e2ccd0e1cc"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -2913,5 +2921,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "6133b9f9e05d0bf4c2b252ff15dc2d3b819ac1d3b61683ff592a30bf37f25f83"
+  "sha256": "cdb76e237bd596fca52e990b401a46658f7a92a5f9bf23ecf10b8f4ada885115"
 }

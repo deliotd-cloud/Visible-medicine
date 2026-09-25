@@ -5,6 +5,7 @@ import { cranialArteryComponentsFor } from '@/lib/cranial-artery-components';
 import './um-knee-entry.css';
 import { useWorkspaceSession } from './workspace-session';
 import { PracticePanelNavigation } from './practice-panel-navigation';
+import { SourceDisplayNotes } from './source-display-notes';
 import { BodySelectionNotice, focusRemovalFeedback } from './body-selection-notice';
 import { lastSingleRemoval } from '@/lib/contextual-dissection-undo';
 import { InlineStudy } from './study-surface';
@@ -2570,9 +2571,7 @@ export default function BodyExplorer({
                               </ul>
                             )}
                             {content.note && (
-                              <div className="body-content-note">
-                                {content.note}
-                              </div>
+                              <SourceDisplayNotes note={content.note} />
                             )}
                             {content.citations?.length ? (
                               <div className="body-reference-links">
