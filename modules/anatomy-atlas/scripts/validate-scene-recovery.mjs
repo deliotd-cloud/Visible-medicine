@@ -526,7 +526,9 @@ for (const displayReady of [false, true])
         !displayReady || missing,
       );
       for (const name of ['submitPractice', 'nextQuestion']) {
+        for (const answered of [false, true]) {
         const calls = [];
+        let restored = 0;
         runInNewContext(
           paused +
             extract(body, name) +
@@ -537,15 +539,19 @@ for (const displayReady of [false, true])
             ');',
           {
             ...context,
-            practice: { id: 1, mode: 'find' },
+            practice: { id: 1, mode: 'find', questions: [{ target: 'target' }] },
             question: 0,
+            answered,
+            restorePracticeView: () => { restored++; },
             practiceDispatch: (a) => calls.push(a),
             setZoom: () => {},
             setReset: () => {},
           },
         );
         same(calls.length, displayReady && !missing && !failed ? 1 : 0);
+        same(restored, name === 'nextQuestion' && answered && displayReady && !missing && !failed ? 1 : 0);
         handlerCases++;
+        }
       }
     }
 for (const displayReady of [false, true])

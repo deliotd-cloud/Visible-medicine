@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "practice-return-view:test": "node scripts/test-practice-return-view.mjs",
     "hallux-xray:test": "node scripts/record-hallux-xray.mjs --check && node scripts/validate-hallux-xray.mjs",
     "hand-bone-xray:test": "node scripts/record-hand-bone-xray.mjs --check && node scripts/validate-hand-bone-xray.mjs",
     "hip-abductor-xray:test": "node scripts/record-hip-abductor-xray.mjs --check && node scripts/validate-hip-abductor-xray.mjs",

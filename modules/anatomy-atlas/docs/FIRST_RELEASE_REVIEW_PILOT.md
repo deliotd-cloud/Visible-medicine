@@ -7,9 +7,9 @@ The index is a fresh review starting point, not a carried-over sign-off. Run
 `node scripts/prepare-first-release-review.mjs --check` before using it and
 verify the displayed website candidate separately.
 
-The shared specimen reassembly-focus candidate uses renderer fingerprint
-`0971dc44b72e6d6e69c7c7cd70b757b81b4e65d4820d07d635fc084b4187cfdb`.
-Website `defdcd1` still contains the earlier renderer from Atlas `a22e4d3`; do not
+The regional practice-return candidate uses renderer fingerprint
+`a41d71d1db34ff270510b636eaa0ad0a46151f35a32803c663e276f922f3bba0`.
+Website `2c651aa` still contains the earlier renderer from Atlas `749a4d1`; do not
 use this candidate packet as proof of that displayed website revision. Standalone
 review links below require their own route/revision check; publication does not
 submit or approve the worksheet. Selection identities and review scope are unchanged.

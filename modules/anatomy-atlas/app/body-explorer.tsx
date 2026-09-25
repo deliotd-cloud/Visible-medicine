@@ -378,6 +378,9 @@ export default function BodyExplorer({
     initialPractice,
   );
   const practiceSerial = useRef(0);
+  const practiceReturnView = useRef<(Pick<StudyView,
+    'selectedId' | 'isolated' | 'focus' | 'explode' | 'layout' | 'plate' |
+    'zoom' | 'view' | 'camera'>) | null>(null);
   const practicePromptId = useId();
   const [practiceMode, setPracticeMode] = useState<PracticeMode>('find');
   const [practiceSampling, setPracticeSampling] =
@@ -1153,6 +1156,12 @@ export default function BodyExplorer({
       },
     );
     if (!session) return;
+    // Practice temporarily changes presentation, not the learner's study view.
+    practiceReturnView.current = {
+      selectedId, isolated, focus, explode, layout, plate, zoom, view,
+      camera: copyRecoveryCamera(cameraCapture.current),
+    };
+    cameraRestore.current = null;
     if (layout === 'tray') setPlate(false);
     setLayout('spatial');
     practiceDispatch({ type: 'start', session });
@@ -1163,6 +1172,25 @@ export default function BodyExplorer({
     setZoom(1);
     setReset((n) => n + 1);
   }
+  function restorePracticeView() {
+    const state = practiceReturnView.current;
+    practiceReturnView.current = null;
+    if (!state) return;
+    setSelectedId(state.selectedId);
+    setIsolated(state.isolated);
+    setFocus(state.focus);
+    setExplode(state.explode);
+    setLayout(state.layout ?? 'spatial');
+    setPlate(state.plate);
+    setZoom(state.zoom);
+    setView(state.view as DissectionView);
+    cameraRestore.current = state.camera;
+    setReset((n) => n + 1);
+  }
+  function exitPractice() {
+    restorePracticeView();
+    practiceDispatch({ type: 'exit' });
+  }
   function nextQuestion() {
     if (practicePaused) return;
     practiceDispatch({
@@ -1170,7 +1198,9 @@ export default function BodyExplorer({
       sessionId: practice.id,
       index: question,
     });
-    if (practice.mode === 'name' || practice.mode === 'reason') {
+    if (answered && question === practice.questions.length - 1) {
+      restorePracticeView();
+    } else if (practice.mode === 'name' || practice.mode === 'reason') {
       setZoom(1);
       setReset((n) => n + 1);
     }
@@ -1732,7 +1762,7 @@ export default function BodyExplorer({
           <Button
             variant="outline"
             onClick={() =>
-              exam ? practiceDispatch({ type: 'exit' }) : startExam()
+              exam ? exitPractice() : startExam()
             }
             disabled={!exam && practiceBlocked}
           >

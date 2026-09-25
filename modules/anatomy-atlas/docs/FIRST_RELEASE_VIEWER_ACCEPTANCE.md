@@ -1,5 +1,37 @@
 # First-release viewer acceptance evidence
 
+## 25 September: regional practice return-state repair
+
+Local Atlas `9e534da` plus this change: Thorax → Dissect → Expose deeper chest
+wall → Diaphragm → Imaging → Practice. Early exit previously retained the layer
+but cleared the selected structure. Starting practice reset separation/layout,
+focus/isolation and zoom without retaining a return snapshot.
+
+The shared regional/whole-body practice handlers now capture their temporary
+presentation changes before a valid session starts. Exit and answered final
+completion restore selection, layout, separation, focus/isolation, view/zoom and
+a copied camera pose. The snapshot is consumed once; retries capture the latest
+study view. Dissection history, systems, teaching tabs and results are not reset.
+During active practice the selection remains cleared and labels stay suppressed.
+No new controls, clinical text, scan link or entitlement changes are introduced.
+
+Browser samples at 1280×720: Thorax retained Diaphragm, stage3 (153 enabled),
+1% separation and Imaging/Ultrasound after an early exit and return to Dissect.
+At390×844 a five-question isolated-naming round was skipped through completion;
+results and retry controls remained available. Returning to Dissect then Details
+showed Diaphragm with Ultrasound selected; document width and scroll width both390.
+After viewport reset, Abdomen liver selection and Isolate & frame → Practice →
+Exit → Explore retained the liver and faded surrounding anatomy in the actual
+rendered view. No console errors were captured. Temporary test tab closed.
+
+22 actual-handler/reducer scenarios cover three answer modes, three layouts,
+exit/completion, invalid start, retry and missing/copied camera state. Renderer
+recovery tests additionally cover final restoration being blocked while display
+is unavailable. TypeScript, shared production build, selection, review, workspace
+transition and focus-navigation checks pass. Four unchanged BodyExplorer lint
+findings remain; this is not real-touch, screen-reader, full camera-measurement,
+clinical acceptance or a completed failure/retry browser matrix.
+
 ## 25 September: back-specimen reassembly focus
 
 Local Atlas `a22e4d3` plus the shared reassembly-focus change was tested through
