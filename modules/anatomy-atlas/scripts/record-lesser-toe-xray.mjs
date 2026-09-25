@@ -3,14 +3,18 @@ import {access,readFile,writeFile} from 'node:fs/promises';
 import {context,hash,snapshot} from './pin-pica-clinical.mjs';
 import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 import pins from '../content/lesser-toe-xray-pins.json' with {type:'json'};
-import {beforeDistalPalmarMri} from './distal-palmar-mri-history.mjs';
 
-const {api:rawApi,display}=await context({current:true}),api=beforeDistalPalmarMri(rawApi);
+const {api:liveApi,display:liveDisplay}=await context({current:true});
 const raw=JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json'));
+// Compare the original two Git trees, not an incomplete rollback of later work.
+// Live selections below must still match the exact recorded after lessons.
+const api=await exactSourceHistoryApi('717fa28a3c345dca935e2b9476890b91fbcbb488'),display=api.bodyDisplayCatalog(raw);
 const savedApi=await exactSourceHistoryApi(pins.sourceCommit),savedDisplay=savedApi.bodyDisplayCatalog(raw);
 assert.deepEqual(savedDisplay,display);assert.equal(hash(snapshot(savedApi,savedDisplay)),pins.previousAllLessonsAndRecipesHash);
 const prior=new Map(),entries=pins.entries.map(entry=>({id:entry.identity.id,sections:Object.fromEntries(entry.topics.map(topic=>{
  const lesson=api.bodyLesson(entry.identity,topic);assert.equal(lesson.readiness,'draft');assert.equal(entry.previous[topic].readiness,'pending');
+ assert.deepEqual(liveDisplay.structures.find(s=>s.id===entry.identity.id),entry.identity);
+ assert.deepEqual(liveApi.bodyLesson(entry.identity,topic),lesson,'Live lesser-toe X-ray teaching drift');
  prior.set(entry.identity.id+'|'+topic,entry.previous[topic]);return [topic,hash(lesson)];
 }))}));
 const before={...api,bodyLesson:(s,t)=>prior.get(s.id+'|'+t)??api.bodyLesson(s,t)};

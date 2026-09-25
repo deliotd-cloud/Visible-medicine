@@ -1,33 +1,37 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {context,hash,snapshot} from './pin-pica-clinical.mjs';
+import {hash,snapshot} from './pin-pica-clinical.mjs';
 import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 import {beforeLesserToeXray} from './lesser-toe-xray-history.mjs';
-import {beforeDistalPalmarMri} from './distal-palmar-mri-history.mjs';
 import {build} from './workspace-test-build.mjs';
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import pins from '../content/lesser-toe-xray-pins.json' with {type:'json'};
 import transition from '../content/lesser-toe-xray-transition.json' with {type:'json'};
 import {lesserToeXraySelections,lesserToeXrayTopics,lesserToeXrayReferences,lesserToeXrayScopeNote} from '../content/lesser-toe-xray.ts';
 
-const {api:rawApi,display}=await context({current:true}),api=beforeDistalPalmarMri(rawApi),before=beforeLesserToeXray(api);
+const raw=JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json'));
+const historical=await exactSourceHistoryApi('717fa28a3c345dca935e2b9476890b91fbcbb488');
+const api={...historical,bodyContent(s,t){const {readiness,...content}=historical.bodyLesson(s,t);return content;}};
+const display=api.bodyDisplayCatalog(raw),before=beforeLesserToeXray(api);
 assert.equal(hash(snapshot(api,display)),transition.currentAllLessonsAndRecipesHash);
 assert.equal(hash(snapshot(before,display)),pins.previousAllLessonsAndRecipesHash);
-const saved=await exactSourceHistoryApi(pins.sourceCommit),raw=JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json'));
+const saved=await exactSourceHistoryApi(pins.sourceCommit);
 assert.deepEqual(saved.bodyDisplayCatalog(raw),display);
 assert.deepEqual(snapshot(saved,display),snapshot(before,display));assert.equal(beforeLesserToeXray(before),before);
 const compiled=await build({stdin:{contents:"export {lesserToeXrayLesson} from './lib/lesser-toe-xray';export {bodyReviewMaterial} from './lib/body-review-material';export {acralBoneImagingGroups} from './content/acral-bone-imaging';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
 const {lesserToeXrayLesson:lesson,bodyReviewMaterial,acralBoneImagingGroups}=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
 assert.equal(pins.entries.length,24);assert.equal(lesserToeXraySelections.length,24);
 const selected=new Map(pins.entries.map(e=>[e.identity.id,e]));
-const contracts=await contentContext(),body=contracts.api.bodyContentRecords(display);
+const contracts=await contentContext(),liveDisplay=contracts.api.bodyDisplayCatalog(raw),body=contracts.api.bodyContentRecords(liveDisplay);
 const validate=await contentValidator(new Map([...contracts.shoulder,...body].map(r=>[r.representationScope+'|'+r.id,r])));
 let changed=0,unchanged=0,rejected=0;
 for(const s of display.structures)for(const tab of api.contentTabs){
  const e=selected.get(s.id),now=api.bodyLesson(s,tab),prior=before.bodyLesson(s,tab);
  if(!e||tab!=='xray'){assert.deepEqual(now,prior);assert.equal(lesson(s,tab),undefined);unchanged++;continue;}
  changed++;assert.deepEqual(s,e.identity);assert.equal(prior.readiness,'pending');assert.equal(now.readiness,'draft');
+ assert.deepEqual(liveDisplay.structures.find(v=>v.id===s.id),e.identity,'Live source identity drift');
+ assert.deepEqual(contracts.api.bodyLesson(s,tab),now,'Live lesser-toe X-ray drift');
  assert.deepEqual(now,lesson(s,tab));assert.deepEqual(prior,e.previous.xray);
  const topic=lesserToeXrayTopics[e.group],group=acralBoneImagingGroups[e.imagingGroup];
  assert.equal(group.region,'foot');assert([2,3,4,5].includes(group.digit));assert.equal(group.segment,e.group);
@@ -37,6 +41,7 @@ for(const s of display.structures)for(const tab of api.contentTabs){
  assert.deepEqual(now.bullets,[...topic.bullets,group.landmark,group.limitation]);
  assert.deepEqual(now.citations,[...new Set([...topic.references.map(k=>lesserToeXrayReferences[k]),...group.anatomyReferences])]);
  const {readiness,...rendered}=now;assert.deepEqual(api.bodyContent(s,tab),rendered);
+ assert.deepEqual(contracts.api.bodyContent(s,tab),rendered,'Current viewer content must match');
  const record=body.find(r=>r.id===s.id);assert(validate(record));assert.deepEqual(record.content.xray,now);assert.equal(record.validation.clinicalApproval,'not-included');
  const copy=structuredClone(now);now.bullets.length=0;now.citations.push('foreign');assert.deepEqual(lesson(s,tab),copy);
 }
@@ -64,4 +69,4 @@ assert.throws(()=>beforeLesserToeXray({...api,bodyLesson:(s,t)=>s.id===first.ide
 for(const b of pins.bundles){assert.deepEqual(display.bundles.find(v=>v.id===b.id),b);const bytes=await readFile('public'+b.url.split('?')[0]);assert.equal(bytes.length,b.bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),b.sha256);}
 const budgets={};for(const topic of Object.values(lesserToeXrayTopics)){const n=[topic.body,...topic.bullets].join(' ').split(/\s+/).length;for(const ref of topic.references)budgets[ref]=(budgets[ref]??0)+n;}
 for(const [ref,n] of Object.entries(budgets)){assert(n<=180,ref+': '+n);assert.equal(new URL(lesserToeXrayReferences[ref]).protocol,'https:');}
-console.log(JSON.stringify({source:pins.sourceCommit,selections:24,xrayDrafts:changed,unchangedTopics:unchanged,rejectedIdentityMutations:rejected,reviewPayloads:24,referenceWordBudgets:budgets,geometryChanged:false,recipesChanged:false,clinicalApproval:false}));
+console.log(JSON.stringify({source:pins.sourceCommit,afterSource:'717fa28a3c345dca935e2b9476890b91fbcbb488',selections:24,xrayDrafts:changed,historicalUnchangedTopics:unchanged,currentLessonsChecked:24,rejectedIdentityMutations:rejected,reviewPayloads:24,referenceWordBudgets:budgets,geometryChanged:false,recipesChanged:false,clinicalApproval:false}));

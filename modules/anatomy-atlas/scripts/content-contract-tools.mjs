@@ -20,6 +20,7 @@ export * from './lib/spine-imaging.ts';
 export * from './lib/hip-imaging.ts';
 export * from './lib/hip-abductor-xray.ts';
 export * from './lib/hand-bone-xray.ts';
+export * from './lib/hallux-xray.ts';
 export * from './content/hip-abductor-xray.ts';
 export * from './lib/wrist-imaging.ts';
 export * from './lib/tarsal-imaging.ts';

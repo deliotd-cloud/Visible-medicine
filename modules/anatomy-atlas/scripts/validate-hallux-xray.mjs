@@ -5,29 +5,20 @@ import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
 import ts from 'typescript';
 import pins from '../content/acral-bone-imaging-pins.json' with {type:'json'};
-import beforeRecord from '../content/hand-bone-xray.before.json' with {type:'json'};
-import transition from '../content/hand-bone-xray.transition.json' with {type:'json'};
+import beforeRecord from '../content/hallux-xray.before.json' with {type:'json'};
+import transition from '../content/hallux-xray.transition.json' with {type:'json'};
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {wholeBodyTeachingSnapshot} from './exact-clinical-reference-history.mjs';
-import {beforeHandBoneXray} from './hand-bone-xray-history.mjs';
 import {beforeHalluxXray} from './hallux-xray-history.mjs';
 import {build} from './workspace-component-test-build.mjs';
 
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
-const expectedFmas=[24464,24466,24468,24470,24472,24465,24467,24469,24471,24473,24450,24451,24452,24453,24454,65470,71915,71908,71916,66791,24455,24456,24457,24458,23938,23940,23942,23944,24459,24460,24461,24462,24463,23951,23953,23955,23957,23959].map(n=>'FMA'+n).sort();
+const expectedFmas=[43253,43254,32650,32651].map(n=>'FMA'+n).sort();
 // Independent anatomical expectations: do not derive this mapping from runtime groups
 // or the generated transition. A correctly hashed lesson can still describe the wrong bone.
 const anatomicalGroups=[
-  {ids:[24464,24465],name:/first metacarpal/i,body:[/first metacarpal/i,/CMC/,/MCP/]},
-  {ids:[24466,24467],name:/second metacarpal/i,body:[/second metacarpal/i,/index/,/MCP/]},
-  {ids:[24468,24469],name:/third metacarpal/i,body:[/third metacarpal/i,/middle finger/,/MCP/]},
-  {ids:[24470,24471],name:/fourth metacarpal/i,body:[/fourth metacarpal/i,/ring-finger/,/MCP/]},
-  {ids:[24472,24473],name:/fifth metacarpal/i,body:[/fifth metacarpal/i,/little finger/,/neck/]},
-  {ids:[24450,65470],name:/proximal phalanx.*thumb/i,body:[/thumb proximal phalanx/i,/MCP/,/\(IP\)/]},
-  {ids:[24451,24452,24453,24454,71915,71908,71916,66791],name:/proximal phalanx.*finger/i,body:[/finger proximal phalanx/i,/MCP/,/\(PIP\)/]},
-  {ids:[24455,24456,24457,24458,23938,23940,23942,23944],name:/middle phalanx.*finger/i,body:[/middle phalanx/i,/PIP/,/\(DIP\)/]},
-  {ids:[24459,23951],name:/distal phalanx.*thumb/i,body:[/thumb distal phalanx/i,/thumb IP joint/,/tuft/]},
-  {ids:[24460,24461,24462,24463,23953,23955,23957,23959],name:/distal phalanx.*finger/i,body:[/finger distal phalanx/i,/DIP joint/,/tuft/]},
+  {ids:[43253,43254],name:/proximal phalanx.*big toe/i,body:[/hallux proximal phalanx/i,/MTP/,/IP/]},
+  {ids:[32650,32651],name:/distal phalanx.*big toe/i,body:[/hallux distal phalanx/i,/IP articular base/,/tuft/]},
 ];
 const expectedAnatomy=new Map(anatomicalGroups.flatMap(g=>g.ids.map(id=>['FMA'+id,g])));
 assert.deepEqual([...expectedAnatomy.keys()].sort(),expectedFmas);
@@ -36,8 +27,8 @@ function assertBoneTeaching(s,lesson){
   assert.match(s.name,expected.name);
   for(const pattern of expected.body)assert.match(lesson.body,pattern,s.fmaId+' has the wrong ray/level teaching');
 }
-const live=await contentContext(),catalog=live.catalog,api=beforeHalluxXray(live.api),display=api.bodyDisplayCatalog(catalog);
-assert.equal(beforeRecord.parentCommit,'5f5a839b9c528d50ae67bd58c226bcfd3b69e6cd');
+const live=await contentContext(),{api,catalog}=live,display=api.bodyDisplayCatalog(catalog);
+assert.equal(beforeRecord.parentCommit,'2902cc420d3a4730c3472a0c501fb83ba2bbdc98');
 assert.equal(transition.parentCommit,beforeRecord.parentCommit);
 assert.equal(transition.beforeHash,hash(beforeRecord));
 assert.equal(beforeRecord.originalPinsHash,hash(pins),'Original acral bone pins changed');
@@ -45,13 +36,13 @@ assert.equal(beforeRecord.catalogHash,hash(display),'Source geometry or display 
 assert.deepEqual(beforeRecord.entries.map(e=>e.identity.fmaId).sort(),expectedFmas);
 assert.deepEqual(transition.entries.map(e=>e.id),beforeRecord.entries.map(e=>e.identity.id));
 const selected=new Map(beforeRecord.entries.map(e=>[e.identity.id,e]));
-assert.equal(selected.size,38);
+assert.equal(selected.size,4);
 for(const entry of beforeRecord.entries){
   assert.deepEqual(entry.identity,pins.entries.find(p=>p.identity.id===entry.identity.id)?.identity);
   assert.equal(entry.previous.readiness,'pending');
 }
-const before=beforeHandBoneXray(api);
-assert.equal(beforeHandBoneXray(before),before,'History must be idempotent');
+const before=beforeHalluxXray(api);
+assert.equal(beforeHalluxXray(before),before,'History must be idempotent');
 assert.equal(hash(wholeBodyTeachingSnapshot(before,catalog)),beforeRecord.previousAllLessonsAndRecipesHash,'Other teaching or recipes changed');
 
 // Render the callback extracted from the actual viewer with its actual source-note component.
@@ -75,10 +66,10 @@ const records=new Map(api.bodyContentRecords(display).map(r=>[r.id,r]));
 const validate=await contentValidator(live.registry);
 let changed=0,unchanged=0,rendered=0,rejected=0;
 const lessonBodies=new Set(),lessonTitles=new Set();
-const thumbProximal=new Set(['FMA65470','FMA24450']);
-const thumbDistal=new Set(['FMA23951','FMA24459']);
+const thumbProximal=new Set(['FMA43253','FMA43254']);
+const thumbDistal=new Set(['FMA32650','FMA32651']);
 for(const s of display.structures)for(const tab of api.contentTabs){
-  const entry=selected.get(s.id),draft=api.handBoneXrayLesson(s,tab);
+  const entry=selected.get(s.id),draft=api.halluxXrayLesson(s,tab);
   if(!entry||tab!=='xray'){
     assert.equal(draft,undefined);
     assert.deepEqual(api.bodyLesson(s,tab),before.bodyLesson(s,tab));
@@ -100,11 +91,11 @@ for(const s of display.structures)for(const tab of api.contentTabs){
   lessonBodies.add(draft.body);lessonTitles.add(draft.title);
   assert(draft.title.startsWith(s.name+' ·'));
   if(thumbProximal.has(s.fmaId)){
-    assert.match(draft.body,/MCP/);assert.match(draft.body,/IP/);
-    assert(!/PIP|DIP/.test(draft.body));assert(draft.bullets.some(b=>b.includes('no middle phalanx')));
+    assert.match(draft.body,/MTP/);assert.match(draft.body,/IP/);
+    assert(!/PIP|DIP/.test(draft.body));assert(draft.bullets.some(b=>b.includes('no middle hallux phalanx')));
   }
   if(thumbDistal.has(s.fmaId)){
-    assert.match(draft.body,/thumb IP joint/);assert.match(draft.body,/tuft/);
+    assert.match(draft.body,/IP articular base/);assert.match(draft.body,/tuft/);
     assert(!/DIP/.test(draft.body));
   }
   assert(draft.bullets.length>=2);
@@ -112,7 +103,7 @@ for(const s of display.structures)for(const tab of api.contentTabs){
   assert(draft.note.includes('Anatomy/radiology review pending'));
   assert(draft.note.includes('paid-lecture access remain independent'));
   assert.match(draft.note,/No X-ray image|No radiograph/i);
-  for(const url of api.handBoneXrayReferences){
+  for(const url of api.halluxXrayReferences){
     assert.equal(new URL(url).protocol,'https:');
     assert(draft.citations.includes(url));
   }
@@ -126,15 +117,15 @@ for(const s of display.structures)for(const tab of api.contentTabs){
   rendered++;
   const copy=structuredClone(draft);
   draft.bullets.push('foreign');draft.citations.push('foreign');
-  assert.deepEqual(api.handBoneXrayLesson(s,tab),copy,'Draft arrays must be detached');
+  assert.deepEqual(api.halluxXrayLesson(s,tab),copy,'Draft arrays must be detached');
   assert.deepEqual(api.bodyLesson(s,tab),copy,'Viewer lesson must be detached');
 }
-assert.equal(changed,38);assert.equal(unchanged,9898);assert.equal(rendered,38);
-assert.equal(lessonBodies.size,10);assert.equal(lessonTitles.size,38);
+assert.equal(changed,4);assert.equal(unchanged,9932);assert.equal(rendered,4);
+assert.equal(lessonBodies.size,2);assert.equal(lessonTitles.size,4);
 let swappedGroupsRejected=0;
 for(const {identity} of beforeRecord.entries)for(const other of beforeRecord.entries){
   if(expectedAnatomy.get(identity.fmaId)===expectedAnatomy.get(other.identity.fmaId))continue;
-  assert.throws(()=>assertBoneTeaching(identity,api.handBoneXrayLesson(other.identity,'xray')));
+  assert.throws(()=>assertBoneTeaching(identity,api.halluxXrayLesson(other.identity,'xray')));
   swappedGroupsRejected++;
 }
 
@@ -145,18 +136,18 @@ for(const {identity} of beforeRecord.entries){
     for(const key of path.slice(0,-1))cursor=cursor[key];
     const key=path.at(-1),value=cursor[key];
     cursor[key]=typeof value==='number'?value+.01:typeof value==='boolean'?!value:String(value)+'-foreign';
-    assert.equal(api.handBoneXrayLesson(bad,'xray'),undefined);
+    assert.equal(api.halluxXrayLesson(bad,'xray'),undefined);
     assert.equal(api.bodyLesson(bad,'xray').readiness,'pending');rejected++;
   }
   for(const mutate of [s=>s.sources.pop(),s=>s.regions.push('foreign'),s=>{delete s.anchor;},s=>{delete s.sources;}]){
     const bad=structuredClone(identity);mutate(bad);
-    assert.equal(api.handBoneXrayLesson(bad,'xray'),undefined);rejected++;
+    assert.equal(api.halluxXrayLesson(bad,'xray'),undefined);rejected++;
   }
 }
 const first=beforeRecord.entries[0];
-assert.throws(()=>beforeHandBoneXray({...api,bodyLesson(s,t){return s.id===first.identity.id&&t==='xray'?structuredClone(first.previous):api.bodyLesson(s,t);}}),/Mixed/);
-assert.throws(()=>beforeHandBoneXray({...api,bodyLesson(s,t){return s.id===first.identity.id&&t==='xray'?{...api.bodyLesson(s,t),body:'foreign'}:api.bodyLesson(s,t);}}),/Unrecorded/);
-assert.throws(()=>beforeHandBoneXray({...api,handBoneXrayLesson(s,t){const lesson=api.handBoneXrayLesson(s,t);return lesson?{...lesson,body:'foreign'}:lesson;}}),/Unrecorded/);
+assert.throws(()=>beforeHalluxXray({...api,bodyLesson(s,t){return s.id===first.identity.id&&t==='xray'?structuredClone(first.previous):api.bodyLesson(s,t);}}),/Mixed/);
+assert.throws(()=>beforeHalluxXray({...api,bodyLesson(s,t){return s.id===first.identity.id&&t==='xray'?{...api.bodyLesson(s,t),body:'foreign'}:api.bodyLesson(s,t);}}),/Unrecorded/);
+assert.throws(()=>beforeHalluxXray({...api,halluxXrayLesson(s,t){const lesson=api.halluxXrayLesson(s,t);return lesson?{...lesson,body:'foreign'}:lesson;}}),/Unrecorded/);
 const original=before.bodyLesson(first.identity,'xray');original.body='foreign';
 assert.deepEqual(before.bodyLesson(first.identity,'xray'),first.previous);
 console.log(JSON.stringify({drafts:changed,unchangedTopics:unchanged,identityMutationsRejected:rejected,swappedGroupsRejected,actualViewerRenders:rendered,geometryChanged:false,recipesChanged:false,imagesImported:false,clinicalApproval:false}));

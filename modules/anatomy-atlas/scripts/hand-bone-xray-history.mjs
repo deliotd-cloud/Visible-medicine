@@ -3,8 +3,10 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import before from '../content/hand-bone-xray.before.json' with {type:'json'};
 import transition from '../content/hand-bone-xray.transition.json' with {type:'json'};
+import {beforeHalluxXray} from './hallux-xray-history.mjs';
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function beforeHandBoneXray(api){
+  api=beforeHalluxXray(api);
   assert.equal(hash(before),'5461b6c93d7eb8225d8619e2a3cc86f1470e5eef651a143c3af4566c7579c5af');
   assert.equal(hash(transition),'d4f8ede9a7111b3046c54f5bd4c173ca3357cfb3344b0a00ff6033664c2d122b');
   assert.equal(before.parentCommit,'5f5a839b9c528d50ae67bd58c226bcfd3b69e6cd');

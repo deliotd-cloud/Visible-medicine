@@ -2,6 +2,7 @@ import { centralVesselImagingLesson } from '../lib/central-vessel-imaging';
 import { mainBronchusXrayLesson } from '../lib/main-bronchus-xray';
 import { hipAbductorXrayLesson } from '../lib/hip-abductor-xray';
 import { handBoneXrayLesson } from '../lib/hand-bone-xray';
+import { halluxXrayLesson } from '../lib/hallux-xray';
 import { properDigitalTeachingLesson } from '../lib/proper-digital-teaching';
 import { spinalDiscFunctionLesson } from '../lib/spinal-disc-function';
 import { laryngealMuscleImagingLesson } from '../lib/laryngeal-muscle-imaging';
@@ -256,6 +257,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (orbitalNeckMuscleImaging) return orbitalNeckMuscleImaging;
   const handBoneXray = handBoneXrayLesson(s, tab);
   if (handBoneXray) return handBoneXray;
+  const halluxXray = halluxXrayLesson(s, tab);
+  if (halluxXray) return halluxXray;
   const acralBoneImaging = acralBoneImagingLesson(s, tab);
   if (acralBoneImaging) return acralBoneImaging;
   const cranialBoneImaging = cranialBoneImagingLesson(s, tab);

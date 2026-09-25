@@ -7,9 +7,9 @@ The index is a fresh review starting point, not a carried-over sign-off. Run
 `node scripts/prepare-first-release-review.mjs --check` before using it and
 verify the displayed website candidate separately.
 
-The hand-bone X-ray candidate refresh uses renderer fingerprint
-`54fef1b1dfe6b2ae293db8be6340c05924c67d96e98e586e437a6ccca403ec1c`.
-Website `2c927b7` still contains the earlier renderer from Atlas `689835f`; do not
+The hallux X-ray candidate refresh uses renderer fingerprint
+`a81a24137d8aa973e4e86e3b6ee92fe7338016ff5d337635c72ba274097332ec`.
+Website `0dc435d` still contains the earlier renderer from Atlas `2902cc4`; do not
 use this candidate packet as proof of that displayed website revision. Standalone
 review links below require their own route/revision check; publication does not
 submit or approve the worksheet. Selection identities and review scope are unchanged.
