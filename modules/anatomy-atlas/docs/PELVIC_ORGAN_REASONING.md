@@ -1,7 +1,7 @@
 # Pelvic organ reasoning — 25 September 2026
 
-Eight original draft questions are added to the existing Practice → Understand
-anatomy mode, using twelve existing source identities. No controls, models,
+Eight original draft questions are added to the existing Practice → Apply
+anatomy · draft mode, using twelve existing source identities. No controls, models,
 textures, fonts, dependencies, scans, masks or access rights are added or changed.
 The earlier 132 concepts remain byte-equivalent in their original order.
 

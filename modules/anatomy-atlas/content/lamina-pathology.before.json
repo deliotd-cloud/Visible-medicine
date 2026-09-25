@@ -1,0 +1,155 @@
+{
+  "parentCommit": "e7e6b197e0cd25c1a9160b69f93fbe673192c755",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "originalPinsHash": "17c346a550a98c169becc90dfccbb407578ca854e23e8c09931b518f7daf7925",
+  "previousAllLessonsAndRecipesHash": "3d7f5294bb2768e611b08030571d94f1496c4780a1377ac76fa3702a501dbec8",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:lamina-terminalis",
+        "fmaId": "FMA61975",
+        "name": "Lamina terminalis",
+        "sourceName": "lamina terminalis",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "limbic-landmarks",
+        "nodeName": "FMA61975",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1764",
+            "sha256": "8935c1c22609f2e8078ec33ac867e2633c645e98b80d1bdca789de8e3a8f010e"
+          },
+          {
+            "file": "FJ1812",
+            "sha256": "91812f9540a4f96cff9ccfcfa478ac885d7f59c0fd08ab0f05fd865e6b670713"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.020590899512171745,
+            7.395299911499023,
+            0.5233100056648254
+          ],
+          "max": [
+            0.007492519915103912,
+            7.514200210571289,
+            0.5964400172233582
+          ]
+        },
+        "center": [
+          -0.0065491897985339165,
+          7.454750061035156,
+          0.5598750114440918
+        ],
+        "anchor": [
+          -0.0054879398085176945,
+          7.460400104522705,
+          0.5632399916648865
+        ],
+        "coverageNote": "Two original lamina files touch at one source-coordinate vertex; their individual normals remain separate. This is not a reconstructed continuous sheet. Every ordered source triangle and position is retained. Stria terminalis is withheld for source defects. Anatomical relationships, laterality and clinical accuracy require review; no patient registration or complete limbic circuit is supplied.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "clinical",
+      "previous": {
+        "readiness": "draft",
+        "title": "Lamina terminalis · Patient-specific anterior ventricular boundary · draft",
+        "body": "The lamina terminalis is a useful anterior third-ventricular landmark, but one reference shape is not a patient-specific boundary. In a retrospective study of 160 adult MR examinations without ventricular pathology, its dimensions and angulation varied; angulation was associated with optic-chiasm position.",
+        "bullets": [
+          "Assess the lamina and neighbouring chiasm on the individual acquisition. Do not transfer the study averages or proposed angle classes to this mesh, infer the location of a nearby artery, or treat an exploded view as a safe operative route.",
+          "The cohort does not validate disease-specific appearances, hydrocephalus assessment, membrane patency or treatment. Pathology remains pending for appropriate structure-specific evidence.",
+          "Source limit: Two original lamina pieces, not a reconstructed continuous membrane. A shared source-coordinate vertex does not prove membrane continuity or patency.",
+          "Visible source: FMA61975 · midline · limbic-landmarks. Two original lamina files touch at one source-coordinate vertex; their individual normals remain separate. This is not a reconstructed continuous sheet. Every ordered source triangle and position is retained. Stria terminalis is withheld for source defects. Anatomical relationships, laterality and clinical accuracy require review; no patient registration or complete limbic circuit is supplied.",
+          "Reference: Hoz et al. (2026), retrospective radiological study; abstract consulted. No diagnostic thresholds or operative instructions reproduced."
+        ],
+        "citations": [
+          "https://pubmed.ncbi.nlm.nih.gov/41952733/"
+        ],
+        "note": "Educational draft for revision-bound radiologist review, not a diagnostic test or procedure plan. No patient registration, scan or clinical approval is supplied. Atlas, imaging-case and paid-lecture access remain independent."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:lamina-terminalis",
+        "fmaId": "FMA61975",
+        "name": "Lamina terminalis",
+        "sourceName": "lamina terminalis",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "limbic-landmarks",
+        "nodeName": "FMA61975",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1764",
+            "sha256": "8935c1c22609f2e8078ec33ac867e2633c645e98b80d1bdca789de8e3a8f010e"
+          },
+          {
+            "file": "FJ1812",
+            "sha256": "91812f9540a4f96cff9ccfcfa478ac885d7f59c0fd08ab0f05fd865e6b670713"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.020590899512171745,
+            7.395299911499023,
+            0.5233100056648254
+          ],
+          "max": [
+            0.007492519915103912,
+            7.514200210571289,
+            0.5964400172233582
+          ]
+        },
+        "center": [
+          -0.0065491897985339165,
+          7.454750061035156,
+          0.5598750114440918
+        ],
+        "anchor": [
+          -0.0054879398085176945,
+          7.460400104522705,
+          0.5632399916648865
+        ],
+        "coverageNote": "Two original lamina files touch at one source-coordinate vertex; their individual normals remain separate. This is not a reconstructed continuous sheet. Every ordered source triangle and position is retained. Stria terminalis is withheld for source defects. Anatomical relationships, laterality and clinical accuracy require review; no patient registration or complete limbic circuit is supplied.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "pathology",
+      "previous": {
+        "readiness": "pending",
+        "title": "Lamina terminalis · Review pending",
+        "body": "Detailed structure-specific clinical and imaging teaching awaits authoring and review.",
+        "bullets": [],
+        "note": "No acquired CT, MRI, X-ray, ultrasound, diffusion tractography or patient registration is supplied."
+      }
+    }
+  ]
+}

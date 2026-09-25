@@ -1,10 +1,12 @@
 // Test-only editorial replay, never clinical approval or application content.
 import assert from 'node:assert/strict';
+import {beforeLaminaPathology} from './lamina-pathology-history.mjs';
 import {createHash} from 'node:crypto';
 import before from '../content/mediastinal-xray.before.json' with {type:'json'};
 import transition from '../content/mediastinal-xray.transition.json' with {type:'json'};
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function beforeMediastinalXray(api){
+  api=beforeLaminaPathology(api);
   assert.equal(hash(before),'43074d111ee8e330fd27b5010b0ce2d27755181653e6eb623917fcce06166c9f');
   assert.equal(hash(transition),'16a870325a20cd2301540e5cd34461e3195f99d6861122f69b758d46a7858ba9');
   assert.equal(before.parentCommit,'5e3667fe3c9f012cbc21e679ba2e834f527dcc3f');

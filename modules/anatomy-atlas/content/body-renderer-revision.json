@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "d4d6585369422bdb9731246e16045d907a07086bcc7f326d6cc412dd6fc03822"
+      "sha256": "eeb30dc9fbd8646dd016c2644e617abfd370f5b48d98fdcdcef2a9e2fbd10fe2"
     },
     {
       "path": "app/body-education-link.ts",
@@ -879,6 +879,10 @@
     {
       "path": "content/lacrimal-drainage-imaging.ts",
       "sha256": "f416f0caadde905b7ab573f48589ec20d5f30c128d411c470c44ec70da63bed4"
+    },
+    {
+      "path": "content/lamina-pathology.ts",
+      "sha256": "80c09cb2ff857919234e558d1c41b05227b477d6bf2505f66c39937772fd587d"
     },
     {
       "path": "content/laryngeal-imaging-pins.json",
@@ -2093,6 +2097,10 @@
       "sha256": "a5affcd8c2058488514ece3349cbbd36f803b1053b0273e81526c022103d55ce"
     },
     {
+      "path": "lib/lamina-pathology.ts",
+      "sha256": "9a137767eda5fda445dcf00034aa994faf385f0de131f49e1867b076c18a7cb0"
+    },
+    {
       "path": "lib/laryngeal-anatomy.ts",
       "sha256": "adb043e56456f63e8f8f5f110c984f3706c8904a6267c6415260c7d0c8973fb3"
     },
@@ -2961,5 +2969,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "e6f7ce10a43d9844985ae66037243bceb0372261d7c41f4da3b88e240425ac43"
+  "sha256": "ea64d66b94ae9de596512b18b25bd6e952818b6188d5751f85bd2d345f5dfa71"
 }

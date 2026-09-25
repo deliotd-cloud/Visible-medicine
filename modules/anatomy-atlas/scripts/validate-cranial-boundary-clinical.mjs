@@ -8,6 +8,7 @@ import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import pins from '../content/cranial-boundary-clinical-pins.json' with {type:'json'};
 import after from '../content/cranial-boundary-clinical.transition.json' with {type:'json'};
 import {authoringBeforeCostalCartilageImaging} from './costal-cartilage-imaging-history.mjs';
+import {beforeLaminaPathology} from './lamina-pathology-history.mjs';
 const live=await context(),c={...live,api:authoringBeforeCostalCartilageImaging(live)}, {api,display}=c,before=authoringBeforeCranialBoundaryClinical(c),original=JSON.stringify(display);
 assert.equal(hash(snapshot(api,display)),after.currentAllLessonsAndRecipesHash);
 assert.equal(hash(snapshot(before,display)),pins.previousAllLessonsAndRecipesHash);
@@ -42,7 +43,7 @@ assert.throws(()=>authoringBeforeCranialBoundaryClinical(alter((s,t)=>s.id===oth
 for(const b of pins.bundles){const bytes=await readFile('public'+b.url.split('?')[0]);assert.equal(bytes.length,b.bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),b.sha256);}
 const content=await contentContext(),records=content.api.bodyContentRecords(display),registry=new Map([...content.shoulder,...records].map(r=>[r.representationScope+'|'+r.id,r])),validate=await contentValidator(registry);
 for(const record of records)assert(validate(record));
-for(const e of pins.entries)for(const t of e.topics){const r=records.find(r=>r.id===e.identity.id);assert.deepEqual(r.content[t],api.bodyLesson(e.identity,t));assert.equal(r.validation.clinicalApproval,'not-included');}
+for(const e of pins.entries)for(const t of e.topics){const r=records.find(r=>r.id===e.identity.id);assert.deepEqual(r.content[t],content.api.bodyLesson(e.identity,t));assert.deepEqual(beforeLaminaPathology(content.api).bodyLesson(e.identity,t),api.bodyLesson(e.identity,t));assert.equal(r.validation.clinicalApproval,'not-included');}
 assert.equal(JSON.stringify(display),original);
 const report={source:pins.sourceCommit,sourceSelections:2,changedPlacements:changed,unchangedTopics:unchanged,rejectedChangedIdentityCases:rejected,bodySchemaRecords:records.length,beforeHash:pins.previousAllLessonsAndRecipesHash,afterHash:after.currentAllLessonsAndRecipesHash,geometryChanged:false,clinicalApproval:false,browserAcceptance:false};
 await writeFile('docs/cranial-boundary-clinical-validation.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

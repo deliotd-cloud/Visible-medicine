@@ -10,6 +10,7 @@ import transition from '../content/mediastinal-xray.transition.json' with {type:
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {wholeBodyTeachingSnapshot} from './exact-clinical-reference-history.mjs';
 import {beforeMediastinalXray} from './mediastinal-xray-history.mjs';
+import {beforeLaminaPathology} from './lamina-pathology-history.mjs';
 import {build} from './workspace-component-test-build.mjs';
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 // Anatomical expectations are independent of runtime topic keys and saved hashes.
@@ -20,7 +21,7 @@ const expected=new Map([
   ['FMA4720',[/^Superior vena cava$/, /right border of the vascular pedicle/, /SVC lumen/]],
   ['FMA4838',[/^Azygos vein$/, /azygos arch/, /not a stand-alone diagnosis/]],
 ]);
-const live=await contentContext(),{api,catalog}=live,display=api.bodyDisplayCatalog(catalog);
+const live=await contentContext(),api=beforeLaminaPathology(live.api),{catalog}=live,display=api.bodyDisplayCatalog(catalog);
 const before=beforeMediastinalXray(api);
 assert.equal(beforeMediastinalXray(before),before);
 assert.equal(hash(display),record.catalogHash);

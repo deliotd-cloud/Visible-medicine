@@ -4,6 +4,7 @@ import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {build} from './workspace-test-build.mjs';
 import {preShortCiliaryAuthoring} from './short-ciliary-history.mjs';
+import {beforeLaminaPathology} from './lamina-pathology-history.mjs';
 export const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 export async function context({current=false}={}){
  const compiled=await build({stdin:{contents:"export {bodyDisplayCatalog} from './lib/body-display-catalog'; export {bodyLesson,bodyContent} from './app/body-content'; export {structures} from './app/anatomy-data'; export {contentTabs} from './lib/content-types'; export {dissectionProfiles} from './app/dissection-data';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
@@ -11,7 +12,7 @@ export async function context({current=false}={}){
  const catalog=JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json'));
  // This helper serves the existing editorial history suites. New anatomy is
  // removed only through its exact recorded transition, never from production.
- if(!current)api=preShortCiliaryAuthoring(api,catalog);
+ if(!current)api=preShortCiliaryAuthoring(beforeLaminaPathology(api),catalog);
  return {api,catalog,display:api.bodyDisplayCatalog(catalog)};
 }
 export const snapshot=(api,display)=>({body:display.structures.map(s=>({id:s.id,sections:Object.fromEntries(api.contentTabs.map(t=>[t,api.bodyLesson(s,t)]))})),shoulder:api.structures,recipes:api.dissectionProfiles});

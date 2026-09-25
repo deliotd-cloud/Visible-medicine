@@ -1335,6 +1335,16 @@ https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html. No publisher
 table, artwork or image is imported; reference access grants no asset licence.
 No new dependency, dataset, font, texture or mandatory fee is introduced.
 
+## Lamina terminalis pathology — 25 September 2026
+
+Original draft teaching links to Richetta et al. (2024),
+https://link.springer.com/article/10.1007/s00381-024-06323-w, published under
+https://creativecommons.org/licenses/by/4.0/. No publisher figures, tables,
+prose, scans or datasets are imported. The new text is a short factual synthesis,
+not a reproduction; authors and source are credited in the teaching panel.
+Existing BodyParts3D attribution remains unchanged. No model, dependency, font,
+texture or mandatory fee is added. Clinical review remains pending.
+
 ## Pelvic organ reasoning — 25 September 2026
 
 Eight original short draft questions/explanations cite the UAMS pelvic/perineal
