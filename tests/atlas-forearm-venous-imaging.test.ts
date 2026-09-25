@@ -7,13 +7,13 @@ test('regional export carries the four source-bound forearm MR drafts without a 
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'2bba43e74ecc65bc1f401b74add346bfc6f9689e7a2a94037d6c307b2af7d6a4');
+  assert.equal(sha(manifestBytes),'ec4786990f829d71819bc52f31c417946fbe7603563a5592102ccd3f29409024');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'5e3667fe3c9f012cbc21e679ba2e834f527dcc3f');
+  assert.equal(manifest.sourceCommit,'acc99b3a2af285e068e0018b1644c4343ec1242b');
   for(const field of ['patientDataIncluded','clinicalApproved','imagingConnection','standaloneReviewConnection'])assert.equal(manifest[field],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,expected] of Object.entries({
-    'app/body-content.ts':'2343b8b61f7dfd1cf5f419a376bd19850ee09f9238eff7412215e5b25cca41bc',
+    'app/body-content.ts':'d4d6585369422bdb9731246e16045d907a07086bcc7f326d6cc412dd6fc03822',
     'content/forearm-venous-imaging-pins.json':'81dd9bcdf0dae7cfcac45d099a960d69d5ff39598a815b8103798382e685c490',
     'content/forearm-venous-imaging.ts':'4b003f2e5d91186b05429989a28f9b4162e9364043736fa5e9d0199b59da0332',
     'lib/forearm-venous-imaging.ts':'2866e1bef3a871d47e8107c2ef3783661548e1a518018c3c03fb52ceadb978cb',

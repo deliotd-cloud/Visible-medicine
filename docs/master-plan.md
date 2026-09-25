@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+25 September mediastinal X-ray teaching: generated Atlas `acc99b3` adds five
+source-bound drafts in existing Imaging panels, without new controls, models,
+patient data or entitlement changes. See [scope and checks](atlas-mediastinal-xray-20260925.md).
+The main checkpoint records publication/recovery separately. Continue substantive
+regional work independently of final CT/MRI cases; clinical/privacy/device and
+release gates remain open.
+
 25 September regional practice return: generated Atlas `5e3667f` restores the
 selected anatomy and presentation after quiz exit/completion, retaining study
 layers, topic and results. No controls, model bytes or access changes. See

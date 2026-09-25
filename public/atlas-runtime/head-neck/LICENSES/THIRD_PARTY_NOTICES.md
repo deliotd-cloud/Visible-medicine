@@ -1317,7 +1317,17 @@ or datasets. No commercial asset rights are inferred from public/indexed access.
 Existing BodyParts3D CC BY 4.0 attribution remains unchanged. No dependency,
 font, texture, new mesh or fee is added. See `docs/LARYNGEAL_MUSCLE_IMAGING.md`
 for exact scope and outstanding radiologist validation.
+## Mediastinal vessel X-ray teaching — 25 September 2026
+
+Five original factual orientation drafts cite Radiology Masterclass, Radiology
+Assistant and ACR/RSNA RadiologyInfo (exact links and scope in
+`docs/MEDIASTINAL_XRAY.md`). No publisher media, prose, scans or datasets are
+imported. Public reading access is not treated as permission to reuse assets.
+Existing BodyParts3D CC BY 4.0 attribution remains unchanged; no dependency,
+model, font, texture or mandatory fee is added. Clinical review remains pending.
+
 # Pes anserinus convergence study
+
 
 The paired whole-body study reuses eight existing BodyParts3D surfaces and their
 retained CC BY 4.0 attribution. Its original short anatomical summaries cite
