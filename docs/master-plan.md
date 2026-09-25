@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+25 September pelvic detail/teaching integration: generated Atlas `0cd2125`
+retains close-up framing for fourteen fully contained hip muscles and adds
+eleven source-bound pelvic-vein imaging drafts to existing panels. All models,
+private access and independent entitlements remain unchanged. See
+[scope and limitations](atlas-pelvic-update-20260925.md). Continue the full
+roadmap; anatomical, clinical, privacy, imaging and device gates remain open.
+
 25 September regional removal-focus integration: shared viewer binds Atlas
 `e2ce70e`, preserving keyboard focus near Undo when selected Remove/Hide controls
 disappear. Abdominal desktop/mobile and pelvic desktop samples retain layers.
