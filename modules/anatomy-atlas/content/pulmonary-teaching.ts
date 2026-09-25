@@ -1,6 +1,14 @@
 import type { NestedSection } from './nested-teaching';
 
 export const pulmonaryTeachingReferences = {
+  pulmonaryLobarProjection: {
+    title: 'King’s College London · Chest radiograph: lungs and lobes',
+    url: 'https://ehealth.kcl.ac.uk/tel/radiology/CXR/03-02-lungs.html',
+  },
+  pulmonaryChestXray: {
+    title: 'ACR / RSNA RadiologyInfo · Chest X-ray',
+    url: 'https://www.radiologyinfo.org/en/info/chestrad',
+  },
   pulmonaryMRIPhysics: {
     title: 'Wild et al. · MRI of the lung: methods (2012)',
     url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3481083/',
@@ -53,6 +61,11 @@ export const pulmonaryTeaching = {
       'pulmonaryTBDiagnosis',
     ),
     imaging: {
+      xray: draft(
+        'Compare frontal and lateral chest radiographs when learning lobar relationships. On the right, the horizontal fissure separates upper from middle lobe; on the left, the lingula belongs to the upper lobe, not a separate middle lobe. These coloured upper-lobe branches are an orientation aid, not a radiographic opacity or a complete lobe outline.',
+        'pulmonaryLobarProjection',
+        'pulmonaryChestXray',
+      ),
       ct: draft(
         'Chest CT depicts nodules and other lung abnormalities and can be reviewed in multiple planes. Use the selected upper-lobe branches as an orientation aid when comparing an independently approved study. The coloured branch outline is not the tissue extent of a lobe, a nodule boundary or a CT attenuation value.',
         'pulmonaryChestCT',
@@ -77,6 +90,11 @@ export const pulmonaryTeaching = {
       'pulmonaryMiddleLobe',
     ),
     imaging: {
+      xray: draft(
+        'The right middle lobe is separated from the upper lobe by the horizontal fissure and from the lower lobe by the oblique fissure. Relate these boundaries across frontal and lateral views rather than using this branch group as a tissue silhouette. No fissure surface, collapse or scan correspondence is supplied by the selected model.',
+        'pulmonaryLobarProjection',
+        'pulmonaryChestXray',
+      ),
       ct: draft(
         'Chest CT can evaluate pneumonia, bronchiectasis and chest tumours. For a middle-lobe study, compare the airway group with the surrounding tissue on the actual examination rather than treating branches as the whole lobe. This atlas has no fissure surfaces, tissue-density information or registered CT slices to establish a collapse pattern.',
         'pulmonaryChestCT',
@@ -101,6 +119,11 @@ export const pulmonaryTeaching = {
       'pulmonaryAspiration',
     ),
     imaging: {
+      xray: draft(
+        'The oblique fissure separates each lower lobe from the other lobes on that side. Use frontal and lateral radiographs together for lobar orientation; the selected lower-lobe branches do not trace the fissure or tissue boundary. A chest radiograph cannot exclude every lung abnormality, and further imaging may be needed. Atlas colours do not represent X-ray attenuation.',
+        'pulmonaryLobarProjection',
+        'pulmonaryChestXray',
+      ),
       ct: draft(
         'CT may help when suspected aspiration pneumonia remains uncertain after an inconclusive chest radiograph or when competing diagnoses need clarification. Assess the distribution of consolidation alongside the history. This partial lower-lobe branch model supplies no consolidation, dependent tissue changes or patient-specific correspondence; rotating it does not simulate aspiration.',
         'pulmonaryAspiration',
@@ -120,6 +143,6 @@ export const pulmonaryTeaching = {
   {
     clinical: NestedSection;
     pathology: NestedSection;
-    imaging: { ct: NestedSection; mri: NestedSection; ultrasound: NestedSection };
+    imaging: { ct: NestedSection; mri: NestedSection; ultrasound: NestedSection; xray: NestedSection };
   }
 >;

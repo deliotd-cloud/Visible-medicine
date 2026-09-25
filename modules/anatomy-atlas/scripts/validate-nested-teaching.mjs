@@ -6,6 +6,7 @@ import { runInNewContext } from 'node:vm';
 import { build } from './workspace-component-test-build.mjs';
 import { nestedBeforeClinicalReferenceRevision } from './clinical-reference-revision-history.mjs';
 import { nestedBeforePulmonaryImaging } from './pulmonary-imaging-history.mjs';
+import { nestedBeforePulmonaryXray } from './pulmonary-xray-history.mjs';
 
 const require = createRequire(import.meta.url);
 const React = require('react');
@@ -48,7 +49,7 @@ const api = {
   nestedConcepts: scope.exports.nestedConcepts.filter(c => c.study !== 'femoral-components' && c.study !== 'coronary-venous'),
   nestedTeachingReferences: Object.fromEntries(Object.entries(scope.exports.nestedTeachingReferences).filter(([key]) => !['femoralComponentAnatomy', 'femoralComponentVariation', 'femoralComponentInjury', 'coronaryVenousAnatomy', 'coronaryVenousHeart', 'coronarySinusImaging', 'smallCardiacVariation'].includes(key))),
 };
-const historicalApi = nestedBeforeClinicalReferenceRevision(nestedBeforePulmonaryImaging(api));
+const historicalApi = nestedBeforeClinicalReferenceRevision(nestedBeforePulmonaryImaging(nestedBeforePulmonaryXray(api)));
 const copy = (value) => JSON.parse(JSON.stringify(value));
 let checks = 0;
 const check = (value, message) => {
@@ -424,7 +425,7 @@ for (const target of targets) {
                       ? ['ct', 'mri', 'ultrasound']
                     : ['ultrasound']
                 : concept.study === 'pulmonary'
-                  ? ['ct', 'mri', 'ultrasound']
+                  ? ['ct', 'mri', 'ultrasound', 'xray']
                   : concept.id === 'cerebral-insula'
                     ? ['ct', 'mri']
                     : concept.id === 'cerebral-superior-temporal-anterior'
@@ -622,7 +623,7 @@ for (const tab of ['anatomy', 'function', 'quiz'])
   same(coverage[tab], { draft: 71, pending: 0 });
 same(coverage.ct, { draft: 39, pending: 32 });
 same(coverage.mri, { draft: 44, pending: 27 });
-same(coverage.xray, { draft: 0, pending: 71 });
+same(coverage.xray, { draft: 5, pending: 66 });
 same(coverage.ultrasound, { draft: 33, pending: 38 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
 const wordsBySource = {};
@@ -640,6 +641,7 @@ const hosts = new Set([
   'www.aium.org',
   'www.heart.org',
   'www.radiologyinfo.org',
+  'ehealth.kcl.ac.uk',
   'edge.sitecorecloud.io',
   'jcmr-online.biomedcentral.com',
   'www.asecho.org',
@@ -691,11 +693,11 @@ for (const concept of api.nestedConcepts) {
     }
   }
 }
-same(Object.keys(wordsBySource).length, 85);
+same(Object.keys(wordsBySource).length, 87);
 same(
   new Set(Object.values(api.nestedTeachingReferences).map((ref) => ref.url))
     .size,
-  86,
+  88,
   'Do not split one source into duplicate reference keys',
 );
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {

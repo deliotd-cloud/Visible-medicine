@@ -1,5 +1,44 @@
 # Pulmonary clinical and imaging teaching
 
+## 25 September — X-ray orientation extension
+
+Three original X-ray drafts now serve five existing source-pinned branch groups:
+right/left upper (FMA7333/FMA7370), right middle (FMA7383), and right/left lower
+(FMA7337/FMA7371). They use the existing collapsed Learn more → Imaging panel;
+no new controls, geometry or scan connection are introduced. The notes explain
+frontal/lateral comparison, fissural relationships and the left lingula, while
+distinguishing a partial branch group from a lobe outline or radiographic finding.
+All other teaching, source bindings and clinical approval states are preserved.
+
+Primary references read 25 September 2026:
+[King’s College London, lungs/lobes](https://ehealth.kcl.ac.uk/tel/radiology/CXR/03-02-lungs.html)
+and [ACR/RSNA RadiologyInfo, chest X-ray](https://www.radiologyinfo.org/en/info/chestrad).
+These are factual reading links, not licensed image sources: no illustrations,
+scans, tables, page text or other publisher assets were copied. The concise
+original wording adds no dependency or mandatory fee. See THIRD_PARTY_NOTICES.
+
+Revision-bound radiologist review is still required. These introductory notes do
+not complete thoracic anatomy, provide a diagnostic protocol, validate source
+lobe membership, or enable patient-specific synchronization. Historical sections
+below describe their dated milestones, not current coverage totals.
+
+Verification of this extension: `npm run pulmonary-xray:test` compares against
+Git parent `77eaf754b12e039abc710f2fab21db28b2385f2f`: five changed placements,
+688 unchanged nested topics, five real component renders, 35 source-mismatch
+rejections and five mixed/tampered history rejections. The nested teaching
+validator passes 9,234 checks; its historical corpus has X-ray 5 draft/66 pending.
+Content contract, body-review bindings, TypeScript, targeted lint and production
+build pass. This is code/render evidence, not browser/device or clinical approval.
+
+The older `pulmonary-imaging:test` currently fails its full-corpus historical
+hash check. The same mismatch is reproduced using the unchanged Git parent:
+actual `a68ae58c46b88d51e1b85efb8725d57fb24d95427cda6a29d1d63c590c776d33`,
+expected `1daf5d8c8cefd0b8e6d910c7e1c72c91f869e018e0ac1d88f1eb6679a134e5ff`.
+No old expected hash was updated. The new exact X-ray rollback preserves those
+older expectations; the pre-existing full-corpus replay needs a separate repair.
+Do not describe this as an all-tests-passing milestone. Publication and recovery
+status are recorded separately in the main coordination checkpoint.
+
 ## 17 September — MRI and ultrasound extension
 
 The five existing upper/middle/lower branch groups now have MRI and Ultrasound

@@ -1,5 +1,14 @@
 # Third-party notices
 
+## Pulmonary branch-group X-ray teaching — 25 September 2026
+
+Three original short orientation drafts link to King's College London and
+ACR/RSNA RadiologyInfo as factual reading references. No publisher prose,
+illustrations, scans, tables or other media are redistributed; the citations
+do not license those assets for reuse. Existing BodyParts3D attribution and
+source geometry are unchanged. No new dependency or mandatory paid service
+is added. See [scope and clinical-review limits](../docs/PULMONARY_TEACHING.md).
+
 ## Orbital-muscle ultrasound teaching — 25 September 2026
 
 Original orientation prose cites Chandra et al. (2014) and Wan et al. (1988)

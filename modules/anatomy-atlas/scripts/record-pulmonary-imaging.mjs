@@ -2,7 +2,8 @@ import assert from 'node:assert/strict';
 import {readFile,writeFile} from 'node:fs/promises';
 import {pulmonaryImagingApi,pulmonaryImagingBase,hash} from './pulmonary-imaging-tools.mjs';
 import baseline from '../content/pulmonary-imaging-baseline.json' with {type:'json'};
-const api=await pulmonaryImagingApi();
+import {nestedBeforePulmonaryXray} from './pulmonary-xray-history.mjs';
+const api=nestedBeforePulmonaryXray(await pulmonaryImagingApi());
 const keys=['pulmonaryMRIPhysics','pulmonaryUltrasoundLimits'];
 const record={sourceCommit:pulmonaryImagingBase,baselineHash:hash(baseline),pulmonary:api.nestedConcepts.filter(c=>c.study==='pulmonary'),references:Object.fromEntries(keys.map(k=>[k,api.nestedTeachingReferences[k]]))};
 const priorConcepts=api.nestedConcepts.map(c=>{
