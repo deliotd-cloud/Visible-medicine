@@ -261,7 +261,7 @@
   border: 1px solid #dbe3d3;
   border-radius: 6px;
   padding: 9px 8px;
-  color: #87917e;
+  color: var(--vm-ink);
 }
 .body-system-bar > div.active {
   background: #fff;
@@ -556,7 +556,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  color: #84947a;
+  color: var(--vm-muted);
   margin-top: 27px;
   letter-spacing: 0.035em;
   text-transform: uppercase;
@@ -597,8 +597,8 @@
   padding-top: 20px;
 }
 .body-content-tabs .eyebrow {
-  font-size: 0.625rem;
-  color: #8e9b81;
+  font-size: 0.75rem;
+  color: var(--vm-muted);
 }
 .body-content-tabs p {
   margin: 8px 0 13px;
@@ -606,9 +606,9 @@
   line-height: 1.6;
 }
 .body-content-tabs ul {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   line-height: 1.6;
-  color: #7c8b72;
+  color: var(--vm-ink);
   list-style: disc;
   padding-left: 18px;
 }
@@ -721,7 +721,7 @@
 }
 .body-structure-browser summary {
   font-size: 0.75rem;
-  color: #769063;
+  color: var(--vm-muted);
   cursor: pointer;
   padding: 4px 0;
 }
