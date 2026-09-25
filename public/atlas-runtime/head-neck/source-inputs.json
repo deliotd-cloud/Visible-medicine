@@ -89,11 +89,11 @@
   },
   {
     "path": "app/body-explorer.css",
-    "sha256": "35116a602687a48636448f225237df4ad5d2ca39ada5211cf8390fbd6d62d0a9"
+    "sha256": "2cafcdb00ef8ae09842cf1b64cd6ae115c254882c49c86829ba3d9d052142c48"
   },
   {
     "path": "app/body-explorer.tsx",
-    "sha256": "82baa2c48a9c1bcada70f1e3b615668ef9432b75120253895558b76a3e676867"
+    "sha256": "e62b3b74cbbd348d3589c4b6d43d972970129b34a8ad7b4e0a66648a35f861ba"
   },
   {
     "path": "app/body-scene.tsx",
@@ -286,6 +286,10 @@
   {
     "path": "app/selection-visibility.css",
     "sha256": "2a5d482d10cbc725100ce98cac41267d759e64f123d79b218b664096b9aebb58"
+  },
+  {
+    "path": "app/source-display-notes.tsx",
+    "sha256": "57b83b84c0c2cc4fe005b57d798e61bc4fc74bbb5e89a11bd014fbdf2f8ba183"
   },
   {
     "path": "app/specimen-structure-search.tsx",
@@ -1165,7 +1169,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "32cd187fd3fe92d19e4d0c53f50121dd9a5920ba55b9c0a4bd50fea4943151e9"
+    "sha256": "7a5fb623f1c7a1c241b93894b5ed270641344df5729925456c4315ea09a53558"
   },
   {
     "path": "content/sca-mca-clinical-pins.json",
@@ -2554,6 +2558,10 @@
   {
     "path": "lib/shoulder-clinical-curriculum.ts",
     "sha256": "dab771a8dee5c917271d3354d350922bea85d985583c863cf1ff1f4b6481b18b"
+  },
+  {
+    "path": "lib/source-display-notes.ts",
+    "sha256": "b8c5fee2d8b91950d1951ea733e519b8fe7dec3e92e0fad22dd7a36df54871a2"
   },
   {
     "path": "lib/specimen-identification.ts",

@@ -1,5 +1,11 @@
 # Visible Medicine — shared delivery plan
 
+25 September compact source-note integration: generated Atlas `68f77a6`
+reduces repeated technical source notices while leaving clinical warnings visible.
+Existing models, teaching, citations and independent access are unchanged. See
+[scope and limitations](atlas-compact-source-notes-20260925.md). Continue remaining
+regional viewer acceptance and substantive teaching within the full roadmap.
+
 25 September named femoral teaching integration: generated Atlas `eb863d0`
 adds source-bound Clinical/Pathology drafts within existing detail panels.
 Unnamed remainders and imaging stay pending; all models, private audience and
