@@ -1,4 +1,7 @@
 import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import { build } from './workspace-test-build.mjs';
@@ -206,12 +209,14 @@ const component = await componentBuild({
   ],
 });
 const require = createRequire(import.meta.url),
+  actualLink = await import('vinext/shims/link'),
   React = require('react'),
   mod = { exports: {} },
   context = {
     module: mod,
     exports: mod.exports,
-    require,
+    // Match the installed application's Next-compatible framework alias.
+    require: (id) => id === 'next/link' ? { __esModule: true, ...actualLink } : require(id),
     URL,
     URLSearchParams,
     console,
@@ -271,6 +276,53 @@ same(
   false,
 );
 const bones = def.surfaces.filter((s) => s.tissue === 'skeleton');
+// Compare to the exact pre-change authored source, not a regenerated baseline.
+const baseline = '7a9cd07a2fe90e0b2871ce0f5a1ea51c4c138651';
+const historical = (path) => execFileSync('git', ['show', `${baseline}:${path}`], {
+  encoding: 'utf8', maxBuffer: 8 * 1024 * 1024,
+});
+const oldCompiled = await build({
+  stdin: { contents: historical('content/back-bone-teaching.ts'),
+    resolveDir: resolve('content'), loader: 'ts' },
+  bundle: true, write: false, format: 'esm', platform: 'node',
+});
+const oldApi = await import('data:text/javascript;base64,' +
+  Buffer.from(oldCompiled.outputFiles[0].text).toString('base64'));
+const addedXray = {
+  FMA52735: /skull base.*C1 ring/,
+  FMA12519: /C1 has no vertebral body/,
+  FMA12520: /dens as part of C2/,
+  FMA12521: /spinolaminar contour across C3–C6/,
+  FMA12522: /spinolaminar contour across C3–C6/,
+  FMA12523: /spinolaminar contour across C3–C6/,
+  FMA12524: /spinolaminar contour across C3–C6/,
+  FMA12525: /C7 in relation to T1/,
+};
+const addedTexts = new Set();
+let addedXrayPlacements = 0;
+same(api.backBoneBindings, oldApi.backBoneBindings);
+same(api.backBoneConcepts, oldApi.backBoneConcepts);
+for (const path of ['content/back-layers-teaching.ts',
+  'content/back-layers-clinical.ts', 'lib/back-layers-teaching.ts',
+  'lib/back-layers.ts', 'public/models/bodyparts3d-v3/back-layers/catalog.json'])
+  same(readFileSync(path, 'utf8').replace(/\r\n/g, '\n'),
+    historical(path).replace(/\r\n/g, '\n'));
+for (const bone of bones) {
+  const current = copy(lessonFor(def, bone));
+  const previous = oldApi.authoredBackBoneLesson(oldApi.backBoneBindings[bone.fmaId]);
+  if (addedXray[bone.fmaId]) {
+    same(previous.extended.topics.xray, undefined);
+    const note = current.extended.topics.xray;
+    ok(addedXray[bone.fmaId].test(note.body));
+    same(note.readiness, 'draft');
+    addedTexts.add(note.body);
+    delete current.extended.topics.xray;
+    addedXrayPlacements++;
+  }
+  same(current, previous);
+}
+same(addedXrayPlacements, 8);
+same(addedTexts.size, 5);
 same(bones.length, 34);
 same(
   Object.keys(api.backBoneBindings).sort(),
@@ -378,11 +430,11 @@ same(boneCounts, {
   pathology: 26,
   ct: 33,
   mri: 27,
-  xray: 26,
+  xray: 34,
   ultrasound: 0,
 });
 same(boneTopicRenders, 272);
-same(bonePendingRenders, 59);
+same(bonePendingRenders, 51);
 same(JSON.stringify(def), before);
 const bad = copy(def);
 bad.catalog.coordinateSystem.sourceToSceneColumnMajor[12] += 0.5;
@@ -413,6 +465,9 @@ console.log(
     boneTopicRenders,
     bonePendingRenders,
     boneRejections,
+    addedXrayPlacements,
+    addedXrayTexts: addedTexts.size,
+    otherBoneContentPreservedAgainst: baseline,
     sourceFrameMutationsRejected: mutations.length,
     browserOrClinicalAcceptance: false,
   }),

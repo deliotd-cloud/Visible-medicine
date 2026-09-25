@@ -31,6 +31,14 @@ export const backBoneReferences = {
     title: 'ACR/RSNA · suspected spine trauma',
     url: 'https://www.radiologyinfo.org/en/info/acs-spine-trauma',
   },
+  upperCervicalRadiographs: {
+    title: 'AO Surgery Reference · upper-cervical radiographic landmarks',
+    url: 'https://surgeryreference.aofoundation.org/spine/trauma/occipitocervical/further-reading/patient-examination-radiological-evaluation-xr-ct-mri',
+  },
+  cervicalRadiographs: {
+    title: 'Royal Children’s Hospital · cervical radiographic landmarks (paediatric context)',
+    url: 'https://www.rch.org.au/trauma-service/manual/Radiology/',
+  },
   compression: {
     title: 'AAOS · osteoporosis and spinal fractures',
     url: 'https://www.orthoinfo.org/diseases--conditions/osteoporosis-and-spinal-fractures/',
@@ -285,6 +293,31 @@ export const backBoneConcepts = {
 } as const satisfies Record<string, Concept>;
 export type BackBoneConcept = keyof typeof backBoneConcepts;
 
+// Projection orientation only; no acquisition protocol or clearance thresholds.
+const cervicalXray: Partial<Record<BackBoneConcept, SpecimenTopicDraft>> = {
+  occipital: draft(
+    'On an upper-cervical lateral radiograph, locate the skull base above the C1 ring; the occipital condyles articulate with C1. This surface supplies anatomical context, not a calibrated craniovertebral measurement or evidence of stability.',
+    'upperCervicalRadiographs',
+  ),
+  atlas: draft(
+    'The lateral projection relates the anterior and posterior C1 arches to the C2 dens; the open-mouth projection shows the C1 lateral masses beside it. C1 has no vertebral body. These reference relationships cannot establish transverse-ligament integrity.',
+    'upperCervicalRadiographs',
+    'column',
+  ),
+  axis: draft(
+    'Identify the dens as part of C2, rising above its body between the C1 lateral masses on an open-mouth projection. Compare with the lateral view of the dens and C2 body. A smooth model contour cannot exclude a fracture.',
+    'upperCervicalRadiographs',
+  ),
+  cervical: draft(
+    'On a lateral radiograph, follow the anterior and posterior vertebral-body margins and the spinolaminar contour across C3–C6 rather than judging one level alone. Intervertebral spaces here contain no modelled discs; explode gaps are not radiographic disc-space widening.',
+    'cervicalRadiographs',
+  ),
+  c7: draft(
+    'Locate C7 in relation to T1 at the cervicothoracic junction. A lateral image that does not show this junction leaves that region unassessed; recognising C7’s spinous process alone is insufficient. Rotating this model does not supply a missing radiographic view.',
+    'cervicalRadiographs',
+  ),
+};
+
 // Exact source identities, admitted only after full specimen/surface validation.
 // These mappings are not transferable to another source merely by matching FMA.
 export const backBoneBindings: Readonly<Record<string, BackBoneConcept>> = {
@@ -335,7 +368,10 @@ export function authoredBackBoneLesson(key: BackBoneConcept): SpecimenLesson {
       extended: {
         modelLimit:
           'One unvalidated, reduced-resolution source bone, not separate landmark meshes. No cartilage, discs, ligament integrity, bone density, marrow signal or patient registration. Explode offsets and source defects are not disease.',
-        topics: selectedTopics,
+        topics: {
+          ...selectedTopics,
+          ...(cervicalXray[key] ? { xray: cervicalXray[key] } : {}),
+        },
         selfCheck: {
           question: c.question,
           answer: c.answer,

@@ -260,12 +260,13 @@ const component = await componentBuild({
   ],
 });
 const require = createRequire(import.meta.url),
+  actualLink = await import('vinext/shims/link'),
   React = require('react'),
   mod = { exports: {} },
   context = {
     module: mod,
     exports: mod.exports,
-    require,
+    require: (id) => id === 'next/link' ? { __esModule: true, ...actualLink } : require(id),
     URL,
     URLSearchParams,
     console,
@@ -401,14 +402,17 @@ for (const fma of ['FMA13358', 'FMA13359', 'FMA22878', 'FMA22879'])
   );
 const body = await readFile('app/body-explorer.tsx', 'utf8');
 ok(
-  body.includes(
+  body.replace(/\s+/g, ' ').includes(
     "backLayersOpen && ['spine', 'whole-body'].includes(initialRegion) && !exam",
   ),
 );
 ok(body.includes('if (!exam) setBackLayersOpen(true)'));
 ok(body.includes('backLayersLauncher.current?.focus()'));
 const standalone = await readFile('app/specimens/back-layers/page.tsx', 'utf8');
-ok(standalone.includes('../../back-layers-study'));
+ok(standalone.includes("from '../independent-linked-page'"));
+ok(standalone.includes('kind="back-layers" link={link}'));
+const linked = await readFile('app/specimens/independent-linked-page.tsx', 'utf8');
+ok(linked.includes("'back-layers': dynamic(() => import('../back-layers-study')"));
 same(standalone.includes('body-explorer'), false);
 console.log(
   JSON.stringify({

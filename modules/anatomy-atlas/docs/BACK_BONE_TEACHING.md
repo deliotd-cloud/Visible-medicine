@@ -20,14 +20,30 @@ separately selectable meshes.
 | Pathology      |                   26 |
 | CT             |                   33 |
 | MRI            |                   27 |
-| X-ray          |                   26 |
+| X-ray          |                   34 |
 | Ultrasound     |                    0 |
 
-The 145 extended placements reuse **17 short topic texts** for cervical,
-thoracolumbar, pelvic and shoulder contexts, not 145 independent lessons.
-Twelve self-checks are placed on the 34 bones. Occipital extended topics, cervical
-Pathology/X-ray, shoulder MRI and all new bone Ultrasound topics remain pending.
+The 153 extended placements reuse **22 short topic texts**, not 153 independent
+lessons. Twelve self-checks are placed on the 34 bones. Occipital topics other
+than X-ray, cervical Pathology, shoulder MRI and all bone Ultrasound topics
+remain pending.
 The prior 14 muscle lessons and 46 muscle extended placements are unchanged.
+
+25 September addition: eight X-ray placements cover occipital, C1, C2, C3–C6
+and C7 with five distinct orientation texts. Upper-cervical arches/lateral
+masses/dens, subaxial body margins and the C7–T1 junction are distinguished.
+These are draft projection-orientation notes, not simulated radiographs,
+patient acquisition instructions, trauma-clearance rules or stability tests.
+
+Primary references checked for this addition on 25 September:
+[AO upper-cervical landmarks](https://surgeryreference.aofoundation.org/spine/trauma/occipitocervical/further-reading/patient-examination-radiological-evaluation-xr-ct-mri),
+[RCH radiographic landmarks](https://www.rch.org.au/trauma-service/manual/Radiology/)
+and the existing OpenStax vertebral anatomy reference. Only basic projection
+landmarks are synthesised from AO/RCH, not their trauma pathways. RCH is a
+paediatric resource: its age-specific variants and measurement thresholds are
+not transferred to this adult reference. AO's blanket plain-film advice is not
+adopted; the existing ACR/RSNA reference distinguishes indicated CT/MRI use.
+No reference illustrations, images, prose or new meshes are redistributed.
 
 ## Evidence and rights
 
@@ -68,6 +84,15 @@ Run `node scripts/validate-back-layers-teaching.mjs` for all bone and muscle
 topic renders, pending states, source rejection and copy-isolation checks. Run
 `node scripts/validate-back-layers.mjs` for retained source geometry and dissection
 controls, including the unchanged muscle practice pools.
+
+The teaching test also compares the 34 bone lessons against exact Git revision
+`7a9cd07a2fe90e0b2871ce0f5a1ea51c4c138651`: only the eight previously absent
+X-ray topics may differ. It retains original muscle/source/catalog files,
+full-source rejection checks and all 384 actual bone/muscle topic renders.
+The two back suites resolve `next/link` to the installed Vinext implementation,
+as the application does. The retained navigation check now tolerates line breaks
+and follows the existing shared linked-specimen route; no production navigation
+was altered. Geometry verification still compares source face order/coordinates.
 
 All notes remain drafts for the radiologist owner. Review anatomical landmarks,
 source artefacts, clinical wording and modality scope before approval. Surface
