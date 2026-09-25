@@ -88,6 +88,12 @@ export function FittedCamera({
       );
   }, [cameraCapture, camera, bounds, size.width, size.height]);
   useEffect(() => {
+    // This component owns the orthographic frustum. Fiber's automatic resize
+    // otherwise replaces its world-space extent with canvas pixels before this
+    // effect, which is then mistaken for a user zoom and shrinks the anatomy.
+    // Perspective cameras still use Fiber's automatic aspect-ratio updates.
+    if (camera instanceof OrthographicCamera)
+      (camera as OrthographicCamera & { manual: boolean }).manual = true;
     if (
       cameraRestore?.current &&
       (camera instanceof PerspectiveCamera ||
