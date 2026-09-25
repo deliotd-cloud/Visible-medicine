@@ -6,6 +6,7 @@ import { beforeForearmVenousImaging } from './forearm-venous-imaging-history.mjs
 import { authoringBeforeThoracoabdominalOrganXray } from './thoracoabdominal-organ-xray-history.mjs';
 import { authoringBeforeSpineUltrasound } from './spine-ultrasound-history.mjs';
 import { preLiverAnatomyCoverage } from './liver-anatomy-coverage-history.mjs';
+import { beforeLacrimalDrainageImaging } from './lacrimal-drainage-imaging-history.mjs';
 import baseline from '../content/clinical-reference-revision.baseline.json' with { type: 'json' };
 import transition from '../content/clinical-reference-revision.transition.json' with { type: 'json' };
 import { clinicalReferenceRevisionHash as hash } from './clinical-reference-revision-tools.mjs';
@@ -46,6 +47,7 @@ export function authoringBeforeClinicalReferenceRevision({ api, catalog }, { exa
     api = beforeForearmVenousImaging(api);
     api = authoringBeforeCoreOrganFunction({ api, catalog }, { deferWholeSnapshot: true });
     api = preLiverAnatomyCoverage(api, catalog);
+    api = beforeLacrimalDrainageImaging(api);
   }
   const identity = baseline.selected.pelvic.identity;
   const currentIdentity = api
