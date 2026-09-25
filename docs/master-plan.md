@@ -1,5 +1,11 @@
 # Visible Medicine — shared delivery plan
 
+25 September study text readability: generated Atlas `0931b2d` improves shared
+system labels, teaching text and Browse structures using existing brand colours.
+No controls, geometry, clinical content or access changes. See
+[scope and acceptance](atlas-study-text-contrast-20260925.md). Publication/recovery
+is recorded in the main checkpoint; clinical/privacy/device/imaging gates remain open.
+
 25 September inferior epigastric vein teaching: generated Atlas `64c1afa` adds
 two source-bound Pathology drafts with explicit single-case and laterality
 limits. No new models, controls, patient media or access changes. See
