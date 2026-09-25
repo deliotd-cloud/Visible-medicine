@@ -60,6 +60,7 @@ export * from './content/spinal-disc-function.ts';
 export * from './lib/central-vessel-imaging.ts';
 export * from './lib/mediastinal-xray.ts';
 export * from './lib/lamina-pathology.ts';
+export * from './lib/epigastric-vein-pathology.ts';
 export * from './content/central-vessel-imaging.ts';
 export * from './lib/thoracic-branch-imaging.ts';
 export * from './content/thoracic-branch-imaging.ts';

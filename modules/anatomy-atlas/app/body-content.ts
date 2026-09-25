@@ -1,6 +1,7 @@
 import { centralVesselImagingLesson } from '../lib/central-vessel-imaging';
 import { mediastinalXrayLesson } from '../lib/mediastinal-xray';
 import { laminaPathologyLesson } from '../lib/lamina-pathology';
+import { epigastricVeinPathologyLesson } from '../lib/epigastric-vein-pathology';
 import { mainBronchusXrayLesson } from '../lib/main-bronchus-xray';
 import { hipAbductorXrayLesson } from '../lib/hip-abductor-xray';
 import { handBoneXrayLesson } from '../lib/hand-bone-xray';
@@ -244,6 +245,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (costalCartilage) return costalCartilage;
   const laminaPathology = laminaPathologyLesson(s, tab);
   if (laminaPathology) return laminaPathology;
+  const epigastricVeinPathology = epigastricVeinPathologyLesson(s, tab);
+  if (epigastricVeinPathology) return epigastricVeinPathology;
   const cranialBoundary = cranialBoundaryClinicalLesson(s, tab);
   if (cranialBoundary) return cranialBoundary;
   const thyroidImaging = thyroidImagingLesson(s, tab);

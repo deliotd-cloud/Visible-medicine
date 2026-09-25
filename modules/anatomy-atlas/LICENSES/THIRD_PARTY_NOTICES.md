@@ -1353,3 +1353,14 @@ viscera table and NIDDK urinary-tract teaching page (links and scope in
 table, scan or dataset is imported; reading access is not an asset licence.
 Existing BodyParts3D CC BY 4.0 attribution remains unchanged. No new dependency,
 mesh, font, texture or mandatory fee is added. Clinical review remains pending.
+
+## Inferior epigastric vein pathology — 25 September 2026
+
+Original short draft teaching cites Hattori et al. (2012),
+https://onlinelibrary.wiley.com/doi/10.1155/2012/492594, as a factual reading
+reference. No publisher prose, figures, tables, scans or datasets are imported.
+Reading access is not an asset licence; this addition makes no claim to reuse
+the article's media. Existing BodyParts3D CC BY 4.0 attribution remains unchanged.
+No new dependency, model, font, texture or mandatory fee is introduced. The
+single-case evidence and right-sided case are explicitly identified; clinical
+review remains pending.

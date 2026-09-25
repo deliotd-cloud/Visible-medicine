@@ -1,0 +1,140 @@
+{
+  "parentCommit": "0cdca340b7a4b67b387389a0fa794e5d36d547e7",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "sourceHash": "f87972da8bc539f6ac54f2363db0b97c4c8c621f567344e4a56b16f53e93fc86",
+  "previousAllLessonsAndRecipesHash": "8ed275f53332c0413ed403d0c9b0b27c56632f013b873c62556a6c273b606b3d",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+        "fmaId": "FMA21164",
+        "name": "Left inferior epigastric vein",
+        "sourceName": "left inferior epigastric vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen",
+          "pelvis"
+        ],
+        "bundle": "inferior-epigastric-vessels",
+        "nodeName": "FMA21164",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3512",
+            "sha256": "e8453328cabd80812db377189df8c040b7a1d0870870293512ede8fe0174fbce"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.18112599849700928,
+            0.31365999579429626,
+            0.6147000193595886
+          ],
+          "max": [
+            0.4179069995880127,
+            2.310699939727783,
+            1.3692400455474854
+          ]
+        },
+        "center": [
+          0.299516499042511,
+          1.3121799677610397,
+          0.991970032453537
+        ],
+        "anchor": [
+          0.3196839988231659,
+          1.2683099508285522,
+          1.14028000831604
+        ],
+        "coverageNote": "Complete original source definition, not a complete abdominal-wall vascular tree. Rectus sheath, inguinal rings, fascia and nerves are not supplied by this addition. Source surfaces do not establish joined lumens, perforator anatomy, blood flow or a safe procedural route. All original triangles and source positions retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "pathology",
+      "previous": {
+        "readiness": "pending",
+        "title": "Left inferior epigastric vein · Review pending",
+        "body": "Detailed pathology and imaging teaching awaits authoring and review.",
+        "bullets": [],
+        "note": "No CT, MRI, X-ray, ultrasound, acquired angiogram or patient registration is supplied."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein",
+        "fmaId": "FMA21163",
+        "name": "Right inferior epigastric vein",
+        "sourceName": "right inferior epigastric vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen",
+          "pelvis"
+        ],
+        "bundle": "inferior-epigastric-vessels",
+        "nodeName": "FMA21163",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3605",
+            "sha256": "50c661b10157afca410a8b1cba93263449ed1d4e78fa0ef85f1c415ea1541a49"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.42350998520851135,
+            0.2670699954032898,
+            0.585070013999939
+          ],
+          "max": [
+            -0.18111300468444824,
+            2.310699939727783,
+            1.3692699670791626
+          ]
+        },
+        "center": [
+          -0.3023114949464798,
+          1.2888849675655365,
+          0.9771699905395508
+        ],
+        "anchor": [
+          -0.3193050026893616,
+          1.273710012435913,
+          1.141029953956604
+        ],
+        "coverageNote": "Complete original source definition, not a complete abdominal-wall vascular tree. Rectus sheath, inguinal rings, fascia and nerves are not supplied by this addition. Source surfaces do not establish joined lumens, perforator anatomy, blood flow or a safe procedural route. All original triangles and source positions retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "pathology",
+      "previous": {
+        "readiness": "pending",
+        "title": "Right inferior epigastric vein · Review pending",
+        "body": "Detailed pathology and imaging teaching awaits authoring and review.",
+        "bullets": [],
+        "note": "No CT, MRI, X-ray, ultrasound, acquired angiogram or patient registration is supplied."
+      }
+    }
+  ]
+}

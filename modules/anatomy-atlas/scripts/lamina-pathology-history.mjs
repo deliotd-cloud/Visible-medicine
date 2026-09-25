@@ -1,5 +1,6 @@
 // Test-only editorial replay; not runtime content or clinical approval.
 import assert from 'node:assert/strict';
+import {beforeEpigastricVeinPathology} from './epigastric-vein-pathology-history.mjs';
 import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
 import before from '../content/lamina-pathology.before.json' with {type:'json'};
@@ -7,6 +8,7 @@ import transition from '../content/lamina-pathology.transition.json' with {type:
 import cranial from '../content/cranial-boundary-clinical-pins.json' with {type:'json'};
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function beforeLaminaPathology(api){
+  api=beforeEpigastricVeinPathology(api);
   assert.equal(hash(before),'7d6bcdf0c2880da94062fef5aadd6bfdba8222d35ceb244c142f9d52027d263e');
   assert.equal(hash(transition),'7cc69cb19bdf00ea1214112a6e7f69dad10162d8c4e1e7cdf1a43eb2bba4010f');
   assert.equal(before.parentCommit,'e7e6b197e0cd25c1a9160b69f93fbe673192c755');
