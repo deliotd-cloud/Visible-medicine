@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "64b753333f473de90ce382f3af40cb212bfa0ce65975b9c021cfe127823cddde"
+    "sha256": "8106395e71ca14b674769d438b6a97034095b263cf73aad46530874b0fe79b15"
   },
   {
     "path": "app/body-education-link.ts",
@@ -814,6 +814,10 @@
   {
     "path": "content/hepatic-teaching.ts",
     "sha256": "0c93b76eba32feb4e5c1d0f139fccd416645dad6419b1e59bb97b043c534a654"
+  },
+  {
+    "path": "content/hip-abductor-xray.ts",
+    "sha256": "cbec6faa8e72189f423c3a76fdddb876b9fb1eb8579aa02629f03c187663a691"
   },
   {
     "path": "content/hip-attachment-pins.json",
@@ -2074,6 +2078,10 @@
   {
     "path": "lib/hepatic.ts",
     "sha256": "86a6ac1226f1ab496c3dc7aee6279da3ef662a0c3316fee10862cb8ba30fae80"
+  },
+  {
+    "path": "lib/hip-abductor-xray.ts",
+    "sha256": "1c5829f35585e0097025bac08f8159ea519a119ee7ae493235b5b2fc4c94be8a"
   },
   {
     "path": "lib/hip-attachments.ts",

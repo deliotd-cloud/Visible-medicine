@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+25 September hip-abductor teaching integration: generated Atlas `77eaf75`
+adds four source-bound X-ray orientation drafts, preserving CT/MRI/US content,
+models, compact UI and independent access. Historical hip verification is repaired
+without rewriting its original baseline. See [scope and limitations](atlas-hip-abductor-xray-20260925.md).
+Continue substantive regional anatomy/teaching and the full imaging roadmap;
+these drafts do not grant clinical or patient-data release approval.
+
 25 September shared specimen focus integration: generated Atlas `885ea54`
 keeps keyboard position through Set aside and exhausted Undo/Redo using existing
 controls. Source/browser checks cover knee and foot samples; no anatomy, teaching,
