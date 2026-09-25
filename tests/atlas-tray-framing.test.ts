@@ -9,9 +9,9 @@ const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
 
 test('generated regional viewer exposes selected-entry Tray framing without widening access',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'196afd420067da394d2e048af1751f2314522dcfe346781d0e8907dc3c1967c2');
+  assert.equal(sha(manifestBytes),'cee184c035509d8bcf61953f02e507118aee961351af888c713a316f36d52454');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'a22e4d36b899a649cdcd30ec05ced3bb74bb3261');
+  assert.equal(manifest.sourceCommit,'749a4d1fb3c522087b3fdedb502b9c84f500278f');
   for(const flag of ['clinicalApproved','patientDataIncluded','imagingConnection','standaloneReviewConnection'])
     assert.equal(manifest[flag],false,flag);
 
@@ -31,7 +31,7 @@ test('generated regional viewer exposes selected-entry Tray framing without wide
   assert.ok(runtime.includes('Selected entry framed · Others remain in the tray · Turn off Frame selection for the overview · Not anatomical positions'));
 
   const inventoryBytes=readFileSync('lib/atlas-model-inventory.json');
-  assert.equal(sha(inventoryBytes),'62a427aa6d505ec3d5342b6bcc41bec0b1fec697d300479eb4fd427f356981f2');
+  assert.equal(sha(inventoryBytes),'307725070b615c9a8f4c09c251574de6a90289a289723abbef21a0833e052d9f');
   const inventory=JSON.parse(inventoryBytes.toString());
   assert.deepEqual(inventory.sources.find((source:{module:string})=>source.module==='head-neck'),{
     module:'head-neck',sourceCommit:manifest.sourceCommit,manifestSha256:sha(manifestBytes),modelPaths:135,

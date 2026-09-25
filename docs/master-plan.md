@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+25 September specimen reassembly: generated Atlas `749a4d1` keeps keyboard focus
+on separation after Return to source positions removes its button. Existing
+anatomy, teaching, source frames and independent access are unchanged. See
+[scope and checks](atlas-specimen-reassembly-20260925.md); publication/recovery
+are recorded in the main checkpoint. Continue remaining regional acceptance and
+substantive Atlas work; clinical/privacy/device/imaging gates remain open.
+
 25 September cervical/great-toe X-ray integration: generated Atlas `a22e4d3`
 adds twelve draft placements in existing regional and back-specimen panels.
 Models, controls, private data and independent entitlements remain unchanged.
