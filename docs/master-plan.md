@@ -1,5 +1,11 @@
 # Visible Medicine — shared delivery plan
 
+25 September responsive scene sizing integration: shared viewer binds Atlas
+`7b5fae0`, preventing stale WebGL dimensions from pushing mobile controls below
+the viewport. Models (136 objects / 143 protected paths), access gates and source
+holds are unchanged. See [integration boundaries](atlas-scene-sizing-20260925.md).
+Continue the full regional roadmap; clinical/device/imaging sign-off remains open.
+
 25 September orbital ultrasound / compact Search integration: shared viewer binds
 Atlas `dbe9e92`, adding fourteen source-linked orbital orientation drafts and the
 narrow-screen Search label refinement. All 136 models / 143 protected paths and
