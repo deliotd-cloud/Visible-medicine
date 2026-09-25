@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+25 September regional practice return: generated Atlas `5e3667f` restores the
+selected anatomy and presentation after quiz exit/completion, retaining study
+layers, topic and results. No controls, model bytes or access changes. See
+[scope and checks](atlas-practice-return-20260925.md); main-task checkpoint records
+publication/recovery. Continue substantive Atlas work independently of final
+imaging, preserving all clinical/privacy/device and release gates.
+
 25 September specimen reassembly: generated Atlas `749a4d1` keeps keyboard focus
 on separation after Return to source positions removes its button. Existing
 anatomy, teaching, source frames and independent access are unchanged. See
