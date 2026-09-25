@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "428200a0cda18d6c6e777ecbe340f3f4ad84ec779e57de060ee96075b9a28dd2"
+    "sha256": "2343b8b61f7dfd1cf5f419a376bd19850ee09f9238eff7412215e5b25cca41bc"
   },
   {
     "path": "app/body-education-link.ts",
@@ -497,7 +497,7 @@
   },
   {
     "path": "content/back-bone-teaching.ts",
-    "sha256": "647362fb6e9a2a3c5c77efb0621855062a58207165c70fd99b7c6e463f3f2789"
+    "sha256": "09580e7ee30c2c4dd951bde5a53b6c93168d43d3cab3ede337b88a102db7854d"
   },
   {
     "path": "content/back-layers-clinical.ts",
@@ -778,6 +778,10 @@
   {
     "path": "content/genicular-study.ts",
     "sha256": "e3990bacdac2466a03bfec56e5fc8eecc0767b1f474d5b161e16cb84d5a1cfaa"
+  },
+  {
+    "path": "content/hallux-xray.ts",
+    "sha256": "e6bd2b81a637f4bf170631d035b98aa7be96de11f101086364939d5579505311"
   },
   {
     "path": "content/hand-bone-xray.ts",
@@ -2006,6 +2010,10 @@
   {
     "path": "lib/genicular-study.ts",
     "sha256": "b1654af910c5ac0581a48a76946d71398634bd2d513de778e4e9b92e7bf425cf"
+  },
+  {
+    "path": "lib/hallux-xray.ts",
+    "sha256": "87f3bb780aeb9c25ca308059cae5207891ef69e5e6b5dc0616528f0ccc5eb699"
   },
   {
     "path": "lib/hand-bone-xray.ts",

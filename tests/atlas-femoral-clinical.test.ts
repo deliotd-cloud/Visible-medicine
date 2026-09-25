@@ -9,8 +9,8 @@ test('named femoral clinical drafts retain exact source inputs, model limits and
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json'),manifest=JSON.parse(bytes.toString());
-  assert.equal(sha(bytes),'cb16632e74a47ee5ae39d899eaa8d0ff8df1667b6e8e50100ef82fc30ed65cfe');
-  assert.equal(manifest.sourceCommit,'2902cc420d3a4730c3472a0c501fb83ba2bbdc98');
+  assert.equal(sha(bytes),'196afd420067da394d2e048af1751f2314522dcfe346781d0e8907dc3c1967c2');
+  assert.equal(manifest.sourceCommit,'a22e4d36b899a649cdcd30ec05ced3bb74bb3261');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   assert.deepEqual(inputs.filter(input=>input.path==='content/femoral-component-teaching.ts'),[

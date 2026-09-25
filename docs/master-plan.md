@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+25 September cervical/great-toe X-ray integration: generated Atlas `a22e4d3`
+adds twelve draft placements in existing regional and back-specimen panels.
+Models, controls, private data and independent entitlements remain unchanged.
+See [scope and limits](atlas-cervical-hallux-xray-20260925.md). The main checkpoint
+records publication/recovery; clinical, privacy, registration and device gates
+remain open. Continue independent Atlas work while specialist imaging matures.
+
 25 September hand-bone X-ray integration: generated Atlas `2902cc4` adds
 38 source-bound orientation drafts to existing panels. No models, controls,
 private data or independent access rights change. See [scope and limits](atlas-hand-bone-xray-20260925.md).
