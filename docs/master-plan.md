@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+25 September study-mode continuity: regional Search now restores the destination
+workspace before applying an accepted study, retaining its recipe and framing
+when launched from Explore. No new controls, anatomy or access changes. See
+[scope and verification](atlas-study-mode-transition-20260925.md); the main-task
+checkpoint records publication separately. Continue the full regional/imaging
+roadmap; clinical, privacy and device gates remain open.
+
 25 September pulmonary X-ray integration: five existing branch-group selections
 gain orientation drafts within the existing Imaging panel, without new controls,
 models, patient data or access changes. See [scope and limitations](atlas-pulmonary-xray-20260925.md).
