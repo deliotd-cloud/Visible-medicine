@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+26 September shoulder quick checks: the local website now imports the tested
+`9856291` shoulder export with selectable answers, feedback/retry and pre-exam
+presentation restoration. Desktop/mobile acceptance, production build, TypeScript
+and access tests pass. Geometry, other regional exports and Clinical Review pins
+are unchanged. See [scope and evidence](atlas-shoulder-quick-check-20260926.md).
+Not published; clinical and release gates remain open.
+
 26 September Clinical Review integration: the website now includes the pinned
 Atlas review home and four personal editors (1,575 contexts), explicit active
 administrator/institution authorization, isolated append-only storage and an
