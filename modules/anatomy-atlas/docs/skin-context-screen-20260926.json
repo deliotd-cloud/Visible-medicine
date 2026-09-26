@@ -1,0 +1,1161 @@
+{
+  "schemaVersion": 1,
+  "skinSha256": "682f402206f15592acdeaae8ffb6b34c3e5c3267fa4685e63d2e4920ef2a80e0",
+  "catalogEvidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "contexts": [
+    {
+      "id": "FMA16586",
+      "name": "Right hip bone",
+      "bundle": "pelvis-skeleton",
+      "bundleSha256": "58e1008b8064e8a61ce659e0246615960826772abe7070f66496eadcd86f4746",
+      "node": "FMA16586",
+      "vertices": 1187,
+      "faces": 2374
+    },
+    {
+      "id": "FMA52734",
+      "name": "Frontal bone",
+      "bundle": "head-neck-skeleton",
+      "bundleSha256": "c1b950c82fd76e69cf153757ca275a6bd27fd25d74d3fd24259b15f9172a39d4",
+      "node": "FMA52734",
+      "vertices": 7257,
+      "faces": 14510
+    },
+    {
+      "id": "FMA24469",
+      "name": "Left third metacarpal bone",
+      "bundle": "hand-skeleton",
+      "bundleSha256": "5f61ad363b757aa0cfcf0d7be4bcedcf63cbfec9ff5728cace9d62aa0447eac1",
+      "node": "FMA24469",
+      "vertices": 356,
+      "faces": 708
+    },
+    {
+      "id": "FMA24475",
+      "name": "Left femur",
+      "bundle": "thigh-skeleton",
+      "bundleSha256": "27bd799bd85387beea9fab40cbe2f83a5e780983170db4dfd1d2e0eda8fd2b59",
+      "node": "FMA24475",
+      "vertices": 1604,
+      "faces": 3204
+    },
+    {
+      "id": "FMA23131",
+      "name": "Left humerus",
+      "bundle": "shoulder-arm-skeleton",
+      "bundleSha256": "f75517af8f2d72d1fd890c20fea3375948addab8eaee42f9217dcfd5754d3649",
+      "node": "FMA23131",
+      "vertices": 1924,
+      "faces": 3844
+    },
+    {
+      "id": "FMA52789",
+      "name": "Left parietal bone",
+      "bundle": "head-neck-skeleton",
+      "bundleSha256": "c1b950c82fd76e69cf153757ca275a6bd27fd25d74d3fd24259b15f9172a39d4",
+      "node": "FMA52789",
+      "vertices": 6607,
+      "faces": 13210
+    },
+    {
+      "id": "FMA23465",
+      "name": "Left radius",
+      "bundle": "forearm-skeleton",
+      "bundleSha256": "7af54bdb11a8ae93d9236c6ed35b9a471543bc2a8a32867992a8917d22b1e0d5",
+      "node": "FMA23465",
+      "vertices": 318,
+      "faces": 632
+    },
+    {
+      "id": "FMA24483",
+      "name": "Left talus",
+      "bundle": "foot-skeleton",
+      "bundleSha256": "1b363def6136145a2a0faa31ca5edb46db8345631a4343c25919a3abf73d2d40",
+      "node": "FMA24483",
+      "vertices": 680,
+      "faces": 1356
+    },
+    {
+      "id": "FMA24478",
+      "name": "Left tibia",
+      "bundle": "leg-skeleton",
+      "bundleSha256": "8885078bc114d8cf5c2ebd12f393761965b2016bf6f5fc196c83549527e2c0af",
+      "node": "FMA24478",
+      "vertices": 848,
+      "faces": 1692
+    },
+    {
+      "id": "FMA16587",
+      "name": "Left hip bone",
+      "bundle": "pelvis-skeleton",
+      "bundleSha256": "58e1008b8064e8a61ce659e0246615960826772abe7070f66496eadcd86f4746",
+      "node": "FMA16587",
+      "vertices": 1166,
+      "faces": 2332
+    },
+    {
+      "id": "FMA52748",
+      "name": "Mandible",
+      "bundle": "head-neck-skeleton",
+      "bundleSha256": "c1b950c82fd76e69cf153757ca275a6bd27fd25d74d3fd24259b15f9172a39d4",
+      "node": "FMA52748",
+      "vertices": 2790,
+      "faces": 5576
+    },
+    {
+      "id": "FMA23464",
+      "name": "Right radius",
+      "bundle": "forearm-skeleton",
+      "bundleSha256": "7af54bdb11a8ae93d9236c6ed35b9a471543bc2a8a32867992a8917d22b1e0d5",
+      "node": "FMA23464",
+      "vertices": 338,
+      "faces": 672
+    },
+    {
+      "id": "FMA24468",
+      "name": "Right third metacarpal bone",
+      "bundle": "hand-skeleton",
+      "bundleSha256": "5f61ad363b757aa0cfcf0d7be4bcedcf63cbfec9ff5728cace9d62aa0447eac1",
+      "node": "FMA24468",
+      "vertices": 353,
+      "faces": 702
+    },
+    {
+      "id": "FMA24474",
+      "name": "Right femur",
+      "bundle": "thigh-skeleton",
+      "bundleSha256": "27bd799bd85387beea9fab40cbe2f83a5e780983170db4dfd1d2e0eda8fd2b59",
+      "node": "FMA24474",
+      "vertices": 1553,
+      "faces": 3102
+    },
+    {
+      "id": "FMA23130",
+      "name": "Right humerus",
+      "bundle": "shoulder-arm-skeleton",
+      "bundleSha256": "f75517af8f2d72d1fd890c20fea3375948addab8eaee42f9217dcfd5754d3649",
+      "node": "FMA23130",
+      "vertices": 1894,
+      "faces": 3784
+    },
+    {
+      "id": "FMA52788",
+      "name": "Right parietal bone",
+      "bundle": "head-neck-skeleton",
+      "bundleSha256": "c1b950c82fd76e69cf153757ca275a6bd27fd25d74d3fd24259b15f9172a39d4",
+      "node": "FMA52788",
+      "vertices": 6503,
+      "faces": 13002
+    },
+    {
+      "id": "FMA24482",
+      "name": "Right talus",
+      "bundle": "foot-skeleton",
+      "bundleSha256": "1b363def6136145a2a0faa31ca5edb46db8345631a4343c25919a3abf73d2d40",
+      "node": "FMA24482",
+      "vertices": 692,
+      "faces": 1380
+    },
+    {
+      "id": "FMA24477",
+      "name": "Right tibia",
+      "bundle": "leg-skeleton",
+      "bundleSha256": "8885078bc114d8cf5c2ebd12f393761965b2016bf6f5fc196c83549527e2c0af",
+      "node": "FMA24477",
+      "vertices": 834,
+      "faces": 1664
+    },
+    {
+      "id": "FMA7088",
+      "name": "Heart",
+      "bundle": "thorax-organs",
+      "bundleSha256": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+      "node": "FMA7088",
+      "vertices": 42416,
+      "faces": 84808
+    },
+    {
+      "id": "FMA7309",
+      "name": "Right lung",
+      "bundle": "thorax-organs",
+      "bundleSha256": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+      "node": "FMA7309",
+      "vertices": 36968,
+      "faces": 73312
+    },
+    {
+      "id": "FMA7310",
+      "name": "Left lung",
+      "bundle": "thorax-organs",
+      "bundleSha256": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+      "node": "FMA7310",
+      "vertices": 20969,
+      "faces": 41438
+    }
+  ],
+  "screening": [
+    {
+      "view": "Anterior",
+      "rows": [
+        {
+          "id": "FMA7163",
+          "role": "skin",
+          "occupiedPixels": 124169,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA16586",
+          "role": "context",
+          "occupiedPixels": 3246,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA52734",
+          "role": "context",
+          "occupiedPixels": 2346,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24469",
+          "role": "context",
+          "occupiedPixels": 148,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24475",
+          "role": "context",
+          "occupiedPixels": 4351,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA23131",
+          "role": "context",
+          "occupiedPixels": 2116,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA52789",
+          "role": "context",
+          "occupiedPixels": 1261,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA23465",
+          "role": "context",
+          "occupiedPixels": 921,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24483",
+          "role": "context",
+          "occupiedPixels": 263,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24478",
+          "role": "context",
+          "occupiedPixels": 2779,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA16587",
+          "role": "context",
+          "occupiedPixels": 3225,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA52748",
+          "role": "context",
+          "occupiedPixels": 728,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA23464",
+          "role": "context",
+          "occupiedPixels": 917,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24468",
+          "role": "context",
+          "occupiedPixels": 147,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24474",
+          "role": "context",
+          "occupiedPixels": 4345,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA23130",
+          "role": "context",
+          "occupiedPixels": 2117,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA52788",
+          "role": "context",
+          "occupiedPixels": 1262,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24482",
+          "role": "context",
+          "occupiedPixels": 266,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24477",
+          "role": "context",
+          "occupiedPixels": 2788,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA7088",
+          "role": "context",
+          "occupiedPixels": 2031,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA7309",
+          "role": "context",
+          "occupiedPixels": 2277,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA7310",
+          "role": "context",
+          "occupiedPixels": 1975,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        }
+      ]
+    },
+    {
+      "view": "Posterior",
+      "rows": [
+        {
+          "id": "FMA7163",
+          "role": "skin",
+          "occupiedPixels": 124169,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA16586",
+          "role": "context",
+          "occupiedPixels": 3246,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA52734",
+          "role": "context",
+          "occupiedPixels": 2346,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24469",
+          "role": "context",
+          "occupiedPixels": 148,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24475",
+          "role": "context",
+          "occupiedPixels": 4351,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA23131",
+          "role": "context",
+          "occupiedPixels": 2116,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA52789",
+          "role": "context",
+          "occupiedPixels": 1261,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA23465",
+          "role": "context",
+          "occupiedPixels": 921,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24483",
+          "role": "context",
+          "occupiedPixels": 263,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24478",
+          "role": "context",
+          "occupiedPixels": 2779,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA16587",
+          "role": "context",
+          "occupiedPixels": 3225,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA52748",
+          "role": "context",
+          "occupiedPixels": 728,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA23464",
+          "role": "context",
+          "occupiedPixels": 917,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24468",
+          "role": "context",
+          "occupiedPixels": 147,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24474",
+          "role": "context",
+          "occupiedPixels": 4345,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA23130",
+          "role": "context",
+          "occupiedPixels": 2117,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA52788",
+          "role": "context",
+          "occupiedPixels": 1262,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24482",
+          "role": "context",
+          "occupiedPixels": 266,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24477",
+          "role": "context",
+          "occupiedPixels": 2788,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA7088",
+          "role": "context",
+          "occupiedPixels": 2031,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA7309",
+          "role": "context",
+          "occupiedPixels": 2277,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA7310",
+          "role": "context",
+          "occupiedPixels": 1975,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        }
+      ]
+    },
+    {
+      "view": "Left lateral",
+      "rows": [
+        {
+          "id": "FMA7163",
+          "role": "skin",
+          "occupiedPixels": 69568,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA16586",
+          "role": "context",
+          "occupiedPixels": 3895,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA52734",
+          "role": "context",
+          "occupiedPixels": 1124,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24469",
+          "role": "context",
+          "occupiedPixels": 164,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24475",
+          "role": "context",
+          "occupiedPixels": 3577,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA23131",
+          "role": "context",
+          "occupiedPixels": 1644,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA52789",
+          "role": "context",
+          "occupiedPixels": 2783,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA23465",
+          "role": "context",
+          "occupiedPixels": 724,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24483",
+          "role": "context",
+          "occupiedPixels": 309,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24478",
+          "role": "context",
+          "occupiedPixels": 2694,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA16587",
+          "role": "context",
+          "occupiedPixels": 3909,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA52748",
+          "role": "context",
+          "occupiedPixels": 676,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA23464",
+          "role": "context",
+          "occupiedPixels": 707,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24468",
+          "role": "context",
+          "occupiedPixels": 162,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24474",
+          "role": "context",
+          "occupiedPixels": 3575,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA23130",
+          "role": "context",
+          "occupiedPixels": 1642,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA52788",
+          "role": "context",
+          "occupiedPixels": 2770,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24482",
+          "role": "context",
+          "occupiedPixels": 309,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24477",
+          "role": "context",
+          "occupiedPixels": 2694,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA7088",
+          "role": "context",
+          "occupiedPixels": 1830,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA7309",
+          "role": "context",
+          "occupiedPixels": 2231,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA7310",
+          "role": "context",
+          "occupiedPixels": 2573,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        }
+      ]
+    },
+    {
+      "view": "Anterior oblique",
+      "rows": [
+        {
+          "id": "FMA7163",
+          "role": "skin",
+          "occupiedPixels": 111621,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA16586",
+          "role": "context",
+          "occupiedPixels": 2310,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA52734",
+          "role": "context",
+          "occupiedPixels": 1961,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 2,
+          "maximumOutsideDepthMm": 113.68040225184723,
+          "flagSamples": [
+            {
+              "pixel": [
+                243,
+                79
+              ],
+              "contextDepthMm": 102.11215896743943,
+              "skinDepthIntervalMm": [
+                -14.515594861108061,
+                -11.568243284407801
+              ]
+            },
+            {
+              "pixel": [
+                244,
+                79
+              ],
+              "contextDepthMm": 103.41957519182415,
+              "skinDepthIntervalMm": [
+                -12.31671287199841,
+                -9.050038739197138
+              ]
+            },
+            {
+              "pixel": [
+                243,
+                79
+              ],
+              "contextDepthMm": 100.00199494296919,
+              "skinDepthIntervalMm": [
+                -14.515594861108061,
+                -11.568243284407801
+              ]
+            }
+          ]
+        },
+        {
+          "id": "FMA24469",
+          "role": "context",
+          "occupiedPixels": 168,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24475",
+          "role": "context",
+          "occupiedPixels": 4099,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA23131",
+          "role": "context",
+          "occupiedPixels": 1852,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA52789",
+          "role": "context",
+          "occupiedPixels": 2582,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA23465",
+          "role": "context",
+          "occupiedPixels": 794,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24483",
+          "role": "context",
+          "occupiedPixels": 278,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24478",
+          "role": "context",
+          "occupiedPixels": 2969,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA16587",
+          "role": "context",
+          "occupiedPixels": 4134,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA52748",
+          "role": "context",
+          "occupiedPixels": 1011,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA23464",
+          "role": "context",
+          "occupiedPixels": 832,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24468",
+          "role": "context",
+          "occupiedPixels": 168,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24474",
+          "role": "context",
+          "occupiedPixels": 4085,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA23130",
+          "role": "context",
+          "occupiedPixels": 1932,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA52788",
+          "role": "context",
+          "occupiedPixels": 1686,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24482",
+          "role": "context",
+          "occupiedPixels": 289,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA24477",
+          "role": "context",
+          "occupiedPixels": 2508,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA7088",
+          "role": "context",
+          "occupiedPixels": 2067,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA7309",
+          "role": "context",
+          "occupiedPixels": 2427,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        },
+        {
+          "id": "FMA7310",
+          "role": "context",
+          "occupiedPixels": 2608,
+          "missingSkinPixels": 0,
+          "outsideDepthEnvelopePixels": 0,
+          "maximumOutsideDepthMm": 0,
+          "flagSamples": []
+        }
+      ]
+    }
+  ],
+  "rayConfirmation": [
+    {
+      "view": "Anterior oblique",
+      "id": "FMA52734",
+      "pixel": [
+        243,
+        79
+      ],
+      "sourcePointMm": [
+        -8.859217566180263,
+        -135.54918252877005,
+        1522.9166666666667
+      ],
+      "rayIntersectionDepthsMm": [
+        -14.515594861107353,
+        -11.568243284406755
+      ],
+      "nearestSkinDistanceMm": 27.230942436304097
+    },
+    {
+      "view": "Anterior oblique",
+      "id": "FMA52734",
+      "pixel": [
+        244,
+        79
+      ],
+      "sourcePointMm": [
+        -8.31056131680404,
+        -137.94680453433776,
+        1522.9166666666667
+      ],
+      "rayIntersectionDepthsMm": [
+        -12.316712871998313,
+        -9.050038739196438
+      ],
+      "nearestSkinDistanceMm": 25.35748105158682
+    },
+    {
+      "view": "Anterior oblique",
+      "id": "FMA52734",
+      "pixel": [
+        243,
+        79
+      ],
+      "sourcePointMm": [
+        -7.3671062750614595,
+        -134.05707123765126,
+        1522.9166666666667
+      ],
+      "rayIntersectionDepthsMm": [
+        -14.515594861107353,
+        -11.568243284406755
+      ],
+      "nearestSkinDistanceMm": 29.200940162822608
+    }
+  ],
+  "pixelsPerMm": 0.48,
+  "depthFlagToleranceMm": 1,
+  "projectionSha256": "bc9abc23f47b770baf5360dae3aae8834e06d9b0b2f8082959af9803f62cb609",
+  "clinicalApproval": false,
+  "runtimeAdmission": false,
+  "limitations": [
+    "A view-ray minimum/maximum depth interval is not a solid-interior test, particularly for concave or open surfaces.",
+    "Raster sampling can miss narrow intersections and can flag holes/seams or silhouette edge discretisation.",
+    "Only the specified 21 existing structures and four views were screened; other anatomy remains untested."
+  ]
+}

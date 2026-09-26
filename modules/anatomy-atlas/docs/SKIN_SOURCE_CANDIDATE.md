@@ -1,6 +1,7 @@
 # Whole-body skin candidate — 26 September 2026
 
-Status: original source acquired and assessed; **not admitted to the runtime atlas**.
+Status: original source acquired, seam-screened and compared with selected internal
+anatomy; **not admitted to the runtime atlas**.
 No clinical approval, regional skin definitions, patient registration or new deployment.
 
 ## Provenance and commercial use
@@ -29,6 +30,10 @@ The code and numerical evidence are in Git; no patient files were used.
 - 1,512 single-face edges; 100 **indexed** connected components. The largest two
   have 54,949 and 47,178 vertices. These are topology statistics, not anatomical
   subdivisions. Coincident-position seams have not been welded or ruled out.
+  **Follow-up:** exact-coordinate equivalence accounts for all these indexed
+  boundaries: 776 duplicate positions collapse diagnostically to one connected
+  component with zero boundary or nonmanifold edges. No source mesh was changed.
+  This does not establish absence of self-intersections or clinical validity.
 - Source superior/inferior extent is about 1,719 mm. The existing source-to-scene
   transform is recorded, not changed to fit this candidate.
 - Three original-geometry orthographic projections visibly show a whole-body
@@ -68,3 +73,41 @@ to the renderer command (same Sharp/system-font environment required).
 4. Bind candidate geometry and renderer revision to the clinical review workflow;
    the owner's explicit sign-off remains required. Test mobile performance,
    visibility, reset and dissection interaction before publication.
+
+## Follow-up: seams and context (26 September)
+
+`docs/skin-seam-screen-20260926.json` records the exact-coordinate diagnostic,
+cross-checked against the earlier indexed topology. No tolerant welding or repair.
+
+`docs/skin-context-screen-20260926.json` records a four-view screen of 18 retained
+bones, heart and bilateral lung aggregates. Actual shipped GLB bytes are verified
+against the pinned catalogue, source holds are checked, and the common catalogue
+matrix is inverted for all context geometry. No structure is independently fitted.
+The partial lung aggregates must not be described as complete pleural surfaces.
+
+Anterior, posterior and left-lateral screens found no flags in those selections.
+The anterior-oblique screen flagged two raster pixels for FMA52734/frontal bone.
+Three recorded surface samples across those pixels were independently confirmed
+with ray/triangle intersection, not dismissed as rounding error. Their nearest
+skin-surface distances were approximately 25–29 mm; the much larger ray-depth
+discrepancy (up to 113.68 mm) is **not** a normal-to-surface distance or a certified
+anatomical defect measurement. This narrow area needs source-level/clinical
+inspection before admission. No automated correction is justified by this screen.
+
+The comparison image `../work/skin-context-review-20260926.png` shows the internal
+structures through ghosted skin, all at the same scale and source coordinates.
+Pixel coverage is about 2.08 mm/pixel. A view-ray depth interval is not a solid
+interior test; concavities, missing surfaces, narrow intersections and untested
+structures require separate review. A low number of flags is not a clinical pass.
+
+```sh
+node --test scripts/test-skin-seam-topology.mjs scripts/test-skin-context-projection.mjs
+node scripts/audit-skin-seams.mjs --check --verify-output
+node scripts/render-skin-context.mjs --check --verify-output
+```
+
+For first creation of those derived artifacts omit `--verify-output`. Only when
+intentionally revising this context screen, `--refresh` replaces its two generated
+outputs; it never edits the source models. The original source audit is immutable.
+Next: inspect the flagged frontal area with a labelled enlarged/sectional view,
+then decide whether this candidate is suitable for a reviewer-only outer layer.
