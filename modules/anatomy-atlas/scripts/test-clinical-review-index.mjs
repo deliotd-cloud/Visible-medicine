@@ -63,6 +63,29 @@ test('pagination is human one-based, clamped, deterministic and complete', () =>
   for (const bad of [0, -1, 1.5, NaN, Infinity, Number.MAX_SAFE_INTEGER + 1, '0', '-1', '1.5', '1e2', ['2'], {}, null]) assert.equal(find({ page: bad }).page, 1);
   const copy = find(); copy.entries[0].name = 'foreign'; assert.notEqual(find().entries[0].name, 'foreign');
 });
+
+test('familiar anatomy names retain exact source, scope and side rather than merging models', () => {
+  const tendons = api.bodyReviewSummaries.filter(s => ['FMA258847','FMA264844'].includes(s.fmaId));
+  assert.equal(tendons.length,2);
+  for (const q of ['Achilles','Achilles tendon','ACHILLÉS TENDON','Achilles’ tendon']) {
+    assert.deepEqual(find({q,scope:'body'}).entries.map(e=>e.id).sort(),tendons.map(s=>s.id).sort());
+  }
+  for (const side of ['left','right']) {
+    const result=find({q:side+' Achilles',scope:'body'});
+    assert.equal(result.total,1); assert.equal(result.entries[0].laterality,side);
+    assert.equal(new URL(result.entries[0].href,'https://synthetic.invalid').searchParams.get('structure'),tendons.find(s=>s.laterality===side).id);
+  }
+  const all=find({q:'Achilles'});
+  assert.equal(all.entries.filter(e=>e.scope==='body').length,2);
+  assert(all.entries.some(e=>e.scope==='specimens'));
+  assert.equal(new Set(all.entries.map(e=>e.key)).size,all.total);
+  assert.equal(find({q:'Achilles',scope:'nested'}).total,0);
+  assert.equal(find({q:'Achilles rupture',scope:'body'}).total,0);
+  assert.equal(find({q:'shoulder blade',scope:'shoulder'}).entries[0].name,'Scapula');
+  assert.equal(find({q:'collarbone',scope:'body'}).total,2);
+  assert.equal(find({q:'CN IV',scope:'body'}).total,2);
+  assert(find({q:'CN IV',scope:'body'}).entries.every(e=>e.name.toLowerCase().includes('trochlear')));
+});
 test('query params discard nonstrings and canonically encode hostile text', () => {
   for (const bad of [[], ['name'], {}, null, 4, true]) { assert.equal(find({ q: bad }).q, ''); assert.equal(find({ scope: bad }).scope, 'all'); }
   assert.equal(find({ scope: 'unknown' }).scope, 'all'); assert.equal(find({ q: '  ' + 'a'.repeat(200) + '  ' }).q.length, 160);

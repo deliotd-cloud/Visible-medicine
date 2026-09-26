@@ -1,5 +1,11 @@
 # Current atlas status
 
+27 September review search: Clinical Review reuses the existing source-checked
+Atlas vocabulary and dedicated shoulder synonyms. Achilles now finds both exact
+whole-body tendons as well as the separate specimens. Scope/side filters, source
+labels, links and decisions remain independent. No new anatomical synonyms or
+clinical approvals; index, page, queue/status tests and TypeScript pass.
+
 27 September follow-up: resolved the legacy Achilles MRI/US historical validation
 mismatch without changing its expected hash. The replay now accounts for exactly
 eleven later regional quiz keys. All learner content/models remain unchanged;
