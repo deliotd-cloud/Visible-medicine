@@ -21,7 +21,7 @@ test('pulmonary X-ray drafts ship source-bound text without offline history or i
     ['app/nested-teaching.tsx','502e0a1d13c65875963bc760ca01260bde329368fe6d3bf4162f98cf3de42744'],
   ])assert.deepEqual(inputs.filter(i=>i.path===path),[{path,sha256}]);
   assert.deepEqual(inputs.filter(f=>f.path.startsWith('scripts/')).map(f=>f.path),[
-    'scripts/export-head-neck-module.mjs','scripts/head-neck-module-inputs.mjs','scripts/independent-source-contract.mjs',
+    'scripts/export-head-neck-module.mjs','scripts/export-space-preflight.mjs','scripts/head-neck-module-inputs.mjs','scripts/independent-source-contract.mjs',
   ]);
   const files=manifest.files as {path:string;sha256:string}[];
   for(const list of [inputs,files])assert(!list.some(f=>/\.before\.json|\.transition\.json|\.local\/|pulmonary-imaging-stage-history|ct-handoff/.test(f.path)));

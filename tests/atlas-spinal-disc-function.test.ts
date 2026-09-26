@@ -1,3 +1,4 @@
+import {nonregionalAtlasSources} from './atlas-nonregional-release-fixture.ts';
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
@@ -8,13 +9,13 @@ test('regional spinal disc Function drafts reach the shared viewer without geome
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'03f52db97af9c81cf0410397482d5bae838cdbf7439935941b65a7f0e50e2ab7');
+  assert.equal(sha(bytes),'c2cfe3ac4debfe9a64d3e6ed292bc19def38540d5bc9610df90a364691e79265');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'ce2037fcdd2ff3308095ce34a7d24628f6a864d2');
+  assert.equal(manifest.sourceCommit,'f46b48c19266fe96a2126327042317484a0a4187');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({
-    'app/body-content.ts':'3630c9d05da8c0850e8e201eab0386e0033dfa20e8ea8cd837ab1eda6da9408f',
+    'app/body-content.ts':'1cf7f8d587e3ff1223663e0619b7cee17bf14836d885b3e157b5d3e94342726e',
     'content/spinal-disc-function.ts':'1d7d5f9883edea19a2339dd0c7da90d711ea9df6c3dfede922dd380ca307d4ef',
     'lib/spinal-disc-function.ts':'402ffd000cf3566b9bee54b71bf3e6a135846ce5a0b77245f94b6deae0fd3607',
   }))assert.deepEqual(inputs.filter(input=>input.path===path),[{path,sha256}]);
@@ -38,7 +39,7 @@ test('regional spinal disc Function drafts reach the shared viewer without geome
   const previous=JSON.parse(execFileSync('git',['show','f7a09832ded47c0405ef378ad1d6a3f4ff223964:lib/atlas-model-inventory.json'],{encoding:'utf8'}));
   const current=JSON.parse(readFileSync('lib/atlas-model-inventory.json','utf8'));
   assert.deepEqual(current.models,previous.models);
-  assert.deepEqual(current.sources.filter((s:{module:string})=>s.module!=='head-neck'),previous.sources.filter((s:{module:string})=>s.module!=='head-neck'));
+  assert.deepEqual(current.sources.filter((s:{module:string})=>s.module!=='head-neck'),nonregionalAtlasSources);
   assert.equal(current.models.length,136);
   assert.equal(current.models.flatMap((m:{paths:string[]})=>m.paths).length,143);
 });

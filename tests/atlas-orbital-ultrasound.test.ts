@@ -1,3 +1,4 @@
+import {nonregionalAtlasSources} from './atlas-nonregional-release-fixture.ts';
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
@@ -8,14 +9,14 @@ test('orbital ultrasound and compact Search are delivered without changing geome
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json'),manifest=JSON.parse(bytes.toString());
-  assert.equal(sha(bytes),'03f52db97af9c81cf0410397482d5bae838cdbf7439935941b65a7f0e50e2ab7');
-  assert.equal(manifest.sourceCommit,'ce2037fcdd2ff3308095ce34a7d24628f6a864d2');
+  assert.equal(sha(bytes),'c2cfe3ac4debfe9a64d3e6ed292bc19def38540d5bc9610df90a364691e79265');
+  assert.equal(manifest.sourceCommit,'f46b48c19266fe96a2126327042317484a0a4187');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of [
     ['content/orbital-neck-muscle-imaging.ts','d8273c7b122422a39bd5239bd07714a13e4497ec927f8e82c24d829d0552e67e'],
     ['lib/orbital-neck-muscle-imaging.ts','d087d792653bab1640f37f30cd4930d2c5f95e34c3bfa23cc06c6df7556e3262'],
-    ['app/atlas-workspace.tsx','849c48b446c6a174e3a7f4beb4fc8a1dabae628ba21b4def75e02b5d9b6e9f26'],
+    ['app/atlas-workspace.tsx','dddafc036e20e23b1048c0be494df62cd6eb794ffbb7a6a6423bd74bf8c0cdbd'],
     ['app/atlas-workspace.css','aaa75b3e4e42a68ac944d70bbca7957eee4c3ba71c4413436cd9bc9f64841c4d'],
   ])assert.deepEqual(inputs.filter(input=>input.path===path),[{path,sha256}]);
   assert.ok(!inputs.some(input=>/native-mr|local-mr-study|\.vmmr|patient[-_/]?data/i.test(input.path)));
@@ -44,7 +45,7 @@ test('orbital ultrasound and compact Search are delivered without changing geome
   const previous=JSON.parse(execFileSync('git',['show','ba52f9e84f559ac3405737ccc0a0fe22d10831d3:lib/atlas-model-inventory.json'],{encoding:'utf8'}));
   const current=JSON.parse(readFileSync('lib/atlas-model-inventory.json','utf8'));
   assert.deepEqual(current.models,previous.models);
-  assert.deepEqual(current.sources.filter((s:{module:string})=>s.module!=='head-neck'),previous.sources.filter((s:{module:string})=>s.module!=='head-neck'));
+  assert.deepEqual(current.sources.filter((s:{module:string})=>s.module!=='head-neck'),nonregionalAtlasSources);
   assert.equal(current.models.length,136);
   assert.equal(current.models.flatMap((m:{paths:string[]})=>m.paths).length,143);
 });

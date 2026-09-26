@@ -8,15 +8,15 @@ const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
 
 test('shared viewer binds reset wording and keyboard-only orientation status to exact Atlas source',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'03f52db97af9c81cf0410397482d5bae838cdbf7439935941b65a7f0e50e2ab7');
+  assert.equal(sha(manifestBytes),'c2cfe3ac4debfe9a64d3e6ed292bc19def38540d5bc9610df90a364691e79265');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'ce2037fcdd2ff3308095ce34a7d24628f6a864d2');
+  assert.equal(manifest.sourceCommit,'f46b48c19266fe96a2126327042317484a0a4187');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,expected] of Object.entries({
-    'app/body-explorer.tsx':'1a24c0ece43111d220f385d2b730c580b34eb161e3c4622aa3a8705ba82350be',
-    'app/body-scene.tsx':'a45ed62ff777f5850fc6a30cd2dd9234a17d4b163d905495acc2fc357d1d4132',
-    'app/fitted-camera.tsx':'572ffa7075bc3c2d5b98d7d8e88e1c558b35601d99bfe859529e99452738f10e',
-    'lib/camera-keyboard.ts':'d26c359d9ccd7820c15099e36f7f6712d7e4a6ecbdc12fa3dc3d83ec8091acf2',
+    'app/body-explorer.tsx':'a4cdbd814df2ee08a4fc158e70d377c378f4e2849870d8ffb7d89d0894658e09',
+    'app/body-scene.tsx':'7117993fb76445f522d303c664fb5405ac07344f5e255906e2ee47640dc4acbc',
+    'app/fitted-camera.tsx':'8621b76137dc18b1200cffb5fc79a0e38d55bb95d933978e7d73e43727850a49',
+    'lib/camera-keyboard.ts':'9a0a095306c6687ca7fd568570c7a66363566ac3a70f2916bc1e8f74aa405220',
   }))assert.equal(inputs.find(input=>input.path===path)?.sha256,expected,path);
   const script=(name:string)=>{
     const file=(manifest.files as {path:string;sha256:string}[])
@@ -38,6 +38,8 @@ test('shared viewer binds reset wording and keyboard-only orientation status to 
   assert.ok(scene.includes('i.textContent=`View from: ${a}. Orbit angle: ${o(n)}° around, ${o(r)}° from above.`'));
   assert.ok(scene.includes('r.shiftKey?2:10'), 'Arrow and Shift-arrow steps share the keyboard path');
   assert.ok(scene.includes('e.addEventListener(`keydown`,i)'), 'Only the focused keyboard handler calls the status callback');
-  assert.ok(scene.includes('return nw(v.domElement,()=>y.current,()=>{j(),_(),m&&y.current&&m('));
+  // Perspective keyboard binding is now one branch of the orthographic/perspective
+  // dispatch. Match its callback wiring without depending on the minified callee.
+  assert.match(scene,/\w+\(v\.domElement,\(\)=>y\.current,\(\)=>\{j\(\),_\(\),m&&y\.current&&m\(/);
   assert.ok(scene.includes('onChange:j})'), 'Pointer orbit keeps the camera capture callback only');
 });

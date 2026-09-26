@@ -1,3 +1,4 @@
+import {nonregionalAtlasSources} from './atlas-nonregional-release-fixture.ts';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
@@ -28,7 +29,7 @@ const ultrasoundIds=[
 
 test('regional runtime carries 11 exact thoracoabdominal X-ray and 15 spine ultrasound drafts',()=>{
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-  assert.equal(manifest.sourceCommit,'ce2037fcdd2ff3308095ce34a7d24628f6a864d2');
+  assert.equal(manifest.sourceCommit,'f46b48c19266fe96a2126327042317484a0a4187');
   assert.equal(new Set(xrayIds).size,11);
   assert.equal(new Set(ultrasoundIds).size,15);
   const regionalIds=new Set((manifest.regionalScopes as {regionalIds:string[]}[]).flatMap(scope=>scope.regionalIds));
@@ -37,7 +38,7 @@ test('regional runtime carries 11 exact thoracoabdominal X-ray and 15 spine ultr
   // These are the exact source pins, lessons and resolvers used by the generated runtime.
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,expected] of Object.entries({
-    'content/thoracoabdominal-organ-imaging.ts':'dac7b927e8a04344886c3f2e7e139d7286d7e910258ac9a60d741f8b6b1ca184',
+    'content/thoracoabdominal-organ-imaging.ts':'bebed40490aa6ba882c6a53d54db529564be3a3ee556d724605ba2748febcc06',
     'content/thoracoabdominal-organ-imaging-pins.json':'e8c92ef7101f083c10c75c0b109c5bcd58197fe5a307ffd8203fcfee8d66a129',
     'lib/thoracoabdominal-organ-imaging.ts':'c503474a75696b55f6bf6bd13bb01b85a60b79c1bc63e0740eb522d81966f720',
     'content/spine-imaging-concepts.ts':'c38defc6224bfa043651d3f338bc9dc389e2e6b700a8f8f95ec719af01258855',
@@ -61,10 +62,10 @@ test('regional runtime carries 11 exact thoracoabdominal X-ray and 15 spine ultr
 
 test('exact right and left main bronchus selections carry external ultrasound draft limits',()=>{
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-  assert.equal(manifest.sourceCommit,'ce2037fcdd2ff3308095ce34a7d24628f6a864d2');
+  assert.equal(manifest.sourceCommit,'f46b48c19266fe96a2126327042317484a0a4187');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   assert.equal(inputs.find(input=>input.path==='content/thoracoabdominal-organ-imaging.ts')?.sha256,
-    'dac7b927e8a04344886c3f2e7e139d7286d7e910258ac9a60d741f8b6b1ca184');
+    'bebed40490aa6ba882c6a53d54db529564be3a3ee556d724605ba2748febcc06');
   const runtime=(manifest.files as {path:string;sha256:string}[])
     .filter(file=>file.path.endsWith('.js'))
     .map(file=>{const bytes=readFileSync(base+file.path);assert.equal(sha(bytes),file.sha256,file.path);return bytes.toString();})
@@ -98,7 +99,7 @@ test('draft export keeps clinical, access and model boundaries',()=>{
   assert.equal(inventory.models.length,136);
   assert.equal(inventory.models.flatMap((model:{paths:string[]})=>model.paths).length,143);
   assert.deepEqual(inventory.sources.filter((source:{module:string})=>source.module!=='head-neck'),
-    previous.sources.filter((source:{module:string})=>source.module!=='head-neck'));
+    nonregionalAtlasSources);
   for(const path of ['lib/atlas-delivery-access.ts','lib/lecture-repository.ts','lib/atlas-navigation.ts'])
     assert.equal(readFileSync(path,'utf8').replaceAll('\r\n','\n'),original(path).toString().replaceAll('\r\n','\n'),path);
 });

@@ -1,5 +1,84 @@
 # Third-party notices
 
+## Small-intestinal mesentery MRI draft — 26 September 2026
+
+Pierro A et al. (2023), *Small Bowel Imaging … Part I*, Life 13(8):1691,
+DOI 10.3390/life13081691. [Full reference](https://pmc.ncbi.nlm.nih.gov/articles/PMC10455392/),
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The author copyright
+and licence notice were inspected on 26 September 2026. Original short summary,
+adapted wording, with author/source/licence credit in the displayed lesson.
+No article figures, tables, patient images, logos or source datasets imported;
+no endorsement or clinical approval implied. No new dependency or mandatory fee.
+
+## Transverse-mesocolon MRI draft — 26 September 2026
+
+Chi XX, Zhang XM, Chen TW, Huang XH, Yang L, Tang W and Xiao B (2014),
+*The Normal Transverse Mesocolon and Involvement of the Mesocolon in Acute
+Pancreatitis: An MRI Study*, PLOS ONE 9(4): e93687.
+[Source](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0093687),
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Publisher licence
+statement and linked licence checked 26 September 2026. Original short factual
+summary with adapted wording and author/source credit in the visible note;
+no figures, scans, tables, source files or logos imported. No endorsement or
+clinical approval is implied. No new software, asset or paid service is added.
+
+## Limb-bone ultrasound orientation — 26 September 2026
+
+Ten original factual drafts link to the ESSR
+[knee](https://www.essr.org/content-essr/uploads/2016/10/knee.pdf) and
+[elbow](https://essr.org/content-essr/uploads/2016/10/elbow.pdf) technical guidelines
+and [RSNA/ACR RadiologyInfo](https://www.radiologyinfo.org/en/info/musculous).
+These references are not reusable product assets: no publisher prose, diagram,
+PDF, photograph, ultrasound image or video is copied or redistributed. Factual
+summaries and Atlas-specific limitations are original; attribution/reading links
+are retained. Existing models/licences are unchanged. No new dependency, font,
+texture, dataset, mandatory fee or paid service is introduced. Review remains
+pending; see [scope and validation](../docs/LIMB_BONE_ULTRASOUND.md).
+
+## Oesophageal external-ultrasound orientation — 26 September 2026
+
+One original factual draft cites the [EFSUMB consensus (Maconi et al., 2021)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8163523/)
+and [Grebe et al., 2019](https://pubmed.ncbi.nlm.nih.gov/30402811/).
+These are reading references, not incorporated datasets or licensed product
+assets. The EFSUMB article is published under CC BY-NC-ND 4.0: its text,
+figures, tables and media are **not** imported, adapted or redistributed here.
+No Grebe article text or media is imported either. The Atlas supplies its own
+brief explanation of factual findings and explicit reference-model limitations.
+Reading access must not be treated as permission to reuse publisher assets.
+Existing model attribution is unchanged; no dependency, image, font, texture,
+model, paid service or mandatory fee is introduced. Clinical review is pending.
+
+## Thoracic-inlet X-ray orientation — 26 September 2026
+
+Six pinned-source drafts use short original factual summaries referencing
+[The Radiology Assistant, Chest X-Ray — Heart Failure, vascular pedicle section](https://radiologyassistant.nl/chest/chest-x-ray/heart-failure)
+and [Radiology Masterclass, CV Catheters — Position, anatomy section](https://www.radiologymasterclass.co.uk/tutorials/chest/chest_tubes/chest_xray_central_line_anatomy).
+No publisher wording, diagrams, radiographs, tables or other media are imported.
+Reading/citing these pages supplies no licence to redistribute their assets.
+No model, dependency, font, texture, paid service or mandatory fee is added;
+existing model licences and attribution remain unchanged. Draft limitations and
+revision-bound radiologist review are recorded in
+[the teaching scope](../docs/THORACIC_INLET_XRAY.md).
+
+## Hilar-vessel chest X-ray orientation — 26 September 2026
+
+Six source-bound teaching placements use original short factual summaries of
+[Radiology Masterclass, Hilar structures](https://www.radiologymasterclass.co.uk/tutorials/chest/chest_home_anatomy/chest_anatomy_page2)
+and [The Radiology Assistant, Chest X-Ray — Basic Interpretation](https://radiologyassistant.nl/chest/chest-x-ray/basic-interpretation).
+No publisher prose, figures, tables, patient images or other media are copied.
+Citing these pages does not grant redistribution rights to their assets. No new
+dependency, geometry or paid service is introduced; existing model attribution
+is retained. See [scope and review limits](../docs/HILAR_VESSEL_XRAY.md).
+
+## Anterior cardiac vein pathology teaching — 26 September 2026
+
+Original short factual synthesis cites Ho, Russell and Rowland (1988),
+[PMID3190963](https://pubmed.ncbi.nlm.nih.gov/3190963/), a single-heart histological
+report. No publisher prose, figures, scans, tables or other media are imported.
+The reference does not grant redistribution rights to the article or its assets.
+No new dependency, geometry or paid service. Existing source attribution remains.
+See [scope and review limits](../docs/ANTERIOR_CARDIAC_PATHOLOGY.md).
+
 ## Pulmonary branch-group X-ray teaching — 25 September 2026
 
 Three original short orientation drafts link to King's College London and
@@ -202,6 +281,14 @@ font, texture, dependency, paid API or mandatory fee. Source-mesh rights remain
 separate. See `docs/GENICULAR_CLINICAL_REFERENCES_20260917.md` for exact scope.
 
 ## Elbow arterial clinical teaching — 17 September 2026
+
+The 26 September CT-orientation extension also uses Habarta et al. below,
+with credit and an adaptation notice in each draft. It adds original named-branch
+orientation, not publication images, case records or copied prose. The case
+report supports a limited CTA example, not reliable depiction of every small
+collateral branch. Existing anatomical factual references and mesh credits remain
+separate; no additional dependency, dataset, font, texture or paid service.
+See `docs/ELBOW_ARTERIAL_CT.md` for scope and evidence limits.
 
 Original short adaptations credit Habarta J, Jordan M, Meffert R, Huflage H,
 Schmalzl J (2022), *Surgical management of a traumatic elbow dislocation with
@@ -1373,3 +1460,104 @@ et al. (2009); links and inspected-source scope are in
 datasets imported. Reading access is not an asset licence. Existing BodyParts3D
 CC BY 4.0 attribution is unchanged. No dependency, font, texture, model or
 mandatory fee added. Evidence limitations are explicit; clinical review pending.
+
+## Laryngeal framework imaging — 26 September 2026
+
+Eight draft placements use original factual summaries and reference links only;
+see `docs/LARYNGEAL_FRAMEWORK_IMAGING.md` for the four primary studies and limits.
+No publisher text, figures, tables, images, videos or datasets are imported.
+Reading access does not grant asset reuse; non-commercial article figures are
+not admitted. Existing model attribution is unchanged. No dependency, font,
+texture, mesh or mandatory fee is added. Clinical review remains pending.
+
+## Orbital nerve MRI — 26 September 2026
+
+Fourteen MRI draft placements contain original short factual summaries citing
+Arizono et al. (2026), https://pubmed.ncbi.nlm.nih.gov/42034568/, and Li et al.
+(2021), https://pubmed.ncbi.nlm.nih.gov/33811598/. No article prose, figures,
+tables, scans or datasets are imported. Reading access is not a media licence;
+no article asset is redistributed or relicensed. Existing model attribution is
+unchanged. No dependency, font, texture, mesh or mandatory fee is added. Specific
+study cohorts and limits are stated; clinical review remains pending.
+
+## Internal thoracic vessel MRI/US — 26 September 2026
+
+Four original factual draft placements cite Tuinder et al. (2012),
+https://pubmed.ncbi.nlm.nih.gov/22695715/ (copyrighted abstract inspected), and
+Blanco/Volpicelli (2014), https://pmc.ncbi.nlm.nih.gov/articles/PMC4255330/
+(CC BY4.0 article inspected). Reading references only: no article prose,
+figures, videos, scans, tables or datasets imported. No asset is relicensed.
+Source/summary limits are in docs/INTERNAL_THORACIC_IMAGING.md. Existing model
+credits and licensing unchanged; no new dependency, font, texture or fee.
+Clinical sign-off remains pending.
+
+## Lateral cricoarytenoid ultrasound — 26 September 2026
+
+Original shortened adaptation of Schneider-Stickler B, Ho GY, Moriggl B (2023),
+*Ultrasound-guided injection into the lateral crico-arytenoid muscle: a pilot study*,
+https://doi.org/10.1007/s00405-023-07843-y, under CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/. Attribution and links appear in the
+two source-bound notes. No figures, scans, tables or datasets are imported, and
+no third-party figure reuse is assumed. No new asset, dependency or fee. See
+docs/LATERAL_CRICOARYTENOID_US.md for scope and evidence limits. Clinical review
+remains pending.
+
+## Plantar arterial ultrasound — 26 September 2026
+
+Original shortened adaptation of Takahashi LA, França GJ, Del Valle CE, Ferreira
+LRC (2020), https://doi.org/10.1590/1677-5449.200068, licensed CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/. Credit and links are displayed in
+six exact-source notes. No figures, images, tables or datasets are imported;
+no new dependency, model, texture, font or fee. See docs/PLANTAR_ARTERIAL_US.md
+for the inspected publisher/licence evidence and clinical limits.
+
+## Eye ultrasound — 26 September 2026
+
+Original adapted summaries of Huang Z, Qi J, Cheng K, Liu S, Zhang K, Du Y,
+Lu Y and Zhu X (2024), https://doi.org/10.3389/fmed.2023.1306276, and Vergouwen
+DPC, de Jong PHP, Schreurs MWJ, Berge JCT and Rothova A (2023),
+https://doi.org/10.3389/fopht.2023.1106419. Both articles are CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/. Credit, source and licence links
+appear with each draft. No figures, scans, tables or datasets reproduced, and
+no new model, font, texture, dependency or fee. See docs/EYE_ULTRASOUND.md.
+
+## Coronary arterial ultrasound — 26 September 2026
+
+Original concise adapted summaries of Johnny Vegsundvåg, Espen Holte, Rune Wiseth,
+Knut Hegbom and Torstein Hole (2009), *Transthoracic echocardiography for imaging
+of the different coronary artery segments: a feasibility study*, Cardiovascular
+Ultrasound 7:58. Source: https://link.springer.com/article/10.1186/1476-7120-7-58 .
+The article-specific publisher rights statement explicitly grants Creative
+Commons Attribution 2.0: https://creativecommons.org/licenses/by/2.0/ . Changes:
+shortened orientation summaries, selected-source binding and Atlas-specific
+representation/review warnings. Full credit is retained here and author/year
+credit accompanies each draft. No figure, table, image or patient data imported;
+no endorsement implied. Existing model licences remain unchanged. No additional
+dependency, font, texture, paid API or mandatory fee. Clinical review pending.
+See `docs/CORONARY_ARTERIAL_US.md`.
+
+## Common interosseous ultrasound — 26 September 2026
+
+Original adapted summary of Mohana Borges AVR and Souza SAL (2021), Radiol Bras
+54(6):398–405, DOI10.1590/0100-3984.2021.0031. Article and explicit Creative
+Commons Attribution reuse statement:
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8630952/. Version not specified in the
+inspected PMC statement; no version is asserted here. Author credit and source
+link displayed in both drafts. No images, tables or datasets imported. See
+docs/COMMON_INTEROSSEOUS_US.md for full title, evidence and limitations.
+# Skin source candidate (26 September 2026; not learner-admitted)
+
+The independently cached FMA7163/FJ2810 skin candidate uses the original
+BodyParts3D version 4 mesh. BodyParts3D, © The Database Center for Life Science
+licensed under CC Attribution 4.0 International. Commercial reuse requires
+compliance with that license. The generated local review projections change
+presentation only; no source geometry is repaired. See
+`docs/SKIN_SOURCE_CANDIDATE.md` and `docs/skin-source-audit-20260926.json` for
+provenance, exact hashes and unfulfilled admission/clinical-review gates.
+The separate read-only review page now includes
+`public/models/review-candidates/skin/skin.glb` and `head-sections.png`.
+Both derive from these CC BY 4.0 source surfaces. Changes: common coordinate
+transform, float32 encoding, display normals, illustrative material and labelled
+surface intersections. No welding, repair or individual anatomical fitting.
+Attribution and the source licence link are displayed on the candidate page.
+No patient imaging is included; learner admission and deployment remain pending.

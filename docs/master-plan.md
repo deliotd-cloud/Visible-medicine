@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+26 September regional integration: the local website's eleven-region/whole-body
+runtime now uses Atlas `f46b48c`, including safe side-specific workspace return
+and the saved teaching/usability improvements. All registered model bytes and
+separate module/review pins are preserved. Desktop/mobile checks, 64 integration
+tests, production build and TypeScript pass. See
+[scope and evidence](atlas-regional-current-20260926.md). Not published; privacy,
+clinical sign-off and linked-imaging release gates remain open.
+
 26 September shoulder quick checks: the local website now imports the tested
 `9856291` shoulder export with selectable answers, feedback/retry and pre-exam
 presentation restoration. Desktop/mobile acceptance, production build, TypeScript
