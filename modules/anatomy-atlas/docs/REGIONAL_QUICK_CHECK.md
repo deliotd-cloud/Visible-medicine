@@ -34,6 +34,13 @@ source, GitHub and independently restored D-drive recovery evidence.
 
 ## Worker handoff
 
+27 September historical regression: `scripts/regional-quick-check-history.mjs`
+reverses only the SHA-pinned set of eleven later keys for old content comparisons.
+It is not imported by the application. `node scripts/test-regional-quick-check-history.mjs`
+checks 11 removals / 9,187 preserved topics, five foreign/mixed key failures,
+idempotence and preservation of unrelated prompt/choice edits. Historical expected
+hashes stay immutable; current learner keys and approvals are unaffected.
+
 Terra Medium performed bounded read-only discovery; its optional femoral
 recall-question suggestion was deferred in favour of the demonstrated existing
 keyed-question gap. Sol Medium authored the focused component regression.

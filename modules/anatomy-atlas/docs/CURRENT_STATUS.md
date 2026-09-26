@@ -1,5 +1,10 @@
 # Current atlas status
 
+27 September follow-up: resolved the legacy Achilles MRI/US historical validation
+mismatch without changing its expected hash. The replay now accounts for exactly
+eleven later regional quiz keys. All learner content/models remain unchanged;
+unknown or mixed answer-key changes are rejected. See [details](ACHILLES_CT.md).
+
 27 September 2026: [Achilles CT orientation](ACHILLES_CT.md) adds two exact-source
 drafts distinguishing conventional/spectral CT, experimental evidence and model
 limitations. MRI/US, geometry and unsupported limb CT gaps remain unchanged.

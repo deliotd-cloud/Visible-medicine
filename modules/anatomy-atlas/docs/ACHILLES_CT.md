@@ -60,3 +60,12 @@ parent and current APIs both produce `0104606a0be7569851a0f39cdf3cb6550a220a6e40
 instead of its immutable expected `fd50acb85998726b79cf3ecb646acf9897117b50f6768e5ea65bd6c89dfb629c`.
 That check remains failing; its historical expected value has not been changed.
 The new exact-parent test independently verifies all existing MRI/US copy unchanged.
+
+Follow-up, 27 September: the historical mismatch is resolved. The older replay
+removed shoulder answer-key fields but left the same fields on eleven regional
+quiz copies. A test-only adapter now removes only the complete, SHA-pinned set
+of those keys, rejects altered or mixed key sets, and preserves all other copy.
+The original Achilles expected snapshot now passes unchanged: four MRI/US
+sections, 8,172 other historical sections and 60 invalid bindings checked.
+`ctRemainsPending` in that older validation report describes its historical
+milestone only, not today's two CT drafts. No runtime content or approval changed.
