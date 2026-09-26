@@ -1,0 +1,11 @@
+.structure-quick-check { color: #174e4b; font-size: 1rem; line-height: 1.5; }
+.structure-quick-check fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.structure-quick-check legend { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
+.structure-quick-check-status, .structure-quick-check-availability { font-size: 14px; margin: 8px 0; }
+.structure-quick-check-choice { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 6px 10px; margin: 6px 0; border: 1px solid #83b5af; border-radius: 8px; background: #f3fbf9; cursor: pointer; overflow-wrap: anywhere; }
+.structure-quick-check-choice input { flex: 0 0 auto; width: 18px; height: 18px; accent-color: #14675e; }
+.structure-quick-check button { min-height: 44px; padding: 8px 14px; font-size: 14px; color: #fff; background: #14675e; border: 1px solid #14675e; border-radius: 8px; cursor: pointer; }
+.structure-quick-check button:disabled { background: #e0eeeb; color: #3d615c; cursor: default; }
+.structure-quick-check :focus-visible { outline: 3px solid #14675e; outline-offset: 3px; }
+.structure-quick-check-feedback:empty { margin: 0; }
+.structure-quick-check-feedback p { margin: 8px 0; }

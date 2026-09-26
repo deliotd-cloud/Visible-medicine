@@ -20,6 +20,9 @@ export type ContentSection = {
   bullets?: string[];
   note?: string;
   citations?: string[];
+  /** Explicit draft key; never infer correctness from the option position. */
+  correctAnswer?: string;
+  explanation?: string;
 };
 
 export type AnatomyStructure = {
@@ -109,6 +112,8 @@ export const structures: AnatomyStructure[] = [
         title: 'Quick check',
         body: 'Which part of the scapula articulates with the humeral head?',
         bullets: ['Glenoid fossa', 'Coracoid process', 'Inferior angle'],
+        correctAnswer: 'Glenoid fossa',
+        explanation: 'The humeral head meets the glenoid fossa at the glenohumeral joint.',
       },
     },
   },
@@ -169,6 +174,8 @@ export const structures: AnatomyStructure[] = [
           'Radial groove',
           'Suprascapular notch',
         ],
+        correctAnswer: 'Intertubercular groove',
+        explanation: 'The proximal long-head biceps tendon runs in the intertubercular groove between the humeral tuberosities.',
       },
     },
   },
@@ -225,6 +232,8 @@ export const structures: AnatomyStructure[] = [
         title: 'Quick check',
         body: 'The lateral clavicle articulates with which process?',
         bullets: ['Acromion', 'Coracoid', 'Spine of scapula'],
+        correctAnswer: 'Acromion',
+        explanation: 'The lateral end of the clavicle joins the acromion at the acromioclavicular joint.',
       },
     },
   },
@@ -290,6 +299,8 @@ export const structures: AnatomyStructure[] = [
           'Musculocutaneous nerve',
           'Suprascapular nerve',
         ],
+        correctAnswer: 'Axillary nerve',
+        explanation: 'The axillary nerve supplies deltoid. This matches the innervation listed in its Anatomy section.',
       },
     },
   },
@@ -350,6 +361,8 @@ export const structures: AnatomyStructure[] = [
           'Lesser tuberosity',
           'Deltoid tuberosity',
         ],
+        correctAnswer: 'Greater tuberosity',
+        explanation: 'The supraspinatus tendon reaches the superior facet of the greater tuberosity.',
       },
     },
   },
@@ -406,6 +419,8 @@ export const structures: AnatomyStructure[] = [
         title: 'Quick check',
         body: 'What is the principal action of infraspinatus?',
         bullets: ['External rotation', 'Internal rotation', 'Elbow flexion'],
+        correctAnswer: 'External rotation',
+        explanation: 'Infraspinatus laterally rotates the humerus at the shoulder; lateral and external rotation describe the same direction here.',
       },
     },
   },
@@ -462,6 +477,8 @@ export const structures: AnatomyStructure[] = [
         title: 'Quick check',
         body: 'Where does subscapularis insert?',
         bullets: ['Lesser tuberosity', 'Greater tuberosity', 'Acromion'],
+        correctAnswer: 'Lesser tuberosity',
+        explanation: 'The subscapularis tendon attaches to the lesser tuberosity on the anterior proximal humerus.',
       },
     },
   },
@@ -523,6 +540,8 @@ export const structures: AnatomyStructure[] = [
           'Spinoglenoid notch',
           'Subacromial bursa',
         ],
+        correctAnswer: 'Intertubercular groove',
+        explanation: 'The proximal long-head biceps tendon normally follows the intertubercular groove after crossing the shoulder joint.',
       },
     },
   },
@@ -583,6 +602,8 @@ export const structures: AnatomyStructure[] = [
           'Suprascapular nerve',
           'Long thoracic nerve',
         ],
+        correctAnswer: 'Axillary nerve',
+        explanation: 'Teres minor receives its nerve supply from the axillary nerve, as does deltoid.',
       },
     },
   },

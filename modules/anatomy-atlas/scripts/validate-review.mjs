@@ -182,9 +182,9 @@ for (const structure of structures) {
   ok(api.staleReview({ ...snapshot, structureId: structure.id, track: 'geometry',
     revisionHash: beforeDelivery.revisions[structure.id].geometry }),
   'Lossless transport still requires current display approval');
-  ok(!api.staleReview({ ...snapshot, structureId: structure.id, track: 'teaching',
+  ok(api.staleReview({ ...snapshot, structureId: structure.id, track: 'teaching',
     revisionHash: beforeDelivery.revisions[structure.id].teaching }),
-  'Unchanged teaching is not relabelled by a delivery change');
+  'New explicit quick-check answers require teaching re-review after the earlier delivery checkpoint');
   ok(beforeDelivery.revisions[structure.id].imaging === null,
     'Transport does not create imaging evidence');
 }

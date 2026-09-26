@@ -1,6 +1,8 @@
 // Historical comparison only. No private review records are read or modified.
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 import { quizQuestions } from '../app/anatomy-data.ts';
 import snapshot from './fixtures/review-display-before-website-pilot.json' with { type: 'json' };
 import {
@@ -30,12 +32,24 @@ export async function reviewDocumentBeforeWebsitePilot(
     snapshot.reviewDocumentSha256,
     '5365d114752b157338dc9ebcf9e58dabe56be2d4d35296e717845bce939dfd05',
   );
-  const previous = reviewDocumentForDisplay(
-    manifest,
-    structures,
-    quizQuestions,
-    structuredClone(snapshot.display),
-  );
+  // Read the exact historical content, never rebuild old teaching with today's data.
+  const previous = JSON.parse(execFileSync('git', [
+    'show', `${snapshot.sourceCommit}:content/review-revisions.json`,
+  ], {cwd:fileURLToPath(new URL('../',import.meta.url)),encoding:'utf8'}));
+  assert.deepEqual(previous.display, snapshot.display);
+  // Explicit migration: only the newly keyed quick-check fields may differ.
+  // Every older prompt, option, teaching field, mesh and identity stays pinned.
+  const priorStructures = structuredClone(structures);
+  for (const structure of priorStructures) {
+    const quiz = structure.sections.quiz;
+    assert.equal(quiz.bullets?.filter(choice => choice === quiz.correctAnswer).length, 1);
+    assert.equal(typeof quiz.explanation, 'string');
+    assert(quiz.explanation.trim());
+    delete quiz.correctAnswer;
+    delete quiz.explanation;
+  }
+  assert.deepEqual(reviewDocumentForDisplay(manifest, priorStructures, quizQuestions,
+    structuredClone(snapshot.display)), previous, 'Only explicit quick-check keys may extend the historical teaching');
   assert.equal(
     hash(JSON.stringify(previous, null, 2) + '\n'),
     snapshot.reviewDocumentSha256,

@@ -182,11 +182,10 @@ for (const selected of structures) {
     check(model.includes('CC BY 4.0'));
     check(info.includes(escape(selected.name)));
     check(info.includes('Start identification exam'));
-    check(
-      !info.includes('Start identification exam</button>') ||
-        !info.includes('disabled=""'),
-      'Ready start remains available',
-    );
+    const examStart = [...info.matchAll(/<button\b([^>]*)>([\s\S]*?)<\/button>/g)]
+      .find((match) => match[2].includes('Start identification exam'));
+    check(examStart && !/\sdisabled(?:\s|=|$)/.test(examStart[1]),
+      'Ready identification exam remains available independently of the unanswered quick check');
     same(context.scene.selectedId, selected.id);
     same(context.scene.structures.length, 9);
     same(context.scene.exam, false);

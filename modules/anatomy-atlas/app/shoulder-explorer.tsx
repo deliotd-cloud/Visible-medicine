@@ -49,6 +49,7 @@ import {
 } from '@/components/ui/combobox';
 import { Slider } from '@/components/ui/slider';
 import { ExplodeStyleSelect } from './explode-style-select';
+import { StructureQuickCheck } from './structure-quick-check';
 import { useWorkspaceSession } from './workspace-session';
 import type { BodyLayout } from '@/lib/body-arrangement';
 import { Switch } from '@/components/ui/switch';
@@ -1213,6 +1214,15 @@ export default function ShoulderExplorer({
                     <GroupedAnatomyNotes>
                       {(tab) => {
                         const section = selected.sections[tab];
+                        if (tab === 'quiz') return (
+                          <StructureQuickCheck
+                            key={selected.id}
+                            question={section.body}
+                            choices={section.bullets ?? []}
+                            correctAnswer={section.correctAnswer ?? null}
+                            explanation={section.explanation}
+                          />
+                        );
                         const modality = {
                           ct: 'CT',
                           mri: 'MRI',
@@ -1299,13 +1309,13 @@ export default function ShoulderExplorer({
                       <div className="eyebrow">
                         Structure check · {selected.name}
                       </div>
-                      <h2>{selected.sections.quiz.body}</h2>
-                      {selected.sections.quiz.bullets?.map((choice, index) => (
-                        <div className="quiz-choice" key={choice}>
-                          <b>{String.fromCharCode(65 + index)}</b>
-                          <span>{choice}</span>
-                        </div>
-                      ))}
+                      <StructureQuickCheck
+                        key={selected.id}
+                        question={selected.sections.quiz.body}
+                        choices={selected.sections.quiz.bullets ?? []}
+                        correctAnswer={selected.sections.quiz.correctAnswer ?? null}
+                        explanation={selected.sections.quiz.explanation}
+                      />
                       <Button onClick={toggleMode} disabled={!displayReady}>
                         <GraduationCap /> Start identification exam
                       </Button>

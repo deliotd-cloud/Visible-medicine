@@ -7,6 +7,11 @@ import { authoringBeforeSpineImaging } from './spine-imaging-history.mjs';
 import transition from '../content/xray-transition.json' with { type: 'json' };
 const hash = (v) => createHash('sha256').update(v).digest('hex');
 const encode = (v) => JSON.stringify(v, null, 2) + '\n';
+const withoutQuickCheckKeys = (structures) => structuredClone(structures).map(s => {
+  delete s.sections.quiz.correctAnswer;
+  delete s.sections.quiz.explanation;
+  return s;
+});
 const withoutXray = (structures) =>
   structures.map((s) => {
     const { xray, ...sections } = s.sections;
@@ -44,7 +49,7 @@ export function authoringBeforeXray({ api, catalog }) {
   return {
     ...api,
     contentTabs: api.contentTabs.filter((t) => t !== 'xray'),
-    structures: withoutXray(api.structures),
+    structures: withoutXray(withoutQuickCheckKeys(api.structures)),
   };
 }
 
@@ -54,6 +59,8 @@ export async function reviewDocumentBeforeXray(
   structures,
 ) {
   revisions = await reviewDocumentBeforeModelDelivery(revisions, manifest, structures);
+  // That pinned historical checkpoint predates explicit quick-check answer keys.
+  structures = withoutQuickCheckKeys(structures);
   assert.equal(
     hash(encode(revisions)),
     transition.afterReviewHash,

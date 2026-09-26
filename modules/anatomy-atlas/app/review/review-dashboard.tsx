@@ -912,6 +912,8 @@ export function ReviewDashboard({ initialId }: { initialId: string }) {
                               </ul>
                             )}
                             {section.note && <p>{section.note}</p>}
+                            {section.correctAnswer && <p><strong>Draft answer key:</strong> {section.correctAnswer}</p>}
+                            {section.explanation && <p><strong>Draft explanation:</strong> {section.explanation}</p>}
                           </section>
                         ),
                       )}

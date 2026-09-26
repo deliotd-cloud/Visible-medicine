@@ -23,6 +23,8 @@ export const reviewDisplayPaths = [
   'lib/camera-keyboard.ts',
   'app/camera-keyboard.css',
   'app/shoulder-explorer.tsx',
+  'app/structure-quick-check.tsx',
+  'app/structure-quick-check.css',
   'app/shoulder-workspace.css',
   'app/atlas-workspace.tsx',
   'app/workspace-session.ts',

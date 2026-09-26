@@ -36,9 +36,10 @@ for (const s of structures) {
     historical.revisions[s.id].geometry,
     current.revisions[s.id].geometry,
   );
-  assert.equal(
+  assert.notEqual(
     historical.revisions[s.id].teaching,
     current.revisions[s.id].teaching,
+    'New explicit draft quiz keys and explanations invalidate earlier teaching sign-off',
   );
   assert.equal(historical.revisions[s.id].imaging, null);
 }
