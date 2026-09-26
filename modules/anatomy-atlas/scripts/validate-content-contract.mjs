@@ -427,6 +427,32 @@ rejects(() =>
   api.shoulderContentRecords(api.structures, wrongFrame, revisions.revisions),
 );
 const expectedFixture = JSON.stringify(shoulder, null, 2) + '\n';
+// Use a body-scope record without a shoulder teaching digest so malformed keys
+// must fail the quiz contract itself, not merely a different revision hash.
+const keyedBody = body.find(record => Object.hasOwn(record.content.quiz, 'correctAnswer'));
+check(keyedBody, 'A body alias exports the formative quiz key');
+same(keyedBody.validation.materialRevisions.teaching, null);
+const quizNegatives = [
+  r => { r.content.quiz.correctAnswer = 'not a choice'; },
+  r => { r.content.quiz.correctAnswer = ' '; },
+  r => { delete r.content.quiz.correctAnswer; },
+  r => { delete r.content.quiz.explanation; },
+  r => { r.content.quiz.explanation = ' '; },
+  r => { r.content.quiz.bullets.push(r.content.quiz.correctAnswer); },
+  r => { r.content.quiz.bullets.push(' ' + r.content.quiz.bullets[0] + ' '); },
+  r => { r.content.quiz.bullets[0] = ''; },
+  r => { r.content.quiz.bullets = [r.content.quiz.correctAnswer]; },
+  r => { r.content.quiz.readiness = 'pending'; },
+  r => { r.content.anatomy.correctAnswer = 'not a quiz'; },
+  r => { r.content.quiz.score = 100; },
+];
+for (const mutate of quizNegatives) {
+  const malformed = clone(keyedBody); mutate(malformed);
+  rejects(() => validate(malformed), 'Reject malformed formative answer keys');
+}
+const unkeyed = clone(keyedBody);
+delete unkeyed.content.quiz.correctAnswer; delete unkeyed.content.quiz.explanation;
+check(validate(unkeyed), 'Existing informational quizzes remain valid v2 records');
 same(
   (
     await readFile(
@@ -445,7 +471,7 @@ const report = {
   shoulderRecords: shoulder.length,
   boundNodes: nodes.size,
   glbAssetsVerified: assets.size,
-  rejectionCases: negative.length + 3,
+  rejectionCases: negative.length + quizNegatives.length + 3,
   originalCopyAndRecipesVerifiedFromRecordedGitTree: true,
   currentPinnedCurriculumTransitionsChecked: true,
   explicitlyUpdatedBodySections: 3634,

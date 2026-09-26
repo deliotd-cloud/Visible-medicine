@@ -599,13 +599,17 @@ check(shoulder.includes("mode === 'study' && !displayReady"));
 check(shoulder.includes('onClick={nextQuestion} disabled={!displayReady}'));
 check(body.includes('Practice paused while the 3D view recovers.'));
 // Exit stays usable during a graphics interruption; no exam restart is invoked.
-{
+for (const saved of [null, {view:{layout:'tray',selectedId:'original'},zoomStep:3}]) {
   const calls = [];
   const spy = (name) => (value) =>
     calls.push([name, typeof value === 'function' ? value('exam') : value]);
+  const beforeExam = {current:saved};
   runInNewContext(extract(shoulder, 'toggleMode') + ';toggleMode();', {
     displayReady: false,
     mode: 'exam',
+    beforeExam,
+    applyStudyView: spy('restore'),
+    setZoomStep: spy('zoomStep'),
     setPlate: spy('plate'),
     setLayout: spy('layout'),
     setSyncPlane: spy('plane'),
@@ -620,7 +624,11 @@ check(body.includes('Practice paused while the 3D view recovers.'));
     },
   });
   same(calls.find((c) => c[0] === 'mode')?.[1], 'study');
-  same(calls.find((c) => c[0] === 'layout')?.[1], 'spatial');
+  same(calls.find((c) => c[0] === 'restore')?.[1], saved?.view);
+  same(calls.find((c) => c[0] === 'zoomStep')?.[1], saved?.zoomStep);
+  same(beforeExam.current, null);
+  check(!calls.some(c => ['layout','layer','systems','explode'].includes(c[0])),
+    'Unavailable exit must not overwrite the saved presentation with exam defaults');
   same(calls.find((c) => c[0] === 'practice')?.[1].type, 'dismiss');
   handlerCases++;
 }

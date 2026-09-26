@@ -136,7 +136,10 @@
           "$ref": "#/$defs/section"
         },
         "quiz": {
-          "$ref": "#/$defs/section"
+          "anyOf": [
+            { "$ref": "#/$defs/section" },
+            { "$ref": "#/$defs/quizSection" }
+          ]
         }
       }
     },
@@ -275,6 +278,25 @@
     }
   },
   "$defs": {
+    "quizSection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "body", "readiness", "bullets", "correctAnswer", "explanation"],
+      "properties": {
+        "title": { "$ref": "#/$defs/section/properties/title" },
+        "body": { "$ref": "#/$defs/section/properties/body" },
+        "note": { "$ref": "#/$defs/section/properties/note" },
+        "citations": { "$ref": "#/$defs/section/properties/citations" },
+        "readiness": { "const": "draft" },
+        "bullets": {
+          "type": "array", "minItems": 2, "uniqueItems": true,
+          "items": { "type": "string", "pattern": "\\S" }
+        },
+        "correctAnswer": { "type": "string", "pattern": "\\S" },
+        "explanation": { "type": "string", "pattern": "\\S" }
+      },
+      "description": "Optional formative answer key; validate exact unique choice membership after schema validation. Not a score or clinical approval."
+    },
     "section": {
       "type": "object",
       "additionalProperties": false,

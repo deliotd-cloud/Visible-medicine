@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { isDeepStrictEqual } from 'node:util';
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { createRequire } from 'node:module';
@@ -13,8 +14,47 @@ import pins from '../content/common-interosseous-us-pins.json' with { type: 'jso
 import { commonInterosseousUsTopics as authored, commonInterosseousUsEvidenceLimit as evidenceLimit } from '../content/common-interosseous-us.ts';
 
 const { api: currentApi, catalog, registry } = await contentContext();
-const api = beforeCoronaryArterialUs(currentApi), display = api.bodyDisplayCatalog(catalog);
+const replayApi = beforeCoronaryArterialUs(currentApi), display = replayApi.bodyDisplayCatalog(catalog);
 const parent = await exactSourceHistoryApi(pins.parentCommit);
+// This checkpoint predates explicit shoulder quick-check keys. Validate that
+// migration, then pin every other field to the exact original source.
+const historicalStructures = structuredClone(replayApi.structures);
+assert.equal(historicalStructures.length, 9);
+for (const structure of historicalStructures) {
+  const quiz = structure.sections.quiz;
+  assert.equal(typeof quiz.correctAnswer, 'string');
+  assert(quiz.correctAnswer.trim());
+  assert.equal(quiz.bullets?.filter(choice => choice === quiz.correctAnswer).length, 1);
+  assert.equal(typeof quiz.explanation, 'string');
+  assert(quiz.explanation.trim());
+  delete quiz.correctAnswer;
+  delete quiz.explanation;
+}
+assert.deepEqual(historicalStructures, parent.structures,
+  'Only explicit quick-check keys may extend the historical shoulder teaching');
+const shoulderQuizIdentities = new Map(display.structures
+  .filter(s => historicalStructures.some(shoulder => shoulder.sourceFmaIds?.includes(s.fmaId)))
+  .map(s => [s.id, s]));
+const historicalBodyLesson = (s, tab) => {
+  const lesson = replayApi.bodyLesson(s, tab);
+  if (tab !== 'quiz' || !isDeepStrictEqual(s, shoulderQuizIdentities.get(s.id))) return lesson;
+  const prior = structuredClone(lesson);
+  assert.equal(typeof prior.correctAnswer, 'string');
+  assert(prior.correctAnswer.trim());
+  assert.equal(prior.bullets?.filter(choice => choice === prior.correctAnswer).length, 1);
+  assert.equal(typeof prior.explanation, 'string');
+  assert(prior.explanation.trim());
+  delete prior.correctAnswer;
+  delete prior.explanation;
+  assert.deepEqual(prior, parent.bodyLesson(s, tab), 'Only explicit shoulder quiz keys may differ');
+  return prior;
+};
+const api = { ...replayApi, structures: historicalStructures, bodyLesson: historicalBodyLesson,
+  bodyContent(s, tab) {
+    const { readiness: _readiness, ...shown } = historicalBodyLesson(s, tab);
+    return shown;
+  },
+};
 assert.equal(pins.parentCommit, 'aca60179199870ddfdb745fb4224775cb7d0c3d8');
 assert.equal(hash(pins), '18eb602bfebf1836c4412848a248ca3f09f9e0ac1982762603d6c2040640a361');
 assert.equal(hash(snapshot(parent, display)), pins.previousAllLessonsAndRecipesHash);

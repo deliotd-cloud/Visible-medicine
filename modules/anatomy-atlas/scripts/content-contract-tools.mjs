@@ -21,6 +21,7 @@ export * from './lib/lateral-cricoarytenoid-us.ts';
 export * from './lib/plantar-arterial-us.ts';
 export * from './lib/common-interosseous-us.ts';
 export * from './lib/coronary-arterial-us.ts';
+export * from './lib/elbow-arterial-ct.ts';
 export * from './lib/orbital-nerve-mri.ts';
 export * from './lib/body-review-material.ts';
 export * from './lib/hilar-vessel-xray.ts';
@@ -228,6 +229,12 @@ export async function contentValidator(registry) {
       throw Error(
         `Invalid content record: ${error.instancePath || '/'} (${error.keyword})`,
       );
+    }
+    const quiz = record.content.quiz;
+    if (Object.hasOwn(quiz, 'correctAnswer')) {
+      if (quiz.bullets.filter(choice => choice === quiz.correctAnswer).length !== 1
+        || new Set(quiz.bullets.map(choice => choice.trim())).size !== quiz.bullets.length)
+        throw Error('Quiz answer must match exactly one unambiguous choice');
     }
     const expected = registry.get(recordKey(record));
     if (!expected)

@@ -282,6 +282,14 @@ separate. See `docs/GENICULAR_CLINICAL_REFERENCES_20260917.md` for exact scope.
 
 ## Elbow arterial clinical teaching — 17 September 2026
 
+The 26 September CT-orientation extension also uses Habarta et al. below,
+with credit and an adaptation notice in each draft. It adds original named-branch
+orientation, not publication images, case records or copied prose. The case
+report supports a limited CTA example, not reliable depiction of every small
+collateral branch. Existing anatomical factual references and mesh credits remain
+separate; no additional dependency, dataset, font, texture or paid service.
+See `docs/ELBOW_ARTERIAL_CT.md` for scope and evidence limits.
+
 Original short adaptations credit Habarta J, Jordan M, Meffert R, Huflage H,
 Schmalzl J (2022), *Surgical management of a traumatic elbow dislocation with
 disruption of the brachial artery*, https://doi.org/10.1007/s11678-022-00686-9;

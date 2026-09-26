@@ -1,5 +1,24 @@
 # First-release viewer acceptance evidence
 
+## 26 September: shoulder quick checks and exam return
+
+Atlas `9856291` production export was exercised over loopback with the actual
+WebGL shoulder: native choice selection, correct/incorrect feedback, keyboard
+retry and an independent identification exam starting at score 0. After changing
+zoom during the exam, exit restored the original superficial layer, Scapula and
+pre-exam framing. Earlier `65d1563` retained cuff-only presentation on exit; the
+same actual-handler regression reproduces that failure and passes after repair.
+
+Supplemental renderer recovery checks now explicitly test exit with and without
+a saved pre-exam snapshot while graphics are unavailable: no exam restart or
+default-view overwrite, snapshot consumed once, saved zoom restored. 784 checks,
+12 event sequences, 5 renderer fault cases and 41 handler cases pass. Selection/
+clipping checks also pass; they do not establish GPU occlusion or clinical truth.
+
+The export is staged on D, not installed in the website or deployed. No new
+patient data, clinical decision, asset entitlement or desktop PACS change.
+Full website/device/clinical acceptance remains pending.
+
 ## 25 September: browser practice recovery acceptance sample
 
 The current published regional runtime retains study state after a controlled

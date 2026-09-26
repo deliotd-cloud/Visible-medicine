@@ -48,3 +48,19 @@ The saved-reference-plane test continues to pass after sharing restoration code.
 
 Run: node scripts/test-structure-quick-check.mjs
 Browser component check: node scripts/preview-structure-quick-check.mjs
+
+## Export-contract follow-up, 26 September
+
+Broad validation found that the v2 seed schema still rejected the two new quiz
+fields. Its optional keyed-quiz branch now carries `correctAnswer` and
+`explanation` together, only for draft quiz sections. It requires at least two
+nonblank, unique choices and a nonblank explanation; the binding validator checks
+exact answer membership and rejects whitespace-equivalent duplicate choices.
+Unkeyed informational quizzes remain compatible. Keys on non-quiz sections,
+scoring fields and clinical approval claims remain unsupported.
+
+The nine-record shoulder seed is regenerated from current revision-bound source.
+Twelve additional negative contract cases use a body alias with no shoulder
+teaching digest, proving malformed keys fail the contract rather than merely a
+revision mismatch. This does not add persistent scoring, import patient data or
+publish the website. Run `node scripts/validate-content-contract.mjs`.

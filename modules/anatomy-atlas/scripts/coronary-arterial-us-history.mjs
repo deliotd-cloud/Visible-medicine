@@ -1,11 +1,13 @@
 // Test-only editorial history. Never used to derive production decisions.
 import assert from 'node:assert/strict';
+import { beforeElbowArterialCt } from './elbow-arterial-ct-history.mjs';
 import { createHash } from 'node:crypto';
 import { isDeepStrictEqual } from 'node:util';
 import pins from '../content/coronary-arterial-us-pins.json' with { type: 'json' };
 import transition from '../content/coronary-arterial-us-transition.json' with { type: 'json' };
 const hash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 export function beforeCoronaryArterialUs(api) {
+  api = beforeElbowArterialCt(api);
   if (typeof api.bodyLesson !== 'function') return api;
   assert.equal(hash(pins), '57c2e06c6ac884c762f77d11043874e447f032250b67889dc8281a2c959b2ec6');
   assert.equal(hash(transition), 'a64218ad569b0c3766ab92d86f736c1b5a72b3b4bb0fe652e70387c2fd825dd7');
