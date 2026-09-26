@@ -1,5 +1,11 @@
 # Current atlas status
 
+26 September 2026: [Regional selectable structure checks](REGIONAL_QUICK_CHECK.md)
+reuse the shoulder answer controls for 11 explicitly keyed regional/whole-body
+quiz entries. Other quiz notes remain unchanged; exam mode hides formative
+answers. Source tests/build pass; browser acceptance and website export pending.
+No clinical approval or teaching/geometry changes.
+
 26 September 2026: [Clinical review history protection](CLINICAL_REVIEW_HOME.md)
 fixes a reproduced delayed-response overwrite in internal and specimen reviews.
 Refresh/exit cancels obsolete reads; late results cannot replace new notes or
