@@ -1,5 +1,5 @@
 {
-  "revision": "f46b48c19266fe96a2126327042317484a0a4187",
+  "revision": "36c53fb9e19fca1c7e579f79d6d4807e4778ac19",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2478,8 +2478,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "505892697dc4661d13f7585c26621d61f547fd3ae8b8a608c37cd21b4e58b5fa",
-      "importedSha256": "acc074cdae484fcb107fc4d7b51a7fdbca1810cf086aac66232010dce410e707"
+      "sourceSha256": "05472c255ec1ca3b8150e14773a3073b19f13d92c1c0ca4d52af8bd640410b60",
+      "importedSha256": "d93fe649e31d9a16b19f839c719a5beac3df876db11cfdea6fc4108fa593ffd9"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -2753,8 +2753,8 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sourceSha256": "29737e984c49ec87f8e725fd26ad952791e7651e50fd922b4b66ecd89e1d2a8e",
-      "importedSha256": "ab57914b612ad5a5c2b59d0caf0d3a463296db117ddf505b86f8b3e4589df776"
+      "sourceSha256": "3ecadf85a320f07b245ce600649ad2031d1c8cf3c88fc5281f023d3b69600521",
+      "importedSha256": "ebeaba94d519132411bd2b2ce173114d3306229b3fc1ee3e4dec2984784c5113"
     },
     {
       "path": "app/review/review.css",
@@ -2903,8 +2903,8 @@
     },
     {
       "path": "app/atlas-workspace.tsx",
-      "sourceSha256": "dddafc036e20e23b1048c0be494df62cd6eb794ffbb7a6a6423bd74bf8c0cdbd",
-      "importedSha256": "ee347b41a1f5c872ed7f63b15bc8a0ce1ea8e9d4308b15f93c779f0aac897c04"
+      "sourceSha256": "6e0be873a4fb9c9b3021537014935c3722a4898e9037d83871af18711e14d4eb",
+      "importedSha256": "c99d29df653d096006ed3c0e7874bad35c05c7d616dc823604631b195ea6914c"
     },
     {
       "path": "lib/atlas-search-presentation.ts",
@@ -2915,6 +2915,16 @@
       "path": "components/ui/radio-group.tsx",
       "sourceSha256": "43f2d6c2f5bdd4a26c57d93e6f141be20472f9bb8777d9a0d61cd8a5e281a999",
       "importedSha256": "2d40b6d3b229763d36a95d75563544d2e76c2148c3627dae957448841a3040da"
+    },
+    {
+      "path": "app/structure-quick-check.tsx",
+      "sourceSha256": "4bfa6567af94f808bc7ed43a9693eae6771da7e8ada1e10183ec4be3ff64c5de",
+      "importedSha256": "4bfa6567af94f808bc7ed43a9693eae6771da7e8ada1e10183ec4be3ff64c5de"
+    },
+    {
+      "path": "app/structure-quick-check.css",
+      "sourceSha256": "fb0ae0d036f91d13bd0d6a82c335159c1f3620c8d0301e63724f369c5e836942",
+      "importedSha256": "fb0ae0d036f91d13bd0d6a82c335159c1f3620c8d0301e63724f369c5e836942"
     },
     {
       "path": "lib/atlas-panel-layout.ts",
@@ -4072,16 +4082,6 @@
       "importedSha256": "0edcb3e3a9997b9b929008dc5c49663e1d6aa1e32fe698c51510edd4bc58a569"
     },
     {
-      "path": "app/structure-quick-check.tsx",
-      "sourceSha256": "4bfa6567af94f808bc7ed43a9693eae6771da7e8ada1e10183ec4be3ff64c5de",
-      "importedSha256": "4bfa6567af94f808bc7ed43a9693eae6771da7e8ada1e10183ec4be3ff64c5de"
-    },
-    {
-      "path": "app/structure-quick-check.css",
-      "sourceSha256": "fb0ae0d036f91d13bd0d6a82c335159c1f3620c8d0301e63724f369c5e836942",
-      "importedSha256": "fb0ae0d036f91d13bd0d6a82c335159c1f3620c8d0301e63724f369c5e836942"
-    },
-    {
       "path": "app/shoulder-workspace.css",
       "sourceSha256": "8214b33fe1942727ba3ff6221bdb29f4812421ed1d14745053466d37a981e072",
       "importedSha256": "8214b33fe1942727ba3ff6221bdb29f4812421ed1d14745053466d37a981e072"
@@ -4203,5 +4203,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "720ee642df45a847caded1fd005e96127f882f4e2b2dd7367ae5d5c78f7d9795"
+  "websiteIntegrationSha256": "e43199ff35ad70a54d3d0179404f97c5c8388bcd42e4eb74f763162e704c419a"
 }

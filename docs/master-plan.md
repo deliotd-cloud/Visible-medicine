@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+26 September regional quiz integration: local regional/whole-body and Clinical
+Review viewers now share source `36c53fb`, with selectable keyed questions and
+unchanged unkeyed notes/models. Source parity, access/history/inventory tests,
+production builds and TypeScript pass; current browser acceptance is outstanding.
+See [integration evidence](atlas-regional-quiz-20260926.md). Nothing published;
+all clinical/privacy/entitlement gates remain in force.
+
 26 September regional quiz parity: Atlas source `36c53fb` now provides selectable
 answers for all 11 explicitly keyed regional/whole-body quiz entries, reusing the
 shoulder controls. The 1,093 other notes retain their original unscored content;

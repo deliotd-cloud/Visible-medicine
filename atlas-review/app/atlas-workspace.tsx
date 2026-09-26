@@ -44,6 +44,7 @@ import {
 } from '@/atlas-review/lib/atlas-navigation';
 import type { BodyCatalog, BodyStructure } from './body-types';
 import { bodyContent } from './body-content';
+import { StructureQuickCheck } from './structure-quick-check';
 import type { StudySide } from '@/atlas-review/lib/study-links';
 import type { ContentTab } from './anatomy-data';
 import { atlasPanelLayout } from '@/atlas-review/lib/atlas-panel-layout';
@@ -415,17 +416,31 @@ export function GroupedAnatomyNotes({
 }
 
 export function QuizNotes({ structure }: { structure: BodyStructure }) {
+  const { exam } = useAtlasWorkspace();
+  if (exam) return null;
   const content = bodyContent(structure, 'quiz');
   return (
     <details className="atlas-quiz-notes">
       <summary>Quiz notes · {structure.name}</summary>
-      <p>{content.body}</p>
-      {content.bullets && (
-        <ul>
-          {content.bullets.map((bullet) => (
-            <li key={bullet}>{bullet}</li>
-          ))}
-        </ul>
+      {content.correctAnswer !== undefined ? (
+        <StructureQuickCheck
+          key={structure.id}
+          question={content.body}
+          choices={content.bullets ?? []}
+          correctAnswer={content.correctAnswer ?? null}
+          explanation={content.explanation}
+        />
+      ) : (
+        <>
+          <p>{content.body}</p>
+          {content.bullets && (
+            <ul>
+              {content.bullets.map((bullet) => (
+                <li key={bullet}>{bullet}</li>
+              ))}
+            </ul>
+          )}
+        </>
       )}
       {content.note && <p className="body-content-note">{content.note}</p>}
       {content.citations?.map((url, i) => (

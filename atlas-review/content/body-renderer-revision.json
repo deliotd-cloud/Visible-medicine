@@ -54,7 +54,7 @@
     },
     {
       "path": "app/atlas-workspace.tsx",
-      "sha256": "dddafc036e20e23b1048c0be494df62cd6eb794ffbb7a6a6423bd74bf8c0cdbd"
+      "sha256": "6e0be873a4fb9c9b3021537014935c3722a4898e9037d83871af18711e14d4eb"
     },
     {
       "path": "app/back-layers-study.tsx",
@@ -295,6 +295,14 @@
     {
       "path": "app/structure-navigator.tsx",
       "sha256": "e22a53d59d24e4dc84cecb9a8c4b8ee84bc3198ba372412d10e90f96c3ed6899"
+    },
+    {
+      "path": "app/structure-quick-check.css",
+      "sha256": "fb0ae0d036f91d13bd0d6a82c335159c1f3620c8d0301e63724f369c5e836942"
+    },
+    {
+      "path": "app/structure-quick-check.tsx",
+      "sha256": "4bfa6567af94f808bc7ed43a9693eae6771da7e8ada1e10183ec4be3ff64c5de"
     },
     {
       "path": "app/study-library.tsx",
@@ -1258,7 +1266,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "29737e984c49ec87f8e725fd26ad952791e7651e50fd922b4b66ecd89e1d2a8e"
+      "sha256": "3ecadf85a320f07b245ce600649ad2031d1c8cf3c88fc5281f023d3b69600521"
     },
     {
       "path": "content/sca-mca-clinical-pins.json",
@@ -3141,7 +3149,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "061dbd294a0a1dc6f8edf9745b2430e0acd95c535a308d5d9c0f82d5136f4135",
-  "sourceRendererSha256": "31a1838ad6109a2aaa8d3ff76248f48b2f3abb3a6e36a9b23fddb8e940cd82f5",
-  "websiteIntegrationSha256": "720ee642df45a847caded1fd005e96127f882f4e2b2dd7367ae5d5c78f7d9795"
+  "sha256": "90dea51129f5286915b08844a0fb0d355d02cd1d61ee9e633965840d449a97e1",
+  "sourceRendererSha256": "2ae41e47589369253a6c590314fb8473d5fb43e7ba916b78a0b4de68813b8fe6",
+  "websiteIntegrationSha256": "e43199ff35ad70a54d3d0179404f97c5c8388bcd42e4eb74f763162e704c419a"
 }
