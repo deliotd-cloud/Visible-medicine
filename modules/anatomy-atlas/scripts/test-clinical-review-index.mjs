@@ -1,0 +1,90 @@
+import assert from 'node:assert/strict';
+import { test } from 'node:test';
+import { build } from './workspace-test-build.mjs';
+import bindings from '../content/nested-review-bindings.json' with { type: 'json' };
+
+const built = await build({ stdin: { resolveDir: process.cwd(), contents: `
+export * from './lib/clinical-review-index';
+export {structures} from './app/anatomy-data';
+export {bodyReviewSummaries} from './lib/body-review-material';
+export {nestedReviewRows} from './lib/nested-review-material';
+export {specimenReviewRows} from './lib/specimen-review-material';
+` }, bundle: true, write: false, platform: 'node', format: 'esm' });
+const api = await import('data:text/javascript;base64,' + Buffer.from(built.outputFiles[0].text).toString('base64'));
+const { clinicalReviewEntries: entries, clinicalReviewScopes: scopes, findClinicalReviewEntries: find, clinicalReviewHref: href } = api;
+
+test('all public rows are represented once with exact scoped links', () => {
+  const counts = { shoulder: api.structures.length, body: api.bodyReviewSummaries.length,
+    nested: api.nestedReviewRows.reduce((n, r) => n + r.surfaces.length, 0),
+    specimens: api.specimenReviewRows.reduce((n, r) => n + r.surfaces.length, 0) };
+  assert.equal(entries.length, Object.values(counts).reduce((a, b) => a + b, 0));
+  assert.equal(new Set(entries.map(e => e.key)).size, entries.length);
+  assert.deepEqual(scopes.map(s => s.id), Object.keys(counts));
+  for (const s of scopes) { assert.equal(entries.filter(e => e.scope === s.id).length, counts[s.id]); assert(s.label && s.description); }
+  for (const e of entries) {
+    assert(e.key.startsWith(e.scope + ':')); assert(e.name && e.context && e.id && e.laterality);
+    const url = new URL(e.href, 'https://synthetic.invalid'); assert.equal(url.origin, 'https://synthetic.invalid');
+    assert.equal(url.searchParams.get('structure'), e.id);
+    assert.equal(url.pathname, scopes.find(s => s.id === e.scope).href);
+    if (e.scope === 'nested') {
+      const row = api.nestedReviewRows.find(r => r.parentId === url.searchParams.get('parent') && r.study === url.searchParams.get('study'));
+      assert(row.surfaces.some(s => s.id === e.id && s.laterality === e.laterality));
+      const group = bindings.groups.find(g => g.key === row.key);
+      assert.equal(url.searchParams.get('source'), group.selections.find(s => s.id === e.id).sourceToken);
+    } else if (e.scope === 'specimens') {
+      const row = api.specimenReviewRows.find(r => r.key === url.searchParams.get('specimen'));
+      assert(row.surfaces.some(s => s.id === e.id && s.laterality === e.laterality)); assert(e.context.includes(row.name));
+    } else {
+      const rows = e.scope === 'shoulder' ? api.structures : api.bodyReviewSummaries;
+      assert.equal(rows.find(s => s.id === e.id).laterality, e.laterality);
+    }
+  }
+  console.log(JSON.stringify({ publicEntries: entries.length, counts }));
+});
+test('case-insensitive AND search spans names, identifiers, FMA, context and laterality', () => {
+  for (const scope of scopes) {
+    const first = entries.find(e => e.scope === scope.id);
+    const result = find({ q: first.id.toUpperCase() + ' ' + first.laterality.toUpperCase(), scope: scope.id });
+    assert(result.entries.some(e => e.key === first.key)); assert(result.entries.every(e => e.scope === scope.id));
+  }
+  const body = api.bodyReviewSummaries.find(s => s.fmaId);
+  assert(find({ q: body.fmaId, scope: 'body' }).entries.some(e => e.id === body.id));
+  assert.equal(find({ q: 'utterly-absent-synthetic-token' }).total, 0);
+  assert.equal(find({ q: 'utterly-absent-synthetic-token' }).pageCount, 1);
+  const shared = api.structures.find(s => api.bodyReviewSummaries.some(b => b.id === s.id));
+  if (shared) assert.deepEqual(find({ q: shared.id }).entries.filter(e => ['body', 'shoulder'].includes(e.scope)).map(e => e.scope), ['shoulder', 'body']);
+});
+test('pagination is human one-based, clamped, deterministic and complete', () => {
+  const first = find(); assert.equal(first.pageSize, 12); assert.equal(first.page, 1); assert.equal(first.entries.length, 12);
+  const collected = [];
+  for (let p = 1; p <= first.pageCount; p++) collected.push(...find({ page: String(p) }).entries.map(e => e.key));
+  assert.deepEqual(collected, entries.map(e => e.key));
+  assert.equal(find({ page: Number.MAX_SAFE_INTEGER }).page, first.pageCount);
+  for (const bad of [0, -1, 1.5, NaN, Infinity, Number.MAX_SAFE_INTEGER + 1, '0', '-1', '1.5', '1e2', ['2'], {}, null]) assert.equal(find({ page: bad }).page, 1);
+  const copy = find(); copy.entries[0].name = 'foreign'; assert.notEqual(find().entries[0].name, 'foreign');
+});
+test('query params discard nonstrings and canonically encode hostile text', () => {
+  for (const bad of [[], ['name'], {}, null, 4, true]) { assert.equal(find({ q: bad }).q, ''); assert.equal(find({ scope: bad }).scope, 'all'); }
+  assert.equal(find({ scope: 'unknown' }).scope, 'all'); assert.equal(find({ q: '  ' + 'a'.repeat(200) + '  ' }).q.length, 160);
+  assert.equal(href(), '/review/overview');
+  const hostile = '<script> /?&=#" 日本語';
+  const url = new URL(href({ q: '  ' + hostile + '  ', scope: 'nested', page: 2 }), 'https://synthetic.invalid');
+  assert.equal(url.pathname, '/review/overview'); assert.equal(url.searchParams.get('q'), hostile); assert.equal(url.searchParams.get('scope'), 'nested');
+  assert.equal(url.hash, ''); assert.equal(url.searchParams.get('page'), null, 'empty search clamps to page one');
+  const paged = new URL(href({ scope: 'body', page: 2 }), 'https://synthetic.invalid'); assert.equal(paged.searchParams.get('page'), '2');
+  assert.equal(href({ q: [], scope: {}, page: ['2'] }), '/review/overview');
+});
+test('missing or mismatched nested bindings fail closed rather than omit rows', async () => {
+  for (const mutate of [b => b.groups.pop(), b => b.groups[0].selections.pop(),
+    b => { b.groups[0].parent.id = 'foreign'; }, b => { b.groups[0].selections[0].sourceToken = 'invalid'; }]) {
+    const bad = structuredClone(bindings); mutate(bad); let overridden = 0;
+    const result = await build({ stdin: { resolveDir: process.cwd(), contents: "export * from './lib/clinical-review-index';" },
+      bundle: true, write: false, platform: 'node', format: 'esm', plugins: [{ name: 'synthetic-binding-mismatch', setup(builder) {
+        builder.onLoad({ filter: /nested-review-bindings\.json$/, namespace: 'workspace-test' }, () => {
+          overridden++; return { contents: JSON.stringify(bad), loader: 'json' };
+        });
+      } }] });
+    assert.equal(overridden, 1);
+    await assert.rejects(import('data:text/javascript;base64,' + Buffer.from(result.outputFiles[0].text).toString('base64')), /Nested review|nested review/);
+  }
+});

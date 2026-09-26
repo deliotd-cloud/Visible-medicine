@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { build } from 'esbuild';
+import { build } from './workspace-test-build.mjs';
 import { loadSourceHolds } from './load-source-holds.mjs';
 import { geometryFingerprint } from './anatomy-inventory.mjs';
 import { loadCurrentSourceHolds } from './current-source-holds.mjs';
@@ -280,7 +280,7 @@ const report = {
     'Equal names, concept IDs or filenames alone do not prove equal anatomy or geometry. Cross-tree equivalence requires pinned geometry evidence and matching retained source hashes.',
     'Independent CC0 lower limb and BP3D v3 abdominal specimens use different donors/releases and are not counted as equal v4 source files. Their anatomical equivalents require separate review.',
     'Source-bound presence does not mean a separately selectable named structure, complete layer, clinically accurate surface or human approval.',
-    'No competitor geometry or explanatory prose is imported. Only audit ID/group metadata is retained; eight original official OBJ files are retained separately as non-runtime cross-tree evidence, with attribution.',
+    `No competitor geometry or explanatory prose is imported. Only audit ID/group metadata is retained; ${cross.sources.length} original official OBJ files are retained separately as non-runtime cross-tree evidence, with attribution.`,
     'The review queue is not an admission list; source topology, spatial extent, aliases, laterality, complete concept membership, licensing and clinical review remain required.',
   ],
   rootBindingsNeedingEquivalenceReview: unverifiedRoot,

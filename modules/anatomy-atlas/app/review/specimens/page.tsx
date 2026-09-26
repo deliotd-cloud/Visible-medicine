@@ -24,8 +24,7 @@ export default async function SpecimenReviewPage({
       <header className="body-review-header">
         <Brand />
         <span>Independent specimen reviews</span>
-        <a href="/review">Shoulder reviews</a>
-        <a href="/review/body">Body reviews</a>
+        <a href="/review/overview">Clinical review home</a>
         <a href="/">Atlas</a>
       </header>
       <main className="body-review-shell">

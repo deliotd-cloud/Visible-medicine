@@ -9,6 +9,8 @@ export const thoracoabdominalOrganImagingReferences={
   lungUS:'https://pmc.ncbi.nlm.nih.gov/articles/PMC10086956/',
   externalLungUS:'https://onlinelibrary.wiley.com/doi/10.1002/ajum.12163',
   esophagus:'https://pmc.ncbi.nlm.nih.gov/articles/PMC2713885/',
+  cervicalEsophagusUS:'https://pmc.ncbi.nlm.nih.gov/articles/PMC8163523/',
+  cervicalEsophagusStudy:'https://pubmed.ncbi.nlm.nih.gov/30402811/',
   thymus:'https://pmc.ncbi.nlm.nih.gov/articles/PMC5296624/',
   thymusMRI:'https://pmc.ncbi.nlm.nih.gov/articles/PMC10742587/',
   stomachCT:'https://pmc.ncbi.nlm.nih.gov/articles/PMC5605014/',
@@ -55,6 +57,7 @@ export const thoracoabdominalOrganImagingGroups:Record<string,Group>={
     ultrasound:fact('Orient left basal views using the diaphragm and neighbouring abdominal organs. Interpret pleural motion, artefacts and any directly visible consolidation in their actual acoustic window.','Neither an artefact nor the static atlas surface is a complete left-lung image.','lungUS'),
   }},
   esophagus:{fmaId:'FMA7131',region:'thorax',laterality:'unpaired',focus:{
+    ultrasound:fact('External neck ultrasound can show the cervical oesophagus as a layered tube left of the trachea near the lower left thyroid pole. This regional acoustic window does not show the entire intrathoracic organ. Grebe and colleagues examined 81 adults without swallowing disorder, with a pilot of three symptomatic participants; this supports cervical visibility, not complete-organ validation.','External transcutaneous ultrasound differs from endoscopic ultrasound and transoesophageal echocardiography. This static atlas surface supplies no sonographic layers, motility, measurements, patency, normality or registered probe plane.','cervicalEsophagusUS','cervicalEsophagusStudy'),
     xray:fact('On a plain chest film, use the posterior mediastinum and expected course toward the hiatus as orientation only. An esophagram uses swallowed contrast and fluoroscopy to show the lumen in motion.','The normal oesophagus is usually not separately outlined on a plain film; a mediastinal contour or air column does not establish mucosal or swallowing findings.','upperGI'),
     ct:fact('Follow the oesophagus behind the trachea and through the hiatus to the stomach. Assess luminal distension alongside wall appearance and adjacent mediastinal tissues.','A collapsed lumen changes apparent wall thickness; this surface does not show mucosa, swallowing or a stricture.','esophagus'),
     mri:fact('Trace the oesophageal wall and surrounding mediastinal fat across anatomical planes. Fluid, wall signal and enhancement depend on the acquired sequence and luminal contents.','Cross-sectional imaging does not replace mucosal inspection or demonstrate motility from one still image.','esophagus'),

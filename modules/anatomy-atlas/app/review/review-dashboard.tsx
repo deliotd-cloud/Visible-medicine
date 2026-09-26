@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { ReviewSignInLink } from '@/components/review-sign-in-link';
 import {
   ArrowUpRight,
   ClipboardCheck,
@@ -298,8 +299,7 @@ export function ReviewDashboard({ initialId }: { initialId: string }) {
       <header className="review-header">
         <Brand />
         <span>Review workspace</span>
-        <Link href="/review/body">Whole-body reviews</Link>
-        <Link href="/review/specimens">Specimen reviews</Link>
+        <Link href="/review/overview">Clinical review home</Link>
         <Link href="/imaging/local">Local CT study</Link>
         <Link href="/shoulder">
           Anatomy explorer <ArrowUpRight size={16} />
@@ -360,12 +360,9 @@ export function ReviewDashboard({ initialId }: { initialId: string }) {
             {error}
             {!loaded && (
               <p>
-                <a
-                  href="/signin-with-chatgpt?return_to=%2Freview"
-                  target="_top"
-                >
+                <ReviewSignInLink target={{ scope: 'shoulder', structure: selectedId }}>
                   Sign in with ChatGPT
-                </a>{' '}
+                </ReviewSignInLink>{' '}
                 · <button onClick={refresh}>Retry loading</button>
               </p>
             )}

@@ -17,6 +17,7 @@ const compiled = await build({
  export * from './lib/anatomy-load-state'; export * from './lib/scene-labels';
  export * from './lib/origin-guides'; export * from './lib/model-delivery';
  export * from './lib/close-up-labels'; export * from './lib/body-display-catalog';
+ export * from './lib/body-bundle-geometry';
  export * from './lib/camera-orientation';
  export * from './app/anatomy-data'; export * from './app/body-types';`,
     resolveDir: process.cwd(),
@@ -549,6 +550,7 @@ const replacements = {
   '@/lib/label-depth': labelDepth,
   '@/lib/anatomy-vessels': {},
   '@/lib/anatomy-load-state': a,
+  '@/lib/body-bundle-geometry': a,
 };
 const bodyScene = component(
   await readFile('app/body-scene.tsx', 'utf8'),

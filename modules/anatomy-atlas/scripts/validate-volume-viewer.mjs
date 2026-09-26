@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { build } from 'esbuild';
+import { build } from './workspace-component-test-build.mjs';
 import { writeFile, unlink } from 'node:fs/promises';
 const bundle = await build({
   stdin: {
@@ -9,18 +9,18 @@ const bundle = await build({
   },
   bundle: true,
   write: false,
-  format: 'esm',
+  format: 'cjs',
   platform: 'node',
   packages: 'external',
   loader: { '.css': 'empty' },
 });
 const temporary = new URL(
-  '../node_modules/.vm-volume-test.mjs',
+  '../node_modules/.vm-volume-test.cjs',
   import.meta.url,
 );
 await writeFile(temporary, bundle.outputFiles[0].text);
 try {
-  const a = await import(temporary.href);
+  const a = (await import(temporary.href)).default;
   let checks = 0;
   const same = (x, y, reason) => {
     checks++;
@@ -515,6 +515,107 @@ try {
   );
   broken.dispose();
 
+  // Synthetic Atlas attachment lifetimes exercise the real bridge and decoded
+  // volume adapter. CT uses HU; MRI uses relative intensities, never patient data.
+  let atlasDetachCases = 0;
+  for (const modality of ['CT', 'MRI']) {
+    const detachImaging = a.createImagingBridge(), detachComparison = a.createComparisonBridge();
+    const loads = [];
+    let detachedView, detachCleaned = 0, detachCleared = 0, detachMounted = 0;
+    const detachSession = a.connectVolumeComparison({
+      id: `synthetic-detach-${modality.toLowerCase()}`, label: `Synthetic ${modality} detach`,
+      modality, imaging: detachImaging, comparison: detachComparison,
+      resolve: (anatomy, signal) => new Promise((resolve, reject) => loads.push({ anatomy, signal, resolve, reject })),
+      mount: (_element, value) => {
+        detachMounted++; detachedView = value;
+        return () => { detachCleaned++; };
+      },
+    });
+    const receiver = a.createAtlasReceiver(() => ({
+      enabled: true, disabled: false, entries: [entry(), entry('right')],
+      allowedIds: [entry().id, entry('right').id], onSelect() {},
+    }), () => {});
+    const resolved = anatomy => ({ ...resolveReady(anatomy),
+      volume: { ...raw(), units: modality === 'CT' ? 'HU' : 'relative' } });
+    const element = { replaceChildren: () => { detachCleared++; } };
+    let detachAtlas = detachImaging.attachAtlas(receiver);
+    detachImaging.publish(entry());
+    same(loads.length, 1);
+    same(detachComparison.getSnapshot().frame.status, 'loading');
+    detachAtlas();
+    same(loads[0].signal.aborted, true, `${modality} Atlas detach aborts its pending volume loader`);
+    const detachedLoading = detachComparison.getSnapshot();
+    same(detachedLoading.frame.status, 'unmapped');
+    same(detachedLoading.frame.anatomy, null);
+    loads[0].resolve(resolved(entry())); await tick();
+    same(detachComparison.getSnapshot(), detachedLoading, `${modality} late detached resolution cannot publish`);
+
+    detachAtlas = detachImaging.attachAtlas(receiver);
+    detachImaging.publish(entry('right'));
+    same(loads.length, 2);
+    detachAtlas();
+    same(loads[1].signal.aborted, true);
+    const detachedRejected = detachComparison.getSnapshot();
+    loads[1].reject(new Error('Synthetic late detached loader rejection')); await tick();
+    same(detachComparison.getSnapshot(), detachedRejected, `${modality} late detached rejection cannot publish error`);
+
+    detachAtlas = detachImaging.attachAtlas(receiver);
+    detachImaging.publish(entry()); loads[2].resolve(resolved(entry())); await tick();
+    const mountedFrame = detachComparison.getSnapshot();
+    same(mountedFrame.frame.status, 'ready', `${modality} a new Atlas attachment and selection work`);
+    const previousUnmount = detachComparison.mount(element, mountedFrame), retiredView = detachedView;
+    same(detachMounted, 1);
+    same(retiredView.volume.units, modality === 'CT' ? 'HU' : 'relative');
+    detachAtlas();
+    same([detachCleaned, detachCleared], [1, 1], `${modality} mounted pixels clear synchronously once on detach`);
+    same(detachComparison.getSnapshot().frame.status, 'unmapped');
+    same(retiredView.setWindow(exact), false, `${modality} detached window controls are unusable`);
+    same(detachComparison.request(mountedFrame, { plane: 'coronal' }), false);
+    same(detachComparison.request(mountedFrame, { slice: 0 }), false);
+    const obsoleteMountCleanup = detachComparison.mount(element, mountedFrame);
+    same(detachMounted, 1, 'Retired frame cannot mount another renderer');
+    obsoleteMountCleanup(); previousUnmount(); detachAtlas();
+    same([detachCleaned, detachCleared], [1, 1], 'Repeated old detach and cleanup do not clear twice');
+
+    const oldDetach = detachAtlas;
+    detachAtlas = detachImaging.attachAtlas(receiver);
+    detachImaging.publish(entry('right'));
+    same(loads.length, 4);
+    const newLoading = detachComparison.getSnapshot();
+    oldDetach();
+    same(loads[3].signal.aborted, false, 'Obsolete detach cannot abort the newer Atlas loader');
+    same(detachComparison.getSnapshot(), newLoading, 'Obsolete detach cannot clear a newer attachment');
+    loads[3].resolve(resolved(entry('right'))); await tick();
+    const freshFrame = detachComparison.getSnapshot();
+    same(freshFrame.frame.status, 'ready');
+    const freshUnmount = detachComparison.mount(element, freshFrame), freshView = detachedView;
+    oldDetach(); previousUnmount();
+    same([detachCleaned, detachCleared], [1, 1], 'Obsolete detach and mount cleanup cannot clear newer pixels');
+    same(freshView.setWindow(exact), true);
+    same(detachMounted, 2);
+
+    detachSession.revoke();
+    same([detachCleaned, detachCleared], [2, 2], 'Revocation clears the current mounted pixels exactly once');
+    same(detachComparison.getSnapshot().frame.status, 'access-denied');
+    detachAtlas();
+    same(detachComparison.getSnapshot().frame.status, 'access-denied', 'Atlas detach preserves revocation');
+    same(freshView.setWindow(linear), false);
+    same(detachComparison.request(freshFrame, { plane: 'sagittal' }), false);
+    freshUnmount();
+    same([detachCleaned, detachCleared], [2, 2]);
+    detachAtlas = detachImaging.attachAtlas(receiver);
+    const revokedLoads = loads.length;
+    detachImaging.publish(entry()); await tick();
+    same(loads.length, revokedLoads, 'Reattachment does not restart a revoked volume loader');
+    same(detachComparison.getSnapshot().frame.status, 'access-denied');
+    detachAtlas();
+    same(detachComparison.getSnapshot().frame.status, 'access-denied');
+    detachSession.dispose(); detachAtlas();
+    same(detachComparison.getSnapshot(), null);
+    same([detachCleaned, detachCleared], [2, 2]);
+    atlasDetachCases++;
+  }
+
   // Small CPU timing observation, not a browser or clinical benchmark.
   const timedVolume = a.prepareVolume({
     ...raw([2, 2, 2]),
@@ -529,7 +630,7 @@ try {
     `Synthetic 256x256 CPU reslice: ${(performance.now() - started).toFixed(1)} ms (local Node, not browser performance).`,
   );
   console.log(
-    `Volume viewer: ${checks} checks passed (synthetic geometry/pixels, affine math, VOI, source matching, races, revocation, disposal, Canvas calls and component markup). No patient or browser/GPU validation claimed.`,
+    `Volume viewer: ${checks} checks passed (${atlasDetachCases} CT/MRI Atlas-detach cases; synthetic geometry/pixels, affine math, VOI, source matching, races, revocation, disposal, Canvas calls and component markup). No patient or browser/GPU validation claimed.`,
   );
 } finally {
   await unlink(temporary);

@@ -36,6 +36,27 @@ const admittedEraSpecs=[
   {name:'elbow',commit:'bda1330',path:'public/models/bodyparts3d/elbow-arteries/catalog.json',count:14,auditSha256:'161f22c01b4667002d197e244ebefdb8eb1287405e354f1eb981a2c9345bba49'},
 ];
 const admittedEras=await Promise.all(admittedEraSpecs.map(async spec=>({...spec,canonical:gitJson(spec.commit,spec.path),current:JSON.parse(await readFile(spec.path,'utf8'))})));
+// Replay only these two recorded later changes; never replace the f271 baseline.
+const celiacCommit='3305cb9a28206db86e7f9b0171323d88a3cfa01b';
+const cardiacCommit='92d97d239e719bfb11fdecbede21b6101d0485f0';
+const celiac=gitJson(celiacCommit,'content/celiac-display-transition.json');
+const cardiac=gitJson(cardiacCommit,'content/anterior-cardiac-vein-transition.json');
+const celiacSource=gitJson(celiacCommit,'public/models/bodyparts3d/celiac-display/display-correction.json');
+const cardiacSource=gitJson(cardiacCommit,'public/models/bodyparts3d/anterior-cardiac-vein/catalog.json');
+for(const [commit,path] of [
+  [celiacCommit,'content/celiac-display-transition.json'],
+  [celiacCommit,'public/models/bodyparts3d/celiac-display/display-correction.json'],
+  [cardiacCommit,'content/anterior-cardiac-vein-transition.json'],
+  [cardiacCommit,'public/models/bodyparts3d/anterior-cardiac-vein/catalog.json'],
+]) assert.deepEqual(JSON.parse(await readFile(path,'utf8')),gitJson(commit,path),'Recorded transition/source changed: '+path);
+assert.deepEqual(celiacSource.original,celiac.original);assert.deepEqual(celiacSource.replacement,celiac.replacement);
+assert.deepEqual(cardiacSource.structures,[cardiac.structure]);
+assert.equal(historicalVessels.filter(s=>s.id===celiac.original.id).length,1);
+assert(!historicalVessels.some(s=>s.id===cardiac.structure.id));
+const recordedVessels=[...historicalVessels.map(s=>{
+  if(s.id!==celiac.original.id)return s;
+  assert.deepEqual(s,celiac.original);return celiac.replacement;
+}),cardiac.structure];
 function verifyVesselSourceHistory(display,eras=admittedEras){
   const admittedIds=new Set();
   for(const era of eras){
@@ -51,11 +72,13 @@ function verifyVesselSourceHistory(display,eras=admittedEras){
     }
   }
   const vesselRecords=display.structures.filter(s=>s.system==='vessels');
-  assert.deepEqual(vesselRecords.filter(s=>!admittedIds.has(s.id)),historicalVessels,'Unknown vessel growth or f271 vessel drift');
+  assert.deepEqual(vesselRecords.filter(s=>!admittedIds.has(s.id)),recordedVessels,'Unknown vessel growth or recorded-source drift');
+  for(const bundle of [celiacSource.bundle,...cardiacSource.bundles])
+    assert.deepEqual(display.bundles.find(b=>b.id===bundle.id),bundle,'Recorded vessel bundle changed');
   const historicalGroups=api.vesselVisibilityGroups(historicalVessels,historicalVessels.map(s=>s.id));
   assert.deepEqual(historicalGroups.map(g=>[g.kind,g.total]),[['artery',175],['vein',98]]);
   const currentGroups=api.vesselVisibilityGroups(vesselRecords,vesselRecords.map(s=>s.id));
-  assert.deepEqual(currentGroups.map(g=>[g.kind,g.total]),[['artery',198],['vein',98]]);
+  assert.deepEqual(currentGroups.map(g=>[g.kind,g.total]),[['artery',198],['vein',99]]);
   return {historicalGroups,currentGroups,admittedIds};
 }
 const sourceHistory=verifyVesselSourceHistory(catalog);
@@ -68,6 +91,14 @@ const changedAdmission=structuredClone(admittedEras);changedAdmission[0].current
 assert.throws(()=>verifyVesselSourceHistory(catalog,changedAdmission));negativeMutations++;
 const missingAdmission=structuredClone(catalog);missingAdmission.structures=missingAdmission.structures.filter(s=>s.id!==admittedId);
 assert.throws(()=>verifyVesselSourceHistory(missingAdmission));negativeMutations++;
+for(const id of [celiac.replacement.id,cardiac.structure.id]) for(const mutation of ['identity','missing','duplicate','bundle']) {
+  const bad=structuredClone(catalog),index=bad.structures.findIndex(s=>s.id===id),structure=bad.structures[index];
+  if(mutation==='identity')structure.sources[0].sha256='0'.repeat(64);
+  else if(mutation==='missing')bad.structures.splice(index,1);
+  else if(mutation==='duplicate')bad.structures.push(structuredClone(structure));
+  else bad.bundles.find(b=>b.id===structure.bundle).sha256='0'.repeat(64);
+  assert.throws(()=>verifyVesselSourceHistory(bad),'Reject recorded vessel drift: '+id+'/'+mutation);negativeMutations++;
+}
 const {dissectionReducer: reduce, resolveDissection: resolve, initialDissection: initial} = api;
 const snap = ({stageId,focusId,removed,restored}) => ({stageId,focusId,removed,restored});
 let scopes=0, plans=0, componentCallbacks=0, parentCallbacks=0;
@@ -132,6 +163,8 @@ const closed=render(mod.exports.VesselSystemControl,props);
 assert(closed.includes('aria-expanded="false"'));assert(closed.includes('Show Vessels'));
 assert(!closed.includes('aria-label="Vessel visibility"'));
 const expanded=render(mod.exports.VesselVisibilityOptions,props);
+assert(expanded.startsWith('<fieldset class="vessel-system-options" aria-label="Vessel visibility">'));
+assert(expanded.endsWith('</fieldset>'));
 assert(expanded.includes('aria-checked="mixed"'));
 assert(expanded.includes('Show arteries')&&expanded.includes('Show veins')&&expanded.includes('Undo'));
 assert(!expanded.includes('Other vessels'));
@@ -140,6 +173,8 @@ const walk=(n,fn)=>{if(!n||typeof n!=='object')return;if(Array.isArray(n)){n.for
 for(const disabled of [false,true]) for(const enabled of [false,true]) {
   const calls=[];
   const tree=mod.exports.VesselVisibilityOptions({...props,disabled,enabled,onVisibility:(...v)=>calls.push(v),onUndo:()=>calls.push('undo'),onRedo:()=>calls.push('redo')});
+  assert.equal(tree.type,'fieldset');assert.equal(tree.props['aria-label'],'Vessel visibility');
+  assert.equal(tree.props.tabIndex,undefined,'Group must not add a keyboard stop');
   walk(tree,n=>{if(n.props?.onCheckedChange){n.props.onCheckedChange(false);n.props.onCheckedChange(true);componentCallbacks+=2;}});
   assert.equal(calls.length,!disabled&&enabled?groups.length*2:0);
   const history=[];walk(tree,n=>{if(n.props?.onClick)history.push(n);});
@@ -147,6 +182,15 @@ for(const disabled of [false,true]) for(const enabled of [false,true]) {
 }
 
 // Execute the real parent handler; do not substitute a matching test implementation.
+const vesselCss=require('postcss').parse(await readFile('app/vessel-system-control.css','utf8'));
+let groupCss;
+vesselCss.walkRules('.anatomy-control-rail .body-vessel-system .vessel-system-options',rule=>{
+  assert.equal(groupCss,undefined);
+  groupCss=Object.fromEntries(rule.nodes.filter(n=>n.type==='decl').map(n=>[n.prop,n.value]));
+});
+assert(groupCss);
+for(const [property,value] of Object.entries({'min-width':'0','min-inline-size':'0','margin':'0','padding':'6px 0 0','border':'0'}))
+  assert.equal(groupCss[property],value,'Native control group retains compact layout: '+property);
 const parent=await readFile('app/body-explorer.tsx','utf8');
 const ast=ts.createSourceFile('body.tsx',parent,ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX);
 let handler,wiring;
@@ -164,12 +208,33 @@ for(const exam of [false,true])for(const enabled of [false,true]) {
 // e552 -> f271 era; later source-bound lessons are intentionally out of scope.
 const historicalPreserved=['app/body-scene.tsx','app/body-content.ts','lib/anatomy-vessels.ts','package-lock.json','public/models/bodyparts3d/full-body/catalog.json','content/abdominal-organ-imaging.ts'];
 for(const path of historicalPreserved)assert.deepEqual(gitShow(controlCommit,path),gitShow(controlParent,path),`${path} changed in the accepted UI-control era`);
-const currentPreserved=['lib/anatomy-vessels.ts','package-lock.json','public/models/bodyparts3d/full-body/catalog.json','content/abdominal-organ-imaging.ts'];
+const currentPreserved=['lib/anatomy-vessels.ts','public/models/bodyparts3d/full-body/catalog.json','content/abdominal-organ-imaging.ts'];
 for(const path of currentPreserved)assert.deepEqual(await readFile(path),gitShow(controlParent,path),`${path} drifted after the accepted UI-control era`);
+// Two independently committed direct-dependency promotions happened later.
+// Reconstruct their exact three-field delta; neither changes package versions.
+const bvhCommit='94fa489683ac7817b678bdfcf0b9df4f12c1cf66';
+const harnessCommit='23b8f3bcc0b03e71d966e50358eb33cc8930f6de';
+const recordedLock=gitJson(controlParent,'package-lock.json');
+assert.equal(recordedLock.packages['node_modules/three-mesh-bvh'].version,'0.8.3');
+recordedLock.packages[''].dependencies['three-mesh-bvh']='0.8.3';
+assert.deepEqual(recordedLock,gitJson(bvhCommit,'package-lock.json'));
+assert.equal(recordedLock.packages['node_modules/tsx'].version,'4.23.13');
+assert.equal(recordedLock.packages['node_modules/tsx'].devOptional,true);
+recordedLock.packages[''].devDependencies.tsx='4.23.13';
+delete recordedLock.packages['node_modules/tsx'].devOptional;
+recordedLock.packages['node_modules/tsx'].dev=true;
+assert.deepEqual(recordedLock,gitJson(harnessCommit,'package-lock.json'));
+const verifyLock=bytes=>{
+  assert.deepEqual(JSON.parse(bytes),recordedLock,'Unrecorded dependency/lock change');
+  assert.deepEqual(bytes,gitShow(harnessCommit,'package-lock.json'),'Exact recorded lock bytes');
+};
+const lockBytes=await readFile('package-lock.json');verifyLock(lockBytes);
+const mutatedLock=JSON.parse(lockBytes);mutatedLock.packages[''].dependencies['three-mesh-bvh']='foreign';
+assert.throws(()=>verifyLock(Buffer.from(JSON.stringify(mutatedLock))));negativeMutations++;
 assert.deepEqual(await readFile('lib/vessel-visibility.ts'),gitShow(controlCommit,'lib/vessel-visibility.ts'));
 const badHistorical=historicalPreserved.map(path=>[path,gitShow(controlCommit,path)]);badHistorical.find(([path])=>path==='app/body-content.ts')[1]=Buffer.from('mutated lesson');
 assert.throws(()=>{for(const [path,bytes] of badHistorical)assert.deepEqual(bytes,gitShow(controlParent,path),`${path} changed`);});negativeMutations++;
 const sourceEras=admittedEras.map(({name,commit,count,auditSha256,canonical})=>({name,commit,count,auditSha256,ids:canonical.structures.map(s=>s.id)}));
-const report={scopes,plans,groups,componentCallbacks,parentCallbacks,defaultCollapsed:true,currentRuntimeCovered:true,currentRawCatalogPreserved:true,historicalControlEra:{parent:controlParent,commit:controlCommit,lessonAndFileBytesPreserved:true,groups:sourceHistory.historicalGroups},sourceEras,negativeMutations,clinicalApproval:false,browserTesting:false};
+const report={scopes,plans,groups,componentCallbacks,parentCallbacks,defaultCollapsed:true,nativeNamedGroups:true,currentRuntimeCovered:true,currentRawCatalogPreserved:true,historicalControlEra:{parent:controlParent,commit:controlCommit,lessonAndFileBytesPreserved:true,groups:sourceHistory.historicalGroups},sourceEras,recordedDisplayChanges:{celiacCommit,cardiacCommit,ids:[celiac.replacement.id,cardiac.structure.id]},recordedDependencyPromotions:{bvhCommit,harnessCommit},negativeMutations,clinicalApproval:false,browserTesting:false};
 await writeFile('docs/vessel-visibility-validation.json',JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify(report));

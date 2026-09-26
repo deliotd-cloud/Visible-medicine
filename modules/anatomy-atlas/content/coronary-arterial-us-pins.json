@@ -1,0 +1,407 @@
+{
+  "parentCommit": "3984c9782e35905996c53b791660ce30b75ba008",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "thorax-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/thorax-vessels-recovery.glb",
+      "bytes": 1131748,
+      "sha256": "0c82e1cb2960c6f2474f2b4759974adab5871d8074a2f4e3712e1c3a37a48ca7",
+      "structures": 25
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "561285eafab2aca4429d8a54278062d671c3e60a6fa31e9eb287557efb5ea3d1",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:trunk-of-left-coronary-artery",
+        "fmaId": "FMA3855",
+        "name": "Trunk of left coronary artery",
+        "sourceName": "trunk of left coronary artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA3855",
+        "bounds": {
+          "min": [
+            0.2338929921388626,
+            4.539499282836914,
+            0.6730400323867798
+          ],
+          "max": [
+            0.34404999017715454,
+            4.608199596405029,
+            0.734250009059906
+          ]
+        },
+        "center": [
+          0.2889714911580086,
+          4.573849439620972,
+          0.7036450207233429
+        ],
+        "anchor": [
+          0.27512800693511963,
+          4.565500259399414,
+          0.6891800165176392
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2737",
+            "sha256": "22aa075132e33f9a3d3be135515362b03ab84f12a0d641edde35e260fb2cd65b"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-main",
+      "topics": [
+        "ultrasound"
+      ],
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:anterior-interventricular-branch-of-left-coronary-artery",
+        "fmaId": "FMA3862",
+        "name": "Anterior interventricular branch of left coronary artery",
+        "sourceName": "anterior interventricular branch of left coronary artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA3862",
+        "bounds": {
+          "min": [
+            0.288318008184433,
+            3.794499397277832,
+            0.6970599889755249
+          ],
+          "max": [
+            0.793912947177887,
+            4.576200008392334,
+            1.227660059928894
+          ]
+        },
+        "center": [
+          0.54111547768116,
+          4.185349702835083,
+          0.9623600244522095
+        ],
+        "anchor": [
+          0.5348989963531494,
+          4.211999416351318,
+          1.1090400218963623
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2631",
+            "sha256": "06c78376e08c2eed7416d0e2a841e47952b5d95cafa89fbcb7612c072cd65573"
+          },
+          {
+            "file": "FJ2632",
+            "sha256": "71c8621f9ed5a9dd7814c054f9e6f2ec9a480b39141110615bc7090795040272"
+          },
+          {
+            "file": "FJ2633",
+            "sha256": "3a38d05c39634da75a226de3a4665b02614bf38ab4ea3a39fe8ef1096c0d0296"
+          },
+          {
+            "file": "FJ2634",
+            "sha256": "21dff12c8f9beef5d6022dda5c9d25419a72509e5a9fc2e4a33cafe771237442"
+          },
+          {
+            "file": "FJ2635",
+            "sha256": "51114a0f6f2d95fbc18ddbce0cc19431a0b2cb55db18208029fce64f9128ec2c"
+          },
+          {
+            "file": "FJ2636",
+            "sha256": "aa2166cc5bf12de992dd33eaee5953bc23bb739f62610bbbec345d6aea2c1ecc"
+          },
+          {
+            "file": "FJ2637",
+            "sha256": "6c59d4cf0dbdb902fc83e5596f7a181bb66bcbeda24e10c8ce48d4661dfbe34d"
+          },
+          {
+            "file": "FJ2638",
+            "sha256": "aa3ccf75d2a5a5fefe9665b5acafed8f1797f001a01da365bfdc709a8c84aa4b"
+          },
+          {
+            "file": "FJ2639",
+            "sha256": "dc8bcfe30ddcaff7e1e9022bb1013bb884cd03a0fc9d9fae00a924c8d4eef955"
+          },
+          {
+            "file": "FJ2640",
+            "sha256": "38bc0b0b2c9f8a7424098f9dbaa36ed57b07cb9a1211a86a823c779c419035b1"
+          },
+          {
+            "file": "FJ2641",
+            "sha256": "27e5fff1fdeeff77e3c911ffe2a753279cb391b977f2de3f6ea17e21876b0dac"
+          },
+          {
+            "file": "FJ2642",
+            "sha256": "e906224a535dbf5bfb2201cd6fc81880521aa02f5148ae1bbe67404ace96b3a6"
+          },
+          {
+            "file": "FJ2643",
+            "sha256": "303086bfdcb88e2e9bb4cddcfaff2e9be2bf3f1db2c7943d8ccd4a7a38239fac"
+          },
+          {
+            "file": "FJ2644",
+            "sha256": "203a8bc0e029a76f3b291729ebb4cbfd1155bb84ff5724d2eb51d5fa02d36aa9"
+          },
+          {
+            "file": "FJ2645",
+            "sha256": "760b5d48099edb74a6b14fafe02b56ad076c4e4c27c8edb905f21929d192f8b5"
+          },
+          {
+            "file": "FJ2646",
+            "sha256": "1e2f885bc9aafd4270895deb0000a970ca4e494e909e06a5f13b94858d0b8cc9"
+          },
+          {
+            "file": "FJ2647",
+            "sha256": "cd55e20146fe1f08872c6733a2ed3ef5f2397235e2f7f8c77b883f64b5b67d57"
+          },
+          {
+            "file": "FJ2648",
+            "sha256": "14c937696c6e76239474f760324389f5cc955cfe06570ec7c4f61eb4216e8894"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lad",
+      "topics": [
+        "ultrasound"
+      ],
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:circumflex-branch-of-left-coronary-artery",
+        "fmaId": "FMA3895",
+        "name": "Circumflex branch of left coronary artery",
+        "sourceName": "circumflex branch of left coronary artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA3895",
+        "bounds": {
+          "min": [
+            0.34355300664901733,
+            3.878199577331543,
+            0.3698049783706665
+          ],
+          "max": [
+            0.7683110237121582,
+            4.563100814819336,
+            0.9284499883651733
+          ]
+        },
+        "center": [
+          0.5559320151805878,
+          4.2206501960754395,
+          0.6491274833679199
+        ],
+        "anchor": [
+          0.6770110130310059,
+          4.167800426483154,
+          0.5232499837875366
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2649",
+            "sha256": "d4833bb0b60ee79f526150ad7ba9124e326aba8cd48000711bf3a6b0997b0ce0"
+          },
+          {
+            "file": "FJ2650",
+            "sha256": "dd2c38fdc784311c955fb8b0420d70dfbdf16f0ce6e236a086dc5f350faae04c"
+          },
+          {
+            "file": "FJ2651",
+            "sha256": "864567c4b15c3add5a8184edb142766538936e2ef17af4efa25acca67f4344d8"
+          },
+          {
+            "file": "FJ2652",
+            "sha256": "fd5ee304558da1d1ffebb01ca7f59b374087667e71d473fe5401f355a2ff161f"
+          },
+          {
+            "file": "FJ2653",
+            "sha256": "74fc42fbc783857619dccb5a753b06cbfce9abc6403f14e38f55bbb9fafdad80"
+          },
+          {
+            "file": "FJ2654",
+            "sha256": "4e8467b12ca3374d25807d5de058cfb8d147ad2decd99f6debe57847a83099a1"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "circumflex",
+      "topics": [
+        "ultrasound"
+      ],
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:trunk-of-right-coronary-artery",
+        "fmaId": "FMA3802",
+        "name": "Trunk of right coronary artery",
+        "sourceName": "trunk of right coronary artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA3802",
+        "bounds": {
+          "min": [
+            -0.2174760103225708,
+            3.879399299621582,
+            0.4330419898033142
+          ],
+          "max": [
+            0.20738500356674194,
+            4.610699653625488,
+            1.124940037727356
+          ]
+        },
+        "center": [
+          -0.005045503377914429,
+          4.245049476623535,
+          0.7789910137653351
+        ],
+        "anchor": [
+          0.04474269971251488,
+          4.465899467468262,
+          0.8356500267982483
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2723",
+            "sha256": "cd008769cb9d565a75bf6b91b5ad3bd482932e37c4747837f6c9446cd23b73a2"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "right-coronary",
+      "topics": [
+        "ultrasound"
+      ],
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

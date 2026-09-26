@@ -7,7 +7,7 @@ The existing atlas selection bridge now accepts X-ray adapters as well as CT, MR
 - Two-way **annotation/structure selection only**. Exact current-source matches can navigate automatically after explicit opt-in. Multiple matches or `component`, `broader` and `related` links require an explicit choice, in the correct direction.
 - The loaded resource ID, revision and material hash must match. A link cannot silently switch cases, substitute a side, reuse a stale annotation or send a donor-model point as a patient coordinate. Didanix retains its annotation-to-source-frame/DICOM patient-LPS resolution.
 - Current registry policies are rechecked for lookup, choice and pending navigation. Atlas, case and lecture entitlement decisions remain independent. Lecture and quiz anchors are never sent to the imaging viewer, even if individually accessible.
-- New selections, study changes, close, practice and disposal cancel pending navigation. Context changes pause both the adapter and the atlas's linked-selection checkbox. Stable user-event IDs suppress repeated events. Port implementations must not echo programmatic reveals as user clicks.
+- New selections, study changes, close, practice and disposal cancel pending navigation. Unmounting/replacing the Atlas source view also aborts pending reveals, clears choices and pauses the connection; remounting does not silently resume it. Context changes pause both the adapter and the atlas's linked-selection checkbox. Stable user-event IDs suppress repeated events. Port implementations must not echo programmatic reveals as user clicks.
 - No network endpoint, message listener, scan data, credentials, patient UID, registration transform or access grant is created by this adapter. No clinical or privacy approval is inferred.
 
 ## Website shoulder integration
@@ -49,6 +49,16 @@ The injected `viewer.reveal(match, {signal, isCurrent})` must:
 Client-side policies and the same-origin API are UX guards, **not authentication or a paywall**. Resource/lecture servers must independently enforce current entitlements on each request. Never deserialize policy callbacks or grant authority from an imported document. No actual study is connected by this installation: the published learning registry remains empty, Didanix's real-DICOM/OIDC readiness gates remain unresolved, and no owner study has been cleared for public release here.
 
 ## Verification and remaining work
+
+26 September: a synthetic regression reproduced a reveal completing after its
+source Atlas unmounted while the Education study remained unchanged. The bridge
+now notifies opt-in adapters when that specific attachment ends; Didanix linking
+cancels the request and requires re-enabling. Each attachment owns its cleanup,
+so an old cleanup cannot detach a new mount reusing the same callback. CT, MRI,
+X-ray and US tests cover abort signals, stale completion, remount/re-enable,
+choice cancellation and synchronous unmount during connection setup. This is
+Atlas/website integration code only: no Didanix desktop application file changed.
+Browser and actual cleared-case acceptance remain separate gates.
 
 17 September: a new regression first reproduced stale-facade reconnection after
 removal. The compiled browser then exposed a valid host-to-iframe document being

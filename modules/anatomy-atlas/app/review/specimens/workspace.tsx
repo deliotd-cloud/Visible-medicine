@@ -1,6 +1,7 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { ReviewSignInLink } from '@/components/review-sign-in-link';
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -302,6 +303,13 @@ export function SpecimenDecisionEditor({
   const [needsRefresh, setNeedsRefresh] = useState(false);
   const [error, setError] = useState(""),
     [message, setMessage] = useState("");
+  const pendingRead = useRef<AbortController | null>(null);
+  function beginRead() {
+    pendingRead.current?.abort();
+    const controller = new AbortController();
+    pendingRead.current = controller;
+    return controller;
+  }
   useEffect(() => {
     onDirty(dirty || busy);
   }, [dirty, busy, onDirty]);
@@ -322,7 +330,7 @@ export function SpecimenDecisionEditor({
     return parseSpecimenHistory(data, c, track, before);
   }
   useEffect(() => {
-    const controller = new AbortController();
+    const controller = beginRead();
     read(undefined, controller.signal)
       .then((p) => {
         if (!controller.signal.aborted) {
@@ -334,7 +342,7 @@ export function SpecimenDecisionEditor({
       .catch((e) => {
         if (!controller.signal.aborted) setError(e.message);
       });
-    return () => controller.abort();
+    return () => pendingRead.current?.abort();
   }, []);
   function edit(patch: Partial<SpecimenReviewDraft>) {
     if (busy) return;
@@ -343,10 +351,13 @@ export function SpecimenDecisionEditor({
     setMessage("");
   }
   async function refresh() {
+    if (busy) return;
+    const controller = beginRead();
     setBusy(true);
     setError("");
     try {
-      const p = await read();
+      const p = await read(undefined, controller.signal);
+      if (controller.signal.aborted) return;
       setPage(p);
       setHistory(p);
       setNeedsRefresh(false);
@@ -360,9 +371,9 @@ export function SpecimenDecisionEditor({
         setReconcile(false);
       }
     } catch (e) {
-      setError((e as Error).message);
+      if (!controller.signal.aborted) setError((e as Error).message);
     } finally {
-      setBusy(false);
+      if (!controller.signal.aborted) setBusy(false);
     }
   }
   async function save() {
@@ -439,6 +450,8 @@ export function SpecimenDecisionEditor({
           : "Private history not loaded"}
       </p>
       {error && <p role="alert">{error}</p>}
+      {!page && error && <p><ReviewSignInLink target={{ scope: 'specimens',
+        specimen: c.specimenKey, structure: c.structureId }} /></p>}
       {message && <p role="status">{message}</p>}
       <div className="specimen-review-actions">
         <Button variant="outline" disabled={busy} onClick={refresh}>
@@ -743,13 +756,16 @@ export function SpecimenDecisionEditor({
             variant="outline"
             disabled={busy}
             onClick={async () => {
+              if (busy) return;
+              const controller = beginRead();
               setBusy(true);
               try {
-                setHistory(await read(history.nextBefore!));
+                const previous = await read(history.nextBefore!, controller.signal);
+                if (!controller.signal.aborted) setHistory(previous);
               } catch (e) {
-                setError((e as Error).message);
+                if (!controller.signal.aborted) setError((e as Error).message);
               } finally {
-                setBusy(false);
+                if (!controller.signal.aborted) setBusy(false);
               }
             }}
           >

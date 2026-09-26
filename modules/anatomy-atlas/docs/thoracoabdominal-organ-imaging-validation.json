@@ -4,16 +4,18 @@
   "sourceSelections": 15,
   "originalDraftPlacements": 42,
   "laterMainBronchusUltrasoundDrafts": 2,
-  "currentDraftPlacements": 44,
+  "laterEsophagusUltrasoundDrafts": 1,
+  "currentDraftPlacements": 45,
   "modalities": {
     "ct": 15,
     "mri": 15,
-    "ultrasound": 14
+    "ultrasound": 15
   },
   "unchangedTopics": 9865,
-  "ultrasoundPending": [
+  "historicalUltrasoundPending": [
     "FMA7131"
   ],
+  "ultrasoundPending": [],
   "bodySchemaRecords": 1101,
   "actualNoteRenders": 42,
   "rejectedSourceTopicCombinations": 798,
@@ -54,5 +56,12 @@
   "clinicalApproval": false,
   "imagesImported": false,
   "imagingConnected": false,
-  "browserOrDeviceAcceptance": false
+  "browserOrDeviceAcceptance": false,
+  "historicalReplay": {
+    "transitionCommit": "6d8c900b4f80843ca7568e4222ffb49d0d22e1f1",
+    "changedTopics": 42,
+    "unchangedTopics": 9867,
+    "originalBaselineHash": "8df979c3fde7a53838b46b8b0a653652d60bd8c0b6033b06814ca36d03adf067",
+    "originalCatalogAndRecipesUnchanged": true
+  }
 }

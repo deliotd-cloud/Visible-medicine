@@ -11,6 +11,10 @@ import pins from '../content/thoracoabdominal-organ-imaging-pins.json' with {typ
 import {authoringBeforeCentralVesselImaging} from './central-vessel-imaging-history.mjs';
 import {beforeCorpusSpongiosumSource} from './corpus-spongiosum-source-history.mjs';
 import corpusPins from '../content/corpus-imaging-pins.json' with {type:'json'};
+import {build} from './workspace-component-test-build.mjs';
+import {execFileSync} from 'node:child_process';
+import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
+import {wholeBodyTeachingSnapshot} from './exact-clinical-reference-history.mjs';
 const newest=await contentContext();
 if(process.argv.includes('--xray-focused')){
   const restored=authoringBeforeThoracoabdominalOrganXray(newest);
@@ -64,11 +68,44 @@ assert.throws(()=>beforeCorpusSpongiosumSource({...unprojected,bodyLesson(s,t){
 assert.equal(beforeCorpusSpongiosumSource(api,newest.catalog),api);
 const {thoracoabdominalOrganImagingGroups:groups,thoracoabdominalOrganImagingReferences:references}=api;
 const original=JSON.stringify(catalog),before=authoringBeforeThoracoabdominalOrganImaging(newest);
-assert.equal(hash({body:catalog.structures.map(s=>({id:s.id,sections:Object.fromEntries(api.contentTabs.map(t=>[t,before.bodyLesson(s,t)]))})),shoulder:api.structures,recipes:api.dissectionProfiles}),pins.previousAllLessonsAndRecipesHash,'All preceding teaching and recipes preserved');
+// Scoped adapters retain later unrelated content; whole historical snapshots
+// must use both original source trees, rather than a mixture with the live tree.
+const transitionCommit='6d8c900b4f80843ca7568e4222ffb49d0d22e1f1';
+const gitBytes=(commit,path)=>execFileSync('git',['show',commit+':'+path],{maxBuffer:16e6});
+const transition=JSON.parse(await readFile('content/thoracoabdominal-organ-imaging.transition.json','utf8'));
+assert.deepEqual(JSON.parse(gitBytes(transitionCommit,'content/thoracoabdominal-organ-imaging-pins.json')),pins);
+assert.deepEqual(JSON.parse(gitBytes(transitionCommit,'content/thoracoabdominal-organ-imaging.transition.json')),transition);
+const rawBefore=JSON.parse(gitBytes(pins.sourceCommit,'public/models/bodyparts3d/full-body/catalog.json'));
+const rawAfter=JSON.parse(gitBytes(transitionCommit,'public/models/bodyparts3d/full-body/catalog.json'));
+assert.deepEqual(rawAfter,rawBefore,'Original transition preserves raw geometry catalog');
+const historicalBefore=await exactSourceHistoryApi(pins.sourceCommit);
+const historicalAfter=await exactSourceHistoryApi(transitionCommit);
+const oldDisplay=historicalBefore.bodyDisplayCatalog(rawBefore);
+assert.deepEqual(historicalAfter.bodyDisplayCatalog(rawAfter),oldDisplay);
+assert.deepEqual(historicalBefore.contentTabs,api.contentTabs);
+assert.deepEqual(historicalAfter.contentTabs,api.contentTabs);
+assert.equal(hash(wholeBodyTeachingSnapshot(historicalBefore,rawBefore)),pins.previousAllLessonsAndRecipesHash,'All original preceding teaching and recipes preserved');
+assert.deepEqual(historicalAfter.structures,historicalBefore.structures);
+assert.deepEqual(historicalAfter.dissectionProfiles,historicalBefore.dissectionProfiles);
+const recorded=new Map(pins.entries.flatMap(e=>e.topics.map(t=>[e.identity.id+'|'+t,{entry:e,tab:t}])));
+let historicalChanged=0,historicalUnchanged=0;
+for(const s of oldDisplay.structures)for(const t of api.contentTabs){
+  const entry=recorded.get(s.id+'|'+t),previous=historicalBefore.bodyLesson(s,t),next=historicalAfter.bodyLesson(s,t);
+  if(!entry){assert.deepEqual(next,previous,'Original unrelated topic preserved');historicalUnchanged++;continue;}
+  assert.deepEqual(s,entry.entry.identity);
+  assert.deepEqual(previous,entry.entry.previous[t]);
+  assert.equal(hash(next),transition.entries.find(e=>e.id===s.id).sections[t]);
+  assert.deepEqual(api.bodyLesson(s,t),next,'Live normalized lesson matches original recorded transition');
+  historicalChanged++;
+}
+assert.equal(historicalChanged,42);assert.equal(historicalUnchanged,9867);
 const records=api.bodyContentRecords(catalog),registry=new Map([...context.shoulder,...records].map(r=>[r.representationScope+'|'+r.id,r]));
 const validate=await contentValidator(registry);for(const r of records)assert(validate(r));
 let changed=0,unchanged=0,rejected=0,rendered=0;
 const require=createRequire(import.meta.url),React=require('react'),render=require('react-dom/server').renderToStaticMarkup;
+const built=await build({stdin:{contents:"export {SourceDisplayNotes} from './app/source-display-notes';",resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'cjs',write:false});
+const scope={exports:{}};runInNewContext(built.outputFiles[0].text,{module:scope,exports:scope.exports,require});
+const {SourceDisplayNotes}=scope.exports;
 const source=await readFile('app/body-explorer.tsx','utf8'),ast=ts.createSourceFile('body.tsx',source,ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX);
 let callback;
 function visit(n){if(ts.isArrowFunction(n)&&n.body.getText(ast).includes('const content = bodyContent(selected, value);')){assert(!callback);callback=n.getText(ast);}ts.forEachChild(n,visit);}
@@ -77,12 +114,13 @@ const callbackJs=ts.transpile('const renderNote='+callback,{target:ts.ScriptTarg
 for(const s of catalog.structures)for(const tab of api.contentTabs) {
   // Later X-ray and main-bronchus external ultrasound extensions have separate transitions.
   if(tab==='ultrasound'&&['FMA7395','FMA7396'].includes(s.fmaId))continue;
-  const topic=tab==='xray'?undefined:api.thoracoabdominalOrganImagingLesson(s,tab),now=api.bodyLesson(s,tab);
+  const laterEsophagus=tab==='ultrasound'&&s.fmaId==='FMA7131';
+  const topic=tab==='xray'||laterEsophagus?undefined:api.thoracoabdominalOrganImagingLesson(s,tab),now=api.bodyLesson(s,tab);
   if(!topic){assert.deepEqual(now,before.bodyLesson(s,tab));unchanged++;continue;}
   changed++;assert.equal(before.bodyLesson(s,tab).readiness,'pending');assert.equal(now.readiness,'draft');assert.deepEqual(now,topic);
   const record=records.find(r=>r.id===s.id);assert.deepEqual(record.content[tab],topic);assert.equal(record.validation.clinicalApproval,'not-included');
   assert.equal(new Set(topic.citations).size,topic.citations.length);
-  const jsx=runInNewContext(callbackJs+';renderNote(topic)',{React,topic:tab,bodyContent:api.bodyContent,selected:s,WorkspaceModeButton:({children})=>React.createElement('button',null,children),ComponentImagingNotes:()=>null,ScanLine:()=>null,catalog,side:'both',exam:false,openNested(){throw Error('No automatic specimen navigation');}});
+  const jsx=runInNewContext(callbackJs+';renderNote(topic)',{React,topic:tab,bodyContent:api.bodyContent,selected:s,SourceDisplayNotes,WorkspaceModeButton:({children})=>React.createElement('button',null,children),ComponentImagingNotes:()=>null,ScanLine:()=>null,catalog,side:'both',exam:false,openNested(){throw Error('No automatic specimen navigation');}});
   const html=render(jsx);assert(html.includes(render(React.createElement('p',null,now.body))));
   for(const bullet of now.bullets)assert(html.includes(render(React.createElement('li',null,bullet))));
   assert(html.includes('No imaging study loaded'));assert(html.includes('review pending'));
@@ -95,7 +133,7 @@ assert.equal(Object.keys(groups).length,15);assert.equal(changed,42);assert.equa
 for(const [region,count] of [['thorax',8],['abdomen',7]])assert.equal(pins.entries.filter(e=>groups[e.group].region===region).length,count);
 const unresolved=pins.entries.filter(e=>!groups[e.group].focus.ultrasound).map(e=>e.identity);
 assert.deepEqual(unresolved.map(s=>s.fmaId).sort(),['FMA7131']);
-for(const s of unresolved){assert.equal(api.thoracoabdominalOrganImagingLesson(s,'ultrasound'),undefined);assert.equal(api.bodyLesson(s,'ultrasound').readiness,'pending');}
+for(const s of unresolved){assert.equal(api.bodyLesson(s,'ultrasound').readiness,'pending');assert.equal(before.bodyLesson(s,'ultrasound').readiness,'pending');assert.equal(newest.api.thoracoabdominalOrganImagingLesson(s,'ultrasound').readiness,'draft');assert.deepEqual(newest.api.bodyLesson(s,'ultrasound'),newest.api.thoracoabdominalOrganImagingLesson(s,'ultrasound'));}
 assert.match(groups['left-lung'].focus.ct.body,/lingula.*upper lobe/);
 assert.match(groups.thymus.focus.mri.body,/younger thymus.*lack/);
 assert.match(groups['cystic-duct'].focus.mri.pitfall,/false connections/);
@@ -113,5 +151,8 @@ for(const entry of Object.values(groups).flatMap(g=>Object.values(g.focus)))uniq
 for(const f of unique.values())for(const key of f.references){assert(references[key]?.startsWith('https://'));budgets[key]=(budgets[key]||0)+((f.body+' '+f.pitfall).match(/\S+/g)?.length||0);}
 for(const [key,count]of Object.entries(budgets))assert(count<=200,key+' reference word count '+count);
 assert.equal(JSON.stringify(catalog),original);
-const report={baselineSource:pins.sourceCommit,groups:15,sourceSelections:15,originalDraftPlacements:changed,laterMainBronchusUltrasoundDrafts:2,currentDraftPlacements:changed+2,modalities:{ct:15,mri:15,ultrasound:14},unchangedTopics:unchanged,ultrasoundPending:unresolved.map(s=>s.fmaId),bodySchemaRecords:records.length,actualNoteRenders:rendered,rejectedSourceTopicCombinations:rejected,uniqueReferenceFacts:unique.size,sourceWordCounts:budgets,sourceGeometryChanged:false,currentApprovalRecordsChanged:false,clinicalApproval:false,imagesImported:false,imagingConnected:false,browserOrDeviceAcceptance:false};
+const currentUltrasoundPending=pins.entries.filter(e=>!newest.api.thoracoabdominalOrganImagingGroups[e.group].focus.ultrasound).map(e=>e.identity.fmaId);
+assert.deepEqual(currentUltrasoundPending,[]);
+const report={baselineSource:pins.sourceCommit,groups:15,sourceSelections:15,originalDraftPlacements:changed,laterMainBronchusUltrasoundDrafts:2,laterEsophagusUltrasoundDrafts:1,currentDraftPlacements:changed+3,modalities:{ct:15,mri:15,ultrasound:15},unchangedTopics:unchanged,historicalUltrasoundPending:unresolved.map(s=>s.fmaId),ultrasoundPending:currentUltrasoundPending,bodySchemaRecords:records.length,actualNoteRenders:rendered,rejectedSourceTopicCombinations:rejected,uniqueReferenceFacts:unique.size,sourceWordCounts:budgets,sourceGeometryChanged:false,currentApprovalRecordsChanged:false,clinicalApproval:false,imagesImported:false,imagingConnected:false,browserOrDeviceAcceptance:false};
+report.historicalReplay={transitionCommit,changedTopics:historicalChanged,unchangedTopics:historicalUnchanged,originalBaselineHash:pins.previousAllLessonsAndRecipesHash,originalCatalogAndRecipesUnchanged:true};
 await writeFile('docs/thoracoabdominal-organ-imaging-validation.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

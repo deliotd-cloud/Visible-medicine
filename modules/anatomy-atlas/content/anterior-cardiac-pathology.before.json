@@ -1,0 +1,77 @@
+{
+  "parentCommit": "896bb439eca407539c1e683298b91d8d78530732",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "sourceHash": "28e8acd87963e78b318244c2f5a39af9afe7ded66d073bb70abf5d5ed9a7ef46",
+  "previousAllLessonsAndRecipesHash": "127772e04149a4f851fd660c0a997e04d0adbfc661aaebdbb649f10739b60e7b",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein",
+        "fmaId": "FMA76767",
+        "name": "Anterior cardiac vein · source group",
+        "sourceName": "anterior cardiac vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "anterior-cardiac-vein",
+        "nodeName": "FMA76767",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2725",
+            "sha256": "48063a8e366f2ad5c6745d9d20c31afc216a68561d5b4826de256444190f7634"
+          },
+          {
+            "file": "FJ2730",
+            "sha256": "bb15f6552044e7e9dbf7035fc0836b0ee10e1a46a22a0b2cc90c4eb711c11141"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.035955000668764114,
+            4.229499816894531,
+            1.0874899625778198
+          ],
+          "max": [
+            0.29523301124572754,
+            4.429800033569336,
+            1.2661999464035034
+          ]
+        },
+        "center": [
+          0.1296390052884817,
+          4.329649925231934,
+          1.1768449544906616
+        ],
+        "anchor": [
+          0.12833400070667267,
+          4.34119987487793,
+          1.2211400270462036
+        ],
+        "coverageNote": "Two original surfaces retained as one source-defined group. The visible branches are not a normal vein count, a complete venous tree or independently named veins. Apparent contact with the heart, right coronary artery or the other component does not prove lumen continuity, drainage openings or a dissection plane. Reassemble before comparing source relationships.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "pathology",
+      "previous": {
+        "readiness": "pending",
+        "title": "Anterior cardiac vein · source group · Review pending",
+        "body": "Additional structure-specific teaching remains to be authored and reviewed.",
+        "bullets": [],
+        "note": "No patient scan, validated imaging visibility, diagnosis, intervention or registered correspondence is supplied."
+      }
+    }
+  ]
+}

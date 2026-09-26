@@ -12,6 +12,13 @@ The current model's exact bundle hashes are checked before restoring. Source cha
 
 ## Data and failure handling
 
+26 September: shoulder bookmarks also preserve the reference-plane illustration
+toggle. It is separate from the cutaway plane and is not an acquired image or
+CT/MRI synchronization. Older version-1 bookmarks omit this optional display
+setting and restore it off, retaining their previous behaviour. A supplied value
+must be boolean and shoulder-scoped; invalid values are rejected without
+overwriting stored data. No migration or account/database change is required.
+
 `lib/study-views.ts` defines a versioned, bounded display-only schema. It rejects invalid numeric values, unsupported versions, malformed IDs/cameras, duplicate IDs and oversized data; it reconstructs allowlisted state and discards unknown fields. Corrupt data is left untouched and saving is disabled, not silently reset. No imported URL, patient frame UID or executable content is accepted into restored state.
 
 Each edit reads the latest store before modifying it and writes successfully before the UI reports success. Web Locks serialise edits across same-origin tabs where supported; storage events refresh other open viewers. Older browsers without Web Locks use a fresh-read best-effort fallback and cannot guarantee concurrent cross-tab edits are atomic. No automatic eviction occurs at the 20-view limit.
@@ -29,7 +36,15 @@ These controls recover from reported asset failures. They do not guarantee avail
 
 ## Evidence and remaining gates
 
-`npm run study:test` executes the runtime validation, persistence, retry-planning, dissection and camera helpers: **16,916 assertions** pass, spanning all 12 body profiles and shoulder view/layer combinations. Tests cover malformed/oversized state, no automatic deletion, write failure, fresh-read preservation, stage-visibility round trips, dissection undo, source mismatch, perspective/orthographic framing and exact retry scope. Existing inspection, dissection, explode and review tests remain separate checks.
+`npm run study:test` executes the runtime validation, persistence, retry-planning, dissection and camera helpers across all 12 body profiles and shoulder view/layer combinations; its output reports the current assertion total. Tests cover malformed/oversized state, no automatic deletion, write failure, fresh-read preservation, stage-visibility round trips, dissection undo, source mismatch, perspective/orthographic framing and exact retry scope. Existing inspection, dissection, explode and review tests remain separate checks.
+
+`npm run shoulder-study-reference-plane:test` executes the actual shoulder
+capture/restore handlers and storage/schema helpers. It checks the illustration
+toggle on/off in spatial and tray presentations while preserving other state,
+legacy omission, strict shoulder scoping and unchanged stored data after invalid
+input. The optional `--baseline` argument to its script loads the old handlers
+from `603fd30` and deliberately fails at the missing captured flag. This is a
+code-level reproduction, not browser acceptance or imaging validation.
 
 Shared bookmark and camera display code is included in shoulder review fingerprints. A build expires prior geometry-display reviews while preserving the immutable review records. There are no new assets, libraries, fonts, paid services, source anatomy or database changes in this milestone.
 

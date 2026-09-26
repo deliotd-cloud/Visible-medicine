@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import * as labelFocus from '../lib/scene-label-focus.ts';
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { Group, Vector3, PerspectiveCamera, OrthographicCamera } from 'three';
@@ -377,7 +378,7 @@ runInNewContext(
       if (name === '@react-three/fiber')
         return {
           useThree: (select) =>
-            select({ size, invalidate: () => invalidations++ }),
+            select({ size, gl: { domElement: { isConnected: false } }, invalidate: () => invalidations++ }),
           useFrame: (fn) => {
             frame = (args) => { fixtureTime += 101; fn({...args, scene: fixtureScene}); };
           },
@@ -386,6 +387,7 @@ runInNewContext(
       if (name === 'three') return Three;
       if (name === '@/lib/screen-label-layout') return labelLayout;
       if (name === '@/lib/label-depth') return labelDepth;
+      if (name === '@/lib/scene-label-focus') return labelFocus;
       if (name === './scene-label-layer.css') return {};
       if (name === 'react/jsx-runtime') return require(name);
       throw Error('Unexpected component import: ' + name);

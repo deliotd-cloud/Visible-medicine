@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
+import { ReviewSignInLink } from '@/components/review-sign-in-link';
 import { Brand } from '../../brand';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -155,8 +156,7 @@ export function BodyReviewDashboard({
       <header className="body-review-header">
         <Brand />
         <span>Body review workspace</span>
-        <Link href="/review">Shoulder review records</Link>
-        <Link href="/review/specimens">Specimen reviews</Link>
+        <Link href="/review/overview">Clinical review home</Link>
         <Link href="/">Back to atlas</Link>
       </header>
       <main className="body-review-shell">
@@ -288,12 +288,9 @@ export function BodyReviewDashboard({
                   Retry
                 </Button>
                 <p>
-                  <a
-                    href="/signin-with-chatgpt?return_to=%2Freview%2Fbody"
-                    target="_top"
-                  >
+                  <ReviewSignInLink target={{ scope: 'body', structure: selected }}>
                     Sign in to the review workspace
-                  </a>
+                  </ReviewSignInLink>
                   . No review decision has been saved.
                 </p>
               </div>

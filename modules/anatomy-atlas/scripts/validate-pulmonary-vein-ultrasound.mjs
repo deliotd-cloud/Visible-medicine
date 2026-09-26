@@ -5,6 +5,7 @@ import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
 import ts from 'typescript';
 import {contentContext} from './content-contract-tools.mjs';
+import {build} from './workspace-component-test-build.mjs';
 import {wholeBodyTeachingSnapshot} from './exact-clinical-reference-history.mjs';
 import {beforePulmonaryVeinUltrasound} from './pulmonary-vein-ultrasound-history.mjs';
 import {beforeOrbitalUltrasound} from './orbital-ultrasound-history.mjs';
@@ -21,6 +22,10 @@ function visit(n){if(ts.isArrowFunction(n)&&n.body.getText(ast).includes('const 
 visit(ast);assert(callback);
 const js=ts.transpileModule('const renderNote='+callback,{compilerOptions:{target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.React}}).outputText;
 const require=createRequire(import.meta.url),React=require('react'),render=require('react-dom/server').renderToStaticMarkup;
+const compiled=await build({stdin:{contents:"export {SourceDisplayNotes} from './app/source-display-notes';",resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'cjs',write:false});
+const noteScope={exports:{}};
+runInNewContext(compiled.outputFiles[0].text,{module:noteScope,exports:noteScope.exports,require});
+const {SourceDisplayNotes}=noteScope.exports;
 const ids=new Set(pins.entries.map(e=>e.identity.id)),records=api.bodyContentRecords(display);
 let changed=0,unchanged=0,rendered=0,rejected=0;
 const bodies=new Set();
@@ -33,7 +38,7 @@ for(const s of display.structures)for(const topic of api.contentTabs){
   assert(lesson.citations.includes(api.centralVesselImagingReferences.echoTEE));
   assert.equal(records.find(r=>r.id===s.id).validation.clinicalApproval,'not-included');
   assert.deepEqual(records.find(r=>r.id===s.id).content[topic],lesson);
-  const jsx=runInNewContext(js+';renderNote(topic)',{React,topic,selected:s,bodyContent:api.bodyContent,WorkspaceModeButton:({children})=>React.createElement('button',null,children),ComponentImagingNotes:()=>null,ScanLine:()=>null,catalog:display,side:'both',exam:false,openNested(){throw Error('No automatic navigation');}});
+  const jsx=runInNewContext(js+';renderNote(topic)',{React,topic,selected:s,bodyContent:api.bodyContent,SourceDisplayNotes,WorkspaceModeButton:({children})=>React.createElement('button',null,children),ComponentImagingNotes:()=>null,ScanLine:()=>null,catalog:display,side:'both',exam:false,openNested(){throw Error('No automatic navigation');}});
   const html=render(jsx);assert(html.includes(render(React.createElement('p',null,lesson.body))));
   for(const bullet of lesson.bullets)assert(html.includes(render(React.createElement('li',null,bullet))));
   for(const url of lesson.citations)assert(html.includes(url.replaceAll('&','&amp;')));

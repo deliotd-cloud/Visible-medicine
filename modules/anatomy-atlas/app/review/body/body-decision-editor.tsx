@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { ReviewSignInLink } from '@/components/review-sign-in-link';
 import {
   bodyApprovalProblems,
   bodyDecisionLabel,
@@ -234,12 +235,7 @@ export function BodyDecisionEditor({
             Retry records
           </Button>
           <p>
-            <a
-              href="/signin-with-chatgpt?return_to=%2Freview%2Fbody"
-              target="_top"
-            >
-              Sign in to save reviews
-            </a>
+            <ReviewSignInLink target={{ scope: 'body', structure: id }} />
           </p>
         </>
       )}

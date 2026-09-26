@@ -88,6 +88,30 @@ Never reuse a pass without its source/configuration identity.
 
 ## Risk-matched validation
 
+### Throughput update — 26 September 2026
+
+Use the available workers for independent deliverables, not duplicate full-project
+investigations. Assign source ownership before starting; the coordinator alone
+edits shared content dispatch, history, package scripts and generated review data.
+Workers return focused evidence and stop; the coordinator integrates a completed
+batch once and runs the shared validation once against that exact combined state.
+
+Only one memory-heavy build, typecheck or broad validation process runs at a time.
+On this Windows host, the recovered Vite build used process-local
+`RAYON_NUM_THREADS=1` and `GOMAXPROCS=2`; prefer that bounded concurrency while
+memory pressure is unresolved. Do not change machine-wide settings or terminate
+unrelated applications. Lightweight independent research may proceed concurrently.
+
+Classify a failed check before retrying: resource failure, pre-existing diagnostic,
+or regression. Retain the original failure and rerun only the affected check after
+a relevant correction or observed resource recovery. Never suppress a check to
+improve throughput. Browser acceptance and actual remote backup still need their
+own evidence; neither can be inferred from a build or local commit.
+
+The current session admits two workers plus the coordinator. A four-worker
+future-session cap was discussed, but the protected configuration write was not
+granted. No higher cap was applied or claimed; obey the actual session limit.
+
 These are starting points, not automatic coverage or a release checklist:
 
 | Change | Required decision/checks |

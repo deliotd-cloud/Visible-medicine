@@ -237,6 +237,7 @@ export default function ShoulderExplorer({
       isolated,
       focus: false,
       labels: showLabels,
+      referencePlane: syncPlane,
       ghostRemoved: false,
       illustrated: true,
       anchorSkeleton,
@@ -250,7 +251,7 @@ export default function ShoulderExplorer({
     workspace.chooseMode('dissect');
     setMode('study');
     practiceDispatch({ type: 'dismiss' });
-    setSyncPlane(false);
+    setSyncPlane(state.referencePlane ?? false);
     setSelectedId(state.selectedId ?? structures[0].id);
     setView(state.view as CameraView);
     setLayer(state.layer);
@@ -826,7 +827,7 @@ export default function ShoulderExplorer({
             <div className="shoulder-model-heading">
               <Title>Right shoulder</Title>
               <div className="shoulder-heading-actions">
-                <div className="shoulder-zoom-controls" role="group" aria-label="Shoulder zoom controls">
+                <fieldset className="shoulder-zoom-controls" aria-label="Shoulder zoom controls">
                   <Button
                     size="icon"
                     variant="outline"
@@ -843,7 +844,7 @@ export default function ShoulderExplorer({
                   >
                     <Minus />
                   </Button>
-                </div>
+                </fieldset>
                 {mode === 'study' && <StructureDetailsButton />}
               </div>
             </div>

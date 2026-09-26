@@ -59,7 +59,11 @@ export function connectDidanixEducation({bridge,registry,viewer,scope,onStatus=(
     }catch{if(isCurrent()) report('adapter-error');return false;}
     finally{if(flight===controller)flight=null;}
   }
+  // Registration notifies bridge subscribers synchronously; one may unmount
+  // the source view before registerAdapter has returned its handle.
+  let pauseBridge=()=>{};
   const registered=bridge.registerAdapter({id:'vm-didanix-education',label:'Didanix Education',modality:'multimodal',
+    onAtlasDetached:()=>{cancel();enabled=false;pauseBridge();report('paused');},
     onAtlasSelection:selection=>{
       cancel();
       if(!allowed()){report('paused');return;}
@@ -73,6 +77,7 @@ export function connectDidanixEducation({bridge,registry,viewer,scope,onStatus=(
       report(choices.length?'choice-required':'unavailable');
     },
   });
+  pauseBridge=()=>registered.pause();
   let stopSelection=()=>{},stopContext=()=>{};
   try {
     stopSelection=viewer.subscribeSelection(event=>{

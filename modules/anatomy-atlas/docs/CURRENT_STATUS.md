@@ -1,5 +1,118 @@
 # Current atlas status
 
+26 September 2026: [Clinical review history protection](CLINICAL_REVIEW_HOME.md)
+fixes a reproduced delayed-response overwrite in internal and specimen reviews.
+Refresh/exit cancels obsolete reads; late results cannot replace new notes or
+report outdated failures. Existing draft reconciliation and save guards remain.
+This is local source work, not publication or radiologist approval.
+
+26 September 2026: [Clinical review continuity](CLINICAL_REVIEW_HOME.md#sign-in-continuity-and-keyboard-focus--26-september-2026)
+retains exact structure/model/source selections through sign-in and adds missing
+internal/specimen sign-in links after initial record-load failures. Review list
+keyboard focus stays inside its clipping boundary. Existing access, unsaved-edit
+and revision gates are unchanged; live integration and browser checks remain open.
+
+26 September 2026: [Common interosseous ultrasound](COMMON_INTEROSSEOUS_US.md)
+adds two attributed, exact-source drafts. Existing anterior-artery teaching and
+all models are preserved; recurrent US and small-branch MRI remain pending.
+Local source only, not clinical approval or live publication.
+
+26 September 2026: [Label focus continuity](LABEL_FOCUS_CONTINUITY.md) returns
+focus from a label omitted by rotation or compact layout to its model canvas,
+without scrolling or taking focus from another control. No added UI, anatomy
+or teaching changes. Browser acceptance and website integration remain pending.
+
+26 September 2026: [Eye ultrasound](EYE_ULTRASOUND.md) adds four lens/sclera
+draft placements with CC BY attribution. Exact source/parent bindings, prior
+teaching and geometry are preserved. No images imported or approvals created.
+Local source only; website integration remains pending.
+
+26 September 2026: [Plantar arterial ultrasound](PLANTAR_ARTERIAL_US.md) adds
+six source-bound drafts with CC BY attribution; six unsupported branch/venous
+slots stay pending. No models, clinical approvals or controls change. The main
+checkpoint records validation/recovery; source work is not live publication.
+
+26 September 2026: [Lateral cricoarytenoid ultrasound](LATERAL_CRICOARYTENOID_US.md)
+adds two exact-source drafts in the existing notes, with explicit cadaver-study
+limits and CC BY attribution. All other topics and models remain unchanged;
+clinical review is pending. Final validation and recovery are recorded in the
+main-workspace checkpoint. No publication or real-image validation is inferred.
+
+26 September 2026: [Clinical review home](CLINICAL_REVIEW_HOME.md) at
+`/review/overview` connects all four existing approval workspaces through a
+searchable index. Exact model scopes and nested source tokens are preserved;
+private decisions and their validation are unchanged. This is source-app work,
+not a deployed website approval area. Website integration, staff authorization,
+private-store compatibility and live save/reload/browser acceptance remain open.
+
+26 September 2026: [Small-intestinal mesentery MRI](SMALL_INTESTINAL_MESENTERY_MRI.md)
+adds an attributed CC BY draft to the existing notes for the exact FMA14643 source
+surface. No new controls, anatomy assets or patient images are introduced; all
+other topics and source holds remain unchanged. The dedicated tests exercise
+source identity, history, rendering and review contracts. Clinical approval,
+actual-image/browser acceptance, publication and external recovery remain pending;
+the main-workspace checkpoint records final verification. Desktop untouched.
+
+26 September 2026: website imaging-link subscribers now have synchronous fault
+isolation in both selection and comparison bridges. One failing observer can no
+longer block registration cleanup handles or the remaining observers; snapshot
+delivery also prevents self-rebinding from extending a notification. Actual-bridge
+synthetic regressions cover lifecycle, observer changes and adapter failures.
+See [the link contract](IMAGING_LINK.md#observer-fault-isolation-26-september-2026).
+Anatomy and teaching are unchanged; revision-bound reviews remain unsigned.
+Desktop software is untouched. Publication, browser acceptance and external
+recovery remain pending; final evidence is in the main-workspace checkpoint.
+
+26 September 2026: [Transverse-mesocolon MRI](TRANSVERSE_MESOCOLON_MRI.md)
+adds one exact-source draft to existing Abdomen/Whole body notes. The primary
+study and commercial-compatible CC BY attribution are recorded; no media is
+imported. The new validator confirms 9,935 other topics unchanged, 39 source
+rejections, actual note rendering and exact baseline replay. Geometry, prior
+source holds and clinical approval remain unchanged. The main-workspace checkpoint
+records final integration checks and recovery; publication and radiologist review
+remain pending.
+
+26 September 2026: [Website volume-link lifecycle](VOLUME_VIEWER.md) now
+invalidates the optional CT/MRI comparison when its source Atlas detaches.
+Pending loads abort; mounted pixels and retired controls clear immediately;
+late outcomes cannot restore images, and revocation stays effective. Synthetic
+CT/MRI regressions reproduce the original failure and pass after the fix, along
+with linked-imaging, Didanix, independent-navigation and review checks. This is
+integration groundwork, not an installed live volume viewer or desktop change.
+Source geometry, teaching, approvals and current renderer bindings are unchanged.
+Publication, browser/real-image acceptance and external recovery remain pending.
+
+26 September 2026: [Search pagination focus](SEARCH_PAGINATION_FOCUS.md)
+keeps direct and related results independently paged and focuses the first newly
+revealed match, including the final page. Fourteen controlled component scenarios,
+existing search/review/workspace regressions, TypeScript/lint and both module
+builds pass. A pre-existing navigation-test mock was repaired after reproduction
+on the saved baseline. Anatomy and teaching are unchanged; review bindings are
+refreshed but unsigned. Browser acceptance, website publication and external
+recovery remain pending. Didanix desktop is untouched.
+
+26 September 2026: [Plantar arterial CT orientation](PLANTAR_ARTERIAL_CT.md)
+adds five paired source-bound concepts to ten existing Foot/Whole body CT panels.
+All 9,926 other topics, geometry and controls are retained; source identities,
+panel rendering and unsigned review/export are checked. These remain drafts,
+not vessel-patency or scan-correspondence claims. The main-workspace checkpoint
+records final verification and recovery; website publication/clinical gates stay open.
+
+26 September2026: [Integrated catalogue intake](CATALOG_INPUT_VALIDATION.md)
+rejects malformed records before selection/link setup and prevents late timed-out
+responses from committing. All raw/display anatomy is preserved;73 intake tests,
+eight related suites, TypeScript/lint and regional build pass. No desktop changes.
+Browser acceptance, website integration/publication and external recovery remain
+pending. Main-workspace checkpoint is authoritative; older entries are historical.
+
+26 September2026: [Limb-bone ultrasound](LIMB_BONE_ULTRASOUND.md) adds ten
+source-bound draft placements through existing regional/whole-body notes;
+patellar ultrasound, all other teaching and geometry remain unchanged. Focused
+content/history/review checks, TypeScript and regional build pass. Publication,
+browser acceptance, external recovery and radiologist sign-off remain pending.
+The main coordination workspace's latest checkpoint is authoritative for saved
+heads/deployment state; older milestone entries below are historical.
+
 [Central-vessel historical verification](CENTRAL_VESSEL_HISTORY_REPAIR.md) now
 separates the immutable source-era snapshot from live scoped transition checks.
 The original baseline hash and 79 replacements are preserved; runtime teaching,

@@ -14,6 +14,8 @@ export const thoracicBranchImagingReferences={
   internalThoracicCT:'https://pmc.ncbi.nlm.nih.gov/articles/PMC9071078/',
   internalBranches:'https://pmc.ncbi.nlm.nih.gov/articles/PMC4583587/',
   internalThoracicUS:'https://pmc.ncbi.nlm.nih.gov/articles/PMC8191278/',
+  internalThoracicMRI:'https://pubmed.ncbi.nlm.nih.gov/22695715/',
+  internalThoracicVeinUS:'https://pmc.ncbi.nlm.nih.gov/articles/PMC4255330/',
   epigastric:'https://pmc.ncbi.nlm.nih.gov/articles/PMC12445759/',
   anteriorVeinsCT:'https://pmc.ncbi.nlm.nih.gov/articles/PMC5919579/',
   bronchialCT:'https://pmc.ncbi.nlm.nih.gov/articles/PMC7237606/',
@@ -31,6 +33,9 @@ const subclavianVeinMRI=fact('Follow axillary-to-subclavian venous continuity in
 const subclavianVeinUS=fact('Follow the accessible axillosubclavian vein and inspect colour and spectral flow. Correlate any abnormality with the actual anatomy.','The clavicle prevents complete direct compression; an unexamined central segment is not a negative result.','venousCompression');
 const internalArteryCT=fact('Trace the parasternal artery behind the costal cartilages from its subclavian origin, keeping accompanying veins distinct.','Sternal distance varies; this donor surface is not a safe procedural clearance.','internalThoracicCT');
 const internalArteryUS=fact('Identify the parasternal arterial channel and nearby pleura using anatomical layers and Doppler, not colour alone.','A small vessel can be obscured by rib shadow; no needle route is provided.','internalThoracicUS');
+const internalArteryMRI=fact('A study of 133 women assessed internal mammary vessels at the second and third intercostal levels on reconstructed T2-weighted MRI. Relate the parasternal artery to the accompanying vein on the actual source sections.','This selected chest-wall study does not establish whole-vessel visibility, lumen patency or a safe surgical route on routine MRI.','internalThoracicMRI');
+const internalVeinMRI=fact('T2-weighted MRI in 133 women demonstrated variable internal mammary artery–vein arrangements at the second and third intercostal levels. Assess venous number and position rather than assuming that this single right-sided source represents every accompanying vein.','The study is not a complete venographic or patency assessment. Neither the source mesh nor a local MR section validates the central venous termination.','internalThoracicMRI');
+const internalVeinUS=fact('A published ultrasound technique depicts parasternal internal thoracic vessels immediately anterior to the pleural line. The vein shows phasic flow and may transmit pulsatility from the nearby artery; pulsatility alone therefore does not identify the artery.','This is observational technique evidence, not a diagnostic-accuracy study. Identify the channel with anatomy and Doppler; no validated puncture route is supplied.','internalThoracicVeinUS');
 const superiorEpigastricCT=fact('Follow internal thoracic continuation into the upper rectus region, distinguishing it from inferior and superficial epigastric vessels.','Visible proximal continuity does not prove a patent inferior epigastric anastomosis.','internalBranches');
 const superiorEpigastricUS=fact('Relate the deep superior epigastric vessels to rectus and its posterior sheath, using Doppler where resolved.','An isolated vessel in the abdominal wall cannot be named from depth alone; trace continuity.','epigastric');
 const musculophrenicArteryCT=fact('Trace the lateral terminal internal thoracic branch towards the costal margin and diaphragm on thin arterial-sensitive sections.','Small branches may be unresolved; source pieces are not a map of all diaphragmatic supply.','internalBranches');
@@ -87,14 +92,15 @@ export const thoracicBranchImagingGroups:Record<string,Group>={
     ct:fact('Identify the venous course in the posterior interventricular groove and confirm its coronary sinus connection on source images.','Do not confuse the accompanying posterior interventricular artery with this vein or treat source pieces as tributaries.','cardiacVeinsCT'),
     mri:fact('Seek posterior interventricular venous continuity towards the sinus on suitable cardiac venous images.','Partial depiction is not proof of a missing connection; this model contains no venous drainage measurement.','cardiacVeinsMR'),
   }},
-  'right-internal-thoracic-artery':{fmaId:'FMA3969',region:'thorax',laterality:'right',focus:{ct:internalArteryCT,ultrasound:internalArteryUS}},
-  'left-internal-thoracic-artery':{fmaId:'FMA4068',region:'thorax',laterality:'left',focus:{ct:internalArteryCT,ultrasound:internalArteryUS}},
+  'right-internal-thoracic-artery':{fmaId:'FMA3969',region:'thorax',laterality:'right',focus:{ct:internalArteryCT,mri:internalArteryMRI,ultrasound:internalArteryUS}},
+  'left-internal-thoracic-artery':{fmaId:'FMA4068',region:'thorax',laterality:'left',focus:{ct:internalArteryCT,mri:internalArteryMRI,ultrasound:internalArteryUS}},
   'right-superior-epigastric-artery':{fmaId:'FMA3988',region:'thorax',laterality:'right',focus:{ct:superiorEpigastricCT,ultrasound:superiorEpigastricUS}},
   'left-superior-epigastric-artery':{fmaId:'FMA4083',region:'thorax',laterality:'left',focus:{ct:superiorEpigastricCT,ultrasound:superiorEpigastricUS}},
   'right-musculophrenic-artery':{fmaId:'FMA10692',region:'thorax',laterality:'right',focus:{ct:musculophrenicArteryCT}},
   'left-musculophrenic-artery':{fmaId:'FMA4077',region:'thorax',laterality:'left',focus:{ct:musculophrenicArteryCT}},
   'right-internal-thoracic-vein':{fmaId:'FMA4758',region:'thorax',laterality:'right',focus:{
     ct:fact('Follow the deep parasternal venous pathway towards its actual central termination and inspect any collateral connections.','Published termination descriptions differ; neither a brachiocephalic nor direct caval junction is validated by this source.','collaterals'),
+    mri:internalVeinMRI,ultrasound:internalVeinUS,
   }},
   'right-musculophrenic-vein':{fmaId:'FMA4772',region:'thorax',laterality:'right',focus:{ct:musculophrenicVeinCT}},
   'left-musculophrenic-vein':{fmaId:'FMA4786',region:'thorax',laterality:'left',focus:{ct:musculophrenicVeinCT}},

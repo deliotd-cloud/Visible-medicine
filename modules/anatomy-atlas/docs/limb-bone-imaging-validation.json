@@ -8,7 +8,10 @@
     "ct": 6,
     "mri": 6
   },
-  "unchangedSections": 9678,
+  "currentUntargetedSections": 9912,
+  "historicalUnchangedSections": 9678,
+  "historicalBefore": "f82bfdf411a10667a1c3aa5f3efdc05e55051ee8",
+  "historicalAfter": "1ddc0732fd882bf3380310ad6b3f673bf014fb5f",
   "rejectedBindings": 288,
   "sourceRows": 12,
   "modelHashes": 3,
@@ -26,7 +29,7 @@
     "tibia": 58,
     "patella": 60
   },
-  "preservedPaths": [
+  "historicallyPreservedPaths": [
     "app/body-explorer.tsx",
     "app/body-scene.tsx",
     "app/dissection-data.ts",
@@ -37,9 +40,6 @@
     "public/models/bodyparts3d/full-body/catalog.json",
     "drizzle/0002_specimen_review_events.sql"
   ],
-  "laterPreservedRevisions": {
-    "app/body-explorer.tsx": "a62e32a48df22b34810fb36bd80ce51467551e16"
-  },
   "clinicalApproval": false,
   "browserTesting": false,
   "realImaging": false

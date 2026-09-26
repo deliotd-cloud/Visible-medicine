@@ -518,7 +518,7 @@ for (const target of targets) {
     if (!accepted) link.request.nested.sourceHash = '0'.repeat(64);
     const env = {
       data: raw,
-      workspace: { chooseMode: mode => { changes.workspaceMode = mode; } },
+      chooseWorkspaceMode: mode => { changes.workspaceMode = mode; },
       bodyDisplayCatalog: api.bodyDisplayCatalog,
       bodyLinkEntries: () => {},
       active: true,
@@ -530,7 +530,7 @@ for (const target of targets) {
       ...Object.fromEntries(
         [
           'setSide',
-          'setSelectedId',
+          'setSelectedIdState',
           'setSystems',
           'dispatch',
           'setView',
@@ -557,7 +557,7 @@ for (const target of targets) {
     same(env.appliedStudyLink.current, true);
     if (accepted) {
       same(changes.workspaceMode, 'dissect');
-      same(changes.setSelectedId, target.parentId);
+      same(changes.setSelectedIdState, target.parentId);
       same(changes.setNestedSelection.structureId, target.structureId);
       same(
         changes[target.study === 'eye' ? 'setEyeParent' : 'setVentricleParent']
@@ -574,7 +574,7 @@ for (const target of targets) {
       );
     } else {
       same(changes.workspaceMode, undefined);
-      same(changes.setSelectedId, undefined);
+      same(changes.setSelectedIdState, undefined);
       same(changes.setNestedSelection, undefined);
       check(changes.setLinkIssue);
     }

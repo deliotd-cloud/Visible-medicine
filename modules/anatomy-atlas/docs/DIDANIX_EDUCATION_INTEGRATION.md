@@ -2,6 +2,16 @@
 
 Owner instruction, 12 September 2026: use the Elivion Didanix **light/education version** as the DICOM/PACS viewer. This supersedes any assumption that this atlas should grow its own learner-facing DICOM/PACS stack. Preserve the detailed 3D atlas and integrate it with that viewer.
 
+Owner clarification, 26 September: continue necessary Didanix linking for the
+integrated website, but do not modify the separately developed **desktop
+application**. Read-only inspection of its current `desktop/README.md` identifies
+Viewer 0.3.0 as a local, session-only staff tool, not an Education account or
+website connection. Its teaching-copy export does not establish publication
+clearance, pixel cleaning, facial defacing or a usable website transport. Leave
+that application untouched. The Atlas-side implemented selection port is
+documented in [DIDANIX_SELECTION_ADAPTER.md](DIDANIX_SELECTION_ADAPTER.md);
+the actual learner-viewer binding and cleared-case acceptance are still required.
+
 ## Checked evidence
 
 The task **Didanix Education - Architecture and Scope** describes a separate educational product, with independent deployment, authentication, education storage, assessment state and release lifecycle; the clinical Didanix/Elivion product is not the integration target. The **PACS RIS PATH EHR** task describes sharing a versioned read-only viewer core rather than joining clinical and teaching environments.

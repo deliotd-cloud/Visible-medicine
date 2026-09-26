@@ -15,6 +15,15 @@ The resolver is trusted application code, not a security boundary. It must use t
 
 On logout, entitlement expiry or withdrawal, call the returned `revoke()` synchronously. It aborts outstanding work, clears mounted pixels, drops volume references, and permanently denies further resolutions for that connection; dispose and explicitly reconnect after fresh authorization. `clear()` clears the series without reconnecting and cannot undo revocation. `dispose()` tears down both bridges and the renderer. The host owns server-side permission enforcement and buffer disposal; JavaScript reference release is not a guaranteed secure memory erasure.
 
+Atlas detachment also invalidates the selected volume immediately: abort pending
+resolution, clear mounted images, discard the retained volume and retire old
+window/plane/slice controls. Late success or failure cannot repopulate the closed
+view. A fresh Atlas attachment may select again through the existing authorized
+resolver; detachment never reverses a prior access revocation. This lifecycle
+applies to the optional website-integrated comparison, not the Didanix desktop
+application. Synthetic CT/MRI regression evidence is separate from real-image,
+browser/device and radiologist acceptance.
+
 The pixel buffer is borrowed read-only for the lifetime of a ready resolution: never mutate, detach, resize or reuse it while this viewer retains it. Prepared geometry is copied/frozen. Shared/resizable buffers, invalid dimensions, singular geometry and buffers above 256 MiB are rejected. This is browser-side code, not a server-volume processing service.
 
 ## Volume input

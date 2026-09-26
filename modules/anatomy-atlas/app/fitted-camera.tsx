@@ -14,7 +14,7 @@ import {
 } from '@/lib/study-camera';
 import type { StudyCamera } from '@/lib/study-views';
 import { steppedCameraScale } from '@/lib/camera-zoom';
-import { bindCameraKeyboard } from '@/lib/camera-keyboard';
+import { bindCameraKeyboard, bindCameraPanKeyboard } from '@/lib/camera-keyboard';
 
 export function FittedCamera({
   bounds,
@@ -246,7 +246,14 @@ export function FittedCamera({
     presetBounds,
   ]);
   useEffect(() => {
-    if (!gl?.domElement || locked || planar) return;
+    if (!gl?.domElement || locked) return;
+    if (planar) {
+      if (!(camera instanceof OrthographicCamera)) return;
+      return bindCameraPanKeyboard(gl.domElement, camera, () => controls.current, () => {
+        capture();
+        invalidate();
+      });
+    }
     return bindCameraKeyboard(gl.domElement, () => controls.current, () => {
       capture();
       invalidate();

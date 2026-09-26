@@ -1,5 +1,33 @@
 # Explode mechanism review
 
+## Current catalogue verification — 26 September 2026
+
+The spatial centroid/framing regression now consumes `bodyDisplayCatalog` and
+the same side filtering and compound-part projection used by the viewer, rather
+than testing only the archived 1,022-entry importer catalogue. It covers all
+1,104 current root representations in 36 region/side scopes (whole body plus
+11 regions, each both/left/right), with 1,184,284 centroid-pair checks, 20,720
+perspective/orthographic fits and the retained 88 dedicated-shoulder crop checks.
+The report binds both catalogue hashes and records each tested scope.
+
+Run `node scripts/validate-explode.mjs`; evidence is in
+`explode-validation.json`. Source metadata is checked unchanged. These are
+numerical checks of source-relative display translations and conservative
+framing, not proof of tissue clearance, attachment correctness, browser pixels
+or clinical approval. No runtime transform or anatomical mesh was changed.
+Tray repacking after system/removal changes remains the deliberate behaviour
+documented in `BODY_ARRANGEMENT.md`; selection/focus alone does not repack it.
+
+`npm run rendered-bounds:test` additionally verifies the actual GLTFLoader
+position buffers against these catalogue bounds: 109 bundles, 1,104 canonical
+entries and two side-specific component presentations, covering 2,635,161
+vertices. Maximum excursion is zero. Expected source world transforms are
+identity, matching the renderer's raw-geometry reuse. Exact bundle bytes/hashes
+and geometry/transform immutability are checked; the detailed report is
+`rendered-bounds-validation.json`. Negative fixtures reject nonfinite positions,
+invalid bounds, discarded transforms and out-of-box geometry. No smoothing,
+scaling, mesh repair, new asset or anatomical approval follows from this check.
+
 ## Separate arranged study mode
 
 The newer [whole-body/regional tray](BODY_ARRANGEMENT.md) complements, rather than replaces, the spatial mechanism below. At 100%, its aligned orthographic layout gives each catalogue entry a separate projected bounding rectangle without rescaling or editing source geometry. Intermediate arrangements and compound source interiors can still overlap. The original spatial mode retains the 2.6× centroid separation and anchored-skeleton options described below.

@@ -35,6 +35,8 @@ export type AdapterInfo = {
 };
 type Adapter = AdapterInfo & {
   onAtlasSelection: (selection: AtlasSelection) => void | Promise<void>;
+  /** Cancel source-view work when its Atlas unmounts or is replaced. */
+  onAtlasDetached?: () => void;
 };
 type AtlasReceiver = (request: LinkedSelection) => SelectionResult;
 const identifier = (v: unknown): v is string =>
@@ -92,7 +94,7 @@ export function parseLinkedSelection(value: unknown): LinkedSelection | null {
 /** One adapter and one active atlas per bridge avoids ambiguous routing. Create separate bridges for separate viewports. */
 export function createImagingBridge() {
   let adapter: Adapter | null = null;
-  let receiver: AtlasReceiver | null = null;
+  let receiver: { receive: AtlasReceiver } | null = null;
   let notifying = false;
   let receiving = false;
   const listeners = new Set<() => void>();
@@ -103,7 +105,18 @@ export function createImagingBridge() {
     if (seen.size > 256) seen.delete(seen.values().next().value!);
     return true;
   };
-  const changed = () => listeners.forEach((listener) => listener());
+  const changed = () => {
+    // Observers must not interrupt ownership/cleanup or extend this delivery.
+    const currentListeners = [...listeners];
+    for (const listener of currentListeners) {
+      if (!listeners.has(listener)) continue;
+      try {
+        listener();
+      } catch {
+        // A failing observer cannot prevent the remaining observers updating.
+      }
+    }
+  };
   return {
     getAdapter: (): AdapterInfo | null =>
       adapter
@@ -118,9 +131,22 @@ export function createImagingBridge() {
     attachAtlas(next: AtlasReceiver) {
       if (receiver)
         throw new Error('An atlas is already attached to this imaging bridge');
-      receiver = next;
+      // Own an attachment, not just the callback: a later mount may reuse it.
+      const attachment = { receive: next };
+      receiver = attachment;
       return () => {
-        if (receiver === next) receiver = null;
+        if (receiver !== attachment) return;
+        receiver = null;
+        const target = adapter;
+        try {
+          target?.onAtlasDetached?.();
+        } catch {
+          if (adapter === target) {
+            adapter = null;
+            seen.clear();
+            changed();
+          }
+        }
       };
     },
     registerAdapter(next: Adapter) {
@@ -132,7 +158,8 @@ export function createImagingBridge() {
         next.label.trim().length < 1 ||
         next.label.length > 80 ||
         !['CT', 'MRI', 'X-ray', 'US', 'multimodal'].includes(next.modality) ||
-        typeof next.onAtlasSelection !== 'function'
+        typeof next.onAtlasSelection !== 'function' ||
+        (next.onAtlasDetached !== undefined && typeof next.onAtlasDetached !== 'function')
       )
         throw new Error('Invalid imaging adapter');
       const owned = { ...next };
@@ -159,7 +186,7 @@ export function createImagingBridge() {
           if (!receiver) return { ...base, status: 'no-atlas' };
           receiving = true;
           try {
-            return receiver(request);
+            return receiver.receive(request);
           } catch {
             return { ...base, status: 'adapter-error' };
           } finally {

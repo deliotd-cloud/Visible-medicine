@@ -49,7 +49,23 @@ const api = {
   nestedConcepts: scope.exports.nestedConcepts.filter(c => c.study !== 'femoral-components' && c.study !== 'coronary-venous'),
   nestedTeachingReferences: Object.fromEntries(Object.entries(scope.exports.nestedTeachingReferences).filter(([key]) => !['femoralComponentAnatomy', 'femoralComponentVariation', 'femoralComponentInjury', 'coronaryVenousAnatomy', 'coronaryVenousHeart', 'coronarySinusImaging', 'smallCardiacVariation'].includes(key))),
 };
-const historicalApi = nestedBeforeClinicalReferenceRevision(nestedBeforePulmonaryImaging(nestedBeforePulmonaryXray(api)));
+// Exact two-field extension; verify new bytes before restoring older snapshots.
+const eyeUsHashes = {
+  'eye-lens': 'c71308116b8adbda8d67d4b9dec4bd53db697052e60c88ce73d96682921a3e14',
+  'eye-sclera': 'a147afbfcbe303730892a7399f793f8d1d90e7ca88765331aff4da34a7b8181d',
+};
+const beforeEyeUs = {
+  ...api,
+  nestedConcepts: api.nestedConcepts.map(c => {
+    if (!Object.hasOwn(eyeUsHashes, c.id)) return c;
+    assert.equal(createHash('sha256').update(JSON.stringify(c.imaging.ultrasound)).digest('hex'), eyeUsHashes[c.id]);
+    const { ultrasound: _added, ...imaging } = c.imaging;
+    return { ...c, imaging };
+  }),
+  nestedTeachingReferences: Object.fromEntries(Object.entries(api.nestedTeachingReferences)
+    .filter(([key]) => !['lensBiometryUBM', 'posteriorScleraBScan'].includes(key))),
+};
+const historicalApi = nestedBeforeClinicalReferenceRevision(nestedBeforePulmonaryImaging(nestedBeforePulmonaryXray(beforeEyeUs)));
 const copy = (value) => JSON.parse(JSON.stringify(value));
 let checks = 0;
 const check = (value, message) => {
@@ -119,11 +135,11 @@ const beforeVisualImaging = beforeDuctImaging
 const eyeImagingScope = {
   'eye-cornea': ['ultrasound'],
   'eye-iris': ['ultrasound'],
-  'eye-lens': ['ct'],
+  'eye-lens': ['ct', 'ultrasound'],
   'eye-zonule': ['ultrasound'],
   'eye-vitreous': ['ultrasound'],
   'eye-choroid': ['ultrasound', 'mri'],
-  'eye-sclera': ['ct', 'mri'],
+  'eye-sclera': ['ct', 'mri', 'ultrasound'],
   'eye-chamber': ['ultrasound'],
 };
 // Remove only the eight newly authored eye-imaging fields to reconstruct v116.
@@ -433,7 +449,7 @@ for (const target of targets) {
                       : []));
   same(
     Object.keys(concept.imaging ?? {}).sort(),
-    [...expectedImaging].sort(),
+    [...expectedImaging].sort((a, b) => a.localeCompare(b)),
     'Explicit authored modality scope',
   );
   for (const topic of topics) {
@@ -624,7 +640,7 @@ for (const tab of ['anatomy', 'function', 'quiz'])
 same(coverage.ct, { draft: 39, pending: 32 });
 same(coverage.mri, { draft: 44, pending: 27 });
 same(coverage.xray, { draft: 5, pending: 66 });
-same(coverage.ultrasound, { draft: 33, pending: 38 });
+same(coverage.ultrasound, { draft: 37, pending: 34 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
 const wordsBySource = {};
 const hosts = new Set([
@@ -658,6 +674,7 @@ const hosts = new Set([
   'nba.uth.tmc.edu',
   'link.springer.com',
   'creativecommons.org',
+  'doi.org',
 ]);
 for (const concept of api.nestedConcepts) {
   check(concept.modelLimit.trim());
@@ -693,11 +710,11 @@ for (const concept of api.nestedConcepts) {
     }
   }
 }
-same(Object.keys(wordsBySource).length, 87);
+same(Object.keys(wordsBySource).length, 89);
 same(
   new Set(Object.values(api.nestedTeachingReferences).map((ref) => ref.url))
     .size,
-  88,
+  90,
   'Do not split one source into duplicate reference keys',
 );
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {

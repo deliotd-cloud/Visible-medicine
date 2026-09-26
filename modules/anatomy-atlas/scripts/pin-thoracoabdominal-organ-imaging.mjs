@@ -9,8 +9,9 @@ const {thoracoabdominalOrganImagingGroups:groups}=await import('data:text/javasc
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 const {api,catalog:raw}=await contentContext(),catalog=api.bodyDisplayCatalog(raw);
 // This immutable pin records the original CT/MRI/ultrasound transition. Later X-ray drafts
-// reuse the exact source identities and are checked against the prior pending topic separately.
-const entries=catalog.structures.flatMap(identity=>{const group=Object.entries(groups).find(([,g])=>g.fmaId===identity.fmaId)?.[0];return group?[{identity,group,topics:Object.keys(groups[group].focus).filter(topic=>topic!=='xray'&&!((identity.fmaId==='FMA7395'||identity.fmaId==='FMA7396')&&topic==='ultrasound'))}]:[];});
+// and external-bronchus/oesophageal US drafts reuse exact identities but have
+// separate transitions. Do not rebase the original 42-topic source pin.
+const entries=catalog.structures.flatMap(identity=>{const group=Object.entries(groups).find(([,g])=>g.fmaId===identity.fmaId)?.[0];return group?[{identity,group,topics:Object.keys(groups[group].focus).filter(topic=>topic!=='xray'&&!(['FMA7395','FMA7396','FMA7131'].includes(identity.fmaId)&&topic==='ultrasound'))}]:[];});
 assert.equal(entries.length,15);assert.equal(Object.keys(groups).length,15);
 for(const e of entries){const g=groups[e.group];assert.equal(e.identity.system,'organs');assert.equal(e.identity.category,'organ');assert(e.identity.regions.includes(g.region));assert.equal(e.identity.laterality,g.laterality);}
 assert.equal(entries.reduce((n,e)=>n+e.topics.length,0),42);
@@ -19,7 +20,7 @@ for(const b of bundles)assert.equal(createHash('sha256').update(await readFile('
 const path='content/thoracoabdominal-organ-imaging-pins.json',sourceCommit='76e0d191c683f273d2399216d82a592b14438b7d';
 const base={sourceCommit,sourceVersion:catalog.sourceVersion,license:catalog.license,coordinateSystem:catalog.coordinateSystem,bundles};
 if(process.argv.includes('--check')){
- const saved=JSON.parse(await readFile(path));assert.deepEqual(saved.entries.map(({previous,anatomy,...e})=>e),entries);
+ const saved=JSON.parse(await readFile(path));assert.deepEqual(saved.entries.map(({previous:_previous,anatomy:_anatomy,...e})=>e),entries);
  for(const k of Object.keys(base))assert.deepEqual(saved[k],base[k]);
  for(const e of saved.entries)assert.deepEqual(e.anatomy,api.bodyLesson(e.identity,'anatomy'));
 }else{

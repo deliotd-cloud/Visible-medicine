@@ -16,6 +16,6 @@ export default defineConfig({
       const symbol={link:'Link',image:'Image',dynamic:'dynamic'}[id.split('/').at(-1)];
       return 'export { '+symbol+' as default } from '+JSON.stringify(fileURLToPath(new URL('./framework.tsx',import.meta.url)))+';';
     },
-  },moduleAudit(root,['integration/head-neck/vite.config.mjs','integration/head-neck/index.html','integration/head-neck/delivery.ts','integration/head-neck/companions.mjs','scripts/head-neck-module-inputs.mjs','scripts/independent-source-contract.mjs','scripts/export-head-neck-module.mjs',...regionalCompanions.map(([source])=>source)])],
+  },moduleAudit(root,['integration/head-neck/vite.config.mjs','integration/head-neck/index.html','integration/head-neck/delivery.ts','integration/head-neck/companions.mjs','scripts/head-neck-module-inputs.mjs','scripts/independent-source-contract.mjs','scripts/export-head-neck-module.mjs','scripts/export-space-preflight.mjs',...regionalCompanions.map(([source])=>source)])],
   build:{outDir:'../../.sites-runtime/head-neck-module',emptyOutDir:true,sourcemap:false},
 });

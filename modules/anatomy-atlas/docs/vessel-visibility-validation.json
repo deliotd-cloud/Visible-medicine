@@ -1,6 +1,6 @@
 {
   "scopes": 36,
-  "plans": 2127,
+  "plans": 2400,
   "groups": [
     {
       "kind": "artery",
@@ -11,13 +11,14 @@
     {
       "kind": "vein",
       "label": "Veins",
-      "total": 98,
-      "shown": 98
+      "total": 99,
+      "shown": 99
     }
   ],
   "componentCallbacks": 16,
   "parentCallbacks": 4,
   "defaultCollapsed": true,
+  "nativeNamedGroups": true,
   "currentRuntimeCovered": true,
   "currentRawCatalogPreserved": true,
   "historicalControlEra": {
@@ -96,7 +97,19 @@
       ]
     }
   ],
-  "negativeMutations": 5,
+  "recordedDisplayChanges": {
+    "celiacCommit": "3305cb9a28206db86e7f9b0171323d88a3cfa01b",
+    "cardiacCommit": "92d97d239e719bfb11fdecbede21b6101d0485f0",
+    "ids": [
+      "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
+      "vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein"
+    ]
+  },
+  "recordedDependencyPromotions": {
+    "bvhCommit": "94fa489683ac7817b678bdfcf0b9df4f12c1cf66",
+    "harnessCommit": "23b8f3bcc0b03e71d966e50358eb33cc8930f6de"
+  },
+  "negativeMutations": 14,
   "clinicalApproval": false,
   "browserTesting": false
 }

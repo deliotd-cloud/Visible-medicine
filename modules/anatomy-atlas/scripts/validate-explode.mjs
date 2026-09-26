@@ -1,5 +1,7 @@
 import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
+import { build } from './workspace-test-build.mjs';
 import {
   Box3,
   Vector3,
@@ -14,15 +16,32 @@ import {
   fitBounds,
 } from '../lib/explode-layout.mjs';
 
-const catalog = JSON.parse(
-  await fs.readFile('public/models/bodyparts3d/full-body/catalog.json', 'utf8'),
+// Exercise the actual displayed additions and side-projected compound entries,
+// not only the archived importer catalogue. Use the same pure runtime helpers
+// as BodyExplorer; no clinical source coordinates or mesh bytes are changed.
+const compiled = await build({
+  stdin: {
+    contents: `export { bodyDisplayCatalog } from './lib/body-display-catalog';
+export { bodySideMatches, bodyPresentationStructure } from './lib/body-presentation-parts';`,
+    resolveDir: process.cwd(), loader: 'ts',
+  },
+  bundle: true, write: false, platform: 'node', format: 'esm',
+});
+const { bodyDisplayCatalog, bodySideMatches, bodyPresentationStructure } = await import(
+  'data:text/javascript;base64,' + Buffer.from(compiled.outputFiles[0].text).toString('base64'),
 );
+const rawBytes = await fs.readFile('public/models/bodyparts3d/full-body/catalog.json');
+const rawCatalog = JSON.parse(rawBytes);
+const catalog = bodyDisplayCatalog(rawCatalog);
+const original = JSON.stringify({ rawCatalog, catalog });
+const hash = value => createHash('sha256').update(value).digest('hex');
 const shoulder = JSON.parse(
   await fs.readFile('public/models/bodyparts3d/manifest.json', 'utf8'),
 );
 let pairChecks = 0,
   framingChecks = 0,
   cropChecks = 0;
+const scopes = [];
 const directions = [
   [0, 0.04, 1],
   [0, 0.04, -1],
@@ -77,10 +96,13 @@ function checkFrame(bounds) {
       }
     }
 }
-for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
+for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)])
+for (const side of ['both', 'left', 'right']) {
   const list = catalog.structures.filter(
-    (s) => region === 'whole-body' || s.regions.includes(region),
-  );
+    (s) => (region === 'whole-body' || s.regions.includes(region)) && bodySideMatches(s, side),
+  ).map(s => bodyPresentationStructure(s, side));
+  assert(list.length, `Expected displayed anatomy for ${region}/${side}`);
+  scopes.push({ region, side, entries: list.length });
   const frame = new Box3();
   for (const s of list) frame.union(translatedBox(s.bounds));
   const origin = frame.getCenter(new Vector3());
@@ -141,9 +163,15 @@ for (const amount of [0, 25, 50, 100])
       cropChecks++;
     }
     checkFrame(bounds);
-  }
+}
+assert.equal(JSON.stringify({ rawCatalog, catalog }), original, 'Source/display records remain unchanged');
 const result = {
   passed: true,
+  archivedEntries: rawCatalog.structures.length,
+  displayEntries: catalog.structures.length,
+  archivedCatalogSha256: hash(rawBytes),
+  displayCatalogSha256: hash(JSON.stringify(catalog)),
+  scopes,
   pairChecks,
   framingChecks,
   cropChecks,

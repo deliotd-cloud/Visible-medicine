@@ -4,6 +4,7 @@ import {execFileSync} from 'node:child_process';
 import {relative,dirname,extname,resolve,isAbsolute} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {build} from './workspace-test-build.mjs';
+import {createGitObjectReader} from './git-object-reader.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url));
 export async function exactSourceHistoryApi(commit, profile='display'){
  const exportsByProfile={
@@ -13,9 +14,17 @@ export async function exactSourceHistoryApi(commit, profile='display'){
  };
  assert(Object.hasOwn(exportsByProfile,profile),'Unknown exact-history export profile');
  assert(/^[a-f0-9]{40}$/.test(commit));
- assert.equal(execFileSync('git',['rev-parse',commit+'^{commit}'],{cwd:root,encoding:'utf8'}).trim(),commit);
- const sourcePaths=new Set(execFileSync('git',['ls-tree','-r','--name-only',commit],{cwd:root,encoding:'utf8',maxBuffer:16e6}).trim().split(/\r?\n/));
- const compiled=await build({stdin:{contents:exportsByProfile[profile],resolveDir:root,loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',plugins:[{name:'exact-application-git-replay',setup(b){
+ const gitOptions={cwd:root,encoding:'utf8',windowsHide:true,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'},maxBuffer:16e6};
+ assert.equal(execFileSync('git',['rev-parse',commit+'^{commit}'],gitOptions).trim(),commit);
+ const sourcePaths=new Map();
+ for(const entry of execFileSync('git',['ls-tree','-r','-z','--full-tree',commit],gitOptions).split('\0')){
+  if(!entry)continue;
+  const match=/^(100644|100755) blob ([a-f0-9]{40})\t([\s\S]+)$/.exec(entry);
+  if(match)sourcePaths.set(match[3],match[2]); // Never follow historical symlinks/submodules.
+ }
+ const reader=createGitObjectReader({cwd:root});
+ let compiled;
+ try { compiled=await build({stdin:{contents:exportsByProfile[profile],resolveDir:root,loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',plugins:[{name:'exact-application-git-replay',setup(b){
  b.onResolve({filter:/.*/},args=>{
   // Keep explicitly allowed installed dependencies with the hermetic builder;
   // resolve application paths against Git, including old-only/renamed files.
@@ -30,9 +39,10 @@ export async function exactSourceHistoryApi(commit, profile='display'){
    if(sourcePaths.has(path+suffix))return {path:resolve(root,path+suffix),namespace:'workspace-test'};
   throw Error('Missing historical application module: '+path);
  });
- b.onLoad({filter:/.*/,namespace:'workspace-test'},args=>{
+ b.onLoad({filter:/.*/,namespace:'workspace-test'},async args=>{
   const path=relative(root,args.path).replaceAll('\\','/');if(path.startsWith('node_modules/'))return;
-  assert(!path.startsWith('../'));return {contents:execFileSync('git',['show',commit+':'+path],{cwd:root,encoding:'utf8',maxBuffer:16e6}),loader:({'.ts':'ts','.tsx':'tsx','.json':'json'})[extname(path)]||'js',resolveDir:dirname(args.path)};
+  assert(!path.startsWith('../'));return {contents:(await reader.readBlob(sourcePaths.get(path))).toString('utf8'),loader:({'.ts':'ts','.tsx':'tsx','.json':'json'})[extname(path)]||'js',resolveDir:dirname(args.path)};
  });}}]});
+ } finally { await reader.close(); }
  return import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
 }

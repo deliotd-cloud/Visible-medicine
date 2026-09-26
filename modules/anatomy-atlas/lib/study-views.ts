@@ -28,6 +28,9 @@ export type StudyView = {
   anchorSkeleton: boolean;
   showOrigins: boolean;
   plate: boolean;
+  // Shoulder-only reference illustration; older device-local views omit it.
+  // This is not a patient slice, cutaway setting or imaging registration.
+  referencePlane?: boolean;
   inspection: InspectionState;
   camera: StudyCamera | null;
 };
@@ -145,6 +148,11 @@ export function parseStudyView(value: unknown): StudyView | null {
   )
     return null;
   if (value.layout === 'tray' && value.plate !== true) return null;
+  if (
+    value.referencePlane !== undefined &&
+    (value.kind !== 'shoulder' || typeof value.referencePlane !== 'boolean')
+  )
+    return null;
   const flags = [
     'isolated',
     'focus',
@@ -195,6 +203,9 @@ export function parseStudyView(value: unknown): StudyView | null {
       StudyView,
       (typeof flags)[number]
     >),
+    ...(value.referencePlane === undefined
+      ? {}
+      : { referencePlane: value.referencePlane as boolean }),
     inspection: {
       plane: i.plane as InspectionState['plane'],
       position: i.position,

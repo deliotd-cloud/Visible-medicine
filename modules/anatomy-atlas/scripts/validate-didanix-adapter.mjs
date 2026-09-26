@@ -10,20 +10,46 @@ const sourceEntry={id,name:'Synthetic structure',sources:anatomy.sources,referen
 const kinds={ct:{type:'volume',id:'test-anchor',seriesId:'test-series',frameId:'test-frame',annotationId:'test-label',geometry:'partial-mask'},mri:{type:'volume',id:'test-anchor',seriesId:'test-series',frameId:'test-frame',annotationId:'test-label',geometry:'point'},xray:{type:'projection',id:'test-anchor',imageId:'test-image',annotationId:'test-label',projectionId:'test-projection'},ultrasound:{type:'ultrasound',id:'test-anchor',clipId:'test-clip',annotationId:'test-label',viewId:'test-view',frameIndex:3,timeMs:null},lecture:{type:'slide',id:'test-anchor',courseId:'test-course',lessonId:'test-lesson',slideId:'test-slide',buildId:null}};
 function fixture(kind='ct',relation='exact',count=1){
  let access=true,navigate=true,study={resourceId:'vm:resource:synthetic',revision:1,materialSha256:hash};
- let incoming,context,disposed=0,selected=[],revealed=[],status=[],pending=null;
+ let incoming,context,disposed=0,pending=null;
+ const selected=[],revealed=[],guards=[],status=[];
  const resource={id:study.resourceId,revision:1,kind,title:'Synthetic fixture only',ageGroup:'adult',laterality:'right',regionIds:['shoulder-arm'],material:{sha256:hash,origin:'synthetic'},anchors:Array.from({length:count},(_,i)=>({...kinds[kind],id:'test-anchor-'+i}))};
  const links=resource.anchors.map((anchor,i)=>({id:'vm:link:test-'+i,revision:1,anatomy,resourceId:resource.id,resourceRevision:1,materialSha256:hash,anchorId:anchor.id,relation}));
  const policy={canNavigate:()=>navigate,canAccessAnatomy:()=>true,canAccess:()=>access,resourceCleared:()=>true,correspondenceCleared:()=>true};
  const registry=api.createLearningRegistry({schemaVersion:1,resources:[resource],links},[anatomy],policy);
- const bridge=api.createImagingBridge();bridge.attachAtlas(request=>{selected.push(request.structureId);return {messageId:request.messageId,status:'selected'};});
+ const bridge=api.createImagingBridge();const receiver=request=>{selected.push(request.structureId);return {messageId:request.messageId,status:'selected'};};
+ const detach=bridge.attachAtlas(receiver);
  const viewer={getStudy:()=>study,canNavigate:()=>navigate,
-  async reveal(match,guard){if(pending)await pending.promise;if(guard.isCurrent())revealed.push({match,signal:guard.signal});},
+  async reveal(match,guard){guards.push(guard);if(pending)await pending.promise;if(guard.isCurrent())revealed.push({match,signal:guard.signal});},
   subscribeSelection:fn=>{incoming=fn;return()=>{disposed++;};},subscribeContext:fn=>{context=fn;return()=>{disposed++;};}};
  const adapter=api.connectDidanixEducation({bridge,registry,viewer,scope:'shoulder-pilot',onStatus:s=>status.push(s)});
  const locator={version:1,linkId:links[0].id,linkRevision:1,resourceId:resource.id,resourceRevision:1,anchorId:resource.anchors[0].id};
- return {adapter,bridge,registry,locator,selected,revealed,status,send:(messageId='event-1',value=locator)=>incoming({messageId,locator:value}),context:()=>context(),access:v=>{access=v;},navigate:v=>{navigate=v;},study:v=>{study=v;},getDisposed:()=>disposed,wait:()=>{let done;const promise=new Promise(r=>{done=r;});pending={promise,done};return done;}};
+ return {adapter,bridge,registry,locator,selected,revealed,guards,status,detach,reattach:()=>bridge.attachAtlas(receiver),send:(messageId='event-1',value=locator)=>incoming({messageId,locator:value}),context:()=>context(),access:v=>{access=v;},navigate:v=>{navigate=v;},study:v=>{study=v;},getDisposed:()=>disposed,wait:()=>{let done;const promise=new Promise(r=>{done=r;});pending={promise,done};return done;}};
 }
 const tick=()=>new Promise(r=>setTimeout(r,0));
+// Closing/replacing the source Atlas must cancel in-flight reveals even when
+// the Education study, entitlement and resource revisions remain unchanged.
+for(const kind of ['ct','mri','xray','ultrasound']) {
+ for(const reattach of [false,true]) {
+  const f=fixture(kind);f.adapter.setEnabled(true);const done=f.wait();
+  f.bridge.publish(sourceEntry);f.detach();
+  same(f.guards.length,1);same(f.guards[0].signal.aborted,true);same(f.guards[0].isCurrent(),false);
+  const detachNext=reattach?f.reattach():()=>{};
+  done();await tick();same(f.revealed.length,0);same(f.status.at(-1),'paused');
+  same(f.send('after-detach').status,'paused');same(f.adapter.choices(),[]);
+  if(reattach){
+   f.adapter.setEnabled(true);f.detach(); // Old cleanup cannot pause the new attachment.
+   same(f.guards[0].isCurrent(),false);
+   f.bridge.publish(sourceEntry);await tick();same(f.revealed.length,1);
+  }
+  detachNext();f.adapter.dispose();
+ }
+ for(const relation of ['component','broader','related']) {
+  const f=fixture(kind,relation);f.adapter.setEnabled(true);f.bridge.publish(sourceEntry);
+  same(f.adapter.choices().length,1);f.detach();const detachNext=f.reattach();
+  same(f.adapter.choices(),[]);same(await f.adapter.choose(f.locator),false);
+  same(f.revealed.length,0);detachNext();f.adapter.dispose();
+ }
+}
 for(const kind of ['ct','mri','xray','ultrasound']) {
  const f=fixture(kind);f.bridge.publish(sourceEntry);await tick();same(f.revealed.length,0);
  f.adapter.setEnabled(true);f.bridge.publish(sourceEntry);await tick();same(f.revealed.length,1);same(f.revealed[0].match.anchor.type,kinds[kind].type);
@@ -80,6 +106,14 @@ const emptyDocument={schemaVersion:1,resources:[],links:[]};
 const deniedPolicy={canNavigate:()=>false,canAccessAnatomy:()=>false,canAccess:()=>false,resourceCleared:()=>false,correspondenceCleared:()=>false};
 const idleViewer=()=>({getStudy:()=>null,canNavigate:()=>false,async reveal(){throw Error('Must not open');},subscribeSelection:()=>()=>{},subscribeContext:()=>()=>{}});
 const idleOptions=()=>({document:emptyDocument,policy:deniedPolicy,viewer:idleViewer()});
+{
+ const bridge=api.createImagingBridge(), close=bridge.attachAtlas(request=>({messageId:request.messageId,status:'selected'}));
+ const stop=bridge.subscribe(close); // Simulate unmount during registration notification.
+ const registry=api.createLearningRegistry(emptyDocument,[],deniedPolicy);
+ const adapter=api.connectDidanixEducation({bridge,registry,viewer:idleViewer(),scope:'body'});
+ same(bridge.getAdapter()?.id,'vm-didanix-education');same(adapter.choices(),[]);
+ adapter.dispose();stop();same(bridge.getAdapter(),null);
+}
 {
  const foreign=runInNewContext('({schemaVersion:1,resources:[],links:[]})');
  const target={},uninstall=api.installShoulderEducationApi(target),facade=target.visibleMedicineShoulderEducation;

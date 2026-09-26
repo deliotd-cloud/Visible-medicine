@@ -45,7 +45,7 @@ export default defineConfig({
         }
       }
       const records=[...packages.values()].sort((a,b)=>a.name.localeCompare(b.name));
-      const inputs=new Set(['package-lock.json','integration/shoulder/vite.config.mjs','integration/shoulder/index.html']);
+      const inputs=new Set(['package-lock.json','integration/shoulder/vite.config.mjs','integration/shoulder/index.html','scripts/export-shoulder-module.mjs','scripts/export-space-preflight.mjs']);
       for(const id of this.getModuleIds()) {
         if(id.includes('node_modules') || id.startsWith('\0')) continue;
         const path=relative(root,id.split('?')[0]).replaceAll('\\','/');
@@ -53,7 +53,7 @@ export default defineConfig({
       }
       const inputRecords=await Promise.all([...inputs].sort().map(async path=>({path,sha256:createHash('sha256').update(await readFile(join(root,path))).digest('hex')})));
       this.emitFile({type:'asset',fileName:'source-inputs.json',source:JSON.stringify(inputRecords,null,2)+'\n'});
-      this.emitFile({type:'asset',fileName:'bundled-dependencies.json',source:JSON.stringify(records.map(({text,...rest})=>rest),null,2)+'\n'});
+      this.emitFile({type:'asset',fileName:'bundled-dependencies.json',source:JSON.stringify(records.map(({text:_text,...rest})=>rest),null,2)+'\n'});
       this.emitFile({type:'asset',fileName:'BUNDLED_NOTICES.txt',source:records.map(p=>p.name+'@'+p.version+' ('+p.license+')\n'+p.text).join('\n\n----------------\n\n')});
     },
   }],

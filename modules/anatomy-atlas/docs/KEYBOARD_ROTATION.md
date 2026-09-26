@@ -10,6 +10,7 @@ The handler belongs to the physical canvas, not the document/window. It ignores
 events targeted at other controls, unfocused canvases, composition, already
 handled events and Alt/Ctrl/Meta shortcuts. Tab and Escape are not intercepted.
 Locked illustration and planar tray views do not install the rotation handler.
+Unlocked orthographic trays instead install the pan handler described below.
 This does not reveal anatomy or alter selection, dissection, geometry or exams.
 
 Camera steps use installed OrbitControls APIs, preserve target/distance/zoom and
@@ -33,3 +34,24 @@ position, target and captured pose (within floating-point tolerance). Hosted
 pelvic sampling retained lateral orientation when opening/dismissing the Study
 menu and toggling labels. Selecting a study deliberately reapplies its framing;
 the menu alone does not request a preset reset.
+
+## Tray keyboard pan — 26 September 2026
+
+Tab to **Pan structure tray**, then use arrow keys to move the viewing window
+within its current screen plane. Each step is 5% of the current visible width
+or height; Shift uses 1%. The step adapts to zoom and viewport framing. Camera
+and target move together, preserving the tray's named projection, scale and
+distance. This does not rotate, repack, remove or translate anatomical meshes.
+
+The focus-only hint says “pan” in Tray and “rotate” in free-orbit views. No new
+permanent toolbar is added. The same focused-canvas/modifier guards apply;
+Tab/Escape remain available, and locked illustration views install neither
+handler. Mode changes/unmount restore owned attributes and remove listeners.
+
+Pan steps immediately capture saved-view position and invalidate the demand
+renderer without announcing a rotation. The camera-keyboard suite covers real
+orthographic cameras with varied directions/up axes, coarse/fine and reverse
+steps, zoom scaling, guards, cleanup, actual spatial/tray/locked transitions,
+refit retention, saved-pan restoration and a portrait viewport. Numerical and
+controlled-component tests do not establish browser focus, visual legibility,
+screen-reader or physical touch-device acceptance; those remain pending.

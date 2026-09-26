@@ -1,3 +1,5 @@
+import { OrthographicCamera, Vector3 } from 'three';
+
 /** Camera-only keyboard input. Never changes anatomy, selection or study state. */
 export interface KeyboardOrbitControls {
   enabled: boolean;
@@ -11,6 +13,62 @@ export interface KeyboardOrbitControls {
   getAzimuthalAngle(): number;
   setPolarAngle(value: number): void;
   setAzimuthalAngle(value: number): void;
+}
+
+/** Translate a tray in its screen plane without changing its named projection. */
+export function bindCameraPanKeyboard(
+  surface: HTMLCanvasElement,
+  camera: OrthographicCamera,
+  getControls: () => { enabled: boolean; enablePan: boolean; enableDamping: boolean; target: Vector3; update(): unknown } | null,
+  onChange: () => void,
+): () => void {
+  const panAttributes = {
+    ...attributes,
+    'aria-label': 'Pan structure tray',
+    'aria-description': 'Arrow keys pan the tray. Hold Shift for fine pan. Tab moves to the next control. Use the existing zoom and view controls to zoom or reset.',
+    'data-keyboard-rotation': undefined,
+    'data-keyboard-pan': 'true',
+  };
+  const owned = Object.entries(panAttributes).filter((entry): entry is [string, string] => entry[1] !== undefined);
+  const previous = Object.fromEntries(owned.map(([key]) => [key, surface.getAttribute(key)]));
+  for (const [key, value] of owned) surface.setAttribute(key, value);
+  const onKeyDown = (event: KeyboardEvent) => {
+    if (event.defaultPrevented || event.isComposing || event.altKey || event.ctrlKey || event.metaKey ||
+        event.target !== surface || surface.ownerDocument.activeElement !== surface) return;
+    const controls = getControls();
+    if (!controls?.enabled || !controls.enablePan) return;
+    const horizontal = event.key === 'ArrowLeft' || event.key === 'ArrowRight';
+    const vertical = event.key === 'ArrowUp' || event.key === 'ArrowDown';
+    if (!horizontal && !vertical) return;
+    const extent = (horizontal ? camera.right - camera.left : camera.top - camera.bottom) / camera.zoom;
+    if (!Number.isFinite(extent) || extent <= 0 || !Number.isFinite(camera.zoom) || camera.zoom <= 0) return;
+    camera.updateMatrixWorld();
+    const offset = new Vector3().setFromMatrixColumn(camera.matrixWorld, horizontal ? 0 : 1);
+    const sign = event.key === 'ArrowLeft' || event.key === 'ArrowDown' ? -1 : 1;
+    offset.multiplyScalar(sign * extent * (event.shiftKey ? 0.01 : 0.05));
+    if (!offset.toArray().every(Number.isFinite)) return;
+    event.preventDefault();
+    event.stopPropagation();
+    const damping = controls.enableDamping;
+    try {
+      controls.enableDamping = false;
+      camera.position.add(offset);
+      controls.target.add(offset);
+      controls.update();
+    } finally {
+      controls.enableDamping = damping;
+    }
+    onChange();
+  };
+  surface.addEventListener('keydown', onKeyDown);
+  return () => {
+    surface.removeEventListener('keydown', onKeyDown);
+    for (const [key, value] of owned) {
+      if (surface.getAttribute(key) !== value) continue;
+      if (previous[key] === null) surface.removeAttribute(key);
+      else surface.setAttribute(key, previous[key]);
+    }
+  };
 }
 
 const attributes = {

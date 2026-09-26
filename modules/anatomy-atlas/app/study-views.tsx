@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useId, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import Link from 'next/link';
 import { BookmarkPlus, RotateCcw, Trash2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -45,6 +45,20 @@ export function StudyViews({
     [busy, setBusy] = useState(false);
   const [removing, setRemoving] = useState<StudyBookmark | null>(null);
   const nameId = useId();
+  const summary = useRef<HTMLElement | null>(null);
+  const saveOpener = useRef<HTMLButtonElement | null>(null);
+  const removeOpener = useRef<HTMLButtonElement | null>(null);
+  const savePopup = useRef<HTMLDivElement | null>(null);
+  const removePopup = useRef<HTMLDivElement | null>(null);
+  const returnDialogFocus = (opener: HTMLButtonElement | null, popup: HTMLDivElement | null) => {
+    const active = summary.current?.ownerDocument.activeElement;
+    // Preserve focus deliberately moved outside this dialog. A removed trigger
+    // or the twentieth-save disabled trigger cannot receive keyboard focus.
+    if (active && active !== summary.current?.ownerDocument.body &&
+      active !== opener && !popup?.contains(active)) return false;
+    if (opener?.isConnected && !opener.disabled && opener.getClientRects().length) return opener;
+    return summary.current?.isConnected && summary.current.getClientRects().length ? summary.current : false;
+  };
   useEffect(() => {
     const refresh = () => {
       try {
@@ -132,14 +146,18 @@ export function StudyViews({
       variant="ghost"
       disabled={busy || disabled}
       aria-label={`Remove saved view ${b.name}`}
-      onClick={() => setRemoving(b)}
+      onClick={(event) => {
+        removeOpener.current = event.currentTarget;
+        setError('');
+        setRemoving(b);
+      }}
     >
       <Trash2 />
     </Button>
   );
   return (
     <details className="vm-study-views">
-      <summary>
+      <summary ref={summary}>
         Saved study views <span>{current.length} in this region</span>
       </summary>
       <div className="vm-study-content">
@@ -154,7 +172,8 @@ export function StudyViews({
           disabled={
             !ready || busy || disabled || bookmarks.length >= MAX_STUDY_VIEWS
           }
-          onClick={() => {
+          onClick={(event) => {
+            saveOpener.current = event.currentTarget;
             setError('');
             setOpen(true);
           }}
@@ -239,7 +258,7 @@ export function StudyViews({
         )}
       </div>
       <Dialog open={open} onOpenChange={(v) => !busy && setOpen(v)}>
-        <DialogContent className="vm-study-dialog">
+        <DialogContent className="vm-study-dialog" ref={savePopup} finalFocus={() => returnDialogFocus(saveOpener.current, savePopup.current)}>
           <DialogHeader>
             <DialogTitle>Save study view</DialogTitle>
             <DialogDescription>
@@ -288,7 +307,7 @@ export function StudyViews({
         open={!!removing}
         onOpenChange={(v) => !v && !busy && setRemoving(null)}
       >
-        <DialogContent className="vm-study-dialog">
+        <DialogContent className="vm-study-dialog" ref={removePopup} finalFocus={() => returnDialogFocus(removeOpener.current, removePopup.current)}>
           <DialogHeader>
             <DialogTitle>Remove saved view?</DialogTitle>
             <DialogDescription>

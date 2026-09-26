@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { build } from 'esbuild';
+import { build } from './workspace-component-test-build.mjs';
 const result = await build({
   stdin: {
     contents: `export * from './lib/imaging-comparison'; export * from './lib/imaging-sync'; export { ComparisonPanel, ImagingComparisonWorkspace } from './app/imaging-comparison'; export { createElement } from 'react'; export { renderToStaticMarkup } from 'react-dom/server';`,
@@ -9,19 +9,19 @@ const result = await build({
   bundle: true,
   write: false,
   platform: 'node',
-  format: 'esm',
+  format: 'cjs',
   packages: 'external',
   loader: { '.css': 'empty' },
 });
 // External imports need a normal file URL; keep transient output out of the source tree.
 import { writeFile, unlink } from 'node:fs/promises';
 const file = new URL(
-  '../node_modules/.vm-comparison-test.mjs',
+  '../node_modules/.vm-comparison-test.cjs',
   import.meta.url,
 );
 await writeFile(file, result.outputFiles[0].text);
 try {
-  const a = await import(file.href);
+  const a = (await import(file.href)).default;
   const entry = {
     id: 'vm:anatomy:test:left',
     name: 'Synthetic mapping fixture — no patient image',

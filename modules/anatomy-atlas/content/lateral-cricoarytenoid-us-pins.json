@@ -1,0 +1,179 @@
+{
+  "parentCommit": "db1572ce7241b60dc98bf15fe0f7ccb372930de8",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "head-neck-muscles",
+      "url": "/models/bodyparts3d/full-body/head-neck-muscles.glb",
+      "bytes": 8566352,
+      "sha256": "ad355b54f865461f5433bd1062bb206bde1967f6d4dc003840e7788800a69adb",
+      "structures": 72
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "218b3bf983b221096d813d5c47c1203d519439c299e5324873fe6026c459883b",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-lateral-crico-arytenoid",
+        "fmaId": "FMA46580",
+        "name": "Right lateral crico-arytenoid",
+        "sourceName": "right lateral crico-arytenoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46580",
+        "bounds": {
+          "min": [
+            -0.11734800040721893,
+            5.94420051574707,
+            0.4725990295410156
+          ],
+          "max": [
+            -0.07283669710159302,
+            6.052299976348877,
+            0.5731199383735657
+          ]
+        },
+        "center": [
+          -0.09509234875440598,
+          5.998250246047974,
+          0.5228594839572906
+        ],
+        "anchor": [
+          -0.1039159968495369,
+          6.000600814819336,
+          0.5278299450874329
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2796",
+            "sha256": "d0a4730aeb6f0bafdf53eced4954a0ccfaf31ba8f3d08aa90e0c18d9c8928cb3"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ultrasound"
+      ],
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-lateral-crico-arytenoid",
+        "fmaId": "FMA46581",
+        "name": "Left lateral crico-arytenoid",
+        "sourceName": "left lateral crico-arytenoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46581",
+        "bounds": {
+          "min": [
+            0.05964810028672218,
+            5.94420051574707,
+            0.47257599234580994
+          ],
+          "max": [
+            0.10436300188302994,
+            6.052299976348877,
+            0.573140025138855
+          ]
+        },
+        "center": [
+          0.08200555108487606,
+          5.998250246047974,
+          0.5228580087423325
+        ],
+        "anchor": [
+          0.09090519696474075,
+          6.000500679016113,
+          0.5261699557304382
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2778",
+            "sha256": "15d694d60ddab28b19aa0ca2017c86ac82ccc3fda58d257a240f56c363d4271a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ultrasound"
+      ],
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

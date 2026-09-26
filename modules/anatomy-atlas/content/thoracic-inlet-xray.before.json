@@ -1,0 +1,404 @@
+{
+  "parentCommit": "03e05321688e893463e1a45547373b304cc9896e",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "originalPinsHash": "0f63534f228382dbf196f4dd2c732f9824bd0727752da8a198fb27ab764234ad",
+  "previousAllLessonsAndRecipesHash": "d49086864faec8db8e7998c684d409099be500dbe1bce6abeaac563c971313dd",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-subclavian-artery",
+        "fmaId": "FMA3953",
+        "name": "Right subclavian artery",
+        "sourceName": "right subclavian artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "shoulder-arm",
+          "head-neck"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA3953",
+        "bounds": {
+          "min": [
+            -0.8217599987983704,
+            5.309399604797363,
+            0.44354599714279175
+          ],
+          "max": [
+            -0.0974728986620903,
+            5.530300140380859,
+            0.6222100257873535
+          ]
+        },
+        "center": [
+          -0.45961644873023033,
+          5.419849872589111,
+          0.5328780114650726
+        ],
+        "anchor": [
+          -0.458391010761261,
+          5.453499794006348,
+          0.5169299840927124
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3579",
+            "sha256": "1fb9231343dce90a8d62061c63e0102eb72d117f131eda7876abfeb0060b6ad3"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "right-subclavian-artery",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-subclavian-artery",
+        "fmaId": "FMA4694",
+        "name": "Left subclavian artery",
+        "sourceName": "left subclavian artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "shoulder-arm",
+          "head-neck"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4694",
+        "bounds": {
+          "min": [
+            0.17685699462890625,
+            5.073100566864014,
+            0.368478000164032
+          ],
+          "max": [
+            0.865464985370636,
+            5.564599514007568,
+            0.5563400387763977
+          ]
+        },
+        "center": [
+          0.5211609899997711,
+          5.318850040435791,
+          0.46240901947021484
+        ],
+        "anchor": [
+          0.6160910129547119,
+          5.413900375366211,
+          0.5066100358963013
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3479",
+            "sha256": "f6af4efb94e1ce94519c94684b1d0a0736272e5a0ed2677a63627e0ebfc228b1"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-subclavian-artery",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-brachiocephalic-vein",
+        "fmaId": "FMA4751",
+        "name": "Right brachiocephalic vein",
+        "sourceName": "right brachiocephalic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "shoulder-arm",
+          "head-neck"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4751",
+        "bounds": {
+          "min": [
+            -0.31965500116348267,
+            4.980200290679932,
+            0.5937699675559998
+          ],
+          "max": [
+            -0.1029599979519844,
+            5.498600006103516,
+            0.8127099871635437
+          ]
+        },
+        "center": [
+          -0.21130749955773354,
+          5.239400148391724,
+          0.7032399773597717
+        ],
+        "anchor": [
+          -0.24767400324344635,
+          5.23900032043457,
+          0.7016200423240662
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3583",
+            "sha256": "53cca77d47a5c4bb02e2c86cd38180752d37bf257a6e7ec48bc2335c6e95211a"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "right-brachiocephalic-vein",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-brachiocephalic-vein",
+        "fmaId": "FMA4761",
+        "name": "Left brachiocephalic vein",
+        "sourceName": "left brachiocephalic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "shoulder-arm",
+          "head-neck"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4761",
+        "bounds": {
+          "min": [
+            -0.23789699375629425,
+            4.958799839019775,
+            0.605430006980896
+          ],
+          "max": [
+            0.2800680100917816,
+            5.479899883270264,
+            0.8235699534416199
+          ]
+        },
+        "center": [
+          0.021085508167743683,
+          5.2193498611450195,
+          0.7144999802112579
+        ],
+        "anchor": [
+          0.03626110032200813,
+          5.196999549865723,
+          0.691029965877533
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3482",
+            "sha256": "435c32387de475a28722653dfa7a830c136dd7921dac768c4b6858877fafb176"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-brachiocephalic-vein",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-subclavian-vein",
+        "fmaId": "FMA4755",
+        "name": "Right subclavian vein",
+        "sourceName": "right subclavian vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "shoulder-arm",
+          "head-neck"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4755",
+        "bounds": {
+          "min": [
+            -0.8682869672775269,
+            5.277299880981445,
+            0.5849699974060059
+          ],
+          "max": [
+            -0.22342300415039062,
+            5.515500545501709,
+            0.717930018901825
+          ]
+        },
+        "center": [
+          -0.5458549857139587,
+          5.396400213241577,
+          0.6514500081539154
+        ],
+        "anchor": [
+          -0.5808529853820801,
+          5.366500377655029,
+          0.6452600359916687
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3587",
+            "sha256": "3ed476e466dbc681e284005f910b546a97ac24999236cae1ec7487149da7bb53"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "right-subclavian-vein",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-subclavian-vein",
+        "fmaId": "FMA4763",
+        "name": "Left subclavian vein",
+        "sourceName": "left subclavian vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "shoulder-arm",
+          "head-neck"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4763",
+        "bounds": {
+          "min": [
+            0.19380800426006317,
+            5.251899242401123,
+            0.554419994354248
+          ],
+          "max": [
+            0.9425779581069946,
+            5.5346999168396,
+            0.7107599377632141
+          ]
+        },
+        "center": [
+          0.5681929811835289,
+          5.393299579620361,
+          0.6325899660587311
+        ],
+        "anchor": [
+          0.5884230136871338,
+          5.4121994972229,
+          0.6234800219535828
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3486",
+            "sha256": "22b351bd5e1e76488e150f433bfc59a44c3a27a567f5eb5c9a6be5b2b21be5c6"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-subclavian-vein",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      }
+    }
+  ]
+}

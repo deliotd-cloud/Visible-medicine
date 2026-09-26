@@ -2,11 +2,16 @@
 import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
+import { execFileSync } from 'node:child_process';
+import { dirname } from 'node:path';
 import { runInNewContext } from 'node:vm';
 import { build } from './workspace-component-test-build.mjs';
 import { build as buildHelpers } from './workspace-test-build.mjs';
+const baseline = process.argv.includes('--baseline');
+const baselineSource = baseline ? execFileSync('git', ['show', '365f3a15b13c2e22c5fd5a9c72e3ee4c253eabf5:app/atlas-workspace.tsx'], { encoding: 'utf8' }) : null;
+let baselineOverrides = 0;
 // Resolve the actual TypeScript helper graph as the app does, including its
-// extensionless transitive imports. No production import or assertion changes.
+// extensionless transitive imports. Baseline mode swaps only the saved component.
 const helpers = await buildHelpers({
   stdin: {
     contents: `export * from './lib/atlas-navigation.ts';
@@ -162,7 +167,14 @@ const output = await build({
   write: false,
   external: ['react', 'react/*', 'react-dom', 'react-dom/*', 'next/link'],
   loader: { '.css': 'empty' },
+  plugins: baseline ? [{ name: 'exact-baseline-navigation', setup(api) {
+    api.onLoad({ filter: /atlas-workspace\.tsx$/, namespace: 'component-test' }, args => {
+      baselineOverrides++;
+      return { contents: baselineSource, loader: 'tsx', resolveDir: dirname(args.path) };
+    });
+  } }] : [],
 });
+if (baseline) assert.equal(baselineOverrides, 1, 'exact baseline component override executed once');
 const vmModule = { exports: {} };
 runInNewContext(output.outputFiles[0].text, {
   module: vmModule,
@@ -276,8 +288,14 @@ const props = {
   region,
   side,
   onSelect: (id) => calls.push(['select', id]),
-  onWindow: (id) => calls.push(['window', id]),
-  onFocus: (id) => calls.push(['focus', id]),
+  // The parent validates source admission before requesting workspace restore,
+  // then applies the accepted study. An ignored beforeApply is legacy behavior.
+  onWindow: (id, beforeApply) => {
+    calls.push(['validate', 'window', id]); beforeApply(); calls.push(['window', id]); return true;
+  },
+  onFocus: (id, beforeApply) => {
+    calls.push(['validate', 'focus', id]); beforeApply(); calls.push(['focus', id]); return true;
+  },
 };
 const index = atlasSearchIndex(catalog, region, side);
 let activationCases = 0;
@@ -309,6 +327,7 @@ for (const type of ['select', 'window', 'focus']) {
     check(confirm);
     confirm.props.onClick();
     same(calls, [
+      ['validate', type, entry.action.id],
       ['mode', 'dissect'],
       [type, entry.action.id],
       ['panel', false, false],
@@ -317,6 +336,37 @@ for (const type of ['select', 'window', 'focus']) {
   }
   same(states[0], false, 'Search closes after confirmed action');
   activationCases++;
+}
+// Older void callbacks apply directly without beforeApply; AtlasSearch restores
+// the mode afterwards. Explicit rejection must never restore mode or panels.
+for (const type of ['window', 'focus']) {
+  const entry = index.find(e => e.action.type === type);
+  const key = type === 'window' ? 'onWindow' : 'onFocus', originalCallback = props[key];
+  for (const behavior of ['legacy-void', 'rejected']) {
+    states = [true, entry.label, 'view', 100, null]; calls.length = 0;
+    props[key] = (id, _beforeApply) => {
+      if (behavior === 'rejected') { calls.push(['validate', type, id]); return false; }
+      calls.push([type, id]);
+    };
+    tree = render(api.AtlasSearch, props);
+    walk(tree, n => n.type === 'button' && n.key === entry.key)[0].props.onClick();
+    same(calls, [], `${behavior} preview leaves the workspace unchanged`);
+    tree = render(api.AtlasSearch, props);
+    walk(tree, n => n.props.children === 'Open study view')[0].props.onClick();
+    if (behavior === 'legacy-void') {
+      same(calls, [[type, entry.action.id], ['mode', 'dissect'],
+        ['panel', false, false], ['panel', true, false]], 'Legacy void applies before fallback mode restore');
+      same(states[0], false, 'Legacy acceptance closes Search');
+    } else {
+      same(calls, [['validate', type, entry.action.id]], 'Rejected source admission causes no action, mode or panel change');
+      same(states[0], true, 'Rejected source admission retains Search');
+      same(states[4].key, entry.key, 'Rejected source admission retains its preview');
+      tree = render(api.AtlasSearch, props);
+      check(walk(tree, n => n.props.role === 'alert').length === 1, 'Rejection remains announced');
+    }
+    activationCases++;
+  }
+  props[key] = originalCallback;
 }
 const entry = index.find((e) => e.action.type === 'select');
 states = [true, entry.label, 'structure', 100, null];
@@ -371,8 +421,7 @@ const result = {
   limitations:
     'Source-linked index, exact existing recipe membership and actual component event closures with injected hooks. Browser layout, dialog focus/keyboard, touch, zoom and GPU acceptance remain pending.',
 };
-await fs.writeFile(
-  'docs/atlas-navigation-validation.json',
-  JSON.stringify(result, null, 2) + '\n',
+if (!baseline) await fs.writeFile(
+  'docs/atlas-navigation-validation.json', JSON.stringify(result, null, 2) + '\n',
 );
 console.log(result);

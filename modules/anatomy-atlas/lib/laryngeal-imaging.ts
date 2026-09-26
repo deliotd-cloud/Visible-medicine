@@ -4,8 +4,11 @@ import {sourceCanonical} from './body-source-additions';
 import type {BodyStructure} from '../app/body-types';
 import type {ContentTab} from '../app/anatomy-data';
 import type {ContentLesson} from './content-types';
+import {laryngealFrameworkImagingLesson} from './laryngeal-framework-imaging';
 const bindings=new Map(pins.entries.map(e=>[e.identity.id,{identity:sourceCanonical(e.identity),group:e.group as LaryngealImagingGroup}]));
 export function laryngealImagingLesson(s:BodyStructure,tab:ContentTab):ContentLesson|undefined{
+  const supplemental=laryngealFrameworkImagingLesson(s,tab);
+  if(supplemental)return supplemental;
   if(tab!=='ct'&&tab!=='mri')return undefined;
   const binding=bindings.get(s.id);
   if(!binding||sourceCanonical(s)!==binding.identity)return undefined;

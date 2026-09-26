@@ -1,5 +1,26 @@
 # Clinical validation checklist
 
+[Limb-bone ultrasound](LIMB_BONE_ULTRASOUND.md): review ten new elbow/knee
+orientation placements for paired radius, ulna, femur, tibia and fibula. Confirm
+regional endpoint versus whole-bone scope, adult-bone visibility limitations and
+soft-tissue relationships. Existing patellar ultrasound remains unchanged. No
+ultrasound image, patient correspondence, complete marrow/cartilage assessment,
+fracture exclusion or scanning-competency claim is supplied.
+
+[Internal thoracic vessel imaging](INTERNAL_THORACIC_IMAGING.md): review three
+MRI and one ultrasound draft placements. Check the female chest-wall cohort,
+limited intercostal MRI coverage, variable venous arrangements and transmitted
+arterial pulsatility in the venous Doppler description. Do not treat these notes
+as complete patency studies, validated procedure planning or evidence for distal
+musculophrenic/superior epigastric visibility. Existing geometry is unchanged.
+
+[Orbital nerve MRI](ORBITAL_NERVE_MRI.md): review fourteen bilateral draft
+placements, distinguishing protocol-specific normal-cohort depiction from
+diagnostic sensitivity. Check poor nasociliary reader agreement, grouped versus
+individual nerve statistics, orbital versus cisternal scope, and exclusion of
+unassessed distal branches. These notes do not validate any patient scan,
+source-mesh correspondence, nerve function or disease detection.
+
 [Costal cartilage imaging](COSTAL_CARTILAGE_IMAGING.md): review14 first–seventh
 bilateral source labels and56 draft modality placements. Check cartilage/rib
 distinction, X-ray visibility, CT contour/cleft context, MR signal interpretation

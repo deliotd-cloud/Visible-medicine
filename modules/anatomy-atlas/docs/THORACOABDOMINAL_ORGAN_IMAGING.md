@@ -1,5 +1,10 @@
 # Chest and abdominal organ imaging teaching
 
+26 September extension: [oesophageal external ultrasound](ESOPHAGUS_EXTERNAL_ULTRASOUND.md)
+adds the remaining cervical-orientation draft in this 15-selection group. This
+does not make the group's ultrasound lessons comprehensive or clinically approved.
+The counts and pending statements in the original dated sections below are historical.
+
 Added 13 September 2026 against Atlas source
 `76e0d191c683f273d2399216d82a592b14438b7d`: 42 original draft orientation notes
 for 15 exact existing organ selections. CT and MRI cover all 15; ultrasound

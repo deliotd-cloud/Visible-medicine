@@ -147,6 +147,8 @@ for (const selected of structures) {
       `${mode}: zoom controls belong in the heading, not over anatomy labels`);
     check(html.includes('aria-label="Shoulder zoom controls"') && !html.includes('class="zoom-controls"'),
       `${mode}: one named external zoom group and no legacy floating controls`);
+    check(html.includes('<fieldset class="shoulder-zoom-controls" aria-label="Shoulder zoom controls">'),
+      `${mode}: native named control group without an added tab stop`);
     const railStart = html.indexOf(
       '<aside class="body-rail anatomy-control-rail"',
     );
@@ -391,14 +393,17 @@ function declarations(selector, container = null) {
   same(found.length, 1, `One scoped rule: ${selector}`);
   return Object.fromEntries(found[0].nodes.filter(n => n.type === 'decl').map(n => [n.prop, n.value + (n.important ? ' !important' : '')]));
 }
-for (const [selector, expected, container] of [
+/** @type {Array<[string, Record<string, string>, string?]>} */
+const layoutRules = [
+  ['.shoulder-zoom-controls', {'flex':'none','min-inline-size':'0','margin':'0','padding':'0','border':'0'}],
   ['.shoulder-model-workspace > .viewer-panel', {'display':'grid','min-width':'0','min-height':'min-content','grid-template-columns':'minmax(0, 1fr)','grid-template-rows':'auto minmax(160px, 1fr)'}],
   ['.shoulder-model-workspace .shoulder-scene', {'position':'relative !important','inset':'auto !important','grid-row':'2','min-height':'0','height':'100% !important'}],
   ['.shoulder-workspace .viewer-meta', {'position':'static','grid-row':'1','min-width':'0'}],
   ['.shoulder-view-footer .viewer-toolbar', {'min-width':'0','container':'shoulder-toolbar / inline-size'}],
   ['.explode-control:has(.vm-explode-style)', {'grid-template-columns':'minmax(0, 1fr) auto'}, 'shoulder-toolbar (max-width: 20rem)'],
   ['.explode-control .vm-explode-style', {'grid-column':'1 / -1','min-width':'0','max-width':'none'}, 'shoulder-toolbar (max-width: 20rem)'],
-]) {
+];
+for (const [selector, expected, container] of layoutRules) {
   const actual = declarations(selector, container);
   for (const [property, value] of Object.entries(expected)) same(actual[property], value, `${selector}: ${property}`);
 }

@@ -12,6 +12,21 @@ No new dependency, scan, font, texture, anatomical mesh or third-party service i
 
 ## Identity and scope
 
+### Observer fault isolation (26 September 2026)
+
+Both same-document selection and comparison bridges isolate synchronous subscriber
+exceptions. Registration still returns its owned cleanup handle; remaining observers
+are notified and adapter errors retain their existing fail-closed behaviour.
+Each notification snapshots its subscribers: additions wait for the next delivery,
+removed listeners are skipped, and self-rebinding cannot extend the current pass.
+A throwing subscriber remains subscribed and may recover on a later notification.
+Subscribers are synchronous; this is not an asynchronous error handler or a change
+to access checks, image loading, registration or clinical approval.
+
+`npm run imaging-subscriber-isolation:test` exercises the actual bridges with
+synthetic fixtures. The original register-handle loss and mutable-set delivery
+failures were reproduced before the fix. No desktop application files are involved.
+
 Use product IDs from the checked-in anatomy catalogue, not display names, colours, array positions or a guessed FMA match. A request carries one identity. A result describes what happened; `selected` means the atlas accepted selection state, not that a mesh has finished loading or that imaging moved.
 
 | Situation | Result | Behaviour |

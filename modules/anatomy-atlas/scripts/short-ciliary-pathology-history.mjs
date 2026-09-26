@@ -5,8 +5,10 @@ import {isDeepStrictEqual} from 'node:util';
 import legacy from '../content/short-ciliary-transition.json' with {type:'json'};
 import before from '../content/short-ciliary-pathology.before.json' with {type:'json'};
 import transition from '../content/short-ciliary-pathology.transition.json' with {type:'json'};
+import {beforeAnteriorCardiacPathology} from './anterior-cardiac-pathology-history.mjs';
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function beforeShortCiliaryPathology(api){
+ api=beforeAnteriorCardiacPathology(api);
  assert.equal(hash(before),'b910428972cc24fb7008cf4e0b2b4a4ff293a5499330f6efad3cb4bae03b6e36');
  assert.equal(hash(transition),'2678c2ed9ed48c24a97efa159310a3f0080cda0880f2fe8a317d7e82205032eb');
  assert.equal(before.parentCommit,'0931b2da1151f04a2b6f0f623252879588178e08');

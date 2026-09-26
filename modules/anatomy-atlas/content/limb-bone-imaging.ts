@@ -5,7 +5,8 @@ export const limbBoneImagingGroups = {
   tibia: ['FMA24477', 'FMA24478'], patella: ['FMA24486', 'FMA24487'],
 } as const;
 export type LimbBoneImagingGroup = keyof typeof limbBoneImagingGroups;
-export type LimbBoneImagingModality = 'xray' | 'ct' | 'mri';
+export type LimbBoneImagingModality = 'xray' | 'ct' | 'mri' | 'ultrasound';
+export const limbBoneUltrasoundLimit = 'Ultrasound assesses accessible adult bone surfaces, not marrow or the bone interior.';
 export const limbBoneImagingReferences = {
   upper: 'https://anatomy.ttuhscep.edu/anatomytables/bones_upperlimb.html',
   lower: 'https://anatomy.ttuhscep.edu/anatomytables/bones_lowerlimb.html',
@@ -18,6 +19,9 @@ export const limbBoneImagingReferences = {
   patella: 'https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/patella/further-reading/patient-examination',
   ct: 'https://www.radiologyinfo.org/en/info/bodyct',
   mri: 'https://www.radiologyinfo.org/en/info/muscmr',
+  elbowUS: 'https://essr.org/content-essr/uploads/2016/10/elbow.pdf',
+  kneeUS: 'https://www.essr.org/content-essr/uploads/2016/10/knee.pdf',
+  boneUS: 'https://www.radiologyinfo.org/en/info/musculous',
 } as const;
 export const limbBoneImagingLandmarks: Record<LimbBoneImagingGroup, {note:string; reference:'upper'|'lower'}> = {
   radius: { note: 'Follow the proximal radial head and neck to the broader distal radius and radial styloid. The radial head is at the elbow; the ulnar head is at the wrist.', reference:'upper' },
@@ -30,6 +34,10 @@ export const limbBoneImagingLandmarks: Record<LimbBoneImagingGroup, {note:string
 type Topic = { body:string; bullets:[string,string]; references:(keyof typeof limbBoneImagingReferences)[] };
 export const limbBoneImagingTopics: Record<LimbBoneImagingGroup, Partial<Record<LimbBoneImagingModality,Topic>>> = {
   radius: {
+    ultrasound: { body:'At the elbow, identify the radial head beneath the capitellum and the radial tuberosity at the distal biceps insertion.', bullets:[
+      'This concerns the proximal radius, not the wrist.',
+      'Camera rotation does not reproduce dynamic forearm ultrasound.',
+    ], references:['elbowUS'] },
     xray: { body:'Trace the radius separately from the ulna, from elbow to wrist. Forearm rotation changes their projected relationship; rotating the atlas camera does not pronate or supinate these fixed bones.', bullets:[
       'Forearm fractures may involve both bones or accompany injury at a neighbouring joint. A single selected shaft is not a complete assessment.',
       'Compare acquired views with the assembled reference. Apparent overlap or separation in this model is not a measured deformity.',
@@ -44,6 +52,10 @@ export const limbBoneImagingTopics: Record<LimbBoneImagingGroup, Partial<Record<
     ], references:['mri'] },
   },
   ulna: {
+    ultrasound: { body:'At the posterior elbow, relate the olecranon to the triceps insertion. Distinguish the neighbouring humeral olecranon fossa from the ulna.', bullets:[
+      'The ulnar head at the wrist is different.',
+      'This fixed surface cannot establish triceps or joint integrity.',
+    ], references:['elbowUS'] },
     xray: { body:'The olecranon forms the posterior bony point of the elbow. An injury involving it may extend into the elbow joint; relate it to the distal humerus and radial head.', bullets:[
       'Continue along the ulna to the wrist rather than mistaking its small distal head for the proximal radial head.',
       'The selected bone does not establish triceps continuity, elbow stability or whether another injury is present.',
@@ -58,6 +70,10 @@ export const limbBoneImagingTopics: Record<LimbBoneImagingGroup, Partial<Record<
     ], references:['mri'] },
   },
   fibula: {
+    ultrasound: { body:'At the fibular head, relate biceps femoris and lateral collateral ligament attachments to the proximal tibiofibular joint.', bullets:[
+      'Keep the head distinct from the malleolus.',
+      'No ligament continuity is established here.',
+    ], references:['kneeUS'] },
     xray: { body:'At the ankle, identify the fibular lateral malleolus separately from the tibial malleoli and talus. Fracture location and adjacent joint findings matter beyond naming the injured bone.', bullets:[
       'The whole fibula remains selected, including its proximal head; an ankle-focused view may not include that region.',
       'This fixed, unloaded atlas cannot demonstrate a stress examination or syndesmotic instability.',
@@ -71,11 +87,17 @@ export const limbBoneImagingTopics: Record<LimbBoneImagingGroup, Partial<Record<
       'Neither bone colour nor the space between separated meshes establishes syndesmotic or lateral-ligament integrity.',
     ], references:['ankle'] },
   },
-  femur: { xray: { body:'Radiographs can localise a distal femoral fracture and show its pattern. Relate the condyles to the tibia and the patella before isolating the femur.', bullets:[
+  femur: { ultrasound: { body:'At the knee, ultrasound can examine the femoral trochlea and overlying cartilage with the joint flexed.', bullets:[
+    'This concerns the distal femur only.',
+    'The atlas cannot simulate joint flexion.',
+  ], references:['kneeUS'] }, xray: { body:'Radiographs can localise a distal femoral fracture and show its pattern. Relate the condyles to the tibia and the patella before isolating the femur.', bullets:[
     'The whole femur spans two joints. A knee-focused comparison is not a review of the femoral neck or hip.',
     'No fracture classification, calibrated projection or normal alignment measurement is supplied by rotating the intact model.',
   ], references:['femur'] } },
-  tibia: { xray: { body:'Localise a proximal tibial finding relative to the plateau rather than the shaft or ankle. Radiographs show bone injury, but some suspected plateau injuries are not visible on initial X-rays.', bullets:[
+  tibia: { ultrasound: { body:'Use proximal tibial landmarks to relate the pes anserinus insertion medially and iliotibial band insertion laterally.', bullets:[
+    'This is proximal, not ankle, orientation.',
+    'No tendon attachment segmentation is supplied.',
+  ], references:['kneeUS'] }, xray: { body:'Localise a proximal tibial finding relative to the plateau rather than the shaft or ankle. Radiographs show bone injury, but some suspected plateau injuries are not visible on initial X-rays.', bullets:[
     'Distinguish the joint surface from the anterior tuberosity using the assembled reference.',
     'The intact atlas does not exclude occult injury, plateau depression or associated meniscal and ligament damage.',
   ], references:['tibia'] } },

@@ -1,0 +1,24 @@
+{
+  "bundles": 109,
+  "meshes": 1104,
+  "regions": {
+    "whole-body": 1104,
+    "head-neck": 291,
+    "thorax": 158,
+    "abdomen": 106,
+    "pelvis": 82,
+    "shoulder-arm": 115,
+    "forearm": 86,
+    "hand": 124,
+    "thigh": 95,
+    "leg": 76,
+    "foot": 122,
+    "spine": 115
+  },
+  "sourceBytesUnchanged": true,
+  "missingNodeRejections": 109,
+  "freshSceneRecoveries": 109,
+  "browserAcceptance": false,
+  "clinicalApproval": false,
+  "limitations": "Actual GLTFLoader scenes and shipped catalogue contracts. No GPU, browser retry, device or clinical acceptance; malformed position and duplicate-node cases are in the focused unit suite."
+}

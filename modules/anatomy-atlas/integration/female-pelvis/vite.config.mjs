@@ -9,6 +9,6 @@ export default defineConfig({
   base:'/atlas-runtime/female-pelvis/', publicDir:false,
   resolve:{alias:{'@':root}},
   css:{postcss:{plugins:[tailwind({base:root})]}},
-  plugins:[react(),moduleAudit(root,['integration/female-pelvis/vite.config.mjs','integration/female-pelvis/index.html'])],
+  plugins:[react(),moduleAudit(root,['integration/female-pelvis/vite.config.mjs','integration/female-pelvis/index.html','scripts/export-female-pelvis-module.mjs','scripts/export-space-preflight.mjs'])],
   build:{outDir:'../../.sites-runtime/female-pelvis-module',emptyOutDir:true,sourcemap:false},
 });

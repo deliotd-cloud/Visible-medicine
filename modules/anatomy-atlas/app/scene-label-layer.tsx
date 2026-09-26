@@ -15,6 +15,7 @@ import { useFrame, useThree } from '@react-three/fiber';
 import { Html } from '@react-three/drei';
 import { Group, Vector3 } from 'three';
 import { createLabelDepthProbe, coveredLabelDescription } from '@/lib/label-depth';
+import { returnHiddenLabelFocus } from '@/lib/scene-label-focus';
 import {
   layoutScreenLabels,
   projectLabelAnchor,
@@ -67,6 +68,7 @@ export function SceneLabelLayer({ children }: { children: ReactNode }) {
   const [entries, setEntries] = useState<Entry[]>([]);
   const invalidate = useThree((state) => state.invalidate);
   const size = useThree((state) => state.size);
+  const canvas = useThree((state) => state.gl.domElement);
   const buttons = useRef(new Map<string, HTMLButtonElement>());
   const lines = useRef(new Map<string, SVGPathElement>());
   const points = useRef(new Map<string, SVGCircleElement>());
@@ -163,6 +165,7 @@ export function SceneLabelLayer({ children }: { children: ReactNode }) {
         point = points.current.get(entry.id);
       if (!button || !line || !point) continue;
       const label = placements.get(entry.id);
+      if (!label) returnHiddenLabelFocus(button, canvas);
       button.style.visibility =
         line.style.visibility =
         point.style.visibility =

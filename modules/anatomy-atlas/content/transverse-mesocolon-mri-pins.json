@@ -1,0 +1,111 @@
+{
+  "parentCommit": "1af9a485525fa130842bd5c77afa9429d2930f9a",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "abdomen-connective-mesenteric",
+      "url": "/models/bodyparts3d/full-body/abdomen-connective-mesenteric.glb",
+      "bytes": 727116,
+      "sha256": "45d592f6eaef66743c7fe88ec944d68a6e6ddf2496d59331e353b15f99b91845",
+      "structures": 3
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "2b9ff0def5cb3ba0a2dfe622731adc50f70369633418d0d69cf1fe97032037ff",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+        "fmaId": "FMA14647",
+        "name": "Transverse mesocolon",
+        "sourceName": "transverse mesocolon",
+        "system": "connective",
+        "category": "membrane",
+        "laterality": "midline",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-connective-mesenteric",
+        "nodeName": "FMA14647",
+        "bounds": {
+          "min": [
+            -0.8190000057220459,
+            0.608720064163208,
+            0.005898017901927233
+          ],
+          "max": [
+            0.9114610552787781,
+            2.636199951171875,
+            1.3182100057601929
+          ]
+        },
+        "center": [
+          0.04623052477836609,
+          1.6224600076675415,
+          0.66205401183106
+        ],
+        "anchor": [
+          -0.042700499296188354,
+          1.7324901819229126,
+          0.9104300141334534
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3398",
+            "sha256": "580c65869c905aa33afa3a19e2b3f685e90b24d9dfa3e67bde775304c1c6a810"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected mesenteric surface only, not a complete peritoneum, mesenteric root, fascial plane or separately segmented peritoneal leaves. Attachments, folds and embedded structures require specialist review.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

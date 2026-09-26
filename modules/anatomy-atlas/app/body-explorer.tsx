@@ -67,6 +67,7 @@ import {
   AtlasSearch,
   StructureDetailsButton,
   PracticeAttention,
+  PracticeResultStudyButton,
   QuizNotes,
 } from './atlas-workspace';
 import {
@@ -77,6 +78,7 @@ import {
   type BodySystem,
 } from './body-types';
 import { bodyContent } from './body-content';
+import { parseBodyCatalog } from '@/lib/body-catalog-input';
 import { ComponentImagingNotes } from './component-imaging-notes';
 import { resolveComponentImagingTarget } from '@/lib/component-imaging-navigation';
 import type { NestedImagingTopic } from '@/content/nested-teaching';
@@ -289,7 +291,7 @@ export default function BodyExplorer({
   const [retries, setRetries] = useState<Record<string, number>>({});
   const [retrying, setRetrying] = useState(false),
     [retryError, setRetryError] = useState('');
-  const [selectedId, setSelectedId] = useState<string | null>(null),
+  const [selectedId, setSelectedIdState] = useState<string | null>(null),
     [systems, setSystems] = useState(
       initialRegion === 'whole-body' ? initialSystems : allBodySystems,
     );
@@ -342,12 +344,13 @@ export default function BodyExplorer({
     requestAnimationFrame(() => kneeSpecimenLauncher.current?.focus());
   }, []);
   const eyeLauncher = useRef<HTMLButtonElement | null>(null);
-  const closeEyeLayers = useCallback(() => {
+  const closeEyeLayers = useCallback((restoreFocus = true) => {
     setEyeParent(null);
     setNestedSelection(null);
     const returnTo = nestedReturnFocus.current;
     nestedReturnFocus.current = null;
-    requestAnimationFrame(() => (returnTo ?? eyeLauncher.current)?.focus());
+    if (restoreFocus)
+      requestAnimationFrame(() => (returnTo ?? eyeLauncher.current)?.focus());
   }, []);
   const [ventricleParent, setVentricleParent] = useState<BodyStructure | null>(
     null,
@@ -355,16 +358,24 @@ export default function BodyExplorer({
   const [manualHeartStudy, setManualHeartStudy] = useState<'coronary-venous' | null>(null);
   const ventricleLauncher = useRef<HTMLButtonElement | null>(null);
   const coronaryVenousLauncher = useRef<HTMLButtonElement | null>(null);
-  const closeVentricles = useCallback(() => {
+  const closeVentricles = useCallback((restoreFocus = true) => {
     setVentricleParent(null);
     setNestedSelection(null);
     setManualHeartStudy(null);
     const returnTo = nestedReturnFocus.current;
     nestedReturnFocus.current = null;
-    requestAnimationFrame(() =>
-      (returnTo ?? ventricleLauncher.current)?.focus(),
-    );
+    if (restoreFocus)
+      requestAnimationFrame(() =>
+        (returnTo ?? ventricleLauncher.current)?.focus(),
+      );
   }, []);
+  // Selection changes own study closure. Clear stale child state in the same
+  // transition so reselecting a parent cannot reopen its previous study.
+  const setSelectedId = useCallback((id: string | null, restoreStudyFocus = true) => {
+    if (eyeParent && eyeParent.id !== id) closeEyeLayers(restoreStudyFocus);
+    if (ventricleParent && ventricleParent.id !== id) closeVentricles(restoreStudyFocus);
+    setSelectedIdState(id);
+  }, [eyeParent, ventricleParent, closeEyeLayers, closeVentricles]);
   const [view, setView] = useState<DissectionView>(profile.stages[0].view),
     [zoom, setZoom] = useState(1),
     [zoomStep, setZoomStep] = useState(0),
@@ -404,6 +415,7 @@ export default function BodyExplorer({
       ghostRemoved: false, anchorSkeleton: false, showOrigins: false, isolated: false,
       focus: false, regionalFraming: true, view, zoom, camera: cameraCapture.current }),
   );
+  const chooseWorkspaceMode = workspace.chooseMode;
   const inlineStudy = workspace.mode === 'dissect' && !exam && Boolean(
     (eyeParent && eyeParent.id === selectedId) || (ventricleParent && ventricleParent.id === selectedId) ||
     (kneeSpecimenOpen && ['leg', 'foot', 'thigh', 'pelvis'].includes(initialRegion)) ||
@@ -412,13 +424,6 @@ export default function BodyExplorer({
     (hraPelvisOpen && ['pelvis', 'whole-body'].includes(initialRegion)) ||
     (hraRenalOpen && ['abdomen', 'whole-body'].includes(initialRegion))
   );
-  useEffect(() => {
-    if (eyeParent && (exam || eyeParent.id !== selectedId)) closeEyeLayers();
-  }, [exam, selectedId, eyeParent, closeEyeLayers]);
-  useEffect(() => {
-    if (ventricleParent && (exam || ventricleParent.id !== selectedId))
-      closeVentricles();
-  }, [exam, selectedId, ventricleParent, closeVentricles]);
   const examTargets = practice.questions.map((q) => q.target);
   const question = practice.index;
   const response = practice.responses[question];
@@ -432,7 +437,10 @@ export default function BodyExplorer({
     const controller = new AbortController();
     let active = true;
     const timeout = setTimeout(() => {
-      if (active) setError(true);
+      if (active) {
+        active = false;
+        setError(true);
+      }
       controller.abort();
     }, 30000);
     fetch(modelDeliveryUrl('/models/bodyparts3d/full-body/catalog.json', assetBase), {
@@ -443,7 +451,8 @@ export default function BodyExplorer({
         return r.json();
       })
       .then((data) => {
-        const value = bodyDisplayCatalog(data as BodyCatalog);
+        if (!active) return;
+        const value = bodyDisplayCatalog(parseBodyCatalog(data));
         if (
           !Array.isArray(value.structures) ||
           !Array.isArray(value.bundles) ||
@@ -457,9 +466,11 @@ export default function BodyExplorer({
             // Commit the linked selection with the loaded catalogue, before
             // mounting the scene. Never emit an imaging event from URL input.
             if (result.status === 'ready') {
-              if (result.focusId || result.nested) workspace.chooseMode('dissect');
+              if (result.focusId || result.nested) chooseWorkspaceMode('dissect');
               setSide(result.side);
-              setSelectedId(result.selected.id);
+              // URL selection is committed only once, before the first scene.
+              // It initializes study state rather than changing an open study.
+              setSelectedIdState(result.selected.id);
               setSystems(allBodySystems);
               dispatch(
                 result.focusId
@@ -499,7 +510,7 @@ export default function BodyExplorer({
       clearTimeout(timeout);
       controller.abort();
     };
-  }, [catalogAttempt, initialRegion, studyLink, assetBase]);
+  }, [catalogAttempt, initialRegion, studyLink, assetBase, dispatch, chooseWorkspaceMode]);
   const region = catalog?.regions.find((r) => r.id === initialRegion),
     whole = initialRegion === 'whole-body';
   const regionStructures = useMemo(
@@ -742,10 +753,10 @@ export default function BodyExplorer({
     }
   }
   const applySelection = useCallback(
-    (id: string) => {
+    (id: string, restoreStudyFocus = true) => {
       const s = regionStructures.find((item) => item.id === id);
       if (exam || !s) return;
-      setSelectedId(id);
+      setSelectedId(id, restoreStudyFocus);
       setSelectionNotice({
         id,
         message: `${s.name} selected.`,
@@ -762,7 +773,7 @@ export default function BodyExplorer({
           : current,
       );
     },
-    [regionStructures, profile, exam],
+    [regionStructures, profile, exam, setSelectedId],
   );
   const linkEntries = useMemo(
     () => (catalog ? bodyLinkEntries(catalog) : []),
@@ -825,9 +836,10 @@ export default function BodyExplorer({
       cameraRestore.current = cameraCapture.current
         ? copyRecoveryCamera(cameraCapture.current)
         : null;
-      nestedReturnFocus.current = launcher;
       // Select locally, without publishing a parent as if it were the requested child.
-      applySelection(parent.id);
+      applySelection(parent.id, false);
+      // Closing a previous parent's study consumes its own return target first.
+      nestedReturnFocus.current = launcher;
       setNestedSelection(teachingTopic ? { ...target, teachingTopic } : target);
       if (target.study === 'eye') setEyeParent(parent);
       else setVentricleParent(parent);
@@ -1329,6 +1341,14 @@ export default function BodyExplorer({
       .map((s) => s.id),
   };
   function captureView(): StudyView {
+    // A side filter changes presentation, not the tissue edits in this region.
+    // Flatten stage/focus rules and manual exceptions across the full scope so
+    // loading the bookmark does not resurrect hidden opposite-side structures.
+    const savedHiddenIds = resolveDissection(
+      catalog?.structures.filter((s) => whole || s.regions.includes(initialRegion)) ?? [],
+      profile,
+      dissection,
+    ).removed.map((s) => s.id);
     return {
       kind: 'body',
       region: initialRegion,
@@ -1338,7 +1358,7 @@ export default function BodyExplorer({
       side: side as StudyView['side'],
       layer: 'cuff',
       systems,
-      hiddenIds,
+      hiddenIds: savedHiddenIds,
       explode,
       layout,
       zoom,
@@ -1953,6 +1973,7 @@ export default function BodyExplorer({
                   size="icon"
                   variant={labels ? 'secondary' : 'ghost'}
                   aria-label="Toggle stage and selected labels"
+                  aria-pressed={labels}
                   disabled={exam}
                   onClick={() => setLabels((v) => !v)}
                 >
@@ -1971,10 +1992,11 @@ export default function BodyExplorer({
                     min={0}
                     max={100}
                     step={1}
-                    disabled={exam}
-                    onValueChange={(v) =>
-                      setExplode(Array.isArray(v) ? v[0] : v)
-                    }
+                    disabled={exam || !available.length}
+                    onValueChange={(v) => {
+                      if (exam || !available.length) return;
+                      setExplode(Array.isArray(v) ? v[0] : v);
+                    }}
                     aria-label={
                       layout === 'tray'
                         ? 'Arranged separation'
@@ -2356,13 +2378,14 @@ export default function BodyExplorer({
                     <ul>
                       {practiceResult.map((r, index) => (
                         <li key={r.target}>
-                          <button
-                            type="button"
-                            onClick={() => {
+                          <PracticeResultStudyButton
+                            onSelect={() => {
                               select(r.target);
+                              cameraRestore.current = null;
                               setInspection(initialInspection);
                               setFocus(true);
                               setZoom(1);
+                              setReset((n) => n + 1);
                             }}
                           >
                             {r.target === r.chosen ? '✓' : 'Review'} ·{' '}
@@ -2370,7 +2393,7 @@ export default function BodyExplorer({
                               catalog.structures.find((s) => s.id === r.target)
                                 ?.name
                             }
-                          </button>
+                          </PracticeResultStudyButton>
                           {practice.questions[index]?.reasoning && (
                             <details>
                               <summary>Review explanation</summary>
@@ -2423,7 +2446,7 @@ export default function BodyExplorer({
                       />
                       {bodySystems[selected.system].name} · {selected.fmaId}
                     </div>
-                    <h2>{selected.name}</h2>
+                    <h2 data-structure-study-heading tabIndex={-1}>{selected.name}</h2>
                     <ReviewStatus structureId={selected.id} />
                     {!exam && hepaticFor(selected).length > 0 && (
                       <p className="vm-practice-note">
@@ -2564,6 +2587,7 @@ export default function BodyExplorer({
                           size="sm"
                           variant={isolated ? 'default' : 'ghost'}
                           aria-label="Fade other structures"
+                          aria-pressed={isolated}
                           disabled={!selected || exam}
                           onClick={() => setIsolated((v) => !v)}
                         >
@@ -2573,6 +2597,7 @@ export default function BodyExplorer({
                           size="sm"
                           variant={focus ? 'default' : 'ghost'}
                           aria-label="Frame selected structure"
+                          aria-pressed={focus}
                           disabled={!selected || exam}
                           onClick={() => {
                             setFocus((v) => !v);

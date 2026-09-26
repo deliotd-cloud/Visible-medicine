@@ -81,6 +81,10 @@
 }
 .shoulder-zoom-controls {
   flex: none;
+  min-inline-size: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 .shoulder-zoom-controls button {
   width: 40px;

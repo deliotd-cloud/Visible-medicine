@@ -48,8 +48,8 @@ const near = (left, right, message, tolerance = 1e-5) =>
     ),
   );
 same(
-  [...bodyIds].sort(),
-  catalog.structures.map(s=>s.id).sort(),
+  [...bodyIds].sort((a,b)=>a<b?-1:a>b?1:0),
+  catalog.structures.map(s=>s.id).sort((a,b)=>a<b?-1:a>b?1:0),
   'Every currently admitted body identity has exactly its reference entry',
 );
 same(new Set(bodyIds).size, bodyIds.length, 'No duplicate reference identities');
@@ -378,6 +378,7 @@ for (const invalid of [
   { id: 'ok', label: '', modality: 'CT' },
   { id: 'ok', label: 'a', modality: 'PET' },
   { id: 'ok', label: 'a', modality: 'CT', onAtlasSelection: 3 },
+  { id: 'ok', label: 'a', modality: 'CT', onAtlasSelection() {}, onAtlasDetached: 3 },
 ])
   throws(() => bridge.registerAdapter(invalid));
 bridge.registerAdapter({
@@ -433,6 +434,26 @@ same(
 );
 replacement.dispose();
 same(statusUpdates, 2, 'Unsubscribed listeners are not notified');
+// Attachment lifetime is distinct from callback identity. Repeated stale
+// cleanup must not remove a new mount that reuses the same receiver function.
+{
+  const scoped = a.createImagingBridge();
+  const receive = request => ({ messageId: request.messageId, status: 'selected' });
+  let detached = 0;
+  const link = scoped.registerAdapter({ id: 'lifecycle', label: 'Lifecycle', modality: 'CT', onAtlasSelection() {}, onAtlasDetached() { detached++; } });
+  const close = scoped.attachAtlas(receive);close();same(detached, 1);
+  const closeNew = scoped.attachAtlas(receive);close();same(detached, 1);
+  same(link.selectStructure(request()).status, 'selected');
+  closeNew();same(detached, 2);same(link.selectStructure(request()).status, 'no-atlas');
+  link.dispose();
+}
+{
+  const scoped = a.createImagingBridge();
+  const close = scoped.attachAtlas(request => ({ messageId: request.messageId, status: 'selected' }));
+  const link = scoped.registerAdapter({ id: 'broken-detach', label: 'Broken detach', modality: 'MRI', onAtlasSelection() {}, onAtlasDetached() { throw Error('Cleanup failed'); } });
+  close();same(scoped.getAdapter(), null);
+  same(link.selectStructure(request()).status, 'disconnected');
+}
 console.log(
   `Imaging-link validation: ${checks.toLocaleString()} assertions passed; ${body.length} body and ${shoulder.length} shoulder reference identities. No acquired scans or patient registration tested.`,
 );

@@ -3,6 +3,10 @@ import {readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
+import {execFileSync} from 'node:child_process';
+import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
+import {snapshot} from './pin-pica-clinical.mjs';
+import {build} from './workspace-component-test-build.mjs';
 import ts from 'typescript';
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {authoringBeforeThoracicBranchImaging,thoracicBranchImagingHash as hash} from './thoracic-branch-imaging-history.mjs';
@@ -11,11 +15,39 @@ import {authoringBeforeAbdominalBranchImaging} from './abdominal-branch-imaging-
 const newest=await contentContext(),context={...newest,api:authoringBeforeAbdominalBranchImaging(newest)},{api}=context,catalog=api.bodyDisplayCatalog(context.catalog);
 const {thoracicBranchImagingGroups:groups,thoracicBranchImagingReferences:references}=api;
 const original=JSON.stringify(catalog),before=authoringBeforeThoracicBranchImaging(newest);
-assert.equal(hash({body:catalog.structures.map(s=>({id:s.id,sections:Object.fromEntries(api.contentTabs.map(t=>[t,before.bodyLesson(s,t)]))})),shoulder:api.structures,recipes:api.dissectionProfiles}),pins.previousAllLessonsAndRecipesHash,'All preceding teaching and recipes preserved');
+// Original whole-atlas history belongs to its exact Git tree, not today's
+// recipes and later geometry partially projected through editorial adapters.
+const transitionCommit='193de0e4273fee3ae69cf3f4402b74b6cde5e118';
+const gitJson=(commit,path)=>JSON.parse(execFileSync('git',['show',commit+':'+path],{maxBuffer:16e6}));
+const transition=JSON.parse(await readFile('content/thoracic-branch-imaging.transition.json'));
+assert.deepEqual(gitJson(transitionCommit,'content/thoracic-branch-imaging-pins.json'),pins);
+assert.deepEqual(gitJson(transitionCommit,'content/thoracic-branch-imaging.transition.json'),transition);
+const rawBefore=gitJson(pins.sourceCommit,'public/models/bodyparts3d/full-body/catalog.json');
+assert.deepEqual(gitJson(transitionCommit,'public/models/bodyparts3d/full-body/catalog.json'),rawBefore);
+const historicalBefore=await exactSourceHistoryApi(pins.sourceCommit),historicalAfter=await exactSourceHistoryApi(transitionCommit);
+const oldDisplay=historicalBefore.bodyDisplayCatalog(rawBefore);
+assert.deepEqual(historicalAfter.bodyDisplayCatalog(rawBefore),oldDisplay);
+assert.equal(hash(snapshot(historicalBefore,oldDisplay)),pins.previousAllLessonsAndRecipesHash,'Original full snapshot remains pinned');
+assert.deepEqual(historicalAfter.structures,historicalBefore.structures);
+assert.deepEqual(historicalAfter.dissectionProfiles,historicalBefore.dissectionProfiles);
+assert.deepEqual(historicalBefore.contentTabs,api.contentTabs);assert.deepEqual(historicalAfter.contentTabs,api.contentTabs);
+const recorded=new Map(pins.entries.flatMap(e=>e.topics.map(tab=>[e.identity.id+'|'+tab,e])));
+let historicalChanged=0,historicalUnchanged=0;
+for(const s of oldDisplay.structures)for(const tab of api.contentTabs){
+  const e=recorded.get(s.id+'|'+tab),previous=historicalBefore.bodyLesson(s,tab),next=historicalAfter.bodyLesson(s,tab);
+  if(!e){assert.deepEqual(next,previous,'Original unrelated topic');historicalUnchanged++;continue;}
+  assert.deepEqual(s,e.identity);assert.deepEqual(previous,e.previous[tab]);
+  assert.equal(hash(next),transition.entries.find(entry=>entry.id===s.id).sections[tab]);
+  assert.deepEqual(api.bodyLesson(s,tab),next,'Retained current topic matches original recorded draft');historicalChanged++;
+}
+assert.equal(historicalChanged,50);assert.equal(historicalUnchanged,9859);
 const records=api.bodyContentRecords(catalog),registry=new Map([...context.shoulder,...records].map(r=>[r.representationScope+'|'+r.id,r]));
 const validate=await contentValidator(registry);for(const r of records)assert(validate(r));
 let changed=0,unchanged=0,rejected=0,rendered=0;
 const require=createRequire(import.meta.url),React=require('react'),render=require('react-dom/server').renderToStaticMarkup;
+const built=await build({stdin:{contents:"export {SourceDisplayNotes} from './app/source-display-notes';",resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'cjs',write:false});
+const scope={exports:{}};runInNewContext(built.outputFiles[0].text,{module:scope,exports:scope.exports,require});
+const {SourceDisplayNotes}=scope.exports;
 const source=await readFile('app/body-explorer.tsx','utf8'),ast=ts.createSourceFile('body.tsx',source,ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX);
 let callback;
 function visit(n){if(ts.isArrowFunction(n)&&n.body.getText(ast).includes('const content = bodyContent(selected, value);')){assert(!callback);callback=n.getText(ast);}ts.forEachChild(n,visit);}
@@ -27,7 +59,7 @@ for(const s of catalog.structures)for(const tab of api.contentTabs) {
   changed++;assert.equal(before.bodyLesson(s,tab).readiness,'pending');assert.equal(now.readiness,'draft');assert.deepEqual(now,topic);
   const record=records.find(r=>r.id===s.id);assert.deepEqual(record.content[tab],topic);assert.equal(record.validation.clinicalApproval,'not-included');
   assert.equal(new Set(topic.citations).size,topic.citations.length);
-  const jsx=runInNewContext(callbackJs+';renderNote(topic)',{React,topic:tab,bodyContent:api.bodyContent,selected:s,WorkspaceModeButton:({children})=>React.createElement('button',null,children),ComponentImagingNotes:()=>null,ScanLine:()=>null,catalog,side:'both',exam:false,openNested(){throw Error('No automatic specimen navigation');}});
+  const jsx=runInNewContext(callbackJs+';renderNote(topic)',{React,topic:tab,bodyContent:api.bodyContent,selected:s,SourceDisplayNotes,WorkspaceModeButton:({children})=>React.createElement('button',null,children),ComponentImagingNotes:()=>null,ScanLine:()=>null,catalog,side:'both',exam:false,openNested(){throw Error('No automatic specimen navigation');}});
   const html=render(jsx);assert(html.includes(render(React.createElement('p',null,now.body))));
   for(const bullet of now.bullets)assert(html.includes(render(React.createElement('li',null,bullet))));
   assert(html.includes('No imaging study loaded'));assert(html.includes('review pending'));
@@ -36,7 +68,12 @@ for(const s of catalog.structures)for(const tab of api.contentTabs) {
   const old=before.bodyLesson(s,tab);old.body='changed';assert.equal(before.bodyLesson(s,tab).readiness,'pending');assert.notEqual(before.bodyLesson(s,tab).body,'changed');
   rendered++;
 }
-assert.equal(Object.keys(groups).length,26);assert.equal(changed,50);assert.equal(unchanged,9859);assert.equal(rendered,50);
+// This later, separately admitted source survives the legacy projection. Keep
+// the original 9,859-topic baseline; account for only its exact nine topics.
+const laterSource=gitJson('efc5ed08bd300540861161f8f823aedb359a789d','public/models/bodyparts3d/corpus-spongiosum/catalog.json');
+const laterStructures=catalog.structures.filter(s=>!oldDisplay.structures.some(old=>old.id===s.id));
+assert.deepEqual(laterStructures,laterSource.structures);assert.equal(laterStructures.length,1);
+assert.equal(Object.keys(groups).length,26);assert.equal(changed,50);assert.equal(unchanged,9859+9);assert.equal(rendered,50);
 for(const [region,count] of [['thorax',26]])assert.equal(pins.entries.filter(e=>groups[e.group].region===region).length,count);
 const pending={mri:['FMA3969','FMA4068','FMA3988','FMA4083','FMA10692','FMA4077','FMA4758','FMA4772','FMA4786','FMA4149','FMA10704','FMA68109','FMA71537'],ultrasound:['FMA3802','FMA3855','FMA3862','FMA3895','FMA4707','FMA4713','FMA10692','FMA4077','FMA4758','FMA4772','FMA4786','FMA4149','FMA10704','FMA68109','FMA71537']};
 for(const tab of ['mri','ultrasound']){const unresolved=pins.entries.filter(e=>!groups[e.group].focus[tab]).map(e=>e.identity);assert.deepEqual(unresolved.map(s=>s.fmaId).sort(),pending[tab].sort());for(const s of unresolved){assert.equal(api.thoracicBranchImagingLesson(s,tab),undefined);assert.equal(api.bodyLesson(s,tab).readiness,'pending');}}

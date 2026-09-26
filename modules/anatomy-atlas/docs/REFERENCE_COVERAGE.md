@@ -1,5 +1,27 @@
 # Audited-source implementation — 11 September 2026
 
+## Current ledger refresh — 26 September 2026
+
+The ledger now matches 1,104 root selections and 106 reachable nested selections.
+Of the pinned reference's 2,234 IS-A source files, 1,793 are represented at the
+root. The 441 root differences comprise 24 nested-covered files, 56 explicit
+source holds, 359 requiring source/anatomical review, one display-correction
+exclusion and one related cross-tree hold. These are file dispositions, **not
+441 missing anatomical structures or a completeness percentage**.
+
+The prior report incorrectly left four already-added short-ciliary/anterior-
+cardiac files in the review queue, and omitted two documented tibial-recurrent
+holds. The refreshed report derives these changes from current source bindings
+and pinned hold evidence; no new asset is admitted and no hold is relaxed.
+The validator now recomputes freshness before checking the report's internal
+consistency, preventing a coherent but outdated ledger from passing alone.
+The audit uses the existing workspace-confined compiler and runs offline.
+
+Older counts below are historical milestones. Use
+`node scripts/validate-reference-coverage.mjs` for current evidence. Fourteen,
+not eight, original OBJ files currently support the cross-tree proof; the
+generated report derives that count directly from the pinned proof.
+
 Current checkpoint, 15 September: [corpus spongiosum bulb/shaft source](CORPUS_SPONGIOSUM.md)
 adds original FJ3133. The regenerated ledger has 1,102 root selections, 1,789
 referenced source IDs and 365 review-queue pieces. All 54 formal holds remain.

@@ -9,6 +9,6 @@ export default defineConfig({
   base:'/atlas-runtime/lower-limb/', publicDir:false,
   resolve:{alias:{'@':root}},
   css:{postcss:{plugins:[tailwind({base:root})]}},
-  plugins:[react(),moduleAudit(root,['integration/lower-limb/vite.config.mjs','integration/lower-limb/index.html'])],
+  plugins:[react(),moduleAudit(root,['integration/lower-limb/vite.config.mjs','integration/lower-limb/index.html','scripts/export-lower-limb-module.mjs','scripts/export-space-preflight.mjs'])],
   build:{outDir:'../../.sites-runtime/lower-limb-module',emptyOutDir:true,sourcemap:false},
 });

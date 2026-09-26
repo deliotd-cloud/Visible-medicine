@@ -116,7 +116,18 @@ export function createComparisonBridge() {
   let owner: Adapter | null = null;
   let snapshot: ComparisonSnapshot | null = null;
   const listeners = new Set<() => void>();
-  const changed = () => listeners.forEach((listener) => listener());
+  const changed = () => {
+    // Observers must not interrupt ownership/cleanup or extend this delivery.
+    const currentListeners = [...listeners];
+    for (const listener of currentListeners) {
+      if (!listeners.has(listener)) continue;
+      try {
+        listener();
+      } catch {
+        // A failing observer cannot prevent the remaining observers updating.
+      }
+    }
+  };
   const fail = (target: Adapter, expected: ComparisonSnapshot) => {
     // Host callbacks can synchronously publish or replace the viewer before
     // failing. Never let superseded work erase a newer frame/access decision.

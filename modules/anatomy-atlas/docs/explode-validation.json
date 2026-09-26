@@ -1,7 +1,193 @@
 {
   "passed": true,
-  "pairChecks": 609480,
-  "framingChecks": 7280,
+  "archivedEntries": 1022,
+  "displayEntries": 1104,
+  "archivedCatalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+  "displayCatalogSha256": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "scopes": [
+    {
+      "region": "whole-body",
+      "side": "both",
+      "entries": 1104
+    },
+    {
+      "region": "whole-body",
+      "side": "left",
+      "entries": 634
+    },
+    {
+      "region": "whole-body",
+      "side": "right",
+      "entries": 634
+    },
+    {
+      "region": "head-neck",
+      "side": "both",
+      "entries": 291
+    },
+    {
+      "region": "head-neck",
+      "side": "left",
+      "entries": 170
+    },
+    {
+      "region": "head-neck",
+      "side": "right",
+      "entries": 169
+    },
+    {
+      "region": "thorax",
+      "side": "both",
+      "entries": 158
+    },
+    {
+      "region": "thorax",
+      "side": "left",
+      "entries": 105
+    },
+    {
+      "region": "thorax",
+      "side": "right",
+      "entries": 104
+    },
+    {
+      "region": "abdomen",
+      "side": "both",
+      "entries": 106
+    },
+    {
+      "region": "abdomen",
+      "side": "left",
+      "entries": 83
+    },
+    {
+      "region": "abdomen",
+      "side": "right",
+      "entries": 81
+    },
+    {
+      "region": "pelvis",
+      "side": "both",
+      "entries": 82
+    },
+    {
+      "region": "pelvis",
+      "side": "left",
+      "entries": 45
+    },
+    {
+      "region": "pelvis",
+      "side": "right",
+      "entries": 47
+    },
+    {
+      "region": "shoulder-arm",
+      "side": "both",
+      "entries": 115
+    },
+    {
+      "region": "shoulder-arm",
+      "side": "left",
+      "entries": 58
+    },
+    {
+      "region": "shoulder-arm",
+      "side": "right",
+      "entries": 58
+    },
+    {
+      "region": "forearm",
+      "side": "both",
+      "entries": 86
+    },
+    {
+      "region": "forearm",
+      "side": "left",
+      "entries": 43
+    },
+    {
+      "region": "forearm",
+      "side": "right",
+      "entries": 43
+    },
+    {
+      "region": "hand",
+      "side": "both",
+      "entries": 124
+    },
+    {
+      "region": "hand",
+      "side": "left",
+      "entries": 61
+    },
+    {
+      "region": "hand",
+      "side": "right",
+      "entries": 63
+    },
+    {
+      "region": "thigh",
+      "side": "both",
+      "entries": 95
+    },
+    {
+      "region": "thigh",
+      "side": "left",
+      "entries": 48
+    },
+    {
+      "region": "thigh",
+      "side": "right",
+      "entries": 48
+    },
+    {
+      "region": "leg",
+      "side": "both",
+      "entries": 76
+    },
+    {
+      "region": "leg",
+      "side": "left",
+      "entries": 38
+    },
+    {
+      "region": "leg",
+      "side": "right",
+      "entries": 38
+    },
+    {
+      "region": "foot",
+      "side": "both",
+      "entries": 122
+    },
+    {
+      "region": "foot",
+      "side": "left",
+      "entries": 61
+    },
+    {
+      "region": "foot",
+      "side": "right",
+      "entries": 61
+    },
+    {
+      "region": "spine",
+      "side": "both",
+      "entries": 115
+    },
+    {
+      "region": "spine",
+      "side": "left",
+      "entries": 87
+    },
+    {
+      "region": "spine",
+      "side": "right",
+      "entries": 84
+    }
+  ],
+  "pairChecks": 1184284,
+  "framingChecks": 20720,
   "cropChecks": 88,
   "centroidDistanceMultiplierAt100": 2.6,
   "sourceGeometryModified": false,

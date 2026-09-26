@@ -1,9 +1,16 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { execFileSync } from 'node:child_process';
 import {
   sourceBindingEvidence,
   sourceCoverageStatus,
 } from './reference-coverage.mjs';
+// A structurally consistent historical report is not evidence of current gaps.
+// Recompute against the actual display catalogue, nested selections and holds.
+// This audit is offline: --verify-reference is deliberately not supplied.
+execFileSync(process.execPath, ['scripts/audit-reference-coverage.mjs', '--check'], {
+  encoding: 'utf8', maxBuffer: 4 * 1024 * 1024,
+});
 const reference = { file: 'FJ1000', geometrySha256: 'b'.repeat(64) };
 const owner = {
   scope: 'root',
@@ -85,6 +92,11 @@ for (const file of ['FJ1662', 'FJ1663', 'FJ1692']) {
 }
 assert.equal(report.summary.rootBindingsNeedingEquivalenceReview, 0);
 assert.equal(report.summary.referenceSourceFiles, 2234);
+for (const file of ['FJ1319', 'FJ1370', 'FJ2725', 'FJ2730'])
+  assert(!report.rootDifferences.some(row => row.file === file),
+    `${file}: admitted short-ciliary/anterior-cardiac source must not remain a gap`);
+for (const file of ['FJ2066', 'FJ2131'])
+  assert.equal(report.rootDifferences.find(row => row.file === file)?.status, 'known-source-hold');
 for(const file of ['FJ2190','FJ2194','FJ2200','FJ2184','FJ2187','FJ1735','FJ1736']) {
   const row=report.rootDifferences.find(r=>r.file===file);
   assert.equal(row.status,'known-source-hold');

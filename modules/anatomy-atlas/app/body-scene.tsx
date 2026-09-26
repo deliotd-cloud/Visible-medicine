@@ -47,6 +47,7 @@ import { selectedOriginGuide, type OriginGuide } from '@/lib/origin-guides';
 import { SceneOrientation } from './scene-orientation';
 import { cameraOrientation, orientationBasis, orientationText } from '@/lib/camera-orientation';
 import { modelDeliveryUrl } from '@/lib/model-delivery';
+import { bodyBundleGeometries } from '@/lib/body-bundle-geometry';
 import './scene-orientation.css';
 
 type Props = {
@@ -143,15 +144,14 @@ function Bundle({
 }) {
   // Production transport is byte-exact meshopt; the decoder is bundled locally.
   const { scene } = useGLTF(modelDeliveryUrl(bundle.url, props.assetBase), false, true);
+  // Validate the entire bundle contract, including hidden/out-of-region nodes,
+  // during render. A failure prevents commit/onLoaded and reaches AssetBoundary.
+  const geometries = useMemo(
+    () => bodyBundleGeometries(scene, props.catalog.structures, bundle.id),
+    [scene, props.catalog.structures, bundle.id],
+  );
   const onLoaded = props.onLoaded;
-  useEffect(() => onLoaded(bundle.id), [bundle.id, onLoaded]);
-  const geometries = useMemo(() => {
-    const map = new Map<string, THREE.BufferGeometry>();
-    scene.traverse((object) => {
-      if (object instanceof THREE.Mesh) map.set(object.name, object.geometry);
-    });
-    return map;
-  }, [scene]);
+  useEffect(() => onLoaded(bundle.id), [bundle.id, onLoaded, geometries]);
   // Use the same side-projected geometry as labels, picking and individual
   // tissue draws. The canonical catalogue may contain a bilateral aggregate.
   const batchSources = useMemo(() => props.structures

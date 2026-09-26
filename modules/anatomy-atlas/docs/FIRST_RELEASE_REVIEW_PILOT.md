@@ -1,18 +1,24 @@
 # First clinical review pilot
 
-25 September source refresh: the unsigned 11-selection index was regenerated after
-the current viewer and teaching revisions. All 11 imaging tracks remain blocked,
-`approval` remains false, and no private reviewer record was read or changed.
-The index is a fresh review starting point, not a carried-over sign-off. Run
-`node scripts/prepare-first-release-review.mjs --check` before using it and
-verify the displayed website candidate separately.
+The standalone Atlas now has a [Clinical review home](CLINICAL_REVIEW_HOME.md)
+at `/review/overview` for searching all four review scopes. It does not yet
+provide that route on the live website or turn the pilot into a release allowlist.
 
-The regional practice-return candidate uses renderer fingerprint
-`a41d71d1db34ff270510b636eaa0ad0a46151f35a32803c663e276f922f3bba0`.
-Website `2c651aa` still contains the earlier renderer from Atlas `749a4d1`; do not
-use this candidate packet as proof of that displayed website revision. Standalone
-review links below require their own route/revision check; publication does not
-submit or approve the worksheet. Selection identities and review scope are unchanged.
+The unsigned 11-selection index is a review starting point, not a carried-over
+sign-off. All 11 imaging tracks remain blocked and `approval` remains false.
+Run `node scripts/prepare-first-release-review.mjs --check` before using it and
+verify the displayed website candidate separately. The authoritative current
+renderer fingerprint is in `content/body-renderer-revision.json` and the
+generated review index; a copied historical hash in prose must not substitute
+for those checks.
+
+26 September: local viewer and teaching changes are ahead of the last verified
+website integration (Atlas `ce2037f`, website `a5c79d1`, private version157).
+The local index must not be used to sign off that older displayed website.
+Feedback screenshots from it are still useful: include the URL, structure,
+side, view and intended correction. Standalone review links below require their
+own route/revision check; publication does not submit or approve a worksheet.
+Selection identities and review scope are unchanged.
 
 This small sample calibrates the first-release review, not the final shipped
 anatomy set. It uses existing review workspaces and source/teaching/renderer

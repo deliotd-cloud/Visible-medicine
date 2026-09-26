@@ -10,9 +10,10 @@ import transition from '../content/short-ciliary-pathology.transition.json' with
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {wholeBodyTeachingSnapshot} from './exact-clinical-reference-history.mjs';
 import {beforeShortCiliaryPathology} from './short-ciliary-pathology-history.mjs';
+import {beforeAnteriorCardiacPathology} from './anterior-cardiac-pathology-history.mjs';
 import {build} from './workspace-component-test-build.mjs';
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
-const live=await contentContext(),{api,catalog}=live,display=api.bodyDisplayCatalog(catalog);
+const live=await contentContext(),{catalog}=live,api=beforeAnteriorCardiacPathology(live.api),display=api.bodyDisplayCatalog(catalog);
 const before=beforeShortCiliaryPathology(api),identity=record.entries[0].identity;
 assert.equal(beforeShortCiliaryPathology(before),before);
 assert.equal(hash(display),record.catalogHash);assert.equal(hash(pins),record.sourceHash);

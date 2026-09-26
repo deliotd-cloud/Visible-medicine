@@ -3,7 +3,7 @@ import test from 'node:test';
 import {createRequire} from 'node:module';
 import {readFile} from 'node:fs/promises';
 import {runInNewContext} from 'node:vm';
-import {bindCameraKeyboard} from '../lib/camera-keyboard.ts';
+import {bindCameraKeyboard,bindCameraPanKeyboard} from '../lib/camera-keyboard.ts';
 import {build} from './workspace-component-test-build.mjs';
 import {reviewDisplayPaths} from './review-revision-evidence.mjs';
 const require=createRequire(import.meta.url);
@@ -31,13 +31,13 @@ test('keyboard behavior and focus treatment are bound to shoulder review revisio
 });
 
 for(const Camera of [PerspectiveCamera,OrthographicCamera])for(const up of [[0,1,0],[0,0,1]]){
-  test(`${Camera.name}, up ${up}: coarse/fine rotation preserves target, distance and zoom`,()=>{
+  test(`${Camera.name}, up ${up.join(',')}: coarse/fine rotation preserves target, distance and zoom`,()=>{
     const camera=new Camera();camera.up.set(...up);camera.position.set(4,5,8);
     const controls=new OrbitControls(camera);controls.target.set(1,.5,-1);controls.update();controls.enableDamping=true;
     const surface=new Surface();let changed=0;
     const release=bindCameraKeyboard(surface,()=>controls,()=>changed++);
     const target=controls.target.clone(),radius=controls.getDistance(),zoom=camera.zoom;
-    let azimuth=controls.getAzimuthalAngle(),polar=controls.getPolarAngle();
+    const azimuth=controls.getAzimuthalAngle(),polar=controls.getPolarAngle();
     assert.equal(surface.getAttribute('tabindex'),'0');assert.match(surface.getAttribute('aria-description'),/Shift/);
     assert.equal(surface.key('ArrowRight').defaultPrevented,true);near(controls.getAzimuthalAngle(),azimuth+Math.PI/18);
     surface.key('ArrowLeft');near(controls.getAzimuthalAngle(),azimuth);
@@ -92,9 +92,10 @@ test('angle limits, invalid inputs, damping and lifecycle restoration',()=>{
   assert.equal(surface.getAttribute('data-keyboard-rotation'),null);
 });
 
-test('actual FittedCamera installs/cleans input, captures rotated saves and excludes locked/planar scenes',async()=>{
+test('actual FittedCamera transitions spatial to tray to locked, captures pan and retains it across refits',async()=>{
   const compiled=await build({stdin:{contents:"export { FittedCamera } from './app/fitted-camera';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'cjs'});
-  const camera=new PerspectiveCamera(38,1.5,.01,150),surface=new Surface(),controls=new OrbitControls(camera);
+  let camera=new PerspectiveCamera(38,1.5,.01,150),controls=new OrbitControls(camera);
+  const surface=new Surface();
   const size={width:900,height:600},gl={domElement:surface},refs=[],mod={exports:{}};
   let index=0,effects=[],cleanups=[],invalidations=0;
   runInNewContext(compiled.outputFiles[0].text,{module:mod,exports:mod.exports,require(name){
@@ -110,6 +111,7 @@ test('actual FittedCamera installs/cleans input, captures rotated saves and excl
     for(const clean of cleanups)clean();cleanups=[];index=0;effects=[];Object.assign(props,changes);
     const element=mod.exports.FittedCamera(props);element.props.ref.current=controls;
     controls.enableRotate=element.props.enableRotate;
+    controls.enablePan=element.props.enablePan;
     for(const effect of effects){const clean=effect();if(clean)cleanups.push(clean);}
   };
   render({});assert.equal(surface.handlers.size,1);
@@ -128,13 +130,76 @@ test('actual FittedCamera installs/cleans input, captures rotated saves and excl
   render({bounds:props.bounds.clone()});near(camera.position.distanceTo(rotated),0);
   for(const field of ['direction','up','pan'])capture.current[field].forEach((v,i)=>near(v,pose[field][i]));
   near(capture.current.scale,pose.scale);assert.equal(surface.handlers.size,1);
-  for(const mode of [{locked:true},{locked:false,planar:true}]){
+  camera=new OrthographicCamera();controls=new OrbitControls(camera);
+  render({locked:false,planar:true});assert.equal(surface.handlers.size,1);
+  assert.equal(surface.getAttribute('data-keyboard-rotation'),null);
+  assert.equal(surface.getAttribute('data-keyboard-pan'),'true');
+  assert.match(surface.getAttribute('aria-label'),/Pan/);
+  assert.doesNotMatch(surface.getAttribute('aria-description'),/rotate/i);
+  const trayPosition=camera.position.clone(),trayTarget=controls.target.clone(),trayPose=structuredClone(capture.current),count=announcements.length,panInvalidations=invalidations;
+  surface.key('ArrowRight');assert(invalidations>panInvalidations);
+  assert.notDeepEqual(capture.current.pan,trayPose.pan);assert.equal(announcements.length,count);
+  near(camera.position.clone().sub(trayPosition).distanceTo(controls.target.clone().sub(trayTarget)),0);
+  const pannedPosition=camera.position.clone(),pannedTarget=controls.target.clone(),pannedPose=structuredClone(capture.current);
+  render({bounds:props.bounds.clone()});near(camera.position.distanceTo(pannedPosition),0);near(controls.target.distanceTo(pannedTarget),0);
+  capture.current.pan.forEach((v,i)=>near(v,pannedPose.pan[i]));near(capture.current.scale,pannedPose.scale);
+  assert.equal(surface.handlers.size,1);assert.equal(announcements.length,count);
+  surface.key('ArrowUp');assert.notDeepEqual(capture.current.pan,pannedPose.pan);
+  const restore={current:structuredClone(pannedPose)};
+  render({cameraRestore:restore});assert.equal(restore.current,null);
+  capture.current.pan.forEach((v,i)=>near(v,pannedPose.pan[i]));near(capture.current.scale,pannedPose.scale);
+  size.width=390;size.height=844;render({});
+  capture.current.pan.forEach((v,i)=>near(v,pannedPose.pan[i]));
+  assert.equal(surface.handlers.size,1);assert.equal(announcements.length,count);
+  for(const mode of [{locked:true},{locked:true,planar:false}]){
     render(mode);assert.equal(surface.handlers.size,0);assert.equal(surface.getAttribute('tabindex'),null);
+    assert.equal(surface.getAttribute('data-keyboard-pan'),null);
     const pose=JSON.stringify(capture.current);surface.key('ArrowRight');assert.equal(JSON.stringify(capture.current),pose);
   }
   render({locked:false,planar:false});assert.equal(surface.handlers.size,1);
   render({});assert.equal(surface.handlers.size,1); // no accumulated listeners after updates
   for(const clean of cleanups)clean();assert.equal(surface.handlers.size,0);
+});
+
+for(const [direction,up] of [[[0,0,1],[0,1,0]],[[1,0,0],[0,0,1]],[[0,0,-1],[0,1,0]],[[0,1,0],[0,0,1]]]){
+  test(`tray pan follows camera right/up for projection ${direction.join(',')}, up ${up.join(',')}`,()=>{
+    const camera=new OrthographicCamera(-10,10,6,-6,.01,150);camera.zoom=2;
+    camera.up.set(...up);camera.position.set(...direction).multiplyScalar(20);
+    const controls=new OrbitControls(camera);controls.target.set(1,2,3);controls.update();controls.enableRotate=false;controls.enableDamping=true;
+    const surface=new Surface();let changed=0;
+    const release=bindCameraPanKeyboard(surface,camera,()=>controls,()=>changed++);
+    const position=camera.position.clone(),target=controls.target.clone(),quaternion=camera.quaternion.clone(),distance=controls.getDistance();
+    camera.updateMatrixWorld();const right=new Vector3().setFromMatrixColumn(camera.matrixWorld,0),screenUp=new Vector3().setFromMatrixColumn(camera.matrixWorld,1);
+    assert.equal(surface.key('ArrowRight').defaultPrevented,true);
+    near(camera.position.clone().sub(position).distanceTo(right.clone().multiplyScalar(.5)),0);
+    near(controls.target.clone().sub(target).distanceTo(right.clone().multiplyScalar(.5)),0);
+    surface.key('ArrowLeft');near(camera.position.distanceTo(position),0);near(controls.target.distanceTo(target),0);
+    surface.key('ArrowUp',{shiftKey:true});near(camera.position.clone().sub(position).distanceTo(screenUp.clone().multiplyScalar(.06)),0);
+    surface.key('ArrowDown',{shiftKey:true});near(camera.position.distanceTo(position),0);
+    camera.quaternion.toArray().forEach((v,i)=>near(v,quaternion.toArray()[i]));near(controls.getDistance(),distance);near(camera.zoom,2);
+    assert.equal(controls.enableDamping,true);assert.equal(changed,4);
+    camera.zoom=4;surface.key('ArrowRight');near(camera.position.distanceTo(position),.25);
+    surface.key('ArrowLeft');camera.right=20;camera.left=-20;surface.key('ArrowRight');near(camera.position.distanceTo(position),.5);
+    release();assert.equal(surface.handlers.size,0);assert.equal(surface.getAttribute('data-keyboard-pan'),null);assert.equal(surface.getAttribute('tabindex'),null);
+  });
+}
+
+test('tray keyboard guards, invalid scale and attribute ownership',()=>{
+  const camera=new OrthographicCamera(-10,10,6,-6);camera.position.set(0,0,20);
+  const controls=new OrbitControls(camera),surface=new Surface();let changed=0;
+  surface.setAttribute('tabindex','-1');surface.setAttribute('role','img');
+  const release=bindCameraPanKeyboard(surface,camera,()=>controls,()=>changed++),position=camera.position.clone();
+  for(const options of [{altKey:true},{ctrlKey:true},{metaKey:true},{isComposing:true},{target:{}},{defaultPrevented:true}])assert.equal(surface.key('ArrowLeft',options).stopped,false);
+  for(const key of ['Tab','Escape','Enter','Home','+','-','a'])assert.equal(surface.key(key).defaultPrevented,false);
+  surface.ownerDocument.activeElement={};assert.equal(surface.key('ArrowRight').defaultPrevented,false);surface.ownerDocument.activeElement=surface;
+  controls.enablePan=false;assert.equal(surface.key('ArrowRight').defaultPrevented,false);controls.enablePan=true;
+  controls.enabled=false;assert.equal(surface.key('ArrowRight').defaultPrevented,false);controls.enabled=true;
+  for(const zoom of [0,-1,Infinity,NaN]){camera.zoom=zoom;assert.equal(surface.key('ArrowRight').defaultPrevented,false);}
+  camera.zoom=1;camera.right=camera.left;assert.equal(surface.key('ArrowRight').defaultPrevented,false);
+  near(camera.position.distanceTo(position),0);assert.equal(changed,0);
+  surface.setAttribute('aria-label','Later owner label');release();release();
+  assert.equal(surface.getAttribute('tabindex'),'-1');assert.equal(surface.getAttribute('role'),'img');assert.equal(surface.getAttribute('aria-label'),'Later owner label');
+  const noControls=bindCameraPanKeyboard(surface,camera,()=>null,()=>changed++);assert.equal(surface.key('ArrowRight').defaultPrevented,false);noControls();
 });
 
 test('BodyScene keeps visual rotation silent and writes a keyboard-only polite orientation status',async()=>{

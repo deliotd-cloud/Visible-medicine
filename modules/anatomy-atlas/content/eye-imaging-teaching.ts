@@ -1,6 +1,14 @@
 import type { NestedImagingTopic, NestedSection } from './nested-teaching';
 
 export const eyeImagingReferences = {
+  lensBiometryUBM: {
+    title: 'Huang et al. (2024) · Lens diameter and ocular biometry · CC BY 4.0',
+    url: 'https://doi.org/10.3389/fmed.2023.1306276',
+  },
+  posteriorScleraBScan: {
+    title: 'Vergouwen et al. (2023) · Scleritis in rheumatoid arthritis · CC BY 4.0',
+    url: 'https://doi.org/10.3389/fopht.2023.1106419',
+  },
   cornealPachymetry: {
     title: 'Kim et al. · Corneal thickness: OCT versus ultrasound pachymetry',
     url: 'https://pubmed.ncbi.nlm.nih.gov/18054888/',
@@ -51,6 +59,10 @@ export const eyeImagingTeaching = {
     ),
   },
   lens: {
+    ultrasound: draft(
+      'Specialised very-high-frequency ultrasound biomicroscopy (UBM) can depict the lens periphery behind the iris. Huang and colleagues estimated equatorial diameter using fitted lens outlines in a single-centre cross-sectional study of 194 eyes. This differs from anterior-to-posterior lens thickness. Their method was not established as a gold standard; displaced lenses and previous ocular trauma were excluded. Do not use this study to diagnose traumatic dislocation or assume ordinary ocular B-scan provides equivalent biometry. This atlas lens has no validated diameter, accommodation or ultrasound echoes. Adapted from Huang et al. (2024), CC BY 4.0; no images reproduced.',
+      'lensBiometryUBM', 'renalReuseLicense',
+    ),
     ct: draft(
       'In a retrospective acute-trauma study, thin-section multiplanar CT helped detect lens dislocation alongside other anterior-globe injuries, as an adjunct to ophthalmic assessment. Evaluate lens position in the context of the whole globe, not one apparent gap. Moving the atlas lens during separation is a viewing aid, not a traumatic dislocation or proof that the globe is intact.',
       'lensTraumaCT',
@@ -79,6 +91,10 @@ export const eyeImagingTeaching = {
     ),
   },
   sclera: {
+    ultrasound: draft(
+      'B-scan ultrasound can show thickening of the posterior sclera-choroidal complex and adjacent fluid. Vergouwen and colleagues illustrate an affected eye with fluid beside the sclera and optic nerve producing a T-sign. This example comes from a retrospective rheumatoid-arthritis/scleritis series, not a diagnostic-accuracy study: it does not establish a universal thickness threshold or a rule for excluding disease. Distinguish the combined imaged coats from this isolated scleral surface. Atlas separation and opacity do not simulate inflammation, fluid or ultrasound echoes. Adapted from Vergouwen et al. (2023), CC BY 4.0; no images reproduced.',
+      'posteriorScleraBScan', 'renalReuseLicense',
+    ),
     ct: draft(
       'A small retrospective scleritis series described eccentric globe-wall thickening and peripheral enhancement on CT, without separately resolving the globe layers. Do not equate a thick-looking atlas shell with inflammation: this model contains neither attenuation nor contrast enhancement, and the study does not establish a universal diagnostic rule.',
       'scleritisImaging',

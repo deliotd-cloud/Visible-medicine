@@ -34,6 +34,10 @@
     "crossTreeProofSha256": "e61cb973d9b64046464d03da9c61febeabe31f93f2c81ce07493f73398408bfa",
     "supplementalSourceHoldEvidence": [
       {
+        "path": "docs/tibial-recurrent-source-disposition.json",
+        "sha256": "a3cfc40af9ce85df44a60a272f50803bb20b459079d9c4a941d5d6124ade2042"
+      },
+      {
         "path": "docs/limbic-landmark-source-audit.json",
         "sha256": "2b29686d350ca29d88c67c7a44c3e143033deea35f15df0a66b90c758a82f69c"
       },
@@ -50,30 +54,30 @@
         "sha256": "2ed4267b0ceae5448673eaf0743ed79a995fc7f879dac26c81e24109c7b201ec"
       }
     ],
-    "currentRootSha256": "e64bd5667582d402593a5819e60c5199884a05d75432d85df5557a9f5ee8e6d7",
-    "reachableNestedSha256": "634260ee4618dbc4b180751fcaf6d12e2d9099543ae240d3bab2410427c8b75e",
+    "currentRootSha256": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "reachableNestedSha256": "5097c32bf81a966d05e3982d3b617d4220f224119ce41c9a94e11d9b402d9e1a",
     "shoulderManifestSha256": "619e3ab84712487bd032b84a8f8b52f94d10883d8db7798057049bab287de857",
     "sourceIdSetSha256": "8e2057667c31e8fc99b87eb4c020467eadb9698ca09a87fc85cd76350254e655"
   },
   "summary": {
     "referenceSourceFiles": 2234,
-    "rootSelections": 1102,
-    "rootSourceFileIds": 1789,
-    "reachableNestedSelections": 104,
-    "rootOnlyDifferences": 445,
+    "rootSelections": 1104,
+    "rootSourceFileIds": 1793,
+    "reachableNestedSelections": 106,
+    "rootOnlyDifferences": 441,
     "rootBindingsNeedingEquivalenceReview": 0,
     "allSourceStatuses": {
       "excluded-by-display-correction": 1,
-      "known-source-hold": 54,
-      "needs-source-and-anatomical-review": 365,
+      "known-source-hold": 56,
+      "needs-source-and-anatomical-review": 359,
       "nested-source-covered": 24,
       "related-cross-tree-hold": 1,
-      "root-source-covered": 1789
+      "root-source-covered": 1793
     },
     "rootDifferenceStatuses": {
       "excluded-by-display-correction": 1,
-      "known-source-hold": 54,
-      "needs-source-and-anatomical-review": 365,
+      "known-source-hold": 56,
+      "needs-source-and-anatomical-review": 359,
       "nested-source-covered": 24,
       "related-cross-tree-hold": 1
     },
@@ -84,25 +88,25 @@
       "digestive": 2,
       "integumentary": 5,
       "muscular": 23,
-      "nervous": 26,
+      "nervous": 24,
       "reproductive": 2,
       "respiratory": 2,
       "sensory": 8,
       "skeletal": 3,
-      "venous": 138
+      "venous": 136
     },
     "reviewQueueReferenceGroups": {
-      "arterial": 216,
+      "arterial": 214,
       "cardiac": 2,
       "connective": 2,
       "digestive": 1,
       "integumentary": 5,
       "muscular": 4,
-      "nervous": 8,
+      "nervous": 6,
       "reproductive": 2,
       "sensory": 8,
       "skeletal": 2,
-      "venous": 115
+      "venous": 113
     }
   },
   "limitations": [
@@ -110,7 +114,7 @@
     "Equal names, concept IDs or filenames alone do not prove equal anatomy or geometry. Cross-tree equivalence requires pinned geometry evidence and matching retained source hashes.",
     "Independent CC0 lower limb and BP3D v3 abdominal specimens use different donors/releases and are not counted as equal v4 source files. Their anatomical equivalents require separate review.",
     "Source-bound presence does not mean a separately selectable named structure, complete layer, clinically accurate surface or human approval.",
-    "No competitor geometry or explanatory prose is imported. Only audit ID/group metadata is retained; eight original official OBJ files are retained separately as non-runtime cross-tree evidence, with attribution.",
+    "No competitor geometry or explanatory prose is imported. Only audit ID/group metadata is retained; 14 original official OBJ files are retained separately as non-runtime cross-tree evidence, with attribution.",
     "The review queue is not an admission list; source topology, spatial extent, aliases, laterality, complete concept membership, licensing and clinical review remain required."
   ],
   "rootBindingsNeedingEquivalenceReview": [],
@@ -254,53 +258,6 @@
       }
     },
     {
-      "file": "FJ1319",
-      "referenceDisplaySystem": "nervous",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA7037",
-          "name": "branch of ciliary ganglion",
-          "componentCount": 2
-        },
-        {
-          "id": "FMA7041",
-          "name": "short ciliary nerve",
-          "componentCount": 2
-        },
-        {
-          "id": "FMA45638",
-          "name": "subdivision of nervous system",
-          "componentCount": 2
-        },
-        {
-          "id": "FMA65539",
-          "name": "subdivision of parasympathetic nervous system",
-          "componentCount": 2
-        },
-        {
-          "id": "FMA65551",
-          "name": "subdivisionof autonomic nervous system",
-          "componentCount": 2
-        },
-        {
-          "id": "FMA78590",
-          "name": "set of heterogeneous clusters",
-          "componentCount": 2
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 44470,
-        "crc32": 1567792412,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
       "file": "FJ1332",
       "referenceDisplaySystem": "sensory",
       "status": "needs-source-and-anatomical-review",
@@ -439,53 +396,6 @@
       "source": {
         "bytes": 1545768,
         "crc32": 2610016988,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1370",
-      "referenceDisplaySystem": "nervous",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA7037",
-          "name": "branch of ciliary ganglion",
-          "componentCount": 2
-        },
-        {
-          "id": "FMA7041",
-          "name": "short ciliary nerve",
-          "componentCount": 2
-        },
-        {
-          "id": "FMA45638",
-          "name": "subdivision of nervous system",
-          "componentCount": 2
-        },
-        {
-          "id": "FMA65539",
-          "name": "subdivision of parasympathetic nervous system",
-          "componentCount": 2
-        },
-        {
-          "id": "FMA65551",
-          "name": "subdivisionof autonomic nervous system",
-          "componentCount": 2
-        },
-        {
-          "id": "FMA78590",
-          "name": "set of heterogeneous clusters",
-          "componentCount": 2
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 46865,
-        "crc32": 264555341,
         "sha256": null,
         "geometrySha256": null
       }
@@ -4386,7 +4296,7 @@
     {
       "file": "FJ2066",
       "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
+      "status": "known-source-hold",
       "admissionApproved": false,
       "definitions": [
         {
@@ -4396,7 +4306,15 @@
         }
       ],
       "owners": [],
-      "holds": [],
+      "holds": [
+        {
+          "tree": "isa",
+          "conceptId": "FMA43908",
+          "reason": "Complete source-labelled artery includes a broad anterior-knee loop/network whose extent as an isolated anterior tibial recurrent artery has not been adjudicated. Hold the whole definition pending revision-bound radiologist identity/extent review; no trimming, relabelling, mirroring or subset admission.",
+          "evidence": "docs/tibial-recurrent-source-disposition.json",
+          "evidenceSha256": "a3cfc40af9ce85df44a60a272f50803bb20b459079d9c4a941d5d6124ade2042"
+        }
+      ],
       "displayCorrections": [],
       "source": {
         "bytes": 392663,
@@ -4931,7 +4849,7 @@
     {
       "file": "FJ2131",
       "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
+      "status": "known-source-hold",
       "admissionApproved": false,
       "definitions": [
         {
@@ -4941,7 +4859,15 @@
         }
       ],
       "owners": [],
-      "holds": [],
+      "holds": [
+        {
+          "tree": "isa",
+          "conceptId": "FMA43907",
+          "reason": "Complete source-labelled artery includes a broad anterior-knee loop/network whose extent as an isolated anterior tibial recurrent artery has not been adjudicated. Hold the whole definition pending revision-bound radiologist identity/extent review; no trimming, relabelling, mirroring or subset admission.",
+          "evidence": "docs/tibial-recurrent-source-disposition.json",
+          "evidenceSha256": "a3cfc40af9ce85df44a60a272f50803bb20b459079d9c4a941d5d6124ade2042"
+        }
+      ],
       "displayCorrections": [],
       "source": {
         "bytes": 399745,
@@ -7439,50 +7365,6 @@
       "source": {
         "bytes": 27313,
         "crc32": 2493918554,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ2725",
-      "referenceDisplaySystem": "venous",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA76767",
-          "name": "anterior cardiac vein",
-          "componentCount": 2
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 29808,
-        "crc32": 1658083387,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ2730",
-      "referenceDisplaySystem": "venous",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA76767",
-          "name": "anterior cardiac vein",
-          "componentCount": 2
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 18960,
-        "crc32": 581197663,
         "sha256": null,
         "geometrySha256": null
       }

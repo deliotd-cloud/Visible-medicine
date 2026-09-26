@@ -18,7 +18,10 @@
 .anatomy-control-rail .body-vessel-system .vessel-system-options {
   grid-column: 1 / -1;
   min-width: 0;
-  padding-top: 6px;
+  min-inline-size: 0;
+  margin: 0;
+  padding: 6px 0 0;
+  border: 0;
   color: var(--vm-ink);
 }
 .anatomy-control-rail .body-vessel-system .vessel-system-option {

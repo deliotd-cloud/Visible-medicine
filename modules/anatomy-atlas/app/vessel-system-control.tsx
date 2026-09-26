@@ -17,7 +17,7 @@ type VesselControlsProps = {
 };
 export function VesselVisibilityOptions({ structures, visibleIds, enabled, disabled, onVisibility, canUndo, canRedo, onUndo, onRedo }: VesselControlsProps) {
   const groups = vesselVisibilityGroups(structures, visibleIds);
-  return <div className="vessel-system-options" role="group" aria-label="Vessel visibility">
+  return <fieldset className="vessel-system-options" aria-label="Vessel visibility">
     {groups.map(group => <label key={group.kind} className="vessel-system-option">
       <Checkbox checked={group.shown === group.total} indeterminate={group.shown > 0 && group.shown < group.total}
         disabled={disabled || !enabled} aria-label={`Show ${group.label.toLowerCase()}`}
@@ -31,7 +31,7 @@ export function VesselVisibilityOptions({ structures, visibleIds, enabled, disab
         onClick={() => { if (!disabled && canRedo) onRedo(); }}>Redo</Button>
     </div></WorkspaceOnly>
     <p>{enabled ? 'Show or hide this vessel type in the current region and side.' : 'Turn on Vessels to change these groups.'}</p>
-  </div>;
+  </fieldset>;
 }
 export function VesselSystemControl(props: VesselControlsProps) {
   const { structures, visibleIds, enabled, disabled, onEnabled } = props;

@@ -3,6 +3,7 @@ import { resolve, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
+import { assertExportSpace } from './export-space-preflight.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const target=resolve(process.argv[2] ?? '');
 if (!process.argv[2] || !target.replaceAll('\\','/').endsWith('/public/atlas-runtime/shoulder')) throw Error('Choose the explicit website public/atlas-runtime/shoulder destination');
@@ -12,6 +13,8 @@ const sourceCommit=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'u
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const build=join(root,'.sites-runtime/shoulder-module');
 const inputs=JSON.parse(await readFile(join(build,'source-inputs.json'),'utf8'));
+for(const path of ['scripts/export-shoulder-module.mjs','scripts/export-space-preflight.mjs'])
+  if(!inputs.some(i=>i.path===path))throw Error('Missing export source binding: '+path);
 for (const required of ['integration/shoulder/vite.config.mjs','app/anatomy-scene.tsx','app/fitted-camera.tsx','lib/explode-layout.mjs']) {
   if (!inputs.some(input => input.path === required)) throw Error('Incomplete module source manifest: ' + required);
 }
@@ -27,6 +30,7 @@ copies.push([join(root,'integration/shoulder/credits.html'),'models/bodyparts3d/
 for(const path of ['LICENSE','LICENSES/THIRD_PARTY_NOTICES.md','LICENSES/dependency-license-audit.json','LICENSES/CC-BY-4.0.txt','LICENSES/BODYPARTS3D.md']) copies.push([join(root,path),path]);
 const manifest=JSON.parse(await readFile(join(root,'public/models/bodyparts3d/manifest.json'),'utf8'));
 if(hash(await readFile(join(root,'public/models/bodyparts3d/shoulder-right.glb')))!==manifest.sha256) throw Error('Model integrity failure');
+await assertExportSpace(target,copies);
 const records=[];
 for(const [from,name] of copies){
   const bytes=await readFile(from); const to=join(target,name);

@@ -274,6 +274,42 @@ export function StructureDetailsButton() {
     </Button>
   );
 }
+export function PracticeResultStudyButton({
+  onSelect,
+  children,
+}: {
+  onSelect: () => void;
+  children: ReactNode;
+}) {
+  const workspace = useAtlasWorkspace();
+  return (
+    <button
+      type="button"
+      disabled={workspace.exam}
+      onClick={(event) => {
+        if (workspace.exam) return;
+        // The information sheet is portalled outside .body-app on compact views.
+        const root = event.currentTarget.closest('.body-info');
+        const origin = event.currentTarget;
+        // Restore Explore before applying the result's selection and framing.
+        workspace.chooseMode('explore');
+        onSelect();
+        workspace.showInfo();
+        // The result list becomes hidden in Explore. Transfer keyboard focus
+        // within this workspace to the newly visible structure heading.
+        if (root) requestAnimationFrame(() => {
+          const active = root.ownerDocument.activeElement;
+          if (!root.isConnected || root.closest('.anatomy-controls-popup')?.hasAttribute('data-closed') ||
+              (active !== origin && active !== root.ownerDocument.body)) return;
+          const heading = root.querySelector<HTMLElement>('[data-structure-study-heading]');
+          if (heading?.isConnected) heading.focus({ preventScroll: true });
+        });
+      }}
+    >
+      {children}
+    </button>
+  );
+}
 export function PracticeAttention({
   answered,
   exam,
@@ -431,12 +467,19 @@ export function AtlasSearch({
     [limit, setLimit] = useState(12);
   const [preview, setPreview] = useState<AtlasSearchEntry | null>(null);
   const [activationIssue, setActivationIssue] = useState<string | null>(null);
+  const [relatedLimit, setRelatedLimit] = useState(12);
   const launcher = useRef<HTMLButtonElement | null>(null);
   const transferringFocus = useRef(false);
   const previewOrigin = useRef<HTMLButtonElement | null>(null);
   const previewConfirmation = useRef<HTMLButtonElement | null>(null);
   const dialogRoot = useRef<HTMLDivElement | null>(null);
   const restorePreviewFocus = useRef(false);
+  const resultList = useRef<HTMLDivElement | null>(null);
+  const relatedList = useRef<HTMLDivElement | null>(null);
+  const relatedDetails = useRef<HTMLDetailsElement | null>(null);
+  const pendingResultFocus = useRef<{
+    key: string; query: string; kind: typeof kind; related: boolean;
+  } | null>(null);
   const entries = useMemo(
     () => atlasSearchIndex(catalog, region, side).filter(entry =>
       !localRegionOnly || entry.action.type !== 'link' ||
@@ -449,6 +492,28 @@ export function AtlasSearch({
     [entries, query, kind],
   );
   const {primary,related}=groupAtlasSearchResults(matches,query,kind);
+  useEffect(() => {
+    const pending = pendingResultFocus.current;
+    if (!pending) return;
+    pendingResultFocus.current = null;
+    if (!open || workspace.exam || preview || pending.query !== query || pending.kind !== kind) return;
+    // A user who closed the native disclosure keeps its focus; never focus a
+    // hidden related result or change the disclosure's open state for them.
+    if (pending.related && !relatedDetails.current?.open) return;
+    const container = pending.related ? relatedList.current : resultList.current;
+    const target = Array.from(container?.querySelectorAll<HTMLElement>('[data-atlas-search-key]') ?? [])
+      .find(node => node.dataset.atlasSearchKey === pending.key && node.isConnected);
+    const destination = target ?? dialogRoot.current;
+    if (destination?.isConnected) destination.focus();
+  }, [limit, relatedLimit, open, workspace.exam, preview, query, kind, entries]);
+  const revealResults = (isRelated: boolean) => {
+    if (!open || workspace.exam || preview) return;
+    const firstNew = isRelated ? related[relatedLimit] : primary[limit];
+    if (!firstNew) return;
+    pendingResultFocus.current = { key: firstNew.key, query, kind, related: isRelated };
+    if (isRelated) setRelatedLimit(value => value + 24);
+    else setLimit(value => value + 24);
+  };
   useEffect(() => {
     if (!open || workspace.exam) {
       restorePreviewFocus.current = false;
@@ -465,6 +530,7 @@ export function AtlasSearch({
     if (target?.isConnected) target.focus({ preventScroll: true });
   }, [open, preview, workspace.exam]);
   const clearPreview = (restoreFocus = false) => {
+    pendingResultFocus.current = null;
     setActivationIssue(null);
     restorePreviewFocus.current = restoreFocus;
     if (!restoreFocus) previewOrigin.current = null;
@@ -490,6 +556,7 @@ export function AtlasSearch({
       (entry.action.type === 'window' || entry.action.type === 'focus') &&
       !confirmed
     ) {
+      pendingResultFocus.current = null;
       previewOrigin.current = origin;
       restorePreviewFocus.current = false;
       setActivationIssue(null);
@@ -533,11 +600,11 @@ export function AtlasSearch({
     clearPreview();
   };
   const renderEntry=(entry:AtlasSearchEntry)=>entry.action.type==='link'?(
-    <Link prefetch={false} key={entry.key} href={entry.action.href} onClick={()=>setOpen(false)}>
+    <Link prefetch={false} key={entry.key} data-atlas-search-key={entry.key} href={entry.action.href} onClick={()=>setOpen(false)}>
       <strong>{entry.label}</strong><small>{entry.detail}</small>
     </Link>
   ):(
-    <button type="button" key={entry.key} onClick={(event)=>activate(entry,false,event?.currentTarget ?? null)}>
+    <button type="button" key={entry.key} data-atlas-search-key={entry.key} onClick={(event)=>activate(entry,false,event?.currentTarget ?? null)}>
       <strong>{entry.label}</strong><small>{entry.detail}</small>
     </button>
   );
@@ -588,6 +655,7 @@ export function AtlasSearch({
           onChange={(event) => {
             setQuery(event.target.value);
             setLimit(12);
+            setRelatedLimit(12);
             clearPreview();
           }}
           placeholder="e.g. Achilles, peroneus, CN IV, FMA…"
@@ -599,6 +667,7 @@ export function AtlasSearch({
           onChange={(event) => {
             setKind(event.target.value as typeof kind);
             setLimit(12);
+            setRelatedLimit(12);
             clearPreview();
           }}
         >
@@ -632,25 +701,25 @@ export function AtlasSearch({
             </Button>
           </section>
         )}
-        <div className="atlas-search-results" hidden={!!preview}>
+        <div ref={resultList} className="atlas-search-results" hidden={!!preview}>
           {primary.slice(0, limit).map(renderEntry)}
           {!matches.length && (
             <p>No matches. Try another name or anatomical ID.</p>
           )}
           {primary.length > limit && (
-            <Button variant="outline" onClick={() => setLimit((n) => n + 24)}>
+            <Button variant="outline" onClick={() => revealResults(false)}>
               Show more results
             </Button>
           )}
           {related.length>0&&(
-            <details key={`${query}|${kind}`} className="rounded-lg border px-3" data-search-related>
+            <details ref={relatedDetails} key={`${query}|${kind}`} className="rounded-lg border px-3" data-search-related>
               <summary className="min-h-11 cursor-pointer py-3 text-sm font-medium">
                 Study views containing this anatomy ({related.length})
               </summary>
               <p className="mb-3 text-sm">Matches may be background anatomy rather than the study’s focus. Opening a study resets custom dissection; you can review it first.</p>
-              <div className="atlas-search-results">
-                {related.slice(0,limit).map(renderEntry)}
-                {related.length>limit&&<Button variant="outline" onClick={()=>setLimit(n=>n+24)}>Show more related study views</Button>}
+              <div ref={relatedList} className="atlas-search-results">
+                {related.slice(0,relatedLimit).map(renderEntry)}
+                {related.length>relatedLimit&&<Button variant="outline" onClick={()=>revealResults(true)}>Show more related study views</Button>}
               </div>
             </details>
           )}

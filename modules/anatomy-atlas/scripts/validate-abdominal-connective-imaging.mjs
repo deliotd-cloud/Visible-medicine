@@ -4,21 +4,42 @@ import {createHash} from 'node:crypto';
 import {context,hash,snapshot} from './pin-pica-clinical.mjs';
 import {beforeAbdominalConnectiveImaging} from './abdominal-connective-imaging-history.mjs';
 import {beforeGenicularImaging} from './genicular-imaging-history.mjs';
+import {beforeTransverseMesocolonMri} from './transverse-mesocolon-mri-history.mjs';
+import {execFileSync} from 'node:child_process';
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {build} from './workspace-test-build.mjs';
 import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 import pins from '../content/abdominal-connective-imaging-pins.json' with {type:'json'};
 import after from '../content/abdominal-connective-imaging.transition.json' with {type:'json'};
 import {abdominalConnectiveSelections,abdominalConnectiveTopics,abdominalConnectiveReferences} from '../content/abdominal-connective-imaging.ts';
-const current=await context({current:true}),display=current.display,api=beforeGenicularImaging(current.api),before=beforeAbdominalConnectiveImaging(api);
+const current=await context({current:true});
+const sourceCatalog=JSON.parse(execFileSync('git',['show',pins.sourceCommit+':public/models/bodyparts3d/full-body/catalog.json'],{encoding:'utf8',maxBuffer:16000000}));
+const savedApi=await exactSourceHistoryApi(pins.sourceCommit);
+const api=await exactSourceHistoryApi('b5f13fd7b4aefb432eea63774917c46feacac9f6');
+const display=savedApi.bodyDisplayCatalog(sourceCatalog);
+assert.deepEqual(api.bodyDisplayCatalog(sourceCatalog),display,'Exact source-era catalogue unchanged');
+const prior=new Map(pins.entries.flatMap(e=>e.topics.map(t=>[e.identity.id+'|'+t,e.previous[t]])));
+const before={...api,bodyLesson:(s,t)=>prior.get(s.id+'|'+t)??api.bodyLesson(s,t)};
 assert.equal(hash(snapshot(api,display)),after.currentAllLessonsAndRecipesHash);
 assert.equal(hash(snapshot(before,display)),pins.previousAllLessonsAndRecipesHash);
 // Independent application replay from the saved parent, not just self-consistent fixtures.
-const savedApi=await exactSourceHistoryApi(pins.sourceCommit);
-const savedCatalog=JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json'));
-assert.deepEqual(savedApi.bodyDisplayCatalog(savedCatalog),display);
 assert.deepEqual(snapshot(savedApi,display),snapshot(before,display));
-assert.equal(beforeAbdominalConnectiveImaging(before),before);
+// Preserve complete current-era lessons separately from the original snapshot.
+const currentBase=beforeTransverseMesocolonMri(current.api);
+const currentParent=await exactSourceHistoryApi('1af9a485525fa130842bd5c77afa9429d2930f9a');
+assert.deepEqual(currentParent.bodyDisplayCatalog(current.catalog),current.display);
+assert.deepEqual(snapshot(currentBase,current.display),snapshot(currentParent,current.display));
+const scopedCurrent=beforeGenicularImaging(currentBase),scopedParent=beforeGenicularImaging(currentParent);
+assert.deepEqual(snapshot(scopedCurrent,current.display),snapshot(scopedParent,current.display));
+const scopedBefore=beforeAbdominalConnectiveImaging(scopedCurrent);
+assert.equal(beforeAbdominalConnectiveImaging(scopedBefore),scopedBefore);
+let currentChanged=0,currentUnchanged=0;
+for(const s of current.display.structures)for(const t of current.api.contentTabs){
+ const e=pins.entries.find(e=>e.identity.id===s.id&&e.topics.includes(t));
+ if(e){assert.deepEqual(s,e.identity);assert.deepEqual(scopedCurrent.bodyLesson(s,t),api.bodyLesson(s,t));assert.deepEqual(scopedBefore.bodyLesson(s,t),e.previous[t]);currentChanged++;}
+ else{assert.deepEqual(scopedCurrent.bodyLesson(s,t),scopedBefore.bodyLesson(s,t));currentUnchanged++;}
+}
+assert.equal(currentChanged,4);assert.equal(currentUnchanged,9932);
 assert.equal(display.sourceVersion,pins.sourceVersion);assert.deepEqual(display.coordinateSystem,pins.coordinateSystem);assert.equal(display.license,pins.license);
 const compiled=await build({stdin:{contents:"export {abdominalConnectiveImagingLesson} from './lib/abdominal-connective-imaging';export {bodyReviewMaterial} from './lib/body-review-material';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
 const {abdominalConnectiveImagingLesson:lesson,bodyReviewMaterial}=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
@@ -44,16 +65,16 @@ for(const e of pins.entries){
   const bad=structuredClone(e.identity);mutate(bad);for(const t of e.topics){assert.equal(lesson(bad,t),undefined);rejected++;}
  }
  const review=await bodyReviewMaterial(e.identity.id);assert.equal(review.approval,false);assert.deepEqual(review.source.structure,e.identity);
- for(const t of e.topics){const {tab,...actual}=review.topics.find(p=>p.tab===t);assert.deepEqual(actual,api.bodyLesson(e.identity,t));reviewed++;}
+ for(const t of e.topics){const {tab:_tab,...actual}=review.topics.find(p=>p.tab===t);assert.deepEqual(actual,api.bodyLesson(e.identity,t));reviewed++;}
 }
 const first=pins.entries[0];
-assert.throws(()=>beforeAbdominalConnectiveImaging({...api,bodyLesson:(s,t)=>s.id===first.identity.id&&t==='ct'?{...api.bodyLesson(s,t),body:'foreign'}:api.bodyLesson(s,t)}),/Unrecorded/);
-assert.throws(()=>beforeAbdominalConnectiveImaging({...api,bodyLesson:(s,t)=>s.id===first.identity.id&&t==='ct'?first.previous[t]:api.bodyLesson(s,t)}),/Mixed/);
+assert.throws(()=>beforeAbdominalConnectiveImaging({...scopedCurrent,bodyLesson:(s,t)=>s.id===first.identity.id&&t==='ct'?{...scopedCurrent.bodyLesson(s,t),body:'foreign'}:scopedCurrent.bodyLesson(s,t)}),/Unrecorded/);
+assert.throws(()=>beforeAbdominalConnectiveImaging({...scopedCurrent,bodyLesson:(s,t)=>s.id===first.identity.id&&t==='ct'?first.previous[t]:scopedCurrent.bodyLesson(s,t)}),/Mixed/);
 for(const b of pins.bundles){assert.deepEqual(display.bundles.find(x=>x.id===b.id),b);const bytes=await readFile('public'+b.url.split('?')[0]);assert.equal(bytes.length,b.bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),b.sha256);}
 // Count unique authored text, not repeated bilateral placements, conservatively per cited source.
 const budgets={};const count=(refs,text)=>{for(const ref of refs)budgets[ref]=(budgets[ref]??0)+text.split(/\s+/).length;};
 for(const s of abdominalConnectiveSelections)count(s.references,s.landmark);
 for(const group of Object.values(abdominalConnectiveTopics))for(const t of Object.values(group))count(t.references,[t.body,...t.bullets].join(' '));
 for(const [key,words] of Object.entries(budgets)){assert(words<=200,key+': '+words);assert.equal(new URL(abdominalConnectiveReferences[key]).protocol,'https:');}
-const report={source:pins.sourceCommit,selections:3,uniqueModalityTexts:4,draftPlacements:changed,unchangedTopics:unchanged,reviewedTopics:reviewed,rejectedIdentityMutations:rejected,sourceWordBudgets:budgets,beforeHash:pins.previousAllLessonsAndRecipesHash,afterHash:after.currentAllLessonsAndRecipesHash,geometryChanged:false,clinicalApproval:false,browserAcceptance:false};
+const report={source:pins.sourceCommit,selections:3,uniqueModalityTexts:4,draftPlacements:changed,unchangedTopics:unchanged,currentDraftPlacements:currentChanged,currentUnchangedTopics:currentUnchanged,reviewedTopics:reviewed,rejectedIdentityMutations:rejected,sourceWordBudgets:budgets,beforeHash:pins.previousAllLessonsAndRecipesHash,afterHash:after.currentAllLessonsAndRecipesHash,geometryChanged:false,clinicalApproval:false,browserAcceptance:false};
 await writeFile('docs/abdominal-connective-imaging-validation.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

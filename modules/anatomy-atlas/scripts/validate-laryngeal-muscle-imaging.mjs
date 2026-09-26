@@ -4,6 +4,7 @@ import {createHash} from 'node:crypto';
 import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
 import ts from 'typescript';
+import {build} from './workspace-component-test-build.mjs';
 import {contentContext} from './content-contract-tools.mjs';
 import {wholeBodyTeachingSnapshot} from './exact-clinical-reference-history.mjs';
 import {beforeLaryngealMuscleImaging} from './laryngeal-muscle-imaging-history.mjs';
@@ -19,6 +20,8 @@ const expected=[['FMA46577','FJ2800','right','posterior'],['FMA46578','FJ2782','
 assert.deepEqual(pins.entries.map(e=>[e.identity.fmaId,...e.identity.sources.map(s=>s.file),e.identity.laterality,e.family]),expected);
 for(const bundle of sourcePins.bundles)assert.equal(createHash('sha256').update(await readFile('public'+bundle.url.split('?')[0])).digest('hex'),bundle.sha256);
 const require=createRequire(import.meta.url),React=require('react'),render=require('react-dom/server').renderToStaticMarkup;
+const built=await build({stdin:{contents:"export {SourceDisplayNotes} from './app/source-display-notes';",resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'cjs',write:false});
+const scope={exports:{}};runInNewContext(built.outputFiles[0].text,{module:scope,exports:scope.exports,require});
 const source=await readFile('app/body-explorer.tsx','utf8'),ast=ts.createSourceFile('body.tsx',source,ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX);
 let callback;
 function visit(n){if(ts.isArrowFunction(n)&&n.body.getText(ast).includes('const content = bodyContent(selected, value);')){assert(!callback);callback=n.getText(ast);}ts.forEachChild(n,visit);}
@@ -41,7 +44,7 @@ for(const s of display.structures)for(const tab of api.contentTabs){
   if(tab==='mri')assert.match(allText,/cadaveric MRI.*not routine in-vivo/);
   for(const url of lesson.citations)assert.equal(new URL(url).protocol,'https:');
   const record=records.find(r=>r.id===s.id);assert.deepEqual(record.content[tab],lesson);assert.equal(record.validation.clinicalApproval,'not-included');
-  const jsx=runInNewContext(js+';renderNote(topic)',{React,topic:tab,bodyContent:api.bodyContent,selected:s,WorkspaceModeButton:({children})=>React.createElement('button',null,children),ComponentImagingNotes:()=>null,ScanLine:()=>null,catalog:display,side:'both',exam:false,openNested(){throw Error('No automatic navigation');}});
+  const jsx=runInNewContext(js+';renderNote(topic)',{React,topic:tab,bodyContent:api.bodyContent,selected:s,SourceDisplayNotes:scope.exports.SourceDisplayNotes,WorkspaceModeButton:({children})=>React.createElement('button',null,children),ComponentImagingNotes:()=>null,ScanLine:()=>null,catalog:display,side:'both',exam:false,openNested(){throw Error('No automatic navigation');}});
   const html=render(jsx);assert(html.includes(render(React.createElement('p',null,lesson.body))));
   assert(html.includes(render(React.createElement('div',{className:'eyebrow'},lesson.title))));
   for(const bullet of lesson.bullets)assert(html.includes(render(React.createElement('li',null,bullet))));

@@ -3,6 +3,7 @@ import {resolve,join,relative} from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {headNeckModuleInputs,root,sha} from './head-neck-module-inputs.mjs';
 import {regionalCompanions} from '../integration/head-neck/companions.mjs';
+import {assertExportSpace} from './export-space-preflight.mjs';
 const target=resolve(process.argv[2]??'');
 if(!process.argv[2] || !target.replaceAll('\\','/').endsWith('/public/atlas-runtime/head-neck'))throw Error('Choose an explicit website public/atlas-runtime/head-neck destination');
 try{await lstat(target);throw Error('Destination exists; preserve it before exporting');}catch(e){if(e.code!=='ENOENT')throw e;}
@@ -11,6 +12,8 @@ const sourceCommit=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'u
 const build=join(root,'.sites-runtime/head-neck-module');
 const inputs=JSON.parse(await readFile(join(build,'source-inputs.json'),'utf8'));
 if(!inputs.some(i=>i.path==='scripts/independent-source-contract.mjs'))throw Error('Missing independent source contract binding');
+for(const path of ['scripts/export-head-neck-module.mjs','scripts/export-space-preflight.mjs'])
+  if(!inputs.some(i=>i.path===path))throw Error('Missing export source binding: '+path);
 for(const required of ['app/body-explorer.tsx','app/body-scene.tsx','app/eye-layers.tsx','app/ventricles.tsx','app/femoral-components.tsx','app/atlas-workspace.tsx','app/study-links.tsx','app/abdominal-wall-study.tsx','app/hra-renal-study.tsx','app/independent-study-navigation.tsx','lib/model-delivery.ts','integration/head-neck/main.tsx','integration/head-neck/specimen-route.ts','integration/head-neck/delivery.ts','integration/head-neck/regions.ts','integration/head-neck/companions.mjs',...regionalCompanions.map(([source])=>source)]){
   if(!inputs.some(i=>i.path===required))throw Error('Missing source binding: '+required);
 }
@@ -26,6 +29,7 @@ if(generated.some(n=>!/^(?:index\.html|BUNDLED_NOTICES\.txt|(?:bundled-dependenc
 const copies=[...generated.map(n=>[join(build,n),n]),...models.map(m=>[m.file,m.path])];
 copies.push(...regionalCompanions.map(([from,to])=>[join(root,from),to]));
 if(new Set(copies.map(([,name])=>name)).size!==copies.length)throw Error('Duplicate output path');
+await assertExportSpace(target,copies);
 const records=[];
 for(const [from,name]of copies){
   if(!(await lstat(from)).isFile())throw Error('Regular files only');

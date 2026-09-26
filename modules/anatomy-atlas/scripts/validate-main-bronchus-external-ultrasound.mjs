@@ -28,5 +28,6 @@ for (const { identity, group } of entries) {
   assert.equal(api.thoracoabdominalOrganImagingLesson(changed, 'ultrasound'), undefined);
   assert.equal(api.bodyLesson(changed, 'ultrasound').readiness, 'pending');
 }
-assert.equal(api.thoracoabdominalOrganImagingGroups.esophagus.focus.ultrasound, undefined);
+assert.equal(before.thoracoabdominalOrganImagingGroups.esophagus.focus.ultrasound, undefined);
+assert.equal(api.thoracoabdominalOrganImagingGroups.esophagus.focus.ultrasound !== undefined, true);
 console.log(JSON.stringify({ externalMainBronchusDrafts: entries.length, exactSource: true, clinicalApproval: false }));

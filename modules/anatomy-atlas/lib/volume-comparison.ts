@@ -201,6 +201,11 @@ export function connectVolumeComparison(options: VolumeComparisonOptions) {
       id: options.id,
       label: options.label,
       modality: options.modality,
+      onAtlasDetached() {
+        // The host session can outlive its source Atlas (route or region change).
+        // Retire pixels and in-flight results before another Atlas can attach.
+        if (!disposed) invalidate(revoked ? 'access-denied' : 'unmapped');
+      },
       async onAtlasSelection(selection) {
         if (revoked) {
           invalidate('access-denied');
