@@ -1,5 +1,16 @@
 # Visible Medicine — shared delivery plan
 
+27 September review usability: local Clinical Review now imports Atlas `59b35d8`
+and reuses existing source-checked search synonyms. Achilles finds both whole-body
+tendons and three separate specimen contexts. Its exact review model/teaching
+includes the two attributed Achilles CT drafts. Learner export remains `36c53fb`;
+new drafts are deliberately reviewable before learner delivery. Review/model
+fingerprints match; prior decisions remain revision-bound and are not migrated.
+Index/page/queue/status, website access/history/search, TypeScript and builds pass.
+Browser search and CT evidence disclosure verified; no decision saved. Mobile
+reading works, but a two-pixel page overflow needs follow-up. Public site unchanged.
+See `docs/clinical-review-search-20260927.md` and the main recovery checkpoint.
+
 27 September validation follow-up: Atlas `cc76604` resolves the older Achilles
 MRI/US snapshot failure by replaying the eleven later regional quiz keys only
 inside historical tests. Original expected hashes retained; Achilles, regional

@@ -4,9 +4,16 @@ import { bodyLesson } from '../app/body-content';
 import { contentTabs } from './content-types';
 import type { BodyCatalog } from '../app/body-types';
 import { makeStudyLink } from './study-links';
+import { structureSearchAliases } from './anatomy-search';
 
 // Read-only review material, separate from private signed shoulder decisions.
 const catalog = bodyDisplayCatalog(rawCatalog as unknown as BodyCatalog);
+const searchStructures = new Map(catalog.structures.map(s => [s.id, s]));
+/** Search-only vocabulary; source names, material and review identities stay exact. */
+export function bodyReviewSearchAliases(id: string): string[] {
+  const structure = searchStructures.get(id);
+  return structure ? structureSearchAliases(structure) : [];
+}
 export const bodyReviewSchema = 'vm-body-review-worksheet-1';
 export const bodyReviewChecks = {
   geometry: [

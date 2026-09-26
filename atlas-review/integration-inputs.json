@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "36c53fb9e19fca1c7e579f79d6d4807e4778ac19",
-  "sha256": "e43199ff35ad70a54d3d0179404f97c5c8388bcd42e4eb74f763162e704c419a",
+  "sourceCommit": "59b35d8f3b176fb542b6ff561472206477f9bbda",
+  "sha256": "e85d2acc35d79864642fcf1402953767dff68853f07fdcf7141bf5012fae2436",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -112,7 +112,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "1b94e8c712da0d47ea58b6b79fcd112457aa275f7d3b037e684fa85fa2d2011b"
+      "sha256": "f0430a954fcf1a5f3765639a1e541641cc73d35628775cab29a1d7eae17c1672"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -593,6 +593,14 @@
     {
       "path": "atlas-review/content/abdominal-wall-teaching.ts",
       "sha256": "b0da512ba08095bb8516538b11f6f052f5e1bd052f2a418fc1015602fe8f5896"
+    },
+    {
+      "path": "atlas-review/content/achilles-ct-pins.json",
+      "sha256": "cbace5da41467256b95305858cb0d356dd0372eacd02be1ff6021f3f29d439fd"
+    },
+    {
+      "path": "atlas-review/content/achilles-ct.ts",
+      "sha256": "90957fbb728c1b72aa29b5db1f0aca01269035d49022d93d3fe5bf413a05cd21"
     },
     {
       "path": "atlas-review/content/acral-attachment-pins.json",
@@ -1711,6 +1719,10 @@
       "sha256": "06795f84c4440639f4b24ea31e10b5e0a37f0e8f494a261f512d12c8ea1687b7"
     },
     {
+      "path": "atlas-review/lib/achilles-ct.ts",
+      "sha256": "827b0bde2ab3c98ee11f95f75e7e4a78af627d80bbcf5916f1f8697a61799254"
+    },
+    {
       "path": "atlas-review/lib/achilles-imaging.ts",
       "sha256": "ebb2a04d15daf14896f65181f891aa4058f8fe70fc28416f5241f6f9565d8f88"
     },
@@ -1868,7 +1880,7 @@
     },
     {
       "path": "atlas-review/lib/body-review-material.ts",
-      "sha256": "72606217ec6bedaaf67ccd387ebe04de3c384326310578514d8248f104e236d6"
+      "sha256": "4c37188514984d138dff39c9b8a16a512fceb1e6195ba0e12c080687662e95b5"
     },
     {
       "path": "atlas-review/lib/body-review-response.ts",
@@ -1964,7 +1976,7 @@
     },
     {
       "path": "atlas-review/lib/clinical-review-index.ts",
-      "sha256": "6a03239ec1b1e666557907150b988d76f232e43fb4fbb1187d7ac500df673712"
+      "sha256": "22196def2a4f09788c941b5a44d10350ed1b383ab0ca3318b0599adc2e778e99"
     },
     {
       "path": "atlas-review/lib/clinical-review-queue.ts",
@@ -3168,7 +3180,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "023c43feab205c8cce95fd1cb72a5693b3021fbea9130beb48a4ee6df7d3a8b7"
+      "sha256": "03393d98d5d3dd0dbcd5e22d74922fed498e47fe5abfb7e8d499be97307bf9a4"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3412,7 +3424,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "7bf4dac81e81495ce1a5ba7174aa689d8f14eb6a9c8c418f7f37d58185da3f02"
+      "sha256": "449052def5c9ecf15568f6a4f062b860d34b725a5f8a7fd3bb122c9816557c1b"
     }
   ]
 }

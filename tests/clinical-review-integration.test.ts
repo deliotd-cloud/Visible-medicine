@@ -12,11 +12,17 @@ const priorMaterial = JSON.parse(readFileSync('tests/fixtures/clinical-review-pr
 
 test('current review includes draft answer evidence and admitted teaching without the held skin candidate', () => {
   const review = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
+  const viewer = JSON.parse(readFileSync('public/atlas-review-viewer/manifest.json', 'utf8'));
   const regional = JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8'));
-  assert.equal(review.revision, regional.sourceCommit);
+  // Review new drafts against their exact review model before learner delivery.
+  // The public learner export is deliberately not upgraded by a review-only import.
+  assert.equal(review.revision, '59b35d8f3b176fb542b6ff561472206477f9bbda');
+  assert.equal(viewer.sourceCommit, review.revision);
+  assert.equal(viewer.websiteIntegrationSha256, review.websiteIntegrationSha256);
+  assert.equal(regional.sourceCommit, '36c53fb9e19fca1c7e579f79d6d4807e4778ac19');
   assert.notEqual(review.revision, priorMaterial.atlasSource);
   const paths = new Set(review.files.map((file: {path:string}) => file.path));
-  for (const path of ['app/structure-quick-check.tsx', 'content/coronary-arterial-us.ts', 'content/elbow-arterial-ct.ts']) assert.ok(paths.has(path), path);
+  for (const path of ['app/structure-quick-check.tsx', 'content/coronary-arterial-us.ts', 'content/elbow-arterial-ct.ts', 'content/achilles-ct.ts']) assert.ok(paths.has(path), path);
   assert.ok(![...paths].some(path => String(path).startsWith('app/review/candidates/')));
   const dashboard = readFileSync('atlas-review/app/review/review-dashboard.tsx', 'utf8');
   assert.ok(dashboard.includes('Draft answer key:'));

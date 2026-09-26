@@ -1,5 +1,6 @@
 import { structures } from '../app/anatomy-data';
-import { bodyReviewSummaries } from './body-review-material';
+import { bodyReviewSummaries, bodyReviewSearchAliases } from './body-review-material';
+import { normalizeAnatomySearch, anatomySearchWordMatches } from './anatomy-search';
 import { nestedReviewRows } from './nested-review-material';
 import { specimenReviewRows } from './specimen-review-material';
 import bindings from '../content/nested-review-bindings.json';
@@ -46,6 +47,12 @@ export const clinicalReviewEntries: readonly ClinicalReviewEntry[] = [
     href: link('/workspace/atlas-review/specimens', { specimen: row.key, structure: s.id }) }))),
 ].sort((a, b) => scopeOrder(a.scope) - scopeOrder(b.scope) || compare(a.name.toLowerCase(), b.name.toLowerCase()) || compare(a.key, b.key));
 if (new Set(clinicalReviewEntries.map(e => e.key)).size !== clinicalReviewEntries.length) throw Error('Duplicate clinical review search key');
+const searchableText = new Map(clinicalReviewEntries.map(e => [e.key,
+  normalizeAnatomySearch([e.name, e.id, e.context, e.laterality,
+    ...(e.scope === 'body' ? bodyReviewSearchAliases(e.id)
+      : e.scope === 'shoulder' ? structures.find(s => s.id === e.id)?.synonyms ?? [] : []),
+  ].join(' ')),
+]));
 
 export type ClinicalReviewSearch = {
   q: string; scope: 'all' | ClinicalReviewScope; page: number; pageCount: number;
@@ -61,9 +68,9 @@ function page(value: unknown) {
   return Number.isSafeInteger(number) && number > 0 ? number : 1;
 }
 export function findClinicalReviewEntries(input: ClinicalReviewSearchInput = {}): ClinicalReviewSearch {
-  const q = query(input.q), selectedScope = scope(input.scope), tokens = q.toLowerCase().split(/\s+/).filter(Boolean);
+  const q = query(input.q), selectedScope = scope(input.scope), tokens = normalizeAnatomySearch(q).split(/\s+/).filter(Boolean);
   const found = clinicalReviewEntries.filter(e => (selectedScope === 'all' || e.scope === selectedScope)
-    && tokens.every(token => [e.name, e.id, e.context, e.laterality].join(' ').toLowerCase().includes(token)));
+    && tokens.every(token => anatomySearchWordMatches(searchableText.get(e.key)!, token)));
   const pageCount = Math.max(1, Math.ceil(found.length / 12)), current = Math.min(page(input.page), pageCount);
   return { q, scope: selectedScope, page: current, pageCount, total: found.length,
     entries: found.slice((current - 1) * 12, current * 12).map(e => ({ ...e })), pageSize: 12 };
