@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+27 September validation follow-up: Atlas `cc76604` resolves the older Achilles
+MRI/US snapshot failure by replaying the eleven later regional quiz keys only
+inside historical tests. Original expected hashes retained; Achilles, regional
+quiz, content-contract and review checks pass. No runtime/model/content/approval
+change or publication. Main checkpoint:
+`work/REGIONAL-QUIZ-HISTORY-CHECKPOINT-20260927.md`.
+
 27 September: Atlas source `7b69867` adds two exact-source Achilles CT drafts
 with CC BY 4.0 attribution, explicit experimental-evidence limits and unchanged
 models/other teaching. Source GitHub and independent D restore verified. These
