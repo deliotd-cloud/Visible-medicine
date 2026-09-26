@@ -1537,3 +1537,13 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC8630952/. Version not specified in the
 inspected PMC statement; no version is asserted here. Author credit and source
 link displayed in both drafts. No images, tables or datasets imported. See
 docs/COMMON_INTEROSSEOUS_US.md for full title, evidence and limitations.
+# Skin source assessment (26 September 2026; not shipped)
+
+The independently cached FMA7163/FJ2810 skin candidate uses the original
+BodyParts3D version 4 mesh. BodyParts3D, © The Database Center for Life Science
+licensed under CC Attribution 4.0 International. Commercial reuse requires
+compliance with that license. The generated local review projections change
+presentation only; no source geometry is repaired. See
+`docs/SKIN_SOURCE_CANDIDATE.md` and `docs/skin-source-audit-20260926.json` for
+provenance, exact hashes and unfulfilled admission/clinical-review gates.
+No mesh or projection from this assessment is added to the shipped application.
