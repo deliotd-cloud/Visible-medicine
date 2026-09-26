@@ -1,0 +1,525 @@
+{
+  "version": 1,
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "auditSha256": "a598c4e0355de55da4fbdbe73a96f75ad1c0ae8e83641b982a0dbe3613f867e8",
+  "structures": [
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
+      "fmaId": "FMA22678",
+      "name": "Right subscapular artery",
+      "sourceName": "right subscapular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "subscapular-arteries",
+      "nodeName": "FMA22678",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2298",
+          "sha256": "41050856a7c2cbb79984a78346a0e3dc13e271758a04012f2283fee2182a2f29"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -1.419819951057434,
+          4.794000148773193,
+          0.33651599287986755
+        ],
+        "max": [
+          -1.2893999814987183,
+          4.94890022277832,
+          0.4222390055656433
+        ]
+      },
+      "center": [
+        -1.3546099662780762,
+        4.871450185775757,
+        0.37937749922275543
+      ],
+      "anchor": [
+        -1.347350001335144,
+        4.877500057220459,
+        0.39108601212501526
+      ],
+      "coverageNote": "Complete IS-A subscapular artery surface, distinct from the broader PART-OF aggregate containing existing branches. Original coordinates and faces retained; no source junction, continuous lumen, complete collateral network or supply territory is validated. Radiologist review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery",
+      "fmaId": "FMA22679",
+      "name": "Left subscapular artery",
+      "sourceName": "left subscapular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "subscapular-arteries",
+      "nodeName": "FMA22679",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2246",
+          "sha256": "4dc93c063b9d87ab85699bfeb9f856cb39faf12d2859b0e4184ba64de6c9ef87"
+        }
+      ],
+      "bounds": {
+        "min": [
+          1.2898600101470947,
+          4.7941999435424805,
+          0.3365879952907562
+        ],
+        "max": [
+          1.4196499586105347,
+          4.948699951171875,
+          0.42217200994491577
+        ]
+      },
+      "center": [
+        1.3547549843788147,
+        4.871449947357178,
+        0.379380002617836
+      ],
+      "anchor": [
+        1.3433200120925903,
+        4.870800018310547,
+        0.3914330005645752
+      ],
+      "coverageNote": "Complete IS-A subscapular artery surface, distinct from the broader PART-OF aggregate containing existing branches. Original coordinates and faces retained; no source junction, continuous lumen, complete collateral network or supply territory is validated. Radiologist review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextRecords": [
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-artery",
+      "fmaId": "FMA22655",
+      "name": "Right axillary artery",
+      "sourceName": "right axillary artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA22655",
+      "bounds": {
+        "min": [
+          -1.5144000053405762,
+          4.581200122833252,
+          0.3005619943141937
+        ],
+        "max": [
+          -0.7694149613380432,
+          5.398399829864502,
+          0.5642500519752502
+        ]
+      },
+      "center": [
+        -1.1419074833393097,
+        4.989799976348877,
+        0.432406023144722
+      ],
+      "anchor": [
+        -1.2723599672317505,
+        5.101700305938721,
+        0.4388520121574402
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2268",
+          "sha256": "192c0b2607e669dc89a6eadd2c11f2fff904f010e4dca81822209865df7e5752"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-artery",
+      "fmaId": "FMA22656",
+      "name": "Left axillary artery",
+      "sourceName": "left axillary artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA22656",
+      "bounds": {
+        "min": [
+          0.7693470120429993,
+          4.581300258636475,
+          0.3007800281047821
+        ],
+        "max": [
+          1.5145699977874756,
+          5.398399829864502,
+          0.5641500353813171
+        ]
+      },
+      "center": [
+        1.1419585049152374,
+        4.989850044250488,
+        0.4324650317430496
+      ],
+      "anchor": [
+        1.2681599855422974,
+        5.105999946594238,
+        0.43566298484802246
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2216",
+          "sha256": "fe9295ce260df56c46f29e56e410937c9fa2f3e104411fb7e91b5f9681509ccb"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-circumflex-scapular-artery",
+      "fmaId": "FMA23180",
+      "name": "Right circumflex scapular artery",
+      "sourceName": "right circumflex scapular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA23180",
+      "bounds": {
+        "min": [
+          -1.4422999620437622,
+          4.805600643157959,
+          0.011157989501953125
+        ],
+        "max": [
+          -1.3413499593734741,
+          4.939200401306152,
+          0.367127001285553
+        ]
+      },
+      "center": [
+        -1.3918249607086182,
+        4.872400522232056,
+        0.18914249539375305
+      ],
+      "anchor": [
+        -1.4265999794006348,
+        4.859799861907959,
+        0.1953199803829193
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2273",
+          "sha256": "37154eff6530ba3cb17412723850f45c3ee5be9d0d9b78e737c7a1f356c87b3c"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-circumflex-scapular-artery",
+      "fmaId": "FMA23181",
+      "name": "Left circumflex scapular artery",
+      "sourceName": "left circumflex scapular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA23181",
+      "bounds": {
+        "min": [
+          1.3415700197219849,
+          4.805500507354736,
+          0.011130981147289276
+        ],
+        "max": [
+          1.4423099756240845,
+          4.939200401306152,
+          0.36712896823883057
+        ]
+      },
+      "center": [
+        1.3919399976730347,
+        4.872350454330444,
+        0.18912997469305992
+      ],
+      "anchor": [
+        1.425610065460205,
+        4.857800483703613,
+        0.19487297534942627
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2221",
+          "sha256": "3387830f0c01f2f98710951a900442fdf6ad7b123ad1202aad4e0390cb0551f4"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-thoracodorsal-artery",
+      "fmaId": "FMA66321",
+      "name": "Right thoracodorsal artery",
+      "sourceName": "right thoracodorsal artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA66321",
+      "bounds": {
+        "min": [
+          -1.3892899751663208,
+          4.006500244140625,
+          0.13707801699638367
+        ],
+        "max": [
+          -1.2835699319839478,
+          4.805500507354736,
+          0.41492798924446106
+        ]
+      },
+      "center": [
+        -1.3364299535751343,
+        4.406000375747681,
+        0.27600300312042236
+      ],
+      "anchor": [
+        -1.3184499740600586,
+        4.4180006980896,
+        0.22675301134586334
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2305",
+          "sha256": "b7d085f37da4801db31307961a176357a1d3a11e226c290e9883455376e9e254"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-thoracodorsal-artery",
+      "fmaId": "FMA66322",
+      "name": "Left thoracodorsal artery",
+      "sourceName": "left thoracodorsal artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA66322",
+      "bounds": {
+        "min": [
+          1.283560037612915,
+          4.006500244140625,
+          0.13711699843406677
+        ],
+        "max": [
+          1.3893699645996094,
+          4.805099964141846,
+          0.4148709774017334
+        ]
+      },
+      "center": [
+        1.3364650011062622,
+        4.405800104141235,
+        0.2759939879179001
+      ],
+      "anchor": [
+        1.3176400661468506,
+        4.427900314331055,
+        0.22957603633403778
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2253",
+          "sha256": "b6f9ae7678bb79b0245d03ea27ceee0a9e3f0cf6b6b0c7613c0830ac40e8989f"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextBundles": [
+    {
+      "id": "shoulder-arm-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-recovery.glb",
+      "bytes": 575076,
+      "sha256": "2630e1f06ada20094814ee1a5245e9d420627a15869c3b6a3c51763be21da84c",
+      "structures": 14
+    }
+  ],
+  "bundles": [
+    {
+      "id": "subscapular-arteries",
+      "url": "/models/bodyparts3d/subscapular-arteries/subscapular-arteries.glb?v=6e7ccebe78f6a8c89b556e5e1256d755801725590c4625bebd3fecd6d93f04b3",
+      "bytes": 31116,
+      "sha256": "6e7ccebe78f6a8c89b556e5e1256d755801725590c4625bebd3fecd6d93f04b3",
+      "structures": 2
+    }
+  ],
+  "modification": "Exact-coordinate welding for indexed normals plus Float32 GLB storage. Every original triangle is retained in order; no smoothing, fitting, mirroring, bridging or face removal.",
+  "clinicalApproval": false
+}

@@ -1,0 +1,435 @@
+{
+  "version": 1,
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "parents": [
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery",
+      "fmaId": "FMA20796",
+      "name": "Right deep femoral artery",
+      "sourceName": "right deep femoral artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "thigh-vessels-recovery",
+      "nodeName": "FMA20796",
+      "bounds": {
+        "min": [
+          -1.205430030822754,
+          -4.397520065307617,
+          0.11512500792741776
+        ],
+        "max": [
+          -0.3285030126571655,
+          -0.051859740167856216,
+          0.7462400197982788
+        ]
+      },
+      "center": [
+        -0.7669665217399597,
+        -2.2246899027377367,
+        0.4306825138628483
+      ],
+      "anchor": [
+        -0.6024489998817444,
+        -3.174220085144043,
+        0.4228479862213135
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2137",
+          "sha256": "46872b103c95147c1d9d33cb2b2ad6bd1be001e32e9f646c0dd61cabea8b4a96"
+        },
+        {
+          "file": "FJ2158",
+          "sha256": "604beb2d77d9c6ec24e0f8c82e806f57a7cbb6fe9a4553d7f5fc999a9aae33f6"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery",
+      "fmaId": "FMA20797",
+      "name": "Left deep femoral artery",
+      "sourceName": "left deep femoral artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "thigh-vessels-recovery",
+      "nodeName": "FMA20797",
+      "bounds": {
+        "min": [
+          0.32847899198532104,
+          -4.397439956665039,
+          0.11526001244783401
+        ],
+        "max": [
+          1.2052100896835327,
+          -0.05195983871817589,
+          0.7461499571800232
+        ]
+      },
+      "center": [
+        0.7668445408344269,
+        -2.2246998976916075,
+        0.4307049848139286
+      ],
+      "anchor": [
+        0.6055749654769897,
+        -3.174769878387451,
+        0.42494696378707886
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2069",
+          "sha256": "055eaa7fd2a8683f4d81d824437925f2c1019c2081558fe4ee2d4ab161085b76"
+        },
+        {
+          "file": "FJ2078",
+          "sha256": "fc1867693af0aa210a96a79c3f53c80fedacd4f136b21c6d4f839ce06575b8ac"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "parentBundles": [
+    {
+      "id": "thigh-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/thigh-vessels-recovery.glb",
+      "bytes": 1415760,
+      "sha256": "5037db3cd7d8d0bf2ac6ae2c4656b50e73c71f5f530595b80cd68153afb6c9f7",
+      "structures": 8
+    }
+  ],
+  "structures": [
+    {
+      "id": "vm:anatomy:body:thigh:right:source-component:fj2137",
+      "fmaId": "FMA20796",
+      "name": "Right deep-femoral source remainder",
+      "sourceName": "right deep femoral artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "femoral-components",
+      "nodeName": "FMA20796_FJ2137",
+      "bounds": {
+        "min": [
+          -0.6331380009651184,
+          -4.397520065307617,
+          0.38884103298187256
+        ],
+        "max": [
+          -0.3285030126571655,
+          -3.1740000247955322,
+          0.6212700009346008
+        ]
+      },
+      "center": [
+        -0.48082050681114197,
+        -3.7857600450515747,
+        0.5050555169582367
+      ],
+      "anchor": [
+        -0.4120299816131592,
+        -3.7866599559783936,
+        0.467276006937027
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2137",
+          "sha256": "46872b103c95147c1d9d33cb2b2ad6bd1be001e32e9f646c0dd61cabea8b4a96"
+        }
+      ],
+      "coverageNote": "Remaining FJ source component of the deep-femoral aggregate. This is not the complete deep femoral artery, an independently named perforator, or a new anatomical concept.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery",
+      "role": "remainder"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:source-component:fj2158",
+      "fmaId": "FMA20801",
+      "name": "Right lateral circumflex femoral artery",
+      "sourceName": "right lateral circumflex femoral artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "femoral-components",
+      "nodeName": "FMA20796_FJ2158",
+      "bounds": {
+        "min": [
+          -1.205430030822754,
+          -0.30968016386032104,
+          0.11512500792741776
+        ],
+        "max": [
+          -0.7600990533828735,
+          -0.051859740167856216,
+          0.7462400197982788
+        ]
+      },
+      "center": [
+        -0.9827645421028137,
+        -0.18076995201408863,
+        0.4306825138628483
+      ],
+      "anchor": [
+        -0.8741430044174194,
+        -0.29057008028030396,
+        0.39709898829460144
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2158",
+          "sha256": "604beb2d77d9c6ec24e0f8c82e806f57a7cbb6fe9a4553d7f5fc999a9aae33f6"
+        }
+      ],
+      "coverageNote": "One complete source-labelled lateral circumflex definition, already contained in the root deep-femoral aggregate. Not a complete branch network or verified joined lumen.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery",
+      "role": "lateral-circumflex"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:source-component:fj2069",
+      "fmaId": "FMA20797",
+      "name": "Left deep-femoral source remainder",
+      "sourceName": "left deep femoral artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "femoral-components",
+      "nodeName": "FMA20797_FJ2069",
+      "bounds": {
+        "min": [
+          0.32847899198532104,
+          -4.397439956665039,
+          0.38888099789619446
+        ],
+        "max": [
+          0.6330739855766296,
+          -3.1740200519561768,
+          0.6213400363922119
+        ]
+      },
+      "center": [
+        0.48077648878097534,
+        -3.785730004310608,
+        0.5051105171442032
+      ],
+      "anchor": [
+        0.41212397813796997,
+        -3.7812600135803223,
+        0.46739500761032104
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2069",
+          "sha256": "055eaa7fd2a8683f4d81d824437925f2c1019c2081558fe4ee2d4ab161085b76"
+        }
+      ],
+      "coverageNote": "Remaining FJ source component of the deep-femoral aggregate. This is not the complete deep femoral artery, an independently named perforator, or a new anatomical concept.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery",
+      "role": "remainder"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:source-component:fj2078",
+      "fmaId": "FMA20802",
+      "name": "Left lateral circumflex femoral artery",
+      "sourceName": "left lateral circumflex femoral artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "femoral-components",
+      "nodeName": "FMA20797_FJ2078",
+      "bounds": {
+        "min": [
+          0.7598729729652405,
+          -0.30973997712135315,
+          0.11526001244783401
+        ],
+        "max": [
+          1.2052100896835327,
+          -0.05195983871817589,
+          0.7461499571800232
+        ]
+      },
+      "center": [
+        0.9825415313243866,
+        -0.18084990791976452,
+        0.4307049848139286
+      ],
+      "anchor": [
+        0.8822689652442932,
+        -0.29078978300094604,
+        0.3767849802970886
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2078",
+          "sha256": "fc1867693af0aa210a96a79c3f53c80fedacd4f136b21c6d4f839ce06575b8ac"
+        }
+      ],
+      "coverageNote": "One complete source-labelled lateral circumflex definition, already contained in the root deep-femoral aggregate. Not a complete branch network or verified joined lumen.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery",
+      "role": "lateral-circumflex"
+    }
+  ],
+  "bundles": [
+    {
+      "id": "femoral-components",
+      "url": "/models/bodyparts3d/femoral-components/femoral-components.glb?v=a35dfffc15ed011570781c6c194ecbfeda08bc70926a39b8cbf0cffa8b88dca0",
+      "bytes": 283964,
+      "sha256": "a35dfffc15ed011570781c6c194ecbfeda08bc70926a39b8cbf0cffa8b88dca0",
+      "structures": 4
+    }
+  ],
+  "selectableIds": [
+    "vm:anatomy:body:thigh:right:source-component:fj2137",
+    "vm:anatomy:body:thigh:right:source-component:fj2158",
+    "vm:anatomy:body:thigh:left:source-component:fj2069",
+    "vm:anatomy:body:thigh:left:source-component:fj2078"
+  ],
+  "contextIds": [],
+  "regions": [
+    {
+      "id": "thigh",
+      "name": "Hip & thigh",
+      "description": "Femur and thigh muscles"
+    }
+  ],
+  "coverage": {
+    "nerves": "Not included",
+    "organs": "Not included",
+    "vessels": "Source partition only; incomplete branch network and unverified junctions"
+  },
+  "excluded": [],
+  "clinicalApproval": false
+}

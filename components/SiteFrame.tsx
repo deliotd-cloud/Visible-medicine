@@ -14,6 +14,7 @@ const workspaceLinks = [
 
 const institutionLinks = [
   ["Overview", "/workspace"],
+  ["Clinical Review", "/workspace/atlas-review"],
   ["People", "/workspace/people"],
   ["Readiness", "/workspace/readiness"],
   ["Controls", "/workspace/control"],

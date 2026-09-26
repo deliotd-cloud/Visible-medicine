@@ -1,0 +1,351 @@
+{
+  "parentCommit": "4e47ebaad006d0b7a9472cfe8d958a40e4b85236",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "head-neck-connective-recovery",
+      "url": "/models/bodyparts3d/full-body/head-neck-connective-recovery.glb",
+      "bytes": 175092,
+      "sha256": "2243b05c7b505ee666ac4a36becfe5298735558b0e86b4d8e4476115f372ce05",
+      "structures": 9
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "eb00dbd390d5e8713965929bdfc0790ac27751d548e4bb37a09542fea9425aba",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+        "fmaId": "FMA55099",
+        "name": "Thyroid cartilage",
+        "sourceName": "thyroid cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-recovery",
+        "nodeName": "FMA55099",
+        "bounds": {
+          "min": [
+            -0.19980300962924957,
+            5.914100170135498,
+            0.41506102681159973
+          ],
+          "max": [
+            0.1868250072002411,
+            6.309300422668457,
+            0.7244600057601929
+          ]
+        },
+        "center": [
+          -0.006489001214504242,
+          6.1117002964019775,
+          0.5697605162858963
+        ],
+        "anchor": [
+          -0.06516009569168091,
+          6.082199573516846,
+          0.6187000274658203
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2808",
+            "sha256": "48cd41bcd4044c7013ba10c971e212766afc970408f51875f9ef8e8c407c0687"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thyroid",
+      "topics": [
+        "ultrasound"
+      ],
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:cartilage:cricoid-cartilage",
+        "fmaId": "FMA9615",
+        "name": "Cricoid cartilage",
+        "sourceName": "cricoid cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-recovery",
+        "nodeName": "FMA9615",
+        "bounds": {
+          "min": [
+            -0.12166500091552734,
+            5.871999740600586,
+            0.42616501450538635
+          ],
+          "max": [
+            0.10860500484704971,
+            6.047199726104736,
+            0.6146900057792664
+          ]
+        },
+        "center": [
+          -0.006529998034238815,
+          5.959599733352661,
+          0.5204275101423264
+        ],
+        "anchor": [
+          0.0015807299641892314,
+          6.007400035858154,
+          0.46646401286125183
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2440",
+            "sha256": "ae1e2bab875a75035aaebdc79212fd859c2c193881462245de3252853721361d"
+          },
+          {
+            "file": "FJ2769",
+            "sha256": "5f75fb4d2969fd1de51898787bb8810c441d5d2bd6eb0c5482b7cacd3c9bc3be"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "cricoid",
+      "topics": [
+        "ultrasound"
+      ],
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:cartilage:right-arytenoid-cartilage",
+        "fmaId": "FMA55113",
+        "name": "Right arytenoid cartilage",
+        "sourceName": "right arytenoid cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-recovery",
+        "nodeName": "FMA55113",
+        "bounds": {
+          "min": [
+            -0.08017900586128235,
+            6.034799575805664,
+            0.45393601059913635
+          ],
+          "max": [
+            -0.025149701163172722,
+            6.116099834442139,
+            0.5267099738121033
+          ]
+        },
+        "center": [
+          -0.052664353512227535,
+          6.075449705123901,
+          0.4903229922056198
+        ],
+        "anchor": [
+          -0.04989840090274811,
+          6.0725998878479,
+          0.48880302906036377
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2792",
+            "sha256": "6766f404ea88ffb33f5430ee4704a416aab95813da19a84998f67fbdcc556eaa"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "arytenoid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:cartilage:left-arytenoid-cartilage",
+        "fmaId": "FMA55114",
+        "name": "Left arytenoid cartilage",
+        "sourceName": "left arytenoid cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-recovery",
+        "nodeName": "FMA55114",
+        "bounds": {
+          "min": [
+            0.01182430051267147,
+            6.034899711608887,
+            0.45375800132751465
+          ],
+          "max": [
+            0.067221499979496,
+            6.116300106048584,
+            0.5268099904060364
+          ]
+        },
+        "center": [
+          0.039522900246083736,
+          6.075599908828735,
+          0.4902839958667755
+        ],
+        "anchor": [
+          0.036466799676418304,
+          6.07550048828125,
+          0.4863249957561493
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2775",
+            "sha256": "1e2c0bf8eab8a3a1814b5d56ba721031f3bd87473ea739e540781117bbfb32c9"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "arytenoid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

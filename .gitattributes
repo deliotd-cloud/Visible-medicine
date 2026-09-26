@@ -6,3 +6,13 @@ public/atlas-runtime/head-neck/** -text
 # Inventory fingerprints must survive Windows checkouts unchanged.
 lib/atlas-model-inventory.json text eol=lf
 lib/atlas-model-staging-candidate.json text eol=lf
+# Clinical Review source and artifact fingerprints are byte-exact across hosts.
+atlas-review/** -text
+public/atlas-review-viewer/** -text
+app/workspace/atlas-review/** text eol=lf
+app/api/atlas-review/** text eol=lf
+lib/clinical-review-* text eol=lf
+components/review-ui-variants.css text eol=lf
+scripts/*clinical-review* text eol=lf
+scripts/clinical-review-viewer/** text eol=lf
+package-lock.json text eol=lf

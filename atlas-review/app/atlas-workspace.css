@@ -1,0 +1,396 @@
+/* Task-specific controls, with anatomy state owned by the explorer above them. */
+/* Compact information sheets keep warnings and full names visible. Reduce
+   repeated vertical spacing, not lesson text or reachable controls. This scope
+   also supports desktop focus mode without changing the normal desktop rail. */
+.anatomy-controls-popup[data-side='right'] > [data-slot='sheet-header'] {
+  padding-bottom: 8px;
+}
+.anatomy-info-content.body-info .body-selection-notice {
+  margin: 4px 0 8px;
+  padding: 6px 8px;
+}
+.anatomy-info-content .body-selection-heading {
+  margin-top: 10px;
+}
+.anatomy-info-content .body-selection-heading + h2 {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  margin: 6px 0 10px;
+  overflow-wrap: anywhere;
+}
+.anatomy-info-content .body-selection-actions {
+  margin-bottom: 8px;
+}
+.anatomy-info-content .body-selection-actions button,
+.anatomy-info-content .atlas-more-actions > summary,
+.anatomy-info-content .atlas-grouped-notes [data-slot='tabs-trigger'] {
+  min-height: 44px;
+}
+.anatomy-info-content .atlas-grouped-notes [data-slot='tabs-content'] {
+  padding-top: 8px;
+}
+/* Text uses rem so browser font preferences are respected; default 16px sizing
+   remains unchanged. Keep spacing/model dimensions independent of text size. */
+.atlas-inline-mode:not([hidden]) { display: contents; }
+.atlas-mode-panel[hidden] {
+  display: none !important;
+}
+.body-topbar {
+  height: auto;
+  min-height: 70px;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  padding: 10px 18px;
+}
+.atlas-workspace-modes {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  flex: none;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid #38717b;
+  border-radius: 7px;
+}
+.atlas-workspace-modes label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 10px;
+  min-height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--vm-ivory);
+}
+.atlas-workspace-modes label[data-active='true'] {
+  background: var(--vm-teal);
+  color: var(--vm-midnight);
+}
+.atlas-workspace-modes label:has([disabled]) {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.atlas-workspace-modes [data-slot='radio-group-item'] {
+  width: 12px;
+  height: 12px;
+  border-color: currentColor;
+}
+.atlas-workspace-modes [data-slot='radio-group-item']::after {
+  inset: 0;
+}
+.atlas-workspace-modes label:has(:focus-visible) {
+  outline: 2px solid var(--vm-teal);
+  outline-offset: 3px;
+}
+.body-topbar :is(.atlas-search-trigger, .atlas-focus-view) {
+  background: transparent;
+  color: var(--vm-ivory);
+  border-color: #38717b;
+  min-height: 40px;
+  font-size: 0.875rem;
+}
+.atlas-search-trigger {
+  margin-left: auto;
+}
+.body-topbar .vm-practice-start {
+  margin-left: 0;
+}
+.body-layout {
+  grid-template-columns: 216px minmax(0, 1fr) 320px;
+}
+.body-rail.anatomy-control-rail {
+  padding: 12px 9px;
+}
+.anatomy-control-rail .body-system-bar {
+  gap: 4px;
+  max-width: 216px;
+}
+.anatomy-controls-popup[data-side='left'] {
+  width: min(90vw, 280px);
+}
+.atlas-search-results[hidden] {
+  display: none;
+}
+.atlas-search-preview {
+  padding: 12px;
+  background: #e9f5f2;
+  border: 1px solid #aac3be;
+  border-radius: 6px;
+}
+.atlas-search-preview p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+.anatomy-control-rail .body-system-bar > div {
+  min-height: 44px;
+  padding: 6px 7px;
+  gap: 6px;
+}
+.anatomy-control-rail .body-system-bar > div > svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.anatomy-control-rail .body-system-bar span {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 5px;
+  font-size: 0.875rem;
+  line-height: 1.2;
+}
+.anatomy-control-rail .body-system-bar small {
+  margin: 0;
+  font-size: 0.75rem;
+}
+.anatomy-control-rail .body-system-bar [data-slot='switch'] {
+  scale: 1;
+  flex-shrink: 0;
+}
+.anatomy-control-rail .atlas-mode-panel > details {
+  margin-top: 10px;
+  border: 1px solid #cfddda;
+  border-radius: 6px;
+}
+.anatomy-control-rail .atlas-mode-panel > details > summary {
+  min-height: 44px;
+  padding: 10px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  line-height: 1.4;
+}
+.anatomy-control-rail .atlas-mode-panel > details > summary small {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--vm-muted);
+}
+.atlas-dissection-entry {
+  margin-top: 10px;
+}
+.atlas-dissection-entry button {
+  width: 100%;
+  font-size: 0.875rem;
+}
+.body-view-row {
+  align-items: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.body-view-row [data-slot='select-trigger'],
+.body-view-row > button {
+  min-height: 38px;
+  font-size: 0.875rem;
+}
+.body-view-row .atlas-camera-view {
+  width: auto;
+  min-width: 155px;
+  text-transform: none;
+}
+.atlas-camera-view > span:first-child {
+  color: var(--vm-muted);
+}
+.body-selection-actions {
+  align-items: flex-start;
+}
+.atlas-more-actions {
+  position: relative;
+  flex: 1 0 100%;
+}
+.atlas-more-actions > summary {
+  padding: 8px 2px;
+  min-height: 38px;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+.atlas-more-actions[open] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.atlas-more-actions[open] > summary {
+  width: 100%;
+}
+.atlas-more-actions button {
+  height: auto;
+  min-height: 38px;
+  white-space: normal;
+  font-size: 0.875rem;
+}
+.atlas-grouped-notes [data-slot='tabs-list'] {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+.atlas-grouped-notes > [data-slot='tabs-list'] {
+  /* Keep the line indicator and focus ring outside the button without making
+     the note navigation a second vertical scroll area. Wrap on narrow views. */
+  flex-wrap: wrap;
+  overflow: visible;
+  height: auto;
+  padding-bottom: 8px;
+}
+.atlas-grouped-notes [data-slot='tabs-trigger'] {
+  font-size: 0.875rem;
+  min-height: 40px;
+  white-space: normal;
+}
+.atlas-grouped-notes .atlas-note-sections [data-slot='tabs-list'] {
+  flex-wrap: wrap;
+  height: auto;
+  background: #e9f5f2;
+  border-radius: 5px;
+}
+.atlas-note-body > [data-slot='button'] {
+  margin-top: 12px;
+}
+.atlas-practice-setup > h2 {
+  font-size: 1.5rem;
+}
+.atlas-practice-setup .vm-practice-options {
+  margin-top: 12px;
+}
+.atlas-search-dialog {
+  width: min(600px, calc(100vw - 24px));
+  max-width: 600px;
+  max-height: calc(100dvh - 24px);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  gap: 10px;
+  color: var(--vm-ink);
+  background: #fff;
+}
+.atlas-search-dialog [data-slot='dialog-title'] {
+  font-size: 1.25rem;
+  padding-right: 30px;
+}
+/* One scrolling dialog: enlarged copy must not squeeze form controls or collapse
+   the result list. Keyboard focus can scroll every result into view. */
+.atlas-search-dialog > * { flex-shrink: 0; }
+.atlas-search-dialog [data-slot='dialog-description'] {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.atlas-search-dialog label {
+  font-size: 0.875rem;
+}
+.atlas-search-dialog :is(input, select) {
+  width: 100%;
+  min-height: max(44px, calc(1.5em + 20px));
+  padding: 9px;
+  border: 1px solid #aac3be;
+  border-radius: 5px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.atlas-search-dialog :is(input, select, button, a):focus-visible {
+  outline: 3px solid var(--vm-teal);
+  outline-offset: 2px;
+}
+.atlas-search-dialog output {
+  color: var(--vm-muted);
+  font-size: 0.75rem;
+}
+.atlas-search-results {
+  min-height: 0;
+  overflow-y: auto;
+}
+.atlas-search-results > :is(button, a) {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  color: var(--vm-ink);
+  border-bottom: 1px solid #d8e7e3;
+  text-decoration: none;
+}
+.atlas-search-results > :is(button, a):hover {
+  background: #e9f5f2;
+}
+.atlas-search-results strong {
+  display: block;
+  font-size: 0.875rem;
+}
+.atlas-search-results small {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--vm-muted);
+}
+@media (max-width: 1100px) {
+  .body-layout {
+    grid-template-columns: minmax(0, 1fr) 300px;
+  }
+  .body-topbar .vm-brand {
+    width: 205px;
+  }
+}
+@media (max-width: 700px) {
+  .body-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .body-topbar {
+    gap: 8px;
+    padding: 8px 12px;
+    min-height: 0;
+  }
+  .body-topbar .vm-brand {
+    width: 180px;
+  }
+  .atlas-workspace-modes {
+    order: 3;
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+  .atlas-workspace-modes label {
+    flex: 1;
+    justify-content: center;
+  }
+  .body-topbar .vm-practice-start {
+    order: 4;
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+  .body-topbar .atlas-focus-view {
+    /* Phones already open with both panels collapsed. */
+    display: none;
+  }
+  .body-topbar .atlas-search-trigger {
+    font-size: 0.875rem;
+    padding-inline: 8px;
+  }
+  .body-view-row .atlas-camera-view {
+    min-width: 140px;
+  }
+  .body-view-row [data-slot='select-trigger'],
+  .body-view-row > button {
+    font-size: 0.875rem;
+    min-height: 36px;
+  }
+}
+/* Keep brand + a named Search action on one row at small phone widths.
+   Only redundant visible context is omitted; the accessible name stays full.
+   No fixed header height: enlarged text can still wrap without clipping. */
+@media (max-width: 380px) {
+  .body-topbar .atlas-search-context { display: none; }
+}
+.body-app[data-focus-view='true'] .body-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-areas: 'controls-launcher info-launcher' 'model model';
+}
+.body-app[data-focus-view='true'] .body-controls-launcher {
+  grid-area: controls-launcher;
+  justify-self: start;
+  margin: 10px 14px 0;
+  min-height: 44px;
+}
+.body-app[data-focus-view='true'] .body-info-launcher {
+  grid-area: info-launcher;
+  justify-self: end;
+  margin: 10px 14px 0 0;
+  min-height: 44px;
+}

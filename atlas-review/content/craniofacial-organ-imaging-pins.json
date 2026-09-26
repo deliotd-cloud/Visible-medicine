@@ -1,0 +1,1046 @@
+{
+  "sourceCommit": "efc5ed08bd300540861161f8f823aedb359a789d",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "head-neck-organs-recovery",
+      "url": "/models/bodyparts3d/full-body/head-neck-organs-recovery.glb",
+      "bytes": 3587376,
+      "sha256": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+      "structures": 3
+    },
+    {
+      "id": "head-neck-organs-gaps",
+      "url": "/models/bodyparts3d/full-body/head-neck-organs-gaps.glb",
+      "bytes": 98216,
+      "sha256": "4d05d792dd062b49d22f8740e4f0a0c4785249cbcac61a47ac7a48d06b5a6ab1",
+      "structures": 7
+    },
+    {
+      "id": "eye-corrected-parent",
+      "url": "/models/bodyparts3d/eye-layers/right-eyeball.glb?v=f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+      "bytes": 1756184,
+      "sha256": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+      "structures": 1
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "db3ac18be29464e72a512c21985a46d7071c7a14758e359440897254288dfdcc",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:unpaired:organ:pituitary-gland",
+        "fmaId": "FMA13889",
+        "name": "Pituitary gland",
+        "sourceName": "pituitary gland",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-organs-recovery",
+        "nodeName": "FMA13889",
+        "bounds": {
+          "min": [
+            -0.06791099905967712,
+            7.225699424743652,
+            0.5110500454902649
+          ],
+          "max": [
+            0.05519689992070198,
+            7.355400562286377,
+            0.6056300401687622
+          ]
+        },
+        "center": [
+          -0.006357049569487572,
+          7.290549993515015,
+          0.5583400428295135
+        ],
+        "anchor": [
+          0.0005999680142849684,
+          7.315200328826904,
+          0.5588800311088562
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1796",
+            "sha256": "e79b1a41d81d066e798dcda7f73f7ffd58741adfbd709d47baacccb2fabfcce0"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "pituitary",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Pituitary gland · Structure & relationships · draft",
+        "body": "An endocrine gland seated in the sphenoid sella turcica and connected to the hypothalamus. Anterior and posterior portions have different organisation.",
+        "bullets": [
+          "One source gland surface: lobes, stalk pathways and cellular populations are not independently segmented or clinically validated.",
+          "Source identity: FMA13889 · 1 source component. Boundaries and relationships require independent review."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "citations": [
+          "https://www.yourhormones.info/glands/pituitary-gland/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+        "fmaId": "FMA12514",
+        "name": "Right eyeball",
+        "sourceName": "right eyeball",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "eye-corrected-parent",
+        "nodeName": "FMA12514",
+        "bounds": {
+          "min": [
+            -0.436180979013443,
+            7.049599647521973,
+            0.8882899284362793
+          ],
+          "max": [
+            -0.17298001050949097,
+            7.311899185180664,
+            1.1605099439620972
+          ]
+        },
+        "center": [
+          -0.304580494761467,
+          7.180749416351318,
+          1.0243999361991882
+        ],
+        "anchor": [
+          -0.310016006231308,
+          7.178900241851807,
+          1.0682499408721924
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1336",
+            "sha256": "518f78b01de0273ea1cdd6152f2215f9432f2ce00ac2164cea8aa3a420cd897c"
+          },
+          {
+            "file": "FJ1337",
+            "sha256": "db3077437828f311b6afa07dc9dc7a27ab0e005ddce62570420c61af31643f22"
+          },
+          {
+            "file": "FJ1340",
+            "sha256": "20cc1b1156cd9fdebd96d8a7710ff3d6d6fc9fef79b7173ef41491e2b6e650a3"
+          },
+          {
+            "file": "FJ1348",
+            "sha256": "1120c896903582ef7349b5be68a03bfb215def235851a82b1f1f44cfe212ad9e"
+          },
+          {
+            "file": "FJ1356",
+            "sha256": "767e9107cf299b87729c9eb921a2ede22d3bfd03ae7027b6fb88631c1a0ec150"
+          },
+          {
+            "file": "FJ1368",
+            "sha256": "6fce2e1842730573a8d1360a88a9512b2ee5fe0ebe55e669cd265601da663b49"
+          },
+          {
+            "file": "FJ1371",
+            "sha256": "8dc5ab248fc952170f9057aaf4bbd2339d9ee4c30b40b32ce793e54b22706738"
+          },
+          {
+            "file": "FJ1382",
+            "sha256": "de22335a9c3ad8036e0651eb09aa975e15151bb5ac6e3d142cf8260204fa633f"
+          }
+        ],
+        "coverageNote": "Source-derived right eyeball with 36 exact disconnected opposite-side triangles suppressed. All retained source surfaces are unchanged in position; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "globe",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Right eyeball · Structure & relationships · draft",
+        "body": "The globe contains optical media and a light-sensitive retina within its coats. This selectable globe groups several source components rather than offering complete layer-by-layer ocular dissection.",
+        "bullets": [
+          "The source sets differ: right globe has eight components, left has nine including FJ1282, labelled left anterior chamber in the ISA index. Neither set independently identifies a retinal component. Do not infer matched or complete internal layers.",
+          "Source identity: FMA12514 · 8 source components. Boundaries and relationships require independent review."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Source-derived right eyeball with 36 exact disconnected opposite-side triangles suppressed. All retained source surfaces are unchanged in position; anatomical and clinical review pending.",
+        "citations": [
+          "https://www.nei.nih.gov/learn-about-eye-health/healthy-vision/how-eyes-work"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+        "fmaId": "FMA12515",
+        "name": "Left eyeball",
+        "sourceName": "left eyeball",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-organs-recovery",
+        "nodeName": "FMA12515",
+        "bounds": {
+          "min": [
+            0.1598919928073883,
+            7.049599647521973,
+            0.8882899284362793
+          ],
+          "max": [
+            0.4231039881706238,
+            7.311899185180664,
+            1.1604899168014526
+          ]
+        },
+        "center": [
+          0.29149799048900604,
+          7.180749416351318,
+          1.024389922618866
+        ],
+        "anchor": [
+          0.2958019971847534,
+          7.178399562835693,
+          1.068350076675415
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1282",
+            "sha256": "c66ed172ed90448e3e9508f21b116f319cfd1036cb7281e2f3541ede5f2adb1f"
+          },
+          {
+            "file": "FJ1285",
+            "sha256": "dd7677f804c1c370a2c6d11966877934efa9ca09c6b100e18f06fd4508ccbbb6"
+          },
+          {
+            "file": "FJ1286",
+            "sha256": "ba4e6f7156124700b63d526a882933b35b89fa0e9fd53495964d57aa5de1c989"
+          },
+          {
+            "file": "FJ1289",
+            "sha256": "6edadfa812d834f5b90d17d427baa0c6688a4cc32856c2b8c6320907bbc05150"
+          },
+          {
+            "file": "FJ1297",
+            "sha256": "e9359237794eef61117f1c12a6822dafdd0cfc70ada8d2447e3d26d4fcda9bd7"
+          },
+          {
+            "file": "FJ1305",
+            "sha256": "a2b7f9b53dd2d14a352dfa0d3e01452031a2957aae62aa7c904d7c1d1922954c"
+          },
+          {
+            "file": "FJ1317",
+            "sha256": "81a184bd0d3d8602af3c2186405a16565bcabd0d305fcbad7e02b979335d9582"
+          },
+          {
+            "file": "FJ1320",
+            "sha256": "a73a8e48e83cd65e15eda97533b59cac7f3f687a7b117e587bc561bf4f7b50a1"
+          },
+          {
+            "file": "FJ1331",
+            "sha256": "417bc91c6719b2982cb60640058ddcce9f50ecfb5a20db02393f2cf7bad82a0b"
+          }
+        ],
+        "coverageNote": "Compound eyeball surface. Internal components are grouped, not an independently reviewed ocular-layer dissection.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "globe",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Left eyeball · Structure & relationships · draft",
+        "body": "The globe contains optical media and a light-sensitive retina within its coats. This selectable globe groups several source components rather than offering complete layer-by-layer ocular dissection.",
+        "bullets": [
+          "The source sets differ: right globe has eight components, left has nine including FJ1282, labelled left anterior chamber in the ISA index. Neither set independently identifies a retinal component. Do not infer matched or complete internal layers.",
+          "Source identity: FMA12515 · 9 source components. Boundaries and relationships require independent review."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Compound eyeball surface. Internal components are grouped, not an independently reviewed ocular-layer dissection.",
+        "citations": [
+          "https://www.nei.nih.gov/learn-about-eye-health/healthy-vision/how-eyes-work"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
+        "fmaId": "FMA59102",
+        "name": "Right lacrimal gland",
+        "sourceName": "right lacrimal gland",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-organs-gaps",
+        "nodeName": "FMA59102",
+        "bounds": {
+          "min": [
+            -0.4780139923095703,
+            7.201999664306641,
+            0.9899499416351318
+          ],
+          "max": [
+            -0.3298249840736389,
+            7.353799819946289,
+            1.1143898963928223
+          ]
+        },
+        "center": [
+          -0.4039194881916046,
+          7.277899742126465,
+          1.052169919013977
+        ],
+        "anchor": [
+          -0.40147000551223755,
+          7.278199672698975,
+          1.0491999387741089
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1350",
+            "sha256": "ff108bfd00a1a4dc0eebfa62c8553b1ca94d7003d18437e7d637566db433f604"
+          }
+        ],
+        "coverageNote": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lacrimal",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Right lacrimal gland · Structure & relationships · draft",
+        "body": "A tear-producing gland above the eye. It is distinct from the drainage passages at the inner corner of the eye.",
+        "bullets": [
+          "Whole source gland only, without independently authored lobes, microscopic ducts or a complete tear-drainage apparatus.",
+          "Source identity: FMA59102 · 1 source component. Boundaries and relationships require independent review."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "citations": [
+          "https://www.nei.nih.gov/eye-health-information/healthy-vision/how-eyes-work/how-tears-work"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland",
+        "fmaId": "FMA59103",
+        "name": "Left lacrimal gland",
+        "sourceName": "left lacrimal gland",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-organs-gaps",
+        "nodeName": "FMA59103",
+        "bounds": {
+          "min": [
+            0.3165940046310425,
+            7.202199935913086,
+            0.9899499416351318
+          ],
+          "max": [
+            0.46473997831344604,
+            7.353199481964111,
+            1.114400029182434
+          ]
+        },
+        "center": [
+          0.39066699147224426,
+          7.277699708938599,
+          1.052174985408783
+        ],
+        "anchor": [
+          0.3881330192089081,
+          7.278299331665039,
+          1.0486301183700562
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1299",
+            "sha256": "4249d4bed4b176bb504a756ebffca8ea5b96268e6f57b000206c81ead66674d8"
+          }
+        ],
+        "coverageNote": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lacrimal",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Left lacrimal gland · Structure & relationships · draft",
+        "body": "A tear-producing gland above the eye. It is distinct from the drainage passages at the inner corner of the eye.",
+        "bullets": [
+          "Whole source gland only, without independently authored lobes, microscopic ducts or a complete tear-drainage apparatus.",
+          "Source identity: FMA59103 · 1 source component. Boundaries and relationships require independent review."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "citations": [
+          "https://www.nei.nih.gov/eye-health-information/healthy-vision/how-eyes-work/how-tears-work"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-submandibular-gland",
+        "fmaId": "FMA59802",
+        "name": "Right submandibular gland",
+        "sourceName": "right submandibular gland",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-organs-gaps",
+        "nodeName": "FMA59802",
+        "bounds": {
+          "min": [
+            -0.31553900241851807,
+            6.3843994140625,
+            0.6861199736595154
+          ],
+          "max": [
+            -0.15683099627494812,
+            6.608299732208252,
+            0.9135000705718994
+          ]
+        },
+        "center": [
+          -0.2361849993467331,
+          6.496349573135376,
+          0.7998100221157074
+        ],
+        "anchor": [
+          -0.2042040079832077,
+          6.460799694061279,
+          0.7824200391769409
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2768",
+            "sha256": "763960d4774199706b8ca344aab369a33a969a105f2c3063b8784c77e3a12d50"
+          }
+        ],
+        "coverageNote": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "submandibular",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Right submandibular gland · Structure & relationships · draft",
+        "body": "A major salivary gland below the mandible with superficial and deep portions related to mylohyoid. Its main duct opens in the floor of the mouth beside the lingual frenulum.",
+        "bullets": [
+          "This whole-organ surface does not independently separate lobes, acini, ducts or the lingual-nerve relationship. It is not the sublingual gland.",
+          "Source identity: FMA59802 · 1 source component. Boundaries and relationships require independent review."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK542272/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-submandibular-gland",
+        "fmaId": "FMA59803",
+        "name": "Left submandibular gland",
+        "sourceName": "left submandibular gland",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-organs-gaps",
+        "nodeName": "FMA59803",
+        "bounds": {
+          "min": [
+            0.1439719945192337,
+            6.3843994140625,
+            0.6859100461006165
+          ],
+          "max": [
+            0.3026610016822815,
+            6.6080002784729,
+            0.9151899814605713
+          ]
+        },
+        "center": [
+          0.2233164981007576,
+          6.4961998462677,
+          0.8005500137805939
+        ],
+        "anchor": [
+          0.26462098956108093,
+          6.472700119018555,
+          0.8044500946998596
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2766",
+            "sha256": "dfb4a6b9789fa55feb8e18cea09a638ec09041cc6b9e9df1e8f5a40ad1ab61be"
+          }
+        ],
+        "coverageNote": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "submandibular",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Left submandibular gland · Structure & relationships · draft",
+        "body": "A major salivary gland below the mandible with superficial and deep portions related to mylohyoid. Its main duct opens in the floor of the mouth beside the lingual frenulum.",
+        "bullets": [
+          "This whole-organ surface does not independently separate lobes, acini, ducts or the lingual-nerve relationship. It is not the sublingual gland.",
+          "Source identity: FMA59803 · 1 source component. Boundaries and relationships require independent review."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK542272/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-sublingual-gland",
+        "fmaId": "FMA59804",
+        "name": "Right sublingual gland",
+        "sourceName": "right sublingual gland",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-organs-gaps",
+        "nodeName": "FMA59804",
+        "bounds": {
+          "min": [
+            -0.21194900572299957,
+            6.408199310302734,
+            0.9094600081443787
+          ],
+          "max": [
+            -0.08598899841308594,
+            6.540400505065918,
+            1.1361799240112305
+          ]
+        },
+        "center": [
+          -0.14896900206804276,
+          6.474299907684326,
+          1.0228199660778046
+        ],
+        "anchor": [
+          -0.1448809951543808,
+          6.4653000831604,
+          1.0181798934936523
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2767",
+            "sha256": "b9165fee0bcb7f88aee932317cbbed3486d4e2c7a3850c1cd109e54c142295b3"
+          }
+        ],
+        "coverageNote": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "sublingual",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Right sublingual gland · Structure & relationships · draft",
+        "body": "A major salivary gland below the floor-of-mouth mucosa, above mylohyoid and lateral to the tongue.",
+        "bullets": [
+          "Whole source organ only. Duct patterns vary and are not independently modelled; this is not a validated duct or gland-excision map.",
+          "Source identity: FMA59804 · 1 source component. Boundaries and relationships require independent review."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK535426/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-sublingual-gland",
+        "fmaId": "FMA59805",
+        "name": "Left sublingual gland",
+        "sourceName": "left sublingual gland",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-organs-gaps",
+        "nodeName": "FMA59805",
+        "bounds": {
+          "min": [
+            0.07302229851484299,
+            6.408499717712402,
+            0.9096899628639221
+          ],
+          "max": [
+            0.19881001114845276,
+            6.539799690246582,
+            1.1357200145721436
+          ]
+        },
+        "center": [
+          0.13591615483164787,
+          6.474149703979492,
+          1.0227049887180328
+        ],
+        "anchor": [
+          0.12993599474430084,
+          6.481899261474609,
+          1.03548002243042
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2765",
+            "sha256": "371b46154a6ff5e08d1cda980778ea434b394620830579088af6456f7fdf9884"
+          }
+        ],
+        "coverageNote": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "sublingual",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Left sublingual gland · Structure & relationships · draft",
+        "body": "A major salivary gland below the floor-of-mouth mucosa, above mylohyoid and lateral to the tongue.",
+        "bullets": [
+          "Whole source organ only. Duct patterns vary and are not independently modelled; this is not a validated duct or gland-excision map.",
+          "Source identity: FMA59805 · 1 source component. Boundaries and relationships require independent review."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK535426/"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1010 @@
+{
+  "sourceCommit": "fb1566736ab1169da48bc7bff3dc4d0bb228dc2a",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "abdomen-organs",
+      "url": "/models/bodyparts3d/full-body/abdomen-organs.glb",
+      "bytes": 6383736,
+      "sha256": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+      "structures": 10
+    },
+    {
+      "id": "pelvis-organs",
+      "url": "/models/bodyparts3d/full-body/pelvis-organs.glb",
+      "bytes": 49544,
+      "sha256": "90baaeb1c521a6b2546e99576bce4b231c6e068b4fa3d48dbd4cb7eb355f93c3",
+      "structures": 2
+    },
+    {
+      "id": "pancreas-corrected-parent",
+      "url": "/models/bodyparts3d/pancreas/pancreas.glb?v=716e391810aa6dcc7a415b9d97c20b9cc70cc7e0f4561495a9a700ea73a774bf",
+      "bytes": 229880,
+      "sha256": "716e391810aa6dcc7a415b9d97c20b9cc70cc7e0f4561495a9a700ea73a774bf",
+      "structures": 1
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unpaired:organ:liver",
+        "fmaId": "FMA7197",
+        "name": "Liver",
+        "sourceName": "liver",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-organs",
+        "nodeName": "FMA7197",
+        "bounds": {
+          "min": [
+            -1.1506400108337402,
+            2.2793993949890137,
+            -0.06671299040317535
+          ],
+          "max": [
+            0.943668007850647,
+            3.831400156021118,
+            1.5241299867630005
+          ]
+        },
+        "center": [
+          -0.10348600149154663,
+          3.055399775505066,
+          0.7287084981799126
+        ],
+        "anchor": [
+          -0.10570300370454788,
+          3.0470995903015137,
+          0.7280399799346924
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1883",
+            "sha256": "305fb8169521520bd373a91e8825597d4dc8200e522e2239b520ca4d1bc67d6e"
+          },
+          {
+            "file": "FJ1893",
+            "sha256": "c92536c5059b17366769bfb48700bc3aa3d1500f9c0e21d94f9cd98e3e9372a6"
+          },
+          {
+            "file": "FJ1913",
+            "sha256": "a305c27d3f093693dcd36b79d17494eec4b854623abd5ef1bf9b8cfcc1924fef"
+          },
+          {
+            "file": "FJ1914",
+            "sha256": "48313d7172ce57ada4fecbaedf82ab5420193bf958b3d74e2397d03c129fa992"
+          },
+          {
+            "file": "FJ1916",
+            "sha256": "5d19f212509f20499e3a7c1f8c7e80d4bb84c0a0d4a0afcb42d4a0f6146c0b64"
+          },
+          {
+            "file": "FJ2386",
+            "sha256": "4669f05fe9d27ef45b2a183b8a21676314d3b11d9491cb497bd93487bf55133b"
+          },
+          {
+            "file": "FJ2404",
+            "sha256": "316a7b553981cafff7ac1279140251cff0c6a88d4cf91f5d729cdb02702405b8"
+          },
+          {
+            "file": "FJ2405",
+            "sha256": "dbeafcb261e23112037b6616d8ffd130f9c96d9e30e70d61855e2f7ef71fccc1"
+          },
+          {
+            "file": "FJ2409",
+            "sha256": "4662aac785711a9b0ca91b860720d018f4e61e8457e919722b68ce814bc27e84"
+          },
+          {
+            "file": "FJ2816",
+            "sha256": "81c86ccdd356c27a960f957f49b4ea883d22d7e75fef29aa794e154d4f5da51e"
+          },
+          {
+            "file": "FJ2818",
+            "sha256": "773b11b267fd680f399e0dbc71217aef981c6f8ee2a2273723481edc5864ee8a"
+          },
+          {
+            "file": "FJ2819",
+            "sha256": "ba7174ecd641887a57116848661d56c2c377659cc3aca4235132e8f548bbd8b9"
+          },
+          {
+            "file": "FJ2820",
+            "sha256": "af49d0747496fb3008b7b33be23ea1c169bb4667ccfad0fa0208d42390737c22"
+          },
+          {
+            "file": "FJ2821",
+            "sha256": "13886d9c2d473e121e27083fa03218fe22e4a75aab3402dcf53754a1375948f9"
+          },
+          {
+            "file": "FJ2822",
+            "sha256": "8f64d0c177586089610214a5a32a189a6a659ca2770b15d193c9255667c8afd2"
+          },
+          {
+            "file": "FJ2823",
+            "sha256": "a89dd2a52ffee337e9777376d1235330463577331fc7f18a40ccf8bc6c99a8d0"
+          },
+          {
+            "file": "FJ2824",
+            "sha256": "2f5e34fceea6c8b718bd3f50a125bf24c434ae7eb3d925b9795b0585272c1349"
+          },
+          {
+            "file": "FJ3071",
+            "sha256": "818576ec6fe49301bb43a34df894f22b6e2af846c59ed5a41ba826e2e66dd0df"
+          },
+          {
+            "file": "FJ3072",
+            "sha256": "0e5ec3bfde87ac0924359c11e59f62a1559fc8692ac4c40c54049c3eb5f1c712"
+          },
+          {
+            "file": "FJ3073",
+            "sha256": "d5a6c22e5680ecf272e36b26bc387279e76d99ea7e6cd0637b69570b6da1159a"
+          },
+          {
+            "file": "FJ3074",
+            "sha256": "8de7ebf4db8679e5db99cdedceb59df6a43c4e33e4cf707e1e4666cd6e50679b"
+          },
+          {
+            "file": "FJ3075",
+            "sha256": "d0aa3b26c1866580abbfa1f9bf44b4d2bc9302ddda0838605b738a3eea912597"
+          },
+          {
+            "file": "FJ3076",
+            "sha256": "45223049350ffe29c9b4842c832efa9248fb60bc16955db35fbfd3b7953ba8da"
+          },
+          {
+            "file": "FJ3077",
+            "sha256": "67bd46a0f91ca9d635f6d7750e96452a72586dc7df2b592be7198ac3d28fe72b"
+          },
+          {
+            "file": "FJ3083",
+            "sha256": "2d5997d5b9ac3ef4bc8461779eed5fe77feadcd0c3ef21bea43f9ee2cb73e90c"
+          },
+          {
+            "file": "FJ3086",
+            "sha256": "974e8d71edc4a0de74480bc4f4a3431082daf60922109f3a0f644d9f953b4af5"
+          },
+          {
+            "file": "FJ3088",
+            "sha256": "b4d46c97bc201e818a86f794a3d3342c99252770eb828465d3a39129adeec44c"
+          },
+          {
+            "file": "FJ3089",
+            "sha256": "8fcc701eabba3de0ed5c7796dc668d78286150901081abd44a69f1a0757de02f"
+          },
+          {
+            "file": "FJ3090",
+            "sha256": "08269713ea808adcc06cddeedfc5a6560e402518a7ea8feab456d2a6618656b4"
+          },
+          {
+            "file": "FJ3091",
+            "sha256": "e9d8c27658e99f33f81f8babae551404b526b5eec7814befd73157966dedd8e6"
+          },
+          {
+            "file": "FJ3092",
+            "sha256": "4e0facfaf6fcf60d1709143982ed5c40dc45fadbb39cc61262908bf12d2a2ac6"
+          },
+          {
+            "file": "FJ3093",
+            "sha256": "5eee760c2aec02f46a9976870c184f1ec61079155bf92f67b59cf962c3803a7f"
+          },
+          {
+            "file": "FJ3095",
+            "sha256": "e53e52448e647cb04154eb2f1f1ae1823c9672aa495d369a0dacf36408675f21"
+          },
+          {
+            "file": "FJ3096",
+            "sha256": "c4f34b49d7a1b657ac99631a0614b283ff3cff231bfcb4d41a5ed48b4c8ab15b"
+          },
+          {
+            "file": "FJ3102",
+            "sha256": "34942cd65cf922f32fdacf165ceab2f35a90f074a2bf3e342abe5d4b8b90ce80"
+          },
+          {
+            "file": "FJ3103",
+            "sha256": "651f3eea6af28fc2fc9ae0431260661bc9709b1bfda5d3cd56475fbb330bf3cd"
+          },
+          {
+            "file": "FJ3104",
+            "sha256": "8a78e25b0446fe08a18ae2c55c021951640274f8a5194205ee5d7d6ba691f7cf"
+          },
+          {
+            "file": "FJ3105",
+            "sha256": "ca3519645aec712c6f25749609888241124ca9047063a352b77279d19b61a47e"
+          },
+          {
+            "file": "FJ3106",
+            "sha256": "6a915804cff8434c4cddc3cb21ae643480fbee3eb6b0838037d51c4d1c1148e4"
+          },
+          {
+            "file": "FJ3107",
+            "sha256": "0cb461fc8492d383e8acfb946d9fbf568b011644b9855b1c65059253d66398b3"
+          },
+          {
+            "file": "FJ3108",
+            "sha256": "751c75af681299c75f8424a589e0aade0d1c15e31056ad2ed48d3ccd70a24c83"
+          },
+          {
+            "file": "FJ3109",
+            "sha256": "37a65eb6bdb90b815de604952b35649a4b7433c34dc2cb1b099889a83a4f4bc4"
+          },
+          {
+            "file": "FJ3110",
+            "sha256": "b562dd3f3bcf6a520d382ce41aa95536b37568949aec3c3ed23226a682f0743b"
+          },
+          {
+            "file": "FJ3111",
+            "sha256": "be81ba12835c12dcfc80ec9bff9afac3bfb0508b3cad4063de981caa60dfee0c"
+          },
+          {
+            "file": "FJ3112",
+            "sha256": "86d033cb87c87b08a0a387c9b40b94ae3507af62aa969ec9b3f81b2a827a513f"
+          },
+          {
+            "file": "FJ3113",
+            "sha256": "cf50d8358b5612e561d32099f85e46826a1e2eec087d6326adbbebc477bb1d19"
+          },
+          {
+            "file": "FJ3114",
+            "sha256": "a234049c9964ccf5042b9b20030c08824ac58ec80b758a2546f3027533c86706"
+          },
+          {
+            "file": "FJ3115",
+            "sha256": "0b91de2f1433e506092600fbc25ddca37b9c5254858196de31b3c9b69f9ba4e6"
+          },
+          {
+            "file": "FJ3116",
+            "sha256": "3fa2c973eb6a00e00972035a8926794f03e7b04cccf0ec4fa80ee30e85170f29"
+          },
+          {
+            "file": "FJ3117",
+            "sha256": "ba48e5808de07cdaf52ef051062651be5db56862f305f6648d0537938dd41b23"
+          },
+          {
+            "file": "FJ3122",
+            "sha256": "ff00a9830cf1ab18c4de3186ddce1920d62daffe57ec51d6adc6bd64cd13beab"
+          },
+          {
+            "file": "FJ3123",
+            "sha256": "67c97c70cce9aed074743d4b3ceba046d34e1d3b05bc5ca35e39a37499e7a66d"
+          },
+          {
+            "file": "FJ3124",
+            "sha256": "a5427ce74353d9c3a2eb535961c78e5aae25a6d57a1e35100c304b000b906403"
+          },
+          {
+            "file": "FJ3125",
+            "sha256": "adf3f9e59b7f0823541a33214fd1b0c127c7cb9d917b48a7fd3075522a74cd9d"
+          },
+          {
+            "file": "FJ3126",
+            "sha256": "c21b4c470358525f91162c4a0bff632f6bd25e09d2ad1b6df10ef2df09cb54b8"
+          },
+          {
+            "file": "FJ3127",
+            "sha256": "8e265e380cefb97c042957abc9c65180dcc59669dcd91888008483a2b601353f"
+          },
+          {
+            "file": "FJ3128",
+            "sha256": "c5586090113b7e556268612565d98737aca9eeceddd11c8d070110f883e00932"
+          }
+        ],
+        "coverageNote": "Display aggregate excludes the separately selectable hepatic artery proper surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable right hepatic vein surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable left hepatic vein surface. Source coordinates are unchanged.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "liver",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
+        "fmaId": "FMA7198",
+        "name": "Pancreas",
+        "sourceName": "pancreas",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "pancreas-corrected-parent",
+        "nodeName": "FMA7198",
+        "bounds": {
+          "min": [
+            -0.5670689940452576,
+            2.043599843978882,
+            0.45412003993988037
+          ],
+          "max": [
+            0.7267439961433411,
+            2.7809996604919434,
+            0.9637899994850159
+          ]
+        },
+        "center": [
+          0.07983750104904175,
+          2.4122997522354126,
+          0.7089550197124481
+        ],
+        "anchor": [
+          0.11720399558544159,
+          2.427800178527832,
+          0.7501899600028992
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1895",
+            "sha256": "fea8a371ac940fb8c5c13e9d459af6c2bd50e1b499f8989c63883a7db0f149ae"
+          },
+          {
+            "file": "FJ1896",
+            "sha256": "17213b1a13963da2a60c792ac6f4047268890f1836d9d03e0383f783b7b73312"
+          },
+          {
+            "file": "FJ2630",
+            "sha256": "50cee3fbe96c857f11a9de653e603ecd0b24b2a9b1d3cc1e53c711ca2ae2b6cc"
+          }
+        ],
+        "coverageNote": "One source-labelled pancreatic envelope and two duct-source components. A nearly coincident parenchymal alternative is omitted from display, not reconstructed as another tissue layer. Original sources are retained; tissue identity, duct continuity and clinical accuracy remain unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "pancreas",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:unpaired:organ:gallbladder",
+        "fmaId": "FMA7202",
+        "name": "Gallbladder",
+        "sourceName": "gallbladder",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "pelvis-organs",
+        "nodeName": "FMA7202",
+        "bounds": {
+          "min": [
+            -0.6328170299530029,
+            2.510699510574341,
+            0.8015100359916687
+          ],
+          "max": [
+            -0.2684040069580078,
+            2.914799690246582,
+            1.285599946975708
+          ]
+        },
+        "center": [
+          -0.45061051845550537,
+          2.7127496004104614,
+          1.0435549914836884
+        ],
+        "anchor": [
+          -0.39591899514198303,
+          2.690899610519409,
+          1.0571200847625732
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2817",
+            "sha256": "625af13ef374a4df98eb5e51f9c2201a1436ca33168ce4deb277ce811c3fb8c8"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "gallbladder",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:organ:right-kidney",
+        "fmaId": "FMA7204",
+        "name": "Right kidney",
+        "sourceName": "right kidney",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-organs",
+        "nodeName": "FMA7204",
+        "bounds": {
+          "min": [
+            -0.8757539987564087,
+            1.6681201457977295,
+            0.14700104296207428
+          ],
+          "max": [
+            -0.3042760193347931,
+            2.712399959564209,
+            0.6185500621795654
+          ]
+        },
+        "center": [
+          -0.5900150090456009,
+          2.1902600526809692,
+          0.38277555257081985
+        ],
+        "anchor": [
+          -0.5424100160598755,
+          2.2017998695373535,
+          0.428384006023407
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ3147",
+            "sha256": "e21e2ebd5224b1cbf8caabbf4fa788d894819a328a006dcdb2eb8aa6eee5875a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "kidney",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:organ:left-kidney",
+        "fmaId": "FMA7205",
+        "name": "Left kidney",
+        "sourceName": "left kidney",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-organs",
+        "nodeName": "FMA7205",
+        "bounds": {
+          "min": [
+            0.32839900255203247,
+            1.844940185546875,
+            0.09591399878263474
+          ],
+          "max": [
+            0.9038300514221191,
+            2.9043993949890137,
+            0.5018499493598938
+          ]
+        },
+        "center": [
+          0.6161145269870758,
+          2.3746697902679443,
+          0.29888197407126427
+        ],
+        "anchor": [
+          0.6226660013198853,
+          2.373699903488159,
+          0.3074040114879608
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ3145",
+            "sha256": "b52066a987f767ad9e5c3092958bf5dd760d9f05f1497d1fc7f7ff11539bdfd2"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "kidney",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unpaired:organ:spleen",
+        "fmaId": "FMA7196",
+        "name": "Spleen",
+        "sourceName": "spleen",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-organs",
+        "nodeName": "FMA7196",
+        "bounds": {
+          "min": [
+            0.5563409924507141,
+            2.5160999298095703,
+            -0.03803901746869087
+          ],
+          "max": [
+            1.1386799812316895,
+            3.2183997631073,
+            0.912619948387146
+          ]
+        },
+        "center": [
+          0.8475104868412018,
+          2.867249846458435,
+          0.43729046545922756
+        ],
+        "anchor": [
+          0.8425660133361816,
+          2.878000497817993,
+          0.4465779960155487
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2561",
+            "sha256": "8dadb164d15392b61e0b08286625c9ea9f959a0f13d8f166b32d84abad4689bf"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "spleen",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:organ:right-adrenal-gland",
+        "fmaId": "FMA15629",
+        "name": "Right adrenal gland",
+        "sourceName": "right adrenal gland",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-organs",
+        "nodeName": "FMA15629",
+        "bounds": {
+          "min": [
+            -0.6253440380096436,
+            2.4552001953125,
+            0.2510550022125244
+          ],
+          "max": [
+            -0.3063019812107086,
+            2.878000497817993,
+            0.5234200358390808
+          ]
+        },
+        "center": [
+          -0.4658230096101761,
+          2.6666003465652466,
+          0.3872375190258026
+        ],
+        "anchor": [
+          -0.4632979929447174,
+          2.675300359725952,
+          0.38868796825408936
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3130",
+            "sha256": "c4d17a1accdd2e684d919582c36c1d51c7b6d382e221525c87e04c2575ccc3c6"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "adrenal",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:organ:left-adrenal-gland",
+        "fmaId": "FMA15630",
+        "name": "Left adrenal gland",
+        "sourceName": "left adrenal gland",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-organs",
+        "nodeName": "FMA15630",
+        "bounds": {
+          "min": [
+            0.2731499969959259,
+            2.633399724960327,
+            0.13134998083114624
+          ],
+          "max": [
+            0.7549160122871399,
+            3.082199811935425,
+            0.3328549861907959
+          ]
+        },
+        "center": [
+          0.5140330046415329,
+          2.857799768447876,
+          0.23210248351097107
+        ],
+        "anchor": [
+          0.5065129995346069,
+          2.8393993377685547,
+          0.23737800121307373
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3129",
+            "sha256": "bff9553c5d66c854bb54577136eb734dfd004075323013456f1e995ac8f8e545"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "adrenal",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "2b6197e7025f3142c39d1356739d4375eeeec28b2fbad7502fd10660a6aba071"
+}

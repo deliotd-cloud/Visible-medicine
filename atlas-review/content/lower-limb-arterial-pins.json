@@ -1,0 +1,5336 @@
+{
+  "sourceCommit": "d0b61f72358a8e0718c09b26e9efa69916cd1012",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "pelvis-skeleton",
+      "url": "/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+      "bytes": 86960,
+      "sha256": "58e1008b8064e8a61ce659e0246615960826772abe7070f66496eadcd86f4746",
+      "structures": 2
+    },
+    {
+      "id": "spine-skeleton",
+      "url": "/models/bodyparts3d/full-body/spine-skeleton.glb",
+      "bytes": 1286192,
+      "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957",
+      "structures": 25
+    },
+    {
+      "id": "foot-skeleton",
+      "url": "/models/bodyparts3d/full-body/foot-skeleton.glb",
+      "bytes": 612448,
+      "sha256": "1b363def6136145a2a0faa31ca5edb46db8345631a4343c25919a3abf73d2d40",
+      "structures": 54
+    },
+    {
+      "id": "thigh-skeleton",
+      "url": "/models/bodyparts3d/full-body/thigh-skeleton.glb",
+      "bytes": 115852,
+      "sha256": "27bd799bd85387beea9fab40cbe2f83a5e780983170db4dfd1d2e0eda8fd2b59",
+      "structures": 2
+    },
+    {
+      "id": "leg-skeleton",
+      "url": "/models/bodyparts3d/full-body/leg-skeleton.glb",
+      "bytes": 118776,
+      "sha256": "8885078bc114d8cf5c2ebd12f393761965b2016bf6f5fc196c83549527e2c0af",
+      "structures": 6
+    },
+    {
+      "id": "abdomen-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/abdomen-vessels-recovery.glb",
+      "bytes": 477592,
+      "sha256": "e41d66684de08fd9bd7dfca340acb63cbf7714eb09a3ea9594184f497c509abe",
+      "structures": 14
+    },
+    {
+      "id": "pelvis-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/pelvis-vessels-recovery.glb",
+      "bytes": 122592,
+      "sha256": "e089b9e9d3eac8ec6c1731ddc2ab0972ae0be041d5175cdedc5cc0bfb8eb09ad",
+      "structures": 12
+    },
+    {
+      "id": "thigh-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/thigh-vessels-recovery.glb",
+      "bytes": 1415760,
+      "sha256": "5037db3cd7d8d0bf2ac6ae2c4656b50e73c71f5f530595b80cd68153afb6c9f7",
+      "structures": 8
+    },
+    {
+      "id": "leg-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/leg-vessels-recovery.glb",
+      "bytes": 2900368,
+      "sha256": "e2751d62cf20f86ec14865a79bad26e70245443965702d98512541378851e466",
+      "structures": 10
+    },
+    {
+      "id": "foot-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/foot-vessels-recovery.glb",
+      "bytes": 107772,
+      "sha256": "648366ffe116673e7428067e8d7f14739161a220fb94e24d832ba9b9312a94b9",
+      "structures": 6
+    },
+    {
+      "id": "foot-vessels-foot-vascular",
+      "url": "/models/bodyparts3d/full-body/foot-vessels-foot-vascular.glb",
+      "bytes": 192916,
+      "sha256": "9e6d01cc92726aa2db728febcf52e0adfa0e6b9db9f58705f49b0653c8311881",
+      "structures": 8
+    }
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:pelvis:right:bone:right-hip-bone",
+      "fmaId": "FMA16586",
+      "name": "Right hip bone",
+      "sourceName": "right hip bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "thigh"
+      ],
+      "bundle": "pelvis-skeleton",
+      "nodeName": "FMA16586",
+      "bounds": {
+        "min": [
+          -1.4487199783325195,
+          -0.4784698486328125,
+          -0.4888122081756592
+        ],
+        "max": [
+          -0.0279029980301857,
+          1.5786901712417603,
+          0.8901899456977844
+        ]
+      },
+      "center": [
+        -0.7383114881813526,
+        0.5501101613044739,
+        0.20068886876106262
+      ],
+      "anchor": [
+        -0.6408339738845825,
+        0.5218298435211182,
+        0.20818497240543365
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3152",
+          "sha256": "99de26e5435a8397b6f39b44ada75319d5e8fa1433e1ea38fdd8de9e079ed9a9"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-second-toe",
+      "fmaId": "FMA32653",
+      "name": "Distal phalanx of left second toe",
+      "sourceName": "distal phalanx of left second toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32653",
+      "bounds": {
+        "min": [
+          1.3215299844741821,
+          -8.70226764678955,
+          1.7086399793624878
+        ],
+        "max": [
+          1.4339699745178223,
+          -8.630226135253906,
+          1.8401700258255005
+        ]
+      },
+      "center": [
+        1.3777499794960022,
+        -8.666246891021729,
+        1.7744050025939941
+      ],
+      "anchor": [
+        1.3842599391937256,
+        -8.650444030761719,
+        1.7721400260925293
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3179",
+          "sha256": "99c76669f09d0758cd2baadbba001728458615370705ef255b933f184689941b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-third-toe",
+      "fmaId": "FMA32655",
+      "name": "Distal phalanx of left third toe",
+      "sourceName": "distal phalanx of left third toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32655",
+      "bounds": {
+        "min": [
+          1.458419919013977,
+          -8.70261287689209,
+          1.6231399774551392
+        ],
+        "max": [
+          1.5484100580215454,
+          -8.643680572509766,
+          1.7365100383758545
+        ]
+      },
+      "center": [
+        1.5034149885177612,
+        -8.673146724700928,
+        1.6798250079154968
+      ],
+      "anchor": [
+        1.4990299940109253,
+        -8.657767295837402,
+        1.6822500228881836
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3180",
+          "sha256": "4b3b06a548ec2cf7eec686f9314dc0fb10fd7a72afc216b88d0b2bf857bb7bf1"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-fourth-toe",
+      "fmaId": "FMA32657",
+      "name": "Distal phalanx of left fourth toe",
+      "sourceName": "distal phalanx of left fourth toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32657",
+      "bounds": {
+        "min": [
+          1.5521200895309448,
+          -8.703092575073242,
+          1.4543099403381348
+        ],
+        "max": [
+          1.6407499313354492,
+          -8.634546279907227,
+          1.5655299425125122
+        ]
+      },
+      "center": [
+        1.596435010433197,
+        -8.668819427490234,
+        1.5099199414253235
+      ],
+      "anchor": [
+        1.5892599821090698,
+        -8.662097930908203,
+        1.5229600667953491
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3181",
+          "sha256": "71e7e83288bde730b7f2c04b3150de2d27236f0ed8e9db6a88704f6c1b9c9721"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-big-toe",
+      "fmaId": "FMA32651",
+      "name": "Distal phalanx of left big toe",
+      "sourceName": "distal phalanx of left big toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32651",
+      "bounds": {
+        "min": [
+          1.0250400304794312,
+          -8.700064659118652,
+          1.6072500944137573
+        ],
+        "max": [
+          1.2505600452423096,
+          -8.590411186218262,
+          1.8591901063919067
+        ]
+      },
+      "center": [
+        1.1378000378608704,
+        -8.645237922668457,
+        1.733220100402832
+      ],
+      "anchor": [
+        1.1560699939727783,
+        -8.621658325195312,
+        1.753059983253479
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3182",
+          "sha256": "aa0a98125fc8e3cfafa4eb1a4a00df9f21b7eefbd6d66327561a70be6f15c5d9"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-little-toe",
+      "fmaId": "FMA32659",
+      "name": "Distal phalanx of left little toe",
+      "sourceName": "distal phalanx of left little toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32659",
+      "bounds": {
+        "min": [
+          1.6126099824905396,
+          -8.704798698425293,
+          1.2616000175476074
+        ],
+        "max": [
+          1.6935800313949585,
+          -8.651289939880371,
+          1.3654500246047974
+        ]
+      },
+      "center": [
+        1.653095006942749,
+        -8.678044319152832,
+        1.3135250210762024
+      ],
+      "anchor": [
+        1.6396600008010864,
+        -8.676704406738281,
+        1.3209500312805176
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3185",
+          "sha256": "5978ed3c7d728bc03a558c5fe2a7db6fd272d02dc6ed67a1fbb21ce1693d659f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-second-toe",
+      "fmaId": "FMA32652",
+      "name": "Distal phalanx of right second toe",
+      "sourceName": "distal phalanx of right second toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32652",
+      "bounds": {
+        "min": [
+          -1.4334598779678345,
+          -8.702884674072266,
+          1.7101199626922607
+        ],
+        "max": [
+          -1.3234801292419434,
+          -8.630534172058105,
+          1.840959906578064
+        ]
+      },
+      "center": [
+        -1.378470003604889,
+        -8.666709423065186,
+        1.7755399346351624
+      ],
+      "anchor": [
+        -1.3784500360488892,
+        -8.649070739746094,
+        1.7747900485992432
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3189",
+          "sha256": "82657ea63694cff41a774da0ad28110e80ea4951e0ddaafcb2e2646275a22702"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-third-toe",
+      "fmaId": "FMA32654",
+      "name": "Distal phalanx of right third toe",
+      "sourceName": "distal phalanx of right third toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32654",
+      "bounds": {
+        "min": [
+          -1.5482499599456787,
+          -8.70197582244873,
+          1.6225900650024414
+        ],
+        "max": [
+          -1.4589101076126099,
+          -8.643865585327148,
+          1.7366600036621094
+        ]
+      },
+      "center": [
+        -1.5035800337791443,
+        -8.67292070388794,
+        1.6796250343322754
+      ],
+      "anchor": [
+        -1.5013600587844849,
+        -8.657671928405762,
+        1.679010033607483
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3190",
+          "sha256": "b31499b63bc1798909b2c8cec77b7ebbb422cf2e0f715381601aa7c136b32aa9"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-fourth-toe",
+      "fmaId": "FMA32656",
+      "name": "Distal phalanx of right fourth toe",
+      "sourceName": "distal phalanx of right fourth toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32656",
+      "bounds": {
+        "min": [
+          -1.6412700414657593,
+          -8.703923225402832,
+          1.4536799192428589
+        ],
+        "max": [
+          -1.5533500909805298,
+          -8.633959770202637,
+          1.56535005569458
+        ]
+      },
+      "center": [
+        -1.5973100662231445,
+        -8.668941497802734,
+        1.5095149874687195
+      ],
+      "anchor": [
+        -1.5972800254821777,
+        -8.654884338378906,
+        1.5148299932479858
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3191",
+          "sha256": "24a38431aa67546c25d938f7c5a572fb1206ffcf6bb6a14281c0322fc3d03bac"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-big-toe",
+      "fmaId": "FMA32650",
+      "name": "Distal phalanx of right big toe",
+      "sourceName": "distal phalanx of right big toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32650",
+      "bounds": {
+        "min": [
+          -1.2511900663375854,
+          -8.698979377746582,
+          1.6078200340270996
+        ],
+        "max": [
+          -1.0239800214767456,
+          -8.59005355834961,
+          1.8604400157928467
+        ]
+      },
+      "center": [
+        -1.1375850439071655,
+        -8.644516468048096,
+        1.7341300249099731
+      ],
+      "anchor": [
+        -1.13850998878479,
+        -8.620617866516113,
+        1.7453700304031372
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3192",
+          "sha256": "aa15fa88eb0a4643efca0763a8088091f970ae510003dcc78c63e9a3dece5b03"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-little-toe",
+      "fmaId": "FMA32658",
+      "name": "Distal phalanx of right little toe",
+      "sourceName": "distal phalanx of right little toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32658",
+      "bounds": {
+        "min": [
+          -1.693269968032837,
+          -8.703537940979004,
+          1.2619999647140503
+        ],
+        "max": [
+          -1.6116900444030762,
+          -8.651418685913086,
+          1.3657898902893066
+        ]
+      },
+      "center": [
+        -1.6524800062179565,
+        -8.677478313446045,
+        1.3138949275016785
+      ],
+      "anchor": [
+        -1.652940034866333,
+        -8.66653823852539,
+        1.3238499164581299
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3195",
+          "sha256": "8053dcba2724d596cd66546934df05d04e5019b3b95ed6ec46795dff1b9abfde"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-first-metatarsal-bone",
+      "fmaId": "FMA24508",
+      "name": "Left first metatarsal bone",
+      "sourceName": "left first metatarsal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24508",
+      "bounds": {
+        "min": [
+          0.7483699917793274,
+          -8.653757095336914,
+          0.7997099161148071
+        ],
+        "max": [
+          1.043779969215393,
+          -8.221405982971191,
+          1.422410011291504
+        ]
+      },
+      "center": [
+        0.8960749804973602,
+        -8.437581539154053,
+        1.1110599637031555
+      ],
+      "anchor": [
+        0.8785949945449829,
+        -8.485761642456055,
+        1.1109199523925781
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3241",
+          "sha256": "1bb41c84fddb65d6394a55c1f534102794942541212702008a6316f93ba08e16"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-second-metatarsal-bone",
+      "fmaId": "FMA24510",
+      "name": "Left second metatarsal bone",
+      "sourceName": "left second metatarsal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24510",
+      "bounds": {
+        "min": [
+          0.9058940410614014,
+          -8.661637306213379,
+          0.7248899936676025
+        ],
+        "max": [
+          1.213479995727539,
+          -8.183069229125977,
+          1.373710036277771
+        ]
+      },
+      "center": [
+        1.0596870183944702,
+        -8.422353267669678,
+        1.0493000149726868
+      ],
+      "anchor": [
+        1.0705000162124634,
+        -8.424696922302246,
+        1.0501400232315063
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3244",
+          "sha256": "4992101f55b96d8fe47abca6e441c902ba1e60429ee41576a1d3a9fc17e4f22a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-third-metatarsal-bone",
+      "fmaId": "FMA24512",
+      "name": "Left third metatarsal bone",
+      "sourceName": "left third metatarsal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24512",
+      "bounds": {
+        "min": [
+          0.9831990003585815,
+          -8.665047645568848,
+          0.681410014629364
+        ],
+        "max": [
+          1.3360999822616577,
+          -8.23668098449707,
+          1.3079500198364258
+        ]
+      },
+      "center": [
+        1.1596494913101196,
+        -8.450864315032959,
+        0.9946800172328949
+      ],
+      "anchor": [
+        1.146009922027588,
+        -8.43350601196289,
+        1.0128998756408691
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3247",
+          "sha256": "84d0c310fd1448e753ac7ed2bda2d62d9dfb8fbe78f749111aaae3a7281ac5cc"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-fourth-metatarsal-bone",
+      "fmaId": "FMA24514",
+      "name": "Left fourth metatarsal bone",
+      "sourceName": "left fourth metatarsal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24514",
+      "bounds": {
+        "min": [
+          1.0177299976348877,
+          -8.673905372619629,
+          0.5696600079536438
+        ],
+        "max": [
+          1.4263800382614136,
+          -8.320211410522461,
+          1.1942499876022339
+        ]
+      },
+      "center": [
+        1.2220550179481506,
+        -8.497058391571045,
+        0.8819549977779388
+      ],
+      "anchor": [
+        1.207509994506836,
+        -8.499809265136719,
+        0.8479499816894531
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3250",
+          "sha256": "e1656035430f9bf5c5b5bb3de96fabfd18e3d78c6e47c39a403a47bd80dfa61b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-fifth-metatarsal-bone",
+      "fmaId": "FMA24516",
+      "name": "Left fifth metatarsal bone",
+      "sourceName": "left fifth metatarsal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24516",
+      "bounds": {
+        "min": [
+          1.0643699169158936,
+          -8.698140144348145,
+          0.3929239511489868
+        ],
+        "max": [
+          1.5237499475479126,
+          -8.397727012634277,
+          1.0508599281311035
+        ]
+      },
+      "center": [
+        1.294059932231903,
+        -8.547933578491211,
+        0.7218919396400452
+      ],
+      "anchor": [
+        1.3113698959350586,
+        -8.51496696472168,
+        0.7386799454689026
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3253",
+          "sha256": "29642383bc5c2d96f7025b2da0b8139f5b71d5d0e1470622745fd9b606575010"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-calcaneus",
+      "fmaId": "FMA24498",
+      "name": "Left calcaneus",
+      "sourceName": "left calcaneus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24498",
+      "bounds": {
+        "min": [
+          0.45009997487068176,
+          -8.684171676635742,
+          -0.25793200731277466
+        ],
+        "max": [
+          1.0076799392700195,
+          -8.190711975097656,
+          0.44141799211502075
+        ]
+      },
+      "center": [
+        0.7288899570703506,
+        -8.4374418258667,
+        0.09174299240112305
+      ],
+      "anchor": [
+        0.6494590044021606,
+        -8.498003005981445,
+        0.14666900038719177
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3256",
+          "sha256": "5424e3e394e233213071fbf46f178ed9123da4763d6b64125f32e7b8af1803d8"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-cuboid-bone",
+      "fmaId": "FMA24529",
+      "name": "Left cuboid bone",
+      "sourceName": "left cuboid bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24529",
+      "bounds": {
+        "min": [
+          0.8196499347686768,
+          -8.515222549438477,
+          0.33163002133369446
+        ],
+        "max": [
+          1.1513400077819824,
+          -8.21852970123291,
+          0.6668499708175659
+        ]
+      },
+      "center": [
+        0.9854949712753296,
+        -8.366876125335693,
+        0.4992399960756302
+      ],
+      "anchor": [
+        0.9507219791412354,
+        -8.351799964904785,
+        0.5837299823760986
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3258",
+          "sha256": "1d9269949005e15c6a39fc30cbe5499468e99c074d5ccf48e1032c8689e12664"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:bone:left-femur",
+      "fmaId": "FMA24475",
+      "name": "Left femur",
+      "sourceName": "left femur",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "thigh-skeleton",
+      "nodeName": "FMA24475",
+      "bounds": {
+        "min": [
+          0.3196620047092438,
+          -4.319439888000488,
+          -0.005177993793040514
+        ],
+        "max": [
+          1.502369999885559,
+          0.34239014983177185,
+          0.622759997844696
+        ]
+      },
+      "center": [
+        0.9110160022974014,
+        -1.9885248690843582,
+        0.30879100202582777
+      ],
+      "anchor": [
+        0.9478089809417725,
+        -2.004189968109131,
+        0.308991014957428
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3259",
+          "sha256": "d291cc3619c32c68edb9d29e0b755634c2cb85e3db89f0d0b63a316f879ef86d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:bone:left-fibula",
+      "fmaId": "FMA24481",
+      "name": "Left fibula",
+      "sourceName": "left fibula",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24481",
+      "bounds": {
+        "min": [
+          0.8452900052070618,
+          -8.251906394958496,
+          -0.014659996144473553
+        ],
+        "max": [
+          1.2010799646377563,
+          -4.408689975738525,
+          0.28119003772735596
+        ]
+      },
+      "center": [
+        1.023184984922409,
+        -6.330298185348511,
+        0.1332650207914412
+      ],
+      "anchor": [
+        1.0649499893188477,
+        -6.316400051116943,
+        0.12487499415874481
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3260",
+          "sha256": "b5fbb694e1d881033ec8318b97c41e9d9bedc89a8df9845573b1aac528829331"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-intermediate-cuneiform-bone",
+      "fmaId": "FMA24524",
+      "name": "Left intermediate cuneiform bone",
+      "sourceName": "left intermediate cuneiform bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24524",
+      "bounds": {
+        "min": [
+          0.8201360106468201,
+          -8.344287872314453,
+          0.5963200330734253
+        ],
+        "max": [
+          1.0195499658584595,
+          -8.113103866577148,
+          0.8033000230789185
+        ]
+      },
+      "center": [
+        0.9198429882526398,
+        -8.2286958694458,
+        0.6998100280761719
+      ],
+      "anchor": [
+        0.9332720041275024,
+        -8.259506225585938,
+        0.6752400398254395
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3264",
+          "sha256": "6770594a46c236c3585febbea87f2e19ce4e27e83def3f37d2a653888c7e60dc"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:sesamoid-bone-of-left-foot",
+      "fmaId": "FMA45098",
+      "name": "Sesamoid bone of left foot",
+      "sourceName": "sesamoid bone of left foot",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA45098",
+      "bounds": {
+        "min": [
+          0.8749479651451111,
+          -8.692931175231934,
+          1.2064300775527954
+        ],
+        "max": [
+          1.0316599607467651,
+          -8.615728378295898,
+          1.3475199937820435
+        ]
+      },
+      "center": [
+        0.9533039629459381,
+        -8.654329776763916,
+        1.2769750356674194
+      ],
+      "anchor": [
+        0.9544450640678406,
+        -8.663689613342285,
+        1.2900999784469604
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3266",
+          "sha256": "cc2fc94a2ff8b65b6e6849fabadb902eb82cbe616157f978b28f0c3f10fbc083"
+        },
+        {
+          "file": "FJ3270",
+          "sha256": "fb2a430917ad6e0fcaa13124476d12e15c2e99288d697e15e6084b01616a1e97"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-lateral-cuneiform-bone",
+      "fmaId": "FMA24526",
+      "name": "Left lateral cuneiform bone",
+      "sourceName": "left lateral cuneiform bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24526",
+      "bounds": {
+        "min": [
+          0.8722599744796753,
+          -8.406270980834961,
+          0.5089800357818604
+        ],
+        "max": [
+          1.128849983215332,
+          -8.148154258728027,
+          0.7514600157737732
+        ]
+      },
+      "center": [
+        1.0005549788475037,
+        -8.277212619781494,
+        0.6302200257778168
+      ],
+      "anchor": [
+        0.9642269611358643,
+        -8.255325317382812,
+        0.660830020904541
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3267",
+          "sha256": "60757ac856520feaac072a47e77d7fffb98571d099838a9c628ccad8fba28bbc"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-medial-cuneiform-bone",
+      "fmaId": "FMA24522",
+      "name": "Left medial cuneiform bone",
+      "sourceName": "left medial cuneiform bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24522",
+      "bounds": {
+        "min": [
+          0.6604260206222534,
+          -8.451443672180176,
+          0.6206099987030029
+        ],
+        "max": [
+          0.9410939812660217,
+          -8.141921043395996,
+          0.9051899909973145
+        ]
+      },
+      "center": [
+        0.8007600009441376,
+        -8.296682357788086,
+        0.7628999948501587
+      ],
+      "anchor": [
+        0.8285470008850098,
+        -8.293458938598633,
+        0.7341600060462952
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3271",
+          "sha256": "0924246c1693b45623469428ccc7dd86688078edbf7d3e43471f3b8d37e3644d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:bone:left-patella",
+      "fmaId": "FMA24487",
+      "name": "Left patella",
+      "sourceName": "left patella",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24487",
+      "bounds": {
+        "min": [
+          0.6059249639511108,
+          -4.3850297927856445,
+          0.5090100169181824
+        ],
+        "max": [
+          1.0222400426864624,
+          -3.9923698902130127,
+          0.7275099754333496
+        ]
+      },
+      "center": [
+        0.8140825033187866,
+        -4.188699841499329,
+        0.618259996175766
+      ],
+      "anchor": [
+        0.8300420641899109,
+        -4.148429870605469,
+        0.5871900320053101
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3275",
+          "sha256": "768362d04f0f91cea9a28f4aeae9d9f63f3c82450b68d185fa4afefe75d75cc1"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-talus",
+      "fmaId": "FMA24483",
+      "name": "Left talus",
+      "sourceName": "left talus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24483",
+      "bounds": {
+        "min": [
+          0.49635398387908936,
+          -8.313055992126465,
+          -0.011860008351504803
+        ],
+        "max": [
+          0.9017840027809143,
+          -7.969018936157227,
+          0.5567700266838074
+        ]
+      },
+      "center": [
+        0.6990689933300018,
+        -8.141037464141846,
+        0.2724550091661513
+      ],
+      "anchor": [
+        0.6949610114097595,
+        -8.184955596923828,
+        0.2745629847049713
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3280",
+          "sha256": "56b40cfe8944df25ebed250dbcc80794ee5435e6ab667edddabf4324553bdb3c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:bone:left-tibia",
+      "fmaId": "FMA24478",
+      "name": "Left tibia",
+      "sourceName": "left tibia",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24478",
+      "bounds": {
+        "min": [
+          0.3503419756889343,
+          -8.060953140258789,
+          0.019821014255285263
+        ],
+        "max": [
+          1.0945500135421753,
+          -4.261380195617676,
+          0.6451500058174133
+        ]
+      },
+      "center": [
+        0.7224459946155548,
+        -6.161166667938232,
+        0.3324855100363493
+      ],
+      "anchor": [
+        0.7442640066146851,
+        -6.160630226135254,
+        0.2990489900112152
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3282",
+          "sha256": "40e55d7d28f060be61815603ee5eb1c0ba4c2e93af6fed6b5db7ca88d4ed82ef"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:bone:left-hip-bone",
+      "fmaId": "FMA16587",
+      "name": "Left hip bone",
+      "sourceName": "left hip bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "thigh"
+      ],
+      "bundle": "pelvis-skeleton",
+      "nodeName": "FMA16587",
+      "bounds": {
+        "min": [
+          0.02750309929251671,
+          -0.480490118265152,
+          -0.4868505895137787
+        ],
+        "max": [
+          1.4475399255752563,
+          1.5809003114700317,
+          0.8909500241279602
+        ]
+      },
+      "center": [
+        0.7375215124338865,
+        0.5502050966024399,
+        0.20204971730709076
+      ],
+      "anchor": [
+        0.6407599449157715,
+        0.5112402439117432,
+        0.24853698909282684
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3288",
+          "sha256": "bfc8b489fee0945cd1d387cf64bd3691af8e033fa72f9fccae45cfd55ac88694"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-second-toe",
+      "fmaId": "FMA32643",
+      "name": "Middle phalanx of left second toe",
+      "sourceName": "middle phalanx of left second toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32643",
+      "bounds": {
+        "min": [
+          1.2512699365615845,
+          -8.679535865783691,
+          1.5752900838851929
+        ],
+        "max": [
+          1.3921200037002563,
+          -8.593413352966309,
+          1.7462899684906006
+        ]
+      },
+      "center": [
+        1.3216949701309204,
+        -8.636474609375,
+        1.6607900261878967
+      ],
+      "anchor": [
+        1.3186700344085693,
+        -8.627381324768066,
+        1.6844900846481323
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3293",
+          "sha256": "72afe21185eed25dbab98a1bb7cb28e64012f672bfb3a76d81fdbf5b531f4958"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-third-toe",
+      "fmaId": "FMA32645",
+      "name": "Middle phalanx of left third toe",
+      "sourceName": "middle phalanx of left third toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32645",
+      "bounds": {
+        "min": [
+          1.3891499042510986,
+          -8.689835548400879,
+          1.489109992980957
+        ],
+        "max": [
+          1.5181100368499756,
+          -8.611088752746582,
+          1.6585201025009155
+        ]
+      },
+      "center": [
+        1.453629970550537,
+        -8.65046215057373,
+        1.5738150477409363
+      ],
+      "anchor": [
+        1.4457899332046509,
+        -8.633589744567871,
+        1.580509901046753
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3294",
+          "sha256": "036f7e9bca027b8b7e6075976249ba90178a9639591878a1b5954d0f7d237c17"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-fourth-toe",
+      "fmaId": "FMA32647",
+      "name": "Middle phalanx of left fourth toe",
+      "sourceName": "middle phalanx of left fourth toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32647",
+      "bounds": {
+        "min": [
+          1.490440011024475,
+          -8.697918891906738,
+          1.3543299436569214
+        ],
+        "max": [
+          1.6138999462127686,
+          -8.619694709777832,
+          1.4877901077270508
+        ]
+      },
+      "center": [
+        1.5521699786186218,
+        -8.658806800842285,
+        1.421060025691986
+      ],
+      "anchor": [
+        1.5460400581359863,
+        -8.674824714660645,
+        1.4180400371551514
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3295",
+          "sha256": "cffbba99a2d64e833cac9545d91dc21092b2d7ecef35dd276a80ff7d35157239"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-little-toe",
+      "fmaId": "FMA230988",
+      "name": "Middle phalanx of left little toe",
+      "sourceName": "middle phalanx of left little toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA230988",
+      "bounds": {
+        "min": [
+          1.5810000896453857,
+          -8.700543403625488,
+          1.2155200242996216
+        ],
+        "max": [
+          1.6667399406433105,
+          -8.637796401977539,
+          1.2895399332046509
+        ]
+      },
+      "center": [
+        1.6238700151443481,
+        -8.669169902801514,
+        1.2525299787521362
+      ],
+      "anchor": [
+        1.618149995803833,
+        -8.691596984863281,
+        1.2495100498199463
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3298",
+          "sha256": "140d41e53c49bbbaea54972b738b215d3c3ef6bb9c5284f9f7e0516a25e2f68c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-second-toe",
+      "fmaId": "FMA32642",
+      "name": "Middle phalanx of right second toe",
+      "sourceName": "middle phalanx of right second toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32642",
+      "bounds": {
+        "min": [
+          -1.393549919128418,
+          -8.680103302001953,
+          1.5764799118041992
+        ],
+        "max": [
+          -1.252369999885559,
+          -8.594038963317871,
+          1.746880054473877
+        ]
+      },
+      "center": [
+        -1.3229599595069885,
+        -8.637071132659912,
+        1.661679983139038
+      ],
+      "anchor": [
+        -1.2956500053405762,
+        -8.636598587036133,
+        1.663540005683899
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3300",
+          "sha256": "505ff6d5185c0cec018be5a18206a2ccbcc8822f09b9282b9ad2586716d3a3d9"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-third-toe",
+      "fmaId": "FMA32644",
+      "name": "Middle phalanx of right third toe",
+      "sourceName": "middle phalanx of right third toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32644",
+      "bounds": {
+        "min": [
+          -1.517259955406189,
+          -8.688310623168945,
+          1.488669991493225
+        ],
+        "max": [
+          -1.388890027999878,
+          -8.60914421081543,
+          1.6574499607086182
+        ]
+      },
+      "center": [
+        -1.4530749917030334,
+        -8.648727416992188,
+        1.5730599761009216
+      ],
+      "anchor": [
+        -1.4524099826812744,
+        -8.636129379272461,
+        1.5889300107955933
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3301",
+          "sha256": "1da31f6465a4767ab9dc18df433e5e0df0da4e9578d2864b02e5a71e785b5d8c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-fourth-toe",
+      "fmaId": "FMA32646",
+      "name": "Middle phalanx of right fourth toe",
+      "sourceName": "middle phalanx of right fourth toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32646",
+      "bounds": {
+        "min": [
+          -1.613420009613037,
+          -8.698887825012207,
+          1.354349970817566
+        ],
+        "max": [
+          -1.4907100200653076,
+          -8.619355201721191,
+          1.4880599975585938
+        ]
+      },
+      "center": [
+        -1.5520650148391724,
+        -8.6591215133667,
+        1.4212049841880798
+      ],
+      "anchor": [
+        -1.5481399297714233,
+        -8.670809745788574,
+        1.430090069770813
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3302",
+          "sha256": "dd69a8df55e8ff34f55fe2b906507aac2659be0d2784833b6a0c2046258929e3"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-little-toe",
+      "fmaId": "FMA230986",
+      "name": "Middle phalanx of right little toe",
+      "sourceName": "middle phalanx of right little toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA230986",
+      "bounds": {
+        "min": [
+          -1.6669000387191772,
+          -8.70090389251709,
+          1.2144999504089355
+        ],
+        "max": [
+          -1.5808000564575195,
+          -8.637391090393066,
+          1.288179874420166
+        ]
+      },
+      "center": [
+        -1.6238500475883484,
+        -8.669147491455078,
+        1.2513399124145508
+      ],
+      "anchor": [
+        -1.6055299043655396,
+        -8.690170288085938,
+        1.2569500207901
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3305",
+          "sha256": "e1a4698c0de159b1851711084ddb96ccaf85022d941f305d670789444d6395bf"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:navicular-bone-of-left-foot",
+      "fmaId": "FMA24501",
+      "name": "Navicular bone of left foot",
+      "sourceName": "navicular bone of left foot",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24501",
+      "bounds": {
+        "min": [
+          0.5792959928512573,
+          -8.309741973876953,
+          0.44276002049446106
+        ],
+        "max": [
+          0.9664379954338074,
+          -8.062971115112305,
+          0.7109699845314026
+        ]
+      },
+      "center": [
+        0.7728669941425323,
+        -8.186356544494629,
+        0.5768650025129318
+      ],
+      "anchor": [
+        0.7872009873390198,
+        -8.179460525512695,
+        0.5617199540138245
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3307",
+          "sha256": "a9608a209e96492213275d1592554855a6acbf0d3a5ec8b05fb5fadfceb5df6c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:navicular-bone-of-right-foot",
+      "fmaId": "FMA24500",
+      "name": "Navicular bone of right foot",
+      "sourceName": "navicular bone of right foot",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24500",
+      "bounds": {
+        "min": [
+          -0.9675399661064148,
+          -8.30776309967041,
+          0.44329002499580383
+        ],
+        "max": [
+          -0.5818960070610046,
+          -8.06155776977539,
+          0.7099299430847168
+        ]
+      },
+      "center": [
+        -0.7747179865837097,
+        -8.1846604347229,
+        0.5766099840402603
+      ],
+      "anchor": [
+        -0.7869519591331482,
+        -8.1781005859375,
+        0.5621800422668457
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3308",
+          "sha256": "0e08f1570755a9675e2556013eda861f00f31fe7ae2139e24584129dfe78d2c2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-big-toe",
+      "fmaId": "FMA43253",
+      "name": "Proximal phalanx of right big toe",
+      "sourceName": "proximal phalanx of right big toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA43253",
+      "bounds": {
+        "min": [
+          -1.1719599962234497,
+          -8.68639087677002,
+          1.3607001304626465
+        ],
+        "max": [
+          -0.866595983505249,
+          -8.514086723327637,
+          1.6928900480270386
+        ]
+      },
+      "center": [
+        -1.0192779898643494,
+        -8.600238800048828,
+        1.5267950892448425
+      ],
+      "anchor": [
+        -1.0429099798202515,
+        -8.565116882324219,
+        1.5583900213241577
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3310",
+          "sha256": "bb72eb8ed4cedf8ad2ab9a0ee2de9c80232ab6bd0e8840259beb59b8bac3bd07"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-third-toe",
+      "fmaId": "FMA32637",
+      "name": "Proximal phalanx of left third toe",
+      "sourceName": "proximal phalanx of left third toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32637",
+      "bounds": {
+        "min": [
+          1.2513200044631958,
+          -8.676982879638672,
+          1.2461700439453125
+        ],
+        "max": [
+          1.4580799341201782,
+          -8.559133529663086,
+          1.5283399820327759
+        ]
+      },
+      "center": [
+        1.354699969291687,
+        -8.618058204650879,
+        1.3872550129890442
+      ],
+      "anchor": [
+        1.3760099411010742,
+        -8.629802703857422,
+        1.3880099058151245
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3311",
+          "sha256": "4787599e0e9fefaa45c40736f38ccacc8ec7e7e867cde692c5ea4f775e97364b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-fourth-toe",
+      "fmaId": "FMA32639",
+      "name": "Proximal phalanx of left fourth toe",
+      "sourceName": "proximal phalanx of left fourth toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32639",
+      "bounds": {
+        "min": [
+          1.3430900573730469,
+          -8.697052955627441,
+          1.144279956817627
+        ],
+        "max": [
+          1.5589998960494995,
+          -8.565251350402832,
+          1.3842500448226929
+        ]
+      },
+      "center": [
+        1.4510449767112732,
+        -8.631152153015137,
+        1.26426500082016
+      ],
+      "anchor": [
+        1.4594999551773071,
+        -8.6431245803833,
+        1.2571600675582886
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3312",
+          "sha256": "32b171c096dfe9993503b4f14e58d5b2996dadf73352efc506c04d1098370a5b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-little-toe",
+      "fmaId": "FMA32641",
+      "name": "Proximal phalanx of left little toe",
+      "sourceName": "proximal phalanx of left little toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32641",
+      "bounds": {
+        "min": [
+          1.4293800592422485,
+          -8.698091506958008,
+          0.9877499341964722
+        ],
+        "max": [
+          1.6478999853134155,
+          -8.599870681762695,
+          1.240190029144287
+        ]
+      },
+      "center": [
+        1.538640022277832,
+        -8.648981094360352,
+        1.1139699816703796
+      ],
+      "anchor": [
+        1.5457299947738647,
+        -8.661887168884277,
+        1.0898399353027344
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3315",
+          "sha256": "4488ac24e66f25118feb375fbdf19e6e123595cbd26c726c3df1604bec59c7f8"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-second-toe",
+      "fmaId": "FMA32634",
+      "name": "Proximal phalanx of right second toe",
+      "sourceName": "proximal phalanx of right second toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32634",
+      "bounds": {
+        "min": [
+          -1.3356499671936035,
+          -8.66873550415039,
+          1.3355499505996704
+        ],
+        "max": [
+          -1.1134600639343262,
+          -8.545463562011719,
+          1.6167999505996704
+        ]
+      },
+      "center": [
+        -1.2245550155639648,
+        -8.607099533081055,
+        1.4761749505996704
+      ],
+      "anchor": [
+        -1.219580054283142,
+        -8.615654945373535,
+        1.4902299642562866
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3319",
+          "sha256": "f8f7d8f026953233fd9412b80ba897fdd329a48108cbfd11578b56dcf9edcc1e"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-third-toe",
+      "fmaId": "FMA32636",
+      "name": "Proximal phalanx of right third toe",
+      "sourceName": "proximal phalanx of right third toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32636",
+      "bounds": {
+        "min": [
+          -1.4590198993682861,
+          -8.6764497756958,
+          1.244360089302063
+        ],
+        "max": [
+          -1.2507599592208862,
+          -8.562044143676758,
+          1.5284100770950317
+        ]
+      },
+      "center": [
+        -1.3548899292945862,
+        -8.61924695968628,
+        1.3863850831985474
+      ],
+      "anchor": [
+        -1.3747600317001343,
+        -8.615997314453125,
+        1.3690699338912964
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3320",
+          "sha256": "49b6fc5fe03ba23422e852d1fcd419b94bafbdf69fd20552eca0620e1ed62e6e"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-fourth-toe",
+      "fmaId": "FMA32638",
+      "name": "Proximal phalanx of right fourth toe",
+      "sourceName": "proximal phalanx of right fourth toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32638",
+      "bounds": {
+        "min": [
+          -1.5592999458312988,
+          -8.697409629821777,
+          1.1437900066375732
+        ],
+        "max": [
+          -1.3433899879455566,
+          -8.564986228942871,
+          1.3842799663543701
+        ]
+      },
+      "center": [
+        -1.4513449668884277,
+        -8.631197929382324,
+        1.2640349864959717
+      ],
+      "anchor": [
+        -1.4282898902893066,
+        -8.63337516784668,
+        1.2634899616241455
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3321",
+          "sha256": "87949e88d498df13a376db05c0b094bae55ade09d5dec4ebd1557a5022d4f8ea"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-little-toe",
+      "fmaId": "FMA32640",
+      "name": "Proximal phalanx of right little toe",
+      "sourceName": "proximal phalanx of right little toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32640",
+      "bounds": {
+        "min": [
+          -1.6483700275421143,
+          -8.698931694030762,
+          0.9871099591255188
+        ],
+        "max": [
+          -1.4288499355316162,
+          -8.600473403930664,
+          1.240839958190918
+        ]
+      },
+      "center": [
+        -1.5386099815368652,
+        -8.649702548980713,
+        1.1139749586582184
+      ],
+      "anchor": [
+        -1.557539939880371,
+        -8.653310775756836,
+        1.0894900560379028
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3324",
+          "sha256": "deeabcf2bf83d7b9f77acf1c1634650805d467188f05505a6898aa3cbbdcea2b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-second-toe",
+      "fmaId": "FMA32635",
+      "name": "Proximal phalanx of left second toe",
+      "sourceName": "proximal phalanx of left second toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32635",
+      "bounds": {
+        "min": [
+          1.114490032196045,
+          -8.668400764465332,
+          1.3348499536514282
+        ],
+        "max": [
+          1.3349299430847168,
+          -8.544700622558594,
+          1.6162399053573608
+        ]
+      },
+      "center": [
+        1.2247099876403809,
+        -8.606550693511963,
+        1.4755449295043945
+      ],
+      "anchor": [
+        1.2201800346374512,
+        -8.6148099899292,
+        1.4928100109100342
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3328",
+          "sha256": "fd7064f417423cb6224e68867b0f3c5fd46c165a76fba035199e4db235d0616b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-big-toe",
+      "fmaId": "FMA43254",
+      "name": "Proximal phalanx of left big toe",
+      "sourceName": "proximal phalanx of left big toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA43254",
+      "bounds": {
+        "min": [
+          0.8670330047607422,
+          -8.684151649475098,
+          1.3603599071502686
+        ],
+        "max": [
+          1.1708199977874756,
+          -8.515522003173828,
+          1.6927099227905273
+        ]
+      },
+      "center": [
+        1.0189265012741089,
+        -8.599836826324463,
+        1.526534914970398
+      ],
+      "anchor": [
+        0.9830190539360046,
+        -8.58358383178711,
+        1.5520700216293335
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3329",
+          "sha256": "3b6770f4dd2bfc54fea30468a90eafd63c21aea8381688ce0912f85502f86f25"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-first-metatarsal-bone",
+      "fmaId": "FMA24507",
+      "name": "Right first metatarsal bone",
+      "sourceName": "right first metatarsal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24507",
+      "bounds": {
+        "min": [
+          -1.0436500310897827,
+          -8.653291702270508,
+          0.7994400262832642
+        ],
+        "max": [
+          -0.7481369972229004,
+          -8.22120189666748,
+          1.421820044517517
+        ]
+      },
+      "center": [
+        -0.8958935141563416,
+        -8.437246799468994,
+        1.1106300354003906
+      ],
+      "anchor": [
+        -0.8959369659423828,
+        -8.49156665802002,
+        1.0965800285339355
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3351",
+          "sha256": "b70e565ec8ad8c09264ae66159415ca4f0cf639598812aac6fcf7b761c3758d3"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-second-metatarsal-bone",
+      "fmaId": "FMA24509",
+      "name": "Right second metatarsal bone",
+      "sourceName": "right second metatarsal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24509",
+      "bounds": {
+        "min": [
+          -1.212730050086975,
+          -8.663178443908691,
+          0.7244799733161926
+        ],
+        "max": [
+          -0.9065660238265991,
+          -8.183246612548828,
+          1.374060034751892
+        ]
+      },
+      "center": [
+        -1.059648036956787,
+        -8.42321252822876,
+        1.0492700040340424
+      ],
+      "anchor": [
+        -1.0672000646591187,
+        -8.418490409851074,
+        1.0409300327301025
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3353",
+          "sha256": "f6c034b6b18aee623f510ee40e4171346c084e8bdd092354d634c87fc9af6acf"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-third-metatarsal-bone",
+      "fmaId": "FMA24511",
+      "name": "Right third metatarsal bone",
+      "sourceName": "right third metatarsal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24511",
+      "bounds": {
+        "min": [
+          -1.3359599113464355,
+          -8.663774490356445,
+          0.6836100220680237
+        ],
+        "max": [
+          -0.9832219481468201,
+          -8.236724853515625,
+          1.3085699081420898
+        ]
+      },
+      "center": [
+        -1.1595909297466278,
+        -8.450249671936035,
+        0.9960899651050568
+      ],
+      "anchor": [
+        -1.1883200407028198,
+        -8.480106353759766,
+        1.0029200315475464
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3355",
+          "sha256": "90b28dbcd11e3d3a6f253adb1ddaa33f30040a08c71bb3a86242372ea9b6170e"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-fourth-metatarsal-bone",
+      "fmaId": "FMA24513",
+      "name": "Right fourth metatarsal bone",
+      "sourceName": "right fourth metatarsal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24513",
+      "bounds": {
+        "min": [
+          -1.4266999959945679,
+          -8.673439025878906,
+          0.5697599649429321
+        ],
+        "max": [
+          -1.0186699628829956,
+          -8.319584846496582,
+          1.1968400478363037
+        ]
+      },
+      "center": [
+        -1.2226849794387817,
+        -8.496511936187744,
+        0.8833000063896179
+      ],
+      "anchor": [
+        -1.2274199724197388,
+        -8.512786865234375,
+        0.8551600575447083
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3357",
+          "sha256": "a5fd57a36b7525de383809bbbb37ff6a56a08ed0fb25af1684085418cc6e8202"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-fifth-metatarsal-bone",
+      "fmaId": "FMA24515",
+      "name": "Right fifth metatarsal bone",
+      "sourceName": "right fifth metatarsal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24515",
+      "bounds": {
+        "min": [
+          -1.5233099460601807,
+          -8.698196411132812,
+          0.39382103085517883
+        ],
+        "max": [
+          -1.064579963684082,
+          -8.398794174194336,
+          1.0507800579071045
+        ]
+      },
+      "center": [
+        -1.2939449548721313,
+        -8.548495292663574,
+        0.7223005443811417
+      ],
+      "anchor": [
+        -1.3091399669647217,
+        -8.51633071899414,
+        0.725640058517456
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3359",
+          "sha256": "cc75b866a2d5ac0317eb3a1d64cef41a65231fab975613d108a4fcdcbc2c58b1"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-calcaneus",
+      "fmaId": "FMA24497",
+      "name": "Right calcaneus",
+      "sourceName": "right calcaneus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24497",
+      "bounds": {
+        "min": [
+          -1.0078099966049194,
+          -8.684906959533691,
+          -0.2599489986896515
+        ],
+        "max": [
+          -0.44875800609588623,
+          -8.191547393798828,
+          0.4414849877357483
+        ]
+      },
+      "center": [
+        -0.7282840013504028,
+        -8.43822717666626,
+        0.0907679945230484
+      ],
+      "anchor": [
+        -0.6279199719429016,
+        -8.424676895141602,
+        0.14383003115653992
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3360",
+          "sha256": "b53e7970e822e997e1b05f94f42514d07a3f98edcc63ec7dd7219354ce1d8176"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-cuboid-bone",
+      "fmaId": "FMA24528",
+      "name": "Right cuboid bone",
+      "sourceName": "right cuboid bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24528",
+      "bounds": {
+        "min": [
+          -1.1508499383926392,
+          -8.511216163635254,
+          0.3373269736766815
+        ],
+        "max": [
+          -0.8236650228500366,
+          -8.2208833694458,
+          0.6676799654960632
+        ]
+      },
+      "center": [
+        -0.9872574806213379,
+        -8.366049766540527,
+        0.5025034695863724
+      ],
+      "anchor": [
+        -0.9330989718437195,
+        -8.329702377319336,
+        0.5668100118637085
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3364",
+          "sha256": "d5ac55e9aa466b0e14d8d7760f7ef2a6edb0d95cfea56205557f647c451a8079"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:bone:right-femur",
+      "fmaId": "FMA24474",
+      "name": "Right femur",
+      "sourceName": "right femur",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "thigh-skeleton",
+      "nodeName": "FMA24474",
+      "bounds": {
+        "min": [
+          -1.5013400316238403,
+          -4.31850004196167,
+          -0.004697990603744984
+        ],
+        "max": [
+          -0.31894299387931824,
+          0.342520147562027,
+          0.6219199895858765
+        ]
+      },
+      "center": [
+        -0.9101415127515793,
+        -1.9879899471998215,
+        0.30861099949106574
+      ],
+      "anchor": [
+        -0.9391549825668335,
+        -2.0242297649383545,
+        0.31437796354293823
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3365",
+          "sha256": "5eff0f92905dd45bd0e79b1de0144dc15988c73c683468163255ba1452d58037"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-fibula",
+      "fmaId": "FMA24480",
+      "name": "Right fibula",
+      "sourceName": "right fibula",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24480",
+      "bounds": {
+        "min": [
+          -1.2016500234603882,
+          -8.252799034118652,
+          -0.015125999227166176
+        ],
+        "max": [
+          -0.8434450030326843,
+          -4.4085001945495605,
+          0.28168800473213196
+        ]
+      },
+      "center": [
+        -1.0225475132465363,
+        -6.3306496143341064,
+        0.1332810027524829
+      ],
+      "anchor": [
+        -1.0324500799179077,
+        -6.344590187072754,
+        0.16410896182060242
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3366",
+          "sha256": "d03fee02cf8eefad1ecfcb9246e3f43ad3c4615c21ce08dc5e2b6901c6395a86"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-intermediate-cuneiform-bone",
+      "fmaId": "FMA24523",
+      "name": "Right intermediate cuneiform bone",
+      "sourceName": "right intermediate cuneiform bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24523",
+      "bounds": {
+        "min": [
+          -1.0200700759887695,
+          -8.344366073608398,
+          0.5958499908447266
+        ],
+        "max": [
+          -0.8185949921607971,
+          -8.11385440826416,
+          0.8053399920463562
+        ]
+      },
+      "center": [
+        -0.9193325340747833,
+        -8.22911024093628,
+        0.7005949914455414
+      ],
+      "anchor": [
+        -0.946753978729248,
+        -8.245765686035156,
+        0.6862199902534485
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3370",
+          "sha256": "3501e34aec7f81bd12b237c9bdccf2c8185d05895637427a92b210edc8423c33"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:sesamoid-bone-of-right-foot",
+      "fmaId": "FMA45097",
+      "name": "Sesamoid bone of right foot",
+      "sourceName": "sesamoid bone of right foot",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA45097",
+      "bounds": {
+        "min": [
+          -1.0300800800323486,
+          -8.692641258239746,
+          1.2073800563812256
+        ],
+        "max": [
+          -0.8706109523773193,
+          -8.61588191986084,
+          1.3477901220321655
+        ]
+      },
+      "center": [
+        -0.950345516204834,
+        -8.654261589050293,
+        1.2775850892066956
+      ],
+      "anchor": [
+        -0.9546130299568176,
+        -8.648820877075195,
+        1.2879300117492676
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3372",
+          "sha256": "dc021f600274fc6dc6af862f213d0e8d61abb5822f44e3e4a2fe752781e1f16a"
+        },
+        {
+          "file": "FJ3376",
+          "sha256": "d2d94ed0abef251d0d15ed0cc21814a4ea4810840e17d05488ae14bac68ac5a0"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-lateral-cuneiform-bone",
+      "fmaId": "FMA24525",
+      "name": "Right lateral cuneiform bone",
+      "sourceName": "right lateral cuneiform bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24525",
+      "bounds": {
+        "min": [
+          -1.128749966621399,
+          -8.405644416809082,
+          0.5083799958229065
+        ],
+        "max": [
+          -0.8719830513000488,
+          -8.14856243133545,
+          0.7523200511932373
+        ]
+      },
+      "center": [
+        -1.0003665089607239,
+        -8.277103424072266,
+        0.6303500235080719
+      ],
+      "anchor": [
+        -0.9971530437469482,
+        -8.328696250915527,
+        0.609470009803772
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3373",
+          "sha256": "628c8da7294f477a1c8c50d6445159bbff0ecda91d35dde48f780eec9eb9657c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-medial-cuneiform-bone",
+      "fmaId": "FMA24521",
+      "name": "Right medial cuneiform bone",
+      "sourceName": "right medial cuneiform bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24521",
+      "bounds": {
+        "min": [
+          -0.9412760138511658,
+          -8.45273208618164,
+          0.6198199987411499
+        ],
+        "max": [
+          -0.6600440144538879,
+          -8.142295837402344,
+          0.9050700664520264
+        ]
+      },
+      "center": [
+        -0.8006600141525269,
+        -8.297513961791992,
+        0.7624450325965881
+      ],
+      "anchor": [
+        -0.8302029967308044,
+        -8.292115211486816,
+        0.7366200089454651
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3377",
+          "sha256": "7ae757be0a8a55129816045c2e92b32576e2c96fe3b047f7841807092b5bf8f4"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-patella",
+      "fmaId": "FMA24486",
+      "name": "Right patella",
+      "sourceName": "right patella",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24486",
+      "bounds": {
+        "min": [
+          -1.0228800773620605,
+          -4.3851399421691895,
+          0.5099199414253235
+        ],
+        "max": [
+          -0.6062080264091492,
+          -3.9920401573181152,
+          0.7272699475288391
+        ]
+      },
+      "center": [
+        -0.8145440518856049,
+        -4.188590049743652,
+        0.6185949444770813
+      ],
+      "anchor": [
+        -0.8611350059509277,
+        -4.189239978790283,
+        0.5913699865341187
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3381",
+          "sha256": "b513b8cb6b37e3eb4211fd35a4469efdf79de37887a0af8c582efc836a6f6307"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-talus",
+      "fmaId": "FMA24482",
+      "name": "Right talus",
+      "sourceName": "right talus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24482",
+      "bounds": {
+        "min": [
+          -0.901136040687561,
+          -8.31156063079834,
+          -0.012459984049201012
+        ],
+        "max": [
+          -0.496273010969162,
+          -7.96889066696167,
+          0.5556899905204773
+        ]
+      },
+      "center": [
+        -0.6987045258283615,
+        -8.140225648880005,
+        0.27161500323563814
+      ],
+      "anchor": [
+        -0.6930500268936157,
+        -8.184046745300293,
+        0.27630698680877686
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3385",
+          "sha256": "8b35f0132c1a05b64f26746fdd0496a2495280cd0c2ac90dbf637fd74f79f54f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-tibia",
+      "fmaId": "FMA24477",
+      "name": "Right tibia",
+      "sourceName": "right tibia",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24477",
+      "bounds": {
+        "min": [
+          -1.0935299396514893,
+          -8.060371398925781,
+          0.02072898857295513
+        ],
+        "max": [
+          -0.3521600067615509,
+          -4.260799884796143,
+          0.6483500003814697
+        ]
+      },
+      "center": [
+        -0.7228449732065201,
+        -6.160585641860962,
+        0.33453949447721243
+      ],
+      "anchor": [
+        -0.6983820199966431,
+        -6.1077399253845215,
+        0.3267289698123932
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3387",
+          "sha256": "01879d7310938e82eecc02e1115332497e94085ff5cc1fa8eeee47ad1f5d3578"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:sacrum",
+      "fmaId": "FMA16202",
+      "name": "Sacrum",
+      "sourceName": "sacrum",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "pelvis",
+        "thigh"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA16202",
+      "bounds": {
+        "min": [
+          -0.5959120392799377,
+          -0.17163024842739105,
+          -0.5725374817848206
+        ],
+        "max": [
+          0.5820289850234985,
+          1.2720000743865967,
+          0.31396400928497314
+        ]
+      },
+      "center": [
+        -0.0069415271282196045,
+        0.5501849129796028,
+        -0.1292867362499237
+      ],
+      "anchor": [
+        0.0035980800166726112,
+        0.6635797023773193,
+        -0.22178100049495697
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3393",
+          "sha256": "cd04cc9f78d758ba34e92896914f647d22d257b9e7e51b97764670f694033489"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+      "fmaId": "FMA3789",
+      "name": "Abdominal aorta",
+      "sourceName": "abdominal aorta",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "midline",
+      "region": "abdomen",
+      "regions": [
+        "abdomen",
+        "pelvis",
+        "thorax"
+      ],
+      "bundle": "abdomen-vessels-recovery",
+      "nodeName": "FMA3789",
+      "bounds": {
+        "min": [
+          -0.009028740227222443,
+          1.4869097471237183,
+          0.32476097345352173
+        ],
+        "max": [
+          0.200547993183136,
+          3.359100341796875,
+          0.8277599811553955
+        ]
+      },
+      "center": [
+        0.09575962647795677,
+        2.4230050444602966,
+        0.5762604773044586
+      ],
+      "anchor": [
+        0.0937374010682106,
+        2.370999813079834,
+        0.619629979133606
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1932",
+          "sha256": "c74d3742308c1f05ce9e85c4508d348e3debf57d4aab5bfbc42041d682d39e02"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-artery",
+      "fmaId": "FMA14765",
+      "name": "Right common iliac artery",
+      "sourceName": "right common iliac artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "bundle": "pelvis-vessels-recovery",
+      "nodeName": "FMA14765",
+      "bounds": {
+        "min": [
+          -0.3750289976596832,
+          1.0346198081970215,
+          0.5504400134086609
+        ],
+        "max": [
+          0.10176699608564377,
+          1.6466498374938965,
+          0.8006599545478821
+        ]
+      },
+      "center": [
+        -0.13663100078701973,
+        1.340634822845459,
+        0.6755499839782715
+      ],
+      "anchor": [
+        -0.1888369917869568,
+        1.3142797946929932,
+        0.6530999541282654
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3565",
+          "sha256": "11eb1378295c92af09a47d9e25e2c4ee9e1430a6689ddfc7deebf2e44d145cc7"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-artery",
+      "fmaId": "FMA14766",
+      "name": "Left common iliac artery",
+      "sourceName": "left common iliac artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "bundle": "pelvis-vessels-recovery",
+      "nodeName": "FMA14766",
+      "bounds": {
+        "min": [
+          0.00908047053962946,
+          1.0173296928405762,
+          0.4063500165939331
+        ],
+        "max": [
+          0.359842985868454,
+          1.6463501453399658,
+          0.7972000241279602
+        ]
+      },
+      "center": [
+        0.18446172820404172,
+        1.331839919090271,
+        0.6017750203609467
+      ],
+      "anchor": [
+        0.13033200800418854,
+        1.297509789466858,
+        0.6209400296211243
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3464",
+          "sha256": "5472501bf8876913b860739b298afa69f5f63e74a6f4dc05540b50dde54b323e"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-artery",
+      "fmaId": "FMA18806",
+      "name": "Right external iliac artery",
+      "sourceName": "right external iliac artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "bundle": "pelvis-vessels-recovery",
+      "nodeName": "FMA18806",
+      "bounds": {
+        "min": [
+          -0.6128699779510498,
+          0.03612976148724556,
+          0.27797096967697144
+        ],
+        "max": [
+          -0.27458298206329346,
+          1.1353998184204102,
+          0.9449800252914429
+        ]
+      },
+      "center": [
+        -0.44372648000717163,
+        0.5857647899538279,
+        0.6114754974842072
+      ],
+      "anchor": [
+        -0.5473840236663818,
+        0.48247987031936646,
+        0.4290419816970825
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3567",
+          "sha256": "6be9a8fa7f67d5ce6638daf7deacd7d4953c258e920b2ba21575be47edde8fe6"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-artery",
+      "fmaId": "FMA18807",
+      "name": "Left external iliac artery",
+      "sourceName": "left external iliac artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "bundle": "pelvis-vessels-recovery",
+      "nodeName": "FMA18807",
+      "bounds": {
+        "min": [
+          0.25536400079727173,
+          0.09831970185041428,
+          0.28136298060417175
+        ],
+        "max": [
+          0.6544149518013,
+          1.12336003780365,
+          1.0294400453567505
+        ]
+      },
+      "center": [
+        0.4548894762992859,
+        0.6108398698270321,
+        0.6554015129804611
+      ],
+      "anchor": [
+        0.5846379995346069,
+        0.4299200475215912,
+        0.5032299757003784
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3466",
+          "sha256": "bba53b19cab2fb7e5c8f9461a21a2250d59e152585e58a9275207d5f51dc491b"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-artery",
+      "fmaId": "FMA18809",
+      "name": "Right internal iliac artery",
+      "sourceName": "right internal iliac artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "bundle": "pelvis-vessels-recovery",
+      "nodeName": "FMA18809",
+      "bounds": {
+        "min": [
+          -0.3603070080280304,
+          0.503649890422821,
+          -0.22547799348831177
+        ],
+        "max": [
+          -0.2723489999771118,
+          1.107659935951233,
+          0.6246700286865234
+        ]
+      },
+      "center": [
+        -0.3163280040025711,
+        0.805654913187027,
+        0.19959601759910583
+      ],
+      "anchor": [
+        -0.3113909959793091,
+        0.7578601241111755,
+        0.21586699783802032
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3569",
+          "sha256": "bc5922d28b6f5d9f67722396283ea7ef10cd3baa8ed0a8271faa8c11ca96d52a"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-artery",
+      "fmaId": "FMA18810",
+      "name": "Left internal iliac artery",
+      "sourceName": "left internal iliac artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "bundle": "pelvis-vessels-recovery",
+      "nodeName": "FMA18810",
+      "bounds": {
+        "min": [
+          0.22271499037742615,
+          0.45338013768196106,
+          -0.38280200958251953
+        ],
+        "max": [
+          0.3353880047798157,
+          1.0986602306365967,
+          0.5145200490951538
+        ]
+      },
+      "center": [
+        0.2790514975786209,
+        0.7760201841592789,
+        0.06585901975631714
+      ],
+      "anchor": [
+        0.27650898694992065,
+        0.7199298143386841,
+        0.08643299341201782
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3468",
+          "sha256": "2effa517c9d8b549b5a6b9e0ffe0326a99b03cb3d7ca58f4b1d338ce80f1d5e0"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-femoral-artery",
+      "fmaId": "FMA70249",
+      "name": "Right femoral artery",
+      "sourceName": "right femoral artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "thigh-vessels-recovery",
+      "nodeName": "FMA70249",
+      "bounds": {
+        "min": [
+          -0.6616889834403992,
+          -3.2957799434661865,
+          0.35492202639579773
+        ],
+        "max": [
+          -0.37722501158714294,
+          0.30250975489616394,
+          0.9295399188995361
+        ]
+      },
+      "center": [
+        -0.5194569975137711,
+        -1.4966350942850113,
+        0.6422309726476669
+      ],
+      "anchor": [
+        -0.4802360236644745,
+        -1.4721503257751465,
+        0.7855099439620972
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2143",
+          "sha256": "d9decbcc37ddafa41a0c01e316cff52a9259ed5292ddf2e199cf09414e872bae"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-femoral-artery",
+      "fmaId": "FMA70250",
+      "name": "Left femoral artery",
+      "sourceName": "left femoral artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "thigh-vessels-recovery",
+      "nodeName": "FMA70250",
+      "bounds": {
+        "min": [
+          0.37866902351379395,
+          -3.2957401275634766,
+          0.3540799617767334
+        ],
+        "max": [
+          0.6591030359268188,
+          0.30408018827438354,
+          0.9302099347114563
+        ]
+      },
+      "center": [
+        0.5188860297203064,
+        -1.4958299696445465,
+        0.6421449482440948
+      ],
+      "anchor": [
+        0.4880099892616272,
+        -1.4989502429962158,
+        0.7933099269866943
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2074",
+          "sha256": "df045596a410cfcc3c15f9aff1d02c5c7bcba234c9ebe6346ec1053d605de4d0"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery",
+      "fmaId": "FMA20796",
+      "name": "Right deep femoral artery",
+      "sourceName": "right deep femoral artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "thigh-vessels-recovery",
+      "nodeName": "FMA20796",
+      "bounds": {
+        "min": [
+          -1.205430030822754,
+          -4.397520065307617,
+          0.11512500792741776
+        ],
+        "max": [
+          -0.3285030126571655,
+          -0.051859740167856216,
+          0.7462400197982788
+        ]
+      },
+      "center": [
+        -0.7669665217399597,
+        -2.2246899027377367,
+        0.4306825138628483
+      ],
+      "anchor": [
+        -0.6024489998817444,
+        -3.174220085144043,
+        0.4228479862213135
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2137",
+          "sha256": "46872b103c95147c1d9d33cb2b2ad6bd1be001e32e9f646c0dd61cabea8b4a96"
+        },
+        {
+          "file": "FJ2158",
+          "sha256": "604beb2d77d9c6ec24e0f8c82e806f57a7cbb6fe9a4553d7f5fc999a9aae33f6"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery",
+      "fmaId": "FMA20797",
+      "name": "Left deep femoral artery",
+      "sourceName": "left deep femoral artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "thigh-vessels-recovery",
+      "nodeName": "FMA20797",
+      "bounds": {
+        "min": [
+          0.32847899198532104,
+          -4.397439956665039,
+          0.11526001244783401
+        ],
+        "max": [
+          1.2052100896835327,
+          -0.05195983871817589,
+          0.7461499571800232
+        ]
+      },
+      "center": [
+        0.7668445408344269,
+        -2.2246998976916075,
+        0.4307049848139286
+      ],
+      "anchor": [
+        0.6055749654769897,
+        -3.174769878387451,
+        0.42494696378707886
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2069",
+          "sha256": "055eaa7fd2a8683f4d81d824437925f2c1019c2081558fe4ee2d4ab161085b76"
+        },
+        {
+          "file": "FJ2078",
+          "sha256": "fc1867693af0aa210a96a79c3f53c80fedacd4f136b21c6d4f839ce06575b8ac"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
+      "fmaId": "FMA77380",
+      "name": "Right popliteal artery",
+      "sourceName": "right popliteal artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "bundle": "leg-vessels-recovery",
+      "nodeName": "FMA77380",
+      "bounds": {
+        "min": [
+          -0.9584179520606995,
+          -5.167250156402588,
+          0.026954002678394318
+        ],
+        "max": [
+          -0.5585640072822571,
+          -3.1922197341918945,
+          0.4578710198402405
+        ]
+      },
+      "center": [
+        -0.7584909796714783,
+        -4.179734945297241,
+        0.2424125112593174
+      ],
+      "anchor": [
+        -0.7508899569511414,
+        -4.185960292816162,
+        0.11681099236011505
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2170",
+          "sha256": "4bc14302e06ca2162a6df730a7d9f8549b5e6e9b919ce34e35bbdbeec1b088b0"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
+      "fmaId": "FMA77381",
+      "name": "Left popliteal artery",
+      "sourceName": "left popliteal artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "bundle": "leg-vessels-recovery",
+      "nodeName": "FMA77381",
+      "bounds": {
+        "min": [
+          0.5585800409317017,
+          -5.167250156402588,
+          0.02696899324655533
+        ],
+        "max": [
+          0.958420991897583,
+          -3.1922500133514404,
+          0.4578530192375183
+        ]
+      },
+      "center": [
+        0.7585005164146423,
+        -4.179750084877014,
+        0.24241100624203682
+      ],
+      "anchor": [
+        0.7594419717788696,
+        -4.18257999420166,
+        0.11660099029541016
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2086",
+          "sha256": "20dac622c09e02e45fa95b6f3c2eba7e932fdc3eef507ac19d0d78ed71ef241c"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-artery",
+      "fmaId": "FMA43896",
+      "name": "Right anterior tibial artery",
+      "sourceName": "right anterior tibial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "bundle": "leg-vessels-recovery",
+      "nodeName": "FMA43896",
+      "bounds": {
+        "min": [
+          -1.0555499792099,
+          -7.956809043884277,
+          0.20105797052383423
+        ],
+        "max": [
+          -0.6813820004463196,
+          -4.781789779663086,
+          0.4810659885406494
+        ]
+      },
+      "center": [
+        -0.8684659898281097,
+        -6.369299411773682,
+        0.3410619795322418
+      ],
+      "anchor": [
+        -0.9001410007476807,
+        -6.391190052032471,
+        0.3953839838504791
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2130",
+          "sha256": "56de59319a67eb9a3fbc9815d9dc66f371b3f116b211c2b03abfbb84ae21568c"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-artery",
+      "fmaId": "FMA43897",
+      "name": "Left anterior tibial artery",
+      "sourceName": "left anterior tibial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "bundle": "leg-vessels-recovery",
+      "nodeName": "FMA43897",
+      "bounds": {
+        "min": [
+          0.6813340187072754,
+          -7.956785678863525,
+          0.20108497142791748
+        ],
+        "max": [
+          1.0555599927902222,
+          -4.781799793243408,
+          0.48104798793792725
+        ]
+      },
+      "center": [
+        0.8684470057487488,
+        -6.369292736053467,
+        0.34106647968292236
+      ],
+      "anchor": [
+        0.8983809947967529,
+        -6.394360065460205,
+        0.39571404457092285
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2065",
+          "sha256": "c6388ae15cdf1b00cbbbb6007784022a7c03d1e349b780193488f1f804150c1e"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-artery",
+      "fmaId": "FMA43898",
+      "name": "Right posterior tibial artery",
+      "sourceName": "right posterior tibial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "bundle": "leg-vessels-recovery",
+      "nodeName": "FMA43898",
+      "bounds": {
+        "min": [
+          -0.9113270044326782,
+          -8.413312911987305,
+          0.0034749985206872225
+        ],
+        "max": [
+          -0.444784015417099,
+          -5.102340221405029,
+          0.36775198578834534
+        ]
+      },
+      "center": [
+        -0.6780555099248886,
+        -6.757826566696167,
+        0.18561349215451628
+      ],
+      "anchor": [
+        -0.615835964679718,
+        -6.753640174865723,
+        0.14388495683670044
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2172",
+          "sha256": "4e82371d5860733555c3b4c096134586128646ad31fb58cdcb6ee97df0849f08"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-artery",
+      "fmaId": "FMA43899",
+      "name": "Left posterior tibial artery",
+      "sourceName": "left posterior tibial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "bundle": "leg-vessels-recovery",
+      "nodeName": "FMA43899",
+      "bounds": {
+        "min": [
+          0.44474801421165466,
+          -8.41340160369873,
+          0.003493995638564229
+        ],
+        "max": [
+          0.9113140106201172,
+          -5.102349758148193,
+          0.36769500374794006
+        ]
+      },
+      "center": [
+        0.6780310124158859,
+        -6.757875680923462,
+        0.18559449969325215
+      ],
+      "anchor": [
+        0.615755021572113,
+        -6.743569850921631,
+        0.1459980010986328
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2087",
+          "sha256": "88e45ecb2bbe5b278d052c240649bf1f576ea3808272e60a4990fc5d8066bbb5"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
+      "fmaId": "FMA43916",
+      "name": "Right dorsalis pedis artery",
+      "sourceName": "right dorsalis pedis artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-vessels-recovery",
+      "nodeName": "FMA43916",
+      "bounds": {
+        "min": [
+          -0.9188739657402039,
+          -8.23951244354248,
+          0.3831169903278351
+        ],
+        "max": [
+          -0.6778370141983032,
+          -7.920245170593262,
+          0.9848100543022156
+        ]
+      },
+      "center": [
+        -0.7983554899692535,
+        -8.079878807067871,
+        0.6839635223150253
+      ],
+      "anchor": [
+        -0.8181509971618652,
+        -8.087831497192383,
+        0.666409969329834
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2055",
+          "sha256": "7b48b7cc6862bea77bd497e456b837e6d99dfc39db267281b3b117924093b618"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
+      "fmaId": "FMA43917",
+      "name": "Left dorsalis pedis artery",
+      "sourceName": "left dorsalis pedis artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-vessels-recovery",
+      "nodeName": "FMA43917",
+      "bounds": {
+        "min": [
+          0.6779540181159973,
+          -8.239434242248535,
+          0.3831549882888794
+        ],
+        "max": [
+          0.9185369610786438,
+          -7.920281887054443,
+          0.98471999168396
+        ]
+      },
+      "center": [
+        0.7982454895973206,
+        -8.07985806465149,
+        0.6839374899864197
+      ],
+      "anchor": [
+        0.8186910152435303,
+        -8.083748817443848,
+        0.6707199811935425
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2073",
+          "sha256": "65766eac33e2ae09ba433d078c35aa9f271143405ab06c27fe16066957e19362"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+      "fmaId": "FMA43929",
+      "name": "Right medial plantar artery",
+      "sourceName": "right medial plantar artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-vessels-recovery",
+      "nodeName": "FMA43929",
+      "bounds": {
+        "min": [
+          -0.7541840076446533,
+          -8.439090728759766,
+          0.36373597383499146
+        ],
+        "max": [
+          -0.6681510210037231,
+          -8.370476722717285,
+          0.7624500393867493
+        ]
+      },
+      "center": [
+        -0.7111675143241882,
+        -8.404783725738525,
+        0.5630930066108704
+      ],
+      "anchor": [
+        -0.7366960048675537,
+        -8.385828018188477,
+        0.5554400086402893
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2164",
+          "sha256": "85916deabe0b545bfccc268b5455dccb89c5d243e769cd91d55a2cd912d0bedc"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+      "fmaId": "FMA43930",
+      "name": "Left medial plantar artery",
+      "sourceName": "left medial plantar artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-vessels-recovery",
+      "nodeName": "FMA43930",
+      "bounds": {
+        "min": [
+          0.6681520342826843,
+          -8.439295768737793,
+          0.36393997073173523
+        ],
+        "max": [
+          0.754256010055542,
+          -8.370553016662598,
+          0.7623299956321716
+        ]
+      },
+      "center": [
+        0.7112040221691132,
+        -8.404924392700195,
+        0.5631349831819534
+      ],
+      "anchor": [
+        0.7362899780273438,
+        -8.385186195373535,
+        0.5559700131416321
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2082",
+          "sha256": "80addbc38b030d34a4002270067ff6488c956ebb5929c355c029bfec4de9ef55"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
+      "fmaId": "FMA43931",
+      "name": "Right lateral plantar artery",
+      "sourceName": "right lateral plantar artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-vessels-recovery",
+      "nodeName": "FMA43931",
+      "bounds": {
+        "min": [
+          -1.135890007019043,
+          -8.598645210266113,
+          0.3558519780635834
+        ],
+        "max": [
+          -0.668641984462738,
+          -8.393439292907715,
+          0.5326600074768066
+        ]
+      },
+      "center": [
+        -0.9022659957408905,
+        -8.496042251586914,
+        0.444255992770195
+      ],
+      "anchor": [
+        -0.8988440036773682,
+        -8.508970260620117,
+        0.42996901273727417
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2159",
+          "sha256": "e9df02eb728daba8672b6974272c3a070b1d148e330b6be22985494465f387e7"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
+      "fmaId": "FMA43932",
+      "name": "Left lateral plantar artery",
+      "sourceName": "left lateral plantar artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-vessels-recovery",
+      "nodeName": "FMA43932",
+      "bounds": {
+        "min": [
+          0.6685410141944885,
+          -8.59858512878418,
+          0.35583198070526123
+        ],
+        "max": [
+          1.1358599662780762,
+          -8.393632888793945,
+          0.5326600074768066
+        ]
+      },
+      "center": [
+        0.9022004902362823,
+        -8.496109008789062,
+        0.44424599409103394
+      ],
+      "anchor": [
+        0.9107360243797302,
+        -8.508086204528809,
+        0.430215984582901
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2079",
+          "sha256": "716cee68fa9d17389915512e20d44592d49d77502959e2b1ee58a19f307e6795"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+      "fmaId": "FMA43943",
+      "name": "Right plantar arch",
+      "sourceName": "right plantar arch",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-vessels-foot-vascular",
+      "nodeName": "FMA43943",
+      "bounds": {
+        "min": [
+          -1.135949969291687,
+          -8.598542213439941,
+          0.5150599479675293
+        ],
+        "max": [
+          -0.6874539852142334,
+          -8.367997169494629,
+          0.8091800212860107
+        ]
+      },
+      "center": [
+        -0.9117019772529602,
+        -8.483269691467285,
+        0.66211998462677
+      ],
+      "anchor": [
+        -0.8901000022888184,
+        -8.440812110900879,
+        0.7681900262832642
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2169",
+          "sha256": "9e02a211ef6b9c06c911892145c75ace55ed48bf8d4ed19eab11f19c3d1301a8"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+      "fmaId": "FMA43944",
+      "name": "Left plantar arch",
+      "sourceName": "left plantar arch",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-vessels-foot-vascular",
+      "nodeName": "FMA43944",
+      "bounds": {
+        "min": [
+          0.6874600052833557,
+          -8.598566055297852,
+          0.5149800181388855
+        ],
+        "max": [
+          1.135830044746399,
+          -8.367867469787598,
+          0.809019923210144
+        ]
+      },
+      "center": [
+        0.9116450250148773,
+        -8.483216762542725,
+        0.6619999706745148
+      ],
+      "anchor": [
+        0.8874579668045044,
+        -8.441765785217285,
+        0.7678399682044983
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2085",
+          "sha256": "0c21b7855d4e5fad25948af62db6c701e0d9552dedf2a8b6a1952b527aa82ea2"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+      "fmaId": "FMA69514",
+      "name": "Right deep plantar artery",
+      "sourceName": "right deep plantar artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-vessels-foot-vascular",
+      "nodeName": "FMA69514",
+      "bounds": {
+        "min": [
+          -0.9863829612731934,
+          -8.398268699645996,
+          0.7904300093650818
+        ],
+        "max": [
+          -0.9010819792747498,
+          -8.230071067810059,
+          1.0000500679016113
+        ]
+      },
+      "center": [
+        -0.9437324702739716,
+        -8.314169883728027,
+        0.8952400386333466
+      ],
+      "anchor": [
+        -0.9452620148658752,
+        -8.325501441955566,
+        0.906719982624054
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2136",
+          "sha256": "fe4fc6b629bff4228554964bbca5b8aacc81c721e8a5177a010f8365b9d2b3da"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+      "fmaId": "FMA69515",
+      "name": "Left deep plantar artery",
+      "sourceName": "left deep plantar artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-vessels-foot-vascular",
+      "nodeName": "FMA69515",
+      "bounds": {
+        "min": [
+          0.901017963886261,
+          -8.397970199584961,
+          0.7905499339103699
+        ],
+        "max": [
+          0.9864949584007263,
+          -8.230093002319336,
+          1.0001400709152222
+        ]
+      },
+      "center": [
+        0.9437564611434937,
+        -8.314031600952148,
+        0.895345002412796
+      ],
+      "anchor": [
+        0.9472869634628296,
+        -8.321274757385254,
+        0.9092300534248352
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2068",
+          "sha256": "d4c5c4fda6fed56de66b8991b23aa7f08f39924bb2970ebb6129abfac191d945"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
+      "fmaId": "FMA43937",
+      "name": "Right superficial medial plantar artery",
+      "sourceName": "right superficial medial plantar artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-vessels-foot-vascular",
+      "nodeName": "FMA43937",
+      "bounds": {
+        "min": [
+          -0.8302369713783264,
+          -8.628193855285645,
+          0.7448300123214722
+        ],
+        "max": [
+          -0.6874139904975891,
+          -8.421586036682129,
+          1.2987300157546997
+        ]
+      },
+      "center": [
+        -0.7588254809379578,
+        -8.524889945983887,
+        1.021780014038086
+      ],
+      "anchor": [
+        -0.7582150101661682,
+        -8.477795600891113,
+        1.0386199951171875
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2179",
+          "sha256": "77f3a27fd0d079e8334f4145d031b308b00e8660b8ad3a2a562fd0f0f632a5c7"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+      "fmaId": "FMA43938",
+      "name": "Left superficial medial plantar artery",
+      "sourceName": "left superficial medial plantar artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-vessels-foot-vascular",
+      "nodeName": "FMA43938",
+      "bounds": {
+        "min": [
+          0.6872889995574951,
+          -8.62808609008789,
+          0.7447799444198608
+        ],
+        "max": [
+          0.8302209973335266,
+          -8.421615600585938,
+          1.2985299825668335
+        ]
+      },
+      "center": [
+        0.7587549984455109,
+        -8.524850845336914,
+        1.0216549634933472
+      ],
+      "anchor": [
+        0.7591999769210815,
+        -8.476333618164062,
+        1.0334899425506592
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2089",
+          "sha256": "e744f8331409c56adeace058fa04fec14f7ec22dc0053c85845383cc0f6dc455"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ]
+}

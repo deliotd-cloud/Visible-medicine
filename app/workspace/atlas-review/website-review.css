@@ -1,0 +1,24 @@
+@theme inline {
+  --color-background:var(--background); --color-foreground:var(--foreground);
+  --color-primary:var(--primary); --color-primary-foreground:var(--primary-foreground);
+  --color-secondary:var(--secondary); --color-secondary-foreground:var(--secondary-foreground);
+  --color-muted:var(--muted); --color-muted-foreground:var(--muted-foreground);
+  --color-accent:var(--accent); --color-accent-foreground:var(--accent-foreground);
+  --color-border:var(--border); --color-input:var(--input); --color-ring:var(--ring);
+  --color-popover:var(--popover); --color-popover-foreground:var(--popover-foreground);
+}
+.website-clinical-review, [data-slot=select-content] {
+  --vm-ivory:#f3f7f6; --vm-ink:#132c32; --vm-midnight:#082a31; --vm-teal:#087b6c; --vm-muted:#51666b;
+  --border:#d4e1df; --background:#fff; --foreground:#132c32; --primary:#087b6c; --primary-foreground:#fff;
+  --muted:#edf5f3; --muted-foreground:#51666b; --input:#c4d4d1; --ring:#087b6c; --radius:.5rem;
+  --popover:#fff; --popover-foreground:#132c32; --secondary:#edf5f3; --secondary-foreground:#132c32;
+  --accent:#dcece8; --accent-foreground:#132c32; --destructive:#a32727;
+}
+.review-account-scope { margin:0; padding:.8rem 1.5rem; font-size:.875rem; background:#e3efeb; line-height:1.5; }
+.website-clinical-review h1 { max-width:none; line-height:1.18; }
+.website-clinical-review .vm-brand { display:none; }
+.website-clinical-review button, .website-clinical-review select, .website-clinical-review input, .website-clinical-review textarea { font-size:1rem; }
+.website-clinical-review :focus-visible { outline:3px solid #087b6c; outline-offset:2px; }
+.review-model-frame { width:100%; height:calc(100dvh - 11rem); min-height:500px; border:0; display:block; }
+.review-model-bar { display:flex; flex-wrap:wrap; gap:1rem; align-items:center; padding:.8rem 1.5rem; }
+@media(max-width:600px) { .review-account-scope {padding:.75rem 1rem;} .review-model-frame {height:calc(100dvh - 9rem);min-height:420px;} }

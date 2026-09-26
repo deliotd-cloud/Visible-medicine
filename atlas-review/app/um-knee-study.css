@@ -1,0 +1,54 @@
+.um-knee-image { min-width: 0; min-height: 0; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: .45rem; }
+.um-knee-camera-tools { display: flex; flex-wrap: wrap; gap: .35rem; align-items: center; }
+.um-knee-camera-tools [data-slot='select-trigger'] { width: 140px; }
+.um-knee-controls { font-size: .875rem; overflow-x: hidden; padding-inline: .25rem; }
+.um-knee-controls p { font-size: .875rem; line-height: 1.5; margin: .5rem 0; }
+.um-knee-label { display: flex; justify-content: space-between; margin: .35rem 0; font-weight: 600; }
+.um-knee-controls [data-slot='select-trigger'] { width: 100%; height: auto; min-height: 36px; white-space: normal; }
+.um-knee-controls [data-slot='select-value'] { min-width: 0; white-space: normal; text-align: left; }
+.um-knee-controls .eye-layer-actions { align-items: center; }
+.um-knee-selection { border: 1px solid var(--border); border-radius: .5rem; padding: .65rem; margin: .6rem 0; }
+.um-knee-selection h3 { font-size: 1rem; font-weight: 600; }
+.um-knee-separation [data-slot='slider'] { margin: .7rem 0; }
+.um-knee-details { border-top: 1px solid var(--border); padding: .65rem 0; }
+.um-knee-details summary { cursor: pointer; font-weight: 600; }
+.um-knee-details a { text-decoration: underline; text-underline-offset: 3px; }
+.um-knee-groups { display: grid; grid-template-columns: 1fr; gap: .25rem; margin: .5rem 0; }
+.um-knee-groups label { display: flex; align-items: center; gap: .4rem; min-height: 32px; }
+.um-knee-groups small { margin-left: auto; font-size: .8125rem; color: var(--muted-foreground); }
+.um-knee-toggle { display: flex; align-items: center; justify-content: space-between; gap: .5rem; min-height: 36px; }
+.um-knee-list li > button:first-child { height: auto; min-height: 36px; white-space: normal; text-align: left; font-size: .875rem; }
+.um-specimen-search-status { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .25rem .5rem; }
+.um-specimen-search-status p { flex: 1 1 10rem; }
+.um-specimen-search-status button { min-height: 36px; white-space: normal; }
+.um-knee-source-id { overflow-wrap: anywhere; }
+.um-source-caution { border-left: 2px solid var(--primary); padding-left: .5rem; }
+.um-specimen-link-warning { padding: 1rem; max-width: 46rem; line-height: 1.6; }
+.um-specimen-link-warning h2 { font-size: 1.25rem; font-weight: 600; }
+.um-specimen-link-warning p { margin: .75rem 0; }
+.specimen-linked-page { max-width: 80rem; margin: auto; padding: 1rem; }
+.specimen-linked-page > h1 { font-size: 1.25rem; font-weight: 600; }
+.specimen-linked-page > a { text-decoration: underline; }
+.um-limb-learning dl { margin: .5rem 0; }
+.um-limb-learning dt { font-weight: 600; margin-top: .5rem; }
+.um-limb-learning dd { margin: .2rem 0 .5rem; line-height: 1.5; }
+.um-limb-learning details { margin-top: .6rem; }
+.um-limb-learning [data-slot="tabs-list"] { max-width: 100%; height: auto; flex-wrap: wrap; justify-content: flex-start; }
+.um-limb-learning [data-slot="tabs-trigger"] { min-height: 2rem; white-space: normal; }
+.um-limb-learning ul, .um-knee-controls > ul { padding-left: 1.2rem; }
+.um-limb-learning li { margin: .35rem 0; overflow-wrap: anywhere; }
+.um-limb-answer-options { display: grid; gap: .5rem; margin: 1rem 0; }
+.um-limb-motor .eye-layer-list { grid-template-columns: 1fr; }
+.um-limb-motor .eye-layer-list li > div { width: 100%; min-width: 0; }
+.um-limb-motor button, .um-limb-motor [data-slot='select-trigger'] { height: auto; min-height: 36px; white-space: normal; text-align: left; }
+.um-limb-motor [data-slot='select-value'] { min-width: 0; white-space: normal; }
+.um-limb-motor details { margin-top: .5rem; }
+.um-limb-answer-options button { min-height: 44px; height: auto; padding: .6rem; white-space: normal; text-align: left; justify-content: flex-start; }
+.um-knee-scene-caption { font-size: .8125rem; line-height: 1.4; color: var(--muted-foreground); margin: 0; }
+@media (max-width: 700px) {
+  .um-knee-workbench { grid-template-rows: minmax(190px, 1fr) minmax(0, 1fr); }
+  .um-knee-controls .um-knee-groups { grid-template-columns: 1fr 1fr; gap: .3rem .8rem; }
+  .um-knee-dialog .eye-layer-heading [data-slot='dialog-description'], .um-knee-dialog .eye-layer-heading > button { font-size: .875rem; }
+  .um-knee-list { grid-template-columns: 1fr; }
+}
+@media (max-height: 550px) and (min-width: 701px) { .um-knee-dialog { height: 98dvh; } }

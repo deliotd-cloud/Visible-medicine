@@ -1,0 +1,48 @@
+/* Root-body motor panel only; shared shoulder/atlas styles are unchanged. */
+.body-motor-explorer p {
+  margin: 0.6rem 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.body-motor-targets {
+  list-style: none;
+  padding: 0;
+  max-height: 18rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.body-motor-targets li {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.body-attachment-unavailable {
+  display: block;
+  padding: 0.35rem 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.body-motor-explorer > .body-attachment-show {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  height: auto;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+.body-motor-targets button {
+  min-height: 44px;
+  height: auto;
+  width: 100%;
+  white-space: normal;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 0.875rem;
+}
+.body-motor-explorer a {
+  display: block;
+  padding: 0.4rem 0;
+  overflow-wrap: anywhere;
+  font-size: 0.875rem;
+}

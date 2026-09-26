@@ -1,0 +1,518 @@
+{
+  "sourceCommit": "46fbcf88ffdd8d9d9846043754e1b7758be498e1",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "brachial-veins",
+      "url": "/models/bodyparts3d/brachial-veins/brachial-veins.glb?v=e603953fca42e17c45f3daa91d3c53bedc0ccf83b70b18b864f9dc72d6bbe265",
+      "bytes": 100360,
+      "sha256": "e603953fca42e17c45f3daa91d3c53bedc0ccf83b70b18b864f9dc72d6bbe265",
+      "structures": 2
+    },
+    {
+      "id": "cubital-veins",
+      "url": "/models/bodyparts3d/cubital-veins/cubital-veins.glb?v=8e31545af2568c7f31a327ccbefa0a85cb054a422e1091fd06676b2b39127321",
+      "bytes": 287992,
+      "sha256": "8e31545af2568c7f31a327ccbefa0a85cb054a422e1091fd06676b2b39127321",
+      "structures": 4
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "eadf84b46f5d0126404ba01923d3fdcb3681492ef1f998056cb740b41d56749a",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+        "fmaId": "FMA22935",
+        "name": "Right medial brachial vein",
+        "sourceName": "right medial brachial vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "forearm"
+        ],
+        "bundle": "brachial-veins",
+        "nodeName": "FMA22935",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2341",
+            "sha256": "0468a157795c7346d964d1884627464d5cfe9c4c8bcc84661aefdb2bc2d18259"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -2.1819400787353516,
+            2.184000015258789,
+            0.3270150125026703
+          ],
+          "max": [
+            -1.500249981880188,
+            4.349800109863281,
+            0.4724330008029938
+          ]
+        },
+        "center": [
+          -1.8410950303077698,
+          3.266900062561035,
+          0.39972400665283203
+        ],
+        "anchor": [
+          -1.8253899812698364,
+          3.2527999877929688,
+          0.38743001222610474
+        ],
+        "coverageNote": "One source-labelled medial brachial vein. Other companion veins, valves, lumen and exact junctions are not supplied. Original coordinates and faces retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "brachial",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein",
+        "fmaId": "FMA22936",
+        "name": "Left medial brachial vein",
+        "sourceName": "left medial brachial vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "forearm"
+        ],
+        "bundle": "brachial-veins",
+        "nodeName": "FMA22936",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2313",
+            "sha256": "3707bf67b5959e140fea0eca643bc31db00e97620e63afbe48ed10357af44ec8"
+          }
+        ],
+        "bounds": {
+          "min": [
+            1.4999699592590332,
+            2.184000015258789,
+            0.32708799839019775
+          ],
+          "max": [
+            2.182039976119995,
+            4.349800109863281,
+            0.4722819924354553
+          ]
+        },
+        "center": [
+          1.8410049676895142,
+          3.266900062561035,
+          0.39968499541282654
+        ],
+        "anchor": [
+          1.8217400312423706,
+          3.272900104522705,
+          0.38906198740005493
+        ],
+        "coverageNote": "One source-labelled medial brachial vein. Other companion veins, valves, lumen and exact junctions are not supplied. Original coordinates and faces retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "brachial",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
+        "fmaId": "FMA22964",
+        "name": "Right median cubital vein",
+        "sourceName": "right median cubital vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "shoulder-arm",
+          "forearm"
+        ],
+        "bundle": "cubital-veins",
+        "nodeName": "FMA22964",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2287",
+            "sha256": "82a121207952ed3f38b387186dbccef17f76fd6f2e90b080dc045796430a30f4"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -2.339289903640747,
+            2.2446999549865723,
+            0.1677989959716797
+          ],
+          "max": [
+            -1.83502995967865,
+            2.6394999027252197,
+            0.5134699940681458
+          ]
+        },
+        "center": [
+          -2.0871599316596985,
+          2.442099928855896,
+          0.3406344950199127
+        ],
+        "anchor": [
+          -2.0185399055480957,
+          2.4019999504089355,
+          0.398142009973526
+        ],
+        "coverageNote": "Whole source-labelled superficial vein. Cubital patterns vary; surfaces do not establish exact junctions, valves, lumen, patency or a safe procedural route. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "cubital",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Right median cubital vein · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching has not yet been validated for this source.",
+          "bullets": [],
+          "note": "No acquired scan, ultrasound appearance, needle trajectory or registered CT/MRI correspondence is supplied."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Right median cubital vein · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching has not yet been validated for this source.",
+          "bullets": [],
+          "note": "No acquired scan, ultrasound appearance, needle trajectory or registered CT/MRI correspondence is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
+        "fmaId": "FMA22965",
+        "name": "Left median cubital vein",
+        "sourceName": "left median cubital vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "shoulder-arm",
+          "forearm"
+        ],
+        "bundle": "cubital-veins",
+        "nodeName": "FMA22965",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2235",
+            "sha256": "8ce3f9edc945531083041cf949011ebd8810c48b0e213399d90946267783cb87"
+          }
+        ],
+        "bounds": {
+          "min": [
+            1.8350499868392944,
+            2.2446999549865723,
+            0.16787099838256836
+          ],
+          "max": [
+            2.339289903640747,
+            2.6394999027252197,
+            0.5134599804878235
+          ]
+        },
+        "center": [
+          2.0871699452400208,
+          2.442099928855896,
+          0.3406654894351959
+        ],
+        "anchor": [
+          2.0208699703216553,
+          2.400399923324585,
+          0.39926499128341675
+        ],
+        "coverageNote": "Whole source-labelled superficial vein. Cubital patterns vary; surfaces do not establish exact junctions, valves, lumen, patency or a safe procedural route. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "cubital",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Left median cubital vein · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching has not yet been validated for this source.",
+          "bullets": [],
+          "note": "No acquired scan, ultrasound appearance, needle trajectory or registered CT/MRI correspondence is supplied."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Left median cubital vein · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching has not yet been validated for this source.",
+          "bullets": [],
+          "note": "No acquired scan, ultrasound appearance, needle trajectory or registered CT/MRI correspondence is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
+        "fmaId": "FMA22968",
+        "name": "Right median antebrachial vein",
+        "sourceName": "right median antebrachial vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "shoulder-arm",
+          "forearm"
+        ],
+        "bundle": "cubital-veins",
+        "nodeName": "FMA22968",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2286",
+            "sha256": "d7f83f57d6c7d22577bf5b5fa8c9f93dab356539dc36c509cff80395ceca75a5"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -2.6244800090789795,
+            0.14717000722885132,
+            0.22865299880504608
+          ],
+          "max": [
+            -1.7628400325775146,
+            2.1364998817443848,
+            0.845329999923706
+          ]
+        },
+        "center": [
+          -2.193660020828247,
+          1.141834944486618,
+          0.5369914993643761
+        ],
+        "anchor": [
+          -2.3166799545288086,
+          1.1974999904632568,
+          0.7166000008583069
+        ],
+        "coverageNote": "Whole source-labelled superficial vein. Cubital patterns vary; surfaces do not establish exact junctions, valves, lumen, patency or a safe procedural route. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "antebrachial",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Right median antebrachial vein · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching has not yet been validated for this source.",
+          "bullets": [],
+          "note": "No acquired scan, ultrasound appearance, needle trajectory or registered CT/MRI correspondence is supplied."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Right median antebrachial vein · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching has not yet been validated for this source.",
+          "bullets": [],
+          "note": "No acquired scan, ultrasound appearance, needle trajectory or registered CT/MRI correspondence is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein",
+        "fmaId": "FMA22969",
+        "name": "Left median antebrachial vein",
+        "sourceName": "left median antebrachial vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "shoulder-arm",
+          "forearm"
+        ],
+        "bundle": "cubital-veins",
+        "nodeName": "FMA22969",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2234",
+            "sha256": "572c2360da079d2a3eab28eb92e0a99ca268fe6550ff03d24a772391304f37fa"
+          }
+        ],
+        "bounds": {
+          "min": [
+            1.762850046157837,
+            0.1472100019454956,
+            0.22861400246620178
+          ],
+          "max": [
+            2.624569892883301,
+            2.1364998817443848,
+            0.8453400135040283
+          ]
+        },
+        "center": [
+          2.193709969520569,
+          1.1418549418449402,
+          0.536977007985115
+        ],
+        "anchor": [
+          2.3207099437713623,
+          1.1797699928283691,
+          0.7182899713516235
+        ],
+        "coverageNote": "Whole source-labelled superficial vein. Cubital patterns vary; surfaces do not establish exact junctions, valves, lumen, patency or a safe procedural route. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "antebrachial",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Left median antebrachial vein · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching has not yet been validated for this source.",
+          "bullets": [],
+          "note": "No acquired scan, ultrasound appearance, needle trajectory or registered CT/MRI correspondence is supplied."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Left median antebrachial vein · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching has not yet been validated for this source.",
+          "bullets": [],
+          "note": "No acquired scan, ultrasound appearance, needle trajectory or registered CT/MRI correspondence is supplied."
+        }
+      }
+    }
+  ]
+}

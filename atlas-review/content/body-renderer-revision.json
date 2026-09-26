@@ -1,0 +1,3123 @@
+{
+  "schemaVersion": 1,
+  "scope": "root-body-renderer",
+  "entrypoints": [
+    "app/body-explorer.tsx",
+    "app/layout.tsx",
+    "app/globals.css",
+    "vite.config.ts",
+    "package.json",
+    "package-lock.json",
+    "scripts/compress-model-delivery.mjs",
+    "scripts/glb-lossless-codec.mjs"
+  ],
+  "dependencies": [
+    {
+      "path": ".openai/hosting.json",
+      "sha256": "9877f15ef06a0175c0d6aa7e6607616575138dfb23b7d6d6ffd96c5e7b301028"
+    },
+    {
+      "path": "app/abdominal-wall-study.tsx",
+      "sha256": "4d553f20904fa72629716b7c502c9bf18637d3b242fa49aa03806e54ccb528b8"
+    },
+    {
+      "path": "app/anatomy-canvas.tsx",
+      "sha256": "667fc0843d6057dd50766eea3ba6ae7aac72332913332aae233f2ee87bc91547"
+    },
+    {
+      "path": "app/anatomy-control-rail.tsx",
+      "sha256": "313212905758d13825c51738df4b7fa374dce6822414c97b701dff98ecd232d9"
+    },
+    {
+      "path": "app/anatomy-data.ts",
+      "sha256": "5dbfe92c163fa0d3286920c0adefc54340086dba11c1cc445f4d4a47bf5baa3a"
+    },
+    {
+      "path": "app/anatomy-tissue.tsx",
+      "sha256": "e2a281af72d26bcd13f0a575476cacbb7d4233a0d485971867f69f91387f323c"
+    },
+    {
+      "path": "app/arm-attachments.tsx",
+      "sha256": "6012ffe547c274f71a4767860e92dbbb2bbcaf5aac042a8f809870aa74752c0e"
+    },
+    {
+      "path": "app/arterial-connections.tsx",
+      "sha256": "53af4510da63ae3aab470801191ff552ca6e202c8433432f3e0ee7fb9bae289b"
+    },
+    {
+      "path": "app/atlas-panel.css",
+      "sha256": "6a2c74a43745e59ae955fceac7b563af9fbf2a7296d74ad3aa85bc91ee3bb90f"
+    },
+    {
+      "path": "app/atlas-workspace.css",
+      "sha256": "aaa75b3e4e42a68ac944d70bbca7957eee4c3ba71c4413436cd9bc9f64841c4d"
+    },
+    {
+      "path": "app/atlas-workspace.tsx",
+      "sha256": "dddafc036e20e23b1048c0be494df62cd6eb794ffbb7a6a6423bd74bf8c0cdbd"
+    },
+    {
+      "path": "app/back-layers-study.tsx",
+      "sha256": "ba4c174c306d94735a0a2d7bea791e8ac21e67e21726db4c5eff1e5915ff0fec"
+    },
+    {
+      "path": "app/body-batch.tsx",
+      "sha256": "05b63136f4d8af290da9d4c190256bd1e17b6339842070b04c26b63238e0ae72"
+    },
+    {
+      "path": "app/body-content.ts",
+      "sha256": "39c85f5fd981896ff5090c4c4d900abd163291625e83018733b8717145a6ce53"
+    },
+    {
+      "path": "app/body-education-link.ts",
+      "sha256": "47a0a195899e3efedc743b7923c9a52f4a8c1943da5613285fc7a398e4448c40"
+    },
+    {
+      "path": "app/body-explorer.css",
+      "sha256": "9913bdbfbde3616885146cf92bed3c25df53ed03d8690125cd8ff85b4208a841"
+    },
+    {
+      "path": "app/body-explorer.tsx",
+      "sha256": "856fc56c2f9606388a50992527bb34bf36adfeb6dba8a7d8ac189bbade47bcab"
+    },
+    {
+      "path": "app/body-scene.tsx",
+      "sha256": "7117993fb76445f522d303c664fb5405ac07344f5e255906e2ee47640dc4acbc"
+    },
+    {
+      "path": "app/body-selection-notice.tsx",
+      "sha256": "585313543be9121cb073f3cb0cb0259f3c9da703b555b77ae5ddf12c706b21aa"
+    },
+    {
+      "path": "app/body-types.ts",
+      "sha256": "22ca77fb0b3e20471db8cb5bd7c250149c7f6f9ba391f74c69a897b05f72f87f"
+    },
+    {
+      "path": "app/bone-joints.tsx",
+      "sha256": "dbeb74df1bf96ac7a6a9bd41c18393cff89d9efe268135d406e15f4bd6e60032"
+    },
+    {
+      "path": "app/bowel-components.tsx",
+      "sha256": "c2bdbd593a4daf5ef891b487ae85431c7ddb9545ab4bb72f6520d7eac8bcbe07"
+    },
+    {
+      "path": "app/brand.tsx",
+      "sha256": "4fdee83b0c6af9419bab378a59eee0a2c326e7f2176979804d7bb7e39faff3c5"
+    },
+    {
+      "path": "app/camera-keyboard.css",
+      "sha256": "98d5bb8c7fe828c06e13f065fa7628aeeeb3638bedaea07a963ee3712ba4e7de"
+    },
+    {
+      "path": "app/cerebral-layers.tsx",
+      "sha256": "8c4fdcbbb15717997f991641b9a9c8ab93987686c0dd9496e2643de9d0486215"
+    },
+    {
+      "path": "app/component-imaging-notes.css",
+      "sha256": "d4e2664c8cdc96bcd015993f6fa69673dcefa5f78553ce1cb11ccd4e71d2a30e"
+    },
+    {
+      "path": "app/component-imaging-notes.tsx",
+      "sha256": "5c6d0606c23c91801d5c750201cd2618b4fd0f1e686aff18574aef586cec2ca5"
+    },
+    {
+      "path": "app/cutaway-controls.tsx",
+      "sha256": "249e53bbccbbcbfd349692d20978b7341001ff5346973297b30ca9e89c547f47"
+    },
+    {
+      "path": "app/dissection-controls.tsx",
+      "sha256": "520127bb748b4c8e2e1cd05f7e97937d73d86a8add37f8023315bbb214330e6d"
+    },
+    {
+      "path": "app/dissection-data.ts",
+      "sha256": "e4612894eda280188f24aa96ea4095795ead893ff5509a4e07d0389a5623e6e4"
+    },
+    {
+      "path": "app/dissection-orientation.tsx",
+      "sha256": "e28dfc446a64d388c2b04137d90046d439b23d155e279688c797518e2cff9088"
+    },
+    {
+      "path": "app/explode-style-select.css",
+      "sha256": "78b35b79e440dcd0021fbf577fecfdd4cdd6eaf83bc11e2fd9779d2f874f4b2a"
+    },
+    {
+      "path": "app/explode-style-select.tsx",
+      "sha256": "6629a4b69c6ced08c9f1d6c251d9fbda7d40f369ecf25e5f9c0cc0bf7428e085"
+    },
+    {
+      "path": "app/eye-layers.css",
+      "sha256": "bc6eda158baa6293b5721818b64927946931e76aacc4aea090917d9e9ed74119"
+    },
+    {
+      "path": "app/eye-layers.tsx",
+      "sha256": "3efe67855495116b5e75ccd14c0737fbd814ae0192633a6080f9d83bae9ecfbc"
+    },
+    {
+      "path": "app/femoral-components.tsx",
+      "sha256": "adedfcc6a51b584908e5813c57b33b873c2b4ec60b70750837aa54e33c10764e"
+    },
+    {
+      "path": "app/fitted-camera.tsx",
+      "sha256": "8621b76137dc18b1200cffb5fc79a0e38d55bb95d933978e7d73e43727850a49"
+    },
+    {
+      "path": "app/globals.css",
+      "sha256": "c0b5616ff8bd0c4579f762fa0e895562645289ec6ead7bbc029ae4791cb61ea3"
+    },
+    {
+      "path": "app/hra-pelvis-study.tsx",
+      "sha256": "9bc5daf1fc380cef80c21f97c3a83cb90f3a9385b5e986fb06edca6d5dc50245"
+    },
+    {
+      "path": "app/hra-pelvis-supplement.tsx",
+      "sha256": "be8825273881d8da435782d63becdd18c3df990675ccfb380bc26817da72fe81"
+    },
+    {
+      "path": "app/hra-renal-study.tsx",
+      "sha256": "80eed76f9ea02589327c29f56ad74d66eb1d58759578f03abab6e6cad775db6a"
+    },
+    {
+      "path": "app/imaging-comparison.css",
+      "sha256": "9adb002431b3bd733f533d65c69a99a2fcf6bdde0542511c7406df7cdcacf738"
+    },
+    {
+      "path": "app/imaging-comparison.tsx",
+      "sha256": "a890887d00f1a0593de8d1fb6872047adbcc82b1c5715fd3b365f535b5c391ae"
+    },
+    {
+      "path": "app/imaging-link.css",
+      "sha256": "ee0cd87e6ee32c14d6fad90bd3c739240d126eac026b9ac5cfd194a61cef1dc2"
+    },
+    {
+      "path": "app/imaging-link.tsx",
+      "sha256": "7119b61ed1d58aa31c828152e698d4bdcdcecece7fb7b66cda275d21e2ec59a3"
+    },
+    {
+      "path": "app/independent-study-navigation.tsx",
+      "sha256": "b76bf1f595ea238d44dcc85906a723553ba190d3a531fe86e5c2121658dc4679"
+    },
+    {
+      "path": "app/inspection-controls.tsx",
+      "sha256": "a4f51d9e92359c296e4fdbe3359f91cf59d70d06ac653d09029d217fa3c8c7d8"
+    },
+    {
+      "path": "app/inspection.css",
+      "sha256": "70a60f780e8d20643267526ca460805c1f8cae1c77e83b2fcf553e413ed350e4"
+    },
+    {
+      "path": "app/layout.tsx",
+      "sha256": "79a6abdd556a0eb06af9192fff1ef4b3c5e48fa4e4560cf4788b3d46d1969cdf"
+    },
+    {
+      "path": "app/nested-practice.css",
+      "sha256": "8e0c687cecb73a74e65f6a574ad0858237d9f61680732eafb140c760779f1591"
+    },
+    {
+      "path": "app/nested-practice.tsx",
+      "sha256": "b5541c479f67dd518556f99fd4ca6b8ceefad1a54dac3b29175798fe8dcdfb44"
+    },
+    {
+      "path": "app/nested-teaching.css",
+      "sha256": "d912bfc774cc744511a4c0e87a0a35f6b693def9f4bddc25b6f010f07dfa83bc"
+    },
+    {
+      "path": "app/nested-teaching.tsx",
+      "sha256": "502e0a1d13c65875963bc760ca01260bde329368fe6d3bf4162f98cf3de42744"
+    },
+    {
+      "path": "app/practice-panel-navigation.tsx",
+      "sha256": "e02be0b9fe8f12c2b52b27205880ae6a20d12bbf506cf91ce83cc36f352cf808"
+    },
+    {
+      "path": "app/reasoning-feedback.tsx",
+      "sha256": "835f5f3fa84c056c30be0851a2fee17b6d9d11a76dd74fe2827da5c948718791"
+    },
+    {
+      "path": "app/region-heading.tsx",
+      "sha256": "007ec5b75713d59cb83f2923b87ab1dc4c3394d1bd15cddf589d6962bcec2c6e"
+    },
+    {
+      "path": "app/related-study.tsx",
+      "sha256": "f9f30a264c8d1c2a38da3c67b0866fc901adb25e2f5c978309adf3f9b776e145"
+    },
+    {
+      "path": "app/review-status.tsx",
+      "sha256": "ba77751cc3d238a7126522eb957c2eeb196aeda998658ab8db45005a7caa263b"
+    },
+    {
+      "path": "app/scene-label-layer.css",
+      "sha256": "2c7a8f927e17f570fdcb83bb74010afc219f47d85d473e4b56c0c339f70ba53f"
+    },
+    {
+      "path": "app/scene-label-layer.tsx",
+      "sha256": "e5e9726bae8b040dd02be573df1994eff3ae844a846cf37394c85782ccc129e0"
+    },
+    {
+      "path": "app/scene-orientation.css",
+      "sha256": "49c0358f4dce010f4dc33f6e1676253bcb8a74128ec019e679d3234504a3ad23"
+    },
+    {
+      "path": "app/scene-orientation.tsx",
+      "sha256": "3f61ff986185e21dba29229728d891b99f2b23829b0cbdf8c1c9ddeef0275f55"
+    },
+    {
+      "path": "app/scene-recovery.css",
+      "sha256": "1686d995b28f2100c9033d420057554fb07d7c5f323f98346c93971a8c647e80"
+    },
+    {
+      "path": "app/scene-recovery.tsx",
+      "sha256": "c2b00f6a53f28b22f2815be96cd8a801ddd4d83540d0520f022c7e1923ec8616"
+    },
+    {
+      "path": "app/selection-visibility-notice.tsx",
+      "sha256": "3d1df340df0d0698de56da0c449f2b75020df44125d10f38566bb25b1c1ab39f"
+    },
+    {
+      "path": "app/selection-visibility.css",
+      "sha256": "2a5d482d10cbc725100ce98cac41267d759e64f123d79b218b664096b9aebb58"
+    },
+    {
+      "path": "app/source-display-notes.tsx",
+      "sha256": "57b83b84c0c2cc4fe005b57d798e61bc4fc74bbb5e89a11bd014fbdf2f8ba183"
+    },
+    {
+      "path": "app/specimen-removal-focus.ts",
+      "sha256": "eb7b9f29bbab0e9524a5162e0254d6c0561a773ad8bf9c7ca89cc59fefe3f362"
+    },
+    {
+      "path": "app/specimen-structure-search.tsx",
+      "sha256": "a345fa00ba55fd17800dc7bbcd15c3d74e812078716c6f236c27b3db747f6fcc"
+    },
+    {
+      "path": "app/specimen-study-link.tsx",
+      "sha256": "917d1979a27c27cb8d6b0024f508507950810a53b8ab8b9418d373b9095cf04a"
+    },
+    {
+      "path": "app/structure-navigator.tsx",
+      "sha256": "e22a53d59d24e4dc84cecb9a8c4b8ee84bc3198ba372412d10e90f96c3ed6899"
+    },
+    {
+      "path": "app/study-library.tsx",
+      "sha256": "414ac8a5d236e90044a44608c427b55a77dec2cd9c7df7f5ad5f2e064e1f61df"
+    },
+    {
+      "path": "app/study-links.tsx",
+      "sha256": "0880f8bce9a3b75fe602008136cc56aaa97e0b579795c77add7b9f6beea254fa"
+    },
+    {
+      "path": "app/study-surface.css",
+      "sha256": "7c9cdf1ba7e0be92beb8c01d37496466fa1dd291055634a7cf5889fb76e2b517"
+    },
+    {
+      "path": "app/study-surface.tsx",
+      "sha256": "635f4058e1418aa16bdb7e8a01047037ccf37682565227adefb207c2ecba9e6e"
+    },
+    {
+      "path": "app/study-views.css",
+      "sha256": "990575bf75078182028c3ed0c30985d842e7814623b82f99e7aa69a761a54f8e"
+    },
+    {
+      "path": "app/study-views.tsx",
+      "sha256": "6d1e76308517cc89bfa007344b68fa7b575729cc2a2733276627843eee1bdfcf"
+    },
+    {
+      "path": "app/um-knee-entry.css",
+      "sha256": "b68e0232a417ca07cc3ae07ed3e756c93833623981a5cf5323b7a71db7017339"
+    },
+    {
+      "path": "app/um-knee-study.css",
+      "sha256": "6a231afb04d42c5524506b2d4bee6e1e6e8fd7f7e4d46d6f1be7ce94eccecd36"
+    },
+    {
+      "path": "app/um-knee-study.tsx",
+      "sha256": "da403c020632fc371ef2bcbb4ebf30f28761fcfd5d05231d63aaba806c8cbc48"
+    },
+    {
+      "path": "app/um-limb-learning.tsx",
+      "sha256": "68032fe4e72628eb0af7c9b841aa4022512f39d2457779a069dee46fa841d6d0"
+    },
+    {
+      "path": "app/um-limb-motor.tsx",
+      "sha256": "b0cbc68e49b2ddb719a50adf4b0d982cdf77cadd3479f21790258a197dd2559c"
+    },
+    {
+      "path": "app/um-limb-study.tsx",
+      "sha256": "a9cb5b3d7446575a5b8f544131f14be5ce2edbd0afdc5a8125caba2b88d39181"
+    },
+    {
+      "path": "app/upper-limb-motor.css",
+      "sha256": "8642774fece7df3c1b7597191362bbd83efb87dc0b3a063fb457e274d809b496"
+    },
+    {
+      "path": "app/upper-limb-motor.tsx",
+      "sha256": "a6bc0bb6b529f13266fdadd2762eb96e4217b803624afede302bd1b85a043701"
+    },
+    {
+      "path": "app/venous-drainage.tsx",
+      "sha256": "9d62f0473a6c6f29400e603e40d77fd7aeae47bc552d7f67ea75b6e6806d3fc7"
+    },
+    {
+      "path": "app/ventricles.tsx",
+      "sha256": "56f6eba3b7f735be290f436958194b12cc5c0f4266c2c6d4ecbb879d84e4d405"
+    },
+    {
+      "path": "app/ventricular-relationships.css",
+      "sha256": "a0aa30cb8500f11382ddd18120660c8e4df68b60369e3b6c487f98b12f0fe743"
+    },
+    {
+      "path": "app/vessel-system-control.css",
+      "sha256": "18fcd0d43ca16191f9b20f5d6dbbe18ef9beaf8b50491f554ed75f8e39cd7946"
+    },
+    {
+      "path": "app/vessel-system-control.tsx",
+      "sha256": "5c31cb6fbe91d78eaca2f367c244fff629241688e637ae0e16365fb191bf814e"
+    },
+    {
+      "path": "app/workspace-session.ts",
+      "sha256": "7a2a73775b9eebebc50df257cc520f2f33499ebb7130f496a4b2cdfb46fc379a"
+    },
+    {
+      "path": "components/ui/button.tsx",
+      "sha256": "081d2a1cb4f3aec636a6894d9eff4e90d476d5db85b82d0399c1f4d18517112e"
+    },
+    {
+      "path": "components/ui/checkbox.tsx",
+      "sha256": "56b2869e5478f38238e6a3d8aefabfbe8af565b38b2ffad06466487b3eacf154"
+    },
+    {
+      "path": "components/ui/dialog.tsx",
+      "sha256": "8bc85def62538b4e62e8530c6b0ba167a192c38519c05f104bf6e10de73b811f"
+    },
+    {
+      "path": "components/ui/input.tsx",
+      "sha256": "6763c86c34c1c07826386d376f5da8fe2e41585bff3615716d5da88915e088d8"
+    },
+    {
+      "path": "components/ui/radio-group.tsx",
+      "sha256": "43f2d6c2f5bdd4a26c57d93e6f141be20472f9bb8777d9a0d61cd8a5e281a999"
+    },
+    {
+      "path": "components/ui/select.tsx",
+      "sha256": "45489c502a21fdd5271481d64ad8f762181c9653d8d26bdc6f75450b78c3c852"
+    },
+    {
+      "path": "components/ui/sheet.tsx",
+      "sha256": "adb432b6f9d7a4733caa45ba8bf510a8a7ff0f6d0dd3aa1f013959fb61268234"
+    },
+    {
+      "path": "components/ui/slider.tsx",
+      "sha256": "1bf16ef0b71435f474d7ce741da41bf99b9d9141d4ba01df3d6b12e04a3b8462"
+    },
+    {
+      "path": "components/ui/switch.tsx",
+      "sha256": "04b085443a1c6a72d408e6eb7dd45df881ca27814415b81b39f614806b52c8fc"
+    },
+    {
+      "path": "components/ui/tabs.tsx",
+      "sha256": "dd914d769bc223b5d5ea56839a7752e534eb475f8d2897d5675606c368bbca1f"
+    },
+    {
+      "path": "content/abdominal-arterial-pins.json",
+      "sha256": "173b19ad9e1ee70e9af87eea6dc4f9c026d5adbdce3d10975e27b35daa8c1573"
+    },
+    {
+      "path": "content/abdominal-arterial.ts",
+      "sha256": "8d3adf0135a17a01281b5cbdf3d9cbd62167849043c6bf4948382f8cb8956ec1"
+    },
+    {
+      "path": "content/abdominal-branch-imaging-pins.json",
+      "sha256": "5daaecd50fae68d64ef88d39237b6700b9f2bac3fa84f1a4792cbc05b3228d61"
+    },
+    {
+      "path": "content/abdominal-branch-imaging.ts",
+      "sha256": "5976ad5d71b7aceedb81e4bff184ac40486c051cd0d69efb128d81c3124b6bff"
+    },
+    {
+      "path": "content/abdominal-connective-imaging-pins.json",
+      "sha256": "dbc05a4607633f9091e194fa126b0639cc211cc992b3d8ab69500894c9ceccd0"
+    },
+    {
+      "path": "content/abdominal-connective-imaging.ts",
+      "sha256": "fbf6e45606abf122173359674b9c209181603b591ed940b032745df87ef5f955"
+    },
+    {
+      "path": "content/abdominal-organ-imaging-pins.json",
+      "sha256": "d5ac67a1dabadd7e1968d97cd0509e180ea07435a7355ac72c5905257827664b"
+    },
+    {
+      "path": "content/abdominal-organ-imaging.ts",
+      "sha256": "a0a0f57b5061048a8765cd9899c5467a98b66c81184b784ce0a93e710417a5ef"
+    },
+    {
+      "path": "content/abdominal-wall-teaching.ts",
+      "sha256": "b0da512ba08095bb8516538b11f6f052f5e1bd052f2a418fc1015602fe8f5896"
+    },
+    {
+      "path": "content/acral-attachment-pins.json",
+      "sha256": "d6bd3bea5eb2816d81fad9fa0ab637b2bee2aae62e22391d778552a332f29a8e"
+    },
+    {
+      "path": "content/acral-attachments.ts",
+      "sha256": "405044c503ea7c85586513f543b55b20b49d62b2a0a174e2e6b344d208a7f122"
+    },
+    {
+      "path": "content/acral-bone-imaging-pins.json",
+      "sha256": "863aa9a374ddd086a2f0a7fe56335582a94431ad98a69ea6caa7fbc4d952db73"
+    },
+    {
+      "path": "content/acral-bone-imaging.ts",
+      "sha256": "591ecb75daf091a4d6e00945e169724245ea6f0514f6ae8778b285f08d8b9f9e"
+    },
+    {
+      "path": "content/anterior-cardiac-pathology.ts",
+      "sha256": "a384a719203900d846f22f02dfafc5fe37549d8e3fb19bbecae1e5a7bb9e18bb"
+    },
+    {
+      "path": "content/arm-attachment-pins.json",
+      "sha256": "8b46b8ac7ab575aa6164350eb8e56f37dcf602c98ce2ed14cc840ab3e3a57714"
+    },
+    {
+      "path": "content/arm-attachments.ts",
+      "sha256": "cd8db74242ef42407a711740c7aec787571714732d491f14356c30acf1315245"
+    },
+    {
+      "path": "content/arm-vascular-studies.ts",
+      "sha256": "4def11852e5843a9ee57a298d4f69758f0b7bd2451f627a951985ca90bb15d0d"
+    },
+    {
+      "path": "content/arm-vascular-study-pins.json",
+      "sha256": "534d166d46212fedb3316c8113162f7e18ab70fe0adea43501af475796b92374"
+    },
+    {
+      "path": "content/back-bone-teaching.ts",
+      "sha256": "09580e7ee30c2c4dd951bde5a53b6c93168d43d3cab3ede337b88a102db7854d"
+    },
+    {
+      "path": "content/back-layers-clinical.ts",
+      "sha256": "aef46c639404b420803382ae7763c47b1f951d4903b68c91c5514955e1f093ea"
+    },
+    {
+      "path": "content/back-layers-teaching.ts",
+      "sha256": "6aa0130d732e155fa225829952e2ebba1702a650699b4cf9feaabde942bdfb41"
+    },
+    {
+      "path": "content/bowel-component-pins.json",
+      "sha256": "5c34d492f10406151508b9a7531cc80314c7c8d8f09fc518dc1e99a0e985fae6"
+    },
+    {
+      "path": "content/brain-imaging-teaching.ts",
+      "sha256": "584e9bcf307fbb67ee58fb203e6763ee3f1e2f2411f2706b76f32deba75d253c"
+    },
+    {
+      "path": "content/cardiac-teaching.ts",
+      "sha256": "0848e6de5820400a84fee5cfdff88ad406de07774aedafc10ec7ffdedbf0a72c"
+    },
+    {
+      "path": "content/central-neural-imaging-pins.json",
+      "sha256": "3395a863ca17220821a540ae016a2d864d421d2e57e61f5ddcdae81f57d940be"
+    },
+    {
+      "path": "content/central-neural-imaging.ts",
+      "sha256": "95ebfa3cc9e0da134286ee682fc5ec7194e3c9ac81d4e8dfd00e8706311145d5"
+    },
+    {
+      "path": "content/central-vessel-imaging-pins.json",
+      "sha256": "29610e12ec6864a4131874e0d3f6520597af3e65179fd0f009b216aff1371a63"
+    },
+    {
+      "path": "content/central-vessel-imaging.ts",
+      "sha256": "829915273c8d8f8f2b8fb064662d9cbf27d3cfa147701e00625f016fc830427a"
+    },
+    {
+      "path": "content/cerebral-arterial-pins.json",
+      "sha256": "8b6185b71ca1684f15480f224f3e9f4d873bdc109b72f27ef6bfb378a5225e64"
+    },
+    {
+      "path": "content/cerebral-arterial.ts",
+      "sha256": "b6917c427751f93555519e55ad25c364fbdfeb0b66afdb49bf0accd116731351"
+    },
+    {
+      "path": "content/cerebral-teaching.ts",
+      "sha256": "ba741cc7373be4ffad1dd7a04af2605d5a033bbe6d40723196241d89d905b1a0"
+    },
+    {
+      "path": "content/chest-wall-muscle-imaging-pins.json",
+      "sha256": "d8e371ae1188185393a28f5a70109ba2eb5f62b99cb7655e03bf4c2d50d9709d"
+    },
+    {
+      "path": "content/chest-wall-muscle-imaging.ts",
+      "sha256": "3d5d7552cb1d0ffa75fc031acf2b147edbb65b66b35ee76799815c0bbbf75e5c"
+    },
+    {
+      "path": "content/collicular-brachia-teaching.ts",
+      "sha256": "f805f4ab67d5d0ae82a0e2bd9116d0e2a7b31f837d05d349dd8cfabd1172428d"
+    },
+    {
+      "path": "content/common-interosseous-us-pins.json",
+      "sha256": "e87dc637251cc5660fbda6e8d753d5d2bd6e0765eb71db726e8366b4c1d1c01d"
+    },
+    {
+      "path": "content/common-interosseous-us.ts",
+      "sha256": "b271d3ac406a1be2c944d8c37fe18d73d168b4a111a29041ee142f647bd04120"
+    },
+    {
+      "path": "content/connective-imaging-pins.json",
+      "sha256": "904dba861d0d5ec45cd8bca9b2e8cf2457fbd9b295f4d692628d5fd4dcf28697"
+    },
+    {
+      "path": "content/connective-imaging.ts",
+      "sha256": "92070b2ee9dc0c0a4ced431486f5cdc2f1964955fecb15f37ceb578470be095c"
+    },
+    {
+      "path": "content/core-organ-function-pins.json",
+      "sha256": "7029a74519f083e854c8f06461e25885b6d21e4710749353c8a6d7704f50aaac"
+    },
+    {
+      "path": "content/core-organ-function.ts",
+      "sha256": "ea4eb8d886f03cab39025dbdcbf1a4a630be83f04254cf731eab7b580222afd3"
+    },
+    {
+      "path": "content/coronary-venous-teaching.ts",
+      "sha256": "ccae64c4d3c441cf681e756456f91fb62f3987f9939dbd1d11fb6c547f393155"
+    },
+    {
+      "path": "content/corpus-clinical.ts",
+      "sha256": "1f3af47828e50ba6ef9b7a32c9f877ed1aa5e323be6bb1285bc26028fb6b4b4c"
+    },
+    {
+      "path": "content/corpus-imaging-pins.json",
+      "sha256": "83c27111df8b3e83caa764d8040316b2bf352b102d1911f5840d8f6077b05884"
+    },
+    {
+      "path": "content/corpus-imaging.ts",
+      "sha256": "c6e45f351156738a2175bd3b759e38b948bd4d63c4719ace21a96cb8c027229b"
+    },
+    {
+      "path": "content/costal-cartilage-imaging-pins.json",
+      "sha256": "8f1822b41913232b7599eca84644a8c94dd346b4f0610d6e793c4d38d7b7abd9"
+    },
+    {
+      "path": "content/costal-cartilage-imaging.ts",
+      "sha256": "e9640bfbc9f79aabc5455717d3e69d2ce3849942d0800409336b2d6be9db00bd"
+    },
+    {
+      "path": "content/cranial-bone-imaging-pins.json",
+      "sha256": "c45e8bb107ee02a976c43fd47cc77305391e112fdeaf84c51e1d2bc3f7850be0"
+    },
+    {
+      "path": "content/cranial-bone-imaging.ts",
+      "sha256": "61087027fac4511522badf36e39e1958ceb4b502750285498aa11ad3e3df0b24"
+    },
+    {
+      "path": "content/cranial-boundary-clinical-pins.json",
+      "sha256": "5b96f1e7c224b32a86722624edd0d873ec3840bd3c062bc342dac74a95368f55"
+    },
+    {
+      "path": "content/cranial-boundary-clinical.ts",
+      "sha256": "a8e3ba710d2d1e33777bc2413bb6747ed379351dd781ca526a6a881d4214a35e"
+    },
+    {
+      "path": "content/craniofacial-organ-imaging-pins.json",
+      "sha256": "31862fac06154de73dc0d7a44a27b21455c65eda224bc498fe12e54ba079e757"
+    },
+    {
+      "path": "content/craniofacial-organ-imaging.ts",
+      "sha256": "3eb73bdc1d711e451c2627ce22ab91a3d8571277b2c21f9c44a7d550faf9fb6b"
+    },
+    {
+      "path": "content/cricothyroid-teaching.ts",
+      "sha256": "43e6e81da3b782aaefb0f806e57517edee327e1a24b9eaa748896aef93c033db"
+    },
+    {
+      "path": "content/cubital-studies.ts",
+      "sha256": "d64d5fc98ed1a8f91d3143b41e7945f013beaeb232d90e54ef0fb8f285bb1986"
+    },
+    {
+      "path": "content/cubital-study-pins.json",
+      "sha256": "e787db76a21b7c3844a74f86e72b61d380345fccd72503030863d97d43b631c0"
+    },
+    {
+      "path": "content/deep-venous-clinical-pins.json",
+      "sha256": "37d56c9087a81591788a26d0a82eaec67904937caed39691405a1f57eafb0e82"
+    },
+    {
+      "path": "content/deep-venous-clinical.ts",
+      "sha256": "de527730010b98e5f6de2f648b216bf920a55fac4af1b2b596791d24b39ed61f"
+    },
+    {
+      "path": "content/deferent-clinical-pins.json",
+      "sha256": "57278b5842bd9e28e037f4a24530f037337881680bcc15828c5e08f2642e9494"
+    },
+    {
+      "path": "content/deferent-clinical.ts",
+      "sha256": "27a7bc0a7b413baa952fba022db20b39af2760bea1238056b6d8bde44f73e7c6"
+    },
+    {
+      "path": "content/deferent-duct-study.ts",
+      "sha256": "175762062c00f6d92dbf5505cd50b4ab1b483f12e7d69161c0b53735dad66120"
+    },
+    {
+      "path": "content/distal-palmar-mri-pins.json",
+      "sha256": "f71c14fb42eb89fba747053d967364dd813b88d8f738a4a77817a7a6b0a39f1b"
+    },
+    {
+      "path": "content/distal-palmar-mri.ts",
+      "sha256": "174ad897535a6fbf3f56f66ce4781198bb26b19395cb70bbcad47acb209a8885"
+    },
+    {
+      "path": "content/elbow-arterial.ts",
+      "sha256": "9550d3887134e04f289cb3d7e39ab710340e0fcfec59c64419441fa4f4779c6e"
+    },
+    {
+      "path": "content/elbow-clinical-pins.json",
+      "sha256": "ac5932374e250c1b111f31ad0c12567e19eb2710a34e237314f807ef73de8898"
+    },
+    {
+      "path": "content/elbow-clinical.ts",
+      "sha256": "9b3a1ef8d411d89155e2719007d4eda5df217a4b358074c7d154ebaac2b4ed83"
+    },
+    {
+      "path": "content/elbow-studies.ts",
+      "sha256": "57f958516bc4750cfb7863c5c642fe4612b2c5b7deab09f7a455b57b4fbe71a1"
+    },
+    {
+      "path": "content/elbow-study-pins.json",
+      "sha256": "5289bca1081ec5e42e3e1cadcb8bcd63616fca38837b93460389db918489a5b1"
+    },
+    {
+      "path": "content/epigastric-vein-pathology.ts",
+      "sha256": "6afb107f31de04311a005ffa98ed8cf011dcdc7c3198cdf8c9c8ed70641c80a3"
+    },
+    {
+      "path": "content/eye-imaging-teaching.ts",
+      "sha256": "ff7d6582465ee18d20f915ee8686a1cf9840f40e936ec4db31f3b9a2a02a2065"
+    },
+    {
+      "path": "content/femoral-component-teaching-bindings.v1.json",
+      "sha256": "258bef0d9526cf5e2a471d49b397c8582fe4016945c9e6cd9f52e79c6a37a43f"
+    },
+    {
+      "path": "content/femoral-component-teaching.ts",
+      "sha256": "89dea170f1e583aa0d59806c1b210aaed8f39f0d02a32616b255fa0f25cb9dd4"
+    },
+    {
+      "path": "content/foot-joint-pins.json",
+      "sha256": "0cfede2414cd17126803a4cb294aaa744b5516323f802ecb9bc8234f5ee3b3d5"
+    },
+    {
+      "path": "content/foot-joints.ts",
+      "sha256": "abd13350b6efa6b79c19ec1669a646ba794d411de09a414a21b68bf407993f1f"
+    },
+    {
+      "path": "content/foot-muscle-imaging-pins.json",
+      "sha256": "0d64ea48081d3141c72effe8e5f637d2784f75032d680f591519d0decc53f533"
+    },
+    {
+      "path": "content/foot-muscle-imaging.ts",
+      "sha256": "80aba36ae5a6dfb3313510f75d414f96c27468d00c912c22b3d87dad5dfa2ba2"
+    },
+    {
+      "path": "content/forearm-arterial-ct-pins.json",
+      "sha256": "2631968bf877c2b0fda7a01bfd5925cf25c16f0fb804de54668051ad274a6e0f"
+    },
+    {
+      "path": "content/forearm-arterial-imaging-pins.json",
+      "sha256": "eae339a9d4868bfeff7310c35bc8391cb200c6a32893456ffae1758132c3cb51"
+    },
+    {
+      "path": "content/forearm-arterial-imaging.ts",
+      "sha256": "8786e98000b58eb6e256d6ccc73f3b653f3ffe714103a59822722f207b9ef791"
+    },
+    {
+      "path": "content/forearm-attachment-pins.json",
+      "sha256": "480a3bdf5cd98008ae11b13bc02a4d3fb5413b87ae0c7b3e4d2830031e700763"
+    },
+    {
+      "path": "content/forearm-attachments.ts",
+      "sha256": "d5c237f8ce42245e736cfbbb145e98bd9d731d1d782445e7f4efb78774f0bd66"
+    },
+    {
+      "path": "content/forearm-muscle-imaging-pins.json",
+      "sha256": "0d8aa48f409c7dc3a9e8b9fdb1e0b54c4bcbcd85c979a8828b347782e0df2db4"
+    },
+    {
+      "path": "content/forearm-muscle-imaging.ts",
+      "sha256": "3997414ad4f60fd6a9f2689bb02aea230aa7ddaa01190640dc8638150a280005"
+    },
+    {
+      "path": "content/forearm-superficial-vein-runtime-pins.json",
+      "sha256": "cb864bdb2d08c8585091a9c7a0cad37392d8b7aff374910d16ea01478a0916e6"
+    },
+    {
+      "path": "content/forearm-superficial-vein-study.ts",
+      "sha256": "6ad60f58f4131df71d35580d086729b27c39cd4d2f0819a5464df43293960053"
+    },
+    {
+      "path": "content/forearm-venous-imaging-pins.json",
+      "sha256": "81dd9bcdf0dae7cfcac45d099a960d69d5ff39598a815b8103798382e685c490"
+    },
+    {
+      "path": "content/forearm-venous-imaging.ts",
+      "sha256": "4b003f2e5d91186b05429989a28f9b4162e9364043736fa5e9d0199b59da0332"
+    },
+    {
+      "path": "content/genicular-clinical-pins.json",
+      "sha256": "f2a6a81d0079672bc863d7080c2848ffa049db7cb465c9309adce5548f4e22ff"
+    },
+    {
+      "path": "content/genicular-clinical.ts",
+      "sha256": "64b316c9ceaafa17e35b2c0c7e7bcc645ddce32822cbc809b2e3f77e477da27a"
+    },
+    {
+      "path": "content/genicular-imaging-pins.json",
+      "sha256": "365a921cf5fa507c682f067df6762dd6759e21c4c686442129bc3f2e3103e9f2"
+    },
+    {
+      "path": "content/genicular-imaging.ts",
+      "sha256": "c95faad0c2c4fe2a5fcc5c6f04e2f1dda92abf1452c9305d4b27c59647f5e259"
+    },
+    {
+      "path": "content/genicular-study-pins.json",
+      "sha256": "fb98f5cedf269b60b8f25e5acada14d44961196478858502f3f48d1cd498890d"
+    },
+    {
+      "path": "content/genicular-study.ts",
+      "sha256": "e3990bacdac2466a03bfec56e5fc8eecc0767b1f474d5b161e16cb84d5a1cfaa"
+    },
+    {
+      "path": "content/hallux-xray.ts",
+      "sha256": "e6bd2b81a637f4bf170631d035b98aa7be96de11f101086364939d5579505311"
+    },
+    {
+      "path": "content/hand-bone-xray.ts",
+      "sha256": "624460d95748280d06636823375e34fb2779e68f235f6064198268d9430bee6d"
+    },
+    {
+      "path": "content/hand-intrinsic-studies.ts",
+      "sha256": "52e2b0d6e28648493f16f9fffb2fa56b5d54f2889c76d866f22bb49041979b85"
+    },
+    {
+      "path": "content/hand-intrinsic-study-pins.json",
+      "sha256": "c07c384a943ac8341d8da2ca6098b13a5ee179c45991300374d9e09f16096d98"
+    },
+    {
+      "path": "content/hand-joint-pins.json",
+      "sha256": "8dca1c9b298ee5a1a33efad161acef8f3d05de5f443ea69644c027d72a3a8e26"
+    },
+    {
+      "path": "content/hand-joints.ts",
+      "sha256": "c7062b9b6a416f575687d3d30da43137d4e1bbe9f7ebf9fcccf5ee930315b74c"
+    },
+    {
+      "path": "content/hand-muscle-imaging-pins.json",
+      "sha256": "0f6a3a095f2e7db3f358ea19c6ab2ad42f915c975c543281a3684cebd651204f"
+    },
+    {
+      "path": "content/hand-muscle-imaging.ts",
+      "sha256": "e91d54120b06c48f163ee9ddb84b646c96a40d0c0ef13d4e4f9749c22c1125e2"
+    },
+    {
+      "path": "content/head-neck-vessel-imaging-pins.json",
+      "sha256": "c1fb20037d691a8b507272ca857317ef9d4bf70b6203cc1565833b10c9bf94e4"
+    },
+    {
+      "path": "content/head-neck-vessel-imaging.ts",
+      "sha256": "f1bd1059c712beb66b4120f1541443d89decd349f072183ffa4766507109524a"
+    },
+    {
+      "path": "content/hepatic-teaching.ts",
+      "sha256": "0c93b76eba32feb4e5c1d0f139fccd416645dad6419b1e59bb97b043c534a654"
+    },
+    {
+      "path": "content/hilar-vessel-xray.ts",
+      "sha256": "911bf8878bc03e6b9eeb751626e1e822bb5599a675cf99ef4da961b0892f07e5"
+    },
+    {
+      "path": "content/hip-abductor-xray.ts",
+      "sha256": "cbec6faa8e72189f423c3a76fdddb876b9fb1eb8579aa02629f03c187663a691"
+    },
+    {
+      "path": "content/hip-attachment-pins.json",
+      "sha256": "65798b1ae2d44f2d9a10d9b88fb4c549d76ab848d4ea4fa236e2140d3f40b5ec"
+    },
+    {
+      "path": "content/hip-attachments.ts",
+      "sha256": "46a78e7d499b487bdebfd9b7c1cf5e6c2d58f73d390c199e4872b177ca8f279f"
+    },
+    {
+      "path": "content/hip-imaging-concepts.ts",
+      "sha256": "d4f9b63d17e1a870f7c3bb74edcf77296f361446de8598a3d7f0ffd62285262e"
+    },
+    {
+      "path": "content/hip-imaging-pins.json",
+      "sha256": "aa6a306d480e42c8af77a628537fcb7fd694217e97a93e60bbd824c5fa8103c5"
+    },
+    {
+      "path": "content/hra-pelvic-teaching.ts",
+      "sha256": "37d738d68742247e45d59b00a040626694e4b21bf547ec938686c62f8d61c492"
+    },
+    {
+      "path": "content/hra-renal-clinical.ts",
+      "sha256": "56a4b179bdce07846f126645351398a2912e6ee29b7ca07768a2821b0f785933"
+    },
+    {
+      "path": "content/hra-renal-teaching.ts",
+      "sha256": "71062f6e1be8255d660575d45ec19099b644d9383a8d0318a3e013ce5f952ac6"
+    },
+    {
+      "path": "content/iliac-arterial-imaging-pins.json",
+      "sha256": "6abb3fc545c8810c55ad12acb14c55cde194874e6d181193a38f33a0a257a6a9"
+    },
+    {
+      "path": "content/iliac-arterial-imaging.ts",
+      "sha256": "1977792c07f8410c98babe944a55ceb0a08741273a34cc19187cad61a6fdda67"
+    },
+    {
+      "path": "content/iliac-venous-imaging-pins.json",
+      "sha256": "debbe9dccde975f58e35aeddb609a9e746b5c83723e2434a80a56d59e1235f4b"
+    },
+    {
+      "path": "content/iliac-venous-imaging.ts",
+      "sha256": "73444dbda06f5b703cb63deb71e98ab1abfb4821e2cb8a4b3dfb0e6136a44b26"
+    },
+    {
+      "path": "content/inferior-epigastric-study.ts",
+      "sha256": "6dcae13f43d2ec4279f89f17bc277e1ca0a45c0f7949fb4cf88bb4415eeaed47"
+    },
+    {
+      "path": "content/inferior-thyroid-context-pins.json",
+      "sha256": "1928f2ecce49146511325abe3fe6331291dcbbbb0ca6308f99e95be2353f07f8"
+    },
+    {
+      "path": "content/infrahyoid-layer-study.ts",
+      "sha256": "fc769248ed0ebe18572288b09793ebc37810d959ab333cde18a58e1f38d10e02"
+    },
+    {
+      "path": "content/lacrimal-drainage-imaging-pins.json",
+      "sha256": "0274e9775d804df06979cd9984a9f27083e22b2eb4aeee8ba1f3de1a46f54826"
+    },
+    {
+      "path": "content/lacrimal-drainage-imaging.ts",
+      "sha256": "f416f0caadde905b7ab573f48589ec20d5f30c128d411c470c44ec70da63bed4"
+    },
+    {
+      "path": "content/lamina-pathology.ts",
+      "sha256": "80c09cb2ff857919234e558d1c41b05227b477d6bf2505f66c39937772fd587d"
+    },
+    {
+      "path": "content/laryngeal-framework-imaging-pins.json",
+      "sha256": "030bb160287d5f40b9817cfb1166e8284d26694f941e72ee79ed82e0aa93a31d"
+    },
+    {
+      "path": "content/laryngeal-framework-imaging.ts",
+      "sha256": "1de41b8b83d17ad76a4dc6df7262aa86c713cf6717c7e1ebc460d930f60972ec"
+    },
+    {
+      "path": "content/laryngeal-imaging-pins.json",
+      "sha256": "97af73448c9063517468aee21c881a6df3b2fc2f4fd8e6a004c98a58a3607338"
+    },
+    {
+      "path": "content/laryngeal-imaging.ts",
+      "sha256": "bfcced54a94c0b349fdbd433dbdb015dd9b654c2a434d58fb12da85e2a04efad"
+    },
+    {
+      "path": "content/laryngeal-muscle-imaging.ts",
+      "sha256": "0a9c09e86550b6253c4796ef1f91cfc743d3029d098f2ebdd66bb34c40b9b7cb"
+    },
+    {
+      "path": "content/laryngeal-muscle-teaching-pins.json",
+      "sha256": "b0935e1a49d5c122ac90981b04d229f8af9848eb6d467723d004a36701995bba"
+    },
+    {
+      "path": "content/laryngeal-muscle-teaching.ts",
+      "sha256": "546ae11608072f7ee5f284fae0834e6d8e3d048fb166f57f880205264d057e95"
+    },
+    {
+      "path": "content/lateral-cricoarytenoid-us-pins.json",
+      "sha256": "87c96089e76eaf7797774fbb89c14e844420e50386ae195581cbad13cfdeba0f"
+    },
+    {
+      "path": "content/lateral-cricoarytenoid-us.ts",
+      "sha256": "0863a4767dc1dc0966419bcc82f06054dee3827c8404f583599ea19df91db86f"
+    },
+    {
+      "path": "content/leg-attachment-pins.json",
+      "sha256": "42a6e0bfaef06211828d82a7b368c3ea3f3709e4876221ccae66f315f79dc7d4"
+    },
+    {
+      "path": "content/leg-attachments.ts",
+      "sha256": "bc23247dfe8603979bc09402595887017e4b43365bfd0c9d8d9956eb28b02494"
+    },
+    {
+      "path": "content/leg-muscle-imaging-pins.json",
+      "sha256": "8871bf36ae747e3b3a3dd8ce3b3646fe6df9db6e84687478ed993ba71b654196"
+    },
+    {
+      "path": "content/leg-muscle-imaging.ts",
+      "sha256": "da36f669814e010c544f116244e7b6a98e6ab7e0f019397a2fb94e1376542289"
+    },
+    {
+      "path": "content/lesser-toe-xray-pins.json",
+      "sha256": "9c599bbcd87dc82b8e52e72c9141d23f2c9ffa1fb6d43bbdd2a32b120d6a9221"
+    },
+    {
+      "path": "content/lesser-toe-xray.ts",
+      "sha256": "139e76cb574d0a0342f472ef68fc53547aef47fba638becba42377d2b2176b9d"
+    },
+    {
+      "path": "content/limb-bone-imaging-pins.json",
+      "sha256": "02689b9c5b4005a168ec25eccc3519d23bfe8c04bdeeb4bb9c3e4d879c6061b7"
+    },
+    {
+      "path": "content/limb-bone-imaging.ts",
+      "sha256": "b36b62f4c334c86c590158e71aa0ffb84299acfb856ea3e29a8d3fdfa8f38160"
+    },
+    {
+      "path": "content/limb-vascular-studies.ts",
+      "sha256": "825f08810f16ae4d409e89a6579f78f739843d192cdb2f9946314c1c30227908"
+    },
+    {
+      "path": "content/limb-vascular-study-pins.json",
+      "sha256": "2d0508aa622e396af8aa7412403c0ccf58bccc06ea4d5d1f9c6c9310d96c4876"
+    },
+    {
+      "path": "content/limbic-landmark-study.ts",
+      "sha256": "61af256e33919e18b87b456e57fff9f8020832fbf7e36a3c3154f42375e5c948"
+    },
+    {
+      "path": "content/longus-colli-attachments.ts",
+      "sha256": "ce22faa4316e6ee72582720efa87fc717820c0410fbe7303c8b6102579382afc"
+    },
+    {
+      "path": "content/longus-colli-studies.ts",
+      "sha256": "586cde809529f252ff037874a5b756228ccc463128616b0c160a82a1f4797216"
+    },
+    {
+      "path": "content/lower-arterial-imaging-pins.json",
+      "sha256": "367400e457a0cd5076b223312fb63686fd48f412ddf23116425ad1338b50e2c0"
+    },
+    {
+      "path": "content/lower-arterial-imaging.ts",
+      "sha256": "c7de12b3f630344c3ba9feb273032a44d8b72fc599be2e1eee3e32b3123516f2"
+    },
+    {
+      "path": "content/lower-limb-arterial-pins.json",
+      "sha256": "274b0d2880de0b3f536f05858893c150cedb1230e0c14e2de84ecb1b4d9aba1b"
+    },
+    {
+      "path": "content/lower-limb-arterial.ts",
+      "sha256": "f5458ec67d394e37d50a578ec71291f16582a3645a097ff8a503eee6692b68dc"
+    },
+    {
+      "path": "content/lower-limb-motor-pins.json",
+      "sha256": "d397cac59e5a0428e803278a16f9acafa0836f9e1aaa1d2fe7f6e14cbf289928"
+    },
+    {
+      "path": "content/lower-limb-motor.ts",
+      "sha256": "b94da1bcd39a91f513565135cb8a4e70c64998fff05aaba8df8a83d7f156f36b"
+    },
+    {
+      "path": "content/lower-neck-study-pins.json",
+      "sha256": "1e6dab5b8cad36ddd54c6734c2ae0f8f3370f366390e631ff1e3fb8da4990843"
+    },
+    {
+      "path": "content/lower-neck-study.ts",
+      "sha256": "792618b31ed43df22c4bff4c1ff8a1649166a6353044a9b4ae75289bfe79cb0d"
+    },
+    {
+      "path": "content/lower-venous-imaging-pins.json",
+      "sha256": "4c981696a009e463c912b90d2ede3540ad527401220386fed3b77aeb873332d4"
+    },
+    {
+      "path": "content/lower-venous-imaging.ts",
+      "sha256": "107dc5c3938bfe14c68d717ada5e703f7f3ae05462f50612827f3eb5265bc66b"
+    },
+    {
+      "path": "content/main-bronchus-xray.ts",
+      "sha256": "20f0d740967f88c06c28a09d1ea7f9becae8fd3299756c178c8898d46294f683"
+    },
+    {
+      "path": "content/major-bone-imaging-pins.json",
+      "sha256": "e4153373cc1cbb0ae558759a731b15568aaa9fdf073138cf0df8d98df5274cad"
+    },
+    {
+      "path": "content/major-bone-imaging.ts",
+      "sha256": "bb3a32051e7e62e61ca8375300bd1d8ee5e6ce018402d17f8427aad1daa46ae1"
+    },
+    {
+      "path": "content/major-organ-function-pins.json",
+      "sha256": "9d5f9c179ce3eb5daa4a7e21dd2da83fa7e531051a969841f465d295d6d39561"
+    },
+    {
+      "path": "content/major-organ-function.ts",
+      "sha256": "6a38862dceedfb4d17a8610b954efa1d4a6a1925528091515bc2cabe0fd13c45"
+    },
+    {
+      "path": "content/mediastinal-organ-study.ts",
+      "sha256": "4307af9d54321db061a743e24faab1838487c220b3cc110528bf860002200767"
+    },
+    {
+      "path": "content/mediastinal-xray.ts",
+      "sha256": "8ae8c1235315cb5b78c63332e90a52667e54c8a695d909fd8753aed905e9b9e6"
+    },
+    {
+      "path": "content/metatarsal-surface-imaging-pins.json",
+      "sha256": "323e74b613713ea121e23a19ee35739d5731b0f28ca8647cff90ca61c8b40b1d"
+    },
+    {
+      "path": "content/metatarsal-surface-imaging.ts",
+      "sha256": "79229d3004f83592a077527209bccd403ef9e61e9e127881110b4a909e247267"
+    },
+    {
+      "path": "content/neck-attachment-pins.json",
+      "sha256": "d2f530522d72e3aebf22c41a09164f352b896b8aaeb34d361213721aa75d6f15"
+    },
+    {
+      "path": "content/neck-attachments.ts",
+      "sha256": "c73802bb9c51b4bb575b83d08ddf6c516047512687c8e0b2b4727f301ae79a0b"
+    },
+    {
+      "path": "content/neck-teaching-pins.json",
+      "sha256": "41a3d3c5de3675b47392b7683a64d41e8c012114772c2a459e4b4d0ce61f69fe"
+    },
+    {
+      "path": "content/neck-teaching.ts",
+      "sha256": "587364471b352822e6fb1debb036890906655d8cec61ac2ee70975b7eeb0c561"
+    },
+    {
+      "path": "content/nested-review-bindings.json",
+      "sha256": "ae98b0279003f76f48f2409c51fefc563ce461670284ce36897dd28fa01690f3"
+    },
+    {
+      "path": "content/nested-teaching-bindings.v1.json",
+      "sha256": "eee2e2c777674822b19d6f2d4dc7c3481b45e123915bfae565ab02bdba6a86fa"
+    },
+    {
+      "path": "content/nested-teaching.ts",
+      "sha256": "7bfb61c51a22046b50c5c411ba09223a5d0536b7adfef07990dd54b6caabbbd8"
+    },
+    {
+      "path": "content/ophthalmic-nerve-studies.ts",
+      "sha256": "4dad953a18972048d20d756a4358a52fb3742f4fefe6502e747df7900822581a"
+    },
+    {
+      "path": "content/orbital-neck-muscle-imaging-pins.json",
+      "sha256": "fb352a056f2fd5ae7693c70ef9c5f3083f358613d3cb78850cd41697371fb6d4"
+    },
+    {
+      "path": "content/orbital-neck-muscle-imaging.ts",
+      "sha256": "d8273c7b122422a39bd5239bd07714a13e4497ec927f8e82c24d829d0552e67e"
+    },
+    {
+      "path": "content/orbital-nerve-mri-pins.json",
+      "sha256": "33a215708e04d1535dbda08e4b54f1bf0eb2174a884a78eef130e25a02124825"
+    },
+    {
+      "path": "content/orbital-nerve-mri.ts",
+      "sha256": "dc494dd0da11730385db2cf13b73a25d445ccf0e1c6406d7c206d5f7b2a49d8f"
+    },
+    {
+      "path": "content/palmar-arterial-imaging-pins.json",
+      "sha256": "cf81abd900c15e1a598c4c1e1e2a7e9fa3fb7c0e1e3e13142fc32eb0ebef77aa"
+    },
+    {
+      "path": "content/palmar-arterial-imaging.ts",
+      "sha256": "07fb960a774eca06b0fa0bf0891782acb848793d4a23ba52ecb2c089a25c6d65"
+    },
+    {
+      "path": "content/pancreatic-teaching.ts",
+      "sha256": "9e8a890f18d9dc9fb5105e854340db4623e762a0785dd4c08b8e5f4d80773817"
+    },
+    {
+      "path": "content/pelvic-organ-imaging-pins.json",
+      "sha256": "244a6414a66c44ddbda0b923475a8b64e278557b4894d8ef13252a952bdb9e97"
+    },
+    {
+      "path": "content/pelvic-organ-imaging.ts",
+      "sha256": "03ea9bced422d20534a6760feaa199c46a0780533360fe3d58ea2b0a98f536aa"
+    },
+    {
+      "path": "content/pelvic-urethral-study.ts",
+      "sha256": "bda972aa5764d853abf80b2a23596efa27d06141f789a116080d3d0bc4559afe"
+    },
+    {
+      "path": "content/pelvic-vein-study.ts",
+      "sha256": "3a998bf0de20529cfef1026a728316ac8a686d903645c8e16f82355645e242fd"
+    },
+    {
+      "path": "content/pelvic-vein-teaching.ts",
+      "sha256": "bfb85f8ecdea32105d9db39d8cc5e7466d0003347afa98c45adcb0b0b000c8db"
+    },
+    {
+      "path": "content/pes-anserine-study.ts",
+      "sha256": "5de0780dc9640509da5cc0231b70e6186030e5b858821b0f2b4ea34d8d023388"
+    },
+    {
+      "path": "content/pica-clinical-pins.json",
+      "sha256": "9062459d73e0f82ae5487d2323c2680017ba78ea99231789564520eb8d1a1676"
+    },
+    {
+      "path": "content/pica-clinical.ts",
+      "sha256": "d3c74eb672d1f295dffc2379d8f399efe52de6164f7db9cb73fef167d6c21196"
+    },
+    {
+      "path": "content/plantar-arterial-ct-pins.json",
+      "sha256": "e90051ef2ff92caac810c77c0810c46b46fad70c47f2b5f208f1db15719d5ca5"
+    },
+    {
+      "path": "content/plantar-arterial-ct.ts",
+      "sha256": "c165473a0fb03e97d03203b40f137f09439cc6ffe81f5495858130844d212eb1"
+    },
+    {
+      "path": "content/plantar-arterial-us-pins.json",
+      "sha256": "2710666176b6e6bf9f2302a68fedc945a761f33a174d9b0eadc7e21b0a3c3f5f"
+    },
+    {
+      "path": "content/plantar-arterial-us.ts",
+      "sha256": "d19f8f61e38dff99ff256d4d25867c40a8fc2a5ed6031707cd5a27bf97c78e74"
+    },
+    {
+      "path": "content/popliteal-vessel-study-pins.json",
+      "sha256": "d0f4f1875c2f3a9b281a90c8d6675f063c7427d4648cda7b3961106ad71eb1f8"
+    },
+    {
+      "path": "content/popliteal-vessel-study.ts",
+      "sha256": "abc5e21efacfde75edb96b34e3a7e218968983d323f078f5381fe3c950a366f3"
+    },
+    {
+      "path": "content/portal-hepatic-clinical-pins.json",
+      "sha256": "3de44ba2dfb2c2084e24df547d5ded9e53f622a386f14a1add022ffb2ee9e9ee"
+    },
+    {
+      "path": "content/portal-hepatic-clinical.ts",
+      "sha256": "6e3c1cbc688a2fdd33514c00fefecd4f9d0bab5572b5aebd7ad661f928ce3767"
+    },
+    {
+      "path": "content/portal-hepatic-study-pins.json",
+      "sha256": "9866bd13b8284542e2cb110192b58860ed7237545f6f34b3518aaac02a8a849c"
+    },
+    {
+      "path": "content/portal-hepatic-study.ts",
+      "sha256": "be65b83468eb1d9f15a91ebcf2c3426ceafc5ebd6560c9e285aac91dffa88b54"
+    },
+    {
+      "path": "content/posterior-mediastinal-study.ts",
+      "sha256": "d07a11bda4ab63ad6ba2098efa80d5afa676aece071352599385b37549516924"
+    },
+    {
+      "path": "content/proper-digital-teaching.ts",
+      "sha256": "e3d3bfd651987ba881c3b7a11dc6a0a07ef9135c73554d43de2a74b839952012"
+    },
+    {
+      "path": "content/pulmonary-teaching.ts",
+      "sha256": "0abe50a77f1a4e64eabd51bc2be39a0798ea2aa567625acb5201b58872934b0a"
+    },
+    {
+      "path": "content/rectal-deferent-imaging-pins.json",
+      "sha256": "61b579bca6028f5812619b9ee8bf5308a9ef5b74213522e48f1ce7158144ddd6"
+    },
+    {
+      "path": "content/rectal-deferent-imaging.ts",
+      "sha256": "c4f8c16e116a3a15923642ca51c2268dda8784f38754511e9aa085f9d654518f"
+    },
+    {
+      "path": "content/regional-branch-imaging-pins.json",
+      "sha256": "9fdb5451f4228321d8fe7af815397f01c283ed3d2dcf4178966ba2c0f1e59f68"
+    },
+    {
+      "path": "content/regional-branch-imaging.ts",
+      "sha256": "e7f36ff635614115799848acca5324a73bd06c23eed1bc47fec21abd93cc7bd5"
+    },
+    {
+      "path": "content/regional-vascular-clinical-pins.json",
+      "sha256": "40b986e14425839098bfd2dae24f9c5d7a604205b32c8814908a63f6c85c8a07"
+    },
+    {
+      "path": "content/regional-vascular-clinical.ts",
+      "sha256": "a13e3d27e86dd9334a68781343db060cd1e9ecab45df992c796d67e3cbec054b"
+    },
+    {
+      "path": "content/renal-teaching.ts",
+      "sha256": "7512d9ce196363f9349e6740fd4a0fad9122f3677e468dfa9a411423ff5c8163"
+    },
+    {
+      "path": "content/review-revisions.json",
+      "sha256": "adba7cca7307bbe23b9ead2fc4fb6025e44869e01ff06a31827cffbafc389489"
+    },
+    {
+      "path": "content/sca-mca-clinical-pins.json",
+      "sha256": "dad3b1addb1dba6e2237eeb13829ce5eb229dcf42e924d89f4f13e19dc6f879d"
+    },
+    {
+      "path": "content/sca-mca-clinical.ts",
+      "sha256": "147c5f95e7d9d588dd678adb02c1c3dd32cc581cf89a704896ff1c4c8f0790d1"
+    },
+    {
+      "path": "content/short-ciliary-pathology.ts",
+      "sha256": "6cc88d0a6b9620920c2a3a8326a6784610087ae1fa00dcc30cd8a0e542629f91"
+    },
+    {
+      "path": "content/short-ciliary-teaching.ts",
+      "sha256": "fb2889d7dcec287401b5b633c75b1b6999e3d0abbd9fc749d5c8c7ae60913f40"
+    },
+    {
+      "path": "content/shoulder-arm-muscle-imaging-pins.json",
+      "sha256": "c19f5a4d20cbd492c512529ef70c7681c5bce7b36343e0bddf75778f4d7e8813"
+    },
+    {
+      "path": "content/shoulder-arm-muscle-imaging.ts",
+      "sha256": "f1362fbc88cebd958073b476b3aa44eae847091fe265e9194971ae5e4360d0c3"
+    },
+    {
+      "path": "content/shoulder-arterial-mri-pins.json",
+      "sha256": "7eeb5ef24a0a87fc42606f6b0a620adabf5ef79b666e8907b3f245887761fae9"
+    },
+    {
+      "path": "content/shoulder-arterial-mri.ts",
+      "sha256": "e9ea55d29364250ae5aab7bcc77f6dec9a80de3cc26b2f3ceb085a3fd4e90d16"
+    },
+    {
+      "path": "content/shoulder-xray-bindings.json",
+      "sha256": "f3e544bf002d4bf8ab0101f5e300e207fff74296f156378667ecc7fe3de10975"
+    },
+    {
+      "path": "content/small-intestinal-mesentery-mri-pins.json",
+      "sha256": "6272b6a4b781a50333d527ffa84c63d081c86958ce739174bbb7d95ca04ccc12"
+    },
+    {
+      "path": "content/small-intestinal-mesentery-mri.ts",
+      "sha256": "6ef7d1e95dbf84c797ceba73bed24dfc27898ee9cedca55a41df127bf7301d93"
+    },
+    {
+      "path": "content/spinal-disc-function.ts",
+      "sha256": "1d7d5f9883edea19a2339dd0c7da90d711ea9df6c3dfede922dd380ca307d4ef"
+    },
+    {
+      "path": "content/spine-imaging-concepts.ts",
+      "sha256": "c38defc6224bfa043651d3f338bc9dc389e2e6b700a8f8f95ec719af01258855"
+    },
+    {
+      "path": "content/spine-imaging-pins.json",
+      "sha256": "4976164571345045f0a0c8d1a16f12afa4122858ecd522fc9ea3949ff18bc6de"
+    },
+    {
+      "path": "content/spine-pelvic-muscle-imaging-pins.json",
+      "sha256": "909170521ff3e07d02ca4a6f9e37b3b21085ab701a8005fc723a2a91c028d32d"
+    },
+    {
+      "path": "content/spine-pelvic-muscle-imaging.ts",
+      "sha256": "199970087d2e10d264c3c86c91cbe1151116a32f7b51637d1cf583586ac13416"
+    },
+    {
+      "path": "content/systemic-venous-pins.json",
+      "sha256": "675c7fe7bfd3e3a24eb02377f3522c59fa949b9ac9ff6a5499ad49f0e42e6ff0"
+    },
+    {
+      "path": "content/systemic-venous.ts",
+      "sha256": "b209da089da96d8585e069c2fa04764ce04d2ffd68d61ba236175e2a8b6a5bf2"
+    },
+    {
+      "path": "content/tarsal-imaging-concepts.ts",
+      "sha256": "e146ed00759aed768aa21b10f209ba6257068dc9446ded8c66b0efcfb577e4a0"
+    },
+    {
+      "path": "content/tarsal-imaging-pins.json",
+      "sha256": "40eaf4348d262d96756925b0ca26ef94fd88b7f5db2974c09e1a7320a0026bf3"
+    },
+    {
+      "path": "content/tentorium-studies.ts",
+      "sha256": "7dc07b8f6ff0b466a9f184923860c80a249dde8f39edd0f1b27b86f01e5494d0"
+    },
+    {
+      "path": "content/thigh-attachment-pins.json",
+      "sha256": "db88abba781f39124b5b7fd63a641d6e60e4e5c349e8e14527dd74f6b0155d77"
+    },
+    {
+      "path": "content/thigh-attachments.ts",
+      "sha256": "006046193ee41279ceb1be406b3cc182ed05aabef5bb49db101b25dc053ad202"
+    },
+    {
+      "path": "content/thigh-muscle-imaging-pins.json",
+      "sha256": "b062dc8f8d42992617d43dabe2dbaaa48c3bcf3bfc59410729e5cd5e66f5dc61"
+    },
+    {
+      "path": "content/thigh-muscle-imaging.ts",
+      "sha256": "d571c8a4f0f76358983b4b15257219ef15c8c609577fc2e7ebb8ea2ada788e61"
+    },
+    {
+      "path": "content/thoracic-bone-imaging-pins.json",
+      "sha256": "4d62f8c112fa9cbf0aa984e9ae5e888f72400336630117e52b3271a1f08573f5"
+    },
+    {
+      "path": "content/thoracic-bone-imaging.ts",
+      "sha256": "1929be45d018e3803ac092f803e87e26f9db7e8458c6046e3d404383ef0941c2"
+    },
+    {
+      "path": "content/thoracic-branch-imaging-pins.json",
+      "sha256": "d178da82b85301f1dd0fa00c052b7d24d68860c4700db078c370203b1430fa5e"
+    },
+    {
+      "path": "content/thoracic-branch-imaging.ts",
+      "sha256": "519d12bdaa31fe1e062616a96c35b238c1fe313c882339ee893c92d8b828450c"
+    },
+    {
+      "path": "content/thoracic-hilar-study.ts",
+      "sha256": "29337537b45c066543ef0ee4010c4d6dfe2ca985b09726f3fc894535c34c4ac8"
+    },
+    {
+      "path": "content/thoracic-inlet-xray.ts",
+      "sha256": "4c5ab647f20be853b81b626c99e81318acd3f9884593d08b225c906d93cea5de"
+    },
+    {
+      "path": "content/thoracoabdominal-organ-imaging-pins.json",
+      "sha256": "e8c92ef7101f083c10c75c0b109c5bcd58197fe5a307ffd8203fcfee8d66a129"
+    },
+    {
+      "path": "content/thoracoabdominal-organ-imaging.ts",
+      "sha256": "bebed40490aa6ba882c6a53d54db529564be3a3ee556d724605ba2748febcc06"
+    },
+    {
+      "path": "content/thorax-central-airway-study.ts",
+      "sha256": "140b9bcd802fdf31e5498bc822b9691022fdcb7898730da22406fdd00b128888"
+    },
+    {
+      "path": "content/thorax-motor-pins.json",
+      "sha256": "ebd0fd6ca7d90f9229b47f181dda0640efeba20a08982fd2fa805fcf1b4c164e"
+    },
+    {
+      "path": "content/thorax-motor.ts",
+      "sha256": "41385b323720bd070e82a6b78dacf2adb1defc039636d154760a74ca1f42cbda"
+    },
+    {
+      "path": "content/thorax-respiratory-study.ts",
+      "sha256": "4631768eb5bf6e210231e0e3e9e3ba43a2fd6eccb23fda415c2964c964e9c0ba"
+    },
+    {
+      "path": "content/thyroid-imaging-pins.json",
+      "sha256": "b39ea65048bc0b9dca76085aaca7407832a32c3794c990b771977a0b8f27754b"
+    },
+    {
+      "path": "content/thyroid-imaging.ts",
+      "sha256": "d518d47f775d876c802fb804251458e5b72ab328ef2ddbbf2daf5d750684f980"
+    },
+    {
+      "path": "content/tract-plantar-imaging-pins.json",
+      "sha256": "9a9ebc2bcba1c77914492012642ec3046f365e7a407631b1ddb4ed4e7aa5f68b"
+    },
+    {
+      "path": "content/tract-plantar-imaging.ts",
+      "sha256": "fb13e2afca6544f011c51b2ecb028fd4e5ef5d12f77f7c50f8ee82072a46e214"
+    },
+    {
+      "path": "content/transverse-mesocolon-mri-pins.json",
+      "sha256": "0ce4107460b044d2200c6c489550aca9f92c7e5f51ab737e7002feabc043ac6c"
+    },
+    {
+      "path": "content/transverse-mesocolon-mri.ts",
+      "sha256": "d540e860efc43b1bb5da3c7ac825a0e7deea941281de8f1e0181446b1df4c152"
+    },
+    {
+      "path": "content/trunk-attachment-pins.json",
+      "sha256": "773fad7cbcb02a2af0c3fc20a69a89fe6b84b17cfbaca21e5e79fe4fb2151a53"
+    },
+    {
+      "path": "content/trunk-attachments.ts",
+      "sha256": "70762bdf36972a0761d19f8f2978a557272406486bf531056c9fb5218fe3474d"
+    },
+    {
+      "path": "content/um-bone-cartilage-clinical.ts",
+      "sha256": "a4fe264638d77bf5d2fb5dfeaaca2f69466075b5bbcd3f2f66f978c8204c0a8e"
+    },
+    {
+      "path": "content/um-calf-foot-clinical.ts",
+      "sha256": "aed9e450838c1c2bc74d904a46a75604af2ab429c3c8313a12da13d8a595476a"
+    },
+    {
+      "path": "content/um-hip-muscle-clinical.ts",
+      "sha256": "549770dd9f1b85494595b227c187b87ab91bb56e43d31f1f62fbb185cac5b252"
+    },
+    {
+      "path": "content/um-hip-thigh-clinical.ts",
+      "sha256": "07bb3a62231ffa4f8283b02da90703273e015cd051fbdb604ddaa3d5afe8b6ec"
+    },
+    {
+      "path": "content/um-limb-clinical.ts",
+      "sha256": "552cb9cf96de3173773ecb71e88e9e19a08904f7ff3bade456f74d815ad41161"
+    },
+    {
+      "path": "content/um-limb-motor.ts",
+      "sha256": "28bd381dbe13677053a13710617041411125e143b3651aef2e8474de225a8b0c"
+    },
+    {
+      "path": "content/um-limb-navigation.v1.json",
+      "sha256": "34833f71e385972efb27f5798a094cb23f4df608c8baa4ca8256bb725332174c"
+    },
+    {
+      "path": "content/um-limb-teaching-bindings.v1.json",
+      "sha256": "f78af67e6db906e672e7a8b23e0b6bbc1d6b0edaa1ec091c2cd00f5f715154bf"
+    },
+    {
+      "path": "content/um-limb-teaching.ts",
+      "sha256": "a595b6a56d315fe1a08e77aa8dcb3c4f1b7fe74589ef72140d38d605e8b2abb7"
+    },
+    {
+      "path": "content/upper-limb-arterial-pins.json",
+      "sha256": "92a761df3eefcf1770a446de6a106f4144119a442847a7909839660ce6d6e352"
+    },
+    {
+      "path": "content/upper-limb-arterial.ts",
+      "sha256": "6192472d02241fd113ee50fe75c7319281ab2516ba47c7b6003dad66d1d9ce69"
+    },
+    {
+      "path": "content/upper-limb-motor-pins.json",
+      "sha256": "d4d9c991e74899d9a10ef16aee9086fdfbe4da40c70dedf1be7db4f0bd09e3c5"
+    },
+    {
+      "path": "content/upper-limb-motor.ts",
+      "sha256": "05b57ea3be22d5a02db6e89b3db90625377b2bfb125bd70bb19058ccb8c551d7"
+    },
+    {
+      "path": "content/upper-venous-clinical-pins.json",
+      "sha256": "4bc51fe63ee56a30bcb39973c85ab36902d419b09c953abaea2262a69b39ab24"
+    },
+    {
+      "path": "content/upper-venous-clinical.ts",
+      "sha256": "90c5c3989d54eb388c1082924c109126d8c4cff5dcb6b2a7fd9f1981b303d3d6"
+    },
+    {
+      "path": "content/upper-vessel-imaging-pins.json",
+      "sha256": "cba12d55b288fb0f33f4bb1e140eb74ce0b05ddd2e7ecfc7287fb7758419b881"
+    },
+    {
+      "path": "content/upper-vessel-imaging.ts",
+      "sha256": "71976d885d8d43fe70c5a03177175f6338d3c88b22053a5d0af5449c39e3411b"
+    },
+    {
+      "path": "content/visual-pathway-teaching.ts",
+      "sha256": "7e5fd834fb125b12047a5ea3471baa7eef12d90a4c223332fa32e8a36f6bcfdd"
+    },
+    {
+      "path": "content/wrist-imaging-concepts.ts",
+      "sha256": "977984f68e2bf0eba819fa4b5332f9220dae56530311988a4a5a4b3f2c91f2e8"
+    },
+    {
+      "path": "content/wrist-imaging-pins.json",
+      "sha256": "3f187b82214165b932599c9df5a47a2f65d9416747e2d651231acb99db4fbf33"
+    },
+    {
+      "path": "lib/abdominal-arterial.ts",
+      "sha256": "23f20b2c03f6b4e2fbe13d47de0af0ba0ad25e36dc8baae4439b43448531fe03"
+    },
+    {
+      "path": "lib/abdominal-branch-imaging.ts",
+      "sha256": "3d4c1a7604c3277cdc31b1db77adbcd15b55345848e3345b7f322a1be5eadcf3"
+    },
+    {
+      "path": "lib/abdominal-connective-imaging.ts",
+      "sha256": "808a7843520946b378496a3629d12dcea5d708c519f58bb0cc99befa7bb1c147"
+    },
+    {
+      "path": "lib/abdominal-organ-clinical-curriculum.ts",
+      "sha256": "2945f5c4cb8c7ff6656130ca73f03f4cecafd9cadcf342de606a97612d8e8d6a"
+    },
+    {
+      "path": "lib/abdominal-organ-imaging.ts",
+      "sha256": "8449bb428287cfd19b1d5976bd575a4f4d82d4d98d7b68db3628879adc228737"
+    },
+    {
+      "path": "lib/abdominal-organ-reasoning.ts",
+      "sha256": "b8912daea3a16c92ae8e8bda65c2d2877e7002d390ac6130dfc45a53e6a312b8"
+    },
+    {
+      "path": "lib/abdominal-vessel-clinical-curriculum.ts",
+      "sha256": "0321c4e1be5ee654e112159bdcefec115038c4a3917126163ae8c15ed80ead33"
+    },
+    {
+      "path": "lib/abdominal-vessel-curriculum.ts",
+      "sha256": "e073ed81c9aa107544430ce18997d4705e7790cdb57993b21b737af39a163539"
+    },
+    {
+      "path": "lib/abdominal-wall-binding.ts",
+      "sha256": "29a30e954bd654f7c5984b91d966139633b94eaff1940321e911d2b63409d67e"
+    },
+    {
+      "path": "lib/abdominal-wall-practice.ts",
+      "sha256": "aaf400ffdef117f6cafca1def51d1caae4e2e450f2c8e62bcb17b7b36efe4ad7"
+    },
+    {
+      "path": "lib/abdominal-wall-teaching.ts",
+      "sha256": "30f1fbd0b64e9cd73566372eed356e71c40a0b0a20fe87e1c8e4ddf6b8068b16"
+    },
+    {
+      "path": "lib/abdominal-wall.ts",
+      "sha256": "06795f84c4440639f4b24ea31e10b5e0a37f0e8f494a261f512d12c8ea1687b7"
+    },
+    {
+      "path": "lib/achilles-imaging.ts",
+      "sha256": "ebb2a04d15daf14896f65181f891aa4058f8fe70fc28416f5241f6f9565d8f88"
+    },
+    {
+      "path": "lib/acral-attachments.ts",
+      "sha256": "2a86de169ce6c1aa8614374c8612b85015acf9c6b6b4a25f68ffdd8ecd4459be"
+    },
+    {
+      "path": "lib/acral-bone-clinical-curriculum.ts",
+      "sha256": "2b4884c09c19e9ba6e80f1ff4ef4b6de2890015337666c30501a95c28e072277"
+    },
+    {
+      "path": "lib/acral-bone-curriculum.ts",
+      "sha256": "c6d1a50721378ca17916b37d8fa9241eedf5e3e0b331f25c2e0393b3287211e5"
+    },
+    {
+      "path": "lib/acral-bone-imaging.ts",
+      "sha256": "82dc48c9c76ba0c65b81a71ab7b85cff991dd70e9e45296817969c3b736b3927"
+    },
+    {
+      "path": "lib/acral-bone-studies.ts",
+      "sha256": "f8c8a593b64a10b09c85782360008713ce58edcbb511291121e4bc75eb60d6da"
+    },
+    {
+      "path": "lib/anatomy-coordinates.ts",
+      "sha256": "211009737314d001b8c48034afa28fbec91481c55ce22a4bbc83b0fa80bcc1bf"
+    },
+    {
+      "path": "lib/anatomy-link-registry.ts",
+      "sha256": "ffd7480f172055c1cd61049779c17a507ae8aa5abbcfb5d093e5bec75a3e1205"
+    },
+    {
+      "path": "lib/anatomy-load-retry.ts",
+      "sha256": "c752b0c38bfda77d5b64a052f7edfe007c739b4cc77186e7a2e8b9ff2e975d0d"
+    },
+    {
+      "path": "lib/anatomy-load-state.ts",
+      "sha256": "585b7155673ef36bc6705bfb7f694660707a12bd081fe7b2846b5755e7d8a67f"
+    },
+    {
+      "path": "lib/anatomy-practice.ts",
+      "sha256": "6cc60a21919341e2dda7b56305c595f02e23eeb499b06191646e763de916a051"
+    },
+    {
+      "path": "lib/anatomy-root-session.ts",
+      "sha256": "1f5a99620d56c1e33708afbcf8ad608c124aed23e2fb4f21adbb4da27837fac2"
+    },
+    {
+      "path": "lib/anatomy-search.ts",
+      "sha256": "2c469d5d892b6bfbfe2c11211f2bc421a6664e3c5b0286cf017ac1b43f25d1a7"
+    },
+    {
+      "path": "lib/anatomy-vessels.ts",
+      "sha256": "3f1e5ef5ebb26101f4aa5cfeccf39a95915732047f1c84c80b14eba9c6469586"
+    },
+    {
+      "path": "lib/anterior-cardiac-pathology.ts",
+      "sha256": "12691fa8dd643d65f2e563b72f3e91324cd1660fa458e9fbdc6159e0c813cb8c"
+    },
+    {
+      "path": "lib/anterior-cardiac-vein.ts",
+      "sha256": "65e542313743aa1b81e0bd6b131dd3bd9492830043631504ee59e4ff7cd5ff49"
+    },
+    {
+      "path": "lib/arm-attachments.ts",
+      "sha256": "f70787aa889aca46e4735fd9b90638fdd29a65b829b6c8b273753c85b610257c"
+    },
+    {
+      "path": "lib/arm-vascular-studies.ts",
+      "sha256": "24996e2997a84263322436050fc7765ae97ca178595b09f34a21b23736ec6c51"
+    },
+    {
+      "path": "lib/arterial.ts",
+      "sha256": "682959cf70658e7ddc037a5d613cd4f49fcb4b9415dc233db9c90a4da89e6138"
+    },
+    {
+      "path": "lib/atlas-navigation.ts",
+      "sha256": "a8d79020c9d9283dfc50f7055b7c8015746a8f13962267c41f63accb200cdb39"
+    },
+    {
+      "path": "lib/atlas-note-navigation.ts",
+      "sha256": "99b6c8a4d774670e4fd71e1ddc086a78eb6f36739bf726ee63a8959ac0490ba6"
+    },
+    {
+      "path": "lib/atlas-panel-layout.ts",
+      "sha256": "8285d84094cc4d3aaab02dbf89360f4e60ad23856cff2bb69faf3a6240c3c23f"
+    },
+    {
+      "path": "lib/atlas-practice.ts",
+      "sha256": "cee0a9436adbfa68d784d40fbf464d0b685c297b502128db20609db95b26fd68"
+    },
+    {
+      "path": "lib/atlas-search-presentation.ts",
+      "sha256": "71682234fe74adaa984fe507ea8bc0bb5ddb82b799d04c20d88ff2a262e3847b"
+    },
+    {
+      "path": "lib/axial-anatomy.ts",
+      "sha256": "395f878dbe308e771a098bd5bcfd08336ba0e180d56c2f23133c100e52fcd413"
+    },
+    {
+      "path": "lib/axial-bone-clinical-curriculum.ts",
+      "sha256": "f0a86fa8e1c49e4902b790fe057aa4c74a5be8258a85b4aa71a3fe691bfc491a"
+    },
+    {
+      "path": "lib/axial-connective-clinical-curriculum.ts",
+      "sha256": "a5b83ef274fbdf6c6828b9e2871148b92d17b78c74064ddb0f205bccd694139e"
+    },
+    {
+      "path": "lib/back-layers-teaching.ts",
+      "sha256": "cb0125ca6ca20b98ca3b08c8b7015788fd8e427bd33581b1d4eb351fd211648e"
+    },
+    {
+      "path": "lib/back-layers.ts",
+      "sha256": "f11998c77ff5823e257f9c81b625532d952ded36fd9729e65fbace6d0090f62c"
+    },
+    {
+      "path": "lib/body-arrangement.ts",
+      "sha256": "5946d4bd5eb1797562309c7469e73d0e6594e88b883c8a4c45344c7d43206c59"
+    },
+    {
+      "path": "lib/body-batching.ts",
+      "sha256": "00d9a45646ac3b21e4372b50bf5388ef94e617a8ab843959bb97e41f2e452291"
+    },
+    {
+      "path": "lib/body-bundle-geometry.ts",
+      "sha256": "89bae02ed7b8850982c111e9415f08266770c8e17f0ce9daa4b39f6b2a431c73"
+    },
+    {
+      "path": "lib/body-catalog-input.ts",
+      "sha256": "c0c306fce49aa474f295ae42eb4418fcec3c59947aeb3b137a9624465a164c83"
+    },
+    {
+      "path": "lib/body-display-catalog.ts",
+      "sha256": "b5dc9cf1cf661bda6a232cfaeccf8473c6eba19da2975107d91e29ac21bcdef8"
+    },
+    {
+      "path": "lib/body-presentation-parts.ts",
+      "sha256": "bb62c2e2a36300d1ba8e214e58b92a40300b958d426ba59ad5d8c1a3a4fa20e0"
+    },
+    {
+      "path": "lib/body-source-additions.ts",
+      "sha256": "3e19f6a5c2bc36facfea90dd886cb0cb0447ef47cae5eb0c5b951ebcca095948"
+    },
+    {
+      "path": "lib/body-system-presets.ts",
+      "sha256": "67b34405e32541d49c85ad931cc818d5a1d9ab923b317f91e83d9a0fb6fbe285"
+    },
+    {
+      "path": "lib/bone-joints.ts",
+      "sha256": "6ac746a3f09fd982dbbb7b24f6c6cc2f61d88b35742d9ac7686632dead421389"
+    },
+    {
+      "path": "lib/bowel-components.ts",
+      "sha256": "23b87d1fcf1e4ab6614650cebd87da6411f9443e92c073858a5b0ac068a7dc31"
+    },
+    {
+      "path": "lib/brachial-veins.ts",
+      "sha256": "d675f79d288ce1eb799e4c58a7d14fe5894257274ef302ce96e3a2990bda5b2c"
+    },
+    {
+      "path": "lib/brainstem.ts",
+      "sha256": "c1672c0d2e21d0fb3b752b6cb001a970b071fa492b218a9c788a476754fc24a9"
+    },
+    {
+      "path": "lib/camera-keyboard.ts",
+      "sha256": "9a0a095306c6687ca7fd568570c7a66363566ac3a70f2916bc1e8f74aa405220"
+    },
+    {
+      "path": "lib/camera-orientation.ts",
+      "sha256": "d64615d0a45a2331a964c9f3d1f9ddbb78534e7243940c414275a5bc67e9fa00"
+    },
+    {
+      "path": "lib/camera-zoom.ts",
+      "sha256": "06263f767e08d8b374005f198c72227c3550767628d6096c24fd698331ea432d"
+    },
+    {
+      "path": "lib/cardiac-circulation.ts",
+      "sha256": "5624f356ff6354ace8742f9201e3303da2c095f633460d2f56c4835f1068cdca"
+    },
+    {
+      "path": "lib/cardiac-context.ts",
+      "sha256": "428c871b7a942e34c87833ff97441e59e7757c4ae0f5610713e779396df432ef"
+    },
+    {
+      "path": "lib/cardiac.ts",
+      "sha256": "482facae9feb332a9899d008cca33aa6bb950046ae7ea96ea2ee67a89001c6ea"
+    },
+    {
+      "path": "lib/central-neural-clinical-curriculum.ts",
+      "sha256": "1034631e736dd108c677f5fbd7f4242e6e2c588f9d69ebeaa8ba7de8119f51e2"
+    },
+    {
+      "path": "lib/central-neural-imaging.ts",
+      "sha256": "b6e2c570c6f595dbc728616b9296b2ca6913be549ae7277f9e86b20ca68c6810"
+    },
+    {
+      "path": "lib/central-neuro-curriculum.ts",
+      "sha256": "e5247f94660df1d974ee98cba7b705b02e3f5da316f9215cb86237e838d94b76"
+    },
+    {
+      "path": "lib/central-vessel-imaging.ts",
+      "sha256": "d350763dc2518e42b158d907e8289e7b7e50bc45c53314a25160c0924d4fa4bb"
+    },
+    {
+      "path": "lib/cerebral-arterial.ts",
+      "sha256": "b44185de2dffed0bf552da5ea90d351182ed65a8993dab14a48b6c5beb130d87"
+    },
+    {
+      "path": "lib/cerebral.ts",
+      "sha256": "10138a8bad86e98cc03dc458c3d9b7245dace9369ded56c980623b15c6d6fdff"
+    },
+    {
+      "path": "lib/chest-wall-muscle-imaging.ts",
+      "sha256": "e97986190d60d6bde5ffcb9f17181880a5521aad4dfca71850c59c22ca431d79"
+    },
+    {
+      "path": "lib/circumflex-femoral.ts",
+      "sha256": "71313635f2ae5a4fa5f7726adf6f6e92fb48a4ae2e43fd7a721860c062a7ccf4"
+    },
+    {
+      "path": "lib/close-up-labels.ts",
+      "sha256": "088b9434143cc6885d80fa0ef90de7ff437f863f1b19fc6df4faf7c6ad3e5bec"
+    },
+    {
+      "path": "lib/common-interosseous-us.ts",
+      "sha256": "ba89e797a74515b21ea71925011c6fc9b6b9866ad6bb87da4d972f9f27e5e617"
+    },
+    {
+      "path": "lib/component-imaging-navigation.ts",
+      "sha256": "a0132e60a7912bc69db5b1c4800efb2ae1fe2b6b62dc7134b6178af9975697d3"
+    },
+    {
+      "path": "lib/connective-anatomy-curriculum.ts",
+      "sha256": "7818a9fb3c9a67e3da14e6064d7074b20c1c86fd26a5a48ed2ac92012b9aea94"
+    },
+    {
+      "path": "lib/connective-curriculum.ts",
+      "sha256": "7ad26feb11b3ebfc29561d4e34acb1186b777fad526ed5ce096d7dd3abcc7f00"
+    },
+    {
+      "path": "lib/connective-imaging.ts",
+      "sha256": "ea8a9e4ebf5707022a4d84d2391b18daedb2bbd5a0bd87abc74fee61d1218ad3"
+    },
+    {
+      "path": "lib/content-types.ts",
+      "sha256": "47ac24cbf05c1061238305589df148e3849265e33c728fce4bdc9c6912e4c3a6"
+    },
+    {
+      "path": "lib/contextual-dissection-undo.ts",
+      "sha256": "628154c5b1ef24e0a1a8f69544fbfeefbd84ab5b950955515a0ca6886d4e93ef"
+    },
+    {
+      "path": "lib/core-organ-function.ts",
+      "sha256": "6ecbd0d421c6caa5ffd3f02edadf8cfdbf49ef7bbab20ea3926054544c896925"
+    },
+    {
+      "path": "lib/coronary-venous.ts",
+      "sha256": "7fe9f98f5ea4ac4e7e9a76cd25016b5461393ba3f25e52b7b2fc8215c64cd62e"
+    },
+    {
+      "path": "lib/corpus-imaging.ts",
+      "sha256": "c5f100e44a819ebe7f532d1960c90be3936c084dad7e1651a9af9e34af1acea9"
+    },
+    {
+      "path": "lib/corpus-spongiosum.ts",
+      "sha256": "e8160f2ae0be2de646b4cebba199b67ea8e96f98f2809c877c70022c27da4972"
+    },
+    {
+      "path": "lib/costal-cartilage-imaging.ts",
+      "sha256": "14f28cf5cf952d8d87c58c534a9c04820b095f3b0d356cbdfb3cda7d6dd732ab"
+    },
+    {
+      "path": "lib/cranial-arteries.ts",
+      "sha256": "503181d76e2a323134da111234bd3842c85026ecf8cae460138271b7279f3804"
+    },
+    {
+      "path": "lib/cranial-artery-components.ts",
+      "sha256": "7e42b848ec0e18377a4b3f9b87de6c81157ef399f3a8195f311dce1b4b292eef"
+    },
+    {
+      "path": "lib/cranial-bone-clinical-curriculum.ts",
+      "sha256": "c0472a3892dd8bbb7ffb0fe71429814cb07a9c24217fe2ab27f792181a867410"
+    },
+    {
+      "path": "lib/cranial-bone-curriculum.ts",
+      "sha256": "b84405a1a36b0f9dcf2066c89f91b0e5066298e288c1924cdf8aa643934c833c"
+    },
+    {
+      "path": "lib/cranial-bone-imaging.ts",
+      "sha256": "4b55a1d4824b5181185399093458888bf6854255c9f29a7731b0bc5410aa5848"
+    },
+    {
+      "path": "lib/cranial-boundary-clinical.ts",
+      "sha256": "b753047c94c9ad6e63c58e9a7cfad519dd3cb2d1e6bbae3d10bc358fbf88c963"
+    },
+    {
+      "path": "lib/craniofacial-organ-imaging.ts",
+      "sha256": "a86395f57e4bb5648969e55b522cd12d035bf23fe32ce4ef82db4e3037593fd5"
+    },
+    {
+      "path": "lib/cricothyroid.ts",
+      "sha256": "1e7d88df1c8f24a4b33b520637d00bdf64d498a5017c332a6ce4d2a1cc0828b9"
+    },
+    {
+      "path": "lib/cubital-studies.ts",
+      "sha256": "11b9e624adc0c5034ad0b6f31d0399e5f1854d65230d1e30803e6fbebbb6b33d"
+    },
+    {
+      "path": "lib/cubital-veins.ts",
+      "sha256": "1877da3b251cae1816573786fe271a94306571f606fb8410386a326efe3e30e6"
+    },
+    {
+      "path": "lib/deep-brain-reasoning.ts",
+      "sha256": "0f18416cece4e887ff8916abf70667b6e9fcbbceff558863782e4e2038616a5f"
+    },
+    {
+      "path": "lib/deep-leg-veins.ts",
+      "sha256": "2faa7dd187bc9bd00b48b4de00acea4ebdbd12d8f07a827ff3a63f8a214ed2a2"
+    },
+    {
+      "path": "lib/deep-neck-curriculum.ts",
+      "sha256": "9b88d3f73c59d7447893bfc73e2b8217cda07ecb0940638d32722b066b95d53e"
+    },
+    {
+      "path": "lib/deep-venous-clinical.ts",
+      "sha256": "9b15045023874855edec38a605c858e869f82cd801c88791e740704f62ac75a0"
+    },
+    {
+      "path": "lib/deferent-clinical.ts",
+      "sha256": "7a95522398b7b3bac652c8c225f9d50efa7b1c17769f44a557909f59a725066c"
+    },
+    {
+      "path": "lib/deferent-ducts.ts",
+      "sha256": "23531f8eb7664f8d758998b0c0af47670c420168022af048306d03558f5c43e6"
+    },
+    {
+      "path": "lib/dental-clinical-curriculum.ts",
+      "sha256": "a0ebba94b72fbff9bc081ec4889f69cd8bcd829bd294d8b8c6c8b91348a868c2"
+    },
+    {
+      "path": "lib/didanix-atlas-adapter.ts",
+      "sha256": "4a81117559f93422222550249ca627d31355ee5cefaa9eda0adf4975e6bb4729"
+    },
+    {
+      "path": "lib/dissection-guidance.ts",
+      "sha256": "31c645be4d92391051e997f156b689a37a02e2adfbc618497da7ef6e74ef6475"
+    },
+    {
+      "path": "lib/dissection-scope.ts",
+      "sha256": "6e47c630ce09ec51fe7b5e1156d85a49c25eded02e044775ee053e7096fbe0ff"
+    },
+    {
+      "path": "lib/dissection-shortcuts.ts",
+      "sha256": "04fedf666837a73a61f7f6655b4a642ead8841c81622c712f521fc3481230828"
+    },
+    {
+      "path": "lib/dissection-workbench.ts",
+      "sha256": "7b12978528d0c08743aa4d4fbe8e08df7f787596576978c39ffdc003227215be"
+    },
+    {
+      "path": "lib/distal-palmar-mri.ts",
+      "sha256": "0392e2cc92fcc9eb896ea3582010bd1032be0148f9fdc40a752a872436707902"
+    },
+    {
+      "path": "lib/elbow-arteries.ts",
+      "sha256": "6b2b82e4cf22e9a07af4d29e7109769c30ae14b5d4cc994f4a23dfe01ce4c73c"
+    },
+    {
+      "path": "lib/elbow-clinical.ts",
+      "sha256": "d7154e7c04f7ea0d6e4c394b3fa15eab23dcbc30197f2975457648a8b66ff950"
+    },
+    {
+      "path": "lib/elbow-studies.ts",
+      "sha256": "dace97bb58a6ef824a49f1fe3874a049cd3aa6f148204670a8c535f121b75589"
+    },
+    {
+      "path": "lib/epigastric-vein-pathology.ts",
+      "sha256": "bb96582a47f415ce7800119d0917925a8b2cafa8d2bd5aa81040f2bb2ba1b9b5"
+    },
+    {
+      "path": "lib/explode-layout.mjs",
+      "sha256": "d5790bc375114b906fdede4e430764df3fc0ff3ce71fba02ed87fec45129dff3"
+    },
+    {
+      "path": "lib/eye-layer-state.ts",
+      "sha256": "e863d50a92dc1f842bc95898c410516a7fd2fe9d9fe9923ea8de7f244056389a"
+    },
+    {
+      "path": "lib/eye-layers.ts",
+      "sha256": "34f668314fa95d7fd1a8bf8c2e8e26d2cfb5d8db7fe16bcc4a06f3e33dc6c0fe"
+    },
+    {
+      "path": "lib/femoral-components.ts",
+      "sha256": "11ceea18314fafee0872c1cdf383f6d132d27b4c9f0c17ba3a5093170c5a8cf5"
+    },
+    {
+      "path": "lib/foot-clinical-curriculum.ts",
+      "sha256": "237f7ee1c684a403f04e87b9e9a798ffabf9b5e9dfbccb22a3e099ed28cc0317"
+    },
+    {
+      "path": "lib/foot-curriculum.ts",
+      "sha256": "d3148c29229c46e10dfd7a75dd9e7327e0b4545f581070162b11ceeb749a4579"
+    },
+    {
+      "path": "lib/foot-joints.ts",
+      "sha256": "3eb2ccb69d9a2d9a05f12d81474ad4171f5850e122f6415f34d585066cbbf2ee"
+    },
+    {
+      "path": "lib/foot-muscle-imaging.ts",
+      "sha256": "6c0b568ac63cf9c43d99051557191e0f8b6d38c04297ffec6a9b5fb618a58262"
+    },
+    {
+      "path": "lib/foot-reasoning.ts",
+      "sha256": "cef5ea8c92edd619891b8c2c51e94b2b0c98d5a285e6c1681a50d4e5c773d9de"
+    },
+    {
+      "path": "lib/foot-vascular-anatomy.ts",
+      "sha256": "4678ddd09311b67e646004b61cf3b52f207b68678010d39dbe04bb37076ccdd4"
+    },
+    {
+      "path": "lib/forearm-arterial-imaging.ts",
+      "sha256": "a28a38a3d8b2e21ae8dc2f80aafb559867932e05d162da7ad20bb5a5887d7ca3"
+    },
+    {
+      "path": "lib/forearm-attachments.ts",
+      "sha256": "e68480e831a40982ce68b4d99bfc51ebef1797c3908971bbf5987e8b8497ca85"
+    },
+    {
+      "path": "lib/forearm-clinical-curriculum.ts",
+      "sha256": "b32c7853733c8a32dffde18e62b49a4a035612f2199dc8a860f36108d495b0fe"
+    },
+    {
+      "path": "lib/forearm-curriculum.ts",
+      "sha256": "c3f357aabdccb863e967244435118cedb335dd7ee5c07df31909384d9ab35511"
+    },
+    {
+      "path": "lib/forearm-muscle-imaging.ts",
+      "sha256": "e322acc549440be5f0dbb6252785173f17eaf8ef9ca02b93a4baad6e7db56939"
+    },
+    {
+      "path": "lib/forearm-reasoning.ts",
+      "sha256": "da658e0b8a66f22bb31cabf49a0505b7f1bca71967afc5ead2b342aff93408b2"
+    },
+    {
+      "path": "lib/forearm-superficial-veins.ts",
+      "sha256": "07dde747d85a1a4fff95b1f19e62f4f1bc6a17c7696b91d60a842d9b6e499105"
+    },
+    {
+      "path": "lib/forearm-vascular-anatomy.ts",
+      "sha256": "2313c21bd2efed6048baad038739009cbd0fcad1eb2b2aed55fb009563bf6f99"
+    },
+    {
+      "path": "lib/forearm-venous-imaging.ts",
+      "sha256": "2866e1bef3a871d47e8107c2ef3783661548e1a518018c3c03fb52ceadb978cb"
+    },
+    {
+      "path": "lib/forearm-vessel-clinical-curriculum.ts",
+      "sha256": "980f819d092940968360e5dbfe58fc23e8ade5343b50f97c5e4970f38af91fc7"
+    },
+    {
+      "path": "lib/genicular-arteries.ts",
+      "sha256": "c9c38677221dc5076d3aa0f55f4ec08b53e307234cc78426b765c93cf4c39322"
+    },
+    {
+      "path": "lib/genicular-clinical.ts",
+      "sha256": "848eb6e257cde820b951877862f81cc16b4892151b4e1df6b628c4fbaab9e829"
+    },
+    {
+      "path": "lib/genicular-imaging.ts",
+      "sha256": "2bf7b934b7178723d6f4d258899ebc99a4c6f098bf4d3c4bc3f83778bba8fcf5"
+    },
+    {
+      "path": "lib/genicular-study.ts",
+      "sha256": "b1654af910c5ac0581a48a76946d71398634bd2d513de778e4e9b92e7bf425cf"
+    },
+    {
+      "path": "lib/hallux-xray.ts",
+      "sha256": "87f3bb780aeb9c25ca308059cae5207891ef69e5e6b5dc0616528f0ccc5eb699"
+    },
+    {
+      "path": "lib/hand-bone-xray.ts",
+      "sha256": "3c2149eca9c8bcaa380f10feb48363dfaff58828c6400c5f88c8011c0a0417ef"
+    },
+    {
+      "path": "lib/hand-clinical-curriculum.ts",
+      "sha256": "7d8acf3e844828f900dcf01beed033e23556cc6bd4f1e61cbb58e0d8795171e9"
+    },
+    {
+      "path": "lib/hand-curriculum.ts",
+      "sha256": "6c3af658311c8a4ea7c50980d327915e0ea8249e7a00a8aab54f22e777111c56"
+    },
+    {
+      "path": "lib/hand-framing.ts",
+      "sha256": "918695d2987684a77a65c749ee199e8c4331b72f514a2d8f7050103217696bad"
+    },
+    {
+      "path": "lib/hand-intrinsic-studies.ts",
+      "sha256": "5cc77244b513326f9c219e1f26b9d5401d9128f77cd9f8e6433cca01b04dc76b"
+    },
+    {
+      "path": "lib/hand-joints.ts",
+      "sha256": "0672bed057e57c516d59e9f7af23587f25317116b572ea35195a25bac25ef6a4"
+    },
+    {
+      "path": "lib/hand-muscle-imaging.ts",
+      "sha256": "14d038b51ce7aabae0b0a1ae85028d6ac70078dfec095a5fed38e58fe5ad152e"
+    },
+    {
+      "path": "lib/hand-reasoning.ts",
+      "sha256": "de5b56b29b26f9c23b090335abf69a4b16089ec62c2c107f550c782da0cfd217"
+    },
+    {
+      "path": "lib/hand-vascular-anatomy.ts",
+      "sha256": "a6fd0906ea69be303e170dd915a0ef4a6d4ecb073d6d50886a00b7dfe8f4e560"
+    },
+    {
+      "path": "lib/hand-venous-anatomy.ts",
+      "sha256": "ba058b19095e8c43a1714b2da6001d8d53601e7aa27bcdb4e1ea26cb87501b89"
+    },
+    {
+      "path": "lib/hand-vessel-clinical-curriculum.ts",
+      "sha256": "4c6f29b5f9fde2ab8507d334c2764dba246592ab2fb4aaf9b8ddac08bab4cd14"
+    },
+    {
+      "path": "lib/head-clinical-curriculum.ts",
+      "sha256": "e60a813172148b58b8f843037f2dc7eff6678585feeb5ccb38ee9bed264260b2"
+    },
+    {
+      "path": "lib/head-detail.ts",
+      "sha256": "74777dee9c5bbf4901956fda8d12d83c3b38c81569b1a35544f59be411e4fd1a"
+    },
+    {
+      "path": "lib/head-neck-reasoning.ts",
+      "sha256": "ce773af06070f8bfc6cb081a46f99c7fc622d6bdc00e380655ed826921c77dc0"
+    },
+    {
+      "path": "lib/head-neck-vessel-clinical-curriculum.ts",
+      "sha256": "a3020e17918ec2c310bcf8a7ff005ce79715ed4b9c8b485a266544dcfb0a9936"
+    },
+    {
+      "path": "lib/head-neck-vessel-imaging.ts",
+      "sha256": "3dcfb5410b33fd27da137401aa3d51bb60bb82e37c65f3f9bc48e02a3aa1b607"
+    },
+    {
+      "path": "lib/head-organ-clinical-curriculum.ts",
+      "sha256": "e3686ba0095ffde1731fa0ecc70aac794f1bee15e5ab2d3b15c543225939a41f"
+    },
+    {
+      "path": "lib/hepatic-biliary-context.ts",
+      "sha256": "62585b9e742a4f62d96afffb045d19df225ddac07ceffcc7a07a6d34b4646a92"
+    },
+    {
+      "path": "lib/hepatic-veins.ts",
+      "sha256": "c0540137e37b35f37d85b9ffa07aa756ad76bea24b95264f155aea8bfe56523d"
+    },
+    {
+      "path": "lib/hepatic.ts",
+      "sha256": "86a6ac1226f1ab496c3dc7aee6279da3ef662a0c3316fee10862cb8ba30fae80"
+    },
+    {
+      "path": "lib/hilar-vessel-xray.ts",
+      "sha256": "c06eb4cc8ab314c96b89656ab48c425882e63b1a332263e4065a80c70fa62f07"
+    },
+    {
+      "path": "lib/hip-abductor-xray.ts",
+      "sha256": "1c5829f35585e0097025bac08f8159ea519a119ee7ae493235b5b2fc4c94be8a"
+    },
+    {
+      "path": "lib/hip-attachments.ts",
+      "sha256": "fe24425b7a26348cd338652c5d562105ed715fdb20546583a1dcf78679e46566"
+    },
+    {
+      "path": "lib/hip-imaging.ts",
+      "sha256": "033f69852bf6b66e3a36b4f6399bc7b0e5e03b0ff1382e9f6017ecd308ef88b5"
+    },
+    {
+      "path": "lib/hra-pelvis-teaching.ts",
+      "sha256": "dd7ad44dab1bb22c2e1878e2a9d9625ef720f6857bb863bd1c48ab4408c47b2e"
+    },
+    {
+      "path": "lib/hra-pelvis.ts",
+      "sha256": "a23f687a1f2a2effa9bcb44249acb62ae7868896052e83796ea189c916e2ff39"
+    },
+    {
+      "path": "lib/hra-renal-teaching.ts",
+      "sha256": "ed766480f08295f56623d563c2afe7dfd53d0332fe9ae468d5594d722fbc038b"
+    },
+    {
+      "path": "lib/hra-renal.ts",
+      "sha256": "3b6d1e2cb4366a340f99ead5c92a94707ad583f12f4cf6699adaa90dcc1c945c"
+    },
+    {
+      "path": "lib/iliac-arterial-imaging.ts",
+      "sha256": "88f5f3395a81f9712cbccc5dfdf5c111a03013012ecca26597383ac6662ec17d"
+    },
+    {
+      "path": "lib/iliac-venous-imaging.ts",
+      "sha256": "67be90455b641db01288ce8a4fe837f2f20082b0b713840835971bd42c4ef4f2"
+    },
+    {
+      "path": "lib/imaging-comparison.ts",
+      "sha256": "108fc0cf8a882211ca19e3a61d0bf95f4110d9422705137ed4ed8356f063f145"
+    },
+    {
+      "path": "lib/imaging-sync.ts",
+      "sha256": "42696bac9b39e5761bd6e654996d6d6245bd51782b8387a8f946e9f42882b147"
+    },
+    {
+      "path": "lib/independent-specimen.ts",
+      "sha256": "3127e41d9c16d47f5ebe0c0e312e8d0bf3dded9cc00b6ab6548256e939f269b0"
+    },
+    {
+      "path": "lib/independent-study-links.ts",
+      "sha256": "ad0231affdc0a6550df15aeae5601c5cc942a13bf4ac2289d24169056ffcc4b3"
+    },
+    {
+      "path": "lib/inferior-epigastric-vessels.ts",
+      "sha256": "cde444a140807cc788cfbed570907316c52e32d00bb2c6295b2c5817c17df997"
+    },
+    {
+      "path": "lib/inferior-thyroid-arteries.ts",
+      "sha256": "cd1a636fef9058321d3256fc6d2e444d3de6d79ab34069bda8706076df0349a0"
+    },
+    {
+      "path": "lib/inspection-geometry.ts",
+      "sha256": "b1262f894eb05a4ab8a4c136d8b12bc5a179869f4e87140f96cc226b1f7b48b1"
+    },
+    {
+      "path": "lib/inspection-state.ts",
+      "sha256": "9034b6b6447248feb1b64374f403539b9572c01dd2db68574dd66fafcfd795e7"
+    },
+    {
+      "path": "lib/intestinal-junction.ts",
+      "sha256": "df13b2bdd0ebdea8b0afece440d9171158afade01ec0e1577b012f83b55637ff"
+    },
+    {
+      "path": "lib/knee-imaging.ts",
+      "sha256": "66f519d34437531606a29d8c491816a483d66fa0f7db4ff35ce4b0ac84ed8208"
+    },
+    {
+      "path": "lib/knee-studies.ts",
+      "sha256": "7407dded372f4e6cde674e9846fde5492bced8659191c4de0feb46bbd7011fd8"
+    },
+    {
+      "path": "lib/label-depth.ts",
+      "sha256": "906cc9824891e2bb39be431274990ab7895891aa7add7784fa0824e19a5c674b"
+    },
+    {
+      "path": "lib/lacrimal-drainage-imaging.ts",
+      "sha256": "a5affcd8c2058488514ece3349cbbd36f803b1053b0273e81526c022103d55ce"
+    },
+    {
+      "path": "lib/lamina-pathology.ts",
+      "sha256": "9a137767eda5fda445dcf00034aa994faf385f0de131f49e1867b076c18a7cb0"
+    },
+    {
+      "path": "lib/laryngeal-anatomy.ts",
+      "sha256": "adb043e56456f63e8f8f5f110c984f3706c8904a6267c6415260c7d0c8973fb3"
+    },
+    {
+      "path": "lib/laryngeal-framework-imaging.ts",
+      "sha256": "9563fe19b6775b26026309c3f373478f9262459321c5fa65fbf57f7b2a5add4d"
+    },
+    {
+      "path": "lib/laryngeal-imaging.ts",
+      "sha256": "1f70ea5c5fdd188bd4ab73555a12ed9b77f5ea028d62c63e77eb3111f50417ef"
+    },
+    {
+      "path": "lib/laryngeal-muscle-imaging.ts",
+      "sha256": "2a00cc7372638c9cbf096f62327fb4e387e75db6cca4897cdb21f37bb18bcade"
+    },
+    {
+      "path": "lib/laryngeal-muscle-teaching.ts",
+      "sha256": "e88a795a04301517a83347da1604b61ea9a56227a4bcf0961cc8acf4165d8425"
+    },
+    {
+      "path": "lib/lateral-cricoarytenoid-us.ts",
+      "sha256": "0a3ea708b9636f783a33c71987ae21173d8101ac80bf4889d7870b9889704ceb"
+    },
+    {
+      "path": "lib/learning-resource-types.ts",
+      "sha256": "c08858a0b3bdcc0467d815d71a129428c3b311c1eaf318a544e1f091b1833778"
+    },
+    {
+      "path": "lib/learning-resources.ts",
+      "sha256": "e2e191c19df1f7bfebd31d429c6320430845d145ac1f9c604a011827eb482da4"
+    },
+    {
+      "path": "lib/leg-attachments.ts",
+      "sha256": "6196950ca893ac2afbeb3fa40ec9482fa947c0b457ec9a0040170fcdc46b0448"
+    },
+    {
+      "path": "lib/leg-clinical-curriculum.ts",
+      "sha256": "d5eac9266e745989f01855bb8927c8534895e287c37ed20a60fa4a2f0c13c10f"
+    },
+    {
+      "path": "lib/leg-curriculum.ts",
+      "sha256": "21b71758f0c558d520547044cb736538e56004416b4962bcf0e812a229a12143"
+    },
+    {
+      "path": "lib/leg-muscle-imaging.ts",
+      "sha256": "21c432732b7f27ccb00e093c0ca0a3ba4cb3a171243e42745339008e951972eb"
+    },
+    {
+      "path": "lib/leg-reasoning.ts",
+      "sha256": "d94d6ea36a8962684935ed07bc235852095b624abc189dd7611d5551cd30022b"
+    },
+    {
+      "path": "lib/lesser-toe-xray.ts",
+      "sha256": "11b54c8bbea1f5cc664b709d9e1714fad8cf67e948bbd2cc649f701ea912e62a"
+    },
+    {
+      "path": "lib/limb-arterial.ts",
+      "sha256": "42608e39680c2188aff69a6c017556dd848900f8f7c26c89a87cd6269128b59a"
+    },
+    {
+      "path": "lib/limb-bone-clinical-curriculum.ts",
+      "sha256": "1ef0b447da72cf1207aadff79164327e8ab2b6be3e6413964e68e5945b52d9c5"
+    },
+    {
+      "path": "lib/limb-bone-curriculum.ts",
+      "sha256": "cc7cdc7c343872f60f36b9337008069c88294b6b56e713159e6b0055327e2ae8"
+    },
+    {
+      "path": "lib/limb-bone-imaging.ts",
+      "sha256": "ad7cf0cd15d0fd6d092751f56c5f5efde40876d972d54f5d25a920eac683309e"
+    },
+    {
+      "path": "lib/limb-connective-clinical-curriculum.ts",
+      "sha256": "22d62232cf0c95dfcf5835d39d79c1c81275876f9f3dba605c65335d00c3220a"
+    },
+    {
+      "path": "lib/limb-motor.ts",
+      "sha256": "c8a648d04913eed4addbd9c7bc0cd01ddd6e76625459cc0bbd6a956bc39423f6"
+    },
+    {
+      "path": "lib/limb-relationships-reasoning.ts",
+      "sha256": "6880ceab40a87287a21e48aa0e93e93fe55246f7c94e98ce6fffc3d8a526b0c9"
+    },
+    {
+      "path": "lib/limb-vascular-studies.ts",
+      "sha256": "c11a2af74ae392407af1663c955c3b318b1de9ebbcb8dff23bd5fb96c9ad3e3c"
+    },
+    {
+      "path": "lib/limbic-landmarks.ts",
+      "sha256": "d31ea68bd362db13907de78743f138c8f7cae518895303cefc03370a821c650f"
+    },
+    {
+      "path": "lib/longus-colli-attachments.ts",
+      "sha256": "b7db37460903142d2d8924bc62100b77c02836df7bd063681df316fcbebc6cf6"
+    },
+    {
+      "path": "lib/longus-colli.ts",
+      "sha256": "2835bfa751ca5dd37ba8b895839f48c1a4e019b6c8bd8d6120cecf04912fdf99"
+    },
+    {
+      "path": "lib/lower-arterial-imaging.ts",
+      "sha256": "021f2b528102027b1a34736bc5693872e7644f2f09dcd18106b206d50675857b"
+    },
+    {
+      "path": "lib/lower-limb-arterial.ts",
+      "sha256": "3d4dba4d517088183dd5a21957c3d0a35862f8c0ad4d69be1395dc2ea6a2d338"
+    },
+    {
+      "path": "lib/lower-limb-motor.ts",
+      "sha256": "e769da189fa98ef8997b2fd275638f9996517a7ed2dd5a1818a5283bb5653c56"
+    },
+    {
+      "path": "lib/lower-limb-vessel-clinical-curriculum.ts",
+      "sha256": "eb79201901dfbe170f0336888ac864308507b6c8f47d1cdf1a0fcddd7e7d295b"
+    },
+    {
+      "path": "lib/lower-neck-study.ts",
+      "sha256": "13e3a214881916a0ab260743cc6a9e7aa77edd33ff2ca5add220e46d4cfa1b4d"
+    },
+    {
+      "path": "lib/lower-venous-imaging.ts",
+      "sha256": "56d60e3802bfc6dd8797fa2c36048916306b0084142a4b59e07b070e0f2b7e76"
+    },
+    {
+      "path": "lib/main-bronchus-xray.ts",
+      "sha256": "5d5530f56c2a54843cb284f7ff83b03c5de5f651d9031aa870526acb2afcf9d6"
+    },
+    {
+      "path": "lib/major-bone-imaging.ts",
+      "sha256": "2079dabd5f918481fb54a2df8fd55311cddd180e337b8266f115d8406f09e373"
+    },
+    {
+      "path": "lib/major-organ-function.ts",
+      "sha256": "4f467f6ccf778ddf96bcf60b45aef4ca258d3c16e717716c4ded6f774366c01d"
+    },
+    {
+      "path": "lib/mediastinal-xray.ts",
+      "sha256": "975fc201ee76040704827e669e2a438dcd5517823c02b673459b4ed29241e615"
+    },
+    {
+      "path": "lib/mesenteric-anatomy.ts",
+      "sha256": "922f748bf87850c9e344943ae9980bfc65701a7d8cf3f97c80ec8ab01d28a6a1"
+    },
+    {
+      "path": "lib/metatarsal-surface-imaging.ts",
+      "sha256": "44a87bbfd9cc3afc86ace0443d7406991d2f6ca957f1feb0fb919630b132ae5a"
+    },
+    {
+      "path": "lib/model-delivery.ts",
+      "sha256": "465d37a26064d03c7f559c4fe1524820349f46549858374af6a3bd9dd5807ed1"
+    },
+    {
+      "path": "lib/neck-attachments.ts",
+      "sha256": "2271d7856889efa4c9f42ff25df9754167f10303250e0f9330588e3412e115ff"
+    },
+    {
+      "path": "lib/neck-clinical-curriculum.ts",
+      "sha256": "446017a9ff682d35f28a0c75e68c0bccd38d4aaf6799fab7af01516dbd5e8772"
+    },
+    {
+      "path": "lib/neck-curriculum.ts",
+      "sha256": "54a5522156c7c96a9b939aa7c18b67362938d3d3bdc4b5441d248ede00e16d89"
+    },
+    {
+      "path": "lib/neck-teaching.ts",
+      "sha256": "2e279a80cea07a6803924260f0347aa988ff61fe1f8b34f845234bab6bdafc22"
+    },
+    {
+      "path": "lib/nested-anatomy.ts",
+      "sha256": "b9368085e520b5228f43391825729ee39b98995522b5db39ef2e8627cfcf28d1"
+    },
+    {
+      "path": "lib/nested-practice.ts",
+      "sha256": "e61db487c33d4c8aaeb737e0122b376abeb5f5bb4df49d99370285eb85d65a82"
+    },
+    {
+      "path": "lib/nested-review-links.ts",
+      "sha256": "0d8d29a78763f5d3d00736fd2ae1aea0dbe6059ad50d6eb59d6b52e4f43e525f"
+    },
+    {
+      "path": "lib/nested-teaching.ts",
+      "sha256": "aa2423a1cc53f70f992c19b601160000d44937eda47faae422d6898902edd23d"
+    },
+    {
+      "path": "lib/neural-anatomy-curriculum.ts",
+      "sha256": "0d11049b0c952c399400e3a47bffe1260856b6c87ac012b7692a53daf1d7f2cc"
+    },
+    {
+      "path": "lib/neuroanatomy.ts",
+      "sha256": "24f93b5edfa14386573decf889ad4ac62c1ef9463432c90cc5893bb39587d23f"
+    },
+    {
+      "path": "lib/ocular-anatomy.ts",
+      "sha256": "91b5c78985548fe16ad7dafda5df06ec92667eeec71d6857930d44b98312438b"
+    },
+    {
+      "path": "lib/orbital-curriculum.ts",
+      "sha256": "bac8510a1c1ee1f0f1923f600a810df5727e000f9c86d34fb59696e655b884a2"
+    },
+    {
+      "path": "lib/orbital-motor-studies.ts",
+      "sha256": "1fded41a546a647e2c0db94ad1537bad6b1cacd62d2ff4ad14413707b98e3c23"
+    },
+    {
+      "path": "lib/orbital-neck-muscle-imaging.ts",
+      "sha256": "d087d792653bab1640f37f30cd4930d2c5f95e34c3bfa23cc06c6df7556e3262"
+    },
+    {
+      "path": "lib/orbital-nerve-curriculum.ts",
+      "sha256": "a9fe89f754f6d49ea78f9a1e8600299e0251f5c30e5384685f68c35c27d75c95"
+    },
+    {
+      "path": "lib/orbital-nerve-mri.ts",
+      "sha256": "aee25f3f203b3d9525f37f7d902fb49fb5fc4d1b6fee0d097da8e43a245382a6"
+    },
+    {
+      "path": "lib/orbital-neural-clinical-curriculum.ts",
+      "sha256": "e18f17a10f8f00a9f1ae2766e8d5531cb5cb22b1906ec7267c0899a9c02828a6"
+    },
+    {
+      "path": "lib/organ-anatomy-curriculum.ts",
+      "sha256": "78279373aa15a8a239f133514cbb47ebb4e86657d77e299ac630603cafcedf1a"
+    },
+    {
+      "path": "lib/organ-curriculum.ts",
+      "sha256": "d0e09a72c41b6edd16ae6e6700ffa0141e80408548a8200c9a52d6401064f4dd"
+    },
+    {
+      "path": "lib/origin-guides.ts",
+      "sha256": "b333566888bf13805da9559004fbfbfa6596095a65d7ca8772de8259ca974ff6"
+    },
+    {
+      "path": "lib/palmar-arterial-imaging.ts",
+      "sha256": "31350adb7f3f211ba2399a8e9e1f62d433c9c87f4394521bdb10444db41df080"
+    },
+    {
+      "path": "lib/pancreatic-anatomy.ts",
+      "sha256": "8517037505ebb927ba2e6aab55cb7e23fe406327b3a27ba21d6906260241ba91"
+    },
+    {
+      "path": "lib/pancreatic.ts",
+      "sha256": "ad475405272bc11360d3d9242e2a85d92c58997d8489f3f4fb54119e741cb8f9"
+    },
+    {
+      "path": "lib/pelvic-curriculum.ts",
+      "sha256": "15133293e5986e463adc1fca007da3d85e5da435db2986e93cb0f02504aa8e91"
+    },
+    {
+      "path": "lib/pelvic-organ-clinical-curriculum.ts",
+      "sha256": "4145a39a7dc07a1494c2f837919bf41173a07e3a9a1dcc174a50040b17bf50ed"
+    },
+    {
+      "path": "lib/pelvic-organ-imaging.ts",
+      "sha256": "d70a6468d006ee5c0efae859ccf2cf609149cf038ba0469a0a0d2ac0dc58b127"
+    },
+    {
+      "path": "lib/pelvic-organ-reasoning.ts",
+      "sha256": "f951d93412bcc797afabef89ca1d3ea7a0a6716a15493b9b9eabebb292487824"
+    },
+    {
+      "path": "lib/pelvic-veins.ts",
+      "sha256": "c7bfabbe5d9f05f61c1dd729c3378bdf32b3055452342da33b2a54d9b480fa33"
+    },
+    {
+      "path": "lib/pelvic-vessel-clinical-curriculum.ts",
+      "sha256": "88ad41c38b390ca0c8b3f2db81b1e7edcbf9c914ef9fa85e54e028a30fa3e0c5"
+    },
+    {
+      "path": "lib/pelvic-vessel-curriculum.ts",
+      "sha256": "4531ad654cf9f49c11dbdf11adb275b13fb0e97785b7c22a3b74c569386dc7c1"
+    },
+    {
+      "path": "lib/pica-clinical.ts",
+      "sha256": "99a3a11731b5beb2cac3211d7be53ede42c4277470d73e0e3c85e9a993995f24"
+    },
+    {
+      "path": "lib/plantar-arterial-ct.ts",
+      "sha256": "91c1cc8b21df7d6f05148515246bcbae1d6cb6f265f15f5d5bbf6a1410072887"
+    },
+    {
+      "path": "lib/plantar-arterial-us.ts",
+      "sha256": "36a0e7b430ae197a2a46fbf3a1a8a63d8aa2639d0dd5c6e0ca8c04ea55aae59f"
+    },
+    {
+      "path": "lib/popliteal-vessel-study.ts",
+      "sha256": "836b58cea4a797392e18e38975091ebb8e8918d8302c6e1ab0ee9caa5463f14b"
+    },
+    {
+      "path": "lib/portal-drainage.ts",
+      "sha256": "f60869bc7638505d9bac15c67c5fff0ced89a32f059151056785d1d86526aa10"
+    },
+    {
+      "path": "lib/portal-hepatic-clinical.ts",
+      "sha256": "944376d0ecd370f4e4b700e25ddf94951d078d0968026a31d2d635c76c441828"
+    },
+    {
+      "path": "lib/portal-hepatic-study.ts",
+      "sha256": "6861ca9b91562c8212cf456a5921c20dbbe1c9aedf73048a2bdbbbb71ad44188"
+    },
+    {
+      "path": "lib/portal-veins.ts",
+      "sha256": "ea4d982449805f6546b8c8bd856ee8b30cead28f6bd144134170de9f96ae8853"
+    },
+    {
+      "path": "lib/proper-digital-teaching.ts",
+      "sha256": "9e072b27456a485d71364eb35fcca7939b64d7af7049b07933d15ec548c63c71"
+    },
+    {
+      "path": "lib/pulmonary-context.ts",
+      "sha256": "3b6a9d180dd304d3f578385bc60dfe681bee07eeec3166124179c3d5131d103c"
+    },
+    {
+      "path": "lib/pulmonary-roles.ts",
+      "sha256": "487419f2eb6b63635e93ad39b9cbf5ca06df694f502f7d3c96f6b3ced4b1813c"
+    },
+    {
+      "path": "lib/pulmonary.ts",
+      "sha256": "82d22b0bf752b53044efb1333a35331a0e371637bd2a1be9cae915d70ce69670"
+    },
+    {
+      "path": "lib/reasoning-questions.ts",
+      "sha256": "c07ec177edb3b1c3056fd7c5373a07a9cd4d0cdd6c0015fb69859bcb5bdab196"
+    },
+    {
+      "path": "lib/rectal-deferent-imaging.ts",
+      "sha256": "b307450ba8b29e834cb627c23df4f3169063152cdbff80f2fa9ac3deebec65da"
+    },
+    {
+      "path": "lib/regional-arterial.ts",
+      "sha256": "093b8479366d151f86ef993b896cbbb2e38df781ebbaf0a5234627a2909402ed"
+    },
+    {
+      "path": "lib/regional-bone-joints.ts",
+      "sha256": "833268e839a6f4b978fee73d96361a712a5520030397e43198a1ae078faaeecb"
+    },
+    {
+      "path": "lib/regional-branch-imaging.ts",
+      "sha256": "6ac9b5db250917a4229d9ebd22166ea6e3ef7cc340649c7cd942bdd2ead9f697"
+    },
+    {
+      "path": "lib/regional-connective-clinical-curriculum.ts",
+      "sha256": "d741394acb5ba6a97b7da80688be07b4a35fa48bd07153385a7c67755d34fb61"
+    },
+    {
+      "path": "lib/regional-framing.ts",
+      "sha256": "96c4e2c9690fdc93b3caadea4a36bad91a038e95ec7da08a362aadf142d8b575"
+    },
+    {
+      "path": "lib/regional-motor.ts",
+      "sha256": "4c5b7715e7a175c16e9694f4aa0e7925d2c753fd5e167c4e2c567df3017fa4b9"
+    },
+    {
+      "path": "lib/regional-vascular-clinical.ts",
+      "sha256": "e5b28caaf9fff1bdca15a72ddc429aef010cc498b9ecab4d64db3c10070c3b88"
+    },
+    {
+      "path": "lib/regional-vessel-curriculum.ts",
+      "sha256": "b9bb8d5bdc6b706dbbdcd1c59ae3316db60730304830454bd4463d9a2de6b869"
+    },
+    {
+      "path": "lib/renal-relationships.ts",
+      "sha256": "f9a070d2b59be090ab63c591c555410cd0b13833c692e2c9e587236e6a173a2a"
+    },
+    {
+      "path": "lib/renal-studies.ts",
+      "sha256": "bc44af653a69733ff82ef7cbad2db054cdf57f43319193cfc3e69b555968a9f5"
+    },
+    {
+      "path": "lib/renal.ts",
+      "sha256": "d048169e7267d1b5339ee22a5ecaedc004abbdc95dadf82f078b184eb3efc936"
+    },
+    {
+      "path": "lib/renderer-health.ts",
+      "sha256": "59097c95fc681c20d4c448b9ed4df96a095def7be0424f9045edb9587c51164f"
+    },
+    {
+      "path": "lib/review-status.ts",
+      "sha256": "51d20ffc6983e8e99571f4aeb85f9fca1b0cec6040d1c267a9466b6e011de488"
+    },
+    {
+      "path": "lib/review-workspace.ts",
+      "sha256": "f7e8e770641815046c9444d1d62ef510424e0e8a9d0e165ca18b1379a6a9dafe"
+    },
+    {
+      "path": "lib/root-education-api.ts",
+      "sha256": "f7ad2030bb5834874cda9f1382312117d73fed2a99d6b17bd3d548472884f8ad"
+    },
+    {
+      "path": "lib/sca-mca-clinical.ts",
+      "sha256": "e54c3ebdaa8619e712bbca4f9099e48a77e4a9cfaba4387859dda741421c868b"
+    },
+    {
+      "path": "lib/scapular-arm-clinical-curriculum.ts",
+      "sha256": "42f314f6fe2c53aa7b7b4791fe456670e9474ba1dfb325bc26d58a12d35f8c6b"
+    },
+    {
+      "path": "lib/scene-label-focus.ts",
+      "sha256": "14439031e43a85e211ae917e779cda8f15d0d77a3259aae0b71cb6bed444c4b8"
+    },
+    {
+      "path": "lib/scene-labels.ts",
+      "sha256": "06d0e7404acfe9785f2c091910d14bd6244103c528139b82b9696713c23c4b99"
+    },
+    {
+      "path": "lib/screen-label-layout.ts",
+      "sha256": "bdbc34219c70803768ececed8aa2f952ec18c9cbeae85d77cd29af458debef04"
+    },
+    {
+      "path": "lib/selection-visibility.ts",
+      "sha256": "d08344cef574acc33d4527f0161a99b10fd42364c53fa8cdc2877a055bcec8f6"
+    },
+    {
+      "path": "lib/short-ciliary-pathology.ts",
+      "sha256": "bf74dbc970a46d4a93745acb2771e9420ed4a3fbadb9b28298589ba3fdef215f"
+    },
+    {
+      "path": "lib/short-ciliary.ts",
+      "sha256": "66d24af31dbc035fd4df5ac322ca881f2182aaae2aa7865ae992a71960f99f88"
+    },
+    {
+      "path": "lib/shoulder-arm-curriculum.ts",
+      "sha256": "1f3ed2b25a8dd8ee8f80291f92bc79760c70aaeeb86e6d2bf77ca63082714f4e"
+    },
+    {
+      "path": "lib/shoulder-arm-muscle-imaging.ts",
+      "sha256": "9c9c4fbd877ecc5afc19ce7462e4b6650e38db3e479dfafa1d4f4508b06424d5"
+    },
+    {
+      "path": "lib/shoulder-arm-vessel-clinical-curriculum.ts",
+      "sha256": "b2d3a2a32e40fa2bfc6e6b454cd5023583506000627fde80173a28b0a3b9624f"
+    },
+    {
+      "path": "lib/shoulder-arterial-mri.ts",
+      "sha256": "d2cec74d690c470be73e01e68093413526a8b20650d300fc208bfbf0908c455f"
+    },
+    {
+      "path": "lib/shoulder-clinical-curriculum.ts",
+      "sha256": "dab771a8dee5c917271d3354d350922bea85d985583c863cf1ff1f4b6481b18b"
+    },
+    {
+      "path": "lib/small-intestinal-mesentery-mri.ts",
+      "sha256": "07aafdc9b3042a11c78f70f09736bd0a613603ccd0ad0f6226603f2ec506019b"
+    },
+    {
+      "path": "lib/source-display-notes.ts",
+      "sha256": "b8c5fee2d8b91950d1951ea733e519b8fe7dec3e92e0fad22dd7a36df54871a2"
+    },
+    {
+      "path": "lib/specimen-identification.ts",
+      "sha256": "6f82c800c9c3572913f02db1cec19102a6fceb2604981d37ea98b716edb7b12a"
+    },
+    {
+      "path": "lib/specimen-links.ts",
+      "sha256": "a185fc2f0c8f439c423660acfe1ada45605245e1131b6e317d130a7339944d76"
+    },
+    {
+      "path": "lib/spinal-bone-curriculum.ts",
+      "sha256": "cd17bce6dedd162d374e0cf9e96a12d435294fb1ce81341c8a7c13af0d2c0f53"
+    },
+    {
+      "path": "lib/spinal-disc-function.ts",
+      "sha256": "402ffd000cf3566b9bee54b71bf3e6a135846ce5a0b77245f94b6deae0fd3607"
+    },
+    {
+      "path": "lib/spinal-level-studies.ts",
+      "sha256": "f41576f081a47a2df247c8ec95bcb295c1a0b4461cb7c432a597ae9d7c10ddee"
+    },
+    {
+      "path": "lib/spine-imaging.ts",
+      "sha256": "669cb11ce1edd966b056ee975bdc61c647232410c84ba3a180fbd89920957a39"
+    },
+    {
+      "path": "lib/spine-pelvic-muscle-imaging.ts",
+      "sha256": "873607de42973b82b281ac4b70e6301c24a3d9bef4203f6e822198dc4fa26b9c"
+    },
+    {
+      "path": "lib/study-camera.ts",
+      "sha256": "83743439ea9ff1d9560cc470aa1f2a8f4552c410fe94edc74ab8411f149be8d1"
+    },
+    {
+      "path": "lib/study-close-up-label.ts",
+      "sha256": "1ad423aaaff68a9c40c8fd33af58bc2f8457460cb70b4d6922e2856dac025438"
+    },
+    {
+      "path": "lib/study-library.ts",
+      "sha256": "88b6f0937a24eca205f2f65b878dc2b33958ecbc241949579af62ab563f2cfc1"
+    },
+    {
+      "path": "lib/study-links.ts",
+      "sha256": "70ec07874a09584d15f7d2a264061988b561972ff62ed2f8f38207b36d886b6f"
+    },
+    {
+      "path": "lib/study-navigation.ts",
+      "sha256": "d7b3b950dc4372821ba9e3f74f1de10622804b48b422197a4ccb07538bc9c0ad"
+    },
+    {
+      "path": "lib/study-views.ts",
+      "sha256": "86504e3a67ec3982b43c211dd01c928e41002b1459b50ff018146b3ee5ad738a"
+    },
+    {
+      "path": "lib/subscapular-arteries.ts",
+      "sha256": "f2bf9dd0cfb5846221865f83fbb8bf1680ea38533b8aa562dd41f58249bb63db"
+    },
+    {
+      "path": "lib/swallowing-curriculum.ts",
+      "sha256": "74a5678392927149fbab787300d28347d2f613df6db1e9d753f7d3110dee7102"
+    },
+    {
+      "path": "lib/systemic-venous.ts",
+      "sha256": "3d7ea90f180f90efefd8e6a922f30add3d88c010147a9ed1ff197fbd2995a644"
+    },
+    {
+      "path": "lib/tarsal-imaging.ts",
+      "sha256": "25d1061071ff016a0b61342ae79b6af6268a486c3cb39d9333cc6c7cfe35640d"
+    },
+    {
+      "path": "lib/tentorium.ts",
+      "sha256": "974332c66ba542c04d602721c3bfe810723ecfdb0e2f8796d33b7c545f55eeab"
+    },
+    {
+      "path": "lib/thigh-attachments.ts",
+      "sha256": "98068ce90901c4d5496f15c6449836d47a7689660bdd3097e2833036fb3ffee7"
+    },
+    {
+      "path": "lib/thigh-clinical-curriculum.ts",
+      "sha256": "68570f667509ba89549288c8e8b0ec39c64e1ed964dc7280d1d43ae237542c9a"
+    },
+    {
+      "path": "lib/thigh-curriculum.ts",
+      "sha256": "f01c5971d13fa780e453e8d66b3a07c111dddd808e3a8cc2a0fdb8b8d1919ddd"
+    },
+    {
+      "path": "lib/thigh-muscle-imaging.ts",
+      "sha256": "76400dbd2175a46882c9e856e4c8ce98a76fbee2bf3141aa03e0b3f416f46c70"
+    },
+    {
+      "path": "lib/thigh-reasoning.ts",
+      "sha256": "8a26447a642d1b2b069eea66840d6004a8d74739778336d91653f83bad7527ef"
+    },
+    {
+      "path": "lib/thoracic-anatomy.ts",
+      "sha256": "5da4967636bc9f4979a20b8db0ce3b4e5921d318a0f1052500a3667ba01cffe9"
+    },
+    {
+      "path": "lib/thoracic-bone-curriculum.ts",
+      "sha256": "d78e4afb5c06415ea876bf182b815286ea234624f614c3ca4d8342d1255d0886"
+    },
+    {
+      "path": "lib/thoracic-bone-imaging.ts",
+      "sha256": "cd980735bb04d2a76a899a166ecd3315e70fdfc0bc397f90baea168cb7e02ba8"
+    },
+    {
+      "path": "lib/thoracic-branch-imaging.ts",
+      "sha256": "ea501db08476c08242a8c22fefd68352ff1d55fba3a9c02cf3f9cd4bff688bea"
+    },
+    {
+      "path": "lib/thoracic-inlet-xray.ts",
+      "sha256": "21b996d128b0c6846e7a3a0d8bffda936f3bc7f7ee8b52911d03d178f54bea83"
+    },
+    {
+      "path": "lib/thoracic-organ-clinical-curriculum.ts",
+      "sha256": "6996aea073a7c5e20dbf33a1d607d261eba35051ef8d983d177c6d0704c3d6dc"
+    },
+    {
+      "path": "lib/thoracic-organ-reasoning.ts",
+      "sha256": "fe7bbe1c69cd31fbf375ebf1b1ecc0f3c8e8aacdf8be7ca2109f382f150e506c"
+    },
+    {
+      "path": "lib/thoracic-vessel-clinical-curriculum.ts",
+      "sha256": "9b0497b72c601d7ff89689d13c6efbf8804113d49790e901e3d5d02ed394a1d2"
+    },
+    {
+      "path": "lib/thoracic-vessel-curriculum.ts",
+      "sha256": "d05924f41b4921cc3d8c3dd97c5171c88ac8f4f949d9ce7cddcc715eb647aac7"
+    },
+    {
+      "path": "lib/thoracoabdominal-organ-imaging.ts",
+      "sha256": "c503474a75696b55f6bf6bd13bb01b85a60b79c1bc63e0740eb522d81966f720"
+    },
+    {
+      "path": "lib/thorax-motor.ts",
+      "sha256": "6e5f15f9c9f7e73457e2ac7502bddf6971b743bcd8ab2e35b86b6466bb42777b"
+    },
+    {
+      "path": "lib/thyroid-imaging.ts",
+      "sha256": "3eb810cb78de5a7fed03d7a103deeea1f5567ebc1e7d4ba6c755d13285b4d954"
+    },
+    {
+      "path": "lib/tissue-picking.ts",
+      "sha256": "d8687a5538d6721a64928065df70b4a2b454dc478929a3ef1e67d8118c2628fd"
+    },
+    {
+      "path": "lib/tract-plantar-imaging.ts",
+      "sha256": "76274b8dbd47b35d9f446830e292687705c72b330a4eed9a0573fb508b2cce82"
+    },
+    {
+      "path": "lib/transverse-mesocolon-mri.ts",
+      "sha256": "713c919011573ba09189ba1dbe23045a5c9629dd74406a1c578a43df0198d4e6"
+    },
+    {
+      "path": "lib/trunk-attachments.ts",
+      "sha256": "eb17e94c4b4bb0c14fedb2d5ecfa6352825a7ade10c2c050a787f3c36d8a7922"
+    },
+    {
+      "path": "lib/trunk-clinical-curriculum.ts",
+      "sha256": "4ad74f7bf268f451f04fc6d3ba88853658fd1acf09e90aed794ec1a62d9eb4cc"
+    },
+    {
+      "path": "lib/trunk-curriculum.ts",
+      "sha256": "7b4a7f488a30884fe02255a81ccaedb6a291284a847771aa6da22ebe12e0a471"
+    },
+    {
+      "path": "lib/trunk-reasoning.ts",
+      "sha256": "a98bd0dd78b8c27fdc0c72b52511e435a417eae09603a863e30305d9d18ef42d"
+    },
+    {
+      "path": "lib/um-knee-study.ts",
+      "sha256": "80908fce33eb88fe5d217d8ed70c948559c19981c48a7daf034353224ee25b55"
+    },
+    {
+      "path": "lib/um-limb-motor.ts",
+      "sha256": "f22ebd7d595c6b1c4a6918047f20fdadefd387db142ae91473e6da0e274bef68"
+    },
+    {
+      "path": "lib/um-limb-navigation.ts",
+      "sha256": "4697de9da3dc98ae0888681e9c799301a54eab2a8919c0f4b004664606bdd83f"
+    },
+    {
+      "path": "lib/um-limb-studies.ts",
+      "sha256": "a544d566b88d1a55c23f85e743d5cbabcc2518c54458c18eff6faa429a9ce810"
+    },
+    {
+      "path": "lib/um-limb-teaching.ts",
+      "sha256": "f51b0532e23719646b5588188c637a49b7523acc5ff976c6cff7101ffa41bf4d"
+    },
+    {
+      "path": "lib/upper-limb-arterial.ts",
+      "sha256": "946e337e78ee2c1b01eeab074a5c1f014c63cd0e8b6d76a084d9b02dc3529422"
+    },
+    {
+      "path": "lib/upper-limb-motor.ts",
+      "sha256": "7809b6454d0814836ccab7305215a5c08e1dc7758f54707a7a82f3920ef3e2b9"
+    },
+    {
+      "path": "lib/upper-limb-vessel-curriculum.ts",
+      "sha256": "47e14e09fc1f013975b29b4ca5d713ee450032f242b48272c01b4d641a6d9c0d"
+    },
+    {
+      "path": "lib/upper-venous-clinical.ts",
+      "sha256": "55a780a698191c1097b3e32911695b35419e58144382cf62c0b0eac1b340b58b"
+    },
+    {
+      "path": "lib/upper-vessel-imaging.ts",
+      "sha256": "909442b69744592d9593863a250ba90d962c9b684e60585eba91475d26d7fef6"
+    },
+    {
+      "path": "lib/utils.ts",
+      "sha256": "9304a861c8673bee09e0f12de31773abbde503b02e59dfd74763ddec2e37cf05"
+    },
+    {
+      "path": "lib/venous-drainage.ts",
+      "sha256": "461295771de1b34288fb3db0b87833d1398b60f81eb88b4a410b18bed608524c"
+    },
+    {
+      "path": "lib/ventricles.ts",
+      "sha256": "46f8ae96624771fb1e3bfb73f26c4ddbe4467e201784374df6159e68834a630c"
+    },
+    {
+      "path": "lib/ventricular-relationships.ts",
+      "sha256": "b9d2bd5ea079a600c2593ca522f325ceb03c2f2704a26747b4262ef6838c84df"
+    },
+    {
+      "path": "lib/vessel-visibility.ts",
+      "sha256": "672b08f4d060497d4c83341d8ecdf03b4e7f3a997ee61cc2c4dfff82c20d3f70"
+    },
+    {
+      "path": "lib/visual-pathway-context.ts",
+      "sha256": "829236c6c200805decaa212289779c36c0f4ec47cf056ba01274efd70065cfbd"
+    },
+    {
+      "path": "lib/visual-pathway.ts",
+      "sha256": "d57ede3b0e06388b222377d5aba1418d1c770ed856f01ea7322de765107acc87"
+    },
+    {
+      "path": "lib/wrist-imaging.ts",
+      "sha256": "6d61c1e5e947e5d9f4067c40d9b97e996b40dbc07999cc773db43be471f58cf4"
+    },
+    {
+      "path": "lib/xray-teaching.ts",
+      "sha256": "7a38c62a92467401cf5192adef611efdf21ad9ceb213371a984ee44fd425a6d1"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "7143e44eb0cb9e11c3f42c4a66d7bdef6f5c89334378d6cc23dcb37f43a1f350"
+    },
+    {
+      "path": "package.json",
+      "sha256": "0e7e72a15625555ba11c51d1402296ff3fa2156fb8029b7dec4030581c75a08e"
+    },
+    {
+      "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
+      "sha256": "a2fa96e5203e8a2c0ce5898a0d190834523a34f0b61c4ebfbce502a933f6d03e"
+    },
+    {
+      "path": "public/models/bodyparts3d-v3/back-layers/catalog.json",
+      "sha256": "23ba69e7268a03c8ab722313326bb7ffc3ac13aa49c0036c043993b38e0e9242"
+    },
+    {
+      "path": "public/models/bodyparts3d/anterior-cardiac-vein/catalog.json",
+      "sha256": "930539839a9b2a1c4a83f13309277aff6b90018cc2554b76010f3c4d3c351e2d"
+    },
+    {
+      "path": "public/models/bodyparts3d/brachial-veins/catalog.json",
+      "sha256": "d0fc1d879d8f7158d84fc70f1e6e1fc1b8ef71ba761bf22abe4407d4b6c73aa3"
+    },
+    {
+      "path": "public/models/bodyparts3d/brainstem/catalog.json",
+      "sha256": "1f405d0df3656da30f34c063bd81c3442cb33e8d2566b17447126460c95c3a38"
+    },
+    {
+      "path": "public/models/bodyparts3d/cardiac/catalog.json",
+      "sha256": "59cebff69d885e243a9b5b8048d9735eb7f4e7848b7f21a40fa6c12873c5b0a3"
+    },
+    {
+      "path": "public/models/bodyparts3d/cardiac/great-vessel-context.json",
+      "sha256": "fac546e54237db4bed783d583b01c583f423a35a74bd759727d519074de0af85"
+    },
+    {
+      "path": "public/models/bodyparts3d/celiac-display/display-correction.json",
+      "sha256": "d71a1bccdbd2c18e1d5a9f6537170e1acbb66c832fa6fbee68e25c7a0ad3ca82"
+    },
+    {
+      "path": "public/models/bodyparts3d/cerebral/catalog.json",
+      "sha256": "8dbcf8e0cbc5aff4c468e2eeda2e57fb048c65515ce35257b56f2247267624de"
+    },
+    {
+      "path": "public/models/bodyparts3d/circumflex-femoral/catalog.json",
+      "sha256": "6d74b75f7ace9cf7b6cb86a52c6f4285ef213876b71cb91c28a67e69ad8acf93"
+    },
+    {
+      "path": "public/models/bodyparts3d/collicular-brachia/catalog.json",
+      "sha256": "a607dbbdae16aff65fa35c65e181fe0aa828b3e4d09b10ba2a851d46a0a4e9d0"
+    },
+    {
+      "path": "public/models/bodyparts3d/coronary-venous/catalog.json",
+      "sha256": "996d8ca712b12dc3c2b9df4a6bad372838aeca64f017574be244ffa0b129abfe"
+    },
+    {
+      "path": "public/models/bodyparts3d/corpus-spongiosum/catalog.json",
+      "sha256": "edfe15182492244336b7cbddad0762f80e2e282e871f710c88afd6246453ce23"
+    },
+    {
+      "path": "public/models/bodyparts3d/cranial-arteries/catalog.json",
+      "sha256": "b9505be9ffd9e7a46348e76e65a4d421a77f57fd5bd2e7252ed685282a0b5ee7"
+    },
+    {
+      "path": "public/models/bodyparts3d/cranial-artery-components/catalog.json",
+      "sha256": "ed9fec0ecffa3912a89b4f7ba587bee067d9f3073c334fcae2973087c19d67f6"
+    },
+    {
+      "path": "public/models/bodyparts3d/cricothyroid/catalog.json",
+      "sha256": "bf52f5d63c8d3917179c52fb5d62f0a931d1f57dff4c27de615329d058fa7479"
+    },
+    {
+      "path": "public/models/bodyparts3d/cubital-veins/catalog.json",
+      "sha256": "623c140cea4f9273a4b0f0233274e617c2d705138a19cb4d7dc69e48054ff2be"
+    },
+    {
+      "path": "public/models/bodyparts3d/deep-leg-veins/catalog.json",
+      "sha256": "bc3c1c7418d8fe31ef94b6fb8b74d20fe54d8e0f2e67aef4df3c1182b68d137a"
+    },
+    {
+      "path": "public/models/bodyparts3d/deferent-ducts/catalog.json",
+      "sha256": "7af85fbe970f87143697c069bbdfefaa3759374a031e0e6d36d65fcfe6761af1"
+    },
+    {
+      "path": "public/models/bodyparts3d/elbow-arteries/catalog.json",
+      "sha256": "2d36e29240315db1d4c1b783013dc73c9f4c329d0811c1540f2ad4c911af81d0"
+    },
+    {
+      "path": "public/models/bodyparts3d/eye-layers/catalog.json",
+      "sha256": "3ae1d1b11eced1383b6de87df09fc8cbe9d24291b2144ae82b0a057d4e96daea"
+    },
+    {
+      "path": "public/models/bodyparts3d/eye-layers/display-correction.json",
+      "sha256": "61e09e972a1d301e56ebae9f1af90ffe9136309eda0242df1a03f84c6ad85dd2"
+    },
+    {
+      "path": "public/models/bodyparts3d/femoral-components/catalog.json",
+      "sha256": "594f8071b63861fcb1f4a0b821a26fd5c54b609444b8321474802b16ec13a799"
+    },
+    {
+      "path": "public/models/bodyparts3d/genicular-arteries/catalog.json",
+      "sha256": "45f141823a7d5fea53b490a718e8401ea1a627f89cb05bc4e9dd68f9020b292b"
+    },
+    {
+      "path": "public/models/bodyparts3d/hepatic-veins/catalog.json",
+      "sha256": "493a2070ab758dd6afd0ccfd8ecd6fe3bb2b855b2ecd34b067806b5b8a465039"
+    },
+    {
+      "path": "public/models/bodyparts3d/hepatic/biliary-context.json",
+      "sha256": "8f900245b094c2221b2a031adc3f29ae042c1b71f1d3d9a4f0783e48d4976969"
+    },
+    {
+      "path": "public/models/bodyparts3d/hepatic/catalog.json",
+      "sha256": "53962f7814854e576efde820bed1ccd2f7393b1296798898dee25f773e24d6c8"
+    },
+    {
+      "path": "public/models/bodyparts3d/inferior-epigastric-vessels/catalog.json",
+      "sha256": "8dd5cb1106d10b06bd731b637183dbaa353d466e45bb65157db4209463009b60"
+    },
+    {
+      "path": "public/models/bodyparts3d/inferior-thyroid-arteries/catalog.json",
+      "sha256": "c1887d76f71de08c25fb9277b00d5edc678affd43995faab4121bd347fc8a6b4"
+    },
+    {
+      "path": "public/models/bodyparts3d/limbic-landmarks/catalog.json",
+      "sha256": "785cbeba0b441d16bc3941fb406d27c49253eb2055f03d81aad47ad686a72f42"
+    },
+    {
+      "path": "public/models/bodyparts3d/longus-colli/catalog.json",
+      "sha256": "4dbf0fd67b985d5aa9ca910ab2757bc8fecf26c4b1315c98acab86d07fed5b38"
+    },
+    {
+      "path": "public/models/bodyparts3d/pancreas/display-correction.json",
+      "sha256": "a7add6d985798dedd1dd78c3879b2fc91f8a6cacc126d2a526f7ba8c4b03fc1a"
+    },
+    {
+      "path": "public/models/bodyparts3d/pancreatic/catalog.json",
+      "sha256": "d138ba3d14314bdf84abf5eb80a873b73a542fd69d3d9cee5419158b1cb67028"
+    },
+    {
+      "path": "public/models/bodyparts3d/pelvic-veins/catalog.json",
+      "sha256": "8bfec9b7bd1aa92de9ec9d91ef2b5738db493c45dfdc5f6da3665c3e72d6b814"
+    },
+    {
+      "path": "public/models/bodyparts3d/portal-veins/catalog.json",
+      "sha256": "2ce331f3cecbd67a2fe75f873c79d0c187b67fc4131b34cab8a44833c4a37ae8"
+    },
+    {
+      "path": "public/models/bodyparts3d/pulmonary/airway-context.json",
+      "sha256": "294ba340df060770edf390bc08f4260f8ed3cbd08250d39ef9b40c611a7ca5d4"
+    },
+    {
+      "path": "public/models/bodyparts3d/pulmonary/branch-types.json",
+      "sha256": "466c03022265e31a0fd0e3c3bfa9f76062c1d53ee4cd369d9e1945f0d03e0be4"
+    },
+    {
+      "path": "public/models/bodyparts3d/pulmonary/catalog.json",
+      "sha256": "b62ccd78dfc2ced8674b94eba67596add4de482f54c3f242814982b4e3dab9ea"
+    },
+    {
+      "path": "public/models/bodyparts3d/renal/catalog.json",
+      "sha256": "8549a481da385d6751e049478f156cdcdf014d804a922420f19ef6fe948d5d9d"
+    },
+    {
+      "path": "public/models/bodyparts3d/short-ciliary/catalog.json",
+      "sha256": "ddad34e031b761c168b44b07d22986f76278a0a2f2bca04c6274f0d9bf382ea1"
+    },
+    {
+      "path": "public/models/bodyparts3d/subscapular-arteries/catalog.json",
+      "sha256": "2d8a47fb5a9a1e856a071d404690d862348c405aac81620c320ce088a8d7d89f"
+    },
+    {
+      "path": "public/models/bodyparts3d/tentorium/catalog.json",
+      "sha256": "42f4720ad54a07d7e1f89c5eeb13e68673f4c8242aae353c7f4435bb48a7645e"
+    },
+    {
+      "path": "public/models/bodyparts3d/ventricles/catalog.json",
+      "sha256": "9a9852fe7e3f245c73525b94cd6fee08bd974f015cab5010d01d56e49ceb0a68"
+    },
+    {
+      "path": "public/models/bodyparts3d/visual-pathway/catalog.json",
+      "sha256": "6e92922cab267cc4bde9cc8262a6caccd619c89bab90fed6a4b346a022b24b32"
+    },
+    {
+      "path": "public/models/bodyparts3d/visual-pathway/sellar-context.json",
+      "sha256": "f3ba11e16956eed6530df9449cdbca919364d76d8d838df2b3520ef678125c16"
+    },
+    {
+      "path": "public/models/hra-pelvis/catalog.json",
+      "sha256": "a0e997a2eb4af64d25bf5f6f9901ea70616fb59443696f7630e0aea6bd53c619"
+    },
+    {
+      "path": "public/models/hra-renal/catalog.json",
+      "sha256": "0bdc5a8ec478c58fbc977b2cf720543d9715d3654bf42b9b3bb5d2e1d49cecf5"
+    },
+    {
+      "path": "public/models/um-knee/catalog.json",
+      "sha256": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e"
+    },
+    {
+      "path": "public/models/um-limb/catalog.json",
+      "sha256": "fc27b778fe8a0e13f773f272bd0bd9bdf9d22117029bd5a5b5d11f0dc39c83fb"
+    },
+    {
+      "path": "scripts/compress-model-delivery.mjs",
+      "sha256": "b18e1c9b00891f31190f8f3ccc02287500673fab48d9e74f0490cc68e9fbddf4"
+    },
+    {
+      "path": "scripts/glb-lossless-codec.mjs",
+      "sha256": "053f0a2a7a397600b8c70814fa07f0013928d60702b163a8c8514d1eaafba224"
+    },
+    {
+      "path": "vite.config.ts",
+      "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
+    }
+  ],
+  "sha256": "fd056e3a877d12eaf883d3244f964aac3bf01abe41e12aad66b74b10280331fb",
+  "sourceRendererSha256": "b9d9be3100f032dce6d7ac15074ae931438dfb3ebac338183124ce017ccf9088",
+  "websiteIntegrationSha256": "fc068953486f9bb55056efc4f1ab1c98a4fbc59b0b8c81c6783b154e1fbb3238"
+}

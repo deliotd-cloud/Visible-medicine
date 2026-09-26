@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "../components/review-ui-variants.css";
 
 :root {
   --ink: #132c32;

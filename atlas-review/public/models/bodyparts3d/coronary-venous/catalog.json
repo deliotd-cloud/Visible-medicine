@@ -1,0 +1,474 @@
+{
+  "version": 1,
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "parent": {
+    "id": "vm:anatomy:body:thorax:unpaired:organ:heart",
+    "fmaId": "FMA7088",
+    "name": "Heart",
+    "sourceName": "heart",
+    "system": "organs",
+    "category": "organ",
+    "laterality": "unpaired",
+    "region": "thorax",
+    "regions": [
+      "thorax"
+    ],
+    "bundle": "thorax-organs",
+    "nodeName": "FMA7088",
+    "bounds": {
+      "min": [
+        -0.36303699016571045,
+        3.7492003440856934,
+        0.2017040252685547
+      ],
+      "max": [
+        0.7454040050506592,
+        4.795000076293945,
+        1.2651699781417847
+      ]
+    },
+    "center": [
+      0.19118350744247437,
+      4.272100210189819,
+      0.7334370017051697
+    ],
+    "anchor": [
+      0.18683800101280212,
+      4.283900260925293,
+      0.7416999936103821
+    ],
+    "sourceTree": "partof",
+    "sources": [
+      {
+        "file": "FJ2417",
+        "sha256": "b4888f2a738be2f11b98d909c3fc08c0a3ccb05f88a94e53d7e283ad17af15dc"
+      },
+      {
+        "file": "FJ2418",
+        "sha256": "e462c4455225f7d99845af95988ca2d9885144fbb3f7567610ca5635ca3a3dbc"
+      },
+      {
+        "file": "FJ2419",
+        "sha256": "05242b351343b3cce42237dd3e8256a53bb395eaee90e4e8a465578259b58fe8"
+      },
+      {
+        "file": "FJ2420",
+        "sha256": "859e44dbbc0e66eb64da60eff23afba5c4bba1a9b6aaf260d075502c0f3c4f44"
+      },
+      {
+        "file": "FJ2421",
+        "sha256": "ab4d65a190910effcffa60cb5522359756504edb45b9dd312971083cb70c3af7"
+      },
+      {
+        "file": "FJ2422",
+        "sha256": "88654bd73fa155daf0b44fd67bccaec81c9e37c105e046076993f2684c463d95"
+      },
+      {
+        "file": "FJ2423",
+        "sha256": "390747e238ba9239961d02d1e02516d7af7aacc86d2bc0c29fc835381032ceeb"
+      },
+      {
+        "file": "FJ2424",
+        "sha256": "8bd340059ff697cfe9ce57f2427e8c5a982e248a1d2230d477a4fe094adc2a2a"
+      },
+      {
+        "file": "FJ2425",
+        "sha256": "223233fef054fb67b81d27881f10a1acce47c9ade147546b6859fa90e4e37dc3"
+      },
+      {
+        "file": "FJ2426",
+        "sha256": "a309412ea0b21043e9851a6e8d7d529db01034c379f0b846a49f2ac070c94bee"
+      },
+      {
+        "file": "FJ2427",
+        "sha256": "2c07c02f4913f9ee34b4a169f64ab506394a751d0906fad9aa596329da703a1e"
+      },
+      {
+        "file": "FJ2429",
+        "sha256": "83ad99e19bb6105883aa99a86a3c0089385dc5d2de96844c3e9eec6616e571e8"
+      },
+      {
+        "file": "FJ2430",
+        "sha256": "92d65071f4ffc0bb22dcf5da52160cb22fd90056af85d9cbb0cb56794b8b5bac"
+      },
+      {
+        "file": "FJ2431",
+        "sha256": "6ab13f8acf9a3cf93830ab28538e39c423b24c07ffad6c305196671dfc419df0"
+      },
+      {
+        "file": "FJ2432",
+        "sha256": "bdcf7f32b2a16bd8d7b2920ac0f03958174c90d31353e9b38c4462aacfc038f3"
+      },
+      {
+        "file": "FJ2433",
+        "sha256": "736c0689a5489394df568e2788d27e1a547d8fcbc464490e7bef94ba9c66e8e8"
+      },
+      {
+        "file": "FJ2434",
+        "sha256": "ab3806e8ae151df2ea1973043cd5ffe48a89f73dc27c81b2a1d4c1b6cee51131"
+      },
+      {
+        "file": "FJ2435",
+        "sha256": "410689ed978de91a6f14a3332f333b9b8db32931edb47e880cf7bc58b505d191"
+      },
+      {
+        "file": "FJ2436",
+        "sha256": "d2d152ec63544d37077ede2c72f2e8ebd80eb98537386ab917c6a19788f8ed98"
+      },
+      {
+        "file": "FJ2437",
+        "sha256": "510fbbf7a56981733876388838d5acfa392de92a37e84a68d489882e7a063dcb"
+      },
+      {
+        "file": "FJ2438",
+        "sha256": "187235f3c3612ef27abde924d01c71579c2946435e64319164f43e5ad008284d"
+      },
+      {
+        "file": "FJ2439",
+        "sha256": "e7c21cd1659eced056eb56e28f4fa9019ace451ea6e0333097846177f807bb5a"
+      },
+      {
+        "file": "FJ2655",
+        "sha256": "6cc76de968f59ae4244f5990fc00023a1ad137e500eea7e3ab02740a9505e030"
+      },
+      {
+        "file": "FJ2667",
+        "sha256": "6bb2898acda5680828658540ed9048abc51b9df9761fed5608567849fcbd6a61"
+      },
+      {
+        "file": "FJ2668",
+        "sha256": "ecd7de3f9aa7a87a85da8abc9c023d6701040c3297fd1f6ba93d7875e871f611"
+      },
+      {
+        "file": "FJ2670",
+        "sha256": "d23c5be67fc7e0a221e6d284772cf89bbc75b31a5bfa431210bd396be8d087b7"
+      },
+      {
+        "file": "FJ2671",
+        "sha256": "095344f7ee5d89c8877b24c76fd57671491f34cb59e0fdf1f0738c54c239b200"
+      },
+      {
+        "file": "FJ2672",
+        "sha256": "0adecd6703d24888e3c236c8a248393777a9b83d902ed9bfc69f258809188092"
+      },
+      {
+        "file": "FJ2673",
+        "sha256": "b3fe7f8dd47fd7758fe4b2f8613c24c642be96d419a7699f85b44a2396a127a7"
+      },
+      {
+        "file": "FJ2674",
+        "sha256": "605cda4cb28547b67d9569ff8576ab7dc9a945d47a9d8b4a15d9552c80daee91"
+      },
+      {
+        "file": "FJ2675",
+        "sha256": "f0d843e88d508d4ab383c4e8131974d9fdcab3b340c87e3002fabde9cf23d3f4"
+      },
+      {
+        "file": "FJ2676",
+        "sha256": "c588c075c7c665691e6789312dad8d86541a1d2916fb63c33d03e38266e213d7"
+      },
+      {
+        "file": "FJ2677",
+        "sha256": "a63f5990cabf34ead2c743bda11b178cdb60a983e7d181c2b757757354f2681e"
+      },
+      {
+        "file": "FJ2692",
+        "sha256": "560c831439ab349de9b564ca92ed175677a3d12963ccd5483314175948797347"
+      },
+      {
+        "file": "FJ2693",
+        "sha256": "ec42da30e165d2cb4ccf189982843b88a8ba006daae95b99104a2061bf30633b"
+      },
+      {
+        "file": "FJ2694",
+        "sha256": "2d2b675af567f743da81826537d13fe72087c98a39741f5848bb70b1676b5c75"
+      },
+      {
+        "file": "FJ2695",
+        "sha256": "00e9b8257eed1ddb8bfb60dfe301b03c08fd8a6e4b83002dad567d8cc738ba73"
+      },
+      {
+        "file": "FJ2696",
+        "sha256": "ec8ecd7100e6a34661db1a99861ef4f3df17c8ac87316cafac2dbf6f895efd5a"
+      },
+      {
+        "file": "FJ2697",
+        "sha256": "e029d3b95fc5b032016ff1e0783a2c71623a55be49cdbbd4be37fcbbfed0117a"
+      },
+      {
+        "file": "FJ2698",
+        "sha256": "2864725de555603dc502c206c9d12bef366358ee4064e8f375c1df9294b7f955"
+      },
+      {
+        "file": "FJ2699",
+        "sha256": "b52176deba592a44bcec3e29d11a8cac00031cac0a35e215d06df515e3224fc4"
+      },
+      {
+        "file": "FJ2700",
+        "sha256": "7c1bda6f9d3170fc5a553a5e917514bb7d108f6c3e37cbe912d6573d634fe983"
+      },
+      {
+        "file": "FJ2714",
+        "sha256": "aa76ceec1e0b4e19b281a2da0e15328d2719eaa1d7b1a3666421bf11ab9c877a"
+      },
+      {
+        "file": "FJ2715",
+        "sha256": "d34c2023e84119131841fe5a1e1251a7252d4900b62b2b1b61d29d3ece4cb51a"
+      },
+      {
+        "file": "FJ2716",
+        "sha256": "ecb5e668e2cf43031263ceed40e29b6862519d8dadef6b21ef63c3398e2f81a5"
+      },
+      {
+        "file": "FJ2717",
+        "sha256": "1dcde62744c8b83892ce1828179d736d2eafdf2fb3cbd74aa61658001dab686b"
+      },
+      {
+        "file": "FJ2718",
+        "sha256": "07ca611daf69f5411871802dbf76e6845519b71df1ef39a772d648c7b1861414"
+      },
+      {
+        "file": "FJ2719",
+        "sha256": "dd10bda525a6b29340babe9b70aa02f8273bedd77519fdc69398dc9f492001b7"
+      },
+      {
+        "file": "FJ2720",
+        "sha256": "996196bea87629d81a5c2040b767026e2a0a77854500999fe9857f3f4a030f5f"
+      },
+      {
+        "file": "FJ2721",
+        "sha256": "d42f1d3059c8a78d65b44ea7934deebd96dbc84338b30341a422a9ce1751c243"
+      },
+      {
+        "file": "FJ2722",
+        "sha256": "f5de57227430b3622ad827348883760596469ed754c473685975be5247cc9abd"
+      },
+      {
+        "file": "FJ2724",
+        "sha256": "419e6a37e1fd0b0e7468654b6b58e561229a94f9641f5b04506271659017b2d4"
+      },
+      {
+        "file": "FJ2727",
+        "sha256": "e482e49e0568a53afa594791946a4cb98ad774dbdf4db6bb32d7f9b3629bdced"
+      },
+      {
+        "file": "FJ2728",
+        "sha256": "107b8fc3f7740ca108ac0d2b4b722d6242a3b78f8e67e29433ac56f08544a31b"
+      },
+      {
+        "file": "FJ2729",
+        "sha256": "8b21e5b96cc8cdd8d4b63d798ff7ae01c0d0b335cc6f3fb8ae00b7895067ad48"
+      },
+      {
+        "file": "FJ2731",
+        "sha256": "ac26ffa55a72b44913d761c6b922f6c000f9a229f29740ab765e5ef5fe43f9c5"
+      }
+    ],
+    "coverageNote": "Display aggregate excludes the separately selectable trunk of right coronary artery surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable trunk of left coronary artery surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable anterior interventricular branch of left coronary artery surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable circumflex branch of left coronary artery surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable great cardiac vein surface. Source coordinates are unchanged.",
+    "provenance": {
+      "method": "licensed-source-mesh",
+      "license": "CC-BY-4.0",
+      "sourceVersion": "4.0",
+      "recovered": false
+    },
+    "validation": {
+      "status": "unvalidated",
+      "anatomicalReview": false
+    }
+  },
+  "regions": [
+    {
+      "id": "thorax",
+      "name": "Coronary venous source parts",
+      "description": "Two source-defined selections within the heart; clinical validation pending."
+    }
+  ],
+  "structures": [
+    {
+      "id": "vm:anatomy:body:thorax:unpaired:vessel:coronary-sinus",
+      "fmaId": "FMA4706",
+      "name": "Coronary sinus",
+      "sourceName": "coronary sinus",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unpaired",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "coronary-venous",
+      "nodeName": "FMA4706",
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2655",
+          "sha256": "6cc76de968f59ae4244f5990fc00023a1ad137e500eea7e3ab02740a9505e030"
+        }
+      ],
+      "parentId": "vm:anatomy:body:thorax:unpaired:organ:heart",
+      "bounds": {
+        "min": [
+          -0.05522400140762329,
+          3.9749999046325684,
+          0.31108298897743225
+        ],
+        "max": [
+          0.4326930046081543,
+          4.166800022125244,
+          0.6556500196456909
+        ]
+      },
+      "center": [
+        0.1887345016002655,
+        4.070899963378906,
+        0.4833665043115616
+      ],
+      "anchor": [
+        0.15570899844169617,
+        4.021100044250488,
+        0.47132501006126404
+      ],
+      "coverageNote": "One original coronary sinus source surface. No opening, connected lumen, flow or patient correspondence is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unpaired:vessel:small-cardiac-vein",
+      "fmaId": "FMA4714",
+      "name": "Small cardiac vein · source group",
+      "sourceName": "small cardiac vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unpaired",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "coronary-venous",
+      "nodeName": "FMA4714",
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2724",
+          "sha256": "419e6a37e1fd0b0e7468654b6b58e561229a94f9641f5b04506271659017b2d4"
+        },
+        {
+          "file": "FJ2731",
+          "sha256": "ac26ffa55a72b44913d761c6b922f6c000f9a229f29740ab765e5ef5fe43f9c5"
+        }
+      ],
+      "parentId": "vm:anatomy:body:thorax:unpaired:organ:heart",
+      "bounds": {
+        "min": [
+          -0.20840099453926086,
+          3.865999937057495,
+          0.6435700058937073
+        ],
+        "max": [
+          0.05994899943470955,
+          4.411300182342529,
+          1.1043100357055664
+        ]
+      },
+      "center": [
+        -0.07422599755227566,
+        4.138650059700012,
+        0.8739400207996368
+      ],
+      "anchor": [
+        -0.1895579993724823,
+        4.0971999168396,
+        1.0046700239181519
+      ],
+      "coverageNote": "Two original source files retained as one small cardiac vein selection, not two independently named branches. No complete tree, junction, lumen, flow or patient correspondence is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "selectableIds": [
+    "vm:anatomy:body:thorax:unpaired:vessel:coronary-sinus",
+    "vm:anatomy:body:thorax:unpaired:vessel:small-cardiac-vein"
+  ],
+  "contextIds": [],
+  "bundles": [
+    {
+      "id": "coronary-venous",
+      "url": "/models/bodyparts3d/coronary-venous/coronary-venous.glb?v=4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12",
+      "bytes": 40996,
+      "sha256": "4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12",
+      "structures": 2
+    }
+  ],
+  "modification": "Original indexed vertices and ordered faces preserved under the pinned source-to-scene transform and Float32 storage. Shading normals recomputed; no geometry repair or inferred connector.",
+  "clinicalApproval": false
+}

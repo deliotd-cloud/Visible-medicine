@@ -26,6 +26,7 @@ export default async function WorkspacePage() {
         <div><span>Governed media</span><b>{snapshot.usage.governedMedia}</b></div>
       </section>
       <section className="workspace-tools expanded">
+        {account.roles.includes("administrator") && <div><p className="section-index">Review anatomy</p><h2>Clinical Review</h2><p>Inspect source-bound anatomy and teaching, record corrections, and save your personal review decisions.</p><Link href="/workspace/atlas-review">Open Clinical Review →</Link></div>}
         <div><p className="section-index">Invite and organise</p><h2>People &amp; roles</h2><p>Create held-delivery invitation links, import bounded rosters and review organisation membership.</p><Link href="/workspace/people">Manage people →</Link></div>
         <div><p className="section-index">Prepare safely</p><h2>Pilot readiness</h2><p>Record identity, tenancy, content, privacy, accessibility, security and operational evidence.</p><Link href="/workspace/readiness">Open readiness centre →</Link></div>
         <div><p className="section-index">Create and deliver</p><h2>Studio</h2><p>Build courses and workbooks, manage cohorts and prepare governed releases.</p><Link href="/studio/workspace">Open Studio workspace →</Link></div>

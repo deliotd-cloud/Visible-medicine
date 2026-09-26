@@ -1,0 +1,407 @@
+{
+  "version": 1,
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "auditSha256": "953c4a9f58d3b5f68961b8aefba1452ff20b215b0c8a927eb65886d045f357d6",
+  "structures": [
+    {
+      "id": "vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve",
+      "fmaId": "FMA7041",
+      "name": "Short ciliary nerve · source group",
+      "sourceName": "short ciliary nerve",
+      "system": "nerves",
+      "category": "nerve",
+      "laterality": "unspecified",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "short-ciliary",
+      "nodeName": "FMA7041",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1319",
+          "sha256": "7f45ad84f0874a8aeb62085affb9e9303057bea8b46068cc0b3e7e341a1258e7"
+        },
+        {
+          "file": "FJ1370",
+          "sha256": "8e8853c389c874fa12b5db73c008755eb5a98a3fe9ce7457757c809ef0c9ded9"
+        }
+      ],
+      "presentationParts": [
+        {
+          "source": {
+            "file": "FJ1319",
+            "sha256": "7f45ad84f0874a8aeb62085affb9e9303057bea8b46068cc0b3e7e341a1258e7"
+          },
+          "displaySide": "left",
+          "nodeName": "FMA7041_FJ1319",
+          "bounds": {
+            "min": [
+              0.23125700652599335,
+              7.21589994430542,
+              0.8174899816513062
+            ],
+            "max": [
+              0.32208600640296936,
+              7.257599830627441,
+              0.9706000089645386
+            ]
+          },
+          "center": [
+            0.27667150646448135,
+            7.236749887466431,
+            0.8940449953079224
+          ],
+          "anchor": [
+            0.2773379981517792,
+            7.2322998046875,
+            0.9024800062179565
+          ]
+        },
+        {
+          "source": {
+            "file": "FJ1370",
+            "sha256": "8e8853c389c874fa12b5db73c008755eb5a98a3fe9ce7457757c809ef0c9ded9"
+          },
+          "displaySide": "right",
+          "nodeName": "FMA7041_FJ1370",
+          "bounds": {
+            "min": [
+              -0.3350659906864166,
+              7.21589994430542,
+              0.8175600171089172
+            ],
+            "max": [
+              -0.24433700740337372,
+              7.257800102233887,
+              0.9706000089645386
+            ]
+          },
+          "center": [
+            -0.28970149904489517,
+            7.236850023269653,
+            0.8940800130367279
+          ],
+          "anchor": [
+            -0.2888390123844147,
+            7.2342000007629395,
+            0.8957200050354004
+          ]
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.3350659906864166,
+          7.21589994430542,
+          0.8174899816513062
+        ],
+        "max": [
+          0.32208600640296936,
+          7.257800102233887,
+          0.9706000089645386
+        ]
+      },
+      "center": [
+        -0.006489992141723633,
+        7.236850023269653,
+        0.8940449953079224
+      ],
+      "anchor": [
+        0.23125700652599335,
+        7.255000114440918,
+        0.8238499760627747
+      ],
+      "coverageNote": "Bilateral source-defined group: one original file on each side, with two topological components per file. Components and visible projections are not a normal nerve count or complete ocular autonomic pathway. Laterality filters show the audited source-file presentation without asserting new sided FMA identities. Fibre continuity, precise globe entry and clinical anatomy require review.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextRecords": [
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:communicating-branch-of-left-nasociliary-nerve-with-left-ciliary-ganglion",
+      "fmaId": "FMA52674",
+      "name": "Communicating branch of left nasociliary nerve with left ciliary ganglion",
+      "sourceName": "communicating branch of left nasociliary nerve with left ciliary ganglion",
+      "system": "nerves",
+      "category": "nerve",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-nerves",
+      "nodeName": "FMA52674",
+      "bounds": {
+        "min": [
+          0.1637910008430481,
+          7.249200344085693,
+          0.7593100070953369
+        ],
+        "max": [
+          0.2468540072441101,
+          7.290799617767334,
+          0.8220500349998474
+        ]
+      },
+      "center": [
+        0.2053225040435791,
+        7.269999980926514,
+        0.7906800210475922
+      ],
+      "anchor": [
+        0.19922199845314026,
+        7.268499851226807,
+        0.7957800030708313
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1311",
+          "sha256": "9511e0d9b9f66f61538766c053cb26c0a1aab37c15b01e5b6269c00a9047647d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:communicating-branch-of-right-nasociliary-nerve-with-right-ciliary-ganglion",
+      "fmaId": "FMA52673",
+      "name": "Communicating branch of right nasociliary nerve with right ciliary ganglion",
+      "sourceName": "communicating branch of right nasociliary nerve with right ciliary ganglion",
+      "system": "nerves",
+      "category": "nerve",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-nerves",
+      "nodeName": "FMA52673",
+      "bounds": {
+        "min": [
+          -0.26000699400901794,
+          7.249300479888916,
+          0.7587899565696716
+        ],
+        "max": [
+          -0.1769160032272339,
+          7.290799617767334,
+          0.8223599195480347
+        ]
+      },
+      "center": [
+        -0.21846149861812592,
+        7.270050048828125,
+        0.7905749380588531
+      ],
+      "anchor": [
+        -0.2174070030450821,
+        7.266600131988525,
+        0.7979200482368469
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1362",
+          "sha256": "e9055e3812268376fcb1d0dc51e212e3c1b5b506947abde5d9d2a1de61516970"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+      "fmaId": "FMA53549",
+      "name": "Right ciliary ganglion",
+      "sourceName": "right ciliary ganglion",
+      "system": "nerves",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-nerves-inventory",
+      "nodeName": "FMA53549",
+      "bounds": {
+        "min": [
+          -0.2703910171985626,
+          7.239599704742432,
+          0.8079899549484253
+        ],
+        "max": [
+          -0.23795200884342194,
+          7.265300273895264,
+          0.8405799865722656
+        ]
+      },
+      "center": [
+        -0.2541715130209923,
+        7.252449989318848,
+        0.8242849707603455
+      ],
+      "anchor": [
+        -0.24665099382400513,
+        7.257500171661377,
+        0.8309299945831299
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1339",
+          "sha256": "de1f5bc0af45dc52a70d8e2d647f509b3ff0072ae504ab95483e9c1662195076"
+        }
+      ],
+      "coverageNote": "Small orbital ganglion source; its roots and connecting nerve branches are not reconstructed. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
+      "fmaId": "FMA53550",
+      "name": "Left ciliary ganglion",
+      "sourceName": "left ciliary ganglion",
+      "system": "nerves",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-nerves-inventory",
+      "nodeName": "FMA53550",
+      "bounds": {
+        "min": [
+          0.22498100996017456,
+          7.239499568939209,
+          0.8080999851226807
+        ],
+        "max": [
+          0.257192999124527,
+          7.265100002288818,
+          0.8402799963951111
+        ]
+      },
+      "center": [
+        0.24108700454235077,
+        7.252299785614014,
+        0.8241899907588959
+      ],
+      "anchor": [
+        0.23325000703334808,
+        7.251800537109375,
+        0.8322200179100037
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1288",
+          "sha256": "c362a3813e882588d31710138ce6e180c2d0dd32e9755a0f53452a82657371e0"
+        }
+      ],
+      "coverageNote": "Small orbital ganglion source; its roots and connecting nerve branches are not reconstructed. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextBundles": [
+    {
+      "id": "head-neck-nerves",
+      "url": "/models/bodyparts3d/full-body/head-neck-nerves.glb",
+      "bytes": 8286776,
+      "sha256": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structures": 27
+    },
+    {
+      "id": "head-neck-nerves-inventory",
+      "url": "/models/bodyparts3d/full-body/head-neck-nerves-inventory.glb",
+      "bytes": 10012,
+      "sha256": "4e7f008f8f6167e351bc02c6b04f538ba74433f893d77e5a5b0bb8396fa3b1b9",
+      "structures": 2
+    }
+  ],
+  "bundles": [
+    {
+      "id": "short-ciliary",
+      "url": "/models/bodyparts3d/short-ciliary/short-ciliary.glb?v=9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5",
+      "bytes": 65264,
+      "sha256": "9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5",
+      "structures": 1
+    }
+  ],
+  "modification": "Original indexed vertices and ordered faces retained under the common source-to-scene transform and Float32 storage; shading normals recomputed. Aggregate and source-part nodes are alternative presentations, never simultaneously drawn for one selection. No repair, mirroring, smoothing or generated connections.",
+  "clinicalApproval": false
+}

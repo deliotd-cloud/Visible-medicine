@@ -1,0 +1,42 @@
+.anatomy-control-rail .body-system-bar > .body-vessel-system {
+  display: grid;
+  grid-template-columns: 16px minmax(0, 1fr) auto;
+  gap: 0 6px;
+}
+.anatomy-control-rail .body-vessel-system .vessel-system-expand {
+  padding: 0;
+  min-width: 0;
+  min-height: 32px;
+  height: auto;
+  justify-content: space-between;
+  color: inherit;
+  white-space: normal;
+}
+.anatomy-control-rail .vessel-system-expand > span { text-align: left; }
+.anatomy-control-rail .vessel-system-expand > svg { width: 12px; height: 12px; }
+.vessel-system-expand > svg.expanded { transform: rotate(90deg); }
+.anatomy-control-rail .body-vessel-system .vessel-system-options {
+  grid-column: 1 / -1;
+  min-width: 0;
+  min-inline-size: 0;
+  margin: 0;
+  padding: 6px 0 0;
+  border: 0;
+  color: var(--vm-ink);
+}
+.anatomy-control-rail .body-vessel-system .vessel-system-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  cursor: pointer;
+}
+.anatomy-control-rail .body-vessel-system .vessel-system-option > span { font-size: 14px; font-weight: 500; }
+.anatomy-control-rail .body-vessel-system .vessel-system-options p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.vessel-system-history { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.vessel-system-history button { flex: 1; min-height: 44px; }

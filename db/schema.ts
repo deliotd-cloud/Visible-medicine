@@ -1,4 +1,5 @@
 import { sql } from "drizzle-orm";
+export * from '../atlas-review/db/schema';
 import { check, index, integer, primaryKey, sqliteTable, text, uniqueIndex } from "drizzle-orm/sqlite-core";
 
 export const users = sqliteTable("users", {

@@ -1,0 +1,2824 @@
+{
+  "sourceCommit": "59a567c7fb76c954cf3d91eeec62124e207bbbf9",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "spine-skeleton",
+      "url": "/models/bodyparts3d/full-body/spine-skeleton.glb",
+      "bytes": 1286192,
+      "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957",
+      "structures": 25
+    },
+    {
+      "id": "spine-connective-gaps",
+      "url": "/models/bodyparts3d/full-body/spine-connective-gaps.glb",
+      "bytes": 934264,
+      "sha256": "aae6dc0589fa3dc9ce5ea51ff28520a077290adb5b92fa4570c3cf20b2090e02",
+      "structures": 22
+    }
+  ],
+  "entries": [
+    {
+      "group": "atlas",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:atlas",
+        "fmaId": "FMA12519",
+        "name": "Atlas",
+        "sourceName": "atlas",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA12519",
+        "bounds": {
+          "min": [
+            -0.41364601254463196,
+            6.62209939956665,
+            -0.09404201805591583
+          ],
+          "max": [
+            0.40230700373649597,
+            6.814300537109375,
+            0.3764420449733734
+          ]
+        },
+        "center": [
+          -0.005669504404067993,
+          6.718199968338013,
+          0.1412000134587288
+        ],
+        "anchor": [
+          -0.10565600544214249,
+          6.696400165557861,
+          0.2025810182094574
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3176",
+            "sha256": "8ac9ee6d7631edc066a322af278ed508eab4d9c0919e9a77657ead17c14c8a79"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "axis",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:axis",
+        "fmaId": "FMA12520",
+        "name": "Axis",
+        "sourceName": "axis",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA12520",
+        "bounds": {
+          "min": [
+            -0.2596159875392914,
+            6.331700325012207,
+            -0.13329102098941803
+          ],
+          "max": [
+            0.24574199318885803,
+            6.783499717712402,
+            0.3653910160064697
+          ]
+        },
+        "center": [
+          -0.006936997175216675,
+          6.557600021362305,
+          0.11604999750852585
+        ],
+        "anchor": [
+          0.013543100096285343,
+          6.581600189208984,
+          0.20394302904605865
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3177",
+            "sha256": "ae446bbf47561c5ff2a2c0a03bfb158ba2581477ae5078ac89cc95b92637adab"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "cervical",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:third-cervical-vertebra",
+        "fmaId": "FMA12521",
+        "name": "Third cervical vertebra",
+        "sourceName": "third cervical vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA12521",
+        "bounds": {
+          "min": [
+            -0.2984279990196228,
+            6.170000076293945,
+            -0.11866901069879532
+          ],
+          "max": [
+            0.28539299964904785,
+            6.457399845123291,
+            0.37813201546669006
+          ]
+        },
+        "center": [
+          -0.006517499685287476,
+          6.313699960708618,
+          0.12973150238394737
+        ],
+        "anchor": [
+          0.008280440233647823,
+          6.285400390625,
+          0.06494998931884766
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3161",
+            "sha256": "8f0de55a4feef85c256501a8afff7bb5aa3f77f4681af4c91801da87b54db103"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "cervical",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:fourth-cervical-vertebra",
+        "fmaId": "FMA12522",
+        "name": "Fourth cervical vertebra",
+        "sourceName": "fourth cervical vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA12522",
+        "bounds": {
+          "min": [
+            -0.27753400802612305,
+            6.045999526977539,
+            -0.09306400269269943
+          ],
+          "max": [
+            0.2637749910354614,
+            6.321400165557861,
+            0.3910810053348541
+          ]
+        },
+        "center": [
+          -0.0068795084953308105,
+          6.1836998462677,
+          0.14900850132107735
+        ],
+        "anchor": [
+          -0.04486189782619476,
+          6.188299655914307,
+          0.1026729941368103
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3164",
+            "sha256": "a883dd5929817f87eb366a32ca9d82463fd0db40286c49b8adc9e9d1a8cecc34"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "cervical",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:fifth-cervical-vertebra",
+        "fmaId": "FMA12523",
+        "name": "Fifth cervical vertebra",
+        "sourceName": "fifth cervical vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA12523",
+        "bounds": {
+          "min": [
+            -0.2969779968261719,
+            5.937700271606445,
+            -0.13917499780654907
+          ],
+          "max": [
+            0.2833319902420044,
+            6.1798996925354,
+            0.407725989818573
+          ]
+        },
+        "center": [
+          -0.00682300329208374,
+          6.058799982070923,
+          0.13427549600601196
+        ],
+        "anchor": [
+          -0.006795770023018122,
+          6.063100814819336,
+          0.12540000677108765
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3167",
+            "sha256": "b2485c3707b04f1fd455ee4d3a7b69670ec9c85d4ef9a54463e5c6089f1a69a7"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "cervical",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:sixth-cervical-vertebra",
+        "fmaId": "FMA12524",
+        "name": "Sixth cervical vertebra",
+        "sourceName": "sixth cervical vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA12524",
+        "bounds": {
+          "min": [
+            -0.31265199184417725,
+            5.815899848937988,
+            -0.20820599794387817
+          ],
+          "max": [
+            0.2994770109653473,
+            6.047399997711182,
+            0.4167099893093109
+          ]
+        },
+        "center": [
+          -0.006587490439414978,
+          5.931649923324585,
+          0.10425199568271637
+        ],
+        "anchor": [
+          -0.02192229963839054,
+          5.937199592590332,
+          0.12316200137138367
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3170",
+            "sha256": "ac100888f7e271851c138e8d41a52168070e4fe5c63e8876a4bcfba08f3b59aa"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "cervical",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:seventh-cervical-vertebra",
+        "fmaId": "FMA12525",
+        "name": "Seventh cervical vertebra",
+        "sourceName": "seventh cervical vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA12525",
+        "bounds": {
+          "min": [
+            -0.33229300379753113,
+            5.647099494934082,
+            -0.28733599185943604
+          ],
+          "max": [
+            0.31931599974632263,
+            5.918399810791016,
+            0.40031898021698
+          ]
+        },
+        "center": [
+          -0.006488502025604248,
+          5.782749652862549,
+          0.05649149417877197
+        ],
+        "anchor": [
+          -0.008737760595977306,
+          5.774100303649902,
+          0.07046298682689667
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3172",
+            "sha256": "43bc0a1f9b3adffd5f45256b61f75affa15b56c85b387fa733b59de310216104"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracic",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:first-thoracic-vertebra",
+        "fmaId": "FMA9165",
+        "name": "First thoracic vertebra",
+        "sourceName": "first thoracic vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA9165",
+        "bounds": {
+          "min": [
+            -0.37382999062538147,
+            5.4721999168396,
+            -0.329133003950119
+          ],
+          "max": [
+            0.35916197299957275,
+            5.769000053405762,
+            0.3687190115451813
+          ]
+        },
+        "center": [
+          -0.007334008812904358,
+          5.620599985122681,
+          0.019793003797531128
+        ],
+        "anchor": [
+          0.021189598366618156,
+          5.618599891662598,
+          0.026789017021656036
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3158",
+            "sha256": "aa69c48def3434d6a3e1c56fc78af45f01545931fde5422af17d5f98ce9ed8a3"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracic",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:second-thoracic-vertebra",
+        "fmaId": "FMA9187",
+        "name": "Second thoracic vertebra",
+        "sourceName": "second thoracic vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA9187",
+        "bounds": {
+          "min": [
+            -0.3592210114002228,
+            5.265899658203125,
+            -0.37879499793052673
+          ],
+          "max": [
+            0.3457840085029602,
+            5.603600025177002,
+            0.3267579674720764
+          ]
+        },
+        "center": [
+          -0.006718501448631287,
+          5.4347498416900635,
+          -0.02601851522922516
+        ],
+        "anchor": [
+          0.020678000524640083,
+          5.457199573516846,
+          -0.02256900817155838
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3160",
+            "sha256": "20c1322be138314f42bbd1be3e69f3f6b590bbca7a8a3cd3414476f207721300"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracic",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:third-thoracic-vertebra",
+        "fmaId": "FMA9209",
+        "name": "Third thoracic vertebra",
+        "sourceName": "third thoracic vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA9209",
+        "bounds": {
+          "min": [
+            -0.32966098189353943,
+            5.022299766540527,
+            -0.4863989055156708
+          ],
+          "max": [
+            0.3184089958667755,
+            5.418499946594238,
+            0.2673629820346832
+          ]
+        },
+        "center": [
+          -0.005625993013381958,
+          5.220399856567383,
+          -0.10951796174049377
+        ],
+        "anchor": [
+          -0.0007605130085721612,
+          5.221899509429932,
+          -0.1273920089006424
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3163",
+            "sha256": "3080ed603c54120fa5201816d77695354c81ea57275c599e68543bfb6ecb89c1"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracic",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:fourth-thoracic-vertebra",
+        "fmaId": "FMA9248",
+        "name": "Fourth thoracic vertebra",
+        "sourceName": "fourth thoracic vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA9248",
+        "bounds": {
+          "min": [
+            -0.35461699962615967,
+            4.777400016784668,
+            -0.49802103638648987
+          ],
+          "max": [
+            0.34282001852989197,
+            5.214100360870361,
+            0.19604896008968353
+          ]
+        },
+        "center": [
+          -0.00589849054813385,
+          4.995750188827515,
+          -0.15098603814840317
+        ],
+        "anchor": [
+          -0.03037009947001934,
+          5.010699272155762,
+          -0.2006720006465912
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3166",
+            "sha256": "cbd60a450a8b2f3ee90ccc655f79a63b090d8a3abf5e6849cf288a7b2d4207f2"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracic",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:fifth-thoracic-vertebra",
+        "fmaId": "FMA9922",
+        "name": "Fifth thoracic vertebra",
+        "sourceName": "fifth thoracic vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA9922",
+        "bounds": {
+          "min": [
+            -0.36151501536369324,
+            4.397700309753418,
+            -0.500185489654541
+          ],
+          "max": [
+            0.3488970100879669,
+            4.972700119018555,
+            0.16009002923965454
+          ]
+        },
+        "center": [
+          -0.006309002637863159,
+          4.685200214385986,
+          -0.17004773020744324
+        ],
+        "anchor": [
+          -0.014510600827634335,
+          4.655699253082275,
+          -0.10752899199724197
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3169",
+            "sha256": "20c3b1dfed3a2ac5e631838ae924379672dac2047186711cfaa819b9a1db6e5b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracic",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:sixth-thoracic-vertebra",
+        "fmaId": "FMA9945",
+        "name": "Sixth thoracic vertebra",
+        "sourceName": "sixth thoracic vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA9945",
+        "bounds": {
+          "min": [
+            -0.3642269968986511,
+            4.093800067901611,
+            -0.48807570338249207
+          ],
+          "max": [
+            0.35033902525901794,
+            4.690799713134766,
+            0.15220901370048523
+          ]
+        },
+        "center": [
+          -0.006943985819816589,
+          4.3922998905181885,
+          -0.16793334484100342
+        ],
+        "anchor": [
+          -0.02785330079495907,
+          4.395999908447266,
+          -0.13166698813438416
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3171",
+            "sha256": "ebee2a07751de0aa0b33974eea0a9228fed9980f740c619776003d5a38c370c5"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracic",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:seventh-thoracic-vertebra",
+        "fmaId": "FMA9968",
+        "name": "Seventh thoracic vertebra",
+        "sourceName": "seventh thoracic vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA9968",
+        "bounds": {
+          "min": [
+            -0.37226298451423645,
+            3.7930004596710205,
+            -0.49328505992889404
+          ],
+          "max": [
+            0.36320599913597107,
+            4.4180006980896,
+            0.1697920262813568
+          ]
+        },
+        "center": [
+          -0.00452849268913269,
+          4.10550057888031,
+          -0.16174651682376862
+        ],
+        "anchor": [
+          0.011212799698114395,
+          4.104100227355957,
+          -0.1311119794845581
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3173",
+            "sha256": "3b66eb6444bc7b6ced9e32eacf2518861531b1296eff0e24db41a85bfdbaff66"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracic",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:eighth-thoracic-vertebra",
+        "fmaId": "FMA9991",
+        "name": "Eighth thoracic vertebra",
+        "sourceName": "eighth thoracic vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA9991",
+        "bounds": {
+          "min": [
+            -0.33659401535987854,
+            3.5374999046325684,
+            -0.49068203568458557
+          ],
+          "max": [
+            0.32152697443962097,
+            4.130500316619873,
+            0.22027602791786194
+          ]
+        },
+        "center": [
+          -0.007533520460128784,
+          3.8340001106262207,
+          -0.13520300388336182
+        ],
+        "anchor": [
+          0.01775220036506653,
+          3.8291003704071045,
+          -0.09381000697612762
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3174",
+            "sha256": "531253894a89d60c78a5235bfba826e0c30c21003267258fe1fca244d9090c1a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracic",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:ninth-thoracic-vertebra",
+        "fmaId": "FMA10014",
+        "name": "Ninth thoracic vertebra",
+        "sourceName": "ninth thoracic vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA10014",
+        "bounds": {
+          "min": [
+            -0.34394797682762146,
+            3.2662999629974365,
+            -0.43843939900398254
+          ],
+          "max": [
+            0.3299800157546997,
+            3.8483996391296387,
+            0.2765290141105652
+          ]
+        },
+        "center": [
+          -0.0069839805364608765,
+          3.5573498010635376,
+          -0.08095519244670868
+        ],
+        "anchor": [
+          -0.013477400876581669,
+          3.556800603866577,
+          -0.04484100267291069
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3175",
+            "sha256": "34bd592e9f0282eea561a680697beeac655584ca9e4db9232b013535c57e7e61"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracic",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:tenth-thoracic-vertebra",
+        "fmaId": "FMA10037",
+        "name": "Tenth thoracic vertebra",
+        "sourceName": "tenth thoracic vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA10037",
+        "bounds": {
+          "min": [
+            -0.3365679979324341,
+            2.9977002143859863,
+            -0.4217749834060669
+          ],
+          "max": [
+            0.32245200872421265,
+            3.5713000297546387,
+            0.34057798981666565
+          ]
+        },
+        "center": [
+          -0.007057994604110718,
+          3.2845001220703125,
+          -0.04059849679470062
+        ],
+        "anchor": [
+          0.01980530098080635,
+          3.304799795150757,
+          -0.0009249877766706049
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3154",
+            "sha256": "abf073c0206696c3baa5cb389831b28a6ce2c6770091065e834b8e4ef50676b1"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracic",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:eleventh-thoracic-vertebra",
+        "fmaId": "FMA10059",
+        "name": "Eleventh thoracic vertebra",
+        "sourceName": "eleventh thoracic vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA10059",
+        "bounds": {
+          "min": [
+            -0.26760998368263245,
+            2.757199764251709,
+            -0.3699110150337219
+          ],
+          "max": [
+            0.2555930018424988,
+            3.2927002906799316,
+            0.425324022769928
+          ]
+        },
+        "center": [
+          -0.0060084909200668335,
+          3.0249500274658203,
+          0.027706503868103027
+        ],
+        "anchor": [
+          -0.00616680970415473,
+          2.9952001571655273,
+          0.09152599424123764
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3155",
+            "sha256": "1f9c9f6dfcd5585e09abc2cf9a8f54ba1c33df399c6d4dad1a92301d85cd88b3"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracic",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:twelfth-thoracic-vertebra",
+        "fmaId": "FMA10081",
+        "name": "Twelfth thoracic vertebra",
+        "sourceName": "twelfth thoracic vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA10081",
+        "bounds": {
+          "min": [
+            -0.22386400401592255,
+            2.4995996952056885,
+            -0.2743909955024719
+          ],
+          "max": [
+            0.21054799854755402,
+            3.015899658203125,
+            0.5138500332832336
+          ]
+        },
+        "center": [
+          -0.006658002734184265,
+          2.7577496767044067,
+          0.11972951889038086
+        ],
+        "anchor": [
+          0.007555339951068163,
+          2.76680064201355,
+          0.16926902532577515
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3156",
+            "sha256": "ffeebd0dead6ed95395e35c0843888b079acf67543e2820437e99978c69642a0"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "lumbar",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:first-lumbar-vertebra",
+        "fmaId": "FMA13072",
+        "name": "First lumbar vertebra",
+        "sourceName": "first lumbar vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "abdomen"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA13072",
+        "bounds": {
+          "min": [
+            -0.3577980101108551,
+            2.1520001888275146,
+            -0.2077759951353073
+          ],
+          "max": [
+            0.3446139991283417,
+            2.719799757003784,
+            0.5948000550270081
+          ]
+        },
+        "center": [
+          -0.006592005491256714,
+          2.4358999729156494,
+          0.19351202994585037
+        ],
+        "anchor": [
+          0.004260269924998283,
+          2.477099657058716,
+          0.2578299641609192
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3157",
+            "sha256": "67940f16382935851ebeb7a86c926dbf922070f390c438fdbbb56f7b7fb76057"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "lumbar",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:second-lumbar-vertebra",
+        "fmaId": "FMA13073",
+        "name": "Second lumbar vertebra",
+        "sourceName": "second lumbar vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "abdomen"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA13073",
+        "bounds": {
+          "min": [
+            -0.4035089910030365,
+            1.9231598377227783,
+            -0.15651199221611023
+          ],
+          "max": [
+            0.3906079828739166,
+            2.3976001739501953,
+            0.6471999883651733
+          ]
+        },
+        "center": [
+          -0.0064505040645599365,
+          2.160380005836487,
+          0.24534399807453156
+        ],
+        "anchor": [
+          -0.04304170235991478,
+          2.146899938583374,
+          0.3003379702568054
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3159",
+            "sha256": "5e6301d2020ba73167e71c274848ddcbec0f7936d9f26a78f2de8ffa82f095c7"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "lumbar",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:third-lumbar-vertebra",
+        "fmaId": "FMA13074",
+        "name": "Third lumbar vertebra",
+        "sourceName": "third lumbar vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "abdomen"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA13074",
+        "bounds": {
+          "min": [
+            -0.40202900767326355,
+            1.6769299507141113,
+            -0.20486000180244446
+          ],
+          "max": [
+            0.3884100019931793,
+            2.097299814224243,
+            0.653529942035675
+          ]
+        },
+        "center": [
+          -0.006809502840042114,
+          1.8871148824691772,
+          0.2243349701166153
+        ],
+        "anchor": [
+          -0.006866959854960442,
+          1.9032598733901978,
+          0.2972889840602875
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3162",
+            "sha256": "aa58bbebf75e858d5258926b3f85ef6bc27f765464e87bfc828baf24156bf155"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "lumbar",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:fourth-lumbar-vertebra",
+        "fmaId": "FMA13075",
+        "name": "Fourth lumbar vertebra",
+        "sourceName": "fourth lumbar vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "abdomen"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA13075",
+        "bounds": {
+          "min": [
+            -0.4276610314846039,
+            1.3866400718688965,
+            -0.23843799531459808
+          ],
+          "max": [
+            0.4141540229320526,
+            1.8340197801589966,
+            0.6040499806404114
+          ]
+        },
+        "center": [
+          -0.006753504276275635,
+          1.6103299260139465,
+          0.18280599266290665
+        ],
+        "anchor": [
+          0.0035792801063507795,
+          1.6106799840927124,
+          0.22114303708076477
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3165",
+            "sha256": "2b02ea3874d39295b15a7de2a2b2dd1367cf5a00a5ba5f87519f2a7064b2286f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "lumbar",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:fifth-lumbar-vertebra",
+        "fmaId": "FMA13076",
+        "name": "Fifth lumbar vertebra",
+        "sourceName": "fifth lumbar vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "abdomen"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA13076",
+        "bounds": {
+          "min": [
+            -0.5100070238113403,
+            1.0459496974945068,
+            -0.31755000352859497
+          ],
+          "max": [
+            0.4957360029220581,
+            1.5483300685882568,
+            0.4907650053501129
+          ]
+        },
+        "center": [
+          -0.007135510444641113,
+          1.2971398830413818,
+          0.08660750091075897
+        ],
+        "anchor": [
+          -0.03946299850940704,
+          1.282289981842041,
+          0.07836498320102692
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3168",
+            "sha256": "0b8d0317800abd7c7cb66473cfa23bcecf2b2a8060a4434f32eb9f6ea93c1cc4"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "sacrum",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:sacrum",
+        "fmaId": "FMA16202",
+        "name": "Sacrum",
+        "sourceName": "sacrum",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "pelvis",
+          "thigh"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA16202",
+        "bounds": {
+          "min": [
+            -0.5959120392799377,
+            -0.17163024842739105,
+            -0.5725374817848206
+          ],
+          "max": [
+            0.5820289850234985,
+            1.2720000743865967,
+            0.31396400928497314
+          ]
+        },
+        "center": [
+          -0.0069415271282196045,
+          0.5501849129796028,
+          -0.1292867362499237
+        ],
+        "anchor": [
+          0.0035980800166726112,
+          0.6635797023773193,
+          -0.22178100049495697
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3393",
+            "sha256": "cd04cc9f78d758ba34e92896914f647d22d257b9e7e51b97764670f694033489"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "cervicalDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-axis",
+        "fmaId": "FMA25058",
+        "name": "Intervertebral disk of axis",
+        "sourceName": "intervertebral disk of axis",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA25058",
+        "bounds": {
+          "min": [
+            -0.1344040036201477,
+            6.414499282836914,
+            0.19221298396587372
+          ],
+          "max": [
+            0.11683999747037888,
+            6.5093994140625,
+            0.37253403663635254
+          ]
+        },
+        "center": [
+          -0.008782003074884415,
+          6.461949348449707,
+          0.28237351030111313
+        ],
+        "anchor": [
+          -0.02172050066292286,
+          6.480300426483154,
+          0.29006898403167725
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3202",
+            "sha256": "10b24dc45678b68734e84e2d10c749c5b53b4ed3c39c04d2052bdebc02301840"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "cervicalDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-cervical-vertebra",
+        "fmaId": "FMA13896",
+        "name": "Intervertebral disk of third cervical vertebra",
+        "sourceName": "intervertebral disk of third cervical vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13896",
+        "bounds": {
+          "min": [
+            -0.1197109967470169,
+            6.268899917602539,
+            0.22661903500556946
+          ],
+          "max": [
+            0.10661400109529495,
+            6.330699443817139,
+            0.38691002130508423
+          ]
+        },
+        "center": [
+          -0.006548497825860977,
+          6.299799680709839,
+          0.30676452815532684
+        ],
+        "anchor": [
+          0.0048338198103010654,
+          6.315899848937988,
+          0.3078949749469757
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3213",
+            "sha256": "1792fb233867a50a88c0b087391886dfb63f62eede857920736367c0d0c9e91d"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "cervicalDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-cervical-vertebra",
+        "fmaId": "FMA13897",
+        "name": "Intervertebral disk of fourth cervical vertebra",
+        "sourceName": "intervertebral disk of fourth cervical vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13897",
+        "bounds": {
+          "min": [
+            -0.13390199840068817,
+            6.087099552154541,
+            0.24215202033519745
+          ],
+          "max": [
+            0.12067300081253052,
+            6.193299770355225,
+            0.4128350019454956
+          ]
+        },
+        "center": [
+          -0.006614498794078827,
+          6.140199661254883,
+          0.3274935111403465
+        ],
+        "anchor": [
+          -0.004538619890809059,
+          6.158599853515625,
+          0.33474501967430115
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3218",
+            "sha256": "a1820438c3e0dd6361807a4a7380861df4134f48df2d869630e678ff71ec226d"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "cervicalDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-cervical-vertebra",
+        "fmaId": "FMA13898",
+        "name": "Intervertebral disk of fifth cervical vertebra",
+        "sourceName": "intervertebral disk of fifth cervical vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13898",
+        "bounds": {
+          "min": [
+            -0.1480959951877594,
+            5.925699234008789,
+            0.25521400570869446
+          ],
+          "max": [
+            0.13479000329971313,
+            6.033299446105957,
+            0.41979798674583435
+          ]
+        },
+        "center": [
+          -0.006652995944023132,
+          5.979499340057373,
+          0.3375059962272644
+        ],
+        "anchor": [
+          -0.0017197600100189447,
+          5.95989990234375,
+          0.31486502289772034
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3219",
+            "sha256": "9614a560acb98669f69bf67a15321e73495e7decf71fa4e4e3941fc494b443d4"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "cervicalDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-sixth-cervical-vertebra",
+        "fmaId": "FMA13899",
+        "name": "Intervertebral disk of sixth cervical vertebra",
+        "sourceName": "intervertebral disk of sixth cervical vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13899",
+        "bounds": {
+          "min": [
+            -0.1482599973678589,
+            5.771800518035889,
+            0.235229030251503
+          ],
+          "max": [
+            0.1335499882698059,
+            5.867499828338623,
+            0.4030120074748993
+          ]
+        },
+        "center": [
+          -0.007355004549026489,
+          5.819650173187256,
+          0.31912051886320114
+        ],
+        "anchor": [
+          -0.030222799628973007,
+          5.799399375915527,
+          0.3185559809207916
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3220",
+            "sha256": "6aa2490d85cc76e1f9c29a4d187e36c54d3faa1091b42d1ebc54d45ae1d96194"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "cervicalDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-cervical-vertebra",
+        "fmaId": "FMA13900",
+        "name": "Intervertebral disk of seventh cervical vertebra",
+        "sourceName": "intervertebral disk of seventh cervical vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13900",
+        "bounds": {
+          "min": [
+            -0.16331200301647186,
+            5.599999904632568,
+            0.19775299727916718
+          ],
+          "max": [
+            0.14938999712467194,
+            5.716700553894043,
+            0.37612298130989075
+          ]
+        },
+        "center": [
+          -0.006961002945899963,
+          5.658350229263306,
+          0.28693798929452896
+        ],
+        "anchor": [
+          0.003953089937567711,
+          5.680699348449707,
+          0.2878810167312622
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3221",
+            "sha256": "d76e5f07cea767b03ee7138fde4781a546f5bbb490de023b1992a5fa206d1322"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracicDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-first-thoracic-vertebra",
+        "fmaId": "FMA10458",
+        "name": "Intervertebral disk of first thoracic vertebra",
+        "sourceName": "intervertebral disk of first thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA10458",
+        "bounds": {
+          "min": [
+            -0.1706399917602539,
+            5.419000148773193,
+            0.1390869915485382
+          ],
+          "max": [
+            0.15535800158977509,
+            5.547500133514404,
+            0.33781898021698
+          ]
+        },
+        "center": [
+          -0.00764099508523941,
+          5.483250141143799,
+          0.2384529858827591
+        ],
+        "anchor": [
+          -0.007474320009350777,
+          5.463499546051025,
+          0.23867301642894745
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3222",
+            "sha256": "b7387340fcd82362f86af387a7fe21a9a2e9ab9f4549ec539fc519112b4296d5"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracicDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-thoracic-vertebra",
+        "fmaId": "FMA13495",
+        "name": "Intervertebral disk of second thoracic vertebra",
+        "sourceName": "intervertebral disk of second thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13495",
+        "bounds": {
+          "min": [
+            -0.16608400642871857,
+            5.207399845123291,
+            0.05354400724172592
+          ],
+          "max": [
+            0.15304699540138245,
+            5.356199741363525,
+            0.28266197443008423
+          ]
+        },
+        "center": [
+          -0.00651850551366806,
+          5.281799793243408,
+          0.16810299083590508
+        ],
+        "anchor": [
+          -0.011264699511229992,
+          5.320699691772461,
+          0.1755940318107605
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3223",
+            "sha256": "108dd5e9e772425ec890afc92d633de4c345c6ff3ad7cb4e31c744b407742777"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracicDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-thoracic-vertebra",
+        "fmaId": "FMA13500",
+        "name": "Intervertebral disk of third thoracic vertebra",
+        "sourceName": "intervertebral disk of third thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13500",
+        "bounds": {
+          "min": [
+            -0.1554419994354248,
+            4.997299671173096,
+            -0.043102990835905075
+          ],
+          "max": [
+            0.1420619934797287,
+            5.144000053405762,
+            0.21583396196365356
+          ]
+        },
+        "center": [
+          -0.006690002977848053,
+          5.070649862289429,
+          0.08636548556387424
+        ],
+        "anchor": [
+          -0.005978099536150694,
+          5.04189920425415,
+          0.06791000068187714
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3224",
+            "sha256": "99e4ff2970050012f88b9a70e5bb9f3cd647bd3091a53238aa1619a65d591ed5"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracicDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-thoracic-vertebra",
+        "fmaId": "FMA13501",
+        "name": "Intervertebral disk of fourth thoracic vertebra",
+        "sourceName": "intervertebral disk of fourth thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13501",
+        "bounds": {
+          "min": [
+            -0.15493899583816528,
+            4.780300140380859,
+            -0.1231670007109642
+          ],
+          "max": [
+            0.14234700798988342,
+            4.913299560546875,
+            0.16735900938510895
+          ]
+        },
+        "center": [
+          -0.00629599392414093,
+          4.846799850463867,
+          0.022096004337072372
+        ],
+        "anchor": [
+          -0.009149219840765,
+          4.875799655914307,
+          0.019243011251091957
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3203",
+            "sha256": "3c1e8acf2db66d447c91e29e1df800cc9eed605fc7adcc7b70d2aeb585f24287"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracicDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-thoracic-vertebra",
+        "fmaId": "FMA13502",
+        "name": "Intervertebral disk of fifth thoracic vertebra",
+        "sourceName": "intervertebral disk of fifth thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13502",
+        "bounds": {
+          "min": [
+            -0.15923400223255157,
+            4.545000076293945,
+            -0.1644349992275238
+          ],
+          "max": [
+            0.14632199704647064,
+            4.650000095367432,
+            0.15302497148513794
+          ]
+        },
+        "center": [
+          -0.006456002593040466,
+          4.5975000858306885,
+          -0.005705013871192932
+        ],
+        "anchor": [
+          -0.004380839876830578,
+          4.567800521850586,
+          -0.0011119842529296875
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3204",
+            "sha256": "70238a6e88e8bf340459cc030536bd591ea8eb55b60694e526b39b0a5ff141d0"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracicDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-sixth-thoracic-vertebra",
+        "fmaId": "FMA13503",
+        "name": "Intervertebral disk of sixth thoracic vertebra",
+        "sourceName": "intervertebral disk of sixth thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13503",
+        "bounds": {
+          "min": [
+            -0.17654100060462952,
+            4.270899772644043,
+            -0.19393499195575714
+          ],
+          "max": [
+            0.16352199018001556,
+            4.391400337219238,
+            0.1619889885187149
+          ]
+        },
+        "center": [
+          -0.006509505212306976,
+          4.331150054931641,
+          -0.015973001718521118
+        ],
+        "anchor": [
+          -0.011805299669504166,
+          4.364100456237793,
+          -0.00856700912117958
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3205",
+            "sha256": "678096eb026ccb41a9d9c9feb36336859543aba2e2b4130d2852d69da5a56bb0"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracicDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-thoracic-vertebra",
+        "fmaId": "FMA13504",
+        "name": "Intervertebral disk of seventh thoracic vertebra",
+        "sourceName": "intervertebral disk of seventh thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13504",
+        "bounds": {
+          "min": [
+            -0.17618998885154724,
+            4.009499549865723,
+            -0.1715650111436844
+          ],
+          "max": [
+            0.16288700699806213,
+            4.131800651550293,
+            0.19492599368095398
+          ]
+        },
+        "center": [
+          -0.006651490926742554,
+          4.070650100708008,
+          0.011680491268634796
+        ],
+        "anchor": [
+          -0.006233209744095802,
+          4.031099796295166,
+          0.0002700042678043246
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3206",
+            "sha256": "ea58f9563a87ea209a665232bef9924be84b89c5614ddcc0bc2bb51dfaea6068"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracicDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eighth-thoracic-vertebra",
+        "fmaId": "FMA13505",
+        "name": "Intervertebral disk of eighth thoracic vertebra",
+        "sourceName": "intervertebral disk of eighth thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13505",
+        "bounds": {
+          "min": [
+            -0.18475200235843658,
+            3.747199773788452,
+            -0.11617698520421982
+          ],
+          "max": [
+            0.17160700261592865,
+            3.893699884414673,
+            0.24182502925395966
+          ]
+        },
+        "center": [
+          -0.006572499871253967,
+          3.8204498291015625,
+          0.06282402202486992
+        ],
+        "anchor": [
+          -0.008365740068256855,
+          3.835400342941284,
+          0.03666599094867706
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3207",
+            "sha256": "7df1bee7ad9edd0e0405b052c62a16472f9f954c45203eb5a5f75fd311841a1b"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracicDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-ninth-thoracic-vertebra",
+        "fmaId": "FMA13506",
+        "name": "Intervertebral disk of ninth thoracic vertebra",
+        "sourceName": "intervertebral disk of ninth thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13506",
+        "bounds": {
+          "min": [
+            -0.19579099118709564,
+            3.471099853515625,
+            -0.06414798647165298
+          ],
+          "max": [
+            0.1826220005750656,
+            3.6254003047943115,
+            0.2963169813156128
+          ]
+        },
+        "center": [
+          -0.006584495306015015,
+          3.5482500791549683,
+          0.1160844974219799
+        ],
+        "anchor": [
+          -0.017035100609064102,
+          3.5726001262664795,
+          0.11290401220321655
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3208",
+            "sha256": "0e56e370d55f029013aab8d837822c21c5ab1bdbbb98109a740d669eb15ee075"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracicDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-tenth-thoracic-vertebra",
+        "fmaId": "FMA13507",
+        "name": "Intervertebral disk of tenth thoracic vertebra",
+        "sourceName": "intervertebral disk of tenth thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13507",
+        "bounds": {
+          "min": [
+            -0.19966499507427216,
+            3.1991002559661865,
+            -0.003185005160048604
+          ],
+          "max": [
+            0.18669599294662476,
+            3.353100538253784,
+            0.37794196605682373
+          ]
+        },
+        "center": [
+          -0.0064845010638237,
+          3.2761003971099854,
+          0.18737848044838756
+        ],
+        "anchor": [
+          -0.008348490111529827,
+          3.257700204849243,
+          0.18977096676826477
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3209",
+            "sha256": "84ebc4e0ab44c57246f189d0ccf5fe212d1f4ec9f64eb8f8c5a7143adba4b5b8"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "thoracicDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eleventh-thoracic-vertebra",
+        "fmaId": "FMA13508",
+        "name": "Intervertebral disk of eleventh thoracic vertebra",
+        "sourceName": "intervertebral disk of eleventh thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13508",
+        "bounds": {
+          "min": [
+            -0.20772799849510193,
+            2.916099786758423,
+            0.06986900418996811
+          ],
+          "max": [
+            0.19428600370883942,
+            3.082399845123291,
+            0.47012197971343994
+          ]
+        },
+        "center": [
+          -0.006720997393131256,
+          2.999249815940857,
+          0.269995491951704
+        ],
+        "anchor": [
+          -0.003259439952671528,
+          2.9774999618530273,
+          0.2717849612236023
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3210",
+            "sha256": "8f2a670e4c8271c8ac6c1195cd324e1d5e69255b937e759c99c6ee90279bc21f"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "lumbarDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-first-lumbar-vertebra",
+        "fmaId": "FMA16033",
+        "name": "Intervertebral disk of first lumbar vertebra",
+        "sourceName": "intervertebral disk of first lumbar vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "abdomen"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA16033",
+        "bounds": {
+          "min": [
+            -0.2189520001411438,
+            2.3256006240844727,
+            0.24532097578048706
+          ],
+          "max": [
+            0.2059819996356964,
+            2.485699415206909,
+            0.6230300068855286
+          ]
+        },
+        "center": [
+          -0.006485000252723694,
+          2.405650019645691,
+          0.4341754913330078
+        ],
+        "anchor": [
+          -0.0340925008058548,
+          2.4264001846313477,
+          0.42872703075408936
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3212",
+            "sha256": "5bcf1493e5210294ed340c9d3146cf28f8961a255cc9bbcbe38526342baefcc1"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "lumbarDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-lumbar-vertebra",
+        "fmaId": "FMA16034",
+        "name": "Intervertebral disk of second lumbar vertebra",
+        "sourceName": "intervertebral disk of second lumbar vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "abdomen"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA16034",
+        "bounds": {
+          "min": [
+            -0.2296990007162094,
+            2.011199951171875,
+            0.28129303455352783
+          ],
+          "max": [
+            0.2164900004863739,
+            2.125699996948242,
+            0.6599099636077881
+          ]
+        },
+        "center": [
+          -0.006604500114917755,
+          2.0684499740600586,
+          0.47060149908065796
+        ],
+        "anchor": [
+          -0.013001500628888607,
+          2.0218000411987305,
+          0.44735297560691833
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3214",
+            "sha256": "804fa1c4aaa0812343a5f1235efc5c0920e034296286071849c93b761084cbd6"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "lumbarDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-lumbar-vertebra",
+        "fmaId": "FMA16035",
+        "name": "Intervertebral disk of third lumbar vertebra",
+        "sourceName": "intervertebral disk of third lumbar vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "abdomen"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA16035",
+        "bounds": {
+          "min": [
+            -0.23009701073169708,
+            1.6329400539398193,
+            0.2457839995622635
+          ],
+          "max": [
+            0.2171669900417328,
+            1.8070696592330933,
+            0.628529965877533
+          ]
+        },
+        "center": [
+          -0.006465010344982147,
+          1.7200048565864563,
+          0.4371569827198982
+        ],
+        "anchor": [
+          -0.0027886598836630583,
+          1.709320068359375,
+          0.425262987613678
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3215",
+            "sha256": "22ae331178c3562580008f500eecbb045a8c88a800e7452914c461ae2ea3e23c"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "lumbarDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra",
+        "fmaId": "FMA16036",
+        "name": "Intervertebral disk of fourth lumbar vertebra",
+        "sourceName": "intervertebral disk of fourth lumbar vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "abdomen"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA16036",
+        "bounds": {
+          "min": [
+            -0.2525309920310974,
+            1.3062798976898193,
+            0.14254997670650482
+          ],
+          "max": [
+            0.2389870136976242,
+            1.5359301567077637,
+            0.5276699662208557
+          ]
+        },
+        "center": [
+          -0.006771989166736603,
+          1.4211050271987915,
+          0.33510997146368027
+        ],
+        "anchor": [
+          0.0067594097927212715,
+          1.3867297172546387,
+          0.3067079782485962
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3216",
+            "sha256": "2aee68b19ac9da829a6d2571ea4673b9a23b2e33e99b86edd41317464e6a7582"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "lumbarDisc",
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra",
+        "fmaId": "FMA16037",
+        "name": "Intervertebral disk of fifth lumbar vertebra",
+        "sourceName": "intervertebral disk of fifth lumbar vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "abdomen"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA16037",
+        "bounds": {
+          "min": [
+            -0.24355000257492065,
+            0.9482598900794983,
+            0.039459992200136185
+          ],
+          "max": [
+            0.2299250066280365,
+            1.2377099990844727,
+            0.4107849895954132
+          ]
+        },
+        "center": [
+          -0.006812497973442078,
+          1.0929849445819855,
+          0.2251224908977747
+        ],
+        "anchor": [
+          -0.00801675021648407,
+          1.148590087890625,
+          0.2523840367794037
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3217",
+            "sha256": "a70ad77646a204454af2c355efca1375c59e392981679ffc85913b8d18979214"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    }
+  ]
+}

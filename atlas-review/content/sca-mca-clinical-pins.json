@@ -1,0 +1,287 @@
+{
+  "sourceCommit": "2793f3f58e7feac113cfbfe482456b571e4e58b8",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "cranial-arteries",
+      "url": "/models/bodyparts3d/cranial-arteries/cranial-arteries.glb?v=3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+      "bytes": 212796,
+      "sha256": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+      "structures": 5
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "655fce7d0c5b5e6364043a433197568d64b14fb23fc577fffb8319b4b618c1fe",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:vessel:right-superior-cerebellar-artery",
+        "fmaId": "FMA50574",
+        "name": "Right superior cerebellar artery",
+        "sourceName": "right superior cerebellar artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "cranial-arteries",
+        "nodeName": "FMA50574",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1726",
+            "sha256": "b0934c5f62d3bcff6dcbdfec902ec29cf9e9142df8f8bad55e96d436392c3b74"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.21416500210762024,
+            7.208099842071533,
+            0.24385599792003632
+          ],
+          "max": [
+            0.007319760043174028,
+            7.277100086212158,
+            0.47693800926208496
+          ]
+        },
+        "center": [
+          -0.1034226210322231,
+          7.242599964141846,
+          0.36039700359106064
+        ],
+        "anchor": [
+          -0.16997599601745605,
+          7.25,
+          0.37613099813461304
+        ],
+        "coverageNote": "Original IS-A superior cerebellar surface. A small proximal portion crosses the source midline; source laterality is preserved without reflection or fitting. Source coordinates and faces retained; radiologist review pending. No patent junction, flow or patient correspondence is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "sca",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Right superior cerebellar artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits radiologist review.",
+          "bullets": [],
+          "note": "No angiogram, perfusion map, diagnostic interpretation or intervention guidance is supplied."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Right superior cerebellar artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits radiologist review.",
+          "bullets": [],
+          "note": "No angiogram, perfusion map, diagnostic interpretation or intervention guidance is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:vessel:left-superior-cerebellar-artery",
+        "fmaId": "FMA50575",
+        "name": "Left superior cerebellar artery",
+        "sourceName": "left superior cerebellar artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "cranial-arteries",
+        "nodeName": "FMA50575",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1726M",
+            "sha256": "3fb8d802bd4c2cd6fe9115470e12aeb8949f3d1d30a6cdaf508573cfad8066f5"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.007319760043174028,
+            7.208099842071533,
+            0.24385599792003632
+          ],
+          "max": [
+            0.21416500210762024,
+            7.277100086212158,
+            0.47693899273872375
+          ]
+        },
+        "center": [
+          0.1034226210322231,
+          7.242599964141846,
+          0.36039749532938004
+        ],
+        "anchor": [
+          0.16997599601745605,
+          7.249899864196777,
+          0.37613099813461304
+        ],
+        "coverageNote": "Original IS-A superior cerebellar surface. A small proximal portion crosses the source midline; source laterality is preserved without reflection or fitting. Source coordinates and faces retained; radiologist review pending. No patent junction, flow or patient correspondence is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "sca",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Left superior cerebellar artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits radiologist review.",
+          "bullets": [],
+          "note": "No angiogram, perfusion map, diagnostic interpretation or intervention guidance is supplied."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Left superior cerebellar artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits radiologist review.",
+          "bullets": [],
+          "note": "No angiogram, perfusion map, diagnostic interpretation or intervention guidance is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+        "fmaId": "FMA50082",
+        "name": "Right middle cerebral artery",
+        "sourceName": "right middle cerebral artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "cranial-arteries",
+        "nodeName": "FMA50082",
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1662",
+            "sha256": "afdefea26af3c469cd5cedf56b327c252faeef55466af4e4b83a4f31af4c382b"
+          },
+          {
+            "file": "FJ1663",
+            "sha256": "876f965a5a0e01b73c27571f53778282b8248b2966f79aa7a8e431a07004c6c0"
+          },
+          {
+            "file": "FJ1692",
+            "sha256": "5c8d20a994fc1ae2e04e833899757d24cb4eae1d51130e60baae5bd7d50ceee8"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.4430699944496155,
+            7.345099925994873,
+            0.26600000262260437
+          ],
+          "max": [
+            -0.08286440372467041,
+            7.719600200653076,
+            0.6843600273132324
+          ]
+        },
+        "center": [
+          -0.26296719908714294,
+          7.532350063323975,
+          0.4751800149679184
+        ],
+        "anchor": [
+          -0.2890470027923584,
+          7.52400016784668,
+          0.4779999852180481
+        ],
+        "coverageNote": "Three original PART-OF files form six components; no matching left MCA definition is supplied. Not a complete MCA tree or separate M1/M2 segment model. Source coordinates and faces retained; radiologist review pending. No patent junction, flow or patient correspondence is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "mca",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Right middle cerebral artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits radiologist review.",
+          "bullets": [],
+          "note": "No angiogram, perfusion map, diagnostic interpretation or intervention guidance is supplied."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Right middle cerebral artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits radiologist review.",
+          "bullets": [],
+          "note": "No angiogram, perfusion map, diagnostic interpretation or intervention guidance is supplied."
+        }
+      }
+    }
+  ]
+}

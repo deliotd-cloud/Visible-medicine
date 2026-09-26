@@ -1,0 +1,4321 @@
+{
+  "version": 1,
+  "specimenId": "hra-united-female-v1.10-kidneys",
+  "source": {
+    "version": "v1.10",
+    "key": "hra-united-female-v1.10-kidneys",
+    "url": "https://cdn.humanatlas.io/digital-objects/ref-organ/united-female/v1.10/assets/3d-vh-f-united.glb",
+    "metadataUrl": "https://cdn.humanatlas.io/digital-objects/ref-organ/united-female/v1.10/metadata.json",
+    "crosswalkUrl": "https://cdn.humanatlas.io/digital-objects/ref-organ/united-female/v1.10/assets/crosswalk.csv",
+    "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422",
+    "bytes": 374505632,
+    "metadataSha256": "b9f137b1176c31419c68b78ac87f0926f874dad22f56d4dde7df3e2f15bab501",
+    "crosswalkSha256": "2a367d3ad8c1cf1b083c884aed7d99fb3b504d482e1e49570ecdb4f03c84d55f",
+    "credit": "Kristen Browne and Heidi Schlehlein. 3D Reference Organ Set for Female, v1.10. HuBMAP, 2026. Based on the NLM Visible Human Dataset.",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "sourceSubsetSha256": "cd61f47dabab9af7510b35a8a446e64de7fcccc053986bc838b93f5753c055fa",
+  "sourceFrame": "hra-united-female-v1.10:lps-mm",
+  "displayTransformColumnMajor": [
+    0.01,
+    0,
+    0,
+    0,
+    0,
+    0,
+    -0.01,
+    0,
+    0,
+    0.01,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+  ],
+  "coordinateNote": "Original GLB metres: x left, y superior, z anterior. LPS mm=(1000*x,-1000*z,1000*y). Display=(10*x,10*y,10*z). Separate reference; no patient registration.",
+  "structures": [
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:kidney-capsule-l",
+      "slug": "kidney-capsule-l",
+      "name": "Left renal capsule",
+      "sourceName": "VH_F_kidney_capsule_L",
+      "nodeName": "VH_F_kidney_capsule_L",
+      "originalNodeIndex": 607,
+      "sourceOntologyId": "UBERON:0002015",
+      "fmaId": null,
+      "concept": "capsule",
+      "sourcePart": null,
+      "tissue": "capsule",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.40051567554473877,
+          1.7577613592147827,
+          -1.3938639163970947
+        ],
+        "max": [
+          1.1316229104995728,
+          3.0063250064849854,
+          -0.6180683970451355
+        ]
+      },
+      "center": [
+        0.7660692930221558,
+        2.382043182849884,
+        -1.0059661567211151
+      ],
+      "anchor": [
+        0.6817427277565002,
+        2.371962070465088,
+        -0.9896324872970581
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_kidney_capsule_L",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 10850,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ddcfad"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:hilum-of-kidney-l",
+      "slug": "hilum-of-kidney-l",
+      "name": "Left renal hilum",
+      "sourceName": "VH_F_hilum_of_kidney_L",
+      "nodeName": "VH_F_hilum_of_kidney_L",
+      "originalNodeIndex": 608,
+      "sourceOntologyId": "UBERON:0008716",
+      "fmaId": null,
+      "concept": "hilum",
+      "sourcePart": null,
+      "tissue": "hilum",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.4433417320251465,
+          2.0650694370269775,
+          -1.0682605504989624
+        ],
+        "max": [
+          0.8287304043769836,
+          2.794732093811035,
+          -0.6654682755470276
+        ]
+      },
+      "center": [
+        0.6360360682010651,
+        2.4299007654190063,
+        -0.866864413022995
+      ],
+      "anchor": [
+        0.6803662180900574,
+        2.4330782890319824,
+        -0.8402788043022156
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_hilum_of_kidney_L",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 5927,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d3bca6"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-a",
+      "slug": "renal-papilla-l-a",
+      "name": "Left renal papilla (source part A)",
+      "sourceName": "VH_F_renal_papilla_L_a",
+      "nodeName": "VH_F_renal_papilla_L_a",
+      "originalNodeIndex": 611,
+      "sourceOntologyId": "UBERON:0001228",
+      "fmaId": null,
+      "concept": "papilla",
+      "sourcePart": "a",
+      "tissue": "papilla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.6617489457130432,
+          2.6739165782928467,
+          -1.1351032257080078
+        ],
+        "max": [
+          0.7006396055221558,
+          2.716508150100708,
+          -1.086215615272522
+        ]
+      },
+      "center": [
+        0.6811942756175995,
+        2.6952123641967773,
+        -1.110659420490265
+      ],
+      "anchor": [
+        0.6965175867080688,
+        2.6864724159240723,
+        -1.1154786348342896
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_papilla_L_a",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 70,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ce9b94"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-b",
+      "slug": "renal-papilla-l-b",
+      "name": "Left renal papilla (source part B)",
+      "sourceName": "VH_F_renal_papilla_L_b",
+      "nodeName": "VH_F_renal_papilla_L_b",
+      "originalNodeIndex": 612,
+      "sourceOntologyId": "UBERON:0001228",
+      "fmaId": null,
+      "concept": "papilla",
+      "sourcePart": "b",
+      "tissue": "papilla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.7153392434120178,
+          2.6699342727661133,
+          -1.1208982467651367
+        ],
+        "max": [
+          0.7503000497817993,
+          2.706758737564087,
+          -1.0773972272872925
+        ]
+      },
+      "center": [
+        0.7328196465969086,
+        2.6883465051651,
+        -1.0991477370262146
+      ],
+      "anchor": [
+        0.7165751457214355,
+        2.6829090118408203,
+        -1.0973165035247803
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_papilla_L_b",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 50,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ce9b94"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-c",
+      "slug": "renal-papilla-l-c",
+      "name": "Left renal papilla (source part C)",
+      "sourceName": "VH_F_renal_papilla_L_c",
+      "nodeName": "VH_F_renal_papilla_L_c",
+      "originalNodeIndex": 613,
+      "sourceOntologyId": "UBERON:0001228",
+      "fmaId": null,
+      "concept": "papilla",
+      "sourcePart": "c",
+      "tissue": "papilla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.7306274175643921,
+          2.5654659271240234,
+          -1.183891773223877
+        ],
+        "max": [
+          0.7820040583610535,
+          2.6108338832855225,
+          -1.1542646884918213
+        ]
+      },
+      "center": [
+        0.7563157379627228,
+        2.588149905204773,
+        -1.1690782308578491
+      ],
+      "anchor": [
+        0.7513051629066467,
+        2.586937427520752,
+        -1.1559221744537354
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_papilla_L_c",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 42,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ce9b94"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-d",
+      "slug": "renal-papilla-l-d",
+      "name": "Left renal papilla (source part D)",
+      "sourceName": "VH_F_renal_papilla_L_d",
+      "nodeName": "VH_F_renal_papilla_L_d",
+      "originalNodeIndex": 614,
+      "sourceOntologyId": "UBERON:0001228",
+      "fmaId": null,
+      "concept": "papilla",
+      "sourcePart": "d",
+      "tissue": "papilla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.7381826043128967,
+          2.5461676120758057,
+          -1.1433839797973633
+        ],
+        "max": [
+          0.7853296995162964,
+          2.579401731491089,
+          -1.1018807888031006
+        ]
+      },
+      "center": [
+        0.7617561519145966,
+        2.5627846717834473,
+        -1.122632384300232
+      ],
+      "anchor": [
+        0.7507897019386292,
+        2.5742673873901367,
+        -1.1212904453277588
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_papilla_L_d",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 78,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ce9b94"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-e",
+      "slug": "renal-papilla-l-e",
+      "name": "Left renal papilla (source part E)",
+      "sourceName": "VH_F_renal_papilla_L_e",
+      "nodeName": "VH_F_renal_papilla_L_e",
+      "originalNodeIndex": 615,
+      "sourceOntologyId": "UBERON:0001228",
+      "fmaId": null,
+      "concept": "papilla",
+      "sourcePart": "e",
+      "tissue": "papilla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.7802520990371704,
+          2.5671873092651367,
+          -1.1253286600112915
+        ],
+        "max": [
+          0.8076024651527405,
+          2.6168627738952637,
+          -1.089609980583191
+        ]
+      },
+      "center": [
+        0.7939272820949554,
+        2.5920250415802,
+        -1.1074693202972412
+      ],
+      "anchor": [
+        0.7813022136688232,
+        2.5949621200561523,
+        -1.111968755722046
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_papilla_L_e",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 66,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ce9b94"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-f",
+      "slug": "renal-papilla-l-f",
+      "name": "Left renal papilla (source part F)",
+      "sourceName": "VH_F_renal_papilla_L_f",
+      "nodeName": "VH_F_renal_papilla_L_f",
+      "originalNodeIndex": 616,
+      "sourceOntologyId": "UBERON:0001228",
+      "fmaId": null,
+      "concept": "papilla",
+      "sourcePart": "f",
+      "tissue": "papilla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.8378361463546753,
+          2.315812587738037,
+          -0.9354568123817444
+        ],
+        "max": [
+          0.8650947213172913,
+          2.3845953941345215,
+          -0.8763048052787781
+        ]
+      },
+      "center": [
+        0.8514654338359833,
+        2.3502039909362793,
+        -0.9058808088302612
+      ],
+      "anchor": [
+        0.8404555916786194,
+        2.351625680923462,
+        -0.9030305743217468
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_papilla_L_f",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 72,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ce9b94"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-g",
+      "slug": "renal-papilla-l-g",
+      "name": "Left renal papilla (source part G)",
+      "sourceName": "VH_F_renal_papilla_L_g",
+      "nodeName": "VH_F_renal_papilla_L_g",
+      "originalNodeIndex": 617,
+      "sourceOntologyId": "UBERON:0001228",
+      "fmaId": null,
+      "concept": "papilla",
+      "sourcePart": "g",
+      "tissue": "papilla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.7454094886779785,
+          2.208500862121582,
+          -1.0364246368408203
+        ],
+        "max": [
+          0.8107130527496338,
+          2.285492181777954,
+          -1.004109501838684
+        ]
+      },
+      "center": [
+        0.7780612707138062,
+        2.246996521949768,
+        -1.0202670693397522
+      ],
+      "anchor": [
+        0.7789214849472046,
+        2.256903648376465,
+        -1.0078356266021729
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_papilla_L_g",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 50,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ce9b94"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-h",
+      "slug": "renal-papilla-l-h",
+      "name": "Left renal papilla (source part H)",
+      "sourceName": "VH_F_renal_papilla_L_h",
+      "nodeName": "VH_F_renal_papilla_L_h",
+      "originalNodeIndex": 618,
+      "sourceOntologyId": "UBERON:0001228",
+      "fmaId": null,
+      "concept": "papilla",
+      "sourcePart": "h",
+      "tissue": "papilla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.8759096264839172,
+          2.240452289581299,
+          -0.9266254901885986
+        ],
+        "max": [
+          0.9034600853919983,
+          2.281172037124634,
+          -0.8831403255462646
+        ]
+      },
+      "center": [
+        0.8896848559379578,
+        2.2608121633529663,
+        -0.9048829078674316
+      ],
+      "anchor": [
+        0.8759096264839172,
+        2.261284112930298,
+        -0.9059280753135681
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_papilla_L_h",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 60,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ce9b94"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-i",
+      "slug": "renal-papilla-l-i",
+      "name": "Left renal papilla (source part I)",
+      "sourceName": "VH_F_renal_papilla_L_i",
+      "nodeName": "VH_F_renal_papilla_L_i",
+      "originalNodeIndex": 619,
+      "sourceOntologyId": "UBERON:0001228",
+      "fmaId": null,
+      "concept": "papilla",
+      "sourcePart": "i",
+      "tissue": "papilla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.8143289089202881,
+          2.045759677886963,
+          -0.8578932285308838
+        ],
+        "max": [
+          0.8574355840682983,
+          2.117814540863037,
+          -0.8202409744262695
+        ]
+      },
+      "center": [
+        0.8358822464942932,
+        2.081787109375,
+        -0.8390671014785767
+      ],
+      "anchor": [
+        0.8285883665084839,
+        2.083277463912964,
+        -0.8523872494697571
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_papilla_L_i",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 62,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ce9b94"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-j",
+      "slug": "renal-papilla-l-j",
+      "name": "Left renal papilla (source part J)",
+      "sourceName": "VH_F_renal_papilla_L_j",
+      "nodeName": "VH_F_renal_papilla_L_j",
+      "originalNodeIndex": 620,
+      "sourceOntologyId": "UBERON:0001228",
+      "fmaId": null,
+      "concept": "papilla",
+      "sourcePart": "j",
+      "tissue": "papilla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.7527475357055664,
+          2.017373561859131,
+          -0.9366912245750427
+        ],
+        "max": [
+          0.803492546081543,
+          2.0723018646240234,
+          -0.8867400884628296
+        ]
+      },
+      "center": [
+        0.7781200408935547,
+        2.044837713241577,
+        -0.9117156565189362
+      ],
+      "anchor": [
+        0.7776569128036499,
+        2.0664005279541016,
+        -0.9208532571792603
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_papilla_L_j",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 86,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ce9b94"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-l-k",
+      "slug": "renal-papilla-l-k",
+      "name": "Left renal papilla (source part K)",
+      "sourceName": "VH_F_renal_papilla_L_k",
+      "nodeName": "VH_F_renal_papilla_L_k",
+      "originalNodeIndex": 621,
+      "sourceOntologyId": "UBERON:0001228",
+      "fmaId": null,
+      "concept": "papilla",
+      "sourcePart": "k",
+      "tissue": "papilla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.8031198382377625,
+          1.9943190813064575,
+          -0.8502727150917053
+        ],
+        "max": [
+          0.8611124753952026,
+          2.038753032684326,
+          -0.801893413066864
+        ]
+      },
+      "center": [
+        0.8321161568164825,
+        2.016536056995392,
+        -0.8260830640792847
+      ],
+      "anchor": [
+        0.8201435208320618,
+        2.0228376388549805,
+        -0.8387460708618164
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_papilla_L_k",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 102,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ce9b94"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-a",
+      "slug": "renal-pyramid-l-a",
+      "name": "Left renal pyramid (source part A)",
+      "sourceName": "VH_F_renal_pyramid_L_a",
+      "nodeName": "VH_F_renal_pyramid_L_a",
+      "originalNodeIndex": 623,
+      "sourceOntologyId": "UBERON:0004200",
+      "fmaId": null,
+      "concept": "pyramid",
+      "sourcePart": "a",
+      "tissue": "medulla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.4795345366001129,
+          2.43922758102417,
+          -1.2892861366271973
+        ],
+        "max": [
+          0.701276957988739,
+          2.928781032562256,
+          -0.9421319365501404
+        ]
+      },
+      "center": [
+        0.590405747294426,
+        2.684004306793213,
+        -1.1157090365886688
+      ],
+      "anchor": [
+        0.5943722128868103,
+        2.687591075897217,
+        -1.1156599521636963
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pyramid_L_a",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 2782,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ac626c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-b",
+      "slug": "renal-pyramid-l-b",
+      "name": "Left renal pyramid (source part B)",
+      "sourceName": "VH_F_renal_pyramid_L_b",
+      "nodeName": "VH_F_renal_pyramid_L_b",
+      "originalNodeIndex": 624,
+      "sourceOntologyId": "UBERON:0004200",
+      "fmaId": null,
+      "concept": "pyramid",
+      "sourcePart": "b",
+      "tissue": "medulla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.6840518116950989,
+          2.595508098602295,
+          -1.156453251838684
+        ],
+        "max": [
+          0.8302880525588989,
+          2.804525136947632,
+          -0.888153076171875
+        ]
+      },
+      "center": [
+        0.7571699321269989,
+        2.7000166177749634,
+        -1.0223031640052795
+      ],
+      "anchor": [
+        0.7184368968009949,
+        2.698807716369629,
+        -1.0326675176620483
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pyramid_L_b",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1008,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ac626c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-c",
+      "slug": "renal-pyramid-l-c",
+      "name": "Left renal pyramid (source part C)",
+      "sourceName": "VH_F_renal_pyramid_L_c",
+      "nodeName": "VH_F_renal_pyramid_L_c",
+      "originalNodeIndex": 625,
+      "sourceOntologyId": "UBERON:0004200",
+      "fmaId": null,
+      "concept": "pyramid",
+      "sourcePart": "c",
+      "tissue": "medulla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.6943705677986145,
+          2.5638680458068848,
+          -1.3199914693832397
+        ],
+        "max": [
+          0.8625096678733826,
+          2.7339208126068115,
+          -1.1550389528274536
+        ]
+      },
+      "center": [
+        0.7784401178359985,
+        2.648894429206848,
+        -1.2375152111053467
+      ],
+      "anchor": [
+        0.8018180131912231,
+        2.671414613723755,
+        -1.211402177810669
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pyramid_L_c",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 668,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ac626c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-d",
+      "slug": "renal-pyramid-l-d",
+      "name": "Left renal pyramid (source part D)",
+      "sourceName": "VH_F_renal_pyramid_L_d",
+      "nodeName": "VH_F_renal_pyramid_L_d",
+      "originalNodeIndex": 626,
+      "sourceOntologyId": "UBERON:0004200",
+      "fmaId": null,
+      "concept": "pyramid",
+      "sourcePart": "d",
+      "tissue": "medulla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.6022220253944397,
+          2.3700430393218994,
+          -1.270442247390747
+        ],
+        "max": [
+          0.9821433424949646,
+          2.5688350200653076,
+          -1.0879325866699219
+        ]
+      },
+      "center": [
+        0.7921826839447021,
+        2.4694390296936035,
+        -1.1791874170303345
+      ],
+      "anchor": [
+        0.8015763163566589,
+        2.456777334213257,
+        -1.1762385368347168
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pyramid_L_d",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1462,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ac626c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-e",
+      "slug": "renal-pyramid-l-e",
+      "name": "Left renal pyramid (source part E)",
+      "sourceName": "VH_F_renal_pyramid_L_e",
+      "nodeName": "VH_F_renal_pyramid_L_e",
+      "originalNodeIndex": 627,
+      "sourceOntologyId": "UBERON:0004200",
+      "fmaId": null,
+      "concept": "pyramid",
+      "sourcePart": "e",
+      "tissue": "medulla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.7848113775253296,
+          2.455491304397583,
+          -1.1739180088043213
+        ],
+        "max": [
+          1.0464746952056885,
+          2.6602816581726074,
+          -0.9278968572616577
+        ]
+      },
+      "center": [
+        0.915643036365509,
+        2.557886481285095,
+        -1.0509074330329895
+      ],
+      "anchor": [
+        0.9412926435470581,
+        2.5899817943573,
+        -1.0507278442382812
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pyramid_L_e",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1334,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ac626c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-f",
+      "slug": "renal-pyramid-l-f",
+      "name": "Left renal pyramid (source part F)",
+      "sourceName": "VH_F_renal_pyramid_L_f",
+      "nodeName": "VH_F_renal_pyramid_L_f",
+      "originalNodeIndex": 628,
+      "sourceOntologyId": "UBERON:0004200",
+      "fmaId": null,
+      "concept": "pyramid",
+      "sourcePart": "f",
+      "tissue": "medulla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.7162977457046509,
+          2.269543409347534,
+          -1.0639915466308594
+        ],
+        "max": [
+          1.0604783296585083,
+          2.53633451461792,
+          -0.7458195686340332
+        ]
+      },
+      "center": [
+        0.8883880376815796,
+        2.402938961982727,
+        -0.9049055576324463
+      ],
+      "anchor": [
+        0.8838110566139221,
+        2.408696174621582,
+        -0.9035288095474243
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pyramid_L_f",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1730,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ac626c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-g",
+      "slug": "renal-pyramid-l-g",
+      "name": "Left renal pyramid (source part G)",
+      "sourceName": "VH_F_renal_pyramid_L_g",
+      "nodeName": "VH_F_renal_pyramid_L_g",
+      "originalNodeIndex": 629,
+      "sourceOntologyId": "UBERON:0004200",
+      "fmaId": null,
+      "concept": "pyramid",
+      "sourcePart": "g",
+      "tissue": "medulla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.5922001004219055,
+          2.050297737121582,
+          -1.2284826040267944
+        ],
+        "max": [
+          0.9759365916252136,
+          2.3626179695129395,
+          -0.9872308969497681
+        ]
+      },
+      "center": [
+        0.7840683460235596,
+        2.2064578533172607,
+        -1.1078567504882812
+      ],
+      "anchor": [
+        0.7636097073554993,
+        2.214301586151123,
+        -1.1166858673095703
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pyramid_L_g",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 2724,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ac626c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-h",
+      "slug": "renal-pyramid-l-h",
+      "name": "Left renal pyramid (source part H)",
+      "sourceName": "VH_F_renal_pyramid_L_h",
+      "nodeName": "VH_F_renal_pyramid_L_h",
+      "originalNodeIndex": 630,
+      "sourceOntologyId": "UBERON:0004200",
+      "fmaId": null,
+      "concept": "pyramid",
+      "sourcePart": "h",
+      "tissue": "medulla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.8783098459243774,
+          2.114140272140503,
+          -1.0171000957489014
+        ],
+        "max": [
+          1.0522915124893188,
+          2.279996395111084,
+          -0.7884824275970459
+        ]
+      },
+      "center": [
+        0.9653006792068481,
+        2.1970683336257935,
+        -0.9027912616729736
+      ],
+      "anchor": [
+        0.933601975440979,
+        2.1709227561950684,
+        -0.8997383117675781
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pyramid_L_h",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 718,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ac626c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-i",
+      "slug": "renal-pyramid-l-i",
+      "name": "Left renal pyramid (source part I)",
+      "sourceName": "VH_F_renal_pyramid_L_i",
+      "nodeName": "VH_F_renal_pyramid_L_i",
+      "originalNodeIndex": 631,
+      "sourceOntologyId": "UBERON:0004200",
+      "fmaId": null,
+      "concept": "pyramid",
+      "sourcePart": "i",
+      "tissue": "medulla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.7826715111732483,
+          1.9802072048187256,
+          -0.9452415108680725
+        ],
+        "max": [
+          1.0150129795074463,
+          2.2875454425811768,
+          -0.6758322715759277
+        ]
+      },
+      "center": [
+        0.8988422453403473,
+        2.133876323699951,
+        -0.8105368912220001
+      ],
+      "anchor": [
+        0.9028199315071106,
+        2.121166944503784,
+        -0.800687313079834
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pyramid_L_i",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1266,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ac626c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-j",
+      "slug": "renal-pyramid-l-j",
+      "name": "Left renal pyramid (source part J)",
+      "sourceName": "VH_F_renal_pyramid_L_j",
+      "nodeName": "VH_F_renal_pyramid_L_j",
+      "originalNodeIndex": 632,
+      "sourceOntologyId": "UBERON:0004200",
+      "fmaId": null,
+      "concept": "pyramid",
+      "sourcePart": "j",
+      "tissue": "medulla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.589513897895813,
+          1.8928582668304443,
+          -1.063420295715332
+        ],
+        "max": [
+          0.8348739147186279,
+          2.157881021499634,
+          -0.8342466354370117
+        ]
+      },
+      "center": [
+        0.7121939063072205,
+        2.025369644165039,
+        -0.9488334655761719
+      ],
+      "anchor": [
+        0.7126667499542236,
+        2.028881072998047,
+        -0.9623389840126038
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pyramid_L_j",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1292,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ac626c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-l-k",
+      "slug": "renal-pyramid-l-k",
+      "name": "Left renal pyramid (source part K)",
+      "sourceName": "VH_F_renal_pyramid_L_k",
+      "nodeName": "VH_F_renal_pyramid_L_k",
+      "originalNodeIndex": 633,
+      "sourceOntologyId": "UBERON:0004200",
+      "fmaId": null,
+      "concept": "pyramid",
+      "sourcePart": "k",
+      "tissue": "medulla",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.6824538111686707,
+          1.8284798860549927,
+          -0.8965129256248474
+        ],
+        "max": [
+          0.9610850214958191,
+          2.0615763664245605,
+          -0.7091074585914612
+        ]
+      },
+      "center": [
+        0.8217694163322449,
+        1.9450281262397766,
+        -0.8028101921081543
+      ],
+      "anchor": [
+        0.8065615892410278,
+        1.9488000869750977,
+        -0.8221896886825562
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pyramid_L_k",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1128,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ac626c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-column-l",
+      "slug": "renal-column-l",
+      "name": "Left renal columns",
+      "sourceName": "VH_F_renal_column_L",
+      "nodeName": "VH_F_renal_column_L",
+      "originalNodeIndex": 635,
+      "sourceOntologyId": "UBERON:0001284",
+      "fmaId": null,
+      "concept": "column",
+      "sourcePart": null,
+      "tissue": "cortex",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.5143791437149048,
+          1.8609354496002197,
+          -1.300565481185913
+        ],
+        "max": [
+          1.0418322086334229,
+          2.882113218307495,
+          -0.7165828943252563
+        ]
+      },
+      "center": [
+        0.7781056761741638,
+        2.3715243339538574,
+        -1.0085741877555847
+      ],
+      "anchor": [
+        0.808602511882782,
+        2.304683208465576,
+        -1.0484387874603271
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_column_L",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 26115,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ba8291"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:kidney-capsule-r",
+      "slug": "kidney-capsule-r",
+      "name": "Right renal capsule",
+      "sourceName": "VH_F_kidney_capsule_R",
+      "nodeName": "VH_F_kidney_capsule_R",
+      "originalNodeIndex": 638,
+      "sourceOntologyId": "UBERON:0002015",
+      "fmaId": null,
+      "concept": "capsule",
+      "sourcePart": null,
+      "tissue": "capsule",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -1.0872153043746948,
+          1.9859576225280762,
+          -1.344380497932434
+        ],
+        "max": [
+          -0.35330820083618164,
+          2.9645047187805176,
+          -0.6489789485931396
+        ]
+      },
+      "center": [
+        -0.7202617526054382,
+        2.475231170654297,
+        -0.9966797232627869
+      ],
+      "anchor": [
+        -0.5857289433479309,
+        2.4095101356506348,
+        -0.9729918241500854
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_kidney_capsule_R",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 10642,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ddcfad"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:hilum-of-kidney-r",
+      "slug": "hilum-of-kidney-r",
+      "name": "Right renal hilum",
+      "sourceName": "VH_F_hilum_of_kidney_R",
+      "nodeName": "VH_F_hilum_of_kidney_R",
+      "originalNodeIndex": 639,
+      "sourceOntologyId": "UBERON:0008716",
+      "fmaId": null,
+      "concept": "hilum",
+      "sourcePart": null,
+      "tissue": "hilum",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.8308717608451843,
+          2.2504303455352783,
+          -1.0493690967559814
+        ],
+        "max": [
+          -0.4479450583457947,
+          2.725198745727539,
+          -0.75257408618927
+        ]
+      },
+      "center": [
+        -0.6394084095954895,
+        2.4878145456314087,
+        -0.9009715914726257
+      ],
+      "anchor": [
+        -0.6557900309562683,
+        2.4434566497802734,
+        -0.870816171169281
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_hilum_of_kidney_R",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 4216,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d3bca6"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:outer-cortex-of-kidney-r",
+      "slug": "outer-cortex-of-kidney-r",
+      "name": "Right outer renal cortex",
+      "sourceName": "VH_F_outer_cortex_of_kidney_R",
+      "nodeName": "VH_F_outer_cortex_of_kidney_R",
+      "originalNodeIndex": 641,
+      "sourceOntologyId": "UBERON:0002189",
+      "fmaId": null,
+      "concept": "cortex",
+      "sourcePart": null,
+      "tissue": "cortex",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -1.0803420543670654,
+          1.9938817024230957,
+          -1.3378701210021973
+        ],
+        "max": [
+          -0.3600793480873108,
+          2.9561219215393066,
+          -0.6565389633178711
+        ]
+      },
+      "center": [
+        -0.7202107012271881,
+        2.475001811981201,
+        -0.9972045421600342
+      ],
+      "anchor": [
+        -0.6349894404411316,
+        2.438244342803955,
+        -1.002537488937378
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_outer_cortex_of_kidney_R",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 13824,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ba8291"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-r-a",
+      "slug": "renal-papilla-r-a",
+      "name": "Right renal papilla (source part A)",
+      "sourceName": "VH_F_renal_papilla_R_a",
+      "nodeName": "VH_F_renal_papilla_R_a",
+      "originalNodeIndex": 645,
+      "sourceOntologyId": "UBERON:0001228",
+      "fmaId": null,
+      "concept": "papilla",
+      "sourcePart": "a",
+      "tissue": "papilla",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.6218768358230591,
+          2.6820058822631836,
+          -1.1376632452011108
+        ],
+        "max": [
+          -0.5828362703323364,
+          2.7312850952148438,
+          -1.0885475873947144
+        ]
+      },
+      "center": [
+        -0.6023565530776978,
+        2.7066454887390137,
+        -1.1131054162979126
+      ],
+      "anchor": [
+        -0.5892462730407715,
+        2.704911231994629,
+        -1.1169301271438599
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_papilla_R_a",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 122,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ce9b94"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-r-b",
+      "slug": "renal-papilla-r-b",
+      "name": "Right renal papilla (source part B)",
+      "sourceName": "VH_F_renal_papilla_R_b",
+      "nodeName": "VH_F_renal_papilla_R_b",
+      "originalNodeIndex": 646,
+      "sourceOntologyId": "UBERON:0001228",
+      "fmaId": null,
+      "concept": "papilla",
+      "sourcePart": "b",
+      "tissue": "papilla",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.5639124512672424,
+          2.6717684268951416,
+          -1.1375011205673218
+        ],
+        "max": [
+          -0.5383043885231018,
+          2.7168095111846924,
+          -1.1033413410186768
+        ]
+      },
+      "center": [
+        -0.5511084198951721,
+        2.694288969039917,
+        -1.1204212307929993
+      ],
+      "anchor": [
+        -0.5639124512672424,
+        2.6947474479675293,
+        -1.1201988458633423
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_papilla_R_b",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 58,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ce9b94"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-r-c",
+      "slug": "renal-papilla-r-c",
+      "name": "Right renal papilla (source part C)",
+      "sourceName": "VH_F_renal_papilla_R_c",
+      "nodeName": "VH_F_renal_papilla_R_c",
+      "originalNodeIndex": 647,
+      "sourceOntologyId": "UBERON:0001228",
+      "fmaId": null,
+      "concept": "papilla",
+      "sourcePart": "c",
+      "tissue": "papilla",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.7521344423294067,
+          2.6369616985321045,
+          -1.1479308605194092
+        ],
+        "max": [
+          -0.7111959457397461,
+          2.6918082237243652,
+          -1.0983763933181763
+        ]
+      },
+      "center": [
+        -0.7316651940345764,
+        2.664384961128235,
+        -1.1231536269187927
+      ],
+      "anchor": [
+        -0.7243264317512512,
+        2.658885955810547,
+        -1.1368284225463867
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_papilla_R_c",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 80,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ce9b94"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-r-d",
+      "slug": "renal-papilla-r-d",
+      "name": "Right renal papilla (source part D)",
+      "sourceName": "VH_F_renal_papilla_R_d",
+      "nodeName": "VH_F_renal_papilla_R_d",
+      "originalNodeIndex": 648,
+      "sourceOntologyId": "UBERON:0001228",
+      "fmaId": null,
+      "concept": "papilla",
+      "sourcePart": "d",
+      "tissue": "papilla",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.7301756143569946,
+          2.566303253173828,
+          -1.139076828956604
+        ],
+        "max": [
+          -0.6897556185722351,
+          2.6320769786834717,
+          -1.102591872215271
+        ]
+      },
+      "center": [
+        -0.7099656164646149,
+        2.59919011592865,
+        -1.1208343505859375
+      ],
+      "anchor": [
+        -0.7202845215797424,
+        2.6035070419311523,
+        -1.1112048625946045
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_papilla_R_d",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 72,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ce9b94"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-r-e",
+      "slug": "renal-papilla-r-e",
+      "name": "Right renal papilla (source part E)",
+      "sourceName": "VH_F_renal_papilla_R_e",
+      "nodeName": "VH_F_renal_papilla_R_e",
+      "originalNodeIndex": 649,
+      "sourceOntologyId": "UBERON:0001228",
+      "fmaId": null,
+      "concept": "papilla",
+      "sourcePart": "e",
+      "tissue": "papilla",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.8139079809188843,
+          2.5260698795318604,
+          -0.945091962814331
+        ],
+        "max": [
+          -0.7778024077415466,
+          2.569383144378662,
+          -0.9052715301513672
+        ]
+      },
+      "center": [
+        -0.7958551943302155,
+        2.5477265119552612,
+        -0.9251817464828491
+      ],
+      "anchor": [
+        -0.8097692728042603,
+        2.5473246574401855,
+        -0.9286748170852661
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_papilla_R_e",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 106,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ce9b94"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-r-f",
+      "slug": "renal-papilla-r-f",
+      "name": "Right renal papilla (source part F)",
+      "sourceName": "VH_F_renal_papilla_R_f",
+      "nodeName": "VH_F_renal_papilla_R_f",
+      "originalNodeIndex": 650,
+      "sourceOntologyId": "UBERON:0001228",
+      "fmaId": null,
+      "concept": "papilla",
+      "sourcePart": "f",
+      "tissue": "papilla",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.8113663792610168,
+          2.502457857131958,
+          -0.996265172958374
+        ],
+        "max": [
+          -0.7916056513786316,
+          2.540281057357788,
+          -0.9502208232879639
+        ]
+      },
+      "center": [
+        -0.8014860153198242,
+        2.521369457244873,
+        -0.973242998123169
+      ],
+      "anchor": [
+        -0.7983699440956116,
+        2.527693271636963,
+        -0.9784461259841919
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_papilla_R_f",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 83,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ce9b94"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-r-g",
+      "slug": "renal-papilla-r-g",
+      "name": "Right renal papilla (source part G)",
+      "sourceName": "VH_F_renal_papilla_R_g",
+      "nodeName": "VH_F_renal_papilla_R_g",
+      "originalNodeIndex": 651,
+      "sourceOntologyId": "UBERON:0001228",
+      "fmaId": null,
+      "concept": "papilla",
+      "sourcePart": "g",
+      "tissue": "papilla",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.8324695825576782,
+          2.288926362991333,
+          -1.0292603969573975
+        ],
+        "max": [
+          -0.8023157715797424,
+          2.3196890354156494,
+          -0.9881020784378052
+        ]
+      },
+      "center": [
+        -0.8173926770687103,
+        2.304307699203491,
+        -1.0086812376976013
+      ],
+      "anchor": [
+        -0.8180503845214844,
+        2.3105530738830566,
+        -1.0144901275634766
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_papilla_R_g",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 124,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ce9b94"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-r-h",
+      "slug": "renal-papilla-r-h",
+      "name": "Right renal papilla (source part H)",
+      "sourceName": "VH_F_renal_papilla_R_h",
+      "nodeName": "VH_F_renal_papilla_R_h",
+      "originalNodeIndex": 652,
+      "sourceOntologyId": "UBERON:0001228",
+      "fmaId": null,
+      "concept": "papilla",
+      "sourcePart": "h",
+      "tissue": "papilla",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.8511818647384644,
+          2.3335556983947754,
+          -0.8656142950057983
+        ],
+        "max": [
+          -0.8285130262374878,
+          2.3695244789123535,
+          -0.8278585076332092
+        ]
+      },
+      "center": [
+        -0.8398474454879761,
+        2.3515400886535645,
+        -0.8467364013195038
+      ],
+      "anchor": [
+        -0.8329895734786987,
+        2.3530027866363525,
+        -0.8518896102905273
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_papilla_R_h",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 26,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ce9b94"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-r-i",
+      "slug": "renal-papilla-r-i",
+      "name": "Right renal papilla (source part I)",
+      "sourceName": "VH_F_renal_papilla_R_i",
+      "nodeName": "VH_F_renal_papilla_R_i",
+      "originalNodeIndex": 653,
+      "sourceOntologyId": "UBERON:0001228",
+      "fmaId": null,
+      "concept": "papilla",
+      "sourcePart": "i",
+      "tissue": "papilla",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.8504489064216614,
+          2.218703508377075,
+          -0.949010968208313
+        ],
+        "max": [
+          -0.8001005053520203,
+          2.2537245750427246,
+          -0.9152200818061829
+        ]
+      },
+      "center": [
+        -0.8252747058868408,
+        2.2362140417099,
+        -0.9321155250072479
+      ],
+      "anchor": [
+        -0.8301007747650146,
+        2.2450404167175293,
+        -0.9378931522369385
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_papilla_R_i",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 106,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ce9b94"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-papilla-r-j",
+      "slug": "renal-papilla-r-j",
+      "name": "Right renal papilla (source part J)",
+      "sourceName": "VH_F_renal_papilla_R_j",
+      "nodeName": "VH_F_renal_papilla_R_j",
+      "originalNodeIndex": 654,
+      "sourceOntologyId": "UBERON:0001228",
+      "fmaId": null,
+      "concept": "papilla",
+      "sourcePart": "j",
+      "tissue": "papilla",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.8188592791557312,
+          2.2057275772094727,
+          -0.8340257406234741
+        ],
+        "max": [
+          -0.7802293300628662,
+          2.245950937271118,
+          -0.7968917489051819
+        ]
+      },
+      "center": [
+        -0.7995443046092987,
+        2.2258392572402954,
+        -0.815458744764328
+      ],
+      "anchor": [
+        -0.7863230109214783,
+        2.2343809604644775,
+        -0.8146185278892517
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_papilla_R_j",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 78,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ce9b94"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-r-a",
+      "slug": "renal-pyramid-r-a",
+      "name": "Right renal pyramid (source part A)",
+      "sourceName": "VH_F_renal_pyramid_R_a",
+      "nodeName": "VH_F_renal_pyramid_R_a",
+      "originalNodeIndex": 656,
+      "sourceOntologyId": "UBERON:0004200",
+      "fmaId": null,
+      "concept": "pyramid",
+      "sourcePart": "a",
+      "tissue": "medulla",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.6582176685333252,
+          2.585355758666992,
+          -1.2726706266403198
+        ],
+        "max": [
+          -0.4545842111110687,
+          2.905449867248535,
+          -0.9872153997421265
+        ]
+      },
+      "center": [
+        -0.556400939822197,
+        2.7454028129577637,
+        -1.1299430131912231
+      ],
+      "anchor": [
+        -0.5648989677429199,
+        2.7468390464782715,
+        -1.129178524017334
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pyramid_R_a",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 2696,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ac626c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-r-b",
+      "slug": "renal-pyramid-r-b",
+      "name": "Right renal pyramid (source part B)",
+      "sourceName": "VH_F_renal_pyramid_R_b",
+      "nodeName": "VH_F_renal_pyramid_R_b",
+      "originalNodeIndex": 657,
+      "sourceOntologyId": "UBERON:0004200",
+      "fmaId": null,
+      "concept": "pyramid",
+      "sourcePart": "b",
+      "tissue": "medulla",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.5669980645179749,
+          2.499572277069092,
+          -1.1384893655776978
+        ],
+        "max": [
+          -0.4291539788246155,
+          2.7663230895996094,
+          -0.9922889471054077
+        ]
+      },
+      "center": [
+        -0.49807602167129517,
+        2.6329476833343506,
+        -1.0653891563415527
+      ],
+      "anchor": [
+        -0.49195951223373413,
+        2.63132381439209,
+        -1.0546064376831055
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pyramid_R_b",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 956,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ac626c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-r-c",
+      "slug": "renal-pyramid-r-c",
+      "name": "Right renal pyramid (source part C)",
+      "sourceName": "VH_F_renal_pyramid_R_c",
+      "nodeName": "VH_F_renal_pyramid_R_c",
+      "originalNodeIndex": 658,
+      "sourceOntologyId": "UBERON:0004200",
+      "fmaId": null,
+      "concept": "pyramid",
+      "sourcePart": "c",
+      "tissue": "medulla",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.9269207119941711,
+          2.5956602096557617,
+          -1.2711443901062012
+        ],
+        "max": [
+          -0.6486190557479858,
+          2.813627243041992,
+          -0.9954473376274109
+        ]
+      },
+      "center": [
+        -0.7877698838710785,
+        2.704643726348877,
+        -1.133295863866806
+      ],
+      "anchor": [
+        -0.7831310033798218,
+        2.698610782623291,
+        -1.1328718662261963
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pyramid_R_c",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 2254,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ac626c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-r-d",
+      "slug": "renal-pyramid-r-d",
+      "name": "Right renal pyramid (source part D)",
+      "sourceName": "VH_F_renal_pyramid_R_d",
+      "nodeName": "VH_F_renal_pyramid_R_d",
+      "originalNodeIndex": 659,
+      "sourceOntologyId": "UBERON:0004200",
+      "fmaId": null,
+      "concept": "pyramid",
+      "sourcePart": "d",
+      "tissue": "medulla",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.83758944272995,
+          2.403102397918701,
+          -1.2745883464813232
+        ],
+        "max": [
+          -0.5906752347946167,
+          2.713906764984131,
+          -1.047687292098999
+        ]
+      },
+      "center": [
+        -0.7141323387622833,
+        2.558504581451416,
+        -1.1611378192901611
+      ],
+      "anchor": [
+        -0.7464280128479004,
+        2.5804877281188965,
+        -1.1424939632415771
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pyramid_R_d",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 2234,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ac626c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-r-e",
+      "slug": "renal-pyramid-r-e",
+      "name": "Right renal pyramid (source part E)",
+      "sourceName": "VH_F_renal_pyramid_R_e",
+      "nodeName": "VH_F_renal_pyramid_R_e",
+      "originalNodeIndex": 660,
+      "sourceOntologyId": "UBERON:0004200",
+      "fmaId": null,
+      "concept": "pyramid",
+      "sourcePart": "e",
+      "tissue": "medulla",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.890059232711792,
+          2.4911022186279297,
+          -0.9683995246887207
+        ],
+        "max": [
+          -0.622485339641571,
+          2.7244157791137695,
+          -0.7283447980880737
+        ]
+      },
+      "center": [
+        -0.7562722861766815,
+        2.6077589988708496,
+        -0.8483721613883972
+      ],
+      "anchor": [
+        -0.7481914758682251,
+        2.5860249996185303,
+        -0.8422168493270874
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pyramid_R_e",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 2328,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ac626c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-r-f",
+      "slug": "renal-pyramid-r-f",
+      "name": "Right renal pyramid (source part F)",
+      "sourceName": "VH_F_renal_pyramid_R_f",
+      "nodeName": "VH_F_renal_pyramid_R_f",
+      "originalNodeIndex": 661,
+      "sourceOntologyId": "UBERON:0004200",
+      "fmaId": null,
+      "concept": "pyramid",
+      "sourcePart": "f",
+      "tissue": "medulla",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.9942200779914856,
+          2.43804669380188,
+          -1.1720948219299316
+        ],
+        "max": [
+          -0.8058765530586243,
+          2.576289653778076,
+          -0.846147894859314
+        ]
+      },
+      "center": [
+        -0.9000483155250549,
+        2.507168173789978,
+        -1.0091213583946228
+      ],
+      "anchor": [
+        -0.9030377268791199,
+        2.513880491256714,
+        -1.010387659072876
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pyramid_R_f",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 2267,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ac626c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-r-g",
+      "slug": "renal-pyramid-r-g",
+      "name": "Right renal pyramid (source part G)",
+      "sourceName": "VH_F_renal_pyramid_R_g",
+      "nodeName": "VH_F_renal_pyramid_R_g",
+      "originalNodeIndex": 662,
+      "sourceOntologyId": "UBERON:0004200",
+      "fmaId": null,
+      "concept": "pyramid",
+      "sourcePart": "g",
+      "tissue": "medulla",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.9725013971328735,
+          2.2300760746002197,
+          -1.174189805984497
+        ],
+        "max": [
+          -0.6349658370018005,
+          2.376410722732544,
+          -0.9776150584220886
+        ]
+      },
+      "center": [
+        -0.803733617067337,
+        2.303243398666382,
+        -1.0759024322032928
+      ],
+      "anchor": [
+        -0.810996949672699,
+        2.3054041862487793,
+        -1.0705311298370361
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pyramid_R_g",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 2454,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ac626c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-r-h",
+      "slug": "renal-pyramid-r-h",
+      "name": "Right renal pyramid (source part H)",
+      "sourceName": "VH_F_renal_pyramid_R_h",
+      "nodeName": "VH_F_renal_pyramid_R_h",
+      "originalNodeIndex": 663,
+      "sourceOntologyId": "UBERON:0004200",
+      "fmaId": null,
+      "concept": "pyramid",
+      "sourcePart": "h",
+      "tissue": "medulla",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -1.019948959350586,
+          2.2629175186157227,
+          -0.9633628129959106
+        ],
+        "max": [
+          -0.6815332770347595,
+          2.439784049987793,
+          -0.695267915725708
+        ]
+      },
+      "center": [
+        -0.8507411181926727,
+        2.351350784301758,
+        -0.8293153643608093
+      ],
+      "anchor": [
+        -0.8448407053947449,
+        2.3345935344696045,
+        -0.8310685157775879
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pyramid_R_h",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 2262,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ac626c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-r-i",
+      "slug": "renal-pyramid-r-i",
+      "name": "Right renal pyramid (source part I)",
+      "sourceName": "VH_F_renal_pyramid_R_i",
+      "nodeName": "VH_F_renal_pyramid_R_i",
+      "originalNodeIndex": 664,
+      "sourceOntologyId": "UBERON:0004200",
+      "fmaId": null,
+      "concept": "pyramid",
+      "sourcePart": "i",
+      "tissue": "medulla",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.9707077741622925,
+          2.1095523834228516,
+          -1.033416748046875
+        ],
+        "max": [
+          -0.6502987146377563,
+          2.258063316345215,
+          -0.8949106931686401
+        ]
+      },
+      "center": [
+        -0.8105032444000244,
+        2.183807849884033,
+        -0.9641637206077576
+      ],
+      "anchor": [
+        -0.8199794292449951,
+        2.209540843963623,
+        -0.9797901511192322
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pyramid_R_i",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1660,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ac626c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pyramid-r-j",
+      "slug": "renal-pyramid-r-j",
+      "name": "Right renal pyramid (source part J)",
+      "sourceName": "VH_F_renal_pyramid_R_j",
+      "nodeName": "VH_F_renal_pyramid_R_j",
+      "originalNodeIndex": 665,
+      "sourceOntologyId": "UBERON:0004200",
+      "fmaId": null,
+      "concept": "pyramid",
+      "sourcePart": "j",
+      "tissue": "medulla",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.9368892908096313,
+          2.032933473587036,
+          -0.898097038269043
+        ],
+        "max": [
+          -0.6103358864784241,
+          2.3013768196105957,
+          -0.6908649206161499
+        ]
+      },
+      "center": [
+        -0.7736125886440277,
+        2.167155146598816,
+        -0.7944809794425964
+      ],
+      "anchor": [
+        -0.7528723478317261,
+        2.1596522331237793,
+        -0.8112389445304871
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pyramid_R_j",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 2862,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#ac626c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-r-a",
+      "slug": "minor-calyx-r-a",
+      "name": "Right minor calyx (source part A)",
+      "sourceName": "VH_F_minor_calyx_R_a",
+      "nodeName": "VH_F_minor_calyx_R_a",
+      "originalNodeIndex": 670,
+      "sourceOntologyId": "UBERON:0001227",
+      "fmaId": null,
+      "concept": "minor-calyx",
+      "sourcePart": "a",
+      "tissue": "collecting",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.6770941019058228,
+          2.6018736362457275,
+          -1.1467065811157227
+        ],
+        "max": [
+          -0.5341233015060425,
+          2.724161148071289,
+          -1.0610737800598145
+        ]
+      },
+      "center": [
+        -0.6056087017059326,
+        2.6630173921585083,
+        -1.1038901805877686
+      ],
+      "anchor": [
+        -0.6085913777351379,
+        2.661604642868042,
+        -1.1066200733184814
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_minor_calyx_R_a",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1060,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-r-b",
+      "slug": "minor-calyx-r-b",
+      "name": "Right minor calyx (source part B)",
+      "sourceName": "VH_F_minor_calyx_R_b",
+      "nodeName": "VH_F_minor_calyx_R_b",
+      "originalNodeIndex": 671,
+      "sourceOntologyId": "UBERON:0001227",
+      "fmaId": null,
+      "concept": "minor-calyx",
+      "sourcePart": "b",
+      "tissue": "collecting",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.6941087245941162,
+          2.579162120819092,
+          -1.152807593345642
+        ],
+        "max": [
+          -0.5635090470314026,
+          2.7385129928588867,
+          -1.0598530769348145
+        ]
+      },
+      "center": [
+        -0.6288088858127594,
+        2.6588375568389893,
+        -1.1063303351402283
+      ],
+      "anchor": [
+        -0.6292980313301086,
+        2.6500110626220703,
+        -1.1136188507080078
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_minor_calyx_R_b",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1220,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-r-c",
+      "slug": "minor-calyx-r-c",
+      "name": "Right minor calyx (source part C)",
+      "sourceName": "VH_F_minor_calyx_R_c",
+      "nodeName": "VH_F_minor_calyx_R_c",
+      "originalNodeIndex": 672,
+      "sourceOntologyId": "UBERON:0001227",
+      "fmaId": null,
+      "concept": "minor-calyx",
+      "sourcePart": "c",
+      "tissue": "collecting",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.7461956143379211,
+          2.556440591812134,
+          -1.158246636390686
+        ],
+        "max": [
+          -0.6653570532798767,
+          2.6761271953582764,
+          -1.0734269618988037
+        ]
+      },
+      "center": [
+        -0.7057763338088989,
+        2.616283893585205,
+        -1.1158367991447449
+      ],
+      "anchor": [
+        -0.7200801372528076,
+        2.6157031059265137,
+        -1.0978621244430542
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_minor_calyx_R_c",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 856,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-r-d",
+      "slug": "minor-calyx-r-d",
+      "name": "Right minor calyx (source part D)",
+      "sourceName": "VH_F_minor_calyx_R_d",
+      "nodeName": "VH_F_minor_calyx_R_d",
+      "originalNodeIndex": 673,
+      "sourceOntologyId": "UBERON:0001227",
+      "fmaId": null,
+      "concept": "minor-calyx",
+      "sourcePart": "d",
+      "tissue": "collecting",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.7610818147659302,
+          2.577468156814575,
+          -1.167654275894165
+        ],
+        "max": [
+          -0.6799498200416565,
+          2.710796594619751,
+          -1.061083197593689
+        ]
+      },
+      "center": [
+        -0.7205158174037933,
+        2.644132375717163,
+        -1.114368736743927
+      ],
+      "anchor": [
+        -0.7265618443489075,
+        2.6391777992248535,
+        -1.0993545055389404
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_minor_calyx_R_d",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1482,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-r-e",
+      "slug": "minor-calyx-r-e",
+      "name": "Right minor calyx (source part E)",
+      "sourceName": "VH_F_minor_calyx_R_e",
+      "nodeName": "VH_F_minor_calyx_R_e",
+      "originalNodeIndex": 674,
+      "sourceOntologyId": "UBERON:0001227",
+      "fmaId": null,
+      "concept": "minor-calyx",
+      "sourcePart": "e",
+      "tissue": "collecting",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.8244818449020386,
+          2.493730068206787,
+          -1.0087904930114746
+        ],
+        "max": [
+          -0.7555215954780579,
+          2.5675387382507324,
+          -0.932711660861969
+        ]
+      },
+      "center": [
+        -0.7900017201900482,
+        2.5306344032287598,
+        -0.9707510769367218
+      ],
+      "anchor": [
+        -0.7909358143806458,
+        2.5474655628204346,
+        -0.9780744314193726
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_minor_calyx_R_e",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1002,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-r-f",
+      "slug": "minor-calyx-r-f",
+      "name": "Right minor calyx (source part F)",
+      "sourceName": "VH_F_minor_calyx_R_f",
+      "nodeName": "VH_F_minor_calyx_R_f",
+      "originalNodeIndex": 675,
+      "sourceOntologyId": "UBERON:0001227",
+      "fmaId": null,
+      "concept": "minor-calyx",
+      "sourcePart": "f",
+      "tissue": "collecting",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.8237839937210083,
+          2.5091700553894043,
+          -0.9833871722221375
+        ],
+        "max": [
+          -0.747832179069519,
+          2.5857672691345215,
+          -0.8892379999160767
+        ]
+      },
+      "center": [
+        -0.7858080863952637,
+        2.547468662261963,
+        -0.9363125860691071
+      ],
+      "anchor": [
+        -0.7740731239318848,
+        2.557990789413452,
+        -0.9449869990348816
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_minor_calyx_R_f",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1216,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-r-g",
+      "slug": "minor-calyx-r-g",
+      "name": "Right minor calyx (source part G)",
+      "sourceName": "VH_F_minor_calyx_R_g",
+      "nodeName": "VH_F_minor_calyx_R_g",
+      "originalNodeIndex": 676,
+      "sourceOntologyId": "UBERON:0001227",
+      "fmaId": null,
+      "concept": "minor-calyx",
+      "sourcePart": "g",
+      "tissue": "collecting",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.8445581197738647,
+          2.2856357097625732,
+          -1.0446192026138306
+        ],
+        "max": [
+          -0.7751668095588684,
+          2.338423490524292,
+          -0.9600054621696472
+        ]
+      },
+      "center": [
+        -0.8098624646663666,
+        2.3120296001434326,
+        -1.002312332391739
+      ],
+      "anchor": [
+        -0.807611346244812,
+        2.3319287300109863,
+        -1.0064460039138794
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_minor_calyx_R_g",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1368,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-r-h",
+      "slug": "minor-calyx-r-h",
+      "name": "Right minor calyx (source part H)",
+      "sourceName": "VH_F_minor_calyx_R_h",
+      "nodeName": "VH_F_minor_calyx_R_h",
+      "originalNodeIndex": 677,
+      "sourceOntologyId": "UBERON:0001227",
+      "fmaId": null,
+      "concept": "minor-calyx",
+      "sourcePart": "h",
+      "tissue": "collecting",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.8477143049240112,
+          2.222088098526001,
+          -0.9608782529830933
+        ],
+        "max": [
+          -0.7830628156661987,
+          2.2820637226104736,
+          -0.904536783695221
+        ]
+      },
+      "center": [
+        -0.815388560295105,
+        2.2520759105682373,
+        -0.9327075183391571
+      ],
+      "anchor": [
+        -0.8242681622505188,
+        2.2603700160980225,
+        -0.9378217458724976
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_minor_calyx_R_h",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 736,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-r-i",
+      "slug": "minor-calyx-r-i",
+      "name": "Right minor calyx (source part I)",
+      "sourceName": "VH_F_minor_calyx_R_i",
+      "nodeName": "VH_F_minor_calyx_R_i",
+      "originalNodeIndex": 678,
+      "sourceOntologyId": "UBERON:0001227",
+      "fmaId": null,
+      "concept": "minor-calyx",
+      "sourcePart": "i",
+      "tissue": "collecting",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.8623215556144714,
+          2.310596466064453,
+          -0.8919140696525574
+        ],
+        "max": [
+          -0.7912728786468506,
+          2.4004476070404053,
+          -0.8117592334747314
+        ]
+      },
+      "center": [
+        -0.826797217130661,
+        2.355522036552429,
+        -0.8518366515636444
+      ],
+      "anchor": [
+        -0.8232791423797607,
+        2.3624470233917236,
+        -0.8540163040161133
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_minor_calyx_R_i",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1302,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-r-j",
+      "slug": "minor-calyx-r-j",
+      "name": "Right minor calyx (source part J)",
+      "sourceName": "VH_F_minor_calyx_R_j",
+      "nodeName": "VH_F_minor_calyx_R_j",
+      "originalNodeIndex": 679,
+      "sourceOntologyId": "UBERON:0001227",
+      "fmaId": null,
+      "concept": "minor-calyx",
+      "sourcePart": "j",
+      "tissue": "collecting",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.8477939367294312,
+          2.1913957595825195,
+          -0.8693137764930725
+        ],
+        "max": [
+          -0.7382888793945312,
+          2.2957258224487305,
+          -0.7681534290313721
+        ]
+      },
+      "center": [
+        -0.7930414080619812,
+        2.243560791015625,
+        -0.8187336027622223
+      ],
+      "anchor": [
+        -0.7858555316925049,
+        2.2466540336608887,
+        -0.8124678134918213
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_minor_calyx_R_j",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 2166,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:major-calyx-r-a",
+      "slug": "major-calyx-r-a",
+      "name": "Right major calyx (source part A)",
+      "sourceName": "VH_F_major_calyx_R_a",
+      "nodeName": "VH_F_major_calyx_R_a",
+      "originalNodeIndex": 681,
+      "sourceOntologyId": "UBERON:0001226",
+      "fmaId": null,
+      "concept": "major-calyx",
+      "sourcePart": "a",
+      "tissue": "collecting",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.7313826084136963,
+          2.4871652126312256,
+          -1.0938366651535034
+        ],
+        "max": [
+          -0.6574022173881531,
+          2.6268510818481445,
+          -0.9608455896377563
+        ]
+      },
+      "center": [
+        -0.6943924129009247,
+        2.557008147239685,
+        -1.0273411273956299
+      ],
+      "anchor": [
+        -0.6939309239387512,
+        2.547163963317871,
+        -1.0297857522964478
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_major_calyx_R_a",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1218,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:major-calyx-r-b",
+      "slug": "major-calyx-r-b",
+      "name": "Right major calyx (source part B)",
+      "sourceName": "VH_F_major_calyx_R_b",
+      "nodeName": "VH_F_major_calyx_R_b",
+      "originalNodeIndex": 682,
+      "sourceOntologyId": "UBERON:0001226",
+      "fmaId": null,
+      "concept": "major-calyx",
+      "sourcePart": "b",
+      "tissue": "collecting",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.7606134414672852,
+          2.47843074798584,
+          -1.0179393291473389
+        ],
+        "max": [
+          -0.687528133392334,
+          2.5615861415863037,
+          -0.957624077796936
+        ]
+      },
+      "center": [
+        -0.7240707874298096,
+        2.5200084447860718,
+        -0.9877817034721375
+      ],
+      "anchor": [
+        -0.7253010272979736,
+        2.5175228118896484,
+        -0.9949033856391907
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_major_calyx_R_b",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 636,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:major-calyx-r-c",
+      "slug": "major-calyx-r-c",
+      "name": "Right major calyx (source part C)",
+      "sourceName": "VH_F_major_calyx_R_c",
+      "nodeName": "VH_F_major_calyx_R_c",
+      "originalNodeIndex": 683,
+      "sourceOntologyId": "UBERON:0001226",
+      "fmaId": null,
+      "concept": "major-calyx",
+      "sourcePart": "c",
+      "tissue": "collecting",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.8478950262069702,
+          2.2752976417541504,
+          -0.9661275744438171
+        ],
+        "max": [
+          -0.7126638889312744,
+          2.387267589569092,
+          -0.8520756959915161
+        ]
+      },
+      "center": [
+        -0.7802794575691223,
+        2.331282615661621,
+        -0.9091016352176666
+      ],
+      "anchor": [
+        -0.784839928150177,
+        2.3430233001708984,
+        -0.9147524833679199
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_major_calyx_R_c",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 2090,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pelvis-r",
+      "slug": "renal-pelvis-r",
+      "name": "Right renal pelvis",
+      "sourceName": "VH_F_renal_pelvis_R",
+      "nodeName": "VH_F_renal_pelvis_R",
+      "originalNodeIndex": 684,
+      "sourceOntologyId": "UBERON:0001224",
+      "fmaId": null,
+      "concept": "pelvis",
+      "sourcePart": null,
+      "tissue": "collecting",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.728952169418335,
+          2.326324462890625,
+          -0.9892194867134094
+        ],
+        "max": [
+          -0.5439093112945557,
+          2.5237598419189453,
+          -0.8536100387573242
+        ]
+      },
+      "center": [
+        -0.6364307403564453,
+        2.425042152404785,
+        -0.9214147627353668
+      ],
+      "anchor": [
+        -0.6447944641113281,
+        2.4319403171539307,
+        -0.9063738584518433
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pelvis_R",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 3012,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:right-ureter",
+      "slug": "right-ureter",
+      "name": "Right ureter",
+      "sourceName": "VH_F_right_ureter",
+      "nodeName": "VH_F_right_ureter",
+      "originalNodeIndex": 685,
+      "sourceOntologyId": "UBERON:0001222",
+      "fmaId": null,
+      "concept": "ureter",
+      "sourcePart": null,
+      "tissue": "collecting",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.6973984837532043,
+          0.11176318675279617,
+          -0.8923738598823547
+        ],
+        "max": [
+          -0.34442341327667236,
+          2.355201482772827,
+          -0.5355392694473267
+        ]
+      },
+      "center": [
+        -0.5209109485149384,
+        1.2334823347628117,
+        -0.7139565646648407
+      ],
+      "anchor": [
+        -0.5207028388977051,
+        1.1716523170471191,
+        -0.6327069997787476
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_right_ureter",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 12952,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-l-a",
+      "slug": "minor-calyx-l-a",
+      "name": "Left minor calyx (source part A)",
+      "sourceName": "VH_F_minor_calyx_L_a",
+      "nodeName": "VH_F_minor_calyx_L_a",
+      "originalNodeIndex": 689,
+      "sourceOntologyId": "UBERON:0001227",
+      "fmaId": null,
+      "concept": "minor-calyx",
+      "sourcePart": "a",
+      "tissue": "collecting",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.5890164375305176,
+          2.6074013710021973,
+          -1.1536754369735718
+        ],
+        "max": [
+          0.7336634397506714,
+          2.7512292861938477,
+          -1.0679881572723389
+        ]
+      },
+      "center": [
+        0.6613399386405945,
+        2.6793153285980225,
+        -1.1108317971229553
+      ],
+      "anchor": [
+        0.6544654369354248,
+        2.6725196838378906,
+        -1.10981023311615
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_minor_calyx_L_a",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 2272,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-l-b",
+      "slug": "minor-calyx-l-b",
+      "name": "Left minor calyx (source part B)",
+      "sourceName": "VH_F_minor_calyx_L_b",
+      "nodeName": "VH_F_minor_calyx_L_b",
+      "originalNodeIndex": 690,
+      "sourceOntologyId": "UBERON:0001227",
+      "fmaId": null,
+      "concept": "minor-calyx",
+      "sourcePart": "b",
+      "tissue": "collecting",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.6997614502906799,
+          2.6250314712524414,
+          -1.1404683589935303
+        ],
+        "max": [
+          0.761865496635437,
+          2.724774122238159,
+          -1.0642482042312622
+        ]
+      },
+      "center": [
+        0.7308134734630585,
+        2.6749027967453003,
+        -1.1023582816123962
+      ],
+      "anchor": [
+        0.7388328313827515,
+        2.6765453815460205,
+        -1.1199935674667358
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_minor_calyx_L_b",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 844,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-l-c",
+      "slug": "minor-calyx-l-c",
+      "name": "Left minor calyx (source part C)",
+      "sourceName": "VH_F_minor_calyx_L_c",
+      "nodeName": "VH_F_minor_calyx_L_c",
+      "originalNodeIndex": 691,
+      "sourceOntologyId": "UBERON:0001227",
+      "fmaId": null,
+      "concept": "minor-calyx",
+      "sourcePart": "c",
+      "tissue": "collecting",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.6940515041351318,
+          2.536515235900879,
+          -1.168456792831421
+        ],
+        "max": [
+          0.8066611886024475,
+          2.6461548805236816,
+          -1.0826398134231567
+        ]
+      },
+      "center": [
+        0.7503563463687897,
+        2.5913350582122803,
+        -1.1255483031272888
+      ],
+      "anchor": [
+        0.7287227511405945,
+        2.588913679122925,
+        -1.1388475894927979
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_minor_calyx_L_c",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1862,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-l-d",
+      "slug": "minor-calyx-l-d",
+      "name": "Left minor calyx (source part D)",
+      "sourceName": "VH_F_minor_calyx_L_d",
+      "nodeName": "VH_F_minor_calyx_L_d",
+      "originalNodeIndex": 692,
+      "sourceOntologyId": "UBERON:0001227",
+      "fmaId": null,
+      "concept": "minor-calyx",
+      "sourcePart": "d",
+      "tissue": "collecting",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.7322525978088379,
+          2.5491819381713867,
+          -1.1387736797332764
+        ],
+        "max": [
+          0.811246395111084,
+          2.6461548805236816,
+          -1.081693410873413
+        ]
+      },
+      "center": [
+        0.7717494964599609,
+        2.597668409347534,
+        -1.1102335453033447
+      ],
+      "anchor": [
+        0.7710752487182617,
+        2.606158494949341,
+        -1.1007609367370605
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_minor_calyx_L_d",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 732,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-l-e",
+      "slug": "minor-calyx-l-e",
+      "name": "Left minor calyx (source part E)",
+      "sourceName": "VH_F_minor_calyx_L_e",
+      "nodeName": "VH_F_minor_calyx_L_e",
+      "originalNodeIndex": 693,
+      "sourceOntologyId": "UBERON:0001227",
+      "fmaId": null,
+      "concept": "minor-calyx",
+      "sourcePart": "e",
+      "tissue": "collecting",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.7298597097396851,
+          2.1822128295898438,
+          -1.0696606636047363
+        ],
+        "max": [
+          0.826521635055542,
+          2.3001081943511963,
+          -0.9843304753303528
+        ]
+      },
+      "center": [
+        0.7781906723976135,
+        2.24116051197052,
+        -1.0269955694675446
+      ],
+      "anchor": [
+        0.7948583960533142,
+        2.250988721847534,
+        -1.008297085762024
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_minor_calyx_L_e",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1756,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-l-f",
+      "slug": "minor-calyx-l-f",
+      "name": "Left minor calyx (source part F)",
+      "sourceName": "VH_F_minor_calyx_L_f",
+      "nodeName": "VH_F_minor_calyx_L_f",
+      "originalNodeIndex": 694,
+      "sourceOntologyId": "UBERON:0001227",
+      "fmaId": null,
+      "concept": "minor-calyx",
+      "sourcePart": "f",
+      "tissue": "collecting",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.8167369365692139,
+          2.288144826889038,
+          -0.9416524171829224
+        ],
+        "max": [
+          0.91135573387146,
+          2.394843816757202,
+          -0.8686586618423462
+        ]
+      },
+      "center": [
+        0.8640463352203369,
+        2.34149432182312,
+        -0.9051555395126343
+      ],
+      "anchor": [
+        0.8396046757698059,
+        2.338135004043579,
+        -0.9162885546684265
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_minor_calyx_L_f",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1598,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-l-g",
+      "slug": "minor-calyx-l-g",
+      "name": "Left minor calyx (source part G)",
+      "sourceName": "VH_F_minor_calyx_L_g",
+      "nodeName": "VH_F_minor_calyx_L_g",
+      "originalNodeIndex": 695,
+      "sourceOntologyId": "UBERON:0001227",
+      "fmaId": null,
+      "concept": "minor-calyx",
+      "sourcePart": "g",
+      "tissue": "collecting",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.824813961982727,
+          2.229918956756592,
+          -0.9401566386222839
+        ],
+        "max": [
+          0.921245813369751,
+          2.298450469970703,
+          -0.8710411787033081
+        ]
+      },
+      "center": [
+        0.873029887676239,
+        2.2641847133636475,
+        -0.905598908662796
+      ],
+      "anchor": [
+        0.8662051558494568,
+        2.262141704559326,
+        -0.9094957113265991
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_minor_calyx_L_g",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 910,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-l-h",
+      "slug": "minor-calyx-l-h",
+      "name": "Left minor calyx (source part H)",
+      "sourceName": "VH_F_minor_calyx_L_h",
+      "nodeName": "VH_F_minor_calyx_L_h",
+      "originalNodeIndex": 696,
+      "sourceOntologyId": "UBERON:0001227",
+      "fmaId": null,
+      "concept": "minor-calyx",
+      "sourcePart": "h",
+      "tissue": "collecting",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.775602400302887,
+          2.0186662673950195,
+          -0.8835187554359436
+        ],
+        "max": [
+          0.8737289309501648,
+          2.1583497524261475,
+          -0.7927876114845276
+        ]
+      },
+      "center": [
+        0.8246656656265259,
+        2.0885080099105835,
+        -0.8381531834602356
+      ],
+      "anchor": [
+        0.8082390427589417,
+        2.082932472229004,
+        -0.8319640755653381
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_minor_calyx_L_h",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1706,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-l-i",
+      "slug": "minor-calyx-l-i",
+      "name": "Left minor calyx (source part I)",
+      "sourceName": "VH_F_minor_calyx_L_i",
+      "nodeName": "VH_F_minor_calyx_L_i",
+      "originalNodeIndex": 697,
+      "sourceOntologyId": "UBERON:0001227",
+      "fmaId": null,
+      "concept": "minor-calyx",
+      "sourcePart": "i",
+      "tissue": "collecting",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.7527926564216614,
+          2.02101731300354,
+          -0.9345510601997375
+        ],
+        "max": [
+          0.8180796504020691,
+          2.1256279945373535,
+          -0.8597391843795776
+        ]
+      },
+      "center": [
+        0.7854361534118652,
+        2.0733226537704468,
+        -0.8971451222896576
+      ],
+      "anchor": [
+        0.7940440773963928,
+        2.0880465507507324,
+        -0.908142626285553
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_minor_calyx_L_i",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 878,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:minor-calyx-l-j",
+      "slug": "minor-calyx-l-j",
+      "name": "Left minor calyx (source part J)",
+      "sourceName": "VH_F_minor_calyx_L_j",
+      "nodeName": "VH_F_minor_calyx_L_j",
+      "originalNodeIndex": 698,
+      "sourceOntologyId": "UBERON:0001227",
+      "fmaId": null,
+      "concept": "minor-calyx",
+      "sourcePart": "j",
+      "tissue": "collecting",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.7694816589355469,
+          1.9881500005722046,
+          -0.8933113813400269
+        ],
+        "max": [
+          0.8769404888153076,
+          2.1316967010498047,
+          -0.7975466251373291
+        ]
+      },
+      "center": [
+        0.8232110738754272,
+        2.0599233508110046,
+        -0.845429003238678
+      ],
+      "anchor": [
+        0.8182165622711182,
+        2.0549044609069824,
+        -0.847705602645874
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_minor_calyx_L_j",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 966,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:major-calyx-l-a",
+      "slug": "major-calyx-l-a",
+      "name": "Left major calyx (source part A)",
+      "sourceName": "VH_F_major_calyx_L_a",
+      "nodeName": "VH_F_major_calyx_L_a",
+      "originalNodeIndex": 700,
+      "sourceOntologyId": "UBERON:0001226",
+      "fmaId": null,
+      "concept": "major-calyx",
+      "sourcePart": "a",
+      "tissue": "collecting",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.6436197757720947,
+          2.4422149658203125,
+          -1.1018235683441162
+        ],
+        "max": [
+          0.7464274764060974,
+          2.6271109580993652,
+          -0.9742898344993591
+        ]
+      },
+      "center": [
+        0.6950236260890961,
+        2.534662961959839,
+        -1.0380567014217377
+      ],
+      "anchor": [
+        0.6967426538467407,
+        2.5358219146728516,
+        -1.0392162799835205
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_major_calyx_L_a",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1644,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:major-calyx-l-b",
+      "slug": "major-calyx-l-b",
+      "name": "Left major calyx (source part B)",
+      "sourceName": "VH_F_major_calyx_L_b",
+      "nodeName": "VH_F_major_calyx_L_b",
+      "originalNodeIndex": 701,
+      "sourceOntologyId": "UBERON:0001226",
+      "fmaId": null,
+      "concept": "major-calyx",
+      "sourcePart": "b",
+      "tissue": "collecting",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.7117663621902466,
+          2.245164632797241,
+          -1.0028327703475952
+        ],
+        "max": [
+          0.7771472930908203,
+          2.313575267791748,
+          -0.901808500289917
+        ]
+      },
+      "center": [
+        0.7444568276405334,
+        2.2793699502944946,
+        -0.9523206353187561
+      ],
+      "anchor": [
+        0.7424444556236267,
+        2.270642042160034,
+        -0.9539508819580078
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_major_calyx_L_b",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 878,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:major-calyx-l-c",
+      "slug": "major-calyx-l-c",
+      "name": "Left major calyx (source part C)",
+      "sourceName": "VH_F_major_calyx_L_c",
+      "nodeName": "VH_F_major_calyx_L_c",
+      "originalNodeIndex": 702,
+      "sourceOntologyId": "UBERON:0001226",
+      "fmaId": null,
+      "concept": "major-calyx",
+      "sourcePart": "c",
+      "tissue": "collecting",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.7096529603004456,
+          2.217590570449829,
+          -0.9420614242553711
+        ],
+        "max": [
+          0.8303812742233276,
+          2.3177082538604736,
+          -0.8695709109306335
+        ]
+      },
+      "center": [
+        0.7700171172618866,
+        2.2676494121551514,
+        -0.9058161675930023
+      ],
+      "anchor": [
+        0.7713096737861633,
+        2.261733055114746,
+        -0.9129998087882996
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_major_calyx_L_c",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 949,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:major-calyx-l-d",
+      "slug": "major-calyx-l-d",
+      "name": "Left major calyx (source part D)",
+      "sourceName": "VH_F_major_calyx_L_d",
+      "nodeName": "VH_F_major_calyx_L_d",
+      "originalNodeIndex": 703,
+      "sourceOntologyId": "UBERON:0001226",
+      "fmaId": null,
+      "concept": "major-calyx",
+      "sourcePart": "d",
+      "tissue": "collecting",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.7054842710494995,
+          2.10604190826416,
+          -0.9064450263977051
+        ],
+        "max": [
+          0.7978328466415405,
+          2.2735323905944824,
+          -0.8506978750228882
+        ]
+      },
+      "center": [
+        0.75165855884552,
+        2.1897871494293213,
+        -0.8785714507102966
+      ],
+      "anchor": [
+        0.7610453367233276,
+        2.1961722373962402,
+        -0.8775317668914795
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_major_calyx_L_d",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1081,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:renal-pelvis-l",
+      "slug": "renal-pelvis-l",
+      "name": "Left renal pelvis",
+      "sourceName": "VH_F_renal_pelvis_L",
+      "nodeName": "VH_F_renal_pelvis_L",
+      "originalNodeIndex": 704,
+      "sourceOntologyId": "UBERON:0001224",
+      "fmaId": null,
+      "concept": "pelvis",
+      "sourcePart": null,
+      "tissue": "collecting",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.5957278609275818,
+          2.2290213108062744,
+          -0.9872148036956787
+        ],
+        "max": [
+          0.7210893034934998,
+          2.4716813564300537,
+          -0.826826810836792
+        ]
+      },
+      "center": [
+        0.6584085822105408,
+        2.350351333618164,
+        -0.9070208072662354
+      ],
+      "anchor": [
+        0.6711285710334778,
+        2.3539366722106934,
+        -0.8968001008033752
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_renal_pelvis_L",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 3206,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:left-ureter",
+      "slug": "left-ureter",
+      "name": "Left ureter",
+      "sourceName": "VH_F_left_ureter",
+      "nodeName": "VH_F_left_ureter",
+      "originalNodeIndex": 705,
+      "sourceOntologyId": "UBERON:0001223",
+      "fmaId": null,
+      "concept": "ureter",
+      "sourcePart": null,
+      "tissue": "collecting",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.0963280200958252,
+          0.09128126502037048,
+          -0.8789948225021362
+        ],
+        "max": [
+          0.631011426448822,
+          2.2877962589263916,
+          -0.5118261575698853
+        ]
+      },
+      "center": [
+        0.3636697232723236,
+        1.189538761973381,
+        -0.6954104900360107
+      ],
+      "anchor": [
+        0.3158751428127289,
+        1.1408950090408325,
+        -0.610761821269989
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_left_ureter",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 14944,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#d6b477"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:right-renal-artery",
+      "slug": "right-renal-artery",
+      "name": "Right renal artery",
+      "sourceName": "VH_F_right_renal_artery",
+      "nodeName": "VH_F_right_renal_artery",
+      "originalNodeIndex": 765,
+      "sourceOntologyId": "UBERON:0001185",
+      "fmaId": null,
+      "concept": "artery",
+      "sourcePart": null,
+      "tissue": "artery",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.6956544518470764,
+          2.322190284729004,
+          -0.8711287975311279
+        ],
+        "max": [
+          0.03248241916298866,
+          2.740274667739868,
+          -0.6979131698608398
+        ]
+      },
+      "center": [
+        -0.3315860163420439,
+        2.531232476234436,
+        -0.7845209836959839
+      ],
+      "anchor": [
+        -0.3893074095249176,
+        2.5745015144348145,
+        -0.7976008653640747
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_right_renal_artery",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 3198,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#bf514d"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:left-renal-artery",
+      "slug": "left-renal-artery",
+      "name": "Left renal artery",
+      "sourceName": "VH_F_left_renal_artery",
+      "nodeName": "VH_F_left_renal_artery",
+      "originalNodeIndex": 766,
+      "sourceOntologyId": "UBERON:0001186",
+      "fmaId": null,
+      "concept": "artery",
+      "sourcePart": null,
+      "tissue": "artery",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          0.19611135125160217,
+          2.3225836753845215,
+          -0.9517172574996948
+        ],
+        "max": [
+          0.6387639045715332,
+          2.7784836292266846,
+          -0.6957402229309082
+        ]
+      },
+      "center": [
+        0.4174376279115677,
+        2.550533652305603,
+        -0.8237287402153015
+      ],
+      "anchor": [
+        0.48223263025283813,
+        2.5517799854278564,
+        -0.802987813949585
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_left_renal_artery",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 5730,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#bf514d"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:kidneys:right-renal-vein",
+      "slug": "right-renal-vein",
+      "name": "Right renal vein",
+      "sourceName": "VH_F_right_renal_vein",
+      "nodeName": "VH_F_right_renal_vein",
+      "originalNodeIndex": 770,
+      "sourceOntologyId": "UBERON:0001141",
+      "fmaId": null,
+      "concept": "vein",
+      "sourcePart": null,
+      "tissue": "vein",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-kidneys",
+      "bounds": {
+        "min": [
+          -0.5365468263626099,
+          2.5588653087615967,
+          -0.9276483058929443
+        ],
+        "max": [
+          -0.32039448618888855,
+          2.8398826122283936,
+          -0.7354023456573486
+        ]
+      },
+      "center": [
+        -0.4284706562757492,
+        2.699373960494995,
+        -0.8315253257751465
+      ],
+      "anchor": [
+        -0.4610656499862671,
+        2.7143173217773438,
+        -0.8282821774482727
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_right_renal_vein",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1072,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial reference surfaces; open boundaries and separate source shells retained. Source-part letters are identifiers, not validated drainage correspondences. No complete lumen or scan registration.",
+      "color": "#597dba"
+    }
+  ],
+  "bundles": [
+    {
+      "id": "hra-united-female-v1.10-kidneys",
+      "url": "/models/hra-renal/kidneys.glb?v=bd5d2affb912",
+      "sha256": "bd5d2affb912f135c8c8da7e7892fbc906ebae017ed7042e900646c2b6332cfc",
+      "bytes": 3557552,
+      "structures": 82
+    }
+  ],
+  "heldNodes": {
+    "VH_F_outer_cortex_of_kidney_L": "Duplicate/collapsed faces, nonmanifold edges/vertices and inconsistent winding; retain both original components, no automatic repair.",
+    "VH_F_renal_column_R": "Duplicate/collapsed faces, nonmanifold edges/vertices, inconsistent winding and four components; no fragment deletion or replacement.",
+    "VH_F_left_renal_vein": "Nonmanifold vertex and four components, including two tiny fragments; no joining, pruning or assumed vessel continuity."
+  },
+  "clinicalApproval": false,
+  "patientRegistration": false
+}

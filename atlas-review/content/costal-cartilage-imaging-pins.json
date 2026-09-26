@@ -1,0 +1,1291 @@
+{
+  "sourceCommit": "8e26f15e2664d3b3aaa2cbff33d2ee28f2d113a0",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "thorax-connective-recovery",
+      "url": "/models/bodyparts3d/full-body/thorax-connective-recovery.glb",
+      "bytes": 289716,
+      "sha256": "2874e8680da861973d2eac549f62cf4d0b5f4c26472a532b7661c74b2ce96900",
+      "structures": 14
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "35a15b92b0d0135ec46e2f4a45d73302b8e4afd44ef60affcd7e0aaeb97cb871",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:cartilage:right-first-costal-cartilage",
+        "fmaId": "FMA7875",
+        "name": "Right first costal cartilage",
+        "sourceName": "right first costal cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-connective-recovery",
+        "nodeName": "FMA7875",
+        "bounds": {
+          "min": [
+            -0.5618740320205688,
+            4.969100475311279,
+            0.7217099666595459
+          ],
+          "max": [
+            -0.19512100517749786,
+            5.202199935913086,
+            1.0075700283050537
+          ]
+        },
+        "center": [
+          -0.37849751859903336,
+          5.085650205612183,
+          0.8646399974822998
+        ],
+        "anchor": [
+          -0.4085620045661926,
+          5.111400127410889,
+          0.8742899894714355
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3333",
+            "sha256": "3d5d3e082d8125f35f1d13ee18db57260d81b692e7a4ab22c076b17421f6d1ac"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:cartilage:left-first-costal-cartilage",
+        "fmaId": "FMA8005",
+        "name": "Left first costal cartilage",
+        "sourceName": "left first costal cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-connective-recovery",
+        "nodeName": "FMA8005",
+        "bounds": {
+          "min": [
+            0.19495199620723724,
+            4.968699932098389,
+            0.7232399582862854
+          ],
+          "max": [
+            0.5619530081748962,
+            5.202499866485596,
+            1.0081199407577515
+          ]
+        },
+        "center": [
+          0.37845250219106674,
+          5.085599899291992,
+          0.8656799495220184
+        ],
+        "anchor": [
+          0.4037410020828247,
+          5.0531005859375,
+          0.8346000909805298
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3239",
+            "sha256": "dd8bec4169a10d30c45bfb2dc1136bfa67bc4d359457d6b815fdfbe433f5dfb6"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:cartilage:right-second-costal-cartilage",
+        "fmaId": "FMA7886",
+        "name": "Right second costal cartilage",
+        "sourceName": "right second costal cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-connective-recovery",
+        "nodeName": "FMA7886",
+        "bounds": {
+          "min": [
+            -0.48186999559402466,
+            4.701200008392334,
+            1.077449917793274
+          ],
+          "max": [
+            -0.10244600474834442,
+            4.880200386047363,
+            1.2826100587844849
+          ]
+        },
+        "center": [
+          -0.29215800017118454,
+          4.790700197219849,
+          1.1800299882888794
+        ],
+        "anchor": [
+          -0.2948240041732788,
+          4.777099609375,
+          1.1526899337768555
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3335",
+            "sha256": "75c0c3b0164c789a27f2a72872e5ce5f958b82b732606be820b68f5f8330964d"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:cartilage:left-second-costal-cartilage",
+        "fmaId": "FMA8031",
+        "name": "Left second costal cartilage",
+        "sourceName": "left second costal cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-connective-recovery",
+        "nodeName": "FMA8031",
+        "bounds": {
+          "min": [
+            0.10202500224113464,
+            4.701700210571289,
+            1.0774799585342407
+          ],
+          "max": [
+            0.48057299852371216,
+            4.880100250244141,
+            1.2824499607086182
+          ]
+        },
+        "center": [
+          0.2912990003824234,
+          4.790900230407715,
+          1.1799649596214294
+        ],
+        "anchor": [
+          0.2923640012741089,
+          4.78939962387085,
+          1.1502400636672974
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3242",
+            "sha256": "edb9924bb7c01d1b0bfbbb05333f631e30db787e24951aeb86e19ded5678ed8a"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:cartilage:right-third-costal-cartilage",
+        "fmaId": "FMA7913",
+        "name": "Right third costal cartilage",
+        "sourceName": "right third costal cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-connective-recovery",
+        "nodeName": "FMA7913",
+        "bounds": {
+          "min": [
+            -0.5072420239448547,
+            4.423799991607666,
+            1.214210033416748
+          ],
+          "max": [
+            -0.13051000237464905,
+            4.599799633026123,
+            1.4010800123214722
+          ]
+        },
+        "center": [
+          -0.3188760131597519,
+          4.5117998123168945,
+          1.30764502286911
+        ],
+        "anchor": [
+          -0.3484269976615906,
+          4.5548996925354,
+          1.277980089187622
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3337",
+            "sha256": "0dc64f1b1e8abd86ce8c345dae47ae9f14c9e3d3addee7a9e4fb07755033fff7"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:cartilage:left-third-costal-cartilage",
+        "fmaId": "FMA8058",
+        "name": "Left third costal cartilage",
+        "sourceName": "left third costal cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-connective-recovery",
+        "nodeName": "FMA8058",
+        "bounds": {
+          "min": [
+            0.13094499707221985,
+            4.424000263214111,
+            1.2143800258636475
+          ],
+          "max": [
+            0.5072259902954102,
+            4.599899768829346,
+            1.4007400274276733
+          ]
+        },
+        "center": [
+          0.319085493683815,
+          4.5119500160217285,
+          1.3075600266456604
+        ],
+        "anchor": [
+          0.32991698384284973,
+          4.542800426483154,
+          1.2879201173782349
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3245",
+            "sha256": "50a443a62da274da125475e6fa9b0653eec26880dd0cc22344f2c6ceb2ca0f4e"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:cartilage:right-fourth-costal-cartilage",
+        "fmaId": "FMA7976",
+        "name": "Right fourth costal cartilage",
+        "sourceName": "right fourth costal cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-connective-recovery",
+        "nodeName": "FMA7976",
+        "bounds": {
+          "min": [
+            -0.5990679860115051,
+            4.110999584197998,
+            1.342039942741394
+          ],
+          "max": [
+            -0.14311100542545319,
+            4.355600357055664,
+            1.4858700037002563
+          ]
+        },
+        "center": [
+          -0.37108949571847916,
+          4.233299970626831,
+          1.4139549732208252
+        ],
+        "anchor": [
+          -0.3594669997692108,
+          4.222700119018555,
+          1.4054800271987915
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3339",
+            "sha256": "8b023d2e8ff32ef995b6f4e3db2423787a8255fc994c5260b663b2145290d4c2"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:cartilage:left-fourth-costal-cartilage",
+        "fmaId": "FMA8167",
+        "name": "Left fourth costal cartilage",
+        "sourceName": "left fourth costal cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-connective-recovery",
+        "nodeName": "FMA8167",
+        "bounds": {
+          "min": [
+            0.1430169939994812,
+            4.110799789428711,
+            1.3432600498199463
+          ],
+          "max": [
+            0.5977680087089539,
+            4.35569953918457,
+            1.4857699871063232
+          ]
+        },
+        "center": [
+          0.37039250135421753,
+          4.233249664306641,
+          1.4145150184631348
+        ],
+        "anchor": [
+          0.3685929775238037,
+          4.247399806976318,
+          1.4017798900604248
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3248",
+            "sha256": "bb9f9646cabaa97db7beb20f90c02065ece1ea935f4b86e57b5fb2666e33f7fe"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:cartilage:right-fifth-costal-cartilage",
+        "fmaId": "FMA8070",
+        "name": "Right fifth costal cartilage",
+        "sourceName": "right fifth costal cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-connective-recovery",
+        "nodeName": "FMA8070",
+        "bounds": {
+          "min": [
+            -0.8216580152511597,
+            3.716099739074707,
+            1.3931599855422974
+          ],
+          "max": [
+            -0.17699600756168365,
+            4.152500152587891,
+            1.5903599262237549
+          ]
+        },
+        "center": [
+          -0.49932701140642166,
+          3.934299945831299,
+          1.4917599558830261
+        ],
+        "anchor": [
+          -0.49982398748397827,
+          3.9382996559143066,
+          1.500789999961853
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3341",
+            "sha256": "78e34af57195fbade25925e556c858629c67e31213b75778252a4b000cc620d7"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:cartilage:left-fifth-costal-cartilage",
+        "fmaId": "FMA8112",
+        "name": "Left fifth costal cartilage",
+        "sourceName": "left fifth costal cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-connective-recovery",
+        "nodeName": "FMA8112",
+        "bounds": {
+          "min": [
+            0.17715299129486084,
+            3.716099739074707,
+            1.3932499885559082
+          ],
+          "max": [
+            0.8203359842300415,
+            4.152400016784668,
+            1.5903799533843994
+          ]
+        },
+        "center": [
+          0.49874448776245117,
+          3.9342498779296875,
+          1.4918149709701538
+        ],
+        "anchor": [
+          0.49482497572898865,
+          3.939499616622925,
+          1.5006799697875977
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3251",
+            "sha256": "153994f11ea01b550386323452501ef37f698d768c5e7189e224ec429e87fd24"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:cartilage:right-sixth-costal-cartilage",
+        "fmaId": "FMA8194",
+        "name": "Right sixth costal cartilage",
+        "sourceName": "right sixth costal cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-connective-recovery",
+        "nodeName": "FMA8194",
+        "bounds": {
+          "min": [
+            -0.936974048614502,
+            3.375600576400757,
+            1.3474899530410767
+          ],
+          "max": [
+            -0.13865500688552856,
+            3.9725000858306885,
+            1.6218699216842651
+          ]
+        },
+        "center": [
+          -0.5378145277500153,
+          3.6740503311157227,
+          1.484679937362671
+        ],
+        "anchor": [
+          -0.5285469889640808,
+          3.6235997676849365,
+          1.5423500537872314
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3343",
+            "sha256": "22079c9ebfef0aafd27a366416e3e4a1a4c190a25ea5c6beac844eda78cbb42d"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:cartilage:left-sixth-costal-cartilage",
+        "fmaId": "FMA8221",
+        "name": "Left sixth costal cartilage",
+        "sourceName": "left sixth costal cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-connective-recovery",
+        "nodeName": "FMA8221",
+        "bounds": {
+          "min": [
+            0.1386220008134842,
+            3.3757996559143066,
+            1.3517199754714966
+          ],
+          "max": [
+            0.9300140142440796,
+            3.9728002548217773,
+            1.6216099262237549
+          ]
+        },
+        "center": [
+          0.5343180075287819,
+          3.674299955368042,
+          1.4866649508476257
+        ],
+        "anchor": [
+          0.5240020155906677,
+          3.6285998821258545,
+          1.5435000658035278
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3254",
+            "sha256": "117248128a238182e9a2585db775ba336eb8e5172523eff26882d094400d1183"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:cartilage:right-seventh-costal-cartilage",
+        "fmaId": "FMA8248",
+        "name": "Right seventh costal cartilage",
+        "sourceName": "right seventh costal cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-connective-recovery",
+        "nodeName": "FMA8248",
+        "bounds": {
+          "min": [
+            -1.0990899801254272,
+            3.0256006717681885,
+            1.2077499628067017
+          ],
+          "max": [
+            0.4956530034542084,
+            3.864499568939209,
+            1.6320799589157104
+          ]
+        },
+        "center": [
+          -0.30171848833560944,
+          3.4450501203536987,
+          1.419914960861206
+        ],
+        "anchor": [
+          -0.29624301195144653,
+          3.4568004608154297,
+          1.5327699184417725
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3345",
+            "sha256": "0bce64747fc720452920d6aa9061cba35430e31074ca35c655a310466a3c30a7"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:cartilage:left-seventh-costal-cartilage",
+        "fmaId": "FMA8275",
+        "name": "Left seventh costal cartilage",
+        "sourceName": "left seventh costal cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-connective-recovery",
+        "nodeName": "FMA8275",
+        "bounds": {
+          "min": [
+            0.033289600163698196,
+            3.025799512863159,
+            1.2090400457382202
+          ],
+          "max": [
+            1.084570050239563,
+            3.864100456237793,
+            1.6321600675582886
+          ]
+        },
+        "center": [
+          0.5589298252016306,
+          3.444949984550476,
+          1.4206000566482544
+        ],
+        "anchor": [
+          0.49131402373313904,
+          3.4056005477905273,
+          1.5368400812149048
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3255",
+            "sha256": "bdf5071c36fa01955489b83366100e0d44cf7594a65319506fd44a8e01e08b9c"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    }
+  ]
+}

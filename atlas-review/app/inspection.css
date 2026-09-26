@@ -1,0 +1,139 @@
+.vm-inspection {
+  border: 1px solid #c8d9d7;
+  border-radius: 10px;
+  background: #f8fbfa;
+  color: #163d43;
+  margin: 12px 0;
+  font-size: 0.875rem;
+}
+.body-workspace > .vm-inspection {
+  margin: 0 14px 12px;
+  flex-shrink: 0;
+}
+.vm-inspection > summary {
+  padding: 13px 16px;
+  cursor: pointer;
+  font-weight: 650;
+}
+.vm-inspection > summary span {
+  font-weight: 400;
+  margin-left: 12px;
+  color: #49666c;
+}
+.vm-inspection fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0 16px 16px;
+  min-width: 0;
+}
+.vm-inspection h3 {
+  font-size: 0.875rem;
+  font-weight: 650;
+  margin: 8px 0 12px;
+}
+.vm-inspection p {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: #49666c;
+  margin: 12px 0 0;
+}
+.vm-inspection > p {
+  padding: 0 16px 12px;
+}
+.vm-inspection-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.vm-inspection-grid > div {
+  min-width: 0;
+}
+.vm-inspection-scale,
+.vm-opacity > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 14px 0;
+}
+.vm-inspection-grid [data-slot='slider'] {
+  margin: 17px 0;
+}
+.vm-inspection-options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  border-top: 1px solid #d8e4e0;
+  margin-top: 16px;
+  padding-top: 16px;
+}
+.vm-inspection-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+.control-rail .vm-inspection-grid {
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+.control-rail .vm-inspection > summary span {
+  display: block;
+  margin: 5px 0 0;
+}
+.vm-practice-start {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.vm-practice-start [data-slot='select-trigger'] {
+  width: 135px;
+}
+.body-topbar .vm-practice-start {
+  margin-left: auto;
+}
+.body-topbar .vm-practice-start > button,
+.body-topbar .vm-practice-start [data-slot='select-trigger'] {
+  color: #f8f7f2;
+  border: 1px solid #527279;
+  background: #002631;
+}
+.body-topbar .vm-practice-start > button:hover,
+.body-topbar .vm-practice-start [data-slot='select-trigger']:hover {
+  background: #164750;
+}
+.vm-practice-result {
+  background: #e9f5f1;
+  border: 1px solid #bfd9d1;
+  padding: 16px;
+  border-radius: 9px;
+  margin-bottom: 18px;
+}
+.vm-practice-result h2 {
+  margin-top: 0;
+}
+.vm-practice-result ul {
+  list-style: none;
+  padding: 0;
+}
+.vm-practice-result li button {
+  text-align: left;
+  text-decoration: underline;
+  color: #165c54;
+  padding: 6px 0;
+  font-size: 0.875rem;
+}
+@media (max-width: 700px) {
+  .body-topbar .vm-practice-start {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .vm-inspection-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .vm-inspection > summary span {
+    display: block;
+    margin: 5px 0 0;
+  }
+}

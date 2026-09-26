@@ -1,0 +1,85 @@
+import type { BodyCatalog, BodyStructure, Vec3 } from '../app/body-types';
+import type { DissectionView } from '../app/dissection-data';
+import { initialVentricles, reduceVentricles, type VentricularAction, type VentricularState } from './ventricles';
+import { normalizeAnatomySearch } from './anatomy-search';
+export type SpecimenSurface = {
+  id: string; slug: string; name: string; sourceName: string; fmaId: string | null;
+  tissue: string; laterality: string; bundle: string; nodeName: string;
+  bounds: { min: number[]; max: number[] }; center: number[]; anchor: number[];
+  sources: Array<{ file: string; sha256: string }>; triangles: number;
+  omittedSourceFaces: number[]; grouped?: boolean; coverageNote?: string | null;
+  sourceQuality?: { components: number; nonManifoldEdges: number; zeroNormalVertices: number };
+};
+export type SpecimenStudy = { id: string; title: string; ids: string[]; selectedId: string; view: DissectionView; note: string };
+export type SpecimenDefinition = {
+  key: string; label: string; source: { credit: string; license: string; version: string };
+  surfaces: SpecimenSurface[]; catalog: BodyCatalog; studies: SpecimenStudy[];
+  initialStudy: string; closeUp: { min: Vec3; max: Vec3 } | null;
+  omittedFaces: number; limitations: string;
+};
+export function specimenCatalog({ key, source, surfaces, bundles, matrix }: {
+  key: string; source: SpecimenDefinition['source']; surfaces: SpecimenSurface[];
+  bundles: BodyCatalog['bundles']; matrix: number[];
+}): BodyCatalog {
+  return {
+    version: 1, sourceVersion: key, license: source.license, credit: source.credit,
+    coordinateSystem: { sourceToSceneColumnMajor: matrix, unitsPerMillimetre: .01 },
+    structures: surfaces.map((s): BodyStructure => ({ ...s, fmaId: '',
+      system: s.tissue === 'skeleton' ? 'skeleton' : s.tissue === 'muscle' ? 'muscles' : 'connective',
+      category: s.tissue, region: 'independent-limb', regions: ['independent-limb'],
+      bounds: s.bounds as BodyStructure['bounds'], center: s.center as Vec3, anchor: s.anchor as Vec3,
+      sourceTree: key, coverageNote: s.coverageNote ?? 'Independent source specimen; clinical review pending.',
+      provenance: { method: 'licensed-source-mesh', license: source.license, sourceVersion: source.version, recovered: false },
+      validation: { status: 'unvalidated', anatomicalReview: false },
+    })),
+    bundles: bundles.filter((b) => surfaces.some((s) => s.bundle === b.id)),
+    regions: [], excluded: [], coverage: { nerves: 'Not supplied', organs: 'Not applicable' },
+  };
+}
+export type SpecimenAction = VentricularAction | { type: 'group'; tissue: string; visible: boolean }
+  | { type: 'show-only'; ids: string[]; selectedId: string };
+export function specimenAction(specimen: SpecimenDefinition, value: string): VentricularAction | null {
+  const study = specimen.studies.find((s) => s.id === value);
+  return study ? { type: 'preset', value, selectedId: study.selectedId } : null;
+}
+export function reduceSpecimen(specimen: SpecimenDefinition, state: VentricularState, action: SpecimenAction) {
+  const structures = specimen.catalog.structures;
+  if (action.type === 'show-only') {
+    // Reject malformed/foreign sets instead of silently opening another tissue.
+    if (!action.ids.length || new Set(action.ids).size !== action.ids.length || !action.ids.includes(action.selectedId)
+      || action.ids.some(id => !structures.some(s => s.id === id))) return state;
+    return reduceVentricles(structures, state, { type: 'preset', value: 'selection', selectedId: action.selectedId }, { selection: action.ids });
+  }
+  if (action.type !== 'group') return reduceVentricles(structures, state, action, Object.fromEntries(specimen.studies.map((s) => [s.id, s.ids])));
+  const members = new Set(specimen.surfaces.filter((s) => s.tissue === action.tissue).map((s) => s.id));
+  if (!members.size) return state;
+  const ids = structures.filter((s) => members.has(s.id) ? action.visible : !state.hidden.includes(s.id)).map((s) => s.id);
+  const selectedId = state.selectedId && ids.includes(state.selectedId) ? state.selectedId : ids[0];
+  return reduceVentricles(structures, state, { type: 'preset', value: 'group', ...(selectedId ? { selectedId } : {}) }, { group: ids });
+}
+export function initialSpecimen(specimen: SpecimenDefinition) {
+  const base = initialVentricles(specimen.catalog.structures), action = specimenAction(specimen, specimen.initialStudy);
+  const initial = action ? reduceSpecimen(specimen, base, action) : base;
+  return { ...initial, history: [], future: [] };
+}
+export function activeSpecimenStudy(specimen: SpecimenDefinition, hidden: string[]) {
+  return specimen.studies.find((s) => specimen.surfaces.every((item) => hidden.includes(item.id) === !s.ids.includes(item.id)));
+}
+/** Search only the current specimen's declared metadata, never another donor's aliases. */
+export function filterSpecimen(specimen: SpecimenDefinition, query: string) {
+  // Structured source-local IDs are exact identities, not bags of words.
+  const exactId = query.trim().toLowerCase();
+  if (exactId.startsWith('vm:')) return specimen.surfaces.filter(s => s.id.toLowerCase() === exactId);
+  const words = normalizeAnatomySearch(query).split(' ').filter(Boolean);
+  if (!words.length) return query.trim() ? [] : [...specimen.surfaces];
+  return specimen.surfaces.filter((surface) => {
+    const text = normalizeAnatomySearch([
+      surface.name, surface.sourceName, surface.slug, surface.tissue,
+      surface.laterality, surface.id, surface.fmaId ?? '',
+    ].join(' '));
+    return words.every((word) => /^fma\d+$/.test(word)
+      // FMA1335 must not silently select FMA13358 or an unmapped specimen.
+      ? normalizeAnatomySearch(surface.fmaId ?? '') === word
+      : text.includes(word));
+  });
+}

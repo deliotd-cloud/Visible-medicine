@@ -1,0 +1,649 @@
+{
+  "version": 1,
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "auditSha256": "adc8884597b4c29e68727fe19c57035d091b30919582cd1ab9bec8178434d40d",
+  "structures": [
+    {
+      "id": "vm:anatomy:body:pelvis:left:organ:left-deferent-duct",
+      "fmaId": "FMA19236",
+      "name": "Left deferent duct",
+      "sourceName": "left deferent duct",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "deferent-ducts",
+      "nodeName": "FMA19236",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3135",
+          "sha256": "75091a49ea2b9d0074eab9564d9d484094c82006a2e10bcb7d4f5f1c4e2b5648"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.02551710046827793,
+          -1.054010033607483,
+          0.025624999776482582
+        ],
+        "max": [
+          1.0262500047683716,
+          0.5781099796295166,
+          1.048050045967102
+        ]
+      },
+      "center": [
+        0.5258835526183248,
+        -0.23795002698898315,
+        0.5368375228717923
+      ],
+      "anchor": [
+        0.21995200216770172,
+        -0.23739999532699585,
+        0.9566500186920166
+      ],
+      "coverageNote": "Complete source-defined deferent duct surface, not a validated continuous lumen or complete spermatic cord. Epididymis, ejaculatory duct, fascial coverings and neurovascular contents are not supplied by this addition. Original coordinates and faces retained; clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:organ:right-deferent-duct",
+      "fmaId": "FMA19235",
+      "name": "Right deferent duct",
+      "sourceName": "right deferent duct",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "deferent-ducts",
+      "nodeName": "FMA19235",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3140",
+          "sha256": "f5fa6eca33541ceffdd87a910e4fb2e804f3bcd4418ee06555dcbb0b60aa581d"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.8408430218696594,
+          -1.0541000366210938,
+          0.029635999351739883
+        ],
+        "max": [
+          -0.03898070007562637,
+          0.6093999743461609,
+          1.0447900295257568
+        ]
+      },
+      "center": [
+        -0.4399118609726429,
+        -0.22235003113746643,
+        0.5372130144387484
+      ],
+      "anchor": [
+        -0.22347700595855713,
+        -0.2893500030040741,
+        0.9433799982070923
+      ],
+      "coverageNote": "Complete source-defined deferent duct surface, not a validated continuous lumen or complete spermatic cord. Epididymis, ejaculatory duct, fascial coverings and neurovascular contents are not supplied by this addition. Original coordinates and faces retained; clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextRecords": [
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:urinary-bladder",
+      "fmaId": "FMA15900",
+      "name": "Urinary bladder",
+      "sourceName": "urinary bladder",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "unpaired",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "pelvis-organs",
+      "nodeName": "FMA15900",
+      "bounds": {
+        "min": [
+          -0.3414659798145294,
+          -0.10268005728721619,
+          0.06525298953056335
+        ],
+        "max": [
+          0.3262379765510559,
+          0.2998901307582855,
+          0.7824000716209412
+        ]
+      },
+      "center": [
+        -0.007614001631736755,
+        0.09860503673553467,
+        0.42382653057575226
+      ],
+      "anchor": [
+        0.054224301129579544,
+        0.25124022364616394,
+        0.4553859829902649
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ3149",
+          "sha256": "b49f40d01bf28550094a7d17901e33e7066039f3a0fb8cf44d79fff2472f9926"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:prostate",
+      "fmaId": "FMA9600",
+      "name": "Prostate",
+      "sourceName": "prostate",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "unpaired",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "pelvis-organs-recovery",
+      "nodeName": "FMA9600",
+      "bounds": {
+        "min": [
+          -0.17826201021671295,
+          -0.2791699171066284,
+          0.14504897594451904
+        ],
+        "max": [
+          0.16457800567150116,
+          -0.07560974359512329,
+          0.46460801362991333
+        ]
+      },
+      "center": [
+        -0.006842002272605896,
+        -0.17738983035087585,
+        0.3048284947872162
+      ],
+      "anchor": [
+        -0.008279549889266491,
+        -0.09260009974241257,
+        0.31331297755241394
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ3139",
+          "sha256": "f20448e74cf6b6096248361bc4f618c1d7f4c1acac77f785abc43e40835b13cb"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:organ:right-testis",
+      "fmaId": "FMA7211",
+      "name": "Right testis",
+      "sourceName": "right testis",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "pelvis-organs-recovery",
+      "nodeName": "FMA7211",
+      "bounds": {
+        "min": [
+          -0.308459997177124,
+          -1.0944000482559204,
+          0.9119000434875488
+        ],
+        "max": [
+          -0.10459699481725693,
+          -0.8101202249526978,
+          1.1335499286651611
+        ]
+      },
+      "center": [
+        -0.20652849599719048,
+        -0.9522601366043091,
+        1.022724986076355
+      ],
+      "anchor": [
+        -0.11235500127077103,
+        -0.9619299173355103,
+        1.0534300804138184
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3142",
+          "sha256": "1dc84c4d16139902662f08c97bc2581cb698cf8411855bcca5474e154f4ad86e"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:organ:left-testis",
+      "fmaId": "FMA7212",
+      "name": "Left testis",
+      "sourceName": "left testis",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "pelvis-organs-recovery",
+      "nodeName": "FMA7212",
+      "bounds": {
+        "min": [
+          0.0749754011631012,
+          -1.10247004032135,
+          0.9135499596595764
+        ],
+        "max": [
+          0.2755810022354126,
+          -0.8131701946258545,
+          1.135140061378479
+        ]
+      },
+      "center": [
+        0.1752782016992569,
+        -0.9578201174736023,
+        1.0243450105190277
+      ],
+      "anchor": [
+        0.11665699630975723,
+        -0.9606097340583801,
+        1.1039799451828003
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3138",
+          "sha256": "bb9e548f7059fb21370b8c9612ce10fe70aa9b96945c1faea33d7cc9ed113639"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:organ:right-seminal-vesicle",
+      "fmaId": "FMA19387",
+      "name": "Right seminal vesicle",
+      "sourceName": "right seminal vesicle",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "pelvis-organs-recovery",
+      "nodeName": "FMA19387",
+      "bounds": {
+        "min": [
+          -0.35323798656463623,
+          -0.11119018495082855,
+          0.048706017434597015
+        ],
+        "max": [
+          -0.036314599215984344,
+          0.18283995985984802,
+          0.2505210041999817
+        ]
+      },
+      "center": [
+        -0.1947762928903103,
+        0.035824887454509735,
+        0.14961351081728935
+      ],
+      "anchor": [
+        -0.21167200803756714,
+        0.008300171233713627,
+        0.13769298791885376
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3143",
+          "sha256": "183e4a11e0a75a76dcdaf33f46afb7f5f30430c5e0b1ff19237be1ebef7e72ba"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:organ:left-seminal-vesicle",
+      "fmaId": "FMA19388",
+      "name": "Left seminal vesicle",
+      "sourceName": "left seminal vesicle",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "pelvis-organs-recovery",
+      "nodeName": "FMA19388",
+      "bounds": {
+        "min": [
+          0.023584799841046333,
+          -0.11156982183456421,
+          0.052228011190891266
+        ],
+        "max": [
+          0.3401399850845337,
+          0.1831701695919037,
+          0.24958297610282898
+        ]
+      },
+      "center": [
+        0.18186239246279,
+        0.03580017387866974,
+        0.15090549364686012
+      ],
+      "anchor": [
+        0.19750098884105682,
+        0.009420165792107582,
+        0.13775798678398132
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3137",
+          "sha256": "e14aff1615aec623f98d769cb60894fb0e859ae0a0e0967a7b5757909afc50eb"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:organ:right-ureter",
+      "fmaId": "FMA15571",
+      "name": "Right ureter",
+      "sourceName": "right ureter",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "abdomen",
+      "regions": [
+        "abdomen",
+        "pelvis"
+      ],
+      "bundle": "abdomen-organs-recovery",
+      "nodeName": "FMA15571",
+      "bounds": {
+        "min": [
+          -0.7279350161552429,
+          0.112030029296875,
+          0.10345901548862457
+        ],
+        "max": [
+          -0.09399290382862091,
+          2.569999933242798,
+          0.6896899938583374
+        ]
+      },
+      "center": [
+        -0.4109639599919319,
+        1.3410149812698364,
+        0.396574504673481
+      ],
+      "anchor": [
+        -0.3323020040988922,
+        1.402260184288025,
+        0.5754200220108032
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ3146",
+          "sha256": "780889608ce700962d98be95432f94d58ca121b240099adeb83d8278ca8a779d"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:organ:left-ureter",
+      "fmaId": "FMA15572",
+      "name": "Left ureter",
+      "sourceName": "left ureter",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "abdomen",
+      "regions": [
+        "abdomen",
+        "pelvis"
+      ],
+      "bundle": "abdomen-organs-recovery",
+      "nodeName": "FMA15572",
+      "bounds": {
+        "min": [
+          0.23268800973892212,
+          0.18039001524448395,
+          0.11610999703407288
+        ],
+        "max": [
+          0.7937660217285156,
+          2.7256994247436523,
+          0.6975100040435791
+        ]
+      },
+      "center": [
+        0.5132270157337189,
+        1.4530447199940681,
+        0.406810000538826
+      ],
+      "anchor": [
+        0.312065988779068,
+        1.4470502138137817,
+        0.6277999877929688
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ3144",
+          "sha256": "1235a492a66c738eceafaafa512def0ed82785741367a29835aae2fdb706d59a"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextBundles": [
+    {
+      "id": "pelvis-organs",
+      "url": "/models/bodyparts3d/full-body/pelvis-organs.glb",
+      "bytes": 49544,
+      "sha256": "90baaeb1c521a6b2546e99576bce4b231c6e068b4fa3d48dbd4cb7eb355f93c3",
+      "structures": 2
+    },
+    {
+      "id": "pelvis-organs-recovery",
+      "url": "/models/bodyparts3d/full-body/pelvis-organs-recovery.glb",
+      "bytes": 73348,
+      "sha256": "d2876cb12fa3f6c71170d18bd6813f96783c47fe12ddf68263bf12e0cae98629",
+      "structures": 6
+    },
+    {
+      "id": "abdomen-organs-recovery",
+      "url": "/models/bodyparts3d/full-body/abdomen-organs-recovery.glb",
+      "bytes": 74092,
+      "sha256": "9ed6f0864a2b37edc4c36ffbb84fdab9cacf34c6069d93455f1ffcb6eee711ab",
+      "structures": 2
+    }
+  ],
+  "bundles": [
+    {
+      "id": "deferent-ducts",
+      "url": "/models/bodyparts3d/deferent-ducts/deferent-ducts.glb?v=53d2cdcb86c04d78671705b34f5b82c0130427735c8c7986553b3a042d8c7544",
+      "bytes": 39612,
+      "sha256": "53d2cdcb86c04d78671705b34f5b82c0130427735c8c7986553b3a042d8c7544",
+      "structures": 2
+    }
+  ],
+  "modification": "Exact-coordinate welding for indexed normals plus Float32 GLB storage. Every original triangle is retained in order; no smoothing, fitting, mirroring, bridging or face removal.",
+  "clinicalApproval": false
+}

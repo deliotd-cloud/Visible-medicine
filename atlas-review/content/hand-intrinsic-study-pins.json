@@ -1,0 +1,1392 @@
+{
+  "sourceCommit": "884f97dd204fe404c91ee34fc4b0b86b43ffaae0",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "entries": [
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-first-metacarpal-bone",
+      "fmaId": "FMA24465",
+      "name": "Left first metacarpal bone",
+      "sourceName": "left first metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24465",
+      "bounds": {
+        "min": [
+          2.7235300540924072,
+          -0.3970501720905304,
+          0.7340599894523621
+        ],
+        "max": [
+          3.096250057220459,
+          -0.025930175557732582,
+          1.0378199815750122
+        ]
+      },
+      "center": [
+        2.909890055656433,
+        -0.2114901738241315,
+        0.8859399855136871
+      ],
+      "anchor": [
+        2.888230085372925,
+        -0.1816699206829071,
+        0.8883599638938904
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3240",
+          "sha256": "f512f1433a67003297c3ca0fca775c94372313cf3c3de28774a1cd7556e08362"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-second-metacarpal-bone",
+      "fmaId": "FMA24467",
+      "name": "Left second metacarpal bone",
+      "sourceName": "left second metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24467",
+      "bounds": {
+        "min": [
+          2.618410110473633,
+          -0.8095800876617432,
+          0.6711699962615967
+        ],
+        "max": [
+          2.9261300563812256,
+          -0.13130980730056763,
+          0.9243299961090088
+        ]
+      },
+      "center": [
+        2.772270083427429,
+        -0.4704449474811554,
+        0.7977499961853027
+      ],
+      "anchor": [
+        2.8213000297546387,
+        -0.48330017924308777,
+        0.7823800444602966
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3243",
+          "sha256": "728fb5278b0e3d2ac9fb0af78ade721c5cb8764144e318a85f07ff9cdb9d7f7d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-third-metacarpal-bone",
+      "fmaId": "FMA24469",
+      "name": "Left third metacarpal bone",
+      "sourceName": "left third metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24469",
+      "bounds": {
+        "min": [
+          2.5236001014709473,
+          -0.7935101389884949,
+          0.6241000294685364
+        ],
+        "max": [
+          2.722520112991333,
+          -0.149749755859375,
+          0.928130030632019
+        ]
+      },
+      "center": [
+        2.62306010723114,
+        -0.47162994742393494,
+        0.7761150300502777
+      ],
+      "anchor": [
+        2.6117498874664307,
+        -0.4807202219963074,
+        0.7944599986076355
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3246",
+          "sha256": "fa86f28ff85a3a1e3ac6872a05912deece4d3f8489e08ea4d21b432db304938b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-fourth-metacarpal-bone",
+      "fmaId": "FMA24471",
+      "name": "Left fourth metacarpal bone",
+      "sourceName": "left fourth metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24471",
+      "bounds": {
+        "min": [
+          2.413559913635254,
+          -0.7474700808525085,
+          0.6589800119400024
+        ],
+        "max": [
+          2.5377399921417236,
+          -0.14781981706619263,
+          0.9191099405288696
+        ]
+      },
+      "center": [
+        2.4756499528884888,
+        -0.4476449489593506,
+        0.789044976234436
+      ],
+      "anchor": [
+        2.48826003074646,
+        -0.46893006563186646,
+        0.7905600070953369
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3249",
+          "sha256": "c5f7a10a04542437ff52fde75f81c5b0b2cba6a4a68c56b829c9e0de2fe1b72f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-fifth-metacarpal-bone",
+      "fmaId": "FMA24473",
+      "name": "Left fifth metacarpal bone",
+      "sourceName": "left fifth metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24473",
+      "bounds": {
+        "min": [
+          2.252700090408325,
+          -0.6796899437904358,
+          0.702239990234375
+        ],
+        "max": [
+          2.453939914703369,
+          -0.13241027295589447,
+          0.9441999793052673
+        ]
+      },
+      "center": [
+        2.353320002555847,
+        -0.40605010837316513,
+        0.8232199847698212
+      ],
+      "anchor": [
+        2.373500108718872,
+        -0.41370972990989685,
+        0.8138800263404846
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3252",
+          "sha256": "ca8db2999ff2d7a14a61e9cbeb83a01011a3557df844ff1c47bb7ac3eaeccdb8"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-first-metacarpal-bone",
+      "fmaId": "FMA24464",
+      "name": "Right first metacarpal bone",
+      "sourceName": "right first metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24464",
+      "bounds": {
+        "min": [
+          -3.0957698822021484,
+          -0.3971899449825287,
+          0.736270010471344
+        ],
+        "max": [
+          -2.7223598957061768,
+          -0.027620239183306694,
+          1.0386099815368652
+        ]
+      },
+      "center": [
+        -2.9090648889541626,
+        -0.2124050920829177,
+        0.8874399960041046
+      ],
+      "anchor": [
+        -2.914479970932007,
+        -0.24702025949954987,
+        0.8846299648284912
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3350",
+          "sha256": "92ef27746cf2c5b317b88558b42e171128f980ea16414ca6e3647d19d1594382"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-second-metacarpal-bone",
+      "fmaId": "FMA24466",
+      "name": "Right second metacarpal bone",
+      "sourceName": "right second metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24466",
+      "bounds": {
+        "min": [
+          -2.926870107650757,
+          -0.8112902641296387,
+          0.6705700159072876
+        ],
+        "max": [
+          -2.6182000637054443,
+          -0.13130980730056763,
+          0.9278700351715088
+        ]
+      },
+      "center": [
+        -2.7725350856781006,
+        -0.47130003571510315,
+        0.7992200255393982
+      ],
+      "anchor": [
+        -2.7511701583862305,
+        -0.46614015102386475,
+        0.7921000719070435
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3352",
+          "sha256": "6d4e9874925f542124ced9e041f340de5b9c8f872d6ad7e2d483e9d0ab159980"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-third-metacarpal-bone",
+      "fmaId": "FMA24468",
+      "name": "Right third metacarpal bone",
+      "sourceName": "right third metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24468",
+      "bounds": {
+        "min": [
+          -2.7234601974487305,
+          -0.7915997505187988,
+          0.623259961605072
+        ],
+        "max": [
+          -2.52485990524292,
+          -0.14737975597381592,
+          0.9273300170898438
+        ]
+      },
+      "center": [
+        -2.624160051345825,
+        -0.4694897532463074,
+        0.7752949893474579
+      ],
+      "anchor": [
+        -2.628920078277588,
+        -0.4772900342941284,
+        0.7948399186134338
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3354",
+          "sha256": "98a26b8f08e6cd3578706a65d83c2e1e432d7a206202294cd525aa287b75072b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-fourth-metacarpal-bone",
+      "fmaId": "FMA24470",
+      "name": "Right fourth metacarpal bone",
+      "sourceName": "right fourth metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24470",
+      "bounds": {
+        "min": [
+          -2.537410020828247,
+          -0.7472100853919983,
+          0.6591699719429016
+        ],
+        "max": [
+          -2.414259910583496,
+          -0.1484197974205017,
+          0.9197099208831787
+        ]
+      },
+      "center": [
+        -2.4758349657058716,
+        -0.44781494140625,
+        0.7894399464130402
+      ],
+      "anchor": [
+        -2.476410150527954,
+        -0.44835999608039856,
+        0.7853500247001648
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3356",
+          "sha256": "3bb88e2a98ce1cb0ab8af411397e5edc5777546c394b25d4d4ee585493ee3718"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-fifth-metacarpal-bone",
+      "fmaId": "FMA24472",
+      "name": "Right fifth metacarpal bone",
+      "sourceName": "right fifth metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24472",
+      "bounds": {
+        "min": [
+          -2.4531400203704834,
+          -0.679840087890625,
+          0.7007599472999573
+        ],
+        "max": [
+          -2.2520198822021484,
+          -0.1308099329471588,
+          0.9452000260353088
+        ]
+      },
+      "center": [
+        -2.352579951286316,
+        -0.4053250104188919,
+        0.8229799866676331
+      ],
+      "anchor": [
+        -2.342400074005127,
+        -0.4185498058795929,
+        0.8263299465179443
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3358",
+          "sha256": "23d26888c325fd6a2de2688e948de72057afaf383db13875445fe597bd2a8bfd"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:right-abductor-pollicis-brevis",
+      "fmaId": "FMA37386",
+      "name": "Right abductor pollicis brevis",
+      "sourceName": "right abductor pollicis brevis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles",
+      "nodeName": "FMA37386",
+      "bounds": {
+        "min": [
+          -3.0253899097442627,
+          -0.30088987946510315,
+          0.7302300333976746
+        ],
+        "max": [
+          -2.6335198879241943,
+          0.08086974918842316,
+          1.0274299383163452
+        ]
+      },
+      "center": [
+        -2.8294548988342285,
+        -0.11001006513834,
+        0.8788299858570099
+      ],
+      "anchor": [
+        -2.8177199363708496,
+        -0.12192992866039276,
+        0.9369299411773682
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1483",
+          "sha256": "e8fae19efda4874793724ff541efd7d9ead31b50fbb343254e3f8effd8aa734d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:left-abductor-pollicis-brevis",
+      "fmaId": "FMA37387",
+      "name": "Left abductor pollicis brevis",
+      "sourceName": "left abductor pollicis brevis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles",
+      "nodeName": "FMA37387",
+      "bounds": {
+        "min": [
+          2.6335198879241943,
+          -0.30088987946510315,
+          0.7302300333976746
+        ],
+        "max": [
+          3.0253899097442627,
+          0.08086974918842316,
+          1.0274299383163452
+        ]
+      },
+      "center": [
+        2.8294548988342285,
+        -0.11001006513834,
+        0.8788299858570099
+      ],
+      "anchor": [
+        2.817730188369751,
+        -0.12192992866039276,
+        0.9369299411773682
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1483M",
+          "sha256": "89f420938e9140ba1b2a97c6d386897131f5f2423b4a24c42ea37a92bf75b493"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:right-opponens-pollicis",
+      "fmaId": "FMA37390",
+      "name": "Right opponens pollicis",
+      "sourceName": "right opponens pollicis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles",
+      "nodeName": "FMA37390",
+      "bounds": {
+        "min": [
+          -3.0585999488830566,
+          -0.2616998255252838,
+          0.8037899732589722
+        ],
+        "max": [
+          -2.5804097652435303,
+          0.06002990901470184,
+          0.9896899461746216
+        ]
+      },
+      "center": [
+        -2.8195048570632935,
+        -0.10083495825529099,
+        0.8967399597167969
+      ],
+      "anchor": [
+        -2.816890001296997,
+        -0.08052978664636612,
+        0.9134700298309326
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1501",
+          "sha256": "abbd7e3223c7aae817ecd4e613e24c7dcd2aff20d56ea35a1517c73f6bae7a9e"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:left-opponens-pollicis",
+      "fmaId": "FMA37391",
+      "name": "Left opponens pollicis",
+      "sourceName": "left opponens pollicis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles",
+      "nodeName": "FMA37391",
+      "bounds": {
+        "min": [
+          2.5804097652435303,
+          -0.2616998255252838,
+          0.8037899732589722
+        ],
+        "max": [
+          3.0585999488830566,
+          0.06002990901470184,
+          0.9896899461746216
+        ]
+      },
+      "center": [
+        2.8195048570632935,
+        -0.10083495825529099,
+        0.8967399597167969
+      ],
+      "anchor": [
+        2.816890001296997,
+        -0.08052978664636612,
+        0.9134700298309326
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1501M",
+          "sha256": "11f813334eaaed8e9502bfa9afaea44aec5c7cdd01e8acf038aeadac2bb13e25"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:oblique-head-of-right-adductor-pollicis",
+      "fmaId": "FMA46121",
+      "name": "Oblique head of right adductor pollicis",
+      "sourceName": "oblique head of right adductor pollicis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles-dissection",
+      "nodeName": "FMA46121",
+      "bounds": {
+        "min": [
+          -2.9933600425720215,
+          -0.40250977873802185,
+          0.7316200137138367
+        ],
+        "max": [
+          -2.565340042114258,
+          -0.10216003656387329,
+          0.9707000851631165
+        ]
+      },
+      "center": [
+        -2.7793500423431396,
+        -0.25233490765094757,
+        0.8511600494384766
+      ],
+      "anchor": [
+        -2.7823901176452637,
+        -0.24340027570724487,
+        0.8806399703025818
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1481",
+          "sha256": "7f95a0d24a061eefc13bbef6c842b7e685798dfd16e767b955015dafde1f858d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:oblique-head-of-left-adductor-pollicis",
+      "fmaId": "FMA46122",
+      "name": "Oblique head of left adductor pollicis",
+      "sourceName": "oblique head of left adductor pollicis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles-dissection",
+      "nodeName": "FMA46122",
+      "bounds": {
+        "min": [
+          2.565340042114258,
+          -0.40250977873802185,
+          0.7316200137138367
+        ],
+        "max": [
+          2.9933600425720215,
+          -0.10216003656387329,
+          0.9707000851631165
+        ]
+      },
+      "center": [
+        2.7793500423431396,
+        -0.25233490765094757,
+        0.8511600494384766
+      ],
+      "anchor": [
+        2.7823901176452637,
+        -0.24340027570724487,
+        0.8806300163269043
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1481M",
+          "sha256": "6aae43f5745e133cfb7a1659dcc6d8e42e94d8772b984f1ad33d79c6a0f8397c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:transverse-head-of-right-adductor-pollicis",
+      "fmaId": "FMA46123",
+      "name": "Transverse head of right adductor pollicis",
+      "sourceName": "transverse head of right adductor pollicis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles-dissection",
+      "nodeName": "FMA46123",
+      "bounds": {
+        "min": [
+          -2.997650146484375,
+          -0.6136602759361267,
+          0.7420799732208252
+        ],
+        "max": [
+          -2.5863900184631348,
+          -0.23294006288051605,
+          0.9672099351882935
+        ]
+      },
+      "center": [
+        -2.792020082473755,
+        -0.4233001694083214,
+        0.8546449542045593
+      ],
+      "anchor": [
+        -2.8035500049591064,
+        -0.3566400110721588,
+        0.834369957447052
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1515",
+          "sha256": "75f0a7b8130a70da1efb175638927868a2eb8d1f79916916666d100ec92190f2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:transverse-head-of-left-adductor-pollicis",
+      "fmaId": "FMA46124",
+      "name": "Transverse head of left adductor pollicis",
+      "sourceName": "transverse head of left adductor pollicis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles-dissection",
+      "nodeName": "FMA46124",
+      "bounds": {
+        "min": [
+          2.5863900184631348,
+          -0.6136602759361267,
+          0.7420799732208252
+        ],
+        "max": [
+          2.997650146484375,
+          -0.23294006288051605,
+          0.9672099351882935
+        ]
+      },
+      "center": [
+        2.792020082473755,
+        -0.4233001694083214,
+        0.8546449542045593
+      ],
+      "anchor": [
+        2.8035500049591064,
+        -0.3566400110721588,
+        0.834369957447052
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1515M",
+          "sha256": "b280fa41da96bb2db519cb055f6ecaea6fe0786586db3f5d695da07a77395924"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:set-of-lumbricals-of-right-hand",
+      "fmaId": "FMA42398",
+      "name": "Set of lumbricals of right hand",
+      "sourceName": "set of lumbricals of right hand",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles-recovery",
+      "nodeName": "FMA42398",
+      "bounds": {
+        "min": [
+          -3.000380039215088,
+          -1.1511797904968262,
+          0.7689399719238281
+        ],
+        "max": [
+          -2.2416999340057373,
+          -0.25091978907585144,
+          1.0827800035476685
+        ]
+      },
+      "center": [
+        -2.6210399866104126,
+        -0.7010497897863388,
+        0.9258599877357483
+      ],
+      "anchor": [
+        -2.5528900623321533,
+        -0.7075097560882568,
+        0.9341000318527222
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1510",
+          "sha256": "d3ce59c7785168a78c152a202480c2ed05b2c0b2798d70d89e3b9bd42fc2f9de"
+        }
+      ],
+      "coverageNote": "One source mesh represents the lumbrical group on this side. Individual first–fourth lumbricals are not separately segmented; attachments and numbering require review.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:set-of-lumbricals-of-left-hand",
+      "fmaId": "FMA42399",
+      "name": "Set of lumbricals of left hand",
+      "sourceName": "set of lumbricals of left hand",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles-recovery",
+      "nodeName": "FMA42399",
+      "bounds": {
+        "min": [
+          2.2416999340057373,
+          -1.1511797904968262,
+          0.7689399719238281
+        ],
+        "max": [
+          3.000380039215088,
+          -0.25091978907585144,
+          1.0827800035476685
+        ]
+      },
+      "center": [
+        2.6210399866104126,
+        -0.7010497897863388,
+        0.9258599877357483
+      ],
+      "anchor": [
+        2.552880048751831,
+        -0.7075097560882568,
+        0.9341000318527222
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1510M",
+          "sha256": "00bab05fd9225e6c06a1dc7f572a01ec1771b23f5cde34bd6378960457c9c8e0"
+        }
+      ],
+      "coverageNote": "One source mesh represents the lumbrical group on this side. Individual first–fourth lumbricals are not separately segmented; attachments and numbering require review.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:set-of-palmar-interossei-of-right-hand",
+      "fmaId": "FMA42402",
+      "name": "Set of palmar interossei of right hand",
+      "sourceName": "set of palmar interossei of right hand",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles-gaps",
+      "nodeName": "FMA42402",
+      "bounds": {
+        "min": [
+          -2.814689874649048,
+          -0.8439398407936096,
+          0.7432199716567993
+        ],
+        "max": [
+          -2.342050075531006,
+          -0.3292401134967804,
+          0.9647300839424133
+        ]
+      },
+      "center": [
+        -2.578369975090027,
+        -0.586589977145195,
+        0.8539750277996063
+      ],
+      "anchor": [
+        -2.5293898582458496,
+        -0.5964099168777466,
+        0.8450599908828735
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1511",
+          "sha256": "85929597b60bd904b7dcc17c56f72dc3d607534bbf11149589f88b9158060bc8"
+        }
+      ],
+      "coverageNote": "One source surface represents a set of interossei on this side, not individually segmented or numbered muscles. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:set-of-palmar-interossei-of-left-hand",
+      "fmaId": "FMA42403",
+      "name": "Set of palmar interossei of left hand",
+      "sourceName": "set of palmar interossei of left hand",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles-gaps",
+      "nodeName": "FMA42403",
+      "bounds": {
+        "min": [
+          2.342050075531006,
+          -0.8439398407936096,
+          0.7432199716567993
+        ],
+        "max": [
+          2.814689874649048,
+          -0.3292401134967804,
+          0.9647300839424133
+        ]
+      },
+      "center": [
+        2.578369975090027,
+        -0.586589977145195,
+        0.8539750277996063
+      ],
+      "anchor": [
+        2.5293800830841064,
+        -0.5964099168777466,
+        0.845050036907196
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1511M",
+          "sha256": "1bcfb4935ff3bfe248e8ed537346ca4172ecb3a9ba1fff4e0865d1770a1792e7"
+        }
+      ],
+      "coverageNote": "One source surface represents a set of interossei on this side, not individually segmented or numbered muscles. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:set-of-dorsal-interossei-of-right-hand",
+      "fmaId": "FMA42404",
+      "name": "Set of dorsal interossei of right hand",
+      "sourceName": "set of dorsal interossei of right hand",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles-gaps",
+      "nodeName": "FMA42404",
+      "bounds": {
+        "min": [
+          -2.9695098400115967,
+          -0.8331897258758545,
+          0.6912400126457214
+        ],
+        "max": [
+          -2.3525099754333496,
+          -0.14445006847381592,
+          0.9486200213432312
+        ]
+      },
+      "center": [
+        -2.661009907722473,
+        -0.4888198971748352,
+        0.8199300169944763
+      ],
+      "anchor": [
+        -2.678340196609497,
+        -0.5198101997375488,
+        0.7394799590110779
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1509",
+          "sha256": "9317e87149b2346714b59513c07d9d7bf36585f9866d3facc16f958e5411fcbd"
+        }
+      ],
+      "coverageNote": "One source surface represents a set of interossei on this side, not individually segmented or numbered muscles. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:set-of-dorsal-interossei-of-left-hand",
+      "fmaId": "FMA42405",
+      "name": "Set of dorsal interossei of left hand",
+      "sourceName": "set of dorsal interossei of left hand",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles-gaps",
+      "nodeName": "FMA42405",
+      "bounds": {
+        "min": [
+          2.3525099754333496,
+          -0.8331897258758545,
+          0.6912400126457214
+        ],
+        "max": [
+          2.9695098400115967,
+          -0.14445006847381592,
+          0.9486200213432312
+        ]
+      },
+      "center": [
+        2.661009907722473,
+        -0.4888198971748352,
+        0.8199300169944763
+      ],
+      "anchor": [
+        2.678340196609497,
+        -0.5198101997375488,
+        0.7394799590110779
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1509M",
+          "sha256": "c9aead8e2cc5fd957fcc11fafc42a0d235bffd00bbea09eaf50c473a41a9a3bd"
+        }
+      ],
+      "coverageNote": "One source surface represents a set of interossei on this side, not individually segmented or numbered muscles. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "id": "hand-skeleton",
+      "url": "/models/bodyparts3d/full-body/hand-skeleton.glb",
+      "bytes": 416816,
+      "sha256": "5f61ad363b757aa0cfcf0d7be4bcedcf63cbfec9ff5728cace9d62aa0447eac1",
+      "structures": 54
+    },
+    {
+      "id": "hand-muscles",
+      "url": "/models/bodyparts3d/full-body/hand-muscles.glb",
+      "bytes": 120784,
+      "sha256": "d0fad445fa6a804c237706038b126e6cb9e3829ec171c9929ab435d4ee74870e",
+      "structures": 10
+    },
+    {
+      "id": "hand-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/hand-muscles-dissection.glb",
+      "bytes": 56028,
+      "sha256": "3f7cae06bed1f4b93bb1ec2715ac4d739e5e38c7f0c495ea22447d57065f29ff",
+      "structures": 4
+    },
+    {
+      "id": "hand-muscles-recovery",
+      "url": "/models/bodyparts3d/full-body/hand-muscles-recovery.glb",
+      "bytes": 100344,
+      "sha256": "754fba175b857079656672c0ab11dd37ad0235cd87c3ccfffa08a2df1c54e129",
+      "structures": 2
+    },
+    {
+      "id": "hand-muscles-gaps",
+      "url": "/models/bodyparts3d/full-body/hand-muscles-gaps.glb",
+      "bytes": 146948,
+      "sha256": "68885665a6924684c3c7b1f078eecb702efd444d78eea1a5941bed6ad0a089dc",
+      "structures": 4
+    }
+  ]
+}

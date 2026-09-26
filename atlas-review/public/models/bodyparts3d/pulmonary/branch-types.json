@@ -1,0 +1,4295 @@
+{
+  "schemaVersion": 1,
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "parents": [
+    {
+      "id": "vm:anatomy:body:thorax:right:organ:right-lung",
+      "fmaId": "FMA7309",
+      "name": "Right lung",
+      "sourceName": "right lung",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-organs",
+      "nodeName": "FMA7309",
+      "bounds": {
+        "min": [
+          -1.1654000282287598,
+          2.145900249481201,
+          -0.2905749976634979
+        ],
+        "max": [
+          0.04834650084376335,
+          5.480200290679932,
+          1.2380999326705933
+        ]
+      },
+      "center": [
+        -0.5585267636924982,
+        3.8130502700805664,
+        0.47376246750354767
+      ],
+      "anchor": [
+        -0.6279900074005127,
+        4.010000228881836,
+        0.2966809868812561
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2041",
+          "sha256": "d52990514f3fd26238511bc25ae0fdbeef1555b2b450b13166925fb8f3541120"
+        },
+        {
+          "file": "FJ2044",
+          "sha256": "92c5a838b3e2be5316d0b4c0ff2b644e533f60d91dffd2716807116033aef0e7"
+        },
+        {
+          "file": "FJ2449",
+          "sha256": "0b17bf783e9229d279c86e9322b6f6e243b841de14a0409a1fa96456a8a6fd04"
+        },
+        {
+          "file": "FJ2451",
+          "sha256": "5c1771d3c4837b5b69e74441236e1cd1f505bf967e6a81e0c1e17445032eec1e"
+        },
+        {
+          "file": "FJ2452",
+          "sha256": "13a428c6691e43fc62b70f055061518ef59e25bc39f7ff4ba29b72d120ffbaab"
+        },
+        {
+          "file": "FJ2453",
+          "sha256": "4753a2f69f7ca376a149db4fd659ec2ea1f86884a59ce92c51635697bb455843"
+        },
+        {
+          "file": "FJ2454",
+          "sha256": "88123cad730989bea78f4f0c9d1c278763ae0936fc463832dab147c86fa78e34"
+        },
+        {
+          "file": "FJ2455",
+          "sha256": "7758820e2beb33284de3276d986ecfe2947f8a7869d8ad939b54e337f5590743"
+        },
+        {
+          "file": "FJ2456",
+          "sha256": "98b2b20bb08530aca323ac07b2c2d35eeb001fffd4a587f47de825349c09dc26"
+        },
+        {
+          "file": "FJ2457",
+          "sha256": "9693f23e864bc668c5705df406d99f911d65b2dd184d6cf50d923b2046af9a75"
+        },
+        {
+          "file": "FJ2458",
+          "sha256": "311b93c7abf1c094c045c18c2eb7f17963b0d60ad2c874a823f57fb2f11187c6"
+        },
+        {
+          "file": "FJ2459",
+          "sha256": "c93561e1dff5a7ea360a95cd7600f1d7306bfd12e10c4dccd36dfc34c7fba83e"
+        },
+        {
+          "file": "FJ2470",
+          "sha256": "ff2aade1295ecc04ea46f39181b2c6688a9320b374bd98ce45e5e24979d660e4"
+        },
+        {
+          "file": "FJ2481",
+          "sha256": "92669323b5b0c67ab73db4d2e0708c812b356cdcc7695cea86ccd3d9a4c82aa1"
+        },
+        {
+          "file": "FJ2486",
+          "sha256": "24a05a87546c554c7ca8ead6b83d101075c034bcca4bbd565f6555b0546436cd"
+        },
+        {
+          "file": "FJ2487",
+          "sha256": "92b1374c9c5fd44c7c9b30d56ceebe335f04dea0246cc4e7e39931db9a7cf499"
+        },
+        {
+          "file": "FJ2488",
+          "sha256": "0c13f3775d83c97e3680cdcd21dd6a08aaa88e27f3ec194c46656ba3fec86856"
+        },
+        {
+          "file": "FJ2489",
+          "sha256": "4da7026ff7c343f8ba453e3bf6f8b9d6a3ed3951dc912e3cb1bdfd8ef8898778"
+        },
+        {
+          "file": "FJ2490",
+          "sha256": "b4f90915d8bab4bbdc709eb3cfc2ee5f69747a55e7c49e192d901dbc754af57c"
+        },
+        {
+          "file": "FJ2491",
+          "sha256": "70cf62a3f2795a31d105a4529501e35f7d6cac81918b3daa67efa2066c312490"
+        },
+        {
+          "file": "FJ2492",
+          "sha256": "09f07da0cbb3e991fbd11acc3b7972e53322ffc8943a0fddeb6206b43ba314dd"
+        },
+        {
+          "file": "FJ2493",
+          "sha256": "316057eefe3951378a54a8be78a812ef770cb840fcd3510652488e2a6f01bf10"
+        },
+        {
+          "file": "FJ2494",
+          "sha256": "ad18d80f4adfefac9e28afc3e92977ff3a2b91363442125eb1b76ef79dc5198b"
+        },
+        {
+          "file": "FJ2495",
+          "sha256": "05cd679bcc9bdf096f8225fc912629ca7e9d8ac5bdfd953aa035d7f5febdeca0"
+        },
+        {
+          "file": "FJ2496",
+          "sha256": "1c25619334e8c82d823706ca5c95bb9466eb65a00b82e38305cb51e370ceecbb"
+        },
+        {
+          "file": "FJ2497",
+          "sha256": "45f451850b731505fd33b5cb853181290b8ecf2cdb6e9eb38bf4ed45fae06feb"
+        },
+        {
+          "file": "FJ2498",
+          "sha256": "397d42ba5f2579cabf2de58ba365482ddf92c93e74390e74026a06eee0f33da8"
+        },
+        {
+          "file": "FJ2499",
+          "sha256": "dcdf9aa446ea578d1a5029e0ea8354369b0dfb74c98ea6f6f690cac8c26cec8e"
+        },
+        {
+          "file": "FJ2500",
+          "sha256": "30055ea7c3210934af6473ea76fc21e2d491344dde3db588ceed344528e8d3ee"
+        },
+        {
+          "file": "FJ2501",
+          "sha256": "6b6f46acabe02d28557b4313300f496c9c360da605645e60a33053aadc855e49"
+        },
+        {
+          "file": "FJ2502",
+          "sha256": "98e5e5a7e774f2c70a97883365137d700b512ef142b0a8f616fd35a8e2dbf65b"
+        },
+        {
+          "file": "FJ2503",
+          "sha256": "c0b528632a04c5f1f6e64e4a5b1c5f7f931eeac04809be955f367165747c4913"
+        },
+        {
+          "file": "FJ2504",
+          "sha256": "ca40945d3428c057e62be35150bd7569d5749e9d01809da3c57f98fee783fc06"
+        },
+        {
+          "file": "FJ2505",
+          "sha256": "3bba26b9b0d2d0138e227a5e6e3b53226e0e12cceac13014d0e0800a5c314c49"
+        },
+        {
+          "file": "FJ2506",
+          "sha256": "cef0aded90ec711f89d9f133187555ffd6b235718855c7c4df2673f1e41b0dc4"
+        },
+        {
+          "file": "FJ2507",
+          "sha256": "5566feecce7363209e4d8f3910e0699ad93789b50f812008cc5eac427f491a3b"
+        },
+        {
+          "file": "FJ2508",
+          "sha256": "8a6145969f6ece99bc5ebc7bbd8db44178016b5527f0036c1e55d0b187967124"
+        },
+        {
+          "file": "FJ2509",
+          "sha256": "1714bc450b7fadc5735099fdd7bc6ea03f35b591a96c7c63e12e93d5c9ba7aa5"
+        },
+        {
+          "file": "FJ2510",
+          "sha256": "cf2c2acd29c67b6890894472099c3c3387a970fdf6c75496c9dccd38e33cdeaf"
+        },
+        {
+          "file": "FJ2511",
+          "sha256": "edc3b11467d2b2bf91a9691d5f738526b94d7bdde39fa7809d164dec8a2f5505"
+        },
+        {
+          "file": "FJ2512",
+          "sha256": "96f6c4bf177237f27bd0694c6c818f1f5227b5ece8884eacdb9f447592010c2e"
+        },
+        {
+          "file": "FJ2513",
+          "sha256": "4b261ffedf0954bc7e9119c8bae7edf8779cc2114291b8c631f1a487a0045114"
+        },
+        {
+          "file": "FJ2514",
+          "sha256": "9404eb550bacf8b5bab8fc09675717576a8fa7dfb27b9cf5d714172b58f9ae68"
+        },
+        {
+          "file": "FJ2515",
+          "sha256": "0b69795c5ad5bc506e7f51327e4a52032b6ca49d631fff0160317dd608a60966"
+        },
+        {
+          "file": "FJ2516",
+          "sha256": "826b1bc8c191768f3cb8c490511ebedcb8b97454383ba5719c2bc878f7ae0ce9"
+        },
+        {
+          "file": "FJ2517",
+          "sha256": "bedfdb3f698ab46309118fa7ffa5761308f51ca88f7f2467e4657c3a767b2377"
+        },
+        {
+          "file": "FJ2518",
+          "sha256": "3a7e31fde656404844fc4c4c4e4f79b136586a8a3272fe481176a23530771e4c"
+        },
+        {
+          "file": "FJ2519",
+          "sha256": "f599ba9c13ec90e64ffb445b9ff02cfd56bb83ab721256399e2cbd9cff03cb72"
+        },
+        {
+          "file": "FJ2520",
+          "sha256": "39e86b28fd18cb4f9ed2ffbb4a29935d4891000e6b5242b298b6b1755f4d5715"
+        },
+        {
+          "file": "FJ2521",
+          "sha256": "4d07b383a6d4e1a604c7ec0c6677e030cdc609b4065251410a3cae38ff7024be"
+        },
+        {
+          "file": "FJ2522",
+          "sha256": "b19bcb13f7f8dbf8a0fe755c449839689c4addb7e08156a678c7eb6616a8018a"
+        },
+        {
+          "file": "FJ2523",
+          "sha256": "85675485c514feb3c8627923fd7c3a7ac50335ff3824211da29ec21d336c3bb7"
+        },
+        {
+          "file": "FJ2524",
+          "sha256": "a2942179f276ca4450e87736a3d3316aa27b655d2bdf9db730ad269712238d37"
+        },
+        {
+          "file": "FJ2525",
+          "sha256": "68cdd6f1c1b22f5fb4546b9bc645b07cf62da3d0537d5328aa0b1ab9bd25f7b9"
+        },
+        {
+          "file": "FJ2526",
+          "sha256": "5fea18655f20183f11295ecdfdc019277ff395486360a7a0fda16c2621c159f9"
+        },
+        {
+          "file": "FJ2967",
+          "sha256": "3b18d2e99aebc749e230f9994fbe677313bf2a14bf79e3573bc8ac7859bb73da"
+        },
+        {
+          "file": "FJ2968",
+          "sha256": "0267770d371d5c3928cd7ed558bb234644c852007ea7e0a5c340fd65cd743bb8"
+        },
+        {
+          "file": "FJ2969",
+          "sha256": "6c3bbe60cde8152bdd21bcc0d864a0fda94174a1bb75e6b55530695e7b9c3ce2"
+        },
+        {
+          "file": "FJ2970",
+          "sha256": "69d361d775022c820afe6d8fe784d834482d4c0ce55a1df0f94370f4f963a46e"
+        },
+        {
+          "file": "FJ2971",
+          "sha256": "29c805a2b89a9587df2b158395b20ed4c905f56e643c0441f6485dcac82199a2"
+        },
+        {
+          "file": "FJ2972",
+          "sha256": "da6aa85ff26d46e5ee3feb9b9b483a80a99965f3eba76df42d83b9299ae1f4fa"
+        },
+        {
+          "file": "FJ2973",
+          "sha256": "e741ad502c67f78ae98f918193e34286224f8380b0551c03ae7a1a7e1d2af9c5"
+        },
+        {
+          "file": "FJ2974",
+          "sha256": "623910c3664b645dbdebae004130f124965453dfb6cfd4166f976eb2bea78391"
+        },
+        {
+          "file": "FJ2975",
+          "sha256": "8e912f0d152e037c81eddd8f86ae84722f7a21ab32e4b3ca4e341594c3eeec28"
+        },
+        {
+          "file": "FJ2976",
+          "sha256": "7148c08361207cbf9887834bcbadbb361e84cd2aa185a4b6d49ab45c9f719666"
+        },
+        {
+          "file": "FJ2977",
+          "sha256": "9d877f080e66dc6d7222d950dbf1a4e4916fa24ece279d92bce62f88145310ec"
+        },
+        {
+          "file": "FJ2978",
+          "sha256": "0c8a4ec2f2755fde9e89835f8df28862f8666e77b72185731b2aec694f88b8ab"
+        },
+        {
+          "file": "FJ2979",
+          "sha256": "80c8df6c3859ba8b68a6d839f16877d06b7733c3903e41f0fb4dbec9b6002c8d"
+        },
+        {
+          "file": "FJ2980",
+          "sha256": "0fa70de8164718985d303a9b8645f10d56d15938ece1c9516616c062695cca3d"
+        },
+        {
+          "file": "FJ2981",
+          "sha256": "01ad75de79e0a9d4dc4281c40a750ec17daa5b8b3a321ca6eca23fa1f0f72c50"
+        },
+        {
+          "file": "FJ2982",
+          "sha256": "7494dcce5d01681979d19b8ca6b9e47f50a070798448ca5d6758e436ff4eaff9"
+        },
+        {
+          "file": "FJ2983",
+          "sha256": "0124c45a5e00914f90eff4118dad2f4d384fcff423e3371af2a4cda69d984854"
+        },
+        {
+          "file": "FJ2984",
+          "sha256": "3df3920fed60f9116b8c1ef8370b3bef41bc1eda4282cd76cbf76e1b4d097151"
+        },
+        {
+          "file": "FJ2985",
+          "sha256": "190e3dce0b1a866fef0302d90eac21f9ae617631a7dff2a8ef3b57def6daab7d"
+        },
+        {
+          "file": "FJ2986",
+          "sha256": "77e49deba75b03615e15e81ebf1495006c9d29cbfeeec0bb035095b1bca54cd9"
+        },
+        {
+          "file": "FJ2987",
+          "sha256": "d16ffeaf8b5da0884b2773c781f2763d1b170f3f296d3e717c34cdf30153a80e"
+        },
+        {
+          "file": "FJ2988",
+          "sha256": "3d7d7ffe312bfe4e516edfb67421f19eee24ad614abb5be782d6d9ffc63bb7fc"
+        },
+        {
+          "file": "FJ2989",
+          "sha256": "ffc5e7b5ef204d6f66b1582dd13a6e4b60952c1fd95b933390fde464ff01718b"
+        },
+        {
+          "file": "FJ2990",
+          "sha256": "bb9345ace85f5b8c35412b953d51aadb5ccfa4d2e51d85af655c42c83d8dcd9b"
+        },
+        {
+          "file": "FJ2991",
+          "sha256": "022d7193227b41d25fe639a8ec4d49b05a9048bc41edebcbf88e353f94ef9be2"
+        },
+        {
+          "file": "FJ2992",
+          "sha256": "fe994778e6a7659b9ff1f65d70b190f4d7388e4eb6704674845c375708151875"
+        },
+        {
+          "file": "FJ2993",
+          "sha256": "07cfb61f8620bc29d8962738b405102fb00e8728e66e95a477a4b7a51c7781e9"
+        },
+        {
+          "file": "FJ2994",
+          "sha256": "be8bc186033d93f6a104537972d14f646cfc8f16ec30564ccdbcee637973144f"
+        },
+        {
+          "file": "FJ2995",
+          "sha256": "e60f9f58a24e683a0eb4c4c8423ee69fca0d62690b7d548b148b9b399a02d828"
+        },
+        {
+          "file": "FJ2996",
+          "sha256": "5e8197cb11567126932629538de9c407a6af49368617c1857a87fba920c43989"
+        },
+        {
+          "file": "FJ2997",
+          "sha256": "09ff589f6aab4edc59cee6e2439efa426cb636033682bb5d2bfb22dbd68f153b"
+        },
+        {
+          "file": "FJ2998",
+          "sha256": "ac138f3e6f044a94dd5306e3edb9a25bc1849996d88fa6fdd635de9b39b92c68"
+        },
+        {
+          "file": "FJ2999",
+          "sha256": "bf597ef5eee13e22cd83f4d78d9ff1aaf074a513dc98fc223060b59a4b4dd4d3"
+        },
+        {
+          "file": "FJ3000",
+          "sha256": "f50a98d1a391ae137702cdbf47603d75d1300735d65e4ca9fd84c1ebbe7500f4"
+        },
+        {
+          "file": "FJ3001",
+          "sha256": "3f8a4a113437bc9bd097d7cceb5d82934458e5562f8d7f1c6b1ab80a6037823c"
+        },
+        {
+          "file": "FJ3002",
+          "sha256": "d66ec5db20772fbce61e563d4804be9aed680f91141ff13a02c25b1b26e47675"
+        },
+        {
+          "file": "FJ3003",
+          "sha256": "c906af931a973815637ad5524e4f946b8ea1c41a5b01ead598b6c5941c7fc240"
+        },
+        {
+          "file": "FJ3004",
+          "sha256": "dfc3321ef449d7a274a485617437a43c611048c38f9a27690eff849bb61b66a8"
+        },
+        {
+          "file": "FJ3005",
+          "sha256": "4829d47c6937364d4841f1aa5d645c0672323b5196c1162a6b0c85e78384ec6a"
+        },
+        {
+          "file": "FJ3006",
+          "sha256": "afb6adf3c58e47bf5a08666c6e5570ae23feb7d51ba079b9466d29c19f2c8d13"
+        },
+        {
+          "file": "FJ3007",
+          "sha256": "48ab550f68716d5e9bc228c71733604c368eb47c946a3f23be72a974801ee615"
+        },
+        {
+          "file": "FJ3008",
+          "sha256": "f3956466989e7d0b92405aa4059bf8f75b473da60176b238906ab7adc6e1e4b0"
+        },
+        {
+          "file": "FJ3009",
+          "sha256": "56762f7e7766a85140e50964848d0d56a11252c76b02811d2d8e5e895bf78363"
+        },
+        {
+          "file": "FJ3010",
+          "sha256": "40c1e43cc4948a5e497ea7a740ba7d1c8eb89b4e8137adfee0bf19fc929a9b5a"
+        },
+        {
+          "file": "FJ3011",
+          "sha256": "ca0f4ca7d3032444d952190c3e50cc8c03090b311ad88df5428582a00619a85d"
+        },
+        {
+          "file": "FJ3012",
+          "sha256": "b62ce0956c98fe8ccb9e92aa7f1e04979a2fc67eea9011b9fec267e970efb6f9"
+        },
+        {
+          "file": "FJ3013",
+          "sha256": "7d462f3de4c52328332787ef529a7e673f444411bfd437eec0c766ea5e4568c3"
+        },
+        {
+          "file": "FJ3014",
+          "sha256": "cfe69f44c2f72fdc7928319ab389759d2b329fb0d12d93ee2b3b4c17135b1ad3"
+        },
+        {
+          "file": "FJ3015",
+          "sha256": "de6f61d587d4c8176f16f86ffd4442ec5c69208bc8e8d7625e9b7aa1dc6579f9"
+        },
+        {
+          "file": "FJ3016",
+          "sha256": "e7bb5644f4853c91d74a4691e520b58d937b840b60d1b87792fac2562428ded0"
+        },
+        {
+          "file": "FJ3017",
+          "sha256": "0363f0de71395705d583533706645f83bcd27f486953b0a7cf74754ed96b3214"
+        },
+        {
+          "file": "FJ3018",
+          "sha256": "5d16b04e44b0979df0f0346ced1d49096e3be79a53962c129ec3ab2fe487ae10"
+        },
+        {
+          "file": "FJ3021",
+          "sha256": "d7c046ef6d3d84c58c33b55cee9bafb14170862bed5b9d4fe1dc897a35aa961b"
+        },
+        {
+          "file": "FJ3022",
+          "sha256": "1fcfdf4d6bb75498f20cde31a18d3a6a9abb19f52ab3d7b3399ebf42699b28fd"
+        },
+        {
+          "file": "FJ3023",
+          "sha256": "9853554488b7e9879f2f1a96b34b19cbeaecd01a8720b8752d55755913513151"
+        },
+        {
+          "file": "FJ3024",
+          "sha256": "aa19f43fea57296c8330c017ea0f307489c7a73a6470de755910a801051d824a"
+        },
+        {
+          "file": "FJ3025",
+          "sha256": "0ab47fe8dd1f565d6455447b5a615ee1e9cb4aa9a53e9e6500119c1ef6aa31e7"
+        },
+        {
+          "file": "FJ3026",
+          "sha256": "ef1032250149dfcf88673cd8c944d6f201040000469e7f0b949af6afabda4e8e"
+        },
+        {
+          "file": "FJ3027",
+          "sha256": "fe4643b42c0fe785c0e60b09c715132da7e03225564233d34b3e094f8d9febf9"
+        },
+        {
+          "file": "FJ3028",
+          "sha256": "01915769535411ec4597c1582620b5821cd636f54dc79331de3bdcfc89cab720"
+        },
+        {
+          "file": "FJ3029",
+          "sha256": "6378d522355f810c3b42281438e0f6fc990239b1e812d679cb1295260a194bd4"
+        },
+        {
+          "file": "FJ3030",
+          "sha256": "0aea211bdc5bd1ab4fababacf2c31bd781c98b33a25b9cbab887caea90336079"
+        },
+        {
+          "file": "FJ3031",
+          "sha256": "5b36e47a88886de1ab64453c6f97cad458794d861e7367544fd920e3ff648cdb"
+        },
+        {
+          "file": "FJ3032",
+          "sha256": "e88becca7ddf38d900a78c4d192959ecd589ce0032026e09a9fdbfc2b278937a"
+        },
+        {
+          "file": "FJ3033",
+          "sha256": "c9d23ebe4835a50e0ea13109292d451c7c34026effee27a764b11b4b9fabd318"
+        },
+        {
+          "file": "FJ3034",
+          "sha256": "0d84a80aa138f074f4caad194e7d930d88a62f478f9c73dcbf5db2ccf87c007e"
+        },
+        {
+          "file": "FJ3035",
+          "sha256": "00cfa5c5489240f21d0efd7b20009f120bace9909699b400f497321bdc65ac22"
+        },
+        {
+          "file": "FJ3036",
+          "sha256": "8bccfc47d20659b4772080af6948e9c01f0356e35e05ef131756d7661b1f6457"
+        },
+        {
+          "file": "FJ3037",
+          "sha256": "aaf657ee22b9749e365462c729d557be0ddcd3026d9ffa33429169f921e63f08"
+        },
+        {
+          "file": "FJ3038",
+          "sha256": "3300d4e15ff24574cdcb750d9e03909ebf3499242b238f5eefa792fd8a4132c6"
+        },
+        {
+          "file": "FJ3039",
+          "sha256": "3c7d62a01349f154d8d3496ca0f6f84a6858b50b3c95e2a82c51cb13d31691e4"
+        },
+        {
+          "file": "FJ3041",
+          "sha256": "dba8530e4e021d6378881c6315f21377ef6819352b0d48dab32f971f55b68e29"
+        },
+        {
+          "file": "FJ3042",
+          "sha256": "8348cb98ec1bc66b5852ddcf254d9923ffdbfccf6d162776dbfc8dd907bc327b"
+        },
+        {
+          "file": "FJ3043",
+          "sha256": "05d961534e19451d65531109a40a9bd2276b35b1f2f3b612f5a5d06168226b99"
+        },
+        {
+          "file": "FJ3044",
+          "sha256": "30ad07679245f56ec20b383e4665df228f9acf59f357a2aacaf9fad402299dd2"
+        },
+        {
+          "file": "FJ3045",
+          "sha256": "a1a70bb44cecb8a52796d02f7958a43388a9308a9fd0ad064c95e66b49e95aa5"
+        },
+        {
+          "file": "FJ3046",
+          "sha256": "74d6222055c21c6581ab154e351b91f4e57bba2f3abfb8da17364b8917e34229"
+        },
+        {
+          "file": "FJ3047",
+          "sha256": "6c7990555ce97dea123932a1fb56135cf82b2d6c309e7083387d53c8f690bfb5"
+        },
+        {
+          "file": "FJ3048",
+          "sha256": "655dabe52638e598cc552cbf7bb7c31ffd8cd1d37a92dab2129b3282e8bb504a"
+        },
+        {
+          "file": "FJ3049",
+          "sha256": "d8668404e9a9fe58cec2c8676751550c856e62b660cbb7d1ecaff8f152b5a7c9"
+        },
+        {
+          "file": "FJ3050",
+          "sha256": "848e258c0bfa7ef596e3a96646e43d89da1dad8633d04c9531e56454f4efcc53"
+        },
+        {
+          "file": "FJ3051",
+          "sha256": "001e64913b5efc2af0cee710f0891586f1a9e8de0b0e214ce9be1f0536d620de"
+        },
+        {
+          "file": "FJ3052",
+          "sha256": "2c68df1784d024669e0e37a4fb1d0e22b0bb804547f4ecbfcc814b8832ddf902"
+        },
+        {
+          "file": "FJ3053",
+          "sha256": "73f302620f1d778175b9fe6067f93e9253f92ecd170f7770ccefcd4d038b40a1"
+        },
+        {
+          "file": "FJ3054",
+          "sha256": "cf8013a7e9aff9db39703108ddcd3a3cff95210f608afea2a9aeb31e684fbb1f"
+        },
+        {
+          "file": "FJ3055",
+          "sha256": "e581441e67fed5b6225b401529610d65f3b199f24ed32a61c84d212a5061c24c"
+        },
+        {
+          "file": "FJ3056",
+          "sha256": "6ab8a75fa921d473dc53ea2f233a806ed0e5227c1cb1cf1693cd0c76f013d85a"
+        },
+        {
+          "file": "FJ3057",
+          "sha256": "7e5b47ae7217398ed3604484ffe2c8d9c9ecf7da7b9fba9261518891fa2b5a31"
+        },
+        {
+          "file": "FJ3058",
+          "sha256": "5f3dd61a518b3d46bc903797e37b5f1df9c9bf0459ed4c8715cca31d114be2da"
+        },
+        {
+          "file": "FJ3059",
+          "sha256": "0869acb61038b06dbfa8adc90e77faac650913070b5733b377e8d6242ee5def2"
+        },
+        {
+          "file": "FJ3060",
+          "sha256": "ee39c7e79005aaa920afba4a21517de78e2cb8674ff9ff60535131242cc7f92e"
+        },
+        {
+          "file": "FJ3061",
+          "sha256": "75536e65550d3bf1fd7a3c15ca8c6b9c4497fe9945d1d12a221dca0e90d59660"
+        },
+        {
+          "file": "FJ3062",
+          "sha256": "5389d53834968728a52dbba765230e533b3c1c2dcc53d797a68e328cf65500ad"
+        },
+        {
+          "file": "FJ3063",
+          "sha256": "ed8211f4f7b5e5439f70c98333f15c79d791676ce76595633278444949d941bd"
+        },
+        {
+          "file": "FJ3064",
+          "sha256": "7aea5192bb926177f306944c21f866d3d35c2fd307f8b00349a1eb8c1b2bb758"
+        },
+        {
+          "file": "FJ3065",
+          "sha256": "dc4249b117762f15f6adc2e03b8dc96822bf4b61cc29053b53b4e752a435ccbd"
+        },
+        {
+          "file": "FJ3066",
+          "sha256": "e5c53904242f77732a33d793184c4cf422e36e7712c480b276ab019237082c82"
+        },
+        {
+          "file": "FJ3067",
+          "sha256": "c16c1e6158bc3523a6dbaca1691aeff61efa43eeb4cdb4a5a8f7b1be8a596b33"
+        },
+        {
+          "file": "FJ3068",
+          "sha256": "0e13303935659ec4b5bb05fb1765ce986e72b77acff8a177fe6ac765d9b1a798"
+        },
+        {
+          "file": "FJ3069",
+          "sha256": "fac24171ab61e7b50ac353600cf5d58dab4b5417c3922f4e1781c80aabc27661"
+        },
+        {
+          "file": "FJ3070",
+          "sha256": "79b6af3a5d4fa81c2aac0e7d665cf4e8e489f850ae3a6ae4345e3d95f2ac619a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:organ:left-lung",
+      "fmaId": "FMA7310",
+      "name": "Left lung",
+      "sourceName": "left lung",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-organs",
+      "nodeName": "FMA7310",
+      "bounds": {
+        "min": [
+          0.19649401307106018,
+          3.231099843978882,
+          -0.2968609929084778
+        ],
+        "max": [
+          1.2543200254440308,
+          5.559399604797363,
+          1.2787100076675415
+        ]
+      },
+      "center": [
+        0.7254070192575455,
+        4.395249724388123,
+        0.49092450737953186
+      ],
+      "anchor": [
+        0.7670379877090454,
+        4.426199913024902,
+        0.47642698884010315
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2441",
+          "sha256": "64b373dbea8fea4f475219800087b0bdec736471a640e2660a9a9cac5f35b3ec"
+        },
+        {
+          "file": "FJ2442",
+          "sha256": "49fbe8509027d1d8e9d572b31de9a3741a02de9eca1ee65a6f1d96b79b35fd57"
+        },
+        {
+          "file": "FJ2443",
+          "sha256": "d9ecc1c75a9021f68a186433dd6f7e6cbe5058459f4c0b94aff3239e0dcff4fd"
+        },
+        {
+          "file": "FJ2444",
+          "sha256": "4fa463ea77c7aaea2b44ac26272a9fb10711d1d000b1464662a7a5389c8e6104"
+        },
+        {
+          "file": "FJ2445",
+          "sha256": "e38bac437798a86e2ec37730443443134c0923ef9532c75b428dc530b81df32a"
+        },
+        {
+          "file": "FJ2446",
+          "sha256": "56338429270073446704a97d17c52719f8eee320393658d9f1774a645d2908d9"
+        },
+        {
+          "file": "FJ2447",
+          "sha256": "3550c217bbea847d0bff2cdbbebd8f10607247ac6cae96b2458641b18c3ecf06"
+        },
+        {
+          "file": "FJ2448",
+          "sha256": "9b95d3c4d9115b2b5dfb36ecb5ca7a66953a5f87fe4c7f58a6d486c352cfc183"
+        },
+        {
+          "file": "FJ2460",
+          "sha256": "33b697f2b0996c6d5ff6723d62573e2b515f657cf675776bf7aab3da35db2856"
+        },
+        {
+          "file": "FJ2461",
+          "sha256": "da15dca4d16db1ddd3b51ddf46ccbb3e7b2780920a09665d0ea321cb1021bf0b"
+        },
+        {
+          "file": "FJ2462",
+          "sha256": "654b5b6e95817618bf7b186c363ffe8336abdbde9b305fcaefc3e4fbdedecea9"
+        },
+        {
+          "file": "FJ2463",
+          "sha256": "4f3659eab7252936df40eb3029836834ed563797ebd5b1fe081a2d1303853e05"
+        },
+        {
+          "file": "FJ2464",
+          "sha256": "6eae8179f9a5a765d9a1f2353a6b35342a15665bb3c52000dd10fb7efc5a9c87"
+        },
+        {
+          "file": "FJ2465",
+          "sha256": "e821c7b23402f6e64914d6c485b5a9e37c5e5d9bed386776b6c572486a5777ec"
+        },
+        {
+          "file": "FJ2466",
+          "sha256": "0fbb025940446f5a4c7a46f5e0aadd186b1ce0e14d83ed73f6581c2337143478"
+        },
+        {
+          "file": "FJ2467",
+          "sha256": "adb6e9730a4f48ab4976216c5bc9b28fb2077b9a213f1ca9f6b23d91077c6683"
+        },
+        {
+          "file": "FJ2468",
+          "sha256": "4b97d114f6af1274ae2b07fc7fb1ff426808012b061c20998b3ec75f305f583e"
+        },
+        {
+          "file": "FJ2469",
+          "sha256": "d0ba96fa139c3e4aa58ccfe3e5bbc601845ddb95aeebe15c3e52ba3720b5b4ed"
+        },
+        {
+          "file": "FJ2471",
+          "sha256": "65042bb74a06d48d9fc6adb7d0d33167db7e0195199a6af741acc5a81c9e2bbc"
+        },
+        {
+          "file": "FJ2472",
+          "sha256": "46c5f757ade14ef9d0b4629fbd360ac52d992fa1e3f22a9c4ff986482ddfe0e8"
+        },
+        {
+          "file": "FJ2473",
+          "sha256": "c6db14ca2d3f5ba038b1a64ea29df192cbc5f2319d524214b491b571dc4506a3"
+        },
+        {
+          "file": "FJ2474",
+          "sha256": "bb8e119c4518f5238026a2e37a73faffaeca4958a8f137aeaf27eab89f77dcdd"
+        },
+        {
+          "file": "FJ2475",
+          "sha256": "76ce29f348ed8ba738f35a9cfb7c1b087ead1e734ef4358aca789e45b667c749"
+        },
+        {
+          "file": "FJ2476",
+          "sha256": "7ca6f318aa98dc428c3f5b5237b5cd11744ca0b2ad54e2c23ee4585c1ce8508e"
+        },
+        {
+          "file": "FJ2477",
+          "sha256": "153faedcab2867f0731b9b56727e375b8de11aae2e4e16c72a74f335b8094400"
+        },
+        {
+          "file": "FJ2478",
+          "sha256": "159053dc8c5f1d4bf5021548dc0ff79d2ca980a3108e910a77b828604523aa15"
+        },
+        {
+          "file": "FJ2479",
+          "sha256": "53574009c39352a0fd2a6dd84b68845690b77d652b6b2a8de784ad92aa6c4551"
+        },
+        {
+          "file": "FJ2480",
+          "sha256": "7e07ea18e778db8f00142c69b4b2bb0ee415d294044dc332b138055f902ef4f8"
+        },
+        {
+          "file": "FJ2482",
+          "sha256": "5722b7698bedb29cf076888f776811b1c7d1d729f5ec14f9d51dac8057389e8c"
+        },
+        {
+          "file": "FJ2483",
+          "sha256": "37cee30d3fd34853e8be332261ecebf4a3f2a95170cf414a97d6151ed6c6d22c"
+        },
+        {
+          "file": "FJ2484",
+          "sha256": "859d772c3a7e053109365d3aa777b064d1f6ef7a266d4266405fb1af84cb8196"
+        },
+        {
+          "file": "FJ2485",
+          "sha256": "2f43d9288d325e57de763d458717f04fabd06fc697c337a1fe7d0ae043726f44"
+        },
+        {
+          "file": "FJ2527",
+          "sha256": "2812f475d2c482cd23064de0aa5f2b59c6b72058814d652a45845aa2b0fb0676"
+        },
+        {
+          "file": "FJ2528",
+          "sha256": "bf677fabc8c85fa8b35718048e9138582680a578e1be670ccde9108a14e9be11"
+        },
+        {
+          "file": "FJ2529",
+          "sha256": "cff5d941d69aae1ccfe21bd2cd775a294bea6cd53f3f9239f866811e223bcf33"
+        },
+        {
+          "file": "FJ2530",
+          "sha256": "09eb35909d8fbf647b0e52385ced1e895aa8b8e5e225118cd1fe89fca7571a08"
+        },
+        {
+          "file": "FJ2531",
+          "sha256": "169a4dbc6947dcfd98bb0bcf5f4ffb437ecbf2a7ee51d93944d3ca58252251fd"
+        },
+        {
+          "file": "FJ2532",
+          "sha256": "bf30a052e36f1a984fb9cca54df188a6995875dba5bf07bf7b2b6548dcd1461e"
+        },
+        {
+          "file": "FJ2533",
+          "sha256": "3f033d99e01946940c4191019fc0c174d1d5fa9b28dddc1426968feb61e6d9de"
+        },
+        {
+          "file": "FJ2534",
+          "sha256": "461e5c6c3dc5de63c38dc937e6128fb4889c8605c50a15807037addaae12e79a"
+        },
+        {
+          "file": "FJ2535",
+          "sha256": "4670a1458826c005d352d25bb2e9d029ba7c105f9c94ab1794e72c13fe0bf93d"
+        },
+        {
+          "file": "FJ2536",
+          "sha256": "d3ad0f299e740ab709a4d626a21f7e8fe15eb130de52ec293be518d7eb5cc8f9"
+        },
+        {
+          "file": "FJ2537",
+          "sha256": "b71c206496ab91bab4988e857fb49d4b74daa3e05af02dcb1c7eb2d54defc461"
+        },
+        {
+          "file": "FJ2538",
+          "sha256": "1b0fbbabb7b834cf21554103793e3b6040cd040a4553522db38a0cd14a68dfdf"
+        },
+        {
+          "file": "FJ2540",
+          "sha256": "034abcb466e8f71def0d77707f6266d1fcdbceae26a0dcc0dfd92ec6b5ecb076"
+        },
+        {
+          "file": "FJ2881",
+          "sha256": "ed30dc150cff62adeea8107c3fa164a3a14a06e54c2fc1709875655a9db37fe6"
+        },
+        {
+          "file": "FJ2882",
+          "sha256": "4c818f1db1cc14b6d7c1549174fc3fb6e7b6cce56bd04542b23eebe33efcfa62"
+        },
+        {
+          "file": "FJ2883",
+          "sha256": "4ed8ded534c49f725c3403bafdc47dac755c9dacd02c3b8d4cdaad7c951e00dc"
+        },
+        {
+          "file": "FJ2884",
+          "sha256": "abfae95bcf1f126d11866a62c2f45839f99f88b3722c88da1ab57baf8baccfd6"
+        },
+        {
+          "file": "FJ2885",
+          "sha256": "fc1ce0a1524c6866c03aaf518f0d7056ba47834dc5c8a24f6f689f8c50ca724b"
+        },
+        {
+          "file": "FJ2886",
+          "sha256": "32b38d09c913d78e21863e40d1e661730a0522e06f6d9c8595fc8ce37050f1c4"
+        },
+        {
+          "file": "FJ2887",
+          "sha256": "c2ada586c2153865073bd233f98b659035675c9a49ff96d297a92e324a8dfb5d"
+        },
+        {
+          "file": "FJ2888",
+          "sha256": "48c2b6729e09202fa97918fc47dddf8bf0cfa46b32025be63bbf48d9aacca6f5"
+        },
+        {
+          "file": "FJ2889",
+          "sha256": "8fdf31ccfc469d7fbe00825a3daa990b478e32c1ad476263b5c62a1bfa6e1d00"
+        },
+        {
+          "file": "FJ2890",
+          "sha256": "a96f916bb1ee2d6be37600737d95d8b587c39b4555b6e120667e4394cd8e4830"
+        },
+        {
+          "file": "FJ2891",
+          "sha256": "379124a8465b7c0c3998e6eb6780a8f2f606dfcd771a1af1e3ec90b11866a3bd"
+        },
+        {
+          "file": "FJ2892",
+          "sha256": "cf6100ec0a04f979b00a8803732b1420deac3f82b8ed053456c34ee1f625fe2a"
+        },
+        {
+          "file": "FJ2893",
+          "sha256": "58544ef724582a4cbbea92d24b2b7ebadda07bbb9371de4a37db9cc857b0456b"
+        },
+        {
+          "file": "FJ2894",
+          "sha256": "89d4a63a968bd00dc2da4fe5baf7427b30ac29ae3fbe1944cdb750fc8cbfb666"
+        },
+        {
+          "file": "FJ2895",
+          "sha256": "4533df99087110a5230718ac586a17e893a1bdeb4459b666910db2958f399a65"
+        },
+        {
+          "file": "FJ2896",
+          "sha256": "a71de7bfc5ecd1b331a63b8303df66c943d14bd285e77e937790ad6adc4834c7"
+        },
+        {
+          "file": "FJ2897",
+          "sha256": "c698f9bf423345605feea0d9d235a57ee7bd3d54d59b053c30759340b25bd64f"
+        },
+        {
+          "file": "FJ2898",
+          "sha256": "0641fd4ca72a62ce5d5b2e977d4c3d85a4fa5d4ded1e564c39d36f7dc96ad4b7"
+        },
+        {
+          "file": "FJ2899",
+          "sha256": "38925605225819b262b62e5c0dff100a5969c04ec3c9a042d87a813309c57cca"
+        },
+        {
+          "file": "FJ2900",
+          "sha256": "07ca5c4533537685d5cb5449f5d62a275360e004ad2b56145fc7b0cd693806a9"
+        },
+        {
+          "file": "FJ2901",
+          "sha256": "e4705150e8e90e71e494fd2366adad0b399c0f8bead1d11592521e41955c9b36"
+        },
+        {
+          "file": "FJ2902",
+          "sha256": "23875d0f6ee363ba4ce26c2e742ce69fab8c7634330e9f4eb9778316ccd902b8"
+        },
+        {
+          "file": "FJ2903",
+          "sha256": "05c973d111b02754c02206fe101cda69e83a24ffcb4b0f788c4eb1fc4d68cac4"
+        },
+        {
+          "file": "FJ2904",
+          "sha256": "f36eafda5102fd0c4de1e364aea22e31663e8436b6c4b6e5009dd05519efa593"
+        },
+        {
+          "file": "FJ2905",
+          "sha256": "32cc6acd5fdf81bc1100b59c6d009ea21098eaafc012c221e767ffe0b88fb672"
+        },
+        {
+          "file": "FJ2906",
+          "sha256": "31b12f04efe6a0692f7d9f81cbe5cdb8bb38cbfc1d6f18b94c1bb74f31e2a9a3"
+        },
+        {
+          "file": "FJ2907",
+          "sha256": "b8c1877af9f078506c014c9e54a0181118c53da32f5747cc062bf6d10af34899"
+        },
+        {
+          "file": "FJ2908",
+          "sha256": "2a712a6f06c93e243186958635991d44c709e0d628d2140378398be5a6fede22"
+        },
+        {
+          "file": "FJ2909",
+          "sha256": "839fad0bb73387e30eba955eae475bae3f82fa67de92fde8cd45b972c2e14a29"
+        },
+        {
+          "file": "FJ2910",
+          "sha256": "93a28ddbf18ddef08c4e27d7eae71cc66e9fcd664fde90bde60dc08dd0925ec7"
+        },
+        {
+          "file": "FJ2911",
+          "sha256": "68dbb8593222b414fd5e5ad73842cbfb11c41f525eef42f2f3eee5c0486bf966"
+        },
+        {
+          "file": "FJ2912",
+          "sha256": "6f730d880c0a79587b24f8c8b1bc83056efaede4d7aab76638085abb7566d978"
+        },
+        {
+          "file": "FJ2913",
+          "sha256": "4936e7c72d76224afd96d13043e9a7289407eac60bff18e0e80e36da56805782"
+        },
+        {
+          "file": "FJ2914",
+          "sha256": "a7688a81452a84efa9bab01ba4ce5caecf37f52595d5c192f57e247b797cebcb"
+        },
+        {
+          "file": "FJ2915",
+          "sha256": "c1243bba41b9bf8e7d653dc87c2ee3d44794e181fb2eb2dc90125796f281a800"
+        },
+        {
+          "file": "FJ2916",
+          "sha256": "fbfff75d26deb68fd550025e6e7566a523af95e84f03c3670b31b6039f859180"
+        },
+        {
+          "file": "FJ2917",
+          "sha256": "7cae7fcbf70c5ebc56bf057f34225e66bcc37362ee6932c5d84c68c7d0c48aad"
+        },
+        {
+          "file": "FJ2918",
+          "sha256": "28e665ef0994bb3e8ffc02e8bda5fb0b970a23f1a320e0aaf5bf3fc9b1676533"
+        },
+        {
+          "file": "FJ2919",
+          "sha256": "9c1eaf17f330259874b90e906373aa1da51e326ef7a9a0dd3896259d5c8a5cb4"
+        },
+        {
+          "file": "FJ2920",
+          "sha256": "ac4833fc2019d4955ef0729ac14e07cf836135625c48ad2c25c5b190caa99557"
+        },
+        {
+          "file": "FJ2921",
+          "sha256": "35a721530266089dc3fd4eab9a946fc9f0173e76ff048cc6d4a62498ce103b6f"
+        },
+        {
+          "file": "FJ2922",
+          "sha256": "1dec6ac7c766169cdc1e096e6cb4d6afe507ccd43d7192b1a6ef1734b5b67bf1"
+        },
+        {
+          "file": "FJ2923",
+          "sha256": "9f49cebddf11bc380e358a6efc79987f5223a7384189434a68773eedb855ff02"
+        },
+        {
+          "file": "FJ2926",
+          "sha256": "fad414b395ab2c152b6a1e325a52035bd7ca9e01227e20bc80581e47b8b01343"
+        },
+        {
+          "file": "FJ2927",
+          "sha256": "363b208397100681a7f4bbc8b85d78eb997dccf970545cd849dc2d8c03d040bc"
+        },
+        {
+          "file": "FJ2928",
+          "sha256": "ac55e50920077e8bb9040abbf2b5a738d62574fc4d4fb0cdc070bc3e05802e43"
+        },
+        {
+          "file": "FJ2929",
+          "sha256": "58648f6a537960d1fbbf2fb281f8bd6aaac6592defbaca89ad33d331336ceba2"
+        },
+        {
+          "file": "FJ2930",
+          "sha256": "77ffddd9e5caeb43f2209b994563c4790be69b62d4e476418ed1e3fbc74ff62a"
+        },
+        {
+          "file": "FJ2931",
+          "sha256": "49225dadab2ba06e6050123a56b02266297f4cf0083a04dd91d4e304026b6613"
+        },
+        {
+          "file": "FJ2932",
+          "sha256": "6104f828c75ee74f80283a01a6ca46a6e23ced0b3b009527bcaad13d6ef3f55d"
+        },
+        {
+          "file": "FJ2934",
+          "sha256": "793374cff1ad399a5d33239b76e919c534fffd7680ce2c6125a535330ef7d54c"
+        },
+        {
+          "file": "FJ2935",
+          "sha256": "38e8748bbc3211d87c5a07ac58f18951fb304373d5306e8eaf969fa6e0ef0e82"
+        },
+        {
+          "file": "FJ2936",
+          "sha256": "59d31a9d4a8bce89ce9cb9679d6453e9a60bb64ec1af6ef6a76dacdeebd3f022"
+        },
+        {
+          "file": "FJ2937",
+          "sha256": "d756defc0690df98dfe2f3d8dcd921e27d7808f6da6b02f5f91fbf72b2610f46"
+        },
+        {
+          "file": "FJ2938",
+          "sha256": "29cbd44a1a23886d928581749cb55f11eb8d1a373f3729d950529837e2f0efa4"
+        },
+        {
+          "file": "FJ2939",
+          "sha256": "3554e5004bc079d3f6b4285903df1ac9cb6e786a825a036cfb7ae50b852e9ef6"
+        },
+        {
+          "file": "FJ2940",
+          "sha256": "d16c3735ac73b3c4350d40dac386159ab33e0c89478f82d3e3b29e0aa788953a"
+        },
+        {
+          "file": "FJ2941",
+          "sha256": "84244ca55e36c864f120e50386e1ef7222421dac701d025a6ca8e1b7e6193f66"
+        },
+        {
+          "file": "FJ2942",
+          "sha256": "06c2e1f33d64582246b2f7c72d1e280e405eefc74eb416adb434174db7174feb"
+        },
+        {
+          "file": "FJ2943",
+          "sha256": "8e0ca7020bd35705642118266421daaa6465b257f8972e8f7e5577c96200ea36"
+        },
+        {
+          "file": "FJ2945",
+          "sha256": "d9323f8364e3f36ee32ccaf41142fd321acd9fc4adce54687a7e0ce420cb65df"
+        },
+        {
+          "file": "FJ2946",
+          "sha256": "ac29bbb11a29e54c93f03840ad052316e8d45de9153ce9c802f13e70418cb97a"
+        },
+        {
+          "file": "FJ2947",
+          "sha256": "371fed38231d406a72f3b1711e0d8df8c065952055b2993a7487b67e4d764f61"
+        },
+        {
+          "file": "FJ2948",
+          "sha256": "778cc361cd4c1b56c192e686d04b26ba0bc1a9b21bcb9363f91dbf062fee7aaf"
+        },
+        {
+          "file": "FJ2949",
+          "sha256": "ee8a3c9bc9a97f8b9bbd1c8d0be4a34357511f175ceab098e4bbd95a3201a97f"
+        },
+        {
+          "file": "FJ2951",
+          "sha256": "d63bcdb232e79e2bf88e3da62994b5bcdddc1e1821a0e6057b1bb7b8902dc6f0"
+        },
+        {
+          "file": "FJ2952",
+          "sha256": "6830d54b9b35e1062cb57807a6ef582206148cc8e35cc8199975bbe4ddaf51f7"
+        },
+        {
+          "file": "FJ2953",
+          "sha256": "0517ed1e8c48d39d815a881e92ffcdf48295f453ae27305c05038bc00536c943"
+        },
+        {
+          "file": "FJ2954",
+          "sha256": "d3bcc4279b58b38171861b577c1d3fc211de998cb73bdd7c2c1a8255a2bf248e"
+        },
+        {
+          "file": "FJ2956",
+          "sha256": "40b055d9eba6dc8ce90def14f4f74d52481edc931821e1f394c2aacbf5694746"
+        },
+        {
+          "file": "FJ2957",
+          "sha256": "94ce2b6eb030ae026730d7690cfbc25bb7c584dd0ac0abc66a855e7ae15a022f"
+        },
+        {
+          "file": "FJ2958",
+          "sha256": "07e806d97e0a0a79d0b7dc6a4e633bdfa5016bb3956cd04548681e3bb81e8ef0"
+        },
+        {
+          "file": "FJ2959",
+          "sha256": "bcbcb7fd063492bbf82b413fca1b1aa92963cb60bb3c5a07ab3e8c7ff74def85"
+        },
+        {
+          "file": "FJ2960",
+          "sha256": "909c5e1c806f948c8b260ced4c4ecb00c09048e4bd9f66038337427ff26de439"
+        },
+        {
+          "file": "FJ2961",
+          "sha256": "1406206eb57cc1044d8490254d8ec55a37bf274b279c98db14e5fca11941b358"
+        },
+        {
+          "file": "FJ2962",
+          "sha256": "0d2d819e42c32c550dcb4bcd2e3c5bb792b3d11479dae12b32f07c9ce4751d37"
+        },
+        {
+          "file": "FJ2963",
+          "sha256": "05d14aa9f4220464c00ad01a581176a56460714dfa2ac67858345ffdaa012a4b"
+        },
+        {
+          "file": "FJ2964",
+          "sha256": "1740fff7638d1eb24e5d1a5f414f4809e929181202c87d14ae214413fb3fac73"
+        },
+        {
+          "file": "FJ2965",
+          "sha256": "f224fab88bea0cff03a42e6582182e8503ff11b7b17b7bf803c6ba03fa1be803"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "originalStructures": [
+    {
+      "id": "vm:anatomy:body:thorax:right:organ:right-upper-lobe-branches",
+      "fmaId": "FMA7333",
+      "name": "Right upper lobe branches",
+      "sourceName": "upper lobe of right lung",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "pulmonary-right",
+      "nodeName": "FMA7333",
+      "bounds": {
+        "min": [
+          -0.9961540102958679,
+          2.145900249481201,
+          -0.10356899350881577
+        ],
+        "max": [
+          0.04834650084376335,
+          5.480200290679932,
+          0.9873899817466736
+        ]
+      },
+      "center": [
+        -0.4739037547260523,
+        3.8130502700805664,
+        0.4419104941189289
+      ],
+      "anchor": [
+        -0.34374698996543884,
+        4.483199596405029,
+        0.47439101338386536
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2041",
+          "sha256": "d52990514f3fd26238511bc25ae0fdbeef1555b2b450b13166925fb8f3541120"
+        },
+        {
+          "file": "FJ2044",
+          "sha256": "92c5a838b3e2be5316d0b4c0ff2b644e533f60d91dffd2716807116033aef0e7"
+        },
+        {
+          "file": "FJ2453",
+          "sha256": "4753a2f69f7ca376a149db4fd659ec2ea1f86884a59ce92c51635697bb455843"
+        },
+        {
+          "file": "FJ2454",
+          "sha256": "88123cad730989bea78f4f0c9d1c278763ae0936fc463832dab147c86fa78e34"
+        },
+        {
+          "file": "FJ2458",
+          "sha256": "311b93c7abf1c094c045c18c2eb7f17963b0d60ad2c874a823f57fb2f11187c6"
+        },
+        {
+          "file": "FJ2509",
+          "sha256": "1714bc450b7fadc5735099fdd7bc6ea03f35b591a96c7c63e12e93d5c9ba7aa5"
+        },
+        {
+          "file": "FJ2510",
+          "sha256": "cf2c2acd29c67b6890894472099c3c3387a970fdf6c75496c9dccd38e33cdeaf"
+        },
+        {
+          "file": "FJ2511",
+          "sha256": "edc3b11467d2b2bf91a9691d5f738526b94d7bdde39fa7809d164dec8a2f5505"
+        },
+        {
+          "file": "FJ2512",
+          "sha256": "96f6c4bf177237f27bd0694c6c818f1f5227b5ece8884eacdb9f447592010c2e"
+        },
+        {
+          "file": "FJ2513",
+          "sha256": "4b261ffedf0954bc7e9119c8bae7edf8779cc2114291b8c631f1a487a0045114"
+        },
+        {
+          "file": "FJ2514",
+          "sha256": "9404eb550bacf8b5bab8fc09675717576a8fa7dfb27b9cf5d714172b58f9ae68"
+        },
+        {
+          "file": "FJ2515",
+          "sha256": "0b69795c5ad5bc506e7f51327e4a52032b6ca49d631fff0160317dd608a60966"
+        },
+        {
+          "file": "FJ2516",
+          "sha256": "826b1bc8c191768f3cb8c490511ebedcb8b97454383ba5719c2bc878f7ae0ce9"
+        },
+        {
+          "file": "FJ2517",
+          "sha256": "bedfdb3f698ab46309118fa7ffa5761308f51ca88f7f2467e4657c3a767b2377"
+        },
+        {
+          "file": "FJ2518",
+          "sha256": "3a7e31fde656404844fc4c4c4e4f79b136586a8a3272fe481176a23530771e4c"
+        },
+        {
+          "file": "FJ2519",
+          "sha256": "f599ba9c13ec90e64ffb445b9ff02cfd56bb83ab721256399e2cbd9cff03cb72"
+        },
+        {
+          "file": "FJ2520",
+          "sha256": "39e86b28fd18cb4f9ed2ffbb4a29935d4891000e6b5242b298b6b1755f4d5715"
+        },
+        {
+          "file": "FJ2521",
+          "sha256": "4d07b383a6d4e1a604c7ec0c6677e030cdc609b4065251410a3cae38ff7024be"
+        },
+        {
+          "file": "FJ2522",
+          "sha256": "b19bcb13f7f8dbf8a0fe755c449839689c4addb7e08156a678c7eb6616a8018a"
+        },
+        {
+          "file": "FJ2523",
+          "sha256": "85675485c514feb3c8627923fd7c3a7ac50335ff3824211da29ec21d336c3bb7"
+        },
+        {
+          "file": "FJ2524",
+          "sha256": "a2942179f276ca4450e87736a3d3316aa27b655d2bdf9db730ad269712238d37"
+        },
+        {
+          "file": "FJ2525",
+          "sha256": "68cdd6f1c1b22f5fb4546b9bc645b07cf62da3d0537d5328aa0b1ab9bd25f7b9"
+        },
+        {
+          "file": "FJ2526",
+          "sha256": "5fea18655f20183f11295ecdfdc019277ff395486360a7a0fda16c2621c159f9"
+        },
+        {
+          "file": "FJ2967",
+          "sha256": "3b18d2e99aebc749e230f9994fbe677313bf2a14bf79e3573bc8ac7859bb73da"
+        },
+        {
+          "file": "FJ2968",
+          "sha256": "0267770d371d5c3928cd7ed558bb234644c852007ea7e0a5c340fd65cd743bb8"
+        },
+        {
+          "file": "FJ2969",
+          "sha256": "6c3bbe60cde8152bdd21bcc0d864a0fda94174a1bb75e6b55530695e7b9c3ce2"
+        },
+        {
+          "file": "FJ2970",
+          "sha256": "69d361d775022c820afe6d8fe784d834482d4c0ce55a1df0f94370f4f963a46e"
+        },
+        {
+          "file": "FJ2971",
+          "sha256": "29c805a2b89a9587df2b158395b20ed4c905f56e643c0441f6485dcac82199a2"
+        },
+        {
+          "file": "FJ2972",
+          "sha256": "da6aa85ff26d46e5ee3feb9b9b483a80a99965f3eba76df42d83b9299ae1f4fa"
+        },
+        {
+          "file": "FJ2973",
+          "sha256": "e741ad502c67f78ae98f918193e34286224f8380b0551c03ae7a1a7e1d2af9c5"
+        },
+        {
+          "file": "FJ2974",
+          "sha256": "623910c3664b645dbdebae004130f124965453dfb6cfd4166f976eb2bea78391"
+        },
+        {
+          "file": "FJ2975",
+          "sha256": "8e912f0d152e037c81eddd8f86ae84722f7a21ab32e4b3ca4e341594c3eeec28"
+        },
+        {
+          "file": "FJ2976",
+          "sha256": "7148c08361207cbf9887834bcbadbb361e84cd2aa185a4b6d49ab45c9f719666"
+        },
+        {
+          "file": "FJ2977",
+          "sha256": "9d877f080e66dc6d7222d950dbf1a4e4916fa24ece279d92bce62f88145310ec"
+        },
+        {
+          "file": "FJ2978",
+          "sha256": "0c8a4ec2f2755fde9e89835f8df28862f8666e77b72185731b2aec694f88b8ab"
+        },
+        {
+          "file": "FJ2979",
+          "sha256": "80c8df6c3859ba8b68a6d839f16877d06b7733c3903e41f0fb4dbec9b6002c8d"
+        },
+        {
+          "file": "FJ2980",
+          "sha256": "0fa70de8164718985d303a9b8645f10d56d15938ece1c9516616c062695cca3d"
+        },
+        {
+          "file": "FJ2981",
+          "sha256": "01ad75de79e0a9d4dc4281c40a750ec17daa5b8b3a321ca6eca23fa1f0f72c50"
+        },
+        {
+          "file": "FJ2989",
+          "sha256": "ffc5e7b5ef204d6f66b1582dd13a6e4b60952c1fd95b933390fde464ff01718b"
+        },
+        {
+          "file": "FJ3000",
+          "sha256": "f50a98d1a391ae137702cdbf47603d75d1300735d65e4ca9fd84c1ebbe7500f4"
+        },
+        {
+          "file": "FJ3011",
+          "sha256": "ca0f4ca7d3032444d952190c3e50cc8c03090b311ad88df5428582a00619a85d"
+        },
+        {
+          "file": "FJ3015",
+          "sha256": "de6f61d587d4c8176f16f86ffd4442ec5c69208bc8e8d7625e9b7aa1dc6579f9"
+        },
+        {
+          "file": "FJ3016",
+          "sha256": "e7bb5644f4853c91d74a4691e520b58d937b840b60d1b87792fac2562428ded0"
+        },
+        {
+          "file": "FJ3017",
+          "sha256": "0363f0de71395705d583533706645f83bcd27f486953b0a7cf74754ed96b3214"
+        },
+        {
+          "file": "FJ3018",
+          "sha256": "5d16b04e44b0979df0f0346ced1d49096e3be79a53962c129ec3ab2fe487ae10"
+        },
+        {
+          "file": "FJ3021",
+          "sha256": "d7c046ef6d3d84c58c33b55cee9bafb14170862bed5b9d4fe1dc897a35aa961b"
+        },
+        {
+          "file": "FJ3022",
+          "sha256": "1fcfdf4d6bb75498f20cde31a18d3a6a9abb19f52ab3d7b3399ebf42699b28fd"
+        },
+        {
+          "file": "FJ3023",
+          "sha256": "9853554488b7e9879f2f1a96b34b19cbeaecd01a8720b8752d55755913513151"
+        },
+        {
+          "file": "FJ3024",
+          "sha256": "aa19f43fea57296c8330c017ea0f307489c7a73a6470de755910a801051d824a"
+        },
+        {
+          "file": "FJ3025",
+          "sha256": "0ab47fe8dd1f565d6455447b5a615ee1e9cb4aa9a53e9e6500119c1ef6aa31e7"
+        },
+        {
+          "file": "FJ3026",
+          "sha256": "ef1032250149dfcf88673cd8c944d6f201040000469e7f0b949af6afabda4e8e"
+        },
+        {
+          "file": "FJ3027",
+          "sha256": "fe4643b42c0fe785c0e60b09c715132da7e03225564233d34b3e094f8d9febf9"
+        },
+        {
+          "file": "FJ3028",
+          "sha256": "01915769535411ec4597c1582620b5821cd636f54dc79331de3bdcfc89cab720"
+        },
+        {
+          "file": "FJ3029",
+          "sha256": "6378d522355f810c3b42281438e0f6fc990239b1e812d679cb1295260a194bd4"
+        },
+        {
+          "file": "FJ3031",
+          "sha256": "5b36e47a88886de1ab64453c6f97cad458794d861e7367544fd920e3ff648cdb"
+        },
+        {
+          "file": "FJ3042",
+          "sha256": "8348cb98ec1bc66b5852ddcf254d9923ffdbfccf6d162776dbfc8dd907bc327b"
+        },
+        {
+          "file": "FJ3053",
+          "sha256": "73f302620f1d778175b9fe6067f93e9253f92ecd170f7770ccefcd4d038b40a1"
+        },
+        {
+          "file": "FJ3064",
+          "sha256": "7aea5192bb926177f306944c21f866d3d35c2fd307f8b00349a1eb8c1b2bb758"
+        },
+        {
+          "file": "FJ3067",
+          "sha256": "c16c1e6158bc3523a6dbaca1691aeff61efa43eeb4cdb4a5a8f7b1be8a596b33"
+        },
+        {
+          "file": "FJ3068",
+          "sha256": "0e13303935659ec4b5bb05fb1765ce986e72b77acff8a177fe6ac765d9b1a798"
+        },
+        {
+          "file": "FJ3069",
+          "sha256": "fac24171ab61e7b50ac353600cf5d58dab4b5417c3922f4e1781c80aabc27661"
+        },
+        {
+          "file": "FJ3070",
+          "sha256": "79b6af3a5d4fa81c2aac0e7d665cf4e8e489f850ae3a6ae4345e3d95f2ac619a"
+        }
+      ],
+      "parentId": "vm:anatomy:body:thorax:right:organ:right-lung",
+      "level": "upper",
+      "roleCounts": {
+        "airway": 21,
+        "artery": 24,
+        "vein": 17,
+        "unclassified": 0
+      },
+      "coverageNote": "Partial source representation: airway and vessel branches grouped by lobe membership; no lobe parenchyma, fissure surfaces, alveoli or complete bronchovascular territories. Not a volume or segmentation mask.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:organ:right-middle-lobe-branches",
+      "fmaId": "FMA7383",
+      "name": "Right middle lobe branches",
+      "sourceName": "middle lobe of lung",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "pulmonary-right",
+      "nodeName": "FMA7383",
+      "bounds": {
+        "min": [
+          -1.1398600339889526,
+          3.802600145339966,
+          0.2707109749317169
+        ],
+        "max": [
+          -0.1901020109653473,
+          4.596700668334961,
+          1.2380999326705933
+        ]
+      },
+      "center": [
+        -0.66498102247715,
+        4.199650406837463,
+        0.7544054538011551
+      ],
+      "anchor": [
+        -0.6659649610519409,
+        4.197199821472168,
+        0.712369978427887
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2449",
+          "sha256": "0b17bf783e9229d279c86e9322b6f6e243b841de14a0409a1fa96456a8a6fd04"
+        },
+        {
+          "file": "FJ2451",
+          "sha256": "5c1771d3c4837b5b69e74441236e1cd1f505bf967e6a81e0c1e17445032eec1e"
+        },
+        {
+          "file": "FJ2503",
+          "sha256": "c0b528632a04c5f1f6e64e4a5b1c5f7f931eeac04809be955f367165747c4913"
+        },
+        {
+          "file": "FJ2504",
+          "sha256": "ca40945d3428c057e62be35150bd7569d5749e9d01809da3c57f98fee783fc06"
+        },
+        {
+          "file": "FJ2505",
+          "sha256": "3bba26b9b0d2d0138e227a5e6e3b53226e0e12cceac13014d0e0800a5c314c49"
+        },
+        {
+          "file": "FJ2506",
+          "sha256": "cef0aded90ec711f89d9f133187555ffd6b235718855c7c4df2673f1e41b0dc4"
+        },
+        {
+          "file": "FJ2507",
+          "sha256": "5566feecce7363209e4d8f3910e0699ad93789b50f812008cc5eac427f491a3b"
+        },
+        {
+          "file": "FJ2508",
+          "sha256": "8a6145969f6ece99bc5ebc7bbd8db44178016b5527f0036c1e55d0b187967124"
+        },
+        {
+          "file": "FJ2982",
+          "sha256": "7494dcce5d01681979d19b8ca6b9e47f50a070798448ca5d6758e436ff4eaff9"
+        },
+        {
+          "file": "FJ2983",
+          "sha256": "0124c45a5e00914f90eff4118dad2f4d384fcff423e3371af2a4cda69d984854"
+        },
+        {
+          "file": "FJ2984",
+          "sha256": "3df3920fed60f9116b8c1ef8370b3bef41bc1eda4282cd76cbf76e1b4d097151"
+        },
+        {
+          "file": "FJ2985",
+          "sha256": "190e3dce0b1a866fef0302d90eac21f9ae617631a7dff2a8ef3b57def6daab7d"
+        },
+        {
+          "file": "FJ2986",
+          "sha256": "77e49deba75b03615e15e81ebf1495006c9d29cbfeeec0bb035095b1bca54cd9"
+        },
+        {
+          "file": "FJ2987",
+          "sha256": "d16ffeaf8b5da0884b2773c781f2763d1b170f3f296d3e717c34cdf30153a80e"
+        },
+        {
+          "file": "FJ2988",
+          "sha256": "3d7d7ffe312bfe4e516edfb67421f19eee24ad614abb5be782d6d9ffc63bb7fc"
+        },
+        {
+          "file": "FJ2990",
+          "sha256": "bb9345ace85f5b8c35412b953d51aadb5ccfa4d2e51d85af655c42c83d8dcd9b"
+        },
+        {
+          "file": "FJ3030",
+          "sha256": "0aea211bdc5bd1ab4fababacf2c31bd781c98b33a25b9cbab887caea90336079"
+        },
+        {
+          "file": "FJ3032",
+          "sha256": "e88becca7ddf38d900a78c4d192959ecd589ce0032026e09a9fdbfc2b278937a"
+        },
+        {
+          "file": "FJ3033",
+          "sha256": "c9d23ebe4835a50e0ea13109292d451c7c34026effee27a764b11b4b9fabd318"
+        },
+        {
+          "file": "FJ3034",
+          "sha256": "0d84a80aa138f074f4caad194e7d930d88a62f478f9c73dcbf5db2ccf87c007e"
+        },
+        {
+          "file": "FJ3035",
+          "sha256": "00cfa5c5489240f21d0efd7b20009f120bace9909699b400f497321bdc65ac22"
+        },
+        {
+          "file": "FJ3036",
+          "sha256": "8bccfc47d20659b4772080af6948e9c01f0356e35e05ef131756d7661b1f6457"
+        },
+        {
+          "file": "FJ3037",
+          "sha256": "aaf657ee22b9749e365462c729d557be0ddcd3026d9ffa33429169f921e63f08"
+        },
+        {
+          "file": "FJ3038",
+          "sha256": "3300d4e15ff24574cdcb750d9e03909ebf3499242b238f5eefa792fd8a4132c6"
+        },
+        {
+          "file": "FJ3039",
+          "sha256": "3c7d62a01349f154d8d3496ca0f6f84a6858b50b3c95e2a82c51cb13d31691e4"
+        }
+      ],
+      "parentId": "vm:anatomy:body:thorax:right:organ:right-lung",
+      "level": "middle",
+      "roleCounts": {
+        "airway": 8,
+        "artery": 8,
+        "vein": 9,
+        "unclassified": 0
+      },
+      "coverageNote": "Partial source representation: airway and vessel branches grouped by lobe membership; no lobe parenchyma, fissure surfaces, alveoli or complete bronchovascular territories. Not a volume or segmentation mask.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:organ:right-lower-lobe-branches",
+      "fmaId": "FMA7337",
+      "name": "Right lower lobe branches",
+      "sourceName": "lower lobe of right lung",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "pulmonary-right",
+      "nodeName": "FMA7337",
+      "bounds": {
+        "min": [
+          -1.1654000282287598,
+          3.344899892807007,
+          -0.2905749976634979
+        ],
+        "max": [
+          -0.0874451994895935,
+          4.931700229644775,
+          0.48912498354911804
+        ]
+      },
+      "center": [
+        -0.6264226138591766,
+        4.138300061225891,
+        0.09927499294281006
+      ],
+      "anchor": [
+        -0.5888990163803101,
+        4.134100437164307,
+        0.10931701958179474
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2452",
+          "sha256": "13a428c6691e43fc62b70f055061518ef59e25bc39f7ff4ba29b72d120ffbaab"
+        },
+        {
+          "file": "FJ2455",
+          "sha256": "7758820e2beb33284de3276d986ecfe2947f8a7869d8ad939b54e337f5590743"
+        },
+        {
+          "file": "FJ2456",
+          "sha256": "98b2b20bb08530aca323ac07b2c2d35eeb001fffd4a587f47de825349c09dc26"
+        },
+        {
+          "file": "FJ2457",
+          "sha256": "9693f23e864bc668c5705df406d99f911d65b2dd184d6cf50d923b2046af9a75"
+        },
+        {
+          "file": "FJ2459",
+          "sha256": "c93561e1dff5a7ea360a95cd7600f1d7306bfd12e10c4dccd36dfc34c7fba83e"
+        },
+        {
+          "file": "FJ2470",
+          "sha256": "ff2aade1295ecc04ea46f39181b2c6688a9320b374bd98ce45e5e24979d660e4"
+        },
+        {
+          "file": "FJ2481",
+          "sha256": "92669323b5b0c67ab73db4d2e0708c812b356cdcc7695cea86ccd3d9a4c82aa1"
+        },
+        {
+          "file": "FJ2486",
+          "sha256": "24a05a87546c554c7ca8ead6b83d101075c034bcca4bbd565f6555b0546436cd"
+        },
+        {
+          "file": "FJ2487",
+          "sha256": "92b1374c9c5fd44c7c9b30d56ceebe335f04dea0246cc4e7e39931db9a7cf499"
+        },
+        {
+          "file": "FJ2488",
+          "sha256": "0c13f3775d83c97e3680cdcd21dd6a08aaa88e27f3ec194c46656ba3fec86856"
+        },
+        {
+          "file": "FJ2489",
+          "sha256": "4da7026ff7c343f8ba453e3bf6f8b9d6a3ed3951dc912e3cb1bdfd8ef8898778"
+        },
+        {
+          "file": "FJ2490",
+          "sha256": "b4f90915d8bab4bbdc709eb3cfc2ee5f69747a55e7c49e192d901dbc754af57c"
+        },
+        {
+          "file": "FJ2491",
+          "sha256": "70cf62a3f2795a31d105a4529501e35f7d6cac81918b3daa67efa2066c312490"
+        },
+        {
+          "file": "FJ2492",
+          "sha256": "09f07da0cbb3e991fbd11acc3b7972e53322ffc8943a0fddeb6206b43ba314dd"
+        },
+        {
+          "file": "FJ2493",
+          "sha256": "316057eefe3951378a54a8be78a812ef770cb840fcd3510652488e2a6f01bf10"
+        },
+        {
+          "file": "FJ2494",
+          "sha256": "ad18d80f4adfefac9e28afc3e92977ff3a2b91363442125eb1b76ef79dc5198b"
+        },
+        {
+          "file": "FJ2495",
+          "sha256": "05cd679bcc9bdf096f8225fc912629ca7e9d8ac5bdfd953aa035d7f5febdeca0"
+        },
+        {
+          "file": "FJ2496",
+          "sha256": "1c25619334e8c82d823706ca5c95bb9466eb65a00b82e38305cb51e370ceecbb"
+        },
+        {
+          "file": "FJ2497",
+          "sha256": "45f451850b731505fd33b5cb853181290b8ecf2cdb6e9eb38bf4ed45fae06feb"
+        },
+        {
+          "file": "FJ2498",
+          "sha256": "397d42ba5f2579cabf2de58ba365482ddf92c93e74390e74026a06eee0f33da8"
+        },
+        {
+          "file": "FJ2499",
+          "sha256": "dcdf9aa446ea578d1a5029e0ea8354369b0dfb74c98ea6f6f690cac8c26cec8e"
+        },
+        {
+          "file": "FJ2500",
+          "sha256": "30055ea7c3210934af6473ea76fc21e2d491344dde3db588ceed344528e8d3ee"
+        },
+        {
+          "file": "FJ2501",
+          "sha256": "6b6f46acabe02d28557b4313300f496c9c360da605645e60a33053aadc855e49"
+        },
+        {
+          "file": "FJ2502",
+          "sha256": "98e5e5a7e774f2c70a97883365137d700b512ef142b0a8f616fd35a8e2dbf65b"
+        },
+        {
+          "file": "FJ2991",
+          "sha256": "022d7193227b41d25fe639a8ec4d49b05a9048bc41edebcbf88e353f94ef9be2"
+        },
+        {
+          "file": "FJ2992",
+          "sha256": "fe994778e6a7659b9ff1f65d70b190f4d7388e4eb6704674845c375708151875"
+        },
+        {
+          "file": "FJ2993",
+          "sha256": "07cfb61f8620bc29d8962738b405102fb00e8728e66e95a477a4b7a51c7781e9"
+        },
+        {
+          "file": "FJ2994",
+          "sha256": "be8bc186033d93f6a104537972d14f646cfc8f16ec30564ccdbcee637973144f"
+        },
+        {
+          "file": "FJ2995",
+          "sha256": "e60f9f58a24e683a0eb4c4c8423ee69fca0d62690b7d548b148b9b399a02d828"
+        },
+        {
+          "file": "FJ2996",
+          "sha256": "5e8197cb11567126932629538de9c407a6af49368617c1857a87fba920c43989"
+        },
+        {
+          "file": "FJ2997",
+          "sha256": "09ff589f6aab4edc59cee6e2439efa426cb636033682bb5d2bfb22dbd68f153b"
+        },
+        {
+          "file": "FJ2998",
+          "sha256": "ac138f3e6f044a94dd5306e3edb9a25bc1849996d88fa6fdd635de9b39b92c68"
+        },
+        {
+          "file": "FJ2999",
+          "sha256": "bf597ef5eee13e22cd83f4d78d9ff1aaf074a513dc98fc223060b59a4b4dd4d3"
+        },
+        {
+          "file": "FJ3001",
+          "sha256": "3f8a4a113437bc9bd097d7cceb5d82934458e5562f8d7f1c6b1ab80a6037823c"
+        },
+        {
+          "file": "FJ3002",
+          "sha256": "d66ec5db20772fbce61e563d4804be9aed680f91141ff13a02c25b1b26e47675"
+        },
+        {
+          "file": "FJ3003",
+          "sha256": "c906af931a973815637ad5524e4f946b8ea1c41a5b01ead598b6c5941c7fc240"
+        },
+        {
+          "file": "FJ3004",
+          "sha256": "dfc3321ef449d7a274a485617437a43c611048c38f9a27690eff849bb61b66a8"
+        },
+        {
+          "file": "FJ3005",
+          "sha256": "4829d47c6937364d4841f1aa5d645c0672323b5196c1162a6b0c85e78384ec6a"
+        },
+        {
+          "file": "FJ3006",
+          "sha256": "afb6adf3c58e47bf5a08666c6e5570ae23feb7d51ba079b9466d29c19f2c8d13"
+        },
+        {
+          "file": "FJ3007",
+          "sha256": "48ab550f68716d5e9bc228c71733604c368eb47c946a3f23be72a974801ee615"
+        },
+        {
+          "file": "FJ3008",
+          "sha256": "f3956466989e7d0b92405aa4059bf8f75b473da60176b238906ab7adc6e1e4b0"
+        },
+        {
+          "file": "FJ3009",
+          "sha256": "56762f7e7766a85140e50964848d0d56a11252c76b02811d2d8e5e895bf78363"
+        },
+        {
+          "file": "FJ3010",
+          "sha256": "40c1e43cc4948a5e497ea7a740ba7d1c8eb89b4e8137adfee0bf19fc929a9b5a"
+        },
+        {
+          "file": "FJ3012",
+          "sha256": "b62ce0956c98fe8ccb9e92aa7f1e04979a2fc67eea9011b9fec267e970efb6f9"
+        },
+        {
+          "file": "FJ3013",
+          "sha256": "7d462f3de4c52328332787ef529a7e673f444411bfd437eec0c766ea5e4568c3"
+        },
+        {
+          "file": "FJ3014",
+          "sha256": "cfe69f44c2f72fdc7928319ab389759d2b329fb0d12d93ee2b3b4c17135b1ad3"
+        },
+        {
+          "file": "FJ3041",
+          "sha256": "dba8530e4e021d6378881c6315f21377ef6819352b0d48dab32f971f55b68e29"
+        },
+        {
+          "file": "FJ3043",
+          "sha256": "05d961534e19451d65531109a40a9bd2276b35b1f2f3b612f5a5d06168226b99"
+        },
+        {
+          "file": "FJ3044",
+          "sha256": "30ad07679245f56ec20b383e4665df228f9acf59f357a2aacaf9fad402299dd2"
+        },
+        {
+          "file": "FJ3045",
+          "sha256": "a1a70bb44cecb8a52796d02f7958a43388a9308a9fd0ad064c95e66b49e95aa5"
+        },
+        {
+          "file": "FJ3046",
+          "sha256": "74d6222055c21c6581ab154e351b91f4e57bba2f3abfb8da17364b8917e34229"
+        },
+        {
+          "file": "FJ3047",
+          "sha256": "6c7990555ce97dea123932a1fb56135cf82b2d6c309e7083387d53c8f690bfb5"
+        },
+        {
+          "file": "FJ3048",
+          "sha256": "655dabe52638e598cc552cbf7bb7c31ffd8cd1d37a92dab2129b3282e8bb504a"
+        },
+        {
+          "file": "FJ3049",
+          "sha256": "d8668404e9a9fe58cec2c8676751550c856e62b660cbb7d1ecaff8f152b5a7c9"
+        },
+        {
+          "file": "FJ3050",
+          "sha256": "848e258c0bfa7ef596e3a96646e43d89da1dad8633d04c9531e56454f4efcc53"
+        },
+        {
+          "file": "FJ3051",
+          "sha256": "001e64913b5efc2af0cee710f0891586f1a9e8de0b0e214ce9be1f0536d620de"
+        },
+        {
+          "file": "FJ3052",
+          "sha256": "2c68df1784d024669e0e37a4fb1d0e22b0bb804547f4ecbfcc814b8832ddf902"
+        },
+        {
+          "file": "FJ3054",
+          "sha256": "cf8013a7e9aff9db39703108ddcd3a3cff95210f608afea2a9aeb31e684fbb1f"
+        },
+        {
+          "file": "FJ3055",
+          "sha256": "e581441e67fed5b6225b401529610d65f3b199f24ed32a61c84d212a5061c24c"
+        },
+        {
+          "file": "FJ3056",
+          "sha256": "6ab8a75fa921d473dc53ea2f233a806ed0e5227c1cb1cf1693cd0c76f013d85a"
+        },
+        {
+          "file": "FJ3057",
+          "sha256": "7e5b47ae7217398ed3604484ffe2c8d9c9ecf7da7b9fba9261518891fa2b5a31"
+        },
+        {
+          "file": "FJ3058",
+          "sha256": "5f3dd61a518b3d46bc903797e37b5f1df9c9bf0459ed4c8715cca31d114be2da"
+        },
+        {
+          "file": "FJ3059",
+          "sha256": "0869acb61038b06dbfa8adc90e77faac650913070b5733b377e8d6242ee5def2"
+        },
+        {
+          "file": "FJ3060",
+          "sha256": "ee39c7e79005aaa920afba4a21517de78e2cb8674ff9ff60535131242cc7f92e"
+        },
+        {
+          "file": "FJ3061",
+          "sha256": "75536e65550d3bf1fd7a3c15ca8c6b9c4497fe9945d1d12a221dca0e90d59660"
+        },
+        {
+          "file": "FJ3062",
+          "sha256": "5389d53834968728a52dbba765230e533b3c1c2dcc53d797a68e328cf65500ad"
+        },
+        {
+          "file": "FJ3063",
+          "sha256": "ed8211f4f7b5e5439f70c98333f15c79d791676ce76595633278444949d941bd"
+        },
+        {
+          "file": "FJ3065",
+          "sha256": "dc4249b117762f15f6adc2e03b8dc96822bf4b61cc29053b53b4e752a435ccbd"
+        },
+        {
+          "file": "FJ3066",
+          "sha256": "e5c53904242f77732a33d793184c4cf422e36e7712c480b276ab019237082c82"
+        }
+      ],
+      "parentId": "vm:anatomy:body:thorax:right:organ:right-lung",
+      "level": "lower",
+      "roleCounts": {
+        "airway": 24,
+        "artery": 22,
+        "vein": 23,
+        "unclassified": 0
+      },
+      "coverageNote": "Partial source representation: airway and vessel branches grouped by lobe membership; no lobe parenchyma, fissure surfaces, alveoli or complete bronchovascular territories. Not a volume or segmentation mask.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:organ:left-upper-lobe-branches",
+      "fmaId": "FMA7370",
+      "name": "Left upper lobe branches",
+      "sourceName": "upper lobe of left lung",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "pulmonary-left",
+      "nodeName": "FMA7370",
+      "bounds": {
+        "min": [
+          0.19649401307106018,
+          3.7072997093200684,
+          -0.24630698561668396
+        ],
+        "max": [
+          1.1336599588394165,
+          5.559399604797363,
+          1.2787100076675415
+        ]
+      },
+      "center": [
+        0.6650769859552383,
+        4.633349657058716,
+        0.5162015110254288
+      ],
+      "anchor": [
+        0.6915040016174316,
+        4.637399673461914,
+        0.5061799883842468
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2441",
+          "sha256": "64b373dbea8fea4f475219800087b0bdec736471a640e2660a9a9cac5f35b3ec"
+        },
+        {
+          "file": "FJ2443",
+          "sha256": "d9ecc1c75a9021f68a186433dd6f7e6cbe5058459f4c0b94aff3239e0dcff4fd"
+        },
+        {
+          "file": "FJ2444",
+          "sha256": "4fa463ea77c7aaea2b44ac26272a9fb10711d1d000b1464662a7a5389c8e6104"
+        },
+        {
+          "file": "FJ2447",
+          "sha256": "3550c217bbea847d0bff2cdbbebd8f10607247ac6cae96b2458641b18c3ecf06"
+        },
+        {
+          "file": "FJ2460",
+          "sha256": "33b697f2b0996c6d5ff6723d62573e2b515f657cf675776bf7aab3da35db2856"
+        },
+        {
+          "file": "FJ2461",
+          "sha256": "da15dca4d16db1ddd3b51ddf46ccbb3e7b2780920a09665d0ea321cb1021bf0b"
+        },
+        {
+          "file": "FJ2462",
+          "sha256": "654b5b6e95817618bf7b186c363ffe8336abdbde9b305fcaefc3e4fbdedecea9"
+        },
+        {
+          "file": "FJ2463",
+          "sha256": "4f3659eab7252936df40eb3029836834ed563797ebd5b1fe081a2d1303853e05"
+        },
+        {
+          "file": "FJ2464",
+          "sha256": "6eae8179f9a5a765d9a1f2353a6b35342a15665bb3c52000dd10fb7efc5a9c87"
+        },
+        {
+          "file": "FJ2465",
+          "sha256": "e821c7b23402f6e64914d6c485b5a9e37c5e5d9bed386776b6c572486a5777ec"
+        },
+        {
+          "file": "FJ2466",
+          "sha256": "0fbb025940446f5a4c7a46f5e0aadd186b1ce0e14d83ed73f6581c2337143478"
+        },
+        {
+          "file": "FJ2467",
+          "sha256": "adb6e9730a4f48ab4976216c5bc9b28fb2077b9a213f1ca9f6b23d91077c6683"
+        },
+        {
+          "file": "FJ2468",
+          "sha256": "4b97d114f6af1274ae2b07fc7fb1ff426808012b061c20998b3ec75f305f583e"
+        },
+        {
+          "file": "FJ2469",
+          "sha256": "d0ba96fa139c3e4aa58ccfe3e5bbc601845ddb95aeebe15c3e52ba3720b5b4ed"
+        },
+        {
+          "file": "FJ2471",
+          "sha256": "65042bb74a06d48d9fc6adb7d0d33167db7e0195199a6af741acc5a81c9e2bbc"
+        },
+        {
+          "file": "FJ2472",
+          "sha256": "46c5f757ade14ef9d0b4629fbd360ac52d992fa1e3f22a9c4ff986482ddfe0e8"
+        },
+        {
+          "file": "FJ2473",
+          "sha256": "c6db14ca2d3f5ba038b1a64ea29df192cbc5f2319d524214b491b571dc4506a3"
+        },
+        {
+          "file": "FJ2474",
+          "sha256": "bb8e119c4518f5238026a2e37a73faffaeca4958a8f137aeaf27eab89f77dcdd"
+        },
+        {
+          "file": "FJ2475",
+          "sha256": "76ce29f348ed8ba738f35a9cfb7c1b087ead1e734ef4358aca789e45b667c749"
+        },
+        {
+          "file": "FJ2476",
+          "sha256": "7ca6f318aa98dc428c3f5b5237b5cd11744ca0b2ad54e2c23ee4585c1ce8508e"
+        },
+        {
+          "file": "FJ2477",
+          "sha256": "153faedcab2867f0731b9b56727e375b8de11aae2e4e16c72a74f335b8094400"
+        },
+        {
+          "file": "FJ2478",
+          "sha256": "159053dc8c5f1d4bf5021548dc0ff79d2ca980a3108e910a77b828604523aa15"
+        },
+        {
+          "file": "FJ2540",
+          "sha256": "034abcb466e8f71def0d77707f6266d1fcdbceae26a0dcc0dfd92ec6b5ecb076"
+        },
+        {
+          "file": "FJ2896",
+          "sha256": "a71de7bfc5ecd1b331a63b8303df66c943d14bd285e77e937790ad6adc4834c7"
+        },
+        {
+          "file": "FJ2897",
+          "sha256": "c698f9bf423345605feea0d9d235a57ee7bd3d54d59b053c30759340b25bd64f"
+        },
+        {
+          "file": "FJ2898",
+          "sha256": "0641fd4ca72a62ce5d5b2e977d4c3d85a4fa5d4ded1e564c39d36f7dc96ad4b7"
+        },
+        {
+          "file": "FJ2899",
+          "sha256": "38925605225819b262b62e5c0dff100a5969c04ec3c9a042d87a813309c57cca"
+        },
+        {
+          "file": "FJ2900",
+          "sha256": "07ca5c4533537685d5cb5449f5d62a275360e004ad2b56145fc7b0cd693806a9"
+        },
+        {
+          "file": "FJ2901",
+          "sha256": "e4705150e8e90e71e494fd2366adad0b399c0f8bead1d11592521e41955c9b36"
+        },
+        {
+          "file": "FJ2902",
+          "sha256": "23875d0f6ee363ba4ce26c2e742ce69fab8c7634330e9f4eb9778316ccd902b8"
+        },
+        {
+          "file": "FJ2904",
+          "sha256": "f36eafda5102fd0c4de1e364aea22e31663e8436b6c4b6e5009dd05519efa593"
+        },
+        {
+          "file": "FJ2905",
+          "sha256": "32cc6acd5fdf81bc1100b59c6d009ea21098eaafc012c221e767ffe0b88fb672"
+        },
+        {
+          "file": "FJ2906",
+          "sha256": "31b12f04efe6a0692f7d9f81cbe5cdb8bb38cbfc1d6f18b94c1bb74f31e2a9a3"
+        },
+        {
+          "file": "FJ2907",
+          "sha256": "b8c1877af9f078506c014c9e54a0181118c53da32f5747cc062bf6d10af34899"
+        },
+        {
+          "file": "FJ2908",
+          "sha256": "2a712a6f06c93e243186958635991d44c709e0d628d2140378398be5a6fede22"
+        },
+        {
+          "file": "FJ2909",
+          "sha256": "839fad0bb73387e30eba955eae475bae3f82fa67de92fde8cd45b972c2e14a29"
+        },
+        {
+          "file": "FJ2910",
+          "sha256": "93a28ddbf18ddef08c4e27d7eae71cc66e9fcd664fde90bde60dc08dd0925ec7"
+        },
+        {
+          "file": "FJ2911",
+          "sha256": "68dbb8593222b414fd5e5ad73842cbfb11c41f525eef42f2f3eee5c0486bf966"
+        },
+        {
+          "file": "FJ2912",
+          "sha256": "6f730d880c0a79587b24f8c8b1bc83056efaede4d7aab76638085abb7566d978"
+        },
+        {
+          "file": "FJ2913",
+          "sha256": "4936e7c72d76224afd96d13043e9a7289407eac60bff18e0e80e36da56805782"
+        },
+        {
+          "file": "FJ2915",
+          "sha256": "c1243bba41b9bf8e7d653dc87c2ee3d44794e181fb2eb2dc90125796f281a800"
+        },
+        {
+          "file": "FJ2916",
+          "sha256": "fbfff75d26deb68fd550025e6e7566a523af95e84f03c3670b31b6039f859180"
+        },
+        {
+          "file": "FJ2917",
+          "sha256": "7cae7fcbf70c5ebc56bf057f34225e66bcc37362ee6932c5d84c68c7d0c48aad"
+        },
+        {
+          "file": "FJ2918",
+          "sha256": "28e665ef0994bb3e8ffc02e8bda5fb0b970a23f1a320e0aaf5bf3fc9b1676533"
+        },
+        {
+          "file": "FJ2926",
+          "sha256": "fad414b395ab2c152b6a1e325a52035bd7ca9e01227e20bc80581e47b8b01343"
+        },
+        {
+          "file": "FJ2927",
+          "sha256": "363b208397100681a7f4bbc8b85d78eb997dccf970545cd849dc2d8c03d040bc"
+        },
+        {
+          "file": "FJ2928",
+          "sha256": "ac55e50920077e8bb9040abbf2b5a738d62574fc4d4fb0cdc070bc3e05802e43"
+        },
+        {
+          "file": "FJ2929",
+          "sha256": "58648f6a537960d1fbbf2fb281f8bd6aaac6592defbaca89ad33d331336ceba2"
+        },
+        {
+          "file": "FJ2930",
+          "sha256": "77ffddd9e5caeb43f2209b994563c4790be69b62d4e476418ed1e3fbc74ff62a"
+        },
+        {
+          "file": "FJ2931",
+          "sha256": "49225dadab2ba06e6050123a56b02266297f4cf0083a04dd91d4e304026b6613"
+        },
+        {
+          "file": "FJ2932",
+          "sha256": "6104f828c75ee74f80283a01a6ca46a6e23ced0b3b009527bcaad13d6ef3f55d"
+        },
+        {
+          "file": "FJ2934",
+          "sha256": "793374cff1ad399a5d33239b76e919c534fffd7680ce2c6125a535330ef7d54c"
+        },
+        {
+          "file": "FJ2935",
+          "sha256": "38e8748bbc3211d87c5a07ac58f18951fb304373d5306e8eaf969fa6e0ef0e82"
+        },
+        {
+          "file": "FJ2936",
+          "sha256": "59d31a9d4a8bce89ce9cb9679d6453e9a60bb64ec1af6ef6a76dacdeebd3f022"
+        },
+        {
+          "file": "FJ2937",
+          "sha256": "d756defc0690df98dfe2f3d8dcd921e27d7808f6da6b02f5f91fbf72b2610f46"
+        },
+        {
+          "file": "FJ2938",
+          "sha256": "29cbd44a1a23886d928581749cb55f11eb8d1a373f3729d950529837e2f0efa4"
+        },
+        {
+          "file": "FJ2939",
+          "sha256": "3554e5004bc079d3f6b4285903df1ac9cb6e786a825a036cfb7ae50b852e9ef6"
+        },
+        {
+          "file": "FJ2940",
+          "sha256": "d16c3735ac73b3c4350d40dac386159ab33e0c89478f82d3e3b29e0aa788953a"
+        },
+        {
+          "file": "FJ2941",
+          "sha256": "84244ca55e36c864f120e50386e1ef7222421dac701d025a6ca8e1b7e6193f66"
+        },
+        {
+          "file": "FJ2942",
+          "sha256": "06c2e1f33d64582246b2f7c72d1e280e405eefc74eb416adb434174db7174feb"
+        },
+        {
+          "file": "FJ2943",
+          "sha256": "8e0ca7020bd35705642118266421daaa6465b257f8972e8f7e5577c96200ea36"
+        },
+        {
+          "file": "FJ2947",
+          "sha256": "371fed38231d406a72f3b1711e0d8df8c065952055b2993a7487b67e4d764f61"
+        },
+        {
+          "file": "FJ2958",
+          "sha256": "07e806d97e0a0a79d0b7dc6a4e633bdfa5016bb3956cd04548681e3bb81e8ef0"
+        },
+        {
+          "file": "FJ2961",
+          "sha256": "1406206eb57cc1044d8490254d8ec55a37bf274b279c98db14e5fca11941b358"
+        },
+        {
+          "file": "FJ2962",
+          "sha256": "0d2d819e42c32c550dcb4bcd2e3c5bb792b3d11479dae12b32f07c9ce4751d37"
+        },
+        {
+          "file": "FJ2963",
+          "sha256": "05d14aa9f4220464c00ad01a581176a56460714dfa2ac67858345ffdaa012a4b"
+        },
+        {
+          "file": "FJ2964",
+          "sha256": "1740fff7638d1eb24e5d1a5f414f4809e929181202c87d14ae214413fb3fac73"
+        },
+        {
+          "file": "FJ2965",
+          "sha256": "f224fab88bea0cff03a42e6582182e8503ff11b7b17b7bf803c6ba03fa1be803"
+        }
+      ],
+      "parentId": "vm:anatomy:body:thorax:left:organ:left-lung",
+      "level": "upper",
+      "roleCounts": {
+        "airway": 23,
+        "artery": 21,
+        "vein": 24,
+        "unclassified": 0
+      },
+      "coverageNote": "Partial source representation: airway and vessel branches grouped by lobe membership; no lobe parenchyma, fissure surfaces, alveoli or complete bronchovascular territories. Not a volume or segmentation mask.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:organ:left-lower-lobe-branches",
+      "fmaId": "FMA7371",
+      "name": "Left lower lobe branches",
+      "sourceName": "lower lobe of left lung",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "pulmonary-left",
+      "nodeName": "FMA7371",
+      "bounds": {
+        "min": [
+          0.3597230017185211,
+          3.231099843978882,
+          -0.2968609929084778
+        ],
+        "max": [
+          1.2543200254440308,
+          4.941400051116943,
+          0.9212399125099182
+        ]
+      },
+      "center": [
+        0.8070215135812759,
+        4.086249947547913,
+        0.3121894598007202
+      ],
+      "anchor": [
+        0.7952679991722107,
+        4.067099571228027,
+        0.3061850070953369
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2442",
+          "sha256": "49fbe8509027d1d8e9d572b31de9a3741a02de9eca1ee65a6f1d96b79b35fd57"
+        },
+        {
+          "file": "FJ2445",
+          "sha256": "e38bac437798a86e2ec37730443443134c0923ef9532c75b428dc530b81df32a"
+        },
+        {
+          "file": "FJ2446",
+          "sha256": "56338429270073446704a97d17c52719f8eee320393658d9f1774a645d2908d9"
+        },
+        {
+          "file": "FJ2448",
+          "sha256": "9b95d3c4d9115b2b5dfb36ecb5ca7a66953a5f87fe4c7f58a6d486c352cfc183"
+        },
+        {
+          "file": "FJ2479",
+          "sha256": "53574009c39352a0fd2a6dd84b68845690b77d652b6b2a8de784ad92aa6c4551"
+        },
+        {
+          "file": "FJ2480",
+          "sha256": "7e07ea18e778db8f00142c69b4b2bb0ee415d294044dc332b138055f902ef4f8"
+        },
+        {
+          "file": "FJ2482",
+          "sha256": "5722b7698bedb29cf076888f776811b1c7d1d729f5ec14f9d51dac8057389e8c"
+        },
+        {
+          "file": "FJ2483",
+          "sha256": "37cee30d3fd34853e8be332261ecebf4a3f2a95170cf414a97d6151ed6c6d22c"
+        },
+        {
+          "file": "FJ2484",
+          "sha256": "859d772c3a7e053109365d3aa777b064d1f6ef7a266d4266405fb1af84cb8196"
+        },
+        {
+          "file": "FJ2485",
+          "sha256": "2f43d9288d325e57de763d458717f04fabd06fc697c337a1fe7d0ae043726f44"
+        },
+        {
+          "file": "FJ2527",
+          "sha256": "2812f475d2c482cd23064de0aa5f2b59c6b72058814d652a45845aa2b0fb0676"
+        },
+        {
+          "file": "FJ2528",
+          "sha256": "bf677fabc8c85fa8b35718048e9138582680a578e1be670ccde9108a14e9be11"
+        },
+        {
+          "file": "FJ2529",
+          "sha256": "cff5d941d69aae1ccfe21bd2cd775a294bea6cd53f3f9239f866811e223bcf33"
+        },
+        {
+          "file": "FJ2530",
+          "sha256": "09eb35909d8fbf647b0e52385ced1e895aa8b8e5e225118cd1fe89fca7571a08"
+        },
+        {
+          "file": "FJ2531",
+          "sha256": "169a4dbc6947dcfd98bb0bcf5f4ffb437ecbf2a7ee51d93944d3ca58252251fd"
+        },
+        {
+          "file": "FJ2532",
+          "sha256": "bf30a052e36f1a984fb9cca54df188a6995875dba5bf07bf7b2b6548dcd1461e"
+        },
+        {
+          "file": "FJ2533",
+          "sha256": "3f033d99e01946940c4191019fc0c174d1d5fa9b28dddc1426968feb61e6d9de"
+        },
+        {
+          "file": "FJ2534",
+          "sha256": "461e5c6c3dc5de63c38dc937e6128fb4889c8605c50a15807037addaae12e79a"
+        },
+        {
+          "file": "FJ2535",
+          "sha256": "4670a1458826c005d352d25bb2e9d029ba7c105f9c94ab1794e72c13fe0bf93d"
+        },
+        {
+          "file": "FJ2536",
+          "sha256": "d3ad0f299e740ab709a4d626a21f7e8fe15eb130de52ec293be518d7eb5cc8f9"
+        },
+        {
+          "file": "FJ2537",
+          "sha256": "b71c206496ab91bab4988e857fb49d4b74daa3e05af02dcb1c7eb2d54defc461"
+        },
+        {
+          "file": "FJ2538",
+          "sha256": "1b0fbbabb7b834cf21554103793e3b6040cd040a4553522db38a0cd14a68dfdf"
+        },
+        {
+          "file": "FJ2881",
+          "sha256": "ed30dc150cff62adeea8107c3fa164a3a14a06e54c2fc1709875655a9db37fe6"
+        },
+        {
+          "file": "FJ2882",
+          "sha256": "4c818f1db1cc14b6d7c1549174fc3fb6e7b6cce56bd04542b23eebe33efcfa62"
+        },
+        {
+          "file": "FJ2883",
+          "sha256": "4ed8ded534c49f725c3403bafdc47dac755c9dacd02c3b8d4cdaad7c951e00dc"
+        },
+        {
+          "file": "FJ2884",
+          "sha256": "abfae95bcf1f126d11866a62c2f45839f99f88b3722c88da1ab57baf8baccfd6"
+        },
+        {
+          "file": "FJ2885",
+          "sha256": "fc1ce0a1524c6866c03aaf518f0d7056ba47834dc5c8a24f6f689f8c50ca724b"
+        },
+        {
+          "file": "FJ2886",
+          "sha256": "32b38d09c913d78e21863e40d1e661730a0522e06f6d9c8595fc8ce37050f1c4"
+        },
+        {
+          "file": "FJ2887",
+          "sha256": "c2ada586c2153865073bd233f98b659035675c9a49ff96d297a92e324a8dfb5d"
+        },
+        {
+          "file": "FJ2888",
+          "sha256": "48c2b6729e09202fa97918fc47dddf8bf0cfa46b32025be63bbf48d9aacca6f5"
+        },
+        {
+          "file": "FJ2889",
+          "sha256": "8fdf31ccfc469d7fbe00825a3daa990b478e32c1ad476263b5c62a1bfa6e1d00"
+        },
+        {
+          "file": "FJ2890",
+          "sha256": "a96f916bb1ee2d6be37600737d95d8b587c39b4555b6e120667e4394cd8e4830"
+        },
+        {
+          "file": "FJ2891",
+          "sha256": "379124a8465b7c0c3998e6eb6780a8f2f606dfcd771a1af1e3ec90b11866a3bd"
+        },
+        {
+          "file": "FJ2892",
+          "sha256": "cf6100ec0a04f979b00a8803732b1420deac3f82b8ed053456c34ee1f625fe2a"
+        },
+        {
+          "file": "FJ2893",
+          "sha256": "58544ef724582a4cbbea92d24b2b7ebadda07bbb9371de4a37db9cc857b0456b"
+        },
+        {
+          "file": "FJ2894",
+          "sha256": "89d4a63a968bd00dc2da4fe5baf7427b30ac29ae3fbe1944cdb750fc8cbfb666"
+        },
+        {
+          "file": "FJ2895",
+          "sha256": "4533df99087110a5230718ac586a17e893a1bdeb4459b666910db2958f399a65"
+        },
+        {
+          "file": "FJ2903",
+          "sha256": "05c973d111b02754c02206fe101cda69e83a24ffcb4b0f788c4eb1fc4d68cac4"
+        },
+        {
+          "file": "FJ2914",
+          "sha256": "a7688a81452a84efa9bab01ba4ce5caecf37f52595d5c192f57e247b797cebcb"
+        },
+        {
+          "file": "FJ2919",
+          "sha256": "9c1eaf17f330259874b90e906373aa1da51e326ef7a9a0dd3896259d5c8a5cb4"
+        },
+        {
+          "file": "FJ2920",
+          "sha256": "ac4833fc2019d4955ef0729ac14e07cf836135625c48ad2c25c5b190caa99557"
+        },
+        {
+          "file": "FJ2921",
+          "sha256": "35a721530266089dc3fd4eab9a946fc9f0173e76ff048cc6d4a62498ce103b6f"
+        },
+        {
+          "file": "FJ2922",
+          "sha256": "1dec6ac7c766169cdc1e096e6cb4d6afe507ccd43d7192b1a6ef1734b5b67bf1"
+        },
+        {
+          "file": "FJ2923",
+          "sha256": "9f49cebddf11bc380e358a6efc79987f5223a7384189434a68773eedb855ff02"
+        },
+        {
+          "file": "FJ2945",
+          "sha256": "d9323f8364e3f36ee32ccaf41142fd321acd9fc4adce54687a7e0ce420cb65df"
+        },
+        {
+          "file": "FJ2946",
+          "sha256": "ac29bbb11a29e54c93f03840ad052316e8d45de9153ce9c802f13e70418cb97a"
+        },
+        {
+          "file": "FJ2948",
+          "sha256": "778cc361cd4c1b56c192e686d04b26ba0bc1a9b21bcb9363f91dbf062fee7aaf"
+        },
+        {
+          "file": "FJ2949",
+          "sha256": "ee8a3c9bc9a97f8b9bbd1c8d0be4a34357511f175ceab098e4bbd95a3201a97f"
+        },
+        {
+          "file": "FJ2951",
+          "sha256": "d63bcdb232e79e2bf88e3da62994b5bcdddc1e1821a0e6057b1bb7b8902dc6f0"
+        },
+        {
+          "file": "FJ2952",
+          "sha256": "6830d54b9b35e1062cb57807a6ef582206148cc8e35cc8199975bbe4ddaf51f7"
+        },
+        {
+          "file": "FJ2953",
+          "sha256": "0517ed1e8c48d39d815a881e92ffcdf48295f453ae27305c05038bc00536c943"
+        },
+        {
+          "file": "FJ2954",
+          "sha256": "d3bcc4279b58b38171861b577c1d3fc211de998cb73bdd7c2c1a8255a2bf248e"
+        },
+        {
+          "file": "FJ2956",
+          "sha256": "40b055d9eba6dc8ce90def14f4f74d52481edc931821e1f394c2aacbf5694746"
+        },
+        {
+          "file": "FJ2957",
+          "sha256": "94ce2b6eb030ae026730d7690cfbc25bb7c584dd0ac0abc66a855e7ae15a022f"
+        },
+        {
+          "file": "FJ2959",
+          "sha256": "bcbcb7fd063492bbf82b413fca1b1aa92963cb60bb3c5a07ab3e8c7ff74def85"
+        },
+        {
+          "file": "FJ2960",
+          "sha256": "909c5e1c806f948c8b260ced4c4ecb00c09048e4bd9f66038337427ff26de439"
+        }
+      ],
+      "parentId": "vm:anatomy:body:thorax:left:organ:left-lung",
+      "level": "lower",
+      "roleCounts": {
+        "airway": 22,
+        "artery": 22,
+        "vein": 12,
+        "unclassified": 0
+      },
+      "coverageNote": "Partial source representation: airway and vessel branches grouped by lobe membership; no lobe parenchyma, fissure surfaces, alveoli or complete bronchovascular territories. Not a volume or segmentation mask.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "originalBundles": [
+    {
+      "id": "pulmonary-right",
+      "url": "/models/bodyparts3d/pulmonary/pulmonary-right.glb?v=62bb25db79270dbd6fe96598e9438d7bfca3592c5f7559cd1ea320e18bb16eca",
+      "sha256": "62bb25db79270dbd6fe96598e9438d7bfca3592c5f7559cd1ea320e18bb16eca",
+      "bytes": 1330588,
+      "structures": 3
+    },
+    {
+      "id": "pulmonary-left",
+      "url": "/models/bodyparts3d/pulmonary/pulmonary-left.glb?v=d4670d3c15580e2a1ef53debab32f08c8199fe6ddaf90af3f3aedb197d93e68d",
+      "sha256": "d4670d3c15580e2a1ef53debab32f08c8199fe6ddaf90af3f3aedb197d93e68d",
+      "bytes": 754268,
+      "structures": 2
+    }
+  ],
+  "auditSha256": "734fc23b6d4812b81ffb007214c271096562bcb8376766fc9d609bfddabc95db",
+  "subsets": [
+    {
+      "groupId": "vm:anatomy:body:thorax:right:organ:right-upper-lobe-branches",
+      "role": "airway",
+      "bundle": "pulmonary-right-branch-types",
+      "nodeName": "FMA7333_airway",
+      "bounds": {
+        "min": [
+          -0.9961540102958679,
+          4.581700325012207,
+          -0.10356899350881577
+        ],
+        "max": [
+          -0.20284700393676758,
+          5.478499889373779,
+          0.9825700521469116
+        ]
+      },
+      "center": [
+        -0.5995005071163177,
+        5.030100107192993,
+        0.43950052931904793
+      ],
+      "anchor": [
+        -0.6436350345611572,
+        4.838699817657471,
+        0.4655410051345825
+      ],
+      "sources": [
+        {
+          "file": "FJ2453",
+          "sha256": "4753a2f69f7ca376a149db4fd659ec2ea1f86884a59ce92c51635697bb455843"
+        },
+        {
+          "file": "FJ2454",
+          "sha256": "88123cad730989bea78f4f0c9d1c278763ae0936fc463832dab147c86fa78e34"
+        },
+        {
+          "file": "FJ2458",
+          "sha256": "311b93c7abf1c094c045c18c2eb7f17963b0d60ad2c874a823f57fb2f11187c6"
+        },
+        {
+          "file": "FJ2509",
+          "sha256": "1714bc450b7fadc5735099fdd7bc6ea03f35b591a96c7c63e12e93d5c9ba7aa5"
+        },
+        {
+          "file": "FJ2510",
+          "sha256": "cf2c2acd29c67b6890894472099c3c3387a970fdf6c75496c9dccd38e33cdeaf"
+        },
+        {
+          "file": "FJ2511",
+          "sha256": "edc3b11467d2b2bf91a9691d5f738526b94d7bdde39fa7809d164dec8a2f5505"
+        },
+        {
+          "file": "FJ2512",
+          "sha256": "96f6c4bf177237f27bd0694c6c818f1f5227b5ece8884eacdb9f447592010c2e"
+        },
+        {
+          "file": "FJ2513",
+          "sha256": "4b261ffedf0954bc7e9119c8bae7edf8779cc2114291b8c631f1a487a0045114"
+        },
+        {
+          "file": "FJ2514",
+          "sha256": "9404eb550bacf8b5bab8fc09675717576a8fa7dfb27b9cf5d714172b58f9ae68"
+        },
+        {
+          "file": "FJ2515",
+          "sha256": "0b69795c5ad5bc506e7f51327e4a52032b6ca49d631fff0160317dd608a60966"
+        },
+        {
+          "file": "FJ2516",
+          "sha256": "826b1bc8c191768f3cb8c490511ebedcb8b97454383ba5719c2bc878f7ae0ce9"
+        },
+        {
+          "file": "FJ2517",
+          "sha256": "bedfdb3f698ab46309118fa7ffa5761308f51ca88f7f2467e4657c3a767b2377"
+        },
+        {
+          "file": "FJ2518",
+          "sha256": "3a7e31fde656404844fc4c4c4e4f79b136586a8a3272fe481176a23530771e4c"
+        },
+        {
+          "file": "FJ2519",
+          "sha256": "f599ba9c13ec90e64ffb445b9ff02cfd56bb83ab721256399e2cbd9cff03cb72"
+        },
+        {
+          "file": "FJ2520",
+          "sha256": "39e86b28fd18cb4f9ed2ffbb4a29935d4891000e6b5242b298b6b1755f4d5715"
+        },
+        {
+          "file": "FJ2521",
+          "sha256": "4d07b383a6d4e1a604c7ec0c6677e030cdc609b4065251410a3cae38ff7024be"
+        },
+        {
+          "file": "FJ2522",
+          "sha256": "b19bcb13f7f8dbf8a0fe755c449839689c4addb7e08156a678c7eb6616a8018a"
+        },
+        {
+          "file": "FJ2523",
+          "sha256": "85675485c514feb3c8627923fd7c3a7ac50335ff3824211da29ec21d336c3bb7"
+        },
+        {
+          "file": "FJ2524",
+          "sha256": "a2942179f276ca4450e87736a3d3316aa27b655d2bdf9db730ad269712238d37"
+        },
+        {
+          "file": "FJ2525",
+          "sha256": "68cdd6f1c1b22f5fb4546b9bc645b07cf62da3d0537d5328aa0b1ab9bd25f7b9"
+        },
+        {
+          "file": "FJ2526",
+          "sha256": "5fea18655f20183f11295ecdfdc019277ff395486360a7a0fda16c2621c159f9"
+        }
+      ],
+      "triangles": 14448
+    },
+    {
+      "groupId": "vm:anatomy:body:thorax:right:organ:right-upper-lobe-branches",
+      "role": "artery",
+      "bundle": "pulmonary-right-branch-types",
+      "nodeName": "FMA7333_artery",
+      "bounds": {
+        "min": [
+          -0.9887239933013916,
+          2.145900249481201,
+          -0.08861198276281357
+        ],
+        "max": [
+          0.04834650084376335,
+          5.480200290679932,
+          0.9873899817466736
+        ]
+      },
+      "center": [
+        -0.4701887462288141,
+        3.8130502700805664,
+        0.44938899949193
+      ],
+      "anchor": [
+        -0.34765398502349854,
+        4.612900257110596,
+        0.3935469686985016
+      ],
+      "sources": [
+        {
+          "file": "FJ2041",
+          "sha256": "d52990514f3fd26238511bc25ae0fdbeef1555b2b450b13166925fb8f3541120"
+        },
+        {
+          "file": "FJ2044",
+          "sha256": "92c5a838b3e2be5316d0b4c0ff2b644e533f60d91dffd2716807116033aef0e7"
+        },
+        {
+          "file": "FJ2967",
+          "sha256": "3b18d2e99aebc749e230f9994fbe677313bf2a14bf79e3573bc8ac7859bb73da"
+        },
+        {
+          "file": "FJ2968",
+          "sha256": "0267770d371d5c3928cd7ed558bb234644c852007ea7e0a5c340fd65cd743bb8"
+        },
+        {
+          "file": "FJ2969",
+          "sha256": "6c3bbe60cde8152bdd21bcc0d864a0fda94174a1bb75e6b55530695e7b9c3ce2"
+        },
+        {
+          "file": "FJ2970",
+          "sha256": "69d361d775022c820afe6d8fe784d834482d4c0ce55a1df0f94370f4f963a46e"
+        },
+        {
+          "file": "FJ2971",
+          "sha256": "29c805a2b89a9587df2b158395b20ed4c905f56e643c0441f6485dcac82199a2"
+        },
+        {
+          "file": "FJ2972",
+          "sha256": "da6aa85ff26d46e5ee3feb9b9b483a80a99965f3eba76df42d83b9299ae1f4fa"
+        },
+        {
+          "file": "FJ2973",
+          "sha256": "e741ad502c67f78ae98f918193e34286224f8380b0551c03ae7a1a7e1d2af9c5"
+        },
+        {
+          "file": "FJ2974",
+          "sha256": "623910c3664b645dbdebae004130f124965453dfb6cfd4166f976eb2bea78391"
+        },
+        {
+          "file": "FJ2975",
+          "sha256": "8e912f0d152e037c81eddd8f86ae84722f7a21ab32e4b3ca4e341594c3eeec28"
+        },
+        {
+          "file": "FJ2976",
+          "sha256": "7148c08361207cbf9887834bcbadbb361e84cd2aa185a4b6d49ab45c9f719666"
+        },
+        {
+          "file": "FJ2977",
+          "sha256": "9d877f080e66dc6d7222d950dbf1a4e4916fa24ece279d92bce62f88145310ec"
+        },
+        {
+          "file": "FJ2978",
+          "sha256": "0c8a4ec2f2755fde9e89835f8df28862f8666e77b72185731b2aec694f88b8ab"
+        },
+        {
+          "file": "FJ2979",
+          "sha256": "80c8df6c3859ba8b68a6d839f16877d06b7733c3903e41f0fb4dbec9b6002c8d"
+        },
+        {
+          "file": "FJ2980",
+          "sha256": "0fa70de8164718985d303a9b8645f10d56d15938ece1c9516616c062695cca3d"
+        },
+        {
+          "file": "FJ2981",
+          "sha256": "01ad75de79e0a9d4dc4281c40a750ec17daa5b8b3a321ca6eca23fa1f0f72c50"
+        },
+        {
+          "file": "FJ2989",
+          "sha256": "ffc5e7b5ef204d6f66b1582dd13a6e4b60952c1fd95b933390fde464ff01718b"
+        },
+        {
+          "file": "FJ3000",
+          "sha256": "f50a98d1a391ae137702cdbf47603d75d1300735d65e4ca9fd84c1ebbe7500f4"
+        },
+        {
+          "file": "FJ3011",
+          "sha256": "ca0f4ca7d3032444d952190c3e50cc8c03090b311ad88df5428582a00619a85d"
+        },
+        {
+          "file": "FJ3015",
+          "sha256": "de6f61d587d4c8176f16f86ffd4442ec5c69208bc8e8d7625e9b7aa1dc6579f9"
+        },
+        {
+          "file": "FJ3016",
+          "sha256": "e7bb5644f4853c91d74a4691e520b58d937b840b60d1b87792fac2562428ded0"
+        },
+        {
+          "file": "FJ3017",
+          "sha256": "0363f0de71395705d583533706645f83bcd27f486953b0a7cf74754ed96b3214"
+        },
+        {
+          "file": "FJ3018",
+          "sha256": "5d16b04e44b0979df0f0346ced1d49096e3be79a53962c129ec3ab2fe487ae10"
+        }
+      ],
+      "triangles": 7562
+    },
+    {
+      "groupId": "vm:anatomy:body:thorax:right:organ:right-upper-lobe-branches",
+      "role": "vein",
+      "bundle": "pulmonary-right-branch-types",
+      "nodeName": "FMA7333_vein",
+      "bounds": {
+        "min": [
+          -0.8389890193939209,
+          4.480600357055664,
+          -0.00021999358432367444
+        ],
+        "max": [
+          -0.2012919932603836,
+          5.463699817657471,
+          0.891450047492981
+        ]
+      },
+      "center": [
+        -0.5201405063271523,
+        4.972150087356567,
+        0.44561502695432864
+      ],
+      "anchor": [
+        -0.552282989025116,
+        4.958399772644043,
+        0.40528395771980286
+      ],
+      "sources": [
+        {
+          "file": "FJ3021",
+          "sha256": "d7c046ef6d3d84c58c33b55cee9bafb14170862bed5b9d4fe1dc897a35aa961b"
+        },
+        {
+          "file": "FJ3022",
+          "sha256": "1fcfdf4d6bb75498f20cde31a18d3a6a9abb19f52ab3d7b3399ebf42699b28fd"
+        },
+        {
+          "file": "FJ3023",
+          "sha256": "9853554488b7e9879f2f1a96b34b19cbeaecd01a8720b8752d55755913513151"
+        },
+        {
+          "file": "FJ3024",
+          "sha256": "aa19f43fea57296c8330c017ea0f307489c7a73a6470de755910a801051d824a"
+        },
+        {
+          "file": "FJ3025",
+          "sha256": "0ab47fe8dd1f565d6455447b5a615ee1e9cb4aa9a53e9e6500119c1ef6aa31e7"
+        },
+        {
+          "file": "FJ3026",
+          "sha256": "ef1032250149dfcf88673cd8c944d6f201040000469e7f0b949af6afabda4e8e"
+        },
+        {
+          "file": "FJ3027",
+          "sha256": "fe4643b42c0fe785c0e60b09c715132da7e03225564233d34b3e094f8d9febf9"
+        },
+        {
+          "file": "FJ3028",
+          "sha256": "01915769535411ec4597c1582620b5821cd636f54dc79331de3bdcfc89cab720"
+        },
+        {
+          "file": "FJ3029",
+          "sha256": "6378d522355f810c3b42281438e0f6fc990239b1e812d679cb1295260a194bd4"
+        },
+        {
+          "file": "FJ3031",
+          "sha256": "5b36e47a88886de1ab64453c6f97cad458794d861e7367544fd920e3ff648cdb"
+        },
+        {
+          "file": "FJ3042",
+          "sha256": "8348cb98ec1bc66b5852ddcf254d9923ffdbfccf6d162776dbfc8dd907bc327b"
+        },
+        {
+          "file": "FJ3053",
+          "sha256": "73f302620f1d778175b9fe6067f93e9253f92ecd170f7770ccefcd4d038b40a1"
+        },
+        {
+          "file": "FJ3064",
+          "sha256": "7aea5192bb926177f306944c21f866d3d35c2fd307f8b00349a1eb8c1b2bb758"
+        },
+        {
+          "file": "FJ3067",
+          "sha256": "c16c1e6158bc3523a6dbaca1691aeff61efa43eeb4cdb4a5a8f7b1be8a596b33"
+        },
+        {
+          "file": "FJ3068",
+          "sha256": "0e13303935659ec4b5bb05fb1765ce986e72b77acff8a177fe6ac765d9b1a798"
+        },
+        {
+          "file": "FJ3069",
+          "sha256": "fac24171ab61e7b50ac353600cf5d58dab4b5417c3922f4e1781c80aabc27661"
+        },
+        {
+          "file": "FJ3070",
+          "sha256": "79b6af3a5d4fa81c2aac0e7d665cf4e8e489f850ae3a6ae4345e3d95f2ac619a"
+        }
+      ],
+      "triangles": 3490
+    },
+    {
+      "groupId": "vm:anatomy:body:thorax:right:organ:right-middle-lobe-branches",
+      "role": "airway",
+      "bundle": "pulmonary-right-branch-types",
+      "nodeName": "FMA7383_airway",
+      "bounds": {
+        "min": [
+          -1.1398600339889526,
+          3.802600145339966,
+          0.2707109749317169
+        ],
+        "max": [
+          -0.2589769959449768,
+          4.535699367523193,
+          1.2380999326705933
+        ]
+      },
+      "center": [
+        -0.6994185149669647,
+        4.16914975643158,
+        0.7544054538011551
+      ],
+      "anchor": [
+        -0.6976619958877563,
+        4.128799915313721,
+        0.700439989566803
+      ],
+      "sources": [
+        {
+          "file": "FJ2449",
+          "sha256": "0b17bf783e9229d279c86e9322b6f6e243b841de14a0409a1fa96456a8a6fd04"
+        },
+        {
+          "file": "FJ2451",
+          "sha256": "5c1771d3c4837b5b69e74441236e1cd1f505bf967e6a81e0c1e17445032eec1e"
+        },
+        {
+          "file": "FJ2503",
+          "sha256": "c0b528632a04c5f1f6e64e4a5b1c5f7f931eeac04809be955f367165747c4913"
+        },
+        {
+          "file": "FJ2504",
+          "sha256": "ca40945d3428c057e62be35150bd7569d5749e9d01809da3c57f98fee783fc06"
+        },
+        {
+          "file": "FJ2505",
+          "sha256": "3bba26b9b0d2d0138e227a5e6e3b53226e0e12cceac13014d0e0800a5c314c49"
+        },
+        {
+          "file": "FJ2506",
+          "sha256": "cef0aded90ec711f89d9f133187555ffd6b235718855c7c4df2673f1e41b0dc4"
+        },
+        {
+          "file": "FJ2507",
+          "sha256": "5566feecce7363209e4d8f3910e0699ad93789b50f812008cc5eac427f491a3b"
+        },
+        {
+          "file": "FJ2508",
+          "sha256": "8a6145969f6ece99bc5ebc7bbd8db44178016b5527f0036c1e55d0b187967124"
+        }
+      ],
+      "triangles": 9866
+    },
+    {
+      "groupId": "vm:anatomy:body:thorax:right:organ:right-middle-lobe-branches",
+      "role": "artery",
+      "bundle": "pulmonary-right-branch-types",
+      "nodeName": "FMA7383_artery",
+      "bounds": {
+        "min": [
+          -1.135949969291687,
+          3.9156994819641113,
+          0.29979202151298523
+        ],
+        "max": [
+          -0.31374499201774597,
+          4.596700668334961,
+          1.2175700664520264
+        ]
+      },
+      "center": [
+        -0.7248474806547165,
+        4.256200075149536,
+        0.7586810439825058
+      ],
+      "anchor": [
+        -0.7069159746170044,
+        4.191299915313721,
+        0.7205600142478943
+      ],
+      "sources": [
+        {
+          "file": "FJ2982",
+          "sha256": "7494dcce5d01681979d19b8ca6b9e47f50a070798448ca5d6758e436ff4eaff9"
+        },
+        {
+          "file": "FJ2983",
+          "sha256": "0124c45a5e00914f90eff4118dad2f4d384fcff423e3371af2a4cda69d984854"
+        },
+        {
+          "file": "FJ2984",
+          "sha256": "3df3920fed60f9116b8c1ef8370b3bef41bc1eda4282cd76cbf76e1b4d097151"
+        },
+        {
+          "file": "FJ2985",
+          "sha256": "190e3dce0b1a866fef0302d90eac21f9ae617631a7dff2a8ef3b57def6daab7d"
+        },
+        {
+          "file": "FJ2986",
+          "sha256": "77e49deba75b03615e15e81ebf1495006c9d29cbfeeec0bb035095b1bca54cd9"
+        },
+        {
+          "file": "FJ2987",
+          "sha256": "d16ffeaf8b5da0884b2773c781f2763d1b170f3f296d3e717c34cdf30153a80e"
+        },
+        {
+          "file": "FJ2988",
+          "sha256": "3d7d7ffe312bfe4e516edfb67421f19eee24ad614abb5be782d6d9ffc63bb7fc"
+        },
+        {
+          "file": "FJ2990",
+          "sha256": "bb9345ace85f5b8c35412b953d51aadb5ccfa4d2e51d85af655c42c83d8dcd9b"
+        }
+      ],
+      "triangles": 1834
+    },
+    {
+      "groupId": "vm:anatomy:body:thorax:right:organ:right-middle-lobe-branches",
+      "role": "vein",
+      "bundle": "pulmonary-right-branch-types",
+      "nodeName": "FMA7383_vein",
+      "bounds": {
+        "min": [
+          -1.0752500295639038,
+          3.923199415206909,
+          0.3919979929924011
+        ],
+        "max": [
+          -0.1901020109653473,
+          4.465799331665039,
+          1.1904600858688354
+        ]
+      },
+      "center": [
+        -0.6326760202646255,
+        4.194499373435974,
+        0.7912290394306183
+      ],
+      "anchor": [
+        -0.6257870197296143,
+        4.116899490356445,
+        0.7609200477600098
+      ],
+      "sources": [
+        {
+          "file": "FJ3030",
+          "sha256": "0aea211bdc5bd1ab4fababacf2c31bd781c98b33a25b9cbab887caea90336079"
+        },
+        {
+          "file": "FJ3032",
+          "sha256": "e88becca7ddf38d900a78c4d192959ecd589ce0032026e09a9fdbfc2b278937a"
+        },
+        {
+          "file": "FJ3033",
+          "sha256": "c9d23ebe4835a50e0ea13109292d451c7c34026effee27a764b11b4b9fabd318"
+        },
+        {
+          "file": "FJ3034",
+          "sha256": "0d84a80aa138f074f4caad194e7d930d88a62f478f9c73dcbf5db2ccf87c007e"
+        },
+        {
+          "file": "FJ3035",
+          "sha256": "00cfa5c5489240f21d0efd7b20009f120bace9909699b400f497321bdc65ac22"
+        },
+        {
+          "file": "FJ3036",
+          "sha256": "8bccfc47d20659b4772080af6948e9c01f0356e35e05ef131756d7661b1f6457"
+        },
+        {
+          "file": "FJ3037",
+          "sha256": "aaf657ee22b9749e365462c729d557be0ddcd3026d9ffa33429169f921e63f08"
+        },
+        {
+          "file": "FJ3038",
+          "sha256": "3300d4e15ff24574cdcb750d9e03909ebf3499242b238f5eefa792fd8a4132c6"
+        },
+        {
+          "file": "FJ3039",
+          "sha256": "3c7d62a01349f154d8d3496ca0f6f84a6858b50b3c95e2a82c51cb13d31691e4"
+        }
+      ],
+      "triangles": 2932
+    },
+    {
+      "groupId": "vm:anatomy:body:thorax:right:organ:right-lower-lobe-branches",
+      "role": "airway",
+      "bundle": "pulmonary-right-branch-types",
+      "nodeName": "FMA7337_airway",
+      "bounds": {
+        "min": [
+          -1.1654000282287598,
+          3.3570995330810547,
+          -0.25828200578689575
+        ],
+        "max": [
+          -0.0874451994895935,
+          4.931700229644775,
+          0.48912498354911804
+        ]
+      },
+      "center": [
+        -0.6264226138591766,
+        4.144399881362915,
+        0.11542148888111115
+      ],
+      "anchor": [
+        -0.5518829822540283,
+        4.103399753570557,
+        0.1718290001153946
+      ],
+      "sources": [
+        {
+          "file": "FJ2452",
+          "sha256": "13a428c6691e43fc62b70f055061518ef59e25bc39f7ff4ba29b72d120ffbaab"
+        },
+        {
+          "file": "FJ2455",
+          "sha256": "7758820e2beb33284de3276d986ecfe2947f8a7869d8ad939b54e337f5590743"
+        },
+        {
+          "file": "FJ2456",
+          "sha256": "98b2b20bb08530aca323ac07b2c2d35eeb001fffd4a587f47de825349c09dc26"
+        },
+        {
+          "file": "FJ2457",
+          "sha256": "9693f23e864bc668c5705df406d99f911d65b2dd184d6cf50d923b2046af9a75"
+        },
+        {
+          "file": "FJ2459",
+          "sha256": "c93561e1dff5a7ea360a95cd7600f1d7306bfd12e10c4dccd36dfc34c7fba83e"
+        },
+        {
+          "file": "FJ2470",
+          "sha256": "ff2aade1295ecc04ea46f39181b2c6688a9320b374bd98ce45e5e24979d660e4"
+        },
+        {
+          "file": "FJ2481",
+          "sha256": "92669323b5b0c67ab73db4d2e0708c812b356cdcc7695cea86ccd3d9a4c82aa1"
+        },
+        {
+          "file": "FJ2486",
+          "sha256": "24a05a87546c554c7ca8ead6b83d101075c034bcca4bbd565f6555b0546436cd"
+        },
+        {
+          "file": "FJ2487",
+          "sha256": "92b1374c9c5fd44c7c9b30d56ceebe335f04dea0246cc4e7e39931db9a7cf499"
+        },
+        {
+          "file": "FJ2488",
+          "sha256": "0c13f3775d83c97e3680cdcd21dd6a08aaa88e27f3ec194c46656ba3fec86856"
+        },
+        {
+          "file": "FJ2489",
+          "sha256": "4da7026ff7c343f8ba453e3bf6f8b9d6a3ed3951dc912e3cb1bdfd8ef8898778"
+        },
+        {
+          "file": "FJ2490",
+          "sha256": "b4f90915d8bab4bbdc709eb3cfc2ee5f69747a55e7c49e192d901dbc754af57c"
+        },
+        {
+          "file": "FJ2491",
+          "sha256": "70cf62a3f2795a31d105a4529501e35f7d6cac81918b3daa67efa2066c312490"
+        },
+        {
+          "file": "FJ2492",
+          "sha256": "09f07da0cbb3e991fbd11acc3b7972e53322ffc8943a0fddeb6206b43ba314dd"
+        },
+        {
+          "file": "FJ2493",
+          "sha256": "316057eefe3951378a54a8be78a812ef770cb840fcd3510652488e2a6f01bf10"
+        },
+        {
+          "file": "FJ2494",
+          "sha256": "ad18d80f4adfefac9e28afc3e92977ff3a2b91363442125eb1b76ef79dc5198b"
+        },
+        {
+          "file": "FJ2495",
+          "sha256": "05cd679bcc9bdf096f8225fc912629ca7e9d8ac5bdfd953aa035d7f5febdeca0"
+        },
+        {
+          "file": "FJ2496",
+          "sha256": "1c25619334e8c82d823706ca5c95bb9466eb65a00b82e38305cb51e370ceecbb"
+        },
+        {
+          "file": "FJ2497",
+          "sha256": "45f451850b731505fd33b5cb853181290b8ecf2cdb6e9eb38bf4ed45fae06feb"
+        },
+        {
+          "file": "FJ2498",
+          "sha256": "397d42ba5f2579cabf2de58ba365482ddf92c93e74390e74026a06eee0f33da8"
+        },
+        {
+          "file": "FJ2499",
+          "sha256": "dcdf9aa446ea578d1a5029e0ea8354369b0dfb74c98ea6f6f690cac8c26cec8e"
+        },
+        {
+          "file": "FJ2500",
+          "sha256": "30055ea7c3210934af6473ea76fc21e2d491344dde3db588ceed344528e8d3ee"
+        },
+        {
+          "file": "FJ2501",
+          "sha256": "6b6f46acabe02d28557b4313300f496c9c360da605645e60a33053aadc855e49"
+        },
+        {
+          "file": "FJ2502",
+          "sha256": "98e5e5a7e774f2c70a97883365137d700b512ef142b0a8f616fd35a8e2dbf65b"
+        }
+      ],
+      "triangles": 17964
+    },
+    {
+      "groupId": "vm:anatomy:body:thorax:right:organ:right-lower-lobe-branches",
+      "role": "artery",
+      "bundle": "pulmonary-right-branch-types",
+      "nodeName": "FMA7337_artery",
+      "bounds": {
+        "min": [
+          -1.1430200338363647,
+          3.3794994354248047,
+          -0.2905749976634979
+        ],
+        "max": [
+          -0.3171589970588684,
+          4.921299934387207,
+          0.4455229938030243
+        ]
+      },
+      "center": [
+        -0.7300895154476166,
+        4.150399684906006,
+        0.07747399806976318
+      ],
+      "anchor": [
+        -0.5888990163803101,
+        4.134100437164307,
+        0.10931701958179474
+      ],
+      "sources": [
+        {
+          "file": "FJ2991",
+          "sha256": "022d7193227b41d25fe639a8ec4d49b05a9048bc41edebcbf88e353f94ef9be2"
+        },
+        {
+          "file": "FJ2992",
+          "sha256": "fe994778e6a7659b9ff1f65d70b190f4d7388e4eb6704674845c375708151875"
+        },
+        {
+          "file": "FJ2993",
+          "sha256": "07cfb61f8620bc29d8962738b405102fb00e8728e66e95a477a4b7a51c7781e9"
+        },
+        {
+          "file": "FJ2994",
+          "sha256": "be8bc186033d93f6a104537972d14f646cfc8f16ec30564ccdbcee637973144f"
+        },
+        {
+          "file": "FJ2995",
+          "sha256": "e60f9f58a24e683a0eb4c4c8423ee69fca0d62690b7d548b148b9b399a02d828"
+        },
+        {
+          "file": "FJ2996",
+          "sha256": "5e8197cb11567126932629538de9c407a6af49368617c1857a87fba920c43989"
+        },
+        {
+          "file": "FJ2997",
+          "sha256": "09ff589f6aab4edc59cee6e2439efa426cb636033682bb5d2bfb22dbd68f153b"
+        },
+        {
+          "file": "FJ2998",
+          "sha256": "ac138f3e6f044a94dd5306e3edb9a25bc1849996d88fa6fdd635de9b39b92c68"
+        },
+        {
+          "file": "FJ2999",
+          "sha256": "bf597ef5eee13e22cd83f4d78d9ff1aaf074a513dc98fc223060b59a4b4dd4d3"
+        },
+        {
+          "file": "FJ3001",
+          "sha256": "3f8a4a113437bc9bd097d7cceb5d82934458e5562f8d7f1c6b1ab80a6037823c"
+        },
+        {
+          "file": "FJ3002",
+          "sha256": "d66ec5db20772fbce61e563d4804be9aed680f91141ff13a02c25b1b26e47675"
+        },
+        {
+          "file": "FJ3003",
+          "sha256": "c906af931a973815637ad5524e4f946b8ea1c41a5b01ead598b6c5941c7fc240"
+        },
+        {
+          "file": "FJ3004",
+          "sha256": "dfc3321ef449d7a274a485617437a43c611048c38f9a27690eff849bb61b66a8"
+        },
+        {
+          "file": "FJ3005",
+          "sha256": "4829d47c6937364d4841f1aa5d645c0672323b5196c1162a6b0c85e78384ec6a"
+        },
+        {
+          "file": "FJ3006",
+          "sha256": "afb6adf3c58e47bf5a08666c6e5570ae23feb7d51ba079b9466d29c19f2c8d13"
+        },
+        {
+          "file": "FJ3007",
+          "sha256": "48ab550f68716d5e9bc228c71733604c368eb47c946a3f23be72a974801ee615"
+        },
+        {
+          "file": "FJ3008",
+          "sha256": "f3956466989e7d0b92405aa4059bf8f75b473da60176b238906ab7adc6e1e4b0"
+        },
+        {
+          "file": "FJ3009",
+          "sha256": "56762f7e7766a85140e50964848d0d56a11252c76b02811d2d8e5e895bf78363"
+        },
+        {
+          "file": "FJ3010",
+          "sha256": "40c1e43cc4948a5e497ea7a740ba7d1c8eb89b4e8137adfee0bf19fc929a9b5a"
+        },
+        {
+          "file": "FJ3012",
+          "sha256": "b62ce0956c98fe8ccb9e92aa7f1e04979a2fc67eea9011b9fec267e970efb6f9"
+        },
+        {
+          "file": "FJ3013",
+          "sha256": "7d462f3de4c52328332787ef529a7e673f444411bfd437eec0c766ea5e4568c3"
+        },
+        {
+          "file": "FJ3014",
+          "sha256": "cfe69f44c2f72fdc7928319ab389759d2b329fb0d12d93ee2b3b4c17135b1ad3"
+        }
+      ],
+      "triangles": 9888
+    },
+    {
+      "groupId": "vm:anatomy:body:thorax:right:organ:right-lower-lobe-branches",
+      "role": "vein",
+      "bundle": "pulmonary-right-branch-types",
+      "nodeName": "FMA7337_vein",
+      "bounds": {
+        "min": [
+          -1.1384700536727905,
+          3.344899892807007,
+          -0.18994800746440887
+        ],
+        "max": [
+          -0.16559600830078125,
+          4.535600662231445,
+          0.3825399875640869
+        ]
+      },
+      "center": [
+        -0.6520330309867859,
+        3.940250277519226,
+        0.09629599004983902
+      ],
+      "anchor": [
+        -0.5856840014457703,
+        3.8645997047424316,
+        0.11055099219083786
+      ],
+      "sources": [
+        {
+          "file": "FJ3041",
+          "sha256": "dba8530e4e021d6378881c6315f21377ef6819352b0d48dab32f971f55b68e29"
+        },
+        {
+          "file": "FJ3043",
+          "sha256": "05d961534e19451d65531109a40a9bd2276b35b1f2f3b612f5a5d06168226b99"
+        },
+        {
+          "file": "FJ3044",
+          "sha256": "30ad07679245f56ec20b383e4665df228f9acf59f357a2aacaf9fad402299dd2"
+        },
+        {
+          "file": "FJ3045",
+          "sha256": "a1a70bb44cecb8a52796d02f7958a43388a9308a9fd0ad064c95e66b49e95aa5"
+        },
+        {
+          "file": "FJ3046",
+          "sha256": "74d6222055c21c6581ab154e351b91f4e57bba2f3abfb8da17364b8917e34229"
+        },
+        {
+          "file": "FJ3047",
+          "sha256": "6c7990555ce97dea123932a1fb56135cf82b2d6c309e7083387d53c8f690bfb5"
+        },
+        {
+          "file": "FJ3048",
+          "sha256": "655dabe52638e598cc552cbf7bb7c31ffd8cd1d37a92dab2129b3282e8bb504a"
+        },
+        {
+          "file": "FJ3049",
+          "sha256": "d8668404e9a9fe58cec2c8676751550c856e62b660cbb7d1ecaff8f152b5a7c9"
+        },
+        {
+          "file": "FJ3050",
+          "sha256": "848e258c0bfa7ef596e3a96646e43d89da1dad8633d04c9531e56454f4efcc53"
+        },
+        {
+          "file": "FJ3051",
+          "sha256": "001e64913b5efc2af0cee710f0891586f1a9e8de0b0e214ce9be1f0536d620de"
+        },
+        {
+          "file": "FJ3052",
+          "sha256": "2c68df1784d024669e0e37a4fb1d0e22b0bb804547f4ecbfcc814b8832ddf902"
+        },
+        {
+          "file": "FJ3054",
+          "sha256": "cf8013a7e9aff9db39703108ddcd3a3cff95210f608afea2a9aeb31e684fbb1f"
+        },
+        {
+          "file": "FJ3055",
+          "sha256": "e581441e67fed5b6225b401529610d65f3b199f24ed32a61c84d212a5061c24c"
+        },
+        {
+          "file": "FJ3056",
+          "sha256": "6ab8a75fa921d473dc53ea2f233a806ed0e5227c1cb1cf1693cd0c76f013d85a"
+        },
+        {
+          "file": "FJ3057",
+          "sha256": "7e5b47ae7217398ed3604484ffe2c8d9c9ecf7da7b9fba9261518891fa2b5a31"
+        },
+        {
+          "file": "FJ3058",
+          "sha256": "5f3dd61a518b3d46bc903797e37b5f1df9c9bf0459ed4c8715cca31d114be2da"
+        },
+        {
+          "file": "FJ3059",
+          "sha256": "0869acb61038b06dbfa8adc90e77faac650913070b5733b377e8d6242ee5def2"
+        },
+        {
+          "file": "FJ3060",
+          "sha256": "ee39c7e79005aaa920afba4a21517de78e2cb8674ff9ff60535131242cc7f92e"
+        },
+        {
+          "file": "FJ3061",
+          "sha256": "75536e65550d3bf1fd7a3c15ca8c6b9c4497fe9945d1d12a221dca0e90d59660"
+        },
+        {
+          "file": "FJ3062",
+          "sha256": "5389d53834968728a52dbba765230e533b3c1c2dcc53d797a68e328cf65500ad"
+        },
+        {
+          "file": "FJ3063",
+          "sha256": "ed8211f4f7b5e5439f70c98333f15c79d791676ce76595633278444949d941bd"
+        },
+        {
+          "file": "FJ3065",
+          "sha256": "dc4249b117762f15f6adc2e03b8dc96822bf4b61cc29053b53b4e752a435ccbd"
+        },
+        {
+          "file": "FJ3066",
+          "sha256": "e5c53904242f77732a33d793184c4cf422e36e7712c480b276ab019237082c82"
+        }
+      ],
+      "triangles": 5328
+    },
+    {
+      "groupId": "vm:anatomy:body:thorax:left:organ:left-upper-lobe-branches",
+      "role": "airway",
+      "bundle": "pulmonary-left-branch-types",
+      "nodeName": "FMA7370_airway",
+      "bounds": {
+        "min": [
+          0.23187799751758575,
+          3.7072997093200684,
+          0.04348800703883171
+        ],
+        "max": [
+          1.1336599588394165,
+          5.531400203704834,
+          1.2787100076675415
+        ]
+      },
+      "center": [
+        0.6827689781785011,
+        4.619349956512451,
+        0.6610990073531866
+      ],
+      "anchor": [
+        0.6410040259361267,
+        4.690200328826904,
+        0.6746799945831299
+      ],
+      "sources": [
+        {
+          "file": "FJ2441",
+          "sha256": "64b373dbea8fea4f475219800087b0bdec736471a640e2660a9a9cac5f35b3ec"
+        },
+        {
+          "file": "FJ2443",
+          "sha256": "d9ecc1c75a9021f68a186433dd6f7e6cbe5058459f4c0b94aff3239e0dcff4fd"
+        },
+        {
+          "file": "FJ2444",
+          "sha256": "4fa463ea77c7aaea2b44ac26272a9fb10711d1d000b1464662a7a5389c8e6104"
+        },
+        {
+          "file": "FJ2447",
+          "sha256": "3550c217bbea847d0bff2cdbbebd8f10607247ac6cae96b2458641b18c3ecf06"
+        },
+        {
+          "file": "FJ2460",
+          "sha256": "33b697f2b0996c6d5ff6723d62573e2b515f657cf675776bf7aab3da35db2856"
+        },
+        {
+          "file": "FJ2461",
+          "sha256": "da15dca4d16db1ddd3b51ddf46ccbb3e7b2780920a09665d0ea321cb1021bf0b"
+        },
+        {
+          "file": "FJ2462",
+          "sha256": "654b5b6e95817618bf7b186c363ffe8336abdbde9b305fcaefc3e4fbdedecea9"
+        },
+        {
+          "file": "FJ2463",
+          "sha256": "4f3659eab7252936df40eb3029836834ed563797ebd5b1fe081a2d1303853e05"
+        },
+        {
+          "file": "FJ2464",
+          "sha256": "6eae8179f9a5a765d9a1f2353a6b35342a15665bb3c52000dd10fb7efc5a9c87"
+        },
+        {
+          "file": "FJ2465",
+          "sha256": "e821c7b23402f6e64914d6c485b5a9e37c5e5d9bed386776b6c572486a5777ec"
+        },
+        {
+          "file": "FJ2466",
+          "sha256": "0fbb025940446f5a4c7a46f5e0aadd186b1ce0e14d83ed73f6581c2337143478"
+        },
+        {
+          "file": "FJ2467",
+          "sha256": "adb6e9730a4f48ab4976216c5bc9b28fb2077b9a213f1ca9f6b23d91077c6683"
+        },
+        {
+          "file": "FJ2468",
+          "sha256": "4b97d114f6af1274ae2b07fc7fb1ff426808012b061c20998b3ec75f305f583e"
+        },
+        {
+          "file": "FJ2469",
+          "sha256": "d0ba96fa139c3e4aa58ccfe3e5bbc601845ddb95aeebe15c3e52ba3720b5b4ed"
+        },
+        {
+          "file": "FJ2471",
+          "sha256": "65042bb74a06d48d9fc6adb7d0d33167db7e0195199a6af741acc5a81c9e2bbc"
+        },
+        {
+          "file": "FJ2472",
+          "sha256": "46c5f757ade14ef9d0b4629fbd360ac52d992fa1e3f22a9c4ff986482ddfe0e8"
+        },
+        {
+          "file": "FJ2473",
+          "sha256": "c6db14ca2d3f5ba038b1a64ea29df192cbc5f2319d524214b491b571dc4506a3"
+        },
+        {
+          "file": "FJ2474",
+          "sha256": "bb8e119c4518f5238026a2e37a73faffaeca4958a8f137aeaf27eab89f77dcdd"
+        },
+        {
+          "file": "FJ2475",
+          "sha256": "76ce29f348ed8ba738f35a9cfb7c1b087ead1e734ef4358aca789e45b667c749"
+        },
+        {
+          "file": "FJ2476",
+          "sha256": "7ca6f318aa98dc428c3f5b5237b5cd11744ca0b2ad54e2c23ee4585c1ce8508e"
+        },
+        {
+          "file": "FJ2477",
+          "sha256": "153faedcab2867f0731b9b56727e375b8de11aae2e4e16c72a74f335b8094400"
+        },
+        {
+          "file": "FJ2478",
+          "sha256": "159053dc8c5f1d4bf5021548dc0ff79d2ca980a3108e910a77b828604523aa15"
+        },
+        {
+          "file": "FJ2540",
+          "sha256": "034abcb466e8f71def0d77707f6266d1fcdbceae26a0dcc0dfd92ec6b5ecb076"
+        }
+      ],
+      "triangles": 5304
+    },
+    {
+      "groupId": "vm:anatomy:body:thorax:left:organ:left-upper-lobe-branches",
+      "role": "artery",
+      "bundle": "pulmonary-left-branch-types",
+      "nodeName": "FMA7370_artery",
+      "bounds": {
+        "min": [
+          0.19649401307106018,
+          3.7948999404907227,
+          0.0462770089507103
+        ],
+        "max": [
+          1.111050009727478,
+          5.485600471496582,
+          1.2113800048828125
+        ]
+      },
+      "center": [
+        0.6537720113992691,
+        4.640250205993652,
+        0.6288285069167614
+      ],
+      "anchor": [
+        0.5776410102844238,
+        4.676800727844238,
+        0.6173499822616577
+      ],
+      "sources": [
+        {
+          "file": "FJ2896",
+          "sha256": "a71de7bfc5ecd1b331a63b8303df66c943d14bd285e77e937790ad6adc4834c7"
+        },
+        {
+          "file": "FJ2897",
+          "sha256": "c698f9bf423345605feea0d9d235a57ee7bd3d54d59b053c30759340b25bd64f"
+        },
+        {
+          "file": "FJ2898",
+          "sha256": "0641fd4ca72a62ce5d5b2e977d4c3d85a4fa5d4ded1e564c39d36f7dc96ad4b7"
+        },
+        {
+          "file": "FJ2899",
+          "sha256": "38925605225819b262b62e5c0dff100a5969c04ec3c9a042d87a813309c57cca"
+        },
+        {
+          "file": "FJ2900",
+          "sha256": "07ca5c4533537685d5cb5449f5d62a275360e004ad2b56145fc7b0cd693806a9"
+        },
+        {
+          "file": "FJ2901",
+          "sha256": "e4705150e8e90e71e494fd2366adad0b399c0f8bead1d11592521e41955c9b36"
+        },
+        {
+          "file": "FJ2902",
+          "sha256": "23875d0f6ee363ba4ce26c2e742ce69fab8c7634330e9f4eb9778316ccd902b8"
+        },
+        {
+          "file": "FJ2904",
+          "sha256": "f36eafda5102fd0c4de1e364aea22e31663e8436b6c4b6e5009dd05519efa593"
+        },
+        {
+          "file": "FJ2905",
+          "sha256": "32cc6acd5fdf81bc1100b59c6d009ea21098eaafc012c221e767ffe0b88fb672"
+        },
+        {
+          "file": "FJ2906",
+          "sha256": "31b12f04efe6a0692f7d9f81cbe5cdb8bb38cbfc1d6f18b94c1bb74f31e2a9a3"
+        },
+        {
+          "file": "FJ2907",
+          "sha256": "b8c1877af9f078506c014c9e54a0181118c53da32f5747cc062bf6d10af34899"
+        },
+        {
+          "file": "FJ2908",
+          "sha256": "2a712a6f06c93e243186958635991d44c709e0d628d2140378398be5a6fede22"
+        },
+        {
+          "file": "FJ2909",
+          "sha256": "839fad0bb73387e30eba955eae475bae3f82fa67de92fde8cd45b972c2e14a29"
+        },
+        {
+          "file": "FJ2910",
+          "sha256": "93a28ddbf18ddef08c4e27d7eae71cc66e9fcd664fde90bde60dc08dd0925ec7"
+        },
+        {
+          "file": "FJ2911",
+          "sha256": "68dbb8593222b414fd5e5ad73842cbfb11c41f525eef42f2f3eee5c0486bf966"
+        },
+        {
+          "file": "FJ2912",
+          "sha256": "6f730d880c0a79587b24f8c8b1bc83056efaede4d7aab76638085abb7566d978"
+        },
+        {
+          "file": "FJ2913",
+          "sha256": "4936e7c72d76224afd96d13043e9a7289407eac60bff18e0e80e36da56805782"
+        },
+        {
+          "file": "FJ2915",
+          "sha256": "c1243bba41b9bf8e7d653dc87c2ee3d44794e181fb2eb2dc90125796f281a800"
+        },
+        {
+          "file": "FJ2916",
+          "sha256": "fbfff75d26deb68fd550025e6e7566a523af95e84f03c3670b31b6039f859180"
+        },
+        {
+          "file": "FJ2917",
+          "sha256": "7cae7fcbf70c5ebc56bf057f34225e66bcc37362ee6932c5d84c68c7d0c48aad"
+        },
+        {
+          "file": "FJ2918",
+          "sha256": "28e665ef0994bb3e8ffc02e8bda5fb0b970a23f1a320e0aaf5bf3fc9b1676533"
+        }
+      ],
+      "triangles": 9272
+    },
+    {
+      "groupId": "vm:anatomy:body:thorax:left:organ:left-upper-lobe-branches",
+      "role": "vein",
+      "bundle": "pulmonary-left-branch-types",
+      "nodeName": "FMA7370_vein",
+      "bounds": {
+        "min": [
+          0.2711929976940155,
+          3.7451000213623047,
+          -0.24630698561668396
+        ],
+        "max": [
+          0.9514949917793274,
+          5.559399604797363,
+          1.0796300172805786
+        ]
+      },
+      "center": [
+        0.6113439947366714,
+        4.652249813079834,
+        0.4166615158319473
+      ],
+      "anchor": [
+        0.6008110046386719,
+        4.617599964141846,
+        0.42155998945236206
+      ],
+      "sources": [
+        {
+          "file": "FJ2926",
+          "sha256": "fad414b395ab2c152b6a1e325a52035bd7ca9e01227e20bc80581e47b8b01343"
+        },
+        {
+          "file": "FJ2927",
+          "sha256": "363b208397100681a7f4bbc8b85d78eb997dccf970545cd849dc2d8c03d040bc"
+        },
+        {
+          "file": "FJ2928",
+          "sha256": "ac55e50920077e8bb9040abbf2b5a738d62574fc4d4fb0cdc070bc3e05802e43"
+        },
+        {
+          "file": "FJ2929",
+          "sha256": "58648f6a537960d1fbbf2fb281f8bd6aaac6592defbaca89ad33d331336ceba2"
+        },
+        {
+          "file": "FJ2930",
+          "sha256": "77ffddd9e5caeb43f2209b994563c4790be69b62d4e476418ed1e3fbc74ff62a"
+        },
+        {
+          "file": "FJ2931",
+          "sha256": "49225dadab2ba06e6050123a56b02266297f4cf0083a04dd91d4e304026b6613"
+        },
+        {
+          "file": "FJ2932",
+          "sha256": "6104f828c75ee74f80283a01a6ca46a6e23ced0b3b009527bcaad13d6ef3f55d"
+        },
+        {
+          "file": "FJ2934",
+          "sha256": "793374cff1ad399a5d33239b76e919c534fffd7680ce2c6125a535330ef7d54c"
+        },
+        {
+          "file": "FJ2935",
+          "sha256": "38e8748bbc3211d87c5a07ac58f18951fb304373d5306e8eaf969fa6e0ef0e82"
+        },
+        {
+          "file": "FJ2936",
+          "sha256": "59d31a9d4a8bce89ce9cb9679d6453e9a60bb64ec1af6ef6a76dacdeebd3f022"
+        },
+        {
+          "file": "FJ2937",
+          "sha256": "d756defc0690df98dfe2f3d8dcd921e27d7808f6da6b02f5f91fbf72b2610f46"
+        },
+        {
+          "file": "FJ2938",
+          "sha256": "29cbd44a1a23886d928581749cb55f11eb8d1a373f3729d950529837e2f0efa4"
+        },
+        {
+          "file": "FJ2939",
+          "sha256": "3554e5004bc079d3f6b4285903df1ac9cb6e786a825a036cfb7ae50b852e9ef6"
+        },
+        {
+          "file": "FJ2940",
+          "sha256": "d16c3735ac73b3c4350d40dac386159ab33e0c89478f82d3e3b29e0aa788953a"
+        },
+        {
+          "file": "FJ2941",
+          "sha256": "84244ca55e36c864f120e50386e1ef7222421dac701d025a6ca8e1b7e6193f66"
+        },
+        {
+          "file": "FJ2942",
+          "sha256": "06c2e1f33d64582246b2f7c72d1e280e405eefc74eb416adb434174db7174feb"
+        },
+        {
+          "file": "FJ2943",
+          "sha256": "8e0ca7020bd35705642118266421daaa6465b257f8972e8f7e5577c96200ea36"
+        },
+        {
+          "file": "FJ2947",
+          "sha256": "371fed38231d406a72f3b1711e0d8df8c065952055b2993a7487b67e4d764f61"
+        },
+        {
+          "file": "FJ2958",
+          "sha256": "07e806d97e0a0a79d0b7dc6a4e633bdfa5016bb3956cd04548681e3bb81e8ef0"
+        },
+        {
+          "file": "FJ2961",
+          "sha256": "1406206eb57cc1044d8490254d8ec55a37bf274b279c98db14e5fca11941b358"
+        },
+        {
+          "file": "FJ2962",
+          "sha256": "0d2d819e42c32c550dcb4bcd2e3c5bb792b3d11479dae12b32f07c9ce4751d37"
+        },
+        {
+          "file": "FJ2963",
+          "sha256": "05d14aa9f4220464c00ad01a581176a56460714dfa2ac67858345ffdaa012a4b"
+        },
+        {
+          "file": "FJ2964",
+          "sha256": "1740fff7638d1eb24e5d1a5f414f4809e929181202c87d14ae214413fb3fac73"
+        },
+        {
+          "file": "FJ2965",
+          "sha256": "f224fab88bea0cff03a42e6582182e8503ff11b7b17b7bf803c6ba03fa1be803"
+        }
+      ],
+      "triangles": 5836
+    },
+    {
+      "groupId": "vm:anatomy:body:thorax:left:organ:left-lower-lobe-branches",
+      "role": "airway",
+      "bundle": "pulmonary-left-branch-types",
+      "nodeName": "FMA7371_airway",
+      "bounds": {
+        "min": [
+          0.3597230017185211,
+          3.248499870300293,
+          -0.2968609929084778
+        ],
+        "max": [
+          1.2287700176239014,
+          4.941400051116943,
+          0.9172700643539429
+        ]
+      },
+      "center": [
+        0.7942465096712112,
+        4.094949960708618,
+        0.31020453572273254
+      ],
+      "anchor": [
+        0.7862380146980286,
+        4.100200176239014,
+        0.3360479772090912
+      ],
+      "sources": [
+        {
+          "file": "FJ2442",
+          "sha256": "49fbe8509027d1d8e9d572b31de9a3741a02de9eca1ee65a6f1d96b79b35fd57"
+        },
+        {
+          "file": "FJ2445",
+          "sha256": "e38bac437798a86e2ec37730443443134c0923ef9532c75b428dc530b81df32a"
+        },
+        {
+          "file": "FJ2446",
+          "sha256": "56338429270073446704a97d17c52719f8eee320393658d9f1774a645d2908d9"
+        },
+        {
+          "file": "FJ2448",
+          "sha256": "9b95d3c4d9115b2b5dfb36ecb5ca7a66953a5f87fe4c7f58a6d486c352cfc183"
+        },
+        {
+          "file": "FJ2479",
+          "sha256": "53574009c39352a0fd2a6dd84b68845690b77d652b6b2a8de784ad92aa6c4551"
+        },
+        {
+          "file": "FJ2480",
+          "sha256": "7e07ea18e778db8f00142c69b4b2bb0ee415d294044dc332b138055f902ef4f8"
+        },
+        {
+          "file": "FJ2482",
+          "sha256": "5722b7698bedb29cf076888f776811b1c7d1d729f5ec14f9d51dac8057389e8c"
+        },
+        {
+          "file": "FJ2483",
+          "sha256": "37cee30d3fd34853e8be332261ecebf4a3f2a95170cf414a97d6151ed6c6d22c"
+        },
+        {
+          "file": "FJ2484",
+          "sha256": "859d772c3a7e053109365d3aa777b064d1f6ef7a266d4266405fb1af84cb8196"
+        },
+        {
+          "file": "FJ2485",
+          "sha256": "2f43d9288d325e57de763d458717f04fabd06fc697c337a1fe7d0ae043726f44"
+        },
+        {
+          "file": "FJ2527",
+          "sha256": "2812f475d2c482cd23064de0aa5f2b59c6b72058814d652a45845aa2b0fb0676"
+        },
+        {
+          "file": "FJ2528",
+          "sha256": "bf677fabc8c85fa8b35718048e9138582680a578e1be670ccde9108a14e9be11"
+        },
+        {
+          "file": "FJ2529",
+          "sha256": "cff5d941d69aae1ccfe21bd2cd775a294bea6cd53f3f9239f866811e223bcf33"
+        },
+        {
+          "file": "FJ2530",
+          "sha256": "09eb35909d8fbf647b0e52385ced1e895aa8b8e5e225118cd1fe89fca7571a08"
+        },
+        {
+          "file": "FJ2531",
+          "sha256": "169a4dbc6947dcfd98bb0bcf5f4ffb437ecbf2a7ee51d93944d3ca58252251fd"
+        },
+        {
+          "file": "FJ2532",
+          "sha256": "bf30a052e36f1a984fb9cca54df188a6995875dba5bf07bf7b2b6548dcd1461e"
+        },
+        {
+          "file": "FJ2533",
+          "sha256": "3f033d99e01946940c4191019fc0c174d1d5fa9b28dddc1426968feb61e6d9de"
+        },
+        {
+          "file": "FJ2534",
+          "sha256": "461e5c6c3dc5de63c38dc937e6128fb4889c8605c50a15807037addaae12e79a"
+        },
+        {
+          "file": "FJ2535",
+          "sha256": "4670a1458826c005d352d25bb2e9d029ba7c105f9c94ab1794e72c13fe0bf93d"
+        },
+        {
+          "file": "FJ2536",
+          "sha256": "d3ad0f299e740ab709a4d626a21f7e8fe15eb130de52ec293be518d7eb5cc8f9"
+        },
+        {
+          "file": "FJ2537",
+          "sha256": "b71c206496ab91bab4988e857fb49d4b74daa3e05af02dcb1c7eb2d54defc461"
+        },
+        {
+          "file": "FJ2538",
+          "sha256": "1b0fbbabb7b834cf21554103793e3b6040cd040a4553522db38a0cd14a68dfdf"
+        }
+      ],
+      "triangles": 5284
+    },
+    {
+      "groupId": "vm:anatomy:body:thorax:left:organ:left-lower-lobe-branches",
+      "role": "artery",
+      "bundle": "pulmonary-left-branch-types",
+      "nodeName": "FMA7371_artery",
+      "bounds": {
+        "min": [
+          0.37318000197410583,
+          3.231099843978882,
+          -0.2792400121688843
+        ],
+        "max": [
+          1.2543200254440308,
+          4.932700157165527,
+          0.9212399125099182
+        ]
+      },
+      "center": [
+        0.8137500137090683,
+        4.081900000572205,
+        0.32099995017051697
+      ],
+      "anchor": [
+        0.8618109822273254,
+        4.100400447845459,
+        0.257425993680954
+      ],
+      "sources": [
+        {
+          "file": "FJ2881",
+          "sha256": "ed30dc150cff62adeea8107c3fa164a3a14a06e54c2fc1709875655a9db37fe6"
+        },
+        {
+          "file": "FJ2882",
+          "sha256": "4c818f1db1cc14b6d7c1549174fc3fb6e7b6cce56bd04542b23eebe33efcfa62"
+        },
+        {
+          "file": "FJ2883",
+          "sha256": "4ed8ded534c49f725c3403bafdc47dac755c9dacd02c3b8d4cdaad7c951e00dc"
+        },
+        {
+          "file": "FJ2884",
+          "sha256": "abfae95bcf1f126d11866a62c2f45839f99f88b3722c88da1ab57baf8baccfd6"
+        },
+        {
+          "file": "FJ2885",
+          "sha256": "fc1ce0a1524c6866c03aaf518f0d7056ba47834dc5c8a24f6f689f8c50ca724b"
+        },
+        {
+          "file": "FJ2886",
+          "sha256": "32b38d09c913d78e21863e40d1e661730a0522e06f6d9c8595fc8ce37050f1c4"
+        },
+        {
+          "file": "FJ2887",
+          "sha256": "c2ada586c2153865073bd233f98b659035675c9a49ff96d297a92e324a8dfb5d"
+        },
+        {
+          "file": "FJ2888",
+          "sha256": "48c2b6729e09202fa97918fc47dddf8bf0cfa46b32025be63bbf48d9aacca6f5"
+        },
+        {
+          "file": "FJ2889",
+          "sha256": "8fdf31ccfc469d7fbe00825a3daa990b478e32c1ad476263b5c62a1bfa6e1d00"
+        },
+        {
+          "file": "FJ2890",
+          "sha256": "a96f916bb1ee2d6be37600737d95d8b587c39b4555b6e120667e4394cd8e4830"
+        },
+        {
+          "file": "FJ2891",
+          "sha256": "379124a8465b7c0c3998e6eb6780a8f2f606dfcd771a1af1e3ec90b11866a3bd"
+        },
+        {
+          "file": "FJ2892",
+          "sha256": "cf6100ec0a04f979b00a8803732b1420deac3f82b8ed053456c34ee1f625fe2a"
+        },
+        {
+          "file": "FJ2893",
+          "sha256": "58544ef724582a4cbbea92d24b2b7ebadda07bbb9371de4a37db9cc857b0456b"
+        },
+        {
+          "file": "FJ2894",
+          "sha256": "89d4a63a968bd00dc2da4fe5baf7427b30ac29ae3fbe1944cdb750fc8cbfb666"
+        },
+        {
+          "file": "FJ2895",
+          "sha256": "4533df99087110a5230718ac586a17e893a1bdeb4459b666910db2958f399a65"
+        },
+        {
+          "file": "FJ2903",
+          "sha256": "05c973d111b02754c02206fe101cda69e83a24ffcb4b0f788c4eb1fc4d68cac4"
+        },
+        {
+          "file": "FJ2914",
+          "sha256": "a7688a81452a84efa9bab01ba4ce5caecf37f52595d5c192f57e247b797cebcb"
+        },
+        {
+          "file": "FJ2919",
+          "sha256": "9c1eaf17f330259874b90e906373aa1da51e326ef7a9a0dd3896259d5c8a5cb4"
+        },
+        {
+          "file": "FJ2920",
+          "sha256": "ac4833fc2019d4955ef0729ac14e07cf836135625c48ad2c25c5b190caa99557"
+        },
+        {
+          "file": "FJ2921",
+          "sha256": "35a721530266089dc3fd4eab9a946fc9f0173e76ff048cc6d4a62498ce103b6f"
+        },
+        {
+          "file": "FJ2922",
+          "sha256": "1dec6ac7c766169cdc1e096e6cb4d6afe507ccd43d7192b1a6ef1734b5b67bf1"
+        },
+        {
+          "file": "FJ2923",
+          "sha256": "9f49cebddf11bc380e358a6efc79987f5223a7384189434a68773eedb855ff02"
+        }
+      ],
+      "triangles": 12380
+    },
+    {
+      "groupId": "vm:anatomy:body:thorax:left:organ:left-lower-lobe-branches",
+      "role": "vein",
+      "bundle": "pulmonary-left-branch-types",
+      "nodeName": "FMA7371_vein",
+      "bounds": {
+        "min": [
+          0.5218030214309692,
+          3.270200252532959,
+          -0.2651830017566681
+        ],
+        "max": [
+          1.193060040473938,
+          4.205999851226807,
+          0.837209939956665
+        ]
+      },
+      "center": [
+        0.8574315309524536,
+        3.738100051879883,
+        0.2860134690999985
+      ],
+      "anchor": [
+        0.8796219825744629,
+        3.7601001262664795,
+        0.26274803280830383
+      ],
+      "sources": [
+        {
+          "file": "FJ2945",
+          "sha256": "d9323f8364e3f36ee32ccaf41142fd321acd9fc4adce54687a7e0ce420cb65df"
+        },
+        {
+          "file": "FJ2946",
+          "sha256": "ac29bbb11a29e54c93f03840ad052316e8d45de9153ce9c802f13e70418cb97a"
+        },
+        {
+          "file": "FJ2948",
+          "sha256": "778cc361cd4c1b56c192e686d04b26ba0bc1a9b21bcb9363f91dbf062fee7aaf"
+        },
+        {
+          "file": "FJ2949",
+          "sha256": "ee8a3c9bc9a97f8b9bbd1c8d0be4a34357511f175ceab098e4bbd95a3201a97f"
+        },
+        {
+          "file": "FJ2951",
+          "sha256": "d63bcdb232e79e2bf88e3da62994b5bcdddc1e1821a0e6057b1bb7b8902dc6f0"
+        },
+        {
+          "file": "FJ2952",
+          "sha256": "6830d54b9b35e1062cb57807a6ef582206148cc8e35cc8199975bbe4ddaf51f7"
+        },
+        {
+          "file": "FJ2953",
+          "sha256": "0517ed1e8c48d39d815a881e92ffcdf48295f453ae27305c05038bc00536c943"
+        },
+        {
+          "file": "FJ2954",
+          "sha256": "d3bcc4279b58b38171861b577c1d3fc211de998cb73bdd7c2c1a8255a2bf248e"
+        },
+        {
+          "file": "FJ2956",
+          "sha256": "40b055d9eba6dc8ce90def14f4f74d52481edc931821e1f394c2aacbf5694746"
+        },
+        {
+          "file": "FJ2957",
+          "sha256": "94ce2b6eb030ae026730d7690cfbc25bb7c584dd0ac0abc66a855e7ae15a022f"
+        },
+        {
+          "file": "FJ2959",
+          "sha256": "bcbcb7fd063492bbf82b413fca1b1aa92963cb60bb3c5a07ab3e8c7ff74def85"
+        },
+        {
+          "file": "FJ2960",
+          "sha256": "909c5e1c806f948c8b260ced4c4ecb00c09048e4bd9f66038337427ff26de439"
+        }
+      ],
+      "triangles": 3362
+    }
+  ],
+  "bundles": [
+    {
+      "id": "pulmonary-right-branch-types",
+      "url": "/models/bodyparts3d/pulmonary/pulmonary-right-branch-types.glb?v=e063e385cfec50c454a211d8d5c5189a1e9da2441b913b798da28430755fe80c",
+      "sha256": "e063e385cfec50c454a211d8d5c5189a1e9da2441b913b798da28430755fe80c",
+      "bytes": 1336880,
+      "structures": 9
+    },
+    {
+      "id": "pulmonary-left-branch-types",
+      "url": "/models/bodyparts3d/pulmonary/pulmonary-left-branch-types.glb?v=3f59528cd2f056fd8818044a40e5836f9cea5423663dac44ea46f65044591df2",
+      "sha256": "3f59528cd2f056fd8818044a40e5836f9cea5423663dac44ea46f65044591df2",
+      "bytes": 758428,
+      "structures": 6
+    }
+  ],
+  "method": "Source-labelled display subsets of existing groups; original geometry retained. Not new FMA identities, parenchyma, perfusion territories or clinical approval."
+}

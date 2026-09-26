@@ -1,0 +1,501 @@
+{
+  "sourceCommit": "98ce21947d5987ba73e7c1fc21c1cf72fa5de669",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "deep-leg-veins",
+      "url": "/models/bodyparts3d/deep-leg-veins/deep-leg-veins.glb?v=b10cd33cb0a8be2602c7d41b8ec88d4a50cd678df936b2a78dfedb6191910096",
+      "bytes": 1295728,
+      "sha256": "b10cd33cb0a8be2602c7d41b8ec88d4a50cd678df936b2a78dfedb6191910096",
+      "structures": 6
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "8d5398cdaa83149d2d2d64ad9c27094d1eff3dba5baf51f6343dd87c7a250e29",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
+        "fmaId": "FMA44336",
+        "name": "Right anterior tibial vein",
+        "sourceName": "right anterior tibial vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "foot"
+        ],
+        "bundle": "deep-leg-veins",
+        "nodeName": "FMA44336",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2132",
+            "sha256": "882bc85f20f37456f27048340d2b431b26e9f1fa4e877b935adf984958384cae"
+          },
+          {
+            "file": "FJ2193",
+            "sha256": "f21e0ec17c0a9366b40494fa34c893386301fba3099df0eb9f3a9476fbaeb770"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -1.0997899770736694,
+            -7.59695291519165,
+            0.1954289972782135
+          ],
+          "max": [
+            -0.5094850063323975,
+            -3.942189931869507,
+            0.6421700119972229
+          ]
+        },
+        "center": [
+          -0.8046374917030334,
+          -5.769571423530579,
+          0.4187995046377182
+        ],
+        "anchor": [
+          -0.9259089827537537,
+          -5.783679962158203,
+          0.3925420045852661
+        ],
+        "coverageNote": "Whole source-labelled vein group, not complete companion veins, valves, lumen or exact junctions. Anterior tibial selections retain two separate source parts. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "anterior",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
+        "fmaId": "FMA44337",
+        "name": "Left anterior tibial vein",
+        "sourceName": "left anterior tibial vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "foot"
+        ],
+        "bundle": "deep-leg-veins",
+        "nodeName": "FMA44337",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2097",
+            "sha256": "baad24d3cc1c5bbc493e95793efa217b3c6d6a6ac87006b15f0bb21a26a0cc1e"
+          },
+          {
+            "file": "FJ2183",
+            "sha256": "64fae2f22228c4da162d61c70e2fe4d59fdcf13e35218df093b58d8eff6dff08"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.5094479918479919,
+            -7.596963882446289,
+            0.19541700184345245
+          ],
+          "max": [
+            1.099869966506958,
+            -3.9422199726104736,
+            0.6419600248336792
+          ]
+        },
+        "center": [
+          0.804658979177475,
+          -5.769591927528381,
+          0.4186885133385658
+        ],
+        "anchor": [
+          0.9276700019836426,
+          -5.768280029296875,
+          0.39618900418281555
+        ],
+        "coverageNote": "Whole source-labelled vein group, not complete companion veins, valves, lumen or exact junctions. Anterior tibial selections retain two separate source parts. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "anterior",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
+        "fmaId": "FMA44338",
+        "name": "Right posterior tibial vein",
+        "sourceName": "right posterior tibial vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "foot"
+        ],
+        "bundle": "deep-leg-veins",
+        "nodeName": "FMA44338",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2173",
+            "sha256": "e2b3c5e3b353033d69a81457f4d55e9da6261399713600b5e200ae2e236c8b34"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -1.0238399505615234,
+            -8.456541061401367,
+            -0.00813200045377016
+          ],
+          "max": [
+            -0.39773398637771606,
+            -5.161489963531494,
+            0.37942200899124146
+          ]
+        },
+        "center": [
+          -0.7107869684696198,
+          -6.809015512466431,
+          0.18564500426873565
+        ],
+        "anchor": [
+          -0.45229700207710266,
+          -6.8045501708984375,
+          0.12772800028324127
+        ],
+        "coverageNote": "Whole source-labelled vein group, not complete companion veins, valves, lumen or exact junctions. Anterior tibial selections retain two separate source parts. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "posterior",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein",
+        "fmaId": "FMA44339",
+        "name": "Left posterior tibial vein",
+        "sourceName": "left posterior tibial vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "foot"
+        ],
+        "bundle": "deep-leg-veins",
+        "nodeName": "FMA44339",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2118",
+            "sha256": "06d0d03da663cc3c83f8efd7dd1cc99ea0cfb912f6ee01c3ed89d51212605db8"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.3977630138397217,
+            -8.456661224365234,
+            -0.008082999847829342
+          ],
+          "max": [
+            1.0238100290298462,
+            -5.161520004272461,
+            0.37894898653030396
+          ]
+        },
+        "center": [
+          0.7107865214347839,
+          -6.809090614318848,
+          0.1854329933412373
+        ],
+        "anchor": [
+          0.45329800248146057,
+          -6.76977014541626,
+          0.13391099870204926
+        ],
+        "coverageNote": "Whole source-labelled vein group, not complete companion veins, valves, lumen or exact junctions. Anterior tibial selections retain two separate source parts. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "posterior",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
+        "fmaId": "FMA51042",
+        "name": "Right deep femoral vein",
+        "sourceName": "right deep femoral vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thigh",
+        "regions": [
+          "thigh"
+        ],
+        "bundle": "deep-leg-veins",
+        "nodeName": "FMA51042",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2135",
+            "sha256": "4e74f0301c15232ce6cb744bd0439d779a9a77eef51b3cf26bab15a632ad2a95"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.7874590158462524,
+            -2.9165799617767334,
+            0.5504299998283386
+          ],
+          "max": [
+            -0.32875800132751465,
+            0.18490000069141388,
+            0.9344300031661987
+          ]
+        },
+        "center": [
+          -0.5581085085868835,
+          -1.3658399805426598,
+          0.7424300014972687
+        ],
+        "anchor": [
+          -0.7389180064201355,
+          -1.372849941253662,
+          0.6927400231361389
+        ],
+        "coverageNote": "Whole source-labelled vein group, not complete companion veins, valves, lumen or exact junctions. Anterior tibial selections retain two separate source parts. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "profunda",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein",
+        "fmaId": "FMA51043",
+        "name": "Left deep femoral vein",
+        "sourceName": "left deep femoral vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thigh",
+        "regions": [
+          "thigh"
+        ],
+        "bundle": "deep-leg-veins",
+        "nodeName": "FMA51043",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2099",
+            "sha256": "7ce931eee500efd0c796c2b29ee29000ad55c9b4c31784bec72dd23b5defa3f3"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.3288309872150421,
+            -2.9166200160980225,
+            0.5504099726676941
+          ],
+          "max": [
+            0.7876279950141907,
+            0.18499000370502472,
+            0.9342799782752991
+          ]
+        },
+        "center": [
+          0.5582294911146164,
+          -1.3658150061964989,
+          0.7423449754714966
+        ],
+        "anchor": [
+          0.7383480072021484,
+          -1.3729699850082397,
+          0.6905699968338013
+        ],
+        "coverageNote": "Whole source-labelled vein group, not complete companion veins, valves, lumen or exact junctions. Anterior tibial selections retain two separate source parts. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "profunda",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        }
+      }
+    }
+  ]
+}

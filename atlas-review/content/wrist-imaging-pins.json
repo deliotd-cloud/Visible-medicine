@@ -1,0 +1,971 @@
+{
+  "sourceCommit": "56e9dc9e0e16f6cfbf3087a5af01aefde50e30d1",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "hand-skeleton",
+      "url": "/models/bodyparts3d/full-body/hand-skeleton.glb",
+      "bytes": 416816,
+      "sha256": "5f61ad363b757aa0cfcf0d7be4bcedcf63cbfec9ff5728cace9d62aa0447eac1",
+      "structures": 54
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:left-capitate",
+        "fmaId": "FMA24447",
+        "name": "Left capitate",
+        "sourceName": "left capitate",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24447",
+        "bounds": {
+          "min": [
+            2.4860999584198,
+            -0.1783599853515625,
+            0.6057299971580505
+          ],
+          "max": [
+            2.6428799629211426,
+            0.04588012769818306,
+            0.7735099792480469
+          ]
+        },
+        "center": [
+          2.564489960670471,
+          -0.06623992882668972,
+          0.6896199882030487
+        ],
+        "anchor": [
+          2.558990001678467,
+          -0.05231994763016701,
+          0.6493800282478333
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3257",
+            "sha256": "d229f9418122099af72721ebeee60b15b68604f3da3532c0625909dc2ac9520c"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "centralDistal"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:left-hamate",
+        "fmaId": "FMA24449",
+        "name": "Left hamate",
+        "sourceName": "left hamate",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24449",
+        "bounds": {
+          "min": [
+            2.3659698963165283,
+            -0.1874401867389679,
+            0.6132199764251709
+          ],
+          "max": [
+            2.515700101852417,
+            0.006309814285486937,
+            0.8398199677467346
+          ]
+        },
+        "center": [
+          2.4408349990844727,
+          -0.09056518622674048,
+          0.7265199720859528
+        ],
+        "anchor": [
+          2.4443600177764893,
+          -0.05999999865889549,
+          0.7370400428771973
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3261",
+            "sha256": "665e0be6779b9bc398e0947eaf190cc4d942e030a05d1a4cfe3ce4270bf8ddbf"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "centralDistal"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:left-lunate",
+        "fmaId": "FMA24438",
+        "name": "Left lunate",
+        "sourceName": "left lunate",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24438",
+        "bounds": {
+          "min": [
+            2.3633899688720703,
+            -0.02778015099465847,
+            0.6062799692153931
+          ],
+          "max": [
+            2.528830051422119,
+            0.09888000786304474,
+            0.7713099718093872
+          ]
+        },
+        "center": [
+          2.4461100101470947,
+          0.035549928434193134,
+          0.6887949705123901
+        ],
+        "anchor": [
+          2.450549840927124,
+          0.0064398194663226604,
+          0.6798700094223022
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3268",
+            "sha256": "3d4a712f4ee30883f8967d15e8ac70e707d524213814bc7e2fbd51a123619b83"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lunate"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:left-pisiform",
+        "fmaId": "FMA24442",
+        "name": "Left pisiform",
+        "sourceName": "left pisiform",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24442",
+        "bounds": {
+          "min": [
+            2.3183798789978027,
+            -0.10275024175643921,
+            0.7703099846839905
+          ],
+          "max": [
+            2.4003000259399414,
+            0.012769775465130806,
+            0.8758900165557861
+          ]
+        },
+        "center": [
+          2.359339952468872,
+          -0.0449902331456542,
+          0.8231000006198883
+        ],
+        "anchor": [
+          2.328850030899048,
+          -0.05520019680261612,
+          0.8421000838279724
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3276",
+            "sha256": "6162726ac4bcb29a9ba8489570650ba8a323576b03423fb16b27bcd1e55c0658"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ulnarProximal"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:left-scaphoid",
+        "fmaId": "FMA24436",
+        "name": "Left scaphoid",
+        "sourceName": "left scaphoid",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24436",
+        "bounds": {
+          "min": [
+            2.4945199489593506,
+            -0.037800293415784836,
+            0.6152700185775757
+          ],
+          "max": [
+            2.7297699451446533,
+            0.1168200671672821,
+            0.7644400000572205
+          ]
+        },
+        "center": [
+          2.612144947052002,
+          0.039509886875748634,
+          0.6898550093173981
+        ],
+        "anchor": [
+          2.606029987335205,
+          0.032169800251722336,
+          0.7195900082588196
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3278",
+            "sha256": "5389b07855a3273ac4646092eaf667466eb3f00cf5f78ed90993e82200f550ab"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "scaphoid"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:left-trapezium",
+        "fmaId": "FMA24444",
+        "name": "Left trapezium",
+        "sourceName": "left trapezium",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24444",
+        "bounds": {
+          "min": [
+            2.6478099822998047,
+            -0.1425299048423767,
+            0.6771000027656555
+          ],
+          "max": [
+            2.8179502487182617,
+            0.057930298149585724,
+            0.8455399870872498
+          ]
+        },
+        "center": [
+          2.732880115509033,
+          -0.04229980334639549,
+          0.7613199949264526
+        ],
+        "anchor": [
+          2.75150990486145,
+          -0.0782000720500946,
+          0.7886000275611877
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3283",
+            "sha256": "50006736c04d10ad0af5c94054c9cf64eac6e55fb0cdde25eefcad1170492f93"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "radialDistal"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:left-trapezoid",
+        "fmaId": "FMA24445",
+        "name": "Left trapezoid",
+        "sourceName": "left trapezoid",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24445",
+        "bounds": {
+          "min": [
+            2.622529983520508,
+            -0.17278015613555908,
+            0.6364499926567078
+          ],
+          "max": [
+            2.7328901290893555,
+            -0.04729980602860451,
+            0.7844999432563782
+          ]
+        },
+        "center": [
+          2.6777100563049316,
+          -0.1100399810820818,
+          0.710474967956543
+        ],
+        "anchor": [
+          2.6738698482513428,
+          -0.13955993950366974,
+          0.7267099618911743
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3284",
+            "sha256": "e4378dd24f9206c580457f09b75cc05a36f0a1b4049fc2c2ce57da51a2ebd7c5"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "radialDistal"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:bone:left-triquetral",
+        "fmaId": "FMA24440",
+        "name": "Left triquetral",
+        "sourceName": "left triquetral",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24440",
+        "bounds": {
+          "min": [
+            2.3182098865509033,
+            -0.11051025241613388,
+            0.6442500352859497
+          ],
+          "max": [
+            2.427309989929199,
+            0.025200195610523224,
+            0.7980700731277466
+          ]
+        },
+        "center": [
+          2.3727599382400513,
+          -0.04265502840280533,
+          0.7211600542068481
+        ],
+        "anchor": [
+          2.377570152282715,
+          -0.0758502185344696,
+          0.7176399827003479
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3285",
+            "sha256": "3561c1648197f5c2f44c577e2b54c1fbf76b36bbcab207f8b67286ba134cea2c"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ulnarProximal"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:right-capitate",
+        "fmaId": "FMA24446",
+        "name": "Right capitate",
+        "sourceName": "right capitate",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24446",
+        "bounds": {
+          "min": [
+            -2.644819974899292,
+            -0.17809021472930908,
+            0.6053399443626404
+          ],
+          "max": [
+            -2.4840099811553955,
+            0.045969847589731216,
+            0.7749199867248535
+          ]
+        },
+        "center": [
+          -2.5644149780273438,
+          -0.06606018356978893,
+          0.690129965543747
+        ],
+        "anchor": [
+          -2.571499824523926,
+          -0.05504028499126434,
+          0.6550499796867371
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3361",
+            "sha256": "982098ff86ccc18075bd4ecf422c4bca732f4d691d249c8f381bac574287c59b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "centralDistal"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:right-hamate",
+        "fmaId": "FMA24448",
+        "name": "Right hamate",
+        "sourceName": "right hamate",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24448",
+        "bounds": {
+          "min": [
+            -2.519279956817627,
+            -0.18706969916820526,
+            0.6140599846839905
+          ],
+          "max": [
+            -2.366000175476074,
+            0.0065301512368023396,
+            0.8393099904060364
+          ]
+        },
+        "center": [
+          -2.4426400661468506,
+          -0.09026977396570146,
+          0.7266849875450134
+        ],
+        "anchor": [
+          -2.4433600902557373,
+          -0.06616027653217316,
+          0.7440400123596191
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3367",
+            "sha256": "9c27cf5b75dd149f2469403af7ad68263e1eff29307864ae10481ac647262eba"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "centralDistal"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:right-lunate",
+        "fmaId": "FMA24437",
+        "name": "Right lunate",
+        "sourceName": "right lunate",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24437",
+        "bounds": {
+          "min": [
+            -2.527240037918091,
+            -0.025390014052391052,
+            0.6063500046730042
+          ],
+          "max": [
+            -2.3620200157165527,
+            0.09820007532835007,
+            0.7692400217056274
+          ]
+        },
+        "center": [
+          -2.4446300268173218,
+          0.03640503063797951,
+          0.6877950131893158
+        ],
+        "anchor": [
+          -2.471640110015869,
+          0.022319946438074112,
+          0.6949800252914429
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3374",
+            "sha256": "82da5ab98cc4f4e311eba2ee20b811bfa392a05d65d9f8c4ed0b9c7fd62880a1"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lunate"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:right-pisiform",
+        "fmaId": "FMA24441",
+        "name": "Right pisiform",
+        "sourceName": "right pisiform",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24441",
+        "bounds": {
+          "min": [
+            -2.4021999835968018,
+            -0.10325012356042862,
+            0.7724900245666504
+          ],
+          "max": [
+            -2.3195600509643555,
+            0.013250121846795082,
+            0.8765800595283508
+          ]
+        },
+        "center": [
+          -2.3608800172805786,
+          -0.04500000085681677,
+          0.8245350420475006
+        ],
+        "anchor": [
+          -2.3296401500701904,
+          -0.02854003943502903,
+          0.839139997959137
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3382",
+            "sha256": "c5b1ce6020acc6e1feff8f44a3f0b5ec717e3cb3218701fbe86644975d981684"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ulnarProximal"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:right-scaphoid",
+        "fmaId": "FMA24435",
+        "name": "Right scaphoid",
+        "sourceName": "right scaphoid",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24435",
+        "bounds": {
+          "min": [
+            -2.730599880218506,
+            -0.03645996004343033,
+            0.6157400012016296
+          ],
+          "max": [
+            -2.4933199882507324,
+            0.11789978295564651,
+            0.7666299939155579
+          ]
+        },
+        "center": [
+          -2.611959934234619,
+          0.04071991145610809,
+          0.6911849975585938
+        ],
+        "anchor": [
+          -2.6074700355529785,
+          0.03192993253469467,
+          0.7223300337791443
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3383",
+            "sha256": "e96e60d6c03b0581caa5733e3ab65aca6dc3671a476d78f123dcd48ecbee0050"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "scaphoid"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:right-trapezium",
+        "fmaId": "FMA24443",
+        "name": "Right trapezium",
+        "sourceName": "right trapezium",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24443",
+        "bounds": {
+          "min": [
+            -2.8172197341918945,
+            -0.1419500708580017,
+            0.6773000359535217
+          ],
+          "max": [
+            -2.6493799686431885,
+            0.05732971057295799,
+            0.8457600474357605
+          ]
+        },
+        "center": [
+          -2.7332998514175415,
+          -0.04231018014252186,
+          0.7615300416946411
+        ],
+        "anchor": [
+          -2.7505600452423096,
+          -0.07653991878032684,
+          0.7888699173927307
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3388",
+            "sha256": "3b2475587f9ca59d43cb48c7275999f795f97f8b0ed6c68d5b37ff582382d81f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "radialDistal"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:right-trapezoid",
+        "fmaId": "FMA23725",
+        "name": "Right trapezoid",
+        "sourceName": "right trapezoid",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA23725",
+        "bounds": {
+          "min": [
+            -2.732609748840332,
+            -0.17135009169578552,
+            0.6352699995040894
+          ],
+          "max": [
+            -2.6214001178741455,
+            -0.0468902587890625,
+            0.7838799953460693
+          ]
+        },
+        "center": [
+          -2.6770049333572388,
+          -0.10912017524242401,
+          0.7095749974250793
+        ],
+        "anchor": [
+          -2.674639940261841,
+          -0.14263977110385895,
+          0.7184200286865234
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3389",
+            "sha256": "6823c47b6593463e65b85861e51026b06b76e0196dde1e8fae8b902a32f2a0e8"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "radialDistal"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:bone:right-triquetral",
+        "fmaId": "FMA24439",
+        "name": "Right triquetral",
+        "sourceName": "right triquetral",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-skeleton",
+        "nodeName": "FMA24439",
+        "bounds": {
+          "min": [
+            -2.4276599884033203,
+            -0.11231017857789993,
+            0.6463099718093872
+          ],
+          "max": [
+            -2.3215699195861816,
+            0.02590026892721653,
+            0.7973599433898926
+          ]
+        },
+        "center": [
+          -2.374614953994751,
+          -0.0432049548253417,
+          0.7218349575996399
+        ],
+        "anchor": [
+          -2.3802099227905273,
+          -0.0769500732421875,
+          0.7228700518608093
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3390",
+            "sha256": "aa1d02ab7a2b7e2d87125a43fc92f497d9d35323de3d1a8b25185dbb7dd5cc09"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ulnarProximal"
+    }
+  ]
+}

@@ -1,5 +1,16 @@
 # Visible Medicine — shared delivery plan
 
+26 September Clinical Review integration: the website now includes the pinned
+Atlas review home and four personal editors (1,575 contexts), explicit active
+administrator/institution authorization, isolated append-only storage and an
+exact-source review model viewer. Local save/correction/stale and access tests
+pass; no clinical approvals or independent entitlements are granted. See
+[integration and release boundaries](clinical-review-integration-20260926.md).
+The dedicated integration chat owns these website changes; the separate Atlas
+checkout and learner exports remain untouched. Publication and actual live
+acceptance are recorded separately in the dated checkpoint, with the newer
+local-first preference preserved pending the owner's publication choice.
+
 25 September short ciliary pathology: generated Atlas `ce2037f` adds one
 source-bound draft with three primary references and explicit evidence limits.
 Models, clinical approvals and access unchanged. Desktop/mobile teaching and

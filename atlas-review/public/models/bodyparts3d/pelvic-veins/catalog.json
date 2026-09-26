@@ -1,0 +1,1072 @@
+{
+  "version": 1,
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "auditSha256": "ffb300bcd1f2cd8c2a9684c133ed5d82a1043d7bda99a78f377854c9168ebf26",
+  "structures": [
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-iliolumbar-vein",
+      "fmaId": "FMA18904",
+      "name": "Left iliolumbar vein",
+      "sourceName": "left iliolumbar vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "pelvic-veins",
+      "nodeName": "FMA18904",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3510",
+          "sha256": "5e7fb984d08beac228872a1545a33bdf37092670d151ed11446d2cc7f5dd7b04"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.13845400512218475,
+          0.8244199752807617,
+          -0.031679000705480576
+        ],
+        "max": [
+          1.2722899913787842,
+          1.6032899618148804,
+          0.8386300206184387
+        ]
+      },
+      "center": [
+        0.7053719982504845,
+        1.213854968547821,
+        0.4034755099564791
+      ],
+      "anchor": [
+        0.48608601093292236,
+        1.125920057296753,
+        0.06637299805879593
+      ],
+      "coverageNote": "Complete original source definition, not a complete pelvic venous network. Left internal pudendal and left lateral sacral definitions are held for coordinate/laterality review. Small superior gluteal surfaces do not depict their entire drainage territory. Plexuses, nerves and fascial canals are not supplied. Source proximity does not establish joined lumens, flow, patency or a safe procedural route. Every original triangle and source position is retained; clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-inferior-gluteal-vein",
+      "fmaId": "FMA18913",
+      "name": "Left inferior gluteal vein",
+      "sourceName": "left inferior gluteal vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "pelvic-veins",
+      "nodeName": "FMA18913",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3513",
+          "sha256": "5b1033ac53d09bc0597f1a854aca3bd20a521c863e06aff6dbf043fe33610315"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.12998899817466736,
+          -0.4673199951648712,
+          -0.6541990041732788
+        ],
+        "max": [
+          0.5243399739265442,
+          0.7375400066375732,
+          0.14071199297904968
+        ]
+      },
+      "center": [
+        0.3271644860506058,
+        0.135110005736351,
+        -0.25674350559711456
+      ],
+      "anchor": [
+        0.305772989988327,
+        0.31898000836372375,
+        -0.37268999218940735
+      ],
+      "coverageNote": "Complete original source definition, not a complete pelvic venous network. Left internal pudendal and left lateral sacral definitions are held for coordinate/laterality review. Small superior gluteal surfaces do not depict their entire drainage territory. Plexuses, nerves and fascial canals are not supplied. Source proximity does not establish joined lumens, flow, patency or a safe procedural route. Every original triangle and source position is retained; clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-obturator-vein",
+      "fmaId": "FMA18916",
+      "name": "Left obturator vein",
+      "sourceName": "left obturator vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "pelvic-veins",
+      "nodeName": "FMA18916",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3527",
+          "sha256": "aa2581514d43322a57ed18573156043e605fd32d2174630aafaaee49221167f8"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.13436000049114227,
+          0.09357000142335892,
+          0.01659500040113926
+        ],
+        "max": [
+          0.5116180181503296,
+          0.7017599940299988,
+          0.4248270094394684
+        ]
+      },
+      "center": [
+        0.32298900932073593,
+        0.39766499772667885,
+        0.22071100492030382
+      ],
+      "anchor": [
+        0.40504100918769836,
+        0.3348099887371063,
+        0.24856999516487122
+      ],
+      "coverageNote": "Complete original source definition, not a complete pelvic venous network. Left internal pudendal and left lateral sacral definitions are held for coordinate/laterality review. Small superior gluteal surfaces do not depict their entire drainage territory. Plexuses, nerves and fascial canals are not supplied. Source proximity does not establish joined lumens, flow, patency or a safe procedural route. Every original triangle and source position is retained; clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-superior-gluteal-vein",
+      "fmaId": "FMA18910",
+      "name": "Left superior gluteal vein",
+      "sourceName": "left superior gluteal vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "pelvic-veins",
+      "nodeName": "FMA18910",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3531",
+          "sha256": "9b5bbf76ba93e44333cc8915d0df1d2f670dcd9997b9a542b13e383ece7e90c3"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.133542001247406,
+          0.49211999773979187,
+          -0.22208000719547272
+        ],
+        "max": [
+          0.5652179718017578,
+          0.9669100046157837,
+          0.1453630030155182
+        ]
+      },
+      "center": [
+        0.3493799865245819,
+        0.7295150011777878,
+        -0.038358502089977264
+      ],
+      "anchor": [
+        0.4095669984817505,
+        0.6200100183486938,
+        -0.0023930000606924295
+      ],
+      "coverageNote": "Complete original source definition, not a complete pelvic venous network. Left internal pudendal and left lateral sacral definitions are held for coordinate/laterality review. Small superior gluteal surfaces do not depict their entire drainage territory. Plexuses, nerves and fascial canals are not supplied. Source proximity does not establish joined lumens, flow, patency or a safe procedural route. Every original triangle and source position is retained; clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-iliolumbar-vein",
+      "fmaId": "FMA18903",
+      "name": "Right iliolumbar vein",
+      "sourceName": "right iliolumbar vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "pelvic-veins",
+      "nodeName": "FMA18903",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3603",
+          "sha256": "6c280dc5a5ef44be36926c62f6bf69d7d12ec9f2b565d7fb3db3ccefcf33113b"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -1.285390019416809,
+          0.8212599754333496,
+          -0.03164000064134598
+        ],
+        "max": [
+          -0.2434699982404709,
+          1.6033600568771362,
+          0.8386300206184387
+        ]
+      },
+      "center": [
+        -0.76443000882864,
+        1.212310016155243,
+        0.40349500998854637
+      ],
+      "anchor": [
+        -0.4924429953098297,
+        1.1016499996185303,
+        0.08211000263690948
+      ],
+      "coverageNote": "Complete original source definition, not a complete pelvic venous network. Left internal pudendal and left lateral sacral definitions are held for coordinate/laterality review. Small superior gluteal surfaces do not depict their entire drainage territory. Plexuses, nerves and fascial canals are not supplied. Source proximity does not establish joined lumens, flow, patency or a safe procedural route. Every original triangle and source position is retained; clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-inferior-gluteal-vein",
+      "fmaId": "FMA18912",
+      "name": "Right inferior gluteal vein",
+      "sourceName": "right inferior gluteal vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "pelvic-veins",
+      "nodeName": "FMA18912",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3606",
+          "sha256": "1b99b7f96670faa00b9c735e93bf733e1cb7d1c3779b3870f578694d6af66f6a"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.6277729868888855,
+          -0.46083998680114746,
+          -0.5131167769432068
+        ],
+        "max": [
+          -0.21878500282764435,
+          0.7511299848556519,
+          0.2962630093097687
+        ]
+      },
+      "center": [
+        -0.4232789948582649,
+        0.1451449990272522,
+        -0.10842688381671906
+      ],
+      "anchor": [
+        -0.4073539972305298,
+        0.32635000348091125,
+        -0.23051400482654572
+      ],
+      "coverageNote": "Complete original source definition, not a complete pelvic venous network. Left internal pudendal and left lateral sacral definitions are held for coordinate/laterality review. Small superior gluteal surfaces do not depict their entire drainage territory. Plexuses, nerves and fascial canals are not supplied. Source proximity does not establish joined lumens, flow, patency or a safe procedural route. Every original triangle and source position is retained; clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-internal-pudendal-vein",
+      "fmaId": "FMA18918",
+      "name": "Right internal pudendal vein",
+      "sourceName": "right internal pudendal vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "pelvic-veins",
+      "nodeName": "FMA18918",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3610",
+          "sha256": "74491f125d9becf64c010ab84fff1c4bd123c862e6542ee4c4e2dc2f21859dac"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.4456329941749573,
+          -0.3688400089740753,
+          -0.2340729981660843
+        ],
+        "max": [
+          -0.029249299317598343,
+          0.5723000168800354,
+          0.5537400245666504
+        ]
+      },
+      "center": [
+        -0.2374411467462778,
+        0.10173000395298004,
+        0.15983351320028305
+      ],
+      "anchor": [
+        -0.31482601165771484,
+        -0.1815900057554245,
+        -0.05195999890565872
+      ],
+      "coverageNote": "Complete original source definition, not a complete pelvic venous network. Left internal pudendal and left lateral sacral definitions are held for coordinate/laterality review. Small superior gluteal surfaces do not depict their entire drainage territory. Plexuses, nerves and fascial canals are not supplied. Source proximity does not establish joined lumens, flow, patency or a safe procedural route. Every original triangle and source position is retained; clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-lateral-sacral-vein",
+      "fmaId": "FMA18906",
+      "name": "Right lateral sacral vein",
+      "sourceName": "right lateral sacral vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "pelvic-veins",
+      "nodeName": "FMA18906",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3611",
+          "sha256": "3be470cf3eac06fb284f246b704568d7e47d55a2fb9ad901d41150567fefd1df"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.29012399911880493,
+          0.22891999781131744,
+          -0.3836610019207001
+        ],
+        "max": [
+          -0.06685250252485275,
+          0.6917799711227417,
+          0.056196000427007675
+        ]
+      },
+      "center": [
+        -0.17848825082182884,
+        0.46034998446702957,
+        -0.1637325007468462
+      ],
+      "anchor": [
+        -0.09207410365343094,
+        0.4889500141143799,
+        -0.3374840021133423
+      ],
+      "coverageNote": "Complete original source definition, not a complete pelvic venous network. Left internal pudendal and left lateral sacral definitions are held for coordinate/laterality review. Small superior gluteal surfaces do not depict their entire drainage territory. Plexuses, nerves and fascial canals are not supplied. Source proximity does not establish joined lumens, flow, patency or a safe procedural route. Every original triangle and source position is retained; clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-obturator-vein",
+      "fmaId": "FMA18915",
+      "name": "Right obturator vein",
+      "sourceName": "right obturator vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "pelvic-veins",
+      "nodeName": "FMA18915",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3612",
+          "sha256": "2a76779335098634c2bb9a643233f44fda922088015c1bbec90eb453513edee2"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.606315016746521,
+          0.020330000668764114,
+          0.11155100166797638
+        ],
+        "max": [
+          -0.264614999294281,
+          0.6740700006484985,
+          0.5199300050735474
+        ]
+      },
+      "center": [
+        -0.435465008020401,
+        0.3472000006586313,
+        0.31574050337076187
+      ],
+      "anchor": [
+        -0.5130529999732971,
+        0.27219998836517334,
+        0.33326101303100586
+      ],
+      "coverageNote": "Complete original source definition, not a complete pelvic venous network. Left internal pudendal and left lateral sacral definitions are held for coordinate/laterality review. Small superior gluteal surfaces do not depict their entire drainage territory. Plexuses, nerves and fascial canals are not supplied. Source proximity does not establish joined lumens, flow, patency or a safe procedural route. Every original triangle and source position is retained; clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-superior-gluteal-vein",
+      "fmaId": "FMA18909",
+      "name": "Right superior gluteal vein",
+      "sourceName": "right superior gluteal vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "pelvic-veins",
+      "nodeName": "FMA18909",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3616",
+          "sha256": "ea3cd12444ef7727416d20ca9aaf46a941053218dbd139604e2e047f38164177"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.6744440197944641,
+          0.49740999937057495,
+          -0.08210299909114838
+        ],
+        "max": [
+          -0.2385070025920868,
+          0.9738500118255615,
+          0.28742900490760803
+        ]
+      },
+      "center": [
+        -0.45647551119327545,
+        0.7356300055980682,
+        0.10266300290822983
+      ],
+      "anchor": [
+        -0.5256829857826233,
+        0.6381300091743469,
+        0.1471640020608902
+      ],
+      "coverageNote": "Complete original source definition, not a complete pelvic venous network. Left internal pudendal and left lateral sacral definitions are held for coordinate/laterality review. Small superior gluteal surfaces do not depict their entire drainage territory. Plexuses, nerves and fascial canals are not supplied. Source proximity does not establish joined lumens, flow, patency or a safe procedural route. Every original triangle and source position is retained; clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextRecords": [
+    {
+      "id": "vm:anatomy:body:pelvis:right:bone:right-hip-bone",
+      "fmaId": "FMA16586",
+      "name": "Right hip bone",
+      "sourceName": "right hip bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "thigh"
+      ],
+      "bundle": "pelvis-skeleton",
+      "nodeName": "FMA16586",
+      "bounds": {
+        "min": [
+          -1.4487199783325195,
+          -0.4784698486328125,
+          -0.4888122081756592
+        ],
+        "max": [
+          -0.0279029980301857,
+          1.5786901712417603,
+          0.8901899456977844
+        ]
+      },
+      "center": [
+        -0.7383114881813526,
+        0.5501101613044739,
+        0.20068886876106262
+      ],
+      "anchor": [
+        -0.6408339738845825,
+        0.5218298435211182,
+        0.20818497240543365
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3152",
+          "sha256": "99de26e5435a8397b6f39b44ada75319d5e8fa1433e1ea38fdd8de9e079ed9a9"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:bone:left-hip-bone",
+      "fmaId": "FMA16587",
+      "name": "Left hip bone",
+      "sourceName": "left hip bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "thigh"
+      ],
+      "bundle": "pelvis-skeleton",
+      "nodeName": "FMA16587",
+      "bounds": {
+        "min": [
+          0.02750309929251671,
+          -0.480490118265152,
+          -0.4868505895137787
+        ],
+        "max": [
+          1.4475399255752563,
+          1.5809003114700317,
+          0.8909500241279602
+        ]
+      },
+      "center": [
+        0.7375215124338865,
+        0.5502050966024399,
+        0.20204971730709076
+      ],
+      "anchor": [
+        0.6407599449157715,
+        0.5112402439117432,
+        0.24853698909282684
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3288",
+          "sha256": "bfc8b489fee0945cd1d387cf64bd3691af8e033fa72f9fccae45cfd55ac88694"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:sacrum",
+      "fmaId": "FMA16202",
+      "name": "Sacrum",
+      "sourceName": "sacrum",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "pelvis",
+        "thigh"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA16202",
+      "bounds": {
+        "min": [
+          -0.5959120392799377,
+          -0.17163024842739105,
+          -0.5725374817848206
+        ],
+        "max": [
+          0.5820289850234985,
+          1.2720000743865967,
+          0.31396400928497314
+        ]
+      },
+      "center": [
+        -0.0069415271282196045,
+        0.5501849129796028,
+        -0.1292867362499237
+      ],
+      "anchor": [
+        0.0035980800166726112,
+        0.6635797023773193,
+        -0.22178100049495697
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3393",
+          "sha256": "cd04cc9f78d758ba34e92896914f647d22d257b9e7e51b97764670f694033489"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-vein",
+      "fmaId": "FMA21387",
+      "name": "Right common iliac vein",
+      "sourceName": "right common iliac vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "bundle": "pelvis-vessels-recovery",
+      "nodeName": "FMA21387",
+      "bounds": {
+        "min": [
+          -0.3588069975376129,
+          1.0063202381134033,
+          0.38333603739738464
+        ],
+        "max": [
+          -0.03588550165295601,
+          1.6460700035095215,
+          0.7344799637794495
+        ]
+      },
+      "center": [
+        -0.19734624959528446,
+        1.3261951208114624,
+        0.558908000588417
+      ],
+      "anchor": [
+        -0.20255500078201294,
+        1.346099853515625,
+        0.5292800068855286
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3566",
+          "sha256": "b34098865ad19c8fe0bc28e46ac76e2af6d52f0065d684637fd1886813c62a76"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-vein",
+      "fmaId": "FMA21388",
+      "name": "Left common iliac vein",
+      "sourceName": "left common iliac vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "bundle": "pelvis-vessels-recovery",
+      "nodeName": "FMA21388",
+      "bounds": {
+        "min": [
+          -0.15095700323581696,
+          1.005910038948059,
+          0.26905500888824463
+        ],
+        "max": [
+          0.2624790072441101,
+          1.6517400741577148,
+          0.7313600182533264
+        ]
+      },
+      "center": [
+        0.055761002004146576,
+        1.328825056552887,
+        0.5002075135707855
+      ],
+      "anchor": [
+        0.08100669831037521,
+        1.337499976158142,
+        0.5072500109672546
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3465",
+          "sha256": "4c2e57a9170cfa997bbe48f3b2a5a49e334e03a1067b4e8decc152fb1bb8d913"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-vein",
+      "fmaId": "FMA18887",
+      "name": "Right internal iliac vein",
+      "sourceName": "right internal iliac vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "bundle": "pelvis-vessels-recovery",
+      "nodeName": "FMA18887",
+      "bounds": {
+        "min": [
+          -0.38811901211738586,
+          -0.1117999255657196,
+          -0.5062593221664429
+        ],
+        "max": [
+          -0.16811001300811768,
+          1.1472302675247192,
+          0.5515400171279907
+        ]
+      },
+      "center": [
+        -0.27811451256275177,
+        0.5177151709794998,
+        0.022640347480773926
+      ],
+      "anchor": [
+        -0.27434200048446655,
+        0.5961199998855591,
+        -0.0652870163321495
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3570",
+          "sha256": "83a53beb46b092f78bf80cf73cdfc10b91e0b32f7183fc79fde7ab0716069d73"
+        },
+        {
+          "file": "FJ3571",
+          "sha256": "9fed45819fc91bdda871afc018a0e8924fa9a7bee6cb131626509f75344aa018"
+        },
+        {
+          "file": "FJ3572",
+          "sha256": "8a9105869190200b0798c89805b8565ab079a40ac859c1996a4bf3a752d75e6f"
+        },
+        {
+          "file": "FJ3607",
+          "sha256": "cd1c2558c44fff12efdad2da945fb314469f48c4e252aa10b79b94f7ec02f3ce"
+        },
+        {
+          "file": "FJ3608",
+          "sha256": "9166b488722a107f0ea509bc5c9f94ff26b4cab54d6a5dcc9141dc1bd29efe79"
+        },
+        {
+          "file": "FJ3609",
+          "sha256": "5cb3da4efafb5e511f9d0e658e095f9198545d325c7cc7d0960669b5124a2295"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-vein",
+      "fmaId": "FMA18888",
+      "name": "Left internal iliac vein",
+      "sourceName": "left internal iliac vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "bundle": "pelvis-vessels-recovery",
+      "nodeName": "FMA18888",
+      "bounds": {
+        "min": [
+          0.11571799963712692,
+          -0.10549987852573395,
+          -0.6006829738616943
+        ],
+        "max": [
+          0.25818198919296265,
+          1.1439203023910522,
+          0.3990840017795563
+        ]
+      },
+      "center": [
+        0.18694999441504478,
+        0.5192102119326591,
+        -0.10079948604106903
+      ],
+      "anchor": [
+        0.20834499597549438,
+        0.5610302686691284,
+        -0.16415901482105255
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3469",
+          "sha256": "6a853f1cc673163d4e339f608f405c8c7ad74a3a6c8364fa71421976cb42b681"
+        },
+        {
+          "file": "FJ3470",
+          "sha256": "84de7eea903bfea9b940078ecb921fafdcd8db65dd52f8e954d2973a8a7e59e1"
+        },
+        {
+          "file": "FJ3471",
+          "sha256": "90354aa14b7a84cd015bd32a9cfba5bd0ab9800bdf220fffcfb2960d752f2bcf"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextBundles": [
+    {
+      "id": "pelvis-skeleton",
+      "url": "/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+      "bytes": 86960,
+      "sha256": "58e1008b8064e8a61ce659e0246615960826772abe7070f66496eadcd86f4746",
+      "structures": 2
+    },
+    {
+      "id": "spine-skeleton",
+      "url": "/models/bodyparts3d/full-body/spine-skeleton.glb",
+      "bytes": 1286192,
+      "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957",
+      "structures": 25
+    },
+    {
+      "id": "pelvis-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/pelvis-vessels-recovery.glb",
+      "bytes": 122592,
+      "sha256": "e089b9e9d3eac8ec6c1731ddc2ab0972ae0be041d5175cdedc5cc0bfb8eb09ad",
+      "structures": 12
+    }
+  ],
+  "bundles": [
+    {
+      "id": "pelvic-veins",
+      "url": "/models/bodyparts3d/pelvic-veins/pelvic-veins.glb?v=d503c707236e8b344ee0c582e8ef935cdb11a5dd6bdbcec2b9f758df4b6f60fa",
+      "bytes": 1183456,
+      "sha256": "d503c707236e8b344ee0c582e8ef935cdb11a5dd6bdbcec2b9f758df4b6f60fa",
+      "structures": 10
+    }
+  ],
+  "modification": "Exact-coordinate welding for indexed normals and Float32 GLB storage. Every triangle retained in order; no fitting, mirroring, smoothing, bridges, invented branches or face removal.",
+  "clinicalApproval": false
+}

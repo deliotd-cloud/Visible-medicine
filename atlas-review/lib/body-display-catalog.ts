@@ -1,0 +1,135 @@
+import correction from '../public/models/bodyparts3d/eye-layers/display-correction.json' with { type: 'json' };
+import pancreaticCorrection from '../public/models/bodyparts3d/pancreas/display-correction.json' with { type: 'json' };
+import celiacCorrection from '../public/models/bodyparts3d/celiac-display/display-correction.json' with { type: 'json' };
+import type { BodyCatalog, BodyStructure } from '../app/body-types';
+import { addBrachialVeins } from './brachial-veins.ts';
+import { addTentorium } from './tentorium.ts';
+import { addDeepLegVeins } from './deep-leg-veins.ts';
+import { addPortalVeins } from './portal-veins.ts';
+import { addHepaticVeins } from './hepatic-veins.ts';
+import { addLongusColli } from './longus-colli.ts';
+import { addCubitalVeins } from './cubital-veins.ts';
+import { addGenicularArteries } from './genicular-arteries.ts';
+import { addInferiorThyroidArteries } from './inferior-thyroid-arteries.ts';
+import { addDeferentDucts } from './deferent-ducts.ts';
+import { addInferiorEpigastricVessels } from './inferior-epigastric-vessels.ts';
+import { addPelvicVeins } from './pelvic-veins.ts';
+import { addLimbicLandmarks } from './limbic-landmarks.ts';
+import { addSubscapularArteries } from './subscapular-arteries.ts';
+import { addCircumflexFemoralBranches } from './circumflex-femoral.ts';
+import { addCranialArteries } from './cranial-arteries.ts';
+import { addElbowArteries } from './elbow-arteries.ts';
+import { addCorpusSpongiosum } from './corpus-spongiosum.ts';
+import { addShortCiliary } from './short-ciliary';
+import { addAnteriorCardiacVein } from './anterior-cardiac-vein';
+
+const canonical = (value: unknown): string => {
+  if (Array.isArray(value)) return `[${value.map(canonical).join(',')}]`;
+  if (value && typeof value === 'object')
+    return `{${Object.keys(value)
+      .sort()
+      .map(
+        (key) =>
+          `${JSON.stringify(key)}:${canonical((value as Record<string, unknown>)[key])}`,
+      )
+      .join(',')}}`;
+  return JSON.stringify(value);
+};
+type DisplayCorrection = {
+  original: BodyStructure;
+  replacement: BodyStructure;
+  bundle: BodyCatalog['bundles'][number];
+  originalBundle?: BodyCatalog['bundles'][number];
+  coordinateSystem: BodyCatalog['coordinateSystem'];
+};
+export const eyeDisplayCorrection = correction as unknown as DisplayCorrection;
+export const pancreasDisplayCorrection =
+  pancreaticCorrection as unknown as DisplayCorrection;
+export const celiacDisplayCorrection = celiacCorrection as unknown as DisplayCorrection;
+/** Apply only this exact correction; do not add unrelated anatomy to legacy callers. */
+export function applyCeliacDisplayCorrection(catalog: BodyCatalog): BodyCatalog {
+  return applyDisplayCorrection(catalog, celiacDisplayCorrection);
+}
+/** Exact teaching-copy continuity only. Not an imaging/approval binding migration. */
+export function celiacTeachingIdentity(s: BodyStructure): BodyStructure {
+  return canonical(s) === canonical(celiacDisplayCorrection.replacement)
+    ? celiacDisplayCorrection.original
+    : s;
+}
+/** Teaching-copy continuity only; never reuse this for imaging or entitlement bindings. */
+export function isPancreasDisplayRecord(s: BodyStructure) {
+  return (
+    s.id === pancreasDisplayCorrection.replacement.id &&
+    canonical(s) === canonical(pancreasDisplayCorrection.replacement)
+  );
+}
+
+/** Keep archived ingestion data immutable. The entire source-bound display
+ * record is replaced atomically, so rendering, labels, practice, focus, saved
+ * views and outgoing reference coordinates all consume the same geometry. */
+export function bodyDisplayCatalog(catalog: BodyCatalog): BodyCatalog {
+  const display = addGenicularArteries(
+    addCubitalVeins(
+      addLongusColli(
+        addHepaticVeins(
+          addPortalVeins(
+            addDeepLegVeins(
+              addTentorium(
+                addBrachialVeins(
+                  [pancreasDisplayCorrection, eyeDisplayCorrection, celiacDisplayCorrection].reduce(
+                    applyDisplayCorrection,
+                    catalog,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+  return addAnteriorCardiacVein(addShortCiliary(addCorpusSpongiosum(addElbowArteries(addCranialArteries(addCircumflexFemoralBranches(addSubscapularArteries(addLimbicLandmarks(addPelvicVeins(addInferiorEpigastricVessels(addDeferentDucts(addInferiorThyroidArteries(display))))))))))));
+}
+
+function applyDisplayCorrection(
+  catalog: BodyCatalog,
+  correction: DisplayCorrection,
+): BodyCatalog {
+  const { original, replacement, bundle, coordinateSystem, originalBundle } =
+    correction;
+  const candidates = catalog.structures.filter((s) => s.id === original.id);
+  if (!candidates.length) return catalog;
+  if (
+    candidates.length !== 1 ||
+    (original.provenance &&
+      catalog.sourceVersion !== original.provenance.sourceVersion) ||
+    canonical(catalog.coordinateSystem) !== canonical(coordinateSystem)
+  )
+    throw new Error('Display source coordinates changed; review required');
+  if (originalBundle) {
+    const matches = catalog.bundles.filter((b) => b.id === originalBundle.id);
+    if (
+      matches.length !== 1 ||
+      canonical(matches[0]) !== canonical(originalBundle)
+    )
+      throw new Error(
+        'Display original asset binding changed; review required',
+      );
+  }
+  const record = candidates[0],
+    existing = catalog.bundles.filter((b) => b.id === bundle.id);
+  if (canonical(record) === canonical(replacement)) {
+    if (existing.length !== 1 || canonical(existing[0]) !== canonical(bundle))
+      throw new Error('Display asset binding changed');
+    return catalog;
+  }
+  if (canonical(record) !== canonical(original) || existing.length)
+    throw new Error('Display source binding changed; review required');
+  return {
+    ...catalog,
+    structures: catalog.structures.map((s) =>
+      s.id === original.id ? replacement : s,
+    ),
+    bundles: [...catalog.bundles, bundle],
+  };
+}

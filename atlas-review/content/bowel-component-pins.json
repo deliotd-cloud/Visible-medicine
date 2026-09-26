@@ -1,0 +1,604 @@
+{
+  "sourceCommit": "674f8bae853f6c372d2c2f00ed94a551a10dc7da",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "definitions": [
+    {
+      "key": "small",
+      "title": "Small-bowel components",
+      "parentFma": "FMA7200",
+      "fmas": [
+        "FMA7200",
+        "FMA11338"
+      ],
+      "officialFiles": [
+        "FJ2573",
+        "FJ2574",
+        "FJ2575",
+        "FJ2576",
+        "FJ2577",
+        "FJ2578",
+        "FJ2579",
+        "FJ2580",
+        "FJ2581",
+        "FJ2582",
+        "FJ2583",
+        "FJ2584",
+        "FJ2585",
+        "FJ2586",
+        "FJ2587",
+        "FJ2588",
+        "FJ2589",
+        "FJ2590",
+        "FJ2591",
+        "FJ2592",
+        "FJ2593",
+        "FJ2594",
+        "FJ2595",
+        "FJ2596",
+        "FJ2597",
+        "FJ2598",
+        "FJ2599",
+        "FJ2600",
+        "FJ2601",
+        "FJ2602",
+        "FJ2603",
+        "FJ2604",
+        "FJ2605",
+        "FJ2606",
+        "FJ2607",
+        "FJ2608",
+        "FJ2609",
+        "FJ2610",
+        "FJ2611",
+        "FJ2612",
+        "FJ2613",
+        "FJ2614",
+        "FJ2615",
+        "FJ2616",
+        "FJ2617",
+        "FJ2618",
+        "FJ2619",
+        "FJ2620",
+        "FJ2621",
+        "FJ2622",
+        "FJ2623",
+        "FJ2624",
+        "FJ2625",
+        "FJ2626",
+        "FJ2627",
+        "FJ2628"
+      ]
+    },
+    {
+      "key": "large",
+      "title": "Large-bowel components",
+      "parentFma": "FMA7201",
+      "fmas": [
+        "FMA7201",
+        "FMA14544",
+        "FMA11338"
+      ],
+      "officialFiles": [
+        "FJ2566",
+        "FJ2567",
+        "FJ2568",
+        "FJ2569",
+        "FJ2570",
+        "FJ2571",
+        "FJ2572",
+        "FJ2599"
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
+      "fmaId": "FMA7200",
+      "name": "Small intestine",
+      "sourceName": "small intestine",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "unpaired",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-organs",
+      "nodeName": "FMA7200",
+      "bounds": {
+        "min": [
+          -0.8705390095710754,
+          0.05289978161454201,
+          0.5389299988746643
+        ],
+        "max": [
+          1.0662100315093994,
+          2.771099805831909,
+          1.3342900276184082
+        ]
+      },
+      "center": [
+        0.09783551096916199,
+        1.4119997937232256,
+        0.9366100132465363
+      ],
+      "anchor": [
+        0.116116002202034,
+        1.4182201623916626,
+        1.1060800552368164
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2573",
+          "sha256": "d549d9857ced73b198cdde3ad2494e897b620884364588f8644d7f6fd74ae1cb"
+        },
+        {
+          "file": "FJ2574",
+          "sha256": "b6547b41e4102688005d102b63a853dc0dc5c2e34610672e8c0639a6b4c4d563"
+        },
+        {
+          "file": "FJ2575",
+          "sha256": "6be375a4887d1354e6b3e8e251e55f22da640e5b5f1f8a8224fd6678d1eda826"
+        },
+        {
+          "file": "FJ2576",
+          "sha256": "5e5687e8af2e373c06136c1020a24ab8803c6dc580197fc589a41f9faea4f40e"
+        },
+        {
+          "file": "FJ2577",
+          "sha256": "ee3f47d0554de48b943b4db2d0f6bc1ec584e6ade56f8ec74bb185d1bdbcf84e"
+        },
+        {
+          "file": "FJ2578",
+          "sha256": "390a30e04a95b41f2a243cc96cc584a463ce8d1accd9b20d459ff71385b29065"
+        },
+        {
+          "file": "FJ2579",
+          "sha256": "b82be69d1481aeab262e79b074b4eacb1f783ae2090cf42b7774b20209e7cf58"
+        },
+        {
+          "file": "FJ2580",
+          "sha256": "f45bc8e30afc5d0aa37e8bcf5e310f5b4716df2c21ae7ebea299c8ec183b5b8b"
+        },
+        {
+          "file": "FJ2581",
+          "sha256": "bde15b34176f21e9eb9f65f7c2c6746637d183a8f088200595443a1f5d4266d5"
+        },
+        {
+          "file": "FJ2582",
+          "sha256": "d48d46d478d409f78b8d68c0ac8848192669680c93f00efdf1aff3741ab1eddb"
+        },
+        {
+          "file": "FJ2583",
+          "sha256": "69cc9c8b12d7c12092fbe451f2ed68860e378ec2c46967a2b71ac2e8806838f5"
+        },
+        {
+          "file": "FJ2584",
+          "sha256": "7bfd148d820040c750592c12cb0c86411fead3701607dffd2c3895369c6c1c11"
+        },
+        {
+          "file": "FJ2585",
+          "sha256": "1263e4a01037f3348768686d364f9f590008dfee2f8dd78539964db91f4aa861"
+        },
+        {
+          "file": "FJ2586",
+          "sha256": "91b76f2902b8f280779820a305caf932cae577073952ba6d116be7a2f8a9243b"
+        },
+        {
+          "file": "FJ2587",
+          "sha256": "cd8315e26a28fce7c54233477704ed4ef1474d75572eb3e26e4e2e9ddc9c056d"
+        },
+        {
+          "file": "FJ2588",
+          "sha256": "b7cbb7897f8d57eb4a7169c32be00f5be796c1e7cc86e74aaec3ad193c677485"
+        },
+        {
+          "file": "FJ2589",
+          "sha256": "1d7695ab41a305eb349921c43dd720bf8016d23bf3859567370d9c339baf6722"
+        },
+        {
+          "file": "FJ2590",
+          "sha256": "73a877864b309b18fc7cb65db64d32baa9c058c9536b4b89fee097e2fc82dbae"
+        },
+        {
+          "file": "FJ2591",
+          "sha256": "dadd4bbb9dc091d2800e3f8d955d7766e5c86c2b854c34a6cd5c61a072d641a3"
+        },
+        {
+          "file": "FJ2592",
+          "sha256": "f5c18c8096976a2c19daa3d6c26cd0032ecec1691392d478b22f1d20c8273a1d"
+        },
+        {
+          "file": "FJ2593",
+          "sha256": "af8ebff2a50f5af91a8a54dac0fb2102850fe9415adb8a3d6893d3275c6736ff"
+        },
+        {
+          "file": "FJ2594",
+          "sha256": "70d6c0ad3390dbfccdda54d352f45b8156ab3255c2184072fecf2e974da01a5d"
+        },
+        {
+          "file": "FJ2595",
+          "sha256": "996e47dec84bf03f4ac007194b83e0eb4d5f511288288986a444fcb6140c1d1d"
+        },
+        {
+          "file": "FJ2596",
+          "sha256": "6dc16ba09ede9b97474595da2540e1268d98bfb10af952b0cc9e36231c3a505f"
+        },
+        {
+          "file": "FJ2597",
+          "sha256": "bdd01b5ff6a117a4a13f23e9f4a9ac390dfa6f0e7550464527c62cf4998dceb6"
+        },
+        {
+          "file": "FJ2598",
+          "sha256": "0efc0e799d28e9df3d0483c828ff9cd4b65db7e0da5fd5d157bf0d10959bd897"
+        },
+        {
+          "file": "FJ2600",
+          "sha256": "14cbe0e74c698aace6e1ed1d95d9da60a494f215caf948d760a84441cb47ffda"
+        },
+        {
+          "file": "FJ2601",
+          "sha256": "af315559e744dcc9ba57c249ec3e7faae53f19211861731ba6cbb994d91061cf"
+        },
+        {
+          "file": "FJ2602",
+          "sha256": "7300e8d6bcefd3476479fecc61eb1f707806500c9a896934ac7248a6088a01d3"
+        },
+        {
+          "file": "FJ2603",
+          "sha256": "cdff2efd1e8a0acd13aafa6328043cc8f6e5b8a2b0831fb457af06e33d0d97ab"
+        },
+        {
+          "file": "FJ2604",
+          "sha256": "cbe476086c02ceced25590d0fcbb6f250e0361f6cac08dca6e743f5ada2b6872"
+        },
+        {
+          "file": "FJ2605",
+          "sha256": "3ad5c6f04a91c08332c264e9b7fea7839867ca1cada6d540d018ba75c64d49e9"
+        },
+        {
+          "file": "FJ2606",
+          "sha256": "89b5f2a7b84ce723f206eefd2ffedd8318fca2fd540ceddee173243fb57d9912"
+        },
+        {
+          "file": "FJ2607",
+          "sha256": "13bbe7d80aa85d7d25e1dad84b9c91842c64f25baa7d46c55950aac11cd12e94"
+        },
+        {
+          "file": "FJ2608",
+          "sha256": "f1699baa49100725b02d81bec5cbe9a344f08bbf04f66a335d77fae079230130"
+        },
+        {
+          "file": "FJ2609",
+          "sha256": "c666347a146576fef68f20a0108b3aaa4c64a4b47340fb4d438429a6878d7b0b"
+        },
+        {
+          "file": "FJ2610",
+          "sha256": "b99fd902532e7f255a4bbf324e8965adc3630544f981763357f1a3362bc8f2d1"
+        },
+        {
+          "file": "FJ2611",
+          "sha256": "f307128f506971b523b25c63df7d603561f283327f7cb7a027c69cbd05985abf"
+        },
+        {
+          "file": "FJ2612",
+          "sha256": "4caa419f277f7a7543a92becadeafdbb2ece3f7e9d423986edb0b2f5c72efd77"
+        },
+        {
+          "file": "FJ2613",
+          "sha256": "4050e67d24cc9e4682b006278584417b05b996501fc14fa1b9ac3e25924174a2"
+        },
+        {
+          "file": "FJ2614",
+          "sha256": "3a0fe667c05cf00349c0f0e6dee83af8f9612d2ab0a61cb393082acbd2f45273"
+        },
+        {
+          "file": "FJ2615",
+          "sha256": "d88c128830e798dd41d723687954fa148702362df7794cb8bff0e69e85fbac6b"
+        },
+        {
+          "file": "FJ2616",
+          "sha256": "39f4f1e9c3e1c6882e60b1e1386ca8b75b7877b7da247c7188868ddd891c9411"
+        },
+        {
+          "file": "FJ2617",
+          "sha256": "b590f94cbe6821b109ecb7d6db1f0a7ba34c696c7618187c3c93ce732317a31d"
+        },
+        {
+          "file": "FJ2618",
+          "sha256": "dba020a6ad5d06cefef0bd468aa2767ff642f8fa9fe8d9907ad7d4d8031358a6"
+        },
+        {
+          "file": "FJ2619",
+          "sha256": "9f4394a95d24321b3c19f7cf41744a10db1fc8cb8b180c11c89ca15a01c0b920"
+        },
+        {
+          "file": "FJ2620",
+          "sha256": "e44f63bc62ff749cb53c1e7a914e6ab6284e82adbdfc4117c6c62092de4d2ecc"
+        },
+        {
+          "file": "FJ2621",
+          "sha256": "fa44e8a3155ccd5c6c98b111a28de4727654ddc5a2ff7a22dd0a50e6efe3ab76"
+        },
+        {
+          "file": "FJ2622",
+          "sha256": "005ab831ac1e943836bbab604e1d65977d4c386e593e3644e78f5361ed027cbf"
+        },
+        {
+          "file": "FJ2623",
+          "sha256": "38ecee2c5b418641b9399e91f493db87abba6b6a1e8cf9250fcdc295491f025d"
+        },
+        {
+          "file": "FJ2624",
+          "sha256": "732a475c4d81228ac54222aa259390d259d2d0f86453777fd23c670a1123a626"
+        },
+        {
+          "file": "FJ2625",
+          "sha256": "668459db84a25f6301edb716439c81a58532ccda4e763f4235da6ea1248163fe"
+        },
+        {
+          "file": "FJ2626",
+          "sha256": "35124a0a754ebdf402a38f8e8d2193dde0c91bbb4cd851163fed49dba2747b8c"
+        },
+        {
+          "file": "FJ2627",
+          "sha256": "994297bdf2c25126db37d5afae74cb9cec76550c4adb6748a7c1f906a2ffab03"
+        },
+        {
+          "file": "FJ2628",
+          "sha256": "be71bf232347b0d1188112f4ded90d1efe15b6672b6d17cdf4728c661da9b732"
+        }
+      ],
+      "coverageNote": "Display aggregate excludes the separately selectable ileocecal junction surface. Source coordinates are unchanged.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
+      "fmaId": "FMA11338",
+      "name": "Ileocecal junction",
+      "sourceName": "ileocecal junction",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "unpaired",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-organs-junction",
+      "nodeName": "FMA11338",
+      "bounds": {
+        "min": [
+          -0.7984409928321838,
+          0.7010302543640137,
+          0.5718200206756592
+        ],
+        "max": [
+          -0.5137779712677002,
+          1.2325701713562012,
+          0.9128300547599792
+        ]
+      },
+      "center": [
+        -0.656109482049942,
+        0.9668002128601074,
+        0.7423250377178192
+      ],
+      "anchor": [
+        -0.6675820350646973,
+        0.964139997959137,
+        0.7129799723625183
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2599",
+          "sha256": "7b759605d311999dcd8c3ff13f224f9a208f4856ddaf21057d8e31952ee8dff1"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 ileocecal-junction source surface, separated from both bowel display aggregates without changing coordinates or shape. The source also aliases this surface to cecal and ileal-wall concepts; it is not a separately validated cecum, valve, bowel wall or surgical plane. This corrects duplicate rendering, not missing tissue. No imaging appearance or patient registration is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
+      "fmaId": "FMA7201",
+      "name": "Large intestine",
+      "sourceName": "large intestine",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "unpaired",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-organs",
+      "nodeName": "FMA7201",
+      "bounds": {
+        "min": [
+          -1.2678300142288208,
+          0.22320984303951263,
+          0.002812004182487726
+        ],
+        "max": [
+          1.174820065498352,
+          2.6472997665405273,
+          1.4693100452423096
+        ]
+      },
+      "center": [
+        -0.046504974365234375,
+        1.43525480479002,
+        0.7360610247123986
+      ],
+      "anchor": [
+        -0.06190739944577217,
+        2.001300096511841,
+        1.112089991569519
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2566",
+          "sha256": "8c156d4b6c70b181ae7d5b181913f693948c38558a530996dbad0158993fb653"
+        },
+        {
+          "file": "FJ2567",
+          "sha256": "01227dde6807b83e2d2a4d1771765e5cb9f33d54719dbd1771b7245a5f7f7a4b"
+        },
+        {
+          "file": "FJ2568",
+          "sha256": "0cb3bccddc08f3121e0e25355c88f68f484ea07d5d8815733b7b49eefd9dbcda"
+        },
+        {
+          "file": "FJ2569",
+          "sha256": "9566e92b9c5c2a265c752200709f45d3deaacf32e8a62e4c41f0f3866b569107"
+        },
+        {
+          "file": "FJ2570",
+          "sha256": "9574b2cbadd22a230c1450101f27ba566d11e2f8c0c3c63329a082b39d89a807"
+        },
+        {
+          "file": "FJ2572",
+          "sha256": "66c493a453400d704e39950bbf468e70182c1e68090ac8a85099bfece42c9d35"
+        }
+      ],
+      "coverageNote": "Display aggregate excludes the separately selectable rectum surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable ileocecal junction surface. Source coordinates are unchanged.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:rectum",
+      "fmaId": "FMA14544",
+      "name": "Rectum",
+      "sourceName": "rectum",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "unpaired",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "pelvis-organs-recovery",
+      "nodeName": "FMA14544",
+      "bounds": {
+        "min": [
+          -0.26214799284935,
+          -0.4267297387123108,
+          -0.3871920108795166
+        ],
+        "max": [
+          0.3543170094490051,
+          0.7391698956489563,
+          0.23578795790672302
+        ]
+      },
+      "center": [
+        0.046084508299827576,
+        0.15622007846832275,
+        -0.07570202648639679
+      ],
+      "anchor": [
+        0.04391549900174141,
+        0.15098999440670013,
+        -0.03379001468420029
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2571",
+          "sha256": "aaedd56539179e2091b3217d11fd42c298ed01a971463725f6c32372289c6819"
+        }
+      ],
+      "coverageNote": "Source rectum surface separated from the large-intestine aggregate for selection. No wall-layer, sphincter or mesorectal dissection is supplied.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "id": "abdomen-organs",
+      "url": "/models/bodyparts3d/full-body/abdomen-organs.glb",
+      "bytes": 6383736,
+      "sha256": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+      "structures": 10
+    },
+    {
+      "id": "pelvis-organs-recovery",
+      "url": "/models/bodyparts3d/full-body/pelvis-organs-recovery.glb",
+      "bytes": 73348,
+      "sha256": "d2876cb12fa3f6c71170d18bd6813f96783c47fe12ddf68263bf12e0cae98629",
+      "structures": 6
+    },
+    {
+      "id": "abdomen-organs-junction",
+      "url": "/models/bodyparts3d/full-body/abdomen-organs-junction.glb",
+      "bytes": 6484,
+      "sha256": "233de27cdb6d272b62e99917813aba52abfbab4978374b6fb2b322573abbd672",
+      "structures": 1
+    }
+  ],
+  "clinicalApproval": false
+}

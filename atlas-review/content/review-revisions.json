@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 1,
+  "modelHash": "54d54094b4f071a137a7c2279bcfd031474c91cf3e8e2354a9d4bb1f013b6263",
+  "display": [
+    [
+      "scripts/glb-lossless-codec.mjs",
+      "053f0a2a7a397600b8c70814fa07f0013928d60702b163a8c8514d1eaafba224"
+    ],
+    [
+      "scripts/compress-model-delivery.mjs",
+      "b18e1c9b00891f31190f8f3ccc02287500673fab48d9e74f0490cc68e9fbddf4"
+    ],
+    [
+      "app/anatomy-scene.tsx",
+      "b43d05d6a6c035d7657572690408f04ca64c7dda1e4a014075e58367371d82b5"
+    ],
+    [
+      "app/scene-label-layer.tsx",
+      "e5e9726bae8b040dd02be573df1994eff3ae844a846cf37394c85782ccc129e0"
+    ],
+    [
+      "app/scene-label-layer.css",
+      "2c7a8f927e17f570fdcb83bb74010afc219f47d85d473e4b56c0c339f70ba53f"
+    ],
+    [
+      "lib/screen-label-layout.ts",
+      "bdbc34219c70803768ececed8aa2f952ec18c9cbeae85d77cd29af458debef04"
+    ],
+    [
+      "lib/label-depth.ts",
+      "906cc9824891e2bb39be431274990ab7895891aa7add7784fa0824e19a5c674b"
+    ],
+    [
+      "app/anatomy-canvas.tsx",
+      "667fc0843d6057dd50766eea3ba6ae7aac72332913332aae233f2ee87bc91547"
+    ],
+    [
+      "lib/anatomy-root-session.ts",
+      "1f5a99620d56c1e33708afbcf8ad608c124aed23e2fb4f21adbb4da27837fac2"
+    ],
+    [
+      "app/scene-recovery.tsx",
+      "c2b00f6a53f28b22f2815be96cd8a801ddd4d83540d0520f022c7e1923ec8616"
+    ],
+    [
+      "app/scene-recovery.css",
+      "1686d995b28f2100c9033d420057554fb07d7c5f323f98346c93971a8c647e80"
+    ],
+    [
+      "lib/renderer-health.ts",
+      "59097c95fc681c20d4c448b9ed4df96a095def7be0424f9045edb9587c51164f"
+    ],
+    [
+      "app/anatomy-tissue.tsx",
+      "e2a281af72d26bcd13f0a575476cacbb7d4233a0d485971867f69f91387f323c"
+    ],
+    [
+      "app/fitted-camera.tsx",
+      "8621b76137dc18b1200cffb5fc79a0e38d55bb95d933978e7d73e43727850a49"
+    ],
+    [
+      "lib/camera-keyboard.ts",
+      "9a0a095306c6687ca7fd568570c7a66363566ac3a70f2916bc1e8f74aa405220"
+    ],
+    [
+      "app/camera-keyboard.css",
+      "98d5bb8c7fe828c06e13f065fa7628aeeeb3638bedaea07a963ee3712ba4e7de"
+    ],
+    [
+      "app/shoulder-explorer.tsx",
+      "065be4eac376a6782affeeae39cfc309c4cd9721c73a2921bbdf6ed144fc6a13"
+    ],
+    [
+      "app/shoulder-workspace.css",
+      "8214b33fe1942727ba3ff6221bdb29f4812421ed1d14745053466d37a981e072"
+    ],
+    [
+      "app/atlas-workspace.tsx",
+      "dddafc036e20e23b1048c0be494df62cd6eb794ffbb7a6a6423bd74bf8c0cdbd"
+    ],
+    [
+      "app/workspace-session.ts",
+      "7a2a73775b9eebebc50df257cc520f2f33499ebb7130f496a4b2cdfb46fc379a"
+    ],
+    [
+      "app/atlas-workspace.css",
+      "aaa75b3e4e42a68ac944d70bbca7957eee4c3ba71c4413436cd9bc9f64841c4d"
+    ],
+    [
+      "app/atlas-panel.css",
+      "6a2c74a43745e59ae955fceac7b563af9fbf2a7296d74ad3aa85bc91ee3bb90f"
+    ],
+    [
+      "lib/atlas-panel-layout.ts",
+      "8285d84094cc4d3aaab02dbf89360f4e60ad23856cff2bb69faf3a6240c3c23f"
+    ],
+    [
+      "lib/atlas-note-navigation.ts",
+      "99b6c8a4d774670e4fd71e1ddc086a78eb6f36739bf726ee63a8959ac0490ba6"
+    ],
+    [
+      "app/anatomy-control-rail.tsx",
+      "313212905758d13825c51738df4b7fa374dce6822414c97b701dff98ecd232d9"
+    ],
+    [
+      "app/body-explorer.css",
+      "9913bdbfbde3616885146cf92bed3c25df53ed03d8690125cd8ff85b4208a841"
+    ],
+    [
+      "lib/atlas-navigation.ts",
+      "a8d79020c9d9283dfc50f7055b7c8015746a8f13962267c41f63accb200cdb39"
+    ],
+    [
+      "lib/anatomy-search.ts",
+      "2c469d5d892b6bfbfe2c11211f2bc421a6664e3c5b0286cf017ac1b43f25d1a7"
+    ],
+    [
+      "app/globals.css",
+      "c0b5616ff8bd0c4579f762fa0e895562645289ec6ead7bbc029ae4791cb61ea3"
+    ],
+    [
+      "lib/explode-layout.mjs",
+      "d5790bc375114b906fdede4e430764df3fc0ff3ce71fba02ed87fec45129dff3"
+    ],
+    [
+      "lib/body-arrangement.ts",
+      "5946d4bd5eb1797562309c7469e73d0e6594e88b883c8a4c45344c7d43206c59"
+    ],
+    [
+      "lib/shoulder-arrangement.ts",
+      "4652e8112b700ea5ef34e58ffd9bc5a1fa35e51fe423876db01deff2c1f6ef5a"
+    ],
+    [
+      "app/explode-style-select.tsx",
+      "6629a4b69c6ced08c9f1d6c251d9fbda7d40f369ecf25e5f9c0cc0bf7428e085"
+    ],
+    [
+      "app/explode-style-select.css",
+      "78b35b79e440dcd0021fbf577fecfdd4cdd6eaf83bc11e2fd9779d2f874f4b2a"
+    ],
+    [
+      "lib/inspection-state.ts",
+      "9034b6b6447248feb1b64374f403539b9572c01dd2db68574dd66fafcfd795e7"
+    ],
+    [
+      "lib/selection-visibility.ts",
+      "d08344cef574acc33d4527f0161a99b10fd42364c53fa8cdc2877a055bcec8f6"
+    ],
+    [
+      "app/selection-visibility-notice.tsx",
+      "3d1df340df0d0698de56da0c449f2b75020df44125d10f38566bb25b1c1ab39f"
+    ],
+    [
+      "app/selection-visibility.css",
+      "2a5d482d10cbc725100ce98cac41267d759e64f123d79b218b664096b9aebb58"
+    ],
+    [
+      "lib/anatomy-practice.ts",
+      "6cc60a21919341e2dda7b56305c595f02e23eeb499b06191646e763de916a051"
+    ],
+    [
+      "lib/inspection-geometry.ts",
+      "b1262f894eb05a4ab8a4c136d8b12bc5a179869f4e87140f96cc226b1f7b48b1"
+    ],
+    [
+      "app/inspection-controls.tsx",
+      "a4f51d9e92359c296e4fdbe3359f91cf59d70d06ac653d09029d217fa3c8c7d8"
+    ],
+    [
+      "app/inspection.css",
+      "70a60f780e8d20643267526ca460805c1f8cae1c77e83b2fcf553e413ed350e4"
+    ],
+    [
+      "lib/study-camera.ts",
+      "83743439ea9ff1d9560cc470aa1f2a8f4552c410fe94edc74ab8411f149be8d1"
+    ],
+    [
+      "lib/study-views.ts",
+      "86504e3a67ec3982b43c211dd01c928e41002b1459b50ff018146b3ee5ad738a"
+    ],
+    [
+      "app/study-views.tsx",
+      "6d1e76308517cc89bfa007344b68fa7b575729cc2a2733276627843eee1bdfcf"
+    ],
+    [
+      "app/study-views.css",
+      "990575bf75078182028c3ed0c30985d842e7814623b82f99e7aa69a761a54f8e"
+    ],
+    [
+      "lib/anatomy-coordinates.ts",
+      "211009737314d001b8c48034afa28fbec91481c55ce22a4bbc83b0fa80bcc1bf"
+    ],
+    [
+      "lib/anatomy-link-registry.ts",
+      "ffd7480f172055c1cd61049779c17a507ae8aa5abbcfb5d093e5bec75a3e1205"
+    ],
+    [
+      "lib/imaging-sync.ts",
+      "42696bac9b39e5761bd6e654996d6d6245bd51782b8387a8f946e9f42882b147"
+    ],
+    [
+      "app/imaging-link.tsx",
+      "7119b61ed1d58aa31c828152e698d4bdcdcecece7fb7b66cda275d21e2ec59a3"
+    ],
+    [
+      "app/imaging-link.css",
+      "ee0cd87e6ee32c14d6fad90bd3c739240d126eac026b9ac5cfd194a61cef1dc2"
+    ]
+  ],
+  "revisions": {
+    "vm:anatomy:upper-limb:shoulder:right:bone:scapula": {
+      "geometry": "165d7390049334ee2b2cd0c735c2beff3c61cdead1c8cd79e198e40b6e1fec0d",
+      "teaching": "a36de3d88fd8eb2616d15958e12d96452f8253e974ba167ef9d483b2952ef48f",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:bone:humerus": {
+      "geometry": "96348884ebb681b88d986178eedbad0934ed49ff4d425058f1658fb08429d8a0",
+      "teaching": "5739b6a59ddefa7ef4be418838ddbffa0de74b968c84cbe917425fdb7a3edb72",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:bone:clavicle": {
+      "geometry": "1944ab87d35b5298bcd20f8d24297e6456b74c69e690adedf86377d0aee55b3e",
+      "teaching": "ab9d9d63e868afec431faad67f369d37fcc64bff1b6a8884af8dc655392a6db8",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:muscle:deltoid": {
+      "geometry": "7408c449f7d25c4cc36aed28eda7dedfabfec29846dea6e93dfd76fb2b0735ab",
+      "teaching": "fda756044a1c801d7692e065775a86ad321d434c5248a3d57118bbc37288ef6e",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:muscle:supraspinatus": {
+      "geometry": "72738cfa16a653b723715eb6ebe223543d83d66a76c025264df38b898bb26c48",
+      "teaching": "8808e4444c7a439312c8cf76effcdae8b80acb599ae5b18bf6da8abeea2a4afd",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:muscle:infraspinatus": {
+      "geometry": "56007b5143f0c27a7eaadf5fb4ca91dd3a35989e9efd3a7cfea4aecc98313e08",
+      "teaching": "0c6eceef4ae0ca06043bc6b9764f6d78217af7042e6cffc4864f410aaa1cb3ce",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:muscle:subscapularis": {
+      "geometry": "9e881d20743fbe414787ce0faa0154301b9e8b9e5bc87afcab970170bae04b34",
+      "teaching": "9f2bb8a8e66118ff3d96df0f0d1f0ebe40d5e74d04809ed4f579e1c8192cb2ef",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:muscle:biceps-long-head": {
+      "geometry": "8df11b866ba60b970ed926873474664940c8b0698d679d92f9397ee78a153877",
+      "teaching": "d41df64b821d4d9fededcb1b06871984c74c575929bbb0fd1bd106b9efb7ab8b",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:muscle:teres-minor": {
+      "geometry": "fcf99e0e6b959e21b705811084278eb21d0abc47545d0e8cb3ddac0a27b29bad",
+      "teaching": "862e5658387156d5e0a3d971895edbd1e8a5d278751e40d0f6954da239ffac9e",
+      "imaging": null
+    }
+  },
+  "sourceRevisions": {
+    "vm:anatomy:upper-limb:shoulder:right:bone:scapula": {
+      "geometry": "f79e935c5491244f094117bc0a9b8f66a4612dcdb68403139ffa1de9cd1e562d",
+      "teaching": "9830dba1ac8afa2b3d488e72d007d3b12eda4dd102527e9a63f6b81a4557a348",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:bone:humerus": {
+      "geometry": "10c76ae5c298787239ba13026c2fbc2c73f8f29b09107bb4c623109725c7c211",
+      "teaching": "fa7b66290bccd261156f67ea9299f4a620b05df8d6afd22f7b3dba9ee70ef35b",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:bone:clavicle": {
+      "geometry": "201ac7fe46f64e65b7d8abbb6abb542cc4101f4ec21dcc999440021c2af90f23",
+      "teaching": "462dda8c347cfb7dce3ba40217b6b7ebfcc89f90c45c6beccb6f6774c69c69f4",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:muscle:deltoid": {
+      "geometry": "d457e5b90fb21fff0b8a75ccca02c716d5f4acc4c69c9643686455f3336ecb9f",
+      "teaching": "4afe81669690b71d3957e55b5960f55a4396b481301d11e32fe2670b9fa42f11",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:muscle:supraspinatus": {
+      "geometry": "7712ea7092740d25d2e177bdf25338720bf04cec8a2409473c901f84f32d2c72",
+      "teaching": "64b7f8a8204e7bcd73281b475d573623c565ddb2cf2c5d1aac5484ef076513ec",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:muscle:infraspinatus": {
+      "geometry": "c674ac889329b96272876f1ef0a1e69095540c49098ed52cb7fdd2d4e0d1b19c",
+      "teaching": "4701ce2f9ee4bbf8cdc83cd7f2518ac88a0cfebe90593ba49869d556a80e2338",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:muscle:subscapularis": {
+      "geometry": "0279745dd0857bc319090ca8b655fb7788241c8c14f2919e2e920174e7b23890",
+      "teaching": "2e734adf238288e47b38f71100129480c4efb1d268f40e263ae7f8521f8a2afa",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:muscle:biceps-long-head": {
+      "geometry": "c140a7bc75cefc7b5d77466e9acfedbe1b827afebdbd7dc8def8b7825024db31",
+      "teaching": "f1698d1f5f39172af3eafa8bbae6a2eea6e5215ed0ffe868555b564fefe1f03f",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:muscle:teres-minor": {
+      "geometry": "252361ece8eb484b843b74ae80ab275e3a7d51fed636861f79b049e504aa2133",
+      "teaching": "f4a6cad130df40e6990cde48a5dea238bbff1ad7e86758331b32efc31f9e2a6b",
+      "imaging": null
+    }
+  },
+  "websiteIntegrationSha256": "fc068953486f9bb55056efc4f1ab1c98a4fbc59b0b8c81c6783b154e1fbb3238"
+}

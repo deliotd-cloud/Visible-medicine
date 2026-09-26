@@ -1,0 +1,767 @@
+{
+  "version": 1,
+  "specimenId": "um-5t6tz7-v1-2:knee",
+  "status": "unvalidated-independent-reference",
+  "source": {
+    "doi": "https://doi.org/10.22452/RD/5T6TZ7",
+    "version": "1.2",
+    "fileId": 596,
+    "archiveSha256": "0c6c7fa81329dba949e00c7d99de37afef0352368eb5b386eb8034ec0b66ec86",
+    "archiveMd5": "d7f066d2fd3fc21c21f64ad3d5a985fd",
+    "metadataSha256": "a9d0957579f4c78975978e12f5627fc9e0be758da676dd11d16dd72a303e5375",
+    "readmeSha256": "deb6b13e74e499015a79a84c0bc5c4faa15cc8a763de43ebb8ec088824fc2967",
+    "license": "CC0-1.0",
+    "credit": "Jeevaraaj N Vivekanandan and Juliana Binti Usman, Universiti Malaya, 2026. DOI:10.22452/RD/5T6TZ7, version 1.2."
+  },
+  "sourceBasis": "STL headers explicitly declare LPS; original float32 positions and triangle order retained. Source README identifies right-limb acquisition. Display scaling is not scan registration or a calibrated measurement.",
+  "displayTransformColumnMajor": [
+    0.01,
+    0,
+    0,
+    0,
+    0,
+    0,
+    -0.01,
+    0,
+    0,
+    0.01,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+  ],
+  "registeredToBodyParts3D": false,
+  "imagingRegistration": null,
+  "prototypeSha256": "f4199fc6fdaed1a7ba2da1ae76bff266f0baf4e0972e0c79f9975fc526d17b48",
+  "geometryBinarySha256": "22eb1cb894deda95508239930c205670d487f3d25fc356c9917941958ab94841",
+  "structures": [
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:knee:femur",
+      "slug": "femur",
+      "name": "Femur",
+      "sourceName": "Bone_Femur",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "skeleton",
+      "bounds": {
+        "min": [
+          -0.8760882019996643,
+          -3.3972840309143066,
+          -0.5324224233627319
+        ],
+        "max": [
+          0.02316240780055523,
+          1.0124977827072144,
+          0.148962140083313
+        ]
+      },
+      "center": [
+        -0.42646289709955454,
+        -1.1923931241035461,
+        -0.19173014163970947
+      ],
+      "anchor": [
+        -0.45524871349334717,
+        -1.1870524883270264,
+        -0.16222117841243744
+      ],
+      "nodeName": "femur",
+      "sources": [
+        {
+          "file": "Segmentation_Bone_Femur.stl",
+          "sha256": "cca47e8afdda3d90bab7d74e3534a5e411e2479b6448f986d56a89f27c99e978"
+        }
+      ],
+      "triangles": 108184,
+      "omittedSourceFaces": [],
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:knee:tibia",
+      "slug": "tibia",
+      "name": "Tibia",
+      "sourceName": "Bone_Tibia",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "skeleton",
+      "bounds": {
+        "min": [
+          -0.9389885663986206,
+          -6.972589015960693,
+          -0.6694017052650452
+        ],
+        "max": [
+          -0.21112528443336487,
+          -3.362298011779785,
+          -0.0004688154149334878
+        ]
+      },
+      "center": [
+        -0.5750569254159927,
+        -5.167443513870239,
+        -0.3349352603399893
+      ],
+      "anchor": [
+        -0.513340950012207,
+        -5.173632621765137,
+        -0.3575859069824219
+      ],
+      "nodeName": "tibia",
+      "sources": [
+        {
+          "file": "Segmentation_Bone_Tibia.stl",
+          "sha256": "70b44bc56b556d91c729e6073a32f05d0fb3a3e7f4ec0c93a4f5b40680d6811d"
+        }
+      ],
+      "triangles": 74064,
+      "omittedSourceFaces": [],
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:knee:fibula",
+      "slug": "fibula",
+      "name": "Fibula",
+      "sourceName": "Bone_Fibula",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "skeleton",
+      "bounds": {
+        "min": [
+          -0.9858615398406982,
+          -7.110271453857422,
+          -0.7577053904533386
+        ],
+        "max": [
+          -0.6646823883056641,
+          -3.5116238594055176,
+          -0.4418109059333801
+        ]
+      },
+      "center": [
+        -0.8252719640731812,
+        -5.31094765663147,
+        -0.5997581481933594
+      ],
+      "anchor": [
+        -0.8022369146347046,
+        -5.31362247467041,
+        -0.6333417296409607
+      ],
+      "nodeName": "fibula",
+      "sources": [
+        {
+          "file": "Segmentation_Bone_Fibula.stl",
+          "sha256": "1f4c41852cf7e9bd1f553632dbaf84e3cdb433247d23a28409203430c86f2f9c"
+        }
+      ],
+      "triangles": 25484,
+      "omittedSourceFaces": [],
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:knee:patella",
+      "slug": "patella",
+      "name": "Patella",
+      "sourceName": "Bone_Patella",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "skeleton",
+      "bounds": {
+        "min": [
+          -0.8620047569274902,
+          -3.2380335330963135,
+          0.1473458856344223
+        ],
+        "max": [
+          -0.4722461402416229,
+          -2.8570492267608643,
+          0.3808971047401428
+        ]
+      },
+      "center": [
+        -0.6671254485845566,
+        -3.047541379928589,
+        0.26412149518728256
+      ],
+      "anchor": [
+        -0.6940558552742004,
+        -3.0531256198883057,
+        0.34696343541145325
+      ],
+      "nodeName": "patella",
+      "sources": [
+        {
+          "file": "Segmentation_Bone_Patella.stl",
+          "sha256": "5e7780e1395332950edf6c02fc59a537e54444de58dc0f220c9054bfe77c0fff"
+        }
+      ],
+      "triangles": 7380,
+      "omittedSourceFaces": [],
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:knee:femoral-cartilage",
+      "slug": "femoral-cartilage",
+      "name": "Distal femoral cartilage",
+      "sourceName": "Cartilage_Femur Distal ",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "cartilage",
+      "bounds": {
+        "min": [
+          -0.8619076013565063,
+          -3.4320874214172363,
+          -0.562417209148407
+        ],
+        "max": [
+          -0.12586377561092377,
+          -3.0423972606658936,
+          0.1208336278796196
+        ]
+      },
+      "center": [
+        -0.49388568848371506,
+        -3.237242341041565,
+        -0.2207917906343937
+      ],
+      "anchor": [
+        -0.5087224841117859,
+        -3.309811592102051,
+        -0.1793748289346695
+      ],
+      "nodeName": "femoral-cartilage",
+      "sources": [
+        {
+          "file": "Segmentation_Cartilage_Femur Distal .stl",
+          "sha256": "ba670fd8fe935b60bb3648bed50d3352bdc3db2b2623d3c2a24ee55e0cec3b9e"
+        }
+      ],
+      "triangles": 22788,
+      "omittedSourceFaces": [
+        13366,
+        13367,
+        13368,
+        13370,
+        13918,
+        13919,
+        13922,
+        13923
+      ],
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:knee:tibial-cartilage",
+      "slug": "tibial-cartilage",
+      "name": "Tibial cartilage (source group)",
+      "sourceName": "Cartilage_Tibia ",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "cartilage",
+      "bounds": {
+        "min": [
+          -0.8862415552139282,
+          -3.4574079513549805,
+          -0.5073418617248535
+        ],
+        "max": [
+          -0.20910508930683136,
+          -3.338027000427246,
+          -0.03286914899945259
+        ]
+      },
+      "center": [
+        -0.5476733222603798,
+        -3.3977174758911133,
+        -0.27010550536215305
+      ],
+      "anchor": [
+        -0.4569602906703949,
+        -3.388974189758301,
+        -0.25620904564857483
+      ],
+      "nodeName": "tibial-cartilage",
+      "sources": [
+        {
+          "file": "Segmentation_Cartilage_Tibia .stl",
+          "sha256": "7dbfbe8b6e78d4306f9d35a75e37a3b9e7a436bb64659b50e1ba7680bc5c5f7d"
+        }
+      ],
+      "triangles": 6348,
+      "omittedSourceFaces": [
+        3492,
+        3493,
+        3497,
+        3498,
+        3556,
+        3557,
+        3558,
+        3559
+      ],
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:knee:patellar-cartilage",
+      "slug": "patellar-cartilage",
+      "name": "Patellar cartilage",
+      "sourceName": "Cartilage_Patella",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "cartilage",
+      "bounds": {
+        "min": [
+          -0.8255133032798767,
+          -3.161079168319702,
+          0.11259899288415909
+        ],
+        "max": [
+          -0.4632372260093689,
+          -2.8822238445281982,
+          0.27988749742507935
+        ]
+      },
+      "center": [
+        -0.6443752646446228,
+        -3.02165150642395,
+        0.19624324515461922
+      ],
+      "anchor": [
+        -0.6439151763916016,
+        -3.022526264190674,
+        0.14847902953624725
+      ],
+      "nodeName": "patellar-cartilage",
+      "sources": [
+        {
+          "file": "Segmentation_Cartilage_Patella.stl",
+          "sha256": "b05387d7f434b4015a1d581ad7bba08dedea70b488d266c94260732a4a925390"
+        }
+      ],
+      "triangles": 4364,
+      "omittedSourceFaces": [],
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:knee:acl",
+      "slug": "acl",
+      "name": "Anterior cruciate ligament",
+      "sourceName": "Ligament_ACL",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "ligament",
+      "bounds": {
+        "min": [
+          -0.6284374594688416,
+          -3.403266668319702,
+          -0.42192161083221436
+        ],
+        "max": [
+          -0.5086668133735657,
+          -3.0631682872772217,
+          -0.16486160457134247
+        ]
+      },
+      "center": [
+        -0.5685521364212036,
+        -3.233217477798462,
+        -0.2933916077017784
+      ],
+      "anchor": [
+        -0.5652884244918823,
+        -3.2350990772247314,
+        -0.29902756214141846
+      ],
+      "nodeName": "acl",
+      "sources": [
+        {
+          "file": "Segmentation_Ligament_ACL.stl",
+          "sha256": "62ae8ab641bb3073449819de127194be621acd000aa26057688bc8f8d9076d54"
+        }
+      ],
+      "triangles": 2672,
+      "omittedSourceFaces": [],
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:knee:pcl",
+      "slug": "pcl",
+      "name": "Posterior cruciate ligament",
+      "sourceName": "Ligament_PCL",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "ligament",
+      "bounds": {
+        "min": [
+          -0.536965012550354,
+          -3.4891180992126465,
+          -0.4733179211616516
+        ],
+        "max": [
+          -0.388132780790329,
+          -3.216435194015503,
+          -0.23155231773853302
+        ]
+      },
+      "center": [
+        -0.4625488966703415,
+        -3.3527766466140747,
+        -0.3524351194500923
+      ],
+      "anchor": [
+        -0.4645204544067383,
+        -3.346942186355591,
+        -0.3492491543292999
+      ],
+      "nodeName": "pcl",
+      "sources": [
+        {
+          "file": "Segmentation_Ligament_PCL.stl",
+          "sha256": "786a8ae4a45c42a11f80d7c378e9c41be30593bc03e970d7bf8fc489240cb3e4"
+        }
+      ],
+      "triangles": 2732,
+      "omittedSourceFaces": [],
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:knee:mcl",
+      "slug": "mcl",
+      "name": "Medial collateral ligament",
+      "sourceName": "Ligament_MCL",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "ligament",
+      "bounds": {
+        "min": [
+          -0.24248172342777252,
+          -3.598001003265381,
+          -0.24082502722740173
+        ],
+        "max": [
+          -0.08680720627307892,
+          -3.177790641784668,
+          -0.1643286645412445
+        ]
+      },
+      "center": [
+        -0.16464446485042572,
+        -3.3878958225250244,
+        -0.20257684588432312
+      ],
+      "anchor": [
+        -0.15737596154212952,
+        -3.3933160305023193,
+        -0.20401114225387573
+      ],
+      "nodeName": "mcl",
+      "sources": [
+        {
+          "file": "Segmentation_Ligament_MCL.stl",
+          "sha256": "f5f1ca536754456140470590d95f79b1143bfd9b8ba5153ad78721c861c0793d"
+        }
+      ],
+      "triangles": 1768,
+      "omittedSourceFaces": [
+        1757,
+        1758,
+        1759,
+        1763,
+        1764,
+        1765,
+        1766,
+        1767,
+        1776,
+        1777,
+        1778,
+        1779,
+        1780,
+        1781,
+        1782,
+        1783
+      ],
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:knee:lcl",
+      "slug": "lcl",
+      "name": "Lateral collateral ligament",
+      "sourceName": "Ligament_LCL",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "ligament",
+      "bounds": {
+        "min": [
+          -1.0068557262420654,
+          -3.605649948120117,
+          -0.6067637801170349
+        ],
+        "max": [
+          -0.8445649147033691,
+          -3.1251060962677,
+          -0.3870178163051605
+        ]
+      },
+      "center": [
+        -0.9257103204727173,
+        -3.3653780221939087,
+        -0.4968907982110977
+      ],
+      "anchor": [
+        -0.9198335409164429,
+        -3.3742165565490723,
+        -0.49305298924446106
+      ],
+      "nodeName": "lcl",
+      "sources": [
+        {
+          "file": "Segmentation_Ligament_LCL.stl",
+          "sha256": "b4a222fec9b6a6d03656c2448264ac5daac5b756b8a7a18d3be27de1bf7e593a"
+        }
+      ],
+      "triangles": 1916,
+      "omittedSourceFaces": [],
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:knee:patellar-ligament",
+      "slug": "patellar-ligament",
+      "name": "Patellar ligament",
+      "sourceName": "Ligament_Patella ",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "ligament",
+      "bounds": {
+        "min": [
+          -0.8534289002418518,
+          -3.7505340576171875,
+          -0.08848778903484344
+        ],
+        "max": [
+          -0.5958862900733948,
+          -3.109832763671875,
+          0.3559540808200836
+        ]
+      },
+      "center": [
+        -0.7246575951576233,
+        -3.4301834106445312,
+        0.1337331458926201
+      ],
+      "anchor": [
+        -0.7267489433288574,
+        -3.4316298961639404,
+        0.1318187266588211
+      ],
+      "nodeName": "patellar-ligament",
+      "sources": [
+        {
+          "file": "Segmentation_Ligament_Patella .stl",
+          "sha256": "92885e29d132834daabb4476731648a804eca3743eec11fb2376ee80495e395b"
+        }
+      ],
+      "triangles": 10004,
+      "omittedSourceFaces": [],
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:knee:meniscus-group",
+      "slug": "meniscus-group",
+      "name": "Knee meniscus (source group)",
+      "sourceName": "Meniscus_Knee",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "meniscus",
+      "bounds": {
+        "min": [
+          -0.8968105316162109,
+          -3.433248996734619,
+          -0.4933066964149475
+        ],
+        "max": [
+          -0.16188044846057892,
+          -3.295093297958374,
+          -0.03139779344201088
+        ]
+      },
+      "center": [
+        -0.5293454900383949,
+        -3.3641711473464966,
+        -0.2623522449284792
+      ],
+      "anchor": [
+        -0.4295124411582947,
+        -3.3758034706115723,
+        -0.27405741810798645
+      ],
+      "nodeName": "meniscus-group",
+      "sources": [
+        {
+          "file": "Segmentation_Meniscus_Knee.stl",
+          "sha256": "ef781315590c6d84028f615c8e0bc63173865fddb86a4e5064a815ace3fd1359"
+        }
+      ],
+      "triangles": 5196,
+      "omittedSourceFaces": [
+        2882,
+        2884,
+        2911,
+        2912,
+        2970,
+        2971,
+        2984,
+        2985
+      ],
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:knee:quadriceps-tendon",
+      "slug": "quadriceps-tendon",
+      "name": "Quadriceps tendon",
+      "sourceName": "Tendon_Quadriceps ",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "tendon",
+      "bounds": {
+        "min": [
+          -0.7997267842292786,
+          -2.9234414100646973,
+          0.1521458923816681
+        ],
+        "max": [
+          -0.4695361852645874,
+          -2.0296847820281982,
+          0.34887000918388367
+        ]
+      },
+      "center": [
+        -0.634631484746933,
+        -2.4765630960464478,
+        0.2505079507827759
+      ],
+      "anchor": [
+        -0.6076821684837341,
+        -2.471069097518921,
+        0.2644200026988983
+      ],
+      "nodeName": "quadriceps-tendon",
+      "sources": [
+        {
+          "file": "Segmentation_Tendon_Quadriceps .stl",
+          "sha256": "f08968890b5f9899abadb0746288b09e6483644e23f5666a8d525600ea622d73"
+        }
+      ],
+      "triangles": 10472,
+      "omittedSourceFaces": [],
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:knee:popliteus",
+      "slug": "popliteus",
+      "name": "Popliteus",
+      "sourceName": "Muscle_Popliteus",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "bounds": {
+        "min": [
+          -0.7279897928237915,
+          -4.401566028594971,
+          -0.5912812948226929
+        ],
+        "max": [
+          -0.37917080521583557,
+          -3.4667587280273438,
+          -0.3077225983142853
+        ]
+      },
+      "center": [
+        -0.5535802990198135,
+        -3.9341623783111572,
+        -0.4495019465684891
+      ],
+      "anchor": [
+        -0.5585878491401672,
+        -3.9464111328125,
+        -0.4628971219062805
+      ],
+      "nodeName": "popliteus",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Popliteus.stl",
+          "sha256": "93c9e714064bc9eb0543bd7108047da098476b25d99594180b1e8a7a7bfcd011"
+        }
+      ],
+      "triangles": 9784,
+      "omittedSourceFaces": [],
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    }
+  ],
+  "bundle": {
+    "id": "um-knee",
+    "url": "/models/um-knee/knee.glb",
+    "bytes": 5298360,
+    "sha256": "cf61571a8c80f463805b1362bb81b3d9eec3c62a1780c7288355e4a20fa8515b",
+    "structures": 15
+  }
+}
