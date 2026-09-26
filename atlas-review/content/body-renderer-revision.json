@@ -30,7 +30,7 @@
     },
     {
       "path": "app/anatomy-data.ts",
-      "sha256": "5dbfe92c163fa0d3286920c0adefc54340086dba11c1cc445f4d4a47bf5baa3a"
+      "sha256": "e8e8da00b4cd1fc92242498fc7feca41b353ee58b3c5a8b147d3f442705ac83b"
     },
     {
       "path": "app/anatomy-tissue.tsx",
@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "39c85f5fd981896ff5090c4c4d900abd163291625e83018733b8717145a6ce53"
+      "sha256": "1b94e8c712da0d47ea58b6b79fcd112457aa275f7d3b037e684fa85fa2d2011b"
     },
     {
       "path": "app/body-education-link.ts",
@@ -78,7 +78,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "856fc56c2f9606388a50992527bb34bf36adfeb6dba8a7d8ac189bbade47bcab"
+      "sha256": "a4cdbd814df2ee08a4fc158e70d377c378f4e2849870d8ffb7d89d0894658e09"
     },
     {
       "path": "app/body-scene.tsx",
@@ -577,6 +577,14 @@
       "sha256": "ea4eb8d886f03cab39025dbdcbf1a4a630be83f04254cf731eab7b580222afd3"
     },
     {
+      "path": "content/coronary-arterial-us-pins.json",
+      "sha256": "9277caac4d2b97c75fced2f393b481f0c84800897a9faa9b28bd9c12e8854a18"
+    },
+    {
+      "path": "content/coronary-arterial-us.ts",
+      "sha256": "64598a6dcb26aa59123b20539911faa9e3eabebb2015ad7198e105d341865efb"
+    },
+    {
       "path": "content/coronary-venous-teaching.ts",
       "sha256": "ccae64c4d3c441cf681e756456f91fb62f3987f9939dbd1d11fb6c547f393155"
     },
@@ -663,6 +671,14 @@
     {
       "path": "content/distal-palmar-mri.ts",
       "sha256": "174ad897535a6fbf3f56f66ce4781198bb26b19395cb70bbcad47acb209a8885"
+    },
+    {
+      "path": "content/elbow-arterial-ct-pins.json",
+      "sha256": "6ff0fad79b76f3c7a45e9f01032c09d309280fcab13afc60690f954bbf2e197f"
+    },
+    {
+      "path": "content/elbow-arterial-ct.ts",
+      "sha256": "38af68ce17b668e7ac373bcbd87d1c8e62c060a3807fd1de060a28120b5a5b7f"
     },
     {
       "path": "content/elbow-arterial.ts",
@@ -1242,7 +1258,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "adba7cca7307bbe23b9ead2fc4fb6025e44869e01ff06a31827cffbafc389489"
+      "sha256": "29737e984c49ec87f8e725fd26ad952791e7651e50fd922b4b66ecd89e1d2a8e"
     },
     {
       "path": "content/sca-mca-clinical-pins.json",
@@ -1809,6 +1825,10 @@
       "sha256": "6ecbd0d421c6caa5ffd3f02edadf8cfdbf49ef7bbab20ea3926054544c896925"
     },
     {
+      "path": "lib/coronary-arterial-us.ts",
+      "sha256": "fa2eae6fdab9639f5d971c146bae925342bd1caf4aca19d42076eb01cef4ed0b"
+    },
+    {
       "path": "lib/coronary-venous.ts",
       "sha256": "7fe9f98f5ea4ac4e7e9a76cd25016b5461393ba3f25e52b7b2fc8215c64cd62e"
     },
@@ -1915,6 +1935,10 @@
     {
       "path": "lib/distal-palmar-mri.ts",
       "sha256": "0392e2cc92fcc9eb896ea3582010bd1032be0148f9fdc40a752a872436707902"
+    },
+    {
+      "path": "lib/elbow-arterial-ct.ts",
+      "sha256": "a2fc77065a921cbbbcf71c637172baa70b3e128a6d713c3c71d5268e422e8827"
     },
     {
       "path": "lib/elbow-arteries.ts",
@@ -2906,7 +2930,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "0e7e72a15625555ba11c51d1402296ff3fa2156fb8029b7dec4030581c75a08e"
+      "sha256": "38668afa27e55b56e04e0d000257609aa66c30994ab3bbce0b6e4787ca53f239"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3117,7 +3141,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "fd056e3a877d12eaf883d3244f964aac3bf01abe41e12aad66b74b10280331fb",
-  "sourceRendererSha256": "b9d9be3100f032dce6d7ac15074ae931438dfb3ebac338183124ce017ccf9088",
-  "websiteIntegrationSha256": "fc068953486f9bb55056efc4f1ab1c98a4fbc59b0b8c81c6783b154e1fbb3238"
+  "sha256": "061dbd294a0a1dc6f8edf9745b2430e0acd95c535a308d5d9c0f82d5136f4135",
+  "sourceRendererSha256": "31a1838ad6109a2aaa8d3ff76248f48b2f3abb3a6e36a9b23fddb8e940cd82f5",
+  "websiteIntegrationSha256": "720ee642df45a847caded1fd005e96127f882f4e2b2dd7367ae5d5c78f7d9795"
 }

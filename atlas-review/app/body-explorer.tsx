@@ -402,7 +402,11 @@ export default function BodyExplorer({
       anchorSkeleton, showOrigins, isolated, focus, regionalFraming, view, zoom,
       camera: cameraCapture.current }),
     state => {
-      setDissection(state.dissection); setSystems(state.systems); setExplode(state.explode);
+      // Laterality is shared between modes. A saved mode must not resurrect a
+      // focus (or Undo/Redo entry) without supplied targets on the current side.
+      setDissection(dissectionReducer(state.dissection,
+        dissectionScopeAction(catalog, profile, initialRegion, side)));
+      setSystems(state.systems); setExplode(state.explode);
       setLayout(state.layout); setInspection(state.inspection); setPlate(state.plate);
       setGhostRemoved(state.ghostRemoved); setAnchorSkeleton(state.anchorSkeleton);
       setShowOrigins(state.showOrigins); setIsolated(state.isolated); setFocus(state.focus);

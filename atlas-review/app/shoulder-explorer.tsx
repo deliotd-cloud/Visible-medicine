@@ -49,6 +49,7 @@ import {
 } from '@/atlas-review/components/ui/combobox';
 import { Slider } from '@/atlas-review/components/ui/slider';
 import { ExplodeStyleSelect } from './explode-style-select';
+import { StructureQuickCheck } from './structure-quick-check';
 import { useWorkspaceSession } from './workspace-session';
 import type { BodyLayout } from '@/atlas-review/lib/body-arrangement';
 import { Switch } from '@/atlas-review/components/ui/switch';
@@ -172,6 +173,7 @@ export default function ShoulderExplorer({
   const [syncPlane, setSyncPlane] = useState(false);
   const [resetNonce, setResetNonce] = useState(0);
   const [mode, setMode] = useState<Mode>('study');
+  const beforeExam = useRef<{ view: StudyView; zoomStep: number } | null>(null);
   const workspace = useWorkspaceSession(
     () => ({ layer, visibleSystems, explode, layout, inspection, plate, anchorSkeleton,
       showOrigins, isolated, syncPlane, view, zoom, camera: cameraCapture.current }),
@@ -251,6 +253,10 @@ export default function ShoulderExplorer({
     workspace.chooseMode('dissect');
     setMode('study');
     practiceDispatch({ type: 'dismiss' });
+    beforeExam.current = null;
+    applyStudyView(state);
+  }
+  function applyStudyView(state: StudyView) {
     setSyncPlane(state.referencePlane ?? false);
     setSelectedId(state.selectedId ?? structures[0].id);
     setView(state.view as CameraView);
@@ -347,7 +353,19 @@ export default function ShoulderExplorer({
   };
 
   const toggleMode = () => {
+    if (mode === 'exam') {
+      setMode('study');
+      practiceDispatch({ type: 'dismiss' });
+      const saved = beforeExam.current;
+      beforeExam.current = null;
+      if (saved) {
+        applyStudyView(saved.view);
+        setZoomStep(saved.zoomStep);
+      }
+      return;
+    }
     if (mode === 'study' && !displayReady) return;
+    beforeExam.current = { view: structuredClone(captureView()), zoomStep };
     setPlate(false);
     setLayout('spatial');
     setSyncPlane(false);
@@ -1213,6 +1231,15 @@ export default function ShoulderExplorer({
                     <GroupedAnatomyNotes>
                       {(tab) => {
                         const section = selected.sections[tab];
+                        if (tab === 'quiz') return (
+                          <StructureQuickCheck
+                            key={selected.id}
+                            question={section.body}
+                            choices={section.bullets ?? []}
+                            correctAnswer={section.correctAnswer ?? null}
+                            explanation={section.explanation}
+                          />
+                        );
                         const modality = {
                           ct: 'CT',
                           mri: 'MRI',
@@ -1299,13 +1326,13 @@ export default function ShoulderExplorer({
                       <div className="eyebrow">
                         Structure check · {selected.name}
                       </div>
-                      <h2>{selected.sections.quiz.body}</h2>
-                      {selected.sections.quiz.bullets?.map((choice, index) => (
-                        <div className="quiz-choice" key={choice}>
-                          <b>{String.fromCharCode(65 + index)}</b>
-                          <span>{choice}</span>
-                        </div>
-                      ))}
+                      <StructureQuickCheck
+                        key={selected.id}
+                        question={selected.sections.quiz.body}
+                        choices={selected.sections.quiz.bullets ?? []}
+                        correctAnswer={selected.sections.quiz.correctAnswer ?? null}
+                        explanation={selected.sections.quiz.explanation}
+                      />
                       <Button onClick={toggleMode} disabled={!displayReady}>
                         <GraduationCap /> Start identification exam
                       </Button>

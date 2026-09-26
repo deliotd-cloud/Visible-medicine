@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+26 September review alignment: the local Clinical Review import and protected
+review model now use Atlas `f46b48c`, with explicit draft quiz answer evidence
+and the latest coronary-US/elbow-CT drafts. Prior decisions remain in history;
+changed revisions require re-review. Eleven targeted checks, source parity,
+production builds and TypeScript pass. Current browser acceptance is outstanding
+because local navigation was blocked. See [scope and evidence](clinical-review-current-20260926.md).
+No publication, new models, personal-record migration or clinical approval.
+
 26 September regional integration: the local website's eleven-region/whole-body
 runtime now uses Atlas `f46b48c`, including safe side-specific workspace return
 and the saved teaching/usability improvements. All registered model bytes and

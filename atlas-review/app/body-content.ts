@@ -15,6 +15,7 @@ import { laryngealMuscleImagingLesson } from '../lib/laryngeal-muscle-imaging';
 import { lateralCricoarytenoidUsLesson } from '../lib/lateral-cricoarytenoid-us';
 import { plantarArterialUsLesson } from '../lib/plantar-arterial-us';
 import { commonInterosseousUsLesson } from '../lib/common-interosseous-us';
+import { coronaryArterialUsLesson } from '../lib/coronary-arterial-us';
 import { lacrimalDrainageImagingLesson } from '../lib/lacrimal-drainage-imaging';
 import { laryngealImagingLesson } from '../lib/laryngeal-imaging';
 import { laryngealMuscleTeachingLesson } from '../lib/laryngeal-muscle-teaching';
@@ -139,6 +140,7 @@ import { anteriorCardiacPathologyLesson } from '../lib/anterior-cardiac-patholog
 import { subscapularArteryLesson } from '../lib/subscapular-arteries';
 import { elbowArteryLesson } from '../lib/elbow-arteries';
 import { elbowClinicalLesson } from '../lib/elbow-clinical';
+import { elbowArterialCtLesson } from '../lib/elbow-arterial-ct';
 import { circumflexFemoralLesson } from '../lib/circumflex-femoral';
 import { cranialArteryLesson } from '../lib/cranial-arteries';
 import { deferentDuctLesson } from '../lib/deferent-ducts';
@@ -231,6 +233,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const coronaryArterialUs = coronaryArterialUsLesson(s, tab);
+  if (coronaryArterialUs) return coronaryArterialUs;
   const commonInterosseousUs = commonInterosseousUsLesson(s, tab);
   if (commonInterosseousUs) return commonInterosseousUs;
   const plantarArterialUs = plantarArterialUsLesson(s, tab);
@@ -307,6 +311,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (chestWallImaging) return chestWallImaging;
   const elbowClinical = elbowClinicalLesson(s, tab);
   if (elbowClinical) return elbowClinical;
+  const elbowCt = elbowArterialCtLesson(s, tab);
+  if (elbowCt) return elbowCt;
   const elbow = elbowArteryLesson(s, tab);
   if (elbow) return elbow;
   const picaClinical = picaClinicalLesson(s, tab);

@@ -1,0 +1,45 @@
+{
+  "websiteCommit": "7087d00228449a6b93c0210f8686cc7845002c88",
+  "atlasSource": "3984c9782e35905996c53b791660ce30b75ba008",
+  "integrationHash": "fc068953486f9bb55056efc4f1ab1c98a4fbc59b0b8c81c6783b154e1fbb3238",
+  "purpose": "Synthetic test identities only; no saved decisions or patient data",
+  "records": [
+    {
+      "key": "shoulder:vm:anatomy:upper-limb:shoulder:right:muscle:biceps-long-head",
+      "scope": "shoulder",
+      "structureId": "vm:anatomy:upper-limb:shoulder:right:muscle:biceps-long-head",
+      "track": "geometry",
+      "revisionHash": "8df11b866ba60b970ed926873474664940c8b0698d679d92f9397ee78a153877",
+      "checklistVersion": "shoulder-review-1"
+    },
+    {
+      "key": "body:vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+      "scope": "body",
+      "structureId": "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+      "track": "geometry",
+      "materialHash": "56daef34f459fdbe2075f900d8626d81353dda5ee1fd02b7689c03caaf230223",
+      "revisionHash": "67446b1cda2327cff8bb4c93680b397997c84e6d97bcb0be8a87005d1347ae8e",
+      "checklistVersion": "body-review-1"
+    },
+    {
+      "key": "nested:[\"[\\\"vm:anatomy:body:head-neck:left:organ:left-eyeball\\\",\\\"eye\\\"]\",\"vm:anatomy:body:head-neck:left:space:anterior-chamber-of-left-eyeball\"]",
+      "scope": "nested",
+      "structureId": "vm:anatomy:body:head-neck:left:space:anterior-chamber-of-left-eyeball",
+      "track": "geometry",
+      "nestedKey": "[\"vm:anatomy:body:head-neck:left:organ:left-eyeball\",\"eye\"]",
+      "materialHash": "4b0af1261ae507b9bfd9255815766b3ccc5981f67c63e99a7a20131b9cefc269",
+      "revisionHash": "bc828e01bd3fb26286839093d73ad03898718832f8a5cfdb382ca8bbdac9aa0a",
+      "checklistVersion": "nested-review-1"
+    },
+    {
+      "key": "specimens:[\"um-5t6tz7-v1-2:lower-limb:foot\",\"vm:reference:um-5t6tz7-v1-2:lower-limb:abductor-digiti-minimi\"]",
+      "scope": "specimens",
+      "structureId": "vm:reference:um-5t6tz7-v1-2:lower-limb:abductor-digiti-minimi",
+      "track": "geometry",
+      "specimenKey": "um-5t6tz7-v1-2:lower-limb:foot",
+      "materialHash": "c9bf24704eb0054950459e24311a7a7d3c4e7efcdbe05986f4e2995fad0173eb",
+      "revisionHash": "e6cb2231a75ee2da55a66a09b1e3b3b813a0fb2ad224745a3dd0f220a6f30e4f",
+      "checklistVersion": "specimen-review-1"
+    }
+  ]
+}

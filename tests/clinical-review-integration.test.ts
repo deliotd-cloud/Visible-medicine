@@ -6,6 +6,24 @@ import { build } from 'esbuild';
 import { Miniflare, Log, LogLevel, convertV4MiniflareOptions } from 'miniflare';
 import { reviewModelHref } from '../lib/clinical-review-links.ts';
 
+const priorMaterial = JSON.parse(readFileSync('tests/fixtures/clinical-review-prior-material-20260926.json','utf8')) as {
+  atlasSource:string; records:Array<{key:string;scope:string;structureId:string;revisionHash:string;materialHash?:string;checklistVersion:string}>;
+};
+
+test('current review includes draft answer evidence and admitted teaching without the held skin candidate', () => {
+  const review = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
+  const regional = JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8'));
+  assert.equal(review.revision, regional.sourceCommit);
+  assert.notEqual(review.revision, priorMaterial.atlasSource);
+  const paths = new Set(review.files.map((file: {path:string}) => file.path));
+  for (const path of ['app/structure-quick-check.tsx', 'content/coronary-arterial-us.ts', 'content/elbow-arterial-ct.ts']) assert.ok(paths.has(path), path);
+  assert.ok(![...paths].some(path => String(path).startsWith('app/review/candidates/')));
+  const dashboard = readFileSync('atlas-review/app/review/review-dashboard.tsx', 'utf8');
+  assert.ok(dashboard.includes('Draft answer key:'));
+  assert.ok(dashboard.includes('Draft explanation:'));
+  assert.ok(!readFileSync('atlas-review/app/review/overview/page.tsx', 'utf8').includes('/review/candidates/skin'));
+});
+
 test('source model links preserve exact identities through the website', () => {
   for (const href of ['/?study=1&structure=FMA1&source=abc&side=both', '/regions/head-neck?study=2&part=child&partSource=def', '/specimens/kidneys?ref=1&refSource=abc', '/specimens/lower-limb?specimen=1&specimenScope=foot&specimenPart=toe']) {
     const before = new URL(href, 'https://x.test'), after = new URL(reviewModelHref(href), 'https://x.test');
@@ -49,6 +67,7 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
             const query=new URLSearchParams({structureId:entry.id,track,...(scope==='nested'?{nestedKey:c.nestedKey}:scope==='specimens'?{specimenKey:c.specimenKey}:{})});
             fixtures.push({endpoint,query:'?'+query,payload:{catalogScope:c.catalogScope,structureId:entry.id,nestedKey:c.nestedKey,specimenKey:c.specimenKey,sourceFrame:c.sourceFrame,track,expectedVersion:0,materialHash:c.materialHash,revisionHash:c.revisions[track],checklistVersion:c.checklistVersion,draft}});
           }
+          Object.assign(fixtures.at(-1),{key:entry.key,scope:entry.scope});
         }
         return Response.json({count:clinicalReviewEntries.length,fixtures});
       }
@@ -84,7 +103,7 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
     };
     const seedResponse=await mf.dispatchFetch('https://review.test/__fixtures');
     assert.equal(seedResponse.status,200,await seedResponse.clone().text());
-    const seed=await seedResponse.json() as {count:number;fixtures:Array<{endpoint:string;query:string;payload:any}>};
+    const seed=await seedResponse.json() as {count:number;fixtures:Array<{key:string;scope:string;endpoint:string;query:string;payload:any}>};
     assert.equal(seed.count,1575);
     assert.equal((await call('reviews','a',seed.fixtures[0].payload)).status,409,'save requires loaded account context');
     await call('reviews');
@@ -96,6 +115,11 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
     }
     for(const fixture of seed.fixtures) {
       const {endpoint,query,payload}=fixture;
+      const prior=priorMaterial.records.find(row=>row.key===fixture.key);
+      assert(prior,'real prior source identity fixture');
+      assert.notEqual(payload.revisionHash,prior.revisionHash,'changed review integration requires a new revision');
+      assert.equal((await call(endpoint,'a',{...payload,revisionHash:prior.revisionHash,
+        ...(prior.materialHash?{materialHash:prior.materialHash}:{})})).status,409,'prior-release form cannot approve current material');
       payload.draft.notes='Synthetic integration check; no clinical review.';
       assert.equal((await call(endpoint,'a',payload,{origin:'https://attacker.test'})).status,403);
       assert.equal((await call(endpoint,'a',payload,{'content-type':'text/plain'})).status,415);
@@ -105,6 +129,19 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
       const history=await (await call(endpoint+query)).json() as any;
       assert.equal(history.history[0].version,1);assert.equal(history.history[0].notes,payload.draft.notes);
       for(const other of ['b','c']) assert.equal(((await (await call(endpoint+query,other)).json()) as any).history.length,0);
+      // Emulate a pre-upgrade record in disposable in-memory storage only. The
+      // fingerprints are captured from the actual prior release, not invented.
+      const table={shoulder:'atlas_personal_review_events',body:'atlas_personal_body_review_events',nested:'atlas_personal_nested_review_events',specimens:'atlas_personal_specimen_review_events'}[fixture.scope];
+      assert(table);
+      const historical={...history.history[0],revisionHash:prior.revisionHash};
+      const replaced=await db.prepare(`UPDATE ${table} SET payload=? WHERE user_id=? AND structure_id=? AND track='geometry' AND version=1`)
+        .bind(JSON.stringify(historical),JSON.stringify(['vm-website-personal-review-1','edu:a','org-a']),payload.structureId).run();
+      assert.equal(replaced.meta.changes,1);
+      const statusPath='review-overview?'+new URLSearchParams({scope:fixture.scope,q:payload.structureId});
+      const staleQueue=await (await call(statusPath)).json() as any;
+      assert.equal(staleQueue.items.find((row:any)=>row.key===fixture.key)?.geometry,'re-review','prior decision is not applied to current material');
+      const preserved=await (await call(endpoint+query)).json() as any;
+      assert.deepEqual(preserved.history[0],historical,'reading current material does not migrate historical decisions');
       assert.equal((await call(endpoint,'a',payload)).status,409);
       const correction={...payload,expectedVersion:1,draft:{...payload.draft,notes:'Synthetic correction; no clinical approval.'}};
       const race=await Promise.all([call(endpoint,'a',correction),call(endpoint,'a',correction)]);
@@ -112,7 +149,10 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
       const after=await (await call(endpoint+query)).json() as any;
       assert.deepEqual(after.history.map((r:any)=>r.version),[2,1]);
       assert.equal(after.history[1].notes,payload.draft.notes,'append-only original');
+      assert.equal(after.history[1].revisionHash,prior.revisionHash,'old revision retained after fresh correction');
       assert.equal(after.history[0].status,'draft');
+      const currentQueue=await (await call(statusPath)).json() as any;
+      assert.equal(currentQueue.items.find((row:any)=>row.key===fixture.key)?.geometry,'in-progress','fresh draft is current, not approved');
       assert.equal((await call(endpoint+'?userId=b&organizationId=org-b','a',{...correction,expectedVersion:2})).status,201,'client IDs cannot select a different store');
     }
     await call('reviews','b');

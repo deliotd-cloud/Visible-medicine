@@ -282,6 +282,14 @@ separate. See `docs/GENICULAR_CLINICAL_REFERENCES_20260917.md` for exact scope.
 
 ## Elbow arterial clinical teaching — 17 September 2026
 
+The 26 September CT-orientation extension also uses Habarta et al. below,
+with credit and an adaptation notice in each draft. It adds original named-branch
+orientation, not publication images, case records or copied prose. The case
+report supports a limited CTA example, not reliable depiction of every small
+collateral branch. Existing anatomical factual references and mesh credits remain
+separate; no additional dependency, dataset, font, texture or paid service.
+See `docs/ELBOW_ARTERIAL_CT.md` for scope and evidence limits.
+
 Original short adaptations credit Habarta J, Jordan M, Meffert R, Huflage H,
 Schmalzl J (2022), *Surgical management of a traumatic elbow dislocation with
 disruption of the brachial artery*, https://doi.org/10.1007/s11678-022-00686-9;
@@ -1513,6 +1521,21 @@ https://creativecommons.org/licenses/by/4.0/. Credit, source and licence links
 appear with each draft. No figures, scans, tables or datasets reproduced, and
 no new model, font, texture, dependency or fee. See docs/EYE_ULTRASOUND.md.
 
+## Coronary arterial ultrasound — 26 September 2026
+
+Original concise adapted summaries of Johnny Vegsundvåg, Espen Holte, Rune Wiseth,
+Knut Hegbom and Torstein Hole (2009), *Transthoracic echocardiography for imaging
+of the different coronary artery segments: a feasibility study*, Cardiovascular
+Ultrasound 7:58. Source: https://link.springer.com/article/10.1186/1476-7120-7-58 .
+The article-specific publisher rights statement explicitly grants Creative
+Commons Attribution 2.0: https://creativecommons.org/licenses/by/2.0/ . Changes:
+shortened orientation summaries, selected-source binding and Atlas-specific
+representation/review warnings. Full credit is retained here and author/year
+credit accompanies each draft. No figure, table, image or patient data imported;
+no endorsement implied. Existing model licences remain unchanged. No additional
+dependency, font, texture, paid API or mandatory fee. Clinical review pending.
+See `docs/CORONARY_ARTERIAL_US.md`.
+
 ## Common interosseous ultrasound — 26 September 2026
 
 Original adapted summary of Mohana Borges AVR and Souza SAL (2021), Radiol Bras
@@ -1522,3 +1545,19 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC8630952/. Version not specified in the
 inspected PMC statement; no version is asserted here. Author credit and source
 link displayed in both drafts. No images, tables or datasets imported. See
 docs/COMMON_INTEROSSEOUS_US.md for full title, evidence and limitations.
+# Skin source candidate (26 September 2026; not learner-admitted)
+
+The independently cached FMA7163/FJ2810 skin candidate uses the original
+BodyParts3D version 4 mesh. BodyParts3D, © The Database Center for Life Science
+licensed under CC Attribution 4.0 International. Commercial reuse requires
+compliance with that license. The generated local review projections change
+presentation only; no source geometry is repaired. See
+`docs/SKIN_SOURCE_CANDIDATE.md` and `docs/skin-source-audit-20260926.json` for
+provenance, exact hashes and unfulfilled admission/clinical-review gates.
+The separate read-only review page now includes
+`public/models/review-candidates/skin/skin.glb` and `head-sections.png`.
+Both derive from these CC BY 4.0 source surfaces. Changes: common coordinate
+transform, float32 encoding, display normals, illustrative material and labelled
+surface intersections. No welding, repair or individual anatomical fitting.
+Attribution and the source licence link are displayed on the candidate page.
+No patient imaging is included; learner admission and deployment remain pending.

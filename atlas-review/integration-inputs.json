@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "3984c9782e35905996c53b791660ce30b75ba008",
-  "sha256": "fc068953486f9bb55056efc4f1ab1c98a4fbc59b0b8c81c6783b154e1fbb3238",
+  "sourceCommit": "f46b48c19266fe96a2126327042317484a0a4187",
+  "sha256": "720ee642df45a847caded1fd005e96127f882f4e2b2dd7367ae5d5c78f7d9795",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -48,7 +48,7 @@
     },
     {
       "path": "atlas-review/app/anatomy-data.ts",
-      "sha256": "5dbfe92c163fa0d3286920c0adefc54340086dba11c1cc445f4d4a47bf5baa3a"
+      "sha256": "e8e8da00b4cd1fc92242498fc7feca41b353ee58b3c5a8b147d3f442705ac83b"
     },
     {
       "path": "atlas-review/app/anatomy-scene.tsx",
@@ -112,7 +112,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "39c85f5fd981896ff5090c4c4d900abd163291625e83018733b8717145a6ce53"
+      "sha256": "1b94e8c712da0d47ea58b6b79fcd112457aa275f7d3b037e684fa85fa2d2011b"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-explorer.tsx",
-      "sha256": "1ff4a69108e106f5a910b0712e757aed069140e7315d986b815e7640d626004a"
+      "sha256": "f1cf72e5ec361708456d03e8a350eb7f2f850c013f215dea7fea355ba4765583"
     },
     {
       "path": "atlas-review/app/body-scene.tsx",
@@ -332,7 +332,7 @@
     },
     {
       "path": "atlas-review/app/review/review-dashboard.tsx",
-      "sha256": "dd2acbff3a33a50f6a9e7b02ffbe4ad79b989f532853690db6897385d88e2ac8"
+      "sha256": "5b32580458ae16196759e4a06fb3812cd9d77b6771212662c562baae5c717ab2"
     },
     {
       "path": "atlas-review/app/review/review.css",
@@ -384,7 +384,7 @@
     },
     {
       "path": "atlas-review/app/shoulder-explorer.tsx",
-      "sha256": "82c9cb8874b16fa680a3ff098e24539d2ed5ab4a4813e6f7d47ca345df301f54"
+      "sha256": "0448c8632ccc838fd1c72edb6123c354e674817e56383898dcc24cc3883d6dfa"
     },
     {
       "path": "atlas-review/app/shoulder-workspace.css",
@@ -409,6 +409,14 @@
     {
       "path": "atlas-review/app/structure-navigator.tsx",
       "sha256": "e22a53d59d24e4dc84cecb9a8c4b8ee84bc3198ba372412d10e90f96c3ed6899"
+    },
+    {
+      "path": "atlas-review/app/structure-quick-check.css",
+      "sha256": "fb0ae0d036f91d13bd0d6a82c335159c1f3620c8d0301e63724f369c5e836942"
+    },
+    {
+      "path": "atlas-review/app/structure-quick-check.tsx",
+      "sha256": "4bfa6567af94f808bc7ed43a9693eae6771da7e8ada1e10183ec4be3ff64c5de"
     },
     {
       "path": "atlas-review/app/study-library.tsx",
@@ -711,6 +719,14 @@
       "sha256": "ea4eb8d886f03cab39025dbdcbf1a4a630be83f04254cf731eab7b580222afd3"
     },
     {
+      "path": "atlas-review/content/coronary-arterial-us-pins.json",
+      "sha256": "9277caac4d2b97c75fced2f393b481f0c84800897a9faa9b28bd9c12e8854a18"
+    },
+    {
+      "path": "atlas-review/content/coronary-arterial-us.ts",
+      "sha256": "64598a6dcb26aa59123b20539911faa9e3eabebb2015ad7198e105d341865efb"
+    },
+    {
       "path": "atlas-review/content/coronary-venous-teaching.ts",
       "sha256": "ccae64c4d3c441cf681e756456f91fb62f3987f9939dbd1d11fb6c547f393155"
     },
@@ -797,6 +813,14 @@
     {
       "path": "atlas-review/content/distal-palmar-mri.ts",
       "sha256": "174ad897535a6fbf3f56f66ce4781198bb26b19395cb70bbcad47acb209a8885"
+    },
+    {
+      "path": "atlas-review/content/elbow-arterial-ct-pins.json",
+      "sha256": "6ff0fad79b76f3c7a45e9f01032c09d309280fcab13afc60690f954bbf2e197f"
+    },
+    {
+      "path": "atlas-review/content/elbow-arterial-ct.ts",
+      "sha256": "38af68ce17b668e7ac373bcbd87d1c8e62c060a3807fd1de060a28120b5a5b7f"
     },
     {
       "path": "atlas-review/content/elbow-arterial.ts",
@@ -1987,6 +2011,10 @@
       "sha256": "6ecbd0d421c6caa5ffd3f02edadf8cfdbf49ef7bbab20ea3926054544c896925"
     },
     {
+      "path": "atlas-review/lib/coronary-arterial-us.ts",
+      "sha256": "fa2eae6fdab9639f5d971c146bae925342bd1caf4aca19d42076eb01cef4ed0b"
+    },
+    {
       "path": "atlas-review/lib/coronary-venous.ts",
       "sha256": "7fe9f98f5ea4ac4e7e9a76cd25016b5461393ba3f25e52b7b2fc8215c64cd62e"
     },
@@ -2093,6 +2121,10 @@
     {
       "path": "atlas-review/lib/distal-palmar-mri.ts",
       "sha256": "0392e2cc92fcc9eb896ea3582010bd1032be0148f9fdc40a752a872436707902"
+    },
+    {
+      "path": "atlas-review/lib/elbow-arterial-ct.ts",
+      "sha256": "a2fc77065a921cbbbcf71c637172baa70b3e128a6d713c3c71d5268e422e8827"
     },
     {
       "path": "atlas-review/lib/elbow-arteries.ts",
@@ -3136,7 +3168,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "f9cac9c2f32764afd3ad3dbd68f31304f4732cca433e50095cf33ab952785c00"
+      "sha256": "023c43feab205c8cce95fd1cb72a5693b3021fbea9130beb48a4ee6df7d3a8b7"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3380,7 +3412,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "f967a51698534f4526bfe7304029fbf729a0822674ebc5dd2f554dd37ed55c9b"
+      "sha256": "0caefee9fcf9646c67110b4b04ff6db982bdad094429b7e1daf71b16c9983bbd"
     }
   ]
 }

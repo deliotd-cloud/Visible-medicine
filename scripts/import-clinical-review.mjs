@@ -8,7 +8,7 @@ import ts from 'typescript';
 
 const repository = process.argv[2];
 if (!repository) throw Error('Supply the Atlas repository path');
-const revision = '3984c9782e35905996c53b791660ce30b75ba008';
+const revision = 'f46b48c19266fe96a2126327042317484a0a4187';
 const git = (...args) => execFileSync('git', ['-C', repository, ...args], { maxBuffer: 64 * 1024 * 1024 });
 const names = new Set(git('ls-tree', '-r', '--name-only', revision).toString().trim().split('\n'));
 const output = 'atlas-review';
@@ -55,6 +55,12 @@ for (const [file, original] of files) {
     // Website-owned links are adapted at the navigation boundary; fingerprints
     // and the source-bound query fields remain owned by the Atlas source.
     if (file.startsWith('app/review/')) {
+      // This unadmitted source candidate has no website route or registered
+      // model. Keep its independent Atlas inspector out of the approval UI.
+      if (file === 'app/review/overview/page.tsx') text = text.replace(
+        '        <p><Link href="/review/candidates/skin">Inspect the skin candidate (read-only)</Link> — separate from approval-ready selections.</p>\n',
+        '',
+      );
       if (text.includes('fetch(')) {
         text = text.replaceAll('fetch(', 'clinicalReviewFetch(')
           .replace(/(import )/, "import { clinicalReviewFetch } from '@/lib/clinical-review-fetch';\n$1");
