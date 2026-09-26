@@ -5,8 +5,10 @@ import { isDeepStrictEqual } from 'node:util';
 import pins from '../content/elbow-arterial-ct-pins.json' with { type: 'json' };
 import transition from '../content/elbow-arterial-ct-transition.json' with { type: 'json' };
 import clinicalPins from '../content/elbow-clinical-pins.json' with { type: 'json' };
+import { beforeAchillesCt } from './achilles-ct-history.mjs';
 const hash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 export function beforeElbowArterialCt(api) {
+  api = beforeAchillesCt(api);
   if (typeof api.bodyLesson !== 'function') return api;
   assert.equal(hash(pins), '2d0a3bab05388cdaaa1ac35464781c0218b8b207caa173723a278de5210df3cc');
   assert.equal(hash(transition), 'b8d048688022f7203dec47fdf6c957c233e114db1a4d9cf00410d4b384b4cd8e');

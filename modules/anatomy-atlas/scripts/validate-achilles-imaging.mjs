@@ -5,8 +5,15 @@ import { contentContext, readContentJson } from './content-contract-tools.mjs';
 import { curriculumHash } from './curriculum-transition.mjs';
 import { authoringBeforeAchillesImaging } from './achilles-imaging-transition.mjs';
 import { authoringBeforeKneeImaging } from './knee-imaging-transition.mjs';
-import { achillesImagingLesson } from '../lib/achilles-imaging.ts';
-import { bodyStudyScope, studyDestinations } from '../lib/study-links.ts';
+import { build } from './workspace-test-build.mjs';
+// Bundle app imports just as the runtime does; Node's native TS loader cannot
+// resolve the transitive extensionless imports used by this browser code.
+const compiled = await build({ stdin: {
+  contents: "export {achillesImagingLesson} from './lib/achilles-imaging'; export {bodyStudyScope,studyDestinations} from './lib/study-links';",
+  resolveDir: process.cwd(), loader: 'ts',
+}, bundle: true, platform: 'node', format: 'esm', write: false });
+const { achillesImagingLesson, bodyStudyScope, studyDestinations } = await import(
+  'data:text/javascript;base64,' + Buffer.from(compiled.outputFiles[0].text).toString('base64'));
 const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const context = await contentContext();
 const { catalog, body } = context;

@@ -1561,3 +1561,21 @@ transform, float32 encoding, display normals, illustrative material and labelled
 surface intersections. No welding, repair or individual anatomical fitting.
 Attribution and the source licence link are displayed on the candidate page.
 No patient imaging is included; learner admission and deployment remain pending.
+
+## Achilles tendon CT teaching — 27 September 2026
+
+Original adapted summary of Giovanni Foti, Luca Bortoli, Matteo Tronu,
+Sabrina Montefusco, Gerardo Serra, Roberto Filippini and Venanzio Iacono (2024),
+*Identification of Achille’s Tendon Tears: Diagnostic Accuracy of Dual-Energy CT
+with Respect to MRI*, Journal of Clinical Medicine 13(15):4426,
+https://doi.org/10.3390/jcm13154426; and Giovanni Foti (2024), *Reply to Maffulli,
+N.; Spiezia, F. Comment on “Foti et al. Identification of Achille’s Tendon Tears:
+Diagnostic Accuracy of Dual-Energy CT with Respect to MRI. J. Clin. Med. 2024,
+13, 4426”*, 13(23):7323, https://doi.org/10.3390/jcm13237323.
+Both article-specific full-text rights statements grant CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/. Verified via Europe PMC public
+full-text XML for PMC11313150 and PMC11642694 on 27 September 2026.
+Changes: concise orientation/limitations synthesis and Atlas-specific scope
+warnings. Author/year credit and source/licence links accompany the drafts;
+no endorsement implied. No figure, scan, table or dataset is reproduced. No new
+model, font, texture, dependency or paid service. Clinical review remains pending.

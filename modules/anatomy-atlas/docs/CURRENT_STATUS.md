@@ -1,5 +1,11 @@
 # Current atlas status
 
+27 September 2026: [Achilles CT orientation](ACHILLES_CT.md) adds two exact-source
+drafts distinguishing conventional/spectral CT, experimental evidence and model
+limitations. MRI/US, geometry and unsupported limb CT gaps remain unchanged.
+No patient images or approvals; verification/recovery is recorded in the main
+checkpoint. Website export and clinical acceptance remain separate gates.
+
 26 September 2026: [Regional selectable structure checks](REGIONAL_QUICK_CHECK.md)
 reuse the shoulder answer controls for 11 explicitly keyed regional/whole-body
 quiz entries. Other quiz notes remain unchanged; exam mode hides formative

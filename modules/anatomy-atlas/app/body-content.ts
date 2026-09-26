@@ -105,6 +105,7 @@ import { forearmVesselClinicalLesson } from '../lib/forearm-vessel-clinical-curr
 import { handVesselClinicalLesson } from '../lib/hand-vessel-clinical-curriculum';
 import { lowerLimbVesselClinicalLesson } from '../lib/lower-limb-vessel-clinical-curriculum';
 import { achillesImagingLesson } from '../lib/achilles-imaging';
+import { achillesCtLesson } from '../lib/achilles-ct';
 import { kneeImagingLesson } from '../lib/knee-imaging';
 import { bodyXrayLesson } from '../lib/xray-teaching';
 import { spineImagingLesson } from '../lib/spine-imaging';
@@ -449,6 +450,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (existing) return draftLesson(existing.sections[tab]);
   const kneeImaging = kneeImagingLesson(s, tab);
   if (kneeImaging) return kneeImaging;
+  const achillesCt = achillesCtLesson(s, tab);
+  if (achillesCt) return achillesCt;
   const achillesImaging = achillesImagingLesson(s, tab);
   if (achillesImaging) return achillesImaging;
   const shoulderArm = shoulderArmLesson(s, tab);
