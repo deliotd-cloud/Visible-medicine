@@ -30,5 +30,21 @@ hash checked. Current revision checks retain all fields.
 Local-only: website generated exports and hosted deployments have not been
 updated. Integration/publication and radiologist approval remain pending.
 
+## Production-module follow-up
+
+The exact source-pinned shoulder export was staged on D and exercised with real
+WebGL anatomy: wrong/right answers, keyboard retry and independent exam scoring
+work. This exposed an existing exam-exit defect: it kept the cuff-only layer and
+discarded the starting presentation. Exam entry now captures a deep local study
+snapshot; exit restores selection, layer, systems, layout, separation, reference
+plane, opacity/cutaway, labels and camera/zoom. Exit still works if rendering
+becomes unavailable. Repeated sessions capture fresh snapshots; bookmarks remain
+an explicit separate restoration. No answers, scans or access rights are copied.
+
+The actual-handler test `scripts/test-shoulder-exam-return.mjs --baseline`
+reproduces the defect at 65d1563. Current behavior passes the same assertions for
+all three layers, plus renderer-unavailable exit, blocked start and repeat entry.
+The saved-reference-plane test continues to pass after sharing restoration code.
+
 Run: node scripts/test-structure-quick-check.mjs
 Browser component check: node scripts/preview-structure-quick-check.mjs

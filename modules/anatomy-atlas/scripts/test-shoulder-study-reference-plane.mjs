@@ -14,12 +14,12 @@ const source = baseline
 const ast = ts.createSourceFile('shoulder.tsx', source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
 const handlers = [], printer = ts.createPrinter();
 function visit(node) {
-  if (ts.isFunctionDeclaration(node) && ['captureView', 'restoreView'].includes(node.name?.text))
+  if (ts.isFunctionDeclaration(node) && ['captureView', 'restoreView', 'applyStudyView'].includes(node.name?.text))
     handlers.push(printer.printNode(ts.EmitHint.Unspecified, node, ast));
   ts.forEachChild(node, visit);
 }
 visit(ast);
-assert.equal(handlers.length, 2, 'extract both actual saved-view handlers');
+assert.equal(handlers.length, baseline ? 2 : 3, 'extract actual saved-view handlers and shared restoration');
 const code = ts.transpileModule(handlers.join('\n'), {
   compilerOptions: { target: ts.ScriptTarget.ES2022 },
 }).outputText;
@@ -54,7 +54,7 @@ function setup(enabled) {
     inspection: { plane: 'coronal', position: 62, flipped: true,
       keepSelectedSolid: true, keepSelectedUncut: false, opacity: { muscles: 35 } },
     cameraCapture: { current: { direction: [1, 0, 0], up: [0, 1, 0], pan: [0.2, 0, 0], scale: 0.8 } },
-    cameraRestore: { current: null }, resetNonce: 0, mode: 'exam',
+    cameraRestore: { current: null }, beforeExam: {current:null}, resetNonce: 0, mode: 'exam',
     workspace: { chooseMode(mode) { state.workspaceMode = mode; } },
     practiceDispatch(action) { state.practiceAction = action; },
   };

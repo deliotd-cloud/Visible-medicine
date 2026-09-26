@@ -173,6 +173,7 @@ export default function ShoulderExplorer({
   const [syncPlane, setSyncPlane] = useState(false);
   const [resetNonce, setResetNonce] = useState(0);
   const [mode, setMode] = useState<Mode>('study');
+  const beforeExam = useRef<{ view: StudyView; zoomStep: number } | null>(null);
   const workspace = useWorkspaceSession(
     () => ({ layer, visibleSystems, explode, layout, inspection, plate, anchorSkeleton,
       showOrigins, isolated, syncPlane, view, zoom, camera: cameraCapture.current }),
@@ -252,6 +253,10 @@ export default function ShoulderExplorer({
     workspace.chooseMode('dissect');
     setMode('study');
     practiceDispatch({ type: 'dismiss' });
+    beforeExam.current = null;
+    applyStudyView(state);
+  }
+  function applyStudyView(state: StudyView) {
     setSyncPlane(state.referencePlane ?? false);
     setSelectedId(state.selectedId ?? structures[0].id);
     setView(state.view as CameraView);
@@ -348,7 +353,19 @@ export default function ShoulderExplorer({
   };
 
   const toggleMode = () => {
+    if (mode === 'exam') {
+      setMode('study');
+      practiceDispatch({ type: 'dismiss' });
+      const saved = beforeExam.current;
+      beforeExam.current = null;
+      if (saved) {
+        applyStudyView(saved.view);
+        setZoomStep(saved.zoomStep);
+      }
+      return;
+    }
     if (mode === 'study' && !displayReady) return;
+    beforeExam.current = { view: structuredClone(captureView()), zoomStep };
     setPlate(false);
     setLayout('spatial');
     setSyncPlane(false);
