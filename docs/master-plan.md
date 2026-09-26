@@ -1,5 +1,14 @@
 # Visible Medicine — shared delivery plan
 
+26 September regional quiz parity: Atlas source `36c53fb` now provides selectable
+answers for all 11 explicitly keyed regional/whole-body quiz entries, reusing the
+shoulder controls. The 1,093 other notes retain their original unscored content;
+no keys are inferred. Actual-component regression, exam suppression, review,
+renderer, selection, TypeScript and regional build checks pass. Browser acceptance
+and website export remain pending. Atlas GitHub/D restore verified; main-workspace
+`work/REGIONAL-QUICK-CHECK-CHECKPOINT-20260926.md` records recovery. This website
+edit is coordination-only, not a runtime update or publication.
+
 26 September review alignment: the local Clinical Review import and protected
 review model now use Atlas `f46b48c`, with explicit draft quiz answer evidence
 and the latest coronary-US/elbow-CT drafts. Prior decisions remain in history;
