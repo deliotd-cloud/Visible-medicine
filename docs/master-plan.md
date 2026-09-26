@@ -1,5 +1,20 @@
 # Visible Medicine — shared delivery plan
 
+27 September: Atlas source `7b69867` adds two exact-source Achilles CT drafts
+with CC BY 4.0 attribution, explicit experimental-evidence limits and unchanged
+models/other teaching. Source GitHub and independent D restore verified. These
+drafts are not yet imported into this website. See the main workspace checkpoint
+`work/ACHILLES-CT-CHECKPOINT-20260927.md` for validation and one pre-existing
+legacy MRI/US historical-test mismatch (expected hash preserved).
+
+Local preview recovered by restarting only the verified website dev process after
+a Vinext request-scope stack overflow; no app/dependency/security change. The
+website still serves the `36c53fb` regional quiz export. Actual direct-view
+keyboard testing verifies scapula answer selection, incorrect/correct feedback
+and retry. Embedded pointer automation was unreliable; do not count it as full
+pointer/mobile acceptance. Clinical Review visual acceptance remains outstanding.
+No publication, patient data, approvals or entitlement changes.
+
 26 September regional quiz integration: local regional/whole-body and Clinical
 Review viewers now share source `36c53fb`, with selectable keyed questions and
 unchanged unkeyed notes/models. Source parity, access/history/inventory tests,
