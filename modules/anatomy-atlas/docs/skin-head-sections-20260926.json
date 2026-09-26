@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "skinSha256": "682f402206f15592acdeaae8ffb6b34c3e5c3267fa4685e63d2e4920ef2a80e0",
+  "frontalSha256": "48583dbbeab8ae243aa4c266b44ca5b26b9c4e1e79976819cfdf5dcb59ec5772",
+  "sourceConfirmation": [
+    {
+      "view": "Anterior oblique",
+      "id": "FMA52734",
+      "pixel": [
+        243,
+        79
+      ],
+      "sourcePointMm": [
+        -8.859217566180263,
+        -135.54918252877005,
+        1522.9166666666667
+      ],
+      "rayIntersectionDepthsMm": [
+        -14.515594861107353,
+        -11.568243284406755
+      ],
+      "nearestSkinDistanceMm": 27.230942436304097,
+      "nearestOriginalFrontalDistanceMm": 0.000017969996480517994
+    },
+    {
+      "view": "Anterior oblique",
+      "id": "FMA52734",
+      "pixel": [
+        244,
+        79
+      ],
+      "sourcePointMm": [
+        -8.31056131680404,
+        -137.94680453433776,
+        1522.9166666666667
+      ],
+      "rayIntersectionDepthsMm": [
+        -12.316712871998313,
+        -9.050038739196438
+      ],
+      "nearestSkinDistanceMm": 25.35748105158682,
+      "nearestOriginalFrontalDistanceMm": 0.000010941960039956796
+    },
+    {
+      "view": "Anterior oblique",
+      "id": "FMA52734",
+      "pixel": [
+        243,
+        79
+      ],
+      "sourcePointMm": [
+        -7.3671062750614595,
+        -134.05707123765126,
+        1522.9166666666667
+      ],
+      "rayIntersectionDepthsMm": [
+        -14.515594861107353,
+        -11.568243284406755
+      ],
+      "nearestSkinDistanceMm": 29.200940162822608,
+      "nearestOriginalFrontalDistanceMm": 0.000011139929722502552
+    }
+  ],
+  "panes": [
+    {
+      "name": "Axial source section",
+      "axis": 2,
+      "h": 0,
+      "v": 1,
+      "min": [
+        -170,
+        -270
+      ],
+      "max": [
+        170,
+        65
+      ],
+      "value": 1522.9166666666667,
+      "rows": [
+        {
+          "name": "skin",
+          "segments": 561,
+          "coplanarTriangles": 0
+        },
+        {
+          "name": "frontal",
+          "segments": 52,
+          "coplanarTriangles": 0
+        }
+      ]
+    },
+    {
+      "name": "Sagittal source section",
+      "axis": 0,
+      "h": 1,
+      "v": 2,
+      "min": [
+        -270,
+        1320
+      ],
+      "max": [
+        65,
+        1680
+      ],
+      "value": -8.859217566180263,
+      "rows": [
+        {
+          "name": "skin",
+          "segments": 1946,
+          "coplanarTriangles": 0
+        },
+        {
+          "name": "frontal",
+          "segments": 262,
+          "coplanarTriangles": 0
+        }
+      ]
+    },
+    {
+      "name": "Coronal source section",
+      "axis": 1,
+      "h": 0,
+      "v": 2,
+      "min": [
+        -170,
+        1320
+      ],
+      "max": [
+        170,
+        1680
+      ],
+      "value": -135.54918252877005,
+      "rows": [
+        {
+          "name": "skin",
+          "segments": 3264,
+          "coplanarTriangles": 0
+        },
+        {
+          "name": "frontal",
+          "segments": 430,
+          "coplanarTriangles": 0
+        }
+      ]
+    }
+  ],
+  "clinicalApproval": false,
+  "geometryModified": false,
+  "runtimeAdmission": false,
+  "imageSha256": "9cfaee68c8189c6ef65aa90f943c0de471dce021fd850d7bfd12899e13275fa8"
+}

@@ -1,7 +1,8 @@
 # Whole-body skin candidate — 26 September 2026
 
 Status: original source acquired, seam-screened and compared with selected internal
-anatomy; **not admitted to the runtime atlas**.
+anatomy; available in a separate read-only candidate inspector, **not admitted to
+the learner atlas**.
 No clinical approval, regional skin definitions, patient registration or new deployment.
 
 ## Provenance and commercial use
@@ -109,5 +110,44 @@ node scripts/render-skin-context.mjs --check --verify-output
 For first creation of those derived artifacts omit `--verify-output`. Only when
 intentionally revising this context screen, `--refresh` replaces its two generated
 outputs; it never edits the source models. The original source audit is immutable.
-Next: inspect the flagged frontal area with a labelled enlarged/sectional view,
-then decide whether this candidate is suitable for a reviewer-only outer layer.
+## Section follow-up and read-only inspector
+
+The flagged frontal samples were checked against the original FJ3200 source,
+not just its transformed display. Nearest original-surface discrepancies are
+0.0000109–0.0000180 mm, consistent with export rounding rather than displacement.
+Axial, sagittal and coronal surface intersections through the sample place it
+within the head outline. The oblique view ray traverses the facial opening; its
+depth interval is therefore inconclusive, not proof of a protruding frontal bone.
+No skin or frontal geometry has been shifted, repaired or fitted independently.
+This remains a numerical/visual screen, not a clinical sign-off or solid-inside test.
+
+`/review/candidates/skin` provides the original whole-body surface, opacity,
+optional frontal context, rotation/zoom and four camera presets. It is linked
+separately from the four approval scopes; there is deliberately no approval/save
+action or learner catalogue entry. Source findings are collapsed to keep the
+model visible. The section figure is labelled as model geometry, not CT/MRI.
+
+`content/skin-review-candidate.json` pins the source, GLB, figure, context bundle
+and four evidence reports. The GLB retains every source vertex/triangle in the
+common transform. Float32 round-trip maximum source displacement is 0.000105 mm;
+display normals are recomputed. No regional patches or additional anatomy are
+inferred. Metadata line endings are pinned for reproducible evidence on Windows.
+
+Four section-helper tests, full geometry/provenance checks and TypeScript pass.
+Browser component inspection verifies whole-body/head framing, keyboard camera
+activation and opacity adjustment without losing head framing. Pointer targeting
+in the browser automation required screenshot coordinates; the original camera
+effect is retained, not replaced with an unneeded render-loop workaround.
+This is isolated-component evidence, not integrated route, device or clinical
+acceptance. The application has not been redeployed.
+
+```sh
+node --test scripts/test-source-plane-sections.mjs
+node scripts/skin-head-sections.mjs --check --verify-output
+node scripts/export-skin-review-candidate.mjs --check --verify-output
+node scripts/test-skin-review-candidate.mjs
+```
+
+Next: radiologist inspection of this candidate, broader internal context,
+mobile/touch and integrated-route acceptance, then a revision-bound admission
+decision. No automatic learner admission follows a passing technical test.

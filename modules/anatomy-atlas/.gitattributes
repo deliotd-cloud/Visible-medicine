@@ -59,3 +59,6 @@ docs/reviews/dorsal-penile-source.json -text
 # Exact pelvic-floor measurement and source projection evidence.
 docs/reviews/pelvic-floor/*.json -text
 docs/reviews/pelvic-floor-context/*.json -text
+# Byte-pinned source sections and reviewer-only skin candidate metadata.
+docs/skin-head-sections-20260926.json -text
+content/skin-review-candidate.json -text

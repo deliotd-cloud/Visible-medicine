@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "id": "vm:candidate:skin:FMA7163",
+  "name": "Whole-body skin candidate",
+  "fmaId": "FMA7163",
+  "sourceFile": "FJ2810",
+  "sourceSha256": "682f402206f15592acdeaae8ffb6b34c3e5c3267fa4685e63d2e4920ef2a80e0",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "model": {
+    "url": "/models/review-candidates/skin/skin.glb",
+    "sha256": "abe3db8cedd8422f669e8f2279bc6a1582491a2622d9576c0ba352aa7bf42ef2",
+    "bytes": 4901048,
+    "nodeName": "FMA7163_candidate",
+    "vertices": 102467,
+    "triangles": 203382,
+    "bounds": {
+      "min": [
+        -3.3411898612976074,
+        -8.781111717224121,
+        -0.9524760246276855
+      ],
+      "max": [
+        3.3282501697540283,
+        8.413599967956543,
+        1.9678300619125366
+      ]
+    }
+  },
+  "context": {
+    "id": "FMA52734",
+    "name": "Frontal bone",
+    "nodeName": "FMA52734",
+    "bundleUrl": "/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+    "bundleSha256": "c1b950c82fd76e69cf153757ca275a6bd27fd25d74d3fd24259b15f9172a39d4"
+  },
+  "section": {
+    "url": "/models/review-candidates/skin/head-sections.png",
+    "sha256": "9cfaee68c8189c6ef65aa90f943c0de471dce021fd850d7bfd12899e13275fa8"
+  },
+  "evidence": [
+    {
+      "path": "docs/skin-source-audit-20260926.json",
+      "sha256": "09285c636d57e55d16c70dc1a420044f2fed582f0368fd09f3aaad02c3411c41"
+    },
+    {
+      "path": "docs/skin-seam-screen-20260926.json",
+      "sha256": "9bcab88ebccbed156d08d7ddd3a3060699dc351126f5899f15a1b3ccdd3a2335"
+    },
+    {
+      "path": "docs/skin-context-screen-20260926.json",
+      "sha256": "3513f784fe06ae955e3eecc655a2db0107c10b6df446fb6ddbbd412554122c7b"
+    },
+    {
+      "path": "docs/skin-head-sections-20260926.json",
+      "sha256": "ae220641b447ca7a3fe568b7a04fcb51585fae590d60b9e33624e7864dcf3a2e"
+    }
+  ],
+  "learnerCatalogAdmission": false,
+  "clinicalApproval": false,
+  "decisionSavingSupported": false,
+  "changes": "Existing common coordinate transform, float32 export and recomputed display normals only. Original vertices/faces retained; no welding, repair, region splitting or individual fitting."
+}

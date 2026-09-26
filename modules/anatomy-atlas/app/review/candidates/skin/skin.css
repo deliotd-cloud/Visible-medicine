@@ -1,0 +1,12 @@
+.skin-candidate{max-width:1280px;margin:auto;padding:1rem;color:#103e48;font-size:1rem;line-height:1.5}
+.skin-candidate header{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.skin-candidate .vm-brand img{max-width:240px;width:100%;height:auto}.skin-candidate .vm-brand{max-width:60%}
+.skin-candidate h1{font-size:1.75rem;margin:.7rem 0}.skin-candidate h1 span{font-size:.9rem;background:#e8eef1;border:1px solid #a7bcc1;border-radius:1rem;padding:.2rem .6rem;white-space:nowrap}
+.skin-candidate a{color:#076579;text-decoration:underline}.skin-candidate p{margin:.6rem 0}
+.skin-candidate-controls{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;padding:.8rem;background:#f3f6f7;border:1px solid #b5c7ca;border-radius:.6rem}
+.skin-candidate-controls label{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;font-size:.95rem}.skin-candidate-controls input[type=range]{width:130px;accent-color:#076579}.skin-candidate-controls input[type=checkbox]{width:1.1rem;height:1.1rem;accent-color:#076579}
+.skin-candidate-views{display:flex;gap:.4rem;flex-wrap:wrap}.skin-candidate button{font:inherit;font-size:.9rem;min-height:44px;padding:.4rem .7rem;background:white;border:1px solid #759da6;color:#103e48;border-radius:.35rem;cursor:pointer}
+.skin-candidate :focus-visible{outline:3px solid #c69232;outline-offset:3px}.skin-candidate-help{font-size:.9rem}
+.skin-candidate-canvas{height:clamp(360px,62vh,700px);border:1px solid #aec3c8;border-radius:.6rem;overflow:hidden;touch-action:none}
+.skin-candidate details{margin:1rem 0;border:1px solid #aec3c8;border-radius:.5rem;padding:.8rem}.skin-candidate summary{cursor:pointer;font-weight:600}.skin-candidate img{width:100%;height:auto}.skin-candidate code{overflow-wrap:anywhere;font-size:.85rem}.skin-candidate footer{font-size:.875rem}
+@media(max-width:600px){.skin-candidate{padding:.75rem}.skin-candidate h1{font-size:1.4rem}.skin-candidate h1 span{display:inline-block}.skin-candidate-controls{gap:.7rem}.skin-candidate-canvas{height:55vh;min-height:340px}.skin-candidate-views{width:100%}.skin-candidate-views button{flex:1}}

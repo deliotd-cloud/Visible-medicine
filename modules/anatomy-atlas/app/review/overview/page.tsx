@@ -44,6 +44,7 @@ export default async function ClinicalReviewPage({ searchParams }: {
             </Link>
           ))}
         </nav>
+        <p><Link href="/review/candidates/skin">Inspect the skin candidate (read-only)</Link> — separate from approval-ready selections.</p>
         <search aria-label="Find review material">
         <form action="/review/overview" method="get" className="clinical-review-search">
           <div>

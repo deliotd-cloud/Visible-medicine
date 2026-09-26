@@ -1537,7 +1537,7 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC8630952/. Version not specified in the
 inspected PMC statement; no version is asserted here. Author credit and source
 link displayed in both drafts. No images, tables or datasets imported. See
 docs/COMMON_INTEROSSEOUS_US.md for full title, evidence and limitations.
-# Skin source assessment (26 September 2026; not shipped)
+# Skin source candidate (26 September 2026; not learner-admitted)
 
 The independently cached FMA7163/FJ2810 skin candidate uses the original
 BodyParts3D version 4 mesh. BodyParts3D, © The Database Center for Life Science
@@ -1546,4 +1546,10 @@ compliance with that license. The generated local review projections change
 presentation only; no source geometry is repaired. See
 `docs/SKIN_SOURCE_CANDIDATE.md` and `docs/skin-source-audit-20260926.json` for
 provenance, exact hashes and unfulfilled admission/clinical-review gates.
-No mesh or projection from this assessment is added to the shipped application.
+The separate read-only review page now includes
+`public/models/review-candidates/skin/skin.glb` and `head-sections.png`.
+Both derive from these CC BY 4.0 source surfaces. Changes: common coordinate
+transform, float32 encoding, display normals, illustrative material and labelled
+surface intersections. No welding, repair or individual anatomical fitting.
+Attribution and the source licence link are displayed on the candidate page.
+No patient imaging is included; learner admission and deployment remain pending.

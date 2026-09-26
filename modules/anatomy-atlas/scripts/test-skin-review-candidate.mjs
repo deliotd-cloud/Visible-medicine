@@ -1,0 +1,32 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {Matrix4,Vector3} from 'three';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+process.argv.push('--check');
+const {skinMesh}=await import('./audit-skin-source.mjs');
+const c=JSON.parse(await readFile('content/skin-review-candidate.json'));
+const hash=b=>createHash('sha256').update(b).digest('hex');
+assert.equal(c.learnerCatalogAdmission,false);assert.equal(c.clinicalApproval,false);assert.equal(c.decisionSavingSupported,false);
+const catalog=JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json'));
+assert(!catalog.structures.some(s=>s.fmaId===c.fmaId||s.id===c.id));
+for(const e of c.evidence)assert.equal(hash(await readFile(e.path)),e.sha256,e.path);
+const bytes=await readFile('public'+c.model.url);assert.equal(hash(bytes),c.model.sha256);assert.equal(bytes.length,c.model.bytes);
+assert.equal(hash(await readFile('public'+c.section.url)),c.section.sha256);
+const {scene}=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');
+const meshes=[];scene.traverse(n=>{if(n.isMesh)meshes.push(n);});assert.equal(meshes.length,1);assert.equal(meshes[0].name,c.model.nodeName);
+const geometry=meshes[0].geometry,pos=geometry.getAttribute('position'),normal=geometry.getAttribute('normal');
+assert.equal(pos.count,skinMesh.vertices.length);assert.equal(geometry.index.count,skinMesh.faces.length*3);
+assert.deepEqual([...geometry.index.array],skinMesh.faces.flat(),'No source triangles may be omitted or reassigned');
+const inverse=new Matrix4().fromArray(catalog.coordinateSystem.sourceToSceneColumnMajor).invert();
+let maxSourceErrorMm=0;
+for(let i=0;i<pos.count;i++){
+  const actual=new Vector3().fromBufferAttribute(pos,i).applyMatrix4(inverse);
+  assert(actual.toArray().every(Number.isFinite));
+  maxSourceErrorMm=Math.max(maxSourceErrorMm,actual.distanceTo(new Vector3(...skinMesh.vertices[i])));
+  const n=new Vector3().fromBufferAttribute(normal,i);assert(Number.isFinite(n.length())&&n.length()>.99&&n.length()<1.01);
+}
+assert(maxSourceErrorMm<.0003,'Unexpected source-to-render displacement');
+assert.equal(c.context.id,'FMA52734');
+assert.equal(hash(await readFile('public'+c.context.bundleUrl.split('?')[0])),c.context.bundleSha256);
+console.log(JSON.stringify({vertices:pos.count,triangles:geometry.index.count/3,maxSourceErrorMm,sourceTrianglesRetained:true,learnerCatalogAdmission:false,clinicalApproval:false}));
