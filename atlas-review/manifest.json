@@ -1,5 +1,5 @@
 {
-  "revision": "bc2cf4af76a117029367c4dfd08d91f684f923a0",
+  "revision": "eecf73cdf5443dd99e308746547ffbe5b1f1463b",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2508,8 +2508,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "764c1e0eeb4d967d1dd2ca1c389f57972b3dee7e27ecbd3d576b6e6b4b1bf4f1",
-      "importedSha256": "b82a9aa05045bb8500b78745c6ce468ddf7bd144af63bba0aa41bfe8cfa43b7e"
+      "sourceSha256": "5c7de33a3ef93f90f16f8fb60e0a3528e5ea1c8e99b6e81ad42324e91bf99cc4",
+      "importedSha256": "c9ea49443b110787b990b5138fe0ece8a6631895110bc53a5b8fd2f79e20cfe6"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -2784,7 +2784,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "3ecadf85a320f07b245ce600649ad2031d1c8cf3c88fc5281f023d3b69600521",
-      "importedSha256": "5e2e2d7e4a82bc37b35e487e0dd78621acbb168d0d07b827cf40b69fcf0faeb2"
+      "importedSha256": "3570ea717956c44d4ec6145a4d313f8dce753cd44cb5ae8997b5b9b8a8ab73e9"
     },
     {
       "path": "app/review/review.css",
@@ -2868,8 +2868,8 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sourceSha256": "a4cdbd814df2ee08a4fc158e70d377c378f4e2849870d8ffb7d89d0894658e09",
-      "importedSha256": "f1cf72e5ec361708456d03e8a350eb7f2f850c013f215dea7fea355ba4765583"
+      "sourceSha256": "8d2a95f39f61db6660745fedbe2dd52fc8df16d497cfc0e6d390b8d2be5491c5",
+      "importedSha256": "bd5ff3ff41b4f67d4865d0c5765f7111dc9f1ee1786ec96e75bdc82bffb89039"
     },
     {
       "path": "app/um-knee-entry.css",
@@ -4233,5 +4233,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "b8694a52d8086d2bfbda22f249fab8923e52e5f9c33cf1baeb17d54f2a917aeb"
+  "websiteIntegrationSha256": "c7426019c4e602d17e32f91a843980a87bfe4102d0f8fa153b5c18dc30ea7bbb"
 }

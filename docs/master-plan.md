@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+27 September restoration review delivery: Clinical Review now imports Atlas
+`eecf73c` and its exact tested Restore handlers. Website builds, TypeScript,
+eleven focused access/content/delivery checks and actual website-served foot
+restoration pass. Previous review decisions remain revision-bound; learner
+delivery stays `36c53fb`, public site unchanged. Historical model-first source
+validation is also repaired with exact Git replay and negative drift checks,
+not a rewritten baseline. See `docs/clinical-review-restore-20260927.md`.
+
 27 September dissection source: Atlas `eecf73c` fixes Restore leaving returned
 tissues faded/non-pickable or selection-framed. Exact current-scope guards,
 single-step Undo and existing layout/cutaway are preserved. Focused tests,
