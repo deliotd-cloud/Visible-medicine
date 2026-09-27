@@ -16,6 +16,7 @@
 }
 .review-account-scope { margin:0; padding:.8rem 1.5rem; font-size:.875rem; background:#e3efeb; line-height:1.5; }
 .website-clinical-review h1 { max-width:none; line-height:1.18; }
+.website-clinical-review :is(p, li) { overflow-wrap:anywhere; }
 .website-clinical-review .vm-brand { display:none; }
 .website-clinical-review button, .website-clinical-review select, .website-clinical-review input, .website-clinical-review textarea { font-size:1rem; }
 .website-clinical-review :focus-visible { outline:3px solid #087b6c; outline-offset:2px; }

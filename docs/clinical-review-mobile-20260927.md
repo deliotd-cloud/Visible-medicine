@@ -23,19 +23,40 @@ workspace links remain in the original menu. The existing review source/model
 pins, status storage, clinical gates, independent entitlements and drafts are
 unchanged. No clinical decision or personal review input was saved.
 
+## Evidence text wrapping
+
+Opening CT Draft by pointer subsequently reproduced the original 2px overflow:
+375px client width, 377px document width. The overflowing list item contained
+the complete CC BY 4.0 licence URL, with normal word wrapping. The website's
+review adapter now allows long paragraph/list tokens to wrap anywhere; no text,
+licence URL or source attribution is removed, abbreviated or hidden.
+
+After reload/pointer activation, the same open CT panel measured 375/375px,
+and a fresh 320px touch check measured 320/320px. No overflowing evidence list
+items; full licence URL retained, no unsaved review edits. This adapter is a
+revision-bound integration input, so the guard correctly rejected the initial
+build until normal binding and review-viewer regeneration were performed. No
+guard bypass, historical decision migration or source Atlas mutation.
+
 ## Checks and boundaries
 
 - Seven existing actual-component header/session and Studio workspace tests pass.
 - Production build, including Clinical Review source/artifact verification, passes.
+- Five review search/integration/contained-viewer tests pass after rebinding,
+  including authorization, revision conflicts, source delivery and history.
 - Real local browser sign-in uses the existing local test identity; no auth bypass
   or alteration. Five Achilles contexts still returned before the menu change.
 - The original browser automation runtime could not initialize after restart;
   fresh Chrome DevTools browser provided the reproduction and geometry evidence.
-- Follow-up screenshot capture stalled after the successful post-fix measurement;
-  broader pointer/mobile acceptance is not claimed. This is not evidence that
-  the site's navigation itself stalled.
+- Follow-up screenshot capture was delayed but returned and visually confirmed
+  the open menu fully within the 320px viewport. Pointer opening of CT evidence
+  also succeeded. Broader whole-site pointer/mobile acceptance is not claimed.
 - Main-workspace logs: `work/review-mobile-tests-20260927.log` and
-  `work/review-mobile-build-20260927.log`. Recovery checkpoint records commit and
+  `work/review-mobile-build-final-20260927.log`,
+  `work/review-mobile-viewer-build-20260927.log` and
+  `work/review-mobile-integration-tests-20260927.log`. The earlier build log
+  records the expected changed-input guard rejection, not the final result.
+  Recovery checkpoint records commit and
   independently verified GitHub/D backups. No public deployment.
 
 Continue the wider regional/teaching roadmap and bounded radiologist reviews.
