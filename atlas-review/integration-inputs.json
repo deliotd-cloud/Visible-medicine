@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "af56c6a227a8e381f2093df905069c824a0ddd8b",
-  "sha256": "3ebb047c387e4371add4598b146bf3905ea17b1d56d3fe02d4afb4711ed8dba9",
+  "sourceCommit": "b3995e784dfab02686e03a995e6e1e4e0ae150d9",
+  "sha256": "6781eccc3fa15dba06f1155691fa8bd8d3f183b5bc5da4d3e2a8354857119de2",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -288,7 +288,7 @@
     },
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
-      "sha256": "10ab01e32827b069dba7d6983f7c55ed96b0c9d721c87dd3d24480410c7f99bb"
+      "sha256": "d77a8aa759ed074d86e2c423974299df2d5bb4c3bf7c5b560f395d33d4e5b7b9"
     },
     {
       "path": "atlas-review/app/review/body/body-review.css",
@@ -300,7 +300,7 @@
     },
     {
       "path": "atlas-review/app/review/body/review-dashboard.tsx",
-      "sha256": "af92640d73214354165628ae9677d82c86b9aad609e7e2b615c243d603fe58b6"
+      "sha256": "1061132ef53ffe03327b61aee99d898fa4592fb1a68ac0cf50446e5499b00d89"
     },
     {
       "path": "atlas-review/app/review/nested/nested-review.css",
@@ -320,7 +320,7 @@
     },
     {
       "path": "atlas-review/app/review/overview/page.tsx",
-      "sha256": "964492aa81d9bfabb49091d428080ea44b27694c06e06323556c0a134b404830"
+      "sha256": "3e0f4388efd794b1a0d412916396818eac693fc809d3fbbc3a2623ec443a170d"
     },
     {
       "path": "atlas-review/app/review/overview/results.tsx",
@@ -1887,6 +1887,10 @@
       "sha256": "bb62c2e2a36300d1ba8e214e58b92a40300b958d426ba59ad5d8c1a3a4fa20e0"
     },
     {
+      "path": "atlas-review/lib/body-reasoning-review.ts",
+      "sha256": "883920f5b4852886aef6da1942211201bc87ad95186b4a8113f3e14fa9dec5b9"
+    },
+    {
       "path": "atlas-review/lib/body-review-api.ts",
       "sha256": "ebe2ec5305e68881846fc495d1775f08cdded5dab853ef459a395818b5ec679c"
     },
@@ -1900,15 +1904,15 @@
     },
     {
       "path": "atlas-review/lib/body-review-decisions.ts",
-      "sha256": "d54c851984990118ad4e2a7638282a4981b98b6acf7eeae3f3ea09ace696dc41"
+      "sha256": "fc1a6f92ddb888d4e2dfd82a8b368f13b24c1b9fd1a89fc175e82ad28daf5f41"
     },
     {
       "path": "atlas-review/lib/body-review-material.ts",
-      "sha256": "4c37188514984d138dff39c9b8a16a512fceb1e6195ba0e12c080687662e95b5"
+      "sha256": "750d9d849e88fecdd802f394de0d3eb0f820ce8b9cc41175f535eb1b05738f70"
     },
     {
       "path": "atlas-review/lib/body-review-response.ts",
-      "sha256": "d6ce7a27a56a0d1d58fe9d1ccb5c8095cc83b206223485cc431c99569efd6067"
+      "sha256": "5d3198da80411e21a136b1eaa6c422f947d6be535f5cd6a1b473162abc29f2c7"
     },
     {
       "path": "atlas-review/lib/body-review-search.ts",
@@ -2808,7 +2812,7 @@
     },
     {
       "path": "atlas-review/lib/reasoning-questions.ts",
-      "sha256": "c07ec177edb3b1c3056fd7c5373a07a9cd4d0cdd6c0015fb69859bcb5bdab196"
+      "sha256": "06e537e4f2f283547ec90da3144b21db06415e347e692fb6b139cecf641affdf"
     },
     {
       "path": "atlas-review/lib/rectal-deferent-imaging.ts",
@@ -3099,6 +3103,10 @@
       "sha256": "d05924f41b4921cc3d8c3dd97c5171c88ac8f4f949d9ce7cddcc715eb647aac7"
     },
     {
+      "path": "atlas-review/lib/thoracic-vessel-reasoning.ts",
+      "sha256": "aa4b5716c43b620e7765ba8534aac7ed56fdd6b8029573a19e7c9c19a4dfc179"
+    },
+    {
       "path": "atlas-review/lib/thoracoabdominal-organ-imaging.ts",
       "sha256": "c503474a75696b55f6bf6bd13bb01b85a60b79c1bc63e0740eb522d81966f720"
     },
@@ -3216,7 +3224,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "907145ad9f0bec6a65b6ff796bd20712d0bc642636d584a7dfc9d443abb63f9e"
+      "sha256": "d43f062ef9f4eb05f7bffdad82b7d8d007f540783d018515f7ab0c544d103f0a"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3460,7 +3468,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "7f82a827d8401690c059a5a95a1a3462b01b130b7a9081de0d5db8e261cc5536"
+      "sha256": "b14cdfb29ac0c75d5551d37eb2f23f18f84d211849414546f19e1f2e96206c89"
     }
   ]
 }

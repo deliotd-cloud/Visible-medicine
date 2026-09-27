@@ -1,5 +1,14 @@
 # Visible Medicine — shared delivery plan
 
+27 September reasoning review delivered locally: learner and Clinical Review
+use Atlas `b3995e7`, including six thoracic vessel questions and source-specific
+review evidence for all 268 eligible question representations. Schema 2 blocks
+old UI from silently hiding new content; expanded teaching requires fresh review.
+101 integration checks, builds, TypeScript and actual mobile review pass. No
+models, decisions or public deployment changed. See
+`docs/clinical-review-reasoning-20260927.md`. Resume substantive Atlas content and
+usability work; this review gap and vessel-question import are complete.
+
 27 September drawer correction delivered locally: learner and Clinical Review
 use Atlas `af56c6a`. Return to model follows content instead of covering lower
 quiz controls. 100 integration checks, TypeScript/builds and actual embedded

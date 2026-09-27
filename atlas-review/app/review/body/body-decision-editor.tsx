@@ -330,7 +330,7 @@ export function BodyDecisionEditor({
           )}
           <p className="body-review-caution">
             {track === 'teaching'
-              ? `Approval scope: available draft topics only (${page.context.teachingTabs.join(', ')}). Pending topics and the separate interactive question bank are excluded.`
+              ? `Approval scope: available draft topics (${page.context.teachingTabs.join(', ')}) and only the displayed source-specific interactive reasoning question, when available. Pending topics and all other interactive questions are excluded.`
               : track === 'geometry'
                 ? 'Approval scope: this root-body selection and renderer only. Nested dissections and independent specimens require separate reviews.'
                 : 'Planning and correction notes can be saved, but imaging cannot be approved until validated images and registration exist.'}

@@ -11,15 +11,16 @@ import { abdominalOrganReasoningConcepts } from './abdominal-organ-reasoning';
 import { thoracicOrganReasoningConcepts } from './thoracic-organ-reasoning';
 import { deepBrainReasoningConcepts } from './deep-brain-reasoning';
 import { pelvicOrganReasoningConcepts } from './pelvic-organ-reasoning';
+import { thoracicVesselReasoningConcepts, thoracicVesselReasoningSourceMatches } from './thoracic-vessel-reasoning';
 // "midline" retains the exact catalogue tag, including bilateral source groups.
-type ReasoningBinding = { fma: string; side: 'right' | 'left' | 'midline' | 'unpaired' } & (
+type ReasoningBinding = { fma: string; side: 'right' | 'left' | 'midline' | 'unpaired' | 'unspecified' } & (
   | { file: string; files?: never }
   | { file?: never; files: readonly [string, string, ...string[]] }
 );
 export interface ReasoningConcept {
   key: string;
   // Omission preserves every existing muscle binding; organs are explicit only.
-  sourceTissue?: 'organ' | 'neural-organ';
+  sourceTissue?: 'organ' | 'neural-organ' | 'vessel';
   region:
     | 'shoulder-arm'
     | 'forearm'
@@ -350,6 +351,7 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
   ...thoracicOrganReasoningConcepts,
   ...deepBrainReasoningConcepts,
   ...pelvicOrganReasoningConcepts,
+  ...thoracicVesselReasoningConcepts,
 ];
 export function reasoningConceptFor(s: BodyStructure) {
   if (
@@ -358,8 +360,9 @@ export function reasoningConceptFor(s: BodyStructure) {
     return undefined;
   return reasoningConcepts.find(
     (c) =>
-      s.system === (c.sourceTissue === 'organ' ? 'organs' : c.sourceTissue === 'neural-organ' ? 'nerves' : 'muscles') &&
-      s.category === (c.sourceTissue === 'organ' || c.sourceTissue === 'neural-organ' ? 'organ' : 'muscle') &&
+      s.system === (c.sourceTissue === 'organ' ? 'organs' : c.sourceTissue === 'neural-organ' ? 'nerves' : c.sourceTissue === 'vessel' ? 'vessels' : 'muscles') &&
+      s.category === (c.sourceTissue === 'organ' || c.sourceTissue === 'neural-organ' ? 'organ' : c.sourceTissue === 'vessel' ? 'vessel' : 'muscle') &&
+      (c.sourceTissue !== 'vessel' || thoracicVesselReasoningSourceMatches(s, c.key)) &&
       s.sourceTree === (c.sourceTree ?? 'isa') &&
       s.region === c.region &&
       s.regions.length === (c.sourceRegions ?? [c.region]).length &&

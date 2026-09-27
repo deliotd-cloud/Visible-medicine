@@ -1,10 +1,10 @@
 {
-  "revision": "af56c6a227a8e381f2093df905069c824a0ddd8b",
+  "revision": "b3995e784dfab02686e03a995e6e1e4e0ae150d9",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
-      "sourceSha256": "b17d893a9e22149447ab7add606e0d9fdf01313ae18b0a6283a51787c51da3a9",
-      "importedSha256": "964492aa81d9bfabb49091d428080ea44b27694c06e06323556c0a134b404830"
+      "sourceSha256": "69e8ecede726675e79fe2f06e7df344922886183af3267ede8bb32c4210a0130",
+      "importedSha256": "3e0f4388efd794b1a0d412916396818eac693fc809d3fbbc3a2623ec443a170d"
     },
     {
       "path": "app/brand.tsx",
@@ -48,8 +48,8 @@
     },
     {
       "path": "lib/body-review-material.ts",
-      "sourceSha256": "4c37188514984d138dff39c9b8a16a512fceb1e6195ba0e12c080687662e95b5",
-      "importedSha256": "4c37188514984d138dff39c9b8a16a512fceb1e6195ba0e12c080687662e95b5"
+      "sourceSha256": "750d9d849e88fecdd802f394de0d3eb0f820ce8b9cc41175f535eb1b05738f70",
+      "importedSha256": "750d9d849e88fecdd802f394de0d3eb0f820ce8b9cc41175f535eb1b05738f70"
     },
     {
       "path": "public/models/bodyparts3d/full-body/catalog.json",
@@ -2422,6 +2422,91 @@
       "importedSha256": "2c469d5d892b6bfbfe2c11211f2bc421a6664e3c5b0286cf017ac1b43f25d1a7"
     },
     {
+      "path": "lib/body-reasoning-review.ts",
+      "sourceSha256": "883920f5b4852886aef6da1942211201bc87ad95186b4a8113f3e14fa9dec5b9",
+      "importedSha256": "883920f5b4852886aef6da1942211201bc87ad95186b4a8113f3e14fa9dec5b9"
+    },
+    {
+      "path": "lib/atlas-practice.ts",
+      "sourceSha256": "cee0a9436adbfa68d784d40fbf464d0b685c297b502128db20609db95b26fd68",
+      "importedSha256": "cee0a9436adbfa68d784d40fbf464d0b685c297b502128db20609db95b26fd68"
+    },
+    {
+      "path": "lib/anatomy-practice.ts",
+      "sourceSha256": "6cc60a21919341e2dda7b56305c595f02e23eeb499b06191646e763de916a051",
+      "importedSha256": "6cc60a21919341e2dda7b56305c595f02e23eeb499b06191646e763de916a051"
+    },
+    {
+      "path": "lib/reasoning-questions.ts",
+      "sourceSha256": "06e537e4f2f283547ec90da3144b21db06415e347e692fb6b139cecf641affdf",
+      "importedSha256": "06e537e4f2f283547ec90da3144b21db06415e347e692fb6b139cecf641affdf"
+    },
+    {
+      "path": "lib/forearm-reasoning.ts",
+      "sourceSha256": "da658e0b8a66f22bb31cabf49a0505b7f1bca71967afc5ead2b342aff93408b2",
+      "importedSha256": "da658e0b8a66f22bb31cabf49a0505b7f1bca71967afc5ead2b342aff93408b2"
+    },
+    {
+      "path": "lib/hand-reasoning.ts",
+      "sourceSha256": "de5b56b29b26f9c23b090335abf69a4b16089ec62c2c107f550c782da0cfd217",
+      "importedSha256": "de5b56b29b26f9c23b090335abf69a4b16089ec62c2c107f550c782da0cfd217"
+    },
+    {
+      "path": "lib/thigh-reasoning.ts",
+      "sourceSha256": "8a26447a642d1b2b069eea66840d6004a8d74739778336d91653f83bad7527ef",
+      "importedSha256": "8a26447a642d1b2b069eea66840d6004a8d74739778336d91653f83bad7527ef"
+    },
+    {
+      "path": "lib/leg-reasoning.ts",
+      "sourceSha256": "d94d6ea36a8962684935ed07bc235852095b624abc189dd7611d5551cd30022b",
+      "importedSha256": "d94d6ea36a8962684935ed07bc235852095b624abc189dd7611d5551cd30022b"
+    },
+    {
+      "path": "lib/foot-reasoning.ts",
+      "sourceSha256": "cef5ea8c92edd619891b8c2c51e94b2b0c98d5a285e6c1681a50d4e5c773d9de",
+      "importedSha256": "cef5ea8c92edd619891b8c2c51e94b2b0c98d5a285e6c1681a50d4e5c773d9de"
+    },
+    {
+      "path": "lib/head-neck-reasoning.ts",
+      "sourceSha256": "ce773af06070f8bfc6cb081a46f99c7fc622d6bdc00e380655ed826921c77dc0",
+      "importedSha256": "ce773af06070f8bfc6cb081a46f99c7fc622d6bdc00e380655ed826921c77dc0"
+    },
+    {
+      "path": "lib/trunk-reasoning.ts",
+      "sourceSha256": "a98bd0dd78b8c27fdc0c72b52511e435a417eae09603a863e30305d9d18ef42d",
+      "importedSha256": "a98bd0dd78b8c27fdc0c72b52511e435a417eae09603a863e30305d9d18ef42d"
+    },
+    {
+      "path": "lib/limb-relationships-reasoning.ts",
+      "sourceSha256": "6880ceab40a87287a21e48aa0e93e93fe55246f7c94e98ce6fffc3d8a526b0c9",
+      "importedSha256": "6880ceab40a87287a21e48aa0e93e93fe55246f7c94e98ce6fffc3d8a526b0c9"
+    },
+    {
+      "path": "lib/abdominal-organ-reasoning.ts",
+      "sourceSha256": "b8912daea3a16c92ae8e8bda65c2d2877e7002d390ac6130dfc45a53e6a312b8",
+      "importedSha256": "b8912daea3a16c92ae8e8bda65c2d2877e7002d390ac6130dfc45a53e6a312b8"
+    },
+    {
+      "path": "lib/thoracic-organ-reasoning.ts",
+      "sourceSha256": "fe7bbe1c69cd31fbf375ebf1b1ecc0f3c8e8aacdf8be7ca2109f382f150e506c",
+      "importedSha256": "fe7bbe1c69cd31fbf375ebf1b1ecc0f3c8e8aacdf8be7ca2109f382f150e506c"
+    },
+    {
+      "path": "lib/deep-brain-reasoning.ts",
+      "sourceSha256": "0f18416cece4e887ff8916abf70667b6e9fcbbceff558863782e4e2038616a5f",
+      "importedSha256": "0f18416cece4e887ff8916abf70667b6e9fcbbceff558863782e4e2038616a5f"
+    },
+    {
+      "path": "lib/pelvic-organ-reasoning.ts",
+      "sourceSha256": "f951d93412bcc797afabef89ca1d3ea7a0a6716a15493b9b9eabebb292487824",
+      "importedSha256": "f951d93412bcc797afabef89ca1d3ea7a0a6716a15493b9b9eabebb292487824"
+    },
+    {
+      "path": "lib/thoracic-vessel-reasoning.ts",
+      "sourceSha256": "aa4b5716c43b620e7765ba8534aac7ed56fdd6b8029573a19e7c9c19a4dfc179",
+      "importedSha256": "aa4b5716c43b620e7765ba8534aac7ed56fdd6b8029573a19e7c9c19a4dfc179"
+    },
+    {
       "path": "lib/nested-review-material.ts",
       "sourceSha256": "eba8b577811c1ac65122b61301b2c83cf7b3a97574bc2a4cc7b2ddae43600801",
       "importedSha256": "eba8b577811c1ac65122b61301b2c83cf7b3a97574bc2a4cc7b2ddae43600801"
@@ -2533,13 +2618,13 @@
     },
     {
       "path": "lib/body-review-decisions.ts",
-      "sourceSha256": "d54c851984990118ad4e2a7638282a4981b98b6acf7eeae3f3ea09ace696dc41",
-      "importedSha256": "d54c851984990118ad4e2a7638282a4981b98b6acf7eeae3f3ea09ace696dc41"
+      "sourceSha256": "fc1a6f92ddb888d4e2dfd82a8b368f13b24c1b9fd1a89fc175e82ad28daf5f41",
+      "importedSha256": "fc1a6f92ddb888d4e2dfd82a8b368f13b24c1b9fd1a89fc175e82ad28daf5f41"
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "acec84e589c6c9f6698ef6dbc1f1ea605f3b54afadc609570ff6320ef5b2324a",
-      "importedSha256": "79643129edd72070c8592bd4336fd1e89ca533fe6dd61e504fcebe1f6606b53b"
+      "sourceSha256": "57015132a46731f50352dd4143df26edbe82c1c5c07a2e29afd4a54d047d21fb",
+      "importedSha256": "1ce1d33617f32408da75561ef442a230815daa95dd82404243b7627f72161223"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -2814,7 +2899,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "df5ac42ebd6444e062ead2bfb08db2ff6bbc384a1aa624c9909d0b6dfb3f5935",
-      "importedSha256": "0d9b26eb4a5ef57a14437aa10ebd643c77696aecd638048681b9139d7b74642f"
+      "importedSha256": "4397d92cefc1c335f23fa67c7fd8a3804260cda16dc347306abddc9e9360a01b"
     },
     {
       "path": "app/review/review.css",
@@ -2828,8 +2913,8 @@
     },
     {
       "path": "app/review/body/review-dashboard.tsx",
-      "sourceSha256": "cb0bb7433a6940198643f64e2404ed33d9642f8e9962926fbe5b7d180951b06f",
-      "importedSha256": "af92640d73214354165628ae9677d82c86b9aad609e7e2b615c243d603fe58b6"
+      "sourceSha256": "db6879399778618f9741c8a76e2336ccd8c1d489f342cfddd7adb916ed5790dc",
+      "importedSha256": "1061132ef53ffe03327b61aee99d898fa4592fb1a68ac0cf50446e5499b00d89"
     },
     {
       "path": "lib/body-review-search.ts",
@@ -2838,13 +2923,13 @@
     },
     {
       "path": "lib/body-review-response.ts",
-      "sourceSha256": "d6ce7a27a56a0d1d58fe9d1ccb5c8095cc83b206223485cc431c99569efd6067",
-      "importedSha256": "d6ce7a27a56a0d1d58fe9d1ccb5c8095cc83b206223485cc431c99569efd6067"
+      "sourceSha256": "5d3198da80411e21a136b1eaa6c422f947d6be535f5cd6a1b473162abc29f2c7",
+      "importedSha256": "5d3198da80411e21a136b1eaa6c422f947d6be535f5cd6a1b473162abc29f2c7"
     },
     {
       "path": "app/review/body/body-decision-editor.tsx",
-      "sourceSha256": "e220243eefbc81f59ad2548667bb2f9da0211a11b1eef72f934fd230af269b97",
-      "importedSha256": "10ab01e32827b069dba7d6983f7c55ed96b0c9d721c87dd3d24480410c7f99bb"
+      "sourceSha256": "5f44c92269a7319e58af5a939255e4c7dbb96f6072f3b975002d57cfcd234ddf",
+      "importedSha256": "d77a8aa759ed074d86e2c423974299df2d5bb4c3bf7c5b560f395d33d4e5b7b9"
     },
     {
       "path": "lib/body-review-client.ts",
@@ -3245,81 +3330,6 @@
       "path": "app/selection-visibility.css",
       "sourceSha256": "2a5d482d10cbc725100ce98cac41267d759e64f123d79b218b664096b9aebb58",
       "importedSha256": "2a5d482d10cbc725100ce98cac41267d759e64f123d79b218b664096b9aebb58"
-    },
-    {
-      "path": "lib/atlas-practice.ts",
-      "sourceSha256": "cee0a9436adbfa68d784d40fbf464d0b685c297b502128db20609db95b26fd68",
-      "importedSha256": "cee0a9436adbfa68d784d40fbf464d0b685c297b502128db20609db95b26fd68"
-    },
-    {
-      "path": "lib/anatomy-practice.ts",
-      "sourceSha256": "6cc60a21919341e2dda7b56305c595f02e23eeb499b06191646e763de916a051",
-      "importedSha256": "6cc60a21919341e2dda7b56305c595f02e23eeb499b06191646e763de916a051"
-    },
-    {
-      "path": "lib/reasoning-questions.ts",
-      "sourceSha256": "c07ec177edb3b1c3056fd7c5373a07a9cd4d0cdd6c0015fb69859bcb5bdab196",
-      "importedSha256": "c07ec177edb3b1c3056fd7c5373a07a9cd4d0cdd6c0015fb69859bcb5bdab196"
-    },
-    {
-      "path": "lib/forearm-reasoning.ts",
-      "sourceSha256": "da658e0b8a66f22bb31cabf49a0505b7f1bca71967afc5ead2b342aff93408b2",
-      "importedSha256": "da658e0b8a66f22bb31cabf49a0505b7f1bca71967afc5ead2b342aff93408b2"
-    },
-    {
-      "path": "lib/hand-reasoning.ts",
-      "sourceSha256": "de5b56b29b26f9c23b090335abf69a4b16089ec62c2c107f550c782da0cfd217",
-      "importedSha256": "de5b56b29b26f9c23b090335abf69a4b16089ec62c2c107f550c782da0cfd217"
-    },
-    {
-      "path": "lib/thigh-reasoning.ts",
-      "sourceSha256": "8a26447a642d1b2b069eea66840d6004a8d74739778336d91653f83bad7527ef",
-      "importedSha256": "8a26447a642d1b2b069eea66840d6004a8d74739778336d91653f83bad7527ef"
-    },
-    {
-      "path": "lib/leg-reasoning.ts",
-      "sourceSha256": "d94d6ea36a8962684935ed07bc235852095b624abc189dd7611d5551cd30022b",
-      "importedSha256": "d94d6ea36a8962684935ed07bc235852095b624abc189dd7611d5551cd30022b"
-    },
-    {
-      "path": "lib/foot-reasoning.ts",
-      "sourceSha256": "cef5ea8c92edd619891b8c2c51e94b2b0c98d5a285e6c1681a50d4e5c773d9de",
-      "importedSha256": "cef5ea8c92edd619891b8c2c51e94b2b0c98d5a285e6c1681a50d4e5c773d9de"
-    },
-    {
-      "path": "lib/head-neck-reasoning.ts",
-      "sourceSha256": "ce773af06070f8bfc6cb081a46f99c7fc622d6bdc00e380655ed826921c77dc0",
-      "importedSha256": "ce773af06070f8bfc6cb081a46f99c7fc622d6bdc00e380655ed826921c77dc0"
-    },
-    {
-      "path": "lib/trunk-reasoning.ts",
-      "sourceSha256": "a98bd0dd78b8c27fdc0c72b52511e435a417eae09603a863e30305d9d18ef42d",
-      "importedSha256": "a98bd0dd78b8c27fdc0c72b52511e435a417eae09603a863e30305d9d18ef42d"
-    },
-    {
-      "path": "lib/limb-relationships-reasoning.ts",
-      "sourceSha256": "6880ceab40a87287a21e48aa0e93e93fe55246f7c94e98ce6fffc3d8a526b0c9",
-      "importedSha256": "6880ceab40a87287a21e48aa0e93e93fe55246f7c94e98ce6fffc3d8a526b0c9"
-    },
-    {
-      "path": "lib/abdominal-organ-reasoning.ts",
-      "sourceSha256": "b8912daea3a16c92ae8e8bda65c2d2877e7002d390ac6130dfc45a53e6a312b8",
-      "importedSha256": "b8912daea3a16c92ae8e8bda65c2d2877e7002d390ac6130dfc45a53e6a312b8"
-    },
-    {
-      "path": "lib/thoracic-organ-reasoning.ts",
-      "sourceSha256": "fe7bbe1c69cd31fbf375ebf1b1ecc0f3c8e8aacdf8be7ca2109f382f150e506c",
-      "importedSha256": "fe7bbe1c69cd31fbf375ebf1b1ecc0f3c8e8aacdf8be7ca2109f382f150e506c"
-    },
-    {
-      "path": "lib/deep-brain-reasoning.ts",
-      "sourceSha256": "0f18416cece4e887ff8916abf70667b6e9fcbbceff558863782e4e2038616a5f",
-      "importedSha256": "0f18416cece4e887ff8916abf70667b6e9fcbbceff558863782e4e2038616a5f"
-    },
-    {
-      "path": "lib/pelvic-organ-reasoning.ts",
-      "sourceSha256": "f951d93412bcc797afabef89ca1d3ea7a0a6716a15493b9b9eabebb292487824",
-      "importedSha256": "f951d93412bcc797afabef89ca1d3ea7a0a6716a15493b9b9eabebb292487824"
     },
     {
       "path": "app/reasoning-feedback.tsx",
@@ -4163,8 +4173,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "907145ad9f0bec6a65b6ff796bd20712d0bc642636d584a7dfc9d443abb63f9e",
-      "importedSha256": "907145ad9f0bec6a65b6ff796bd20712d0bc642636d584a7dfc9d443abb63f9e"
+      "sourceSha256": "d43f062ef9f4eb05f7bffdad82b7d8d007f540783d018515f7ab0c544d103f0a",
+      "importedSha256": "d43f062ef9f4eb05f7bffdad82b7d8d007f540783d018515f7ab0c544d103f0a"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -4263,5 +4273,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "3ebb047c387e4371add4598b146bf3905ea17b1d56d3fe02d4afb4711ed8dba9"
+  "websiteIntegrationSha256": "6781eccc3fa15dba06f1155691fa8bd8d3f183b5bc5da4d3e2a8354857119de2"
 }

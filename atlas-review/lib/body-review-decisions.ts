@@ -109,7 +109,7 @@ export const bodyChecklists: Record<BodyReviewTrack, BodyReviewCheck[]> = {
     {
       id: 'assessment',
       label:
-        'Check authored Quiz notes where supplied; the separate interactive question bank is outside this approval.',
+        'Check authored Quiz notes and the displayed source-specific interactive reasoning question where supplied, including its answer, alternatives, explanation and references. Other questions are excluded.',
     },
     {
       id: 'scope',
