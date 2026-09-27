@@ -24,6 +24,7 @@ export * from './lib/coronary-arterial-us.ts';
 export * from './lib/elbow-arterial-ct.ts';
 export * from './lib/orbital-nerve-mri.ts';
 export * from './lib/circle-willis-imaging.ts';
+export * from './lib/thoracic-quiz.ts';
 export * from './lib/body-review-material.ts';
 export * from './lib/hilar-vessel-xray.ts';
 export * from './lib/thoracic-inlet-xray.ts';

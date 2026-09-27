@@ -2,10 +2,12 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { isDeepStrictEqual } from 'node:util';
+import { beforeThoracicQuiz } from './thoracic-quiz-history.mjs';
 import pins from '../content/circle-willis-imaging-pins.json' with { type: 'json' };
 import transition from '../content/circle-willis-imaging-transition.json' with { type: 'json' };
 const hash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 export function beforeCircleWillisImaging(api) {
+  api = beforeThoracicQuiz(api);
   if (typeof api.bodyLesson !== 'function') return api;
   if (typeof api.bodyDisplayCatalog !== 'function' && pins.entries.every(e => e.topics.every(t => api.bodyLesson(e.identity, t) === undefined))) return api;
   assert.equal(hash(pins), 'b5e35e27b271b5b9e3932872f168735428416882918c12554a9ff03c06f87f7e');

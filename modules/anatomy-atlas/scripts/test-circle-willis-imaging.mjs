@@ -3,10 +3,12 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { contentContext, contentValidator } from './content-contract-tools.mjs';
 import { exactSourceHistoryApi } from './exact-source-history-api.mjs';
+import { beforeThoracicQuiz } from './thoracic-quiz-history.mjs';
 const hash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const snapshot = (api, display) => ({ body: display.structures.map(s => ({ id: s.id, sections: Object.fromEntries(api.contentTabs.map(t => [t, api.bodyLesson(s, t)])) })), shoulder: api.structures, recipes: api.dissectionProfiles });
 const parentCommit = '0770fd3e49eb02b0430a80769744c88027c591e5';
-const { api, catalog, registry } = await contentContext();
+const { api: currentApi, catalog, registry } = await contentContext();
+const api = beforeThoracicQuiz(currentApi);
 const display = api.bodyDisplayCatalog(catalog), parent = await exactSourceHistoryApi(parentCommit);
 const fmas = ['FMA50169', 'FMA50029', 'FMA50030', 'FMA50584', 'FMA50585', 'FMA50085', 'FMA50086'];
 if (process.argv.includes('--capture')) {

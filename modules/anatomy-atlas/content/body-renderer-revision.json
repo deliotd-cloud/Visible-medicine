@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "ecc119db4b2f0d6c71bf6d533673864bcb9d8c361408f742bca32e3291dd612b"
+      "sha256": "38555af3e44491a45cdbfc231999723b8b6d2eb149256f4e6a42c8192293763f"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1415,6 +1415,14 @@
     {
       "path": "content/thoracic-inlet-xray.ts",
       "sha256": "4c5ab647f20be853b81b626c99e81318acd3f9884593d08b225c906d93cea5de"
+    },
+    {
+      "path": "content/thoracic-quiz-pins.json",
+      "sha256": "92aa67280c42b6966e06a6c2c05b6e9db5e4d90bd21912cda3eaadf67395b714"
+    },
+    {
+      "path": "content/thoracic-quiz.ts",
+      "sha256": "581c485dd186321db1304024bc8226e34e8e250ce9a29727c65c40ef6f957d9f"
     },
     {
       "path": "content/thoracoabdominal-organ-imaging-pins.json",
@@ -2845,6 +2853,10 @@
       "sha256": "fe7bbe1c69cd31fbf375ebf1b1ecc0f3c8e8aacdf8be7ca2109f382f150e506c"
     },
     {
+      "path": "lib/thoracic-quiz.ts",
+      "sha256": "0fa4ec6755a44490a8fb8036be432fd52180151523fd4e79888a4ada416524ff"
+    },
+    {
       "path": "lib/thoracic-vessel-clinical-curriculum.ts",
       "sha256": "9b0497b72c601d7ff89689d13c6efbf8804113d49790e901e3d5d02ed394a1d2"
     },
@@ -3185,5 +3197,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "a1307a9ca7dffcc027c8fb3aca955f08e67f2a33cdc6a134ac58624c2d95d51e"
+  "sha256": "71113ff46b0e224ad33bf0d25e58a0442d5914b7a64e25fb0bb746f89d2e62a6"
 }
