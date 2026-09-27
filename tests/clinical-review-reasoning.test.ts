@@ -7,7 +7,7 @@ import { build } from 'esbuild';
 test('interactive reasoning reaches learner and protected review with source-bound answers', async () => {
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const learner=JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json','utf8'));
-  assert.equal(review.revision,'6b1539f9de931cfcae0492278a04d90955974844');
+  assert.equal(review.revision,'a0b0d1b4a3d57c07c5d1f6593d7151bf3fc24f74');
   assert.equal(learner.sourceCommit,review.revision);
   const inputs=JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json','utf8'));
   for(const path of ['lib/reasoning-questions.ts','lib/thoracic-vessel-reasoning.ts','lib/atlas-practice.ts']) {
@@ -25,7 +25,7 @@ test('interactive reasoning reaches learner and protected review with source-bou
   for(const row of api.bodyReviewSummaries.filter((s:any)=>s.system==='vessels' && s.regions.includes('thorax'))) {
     const packet=await api.bodyReviewMaterial(row.id);
     assert(api.parseBodyReviewResponse(packet,row.id));
-    assert.equal(packet.schema,'vm-body-review-worksheet-2');
+    assert.equal(packet.schema,'vm-body-review-worksheet-3');
     assert.equal(packet.approval,false);
     if(!packet.reasoning) continue;
     count++;

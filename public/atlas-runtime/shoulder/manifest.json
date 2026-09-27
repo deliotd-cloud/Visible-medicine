@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "sourceCommit": "6b1539f9de931cfcae0492278a04d90955974844",
+  "sourceCommit": "a0b0d1b4a3d57c07c5d1f6593d7151bf3fc24f74",
   "region": "shoulder-right",
   "structures": 9,
   "patientDataIncluded": false,
@@ -10,7 +10,7 @@
     {
       "path": "index.html",
       "bytes": 504,
-      "sha256": "c1019dc752a20480f756f56fad8cb9070a5c874b4c26055f75d42d281fb1088d"
+      "sha256": "8534e7603546abb92c5cd782385c1d415e543c633a1c59f8c699fb97be0bd5a0"
     },
     {
       "path": "BUNDLED_NOTICES.txt",
@@ -25,12 +25,7 @@
     {
       "path": "source-inputs.json",
       "bytes": 78396,
-      "sha256": "e53f9a6fa4499e6923da8c4bccde832f1150823515c5db54fd61513554c1e14c"
-    },
-    {
-      "path": "assets/anatomy-scene-9Gio0mwU.js",
-      "bytes": 1068357,
-      "sha256": "019f32889472a82aa166b1e8ae8195cf5c582bc92f80426eaecbff37e987261e"
+      "sha256": "325d1e77500c1d0d685eafd84378d823375b9ba7d73663c2934fe8d5f97b6849"
     },
     {
       "path": "assets/anatomy-scene-DWpmDIUC.css",
@@ -38,14 +33,19 @@
       "sha256": "dd7c542a365357d2921742ad887ebff8660a31d404fca8b512e450865cc2896d"
     },
     {
-      "path": "assets/index-CzocKgnk.css",
-      "bytes": 295985,
-      "sha256": "c2bbbae95eb463f1f1b56a631eef1254c3032f7888dd81247a479b51542982c7"
+      "path": "assets/anatomy-scene-jZmw4HG1.js",
+      "bytes": 1068357,
+      "sha256": "7db5e9b42eaa786ee5f7e5645600dff32c9f67b0c942df4c90e96438d0818950"
     },
     {
-      "path": "assets/index-DsyxPRpg.js",
-      "bytes": 4103845,
-      "sha256": "27457645ef894bbfdb0d7b5f5db324f77e1223fcd7f8f838433eebbd1e457c1f"
+      "path": "assets/index-B9kC0ge4.js",
+      "bytes": 4103877,
+      "sha256": "329d2dfb1c2638233dc9221468a513a0dc50bd1a43ea7b421c5744b5f70d71a9"
+    },
+    {
+      "path": "assets/index-CMfJNN1D.css",
+      "bytes": 296494,
+      "sha256": "eb842d5b0fe2b5c29c82b3608157eeab4f25a97b42c3d31a8d63c44596a4b054"
     },
     {
       "path": "models/bodyparts3d/shoulder-right.glb",
@@ -69,8 +69,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "bytes": 205797,
-      "sha256": "ee9b4cb84773bde6e355f4609bacd8e821f29d8bb95fbbb42608faa06f5a8a65"
+      "bytes": 206565,
+      "sha256": "f1537038314a5ce02418504eb826a3fad444cd27ceb6b00090aef14176d90ec1"
     },
     {
       "path": "LICENSES/dependency-license-audit.json",

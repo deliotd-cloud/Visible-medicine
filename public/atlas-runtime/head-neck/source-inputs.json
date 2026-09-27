@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "ee9b4cb84773bde6e355f4609bacd8e821f29d8bb95fbbb42608faa06f5a8a65"
+    "sha256": "f1537038314a5ce02418504eb826a3fad444cd27ceb6b00090aef14176d90ec1"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -93,11 +93,11 @@
   },
   {
     "path": "app/body-explorer.tsx",
-    "sha256": "fedfd83496638c6e6420b938edc86ad7ef9b7b2c7e1666c824abe4720a56eb83"
+    "sha256": "8d3cb2812b7f9cf84cf78a42a7c6d0b022165b6eafcc5565d41c0fa9428d245d"
   },
   {
     "path": "app/body-scene.tsx",
-    "sha256": "7117993fb76445f522d303c664fb5405ac07344f5e255906e2ee47640dc4acbc"
+    "sha256": "ab99681505b1f1eb8b3935c14b9a614310fb831c0b122492a23be635b3a302ce"
   },
   {
     "path": "app/body-selection-notice.tsx",
@@ -248,6 +248,14 @@
     "sha256": "007ec5b75713d59cb83f2923b87ab1dc4c3394d1bd15cddf589d6962bcec2c6e"
   },
   {
+    "path": "app/regional-guided-learning.css",
+    "sha256": "4a5397085d56ea33aa86388b5b053384f8b3b3802021ce2721a94e3dca555400"
+  },
+  {
+    "path": "app/regional-guided-learning.tsx",
+    "sha256": "557bfe3cc7b31eec83a20177a270e3f302f29038e83aedb0b26e459093c04a3d"
+  },
+  {
     "path": "app/related-study.tsx",
     "sha256": "f9f30a264c8d1c2a38da3c67b0866fc901adb25e2f5c978309adf3f9b776e145"
   },
@@ -313,7 +321,7 @@
   },
   {
     "path": "app/structure-quick-check.tsx",
-    "sha256": "4bfa6567af94f808bc7ed43a9693eae6771da7e8ada1e10183ec4be3ff64c5de"
+    "sha256": "7944394d093532c548b062e68be601d0fe6d4ebe7b4c5267275ade0436548632"
   },
   {
     "path": "app/study-library.tsx",
@@ -1301,7 +1309,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "bdbb8fb879c7d3ca154aec04cd5aa102ab46472556d0751872cb92ef4c1aaaf0"
+    "sha256": "2cf321f6047de050e0ad7e2ac7fb6977aa45c43d7b59c24fd820a46a3cffc499"
   },
   {
     "path": "content/sca-mca-clinical-pins.json",
@@ -2738,6 +2746,10 @@
   {
     "path": "lib/regional-motor.ts",
     "sha256": "4c5b7715e7a175c16e9694f4aa0e7925d2c753fd5e167c4e2c567df3017fa4b9"
+  },
+  {
+    "path": "lib/regional-tours.ts",
+    "sha256": "41fdb9f9f497cfa87c994ea241117a7fe0ccd84d97149dd90aa776a54bb9c1d2"
   },
   {
     "path": "lib/regional-vascular-clinical.ts",

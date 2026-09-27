@@ -1,5 +1,15 @@
 # Visible Medicine — shared delivery plan
 
+27 September thoracic Guided learning and structure-check feedback delivered
+locally from Atlas `a0b0d1b`. Six source-bound airway/vessel stops with smooth
+camera playback, complete schema3 Clinical Review evidence; correct answers now
+offer “Practise again”, incorrect answers “Try again” in every structure-check
+host. 107 integration checks, TypeScript/builds and actual mobile learner/review
+checks pass. Models, answer keys, standalone specimen modules and private review
+decisions unchanged. See `docs/thorax-tour-quick-check-delivery-20260927.md`.
+Not published or clinically approved. Continue substantive regional guided
+learning and imaging linkage; do not repeat this completed import.
+
 27 September Guided learning delivered locally: shoulder and regional learners
 plus Clinical Review use Atlas `6b1539f`. Five-step shoulder pilot, gentle 1.8s
 camera sweeps, compact playback and complete draft review evidence. 105 integration

@@ -417,6 +417,21 @@ export function BodyReviewDetails({
           )}
         </details>
       ))}
+      {material.guidedTours.map(evidence=><details key={evidence.tour.id}>
+        <summary>Guided learning · {evidence.tour.title} · Draft</summary>
+        <p>{evidence.limitations}</p>
+        <p>Revision {evidence.tour.revision} · {evidence.transitionMs/1000}s camera sweep · {evidence.transition} · no separation</p>
+        <ol>{evidence.tour.steps.map(step=><li key={step.id}>
+          <h4>{step.title}</h4><p>{step.caption}</p>
+          <p>{step.view} · {step.durationMs/1000}s · {step.fadeOthers?'Others faded':'Full context'} · <code>{step.selectedId}</code></p>
+          {step.references.map(url=><a key={url} href={url} target="_blank" rel="noreferrer">Anatomy reference ↗</a>)}
+        </li>)}</ol>
+        <details><summary>Exact source surfaces & bundles</summary>
+          {evidence.structures.map(s=><p key={s.id}>{s.name} · <code>{s.id}</code> · {s.sources.map(p=>`${p.file}: ${p.sha256}`).join('; ')}</p>)}
+          {evidence.bundles.map(b=><p key={b.id}>{b.id}: <code>{b.sha256}</code></p>)}
+        </details>
+        <p>Use Guided learning in the thorax learner to inspect framing and transitions. This material does not approve images or linked lectures.</p>
+      </details>)}
       <details>
         <summary>Interactive reasoning · Draft</summary>
         {material.reasoning ? (

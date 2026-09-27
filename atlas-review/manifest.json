@@ -1,5 +1,5 @@
 {
-  "revision": "6b1539f9de931cfcae0492278a04d90955974844",
+  "revision": "a0b0d1b4a3d57c07c5d1f6593d7151bf3fc24f74",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -48,8 +48,8 @@
     },
     {
       "path": "lib/body-review-material.ts",
-      "sourceSha256": "750d9d849e88fecdd802f394de0d3eb0f820ce8b9cc41175f535eb1b05738f70",
-      "importedSha256": "750d9d849e88fecdd802f394de0d3eb0f820ce8b9cc41175f535eb1b05738f70"
+      "sourceSha256": "4f519cc25801bfc816861cc28e156bf7a0bf4cfb1a22dec7ec61efcc6668c6b5",
+      "importedSha256": "4f519cc25801bfc816861cc28e156bf7a0bf4cfb1a22dec7ec61efcc6668c6b5"
     },
     {
       "path": "public/models/bodyparts3d/full-body/catalog.json",
@@ -2522,6 +2522,21 @@
       "importedSha256": "aa4b5716c43b620e7765ba8534aac7ed56fdd6b8029573a19e7c9c19a4dfc179"
     },
     {
+      "path": "lib/regional-tours.ts",
+      "sourceSha256": "41fdb9f9f497cfa87c994ea241117a7fe0ccd84d97149dd90aa776a54bb9c1d2",
+      "importedSha256": "41fdb9f9f497cfa87c994ea241117a7fe0ccd84d97149dd90aa776a54bb9c1d2"
+    },
+    {
+      "path": "lib/selection-visibility.ts",
+      "sourceSha256": "d08344cef574acc33d4527f0161a99b10fd42364c53fa8cdc2877a055bcec8f6",
+      "importedSha256": "d08344cef574acc33d4527f0161a99b10fd42364c53fa8cdc2877a055bcec8f6"
+    },
+    {
+      "path": "lib/inspection-state.ts",
+      "sourceSha256": "9034b6b6447248feb1b64374f403539b9572c01dd2db68574dd66fafcfd795e7",
+      "importedSha256": "9034b6b6447248feb1b64374f403539b9572c01dd2db68574dd66fafcfd795e7"
+    },
+    {
       "path": "lib/nested-review-material.ts",
       "sourceSha256": "eba8b577811c1ac65122b61301b2c83cf7b3a97574bc2a4cc7b2ddae43600801",
       "importedSha256": "eba8b577811c1ac65122b61301b2c83cf7b3a97574bc2a4cc7b2ddae43600801"
@@ -2638,8 +2653,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "720f0b23fead483583ac1dbdeef9dd098dc2ed55c119ab9333acaabe3db04a6d",
-      "importedSha256": "cfd09f2d5877880f7c41189e5417da919c6f4afdcde5f245d2d628731180d23b"
+      "sourceSha256": "091a885d6718c4f77a61901d6c7db9811ecd1bba793d54a21ad7c50bb5c7c16a",
+      "importedSha256": "b7e7780609481df8a619cc21270666651cc40978193db73712575bac071cf0ea"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -2882,11 +2897,6 @@
       "importedSha256": "619e3ab84712487bd032b84a8f8b52f94d10883d8db7798057049bab287de857"
     },
     {
-      "path": "lib/inspection-state.ts",
-      "sourceSha256": "9034b6b6447248feb1b64374f403539b9572c01dd2db68574dd66fafcfd795e7",
-      "importedSha256": "9034b6b6447248feb1b64374f403539b9572c01dd2db68574dd66fafcfd795e7"
-    },
-    {
       "path": "lib/study-views.ts",
       "sourceSha256": "86504e3a67ec3982b43c211dd01c928e41002b1459b50ff018146b3ee5ad738a",
       "importedSha256": "86504e3a67ec3982b43c211dd01c928e41002b1459b50ff018146b3ee5ad738a"
@@ -2933,8 +2943,8 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sourceSha256": "bdbb8fb879c7d3ca154aec04cd5aa102ab46472556d0751872cb92ef4c1aaaf0",
-      "importedSha256": "a2e2c488861aa74631d0474872859e1ebe5aa18ff4e6fdd11e346a81fb28774b"
+      "sourceSha256": "2cf321f6047de050e0ad7e2ac7fb6977aa45c43d7b59c24fd820a46a3cffc499",
+      "importedSha256": "861987696e691af8c64dcfd2de6ec6cde599758ebe5c30d1c7af0ae250ead6a2"
     },
     {
       "path": "app/review/review.css",
@@ -2948,8 +2958,8 @@
     },
     {
       "path": "app/review/body/review-dashboard.tsx",
-      "sourceSha256": "db6879399778618f9741c8a76e2336ccd8c1d489f342cfddd7adb916ed5790dc",
-      "importedSha256": "1061132ef53ffe03327b61aee99d898fa4592fb1a68ac0cf50446e5499b00d89"
+      "sourceSha256": "46dcbf3ae675495228b4bead5fe0a8ec39c36b1ffb96f5837b6ebc6a949641de",
+      "importedSha256": "fc126e28dc760aab15a647a9ff27825dbfcd0d6b5deda69c0f6e859dc74340b7"
     },
     {
       "path": "lib/body-review-search.ts",
@@ -2958,13 +2968,13 @@
     },
     {
       "path": "lib/body-review-response.ts",
-      "sourceSha256": "5d3198da80411e21a136b1eaa6c422f947d6be535f5cd6a1b473162abc29f2c7",
-      "importedSha256": "5d3198da80411e21a136b1eaa6c422f947d6be535f5cd6a1b473162abc29f2c7"
+      "sourceSha256": "654e095ce69eaecdc42ee5e36346abc1b296384c1f2929528ca6b6f941d2d12a",
+      "importedSha256": "654e095ce69eaecdc42ee5e36346abc1b296384c1f2929528ca6b6f941d2d12a"
     },
     {
       "path": "app/review/body/body-decision-editor.tsx",
-      "sourceSha256": "5f44c92269a7319e58af5a939255e4c7dbb96f6072f3b975002d57cfcd234ddf",
-      "importedSha256": "d77a8aa759ed074d86e2c423974299df2d5bb4c3bf7c5b560f395d33d4e5b7b9"
+      "sourceSha256": "fd264db0d8448af3117e67800a5ce8f051c0556b75f0603ec4557c0dd4bebe1b",
+      "importedSha256": "8656bfa552e229c62c359c476d1d20589998ce6ab61acd69453082ed19ceaf00"
     },
     {
       "path": "lib/body-review-client.ts",
@@ -3018,8 +3028,8 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sourceSha256": "fedfd83496638c6e6420b938edc86ad7ef9b7b2c7e1666c824abe4720a56eb83",
-      "importedSha256": "703b52905567f89c748cced2462f0bcf9796793d5626f3615c51d05544d019ff"
+      "sourceSha256": "8d3cb2812b7f9cf84cf78a42a7c6d0b022165b6eafcc5565d41c0fa9428d245d",
+      "importedSha256": "e43f6c24af416230005710acd36b1778c830ca61dcfe2d6eeab86252eec70478"
     },
     {
       "path": "app/um-knee-entry.css",
@@ -3098,8 +3108,8 @@
     },
     {
       "path": "app/structure-quick-check.tsx",
-      "sourceSha256": "4bfa6567af94f808bc7ed43a9693eae6771da7e8ada1e10183ec4be3ff64c5de",
-      "importedSha256": "4bfa6567af94f808bc7ed43a9693eae6771da7e8ada1e10183ec4be3ff64c5de"
+      "sourceSha256": "7944394d093532c548b062e68be601d0fe6d4ebe7b4c5267275ade0436548632",
+      "importedSha256": "7944394d093532c548b062e68be601d0fe6d4ebe7b4c5267275ade0436548632"
     },
     {
       "path": "app/structure-quick-check.css",
@@ -3127,6 +3137,186 @@
       "importedSha256": "7c9cdf1ba7e0be92beb8c01d37496466fa1dd291055634a7cf5889fb76e2b517"
     },
     {
+      "path": "app/regional-guided-learning.tsx",
+      "sourceSha256": "557bfe3cc7b31eec83a20177a270e3f302f29038e83aedb0b26e459093c04a3d",
+      "importedSha256": "1bcbf90359471b27322795ec58963806225f0695416205030356dbb9c5cd9aeb"
+    },
+    {
+      "path": "lib/renderer-health.ts",
+      "sourceSha256": "59097c95fc681c20d4c448b9ed4df96a095def7be0424f9045edb9587c51164f",
+      "importedSha256": "59097c95fc681c20d4c448b9ed4df96a095def7be0424f9045edb9587c51164f"
+    },
+    {
+      "path": "lib/model-delivery.ts",
+      "sourceSha256": "465d37a26064d03c7f559c4fe1524820349f46549858374af6a3bd9dd5807ed1",
+      "importedSha256": "465d37a26064d03c7f559c4fe1524820349f46549858374af6a3bd9dd5807ed1"
+    },
+    {
+      "path": "app/regional-guided-learning.css",
+      "sourceSha256": "4a5397085d56ea33aa86388b5b053384f8b3b3802021ce2721a94e3dca555400",
+      "importedSha256": "4a5397085d56ea33aa86388b5b053384f8b3b3802021ce2721a94e3dca555400"
+    },
+    {
+      "path": "app/body-scene.tsx",
+      "sourceSha256": "ab99681505b1f1eb8b3935c14b9a614310fb831c0b122492a23be635b3a302ce",
+      "importedSha256": "f6eb7a625abf72c0570f761ab6c8ed7d221e3233fe185b82e9abb4fe9d80accb"
+    },
+    {
+      "path": "app/anatomy-canvas.tsx",
+      "sourceSha256": "667fc0843d6057dd50766eea3ba6ae7aac72332913332aae233f2ee87bc91547",
+      "importedSha256": "3e72ba3f8248e0168e0279a42c2ef56b3ecebee496fd87570a7033a17bb77cb0"
+    },
+    {
+      "path": "lib/anatomy-root-session.ts",
+      "sourceSha256": "1f5a99620d56c1e33708afbcf8ad608c124aed23e2fb4f21adbb4da27837fac2",
+      "importedSha256": "1f5a99620d56c1e33708afbcf8ad608c124aed23e2fb4f21adbb4da27837fac2"
+    },
+    {
+      "path": "app/camera-keyboard.css",
+      "sourceSha256": "98d5bb8c7fe828c06e13f065fa7628aeeeb3638bedaea07a963ee3712ba4e7de",
+      "importedSha256": "98d5bb8c7fe828c06e13f065fa7628aeeeb3638bedaea07a963ee3712ba4e7de"
+    },
+    {
+      "path": "app/fitted-camera.tsx",
+      "sourceSha256": "ff59cb133b53a6ea728dc0aa902a1530559e375a834ec5eb7d0d7b5509a73e5c",
+      "importedSha256": "1552c8b595088217b917e51ffb5a1f3eaa20ba132a048179f452425ca4d0c732"
+    },
+    {
+      "path": "lib/explode-layout.mjs",
+      "sourceSha256": "d5790bc375114b906fdede4e430764df3fc0ff3ce71fba02ed87fec45129dff3",
+      "importedSha256": "d5790bc375114b906fdede4e430764df3fc0ff3ce71fba02ed87fec45129dff3"
+    },
+    {
+      "path": "lib/study-camera.ts",
+      "sourceSha256": "83743439ea9ff1d9560cc470aa1f2a8f4552c410fe94edc74ab8411f149be8d1",
+      "importedSha256": "83743439ea9ff1d9560cc470aa1f2a8f4552c410fe94edc74ab8411f149be8d1"
+    },
+    {
+      "path": "lib/camera-zoom.ts",
+      "sourceSha256": "06263f767e08d8b374005f198c72227c3550767628d6096c24fd698331ea432d",
+      "importedSha256": "06263f767e08d8b374005f198c72227c3550767628d6096c24fd698331ea432d"
+    },
+    {
+      "path": "lib/camera-keyboard.ts",
+      "sourceSha256": "9a0a095306c6687ca7fd568570c7a66363566ac3a70f2916bc1e8f74aa405220",
+      "importedSha256": "9a0a095306c6687ca7fd568570c7a66363566ac3a70f2916bc1e8f74aa405220"
+    },
+    {
+      "path": "lib/tour-camera.ts",
+      "sourceSha256": "6e1cb68621d86be34fbaa3fbc57497ec167f82a6dd0824605a37708ecd710f46",
+      "importedSha256": "6e1cb68621d86be34fbaa3fbc57497ec167f82a6dd0824605a37708ecd710f46"
+    },
+    {
+      "path": "lib/body-arrangement.ts",
+      "sourceSha256": "5946d4bd5eb1797562309c7469e73d0e6594e88b883c8a4c45344c7d43206c59",
+      "importedSha256": "5946d4bd5eb1797562309c7469e73d0e6594e88b883c8a4c45344c7d43206c59"
+    },
+    {
+      "path": "app/anatomy-tissue.tsx",
+      "sourceSha256": "e2a281af72d26bcd13f0a575476cacbb7d4233a0d485971867f69f91387f323c",
+      "importedSha256": "e3f01f0f3ae70da126f1a8268585bbe18fe5e932b6c1bac65c4bb04fbbe8d2d1"
+    },
+    {
+      "path": "lib/label-depth.ts",
+      "sourceSha256": "906cc9824891e2bb39be431274990ab7895891aa7add7784fa0824e19a5c674b",
+      "importedSha256": "906cc9824891e2bb39be431274990ab7895891aa7add7784fa0824e19a5c674b"
+    },
+    {
+      "path": "lib/tissue-picking.ts",
+      "sourceSha256": "d8687a5538d6721a64928065df70b4a2b454dc478929a3ef1e67d8118c2628fd",
+      "importedSha256": "d8687a5538d6721a64928065df70b4a2b454dc478929a3ef1e67d8118c2628fd"
+    },
+    {
+      "path": "lib/inspection-geometry.ts",
+      "sourceSha256": "b1262f894eb05a4ab8a4c136d8b12bc5a179869f4e87140f96cc226b1f7b48b1",
+      "importedSha256": "b1262f894eb05a4ab8a4c136d8b12bc5a179869f4e87140f96cc226b1f7b48b1"
+    },
+    {
+      "path": "app/body-batch.tsx",
+      "sourceSha256": "05b63136f4d8af290da9d4c190256bd1e17b6339842070b04c26b63238e0ae72",
+      "importedSha256": "a401b976d00809e0d4ba147e26f1e91777c1b86daa92a05f16ed372bc64ba34d"
+    },
+    {
+      "path": "lib/body-batching.ts",
+      "sourceSha256": "00d9a45646ac3b21e4372b50bf5388ef94e617a8ab843959bb97e41f2e452291",
+      "importedSha256": "00d9a45646ac3b21e4372b50bf5388ef94e617a8ab843959bb97e41f2e452291"
+    },
+    {
+      "path": "lib/scene-labels.ts",
+      "sourceSha256": "06d0e7404acfe9785f2c091910d14bd6244103c528139b82b9696713c23c4b99",
+      "importedSha256": "06d0e7404acfe9785f2c091910d14bd6244103c528139b82b9696713c23c4b99"
+    },
+    {
+      "path": "lib/close-up-labels.ts",
+      "sourceSha256": "088b9434143cc6885d80fa0ef90de7ff437f863f1b19fc6df4faf7c6ad3e5bec",
+      "importedSha256": "088b9434143cc6885d80fa0ef90de7ff437f863f1b19fc6df4faf7c6ad3e5bec"
+    },
+    {
+      "path": "app/scene-label-layer.tsx",
+      "sourceSha256": "e5e9726bae8b040dd02be573df1994eff3ae844a846cf37394c85782ccc129e0",
+      "importedSha256": "8d4c6b4823a43df79f38e4255478aa5a4223ed220339124d97b5b82106ab41c8"
+    },
+    {
+      "path": "lib/scene-label-focus.ts",
+      "sourceSha256": "14439031e43a85e211ae917e779cda8f15d0d77a3259aae0b71cb6bed444c4b8",
+      "importedSha256": "14439031e43a85e211ae917e779cda8f15d0d77a3259aae0b71cb6bed444c4b8"
+    },
+    {
+      "path": "lib/screen-label-layout.ts",
+      "sourceSha256": "bdbc34219c70803768ececed8aa2f952ec18c9cbeae85d77cd29af458debef04",
+      "importedSha256": "bdbc34219c70803768ececed8aa2f952ec18c9cbeae85d77cd29af458debef04"
+    },
+    {
+      "path": "app/scene-label-layer.css",
+      "sourceSha256": "2c7a8f927e17f570fdcb83bb74010afc219f47d85d473e4b56c0c339f70ba53f",
+      "importedSha256": "2c7a8f927e17f570fdcb83bb74010afc219f47d85d473e4b56c0c339f70ba53f"
+    },
+    {
+      "path": "lib/anatomy-vessels.ts",
+      "sourceSha256": "3f1e5ef5ebb26101f4aa5cfeccf39a95915732047f1c84c80b14eba9c6469586",
+      "importedSha256": "3f1e5ef5ebb26101f4aa5cfeccf39a95915732047f1c84c80b14eba9c6469586"
+    },
+    {
+      "path": "lib/anatomy-load-state.ts",
+      "sourceSha256": "585b7155673ef36bc6705bfb7f694660707a12bd081fe7b2846b5755e7d8a67f",
+      "importedSha256": "585b7155673ef36bc6705bfb7f694660707a12bd081fe7b2846b5755e7d8a67f"
+    },
+    {
+      "path": "app/scene-recovery.tsx",
+      "sourceSha256": "c2b00f6a53f28b22f2815be96cd8a801ddd4d83540d0520f022c7e1923ec8616",
+      "importedSha256": "2121d6d1209ce5ccaa7d1a1cd5b928e11586ed4648c19e1832c857b6e04d89c0"
+    },
+    {
+      "path": "app/scene-recovery.css",
+      "sourceSha256": "1686d995b28f2100c9033d420057554fb07d7c5f323f98346c93971a8c647e80",
+      "importedSha256": "1686d995b28f2100c9033d420057554fb07d7c5f323f98346c93971a8c647e80"
+    },
+    {
+      "path": "lib/origin-guides.ts",
+      "sourceSha256": "b333566888bf13805da9559004fbfbfa6596095a65d7ca8772de8259ca974ff6",
+      "importedSha256": "326702aceb1faa827098b7970cec1e001fe68f2aba4365cea8240e817ec75e11"
+    },
+    {
+      "path": "app/scene-orientation.tsx",
+      "sourceSha256": "3f61ff986185e21dba29229728d891b99f2b23829b0cbdf8c1c9ddeef0275f55",
+      "importedSha256": "2fe9e87cc9032e13f4811bbd2bc0cfa0a5c6f0aabe43063ab9d9d2aa32d3b188"
+    },
+    {
+      "path": "lib/camera-orientation.ts",
+      "sourceSha256": "d64615d0a45a2331a964c9f3d1f9ddbb78534e7243940c414275a5bc67e9fa00",
+      "importedSha256": "d64615d0a45a2331a964c9f3d1f9ddbb78534e7243940c414275a5bc67e9fa00"
+    },
+    {
+      "path": "lib/body-bundle-geometry.ts",
+      "sourceSha256": "89bae02ed7b8850982c111e9415f08266770c8e17f0ce9daa4b39f6b2a431c73",
+      "importedSha256": "89bae02ed7b8850982c111e9415f08266770c8e17f0ce9daa4b39f6b2a431c73"
+    },
+    {
+      "path": "app/scene-orientation.css",
+      "sourceSha256": "49c0358f4dce010f4dc33f6e1676253bcb8a74128ec019e679d3234504a3ad23",
+      "importedSha256": "49c0358f4dce010f4dc33f6e1676253bcb8a74128ec019e679d3234504a3ad23"
+    },
+    {
       "path": "app/upper-limb-motor.css",
       "sourceSha256": "8642774fece7df3c1b7597191362bbd83efb87dc0b3a063fb457e274d809b496",
       "importedSha256": "8642774fece7df3c1b7597191362bbd83efb87dc0b3a063fb457e274d809b496"
@@ -3147,16 +3337,6 @@
       "importedSha256": "74674d0d589be5bc3f1505115c319110aade1e2804c22dcc9176be7769b6abc4"
     },
     {
-      "path": "lib/body-arrangement.ts",
-      "sourceSha256": "5946d4bd5eb1797562309c7469e73d0e6594e88b883c8a4c45344c7d43206c59",
-      "importedSha256": "5946d4bd5eb1797562309c7469e73d0e6594e88b883c8a4c45344c7d43206c59"
-    },
-    {
-      "path": "lib/explode-layout.mjs",
-      "sourceSha256": "d5790bc375114b906fdede4e430764df3fc0ff3ce71fba02ed87fec45129dff3",
-      "importedSha256": "d5790bc375114b906fdede4e430764df3fc0ff3ce71fba02ed87fec45129dff3"
-    },
-    {
       "path": "app/explode-style-select.css",
       "sourceSha256": "78b35b79e440dcd0021fbf577fecfdd4cdd6eaf83bc11e2fd9779d2f874f4b2a",
       "importedSha256": "78b35b79e440dcd0021fbf577fecfdd4cdd6eaf83bc11e2fd9779d2f874f4b2a"
@@ -3170,11 +3350,6 @@
       "path": "lib/body-catalog-input.ts",
       "sourceSha256": "c0c306fce49aa474f295ae42eb4418fcec3c59947aeb3b137a9624465a164c83",
       "importedSha256": "c0c306fce49aa474f295ae42eb4418fcec3c59947aeb3b137a9624465a164c83"
-    },
-    {
-      "path": "lib/model-delivery.ts",
-      "sourceSha256": "465d37a26064d03c7f559c4fe1524820349f46549858374af6a3bd9dd5807ed1",
-      "importedSha256": "465d37a26064d03c7f559c4fe1524820349f46549858374af6a3bd9dd5807ed1"
     },
     {
       "path": "app/component-imaging-notes.tsx",
@@ -3302,11 +3477,6 @@
       "importedSha256": "672b08f4d060497d4c83341d8ecdf03b4e7f3a997ee61cc2c4dfff82c20d3f70"
     },
     {
-      "path": "lib/anatomy-vessels.ts",
-      "sourceSha256": "3f1e5ef5ebb26101f4aa5cfeccf39a95915732047f1c84c80b14eba9c6469586",
-      "importedSha256": "3f1e5ef5ebb26101f4aa5cfeccf39a95915732047f1c84c80b14eba9c6469586"
-    },
-    {
       "path": "app/anatomy-control-rail.tsx",
       "sourceSha256": "313212905758d13825c51738df4b7fa374dce6822414c97b701dff98ecd232d9",
       "importedSha256": "816d9189615b32587aa47b0cee74e039292e9f5439fae8a3266cca24f0105530"
@@ -3340,11 +3510,6 @@
       "path": "lib/hand-framing.ts",
       "sourceSha256": "918695d2987684a77a65c749ee199e8c4331b72f514a2d8f7050103217696bad",
       "importedSha256": "918695d2987684a77a65c749ee199e8c4331b72f514a2d8f7050103217696bad"
-    },
-    {
-      "path": "lib/selection-visibility.ts",
-      "sourceSha256": "d08344cef574acc33d4527f0161a99b10fd42364c53fa8cdc2877a055bcec8f6",
-      "importedSha256": "d08344cef574acc33d4527f0161a99b10fd42364c53fa8cdc2877a055bcec8f6"
     },
     {
       "path": "lib/regional-framing.ts",
@@ -3782,159 +3947,9 @@
       "importedSha256": "c752b0c38bfda77d5b64a052f7edfe007c739b4cc77186e7a2e8b9ff2e975d0d"
     },
     {
-      "path": "lib/renderer-health.ts",
-      "sourceSha256": "59097c95fc681c20d4c448b9ed4df96a095def7be0424f9045edb9587c51164f",
-      "importedSha256": "59097c95fc681c20d4c448b9ed4df96a095def7be0424f9045edb9587c51164f"
-    },
-    {
-      "path": "lib/anatomy-load-state.ts",
-      "sourceSha256": "585b7155673ef36bc6705bfb7f694660707a12bd081fe7b2846b5755e7d8a67f",
-      "importedSha256": "585b7155673ef36bc6705bfb7f694660707a12bd081fe7b2846b5755e7d8a67f"
-    },
-    {
       "path": "lib/body-system-presets.ts",
       "sourceSha256": "67b34405e32541d49c85ad931cc818d5a1d9ab923b317f91e83d9a0fb6fbe285",
       "importedSha256": "67b34405e32541d49c85ad931cc818d5a1d9ab923b317f91e83d9a0fb6fbe285"
-    },
-    {
-      "path": "app/body-scene.tsx",
-      "sourceSha256": "7117993fb76445f522d303c664fb5405ac07344f5e255906e2ee47640dc4acbc",
-      "importedSha256": "9622529ed716992ddb1348d060b516afbb4821c8fb720f59eb30dedf7de19e0a"
-    },
-    {
-      "path": "app/anatomy-canvas.tsx",
-      "sourceSha256": "667fc0843d6057dd50766eea3ba6ae7aac72332913332aae233f2ee87bc91547",
-      "importedSha256": "3e72ba3f8248e0168e0279a42c2ef56b3ecebee496fd87570a7033a17bb77cb0"
-    },
-    {
-      "path": "lib/anatomy-root-session.ts",
-      "sourceSha256": "1f5a99620d56c1e33708afbcf8ad608c124aed23e2fb4f21adbb4da27837fac2",
-      "importedSha256": "1f5a99620d56c1e33708afbcf8ad608c124aed23e2fb4f21adbb4da27837fac2"
-    },
-    {
-      "path": "app/camera-keyboard.css",
-      "sourceSha256": "98d5bb8c7fe828c06e13f065fa7628aeeeb3638bedaea07a963ee3712ba4e7de",
-      "importedSha256": "98d5bb8c7fe828c06e13f065fa7628aeeeb3638bedaea07a963ee3712ba4e7de"
-    },
-    {
-      "path": "app/fitted-camera.tsx",
-      "sourceSha256": "ff59cb133b53a6ea728dc0aa902a1530559e375a834ec5eb7d0d7b5509a73e5c",
-      "importedSha256": "1552c8b595088217b917e51ffb5a1f3eaa20ba132a048179f452425ca4d0c732"
-    },
-    {
-      "path": "lib/study-camera.ts",
-      "sourceSha256": "83743439ea9ff1d9560cc470aa1f2a8f4552c410fe94edc74ab8411f149be8d1",
-      "importedSha256": "83743439ea9ff1d9560cc470aa1f2a8f4552c410fe94edc74ab8411f149be8d1"
-    },
-    {
-      "path": "lib/camera-zoom.ts",
-      "sourceSha256": "06263f767e08d8b374005f198c72227c3550767628d6096c24fd698331ea432d",
-      "importedSha256": "06263f767e08d8b374005f198c72227c3550767628d6096c24fd698331ea432d"
-    },
-    {
-      "path": "lib/camera-keyboard.ts",
-      "sourceSha256": "9a0a095306c6687ca7fd568570c7a66363566ac3a70f2916bc1e8f74aa405220",
-      "importedSha256": "9a0a095306c6687ca7fd568570c7a66363566ac3a70f2916bc1e8f74aa405220"
-    },
-    {
-      "path": "lib/tour-camera.ts",
-      "sourceSha256": "6e1cb68621d86be34fbaa3fbc57497ec167f82a6dd0824605a37708ecd710f46",
-      "importedSha256": "6e1cb68621d86be34fbaa3fbc57497ec167f82a6dd0824605a37708ecd710f46"
-    },
-    {
-      "path": "app/anatomy-tissue.tsx",
-      "sourceSha256": "e2a281af72d26bcd13f0a575476cacbb7d4233a0d485971867f69f91387f323c",
-      "importedSha256": "e3f01f0f3ae70da126f1a8268585bbe18fe5e932b6c1bac65c4bb04fbbe8d2d1"
-    },
-    {
-      "path": "lib/label-depth.ts",
-      "sourceSha256": "906cc9824891e2bb39be431274990ab7895891aa7add7784fa0824e19a5c674b",
-      "importedSha256": "906cc9824891e2bb39be431274990ab7895891aa7add7784fa0824e19a5c674b"
-    },
-    {
-      "path": "lib/tissue-picking.ts",
-      "sourceSha256": "d8687a5538d6721a64928065df70b4a2b454dc478929a3ef1e67d8118c2628fd",
-      "importedSha256": "d8687a5538d6721a64928065df70b4a2b454dc478929a3ef1e67d8118c2628fd"
-    },
-    {
-      "path": "lib/inspection-geometry.ts",
-      "sourceSha256": "b1262f894eb05a4ab8a4c136d8b12bc5a179869f4e87140f96cc226b1f7b48b1",
-      "importedSha256": "b1262f894eb05a4ab8a4c136d8b12bc5a179869f4e87140f96cc226b1f7b48b1"
-    },
-    {
-      "path": "app/body-batch.tsx",
-      "sourceSha256": "05b63136f4d8af290da9d4c190256bd1e17b6339842070b04c26b63238e0ae72",
-      "importedSha256": "a401b976d00809e0d4ba147e26f1e91777c1b86daa92a05f16ed372bc64ba34d"
-    },
-    {
-      "path": "lib/body-batching.ts",
-      "sourceSha256": "00d9a45646ac3b21e4372b50bf5388ef94e617a8ab843959bb97e41f2e452291",
-      "importedSha256": "00d9a45646ac3b21e4372b50bf5388ef94e617a8ab843959bb97e41f2e452291"
-    },
-    {
-      "path": "lib/scene-labels.ts",
-      "sourceSha256": "06d0e7404acfe9785f2c091910d14bd6244103c528139b82b9696713c23c4b99",
-      "importedSha256": "06d0e7404acfe9785f2c091910d14bd6244103c528139b82b9696713c23c4b99"
-    },
-    {
-      "path": "lib/close-up-labels.ts",
-      "sourceSha256": "088b9434143cc6885d80fa0ef90de7ff437f863f1b19fc6df4faf7c6ad3e5bec",
-      "importedSha256": "088b9434143cc6885d80fa0ef90de7ff437f863f1b19fc6df4faf7c6ad3e5bec"
-    },
-    {
-      "path": "app/scene-label-layer.tsx",
-      "sourceSha256": "e5e9726bae8b040dd02be573df1994eff3ae844a846cf37394c85782ccc129e0",
-      "importedSha256": "8d4c6b4823a43df79f38e4255478aa5a4223ed220339124d97b5b82106ab41c8"
-    },
-    {
-      "path": "lib/scene-label-focus.ts",
-      "sourceSha256": "14439031e43a85e211ae917e779cda8f15d0d77a3259aae0b71cb6bed444c4b8",
-      "importedSha256": "14439031e43a85e211ae917e779cda8f15d0d77a3259aae0b71cb6bed444c4b8"
-    },
-    {
-      "path": "lib/screen-label-layout.ts",
-      "sourceSha256": "bdbc34219c70803768ececed8aa2f952ec18c9cbeae85d77cd29af458debef04",
-      "importedSha256": "bdbc34219c70803768ececed8aa2f952ec18c9cbeae85d77cd29af458debef04"
-    },
-    {
-      "path": "app/scene-label-layer.css",
-      "sourceSha256": "2c7a8f927e17f570fdcb83bb74010afc219f47d85d473e4b56c0c339f70ba53f",
-      "importedSha256": "2c7a8f927e17f570fdcb83bb74010afc219f47d85d473e4b56c0c339f70ba53f"
-    },
-    {
-      "path": "app/scene-recovery.tsx",
-      "sourceSha256": "c2b00f6a53f28b22f2815be96cd8a801ddd4d83540d0520f022c7e1923ec8616",
-      "importedSha256": "2121d6d1209ce5ccaa7d1a1cd5b928e11586ed4648c19e1832c857b6e04d89c0"
-    },
-    {
-      "path": "app/scene-recovery.css",
-      "sourceSha256": "1686d995b28f2100c9033d420057554fb07d7c5f323f98346c93971a8c647e80",
-      "importedSha256": "1686d995b28f2100c9033d420057554fb07d7c5f323f98346c93971a8c647e80"
-    },
-    {
-      "path": "lib/origin-guides.ts",
-      "sourceSha256": "b333566888bf13805da9559004fbfbfa6596095a65d7ca8772de8259ca974ff6",
-      "importedSha256": "326702aceb1faa827098b7970cec1e001fe68f2aba4365cea8240e817ec75e11"
-    },
-    {
-      "path": "app/scene-orientation.tsx",
-      "sourceSha256": "3f61ff986185e21dba29229728d891b99f2b23829b0cbdf8c1c9ddeef0275f55",
-      "importedSha256": "2fe9e87cc9032e13f4811bbd2bc0cfa0a5c6f0aabe43063ab9d9d2aa32d3b188"
-    },
-    {
-      "path": "lib/camera-orientation.ts",
-      "sourceSha256": "d64615d0a45a2331a964c9f3d1f9ddbb78534e7243940c414275a5bc67e9fa00",
-      "importedSha256": "d64615d0a45a2331a964c9f3d1f9ddbb78534e7243940c414275a5bc67e9fa00"
-    },
-    {
-      "path": "lib/body-bundle-geometry.ts",
-      "sourceSha256": "89bae02ed7b8850982c111e9415f08266770c8e17f0ce9daa4b39f6b2a431c73",
-      "importedSha256": "89bae02ed7b8850982c111e9415f08266770c8e17f0ce9daa4b39f6b2a431c73"
-    },
-    {
-      "path": "app/scene-orientation.css",
-      "sourceSha256": "49c0358f4dce010f4dc33f6e1676253bcb8a74128ec019e679d3234504a3ad23",
-      "importedSha256": "49c0358f4dce010f4dc33f6e1676253bcb8a74128ec019e679d3234504a3ad23"
     },
     {
       "path": "app/eye-layers.tsx",
@@ -4208,8 +4223,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "ee9b4cb84773bde6e355f4609bacd8e821f29d8bb95fbbb42608faa06f5a8a65",
-      "importedSha256": "ee9b4cb84773bde6e355f4609bacd8e821f29d8bb95fbbb42608faa06f5a8a65"
+      "sourceSha256": "f1537038314a5ce02418504eb826a3fad444cd27ceb6b00090aef14176d90ec1",
+      "importedSha256": "f1537038314a5ce02418504eb826a3fad444cd27ceb6b00090aef14176d90ec1"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -4243,8 +4258,8 @@
     },
     {
       "path": "lib/body-review-context.ts",
-      "sourceSha256": "a76017c93b573531dbb1afdb3c592eef5f227a61d18d38ddca06f59cc8993f7c",
-      "importedSha256": "a76017c93b573531dbb1afdb3c592eef5f227a61d18d38ddca06f59cc8993f7c"
+      "sourceSha256": "c675ae2322ef4e75172e34415a9c3e049325bfc3e166b0a3bdf3be71e2d0c3d3",
+      "importedSha256": "c675ae2322ef4e75172e34415a9c3e049325bfc3e166b0a3bdf3be71e2d0c3d3"
     },
     {
       "path": "lib/body-review-store.ts",
@@ -4308,5 +4323,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "b4f190885c50e58c27bff6a91ca0adc2718462062e9d206bb20117b8db0edf11"
+  "websiteIntegrationSha256": "819b033288ab55ef634b21bf4d5749de823384ae5670820203b667f977bd8d1a"
 }

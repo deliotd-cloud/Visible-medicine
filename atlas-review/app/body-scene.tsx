@@ -51,6 +51,9 @@ import { bodyBundleGeometries } from '@/atlas-review/lib/body-bundle-geometry';
 import './scene-orientation.css';
 
 type Props = {
+  tourLocked?: boolean;
+  transitionMs?: number;
+  transitionPaused?: boolean;
   /** Optional same-origin website delivery prefix; canonical anatomy remains unchanged. */
   assetBase?: string;
   catalog: BodyCatalog;
@@ -587,7 +590,9 @@ export function BodyScene(props: Props) {
             zoomStep={props.zoomStep}
             fitOccupancy={props.fitOccupancy ?? [0.7, 0.9]}
             reset={props.reset}
-            locked={props.plate && layout !== 'tray'}
+            locked={props.tourLocked || (props.plate && layout !== 'tray')}
+            transitionMs={props.transitionMs}
+            transitionPaused={props.transitionPaused}
             planar={layout === 'tray'}
             recenterKey={focusId ?? props.presetKey ?? ''}
             cameraCapture={props.cameraCapture}

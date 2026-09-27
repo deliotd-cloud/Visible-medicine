@@ -23,6 +23,8 @@ export async function bodyReviewContext(
   const material = await bodyReviewMaterial(id);
   if (!material) return null;
   const { source, fingerprints, topics } = material;
+  const checklists = structuredClone(bodyChecklists);
+  if (material.guidedTours.length) checklists.teaching.push({id:'guided-tour',label:'Review the complete guided tour: all captions, source surfaces, references, selected targets, fading and camera transitions. Record corrections in the intended learner scope.'});
   const scope = {
     catalogScope: bodyDecisionScope,
     structureId: id,
@@ -53,7 +55,7 @@ export async function bodyReviewContext(
     sourceHash: fingerprints.source,
     teachingHash: fingerprints.teaching,
     rendererHash: renderer.sha256,
-    checklists: structuredClone(bodyChecklists),
+    checklists,
     blockers,
     teachingTabs,
     revisions: {
@@ -67,7 +69,7 @@ export async function bodyReviewContext(
         ...scope,
         source: fingerprints.source,
         teaching: fingerprints.teaching,
-        checks: bodyChecklists.teaching,
+        checks: checklists.teaching,
       }),
       imaging: null,
     },

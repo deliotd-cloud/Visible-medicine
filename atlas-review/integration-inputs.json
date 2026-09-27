@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "6b1539f9de931cfcae0492278a04d90955974844",
-  "sha256": "b4f190885c50e58c27bff6a91ca0adc2718462062e9d206bb20117b8db0edf11",
+  "sourceCommit": "a0b0d1b4a3d57c07c5d1f6593d7151bf3fc24f74",
+  "sha256": "819b033288ab55ef634b21bf4d5749de823384ae5670820203b667f977bd8d1a",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,11 +124,11 @@
     },
     {
       "path": "atlas-review/app/body-explorer.tsx",
-      "sha256": "703b52905567f89c748cced2462f0bcf9796793d5626f3615c51d05544d019ff"
+      "sha256": "e43f6c24af416230005710acd36b1778c830ca61dcfe2d6eeab86252eec70478"
     },
     {
       "path": "atlas-review/app/body-scene.tsx",
-      "sha256": "9622529ed716992ddb1348d060b516afbb4821c8fb720f59eb30dedf7de19e0a"
+      "sha256": "f6eb7a625abf72c0570f761ab6c8ed7d221e3233fe185b82e9abb4fe9d80accb"
     },
     {
       "path": "atlas-review/app/body-selection-notice.tsx",
@@ -279,6 +279,14 @@
       "sha256": "007ec5b75713d59cb83f2923b87ab1dc4c3394d1bd15cddf589d6962bcec2c6e"
     },
     {
+      "path": "atlas-review/app/regional-guided-learning.css",
+      "sha256": "4a5397085d56ea33aa86388b5b053384f8b3b3802021ce2721a94e3dca555400"
+    },
+    {
+      "path": "atlas-review/app/regional-guided-learning.tsx",
+      "sha256": "1bcbf90359471b27322795ec58963806225f0695416205030356dbb9c5cd9aeb"
+    },
+    {
       "path": "atlas-review/app/related-study.tsx",
       "sha256": "f9f30a264c8d1c2a38da3c67b0866fc901adb25e2f5c978309adf3f9b776e145"
     },
@@ -288,7 +296,7 @@
     },
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
-      "sha256": "d77a8aa759ed074d86e2c423974299df2d5bb4c3bf7c5b560f395d33d4e5b7b9"
+      "sha256": "8656bfa552e229c62c359c476d1d20589998ce6ab61acd69453082ed19ceaf00"
     },
     {
       "path": "atlas-review/app/review/body/body-review.css",
@@ -300,7 +308,7 @@
     },
     {
       "path": "atlas-review/app/review/body/review-dashboard.tsx",
-      "sha256": "1061132ef53ffe03327b61aee99d898fa4592fb1a68ac0cf50446e5499b00d89"
+      "sha256": "fc126e28dc760aab15a647a9ff27825dbfcd0d6b5deda69c0f6e859dc74340b7"
     },
     {
       "path": "atlas-review/app/review/nested/nested-review.css",
@@ -424,7 +432,7 @@
     },
     {
       "path": "atlas-review/app/structure-quick-check.tsx",
-      "sha256": "4bfa6567af94f808bc7ed43a9693eae6771da7e8ada1e10183ec4be3ff64c5de"
+      "sha256": "7944394d093532c548b062e68be601d0fe6d4ebe7b4c5267275ade0436548632"
     },
     {
       "path": "atlas-review/app/study-library.tsx",
@@ -1916,7 +1924,7 @@
     },
     {
       "path": "atlas-review/lib/body-review-context.ts",
-      "sha256": "a76017c93b573531dbb1afdb3c592eef5f227a61d18d38ddca06f59cc8993f7c"
+      "sha256": "c675ae2322ef4e75172e34415a9c3e049325bfc3e166b0a3bdf3be71e2d0c3d3"
     },
     {
       "path": "atlas-review/lib/body-review-decisions.ts",
@@ -1924,11 +1932,11 @@
     },
     {
       "path": "atlas-review/lib/body-review-material.ts",
-      "sha256": "750d9d849e88fecdd802f394de0d3eb0f820ce8b9cc41175f535eb1b05738f70"
+      "sha256": "4f519cc25801bfc816861cc28e156bf7a0bf4cfb1a22dec7ec61efcc6668c6b5"
     },
     {
       "path": "atlas-review/lib/body-review-response.ts",
-      "sha256": "5d3198da80411e21a136b1eaa6c422f947d6be535f5cd6a1b473162abc29f2c7"
+      "sha256": "654e095ce69eaecdc42ee5e36346abc1b296384c1f2929528ca6b6f941d2d12a"
     },
     {
       "path": "atlas-review/lib/body-review-search.ts",
@@ -2859,6 +2867,10 @@
       "sha256": "4c5b7715e7a175c16e9694f4aa0e7925d2c753fd5e167c4e2c567df3017fa4b9"
     },
     {
+      "path": "atlas-review/lib/regional-tours.ts",
+      "sha256": "41fdb9f9f497cfa87c994ea241117a7fe0ccd84d97149dd90aa776a54bb9c1d2"
+    },
+    {
       "path": "atlas-review/lib/regional-vascular-clinical.ts",
       "sha256": "e5b28caaf9fff1bdca15a72ddc429aef010cc498b9ecab4d64db3c10070c3b88"
     },
@@ -3252,7 +3264,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "ee9b4cb84773bde6e355f4609bacd8e821f29d8bb95fbbb42608faa06f5a8a65"
+      "sha256": "f1537038314a5ce02418504eb826a3fad444cd27ceb6b00090aef14176d90ec1"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3496,7 +3508,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "81be8a8c9b80720580211ac98dc5b2c35cc82c64accaa303a0790d73438e4e16"
+      "sha256": "6d8e15e18d9089c3a2d5d24c1a78475c3f51b01a9f5e7fc13103d7c61d35c975"
     }
   ]
 }

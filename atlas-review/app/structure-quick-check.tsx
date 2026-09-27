@@ -25,6 +25,7 @@ function QuickCheckAttempt({ question, choices, correctAnswer, explanation }: St
     && choices.filter(choice => choice === correctAnswer).length === 1
     && choices.every(choice => choice.trim().length > 0)
     && new Set(choices.map(choice => choice.trim())).size === choices.length;
+  const isCorrect = hasKey && selected !== null && choices[selected] === correctAnswer;
 
   return (
     <section className="structure-quick-check" aria-label="Structure check">
@@ -49,7 +50,7 @@ function QuickCheckAttempt({ question, choices, correctAnswer, explanation }: St
       }}>Check answer</button>}
       <div ref={feedback} className="structure-quick-check-feedback" tabIndex={-1} aria-live="polite" aria-atomic="true">
         {checked && hasKey && <>
-          <p>{choices[selected ?? -1] === correctAnswer ? "Correct." : "Incorrect."} Correct answer: {correctAnswer}</p>
+          <p>{isCorrect ? "Correct." : "Incorrect."} Correct answer: {correctAnswer}</p>
           {explanation && <p>{explanation}</p>}
         </>}
       </div>
@@ -57,7 +58,7 @@ function QuickCheckAttempt({ question, choices, correctAnswer, explanation }: St
         setSelected(null);
         setChecked(false);
         firstChoice.current?.focus({ preventScroll: true });
-      }}>Try again</button>}
+      }}>{isCorrect ? "Practise again" : "Try again"}</button>}
     </section>
   );
 }
