@@ -12,6 +12,8 @@ import { historicalRecipeProfiles } from './recipe-history.mjs';
 import {
   modelFirstCallbackMigrations,
   modelFirstHandlerMigrations,
+  modelFirstPracticeCallbackMigration,
+  modelFirstLateCallbackMigrations,
 } from './model-first-migrations.mjs';
 
 const hash = (b) => createHash('sha256').update(b).digest('hex');
@@ -107,6 +109,35 @@ for (const [name, migration] of Object.entries(modelFirstHandlerMigrations)) {
   check(/^[a-f0-9]{64}$/.test(migration.sha256), `${name} exact SHA-256 pin`);
   check(migration.commits.length > 0, `${name} migration provenance`);
   check(migration.evidence.length > 0, `${name} executable evidence`);
+}
+// Replay the historical omissions as complete binding deltas, so their pins
+// cannot admit an unrelated handler or callback change in those revisions.
+for (const [commit, names, callbackMigration] of [
+  ['6cbeafbf85430e02e569a3bdd3a5d7e16b0a1467', ['captureView'], null],
+  [modelFirstPracticeCallbackMigration.commit,
+    ['startExam', 'nextQuestion', 'restorePracticeView', 'exitPractice'],
+    modelFirstPracticeCallbackMigration],
+  ...modelFirstLateCallbackMigrations.slice(1).map(migration =>
+    [migration.commit, [], migration]),
+]) {
+  const before = bindings(execFileSync('git',
+    ['show', `${commit}^:app/body-explorer.tsx`], { maxBuffer: 2e6 }).toString());
+  const after = bindings(execFileSync('git',
+    ['show', `${commit}:app/body-explorer.tsx`], { maxBuffer: 2e6 }).toString());
+  const callbacks = [...before.callbacks];
+  if (callbackMigration) {
+    for (const retired of callbackMigration.remove) {
+      same(callbacks.filter(value => value === retired).length, 1,
+        'Exactly one historical callback is retired');
+      callbacks.splice(callbacks.indexOf(retired), 1);
+    }
+    callbacks.push(...callbackMigration.add);
+  }
+  same(after, {
+    functions: { ...before.functions, ...Object.fromEntries(names.map(name =>
+      [name, modelFirstHandlerMigrations[name].sha256])) },
+    callbacks: callbacks.sort(compare),
+  }, `${commit} changes only the explicitly pinned historical bindings`);
 }
 // Search confirmation gained an explicit accepted/rejected result in e36cd877.
 // Replay both exact Git revisions; retain the former hash as evidence instead
@@ -412,6 +443,15 @@ same(migratedCallbacks.filter(value => value === oldRemoval).length, 1,
   'Exactly one selected-structure removal is migrated');
 migratedCallbacks.splice(migratedCallbacks.indexOf(oldRemoval), 1,
   'onClick/ba64cb8c59b952c356a59b0f65f692c4f3f2bcdbb2d1ecfb2f7a0a2048844b8c');
+for (const migration of modelFirstLateCallbackMigrations) {
+  check(migration.evidence.length > 0, 'Late callback executable evidence');
+  for (const retired of migration.remove) {
+    same(migratedCallbacks.filter(value => value === retired).length, 1,
+      'Exactly one late callback is migrated');
+    migratedCallbacks.splice(migratedCallbacks.indexOf(retired), 1);
+  }
+  migratedCallbacks.push(...migration.add);
+}
 same(
   bindings(source).callbacks,
   migratedCallbacks.sort(compare),
@@ -467,13 +507,18 @@ function findExplodeCallback(node) {
 }
 findExplodeCallback(explorerAst);
 same(explodeCallbacks.length, 1);
+for (const exam of [false, true])
+for (const available of [[], [{ id: 'visible' }]])
 for (const value of [0, 50, 100, [0], [50], [100]]) {
   const emitted = [];
   runInNewContext(`(${explodeCallbacks[0]})(value)`, {
     value,
+    exam,
+    available,
     setExplode: (next) => emitted.push(next),
   });
-  same(emitted, [Array.isArray(value) ? value[0] : value]);
+  same(emitted, exam || !available.length ? [] :
+    [Array.isArray(value) ? value[0] : value]);
 }
 const raw = await fs.readFile(
     'public/models/bodyparts3d/full-body/catalog.json',
@@ -1020,15 +1065,15 @@ const result = {
     ([name, fingerprint]) => bindings(source).functions[name] === fingerprint,
   ).length,
   pinnedHandlerMigrations: Object.keys(modelFirstHandlerMigrations).length + 2,
-  pinnedCallbackMigrationGroups: modelFirstCallbackMigrations.length + 3,
+  pinnedCallbackMigrationGroups: modelFirstCallbackMigrations.length + 3 + modelFirstLateCallbackMigrations.length,
   pinnedCallbackRemovals: modelFirstCallbackMigrations.reduce(
     (count, migration) => count + migration.remove.length,
     0,
-  ) + 1,
+  ) + 1 + modelFirstLateCallbackMigrations.reduce((count, migration) => count + migration.remove.length, 0),
   pinnedCallbackAdditions: modelFirstCallbackMigrations.reduce(
     (count, migration) => count + migration.add.length,
     0,
-  ) + 4,
+  ) + 4 + modelFirstLateCallbackMigrations.reduce((count, migration) => count + migration.add.length, 0),
   injectedWorkspaceSessionModeFixture: true,
   explicitDissectionHistoryHandlerMigration: 1,
   addedDissectionRedoHandler: 1,
@@ -1048,7 +1093,7 @@ const result = {
   addedRelationshipCallbacks: 6,
   addedComponentImagingCallback: 1,
   explicitSliderValueMigration: 1,
-  actualSliderValueCases: 6,
+  actualSliderValueCases: 24,
   preservedControlCallbacks: baseline.callbacks.length - 8,
   addedEyeLayerCallbacks: 2,
   addedVentricularCallbacks: 2,

@@ -1,5 +1,13 @@
 # Current atlas status
 
+27 September restoration follow-through: the historical model-first validator
+now replays exact saved-view/practice/control migrations without rewriting its
+original baseline. All 3,844 checks and 105 markup cases pass; four deliberate
+handler/callback drift mutations are rejected. The tested restoration source
+`eecf73c` is imported into the website's local Clinical Review viewer; learner
+delivery and public deployment remain separate. No geometry, teaching or clinical
+decisions change in this follow-through.
+
 27 September dissection restoration: Restore one/matching now exits isolation
 fading and selected-only framing, then refits without changing source geometry,
 teaching, layout, separation or cutaway. The foot-viewer failure was reproduced;

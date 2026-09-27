@@ -2,6 +2,31 @@
 // A handler is admitted only by name and canonical TypeScript SHA-256. The
 // provenance/evidence fields make each pin auditable; they do not relax checks.
 export const modelFirstHandlerMigrations = Object.freeze({
+  captureView: Object.freeze({
+    sha256: '4b76e9631ae8970728eab86382896ab221be2e6bfb184bbc8a30f2918c87e738',
+    commits: Object.freeze(['6cbeafbf85430e02e569a3bdd3a5d7e16b0a1467']),
+    evidence: Object.freeze(['node scripts/test-study-view-laterality.mjs']),
+  }),
+  startExam: Object.freeze({
+    sha256: '940df890fe3bc6ac2a4efb305915927f1f79a205ff14f88e876f226c87e31550',
+    commits: Object.freeze(['5e3667fe3c9f012cbc21e679ba2e834f527dcc3f']),
+    evidence: Object.freeze(['node scripts/test-practice-return-view.mjs']),
+  }),
+  nextQuestion: Object.freeze({
+    sha256: 'f0b100a89306b2ce3414f9a25a383e7b1d33b6e8707894fe3b1f7370da897531',
+    commits: Object.freeze(['5e3667fe3c9f012cbc21e679ba2e834f527dcc3f']),
+    evidence: Object.freeze(['node scripts/test-practice-return-view.mjs']),
+  }),
+  restorePracticeView: Object.freeze({
+    sha256: '19865fc7e925f86c842af6956daa68d4831b55791fb65f809162d9e9867c4a45',
+    commits: Object.freeze(['5e3667fe3c9f012cbc21e679ba2e834f527dcc3f']),
+    evidence: Object.freeze(['node scripts/test-practice-return-view.mjs']),
+  }),
+  exitPractice: Object.freeze({
+    sha256: 'fdd5bc7ebb9101591f5a35fd72d175861030482090ed9dcc5aff03d55de38714',
+    commits: Object.freeze(['5e3667fe3c9f012cbc21e679ba2e834f527dcc3f']),
+    evidence: Object.freeze(['node scripts/test-practice-return-view.mjs']),
+  }),
   restoreStructure: Object.freeze({
     sha256: '46840cddce5f8d9c2c22b50f6d41062364b0c2d5d1069a453118819b492e5873',
     commits: Object.freeze(['b0cf1d5855ecd2f44c30c3c3791caf12ac970b98']),
@@ -73,6 +98,37 @@ export const modelFirstHandlerMigrations = Object.freeze({
     ]),
   }),
 });
+
+// Applied after the pre-compact and contextual-dissection snapshots are checked.
+export const modelFirstPracticeCallbackMigration = Object.freeze({
+  commit: '5e3667fe3c9f012cbc21e679ba2e834f527dcc3f',
+  reason: 'Practice exit restores the captured regional presentation before exiting.',
+  remove: Object.freeze([
+    'onClick/722fbbca8a2f3cf1da1ec8bfdd3c07d835fdc540f01b82c999e9f783d45d22c1',
+  ]),
+  add: Object.freeze([
+    'onClick/01b63583ac8542a679e3de8da8fe2774fd815628dbae121c45c1e904b2961ee1',
+  ]),
+  evidence: modelFirstHandlerMigrations.exitPractice.evidence,
+});
+
+export const modelFirstLateCallbackMigrations = Object.freeze([
+  modelFirstPracticeCallbackMigration,
+  Object.freeze({
+    commit: 'ffe718b7e75778c3c9bd27b9094b0ff9743bb267',
+    reason: 'Separation ignores exam and empty-view requests.',
+    remove: Object.freeze(['onValueChange/47c85b1c47a0ca99aa3cbfb9b61caa74d53dcf5c945ab3c7a766cac596813974']),
+    add: Object.freeze(['onValueChange/0188fa3cebbf579abdfd26894cccaf1bc0b3d1c54af905b8abcc1d0e91ee4846']),
+    evidence: Object.freeze(['node scripts/test-viewer-control-state.mjs']),
+  }),
+  Object.freeze({
+    commit: '03e05321688e893463e1a45547373b304cc9896e',
+    reason: 'Practice results open study details with fresh framing and focus.',
+    remove: Object.freeze(['onClick/c56fd050c8413a03c543f86e5ec4ae82c230bce93a954ef0d7afbc4e051991db']),
+    add: Object.freeze(['onSelect/7ca53e50b5d408f8322e227a61dbf1de022948a87e4f8846ff05c96f99decac4']),
+    evidence: Object.freeze(['node scripts/test-practice-result-navigation.mjs']),
+  }),
+]);
 
 export const modelFirstCallbackMigrations = Object.freeze([
   Object.freeze({
