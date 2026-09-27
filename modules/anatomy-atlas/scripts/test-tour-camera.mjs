@@ -28,6 +28,23 @@ function render(changes={}){Object.assign(props,changes);index=0;effectIndex=0;m
 const near=(a,b)=>assert(Math.abs(a-b)<1e-7,`${a} != ${b}`);
 const from={position:new Vector3(0,0,10),target:new Vector3(),up:new Vector3(0,1,0)};
 const to={position:new Vector3(0,0,-10),target:new Vector3(),up:new Vector3(0,1,0)};
+// Dorsal-to-plantar foot sweeps reverse both radial direction and screen-up.
+// Independently interpolating these vectors can make them parallel mid-flight.
+const top={position:new Vector3(0,10,0),target:new Vector3(),up:new Vector3(0,0,-1)};
+const bottom={position:new Vector3(0,-10,0),target:new Vector3(),up:new Vector3(0,0,1)};
+for(const [a,b] of [[top,bottom],[bottom,top]]) {
+  let previousQuaternion;
+  for(let i=0;i<=100;i++) {
+    const pose=mod.exports.interpolateTourCamera(a,b,i/100);
+    const radial=pose.position.clone().sub(pose.target).normalize();
+    assert(radial.clone().cross(pose.up.clone().normalize()).length()>.999999,'Polar camera up must stay perpendicular to its viewing axis');
+    near(pose.position.distanceTo(pose.target),10);
+    const probe=new PerspectiveCamera();probe.position.copy(pose.position);probe.up.copy(pose.up);probe.lookAt(pose.target);probe.updateMatrixWorld();
+    assert(probe.quaternion.toArray().every(Number.isFinite));
+    if(previousQuaternion)assert(Math.abs(probe.quaternion.dot(previousQuaternion))>.99,'No polar orientation flip');
+    previousQuaternion=probe.quaternion.clone();
+  }
+}
 for(let i=0;i<=100;i++){
   const pose=mod.exports.interpolateTourCamera(from,to,i/100);
   near(pose.position.distanceTo(pose.target),10);
@@ -69,4 +86,15 @@ render({viewKey:'lateral-resize',direction:[-1,0,0],transitionMs:1000});frame(nu
 size.width=500;camera.aspect=500/600;render();
 for(let i=0;i<25;i++)frame(null,.05);
 near(camera.position.z,0);assert(camera.position.x<0,'Resize mid-transition still reaches selected view');
-console.log(JSON.stringify({passed:true,antipodalOrbitSamples:101,actualCameraPauseResume:true,exactRestore:true,reducedMotionImmediate:true}));
+render({viewKey:'superior',direction:[0,1,0],up:[0,0,-1],transitionMs:0,locked:true});
+const polarStart=camera.position.clone();
+render({viewKey:'inferior',direction:[0,-1,0],up:[0,0,1],transitionMs:1000});
+for(let i=0;i<10;i++)frame(null,.05);
+assert(camera.position.distanceTo(polarStart)>1);
+assert(camera.position.clone().sub(controls.target).normalize().cross(camera.up).length()>.999999);
+const polarPaused=camera.position.clone(),polarUp=camera.up.clone();
+render({transitionPaused:true});frame(null,.5);
+near(camera.position.distanceTo(polarPaused),0);near(camera.up.distanceTo(polarUp),0);
+render({transitionPaused:false});for(let i=0;i<20;i++)frame(null,.05);
+assert(camera.position.y<controls.target.y);near(camera.up.distanceTo(new Vector3(0,0,1)),0);
+console.log(JSON.stringify({passed:true,antipodalOrbitSamples:101,polarFrameSamples:202,actualCameraPauseResume:true,actualPolarPauseResume:true,exactRestore:true,reducedMotionImmediate:true}));

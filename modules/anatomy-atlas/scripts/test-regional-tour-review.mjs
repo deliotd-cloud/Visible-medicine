@@ -37,21 +37,23 @@ const limbCases=[
  {region:'thigh',names:['right-rectus-femoris','right-vastus-lateralis','right-adductor-longus','long-head-of-right-biceps-femoris','right-semitendinosus'],views:['anterior','right','left','posterior','posterior'],bones:['right-femur'],bundles:['thigh-muscles','thigh-muscles-dissection','thigh-skeleton']},
  {region:'leg',names:['right-tibialis-anterior','right-extensor-digitorum-longus','right-fibularis-longus','right-soleus','right-tibialis-posterior'],views:['anterior','anterior','right','posterior','posterior'],bones:['right-tibia','right-fibula'],bundles:['leg-muscles','leg-skeleton']},
  {region:'hand',names:['right-abductor-pollicis-brevis','right-opponens-pollicis','abductor-digiti-minimi-of-right-hand','flexor-digiti-minimi-brevis-of-right-hand','opponens-digiti-minimi-of-right-hand'],views:Array(5).fill('anterior'),bones:['right-first-metacarpal-bone','right-fifth-metacarpal-bone'],bundles:['hand-muscles','hand-skeleton']},
+  {region:'foot',names:['right-extensor-hallucis-brevis','right-abductor-hallucis','right-flexor-digitorum-brevis','abductor-digiti-minimi-of-right-foot','right-flexor-accessorius'],views:['superior','inferior','inferior','inferior','inferior'],bones:['right-calcaneus','right-first-metatarsal-bone','right-fifth-metatarsal-bone'],bundles:['foot-muscles','foot-skeleton']},
+  {region:'shoulder-arm',exportName:'upperArmTour',id:'right-upper-arm-muscle-orientation',bonePrefix:'vm:anatomy:upper-limb:shoulder:right:bone:',names:['long-head-of-right-biceps-brachii','short-head-of-right-biceps-brachii','right-brachialis','long-head-of-right-triceps-brachii','lateral-head-of-right-triceps-brachii','medial-head-of-right-triceps-brachii'],views:['anterior','anterior','anterior','posterior','posterior','posterior'],bones:['humerus','scapula'],bundles:['shoulder-arm-muscles','shoulder-arm-muscles-dissection','shoulder-arm-skeleton']},
 ];
 for(const spec of limbCases){
- const tour=api[`${spec.region}Tour`],ids=spec.names.map(name=>`vm:anatomy:body:${spec.region}:right:muscle:${name}`),bones=spec.bones.map(name=>`vm:anatomy:body:${spec.region}:right:bone:${name}`);
+ const tour=api[spec.exportName??`${spec.region}Tour`],ids=spec.names.map(name=>`vm:anatomy:body:${spec.region}:right:muscle:${name}`),bones=spec.bones.map(name=>(spec.bonePrefix??`vm:anatomy:body:${spec.region}:right:bone:`)+name);
  const structures=api.regionalTourStructures(api.catalog,tour);
- assert.equal(tour.id,`right-${spec.region}-muscle-orientation`);assert.equal(tour.revision,`${tour.id}-v1`);
+ assert.equal(tour.id,spec.id??`right-${spec.region}-muscle-orientation`);assert.equal(tour.revision,`${tour.id}-v1`);
  assert.equal(tour.status,'draft');assert.equal(tour.region,spec.region);assert.equal(api.regionalTourFor(spec.region).id,tour.id);
  assert.deepEqual(tour.steps.map(s=>s.selectedId),ids);assert.deepEqual(tour.steps.map(s=>s.view),spec.views);assert.deepEqual(tour.contextIds,bones);
  assert.deepEqual(structures.map(s=>s.id).sort(),[...ids,...bones].sort());assert.deepEqual([...new Set(structures.map(s=>s.bundle))].sort(),spec.bundles);
  assert(structures.every(s=>s.laterality==='right'));
  for(const step of tour.steps){assert.deepEqual(step.frameIds,[step.selectedId]);assert.equal(step.fadeOthers,true);assert.equal(step.durationMs,14000);}
 }
-const oldTours=await compile(execFileSync('git',['show','5ef14b7:lib/regional-tours.ts'],{encoding:'utf8'}).replaceAll("from './","from './lib/"));
+const oldTours=await compile(execFileSync('git',['show','84f1815:lib/regional-tours.ts'],{encoding:'utf8'}).replaceAll("from './","from './lib/"));
 assert.deepEqual(api.regionalTourEvidence(api.catalog,selected[0].id),oldTours.regionalTourEvidence(api.catalog,selected[0].id),'Existing thorax evidence unchanged');
 assert.deepEqual(api.regionalTourEvidence(api.catalog,cervical[0].id),oldTours.regionalTourEvidence(api.catalog,cervical[0].id),'Existing cervical evidence unchanged');
-for(const s of [...selected,...cervical,...abdominal,...forearm])assert.deepEqual(api.regionalTourEvidence(api.catalog,s.id),oldTours.regionalTourEvidence(api.catalog,s.id),'All 29 prior tour member evidence unchanged');
+for(const s of oldTours.regionalTours.flatMap(t=>oldTours.regionalTourStructures(api.catalog,t)))assert.deepEqual(api.regionalTourEvidence(api.catalog,s.id),oldTours.regionalTourEvidence(api.catalog,s.id),'All 49 prior tour member evidence unchanged');
 let checked=0;
 for(const s of api.catalog.structures){
  const m=await api.bodyReviewMaterial(s.id),c=await api.bodyReviewContext(s.id);
@@ -68,7 +70,7 @@ for(const s of api.catalog.structures){
  }else{assert.equal(m.guidedTours.length,0);assert.equal(m.fingerprints.teaching,previous,'Unrelated teaching history retained');assert(!c.checklists.teaching.some(v=>v.id==='guided-tour'));}
  assert.equal(c.revisions.imaging,null);
 }
-assert.equal(api.catalog.structures.length,1104);assert.equal(checked,49);
+assert.equal(api.catalog.structures.length,1104);assert.equal(checked,65);
 const sample=await api.bodyReviewMaterial(selected[0].id);
 for(const mutate of [p=>delete p.guidedTours,p=>p.guidedTours=[],p=>p.guidedTours.push(structuredClone(p.guidedTours[0])),p=>p.schema='vm-body-review-worksheet-2',p=>p.guidedTours[0].tour.steps[0].references=['javascript:alert(1)'],p=>p.guidedTours[0].tour.steps[0].selectedId='missing',p=>p.guidedTours[0].structures[0].sources[0].sha256='0'.repeat(64),p=>p.guidedTours[0].transitionMs=0,p=>p.guidedTours[0].tour.steps[0].durationMs=-1]){
  const p=structuredClone(sample);mutate(p);assert.equal(api.parseBodyReviewResponse(p,selected[0].id),null);
@@ -106,10 +108,10 @@ for(const [label,mutate] of [['caption',p=>p.guidedTours[0].tour.steps[0].captio
 }
 let limbInvalidPackets=0,limbMissingSources=0,limbInvalidFrames=0;
 for(const spec of limbCases){
- const tour=api[`${spec.region}Tour`],id=tour.steps[0].selectedId,packet=await api.bodyReviewMaterial(id),evidence=packet.guidedTours[0];
+ const tour=api[spec.exportName??`${spec.region}Tour`],id=tour.steps[0].selectedId,packet=await api.bodyReviewMaterial(id),evidence=packet.guidedTours[0];
  assert.deepEqual(evidence,api.regionalTourEvidence(api.catalog,id)[0]);
- assert.equal(evidence.transitionMs,1800);assert.equal(evidence.separation,0);assert.equal(evidence.stepFrames.length,5);
- for(let i=0;i<5;i++)assert.deepEqual(evidence.stepFrames[i],api.regionalTourFrame(api.catalog,tour,i));
+ assert.equal(evidence.transitionMs,1800);assert.equal(evidence.separation,0);assert.equal(evidence.stepFrames.length,tour.steps.length);
+ for(let i=0;i<tour.steps.length;i++)assert.deepEqual(evidence.stepFrames[i],api.regionalTourFrame(api.catalog,tour,i));
  for(const s of api.regionalTourStructures(api.catalog,tour)){
   const missing={...api.catalog,structures:api.catalog.structures.filter(v=>v.id!==s.id)};
   assert.throws(()=>api.regionalTourStructures(missing,tour));limbMissingSources++;
@@ -141,5 +143,5 @@ for(const spec of limbCases){
   const altered=structuredClone(tour);altered.steps[0].frameIds=frameIds;assert.throws(()=>api.regionalTourFrame(api.catalog,altered,0));limbInvalidFrames++;
  }
 }
-assert.equal(limbMissingSources,20);assert.equal(limbInvalidPackets,57);assert.equal(limbInvalidFrames,12);
-console.log(JSON.stringify({reviewed:api.catalog.structures.length,tourBound:checked,otherTeachingUnchanged:api.catalog.structures.length-checked,priorTourEvidenceUnchanged:29,invalidPacketsRejected:24+limbInvalidPackets,missingSourcesRejected:29+limbMissingSources,wrongOrMissingDisplayRejected:2,invalidFramesRejected:4+limbInvalidFrames}));
+assert.equal(limbMissingSources,36);assert.equal(limbInvalidPackets,95);assert.equal(limbInvalidFrames,20);
+console.log(JSON.stringify({reviewed:api.catalog.structures.length,tourBound:checked,otherTeachingUnchanged:api.catalog.structures.length-checked,priorTourEvidenceUnchanged:49,invalidPacketsRejected:24+limbInvalidPackets,missingSourcesRejected:29+limbMissingSources,wrongOrMissingDisplayRejected:2,invalidFramesRejected:4+limbInvalidFrames}));

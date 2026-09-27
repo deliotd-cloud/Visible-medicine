@@ -143,7 +143,37 @@ export const handTour: RegionalTour = {
     limbStep('hand','opponens-digiti-minimi-of-right-hand','Opponens digiti minimi','anterior','Finish with opponens digiti minimi alongside the fifth metacarpal. It contributes to opposition on the little-finger side. Fading exposes the small supplied surface, not an intact palmar fascial space.',handReference),
   ],
 };
-export const regionalTours=[thoraxTour,cervicalSpineTour,celiacTour,forearmTour,thighTour,legTour,handTour];
+export const footTour: RegionalTour = {
+  id:'right-foot-muscle-orientation',title:'Right foot: dorsal to plantar',region:'foot',
+  revision:'right-foot-muscle-orientation-v1',status:'draft',
+  description:'Five focused stops from the dorsal hallux extensor to selected plantar muscles. Heel and first/fifth metatarsals provide faded landmarks.',
+  limitations:'Selected right-foot surfaces, not a complete four-layer sole dissection. Other short extensors, long tendons, digital skeleton, fascia and neurovascular structures are omitted. Flexor accessorius is a combined source surface, not two separately selectable heads. No verified tendon continuity, weight-bearing simulation, acquired imaging or patient registration. Draft pending radiologist review.',
+  contextIds:['right-calcaneus','right-first-metatarsal-bone','right-fifth-metatarsal-bone'].map(name=>limbId('foot','bone',name)),
+  steps:[
+    limbStep('foot','right-extensor-hallucis-brevis','Extensor hallucis brevis · Dorsal','superior','Begin above the foot with the short hallux extensor. It extends the great toe at its base. The highlighted surface is not the long extensor or all of extensor digitorum brevis.',legReference),
+    limbStep('foot','right-abductor-hallucis','Abductor hallucis · Medial sole','inferior','Sweep underneath to abductor hallucis on the medial sole. It assists great-toe abduction and flexion. The first metatarsal remains as context; the full hallux skeleton is not shown.',legReference),
+    limbStep('foot','right-flexor-digitorum-brevis','Flexor digitorum brevis · Central sole','inferior','Move across to flexor digitorum brevis. It flexes toes two to five. Follow the supplied surface, but do not treat its digital slips as individually selectable or as proof of intact tendon insertions.',legReference),
+    limbStep('foot','abductor-digiti-minimi-of-right-foot','Abductor digiti minimi · Lateral sole','inferior','Identify abductor digiti minimi beside the fifth metatarsal on the lateral sole. Compare the selected surface with the medial abductor hallucis, now faded. This is foot anatomy, distinct from the similarly named hand muscle.',legReference),
+    limbStep('foot','right-flexor-accessorius','Quadratus plantae · Flexor accessorius','inferior','Finish deeper with quadratus plantae, retained in the source as flexor accessorius. It assists the long digital flexor through its tendon apparatus rather than attaching directly to a toe bone. Fading reveals a surface, not a physical dissection plane.',legReference),
+  ],
+};
+const armReference='https://anatomy.ttuhscep.edu/musculoskeletal_system/axilla_tables.html';
+export const upperArmTour: RegionalTour = {
+  id:'right-upper-arm-muscle-orientation',title:'Right upper arm: flexors & extensors',region:'shoulder-arm',
+  revision:'right-upper-arm-muscle-orientation-v1',status:'draft',
+  description:'Six stops distinguish both biceps heads, brachialis and all three triceps heads. Humerus and scapula stay in the original source frame.',
+  limitations:'Selected right-sided source surfaces only, not complete arm compartments. Forearm bones, complete distal tendon insertions, coracobrachialis, fascia, nerves and vessels are not shown. Individual source heads do not establish complete tendon continuity. No muscle contraction, joint-motion simulation, acquired imaging or patient registration. Draft pending radiologist review.',
+  contextIds:['humerus','scapula'].map(name=>`vm:anatomy:upper-limb:shoulder:right:bone:${name}`),
+  steps:[
+    limbStep('shoulder-arm','long-head-of-right-biceps-brachii','Biceps brachii · Long head','anterior','Begin anteriorly with the long biceps head. Its usual proximal attachment is at the supraglenoid region of the scapula. The source surface does not establish an intact tendon through the shoulder joint.',armReference),
+    limbStep('shoulder-arm','short-head-of-right-biceps-brachii','Biceps brachii · Short head','anterior','Compare the short head, which arises from the coracoid process. Both heads contribute to elbow flexion and supination. Their common radial insertion is outside this tour because the radius is not included.',armReference),
+    limbStep('shoulder-arm','right-brachialis','Brachialis · Deep anterior','anterior','Fade the biceps heads to reveal brachialis against the anterior humerus. This elbow flexor attaches distally to the ulna; that bone is not shown. Visibility here is not a surgical tissue plane.',armReference),
+    limbStep('shoulder-arm','long-head-of-right-triceps-brachii','Triceps brachii · Long head','posterior','Sweep posteriorly to the long triceps head. Its scapular origin lies below the glenoid, unlike the long biceps head above it. It crosses both shoulder and elbow, but no movement is simulated.',armReference),
+    limbStep('shoulder-arm','lateral-head-of-right-triceps-brachii','Triceps brachii · Lateral head','posterior','Locate the lateral triceps head along the posterior humerus. Compare its position with the faded long head. The radial nerve and its relation to these muscles are not rendered by this tour.',armReference),
+    limbStep('shoulder-arm','medial-head-of-right-triceps-brachii','Triceps brachii · Medial head','posterior','Finish with the deeper medial head. All three triceps heads contribute to elbow extension through a common olecranon attachment. Separate highlighted surfaces do not prove continuous tendon anatomy; the ulna is omitted.',armReference),
+  ],
+};
+export const regionalTours=[thoraxTour,cervicalSpineTour,celiacTour,forearmTour,thighTour,legTour,handTour,footTour,upperArmTour];
 export const regionalTourFor=(region:string)=>regionalTours.find(t=>t.region===region)??null;
 export const regionalTourLimitations=(tour:RegionalTour)=>tour.limitations??'Selected exterior source surfaces only; no complete lumen, bronchial tree, surgical plane, acquired imaging or spatial registration. Draft pending radiologist review.';
 

@@ -10,7 +10,7 @@ const require = createRequire(import.meta.url), React = require('react');
 const catalog = JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json', import.meta.url), 'utf8'));
 const catalogBefore = JSON.stringify(catalog);
 const built = await build({ stdin: {
-  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, cervicalSpineTour, celiacTour, forearmTour, thighTour, legTour, handTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
+  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, cervicalSpineTour, celiacTour, forearmTour, thighTour, legTour, handTour, footTour, upperArmTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
   loader: 'tsx', resolveDir: process.cwd(),
 }, bundle: true, write: false, format: 'cjs', platform: 'node', loader: { '.css': 'empty' }, plugins: [{ name: 'gpu-boundary', setup(api) {
   api.onLoad({ filter: /[\\/]app[\\/]body-scene\.tsx$/ }, () => ({ loader: 'tsx', contents: 'export function BodyScene(){return null;}' }));
@@ -105,11 +105,13 @@ const limbCases = [
   {region:'thigh',names:['right-rectus-femoris','right-vastus-lateralis','right-adductor-longus','long-head-of-right-biceps-femoris','right-semitendinosus'],views:['anterior','right','left','posterior','posterior'],bones:['right-femur'],bundles:['thigh-muscles','thigh-muscles-dissection','thigh-skeleton']},
   {region:'leg',names:['right-tibialis-anterior','right-extensor-digitorum-longus','right-fibularis-longus','right-soleus','right-tibialis-posterior'],views:['anterior','anterior','right','posterior','posterior'],bones:['right-tibia','right-fibula'],bundles:['leg-muscles','leg-skeleton']},
   {region:'hand',names:['right-abductor-pollicis-brevis','right-opponens-pollicis','abductor-digiti-minimi-of-right-hand','flexor-digiti-minimi-brevis-of-right-hand','opponens-digiti-minimi-of-right-hand'],views:Array(5).fill('anterior'),bones:['right-first-metacarpal-bone','right-fifth-metacarpal-bone'],bundles:['hand-muscles','hand-skeleton']},
+  {region:'foot',names:['right-extensor-hallucis-brevis','right-abductor-hallucis','right-flexor-digitorum-brevis','abductor-digiti-minimi-of-right-foot','right-flexor-accessorius'],views:['superior','inferior','inferior','inferior','inferior'],bones:['right-calcaneus','right-first-metatarsal-bone','right-fifth-metatarsal-bone'],bundles:['foot-muscles','foot-skeleton']},
+  {region:'shoulder-arm',exportName:'upperArmTour',id:'right-upper-arm-muscle-orientation',bonePrefix:'vm:anatomy:upper-limb:shoulder:right:bone:',names:['long-head-of-right-biceps-brachii','short-head-of-right-biceps-brachii','right-brachialis','long-head-of-right-triceps-brachii','lateral-head-of-right-triceps-brachii','medial-head-of-right-triceps-brachii'],views:['anterior','anterior','anterior','posterior','posterior','posterior'],bones:['humerus','scapula'],bundles:['shoulder-arm-muscles','shoulder-arm-muscles-dissection','shoulder-arm-skeleton']},
 ];
 for(const spec of limbCases){
   test(`${spec.region} tour requires every source bundle and runs all exact stops without looping`,()=>{
-    const h=harness(catalog,`${spec.region}Tour`),ids=spec.names.map(name=>`vm:anatomy:body:${spec.region}:right:muscle:${name}`);
-    const contexts=spec.bones.map(name=>`vm:anatomy:body:${spec.region}:right:bone:${name}`);
+    const h=harness(catalog,spec.exportName??`${spec.region}Tour`),ids=spec.names.map(name=>`vm:anatomy:body:${spec.region}:right:muscle:${name}`);
+    const contexts=spec.bones.map(name=>(spec.bonePrefix??`vm:anatomy:body:${spec.region}:right:bone:`)+name);
     assert.deepEqual(h.bundles().sort(),spec.bundles);
     assert.deepEqual(plain(h.scene().structures.map(s=>s.id)).sort(),[...ids,...contexts].sort());
     assert(h.scene().structures.every(s=>s.laterality==='right'));
@@ -119,25 +121,25 @@ for(const spec of limbCases){
     assert.equal(h.button('Start guided tour').disabled,false);assert.equal(h.timers.size,0);
     h.click('Start guided tour');assert.equal(h.button('Back').disabled,true);
     h.button('Back').onClick();h.render();assert.equal(h.scene().reset,0);
-    const frames=[];
-    for(let i=0;i<5;i++){
+    const frames=[],last=ids.length-1;
+    for(let i=0;i<ids.length;i++){
       assert.equal(h.scene().selectedId,ids[i]);assert.equal(h.scene().view,spec.views[i]);
       assert.deepEqual(plain(h.props.tour.steps[i].frameIds),[ids[i]]);
       assert.equal(h.props.tour.steps[i].durationMs,14000);assert.equal(h.props.tour.steps[i].fadeOthers,true);
       assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,i)));
       assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
-      frames.push(plain(h.scene().presetBounds));if(i<4)h.click('Next');
+      frames.push(plain(h.scene().presetBounds));if(i<last)h.click('Next');
     }
-    assert.notDeepEqual(frames[0],frames[4]);
+    assert.notDeepEqual(frames[0],frames[last]);
     h.click('Back');h.click('Play');h.tick();h.tick();
-    assert.equal(h.scene().reset,4);assert.equal(h.scene().selectedId,ids[4]);
+    assert.equal(h.scene().reset,last);assert.equal(h.scene().selectedId,ids[last]);
     assert.equal(h.timers.size,0);assert.equal(h.button('Play')['aria-pressed'],false);assert.equal(h.exits(),0);
-    h.click('Finish');assert.equal(h.exits(),1);assert.equal(h.scene().reset,4);h.unchanged();
+    h.click('Finish');assert.equal(h.exits(),1);assert.equal(h.scene().reset,last);h.unchanged();
   });
   test(`${spec.region} missing muscle or bone fails closed and Exit stays usable`,()=>{
     for(const [kind,names] of [['muscle',spec.names],['bone',spec.bones]])for(const name of names){
-      const id=`vm:anatomy:body:${spec.region}:right:${kind}:${name}`;
-      const h=harness(catalog,`${spec.region}Tour`,false,id);
+      const id=kind==='bone'?(spec.bonePrefix??`vm:anatomy:body:${spec.region}:right:bone:`)+name:`vm:anatomy:body:${spec.region}:right:muscle:${name}`;
+      const h=harness(catalog,spec.exportName??`${spec.region}Tour`,false,id);
       assert.equal(nodes(h.tree()).filter(n=>n.type==='BodyScene').length,0);
       assert.equal(h.button('Start guided tour').disabled,true);assert.equal(h.timers.size,0);
       assert.match(text(h.tree()),/unavailable for the current anatomy source/);

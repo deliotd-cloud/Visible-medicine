@@ -1,4 +1,4 @@
-import { Quaternion, Vector3 } from 'three';
+import { Matrix4, Quaternion, Vector3 } from 'three';
 
 export type TourCameraPose = { position: Vector3; target: Vector3; up: Vector3 };
 
@@ -13,11 +13,16 @@ export function interpolateTourCamera(from: TourCameraPose, to: TourCameraPose, 
   const a = from.position.clone().sub(from.target);
   const b = to.position.clone().sub(to.target);
   const radius = a.length() * (1 - eased) + b.length() * eased;
-  const rotation = new Quaternion().setFromUnitVectors(a.normalize(), b.normalize());
-  const direction = a.applyQuaternion(new Quaternion().slerp(rotation, eased));
+  // Interpolate one rigid camera frame. Independently rotating radial and up
+  // vectors makes them parallel during superior ↔ inferior sweeps, producing
+  // a lookAt singularity and visible roll/flip. A unit quaternion preserves an
+  // orthogonal frame, including rolled starting views and antipodal presets.
+  const orientation = (pose: TourCameraPose) => new Quaternion().setFromRotationMatrix(
+    new Matrix4().lookAt(pose.position, pose.target, pose.up),
+  );
+  const rotation = orientation(from).slerp(orientation(to), eased);
+  const direction = new Vector3(0, 0, 1).applyQuaternion(rotation);
   const target = from.target.clone().lerp(to.target, eased);
-  // Tour presets share world-up; also handle an imported rolled starting view.
-  const upRotation = new Quaternion().setFromUnitVectors(from.up.clone().normalize(), to.up.clone().normalize());
-  const up = from.up.clone().normalize().applyQuaternion(new Quaternion().slerp(upRotation, eased));
+  const up = new Vector3(0, 1, 0).applyQuaternion(rotation);
   return { position: target.clone().addScaledVector(direction, radius), target, up };
 }

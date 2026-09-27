@@ -274,6 +274,39 @@ context is rejected. This protects review presentation; it grants no approval.
 Website integration and visual acceptance are separate delivery gates; source
 implementation alone does not mean they are published or clinically accepted.
 
+## Foot and upper arm; polar camera stability — 27 September 2026
+
+The right-foot tour moves from dorsal extensor hallucis brevis to plantar
+abductor hallucis, flexor digitorum brevis, abductor digiti minimi and quadratus
+plantae (source name flexor accessorius). Calcaneus and first/fifth metatarsals
+provide context. Source axes require superior for dorsal and inferior for
+plantar, not the anterior preset. Five separate target frames are retained.
+
+The right upper-arm tour distinguishes long/short biceps heads, brachialis and
+long/lateral/medial triceps heads. Six targets span muscle and dissection bundles;
+canonical upper-limb humerus/scapula IDs provide context. It does not duplicate
+the dedicated shoulder rotator-cuff tour. No radius/ulna or intact tendon system
+is claimed. Both tours remain draft and reuse existing licensed meshes/credits.
+
+References: TTUHSC Leg & Foot and Axilla/Posterior Shoulder/Arm tables, linked
+in each original caption. No external images or prose imported. Read-only source
+audit by Terra Medium; main authored/verified code. No nested delegation.
+Additional test-worker requests were unavailable; main completed the tests.
+
+A new dorsal-to-plantar regression exposed independent radial/up interpolation
+becoming parallel during an antipodal polar sweep. Camera interpolation now
+slerps a single rigid orientation frame while retaining quintic easing, radius
+and target interpolation, exact endpoints, pause/resume and reduced motion.
+202 bidirectional polar samples verify orthogonality and no orientation flip;
+the actual-camera harness verifies the polar pause/resume. The prior101antipodal
+orbit samples and existing camera checks remain. Camera source changes are
+renderer-review material; no prior clinical acceptance is assumed.
+
+Nine regional tours plus shoulder now bind208step/modality notes. Complete
+sequence/context/frame evidence covers65source records; previous49tour evidence
+records are checked unchanged. Review stays revision-bound and unapproved.
+Website import and actual browser acceptance are separate delivery gates.
+
 ## Compact regional tour presentation — 27 September 2026
 
 At widths up to 600px, the explanation starts collapsed; opening it exposes the
