@@ -397,6 +397,8 @@ export function BodyReviewDetails({
               ))}
             </ul>
           )}
+          {topic.correctAnswer && <p><strong>Draft answer key:</strong> {topic.correctAnswer}</p>}
+          {topic.explanation && <p><strong>Draft explanation:</strong> {topic.explanation}</p>}
           {topic.note && <p>{topic.note}</p>}
           {topic.citations?.map((url, i) =>
             /^https?:\/\//i.test(url) ? (

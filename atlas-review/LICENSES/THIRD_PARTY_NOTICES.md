@@ -1579,3 +1579,15 @@ Changes: concise orientation/limitations synthesis and Atlas-specific scope
 warnings. Author/year credit and source/licence links accompany the drafts;
 no endorsement implied. No figure, scan, table or dataset is reproduced. No new
 model, font, texture, dependency or paid service. Clinical review remains pending.
+
+## Foot vascular formative questions — 27 September 2026
+
+Original draft questions/explanations using anatomical facts checked against
+TTUHSC El Paso's lower-limb arteries and veins tables:
+https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html and
+https://anatomy.ttuhscep.edu/anatomytables/veins_lowerlimb.html.
+These copyrighted tables (Thomas R. Gest / MedCharts Anatomy attribution on
+the source pages) are factual references only, not imported or relicensed assets.
+No tables, figures, page layouts or extended source prose redistributed. Source
+links accompany the original questions. Existing model licences remain unchanged;
+no new paid service or dependency. All answer keys require clinical review.

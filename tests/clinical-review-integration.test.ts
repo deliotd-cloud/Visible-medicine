@@ -16,7 +16,7 @@ test('current review includes draft answer evidence and admitted teaching withou
   const regional = JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8'));
   // Review new drafts against their exact review model before learner delivery.
   // The public learner export is deliberately not upgraded by a review-only import.
-  assert.equal(review.revision, '59b35d8f3b176fb542b6ff561472206477f9bbda');
+  assert.equal(review.revision, 'bc2cf4af76a117029367c4dfd08d91f684f923a0');
   assert.equal(viewer.sourceCommit, review.revision);
   assert.equal(viewer.websiteIntegrationSha256, review.websiteIntegrationSha256);
   assert.equal(regional.sourceCommit, '36c53fb9e19fca1c7e579f79d6d4807e4778ac19');

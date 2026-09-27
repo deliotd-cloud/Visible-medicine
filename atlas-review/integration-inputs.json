@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "59b35d8f3b176fb542b6ff561472206477f9bbda",
-  "sha256": "50438a3fee4f0072422a168a004f67ea0bf70d89cf6093a9dbceb82e43f1cded",
+  "sourceCommit": "bc2cf4af76a117029367c4dfd08d91f684f923a0",
+  "sha256": "b8694a52d8086d2bfbda22f249fab8923e52e5f9c33cf1baeb17d54f2a917aeb",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -112,7 +112,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "f0430a954fcf1a5f3765639a1e541641cc73d35628775cab29a1d7eae17c1672"
+      "sha256": "ba573d1256c3a82bc46c0310baac9bbcf0ff523ef338560690e79b1dc5b44c21"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -300,7 +300,7 @@
     },
     {
       "path": "atlas-review/app/review/body/review-dashboard.tsx",
-      "sha256": "a9ad7527fd4dbe222669ae4f65ed95f4d55ebbcb52df9281a6109cdef5c7ebf6"
+      "sha256": "af92640d73214354165628ae9677d82c86b9aad609e7e2b615c243d603fe58b6"
     },
     {
       "path": "atlas-review/app/review/nested/nested-review.css",
@@ -881,6 +881,14 @@
     {
       "path": "atlas-review/content/foot-muscle-imaging.ts",
       "sha256": "80aba36ae5a6dfb3313510f75d414f96c27468d00c912c22b3d87dad5dfa2ba2"
+    },
+    {
+      "path": "atlas-review/content/foot-vascular-quiz-pins.json",
+      "sha256": "9d6a38f9c1c5559f0bca4d7665ad863f04d5074b607a23205d226646c6ef1b66"
+    },
+    {
+      "path": "atlas-review/content/foot-vascular-quiz.ts",
+      "sha256": "3dc9fd1aa39ea472ea2d01b3e682a02524fdd902da2e44a71b3132714759bde9"
     },
     {
       "path": "atlas-review/content/forearm-arterial-ct-pins.json",
@@ -2195,6 +2203,10 @@
       "sha256": "4678ddd09311b67e646004b61cf3b52f207b68678010d39dbe04bb37076ccdd4"
     },
     {
+      "path": "atlas-review/lib/foot-vascular-quiz.ts",
+      "sha256": "df617fe8a552a1d0b808c212497c77c879a18192a4094e269a4e0d94fc3eb791"
+    },
+    {
       "path": "atlas-review/lib/forearm-arterial-imaging.ts",
       "sha256": "a28a38a3d8b2e21ae8dc2f80aafb559867932e05d162da7ad20bb5a5887d7ca3"
     },
@@ -3180,7 +3192,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "03393d98d5d3dd0dbcd5e22d74922fed498e47fe5abfb7e8d499be97307bf9a4"
+      "sha256": "ae76f83067466dfa121cd1502b850ab3f9a3d4607b618bd052ccb7cdc384a062"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3424,7 +3436,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "449052def5c9ecf15568f6a4f062b860d34b725a5f8a7fd3bb122c9816557c1b"
+      "sha256": "0e08ea6d5d2daea60cb417d6316c981e6d537fc444b660c783075b73f956b1f0"
     }
   ]
 }

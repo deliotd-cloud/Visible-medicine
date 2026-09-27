@@ -1,5 +1,14 @@
 # Visible Medicine — shared delivery plan
 
+27 September review delivery: the eight foot vascular quiz drafts are now
+imported into protected Clinical Review at Atlas `bc2cf4a`, with a matching
+review viewer/presentation revision. An actual-panel regression exposed hidden
+answer/explanation evidence; fixed in source, reimported and verified. Source
+review validation, nine website tests, TypeScript/builds and local desktop/320px
+touch disclosure checks pass. No decisions migrated or approvals recorded;
+learner runtime remains `36c53fb`, public site unchanged. See
+[review evidence](clinical-review-foot-quiz-20260927.md).
+
 27 September foot teaching: Atlas source `eafd71c` adds eight source-bound draft
 vascular quick checks (four paired concepts), using existing selectable controls.
 9,928 other topic entries and model bytes remain unchanged. Focused/history,
