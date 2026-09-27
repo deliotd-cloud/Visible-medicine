@@ -34,6 +34,12 @@ does not publish questions or migrate a review decision.
 
 ## Validation
 
+Review integration exposed a pre-existing body worksheet gap: answer fields
+were present in review material but not displayed. The source body-review
+disclosure now renders authored draft answer/explanation fields, with eight
+keyed and one unkeyed actual-component regression cases. No question content,
+checklist, decision or learner presentation is changed by this display fix.
+
 The focused test verifies eight changed quizzes, 9,928 unchanged other topics,
 284 altered-source rejections and eight actual component/exam render cases.
 Historical replay restores the pinned parent snapshot without changing old

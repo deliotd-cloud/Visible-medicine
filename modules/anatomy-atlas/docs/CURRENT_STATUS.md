@@ -1,5 +1,10 @@
 # Current atlas status
 
+27 September review evidence: body review topic disclosures now show authored
+draft answer keys and explanations, matching the dedicated shoulder reviewer.
+Unkeyed legacy notes gain no inferred answer. Teaching, models, checklists and
+saved decisions are unchanged; website presentation must be rebound on import.
+
 27 September foot vascular quizzes: eight exact source selections now have four
 paired formative questions with explicit answers and explanations. Existing
 collapsed controls are reused; exam mode hides them. Full source pins preserve

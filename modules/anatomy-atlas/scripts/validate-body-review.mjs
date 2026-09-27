@@ -230,6 +230,25 @@ for (const packet of [
   assert(!html.includes('>Approve<'));
   renders++;
 }
+// The reviewer must see authored answer evidence, not just learner-facing choices.
+const vascularPins = JSON.parse(await readFile('content/foot-vascular-quiz-pins.json', 'utf8'));
+for (const {identity} of vascularPins.entries) {
+  const packet = packets.find(p => p.structureId === identity.id);
+  assert(packet);
+  const quiz = packet.topics.find(t => t.tab === 'quiz');
+  assert.equal(quiz.readiness, 'draft');
+  const html = render(React.createElement(module.exports.BodyReviewDetails, {material: packet}));
+  assert(html.includes('Draft answer key:</strong> ' + quiz.correctAnswer));
+  assert(html.includes('Draft explanation:</strong> ' + quiz.explanation));
+  assert(!html.includes('>Approve<'));
+  renders++;
+}
+const unkeyed = packets.find(p => p.topics.every(t => !t.correctAnswer && !t.explanation));
+assert(unkeyed);
+const unkeyedHtml = render(React.createElement(module.exports.BodyReviewDetails, {material: unkeyed}));
+assert(!unkeyedHtml.includes('Draft answer key:'));
+assert(!unkeyedHtml.includes('Draft explanation:'));
+renders++;
 for (const region of ['shoulder-arm', 'forearm', 'thigh']) {
   const html = render(
     React.createElement(module.exports.BodyReviewDashboard, {
