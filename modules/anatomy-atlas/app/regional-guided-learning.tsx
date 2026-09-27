@@ -37,7 +37,7 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit}:{catalog:
       <div className="regional-tour-heading"><h2>{active?step.title:tour.title}</h2>{active&&<span>Step {index+1} of {tour.steps.length}</span>}</div>
       <p aria-live="polite" aria-atomic="true">{active?step.caption:tour.description}</p>
       <details><summary>References & limits · Draft, review pending</summary>
-        <p>Selected exterior source surfaces in a common frame. Not a continuous airway lumen, complete bronchial tree or patient scan. Exit restores your previous workspace.</p>
+        <p>{tour.limitations??'Selected exterior source surfaces in a common frame. Not a continuous airway lumen, complete bronchial tree or patient scan.'} Exit restores your previous workspace.</p>
         {step.references.map(url=><a key={url} href={url} target="_blank" rel="noreferrer">Anatomy reference ↗</a>)}
       </details>
       {active&&selected&&<TourImagingNotes key={step.id} structureName={selected.name}

@@ -1,5 +1,29 @@
 # Agent-authored guided learning
 
+## Cervical spine expansion — 27 September
+
+The spine library now offers **Cervical spine: C1 to T1**, five manual/playable
+stops at atlas, axis, C3, C7 and T1. C4–C6 are faded context. All eight exact
+BodyParts3D identities belong to the spine region and the same skeleton bundle;
+no geometry is created, moved or relabelled. A fixed cervical bounding frame
+keeps the short tour legible instead of framing the entire spine. Existing
+1.8-second eased orbital transitions, reduced-motion support, pause/readiness
+gates and pre-tour workspace restoration are reused.
+
+Original captions reference the TTUHSC Back & Spinal Cord anatomy table
+(https://anatomy.ttuhscep.edu/schemes/back_tables.html); no images or prose were
+imported. Existing mesh credits and licensing remain unchanged. This tour
+does not display discs, ligaments, cord or nerve roots; it does not assert
+patient-level vertebral numbering, normality, motion or scan alignment.
+
+All eight visible selections receive the complete tour in teaching-review
+evidence. Prior thoracic evidence is unchanged; unrelated teaching retains its
+revision. The review viewer names the appropriate regional learner. The owner
+must review vertebral identities, orientation, fine mesh features, sequence,
+camera readability and captions before clinical sign-off. Each of the five
+stops also exposes the existing four modality notes without inventing scans.
+Source implementation only until explicitly imported into the website.
+
 The owner requested agent-authored tours, grouped under **Guided learning**,
 not an educator authoring dependency. The first local pilot is the existing
 right-shoulder module: deltoid cover, infraspinatus, teres minor, supraspinatus,

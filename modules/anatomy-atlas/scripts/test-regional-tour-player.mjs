@@ -10,7 +10,7 @@ const require = createRequire(import.meta.url), React = require('react');
 const catalog = JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json', import.meta.url), 'utf8'));
 const catalogBefore = JSON.stringify(catalog);
 const built = await build({ stdin: {
-  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
+  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, cervicalSpineTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
   loader: 'tsx', resolveDir: process.cwd(),
 }, bundle: true, write: false, format: 'cjs', platform: 'node', loader: { '.css': 'empty' }, plugins: [{ name: 'gpu-boundary', setup(api) {
   api.onLoad({ filter: /[\\/]app[\\/]body-scene\.tsx$/ }, () => ({ loader: 'tsx', contents: 'export function BodyScene(){return null;}' }));
@@ -19,7 +19,7 @@ const nodes = tree => !tree || typeof tree !== 'object' ? [] : Array.isArray(tre
 const text = tree => tree == null ? '' : typeof tree === 'string' || typeof tree === 'number' ? String(tree) : Array.isArray(tree) ? tree.map(text).join('') : text(tree.props?.children);
 const plain = value => JSON.parse(JSON.stringify(value));
 
-function harness(source = catalog) {
+function harness(source = catalog, tourName = 'thoraxTour') {
   const slots = [], setters = [], timers = new Map(), listeners = new Map();
   let cursor = 0, pending = [], dirty = false, tree, serial = 0, exits = 0;
   const changed = (old, next) => !old || !next || old.length !== next.length || old.some((item, i) => !Object.is(item, next[i]));
@@ -36,7 +36,7 @@ function harness(source = catalog) {
   const mod = { exports: {} };
   runInNewContext(built.outputFiles[0].text, { module: mod, exports: mod.exports, window: win, document: doc, structuredClone,
     require(id) { if (id === 'react') return shim; if (id === 'next/dynamic') return () => 'BodyScene'; return require(id); } });
-  const api = mod.exports, props = { catalog: source, tour: api.thoraxTour, assetBase: '/atlas-runtime/thorax', onExit() { exits++; } };
+  const api = mod.exports, props = { catalog: source, tour: api[tourName], assetBase: '/atlas-runtime/head-neck', onExit() { exits++; } };
   const tourBefore = JSON.stringify(props.tour);
   function render() { let count = 0; do { dirty = false; cursor = 0; pending = []; tree = api.RegionalGuidedLearning(props); for (const effect of pending) effect(); assert(++count < 15); } while (dirty); return tree; }
   function find(predicate) { const matches = nodes(tree).filter(predicate); assert.equal(matches.length, 1); return matches[0].props; }
@@ -50,6 +50,25 @@ function harness(source = catalog) {
   render();
   return { render, scene, button, bundles, ready, click, tick, timers, preference, listeners, doc, api, props, unchanged, tree: () => tree, exits: () => exits };
 }
+
+test('Cervical tour runs all five exact steps with fixed framing and its own limits', () => {
+  const h=harness(catalog,'cervicalSpineTour');
+  assert.equal(h.button('Start guided tour').disabled,true);
+  assert.match(text(h.tree()),/discs, ligaments, spinal cord and nerve roots are not shown/);
+  assert.doesNotMatch(text(h.tree()),/bronchial tree/);
+  h.ready();h.click('Start guided tour');
+  const frame=plain(h.scene().presetBounds);
+  assert.equal(h.scene().structures.length,8);assert.deepEqual(h.bundles(),['spine-skeleton']);
+  for(let i=0;i<5;i++){
+    assert.equal(h.scene().selectedId,h.props.tour.steps[i].selectedId);
+    assert.deepEqual(plain(h.scene().presetBounds),frame);
+    assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);
+    if(i<4)h.click('Next');
+  }
+  h.click('Back');assert.equal(h.scene().selectedId,h.props.tour.steps[3].selectedId);
+  h.click('Play');h.tick();h.tick();assert.equal(h.timers.size,0);
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
+});
 
 test('All actual tour bundles and ready renderer are required; entry remains manual and canonical', () => {
   const h = harness();

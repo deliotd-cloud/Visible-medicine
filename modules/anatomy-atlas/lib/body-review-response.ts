@@ -1,7 +1,7 @@
 import type { BodyReviewMaterial } from './body-review-material';
 import type { BodyStructure } from '../app/body-types';
 import { validBodyPresentationParts } from './body-presentation-parts';
-import { regionalTours } from './regional-tours';
+import { regionalTours, regionalTourLimitations } from './regional-tours';
 const object = (v: unknown): v is Record<string, unknown> =>
   !!v && typeof v === 'object' && !Array.isArray(v);
 const strings = (v: unknown): v is string[] =>
@@ -65,6 +65,7 @@ function validTours(value:unknown,source:Record<string,unknown>):boolean {
     const t=e.tour,structures=e.structures,bundles=e.bundles;
     const definition=expected.find(item=>item.id===t.id);
     if(!definition||JSON.stringify(t)!==JSON.stringify(definition))return false;
+    if(e.limitations!==regionalTourLimitations(definition))return false;
     if(!token(t.id)||!token(t.revision)||!token(t.region)||!text(t.title)||!text(t.description)||t.status!=='draft'||
       !strings(t.contextIds)||!Array.isArray(t.steps)||!t.steps.length||t.steps.length>30)return false;
     if(!structures.every(s=>object(s)&&text(s.id)&&text(s.name)&&token(s.bundle)&&sourceParts(s.sources))||
