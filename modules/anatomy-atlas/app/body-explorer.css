@@ -2998,8 +2998,8 @@
   right: 8px;
 }
 .anatomy-controls-return {
-  position: sticky;
-  bottom: 0;
+  /* Follow the content: a sticky footer can cover quiz answers and consume taps. */
+  position: static;
   margin: 14px 0 0;
   width: 100%;
   background: #fff;
