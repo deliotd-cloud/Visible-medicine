@@ -1,5 +1,19 @@
 # Source-bound anatomical reasoning pilot
 
+## Thoracic vessels — 27 September 2026
+
+Six original draft concepts extend Apply anatomy to the ascending aorta, arch,
+descending thoracic aorta, superior vena cava, azygos and hemiazygos veins.
+The bank now contains 146 concepts / 268 source representations; counts below are
+historical. All preceding 140 concepts remain ordered and hash-pinned unchanged.
+No new models or global admission of arbitrary vessels. See
+[source contract and review limits](THORACIC_VESSEL_REASONING.md).
+
+These questions are separate from the seven thoracic Structure checks in Quiz
+notes. The current body-review worksheet explicitly excludes the interactive
+reasoning bank: do not treat a worksheet approval as assessment sign-off.
+Dedicated revision-bound bank review and website delivery remain required.
+
 ## Deep-brain structures — 24 September 2026
 
 Six original draft concepts add caudate, putamen, pallidum, thalamus and the

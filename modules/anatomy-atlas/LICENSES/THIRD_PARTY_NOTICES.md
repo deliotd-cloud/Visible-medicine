@@ -1605,6 +1605,19 @@ Source links accompany concise original drafts. Existing model/data licences
 remain unchanged; no dependency, texture, font, paid service or endorsement.
 Anatomical and radiological sign-off is still required for every draft.
 
+## Thoracic vessel reasoning — 27 September 2026
+
+Six original draft reasoning questions use factual references inspected at
+https://anatomy.ttuhscep.edu/anatomytables/arteries_thorax.html and
+https://anatomy.ttuhscep.edu/anatomytables/veins_thorax.html.
+These copyrighted university tables cite MedCharts Anatomy; they are references,
+not licensed assets being redistributed. No source tables, figures, layouts,
+question-bank items or extended prose are copied. Original concise prompts and
+explanations link to their sources. Existing model notices/licences are unchanged;
+no paid service, new dataset, dependency, font or texture is introduced. Clinical
+and educational approval remains pending. Catalogue side tags are preserved,
+not reinterpreted as clinical laterality or evidence of vessel patency.
+
 ## Thoracic structure quick checks — 27 September 2026
 
 Original factual questions and explanations checked against TTUHSC El Paso:

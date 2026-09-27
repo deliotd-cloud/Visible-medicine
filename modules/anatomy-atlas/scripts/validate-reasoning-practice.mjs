@@ -94,8 +94,9 @@ same(hash(JSON.stringify(api.reasoningConcepts.slice(0,123))), '3052d88e4b5e2c1d
 same(api.reasoningConcepts.slice(123,126).map(c => c.key), ['thoracic-trachea','thoracic-esophagus','thoracic-thymus']);
 same(hash(JSON.stringify(api.reasoningConcepts.slice(0,126))), '523ab89c9c6313eec445979978777283e316b118328bd18ddde80a47ecfd3a32', 'All preceding 126 concepts remain unchanged and ordered');
 same(hash(JSON.stringify(api.reasoningConcepts.slice(0,132))), '256305e55245d7595c03cc888c3bb8a4918debd6bf6055419860cf66555c892e', 'All preceding 132 concepts remain unchanged and ordered');
-same(api.reasoningConcepts.length, 140);
-same(bound.length, 262);
+same(hash(JSON.stringify(api.reasoningConcepts.slice(0,140))), '2b5f7d7e84abdb80f494c0e0a6d3b371e8cb122abf46b9da69b8d555a9eebe66', 'All preceding 140 concepts remain unchanged and ordered');
+same(api.reasoningConcepts.length, 146);
+same(bound.length, 268);
 same(bound.filter((s) => s.region === 'shoulder-arm').length, 26);
 same(bound.filter((s) => s.region === 'forearm').length, 18);
 same(bound.filter((s) => s.region === 'hand').length, 20);
@@ -104,10 +105,10 @@ same(bound.filter((s) => s.region === 'leg').length, 28);
 same(bound.filter((s) => s.region === 'foot').length, 16);
 same(bound.filter((s) => s.region === 'head-neck').length, 60);
 same(bound.filter((s) => s.region === 'spine').length, 24);
-same(bound.filter((s) => s.region === 'thorax').length, 13);
+same(bound.filter((s) => s.region === 'thorax').length, 19);
 same(bound.filter((s) => s.region === 'abdomen').length, 11);
 same(bound.filter((s) => s.region === 'pelvis').length, 10);
-same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 140);
+same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 146);
 same(hash(JSON.stringify(precedingConcepts.filter(c => !c.key.startsWith('neck-')))),
   'caafb323ca7d5a04971f91ad369d68c3a8da5e43839b39d8cd76192d1497bad2',
   'All 100 preceding concepts remain unchanged and in order');
@@ -167,9 +168,12 @@ for (const concept of api.reasoningConcepts) {
   const grouped = ['trunk-diaphragm', 'trunk-external-intercostal', 'trunk-internal-intercostal', 'trunk-innermost-intercostal'].includes(concept.key);
   const organ = concept.sourceTissue === 'organ';
   const neuralOrgan = concept.sourceTissue === 'neural-organ';
+  const vessel = concept.sourceTissue === 'vessel';
+  const vesselSides = { FMA3736: 'midline', FMA3768: 'midline', FMA87217: 'unspecified', FMA4720: 'unspecified', FMA4838: 'unspecified', FMA4944: 'midline' };
   const pairedOrgan = ['pelvic-testis', 'pelvic-epididymis', 'pelvic-seminal-vesicle', 'pelvic-ureter'].includes(concept.key);
-  same(concept.bindings.length, grouped || (organ && !pairedOrgan) ? 1 : 2);
-  same([...new Set(concept.bindings.map(b => b.side))].sort((a, b) => a.localeCompare(b)), organ && !pairedOrgan ? ['unpaired'] : grouped ? ['midline'] : ['left', 'right']);
+  same(concept.bindings.length, vessel || grouped || (organ && !pairedOrgan) ? 1 : 2);
+  if (vessel) check(Object.hasOwn(vesselSides, concept.bindings[0].fma), 'Only the six explicitly authored vessels');
+  same([...new Set(concept.bindings.map(b => b.side))].sort((a, b) => a.localeCompare(b)), vessel ? [vesselSides[concept.bindings[0].fma]] : organ && !pairedOrgan ? ['unpaired'] : grouped ? ['midline'] : ['left', 'right']);
   same(new Set(concept.distractors).size, 3);
   check(!concept.distractors.includes(concept.key));
   check(concept.prompt.length > 40 && concept.explanation.length > 40);
@@ -194,8 +198,8 @@ for (const concept of api.reasoningConcepts) {
     );
     const s = bound.find((s) => s.fmaId === binding.fma);
     check(s && s.laterality === binding.side);
-    same(s.system, neuralOrgan ? 'nerves' : organ ? 'organs' : 'muscles');
-    same(s.category, neuralOrgan || organ ? 'organ' : 'muscle');
+    same(s.system, vessel ? 'vessels' : neuralOrgan ? 'nerves' : organ ? 'organs' : 'muscles');
+    same(s.category, vessel ? 'vessel' : neuralOrgan || organ ? 'organ' : 'muscle');
     same(s.region, concept.region);
     same(s.sourceTree, concept.sourceTree ?? 'isa');
     same(s.regions, concept.sourceRegions ?? [concept.region]);
@@ -307,7 +311,7 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
       same(session, null, 'No unbound regional question is invented');
     if (!session) continue;
     const expected = { 'whole-body': 20, 'head-neck': 20, 'shoulder-arm': 13, forearm: 9,
-      hand: 10, thigh: 18, pelvis: 16, leg: 14, foot: 8, spine: 12, thorax: 10, abdomen: 9 }[region];
+      hand: 10, thigh: 18, pelvis: 16, leg: 14, foot: 8, spine: 12, thorax: 16, abdomen: 9 }[region];
     same(session.questions.length, expected);
     same(
       new Set(session.questions.map((q) => q.reasoning.key)).size,
@@ -369,7 +373,7 @@ for (const count of [1, 5, 10, 20, 100, NaN, Infinity, -10]) {
   same(
     create(all, { count }).questions.length,
     Math.min(
-      140,
+      146,
       Math.max(1, Math.min(20, Math.floor(Number.isFinite(count) ? count : 5))),
     ),
   );
@@ -383,12 +387,12 @@ same(create(all, { id: 0 }), null);
 same(create(all, { id: 1.5 }), null);
 const newConcepts = api.reasoningConcepts.filter(c => c.key.startsWith('trunk-') || c.key.startsWith('neck-') || c.key.startsWith('limb-') || c.key.startsWith('abdominal-') || c.key.startsWith('thoracic-'));
 const referenceWords = {};
-same(newConcepts.length, 46);
+same(newConcepts.length, 52);
 const limbConcepts = newConcepts.filter(c => c.key.startsWith('limb-'));
 const organConcepts = newConcepts.filter(c => c.sourceTissue === 'organ');
 same(organConcepts.length, 10);
 const liveDisplay = api.bodyDisplayCatalog(catalog);
-const pelvicConcepts = api.reasoningConcepts.slice(132);
+const pelvicConcepts = api.reasoningConcepts.slice(132,140);
 same(pelvicConcepts.map(c => c.key), [
   'pelvic-bladder', 'pelvic-prostate', 'pelvic-rectum', 'pelvic-urethra',
   'pelvic-testis', 'pelvic-epididymis', 'pelvic-seminal-vesicle', 'pelvic-ureter',
@@ -543,8 +547,8 @@ for (const concept of [...newConcepts, ...deepConcepts, ...pelvicConcepts]) {
 for (const [url, words] of Object.entries(referenceWords)) check(words <= 200, `Brief original synthesis per reference: ${url} (${words})`);
 const groupedTargets = bound.filter(s => s.laterality === 'midline');
 same(bound.filter(s => s.sourceTree === 'partof').map(s => s.fmaId).sort(), ['FMA13373', 'FMA13374', 'FMA15571', 'FMA15572', 'FMA15900', 'FMA7131', 'FMA7148', 'FMA7202', 'FMA7394', 'FMA9600', 'FMA9607']);
-same(groupedTargets.map(s => s.fmaId).sort(), ['FMA13295', 'FMA9756', 'FMA9757', 'FMA9758'].sort());
-same(create(groupedTargets).questions.length, 4, 'Four genuine grouped/unpaired targets work together');
+same(groupedTargets.map(s => s.fmaId).sort(), ['FMA13295', 'FMA9756', 'FMA9757', 'FMA9758', 'FMA3736', 'FMA3768', 'FMA4944'].sort());
+same(create(groupedTargets).questions.length, 7, 'Four prior muscle groups and three exact catalogue-midline vessels work together');
 for (const group of groupedTargets) {
   for (const laterality of ['left', 'right', 'unpaired', 'unspecified'])
     same(api.reasoningConceptFor({ ...group, laterality }), undefined, 'Never split/relabel a catalogue group');
