@@ -100,7 +100,7 @@ test('actual FittedCamera transitions spatial to tray to locked, captures pan an
   let index=0,effects=[],cleanups=[],invalidations=0;
   runInNewContext(compiled.outputFiles[0].text,{module:mod,exports:mod.exports,require(name){
     if(name==='react')return{useRef(value){return refs[index++]??(refs[index-1]={current:value});},useCallback:fn=>fn,useEffect:fn=>effects.push(fn)};
-    if(name==='@react-three/fiber')return{useThree:()=>({camera,size,gl,invalidate(){invalidations++;}})};
+    if(name==='@react-three/fiber')return{useThree:()=>({camera,size,gl,invalidate(){invalidations++;}}),useFrame(){}};
     if(name==='@react-three/drei')return{OrbitControls:'OrbitControls'};
     return require(name);
   }});

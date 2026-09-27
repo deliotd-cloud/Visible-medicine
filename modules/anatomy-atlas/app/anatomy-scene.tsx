@@ -71,6 +71,9 @@ type SceneProps = {
   inspection: InspectionState;
   cameraCapture?: RefObject<StudyCamera | null>;
   cameraRestore?: RefObject<StudyCamera | null>;
+  tourLocked?: boolean;
+  transitionMs?: number;
+  transitionPaused?: boolean;
   onSelect: (id: string) => void;
   onRendererHealth: (health: RendererHealth) => void;
   onModelReady: (ready: boolean) => void;
@@ -573,7 +576,9 @@ export function AnatomyScene(props: SceneProps) {
             zoom={props.zoom}
             zoomStep={props.zoomStep}
             reset={props.resetNonce}
-            locked={props.plate && layout !== 'tray'}
+            locked={props.tourLocked || (props.plate && layout !== 'tray')}
+            transitionMs={props.transitionMs}
+            transitionPaused={props.transitionPaused}
             planar={layout === 'tray'}
             cameraCapture={props.cameraCapture}
             cameraRestore={props.cameraRestore}

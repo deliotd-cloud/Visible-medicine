@@ -32,7 +32,7 @@ export type SavedReview = ReviewDraft & {
   revisionHash: string | null;
   checklistVersion: string;
 };
-export const checklistVersion = 'shoulder-review-1';
+export const checklistVersion = 'shoulder-review-2-guided';
 export const trackLabels: Record<ReviewTrack, string> = {
   geometry: 'Geometry',
   teaching: 'Teaching',
@@ -88,6 +88,10 @@ export function checklist(structureId: string, track: ReviewTrack) {
             [
               'quiz',
               'Check the quick question, answer choices and applicable identification-exam answers.',
+            ],
+            [
+              'guided-tour',
+              'Review every guided-tour caption, structure, layer and camera transition in the learner; record required framing or teaching corrections.',
             ],
             [
               'evidence',

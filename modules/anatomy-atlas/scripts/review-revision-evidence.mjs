@@ -23,6 +23,10 @@ export const reviewDisplayPaths = [
   'lib/camera-keyboard.ts',
   'app/camera-keyboard.css',
   'app/shoulder-explorer.tsx',
+  'lib/shoulder-tours.ts',
+  'lib/tour-camera.ts',
+  'app/shoulder-tour-player.tsx',
+  'app/shoulder-tour-player.css',
   'app/structure-quick-check.tsx',
   'app/structure-quick-check.css',
   'app/shoulder-workspace.css',
@@ -66,6 +70,7 @@ export function reviewDocumentForDisplay(
   structures,
   quizQuestions,
   display,
+  guidedTourSourceHash = null,
 ) {
   return {
     schemaVersion: 1,
@@ -83,7 +88,9 @@ export function reviewDocumentForDisplay(
               identity: { id: s.id, name: s.name, latinName: s.latinName },
             }),
           ),
-          teaching: hash(JSON.stringify({ structure: s, quizQuestions })),
+          teaching: hash(JSON.stringify({ structure: s, quizQuestions,
+            ...(guidedTourSourceHash ? { guidedTourSourceHash } : {}),
+          })),
           imaging: null,
         },
       ]),
@@ -112,5 +119,8 @@ export async function currentReviewDocument(
       ),
     ]),
   );
-  return reviewDocumentForDisplay(manifest, structures, quizQuestions, display);
+  // Current tour text, IDs, layer/camera choices and timings are material teaching.
+  // Historical reconstruction deliberately omits this new field by default.
+  const tourHash = hash((await readFile(new URL('lib/shoulder-tours.ts', root), 'utf8')).replace(/\r\n/g, '\n'));
+  return reviewDocumentForDisplay(manifest, structures, quizQuestions, display, tourHash);
 }

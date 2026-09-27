@@ -1,0 +1,26 @@
+.shoulder-tour-start { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 12px; margin: 0 10px 10px; border: 1px solid var(--border); border-radius: .75rem; }
+.shoulder-tour-start h3 { margin: 0; font-size: 1rem; }
+.shoulder-tour-start p { margin: .3rem 0; font-size: .875rem; }
+.shoulder-tour-start small { color: var(--muted-foreground); }
+.shoulder-tour-credits { display: block; margin: 0 12px 8px; font-size: .75rem; text-decoration: underline; }
+.shoulder-workspace.guided-learning-open > .body-layout { grid-template-columns: minmax(0, 1fr) !important; grid-template-rows: minmax(0, 1fr) !important; grid-template-areas: 'model' !important; }
+.shoulder-workspace.guided-learning-open .body-layout > :is(.body-rail, .body-info, .body-controls-launcher, .body-info-launcher) { display: none !important; }
+.shoulder-workspace.guided-learning-open .shoulder-view-controls,
+.shoulder-workspace.guided-learning-open .shoulder-heading-actions { display: none; }
+.shoulder-workspace.guided-learning-open .shoulder-model-workspace > .viewer-panel { min-height: 240px; flex: 1 0 240px; }
+.shoulder-tour-player { margin: 0 10px 8px; flex-shrink: 0; }
+.shoulder-model-workspace[data-tour-active='true'] .shoulder-view-controls,
+.shoulder-model-workspace[data-tour-active='true'] .shoulder-view-footer,
+.shoulder-model-workspace[data-tour-active='true'] .shoulder-heading-actions { display: none; }
+.shoulder-tour-player { min-width: 0; padding: .75rem; border: 1px solid var(--border); border-radius: .75rem; background: var(--background); font-size: .875rem; line-height: 1.45; }
+.shoulder-tour-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .25rem .75rem; }
+.shoulder-tour-heading span { color: var(--muted-foreground); font-size: .75rem; }
+.shoulder-tour-player > p { margin: .4rem 0; }
+.shoulder-tour-evidence { margin: .4rem 0 .6rem; font-size: .75rem; }
+.shoulder-tour-evidence summary { cursor: pointer; }
+.shoulder-tour-evidence ul { margin: .4rem 0; padding-left: 1.25rem; }
+.shoulder-tour-evidence a { text-decoration: underline; overflow-wrap: anywhere; }
+.shoulder-tour-evidence p { margin: .35rem 0; color: var(--muted-foreground); }
+.shoulder-tour-controls { display: flex; flex-wrap: wrap; gap: .35rem; }
+.shoulder-tour-controls button { min-height: 2.75rem; }
+@media (max-width: 420px) { .shoulder-tour-player { padding: .6rem; } .shoulder-tour-controls button { flex: 1 1 auto; } }

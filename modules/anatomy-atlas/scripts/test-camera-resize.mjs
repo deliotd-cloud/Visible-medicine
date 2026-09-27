@@ -57,7 +57,7 @@ function harness(orthographic, width = 390, height = 844) {
         useRef(value) { return refs[index++] ?? (refs[index - 1] = { current: value }); },
         useCallback: fn => fn, useEffect: fn => effects.push(fn),
       };
-      if (name === '@react-three/fiber') return { useThree: () => ({ camera, size, invalidate() {} }) };
+      if (name === '@react-three/fiber') return { useThree: () => ({ camera, size, invalidate() {} }), useFrame() {} };
       if (name === '@react-three/drei') return { OrbitControls: 'OrbitControls' };
       return require(name);
     },

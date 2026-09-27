@@ -1,7 +1,7 @@
 'use client';
 /* oxlint-disable react/react-compiler -- Three.js camera is an imperative external renderer, not React state. */
 import { useCallback, useEffect, useRef, type RefObject } from 'react';
-import { useThree } from '@react-three/fiber';
+import { useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import type { OrbitControls as Controls } from 'three-stdlib';
 import { Box3, Vector3, PerspectiveCamera, OrthographicCamera } from 'three';
@@ -15,6 +15,7 @@ import {
 import type { StudyCamera } from '@/lib/study-views';
 import { steppedCameraScale } from '@/lib/camera-zoom';
 import { bindCameraKeyboard, bindCameraPanKeyboard } from '@/lib/camera-keyboard';
+import { interpolateTourCamera, type TourCameraPose } from '@/lib/tour-camera';
 
 export function FittedCamera({
   bounds,
@@ -32,6 +33,8 @@ export function FittedCamera({
   cameraCapture,
   cameraRestore,
   onKeyboardRotate,
+  transitionMs = 0,
+  transitionPaused = false,
 }: {
   bounds: Box3;
   direction: number[];
@@ -49,9 +52,13 @@ export function FittedCamera({
   cameraCapture?: RefObject<StudyCamera | null>;
   cameraRestore?: RefObject<StudyCamera | null>;
   onKeyboardRotate?: (cameraFrom: Vector3, azimuth: number, polar: number) => void;
+  /** Opt-in guided tours only. Ordinary atlas camera behaviour stays immediate. */
+  transitionMs?: number;
+  transitionPaused?: boolean;
 }) {
   const { camera, size, invalidate, gl } = useThree();
   const controls = useRef<Controls>(null);
+  const transition = useRef<{ from: TourCameraPose; to: TourCameraPose; elapsed: number; duration: number } | null>(null);
   const previous = useRef<{
     key: string;
     bounds: Box3;
@@ -87,7 +94,28 @@ export function FittedCamera({
         size.width / Math.max(1, size.height),
       );
   }, [cameraCapture, camera, bounds, size.width, size.height]);
+  useFrame((_state, delta) => {
+    const motion = transition.current;
+    if (!motion || transitionPaused) return;
+    motion.elapsed += Math.min(delta, 0.05) * 1000;
+    const progress = Math.min(1, motion.elapsed / motion.duration);
+    const pose = interpolateTourCamera(motion.from, motion.to, progress);
+    camera.position.copy(pose.position);
+    camera.up.copy(pose.up);
+    camera.lookAt(pose.target);
+    controls.current?.target.copy(pose.target);
+    controls.current?.update();
+    capture();
+    if (progress === 1) transition.current = null;
+    else invalidate();
+  });
+  useEffect(() => { if (!transitionPaused) invalidate(); }, [transitionPaused, invalidate]);
   useEffect(() => {
+    const interruptedTransition = transition.current !== null;
+    transition.current = null;
+    const from = controls.current && previous.current ? {
+      position: camera.position.clone(), target: controls.current.target.clone(), up: camera.up.clone(),
+    } : null;
     // This component owns the orthographic frustum. Fiber's automatic resize
     // otherwise replaces its world-space extent with canvas pixels before this
     // effect, which is then mistaken for a user zoom and shrinks the anatomy.
@@ -125,7 +153,9 @@ export function FittedCamera({
       invalidate();
       return;
     }
-    const isPreset = previous.current?.key !== key;
+    // Resize or reduced-motion changes must still arrive at the selected preset,
+    // not accidentally adopt an intermediate animated orbit as the new view.
+    const isPreset = previous.current?.key !== key || interruptedTransition;
     const isRecenter = previous.current?.recenterKey !== recenterKey;
     const orbit =
       !isPreset && controls.current
@@ -218,6 +248,19 @@ export function FittedCamera({
       // region. Later orbit/zoom/resize and legacy saves retain that pan/scale.
       center: fit.center,
     };
+    if (from && transitionMs > 0 && camera instanceof PerspectiveCamera && isPreset) {
+      transition.current = {
+        from,
+        to: { position: camera.position.clone(), target: target.clone(), up: camera.up.clone() },
+        elapsed: 0,
+        duration: transitionMs,
+      };
+      camera.position.copy(from.position);
+      camera.up.copy(from.up);
+      camera.lookAt(from.target);
+      controls.current?.target.copy(from.target);
+      controls.current?.update();
+    }
     capture();
     invalidate();
   }, [
@@ -244,6 +287,7 @@ export function FittedCamera({
     horizontalFill,
     verticalFill,
     presetBounds,
+    transitionMs,
   ]);
   useEffect(() => {
     if (!gl?.domElement || locked) return;
