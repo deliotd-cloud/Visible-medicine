@@ -1243,6 +1243,8 @@ export default function BodyExplorer({
   function resetView() {
     cameraRestore.current = null;
     setRegionalFraming(true);
+    setShowOrigins(false);
+    setAnchorSkeleton(false);
     setLayout('spatial');
     setInspection(initialInspection);
     setPlate(false);
@@ -2043,13 +2045,13 @@ export default function BodyExplorer({
                   variant="ghost"
                   aria-label="Reset camera, layout, cutaway, focus, isolation, and separation"
                   aria-describedby="reset-view-help"
-                  title="Restore the default view. System visibility and removed structures are preserved."
+                  title="Reset view and separation options. System visibility and removed structures are preserved."
                   onClick={resetView}
                 >
                   <RotateCcw />
                 </Button>
                 <span id="reset-view-help" className="sr-only">
-                  System visibility and removed structures remain unchanged.
+                  Original-position guides and bone pinning are reset. System visibility and removed structures remain unchanged.
                 </span>
               </div>
               <div className="body-canvas-caption">

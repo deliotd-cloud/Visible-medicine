@@ -15,7 +15,7 @@ test('regional selection return delivers the verified source without changing mo
  const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
  for(const [path,sha256]of [
   ['app/atlas-workspace.tsx','6ead6f8f9221666d3f6517e00220b2ecd4533746085674fbd13ae79463f64c46'],
-  ['app/body-explorer.tsx','8d2a95f39f61db6660745fedbe2dd52fc8df16d497cfc0e6d390b8d2be5491c5'],
+  ['app/body-explorer.tsx','fedfd83496638c6e6420b938edc86ad7ef9b7b2c7e1666c824abe4720a56eb83'],
   ['app/workspace-session.ts','7a2a73775b9eebebc50df257cc520f2f33499ebb7130f496a4b2cdfb46fc379a'],
  ])assert.deepEqual(inputs.filter(i=>i.path===path),[{path,sha256}]);
  assert.equal(inventory.models.length,136);

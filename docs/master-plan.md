@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+27 September Reset separation fix delivered locally: learner and Clinical Review
+use Atlas `9cea189`. Reset clears guides/bone pinning and restores regional framing,
+preserving systems and removed tissue. Integration checks, builds, TypeScript and
+desktop/mobile learner checks pass; protected review model loads. All geometry,
+teaching and decisions unchanged. See `docs/atlas-reset-separation-delivery-20260927.md`.
+No public release or clinical approval. Resume substantive Atlas work; this fix
+and its website delivery are complete.
+
 27 September shoulder arterial CT delivered locally: learner and Clinical Review
 use Atlas `0ff5e51`, adding eight source-bound CT/CTA drafts with references and
 patient-imaging limitations. All 136 models, twelve regional scopes, access

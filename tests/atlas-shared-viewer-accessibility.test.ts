@@ -8,12 +8,12 @@ const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
 
 test('shared viewer binds reset wording and keyboard-only orientation status to exact Atlas source',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'cd0153780348320b65287d48618d1281bcdad8e68c03fc418231ce605d708467');
+  assert.equal(sha(manifestBytes),'3d64d5023d2a6702ffad7cbebb3cce3d37b96399dcc44e976f095fad83cc0588');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'0ff5e51a5fb9e6b660a16d1531da5c92a74317c2');
+  assert.equal(manifest.sourceCommit,'9cea1892eaf33f9ee0655e4ecc03e50037844536');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,expected] of Object.entries({
-    'app/body-explorer.tsx':'8d2a95f39f61db6660745fedbe2dd52fc8df16d497cfc0e6d390b8d2be5491c5',
+    'app/body-explorer.tsx':'fedfd83496638c6e6420b938edc86ad7ef9b7b2c7e1666c824abe4720a56eb83',
     'app/body-scene.tsx':'7117993fb76445f522d303c664fb5405ac07344f5e255906e2ee47640dc4acbc',
     'app/fitted-camera.tsx':'8621b76137dc18b1200cffb5fc79a0e38d55bb95d933978e7d73e43727850a49',
     'lib/camera-keyboard.ts':'9a0a095306c6687ca7fd568570c7a66363566ac3a70f2916bc1e8f74aa405220',
@@ -30,7 +30,7 @@ test('shared viewer binds reset wording and keyboard-only orientation status to 
   assert.ok(explorer.includes('"aria-label":`Reset camera, layout, cutaway, focus, isolation, and separation`'));
   assert.ok(explorer.includes('"aria-describedby":`reset-view-help`'));
   assert.ok(explorer.includes('System visibility and removed structures are preserved.'));
-  assert.ok(explorer.includes('id:`reset-view-help`,className:`sr-only`,children:`System visibility and removed structures remain unchanged.`'));
+  assert.ok(explorer.includes('id:`reset-view-help`,className:`sr-only`,children:`Original-position guides and bone pinning are reset. System visibility and removed structures remain unchanged.`'));
 
   const scene=script('body-scene');
   assert.ok(scene.includes('className:`anatomy-live-orientation`,"aria-live":`off`'));
