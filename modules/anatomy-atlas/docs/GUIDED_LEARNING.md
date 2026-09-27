@@ -1,5 +1,27 @@
 # Agent-authored guided learning
 
+## Coeliac branch orientation — 27 September
+
+Abdomen Guided learning now offers five selected artery stops: coeliac trunk,
+left gastric, splenic, common hepatic and hepatic artery proper. The abdominal
+aorta is faded context, not an additional stop or a complete abdominal vascular
+map. Framing is the union of the five targets rather than the full aorta.
+
+The existing source-bound `celiac-display-corrected` bundle is required; missing
+or archived duplicate display bindings fail closed. Other targets retain their
+`abdomen-vessels-recovery` geometry. No new triangles, inferred connections,
+licences or images. BodyParts3D attribution stays visible. The six structures
+and two actual display bundles are included in teaching review evidence.
+
+Captions are original summaries referencing TTUHSC stomach/duodenum tables;
+the tour qualifies the usual branching pattern and excludes blood flow,
+continuous lumen, patency, calibre, procedural use and patient registration.
+It shows neither the organs nor all downstream branches. Existing modality
+notes follow each exact selected structure; incomplete content is not relabelled
+as complete. Radiologist review must inspect branch identity, spatial relations,
+source omissions, fine-surface legibility, transitions and teaching before sign-off.
+Source-only until generated website/review import; no deployment implied.
+
 ## Cervical spine expansion — 27 September
 
 The spine library now offers **Cervical spine: C1 to T1**, five manual/playable

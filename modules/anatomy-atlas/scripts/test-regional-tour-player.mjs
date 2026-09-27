@@ -10,7 +10,7 @@ const require = createRequire(import.meta.url), React = require('react');
 const catalog = JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json', import.meta.url), 'utf8'));
 const catalogBefore = JSON.stringify(catalog);
 const built = await build({ stdin: {
-  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, cervicalSpineTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
+  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, cervicalSpineTour, celiacTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
   loader: 'tsx', resolveDir: process.cwd(),
 }, bundle: true, write: false, format: 'cjs', platform: 'node', loader: { '.css': 'empty' }, plugins: [{ name: 'gpu-boundary', setup(api) {
   api.onLoad({ filter: /[\\/]app[\\/]body-scene\.tsx$/ }, () => ({ loader: 'tsx', contents: 'export function BodyScene(){return null;}' }));
@@ -36,7 +36,7 @@ function harness(source = catalog, tourName = 'thoraxTour') {
   const mod = { exports: {} };
   runInNewContext(built.outputFiles[0].text, { module: mod, exports: mod.exports, window: win, document: doc, structuredClone,
     require(id) { if (id === 'react') return shim; if (id === 'next/dynamic') return () => 'BodyScene'; return require(id); } });
-  const api = mod.exports, props = { catalog: source, tour: api[tourName], assetBase: '/atlas-runtime/head-neck', onExit() { exits++; } };
+  const api = mod.exports, props = { catalog: api.bodyDisplayCatalog(source), tour: api[tourName], assetBase: '/atlas-runtime/head-neck', onExit() { exits++; } };
   const tourBefore = JSON.stringify(props.tour);
   function render() { let count = 0; do { dirty = false; cursor = 0; pending = []; tree = api.RegionalGuidedLearning(props); for (const effect of pending) effect(); assert(++count < 15); } while (dirty); return tree; }
   function find(predicate) { const matches = nodes(tree).filter(predicate); assert.equal(matches.length, 1); return matches[0].props; }
@@ -67,6 +67,24 @@ test('Cervical tour runs all five exact steps with fixed framing and its own lim
   }
   h.click('Back');assert.equal(h.scene().selectedId,h.props.tour.steps[3].selectedId);
   h.click('Play');h.tick();h.tick();assert.equal(h.timers.size,0);
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
+});
+
+test('Coeliac tour uses the corrected display and waits for both exact bundles', () => {
+  const h=harness(catalog,'celiacTour');
+  assert.equal(h.scene().structures.length,6);
+  assert.equal(h.scene().structures.find(s=>s.id===h.props.tour.steps[0].selectedId).bundle,'celiac-display-corrected');
+  assert.match(text(h.tree()),/Branching patterns vary/);
+  h.scene().onRendererHealth('ready');h.scene().onLoaded('abdomen-vessels-recovery');h.render();
+  assert.equal(h.button('Start guided tour').disabled,true,'Archived vascular bundle does not satisfy corrected display');
+  h.scene().onLoaded('celiac-display-corrected');h.render();h.click('Start guided tour');
+  const frame=plain(h.scene().presetBounds);
+  for(let i=0;i<5;i++){
+    assert.equal(h.scene().selectedId,h.props.tour.steps[i].selectedId);
+    assert.deepEqual(plain(h.scene().presetBounds),frame);
+    assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);
+    if(i<4)h.click('Next');
+  }
   h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
 });
 

@@ -14,8 +14,15 @@ assert.equal(cervical.length,8);assert.equal(api.cervicalSpineTour.steps.length,
 assert.equal(new Set(cervical.map(s=>s.bundle)).size,1);
 assert.equal(api.regionalTourFor('spine').id,api.cervicalSpineTour.id);
 assert.equal(api.regionalTourFor('head-neck'),null,'Do not silently duplicate a spine tour in another regional scope');
-const oldTours=await compile(execFileSync('git',['show','2d2f2b8:lib/regional-tours.ts'],{encoding:'utf8'}).replaceAll("from './","from './lib/"));
+const abdominal=api.regionalTourStructures(api.catalog,api.celiacTour);
+assert.equal(abdominal.length,6);assert.equal(api.celiacTour.steps.length,5);
+assert.equal(api.regionalTourFor('abdomen').id,api.celiacTour.id);
+const celiac=abdominal.find(s=>s.id===api.celiacTour.steps[0].selectedId);
+assert.equal(celiac.bundle,'celiac-display-corrected');
+assert.equal(new Set(abdominal.map(s=>s.bundle)).size,2);
+const oldTours=await compile(execFileSync('git',['show','edca765:lib/regional-tours.ts'],{encoding:'utf8'}).replaceAll("from './","from './lib/"));
 assert.deepEqual(api.regionalTourEvidence(api.catalog,selected[0].id),oldTours.regionalTourEvidence(api.catalog,selected[0].id),'Existing thorax evidence unchanged');
+assert.deepEqual(api.regionalTourEvidence(api.catalog,cervical[0].id),oldTours.regionalTourEvidence(api.catalog,cervical[0].id),'Existing cervical evidence unchanged');
 let checked=0;
 for(const s of api.catalog.structures){
  const m=await api.bodyReviewMaterial(s.id),c=await api.bodyReviewContext(s.id);
@@ -27,12 +34,12 @@ for(const s of api.catalog.structures){
  if(tours.length){
   assert.equal(m.guidedTours.length,1);assert.notEqual(m.fingerprints.teaching,previous);
   assert(c.checklists.teaching.some(v=>v.id==='guided-tour'));
-  assert.equal(m.guidedTours[0].structures.length,8);
+  assert.equal(m.guidedTours[0].structures.length,api.regionalTourStructures(api.catalog,tours[0]).length);
   assert.equal(m.guidedTours[0].tour.steps.length,tours[0].steps.length);checked++;
  }else{assert.equal(m.guidedTours.length,0);assert.equal(m.fingerprints.teaching,previous,'Unrelated teaching history retained');assert(!c.checklists.teaching.some(v=>v.id==='guided-tour'));}
  assert.equal(c.revisions.imaging,null);
 }
-assert.equal(checked,16);
+assert.equal(checked,22);
 const sample=await api.bodyReviewMaterial(selected[0].id);
 for(const mutate of [p=>delete p.guidedTours,p=>p.guidedTours=[],p=>p.guidedTours.push(structuredClone(p.guidedTours[0])),p=>p.schema='vm-body-review-worksheet-2',p=>p.guidedTours[0].tour.steps[0].references=['javascript:alert(1)'],p=>p.guidedTours[0].tour.steps[0].selectedId='missing',p=>p.guidedTours[0].structures[0].sources[0].sha256='0'.repeat(64),p=>p.guidedTours[0].transitionMs=0,p=>p.guidedTours[0].tour.steps[0].durationMs=-1]){
  const p=structuredClone(sample);mutate(p);assert.equal(api.parseBodyReviewResponse(p,selected[0].id),null);
@@ -44,4 +51,12 @@ const spinePacket=await api.bodyReviewMaterial(cervical[0].id);
 for(const mutate of [p=>p.guidedTours[0].tour.limitations='Approved',p=>p.guidedTours[0].limitations='Approved',p=>p.guidedTours[0].tour.contextIds=[],p=>p.guidedTours[0].tour.steps.reverse()]){
  const p=structuredClone(spinePacket);mutate(p);assert.equal(api.parseBodyReviewResponse(p,cervical[0].id),null);
 }
-console.log(JSON.stringify({reviewed:api.catalog.structures.length,tourBound:checked,otherTeachingUnchanged:api.catalog.structures.length-checked,priorThoraxEvidenceUnchanged:true,invalidPacketsRejected:13,missingSourcesRejected:16}));
+for(const s of abdominal) {const missing={...api.catalog,structures:api.catalog.structures.filter(v=>v.id!==s.id)};assert.throws(()=>api.regionalTourStructures(missing,api.celiacTour));}
+const wrongDisplay=structuredClone(api.catalog);wrongDisplay.structures.find(s=>s.id===celiac.id).bundle='abdomen-vessels-recovery';
+assert.throws(()=>api.regionalTourStructures(wrongDisplay,api.celiacTour),'Never fall back to archived duplicate geometry');
+const missingDisplay={...api.catalog,bundles:api.catalog.bundles.filter(b=>b.id!==celiac.bundle)};
+assert.throws(()=>api.regionalTourStructures(missingDisplay,api.celiacTour));
+const abdominalPacket=await api.bodyReviewMaterial(celiac.id);
+const tampered=structuredClone(abdominalPacket);delete tampered.guidedTours[0].tour.requiredDisplayBundles;
+assert.equal(api.parseBodyReviewResponse(tampered,celiac.id),null);
+console.log(JSON.stringify({reviewed:api.catalog.structures.length,tourBound:checked,otherTeachingUnchanged:api.catalog.structures.length-checked,priorTourEvidenceUnchanged:true,invalidPacketsRejected:14,missingSourcesRejected:22,wrongOrMissingDisplayRejected:2}));
