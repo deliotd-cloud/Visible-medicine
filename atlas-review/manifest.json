@@ -1,5 +1,5 @@
 {
-  "revision": "5ef14b7fc7d06d998884b6e027e60f3349113acc",
+  "revision": "84f18150a8a3f5ee4da6f0f20442b8502469ec25",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2523,8 +2523,8 @@
     },
     {
       "path": "lib/regional-tours.ts",
-      "sourceSha256": "7e7cba3dab468a5ea215ee4dd93a4fcbaf3bc194e802a8cccf52c090db3d0987",
-      "importedSha256": "7e7cba3dab468a5ea215ee4dd93a4fcbaf3bc194e802a8cccf52c090db3d0987"
+      "sourceSha256": "a1172b3e9445365716bf7046a81c52ff7d5547feb87137bc487c14488653cf06",
+      "importedSha256": "a1172b3e9445365716bf7046a81c52ff7d5547feb87137bc487c14488653cf06"
     },
     {
       "path": "lib/selection-visibility.ts",
@@ -2653,8 +2653,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "87b34b4f2b93feede3ce4d6c1a1bd802874fbb09f94687092c7241d288c2a0cc",
-      "importedSha256": "b3c642a204971d7205b79ac122c705467a7a00645568292d905d309545d85d75"
+      "sourceSha256": "ecabdd8d4ab019d35782564616e7fd5923b5bad9c9599aa264eb524556a55cf3",
+      "importedSha256": "569173324913680feb73fc37e0074d661a443dbfc567b66e3e57ff9d90c3a3ec"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -2944,7 +2944,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "3ee3dbc5a7047940f233bc7d7af118ef137a60177868016916371784fb895154",
-      "importedSha256": "ab35629ce45190e4acdb66c163ca6e3e4b9aae62ec648ebb1048da83bc841a38"
+      "importedSha256": "3c9cd7f2835036b6c1e377d7e1d3baf4885497344032464b90ba3db62fb9d898"
     },
     {
       "path": "app/review/review.css",
@@ -2968,8 +2968,8 @@
     },
     {
       "path": "lib/body-review-response.ts",
-      "sourceSha256": "5ea6a63186fe23b24f87580d835e51781b96d10404597cdcd89d27deac15b46f",
-      "importedSha256": "5ea6a63186fe23b24f87580d835e51781b96d10404597cdcd89d27deac15b46f"
+      "sourceSha256": "cc7dd49743bd0166a08274e5e98dd584255f5b5b4c9f1ddd39893e715018d964",
+      "importedSha256": "cc7dd49743bd0166a08274e5e98dd584255f5b5b4c9f1ddd39893e715018d964"
     },
     {
       "path": "app/review/body/body-decision-editor.tsx",
@@ -4333,5 +4333,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "5d12d8d806722915b60b3f228fdd6846c1c9b3e40672decf5ada57565e65ec58"
+  "websiteIntegrationSha256": "7cfe02c94a636de20fc09a1ff72b9242dca307e4c022c4a2b6a9365af178badb"
 }

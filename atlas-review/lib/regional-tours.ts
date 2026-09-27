@@ -92,7 +92,58 @@ export const forearmTour: RegionalTour = {
     forearmStep('pronator-quadratus','Pronator quadratus · Distal close-up','anterior','Finish with a close-up of pronator quadratus, deep in the distal anterior forearm between ulna and radius. It contributes to pronation. Nearby context may extend beyond this frame; no nerve course is depicted.'),
   ],
 };
-export const regionalTours=[thoraxTour,cervicalSpineTour,celiacTour,forearmTour];
+const limbId=(region:string,kind:string,name:string)=>`vm:anatomy:body:${region}:right:${kind}:${name}`;
+const limbStep=(region:string,name:string,title:string,view:DissectionView,caption:string,reference:string)=>({
+  id:name,title,selectedId:limbId(region,'muscle',name),view,caption,
+  references:[reference],durationMs:14000,fadeOthers:true,
+  frameIds:[limbId(region,'muscle',name)],
+});
+const topographyReference='https://anatomy.ttuhscep.edu/anatomytables/topogr_alpha.html';
+const legReference='https://anatomy.ttuhscep.edu/schemes/leg_tables.html';
+const handReference='https://anatomy.ttuhscep.edu/musculoskeletal_system/hand_tables.html';
+export const thighTour: RegionalTour = {
+  id:'right-thigh-muscle-orientation',title:'Right thigh: muscle orientation',region:'thigh',
+  revision:'right-thigh-muscle-orientation-v1',status:'draft',
+  description:'Five selected muscle surfaces around the femur: anterior, medial and posterior orientation with gentle camera sweeps.',
+  limitations:'Selected right-sided surfaces only, not complete compartments or fascial dissection planes. The short head of biceps femoris, pelvic attachments, knee complex, nerves and vessels are outside this tour. Tendon continuity and attachment detail need source review. No simulated motion, acquired imaging or patient registration. Draft pending radiologist review.',
+  contextIds:[limbId('thigh','bone','right-femur')],
+  steps:[
+    limbStep('thigh','right-rectus-femoris','Rectus femoris · Anterior','anterior','Start with rectus femoris in the anterior quadriceps group. The femur remains faded behind it. This is one selected muscle, not the whole quadriceps or its complete attachment system.',topographyReference),
+    limbStep('thigh','right-vastus-lateralis','Vastus lateralis · Lateral view','right','Sweep towards the anatomical right to find vastus lateralis. Although lateral in position, it belongs to the anterior quadriceps group. Compare its surface with rectus femoris and the femur.',topographyReference),
+    limbStep('thigh','right-adductor-longus','Adductor longus · Medial','left','Move to the medial side of this right thigh. Adductor longus belongs to the medial adductor group. Fading reveals the supplied surface; it does not open a real fascial compartment.',topographyReference),
+    limbStep('thigh','long-head-of-right-biceps-femoris','Biceps femoris · Long head','posterior','Turn posteriorly to the long head of biceps femoris, on the lateral hamstring side. Only the long head is highlighted; the separate short head is not included in this tour.',topographyReference),
+    limbStep('thigh','right-semitendinosus','Semitendinosus · Posteromedial','posterior','Finish on semitendinosus, a medial hamstring. Compare its position with the faded long head of biceps femoris. The tour does not show all boundaries or contents of the popliteal fossa.',topographyReference),
+  ],
+};
+export const legTour: RegionalTour = {
+  id:'right-leg-muscle-orientation',title:'Right leg: muscle orientation',region:'leg',
+  revision:'right-leg-muscle-orientation-v1',status:'draft',
+  description:'Travel from anterior muscles to the lateral and posterior leg, with tibia and fibula as faded landmarks.',
+  limitations:'Selected right-sided muscle surfaces, not complete compartments or verified fascial planes. Gastrocnemius, nerves, vessels and the full foot skeleton are not included. Surface visibility does not establish tendon continuity or precise insertions. No simulated contraction, acquired imaging or patient registration. Draft pending radiologist review.',
+  contextIds:['right-tibia','right-fibula'].map(name=>limbId('leg','bone',name)),
+  steps:[
+    limbStep('leg','right-tibialis-anterior','Tibialis anterior · Anterior','anterior','Begin in the anterior leg beside the faded tibia. Tibialis anterior contributes to ankle dorsiflexion and foot inversion. Use the bones for orientation without assuming the entire tendon insertion is demonstrated.',legReference),
+    limbStep('leg','right-extensor-digitorum-longus','Extensor digitorum longus','anterior','Identify another anterior muscle, extensor digitorum longus. It extends the lateral four toes and assists dorsiflexion. The selected surface is not a complete digital tendon map.',legReference),
+    limbStep('leg','right-fibularis-longus','Fibularis longus · Lateral','right','Sweep to the lateral side and locate fibularis longus near the fibula. It contributes to eversion and plantarflexion. The foot and the complete plantar tendon route are outside this tour.',legReference),
+    limbStep('leg','right-soleus','Soleus · Posterior','posterior','Move behind the leg to soleus, a plantarflexor in the superficial posterior compartment. Superficial compartment does not mean the outermost muscle: gastrocnemius, which normally overlies it, is not shown here.',legReference),
+    limbStep('leg','right-tibialis-posterior','Tibialis posterior · Deep posterior','posterior','Finish with tibialis posterior in the deep posterior group. It assists inversion and plantarflexion. The other surfaces fade to reveal this target; this visibility change is not a surgical dissection plane.',legReference),
+  ],
+};
+export const handTour: RegionalTour = {
+  id:'right-hand-muscle-orientation',title:'Right hand: thenar to hypothenar',region:'hand',
+  revision:'right-hand-muscle-orientation-v1',status:'draft',
+  description:'Five close-up stops from thumb-side to little-finger-side intrinsic muscles. First and fifth metacarpals stay as faded context.',
+  limitations:'Selected right-hand intrinsic surfaces only, not the complete thenar group or palm. No lumbricals, interossei, full digital skeleton, fascial spaces or neurovascular courses are demonstrated. Small surfaces and attachments need source review. Fading is not physical tissue removal. No animated opposition, acquired imaging or patient registration. Draft pending radiologist review.',
+  contextIds:['right-first-metacarpal-bone','right-fifth-metacarpal-bone'].map(name=>limbId('hand','bone',name)),
+  steps:[
+    limbStep('hand','right-abductor-pollicis-brevis','Abductor pollicis brevis · Thenar','anterior','Begin on the palmar thumb side with abductor pollicis brevis. This thenar muscle abducts the thumb. The faded first metacarpal provides context while the camera frames the smaller muscle surface.',handReference),
+    limbStep('hand','right-opponens-pollicis','Opponens pollicis · Deep thenar','anterior','Look deeper in the thenar group for opponens pollicis beside the first metacarpal. Its action contributes to thumb opposition. This static model does not animate the movement or establish complete attachments.',handReference),
+    limbStep('hand','abductor-digiti-minimi-of-right-hand','Abductor digiti minimi · Hypothenar','anterior','Cross to the little-finger side and identify abductor digiti minimi of the hand. It abducts the fifth digit. The fifth metacarpal now provides the local bony landmark.',handReference),
+    limbStep('hand','flexor-digiti-minimi-brevis-of-right-hand','Flexor digiti minimi brevis','anterior','Compare the neighbouring hypothenar flexor digiti minimi brevis. It contributes to little-finger flexion. Keep the selected surface distinct from the adjacent abductor; the complete finger skeleton is not included.',handReference),
+    limbStep('hand','opponens-digiti-minimi-of-right-hand','Opponens digiti minimi','anterior','Finish with opponens digiti minimi alongside the fifth metacarpal. It contributes to opposition on the little-finger side. Fading exposes the small supplied surface, not an intact palmar fascial space.',handReference),
+  ],
+};
+export const regionalTours=[thoraxTour,cervicalSpineTour,celiacTour,forearmTour,thighTour,legTour,handTour];
 export const regionalTourFor=(region:string)=>regionalTours.find(t=>t.region===region)??null;
 export const regionalTourLimitations=(tour:RegionalTour)=>tour.limitations??'Selected exterior source surfaces only; no complete lumen, bronchial tree, surgical plane, acquired imaging or spatial registration. Draft pending radiologist review.';
 

@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { build } from 'esbuild';
 
-test('thoracic, cervical, coeliac and forearm tours ship complete source-bound review evidence', async () => {
+test('all seven regional tours ship complete source-bound review evidence', async () => {
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const base='public/atlas-runtime/head-neck/';
   const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
@@ -32,8 +32,15 @@ test('thoracic, cervical, coeliac and forearm tours ship complete source-bound r
   assert.equal(api.forearmTour.status,'draft');assert.equal(api.forearmTour.steps.length,5);
   assert.equal(api.regionalTourFor('forearm').id,'right-forearm-muscle-orientation');
   assert.equal(api.forearmTour.revision,'right-forearm-muscle-orientation-v1');
-  for(const tour of [api.thoraxTour,api.cervicalSpineTour,api.celiacTour,api.forearmTour]) {
-  const count=tour===api.forearmTour?7:tour===api.celiacTour?6:8;
+  for(const region of ['thigh','leg','hand']) {
+    const tour=api[region+'Tour'];
+    assert.equal(tour.status,'draft');assert.equal(tour.steps.length,5);
+    assert.equal(api.regionalTourFor(region).id,'right-'+region+'-muscle-orientation');
+    assert.equal(tour.revision,tour.id+'-v1');
+  }
+  assert.equal(api.regionalTours.length,7);
+  for(const tour of api.regionalTours) {
+  const count=({thorax:8,spine:8,abdomen:6,forearm:7,thigh:6,leg:7,hand:7} as Record<string,number>)[tour.region];
   const ids=new Set([...tour.contextIds,...tour.steps.map((s:any)=>s.selectedId)]);
   assert.equal(ids.size,count);
   for(const id of ids) {
@@ -53,6 +60,9 @@ test('thoracic, cervical, coeliac and forearm tours ship complete source-bound r
       (p:any)=>{p.guidedTours[0].tour.steps[0].caption='Changed unreviewed caption';},
       (p:any)=>{p.schema='vm-body-review-worksheet-2';},
       (p:any)=>{p.guidedTours[0].limitations='Approved';},
+      (p:any)=>{p.guidedTours[0].structures.find((s:any)=>s.id!==id).sources[0].sha256='0'.repeat(64);},
+      (p:any)=>{p.guidedTours[0].structures.find((s:any)=>s.id!==id).bounds.min[0]-=1;},
+      (p:any)=>{p.guidedTours[0].sourceVersion+='-altered';},
     ]) {const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,id),null);}
     if(tour===api.celiacTour) {
       const evidence=packet.guidedTours[0];
@@ -65,10 +75,12 @@ test('thoracic, cervical, coeliac and forearm tours ship complete source-bound r
         (p:any)=>{delete p.guidedTours[0].tour.requiredDisplayBundles;},
       ]) {const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,id),null);}
     }
-    if(tour===api.forearmTour) {
+    if(['forearm','thigh','leg','hand'].includes(tour.region)) {
       const evidence=packet.guidedTours[0];
       assert.ok(evidence.structures.every((s:any)=>s.laterality==='right'));
-      assert.deepEqual(evidence.bundles.map((b:any)=>b.id).sort(),['forearm-muscles','forearm-skeleton']);
+      assert.deepEqual(evidence.bundles.map((b:any)=>b.id).sort(),[
+        tour.region+'-muscles',...(tour.region==='thigh'?['thigh-muscles-dissection']:[]),tour.region+'-skeleton',
+      ]);
       assert.equal(evidence.stepFrames.length,5);
       for(const step of evidence.tour.steps)assert.deepEqual(step.frameIds,[step.selectedId]);
       for(const mutate of [
@@ -81,6 +93,7 @@ test('thoracic, cervical, coeliac and forearm tours ship complete source-bound r
   }
   }
   const js=learner.files.filter((f:any)=>f.path.endsWith('.js')).map((f:any)=>readFileSync(base+f.path,'utf8')).join('\n');
+  for(const region of ['thigh','leg','hand'])assert.ok(js.includes('right-'+region+'-muscle-orientation-v1'));
   for(const label of ['Cervical spine: C1 to T1','cervical-spine-orientation','C7 · Vertebra prominens','Coeliac trunk & branches','celiac-branches-orientation-v2','Right forearm: muscle orientation','right-forearm-muscle-orientation-v1','Pronator quadratus · Distal close-up']) assert.ok(js.includes(label),label);
   assert.ok(readFileSync('atlas-review/app/review/body/review-dashboard.tsx','utf8').includes('{evidence.tour.region} learner'));
   assert.ok(readFileSync('atlas-review/app/review/body/review-dashboard.tsx','utf8').includes('Camera close-up:'));

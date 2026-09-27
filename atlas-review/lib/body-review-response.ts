@@ -1,7 +1,22 @@
 import type { BodyReviewMaterial } from './body-review-material';
 import type { BodyCatalog, BodyStructure } from '../app/body-types';
 import { validBodyPresentationParts } from './body-presentation-parts';
-import { regionalTours, regionalTourLimitations, regionalTourStepFrames } from './regional-tours';
+import { regionalTours, regionalTourLimitations, regionalTourStepFrames, regionalTourEvidence } from './regional-tours';
+import rawCatalog from '../public/models/bodyparts3d/full-body/catalog.json';
+import { bodyDisplayCatalog } from './body-display-catalog';
+
+// Resolve once from this build's trusted catalogue, never from a response packet.
+// Every visible context surface and bundle is material to clinical review.
+let trustedTourPackets: Map<string,string> | undefined;
+function trustedTourPacket(id:string):string|undefined {
+  if(!trustedTourPackets){
+    const catalog=bodyDisplayCatalog(rawCatalog as unknown as BodyCatalog);
+    trustedTourPackets=new Map(regionalTours.map(t=>[
+      t.id,JSON.stringify(regionalTourEvidence(catalog,t.steps[0].selectedId).find(e=>e.tour.id===t.id)),
+    ]));
+  }
+  return trustedTourPackets.get(id);
+}
 const object = (v: unknown): v is Record<string, unknown> =>
   !!v && typeof v === 'object' && !Array.isArray(v);
 const strings = (v: unknown): v is string[] =>
@@ -65,6 +80,7 @@ function validTours(value:unknown,source:Record<string,unknown>):boolean {
     const t=e.tour,structures=e.structures,bundles=e.bundles;
     const definition=expected.find(item=>item.id===t.id);
     if(!definition||JSON.stringify(t)!==JSON.stringify(definition))return false;
+    if(JSON.stringify(e)!==trustedTourPacket(definition.id))return false;
     if(e.limitations!==regionalTourLimitations(definition))return false;
     if(!token(t.id)||!token(t.revision)||!token(t.region)||!text(t.title)||!text(t.description)||t.status!=='draft'||
       !strings(t.contextIds)||!Array.isArray(t.steps)||!t.steps.length||t.steps.length>30)return false;

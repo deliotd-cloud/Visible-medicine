@@ -1,5 +1,14 @@
 # Visible Medicine — shared delivery plan
 
+27 September integrated locally: three right-sided guided tours for
+thigh, leg and hand from Atlas `84f1815`, five stops each. Full source context is
+bound to clinical review; parser rejects altered nonselected evidence as well
+as selected anatomy.164 step/modality bindings; unchanged model bytes, access
+and independent specimen pins.109 website checks and production build pass.
+Drafts only, no publication. Final visual acceptance
+and backup evidence: coordination `work/LIMB-TOURS-CHECKPOINT-20260927.md`.
+See `docs/limb-guided-learning-delivery-20260927.md`; do not repeat native MRI.
+
 27 September right-forearm Guided learning imported locally from Atlas `5ef14b7`:
 five muscle stops, exact radius/ulna context, distal close-up and complete draft
 review evidence. Step changes are announced with collapsed mobile teaching;
