@@ -43,7 +43,7 @@ for (const selected of whole.surfaces) {
   lesson.extended.topics.clinical.body = 'mutated';
   same(specimenTeachingFor(whole, selected).extended, extended);
 }
-same(counts, { clinical: 65, pathology: 65, ct: 11, mri: 35, xray: 31, ultrasound: 21 });
+same(counts, { clinical: 65, pathology: 65, ct: 11, mri: 36, xray: 31, ultrasound: 27 });
 const hipTopics = {
   femur: ['clinical', 'pathology', 'xray', 'ct', 'mri'],
   'femoral-head-cartilage': ['clinical', 'pathology', 'xray'],
@@ -63,10 +63,10 @@ for (const [slug, topics] of Object.entries(hipTopics)) {
   same(Object.values(limbDefinitions).some(def => def.key.endsWith(':hip-thigh') && def.surfaces.some(s => s.slug === slug)), true);
 }
 const calfFootTopics = {
-  'extensor-digitorum-longus': [], 'extensor-hallucis-longus': [],
-  'peroneus-longus': ['mri', 'ultrasound'], 'flexor-digitorum-longus': [], 'flexor-hallucis-longus': [],
-  popliteus: ['mri'], soleus: ['mri', 'ultrasound'], 'tibialis-anterior': [],
-  'tibialis-posterior': ['mri', 'xray'], 'gastrocnemius-medial': ['ultrasound'], 'gastrocnemius-lateral': [],
+  'extensor-digitorum-longus': ['ultrasound'], 'extensor-hallucis-longus': ['ultrasound'],
+  'peroneus-longus': ['mri', 'ultrasound'], 'flexor-digitorum-longus': ['ultrasound'], 'flexor-hallucis-longus': ['ultrasound'],
+  popliteus: ['mri'], soleus: ['mri', 'ultrasound'], 'tibialis-anterior': ['mri', 'ultrasound'],
+  'tibialis-posterior': ['mri', 'xray', 'ultrasound'], 'gastrocnemius-medial': ['ultrasound'], 'gastrocnemius-lateral': [],
   'abductor-hallucis': [], 'abductor-digiti-minimi': ['mri'], 'flexor-digitorum-brevis': [],
   'quadratus-plantae': [], 'extensor-digitorum-brevis': [],
 };
