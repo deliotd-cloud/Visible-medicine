@@ -68,7 +68,8 @@ function validTours(value:unknown,source:Record<string,unknown>):boolean {
     if(e.limitations!==regionalTourLimitations(definition))return false;
     if(!token(t.id)||!token(t.revision)||!token(t.region)||!text(t.title)||!text(t.description)||t.status!=='draft'||
       !strings(t.contextIds)||!Array.isArray(t.steps)||!t.steps.length||t.steps.length>30)return false;
-    if(!structures.every(s=>object(s)&&text(s.id)&&text(s.name)&&token(s.bundle)&&sourceParts(s.sources))||
+    if(!structures.every(s=>object(s)&&text(s.id)&&text(s.name)&&token(s.bundle)&&sourceParts(s.sources)&&
+      typeof s.laterality==='string'&&sides.includes(s.laterality)&&s.id.split(':')[4]===s.laterality)||
       new Set(structures.map(s=>s.id)).size!==structures.length||
       !bundles.every(b=>object(b)&&token(b.id)&&hash(b.sha256))||new Set(bundles.map(b=>b.id)).size!==bundles.length)return false;
     if(!t.steps.every(s=>object(s)&&token(s.id)&&text(s.title)&&text(s.caption)&&

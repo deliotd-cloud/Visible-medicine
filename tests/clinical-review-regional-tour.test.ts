@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { build } from 'esbuild';
 
-test('thoracic, cervical and coeliac tours ship complete source-bound review evidence', async () => {
+test('thoracic, cervical, coeliac and forearm tours ship complete source-bound review evidence', async () => {
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const base='public/atlas-runtime/head-neck/';
   const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
@@ -29,8 +29,11 @@ test('thoracic, cervical and coeliac tours ship complete source-bound review evi
   assert.equal(api.celiacTour.status,'draft');assert.equal(api.celiacTour.steps.length,5);
   assert.equal(api.celiacTour.revision,'celiac-branches-orientation-v2');
   assert.equal(api.regionalTourFor('abdomen').id,'celiac-branches-orientation');
-  for(const tour of [api.thoraxTour,api.cervicalSpineTour,api.celiacTour]) {
-  const count=tour===api.celiacTour?6:8;
+  assert.equal(api.forearmTour.status,'draft');assert.equal(api.forearmTour.steps.length,5);
+  assert.equal(api.regionalTourFor('forearm').id,'right-forearm-muscle-orientation');
+  assert.equal(api.forearmTour.revision,'right-forearm-muscle-orientation-v1');
+  for(const tour of [api.thoraxTour,api.cervicalSpineTour,api.celiacTour,api.forearmTour]) {
+  const count=tour===api.forearmTour?7:tour===api.celiacTour?6:8;
   const ids=new Set([...tour.contextIds,...tour.steps.map((s:any)=>s.selectedId)]);
   assert.equal(ids.size,count);
   for(const id of ids) {
@@ -62,10 +65,23 @@ test('thoracic, cervical and coeliac tours ship complete source-bound review evi
         (p:any)=>{delete p.guidedTours[0].tour.requiredDisplayBundles;},
       ]) {const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,id),null);}
     }
+    if(tour===api.forearmTour) {
+      const evidence=packet.guidedTours[0];
+      assert.ok(evidence.structures.every((s:any)=>s.laterality==='right'));
+      assert.deepEqual(evidence.bundles.map((b:any)=>b.id).sort(),['forearm-muscles','forearm-skeleton']);
+      assert.equal(evidence.stepFrames.length,5);
+      for(const step of evidence.tour.steps)assert.deepEqual(step.frameIds,[step.selectedId]);
+      for(const mutate of [
+        (p:any)=>{delete p.guidedTours[0].stepFrames;},
+        (p:any)=>{p.guidedTours[0].stepFrames[4].max[0]+=1;},
+        (p:any)=>{p.guidedTours[0].structures[0].laterality='left';},
+        (p:any)=>{delete p.guidedTours[0].structures[0].laterality;},
+      ]) {const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,id),null);}
+    }
   }
   }
   const js=learner.files.filter((f:any)=>f.path.endsWith('.js')).map((f:any)=>readFileSync(base+f.path,'utf8')).join('\n');
-  for(const label of ['Cervical spine: C1 to T1','cervical-spine-orientation','C7 · Vertebra prominens','Coeliac trunk & branches','celiac-branches-orientation-v2']) assert.ok(js.includes(label),label);
+  for(const label of ['Cervical spine: C1 to T1','cervical-spine-orientation','C7 · Vertebra prominens','Coeliac trunk & branches','celiac-branches-orientation-v2','Right forearm: muscle orientation','right-forearm-muscle-orientation-v1','Pronator quadratus · Distal close-up']) assert.ok(js.includes(label),label);
   assert.ok(readFileSync('atlas-review/app/review/body/review-dashboard.tsx','utf8').includes('{evidence.tour.region} learner'));
   assert.ok(readFileSync('atlas-review/app/review/body/review-dashboard.tsx','utf8').includes('Camera close-up:'));
 });

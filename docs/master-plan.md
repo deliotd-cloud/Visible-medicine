@@ -1,5 +1,15 @@
 # Visible Medicine — shared delivery plan
 
+27 September right-forearm Guided learning imported locally from Atlas `5ef14b7`:
+five muscle stops, exact radius/ulna context, distal close-up and complete draft
+review evidence. Step changes are announced with collapsed mobile teaching;
+review context laterality must agree with its anatomical ID.109website checks
+and104step/modality note bindings pass; no models, scans, access rules or approvals
+changed. See `docs/forearm-guided-learning-delivery-20260927.md` and the final
+coordination checkpoint for browser/recovery evidence. Not published. Continue
+source-supported regional teaching and cleared-case Education integration;
+do not repeat this delivery or the completed native MRI milestone.
+
 27 September coeliac Guided learning imported locally from Atlas `14581a6`:
 five source-bound artery stops, corrected coeliac display, close-up camera frames
 and complete draft Clinical Review evidence. Mobile regional tours now keep the
