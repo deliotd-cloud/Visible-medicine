@@ -9,7 +9,7 @@ test('regional learner and review viewers ship the tested selectable-question so
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
-  assert.equal(manifest.sourceCommit,'0770fd3e49eb02b0430a80769744c88027c591e5');
+  assert.equal(manifest.sourceCommit,'f28c415f9b46137db744d4606bc425d1aea54550');
   assert.equal(review.revision,'f28c415f9b46137db744d4606bc425d1aea54550');
   for(const [path,sha256] of Object.entries({
     'app/atlas-workspace.tsx':'6e0be873a4fb9c9b3021537014935c3722a4898e9037d83871af18711e14d4eb',

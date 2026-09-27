@@ -18,7 +18,7 @@ test('current review includes draft answer evidence and admitted teaching withou
   assert.equal(review.revision, 'f28c415f9b46137db744d4606bc425d1aea54550');
   assert.equal(viewer.sourceCommit, review.revision);
   assert.equal(viewer.websiteIntegrationSha256, review.websiteIntegrationSha256);
-  assert.equal(regional.sourceCommit, '0770fd3e49eb02b0430a80769744c88027c591e5');
+  assert.equal(regional.sourceCommit, 'f28c415f9b46137db744d4606bc425d1aea54550');
   assert.notEqual(review.revision, priorMaterial.atlasSource);
   const paths = new Set(review.files.map((file: {path:string}) => file.path));
   for (const path of ['app/structure-quick-check.tsx', 'content/coronary-arterial-us.ts', 'content/elbow-arterial-ct.ts', 'content/achilles-ct.ts']) assert.ok(paths.has(path), path);

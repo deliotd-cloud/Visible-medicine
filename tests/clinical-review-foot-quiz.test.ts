@@ -5,7 +5,7 @@ import { build } from 'esbuild';
 
 // Includes the eafd71c quiz batch and the body-panel answer-evidence repair.
 const reviewRevision = 'f28c415f9b46137db744d4606bc425d1aea54550';
-const learnerRevision = '0770fd3e49eb02b0430a80769744c88027c591e5';
+const learnerRevision = 'f28c415f9b46137db744d4606bc425d1aea54550';
 const identities = [
   ['right-medial-plantar-artery', 'right', 'FMA43929', 'Posterior tibial artery', ['FJ2164']],
   ['left-medial-plantar-artery', 'left', 'FMA43930', 'Posterior tibial artery', ['FJ2082']],
