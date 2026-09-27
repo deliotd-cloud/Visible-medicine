@@ -2,10 +2,12 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { isDeepStrictEqual } from 'node:util';
+import { beforeShoulderArterialCt } from './shoulder-arterial-ct-history.mjs';
 import pins from '../content/thoracic-quiz-pins.json' with { type: 'json' };
 import transition from '../content/thoracic-quiz-transition.json' with { type: 'json' };
 const hash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 export function beforeThoracicQuiz(api) {
+  api = beforeShoulderArterialCt(api);
   if (typeof api.bodyLesson !== 'function') return api;
   if (typeof api.bodyDisplayCatalog !== 'function' && pins.entries.every(e => api.bodyLesson(e.identity, 'quiz') === undefined)) return api;
   assert.equal(hash(pins), '1efb766a72f1484aaa2b403c0a7d8f25382d5d2f45cd0ecbfb6eab5848e344aa');

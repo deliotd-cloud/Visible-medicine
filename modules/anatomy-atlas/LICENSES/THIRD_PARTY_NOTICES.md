@@ -1629,3 +1629,17 @@ wording are redistributed. Source links accompany short original questions.
 Existing model licences and notices remain unchanged; no new asset, dependency,
 font, texture, paid service or mandatory fee. All teaching remains draft and
 requires revision-bound radiologist sign-off.
+
+## Shoulder arterial CT/CTA orientation — 27 September 2026
+
+Original concise factual teaching references TTUHSC El Paso's upper-limb
+arteries table (https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html),
+ACR/RSNA RadiologyInfo (https://www.radiologyinfo.org/en/info/angioct), and Barrett
+et al., Anatomic variants of the subscapular-thoracodorsal arterial system,
+Oral Oncology 125 (2022), 105682 (https://pmc.ncbi.nlm.nih.gov/articles/PMC8926423/).
+Pages inspected 27 September 2026. These copyrighted references are not imported
+or relicensed assets; PMC availability is not treated as commercial permission.
+No publisher figures, tables, scans, layouts or extended prose are reproduced.
+Source links accompany the drafts; no endorsement implied. No new model, font,
+texture, dataset, dependency or paid service. Existing licences are unchanged;
+revision-bound radiologist sign-off remains required.

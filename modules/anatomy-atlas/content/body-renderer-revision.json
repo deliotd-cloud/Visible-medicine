@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "38555af3e44491a45cdbfc231999723b8b6d2eb149256f4e6a42c8192293763f"
+      "sha256": "03c333ecfb5d3bb29223490fec7992a045a7da34fef72e53907dd896c8936a3e"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1315,6 +1315,14 @@
     {
       "path": "content/shoulder-arm-muscle-imaging.ts",
       "sha256": "f1362fbc88cebd958073b476b3aa44eae847091fe265e9194971ae5e4360d0c3"
+    },
+    {
+      "path": "content/shoulder-arterial-ct-pins.json",
+      "sha256": "f6bdcd874050a39c27c87f2af7163ca7c93994a7b2fc2fd18d2bdadc73621024"
+    },
+    {
+      "path": "content/shoulder-arterial-ct.ts",
+      "sha256": "d7d59978ebf64cfe1d26c67065aabee0eb4d948ba77649005077dc3a65640baa"
     },
     {
       "path": "content/shoulder-arterial-mri-pins.json",
@@ -2717,6 +2725,10 @@
       "sha256": "b2d3a2a32e40fa2bfc6e6b454cd5023583506000627fde80173a28b0a3b9624f"
     },
     {
+      "path": "lib/shoulder-arterial-ct.ts",
+      "sha256": "8c00c0a853299d60bf67e9fc250c84fd593ef3963fa4e833e3585f0181c77644"
+    },
+    {
       "path": "lib/shoulder-arterial-mri.ts",
       "sha256": "d2cec74d690c470be73e01e68093413526a8b20650d300fc208bfbf0908c455f"
     },
@@ -3201,5 +3213,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "d3eebbdddbe88b45450dcbfccbb80012b6d4c96cb6664ddae0b62d15e0ab5973"
+  "sha256": "74731e7c7c770fe67a83286732ec80a3e32ebc947032c29ed1bba75ec4bf7e58"
 }
