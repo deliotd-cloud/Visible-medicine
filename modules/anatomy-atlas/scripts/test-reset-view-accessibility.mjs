@@ -26,5 +26,7 @@ test('reset control describes the state reset by its handler', () => {
   assert.doesNotMatch(resetView, /\bset(?:Systems|Dissection)\(/);
   assert.match(help, /system visibility/i);
   assert.match(help, /removed structures/i);
-  assert.match(source, /<span id="reset-view-help" className="sr-only">\s*System visibility and removed structures remain unchanged\.\s*<\/span>/);
+  for (const state of ['setShowOrigins', 'setAnchorSkeleton'])
+    assert.match(resetView, new RegExp(`\\b${state}\\(false\\)`));
+  assert.match(source, /<span id="reset-view-help" className="sr-only">\s*Original-position guides and bone pinning are reset\. System visibility and removed structures remain unchanged\.\s*<\/span>/);
 });

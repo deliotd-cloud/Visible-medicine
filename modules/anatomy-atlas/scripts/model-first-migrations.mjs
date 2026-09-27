@@ -50,11 +50,16 @@ export const modelFirstHandlerMigrations = Object.freeze({
     ]),
   }),
   resetView: Object.freeze({
-    sha256: 'b5194f7b29cc94da04155e6b06bb3bf59b54fe2ae3a96e7a20295d50776e9740',
+    sha256: 'b3d25de7a195361ed5822ec707ad9b1655870c0e01a71c593f9442dfa04764bb',
+    previousSha256: 'b5194f7b29cc94da04155e6b06bb3bf59b54fe2ae3a96e7a20295d50776e9740',
+    parentCommit: '0ff5e51a5fb9e6b660a16d1531da5c92a74317c2',
+    reason: 'Reset clears original-position guides and bone pinning so default regional framing can return; hidden tissue and systems are preserved.',
     commits: Object.freeze(['5c20d43a']),
     evidence: Object.freeze([
       'node scripts/validate-camera-orientation.mjs',
       'node scripts/validate-study-views.mjs',
+      'node scripts/test-reset-separation-options.mjs',
+      'node --test scripts/test-reset-view-accessibility.mjs',
     ]),
   }),
   restoreView: Object.freeze({
