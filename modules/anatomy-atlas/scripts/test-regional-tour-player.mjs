@@ -75,6 +75,17 @@ test('All actual tour bundles and ready renderer are required; entry remains man
   h.unchanged();
 });
 
+test('Opening step-bound imaging notes pauses motion and autoplay; next step gets fresh notes',()=>{
+  const h=harness();h.ready();h.click('Start guided tour');h.click('Play');
+  const notes=()=>nodes(h.tree()).find(n=>n.type?.name==='TourImagingNotes');
+  assert.equal(notes().key,h.props.tour.steps[0].id);
+  assert.equal(notes().props.structureName,'Trachea');assert.equal(notes().props.lessons.length,4);
+  notes().props.onOpen();h.render();
+  assert.equal(h.timers.size,0);assert.equal(h.button('Play')['aria-pressed'],false);assert.equal(h.scene().transitionPaused,true);
+  h.click('Next');assert.equal(notes().key,h.props.tour.steps[1].id);assert.equal(h.timers.size,0);
+  assert.equal(notes().props.structureName,'Right main bronchus');h.unchanged();
+});
+
 test('Manual step bounds, autoplay pause/resume and final hold use actual callbacks', () => {
   const h = harness(); h.ready(); h.click('Start guided tour');
   assert.equal(h.button('Back').disabled, true);

@@ -950,6 +950,7 @@ export default function ShoulderExplorer({
                 playing={tourPlaying}
                 ready={displayReady}
                 onStart={startTour}
+                onReadImaging={() => { setTourPlaying(false); setTourMotionPaused(true); }}
                 onPlayPause={() => {
                   if (!displayReady) return;
                   setTourPlaying(!tourPlaying);

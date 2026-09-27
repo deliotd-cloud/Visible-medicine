@@ -41,6 +41,29 @@ remains draft: the radiologist must check anatomy, omissions, views and teaching
 
 ## Linking to CT/MRI (design, not delivered imaging)
 
+27 September source increment: shoulder and thorax tour steps now include a
+collapsed **CT / MRI & imaging notes** reader. CT, MRI, X-ray and Ultrasound
+reuse the exact selected structure's existing teaching sections, including
+readiness, source references and limitations. The reader is keyboard-focusable
+with bounded internal scrolling to keep the model and controls close by.
+Opening it pauses camera/playback; closing it does not auto-resume. Each step
+remounts a fresh collapsed reader on CT, so neither an old structure's notes nor
+its open/scroll state silently follows the next target. Play explicitly resumes.
+These are teaching notes, not a delivered scan linkage or acquisition viewer.
+All44displayed modality/step combinations are checked against source teaching;
+the24thorax combinations match existing review topics. Review renderer hashes
+include this display. No case/lecture access or source geometry is changed.
+
+Acceptance for this increment:44source-bound modality lessons,6regional player
+tests,7shoulder session tests,3shoulder content/player tests,235reviewchecks,
+1,104regional review packets,detached host restore and101camera orbit samples
+pass. TypeScript and both production module builds pass. Actual375px previews
+for shoulder/thorax confirm opening pauses Play, CT/MRI switches correctly,
+next step closes the reader and resets CT/scroll position, and one canvas/no
+horizontal overflow. The reader is244px high at this viewport; inspected the
+rendered thorax screenshot. Source-only until the next website import; these
+checks do not approve clinical teaching or claim actual image synchronization.
+
 Future steps can reference a stable anatomical ID plus an approved educational
 case, series, image/frame or landmark and its revision. The integrated Didanix
 Education/light viewer can present that scan beside the 3D tour. This does not

@@ -27,6 +27,8 @@ export const reviewDisplayPaths = [
   'lib/tour-camera.ts',
   'app/shoulder-tour-player.tsx',
   'app/shoulder-tour-player.css',
+  'app/tour-imaging-notes.tsx',
+  'app/tour-imaging-notes.css',
   'app/structure-quick-check.tsx',
   'app/structure-quick-check.css',
   'app/shoulder-workspace.css',

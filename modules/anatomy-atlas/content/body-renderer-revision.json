@@ -242,7 +242,7 @@
     },
     {
       "path": "app/regional-guided-learning.tsx",
-      "sha256": "557bfe3cc7b31eec83a20177a270e3f302f29038e83aedb0b26e459093c04a3d"
+      "sha256": "221493b5de86cd995fd96ef03338b88ac8e3737626335d3ae2125b972f756dac"
     },
     {
       "path": "app/related-study.tsx",
@@ -335,6 +335,14 @@
     {
       "path": "app/study-views.tsx",
       "sha256": "6d1e76308517cc89bfa007344b68fa7b575729cc2a2733276627843eee1bdfcf"
+    },
+    {
+      "path": "app/tour-imaging-notes.css",
+      "sha256": "6f9a9de31b7866fb2a7382cdd811b0ebc3e618fa5d8b52f17d744859197a865c"
+    },
+    {
+      "path": "app/tour-imaging-notes.tsx",
+      "sha256": "c8f877538452e077cbb2906ca451dcfbfc70ae409eb0f677fc5d4b9861a153dc"
     },
     {
       "path": "app/um-knee-entry.css",
@@ -1298,7 +1306,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "2cf321f6047de050e0ad7e2ac7fb6977aa45c43d7b59c24fd820a46a3cffc499"
+      "sha256": "3ee3dbc5a7047940f233bc7d7af118ef137a60177868016916371784fb895154"
     },
     {
       "path": "content/sca-mca-clinical-pins.json",
@@ -3229,5 +3237,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "fdeb6e98be4db58aa5fa90178c1f12527d320c2c4fe71b32b166871455c66036"
+  "sha256": "a7f15c6f5d0fb44d9bcbd618f57fd288e033e02d5a71edd4e9c287058712eb32"
 }

@@ -92,6 +92,13 @@ test('Exit restores every captured display field, live camera and relative zoom 
   assert.deepEqual(restored, captured); assert.equal(h.scene().zoomStep, step);
 });
 
+test('Reading imaging notes pauses actual shoulder tour playback and camera',()=>{
+  const h=harness();h.ready();h.enter();h.player().onStart();h.render();h.player().onPlayPause();h.render();
+  assert.equal(h.player().playing,true);h.player().onReadImaging();h.render();
+  assert.equal(h.player().playing,false);assert.equal(h.timers.size,0);assert.equal(h.scene().transitionPaused,true);
+  h.player().onPlayPause();h.render();assert.equal(h.player().playing,true);assert.equal(h.scene().transitionPaused,false);
+});
+
 test('Context failure and hidden tab pause without automatic resumption; exit remains callable', () => {
   for (const cause of ['lost', 'failed', 'model', 'hidden']) {
     const h = harness(); h.ready(); h.enter(); h.player().onStart(); h.render(); h.player().onPlayPause(); h.render();
