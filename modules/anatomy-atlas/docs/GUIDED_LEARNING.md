@@ -307,6 +307,27 @@ sequence/context/frame evidence covers65source records; previous49tour evidence
 records are checked unchanged. Review stays revision-bound and unapproved.
 Website import and actual browser acceptance are separate delivery gates.
 
+## Larynx and male pelvis — 27 September 2026
+
+Two further five-stop regional sequences use only existing root-body surfaces.
+Head/neck frames thyroid cartilage, cricoid, each arytenoid and epiglottis, with
+hyoid context. Pelvis frames bladder, prostate, each seminal vesicle and rectum,
+with hip-bone/sacral context. The male sequence explicitly excludes the separate
+female-pelvis specimen and is not a mixed-source reconstruction. Both remain
+drafts; no lumen, internal zones, movement, surgical plane or scan alignment is
+asserted. Original concise captions reference TTUHSC's
+[laryngeal tables](https://anatomy.ttuhscep.edu/nervous_system/deepneck_tables.html)
+and [pelvic viscera explanations](https://anatomy.ttuhscep.edu/reproductive_system/pelvicvisc_ans.html).
+No external prose, images, meshes, dependencies or new licence obligations added.
+
+Eleven regional tours plus shoulder now bind248step/modality notes and79root
+review records. All65prior tour-member evidence stays unchanged. Actual player
+tests cover all stops, readiness and missing context; review tests reject217
+altered packets and79missing sources. New tour source audit: Terra Medium,
+read-only; main authored/verified code. A second worker was unavailable.
+Source geometry remains unvalidated pending radiologist sign-off. Website
+delivery and visual acceptance are separate gates, recorded in the checkpoint.
+
 ## Compact regional tour presentation — 27 September 2026
 
 At widths up to 600px, the explanation starts collapsed; opening it exposes the

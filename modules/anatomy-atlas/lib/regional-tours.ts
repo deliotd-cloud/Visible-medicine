@@ -173,7 +173,42 @@ export const upperArmTour: RegionalTour = {
     limbStep('shoulder-arm','medial-head-of-right-triceps-brachii','Triceps brachii · Medial head','posterior','Finish with the deeper medial head. All three triceps heads contribute to elbow extension through a common olecranon attachment. Separate highlighted surfaces do not prove continuous tendon anatomy; the ulna is omitted.',armReference),
   ],
 };
-export const regionalTours=[thoraxTour,cervicalSpineTour,celiacTour,forearmTour,thighTour,legTour,handTour,footTour,upperArmTour];
+const neckId=(side:string,kind:string,name:string)=>`vm:anatomy:body:head-neck:${side}:${kind}:${name}`;
+const larynxReference='https://anatomy.ttuhscep.edu/nervous_system/deepneck_tables.html';
+const surfaceStep=(id:string,title:string,selectedId:string,view:DissectionView,caption:string,reference:string)=>({
+  id,title,selectedId,view,caption,references:[reference],durationMs:14000,fadeOthers:true,frameIds:[selectedId],
+});
+export const larynxTour: RegionalTour = {
+  id:'laryngeal-framework-orientation',title:'Larynx: framework & epiglottis',region:'head-neck',
+  revision:'laryngeal-framework-orientation-v1',status:'draft',
+  description:'Five close-up stops around the laryngeal framework, using the hyoid as a faded superior landmark. Right and left arytenoids remain separately identified.',
+  limitations:'Selected exterior source surfaces only, not a complete larynx, mucosal airway or endoscopic view. The thyroid gland, vocal folds, intrinsic muscles, smaller cartilages, vessels and nerves are not shown. Fading is not tissue dissection; no phonation, swallowing, airway patency, procedural route, acquired scan or patient registration is demonstrated. Draft pending radiologist review.',
+  contextIds:[neckId('midline','bone','hyoid-bone')],
+  steps:[
+    surfaceStep('thyroid','Thyroid cartilage · Anterior shield',neckId('midline','cartilage','thyroid-cartilage'),'anterior','Start with the broad thyroid cartilage below the faded hyoid. Its two laminae meet anteriorly. Do not confuse this cartilage with the thyroid gland, which is outside this tour.',larynxReference),
+    surfaceStep('cricoid','Cricoid cartilage · Ring below',neckId('midline','cartilage','cricoid-cartilage'),'right','Sweep to the right side of the cricoid below the thyroid cartilage. In usual anatomy its anterior arch is narrower than its broad posterior lamina. A ring-shaped surface does not establish an open airway.',larynxReference),
+    surfaceStep('right-arytenoid','Right arytenoid · Posterior',neckId('right','cartilage','right-arytenoid-cartilage'),'posterior','Turn behind the larynx to the right arytenoid on the upper cricoid lamina. Its vocal process provides a vocal-ligament attachment; those ligaments are not rendered in this sequence.',larynxReference),
+    surfaceStep('left-arytenoid','Left arytenoid · Paired comparison',neckId('left','cartilage','left-arytenoid-cartilage'),'posterior','Compare the separately labelled left arytenoid with the faded right one. Both retain their supplied source positions. Their movement and the vocal-fold opening are not simulated.',larynxReference),
+    surfaceStep('epiglottis','Epiglottis · Superior landmark',neckId('unpaired','organ','epiglottis'),'left','Finish with the epiglottis in the superior laryngeal region. The catalogue retains it as an organ surface. This static outline does not separate cartilage from mucosa or demonstrate swallowing closure.',larynxReference),
+  ],
+};
+const pelvicOrgan=(side:string,name:string)=>`vm:anatomy:body:pelvis:${side}:organ:${name}`;
+const pelvisReference='https://anatomy.ttuhscep.edu/reproductive_system/pelvicvisc_ans.html';
+export const malePelvisTour: RegionalTour = {
+  id:'male-pelvic-viscera-orientation',title:'Male pelvis: bladder to rectum',region:'pelvis',
+  revision:'male-pelvic-viscera-orientation-v1',status:'draft',
+  description:'Five source-bound visceral stops with the hip bones and sacrum as faded landmarks. This sequence uses the root male anatomy, not the separate female-pelvis specimen.',
+  limitations:'Selected root-body male pelvic surfaces only. Not the female pelvis or a mixed-specimen reconstruction. Ureters, urethra, ducts, pelvic floor, fascial planes and neurovascular structures are omitted. Organ outlines do not establish internal zones, luminal continuity, distension, disease or surgical planes. No acquired CT/MRI, scan registration or procedural simulation. Draft pending radiologist review.',
+  contextIds:['vm:anatomy:body:pelvis:right:bone:right-hip-bone','vm:anatomy:body:pelvis:left:bone:left-hip-bone','vm:anatomy:body:spine:midline:bone:sacrum'],
+  steps:[
+    surfaceStep('bladder','Urinary bladder · Anterior',pelvicOrgan('unpaired','urinary-bladder'),'anterior','Begin with the bladder in the anterior pelvis, using the faded hip bones for orientation. Its shape depends on filling in life; the fixed source surface does not show a measured capacity or bladder wall layers.',pelvisReference),
+    surfaceStep('prostate','Prostate · Below the bladder',pelvicOrgan('unpaired','prostate'),'right','Sweep to the right side to compare the prostate below the bladder and in front of the rectum. This is an outer gland surface, not a zonal prostate atlas or a depiction of the urethral lumen.',pelvisReference),
+    surfaceStep('right-seminal-vesicle','Right seminal vesicle · Posterior',pelvicOrgan('right','right-seminal-vesicle'),'posterior','Turn posteriorly to identify the right seminal vesicle behind the bladder and above the prostate. The ductal connections are not shown; the surface should not be used to infer a continuous reproductive tract.',pelvisReference),
+    surfaceStep('left-seminal-vesicle','Left seminal vesicle · Paired comparison',pelvicOrgan('left','left-seminal-vesicle'),'posterior','Compare the separately labelled left seminal vesicle with the faded right side. Both stay in the original body-source frame. Normal asymmetry and internal duct detail cannot be established by this simplified view.',pelvisReference),
+    surfaceStep('rectum','Rectum · Posterior relationship',pelvicOrgan('unpaired','rectum'),'left','Finish from the left with the rectum behind the bladder and prostate. The sacrum provides posterior context. Fading adjacent organs improves visibility but does not reveal a validated rectal wall or mesorectal plane.',pelvisReference),
+  ],
+};
+export const regionalTours=[thoraxTour,cervicalSpineTour,celiacTour,forearmTour,thighTour,legTour,handTour,footTour,upperArmTour,larynxTour,malePelvisTour];
 export const regionalTourFor=(region:string)=>regionalTours.find(t=>t.region===region)??null;
 export const regionalTourLimitations=(tour:RegionalTour)=>tour.limitations??'Selected exterior source surfaces only; no complete lumen, bronchial tree, surgical plane, acquired imaging or spatial registration. Draft pending radiologist review.';
 

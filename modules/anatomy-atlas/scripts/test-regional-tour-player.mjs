@@ -10,7 +10,7 @@ const require = createRequire(import.meta.url), React = require('react');
 const catalog = JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json', import.meta.url), 'utf8'));
 const catalogBefore = JSON.stringify(catalog);
 const built = await build({ stdin: {
-  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, cervicalSpineTour, celiacTour, forearmTour, thighTour, legTour, handTour, footTour, upperArmTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
+  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, cervicalSpineTour, celiacTour, forearmTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
   loader: 'tsx', resolveDir: process.cwd(),
 }, bundle: true, write: false, format: 'cjs', platform: 'node', loader: { '.css': 'empty' }, plugins: [{ name: 'gpu-boundary', setup(api) {
   api.onLoad({ filter: /[\\/]app[\\/]body-scene\.tsx$/ }, () => ({ loader: 'tsx', contents: 'export function BodyScene(){return null;}' }));
@@ -221,6 +221,42 @@ test('Opening step-bound imaging notes pauses motion and autoplay; next step get
   h.click('Next');assert.equal(notes().key,h.props.tour.steps[1].id);assert.equal(h.timers.size,0);
   assert.equal(notes().props.structureName,'Right main bronchus');h.unchanged();
 });
+
+const visceralCases=[
+  {name:'larynxTour',region:'head-neck',prefix:'vm:anatomy:body:head-neck:',targets:['midline:cartilage:thyroid-cartilage','midline:cartilage:cricoid-cartilage','right:cartilage:right-arytenoid-cartilage','left:cartilage:left-arytenoid-cartilage','unpaired:organ:epiglottis'],context:['vm:anatomy:body:head-neck:midline:bone:hyoid-bone'],bundles:['head-neck-connective-recovery','head-neck-organs-visceral-detail','head-neck-skeleton']},
+  {name:'malePelvisTour',region:'pelvis',prefix:'vm:anatomy:body:pelvis:',targets:['unpaired:organ:urinary-bladder','unpaired:organ:prostate','right:organ:right-seminal-vesicle','left:organ:left-seminal-vesicle','unpaired:organ:rectum'],context:['vm:anatomy:body:pelvis:right:bone:right-hip-bone','vm:anatomy:body:pelvis:left:bone:left-hip-bone','vm:anatomy:body:spine:midline:bone:sacrum'],bundles:['pelvis-organs','pelvis-organs-recovery','pelvis-skeleton','spine-skeleton']},
+];
+for(const spec of visceralCases){
+  test(`${spec.name}: exact five stops, all bundles, frames and final hold`,()=>{
+    const h=harness(catalog,spec.name),ids=spec.targets.map(id=>spec.prefix+id);
+    assert.deepEqual(plain(h.props.tour.contextIds),spec.context);
+    assert.deepEqual(h.bundles().sort(),spec.bundles);
+    assert.equal(h.props.tour.region,spec.region);
+    assert.equal(h.button('Start guided tour').disabled,true);
+    h.scene().onRendererHealth('ready');h.render();
+    for(const bundle of spec.bundles){assert.equal(h.button('Start guided tour').disabled,true);h.scene().onLoaded(bundle);h.render();}
+    h.click('Start guided tour');h.click('Play');
+    for(let i=0;i<5;i++){
+      assert.equal(h.scene().selectedId,ids[i]);
+      assert.equal(h.scene().view,['anterior','right','posterior','posterior','left'][i]);
+      assert.deepEqual(plain(h.props.tour.steps[i].frameIds),[ids[i]]);
+      assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,i)));
+      assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);
+      assert.equal(h.scene().isolated,true);h.tick();
+    }
+    assert.equal(h.scene().reset,4);assert.equal(h.timers.size,0);assert.equal(h.exits(),0);
+    h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
+  });
+  test(`${spec.name}: missing selected or context source fails closed`,()=>{
+    for(const id of [...spec.targets.map(id=>spec.prefix+id),...spec.context]){
+      const h=harness(catalog,spec.name,false,id);
+      assert.equal(nodes(h.tree()).filter(n=>n.type==='BodyScene').length,0);
+      assert.equal(h.button('Start guided tour').disabled,true);
+      assert.match(text(h.tree()),/unavailable for the current anatomy source/);
+      h.click('Exit tour');assert.equal(h.exits(),1);h.unchanged();
+    }
+  });
+}
 
 test('Manual step bounds, autoplay pause/resume and final hold use actual callbacks', () => {
   const h = harness(); h.ready(); h.click('Start guided tour');
