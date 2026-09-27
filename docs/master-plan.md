@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+27 September drawer correction delivered locally: learner and Clinical Review
+use Atlas `af56c6a`. Return to model follows content instead of covering lower
+quiz controls. 100 integration checks, TypeScript/builds and actual embedded
+mobile answer/retry/hit-testing pass. The prior footer caveat is resolved;
+models, teaching, decisions and public site unchanged. See
+`docs/atlas-panel-return-delivery-20260927.md`. Resume substantive anatomy work.
+
 27 September thoracic quick checks delivered locally: learner and Clinical
 Review now import Atlas `973c73e`, adding seven lung/airway/pulmonary-artery
 questions with selectable answers and draft answer/explanation evidence.

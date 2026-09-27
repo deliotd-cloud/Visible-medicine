@@ -3,14 +3,33 @@ import test from 'node:test';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 
+test('learner and review CSS keep the return control after, not over, answers',()=>{
+  for (const root of ['public/atlas-runtime/head-neck/','public/atlas-review-viewer/']) {
+    const manifest=JSON.parse(readFileSync(root+'manifest.json','utf8'));
+    assert.equal(manifest.sourceCommit,'af56c6a227a8e381f2093df905069c824a0ddd8b');
+    const css=manifest.files.filter((f:{path:string})=>f.path.endsWith('.css')).map((f:{path:string;sha256:string})=>{
+      const bytes=readFileSync(root+f.path);
+      assert.equal(createHash('sha256').update(bytes).digest('hex'),f.sha256);
+      return bytes.toString();
+    }).join('\n');
+    const rules=[...css.matchAll(/\.anatomy-controls-return\s*\{([^}]+)\}/g)];
+    assert(rules.length>0,root);
+    for (const rule of rules) {
+      assert.match(rule[1],/position:\s*static(?:;|$)/);
+      assert(!/position:\s*(sticky|fixed|absolute)/.test(rule[1]));
+      assert.match(rule[1],/min-height:\s*44px(?:;|$)/);
+    }
+  }
+});
+
 // Delivery evidence only: Atlas actual-component tests establish answer behavior.
 test('regional learner and review viewers ship the tested selectable-question source',()=>{
   const base='public/atlas-runtime/head-neck/';
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
-  assert.equal(manifest.sourceCommit,'973c73ecfc8b5f39adcb718faf476e56782466a9');
-  assert.equal(review.revision,'973c73ecfc8b5f39adcb718faf476e56782466a9');
+  assert.equal(manifest.sourceCommit,'af56c6a227a8e381f2093df905069c824a0ddd8b');
+  assert.equal(review.revision,'af56c6a227a8e381f2093df905069c824a0ddd8b');
   for(const [path,sha256] of Object.entries({
     'app/atlas-workspace.tsx':'6ead6f8f9221666d3f6517e00220b2ecd4533746085674fbd13ae79463f64c46',
     'app/structure-quick-check.tsx':'4bfa6567af94f808bc7ed43a9693eae6771da7e8ada1e10183ec4be3ff64c5de',
