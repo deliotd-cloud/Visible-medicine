@@ -1655,3 +1655,13 @@ No publisher figures, tables, scans, layouts or extended prose are reproduced.
 Source links accompany the drafts; no endorsement implied. No new model, font,
 texture, dataset, dependency or paid service. Existing licences are unchanged;
 revision-bound radiologist sign-off remains required.
+
+## Agent-authored shoulder guided tour — 27 September 2026
+
+Original short orientation captions reference the TTUHSC El Paso upper-limb
+muscle table, https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html,
+checked 27 September 2026. This is a linked factual reference, not imported or
+relicensed prose, imagery or a model. Existing shoulder geometry and its notices
+are unchanged. No new dependency, font, texture, dataset, paid service or
+mandatory fee. AI authorship does not confer clinical validation: captions,
+layer choices, camera framing and omissions require radiologist review.

@@ -98,6 +98,8 @@ import {
 import { StudyViews } from './study-views';
 import type { StudyCamera, StudyView } from '@/atlas-review/lib/study-views';
 import manifest from '@/atlas-review/public/models/bodyparts3d/manifest.json';
+import { shoulderTour, shoulderTourStepView } from '@/atlas-review/lib/shoulder-tours';
+import { ShoulderTourPlayer } from './shoulder-tour-player';
 
 type Mode = 'study' | 'exam';
 import { rendererReady, type RendererHealth } from '@/atlas-review/lib/renderer-health';
@@ -174,6 +176,16 @@ export default function ShoulderExplorer({
   const [resetNonce, setResetNonce] = useState(0);
   const [mode, setMode] = useState<Mode>('study');
   const beforeExam = useRef<{ view: StudyView; zoomStep: number } | null>(null);
+  const [tourIndex, setTourIndex] = useState<number | null>(null);
+  const [guidedLearning, setGuidedLearning] = useState(false);
+  const [tourPlaying, setTourPlaying] = useState(false);
+  const [tourMotionPaused, setTourMotionPaused] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+  const beforeTour = useRef<{ view: StudyView; zoomStep: number } | null>(null);
+  const tourActiveRef = useRef(false);
+  const tourControls = useRef<HTMLDivElement>(null);
+  const tourHadFocus = useRef(false);
+  const tourActive = tourIndex !== null;
   const workspace = useWorkspaceSession(
     () => ({ layer, visibleSystems, explode, layout, inspection, plate, anchorSkeleton,
       showOrigins, isolated, syncPlane, view, zoom, camera: cameraCapture.current }),
@@ -250,13 +262,14 @@ export default function ShoulderExplorer({
     };
   }
   function restoreView(state: StudyView) {
+    if (tourActiveRef.current) return;
     workspace.chooseMode('dissect');
     setMode('study');
     practiceDispatch({ type: 'dismiss' });
     beforeExam.current = null;
     applyStudyView(state);
   }
-  function applyStudyView(state: StudyView) {
+  const applyStudyView = useCallback((state: StudyView) => {
     setSyncPlane(state.referencePlane ?? false);
     setSelectedId(state.selectedId ?? structures[0].id);
     setView(state.view as CameraView);
@@ -273,7 +286,64 @@ export default function ShoulderExplorer({
     setInspection(state.inspection);
     cameraRestore.current = state.camera;
     setResetNonce((n) => n + 1);
+  }, []);
+
+  const applyTourStep = useCallback((index: number) => {
+    const state = shoulderTourStepView(index);
+    if (!state) return;
+    setTourIndex(index);
+    setTourMotionPaused(false);
+    setZoomStep(0);
+    applyStudyView(state);
+  }, [applyStudyView]);
+  function startTour() {
+    if (!guidedLearning || tourActiveRef.current || !displayReady || mode !== 'study' || workspace.mode === 'practice') return;
+    beforeTour.current = { view: structuredClone(captureView()), zoomStep };
+    tourActiveRef.current = true;
+    setTourPlaying(false);
+    applyTourStep(0);
   }
+  function exitTour() {
+    const saved = beforeTour.current;
+    beforeTour.current = null;
+    tourActiveRef.current = false;
+    setTourIndex(null);
+    setTourPlaying(false);
+    setTourMotionPaused(false);
+    if (saved) {
+      applyStudyView(saved.view);
+      setZoomStep(saved.zoomStep);
+    }
+  }
+  useEffect(() => {
+    if (tourActive || tourHadFocus.current)
+      tourControls.current?.querySelector<HTMLButtonElement>('button:not(:disabled)')?.focus({ preventScroll: true });
+    tourHadFocus.current = tourActive;
+  }, [tourActive]);
+  useEffect(() => {
+    const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const update = () => setReducedMotion(preference.matches);
+    update();
+    preference.addEventListener('change', update);
+    return () => preference.removeEventListener('change', update);
+  }, []);
+  useEffect(() => {
+    if (!tourActive) return;
+    const pause = () => { setTourPlaying(false); setTourMotionPaused(true); };
+    const visibility = () => { if (document.hidden) pause(); };
+    if (!displayReady) pause();
+    document.addEventListener('visibilitychange', visibility);
+    return () => document.removeEventListener('visibilitychange', visibility);
+  }, [tourActive, displayReady]);
+  useEffect(() => {
+    if (!tourPlaying || tourIndex === null || !displayReady || document.hidden) return;
+    const timer = window.setTimeout(() => {
+      if (!tourActiveRef.current || document.hidden) return;
+      if (tourIndex + 1 < shoulderTour.steps.length) applyTourStep(tourIndex + 1);
+      else setTourPlaying(false);
+    }, shoulderTour.steps[tourIndex].durationMs);
+    return () => window.clearTimeout(timer);
+  }, [tourPlaying, tourIndex, displayReady, applyTourStep]);
 
   const searchOptions = useMemo<SearchOption[]>(
     () =>
@@ -287,6 +357,7 @@ export default function ShoulderExplorer({
     searchOptions.find((option) => option.value === selectedId) ?? null;
 
   const applySelection = useCallback((id: string) => {
+    if (tourActiveRef.current) return false;
     const structure = structureById.get(id);
     if (!structure) return false;
     setSelectedId(id);
@@ -313,7 +384,7 @@ export default function ShoulderExplorer({
   const imagingLink = useImagingLink({
     entries: linkEntries,
     allowedIds: structures.map((s) => s.id),
-    disabled: mode === 'exam',
+    disabled: mode === 'exam' || tourActive,
     onSelect: (id) => {
       applySelection(id);
       setInspection(initialInspection);
@@ -330,7 +401,7 @@ export default function ShoulderExplorer({
   );
 
   const handleSceneSelect = (id: string) => {
-    if (!displayReady) return;
+    if (!displayReady || tourActiveRef.current) return;
     selectStructure(id);
     if (mode === 'exam')
       practiceDispatch({
@@ -353,6 +424,7 @@ export default function ShoulderExplorer({
   };
 
   const toggleMode = () => {
+    if (tourActiveRef.current) return;
     if (mode === 'exam') {
       setMode('study');
       practiceDispatch({ type: 'dismiss' });
@@ -462,6 +534,7 @@ export default function ShoulderExplorer({
           },
           annotations: { readOnlyHint: false, untrustedContentHint: false },
           execute(input) {
+            if (tourActiveRef.current) throw new Error('Exit the guided tour before changing the view');
             const config = input as {
               view?: unknown;
               layer?: unknown;
@@ -551,14 +624,18 @@ export default function ShoulderExplorer({
 
   return (
     <TooltipProvider>
-      <AtlasWorkspace exam={mode === 'exam'} className="shoulder-workspace" presentation={presentation} session={workspace}>
+      <AtlasWorkspace exam={mode === 'exam'} className={`shoulder-workspace${guidedLearning ? ' guided-learning-open' : ''}`} presentation={presentation} session={workspace}>
         <PracticeAttention
           exam={mode === 'exam'}
           answered={Boolean(answerId)}
         />
-        <header className="body-topbar">
+        <header className="body-topbar" inert={tourActive}>
           {presentation === 'standalone' && <Brand />}
-          <WorkspaceModes />
+          <WorkspaceModes guidedLearning={{ active: guidedLearning, onChange: active => {
+            if (tourActiveRef.current) return;
+            setGuidedLearning(active);
+            if (active && workspace.mode === 'practice') workspace.chooseMode('explore');
+          } }} />
           <div className="top-actions">
             {presentation === 'standalone' && <Link href="/" className="body-return-link">
               Whole body & regions
@@ -579,7 +656,7 @@ export default function ShoulderExplorer({
 
         <div className="body-layout">
           <AnatomyControlRail>
-            <div className="shoulder-tools">
+            <div className="shoulder-tools" inert={tourActive}>
               {mode === 'study' ? (
                 <>
                   <div className="eyebrow">Find a structure</div>
@@ -841,8 +918,8 @@ export default function ShoulderExplorer({
             </div>
           </AnatomyControlRail>
 
-          <div className="shoulder-model-workspace body-workspace">
-            <div className="shoulder-model-heading">
+          <div className="shoulder-model-workspace body-workspace" data-tour-active={tourActive}>
+            <div className="shoulder-model-heading" inert={tourActive}>
               <Title>Right shoulder</Title>
               <div className="shoulder-heading-actions">
                 <fieldset className="shoulder-zoom-controls" aria-label="Shoulder zoom controls">
@@ -866,7 +943,25 @@ export default function ShoulderExplorer({
                 {mode === 'study' && <StructureDetailsButton />}
               </div>
             </div>
-            <div className="shoulder-view-controls">
+            {guidedLearning && mode === 'study' && workspace.mode !== 'practice' && (
+              <div ref={tourControls}>
+              <ShoulderTourPlayer
+                index={tourIndex}
+                playing={tourPlaying}
+                ready={displayReady}
+                onStart={startTour}
+                onPlayPause={() => {
+                  if (!displayReady) return;
+                  setTourPlaying(!tourPlaying);
+                  setTourMotionPaused(tourPlaying);
+                }}
+                onStep={index => { if (displayReady) applyTourStep(index); }}
+                onExit={exitTour}
+              />
+              {tourActive && <a className="shoulder-tour-credits" href={`${assetBase}/models/bodyparts3d/credits.html`} target="_blank" rel="noreferrer">BodyParts3D · CC BY 4.0 · Adapted</a>}
+              </div>
+            )}
+            <div className="shoulder-view-controls" inert={tourActive}>
               <Select
                 value={view}
                 items={{
@@ -935,7 +1030,7 @@ export default function ShoulderExplorer({
               </Select>
               </WorkspaceOnly>
             </div>
-            {mode === 'study' && (
+            {mode === 'study' && !tourActive && (
               <SelectionVisibilityNotice
                 name={selected.name}
                 report={selectedVisibility}
@@ -994,11 +1089,14 @@ export default function ShoulderExplorer({
                 inspection={mode === 'exam' ? initialInspection : inspection}
                 cameraCapture={cameraCapture}
                 cameraRestore={cameraRestore}
+                tourLocked={tourActive}
+                transitionMs={tourActive && !reducedMotion ? 1800 : 0}
+                transitionPaused={tourMotionPaused}
                 onRendererHealth={setRendererHealth}
                 onModelReady={setModelReady}
               />
             </section>
-            <div className="shoulder-view-footer illustration-mode">
+            <div className="shoulder-view-footer illustration-mode" inert={tourActive}>
               <div className="viewer-toolbar" aria-label="3D view controls">
                 <Tooltip>
                   <TooltipTrigger
@@ -1140,7 +1238,7 @@ export default function ShoulderExplorer({
           </div>
 
           <AnatomyInfoPanel practice={mode === 'exam'}>
-            <div className="shoulder-info" aria-live="polite">
+            <div className="shoulder-info" aria-live="polite" inert={tourActive}>
               {mode === 'exam' ? (
                 <div className="exam-panel">
                   <div className="info-kicker">STRUCTURE IDENTIFICATION</div>

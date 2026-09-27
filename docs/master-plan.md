@@ -1,5 +1,14 @@
 # Visible Medicine — shared delivery plan
 
+27 September Guided learning delivered locally: shoulder and regional learners
+plus Clinical Review use Atlas `6b1539f`. Five-step shoulder pilot, gentle 1.8s
+camera sweeps, compact playback and complete draft review evidence. 105 integration
+checks, TypeScript/builds and mobile learner/review pass; model bytes, separate
+modules and decisions unchanged. See `docs/guided-learning-delivery-20260927.md`.
+No publication/clinical approval. Next extend source-bound regional tours; do not
+repeat the source-to-website import. CT/MRI pairing still needs cleared cases and
+verified mapping/registration; independent entitlements remain mandatory.
+
 27 September ankle imaging delivered locally: regional and separate lower-limb
 learners plus Clinical Review use Atlas `80ff7f2`. Seven new MRI/US drafts,
 unchanged models/prior teaching/access/decisions. 107checks, builds, TypeScript and

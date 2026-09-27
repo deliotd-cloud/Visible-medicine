@@ -8,14 +8,14 @@ const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
 
 test('shared viewer binds reset wording and keyboard-only orientation status to exact Atlas source',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'63b4047a4ebbfccdd2fb114865c184b58260b8fffd9ab716f8e627365cb8254e');
+  assert.equal(sha(manifestBytes),'fa5059b14532ef06efa0d2e9a1395c8d1d0a7aad295348726fe5061a1ca1fe8b');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'80ff7f2ce56ce3cc27d4d9e6962797292585c3df');
+  assert.equal(manifest.sourceCommit,'6b1539f9de931cfcae0492278a04d90955974844');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,expected] of Object.entries({
     'app/body-explorer.tsx':'fedfd83496638c6e6420b938edc86ad7ef9b7b2c7e1666c824abe4720a56eb83',
     'app/body-scene.tsx':'7117993fb76445f522d303c664fb5405ac07344f5e255906e2ee47640dc4acbc',
-    'app/fitted-camera.tsx':'8621b76137dc18b1200cffb5fc79a0e38d55bb95d933978e7d73e43727850a49',
+    'app/fitted-camera.tsx':'ff59cb133b53a6ea728dc0aa902a1530559e375a834ec5eb7d0d7b5509a73e5c',
     'lib/camera-keyboard.ts':'9a0a095306c6687ca7fd568570c7a66363566ac3a70f2916bc1e8f74aa405220',
   }))assert.equal(inputs.find(input=>input.path===path)?.sha256,expected,path);
   const script=(name:string)=>{
@@ -40,6 +40,14 @@ test('shared viewer binds reset wording and keyboard-only orientation status to 
   assert.ok(scene.includes('e.addEventListener(`keydown`,i)'), 'Only the focused keyboard handler calls the status callback');
   // Perspective keyboard binding is now one branch of the orthographic/perspective
   // dispatch. Match its callback wiring without depending on the minified callee.
-  assert.match(scene,/\w+\(v\.domElement,\(\)=>y\.current,\(\)=>\{j\(\),_\(\),m&&y\.current&&m\(/);
-  assert.ok(scene.includes('onChange:j})'), 'Pointer orbit keeps the camera capture callback only');
+  // Bind the readable implementation to the exported source hash instead of
+  // depending on local names changed by the guided-camera minification.
+  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
+  const cameraFile=review.files.find((f:{path:string})=>f.path==='app/fitted-camera.tsx');
+  assert.equal(cameraFile.sourceSha256,inputs.find(i=>i.path==='app/fitted-camera.tsx')?.sha256);
+  const cameraBytes=readFileSync('atlas-review/app/fitted-camera.tsx');
+  assert.equal(sha(cameraBytes),cameraFile.importedSha256);
+  const cameraSource=cameraBytes.toString();
+  assert.match(cameraSource,/return bindCameraKeyboard\(gl\.domElement, \(\) => controls\.current, \(\) => \{\s+capture\(\);\s+invalidate\(\);\s+if \(onKeyboardRotate && controls\.current\)/);
+  assert.ok(cameraSource.includes('onChange={capture}'), 'Pointer orbit keeps the camera capture callback only');
 });

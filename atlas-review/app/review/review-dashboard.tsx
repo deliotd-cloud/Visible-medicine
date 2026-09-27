@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { Brand } from '../brand';
 import { structures, quizQuestions } from '../anatomy-data';
+import { shoulderTour } from '@/atlas-review/lib/shoulder-tours';
 import { Button } from '@/atlas-review/components/ui/button';
 import { Checkbox } from '@/atlas-review/components/ui/checkbox';
 import { Input } from '@/atlas-review/components/ui/input';
@@ -898,6 +899,16 @@ export function ReviewDashboard({ initialId }: { initialId: string }) {
                   <p>Checklist: {checklistVersion}</p>
                   {track === 'teaching' && (
                     <>
+                      <section>
+                        <h3>Guided tour · {shoulderTour.title}</h3>
+                        <p>Draft {shoulderTour.revision}. Review the complete sequence in the shoulder learner, including camera framing and visible layers. This teaching fingerprint includes the entire tour; it does not approve acquired images.</p>
+                        <ol>{shoulderTour.steps.map(step => <li key={step.id}>
+                          <strong>{step.title}</strong> · {step.view} · {step.layer} · {step.durationMs / 1000} seconds · {step.fadeOthers ? 'Others faded' : 'Full context'}
+                          <p>{step.caption}</p>
+                          <p>Structure: <code>{step.selectedId}</code></p>
+                          {step.references.map(url => <a key={url} href={url} target="_blank" rel="noreferrer">Anatomy reference</a>)}
+                        </li>)}</ol>
+                      </section>
                       {Object.entries(selected.sections).map(
                         ([name, section]) => (
                           <section key={name}>

@@ -1,5 +1,5 @@
 {
-  "revision": "80ff7f2ce56ce3cc27d4d9e6962797292585c3df",
+  "revision": "6b1539f9de931cfcae0492278a04d90955974844",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2638,8 +2638,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "d42862b346b3bb0e9fcad59aacf74c84a7c4098d87c083584194c40805b804ad",
-      "importedSha256": "01a81a0cd0c75e86be34a3bd96b82b7b596284e6ad710a1e5bb84463a471e372"
+      "sourceSha256": "720f0b23fead483583ac1dbdeef9dd098dc2ed55c119ab9333acaabe3db04a6d",
+      "importedSha256": "cfd09f2d5877880f7c41189e5417da919c6f4afdcde5f245d2d628731180d23b"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -2863,13 +2863,33 @@
     },
     {
       "path": "app/review/review-dashboard.tsx",
-      "sourceSha256": "2d3ea311a600012f0c12d9cf630468c85bafd1ecd28fb655d16a80a80922a118",
-      "importedSha256": "5b32580458ae16196759e4a06fb3812cd9d77b6771212662c562baae5c717ab2"
+      "sourceSha256": "52fc636309a421f8d51f90b84f65680dcd3eaca7d1d3459bfebd8bc83c30deff",
+      "importedSha256": "7353391ed7deb2493e23176fa98f3e9bfe98f053e6e2dd2a10c85eb2961329d8"
     },
     {
       "path": "components/review-sign-in-link.tsx",
       "sourceSha256": "4ee923c93be6b51ea1c8e61ffb95d5b156c2b1382f7dfff0f3dbd3d8997f7af6",
       "importedSha256": "b8b3a028369a0b14c14706ebaca52806e083405c7331c329b5f0911fed888af1"
+    },
+    {
+      "path": "lib/shoulder-tours.ts",
+      "sourceSha256": "03083449553e2f4db25adf66c9d5fc18b2c7849ee2b1846f4cd06775ceeb2fda",
+      "importedSha256": "03083449553e2f4db25adf66c9d5fc18b2c7849ee2b1846f4cd06775ceeb2fda"
+    },
+    {
+      "path": "public/models/bodyparts3d/manifest.json",
+      "sourceSha256": "619e3ab84712487bd032b84a8f8b52f94d10883d8db7798057049bab287de857",
+      "importedSha256": "619e3ab84712487bd032b84a8f8b52f94d10883d8db7798057049bab287de857"
+    },
+    {
+      "path": "lib/inspection-state.ts",
+      "sourceSha256": "9034b6b6447248feb1b64374f403539b9572c01dd2db68574dd66fafcfd795e7",
+      "importedSha256": "9034b6b6447248feb1b64374f403539b9572c01dd2db68574dd66fafcfd795e7"
+    },
+    {
+      "path": "lib/study-views.ts",
+      "sourceSha256": "86504e3a67ec3982b43c211dd01c928e41002b1459b50ff018146b3ee5ad738a",
+      "importedSha256": "86504e3a67ec3982b43c211dd01c928e41002b1459b50ff018146b3ee5ad738a"
     },
     {
       "path": "components/ui/button.tsx",
@@ -2908,13 +2928,13 @@
     },
     {
       "path": "lib/review-workspace.ts",
-      "sourceSha256": "f7e8e770641815046c9444d1d62ef510424e0e8a9d0e165ca18b1379a6a9dafe",
-      "importedSha256": "f7e8e770641815046c9444d1d62ef510424e0e8a9d0e165ca18b1379a6a9dafe"
+      "sourceSha256": "8638eb0242038291d6fade2d12051fa2c189ec942c9a019acf6e48981c259882",
+      "importedSha256": "8638eb0242038291d6fade2d12051fa2c189ec942c9a019acf6e48981c259882"
     },
     {
       "path": "content/review-revisions.json",
-      "sourceSha256": "df5ac42ebd6444e062ead2bfb08db2ff6bbc384a1aa624c9909d0b6dfb3f5935",
-      "importedSha256": "bc21b73e59fc035a2b375b11cbdab91aa513d3f9566aa02cf21d71bbcdf6d152"
+      "sourceSha256": "bdbb8fb879c7d3ca154aec04cd5aa102ab46472556d0751872cb92ef4c1aaaf0",
+      "importedSha256": "a2e2c488861aa74631d0474872859e1ebe5aa18ff4e6fdd11e346a81fb28774b"
     },
     {
       "path": "app/review/review.css",
@@ -3063,8 +3083,8 @@
     },
     {
       "path": "app/atlas-workspace.tsx",
-      "sourceSha256": "6ead6f8f9221666d3f6517e00220b2ecd4533746085674fbd13ae79463f64c46",
-      "importedSha256": "ddf6afdd60bc5db4250e47b00a273c69a852d016f053860e0d3c8dafde879477"
+      "sourceSha256": "3492d74682daa945418e97a7e8130cae62907e4c7f67285c99196b329f79b104",
+      "importedSha256": "9642831dd7e4f3b27086c61e1ed89d865f2b8f2502ffac67aa7f5369706a2735"
     },
     {
       "path": "lib/atlas-search-presentation.ts",
@@ -3312,11 +3332,6 @@
       "importedSha256": "91892a8a2d0611c68a8f07ffe6f170444f8d83a589a6b609d7b48eb204fad538"
     },
     {
-      "path": "lib/inspection-state.ts",
-      "sourceSha256": "9034b6b6447248feb1b64374f403539b9572c01dd2db68574dd66fafcfd795e7",
-      "importedSha256": "9034b6b6447248feb1b64374f403539b9572c01dd2db68574dd66fafcfd795e7"
-    },
-    {
       "path": "app/inspection.css",
       "sourceSha256": "70a60f780e8d20643267526ca460805c1f8cae1c77e83b2fcf553e413ed350e4",
       "importedSha256": "70a60f780e8d20643267526ca460805c1f8cae1c77e83b2fcf553e413ed350e4"
@@ -3355,11 +3370,6 @@
       "path": "app/study-views.tsx",
       "sourceSha256": "6d1e76308517cc89bfa007344b68fa7b575729cc2a2733276627843eee1bdfcf",
       "importedSha256": "3bd24ede8dc84c62f2da314ba1973fe956d78212562a2a368472686c8bf6a6ad"
-    },
-    {
-      "path": "lib/study-views.ts",
-      "sourceSha256": "86504e3a67ec3982b43c211dd01c928e41002b1459b50ff018146b3ee5ad738a",
-      "importedSha256": "86504e3a67ec3982b43c211dd01c928e41002b1459b50ff018146b3ee5ad738a"
     },
     {
       "path": "app/study-views.css",
@@ -3808,8 +3818,8 @@
     },
     {
       "path": "app/fitted-camera.tsx",
-      "sourceSha256": "8621b76137dc18b1200cffb5fc79a0e38d55bb95d933978e7d73e43727850a49",
-      "importedSha256": "c7ee809d68a44f0a760a1b88788e4b6a8d68e73cc20366835e2f6caa7e0fd735"
+      "sourceSha256": "ff59cb133b53a6ea728dc0aa902a1530559e375a834ec5eb7d0d7b5509a73e5c",
+      "importedSha256": "1552c8b595088217b917e51ffb5a1f3eaa20ba132a048179f452425ca4d0c732"
     },
     {
       "path": "lib/study-camera.ts",
@@ -3825,6 +3835,11 @@
       "path": "lib/camera-keyboard.ts",
       "sourceSha256": "9a0a095306c6687ca7fd568570c7a66363566ac3a70f2916bc1e8f74aa405220",
       "importedSha256": "9a0a095306c6687ca7fd568570c7a66363566ac3a70f2916bc1e8f74aa405220"
+    },
+    {
+      "path": "lib/tour-camera.ts",
+      "sourceSha256": "6e1cb68621d86be34fbaa3fbc57497ec167f82a6dd0824605a37708ecd710f46",
+      "importedSha256": "6e1cb68621d86be34fbaa3fbc57497ec167f82a6dd0824605a37708ecd710f46"
     },
     {
       "path": "app/anatomy-tissue.tsx",
@@ -4138,23 +4153,18 @@
     },
     {
       "path": "app/shoulder-explorer.tsx",
-      "sourceSha256": "bf52f182d3cedadf31cf539f778aad5e95bb8e23c1b73d48a4deeae788a2a993",
-      "importedSha256": "0448c8632ccc838fd1c72edb6123c354e674817e56383898dcc24cc3883d6dfa"
+      "sourceSha256": "0b1eb08fbdfce088dc92df88e67a901a879e910f38acc127ee6ded5567c04cfa",
+      "importedSha256": "363c9c4a4295058f1e289f91986dbf04adfef4e874dc5a2f1f76f65a83148bec"
     },
     {
       "path": "app/anatomy-scene.tsx",
-      "sourceSha256": "b43d05d6a6c035d7657572690408f04ca64c7dda1e4a014075e58367371d82b5",
-      "importedSha256": "a84c7e11cf5f2122bab43ab2bf6388cc0f7969c06248a4028c037a1bc216ebb9"
+      "sourceSha256": "69a7df51013d5597f5bfcf7ef86208b8835c198d06c36a9ce80e7a9c71d48af8",
+      "importedSha256": "1afaffa9797c5af4787063f6b59b4c76bd5dd751ed216d9f65dd2482b3074119"
     },
     {
       "path": "lib/shoulder-arrangement.ts",
       "sourceSha256": "4652e8112b700ea5ef34e58ffd9bc5a1fa35e51fe423876db01deff2c1f6ef5a",
       "importedSha256": "4652e8112b700ea5ef34e58ffd9bc5a1fa35e51fe423876db01deff2c1f6ef5a"
-    },
-    {
-      "path": "public/models/bodyparts3d/manifest.json",
-      "sourceSha256": "619e3ab84712487bd032b84a8f8b52f94d10883d8db7798057049bab287de857",
-      "importedSha256": "619e3ab84712487bd032b84a8f8b52f94d10883d8db7798057049bab287de857"
     },
     {
       "path": "components/ui/combobox.tsx",
@@ -4177,6 +4187,16 @@
       "importedSha256": "925b83bb306cfd9f1bfc2ac655efb3f474693aaeac2419166a37e694162eab4a"
     },
     {
+      "path": "app/shoulder-tour-player.tsx",
+      "sourceSha256": "21992ce697385877f10ef00dcc85755b4853f3263370264c0cfccba74a5024d5",
+      "importedSha256": "f98b113a4f110e7b573bf9c951bacdad78393416a5e258deb664ffdf95282213"
+    },
+    {
+      "path": "app/shoulder-tour-player.css",
+      "sourceSha256": "212ae3785249c4b1457cbc5610274646941f5bfc8097453e31f187b1a8f097d9",
+      "importedSha256": "212ae3785249c4b1457cbc5610274646941f5bfc8097453e31f187b1a8f097d9"
+    },
+    {
       "path": "app/globals.css",
       "sourceSha256": "c0b5616ff8bd0c4579f762fa0e895562645289ec6ead7bbc029ae4791cb61ea3",
       "importedSha256": "8c3673ebf04f809192a4a50695b00bd50ee55f9a3ed02640d48a28c44bcfbae2"
@@ -4188,8 +4208,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "48106c8c2e928cd22f97c6ef5042c4ece1587f96a18b0c1d9c0952f7db809351",
-      "importedSha256": "48106c8c2e928cd22f97c6ef5042c4ece1587f96a18b0c1d9c0952f7db809351"
+      "sourceSha256": "ee9b4cb84773bde6e355f4609bacd8e821f29d8bb95fbbb42608faa06f5a8a65",
+      "importedSha256": "ee9b4cb84773bde6e355f4609bacd8e821f29d8bb95fbbb42608faa06f5a8a65"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -4288,5 +4308,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "7f6948c5d90bad6534da8c3a49ba8aaf95e418f8fd1c4ae4cea527637c135bd2"
+  "websiteIntegrationSha256": "b4f190885c50e58c27bff6a91ca0adc2718462062e9d206bb20117b8db0edf11"
 }

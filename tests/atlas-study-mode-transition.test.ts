@@ -15,7 +15,7 @@ test('regional delivery binds the verified Search/session transition without exp
   assert.equal(manifest.sourceCommit,registered.sourceCommit);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of [
-    ['app/atlas-workspace.tsx','6ead6f8f9221666d3f6517e00220b2ecd4533746085674fbd13ae79463f64c46'],
+    ['app/atlas-workspace.tsx','3492d74682daa945418e97a7e8130cae62907e4c7f67285c99196b329f79b104'],
     ['app/body-explorer.tsx','fedfd83496638c6e6420b938edc86ad7ef9b7b2c7e1666c824abe4720a56eb83'],
     ['app/workspace-session.ts','7a2a73775b9eebebc50df257cc520f2f33499ebb7130f496a4b2cdfb46fc379a'],
   ])assert.deepEqual(inputs.filter(i=>i.path===path),[{path,sha256}]);

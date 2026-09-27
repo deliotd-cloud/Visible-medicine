@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "48106c8c2e928cd22f97c6ef5042c4ece1587f96a18b0c1d9c0952f7db809351"
+    "sha256": "ee9b4cb84773bde6e355f4609bacd8e821f29d8bb95fbbb42608faa06f5a8a65"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -69,7 +69,7 @@
   },
   {
     "path": "app/atlas-workspace.tsx",
-    "sha256": "6ead6f8f9221666d3f6517e00220b2ecd4533746085674fbd13ae79463f64c46"
+    "sha256": "3492d74682daa945418e97a7e8130cae62907e4c7f67285c99196b329f79b104"
   },
   {
     "path": "app/back-layers-study.tsx",
@@ -173,7 +173,7 @@
   },
   {
     "path": "app/fitted-camera.tsx",
-    "sha256": "8621b76137dc18b1200cffb5fc79a0e38d55bb95d933978e7d73e43727850a49"
+    "sha256": "ff59cb133b53a6ea728dc0aa902a1530559e375a834ec5eb7d0d7b5509a73e5c"
   },
   {
     "path": "app/globals.css",
@@ -1301,7 +1301,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "df5ac42ebd6444e062ead2bfb08db2ff6bbc384a1aa624c9909d0b6dfb3f5935"
+    "sha256": "bdbb8fb879c7d3ca154aec04cd5aa102ab46472556d0751872cb92ef4c1aaaf0"
   },
   {
     "path": "content/sca-mca-clinical-pins.json",
@@ -2769,7 +2769,7 @@
   },
   {
     "path": "lib/review-workspace.ts",
-    "sha256": "f7e8e770641815046c9444d1d62ef510424e0e8a9d0e165ca18b1379a6a9dafe"
+    "sha256": "8638eb0242038291d6fade2d12051fa2c189ec942c9a019acf6e48981c259882"
   },
   {
     "path": "lib/root-education-api.ts",
@@ -2990,6 +2990,10 @@
   {
     "path": "lib/tissue-picking.ts",
     "sha256": "d8687a5538d6721a64928065df70b4a2b454dc478929a3ef1e67d8118c2628fd"
+  },
+  {
+    "path": "lib/tour-camera.ts",
+    "sha256": "6e1cb68621d86be34fbaa3fbc57497ec167f82a6dd0824605a37708ecd710f46"
   },
   {
     "path": "lib/tract-plantar-imaging.ts",

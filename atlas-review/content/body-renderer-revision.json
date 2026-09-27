@@ -54,7 +54,7 @@
     },
     {
       "path": "app/atlas-workspace.tsx",
-      "sha256": "6ead6f8f9221666d3f6517e00220b2ecd4533746085674fbd13ae79463f64c46"
+      "sha256": "3492d74682daa945418e97a7e8130cae62907e4c7f67285c99196b329f79b104"
     },
     {
       "path": "app/back-layers-study.tsx",
@@ -158,7 +158,7 @@
     },
     {
       "path": "app/fitted-camera.tsx",
-      "sha256": "8621b76137dc18b1200cffb5fc79a0e38d55bb95d933978e7d73e43727850a49"
+      "sha256": "ff59cb133b53a6ea728dc0aa902a1530559e375a834ec5eb7d0d7b5509a73e5c"
     },
     {
       "path": "app/globals.css",
@@ -1290,7 +1290,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "df5ac42ebd6444e062ead2bfb08db2ff6bbc384a1aa624c9909d0b6dfb3f5935"
+      "sha256": "bdbb8fb879c7d3ca154aec04cd5aa102ab46472556d0751872cb92ef4c1aaaf0"
     },
     {
       "path": "content/sca-mca-clinical-pins.json",
@@ -2674,7 +2674,7 @@
     },
     {
       "path": "lib/review-workspace.ts",
-      "sha256": "f7e8e770641815046c9444d1d62ef510424e0e8a9d0e165ca18b1379a6a9dafe"
+      "sha256": "8638eb0242038291d6fade2d12051fa2c189ec942c9a019acf6e48981c259882"
     },
     {
       "path": "lib/root-education-api.ts",
@@ -2895,6 +2895,10 @@
     {
       "path": "lib/tissue-picking.ts",
       "sha256": "d8687a5538d6721a64928065df70b4a2b454dc478929a3ef1e67d8118c2628fd"
+    },
+    {
+      "path": "lib/tour-camera.ts",
+      "sha256": "6e1cb68621d86be34fbaa3fbc57497ec167f82a6dd0824605a37708ecd710f46"
     },
     {
       "path": "lib/tract-plantar-imaging.ts",
@@ -3213,7 +3217,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "1df702086411e82f0b08198d83d056c42f9c334c9b445631e62a53040d96684f",
-  "sourceRendererSha256": "40b49115e2b445a130c97c1dd96fa2b71ba300dbfe7c04fa5d2a3c650b396dd2",
-  "websiteIntegrationSha256": "7f6948c5d90bad6534da8c3a49ba8aaf95e418f8fd1c4ae4cea527637c135bd2"
+  "sha256": "8f70a2f13bb300cf2f29e900a05bf541cdf33bd22ad63efc1eeec3e12312ec9a",
+  "sourceRendererSha256": "48c1028c8eeda4968627c8a96c6cedd54a6c5c79cc93752acfe290a7d8bde55d",
+  "websiteIntegrationSha256": "b4f190885c50e58c27bff6a91ca0adc2718462062e9d206bb20117b8db0edf11"
 }

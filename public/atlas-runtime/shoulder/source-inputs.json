@@ -13,7 +13,7 @@
   },
   {
     "path": "app/anatomy-scene.tsx",
-    "sha256": "b43d05d6a6c035d7657572690408f04ca64c7dda1e4a014075e58367371d82b5"
+    "sha256": "69a7df51013d5597f5bfcf7ef86208b8835c198d06c36a9ce80e7a9c71d48af8"
   },
   {
     "path": "app/atlas-panel.css",
@@ -21,19 +21,19 @@
   },
   {
     "path": "app/atlas-workspace.css",
-    "sha256": "aaa75b3e4e42a68ac944d70bbca7957eee4c3ba71c4413436cd9bc9f64841c4d"
+    "sha256": "10112bc03082946db1a475a390cf1a385f92bc83e4dc978d6d87d2773f9fae72"
   },
   {
     "path": "app/atlas-workspace.tsx",
-    "sha256": "dddafc036e20e23b1048c0be494df62cd6eb794ffbb7a6a6423bd74bf8c0cdbd"
+    "sha256": "3492d74682daa945418e97a7e8130cae62907e4c7f67285c99196b329f79b104"
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "c9f9a96871babe9a7d2d71a5159ec14e7308989eb883b5f6c8a2ccc578afb6f4"
+    "sha256": "3e3e52758842f6ecfb058b963b0af6be17ca3013be8e1b2dc3ed3b5276e54c54"
   },
   {
     "path": "app/body-explorer.css",
-    "sha256": "9913bdbfbde3616885146cf92bed3c25df53ed03d8690125cd8ff85b4208a841"
+    "sha256": "7132ca1326b6d709e191483c9c341ef76b7dc9954ac66eae277fb3ab3c939e31"
   },
   {
     "path": "app/brand.tsx",
@@ -57,7 +57,7 @@
   },
   {
     "path": "app/fitted-camera.tsx",
-    "sha256": "8621b76137dc18b1200cffb5fc79a0e38d55bb95d933978e7d73e43727850a49"
+    "sha256": "ff59cb133b53a6ea728dc0aa902a1530559e375a834ec5eb7d0d7b5509a73e5c"
   },
   {
     "path": "app/globals.css",
@@ -109,7 +109,15 @@
   },
   {
     "path": "app/shoulder-explorer.tsx",
-    "sha256": "bf52f182d3cedadf31cf539f778aad5e95bb8e23c1b73d48a4deeae788a2a993"
+    "sha256": "0b1eb08fbdfce088dc92df88e67a901a879e910f38acc127ee6ded5567c04cfa"
+  },
+  {
+    "path": "app/shoulder-tour-player.css",
+    "sha256": "212ae3785249c4b1457cbc5610274646941f5bfc8097453e31f187b1a8f097d9"
+  },
+  {
+    "path": "app/shoulder-tour-player.tsx",
+    "sha256": "21992ce697385877f10ef00dcc85755b4853f3263370264c0cfccba74a5024d5"
   },
   {
     "path": "app/shoulder-workspace.css",
@@ -212,6 +220,14 @@
     "sha256": "a0a0f57b5061048a8765cd9899c5467a98b66c81184b784ce0a93e710417a5ef"
   },
   {
+    "path": "content/achilles-ct-pins.json",
+    "sha256": "cbace5da41467256b95305858cb0d356dd0372eacd02be1ff6021f3f29d439fd"
+  },
+  {
+    "path": "content/achilles-ct.ts",
+    "sha256": "90957fbb728c1b72aa29b5db1f0aca01269035d49022d93d3fe5bf413a05cd21"
+  },
+  {
     "path": "content/acral-bone-imaging-pins.json",
     "sha256": "863aa9a374ddd086a2f0a7fe56335582a94431ad98a69ea6caa7fbc4d952db73"
   },
@@ -254,6 +270,14 @@
   {
     "path": "content/chest-wall-muscle-imaging.ts",
     "sha256": "3d5d7552cb1d0ffa75fc031acf2b147edbb65b66b35ee76799815c0bbbf75e5c"
+  },
+  {
+    "path": "content/circle-willis-imaging-pins.json",
+    "sha256": "8891733101134e78fad8a36d1fd8b7387ea64b20ed2c2d36f3a20e978d6deece"
+  },
+  {
+    "path": "content/circle-willis-imaging.ts",
+    "sha256": "d71c9cfe19ceb29934c91832cc3bd39d14a2dec405f4816e5eef4643d8eea2f1"
   },
   {
     "path": "content/common-interosseous-us-pins.json",
@@ -368,6 +392,14 @@
     "sha256": "174ad897535a6fbf3f56f66ce4781198bb26b19395cb70bbcad47acb209a8885"
   },
   {
+    "path": "content/elbow-arterial-ct-pins.json",
+    "sha256": "6ff0fad79b76f3c7a45e9f01032c09d309280fcab13afc60690f954bbf2e197f"
+  },
+  {
+    "path": "content/elbow-arterial-ct.ts",
+    "sha256": "38af68ce17b668e7ac373bcbd87d1c8e62c060a3807fd1de060a28120b5a5b7f"
+  },
+  {
     "path": "content/elbow-arterial.ts",
     "sha256": "9550d3887134e04f289cb3d7e39ab710340e0fcfec59c64419441fa4f4779c6e"
   },
@@ -394,6 +426,14 @@
   {
     "path": "content/foot-muscle-imaging.ts",
     "sha256": "80aba36ae5a6dfb3313510f75d414f96c27468d00c912c22b3d87dad5dfa2ba2"
+  },
+  {
+    "path": "content/foot-vascular-quiz-pins.json",
+    "sha256": "9d6a38f9c1c5559f0bca4d7665ad863f04d5074b607a23205d226646c6ef1b66"
+  },
+  {
+    "path": "content/foot-vascular-quiz.ts",
+    "sha256": "3dc9fd1aa39ea472ea2d01b3e682a02524fdd902da2e44a71b3132714759bde9"
   },
   {
     "path": "content/forearm-arterial-ct-pins.json",
@@ -817,7 +857,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "29737e984c49ec87f8e725fd26ad952791e7651e50fd922b4b66ecd89e1d2a8e"
+    "sha256": "bdbb8fb879c7d3ca154aec04cd5aa102ab46472556d0751872cb92ef4c1aaaf0"
   },
   {
     "path": "content/sca-mca-clinical-pins.json",
@@ -842,6 +882,14 @@
   {
     "path": "content/shoulder-arm-muscle-imaging.ts",
     "sha256": "f1362fbc88cebd958073b476b3aa44eae847091fe265e9194971ae5e4360d0c3"
+  },
+  {
+    "path": "content/shoulder-arterial-ct-pins.json",
+    "sha256": "f6bdcd874050a39c27c87f2af7163ca7c93994a7b2fc2fd18d2bdadc73621024"
+  },
+  {
+    "path": "content/shoulder-arterial-ct.ts",
+    "sha256": "d7d59978ebf64cfe1d26c67065aabee0eb4d948ba77649005077dc3a65640baa"
   },
   {
     "path": "content/shoulder-arterial-mri-pins.json",
@@ -926,6 +974,14 @@
   {
     "path": "content/thoracic-inlet-xray.ts",
     "sha256": "4c5ab647f20be853b81b626c99e81318acd3f9884593d08b225c906d93cea5de"
+  },
+  {
+    "path": "content/thoracic-quiz-pins.json",
+    "sha256": "92aa67280c42b6966e06a6c2c05b6e9db5e4d90bd21912cda3eaadf67395b714"
+  },
+  {
+    "path": "content/thoracic-quiz.ts",
+    "sha256": "581c485dd186321db1304024bc8226e34e8e250ce9a29727c65c40ef6f957d9f"
   },
   {
     "path": "content/thoracoabdominal-organ-imaging-pins.json",
@@ -1038,6 +1094,10 @@
   {
     "path": "lib/abdominal-vessel-curriculum.ts",
     "sha256": "e073ed81c9aa107544430ce18997d4705e7790cdb57993b21b737af39a163539"
+  },
+  {
+    "path": "lib/achilles-ct.ts",
+    "sha256": "827b0bde2ab3c98ee11f95f75e7e4a78af627d80bbcf5916f1f8697a61799254"
   },
   {
     "path": "lib/achilles-imaging.ts",
@@ -1180,6 +1240,10 @@
     "sha256": "e97986190d60d6bde5ffcb9f17181880a5521aad4dfca71850c59c22ca431d79"
   },
   {
+    "path": "lib/circle-willis-imaging.ts",
+    "sha256": "d4e7beb1ae7377777d6c9d93d16da8aac14384cd38e28a7de1cf7e2ecc803e2c"
+  },
+  {
     "path": "lib/circumflex-femoral.ts",
     "sha256": "71313635f2ae5a4fa5f7726adf6f6e92fb48a4ae2e43fd7a721860c062a7ccf4"
   },
@@ -1304,6 +1368,10 @@
     "sha256": "0392e2cc92fcc9eb896ea3582010bd1032be0148f9fdc40a752a872436707902"
   },
   {
+    "path": "lib/elbow-arterial-ct.ts",
+    "sha256": "a2fc77065a921cbbbcf71c637172baa70b3e128a6d713c3c71d5268e422e8827"
+  },
+  {
     "path": "lib/elbow-arteries.ts",
     "sha256": "6b2b82e4cf22e9a07af4d29e7109769c30ae14b5d4cc994f4a23dfe01ce4c73c"
   },
@@ -1342,6 +1410,10 @@
   {
     "path": "lib/foot-vascular-anatomy.ts",
     "sha256": "4678ddd09311b67e646004b61cf3b52f207b68678010d39dbe04bb37076ccdd4"
+  },
+  {
+    "path": "lib/foot-vascular-quiz.ts",
+    "sha256": "df617fe8a552a1d0b808c212497c77c879a18192a4094e269a4e0d94fc3eb791"
   },
   {
     "path": "lib/forearm-arterial-imaging.ts",
@@ -1805,7 +1877,7 @@
   },
   {
     "path": "lib/review-workspace.ts",
-    "sha256": "f7e8e770641815046c9444d1d62ef510424e0e8a9d0e165ca18b1379a6a9dafe"
+    "sha256": "8638eb0242038291d6fade2d12051fa2c189ec942c9a019acf6e48981c259882"
   },
   {
     "path": "lib/root-education-api.ts",
@@ -1856,12 +1928,20 @@
     "sha256": "4652e8112b700ea5ef34e58ffd9bc5a1fa35e51fe423876db01deff2c1f6ef5a"
   },
   {
+    "path": "lib/shoulder-arterial-ct.ts",
+    "sha256": "8c00c0a853299d60bf67e9fc250c84fd593ef3963fa4e833e3585f0181c77644"
+  },
+  {
     "path": "lib/shoulder-arterial-mri.ts",
     "sha256": "d2cec74d690c470be73e01e68093413526a8b20650d300fc208bfbf0908c455f"
   },
   {
     "path": "lib/shoulder-clinical-curriculum.ts",
     "sha256": "dab771a8dee5c917271d3354d350922bea85d985583c863cf1ff1f4b6481b18b"
+  },
+  {
+    "path": "lib/shoulder-tours.ts",
+    "sha256": "03083449553e2f4db25adf66c9d5fc18b2c7849ee2b1846f4cd06775ceeb2fda"
   },
   {
     "path": "lib/small-intestinal-mesentery-mri.ts",
@@ -1960,6 +2040,10 @@
     "sha256": "6996aea073a7c5e20dbf33a1d607d261eba35051ef8d983d177c6d0704c3d6dc"
   },
   {
+    "path": "lib/thoracic-quiz.ts",
+    "sha256": "0fa4ec6755a44490a8fb8036be432fd52180151523fd4e79888a4ada416524ff"
+  },
+  {
     "path": "lib/thoracic-vessel-clinical-curriculum.ts",
     "sha256": "9b0497b72c601d7ff89689d13c6efbf8804113d49790e901e3d5d02ed394a1d2"
   },
@@ -1978,6 +2062,10 @@
   {
     "path": "lib/tissue-picking.ts",
     "sha256": "d8687a5538d6721a64928065df70b4a2b454dc478929a3ef1e67d8118c2628fd"
+  },
+  {
+    "path": "lib/tour-camera.ts",
+    "sha256": "6e1cb68621d86be34fbaa3fbc57497ec167f82a6dd0824605a37708ecd710f46"
   },
   {
     "path": "lib/tract-plantar-imaging.ts",

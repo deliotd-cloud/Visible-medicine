@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "80ff7f2ce56ce3cc27d4d9e6962797292585c3df",
-  "sha256": "7f6948c5d90bad6534da8c3a49ba8aaf95e418f8fd1c4ae4cea527637c135bd2",
+  "sourceCommit": "6b1539f9de931cfcae0492278a04d90955974844",
+  "sha256": "b4f190885c50e58c27bff6a91ca0adc2718462062e9d206bb20117b8db0edf11",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -52,7 +52,7 @@
     },
     {
       "path": "atlas-review/app/anatomy-scene.tsx",
-      "sha256": "a84c7e11cf5f2122bab43ab2bf6388cc0f7969c06248a4028c037a1bc216ebb9"
+      "sha256": "1afaffa9797c5af4787063f6b59b4c76bd5dd751ed216d9f65dd2482b3074119"
     },
     {
       "path": "atlas-review/app/anatomy-tissue.tsx",
@@ -100,7 +100,7 @@
     },
     {
       "path": "atlas-review/app/atlas-workspace.tsx",
-      "sha256": "ddf6afdd60bc5db4250e47b00a273c69a852d016f053860e0d3c8dafde879477"
+      "sha256": "9642831dd7e4f3b27086c61e1ed89d865f2b8f2502ffac67aa7f5369706a2735"
     },
     {
       "path": "atlas-review/app/back-layers-study.tsx",
@@ -204,7 +204,7 @@
     },
     {
       "path": "atlas-review/app/fitted-camera.tsx",
-      "sha256": "c7ee809d68a44f0a760a1b88788e4b6a8d68e73cc20366835e2f6caa7e0fd735"
+      "sha256": "1552c8b595088217b917e51ffb5a1f3eaa20ba132a048179f452425ca4d0c732"
     },
     {
       "path": "atlas-review/app/globals.css",
@@ -332,7 +332,7 @@
     },
     {
       "path": "atlas-review/app/review/review-dashboard.tsx",
-      "sha256": "5b32580458ae16196759e4a06fb3812cd9d77b6771212662c562baae5c717ab2"
+      "sha256": "7353391ed7deb2493e23176fa98f3e9bfe98f053e6e2dd2a10c85eb2961329d8"
     },
     {
       "path": "atlas-review/app/review/review.css",
@@ -384,7 +384,15 @@
     },
     {
       "path": "atlas-review/app/shoulder-explorer.tsx",
-      "sha256": "0448c8632ccc838fd1c72edb6123c354e674817e56383898dcc24cc3883d6dfa"
+      "sha256": "363c9c4a4295058f1e289f91986dbf04adfef4e874dc5a2f1f76f65a83148bec"
+    },
+    {
+      "path": "atlas-review/app/shoulder-tour-player.css",
+      "sha256": "212ae3785249c4b1457cbc5610274646941f5bfc8097453e31f187b1a8f097d9"
+    },
+    {
+      "path": "atlas-review/app/shoulder-tour-player.tsx",
+      "sha256": "f98b113a4f110e7b573bf9c951bacdad78393416a5e258deb664ffdf95282213"
     },
     {
       "path": "atlas-review/app/shoulder-workspace.css",
@@ -2888,7 +2896,7 @@
     },
     {
       "path": "atlas-review/lib/review-workspace.ts",
-      "sha256": "f7e8e770641815046c9444d1d62ef510424e0e8a9d0e165ca18b1379a6a9dafe"
+      "sha256": "8638eb0242038291d6fade2d12051fa2c189ec942c9a019acf6e48981c259882"
     },
     {
       "path": "atlas-review/lib/root-education-api.ts",
@@ -2953,6 +2961,10 @@
     {
       "path": "atlas-review/lib/shoulder-clinical-curriculum.ts",
       "sha256": "dab771a8dee5c917271d3354d350922bea85d985583c863cf1ff1f4b6481b18b"
+    },
+    {
+      "path": "atlas-review/lib/shoulder-tours.ts",
+      "sha256": "03083449553e2f4db25adf66c9d5fc18b2c7849ee2b1846f4cd06775ceeb2fda"
     },
     {
       "path": "atlas-review/lib/small-intestinal-mesentery-mri.ts",
@@ -3135,6 +3147,10 @@
       "sha256": "d8687a5538d6721a64928065df70b4a2b454dc478929a3ef1e67d8118c2628fd"
     },
     {
+      "path": "atlas-review/lib/tour-camera.ts",
+      "sha256": "6e1cb68621d86be34fbaa3fbc57497ec167f82a6dd0824605a37708ecd710f46"
+    },
+    {
       "path": "atlas-review/lib/tract-plantar-imaging.ts",
       "sha256": "76274b8dbd47b35d9f446830e292687705c72b330a4eed9a0573fb508b2cce82"
     },
@@ -3236,7 +3252,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "48106c8c2e928cd22f97c6ef5042c4ece1587f96a18b0c1d9c0952f7db809351"
+      "sha256": "ee9b4cb84773bde6e355f4609bacd8e821f29d8bb95fbbb42608faa06f5a8a65"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3480,7 +3496,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "9960442069f12f296ccc8df7aef00229cd5b49a2a2689c8d5637557d28c6c3d9"
+      "sha256": "81be8a8c9b80720580211ac98dc5b2c35cc82c64accaa303a0790d73438e4e16"
     }
   ]
 }

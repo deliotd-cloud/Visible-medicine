@@ -282,6 +282,14 @@ separate. See `docs/GENICULAR_CLINICAL_REFERENCES_20260917.md` for exact scope.
 
 ## Elbow arterial clinical teaching — 17 September 2026
 
+The 26 September CT-orientation extension also uses Habarta et al. below,
+with credit and an adaptation notice in each draft. It adds original named-branch
+orientation, not publication images, case records or copied prose. The case
+report supports a limited CTA example, not reliable depiction of every small
+collateral branch. Existing anatomical factual references and mesh credits remain
+separate; no additional dependency, dataset, font, texture or paid service.
+See `docs/ELBOW_ARTERIAL_CT.md` for scope and evidence limits.
+
 Original short adaptations credit Habarta J, Jordan M, Meffert R, Huflage H,
 Schmalzl J (2022), *Surgical management of a traumatic elbow dislocation with
 disruption of the brachial artery*, https://doi.org/10.1007/s11678-022-00686-9;
@@ -1553,3 +1561,107 @@ transform, float32 encoding, display normals, illustrative material and labelled
 surface intersections. No welding, repair or individual anatomical fitting.
 Attribution and the source licence link are displayed on the candidate page.
 No patient imaging is included; learner admission and deployment remain pending.
+
+## Achilles tendon CT teaching — 27 September 2026
+
+Original adapted summary of Giovanni Foti, Luca Bortoli, Matteo Tronu,
+Sabrina Montefusco, Gerardo Serra, Roberto Filippini and Venanzio Iacono (2024),
+*Identification of Achille’s Tendon Tears: Diagnostic Accuracy of Dual-Energy CT
+with Respect to MRI*, Journal of Clinical Medicine 13(15):4426,
+https://doi.org/10.3390/jcm13154426; and Giovanni Foti (2024), *Reply to Maffulli,
+N.; Spiezia, F. Comment on “Foti et al. Identification of Achille’s Tendon Tears:
+Diagnostic Accuracy of Dual-Energy CT with Respect to MRI. J. Clin. Med. 2024,
+13, 4426”*, 13(23):7323, https://doi.org/10.3390/jcm13237323.
+Both article-specific full-text rights statements grant CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/. Verified via Europe PMC public
+full-text XML for PMC11313150 and PMC11642694 on 27 September 2026.
+Changes: concise orientation/limitations synthesis and Atlas-specific scope
+warnings. Author/year credit and source/licence links accompany the drafts;
+no endorsement implied. No figure, scan, table or dataset is reproduced. No new
+model, font, texture, dependency or paid service. Clinical review remains pending.
+
+## Foot vascular formative questions — 27 September 2026
+
+Original draft questions/explanations using anatomical facts checked against
+TTUHSC El Paso's lower-limb arteries and veins tables:
+https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html and
+https://anatomy.ttuhscep.edu/anatomytables/veins_lowerlimb.html.
+These copyrighted tables (Thomas R. Gest / MedCharts Anatomy attribution on
+the source pages) are factual references only, not imported or relicensed assets.
+No tables, figures, page layouts or extended source prose redistributed. Source
+links accompany the original questions. Existing model licences remain unchanged;
+no new paid service or dependency. All answer keys require clinical review.
+
+## Circle of Willis CT/MRI orientation — 27 September 2026
+
+Original factual teaching with references to UTHealth Neuroanatomy Online:
+https://nba.uth.tmc.edu/neuroanatomy/l4/Lab04p06_index.html and
+https://nba.uth.tmc.edu/neuroanatomy/l4/Lab04p07_index.html; and ACR/RSNA
+RadiologyInfo: https://www.radiologyinfo.org/en/info/angioct and
+https://www.radiologyinfo.org/en/info/angiomr. Pages inspected 27 September 2026.
+These copyrighted pages are factual references only, not freely relicensed
+assets. No source figures, tables, scans, layouts or extended prose are copied.
+Source links accompany concise original drafts. Existing model/data licences
+remain unchanged; no dependency, texture, font, paid service or endorsement.
+Anatomical and radiological sign-off is still required for every draft.
+
+## Thoracic vessel reasoning — 27 September 2026
+
+Six original draft reasoning questions use factual references inspected at
+https://anatomy.ttuhscep.edu/anatomytables/arteries_thorax.html and
+https://anatomy.ttuhscep.edu/anatomytables/veins_thorax.html.
+These copyrighted university tables cite MedCharts Anatomy; they are references,
+not licensed assets being redistributed. No source tables, figures, layouts,
+question-bank items or extended prose are copied. Original concise prompts and
+explanations link to their sources. Existing model notices/licences are unchanged;
+no paid service, new dataset, dependency, font or texture is introduced. Clinical
+and educational approval remains pending. Catalogue side tags are preserved,
+not reinterpreted as clinical laterality or evidence of vessel patency.
+
+## Thoracic structure quick checks — 27 September 2026
+
+Original factual questions and explanations checked against TTUHSC El Paso:
+https://anatomy.ttuhscep.edu/anatomytables/viscera_thorax.html and
+https://anatomy.ttuhscep.edu/cardiovascular_system/sup_med_ans.html.
+These copyrighted university pages are factual references, not imported or
+relicensed datasets/question banks. No images, tables, layouts or source quiz
+wording are redistributed. Source links accompany short original questions.
+Existing model licences and notices remain unchanged; no new asset, dependency,
+font, texture, paid service or mandatory fee. All teaching remains draft and
+requires revision-bound radiologist sign-off.
+
+## Independent ankle-tendon imaging drafts — 27 September 2026
+
+Brief original ultrasound orientation references the ESSR ankle technical
+guidelines (https://essr.org/content-essr/uploads/2016/10/ankle.pdf); the tibialis
+anterior MRI note references Lee et al., AJR 187 (2006), W161–168,
+https://pubmed.ncbi.nlm.nih.gov/16861505/. References checked 27 September 2026.
+These are linked factual sources, not imported or relicensed material. No PDF,
+figure, protocol, source text, patient scan or external question bank is bundled.
+The existing independent CC0 specimen licence is unchanged. No new asset,
+dependency, paid service or fee; drafts require radiologist sign-off. Public
+availability of a reference does not grant commercial image-reuse rights.
+
+## Shoulder arterial CT/CTA orientation — 27 September 2026
+
+Original concise factual teaching references TTUHSC El Paso's upper-limb
+arteries table (https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html),
+ACR/RSNA RadiologyInfo (https://www.radiologyinfo.org/en/info/angioct), and Barrett
+et al., Anatomic variants of the subscapular-thoracodorsal arterial system,
+Oral Oncology 125 (2022), 105682 (https://pmc.ncbi.nlm.nih.gov/articles/PMC8926423/).
+Pages inspected 27 September 2026. These copyrighted references are not imported
+or relicensed assets; PMC availability is not treated as commercial permission.
+No publisher figures, tables, scans, layouts or extended prose are reproduced.
+Source links accompany the drafts; no endorsement implied. No new model, font,
+texture, dataset, dependency or paid service. Existing licences are unchanged;
+revision-bound radiologist sign-off remains required.
+
+## Agent-authored shoulder guided tour — 27 September 2026
+
+Original short orientation captions reference the TTUHSC El Paso upper-limb
+muscle table, https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html,
+checked 27 September 2026. This is a linked factual reference, not imported or
+relicensed prose, imagery or a model. Existing shoulder geometry and its notices
+are unchanged. No new dependency, font, texture, dataset, paid service or
+mandatory fee. AI authorship does not confer clinical validation: captions,
+layer choices, camera framing and omissions require radiologist review.
