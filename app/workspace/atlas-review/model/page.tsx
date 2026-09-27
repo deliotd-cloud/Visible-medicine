@@ -14,6 +14,6 @@ export default async function ReviewModel({ searchParams }: { searchParams: Prom
     query.set(key, value);
   }
   query.set('kind', kind); query.set('region', region);
-  return <><nav className="review-model-bar" aria-label="Review model navigation"><a href="/workspace/atlas-review">← Clinical Review</a><span>Exact review source · 26 September 2026</span></nav>
+  return <><nav className="review-model-bar" aria-label="Review model navigation"><a href="/workspace/atlas-review">← Clinical Review</a><span>Review-linked model</span></nav>
     <iframe className="review-model-frame" title="Clinical Review anatomy model" src={'/atlas-review-viewer/index.html?' + query.toString()} allowFullScreen /></>;
 }

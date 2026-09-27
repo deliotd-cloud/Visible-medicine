@@ -1,5 +1,5 @@
 {
-  "revision": "eecf73cdf5443dd99e308746547ffbe5b1f1463b",
+  "revision": "f28c415f9b46137db744d4606bc425d1aea54550",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -533,8 +533,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "ba573d1256c3a82bc46c0310baac9bbcf0ff523ef338560690e79b1dc5b44c21",
-      "importedSha256": "ba573d1256c3a82bc46c0310baac9bbcf0ff523ef338560690e79b1dc5b44c21"
+      "sourceSha256": "ecc119db4b2f0d6c71bf6d533673864bcb9d8c361408f742bca32e3291dd612b",
+      "importedSha256": "ecc119db4b2f0d6c71bf6d533673864bcb9d8c361408f742bca32e3291dd612b"
     },
     {
       "path": "lib/central-vessel-imaging.ts",
@@ -1250,6 +1250,21 @@
       "path": "content/foot-vascular-quiz.ts",
       "sourceSha256": "3dc9fd1aa39ea472ea2d01b3e682a02524fdd902da2e44a71b3132714759bde9",
       "importedSha256": "3dc9fd1aa39ea472ea2d01b3e682a02524fdd902da2e44a71b3132714759bde9"
+    },
+    {
+      "path": "lib/circle-willis-imaging.ts",
+      "sourceSha256": "d4e7beb1ae7377777d6c9d93d16da8aac14384cd38e28a7de1cf7e2ecc803e2c",
+      "importedSha256": "d4e7beb1ae7377777d6c9d93d16da8aac14384cd38e28a7de1cf7e2ecc803e2c"
+    },
+    {
+      "path": "content/circle-willis-imaging-pins.json",
+      "sourceSha256": "8891733101134e78fad8a36d1fd8b7387ea64b20ed2c2d36f3a20e978d6deece",
+      "importedSha256": "8891733101134e78fad8a36d1fd8b7387ea64b20ed2c2d36f3a20e978d6deece"
+    },
+    {
+      "path": "content/circle-willis-imaging.ts",
+      "sourceSha256": "d71c9cfe19ceb29934c91832cc3bd39d14a2dec405f4816e5eef4643d8eea2f1",
+      "importedSha256": "d71c9cfe19ceb29934c91832cc3bd39d14a2dec405f4816e5eef4643d8eea2f1"
     },
     {
       "path": "lib/knee-imaging.ts",
@@ -2508,8 +2523,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "5c7de33a3ef93f90f16f8fb60e0a3528e5ea1c8e99b6e81ad42324e91bf99cc4",
-      "importedSha256": "c9ea49443b110787b990b5138fe0ece8a6631895110bc53a5b8fd2f79e20cfe6"
+      "sourceSha256": "515af00d80a8657f39cb715cd67c4c065f24be572743974bf762aca9b6312616",
+      "importedSha256": "fde4025f889571632f87a8463bd41d98fd0e18fa47863a0ddd77755a16a35cfa"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -2784,7 +2799,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "3ecadf85a320f07b245ce600649ad2031d1c8cf3c88fc5281f023d3b69600521",
-      "importedSha256": "3570ea717956c44d4ec6145a4d313f8dce753cd44cb5ae8997b5b9b8a8ab73e9"
+      "importedSha256": "f11da80f3e291f05e0658382b476f28d842d51d2443dc73fe9963f3dd81cde0d"
     },
     {
       "path": "app/review/review.css",
@@ -4133,8 +4148,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "ae76f83067466dfa121cd1502b850ab3f9a3d4607b618bd052ccb7cdc384a062",
-      "importedSha256": "ae76f83067466dfa121cd1502b850ab3f9a3d4607b618bd052ccb7cdc384a062"
+      "sourceSha256": "faf0f4f2870e5e521bd0ea3e0e99281a47d2d5095888fd6cf93d693c4fd51537",
+      "importedSha256": "faf0f4f2870e5e521bd0ea3e0e99281a47d2d5095888fd6cf93d693c4fd51537"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -4233,5 +4248,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "c7426019c4e602d17e32f91a843980a87bfe4102d0f8fa153b5c18dc30ea7bbb"
+  "websiteIntegrationSha256": "8bd0347ce4e49b4e611c3d3c16b64edf61ba2f7d2ed750f7ece007bbcb342613"
 }

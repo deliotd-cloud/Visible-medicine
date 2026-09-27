@@ -1,5 +1,15 @@
 # Visible Medicine — shared delivery plan
 
+27 September Circle of Willis review delivery: protected Clinical Review now
+imports Atlas `f28c415` with 14 CT/MRI drafts across seven existing arteries.
+The matching review model is rebound; no decisions are migrated or submitted.
+Eight integration tests, TypeScript/build, actual desktop worksheet/model and
+375px touch Details CT/MRI switching pass. All 136 models, learner `0770fd3`,
+independent access and specialist data remain unchanged. Source and references:
+`docs/clinical-review-circle-willis-20260927.md`. Local-only; no public release.
+Next update the main learner export from this verified source, preserving the
+separate modules and review bindings, then return to substantive atlas gaps.
+
 27 September regional delivery: the main local regional/whole-body viewer now
 uses Atlas `0770fd3`, including tested restoration and the previously prepared
 draft foot quizzes/Achilles CT notes. All model bytes, independent modules,

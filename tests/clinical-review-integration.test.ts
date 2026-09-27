@@ -15,7 +15,7 @@ test('current review includes draft answer evidence and admitted teaching withou
   const viewer = JSON.parse(readFileSync('public/atlas-review-viewer/manifest.json', 'utf8'));
   const regional = JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8'));
   // Review and learner exports retain their independently verified source pins.
-  assert.equal(review.revision, 'eecf73cdf5443dd99e308746547ffbe5b1f1463b');
+  assert.equal(review.revision, 'f28c415f9b46137db744d4606bc425d1aea54550');
   assert.equal(viewer.sourceCommit, review.revision);
   assert.equal(viewer.websiteIntegrationSha256, review.websiteIntegrationSha256);
   assert.equal(regional.sourceCommit, '0770fd3e49eb02b0430a80769744c88027c591e5');

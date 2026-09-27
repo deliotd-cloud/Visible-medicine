@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "eecf73cdf5443dd99e308746547ffbe5b1f1463b",
-  "sha256": "c7426019c4e602d17e32f91a843980a87bfe4102d0f8fa153b5c18dc30ea7bbb",
+  "sourceCommit": "f28c415f9b46137db744d4606bc425d1aea54550",
+  "sha256": "8bd0347ce4e49b4e611c3d3c16b64edf61ba2f7d2ed750f7ece007bbcb342613",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -12,7 +12,7 @@
     },
     {
       "path": "app/workspace/atlas-review/model/page.tsx",
-      "sha256": "bf70ebd6136fff7f2ead81cded6a70b6d734713a06a2e521869e0b50a8be2ee8"
+      "sha256": "edf56a8ed55598b0bb63e715c3cd3df06fd685d59e59f40b4990936f0a2cd901"
     },
     {
       "path": "app/workspace/atlas-review/nested/page.tsx",
@@ -112,7 +112,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "ba573d1256c3a82bc46c0310baac9bbcf0ff523ef338560690e79b1dc5b44c21"
+      "sha256": "ecc119db4b2f0d6c71bf6d533673864bcb9d8c361408f742bca32e3291dd612b"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -697,6 +697,14 @@
     {
       "path": "atlas-review/content/chest-wall-muscle-imaging.ts",
       "sha256": "3d5d7552cb1d0ffa75fc031acf2b147edbb65b66b35ee76799815c0bbbf75e5c"
+    },
+    {
+      "path": "atlas-review/content/circle-willis-imaging-pins.json",
+      "sha256": "8891733101134e78fad8a36d1fd8b7387ea64b20ed2c2d36f3a20e978d6deece"
+    },
+    {
+      "path": "atlas-review/content/circle-willis-imaging.ts",
+      "sha256": "d71c9cfe19ceb29934c91832cc3bd39d14a2dec405f4816e5eef4643d8eea2f1"
     },
     {
       "path": "atlas-review/content/collicular-brachia-teaching.ts",
@@ -1979,6 +1987,10 @@
       "sha256": "e97986190d60d6bde5ffcb9f17181880a5521aad4dfca71850c59c22ca431d79"
     },
     {
+      "path": "atlas-review/lib/circle-willis-imaging.ts",
+      "sha256": "d4e7beb1ae7377777d6c9d93d16da8aac14384cd38e28a7de1cf7e2ecc803e2c"
+    },
+    {
       "path": "atlas-review/lib/circumflex-femoral.ts",
       "sha256": "71313635f2ae5a4fa5f7726adf6f6e92fb48a4ae2e43fd7a721860c062a7ccf4"
     },
@@ -3192,7 +3204,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "ae76f83067466dfa121cd1502b850ab3f9a3d4607b618bd052ccb7cdc384a062"
+      "sha256": "faf0f4f2870e5e521bd0ea3e0e99281a47d2d5095888fd6cf93d693c4fd51537"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3436,7 +3448,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "8a2dd068fa31e77011f7abe3ff15c683d6509ce9c13b72ef5f9c8e1566d4f3e8"
+      "sha256": "1c2f57b7207c539299fe492e4b8448e231f340d83ab95d67a39a823ff7f47f6e"
     }
   ]
 }

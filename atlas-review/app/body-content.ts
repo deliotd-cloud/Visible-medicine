@@ -107,6 +107,7 @@ import { lowerLimbVesselClinicalLesson } from '../lib/lower-limb-vessel-clinical
 import { achillesImagingLesson } from '../lib/achilles-imaging';
 import { achillesCtLesson } from '../lib/achilles-ct';
 import { footVascularQuizLesson } from '../lib/foot-vascular-quiz';
+import { circleWillisImagingLesson } from '../lib/circle-willis-imaging';
 import { kneeImagingLesson } from '../lib/knee-imaging';
 import { bodyXrayLesson } from '../lib/xray-teaching';
 import { spineImagingLesson } from '../lib/spine-imaging';
@@ -235,6 +236,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const circleWillisImaging = circleWillisImagingLesson(s, tab);
+  if (circleWillisImaging) return circleWillisImaging;
   const footVascularQuiz = footVascularQuizLesson(s, tab);
   if (footVascularQuiz) return footVascularQuiz;
   const coronaryArterialUs = coronaryArterialUsLesson(s, tab);
