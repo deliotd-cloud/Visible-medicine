@@ -13,4 +13,13 @@
 .regional-tour-canvas {position:relative;flex:1 0 300px;min-height:300px;}
 .regional-tour-canvas>.body-scene {height:100%;min-height:300px;}
 .regional-tour-credit {font-size:.75rem;text-decoration:underline;}
+.regional-tour-explanation>summary {min-height:44px;display:list-item;align-content:center;}
+@media(max-width:600px){
+  /* The website already identifies the region above its embedded viewer. */
+  .body-topbar[data-shared-header="true"][data-guided-learning="true"]>.region-heading-compact{display:none;}
+  .regional-tour-panel{padding:8px;}
+  .regional-tour-panel .regional-tour-explanation{margin:0;}
+  .regional-tour-controls{gap:4px;}
+  .regional-tour-controls button{padding-inline:10px;}
+}
 @media(max-width:420px){.regional-tour-panel{padding:10px}.regional-tour-controls button{flex:1 1 auto}.regional-tour-canvas{flex-basis:280px;min-height:280px}.regional-tour-canvas>.body-scene{min-height:280px}}

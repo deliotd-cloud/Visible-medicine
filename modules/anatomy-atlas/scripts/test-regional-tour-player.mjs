@@ -19,7 +19,7 @@ const nodes = tree => !tree || typeof tree !== 'object' ? [] : Array.isArray(tre
 const text = tree => tree == null ? '' : typeof tree === 'string' || typeof tree === 'number' ? String(tree) : Array.isArray(tree) ? tree.map(text).join('') : text(tree.props?.children);
 const plain = value => JSON.parse(JSON.stringify(value));
 
-function harness(source = catalog, tourName = 'thoraxTour') {
+function harness(source = catalog, tourName = 'thoraxTour', compact = false) {
   const slots = [], setters = [], timers = new Map(), listeners = new Map();
   let cursor = 0, pending = [], dirty = false, tree, serial = 0, exits = 0;
   const changed = (old, next) => !old || !next || old.length !== next.length || old.some((item, i) => !Object.is(item, next[i]));
@@ -32,7 +32,7 @@ function harness(source = catalog, tourName = 'thoraxTour') {
   };
   const preference = { matches: false, addEventListener(_event, fn) { listeners.set('motion', fn); }, removeEventListener() { listeners.delete('motion'); } };
   const doc = { hidden: false, addEventListener(event, fn) { listeners.set(event, fn); }, removeEventListener(event) { listeners.delete(event); } };
-  const win = { matchMedia: () => preference, setTimeout(fn, delay) { const id = ++serial; timers.set(id, { fn, delay }); return id; }, clearTimeout(id) { timers.delete(id); } };
+  const win = { matchMedia: query => query.includes('max-width') ? {matches:compact} : preference, setTimeout(fn, delay) { const id = ++serial; timers.set(id, { fn, delay }); return id; }, clearTimeout(id) { timers.delete(id); } };
   const mod = { exports: {} };
   runInNewContext(built.outputFiles[0].text, { module: mod, exports: mod.exports, window: win, document: doc, structuredClone,
     require(id) { if (id === 'react') return shim; if (id === 'next/dynamic') return () => 'BodyScene'; return require(id); } });
@@ -50,6 +50,22 @@ function harness(source = catalog, tourName = 'thoraxTour') {
   render();
   return { render, scene, button, bundles, ready, click, tick, timers, preference, listeners, doc, api, props, unchanged, tree: () => tree, exits: () => exits };
 }
+
+test('Compact tours retain complete teaching on demand and pause while reading', () => {
+  for (const compact of [true,false]) {
+    const h=harness(catalog,'celiacTour',compact);
+    const explanation=()=>nodes(h.tree()).find(n=>n.props?.className==='regional-tour-explanation').props;
+    assert.equal(explanation().open,!compact);
+    assert.match(text(h.tree()),/Branching patterns vary/,'Complete limitations are retained');
+    h.ready();h.click('Start guided tour');h.click('Play');
+    explanation().onToggle({currentTarget:{open:true}});h.render();
+    assert.equal(explanation().open,true);assert.equal(h.timers.size,0);
+    assert.equal(h.scene().transitionPaused,true);
+    explanation().onToggle({currentTarget:{open:false}});h.render();
+    assert.equal(explanation().open,false);assert.equal(h.timers.size,0,'Closing never resumes playback');
+    h.click('Next');assert.equal(h.scene().reset,1);h.click('Exit tour');assert.equal(h.exits(),1);
+  }
+});
 
 test('Cervical tour runs all five exact steps with fixed framing and its own limits', () => {
   const h=harness(catalog,'cervicalSpineTour');

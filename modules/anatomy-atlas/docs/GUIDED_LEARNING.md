@@ -215,3 +215,13 @@ step, Finish/Exit, restored surface layer, focus return and return to Explore.
 The supraspinatus step now explicitly fades other structures for visibility.
 No clinical decision, geometry, private scan, website deployment or desktop PACS
 was changed. Website import and review integration are the next delivery step.
+
+## Compact regional tour presentation — 27 September 2026
+
+At widths up to 600px, the explanation starts collapsed; opening it exposes the
+complete caption, modality notes and references, and pauses camera/playback.
+Closing it never resumes playback. Desktop explanations start expanded. The
+step title, step count and playback/exit controls remain outside the disclosure.
+In embedded mobile tours only, repeated regional metadata is hidden because the
+website already identifies the region; mode navigation remains available. Exit
+restores the ordinary regional header. No tour definitions or geometry changed.
