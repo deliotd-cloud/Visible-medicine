@@ -1,7 +1,9 @@
 import assert from 'node:assert/strict';
 import { contentContext } from './content-contract-tools.mjs';
 import { beforeRegionalQuickCheckKeys } from './regional-quick-check-history.mjs';
-const {api,catalog} = await contentContext();
+import { beforeFootVascularQuiz } from './foot-vascular-quiz-history.mjs';
+const {api: currentApi,catalog} = await contentContext();
+const api = beforeFootVascularQuiz(currentApi);
 const before = beforeRegionalQuickCheckKeys(api,catalog);
 const keyed = catalog.structures.filter(s=>api.bodyLesson(s,'quiz').correctAnswer !== undefined);
 assert.equal(keyed.length,11);

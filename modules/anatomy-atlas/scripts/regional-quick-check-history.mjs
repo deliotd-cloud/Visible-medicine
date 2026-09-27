@@ -2,8 +2,10 @@
 // Runtime teaching, exported records and personal review decisions never use this.
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
+import { beforeFootVascularQuiz } from './foot-vascular-quiz-history.mjs';
 
 export function beforeRegionalQuickCheckKeys(api, catalog) {
+  api = beforeFootVascularQuiz(api);
   const keys = catalog.structures.flatMap(s => {
     const quiz = api.bodyLesson(s, 'quiz');
     return quiz.correctAnswer === undefined && quiz.explanation === undefined

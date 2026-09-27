@@ -1,5 +1,12 @@
 # Current atlas status
 
+27 September foot vascular quizzes: eight exact source selections now have four
+paired formative questions with explicit answers and explanations. Existing
+collapsed controls are reused; exam mode hides them. Full source pins preserve
+all other topics/models. Original factual-reference questions remain drafts for
+radiologist sign-off, not patient findings or proof of flow. See
+[scope and evidence](FOOT_VASCULAR_QUIZ.md); website delivery is separately pinned.
+
 27 September review search: Clinical Review reuses the existing source-checked
 Atlas vocabulary and dedicated shoulder synonyms. Achilles now finds both exact
 whole-body tendons as well as the separate specimens. Scope/side filters, source

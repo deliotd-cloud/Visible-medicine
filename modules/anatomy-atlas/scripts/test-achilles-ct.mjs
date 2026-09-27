@@ -5,6 +5,7 @@ import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import ts from 'typescript';
 import { contentContext, contentValidator } from './content-contract-tools.mjs';
+import { beforeFootVascularQuiz } from './foot-vascular-quiz-history.mjs';
 const hash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const snapshot = (api, display) => ({ body: display.structures.map(s => ({ id: s.id, sections: Object.fromEntries(api.contentTabs.map(t => [t, api.bodyLesson(s, t)])) })), shoulder: api.structures, recipes: api.dissectionProfiles });
 import { exactSourceHistoryApi } from './exact-source-history-api.mjs';
@@ -14,7 +15,7 @@ import pins from '../content/achilles-ct-pins.json' with { type: 'json' };
 import { achillesCtTopic as authored } from '../content/achilles-ct.ts';
 
 const { api: currentApi, catalog, registry } = await contentContext();
-const api = currentApi, display = api.bodyDisplayCatalog(catalog);
+const api = beforeFootVascularQuiz(currentApi), display = api.bodyDisplayCatalog(catalog);
 const lessonBuild = await buildLesson({ stdin: { contents: "export {achillesCtLesson} from './lib/achilles-ct';", resolveDir: process.cwd(), loader: 'ts' }, bundle: true, platform: 'node', format: 'esm', write: false });
 const { achillesCtLesson } = await import('data:text/javascript;base64,' + Buffer.from(lessonBuild.outputFiles[0].text).toString('base64'));
 const parent = await exactSourceHistoryApi(pins.parentCommit);

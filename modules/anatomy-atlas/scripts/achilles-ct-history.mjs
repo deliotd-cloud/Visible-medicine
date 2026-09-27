@@ -2,10 +2,12 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { isDeepStrictEqual } from 'node:util';
+import { beforeFootVascularQuiz } from './foot-vascular-quiz-history.mjs';
 import pins from '../content/achilles-ct-pins.json' with { type: 'json' };
 import transition from '../content/achilles-ct-transition.json' with { type: 'json' };
 const hash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 export function beforeAchillesCt(api) {
+  api = beforeFootVascularQuiz(api);
   if (typeof api.bodyLesson !== 'function') return api;
   // The elbow-only legacy fixture has no display API and no Achilles lessons.
   // A real display API must always pass the immutable checks below.

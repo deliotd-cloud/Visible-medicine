@@ -2,10 +2,14 @@
 import {build} from 'esbuild';
 import {createServer} from 'node:http';
 const root=process.cwd();
+const footVascular = process.argv.includes('--foot-vascular');
+const contentImports = footVascular
+ ? "import pins from './content/foot-vascular-quiz-pins.json'; import {bodyLesson} from './app/body-content'; const structures=pins.entries.map(({identity})=>({...identity,sections:{quiz:bodyLesson(identity,'quiz')}}));"
+ : "import{structures}from'./app/anatomy-data';";
 const result=await build({stdin:{contents:`import React,{useState} from 'react';
 import{createRoot}from'react-dom/client';
 import{StructureQuickCheck}from'./app/structure-quick-check';
-import{structures}from'./app/anatomy-data';
+${contentImports}
 function Preview(){const [index,setIndex]=useState(0);const s=structures[index],q=s.sections.quiz;return <main><h1>Structure check</h1><p>Local interaction preview · draft teaching</p><label>Structure <select value={index} onChange={e=>setIndex(Number(e.target.value))}>{structures.map((s,i)=><option value={i} key={s.id}>{s.name}</option>)}</select></label><StructureQuickCheck key={s.id} question={q.body} choices={q.bullets??[]} correctAnswer={q.correctAnswer??null} explanation={q.explanation}/></main>}
 createRoot(document.getElementById('root')).render(<Preview/>);`,resolveDir:root,loader:'tsx'},bundle:true,write:false,outdir:'.local/quick-check-preview',format:'esm',platform:'browser',jsx:'automatic',define:{'process.env.NODE_ENV':'"production"'}});
 const js=result.outputFiles.find(f=>f.path.endsWith('.js')).contents;

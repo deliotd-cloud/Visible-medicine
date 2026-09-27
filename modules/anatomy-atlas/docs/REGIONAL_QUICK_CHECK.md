@@ -1,5 +1,11 @@
 # Selectable regional structure checks — 26 September 2026
 
+27 September addition: [foot vascular quizzes](FOOT_VASCULAR_QUIZ.md) add eight
+explicitly keyed source selections (four paired concepts), bringing the current
+display to 19 keyed entries and 1,085 legacy notes. The counts below describe the
+original 26 September milestone. Historical replay first reverses the separately
+pinned eight-question transition, then preserves the original eleven-key hash.
+
 The shared regional/whole-body Practice panel used to render every question as
 plain text, including the explicitly keyed questions already interactive in the
 dedicated shoulder viewer. `QuizNotes` now uses the same `StructureQuickCheck`
