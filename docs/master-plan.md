@@ -1,5 +1,14 @@
 # Visible Medicine — shared delivery plan
 
+27 September dissection source: Atlas `eecf73c` fixes Restore leaving returned
+tissues faded/non-pickable or selection-framed. Exact current-scope guards,
+single-step Undo and existing layout/cutaway are preserved. Focused tests,
+TypeScript/build and local foot-viewer before/after checks pass; an older
+model-first migration omission is separately documented, not suppressed.
+GitHub/D source recovery verified. Not imported into this website yet; review
+stays `bc2cf4a`, learner `36c53fb`. See main recovery checkpoint
+`work/RESTORE-VISIBILITY-CHECKPOINT-20260927.md`.
+
 27 September review delivery: the eight foot vascular quiz drafts are now
 imported into protected Clinical Review at Atlas `bc2cf4a`, with a matching
 review viewer/presentation revision. An actual-panel regression exposed hidden
