@@ -85,7 +85,7 @@ export default async function ClinicalReviewPage({ searchParams }: {
             <li>Save or discard edits before switching workspaces. Changed material requires revision-specific re-review.</li>
             <li>CT/MRI/X-ray/ultrasound wording is not acquired-image approval. Cleared images, validated mapping and separate case rights are required.</li>
           </ol>
-          <p>Detailed anatomy uses its exact parent and source; independent specimens do not inherit whole-body approval. The interactive question bank also needs separate review.</p>
+          <p>Detailed anatomy uses its exact parent and source; independent specimens do not inherit whole-body approval. Body teaching review includes only the displayed source-specific interactive reasoning question, when available. All other interactive questions require their own review.</p>
           <p className="clinical-review-revision">Source renderer fingerprint: <code>{renderer.sha256}</code>. This is not a deployment receipt or clinical approval.</p>
         </details>
       </main>

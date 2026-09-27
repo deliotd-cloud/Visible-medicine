@@ -225,8 +225,19 @@ for (const packet of [
   );
   assert(html.includes('Download review worksheet'));
   assert(html.includes('not clinical approval'));
-  assert.equal((html.match(/<details/g) || []).length, 11);
+  assert.equal((html.match(/<details/g) || []).length, 12 + (packet.reasoning ? 1 + packet.reasoning.choices.length : 0));
   assert(!html.includes('<textarea'));
+  assert(!html.includes('>Approve<'));
+  renders++;
+}
+const reasoningPackets = packets.filter(p=>p.reasoning);
+assert.equal(reasoningPackets.length,268);
+for (const packet of reasoningPackets) {
+  const html=render(React.createElement(module.exports.BodyReviewDetails,{material:packet}));
+  assert(html.includes('Interactive reasoning'));
+  assert(html.includes('Correct answer'));
+  for(const choice of packet.reasoning.choices) assert(html.includes(choice.bundleSha256));
+  for(const reference of packet.reasoning.references) assert(html.includes(reference.url.replaceAll('&','&amp;')));
   assert(!html.includes('>Approve<'));
   renders++;
 }

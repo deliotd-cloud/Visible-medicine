@@ -5,6 +5,7 @@ import { contentTabs } from './content-types';
 import type { BodyCatalog } from '../app/body-types';
 import { makeStudyLink } from './study-links';
 import { structureSearchAliases } from './anatomy-search';
+import { bodyReasoningReview } from './body-reasoning-review';
 
 // Read-only review material, separate from private signed shoulder decisions.
 const catalog = bodyDisplayCatalog(rawCatalog as unknown as BodyCatalog);
@@ -14,7 +15,8 @@ export function bodyReviewSearchAliases(id: string): string[] {
   const structure = searchStructures.get(id);
   return structure ? structureSearchAliases(structure) : [];
 }
-export const bodyReviewSchema = 'vm-body-review-worksheet-1';
+// Older clients must reject the expanded worksheet instead of hiding new review material.
+export const bodyReviewSchema = 'vm-body-review-worksheet-2';
 export const bodyReviewChecks = {
   geometry: [
     'Verify source identity, laterality, grouped parts and anatomical boundaries.',
@@ -24,7 +26,7 @@ export const bodyReviewChecks = {
   teaching: [
     'Verify each draft, its references, scope, attachments/actions and clinical wording.',
     'Record corrections and missing topics; pending or identification-only text is not completed teaching.',
-    'Check assessment answers separately; this worksheet does not contain the interactive question bank.',
+    'Check Quiz notes and the displayed source-specific interactive reasoning question, including its answer, alternatives, explanation and references. Other questions are excluded.',
   ],
   imaging: [
     'Review CT, MRI, X-ray and ultrasound wording separately from acquired-image registration.',
@@ -88,14 +90,17 @@ export async function bodyReviewMaterial(id: string) {
     tab,
     ...bodyLesson(structure, tab),
   }));
+  const reasoning = bodyReasoningReview(catalog, id);
   const scope = {
     schema: bodyReviewSchema,
     kind: 'body-display-catalog',
     structureId: id,
   };
   const fingerprints = {
-    source: await digest({ scope, source }),
-    teaching: await digest({ scope, topics }),
+    // The transport schema changed, not the anatomical source identity. Retain
+    // its original hash domain so existing geometry decisions are not widened or invalidated.
+    source: await digest({ scope: { ...scope, schema: 'vm-body-review-worksheet-1' }, source }),
+    teaching: await digest({ scope, topics, reasoning }),
     checklist: await digest({ scope, checks: bodyReviewChecks }),
   };
   return structuredClone({
@@ -104,6 +109,7 @@ export async function bodyReviewMaterial(id: string) {
     approval: false as const,
     source,
     topics,
+    reasoning,
     fingerprints,
     materialHash: await digest({ scope, fingerprints }),
     atlasLink: makeStudyLink(catalog, structure.region, structure.id, 'both'),
@@ -119,7 +125,7 @@ export async function bodyReviewMaterial(id: string) {
       'Worksheet only: no review decision is saved or imported. It cannot approve anatomy, teaching or imaging.',
       'Hashes identify source/content/checklist snapshots, not signatures or a revision-bound approval of renderer code.',
       'This root-body selection excludes nested organ dissections, independent specimens and dedicated shoulder-pilot reviews.',
-      'Draft readiness is editorial coverage, not clinical validation. Quiz notes do not represent the interactive question bank.',
+      'Draft readiness is editorial coverage, not clinical validation. Quiz notes and source-specific interactive reasoning are separate sections; only the displayed material is included, not the entire question bank.',
       'No patient images, spatial registration, private review history or paid lecture content is included.',
     ],
   });

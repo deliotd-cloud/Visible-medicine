@@ -416,6 +416,50 @@ export function BodyReviewDetails({
         </details>
       ))}
       <details>
+        <summary>Interactive reasoning · Draft</summary>
+        {material.reasoning ? (
+          <>
+            <h4>{material.reasoning.prompt}</h4>
+            <p>Draft answer key for review. This question is not clinically approved.</p>
+            <ul>
+              {material.reasoning.choices.map(choice => (
+                <li key={choice.id}>
+                  <strong>{choice.id === material.reasoning?.answerId ? 'Correct answer' : 'Alternative'}:</strong>{' '}
+                  {choice.name} · {choice.laterality}
+                </li>
+              ))}
+            </ul>
+            <p><strong>Draft explanation:</strong> {material.reasoning.explanation}</p>
+            {material.reasoning.references.map((reference, i) => (
+              <a className="body-review-reference" href={reference.url} target="_blank"
+                rel="noreferrer" key={`${reference.url}-${i}`}>
+                {reference.title} ↗
+              </a>
+            ))}
+            <p>{material.reasoning.scope}</p>
+            <p>Question <code>{material.reasoning.key}</code> · revision {material.reasoning.revision}</p>
+            <details>
+              <summary>Exact choice sources & checksums · {material.reasoning.choices.length} choices</summary>
+              {material.reasoning.choices.map(choice => (
+                <details key={choice.id}>
+                  <summary>{choice.name} · {choice.id === material.reasoning?.answerId ? 'Correct answer' : 'Alternative'}</summary>
+                  <p>{choice.fmaId} · {choice.laterality} · {choice.regions.join(', ')} · {choice.sourceTree}</p>
+                  <code>{choice.id}</code>
+                  <p>Node <code>{choice.nodeName}</code> · bundle <code>{choice.bundle}</code></p>
+                  <p>Canonical model checksum</p>
+                  <code>{choice.bundleSha256}</code>
+                  <ul>{choice.sources.map(part => (
+                    <li key={part.file}>{part.file}<code>{part.sha256}</code></li>
+                  ))}</ul>
+                </details>
+              ))}
+            </details>
+          </>
+        ) : (
+          <p>No eligible interactive reasoning question is available for this exact source selection. This does not indicate review or approval.</p>
+        )}
+      </details>
+      <details>
         <summary>Review checklist & handoff</summary>
         <p>
           Download the worksheet to record reviewer details, evidence and
