@@ -1,5 +1,17 @@
 # Visible Medicine — shared delivery plan
 
+27 September foot teaching: Atlas source `eafd71c` adds eight source-bound draft
+vascular quick checks (four paired concepts), using existing selectable controls.
+9,928 other topic entries and model bytes remain unchanged. Focused/history,
+exam, content/review, TypeScript and regional build checks pass; isolated real
+component keyboard/touch feedback and reset verified, including 320px layout.
+Source GitHub readback and independent D restore verified. These new drafts are
+not yet imported into website Clinical Review or learner runtime: current pins
+remain `59b35d8` and `36c53fb` respectively. This is a coordination-only update,
+not publication or clinical approval. Next delivery should import the bounded
+review batch with exact source/presentation revisions before learner release.
+See main workspace `work/FOOT-VASCULAR-QUIZ-CHECKPOINT-20260927.md`.
+
 27 September mobile follow-up: reproduced an open workspace-switcher menu
 extending beyond a 320px viewport (329px document width). The compact header
 now anchors that menu inward at mobile widths; same-browser measurement after
