@@ -5,6 +5,8 @@ import { footClinicalGroups } from '../lib/foot-clinical-curriculum';
 import type { SpecimenClinicalLesson, SpecimenTopicDraft } from './um-limb-clinical';
 
 export const calfFootClinicalReferences = {
+  ankleUS: { title: 'ESSR · Ankle ultrasound technical guidelines', url: 'https://essr.org/content-essr/uploads/2016/10/ankle.pdf' },
+  tibialisAnteriorMRI: { title: 'Lee et al. · Tibialis anterior tendon and extensor retinaculum MRI (2006)', url: 'https://pubmed.ncbi.nlm.nih.gov/16861505/' },
   lowerLegAnatomy: { title: 'NCBI · Posterior leg compartment anatomy', url: 'https://www.ncbi.nlm.nih.gov/books/NBK537340/' },
   anteriorLegAnatomy: { title: 'NCBI · Anterior leg compartment anatomy', url: 'https://www.ncbi.nlm.nih.gov/books/NBK539725/' },
   footDrop: { title: 'NCBI · Foot drop: differential assessment', url: 'https://www.ncbi.nlm.nih.gov/books/NBK554393/' },
@@ -35,12 +37,18 @@ function reuse(region: 'leg' | 'foot', key: string, clinicalRef: Reference, path
 export const calfFootClinicalLessons: Record<string, SpecimenClinicalLesson> = {
   'extensor-digitorum-longus': {
     modelLimit: 'One supplied muscle surface, not separately validated distal tendon slips or a nerve territory. Its reference shape cannot show weakness, compartment pressure or a tendon tear.',
-    topics: reuse('leg', 'extensor-digitorum-longus', 'footDrop', 'anteriorLegAnatomy'),
+    topics: {
+      ...reuse('leg', 'extensor-digitorum-longus', 'footDrop', 'anteriorLegAnatomy'),
+      ultrasound: draft('Trace EDL across the anterior ankle, distinguishing it from EHL. Follow the tendon course rather than identifying one cross-section; this specimen does not validate individual distal slips.', 'ankleUS'),
+    },
     selfCheck: quiz('Does weak lesser-toe extension identify one torn tendon?', 'No. Compare ankle movement and the wider neurological pattern; this selection does not isolate individual tendon slips.', 'footDrop'),
   },
   'extensor-hallucis-longus': {
     modelLimit: 'The long hallux extensor is supplied as one surface. No tear, root lesion or separate distal attachment footprint is segmented; selecting it does not test L5 function.',
-    topics: reuse('leg', 'extensor-hallucis-longus', 'footDrop'),
+    topics: {
+      ...reuse('leg', 'extensor-hallucis-longus', 'footDrop'),
+      ultrasound: draft('Identify EHL among the anterior ankle tendons and follow its course, separating it from tibialis anterior and EDL. The static surface cannot establish tendon continuity in a patient.', 'ankleUS'),
+    },
     selfCheck: quiz('Can this selection establish an L5 root lesion?', 'No. It identifies a reference muscle, not the cause or distribution of weakness in a patient.'),
   },
   'peroneus-longus': {
@@ -54,12 +62,18 @@ export const calfFootClinicalLessons: Record<string, SpecimenClinicalLesson> = {
   },
   'flexor-digitorum-longus': {
     modelLimit: 'A supplied long-flexor surface is not four independently assessed distal tendon slips. The foot display does not validate individual pulley systems or tendon continuity.',
-    topics: reuse('leg', 'flexor-digitorum-longus', 'lowerLegAnatomy'),
+    topics: {
+      ...reuse('leg', 'flexor-digitorum-longus', 'lowerLegAnatomy'),
+      ultrasound: draft('Find FDL beside tibialis posterior behind the medial malleolus, then trace it distally. Distinguish adjacent vessels and nerve; this muscle selection is not a complete tarsal-tunnel examination.', 'ankleUS'),
+    },
     selfCheck: quiz('Does FDL stop at the middle phalanges like the short flexor?', 'No. Its distal attachments reach the distal phalanges of toes 2–5; the short flexor reaches the middle phalanges.', 'lowerLimbTable'),
   },
   'flexor-hallucis-longus': {
     modelLimit: 'The reference surface does not segment tenosynovitis, impingement, a tear or its sheath. Historical surgical-series findings are not prevalence estimates or a treatment pathway.',
-    topics: reuse('leg', 'flexor-hallucis-longus', 'fhlInjury'),
+    topics: {
+      ...reuse('leg', 'flexor-hallucis-longus', 'fhlInjury'),
+      ultrasound: draft('Identify FHL between the posterior talar tubercles; great-toe movement helps confirm the tendon. Follow its course beneath the sustentaculum tali. Exploding this static surface does not reproduce tendon motion.', 'ankleUS'),
+    },
     selfCheck: quiz('Is FHL tendon disease restricted to dancers?', 'No. It has also been reported in nondancers; a selected clinical series cannot establish its population prevalence.', 'fhlInjury'),
   },
   popliteus: {
@@ -81,7 +95,11 @@ export const calfFootClinicalLessons: Record<string, SpecimenClinicalLesson> = {
   },
   'tibialis-anterior': {
     modelLimit: 'This muscle reference is not a torn tendon or a mapped neurological lesion. It contains no motor testing, gait simulation or measured compartment pressure.',
-    topics: reuse('leg', 'tibialis-anterior', 'footDrop'),
+    topics: {
+      ...reuse('leg', 'tibialis-anterior', 'footDrop'),
+      mri: draft('Assess the tibialis anterior tendon together with its extensor-retinacular relationship. A small cadaver/patient study correlated standard and oblique-coronal MRI with this anatomy; its tear patterns are not universal diagnostic rules. The specimen does not separately segment those retinacular tunnels or patient injury.', 'tibialisAnteriorMRI'),
+      ultrasound: draft('Follow tibialis anterior from its muscle-tendon junction across the anterior ankle towards its medial insertion. Inspect beyond a single transverse view; the specimen does not provide ultrasound images.', 'ankleUS'),
+    },
     selfCheck: quiz('Is foot drop a diagnosis of tibialis-anterior tendon rupture?', 'No. It describes impaired dorsiflexion with several possible muscular, tendon and neurological causes.', 'footDrop'),
   },
   'tibialis-posterior': {
@@ -90,6 +108,7 @@ export const calfFootClinicalLessons: Record<string, SpecimenClinicalLesson> = {
       ...reuse('leg', 'tibialis-posterior', 'archCollapse'),
       mri: draft('MRI may assess posterior tibial tendon and associated ligament abnormalities when needed. Progressive arch collapse is not necessarily an isolated muscle lesion.', 'archCollapse'),
       xray: draft('Standing radiographs assess alignment and joint changes under load. They do not directly show tendon continuity; rotating or exploding this model is not a weight-bearing radiograph.', 'archCollapse'),
+      ultrasound: draft('Trace tibialis posterior behind the medial malleolus towards its insertion, distinguishing adjacent FDL. Examine the navicular insertion region separately; this specimen does not resolve every distal tendon slip.', 'ankleUS'),
     },
     selfCheck: quiz('Can exploded arch spacing grade progressive collapsing foot deformity?', 'No. Display spacing is not a calibrated standing alignment study and the full ligament apparatus is absent.'),
   },

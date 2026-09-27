@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+27 September ankle imaging delivered locally: regional and separate lower-limb
+learners plus Clinical Review use Atlas `80ff7f2`. Seven new MRI/US drafts,
+unchanged models/prior teaching/access/decisions. 107checks, builds, TypeScript and
+actual mobile learner/review pass. See `docs/um-ankle-imaging-delivery-20260927.md`.
+No publication/clinical approval. Next: agent-authored guided tours with camera,
+layer steps and captions, clinical review, compact playback and restored starting
+view. Do not substitute manual educator authoring for the owner's request.
+
 27 September Reset separation fix delivered locally: learner and Clinical Review
 use Atlas `9cea189`. Reset clears guides/bone pinning and restores regional framing,
 preserving systems and removed tissue. Integration checks, builds, TypeScript and

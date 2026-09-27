@@ -1,5 +1,5 @@
 {
-  "revision": "9cea1892eaf33f9ee0655e4ecc03e50037844536",
+  "revision": "80ff7f2ce56ce3cc27d4d9e6962797292585c3df",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2638,8 +2638,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "8e4a8eacc99685d1a009036a3dc922e92f9ad51f3056cb73558ab7ac3c1b44bc",
-      "importedSha256": "7498b14070133f9b990d4da54af4fdd23a08b93bd97792d17329ec6580c52df0"
+      "sourceSha256": "d42862b346b3bb0e9fcad59aacf74c84a7c4098d87c083584194c40805b804ad",
+      "importedSha256": "01a81a0cd0c75e86be34a3bd96b82b7b596284e6ad710a1e5bb84463a471e372"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -2683,8 +2683,8 @@
     },
     {
       "path": "content/um-calf-foot-clinical.ts",
-      "sourceSha256": "aed9e450838c1c2bc74d904a46a75604af2ab429c3c8313a12da13d8a595476a",
-      "importedSha256": "aed9e450838c1c2bc74d904a46a75604af2ab429c3c8313a12da13d8a595476a"
+      "sourceSha256": "557ae3859bea0db95f70303474d9afa053a8dec0380a6ffc325c070f281c9fd1",
+      "importedSha256": "557ae3859bea0db95f70303474d9afa053a8dec0380a6ffc325c070f281c9fd1"
     },
     {
       "path": "content/um-hip-muscle-clinical.ts",
@@ -2773,8 +2773,8 @@
     },
     {
       "path": "content/um-limb-teaching-bindings.v1.json",
-      "sourceSha256": "f78af67e6db906e672e7a8b23e0b6bbc1d6b0edaa1ec091c2cd00f5f715154bf",
-      "importedSha256": "f78af67e6db906e672e7a8b23e0b6bbc1d6b0edaa1ec091c2cd00f5f715154bf"
+      "sourceSha256": "cd73ab7b7fd70de4a4e83c173617dffac78220bd8a56670da6f52f9cafc4c0b1",
+      "importedSha256": "cd73ab7b7fd70de4a4e83c173617dffac78220bd8a56670da6f52f9cafc4c0b1"
     },
     {
       "path": "lib/abdominal-wall.ts",
@@ -2914,7 +2914,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "df5ac42ebd6444e062ead2bfb08db2ff6bbc384a1aa624c9909d0b6dfb3f5935",
-      "importedSha256": "aead0bf40539a874edd3d87c2855efa81140ea14604e474a35dcb39ff77f62f5"
+      "importedSha256": "bc21b73e59fc035a2b375b11cbdab91aa513d3f9566aa02cf21d71bbcdf6d152"
     },
     {
       "path": "app/review/review.css",
@@ -4188,8 +4188,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "a4f133f809cb7cbba8dc2ee03d22fed02f48956a8718efcec18b7932318b6e06",
-      "importedSha256": "a4f133f809cb7cbba8dc2ee03d22fed02f48956a8718efcec18b7932318b6e06"
+      "sourceSha256": "48106c8c2e928cd22f97c6ef5042c4ece1587f96a18b0c1d9c0952f7db809351",
+      "importedSha256": "48106c8c2e928cd22f97c6ef5042c4ece1587f96a18b0c1d9c0952f7db809351"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -4288,5 +4288,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "1ceef6fa867703d998e1b511fecd9d157f3dbc9bf4dd7453d586e28e39814879"
+  "websiteIntegrationSha256": "7f6948c5d90bad6534da8c3a49ba8aaf95e418f8fd1c4ae4cea527637c135bd2"
 }

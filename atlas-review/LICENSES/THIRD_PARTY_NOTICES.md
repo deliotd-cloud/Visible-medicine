@@ -1630,6 +1630,18 @@ Existing model licences and notices remain unchanged; no new asset, dependency,
 font, texture, paid service or mandatory fee. All teaching remains draft and
 requires revision-bound radiologist sign-off.
 
+## Independent ankle-tendon imaging drafts — 27 September 2026
+
+Brief original ultrasound orientation references the ESSR ankle technical
+guidelines (https://essr.org/content-essr/uploads/2016/10/ankle.pdf); the tibialis
+anterior MRI note references Lee et al., AJR 187 (2006), W161–168,
+https://pubmed.ncbi.nlm.nih.gov/16861505/. References checked 27 September 2026.
+These are linked factual sources, not imported or relicensed material. No PDF,
+figure, protocol, source text, patient scan or external question bank is bundled.
+The existing independent CC0 specimen licence is unchanged. No new asset,
+dependency, paid service or fee; drafts require radiologist sign-off. Public
+availability of a reference does not grant commercial image-reuse rights.
+
 ## Shoulder arterial CT/CTA orientation — 27 September 2026
 
 Original concise factual teaching references TTUHSC El Paso's upper-limb

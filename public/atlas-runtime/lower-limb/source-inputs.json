@@ -13,7 +13,7 @@
   },
   {
     "path": "app/body-scene.tsx",
-    "sha256": "bef3d3d67aa39d8ebe924ca5e0b42d3f82198d61538a02c6be30d8dfd23f1301"
+    "sha256": "7117993fb76445f522d303c664fb5405ac07344f5e255906e2ee47640dc4acbc"
   },
   {
     "path": "app/body-types.ts",
@@ -21,7 +21,7 @@
   },
   {
     "path": "app/camera-keyboard.css",
-    "sha256": "546be3cb74dc907c2652d4b177352303d123275bfed6b6946c740750467cefb8"
+    "sha256": "98d5bb8c7fe828c06e13f065fa7628aeeeb3638bedaea07a963ee3712ba4e7de"
   },
   {
     "path": "app/explode-style-select.css",
@@ -37,7 +37,7 @@
   },
   {
     "path": "app/fitted-camera.tsx",
-    "sha256": "4d659d330d43f3482043c9fc3d9992993b4bef88b194645dfd3472f80184c203"
+    "sha256": "8621b76137dc18b1200cffb5fc79a0e38d55bb95d933978e7d73e43727850a49"
   },
   {
     "path": "app/globals.css",
@@ -49,7 +49,7 @@
   },
   {
     "path": "app/scene-label-layer.tsx",
-    "sha256": "acc22f03e90b46a9c67cafe31ba3fa6f59020cb2a3fe83f32c4ebd8a294b7d9f"
+    "sha256": "e5e9726bae8b040dd02be573df1994eff3ae844a846cf37394c85782ccc129e0"
   },
   {
     "path": "app/scene-orientation.css",
@@ -68,6 +68,10 @@
     "sha256": "c2b00f6a53f28b22f2815be96cd8a801ddd4d83540d0520f022c7e1923ec8616"
   },
   {
+    "path": "app/specimen-removal-focus.ts",
+    "sha256": "eb7b9f29bbab0e9524a5162e0254d6c0561a773ad8bf9c7ca89cc59fefe3f362"
+  },
+  {
     "path": "app/specimen-structure-search.tsx",
     "sha256": "a345fa00ba55fd17800dc7bbcd15c3d74e812078716c6f236c27b3db747f6fcc"
   },
@@ -81,7 +85,7 @@
   },
   {
     "path": "app/um-knee-study.tsx",
-    "sha256": "b021611bd3009f11a13a5ff9416151262fbe72ff010e83833df45fa8ec16d730"
+    "sha256": "da403c020632fc371ef2bcbb4ebf30f28761fcfd5d05231d63aaba806c8cbc48"
   },
   {
     "path": "app/um-limb-learning.tsx",
@@ -125,7 +129,7 @@
   },
   {
     "path": "content/um-calf-foot-clinical.ts",
-    "sha256": "aed9e450838c1c2bc74d904a46a75604af2ab429c3c8313a12da13d8a595476a"
+    "sha256": "557ae3859bea0db95f70303474d9afa053a8dec0380a6ffc325c070f281c9fd1"
   },
   {
     "path": "content/um-hip-muscle-clinical.ts",
@@ -149,7 +153,7 @@
   },
   {
     "path": "content/um-limb-teaching-bindings.v1.json",
-    "sha256": "f78af67e6db906e672e7a8b23e0b6bbc1d6b0edaa1ec091c2cd00f5f715154bf"
+    "sha256": "cd73ab7b7fd70de4a4e83c173617dffac78220bd8a56670da6f52f9cafc4c0b1"
   },
   {
     "path": "integration/lower-limb/index.html",
@@ -165,7 +169,7 @@
   },
   {
     "path": "integration/lower-limb/vite.config.mjs",
-    "sha256": "69c259d7a5175e6b61e4b7d4144f94e62dd7e7da4d9f645501a40b6eb264a9fe"
+    "sha256": "746dc7116f2781315fe227fdb1f01da0ed76f60952793a7a8e3995c8990bbd93"
   },
   {
     "path": "integration/module-audit.mjs",
@@ -189,7 +193,7 @@
   },
   {
     "path": "lib/anatomy-search.ts",
-    "sha256": "b67d5f0eb9d8aa96e16edf91fafbbea322913887912e4140d7697caefaa3fa92"
+    "sha256": "2c469d5d892b6bfbfe2c11211f2bc421a6664e3c5b0286cf017ac1b43f25d1a7"
   },
   {
     "path": "lib/anatomy-vessels.ts",
@@ -204,8 +208,12 @@
     "sha256": "00d9a45646ac3b21e4372b50bf5388ef94e617a8ab843959bb97e41f2e452291"
   },
   {
+    "path": "lib/body-bundle-geometry.ts",
+    "sha256": "89bae02ed7b8850982c111e9415f08266770c8e17f0ce9daa4b39f6b2a431c73"
+  },
+  {
     "path": "lib/camera-keyboard.ts",
-    "sha256": "49fc891102a943037311097439e4b80ac5c7eb0a18d1c0468672c39f888f8047"
+    "sha256": "9a0a095306c6687ca7fd568570c7a66363566ac3a70f2916bc1e8f74aa405220"
   },
   {
     "path": "lib/camera-orientation.ts",
@@ -268,6 +276,10 @@
     "sha256": "59097c95fc681c20d4c448b9ed4df96a095def7be0424f9045edb9587c51164f"
   },
   {
+    "path": "lib/scene-label-focus.ts",
+    "sha256": "14439031e43a85e211ae917e779cda8f15d0d77a3259aae0b71cb6bed444c4b8"
+  },
+  {
     "path": "lib/scene-labels.ts",
     "sha256": "06d0e7404acfe9785f2c091910d14bd6244103c528139b82b9696713c23c4b99"
   },
@@ -289,7 +301,7 @@
   },
   {
     "path": "lib/study-views.ts",
-    "sha256": "1566f9df18aac9537051e941d7915bfaf1ce60c5a291800bacb353a43f6f7a69"
+    "sha256": "86504e3a67ec3982b43c211dd01c928e41002b1459b50ff018146b3ee5ad738a"
   },
   {
     "path": "lib/thigh-clinical-curriculum.ts",
@@ -329,7 +341,7 @@
   },
   {
     "path": "package-lock.json",
-    "sha256": "a5b607301ca60d2bb4327b68afad1cbe6dd5303efc9c11d0f4de59d870a5e7e0"
+    "sha256": "7143e44eb0cb9e11c3f42c4a66d7bdef6f5c89334378d6cc23dcb37f43a1f350"
   },
   {
     "path": "public/models/bodyparts3d/ventricles/catalog.json",
@@ -342,5 +354,13 @@
   {
     "path": "public/models/um-limb/catalog.json",
     "sha256": "fc27b778fe8a0e13f773f272bd0bd9bdf9d22117029bd5a5b5d11f0dc39c83fb"
+  },
+  {
+    "path": "scripts/export-lower-limb-module.mjs",
+    "sha256": "66039f219b00340c95c9ec89e30f22abe195a1da6464bc62833148562c9d315d"
+  },
+  {
+    "path": "scripts/export-space-preflight.mjs",
+    "sha256": "ebaf5d4d0a68dd0596c8f569fd3ba5aca591f18afa28a52bf2b75e50ddd322d1"
   }
 ]
