@@ -1,5 +1,14 @@
 # Visible Medicine — shared delivery plan
 
+27 September mobile follow-up: reproduced an open workspace-switcher menu
+extending beyond a 320px viewport (329px document width). The compact header
+now anchors that menu inward at mobile widths; same-browser measurement after
+the fix is 320px document width, menu fully inside. No global overflow clipping,
+control removal or review/entitlement changes. Seven header/workspace regressions
+and production build pass. Earlier 2px overflow was not reproduced in the fresh
+375/390px checks; do not equate this targeted fix with full mobile acceptance.
+See `docs/clinical-review-mobile-20260927.md`. Local only; no approval recorded.
+
 27 September review usability: local Clinical Review now imports Atlas `59b35d8`
 and reuses existing source-checked search synonyms. Achilles finds both whole-body
 tendons and three separate specimen contexts. Its exact review model/teaching

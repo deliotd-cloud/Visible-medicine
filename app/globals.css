@@ -719,6 +719,8 @@ body.splash-open { overflow: hidden; }
   .workspace-context-header .app-frame-nav { min-width: 0; width: 100%; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); }
   .workspace-context-header .app-frame-nav a { min-width: 0; padding-inline: 7px; }
   .workspace-context-header .workspace-mobile-menu { display: block; flex: 0 0 auto; }
+  /* The switcher sits beside the wordmark: expand inward on narrow screens. */
+  .workspace-context-header .workspace-switch > nav { right: 0; max-width: calc(100vw - 32px); }
   .studio-context-bar { padding: 10px 18px; }
   .studio-context-bar > div { align-items: center; flex-direction: row; gap: 7px; }
   .studio-context-bar small { width: 100%; }
