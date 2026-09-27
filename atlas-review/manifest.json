@@ -1,5 +1,5 @@
 {
-  "revision": "2d2f2b87232393e0b0d46bd6daba579d78939369",
+  "revision": "edca765b64dbdc58a75aa80610f42646bdb10511",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2523,8 +2523,8 @@
     },
     {
       "path": "lib/regional-tours.ts",
-      "sourceSha256": "41fdb9f9f497cfa87c994ea241117a7fe0ccd84d97149dd90aa776a54bb9c1d2",
-      "importedSha256": "41fdb9f9f497cfa87c994ea241117a7fe0ccd84d97149dd90aa776a54bb9c1d2"
+      "sourceSha256": "6e199fbb332a3a9d383a7dda31c5e70790d66c93eb07440d18a023ed6514ee59",
+      "importedSha256": "6e199fbb332a3a9d383a7dda31c5e70790d66c93eb07440d18a023ed6514ee59"
     },
     {
       "path": "lib/selection-visibility.ts",
@@ -2653,8 +2653,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "381b85e759df9662136b138b4e62ecddcf21dee9d657e9f96aecd111c0df0d17",
-      "importedSha256": "9a8a9a99a8c722fb1ea21039875db1b10a9feff105c53cac0b6e276903209738"
+      "sourceSha256": "9e66fc81905868e4d85fb425efc0cd0492a8923193e307f08f2f10224ba9d0dd",
+      "importedSha256": "fdb040172405c2baee0c49ff0d888deeb916f4dce47a0347dcfda51847d5c8c4"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -2944,7 +2944,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "3ee3dbc5a7047940f233bc7d7af118ef137a60177868016916371784fb895154",
-      "importedSha256": "5e50298e5425227bbdfd7de50b3458585159a767fd414dc6d5bd270508850942"
+      "importedSha256": "22104eef47ea9431ce93bbfafb2277960097f11b90776a1eef9a425d08718c61"
     },
     {
       "path": "app/review/review.css",
@@ -2958,8 +2958,8 @@
     },
     {
       "path": "app/review/body/review-dashboard.tsx",
-      "sourceSha256": "46dcbf3ae675495228b4bead5fe0a8ec39c36b1ffb96f5837b6ebc6a949641de",
-      "importedSha256": "fc126e28dc760aab15a647a9ff27825dbfcd0d6b5deda69c0f6e859dc74340b7"
+      "sourceSha256": "741bb07f59ca570eac22ac69d3eb75edf3c21f88179408edd813d1e06c53cdba",
+      "importedSha256": "1e1abf21628f1b91eeee35c5673217a205e4429e4cc46d95d84e7413b958501b"
     },
     {
       "path": "lib/body-review-search.ts",
@@ -2968,8 +2968,8 @@
     },
     {
       "path": "lib/body-review-response.ts",
-      "sourceSha256": "654e095ce69eaecdc42ee5e36346abc1b296384c1f2929528ca6b6f941d2d12a",
-      "importedSha256": "654e095ce69eaecdc42ee5e36346abc1b296384c1f2929528ca6b6f941d2d12a"
+      "sourceSha256": "2c2d5fd716779c004ee69d674a33136af22907d38deae14dada890ae0c55b8d5",
+      "importedSha256": "2c2d5fd716779c004ee69d674a33136af22907d38deae14dada890ae0c55b8d5"
     },
     {
       "path": "app/review/body/body-decision-editor.tsx",
@@ -3138,8 +3138,8 @@
     },
     {
       "path": "app/regional-guided-learning.tsx",
-      "sourceSha256": "221493b5de86cd995fd96ef03338b88ac8e3737626335d3ae2125b972f756dac",
-      "importedSha256": "515108f46d2ec4bcba588534d3f6e6b96345dc9ee262bd83ec8bd6ecc014428f"
+      "sourceSha256": "ab8b37375320fa8cde6ea391a214de844b746607d0c08eee76a89dff86025ad0",
+      "importedSha256": "996c5d624bc52eab2f0da5bdabd7d694a5d71a3239441e705747e2c8215bc49d"
     },
     {
       "path": "lib/renderer-health.ts",
@@ -4333,5 +4333,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "92d1c536a745a3528210a7c4b998de64f304fc987184736f30298d3813b97ca3"
+  "websiteIntegrationSha256": "0553f8fd78f894678f0f80aa4d7bb58b7714024dc1e8e833fd902329b2ab289a"
 }

@@ -8,9 +8,9 @@ const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
 
 test('shared viewer binds reset wording and keyboard-only orientation status to exact Atlas source',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'a8a45649ba6d16d8bc510c8b971f8f440d78483106c6b79a54307a07aa757ee5');
+  assert.equal(sha(manifestBytes),'07d6bcdaf8638aa4bff29165967ce4298d5f0d81ee23752990d5b5975d97d358');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'2d2f2b87232393e0b0d46bd6daba579d78939369');
+  assert.equal(manifest.sourceCommit,'edca765b64dbdc58a75aa80610f42646bdb10511');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,expected] of Object.entries({
     'app/body-explorer.tsx':'8d3cb2812b7f9cf84cf78a42a7c6d0b022165b6eafcc5565d41c0fa9428d245d',

@@ -430,7 +430,7 @@ export function BodyReviewDetails({
           {evidence.structures.map(s=><p key={s.id}>{s.name} · <code>{s.id}</code> · {s.sources.map(p=>`${p.file}: ${p.sha256}`).join('; ')}</p>)}
           {evidence.bundles.map(b=><p key={b.id}>{b.id}: <code>{b.sha256}</code></p>)}
         </details>
-        <p>Use Guided learning in the thorax learner to inspect framing and transitions. This material does not approve images or linked lectures.</p>
+        <p>Use Guided learning in the {evidence.tour.region} learner to inspect framing and transitions. This material does not approve images or linked lectures.</p>
       </details>)}
       <details>
         <summary>Interactive reasoning · Draft</summary>

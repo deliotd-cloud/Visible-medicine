@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "2d2f2b87232393e0b0d46bd6daba579d78939369",
-  "sha256": "92d1c536a745a3528210a7c4b998de64f304fc987184736f30298d3813b97ca3",
+  "sourceCommit": "edca765b64dbdc58a75aa80610f42646bdb10511",
+  "sha256": "0553f8fd78f894678f0f80aa4d7bb58b7714024dc1e8e833fd902329b2ab289a",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -284,7 +284,7 @@
     },
     {
       "path": "atlas-review/app/regional-guided-learning.tsx",
-      "sha256": "515108f46d2ec4bcba588534d3f6e6b96345dc9ee262bd83ec8bd6ecc014428f"
+      "sha256": "996c5d624bc52eab2f0da5bdabd7d694a5d71a3239441e705747e2c8215bc49d"
     },
     {
       "path": "atlas-review/app/related-study.tsx",
@@ -308,7 +308,7 @@
     },
     {
       "path": "atlas-review/app/review/body/review-dashboard.tsx",
-      "sha256": "fc126e28dc760aab15a647a9ff27825dbfcd0d6b5deda69c0f6e859dc74340b7"
+      "sha256": "1e1abf21628f1b91eeee35c5673217a205e4429e4cc46d95d84e7413b958501b"
     },
     {
       "path": "atlas-review/app/review/nested/nested-review.css",
@@ -1944,7 +1944,7 @@
     },
     {
       "path": "atlas-review/lib/body-review-response.ts",
-      "sha256": "654e095ce69eaecdc42ee5e36346abc1b296384c1f2929528ca6b6f941d2d12a"
+      "sha256": "2c2d5fd716779c004ee69d674a33136af22907d38deae14dada890ae0c55b8d5"
     },
     {
       "path": "atlas-review/lib/body-review-search.ts",
@@ -2876,7 +2876,7 @@
     },
     {
       "path": "atlas-review/lib/regional-tours.ts",
-      "sha256": "41fdb9f9f497cfa87c994ea241117a7fe0ccd84d97149dd90aa776a54bb9c1d2"
+      "sha256": "6e199fbb332a3a9d383a7dda31c5e70790d66c93eb07440d18a023ed6514ee59"
     },
     {
       "path": "atlas-review/lib/regional-vascular-clinical.ts",
@@ -3516,7 +3516,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "4799710efd7aeb1f5fd131753e5ae7509e02ddffe8b3534260aa6e905885a055"
+      "sha256": "aceec78a22183a52dee502270837ec0988ea0f3aaa8d29cdb86fcf2a630cbbaa"
     }
   ]
 }

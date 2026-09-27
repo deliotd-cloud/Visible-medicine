@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { build } from 'esbuild';
 
-test('thoracic tour ships with the same complete source-bound review evidence', async () => {
+test('thoracic and cervical tours ship complete source-bound review evidence', async () => {
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const base='public/atlas-runtime/head-neck/';
   const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
@@ -24,14 +24,17 @@ test('thoracic tour ships with the same complete source-bound review evidence', 
   `,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
   const api=await import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
   assert.equal(api.thoraxTour.status,'draft'); assert.equal(api.thoraxTour.steps.length,6);
-  const ids=new Set([...api.thoraxTour.contextIds,...api.thoraxTour.steps.map((s:any)=>s.selectedId)]);
+  assert.equal(api.cervicalSpineTour.status,'draft');assert.equal(api.cervicalSpineTour.steps.length,5);
+  assert.equal(api.regionalTourFor('spine').id,'cervical-spine-orientation');
+  for(const tour of [api.thoraxTour,api.cervicalSpineTour]) {
+  const ids=new Set([...tour.contextIds,...tour.steps.map((s:any)=>s.selectedId)]);
   assert.equal(ids.size,8);
   for(const id of ids) {
     const packet=await api.bodyReviewMaterial(id);
     assert.equal(packet.schema,'vm-body-review-worksheet-3');
     assert.ok(api.parseBodyReviewResponse(packet,id));
     assert.equal(packet.guidedTours.length,1);
-    assert.deepEqual(packet.guidedTours[0].tour,api.thoraxTour);
+    assert.deepEqual(packet.guidedTours[0].tour,tour);
     assert.equal(packet.guidedTours[0].structures.length,8);
     assert.equal(packet.guidedTours[0].transitionMs,1800);
     assert.equal(packet.guidedTours[0].transition,'quintic-orbit');
@@ -42,8 +45,13 @@ test('thoracic tour ships with the same complete source-bound review evidence', 
       (p:any)=>{p.guidedTours=[];},
       (p:any)=>{p.guidedTours[0].tour.steps[0].caption='Changed unreviewed caption';},
       (p:any)=>{p.schema='vm-body-review-worksheet-2';},
+      (p:any)=>{p.guidedTours[0].limitations='Approved';},
     ]) {const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,id),null);}
   }
+  }
+  const js=learner.files.filter((f:any)=>f.path.endsWith('.js')).map((f:any)=>readFileSync(base+f.path,'utf8')).join('\n');
+  for(const label of ['Cervical spine: C1 to T1','cervical-spine-orientation','C7 · Vertebra prominens']) assert.ok(js.includes(label),label);
+  assert.ok(readFileSync('atlas-review/app/review/body/review-dashboard.tsx','utf8').includes('{evidence.tour.region} learner'));
 });
 
 test('all structure-check hosts deliver the corrected success/retry component',()=>{

@@ -7,7 +7,7 @@ test('regional and whole-body delivery contains tested restoration and source-bo
   const base='public/atlas-runtime/head-neck/';
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
-  assert.equal(manifest.sourceCommit,'2d2f2b87232393e0b0d46bd6daba579d78939369');
+  assert.equal(manifest.sourceCommit,'edca765b64dbdc58a75aa80610f42646bdb10511');
   for(const [path,hash] of Object.entries({
     'app/body-explorer.tsx':'8d3cb2812b7f9cf84cf78a42a7c6d0b022165b6eafcc5565d41c0fa9428d245d',
     'content/achilles-ct.ts':'90957fbb728c1b72aa29b5db1f0aca01269035d49022d93d3fe5bf413a05cd21',

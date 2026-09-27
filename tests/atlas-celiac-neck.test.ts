@@ -9,9 +9,9 @@ test('regional correction preserves old models and binds the reviewed lower-neck
   const base='public/atlas-runtime/head-neck/';
   const sha=(b:string|Buffer)=>createHash('sha256').update(b).digest('hex');
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'a8a45649ba6d16d8bc510c8b971f8f440d78483106c6b79a54307a07aa757ee5');
+  assert.equal(sha(manifestBytes),'07d6bcdaf8638aa4bff29165967ce4298d5f0d81ee23752990d5b5975d97d358');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'2d2f2b87232393e0b0d46bd6daba579d78939369');
+  assert.equal(manifest.sourceCommit,'edca765b64dbdc58a75aa80610f42646bdb10511');
   assert.equal(manifest.patientDataIncluded,false);assert.equal(manifest.clinicalApproved,false);
   assert.equal(manifest.regionalScopes.length,12);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];

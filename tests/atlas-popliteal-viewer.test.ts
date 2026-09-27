@@ -6,7 +6,7 @@ import test from 'node:test';
 test('regional export binds paired popliteal studies and guarded Search handoff',()=>{
   const base='public/atlas-runtime/head-neck/';
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-  assert.equal(manifest.sourceCommit,'2d2f2b87232393e0b0d46bd6daba579d78939369');
+  assert.equal(manifest.sourceCommit,'edca765b64dbdc58a75aa80610f42646bdb10511');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({
     'app/atlas-workspace.tsx':'3492d74682daa945418e97a7e8130cae62907e4c7f67285c99196b329f79b104',

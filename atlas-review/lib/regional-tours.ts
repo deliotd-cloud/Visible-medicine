@@ -4,7 +4,7 @@ import { selectionBounds } from './selection-visibility';
 
 export type RegionalTour = {
   id: string; title: string; description: string; region: string; revision: string;
-  status: 'draft'; contextIds: string[];
+  status: 'draft'; contextIds: string[]; limitations?: string;
   steps: Array<{ id: string; title: string; caption: string; selectedId: string;
     view: DissectionView; durationMs: number; fadeOthers: boolean; references: string[] }>;
 };
@@ -27,8 +27,28 @@ export const thoraxTour: RegionalTour = {
     thoraxStep('left-pulmonary-artery','Left pulmonary artery',id('left','vessel','left-pulmonary-artery'),'left','Compare the left pulmonary artery with the left main bronchus. In usual anatomy the artery is superior to the bronchus. These are selected exterior segments, not a complete hilar or lobar map.',[vessels]),
   ],
 };
-export const regionalTours=[thoraxTour];
+const cervicalId=(name:string)=>`vm:anatomy:body:spine:midline:bone:${name}`;
+const cervicalReference='https://anatomy.ttuhscep.edu/schemes/back_tables.html';
+const cervicalStep=(slug:string,title:string,name:string,view:DissectionView,caption:string)=>({
+  id:slug,title,selectedId:cervicalId(name),view,caption,references:[cervicalReference],durationMs:14000,fadeOthers:true,
+});
+export const cervicalSpineTour: RegionalTour = {
+  id:'cervical-spine-orientation',title:'Cervical spine: C1 to T1',region:'spine',
+  revision:'cervical-spine-orientation-v1',status:'draft',
+  description:'Five guided stops from the atlas to the cervicothoracic junction. C4–C6 remain as faded context in the original source frame.',
+  limitations:'Selected bony source surfaces only; discs, ligaments, spinal cord and nerve roots are not shown in this tour. Typical features vary between individuals. No joint-motion simulation, acquired imaging or spatial registration. Draft pending radiologist review.',
+  contextIds:['fourth-cervical-vertebra','fifth-cervical-vertebra','sixth-cervical-vertebra'].map(cervicalId),
+  steps:[
+    cervicalStep('c1','C1 · Atlas','atlas','anterior','Begin at C1. Unlike a typical vertebra, atlas forms a ring with anterior and posterior arches rather than a vertebral body. Use the faded C2 surface below for orientation.'),
+    cervicalStep('c2','C2 · Axis','axis','right','Locate the dens rising from C2 towards the anterior arch of C1. Compare these neighbouring bones without separating them; this tour does not simulate their movement.'),
+    cervicalStep('c3','C3 · Typical cervical vertebra','third-cervical-vertebra','posterior','Use C3 to orient the mid-cervical series. Typical cervical features include a small body, transverse foramina and a bifid spinous process. Compare with the faded C4–C6 surfaces; fine details require source review.'),
+    cervicalStep('c7','C7 · Vertebra prominens','seventh-cervical-vertebra','posterior','Follow the series down to C7. Its spinous process is usually longer and non-bifid compared with the mid-cervical vertebrae. This is a typical distinction, not a reliable patient-level numbering rule on its own.'),
+    cervicalStep('t1','T1 · Cervicothoracic junction','first-thoracic-vertebra','left','Finish at T1, below C7. Thoracic vertebrae bear rib-articulation facets. Compare the bony transition here; ribs and soft tissues are outside this tour, and no patient scan is aligned.'),
+  ],
+};
+export const regionalTours=[thoraxTour,cervicalSpineTour];
 export const regionalTourFor=(region:string)=>regionalTours.find(t=>t.region===region)??null;
+export const regionalTourLimitations=(tour:RegionalTour)=>tour.limitations??'Selected exterior source surfaces only; no complete lumen, bronchial tree, surgical plane, acquired imaging or spatial registration. Draft pending radiologist review.';
 
 /** Resolve exact identities; never substitute a similarly named surface. */
 export function regionalTourStructures(catalog:BodyCatalog,tour:RegionalTour):BodyStructure[] {
@@ -50,6 +70,6 @@ export function regionalTourEvidence(catalog:BodyCatalog,structureId:string) {
     return structuredClone({tour,structures,bundles:catalog.bundles.filter(b=>structures.some(s=>s.bundle===b.id)),
       coordinateSystem:catalog.coordinateSystem,sourceVersion:catalog.sourceVersion,frame:regionalTourFrame(catalog,tour),
       transitionMs:1800,transition:'quintic-orbit',separation:0,
-      limitations:'Selected exterior source surfaces only; no complete lumen, bronchial tree, surgical plane, acquired imaging or spatial registration. Draft pending radiologist review.'});
+      limitations:regionalTourLimitations(tour)});
   });
 }

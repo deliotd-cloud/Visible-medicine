@@ -1,5 +1,14 @@
 # Visible Medicine — shared delivery plan
 
+27 September cervical Guided learning delivered locally from Atlas `edca765`.
+Spine now offers C1/C2/C3/C7/T1 with C4–C6 context, existing modality notes and
+complete revision-bound draft review evidence. 108 integration checks, builds,
+TypeScript and actual mobile learner/review flows pass. Model bytes, independent
+specimen pins, access and private decisions unchanged; shoulder payload unchanged
+with revalidated source manifest. See `docs/cervical-guided-learning-delivery-20260927.md`.
+Not published or clinically approved. Next continue substantive regional tours
+and cleared-case Education integration, not this completed import or native MRI.
+
 27 September guided-tour imaging notes delivered locally from Atlas `2d2f2b8`
 in both shoulder/regional learners and protected review. Each active step has
 collapsed CT/MRI/X-ray/US teaching; opening pauses camera/playback and changing

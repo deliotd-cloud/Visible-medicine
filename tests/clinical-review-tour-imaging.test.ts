@@ -6,7 +6,7 @@ import {build} from 'esbuild';
 
 test('guided imaging notes reach both learners and review without inventing scan access',async()=>{
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
-  assert.equal(review.revision,'2d2f2b87232393e0b0d46bd6daba579d78939369');
+  assert.equal(review.revision,'edca765b64dbdc58a75aa80610f42646bdb10511');
   for(const module of ['head-neck','shoulder']){
     const base=`public/atlas-runtime/${module}/`;
     const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
@@ -24,7 +24,7 @@ test('guided imaging notes reach both learners and review without inventing scan
   const result=await build({stdin:{contents:`
     export {structures} from './atlas-review/app/anatomy-data';
     export {shoulderTour} from './atlas-review/lib/shoulder-tours';
-    export {thoraxTour,regionalTourStructures} from './atlas-review/lib/regional-tours';
+    export {regionalTours,regionalTourStructures} from './atlas-review/lib/regional-tours';
     export {bodyLesson} from './atlas-review/app/body-content';
     export {bodyReviewMaterial} from './atlas-review/lib/body-review-material';
     import raw from './atlas-review/public/models/bodyparts3d/full-body/catalog.json';
@@ -33,8 +33,8 @@ test('guided imaging notes reach both learners and review without inventing scan
   `,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
   const api=await import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
   let checked=0;
-  for(const step of api.thoraxTour.steps){
-    const structure=api.regionalTourStructures(api.catalog,api.thoraxTour).find((s:any)=>s.id===step.selectedId);
+  for(const tour of api.regionalTours) for(const step of tour.steps){
+    const structure=api.regionalTourStructures(api.catalog,tour).find((s:any)=>s.id===step.selectedId);
     const packet=await api.bodyReviewMaterial(structure.id);
     assert.equal(packet.approval,false);
     for(const tab of ['ct','mri','xray','ultrasound']){
@@ -47,7 +47,7 @@ test('guided imaging notes reach both learners and review without inventing scan
     const structure=api.structures.find((s:any)=>s.id===step.selectedId);
     for(const tab of ['ct','mri','xray','ultrasound']){assert.ok(structure.sections[tab]?.body);checked++;}
   }
-  assert.equal(checked,44);
+  assert.equal(checked,64);
   const notes=readFileSync('atlas-review/app/tour-imaging-notes.tsx','utf8');
   assert.ok(notes.includes('paid lectures require their own access'));
   assert.ok(notes.includes('if(event.currentTarget.open)onOpen()'));
