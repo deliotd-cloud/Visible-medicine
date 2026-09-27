@@ -1665,3 +1665,15 @@ relicensed prose, imagery or a model. Existing shoulder geometry and its notices
 are unchanged. No new dependency, font, texture, dataset, paid service or
 mandatory fee. AI authorship does not confer clinical validation: captions,
 layer choices, camera framing and omissions require radiologist review.
+
+## Agent-authored thoracic guided tour — 27 September 2026
+
+Original concise orientation captions use factual reference checking against
+Texas Tech University Health Sciences Center El Paso, Lungs and Mediastina
+(https://anatomy.ttuhscep.edu/schemes/lungs_ans.html), and the NCBI Bookshelf
+chapter Right Aortic Arches (https://www.ncbi.nlm.nih.gov/books/NBK431104/).
+References checked 27 September 2026. Linked sources are not imported assets
+or relicensed publisher content. No figures, scans or extended passages copied.
+Existing BodyParts3D surfaces, source coordinates and required credits retained.
+No new model, texture, font, dependency, paid service or mandatory fee. Source
+segments are incomplete and the tour requires revision-bound radiologist review.

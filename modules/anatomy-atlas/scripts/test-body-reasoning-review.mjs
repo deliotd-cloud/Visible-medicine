@@ -41,9 +41,9 @@ for (const s of api.catalog.structures) {
   const material = await api.bodyReviewMaterial(s.id);
   assert.deepEqual(material.reasoning, r);
   assert(api.parseBodyReviewResponse(material,s.id));
-  const scope = {schema:material.schema,kind:material.kind,structureId:s.id};
-  assert.equal(material.fingerprints.teaching,digest({scope,topics:material.topics,reasoning:r}));
-  assert.equal(material.schema,'vm-body-review-worksheet-2');
+  const scope = {schema:'vm-body-review-worksheet-2',kind:material.kind,structureId:s.id};
+  assert.equal(material.fingerprints.teaching,digest({scope,topics:material.topics,reasoning:r,...(material.guidedTours.length?{guidedTours:material.guidedTours}:{})}));
+  assert.equal(material.schema,'vm-body-review-worksheet-3');
   const sourceScope = {...scope,schema:'vm-body-review-worksheet-1'};
   assert.equal(material.fingerprints.source,digest({scope:sourceScope,source:material.source}));
   const context = await api.bodyReviewContext(s.id);

@@ -9,6 +9,8 @@ import { SourceDisplayNotes } from './source-display-notes';
 import { BodySelectionNotice, focusRemovalFeedback } from './body-selection-notice';
 import { lastSingleRemoval } from '@/lib/contextual-dissection-undo';
 import { InlineStudy } from './study-surface';
+import { RegionalGuidedLearning } from './regional-guided-learning';
+import { regionalTourFor } from '@/lib/regional-tours';
 import './upper-limb-motor.css';
 import {
   useCallback,
@@ -308,6 +310,22 @@ export default function BodyExplorer({
   const [plate, setPlate] = useState(false);
   const cameraCapture = useRef<StudyCamera | null>(null);
   const cameraRestore = useRef<StudyCamera | null>(null);
+  const [guidedLearning, setGuidedLearning] = useState(false);
+  const guidedReturnCamera = useRef<StudyCamera | null>(null);
+  const guidedReturnFocus = useRef<HTMLElement | null>(null);
+  const regionalTour = regionalTourFor(initialRegion);
+  function changeGuidedLearning(active: boolean) {
+    if (active && (!regionalTour || practice.status === 'active')) return;
+    if (active && !guidedLearning) {
+      guidedReturnCamera.current = cameraCapture.current ? structuredClone(cameraCapture.current) : null;
+      guidedReturnFocus.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    } else if (!active && guidedLearning) {
+      cameraRestore.current = guidedReturnCamera.current;
+      setReset(n => n + 1);
+      requestAnimationFrame(() => guidedReturnFocus.current?.focus({preventScroll:true}));
+    }
+    setGuidedLearning(active);
+  }
   const [nestedSelection, setNestedSelection] = useState<
     (NestedSelection & { teachingTopic?: NestedImagingTopic }) | null
   >(null);
@@ -786,7 +804,7 @@ export default function BodyExplorer({
   const imagingLink = useImagingLink({
     entries: linkEntries,
     allowedIds: regionStructures.map((s) => s.id),
-    disabled: exam || inlineStudy,
+    disabled: exam || inlineStudy || guidedLearning,
     onSelect: (id) => {
       applySelection(id);
       setInspection(initialInspection);
@@ -796,16 +814,16 @@ export default function BodyExplorer({
   const educationAllowedIds = useMemo(() => regionStructures.map(s => s.id), [regionStructures]);
   useBodyEducationLink({
     entries: linkEntries, allowedIds: educationAllowedIds,
-    disabled: exam || inlineStudy, contextKey: `${initialRegion}/${side}`,
+    disabled: exam || inlineStudy || guidedLearning, contextKey: `${initialRegion}/${side}`,
     enabled: presentation === 'panel',
   });
   const select = useCallback(
     (id: string) => {
-      if (exam || !regionStructures.some((item) => item.id === id)) return;
+      if (exam || guidedLearning || !regionStructures.some((item) => item.id === id)) return;
       applySelection(id);
       publishSelection(id);
     },
-    [applySelection, publishSelection, exam, regionStructures],
+    [applySelection, publishSelection, exam, guidedLearning, regionStructures],
   );
   const openNested = useCallback(
     (
@@ -1293,7 +1311,7 @@ export default function BodyExplorer({
           },
           annotations: { readOnlyHint: false, untrustedContentHint: false },
           execute(input) {
-            if (exam) throw new Error('Selection tools disabled during exam');
+            if (exam || guidedLearning) throw new Error('Selection tools disabled during exam or guided learning');
             const id = (input as { structureId?: unknown }).structureId;
             if (
               typeof id !== 'string' ||
@@ -1308,7 +1326,7 @@ export default function BodyExplorer({
       ),
     ).catch(() => undefined);
     return () => lifecycle.abort();
-  }, [catalog, regionStructures, select, exam]);
+  }, [catalog, regionStructures, select, exam, guidedLearning]);
 
   if (error)
     return (
@@ -1768,7 +1786,7 @@ export default function BodyExplorer({
   return (
     <AtlasWorkspace exam={exam} presentation={presentation} session={workspace}
       onKeyDown={event => handleDissectionHistoryKey(event, {
-        enabled: workspace.mode === 'dissect' && !exam && !inlineStudy,
+        enabled: workspace.mode === 'dissect' && !exam && !inlineStudy && !guidedLearning,
         canUndo: dissection.history.length > 0,
         canRedo: dissection.future.length > 0,
       }, undoDissection, redoDissection)}>
@@ -1776,7 +1794,8 @@ export default function BodyExplorer({
       <header className="body-topbar" data-shared-header={sharedHeader}>
         {sharedHeader ? <RegionHeading title={title} count={regionStructures.length}
           compact description={whole ? 'Explore the body by region or anatomical system.' : region!.description}/> : <Brand />}
-        <WorkspaceModes />
+        <WorkspaceModes guidedLearning={regionalTour ? {active:guidedLearning,onChange:changeGuidedLearning} : undefined} />
+        {!guidedLearning && <>
         <AtlasSearch
           catalog={catalog}
           localRegionOnly={presentation === 'panel'}
@@ -1815,7 +1834,9 @@ export default function BodyExplorer({
             {exam ? 'Exit practice' : 'Start practice'}
           </Button>
         </WorkspaceOnly>
+        </>}
       </header>
+      {guidedLearning && regionalTour ? <RegionalGuidedLearning catalog={catalog} tour={regionalTour} assetBase={assetBase} onExit={()=>changeGuidedLearning(false)} /> : <>
       <div className="body-layout" hidden={inlineStudy}>
         <AnatomyControlRail>{railContent}</AnatomyControlRail>
         <section className="body-workspace" aria-label={`${title} 3D anatomy`}>
@@ -2882,6 +2903,7 @@ export default function BodyExplorer({
         />
       )}
       </InlineStudy>
+      </>}
     </AtlasWorkspace>
   );
 }

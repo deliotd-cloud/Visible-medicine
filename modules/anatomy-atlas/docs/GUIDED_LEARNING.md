@@ -66,6 +66,53 @@ task. No synthetic scan or unvalidated automatic overlay is a substitute.
 
 ## Next delivery
 
+The shoulder pilot was delivered locally to website `3f639ae` on 27 September.
+The next source increment adds a six-stop thorax tour: trachea, right/left main
+bronchi, aortic arch and right/left pulmonary arteries, with two lung context
+surfaces. It uses an integrated regional Guided learning tab, not a popup.
+The ordinary scene unmounts while touring; dissection history, filters, selection,
+zoom and workspace mode remain untouched. Exit remounts that workspace with a
+detached copy of its original camera. Tour selections do not publish imaging
+events or change case/lecture entitlements. Only the supported thorax region
+offers this tour; whole-body and other regions do not advertise missing tours.
+
+All target/context identities resolve exactly, and all required bundles plus a
+healthy renderer gate playback. Missing anatomy fails closed with usable Exit.
+Pause, hidden tabs and renderer loss pause motion and playback; recovery never
+auto-resumes. The same 1.8s quintic orbit and reduced-motion behavior apply.
+The camera frame is the stable union of six target bounds; lung context does
+not force an unnecessarily distant full-source camera. No mesh is repositioned.
+
+Review worksheet schema3 rejects cached schema2 clients rather than silently
+hiding new evidence. Eight source selections carry the complete tour, all
+context geometry identities, bundle hashes, frame, captions, timings and
+references in their teaching fingerprint, with a required guided-tour checklist.
+The remaining1,096teaching fingerprints retain their prior exact hash domain.
+No clinical decisions are migrated or written. Imaging approval stays unavailable.
+
+Additional checks: `node scripts/test-regional-tour-player.mjs`,
+`node scripts/test-regional-tour-host.mjs`, `node scripts/test-regional-tour-review.mjs`,
+`node scripts/test-body-reasoning-review.mjs`, existing body review/decision,
+camera/navigation checks and regional build. Clinical review remains mandatory.
+
+Thorax source acceptance, 27 September: actual component harness5/5, entry/exit
+camera/state guard, eight-source tour binding and1,096unchanged teaching hashes,
+9malformed packets and8missing-source rejections; body-review1,104selections/
+9,936topics,1,104decision contexts/3,312tracks and real SQLite isolation/history tests,
+268reasoning packets, camera27resize/414zoom checks,169,949navigation and141,680
+study-navigation assertions pass. The navigation test's old exact selection-guard
+string was updated to require the added guided-learning guard, not weaken it.
+TypeScript and regional build pass. Actual1280px source preview shows the selected
+trachea with faded context;375px tour advances through all six stops and Finish
+returns to Explore, with no horizontal overflow and about390px model height on
+entry. Source captions, geometry relationships and framing still need radiologist
+assessment. Regional website import and live protected review QA remain next.
+
+Bounded contribution: Terra Medium supplied read-only source/reference research;
+existing Sol Medium worker supplied only the new player test file (5passingtests).
+Main implemented/integrated the source and review changes. Per-run token totals
+were unavailable; no token-saving percentage or clinical approval is claimed.
+
 After source acceptance and recovery backup, regenerate/import the shoulder
 learner and protected website review from this same commit. Shared camera and
 navigation fingerprints also affect regional exports; synchronize those through

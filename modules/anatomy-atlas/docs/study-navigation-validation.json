@@ -1,28 +1,28 @@
 {
   "passed": true,
-  "assertions": 138992,
+  "assertions": 141680,
   "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
       "structures": 1104,
-      "selectionsWithGroups": 386,
-      "memberships": 510
+      "selectionsWithGroups": 419,
+      "memberships": 568
     },
     {
       "region": "whole-body",
       "side": "right",
       "structures": 634,
-      "selectionsWithGroups": 219,
-      "memberships": 286
+      "selectionsWithGroups": 236,
+      "memberships": 317
     },
     {
       "region": "whole-body",
       "side": "left",
       "structures": 634,
-      "selectionsWithGroups": 228,
-      "memberships": 293
+      "selectionsWithGroups": 245,
+      "memberships": 324
     },
     {
       "region": "shoulder-arm",
@@ -113,21 +113,21 @@
       "side": "both",
       "structures": 76,
       "selectionsWithGroups": 72,
-      "memberships": 138
+      "memberships": 152
     },
     {
       "region": "leg",
       "side": "right",
       "structures": 38,
       "selectionsWithGroups": 36,
-      "memberships": 69
+      "memberships": 76
     },
     {
       "region": "leg",
       "side": "left",
       "structures": 38,
       "selectionsWithGroups": 36,
-      "memberships": 69
+      "memberships": 76
     },
     {
       "region": "foot",
@@ -155,21 +155,21 @@
       "side": "both",
       "structures": 158,
       "selectionsWithGroups": 129,
-      "memberships": 174
+      "memberships": 186
     },
     {
       "region": "thorax",
       "side": "right",
       "structures": 104,
       "selectionsWithGroups": 82,
-      "memberships": 121
+      "memberships": 129
     },
     {
       "region": "thorax",
       "side": "left",
       "structures": 105,
       "selectionsWithGroups": 83,
-      "memberships": 120
+      "memberships": 128
     },
     {
       "region": "abdomen",
@@ -217,22 +217,22 @@
       "region": "head-neck",
       "side": "both",
       "structures": 291,
-      "selectionsWithGroups": 228,
-      "memberships": 397
+      "selectionsWithGroups": 244,
+      "memberships": 421
     },
     {
       "region": "head-neck",
       "side": "right",
       "structures": 169,
-      "selectionsWithGroups": 131,
-      "memberships": 222
+      "selectionsWithGroups": 139,
+      "memberships": 234
     },
     {
       "region": "head-neck",
       "side": "left",
       "structures": 170,
-      "selectionsWithGroups": 130,
-      "memberships": 228
+      "selectionsWithGroups": 138,
+      "memberships": 240
     },
     {
       "region": "spine",

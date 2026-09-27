@@ -6,6 +6,7 @@ import type { BodyCatalog } from '../app/body-types';
 import { makeStudyLink } from './study-links';
 import { structureSearchAliases } from './anatomy-search';
 import { bodyReasoningReview } from './body-reasoning-review';
+import { regionalTourEvidence } from './regional-tours';
 
 // Read-only review material, separate from private signed shoulder decisions.
 const catalog = bodyDisplayCatalog(rawCatalog as unknown as BodyCatalog);
@@ -16,7 +17,7 @@ export function bodyReviewSearchAliases(id: string): string[] {
   return structure ? structureSearchAliases(structure) : [];
 }
 // Older clients must reject the expanded worksheet instead of hiding new review material.
-export const bodyReviewSchema = 'vm-body-review-worksheet-2';
+export const bodyReviewSchema = 'vm-body-review-worksheet-3';
 export const bodyReviewChecks = {
   geometry: [
     'Verify source identity, laterality, grouped parts and anatomical boundaries.',
@@ -91,6 +92,9 @@ export async function bodyReviewMaterial(id: string) {
     ...bodyLesson(structure, tab),
   }));
   const reasoning = bodyReasoningReview(catalog, id);
+  const guidedTours = regionalTourEvidence(catalog, id);
+  const checks = {geometry:[...bodyReviewChecks.geometry],teaching:[...bodyReviewChecks.teaching] as string[],imaging:[...bodyReviewChecks.imaging]};
+  if (guidedTours.length) checks.teaching.push('Review the entire displayed guided tour, all context surfaces, captions, references, target selections and camera transitions; record framing or teaching corrections.');
   const scope = {
     schema: bodyReviewSchema,
     kind: 'body-display-catalog',
@@ -100,8 +104,10 @@ export async function bodyReviewMaterial(id: string) {
     // The transport schema changed, not the anatomical source identity. Retain
     // its original hash domain so existing geometry decisions are not widened or invalidated.
     source: await digest({ scope: { ...scope, schema: 'vm-body-review-worksheet-1' }, source }),
-    teaching: await digest({ scope, topics, reasoning }),
-    checklist: await digest({ scope, checks: bodyReviewChecks }),
+    // Preserve unchanged teaching history outside this tour; the transport
+    // version alone must not broaden/invalidate the reviewed teaching scope.
+    teaching: await digest({ scope: {...scope,schema:'vm-body-review-worksheet-2'}, topics, reasoning, ...(guidedTours.length ? {guidedTours} : {}) }),
+    checklist: await digest({ scope: {...scope,schema:'vm-body-review-worksheet-2'}, checks }),
   };
   return structuredClone({
     ...scope,
@@ -110,10 +116,11 @@ export async function bodyReviewMaterial(id: string) {
     source,
     topics,
     reasoning,
+    guidedTours,
     fingerprints,
     materialHash: await digest({ scope, fingerprints }),
     atlasLink: makeStudyLink(catalog, structure.region, structure.id, 'both'),
-    checklist: bodyReviewChecks,
+    checklist: checks,
     reviewerNotes: {
       reviewer: '',
       qualification: '',

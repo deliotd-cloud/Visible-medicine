@@ -223,7 +223,7 @@ for (const text of [
 const explorer = await readFile('app/body-explorer.tsx', 'utf8');
 check(
   explorer.includes(
-    'if (exam || !regionStructures.some((item) => item.id === id)) return;',
+    'if (exam || guidedLearning || !regionStructures.some((item) => item.id === id)) return;',
   ),
 );
 check(

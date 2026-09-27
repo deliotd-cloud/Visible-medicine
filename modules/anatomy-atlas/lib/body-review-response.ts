@@ -1,6 +1,7 @@
 import type { BodyReviewMaterial } from './body-review-material';
 import type { BodyStructure } from '../app/body-types';
 import { validBodyPresentationParts } from './body-presentation-parts';
+import { regionalTours } from './regional-tours';
 const object = (v: unknown): v is Record<string, unknown> =>
   !!v && typeof v === 'object' && !Array.isArray(v);
 const strings = (v: unknown): v is string[] =>
@@ -14,7 +15,7 @@ const sourceParts = (v: unknown): v is { file: string; sha256: string }[] =>
     typeof p.file === 'string' && /^FJ\d+M?$/.test(p.file) && hash(p.sha256)) &&
   new Set(v.map(p => p.file)).size === v.length;
 function safeReference(v: unknown): v is string {
-  if (typeof v !== 'string' || !/^https:\/\//.test(v) || /[\s\\]/.test(v)) return false;
+  if (typeof v !== 'string' || !v.startsWith('https://') || /[\s\\]/.test(v)) return false;
   try {
     const url = new URL(v);
     return url.protocol === 'https:' && !!url.hostname && !url.username && !url.password;
@@ -53,6 +54,32 @@ function validReasoning(value: unknown, source: Record<string, unknown>): boolea
       p.file === sources[i].file && p.sha256 === sources[i].sha256)) return false;
   return true;
 }
+function validTours(value:unknown,source:Record<string,unknown>):boolean {
+  if(!Array.isArray(value)||value.length>4||!object(source.structure)||!object(source.bundle))return false;
+  const selected=source.structure,bundle=source.bundle;
+  const expected=regionalTours.filter(t=>[...t.contextIds,...t.steps.map(s=>s.selectedId)].includes(String(selected.id)));
+  if(value.length!==expected.length||new Set(value.map(e=>object(e)&&object(e.tour)?e.tour.id:null)).size!==value.length)return false;
+  return value.every(e=>{
+    if(!object(e)||!object(e.tour)||!Array.isArray(e.structures)||!Array.isArray(e.bundles)||
+      e.transitionMs!==1800||e.transition!=='quintic-orbit'||e.separation!==0||!text(e.limitations)||!text(e.sourceVersion))return false;
+    const t=e.tour,structures=e.structures,bundles=e.bundles;
+    const definition=expected.find(item=>item.id===t.id);
+    if(!definition||JSON.stringify(t)!==JSON.stringify(definition))return false;
+    if(!token(t.id)||!token(t.revision)||!token(t.region)||!text(t.title)||!text(t.description)||t.status!=='draft'||
+      !strings(t.contextIds)||!Array.isArray(t.steps)||!t.steps.length||t.steps.length>30)return false;
+    if(!structures.every(s=>object(s)&&text(s.id)&&text(s.name)&&token(s.bundle)&&sourceParts(s.sources))||
+      new Set(structures.map(s=>s.id)).size!==structures.length||
+      !bundles.every(b=>object(b)&&token(b.id)&&hash(b.sha256))||new Set(bundles.map(b=>b.id)).size!==bundles.length)return false;
+    if(!t.steps.every(s=>object(s)&&token(s.id)&&text(s.title)&&text(s.caption)&&
+      structures.some(v=>v.id===s.selectedId)&&['anterior','posterior','left','right','superior','inferior'].includes(String(s.view))&&
+      typeof s.fadeOthers==='boolean'&&Number.isSafeInteger(s.durationMs)&&(s.durationMs as number)>=1000&&(s.durationMs as number)<=120000&&
+      Array.isArray(s.references)&&s.references.length>0&&s.references.every(safeReference))||
+      new Set(t.steps.map(s=>s.id)).size!==t.steps.length||!t.contextIds.every(id=>structures.some(s=>s.id===id)))return false;
+    const own=structures.find(s=>s.id===selected.id),contextIds=t.contextIds,steps=t.steps;
+    return !!own&&JSON.stringify(own)===JSON.stringify(selected)&&bundles.some(b=>b.id===bundle.id&&b.sha256===bundle.sha256)&&
+      structures.every(s=>bundles.some(b=>b.id===s.bundle))&&structures.every(s=>contextIds.includes(s.id)||steps.some(step=>object(step)&&step.selectedId===s.id));
+  });
+}
 /** Validate fields consumed by the read-only UI; never accept a review decision. */
 export function parseBodyReviewResponse(
   value: unknown,
@@ -60,7 +87,7 @@ export function parseBodyReviewResponse(
 ): BodyReviewMaterial | null {
   if (
     !object(value) ||
-    value.schema !== 'vm-body-review-worksheet-2' ||
+    value.schema !== 'vm-body-review-worksheet-3' ||
     value.kind !== 'body-display-catalog' ||
     value.structureId !== expectedId ||
     value.approval !== false ||
@@ -143,6 +170,7 @@ export function parseBodyReviewResponse(
   )
     return null;
   if (!validReasoning(value.reasoning, source)) return null;
+  if (!validTours(value.guidedTours, source)) return null;
   const checks = value.checklist;
   if (
     !object(checks) ||

@@ -78,11 +78,11 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "fedfd83496638c6e6420b938edc86ad7ef9b7b2c7e1666c824abe4720a56eb83"
+      "sha256": "8d3cb2812b7f9cf84cf78a42a7c6d0b022165b6eafcc5565d41c0fa9428d245d"
     },
     {
       "path": "app/body-scene.tsx",
-      "sha256": "7117993fb76445f522d303c664fb5405ac07344f5e255906e2ee47640dc4acbc"
+      "sha256": "ab99681505b1f1eb8b3935c14b9a614310fb831c0b122492a23be635b3a302ce"
     },
     {
       "path": "app/body-selection-notice.tsx",
@@ -235,6 +235,14 @@
     {
       "path": "app/region-heading.tsx",
       "sha256": "007ec5b75713d59cb83f2923b87ab1dc4c3394d1bd15cddf589d6962bcec2c6e"
+    },
+    {
+      "path": "app/regional-guided-learning.css",
+      "sha256": "4a5397085d56ea33aa86388b5b053384f8b3b3802021ce2721a94e3dca555400"
+    },
+    {
+      "path": "app/regional-guided-learning.tsx",
+      "sha256": "557bfe3cc7b31eec83a20177a270e3f302f29038e83aedb0b26e459093c04a3d"
     },
     {
       "path": "app/related-study.tsx",
@@ -2645,6 +2653,10 @@
       "sha256": "4c5b7715e7a175c16e9694f4aa0e7925d2c753fd5e167c4e2c567df3017fa4b9"
     },
     {
+      "path": "lib/regional-tours.ts",
+      "sha256": "41fdb9f9f497cfa87c994ea241117a7fe0ccd84d97149dd90aa776a54bb9c1d2"
+    },
+    {
       "path": "lib/regional-vascular-clinical.ts",
       "sha256": "e5b28caaf9fff1bdca15a72ddc429aef010cc498b9ecab4d64db3c10070c3b88"
     },
@@ -3217,5 +3229,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "48c1028c8eeda4968627c8a96c6cedd54a6c5c79cc93752acfe290a7d8bde55d"
+  "sha256": "04d73164bb06c4f4c9360137d0826584e8a0f4f4f82450850a24b4c6c916f3a2"
 }
