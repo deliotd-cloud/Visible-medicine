@@ -243,6 +243,37 @@ Read-only source/reference audit: existing Terra Medium worker; bounded player
 and review tests: Sol Medium worker; main owns definitions, integration and risk
 review. No nested delegation. Per-run worker token totals unavailable.
 
+## Right thigh, leg and hand — 27 September 2026
+
+Three additional five-stop draft tours use existing exact-source muscle meshes,
+selected-target close-up frames and the same smooth, pauseable camera player.
+Thigh: rectus femoris, vastus lateralis, adductor longus, biceps femoris long head,
+semitendinosus; femur context. Leg: tibialis anterior, extensor digitorum longus,
+fibularis longus, soleus, tibialis posterior; tibia/fibula context. Hand: abductor
+pollicis brevis, opponens pollicis, abductor digiti minimi, flexor digiti minimi
+brevis, opponens digiti minimi; first/fifth metacarpal context. All are right-sided.
+
+Original short captions are fact-checked against TTUHSC's topographical, leg/foot
+and hand tables (links in each step). No reference prose, diagrams or new assets
+are imported. Existing model licences/credits remain unchanged. Tour membership,
+captions, context, frames and limits are included in revision-bound clinical review.
+The three additions bind 60 existing modality notes; they do not supply new scans
+or establish registration. All 164 tour/step/modality bindings are tested together.
+
+Review must check small/deep hand and tibialis posterior visibility, anatomical
+orientation, mesh fidelity and attachment limits. Soleus is in the superficial
+posterior compartment, not the outermost calf muscle; gastrocnemius is omitted.
+The thigh tour selects only the long biceps head, not both. Fading is explicitly
+not a physical fascial dissection. New tours remain drafts until radiologist sign-off.
+
+Negative tests exposed a prior gap: nonselected context source digests were only
+shape-checked. Review responses now compare the complete tour evidence with this
+build's trusted display catalogue, including every context surface, source digest,
+bundle, bounds, coordinate frame and source version. A well-formed but altered
+context is rejected. This protects review presentation; it grants no approval.
+Website integration and visual acceptance are separate delivery gates; source
+implementation alone does not mean they are published or clinically accepted.
+
 ## Compact regional tour presentation — 27 September 2026
 
 At widths up to 600px, the explanation starts collapsed; opening it exposes the

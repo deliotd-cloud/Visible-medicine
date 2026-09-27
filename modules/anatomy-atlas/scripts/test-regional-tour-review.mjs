@@ -33,10 +33,25 @@ assert.deepEqual([...new Set(forearm.map(s=>s.bundle))].sort(),['forearm-muscles
 assert(forearm.every(s=>s.laterality==='right'&&!s.id.includes(':nerve:')));
 assert.deepEqual(api.forearmTour.steps.map(s=>s.view),['right','posterior','anterior','anterior','anterior']);
 for(const step of api.forearmTour.steps){assert.deepEqual(step.frameIds,[step.selectedId]);assert.equal(step.fadeOthers,true);}
-const oldTours=await compile(execFileSync('git',['show','14581a6:lib/regional-tours.ts'],{encoding:'utf8'}).replaceAll("from './","from './lib/"));
+const limbCases=[
+ {region:'thigh',names:['right-rectus-femoris','right-vastus-lateralis','right-adductor-longus','long-head-of-right-biceps-femoris','right-semitendinosus'],views:['anterior','right','left','posterior','posterior'],bones:['right-femur'],bundles:['thigh-muscles','thigh-muscles-dissection','thigh-skeleton']},
+ {region:'leg',names:['right-tibialis-anterior','right-extensor-digitorum-longus','right-fibularis-longus','right-soleus','right-tibialis-posterior'],views:['anterior','anterior','right','posterior','posterior'],bones:['right-tibia','right-fibula'],bundles:['leg-muscles','leg-skeleton']},
+ {region:'hand',names:['right-abductor-pollicis-brevis','right-opponens-pollicis','abductor-digiti-minimi-of-right-hand','flexor-digiti-minimi-brevis-of-right-hand','opponens-digiti-minimi-of-right-hand'],views:Array(5).fill('anterior'),bones:['right-first-metacarpal-bone','right-fifth-metacarpal-bone'],bundles:['hand-muscles','hand-skeleton']},
+];
+for(const spec of limbCases){
+ const tour=api[`${spec.region}Tour`],ids=spec.names.map(name=>`vm:anatomy:body:${spec.region}:right:muscle:${name}`),bones=spec.bones.map(name=>`vm:anatomy:body:${spec.region}:right:bone:${name}`);
+ const structures=api.regionalTourStructures(api.catalog,tour);
+ assert.equal(tour.id,`right-${spec.region}-muscle-orientation`);assert.equal(tour.revision,`${tour.id}-v1`);
+ assert.equal(tour.status,'draft');assert.equal(tour.region,spec.region);assert.equal(api.regionalTourFor(spec.region).id,tour.id);
+ assert.deepEqual(tour.steps.map(s=>s.selectedId),ids);assert.deepEqual(tour.steps.map(s=>s.view),spec.views);assert.deepEqual(tour.contextIds,bones);
+ assert.deepEqual(structures.map(s=>s.id).sort(),[...ids,...bones].sort());assert.deepEqual([...new Set(structures.map(s=>s.bundle))].sort(),spec.bundles);
+ assert(structures.every(s=>s.laterality==='right'));
+ for(const step of tour.steps){assert.deepEqual(step.frameIds,[step.selectedId]);assert.equal(step.fadeOthers,true);assert.equal(step.durationMs,14000);}
+}
+const oldTours=await compile(execFileSync('git',['show','5ef14b7:lib/regional-tours.ts'],{encoding:'utf8'}).replaceAll("from './","from './lib/"));
 assert.deepEqual(api.regionalTourEvidence(api.catalog,selected[0].id),oldTours.regionalTourEvidence(api.catalog,selected[0].id),'Existing thorax evidence unchanged');
 assert.deepEqual(api.regionalTourEvidence(api.catalog,cervical[0].id),oldTours.regionalTourEvidence(api.catalog,cervical[0].id),'Existing cervical evidence unchanged');
-for(const s of [...selected,...cervical,...abdominal])assert.deepEqual(api.regionalTourEvidence(api.catalog,s.id),oldTours.regionalTourEvidence(api.catalog,s.id),'All prior tour member evidence unchanged');
+for(const s of [...selected,...cervical,...abdominal,...forearm])assert.deepEqual(api.regionalTourEvidence(api.catalog,s.id),oldTours.regionalTourEvidence(api.catalog,s.id),'All 29 prior tour member evidence unchanged');
 let checked=0;
 for(const s of api.catalog.structures){
  const m=await api.bodyReviewMaterial(s.id),c=await api.bodyReviewContext(s.id);
@@ -53,7 +68,7 @@ for(const s of api.catalog.structures){
  }else{assert.equal(m.guidedTours.length,0);assert.equal(m.fingerprints.teaching,previous,'Unrelated teaching history retained');assert(!c.checklists.teaching.some(v=>v.id==='guided-tour'));}
  assert.equal(c.revisions.imaging,null);
 }
-assert.equal(api.catalog.structures.length,1104);assert.equal(checked,29);
+assert.equal(api.catalog.structures.length,1104);assert.equal(checked,49);
 const sample=await api.bodyReviewMaterial(selected[0].id);
 for(const mutate of [p=>delete p.guidedTours,p=>p.guidedTours=[],p=>p.guidedTours.push(structuredClone(p.guidedTours[0])),p=>p.schema='vm-body-review-worksheet-2',p=>p.guidedTours[0].tour.steps[0].references=['javascript:alert(1)'],p=>p.guidedTours[0].tour.steps[0].selectedId='missing',p=>p.guidedTours[0].structures[0].sources[0].sha256='0'.repeat(64),p=>p.guidedTours[0].transitionMs=0,p=>p.guidedTours[0].tour.steps[0].durationMs=-1]){
  const p=structuredClone(sample);mutate(p);assert.equal(api.parseBodyReviewResponse(p,selected[0].id),null);
@@ -89,4 +104,42 @@ for(let i=0;i<5;i++)assert.deepEqual(forearmEvidence.stepFrames[i],api.regionalT
 for(const [label,mutate] of [['caption',p=>p.guidedTours[0].tour.steps[0].caption='Changed teaching'],['frame bounds',p=>p.guidedTours[0].stepFrames[0].min[0]-=1],['frame target',p=>p.guidedTours[0].tour.steps[0].frameIds=[forearmMuscles[1]]],['context side',p=>p.guidedTours[0].structures[0].laterality='left'],['unknown context side',p=>p.guidedTours[0].structures[0].laterality='unknown'],['missing context side',p=>delete p.guidedTours[0].structures[0].laterality],['selected side',p=>p.guidedTours[0].tour.steps[0].selectedId=forearmMuscles[0].replace(':right:',':left:')]]){
  const p=structuredClone(forearmPacket);mutate(p);assert.equal(api.parseBodyReviewResponse(p,forearmMuscles[0])===null,true,`Reject altered forearm ${label}`);
 }
-console.log(JSON.stringify({reviewed:api.catalog.structures.length,tourBound:checked,otherTeachingUnchanged:api.catalog.structures.length-checked,priorTourEvidenceUnchanged:true,invalidPacketsRejected:24,missingSourcesRejected:29,wrongOrMissingDisplayRejected:2,invalidFramesRejected:4}));
+let limbInvalidPackets=0,limbMissingSources=0,limbInvalidFrames=0;
+for(const spec of limbCases){
+ const tour=api[`${spec.region}Tour`],id=tour.steps[0].selectedId,packet=await api.bodyReviewMaterial(id),evidence=packet.guidedTours[0];
+ assert.deepEqual(evidence,api.regionalTourEvidence(api.catalog,id)[0]);
+ assert.equal(evidence.transitionMs,1800);assert.equal(evidence.separation,0);assert.equal(evidence.stepFrames.length,5);
+ for(let i=0;i<5;i++)assert.deepEqual(evidence.stepFrames[i],api.regionalTourFrame(api.catalog,tour,i));
+ for(const s of api.regionalTourStructures(api.catalog,tour)){
+  const missing={...api.catalog,structures:api.catalog.structures.filter(v=>v.id!==s.id)};
+  assert.throws(()=>api.regionalTourStructures(missing,tour));limbMissingSources++;
+ }
+ for(const [label,mutate] of [
+  ['caption',p=>p.guidedTours[0].tour.steps[0].caption='Changed teaching'],
+  ['revision',p=>p.guidedTours[0].tour.revision+='-changed'],
+  ['step order',p=>p.guidedTours[0].tour.steps.reverse()],
+  ['limitations',p=>p.guidedTours[0].tour.limitations='Approved'],
+  ['context',p=>p.guidedTours[0].tour.contextIds=[]],
+  ['frame bounds',p=>p.guidedTours[0].stepFrames[0].min[0]-=1],
+  ['missing frames',p=>delete p.guidedTours[0].stepFrames],
+  ['frame target',p=>p.guidedTours[0].tour.steps[0].frameIds=[tour.steps[1].selectedId]],
+  ['context side',p=>p.guidedTours[0].structures[0].laterality='left'],
+  ['unknown side',p=>p.guidedTours[0].structures[0].laterality='unknown'],
+  ['missing side',p=>delete p.guidedTours[0].structures[0].laterality],
+  ['selected side',p=>p.guidedTours[0].tour.steps[0].selectedId=id.replace(':right:',':left:')],
+  ['selected source digest',p=>p.guidedTours[0].structures.find(s=>s.id===id).sources[0].sha256='0'.repeat(64)],
+  ['context source digest',p=>p.guidedTours[0].structures.find(s=>s.id===tour.contextIds[0]).sources[0].sha256='0'.repeat(64)],
+  ['context bounds',p=>p.guidedTours[0].structures.find(s=>s.id===tour.contextIds[0]).bounds.min[0]-=1],
+  ['context node name',p=>p.guidedTours[0].structures.find(s=>s.id===tour.contextIds[0]).nodeName+='-changed'],
+  ['coordinate system',p=>p.guidedTours[0].coordinateSystem.unitsPerMillimetre*=2],
+  ['source version',p=>p.guidedTours[0].sourceVersion+='-changed'],
+  ['nonselected bundle digest',p=>p.guidedTours[0].bundles.find(b=>b.id!==p.source.bundle.id).sha256='0'.repeat(64)],
+ ]){
+  const p=structuredClone(packet);mutate(p);assert.equal(api.parseBodyReviewResponse(p,id),null,`Reject altered ${spec.region} ${label}`);limbInvalidPackets++;
+ }
+ for(const frameIds of [[],['missing'],[id,id],[tour.contextIds[0]]]){
+  const altered=structuredClone(tour);altered.steps[0].frameIds=frameIds;assert.throws(()=>api.regionalTourFrame(api.catalog,altered,0));limbInvalidFrames++;
+ }
+}
+assert.equal(limbMissingSources,20);assert.equal(limbInvalidPackets,57);assert.equal(limbInvalidFrames,12);
+console.log(JSON.stringify({reviewed:api.catalog.structures.length,tourBound:checked,otherTeachingUnchanged:api.catalog.structures.length-checked,priorTourEvidenceUnchanged:29,invalidPacketsRejected:24+limbInvalidPackets,missingSourcesRejected:29+limbMissingSources,wrongOrMissingDisplayRejected:2,invalidFramesRejected:4+limbInvalidFrames}));
