@@ -9,8 +9,8 @@ test('four pulmonary-vein ultrasound drafts reach the viewer without geometry or
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json'),manifest=JSON.parse(bytes.toString());
-  assert.equal(sha(bytes),'4dbcbdec13fbdd0bb7549297e2b17f25fdd51810c9c9d4b8938e59e36a6e8f40');
-  assert.equal(manifest.sourceCommit,'36c53fb9e19fca1c7e579f79d6d4807e4778ac19');
+  assert.equal(sha(bytes),'ce3f3bc59f598baaa64f9acaf864d249fe5009fdc1eb5cc0666b7ae417d1944d');
+  assert.equal(manifest.sourceCommit,'0770fd3e49eb02b0430a80769744c88027c591e5');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   assert.deepEqual(inputs.filter(input=>input.path==='content/central-vessel-imaging.ts'),[{path:'content/central-vessel-imaging.ts',sha256:'829915273c8d8f8f2b8fb064662d9cbf27d3cfa147701e00625f016fc830427a'}]);

@@ -6,11 +6,11 @@ import test from 'node:test';
 test('regional export binds paired popliteal studies and guarded Search handoff',()=>{
   const base='public/atlas-runtime/head-neck/';
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-  assert.equal(manifest.sourceCommit,'36c53fb9e19fca1c7e579f79d6d4807e4778ac19');
+  assert.equal(manifest.sourceCommit,'0770fd3e49eb02b0430a80769744c88027c591e5');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({
     'app/atlas-workspace.tsx':'6e0be873a4fb9c9b3021537014935c3722a4898e9037d83871af18711e14d4eb',
-    'app/body-explorer.tsx':'a4cdbd814df2ee08a4fc158e70d377c378f4e2849870d8ffb7d89d0894658e09',
+    'app/body-explorer.tsx':'8d2a95f39f61db6660745fedbe2dd52fc8df16d497cfc0e6d390b8d2be5491c5',
     'content/popliteal-vessel-study-pins.json':'d0f4f1875c2f3a9b281a90c8d6675f063c7427d4648cda7b3961106ad71eb1f8',
     'content/popliteal-vessel-study.ts':'abc5e21efacfde75edb96b34e3a7e218968983d323f078f5381fe3c950a366f3',
     'lib/popliteal-vessel-study.ts':'836b58cea4a797392e18e38975091ebb8e8918d8302c6e1ab0ee9caa5463f14b',

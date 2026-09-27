@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "023c43feab205c8cce95fd1cb72a5693b3021fbea9130beb48a4ee6df7d3a8b7"
+    "sha256": "ae76f83067466dfa121cd1502b850ab3f9a3d4607b618bd052ccb7cdc384a062"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "1cf7f8d587e3ff1223663e0619b7cee17bf14836d885b3e157b5d3e94342726e"
+    "sha256": "c340d82b4ffaeb1372cc4ad405d6f5da308ea93437d4a520c951a9a771b482f9"
   },
   {
     "path": "app/body-education-link.ts",
@@ -93,7 +93,7 @@
   },
   {
     "path": "app/body-explorer.tsx",
-    "sha256": "a4cdbd814df2ee08a4fc158e70d377c378f4e2849870d8ffb7d89d0894658e09"
+    "sha256": "8d2a95f39f61db6660745fedbe2dd52fc8df16d497cfc0e6d390b8d2be5491c5"
   },
   {
     "path": "app/body-scene.tsx",
@@ -472,6 +472,14 @@
     "sha256": "b0da512ba08095bb8516538b11f6f052f5e1bd052f2a418fc1015602fe8f5896"
   },
   {
+    "path": "content/achilles-ct-pins.json",
+    "sha256": "cbace5da41467256b95305858cb0d356dd0372eacd02be1ff6021f3f29d439fd"
+  },
+  {
+    "path": "content/achilles-ct.ts",
+    "sha256": "90957fbb728c1b72aa29b5db1f0aca01269035d49022d93d3fe5bf413a05cd21"
+  },
+  {
     "path": "content/acral-attachment-pins.json",
     "sha256": "d6bd3bea5eb2816d81fad9fa0ab637b2bee2aae62e22391d778552a332f29a8e"
   },
@@ -750,6 +758,14 @@
   {
     "path": "content/foot-muscle-imaging.ts",
     "sha256": "80aba36ae5a6dfb3313510f75d414f96c27468d00c912c22b3d87dad5dfa2ba2"
+  },
+  {
+    "path": "content/foot-vascular-quiz-pins.json",
+    "sha256": "9d6a38f9c1c5559f0bca4d7665ad863f04d5074b607a23205d226646c6ef1b66"
+  },
+  {
+    "path": "content/foot-vascular-quiz.ts",
+    "sha256": "3dc9fd1aa39ea472ea2d01b3e682a02524fdd902da2e44a71b3132714759bde9"
   },
   {
     "path": "content/forearm-arterial-ct-pins.json",
@@ -1672,6 +1688,10 @@
     "sha256": "06795f84c4440639f4b24ea31e10b5e0a37f0e8f494a261f512d12c8ea1687b7"
   },
   {
+    "path": "lib/achilles-ct.ts",
+    "sha256": "827b0bde2ab3c98ee11f95f75e7e4a78af627d80bbcf5916f1f8697a61799254"
+  },
+  {
     "path": "lib/achilles-imaging.ts",
     "sha256": "ebb2a04d15daf14896f65181f891aa4058f8fe70fc28416f5241f6f9565d8f88"
   },
@@ -2098,6 +2118,10 @@
   {
     "path": "lib/foot-vascular-anatomy.ts",
     "sha256": "4678ddd09311b67e646004b61cf3b52f207b68678010d39dbe04bb37076ccdd4"
+  },
+  {
+    "path": "lib/foot-vascular-quiz.ts",
+    "sha256": "df617fe8a552a1d0b808c212497c77c879a18192a4094e269a4e0d94fc3eb791"
   },
   {
     "path": "lib/forearm-arterial-imaging.ts",

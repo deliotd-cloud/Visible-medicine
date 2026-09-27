@@ -1,5 +1,14 @@
 # Visible Medicine — shared delivery plan
 
+27 September regional delivery: the main local regional/whole-body viewer now
+uses Atlas `0770fd3`, including tested restoration and the previously prepared
+draft foot quizzes/Achilles CT notes. All model bytes, independent modules,
+review pins and administrator-review access remain unchanged. 96 integration/
+delivery checks, builds, TypeScript and actual embedded restore/Undo plus whole-
+body navigation pass. No clinical decisions or public deployment. See
+`docs/atlas-restoration-delivery-20260927.md`. Next work returns to substantive
+anatomical/detail and teaching gaps, not repeated restoration delivery.
+
 27 September restoration review delivery: Clinical Review now imports Atlas
 `eecf73c` and its exact tested Restore handlers. Website builds, TypeScript,
 eleven focused access/content/delivery checks and actual website-served foot
