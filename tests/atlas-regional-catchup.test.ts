@@ -7,9 +7,9 @@ test('regional catch-up carries exact saved focus and search inputs without priv
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'1711b1ff448404abdb7751577d432ae3d80d3841475ea7c1957d6a54db7628d3');
+  assert.equal(sha(bytes),'411da5e13d266cd2d684f1322970947cc37aca0afe4d6def2aa76ce105200c55');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'82dee8b0b48b9f5bc2f1a1893dd302bf3993af6f');
+  assert.equal(manifest.sourceCommit,'912913b6069a8ede53893318024cf106f37a7e57');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,hash] of Object.entries({
     'content/ophthalmic-nerve-studies.ts':'4dad953a18972048d20d756a4358a52fb3742f4fefe6502e747df7900822581a',

@@ -1,5 +1,14 @@
 # Visible Medicine — shared delivery plan
 
+27 September larynx and male-pelvis Guided learning integrated locally from
+Atlas `912913b`:10new stops,11regional tours,248modality teaching bindings and79
+source-bound review records. Existing65tour-member evidence unchanged. No model,
+licence, scan, independent specimen or access changes; no publication/approval.
+See `docs/neck-pelvis-guided-learning-delivery-20260927.md` and coordination
+`work/NECK-PELVIS-TOURS-CHECKPOINT-20260927.md` for final verification/backups.
+Next substantive work: whole-body guided overview and cleared Education mapping,
+without redoing completed native MRI or treating generic models as registered scans.
+
 27 September foot/upper-arm Guided learning integrated locally from Atlas
 `82dee8b`: five dorsal-to-plantar foot stops and six separate upper-arm muscle/head
 stops. Nine regional tours, 208 modality-note bindings. A reproduced polar camera
