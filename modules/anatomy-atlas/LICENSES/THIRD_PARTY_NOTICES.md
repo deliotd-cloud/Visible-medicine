@@ -1591,3 +1591,16 @@ the source pages) are factual references only, not imported or relicensed assets
 No tables, figures, page layouts or extended source prose redistributed. Source
 links accompany the original questions. Existing model licences remain unchanged;
 no new paid service or dependency. All answer keys require clinical review.
+
+## Circle of Willis CT/MRI orientation — 27 September 2026
+
+Original factual teaching with references to UTHealth Neuroanatomy Online:
+https://nba.uth.tmc.edu/neuroanatomy/l4/Lab04p06_index.html and
+https://nba.uth.tmc.edu/neuroanatomy/l4/Lab04p07_index.html; and ACR/RSNA
+RadiologyInfo: https://www.radiologyinfo.org/en/info/angioct and
+https://www.radiologyinfo.org/en/info/angiomr. Pages inspected 27 September 2026.
+These copyrighted pages are factual references only, not freely relicensed
+assets. No source figures, tables, scans, layouts or extended prose are copied.
+Source links accompany concise original drafts. Existing model/data licences
+remain unchanged; no dependency, texture, font, paid service or endorsement.
+Anatomical and radiological sign-off is still required for every draft.

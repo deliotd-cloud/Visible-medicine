@@ -1,5 +1,12 @@
 # Current atlas status
 
+27 September Circle of Willis teaching: seven existing artery selections now
+have source-bound CT/CTA and MRI/MRA orientation drafts (14 placements). Exact
+source identity, laterality and model bytes are pinned; all 9,922 other topic
+placements remain unchanged. No patient imaging, geometry, paid dependency or
+clinical approval is added. See [scope, references and review requirements](CIRCLE_WILLIS_IMAGING.md).
+Website learner/review imports and public deployment remain separate steps.
+
 27 September restoration follow-through: the historical model-first validator
 now replays exact saved-view/practice/control migrations without rewriting its
 original baseline. All 3,844 checks and 105 markup cases pass; four deliberate

@@ -2,10 +2,12 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { isDeepStrictEqual } from 'node:util';
+import { beforeCircleWillisImaging } from './circle-willis-imaging-history.mjs';
 import pins from '../content/foot-vascular-quiz-pins.json' with { type: 'json' };
 import transition from '../content/foot-vascular-quiz-transition.json' with { type: 'json' };
 const hash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 export function beforeFootVascularQuiz(api) {
+  api = beforeCircleWillisImaging(api);
   if (typeof api.bodyLesson !== 'function') return api;
   // Narrow legacy fixtures do not contain these selections at all.
   if (typeof api.bodyDisplayCatalog !== 'function' && pins.entries.every(e => api.bodyLesson(e.identity, 'quiz') === undefined)) return api;

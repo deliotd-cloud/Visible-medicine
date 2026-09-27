@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "ba573d1256c3a82bc46c0310baac9bbcf0ff523ef338560690e79b1dc5b44c21"
+      "sha256": "ecc119db4b2f0d6c71bf6d533673864bcb9d8c361408f742bca32e3291dd612b"
     },
     {
       "path": "app/body-education-link.ts",
@@ -563,6 +563,14 @@
     {
       "path": "content/chest-wall-muscle-imaging.ts",
       "sha256": "3d5d7552cb1d0ffa75fc031acf2b147edbb65b66b35ee76799815c0bbbf75e5c"
+    },
+    {
+      "path": "content/circle-willis-imaging-pins.json",
+      "sha256": "8891733101134e78fad8a36d1fd8b7387ea64b20ed2c2d36f3a20e978d6deece"
+    },
+    {
+      "path": "content/circle-willis-imaging.ts",
+      "sha256": "d71c9cfe19ceb29934c91832cc3bd39d14a2dec405f4816e5eef4643d8eea2f1"
     },
     {
       "path": "content/collicular-brachia-teaching.ts",
@@ -1811,6 +1819,10 @@
     {
       "path": "lib/chest-wall-muscle-imaging.ts",
       "sha256": "e97986190d60d6bde5ffcb9f17181880a5521aad4dfca71850c59c22ca431d79"
+    },
+    {
+      "path": "lib/circle-willis-imaging.ts",
+      "sha256": "d4e7beb1ae7377777d6c9d93d16da8aac14384cd38e28a7de1cf7e2ecc803e2c"
     },
     {
       "path": "lib/circumflex-femoral.ts",
@@ -3173,5 +3185,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "914e66e50bdc2706078f97dd89e1d7e352190de323db6e6d8c2c1c69e35e7a9d"
+  "sha256": "7013151223e1e396a0b2233d5e82669ef7091e9f1e59ad8e76bd60072c2bcf6a"
 }

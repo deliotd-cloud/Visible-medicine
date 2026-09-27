@@ -2,8 +2,12 @@ import assert from 'node:assert/strict';
 import { contentContext } from './content-contract-tools.mjs';
 import { exactSourceHistoryApi } from './exact-source-history-api.mjs';
 import { beforeFootVascularQuiz } from './foot-vascular-quiz-history.mjs';
+import { beforeCircleWillisImaging } from './circle-willis-imaging-history.mjs';
 import pins from '../content/foot-vascular-quiz-pins.json' with { type: 'json' };
-const { api, catalog } = await contentContext();
+import circlePins from '../content/circle-willis-imaging-pins.json' with { type: 'json' };
+const { api: currentApi, catalog } = await contentContext();
+// Historical foot counts/hashes exclude the independently verified later batch.
+const api = beforeCircleWillisImaging(currentApi);
 const parent = await exactSourceHistoryApi(pins.parentCommit);
 const prior = beforeFootVascularQuiz(api);
 const display = api.bodyDisplayCatalog(catalog);
@@ -37,4 +41,13 @@ const alteredOther = { ...api, bodyLesson(s, tab) {
   return s.id === other.id && tab === 'quiz' ? { ...lesson, body: 'Unrelated change retained' } : lesson;
 } };
 assert.equal(beforeFootVascularQuiz(alteredOther).bodyLesson(other, 'quiz').body, 'Unrelated change retained');
-console.log(JSON.stringify({ restored, unchanged, rejected, unrelatedChangeRetained: true, clinicalApproval: false }));
+// Normalization must reject corruption instead of masking an unknown later state.
+assert.throws(() => beforeCircleWillisImaging({ ...currentApi, bodyLesson(s, tab) {
+  const lesson = currentApi.bodyLesson(s, tab);
+  return s.id === circlePins.entries[0].identity.id && tab === 'ct' ? { ...lesson, body: 'foreign' } : lesson;
+} }), /Unrecorded/);
+assert.throws(() => beforeCircleWillisImaging({ ...currentApi, bodyLesson(s, tab) {
+  return s.id === circlePins.entries[0].identity.id && tab === 'ct'
+    ? structuredClone(circlePins.entries[0].previous.ct) : currentApi.bodyLesson(s, tab);
+} }), /Mixed/);
+console.log(JSON.stringify({ restored, unchanged, rejected, laterHistoryRejected: 2, unrelatedChangeRetained: true, clinicalApproval: false }));

@@ -5,6 +5,7 @@ import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import { contentContext, contentValidator } from './content-contract-tools.mjs';
 import { exactSourceHistoryApi } from './exact-source-history-api.mjs';
+import { beforeCircleWillisImaging } from './circle-willis-imaging-history.mjs';
 import { build as componentBuild } from './workspace-component-test-build.mjs';
 import { build } from './workspace-test-build.mjs';
 import pins from '../content/foot-vascular-quiz-pins.json' with { type: 'json' };
@@ -13,7 +14,9 @@ import { footVascularQuizGroups, footVascularQuizQuestions } from '../content/fo
 const hash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const snapshot = (api, display) => ({ body: display.structures.map(s => ({ id: s.id, sections: Object.fromEntries(api.contentTabs.map(t => [t, api.bodyLesson(s, t)])) })), shoulder: api.structures, recipes: api.dissectionProfiles });
 
-const { api, catalog, registry } = await contentContext();
+const { api: currentApi, catalog, registry } = await contentContext();
+// Check the frozen foot transition after verifying/replaying later editorial work.
+const api = beforeCircleWillisImaging(currentApi);
 const display = api.bodyDisplayCatalog(catalog), parent = await exactSourceHistoryApi(pins.parentCommit);
 const built = await build({ stdin: { contents: "export {footVascularQuizLesson} from './lib/foot-vascular-quiz';", resolveDir: process.cwd(), loader: 'ts' }, bundle: true, write: false, platform: 'node', format: 'esm' });
 const { footVascularQuizLesson } = await import('data:text/javascript;base64,' + Buffer.from(built.outputFiles[0].text).toString('base64'));
