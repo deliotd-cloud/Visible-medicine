@@ -71,7 +71,28 @@ export const celiacTour: RegionalTour = {
     celiacStep('proper-hepatic','Hepatic artery proper',abdominalVessel('unspecified','hepatic-artery-proper'),'anterior','Compare the hepatic artery proper with the common hepatic segment. Typical hepatic branching is only an orientation guide: origins vary, and these surfaces are not a patient-specific surgical or angiographic map.',[foregutReference],hepaticFrame),
   ],
 };
-export const regionalTours=[thoraxTour,cervicalSpineTour,celiacTour];
+const forearmId=(kind:string,name:string)=>`vm:anatomy:body:forearm:right:${kind}:right-${name}`;
+const forearmReference='https://anatomy.ttuhscep.edu/musculoskeletal_system/forearm_ans.html';
+const forearmStep=(name:string,title:string,view:DissectionView,caption:string)=>({
+  id:name,title,selectedId:forearmId('muscle',name),view,caption,
+  references:[forearmReference],durationMs:14000,fadeOthers:true,
+  frameIds:[forearmId('muscle',name)],
+});
+export const forearmTour: RegionalTour = {
+  id:'right-forearm-muscle-orientation',title:'Right forearm: muscle orientation',region:'forearm',
+  revision:'right-forearm-muscle-orientation-v1',status:'draft',
+  description:'Five selected muscles, with radius and ulna as faded context. Follow the lateral, posterior and anterior surfaces, finishing with a distal close-up.',
+  limitations:'Right-sided selected source surfaces, not complete muscle compartments or a dissection of fascial planes. Nerves, vessels and the complete wrist/hand skeleton are not shown. Fine tendon continuity and attachments require source review. No simulated contraction, acquired imaging or patient registration. Draft pending radiologist review.',
+  contextIds:[forearmId('bone','radius'),forearmId('bone','ulna')],
+  steps:[
+    forearmStep('brachioradialis','Brachioradialis · Lateral landmark','right','Begin on the lateral side of the right forearm. Brachioradialis belongs to the posterior compartment but acts as an elbow flexor. The faded radius and ulna provide orientation; the humerus is not shown.'),
+    forearmStep('extensor-digitorum','Extensor digitorum · Posterior','posterior','Sweep to the posterior surface and identify extensor digitorum. It extends digits two to five. Follow the supplied surface distally without treating it as a verified map of individual tendon insertions.'),
+    forearmStep('flexor-carpi-radialis','Flexor carpi radialis · Anterior','anterior','Move to the anterior side. Flexor carpi radialis is a superficial flexor that flexes the wrist and assists radial deviation. Compare its position with the faded forearm bones; wrist motion is not simulated.'),
+    forearmStep('flexor-digitorum-superficialis','Flexor digitorum superficialis','anterior','Identify the intermediate anterior flexor, flexor digitorum superficialis. Its action includes proximal interphalangeal flexion in digits two to five. Other muscles fade for visibility; fading is not a true dissection plane.'),
+    forearmStep('pronator-quadratus','Pronator quadratus · Distal close-up','anterior','Finish with a close-up of pronator quadratus, deep in the distal anterior forearm between ulna and radius. It contributes to pronation. Nearby context may extend beyond this frame; no nerve course is depicted.'),
+  ],
+};
+export const regionalTours=[thoraxTour,cervicalSpineTour,celiacTour,forearmTour];
 export const regionalTourFor=(region:string)=>regionalTours.find(t=>t.region===region)??null;
 export const regionalTourLimitations=(tour:RegionalTour)=>tour.limitations??'Selected exterior source surfaces only; no complete lumen, bronchial tree, surgical plane, acquired imaging or spatial registration. Draft pending radiologist review.';
 

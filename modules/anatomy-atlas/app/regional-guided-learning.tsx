@@ -37,7 +37,7 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit}:{catalog:
   useEffect(()=>{if(active)controls.current?.querySelector<HTMLButtonElement>('button:not(:disabled)')?.focus({preventScroll:true});},[active]);
   return <section className="regional-tour" aria-label={tour.title}>
     <div className="regional-tour-panel">
-      <div className="regional-tour-heading"><h2>{active?step.title:tour.title}</h2>{active&&<span>Step {index+1} of {tour.steps.length}</span>}</div>
+      <div className="regional-tour-heading" aria-live="polite" aria-atomic="true"><h2>{active?step.title:tour.title}</h2>{active&&<span>Step {index+1} of {tour.steps.length}</span>}</div>
       <details className="regional-tour-explanation" open={explanationOpen} onToggle={event=>{
         const open=event.currentTarget.open;setExplanationOpen(open);
         if(open){setPlaying(false);setMotionPaused(true);}

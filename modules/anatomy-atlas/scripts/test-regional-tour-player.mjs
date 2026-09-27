@@ -10,7 +10,7 @@ const require = createRequire(import.meta.url), React = require('react');
 const catalog = JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json', import.meta.url), 'utf8'));
 const catalogBefore = JSON.stringify(catalog);
 const built = await build({ stdin: {
-  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, cervicalSpineTour, celiacTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
+  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, cervicalSpineTour, celiacTour, forearmTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
   loader: 'tsx', resolveDir: process.cwd(),
 }, bundle: true, write: false, format: 'cjs', platform: 'node', loader: { '.css': 'empty' }, plugins: [{ name: 'gpu-boundary', setup(api) {
   api.onLoad({ filter: /[\\/]app[\\/]body-scene\.tsx$/ }, () => ({ loader: 'tsx', contents: 'export function BodyScene(){return null;}' }));
@@ -65,6 +65,39 @@ test('Compact tours retain complete teaching on demand and pause while reading',
     assert.equal(explanation().open,false);assert.equal(h.timers.size,0,'Closing never resumes playback');
     h.click('Next');assert.equal(h.scene().reset,1);h.click('Exit tour');assert.equal(h.exits(),1);
   }
+});
+
+test('Forearm tour requires both bundles and runs five exact right-sided close-ups with bounded finish', () => {
+  const h=harness(catalog,'forearmTour');
+  const heading=()=>nodes(h.tree()).find(n=>n.props?.className==='regional-tour-heading');
+  assert.equal(heading().props['aria-live'],'polite');assert.equal(heading().props['aria-atomic'],'true');
+  assert.equal(h.scene().structures.length,7);assert.deepEqual(h.bundles().sort(),['forearm-muscles','forearm-skeleton']);
+  assert(h.scene().structures.every(s=>s.laterality==='right'));
+  assert(h.scene().structures.every(s=>!s.id.includes(':nerve:')));
+  assert.match(text(h.tree()),/nerve/i);assert.match(text(h.tree()),/registration/i);assert.match(text(h.tree()),/Draft pending radiologist review/);
+  assert.equal(h.button('Start guided tour').disabled,true);
+  h.scene().onLoaded('forearm-muscles');h.scene().onLoaded('unknown-bundle');h.render();
+  assert.equal(h.button('Start guided tour').disabled,true);
+  h.scene().onRendererHealth('ready');h.render();assert.equal(h.button('Start guided tour').disabled,true);
+  h.scene().onLoaded('forearm-skeleton');h.render();assert.equal(h.button('Start guided tour').disabled,false);
+  assert.equal(h.timers.size,0);h.click('Start guided tour');
+  assert.equal(h.button('Back').disabled,true);h.button('Back').onClick();h.render();assert.equal(h.scene().reset,0);
+  const names=['right-brachioradialis','right-extensor-digitorum','right-flexor-carpi-radialis','right-flexor-digitorum-superficialis','right-pronator-quadratus'];
+  const views=['right','posterior','anterior','anterior','anterior'];
+  const frames=[];
+  for(let i=0;i<5;i++){
+    const id=`vm:anatomy:body:forearm:right:muscle:${names[i]}`;
+    assert.equal(h.scene().selectedId,id);assert.equal(h.scene().view,views[i]);
+    assert.deepEqual(plain(h.props.tour.steps[i].frameIds),[id]);
+    assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,i)));
+    assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
+    assert.match(text(heading()),new RegExp(`Step ${i+1} of 5`));assert.match(text(heading()),new RegExp(h.props.tour.steps[i].title.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));
+    frames.push(plain(h.scene().presetBounds));if(i<4)h.click('Next');
+  }
+  assert.notDeepEqual(frames[0],frames[4],'Different muscle stops use distinct source bounds');
+  h.click('Back');assert.equal(h.scene().reset,3);h.click('Play');h.tick();h.tick();
+  assert.equal(h.scene().reset,4);assert.equal(h.timers.size,0);assert.equal(h.button('Play')['aria-pressed'],false);assert.equal(h.exits(),0);
+  h.click('Finish');assert.equal(h.exits(),1);assert.equal(h.scene().reset,4);h.unchanged();
 });
 
 test('Cervical tour runs all five exact steps with fixed framing and its own limits', () => {

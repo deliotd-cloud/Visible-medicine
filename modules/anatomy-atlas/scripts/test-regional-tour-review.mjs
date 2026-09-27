@@ -20,9 +20,23 @@ assert.equal(api.regionalTourFor('abdomen').id,api.celiacTour.id);
 const celiac=abdominal.find(s=>s.id===api.celiacTour.steps[0].selectedId);
 assert.equal(celiac.bundle,'celiac-display-corrected');
 assert.equal(new Set(abdominal.map(s=>s.bundle)).size,2);
-const oldTours=await compile(execFileSync('git',['show','edca765:lib/regional-tours.ts'],{encoding:'utf8'}).replaceAll("from './","from './lib/"));
+const forearm=api.regionalTourStructures(api.catalog,api.forearmTour);
+const forearmMuscles=['right-brachioradialis','right-extensor-digitorum','right-flexor-carpi-radialis','right-flexor-digitorum-superficialis','right-pronator-quadratus'].map(name=>`vm:anatomy:body:forearm:right:muscle:${name}`);
+const forearmBones=['right-radius','right-ulna'].map(name=>`vm:anatomy:body:forearm:right:bone:${name}`);
+assert.equal(api.forearmTour.id,'right-forearm-muscle-orientation');assert.equal(api.forearmTour.revision,'right-forearm-muscle-orientation-v1');
+assert.equal(api.forearmTour.status,'draft');assert.equal(api.forearmTour.region,'forearm');
+assert.equal(api.regionalTourFor('forearm').id,api.forearmTour.id);
+assert.deepEqual(api.forearmTour.steps.map(s=>s.selectedId),forearmMuscles);
+assert.deepEqual(api.forearmTour.contextIds,forearmBones);
+assert.deepEqual(forearm.map(s=>s.id).sort(),[...forearmBones,...forearmMuscles].sort());
+assert.deepEqual([...new Set(forearm.map(s=>s.bundle))].sort(),['forearm-muscles','forearm-skeleton']);
+assert(forearm.every(s=>s.laterality==='right'&&!s.id.includes(':nerve:')));
+assert.deepEqual(api.forearmTour.steps.map(s=>s.view),['right','posterior','anterior','anterior','anterior']);
+for(const step of api.forearmTour.steps){assert.deepEqual(step.frameIds,[step.selectedId]);assert.equal(step.fadeOthers,true);}
+const oldTours=await compile(execFileSync('git',['show','14581a6:lib/regional-tours.ts'],{encoding:'utf8'}).replaceAll("from './","from './lib/"));
 assert.deepEqual(api.regionalTourEvidence(api.catalog,selected[0].id),oldTours.regionalTourEvidence(api.catalog,selected[0].id),'Existing thorax evidence unchanged');
 assert.deepEqual(api.regionalTourEvidence(api.catalog,cervical[0].id),oldTours.regionalTourEvidence(api.catalog,cervical[0].id),'Existing cervical evidence unchanged');
+for(const s of [...selected,...cervical,...abdominal])assert.deepEqual(api.regionalTourEvidence(api.catalog,s.id),oldTours.regionalTourEvidence(api.catalog,s.id),'All prior tour member evidence unchanged');
 let checked=0;
 for(const s of api.catalog.structures){
  const m=await api.bodyReviewMaterial(s.id),c=await api.bodyReviewContext(s.id);
@@ -39,7 +53,7 @@ for(const s of api.catalog.structures){
  }else{assert.equal(m.guidedTours.length,0);assert.equal(m.fingerprints.teaching,previous,'Unrelated teaching history retained');assert(!c.checklists.teaching.some(v=>v.id==='guided-tour'));}
  assert.equal(c.revisions.imaging,null);
 }
-assert.equal(checked,22);
+assert.equal(api.catalog.structures.length,1104);assert.equal(checked,29);
 const sample=await api.bodyReviewMaterial(selected[0].id);
 for(const mutate of [p=>delete p.guidedTours,p=>p.guidedTours=[],p=>p.guidedTours.push(structuredClone(p.guidedTours[0])),p=>p.schema='vm-body-review-worksheet-2',p=>p.guidedTours[0].tour.steps[0].references=['javascript:alert(1)'],p=>p.guidedTours[0].tour.steps[0].selectedId='missing',p=>p.guidedTours[0].structures[0].sources[0].sha256='0'.repeat(64),p=>p.guidedTours[0].transitionMs=0,p=>p.guidedTours[0].tour.steps[0].durationMs=-1]){
  const p=structuredClone(sample);mutate(p);assert.equal(api.parseBodyReviewResponse(p,selected[0].id),null);
@@ -66,4 +80,13 @@ for(const mutate of [p=>delete p.guidedTours[0].stepFrames,p=>p.guidedTours[0].s
 for(const frameIds of [[],['missing'],[celiac.id,celiac.id],[api.celiacTour.contextIds[0]]]) {
  const tour=structuredClone(api.celiacTour);tour.steps[0].frameIds=frameIds;assert.throws(()=>api.regionalTourFrame(api.catalog,tour,0));
 }
-console.log(JSON.stringify({reviewed:api.catalog.structures.length,tourBound:checked,otherTeachingUnchanged:api.catalog.structures.length-checked,priorTourEvidenceUnchanged:true,invalidPacketsRejected:17,missingSourcesRejected:22,wrongOrMissingDisplayRejected:2,invalidFramesRejected:4}));
+for(const s of forearm){const missing={...api.catalog,structures:api.catalog.structures.filter(v=>v.id!==s.id)};assert.throws(()=>api.regionalTourStructures(missing,api.forearmTour));}
+const forearmPacket=await api.bodyReviewMaterial(forearmMuscles[0]);
+const forearmEvidence=forearmPacket.guidedTours[0];
+assert.deepEqual(forearmEvidence,api.regionalTourEvidence(api.catalog,forearmMuscles[0])[0]);
+assert.equal(forearmEvidence.transitionMs,1800);assert.equal(forearmEvidence.separation,0);assert.equal(forearmEvidence.stepFrames.length,5);
+for(let i=0;i<5;i++)assert.deepEqual(forearmEvidence.stepFrames[i],api.regionalTourFrame(api.catalog,api.forearmTour,i));
+for(const [label,mutate] of [['caption',p=>p.guidedTours[0].tour.steps[0].caption='Changed teaching'],['frame bounds',p=>p.guidedTours[0].stepFrames[0].min[0]-=1],['frame target',p=>p.guidedTours[0].tour.steps[0].frameIds=[forearmMuscles[1]]],['context side',p=>p.guidedTours[0].structures[0].laterality='left'],['unknown context side',p=>p.guidedTours[0].structures[0].laterality='unknown'],['missing context side',p=>delete p.guidedTours[0].structures[0].laterality],['selected side',p=>p.guidedTours[0].tour.steps[0].selectedId=forearmMuscles[0].replace(':right:',':left:')]]){
+ const p=structuredClone(forearmPacket);mutate(p);assert.equal(api.parseBodyReviewResponse(p,forearmMuscles[0])===null,true,`Reject altered forearm ${label}`);
+}
+console.log(JSON.stringify({reviewed:api.catalog.structures.length,tourBound:checked,otherTeachingUnchanged:api.catalog.structures.length-checked,priorTourEvidenceUnchanged:true,invalidPacketsRejected:24,missingSourcesRejected:29,wrongOrMissingDisplayRejected:2,invalidFramesRejected:4}));

@@ -216,6 +216,33 @@ The supraspinatus step now explicitly fades other structures for visibility.
 No clinical decision, geometry, private scan, website deployment or desktop PACS
 was changed. Website import and review integration are the next delivery step.
 
+## Right forearm muscle orientation — 27 September 2026
+
+Five right-sided stops: brachioradialis, extensor digitorum, flexor carpi radialis,
+flexor digitorum superficialis and pronator quadratus. Exact right radius and
+ulna source records provide faded context. Each camera frame is bound to its
+selected muscle; the smaller distal pronator quadratus receives a closer view.
+Existing muscle/skeleton bundles and credits are retained; no new model, image,
+texture, font or dependency is included. The source has no forearm nerve meshes:
+this is explicitly not a nerve-pathway tour or a complete compartment dissection.
+
+Original teaching is referenced to TTUHSC's Forearm & Wrist dissector answers:
+https://anatomy.ttuhscep.edu/musculoskeletal_system/forearm_ans.html
+No diagrams or source text are copied. All tour evidence, context and computed
+frames are material to the radiologist's revision-bound teaching review.
+Existing CT/MRI/X-ray/US lessons are reused without implying an aligned scan.
+The visible step heading is a polite atomic live region so collapsed mobile
+explanations do not suppress step-change announcements.
+
+The added negative review test exposed accepted inconsistent context laterality.
+The response parser now rejects a context or target whose laterality is missing,
+unknown or disagrees with its anatomical ID. The test remains strict; no clinical
+decision or prior source evidence is rewritten by this validation change.
+
+Read-only source/reference audit: existing Terra Medium worker; bounded player
+and review tests: Sol Medium worker; main owns definitions, integration and risk
+review. No nested delegation. Per-run worker token totals unavailable.
+
 ## Compact regional tour presentation — 27 September 2026
 
 At widths up to 600px, the explanation starts collapsed; opening it exposes the
