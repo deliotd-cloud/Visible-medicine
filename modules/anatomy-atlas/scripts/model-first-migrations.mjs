@@ -2,6 +2,16 @@
 // A handler is admitted only by name and canonical TypeScript SHA-256. The
 // provenance/evidence fields make each pin auditable; they do not relax checks.
 export const modelFirstHandlerMigrations = Object.freeze({
+  restoreStructure: Object.freeze({
+    sha256: '46840cddce5f8d9c2c22b50f6d41062364b0c2d5d1069a453118819b492e5873',
+    commits: Object.freeze(['b0cf1d5855ecd2f44c30c3c3791caf12ac970b98']),
+    evidence: Object.freeze(['node scripts/test-restore-visibility.mjs']),
+  }),
+  restoreStructures: Object.freeze({
+    sha256: '84c29c7b1b9119011d3f7921ff302531b314b30dbca1095ebbccc57aefa07648',
+    commits: Object.freeze(['b0cf1d5855ecd2f44c30c3c3791caf12ac970b98']),
+    evidence: Object.freeze(['node scripts/test-restore-visibility.mjs']),
+  }),
   retryAnatomy: Object.freeze({
     sha256: 'f0db9be0deeab6fc58b70c3423022dcf1b0bfcb3f84e905ef97514e9ec69f549',
     commits: Object.freeze([

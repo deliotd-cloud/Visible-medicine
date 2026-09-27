@@ -1,5 +1,29 @@
 # First-release viewer acceptance evidence
 
+## 27 September: restored tissue visibility
+
+Baseline reproduced in the actual website review viewer (`bc2cf4a`): Foot,
+Dissect, Remove plantar layer 1, select Right talus, Fade others, restore right
+abductor digiti minimi. Removed count fell from six to five but Fade others stayed
+pressed; the renderer still classified the restored muscle as a ghost.
+
+Source fix `b0cf1d5` was built and served through a loopback-only, source-hash
+checked regional preview without copying models. At1440x1000 the same restore
+cleared both Fade others and Frame selected, retained Right talus and the layer,
+and refitted the two-foot view. Screenshot visually inspected; document1440px.
+With fading re-enabled, Restore matching changed five removed entries to zero,
+cleared fading, and a single Undo returned the removed count to five. No clinical
+decision, source geometry or teaching changed. This is local desktop evidence;
+the website export and touch/GPU/device matrix require separate delivery checks.
+
+Twelve actual-handler regression cases pass, alongside dissection workbench,
+history, selection visibility, explode styles, TypeScript and regional build.
+The broader model-first validator still fails on pre-existing practice-return
+and saved-view handler migration omissions from `5e3667fe` and `6cbeafbf`.
+Those same function hashes exist at parent `bc2cf4a`; old baseline expectations
+were not overwritten. New restore handlers have explicit provenance pins.
+See coordinating `work/RESTORE-VISIBILITY-CHECKPOINT-20260927.md`.
+
 ## 26 September: shoulder quick checks and exam return
 
 Atlas `9856291` production export was exercised over loopback with the actual

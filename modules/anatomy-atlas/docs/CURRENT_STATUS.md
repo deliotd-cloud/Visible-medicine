@@ -1,5 +1,11 @@
 # Current atlas status
 
+27 September dissection restoration: Restore one/matching now exits isolation
+fading and selected-only framing, then refits without changing source geometry,
+teaching, layout, separation or cutaway. The foot-viewer failure was reproduced;
+invalid/out-of-scope requests and exam mode cannot change history or display.
+See [workbench behaviour](DISSECTION_WORKBENCH.md).
+
 27 September review evidence: body review topic disclosures now show authored
 draft answer keys and explanations, matching the dedicated shoulder reviewer.
 Unkeyed legacy notes gain no inferred answer. Teaching, models, checklists and

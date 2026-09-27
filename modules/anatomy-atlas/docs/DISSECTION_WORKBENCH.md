@@ -11,6 +11,18 @@ This milestone strengthens shoulder-style removal, exploration and restoration i
 5. Select and remove individual structures to customise a view. In the study guide, expand **Removed from this view**, search by name/source name/FMA identity/side, or filter by system. Restore one result or all matching results. A group restoration is one undoable dissection change; it does not alter unrelated removed entries.
 6. Reassemble, use Undo (up to forty dissection snapshots), or save the current configuration using the existing device-local study views. Camera/system preferences are not part of dissection Undo history.
 
+### Restoring visible tissue — 27 September 2026
+
+Restore one or matching results now exits **Fade others** and selection-only
+framing, and refits the current view. Previously a restored non-selected surface
+could remain a faint, non-pickable ghost or outside the selected camera frame.
+The existing selection, layout, separation, cutaway and other tissue choices
+remain unchanged; an active cutaway can still clip restored surfaces. Undo
+reverses the tissue restoration as one step, not the camera/display adjustment.
+Foreign, nonremoved or empty restore requests do nothing; exam mode rejects them.
+`node scripts/test-restore-visibility.mjs` exercises the production handlers,
+source catalogue, reducer and renderer fading predicate (12 cases).
+
 ### Keyboard history — 17 September 2026
 
 In a regional/whole-body **Dissect** workspace, use **Ctrl/Cmd+Z** to undo and

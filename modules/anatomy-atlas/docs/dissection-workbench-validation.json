@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "checks": 134282,
+  "checks": 134312,
   "catalogueStructures": 1022,
   "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
   "regions": [
@@ -8,7 +8,7 @@
       "region": "whole-body",
       "layerSteps": 0,
       "studyWindows": 7,
-      "focusedViews": 24
+      "focusedViews": 30
     },
     {
       "region": "shoulder-arm",
@@ -38,7 +38,7 @@
       "region": "leg",
       "layerSteps": 4,
       "studyWindows": 6,
-      "focusedViews": 13
+      "focusedViews": 14
     },
     {
       "region": "foot",
@@ -50,7 +50,7 @@
       "region": "thorax",
       "layerSteps": 4,
       "studyWindows": 9,
-      "focusedViews": 15
+      "focusedViews": 18
     },
     {
       "region": "abdomen",

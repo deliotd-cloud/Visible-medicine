@@ -1094,9 +1094,16 @@ export default function BodyExplorer({
   }
   function restoreStructure(id: string) {
     if (exam) return;
+    const s = resolved.removed.find((item) => item.id === id);
+    if (!s) return;
     dispatch({ type: 'restore', id });
-    const s = catalog?.structures.find((s) => s.id === id);
-    if (s) setSystems((prev) => ({ ...prev, [s.system]: true }));
+    setSystems((prev) => ({ ...prev, [s.system]: true }));
+    setIsolated(false);
+    setFocus(false);
+    setZoom(1);
+    // Refit also clears live wheel zoom/pan when React zoom is already one.
+    cameraRestore.current = null;
+    setReset((n) => n + 1);
   }
   function restoreStructures(ids: string[]) {
     if (exam) return;
@@ -1109,6 +1116,11 @@ export default function BodyExplorer({
       for (const item of allowed) next[item.system] = true;
       return next;
     });
+    setIsolated(false);
+    setFocus(false);
+    setZoom(1);
+    cameraRestore.current = null;
+    setReset((n) => n + 1);
   }
   function changeVesselVisibility(kind: VesselKind, show: boolean) {
     const action = vesselVisibilityAction(
