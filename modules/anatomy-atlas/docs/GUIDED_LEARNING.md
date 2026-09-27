@@ -328,6 +328,29 @@ read-only; main authored/verified code. A second worker was unavailable.
 Source geometry remains unvalidated pending radiologist sign-off. Website
 delivery and visual acceptance are separate gates, recorded in the checkpoint.
 
+## Whole-body tour library — 27 September 2026
+
+Whole-body Guided learning now uses a compact, labelled selector to open any of
+the11existing regional tours inside the same viewer. No pop-out, region route
+change, synthetic whole-body tour, cross-specimen frame or new teaching evidence
+is created. Regional pages retain their own focused tour. The dedicated shoulder
+rotator-cuff tour remains on the shoulder page; the library's upper-arm tour is
+distinct and clearly named.
+
+Switching tour remounts the player with an ID+revision key, discarding old timers,
+step, loaded/failed bundle flags and camera state. It waits for the selected tour's
+own sources and explicit Start; there is no automatic continuation. Invalid
+selector values are ignored. Exiting uses the existing detached camera/launcher
+restore without altering selection, dissection history, systems or layout.
+The whole-body entry remains blocked during an active practice exam.
+
+Component-boundary tests cover every option, identity, remount, invalid values,
+single-player/no-link rendering and shared exit. Host tests exercise actual
+entry/exit, exam guard and exact camera/focus restoration; the24player tests
+remain unchanged. Browser switching, restoration and compact layout must also
+pass before website delivery. Read-only navigation audit: Terra Medium; main
+implemented the tightly coupled host/player integration.
+
 ## Compact regional tour presentation — 27 September 2026
 
 At widths up to 600px, the explanation starts collapsed; opening it exposes the
