@@ -62,12 +62,20 @@ answer(1);
 assert.match(text(tree), /Correct\. Correct answer: Example B/);
 assert.match(text(tree), /keyed example/);
 assert.equal(document.activeElement, 'feedback');
-button('Try again').props.onClick(); render();
+assert.equal(button('Try again'), undefined, 'success must not suggest a wrong answer');
+button('Practise again').props.onClick(); render();
 assert.equal(document.activeElement, 'first-radio');
 assert(radios().every(node => !node.props.checked));
 assert.equal(button('Try again'), undefined);
+assert.equal(button('Practise again'), undefined);
 answer(0);
 assert.match(text(tree), /Incorrect\. Correct answer: Example B/);
+assert(button('Try again'), 'incorrect answers offer retry');
+assert.equal(button('Practise again'), undefined);
+button('Try again').props.onClick(); render();
+assert.equal(document.activeElement, 'first-radio');
+assert(radios().every(node => !node.props.checked));
+answer(0);
 radios()[1].props.onChange(); render();
 assert.equal(button('Try again'), undefined, 'changed choice clears prior marking');
 for (const next of [
@@ -79,6 +87,7 @@ for (const next of [
   render(); answer(1); render(next);
   assert(radios().every(node => !node.props.checked));
   assert.equal(button('Try again'), undefined, 'content revision clears feedback');
+  assert.equal(button('Practise again'), undefined, 'content revision clears successful retry');
 }
 for (const next of [
   { ...props, correctAnswer: null }, { ...props, correctAnswer: 'Missing choice' },
