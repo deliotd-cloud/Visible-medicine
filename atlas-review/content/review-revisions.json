@@ -84,7 +84,7 @@
     ],
     [
       "app/atlas-workspace.tsx",
-      "6e0be873a4fb9c9b3021537014935c3722a4898e9037d83871af18711e14d4eb"
+      "6ead6f8f9221666d3f6517e00220b2ecd4533746085674fbd13ae79463f64c46"
     ],
     [
       "app/workspace-session.ts",
@@ -92,7 +92,7 @@
     ],
     [
       "app/atlas-workspace.css",
-      "aaa75b3e4e42a68ac944d70bbca7957eee4c3ba71c4413436cd9bc9f64841c4d"
+      "10112bc03082946db1a475a390cf1a385f92bc83e4dc978d6d87d2773f9fae72"
     ],
     [
       "app/atlas-panel.css",
@@ -217,97 +217,97 @@
   ],
   "revisions": {
     "vm:anatomy:upper-limb:shoulder:right:bone:scapula": {
-      "geometry": "1cdd7c9387a4d4c3d23916994c56e27afa11ca93e8c6b00a1baba4f71af7d56c",
-      "teaching": "9f299196820ef2e5cac34e726d3fb42fdc3c699f8aa1c1219d677dc529094e91",
+      "geometry": "ca80756cd3a47c9762edf6a01387335f335ef23ac95e8868163a0bfed748b23f",
+      "teaching": "639730b139a4c1c9ca328d90b8cd81b0bdd99af64453bffaedf63c10825cfc0d",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:bone:humerus": {
-      "geometry": "e6636de65f6a704740efcd701963a7a2a1e46d74dc5ddc98376f35ee9ae17cf6",
-      "teaching": "cacbc22c9364d565b742f4196722cdf24127a38fbff4d34a847ffc156207290d",
+      "geometry": "30c17352a61f470d289cd202bd9ad60e03889a59d61a2639df520382b4b77cc6",
+      "teaching": "0be1c449f2d31cfde2ba079d9c59ee0293ddcc2123e689c4debf07f8035b6b26",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:bone:clavicle": {
-      "geometry": "4543d85ac6c55361a676d50e9916f3318db5bfdcd9666106d010c8b21629f750",
-      "teaching": "de0cc619847a5f5c0415c82ea001859df2da8a62817cfda807212d211c3f8b00",
+      "geometry": "4c13cadc2301f7a9b1efc9eda7a8de9bc4e5e90a1992bfd1a2834308c99dc60a",
+      "teaching": "066a5cb2a65e64c5a70c848f6e1cc44366a52e23136fd2b156446e2e30d68c4a",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:deltoid": {
-      "geometry": "80511ca88990f92b5f0ccb6b96ed311269645d3645d0188ab25b35220fb2e953",
-      "teaching": "8584f25e3e8da943887dbd2f50c7565c9c287f4f2c3ddd4da2bcd099601a57ef",
+      "geometry": "8b56cde086cb6a48b69c24aa7b4fc41f8968efc685d5db8dd2f62a795284daa8",
+      "teaching": "4ef7f9a0f8d65e96e3ece6a8d75de88762f4062ae0ae66a9e0ce4fedc87b56a6",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:supraspinatus": {
-      "geometry": "d762fbdd396fe898ddbbb639dfee4a16a796c3c5d12045eb99a4e7869a3286e2",
-      "teaching": "fc7911c0011be9b034e4fdb5a375d6740f7759442ac9b06ef18bb55bc80da4ee",
+      "geometry": "3fd0462b66f5c322bc360c369f254e6368f567b8434b8c97b43dcf9d474e012c",
+      "teaching": "60f48497dae8f7bbe9849b552d3d28e35dfb69c9fb79cd49592ad2f9980a0313",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:infraspinatus": {
-      "geometry": "eb34db1b3367001aece9ff3d69d4d04f6946c1ef89db8ada8113148e7734231e",
-      "teaching": "3a550026e27dd78170de04551f9c39e444c2c89c98e9a0c37cb50857bb061869",
+      "geometry": "751a45106f5d2e9687f5144cd6ab3e30c0a22150e6a87965217ced03482ba451",
+      "teaching": "51a03721264a534efd3c963db6f0bd0d2ed03d3dfb2ae5c2fff0d2b486a2f8a2",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:subscapularis": {
-      "geometry": "1943239d23b5d02bd9869ca738e8c7d5356c2690ad52c75958db5c2d988a7e79",
-      "teaching": "354d2a808e90776ba038964897ae160620ad6b8adcc62bc3164f2f6c4612fa9d",
+      "geometry": "04852f7933d48c242c569f425b73b69d93a677fa1a98bf07d043ff5b7ed7bc4f",
+      "teaching": "e5bf3277653346555e19110bb36d19a11019499eec4e3802635263fbbb5168f3",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:biceps-long-head": {
-      "geometry": "56ddc48335ebd1b2f939cc5e44038a1f93952e55a3c67ca46520a1d5301aad38",
-      "teaching": "560785e2b487804ced2e52967e57b82effe6382ea68f28f0ea8061a955021ab8",
+      "geometry": "fa1a276695ac8d2cfa49658442e57a3b900bb7388e92d62843199ef8d45232d9",
+      "teaching": "056d01784bacd7046a1ac24413f1f4c8e7c47e266ccdcdf27dbe2f1bb56f2335",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:teres-minor": {
-      "geometry": "41dc8b3242c458e3be54498cc43ad7dfa65de6a12608955de072afb3a5a3e3ec",
-      "teaching": "c2ed7d1ac700c36db9ec067dfa6058c9d574c66b1c2c2efd2edafc1e139675a3",
+      "geometry": "5f75ddc653f2ac4c671601ceb7378d311a2b5f6a4337e4de8070692228603414",
+      "teaching": "f5a71367ecfcdd1ea76a1ae9f3ae495f4748f338394bba22c9fbf7b9d21b7f15",
       "imaging": null
     }
   },
   "sourceRevisions": {
     "vm:anatomy:upper-limb:shoulder:right:bone:scapula": {
-      "geometry": "33c3901bdbf10029f1708f9d9d733aa752ff0f70453c0eea2a251f8ea0472a69",
+      "geometry": "0eb6e9cbec4c14288027a932e51a18072ccb514e79c0bd71fe16c00c2d5ecdb9",
       "teaching": "beed30905f863731d9c2ccf606e11589d4170c257d6896ec0364acc7f5d9179b",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:bone:humerus": {
-      "geometry": "5ba728ae68e6df46f82282bb73ec652abd2ec1dd0914d0e4c83468bc9cd86726",
+      "geometry": "929d8029277031bb85be69cc7f59d013548e35b21ecfcea3c7227c77b1dcbbda",
       "teaching": "242de3836b880e908573e4bcda435b6fea54e02867c2ca3f22700fcb8d80fca3",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:bone:clavicle": {
-      "geometry": "3673c8c0bc2b03c8536bcc9c0c5104c0a0ab8a3ca3b6f087933bd7fa6b33b216",
+      "geometry": "ae9824d7eb31880974ccd7922e2d1fccea8c976d4a8ab187e24e52386dbc3c50",
       "teaching": "64785ef0174a8559db380f5f9c3f8a0c3982515abfa3297d93d90d850c837779",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:deltoid": {
-      "geometry": "7c642f71434734b7f3883c6163cbeb87ed86c898dee4d4882bc85287394530b2",
+      "geometry": "5bedbb22dac9c476bedadb6404988b938088552a86a355da5fc8808392e7ba58",
       "teaching": "3041525c6d64b8826fec12dbc90d1de2616434f3dd8288ca313166713f682ac0",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:supraspinatus": {
-      "geometry": "d8b2ae909cb1ce9c0aa4f70b8e5efaac7d472947130b66faa6710a2ac36c978b",
+      "geometry": "ab4e059058a5d36997014ec2a58d99ce6e36bd37dabba75badae127837a3dd41",
       "teaching": "4894aaf5d93a752be4b27cc590d77b6b18077ec71150dad1aa7465c5d5807fbd",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:infraspinatus": {
-      "geometry": "1c3a6b0ad87dd3c5fa0b7926af847b0adfbadcfb4ab552d796d6269a792b659f",
+      "geometry": "0ce5d13ebafb1bece9615a669f05bf6c981d9e43fa816533459c84fdf6fb9a8d",
       "teaching": "5aa1a7a874317b9eec80a1e9913b244adecee86c26a813c4eaec9ef86ab01620",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:subscapularis": {
-      "geometry": "ed967cf24727ec1ef4178122061a35ef76dd198bd90598ae65fe7782182dcb54",
+      "geometry": "e103e37e043c1a59f7cef6b49a6939b02da678c06f66c1a1efaef2920b7e671a",
       "teaching": "a926fd9be93808d2c552b89a07aa689c1518093e8b856d7d53e86200f03587d3",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:biceps-long-head": {
-      "geometry": "30706c844bc7b4494a153fdff3a1a196bacafc0a5ec973f599e93b8814166e59",
+      "geometry": "7b0be28b2e20ed645b559cd46c54a0d4d1c13effe8d30fca60a3bcd95c429100",
       "teaching": "3ab8846656b1995be76bbd11bd87a9fff7f2d089470bd6e7f99517bce98219d3",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:teres-minor": {
-      "geometry": "b53c0f7d9114ef42348607ed42504e718cbaa0033ee5ea4dcbbe0822704aa3f9",
+      "geometry": "5f60e00ab73cd553465f38cbc95f608c6512a9ceb6920c3221f03aad7caecb8a",
       "teaching": "0ba952cce2e176e0df0cb563dee43e4e780c3dbbb842bd7d15edaba1f9f0bc9f",
       "imaging": null
     }
   },
-  "websiteIntegrationSha256": "8bd0347ce4e49b4e611c3d3c16b64edf61ba2f7d2ed750f7ece007bbcb342613"
+  "websiteIntegrationSha256": "e68d8508c4be49f3d120cd64d15cf3d9229d7264a39717cd3f08979f85353196"
 }

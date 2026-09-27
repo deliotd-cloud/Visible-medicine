@@ -266,6 +266,7 @@ export function StructureDetailsButton() {
   return (
     <Button
       variant="outline"
+      className="atlas-structure-details"
       onClick={() => {
         if (mode === 'practice') chooseMode('explore');
         showInfo();

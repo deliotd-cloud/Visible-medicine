@@ -1,5 +1,5 @@
 {
-  "revision": "f28c415f9b46137db744d4606bc425d1aea54550",
+  "revision": "0c319d5ed92cfae5eb95a5486bfe312a3a63fed6",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2523,8 +2523,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "515af00d80a8657f39cb715cd67c4c065f24be572743974bf762aca9b6312616",
-      "importedSha256": "fde4025f889571632f87a8463bd41d98fd0e18fa47863a0ddd77755a16a35cfa"
+      "sourceSha256": "228cb1c79cc20b19a5e0f7f4f6e68526fce20a8b8c78ea9c85ae21bfbcde78d0",
+      "importedSha256": "7f82c2776449f179ba94ed4131147a9df703d3033e24c736179873a3f020b460"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -2798,8 +2798,8 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sourceSha256": "3ecadf85a320f07b245ce600649ad2031d1c8cf3c88fc5281f023d3b69600521",
-      "importedSha256": "f11da80f3e291f05e0658382b476f28d842d51d2443dc73fe9963f3dd81cde0d"
+      "sourceSha256": "bf12cdb8c51eb813e9351f344774217eced367e54c042fe7d9ebced6835dfacc",
+      "importedSha256": "b9991bd657bca6f872788dee5fa2a4c4385e094244ca740a096d37dcc688d657"
     },
     {
       "path": "app/review/review.css",
@@ -2948,8 +2948,8 @@
     },
     {
       "path": "app/atlas-workspace.tsx",
-      "sourceSha256": "6e0be873a4fb9c9b3021537014935c3722a4898e9037d83871af18711e14d4eb",
-      "importedSha256": "c99d29df653d096006ed3c0e7874bad35c05c7d616dc823604631b195ea6914c"
+      "sourceSha256": "6ead6f8f9221666d3f6517e00220b2ecd4533746085674fbd13ae79463f64c46",
+      "importedSha256": "ddf6afdd60bc5db4250e47b00a273c69a852d016f053860e0d3c8dafde879477"
     },
     {
       "path": "lib/atlas-search-presentation.ts",
@@ -3148,8 +3148,8 @@
     },
     {
       "path": "app/atlas-workspace.css",
-      "sourceSha256": "aaa75b3e4e42a68ac944d70bbca7957eee4c3ba71c4413436cd9bc9f64841c4d",
-      "importedSha256": "aaa75b3e4e42a68ac944d70bbca7957eee4c3ba71c4413436cd9bc9f64841c4d"
+      "sourceSha256": "10112bc03082946db1a475a390cf1a385f92bc83e4dc978d6d87d2773f9fae72",
+      "importedSha256": "10112bc03082946db1a475a390cf1a385f92bc83e4dc978d6d87d2773f9fae72"
     },
     {
       "path": "app/vessel-system-control.css",
@@ -4248,5 +4248,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "8bd0347ce4e49b4e611c3d3c16b64edf61ba2f7d2ed750f7ece007bbcb342613"
+  "websiteIntegrationSha256": "e68d8508c4be49f3d120cd64d15cf3d9229d7264a39717cd3f08979f85353196"
 }

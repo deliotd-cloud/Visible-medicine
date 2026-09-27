@@ -1,5 +1,14 @@
 # Visible Medicine — shared delivery plan
 
+27 September compact controls delivery: learner and Clinical Review now use
+Atlas `0c319d5`. Removing the redundant compact-layout Details shortcut restores
+44px of selected mobile model height while preserving Structure info, Practice,
+ordinary desktop and shoulder controls. 98 integration tests, TypeScript/build,
+inventory/binding checks and actual mobile/desktop interactions pass. All models,
+teaching and decisions unchanged; review presentation revisions refreshed.
+See `docs/atlas-compact-controls-delivery-20260927.md`. Local-only, no approval or
+public release. Resume substantive atlas detail/usability work after saving.
+
 27 September Circle of Willis learner delivery: the regional/whole-body export
 now uses Atlas `f28c415`, matching the source already in protected review while
 retaining separate presentation bindings. All 136 models, twelve scopes,

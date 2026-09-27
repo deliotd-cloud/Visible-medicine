@@ -394,3 +394,16 @@
   margin: 10px 14px 0 0;
   min-height: 44px;
 }
+
+/* The compact/focused regional layout already has its Structure info launcher.
+   Keep that 44px target; avoid a duplicate Details button wrapping the camera row
+   after selection. Do not remove the shoulder shortcut or the desktop rail action. */
+.body-app:not([data-workspace-mode='practice'])[data-panel-info='true'] .body-view-row > .atlas-structure-details,
+.body-app:not([data-workspace-mode='practice'])[data-focus-view='true'] .body-view-row > .atlas-structure-details {
+  display: none;
+}
+@media (max-width: 700px) {
+  .body-app:not([data-workspace-mode='practice']) .body-view-row > .atlas-structure-details {
+    display: none;
+  }
+}

@@ -9,10 +9,10 @@ test('regional learner and review viewers ship the tested selectable-question so
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
-  assert.equal(manifest.sourceCommit,'f28c415f9b46137db744d4606bc425d1aea54550');
-  assert.equal(review.revision,'f28c415f9b46137db744d4606bc425d1aea54550');
+  assert.equal(manifest.sourceCommit,'0c319d5ed92cfae5eb95a5486bfe312a3a63fed6');
+  assert.equal(review.revision,'0c319d5ed92cfae5eb95a5486bfe312a3a63fed6');
   for(const [path,sha256] of Object.entries({
-    'app/atlas-workspace.tsx':'6e0be873a4fb9c9b3021537014935c3722a4898e9037d83871af18711e14d4eb',
+    'app/atlas-workspace.tsx':'6ead6f8f9221666d3f6517e00220b2ecd4533746085674fbd13ae79463f64c46',
     'app/structure-quick-check.tsx':'4bfa6567af94f808bc7ed43a9693eae6771da7e8ada1e10183ec4be3ff64c5de',
     'app/structure-quick-check.css':'fb0ae0d036f91d13bd0d6a82c335159c1f3620c8d0301e63724f369c5e836942',
   })) {

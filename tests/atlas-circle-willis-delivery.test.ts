@@ -7,7 +7,7 @@ test('regional and whole-body export delivers source-bound Circle of Willis draf
   const root = 'public/atlas-runtime/head-neck/';
   const manifest = JSON.parse(readFileSync(root + 'manifest.json', 'utf8'));
   const inputs = JSON.parse(readFileSync(root + 'source-inputs.json', 'utf8')) as {path:string;sha256:string}[];
-  assert.equal(manifest.sourceCommit, 'f28c415f9b46137db744d4606bc425d1aea54550');
+  assert.equal(manifest.sourceCommit, '0c319d5ed92cfae5eb95a5486bfe312a3a63fed6');
   for (const [path, sha256] of Object.entries({
     'app/body-content.ts': 'ac10688a153fce2caea59baac9c0182f4118d303ad1318a1d5caf2dd4b7528a5',
     'content/circle-willis-imaging-pins.json': '8891733101134e78fad8a36d1fd8b7387ea64b20ed2c2d36f3a20e978d6deece',
@@ -29,7 +29,7 @@ test('regional and whole-body export delivers source-bound Circle of Willis draf
     assert.equal(bytes.length, file.bytes);
     assert.equal(createHash('sha256').update(bytes).digest('hex'), file.sha256, file.path);
   }
-  // The protected review export is separately built/bound and unchanged here.
+  // The protected review export is separately built/bound, including the compact-controls update.
   const review = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
-  assert.equal(review.websiteIntegrationSha256, '8bd0347ce4e49b4e611c3d3c16b64edf61ba2f7d2ed750f7ece007bbcb342613');
+  assert.equal(review.websiteIntegrationSha256, 'e68d8508c4be49f3d120cd64d15cf3d9229d7264a39717cd3f08979f85353196');
 });
