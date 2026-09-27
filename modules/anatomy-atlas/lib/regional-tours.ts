@@ -7,7 +7,7 @@ export type RegionalTour = {
   status: 'draft'; contextIds: string[]; limitations?: string;
   requiredDisplayBundles?: Record<string,string>;
   steps: Array<{ id: string; title: string; caption: string; selectedId: string;
-    view: DissectionView; durationMs: number; fadeOthers: boolean; references: string[] }>;
+    view: DissectionView; durationMs: number; fadeOthers: boolean; references: string[]; frameIds?: string[] }>;
 };
 const id=(side:string,kind:string,name:string)=>`vm:anatomy:body:thorax:${side}:${kind}:${name}`;
 const airway='https://anatomy.ttuhscep.edu/schemes/lungs_ans.html';
@@ -51,22 +51,24 @@ const abdominalVessel=(side:string,name:string)=>`vm:anatomy:body:abdomen:${side
 const celiacId=abdominalVessel('unspecified','celiac-artery');
 const foregutReference='https://anatomy.ttuhscep.edu/gastrointestinal_system/duodenum_tables.html';
 const stomachReference='https://anatomy.ttuhscep.edu/gastrointestinal_system/stomach_tables.html';
-const celiacStep=(slug:string,title:string,selectedId:string,view:DissectionView,caption:string,references=[foregutReference])=>({
-  id:slug,title,selectedId,view,caption,references,durationMs:14000,fadeOthers:true,
+const celiacStep=(slug:string,title:string,selectedId:string,view:DissectionView,caption:string,references=[foregutReference],frameIds?:string[])=>({
+  id:slug,title,selectedId,view,caption,references,durationMs:14000,fadeOthers:true,...(frameIds?{frameIds}:{}),
 });
+const proximalCeliacFrame=[celiacId,abdominalVessel('left','left-gastric-artery'),abdominalVessel('midline','common-hepatic-artery')];
+const hepaticFrame=[celiacId,abdominalVessel('midline','common-hepatic-artery'),abdominalVessel('unspecified','hepatic-artery-proper')];
 export const celiacTour: RegionalTour = {
   id:'celiac-branches-orientation',title:'Coeliac trunk & branches',region:'abdomen',
-  revision:'celiac-branches-orientation-v1',status:'draft',
+  revision:'celiac-branches-orientation-v2',status:'draft',
   description:'Five stops through the coeliac trunk and selected gastric, splenic and hepatic artery surfaces. The abdominal aorta stays as faded upstream context.',
   limitations:'Selected exterior vessel segments only, not a verified continuous tree or lumen. Branching patterns vary; organs and the complete downstream arterial network are not shown. No patency, calibre, flow, procedural route, patient scan or spatial registration is established. Draft pending radiologist review.',
   contextIds:[abdominalVessel('midline','abdominal-aorta')],
   requiredDisplayBundles:{[celiacId]:'celiac-display-corrected'},
   steps:[
-    celiacStep('celiac','Coeliac trunk',celiacId,'anterior','Start with the short coeliac segment near the faded abdominal aorta. In the usual arrangement it gives rise to the left gastric, splenic and common hepatic arteries. Their names describe separate supplied surfaces, not proof of a continuous lumen.'),
-    celiacStep('left-gastric','Left gastric artery',abdominalVessel('left','left-gastric-artery'),'right','Locate the left gastric surface relative to the coeliac trunk. In usual anatomy this branch supplies the stomach near its lesser curvature. The stomach is not shown here; the selected segment does not map its full supply territory.',[stomachReference]),
+    celiacStep('celiac','Coeliac trunk',celiacId,'anterior','Start with the short coeliac segment near the faded abdominal aorta. In the usual arrangement it gives rise to the left gastric, splenic and common hepatic arteries. Their names describe separate supplied surfaces, not proof of a continuous lumen.',[foregutReference],proximalCeliacFrame),
+    celiacStep('left-gastric','Left gastric artery',abdominalVessel('left','left-gastric-artery'),'right','Locate the left gastric surface relative to the coeliac trunk. In usual anatomy this branch supplies the stomach near its lesser curvature. The stomach is not shown here; the selected segment does not map its full supply territory.',[stomachReference],proximalCeliacFrame),
     celiacStep('splenic','Splenic artery',abdominalVessel('unspecified','splenic-artery'),'anterior','Follow the splenic arterial surface towards the anatomical left. The splenic artery is another usual coeliac branch. This tour omits its complete pancreatic and gastric branches and does not demonstrate blood flow.',[stomachReference]),
-    celiacStep('common-hepatic','Common hepatic artery',abdominalVessel('midline','common-hepatic-artery'),'right','Return to the common hepatic surface. In the usual arrangement this coeliac branch gives the gastroduodenal and proper hepatic arteries. The gastroduodenal branch is outside this focused tour.'),
-    celiacStep('proper-hepatic','Hepatic artery proper',abdominalVessel('unspecified','hepatic-artery-proper'),'anterior','Compare the hepatic artery proper with the common hepatic segment. Typical hepatic branching is only an orientation guide: origins vary, and these surfaces are not a patient-specific surgical or angiographic map.'),
+    celiacStep('common-hepatic','Common hepatic artery',abdominalVessel('midline','common-hepatic-artery'),'right','Return to the common hepatic surface. In the usual arrangement this coeliac branch gives the gastroduodenal and proper hepatic arteries. The gastroduodenal branch is outside this focused tour.',[foregutReference],hepaticFrame),
+    celiacStep('proper-hepatic','Hepatic artery proper',abdominalVessel('unspecified','hepatic-artery-proper'),'anterior','Compare the hepatic artery proper with the common hepatic segment. Typical hepatic branching is only an orientation guide: origins vary, and these surfaces are not a patient-specific surgical or angiographic map.',[foregutReference],hepaticFrame),
   ],
 };
 export const regionalTours=[thoraxTour,cervicalSpineTour,celiacTour];
@@ -84,9 +86,19 @@ export function regionalTourStructures(catalog:BodyCatalog,tour:RegionalTour):Bo
     return matches[0];
   });
 }
-export function regionalTourFrame(catalog:BodyCatalog,tour:RegionalTour) {
-  return selectionBounds(regionalTourStructures(catalog,tour).filter(s=>tour.steps.some(step=>step.selectedId===s.id)));
+export function regionalTourFrame(catalog:BodyCatalog,tour:RegionalTour,index?:number) {
+  const structures=regionalTourStructures(catalog,tour);
+  if(index!==undefined&&(!Number.isInteger(index)||index<0||index>=tour.steps.length))throw Error('Invalid tour step.');
+  const step=index===undefined?undefined:tour.steps[index];
+  const ids=step?.frameIds??tour.steps.map(s=>s.selectedId);
+  if(!ids.length||new Set(ids).size!==ids.length||!ids.every(id=>structures.some(s=>s.id===id))||
+    (step&&!ids.includes(step.selectedId)))throw Error('Invalid tour camera frame.');
+  const frame=selectionBounds(structures.filter(s=>ids.includes(s.id)));
+  if(!frame)throw Error('Tour camera bounds unavailable.');
+  return frame;
 }
+export const regionalTourStepFrames=(catalog:BodyCatalog,tour:RegionalTour)=>
+  tour.steps.some(s=>s.frameIds)?tour.steps.map((_,i)=>regionalTourFrame(catalog,tour,i)):undefined;
 /** Complete sequence plus all visible context is material review evidence. */
 export function regionalTourEvidence(catalog:BodyCatalog,structureId:string) {
   return regionalTours.filter(t=>[...t.contextIds,...t.steps.map(s=>s.selectedId)].includes(structureId)).map(tour=>{
@@ -94,6 +106,7 @@ export function regionalTourEvidence(catalog:BodyCatalog,structureId:string) {
     return structuredClone({tour,structures,bundles:catalog.bundles.filter(b=>structures.some(s=>s.bundle===b.id)),
       coordinateSystem:catalog.coordinateSystem,sourceVersion:catalog.sourceVersion,frame:regionalTourFrame(catalog,tour),
       transitionMs:1800,transition:'quintic-orbit',separation:0,
-      limitations:regionalTourLimitations(tour)});
+      limitations:regionalTourLimitations(tour),
+      ...(tour.steps.some(s=>s.frameIds)?{stepFrames:regionalTourStepFrames(catalog,tour)}:{})});
   });
 }

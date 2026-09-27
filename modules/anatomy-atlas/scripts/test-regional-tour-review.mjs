@@ -59,4 +59,11 @@ assert.throws(()=>api.regionalTourStructures(missingDisplay,api.celiacTour));
 const abdominalPacket=await api.bodyReviewMaterial(celiac.id);
 const tampered=structuredClone(abdominalPacket);delete tampered.guidedTours[0].tour.requiredDisplayBundles;
 assert.equal(api.parseBodyReviewResponse(tampered,celiac.id),null);
-console.log(JSON.stringify({reviewed:api.catalog.structures.length,tourBound:checked,otherTeachingUnchanged:api.catalog.structures.length-checked,priorTourEvidenceUnchanged:true,invalidPacketsRejected:14,missingSourcesRejected:22,wrongOrMissingDisplayRejected:2}));
+assert.equal(abdominalPacket.guidedTours[0].stepFrames.length,5);
+for(const mutate of [p=>delete p.guidedTours[0].stepFrames,p=>p.guidedTours[0].stepFrames[0].min[0]-=1,p=>p.guidedTours[0].tour.steps[0].frameIds=[]]){
+ const p=structuredClone(abdominalPacket);mutate(p);assert.equal(api.parseBodyReviewResponse(p,celiac.id),null);
+}
+for(const frameIds of [[],['missing'],[celiac.id,celiac.id],[api.celiacTour.contextIds[0]]]) {
+ const tour=structuredClone(api.celiacTour);tour.steps[0].frameIds=frameIds;assert.throws(()=>api.regionalTourFrame(api.catalog,tour,0));
+}
+console.log(JSON.stringify({reviewed:api.catalog.structures.length,tourBound:checked,otherTeachingUnchanged:api.catalog.structures.length-checked,priorTourEvidenceUnchanged:true,invalidPacketsRejected:17,missingSourcesRejected:22,wrongOrMissingDisplayRejected:2,invalidFramesRejected:4}));

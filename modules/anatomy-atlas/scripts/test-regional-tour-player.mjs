@@ -78,13 +78,15 @@ test('Coeliac tour uses the corrected display and waits for both exact bundles',
   h.scene().onRendererHealth('ready');h.scene().onLoaded('abdomen-vessels-recovery');h.render();
   assert.equal(h.button('Start guided tour').disabled,true,'Archived vascular bundle does not satisfy corrected display');
   h.scene().onLoaded('celiac-display-corrected');h.render();h.click('Start guided tour');
-  const frame=plain(h.scene().presetBounds);
+  const frame=plain(h.scene().presetBounds),overview=h.api.regionalTourFrame(h.props.catalog,h.props.tour);
+  assert(frame.max[0]-frame.min[0]<(overview.max[0]-overview.min[0])/2,'Small origin gets a materially closer frame');
   for(let i=0;i<5;i++){
     assert.equal(h.scene().selectedId,h.props.tour.steps[i].selectedId);
-    assert.deepEqual(plain(h.scene().presetBounds),frame);
+    assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,i)));
     assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);
     if(i<4)h.click('Next');
   }
+  assert.notDeepEqual(plain(h.scene().presetBounds),frame,'Hepatic stops use their own close-up');
   h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
 });
 

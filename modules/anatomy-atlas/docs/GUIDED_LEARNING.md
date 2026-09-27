@@ -5,7 +5,12 @@
 Abdomen Guided learning now offers five selected artery stops: coeliac trunk,
 left gastric, splenic, common hepatic and hepatic artery proper. The abdominal
 aorta is faded context, not an additional stop or a complete abdominal vascular
-map. Framing is the union of the five targets rather than the full aorta.
+map. Mobile inspection found the overview too wide for the small origin: v2
+uses named source-bound close-ups for coeliac/gastric and hepatic stops, retaining
+the five-target overview for the splenic stop. Camera position and target glide
+between these frames; anatomy stays fixed. Other context may extend beyond the
+close-up. Frame identities and computed bounds are part of teaching evidence;
+altered/missing frames and frames excluding the selected target are rejected.
 
 The existing source-bound `celiac-display-corrected` bundle is required; missing
 or archived duplicate display bindings fail closed. Other targets retain their

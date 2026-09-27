@@ -15,7 +15,7 @@ const empty:string[]=[];
 const noSelection=()=>{};
 
 export function RegionalGuidedLearning({catalog,tour,assetBase,onExit}:{catalog:BodyCatalog;tour:RegionalTour;assetBase?:string;onExit:()=>void}) {
-  const resolved=useMemo(()=>{try{return {structures:regionalTourStructures(catalog,tour),frame:regionalTourFrame(catalog,tour),error:''};}catch{return {structures:[],frame:null,error:'This tour is unavailable for the current anatomy source.'};}},[catalog,tour]);
+  const resolved=useMemo(()=>{try{return {structures:regionalTourStructures(catalog,tour),frames:tour.steps.map((_,i)=>regionalTourFrame(catalog,tour,i)),error:''};}catch{return {structures:[],frames:[],error:'This tour is unavailable for the current anatomy source.'};}},[catalog,tour]);
   const [index,setIndex]=useState<number|null>(null),[playing,setPlaying]=useState(false);
   const [motionPaused,setMotionPaused]=useState(false),[reduced,setReduced]=useState(false);
   const [health,setHealth]=useState<RendererHealth>('starting');
@@ -58,7 +58,7 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit}:{catalog:
         selectedId={step.selectedId} systems={allBodySystems} isolated={step.fadeOthers} hiddenIds={empty}
         ghostRemoved={false} illustrated landmarks={empty} explode={0} layout="spatial" anchorSkeleton={false}
         showOrigins={false} labels view={step.view} zoom={1} reset={index??0} focus={false} exam={false}
-        inspection={initialInspection} presetBounds={resolved.frame} presetKey={tour.id} plate={false}
+        inspection={initialInspection} presetBounds={resolved.frames[index??0]} presetKey={tour.id} plate={false}
         tourLocked transitionMs={active&&!reduced?1800:0} transitionPaused={motionPaused||!ready}
         onSelect={noSelection} onLoaded={onLoaded} onFailure={onFailure} onRendererHealth={setHealth}/>}
     </div>
