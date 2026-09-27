@@ -1,5 +1,5 @@
 {
-  "revision": "84f18150a8a3f5ee4da6f0f20442b8502469ec25",
+  "revision": "82dee8b0b48b9f5bc2f1a1893dd302bf3993af6f",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2523,8 +2523,8 @@
     },
     {
       "path": "lib/regional-tours.ts",
-      "sourceSha256": "a1172b3e9445365716bf7046a81c52ff7d5547feb87137bc487c14488653cf06",
-      "importedSha256": "a1172b3e9445365716bf7046a81c52ff7d5547feb87137bc487c14488653cf06"
+      "sourceSha256": "70e7f291fad9c8822ee7ad8f65382be89f26ea2754eb762c838e43b4c055e6a9",
+      "importedSha256": "70e7f291fad9c8822ee7ad8f65382be89f26ea2754eb762c838e43b4c055e6a9"
     },
     {
       "path": "lib/selection-visibility.ts",
@@ -2653,8 +2653,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "ecabdd8d4ab019d35782564616e7fd5923b5bad9c9599aa264eb524556a55cf3",
-      "importedSha256": "569173324913680feb73fc37e0074d661a443dbfc567b66e3e57ff9d90c3a3ec"
+      "sourceSha256": "4b498e12cb7835a295431dc6e0e387e2b96afa7f3594c57bea2858593444db80",
+      "importedSha256": "63463f0aa138ba9f4883e51fbac0ec4feea2bfb3bf70d17b08540d179d64c820"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -2944,7 +2944,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "3ee3dbc5a7047940f233bc7d7af118ef137a60177868016916371784fb895154",
-      "importedSha256": "3c9cd7f2835036b6c1e377d7e1d3baf4885497344032464b90ba3db62fb9d898"
+      "importedSha256": "2cad0aeb6b5e5566da44b613ed196484776ef8ed50b0a7ce8acc7f568e70a36f"
     },
     {
       "path": "app/review/review.css",
@@ -3213,8 +3213,8 @@
     },
     {
       "path": "lib/tour-camera.ts",
-      "sourceSha256": "6e1cb68621d86be34fbaa3fbc57497ec167f82a6dd0824605a37708ecd710f46",
-      "importedSha256": "6e1cb68621d86be34fbaa3fbc57497ec167f82a6dd0824605a37708ecd710f46"
+      "sourceSha256": "616b2e1ba047ec760129532922922a166baa02fcb53a253582d91a5982587467",
+      "importedSha256": "616b2e1ba047ec760129532922922a166baa02fcb53a253582d91a5982587467"
     },
     {
       "path": "lib/body-arrangement.ts",
@@ -4333,5 +4333,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "7cfe02c94a636de20fc09a1ff72b9242dca307e4c022c4a2b6a9365af178badb"
+  "websiteIntegrationSha256": "ab3b7f2b429163ca425dddb9438a4af4d78dc35338e066f0f300092d7bbac5d1"
 }

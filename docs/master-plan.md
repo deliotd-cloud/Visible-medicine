@@ -1,5 +1,16 @@
 # Visible Medicine — shared delivery plan
 
+27 September foot/upper-arm Guided learning integrated locally from Atlas
+`82dee8b`: five dorsal-to-plantar foot stops and six separate upper-arm muscle/head
+stops. Nine regional tours, 208 modality-note bindings. A reproduced polar camera
+singularity is fixed by rigid-frame quaternion interpolation in both learners and
+review. Models, independent specimen pins and access gates unchanged. Drafts only;
+no publication or clinical approval. See
+`docs/foot-arm-guided-learning-delivery-20260927.md` and coordination
+`work/FOOT-ARM-TOURS-CHECKPOINT-20260927.md` for final acceptance/backups.
+Continue remaining substantive regional teaching and cleared-case linkage;
+the native MRI milestone is already complete.
+
 27 September integrated locally: three right-sided guided tours for
 thigh, leg and hand from Atlas `84f1815`, five stops each. Full source context is
 bound to clinical review; parser rejects altered nonselected evidence as well
