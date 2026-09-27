@@ -1604,3 +1604,15 @@ assets. No source figures, tables, scans, layouts or extended prose are copied.
 Source links accompany concise original drafts. Existing model/data licences
 remain unchanged; no dependency, texture, font, paid service or endorsement.
 Anatomical and radiological sign-off is still required for every draft.
+
+## Thoracic structure quick checks — 27 September 2026
+
+Original factual questions and explanations checked against TTUHSC El Paso:
+https://anatomy.ttuhscep.edu/anatomytables/viscera_thorax.html and
+https://anatomy.ttuhscep.edu/cardiovascular_system/sup_med_ans.html.
+These copyrighted university pages are factual references, not imported or
+relicensed datasets/question banks. No images, tables, layouts or source quiz
+wording are redistributed. Source links accompany short original questions.
+Existing model licences and notices remain unchanged; no new asset, dependency,
+font, texture, paid service or mandatory fee. All teaching remains draft and
+requires revision-bound radiologist sign-off.

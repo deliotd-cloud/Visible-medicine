@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "faf0f4f2870e5e521bd0ea3e0e99281a47d2d5095888fd6cf93d693c4fd51537"
+    "sha256": "907145ad9f0bec6a65b6ff796bd20712d0bc642636d584a7dfc9d443abb63f9e"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "ac10688a153fce2caea59baac9c0182f4118d303ad1318a1d5caf2dd4b7528a5"
+    "sha256": "9f1c83716caf5936c3438276fadd76e1cb51736d518fca061de8b7d653e44213"
   },
   {
     "path": "app/body-education-link.ts",
@@ -1466,6 +1466,14 @@
   {
     "path": "content/thoracic-inlet-xray.ts",
     "sha256": "4c5ab647f20be853b81b626c99e81318acd3f9884593d08b225c906d93cea5de"
+  },
+  {
+    "path": "content/thoracic-quiz-pins.json",
+    "sha256": "92aa67280c42b6966e06a6c2c05b6e9db5e4d90bd21912cda3eaadf67395b714"
+  },
+  {
+    "path": "content/thoracic-quiz.ts",
+    "sha256": "581c485dd186321db1304024bc8226e34e8e250ce9a29727c65c40ef6f957d9f"
   },
   {
     "path": "content/thoracoabdominal-organ-imaging-pins.json",
@@ -2938,6 +2946,10 @@
   {
     "path": "lib/thoracic-organ-reasoning.ts",
     "sha256": "fe7bbe1c69cd31fbf375ebf1b1ecc0f3c8e8aacdf8be7ca2109f382f150e506c"
+  },
+  {
+    "path": "lib/thoracic-quiz.ts",
+    "sha256": "0fa4ec6755a44490a8fb8036be432fd52180151523fd4e79888a4ada416524ff"
   },
   {
     "path": "lib/thoracic-vessel-clinical-curriculum.ts",

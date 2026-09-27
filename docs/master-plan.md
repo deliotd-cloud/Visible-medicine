@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+27 September thoracic quick checks delivered locally: learner and Clinical
+Review now import Atlas `973c73e`, adding seven lung/airway/pulmonary-artery
+questions with selectable answers and draft answer/explanation evidence.
+99 integration checks, TypeScript/builds and actual mobile question/review
+interaction pass; no model changes, decisions or public deployment. See
+`docs/atlas-thoracic-quiz-delivery-20260927.md`, including a small-screen footer
+occlusion caveat for the next usability pass. Keep the full goal intact.
+
 27 September compact controls delivery: learner and Clinical Review now use
 Atlas `0c319d5`. Removing the redundant compact-layout Details shortcut restores
 44px of selected mobile model height while preserving Structure info, Practice,
