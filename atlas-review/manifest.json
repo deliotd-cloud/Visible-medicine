@@ -1,5 +1,5 @@
 {
-  "revision": "a0b0d1b4a3d57c07c5d1f6593d7151bf3fc24f74",
+  "revision": "2d2f2b87232393e0b0d46bd6daba579d78939369",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2653,8 +2653,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "091a885d6718c4f77a61901d6c7db9811ecd1bba793d54a21ad7c50bb5c7c16a",
-      "importedSha256": "b7e7780609481df8a619cc21270666651cc40978193db73712575bac071cf0ea"
+      "sourceSha256": "381b85e759df9662136b138b4e62ecddcf21dee9d657e9f96aecd111c0df0d17",
+      "importedSha256": "9a8a9a99a8c722fb1ea21039875db1b10a9feff105c53cac0b6e276903209738"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -2943,8 +2943,8 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sourceSha256": "2cf321f6047de050e0ad7e2ac7fb6977aa45c43d7b59c24fd820a46a3cffc499",
-      "importedSha256": "861987696e691af8c64dcfd2de6ec6cde599758ebe5c30d1c7af0ae250ead6a2"
+      "sourceSha256": "3ee3dbc5a7047940f233bc7d7af118ef137a60177868016916371784fb895154",
+      "importedSha256": "5e50298e5425227bbdfd7de50b3458585159a767fd414dc6d5bd270508850942"
     },
     {
       "path": "app/review/review.css",
@@ -3138,8 +3138,8 @@
     },
     {
       "path": "app/regional-guided-learning.tsx",
-      "sourceSha256": "557bfe3cc7b31eec83a20177a270e3f302f29038e83aedb0b26e459093c04a3d",
-      "importedSha256": "1bcbf90359471b27322795ec58963806225f0695416205030356dbb9c5cd9aeb"
+      "sourceSha256": "221493b5de86cd995fd96ef03338b88ac8e3737626335d3ae2125b972f756dac",
+      "importedSha256": "515108f46d2ec4bcba588534d3f6e6b96345dc9ee262bd83ec8bd6ecc014428f"
     },
     {
       "path": "lib/renderer-health.ts",
@@ -3150,6 +3150,16 @@
       "path": "lib/model-delivery.ts",
       "sourceSha256": "465d37a26064d03c7f559c4fe1524820349f46549858374af6a3bd9dd5807ed1",
       "importedSha256": "465d37a26064d03c7f559c4fe1524820349f46549858374af6a3bd9dd5807ed1"
+    },
+    {
+      "path": "app/tour-imaging-notes.tsx",
+      "sourceSha256": "c8f877538452e077cbb2906ca451dcfbfc70ae409eb0f677fc5d4b9861a153dc",
+      "importedSha256": "5667a7b3426bbd8ed205a89cee4dbf3d87897f253c5ba043c4e90affa31a7803"
+    },
+    {
+      "path": "app/tour-imaging-notes.css",
+      "sourceSha256": "6f9a9de31b7866fb2a7382cdd811b0ebc3e618fa5d8b52f17d744859197a865c",
+      "importedSha256": "6f9a9de31b7866fb2a7382cdd811b0ebc3e618fa5d8b52f17d744859197a865c"
     },
     {
       "path": "app/regional-guided-learning.css",
@@ -4168,8 +4178,8 @@
     },
     {
       "path": "app/shoulder-explorer.tsx",
-      "sourceSha256": "0b1eb08fbdfce088dc92df88e67a901a879e910f38acc127ee6ded5567c04cfa",
-      "importedSha256": "363c9c4a4295058f1e289f91986dbf04adfef4e874dc5a2f1f76f65a83148bec"
+      "sourceSha256": "9b1596aa9d37beb51a4798b10f0ac8e2a6bec9cc77ed78855442597a4580d54a",
+      "importedSha256": "d2d600ae88bf2b5910fa496de7cb08aeeb3b661ba74dcdd68724650fea06736b"
     },
     {
       "path": "app/anatomy-scene.tsx",
@@ -4203,8 +4213,8 @@
     },
     {
       "path": "app/shoulder-tour-player.tsx",
-      "sourceSha256": "21992ce697385877f10ef00dcc85755b4853f3263370264c0cfccba74a5024d5",
-      "importedSha256": "f98b113a4f110e7b573bf9c951bacdad78393416a5e258deb664ffdf95282213"
+      "sourceSha256": "92dfaeba2179daf2e4a6d92290203969dd5842f92e8dfb51b27003b2dbe66de8",
+      "importedSha256": "fbbc80959d78c1262258a9ff1247e2be8ef58b5f71bc65cf2f9d55e2b5b514aa"
     },
     {
       "path": "app/shoulder-tour-player.css",
@@ -4323,5 +4333,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "819b033288ab55ef634b21bf4d5749de823384ae5670820203b667f977bd8d1a"
+  "websiteIntegrationSha256": "92d1c536a745a3528210a7c4b998de64f304fc987184736f30298d3813b97ca3"
 }

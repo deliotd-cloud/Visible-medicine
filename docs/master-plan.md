@@ -1,5 +1,15 @@
 # Visible Medicine — shared delivery plan
 
+27 September guided-tour imaging notes delivered locally from Atlas `2d2f2b8`
+in both shoulder/regional learners and protected review. Each active step has
+collapsed CT/MRI/X-ray/US teaching; opening pauses camera/playback and changing
+steps resets the reader. 44 source-bound step/modality combinations; 108website
+checks, TypeScript/builds and actual mobile learner/review checks pass. No scan
+pairing, entitlement changes, model changes or clinical approval. See
+`docs/tour-imaging-notes-delivery-20260927.md`. Next: continue substantive guided
+learning and integration of cleared, revision-bound imaging via Didanix Education.
+Do not repeat this import or the completed native MRI milestone. Unpublished.
+
 27 September thoracic Guided learning and structure-check feedback delivered
 locally from Atlas `a0b0d1b`. Six source-bound airway/vessel stops with smooth
 camera playback, complete schema3 Clinical Review evidence; correct answers now

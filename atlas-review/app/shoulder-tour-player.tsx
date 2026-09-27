@@ -1,5 +1,7 @@
 import { Button } from '@/atlas-review/components/ui/button';
 import { shoulderTour } from '@/atlas-review/lib/shoulder-tours';
+import { structures } from './anatomy-data';
+import { TourImagingNotes,tourImagingModalities } from './tour-imaging-notes';
 import './shoulder-tour-player.css';
 
 export type ShoulderTourPlayerProps = {
@@ -10,9 +12,10 @@ export type ShoulderTourPlayerProps = {
   onPlayPause: () => void;
   onStep: (index: number) => void;
   onExit: () => void;
+  onReadImaging: () => void;
 };
 
-export function ShoulderTourPlayer({ index, playing, ready, onStart, onPlayPause, onStep, onExit }: ShoulderTourPlayerProps) {
+export function ShoulderTourPlayer({ index, playing, ready, onStart, onPlayPause, onStep, onExit, onReadImaging }: ShoulderTourPlayerProps) {
   const step = index !== null && Number.isInteger(index) ? shoulderTour.steps[index] : undefined;
   if (!step) return (
     <section className="shoulder-tour-start" aria-label="Guided learning tours">
@@ -21,6 +24,7 @@ export function ShoulderTourPlayer({ index, playing, ready, onStart, onPlayPause
     </section>
   );
   const activeIndex = index!;
+  const selected = structures.find(s=>s.id===step.selectedId);
   const last = activeIndex === shoulderTour.steps.length - 1;
   return (
     <section className="shoulder-tour-player" aria-label={shoulderTour.title}>
@@ -35,6 +39,9 @@ export function ShoulderTourPlayer({ index, playing, ready, onStart, onPlayPause
         <p>Teaching draft. Source surfaces are retained; no injury or scan is simulated.</p>
         <p>Other view controls are suspended during the tour. Exit restores your starting view.</p>
       </details>
+      {selected&&<TourImagingNotes key={step.id} structureName={selected.name}
+        lessons={tourImagingModalities.map(({id,label})=>({id,label,content:selected.sections[id]}))}
+        onOpen={onReadImaging}/>}
       {!ready && <output>Playback paused while the model is unavailable. You can still exit.</output>}
       <div className="shoulder-tour-controls">
         <Button type="button" variant="outline" disabled={!ready || activeIndex === 0} onClick={() => onStep(activeIndex - 1)}>Back</Button>

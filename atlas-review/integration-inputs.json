@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "a0b0d1b4a3d57c07c5d1f6593d7151bf3fc24f74",
-  "sha256": "819b033288ab55ef634b21bf4d5749de823384ae5670820203b667f977bd8d1a",
+  "sourceCommit": "2d2f2b87232393e0b0d46bd6daba579d78939369",
+  "sha256": "92d1c536a745a3528210a7c4b998de64f304fc987184736f30298d3813b97ca3",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -284,7 +284,7 @@
     },
     {
       "path": "atlas-review/app/regional-guided-learning.tsx",
-      "sha256": "1bcbf90359471b27322795ec58963806225f0695416205030356dbb9c5cd9aeb"
+      "sha256": "515108f46d2ec4bcba588534d3f6e6b96345dc9ee262bd83ec8bd6ecc014428f"
     },
     {
       "path": "atlas-review/app/related-study.tsx",
@@ -392,7 +392,7 @@
     },
     {
       "path": "atlas-review/app/shoulder-explorer.tsx",
-      "sha256": "363c9c4a4295058f1e289f91986dbf04adfef4e874dc5a2f1f76f65a83148bec"
+      "sha256": "d2d600ae88bf2b5910fa496de7cb08aeeb3b661ba74dcdd68724650fea06736b"
     },
     {
       "path": "atlas-review/app/shoulder-tour-player.css",
@@ -400,7 +400,7 @@
     },
     {
       "path": "atlas-review/app/shoulder-tour-player.tsx",
-      "sha256": "f98b113a4f110e7b573bf9c951bacdad78393416a5e258deb664ffdf95282213"
+      "sha256": "fbbc80959d78c1262258a9ff1247e2be8ef58b5f71bc65cf2f9d55e2b5b514aa"
     },
     {
       "path": "atlas-review/app/shoulder-workspace.css",
@@ -457,6 +457,14 @@
     {
       "path": "atlas-review/app/study-views.tsx",
       "sha256": "3bd24ede8dc84c62f2da314ba1973fe956d78212562a2a368472686c8bf6a6ad"
+    },
+    {
+      "path": "atlas-review/app/tour-imaging-notes.css",
+      "sha256": "6f9a9de31b7866fb2a7382cdd811b0ebc3e618fa5d8b52f17d744859197a865c"
+    },
+    {
+      "path": "atlas-review/app/tour-imaging-notes.tsx",
+      "sha256": "5667a7b3426bbd8ed205a89cee4dbf3d87897f253c5ba043c4e90affa31a7803"
     },
     {
       "path": "atlas-review/app/um-knee-entry.css",
@@ -3508,7 +3516,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "6d8e15e18d9089c3a2d5d24c1a78475c3f51b01a9f5e7fc13103d7c61d35c975"
+      "sha256": "4799710efd7aeb1f5fd131753e5ae7509e02ddffe8b3534260aa6e905885a055"
     }
   ]
 }

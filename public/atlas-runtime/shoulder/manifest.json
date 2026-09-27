@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "sourceCommit": "a0b0d1b4a3d57c07c5d1f6593d7151bf3fc24f74",
+  "sourceCommit": "2d2f2b87232393e0b0d46bd6daba579d78939369",
   "region": "shoulder-right",
   "structures": 9,
   "patientDataIncluded": false,
@@ -10,7 +10,7 @@
     {
       "path": "index.html",
       "bytes": 504,
-      "sha256": "8534e7603546abb92c5cd782385c1d415e543c633a1c59f8c699fb97be0bd5a0"
+      "sha256": "bdc61dfdb42259860afe38b8431acf627ff532ed9ebf06cf3cd90095422c7fef"
     },
     {
       "path": "BUNDLED_NOTICES.txt",
@@ -24,8 +24,13 @@
     },
     {
       "path": "source-inputs.json",
-      "bytes": 78396,
-      "sha256": "325d1e77500c1d0d685eafd84378d823375b9ba7d73663c2934fe8d5f97b6849"
+      "bytes": 78660,
+      "sha256": "2607a0ba73e0bbd98bacadbaa4c944c9319fde16f1810d863fcfcbb892aadd6a"
+    },
+    {
+      "path": "assets/anatomy-scene-CxQAlUne.js",
+      "bytes": 1068357,
+      "sha256": "a53c22dd4221a6ae4f953c82c639c5923525156f540bafcec48d0e15c1a0dd72"
     },
     {
       "path": "assets/anatomy-scene-DWpmDIUC.css",
@@ -33,19 +38,14 @@
       "sha256": "dd7c542a365357d2921742ad887ebff8660a31d404fca8b512e450865cc2896d"
     },
     {
-      "path": "assets/anatomy-scene-jZmw4HG1.js",
-      "bytes": 1068357,
-      "sha256": "7db5e9b42eaa786ee5f7e5645600dff32c9f67b0c942df4c90e96438d0818950"
+      "path": "assets/index-CXic3eNz.js",
+      "bytes": 4106114,
+      "sha256": "0a26540a50a8b4663b26ce3c22700b33f85378fba4ed0de9c0a7bd895b96992e"
     },
     {
-      "path": "assets/index-B9kC0ge4.js",
-      "bytes": 4103877,
-      "sha256": "329d2dfb1c2638233dc9221468a513a0dc50bd1a43ea7b421c5744b5f70d71a9"
-    },
-    {
-      "path": "assets/index-CMfJNN1D.css",
-      "bytes": 296494,
-      "sha256": "eb842d5b0fe2b5c29c82b3608157eeab4f25a97b42c3d31a8d63c44596a4b054"
+      "path": "assets/index-DIqnRXyO.css",
+      "bytes": 297565,
+      "sha256": "b249da343117a1e2464b3a538a5909e513baf3d46831c3e73ef868d1a61c6e39"
     },
     {
       "path": "models/bodyparts3d/shoulder-right.glb",
