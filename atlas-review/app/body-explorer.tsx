@@ -1791,7 +1791,7 @@ export default function BodyExplorer({
         canRedo: dissection.future.length > 0,
       }, undoDissection, redoDissection)}>
       <PracticeAttention answered={answered} exam={exam} />
-      <header className="body-topbar" data-shared-header={sharedHeader}>
+      <header className="body-topbar" data-shared-header={sharedHeader} data-guided-learning={guidedLearning}>
         {sharedHeader ? <RegionHeading title={title} count={regionStructures.length}
           compact description={whole ? 'Explore the body by region or anatomical system.' : region!.description}/> : <Brand />}
         <WorkspaceModes guidedLearning={regionalTour ? {active:guidedLearning,onChange:changeGuidedLearning} : undefined} />

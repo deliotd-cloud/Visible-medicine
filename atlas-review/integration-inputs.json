@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "edca765b64dbdc58a75aa80610f42646bdb10511",
-  "sha256": "0553f8fd78f894678f0f80aa4d7bb58b7714024dc1e8e833fd902329b2ab289a",
+  "sourceCommit": "14581a6e2cbf82d8d57e98290c7d7b63c5bf3cb1",
+  "sha256": "f79059cc022375ad6b277dd393c96d7f2e622098fb921e7690c197481f69f1fd",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-explorer.tsx",
-      "sha256": "e43f6c24af416230005710acd36b1778c830ca61dcfe2d6eeab86252eec70478"
+      "sha256": "3ccd96cda9f11e5d8f4cc7e80e668df82fabf84ca5b3f5f418702bf71c28647e"
     },
     {
       "path": "atlas-review/app/body-scene.tsx",
@@ -280,11 +280,11 @@
     },
     {
       "path": "atlas-review/app/regional-guided-learning.css",
-      "sha256": "4a5397085d56ea33aa86388b5b053384f8b3b3802021ce2721a94e3dca555400"
+      "sha256": "a5662d48381db23816d38d1b185164cbe3c4eca82696791ceed29c4f218f6eff"
     },
     {
       "path": "atlas-review/app/regional-guided-learning.tsx",
-      "sha256": "996c5d624bc52eab2f0da5bdabd7d694a5d71a3239441e705747e2c8215bc49d"
+      "sha256": "193921a8bcfd0e293aeb186f74b4e708f6b5220a749f7216c5994a8543df2929"
     },
     {
       "path": "atlas-review/app/related-study.tsx",
@@ -308,7 +308,7 @@
     },
     {
       "path": "atlas-review/app/review/body/review-dashboard.tsx",
-      "sha256": "1e1abf21628f1b91eeee35c5673217a205e4429e4cc46d95d84e7413b958501b"
+      "sha256": "63d446de86094cfb0a5c184fa03d69dc49aa4c5cbedf88a49acd05a9b89eb994"
     },
     {
       "path": "atlas-review/app/review/nested/nested-review.css",
@@ -1944,7 +1944,7 @@
     },
     {
       "path": "atlas-review/lib/body-review-response.ts",
-      "sha256": "2c2d5fd716779c004ee69d674a33136af22907d38deae14dada890ae0c55b8d5"
+      "sha256": "2e1ca7605e6059b359c9e62af65886df4f02881348e71258723c690e3160be47"
     },
     {
       "path": "atlas-review/lib/body-review-search.ts",
@@ -2876,7 +2876,7 @@
     },
     {
       "path": "atlas-review/lib/regional-tours.ts",
-      "sha256": "6e199fbb332a3a9d383a7dda31c5e70790d66c93eb07440d18a023ed6514ee59"
+      "sha256": "2b623d22663ceeadbf75d348ae9a8b7765508df73d7c5123cebe4610a4cd3416"
     },
     {
       "path": "atlas-review/lib/regional-vascular-clinical.ts",
@@ -3516,7 +3516,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "aceec78a22183a52dee502270837ec0988ea0f3aaa8d29cdb86fcf2a630cbbaa"
+      "sha256": "6353041b3d8644ccbbafdfd000a1107040bba4233e77ae44f08140209a68812b"
     }
   ]
 }

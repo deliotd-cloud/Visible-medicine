@@ -15,9 +15,10 @@ const empty:string[]=[];
 const noSelection=()=>{};
 
 export function RegionalGuidedLearning({catalog,tour,assetBase,onExit}:{catalog:BodyCatalog;tour:RegionalTour;assetBase?:string;onExit:()=>void}) {
-  const resolved=useMemo(()=>{try{return {structures:regionalTourStructures(catalog,tour),frame:regionalTourFrame(catalog,tour),error:''};}catch{return {structures:[],frame:null,error:'This tour is unavailable for the current anatomy source.'};}},[catalog,tour]);
+  const resolved=useMemo(()=>{try{return {structures:regionalTourStructures(catalog,tour),frames:tour.steps.map((_,i)=>regionalTourFrame(catalog,tour,i)),error:''};}catch{return {structures:[],frames:[],error:'This tour is unavailable for the current anatomy source.'};}},[catalog,tour]);
   const [index,setIndex]=useState<number|null>(null),[playing,setPlaying]=useState(false);
   const [motionPaused,setMotionPaused]=useState(false),[reduced,setReduced]=useState(false);
+  const [explanationOpen,setExplanationOpen]=useState(true);
   const [health,setHealth]=useState<RendererHealth>('starting');
   const [loaded,setLoaded]=useState<string[]>([]),[failed,setFailed]=useState<string[]>([]);
   const controls=useRef<HTMLDivElement>(null);
@@ -27,6 +28,8 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit}:{catalog:
   const step=tour.steps[index??0];
   const changeStep=useCallback((next:number)=>{if(!Number.isInteger(next)||next<0||next>=tour.steps.length)return;setIndex(next);setMotionPaused(false);},[tour]);
   useEffect(()=>{const q=window.matchMedia('(prefers-reduced-motion: reduce)');const update=()=>setReduced(q.matches);update();q.addEventListener('change',update);return()=>q.removeEventListener('change',update);},[]);
+  // Keep mobile anatomy in view; the complete teaching remains one disclosure away.
+  useEffect(()=>{setExplanationOpen(!window.matchMedia('(max-width: 600px)').matches);},[]);
   useEffect(()=>{const pause=()=>{setPlaying(false);setMotionPaused(true);};const visibility=()=>{if(document.hidden)pause();};if(!ready)pause();document.addEventListener('visibilitychange',visibility);return()=>document.removeEventListener('visibilitychange',visibility);},[ready]);
   useEffect(()=>{if(!playing||index===null||!ready||document.hidden)return;const timer=window.setTimeout(()=>{if(document.hidden)return;if(index+1<tour.steps.length)changeStep(index+1);else setPlaying(false);},step.durationMs);return()=>window.clearTimeout(timer);},[playing,index,ready,step.durationMs,tour,changeStep]);
   const active=index!==null;
@@ -35,6 +38,11 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit}:{catalog:
   return <section className="regional-tour" aria-label={tour.title}>
     <div className="regional-tour-panel">
       <div className="regional-tour-heading"><h2>{active?step.title:tour.title}</h2>{active&&<span>Step {index+1} of {tour.steps.length}</span>}</div>
+      <details className="regional-tour-explanation" open={explanationOpen} onToggle={event=>{
+        const open=event.currentTarget.open;setExplanationOpen(open);
+        if(open){setPlaying(false);setMotionPaused(true);}
+      }}>
+      <summary>Step explanation & imaging · Draft</summary>
       <p aria-live="polite" aria-atomic="true">{active?step.caption:tour.description}</p>
       <details><summary>References & limits · Draft, review pending</summary>
         <p>{tour.limitations??'Selected exterior source surfaces in a common frame. Not a continuous airway lumen, complete bronchial tree or patient scan.'} Exit restores your previous workspace.</p>
@@ -43,6 +51,7 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit}:{catalog:
       {active&&selected&&<TourImagingNotes key={step.id} structureName={selected.name}
         lessons={tourImagingModalities.map(({id,label})=>({id,label,content:bodyLesson(selected,id)}))}
         onOpen={()=>{setPlaying(false);setMotionPaused(true);}}/>}
+      </details>
       {!ready&&<output>{resolved.error|| (failed.length?'Some anatomy failed to load. Exit and reload the atlas before retrying.':'Preparing the model. Playback is paused until all tour anatomy is ready.')}</output>}
       <div className="regional-tour-controls" ref={controls}>
         {!active?<Button disabled={!ready} onClick={()=>{setPlaying(false);changeStep(0);}}>Start guided tour</Button>:<>
@@ -58,7 +67,7 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit}:{catalog:
         selectedId={step.selectedId} systems={allBodySystems} isolated={step.fadeOthers} hiddenIds={empty}
         ghostRemoved={false} illustrated landmarks={empty} explode={0} layout="spatial" anchorSkeleton={false}
         showOrigins={false} labels view={step.view} zoom={1} reset={index??0} focus={false} exam={false}
-        inspection={initialInspection} presetBounds={resolved.frame} presetKey={tour.id} plate={false}
+        inspection={initialInspection} presetBounds={resolved.frames[index??0]} presetKey={tour.id} plate={false}
         tourLocked transitionMs={active&&!reduced?1800:0} transitionPaused={motionPaused||!ready}
         onSelect={noSelection} onLoaded={onLoaded} onFailure={onFailure} onRendererHealth={setHealth}/>}
     </div>

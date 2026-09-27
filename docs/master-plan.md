@@ -1,5 +1,15 @@
 # Visible Medicine — shared delivery plan
 
+27 September coeliac Guided learning imported locally from Atlas `14581a6`:
+five source-bound artery stops, corrected coeliac display, close-up camera frames
+and complete draft Clinical Review evidence. Mobile regional tours now keep the
+model visible with optional step explanation/imaging; opening pauses playback.
+Source/website checks and builds pass. No model bytes, independent specimen pins,
+entitlements, scans or approvals changed. Final browser/backup evidence is in the
+coordination checkpoint; see `docs/celiac-guided-learning-delivery-20260927.md`.
+Not published. Continue substantive supported regional tours and cleared-case
+Education integration; do not redo this import or completed native MRI work.
+
 27 September cervical Guided learning delivered locally from Atlas `edca765`.
 Spine now offers C1/C2/C3/C7/T1 with C4–C6 context, existing modality notes and
 complete revision-bound draft review evidence. 108 integration checks, builds,

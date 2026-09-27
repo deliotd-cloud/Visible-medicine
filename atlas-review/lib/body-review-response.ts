@@ -1,7 +1,7 @@
 import type { BodyReviewMaterial } from './body-review-material';
-import type { BodyStructure } from '../app/body-types';
+import type { BodyCatalog, BodyStructure } from '../app/body-types';
 import { validBodyPresentationParts } from './body-presentation-parts';
-import { regionalTours, regionalTourLimitations } from './regional-tours';
+import { regionalTours, regionalTourLimitations, regionalTourStepFrames } from './regional-tours';
 const object = (v: unknown): v is Record<string, unknown> =>
   !!v && typeof v === 'object' && !Array.isArray(v);
 const strings = (v: unknown): v is string[] =>
@@ -77,6 +77,10 @@ function validTours(value:unknown,source:Record<string,unknown>):boolean {
       Array.isArray(s.references)&&s.references.length>0&&s.references.every(safeReference))||
       new Set(t.steps.map(s=>s.id)).size!==t.steps.length||!t.contextIds.every(id=>structures.some(s=>s.id===id)))return false;
     const own=structures.find(s=>s.id===selected.id),contextIds=t.contextIds,steps=t.steps;
+    try {
+      const frames=regionalTourStepFrames({structures,bundles} as unknown as BodyCatalog,definition);
+      if(JSON.stringify(e.stepFrames)!==JSON.stringify(frames))return false;
+    } catch { return false; }
     return !!own&&JSON.stringify(own)===JSON.stringify(selected)&&bundles.some(b=>b.id===bundle.id&&b.sha256===bundle.sha256)&&
       structures.every(s=>bundles.some(b=>b.id===s.bundle))&&structures.every(s=>contextIds.includes(s.id)||steps.some(step=>object(step)&&step.selectedId===s.id));
   });
