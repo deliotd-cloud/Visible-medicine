@@ -1,0 +1,603 @@
+{
+  "parentCommit": "b3995e784dfab02686e03a995e6e1e4e0ae150d9",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "shoulder-arm-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-recovery.glb",
+      "bytes": 575076,
+      "sha256": "2630e1f06ada20094814ee1a5245e9d420627a15869c3b6a3c51763be21da84c",
+      "structures": 14
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "2602272a684da3ca5e081d7b1f15084a52dcbc45e92f82d6b7a36e6791ebe7d5",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-anterior-circumflex-humeral-artery",
+        "fmaId": "FMA22682",
+        "name": "Right anterior circumflex humeral artery",
+        "sourceName": "right anterior circumflex humeral artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-vessels-recovery",
+        "nodeName": "FMA22682",
+        "bounds": {
+          "min": [
+            -1.9123198986053467,
+            4.655500411987305,
+            0.20995399355888367
+          ],
+          "max": [
+            -1.432569980621338,
+            5.329399585723877,
+            0.5645800232887268
+          ]
+        },
+        "center": [
+          -1.6724449396133423,
+          4.992449998855591,
+          0.38726700842380524
+        ],
+        "anchor": [
+          -1.7245100736618042,
+          4.948000431060791,
+          0.46442702412605286
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2264",
+            "sha256": "a7aaef0dc149e6b481057266ee1b9a41720e0400a70697fbb5c15e7f8dd06187"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "anteriorHumeral",
+      "topics": [
+        "ct"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-anterior-circumflex-humeral-artery",
+        "fmaId": "FMA22683",
+        "name": "Left anterior circumflex humeral artery",
+        "sourceName": "left anterior circumflex humeral artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-vessels-recovery",
+        "nodeName": "FMA22683",
+        "bounds": {
+          "min": [
+            1.4325900077819824,
+            4.655500411987305,
+            0.20999497175216675
+          ],
+          "max": [
+            1.912310004234314,
+            5.329399585723877,
+            0.5646399855613708
+          ]
+        },
+        "center": [
+          1.6724500060081482,
+          4.992449998855591,
+          0.3873174786567688
+        ],
+        "anchor": [
+          1.7258399724960327,
+          4.945199966430664,
+          0.4618060290813446
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2212",
+            "sha256": "87ac4531b5551470294420965e60888cae7a4943f767386ab3f40713144850f2"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "anteriorHumeral",
+      "topics": [
+        "ct"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-posterior-circumflex-humeral-artery",
+        "fmaId": "FMA22685",
+        "name": "Right posterior circumflex humeral artery",
+        "sourceName": "right posterior circumflex humeral artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-vessels-recovery",
+        "nodeName": "FMA22685",
+        "bounds": {
+          "min": [
+            -1.9295200109481812,
+            4.858699798583984,
+            0.12414398044347763
+          ],
+          "max": [
+            -1.401319980621338,
+            4.984599590301514,
+            0.4818840026855469
+          ]
+        },
+        "center": [
+          -1.6654199957847595,
+          4.921649694442749,
+          0.30301399156451225
+        ],
+        "anchor": [
+          -1.5748900175094604,
+          4.877199649810791,
+          0.24333198368549347
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2291",
+            "sha256": "72f4c8d4e8465447611464bfa74df78924ffeaa9fc9829af32a4082518b6c02b"
+          },
+          {
+            "file": "FJ2292",
+            "sha256": "19ad27ed37b4fdc61653588976e81e138f28b063c52b270e5cdfb93364eac58b"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "posteriorHumeral",
+      "topics": [
+        "ct"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-posterior-circumflex-humeral-artery",
+        "fmaId": "FMA22687",
+        "name": "Left posterior circumflex humeral artery",
+        "sourceName": "left posterior circumflex humeral artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-vessels-recovery",
+        "nodeName": "FMA22687",
+        "bounds": {
+          "min": [
+            1.401360034942627,
+            4.859000205993652,
+            0.12425899505615234
+          ],
+          "max": [
+            1.9289900064468384,
+            4.984499454498291,
+            0.4817900061607361
+          ]
+        },
+        "center": [
+          1.6651750206947327,
+          4.921749830245972,
+          0.3030245006084442
+        ],
+        "anchor": [
+          1.5877599716186523,
+          4.874300479888916,
+          0.2290930151939392
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2239",
+            "sha256": "1e88872df7cffa6ccc3c325b2fbd0543279dc9ffc0a75b7e1e1ae14a0dc30d6f"
+          },
+          {
+            "file": "FJ2240",
+            "sha256": "8d07c946f22777f447e46597283d37a9ad993f8f1f8d194af6ed58dd2475d62c"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "posteriorHumeral",
+      "topics": [
+        "ct"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-circumflex-scapular-artery",
+        "fmaId": "FMA23180",
+        "name": "Right circumflex scapular artery",
+        "sourceName": "right circumflex scapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-vessels-recovery",
+        "nodeName": "FMA23180",
+        "bounds": {
+          "min": [
+            -1.4422999620437622,
+            4.805600643157959,
+            0.011157989501953125
+          ],
+          "max": [
+            -1.3413499593734741,
+            4.939200401306152,
+            0.367127001285553
+          ]
+        },
+        "center": [
+          -1.3918249607086182,
+          4.872400522232056,
+          0.18914249539375305
+        ],
+        "anchor": [
+          -1.4265999794006348,
+          4.859799861907959,
+          0.1953199803829193
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2273",
+            "sha256": "37154eff6530ba3cb17412723850f45c3ee5be9d0d9b78e737c7a1f356c87b3c"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "scapular",
+      "topics": [
+        "ct"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-circumflex-scapular-artery",
+        "fmaId": "FMA23181",
+        "name": "Left circumflex scapular artery",
+        "sourceName": "left circumflex scapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-vessels-recovery",
+        "nodeName": "FMA23181",
+        "bounds": {
+          "min": [
+            1.3415700197219849,
+            4.805500507354736,
+            0.011130981147289276
+          ],
+          "max": [
+            1.4423099756240845,
+            4.939200401306152,
+            0.36712896823883057
+          ]
+        },
+        "center": [
+          1.3919399976730347,
+          4.872350454330444,
+          0.18912997469305992
+        ],
+        "anchor": [
+          1.425610065460205,
+          4.857800483703613,
+          0.19487297534942627
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2221",
+            "sha256": "3387830f0c01f2f98710951a900442fdf6ad7b123ad1202aad4e0390cb0551f4"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "scapular",
+      "topics": [
+        "ct"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-thoracodorsal-artery",
+        "fmaId": "FMA66321",
+        "name": "Right thoracodorsal artery",
+        "sourceName": "right thoracodorsal artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-vessels-recovery",
+        "nodeName": "FMA66321",
+        "bounds": {
+          "min": [
+            -1.3892899751663208,
+            4.006500244140625,
+            0.13707801699638367
+          ],
+          "max": [
+            -1.2835699319839478,
+            4.805500507354736,
+            0.41492798924446106
+          ]
+        },
+        "center": [
+          -1.3364299535751343,
+          4.406000375747681,
+          0.27600300312042236
+        ],
+        "anchor": [
+          -1.3184499740600586,
+          4.4180006980896,
+          0.22675301134586334
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2305",
+            "sha256": "b7d085f37da4801db31307961a176357a1d3a11e226c290e9883455376e9e254"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thoracodorsal",
+      "topics": [
+        "ct"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-thoracodorsal-artery",
+        "fmaId": "FMA66322",
+        "name": "Left thoracodorsal artery",
+        "sourceName": "left thoracodorsal artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-vessels-recovery",
+        "nodeName": "FMA66322",
+        "bounds": {
+          "min": [
+            1.283560037612915,
+            4.006500244140625,
+            0.13711699843406677
+          ],
+          "max": [
+            1.3893699645996094,
+            4.805099964141846,
+            0.4148709774017334
+          ]
+        },
+        "center": [
+          1.3364650011062622,
+          4.405800104141235,
+          0.2759939879179001
+        ],
+        "anchor": [
+          1.3176400661468506,
+          4.427900314331055,
+          0.22957603633403778
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2253",
+            "sha256": "b6f9ae7678bb79b0245d03ea27ceee0a9e3f0cf6b6b0c7613c0830ac40e8989f"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thoracodorsal",
+      "topics": [
+        "ct"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

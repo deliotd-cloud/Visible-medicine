@@ -5,7 +5,7 @@ import { build } from 'esbuild';
 
 test('imported reviewer search finds both Achilles sides without combining specimens or decisions', async () => {
   const manifest=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
-  assert.equal(manifest.revision,'b3995e784dfab02686e03a995e6e1e4e0ae150d9');
+  assert.equal(manifest.revision,'0ff5e51a5fb9e6b660a16d1531da5c92a74317c2');
   const result=await build({stdin:{contents:"export {findClinicalReviewEntries} from './atlas-review/lib/clinical-review-index'; export {bodyReviewMaterial} from './atlas-review/lib/body-review-material';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
   const api=await import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
   const body=api.findClinicalReviewEntries({q:'Achilles',scope:'body'});

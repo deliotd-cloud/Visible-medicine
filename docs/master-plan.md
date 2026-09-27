@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+27 September shoulder arterial CT delivered locally: learner and Clinical Review
+use Atlas `0ff5e51`, adding eight source-bound CT/CTA drafts with references and
+patient-imaging limitations. All 136 models, twelve regional scopes, access
+rules and decisions are unchanged. Integration checks, TypeScript/builds and
+actual mobile learner/review pass. See `docs/shoulder-arterial-ct-delivery-20260927.md`.
+No public deployment or clinical approval. This source-to-website delivery is
+complete; resume substantive Atlas anatomy, teaching and usability work.
+
 27 September reasoning review delivered locally: learner and Clinical Review
 use Atlas `b3995e7`, including six thoracic vessel questions and source-specific
 review evidence for all 268 eligible question representations. Schema 2 blocks

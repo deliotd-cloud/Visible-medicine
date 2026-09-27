@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "b3995e784dfab02686e03a995e6e1e4e0ae150d9",
-  "sha256": "6781eccc3fa15dba06f1155691fa8bd8d3f183b5bc5da4d3e2a8354857119de2",
+  "sourceCommit": "0ff5e51a5fb9e6b660a16d1531da5c92a74317c2",
+  "sha256": "a13993fbc9ded6bfa66720b581883c4127b4b91f399afd3132daad20dadb16e3",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -112,7 +112,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "38555af3e44491a45cdbfc231999723b8b6d2eb149256f4e6a42c8192293763f"
+      "sha256": "03c333ecfb5d3bb29223490fec7992a045a7da34fef72e53907dd896c8936a3e"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -1445,6 +1445,14 @@
     {
       "path": "atlas-review/content/shoulder-arm-muscle-imaging.ts",
       "sha256": "f1362fbc88cebd958073b476b3aa44eae847091fe265e9194971ae5e4360d0c3"
+    },
+    {
+      "path": "atlas-review/content/shoulder-arterial-ct-pins.json",
+      "sha256": "f6bdcd874050a39c27c87f2af7163ca7c93994a7b2fc2fd18d2bdadc73621024"
+    },
+    {
+      "path": "atlas-review/content/shoulder-arterial-ct.ts",
+      "sha256": "d7d59978ebf64cfe1d26c67065aabee0eb4d948ba77649005077dc3a65640baa"
     },
     {
       "path": "atlas-review/content/shoulder-arterial-mri-pins.json",
@@ -2935,6 +2943,10 @@
       "sha256": "4652e8112b700ea5ef34e58ffd9bc5a1fa35e51fe423876db01deff2c1f6ef5a"
     },
     {
+      "path": "atlas-review/lib/shoulder-arterial-ct.ts",
+      "sha256": "8c00c0a853299d60bf67e9fc250c84fd593ef3963fa4e833e3585f0181c77644"
+    },
+    {
       "path": "atlas-review/lib/shoulder-arterial-mri.ts",
       "sha256": "d2cec74d690c470be73e01e68093413526a8b20650d300fc208bfbf0908c455f"
     },
@@ -3224,7 +3236,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "d43f062ef9f4eb05f7bffdad82b7d8d007f540783d018515f7ab0c544d103f0a"
+      "sha256": "a4f133f809cb7cbba8dc2ee03d22fed02f48956a8718efcec18b7932318b6e06"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3468,7 +3480,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "b14cdfb29ac0c75d5551d37eb2f23f18f84d211849414546f19e1f2e96206c89"
+      "sha256": "4878953491fc83f47532327cc6e895a5a0d6b707bad71ed3d3c9b24e5e9debf0"
     }
   ]
 }
