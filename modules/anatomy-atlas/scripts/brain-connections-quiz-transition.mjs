@@ -1,15 +1,12 @@
 import assert from 'node:assert/strict';
-import {beforeBrainConnectionsQuiz} from './brain-connections-quiz-history.mjs';
-import {shoulderBeforeSoftTissueXray} from './shoulder-soft-tissue-xray-history.mjs';
 import {readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {contentContext} from './content-contract-tools.mjs';
 import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
-import pins from '../content/pelvic-organ-quiz-pins.json' with {type:'json'};
+import pins from '../content/brain-connections-quiz-pins.json' with {type:'json'};
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 const snapshot=(api,display)=>({body:display.structures.map(s=>({id:s.id,sections:Object.fromEntries(api.contentTabs.map(t=>[t,api.bodyLesson(s,t)]))})),shoulder:api.structures,recipes:api.dissectionProfiles});
-const {api:currentApi,catalog}=await contentContext();
-const api=beforeBrainConnectionsQuiz({...currentApi,structures:shoulderBeforeSoftTissueXray(currentApi.structures)});
+const {api,catalog}=await contentContext();
 const parent=await exactSourceHistoryApi(pins.parentCommit),display=api.bodyDisplayCatalog(catalog);
 assert.deepEqual(display,parent.bodyDisplayCatalog(catalog));
 assert.deepEqual(api.structures,parent.structures);assert.deepEqual(api.dissectionProfiles,parent.dissectionProfiles);
@@ -25,6 +22,6 @@ for(const s of display.structures)for(const tab of api.contentTabs){
 }
 assert.equal(entries.length,8);assert.equal(unchanged,9928);
 const transition={parentCommit:pins.parentCommit,pinsHash:hash(pins),previousAllLessonsAndRecipesHash:pins.previousAllLessonsAndRecipesHash,currentAllLessonsAndRecipesHash:hash(snapshot(api,display)),entries};
-if(process.argv.includes('--record'))await writeFile('content/pelvic-organ-quiz-transition.json',JSON.stringify(transition,null,2)+'\n',{flag:'wx'});
-else assert.deepEqual(JSON.parse(await readFile('content/pelvic-organ-quiz-transition.json')),transition);
+if(process.argv.includes('--record'))await writeFile('content/brain-connections-quiz-transition.json',JSON.stringify(transition,null,2)+'\n',{flag:'wx'});
+else assert.deepEqual(JSON.parse(await readFile('content/brain-connections-quiz-transition.json')),transition);
 console.log(JSON.stringify({changed:entries.length,unchanged,pinsHash:hash(pins),transitionHash:hash(transition),geometryUnchanged:true,clinicalApproval:false}));

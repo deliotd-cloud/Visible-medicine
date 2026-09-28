@@ -35,7 +35,7 @@ Independent specimens retain separate source frames and teaching inventories. Th
 | Ultrasound | 624 | 0 | 480 | 0 |
 | Pathology | 1097 | 0 | 7 | 0 |
 | Clinical | 1097 | 0 | 7 | 0 |
-| Quiz notes | 106 | 0 | 1 | 997 |
+| Quiz notes | 114 | 0 | 1 | 989 |
 
 ## Nested teaching readiness
 

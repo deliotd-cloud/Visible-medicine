@@ -1,14 +1,12 @@
 import assert from 'node:assert/strict';
-import {beforeBrainConnectionsQuiz} from './brain-connections-quiz-history.mjs';
-import {shoulderBeforeSoftTissueXray} from './shoulder-soft-tissue-xray-history.mjs';
 import { contentContext } from './content-contract-tools.mjs';
 import { exactSourceHistoryApi } from './exact-source-history-api.mjs';
-import { beforePelvicOrganQuiz } from './pelvic-organ-quiz-history.mjs';
-import pins from '../content/pelvic-organ-quiz-pins.json' with { type: 'json' };
+import { beforeBrainConnectionsQuiz } from './brain-connections-quiz-history.mjs';
+import pins from '../content/brain-connections-quiz-pins.json' with { type: 'json' };
 const { api: currentApi, catalog } = await contentContext();
-const api = beforeBrainConnectionsQuiz({...currentApi, structures: shoulderBeforeSoftTissueXray(currentApi.structures)});
+const api = currentApi;
 const parent = await exactSourceHistoryApi(pins.parentCommit);
-const prior = beforePelvicOrganQuiz(api);
+const prior = beforeBrainConnectionsQuiz(api);
 const display = api.bodyDisplayCatalog(catalog);
 let unchanged = 0, restored = 0, rejected = 0;
 const ids = new Set(pins.entries.map(e => e.identity.id));
@@ -20,7 +18,7 @@ for (const structure of display.structures) for (const tab of api.contentTabs) {
   else { assert.deepEqual(prior.bodyLesson(structure, tab), api.bodyLesson(structure, tab)); unchanged++; }
 }
 assert.equal(restored, 8); assert.equal(unchanged, 9928);
-assert.equal(beforePelvicOrganQuiz(prior), prior);
+assert.equal(beforeBrainConnectionsQuiz(prior), prior);
 assert.equal(prior.structures, api.structures);
 assert.equal(prior.dissectionProfiles, api.dissectionProfiles);
 for (const entry of pins.entries) for (const field of ['body', 'correctAnswer', 'explanation', 'note']) {
@@ -28,9 +26,9 @@ for (const entry of pins.entries) for (const field of ['body', 'correctAnswer', 
     const lesson = api.bodyLesson(s, tab);
     return s.id === entry.identity.id && tab === 'quiz' ? { ...lesson, [field]: 'foreign' } : lesson;
   } };
-  assert.throws(() => beforePelvicOrganQuiz(altered), /Unrecorded/); rejected++;
+  assert.throws(() => beforeBrainConnectionsQuiz(altered), /Unrecorded/); rejected++;
 }
-assert.throws(() => beforePelvicOrganQuiz({ ...api, bodyLesson(s, tab) {
+assert.throws(() => beforeBrainConnectionsQuiz({ ...api, bodyLesson(s, tab) {
   return s.id === pins.entries[0].identity.id && tab === 'quiz'
     ? structuredClone(pins.entries[0].previous.quiz) : api.bodyLesson(s, tab);
 } }), /Mixed/); rejected++;
@@ -39,6 +37,6 @@ const alteredOther = { ...api, bodyLesson(s, tab) {
   const lesson = api.bodyLesson(s, tab);
   return s.id === other.id && tab === 'quiz' ? { ...lesson, body: 'Unrelated change retained' } : lesson;
 } };
-assert.equal(beforePelvicOrganQuiz(alteredOther).bodyLesson(other, 'quiz').body, 'Unrelated change retained');
+assert.equal(beforeBrainConnectionsQuiz(alteredOther).bodyLesson(other, 'quiz').body, 'Unrelated change retained');
 
 console.log(JSON.stringify({restored,unchanged,rejected,unrelatedChangeRetained:true,clinicalApproval:false}));

@@ -30,7 +30,7 @@
     },
     {
       "path": "app/anatomy-data.ts",
-      "sha256": "e8e8da00b4cd1fc92242498fc7feca41b353ee58b3c5a8b147d3f442705ac83b"
+      "sha256": "9746f3bc65cef35b5b3054dc58fd9611168807ce4a1aa28de3cf35ff4c79ee13"
     },
     {
       "path": "app/anatomy-tissue.tsx",
@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "87f4bbe14a163e4c998f105cdd2a4e9bf5c94bce9027a621ea225ea76e245800"
+      "sha256": "e88cf0d8a38be93fb57426473878911c52ed9acb9e89ae2cf18f71496faa12b1"
     },
     {
       "path": "app/body-education-link.ts",
@@ -555,6 +555,14 @@
     {
       "path": "content/bowel-component-pins.json",
       "sha256": "5c34d492f10406151508b9a7531cc80314c7c8d8f09fc518dc1e99a0e985fae6"
+    },
+    {
+      "path": "content/brain-connections-quiz-pins.json",
+      "sha256": "effc79d38c9e87c973a5d6e72e8490f6b793d2b1b4e54fe5c7b14fefb5674e5e"
+    },
+    {
+      "path": "content/brain-connections-quiz.ts",
+      "sha256": "d9d746732179a04813e66967fb9097f27f44308c806693f72bdaffe436c11a20"
     },
     {
       "path": "content/brain-imaging-teaching.ts",
@@ -1342,7 +1350,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "3e31f6ce492f4f8ca587b36a9df04a926c87beec710e747df58932fd0d48a3f9"
+      "sha256": "52c6ebe8633eb8bdc745feb0e63054da2cdb96fb7772d28103e38673fdb2c1cd"
     },
     {
       "path": "content/sca-mca-clinical-pins.json",
@@ -1835,6 +1843,10 @@
     {
       "path": "lib/brachial-veins.ts",
       "sha256": "d675f79d288ce1eb799e4c58a7d14fe5894257274ef302ce96e3a2990bda5b2c"
+    },
+    {
+      "path": "lib/brain-connections-quiz.ts",
+      "sha256": "64583da846d7c9519c84c1b2715bb881fb5d69696aa0b1e2f7c7340378d4f156"
     },
     {
       "path": "lib/brainstem.ts",
@@ -2821,6 +2833,10 @@
       "sha256": "dab771a8dee5c917271d3354d350922bea85d985583c863cf1ff1f4b6481b18b"
     },
     {
+      "path": "lib/shoulder-soft-tissue-xray.ts",
+      "sha256": "49f6c4d1a1a97f4532d382260f9bc4a8ea158a83184b05df8a2ae1bbd67070fd"
+    },
+    {
       "path": "lib/small-intestinal-mesentery-mri.ts",
       "sha256": "07aafdc9b3042a11c78f70f09736bd0a613603ccd0ad0f6226603f2ec506019b"
     },
@@ -3090,7 +3106,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "85d22ed027580579e17cc496e0948dabb648bbd5e3738ab0d273f7cd7503fc2c"
+      "sha256": "255fc6f4b9b881191f23d0c8c9db13d39455a804a21b257703177a831e6cfb80"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3301,5 +3317,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "7caea3e450cdbda60df297e0d7f99ecfde0668adaacdc8511628d9ccc6a87e9c"
+  "sha256": "135a03ce97c3e0e35024917318e63d48c5288c69719adfcc653f550fa05ff703"
 }
