@@ -2,6 +2,12 @@
 // A handler is admitted only by name and canonical TypeScript SHA-256. The
 // provenance/evidence fields make each pin auditable; they do not relax checks.
 export const modelFirstHandlerMigrations = Object.freeze({
+  changeGuidedLearning: Object.freeze({
+    sha256: 'ca26c667325ac9a0649002025a519f14b27b310cd4abeff081f1c497dc7d5ffb',
+    commits: Object.freeze(['dbbf3613f0d20ac26999ae604facfa60bb06128e', '77244671eaf419095f681bb284737c01ecfbf6bb']),
+    reason: 'Source-bound regional and whole-body tours capture and restore camera/focus without changing dissection state; active exams block entry.',
+    evidence: Object.freeze(['node scripts/test-regional-tour-host.mjs', 'node scripts/test-whole-body-guided-learning.mjs']),
+  }),
   captureView: Object.freeze({
     sha256: '4b76e9631ae8970728eab86382896ab221be2e6bfb184bbc8a30f2918c87e738',
     commits: Object.freeze(['6cbeafbf85430e02e569a3bdd3a5d7e16b0a1467']),
@@ -119,6 +125,25 @@ export const modelFirstPracticeCallbackMigration = Object.freeze({
 
 export const modelFirstLateCallbackMigrations = Object.freeze([
   modelFirstPracticeCallbackMigration,
+  Object.freeze({
+    commit: 'dbbf3613f0d20ac26999ae604facfa60bb06128e',
+    reason: 'Guided learning disables dissection shortcuts and adds the regional exit binding; behavior is exercised in the host and shortcut suites.',
+    historicalFunctions: Object.freeze({changeGuidedLearning: '3365a1fe80a9beb82dbf82a2d59b9f0e06ec1644e4d50ba629155608d5292405'}),
+    remove: Object.freeze(['onKeyDown/5d3845091af3e5fd8299d1189dca0463708887af3ba55642ee60ddc72ad7b721']),
+    add: Object.freeze([
+      'onKeyDown/e8cedc104d60daca7c64aabb16e34d2b767e9ab52dfbcebb02eb3aeb8c00cb2e',
+      'onExit/9b2194a51a20f8e1968c981cf94b3a3e6ded389bfdf9f8725604e348e48f21e8',
+    ]),
+    evidence: Object.freeze(['node scripts/test-regional-tour-host.mjs', 'node scripts/test-dissection-shortcuts.mjs']),
+  }),
+  Object.freeze({
+    commit: '77244671eaf419095f681bb284737c01ecfbf6bb',
+    reason: 'Whole-body library adds one exit binding to the same guarded tour handler, preserving callback multiplicity.',
+    historicalFunctions: Object.freeze({changeGuidedLearning: 'ca26c667325ac9a0649002025a519f14b27b310cd4abeff081f1c497dc7d5ffb'}),
+    remove: Object.freeze([]),
+    add: Object.freeze(['onExit/9b2194a51a20f8e1968c981cf94b3a3e6ded389bfdf9f8725604e348e48f21e8']),
+    evidence: Object.freeze(['node scripts/test-whole-body-guided-learning.mjs']),
+  }),
   Object.freeze({
     commit: 'ffe718b7e75778c3c9bd27b9094b0ff9743bb267',
     reason: 'Separation ignores exam and empty-view requests.',

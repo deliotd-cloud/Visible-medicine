@@ -26,4 +26,32 @@ assert(source.includes('!inlineStudy && !guidedLearning'));
 assert(source.includes('guidedLearning && regionalTour ? <RegionalGuidedLearning'));
 assert(source.includes('guidedLearning && (whole || regionalToursFor(initialRegion).length>1) ? <WholeBodyGuidedLearning'));
 assert(source.includes('key={initialRegion} region={initialRegion}'));
+// Execute the exact host bindings admitted by the historical migration. Testing
+// only the shortcut helper would miss a host accidentally enabling it on a tour.
+const historyBindings=[],exitBindings=[];
+function collectBindings(n){
+  if(ts.isJsxAttribute(n)&&n.initializer&&ts.isJsxExpression(n.initializer)){
+    const expression=n.initializer.expression;
+    if(expression&&n.name.text==='onKeyDown'&&expression.getText(ast).includes('handleDissectionHistoryKey')) historyBindings.push(expression.getText(ast));
+    if(expression&&n.name.text==='onExit'&&expression.getText(ast).includes('changeGuidedLearning')) exitBindings.push(expression.getText(ast));
+  }
+  ts.forEachChild(n,collectBindings);
+}
+collectBindings(ast);assert.equal(historyBindings.length,1);assert.equal(exitBindings.length,2);
+const compileBinding=expression=>ts.transpileModule(`const callback=(${expression});`,{compilerOptions:{target:ts.ScriptTarget.ES2022}}).outputText;
+for(const mode of ['explore','dissect','practice'])for(const exam of [false,true])for(const inlineStudy of [false,true])for(const guidedLearning of [false,true]){
+  let received;
+  const event={},undo=()=>{},redo=()=>{};
+  runInNewContext(compileBinding(historyBindings[0])+';callback(event)',{
+    workspace:{mode},exam,inlineStudy,guidedLearning,dissection:{history:[{}],future:[{}]},event,
+    undoDissection:undo,redoDissection:redo,
+    handleDissectionHistoryKey:(e,state,u,r)=>{assert.equal(e,event);assert.equal(u,undo);assert.equal(r,redo);received=state;},
+  });
+  assert.equal(received.enabled,mode==='dissect'&&!exam&&!inlineStudy&&!guidedLearning);
+  assert.equal(received.canUndo,true);assert.equal(received.canRedo,true);
+}
+for(const expression of exitBindings){
+  const calls=[];runInNewContext(compileBinding(expression)+';callback()',{changeGuidedLearning:value=>calls.push(value)});
+  assert.deepEqual(calls,[false],'Each player exits through the shared restoration handler');
+}
 console.log(JSON.stringify({exactDetachedCameraRestore:true,workspaceStateUntouched:true,examBlocked:true,undefinedTourBlocked:true,exclusiveSceneBranch:true}));

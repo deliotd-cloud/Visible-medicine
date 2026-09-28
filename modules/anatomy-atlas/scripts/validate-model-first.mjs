@@ -135,7 +135,8 @@ for (const [commit, names, callbackMigration] of [
   }
   same(after, {
     functions: { ...before.functions, ...Object.fromEntries(names.map(name =>
-      [name, modelFirstHandlerMigrations[name].sha256])) },
+      [name, modelFirstHandlerMigrations[name].sha256])),
+      ...callbackMigration?.historicalFunctions },
     callbacks: callbacks.sort(compare),
   }, `${commit} changes only the explicitly pinned historical bindings`);
 }

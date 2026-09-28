@@ -59,12 +59,15 @@ and visibility checks. Report paths stay outside hosted content. On the checked
 host, final evidence is `work/embedded-readability-acceptance-20260928.json` in
 the coordination workspace. Earlier failed runs remain separately retained.
 
-Renderer and selection-visibility suites pass. The broader model-first suite
-currently fails its immutable named-handler inventory because the previously
-added `changeGuidedLearning` handler is not in its migration list. The handler,
-validator and migrations are byte-unchanged from parent `4479588`; this CSS fix
-does not suppress that failure or rewrite the baseline. Resolve that historical
-test migration separately before claiming the broad suite is green.
+Renderer and selection-visibility suites pass. The initial broader model-first
+run exposed historical Guided learning omissions, unrelated to this CSS fix.
+A separate test-only correction now replays exact Git binding deltas from
+`dbbf361` and `7724467`: the tour handler, dissection-shortcut guard and two exit
+callbacks. The immutable baseline and runtime code remain unchanged. The host
+test executes both exit bindings and all 24 mode/exam/study/tour shortcut states.
+Model-first, tour-host, whole-body library and shortcut tests now pass. Original
+failure logs remain retained; the model-first passing log is
+`.local/test-logs/2026-09-28T22-03-06.546Z-26740-a5d21f1d.log`.
 
 Presentation fingerprints are refreshed conservatively. No clinical approvals
 are copied to the changed presentation. Exact commit, builds, source recovery

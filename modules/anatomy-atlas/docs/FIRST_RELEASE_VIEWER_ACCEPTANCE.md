@@ -6,8 +6,9 @@
 phone/default, phone/200% root font and desktop size. The new production-module
 checks reproduce the small-model failure and pass after a CSS-only correction.
 They include clipping ancestors and keyboard sheet/mode return, not physical
-touch, screen-reader or complete viewer acceptance. Website import is separate;
-the existing Guided-learning historical-test mismatch remains explicitly open.
+touch, screen-reader or complete viewer acceptance. Website import is separate.
+The historical Guided learning test omissions are now pinned to their exact Git
+changes and behavior-tested without changing the immutable baseline or runtime.
 
 ## 27 September: restored tissue visibility
 
