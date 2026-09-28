@@ -1701,6 +1701,15 @@ model, image, font, dependency, paid service or mandatory fee is introduced.
 
 # Pelvic organ quick-check factual references — 28 September 2026
 
+Male pelvic duct landmark tour (28 September 2026): original short captions use
+NIH NCI SEER factual references at
+https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html and
+https://training.seer.cancer.gov/anatomy/reproductive/male/glands.html . No source
+media, tables or prose are copied. Existing meshes and their attribution remain
+unchanged; no new asset, dependency, service or mandatory fee. Static reference
+surfaces are not a continuous lumen, fertility assessment or registered scan.
+All tour teaching and anatomical relationships require radiologist review.
+
 Original questions use NIH NIDDK urinary-tract/enlarged-prostate and NCI SEER
 male duct/accessory-gland facts. Exact links accompany each lesson and
 `docs/PELVIC_ORGAN_QUIZ.md`. No media, tables or question-bank items are copied.

@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "8da967df7f4f419014ea03b323d239732a787be1",
-  "sha256": "81fc030beacc94ec349e6f4c9d725b1e636bb6cd54e8d84a5658dce3084578dd",
+  "sourceCommit": "548aa09141cf76c020460cb2580d10b8a6cc057b",
+  "sha256": "37287f6e98856dda332052038d8e147e92191d62bf859ecac82722113352ef11",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -2687,6 +2687,10 @@
       "sha256": "4f467f6ccf778ddf96bcf60b45aef4ca258d3c16e717716c4ded6f774366c01d"
     },
     {
+      "path": "atlas-review/lib/male-duct-tour.ts",
+      "sha256": "0ecd223bcd86e19c06ac24b70685543b9881cc1754bfb0d08cff85a837edff11"
+    },
+    {
       "path": "atlas-review/lib/mediastinal-xray.ts",
       "sha256": "975fc201ee76040704827e669e2a438dcd5517823c02b673459b4ed29241e615"
     },
@@ -2936,7 +2940,7 @@
     },
     {
       "path": "atlas-review/lib/regional-tours.ts",
-      "sha256": "180f27d2c75cafae985b394196b30cbd7e074347a1a1f45b52901711da1d48a6"
+      "sha256": "1c96e08ea6950a3d22eb4d7ba3885d2e64ab468495cc3fec24af28e9378b46e2"
     },
     {
       "path": "atlas-review/lib/regional-vascular-clinical.ts",
@@ -3332,7 +3336,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "2fe97a279e8e824017f368efba00245f6d7d842ca212dcf91adf0d30ca4c4c59"
+      "sha256": "e3eb2545f43bfc1d69e9dd4567c77c9f9f3b9f04c7ea4f5fd5720b6c60c0634e"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3576,7 +3580,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "26e74a35c7deb4511e49a0bc32e26f1c65bca91793152dc6888ac9c6a4739168"
+      "sha256": "c6f8ca2149f177a8f0086627223594e8796b3eb8326c34738e02a1b4810999c0"
     }
   ]
 }

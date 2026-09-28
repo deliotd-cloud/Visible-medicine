@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+28 September: male pelvic duct landmark tour imported locally from Atlas `548aa09`.
+Six stops using eight source surfaces; two pelvis choices, fifteen regional tours.
+All240 tests, types/build and embedded mobile/review sampling pass. Shared pelvic
+structures retain both review-bound tours. Models, access and decisions unchanged;
+no publication or clinical approval. See `docs/male-duct-tour-delivery-20260928.md`
+and coordination checkpoint for GitHub/D recovery. Native MRI remains done.
+
 28 September: pelvic organ questions imported locally from Atlas `8da967d`.
 Eight source-bound draft placements reach learner and protected Clinical Review.
 All240 tests, types/build and embedded mobile answer/review sampling pass.

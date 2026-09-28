@@ -7,8 +7,8 @@ test('pelvic reasoning ships as generated draft teaching without new anatomy or 
  const base='public/atlas-runtime/head-neck/';
  const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
  const bytes=readFileSync(base+'manifest.json'),manifest=JSON.parse(bytes.toString());
- assert.equal(sha(bytes),'ea7436982dbb39432f4ac13c66c969197cf19b80424cfd0c94b27e50a0bbcbe0');
- assert.equal(manifest.sourceCommit,'8da967df7f4f419014ea03b323d239732a787be1');
+ assert.equal(sha(bytes),'081f2c70fbb0875fa445eb52338c263a585ba91121a87ef2e70900079e0466be');
+ assert.equal(manifest.sourceCommit,'548aa09141cf76c020460cb2580d10b8a6cc057b');
  const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
  assert.deepEqual(inputs.filter(i=>i.path==='lib/pelvic-organ-reasoning.ts'),[{path:'lib/pelvic-organ-reasoning.ts',sha256:'f951d93412bcc797afabef89ca1d3ea7a0a6716a15493b9b9eabebb292487824'}]);
  const files=manifest.files as {path:string;sha256:string}[];

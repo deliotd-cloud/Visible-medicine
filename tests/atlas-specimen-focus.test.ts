@@ -7,9 +7,9 @@ test('specimen runtime binds verified removal/history focus without publishing C
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'ea7436982dbb39432f4ac13c66c969197cf19b80424cfd0c94b27e50a0bbcbe0');
+  assert.equal(sha(bytes),'081f2c70fbb0875fa445eb52338c263a585ba91121a87ef2e70900079e0466be');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'8da967df7f4f419014ea03b323d239732a787be1');
+  assert.equal(manifest.sourceCommit,'548aa09141cf76c020460cb2580d10b8a6cc057b');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of [
     ['app/specimen-removal-focus.ts','eb7b9f29bbab0e9524a5162e0254d6c0561a773ad8bf9c7ca89cc59fefe3f362'],

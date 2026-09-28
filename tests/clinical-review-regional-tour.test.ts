@@ -4,13 +4,13 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { build } from 'esbuild';
 
-test('all fourteen regional tours ship complete source-bound review evidence', async () => {
+test('all fifteen regional tours ship complete source-bound review evidence', async () => {
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const base='public/atlas-runtime/head-neck/';
   const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
   assert.equal(learner.sourceCommit,review.revision);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
-  for(const path of ['lib/regional-tours.ts','lib/chest-wall-tour.ts','lib/orbital-tour.ts','lib/intrinsic-larynx-tour.ts','app/regional-guided-learning.tsx','lib/tour-camera.ts','app/fitted-camera.tsx']) {
+  for(const path of ['lib/regional-tours.ts','lib/chest-wall-tour.ts','lib/orbital-tour.ts','lib/intrinsic-larynx-tour.ts','lib/male-duct-tour.ts','app/regional-guided-learning.tsx','lib/tour-camera.ts','app/fitted-camera.tsx']) {
     const file=review.files.find((f:any)=>f.path===path); assert.ok(file,path);
     assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,file.sourceSha256,path);
     assert.equal(createHash('sha256').update(readFileSync('atlas-review/'+path)).digest('hex'),file.importedSha256);
@@ -48,7 +48,10 @@ test('all fourteen regional tours ship complete source-bound review evidence', a
     assert.equal(api.regionalTourFor(region).id,id);assert.equal(api[name].revision,id+'-v1');
     assert.deepEqual(api[name].steps.map((s:any)=>s.view),['anterior','right','posterior','posterior','left']);
   }
-  assert.equal(api.regionalTours.length,14);
+  assert.equal(api.regionalTours.length,15);
+  assert.equal(api.maleDuctTour.status,'draft');
+  assert.equal(api.maleDuctTour.steps.length,6);
+  assert.deepEqual(api.regionalToursFor('pelvis').map((t:any)=>t.id),[api.malePelvisTour.id,api.maleDuctTour.id]);
   assert.equal(api.orbitalTour.status,'draft');
   assert.equal(api.orbitalTour.steps.length,6);
   assert.deepEqual(api.regionalToursFor('head-neck').map((t:any)=>t.id),[api.larynxTour.id,api.orbitalTour.id,api.intrinsicLarynxTour.id]);
@@ -66,13 +69,21 @@ test('all fourteen regional tours ship complete source-bound review evidence', a
     assert.equal(packet.schema,'vm-body-review-worksheet-3');
     assert.ok(api.parseBodyReviewResponse(packet,id));
     const shared=api.intrinsicLarynxTour.contextIds.includes(id);
-    assert.equal(packet.guidedTours.length,shared?2:1);
+    const sharedPelvis=['urinary-bladder','prostate','right-seminal-vesicle'].some(name=>id.endsWith(':'+name));
+    assert.equal(packet.guidedTours.length,shared||sharedPelvis?2:1);
     const tourIndex=packet.guidedTours.findIndex((e:any)=>e.tour.id===tour.id);assert.ok(tourIndex>=0);
     if(shared){
       assert.deepEqual(packet.guidedTours.map((e:any)=>e.tour.id),[api.larynxTour.id,api.intrinsicLarynxTour.id]);
       for(const omitted of [api.larynxTour.id,api.intrinsicLarynxTour.id]){
         const changed=structuredClone(packet);changed.guidedTours=changed.guidedTours.filter((e:any)=>e.tour.id!==omitted);
         assert.equal(api.parseBodyReviewResponse(changed,id),null,'Neither shared tour can be omitted');
+      }
+    }
+    if(sharedPelvis){
+      assert.deepEqual(packet.guidedTours.map((e:any)=>e.tour.id),[api.malePelvisTour.id,api.maleDuctTour.id]);
+      for(const omitted of [api.malePelvisTour.id,api.maleDuctTour.id]){
+        const changed=structuredClone(packet);changed.guidedTours=changed.guidedTours.filter((e:any)=>e.tour.id!==omitted);
+        assert.equal(api.parseBodyReviewResponse(changed,id),null,'Neither shared pelvic tour can be omitted');
       }
     }
     assert.deepEqual(packet.guidedTours[tourIndex].tour,tour);
@@ -128,7 +139,19 @@ test('all fourteen regional tours ship complete source-bound review evidence', a
         (p:any)=>{p.guidedTours[tourIndex].stepFrames[5].max[0]+=1;},
       ]) {const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,id),null);}
     }
-    if(tour!==api.orbitalTour&&tour!==api.intrinsicLarynxTour&&['head-neck','pelvis'].includes(tour.region)) {
+    if(tour===api.maleDuctTour) {
+      const e=packet.guidedTours[tourIndex];
+      assert.equal(packet.approval,false);assert.equal(e.stepFrames.length,6);
+      assert.deepEqual(e.bundles.map((b:any)=>b.id).sort(),['abdomen-organs-recovery','deferent-ducts','pelvis-organs','pelvis-organs-gaps','pelvis-organs-recovery']);
+      assert.equal(e.structures.find((s:any)=>s.id.endsWith(':right-deferent-duct')).fmaId,'FMA19235');
+      assert.match(tour.limitations,/Not a continuous sperm-flow simulation/);
+      for(const mutate of [
+        (p:any)=>{p.guidedTours[tourIndex].tour.steps.reverse();},
+        (p:any)=>{p.guidedTours[tourIndex].stepFrames[5].max[0]+=1;},
+        (p:any)=>{p.guidedTours[tourIndex].structures.find((s:any)=>s.id.endsWith(':right-deferent-duct')).fmaId='FMA19236';},
+      ]){const changed=structuredClone(packet);mutate(changed);assert.equal(api.parseBodyReviewResponse(changed,id),null);}
+    }
+    if(tour!==api.orbitalTour&&tour!==api.intrinsicLarynxTour&&tour!==api.maleDuctTour&&['head-neck','pelvis'].includes(tour.region)) {
       const e=packet.guidedTours[tourIndex];
       assert.equal(e.stepFrames.length,5);
       assert.deepEqual(e.bundles.map((b:any)=>b.id).sort(),tour.region==='head-neck'
@@ -159,7 +182,7 @@ test('all fourteen regional tours ship complete source-bound review evidence', a
   }
   const js=learner.files.filter((f:any)=>f.path.endsWith('.js')).map((f:any)=>readFileSync(base+f.path,'utf8')).join('\n');
   for(const region of ['thigh','leg','hand','foot','upper-arm'])assert.ok(js.includes('right-'+region+'-muscle-orientation-v1'));
-  for(const id of ['laryngeal-framework-orientation-v1','male-pelvic-viscera-orientation-v1','right-orbital-muscle-orientation-v1','intrinsic-larynx-muscle-orientation-v1'])assert.ok(js.includes(id));
+  for(const id of ['laryngeal-framework-orientation-v1','male-pelvic-viscera-orientation-v1','right-orbital-muscle-orientation-v1','intrinsic-larynx-muscle-orientation-v1','male-pelvic-duct-landmarks-v1'])assert.ok(js.includes(id));
   for(const label of ['Cervical spine: C1 to T1','cervical-spine-orientation','C7 · Vertebra prominens','Coeliac trunk & branches','celiac-branches-orientation-v2','Right forearm: muscle orientation','right-forearm-muscle-orientation-v1','Pronator quadratus · Distal close-up']) assert.ok(js.includes(label),label);
   assert.ok(readFileSync('atlas-review/app/review/body/review-dashboard.tsx','utf8').includes('{evidence.tour.region} learner'));
   assert.ok(readFileSync('atlas-review/app/review/body/review-dashboard.tsx','utf8').includes('Camera close-up:'));

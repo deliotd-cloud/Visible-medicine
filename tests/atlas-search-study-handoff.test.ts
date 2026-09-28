@@ -9,8 +9,8 @@ test('shared viewer exports the verified unobstructed Search handoff without ana
   const base='public/atlas-runtime/head-neck/';
   const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
   const bytes=readFileSync(base+'manifest.json'),manifest=JSON.parse(bytes.toString());
-  assert.equal(sha(bytes),'ea7436982dbb39432f4ac13c66c969197cf19b80424cfd0c94b27e50a0bbcbe0');
-  assert.equal(manifest.sourceCommit,'8da967df7f4f419014ea03b323d239732a787be1');
+  assert.equal(sha(bytes),'081f2c70fbb0875fa445eb52338c263a585ba91121a87ef2e70900079e0466be');
+  assert.equal(manifest.sourceCommit,'548aa09141cf76c020460cb2580d10b8a6cc057b');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   assert.deepEqual(inputs.filter(i=>i.path==='app/atlas-workspace.tsx'),[{path:'app/atlas-workspace.tsx',sha256:'3492d74682daa945418e97a7e8130cae62907e4c7f67285c99196b329f79b104'}]);
