@@ -33,7 +33,7 @@ export function ShoulderTourPlayer({ index, playing, ready, onStart, onPlayPause
         <span>Step {activeIndex + 1} of {shoulderTour.steps.length}</span>
       </div>
       <p aria-live="polite" aria-atomic="true">{step.caption}</p>
-      <details className="shoulder-tour-evidence">
+      <details className="shoulder-tour-evidence" onToggle={event=>{if(event.currentTarget.open)onReadImaging();}}>
         <summary>References · draft, review pending</summary>
         <ul>{step.references.map(reference => <li key={reference}><a href={reference} target="_blank" rel="noreferrer">Upper limb muscle anatomy reference</a></li>)}</ul>
         <p>Teaching draft. Source surfaces are retained; no injury or scan is simulated.</p>

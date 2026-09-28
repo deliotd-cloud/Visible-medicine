@@ -89,7 +89,7 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit}:{catalog:
       }}>
       <summary>Step explanation & imaging · Draft</summary>
       <p aria-live="polite" aria-atomic="true">{active?step.caption:tour.description}</p>
-      <details><summary>References & limits · Draft, review pending</summary>
+      <details onToggle={event=>{if(event.currentTarget.open){setPlaying(false);setMotionPaused(true);}}}><summary>References & limits · Draft, review pending</summary>
         <p>{tour.limitations??'Selected exterior source surfaces in a common frame. Not a continuous airway lumen, complete bronchial tree or patient scan.'} Exit restores your previous workspace.</p>
         {step.references.map(url=><a key={url} href={url} target="_blank" rel="noreferrer">Anatomy reference ↗</a>)}
       </details>

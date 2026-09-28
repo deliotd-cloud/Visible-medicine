@@ -9,9 +9,9 @@ const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
 
 test('shared Thorax focus discloses compound midline source limits under either side filter',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'081f2c70fbb0875fa445eb52338c263a585ba91121a87ef2e70900079e0466be');
+  assert.equal(sha(manifestBytes),'158054edbf84d7bfd3d36a44d4890ca0f5d469e291a2ae50163fee73af7b156d');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'548aa09141cf76c020460cb2580d10b8a6cc057b');
+  assert.equal(manifest.sourceCommit,'9d32da3550739fc3a7e14f3fb1cbc28c45e9d428');
   for(const flag of ['patientDataIncluded','clinicalApproved','imagingConnection','standaloneReviewConnection'])
     assert.equal(manifest[flag],false,flag);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
@@ -35,7 +35,7 @@ test('shared Thorax focus discloses compound midline source limits under either 
     'Anatomical relationships require revision-bound radiologist review',
   ])assert.ok(runtime.includes(phrase),phrase);
   const inventoryBytes=readFileSync('lib/atlas-model-inventory.json');
-  assert.equal(sha(inventoryBytes),'03a0a7d54dc02e6c9cb18ef81e973ed600f88a1a2635030a399bafa3c5fbd5f3');
+  assert.equal(sha(inventoryBytes),'68973dd7d1d64302ff78804519464904b807bb09f0e3f16dde745cc598152fa5');
   const inventory=JSON.parse(inventoryBytes.toString());
   assert.equal(inventory.sources.find((source:{module:string})=>source.module==='head-neck')?.manifestSha256,sha(manifestBytes));
   assert.equal(inventory.models.length,136);

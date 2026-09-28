@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+28 September: guided-tour reference reading imported locally from Atlas `9d32da3`.
+Shoulder/regional references pause playback and camera motion; closing never
+auto-resumes. All241 tests, types/build and embedded mobile journeys pass.
+Models, teaching, access and decisions unchanged. See
+`docs/tour-reference-reading-delivery-20260928.md` and coordination checkpoint
+for GitHub/D recovery. No publication or clinical approval. Native MRI remains done.
+
 28 September: male pelvic duct landmark tour imported locally from Atlas `548aa09`.
 Six stops using eight source surfaces; two pelvis choices, fifteen regional tours.
 All240 tests, types/build and embedded mobile/review sampling pass. Shared pelvic

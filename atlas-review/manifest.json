@@ -1,5 +1,5 @@
 {
-  "revision": "548aa09141cf76c020460cb2580d10b8a6cc057b",
+  "revision": "9d32da3550739fc3a7e14f3fb1cbc28c45e9d428",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2718,8 +2718,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "af74912870d46c7e56a702a72c5cb68d6a21902abf338007f0aae045e0421bf2",
-      "importedSha256": "c4ed83af3947107f6a6e592ea12ccc6f4f95c9471fb970a6810ce4402ce0130b"
+      "sourceSha256": "610dd9bab4e6807f5478f279130c4587812ef12e056142475867e53087d8c299",
+      "importedSha256": "8eba4eeee5e26eb0a2aeb8fa940af810c78d317505c944d9071a5bb57baefd1a"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3008,8 +3008,8 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sourceSha256": "4a834155e39cb95bc4c0f48524bafd0b09ed5c8e36a2b8b55ab6c466896d3826",
-      "importedSha256": "25964e9e839d48ef534cd85f0c340f61f57cd0b2c3c9857d2f5bf0ce58cd786e"
+      "sourceSha256": "883f77189fe087f3932dea2da617d3adee883b961dc234a6fd37d009eebe1b1a",
+      "importedSha256": "2acdcdb22ee7c7503477968dd1f4de13af5586c41fcb4b3c09e4ff45ee34ce65"
     },
     {
       "path": "app/review/review.css",
@@ -3203,8 +3203,8 @@
     },
     {
       "path": "app/regional-guided-learning.tsx",
-      "sourceSha256": "1c30ad6ce38f1d45d2871ef573ca546bf557eb3396ab6938debbb8f0fe4af1bd",
-      "importedSha256": "3f51ced4d1dfeda6d9eb4c72e433091e2a402097b8fb2ebc3e0770adf240d800"
+      "sourceSha256": "1fdd24ca0a05ea3683ac35790aaab268bfb74c09eb1f769a91fce7552a4aa5c0",
+      "importedSha256": "4c8b4b67d50f802349a332cb507855503a69d6f877785c0119c0e00abadf0f93"
     },
     {
       "path": "lib/renderer-health.ts",
@@ -4293,8 +4293,8 @@
     },
     {
       "path": "app/shoulder-tour-player.tsx",
-      "sourceSha256": "92dfaeba2179daf2e4a6d92290203969dd5842f92e8dfb51b27003b2dbe66de8",
-      "importedSha256": "fbbc80959d78c1262258a9ff1247e2be8ef58b5f71bc65cf2f9d55e2b5b514aa"
+      "sourceSha256": "cb8a94094e8dde630c3bf24e9ae27a18e0239307388fbffd2a81b5e2cf18657e",
+      "importedSha256": "28a103d323f6a751957f3c10b3b568b9e198b993234721d51610d0010ee67166"
     },
     {
       "path": "app/shoulder-tour-player.css",
@@ -4413,5 +4413,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "37287f6e98856dda332052038d8e147e92191d62bf859ecac82722113352ef11"
+  "websiteIntegrationSha256": "3bdce61094a9651964a8205820dc7e9bcad3f206e27f93067434f2eef0d61210"
 }
