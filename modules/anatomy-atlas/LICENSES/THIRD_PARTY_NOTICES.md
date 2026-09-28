@@ -1,5 +1,14 @@
 # Third-party notices
 
+## Shoulder soft-tissue X-ray drafts — 28 September 2026
+
+Original concise factual teaching with links to Texas Tech anatomy, RadiologyInfo
+(ACR/RSNA/ASRT) and AAOS. [References and scope](../docs/SHOULDER_SOFT_TISSUE_XRAY.md).
+These copyrighted reference pages are not imported assets or permissively licensed
+datasets. No source prose, figures, tables, scans, logos or meshes are reproduced;
+no endorsement implied. Existing project terms remain; no new dependency, paid
+service or mandatory fee is introduced. Clinical approval remains pending.
+
 ## Small-intestinal mesentery MRI draft — 26 September 2026
 
 Pierro A et al. (2023), *Small Bowel Imaging … Part I*, Life 13(8):1691,

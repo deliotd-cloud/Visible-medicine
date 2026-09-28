@@ -267,7 +267,7 @@
     "app/nested-teaching.css": "d912bfc774cc744511a4c0e87a0a35f6b693def9f4bddc25b6f010f07dfa83bc",
     "package-lock.json": "7143e44eb0cb9e11c3f42c4a66d7bdef6f5c89334378d6cc23dcb37f43a1f350",
     "content/schema/anatomy-structure.schema.json": "b29bda2931faaa47bb7747f07a46520b65d7e4847ce65b5df29dd008a90de95c",
-    "content/review-revisions.json": "3e31f6ce492f4f8ca587b36a9df04a926c87beec710e747df58932fd0d48a3f9",
+    "content/review-revisions.json": "52c6ebe8633eb8bdc745feb0e63054da2cdb96fb7772d28103e38673fdb2c1cd",
     "content/learning-resources.v1.json": "799fec602114a944b4f675d341b445982dac56786cca9b5800d52db7d95899e5",
     "lib/learning-resource-types.ts": "c08858a0b3bdcc0467d815d71a129428c3b311c1eaf318a544e1f091b1833778",
     "lib/learning-resources.ts": "e2e191c19df1f7bfebd31d429c6320430845d145ac1f9c604a011827eb482da4",
@@ -357,7 +357,7 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "9fefea94a9c9a192cb5bf57cbe1ec4aba62d684e4f40ce371d291fd374e7b984",
+    "resolvedContentAndRecipeData": "26bef5ca178e736bd60c3ac8cd54956159c113c2b987291ed17e62c7624aa943",
     "explicitTopicReadiness": "6b4b98f4347ea5833fc094dd342d19c0daeba918d47fbff6e7389f04c3fcf07b",
     "reasoningQuestionData": "379e5c6302a2d098162cb6c7cb7deeaec508636aae7972ae60c8af00f2518d3c",
     "guidedLearningData": "577a70d083fc2cdf5c4fcd4dcf4229030434168961a1005a9cb86073ba290409",
@@ -2002,9 +2002,9 @@
         "generatedIdentification": 0
       },
       "xray": {
-        "specificDraft": 3,
+        "specificDraft": 9,
         "identityOnly": 0,
-        "pending": 6,
+        "pending": 0,
         "generatedIdentification": 0
       },
       "ultrasound": {

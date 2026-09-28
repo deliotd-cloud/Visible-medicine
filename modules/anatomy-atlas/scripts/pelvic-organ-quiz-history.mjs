@@ -2,10 +2,12 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
+import {shoulderBeforeSoftTissueXray} from './shoulder-soft-tissue-xray-history.mjs';
 import pins from '../content/pelvic-organ-quiz-pins.json' with {type:'json'};
 import transition from '../content/pelvic-organ-quiz-transition.json' with {type:'json'};
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 export function beforePelvicOrganQuiz(api){
+ if (api.structures) api = {...api, structures: shoulderBeforeSoftTissueXray(api.structures)};
  if(typeof api.bodyLesson!=='function')return api;
  if(typeof api.bodyDisplayCatalog!=='function'&&pins.entries.every(e=>api.bodyLesson(e.identity,'quiz')===undefined))return api;
  assert.equal(hash(pins),'953dec1a76e482cc5f6638d982ad5b091bfe436354a8172e1797ab0697d404fe');

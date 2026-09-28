@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "shoulder-soft-tissue-xray:test": "node --import tsx --test scripts/test-shoulder-soft-tissue-xray.mjs",
     "clinical-review:test": "node scripts/test-clinical-review-index.mjs && node scripts/test-clinical-review-page.mjs && node scripts/test-clinical-review-queue.mjs && node scripts/test-clinical-review-results.mjs && node scripts/test-review-sign-in.mjs && node scripts/test-review-history-races.mjs",
     "lateral-cricoarytenoid-us:test": "node scripts/validate-lateral-cricoarytenoid-us.mjs",
     "plantar-arterial-us:test": "node scripts/validate-plantar-arterial-us.mjs",

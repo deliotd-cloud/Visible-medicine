@@ -6,6 +6,7 @@ import { quizQuestions } from '../app/anatomy-data.ts';
 import { authoringBeforeSpineImaging } from './spine-imaging-history.mjs';
 import transition from '../content/xray-transition.json' with { type: 'json' };
 import { beforeRegionalQuickCheckKeys } from './regional-quick-check-history.mjs';
+import { shoulderBeforeSoftTissueXray } from './shoulder-soft-tissue-xray-history.mjs';
 const hash = (v) => createHash('sha256').update(v).digest('hex');
 const encode = (v) => JSON.stringify(v, null, 2) + '\n';
 const withoutQuickCheckKeys = (structures) => structuredClone(structures).map(s => {
@@ -62,7 +63,7 @@ export async function reviewDocumentBeforeXray(
 ) {
   revisions = await reviewDocumentBeforeModelDelivery(revisions, manifest, structures);
   // That pinned historical checkpoint predates explicit quick-check answer keys.
-  structures = withoutQuickCheckKeys(structures);
+  structures = withoutQuickCheckKeys(shoulderBeforeSoftTissueXray(structures));
   assert.equal(
     hash(encode(revisions)),
     transition.afterReviewHash,

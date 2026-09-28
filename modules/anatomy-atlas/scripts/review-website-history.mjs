@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { quizQuestions } from '../app/anatomy-data.ts';
+import { shoulderBeforeSoftTissueXray } from './shoulder-soft-tissue-xray-history.mjs';
 import snapshot from './fixtures/review-display-before-website-pilot.json' with { type: 'json' };
 import {
   currentReviewDocument,
@@ -39,7 +40,7 @@ export async function reviewDocumentBeforeWebsitePilot(
   assert.deepEqual(previous.display, snapshot.display);
   // Explicit migration: only the newly keyed quick-check fields may differ.
   // Every older prompt, option, teaching field, mesh and identity stays pinned.
-  const priorStructures = structuredClone(structures);
+  const priorStructures = shoulderBeforeSoftTissueXray(structures);
   for (const structure of priorStructures) {
     const quiz = structure.sections.quiz;
     assert.equal(quiz.bullets?.filter(choice => choice === quiz.correctAnswer).length, 1);

@@ -157,7 +157,7 @@
       "status": "draft",
       "clinicalApproval": "not-included",
       "materialRevisions": {
-        "geometry": "b65371a69a1a3d52e96b5a7a916375c5742f92c32b56123bc0ab379ea17e9d3c",
+        "geometry": "80af238ccd51f316a222124f69319a365e9980577ad41c8edadb6767f142b39f",
         "teaching": "7b9dfb26d73375a22ed0f55e076bb4a45abf807acdcdfe53d43cf7bf2fee78d2",
         "imaging": null
       }
@@ -306,7 +306,7 @@
       "status": "draft",
       "clinicalApproval": "not-included",
       "materialRevisions": {
-        "geometry": "f3859587d8ed372f76375b362fff5ea361600f94908e2e883957905cc95b7c0e",
+        "geometry": "ee71a3bdfb1c24be4ba16b67f4ca737e28b25189be5ee39815c789e4114742f5",
         "teaching": "783843c2a27f70015c324a11cec92fda16657dadc1798553233418838acf0050",
         "imaging": null
       }
@@ -455,7 +455,7 @@
       "status": "draft",
       "clinicalApproval": "not-included",
       "materialRevisions": {
-        "geometry": "3e94c7da183e747d768b28631f5f1035ad952f3ca5ad6695f7477cc40ed38399",
+        "geometry": "ae5261d8670beb996fc8f7c8b236997e6dffc15bee12ff308ee15233b5e2b8d4",
         "teaching": "74b788a672949f4f3107273754d51daf8d9aaa35553612ab88de6ed27c2d420d",
         "imaging": null
       }
@@ -582,10 +582,19 @@
         "readiness": "draft"
       },
       "xray": {
-        "readiness": "pending",
-        "title": "X-ray teaching pending",
-        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
-        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        "title": "Deltoid · X-ray landmarks and limits",
+        "readiness": "draft",
+        "body": "Relate the clavicle, acromion and scapular spine to the deltoid origin; its humeral attachment is farther down the shaft.",
+        "bullets": [
+          "The dedicated shoulder crop is not evidence of the complete distal attachment. A soft-tissue outline does not resolve the three deltoid portions or establish muscle integrity.",
+          "Radiographs provide limited soft-tissue detail. Use the MRI and Ultrasound teaching tabs for complementary context, not as proof that a patient study is linked.",
+          "Return explode to zero and keep bones visible for orientation. Camera rotation is not a radiographic projection; no detector geometry or measured patient relationship is supplied."
+        ],
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html",
+          "https://www.radiologyinfo.org/en/info/bonerad"
+        ],
+        "note": "Original teaching draft; radiologist sign-off pending. No source image or prose is reproduced. No patient scan, registration or acquisition recommendation is provided. Atlas, imaging-case and lecture access remain independent."
       },
       "ultrasound": {
         "title": "Ultrasound appearance",
@@ -628,8 +637,8 @@
       "status": "draft",
       "clinicalApproval": "not-included",
       "materialRevisions": {
-        "geometry": "c094a74457b1a7621388f192ff2a32c1f6f79741bd35d7922601e6b91e6bac05",
-        "teaching": "0035dd024a9d32462c1cde9c437472cd3cb5f98f12080c5c7167d88c261ec303",
+        "geometry": "b186bf8d0582e471a97b647e4c6a0cb4fec75f68be8e51c38801cba8ac4851fb",
+        "teaching": "fed81df216de24bf3785e2da2b27fcdec3251160ea19a4686cc9c8d68e565fb9",
         "imaging": null
       }
     }
@@ -721,10 +730,20 @@
         "readiness": "draft"
       },
       "xray": {
-        "readiness": "pending",
-        "title": "X-ray teaching pending",
-        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
-        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        "title": "Supraspinatus · X-ray landmarks and limits",
+        "readiness": "draft",
+        "body": "Use the supraspinous fossa and superior greater-tubercle attachment to orient this upper cuff component.",
+        "bullets": [
+          "Bony appearance alone does not establish whether this tendon is intact. A normal radiograph does not exclude a cuff tear.",
+          "MRI or ultrasound can assess cuff soft tissues. Neither a normal X-ray nor an intact atlas surface establishes a normal tendon.",
+          "Return explode to zero and keep bones visible for orientation. Camera rotation is not a radiographic projection; no detector geometry or measured patient relationship is supplied."
+        ],
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html",
+          "https://www.radiologyinfo.org/en/info/bonerad",
+          "https://www.orthoinfo.org/diseases--conditions/rotator-cuff-tears/"
+        ],
+        "note": "Original teaching draft; radiologist sign-off pending. No source image or prose is reproduced. No patient scan, registration or acquisition recommendation is provided. Atlas, imaging-case and lecture access remain independent."
       },
       "ultrasound": {
         "title": "Ultrasound appearance",
@@ -767,8 +786,8 @@
       "status": "draft",
       "clinicalApproval": "not-included",
       "materialRevisions": {
-        "geometry": "06db57e2efe3adb2accf26694f69102dbb62bd31cfc9648cdde039305a3dd0b9",
-        "teaching": "b4842e5ec95c9fc4e39d26acc7b757e3ef6187cdbf6ce811958ecef03a04a165",
+        "geometry": "61fb4fe25577dd84b43358c619756f6e8da2cf41550b715cde4cfd99e8ce4eda",
+        "teaching": "9e4ed5c712e05411d574a74b043254fc2e2cf72251b1499f7ecb0bb4a7aa2556",
         "imaging": null
       }
     }
@@ -860,10 +879,20 @@
         "readiness": "draft"
       },
       "xray": {
-        "readiness": "pending",
-        "title": "X-ray teaching pending",
-        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
-        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        "title": "Infraspinatus · X-ray landmarks and limits",
+        "readiness": "draft",
+        "body": "Identify the scapular spine, then relate the muscle below it to the middle facet of the greater tubercle.",
+        "bullets": [
+          "Do not label the posterior cuff from an overlapping bony projection alone. Radiography cannot directly establish this tendon’s continuity.",
+          "MRI or ultrasound can assess cuff soft tissues. Neither a normal X-ray nor an intact atlas surface establishes a normal tendon.",
+          "Return explode to zero and keep bones visible for orientation. Camera rotation is not a radiographic projection; no detector geometry or measured patient relationship is supplied."
+        ],
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html",
+          "https://www.radiologyinfo.org/en/info/bonerad",
+          "https://www.orthoinfo.org/diseases--conditions/rotator-cuff-tears/"
+        ],
+        "note": "Original teaching draft; radiologist sign-off pending. No source image or prose is reproduced. No patient scan, registration or acquisition recommendation is provided. Atlas, imaging-case and lecture access remain independent."
       },
       "ultrasound": {
         "title": "Ultrasound appearance",
@@ -906,8 +935,8 @@
       "status": "draft",
       "clinicalApproval": "not-included",
       "materialRevisions": {
-        "geometry": "b29e94a8800bbe69a22777ab834b17f6a31d049d15481e32ee8cd52326a96695",
-        "teaching": "3bede170e06447b07849d8c2afddc1958dc5e65790e13d0cb53e19aa695f3891",
+        "geometry": "ab006d3fb78d8b8c31008167ff5e8c447b37672ced3bd5cdb0e46df38937440c",
+        "teaching": "85a88631804ff10313349ca0da2a71e6e635d6603d122fccc662132d50f233ec",
         "imaging": null
       }
     }
@@ -999,10 +1028,20 @@
         "readiness": "draft"
       },
       "xray": {
-        "readiness": "pending",
-        "title": "X-ray teaching pending",
-        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
-        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        "title": "Subscapularis · X-ray landmarks and limits",
+        "readiness": "draft",
+        "body": "Relate the anterior scapular surface to the lesser tubercle, rather than the greater-tubercle attachment of the other cuff muscles.",
+        "bullets": [
+          "Seeing the lesser tubercle does not prove that its tendon attachment is intact. The isolated coloured surface is not an X-ray silhouette.",
+          "MRI or ultrasound can assess cuff soft tissues. Neither a normal X-ray nor an intact atlas surface establishes a normal tendon.",
+          "Return explode to zero and keep bones visible for orientation. Camera rotation is not a radiographic projection; no detector geometry or measured patient relationship is supplied."
+        ],
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html",
+          "https://www.radiologyinfo.org/en/info/bonerad",
+          "https://www.orthoinfo.org/diseases--conditions/rotator-cuff-tears/"
+        ],
+        "note": "Original teaching draft; radiologist sign-off pending. No source image or prose is reproduced. No patient scan, registration or acquisition recommendation is provided. Atlas, imaging-case and lecture access remain independent."
       },
       "ultrasound": {
         "title": "Ultrasound appearance",
@@ -1045,8 +1084,8 @@
       "status": "draft",
       "clinicalApproval": "not-included",
       "materialRevisions": {
-        "geometry": "d7c7fe205017e0f501227bd62bb20ae877361473d42b5dae550548256c2cf8d6",
-        "teaching": "5ca78d12f58c4f989915233eb31e2b6a570d97b8df22c5f8346a6605fc985231",
+        "geometry": "c57f3676d74b9bffc8bd736fbd821a17a5725c1bda57f4fa46e83e5b912eff90",
+        "teaching": "7f3fcb4ba2411ccd218c1701edac451c2c743c4ef02f140455e8a6b307ceb26a",
         "imaging": null
       }
     }
@@ -1140,10 +1179,20 @@
         "readiness": "draft"
       },
       "xray": {
-        "readiness": "pending",
-        "title": "X-ray teaching pending",
-        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
-        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        "title": "Biceps · long head · X-ray landmarks and limits",
+        "readiness": "draft",
+        "body": "Use the supraglenoid origin as an anatomical landmark; do not confuse it with the short head’s coracoid origin.",
+        "bullets": [
+          "Plain radiographs cannot directly show a long-head biceps tear. They can help assess alternative bony causes of shoulder pain; tendon assessment requires other evidence.",
+          "Radiographs provide limited soft-tissue detail. Use the MRI and Ultrasound teaching tabs for complementary context, not as proof that a patient study is linked.",
+          "Return explode to zero and keep bones visible for orientation. Camera rotation is not a radiographic projection; no detector geometry or measured patient relationship is supplied."
+        ],
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html",
+          "https://www.radiologyinfo.org/en/info/bonerad",
+          "https://www.orthoinfo.org/diseases--conditions/biceps-tendon-tear-at-the-shoulder/"
+        ],
+        "note": "Original teaching draft; radiologist sign-off pending. No source image or prose is reproduced. No patient scan, registration or acquisition recommendation is provided. Atlas, imaging-case and lecture access remain independent."
       },
       "ultrasound": {
         "title": "Ultrasound appearance",
@@ -1186,8 +1235,8 @@
       "status": "draft",
       "clinicalApproval": "not-included",
       "materialRevisions": {
-        "geometry": "085eab842809210e99f5fad2ed2e6ad39659858ea60f6daa14ac1d480dd942c1",
-        "teaching": "19ca5976fea94f95c871b6025a45c0d56a7485079cd73f2ff4b3aceae249146d",
+        "geometry": "dfa0abef09be42474fc98a932a590fa521a69133e0279b7f9f783a62929f7240",
+        "teaching": "e26ab75a389bc428ec57ebdbe84cb6580f206f0c30be3195058b09a50e06d722",
         "imaging": null
       }
     }
@@ -1279,10 +1328,20 @@
         "readiness": "draft"
       },
       "xray": {
-        "readiness": "pending",
-        "title": "X-ray teaching pending",
-        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
-        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        "title": "Teres minor · X-ray landmarks and limits",
+        "readiness": "draft",
+        "body": "Relate the lateral scapular border to the inferior facet of the greater tubercle, below the infraspinatus attachment.",
+        "bullets": [
+          "An overlapping radiographic projection cannot separate this small cuff muscle from infraspinatus or establish muscle quality.",
+          "MRI or ultrasound can assess cuff soft tissues. Neither a normal X-ray nor an intact atlas surface establishes a normal tendon.",
+          "Return explode to zero and keep bones visible for orientation. Camera rotation is not a radiographic projection; no detector geometry or measured patient relationship is supplied."
+        ],
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html",
+          "https://www.radiologyinfo.org/en/info/bonerad",
+          "https://www.orthoinfo.org/diseases--conditions/rotator-cuff-tears/"
+        ],
+        "note": "Original teaching draft; radiologist sign-off pending. No source image or prose is reproduced. No patient scan, registration or acquisition recommendation is provided. Atlas, imaging-case and lecture access remain independent."
       },
       "ultrasound": {
         "title": "Ultrasound assessment",
@@ -1325,8 +1384,8 @@
       "status": "draft",
       "clinicalApproval": "not-included",
       "materialRevisions": {
-        "geometry": "763c867895880fefdf1fccd734161a8ba450c5683a9e78e554b4ae08ddb9cdf8",
-        "teaching": "b86d5b3cda0c3f7a7c89549924e5cc7682fc6eeb7f9180cfe417590e45e2c11a",
+        "geometry": "3d0f026895d50b52cd9052f46ee512eccab2342821fb54c94ffe8c6240328961",
+        "teaching": "bf099a89286eb8689130b43d3b6989ff19919d41c770d1ab752a699866a85a52",
         "imaging": null
       }
     }

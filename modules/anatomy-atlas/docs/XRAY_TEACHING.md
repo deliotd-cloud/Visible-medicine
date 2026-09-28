@@ -2,6 +2,11 @@
 
 ## Use and scope
 
+28 September: [six shoulder soft-tissue drafts](SHOULDER_SOFT_TISSUE_XRAY.md)
+fill the dedicated shoulder's previously pending muscle/tendon X-ray tabs.
+All nine shoulder selections now have introductory drafts; root-body and nested
+coverage are unchanged by this addition. Historical counts below are not current.
+
 Current coverage is reported in [the generated inventory](CURRENT_STATUS.md#body-teaching-readiness). The original shoulder/spine implementation totals below describe their historical milestones. Subsequent wrist, tarsal and [limb-bone teaching](LIMB_BONE_IMAGING.md) extend those notes; historical counts must not be used as current totals.
 
 Select a structure, then **Imaging → X-ray**. The three top-level information groups remain unchanged; imaging choices can wrap on narrow panels. The collapsed internal-study panel also offers X-ray, explicitly pending for every current part.

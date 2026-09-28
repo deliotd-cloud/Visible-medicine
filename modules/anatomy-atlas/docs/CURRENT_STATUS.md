@@ -63,7 +63,7 @@ These representations overlap root-body anatomy. Shared text and introductory qu
 | Function | 9 | 0 | 0 | 0 |
 | CT | 9 | 0 | 0 | 0 |
 | MRI | 9 | 0 | 0 | 0 |
-| X-ray | 3 | 0 | 6 | 0 |
+| X-ray | 9 | 0 | 0 | 0 |
 | Ultrasound | 9 | 0 | 0 | 0 |
 | Pathology | 9 | 0 | 0 | 0 |
 | Clinical | 9 | 0 | 0 | 0 |
