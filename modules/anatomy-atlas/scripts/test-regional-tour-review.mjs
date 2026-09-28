@@ -1,9 +1,16 @@
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
+import {readFileSync} from 'node:fs';
 import {build} from './workspace-test-build.mjs';
 const compile=async contents=>{const r=await build({stdin:{contents,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});return import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64'));};
 const api=await compile(`export * from './lib/regional-tours';export * from './lib/body-review-material';export * from './lib/body-review-context';export * from './lib/body-review-response';export * from './lib/body-review-decisions';import raw from './public/models/bodyparts3d/full-body/catalog.json';import {bodyDisplayCatalog} from './lib/body-display-catalog';export const catalog=bodyDisplayCatalog(raw as any);`);
+// Keep all twelve pre-orbit definitions/context/captions unchanged, including
+// the imported chest-wall definition. This comparison is not a clinical gate.
+const parent='d3d3a750db64c6d10bad1632d68151c871cc8b96';
+assert.equal(readFileSync('lib/chest-wall-tour.ts','utf8').replace(/\r/g,''),execFileSync('git',['show',parent+':lib/chest-wall-tour.ts'],{encoding:'utf8'}).replace(/\r/g,''));
+const priorTours=await compile(execFileSync('git',['show',parent+':lib/regional-tours.ts'],{encoding:'utf8'}).replaceAll("from './","from './lib/"));
+assert.deepEqual(api.regionalTours.filter(t=>t.id!==api.orbitalTour.id),priorTours.regionalTours);
 const oldParser=await compile(execFileSync('git',['show','6b1539f:lib/body-review-response.ts'],{encoding:'utf8'}).replaceAll("from './","from './lib/"));
 const canonical=v=>Array.isArray(v)?'['+v.map(canonical).join(',')+']':v&&typeof v==='object'?'{'+Object.keys(v).sort().map(k=>JSON.stringify(k)+':'+canonical(v[k])).join(',')+'}':JSON.stringify(v);
 const digest=v=>createHash('sha256').update(canonical(JSON.parse(JSON.stringify(v)))).digest('hex');
@@ -70,7 +77,24 @@ for(const s of api.catalog.structures){
  }else{assert.equal(m.guidedTours.length,0);assert.equal(m.fingerprints.teaching,previous,'Unrelated teaching history retained');assert(!c.checklists.teaching.some(v=>v.id==='guided-tour'));}
  assert.equal(c.revisions.imaging,null);
 }
-assert.equal(api.catalog.structures.length,1104);assert.equal(checked,88);assert.equal(api.regionalTours.length,12);
+assert.equal(api.catalog.structures.length,1104);assert.equal(checked,95);assert.equal(api.regionalTours.length,13);
+const orbitalStructures=api.regionalTourStructures(api.catalog,api.orbitalTour);
+assert.equal(orbitalStructures.length,7);assert.equal(api.regionalToursFor('head-neck').length,2);
+let orbitalRejected=0;
+for(const structure of orbitalStructures){
+ const packet=await api.bodyReviewMaterial(structure.id);
+ assert.equal(packet.approval,false);assert.equal(packet.guidedTours.length,1);
+ assert.deepEqual(packet.guidedTours,api.regionalTourEvidence(api.catalog,structure.id));
+ assert.equal(packet.guidedTours[0].stepFrames.length,6);
+ for(const mutate of [
+  p=>p.guidedTours[0].tour.steps.reverse(),p=>p.guidedTours[0].tour.contextIds=[],
+  p=>delete p.guidedTours[0].tour.requiredDisplayBundles,
+  p=>p.guidedTours[0].stepFrames[0].min[0]-=1,
+  p=>p.guidedTours[0].tour.steps[0].caption+=' changed',
+  p=>p.guidedTours[0].structures.find(s=>s.id!==structure.id).sources[0].sha256='0'.repeat(64),
+ ]){const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,structure.id),null);orbitalRejected++;}
+}
+assert.equal(orbitalRejected,42);
 const chestStructures=api.regionalTourStructures(api.catalog,api.chestWallTour);
 assert.equal(chestStructures.length,9);assert.equal(api.regionalToursFor('thorax').length,2);
 assert.equal(api.regionalTourFor('thorax').id,api.thoraxTour.id,'The original airway tour remains the regional default');

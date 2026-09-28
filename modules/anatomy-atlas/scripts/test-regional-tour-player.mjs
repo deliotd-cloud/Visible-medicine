@@ -10,7 +10,7 @@ const require = createRequire(import.meta.url), React = require('react');
 const catalog = JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json', import.meta.url), 'utf8'));
 const catalogBefore = JSON.stringify(catalog);
 const built = await build({ stdin: {
-  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, chestWallTour, cervicalSpineTour, celiacTour, forearmTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
+  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, chestWallTour, orbitalTour, cervicalSpineTour, celiacTour, forearmTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
   loader: 'tsx', resolveDir: process.cwd(),
 }, bundle: true, write: false, format: 'cjs', platform: 'node', loader: { '.css': 'empty' }, plugins: [{ name: 'gpu-boundary', setup(api) {
   api.onLoad({ filter: /[\\/]app[\\/]body-scene\.tsx$/ }, () => ({ loader: 'tsx', contents: 'export function BodyScene(){return null;}' }));
@@ -311,6 +311,22 @@ test('Chest-wall tour rejects every missing target or context source',()=>{
     assert.equal(nodes(h.tree()).filter(n=>n.type==='BodyScene').length,0);
     assert(h.button('Start guided tour').disabled);h.click('Exit tour');assert.equal(h.exits(),1);
   }
+});
+
+test('Orbital tour uses corrected globe context, six close-up targets and safe finish',()=>{
+ const h=harness(catalog,'orbitalTour',true);assert.equal(h.props.tour.steps.length,6);
+ assert.equal(h.scene().structures.length,7);h.ready();h.click('Start guided tour');
+ for(let i=0;i<6;i++){
+  assert.equal(h.scene().selectedId,h.props.tour.steps[i].selectedId);
+  assert.deepEqual(h.scene().presetBounds,h.api.regionalTourFrame(h.props.catalog,h.props.tour,i));
+  assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);
+  assert.equal(h.scene().structures.find(s=>s.id===h.props.tour.contextIds[0]).bundle,'eye-corrected-parent');
+  if(i<5)h.click('Next');
+ }
+ h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
+ const missing=harness(catalog,'orbitalTour',true,h.props.tour.contextIds[0]);
+ assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);
+ assert(missing.button('Start guided tour').disabled);missing.click('Exit tour');assert.equal(missing.exits(),1);
 });
 
 test('Hidden tabs and renderer/load failure pause, never auto-resume, and keep Exit enabled', () => {
