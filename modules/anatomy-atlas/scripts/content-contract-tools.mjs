@@ -27,6 +27,7 @@ export * from './lib/circle-willis-imaging.ts';
 export * from './lib/thoracic-quiz.ts';
 export * from './lib/cervical-quiz.ts';
 export * from './lib/abdominal-organ-quiz.ts';
+export * from './lib/pelvic-organ-quiz.ts';
 export * from './lib/shoulder-arterial-ct.ts';
 export * from './lib/body-review-material.ts';
 export * from './lib/hilar-vessel-xray.ts';
