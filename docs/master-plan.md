@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+29 September: review models now return to the exact originating worksheet,
+including independent specimen close controls. Complete source-bound query
+matching and same-origin fallback preserve review context without changing
+approvals or access. All 1,575 selections round-trip; 255 tests, types/build and
+actual mobile body/specimen return checks pass. Models and fracture work
+preserved; no publication. See `docs/review-return-20260929.md` and coordination
+recovery checkpoint. Native MRI remains done.
+
 29 September: brain connections quick checks imported locally from Atlas
 `e1ad6b0`. Six referenced questions reach eight existing brain selections in
 learner Quiz notes and protected Clinical Review, without extra controls.

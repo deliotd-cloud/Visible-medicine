@@ -1,6 +1,6 @@
 {
   "sourceCommit": "e1ad6b0c2aa62cb0f719ef666d559ec0bc8c9eed",
-  "sha256": "74c4e812b625fdd7d2517446fb2275ea42a6b85ed87224002db4b166e2f508c2",
+  "sha256": "ab93d781c2bae2b3126d894ca7ff2f8d7bbe32d7f1147445a08740b8367b21ce",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -12,7 +12,7 @@
     },
     {
       "path": "app/workspace/atlas-review/model/page.tsx",
-      "sha256": "edf56a8ed55598b0bb63e715c3cd3df06fd685d59e59f40b4990936f0a2cd901"
+      "sha256": "32a84070d907f4b971bdfffbc4474b3f0cf1a22729899196c57e91dc6b8f9234"
     },
     {
       "path": "app/workspace/atlas-review/nested/page.tsx",
@@ -3571,12 +3571,16 @@
       "sha256": "fc209912445085f72d75aee3aaa62cfce7432fd5e66a57bb79c14b807a80969d"
     },
     {
+      "path": "lib/clinical-review-return.ts",
+      "sha256": "6d70de16d140d54717741c1cb6638f274fd8ce10578ca50832c81f446e9b0d50"
+    },
+    {
       "path": "package-lock.json",
       "sha256": "da6513ef764b1291e1bc87ebd50184971ebe7ffe44be24e9753e8071fe297b68"
     },
     {
       "path": "scripts/bind-clinical-review.mjs",
-      "sha256": "0cb9fad7dda927b7afb5f050acf79d8d0f76d5c0977ed3ed01c3b2a48b99cae0"
+      "sha256": "a767e5f655cd55a12b4720ade56ac7b8be3ee2ae200cb5f7471da2f37d6f98ab"
     },
     {
       "path": "scripts/build-clinical-review-viewer.mjs",
@@ -3592,7 +3596,11 @@
     },
     {
       "path": "scripts/clinical-review-viewer/main.tsx",
-      "sha256": "29a2d7cb2e71707db1bbb088beaeb32022d8f5d1dd15da8b5ba655dcd14cf40a"
+      "sha256": "f58a60aba54424a812feb89b69d01387c67f08cd5ee147806d68dfcf9edcdcc9"
+    },
+    {
+      "path": "scripts/clinical-review-viewer/review-return.ts",
+      "sha256": "2091a3a268d9649662e945b9d0d6420fd0871002ec6c3affbe52362f6a1d7975"
     },
     {
       "path": "scripts/import-clinical-review.mjs",

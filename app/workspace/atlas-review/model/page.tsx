@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { dissectionProfiles } from '@/atlas-review/app/dissection-data';
+import { clinicalReviewReturn } from '../../../../lib/clinical-review-return';
 export const dynamic = 'force-dynamic';
 export default async function ReviewModel({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const params = await searchParams;
@@ -14,6 +15,7 @@ export default async function ReviewModel({ searchParams }: { searchParams: Prom
     query.set(key, value);
   }
   query.set('kind', kind); query.set('region', region);
-  return <><nav className="review-model-bar" aria-label="Review model navigation"><a href="/workspace/atlas-review">← Clinical Review</a><span>Review-linked model</span></nav>
+  const back = await clinicalReviewReturn(Object.fromEntries(query));
+  return <><nav className="review-model-bar" aria-label="Review model navigation"><a data-review-return href={back.href} title={back.name ? `Return to ${back.name} review` : undefined}>{back.name ? '← Back to worksheet' : '← Clinical Review'}</a><span>Review-linked model</span></nav>
     <iframe className="review-model-frame" title="Clinical Review anatomy model" src={'/atlas-review-viewer/index.html?' + query.toString()} allowFullScreen /></>;
 }

@@ -5,7 +5,7 @@ import { createHash } from 'node:crypto';
 const sha = value => createHash('sha256').update(value).digest('hex');
 const manifest = JSON.parse(readFileSync('atlas-review/manifest.json'));
 const revisionPaths = ['content/body-renderer-revision.json','content/review-revisions.json'];
-const adapterPaths = ['scripts/import-clinical-review.mjs','scripts/build-clinical-review-viewer.mjs','scripts/bind-clinical-review.mjs','lib/clinical-review-links.ts','lib/clinical-review-fetch.ts','components/review-ui-variants.css','package-lock.json',
+const adapterPaths = ['scripts/import-clinical-review.mjs','scripts/build-clinical-review-viewer.mjs','scripts/bind-clinical-review.mjs','lib/clinical-review-links.ts','lib/clinical-review-return.ts','lib/clinical-review-fetch.ts','components/review-ui-variants.css','package-lock.json',
   ...readdirSync('scripts/clinical-review-viewer').map(p=>'scripts/clinical-review-viewer/'+p),
   ...readdirSync('app/workspace/atlas-review',{recursive:true}).filter(p=>/\.(tsx|css)$/.test(p)).map(p=>'app/workspace/atlas-review/'+p.replaceAll('\\','/'))];
 const inputs = [...manifest.files.filter(f=>!revisionPaths.includes(f.path)).map(f=>({path:'atlas-review/'+f.path,sha256:sha(readFileSync('atlas-review/'+f.path))})),

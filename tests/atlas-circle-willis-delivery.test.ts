@@ -31,5 +31,5 @@ test('regional and whole-body export delivers source-bound Circle of Willis draf
   }
   // The protected review export is separately built/bound, including the compact-controls update.
   const review = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
-  assert.equal(review.websiteIntegrationSha256, '74c4e812b625fdd7d2517446fb2275ea42a6b85ed87224002db4b166e2f508c2');
+  assert.equal(review.websiteIntegrationSha256, 'ab93d781c2bae2b3126d894ca7ff2f8d7bbe32d7f1147445a08740b8367b21ce');
 });
