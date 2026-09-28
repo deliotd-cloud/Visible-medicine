@@ -50,5 +50,5 @@ for(const [index,step] of api.shoulderTour.steps.entries()){
  for(const l of notes.props.lessons){assert.deepEqual(plain(l.content),plain(structure.sections[l.id]));count++;}
  notes.props.onOpen();
 }
-assert.equal(opened,6);assert.equal(count,248);
+assert.equal(opened,6);assert.equal(count,272);
 console.log(JSON.stringify({passed:true,sourceBoundModalityLessons:count,openPauseCallback:true,missingAndPending:true,safeReferences:true,noPatientImages:true}));

@@ -10,7 +10,7 @@ const require = createRequire(import.meta.url), React = require('react');
 const catalog = JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json', import.meta.url), 'utf8'));
 const catalogBefore = JSON.stringify(catalog);
 const built = await build({ stdin: {
-  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, cervicalSpineTour, celiacTour, forearmTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
+  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, chestWallTour, cervicalSpineTour, celiacTour, forearmTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
   loader: 'tsx', resolveDir: process.cwd(),
 }, bundle: true, write: false, format: 'cjs', platform: 'node', loader: { '.css': 'empty' }, plugins: [{ name: 'gpu-boundary', setup(api) {
   api.onLoad({ filter: /[\\/]app[\\/]body-scene\.tsx$/ }, () => ({ loader: 'tsx', contents: 'export function BodyScene(){return null;}' }));
@@ -287,6 +287,30 @@ test('Manual step bounds, autoplay pause/resume and final hold use actual callba
   assert.equal(h.scene().reset, 5); assert.equal(h.exits(), 0, 'Autoplay never exits automatically');
   h.click('Finish'); assert.equal(h.exits(), 1); assert.equal(h.scene().selectedId, final, 'Finish does not advance beyond sequence');
   h.unchanged();
+});
+
+test('Chest-wall tour uses six exact sources, smooth per-step frames and final hold',()=>{
+  const h=harness(catalog,'chestWallTour',true);
+  assert.equal(h.props.tour.steps.length,6);assert(h.button('Start guided tour').disabled);
+  h.ready();h.click('Start guided tour');h.click('Play');
+  for(let i=0;i<6;i++){
+    const step=h.props.tour.steps[i],scene=h.scene();
+    assert.equal(scene.selectedId,step.selectedId);assert.equal(scene.explode,0);
+    assert.equal(scene.transitionMs,1800);assert.equal(scene.isolated,true);
+    assert.deepEqual(plain(scene.presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,i)));
+    h.tick();
+  }
+  assert.equal(h.timers.size,0);assert.equal(h.scene().reset,5);
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
+});
+
+test('Chest-wall tour rejects every missing target or context source',()=>{
+  const initial=harness(catalog,'chestWallTour');
+  for(const id of [...initial.props.tour.contextIds,...initial.props.tour.steps.map(s=>s.selectedId)]){
+    const h=harness(catalog,'chestWallTour',true,id);
+    assert.equal(nodes(h.tree()).filter(n=>n.type==='BodyScene').length,0);
+    assert(h.button('Start guided tour').disabled);h.click('Exit tour');assert.equal(h.exits(),1);
+  }
 });
 
 test('Hidden tabs and renderer/load failure pause, never auto-resume, and keep Exit enabled', () => {

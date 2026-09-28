@@ -11,7 +11,7 @@ import { lastSingleRemoval } from '@/lib/contextual-dissection-undo';
 import { InlineStudy } from './study-surface';
 import { RegionalGuidedLearning } from './regional-guided-learning';
 import { WholeBodyGuidedLearning } from './whole-body-guided-learning';
-import { regionalTourFor } from '@/lib/regional-tours';
+import { regionalTourFor,regionalToursFor } from '@/lib/regional-tours';
 import './upper-limb-motor.css';
 import {
   useCallback,
@@ -1837,7 +1837,7 @@ export default function BodyExplorer({
         </WorkspaceOnly>
         </>}
       </header>
-      {guidedLearning && whole ? <WholeBodyGuidedLearning catalog={catalog} assetBase={assetBase} onExit={()=>changeGuidedLearning(false)} /> : guidedLearning && regionalTour ? <RegionalGuidedLearning catalog={catalog} tour={regionalTour} assetBase={assetBase} onExit={()=>changeGuidedLearning(false)} /> : <>
+      {guidedLearning && (whole || regionalToursFor(initialRegion).length>1) ? <WholeBodyGuidedLearning key={initialRegion} region={initialRegion} catalog={catalog} assetBase={assetBase} onExit={()=>changeGuidedLearning(false)} /> : guidedLearning && regionalTour ? <RegionalGuidedLearning catalog={catalog} tour={regionalTour} assetBase={assetBase} onExit={()=>changeGuidedLearning(false)} /> : <>
       <div className="body-layout" hidden={inlineStudy}>
         <AnatomyControlRail>{railContent}</AnatomyControlRail>
         <section className="body-workspace" aria-label={`${title} 3D anatomy`}>

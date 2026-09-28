@@ -1,5 +1,14 @@
 # Agent-authored guided learning
 
+## Regional tour choices — 28 September 2026
+
+Thorax offers a compact Tour selector for its original airway/vessel sequence
+and a six-stop chest-wall muscle/diaphragm sequence. Whole body includes both;
+single-tour regions retain their direct player. Switching waits for an explicit
+Start and clears the old playback/camera/answer session. A regional selector
+cannot open tours from another region; Exit retains the original workspace.
+See CHEST_WALL_TOUR.md for source and clinical limitations.
+
 ## Source-bound quick checks — 28 September 2026
 
 Regional tour explanations offer a collapsed Quick check only when the selected

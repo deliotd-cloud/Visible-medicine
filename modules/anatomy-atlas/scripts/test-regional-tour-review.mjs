@@ -63,14 +63,33 @@ for(const s of api.catalog.structures){
  const previous=digest({scope,topics:m.topics,reasoning:m.reasoning});
  const tours=api.regionalTours.filter(t=>[...t.contextIds,...t.steps.map(step=>step.selectedId)].includes(s.id));
  if(tours.length){
-  assert.equal(m.guidedTours.length,1);assert.notEqual(m.fingerprints.teaching,previous);
+  assert.equal(m.guidedTours.length,tours.length);assert.notEqual(m.fingerprints.teaching,previous);
   assert(c.checklists.teaching.some(v=>v.id==='guided-tour'));
   assert.equal(m.guidedTours[0].structures.length,api.regionalTourStructures(api.catalog,tours[0]).length);
   assert.equal(m.guidedTours[0].tour.steps.length,tours[0].steps.length);checked++;
  }else{assert.equal(m.guidedTours.length,0);assert.equal(m.fingerprints.teaching,previous,'Unrelated teaching history retained');assert(!c.checklists.teaching.some(v=>v.id==='guided-tour'));}
  assert.equal(c.revisions.imaging,null);
 }
-assert.equal(api.catalog.structures.length,1104);assert.equal(checked,79);assert.equal(api.regionalTours.length,11);
+assert.equal(api.catalog.structures.length,1104);assert.equal(checked,88);assert.equal(api.regionalTours.length,12);
+const chestStructures=api.regionalTourStructures(api.catalog,api.chestWallTour);
+assert.equal(chestStructures.length,9);assert.equal(api.regionalToursFor('thorax').length,2);
+assert.equal(api.regionalTourFor('thorax').id,api.thoraxTour.id,'The original airway tour remains the regional default');
+let chestInvalidPackets=0;
+for(const structure of chestStructures){
+ const packet=await api.bodyReviewMaterial(structure.id);
+ assert.equal(packet.approval,false);
+ assert.deepEqual(packet.guidedTours,api.regionalTourEvidence(api.catalog,structure.id));
+ assert.equal(packet.guidedTours.length,1);assert.equal(packet.guidedTours[0].stepFrames.length,6);
+ for(const mutate of [
+  p=>p.guidedTours[0].tour.steps.reverse(),
+  p=>p.guidedTours[0].tour.steps[0].caption+=' changed',
+  p=>p.guidedTours[0].tour.contextIds=[],
+  p=>delete p.guidedTours[0].tour.requiredDisplayBundles,
+  p=>p.guidedTours[0].stepFrames[3].min[0]-=1,
+  p=>p.guidedTours[0].structures.find(s=>s.id!==structure.id).sources[0].sha256='0'.repeat(64),
+ ]){const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,structure.id),null);chestInvalidPackets++;}
+}
+assert.equal(chestInvalidPackets,54);
 const sample=await api.bodyReviewMaterial(selected[0].id);
 for(const mutate of [p=>delete p.guidedTours,p=>p.guidedTours=[],p=>p.guidedTours.push(structuredClone(p.guidedTours[0])),p=>p.schema='vm-body-review-worksheet-2',p=>p.guidedTours[0].tour.steps[0].references=['javascript:alert(1)'],p=>p.guidedTours[0].tour.steps[0].selectedId='missing',p=>p.guidedTours[0].structures[0].sources[0].sha256='0'.repeat(64),p=>p.guidedTours[0].transitionMs=0,p=>p.guidedTours[0].tour.steps[0].durationMs=-1]){
  const p=structuredClone(sample);mutate(p);assert.equal(api.parseBodyReviewResponse(p,selected[0].id),null);
@@ -176,4 +195,4 @@ for(const [tour,expectedId,count,bundles] of [
  }
 }
 assert.equal(visceralMissing,14);assert.equal(visceralInvalid,98);
-console.log(JSON.stringify({reviewed:api.catalog.structures.length,tourBound:checked,otherTeachingUnchanged:api.catalog.structures.length-checked,priorTourEvidenceUnchanged:65,invalidPacketsRejected:24+limbInvalidPackets+visceralInvalid,missingSourcesRejected:29+limbMissingSources+visceralMissing,wrongOrMissingDisplayRejected:2,invalidFramesRejected:4+limbInvalidFrames}));
+console.log(JSON.stringify({reviewed:api.catalog.structures.length,tourBound:checked,otherTeachingUnchanged:api.catalog.structures.length-checked,priorTourEvidenceUnchanged:65,invalidPacketsRejected:24+limbInvalidPackets+visceralInvalid+chestInvalidPackets,missingSourcesRejected:29+limbMissingSources+visceralMissing,wrongOrMissingDisplayRejected:2,invalidFramesRejected:4+limbInvalidFrames}));

@@ -5,6 +5,7 @@ import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import { contentContext, contentValidator } from './content-contract-tools.mjs';
 import { exactSourceHistoryApi } from './exact-source-history-api.mjs';
+import { beforeShoulderArterialCt } from './shoulder-arterial-ct-history.mjs';
 import { build as componentBuild } from './workspace-component-test-build.mjs';
 import { build } from './workspace-test-build.mjs';
 import pins from '../content/thoracic-quiz-pins.json' with { type: 'json' };
@@ -13,7 +14,10 @@ import { thoracicQuizGroups, thoracicQuizQuestions } from '../content/thoracic-q
 const hash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const snapshot = (api, display) => ({ body: display.structures.map(s => ({ id: s.id, sections: Object.fromEntries(api.contentTabs.map(t => [t, api.bodyLesson(s, t)])) })), shoulder: api.structures, recipes: api.dissectionProfiles });
 
-const { api, catalog, registry } = await contentContext();
+const { api: currentApi, catalog, registry } = await contentContext();
+// Replay only recorded later editorial changes; preserve the original thoracic
+// transition and still render/interact with today's production component below.
+const api = beforeShoulderArterialCt(currentApi);
 const display = api.bodyDisplayCatalog(catalog), parent = await exactSourceHistoryApi(pins.parentCommit);
 const built = await build({ stdin: { contents: "export {thoracicQuizLesson} from './lib/thoracic-quiz';", resolveDir: process.cwd(), loader: 'ts' }, bundle: true, write: false, platform: 'node', format: 'esm' });
 const { thoracicQuizLesson } = await import('data:text/javascript;base64,' + Buffer.from(built.outputFiles[0].text).toString('base64'));
@@ -141,10 +145,12 @@ for (const { identity } of pins.entries) {
   const correct = lesson.bullets.indexOf(lesson.correctAnswer);
   answer(correct); assert(nodeText(tree).includes('Correct. Correct answer: ' + lesson.correctAnswer));
   assert(nodeText(tree).includes(lesson.explanation)); assert.equal(focus.target, 'feedback');
-  button('Try again').props.onClick(); redraw(); assert.equal(focus.target, 'first-radio');
-  assert(radios().every(node => !node.props.checked)); assert.equal(button('Try again'), undefined);
+  assert.equal(button('Try again'), undefined, 'A correct answer must not suggest failure');
+  button('Practise again').props.onClick(); redraw(); assert.equal(focus.target, 'first-radio');
+  assert(radios().every(node => !node.props.checked)); assert.equal(button('Practise again'), undefined);
   answer((correct + 1) % 4); assert(nodeText(tree).includes('Incorrect. Correct answer: ' + lesson.correctAnswer));
   assert(nodeText(tree).includes(lesson.explanation));
+  assert(button('Try again')); assert.equal(button('Practise again'), undefined);
   radios()[correct].props.onChange(); redraw(); assert(!nodeText(tree).includes('Correct answer:'));
   assert(!nodeText(tree).includes(lesson.explanation)); interacted++;
 }

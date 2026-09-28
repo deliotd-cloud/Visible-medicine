@@ -6,23 +6,25 @@ import type {BodyCatalog} from './body-types';
 import {RegionalGuidedLearning} from './regional-guided-learning';
 import './whole-body-guided-learning.css';
 
-// Reuse reviewed regional scopes; do not invent whole-body memberships or
+// Reuse source-bound regional scopes; do not invent whole-body memberships or
 // combine independent specimens into a new camera/source frame.
 const order=['head-neck','spine','thorax','abdomen','pelvis','shoulder-arm','forearm','hand','thigh','leg','foot'];
 export const wholeBodyTourOptions=order.flatMap(region=>regionalTours.filter(t=>t.region===region));
 
-export function WholeBodyGuidedLearning({catalog,assetBase,onExit}:{catalog:BodyCatalog;assetBase?:string;onExit:()=>void}) {
+export function WholeBodyGuidedLearning({catalog,assetBase,onExit,region='whole-body'}:{catalog:BodyCatalog;assetBase?:string;onExit:()=>void;region?:string}) {
   const labelId=useId();
-  const [tourId,setTourId]=useState(wholeBodyTourOptions[0].id);
-  const tour=wholeBodyTourOptions.find(t=>t.id===tourId)!;
+  const options=region==='whole-body'?wholeBodyTourOptions:wholeBodyTourOptions.filter(t=>t.region===region);
+  const [tourId,setTourId]=useState(options[0]?.id??'');
+  const tour=options.find(t=>t.id===tourId)??options[0];
+  if(!tour)return <section aria-label="Guided tour library"><p role="status">No guided tours are available for this region.</p><button type="button" onClick={onExit}>Exit tour</button></section>;
   return <section className="whole-body-guided-learning" aria-label="Guided tour library">
     <div className="whole-body-tour-picker">
       <span id={labelId}>Tour</span>
       <Select value={tour.id} onValueChange={id=>{
-        if(wholeBodyTourOptions.some(t=>t.id===id))setTourId(id as string);
+        if(options.some(t=>t.id===id))setTourId(id as string);
       }}>
         <SelectTrigger aria-labelledby={labelId}><SelectValue>{tour.title}</SelectValue></SelectTrigger>
-        <SelectContent>{wholeBodyTourOptions.map(t=><SelectItem key={t.id} value={t.id}>{t.title}</SelectItem>)}</SelectContent>
+        <SelectContent>{options.map(t=><SelectItem key={t.id} value={t.id}>{t.title}</SelectItem>)}</SelectContent>
       </Select>
     </div>
     {/* A new key discards old timers, step, readiness, reading and camera state.

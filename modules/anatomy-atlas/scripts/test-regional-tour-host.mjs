@@ -24,5 +24,6 @@ assert(source.includes('disabled: exam || inlineStudy || guidedLearning'));
 assert(source.includes("if (exam || guidedLearning) throw new Error('Selection tools disabled during exam or guided learning')"));
 assert(source.includes('!inlineStudy && !guidedLearning'));
 assert(source.includes('guidedLearning && regionalTour ? <RegionalGuidedLearning'));
-assert(source.includes('guidedLearning && whole ? <WholeBodyGuidedLearning'));
+assert(source.includes('guidedLearning && (whole || regionalToursFor(initialRegion).length>1) ? <WholeBodyGuidedLearning'));
+assert(source.includes('key={initialRegion} region={initialRegion}'));
 console.log(JSON.stringify({exactDetachedCameraRestore:true,workspaceStateUntouched:true,examBlocked:true,undefinedTourBlocked:true,exclusiveSceneBranch:true}));
