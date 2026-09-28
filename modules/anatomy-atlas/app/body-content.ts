@@ -108,6 +108,7 @@ import { achillesImagingLesson } from '../lib/achilles-imaging';
 import { achillesCtLesson } from '../lib/achilles-ct';
 import { footVascularQuizLesson } from '../lib/foot-vascular-quiz';
 import { thoracicQuizLesson } from '../lib/thoracic-quiz';
+import { cervicalQuizLesson } from '../lib/cervical-quiz';
 import { shoulderArterialCtLesson } from '../lib/shoulder-arterial-ct';
 import { circleWillisImagingLesson } from '../lib/circle-willis-imaging';
 import { kneeImagingLesson } from '../lib/knee-imaging';
@@ -240,6 +241,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   const shoulderCt = shoulderArterialCtLesson(s, tab);
   if (shoulderCt) return shoulderCt;
+  const cervicalQuiz = cervicalQuizLesson(s, tab);
+  if (cervicalQuiz) return cervicalQuiz;
   const thoracicQuiz = thoracicQuizLesson(s, tab);
   if (thoracicQuiz) return thoracicQuiz;
   const circleWillisImaging = circleWillisImagingLesson(s, tab);

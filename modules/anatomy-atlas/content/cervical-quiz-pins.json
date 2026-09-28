@@ -1,0 +1,388 @@
+{
+  "parentCommit": "77244671eaf419095f681bb284737c01ecfbf6bb",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "spine-skeleton",
+      "url": "/models/bodyparts3d/full-body/spine-skeleton.glb",
+      "bytes": 1286192,
+      "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957",
+      "structures": 25
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "c01fa779208cfd172534ae7043e9331b89322f1bb06007df5923a6c400b0c6d1",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:atlas",
+        "fmaId": "FMA12519",
+        "name": "Atlas",
+        "sourceName": "atlas",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA12519",
+        "bounds": {
+          "min": [
+            -0.41364601254463196,
+            6.62209939956665,
+            -0.09404201805591583
+          ],
+          "max": [
+            0.40230700373649597,
+            6.814300537109375,
+            0.3764420449733734
+          ]
+        },
+        "center": [
+          -0.005669504404067993,
+          6.718199968338013,
+          0.1412000134587288
+        ],
+        "anchor": [
+          -0.10565600544214249,
+          6.696400165557861,
+          0.2025810182094574
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3176",
+            "sha256": "8ac9ee6d7631edc066a322af278ed508eab4d9c0919e9a77657ead17c14c8a79"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "atlas",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find atlas on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:axis",
+        "fmaId": "FMA12520",
+        "name": "Axis",
+        "sourceName": "axis",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA12520",
+        "bounds": {
+          "min": [
+            -0.2596159875392914,
+            6.331700325012207,
+            -0.13329102098941803
+          ],
+          "max": [
+            0.24574199318885803,
+            6.783499717712402,
+            0.3653910160064697
+          ]
+        },
+        "center": [
+          -0.006936997175216675,
+          6.557600021362305,
+          0.11604999750852585
+        ],
+        "anchor": [
+          0.013543100096285343,
+          6.581600189208984,
+          0.20394302904605865
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3177",
+            "sha256": "ae446bbf47561c5ff2a2c0a03bfb158ba2581477ae5078ac89cc95b92637adab"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "axis",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find axis on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:third-cervical-vertebra",
+        "fmaId": "FMA12521",
+        "name": "Third cervical vertebra",
+        "sourceName": "third cervical vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA12521",
+        "bounds": {
+          "min": [
+            -0.2984279990196228,
+            6.170000076293945,
+            -0.11866901069879532
+          ],
+          "max": [
+            0.28539299964904785,
+            6.457399845123291,
+            0.37813201546669006
+          ]
+        },
+        "center": [
+          -0.006517499685287476,
+          6.313699960708618,
+          0.12973150238394737
+        ],
+        "anchor": [
+          0.008280440233647823,
+          6.285400390625,
+          0.06494998931884766
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3161",
+            "sha256": "8f0de55a4feef85c256501a8afff7bb5aa3f77f4681af4c91801da87b54db103"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "typicalCervical",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find third cervical vertebra on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:seventh-cervical-vertebra",
+        "fmaId": "FMA12525",
+        "name": "Seventh cervical vertebra",
+        "sourceName": "seventh cervical vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA12525",
+        "bounds": {
+          "min": [
+            -0.33229300379753113,
+            5.647099494934082,
+            -0.28733599185943604
+          ],
+          "max": [
+            0.31931599974632263,
+            5.918399810791016,
+            0.40031898021698
+          ]
+        },
+        "center": [
+          -0.006488502025604248,
+          5.782749652862549,
+          0.05649149417877197
+        ],
+        "anchor": [
+          -0.008737760595977306,
+          5.774100303649902,
+          0.07046298682689667
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3172",
+            "sha256": "43bc0a1f9b3adffd5f45256b61f75affa15b56c85b387fa733b59de310216104"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "vertebraProminens",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find seventh cervical vertebra on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:first-thoracic-vertebra",
+        "fmaId": "FMA9165",
+        "name": "First thoracic vertebra",
+        "sourceName": "first thoracic vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA9165",
+        "bounds": {
+          "min": [
+            -0.37382999062538147,
+            5.4721999168396,
+            -0.329133003950119
+          ],
+          "max": [
+            0.35916197299957275,
+            5.769000053405762,
+            0.3687190115451813
+          ]
+        },
+        "center": [
+          -0.007334008812904358,
+          5.620599985122681,
+          0.019793003797531128
+        ],
+        "anchor": [
+          0.021189598366618156,
+          5.618599891662598,
+          0.026789017021656036
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3158",
+            "sha256": "aa69c48def3434d6a3e1c56fc78af45f01545931fde5422af17d5f98ce9ed8a3"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "firstThoracic",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find first thoracic vertebra on the model."
+        }
+      }
+    }
+  ]
+}

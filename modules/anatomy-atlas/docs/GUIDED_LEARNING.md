@@ -1,5 +1,21 @@
 # Agent-authored guided learning
 
+## Source-bound quick checks — 28 September 2026
+
+Regional tour explanations offer a collapsed Quick check only when the selected
+structure has an explicitly keyed draft quiz. Opening pauses camera movement
+and autoplay; closing never resumes playback. Existing Structure check controls
+provide feedback, explanation and retry/practise wording. No answer is inferred
+from unkeyed notes; missing or ambiguous choices stay unavailable. Step changes
+reset the attempt; model unavailability removes it. References and limits remain
+available in a secondary disclosure. This is formative learning, not a scored
+examination or clinical approval.
+
+Cervical C1/C2/C3/C7/T1 questions use exact source identity guards. Existing
+keyed thoracic and other regional lessons are reused, not duplicated. Geometry,
+tour definitions, imaging-case and paid-lecture access remain unchanged.
+See CERVICAL_QUIZ.md for factual sources and source/website acceptance boundaries.
+
 ## Coeliac branch orientation — 27 September
 
 Abdomen Guided learning now offers five selected artery stops: coeliac trunk,

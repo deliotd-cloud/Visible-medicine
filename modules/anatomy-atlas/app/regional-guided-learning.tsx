@@ -9,6 +9,7 @@ import {rendererReady,type RendererHealth} from '@/lib/renderer-health';
 import {modelDeliveryUrl} from '@/lib/model-delivery';
 import {bodyLesson} from './body-content';
 import {TourImagingNotes,tourImagingModalities} from './tour-imaging-notes';
+import {TourQuickCheck} from './tour-quick-check';
 import './regional-guided-learning.css';
 const Scene=dynamic(()=>import('./body-scene').then(m=>m.BodyScene),{ssr:false});
 const empty:string[]=[];
@@ -48,8 +49,10 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit}:{catalog:
         <p>{tour.limitations??'Selected exterior source surfaces in a common frame. Not a continuous airway lumen, complete bronchial tree or patient scan.'} Exit restores your previous workspace.</p>
         {step.references.map(url=><a key={url} href={url} target="_blank" rel="noreferrer">Anatomy reference ↗</a>)}
       </details>
-      {active&&selected&&<TourImagingNotes key={step.id} structureName={selected.name}
+      {active&&selected&&<TourImagingNotes key={`imaging:${step.id}`} structureName={selected.name}
         lessons={tourImagingModalities.map(({id,label})=>({id,label,content:bodyLesson(selected,id)}))}
+        onOpen={()=>{setPlaying(false);setMotionPaused(true);}}/>}
+      {active&&ready&&selected&&<TourQuickCheck key={`quiz:${step.id}`} lesson={bodyLesson(selected,'quiz')}
         onOpen={()=>{setPlaying(false);setMotionPaused(true);}}/>}
       </details>
       {!ready&&<output>{resolved.error|| (failed.length?'Some anatomy failed to load. Exit and reload the atlas before retrying.':'Preparing the model. Playback is paused until all tour anatomy is ready.')}</output>}

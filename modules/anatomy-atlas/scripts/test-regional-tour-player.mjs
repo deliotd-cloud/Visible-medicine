@@ -68,6 +68,22 @@ test('Compact tours retain complete teaching on demand and pause while reading',
   }
 });
 
+test('Source-bound quick checks pause playback, remount per step and disappear on renderer failure',()=>{
+  const h=harness(catalog,'thoraxTour',true);
+  const check=()=>nodes(h.tree()).find(n=>n.props?.lesson&&n.props?.onOpen);
+  assert.equal(check(),undefined);
+  h.ready();assert.equal(check(),undefined,'No attempt before Start');
+  h.click('Start guided tour');const initial=check();assert.ok(initial.props.lesson.correctAnswer);
+  const disclosureKeys=nodes(h.tree()).filter(n=>n.props?.onOpen).map(n=>n.key);
+  assert.equal(new Set(disclosureKeys).size,disclosureKeys.length,'Sibling disclosures require unique keys to prevent retained duplicate panels');
+  h.click('Play');assert.equal(h.timers.size,1);
+  initial.props.onOpen();h.render();assert.equal(h.timers.size,0);assert.equal(h.scene().transitionPaused,true);
+  h.click('Next');assert.notEqual(check().key,initial.key,'Each step resets its check');
+  assert.notEqual(check().props.lesson.body,initial.props.lesson.body);
+  h.scene().onRendererHealth('lost');h.render();assert.equal(check(),undefined,'No answering without available anatomy');
+  h.click('Exit tour');assert.equal(h.exits(),1);h.unchanged();
+});
+
 test('Forearm tour requires both bundles and runs five exact right-sided close-ups with bounded finish', () => {
   const h=harness(catalog,'forearmTour');
   const heading=()=>nodes(h.tree()).find(n=>n.props?.className==='regional-tour-heading');
@@ -214,11 +230,11 @@ test('All actual tour bundles and ready renderer are required; entry remains man
 test('Opening step-bound imaging notes pauses motion and autoplay; next step gets fresh notes',()=>{
   const h=harness();h.ready();h.click('Start guided tour');h.click('Play');
   const notes=()=>nodes(h.tree()).find(n=>n.type?.name==='TourImagingNotes');
-  assert.equal(notes().key,h.props.tour.steps[0].id);
+  assert.equal(notes().key,`imaging:${h.props.tour.steps[0].id}`);
   assert.equal(notes().props.structureName,'Trachea');assert.equal(notes().props.lessons.length,4);
   notes().props.onOpen();h.render();
   assert.equal(h.timers.size,0);assert.equal(h.button('Play')['aria-pressed'],false);assert.equal(h.scene().transitionPaused,true);
-  h.click('Next');assert.equal(notes().key,h.props.tour.steps[1].id);assert.equal(h.timers.size,0);
+  h.click('Next');assert.equal(notes().key,`imaging:${h.props.tour.steps[1].id}`);assert.equal(h.timers.size,0);
   assert.equal(notes().props.structureName,'Right main bronchus');h.unchanged();
 });
 
