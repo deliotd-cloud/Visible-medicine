@@ -155,6 +155,17 @@ same(screenLabelLimitPerSide(559,319),1);same(screenLabelLimitPerSide(559,320),2
 same(screenLabelLimitPerSide(560,239),2);same(screenLabelLimitPerSide(560,240),8);
 for(const width of [319,359,373,375,376,399,559])check(Number.isInteger(screenLabelMaxWidth(width)),'CSS and integral DOM measurements share the same width cap');
 for(const width of [NaN,Infinity,-1,0])same(screenLabelMaxWidth(width),0,'Invalid canvas widths never reach CSS');
+for(const width of [240,320,353,376,559,736,1024]) {
+  const normal=screenLabelMaxWidth(width),large=screenLabelMaxWidth(width,2);
+  check(large>=normal,'Enlarged text never gets a narrower label');
+  check(large<=width/2-20,'Enlargement preserves its half and central clearance');
+  for(const scale of [NaN,Infinity,-1,0])same(screenLabelMaxWidth(width,scale),normal,'Invalid scale uses the normal bound');
+  same(screenLabelMaxWidth(width,8),large,'Text growth cannot exceed side bound');
+  const input=[{id:'left-large',x:width*.35,y:100,width:large,height:84,selected:true},
+    {id:'right-large',x:width*.65,y:100,width:large,height:84}];
+  same(validate(input,width,212).length,2,'Both enlarged labels fit without switching screen side');
+  same(validate(input.map(l=>({...l,width:large+1})),width,212).length,0,'Oversized labels are still rejected');
+}
 for(const dimensions of [[NaN,400],[360,Infinity],[0,400],[360,0]])same(screenLabelLimitPerSide(...dimensions),0);
 
 const directions = [
@@ -418,6 +429,9 @@ same(
   'Anatomical text is not relabelled to screen laterality',
 );
 const labelButtons = elements.filter((element) => element.type === 'button');
+same(buttonElement.props.style.maxWidth,
+  `min(${screenLabelMaxWidth(size.width,2)}px, max(${screenLabelMaxWidth(size.width)}px, 7em))`,
+  'Actual label width follows font size within a hard screen-side cap');
 same(buttonElement.props['aria-current'], 'true', 'Selected anatomy is marked current, not a toggle');
 same(labelButtons[1].props['aria-current'], undefined, 'Unselected anatomy is not marked current');
 check(labelButtons.every((button) => !Object.hasOwn(button.props, 'aria-pressed')), 'Labels do not promise a toggle action');

@@ -1,5 +1,13 @@
 # First-release viewer acceptance evidence
 
+## 28 September: enlarged label text and drawing space
+
+[Enlarged-label evidence](ENLARGED_LABEL_READABILITY.md) follows up the observed
+broken-word shoulder labels. Font-responsive bounded columns and model height
+pass six actual shoulder browser cases and fifteen regional layout cases. Names,
+selection, screen side and anchor clearance are tested; this is not universal
+text-fit or clinical acceptance. Source delivery and website import are separate.
+
 ## 28 September: short embedded model readability
 
 [Embedded layout evidence](EMBEDDED_MODEL_READABILITY.md) covers five scopes at

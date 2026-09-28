@@ -248,7 +248,9 @@ export function SceneLabelLayer({ children }: { children: ReactNode }) {
                 } else buttons.current.delete(entry.id);
               }}
               className={`scene-label${entry.selected ? ' selected' : ''}`}
-              style={{ maxWidth: screenLabelMaxWidth(size.width) }}
+              // Grow with the actual label font, not device width or a guessed
+              // zoom setting. Measured layout still enforces screen-side bounds.
+              style={{ maxWidth: `min(${screenLabelMaxWidth(size.width, 2)}px, max(${screenLabelMaxWidth(size.width)}px, 7em))` }}
               onPointerDown={(event) => event.stopPropagation()}
               onPointerUp={(event) => event.stopPropagation()}
               onDoubleClick={(event) => event.stopPropagation()}

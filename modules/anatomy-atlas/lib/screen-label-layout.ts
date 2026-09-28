@@ -46,11 +46,12 @@ export function projectLabelAnchor(
 }
 
 export const labelGutter = 10;
-export function screenLabelMaxWidth(width: number) {
+export function screenLabelMaxWidth(width: number, textScale = 1) {
   if (!Number.isFinite(width) || width <= 0) return 0;
   // Keep the central model area open on narrow canvases. This is based on the
   // actual canvas (including an embedded panel), not the browser's width.
-  const column = width < 560 ? Math.min(160, width * 0.3) : 216;
+  const scale = Number.isFinite(textScale) ? Math.max(1, Math.min(2, textScale)) : 1;
+  const column = (width < 560 ? Math.min(160, width * 0.3) : 216) * scale;
   // offsetWidth is integral. Avoid rejecting a valid browser-measured box whose
   // fractional CSS max-width rounded up by a pixel.
   return Math.max(0, Math.floor(Math.min(column, width / 2 - labelGutter * 2)));
@@ -90,7 +91,9 @@ export function layoutScreenLabels(
       label.y >= 0 &&
       label.y <= height &&
       label.width > 0 &&
-      label.width <= screenLabelMaxWidth(width) &&
+      // Enlarged text can use more of its own half, but never cross the centre
+      // or consume the protected gap between the two columns.
+      label.width <= screenLabelMaxWidth(width, 2) &&
       label.height > 0,
   );
   const result: PlacedLabel[] = [];
