@@ -177,6 +177,7 @@
     "abdominal-organ-quiz:test": "node scripts/test-abdominal-organ-quiz.mjs --integrated && node scripts/abdominal-organ-quiz-transition.mjs && node scripts/test-abdominal-organ-quiz-history.mjs",
     "chest-wall-tour:test": "node scripts/test-chest-wall-tour.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-regional-tour-host.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-regional-tour-review.mjs",
     "orbital-tour:test": "node scripts/test-orbital-tour.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-regional-tour-host.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-regional-tour-review.mjs && node scripts/test-tour-imaging-notes.mjs",
+    "intrinsic-larynx-tour:test": "node scripts/test-intrinsic-larynx-tour.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-regional-tour-host.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-regional-tour-review.mjs && node scripts/test-tour-imaging-notes.mjs",
     "upper-limb-motor:test": "node scripts/pin-upper-limb-motor.mjs --check && node scripts/validate-upper-limb-motor.mjs",
     "spine-imaging:test": "node scripts/validate-spine-imaging.mjs",
     "abdominal-wall:export": "node scripts/export-abdominal-wall.mjs",
