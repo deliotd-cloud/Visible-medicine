@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "0ea6aaf08e7b55890b41e2a46ecb6a6b4f85ee60073c3a5260a54e63614a8578"
+    "sha256": "360009f88c161441eafb599b0f9d2b3d39b6405fad3086ba7a8b5a2b5a08f57b"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "8ca9d2962c0f33aee27178872eaae40ad05fdb8469227467cffb8b735094b350"
+    "sha256": "6c8b7825679ef0494108b355a0d050126a4e16b34e74bb5316c7a98488d51b4a"
   },
   {
     "path": "app/body-education-link.ts",
@@ -494,6 +494,14 @@
   {
     "path": "content/abdominal-organ-imaging.ts",
     "sha256": "a0a0f57b5061048a8765cd9899c5467a98b66c81184b784ce0a93e710417a5ef"
+  },
+  {
+    "path": "content/abdominal-organ-quiz-pins.json",
+    "sha256": "3c989ea5ade1dc31161da94c7a282912a94b92b5734b3627c48b8ace202b89aa"
+  },
+  {
+    "path": "content/abdominal-organ-quiz.ts",
+    "sha256": "336cba1c47587e71916a07f863339b814aa6c7f2606e3464f2d7627599adddeb"
   },
   {
     "path": "content/abdominal-wall-teaching.ts",
@@ -1718,6 +1726,10 @@
   {
     "path": "lib/abdominal-organ-imaging.ts",
     "sha256": "8449bb428287cfd19b1d5976bd575a4f4d82d4d98d7b68db3628879adc228737"
+  },
+  {
+    "path": "lib/abdominal-organ-quiz.ts",
+    "sha256": "77477913b63cedccd4952a3ab151533905a985a83436da2770849fc0f408d2a0"
   },
   {
     "path": "lib/abdominal-organ-reasoning.ts",

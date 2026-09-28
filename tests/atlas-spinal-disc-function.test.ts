@@ -9,13 +9,13 @@ test('regional spinal disc Function drafts reach the shared viewer without geome
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'c277e5c52300a110dc6b456cd8d27c832931f8b4563b31590f148b12952c74e0');
+  assert.equal(sha(bytes),'6a1e737c3439b24ee90b65407701fb27fe93cdd1034f8d572e4ce9c75491fae5');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'3f6f74478e2978109ff47587f1aa60e1b66ecd81');
+  assert.equal(manifest.sourceCommit,'d3d3a750db64c6d10bad1632d68151c871cc8b96');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({
-    'app/body-content.ts':'8ca9d2962c0f33aee27178872eaae40ad05fdb8469227467cffb8b735094b350',
+    'app/body-content.ts':'6c8b7825679ef0494108b355a0d050126a4e16b34e74bb5316c7a98488d51b4a',
     'content/spinal-disc-function.ts':'1d7d5f9883edea19a2339dd0c7da90d711ea9df6c3dfede922dd380ca307d4ef',
     'lib/spinal-disc-function.ts':'402ffd000cf3566b9bee54b71bf3e6a135846ce5a0b77245f94b6deae0fd3607',
   }))assert.deepEqual(inputs.filter(input=>input.path===path),[{path,sha256}]);

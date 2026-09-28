@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+28 September: abdominal organ quick checks imported locally from Atlas `d3d3a75`.
+Six source-bound draft placements reach the learner and protected Clinical Review;
+238 website tests, types/build and mobile learner/review sampling pass. Geometry,
+independent entitlements and clinical decisions unchanged. No publication or
+clinical approval. See `docs/abdominal-quiz-delivery-20260928.md` and the main
+coordination checkpoint for verified GitHub/D recovery. Native MRI remains done.
+
 28 September: chest-wall Guided learning imported locally from Atlas `3f6f744`.
 Six stops cover intercostal layers, paired transversus thoracis and diaphragm;
 thorax now offers two tours and whole-body twelve, using a compact selector.

@@ -1698,3 +1698,14 @@ copyrighted table, illustrations and prose are not copied or redistributed.
 The captions describe anatomical facts, not source-verified mesh boundaries.
 Existing BodyParts3D geometry and its CC BY 4.0 notices are unchanged. No new
 model, image, font, dependency, paid service or mandatory fee is introduced.
+
+# Abdominal organ quick-check factual references — 28 September 2026
+
+Four original short questions use anatomical/physiological facts from NIH NCI
+SEER Training (pancreas, spleen, adrenal gland) and NIDDK (kidney function).
+Exact page links accompany each draft question. No source illustrations, tables,
+question-bank items or extended prose are copied or redistributed. References
+are evidence links, not a claim to license third-party website assets. Existing
+BodyParts3D geometry/credits are unchanged. No new media, font, dependency, paid
+API or mandatory fee is introduced. Clinical approval remains revision-bound
+and pending; source surfaces do not depict microscopic tissue or patient scans.

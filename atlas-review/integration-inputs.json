@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "3f6f74478e2978109ff47587f1aa60e1b66ecd81",
-  "sha256": "c639eb7a0f8d7b7dde7988691bf2cbba2dc27aa2ccf2cf83fbde4301821b10e7",
+  "sourceCommit": "d3d3a750db64c6d10bad1632d68151c871cc8b96",
+  "sha256": "f5f09116b9ba146425f9460b09e3c3d6bd9e92e7644c2eb7d8286facd0cf2ccb",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -112,7 +112,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "c72ca21c349436e9ca94d8fe68ebab53869db68bd7f6871d4d796e3b791c4294"
+      "sha256": "17aeaa62d13db0294cfafbc3378d2c636d101713ef01c7d66d06a4962798e1b3"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -625,6 +625,14 @@
     {
       "path": "atlas-review/content/abdominal-organ-imaging.ts",
       "sha256": "a0a0f57b5061048a8765cd9899c5467a98b66c81184b784ce0a93e710417a5ef"
+    },
+    {
+      "path": "atlas-review/content/abdominal-organ-quiz-pins.json",
+      "sha256": "3c989ea5ade1dc31161da94c7a282912a94b92b5734b3627c48b8ace202b89aa"
+    },
+    {
+      "path": "atlas-review/content/abdominal-organ-quiz.ts",
+      "sha256": "336cba1c47587e71916a07f863339b814aa6c7f2606e3464f2d7627599adddeb"
     },
     {
       "path": "atlas-review/content/abdominal-wall-teaching.ts",
@@ -1765,6 +1773,10 @@
     {
       "path": "atlas-review/lib/abdominal-organ-imaging.ts",
       "sha256": "8449bb428287cfd19b1d5976bd575a4f4d82d4d98d7b68db3628879adc228737"
+    },
+    {
+      "path": "atlas-review/lib/abdominal-organ-quiz.ts",
+      "sha256": "77477913b63cedccd4952a3ab151533905a985a83436da2770849fc0f408d2a0"
     },
     {
       "path": "atlas-review/lib/abdominal-organ-reasoning.ts",
@@ -3300,7 +3312,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "0ea6aaf08e7b55890b41e2a46ecb6a6b4f85ee60073c3a5260a54e63614a8578"
+      "sha256": "360009f88c161441eafb599b0f9d2b3d39b6405fad3086ba7a8b5a2b5a08f57b"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3544,7 +3556,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "749c78d9c9bf7960b092c4b8b1a5670bc2386d7a32ad31f246dc607d88b306d7"
+      "sha256": "b265f12c89626912e114039d3a49a4b61ad8099f9f9fbf44df0579f94a3977d9"
     }
   ]
 }
