@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "bc948b52e8f63c12305bda6eb3e902c5d74e18dc",
-  "sha256": "433bbf8cadf0f23f71f5c9decf00a49925fd385d051de43422123bf29b4879db",
+  "sourceCommit": "beaa104c53e6aa62bb485febd1c47517b346de01",
+  "sha256": "4847995850dd1e47ea549de7e66d70c46f2fa812e1edb314086723d81f4d5c4e",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -48,7 +48,7 @@
     },
     {
       "path": "atlas-review/app/anatomy-data.ts",
-      "sha256": "e8e8da00b4cd1fc92242498fc7feca41b353ee58b3c5a8b147d3f442705ac83b"
+      "sha256": "9746f3bc65cef35b5b3054dc58fd9611168807ce4a1aa28de3cf35ff4c79ee13"
     },
     {
       "path": "atlas-review/app/anatomy-scene.tsx",
@@ -3047,6 +3047,10 @@
       "sha256": "dab771a8dee5c917271d3354d350922bea85d985583c863cf1ff1f4b6481b18b"
     },
     {
+      "path": "atlas-review/lib/shoulder-soft-tissue-xray.ts",
+      "sha256": "49f6c4d1a1a97f4532d382260f9bc4a8ea158a83184b05df8a2ae1bbd67070fd"
+    },
+    {
       "path": "atlas-review/lib/shoulder-tours.ts",
       "sha256": "03083449553e2f4db25adf66c9d5fc18b2c7849ee2b1846f4cd06775ceeb2fda"
     },
@@ -3336,7 +3340,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "e3eb2545f43bfc1d69e9dd4567c77c9f9f3b9f04c7ea4f5fd5720b6c60c0634e"
+      "sha256": "45a2d2d3a513b87a50cb029a685e96b3a185ea58081193a2acdca8a9f5a86245"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3580,7 +3584,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "4eb062c34ff68579317843ad4468ec1c64250b146945b6c3df42680f82a5889d"
+      "sha256": "8834aaeb9bb7b6a06226aa2b0332eacab0768b1a1623161d52d9dee68c2cd145"
     }
   ]
 }

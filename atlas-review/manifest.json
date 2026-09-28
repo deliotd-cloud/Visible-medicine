@@ -1,5 +1,5 @@
 {
-  "revision": "bc948b52e8f63c12305bda6eb3e902c5d74e18dc",
+  "revision": "beaa104c53e6aa62bb485febd1c47517b346de01",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -18,8 +18,8 @@
     },
     {
       "path": "app/anatomy-data.ts",
-      "sourceSha256": "e8e8da00b4cd1fc92242498fc7feca41b353ee58b3c5a8b147d3f442705ac83b",
-      "importedSha256": "e8e8da00b4cd1fc92242498fc7feca41b353ee58b3c5a8b147d3f442705ac83b"
+      "sourceSha256": "9746f3bc65cef35b5b3054dc58fd9611168807ce4a1aa28de3cf35ff4c79ee13",
+      "importedSha256": "9746f3bc65cef35b5b3054dc58fd9611168807ce4a1aa28de3cf35ff4c79ee13"
     },
     {
       "path": "lib/xray-teaching.ts",
@@ -45,6 +45,11 @@
       "path": "content/shoulder-xray-bindings.json",
       "sourceSha256": "f3e544bf002d4bf8ab0101f5e300e207fff74296f156378667ecc7fe3de10975",
       "importedSha256": "f3e544bf002d4bf8ab0101f5e300e207fff74296f156378667ecc7fe3de10975"
+    },
+    {
+      "path": "lib/shoulder-soft-tissue-xray.ts",
+      "sourceSha256": "49f6c4d1a1a97f4532d382260f9bc4a8ea158a83184b05df8a2ae1bbd67070fd",
+      "importedSha256": "49f6c4d1a1a97f4532d382260f9bc4a8ea158a83184b05df8a2ae1bbd67070fd"
     },
     {
       "path": "lib/body-review-material.ts",
@@ -2719,7 +2724,7 @@
     {
       "path": "content/body-renderer-revision.json",
       "sourceSha256": "c6a5f01adbd0763d66830c3d31377bb2e72e45efc8a21567e1a59a3b4ab2f94b",
-      "importedSha256": "d05f7e301de160302f68725b549d885d2430e2ae80000ccd835a0aecc505e48d"
+      "importedSha256": "340679d543e488d1a84e1880d1855e19fcf00899de040972c49e61d38f1b6961"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3008,8 +3013,8 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sourceSha256": "3e31f6ce492f4f8ca587b36a9df04a926c87beec710e747df58932fd0d48a3f9",
-      "importedSha256": "1e40e856860db03b2d00dbad5484f8212938148dc9c717bf052e2af4c4bdb710"
+      "sourceSha256": "52c6ebe8633eb8bdc745feb0e63054da2cdb96fb7772d28103e38673fdb2c1cd",
+      "importedSha256": "6e0c4cc408ee6a8415e4e5226f649128b5e82e1743beb6439a953e8a0bf702e2"
     },
     {
       "path": "app/review/review.css",
@@ -4313,8 +4318,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "e3eb2545f43bfc1d69e9dd4567c77c9f9f3b9f04c7ea4f5fd5720b6c60c0634e",
-      "importedSha256": "e3eb2545f43bfc1d69e9dd4567c77c9f9f3b9f04c7ea4f5fd5720b6c60c0634e"
+      "sourceSha256": "45a2d2d3a513b87a50cb029a685e96b3a185ea58081193a2acdca8a9f5a86245",
+      "importedSha256": "45a2d2d3a513b87a50cb029a685e96b3a185ea58081193a2acdca8a9f5a86245"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -4413,5 +4418,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "433bbf8cadf0f23f71f5c9decf00a49925fd385d051de43422123bf29b4879db"
+  "websiteIntegrationSha256": "4847995850dd1e47ea549de7e66d70c46f2fa812e1edb314086723d81f4d5c4e"
 }

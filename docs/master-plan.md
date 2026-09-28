@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+28 September: shoulder soft-tissue X-ray teaching imported locally from Atlas
+`beaa104`. Six new referenced drafts reach learner and protected Clinical Review;
+all nine shoulder selections now have introductory X-ray notes.250 tests,
+types/build pass; models and independent access preserved, no saved approval
+migration. See `docs/shoulder-soft-xray-delivery-20260928.md` and coordination
+recovery checkpoint. Fracture changes preserved; no Atlas publication or clinical
+approval. Native MRI remains done.
+
 28 September: enlarged label readability imported locally from Atlas `bc948b5`.
 Font-responsive side-bounded labels and model space reach learner/review. Shoulder
 review now uses the intended panel layout, preserving selection and removing its

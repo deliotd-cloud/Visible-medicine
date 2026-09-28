@@ -1,4 +1,5 @@
-import { pendingXrayLesson, shoulderXrayLesson } from '../lib/xray-teaching.ts';
+import { shoulderXrayLesson } from '../lib/xray-teaching.ts';
+import { shoulderSoftTissueXrayLesson } from '../lib/shoulder-soft-tissue-xray.ts';
 
 export type SystemKey = 'skeleton' | 'muscles' | 'soft-tissue';
 export type ContentTab =
@@ -254,7 +255,7 @@ export const structures: AnatomyStructure[] = [
       'posterior deltoid',
     ],
     sections: {
-      xray: pendingXrayLesson(),
+      xray: shoulderSoftTissueXrayLesson('deltoid'),
       anatomy: {
         title: 'Overview',
         body: 'A multipennate muscle forming the rounded contour of the shoulder.',
@@ -316,7 +317,7 @@ export const structures: AnatomyStructure[] = [
     color: '#ef897c',
     synonyms: ['supraspinatus tendon', 'superior rotator cuff'],
     sections: {
-      xray: pendingXrayLesson(),
+      xray: shoulderSoftTissueXrayLesson('supraspinatus'),
       anatomy: {
         title: 'Overview',
         body: 'Occupies the supraspinous fossa and passes beneath the acromion to the superior facet of the greater tuberosity.',
@@ -378,7 +379,7 @@ export const structures: AnatomyStructure[] = [
     color: '#be4f49',
     synonyms: ['infraspinatus tendon', 'posterior cuff'],
     sections: {
-      xray: pendingXrayLesson(),
+      xray: shoulderSoftTissueXrayLesson('infraspinatus'),
       anatomy: {
         title: 'Overview',
         body: 'Arises from the infraspinous fossa and inserts on the middle facet of the greater tuberosity.',
@@ -436,7 +437,7 @@ export const structures: AnatomyStructure[] = [
     color: '#a9423e',
     synonyms: ['subscapularis tendon', 'anterior cuff'],
     sections: {
-      xray: pendingXrayLesson(),
+      xray: shoulderSoftTissueXrayLesson('subscapularis'),
       anatomy: {
         title: 'Overview',
         body: 'Arises from the subscapular fossa and inserts on the lesser tuberosity.',
@@ -494,7 +495,7 @@ export const structures: AnatomyStructure[] = [
     color: '#b55b55',
     synonyms: ['LHB', 'biceps tendon', 'bicipital tendon'],
     sections: {
-      xray: pendingXrayLesson(),
+      xray: shoulderSoftTissueXrayLesson('biceps-long-head'),
       anatomy: {
         title: 'Long head and proximal tendon',
         body: 'The long head begins at the superior glenoid region, crosses the joint and descends through the intertubercular groove before joining the muscle belly in the arm.',
@@ -557,7 +558,7 @@ export const structures: AnatomyStructure[] = [
     color: '#a94b48',
     synonyms: ['small round muscle', 'inferior posterior cuff'],
     sections: {
-      xray: pendingXrayLesson(),
+      xray: shoulderSoftTissueXrayLesson('teres-minor'),
       anatomy: {
         title: 'Posterior cuff',
         body: 'This narrow cuff muscle lies along the lateral scapula, below infraspinatus and above teres major.',

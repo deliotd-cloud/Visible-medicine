@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "e3eb2545f43bfc1d69e9dd4567c77c9f9f3b9f04c7ea4f5fd5720b6c60c0634e"
+    "sha256": "45a2d2d3a513b87a50cb029a685e96b3a185ea58081193a2acdca8a9f5a86245"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -45,7 +45,7 @@
   },
   {
     "path": "app/anatomy-data.ts",
-    "sha256": "e8e8da00b4cd1fc92242498fc7feca41b353ee58b3c5a8b147d3f442705ac83b"
+    "sha256": "9746f3bc65cef35b5b3054dc58fd9611168807ce4a1aa28de3cf35ff4c79ee13"
   },
   {
     "path": "app/anatomy-tissue.tsx",
@@ -1353,7 +1353,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "3e31f6ce492f4f8ca587b36a9df04a926c87beec710e747df58932fd0d48a3f9"
+    "sha256": "52c6ebe8633eb8bdc745feb0e63054da2cdb96fb7772d28103e38673fdb2c1cd"
   },
   {
     "path": "content/sca-mca-clinical-pins.json",
@@ -2914,6 +2914,10 @@
   {
     "path": "lib/shoulder-clinical-curriculum.ts",
     "sha256": "dab771a8dee5c917271d3354d350922bea85d985583c863cf1ff1f4b6481b18b"
+  },
+  {
+    "path": "lib/shoulder-soft-tissue-xray.ts",
+    "sha256": "49f6c4d1a1a97f4532d382260f9bc4a8ea158a83184b05df8a2ae1bbd67070fd"
   },
   {
     "path": "lib/small-intestinal-mesentery-mri.ts",
