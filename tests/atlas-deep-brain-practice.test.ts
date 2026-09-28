@@ -8,9 +8,9 @@ test('deep-brain formative practice ships tested source without new models or ac
   const base='public/atlas-runtime/head-neck/';
   const sha=(data:Buffer)=>createHash('sha256').update(data).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'891d8c5548d56a67eb6585ee5b95bb361a71a7d632d83d83fbaa88ed77180352');
+  assert.equal(sha(bytes),'ad1885274a7425cb8e720b8acda6b78cb6cd205036c38dd7e73c32d7657c8149');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'beaa104c53e6aa62bb485febd1c47517b346de01');
+  assert.equal(manifest.sourceCommit,'46fde2b6fa76af9349bd582f5ed328305bb26291');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({

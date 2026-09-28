@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+29 September: shoulder review navigation imported locally from Atlas `46fde2b`.
+Embedded review opens the website's protected shoulder review with the selected
+ID; valid host bookmarks now reach iframe/full-screen views.252 tests,types/build
+and actual navigation/fallback checks pass. Models/content/access and fracture
+work preserved; no review submitted or Atlas publication. See
+`docs/shoulder-review-nav-delivery-20260928.md` and coordination recovery checkpoint.
+Native MRI remains done.
+
 28 September: shoulder soft-tissue X-ray teaching imported locally from Atlas
 `beaa104`. Six new referenced drafts reach learner and protected Clinical Review;
 all nine shoulder selections now have introductory X-ray notes.250 tests,

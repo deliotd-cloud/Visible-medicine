@@ -7,8 +7,8 @@ test('mediastinal X-ray drafts ship from tested source without scan or access cl
  const base='public/atlas-runtime/head-neck/';
  const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
  const bytes=readFileSync(base+'manifest.json'),manifest=JSON.parse(bytes.toString());
- assert.equal(sha(bytes),'891d8c5548d56a67eb6585ee5b95bb361a71a7d632d83d83fbaa88ed77180352');
- assert.equal(manifest.sourceCommit,'beaa104c53e6aa62bb485febd1c47517b346de01');
+ assert.equal(sha(bytes),'ad1885274a7425cb8e720b8acda6b78cb6cd205036c38dd7e73c32d7657c8149');
+ assert.equal(manifest.sourceCommit,'46fde2b6fa76af9349bd582f5ed328305bb26291');
  const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
  for(const [path,sha256] of [
   ['content/mediastinal-xray.ts','8ae8c1235315cb5b78c63332e90a52667e54c8a695d909fd8753aed905e9b9e6'],

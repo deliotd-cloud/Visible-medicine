@@ -48,7 +48,7 @@ test('website uses one real shoulder and does not imply a scan connection',async
   assert.equal(entries.length,1); assert.equal(entries[0].images,0); assert.equal(entries[0].structures,9);
   const source=await readFile(new URL('../app/atlas/shoulder-3d/page.tsx',import.meta.url),'utf8');
   assert.equal((source.match(/<iframe\b/g)||[]).length,1);
-  assert(source.includes('src="/atlas-runtime/shoulder/index.html"'));
+  assert(source.includes('src={moduleHref}'));
   assert(source.includes('No scan or spatial registration is connected'));
   assert(!source.includes('postMessage') && !source.includes('iframe src={'));
 });
