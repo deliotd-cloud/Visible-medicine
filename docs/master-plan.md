@@ -1,5 +1,14 @@
 # Visible Medicine — shared delivery plan
 
+29 September: brain connections quick checks imported locally from Atlas
+`e1ad6b0`. Six referenced questions reach eight existing brain selections in
+learner Quiz notes and protected Clinical Review, without extra controls.
+253 tests, types/build and actual matching mobile learner/review checks pass.
+All model assets, independent access and fracture work preserved; no saved
+approval migrated, patient upload or publication. See
+`docs/brain-connections-quiz-delivery-20260929.md` and coordination checkpoint.
+Native MRI remains done.
+
 29 September: shoulder review navigation imported locally from Atlas `46fde2b`.
 Embedded review opens the website's protected shoulder review with the selected
 ID; valid host bookmarks now reach iframe/full-screen views.252 tests,types/build

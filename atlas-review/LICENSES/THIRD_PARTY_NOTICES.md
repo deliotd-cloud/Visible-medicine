@@ -1758,3 +1758,15 @@ media for reuse. Existing BodyParts3D surfaces keep their commercial-compatible
 licence and attribution. No new asset, dependency, font, service or fee is added.
 Static muscle/cartilage surfaces are not vocal-fold motion, an airway lumen,
 patient registration or a procedural demonstration. Clinical review is pending.
+
+# Brain connections quick-check references — 29 September 2026
+
+Six original short questions reference factual relationships in UTHealth McGovern
+Medical School's Neuroanatomy/Neuroscience Online and the US National Cancer
+Institute's CSF definition. Exact links and scope are in
+`docs/BRAIN_CONNECTIONS_QUIZ.md` and accompany the displayed questions. No source
+question-bank items, illustrations, tables, scans or extended prose are copied.
+Links are evidence references, not licences to redistribute those websites'
+assets. Existing BodyParts3D geometry and credits are unchanged. No new media,
+font, dependency, service or mandatory fee is introduced. All questions remain
+draft and require revision-bound radiologist review.

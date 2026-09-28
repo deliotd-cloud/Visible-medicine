@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "46fde2b6fa76af9349bd582f5ed328305bb26291",
-  "sha256": "ef60a2220806918c2c880cd55a46570913586fb20b514dd7c09ca741adcdd30e",
+  "sourceCommit": "e1ad6b0c2aa62cb0f719ef666d559ec0bc8c9eed",
+  "sha256": "74c4e812b625fdd7d2517446fb2275ea42a6b85ed87224002db4b166e2f508c2",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -112,7 +112,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "87f4bbe14a163e4c998f105cdd2a4e9bf5c94bce9027a621ea225ea76e245800"
+      "sha256": "e88cf0d8a38be93fb57426473878911c52ed9acb9e89ae2cf18f71496faa12b1"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -697,6 +697,14 @@
     {
       "path": "atlas-review/content/bowel-component-pins.json",
       "sha256": "5c34d492f10406151508b9a7531cc80314c7c8d8f09fc518dc1e99a0e985fae6"
+    },
+    {
+      "path": "atlas-review/content/brain-connections-quiz-pins.json",
+      "sha256": "effc79d38c9e87c973a5d6e72e8490f6b793d2b1b4e54fe5c7b14fefb5674e5e"
+    },
+    {
+      "path": "atlas-review/content/brain-connections-quiz.ts",
+      "sha256": "d9d746732179a04813e66967fb9097f27f44308c806693f72bdaffe436c11a20"
     },
     {
       "path": "atlas-review/content/brain-imaging-teaching.ts",
@@ -2013,6 +2021,10 @@
     {
       "path": "atlas-review/lib/brachial-veins.ts",
       "sha256": "d675f79d288ce1eb799e4c58a7d14fe5894257274ef302ce96e3a2990bda5b2c"
+    },
+    {
+      "path": "atlas-review/lib/brain-connections-quiz.ts",
+      "sha256": "64583da846d7c9519c84c1b2715bb881fb5d69696aa0b1e2f7c7340378d4f156"
     },
     {
       "path": "atlas-review/lib/brainstem.ts",
@@ -3340,7 +3352,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "45a2d2d3a513b87a50cb029a685e96b3a185ea58081193a2acdca8a9f5a86245"
+      "sha256": "55b670b0d8a8a425b2d57fd4da8653818e815a18e6e4492f82c83e64a23c52da"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3584,7 +3596,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "738e9685a53aa14850fed896fdbb50afe993d6fe7e89d2dcc8f6e10bb9e4ef7a"
+      "sha256": "c222091894bb34d6cfb4d8818d8c985adc4f58ae17f18b41e7b6d2ea369fdf1c"
     }
   ]
 }
