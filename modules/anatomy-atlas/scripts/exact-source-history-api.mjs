@@ -9,6 +9,7 @@ const root=fileURLToPath(new URL('../',import.meta.url));
 export async function exactSourceHistoryApi(commit, profile='display'){
  const exportsByProfile={
   display:"export {bodyLesson} from './app/body-content';export {structures} from './app/anatomy-data';export {dissectionProfiles} from './app/dissection-data';export {bodyDisplayCatalog} from './lib/body-display-catalog';export {contentTabs} from './lib/content-types';",
+  'display-content':"export {bodyLesson} from './app/body-content';export {structures} from './app/anatomy-data';export {dissectionProfiles} from './app/dissection-data';export {bodyDisplayCatalog} from './lib/body-display-catalog';export {contentTabs} from './lib/content-types';export {bodyContentRecords} from './lib/content-export';",
   curriculum:"export {bodyContent,bodyLesson} from './app/body-content';export {structures} from './app/anatomy-data';export {dissectionProfiles} from './app/dissection-data';export {contentTabs} from './lib/content-types';",
   copy:"export {bodyContent} from './app/body-content';export {structures} from './app/anatomy-data';export {dissectionProfiles} from './app/dissection-data';",
  };
