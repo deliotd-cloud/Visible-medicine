@@ -7,9 +7,9 @@ test('compact source disclosure ships the tested implementation without rewritin
   const base='public/atlas-runtime/head-neck/';
   const sha=(data:Buffer)=>createHash('sha256').update(data).digest('hex');
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'6a1e737c3439b24ee90b65407701fb27fe93cdd1034f8d572e4ce9c75491fae5');
+  assert.equal(sha(manifestBytes),'e58b816df846b8036f17f0721db7fee5cbd9d989cf201258ecdd6cdc3f9ea89e');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'d3d3a750db64c6d10bad1632d68151c871cc8b96');
+  assert.equal(manifest.sourceCommit,'5a0952d7ff841e0aac20522faf2a4d4cfe030415');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256]of [
     ['app/source-display-notes.tsx','57b83b84c0c2cc4fe005b57d798e61bc4fc74bbb5e89a11bd014fbdf2f8ba183'],

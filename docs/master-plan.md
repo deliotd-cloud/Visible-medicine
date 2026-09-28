@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+28 September: orbital guided learning imported locally from Atlas `5a0952d`.
+Six eye-muscle stops with corrected globe context reach learner and protected
+review. All238 website tests, types/build and mobile learner/review sampling pass.
+No models, entitlements or decisions changed; no publication or clinical approval.
+See `docs/orbital-tour-delivery-20260928.md` and the coordination checkpoint for
+verified GitHub/D recovery. Native MRI remains done.
+
 28 September: abdominal organ quick checks imported locally from Atlas `d3d3a75`.
 Six source-bound draft placements reach the learner and protected Clinical Review;
 238 website tests, types/build and mobile learner/review sampling pass. Geometry,

@@ -1709,3 +1709,14 @@ are evidence links, not a claim to license third-party website assets. Existing
 BodyParts3D geometry/credits are unchanged. No new media, font, dependency, paid
 API or mandatory fee is introduced. Clinical approval remains revision-bound
 and pending; source surfaces do not depict microscopic tissue or patient scans.
+
+# Orbital guided learning factual reference — 28 September 2026
+
+Original concise captions reference TTUHSC El Paso's eye anatomy table:
+https://anatomy.ttuhscep.edu/nervous_system/eye_tables.html . No illustrations,
+tables, scans or source prose are copied. This is a factual reference, not a
+licence to redistribute that website's media. Existing BodyParts3D muscle
+surfaces and corrected globe retain their existing attribution and commercial
+reuse conditions. No new model, image, texture, font, dependency, service or
+mandatory fee is introduced. Static source surfaces do not simulate gaze or
+constitute clinical approval, patient registration or a diagnostic examination.
