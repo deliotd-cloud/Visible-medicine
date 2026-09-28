@@ -27,7 +27,7 @@ const Viewer = viewers[kind as keyof typeof viewers];
 const valid = q.getAll('kind').length === 1 && q.getAll('region').length === 1 && Object.hasOwn(dissectionProfiles, region);
 createRoot(document.getElementById('root')!).render(<Boundary><Suspense fallback={<p role="status">Loading the review model…</p>}>
   {!valid ? <p role="alert">Invalid review model link.</p> : kind === 'body' ? <BodyExplorer initialRegion={region} studyLink={parseStudyLink(params)} assetBase={base} presentation="panel" embedded />
-    : kind === 'shoulder' ? <Shoulder initialSelectedId={q.get('structure') ?? undefined} assetBase="/atlas-runtime/shoulder" />
+    : kind === 'shoulder' ? <Shoulder initialSelectedId={q.get('structure') ?? undefined} assetBase="/atlas-runtime/shoulder" presentation="panel" />
     : kind === 'lower-limb' ? <Limb assetBase={base} initialRegion={region} initialLink={parseSpecimenLink(params)} onClose={close} />
     : Viewer ? <Viewer assetBase={base} initialLink={parseIndependentStudyLink(params)} onClose={close} />
     : <p role="alert">Unknown review model.</p>}

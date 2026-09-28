@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+28 September: enlarged label readability imported locally from Atlas `bc948b5`.
+Font-responsive side-bounded labels and model space reach learner/review. Shoulder
+review now uses the intended panel layout, preserving selection and removing its
+duplicate header.249 local tests, types/build and actual browser sampling pass.
+Models/content/access/decisions unchanged; fracture work preserved. See
+`docs/enlarged-labels-delivery-20260928.md` and coordination recovery checkpoint.
+No Atlas publication or clinical approval. Native MRI remains done.
+
 28 September: embedded mobile readability imported locally from Atlas `7d58450`.
 Learner and Clinical Review panels preserve model space and readable mode controls;
 enlarged text can scroll to the model instead of a tiny nested viewport.248 local

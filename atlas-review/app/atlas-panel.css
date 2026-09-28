@@ -96,5 +96,10 @@
 }
 .body-app[data-presentation='panel'][data-panel-short='true'] .body-workspace { overflow:visible; }
 .body-app[data-presentation='panel'][data-panel-short='true'] .body-canvas {
-  grid-template-rows:auto minmax(calc(200px + 2rem),1fr) auto auto auto;
+  /* Grow the drawing space with enlarged labels as well as their width, so
+     the label packer has room to move boxes away from the anatomical anchors. */
+  grid-template-rows:auto minmax(max(calc(200px + 2rem),14.5rem),1fr) auto auto auto;
+}
+.body-app[data-presentation='panel'][data-panel-short='true'] .shoulder-model-workspace>.viewer-panel {
+  grid-template-rows:auto minmax(12.5rem,1fr);
 }

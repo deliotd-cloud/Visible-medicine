@@ -16,7 +16,7 @@
     ],
     [
       "app/scene-label-layer.tsx",
-      "e5e9726bae8b040dd02be573df1994eff3ae844a846cf37394c85782ccc129e0"
+      "05748f6bf138ec79cce969af67b2e681300ef6bbee693f4d379292af46a11eab"
     ],
     [
       "app/scene-label-layer.css",
@@ -24,7 +24,7 @@
     ],
     [
       "lib/screen-label-layout.ts",
-      "bdbc34219c70803768ececed8aa2f952ec18c9cbeae85d77cd29af458debef04"
+      "2b5c270ce1653bda7bc1ed8cef0cded20ae99a8fa579623756d5da31845514d7"
     ],
     [
       "lib/label-depth.ts",
@@ -120,7 +120,7 @@
     ],
     [
       "app/atlas-panel.css",
-      "4e97a058e95142c6487ee69c6959ba73f3189ae9b7e6b0146756c1ec038a4f84"
+      "1a143199998b76fe6b575188168e903b31bc993137ae51e6543e7acb1124303c"
     ],
     [
       "lib/atlas-panel-layout.ts",
@@ -241,97 +241,97 @@
   ],
   "revisions": {
     "vm:anatomy:upper-limb:shoulder:right:bone:scapula": {
-      "geometry": "f37f3566117b51da376d11dc258558400fd1db6339db75b7c56f3e124bb2a307",
-      "teaching": "77e409a858765057964e2ae8b7b8f61c5f7d940a7175cf19b27e160be9db7b09",
+      "geometry": "8bf85496199d630a4676af0caf92d8ab2263a5b8c50bfbe59b311c63baf9af3b",
+      "teaching": "08c9d6444899baf5989367b8ce1e74350560f47a7a784dadb0f114bbfe70152f",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:bone:humerus": {
-      "geometry": "ac8ee3eb82b34dfa80ea3a9312e6b8a09e599e265fd053531e4b56c6e0936ac8",
-      "teaching": "4008d2c90d0ce8efa8666dde718291e26d94464cd2965c11e31f505b2e39c6b2",
+      "geometry": "a6ce859012e9f782c432d2fadf3ca362039daef7c416d34b72adb9b03e8c4e4a",
+      "teaching": "34042602a1f3d5b477f6ce81fef24c791bb9d1b351111ef634f31de33544c6a9",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:bone:clavicle": {
-      "geometry": "7c1f49267231d43ab1783d87bdfe0044980987f450c564cd9ea84ec018ec8cbb",
-      "teaching": "eb4de9ceda0c324a50df7d90a24a78afdb69e2ba127f4341b32055b2dc83f63f",
+      "geometry": "fa855c9bc30820d9c37f4b9e1602dd78849cf34bd404b228d0c8b9d0ffea4cdc",
+      "teaching": "bb739d17cc36c88e0135531b0c1f402fe03337b60e7723ba87ca617ad9119cb2",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:deltoid": {
-      "geometry": "091b77864cc88ef762ce46aaabf419d405f4c4ccd5ecb6d29aa3d3cfcd7759f2",
-      "teaching": "797ffd3e983c21d4da58c85c476fe5a01559c0e0dfb873b74ee062d0a10f3e53",
+      "geometry": "ee60d46e6c267bd915aecf42d8f29fe1ec75fe67a8f5a27e37fab159707c6859",
+      "teaching": "986e5a74a2d1394b551e6ec0a24e3537d3c656384f29ba3c541236ae5fefdbf0",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:supraspinatus": {
-      "geometry": "fae058b5981ca714911c9a02a6e89cc4ba897e5b6f84f12209d8fbe6e8f76dd7",
-      "teaching": "d775e28c364074a6b97ee3ad75fd3b378f1ca9c0db7570d9e3c67fc1973fa187",
+      "geometry": "90c911a52a9fc9f64d6c16ad474719412537cdf20e449d371a3de4a245a042e6",
+      "teaching": "8b6f700f66cd76a7dc9841b7dcc59fdcf1b7749646088aced192b05a61b3b6d2",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:infraspinatus": {
-      "geometry": "6476bf3a6bddbd476a0e58b6f236861aecf2c89cef9cf545273a3bd82ac381ce",
-      "teaching": "c77f12fd47ba068cdd71bcbdb75bf6418d2a7623d38b0a9d5d79c4ab1b603510",
+      "geometry": "fa75e7478e7262081e16f2aaa6f2056aea17c7d39e5fe8b9a50b47f817f33324",
+      "teaching": "f1b0ec17da6ff4db382ad8d2340d6efc9773e6963851066595e941d33d71a8df",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:subscapularis": {
-      "geometry": "f24387f3055c88263e59847c07602db690ddb2f171dcdedc8fd6d0673d246712",
-      "teaching": "fdd01bf3eaa08e8ddc861e6c4af16dadad386b08a452f7c4c941e70aa298f8f1",
+      "geometry": "e2e6eae40274623b6b3f0d2ff34ca49bb4babe95e0ba697103c1379e5b4eb182",
+      "teaching": "1de84ff43fa595707c97d2e26c3066a84d89a4c82d1d1a408a2629e624f64518",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:biceps-long-head": {
-      "geometry": "0458839da98f1283631c293c1e86a8d5846d0fe2564d49f783049bd4714b7959",
-      "teaching": "ef86618c102e52d0cdf6f680ad152bcfc27fac82a24c998540c9c47e33cff504",
+      "geometry": "ab25148940f56173ccaf9aebe66798584f49055dbe3e5edeaaa69a9174541ee4",
+      "teaching": "45acb3e8246f4f2b43c4fbd0a9a57df0d8782d1e92da07e4d7edc3687b20ff92",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:teres-minor": {
-      "geometry": "4266e07305bd5d5b8ce0ab06418ff6925758530b324563d0d94f68496e36d61e",
-      "teaching": "57755b8cd9482c50a158edd7e22e98100e99b6985549ad13ceb2aa4525be01f1",
+      "geometry": "215ca4ae33c0c33c720271419c4ad551b9707ddf2034b0c874d732688e5bca42",
+      "teaching": "b2dbfe12970c1efffb2307f01ce593a4d780731488b3a7b813551f8128923b12",
       "imaging": null
     }
   },
   "sourceRevisions": {
     "vm:anatomy:upper-limb:shoulder:right:bone:scapula": {
-      "geometry": "834f6032e84d0e93eb00c99b7aed227f1a3406fc8dae568969423f08c3784db3",
+      "geometry": "80af238ccd51f316a222124f69319a365e9980577ad41c8edadb6767f142b39f",
       "teaching": "7b9dfb26d73375a22ed0f55e076bb4a45abf807acdcdfe53d43cf7bf2fee78d2",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:bone:humerus": {
-      "geometry": "4e537fcd4ba4f3e3a96067e1fddabc2b53a0006a3cf60292d04cc7802af0198f",
+      "geometry": "ee71a3bdfb1c24be4ba16b67f4ca737e28b25189be5ee39815c789e4114742f5",
       "teaching": "783843c2a27f70015c324a11cec92fda16657dadc1798553233418838acf0050",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:bone:clavicle": {
-      "geometry": "a2c1b68a3fab77a96d446057ae62b994ab9c4f4c2c7437499f285f220956efbc",
+      "geometry": "ae5261d8670beb996fc8f7c8b236997e6dffc15bee12ff308ee15233b5e2b8d4",
       "teaching": "74b788a672949f4f3107273754d51daf8d9aaa35553612ab88de6ed27c2d420d",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:deltoid": {
-      "geometry": "5bcdd41a3fb763fb2e640f8f2402dc3b0117fa88dac34cd94b2b26f4db967e8a",
+      "geometry": "b186bf8d0582e471a97b647e4c6a0cb4fec75f68be8e51c38801cba8ac4851fb",
       "teaching": "0035dd024a9d32462c1cde9c437472cd3cb5f98f12080c5c7167d88c261ec303",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:supraspinatus": {
-      "geometry": "3e080bf6fd46ba5ab9657fe20bc7696805dd703b5776bbf1119d3825e3c51bb9",
+      "geometry": "61fb4fe25577dd84b43358c619756f6e8da2cf41550b715cde4cfd99e8ce4eda",
       "teaching": "b4842e5ec95c9fc4e39d26acc7b757e3ef6187cdbf6ce811958ecef03a04a165",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:infraspinatus": {
-      "geometry": "f25cd6fef391a649d8ca60425a26ccb5c00152fe664c0a263db0da881c5332cf",
+      "geometry": "ab006d3fb78d8b8c31008167ff5e8c447b37672ced3bd5cdb0e46df38937440c",
       "teaching": "3bede170e06447b07849d8c2afddc1958dc5e65790e13d0cb53e19aa695f3891",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:subscapularis": {
-      "geometry": "95dd28f55e0bcfebf043d33265446cae44976c1ed3647affbd8a26c9ff2b3032",
+      "geometry": "c57f3676d74b9bffc8bd736fbd821a17a5725c1bda57f4fa46e83e5b912eff90",
       "teaching": "5ca78d12f58c4f989915233eb31e2b6a570d97b8df22c5f8346a6605fc985231",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:biceps-long-head": {
-      "geometry": "297d8a67645bbc265ea951cceb483e4f2b6466d35b2ba3d29811fb9785991e1f",
+      "geometry": "dfa0abef09be42474fc98a932a590fa521a69133e0279b7f9f783a62929f7240",
       "teaching": "19ca5976fea94f95c871b6025a45c0d56a7485079cd73f2ff4b3aceae249146d",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:teres-minor": {
-      "geometry": "5d5295b47298001bbdc587f1994d835735b8267b9c07df367e913be97bbe83eb",
+      "geometry": "3d0f026895d50b52cd9052f46ee512eccab2342821fb54c94ffe8c6240328961",
       "teaching": "b86d5b3cda0c3f7a7c89549924e5cc7682fc6eeb7f9180cfe417590e45e2c11a",
       "imaging": null
     }
   },
-  "websiteIntegrationSha256": "dfdec0feb120ef6f22e37e47a96c194b955ad37484423ce98017f9ee1795d6a8"
+  "websiteIntegrationSha256": "433bbf8cadf0f23f71f5c9decf00a49925fd385d051de43422123bf29b4879db"
 }

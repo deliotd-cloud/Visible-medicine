@@ -1,5 +1,5 @@
 {
-  "revision": "7d584505c79d94a5b19c44fed0b75f2f7d57d424",
+  "revision": "bc948b52e8f63c12305bda6eb3e902c5d74e18dc",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2718,8 +2718,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "baaf56d02727b840786592ec8b4bdb272527f7d871d4c3d6fe24036462e98f8c",
-      "importedSha256": "7ad31d7afc33fe255fa71bac87e5b695afd1ec696a2caf869e0a0124dcda5ab9"
+      "sourceSha256": "c6a5f01adbd0763d66830c3d31377bb2e72e45efc8a21567e1a59a3b4ab2f94b",
+      "importedSha256": "d05f7e301de160302f68725b549d885d2430e2ae80000ccd835a0aecc505e48d"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3008,8 +3008,8 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sourceSha256": "23aeec50e899a1d88b5fa8e9cf1029dc3054ffffc15ad554e4ec391b6b411f7a",
-      "importedSha256": "1b76de7a1c8a3ed3922744b9b7a246ca2644d9a2b82619168bec73f9661155b3"
+      "sourceSha256": "3e31f6ce492f4f8ca587b36a9df04a926c87beec710e747df58932fd0d48a3f9",
+      "importedSha256": "1e40e856860db03b2d00dbad5484f8212938148dc9c717bf052e2af4c4bdb710"
     },
     {
       "path": "app/review/review.css",
@@ -3193,8 +3193,8 @@
     },
     {
       "path": "app/atlas-panel.css",
-      "sourceSha256": "4e97a058e95142c6487ee69c6959ba73f3189ae9b7e6b0146756c1ec038a4f84",
-      "importedSha256": "4e97a058e95142c6487ee69c6959ba73f3189ae9b7e6b0146756c1ec038a4f84"
+      "sourceSha256": "1a143199998b76fe6b575188168e903b31bc993137ae51e6543e7acb1124303c",
+      "importedSha256": "1a143199998b76fe6b575188168e903b31bc993137ae51e6543e7acb1124303c"
     },
     {
       "path": "app/study-surface.css",
@@ -3338,8 +3338,8 @@
     },
     {
       "path": "app/scene-label-layer.tsx",
-      "sourceSha256": "e5e9726bae8b040dd02be573df1994eff3ae844a846cf37394c85782ccc129e0",
-      "importedSha256": "8d4c6b4823a43df79f38e4255478aa5a4223ed220339124d97b5b82106ab41c8"
+      "sourceSha256": "05748f6bf138ec79cce969af67b2e681300ef6bbee693f4d379292af46a11eab",
+      "importedSha256": "1335ce3aab7accb12c4a36b776bc88af60c194c3018bf5935905e65946a28ac6"
     },
     {
       "path": "lib/scene-label-focus.ts",
@@ -3348,8 +3348,8 @@
     },
     {
       "path": "lib/screen-label-layout.ts",
-      "sourceSha256": "bdbc34219c70803768ececed8aa2f952ec18c9cbeae85d77cd29af458debef04",
-      "importedSha256": "bdbc34219c70803768ececed8aa2f952ec18c9cbeae85d77cd29af458debef04"
+      "sourceSha256": "2b5c270ce1653bda7bc1ed8cef0cded20ae99a8fa579623756d5da31845514d7",
+      "importedSha256": "2b5c270ce1653bda7bc1ed8cef0cded20ae99a8fa579623756d5da31845514d7"
     },
     {
       "path": "app/scene-label-layer.css",
@@ -4413,5 +4413,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "dfdec0feb120ef6f22e37e47a96c194b955ad37484423ce98017f9ee1795d6a8"
+  "websiteIntegrationSha256": "433bbf8cadf0f23f71f5c9decf00a49925fd385d051de43422123bf29b4879db"
 }

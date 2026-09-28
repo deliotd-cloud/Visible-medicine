@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "7d584505c79d94a5b19c44fed0b75f2f7d57d424",
-  "sha256": "dfdec0feb120ef6f22e37e47a96c194b955ad37484423ce98017f9ee1795d6a8",
+  "sourceCommit": "bc948b52e8f63c12305bda6eb3e902c5d74e18dc",
+  "sha256": "433bbf8cadf0f23f71f5c9decf00a49925fd385d051de43422123bf29b4879db",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -92,7 +92,7 @@
     },
     {
       "path": "atlas-review/app/atlas-panel.css",
-      "sha256": "4e97a058e95142c6487ee69c6959ba73f3189ae9b7e6b0146756c1ec038a4f84"
+      "sha256": "1a143199998b76fe6b575188168e903b31bc993137ae51e6543e7acb1124303c"
     },
     {
       "path": "atlas-review/app/atlas-workspace.css",
@@ -364,7 +364,7 @@
     },
     {
       "path": "atlas-review/app/scene-label-layer.tsx",
-      "sha256": "8d4c6b4823a43df79f38e4255478aa5a4223ed220339124d97b5b82106ab41c8"
+      "sha256": "1335ce3aab7accb12c4a36b776bc88af60c194c3018bf5935905e65946a28ac6"
     },
     {
       "path": "atlas-review/app/scene-orientation.css",
@@ -3004,7 +3004,7 @@
     },
     {
       "path": "atlas-review/lib/screen-label-layout.ts",
-      "sha256": "bdbc34219c70803768ececed8aa2f952ec18c9cbeae85d77cd29af458debef04"
+      "sha256": "2b5c270ce1653bda7bc1ed8cef0cded20ae99a8fa579623756d5da31845514d7"
     },
     {
       "path": "atlas-review/lib/selection-visibility.ts",
@@ -3576,11 +3576,11 @@
     },
     {
       "path": "scripts/clinical-review-viewer/main.tsx",
-      "sha256": "8e15fd7f4e0dfe6edf60d45ed0437ec4ea37faf2351f29a954166bc08d7feb74"
+      "sha256": "29a2d7cb2e71707db1bbb088beaeb32022d8f5d1dd15da8b5ba655dcd14cf40a"
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "16c24f69e2569d40be476da36dab22729ef228afcb55e66c2af7f8e1a9f5f023"
+      "sha256": "4eb062c34ff68579317843ad4468ec1c64250b146945b6c3df42680f82a5889d"
     }
   ]
 }
