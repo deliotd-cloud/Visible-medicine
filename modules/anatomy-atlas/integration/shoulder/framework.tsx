@@ -1,7 +1,10 @@
 import { lazy, Suspense, type AnchorHTMLAttributes, type ComponentType, type ImgHTMLAttributes } from 'react';
+import { shoulderWebsiteReviewHref } from './navigation';
 
 // Navigation leaves the embedded document; review authentication stays with its owner.
 export function Link({ href, children, ...props }: AnchorHTMLAttributes<HTMLAnchorElement>) {
+  const review = shoulderWebsiteReviewHref(href);
+  if (review) return <a {...props} href={review} target="_top">{children}</a>;
   const url = href?.startsWith('/') ? new URL(href, 'https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site').href : href;
   return <a {...props} href={url} target="_blank" rel="noopener noreferrer">{children}</a>;
 }
