@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+28 September: guided-tour recovery imported locally from Atlas `367ec85`.
+Failed required model downloads can be retried without losing the selected step
+or automatically resuming playback. Keyboard focus recovery is included, with no
+extra controls during normal use. All239 tests, types/build and embedded mobile
+Start/Next/Exit checks pass. Models, teaching, access and decisions unchanged.
+See `docs/tour-retry-delivery-20260928.md` and the coordination checkpoint for
+verified GitHub/D recovery. No publication or approval. Native MRI remains done.
+
 28 September: intrinsic laryngeal guided learning imported locally from Atlas `bf5c396`.
 Seven muscle stops with three cartilage landmarks reach learner and protected
 review. Shared cartilages retain both tours; neither can be omitted from review.

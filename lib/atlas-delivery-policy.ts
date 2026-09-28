@@ -5,5 +5,5 @@ import type { AtlasDeliveryPolicy } from './atlas-delivery-access.ts';
 // Keep the private draft available only to review staff.
 export const ATLAS_DELIVERY_POLICY = {
   audience: 'administrator-review',
-  manifestRevision: '6798c5179202868e7697d9cfdc57c6d1150de7664ca099cdf53d0080c0a34901',
+  manifestRevision: '1a51e42b94da674a1a26ae4cc7a21053f3f918a4ff963a8ac1515a75c99a8a5c',
 } as const satisfies AtlasDeliveryPolicy;

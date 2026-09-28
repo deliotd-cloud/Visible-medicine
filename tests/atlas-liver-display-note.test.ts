@@ -8,9 +8,9 @@ const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
 
 test('regional export binds the liver display note without claiming segment validation',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'8b9ff18ec11ed9218c872e7999fa00585947e9d0a389706170db482321065d81');
+  assert.equal(sha(manifestBytes),'b6689c7fd31771ed6f14369dd1e23b63b9db8b788562b891b7d1d929aeef20e7');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'bf5c3964677ff866b166404355349267dbf2c503');
+  assert.equal(manifest.sourceCommit,'367ec85339ef2f7bd11df43a96514ac85712f4ab');
   for(const flag of ['clinicalApproved','patientDataIncluded','imagingConnection','standaloneReviewConnection'])
     assert.equal(manifest[flag],false,flag);
 
