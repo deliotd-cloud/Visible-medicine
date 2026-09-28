@@ -11,9 +11,9 @@ const parent='8da967df7f4f419014ea03b323d239732a787be1';
 assert.equal(readFileSync('lib/chest-wall-tour.ts','utf8').replace(/\r/g,''),execFileSync('git',['show',parent+':lib/chest-wall-tour.ts'],{encoding:'utf8'}).replace(/\r/g,''));
 const priorTours=await compile(execFileSync('git',['show',parent+':lib/regional-tours.ts'],{encoding:'utf8'}).replaceAll("from './","from './lib/"));
 assert.equal(readFileSync('lib/orbital-tour.ts','utf8').replace(/\r/g,''),execFileSync('git',['show',parent+':lib/orbital-tour.ts'],{encoding:'utf8'}).replace(/\r/g,''));
-assert.deepEqual(api.regionalTours.filter(t=>t.id!==api.maleDuctTour.id),priorTours.regionalTours);
+assert.deepEqual(api.regionalTours.filter(t=>![api.maleDuctTour.id,api.deepBrainTour.id].includes(t.id)),priorTours.regionalTours);
 for(const s of priorTours.regionalTours.flatMap(t=>priorTours.regionalTourStructures(api.catalog,t))){
- assert.deepEqual(api.regionalTourEvidence(api.catalog,s.id).filter(e=>e.tour.id!==api.maleDuctTour.id),priorTours.regionalTourEvidence(api.catalog,s.id),'Every prior individual tour retains its evidence');
+ assert.deepEqual(api.regionalTourEvidence(api.catalog,s.id).filter(e=>![api.maleDuctTour.id,api.deepBrainTour.id].includes(e.tour.id)),priorTours.regionalTourEvidence(api.catalog,s.id),'Every prior individual tour retains its evidence');
 }
 const oldParser=await compile(execFileSync('git',['show','6b1539f:lib/body-review-response.ts'],{encoding:'utf8'}).replaceAll("from './","from './lib/"));
 const canonical=v=>Array.isArray(v)?'['+v.map(canonical).join(',')+']':v&&typeof v==='object'?'{'+Object.keys(v).sort().map(k=>JSON.stringify(k)+':'+canonical(v[k])).join(',')+'}':JSON.stringify(v);
@@ -75,7 +75,8 @@ for(const s of api.catalog.structures){
  const priorEvidence=priorTours.regionalTourEvidence(api.catalog,s.id);
  const beforeDuct=digest({scope,topics:m.topics,reasoning:m.reasoning,...(priorEvidence.length?{guidedTours:priorEvidence}:{})});
  const gainsDuct=[...api.maleDuctTour.contextIds,...api.maleDuctTour.steps.map(step=>step.selectedId)].includes(s.id);
- if(gainsDuct)assert.notEqual(m.fingerprints.teaching,beforeDuct,'New duct tour and shared organ teaching require fresh review');
+ const gainsBrain=[...api.deepBrainTour.contextIds,...api.deepBrainTour.steps.map(step=>step.selectedId)].includes(s.id);
+ if(gainsDuct||gainsBrain)assert.notEqual(m.fingerprints.teaching,beforeDuct,'New tour teaching requires fresh review');
  else assert.equal(m.fingerprints.teaching,beforeDuct,'No unrelated teaching review is invalidated');
  const tours=api.regionalTours.filter(t=>[...t.contextIds,...t.steps.map(step=>step.selectedId)].includes(s.id));
  if(tours.length){
@@ -86,9 +87,9 @@ for(const s of api.catalog.structures){
  }else{assert.equal(m.guidedTours.length,0);assert.equal(m.fingerprints.teaching,previous,'Unrelated teaching history retained');assert(!c.checklists.teaching.some(v=>v.id==='guided-tour'));}
  assert.equal(c.revisions.imaging,null);
 }
-assert.equal(api.catalog.structures.length,1104);assert.equal(checked,107);assert.equal(api.regionalTours.length,15);
+assert.equal(api.catalog.structures.length,1104);assert.equal(checked,114);assert.equal(api.regionalTours.length,16);
 const orbitalStructures=api.regionalTourStructures(api.catalog,api.orbitalTour);
-assert.equal(orbitalStructures.length,7);assert.equal(api.regionalToursFor('head-neck').length,3);
+assert.equal(orbitalStructures.length,7);assert.equal(api.regionalToursFor('head-neck').length,4);
 let orbitalRejected=0;
 for(const structure of orbitalStructures){
  const packet=await api.bodyReviewMaterial(structure.id);
