@@ -335,6 +335,7 @@
     "format": "oxfmt",
     "licenses:audit": "node scripts/audit-licenses.mjs",
     "requirements:audit": "node scripts/audit-requirements.mjs",
+    "requirements:check": "node --test scripts/test-requirement-summary-current.mjs && node scripts/audit-requirements.mjs --check",
     "content:export": "node scripts/export-content.mjs",
     "content:test": "node scripts/validate-content-contract.mjs",
     "shoulder-arm-curriculum:test": "node scripts/validate-shoulder-arm-curriculum.mjs",

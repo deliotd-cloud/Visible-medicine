@@ -51,6 +51,8 @@ export { lowerArterialImagingLesson } from './lib/lower-arterial-imaging.ts';
 export { limbBoneImagingLesson } from './lib/limb-bone-imaging.ts';
 export { thoracicBoneImagingLesson } from './lib/thoracic-bone-imaging.ts';
 export { abdominalOrganImagingLesson } from './lib/abdominal-organ-imaging.ts';
+export { regionalTours } from './lib/regional-tours.ts';
+export { shoulderTour } from './lib/shoulder-tours.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';
 export { reasoningConcepts, reasoningConceptFor } from './lib/reasoning-questions.ts';
@@ -115,6 +117,8 @@ const {
   limbBoneImagingLesson,
   thoracicBoneImagingLesson,
   abdominalOrganImagingLesson,
+  regionalTours,
+  shoulderTour,
   structures: shoulder,
   dissectionProfiles,
   reasoningConcepts,
@@ -703,6 +707,13 @@ sourceHashes.explicitTopicReadiness = hash(
   ),
 );
 sourceHashes.reasoningQuestionData = hash(JSON.stringify(reasoningConcepts));
+sourceHashes.guidedLearningData = hash(JSON.stringify({ regionalTours, shoulderTour }));
+for (const path of [
+  'app/volume-image.tsx', 'app/review/mri-import/page.tsx',
+  'lib/regional-tours.ts', 'lib/shoulder-tours.ts', 'lib/chest-wall-tour.ts',
+  'lib/orbital-tour.ts', 'lib/intrinsic-larynx-tour.ts', 'lib/male-duct-tour.ts',
+])
+  sourceHashes[path] = hash(await read(path));
 // Include resolved nested text and references, including separately imported
 // organ modules. Coverage counts alone do not detect an altered paragraph.
 sourceHashes.nestedTeachingData = hash(
@@ -1136,6 +1147,13 @@ const report = {
     anatomicalCompletenessMeasured: false,
   },
   study: {
+    guidedLearning: {
+      regionalTours: regionalTours.length,
+      regionalStops: regionalTours.reduce((total, tour) => total + tour.steps.length, 0),
+      shoulderTours: 1,
+      shoulderStops: shoulderTour.steps.length,
+      readiness: 'draft',
+    },
     vesselVisibilityGroups: vesselVisibilityGroups(catalog.structures, []).map(({kind,total}) => ({kind,total})),
     wristHandPartnerBones: Object.values(handBoneFmas).flat().length,
     wristHandOrdinaryPairsPerSide: handJoints.filter(j => j.kind !== 'variable').length,
@@ -1197,9 +1215,18 @@ const report = {
     supportedKinds: learningResourceKinds,
     configuredResources: learning.resources.length,
     configuredCorrespondences: learning.links.length,
-    liveViewerIntegration: false,
+    configurationScope: 'Atlas content/learning-resources.v1.json only; not the separate website host configuration',
+    implementedCapabilities: {
+      educationSelectionPort: 'lib/root-education-api.ts',
+      optionalDecodedCtMriViewer: 'app/volume-image.tsx',
+      privateNativeMriQa: 'app/review/mri-import/page.tsx',
+    },
+    externalWebsiteEvidence: {
+      reference: 'Canonical website docs/master-plan.md, mapped in the coordination WORKSPACE_MAP.md',
+      scope: 'Separate website records Didanix Education integration and completed native MRI synthetic QA; this Atlas-only inventory does not inspect its runtime, clearance or deployment.',
+    },
     limitation:
-      'Strict read-only transport and source/anchor registry with host-policy gates. Configured records are not approvals. No external resources are configured at this milestone.',
+      'Implemented host adapters and image viewers are distinct from configured resources. Registry counts measure only the Atlas static document. Host-provided records, acquired-case privacy/rights clearance, independent entitlements, validated correspondences and revision-bound clinical acceptance are separate gates.',
   },
   teaching: {
     classification: {
