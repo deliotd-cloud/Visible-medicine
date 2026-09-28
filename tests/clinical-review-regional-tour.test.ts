@@ -4,13 +4,13 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { build } from 'esbuild';
 
-test('all thirteen regional tours ship complete source-bound review evidence', async () => {
+test('all fourteen regional tours ship complete source-bound review evidence', async () => {
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const base='public/atlas-runtime/head-neck/';
   const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
   assert.equal(learner.sourceCommit,review.revision);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
-  for(const path of ['lib/regional-tours.ts','lib/chest-wall-tour.ts','lib/orbital-tour.ts','app/regional-guided-learning.tsx','lib/tour-camera.ts','app/fitted-camera.tsx']) {
+  for(const path of ['lib/regional-tours.ts','lib/chest-wall-tour.ts','lib/orbital-tour.ts','lib/intrinsic-larynx-tour.ts','app/regional-guided-learning.tsx','lib/tour-camera.ts','app/fitted-camera.tsx']) {
     const file=review.files.find((f:any)=>f.path===path); assert.ok(file,path);
     assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,file.sourceSha256,path);
     assert.equal(createHash('sha256').update(readFileSync('atlas-review/'+path)).digest('hex'),file.importedSha256);
@@ -48,53 +48,74 @@ test('all thirteen regional tours ship complete source-bound review evidence', a
     assert.equal(api.regionalTourFor(region).id,id);assert.equal(api[name].revision,id+'-v1');
     assert.deepEqual(api[name].steps.map((s:any)=>s.view),['anterior','right','posterior','posterior','left']);
   }
-  assert.equal(api.regionalTours.length,13);
+  assert.equal(api.regionalTours.length,14);
   assert.equal(api.orbitalTour.status,'draft');
   assert.equal(api.orbitalTour.steps.length,6);
-  assert.deepEqual(api.regionalToursFor('head-neck').map((t:any)=>t.id),[api.larynxTour.id,api.orbitalTour.id]);
+  assert.deepEqual(api.regionalToursFor('head-neck').map((t:any)=>t.id),[api.larynxTour.id,api.orbitalTour.id,api.intrinsicLarynxTour.id]);
   assert.equal(api.chestWallTour.status,'draft');
   assert.equal(api.chestWallTour.steps.length,6);
   assert.deepEqual(api.regionalToursFor('thorax').map((t:any)=>t.id),[api.thoraxTour.id,api.chestWallTour.id]);
   assert.equal(api.regionalTourFor('thorax').id,api.thoraxTour.id);
   assert.deepEqual(api.chestWallTour.steps.map((s:any)=>s.view),['right','right','right','posterior','posterior','superior']);
   for(const tour of api.regionalTours) {
-  const count=tour===api.orbitalTour?7:tour===api.chestWallTour?9:({thorax:8,spine:8,abdomen:6,forearm:7,thigh:6,leg:7,hand:7,foot:8,'shoulder-arm':8,'head-neck':6,pelvis:8} as Record<string,number>)[tour.region];
+  const count=tour===api.intrinsicLarynxTour?10:tour===api.orbitalTour?7:tour===api.chestWallTour?9:({thorax:8,spine:8,abdomen:6,forearm:7,thigh:6,leg:7,hand:7,foot:8,'shoulder-arm':8,'head-neck':6,pelvis:8} as Record<string,number>)[tour.region];
   const ids=new Set([...tour.contextIds,...tour.steps.map((s:any)=>s.selectedId)]);
   assert.equal(ids.size,count);
   for(const id of ids) {
     const packet=await api.bodyReviewMaterial(id);
     assert.equal(packet.schema,'vm-body-review-worksheet-3');
     assert.ok(api.parseBodyReviewResponse(packet,id));
-    assert.equal(packet.guidedTours.length,1);
-    assert.deepEqual(packet.guidedTours[0].tour,tour);
-    assert.equal(packet.guidedTours[0].structures.length,count);
-    assert.equal(packet.guidedTours[0].transitionMs,1800);
-    assert.equal(packet.guidedTours[0].transition,'quintic-orbit');
+    const shared=api.intrinsicLarynxTour.contextIds.includes(id);
+    assert.equal(packet.guidedTours.length,shared?2:1);
+    const tourIndex=packet.guidedTours.findIndex((e:any)=>e.tour.id===tour.id);assert.ok(tourIndex>=0);
+    if(shared){
+      assert.deepEqual(packet.guidedTours.map((e:any)=>e.tour.id),[api.larynxTour.id,api.intrinsicLarynxTour.id]);
+      for(const omitted of [api.larynxTour.id,api.intrinsicLarynxTour.id]){
+        const changed=structuredClone(packet);changed.guidedTours=changed.guidedTours.filter((e:any)=>e.tour.id!==omitted);
+        assert.equal(api.parseBodyReviewResponse(changed,id),null,'Neither shared tour can be omitted');
+      }
+    }
+    assert.deepEqual(packet.guidedTours[tourIndex].tour,tour);
+    assert.equal(packet.guidedTours[tourIndex].structures.length,count);
+    assert.equal(packet.guidedTours[tourIndex].transitionMs,1800);
+    assert.equal(packet.guidedTours[tourIndex].transition,'quintic-orbit');
     const context=await api.bodyReviewContext(id);
     assert.ok(context.checklists.teaching.some((c:any)=>c.id==='guided-tour'));
     assert.equal(context.revisions.imaging,null);
     for(const mutate of [
       (p:any)=>{p.guidedTours=[];},
-      (p:any)=>{p.guidedTours[0].tour.steps[0].caption='Changed unreviewed caption';},
+      (p:any)=>{p.guidedTours[tourIndex].tour.steps[0].caption='Changed unreviewed caption';},
       (p:any)=>{p.schema='vm-body-review-worksheet-2';},
-      (p:any)=>{p.guidedTours[0].limitations='Approved';},
-      (p:any)=>{p.guidedTours[0].structures.find((s:any)=>s.id!==id).sources[0].sha256='0'.repeat(64);},
-      (p:any)=>{p.guidedTours[0].structures.find((s:any)=>s.id!==id).bounds.min[0]-=1;},
-      (p:any)=>{p.guidedTours[0].sourceVersion+='-altered';},
+      (p:any)=>{p.guidedTours[tourIndex].limitations='Approved';},
+      (p:any)=>{p.guidedTours[tourIndex].structures.find((s:any)=>s.id!==id).sources[0].sha256='0'.repeat(64);},
+      (p:any)=>{p.guidedTours[tourIndex].structures.find((s:any)=>s.id!==id).bounds.min[0]-=1;},
+      (p:any)=>{p.guidedTours[tourIndex].sourceVersion+='-altered';},
     ]) {const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,id),null);}
     if(tour===api.celiacTour) {
-      const evidence=packet.guidedTours[0];
+      const evidence=packet.guidedTours[tourIndex];
       assert.equal(evidence.structures.find((s:any)=>s.id===tour.steps[0].selectedId).bundle,'celiac-display-corrected');
       assert.equal(evidence.stepFrames.length,5);
       assert.ok(evidence.stepFrames[0].max[0]-evidence.stepFrames[0].min[0]<(evidence.frame.max[0]-evidence.frame.min[0])/2);
       for(const mutate of [
-        (p:any)=>{delete p.guidedTours[0].stepFrames;},
-        (p:any)=>{p.guidedTours[0].stepFrames[0].min[0]-=1;},
-        (p:any)=>{delete p.guidedTours[0].tour.requiredDisplayBundles;},
+        (p:any)=>{delete p.guidedTours[tourIndex].stepFrames;},
+        (p:any)=>{p.guidedTours[tourIndex].stepFrames[0].min[0]-=1;},
+        (p:any)=>{delete p.guidedTours[tourIndex].tour.requiredDisplayBundles;},
       ]) {const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,id),null);}
     }
+    if(tour===api.intrinsicLarynxTour) {
+      const e=packet.guidedTours[tourIndex];
+      assert.equal(tour.status,'draft');assert.equal(packet.approval,false);
+      assert.equal(e.stepFrames.length,7);assert.equal(tour.steps.length,7);
+      assert.deepEqual(e.bundles.map((b:any)=>b.id).sort(),['head-neck-connective-recovery','head-neck-muscles']);
+      assert.equal(e.structures.filter((s:any)=>s.category==='muscle').length,7);
+      for(const mutate of [
+        (p:any)=>{p.guidedTours[tourIndex].tour.steps.reverse();},
+        (p:any)=>{p.guidedTours[tourIndex].stepFrames[6].max[0]+=1;},
+        (p:any)=>{p.guidedTours.push(structuredClone(p.guidedTours[tourIndex]));},
+      ]){const changed=structuredClone(packet);mutate(changed);assert.equal(api.parseBodyReviewResponse(changed,id),null);}
+    }
     if(tour===api.orbitalTour) {
-      const e=packet.guidedTours[0],globe=tour.contextIds[0];
+      const e=packet.guidedTours[tourIndex],globe=tour.contextIds[0];
       assert.equal(e.stepFrames.length,6);
       assert.equal(packet.approval,false);
       assert.deepEqual(e.bundles.map((b:any)=>b.id).sort(),['eye-corrected-parent','head-neck-muscles']);
@@ -102,25 +123,25 @@ test('all thirteen regional tours ship complete source-bound review evidence', a
       assert.equal(e.structures.find((s:any)=>s.id===globe).bundle,'eye-corrected-parent');
       for(const step of tour.steps)assert.deepEqual(step.frameIds,[step.selectedId,globe]);
       for(const mutate of [
-        (p:any)=>{p.guidedTours[0].structures.find((s:any)=>s.id===globe).bundle='head-neck-organs-recovery';},
-        (p:any)=>{p.guidedTours[0].tour.steps.reverse();},
-        (p:any)=>{p.guidedTours[0].stepFrames[5].max[0]+=1;},
+        (p:any)=>{p.guidedTours[tourIndex].structures.find((s:any)=>s.id===globe).bundle='head-neck-organs-recovery';},
+        (p:any)=>{p.guidedTours[tourIndex].tour.steps.reverse();},
+        (p:any)=>{p.guidedTours[tourIndex].stepFrames[5].max[0]+=1;},
       ]) {const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,id),null);}
     }
-    if(tour!==api.orbitalTour&&['head-neck','pelvis'].includes(tour.region)) {
-      const e=packet.guidedTours[0];
+    if(tour!==api.orbitalTour&&tour!==api.intrinsicLarynxTour&&['head-neck','pelvis'].includes(tour.region)) {
+      const e=packet.guidedTours[tourIndex];
       assert.equal(e.stepFrames.length,5);
       assert.deepEqual(e.bundles.map((b:any)=>b.id).sort(),tour.region==='head-neck'
         ?['head-neck-connective-recovery','head-neck-organs-visceral-detail','head-neck-skeleton']
         :['pelvis-organs','pelvis-organs-recovery','pelvis-skeleton','spine-skeleton']);
       assert.ok(e.structures.every((s:any)=>!s.id.includes('independent')));
       for(const step of tour.steps)assert.deepEqual(step.frameIds,[step.selectedId]);
-      for(const mutate of [(p:any)=>{p.guidedTours[0].tour.contextIds=['independent-female-pelvis'];},(p:any)=>{p.guidedTours[0].stepFrames[0].max[1]+=1;}]) {
+      for(const mutate of [(p:any)=>{p.guidedTours[tourIndex].tour.contextIds=['independent-female-pelvis'];},(p:any)=>{p.guidedTours[tourIndex].stepFrames[0].max[1]+=1;}]) {
         const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,id),null);
       }
     }
     if(['forearm','thigh','leg','hand','foot','shoulder-arm'].includes(tour.region)) {
-      const evidence=packet.guidedTours[0];
+      const evidence=packet.guidedTours[tourIndex];
       assert.ok(evidence.structures.every((s:any)=>s.laterality==='right'));
       assert.deepEqual(evidence.bundles.map((b:any)=>b.id).sort(),[
         tour.region+'-muscles',...(['thigh','shoulder-arm'].includes(tour.region)?[tour.region+'-muscles-dissection']:[]),tour.region+'-skeleton',
@@ -128,17 +149,17 @@ test('all thirteen regional tours ship complete source-bound review evidence', a
       assert.equal(evidence.stepFrames.length,tour.steps.length);
       for(const step of evidence.tour.steps)assert.deepEqual(step.frameIds,[step.selectedId]);
       for(const mutate of [
-        (p:any)=>{delete p.guidedTours[0].stepFrames;},
-        (p:any)=>{p.guidedTours[0].stepFrames[4].max[0]+=1;},
-        (p:any)=>{p.guidedTours[0].structures[0].laterality='left';},
-        (p:any)=>{delete p.guidedTours[0].structures[0].laterality;},
+        (p:any)=>{delete p.guidedTours[tourIndex].stepFrames;},
+        (p:any)=>{p.guidedTours[tourIndex].stepFrames[4].max[0]+=1;},
+        (p:any)=>{p.guidedTours[tourIndex].structures[0].laterality='left';},
+        (p:any)=>{delete p.guidedTours[tourIndex].structures[0].laterality;},
       ]) {const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,id),null);}
     }
   }
   }
   const js=learner.files.filter((f:any)=>f.path.endsWith('.js')).map((f:any)=>readFileSync(base+f.path,'utf8')).join('\n');
   for(const region of ['thigh','leg','hand','foot','upper-arm'])assert.ok(js.includes('right-'+region+'-muscle-orientation-v1'));
-  for(const id of ['laryngeal-framework-orientation-v1','male-pelvic-viscera-orientation-v1','right-orbital-muscle-orientation-v1'])assert.ok(js.includes(id));
+  for(const id of ['laryngeal-framework-orientation-v1','male-pelvic-viscera-orientation-v1','right-orbital-muscle-orientation-v1','intrinsic-larynx-muscle-orientation-v1'])assert.ok(js.includes(id));
   for(const label of ['Cervical spine: C1 to T1','cervical-spine-orientation','C7 · Vertebra prominens','Coeliac trunk & branches','celiac-branches-orientation-v2','Right forearm: muscle orientation','right-forearm-muscle-orientation-v1','Pronator quadratus · Distal close-up']) assert.ok(js.includes(label),label);
   assert.ok(readFileSync('atlas-review/app/review/body/review-dashboard.tsx','utf8').includes('{evidence.tour.region} learner'));
   assert.ok(readFileSync('atlas-review/app/review/body/review-dashboard.tsx','utf8').includes('Camera close-up:'));

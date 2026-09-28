@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+28 September: intrinsic laryngeal guided learning imported locally from Atlas `bf5c396`.
+Seven muscle stops with three cartilage landmarks reach learner and protected
+review. Shared cartilages retain both tours; neither can be omitted from review.
+All238 website tests, types/build, mobile seven-stop/Finish/focus and shared-review
+checks pass. Models, access and decisions unchanged; no publication or approval.
+See `docs/intrinsic-larynx-tour-delivery-20260928.md` and the coordination checkpoint
+for verified GitHub/D recovery. Native MRI remains done.
+
 28 September: orbital guided learning imported locally from Atlas `5a0952d`.
 Six eye-muscle stops with corrected globe context reach learner and protected
 review. All238 website tests, types/build and mobile learner/review sampling pass.

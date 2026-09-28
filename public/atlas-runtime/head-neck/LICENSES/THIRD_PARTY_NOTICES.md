@@ -1720,3 +1720,14 @@ surfaces and corrected globe retain their existing attribution and commercial
 reuse conditions. No new model, image, texture, font, dependency, service or
 mandatory fee is introduced. Static source surfaces do not simulate gaze or
 constitute clinical approval, patient registration or a diagnostic examination.
+
+# Intrinsic laryngeal guided learning reference — 28 September 2026
+
+Original short captions use factual muscle relationships/actions from TTUHSC
+El Paso's larynx and neck table:
+https://anatomy.ttuhscep.edu/schemes/larynx_tables.html . No table, illustration,
+scan or source prose is copied. This reference does not license the website's
+media for reuse. Existing BodyParts3D surfaces keep their commercial-compatible
+licence and attribution. No new asset, dependency, font, service or fee is added.
+Static muscle/cartilage surfaces are not vocal-fold motion, an airway lumen,
+patient registration or a procedural demonstration. Clinical review is pending.

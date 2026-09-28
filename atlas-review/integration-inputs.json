@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "5a0952d7ff841e0aac20522faf2a4d4cfe030415",
-  "sha256": "c42146c6ae6ea7b2b373d9013ea83cb55c1976b8229ea52feda0bba1a3594230",
+  "sourceCommit": "bf5c3964677ff866b166404355349267dbf2c503",
+  "sha256": "1db692ef88840e479fca5bcaaa09220fb4e2330cabb4c8623bc3746423589957",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -2519,6 +2519,10 @@
       "sha256": "df13b2bdd0ebdea8b0afece440d9171158afade01ec0e1577b012f83b55637ff"
     },
     {
+      "path": "atlas-review/lib/intrinsic-larynx-tour.ts",
+      "sha256": "05e8dc9544e40cd49c2cf5fb086958b401f2b5bd6d3e294309ef54cf6c31ea3a"
+    },
+    {
       "path": "atlas-review/lib/knee-imaging.ts",
       "sha256": "66f519d34437531606a29d8c491816a483d66fa0f7db4ff35ce4b0ac84ed8208"
     },
@@ -2920,7 +2924,7 @@
     },
     {
       "path": "atlas-review/lib/regional-tours.ts",
-      "sha256": "9280fde42021a850f45e3860292166414fa3bb9a82cbcbbeba0a17994615f851"
+      "sha256": "180f27d2c75cafae985b394196b30cbd7e074347a1a1f45b52901711da1d48a6"
     },
     {
       "path": "atlas-review/lib/regional-vascular-clinical.ts",
@@ -3316,7 +3320,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "2289ff303680d2ad196a1ee4b97e16eb4c884c9b7b625d1096f46e2074894c2e"
+      "sha256": "2a4f1761c35f7c972747866fa2330dce97aa4067eb02bdd4bf9829dc82636b31"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3560,7 +3564,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "69c4af4c9f6b9d176c3362c9f36d5ff9544441c5afaa5a1b5c4ab1ddd695f2ac"
+      "sha256": "9720de39fa303f5b0ca109b7ae483b7ccae80b5a22868ac1c9c0a6fc65c70762"
     }
   ]
 }
