@@ -555,12 +555,14 @@ for (const displayReady of [false, true])
       }
     }
 for (const displayReady of [false, true])
+  for (const tourActive of [false, true])
   for (const mode of ['study', 'exam']) {
     const calls = [];
     runInNewContext(
       extract(shoulder, 'handleSceneSelect') + ";handleSceneSelect('id');",
       {
         displayReady,
+        tourActiveRef: { current: tourActive },
         mode,
         selectStructure: (id) => calls.push(id),
         practiceDispatch: (a) => calls.push(a),
@@ -568,13 +570,14 @@ for (const displayReady of [false, true])
         questionIndex: 0,
       },
     );
-    same(calls.length, displayReady ? (mode === 'exam' ? 2 : 1) : 0);
+    same(calls.length, displayReady && !tourActive ? (mode === 'exam' ? 2 : 1) : 0);
     handlerCases++;
   }
 for (const name of ['nextQuestion', 'beginShoulderPractice', 'toggleMode']) {
   const calls = [];
   runInNewContext(extract(shoulder, name) + ';' + name + '();', {
     displayReady: false,
+    tourActiveRef: { current: false },
     mode: 'study',
     practiceDispatch: (a) => calls.push(a),
   });
@@ -606,6 +609,7 @@ for (const saved of [null, {view:{layout:'tray',selectedId:'original'},zoomStep:
   const beforeExam = {current:saved};
   runInNewContext(extract(shoulder, 'toggleMode') + ';toggleMode();', {
     displayReady: false,
+    tourActiveRef: { current: false },
     mode: 'exam',
     beforeExam,
     applyStudyView: spy('restore'),

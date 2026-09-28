@@ -13,7 +13,7 @@ const built = await build({ stdin: {
   contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, celiacTour, forearmTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
   loader: 'tsx', resolveDir: process.cwd(),
 }, bundle: true, write: false, format: 'cjs', platform: 'node', loader: { '.css': 'empty' }, plugins: [{ name: 'gpu-boundary', setup(api) {
-  api.onLoad({ filter: /[\\/]app[\\/]body-scene\.tsx$/ }, () => ({ loader: 'tsx', contents: 'export function BodyScene(){return null;}' }));
+  api.onLoad({ filter: /[\\/]app[\\/]body-scene\.tsx$/ }, () => ({ loader: 'tsx', contents: 'if(globalThis.retryControl.importError)throw new Error("import failed"); export function BodyScene(){return null;} export function retryBodyAssets(urls,base){globalThis.retryControl.clear(urls,base);}' }));
 } }] });
 const nodes = tree => !tree || typeof tree !== 'object' ? [] : Array.isArray(tree) ? tree.flatMap(nodes) : [tree, ...nodes(tree.props?.children)];
 const text = tree => tree == null ? '' : typeof tree === 'string' || typeof tree === 'number' ? String(tree) : Array.isArray(tree) ? tree.map(text).join('') : text(tree.props?.children);
@@ -21,10 +21,11 @@ const plain = value => JSON.parse(JSON.stringify(value));
 
 function harness(source = catalog, tourName = 'thoraxTour', compact = false, missingDisplayId) {
   const slots = [], setters = [], timers = new Map(), listeners = new Map();
-  let cursor = 0, pending = [], dirty = false, tree, serial = 0, exits = 0;
+  let cursor = 0, pending = [], dirty = false, tree, serial = 0, exits = 0, mounted = true, lateUpdates = 0, autoReady = false, committedSceneKey;
+  const retryControl={calls:[],importError:false,cacheError:false,clear(urls,base){this.calls.push({urls:plain(urls),base});if(this.cacheError)throw new Error('cache failed');}};
   const changed = (old, next) => !old || !next || old.length !== next.length || old.some((item, i) => !Object.is(item, next[i]));
   const shim = { ...React,
-    useState(initial) { const i = cursor++; if (!(i in slots)) slots[i] = typeof initial === 'function' ? initial() : initial; setters[i] ??= value => { const next = typeof value === 'function' ? value(slots[i]) : value; if (!Object.is(next, slots[i])) { slots[i] = next; dirty = true; } }; return [slots[i], setters[i]]; },
+    useState(initial) { const i = cursor++; if (!(i in slots)) slots[i] = typeof initial === 'function' ? initial() : initial; setters[i] ??= value => { if(!mounted){lateUpdates++;return;} const next = typeof value === 'function' ? value(slots[i]) : value; if (!Object.is(next, slots[i])) { slots[i] = next; dirty = true; } }; return [slots[i], setters[i]]; },
     useRef(initial) { return slots[cursor++] ??= { current: initial }; },
     useMemo(fn, deps) { const i = cursor++; if (changed(slots[i]?.deps, deps)) slots[i] = { deps, value: fn() }; return slots[i].value; },
     useCallback(fn, deps) { return shim.useMemo(() => fn, deps); },
@@ -34,12 +35,16 @@ function harness(source = catalog, tourName = 'thoraxTour', compact = false, mis
   const doc = { hidden: false, addEventListener(event, fn) { listeners.set(event, fn); }, removeEventListener(event) { listeners.delete(event); } };
   const win = { matchMedia: query => query.includes('max-width') ? {matches:compact} : preference, setTimeout(fn, delay) { const id = ++serial; timers.set(id, { fn, delay }); return id; }, clearTimeout(id) { timers.delete(id); } };
   const mod = { exports: {} };
-  runInNewContext(built.outputFiles[0].text, { module: mod, exports: mod.exports, window: win, document: doc, structuredClone,
+  runInNewContext(built.outputFiles[0].text, { module: mod, exports: mod.exports, window: win, document: doc, structuredClone, retryControl,
     require(id) { if (id === 'react') return shim; if (id === 'next/dynamic') return () => 'BodyScene'; return require(id); } });
   const api = mod.exports, props = { catalog: api.bodyDisplayCatalog(source), tour: api[tourName], assetBase: '/atlas-runtime/head-neck', onExit() { exits++; } };
   if(missingDisplayId)props.catalog={...props.catalog,structures:props.catalog.structures.filter(s=>s.id!==missingDisplayId)};
   const tourBefore = JSON.stringify(props.tour);
-  function render() { let count = 0; do { dirty = false; cursor = 0; pending = []; tree = api.RegionalGuidedLearning(props); for (const effect of pending) effect(); assert(++count < 15); } while (dirty); return tree; }
+  function render() { let count = 0; do { dirty = false; cursor = 0; pending = []; tree = api.RegionalGuidedLearning(props); assert(++count < 15); if(dirty)continue;
+    const mountedScene=nodes(tree).find(n=>n.type==='BodyScene');
+    if(autoReady&&mountedScene&&committedSceneKey!==mountedScene.key){committedSceneKey=mountedScene.key;for(const id of new Set(mountedScene.props.structures.map(s=>s.bundle)))mountedScene.props.onLoaded(id);mountedScene.props.onRendererHealth('ready');}
+    for (const effect of pending) effect();
+  } while (dirty); return tree; }
   function find(predicate) { const matches = nodes(tree).filter(predicate); assert.equal(matches.length, 1); return matches[0].props; }
   const scene = () => find(n => n.type === 'BodyScene');
   const button = label => find(n => n.props?.onClick && text(n) === label);
@@ -48,9 +53,83 @@ function harness(source = catalog, tourName = 'thoraxTour', compact = false, mis
   function click(label) { const control = button(label); assert(!control.disabled, `${label} enabled`); control.onClick(); render(); }
   function tick() { assert.equal(timers.size, 1); const [id, timer] = [...timers][0]; timers.delete(id); assert.equal(timer.delay, props.tour.steps[scene().reset].durationMs); timer.fn(); render(); }
   function unchanged() { assert.equal(JSON.stringify(catalog), catalogBefore, 'Source catalogue unchanged'); assert.equal(JSON.stringify(props.tour), tourBefore, 'Tour definition unchanged'); }
+  function unmount(){for(const slot of slots)slot?.cleanup?.();mounted=false;}
+  async function settle(){await new Promise(resolve=>setImmediate(resolve));if(mounted)render();}
   render();
-  return { render, scene, button, bundles, ready, click, tick, timers, preference, listeners, doc, api, props, unchanged, tree: () => tree, exits: () => exits };
+  return { render, scene, button, bundles, ready, click, tick, timers, preference, listeners, doc, api, props, unchanged, unmount, settle, retryControl, mountReady(){autoReady=true;render();}, lateUpdates:()=>lateUpdates, tree: () => tree, exits: () => exits };
 }
+
+test('Retry clears only failed required anatomy and preserves the paused step and teaching',async()=>{
+  const h=harness(catalog,'forearmTour',true);h.ready();h.click('Start guided tour');h.click('Next');h.click('Play');
+  const explanation=()=>nodes(h.tree()).find(n=>n.props?.className==='regional-tour-explanation').props;
+  const before={caption:h.props.tour.steps[1].caption,selected:h.scene().selectedId,frame:plain(h.scene().presetBounds)};
+  const failed='forearm-muscles',other='head-neck-skeleton';
+  h.scene().onFailure(other);h.scene().onFailure('unknown-bundle');h.render();
+  assert.equal(h.timers.size,1,'Unrequested failures do not affect the tour');
+  h.scene().onFailure(failed);h.render();assert.equal(h.timers.size,0);
+  const retry=h.button('Retry missing anatomy');retry.onClick();retry.onClick();h.render();
+  assert.equal(h.button('Retrying…').disabled,true);assert.equal(h.button('Exit tour').disabled,undefined);
+  await h.settle();
+  assert.deepEqual(h.retryControl.calls,[{urls:[h.props.catalog.bundles.find(b=>b.id===failed).url],base:h.props.assetBase}]);
+  assert.deepEqual(plain(h.scene().retries),{[failed]:1});
+  assert.equal(h.button('Play').disabled,true,'Retry must wait for the actual new load');
+  h.scene().onLoaded(failed);h.render();
+  assert.equal(h.button('Play').disabled,false);assert.equal(h.button('Play')['aria-pressed'],false);assert.equal(h.timers.size,0);assert.equal(h.scene().transitionPaused,true);
+  assert.equal(h.scene().reset,1);assert.equal(h.scene().selectedId,before.selected);assert.deepEqual(plain(h.scene().presetBounds),before.frame);
+  assert.equal(explanation().open,false);assert.ok(text(h.tree()).includes(before.caption));h.unchanged();
+  h.scene().onFailure(failed);h.render();h.click('Retry missing anatomy');await h.settle();
+  assert.equal(h.scene().retries[failed],2);h.scene().onFailure(failed);h.render();
+  assert.equal(h.button('Play').disabled,true);assert.equal(h.button('Retry missing anatomy').disabled,false);
+  assert.match(text(h.tree()),/failed to load/);h.click('Exit tour');assert.equal(h.exits(),1);
+});
+
+test('Recovered retry restores keyboard focus without stealing another control',async()=>{
+  for(const moved of [false,true]){
+    const h=harness();h.ready();h.click('Start guided tour');
+    const failed=h.bundles()[0];h.scene().onFailure(failed);h.render();
+    let focused=0;
+    nodes(h.tree()).find(n=>n.props?.className==='regional-tour-controls').props.ref.current={querySelector(selector){assert.equal(selector,'[data-tour-resume]');return {focus(){focused++;}};}};
+    const button={};h.doc.body={};h.doc.activeElement=button;
+    h.button('Retry missing anatomy').onClick({currentTarget:button});await h.settle();
+    h.doc.activeElement=moved?{}:h.doc.body;
+    h.scene().onLoaded(failed);h.render();assert.equal(focused,moved?0:1);
+    assert.equal(h.button('Play')['aria-pressed'],false);
+  }
+});
+
+test('Import and cache-clear failures retain failure state and allow another retry',async()=>{
+  for(const cause of ['importError','cacheError']){
+    const h=harness(catalog,'forearmTour');h.mountReady();h.click('Start guided tour');
+    const failed=h.bundles()[0];h.scene().onFailure(failed);h.render();h.retryControl[cause]=true;
+    h.click('Retry missing anatomy');await h.settle();
+    assert.match(text(h.tree()),/retry could not start/);assert.deepEqual(plain(h.scene().retries),{});
+    assert.equal(h.button('Play').disabled,true);assert.equal(h.button('Retry missing anatomy').disabled,false);
+    h.retryControl[cause]=false;h.click('Retry missing anatomy');await h.settle();
+    if(cause==='importError'){
+      // Like a cached rejected browser module, esbuild's failed initializer cannot recover here.
+      assert.match(text(h.tree()),/retry could not start/);assert.deepEqual(plain(h.scene().retries),{});
+      assert.equal(h.button('Play').disabled,true);assert.equal(h.button('Retry missing anatomy').disabled,false);
+      h.click('Exit tour');assert.equal(h.exits(),1);h.unchanged();continue;
+    }
+    assert.equal(h.scene().retries[failed],1);h.scene().onLoaded(failed);h.render();
+    assert.equal(h.button('Play').disabled,false);assert.equal(h.timers.size,0);h.unchanged();
+  }
+});
+
+test('Late retry imports cannot clear caches or update an unmounted or changed tour',async()=>{
+  for(const change of ['unmount','tour','assetBase']){
+    const h=harness(catalog,'forearmTour');h.mountReady();h.click('Start guided tour');
+    const stale=h.scene();stale.onFailure(h.bundles()[0]);h.render();h.click('Retry missing anatomy');
+    if(change==='unmount')h.unmount();
+    else {if(change==='tour')h.props.tour=h.api.legTour;else h.props.assetBase='/atlas-runtime/another-source';h.render();}
+    await h.settle();assert.deepEqual(h.retryControl.calls,[]);assert.equal(h.lateUpdates(),0);
+    if(change!=='unmount'){
+      stale.onFailure('forearm-muscles');stale.onLoaded('forearm-muscles');h.render();
+      assert.deepEqual(plain(h.scene().retries),{});assert.equal(h.button('Start guided tour').disabled,false,'New scene mount callbacks survive source change');
+      assert.doesNotMatch(text(h.tree()),/failed to load/);h.click('Start guided tour');assert.equal(h.timers.size,0);
+    }
+  }
+});
 
 test('Compact tours retain complete teaching on demand and pause while reading', () => {
   for (const compact of [true,false]) {
