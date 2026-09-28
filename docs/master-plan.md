@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+28 September: chest-wall Guided learning imported locally from Atlas `3f6f744`.
+Six stops cover intercostal layers, paired transversus thoracis and diaphragm;
+thorax now offers two tours and whole-body twelve, using a compact selector.
+Source geometry, independent specimen pins, access and clinical decisions remain
+unchanged. See `docs/chest-wall-tour-delivery-20260928.md` and the coordination
+checkpoint for verification/recovery. Unpublished and pending radiologist review.
+
 28 September: cervical quick-check integration from Atlas `510b67e` verified locally.
 111 website tests, TypeScript, production build and mobile learner checks pass.
 Five draft questions and optional source-bound guided practice,

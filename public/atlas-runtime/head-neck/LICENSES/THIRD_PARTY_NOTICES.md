@@ -1690,3 +1690,11 @@ no tables, figures, scans, extended prose or question-bank content is reproduced
 or relicensed. No new model, font, dependency, texture, paid API or mandatory
 fee is introduced. Existing source credits/rights remain. Draft questions and
 source anatomy require revision-bound radiologist review.
+# Chest-wall guided learning factual reference — 28 September 2026
+
+Original concise captions reference TTUHSC El Paso's thoracic-muscle teaching
+table: https://anatomy.ttuhscep.edu/anatomytables/muscles_thorax.html . The
+copyrighted table, illustrations and prose are not copied or redistributed.
+The captions describe anatomical facts, not source-verified mesh boundaries.
+Existing BodyParts3D geometry and its CC BY 4.0 notices are unchanged. No new
+model, image, font, dependency, paid service or mandatory fee is introduced.

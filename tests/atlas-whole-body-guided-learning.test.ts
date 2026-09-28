@@ -17,7 +17,9 @@ test('whole-body library delivers the tested selector and shared regional player
   }
   const source=readFileSync('atlas-review/app/whole-body-guided-learning.tsx','utf8');
   assert.ok(source.includes('key={`${tour.id}:${tour.revision}`}'));
-  assert.ok(source.includes('wholeBodyTourOptions.some(t=>t.id===id)'));
+  assert.ok(source.includes('options.some(t=>t.id===id)'));
+  assert.ok(source.includes("wholeBodyTourOptions.filter(t=>t.region===region)"));
+  assert.ok(source.includes('No guided tours are available for this region.'));
   assert.ok(source.includes('onExit={onExit}'));
   assert.ok(!/<iframe|window\.open|location\.(assign|href)/.test(source));
   const js=manifest.files.filter((f:any)=>f.path.endsWith('.js')).map((f:any)=>{

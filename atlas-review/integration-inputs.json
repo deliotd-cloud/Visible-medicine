@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "510b67e599638138efccb1e55a6fc32bcdeed27b",
-  "sha256": "0080e43a77a891b62580b58110eb45bada9f1fad56386bd228b2e2954d3b3b82",
+  "sourceCommit": "3f6f74478e2978109ff47587f1aa60e1b66ecd81",
+  "sha256": "c639eb7a0f8d7b7dde7988691bf2cbba2dc27aa2ccf2cf83fbde4301821b10e7",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-explorer.tsx",
-      "sha256": "56008ce612399206727fbb9150122d8ea0f68fa751bff4aa232c0ff538782221"
+      "sha256": "6799bf73a63f3c1c83dba0390613dd882d01019a716d3018126a918d57124552"
     },
     {
       "path": "atlas-review/app/body-scene.tsx",
@@ -528,7 +528,7 @@
     },
     {
       "path": "atlas-review/app/whole-body-guided-learning.tsx",
-      "sha256": "b95b8795a0215cd9d48413fcd07681f857fb83433237bb800d4543247c591be9"
+      "sha256": "25fc52ddc31c612614baa9687b020ed044d64b1a5986a0f88306c298d6db45fd"
     },
     {
       "path": "atlas-review/app/workspace-session.ts",
@@ -2055,6 +2055,10 @@
       "sha256": "e97986190d60d6bde5ffcb9f17181880a5521aad4dfca71850c59c22ca431d79"
     },
     {
+      "path": "atlas-review/lib/chest-wall-tour.ts",
+      "sha256": "232ec7d0e64d12929a24a68782c8110090ab6df78f4f15cb8440bfc6ff9ac5da"
+    },
+    {
       "path": "atlas-review/lib/circle-willis-imaging.ts",
       "sha256": "d4e7beb1ae7377777d6c9d93d16da8aac14384cd38e28a7de1cf7e2ecc803e2c"
     },
@@ -2900,7 +2904,7 @@
     },
     {
       "path": "atlas-review/lib/regional-tours.ts",
-      "sha256": "f65e4158978a4d62f3d0fe5c4dd44dc7694e0de75c854e676dc3f34a8ff8f5ec"
+      "sha256": "bded62cab0d45f953c7faaf3c333494fd124e7b3eec1c841f2df1b24eca423db"
     },
     {
       "path": "atlas-review/lib/regional-vascular-clinical.ts",
@@ -3296,7 +3300,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "817dc3aadf7a74b8c015a01088699f4062096c53742a890af63725bd0c8608b2"
+      "sha256": "0ea6aaf08e7b55890b41e2a46ecb6a6b4f85ee60073c3a5260a54e63614a8578"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3540,7 +3544,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "25375354ed42d35c87be1d7c786e9bde6093d3fb4438e223c560eb66e430ca47"
+      "sha256": "749c78d9c9bf7960b092c4b8b1a5670bc2386d7a32ad31f246dc607d88b306d7"
     }
   ]
 }

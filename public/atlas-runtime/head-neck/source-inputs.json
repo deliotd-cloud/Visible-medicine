@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "817dc3aadf7a74b8c015a01088699f4062096c53742a890af63725bd0c8608b2"
+    "sha256": "0ea6aaf08e7b55890b41e2a46ecb6a6b4f85ee60073c3a5260a54e63614a8578"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -93,7 +93,7 @@
   },
   {
     "path": "app/body-explorer.tsx",
-    "sha256": "6349a0fa81cba0412ba60724a1e1d058ccdf310c3c7b00912c9951b98163a800"
+    "sha256": "aa5eef6a1429f28243aaaab185bc29b54bbdd3aa06c4990cefc767126796dc30"
   },
   {
     "path": "app/body-scene.tsx",
@@ -417,7 +417,7 @@
   },
   {
     "path": "app/whole-body-guided-learning.tsx",
-    "sha256": "65f94350c4ecc05d2b738b2f66c2369056d5b5527bf58f4a6274625457c44e62"
+    "sha256": "96720e3bd119a2f41d06c1baac8d61583abb2dad9d9942bb41e812dcb36a9ed9"
   },
   {
     "path": "app/workspace-session.ts",
@@ -1972,6 +1972,10 @@
     "sha256": "e97986190d60d6bde5ffcb9f17181880a5521aad4dfca71850c59c22ca431d79"
   },
   {
+    "path": "lib/chest-wall-tour.ts",
+    "sha256": "232ec7d0e64d12929a24a68782c8110090ab6df78f4f15cb8440bfc6ff9ac5da"
+  },
+  {
     "path": "lib/circle-willis-imaging.ts",
     "sha256": "d4e7beb1ae7377777d6c9d93d16da8aac14384cd38e28a7de1cf7e2ecc803e2c"
   },
@@ -2781,7 +2785,7 @@
   },
   {
     "path": "lib/regional-tours.ts",
-    "sha256": "f65e4158978a4d62f3d0fe5c4dd44dc7694e0de75c854e676dc3f34a8ff8f5ec"
+    "sha256": "bded62cab0d45f953c7faaf3c333494fd124e7b3eec1c841f2df1b24eca423db"
   },
   {
     "path": "lib/regional-vascular-clinical.ts",
