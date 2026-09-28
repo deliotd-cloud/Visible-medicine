@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+28 September: embedded mobile readability imported locally from Atlas `7d58450`.
+Learner and Clinical Review panels preserve model space and readable mode controls;
+enlarged text can scroll to the model instead of a tiny nested viewport.248 local
+workspace tests, types/build and actual learner/review sampling pass. Models,
+content, entitlements and saved decisions unchanged; fracture work preserved.
+See `docs/embedded-readability-delivery-20260928.md` and coordination recovery
+checkpoint. No Atlas publication or approval. Native MRI remains done.
+
 28 September: guided-tour reference reading imported locally from Atlas `9d32da3`.
 Shoulder/regional references pause playback and camera motion; closing never
 auto-resumes. All241 tests, types/build and embedded mobile journeys pass.
