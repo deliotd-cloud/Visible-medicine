@@ -10,6 +10,7 @@ import { BodySelectionNotice, focusRemovalFeedback } from './body-selection-noti
 import { lastSingleRemoval } from '@/atlas-review/lib/contextual-dissection-undo';
 import { InlineStudy } from './study-surface';
 import { RegionalGuidedLearning } from './regional-guided-learning';
+import { WholeBodyGuidedLearning } from './whole-body-guided-learning';
 import { regionalTourFor } from '@/atlas-review/lib/regional-tours';
 import './upper-limb-motor.css';
 import {
@@ -315,7 +316,7 @@ export default function BodyExplorer({
   const guidedReturnFocus = useRef<HTMLElement | null>(null);
   const regionalTour = regionalTourFor(initialRegion);
   function changeGuidedLearning(active: boolean) {
-    if (active && (!regionalTour || practice.status === 'active')) return;
+    if (active && ((!regionalTour && initialRegion !== 'whole-body') || practice.status === 'active')) return;
     if (active && !guidedLearning) {
       guidedReturnCamera.current = cameraCapture.current ? structuredClone(cameraCapture.current) : null;
       guidedReturnFocus.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
@@ -1794,7 +1795,7 @@ export default function BodyExplorer({
       <header className="body-topbar" data-shared-header={sharedHeader} data-guided-learning={guidedLearning}>
         {sharedHeader ? <RegionHeading title={title} count={regionStructures.length}
           compact description={whole ? 'Explore the body by region or anatomical system.' : region!.description}/> : <Brand />}
-        <WorkspaceModes guidedLearning={regionalTour ? {active:guidedLearning,onChange:changeGuidedLearning} : undefined} />
+        <WorkspaceModes guidedLearning={regionalTour || whole ? {active:guidedLearning,onChange:changeGuidedLearning} : undefined} />
         {!guidedLearning && <>
         <AtlasSearch
           catalog={catalog}
@@ -1836,7 +1837,7 @@ export default function BodyExplorer({
         </WorkspaceOnly>
         </>}
       </header>
-      {guidedLearning && regionalTour ? <RegionalGuidedLearning catalog={catalog} tour={regionalTour} assetBase={assetBase} onExit={()=>changeGuidedLearning(false)} /> : <>
+      {guidedLearning && whole ? <WholeBodyGuidedLearning catalog={catalog} assetBase={assetBase} onExit={()=>changeGuidedLearning(false)} /> : guidedLearning && regionalTour ? <RegionalGuidedLearning catalog={catalog} tour={regionalTour} assetBase={assetBase} onExit={()=>changeGuidedLearning(false)} /> : <>
       <div className="body-layout" hidden={inlineStudy}>
         <AnatomyControlRail>{railContent}</AnatomyControlRail>
         <section className="body-workspace" aria-label={`${title} 3D anatomy`}>

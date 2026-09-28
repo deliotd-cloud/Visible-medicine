@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+28 September: whole-body Guided learning library imported locally from Atlas
+`7724467`, with eleven regional tours in one compact selector and explicit
+restart after switching. Same source-bound player, exam guards and exit restore;
+no model, teaching, entitlement or clinical-approval changes. Disk-full recovery
+completed without altering prior source/scans. See
+`docs/whole-body-tour-library-delivery-20260927.md` and the final coordination
+checkpoint for checks/backups. Unpublished. Native MRI remains complete.
+
 27 September larynx and male-pelvis Guided learning integrated locally from
 Atlas `912913b`:10new stops,11regional tours,248modality teaching bindings and79
 source-bound review records. Existing65tour-member evidence unchanged. No model,

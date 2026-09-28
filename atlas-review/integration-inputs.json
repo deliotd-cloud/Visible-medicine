@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "912913b6069a8ede53893318024cf106f37a7e57",
-  "sha256": "ab0f8167553b2f477d8dc5db40bfbf74ff7b9d4b2ac4b75dc654e015e6cffe13",
+  "sourceCommit": "77244671eaf419095f681bb284737c01ecfbf6bb",
+  "sha256": "433de2ab29c86b1706eab97638e3c6a42ad3b18c6498a95363c69aa58fee5a83",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-explorer.tsx",
-      "sha256": "3ccd96cda9f11e5d8f4cc7e80e668df82fabf84ca5b3f5f418702bf71c28647e"
+      "sha256": "56008ce612399206727fbb9150122d8ea0f68fa751bff4aa232c0ff538782221"
     },
     {
       "path": "atlas-review/app/body-scene.tsx",
@@ -517,6 +517,14 @@
     {
       "path": "atlas-review/app/vessel-system-control.tsx",
       "sha256": "a59b7e2d91916a91a4b10849512bd80ee4ac5200e6ec3be5d52dd617e2e29a4e"
+    },
+    {
+      "path": "atlas-review/app/whole-body-guided-learning.css",
+      "sha256": "e3a5333bd4dce900a204ac8a7513e4d048fdf1d38b671bed610660726a058f52"
+    },
+    {
+      "path": "atlas-review/app/whole-body-guided-learning.tsx",
+      "sha256": "b95b8795a0215cd9d48413fcd07681f857fb83433237bb800d4543247c591be9"
     },
     {
       "path": "atlas-review/app/workspace-session.ts",
@@ -3516,7 +3524,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "d624135375646a46c57b505f48cb4ffa71ff6d043adbe42d9d8859bea2e76dc7"
+      "sha256": "60d9aca36a70f240d908787c5e38e40d120df69fa18705bafdcb105d784cf545"
     }
   ]
 }

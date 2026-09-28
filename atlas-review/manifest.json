@@ -1,5 +1,5 @@
 {
-  "revision": "912913b6069a8ede53893318024cf106f37a7e57",
+  "revision": "77244671eaf419095f681bb284737c01ecfbf6bb",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2653,8 +2653,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "cf2b09fd0e5e6f8ae964e8503ab19249261c34317212ee712e9f6b616f69d5de",
-      "importedSha256": "337a79b432bc7456a6dacac4a3cd8a5a483f1d987279a5f67735f52bbbe95126"
+      "sourceSha256": "c7704b01757e0daab1e08a52e91830d4053427d9ec360f30af651146c3823d3c",
+      "importedSha256": "24d853fb47aa99a221ccdc616e8de6a04f471b74fd54428c4d5df3e751fe1fc0"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -2944,7 +2944,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "3ee3dbc5a7047940f233bc7d7af118ef137a60177868016916371784fb895154",
-      "importedSha256": "d9c9c1fde5d0099924a9cfeab2df050982b0cc0245790995f833dda9da913c52"
+      "importedSha256": "afbc85fbb40e3c9e02b810cbed0c38aefe5369faf196cdd038bce945fe2b5170"
     },
     {
       "path": "app/review/review.css",
@@ -3028,8 +3028,8 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sourceSha256": "d48fba0a93e73bd9362cecb26c95a5ef8e3d21babdd20fcac622cca7e735c325",
-      "importedSha256": "3ccd96cda9f11e5d8f4cc7e80e668df82fabf84ca5b3f5f418702bf71c28647e"
+      "sourceSha256": "6349a0fa81cba0412ba60724a1e1d058ccdf310c3c7b00912c9951b98163a800",
+      "importedSha256": "56008ce612399206727fbb9150122d8ea0f68fa751bff4aa232c0ff538782221"
     },
     {
       "path": "app/um-knee-entry.css",
@@ -3325,6 +3325,16 @@
       "path": "app/scene-orientation.css",
       "sourceSha256": "49c0358f4dce010f4dc33f6e1676253bcb8a74128ec019e679d3234504a3ad23",
       "importedSha256": "49c0358f4dce010f4dc33f6e1676253bcb8a74128ec019e679d3234504a3ad23"
+    },
+    {
+      "path": "app/whole-body-guided-learning.tsx",
+      "sourceSha256": "65f94350c4ecc05d2b738b2f66c2369056d5b5527bf58f4a6274625457c44e62",
+      "importedSha256": "b95b8795a0215cd9d48413fcd07681f857fb83433237bb800d4543247c591be9"
+    },
+    {
+      "path": "app/whole-body-guided-learning.css",
+      "sourceSha256": "e3a5333bd4dce900a204ac8a7513e4d048fdf1d38b671bed610660726a058f52",
+      "importedSha256": "e3a5333bd4dce900a204ac8a7513e4d048fdf1d38b671bed610660726a058f52"
     },
     {
       "path": "app/upper-limb-motor.css",
@@ -4333,5 +4343,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "ab0f8167553b2f477d8dc5db40bfbf74ff7b9d4b2ac4b75dc654e015e6cffe13"
+  "websiteIntegrationSha256": "433de2ab29c86b1706eab97638e3c6a42ad3b18c6498a95363c69aa58fee5a83"
 }

@@ -78,7 +78,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "d48fba0a93e73bd9362cecb26c95a5ef8e3d21babdd20fcac622cca7e735c325"
+      "sha256": "6349a0fa81cba0412ba60724a1e1d058ccdf310c3c7b00912c9951b98163a800"
     },
     {
       "path": "app/body-scene.tsx",
@@ -395,6 +395,14 @@
     {
       "path": "app/vessel-system-control.tsx",
       "sha256": "5c31cb6fbe91d78eaca2f367c244fff629241688e637ae0e16365fb191bf814e"
+    },
+    {
+      "path": "app/whole-body-guided-learning.css",
+      "sha256": "e3a5333bd4dce900a204ac8a7513e4d048fdf1d38b671bed610660726a058f52"
+    },
+    {
+      "path": "app/whole-body-guided-learning.tsx",
+      "sha256": "65f94350c4ecc05d2b738b2f66c2369056d5b5527bf58f4a6274625457c44e62"
     },
     {
       "path": "app/workspace-session.ts",
@@ -3237,7 +3245,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "0694f57c2d3db4cb2ae0d7f89b2b7ddb3b6f8c3e411887723450de4426c38a85",
-  "sourceRendererSha256": "b6fd2d9b1e82efdbc02f6ca6732f68b395023daa59833034c599ec5bc68006af",
-  "websiteIntegrationSha256": "ab0f8167553b2f477d8dc5db40bfbf74ff7b9d4b2ac4b75dc654e015e6cffe13"
+  "sha256": "c6dfdedf292f0cf863312527dbab30718f0423c583ec9a5da0389c1ae7b43420",
+  "sourceRendererSha256": "99a6bed3cc2f60b72874c9cb7a2087b6e95e666c955915f59aa22ac674a91dad",
+  "websiteIntegrationSha256": "433de2ab29c86b1706eab97638e3c6a42ad3b18c6498a95363c69aa58fee5a83"
 }
