@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "367ec85339ef2f7bd11df43a96514ac85712f4ab",
-  "sha256": "388e5cb921dd9b187b2bc40a0aa59ccc4eaf9d66c96b3d5995547691a1059c23",
+  "sourceCommit": "8da967df7f4f419014ea03b323d239732a787be1",
+  "sha256": "81fc030beacc94ec349e6f4c9d725b1e636bb6cd54e8d84a5658dce3084578dd",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -112,7 +112,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "17aeaa62d13db0294cfafbc3378d2c636d101713ef01c7d66d06a4962798e1b3"
+      "sha256": "87f4bbe14a163e4c998f105cdd2a4e9bf5c94bce9027a621ea225ea76e245800"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -1369,6 +1369,14 @@
     {
       "path": "atlas-review/content/pelvic-organ-imaging.ts",
       "sha256": "03ea9bced422d20534a6760feaa199c46a0780533360fe3d58ea2b0a98f536aa"
+    },
+    {
+      "path": "atlas-review/content/pelvic-organ-quiz-pins.json",
+      "sha256": "2cc2f4a11cbc06d768a13c9f5a6b3c63c80684ed7fe932ae804087cfc3900ab6"
+    },
+    {
+      "path": "atlas-review/content/pelvic-organ-quiz.ts",
+      "sha256": "73a13609bad4ba553dcc37132400d11c18e7dd99a9f9ad4794ddc8c80ded0982"
     },
     {
       "path": "atlas-review/content/pelvic-urethral-study.ts",
@@ -2827,6 +2835,10 @@
       "sha256": "d70a6468d006ee5c0efae859ccf2cf609149cf038ba0469a0a0d2ac0dc58b127"
     },
     {
+      "path": "atlas-review/lib/pelvic-organ-quiz.ts",
+      "sha256": "28da9fd82eb9aff793bf86f16e14c4170a4534b3db323e2bdf491e945bb2479b"
+    },
+    {
       "path": "atlas-review/lib/pelvic-organ-reasoning.ts",
       "sha256": "f951d93412bcc797afabef89ca1d3ea7a0a6716a15493b9b9eabebb292487824"
     },
@@ -3320,7 +3332,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "2a4f1761c35f7c972747866fa2330dce97aa4067eb02bdd4bf9829dc82636b31"
+      "sha256": "2fe97a279e8e824017f368efba00245f6d7d842ca212dcf91adf0d30ca4c4c59"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3564,7 +3576,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "fdab43e2e675cbd016ba7d396b9bb4f816d7fe0d1e200a219688b34a8c868b16"
+      "sha256": "26e74a35c7deb4511e49a0bc32e26f1c65bca91793152dc6888ac9c6a4739168"
     }
   ]
 }

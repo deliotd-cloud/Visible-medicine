@@ -29,7 +29,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "6c8b7825679ef0494108b355a0d050126a4e16b34e74bb5316c7a98488d51b4a"
+    "sha256": "fe0dbe3d244a3fa152a84926f0d69399dcc3e5fe604d3ebe9b64cf00dcff1304"
   },
   {
     "path": "app/body-explorer.css",
@@ -782,6 +782,14 @@
   {
     "path": "content/pelvic-organ-imaging.ts",
     "sha256": "03ea9bced422d20534a6760feaa199c46a0780533360fe3d58ea2b0a98f536aa"
+  },
+  {
+    "path": "content/pelvic-organ-quiz-pins.json",
+    "sha256": "2cc2f4a11cbc06d768a13c9f5a6b3c63c80684ed7fe932ae804087cfc3900ab6"
+  },
+  {
+    "path": "content/pelvic-organ-quiz.ts",
+    "sha256": "73a13609bad4ba553dcc37132400d11c18e7dd99a9f9ad4794ddc8c80ded0982"
   },
   {
     "path": "content/pelvic-urethral-study.ts",
@@ -1822,6 +1830,10 @@
   {
     "path": "lib/pelvic-organ-imaging.ts",
     "sha256": "d70a6468d006ee5c0efae859ccf2cf609149cf038ba0469a0a0d2ac0dc58b127"
+  },
+  {
+    "path": "lib/pelvic-organ-quiz.ts",
+    "sha256": "28da9fd82eb9aff793bf86f16e14c4170a4534b3db323e2bdf491e945bb2479b"
   },
   {
     "path": "lib/pelvic-veins.ts",

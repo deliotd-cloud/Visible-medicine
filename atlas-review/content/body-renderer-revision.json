@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "17aeaa62d13db0294cfafbc3378d2c636d101713ef01c7d66d06a4962798e1b3"
+      "sha256": "87f4bbe14a163e4c998f105cdd2a4e9bf5c94bce9027a621ea225ea76e245800"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1227,6 +1227,14 @@
     {
       "path": "content/pelvic-organ-imaging.ts",
       "sha256": "03ea9bced422d20534a6760feaa199c46a0780533360fe3d58ea2b0a98f536aa"
+    },
+    {
+      "path": "content/pelvic-organ-quiz-pins.json",
+      "sha256": "2cc2f4a11cbc06d768a13c9f5a6b3c63c80684ed7fe932ae804087cfc3900ab6"
+    },
+    {
+      "path": "content/pelvic-organ-quiz.ts",
+      "sha256": "73a13609bad4ba553dcc37132400d11c18e7dd99a9f9ad4794ddc8c80ded0982"
     },
     {
       "path": "content/pelvic-urethral-study.ts",
@@ -2613,6 +2621,10 @@
       "sha256": "d70a6468d006ee5c0efae859ccf2cf609149cf038ba0469a0a0d2ac0dc58b127"
     },
     {
+      "path": "lib/pelvic-organ-quiz.ts",
+      "sha256": "28da9fd82eb9aff793bf86f16e14c4170a4534b3db323e2bdf491e945bb2479b"
+    },
+    {
       "path": "lib/pelvic-organ-reasoning.ts",
       "sha256": "f951d93412bcc797afabef89ca1d3ea7a0a6716a15493b9b9eabebb292487824"
     },
@@ -3074,7 +3086,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "54cfc3bd741c8ae06a648ff1c96a14170743c2939cf4ae4d111304758c2925ec"
+      "sha256": "cf995989b32637bbfaf5f2c3516b8dd65bc43825529412fa67b16a830f35861a"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3285,7 +3297,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "4d5f95394569acb22f40f4a9f67166a24da0a2b30f58a92a6fd905364caba4cf",
-  "sourceRendererSha256": "f9155ad3c55e99a6c7c2904fec2bdf6b03b766b0d6ae7c79b523f1e65b204b88",
-  "websiteIntegrationSha256": "388e5cb921dd9b187b2bc40a0aa59ccc4eaf9d66c96b3d5995547691a1059c23"
+  "sha256": "8c11a322561415abaf6890ab174cbefb69c4dc4df5b13d55ea128fb2715910e3",
+  "sourceRendererSha256": "639a71739cbfb860c5a559949a762f781313676ccc2be8c8a650ea1e6f691f4d",
+  "websiteIntegrationSha256": "81fc030beacc94ec349e6f4c9d725b1e636bb6cd54e8d84a5658dce3084578dd"
 }

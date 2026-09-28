@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+28 September: pelvic organ questions imported locally from Atlas `8da967d`.
+Eight source-bound draft placements reach learner and protected Clinical Review.
+All240 tests, types/build and embedded mobile answer/review sampling pass.
+Models, independent entitlements and decisions unchanged; no publication or
+clinical approval. See `docs/pelvic-organ-quiz-delivery-20260928.md` and the
+coordination checkpoint for verified GitHub/D recovery. Native MRI remains done.
+
 28 September: guided-tour recovery imported locally from Atlas `367ec85`.
 Failed required model downloads can be retried without losing the selected step
 or automatically resuming playback. Keyboard focus recovery is included, with no

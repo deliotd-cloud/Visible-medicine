@@ -110,6 +110,7 @@ import { footVascularQuizLesson } from '../lib/foot-vascular-quiz';
 import { thoracicQuizLesson } from '../lib/thoracic-quiz';
 import { cervicalQuizLesson } from '../lib/cervical-quiz';
 import { abdominalOrganQuizLesson } from '../lib/abdominal-organ-quiz';
+import { pelvicOrganQuizLesson } from '../lib/pelvic-organ-quiz';
 import { shoulderArterialCtLesson } from '../lib/shoulder-arterial-ct';
 import { circleWillisImagingLesson } from '../lib/circle-willis-imaging';
 import { kneeImagingLesson } from '../lib/knee-imaging';
@@ -241,6 +242,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   const abdominalOrganQuiz = abdominalOrganQuizLesson(s, tab);
+  const pelvicOrganQuiz = pelvicOrganQuizLesson(s, tab);
+  if (pelvicOrganQuiz) return pelvicOrganQuiz;
   if (abdominalOrganQuiz) return abdominalOrganQuiz;
   const shoulderCt = shoulderArterialCtLesson(s, tab);
   if (shoulderCt) return shoulderCt;
