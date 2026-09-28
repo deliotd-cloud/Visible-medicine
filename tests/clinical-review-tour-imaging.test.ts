@@ -6,7 +6,7 @@ import {build} from 'esbuild';
 
 test('guided imaging notes reach both learners and review without inventing scan access',async()=>{
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
-  assert.equal(review.revision,'77244671eaf419095f681bb284737c01ecfbf6bb');
+  assert.equal(review.revision,'510b67e599638138efccb1e55a6fc32bcdeed27b');
   for(const module of ['head-neck','shoulder']){
     const base=`public/atlas-runtime/${module}/`;
     const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));

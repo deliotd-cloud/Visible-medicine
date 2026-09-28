@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "f1537038314a5ce02418504eb826a3fad444cd27ceb6b00090aef14176d90ec1"
+    "sha256": "817dc3aadf7a74b8c015a01088699f4062096c53742a890af63725bd0c8608b2"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "3e3e52758842f6ecfb058b963b0af6be17ca3013be8e1b2dc3ed3b5276e54c54"
+    "sha256": "8ca9d2962c0f33aee27178872eaae40ad05fdb8469227467cffb8b735094b350"
   },
   {
     "path": "app/body-education-link.ts",
@@ -249,11 +249,11 @@
   },
   {
     "path": "app/regional-guided-learning.css",
-    "sha256": "a5662d48381db23816d38d1b185164cbe3c4eca82696791ceed29c4f218f6eff"
+    "sha256": "f4c466234e8cfd8df40ebc3752383f541b4d580b62eea827cc7267dc58b20d4b"
   },
   {
     "path": "app/regional-guided-learning.tsx",
-    "sha256": "71801a1f2bf364190809f1febf1589769f3ea5f109c8307d10e6d47aace8048c"
+    "sha256": "cef018420cbbad5dddca2de6c223f52e2d2e9ea4b50aafc9c5ffdc55db9e781a"
   },
   {
     "path": "app/related-study.tsx",
@@ -354,6 +354,10 @@
   {
     "path": "app/tour-imaging-notes.tsx",
     "sha256": "c8f877538452e077cbb2906ca451dcfbfc70ae409eb0f677fc5d4b9861a153dc"
+  },
+  {
+    "path": "app/tour-quick-check.tsx",
+    "sha256": "7277f66586c2c54d5a7e175da1b5b821599d3f19e64eda4b65cab47adcae49bc"
   },
   {
     "path": "app/um-knee-entry.css",
@@ -590,6 +594,14 @@
   {
     "path": "content/cerebral-teaching.ts",
     "sha256": "ba741cc7373be4ffad1dd7a04af2605d5a033bbe6d40723196241d89d905b1a0"
+  },
+  {
+    "path": "content/cervical-quiz-pins.json",
+    "sha256": "8d2295fe2cc4edb40f6f11cbced5b6a95a118f7174e7a996afb13a7b1f1860e5"
+  },
+  {
+    "path": "content/cervical-quiz.ts",
+    "sha256": "f118719e4ec172e77a00c4ee602ada58bd8f8af60da398145699986d820a12d0"
   },
   {
     "path": "content/chest-wall-muscle-imaging-pins.json",
@@ -1325,7 +1337,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "3ee3dbc5a7047940f233bc7d7af118ef137a60177868016916371784fb895154"
+    "sha256": "4a834155e39cb95bc4c0f48524bafd0b09ed5c8e36a2b8b55ab6c466896d3826"
   },
   {
     "path": "content/sca-mca-clinical-pins.json",
@@ -1950,6 +1962,10 @@
   {
     "path": "lib/cerebral.ts",
     "sha256": "10138a8bad86e98cc03dc458c3d9b7245dace9369ded56c980623b15c6d6fdff"
+  },
+  {
+    "path": "lib/cervical-quiz.ts",
+    "sha256": "1e2df51d2d9507b6df0f75990ca18790c4fa0a7f1d6f238157a7760c61ad5428"
   },
   {
     "path": "lib/chest-wall-muscle-imaging.ts",

@@ -9,8 +9,8 @@ test('orbital ultrasound and compact Search are delivered without changing geome
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json'),manifest=JSON.parse(bytes.toString());
-  assert.equal(sha(bytes),'1b44793601ff355d7f84deb76f61ab4db5bc8ce87eece50ddcc5b37039c1c5fe');
-  assert.equal(manifest.sourceCommit,'77244671eaf419095f681bb284737c01ecfbf6bb');
+  assert.equal(sha(bytes),'a4abad9c9506f9249d81f4b37741b15b990058f4b7a89b05dba1e9d4a9d35bc8');
+  assert.equal(manifest.sourceCommit,'510b67e599638138efccb1e55a6fc32bcdeed27b');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of [

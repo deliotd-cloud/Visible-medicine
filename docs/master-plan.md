@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+28 September: cervical quick-check integration from Atlas `510b67e` verified locally.
+111 website tests, TypeScript, production build and mobile learner checks pass.
+Five draft questions and optional source-bound guided practice,
+with paused playback and model-visible mobile reading. No approval/publication,
+model or entitlement changes. See `docs/cervical-quiz-delivery-20260928.md` and
+the coordination cervical-quiz checkpoint for final acceptance and recovery.
+
 28 September: whole-body Guided learning library imported locally from Atlas
 `7724467`, with eleven regional tours in one compact selector and explicit
 restart after switching. Same source-bound player, exam guards and exit restore;

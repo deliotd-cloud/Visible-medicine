@@ -1677,3 +1677,16 @@ or relicensed publisher content. No figures, scans or extended passages copied.
 Existing BodyParts3D surfaces, source coordinates and required credits retained.
 No new model, texture, font, dependency, paid service or mandatory fee. Source
 segments are incomplete and the tour requires revision-bound radiologist review.
+
+## Cervical formative questions — 28 September 2026
+
+Original short questions and explanations use factual checking against UAMS,
+Bones of the Back Region
+(https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/bone-tables/bones-of-the-back-region/),
+and TTUHSC El Paso, Deep Back & Spinal Cord tables
+(https://anatomy.ttuhscep.edu/musculoskeletal_system/spinalcord_tables.html).
+Read 28 September 2026. Linked university pages remain their owners' copyright;
+no tables, figures, scans, extended prose or question-bank content is reproduced
+or relicensed. No new model, font, dependency, texture, paid API or mandatory
+fee is introduced. Existing source credits/rights remain. Draft questions and
+source anatomy require revision-bound radiologist review.

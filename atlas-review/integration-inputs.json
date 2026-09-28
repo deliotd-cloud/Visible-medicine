@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "77244671eaf419095f681bb284737c01ecfbf6bb",
-  "sha256": "433de2ab29c86b1706eab97638e3c6a42ad3b18c6498a95363c69aa58fee5a83",
+  "sourceCommit": "510b67e599638138efccb1e55a6fc32bcdeed27b",
+  "sha256": "0080e43a77a891b62580b58110eb45bada9f1fad56386bd228b2e2954d3b3b82",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -112,7 +112,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "03c333ecfb5d3bb29223490fec7992a045a7da34fef72e53907dd896c8936a3e"
+      "sha256": "c72ca21c349436e9ca94d8fe68ebab53869db68bd7f6871d4d796e3b791c4294"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -280,11 +280,11 @@
     },
     {
       "path": "atlas-review/app/regional-guided-learning.css",
-      "sha256": "a5662d48381db23816d38d1b185164cbe3c4eca82696791ceed29c4f218f6eff"
+      "sha256": "f4c466234e8cfd8df40ebc3752383f541b4d580b62eea827cc7267dc58b20d4b"
     },
     {
       "path": "atlas-review/app/regional-guided-learning.tsx",
-      "sha256": "3b2100976ba204259a0882d87ead18310903913f5d14069ab727c2ab461e4eff"
+      "sha256": "2ee979713d9ef5b11d2782b191e2f11bb2f605a02d820340ad51b8c6f67bd546"
     },
     {
       "path": "atlas-review/app/related-study.tsx",
@@ -465,6 +465,10 @@
     {
       "path": "atlas-review/app/tour-imaging-notes.tsx",
       "sha256": "5667a7b3426bbd8ed205a89cee4dbf3d87897f253c5ba043c4e90affa31a7803"
+    },
+    {
+      "path": "atlas-review/app/tour-quick-check.tsx",
+      "sha256": "ef9c5dfa93e94d241b1b12037d560632ead5f4b35e3d0490897d49ed3fee04d3"
     },
     {
       "path": "atlas-review/app/um-knee-entry.css",
@@ -721,6 +725,14 @@
     {
       "path": "atlas-review/content/cerebral-teaching.ts",
       "sha256": "ba741cc7373be4ffad1dd7a04af2605d5a033bbe6d40723196241d89d905b1a0"
+    },
+    {
+      "path": "atlas-review/content/cervical-quiz-pins.json",
+      "sha256": "8d2295fe2cc4edb40f6f11cbced5b6a95a118f7174e7a996afb13a7b1f1860e5"
+    },
+    {
+      "path": "atlas-review/content/cervical-quiz.ts",
+      "sha256": "f118719e4ec172e77a00c4ee602ada58bd8f8af60da398145699986d820a12d0"
     },
     {
       "path": "atlas-review/content/chest-wall-muscle-imaging-pins.json",
@@ -2035,6 +2047,10 @@
       "sha256": "10138a8bad86e98cc03dc458c3d9b7245dace9369ded56c980623b15c6d6fdff"
     },
     {
+      "path": "atlas-review/lib/cervical-quiz.ts",
+      "sha256": "1e2df51d2d9507b6df0f75990ca18790c4fa0a7f1d6f238157a7760c61ad5428"
+    },
+    {
       "path": "atlas-review/lib/chest-wall-muscle-imaging.ts",
       "sha256": "e97986190d60d6bde5ffcb9f17181880a5521aad4dfca71850c59c22ca431d79"
     },
@@ -3280,7 +3296,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "f1537038314a5ce02418504eb826a3fad444cd27ceb6b00090aef14176d90ec1"
+      "sha256": "817dc3aadf7a74b8c015a01088699f4062096c53742a890af63725bd0c8608b2"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3524,7 +3540,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "60d9aca36a70f240d908787c5e38e40d120df69fa18705bafdcb105d784cf545"
+      "sha256": "25375354ed42d35c87be1d7c786e9bde6093d3fb4438e223c560eb66e430ca47"
     }
   ]
 }

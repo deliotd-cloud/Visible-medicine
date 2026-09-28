@@ -19,6 +19,7 @@
   .body-topbar[data-shared-header="true"][data-guided-learning="true"]>.region-heading-compact{display:none;}
   .regional-tour-panel{padding:8px;}
   .regional-tour-panel .regional-tour-explanation{margin:0;}
+  .regional-tour-explanation[open]{max-height:min(32dvh,20rem);overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;}
   .regional-tour-controls{gap:4px;}
   .regional-tour-controls button{padding-inline:10px;}
 }

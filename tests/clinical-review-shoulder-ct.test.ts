@@ -8,7 +8,7 @@ test('eight shoulder CT drafts reach learner and protected review without images
   const review = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
   const learner = JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8'));
   const inputs = JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json', 'utf8'));
-  assert.equal(review.revision, '77244671eaf419095f681bb284737c01ecfbf6bb');
+  assert.equal(review.revision, '510b67e599638138efccb1e55a6fc32bcdeed27b');
   assert.equal(learner.sourceCommit, review.revision);
   for (const path of ['content/shoulder-arterial-ct-pins.json', 'content/shoulder-arterial-ct.ts', 'lib/shoulder-arterial-ct.ts']) {
     const file = review.files.find((f: any) => f.path === path); assert(file);
@@ -18,9 +18,9 @@ test('eight shoulder CT drafts reach learner and protected review without images
   // Existing dispatch source has checkout CRLF/LF mixing after a Windows patch;
   // the review importer reads Git's LF blob. Pin both audited forms explicitly.
   assert.equal(inputs.find((f: any) => f.path === 'app/body-content.ts')?.sha256,
-    '3e3e52758842f6ecfb058b963b0af6be17ca3013be8e1b2dc3ed3b5276e54c54');
+    '8ca9d2962c0f33aee27178872eaae40ad05fdb8469227467cffb8b735094b350');
   const dispatch = review.files.find((f: any) => f.path === 'app/body-content.ts');
-  assert.equal(dispatch.sourceSha256, '03c333ecfb5d3bb29223490fec7992a045a7da34fef72e53907dd896c8936a3e');
+  assert.equal(dispatch.sourceSha256, 'c72ca21c349436e9ca94d8fe68ebab53869db68bd7f6871d4d796e3b791c4294');
   assert.equal(createHash('sha256').update(readFileSync('atlas-review/app/body-content.ts')).digest('hex'), dispatch.sourceSha256);
   for (const key of ['patientDataIncluded', 'clinicalApproved', 'imagingConnection', 'standaloneReviewConnection']) assert.equal(learner[key], false);
   const pins = JSON.parse(readFileSync('atlas-review/content/shoulder-arterial-ct-pins.json', 'utf8'));

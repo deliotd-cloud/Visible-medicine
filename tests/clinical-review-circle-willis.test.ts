@@ -7,7 +7,7 @@ import { build } from 'esbuild';
 test('fourteen Circle of Willis imaging drafts reach exact-source review, not approval', async () => {
   const manifest = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
   const viewer = JSON.parse(readFileSync('public/atlas-review-viewer/manifest.json', 'utf8'));
-  assert.equal(manifest.revision, '77244671eaf419095f681bb284737c01ecfbf6bb');
+  assert.equal(manifest.revision, '510b67e599638138efccb1e55a6fc32bcdeed27b');
   assert.equal(viewer.sourceCommit, manifest.revision);
   assert.equal(viewer.websiteIntegrationSha256, manifest.websiteIntegrationSha256);
   assert.equal(viewer.personalRecordsIncluded, false);
