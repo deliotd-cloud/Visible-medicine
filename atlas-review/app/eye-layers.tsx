@@ -1,6 +1,8 @@
 'use client';
 import { useCallback, useMemo, useReducer, useState } from 'react';
 import { NestedTeaching } from './nested-teaching';
+import { ImagingLink } from './imaging-link';
+import { useNestedEducationLink } from './nested-education-link';
 import type { NestedImagingTopic } from '@/atlas-review/content/nested-teaching';
 import { ArrowLeft, RotateCcw, Eye, Focus, Tags } from 'lucide-react';
 import { Button } from '@/atlas-review/components/ui/button';
@@ -20,7 +22,7 @@ import {
   DialogDescription,
 } from './study-surface';
 import { BodyScene, retryBodyAssets } from './body-scene';
-import { allBodySystems, type BodyStructure } from './body-types';
+import { allBodySystems, type BodyCatalog, type BodyStructure } from './body-types';
 import { initialInspection } from '@/atlas-review/lib/inspection-state';
 import {
   CutawayControls as EyeCutawayControls,
@@ -53,11 +55,13 @@ export function EyeLayerView({
   parent,
   initialSelectedId,
   initialTeachingTopic,
+  educationCatalog,
   assetBase = '',
 }: {
   parent: BodyStructure;
   initialSelectedId?: string;
   initialTeachingTopic?: NestedImagingTopic;
+  educationCatalog?: BodyCatalog;
   assetBase?: string;
 }) {
   const layers = useMemo(() => eyeLayersFor(parent), [parent]);
@@ -125,9 +129,30 @@ export function EyeLayerView({
       ),
     [layers, selectedId],
   );
-  function select(id: string) {
+  function applySelection(id: string) {
     dispatch({ type: 'select', id });
     setFocus(false);
+  }
+  const educationAllowedIds = useMemo(
+    () => loaded && !failed
+      ? layers.filter((s) => !hidden.includes(s.id)).map((s) => s.id)
+      : [],
+    [layers, hidden, loaded, failed],
+  );
+  const educationLink = useNestedEducationLink({
+    catalog: educationCatalog,
+    parent,
+    study: 'eye',
+    layers,
+    allowedIds: educationAllowedIds,
+    disabled: !layers.length || (!!initialSelectedId && !initialSelection) ||
+      health !== 'ready' || !loaded || failed ||
+      isolated || inspection.plane !== 'off',
+    onSelect: applySelection,
+  });
+  function select(id: string) {
+    applySelection(id);
+    educationLink.publish(id);
   }
   function preset(value: EyePreset) {
     dispatch({ type: 'preset', value });
@@ -289,6 +314,7 @@ export function EyeLayerView({
         className="eye-layer-controls"
         aria-label="Eye dissection controls"
       >
+        {educationLink.adapter && <ImagingLink link={educationLink} />}
         <div className="eye-layer-presets">
           <label htmlFor="eye-layer-preset">Study view</label>
           <Select
@@ -551,12 +577,14 @@ export default function EyeLayers({
   onClose,
   initialSelectedId,
   initialTeachingTopic,
+  educationCatalog,
   assetBase = '',
 }: {
   parent: BodyStructure;
   onClose: () => void;
   initialSelectedId?: string;
   initialTeachingTopic?: NestedImagingTopic;
+  educationCatalog?: BodyCatalog;
   assetBase?: string;
 }) {
   return (
@@ -588,6 +616,7 @@ export default function EyeLayers({
           parent={parent}
           initialSelectedId={initialSelectedId}
           initialTeachingTopic={initialTeachingTopic}
+          educationCatalog={educationCatalog}
         />
       </DialogContent>
     </Dialog>

@@ -1,5 +1,5 @@
 {
-  "revision": "d1dc51ed38502b557b8ae04aae295e20dc5f7317",
+  "revision": "b65b8c40bd3fb428b2b4688c695039e2e3a3554c",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2799,7 +2799,7 @@
     {
       "path": "content/body-renderer-revision.json",
       "sourceSha256": "de064cf6949dc297c6504be368fe7012af947bb775baffe785f316166849ee36",
-      "importedSha256": "fe58524419c329899f137f1ec744c9fc717401533276f6f34b8c5e8aedc0c255"
+      "importedSha256": "db8565dddcbeb24bace148d21c0a06b012ece042178feed42b057e91d87d6fe9"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3089,7 +3089,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "1fcf6761a76bd594af08a21f79f6408d4963b35a075399f12531de08a2df2e8c",
-      "importedSha256": "00d4cb0ecb2cf377fe8d25dd209c18b96a5cc7a2c151896d093eb5ee9425113d"
+      "importedSha256": "1dd89296a3acba01052590b2b4ce8b57432d02d8512ecf4b5c1b6672d5bfd1a0"
     },
     {
       "path": "app/review/review.css",
@@ -3173,8 +3173,8 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sourceSha256": "7a0b953d8b5c81590b2e3f97409e7a4ee5ad35f69fe31119e178d63171b4ea98",
-      "importedSha256": "adceeae0b165fb10161f1c44aca0f7aab09e419fc29bf98518b46e9aa8698adf"
+      "sourceSha256": "d6e7ebbe87a4325a84d3a0241b788edcf23e6dae7ec6e3c3f6c15875abf6ad57",
+      "importedSha256": "6b72d163f6a06dc3f1e2bf2e65b33856f73319188b2c71e64854a5b5716baccd"
     },
     {
       "path": "app/um-knee-entry.css",
@@ -4143,8 +4143,8 @@
     },
     {
       "path": "app/eye-layers.tsx",
-      "sourceSha256": "3efe67855495116b5e75ccd14c0737fbd814ae0192633a6080f9d83bae9ecfbc",
-      "importedSha256": "5bfdf6a72b5624e75984b49bc695fc91d7975d73890ac500511ff9f81ffe5f9b"
+      "sourceSha256": "dc85935898d81d5b6a1c17b750f7ae7b52893dda8c1082e200859a74ec61d675",
+      "importedSha256": "065a09ffbeccf8ba2f0664652da79a00952be6bcd9508405cedd78ec24a7c6d2"
     },
     {
       "path": "app/nested-teaching.tsx",
@@ -4160,6 +4160,26 @@
       "path": "lib/nested-review-links.ts",
       "sourceSha256": "0d8d29a78763f5d3d00736fd2ae1aea0dbe6059ad50d6eb59d6b52e4f43e525f",
       "importedSha256": "7bd3d20b155782e2441511c8e38b920312c18e15e11dea50bd237876dc48ffce"
+    },
+    {
+      "path": "app/nested-education-link.ts",
+      "sourceSha256": "b2ebc43750d6cad1f924b89c6e04fa1035c40f01c97e68b479baf0ca9218008e",
+      "importedSha256": "b2ebc43750d6cad1f924b89c6e04fa1035c40f01c97e68b479baf0ca9218008e"
+    },
+    {
+      "path": "lib/nested-education-binding.ts",
+      "sourceSha256": "4ef9ac4e7fb31d13899399c353fd883ba7c49c8cc44c51c132710ae7eea4f476",
+      "importedSha256": "4ef9ac4e7fb31d13899399c353fd883ba7c49c8cc44c51c132710ae7eea4f476"
+    },
+    {
+      "path": "lib/nested-learning-anatomy.ts",
+      "sourceSha256": "0a635f713f9bc99d00c62c14cc4c5d05a4eb639f9633afc9f2ae2b440bb4dcc7",
+      "importedSha256": "0a635f713f9bc99d00c62c14cc4c5d05a4eb639f9633afc9f2ae2b440bb4dcc7"
+    },
+    {
+      "path": "lib/learning-anatomy.ts",
+      "sourceSha256": "ee24e46059a1ebbab82a7d2aaf78e9893eea4638ea00136989d2d098789077b3",
+      "importedSha256": "ee24e46059a1ebbab82a7d2aaf78e9893eea4638ea00136989d2d098789077b3"
     },
     {
       "path": "app/cutaway-controls.tsx",
@@ -4178,33 +4198,13 @@
     },
     {
       "path": "app/ventricles.tsx",
-      "sourceSha256": "f257d94c627dbd6888e1dc7d8709264bf168050f409678a2aae3c2cb3a54b7cc",
-      "importedSha256": "f2f9761d7046d60da341393d87b41a17f2029a5203b61468355d912028db0d93"
+      "sourceSha256": "08a2c1cd5d64cb9072d8fe80f2d95a40a7eb0611a2071043db45bc4a8f6f7ed0",
+      "importedSha256": "dace20b965bc3837808101f9304194e87ff2360c942b0a0687875a7b6930993a"
     },
     {
       "path": "app/femoral-components.tsx",
-      "sourceSha256": "adedfcc6a51b584908e5813c57b33b873c2b4ec60b70750837aa54e33c10764e",
-      "importedSha256": "a9e28c16435d8deaf77cfaabd34be6db9c8083c065856ab023401cde2a12be8e"
-    },
-    {
-      "path": "app/nested-education-link.ts",
-      "sourceSha256": "b2ebc43750d6cad1f924b89c6e04fa1035c40f01c97e68b479baf0ca9218008e",
-      "importedSha256": "b2ebc43750d6cad1f924b89c6e04fa1035c40f01c97e68b479baf0ca9218008e"
-    },
-    {
-      "path": "lib/nested-education-binding.ts",
-      "sourceSha256": "372cffa20affc7c2a6eeefa70b548f46b36717ebf0b9e52417a32da8978c8ece",
-      "importedSha256": "372cffa20affc7c2a6eeefa70b548f46b36717ebf0b9e52417a32da8978c8ece"
-    },
-    {
-      "path": "lib/nested-learning-anatomy.ts",
-      "sourceSha256": "0a635f713f9bc99d00c62c14cc4c5d05a4eb639f9633afc9f2ae2b440bb4dcc7",
-      "importedSha256": "0a635f713f9bc99d00c62c14cc4c5d05a4eb639f9633afc9f2ae2b440bb4dcc7"
-    },
-    {
-      "path": "lib/learning-anatomy.ts",
-      "sourceSha256": "ee24e46059a1ebbab82a7d2aaf78e9893eea4638ea00136989d2d098789077b3",
-      "importedSha256": "ee24e46059a1ebbab82a7d2aaf78e9893eea4638ea00136989d2d098789077b3"
+      "sourceSha256": "0bcd8922fb70204b272a1083c67a6bfda8b3af20eb20f870ef19be0700aa05ae",
+      "importedSha256": "d98c4ebd591590669a067483d6883b0d934032f2009a54d5fdfa9e766c07b30c"
     },
     {
       "path": "lib/cardiac-circulation.ts",
@@ -4533,5 +4533,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "bcbb4da0f5deb2878dcc939df649264979e64775c6d6578b73a35092b53aa733"
+  "websiteIntegrationSha256": "88769d8fc9c9e65bb1e7f15e0fb7ef9cc73f2f85359866c02904b47b0f835c23"
 }

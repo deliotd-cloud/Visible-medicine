@@ -2867,6 +2867,7 @@ export default function BodyExplorer({
       {eyeParent && !exam && eyeParent.id === selectedId && (
         <EyeLayers
           assetBase={assetBase}
+          educationCatalog={presentation === 'panel' ? catalog : undefined}
           parent={eyeParent}
           initialSelectedId={nestedSelection?.structureId}
           initialTeachingTopic={nestedSelection?.teachingTopic}

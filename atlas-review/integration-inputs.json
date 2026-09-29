@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "d1dc51ed38502b557b8ae04aae295e20dc5f7317",
-  "sha256": "bcbb4da0f5deb2878dcc939df649264979e64775c6d6578b73a35092b53aa733",
+  "sourceCommit": "b65b8c40bd3fb428b2b4688c695039e2e3a3554c",
+  "sha256": "88769d8fc9c9e65bb1e7f15e0fb7ef9cc73f2f85359866c02904b47b0f835c23",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-explorer.tsx",
-      "sha256": "adceeae0b165fb10161f1c44aca0f7aab09e419fc29bf98518b46e9aa8698adf"
+      "sha256": "6b72d163f6a06dc3f1e2bf2e65b33856f73319188b2c71e64854a5b5716baccd"
     },
     {
       "path": "atlas-review/app/body-scene.tsx",
@@ -196,11 +196,11 @@
     },
     {
       "path": "atlas-review/app/eye-layers.tsx",
-      "sha256": "5bfdf6a72b5624e75984b49bc695fc91d7975d73890ac500511ff9f81ffe5f9b"
+      "sha256": "065a09ffbeccf8ba2f0664652da79a00952be6bcd9508405cedd78ec24a7c6d2"
     },
     {
       "path": "atlas-review/app/femoral-components.tsx",
-      "sha256": "a9e28c16435d8deaf77cfaabd34be6db9c8083c065856ab023401cde2a12be8e"
+      "sha256": "d98c4ebd591590669a067483d6883b0d934032f2009a54d5fdfa9e766c07b30c"
     },
     {
       "path": "atlas-review/app/fitted-camera.tsx",
@@ -524,7 +524,7 @@
     },
     {
       "path": "atlas-review/app/ventricles.tsx",
-      "sha256": "f2f9761d7046d60da341393d87b41a17f2029a5203b61468355d912028db0d93"
+      "sha256": "dace20b965bc3837808101f9304194e87ff2360c942b0a0687875a7b6930993a"
     },
     {
       "path": "atlas-review/app/ventricular-relationships.css",
@@ -2796,7 +2796,7 @@
     },
     {
       "path": "atlas-review/lib/nested-education-binding.ts",
-      "sha256": "372cffa20affc7c2a6eeefa70b548f46b36717ebf0b9e52417a32da8978c8ece"
+      "sha256": "4ef9ac4e7fb31d13899399c353fd883ba7c49c8cc44c51c132710ae7eea4f476"
     },
     {
       "path": "atlas-review/lib/nested-learning-anatomy.ts",
@@ -3684,7 +3684,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "c07d9289bf4e224280dcc8182c791ced8a906382f696800cfd3ee345341476f5"
+      "sha256": "f12228bd15f98ee6de068a044052eb28b87559aea217446615d68742dc936cf6"
     }
   ]
 }

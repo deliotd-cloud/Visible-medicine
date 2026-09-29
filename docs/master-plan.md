@@ -1,5 +1,15 @@
 # Visible Medicine — shared delivery plan
 
+29 September: eye and artery-component Education linking integrated locally.
+Both eyes, both deep-femoral parents and all three supplied cranial-artery
+component views now share explicit, source-bound imaging selection. Hidden
+children are rejected; restoring visibility stays paused until fresh opt-in.
+Root Atlas linking remains separate. All137 models and notices unchanged.
+298 website tests, types/build, seven integrated browser views, two phone/200%
+text cases and actual Clinical Review pass. Synthetic links only; no real case,
+publication or approval. Fracture changes preserved. D recovery pending while
+full; native MRI remains done. See `docs/education-parity-delivery-20260929.md`.
+
 29 September: nested anatomy Education linking integrated locally.
 Shared nested workbenches have independent current-source selection connections;
 root Atlas linking remains separate. Explicit host/learner opt-in, stale/hidden
