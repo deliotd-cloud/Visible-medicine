@@ -20,8 +20,8 @@ test('regional delivery binds the verified Search/session transition without exp
     ['app/workspace-session.ts','7a2a73775b9eebebc50df257cc520f2f33499ebb7130f496a4b2cdfb46fc379a'],
   ])assert.deepEqual(inputs.filter(i=>i.path===path),[{path,sha256}]);
   assert(!inputs.some(i=>/test-study-mode|study-history|\.transition\.json|\.local\//.test(i.path)));
-  assert.equal(inventory.models.length,136);
-  assert.equal(inventory.models.flatMap((m:{paths:string[]})=>m.paths).length,143);
+  assert.equal(inventory.models.length,137);
+  assert.equal(inventory.models.flatMap((m:{paths:string[]})=>m.paths).length,144);
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])
     assert.equal(manifest[flag],false);
 });

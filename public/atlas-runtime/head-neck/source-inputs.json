@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "104c93f9b54ed5d23079a748c9b92f42930c1fdfc8a61854d52e3e0b69aef4d0"
+    "sha256": "80b62790d30ec18d3963756d998f0c48141dbfabff83031b434d2b735c0254a0"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -397,7 +397,7 @@
   },
   {
     "path": "app/ventricles.tsx",
-    "sha256": "56f6eba3b7f735be290f436958194b12cc5c0f4266c2c6d4ecbb879d84e4d405"
+    "sha256": "7d0d7ed434011c50c49da5540725dadf472785e44a1000b96ca768ed028f7a1e"
   },
   {
     "path": "app/ventricular-relationships.css",
@@ -1197,7 +1197,7 @@
   },
   {
     "path": "content/nested-review-bindings.json",
-    "sha256": "ae98b0279003f76f48f2409c51fefc563ce461670284ce36897dd28fa01690f3"
+    "sha256": "ce08b922d13c6a76f6672de0ca73cceea2250c1208ee9edc8f3f59d05bf4b73d"
   },
   {
     "path": "content/nested-teaching-bindings.v1.json",
@@ -1993,7 +1993,7 @@
   },
   {
     "path": "lib/cerebral.ts",
-    "sha256": "10138a8bad86e98cc03dc458c3d9b7245dace9369ded56c980623b15c6d6fdff"
+    "sha256": "c929ff426870c46ae187ca8f012b77b89a7296667888807633a18fbb4b4ef08e"
   },
   {
     "path": "lib/cervical-quiz.ts",
@@ -2386,6 +2386,10 @@
   {
     "path": "lib/hip-imaging.ts",
     "sha256": "033f69852bf6b66e3a36b4f6399bc7b0e5e03b0ff1382e9f6017ecd308ef88b5"
+  },
+  {
+    "path": "lib/hippocampi.ts",
+    "sha256": "ae33235e59efb4a3303786cc2acbadb0b0feafe5900700cc77a849fb3192db31"
   },
   {
     "path": "lib/hra-pelvis-teaching.ts",
@@ -3334,6 +3338,10 @@
   {
     "path": "public/models/bodyparts3d/hepatic/catalog.json",
     "sha256": "53962f7814854e576efde820bed1ccd2f7393b1296798898dee25f773e24d6c8"
+  },
+  {
+    "path": "public/models/bodyparts3d/hippocampi/catalog.json",
+    "sha256": "b9448630bcee365817b6421355675c2a44a955993f9a6b66e7e655da8abfb9e1"
   },
   {
     "path": "public/models/bodyparts3d/inferior-epigastric-vessels/catalog.json",

@@ -8,7 +8,7 @@ test('regional and whole-body learners deliver the verified source-bound tour re
   const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
-  assert.equal(learner.sourceCommit,'b5447ec5a14f32670ddc591918997b14b62974b7');
+  assert.equal(learner.sourceCommit,'bd700a5528dd4b2a62653f530d3f474de1f8b5bb');
   assert.equal(review.revision,learner.sourceCommit);
   for(const path of ['app/regional-guided-learning.tsx','lib/anatomy-load-retry.ts','app/body-scene.tsx']){
     const record=review.files.find((f:any)=>f.path===path);assert.ok(record,path);

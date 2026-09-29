@@ -1,3 +1,4 @@
+import {beforeHippocampi} from './atlas-hippocampi-fixture.ts';
 import {nonregionalAtlasSources} from './atlas-nonregional-release-fixture.ts';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -9,8 +10,8 @@ test('shared regional viewer isolates scene intrinsic size without changing mode
   const base='public/atlas-runtime/head-neck/';
   const hash=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json'),manifest=JSON.parse(bytes.toString());
-  assert.equal(hash(bytes),'3f4fc1ea05427fba9af8833149777d78140614dca076e53acbc4dbccf8e0944c');
-  assert.equal(manifest.sourceCommit,'b5447ec5a14f32670ddc591918997b14b62974b7');
+  assert.equal(hash(bytes),'9fe5ab420dbe49c45bd8b72e2b6ba83a87cb9840bd27c7aeed2436e9f20f5a3b');
+  assert.equal(manifest.sourceCommit,'bd700a5528dd4b2a62653f530d3f474de1f8b5bb');
   for(const flag of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
   assert.deepEqual(inputs.filter((i:{path:string})=>i.path==='app/body-explorer.css'),[
@@ -24,6 +25,6 @@ test('shared regional viewer isolates scene intrinsic size without changing mode
   assert.ok(/\.body-workspace\{[^}]*overflow-y:auto/.test(css),'Short and enlarged layouts retain scrolling');
   const current=JSON.parse(readFileSync('lib/atlas-model-inventory.json','utf8'));
   const previous=JSON.parse(execFileSync('git',['show','5c3346b2a73223fac91dc71c593adcf32e77ea33:lib/atlas-model-inventory.json'],{encoding:'utf8'}));
-  assert.deepEqual(current.models,previous.models);
+  assert.deepEqual(beforeHippocampi(current.models),previous.models);
   assert.deepEqual(current.sources.filter((s:{module:string})=>s.module!=='head-neck'),nonregionalAtlasSources);
 });

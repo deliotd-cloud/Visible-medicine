@@ -1,3 +1,4 @@
+import {beforeHippocampi} from './atlas-hippocampi-fixture.ts';
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
@@ -8,9 +9,9 @@ test('deep-brain formative practice ships tested source without new models or ac
   const base='public/atlas-runtime/head-neck/';
   const sha=(data:Buffer)=>createHash('sha256').update(data).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'3f4fc1ea05427fba9af8833149777d78140614dca076e53acbc4dbccf8e0944c');
+  assert.equal(sha(bytes),'9fe5ab420dbe49c45bd8b72e2b6ba83a87cb9840bd27c7aeed2436e9f20f5a3b');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'b5447ec5a14f32670ddc591918997b14b62974b7');
+  assert.equal(manifest.sourceCommit,'bd700a5528dd4b2a62653f530d3f474de1f8b5bb');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({
@@ -24,6 +25,6 @@ test('deep-brain formative practice ships tested source without new models or ac
   for(const key of ['caudate','putamen','pallidum','thalamus','lateral-geniculate','medial-geniculate'])assert.ok(runtime.includes('deep-brain-'+key),key);
   const before=JSON.parse(execFileSync('git',['show','83fa723ec2babaecdd71ecc4919928f94d03081a:lib/atlas-model-inventory.json'],{encoding:'utf8'}));
   const current=JSON.parse(readFileSync('lib/atlas-model-inventory.json','utf8'));
-  assert.deepEqual(current.models,before.models,'all original model bytes and protected paths remain identical');
-  assert.equal(current.models.length,136);
+  assert.deepEqual(beforeHippocampi(current.models),before.models,'all original model bytes and protected paths remain identical');
+  assert.equal(current.models.length,137);
 });

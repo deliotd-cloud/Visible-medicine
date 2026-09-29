@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "sourceCommit": "b5447ec5a14f32670ddc591918997b14b62974b7",
+  "sourceCommit": "bd700a5528dd4b2a62653f530d3f474de1f8b5bb",
   "region": "head-neck",
   "sourceVersion": "4.0",
   "regionalIds": [
@@ -492,6 +492,22 @@
     {
       "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
       "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "study": "cerebral",
+      "title": "Cerebral regions",
+      "structureId": "vm:anatomy:body:head-neck:left:organ:left-hippocampus",
+      "sourceHash": "11cf97da7aa459f1181c79278b41c9c4369f8954eb5d4a00d1bc22b5cf28964e"
+    },
+    {
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "study": "cerebral",
+      "title": "Cerebral regions",
+      "structureId": "vm:anatomy:body:head-neck:right:organ:right-hippocampus",
+      "sourceHash": "11cf97da7aa459f1181c79278b41c9c4369f8954eb5d4a00d1bc22b5cf28964e"
+    },
+    {
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
       "study": "visual-pathway",
       "title": "Optic chiasm and tracts",
       "structureId": "vm:anatomy:body:head-neck:midline:organ:optic-chiasm",
@@ -899,7 +915,7 @@
     }
   ],
   "structures": 291,
-  "nestedSelections": 75,
+  "nestedSelections": 77,
   "regionalScopes": [
     {
       "region": "head-neck",
@@ -1388,6 +1404,22 @@
           "title": "Cerebral regions",
           "structureId": "vm:anatomy:body:head-neck:right:organ:posterior-part-of-right-superior-temporal-gyrus",
           "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "cerebral",
+          "title": "Cerebral regions",
+          "structureId": "vm:anatomy:body:head-neck:left:organ:left-hippocampus",
+          "sourceHash": "11cf97da7aa459f1181c79278b41c9c4369f8954eb5d4a00d1bc22b5cf28964e"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "cerebral",
+          "title": "Cerebral regions",
+          "structureId": "vm:anatomy:body:head-neck:right:organ:right-hippocampus",
+          "sourceHash": "11cf97da7aa459f1181c79278b41c9c4369f8954eb5d4a00d1bc22b5cf28964e"
         },
         {
           "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
@@ -2016,6 +2048,13 @@
           "bytes": 1131748,
           "sha256": "0c82e1cb2960c6f2474f2b4759974adab5871d8074a2f4e3712e1c3a37a48ca7",
           "structures": 25
+        },
+        {
+          "id": "hippocampi",
+          "url": "/models/bodyparts3d/hippocampi/hippocampi.glb?v=11cf97da7aa459f1181c79278b41c9c4369f8954eb5d4a00d1bc22b5cf28964e",
+          "bytes": 38548,
+          "sha256": "11cf97da7aa459f1181c79278b41c9c4369f8954eb5d4a00d1bc22b5cf28964e",
+          "structures": 2
         },
         {
           "id": "inferior-thyroid-arteries",
@@ -8458,6 +8497,22 @@
         {
           "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
           "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "cerebral",
+          "title": "Cerebral regions",
+          "structureId": "vm:anatomy:body:head-neck:left:organ:left-hippocampus",
+          "sourceHash": "11cf97da7aa459f1181c79278b41c9c4369f8954eb5d4a00d1bc22b5cf28964e"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+          "study": "cerebral",
+          "title": "Cerebral regions",
+          "structureId": "vm:anatomy:body:head-neck:right:organ:right-hippocampus",
+          "sourceHash": "11cf97da7aa459f1181c79278b41c9c4369f8954eb5d4a00d1bc22b5cf28964e"
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
           "study": "visual-pathway",
           "title": "Optic chiasm and tracts",
           "structureId": "vm:anatomy:body:head-neck:midline:organ:optic-chiasm",
@@ -10002,6 +10057,13 @@
           "structures": 1
         },
         {
+          "id": "hippocampi",
+          "url": "/models/bodyparts3d/hippocampi/hippocampi.glb?v=11cf97da7aa459f1181c79278b41c9c4369f8954eb5d4a00d1bc22b5cf28964e",
+          "bytes": 38548,
+          "sha256": "11cf97da7aa459f1181c79278b41c9c4369f8954eb5d4a00d1bc22b5cf28964e",
+          "structures": 2
+        },
+        {
           "id": "inferior-epigastric-vessels",
           "url": "/models/bodyparts3d/inferior-epigastric-vessels/inferior-epigastric-vessels.glb?v=8049ac70b0130cfe597cde159d1716f79f1b686583ea71dc91a5955f6c95925c",
           "bytes": 526756,
@@ -10923,6 +10985,13 @@
       "structures": 1
     },
     {
+      "id": "hippocampi",
+      "url": "/models/bodyparts3d/hippocampi/hippocampi.glb?v=11cf97da7aa459f1181c79278b41c9c4369f8954eb5d4a00d1bc22b5cf28964e",
+      "bytes": 38548,
+      "sha256": "11cf97da7aa459f1181c79278b41c9c4369f8954eb5d4a00d1bc22b5cf28964e",
+      "structures": 2
+    },
+    {
       "id": "inferior-epigastric-vessels",
       "url": "/models/bodyparts3d/inferior-epigastric-vessels/inferior-epigastric-vessels.glb?v=8049ac70b0130cfe597cde159d1716f79f1b686583ea71dc91a5955f6c95925c",
       "bytes": 526756,
@@ -11088,7 +11157,7 @@
     {
       "path": "index.html",
       "bytes": 914,
-      "sha256": "edec1155c5a9cc7594d92ce5f7164122048843289aed91217a230e69c294837b"
+      "sha256": "ee4c13ff0a794b1375363e798c153421cb764eca6d0e3825ea3428b337e5d4f6"
     },
     {
       "path": "BUNDLED_NOTICES.txt",
@@ -11102,13 +11171,13 @@
     },
     {
       "path": "source-inputs.json",
-      "bytes": 117781,
-      "sha256": "46d55da6dc5db73516bbd43616875d96b2ad36e1849f17599e8b14295039ee8a"
+      "bytes": 118059,
+      "sha256": "35b790a891a3d125a386a67b814320be1998de65576aee1f9351a18f1d6091ae"
     },
     {
-      "path": "assets/abdominal-wall-study-CEfCriON.js",
+      "path": "assets/abdominal-wall-study-LGnWumbG.js",
       "bytes": 44599,
-      "sha256": "5d91b17f16c9b41b3ab31af09954097f8f94e52b7e325e7fca8ac51224b25d8a"
+      "sha256": "1018e13bfce146bf3d88bf279b816036d545aceed6ec4bb90cd23fd3a4d9d750"
     },
     {
       "path": "assets/anatomy-load-state-C_7D7z_U.js",
@@ -11116,9 +11185,9 @@
       "sha256": "a8af94d5770fa1179af03c7ffdc866e0e9562026727a2d9a592366b7eb7b784d"
     },
     {
-      "path": "assets/back-layers-study-0qDirQsj.js",
+      "path": "assets/back-layers-study-D52PK7i2.js",
       "bytes": 76787,
-      "sha256": "780310714ba0bd42e937ea62fa35aa17d2b85287e5527760298b883a04b138fd"
+      "sha256": "9372bb2b4bf2ab1a1b2d7d44960603b354e6403d14bf9b3b5d027302fb306461"
     },
     {
       "path": "assets/body-scene-BhJs5X6h.js",
@@ -11136,9 +11205,9 @@
       "sha256": "87c31bfe8303461a8afbde6251bb48df5a77645f774c8ef3ac48c292a30ec5c8"
     },
     {
-      "path": "assets/cutaway-controls-D4mRx2sp.js",
-      "bytes": 119109,
-      "sha256": "c06317e9a96eb25cf9a0d2c3b96cdb389aadd0e73894bc1ef83b2ee885a031af"
+      "path": "assets/cutaway-controls-B0gbtYm3.js",
+      "bytes": 119557,
+      "sha256": "24367e05c5e53a3a0118e8a2c6ef6a8f6d09a26611f5ac13a3f0f2ee007766db"
     },
     {
       "path": "assets/eye-layers-B3CQEl2o.css",
@@ -11146,29 +11215,34 @@
       "sha256": "58f9322c6a028c52be262400337233bf1eb9350ca31aef05830a1df107bbd343"
     },
     {
-      "path": "assets/eye-layers-CY8czEJO.js",
+      "path": "assets/eye-layers-CPanCU2K.js",
       "bytes": 11522,
-      "sha256": "f86775c1765cb17f731921e17f88a9baf4eb79bc424072da44fc5ea38cb0a557"
+      "sha256": "b2dbbca4e209081fcbd280092f548f20777a102d6fb9593a304249e98d2919b1"
     },
     {
-      "path": "assets/hra-pelvis-study-Dl4WnjLR.js",
+      "path": "assets/hra-pelvis-study-BkjoPN0p.js",
       "bytes": 94864,
-      "sha256": "8aa9760d9d6ee8e8551d0e630daf928793b3d5a578e9705bfb1214c1f2178982"
+      "sha256": "88a6db6ee214b535b13b0239fc6dfa0687db6a7a7061e3bfd7a629835d2ccc00"
     },
     {
-      "path": "assets/hra-renal-study-CW3olNy3.js",
+      "path": "assets/hra-renal-study-XNmGiVaN.js",
       "bytes": 4389,
-      "sha256": "65f77c55a819748bd1231e56a98852d00fa7f25603c6f92e963c444da131c752"
+      "sha256": "ea270476fd31935c040e6264c737e6dc6474c7dbbd2eeed37a502e56a3c42761"
     },
     {
-      "path": "assets/hra-renal-teaching-DhJ7q2bN.js",
+      "path": "assets/hra-renal-teaching-DaXdATPT.js",
       "bytes": 115099,
-      "sha256": "8a204a9afc9335334925dfd3dfe04ee2716584110d0ac777d05f0983f1901729"
+      "sha256": "6c7a0569a5bc481b749e624f84d909c493f69503bda7bf25132bb47edfe40554"
     },
     {
-      "path": "assets/independent-study-navigation-BeD08iga.js",
+      "path": "assets/independent-study-navigation-Coi4MEEf.js",
       "bytes": 2628,
-      "sha256": "03e30f86e19b4b8333b135c41c93d30397055954cead19c50a1949d65e85c999"
+      "sha256": "ef168dda29d41776d900435c07aa25f21ac3f15b3c4df9d362f944fc5c9165bc"
+    },
+    {
+      "path": "assets/index-CRACg4gU.js",
+      "bytes": 2146411,
+      "sha256": "931fcda7f63788bf694f491ef3c0bc9ec965de382e3e34d946bc6944a848df68"
     },
     {
       "path": "assets/index-Czyb9w2s.css",
@@ -11176,19 +11250,14 @@
       "sha256": "98bbc09496d00e9c10a7196dd40e8d2e2f818b31d04e7c58dbe01ec34b7585fb"
     },
     {
-      "path": "assets/index-DzKBfKi_.js",
-      "bytes": 2146411,
-      "sha256": "dc109a04b1dcfc33d084e21d6beb27a0d5c3ccf85051263ddf9e9b3a15fb7867"
-    },
-    {
       "path": "assets/rolldown-runtime-hePW80VL.js",
       "bytes": 716,
       "sha256": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021"
     },
     {
-      "path": "assets/slider-Dk_VJbWg.js",
-      "bytes": 5169448,
-      "sha256": "b4ecb78891332b18855ab2092d01b7889b8343b281a8b50c8055966115377dc4"
+      "path": "assets/slider-BwnZOtfS.js",
+      "bytes": 5203207,
+      "sha256": "384fb913470c897e92da3ca80d97647273d11905514e71a2d06bd973fd8752c0"
     },
     {
       "path": "assets/slider-rDmsz32l.css",
@@ -11196,9 +11265,9 @@
       "sha256": "5cb90016c099bc12a94d4e03a591cdfd0fdc447067e7a03a04136af8f886f575"
     },
     {
-      "path": "assets/um-knee-study-6PFUBabe.js",
+      "path": "assets/um-knee-study-DebM-EdG.js",
       "bytes": 522912,
-      "sha256": "04d5d2b306954656f417215aa4fcdd9d8c1ab884878b1018b0b847c598175c04"
+      "sha256": "c00ab743eac487e16919e10205f3effe771d8f3f3a2e7c7872d2f90162290d84"
     },
     {
       "path": "assets/um-knee-study-DE_VvcAw.css",
@@ -11206,9 +11275,9 @@
       "sha256": "7f1d701756afcca6313a1ea8b3bb47f578ae6066d9d6750576f1003f9c65da3b"
     },
     {
-      "path": "assets/um-limb-study-BZUVKPbP.js",
+      "path": "assets/um-limb-study-DeUGxUId.js",
       "bytes": 2603,
-      "sha256": "6d0334e6e5efc2ba79ca393091aa80fe7fb3960efde0e255b4f7641d6a452f75"
+      "sha256": "28348e0c9d8abe99e23a9e175f995b0412a046a8cfac0bfa5893f4f8f12c70d9"
     },
     {
       "path": "assets/ventricles-CfdrTivY.css",
@@ -11216,9 +11285,9 @@
       "sha256": "3afed59416d5b658434fa6dd284a3af3ff3868bdf2412b57c6f882f616e0b385"
     },
     {
-      "path": "assets/ventricles-VvSPcGCo.js",
-      "bytes": 238186,
-      "sha256": "04f8d3dc05a486c81242a5a067f30a75b820476e0d040aebfa5c1381fc62ecce"
+      "path": "assets/ventricles-CxGhO0fl.js",
+      "bytes": 238254,
+      "sha256": "9ca147d0263ac0b8375085e98b27003b87c7e23360526046f99bd37b2581485c"
     },
     {
       "path": "models/bodyparts3d-v3/abdominal-wall/abdominal-wall.glb",
@@ -11781,6 +11850,11 @@
       "sha256": "bdec533f350ee74b15e14f073f600599841b060a8275d3c60795646c8bd7523c"
     },
     {
+      "path": "models/bodyparts3d/hippocampi/hippocampi.glb",
+      "bytes": 38548,
+      "sha256": "11cf97da7aa459f1181c79278b41c9c4369f8954eb5d4a00d1bc22b5cf28964e"
+    },
+    {
       "path": "models/bodyparts3d/inferior-epigastric-vessels/inferior-epigastric-vessels.glb",
       "bytes": 526756,
       "sha256": "8049ac70b0130cfe597cde159d1716f79f1b686583ea71dc91a5955f6c95925c"
@@ -11927,8 +12001,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "bytes": 212877,
-      "sha256": "104c93f9b54ed5d23079a748c9b92f42930c1fdfc8a61854d52e3e0b69aef4d0"
+      "bytes": 213784,
+      "sha256": "80b62790d30ec18d3963756d998f0c48141dbfabff83031b434d2b735c0254a0"
     },
     {
       "path": "LICENSES/CC-BY-4.0.txt",

@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+29 September: selectable left/right hippocampi imported locally from Atlas
+`bd700a5`. Head-neck/whole-body search and cerebral dissection share exact source
+identities with protected Clinical Review. One licensed bundle added; all prior
+models and unrelated regional scopes preserved. New teaching and radiologist
+sign-off remain pending. Exact worksheet return retained; no publication,
+approval or fracture/PACS changes. See `docs/hippocampi-delivery-20260929.md`.
+Native MRI remains done.
+
 29 September: deep-brain guided tour imported locally from Atlas `b5447ec`.
 Six smooth-camera stops and seven existing source selections are available in
 Head & neck/Whole body Guided learning with matching Clinical Review evidence.

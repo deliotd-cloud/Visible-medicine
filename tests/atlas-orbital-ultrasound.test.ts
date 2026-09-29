@@ -1,3 +1,4 @@
+import {beforeHippocampi} from './atlas-hippocampi-fixture.ts';
 import {nonregionalAtlasSources} from './atlas-nonregional-release-fixture.ts';
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
@@ -9,8 +10,8 @@ test('orbital ultrasound and compact Search are delivered without changing geome
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json'),manifest=JSON.parse(bytes.toString());
-  assert.equal(sha(bytes),'3f4fc1ea05427fba9af8833149777d78140614dca076e53acbc4dbccf8e0944c');
-  assert.equal(manifest.sourceCommit,'b5447ec5a14f32670ddc591918997b14b62974b7');
+  assert.equal(sha(bytes),'9fe5ab420dbe49c45bd8b72e2b6ba83a87cb9840bd27c7aeed2436e9f20f5a3b');
+  assert.equal(manifest.sourceCommit,'bd700a5528dd4b2a62653f530d3f474de1f8b5bb');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of [
@@ -44,8 +45,8 @@ test('orbital ultrasound and compact Search are delivered without changing geome
   assert.ok(/\.atlas-search-context\{display:none\}/.test(css),'Only the redundant visible Search context is hidden');
   const previous=JSON.parse(execFileSync('git',['show','ba52f9e84f559ac3405737ccc0a0fe22d10831d3:lib/atlas-model-inventory.json'],{encoding:'utf8'}));
   const current=JSON.parse(readFileSync('lib/atlas-model-inventory.json','utf8'));
-  assert.deepEqual(current.models,previous.models);
+  assert.deepEqual(beforeHippocampi(current.models),previous.models);
   assert.deepEqual(current.sources.filter((s:{module:string})=>s.module!=='head-neck'),nonregionalAtlasSources);
-  assert.equal(current.models.length,136);
-  assert.equal(current.models.flatMap((m:{paths:string[]})=>m.paths).length,143);
+  assert.equal(current.models.length,137);
+  assert.equal(current.models.flatMap((m:{paths:string[]})=>m.paths).length,144);
 });

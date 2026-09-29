@@ -1,3 +1,4 @@
+import {beforeHippocampi} from './atlas-hippocampi-fixture.ts';
 import {nonregionalAtlasSources} from './atlas-nonregional-release-fixture.ts';
 import assert from 'node:assert/strict';
 import test from 'node:test';
@@ -9,9 +10,9 @@ test('regional correction preserves old models and binds the reviewed lower-neck
   const base='public/atlas-runtime/head-neck/';
   const sha=(b:string|Buffer)=>createHash('sha256').update(b).digest('hex');
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'3f4fc1ea05427fba9af8833149777d78140614dca076e53acbc4dbccf8e0944c');
+  assert.equal(sha(manifestBytes),'9fe5ab420dbe49c45bd8b72e2b6ba83a87cb9840bd27c7aeed2436e9f20f5a3b');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'b5447ec5a14f32670ddc591918997b14b62974b7');
+  assert.equal(manifest.sourceCommit,'bd700a5528dd4b2a62653f530d3f474de1f8b5bb');
   assert.equal(manifest.patientDataIncluded,false);assert.equal(manifest.clinicalApproved,false);
   assert.equal(manifest.regionalScopes.length,12);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
@@ -31,6 +32,6 @@ test('regional correction preserves old models and binds the reviewed lower-neck
   assert.equal(bytes.length,5604);assert.equal(sha(bytes),'4f431242839c255ae2320b4004c537a4c2defb7d0cd7b51fdea60f7ba3c09e8f');
   const prior=JSON.parse(execFileSync('git',['show','0755514ba326eb5d70c20da229cd26ebff64ee4d:lib/atlas-model-inventory.json'],{encoding:'utf8'}));
   const current=JSON.parse(readFileSync('lib/atlas-model-inventory.json','utf8'));
-  assert.deepEqual(current.models.filter((m:{sha256:string})=>m.sha256!==correction.bundle.sha256&&m.sha256!=='4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12'),prior.models);
+  assert.deepEqual(beforeHippocampi(current.models).filter((m:{sha256:string})=>m.sha256!==correction.bundle.sha256&&m.sha256!=='4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12'),prior.models);
   assert.deepEqual(current.sources.filter((s:{module:string})=>s.module!=='head-neck'),nonregionalAtlasSources);
 });

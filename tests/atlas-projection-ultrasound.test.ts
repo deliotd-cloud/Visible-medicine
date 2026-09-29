@@ -1,3 +1,4 @@
+import {beforeHippocampi} from './atlas-hippocampi-fixture.ts';
 import {nonregionalAtlasSources} from './atlas-nonregional-release-fixture.ts';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -29,7 +30,7 @@ const ultrasoundIds=[
 
 test('regional runtime carries 11 exact thoracoabdominal X-ray and 15 spine ultrasound drafts',()=>{
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-  assert.equal(manifest.sourceCommit,'b5447ec5a14f32670ddc591918997b14b62974b7');
+  assert.equal(manifest.sourceCommit,'bd700a5528dd4b2a62653f530d3f474de1f8b5bb');
   assert.equal(new Set(xrayIds).size,11);
   assert.equal(new Set(ultrasoundIds).size,15);
   const regionalIds=new Set((manifest.regionalScopes as {regionalIds:string[]}[]).flatMap(scope=>scope.regionalIds));
@@ -62,7 +63,7 @@ test('regional runtime carries 11 exact thoracoabdominal X-ray and 15 spine ultr
 
 test('exact right and left main bronchus selections carry external ultrasound draft limits',()=>{
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-  assert.equal(manifest.sourceCommit,'b5447ec5a14f32670ddc591918997b14b62974b7');
+  assert.equal(manifest.sourceCommit,'bd700a5528dd4b2a62653f530d3f474de1f8b5bb');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   assert.equal(inputs.find(input=>input.path==='content/thoracoabdominal-organ-imaging.ts')?.sha256,
     'bebed40490aa6ba882c6a53d54db529564be3a3ee556d724605ba2748febcc06');
@@ -95,9 +96,9 @@ test('draft export keeps clinical, access and model boundaries',()=>{
     assert.equal(manifest[flag],false,flag);
   const inventory=JSON.parse(readFileSync('lib/atlas-model-inventory.json','utf8'));
   const previous=JSON.parse(original('lib/atlas-model-inventory.json').toString());
-  assert.deepEqual(inventory.models.filter((m:{sha256:string})=>m.sha256!=='4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12'),previous.models);
-  assert.equal(inventory.models.length,136);
-  assert.equal(inventory.models.flatMap((model:{paths:string[]})=>model.paths).length,143);
+  assert.deepEqual(beforeHippocampi(inventory.models).filter((m:{sha256:string})=>m.sha256!=='4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12'),previous.models);
+  assert.equal(inventory.models.length,137);
+  assert.equal(inventory.models.flatMap((model:{paths:string[]})=>model.paths).length,144);
   assert.deepEqual(inventory.sources.filter((source:{module:string})=>source.module!=='head-neck'),
     nonregionalAtlasSources);
   for(const path of ['lib/atlas-delivery-access.ts','lib/lecture-repository.ts','lib/atlas-navigation.ts'])

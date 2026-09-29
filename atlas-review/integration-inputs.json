@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "b5447ec5a14f32670ddc591918997b14b62974b7",
-  "sha256": "315818bab66b0c97549e842934b521559c1836439bb12a5e8277b8dc3ee4ba70",
+  "sourceCommit": "bd700a5528dd4b2a62653f530d3f474de1f8b5bb",
+  "sha256": "4942b385e5c529ce1249486b5a033007b93ac917eb985d281d7b2813073e9158",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -508,7 +508,7 @@
     },
     {
       "path": "atlas-review/app/ventricles.tsx",
-      "sha256": "a26cca561d9fe563e23d10b3c75b4e8557e348edb8390a45242d37470251dc22"
+      "sha256": "643c8bda26e63397a5c5b991152cb2d761bf4bd6fe632ecd680e983c05922e54"
     },
     {
       "path": "atlas-review/app/ventricular-relationships.css",
@@ -1328,7 +1328,7 @@
     },
     {
       "path": "atlas-review/content/nested-review-bindings.json",
-      "sha256": "ae98b0279003f76f48f2409c51fefc563ce461670284ce36897dd28fa01690f3"
+      "sha256": "ce08b922d13c6a76f6672de0ca73cceea2250c1208ee9edc8f3f59d05bf4b73d"
     },
     {
       "path": "atlas-review/content/nested-teaching-bindings.v1.json",
@@ -2076,7 +2076,7 @@
     },
     {
       "path": "atlas-review/lib/cerebral.ts",
-      "sha256": "10138a8bad86e98cc03dc458c3d9b7245dace9369ded56c980623b15c6d6fdff"
+      "sha256": "c929ff426870c46ae187ca8f012b77b89a7296667888807633a18fbb4b4ef08e"
     },
     {
       "path": "atlas-review/lib/cervical-quiz.ts",
@@ -2481,6 +2481,10 @@
     {
       "path": "atlas-review/lib/hip-imaging.ts",
       "sha256": "033f69852bf6b66e3a36b4f6399bc7b0e5e03b0ff1382e9f6017ecd308ef88b5"
+    },
+    {
+      "path": "atlas-review/lib/hippocampi.ts",
+      "sha256": "ae33235e59efb4a3303786cc2acbadb0b0feafe5900700cc77a849fb3192db31"
     },
     {
       "path": "atlas-review/lib/hra-pelvis-teaching.ts",
@@ -3356,7 +3360,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "104c93f9b54ed5d23079a748c9b92f42930c1fdfc8a61854d52e3e0b69aef4d0"
+      "sha256": "80b62790d30ec18d3963756d998f0c48141dbfabff83031b434d2b735c0254a0"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3469,6 +3473,10 @@
     {
       "path": "atlas-review/public/models/bodyparts3d/hepatic/catalog.json",
       "sha256": "53962f7814854e576efde820bed1ccd2f7393b1296798898dee25f773e24d6c8"
+    },
+    {
+      "path": "atlas-review/public/models/bodyparts3d/hippocampi/catalog.json",
+      "sha256": "b9448630bcee365817b6421355675c2a44a955993f9a6b66e7e655da8abfb9e1"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d/inferior-epigastric-vessels/catalog.json",
@@ -3608,7 +3616,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "9be9f88018b67364c3f68511ef72b10c96959959d0f67628b9de8887e1e63933"
+      "sha256": "9649ca3e7aa714a06cda9b9ffd32031697f9823a24419fc6b9d96c4e08bf395b"
     }
   ]
 }

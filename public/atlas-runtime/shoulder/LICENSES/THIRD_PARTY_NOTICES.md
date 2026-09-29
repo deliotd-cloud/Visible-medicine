@@ -1,5 +1,19 @@
 # Third-party notices
 
+## Selectable hippocampi — 29 September 2026
+
+BodyParts3D, © The Database Center for Life Science licensed under
+CC Attribution 4.0 International. Original v4 PART-OF surfaces FJ1759/FMA72714
+(left) and FJ1807/FMA72713 (right), already present in the licensed brain
+aggregate, are now separated for selection. Converted OBJ to GLB, welded
+coincident vertices, recalculated normals and applied the existing common
+source-to-scene transform. No geometry was invented or imported from patients.
+Credit is retained in the viewer and bundle manifest. Commercial reuse requires
+attribution and compliance with [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+The [official source licence](https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html)
+was checked on 29 September 2026. No new dependency or mandatory paid service.
+These surfaces remain unvalidated; see [scope](../docs/HIPPOCAMPI.md).
+
 ## Shoulder soft-tissue X-ray drafts — 28 September 2026
 
 Original concise factual teaching with links to Texas Tech anatomy, RadiologyInfo

@@ -386,7 +386,7 @@
     },
     {
       "path": "app/ventricles.tsx",
-      "sha256": "56f6eba3b7f735be290f436958194b12cc5c0f4266c2c6d4ecbb879d84e4d405"
+      "sha256": "7d0d7ed434011c50c49da5540725dadf472785e44a1000b96ca768ed028f7a1e"
     },
     {
       "path": "app/ventricular-relationships.css",
@@ -1186,7 +1186,7 @@
     },
     {
       "path": "content/nested-review-bindings.json",
-      "sha256": "ae98b0279003f76f48f2409c51fefc563ce461670284ce36897dd28fa01690f3"
+      "sha256": "ce08b922d13c6a76f6672de0ca73cceea2250c1208ee9edc8f3f59d05bf4b73d"
     },
     {
       "path": "content/nested-teaching-bindings.v1.json",
@@ -1898,7 +1898,7 @@
     },
     {
       "path": "lib/cerebral.ts",
-      "sha256": "10138a8bad86e98cc03dc458c3d9b7245dace9369ded56c980623b15c6d6fdff"
+      "sha256": "c929ff426870c46ae187ca8f012b77b89a7296667888807633a18fbb4b4ef08e"
     },
     {
       "path": "lib/cervical-quiz.ts",
@@ -2291,6 +2291,10 @@
     {
       "path": "lib/hip-imaging.ts",
       "sha256": "033f69852bf6b66e3a36b4f6399bc7b0e5e03b0ff1382e9f6017ecd308ef88b5"
+    },
+    {
+      "path": "lib/hippocampi.ts",
+      "sha256": "ae33235e59efb4a3303786cc2acbadb0b0feafe5900700cc77a849fb3192db31"
     },
     {
       "path": "lib/hra-pelvis-teaching.ts",
@@ -3110,7 +3114,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "c1e6bc0a6cfd2c283daf82209ab766a24b1f67553ef12f446987ea390e6665a7"
+      "sha256": "a4078c0ba3442de2e8e840219275a38a9797695902ba99690f2d28c9bf4b0f4b"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3221,6 +3225,10 @@
       "sha256": "53962f7814854e576efde820bed1ccd2f7393b1296798898dee25f773e24d6c8"
     },
     {
+      "path": "public/models/bodyparts3d/hippocampi/catalog.json",
+      "sha256": "b9448630bcee365817b6421355675c2a44a955993f9a6b66e7e655da8abfb9e1"
+    },
+    {
       "path": "public/models/bodyparts3d/inferior-epigastric-vessels/catalog.json",
       "sha256": "8dd5cb1106d10b06bd731b637183dbaa353d466e45bb65157db4209463009b60"
     },
@@ -3321,7 +3329,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "86bb255f6dfa64e44db6259b6fbe82bd9ea2b5ac276edcfd0254ac7077fa9e22",
-  "sourceRendererSha256": "807caefb2b1a3588762858270a28bf39bf2cb4433bd147784302a31878cdf725",
-  "websiteIntegrationSha256": "315818bab66b0c97549e842934b521559c1836439bb12a5e8277b8dc3ee4ba70"
+  "sha256": "292bee7db5d698662772bdef7ea7d7cce88ad317f9f80d1b229ca7125b9273ba",
+  "sourceRendererSha256": "4489d88efb22b3825072db686f77090926476f3eb435b48997063729b75040a8",
+  "websiteIntegrationSha256": "4942b385e5c529ce1249486b5a033007b93ac917eb985d281d7b2813073e9158"
 }

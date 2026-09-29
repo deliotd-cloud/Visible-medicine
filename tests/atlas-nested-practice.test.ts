@@ -1,3 +1,4 @@
+import {beforeHippocampi} from './atlas-hippocampi-fixture.ts';
 import {nonregionalAtlasSources} from './atlas-nonregional-release-fixture.ts';
 import assert from 'node:assert/strict';
 import test from 'node:test';
@@ -9,9 +10,9 @@ test('regional practice export preserves every model and binds the tested named-
   const base = 'public/atlas-runtime/head-neck/';
   const sha = (b: string | Buffer) => createHash('sha256').update(b).digest('hex');
   const bytes = readFileSync(base + 'manifest.json');
-  assert.equal(sha(bytes), '3f4fc1ea05427fba9af8833149777d78140614dca076e53acbc4dbccf8e0944c');
+  assert.equal(sha(bytes), '9fe5ab420dbe49c45bd8b72e2b6ba83a87cb9840bd27c7aeed2436e9f20f5a3b');
   const manifest = JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit, 'b5447ec5a14f32670ddc591918997b14b62974b7');
+  assert.equal(manifest.sourceCommit, 'bd700a5528dd4b2a62653f530d3f474de1f8b5bb');
   assert.equal(manifest.patientDataIncluded, false);
   assert.equal(manifest.clinicalApproved, false);
   assert.equal(manifest.imagingConnection, false);
@@ -24,7 +25,7 @@ test('regional practice export preserves every model and binds the tested named-
     'app/nested-practice.tsx': 'b5541c479f67dd518556f99fd4ca6b8ceefad1a54dac3b29175798fe8dcdfb44',
     'app/nested-practice.css': '8e0c687cecb73a74e65f6a574ad0858237d9f61680732eafb140c760779f1591',
     'lib/nested-practice.ts': 'e61db487c33d4c8aaeb737e0122b376abeb5f5bb4df49d99370285eb85d65a82',
-    'app/ventricles.tsx': '56f6eba3b7f735be290f436958194b12cc5c0f4266c2c6d4ecbb879d84e4d405',
+    'app/ventricles.tsx': '7d0d7ed434011c50c49da5540725dadf472785e44a1000b96ca768ed028f7a1e',
   })) assert.equal(inputs.find(f => f.path === path)?.sha256, hash);
   const runtime = manifest.files.filter((f:{path:string}) => f.path.endsWith('.js')).map((f:{path:string;sha256:string}) => {
     const data = readFileSync(base + f.path); assert.equal(sha(data), f.sha256); return data.toString();
@@ -33,8 +34,8 @@ test('regional practice export preserves every model and binds the tested named-
   assert(runtime.includes('Enabled by the current layers and system filters; models may still be loading or unavailable.'));
   const prior = JSON.parse(execFileSync('git', ['show', 'b4514b336868b7cedca25f33b61ed428355c4726:lib/atlas-model-inventory.json'], {encoding:'utf8'}));
   const current = JSON.parse(readFileSync('lib/atlas-model-inventory.json', 'utf8'));
-  assert.deepEqual(current.models.filter((m:{sha256:string})=>m.sha256!=='4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12'), prior.models);
-  assert.equal(current.models.length, 136);
-  assert.equal(current.models.flatMap((m:{paths:string[]}) => m.paths).length, 143);
+  assert.deepEqual(beforeHippocampi(current.models).filter((m:{sha256:string})=>m.sha256!=='4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12'), prior.models);
+  assert.equal(current.models.length, 137);
+  assert.equal(current.models.flatMap((m:{paths:string[]}) => m.paths).length, 144);
   assert.deepEqual(current.sources.filter((s:{module:string}) => s.module !== 'head-neck'), nonregionalAtlasSources);
 });

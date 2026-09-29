@@ -18,8 +18,8 @@ test('regional selection return delivers the verified source without changing mo
   ['app/body-explorer.tsx','aa5eef6a1429f28243aaaab185bc29b54bbdd3aa06c4990cefc767126796dc30'],
   ['app/workspace-session.ts','7a2a73775b9eebebc50df257cc520f2f33499ebb7130f496a4b2cdfb46fc379a'],
  ])assert.deepEqual(inputs.filter(i=>i.path===path),[{path,sha256}]);
- assert.equal(inventory.models.length,136);
- assert.equal(inventory.models.flatMap((m:{paths:string[]})=>m.paths).length,143);
+ assert.equal(inventory.models.length,137);
+ assert.equal(inventory.models.flatMap((m:{paths:string[]})=>m.paths).length,144);
  for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
  assert(!(manifest.files as {path:string}[]).some(f=>/ct-handoff|\.local\/|\.(dcm|dicom|nii|nrrd)(\.|$)/i.test(f.path)));
 });
