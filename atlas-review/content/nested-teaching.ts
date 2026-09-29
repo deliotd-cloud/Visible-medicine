@@ -1,4 +1,5 @@
 import type { NestedStudy } from '../lib/nested-anatomy';
+import { ventricularUltrasoundTeaching, ventricularUltrasoundReferences } from './ventricular-ultrasound-teaching.ts';
 import { cerebralLobarImaging, cerebralLobarReferences } from './cerebral-lobar-imaging.ts';
 import { hippocampalConcepts, hippocampalTeachingReferences } from './hippocampal-teaching.ts';
 import { femoralComponentConcepts, femoralComponentReferences } from './femoral-component-teaching.ts';
@@ -61,6 +62,7 @@ export const nestedTeachingReferences: Record<
   string,
   { title: string; url: string }
 > = {
+  ...ventricularUltrasoundReferences,
   ...hippocampalTeachingReferences,
   ...femoralComponentReferences,
   ...eyeImagingReferences,
@@ -644,7 +646,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'ventricular-lateral',
     study: 'ventricles',
-    imaging: brainImagingTeaching.lateral,
+    imaging: {...brainImagingTeaching.lateral, ultrasound: ventricularUltrasoundTeaching.lateral},
     fmaIds: ['FMA78450', 'FMA78449'],
     sections: {
       anatomy: section(
@@ -675,7 +677,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'ventricular-third',
     study: 'ventricles',
-    imaging: brainImagingTeaching.third,
+    imaging: {...brainImagingTeaching.third, ultrasound: ventricularUltrasoundTeaching.third},
     fmaIds: ['FMA78454'],
     sections: {
       anatomy: section(
@@ -707,7 +709,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'ventricular-fourth',
     study: 'ventricles',
-    imaging: brainImagingTeaching.fourth,
+    imaging: {...brainImagingTeaching.fourth, ultrasound: ventricularUltrasoundTeaching.fourth},
     fmaIds: ['FMA78469'],
     sections: {
       anatomy: section(

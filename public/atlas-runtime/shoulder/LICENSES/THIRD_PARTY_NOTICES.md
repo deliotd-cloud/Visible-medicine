@@ -1823,6 +1823,16 @@ scans, tables or datasets are redistributed; evidence links confer no media
 licence. Existing geometry credits remain. No dependency, font, fee or service
 added. Clinical and imaging approval remain pending.
 
+## Ventricular ultrasound orientation, 29 September 2026
+
+Original short neonatal/infant orientation notes link to the ACR–AIUM–SPR–SRU
+neurosonography parameter and Steggerda et al. (2015), PMID25899415. Evidence and
+retrieval limits are recorded in `docs/VENTRICULAR_ULTRASOUND_20260929.md`.
+No guideline PDF, publisher figures, tables, ultrasound images, scans or extended
+passages are redistributed. References are not licences to reuse those assets.
+Existing adult-model credits remain unchanged. No new dependency, font, service
+or fee is added. Drafts do not confer clinical or acquired-image approval.
+
 ## Brain connections references
 
 Six original short questions reference factual relationships in UTHealth McGovern

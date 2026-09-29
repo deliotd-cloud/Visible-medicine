@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+29 September: ventricular ultrasound teaching imported locally from Atlas
+`61f1c97`. Three referenced draft topics reach four selections in learner and
+Clinical Review using existing tabs, with explicit adult-model/neonatal-window
+limitations. Model bytes, source identities, prior teaching and independent
+access preserved. No scans, patient upload, publication or approval. Separate
+fracture work untouched. See `docs/ventricular-ultrasound-delivery-20260929.md`.
+Native MRI remains done.
+
 29 September: anatomical search word forms imported locally from Atlas
 `1c3dca2`. Learner and Clinical Review accept collicular/colliculus and
 brachia/brachium, retaining exact source labels, sides and links; FMA numeric

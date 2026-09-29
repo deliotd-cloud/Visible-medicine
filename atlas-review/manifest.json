@@ -1,5 +1,5 @@
 {
-  "revision": "1c3dca274a958a88d583989b769d4b05296622d8",
+  "revision": "61f1c97114800e161bd302652f93854c5b0a6703",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2658,8 +2658,13 @@
     },
     {
       "path": "content/nested-teaching.ts",
-      "sourceSha256": "4d0d3ee3f333d844c4bdc2dccf1caf3691ab1eeda9c0f93bdeee1a860ad87bcf",
-      "importedSha256": "4d0d3ee3f333d844c4bdc2dccf1caf3691ab1eeda9c0f93bdeee1a860ad87bcf"
+      "sourceSha256": "97b0825d12e19341bcb4e281875578de0fb62d710961b192d360928387189d7a",
+      "importedSha256": "97b0825d12e19341bcb4e281875578de0fb62d710961b192d360928387189d7a"
+    },
+    {
+      "path": "content/ventricular-ultrasound-teaching.ts",
+      "sourceSha256": "65642bef8a2f76b0e6383c6fa731fa83d1ceb5ca1dddf56537a962c6d5dee012",
+      "importedSha256": "65642bef8a2f76b0e6383c6fa731fa83d1ceb5ca1dddf56537a962c6d5dee012"
     },
     {
       "path": "content/cerebral-lobar-imaging.ts",
@@ -2763,8 +2768,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "56a5476092b6e124ad3da45633c5c6f3d2a4b277115083f06d669fb5981d6d58",
-      "importedSha256": "f106efc096f3fe75b628a69c968003cbe28bc0a3c8801125f30cd60aaaa55e46"
+      "sourceSha256": "d0ef681b2a8b1293b47573a0db21da3924597b8197fafc0d39326b2e7e42dd72",
+      "importedSha256": "f7f2042cdcecf7d7d4b8f851c7c21755edd50a11d26ea1a53a46ce982bc41fe5"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3054,7 +3059,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "fb6991b58ab04357c6b9ffc2a98e3df6bf329a9b6be41feec22eacea2e2dc217",
-      "importedSha256": "d00232bab74f3a01baefce3a85320bd9aff714c594c302b0008dcf63976b3ffe"
+      "importedSha256": "7a8e41353ce1659e0288943a144f3b8d279b86eb97a49317ff9e3dd1f033afbc"
     },
     {
       "path": "app/review/review.css",
@@ -4358,8 +4363,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "fbb048821547538845a123d5832fa7a93e031a039df6f21260710aa86b0404d1",
-      "importedSha256": "fbb048821547538845a123d5832fa7a93e031a039df6f21260710aa86b0404d1"
+      "sourceSha256": "2f947e3c498e0e02e198c8b0a4496c243ff624af0e06c42a879e96519d16c2f6",
+      "importedSha256": "2f947e3c498e0e02e198c8b0a4496c243ff624af0e06c42a879e96519d16c2f6"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -4458,5 +4463,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "89c8e7aca864191f6ea2ef1e9d9b9cb6d9a3234813e8df67eb4f34e79e4cb56a"
+  "websiteIntegrationSha256": "dd722b70a974900657cea2298dbb10915965361b890777c384be475d1302d97d"
 }

@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "1c3dca274a958a88d583989b769d4b05296622d8",
-  "sha256": "89c8e7aca864191f6ea2ef1e9d9b9cb6d9a3234813e8df67eb4f34e79e4cb56a",
+  "sourceCommit": "61f1c97114800e161bd302652f93854c5b0a6703",
+  "sha256": "dd722b70a974900657cea2298dbb10915965361b890777c384be475d1302d97d",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -1344,7 +1344,7 @@
     },
     {
       "path": "atlas-review/content/nested-teaching.ts",
-      "sha256": "4d0d3ee3f333d844c4bdc2dccf1caf3691ab1eeda9c0f93bdeee1a860ad87bcf"
+      "sha256": "97b0825d12e19341bcb4e281875578de0fb62d710961b192d360928387189d7a"
     },
     {
       "path": "atlas-review/content/ophthalmic-nerve-studies.ts",
@@ -1761,6 +1761,10 @@
     {
       "path": "atlas-review/content/upper-vessel-imaging.ts",
       "sha256": "71976d885d8d43fe70c5a03177175f6338d3c88b22053a5d0af5449c39e3411b"
+    },
+    {
+      "path": "atlas-review/content/ventricular-ultrasound-teaching.ts",
+      "sha256": "65642bef8a2f76b0e6383c6fa731fa83d1ceb5ca1dddf56537a962c6d5dee012"
     },
     {
       "path": "atlas-review/content/visual-pathway-teaching.ts",
@@ -3368,7 +3372,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "fbb048821547538845a123d5832fa7a93e031a039df6f21260710aa86b0404d1"
+      "sha256": "2f947e3c498e0e02e198c8b0a4496c243ff624af0e06c42a879e96519d16c2f6"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3624,7 +3628,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "b78f1f91b7b6ac16a685f91e5ab509b9b9fb45f4b0520f9712087f63d39b4709"
+      "sha256": "2013c526af64545762b59f130c2dc39dd25145f00c5484468b236f297f114df5"
     }
   ]
 }
