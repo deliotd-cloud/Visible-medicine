@@ -4,9 +4,9 @@ import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {build} from 'esbuild';
 
-test('starter import is review-only and preserves learner modules and model inventory',()=>{
+test('saved starter import is review-only and preserves learner modules and model inventory',()=>{
  const prior=(path:string)=>JSON.parse(execFileSync('git',['show','0292830:'+path],{encoding:'utf8',maxBuffer:32e6}));
- const current=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
+ const current=(path:string)=>JSON.parse(execFileSync('git',['show','a0841f3:'+path],{encoding:'utf8',maxBuffer:32e6}));
  const before=prior('atlas-review/manifest.json'),after=current('atlas-review/manifest.json');
  assert.equal(after.revision,'97f48a1ec2e74d0d88b34a26c5180f0aaf447448');
  assert.deepEqual(after.files.filter((f:any)=>before.files.find((p:any)=>p.path===f.path)?.sourceSha256!==f.sourceSha256).map((f:any)=>f.path).sort(),

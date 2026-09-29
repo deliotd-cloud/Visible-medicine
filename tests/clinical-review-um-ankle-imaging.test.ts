@@ -6,7 +6,7 @@ import { build } from 'esbuild';
 
 test('seven ankle drafts reach both learner modules and exact specimen review', async () => {
   const review = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
-  assert.equal(review.revision, '97f48a1ec2e74d0d88b34a26c5180f0aaf447448');
+  assert.equal(review.revision, 'e1aeae3e97e01fe059b7de505e3d901a4f6b3695');
   const pins = {
     'content/um-calf-foot-clinical.ts': '557ae3859bea0db95f70303474d9afa053a8dec0380a6ffc325c070f281c9fd1',
     'content/um-limb-teaching-bindings.v1.json': 'cd73ab7b7fd70de4a4e83c173617dffac78220bd8a56670da6f52f9cafc4c0b1',
@@ -16,7 +16,7 @@ test('seven ankle drafts reach both learner modules and exact specimen review', 
     const manifest = JSON.parse(readFileSync(base + 'manifest.json', 'utf8'));
     const inputs = JSON.parse(readFileSync(base + 'source-inputs.json', 'utf8'));
     // Independent lower-limb release retains the same exact teaching bytes.
-    assert.equal(manifest.sourceCommit, module === 'head-neck' ? 'e4a2eb560e8e586164a5eca9a2a8dfa658d24a8d' : '80ff7f2ce56ce3cc27d4d9e6962797292585c3df');
+    assert.equal(manifest.sourceCommit, module === 'head-neck' ? 'e1aeae3e97e01fe059b7de505e3d901a4f6b3695' : '80ff7f2ce56ce3cc27d4d9e6962797292585c3df');
     for (const key of ['patientDataIncluded', 'clinicalApproved', 'imagingConnection', 'standaloneReviewConnection']) assert.equal(manifest[key], false);
     for (const [path, expected] of Object.entries(pins)) {
       assert.equal(inputs.find((f: any) => f.path === path)?.sha256, expected);

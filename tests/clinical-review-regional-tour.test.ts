@@ -8,7 +8,7 @@ test('all eighteen regional tours ship complete source-bound review evidence', a
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const base='public/atlas-runtime/head-neck/';
   const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-  assert.equal(learner.sourceCommit,'e4a2eb560e8e586164a5eca9a2a8dfa658d24a8d');
+  assert.equal(learner.sourceCommit,'e1aeae3e97e01fe059b7de505e3d901a4f6b3695');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
   for(const path of ['lib/regional-tours.ts','lib/chest-wall-tour.ts','lib/orbital-tour.ts','lib/intrinsic-larynx-tour.ts','lib/male-duct-tour.ts','lib/deep-brain-tour.ts','lib/subscapular-tour.ts','app/regional-guided-learning.tsx','lib/tour-camera.ts','app/fitted-camera.tsx']) {
     const file=review.files.find((f:any)=>f.path===path); assert.ok(file,path);
@@ -258,7 +258,7 @@ test('all structure-check hosts deliver the corrected success/retry component',(
     const base=`public/atlas-runtime/${module}/`;
     const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
     const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
-    assert.equal(manifest.sourceCommit,'e4a2eb560e8e586164a5eca9a2a8dfa658d24a8d');
+    assert.equal(manifest.sourceCommit,'e1aeae3e97e01fe059b7de505e3d901a4f6b3695');
     assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,review.files.find((f:any)=>f.path===path)?.sourceSha256);
     const js=manifest.files.filter((f:any)=>f.path.endsWith('.js')).map((f:any)=>readFileSync(base+f.path,'utf8')).join('\n');
     for(const text of ['Practise again','Try again','Correct.','Incorrect.']) assert.ok(js.includes(text),module+': '+text);

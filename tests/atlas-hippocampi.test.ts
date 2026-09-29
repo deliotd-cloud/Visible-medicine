@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 import {hippocampalModel,beforeHippocampi} from './atlas-hippocampi-fixture.ts';
 import {ATLAS_DELIVERY_POLICY} from '../lib/atlas-delivery-policy.ts';
 
-const revision='e4a2eb560e8e586164a5eca9a2a8dfa658d24a8d';
+const revision='e1aeae3e97e01fe059b7de505e3d901a4f6b3695';
 const base='6990315c6b053f623738d8664e06de9d7af1dcf3';
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const hash=(bytes:string|Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
@@ -29,7 +29,7 @@ test('hippocampi add exactly one licensed bundle without replacing any previous 
     assert.deepEqual(actual.map((t:any)=>t.structureId),['head-neck','whole-body'].includes(scope.region)?ids:[]);
     assert(actual.every((t:any)=>t.sourceHash===hippocampalModel.sha256&&t.study==='cerebral'));
   }
-  const review=json('atlas-review/manifest.json');assert.equal(review.revision,'97f48a1ec2e74d0d88b34a26c5180f0aaf447448');
+  const review=json('atlas-review/manifest.json');assert.equal(review.revision,'e1aeae3e97e01fe059b7de505e3d901a4f6b3695');
   const inputs=json('public/atlas-runtime/head-neck/source-inputs.json');
   for(const path of ['lib/hippocampi.ts','lib/cerebral.ts','public/models/bodyparts3d/hippocampi/catalog.json']){
     const entry=review.files.find((f:any)=>f.path===path);assert(entry,path);

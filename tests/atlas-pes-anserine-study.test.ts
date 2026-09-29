@@ -10,8 +10,8 @@ test('sided pes anserinus studies reach the shared viewer without geometry or ac
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json'),manifest=JSON.parse(bytes.toString());
-  assert.equal(sha(bytes),'04288e0089e8e802949661a93acafaa5b29efbe825a427322aa6bc2672e561f1');
-  assert.equal(manifest.sourceCommit,'e4a2eb560e8e586164a5eca9a2a8dfa658d24a8d');
+  assert.equal(sha(bytes),'c5317420e5c183940e42f73606445595e826a09d33d31f5db777eaa759d95c58');
+  assert.equal(manifest.sourceCommit,'e1aeae3e97e01fe059b7de505e3d901a4f6b3695');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256]of Object.entries({

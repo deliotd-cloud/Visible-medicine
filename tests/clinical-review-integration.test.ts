@@ -15,10 +15,10 @@ test('current review includes draft answer evidence and admitted teaching withou
   const viewer = JSON.parse(readFileSync('public/atlas-review-viewer/manifest.json', 'utf8'));
   const regional = JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8'));
   // Review and learner exports retain their independently verified source pins.
-  assert.equal(review.revision, '97f48a1ec2e74d0d88b34a26c5180f0aaf447448');
+  assert.equal(review.revision, 'e1aeae3e97e01fe059b7de505e3d901a4f6b3695');
   assert.equal(viewer.sourceCommit, review.revision);
   assert.equal(viewer.websiteIntegrationSha256, review.websiteIntegrationSha256);
-  assert.equal(regional.sourceCommit, 'e4a2eb560e8e586164a5eca9a2a8dfa658d24a8d');
+  assert.equal(regional.sourceCommit, 'e1aeae3e97e01fe059b7de505e3d901a4f6b3695');
   assert.notEqual(review.revision, priorMaterial.atlasSource);
   const paths = new Set(review.files.map((file: {path:string}) => file.path));
   for (const path of ['app/structure-quick-check.tsx', 'content/coronary-arterial-us.ts', 'content/elbow-arterial-ct.ts', 'content/achilles-ct.ts']) assert.ok(paths.has(path), path);

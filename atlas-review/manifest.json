@@ -1,5 +1,5 @@
 {
-  "revision": "97f48a1ec2e74d0d88b34a26c5180f0aaf447448",
+  "revision": "e1aeae3e97e01fe059b7de505e3d901a4f6b3695",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2753,8 +2753,8 @@
     },
     {
       "path": "content/cricothyroid-teaching.ts",
-      "sourceSha256": "43e6e81da3b782aaefb0f806e57517edee327e1a24b9eaa748896aef93c033db",
-      "importedSha256": "43e6e81da3b782aaefb0f806e57517edee327e1a24b9eaa748896aef93c033db"
+      "sourceSha256": "ad6404871498f39639a478eef5a17c6abe8395e7351d2a6c8595606d2533b68d",
+      "importedSha256": "ad6404871498f39639a478eef5a17c6abe8395e7351d2a6c8595606d2533b68d"
     },
     {
       "path": "content/cardiac-teaching.ts",
@@ -2803,8 +2803,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "f75eb36f0ad0c5f1b3aacee0248a78d31c9ab3241ce7c7a966e377a520381f5d",
-      "importedSha256": "09df3b3b4d9db89a28b4053dc5f0e3deb4f401b79af148af27f9e0580818adf1"
+      "sourceSha256": "ed04332f05ed9fcf81b00f34649d18686ab79054151a49035e4c10f720063c2a",
+      "importedSha256": "59e0e2c85cc7dcd9f83dfd5946985125ff09c43261ff2b15903b705dfcb0d798"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3099,7 +3099,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "1fcf6761a76bd594af08a21f79f6408d4963b35a075399f12531de08a2df2e8c",
-      "importedSha256": "7d84d6f53b20cafbccfd951bd0cee6c1e555de58498f4271b2f1e18dcea1b9bd"
+      "importedSha256": "91a1599d9e6e0a895b2cb76697ab494f56734179102ed39fb36dce07bf80bd95"
     },
     {
       "path": "app/review/review.css",
@@ -4443,8 +4443,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "88c0918ba3a7ff6db30d9a16b110320a9a4487af85ea923747a06bbcbced872e",
-      "importedSha256": "88c0918ba3a7ff6db30d9a16b110320a9a4487af85ea923747a06bbcbced872e"
+      "sourceSha256": "fc1886ec10e827f39ba63bce7ce9697a2e28b4db07a817aad4487b976627e0ec",
+      "importedSha256": "fc1886ec10e827f39ba63bce7ce9697a2e28b4db07a817aad4487b976627e0ec"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -4543,5 +4543,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "699b0426d810a9c6ad15f672e37d697911d0aeedb74728ac465fc7f138db6874"
+  "websiteIntegrationSha256": "b392f434ff4a45af2772c9eff55056f2b7a385eed145cc1d8b94c971265329be"
 }

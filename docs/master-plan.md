@@ -1,5 +1,14 @@
 # Visible Medicine — shared delivery plan
 
+29 September: cricothyroid CT/MRI teaching integrated locally.
+Four existing named muscle parts now show two cited draft lessons in learner
+and Clinical Review views. All137 models and source bindings retained; no new
+assets, dependencies, patient data, approval or publication.303 website tests,
+types/build and28 actual desktop/phone/enlarged-text and review checks pass.
+Separate fracture work preserved. GitHub/C recovery recorded separately; D
+full/pending, untouched. See `docs/cricothyroid-imaging-delivery-20260929.md`.
+Native MRI remains done; continue the broader Atlas roadmap.
+
 29 September: compact starter Clinical Review integrated locally.
 The existing Review area filter now provides the eleven-selection calibration
 sample, with current source-bound links and private status reads. Search retains
