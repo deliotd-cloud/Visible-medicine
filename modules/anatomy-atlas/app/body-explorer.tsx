@@ -2897,6 +2897,7 @@ export default function BodyExplorer({
       {ventricleParent && !exam && ventricleParent.id === selectedId && (
         <Ventricles
           assetBase={assetBase}
+          educationCatalog={presentation === 'panel' ? catalog : undefined}
           parent={ventricleParent}
           initialStudy={
             nestedSelection?.study === 'eye'

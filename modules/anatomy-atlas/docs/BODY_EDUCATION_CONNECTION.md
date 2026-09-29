@@ -17,8 +17,8 @@ anchors are not sent to the imaging viewer. Exact concepts are not registration.
 Changes to region, side, catalogue, Practice, or an active separate/nested
 dissection pause linking and cancel pending reveals. Returning does not silently
 resume: host and learner opt-in remain necessary. Root selection cannot act on
-an unrelated specimen or hidden nested study. Nested imaging connections are
-not implemented by this root port.
+an unrelated specimen or hidden nested study. Nested imaging connections use a
+separate mounted-view port; see [Nested Education connection](NESTED_EDUCATION_CONNECTION.md).
 
 Page-hide, unmount and catalogue replacement dispose the old interface. A fresh
 page-show installation starts paused; cached interfaces stay removed. The

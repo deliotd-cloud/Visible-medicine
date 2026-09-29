@@ -1,4 +1,4 @@
-import {imagingBridge} from './imaging-sync';
+import {imagingBridge,type createImagingBridge} from './imaging-sync';
 import {connectDidanixEducation,type DidanixEducationPort,type DidanixLinkStatus} from './didanix-atlas-adapter';
 import {createLearningRegistry,type LearningPolicy,type AnatomyRepresentation} from './learning-resources';
 
@@ -9,6 +9,22 @@ export function installRootEducationApi(target:Window,scope:'body'|'shoulder-pil
   canAccessAnatomy:(anatomy:AnatomyRepresentation)=>boolean;
 }) {
   const key=scope==='body'?'visibleMedicineBodyEducation':'visibleMedicineShoulderEducation';
+  return installEducationApi(target,key,scope,imagingBridge,records,gate);
+}
+
+/** An isolated mounted dissection owns this bridge; it never takes over the root. */
+export function installNestedEducationApi(target:Window,bridge:ReturnType<typeof createImagingBridge>,records:AnatomyRepresentation[],gate:{
+  canNavigate:()=>boolean;
+  canAccessAnatomy:(anatomy:AnatomyRepresentation)=>boolean;
+}) {
+  if(records.some(a=>a.scope!=='nested'))throw Error('Nested Education requires nested anatomy records');
+  return installEducationApi(target,'visibleMedicineNestedEducation','nested',bridge,records,gate);
+}
+
+function installEducationApi(target:Window,key:string,scope:'body'|'shoulder-pilot'|'nested',bridge:ReturnType<typeof createImagingBridge>,records:AnatomyRepresentation[],gate?:{
+  canNavigate:()=>boolean;
+  canAccessAnatomy:(anatomy:AnatomyRepresentation)=>boolean;
+}) {
   if(Object.hasOwn(target,key))throw Error('Education API already installed');
   const anatomy=structuredClone(records);
   let active:ReturnType<typeof connectDidanixEducation>|null=null;
@@ -25,7 +41,7 @@ export function installRootEducationApi(target:Window,scope:'body'|'shoulder-pil
         };
         const registry=createLearningRegistry(options.document,anatomy,policy);
         if(removed)throw Error('This Didanix Education interface has been removed');
-        const connection=connectDidanixEducation({bridge:imagingBridge,registry,viewer:options.viewer,scope,onStatus:options.onStatus});
+        const connection=connectDidanixEducation({bridge,registry,viewer:options.viewer,scope,onStatus:options.onStatus});
         if(removed){connection.dispose();throw Error('This Didanix Education interface has been removed');}
         active=connection;
         return {...connection,dispose(){try{connection.dispose();}finally{if(active===connection)active=null;}}};

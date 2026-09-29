@@ -59,13 +59,14 @@ const reject = (fn, message) => {
   assert.throws(fn, message);
 };
 same(legacy.length, 1113); // Current root and shoulder bindings; no coronary root addition.
-same(anatomy.length, 1219);
+same(anatomy.length, 1221);
 same(
   anatomy.filter((t) => t.scope !== 'nested'),
   legacy,
   'Current body and shoulder bindings unchanged by the nested extension',
 );
-same(nested.length, 106);
+same(nested.length, 108); // Includes the two existing source-bound hippocampi.
+same(nested.filter(t => t.structureId.endsWith('-hippocampus')).length, 2);
 same(
   nested.map((t) => t.structureId).sort(),
   targets.map((t) => t.structureId).sort(),

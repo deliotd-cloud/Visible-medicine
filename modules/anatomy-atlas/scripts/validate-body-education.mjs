@@ -40,7 +40,7 @@ for(const [kind,anchor] of Object.entries(anchors)){
 // The component must wire the verified root catalogue and pause separate views.
 const component=await readFile('app/body-explorer.tsx','utf8');
 assert(component.includes('entries: linkEntries, allowedIds: educationAllowedIds'));
-assert(component.includes('disabled: exam || inlineStudy, contextKey: `${initialRegion}/${side}`'));
+assert(component.includes('disabled: exam || inlineStudy || guidedLearning, contextKey: `${initialRegion}/${side}`'));
 assert(component.includes("enabled: presentation === 'panel'"));
 const report={checks,modalities:Object.keys(anchors),trustedAnatomyRecords:anatomy.length,syntheticOnly:true,clinicalApproval:false,browserAcceptance:false};
 await writeFile('docs/body-education-validation.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

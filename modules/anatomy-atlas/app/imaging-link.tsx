@@ -10,6 +10,7 @@ import {
   createAtlasReceiver,
   imagingBridge,
   type AdapterInfo,
+  type createImagingBridge,
 } from '@/lib/imaging-sync';
 import {
   type AnatomyLinkEntry,
@@ -22,11 +23,13 @@ export function useImagingLink({
   allowedIds,
   disabled,
   onSelect,
+  bridge = imagingBridge,
 }: {
   entries: AnatomyLinkEntry[];
   allowedIds: string[];
   disabled: boolean;
   onSelect: (id: string) => void;
+  bridge?: ReturnType<typeof createImagingBridge>;
 }) {
   const [enabled, setEnabled] = useState(false);
   const [adapter, setAdapter] = useState<AdapterInfo | null>(null);
@@ -38,15 +41,15 @@ export function useImagingLink({
   });
   useEffect(() => {
     const update = () => {
-      setAdapter(imagingBridge.getAdapter());
+      setAdapter(bridge.getAdapter());
       setEnabled(false);
       current.current.enabled = false;
       setChoice(null);
       setNotice('');
     };
     update();
-    const unsubscribe = imagingBridge.subscribe(update);
-    const detach = imagingBridge.attachAtlas(
+    const unsubscribe = bridge.subscribe(update);
+    const detach = bridge.attachAtlas(
       createAtlasReceiver(
         () => current.current,
         (resolution) => {
@@ -74,17 +77,17 @@ export function useImagingLink({
       unsubscribe();
       detach();
     };
-  }, []);
+  }, [bridge]);
   const publish = useCallback((id: string) => {
     if (!current.current.enabled || current.current.disabled) return;
     if (!current.current.allowedIds.includes(id)) return;
     setChoice(null);
     const entry = current.current.entries.find((entry) => entry.id === id);
-    if (entry && imagingBridge.publish(entry))
+    if (entry && bridge.publish(entry))
       setNotice(
         `Sent ${entry.name} to the linked viewer. Selection only; no patient alignment.`,
       );
-  }, []);
+  }, [bridge]);
   function choose(id: string) {
     if (
       !enabled ||
@@ -169,7 +172,7 @@ export function ImagingLink({
           assembled source-model millimetres, not patient coordinates or
           measured landmarks. No scans are included.
         </p>
-        {link.disabled && <p>Linked selection is paused during practice.</p>}
+        {link.disabled && <p>Linked selection is paused in this view. Return to a loaded, unfiltered exploration view to reconnect.</p>}
         <output aria-live="polite">{!link.disabled && link.notice}</output>
         {active && candidates.length > 0 && (
           <div className="vm-imaging-choices">
