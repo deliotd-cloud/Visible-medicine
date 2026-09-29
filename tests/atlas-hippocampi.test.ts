@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 import {hippocampalModel,beforeHippocampi} from './atlas-hippocampi-fixture.ts';
 import {ATLAS_DELIVERY_POLICY} from '../lib/atlas-delivery-policy.ts';
 
-const revision='bd700a5528dd4b2a62653f530d3f474de1f8b5bb';
+const revision='ed3e0e2a202b359023be127567c2a268d901a396';
 const base='6990315c6b053f623738d8664e06de9d7af1dcf3';
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const hash=(bytes:string|Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
@@ -43,7 +43,7 @@ test('hippocampi add exactly one licensed bundle without replacing any previous 
   assert.equal('approvedRevision' in ATLAS_DELIVERY_POLICY,false);
 });
 
-test('both hippocampal review worksheets retain source identity, pending teaching and exact return links',async()=>{
+test('both hippocampal review worksheets retain source identity, draft teaching and exact return links',async()=>{
   const result=await build({stdin:{contents:`
     export {nestedReviewRows,nestedReviewMaterial,nestedReviewSelection} from './atlas-review/lib/nested-review-material';
     export {clinicalReviewEntries} from './atlas-review/lib/clinical-review-index';
@@ -57,12 +57,34 @@ test('both hippocampal review worksheets retain source identity, pending teachin
     const material=await api.nestedReviewMaterial(group.key,id);assert(material);
     assert.equal(material.source.childBundleHash,hippocampalModel.sha256);
     assert.equal(material.source.structure.id,id);
-    assert(material.teaching.topics.every((t:any)=>t.readiness==='pending'));
-    assert.equal(material.teaching.concept,null);assert.equal(material.context.revisions.imaging,null);
+    assert(material.teaching.topics.every((t:any)=>t.readiness===(['xray','ultrasound'].includes(t.tab)?'pending':'draft')));
+    assert.equal(material.teaching.concept.id,'cerebral-hippocampus');assert.equal(material.context.revisions.imaging,null);
+    assert.equal(material.context.blockers.teaching.length,0);
+    assert(material.context.blockers.imaging.length>0);
+    assert.match(material.teaching.concept.quiz.answer,/temporal \(inferior\) horn/);
+    assert.equal(material.teaching.concept.quiz.basis,'primary-reference');
+    assert.equal(material.context.sourceHash,id.includes(':left:')?'9e4b583cb33b281e139daba3da0b093209f9584cf8366cf7075ea95d3973e22e':'a7715965a4f5307ca2472dbf1274c433c3c631647773d6d22534ad88b920be39');
     for(const track of ['geometry','teaching','imaging'])assert(api.nestedApprovalProblems(api.blankNestedReview(material.context,track),material.context,track).length);
     assert.equal(await api.nestedReviewSelection(group.key,id,'0'.repeat(64)),null);
     const entry=api.clinicalReviewEntries.find((e:any)=>e.scope==='nested'&&e.id===id);assert(entry);
     const query=Object.fromEntries(new URL(api.reviewModelHref(material.atlasLink),'https://review.test').searchParams);
     assert.deepEqual(await api.clinicalReviewReturn(query),{href:entry.href,name:entry.name});
+  }
+});
+
+test('hippocampal teaching import preserves all geometry and prior teaching bindings',()=>{
+  const before='27e242f56007b49fed33ad2aee2915db47b9aa9e';
+  const fromGit=(path:string)=>JSON.parse(execFileSync('git',['show',before+':'+path],{encoding:'utf8'}));
+  assert.deepEqual(json('lib/atlas-model-inventory.json').models,fromGit('lib/atlas-model-inventory.json').models);
+  assert.deepEqual(json('atlas-review/content/nested-review-bindings.json'),fromGit('atlas-review/content/nested-review-bindings.json'));
+  const pins=json('atlas-review/content/nested-teaching-bindings.v1.json');
+  assert.equal(pins.bindings.length,75);
+  assert.deepEqual({...pins,bindings:pins.bindings.filter((b:any)=>b.conceptId!=='cerebral-hippocampus')},fromGit('atlas-review/content/nested-teaching-bindings.v1.json'));
+  const review=json('atlas-review/manifest.json');
+  const inputs=json('public/atlas-runtime/head-neck/source-inputs.json');
+  for(const path of ['content/hippocampal-teaching.ts','content/nested-teaching-bindings.v1.json','content/nested-teaching.ts']){
+    const entry=review.files.find((f:any)=>f.path===path);assert(entry,path);
+    assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,entry.sourceSha256);
+    assert.equal(hash(readFileSync('atlas-review/'+path)),entry.importedSha256);
   }
 });

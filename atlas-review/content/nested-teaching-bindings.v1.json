@@ -7152,6 +7152,136 @@
       }
     },
     {
+      "conceptId": "cerebral-hippocampus",
+      "study": "cerebral",
+      "sourceHash": "11cf97da7aa459f1181c79278b41c9c4369f8954eb5d4a00d1bc22b5cf28964e",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-hippocampus",
+        "fmaId": "FMA72714",
+        "name": "Left hippocampus",
+        "sourceName": "left hippocampus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "group": "hippocampus",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "hippocampi",
+        "nodeName": "FMA72714",
+        "bounds": {
+          "min": [
+            0.1663690060377121,
+            7.292500019073486,
+            0.09446098655462265
+          ],
+          "max": [
+            0.3660129904747009,
+            7.512399673461914,
+            0.523389995098114
+          ]
+        },
+        "center": [
+          0.2661909982562065,
+          7.4024498462677,
+          0.30892549082636833
+        ],
+        "anchor": [
+          0.25900498032569885,
+          7.405200004577637,
+          0.2891409993171692
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1759",
+            "sha256": "f64b3cea9f760a352cb8981f6cb577700a66392d8a8395ffb45dfebdccee7344"
+          }
+        ],
+        "studyParentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "sourceRelationship": "parent-component",
+        "coverageNote": "Original coarse hippocampal surface from the brain aggregate; not separate CA fields, dentate gyrus, subiculum or a patient segmentation. Source shape and position retained; radiologist review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "cerebral-hippocampus",
+      "study": "cerebral",
+      "sourceHash": "11cf97da7aa459f1181c79278b41c9c4369f8954eb5d4a00d1bc22b5cf28964e",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-hippocampus",
+        "fmaId": "FMA72713",
+        "name": "Right hippocampus",
+        "sourceName": "right hippocampus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "group": "hippocampus",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "hippocampi",
+        "nodeName": "FMA72713",
+        "bounds": {
+          "min": [
+            -0.3790610134601593,
+            7.292700290679932,
+            0.0952330008149147
+          ],
+          "max": [
+            -0.17908799648284912,
+            7.512399673461914,
+            0.5236799716949463
+          ]
+        },
+        "center": [
+          -0.2790745049715042,
+          7.402549982070923,
+          0.3094564862549305
+        ],
+        "anchor": [
+          -0.2813819944858551,
+          7.404399394989014,
+          0.2933200001716614
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1807",
+            "sha256": "6ae0c7024c63059599eedabc36fe4650e5979d99ca7d8f9b8bd2389c89d6c5a4"
+          }
+        ],
+        "studyParentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "sourceRelationship": "parent-component",
+        "coverageNote": "Original coarse hippocampal surface from the brain aggregate; not separate CA fields, dentate gyrus, subiculum or a patient segmentation. Source shape and position retained; radiologist review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
       "conceptId": "visual-optic-chiasm",
       "study": "visual-pathway",
       "sourceHash": "c9698e52e4678c06a5ed5df8212e3ecb1ce89d9a25d4e1859f0ec5be7d4864bc",

@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+29 September: source-bound hippocampal teaching imported locally from Atlas
+`ed3e0e2`. Both hippocampi now provide draft Anatomy/Function/Clinical/Pathology,
+CT/MRI and a self-check in learner and protected Clinical Review panels. All
+models and previous teaching bindings preserved; X-ray/US and image registration
+remain pending. Tests, types/build and browser checks recorded in the delivery
+checkpoint. No publication, approval, patient upload or fracture/PACS changes.
+See `docs/hippocampal-teaching-delivery-20260929.md`. Native MRI remains done.
+
 29 September: selectable left/right hippocampi imported locally from Atlas
 `bd700a5`. Head-neck/whole-body search and cerebral dissection share exact source
 identities with protected Clinical Review. One licensed bundle added; all prior

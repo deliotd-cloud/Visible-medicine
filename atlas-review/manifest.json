@@ -1,5 +1,5 @@
 {
-  "revision": "bd700a5528dd4b2a62653f530d3f474de1f8b5bb",
+  "revision": "ed3e0e2a202b359023be127567c2a268d901a396",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2648,8 +2648,8 @@
     },
     {
       "path": "content/nested-teaching-bindings.v1.json",
-      "sourceSha256": "eee2e2c777674822b19d6f2d4dc7c3481b45e123915bfae565ab02bdba6a86fa",
-      "importedSha256": "eee2e2c777674822b19d6f2d4dc7c3481b45e123915bfae565ab02bdba6a86fa"
+      "sourceSha256": "333fe4f02e3a776c119bd8d6af75787da27ebdd0d777fa5e028fe60cfd42a81e",
+      "importedSha256": "333fe4f02e3a776c119bd8d6af75787da27ebdd0d777fa5e028fe60cfd42a81e"
     },
     {
       "path": "content/femoral-component-teaching-bindings.v1.json",
@@ -2658,8 +2658,13 @@
     },
     {
       "path": "content/nested-teaching.ts",
-      "sourceSha256": "7bfb61c51a22046b50c5c411ba09223a5d0536b7adfef07990dd54b6caabbbd8",
-      "importedSha256": "7bfb61c51a22046b50c5c411ba09223a5d0536b7adfef07990dd54b6caabbbd8"
+      "sourceSha256": "bb5811f2c542ec677ef1e040465fd85faf534cc571582b35b12c795faa84f183",
+      "importedSha256": "bb5811f2c542ec677ef1e040465fd85faf534cc571582b35b12c795faa84f183"
+    },
+    {
+      "path": "content/hippocampal-teaching.ts",
+      "sourceSha256": "6ee598d0771a70ca570ce017222eb8a4894feb4c8b59343ebc70f4ced435af87",
+      "importedSha256": "6ee598d0771a70ca570ce017222eb8a4894feb4c8b59343ebc70f4ced435af87"
     },
     {
       "path": "content/femoral-component-teaching.ts",
@@ -2753,8 +2758,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "ac4959c6efe4207988bbed34d9dddce00c0a267a7eaf2e3f8fa75e38405c74de",
-      "importedSha256": "5c91d7340be2cd681e5d7718c079bc991282df233bc84b5327ef14935d234a06"
+      "sourceSha256": "feda2fbcb229c4c41185f5be9bda40fd543a4f9401e35900e39ed0a130cee204",
+      "importedSha256": "4ad8058b0e77a699d2fa9ff7876edd046c0fd4e48514abb1c4ce7b5fdfc35076"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3044,7 +3049,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "52c6ebe8633eb8bdc745feb0e63054da2cdb96fb7772d28103e38673fdb2c1cd",
-      "importedSha256": "2e57c07141567e5e22243089336bb1df542ccbae2b6d7a9580f8e0dc2f14f9c5"
+      "importedSha256": "e37f02e467f9e5620b135a73a8e70c200b4341256900785ca6341ccdee5dee01"
     },
     {
       "path": "app/review/review.css",
@@ -4348,8 +4353,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "80b62790d30ec18d3963756d998f0c48141dbfabff83031b434d2b735c0254a0",
-      "importedSha256": "80b62790d30ec18d3963756d998f0c48141dbfabff83031b434d2b735c0254a0"
+      "sourceSha256": "e9db3b62fae23a19a2099f2dca9634e383eb85d9503924876fa40b1f6468f806",
+      "importedSha256": "e9db3b62fae23a19a2099f2dca9634e383eb85d9503924876fa40b1f6468f806"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -4448,5 +4453,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "4942b385e5c529ce1249486b5a033007b93ac917eb985d281d7b2813073e9158"
+  "websiteIntegrationSha256": "249eed182b88edf5e74041a7b9a5e5efab7fb67db599d0e35a159fe0aaa4d49f"
 }
