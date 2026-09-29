@@ -7,9 +7,9 @@ test('regional and whole-body delivery contains tested restoration and source-bo
   const base='public/atlas-runtime/head-neck/';
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
-  assert.equal(manifest.sourceCommit,'c32312102a1793d579ec22297b0d3df81e4cb122');
+  assert.equal(manifest.sourceCommit,'ed5215fcd3a8c4c113f8072b552f0a3cc1b5aa82');
   for(const [path,hash] of Object.entries({
-    'app/body-explorer.tsx':'bbae6dd690fa8d65ca53f1150518b56909061609b32038cf9fd102913cc80273',
+    'app/body-explorer.tsx':'6e93637ab53c186a8513a0314fd5d8fdfacbf6665e1443d3b6a31f6b411b9ba9',
     'content/achilles-ct.ts':'90957fbb728c1b72aa29b5db1f0aca01269035d49022d93d3fe5bf413a05cd21',
     'content/foot-vascular-quiz.ts':'3dc9fd1aa39ea472ea2d01b3e682a02524fdd902da2e44a71b3132714759bde9',
     'lib/foot-vascular-quiz.ts':'df617fe8a552a1d0b808c212497c77c879a18192a4094e269a4e0d94fc3eb791',

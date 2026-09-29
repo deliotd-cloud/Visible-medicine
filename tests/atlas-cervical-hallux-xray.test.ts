@@ -2,14 +2,15 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import test from 'node:test';
+import {emittedTeaching} from './atlas-emitted-teaching.ts';
 
 test('cervical and hallux orientation ships exact source, draft wording and no imaging connection',()=>{
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'7c22f19682f8084545f6a11b9c0af328862756f5780966661f2bce8c73efde86');
+  assert.equal(sha(bytes),'c8bd68407de72079e793ea059b81703a341bc085a25a50909fe23fc736e5fc18');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'c32312102a1793d579ec22297b0d3df81e4cb122');
+  assert.equal(manifest.sourceCommit,'ed5215fcd3a8c4c113f8072b552f0a3cc1b5aa82');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of [
     ['app/body-content.ts','a974be279f6dc96660d838fa0323f5ccbf48104d536fba688e141de3159dac71'],
@@ -23,7 +24,8 @@ test('cervical and hallux orientation ships exact source, draft wording and no i
     const chunk=readFileSync(base+matches[0].path);assert.equal(sha(chunk),matches[0].sha256);
     for(const marker of markers)assert(chunk.toString().includes(marker),marker);
   };
-  contains(/\/slider-[^/]+\.js$/,['Trace the hallux proximal phalanx','Follow the hallux distal phalanx','This source has no middle hallux phalanx']);
+  const teaching=emittedTeaching(base,files);
+  for(const marker of ['Trace the hallux proximal phalanx','Follow the hallux distal phalanx','This source has no middle hallux phalanx'])assert(teaching.includes(marker),marker);
   contains(/\/back-layers-study-[^/]+\.js$/,['C1 has no vertebral body','dens as part of C2','spinolaminar contour across C3','C7 in relation to T1','skull base above the C1 ring']);
   contains(/\/um-knee-study-[^/]+\.js$/,['specialist review pending','No patient images, scan alignment or measured pathology']);
   assert(!inputs.some(f=>/\.before\.json|\.transition\.json|\.local\//.test(f.path)));

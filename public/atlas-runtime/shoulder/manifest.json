@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "sourceCommit": "c32312102a1793d579ec22297b0d3df81e4cb122",
+  "sourceCommit": "ed5215fcd3a8c4c113f8072b552f0a3cc1b5aa82",
   "region": "shoulder-right",
   "structures": 9,
   "patientDataIncluded": false,
@@ -10,7 +10,7 @@
     {
       "path": "index.html",
       "bytes": 504,
-      "sha256": "8d92dceb4ecefe1b736b3db93aacb206115640eafcad3160e1e8df7974985b6a"
+      "sha256": "ed59245a8ad0baeb9df93a8415b6f3f92c279c6886075d1c929b8c72202a89a3"
     },
     {
       "path": "BUNDLED_NOTICES.txt",
@@ -24,13 +24,13 @@
     },
     {
       "path": "source-inputs.json",
-      "bytes": 80848,
-      "sha256": "e5823ad9330cae468df32a5754e1511de58c61893c94d7a380dd2d120f0d141b"
+      "bytes": 81113,
+      "sha256": "febf95d5aae2f37bb2b9707e267c6107b5b181ed17ad3cf6528532c8a8347b09"
     },
     {
-      "path": "assets/anatomy-scene-Bgkkz9Wk.js",
-      "bytes": 1068380,
-      "sha256": "ec8aad4ea1fba1532c1cb158a47be1cb838ca5fe386980d2b2a18c6f2a3b51cf"
+      "path": "assets/anatomy-scene-DLzH-ic7.js",
+      "bytes": 1068375,
+      "sha256": "8bb0b53f5844efbc2bd1285fa6f4fed63853c1750a4719f3a308ddcb42242ac0"
     },
     {
       "path": "assets/anatomy-scene-DWpmDIUC.css",
@@ -38,14 +38,19 @@
       "sha256": "dd7c542a365357d2921742ad887ebff8660a31d404fca8b512e450865cc2896d"
     },
     {
+      "path": "assets/body-content-vxGu5hUh.js",
+      "bytes": 4065594,
+      "sha256": "b2ca3c9880b9d28be5993ffd9af22e5cac9841f1ed4ce299093d2707a8f6339a"
+    },
+    {
       "path": "assets/index-B7e9x0t8.css",
       "bytes": 298812,
       "sha256": "ee484814c7e863fca896fae08b4bcdfbfc30fed076dbd3a996af2f58c335b853"
     },
     {
-      "path": "assets/index-BP1E1XV-.js",
-      "bytes": 4177279,
-      "sha256": "1d4a4ff2b7b679c6f1ae5bee3f09b4c86e9e4523bd8fcf627871f6ba612b97ab"
+      "path": "assets/index-DD5AZfz_.js",
+      "bytes": 1013705,
+      "sha256": "aae0cfc6c7f6aecd1849e0cbf0ccaced8a20e78e086fa623cbc920f12b002cd0"
     },
     {
       "path": "models/bodyparts3d/shoulder-right.glb",

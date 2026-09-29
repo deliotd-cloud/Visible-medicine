@@ -7,14 +7,14 @@ test('compact source disclosure ships the tested implementation without rewritin
   const base='public/atlas-runtime/head-neck/';
   const sha=(data:Buffer)=>createHash('sha256').update(data).digest('hex');
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'7c22f19682f8084545f6a11b9c0af328862756f5780966661f2bce8c73efde86');
+  assert.equal(sha(manifestBytes),'c8bd68407de72079e793ea059b81703a341bc085a25a50909fe23fc736e5fc18');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'c32312102a1793d579ec22297b0d3df81e4cb122');
+  assert.equal(manifest.sourceCommit,'ed5215fcd3a8c4c113f8072b552f0a3cc1b5aa82');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256]of [
     ['app/source-display-notes.tsx','57b83b84c0c2cc4fe005b57d798e61bc4fc74bbb5e89a11bd014fbdf2f8ba183'],
     ['lib/source-display-notes.ts','b8c5fee2d8b91950d1951ea733e519b8fe7dec3e92e0fad22dd7a36df54871a2'],
-    ['app/body-explorer.tsx','bbae6dd690fa8d65ca53f1150518b56909061609b32038cf9fd102913cc80273'],
+    ['app/body-explorer.tsx','6e93637ab53c186a8513a0314fd5d8fdfacbf6665e1443d3b6a31f6b411b9ba9'],
   ])assert.deepEqual(inputs.filter(input=>input.path===path),[{path,sha256}]);
   const runtime=(manifest.files as {path:string;sha256:string}[]).filter(f=>f.path.endsWith('.js')).map(f=>{
     const data=readFileSync(base+f.path);assert.equal(sha(data),f.sha256);return data.toString();

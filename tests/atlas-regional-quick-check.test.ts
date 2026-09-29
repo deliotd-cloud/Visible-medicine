@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 test('learner and review CSS keep the return control after, not over, answers',()=>{
   for (const root of ['public/atlas-runtime/head-neck/','public/atlas-review-viewer/']) {
     const manifest=JSON.parse(readFileSync(root+'manifest.json','utf8'));
-    assert.equal(manifest.sourceCommit,'c32312102a1793d579ec22297b0d3df81e4cb122');
+    assert.equal(manifest.sourceCommit,'ed5215fcd3a8c4c113f8072b552f0a3cc1b5aa82');
     const css=manifest.files.filter((f:{path:string})=>f.path.endsWith('.css')).map((f:{path:string;sha256:string})=>{
       const bytes=readFileSync(root+f.path);
       assert.equal(createHash('sha256').update(bytes).digest('hex'),f.sha256);
@@ -28,10 +28,10 @@ test('regional learner and review viewers ship the tested selectable-question so
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
-  assert.equal(manifest.sourceCommit,'c32312102a1793d579ec22297b0d3df81e4cb122');
-  assert.equal(review.revision,'c32312102a1793d579ec22297b0d3df81e4cb122');
+  assert.equal(manifest.sourceCommit,'ed5215fcd3a8c4c113f8072b552f0a3cc1b5aa82');
+  assert.equal(review.revision,'ed5215fcd3a8c4c113f8072b552f0a3cc1b5aa82');
   for(const [path,sha256] of Object.entries({
-    'app/atlas-workspace.tsx':'3492d74682daa945418e97a7e8130cae62907e4c7f67285c99196b329f79b104',
+    'app/atlas-workspace.tsx':'ee177772777f18e2db5ed8ab5c30448ace5e07fa1adab4e7f6515c6907605110',
     'app/structure-quick-check.tsx':'7944394d093532c548b062e68be601d0fe6d4ebe7b4c5267275ade0436548632',
     'app/structure-quick-check.css':'fb0ae0d036f91d13bd0d6a82c335159c1f3620c8d0301e63724f369c5e836942',
   })) {

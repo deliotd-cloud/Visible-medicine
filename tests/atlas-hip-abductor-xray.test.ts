@@ -2,14 +2,15 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import test from 'node:test';
+import {emittedTeaching} from './atlas-emitted-teaching.ts';
 
 test('hip abductor X-ray drafts ship their exact source-bound implementation without history or scan data',()=>{
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'7c22f19682f8084545f6a11b9c0af328862756f5780966661f2bce8c73efde86');
+  assert.equal(sha(bytes),'c8bd68407de72079e793ea059b81703a341bc085a25a50909fe23fc736e5fc18');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'c32312102a1793d579ec22297b0d3df81e4cb122');
+  assert.equal(manifest.sourceCommit,'ed5215fcd3a8c4c113f8072b552f0a3cc1b5aa82');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of [
     ['app/body-content.ts','a974be279f6dc96660d838fa0323f5ccbf48104d536fba688e141de3159dac71'],
@@ -22,9 +23,7 @@ test('hip abductor X-ray drafts ship their exact source-bound implementation wit
   ]);
   assert(!inputs.some(f=>/\.before\.json|\.transition\.json|\.local\//.test(f.path)));
   assert(!files.some(f=>/ct-handoff|lacrimal-drainage-imaging-history|\.local\//.test(f.path)));
-  const chunks=files.filter(f=>/\/slider-[^/]+\.js$/.test(f.path));
-  assert.equal(chunks.length,1);
-  const chunk=readFileSync(base+chunks[0].path);assert.equal(sha(chunk),chunks[0].sha256);
+  const chunk=emittedTeaching(base,files);
   for(const marker of ['Use the ilium and greater trochanter','Relate the selected gluteus minimus','does not establish an intact abductor tendon','Anatomy/radiology review pending'])
     assert(chunk.toString().includes(marker),marker);
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);

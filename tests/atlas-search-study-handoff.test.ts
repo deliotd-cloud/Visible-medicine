@@ -10,11 +10,11 @@ test('shared viewer exports the verified unobstructed Search handoff without ana
   const base='public/atlas-runtime/head-neck/';
   const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
   const bytes=readFileSync(base+'manifest.json'),manifest=JSON.parse(bytes.toString());
-  assert.equal(sha(bytes),'7c22f19682f8084545f6a11b9c0af328862756f5780966661f2bce8c73efde86');
-  assert.equal(manifest.sourceCommit,'c32312102a1793d579ec22297b0d3df81e4cb122');
+  assert.equal(sha(bytes),'c8bd68407de72079e793ea059b81703a341bc085a25a50909fe23fc736e5fc18');
+  assert.equal(manifest.sourceCommit,'ed5215fcd3a8c4c113f8072b552f0a3cc1b5aa82');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
-  assert.deepEqual(inputs.filter(i=>i.path==='app/atlas-workspace.tsx'),[{path:'app/atlas-workspace.tsx',sha256:'3492d74682daa945418e97a7e8130cae62907e4c7f67285c99196b329f79b104'}]);
+  assert.deepEqual(inputs.filter(i=>i.path==='app/atlas-workspace.tsx'),[{path:'app/atlas-workspace.tsx',sha256:'ee177772777f18e2db5ed8ab5c30448ace5e07fa1adab4e7f6515c6907605110'}]);
   assert.ok(!inputs.some(i=>/native-mr|local-mr-study|renal-segmental|\.vmmr/i.test(i.path)));
   for(const file of manifest.files as {path:string;sha256:string}[])assert.equal(sha(readFileSync(base+file.path)),file.sha256,file.path);
   const before=JSON.parse(execFileSync('git',['show','da3b8666644a557604d141dbecdc8338eb85fb06:lib/atlas-model-inventory.json'],{encoding:'utf8'}));

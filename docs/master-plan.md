@@ -1,5 +1,14 @@
 # Visible Medicine — shared delivery plan
 
+29 September: lazy teaching imported locally from Atlas `ed5215f`.
+Initial regional JavaScript reduced 48.9%, from7.63MB to3.90MB; complete teaching
+loads on demand. Hidden panels do not fetch; shared loading, stale-subscriber
+guards and explicit warned reload recovery preserve viewer availability. All137
+models and teaching unchanged. Desktop/phone, injected failure recovery, mobile
+tour and signed-in Clinical Review pass. Separate fracture work preserved.
+No publication or clinical approval. GitHub/C recovery, D pending while full.
+See `docs/lazy-teaching-delivery-20260929.md`. Native MRI remains done.
+
 29 September: lower-limb bone reasoning imported locally from Atlas `c323121`.
 Eight draft concepts/sixteen bilateral surfaces;166 concepts total. All preceding
 158 and137 model hashes preserved.277 website tests, types/build and actual

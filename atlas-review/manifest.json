@@ -1,5 +1,5 @@
 {
-  "revision": "c32312102a1793d579ec22297b0d3df81e4cb122",
+  "revision": "ed5215fcd3a8c4c113f8072b552f0a3cc1b5aa82",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2793,8 +2793,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "c810db7634f0f9ed46697cd6ca49a38e1692d400e3f2f39769efb62cdfcc7b8b",
-      "importedSha256": "1ae98736a4d55e851c4b0eae025d8bc55db6ffc5a8e0d525e441f216dfb1cf2f"
+      "sourceSha256": "018fc4ee179885d87b17c9d6f901faadaab0918f00a8fd7fae6eb5b642cff14f",
+      "importedSha256": "6052ed4752b8caf039dd0f604f81ba464f035626459a732434034e23c90d47af"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3083,8 +3083,8 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sourceSha256": "fb6991b58ab04357c6b9ffc2a98e3df6bf329a9b6be41feec22eacea2e2dc217",
-      "importedSha256": "0b2387a2ad6a2d0c6a8617e6643ab4f2fed13cbaf452150316392138f6a84417"
+      "sourceSha256": "b8f32750ef4e1448914c4856d8996b84b93dad4422ef1051aeb310c905209b8d",
+      "importedSha256": "1fb85fc7bd98db65792a24e197f970dead70d37c4cd07bf054c303b88e7895ef"
     },
     {
       "path": "app/review/review.css",
@@ -3168,8 +3168,8 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sourceSha256": "bbae6dd690fa8d65ca53f1150518b56909061609b32038cf9fd102913cc80273",
-      "importedSha256": "e4db8290e5767c301d2eca8fd25a58a4deff44f0aca6f3ff88c3ab82928d0a82"
+      "sourceSha256": "6e93637ab53c186a8513a0314fd5d8fdfacbf6665e1443d3b6a31f6b411b9ba9",
+      "importedSha256": "af87f28957018835cfdf0e0cf4abcd165cb91ad203b9f23e69bf34f487c510c4"
     },
     {
       "path": "app/um-knee-entry.css",
@@ -3233,8 +3233,8 @@
     },
     {
       "path": "app/atlas-workspace.tsx",
-      "sourceSha256": "3492d74682daa945418e97a7e8130cae62907e4c7f67285c99196b329f79b104",
-      "importedSha256": "9642831dd7e4f3b27086c61e1ed89d865f2b8f2502ffac67aa7f5369706a2735"
+      "sourceSha256": "ee177772777f18e2db5ed8ab5c30448ace5e07fa1adab4e7f6515c6907605110",
+      "importedSha256": "c69a131e1e5c1dc2f8a613b64fd59dff1b735ded3893fd7b20764ea553e62616"
     },
     {
       "path": "lib/atlas-search-presentation.ts",
@@ -3245,6 +3245,16 @@
       "path": "components/ui/radio-group.tsx",
       "sourceSha256": "43f2d6c2f5bdd4a26c57d93e6f141be20472f9bb8777d9a0d61cd8a5e281a999",
       "importedSha256": "2d40b6d3b229763d36a95d75563544d2e76c2148c3627dae957448841a3040da"
+    },
+    {
+      "path": "app/lazy-body-teaching.tsx",
+      "sourceSha256": "e8fb67f5f028e3333c93b2075007d7f41da794129cc07608adba09a0c5307bb8",
+      "importedSha256": "e8fb67f5f028e3333c93b2075007d7f41da794129cc07608adba09a0c5307bb8"
+    },
+    {
+      "path": "lib/body-teaching-loader.ts",
+      "sourceSha256": "1d1b1c5d43eab766a6d73e0b568c4700213157f301221e4fe0ad8a0aff8d372b",
+      "importedSha256": "1d1b1c5d43eab766a6d73e0b568c4700213157f301221e4fe0ad8a0aff8d372b"
     },
     {
       "path": "app/structure-quick-check.tsx",
@@ -3278,8 +3288,8 @@
     },
     {
       "path": "app/regional-guided-learning.tsx",
-      "sourceSha256": "1fdd24ca0a05ea3683ac35790aaab268bfb74c09eb1f769a91fce7552a4aa5c0",
-      "importedSha256": "4c8b4b67d50f802349a332cb507855503a69d6f877785c0119c0e00abadf0f93"
+      "sourceSha256": "90d4a7d2bbbae7c9abc0676a40e597be8b26fa7ed49fc2db2306ae7759ab48e5",
+      "importedSha256": "f72297604a4780254376cbddc431f6e7f5bd3f24fef32ba10aada8d3b6c5d9a8"
     },
     {
       "path": "lib/renderer-health.ts",
@@ -3648,8 +3658,8 @@
     },
     {
       "path": "app/anatomy-control-rail.tsx",
-      "sourceSha256": "313212905758d13825c51738df4b7fa374dce6822414c97b701dff98ecd232d9",
-      "importedSha256": "816d9189615b32587aa47b0cee74e039292e9f5439fae8a3266cca24f0105530"
+      "sourceSha256": "955463bf3bb3d0b658f2b31e36de3de92c0a9ccd8c8ff145f2a8f627ade961ed",
+      "importedSha256": "3d502beb503730963fe6d0c8e968626b6b7f4756ac2428fe7d727bdebbcafdfb"
     },
     {
       "path": "components/ui/sheet.tsx",
@@ -4488,5 +4498,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "1c90a09a9d006acedf3393f03e394397f6be9ff98611d0f79c840990e53d571f"
+  "websiteIntegrationSha256": "034ced3667cb3ef533d533d5f7257f5f32c05fddce595e00e6e38dd9312db26f"
 }

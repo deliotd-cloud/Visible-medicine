@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 
 test('paired cerebral CT/MRI drafts reach learner and exact review worksheets without changing source anatomy',async()=>{
-  const revision='c32312102a1793d579ec22297b0d3df81e4cb122';
+  const revision='ed5215fcd3a8c4c113f8072b552f0a3cc1b5aa82';
   const base='c73aeae9b5f0b21091a97612d9ed54f3dd549c8e';
   const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
   const prior=(p:string)=>JSON.parse(execFileSync('git',['show',base+':'+p],{encoding:'utf8'}));

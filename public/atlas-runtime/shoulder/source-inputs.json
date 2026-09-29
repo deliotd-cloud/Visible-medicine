@@ -5,7 +5,7 @@
   },
   {
     "path": "app/anatomy-control-rail.tsx",
-    "sha256": "313212905758d13825c51738df4b7fa374dce6822414c97b701dff98ecd232d9"
+    "sha256": "955463bf3bb3d0b658f2b31e36de3de92c0a9ccd8c8ff145f2a8f627ade961ed"
   },
   {
     "path": "app/anatomy-data.ts",
@@ -25,7 +25,7 @@
   },
   {
     "path": "app/atlas-workspace.tsx",
-    "sha256": "3492d74682daa945418e97a7e8130cae62907e4c7f67285c99196b329f79b104"
+    "sha256": "ee177772777f18e2db5ed8ab5c30448ace5e07fa1adab4e7f6515c6907605110"
   },
   {
     "path": "app/body-content.ts",
@@ -78,6 +78,10 @@
   {
     "path": "app/inspection.css",
     "sha256": "70a60f780e8d20643267526ca460805c1f8cae1c77e83b2fcf553e413ed350e4"
+  },
+  {
+    "path": "app/lazy-body-teaching.tsx",
+    "sha256": "e8fb67f5f028e3333c93b2075007d7f41da794129cc07608adba09a0c5307bb8"
   },
   {
     "path": "app/review-status.tsx",
@@ -897,7 +901,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "fb6991b58ab04357c6b9ffc2a98e3df6bf329a9b6be41feec22eacea2e2dc217"
+    "sha256": "b8f32750ef4e1448914c4856d8996b84b93dad4422ef1051aeb310c905209b8d"
   },
   {
     "path": "content/sca-mca-clinical-pins.json",
@@ -1242,6 +1246,10 @@
   {
     "path": "lib/body-source-additions.ts",
     "sha256": "3e19f6a5c2bc36facfea90dd886cb0cb0447ef47cae5eb0c5b951ebcca095948"
+  },
+  {
+    "path": "lib/body-teaching-loader.ts",
+    "sha256": "1d1b1c5d43eab766a6d73e0b568c4700213157f301221e4fe0ad8a0aff8d372b"
   },
   {
     "path": "lib/brachial-veins.ts",

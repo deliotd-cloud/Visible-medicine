@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import test from 'node:test';
+import {emittedTeaching} from './atlas-emitted-teaching.ts';
 import {ATLAS_DELIVERY_POLICY} from '../lib/atlas-delivery-policy.ts';
 
 const base='public/atlas-runtime/head-neck/';
@@ -17,9 +18,9 @@ const selections=[
 
 test('head-neck export binds six exact lacrimal drainage selections to CT and MRI drafts only',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'7c22f19682f8084545f6a11b9c0af328862756f5780966661f2bce8c73efde86');
+  assert.equal(sha(manifestBytes),'c8bd68407de72079e793ea059b81703a341bc085a25a50909fe23fc736e5fc18');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'c32312102a1793d579ec22297b0d3df81e4cb122');
+  assert.equal(manifest.sourceCommit,'ed5215fcd3a8c4c113f8072b552f0a3cc1b5aa82');
   for(const flag of ['patientDataIncluded','clinicalApproved','imagingConnection','standaloneReviewConnection'])
     assert.equal(manifest[flag],false,flag);
 
@@ -30,12 +31,7 @@ test('head-neck export binds six exact lacrimal drainage selections to CT and MR
     'lib/lacrimal-drainage-imaging.ts':'a5affcd8c2058488514ece3349cbbd36f803b1053b0273e81526c022103d55ce',
   }))assert.equal(inputs.find(row=>row.path===path)?.sha256,expected,path);
 
-  const slider=(manifest.files as {path:string;sha256:string}[])
-    .find(file=>/^assets\/slider-.*\.js$/.test(file.path));
-  assert.ok(slider,'teaching bundle');
-  const bytes=readFileSync(base+slider.path);
-  assert.equal(sha(bytes),slider.sha256);
-  const runtime=bytes.toString();
+  const runtime=emittedTeaching(base,manifest.files);
   const regionalIds=new Set((manifest.regionalScopes as {regionalIds:string[]}[]).flatMap(scope=>scope.regionalIds));
   for(const [name,fma,file,sourceHash,group] of selections){
     const side=name.startsWith('right-')?'right':'left';
@@ -77,7 +73,7 @@ test('head-neck export binds six exact lacrimal drainage selections to CT and MR
   ])assert.ok(runtime.includes(phrase),phrase);
 
   const inventoryBytes=readFileSync('lib/atlas-model-inventory.json');
-  assert.equal(sha(inventoryBytes),'a697f1ecac35728679345729ecc19a84e2580a9ba54932652ab2b24d1bcd06e6');
+  assert.equal(sha(inventoryBytes),'f2d3607a946203b968b9866f6d92a0a6c162906f61ec3c1f59340cd3c5465ab9');
   const inventory=JSON.parse(inventoryBytes.toString());
   assert.equal(inventory.sources.find((source:{module:string})=>source.module==='head-neck')?.manifestSha256,sha(manifestBytes));
   assert.equal(inventory.models.length,137);

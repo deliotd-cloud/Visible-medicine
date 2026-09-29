@@ -1,5 +1,6 @@
 'use client';
-import { useEffect, useState, type ReactNode } from 'react';
+import { useContext, useEffect, useState, type ReactNode } from 'react';
+import { BodyTeachingVisibility } from './lazy-body-teaching';
 import { useAtlasWorkspace } from './atlas-workspace';
 import { Dialog } from '@base-ui/react/dialog';
 import { Layers3, Info, X } from 'lucide-react';
@@ -25,8 +26,9 @@ function AnatomySidePanel({
   info?: boolean;
   practice?: boolean;
 }) {
-  const [compact, setCompact] = useState(false);
+  const [compact, setCompact] = useState<boolean | null>(null);
   const workspace = useAtlasWorkspace();
+  const teachingVisible = useContext(BodyTeachingVisibility);
   const { setPanelOpen } = workspace;
   const open = workspace.panels[info ? 'info' : 'tools'];
   const panelCompact = workspace.panelLayout?.[info ? 'info' : 'tools'];
@@ -60,7 +62,9 @@ function AnatomySidePanel({
           info ? 'Anatomy study panel' : 'Systems and dissection tools'
         }
       >
-        {children}
+        <BodyTeachingVisibility.Provider value={teachingVisible && (panelCompact !== undefined || compact !== null)}>
+          {children}
+        </BodyTeachingVisibility.Provider>
       </aside>
     );
   return (
@@ -108,7 +112,9 @@ function AnatomySidePanel({
               info ? 'body-info anatomy-info-content' : 'anatomy-control-rail'
             }
           >
-            {children}
+            <BodyTeachingVisibility.Provider value={teachingVisible && open}>
+              {children}
+            </BodyTeachingVisibility.Provider>
           </div>
           <SheetClose
             render={

@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import test from 'node:test';
+import {emittedTeaching} from './atlas-emitted-teaching.ts';
 
 const base='public/atlas-runtime/head-neck/';
 const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
@@ -14,9 +15,9 @@ const selections=[
 
 test('shared regional export retains four exact interosseous CT draft bindings and source limits',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'7c22f19682f8084545f6a11b9c0af328862756f5780966661f2bce8c73efde86');
+  assert.equal(sha(manifestBytes),'c8bd68407de72079e793ea059b81703a341bc085a25a50909fe23fc736e5fc18');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'c32312102a1793d579ec22297b0d3df81e4cb122');
+  assert.equal(manifest.sourceCommit,'ed5215fcd3a8c4c113f8072b552f0a3cc1b5aa82');
   for(const flag of ['patientDataIncluded','clinicalApproved','imagingConnection','standaloneReviewConnection'])
     assert.equal(manifest[flag],false,flag);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
@@ -35,7 +36,7 @@ test('shared regional export retains four exact interosseous CT draft bindings a
     assert.equal(sha(bytes),file.sha256,file.path);
     return bytes.toString();
   };
-  const identities=script('index'),teaching=script('slider');
+  const identities=script('index'),teaching=emittedTeaching(base,manifest.files);
   for(const [name,fma,file,sourceHash] of selections){
     const id=`vm:anatomy:body:forearm:${name.startsWith('right-')?'right':'left'}:vessel:${name}`;
     const start=identities.indexOf(`id:\`${id}\`,fmaId:\`${fma}\``);

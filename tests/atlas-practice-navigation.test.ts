@@ -10,14 +10,14 @@ test('shared practice exports tested focus navigation without changing model inv
   const base='public/atlas-runtime/head-neck/';
   const sha=(data:Buffer)=>createHash('sha256').update(data).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'7c22f19682f8084545f6a11b9c0af328862756f5780966661f2bce8c73efde86');
+  assert.equal(sha(bytes),'c8bd68407de72079e793ea059b81703a341bc085a25a50909fe23fc736e5fc18');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'c32312102a1793d579ec22297b0d3df81e4cb122');
+  assert.equal(manifest.sourceCommit,'ed5215fcd3a8c4c113f8072b552f0a3cc1b5aa82');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({
     'app/practice-panel-navigation.tsx':'e02be0b9fe8f12c2b52b27205880ae6a20d12bbf506cf91ce83cc36f352cf808',
-    'app/body-explorer.tsx':'bbae6dd690fa8d65ca53f1150518b56909061609b32038cf9fd102913cc80273',
+    'app/body-explorer.tsx':'6e93637ab53c186a8513a0314fd5d8fdfacbf6665e1443d3b6a31f6b411b9ba9',
   }))assert.deepEqual(inputs.filter(input=>input.path===path),[{path,sha256}]);
   assert.ok(!inputs.some(input=>/native-mr|local-mr-study|\.vmmr|patient[-_/]?data/i.test(input.path)));
   const runtime=(manifest.files as {path:string;sha256:string}[]).filter(file=>file.path.endsWith('.js')).map(file=>{

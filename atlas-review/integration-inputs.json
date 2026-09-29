@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "c32312102a1793d579ec22297b0d3df81e4cb122",
-  "sha256": "1c90a09a9d006acedf3393f03e394397f6be9ff98611d0f79c840990e53d571f",
+  "sourceCommit": "ed5215fcd3a8c4c113f8072b552f0a3cc1b5aa82",
+  "sha256": "034ced3667cb3ef533d533d5f7257f5f32c05fddce595e00e6e38dd9312db26f",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -44,7 +44,7 @@
     },
     {
       "path": "atlas-review/app/anatomy-control-rail.tsx",
-      "sha256": "816d9189615b32587aa47b0cee74e039292e9f5439fae8a3266cca24f0105530"
+      "sha256": "3d502beb503730963fe6d0c8e968626b6b7f4756ac2428fe7d727bdebbcafdfb"
     },
     {
       "path": "atlas-review/app/anatomy-data.ts",
@@ -100,7 +100,7 @@
     },
     {
       "path": "atlas-review/app/atlas-workspace.tsx",
-      "sha256": "9642831dd7e4f3b27086c61e1ed89d865f2b8f2502ffac67aa7f5369706a2735"
+      "sha256": "c69a131e1e5c1dc2f8a613b64fd59dff1b735ded3893fd7b20764ea553e62616"
     },
     {
       "path": "atlas-review/app/back-layers-study.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-explorer.tsx",
-      "sha256": "e4db8290e5767c301d2eca8fd25a58a4deff44f0aca6f3ff88c3ab82928d0a82"
+      "sha256": "af87f28957018835cfdf0e0cf4abcd165cb91ad203b9f23e69bf34f487c510c4"
     },
     {
       "path": "atlas-review/app/body-scene.tsx",
@@ -251,6 +251,10 @@
       "sha256": "70a60f780e8d20643267526ca460805c1f8cae1c77e83b2fcf553e413ed350e4"
     },
     {
+      "path": "atlas-review/app/lazy-body-teaching.tsx",
+      "sha256": "e8fb67f5f028e3333c93b2075007d7f41da794129cc07608adba09a0c5307bb8"
+    },
+    {
       "path": "atlas-review/app/nested-practice.css",
       "sha256": "8e0c687cecb73a74e65f6a574ad0858237d9f61680732eafb140c760779f1591"
     },
@@ -284,7 +288,7 @@
     },
     {
       "path": "atlas-review/app/regional-guided-learning.tsx",
-      "sha256": "4c8b4b67d50f802349a332cb507855503a69d6f877785c0119c0e00abadf0f93"
+      "sha256": "f72297604a4780254376cbddc431f6e7f5bd3f24fef32ba10aada8d3b6c5d9a8"
     },
     {
       "path": "atlas-review/app/related-study.tsx",
@@ -2031,6 +2035,10 @@
       "sha256": "67b34405e32541d49c85ad931cc818d5a1d9ab923b317f91e83d9a0fb6fbe285"
     },
     {
+      "path": "atlas-review/lib/body-teaching-loader.ts",
+      "sha256": "1d1b1c5d43eab766a6d73e0b568c4700213157f301221e4fe0ad8a0aff8d372b"
+    },
+    {
       "path": "atlas-review/lib/bone-joints.ts",
       "sha256": "6ac746a3f09fd982dbbb7b24f6c6cc2f61d88b35742d9ac7686632dead421389"
     },
@@ -3648,7 +3656,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "563a76197c0c8cb4d87059eaf7a23d39444c27f873cd16064461bf59b5a90715"
+      "sha256": "6bed4ebcce3f7b8f4beb2c05160a0cf66263c46aa4f8192cee9eaa6c3f717dd6"
     }
   ]
 }
