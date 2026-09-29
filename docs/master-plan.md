@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+29 September: lossless protected model delivery implemented locally.
+Native Workers gzip negotiates original client preferences; stored geometry,
+canonical fingerprints, private authorization and identity range reads remain
+unchanged. Raw workerd HTTP and actual signed-in local website checks pass;
+signed-out access is denied. No static learner URL or hosted deployment change.
+See `docs/atlas-lossless-delivery-20260929.md`. Clinical review gates remain;
+GitHub/C recovery recorded separately, D pending while full. Native MRI remains done.
+
 29 September: lazy teaching imported locally from Atlas `ed5215f`.
 Initial regional JavaScript reduced 48.9%, from7.63MB to3.90MB; complete teaching
 loads on demand. Hidden panels do not fetch; shared loading, stale-subscriber

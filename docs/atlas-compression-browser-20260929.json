@@ -1,0 +1,71 @@
+{
+  "date": "2026-09-29",
+  "implementation": "Native Workers automatic encoding; canonical stream unchanged in process",
+  "websiteBase": "4a5a9ed4989f4dca1719fbb689b715c5e7c79f9a",
+  "localOnly": true,
+  "scope": "Normal signed-in browser in existing localhost website; no injected credentials",
+  "stagedFixture": {
+    "sha256": "9c45f3aef04a0507414a6280b4866d31eda2a9df50ef61acc3071d5d909d12cd",
+    "bytes": 3099336,
+    "status": 201,
+    "source": "Existing licensed public Atlas model, exact source SHA verified before local authenticated PUT"
+  },
+  "anonymousRequestStatus": 401,
+  "checks": [
+    {
+      "method": "HEAD",
+      "status": 200,
+      "encoding": null,
+      "etag": "W/\"9c45f3aef04a0507414a6280b4866d31eda2a9df50ef61acc3071d5d909d12cd\"",
+      "range": null,
+      "length": null,
+      "cache": "private, no-store",
+      "vary": "Cookie, Accept-Encoding, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Interception-Id, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode, X-Vinext-Rsc-State-Fingerprint",
+      "decodedBytes": 0,
+      "sha256": null
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "encoding": null,
+      "etag": "W/\"9c45f3aef04a0507414a6280b4866d31eda2a9df50ef61acc3071d5d909d12cd\"",
+      "range": null,
+      "length": null,
+      "cache": "private, no-store",
+      "vary": "Cookie, Accept-Encoding, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Interception-Id, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode, X-Vinext-Rsc-State-Fingerprint",
+      "decodedBytes": 3099336,
+      "sha256": "9c45f3aef04a0507414a6280b4866d31eda2a9df50ef61acc3071d5d909d12cd"
+    },
+    {
+      "method": "GET",
+      "headers": {
+        "Range": "bytes=0-11"
+      },
+      "status": 206,
+      "encoding": null,
+      "etag": "\"9c45f3aef04a0507414a6280b4866d31eda2a9df50ef61acc3071d5d909d12cd\"",
+      "range": "bytes 0-11/3099336",
+      "length": null,
+      "cache": "private, no-store",
+      "vary": "Cookie, Accept-Encoding, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Interception-Id, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode, X-Vinext-Rsc-State-Fingerprint",
+      "decodedBytes": 12,
+      "sha256": null
+    },
+    {
+      "method": "GET",
+      "headers": {
+        "If-None-Match": "\"9c45f3aef04a0507414a6280b4866d31eda2a9df50ef61acc3071d5d909d12cd\""
+      },
+      "status": 304,
+      "encoding": null,
+      "etag": "W/\"9c45f3aef04a0507414a6280b4866d31eda2a9df50ef61acc3071d5d909d12cd\"",
+      "range": null,
+      "length": null,
+      "cache": "private, no-store",
+      "vary": "Cookie, Accept-Encoding",
+      "decodedBytes": 0,
+      "sha256": null
+    }
+  ],
+  "limitation": "Vinext development bridge decodes and removes Content-Encoding. Raw workerd HTTP tests separately verify encoded transport and one-decode SHA equality. No browser speed, hosted deployment or clinical approval claim."
+}

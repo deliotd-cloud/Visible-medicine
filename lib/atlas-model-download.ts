@@ -5,12 +5,16 @@ export async function verifyAtlasModelDownload(response: Response, model: Pick<A
   const length = response.headers.get('content-length');
   const etag = response.headers.get('etag');
   const type = response.headers.get('content-type')?.split(';')[0].trim().toLowerCase();
+  const encoding = response.headers.get('content-encoding')?.trim().toLowerCase() ?? 'identity';
   // A proxy may stream without Content-Length or weaken/omit an ETag. Neither
   // header proves byte integrity: always enforce actual size and SHA-256 below.
   if (!Number.isSafeInteger(model.bytes) || model.bytes < 12 || model.bytes > 32 * 1024 * 1024 || !/^[a-f0-9]{64}$/.test(model.sha256)
     || response.status !== 200 || response.redirected || !response.body
     || !['model/gltf-binary', 'application/octet-stream'].includes(type ?? '')
-    || (length !== null && (!/^\d+$/.test(length) || Number(length) !== model.bytes))
+    || !['identity', 'gzip'].includes(encoding)
+    // Fetch exposes decoded bytes but may retain the encoded Content-Length.
+    // The stream's canonical size/header/SHA checks below are never skipped.
+    || (length !== null && (!/^\d+$/.test(length) || !Number.isSafeInteger(Number(length)) || (encoding === 'identity' && Number(length) !== model.bytes)))
     || (etag !== null && etag.replace(/^W\//, '') !== `"${model.sha256}"`)) {
     await response.body?.cancel();
     throw new Error(`Download response rejected: HTTP ${response.status}; type ${type?.slice(0, 80) ?? 'missing'}; length ${length?.slice(0, 24) ?? 'not supplied'}; fingerprint ${etag === null ? 'not supplied' : etag.replace(/^W\//, '') === `"${model.sha256}"` ? 'matches' : 'unexpected'}.`);

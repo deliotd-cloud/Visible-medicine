@@ -41,7 +41,7 @@ test('actual D1/R2 access is read-only, revision-bound and independent of lectur
   const model = inventory.models.find((m: { paths: string[] }) => m.paths.length > 1);
   assert(model, 'Exercise a real shared model through every registered alias');
   const bytes = readFileSync('public' + model.paths[0]);
-  const modules = ['atlas-model-storage', 'atlas-model-delivery', 'atlas-delivery-access'].map(name => ({
+  const modules = ['atlas-model-storage', 'atlas-model-delivery', 'atlas-delivery-access', 'atlas-content-encoding'].map(name => ({
     type: 'ESModule' as const, path: resolve(`lib/${name}.ts`),
     contents: ts.transpileModule(readFileSync(`lib/${name}.ts`, 'utf8'), { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext } }).outputText,
   }));
@@ -124,7 +124,7 @@ test('actual D1/R2 access is read-only, revision-bound and independent of lectur
       ['account_security_profiles','status','deactivated','active',"user_id='edu:learner'"],
     ] as const) {
       await db.prepare(`UPDATE ${table} SET ${column}=? WHERE ${where}`).bind(denied).run();
-      const readVariants: Record<string,string>[] = [{}, {range:'bytes=0-11'}, {'if-none-match':`"${model.sha256}"`}];
+      const readVariants: Record<string,string>[] = [{}, {range:'bytes=0-11'}, {'if-none-match':`"${model.sha256}"`}, {'accept-encoding':'gzip'}, {'accept-encoding':'gzip',range:'bytes=0-11'}, {'accept-encoding':'gzip','if-none-match':`"${model.sha256}"`}];
       for (const extra of readVariants) {
         assert.equal((await call('learner','GET',{...learnerHeaders,...extra})).status,403);
       }

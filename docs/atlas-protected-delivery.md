@@ -1,5 +1,10 @@
 # Atlas model transport and release boundary
 
+29 September update: native negotiated gzip is implemented for complete protected
+responses. Canonical bytes, ranges and authorization remain unchanged. See
+[local evidence and limits](atlas-lossless-delivery-20260929.md). Not published.
+The package counts below describe the historical 13 September revision.
+
 13 September 2026. Complements [staging evidence](atlas-model-storage.md).
 This revision preserves the complete canonical four-module package: 59 GLBs,
 127,449,300 original bytes, including the shared head/neck–thorax runtime and

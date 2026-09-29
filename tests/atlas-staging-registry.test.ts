@@ -81,6 +81,7 @@ test('all 14 added GLBs stage in real local R2 but remain unavailable through th
   const mf = new Miniflare(convertV4MiniflareOptions({ modules: [
     { type: 'ESModule', path: resolve('tests/staging-registry-worker.mjs'), contents: worker },
     ...['storage', 'delivery'].map(name => ({ type: 'ESModule' as const, path: resolve(`tests/atlas-model-${name}.ts`), contents: transpile(`lib/atlas-model-${name}.ts`) })),
+    { type: 'ESModule', path: resolve('tests/atlas-content-encoding.ts'), contents: transpile('lib/atlas-content-encoding.ts') },
   ], compatibilityDate: '2026-08-23', r2Buckets: ['FILES'], log: new Log(LogLevel.NONE) }));
   try {
     const admin = { 'x-test-role': 'admin', origin: 'https://atlas.test', 'content-type': 'model/gltf-binary' };

@@ -31,6 +31,7 @@ test('proxy streaming metadata never substitutes for actual bytes and SHA-256', 
   const variants: Record<string, string>[] = [
     { 'content-type': 'model/gltf-binary' },
     { 'content-type': 'application/octet-stream', etag: `W/"${model.sha256}"` },
+    { 'content-type': 'model/gltf-binary', 'content-encoding': 'gzip', 'content-length': '1234', etag: `W/"${model.sha256}"` },
   ];
   for (const metadata of variants) {
     assert.deepEqual(await verifyAtlasModelDownload(new Response(bytes, { headers: metadata }), model), model);
@@ -38,6 +39,12 @@ test('proxy streaming metadata never substitutes for actual bytes and SHA-256', 
     await assert.rejects(() => verifyAtlasModelDownload(new Response(Buffer.concat([bytes, Buffer.from([0])]), { headers: metadata }), model), /exceeds/);
     const corrupted = Buffer.from(bytes); corrupted[corrupted.length - 1] ^= 1;
     await assert.rejects(() => verifyAtlasModelDownload(new Response(corrupted, { headers: metadata }), model), /fingerprint/);
+  }
+});
+
+test('encoded response metadata rejects unknown codings and invalid encoded lengths', async()=>{
+  for(const patch of [{'content-encoding':'unknown'},{'content-encoding':'gzip','content-length':'-1'},{'content-encoding':'gzip','content-length':'9007199254740993'}]){
+    await assert.rejects(verifyAtlasModelDownload(new Response(bytes,{headers:{...headers,...patch}}),model));
   }
 });
 test('cancellation before and during a stalled stream terminates verification', async () => {
