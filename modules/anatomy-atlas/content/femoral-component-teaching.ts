@@ -13,6 +13,18 @@ export const femoralComponentReferences = {
     title: 'Cho et al. (2025) · Descending circumflex branch injury case report',
     url: 'https://aott.org.tr/index.php/pub/article/view/4018',
   },
+  femoralComponentCTA: {
+    title: 'Yu et al. (2022) · CTA mapping of anterolateral thigh perforators',
+    url: 'https://pubmed.ncbi.nlm.nih.gov/36512153/',
+  },
+  femoralComponentMRA: {
+    title: 'Jiang et al. (2016) · Contrast-enhanced MRA of thigh flap vessels',
+    url: 'https://pubmed.ncbi.nlm.nih.gov/27446322/',
+  },
+  femoralComponentDoppler: {
+    title: 'Debelmas et al. (2018) · Colour Doppler assessment of thigh perforators',
+    url: 'https://pubmed.ncbi.nlm.nih.gov/29481406/',
+  },
 };
 const pending = {
   body: 'Component-specific clinical teaching awaits review. This source partition is not an angiogram or a complete vascular network.',
@@ -43,6 +55,23 @@ export const femoralComponentConcepts: NestedConcept[] = [
       pathology: {
         body: 'Injury to a descending branch of the lateral circumflex femoral artery has been reported with pseudoaneurysm after intertrochanteric fracture fixation. This is branch-level clinical context, not evidence of a lesion in the selected parent component. A single case cannot establish frequency or prove a general injury mechanism. No pseudoaneurysm, wall defect, bleeding, fracture or implant is represented in this reference model.',
         references: ['femoralComponentInjury'],
+        readiness: 'draft',
+      },
+    },
+    imaging: {
+      ct: {
+        body: 'CTA can trace the lateral circumflex femoral system and locate perforators for anterolateral thigh flap assessment. A 35-patient study demonstrated variable origins and muscular or septal courses, not one universal branching pattern. Compare the parent vessel with the actual acquired branches; this supplied component does not map those perforators, measure their calibre or define a safe harvest route.',
+        references: ['femoralComponentCTA'],
+        readiness: 'draft',
+      },
+      mri: {
+        body: 'Contrast-enhanced MR angiography can depict the lateral circumflex femoral artery and its branching pattern. In a retrospective series of 68 patients, the parent artery was visualised in all patients, but tertiary branches were identified in only 94 of 136 limbs. Parent-vessel visibility therefore does not establish a complete perforator map. This surface contains no MR signal, flow measurement or patient registration.',
+        references: ['femoralComponentMRA'],
+        readiness: 'draft',
+      },
+      ultrasound: {
+        body: 'Colour Doppler can assess the course and location of thigh perforators, including their passage through the vastus lateralis aponeurosis. A prospective study compared 30 located perforators with operative findings; localisation was useful but not exact in every case. Use this parent-vessel component for orientation only: it contains neither a Doppler signal nor the small perforators, and cannot substitute for an acquired examination.',
+        references: ['femoralComponentDoppler'],
         readiness: 'draft',
       },
     },

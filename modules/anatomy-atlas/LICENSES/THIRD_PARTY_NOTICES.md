@@ -1804,6 +1804,17 @@ Draft lessons and their limitations require radiologist review.
 
 # Brain connections quick-check references — 29 September 2026
 
+## Femoral component imaging references — 29 September 2026
+
+Original short teaching summaries reference Yu et al. (2022; PMID36512153), Jiang
+et al. (2016; PMID27446322), and Debelmas et al. (2018; PMID29481406). See
+`docs/FEMORAL_COMPONENT_IMAGING_20260929.md`. No article passages, publisher media,
+scans, tables or datasets are redistributed; evidence links confer no media
+licence. Existing geometry credits remain. No dependency, font, fee or service
+added. Clinical and imaging approval remain pending.
+
+## Brain connections references
+
 Six original short questions reference factual relationships in UTHealth McGovern
 Medical School's Neuroanatomy/Neuroscience Online and the US National Cancer
 Institute's CSF definition. Exact links and scope are in

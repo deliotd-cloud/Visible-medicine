@@ -105,7 +105,12 @@ const targets = api
   .nestedStudyTargets(root)
   .filter((t) => t.study === 'femoral-components');
 same(targets.length, 4);
-same(api.nestedStudyTargets(root).length, 106);
+const allNestedTargets = api.nestedStudyTargets(root);
+// Two separately source-pinned hippocampi were added after this suite's baseline.
+const hippocampi = allNestedTargets.filter(t => t.study === 'cerebral' && ['FMA72713', 'FMA72714'].includes(t.structure.fmaId));
+same(hippocampi.map(t => t.structure.fmaId).sort(), ['FMA72713', 'FMA72714']);
+same(allNestedTargets.filter(t => !hippocampi.includes(t)).length, 106);
+same(allNestedTargets.length, 108);
 const catalog = api.femoralComponentCatalog;
 same(catalog.clinicalApproval, false);
 const lateralIdentity = {
@@ -242,7 +247,8 @@ for (const parent of parents) {
       }
     }
     for (const tab of ['ct', 'mri', 'xray', 'ultrasound'])
-      same(api.nestedTopicLesson(lesson, tab).readiness, 'pending');
+      same(api.nestedTopicLesson(lesson, tab).readiness,
+        part.role === 'lateral-circumflex' && tab !== 'xray' ? 'draft' : 'pending');
     for (const mutate of [
       (s) => (s.role = 'foreign'),
       (s) => (s.id = parent.id),
@@ -487,7 +493,7 @@ console.log(
     parents: 2,
     components: 4,
     rootStructures: 1104,
-    nestedTargets: 106,
+    nestedTargets: allNestedTargets.length,
     clinicalApproval: false,
     browserOrGPUAcceptance: false,
     imagingResourcesAdded: 0,

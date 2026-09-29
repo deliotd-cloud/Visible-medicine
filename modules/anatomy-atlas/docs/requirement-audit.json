@@ -218,7 +218,7 @@
     "lib/cricothyroid.ts": "1e7d88df1c8f24a4b33b520637d00bdf64d498a5017c332a6ce4d2a1cc0828b9",
     "lib/femoral-components.ts": "11ceea18314fafee0872c1cdf383f6d132d27b4c9f0c17ba3a5093170c5a8cf5",
     "app/femoral-components.tsx": "adedfcc6a51b584908e5813c57b33b873c2b4ec60b70750837aa54e33c10764e",
-    "content/femoral-component-teaching.ts": "89dea170f1e583aa0d59806c1b210aaed8f39f0d02a32616b255fa0f25cb9dd4",
+    "content/femoral-component-teaching.ts": "5f52d9e615dfd8f842a705b630c37b67ec396fb92b3a53dbf02d19de91320b31",
     "content/femoral-component-teaching-bindings.v1.json": "258bef0d9526cf5e2a471d49b397c8582fe4016945c9e6cd9f52e79c6a37a43f",
     "public/models/bodyparts3d/femoral-components/catalog.json": "594f8071b63861fcb1f4a0b821a26fd5c54b609444b8321474802b16ec13a799",
     "docs/femoral-component-source-audit.json": "4d4ef68501b179b3eae660a58f3de6a5851c874f25574c333e782033280c6a90",
@@ -375,7 +375,7 @@
     "lib/intrinsic-larynx-tour.ts": "05e8dc9544e40cd49c2cf5fb086958b401f2b5bd6d3e294309ef54cf6c31ea3a",
     "lib/male-duct-tour.ts": "0ecd223bcd86e19c06ac24b70685543b9881cc1754bfb0d08cff85a837edff11",
     "lib/deep-brain-tour.ts": "f3dc89facdbc8cdf134b25480495a263fbf50daedb2aa74421912672054442eb",
-    "nestedTeachingData": "ca2a670464e51ac9aaf1d98b485fe86439611eebc1295d1531272c55ab83dcc1"
+    "nestedTeachingData": "400fcdb431723124777bcda68bc32a8851dc3f61045b04045276d3d60d65e228"
   },
   "rendering": {
     "bodyBatching": {
@@ -1923,7 +1923,7 @@
         }
       ],
       "concepts": 47,
-      "references": 103,
+      "references": 106,
       "topics": {
         "anatomy": {
           "specificDraft": 79,
@@ -1938,15 +1938,15 @@
           "generatedIdentification": 0
         },
         "ct": {
-          "specificDraft": 51,
+          "specificDraft": 53,
           "identityOnly": 0,
-          "pending": 57,
+          "pending": 55,
           "generatedIdentification": 0
         },
         "mri": {
-          "specificDraft": 56,
+          "specificDraft": 58,
           "identityOnly": 0,
-          "pending": 52,
+          "pending": 50,
           "generatedIdentification": 0
         },
         "xray": {
@@ -1956,9 +1956,9 @@
           "generatedIdentification": 0
         },
         "ultrasound": {
-          "specificDraft": 37,
+          "specificDraft": 39,
           "identityOnly": 0,
-          "pending": 71,
+          "pending": 69,
           "generatedIdentification": 0
         },
         "pathology": {
