@@ -7,8 +7,8 @@ test('practice return ships its exact tested source and retains private-source b
  const base='public/atlas-runtime/head-neck/';
  const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
  const bytes=readFileSync(base+'manifest.json'), manifest=JSON.parse(bytes.toString());
- assert.equal(sha(bytes),'49e1d7ade1682c8b1032908c1fb0a765a12de2df53de81b00250e5f11a82b3ae');
- assert.equal(manifest.sourceCommit,'53e1ff32cc7b5ac81ec9d5e151c6e419fcb6a723');
+ assert.equal(sha(bytes),'e650f5054198e00b4699f579dc47f8b9256089c4bbee6bb214fd6c6a1effe433');
+ assert.equal(manifest.sourceCommit,'7dd7f5cfe4690ca1e5542107e52f97fa5142865f');
  const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
  assert.deepEqual(inputs.filter(i=>i.path==='app/body-explorer.tsx'),[{
   path:'app/body-explorer.tsx',sha256:'d6e7ebbe87a4325a84d3a0241b788edcf23e6dae7ec6e3c3f6c15875abf6ad57',

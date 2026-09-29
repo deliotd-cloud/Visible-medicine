@@ -1,5 +1,14 @@
 # Visible Medicine — shared delivery plan
 
+29 September: enlarged-text tour selector corrected and integrated locally.
+The shared picker grows with wrapped titles instead of clipping at a fixed
+height. All19titles checked at320/375/1280px and100/200%text (114checks), plus
+six keyboard journeys and active-tour canvas/Finish reachability.305website
+tests, types and build pass. Anatomy, teaching, all137models and notices
+unchanged. No publication/approval; fracture work preserved. See
+`docs/tour-reflow-delivery-20260929.md`. GitHub/C evidence recorded separately;
+D remains full/pending, untouched. Continue the broader Atlas goal.
+
 29 September: eight-bone carpal tour integrated locally.
 Hand and Whole body Guided learning include the right wrist sequence; the
 intrinsic-hand tour remains the default. Stable assembled framing and existing

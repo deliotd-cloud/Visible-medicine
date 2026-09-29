@@ -1,0 +1,65 @@
+{
+  "source": "7dd7f5cfe4690ca1e5542107e52f97fa5142865f",
+  "localOnly": true,
+  "compiledPreviewOverride": false,
+  "selectorChecks": 114,
+  "keyboardChecks": 6,
+  "scenarios": [
+    {
+      "width": 1280,
+      "fontPixels": 16,
+      "titleChecks": 19,
+      "allInside": true
+    },
+    {
+      "width": 1280,
+      "fontPixels": 32,
+      "titleChecks": 19,
+      "allInside": true
+    },
+    {
+      "width": 375,
+      "fontPixels": 16,
+      "titleChecks": 19,
+      "allInside": true
+    },
+    {
+      "width": 375,
+      "fontPixels": 32,
+      "titleChecks": 19,
+      "allInside": true
+    },
+    {
+      "width": 320,
+      "fontPixels": 16,
+      "titleChecks": 19,
+      "allInside": true
+    },
+    {
+      "width": 320,
+      "fontPixels": 32,
+      "titleChecks": 19,
+      "allInside": true
+    }
+  ],
+  "activeTour": {
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "fontPixels": 32,
+    "canvasBox": {
+      "x": 8,
+      "y": 532.625,
+      "width": 359,
+      "height": 188.84375
+    },
+    "visibleIntersection": {
+      "width": 359,
+      "height": 188.84375
+    },
+    "finishReachable": true,
+    "localOnly": true
+  },
+  "errors": []
+}

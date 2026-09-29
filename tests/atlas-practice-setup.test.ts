@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 test('practice setup and review share the single panel-contained session length control',()=>{
  const manifest=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
  const runtime=JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json','utf8'));
- assert.equal(runtime.sourceCommit,'53e1ff32cc7b5ac81ec9d5e151c6e419fcb6a723');
+ assert.equal(runtime.sourceCommit,'7dd7f5cfe4690ca1e5542107e52f97fa5142865f');
  const path='app/body-explorer.tsx';
  const file=manifest.files.find((f:any)=>f.path===path);assert(file);
  const inputs=JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json','utf8'));

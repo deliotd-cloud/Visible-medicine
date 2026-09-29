@@ -9,8 +9,9 @@ test('carpal tour import preserves all models and delivers exact assembled sourc
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
  const prior=(p:string)=>JSON.parse(execFileSync('git',['show','6302b12:'+p],{encoding:'utf8',maxBuffer:32e6}));
  const review=json('atlas-review/manifest.json'),before=prior('atlas-review/manifest.json');
- assert.equal(review.revision,'53e1ff32cc7b5ac81ec9d5e151c6e419fcb6a723');
- assert.deepEqual(review.files.filter((f:any)=>before.files.find((p:any)=>p.path===f.path)?.sourceSha256!==f.sourceSha256).map((f:any)=>f.path).sort(),[
+ assert.equal(review.revision,'7dd7f5cfe4690ca1e5542107e52f97fa5142865f');
+ const saved=JSON.parse(execFileSync('git',['show','047d488a:atlas-review/manifest.json'],{encoding:'utf8'}));
+ assert.deepEqual(saved.files.filter((f:any)=>before.files.find((p:any)=>p.path===f.path)?.sourceSha256!==f.sourceSha256).map((f:any)=>f.path).sort(),[
   'LICENSES/THIRD_PARTY_NOTICES.md','content/body-renderer-revision.json','lib/carpal-tour.ts','lib/regional-tours.ts',
  ]);
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,prior('lib/atlas-model-inventory.json').models);
