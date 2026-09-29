@@ -1,0 +1,36 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {runInNewContext} from 'node:vm';
+import {build} from './workspace-component-test-build.mjs';
+const require=createRequire(import.meta.url);
+const result=await build({stdin:{contents:"export {TourStepPicker} from './app/tour-step-picker';export {ShoulderTourPlayer} from './app/shoulder-tour-player';export {shoulderTour} from './lib/shoulder-tours';export {regionalTours} from './lib/regional-tours';",resolveDir:process.cwd(),loader:'tsx'},bundle:true,write:false,platform:'node',format:'cjs',loader:{'.css':'empty'},plugins:[{name:'select-boundary',setup(api){api.onLoad({filter:/[\\/]components[\\/]ui[\\/]select\.tsx$/},()=>({loader:'js',contents:'export const Select="Select",SelectContent="SelectContent",SelectItem="SelectItem",SelectTrigger="SelectTrigger",SelectValue="SelectValue";'}));}}]});
+const mod={exports:{}};runInNewContext(result.outputFiles[0].text,{module:mod,exports:mod.exports,require});
+const api=mod.exports,nodes=t=>!t||typeof t!=='object'?[]:Array.isArray(t)?t.flatMap(nodes):[t,...nodes(t.props?.children)];
+let checked=0;
+for(const tour of [...api.regionalTours,api.shoulderTour])for(let index=0;index<tour.steps.length;index++){
+ const calls=[],props={steps:tour.steps,index,ready:true,onPause:()=>calls.push('pause'),onStep:n=>calls.push(n)};
+ const tree=api.TourStepPicker(props),control=tree.props;
+ const options=nodes(tree).filter(n=>n.type==='SelectItem');
+ assert.equal(options.length,tour.steps.length);assert.equal(control.value,tour.steps[index].id);
+ assert.equal(nodes(tree).find(n=>n.type==='SelectTrigger').props['aria-label'],'Go to tour step');
+ control.onOpenChange(true);assert.deepEqual(calls,['pause']);calls.length=0;
+ control.onOpenChange(false);assert.equal(calls.length,0,'Escape/close never resumes');
+ for(const invalid of [null,undefined,'missing','__proto__','0',0,-1,NaN,{},tour.steps[index].id])control.onValueChange(invalid);
+ assert.equal(calls.length,0);
+ const target=(index+2)%tour.steps.length;control.onValueChange(tour.steps[target].id);
+ assert.deepEqual(calls,['pause',target],'Pause before selecting the exact source stop');
+ calls.length=0;
+ const unavailable=api.TourStepPicker({...props,ready:false});
+ assert.equal(unavailable.props.disabled,true);assert.notEqual(unavailable.key,tree.key,'Unavailable anatomy closes the old menu');
+ unavailable.props.onOpenChange(true);unavailable.props.onValueChange(tour.steps[target].id);assert.equal(calls.length,0);
+ checked++;
+}
+for(const index of [-1,999])assert.equal(api.TourStepPicker({steps:api.shoulderTour.steps,index,ready:true,onPause(){throw Error('unexpected')},onStep(){throw Error('unexpected')}}),null);
+const calls=[];
+const shoulder=api.ShoulderTourPlayer({index:0,ready:true,playing:true,onStart(){},onPlayPause(){calls.push('toggle')},onStep:n=>calls.push(n),onExit(){},onReadImaging:()=>calls.push('pause')});
+const picker=nodes(shoulder).find(n=>n.type?.name==='TourStepPicker');
+assert.equal(picker.props.steps,api.shoulderTour.steps);
+const select=api.TourStepPicker(picker.props);
+select.props.onOpenChange(true);select.props.onValueChange(api.shoulderTour.steps[4].id);
+assert.deepEqual(calls,['pause','pause',4],'Shoulder uses pause, never playback toggle');
+console.log(JSON.stringify({tours:18,steps:checked,exactIds:true,invalidAndUnavailableRejected:true,pauseBeforeJump:true,noImplicitResume:true}));

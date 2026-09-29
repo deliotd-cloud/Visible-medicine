@@ -62,6 +62,18 @@ function harness(source = catalog, tourName = 'thoraxTour', compact = false, mis
   return { render, scene, button, bundles, ready, click, tick, timers, preference, listeners, doc, api, props, unchanged, unmount, settle, retryControl, mountReady(){autoReady=true;render();}, lateUpdates:()=>lateUpdates, tree: () => tree, exits: () => exits };
 }
 
+test('Direct step navigation pauses autoplay and uses exact frames without resuming',()=>{
+  const h=harness(catalog,'subscapularTour');h.ready();h.click('Start guided tour');h.click('Play');
+  const picker=()=>nodes(h.tree()).find(n=>n.type?.name==='TourStepPicker').props;
+  picker().onPause();h.render();assert.equal(h.timers.size,0);assert.equal(h.scene().transitionPaused,true);
+  picker().onStep(3);h.render();assert.equal(h.scene().reset,3);assert.equal(h.scene().transitionPaused,false);
+  assert.equal(h.scene().selectedId,h.props.tour.steps[3].selectedId);assert.equal(h.button('Play')['aria-pressed'],false);
+  assert.equal(h.scene().transitionMs,1800);assert.equal(h.timers.size,0);
+  h.scene().onRendererHealth('lost');h.render();assert.equal(picker().ready,false);
+  picker().onStep(0);h.render();assert.equal(h.scene().reset,3,'Unavailable anatomy rejects direct navigation');
+  h.click('Exit tour');assert.equal(h.exits(),1);h.unchanged();
+});
+
 test('Subscapular tour keeps four exact artery steps, smooth frames, pause and exit',()=>{
   const h=harness(catalog,'subscapularTour',true);
   assert.equal(h.button('Start guided tour').disabled,true);h.ready();h.click('Start guided tour');
@@ -184,7 +196,9 @@ test('Source-bound quick checks pause playback, remount per step and disappear o
 test('Forearm tour requires both bundles and runs five exact right-sided close-ups with bounded finish', () => {
   const h=harness(catalog,'forearmTour');
   const heading=()=>nodes(h.tree()).find(n=>n.props?.className==='regional-tour-heading');
-  assert.equal(heading().props['aria-live'],'polite');assert.equal(heading().props['aria-atomic'],'true');
+  const announcement=nodes(heading()).find(n=>n.type==='h2');
+  assert.equal(announcement.props['aria-live'],'polite');assert.equal(announcement.props['aria-atomic'],'true');
+  assert.equal(heading().props['aria-live'],undefined,'Interactive picker is outside the live announcement');
   assert.equal(h.scene().structures.length,7);assert.deepEqual(h.bundles().sort(),['forearm-muscles','forearm-skeleton']);
   assert(h.scene().structures.every(s=>s.laterality==='right'));
   assert(h.scene().structures.every(s=>!s.id.includes(':nerve:')));
@@ -205,7 +219,7 @@ test('Forearm tour requires both bundles and runs five exact right-sided close-u
     assert.deepEqual(plain(h.props.tour.steps[i].frameIds),[id]);
     assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,i)));
     assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
-    assert.match(text(heading()),new RegExp(`Step ${i+1} of 5`));assert.match(text(heading()),new RegExp(h.props.tour.steps[i].title.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));
+    assert.equal(nodes(heading()).find(n=>n.type?.name==='TourStepPicker').props.index,i);assert.match(text(heading()),new RegExp(h.props.tour.steps[i].title.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));
     frames.push(plain(h.scene().presetBounds));if(i<4)h.click('Next');
   }
   assert.notDeepEqual(frames[0],frames[4],'Different muscle stops use distinct source bounds');

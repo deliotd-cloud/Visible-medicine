@@ -1,0 +1,5 @@
+.tour-step-trigger[data-slot=select-trigger]{min-height:2.75rem;height:auto;max-width:100%;font-size:.875rem;}
+.tour-step-trigger [data-slot=select-value]{font-size:.875rem;line-height:1.4;}
+.tour-step-options[data-slot=select-content]{width:min(28rem,calc(100vw - 2rem));max-width:calc(100vw - 2rem);}
+.tour-step-options [data-slot=select-item]{min-height:2.75rem;white-space:normal;overflow-wrap:anywhere;font-size:.875rem;line-height:1.4;}
+.tour-step-options [data-slot=select-item]>span:first-child{white-space:normal;min-width:0;flex-shrink:1;}
