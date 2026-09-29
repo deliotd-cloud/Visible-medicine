@@ -371,16 +371,17 @@
     "resolvedContentAndRecipeData": "e5c2c05557a48137e701bc8110a451b9b4937e1b0f0b8bd10da654d9c0eb3b1d",
     "explicitTopicReadiness": "75adadc036908764557bb74454f91dd9e327727335b43d4d3aca3b0cb2518bf2",
     "reasoningQuestionData": "e14edb0ec5501658df333e69f0aef4d9593b6647a3773258ff0ef6ec03b786fb",
-    "guidedLearningData": "0925f1d369b1e339c0ebc9e0f75d70083817b5c5ed5e086740f1255a0221b253",
+    "guidedLearningData": "3a4ab678fa4877c532ad6a9a6eaf1a1c41195c18a229869265e157f65b28a5a9",
     "app/volume-image.tsx": "34d28f4f9284cbb18dd4c175815490fb3727912fdb4acb22143c91167ccd4448",
     "app/review/mri-import/page.tsx": "70e68c1a824ba1fe8f8b3c4291a9d8015c18288a9040289d4f4adec59bed039e",
-    "lib/regional-tours.ts": "bbde9a945bd1525373762a0048a307d51ba9ffdaeeeaa0f472505f0716da2e93",
+    "lib/regional-tours.ts": "160b8187e79e7ca184cfc9653e1031bbbefef643f1fa43155f9a99418cdb13ed",
     "lib/shoulder-tours.ts": "03083449553e2f4db25adf66c9d5fc18b2c7849ee2b1846f4cd06775ceeb2fda",
     "lib/chest-wall-tour.ts": "232ec7d0e64d12929a24a68782c8110090ab6df78f4f15cb8440bfc6ff9ac5da",
     "lib/orbital-tour.ts": "e28d25ee70c8aea373439d1e938d1d2da5a23115042728da42989a6e4853c3d0",
     "lib/intrinsic-larynx-tour.ts": "05e8dc9544e40cd49c2cf5fb086958b401f2b5bd6d3e294309ef54cf6c31ea3a",
     "lib/male-duct-tour.ts": "0ecd223bcd86e19c06ac24b70685543b9881cc1754bfb0d08cff85a837edff11",
     "lib/deep-brain-tour.ts": "f3dc89facdbc8cdf134b25480495a263fbf50daedb2aa74421912672054442eb",
+    "lib/subscapular-tour.ts": "bb0dedb25c5ff20485e290c0ee91ef2a9668ea291aa11ed7f33209c4b1ce0504",
     "nestedTeachingData": "4207e18d62f328b5611d3b481c26e0f3e4e169bc3da5d6920480ffbbae1107c1"
   },
   "rendering": {
@@ -1624,8 +1625,8 @@
   },
   "study": {
     "guidedLearning": {
-      "regionalTours": 16,
-      "regionalStops": 88,
+      "regionalTours": 17,
+      "regionalStops": 92,
       "shoulderTours": 1,
       "shoulderStops": 5,
       "readiness": "draft"

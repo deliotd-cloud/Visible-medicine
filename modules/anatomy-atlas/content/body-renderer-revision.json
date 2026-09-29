@@ -2778,7 +2778,7 @@
     },
     {
       "path": "lib/regional-tours.ts",
-      "sha256": "bbde9a945bd1525373762a0048a307d51ba9ffdaeeeaa0f472505f0716da2e93"
+      "sha256": "160b8187e79e7ca184cfc9653e1031bbbefef643f1fa43155f9a99418cdb13ed"
     },
     {
       "path": "lib/regional-vascular-clinical.ts",
@@ -2939,6 +2939,10 @@
     {
       "path": "lib/subscapular-arteries.ts",
       "sha256": "f2bf9dd0cfb5846221865f83fbb8bf1680ea38533b8aa562dd41f58249bb63db"
+    },
+    {
+      "path": "lib/subscapular-tour.ts",
+      "sha256": "bb0dedb25c5ff20485e290c0ee91ef2a9668ea291aa11ed7f33209c4b1ce0504"
     },
     {
       "path": "lib/swallowing-curriculum.ts",
@@ -3154,7 +3158,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "34600bf16f0fc4baf4bd7b74986c07ec9a8316de15f8143c43a31e25693f6a30"
+      "sha256": "fb22f74c768302e6ac2a4d713a0a1fe8b2695b22e03c155c0aa2fbb101c6721e"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3369,5 +3373,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "899a8e554865f3dfee74d948577937443be4f171371597f14c1ed1ebd8b72e32"
+  "sha256": "93947620ad271cd6a7d138238fdab047eccd9ee78df52c26805dd1877a534018"
 }

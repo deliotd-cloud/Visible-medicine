@@ -1,5 +1,9 @@
 # Agent-authored guided learning
 
+29 September: [right subscapular branch tour](SUBSCAPULAR_TOUR.md) adds four
+source-bound arterial stops under Shoulder & arm and Whole body. Existing tours,
+model bytes and draft/review boundaries remain unchanged.
+
 ## Regional tour choices — 28 September 2026
 
 Thorax offers a compact Tour selector for its original airway/vessel sequence

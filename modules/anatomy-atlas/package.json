@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "subscapular-tour:test": "node scripts/test-subscapular-tour.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-regional-tour-review.mjs && node scripts/test-tour-camera.mjs",
     "superior-temporal-mri:test": "node scripts/validate-superior-temporal-mri.mjs",
     "collicular-teaching:test": "node scripts/validate-collicular-teaching.mjs && node scripts/validate-collicular-brachia.mjs && node scripts/validate-nested-teaching.mjs",
     "hippocampi:test": "node scripts/validate-hippocampi.mjs && node scripts/validate-cerebral.mjs && node scripts/validate-hippocampal-teaching.mjs",

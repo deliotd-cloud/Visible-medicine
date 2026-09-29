@@ -724,7 +724,7 @@ sourceHashes.guidedLearningData = hash(JSON.stringify({ regionalTours, shoulderT
 for (const path of [
   'app/volume-image.tsx', 'app/review/mri-import/page.tsx',
   'lib/regional-tours.ts', 'lib/shoulder-tours.ts', 'lib/chest-wall-tour.ts',
-  'lib/orbital-tour.ts', 'lib/intrinsic-larynx-tour.ts', 'lib/male-duct-tour.ts', 'lib/deep-brain-tour.ts',
+  'lib/orbital-tour.ts', 'lib/intrinsic-larynx-tour.ts', 'lib/male-duct-tour.ts', 'lib/deep-brain-tour.ts', 'lib/subscapular-tour.ts',
 ])
   sourceHashes[path] = hash(await read(path));
 // Include resolved nested text and references, including separately imported

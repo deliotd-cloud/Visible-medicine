@@ -13,7 +13,7 @@ const fmas=['FMA86464','FMA61961','FMA72924','FMA72925','FMA72832','FMA74877'];
 assert.deepEqual(tour.steps.map(step=>structures.find(s=>s.id===step.selectedId).fmaId),fmas);
 assert.deepEqual(structures.filter(s=>tour.contextIds.includes(s.id)).map(s=>s.fmaId),['FMA72833']);
 assert(!structures.some(s=>s.fmaId==='FMA61970'));assert.equal(structures.find(s=>s.fmaId==='FMA74877').sources.length,2);
-assert.deepEqual(api.regionalTours.filter(t=>t.id!==tour.id),previous.regionalTours);
+assert.deepEqual(api.regionalTours.filter(t=>t.id!==tour.id&&t.id!==api.subscapularTour.id),previous.regionalTours);
 const raw=JSON.parse(execFileSync('git',['show',parent+':public/models/bodyparts3d/full-body/catalog.json'],{encoding:'utf8',maxBuffer:8e6}));
 for(const s of structures){
  assert.deepEqual(s,raw.structures.find(old=>old.id===s.id),'Exact immutable source identity');
@@ -45,7 +45,13 @@ for(const s of api.catalog.structures){
  const scope={schema:'vm-body-review-worksheet-2',kind:packet.kind,structureId:s.id};
  const oldTours=previous.regionalTourEvidence(api.catalog,s.id);
  const oldHash=digest({scope,topics:packet.topics,reasoning:packet.reasoning,...(oldTours.length?{guidedTours:oldTours}:{})});
- if(!structures.some(t=>t.id===s.id)){assert.equal(packet.fingerprints.teaching,oldHash);unchanged++;continue;}
+ if(!structures.some(t=>t.id===s.id)){
+  // Compare this historical milestone's evidence without the later, separately
+  // tested subscapular sequence; do not carry its new review hash backwards.
+  const historical=packet.guidedTours.filter(e=>e.tour.id!==api.subscapularTour.id);
+  assert.equal(digest({scope,topics:packet.topics,reasoning:packet.reasoning,...(historical.length?{guidedTours:historical}:{})}),oldHash);
+  unchanged++;continue;
+ }
  changed++;assert.notEqual(packet.fingerprints.teaching,oldHash);assert.equal(packet.approval,false);assert(api.parseBodyReviewResponse(packet,s.id));
  assert.deepEqual(packet.guidedTours.filter(e=>e.tour.id!==tour.id),oldTours);
  for(const mutate of [p=>p.guidedTours=[],p=>p.guidedTours[0].tour.steps.reverse(),p=>p.guidedTours[0].tour.steps[0].caption+=' foreign',p=>p.guidedTours[0].tour.revision+='-foreign',p=>p.guidedTours[0].stepFrames[0].min[0]-=1,p=>p.guidedTours[0].structures[0].sources[0].sha256='0'.repeat(64),p=>p.guidedTours[0].tour.limitations='Approved']){
