@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+29 September: femoral component imaging teaching imported locally from Atlas
+`8386fa7`. Two lateral circumflex femoral source components receive six draft
+CT/MRA/colour-Doppler placements in learner and Clinical Review. Model bytes,
+source identities and independent access preserved. No patient upload, acquired
+image approval, publication or fracture changes. See
+`docs/femoral-component-imaging-delivery-20260929.md`. Native MRI remains done.
+
 29 September: cerebral-lobar CT/MRI teaching imported locally from Atlas
 `2792be3`. Eight paired lobe selections have 16 new draft modality placements
 in learner and protected Clinical Review, retaining existing compact tabs.
