@@ -1,5 +1,5 @@
 {
-  "revision": "0c72b49634b9dc0560a3f92944ca18a52e6b0646",
+  "revision": "0ede9422e6e9ce7e190cbe48d3cd3fe3714c7828",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2773,8 +2773,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "cb1ce41dd922c07fa1eaac91697387e7de4179aaead5f41261cf6c0765a8ab5e",
-      "importedSha256": "1f5298eb0ab5dd3b2a435176450c4866fee047ea8650dd311a187d875fd7a863"
+      "sourceSha256": "199390e0b31fa009468467ee9ee32724bde41949f73c554f37a4a6e8c4d28325",
+      "importedSha256": "d2231315644861a3ee2588e5e8c9eab398759503171280bb7d24e964cbdd91be"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3064,7 +3064,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "fb6991b58ab04357c6b9ffc2a98e3df6bf329a9b6be41feec22eacea2e2dc217",
-      "importedSha256": "76cf18f0fc45c2335d9c5e9bc16d251a88469fb91de21815b7f8b2a915348801"
+      "importedSha256": "d6292f0a49260dd155204773fd14f49fa6d31d976b669c0fef32e8af4f81713b"
     },
     {
       "path": "app/review/review.css",
@@ -3603,8 +3603,8 @@
     },
     {
       "path": "app/body-explorer.css",
-      "sourceSha256": "7132ca1326b6d709e191483c9c341ef76b7dc9954ac66eae277fb3ab3c939e31",
-      "importedSha256": "7132ca1326b6d709e191483c9c341ef76b7dc9954ac66eae277fb3ab3c939e31"
+      "sourceSha256": "315a5cbfeac80620e6f805b82d409a293acdf07869333438b6eb74dbbb3a826f",
+      "importedSha256": "315a5cbfeac80620e6f805b82d409a293acdf07869333438b6eb74dbbb3a826f"
     },
     {
       "path": "app/atlas-workspace.css",
@@ -4273,8 +4273,8 @@
     },
     {
       "path": "app/um-knee-study.css",
-      "sourceSha256": "6a231afb04d42c5524506b2d4bee6e1e6e8fd7f7e4d46d6f1be7ce94eccecd36",
-      "importedSha256": "6a231afb04d42c5524506b2d4bee6e1e6e8fd7f7e4d46d6f1be7ce94eccecd36"
+      "sourceSha256": "d8c4851100416189bc01c9d8505079d66ce1cea009cca88eb7d93ac00476f2f0",
+      "importedSha256": "d8c4851100416189bc01c9d8505079d66ce1cea009cca88eb7d93ac00476f2f0"
     },
     {
       "path": "app/abdominal-wall-study.tsx",
@@ -4468,5 +4468,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "79945f316b123c4f5d61a28f522dc5c4657f469f8744f1387c6ea896cf78f615"
+  "websiteIntegrationSha256": "1c92422cc6fac14988e9f265aa8b214c8eaf515078c3179bd33749a404ac7435"
 }

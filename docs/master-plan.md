@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+29 September: compact mobile anatomy controls imported locally from Atlas
+`0ede942`. Learner and Clinical Review camera actions have 44px touch targets;
+normal phone camera controls retain one compact row. System switches, teaching,
+geometry and independent access unchanged. Six source browser cases, 272 website
+tests, types/build and actual learner/specimen/review phone checks pass. Separate
+fracture work preserved; no publication or approval. See
+`docs/mobile-anatomy-targets-delivery-20260929.md`. Native MRI remains done.
+
 29 September: coronary sinus ultrasound teaching imported locally from Atlas
 `0c72b49`. One referenced orientation draft in existing learner/review tabs;
 small cardiac vein ultrasound remains pending. 272 tests and real learner/review

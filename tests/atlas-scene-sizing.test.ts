@@ -10,12 +10,12 @@ test('shared regional viewer isolates scene intrinsic size without changing mode
   const base='public/atlas-runtime/head-neck/';
   const hash=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json'),manifest=JSON.parse(bytes.toString());
-  assert.equal(hash(bytes),'6ec3ceffe67faff5d2d35b69d7f76e20edb523fdc1f137c042bca23adda01d3c');
-  assert.equal(manifest.sourceCommit,'0c72b49634b9dc0560a3f92944ca18a52e6b0646');
+  assert.equal(hash(bytes),'9613d2a8e7bd6e362b946a844d20205d2e02b9d6145889e382613967fee40ec2');
+  assert.equal(manifest.sourceCommit,'0ede9422e6e9ce7e190cbe48d3cd3fe3714c7828');
   for(const flag of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
   assert.deepEqual(inputs.filter((i:{path:string})=>i.path==='app/body-explorer.css'),[
-    {path:'app/body-explorer.css',sha256:'7132ca1326b6d709e191483c9c341ef76b7dc9954ac66eae277fb3ab3c939e31'},
+    {path:'app/body-explorer.css',sha256:'315a5cbfeac80620e6f805b82d409a293acdf07869333438b6eb74dbbb3a826f'},
   ]);
   const css=manifest.files.filter((f:{path:string})=>f.path.endsWith('.css')).map((f:{path:string;sha256:string})=>{
     const data=readFileSync(base+f.path);assert.equal(hash(data),f.sha256);return data.toString();
