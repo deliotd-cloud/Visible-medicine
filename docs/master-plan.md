@@ -1,5 +1,15 @@
 # Visible Medicine — shared delivery plan
 
+29 September: lower lumbar/sacral guided learning integrated locally.
+Five source-bound stops are available under Spine and Whole body using the
+existing compact selector and smooth camera transitions. All137 models and
+previous licence notices retained; only an original-prose reference note added.
+300 website tests, final types/build, twenty actual learner stops across desktop,
+phone and200%text, and the complete L4 Clinical Review sequence pass. No clinical
+approval, scan connection or publication. Fracture work preserved. GitHub/C
+recovery recorded separately; D full/pending. Native MRI remains done. See
+`docs/lumbar-tour-delivery-20260929.md`.
+
 29 September: eye and artery-component Education linking integrated locally.
 Both eyes, both deep-femoral parents and all three supplied cranial-artery
 component views now share explicit, source-bound imaging selection. Hidden

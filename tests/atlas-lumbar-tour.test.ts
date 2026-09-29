@@ -1,0 +1,43 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {readFileSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+const revision='e4a2eb560e8e586164a5eca9a2a8dfa658d24a8d';
+const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
+const oldBytes=(path:string)=>execFileSync('git',['show','a5ed52c:'+path],{maxBuffer:16e6});
+const prior=(path:string)=>JSON.parse(Buffer.from(oldBytes(path)).toString('utf8'));
+const sha=(path:string)=>createHash('sha256').update(readFileSync(path)).digest('hex');
+
+test('lumbar tour source import has the exact declared teaching and review dependency changes',()=>{
+ const before=prior('atlas-review/manifest.json'),after=json('atlas-review/manifest.json');
+ assert.equal(after.revision,revision);
+ const changed=after.files.filter((f:any)=>before.files.find((p:any)=>p.path===f.path)?.sourceSha256!==f.sourceSha256);
+ assert.deepEqual(changed.map((f:any)=>f.path).sort(),[
+  'LICENSES/THIRD_PARTY_NOTICES.md','content/body-renderer-revision.json','lib/lumbar-tour.ts','lib/regional-tours.ts',
+ ]);
+ assert.equal(after.files.length,before.files.length+1);
+ for(const f of changed)assert.equal(sha('atlas-review/'+f.path),f.importedSha256);
+ const regional=json('public/atlas-runtime/head-neck/source-inputs.json');
+ for(const path of ['lib/lumbar-tour.ts','lib/regional-tours.ts'])
+  assert.equal(regional.find((f:any)=>f.path===path)?.sha256,after.files.find((f:any)=>f.path===path)?.sourceSha256);
+ assert.equal(after.files.some((f:any)=>f.path==='content/learning-resources.v1.json'),false);
+});
+
+test('lumbar tour keeps every model and existing licence notice without patient data or approval',()=>{
+ for(const module of ['head-neck','shoulder']){
+  const prefix='public/atlas-runtime/'+module+'/',before=prior(prefix+'manifest.json'),after=json(prefix+'manifest.json');
+  assert.equal(after.sourceCommit,revision);
+  const retained=(f:any)=>f.path.endsWith('.glb')||f.path==='BUNDLED_NOTICES.txt'||f.path==='bundled-dependencies.json'||f.path.includes('credits');
+  assert.deepEqual(after.files.filter(retained),before.files.filter(retained));
+  for(const f of after.files.filter(retained))assert.equal(sha(prefix+f.path),f.sha256);
+  assert.deepEqual(after.modelBundles,before.modelBundles);assert.deepEqual(after.regionalScopes,before.regionalScopes);
+  for(const flag of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection'])assert.equal(after[flag],false);
+  const path=prefix+'LICENSES/THIRD_PARTY_NOTICES.md';
+  const old=Buffer.from(oldBytes(path)).toString('utf8').replace(/\r/g,''),current=readFileSync(path,'utf8').replace(/\r/g,'');
+  assert(current.startsWith(old.trimEnd()),'Every previous notice is retained');
+  assert.match(current.slice(old.trimEnd().length),/Lower lumbar guided learning references/);
+  assert.equal(current,readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md','utf8').replace(/\r/g,''));
+ }
+ assert.deepEqual(json('lib/atlas-model-inventory.json').models,prior('lib/atlas-model-inventory.json').models);
+});

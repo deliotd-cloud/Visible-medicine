@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "b65b8c40bd3fb428b2b4688c695039e2e3a3554c",
-  "sha256": "88769d8fc9c9e65bb1e7f15e0fb7ef9cc73f2f85359866c02904b47b0f835c23",
+  "sourceCommit": "e4a2eb560e8e586164a5eca9a2a8dfa658d24a8d",
+  "sha256": "662a18461007e42ef30f646939256a819896a1ed4a6391d801cbf5e2e8b04062",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -2743,6 +2743,10 @@
       "sha256": "56d60e3802bfc6dd8797fa2c36048916306b0084142a4b59e07b070e0f2b7e76"
     },
     {
+      "path": "atlas-review/lib/lumbar-tour.ts",
+      "sha256": "00ca73890eeb65988461f90b4f333259955f689d0e6dcdcafa7f3a783f004bed"
+    },
+    {
       "path": "atlas-review/lib/main-bronchus-xray.ts",
       "sha256": "5d5530f56c2a54843cb284f7ff83b03c5de5f651d9031aa870526acb2afcf9d6"
     },
@@ -3016,7 +3020,7 @@
     },
     {
       "path": "atlas-review/lib/regional-tours.ts",
-      "sha256": "160b8187e79e7ca184cfc9653e1031bbbefef643f1fa43155f9a99418cdb13ed"
+      "sha256": "9b92b8daf760a9297b1e59f97e77f3b93bdf8773d8574f6b8dc88ba2c3ff8665"
     },
     {
       "path": "atlas-review/lib/regional-vascular-clinical.ts",
@@ -3428,7 +3432,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "1bb25235ae6aba5055c5ea2220ff75399dedc88ed0f0d35de2794ea1cb6659e9"
+      "sha256": "88c0918ba3a7ff6db30d9a16b110320a9a4487af85ea923747a06bbcbced872e"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3684,7 +3688,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "f12228bd15f98ee6de068a044052eb28b87559aea217446615d68742dc936cf6"
+      "sha256": "6e7eebb35d33b6a482a6550fe3330eced0463b486812f99e7ca4c5afef4ab978"
     }
   ]
 }

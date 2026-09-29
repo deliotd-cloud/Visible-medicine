@@ -5,19 +5,19 @@ import {createHash} from 'node:crypto';
 
 // Source behavior is covered by the Atlas camera suite. These release checks
 // bind all exported viewers to that implementation and its focus-only styling.
-const source = 'b65b8c40bd3fb428b2b4688c695039e2e3a3554c';
+const source = 'e4a2eb560e8e586164a5eca9a2a8dfa658d24a8d';
 const modules = {
-  shoulder:'8edcf9cc89d754e5045fc018b938e24db31ca55e016c3385df39a0f46613715e',
+  shoulder:'7b6a4ec111706466e9fe5f6e7f675126e860d9f6c7504579d0d4bf9c16500495',
   'female-pelvis':'ce64af2fd913be42c856beaf25cb2f48996ec69394e28b75a595ed98415a1bb4',
   'lower-limb':'447e9f0065efcd8b8d4f2f2bfe25b2bf63185655c49ae830b8217b590ffdb419',
-  'head-neck':'7c71747c94426801f3509f1ab3a9ccc79d54c99da6ba7ec3502ab16a2e9a5ce6',
+  'head-neck':'04288e0089e8e802949661a93acafaa5b29efbe825a427322aa6bc2672e561f1',
 };
 for(const [module,manifestHash] of Object.entries(modules)) test(`${module} exports the source-verified keyboard camera and focus-only hint`,()=>{
   const base = `public/atlas-runtime/${module}/`;
   const bytes = readFileSync(base+'manifest.json');
   assert.equal(createHash('sha256').update(bytes).digest('hex'),manifestHash);
   assert.equal(JSON.parse(bytes.toString()).sourceCommit,module==='shoulder'
-    ?'b65b8c40bd3fb428b2b4688c695039e2e3a3554c'
+    ?'e4a2eb560e8e586164a5eca9a2a8dfa658d24a8d'
     :module==='female-pelvis'?'84e8d083c0bfc7cd41542f5fa0cbb7e172ac2e02':module==='lower-limb'?'80ff7f2ce56ce3cc27d4d9e6962797292585c3df':source);
   const inputs = JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({

@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { build } from 'esbuild';
 
-test('all seventeen regional tours ship complete source-bound review evidence', async () => {
+test('all eighteen regional tours ship complete source-bound review evidence', async () => {
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const base='public/atlas-runtime/head-neck/';
   const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
@@ -51,7 +51,9 @@ test('all seventeen regional tours ship complete source-bound review evidence', 
     assert.equal(api.regionalTourFor(region).id,id);assert.equal(api[name].revision,id+'-v1');
     assert.deepEqual(api[name].steps.map((s:any)=>s.view),['anterior','right','posterior','posterior','left']);
   }
-  assert.equal(api.regionalTours.length,17);
+  assert.equal(api.regionalTours.length,18);
+  assert.equal(api.lumbarTour.status,'draft');assert.equal(api.lumbarTour.steps.length,5);
+  assert.deepEqual(api.regionalToursFor('spine').map((t:any)=>t.id),[api.cervicalSpineTour.id,api.lumbarTour.id]);
   assert.equal(api.deepBrainTour.status,'draft');
   assert.equal(api.deepBrainTour.steps.length,6);
   assert.equal(api.deepBrainTour.revision,'deep-brain-commissures-limbic-landmarks-v1');
@@ -67,7 +69,7 @@ test('all seventeen regional tours ship complete source-bound review evidence', 
   assert.equal(api.regionalTourFor('thorax').id,api.thoraxTour.id);
   assert.deepEqual(api.chestWallTour.steps.map((s:any)=>s.view),['right','right','right','posterior','posterior','superior']);
   for(const tour of api.regionalTours) {
-  const count=tour===api.subscapularTour?5:tour===api.deepBrainTour?7:tour===api.intrinsicLarynxTour?10:tour===api.orbitalTour?7:tour===api.chestWallTour?9:({thorax:8,spine:8,abdomen:6,forearm:7,thigh:6,leg:7,hand:7,foot:8,'shoulder-arm':8,'head-neck':6,pelvis:8} as Record<string,number>)[tour.region];
+  const count=tour===api.lumbarTour?5:tour===api.subscapularTour?5:tour===api.deepBrainTour?7:tour===api.intrinsicLarynxTour?10:tour===api.orbitalTour?7:tour===api.chestWallTour?9:({thorax:8,spine:8,abdomen:6,forearm:7,thigh:6,leg:7,hand:7,foot:8,'shoulder-arm':8,'head-neck':6,pelvis:8} as Record<string,number>)[tour.region];
   const ids=new Set([...tour.contextIds,...tour.steps.map((s:any)=>s.selectedId)]);
   assert.equal(ids.size,count);
   for(const id of ids) {
@@ -76,7 +78,15 @@ test('all seventeen regional tours ship complete source-bound review evidence', 
     assert.ok(api.parseBodyReviewResponse(packet,id));
     const shared=api.intrinsicLarynxTour.contextIds.includes(id);
     const sharedPelvis=['urinary-bladder','prostate','right-seminal-vesicle'].some(name=>id.endsWith(':'+name));
-    assert.equal(packet.guidedTours.length,shared||sharedPelvis||api.subscapularTour.contextIds.includes(id)?2:1);
+    const sharedLumbar=id==='vm:anatomy:body:spine:midline:bone:sacrum';
+    assert.equal(packet.guidedTours.length,shared||sharedPelvis||sharedLumbar||api.subscapularTour.contextIds.includes(id)?2:1);
+    if(sharedLumbar){
+      assert.deepEqual(packet.guidedTours.map((e:any)=>e.tour.id),[api.malePelvisTour.id,api.lumbarTour.id]);
+      for(const omitted of [api.malePelvisTour.id,api.lumbarTour.id]){
+        const changed=structuredClone(packet);changed.guidedTours=changed.guidedTours.filter((e:any)=>e.tour.id!==omitted);
+        assert.equal(api.parseBodyReviewResponse(changed,id),null,'Both sacral teaching sequences are review material');
+      }
+    }
     const tourIndex=packet.guidedTours.findIndex((e:any)=>e.tour.id===tour.id);assert.ok(tourIndex>=0);
     if(shared){
       assert.deepEqual(packet.guidedTours.map((e:any)=>e.tour.id),[api.larynxTour.id,api.intrinsicLarynxTour.id]);

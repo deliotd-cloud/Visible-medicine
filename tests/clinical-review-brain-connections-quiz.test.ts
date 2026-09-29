@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 test('eight brain selections share exact learner/review quiz evidence without approval',async()=>{
  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
  const inputs=JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json','utf8'));
- assert.equal(review.revision,'b65b8c40bd3fb428b2b4688c695039e2e3a3554c');
+ assert.equal(review.revision,'e4a2eb560e8e586164a5eca9a2a8dfa658d24a8d');
  for(const path of ['content/brain-connections-quiz.ts','content/brain-connections-quiz-pins.json','lib/brain-connections-quiz.ts']){
   const file=review.files.find((f:any)=>f.path===path);assert(file);
   assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,file.sourceSha256);

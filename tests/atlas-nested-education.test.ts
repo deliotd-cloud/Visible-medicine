@@ -3,11 +3,12 @@ import test from 'node:test';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
+// Freeze this historical connection delivery; newer tour changes are tested separately.
+const json=(path:string)=>JSON.parse(execFileSync('git',['show','a5ed52c:'+path],{encoding:'utf8'}));
 const prior=(path:string)=>JSON.parse(execFileSync('git',['show','e63af48:'+path],{encoding:'utf8'}));
-const sha=(path:string)=>createHash('sha256').update(readFileSync(path)).digest('hex');
+const sha=(path:string)=>createHash('sha256').update(execFileSync('git',['show','a5ed52c:'+path],{maxBuffer:32e6})).digest('hex');
 
-test('eye and component Education parity changes only its declared connection dependency closure',()=>{
+test('historical eye and component Education parity changed only its declared connection dependency closure',()=>{
  const before=prior('atlas-review/manifest.json'),after=json('atlas-review/manifest.json');
  assert.equal(after.revision,'b65b8c40bd3fb428b2b4688c695039e2e3a3554c');
  const changed=after.files.filter((f:any)=>before.files.find((p:any)=>p.path===f.path)?.sourceSha256!==f.sourceSha256);
@@ -24,7 +25,7 @@ test('eye and component Education parity changes only its declared connection de
  assert.equal(after.files.some((f:any)=>f.path==='content/learning-resources.v1.json'),false,'No case registry is imported by the connection');
 });
 
-test('nested connection preserves all existing model bytes, notices, scope and publication gates',()=>{
+test('historical nested connection preserved model bytes, notices, scope and publication gates',()=>{
  for(const module of ['head-neck','shoulder']){
   const path='public/atlas-runtime/'+module+'/manifest.json',before=prior(path),after=json(path);
   assert.equal(after.sourceCommit,'b65b8c40bd3fb428b2b4688c695039e2e3a3554c');

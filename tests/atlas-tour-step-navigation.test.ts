@@ -21,7 +21,8 @@ test('both website tour players deliver the same pause-safe step picker without 
  }
  for(const path of ['lib/regional-tours.ts','lib/shoulder-tours.ts','lib/subscapular-tour.ts']){
   const prior=execFileSync('git',['show','6c7524e:atlas-review/'+path],{encoding:'utf8'}).replace(/\r/g,'');
-  assert.equal(readFileSync('atlas-review/'+path,'utf8').replace(/\r/g,''),prior,'Tour definitions and source references unchanged');
+  const delivered=execFileSync('git',['show','ff3502a:atlas-review/'+path],{encoding:'utf8'}).replace(/\r/g,'');
+  assert.equal(delivered,prior,'The historical step-picker delivery did not change tour teaching; later tours have separate coverage');
  }
  const picker=readFileSync('atlas-review/app/tour-step-picker.tsx','utf8');
  assert.ok(picker.includes('disabled={!ready}'));assert.ok(picker.includes('onPause();onStep(next)'));

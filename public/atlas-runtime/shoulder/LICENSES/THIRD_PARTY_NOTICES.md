@@ -1903,3 +1903,10 @@ Links are evidence references, not licences to redistribute those websites'
 assets. Existing BodyParts3D geometry and credits are unchanged. No new media,
 font, dependency, service or mandatory fee is introduced. All questions remain
 draft and require revision-bound radiologist review.
+## Lower lumbar guided learning references — 29 September 2026
+
+The lower-lumbar/sacral tour contains original short factual captions linked to
+TTUHSC El Paso back anatomy tables and UAMS back-joint tables, documented in
+`docs/LUMBAR_GUIDED_TOUR.md`. No source prose, tables, diagrams or images are
+redistributed. Existing BodyParts3D4.0/CC BY4.0 asset notices remain in force.
+This authoring addition introduces no new asset, dependency or licence grant.
