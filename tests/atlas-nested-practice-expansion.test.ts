@@ -12,7 +12,7 @@ test('expanded practice is the same reviewed source in learner and Clinical Revi
   const sha=(s:string)=>createHash('sha256').update(s).digest('hex');
   const learner=json('public/atlas-runtime/head-neck/manifest.json');
   const review=json('atlas-review/manifest.json');
-  assert.equal(learner.sourceCommit,revision);assert.equal(review.revision,revision);
+  assert.equal(learner.sourceCommit,revision);assert.equal(review.revision,'97f48a1ec2e74d0d88b34a26c5180f0aaf447448');
   const page=read('app/atlas/head-neck-3d/page.tsx');
   assert(page.includes('{regionalManifest.structures} regional selections and {regionalManifest.nestedSelections} nested selections'));
   assert.equal(learner.structures,291);assert.equal(learner.nestedSelections,77);

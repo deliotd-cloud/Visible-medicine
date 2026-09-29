@@ -13,7 +13,7 @@ test('paired cerebral CT/MRI drafts reach learner and exact review worksheets wi
   const sha=(s:Uint8Array|string)=>createHash('sha256').update(s).digest('hex');
   const learner=json('public/atlas-runtime/head-neck/manifest.json');
   const review=json('atlas-review/manifest.json');
-  assert.equal(learner.sourceCommit,revision);assert.equal(review.revision,revision);
+  assert.equal(learner.sourceCommit,revision);assert.equal(review.revision,'97f48a1ec2e74d0d88b34a26c5180f0aaf447448');
   const inputs=json('public/atlas-runtime/head-neck/source-inputs.json');
   for(const path of ['content/cerebral-lobar-imaging.ts','content/nested-teaching.ts']){
     const source=review.files.find((f:any)=>f.path===path);assert(source);

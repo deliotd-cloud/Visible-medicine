@@ -1,5 +1,14 @@
 # Visible Medicine — shared delivery plan
 
+29 September: compact starter Clinical Review integrated locally.
+The existing Review area filter now provides the eleven-selection calibration
+sample, with current source-bound links and private status reads. Search retains
+the sample; no decisions or approval are created. Review controls/cards and
+institution navigation reflow at narrow widths/enlarged text. Learner models,
+teaching and separate fracture work are unchanged. No publication or real-image
+sign-off. Verification and recovery: `docs/review-starter-delivery-20260929.md`
+and the main workspace checkpoint. D remains full/pending; native MRI is done.
+
 29 September: lower lumbar/sacral guided learning integrated locally.
 Five source-bound stops are available under Spine and Whole body using the
 existing compact selector and smooth camera transitions. All137 models and

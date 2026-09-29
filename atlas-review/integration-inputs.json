@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "e4a2eb560e8e586164a5eca9a2a8dfa658d24a8d",
-  "sha256": "662a18461007e42ef30f646939256a819896a1ed4a6391d801cbf5e2e8b04062",
+  "sourceCommit": "97f48a1ec2e74d0d88b34a26c5180f0aaf447448",
+  "sha256": "699b0426d810a9c6ad15f672e37d697911d0aeedb74728ac465fc7f138db6874",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -332,11 +332,11 @@
     },
     {
       "path": "atlas-review/app/review/overview/overview.css",
-      "sha256": "e73d3c45366c5ab14408b226477f9d7a477c8e28d335050c91a50a1fddd58cf6"
+      "sha256": "a5b7f5979fa801521d02be4b04776dd6a3af8bb75ddf2ed18c7c8a3bcff206da"
     },
     {
       "path": "atlas-review/app/review/overview/page.tsx",
-      "sha256": "3e0f4388efd794b1a0d412916396818eac693fc809d3fbbc3a2623ec443a170d"
+      "sha256": "48b2870847ff997e2e61c653a248c9135b312d6bbe1ed9cd6eda29e2d3354adb"
     },
     {
       "path": "atlas-review/app/review/overview/results.tsx",
@@ -2140,7 +2140,11 @@
     },
     {
       "path": "atlas-review/lib/clinical-review-index.ts",
-      "sha256": "22196def2a4f09788c941b5a44d10350ed1b383ab0ca3318b0599adc2e778e99"
+      "sha256": "54ca44f8e2a5c2cd9227b4e70de6828087847d8dd5bdab9e862a7d14e8e58062"
+    },
+    {
+      "path": "atlas-review/lib/clinical-review-pilot.ts",
+      "sha256": "7be08212b3045865877b366ff629ae801a7312aed9a27f234d3081a198bdf362"
     },
     {
       "path": "atlas-review/lib/clinical-review-queue.ts",
@@ -3688,7 +3692,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "6e7eebb35d33b6a482a6550fe3330eced0463b486812f99e7ca4c5afef4ab978"
+      "sha256": "23937d4cc962d06118f6808b811bf35a2a9db90570024c23598381d88ba8bdb4"
     }
   ]
 }

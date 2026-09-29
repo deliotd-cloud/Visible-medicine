@@ -10,14 +10,14 @@ const prior=(path:string)=>JSON.parse(Buffer.from(oldBytes(path)).toString('utf8
 const sha=(path:string)=>createHash('sha256').update(readFileSync(path)).digest('hex');
 
 test('lumbar tour source import has the exact declared teaching and review dependency changes',()=>{
- const before=prior('atlas-review/manifest.json'),after=json('atlas-review/manifest.json');
+ const before=prior('atlas-review/manifest.json'),after=JSON.parse(execFileSync('git',['show','0292830:atlas-review/manifest.json'],{encoding:'utf8'}));
  assert.equal(after.revision,revision);
  const changed=after.files.filter((f:any)=>before.files.find((p:any)=>p.path===f.path)?.sourceSha256!==f.sourceSha256);
  assert.deepEqual(changed.map((f:any)=>f.path).sort(),[
   'LICENSES/THIRD_PARTY_NOTICES.md','content/body-renderer-revision.json','lib/lumbar-tour.ts','lib/regional-tours.ts',
  ]);
  assert.equal(after.files.length,before.files.length+1);
- for(const f of changed)assert.equal(sha('atlas-review/'+f.path),f.importedSha256);
+ for(const f of changed)assert.equal(createHash('sha256').update(execFileSync('git',['show','0292830:atlas-review/'+f.path],{maxBuffer:32e6})).digest('hex'),f.importedSha256);
  const regional=json('public/atlas-runtime/head-neck/source-inputs.json');
  for(const path of ['lib/lumbar-tour.ts','lib/regional-tours.ts'])
   assert.equal(regional.find((f:any)=>f.path===path)?.sha256,after.files.find((f:any)=>f.path===path)?.sourceSha256);

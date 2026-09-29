@@ -4,6 +4,7 @@ import { normalizeAnatomySearch, anatomySearchWordMatches } from './anatomy-sear
 import { nestedReviewRows } from './nested-review-material';
 import { specimenReviewRows } from './specimen-review-material';
 import bindings from '../content/nested-review-bindings.json';
+import { resolveReviewPilot } from './clinical-review-pilot';
 
 export type ClinicalReviewScope = 'shoulder' | 'body' | 'nested' | 'specimens';
 export const clinicalReviewScopes = [
@@ -47,6 +48,7 @@ export const clinicalReviewEntries: readonly ClinicalReviewEntry[] = [
     href: link('/workspace/atlas-review/specimens', { specimen: row.key, structure: s.id }) }))),
 ].sort((a, b) => scopeOrder(a.scope) - scopeOrder(b.scope) || compare(a.name.toLowerCase(), b.name.toLowerCase()) || compare(a.key, b.key));
 if (new Set(clinicalReviewEntries.map(e => e.key)).size !== clinicalReviewEntries.length) throw Error('Duplicate clinical review search key');
+const pilotEntries = resolveReviewPilot(clinicalReviewEntries);
 const searchableText = new Map(clinicalReviewEntries.map(e => [e.key,
   normalizeAnatomySearch([e.name, e.id, e.context, e.laterality,
     ...(e.scope === 'body' ? bodyReviewSearchAliases(e.id)
@@ -55,12 +57,13 @@ const searchableText = new Map(clinicalReviewEntries.map(e => [e.key,
 ]));
 
 export type ClinicalReviewSearch = {
-  q: string; scope: 'all' | ClinicalReviewScope; page: number; pageCount: number;
+  q: string; scope: 'all' | 'pilot' | ClinicalReviewScope; page: number; pageCount: number;
   total: number; entries: ClinicalReviewEntry[]; pageSize: 12;
 };
 export type ClinicalReviewSearchInput = { q?: unknown; scope?: unknown; page?: unknown };
 function query(value: unknown) { return typeof value === 'string' ? value.trim().slice(0, 160) : ''; }
 function scope(value: unknown): ClinicalReviewSearch['scope'] {
+  if (value === 'pilot') return 'pilot';
   return typeof value === 'string' && clinicalReviewScopes.some(s => s.id === value) ? value as ClinicalReviewScope : 'all';
 }
 function page(value: unknown) {
@@ -69,7 +72,8 @@ function page(value: unknown) {
 }
 export function findClinicalReviewEntries(input: ClinicalReviewSearchInput = {}): ClinicalReviewSearch {
   const q = query(input.q), selectedScope = scope(input.scope), tokens = normalizeAnatomySearch(q).split(/\s+/).filter(Boolean);
-  const found = clinicalReviewEntries.filter(e => (selectedScope === 'all' || e.scope === selectedScope)
+  const candidates = selectedScope === 'pilot' ? pilotEntries : clinicalReviewEntries;
+  const found = candidates.filter(e => (selectedScope === 'all' || selectedScope === 'pilot' || e.scope === selectedScope)
     && tokens.every(token => anatomySearchWordMatches(searchableText.get(e.key)!, token)));
   const pageCount = Math.max(1, Math.ceil(found.length / 12)), current = Math.min(page(input.page), pageCount);
   return { q, scope: selectedScope, page: current, pageCount, total: found.length,

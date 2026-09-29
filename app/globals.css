@@ -1400,7 +1400,7 @@ body.splash-open { overflow: hidden; }
 .app-frame-actions > a.active { color: var(--teal); font-weight: 700; }
 .education-boundary-pill { padding: 0 11px; border: 1px solid #b8d4ce; border-radius: 999px; color: #336d62; background: #e4f4f0; font: 700 9px/1 var(--font-geist-mono),monospace; letter-spacing: .035em; text-transform: uppercase; }
 .public-site-link { gap: 7px; color: var(--teal); }
-.institution-app-nav { min-height: 48px; padding: 0 28px; display: flex; align-items: center; justify-content: center; gap: 7px; border-bottom: 1px solid var(--line); background: #e7f0ee; }
+.institution-app-nav { min-height: 48px; padding: 0 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 7px; border-bottom: 1px solid var(--line); background: #e7f0ee; }
 .institution-app-nav a { min-height: 34px; padding: 0 14px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; color: var(--secondary-text); font-size: 11px; }
 .institution-app-nav a:hover, .institution-app-nav a[aria-current="page"] { background: white; color: var(--teal); }
 .institution-app-nav a[aria-current="page"] { font-weight: 700; }
