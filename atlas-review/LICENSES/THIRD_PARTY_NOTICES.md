@@ -1843,6 +1843,15 @@ material or extended prose copied. Links are not media-reuse licences. Existing
 BodyParts3D credits remain unchanged; no new asset, dependency, font or fee.
 These are draft teaching notes, not clinical or acquired-image approval.
 
+## Coronary sinus ultrasound references
+
+An original short draft cites the Mai et al. (2006) case observation and Kolski
+et al. (2011) primary study abstract. See
+`docs/CORONARY_SINUS_ULTRASOUND_20260929.md` for exact URLs and limitations.
+Factual references only; no publisher images, scans, tables or extended text
+copied. Links confer no media reuse rights. No new model, font, dependency,
+service or fee; existing asset credits and clinical-review gates unchanged.
+
 ## Brain connections references
 
 Six original short questions reference factual relationships in UTHealth McGovern

@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+29 September: coronary sinus ultrasound teaching imported locally from Atlas
+`0c72b49`. One referenced orientation draft in existing learner/review tabs;
+small cardiac vein ultrasound remains pending. 272 tests and real learner/review
+phone checks pass. Model bytes, prior CT/MRI teaching and independent access
+preserved. No patient upload, publication or approval; fracture work untouched.
+See `docs/coronary-sinus-ultrasound-delivery-20260929.md`. Native MRI remains done.
+
 29 September: cardiac chamber X-ray teaching imported locally from Atlas
 `c55db3a`. Four original referenced drafts appear in existing learner tabs and
 Clinical Review; no new navigation or scanned images. 271 tests, types/build

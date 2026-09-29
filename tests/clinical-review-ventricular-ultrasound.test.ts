@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 test('ventricular ultrasound drafts match learner source and exact review selections without image approval',async()=>{
  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
  const inputs=JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json','utf8'));
- assert.equal(review.revision,'c55db3aba23f5f260ef09955b470650a8485800a');
+ assert.equal(review.revision,'0c72b49634b9dc0560a3f92944ca18a52e6b0646');
  for(const path of ['content/ventricular-ultrasound-teaching.ts','content/nested-teaching.ts','content/nested-teaching-bindings.v1.json','lib/nested-teaching.ts']){
   const file=review.files.find((f:any)=>f.path===path);assert(file);
   assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,file.sourceSha256);

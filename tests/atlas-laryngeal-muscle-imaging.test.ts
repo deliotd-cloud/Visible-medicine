@@ -10,8 +10,8 @@ test('laryngeal muscle CT/MRI drafts reach the shared viewer without new geometr
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json'),manifest=JSON.parse(bytes.toString());
-  assert.equal(sha(bytes),'01098b2fa54c4c08f044137eacddff123f54e51235fd50c933db03bc75664aa3');
-  assert.equal(manifest.sourceCommit,'c55db3aba23f5f260ef09955b470650a8485800a');
+  assert.equal(sha(bytes),'6ec3ceffe67faff5d2d35b69d7f76e20edb523fdc1f137c042bca23adda01d3c');
+  assert.equal(manifest.sourceCommit,'0c72b49634b9dc0560a3f92944ca18a52e6b0646');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256]of Object.entries({

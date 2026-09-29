@@ -13,9 +13,9 @@ const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
 
 test('exact Atlas coronary venous study is nested under Heart with one protected source bundle',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'01098b2fa54c4c08f044137eacddff123f54e51235fd50c933db03bc75664aa3');
+  assert.equal(sha(manifestBytes),'6ec3ceffe67faff5d2d35b69d7f76e20edb523fdc1f137c042bca23adda01d3c');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'c55db3aba23f5f260ef09955b470650a8485800a');
+  assert.equal(manifest.sourceCommit,'0c72b49634b9dc0560a3f92944ca18a52e6b0646');
   assert.equal(manifest.regionalScopes.length,12);
   for(const flag of ['patientDataIncluded','clinicalApproved','imagingConnection','standaloneReviewConnection'])
     assert.equal(manifest[flag],false,flag);
@@ -39,7 +39,7 @@ test('exact Atlas coronary venous study is nested under Heart with one protected
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,hash] of Object.entries({
     'lib/coronary-venous.ts':'7fe9f98f5ea4ac4e7e9a76cd25016b5461393ba3f25e52b7b2fc8215c64cd62e',
-    'content/coronary-venous-teaching.ts':'ccae64c4d3c441cf681e756456f91fb62f3987f9939dbd1d11fb6c547f393155',
+    'content/coronary-venous-teaching.ts':'82f2b333d8ddd2cb039c8910540da79affb11bd7d20254a83916e8d131da4194',
     'public/models/bodyparts3d/coronary-venous/catalog.json':'996d8ca712b12dc3c2b9df4a6bad372838aeca64f017574be244ffa0b129abfe',
     'integration/head-neck/delivery.ts':'a021cf6806b205834848faf3e1283827a402257922a2c94fd3a4b71799fc185e',
   }))assert.deepEqual(inputs.filter(input=>input.path===path),[{path,sha256:hash}]);
@@ -52,7 +52,7 @@ test('exact Atlas coronary venous study is nested under Heart with one protected
 
 test('coronary model stays registered for administrator review without case or lecture entitlement',async()=>{
   const inventoryBytes=readFileSync('lib/atlas-model-inventory.json');
-  assert.equal(sha(inventoryBytes),'e6e07066329d93c212692e7ce84b0fe02a70fbbf6db404301bba32da0420e746');
+  assert.equal(sha(inventoryBytes),'e2d134a60d4d71a654e4b17fbdded3ade838a42872a9b67ce37b4b5998e6c9a9');
   const inventory=JSON.parse(inventoryBytes.toString());
   assert.equal(inventory.models.length,137);
   assert.equal(inventory.models.flatMap((model:{paths:string[]})=>model.paths).length,144);
