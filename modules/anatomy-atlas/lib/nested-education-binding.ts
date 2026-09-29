@@ -16,12 +16,14 @@ export function nestedEducationBinding(catalog:BodyCatalog|undefined,parent:Body
   };
   if(!catalog)return empty;
   try{
+    // Parents may use an admitted display-correction bundle (not the raw one).
+    // Resolve both the records and bundle identity in that same trusted frame.
+    const current=bodyDisplayCatalog(catalog);
     const records=nestedLearningAnatomyRepresentations(catalog).filter(a=>
       a.nested.study===study&&a.nested.parentId===parent.id&&
       sourceKey(a.nested.parentSources)===sourceKey(parent.sources)&&
-      catalog.bundles.some(b=>b.id===parent.bundle&&b.sha256===a.nested.parentBundleSha256)&&
+      current.bundles.some(b=>b.id===parent.bundle&&b.sha256===a.nested.parentBundleSha256)&&
       layers.some(s=>s.id===a.structureId&&sourceKey(s.sources)===sourceKey(a.sources)));
-    const current=bodyDisplayCatalog(catalog);
     const targets=nestedStudyTargets(current).filter(t=>records.some(a=>
       a.structureId===t.structureId&&a.nested.parentId===t.parentId&&
       a.nested.study===t.study&&a.nested.bundleSha256===t.sourceHash&&

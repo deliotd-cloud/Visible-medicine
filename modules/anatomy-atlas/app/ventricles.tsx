@@ -762,7 +762,8 @@ export function VentricularView({
     catalog: educationCatalog, parent, study, layers,
     allowedIds: educationAllowedIds,
     disabled: !!practiceSnapshot || health !== 'ready' || loading || hasFailed ||
-      isolated || inspection.plane !== 'off' || practiceBranchFiltered,
+      isolated || inspection.plane !== 'off' || practiceBranchFiltered ||
+      (initialSelectedId !== undefined && !initialSelection),
     onSelect: applySelection,
   });
   function select(id: string) {
@@ -2082,11 +2083,11 @@ export default function Ventricles(props: {
     initialStudy === 'cranial-artery-components' ||
     (!initialStudy && cranialArteryComponentsFor(props.parent).length)
   )
-    return <FemoralComponents {...rest} study="cranial-artery-components" />;
+    return <FemoralComponents {...rest} educationCatalog={educationCatalog} study="cranial-artery-components" />;
   if (
     initialStudy === 'femoral-components' ||
     (!initialStudy && femoralComponentsFor(props.parent).length)
   )
-    return <FemoralComponents {...rest} />;
+    return <FemoralComponents {...rest} educationCatalog={educationCatalog} />;
   return <LegacyVentricles {...rest} educationCatalog={educationCatalog} initialStudy={initialStudy} />;
 }

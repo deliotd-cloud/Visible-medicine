@@ -7,6 +7,7 @@ import { runInNewContext } from 'node:vm';
 import { build } from './workspace-component-test-build.mjs';
 
 const parentCommit = '744fc73c6c4d54754688fe93006e62df8b20f9f4';
+const deliveryCommit = 'efa08d761641acb3fe5700e3a9191f245374927e';
 const require = createRequire(import.meta.url);
 const { renderToStaticMarkup } = require('react-dom/server');
 const copy = value => JSON.parse(JSON.stringify(value));
@@ -52,7 +53,13 @@ assert.equal(api.nestedTeachingReferences.renalReuseLicense.url, 'https://creati
 for (const file of ['content/nested-teaching-bindings.v1.json', 'content/nested-teaching.ts',
   'lib/nested-teaching.ts', 'lib/nested-anatomy.ts', 'app/nested-teaching.tsx',
   'public/models/bodyparts3d/eye-layers/catalog.json']) {
-  assert.equal((await readFile(file, 'utf8')).replaceAll('\r\n', '\n'), git(file).replaceAll('\r\n', '\n'), file);
+  // Preserve this historical delivery's no-other-changes assertion without
+  // forbidding later independently validated anatomy or interface additions.
+  const delivered = execFileSync('git', ['show', `${deliveryCommit}:${file}`],
+    { encoding: 'utf8', windowsHide: true, maxBuffer: 16e6 });
+  assert.equal(delivered.replaceAll('\r\n', '\n'), git(file).replaceAll('\r\n', '\n'), file);
+  if (file.startsWith('public/models/'))
+    assert.equal((await readFile(file, 'utf8')).replaceAll('\r\n', '\n'), delivered.replaceAll('\r\n', '\n'), 'Current eye geometry is unchanged');
 }
 const eye = JSON.parse(await readFile('public/models/bodyparts3d/eye-layers/catalog.json', 'utf8'));
 for (const bundle of eye.bundles) {

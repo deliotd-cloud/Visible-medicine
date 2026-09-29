@@ -199,18 +199,17 @@ same(
   untouched,
   'Display correction never rewrites archived source',
 );
-same(display.structures.length, catalog.structures.length);
+same(display.structures.length, 1104); // Current admitted additions coexist with the eye correction.
 same(
-  display.structures.map((s) => s.id),
+  display.structures.slice(0, catalog.structures.length).map((s) => s.id),
   catalog.structures.map((s) => s.id),
 );
 same(
-  display.structures.filter(
+  display.structures.slice(0, catalog.structures.length).filter(
     (s, i) =>
-      s.fmaId !== 'FMA7198' &&
       JSON.stringify(s) !== JSON.stringify(catalog.structures[i]),
-  ).length,
-  1,
+  ).map(s => s.id).sort(),
+  [correction.original.id, displayApi.pancreasDisplayCorrection.original.id, displayApi.celiacDisplayCorrection.original.id].sort(),
 );
 same(
   displayApi.bodyDisplayCatalog(display),
@@ -225,7 +224,7 @@ same(
   display.structures.find((s) => s.id === correction.original.id),
   correction.replacement,
 );
-same(display.bundles.at(-1), correction.bundle);
+same(display.bundles.find(b => b.id === correction.bundle.id), correction.bundle);
 same(
   api.eyeLayersFor(correction.replacement).length,
   7,
@@ -303,6 +302,13 @@ for (const tab of [
 ]) {
   const before = contentApi.bodyLesson(correction.original, tab),
     after = contentApi.bodyLesson(correction.replacement, tab);
+  if (['ct', 'mri', 'ultrasound'].includes(tab)) {
+    // Later source-bound imaging drafts deliberately reject the archived raw
+    // parent; do not mistake authored draft teaching for clinical acceptance.
+    same(before.readiness, 'pending');
+    same(after.readiness, 'draft', 'The corrected source is still unapproved');
+    continue;
+  }
   same(
     after.readiness,
     before.readiness,
@@ -501,9 +507,9 @@ for (const side of ['left', 'right']) {
 
 // Execute the real launcher/close callbacks without mounting a browser or GPU.
 const source = await readFile('app/body-explorer.tsx', 'utf8');
-check(source.includes('const value = bodyDisplayCatalog(data as BodyCatalog)'));
+check(source.includes('const value = bodyDisplayCatalog(parseBodyCatalog(data))'));
 check(
-  source.indexOf('bodyDisplayCatalog(data as BodyCatalog)') <
+  source.indexOf('bodyDisplayCatalog(parseBodyCatalog(data))') <
     source.indexOf('bodyLinkEntries(value)'),
   'Source display correction precedes reference validation',
 );
@@ -557,8 +563,10 @@ runInNewContext(`(${close})();`, env);
 same(chosen, null);
 same(focused, 1);
 check(
-  /!eyeParent\s*&&\s*!ventricleParent\s*&&\s*\(\s*<Scene/.test(source),
-  'Parent scene unmounted while child dissection is open',
+  source.includes('<div className="body-layout" hidden={inlineStudy}>') &&
+    source.includes('(eyeParent && eyeParent.id === selectedId)') &&
+    source.includes('disabled: exam || inlineStudy || guidedLearning'),
+  'Parent view is hidden and root linking paused during current inline dissection',
 );
 check(source.includes('eyeParent.id === selectedId'));
 check(source.includes('!exam && eyeLayersFor(selected).length > 0'));
@@ -600,10 +608,12 @@ const compiled = await build({
   ],
 });
 const component = { exports: {} };
+const actualLink = await import('vinext/shims/link');
 runInNewContext(compiled.outputFiles[0].text, {
   module: component,
   exports: component.exports,
-  require,
+  require: id => id === 'next/link' ? {__esModule:true,...actualLink} : require(id),
+  URLSearchParams,
   console,
   process: { env: { NODE_ENV: 'test' } },
 });
@@ -842,7 +852,9 @@ const result = {
   correctedParentTriangles: parentTriangles.length,
   suppressedComponents,
   suppressedAreaMm2,
-  unrelatedToEyeOrPancreasDisplayedRecordsChanged: 0,
+  unrelatedOriginalRecordsChanged: 0,
+  knownDisplayCorrections: ['eye', 'pancreas', 'celiac'],
+  currentRootStructures: display.structures.length,
   controlMarkupCases: 2,
   cutawayControlMarkupCases: 6,
   cutawayGeometryCases,

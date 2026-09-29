@@ -17,7 +17,13 @@
   "correctedParentTriangles": 97338,
   "suppressedComponents": 9,
   "suppressedAreaMm2": 0.0029953646262735273,
-  "unrelatedToEyeOrPancreasDisplayedRecordsChanged": 0,
+  "unrelatedOriginalRecordsChanged": 0,
+  "knownDisplayCorrections": [
+    "eye",
+    "pancreas",
+    "celiac"
+  ],
+  "currentRootStructures": 1104,
   "controlMarkupCases": 2,
   "cutawayControlMarkupCases": 6,
   "cutawayGeometryCases": 270,

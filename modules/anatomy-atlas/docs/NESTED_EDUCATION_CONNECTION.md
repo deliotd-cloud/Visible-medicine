@@ -4,7 +4,9 @@ The website's shared nested workbench exposes `visibleMedicineNestedEducation`
 while a trusted current parent/study is mounted. This covers the workbench's
 brainstem, ventricular, cerebral, visual-pathway, cardiac, coronary-venous,
 pulmonary, hepatic, pancreatic, renal and cricothyroid source structures.
-Eye, femoral and cranial-artery component workbenches are not connected here.
+Eye, femoral and cranial-artery component workbenches now use the same isolated
+connection in their own mounted views. Source-part names remain source-part
+names; this does not identify an unnamed artery fragment as a clinical segment.
 The standalone Atlas does not install this website host interface.
 
 The host calls `connect({document, policy, viewer, onStatus})`, using the existing
@@ -60,3 +62,40 @@ This checkpoint is source/compiled-module acceptance only. Importing into the
 website, refreshing review bindings and checking the integrated website remain
 the next delivery step. No hosted deployment, real-study connection or clinical
 approval is claimed.
+
+## Separate-workbench parity — 29 September 2026
+
+Eye and artery-component views forward the trusted website catalogue and use
+the same explicit opt-in, loaded/visible child restrictions, isolation/cutaway
+pause and non-echoing selection. Unresolved initial child bindings fail closed.
+No controls appear without a host connection. The reconciler now checks parent
+bundle identity against the admitted display catalogue, matching the existing
+record resolver; this fixes the corrected right-eye bundle being rejected when
+starting with the raw catalogue. Raw and corrected inputs resolve identically,
+and unknown parent bundles still fail. No source gate or licence was relaxed.
+
+Checks: eight synthetic CT/MRI hook cases across four workbench families,
+75 actual eye-component callback checks, 1,027 existing nested-practice checks,
+151,891 eye geometry/control assertions, 803 femoral and 1,534 cranial-component
+checks; eye ultrasound teaching and imaging/renderer/visibility regressions pass.
+TypeScript and regional module build pass. Actual compiled-browser tests cover
+all seven current parent views (both eyes, both deep-femoral parents, both PICA
+parents and the supplied right MCA source parts), alternating1440/390px.
+Opt-in, incoming/outgoing selection, no echo, hide/reject/restore-pause and root
+preservation pass. Eye/femoral mobile screenshots inspected. Synthetic only;
+not real-DICOM, clinical or full-device acceptance.
+
+Legacy validators were repaired without changing anatomy: current admitted
+root additions/three display corrections, source-bound draft imaging rather
+than archived raw-parent teaching, current inline-view hiding/paused root
+connection, and the installed framework shim. The ultrasound test's historical
+whole-file comparisons now use its original delivery while present geometry,
+exact teaching hashes and negative source checks remain current. Component
+callback harnesses explicitly implement the new React hooks; lifecycle tests
+and browser checks remain separate. Initial failures are retained in local logs.
+
+The parity changes are source-only at this checkpoint; they still require the
+next generated website import and integration checks. Evidence:
+`work/check-education-parity-browser-20260929.mjs`,
+`work/education-parity-browser-20260929.json`, and Atlas `.local/test-logs/`.
+Models, authored content, private images, approvals and desktop viewers unchanged.

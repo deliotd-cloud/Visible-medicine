@@ -50,6 +50,10 @@ let active = false,
   slots = [];
 const shim = {
   ...React,
+  // Callback harness only; Education lifecycle has its own hook/browser suite.
+  useRef: value => active ? shim.useState(() => ({current:value}))[0] : React.useRef(value),
+  useEffect: (fn,deps) => { if (!active) return React.useEffect(fn,deps); },
+  useLayoutEffect: (fn,deps) => { if (!active) return React.useLayoutEffect(fn,deps); },
   useState(value) {
     if (!active) return React.useState(value);
     const i = cursor++;

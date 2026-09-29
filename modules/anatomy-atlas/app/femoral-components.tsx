@@ -22,7 +22,9 @@ import {
   DialogTitle,
 } from './study-surface';
 import { BodyScene, retryBodyAssets } from './body-scene';
-import { allBodySystems, type BodyStructure } from './body-types';
+import { allBodySystems, type BodyCatalog, type BodyStructure } from './body-types';
+import { ImagingLink } from './imaging-link';
+import { useNestedEducationLink } from './nested-education-link';
 import { NestedTeaching } from './nested-teaching';
 import { nestedReviewHref } from '@/lib/nested-review-links';
 import { CutawayControls, cutPlanes } from './cutaway-controls';
@@ -52,6 +54,7 @@ import './eye-layers.css';
 
 type Props = {
   parent: BodyStructure;
+  educationCatalog?: BodyCatalog;
   study?: 'femoral-components' | 'cranial-artery-components';
   initialSelectedId?: string;
   initialTeachingTopic?: NestedImagingTopic;
@@ -78,6 +81,7 @@ const femoralPresetNames = {
 
 export function FemoralComponentView({
   parent,
+  educationCatalog,
   study = 'femoral-components',
   initialSelectedId,
   initialTeachingTopic,
@@ -182,6 +186,25 @@ export function FemoralComponentView({
     setFocus(false);
     setIsolated(false);
   }
+  const educationAllowedIds = useMemo(
+    () => loaded && !failed ? parts.filter(s => !hidden.includes(s.id)).map(s => s.id) : [],
+    [parts, hidden, loaded, failed],
+  );
+  function applySelection(id: string) {
+    if (parts.some(s => s.id === id)) change({ type: 'select', id });
+  }
+  const educationLink = useNestedEducationLink({
+    catalog: educationCatalog, parent, study, layers: parts,
+    allowedIds: educationAllowedIds,
+    disabled: !loaded || failed || health !== 'ready' || isolated ||
+      inspection.plane !== 'off' || (initialSelectedId !== undefined && !initialSelection),
+    onSelect: applySelection,
+  });
+  function select(id: string) {
+    if (!parts.some(s => s.id === id)) return;
+    applySelection(id);
+    educationLink.publish(id);
+  }
   function showPreset(value: string) {
     if (!Object.hasOwn(presets, value)) return;
     change({ type: 'preset', value });
@@ -225,7 +248,7 @@ export function FemoralComponentView({
           plate={false}
           appearance={appearance}
           retries={{ [study]: retry }}
-          onSelect={(id) => change({ type: 'select', id })}
+          onSelect={select}
           onLoaded={onLoaded}
           onFailure={onFailure}
           onRendererHealth={setHealth}
@@ -326,6 +349,7 @@ export function FemoralComponentView({
         className="eye-layer-controls"
         aria-label="Artery component controls"
       >
+        {educationLink.adapter && <ImagingLink link={educationLink} />}
         {study === 'femoral-components' && (
           <div className="eye-layer-presets">
             <label htmlFor="femoral-component-preset">Study view</label>
@@ -362,7 +386,7 @@ export function FemoralComponentView({
                 size="sm"
                 variant={s.id === selectedId ? 'secondary' : 'ghost'}
                 aria-pressed={s.id === selectedId}
-                onClick={() => change({ type: 'select', id: s.id })}
+                onClick={() => select(s.id)}
               >
                 {s.role === 'source-part' ? s.name : femoralComponentLabel(s)}
               </Button>
