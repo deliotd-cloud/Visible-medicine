@@ -1,5 +1,14 @@
 # Third-party notices
 
+## Cerebral-lobar imaging teaching — 29 September 2026
+
+Original concise CT/MRI teaching links to consultant-authored Radiology
+Masterclass and the ESR CNS chapter. No reference text, images, diagrams or
+PDFs are redistributed. These are factual references, not reusable assets:
+the ESR chapter explicitly uses CC BY-NC-ND 4.0 and is excluded from commercial
+asset ingestion. No new dependency, fee, model or patient image is introduced.
+See [teaching scope and validation](../docs/CEREBRAL_LOBAR_IMAGING_20260929.md).
+
 ## Selectable hippocampi — 29 September 2026
 
 BodyParts3D, © The Database Center for Life Science licensed under

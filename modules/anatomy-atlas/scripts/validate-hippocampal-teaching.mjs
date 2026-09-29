@@ -5,6 +5,7 @@ import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import { resolve } from 'node:path';
 import { build } from './workspace-component-test-build.mjs';
+import { nestedBeforeLobarImaging } from './cerebral-lobar-imaging-history.mjs';
 
 const baseline = 'bd700a5528dd4b2a62653f530d3f474de1f8b5bb';
 const require = createRequire(import.meta.url);
@@ -20,9 +21,10 @@ async function load(contents, resolveDir = process.cwd()) {
 }
 const api = await load(`export * from './content/nested-teaching'; export * from './lib/nested-teaching'; export * from './lib/nested-review-material'; export {cerebralCatalog} from './lib/cerebral'; export {NestedTeaching} from './app/nested-teaching';`);
 const previous = await load(old('content/nested-teaching.ts'), resolve('content'));
-assert.deepEqual(clone(api.nestedConcepts.filter(c => c.id !== 'cerebral-hippocampus')), clone(previous.nestedConcepts), 'All older lessons unchanged');
+const beforeLobar = nestedBeforeLobarImaging(api);
+assert.deepEqual(clone(beforeLobar.nestedConcepts.filter(c => c.id !== 'cerebral-hippocampus')), clone(previous.nestedConcepts), 'All older lessons unchanged except independently pinned lobar imaging');
 for (const [key, value] of Object.entries(previous.nestedTeachingReferences)) assert.deepEqual(clone(api.nestedTeachingReferences[key]), clone(value));
-const newReferences = Object.keys(api.nestedTeachingReferences).filter(key => !Object.hasOwn(previous.nestedTeachingReferences, key));
+const newReferences = Object.keys(beforeLobar.nestedTeachingReferences).filter(key => !Object.hasOwn(previous.nestedTeachingReferences, key));
 assert.deepEqual(newReferences.sort(), ['hippocampalTopography', 'hippocampalMemory', 'hippocampalLearning', 'hippocampalMRI'].sort());
 const pins = JSON.parse(await readFile('content/nested-teaching-bindings.v1.json'));
 const priorPins = JSON.parse(old('content/nested-teaching-bindings.v1.json'));

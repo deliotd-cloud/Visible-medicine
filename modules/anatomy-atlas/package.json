@@ -225,7 +225,7 @@
     "cardiac:test": "node scripts/validate-cardiac.mjs",
     "ventricular-relationships:test": "node scripts/validate-ventricular-relationships.mjs",
     "nested-learning:test": "node scripts/validate-nested-learning.mjs",
-    "nested-teaching:test": "node scripts/pin-nested-teaching.mjs --check && node scripts/validate-nested-teaching.mjs",
+    "nested-teaching:test": "node scripts/pin-nested-teaching.mjs --check && node scripts/validate-nested-teaching.mjs && node scripts/validate-cerebral-lobar-imaging.mjs",
     "eye-ultrasound:test": "node scripts/validate-eye-ultrasound.mjs",
     "pulmonary-imaging:test": "node scripts/record-pulmonary-imaging-baseline.mjs --check && node scripts/record-pulmonary-imaging.mjs --check && node scripts/validate-pulmonary-imaging.mjs",
     "pulmonary-xray:test": "node scripts/record-pulmonary-xray.mjs --check && node scripts/validate-pulmonary-xray.mjs",

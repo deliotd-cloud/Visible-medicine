@@ -7,6 +7,7 @@ import { build } from './workspace-component-test-build.mjs';
 import { nestedBeforeClinicalReferenceRevision } from './clinical-reference-revision-history.mjs';
 import { nestedBeforePulmonaryImaging } from './pulmonary-imaging-history.mjs';
 import { nestedBeforePulmonaryXray } from './pulmonary-xray-history.mjs';
+import { nestedBeforeLobarImaging, lobarIds } from './cerebral-lobar-imaging-history.mjs';
 
 const require = createRequire(import.meta.url);
 const React = require('react');
@@ -65,7 +66,7 @@ const beforeEyeUs = {
   nestedTeachingReferences: Object.fromEntries(Object.entries(api.nestedTeachingReferences)
     .filter(([key]) => !['lensBiometryUBM', 'posteriorScleraBScan'].includes(key))),
 };
-const historicalApi = nestedBeforeClinicalReferenceRevision(nestedBeforePulmonaryImaging(nestedBeforePulmonaryXray(beforeEyeUs)));
+const historicalApi = nestedBeforeClinicalReferenceRevision(nestedBeforePulmonaryImaging(nestedBeforePulmonaryXray(nestedBeforeLobarImaging(beforeEyeUs))));
 const copy = (value) => JSON.parse(JSON.stringify(value));
 let checks = 0;
 const check = (value, message) => {
@@ -446,7 +447,7 @@ for (const target of targets) {
                     : ['ultrasound']
                 : concept.study === 'pulmonary'
                   ? ['ct', 'mri', 'ultrasound', 'xray']
-                  : concept.id === 'cerebral-insula'
+                  : concept.id === 'cerebral-insula' || lobarIds.some(id => concept.id === 'cerebral-' + id)
                     ? ['ct', 'mri']
                     : concept.id === 'cerebral-superior-temporal-anterior'
                       ? ['mri']
@@ -641,13 +642,15 @@ same(coverage.pathology, { draft: 69, pending: 2 });
 same(coverage.clinical, { draft: 69, pending: 2 });
 for (const tab of ['anatomy', 'function', 'quiz'])
   same(coverage[tab], { draft: 71, pending: 0 });
-same(coverage.ct, { draft: 39, pending: 32 });
-same(coverage.mri, { draft: 44, pending: 27 });
+same(coverage.ct, { draft: 47, pending: 24 });
+same(coverage.mri, { draft: 52, pending: 19 });
 same(coverage.xray, { draft: 5, pending: 66 });
 same(coverage.ultrasound, { draft: 37, pending: 34 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
 const wordsBySource = {};
 const hosts = new Set([
+  'www.radiologymasterclass.co.uk',
+  'www.myesr.org',
   'oac22.hsc.uth.tmc.edu',
   'uroweb.org',
   'cdt.amegroups.org',
@@ -714,11 +717,11 @@ for (const concept of api.nestedConcepts) {
     }
   }
 }
-same(Object.keys(wordsBySource).length, 89);
+same(Object.keys(wordsBySource).length, 91);
 same(
   new Set(Object.values(api.nestedTeachingReferences).map((ref) => ref.url))
     .size,
-  90,
+  92,
   'Do not split one source into duplicate reference keys',
 );
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {
