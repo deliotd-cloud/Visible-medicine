@@ -16,11 +16,15 @@
       "references": [
         "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
         "https://anatomy.elpaso.ttuhsc.edu/schemes/thigh_tables.html",
+        "https://anatomy.ttuhscep.edu/schemes/lungs_ans.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html",
         "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
         "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
         "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
         "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf",
         "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/veins_lowerlimb.html",
         "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html",
         "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html",
         "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html",
@@ -34,7 +38,9 @@
         "https://publish.uwo.ca/~jkiernan/brndiss.htm",
         "https://link.springer.com/article/10.1007/s00701-026-06791-w",
         "https://anatomy.ttuhscep.edu/schemes/axilla_ans.html",
-        "https://pubmed.ncbi.nlm.nih.gov/23131916/"
+        "https://pubmed.ncbi.nlm.nih.gov/23131916/",
+        "https://anatomy.ttuhscep.edu/nervous_system/eye_tables.html",
+        "https://anatomy.ttuhscep.edu/nervous_system/eye.html"
       ],
       "stages": [
         {
@@ -3702,6 +3708,410 @@
           ]
         },
         {
+          "id": "right-pulmonary-hilum",
+          "title": "Right pulmonary hilum: bronchus & vessels",
+          "rule": {
+            "fmaIds": [
+              "FMA7395",
+              "FMA50872",
+              "FMA49914",
+              "FMA49911"
+            ]
+          },
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "At the right lung root, compare the main bronchus with the right pulmonary artery and superior and inferior pulmonary vein exterior surfaces.",
+          "inspect": "Rotate around the right bronchus to compare its posterior course with the artery and the more anterior and inferior venous surfaces. Select or remove one surface to see what it covers; Undo restores it. After separating surfaces, return to 0% before judging their source positions. These exterior source surfaces do not establish a joined lumen or ostia, a complete lobar map, surgical planes, or patient registration. The grouped left superior and inferior vein selections are not individually named branches. Source boundaries and relationships require revision-bound radiologist review.",
+          "requiredSourceBindings": [
+            {
+              "id": "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+              "fmaId": "FMA7395",
+              "laterality": "right",
+              "bundle": "thorax-organs-inventory",
+              "nodeName": "FMA7395",
+              "sources": [
+                {
+                  "file": "FJ2539",
+                  "sha256": "0e1e4dc8c326263c21819c3c48a3e2e41e72fa92425983876d4902fa5dcc3074"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:right:vessel:right-pulmonary-artery",
+              "fmaId": "FMA50872",
+              "laterality": "right",
+              "bundle": "thorax-vessels-recovery",
+              "nodeName": "FMA50872",
+              "sources": [
+                {
+                  "file": "FJ3019",
+                  "sha256": "c773fc2d3d3f79544699c16f38f56619730a6d5a1a2c8bb4d8f0dc2ab6889d97"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:right:vessel:right-superior-pulmonary-vein",
+              "fmaId": "FMA49914",
+              "laterality": "right",
+              "bundle": "thorax-vessels-recovery",
+              "nodeName": "FMA49914",
+              "sources": [
+                {
+                  "file": "FJ3020",
+                  "sha256": "074ba67bb3db8f93d6ac7d4e9d2bd1ddcca6e54a2bcb765ec146a9fd30bb3aa8"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:right:vessel:right-inferior-pulmonary-vein",
+              "fmaId": "FMA49911",
+              "laterality": "right",
+              "bundle": "thorax-vessels-recovery",
+              "nodeName": "FMA49911",
+              "sources": [
+                {
+                  "file": "FJ3040",
+                  "sha256": "2e15b98f227f16c3dcacab1a93a26d42e07cd2c2d72ba34b1ef438396f598a12"
+                }
+              ]
+            }
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:thorax:right:vessel:right-pulmonary-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-superior-pulmonary-vein",
+            "vm:anatomy:body:thorax:right:vessel:right-inferior-pulmonary-vein",
+            "vm:anatomy:body:thorax:right:organ:right-main-bronchus"
+          ]
+        },
+        {
+          "id": "left-pulmonary-hilum",
+          "title": "Left pulmonary hilum: bronchus & vessels",
+          "rule": {
+            "fmaIds": [
+              "FMA7396",
+              "FMA50873",
+              "FMA49916",
+              "FMA49913"
+            ]
+          },
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "At the left lung root, compare the main bronchus with the left pulmonary artery and grouped superior and inferior pulmonary vein exterior surfaces.",
+          "inspect": "Rotate around the left bronchus and compare the superior arterial surface with the bronchus and the more anterior and inferior venous surfaces. Select or remove one surface to see what it covers; Undo restores it. After separating surfaces, return to 0% before judging their source positions. These exterior source surfaces do not establish a joined lumen or ostia, a complete lobar map, surgical planes, or patient registration. The grouped left superior and inferior vein selections are not individually named branches. Source boundaries and relationships require revision-bound radiologist review.",
+          "requiredSourceBindings": [
+            {
+              "id": "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
+              "fmaId": "FMA7396",
+              "laterality": "left",
+              "bundle": "thorax-organs-inventory",
+              "nodeName": "FMA7396",
+              "sources": [
+                {
+                  "file": "FJ2450",
+                  "sha256": "7c4ac571448fb3d0c3c1095874bf17a60853bf12457d842a11dd2c62c0994946"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:left:vessel:left-pulmonary-artery",
+              "fmaId": "FMA50873",
+              "laterality": "left",
+              "bundle": "thorax-vessels-recovery",
+              "nodeName": "FMA50873",
+              "sources": [
+                {
+                  "file": "FJ2924",
+                  "sha256": "0cb5312cf816387fdad0d3809a5b5cae1445806ce85546adea39240bc72d2580"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:left:vessel:left-superior-pulmonary-vein",
+              "fmaId": "FMA49916",
+              "laterality": "left",
+              "bundle": "thorax-vessels-recovery",
+              "nodeName": "FMA49916",
+              "sources": [
+                {
+                  "file": "FJ2925",
+                  "sha256": "e87124704e4ca94bfe3206a571e464fe8ccc41afe0f36ee5ccf46cf00aaf4918"
+                },
+                {
+                  "file": "FJ2933",
+                  "sha256": "64e0d2deec1d847be95f41a25c616935c9b400f233a2c07a8c453a3441f80a35"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:left:vessel:left-inferior-pulmonary-vein",
+              "fmaId": "FMA49913",
+              "laterality": "left",
+              "bundle": "thorax-vessels-recovery",
+              "nodeName": "FMA49913",
+              "sources": [
+                {
+                  "file": "FJ2944",
+                  "sha256": "a531b898f54ae008b1ad0c0f0993158e1a15cfbebee79098033ea8c2d2f84372"
+                },
+                {
+                  "file": "FJ2950",
+                  "sha256": "f32bbffccdb0528ed085041ad4243b5b4817a26aa82a73669f9132d6c54f17de"
+                },
+                {
+                  "file": "FJ2955",
+                  "sha256": "bfbb5067eb2da9857069139f12d019bb0f599babc89730aeb4accb1a77916991"
+                }
+              ]
+            }
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:thorax:left:vessel:left-pulmonary-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-superior-pulmonary-vein",
+            "vm:anatomy:body:thorax:left:vessel:left-inferior-pulmonary-vein",
+            "vm:anatomy:body:thorax:left:organ:left-main-bronchus"
+          ]
+        },
+        {
+          "id": "right-pes-anserinus-muscle-convergence",
+          "title": "Right pes anserinus: muscle convergence",
+          "rule": {
+            "fmaIds": [
+              "FMA22354",
+              "FMA43883",
+              "FMA22358"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA24477"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare right sartorius, gracilis, and semitendinosus with the right tibia. Their distal attachments converge at the proximal medial tibia.",
+          "inspect": "Inspect the source surfaces around the medial knee. Select a muscle or tibia to read its source label; Remove one, then Undo to restore it. Extract to separate surfaces for inspection and return separation to 0% to restore source positions. These source surfaces do not separately segment the pes tendon, bursa, medial collateral ligament, or individual insertions; they do not establish insertion order or tendon continuity, graft planning, or scan registration. This draft needs revision-bound radiologist review before clinical approval.",
+          "requiredSourceBindings": [
+            {
+              "id": "vm:anatomy:body:thigh:right:muscle:right-sartorius",
+              "fmaId": "FMA22354",
+              "laterality": "right",
+              "bundle": "thigh-muscles",
+              "nodeName": "FMA22354",
+              "sources": [
+                {
+                  "file": "FJ1434",
+                  "sha256": "670d0351a8f017d4792ee7c5780557b5468a298e128cf44da9443d2712d24eb7"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thigh:right:muscle:right-gracilis",
+              "fmaId": "FMA43883",
+              "laterality": "right",
+              "bundle": "thigh-muscles",
+              "nodeName": "FMA43883",
+              "sources": [
+                {
+                  "file": "FJ1421",
+                  "sha256": "82d12d8359e66303a7e5a21c2b9b24b26d33b8bbeab55f8f97c87881e25e5fa7"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thigh:right:muscle:right-semitendinosus",
+              "fmaId": "FMA22358",
+              "laterality": "right",
+              "bundle": "thigh-muscles",
+              "nodeName": "FMA22358",
+              "sources": [
+                {
+                  "file": "FJ1436",
+                  "sha256": "a9351992df5093e761784b73ca3f4a7d09d0c997e3cef2f840a45b863eb7097d"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:right:bone:right-tibia",
+              "fmaId": "FMA24477",
+              "laterality": "right",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24477",
+              "sources": [
+                {
+                  "file": "FJ3387",
+                  "sha256": "01879d7310938e82eecc02e1115332497e94085ff5cc1fa8eeee47ad1f5d3578"
+                }
+              ]
+            }
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:leg:right:bone:right-tibia",
+            "vm:anatomy:body:thigh:right:muscle:right-gracilis",
+            "vm:anatomy:body:thigh:right:muscle:right-sartorius",
+            "vm:anatomy:body:thigh:right:muscle:right-semitendinosus"
+          ]
+        },
+        {
+          "id": "left-pes-anserinus-muscle-convergence",
+          "title": "Left pes anserinus: muscle convergence",
+          "rule": {
+            "fmaIds": [
+              "FMA22355",
+              "FMA43884",
+              "FMA22359"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA24478"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare left sartorius, gracilis, and semitendinosus with the left tibia. Their distal attachments converge at the proximal medial tibia.",
+          "inspect": "Inspect the source surfaces around the medial knee. Select a muscle or tibia to read its source label; Remove one, then Undo to restore it. Extract to separate surfaces for inspection and return separation to 0% to restore source positions. These source surfaces do not separately segment the pes tendon, bursa, medial collateral ligament, or individual insertions; they do not establish insertion order or tendon continuity, graft planning, or scan registration. This draft needs revision-bound radiologist review before clinical approval.",
+          "requiredSourceBindings": [
+            {
+              "id": "vm:anatomy:body:thigh:left:muscle:left-sartorius",
+              "fmaId": "FMA22355",
+              "laterality": "left",
+              "bundle": "thigh-muscles",
+              "nodeName": "FMA22355",
+              "sources": [
+                {
+                  "file": "FJ1434M",
+                  "sha256": "4c32d96cf9113542f135a32f8a709505fee10796b9b076cc16c7efe665778bc8"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thigh:left:muscle:left-gracilis",
+              "fmaId": "FMA43884",
+              "laterality": "left",
+              "bundle": "thigh-muscles",
+              "nodeName": "FMA43884",
+              "sources": [
+                {
+                  "file": "FJ1421M",
+                  "sha256": "1c760938cc531c810758cf5f9fb25ff3a6a0cfd7798d102da95b3269f6741b00"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thigh:left:muscle:left-semitendinosus",
+              "fmaId": "FMA22359",
+              "laterality": "left",
+              "bundle": "thigh-muscles",
+              "nodeName": "FMA22359",
+              "sources": [
+                {
+                  "file": "FJ1436M",
+                  "sha256": "e97560023348e6d7aa6d1586862a9717b6ae6ffb72f8ceee8ecf43f3f63c567f"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:bone:left-tibia",
+              "fmaId": "FMA24478",
+              "laterality": "left",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24478",
+              "sources": [
+                {
+                  "file": "FJ3282",
+                  "sha256": "40e55d7d28f060be61815603ee5eb1c0ba4c2e93af6fed6b5db7ca88d4ed82ef"
+                }
+              ]
+            }
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:leg:left:bone:left-tibia",
+            "vm:anatomy:body:thigh:left:muscle:left-gracilis",
+            "vm:anatomy:body:thigh:left:muscle:left-sartorius",
+            "vm:anatomy:body:thigh:left:muscle:left-semitendinosus"
+          ]
+        },
+        {
+          "id": "posterior-mediastinal-conduits",
+          "title": "Posterior mediastinum: oesophagus & vessels",
+          "rule": {
+            "fmaIds": [
+              "FMA7131",
+              "FMA87217",
+              "FMA4838",
+              "FMA4944"
+            ]
+          },
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Compare the supplied oesophagus, descending thoracic aorta, azygos and hemiazygos exterior surfaces in source coordinates. This selected group illustrates posterior mediastinal contents, not its complete boundaries.",
+          "inspect": "From the posterior view, rotate and select each exterior surface, then remove one and use Undo to restore it. Compare the source display with the normal teaching pattern: azygos ascends on the right, hemiazygos crosses toward it, and the descending aorta approaches the midline inferiorly. These are reference relationships, not verified claims about this source geometry. Restore separation to 0% before judging source relationships. Both left and right side filters retain all four targets because their source labels are unpaired, unspecified or midline; those labels do not mean unilateral segmentation. No joined lumen or complete mediastinum is shown. Nerves, thoracic duct, lymph nodes and boundary planes are not drawn. These surfaces do not establish patient registration; source boundaries and relationships await revision-bound radiologist review.",
+          "requiredSourceBindings": [
+            {
+              "id": "vm:anatomy:body:thorax:unpaired:organ:esophagus",
+              "fmaId": "FMA7131",
+              "laterality": "unpaired",
+              "bundle": "thorax-organs",
+              "nodeName": "FMA7131",
+              "sources": [
+                {
+                  "file": "FJ2563",
+                  "sha256": "0bc2935e13650b9a5ea143dee97767e2dba0589eae92f0df4e01f3e2fce3c4b0"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:unspecified:vessel:descending-thoracic-aorta",
+              "fmaId": "FMA87217",
+              "laterality": "unspecified",
+              "bundle": "thorax-vessels-recovery",
+              "nodeName": "FMA87217",
+              "sources": [
+                {
+                  "file": "FJ1931",
+                  "sha256": "b213c8178b48f9afae695254f7bcfb3e08d5781878a76724c353e7e6ea6269be"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:unspecified:vessel:azygos-vein",
+              "fmaId": "FMA4838",
+              "laterality": "unspecified",
+              "bundle": "thorax-vessels-recovery",
+              "nodeName": "FMA4838",
+              "sources": [
+                {
+                  "file": "FJ3416",
+                  "sha256": "88b374af13155c62ea5bcaad554a699d1d95e23948eeb810b62edb7467789dde"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+              "fmaId": "FMA4944",
+              "laterality": "midline",
+              "bundle": "thorax-vessels-recovery",
+              "nodeName": "FMA4944",
+              "sources": [
+                {
+                  "file": "FJ3434",
+                  "sha256": "dcc2d6adb32cb84ffd91fd9104a3ba13986d6e9801231733086cbd8ab5ca2b26"
+                }
+              ]
+            }
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:thorax:unpaired:organ:esophagus",
+            "vm:anatomy:body:thorax:unspecified:vessel:descending-thoracic-aorta",
+            "vm:anatomy:body:thorax:unspecified:vessel:azygos-vein",
+            "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein"
+          ]
+        },
+        {
           "id": "renal-right-relationships",
           "title": "Right kidney relationships",
           "rule": {
@@ -4003,6 +4413,245 @@
             "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
             "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
+          ]
+        },
+        {
+          "id": "knee-popliteal-vessel-pair",
+          "title": "Knee: popliteal artery and vein",
+          "rule": {
+            "fmaIds": [
+              "FMA77380",
+              "FMA77381",
+              "FMA44328",
+              "FMA44329"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA24474",
+                "FMA24475",
+                "FMA24477",
+                "FMA24478",
+                "FMA24480",
+                "FMA24481",
+                "FMA24486",
+                "FMA24487",
+                "FMA22591",
+                "FMA22592"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Compare the supplied popliteal artery and vein surfaces behind each knee with popliteus and whole knee bones. Choose Left or Right to inspect one side.",
+          "inspect": "Rotate to compare the same-side artery and vein surfaces; their displayed order may change with the view. Hide popliteus or a bone to inspect covered surfaces, then Undo. Extract selected separates a whole source surface; return separation to 0% before judging source positions. This is not a fixed vessel order, a compression or patency test, flow study, complete popliteal-fossa dissection, nerve or fascia map, or patient registration. Source boundaries and relationships await revision-bound radiologist review.",
+          "landmarks": [
+            "popliteal artery$",
+            "popliteal vein$",
+            "popliteus$",
+            "patella$"
+          ],
+          "requiredSourceBindings": [
+            {
+              "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
+              "fmaId": "FMA77380",
+              "laterality": "right",
+              "bundle": "leg-vessels-recovery",
+              "nodeName": "FMA77380",
+              "sources": [
+                {
+                  "file": "FJ2170",
+                  "sha256": "4bc14302e06ca2162a6df730a7d9f8549b5e6e9b919ce34e35bbdbeec1b088b0"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
+              "fmaId": "FMA77381",
+              "laterality": "left",
+              "bundle": "leg-vessels-recovery",
+              "nodeName": "FMA77381",
+              "sources": [
+                {
+                  "file": "FJ2086",
+                  "sha256": "20dac622c09e02e45fa95b6f3c2eba7e932fdc3eef507ac19d0d78ed71ef241c"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-vein",
+              "fmaId": "FMA44328",
+              "laterality": "right",
+              "bundle": "leg-vessels-recovery",
+              "nodeName": "FMA44328",
+              "sources": [
+                {
+                  "file": "FJ2171",
+                  "sha256": "b54fb1bed98c0159e1c8501d3211d43080a085fb498d5c992015afc49e1e3dbc"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-vein",
+              "fmaId": "FMA44329",
+              "laterality": "left",
+              "bundle": "leg-vessels-recovery",
+              "nodeName": "FMA44329",
+              "sources": [
+                {
+                  "file": "FJ2117",
+                  "sha256": "92082063ece4916d1b8c3a17b6d135c36edf3ab75dd5b7e9604e71a6d58fa2ee"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thigh:right:bone:right-femur",
+              "fmaId": "FMA24474",
+              "laterality": "right",
+              "bundle": "thigh-skeleton",
+              "nodeName": "FMA24474",
+              "sources": [
+                {
+                  "file": "FJ3365",
+                  "sha256": "5eff0f92905dd45bd0e79b1de0144dc15988c73c683468163255ba1452d58037"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thigh:left:bone:left-femur",
+              "fmaId": "FMA24475",
+              "laterality": "left",
+              "bundle": "thigh-skeleton",
+              "nodeName": "FMA24475",
+              "sources": [
+                {
+                  "file": "FJ3259",
+                  "sha256": "d291cc3619c32c68edb9d29e0b755634c2cb85e3db89f0d0b63a316f879ef86d"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:right:bone:right-tibia",
+              "fmaId": "FMA24477",
+              "laterality": "right",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24477",
+              "sources": [
+                {
+                  "file": "FJ3387",
+                  "sha256": "01879d7310938e82eecc02e1115332497e94085ff5cc1fa8eeee47ad1f5d3578"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:bone:left-tibia",
+              "fmaId": "FMA24478",
+              "laterality": "left",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24478",
+              "sources": [
+                {
+                  "file": "FJ3282",
+                  "sha256": "40e55d7d28f060be61815603ee5eb1c0ba4c2e93af6fed6b5db7ca88d4ed82ef"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:right:bone:right-fibula",
+              "fmaId": "FMA24480",
+              "laterality": "right",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24480",
+              "sources": [
+                {
+                  "file": "FJ3366",
+                  "sha256": "d03fee02cf8eefad1ecfcb9246e3f43ad3c4615c21ce08dc5e2b6901c6395a86"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:bone:left-fibula",
+              "fmaId": "FMA24481",
+              "laterality": "left",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24481",
+              "sources": [
+                {
+                  "file": "FJ3260",
+                  "sha256": "b5fbb694e1d881033ec8318b97c41e9d9bedc89a8df9845573b1aac528829331"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:right:bone:right-patella",
+              "fmaId": "FMA24486",
+              "laterality": "right",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24486",
+              "sources": [
+                {
+                  "file": "FJ3381",
+                  "sha256": "b513b8cb6b37e3eb4211fd35a4469efdf79de37887a0af8c582efc836a6f6307"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:bone:left-patella",
+              "fmaId": "FMA24487",
+              "laterality": "left",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24487",
+              "sources": [
+                {
+                  "file": "FJ3275",
+                  "sha256": "768362d04f0f91cea9a28f4aeae9d9f63f3c82450b68d185fa4afefe75d75cc1"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:right:muscle:right-popliteus",
+              "fmaId": "FMA22591",
+              "laterality": "right",
+              "bundle": "leg-muscles",
+              "nodeName": "FMA22591",
+              "sources": [
+                {
+                  "file": "FJ1430",
+                  "sha256": "78f5d5b80867116a0bbf59575efb8de3ed681030875a577bc00d310012df80fd"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:muscle:left-popliteus",
+              "fmaId": "FMA22592",
+              "laterality": "left",
+              "bundle": "leg-muscles",
+              "nodeName": "FMA22592",
+              "sources": [
+                {
+                  "file": "FJ1430M",
+                  "sha256": "96ece008a2edf30338e1b53611c86de64f2cc329af84fe5d54e9375469c3babd"
+                }
+              ]
+            }
+          ],
+          "sideFilteredSourceBindings": true,
+          "visibleStructureIds": [
+            "vm:anatomy:body:thigh:left:bone:left-femur",
+            "vm:anatomy:body:leg:left:bone:left-fibula",
+            "vm:anatomy:body:leg:left:bone:left-patella",
+            "vm:anatomy:body:leg:left:bone:left-tibia",
+            "vm:anatomy:body:thigh:right:bone:right-femur",
+            "vm:anatomy:body:leg:right:bone:right-fibula",
+            "vm:anatomy:body:leg:right:bone:right-patella",
+            "vm:anatomy:body:leg:right:bone:right-tibia",
+            "vm:anatomy:body:leg:right:muscle:right-popliteus",
+            "vm:anatomy:body:leg:left:muscle:left-popliteus",
+            "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
+            "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
+            "vm:anatomy:body:leg:right:vessel:right-popliteal-vein",
+            "vm:anatomy:body:leg:left:vessel:left-popliteal-vein"
           ]
         },
         {
@@ -5219,6 +5868,412 @@
             "vm:anatomy:body:head-neck:right:muscle:right-sternothyroid",
             "vm:anatomy:body:head-neck:right:muscle:right-thyrohyoid",
             "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage"
+          ]
+        },
+        {
+          "id": "v1-frontal-lacrimal-subset",
+          "title": "V1 · frontal & lacrimal source subset",
+          "rule": {
+            "fmaIds": [
+              "FMA52639",
+              "FMA52640",
+              "FMA52656",
+              "FMA52657",
+              "FMA52643",
+              "FMA52644",
+              "FMA52629",
+              "FMA52630"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA59102",
+                "FMA59103"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "superior",
+          "description": "Compare the source-labelled frontal, supra-orbital, supratrochlear and lacrimal nerves with the lacrimal glands as separate orbital context. These surfaces do not establish branch continuity or sensory territories.",
+          "inspect": "Choose Both, Left or Right. Select a source surface, Remove it and Undo to restore it; return separation to 0% before comparing source positions. This conventional V1 grouping does not prove a complete CN V, branch continuity, sensory function, patient registration or clinical approval. Source relationships await revision-bound radiologist review.",
+          "requiredSourceBindings": [
+            {
+              "id": "vm:anatomy:body:head-neck:right:nerve:right-frontal-nerve",
+              "fmaId": "FMA52639",
+              "laterality": "right",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52639",
+              "sources": [
+                {
+                  "file": "FJ1341",
+                  "sha256": "1d9f4f0ed3196ceb32439608452ef9849f631e1adce9920a6e31bc517bf2f714"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:nerve:left-frontal-nerve",
+              "fmaId": "FMA52640",
+              "laterality": "left",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52640",
+              "sources": [
+                {
+                  "file": "FJ1290",
+                  "sha256": "66c53668aa92b73c55ce5fcfe6476e6665eedf923c8ea02290cdf3456296e0e9"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:nerve:right-supra-orbital-nerve",
+              "fmaId": "FMA52656",
+              "laterality": "right",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52656",
+              "sources": [
+                {
+                  "file": "FJ1376",
+                  "sha256": "18a71e5cefbb6c68e1daf6147fedfa0943ee3044725ea7eccbe5ca62db4c15e4"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:nerve:left-supra-orbital-nerve",
+              "fmaId": "FMA52657",
+              "laterality": "left",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52657",
+              "sources": [
+                {
+                  "file": "FJ1325",
+                  "sha256": "c37ecf086b1049ac3b8acbd0b50ac5eb4c14a58e3a7c56b9d952f463b183853a"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:nerve:right-supratrochlear-nerve",
+              "fmaId": "FMA52643",
+              "laterality": "right",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52643",
+              "sources": [
+                {
+                  "file": "FJ1377",
+                  "sha256": "d11bfb0864f689cc996e2e41c91ce975e3c1dee33c947e2668cce82c03c663d2"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:nerve:left-supratrochlear-nerve",
+              "fmaId": "FMA52644",
+              "laterality": "left",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52644",
+              "sources": [
+                {
+                  "file": "FJ1326",
+                  "sha256": "f8a3b51c6408d43a35ccf8a773e4bdd5b5872d562402a9834c34c5dc0b3d9c25"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:nerve:right-lacrimal-nerve",
+              "fmaId": "FMA52629",
+              "laterality": "right",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52629",
+              "sources": [
+                {
+                  "file": "FJ1351",
+                  "sha256": "0e563e908e3c1e6ea08e3233e8e90c37b6fd029b165a0e6c41d37f985b538f22"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:nerve:left-lacrimal-nerve",
+              "fmaId": "FMA52630",
+              "laterality": "left",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52630",
+              "sources": [
+                {
+                  "file": "FJ1300",
+                  "sha256": "4922693d563eaa50f8b0b0f7547dce8fd265fc40de5414b83020e5b302cecd0a"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
+              "fmaId": "FMA59102",
+              "laterality": "right",
+              "bundle": "head-neck-organs-gaps",
+              "nodeName": "FMA59102",
+              "sources": [
+                {
+                  "file": "FJ1350",
+                  "sha256": "ff108bfd00a1a4dc0eebfa62c8553b1ca94d7003d18437e7d637566db433f604"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland",
+              "fmaId": "FMA59103",
+              "laterality": "left",
+              "bundle": "head-neck-organs-gaps",
+              "nodeName": "FMA59103",
+              "sources": [
+                {
+                  "file": "FJ1299",
+                  "sha256": "4249d4bed4b176bb504a756ebffca8ea5b96268e6f57b000206c81ead66674d8"
+                }
+              ]
+            }
+          ],
+          "sideFilteredSourceBindings": true,
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:left:nerve:left-frontal-nerve",
+            "vm:anatomy:body:head-neck:left:nerve:left-lacrimal-nerve",
+            "vm:anatomy:body:head-neck:left:nerve:left-supra-orbital-nerve",
+            "vm:anatomy:body:head-neck:left:nerve:left-supratrochlear-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:right-frontal-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:right-lacrimal-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:right-supra-orbital-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:right-supratrochlear-nerve",
+            "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
+            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland"
+          ]
+        },
+        {
+          "id": "v1-nasociliary-subset",
+          "title": "V1 · nasociliary source subset",
+          "rule": {
+            "fmaIds": [
+              "FMA52669",
+              "FMA52670",
+              "FMA52676",
+              "FMA52677",
+              "FMA52715",
+              "FMA52716",
+              "FMA52698",
+              "FMA52699",
+              "FMA82734",
+              "FMA82735",
+              "FMA52673",
+              "FMA52674"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA53549",
+                "FMA53550"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "superior",
+          "description": "Compare the source-labelled nasociliary, ethmoidal, infratrochlear, long ciliary and ciliary-ganglion communicating branches. The paired ciliary ganglia are context, not proof of a connected or functioning pathway.",
+          "inspect": "Choose Both, Left or Right. Select a source surface, Remove it and Undo to restore it; return separation to 0% before comparing source positions. This conventional V1 grouping does not prove a complete CN V, branch continuity, sensory function, patient registration or clinical approval. Source relationships await revision-bound radiologist review.",
+          "requiredSourceBindings": [
+            {
+              "id": "vm:anatomy:body:head-neck:right:nerve:right-nasociliary-nerve",
+              "fmaId": "FMA52669",
+              "laterality": "right",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52669",
+              "sources": [
+                {
+                  "file": "FJ1361",
+                  "sha256": "f399ec1e5dd080357ba1bdde33393932e400f76567cf9c9c2392430600f99059"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:nerve:left-nasociliary-nerve",
+              "fmaId": "FMA52670",
+              "laterality": "left",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52670",
+              "sources": [
+                {
+                  "file": "FJ1310",
+                  "sha256": "c6f00f35feecee6f75646ac7a5461f03ee6ca89e55158c9574fbf5663270df77"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:nerve:right-anterior-ethmoidal-nerve",
+              "fmaId": "FMA52676",
+              "laterality": "right",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52676",
+              "sources": [
+                {
+                  "file": "FJ1333",
+                  "sha256": "125af43b25653f04d3c1efcb0ae71cc19da9b13dd305ff443881bcc1fbec138f"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:nerve:left-anterior-ethmoidal-nerve",
+              "fmaId": "FMA52677",
+              "laterality": "left",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52677",
+              "sources": [
+                {
+                  "file": "FJ1283",
+                  "sha256": "b75bf29e8ccea444f1a0ccd694c9f7fdbc7ad8d0cace68f60be489024e647af9"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:nerve:right-posterior-ethmoidal-nerve",
+              "fmaId": "FMA52715",
+              "laterality": "right",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52715",
+              "sources": [
+                {
+                  "file": "FJ1366",
+                  "sha256": "f57d8678d7c047eff9a104ece72c3e0391909fef1f895679bb37ffb7a88dbb00"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:nerve:left-posterior-ethmoidal-nerve",
+              "fmaId": "FMA52716",
+              "laterality": "left",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52716",
+              "sources": [
+                {
+                  "file": "FJ1315",
+                  "sha256": "5d9a0810f0345ba52ca1680d132e0e63021af48a691e6abd1a137c898f78134e"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:nerve:right-infratrochlear-nerve",
+              "fmaId": "FMA52698",
+              "laterality": "right",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52698",
+              "sources": [
+                {
+                  "file": "FJ1347",
+                  "sha256": "01773f3e0da8b9564817531e2aba0d85f97a9da6d1e20b593b44c14ded8281ac"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:nerve:left-infratrochlear-nerve",
+              "fmaId": "FMA52699",
+              "laterality": "left",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52699",
+              "sources": [
+                {
+                  "file": "FJ1296",
+                  "sha256": "d209c170330a18a2f1065be1bd0acacc034ea30a46e19a9bf0946fa12eece412"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:nerve:right-long-ciliary-nerve",
+              "fmaId": "FMA82734",
+              "laterality": "right",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA82734",
+              "sources": [
+                {
+                  "file": "FJ1369",
+                  "sha256": "a3e9a8f15fcd4b9ed6bb12ca2fa984b971ecb9e090b832effc8e108537871917"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:nerve:left-long-ciliary-nerve",
+              "fmaId": "FMA82735",
+              "laterality": "left",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA82735",
+              "sources": [
+                {
+                  "file": "FJ1318",
+                  "sha256": "41dd32800ddf73a2dabd9dc2556766d2fea99a593793a98879985bc926b89c7b"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:nerve:communicating-branch-of-right-nasociliary-nerve-with-right-ciliary-ganglion",
+              "fmaId": "FMA52673",
+              "laterality": "right",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52673",
+              "sources": [
+                {
+                  "file": "FJ1362",
+                  "sha256": "e9055e3812268376fcb1d0dc51e212e3c1b5b506947abde5d9d2a1de61516970"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:nerve:communicating-branch-of-left-nasociliary-nerve-with-left-ciliary-ganglion",
+              "fmaId": "FMA52674",
+              "laterality": "left",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52674",
+              "sources": [
+                {
+                  "file": "FJ1311",
+                  "sha256": "9511e0d9b9f66f61538766c053cb26c0a1aab37c15b01e5b6269c00a9047647d"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+              "fmaId": "FMA53549",
+              "laterality": "right",
+              "bundle": "head-neck-nerves-inventory",
+              "nodeName": "FMA53549",
+              "sources": [
+                {
+                  "file": "FJ1339",
+                  "sha256": "de1f5bc0af45dc52a70d8e2d647f509b3ff0072ae504ab95483e9c1662195076"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
+              "fmaId": "FMA53550",
+              "laterality": "left",
+              "bundle": "head-neck-nerves-inventory",
+              "nodeName": "FMA53550",
+              "sources": [
+                {
+                  "file": "FJ1288",
+                  "sha256": "c362a3813e882588d31710138ce6e180c2d0dd32e9755a0f53452a82657371e0"
+                }
+              ]
+            }
+          ],
+          "sideFilteredSourceBindings": true,
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:left:nerve:left-anterior-ethmoidal-nerve",
+            "vm:anatomy:body:head-neck:left:nerve:left-infratrochlear-nerve",
+            "vm:anatomy:body:head-neck:left:nerve:left-nasociliary-nerve",
+            "vm:anatomy:body:head-neck:left:nerve:communicating-branch-of-left-nasociliary-nerve-with-left-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:left:nerve:left-posterior-ethmoidal-nerve",
+            "vm:anatomy:body:head-neck:left:nerve:left-long-ciliary-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:right-anterior-ethmoidal-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:right-infratrochlear-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:right-nasociliary-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:communicating-branch-of-right-nasociliary-nerve-with-right-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:right:nerve:right-posterior-ethmoidal-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:right-long-ciliary-nerve",
+            "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion"
           ]
         }
       ]
@@ -11016,7 +12071,9 @@
         "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html",
         "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
         "https://pmc.ncbi.nlm.nih.gov/articles/PMC5381851/",
-        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html"
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/veins_lowerlimb.html"
       ],
       "stages": [
         {
@@ -12061,6 +13118,245 @@
             "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
             "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
             "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
+          ]
+        },
+        {
+          "id": "knee-popliteal-vessel-pair",
+          "title": "Knee: popliteal artery and vein",
+          "rule": {
+            "fmaIds": [
+              "FMA77380",
+              "FMA77381",
+              "FMA44328",
+              "FMA44329"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA24474",
+                "FMA24475",
+                "FMA24477",
+                "FMA24478",
+                "FMA24480",
+                "FMA24481",
+                "FMA24486",
+                "FMA24487",
+                "FMA22591",
+                "FMA22592"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Compare the supplied popliteal artery and vein surfaces behind each knee with popliteus and whole knee bones. Choose Left or Right to inspect one side.",
+          "inspect": "Rotate to compare the same-side artery and vein surfaces; their displayed order may change with the view. Hide popliteus or a bone to inspect covered surfaces, then Undo. Extract selected separates a whole source surface; return separation to 0% before judging source positions. This is not a fixed vessel order, a compression or patency test, flow study, complete popliteal-fossa dissection, nerve or fascia map, or patient registration. Source boundaries and relationships await revision-bound radiologist review.",
+          "landmarks": [
+            "popliteal artery$",
+            "popliteal vein$",
+            "popliteus$",
+            "patella$"
+          ],
+          "requiredSourceBindings": [
+            {
+              "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
+              "fmaId": "FMA77380",
+              "laterality": "right",
+              "bundle": "leg-vessels-recovery",
+              "nodeName": "FMA77380",
+              "sources": [
+                {
+                  "file": "FJ2170",
+                  "sha256": "4bc14302e06ca2162a6df730a7d9f8549b5e6e9b919ce34e35bbdbeec1b088b0"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
+              "fmaId": "FMA77381",
+              "laterality": "left",
+              "bundle": "leg-vessels-recovery",
+              "nodeName": "FMA77381",
+              "sources": [
+                {
+                  "file": "FJ2086",
+                  "sha256": "20dac622c09e02e45fa95b6f3c2eba7e932fdc3eef507ac19d0d78ed71ef241c"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-vein",
+              "fmaId": "FMA44328",
+              "laterality": "right",
+              "bundle": "leg-vessels-recovery",
+              "nodeName": "FMA44328",
+              "sources": [
+                {
+                  "file": "FJ2171",
+                  "sha256": "b54fb1bed98c0159e1c8501d3211d43080a085fb498d5c992015afc49e1e3dbc"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-vein",
+              "fmaId": "FMA44329",
+              "laterality": "left",
+              "bundle": "leg-vessels-recovery",
+              "nodeName": "FMA44329",
+              "sources": [
+                {
+                  "file": "FJ2117",
+                  "sha256": "92082063ece4916d1b8c3a17b6d135c36edf3ab75dd5b7e9604e71a6d58fa2ee"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thigh:right:bone:right-femur",
+              "fmaId": "FMA24474",
+              "laterality": "right",
+              "bundle": "thigh-skeleton",
+              "nodeName": "FMA24474",
+              "sources": [
+                {
+                  "file": "FJ3365",
+                  "sha256": "5eff0f92905dd45bd0e79b1de0144dc15988c73c683468163255ba1452d58037"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thigh:left:bone:left-femur",
+              "fmaId": "FMA24475",
+              "laterality": "left",
+              "bundle": "thigh-skeleton",
+              "nodeName": "FMA24475",
+              "sources": [
+                {
+                  "file": "FJ3259",
+                  "sha256": "d291cc3619c32c68edb9d29e0b755634c2cb85e3db89f0d0b63a316f879ef86d"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:right:bone:right-tibia",
+              "fmaId": "FMA24477",
+              "laterality": "right",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24477",
+              "sources": [
+                {
+                  "file": "FJ3387",
+                  "sha256": "01879d7310938e82eecc02e1115332497e94085ff5cc1fa8eeee47ad1f5d3578"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:bone:left-tibia",
+              "fmaId": "FMA24478",
+              "laterality": "left",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24478",
+              "sources": [
+                {
+                  "file": "FJ3282",
+                  "sha256": "40e55d7d28f060be61815603ee5eb1c0ba4c2e93af6fed6b5db7ca88d4ed82ef"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:right:bone:right-fibula",
+              "fmaId": "FMA24480",
+              "laterality": "right",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24480",
+              "sources": [
+                {
+                  "file": "FJ3366",
+                  "sha256": "d03fee02cf8eefad1ecfcb9246e3f43ad3c4615c21ce08dc5e2b6901c6395a86"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:bone:left-fibula",
+              "fmaId": "FMA24481",
+              "laterality": "left",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24481",
+              "sources": [
+                {
+                  "file": "FJ3260",
+                  "sha256": "b5fbb694e1d881033ec8318b97c41e9d9bedc89a8df9845573b1aac528829331"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:right:bone:right-patella",
+              "fmaId": "FMA24486",
+              "laterality": "right",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24486",
+              "sources": [
+                {
+                  "file": "FJ3381",
+                  "sha256": "b513b8cb6b37e3eb4211fd35a4469efdf79de37887a0af8c582efc836a6f6307"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:bone:left-patella",
+              "fmaId": "FMA24487",
+              "laterality": "left",
+              "bundle": "leg-skeleton",
+              "nodeName": "FMA24487",
+              "sources": [
+                {
+                  "file": "FJ3275",
+                  "sha256": "768362d04f0f91cea9a28f4aeae9d9f63f3c82450b68d185fa4afefe75d75cc1"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:right:muscle:right-popliteus",
+              "fmaId": "FMA22591",
+              "laterality": "right",
+              "bundle": "leg-muscles",
+              "nodeName": "FMA22591",
+              "sources": [
+                {
+                  "file": "FJ1430",
+                  "sha256": "78f5d5b80867116a0bbf59575efb8de3ed681030875a577bc00d310012df80fd"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:leg:left:muscle:left-popliteus",
+              "fmaId": "FMA22592",
+              "laterality": "left",
+              "bundle": "leg-muscles",
+              "nodeName": "FMA22592",
+              "sources": [
+                {
+                  "file": "FJ1430M",
+                  "sha256": "96ece008a2edf30338e1b53611c86de64f2cc329af84fe5d54e9375469c3babd"
+                }
+              ]
+            }
+          ],
+          "sideFilteredSourceBindings": true,
+          "visibleStructureIds": [
+            "vm:anatomy:body:thigh:left:bone:left-femur",
+            "vm:anatomy:body:leg:left:bone:left-fibula",
+            "vm:anatomy:body:leg:left:bone:left-patella",
+            "vm:anatomy:body:leg:left:bone:left-tibia",
+            "vm:anatomy:body:thigh:right:bone:right-femur",
+            "vm:anatomy:body:leg:right:bone:right-fibula",
+            "vm:anatomy:body:leg:right:bone:right-patella",
+            "vm:anatomy:body:leg:right:bone:right-tibia",
+            "vm:anatomy:body:leg:right:muscle:right-popliteus",
+            "vm:anatomy:body:leg:left:muscle:left-popliteus",
+            "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
+            "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
+            "vm:anatomy:body:leg:right:vessel:right-popliteal-vein",
+            "vm:anatomy:body:leg:left:vessel:left-popliteal-vein"
           ]
         }
       ]
@@ -13865,6 +15161,7 @@
       ],
       "references": [
         "https://anatomy.ttuhscep.edu/schemes/thorax_wall_tables.html",
+        "https://anatomy.ttuhscep.edu/schemes/lungs_ans.html",
         "https://anatomy.ttuhscep.edu/anatomytables/muscles_thorax.html",
         "https://www.ncbi.nlm.nih.gov/books/NBK538321/"
       ],
@@ -15665,6 +16962,246 @@
             "vm:anatomy:body:thorax:unpaired:organ:esophagus",
             "vm:anatomy:body:thorax:unpaired:organ:trachea",
             "vm:anatomy:body:thorax:unpaired:organ:thymus"
+          ]
+        },
+        {
+          "id": "right-pulmonary-hilum",
+          "title": "Right pulmonary hilum: bronchus & vessels",
+          "rule": {
+            "fmaIds": [
+              "FMA7395",
+              "FMA50872",
+              "FMA49914",
+              "FMA49911"
+            ]
+          },
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "At the right lung root, compare the main bronchus with the right pulmonary artery and superior and inferior pulmonary vein exterior surfaces.",
+          "inspect": "Rotate around the right bronchus to compare its posterior course with the artery and the more anterior and inferior venous surfaces. Select or remove one surface to see what it covers; Undo restores it. After separating surfaces, return to 0% before judging their source positions. These exterior source surfaces do not establish a joined lumen or ostia, a complete lobar map, surgical planes, or patient registration. The grouped left superior and inferior vein selections are not individually named branches. Source boundaries and relationships require revision-bound radiologist review.",
+          "requiredSourceBindings": [
+            {
+              "id": "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+              "fmaId": "FMA7395",
+              "laterality": "right",
+              "bundle": "thorax-organs-inventory",
+              "nodeName": "FMA7395",
+              "sources": [
+                {
+                  "file": "FJ2539",
+                  "sha256": "0e1e4dc8c326263c21819c3c48a3e2e41e72fa92425983876d4902fa5dcc3074"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:right:vessel:right-pulmonary-artery",
+              "fmaId": "FMA50872",
+              "laterality": "right",
+              "bundle": "thorax-vessels-recovery",
+              "nodeName": "FMA50872",
+              "sources": [
+                {
+                  "file": "FJ3019",
+                  "sha256": "c773fc2d3d3f79544699c16f38f56619730a6d5a1a2c8bb4d8f0dc2ab6889d97"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:right:vessel:right-superior-pulmonary-vein",
+              "fmaId": "FMA49914",
+              "laterality": "right",
+              "bundle": "thorax-vessels-recovery",
+              "nodeName": "FMA49914",
+              "sources": [
+                {
+                  "file": "FJ3020",
+                  "sha256": "074ba67bb3db8f93d6ac7d4e9d2bd1ddcca6e54a2bcb765ec146a9fd30bb3aa8"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:right:vessel:right-inferior-pulmonary-vein",
+              "fmaId": "FMA49911",
+              "laterality": "right",
+              "bundle": "thorax-vessels-recovery",
+              "nodeName": "FMA49911",
+              "sources": [
+                {
+                  "file": "FJ3040",
+                  "sha256": "2e15b98f227f16c3dcacab1a93a26d42e07cd2c2d72ba34b1ef438396f598a12"
+                }
+              ]
+            }
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:thorax:right:vessel:right-pulmonary-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-superior-pulmonary-vein",
+            "vm:anatomy:body:thorax:right:vessel:right-inferior-pulmonary-vein",
+            "vm:anatomy:body:thorax:right:organ:right-main-bronchus"
+          ]
+        },
+        {
+          "id": "left-pulmonary-hilum",
+          "title": "Left pulmonary hilum: bronchus & vessels",
+          "rule": {
+            "fmaIds": [
+              "FMA7396",
+              "FMA50873",
+              "FMA49916",
+              "FMA49913"
+            ]
+          },
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "At the left lung root, compare the main bronchus with the left pulmonary artery and grouped superior and inferior pulmonary vein exterior surfaces.",
+          "inspect": "Rotate around the left bronchus and compare the superior arterial surface with the bronchus and the more anterior and inferior venous surfaces. Select or remove one surface to see what it covers; Undo restores it. After separating surfaces, return to 0% before judging their source positions. These exterior source surfaces do not establish a joined lumen or ostia, a complete lobar map, surgical planes, or patient registration. The grouped left superior and inferior vein selections are not individually named branches. Source boundaries and relationships require revision-bound radiologist review.",
+          "requiredSourceBindings": [
+            {
+              "id": "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
+              "fmaId": "FMA7396",
+              "laterality": "left",
+              "bundle": "thorax-organs-inventory",
+              "nodeName": "FMA7396",
+              "sources": [
+                {
+                  "file": "FJ2450",
+                  "sha256": "7c4ac571448fb3d0c3c1095874bf17a60853bf12457d842a11dd2c62c0994946"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:left:vessel:left-pulmonary-artery",
+              "fmaId": "FMA50873",
+              "laterality": "left",
+              "bundle": "thorax-vessels-recovery",
+              "nodeName": "FMA50873",
+              "sources": [
+                {
+                  "file": "FJ2924",
+                  "sha256": "0cb5312cf816387fdad0d3809a5b5cae1445806ce85546adea39240bc72d2580"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:left:vessel:left-superior-pulmonary-vein",
+              "fmaId": "FMA49916",
+              "laterality": "left",
+              "bundle": "thorax-vessels-recovery",
+              "nodeName": "FMA49916",
+              "sources": [
+                {
+                  "file": "FJ2925",
+                  "sha256": "e87124704e4ca94bfe3206a571e464fe8ccc41afe0f36ee5ccf46cf00aaf4918"
+                },
+                {
+                  "file": "FJ2933",
+                  "sha256": "64e0d2deec1d847be95f41a25c616935c9b400f233a2c07a8c453a3441f80a35"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:left:vessel:left-inferior-pulmonary-vein",
+              "fmaId": "FMA49913",
+              "laterality": "left",
+              "bundle": "thorax-vessels-recovery",
+              "nodeName": "FMA49913",
+              "sources": [
+                {
+                  "file": "FJ2944",
+                  "sha256": "a531b898f54ae008b1ad0c0f0993158e1a15cfbebee79098033ea8c2d2f84372"
+                },
+                {
+                  "file": "FJ2950",
+                  "sha256": "f32bbffccdb0528ed085041ad4243b5b4817a26aa82a73669f9132d6c54f17de"
+                },
+                {
+                  "file": "FJ2955",
+                  "sha256": "bfbb5067eb2da9857069139f12d019bb0f599babc89730aeb4accb1a77916991"
+                }
+              ]
+            }
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:thorax:left:vessel:left-pulmonary-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-superior-pulmonary-vein",
+            "vm:anatomy:body:thorax:left:vessel:left-inferior-pulmonary-vein",
+            "vm:anatomy:body:thorax:left:organ:left-main-bronchus"
+          ]
+        },
+        {
+          "id": "posterior-mediastinal-conduits",
+          "title": "Posterior mediastinum: oesophagus & vessels",
+          "rule": {
+            "fmaIds": [
+              "FMA7131",
+              "FMA87217",
+              "FMA4838",
+              "FMA4944"
+            ]
+          },
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Compare the supplied oesophagus, descending thoracic aorta, azygos and hemiazygos exterior surfaces in source coordinates. This selected group illustrates posterior mediastinal contents, not its complete boundaries.",
+          "inspect": "From the posterior view, rotate and select each exterior surface, then remove one and use Undo to restore it. Compare the source display with the normal teaching pattern: azygos ascends on the right, hemiazygos crosses toward it, and the descending aorta approaches the midline inferiorly. These are reference relationships, not verified claims about this source geometry. Restore separation to 0% before judging source relationships. Both left and right side filters retain all four targets because their source labels are unpaired, unspecified or midline; those labels do not mean unilateral segmentation. No joined lumen or complete mediastinum is shown. Nerves, thoracic duct, lymph nodes and boundary planes are not drawn. These surfaces do not establish patient registration; source boundaries and relationships await revision-bound radiologist review.",
+          "requiredSourceBindings": [
+            {
+              "id": "vm:anatomy:body:thorax:unpaired:organ:esophagus",
+              "fmaId": "FMA7131",
+              "laterality": "unpaired",
+              "bundle": "thorax-organs",
+              "nodeName": "FMA7131",
+              "sources": [
+                {
+                  "file": "FJ2563",
+                  "sha256": "0bc2935e13650b9a5ea143dee97767e2dba0589eae92f0df4e01f3e2fce3c4b0"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:unspecified:vessel:descending-thoracic-aorta",
+              "fmaId": "FMA87217",
+              "laterality": "unspecified",
+              "bundle": "thorax-vessels-recovery",
+              "nodeName": "FMA87217",
+              "sources": [
+                {
+                  "file": "FJ1931",
+                  "sha256": "b213c8178b48f9afae695254f7bcfb3e08d5781878a76724c353e7e6ea6269be"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:unspecified:vessel:azygos-vein",
+              "fmaId": "FMA4838",
+              "laterality": "unspecified",
+              "bundle": "thorax-vessels-recovery",
+              "nodeName": "FMA4838",
+              "sources": [
+                {
+                  "file": "FJ3416",
+                  "sha256": "88b374af13155c62ea5bcaad554a699d1d95e23948eeb810b62edb7467789dde"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+              "fmaId": "FMA4944",
+              "laterality": "midline",
+              "bundle": "thorax-vessels-recovery",
+              "nodeName": "FMA4944",
+              "sources": [
+                {
+                  "file": "FJ3434",
+                  "sha256": "dcc2d6adb32cb84ffd91fd9104a3ba13986d6e9801231733086cbd8ab5ca2b26"
+                }
+              ]
+            }
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:thorax:unpaired:organ:esophagus",
+            "vm:anatomy:body:thorax:unspecified:vessel:descending-thoracic-aorta",
+            "vm:anatomy:body:thorax:unspecified:vessel:azygos-vein",
+            "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein"
           ]
         },
         {
@@ -18778,7 +20315,9 @@
         "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf",
         "https://nba.uth.tmc.edu/neuroanatomy/L11/Lab11p09_index.html",
         "https://publish.uwo.ca/~jkiernan/brndiss.htm",
-        "https://link.springer.com/article/10.1007/s00701-026-06791-w"
+        "https://link.springer.com/article/10.1007/s00701-026-06791-w",
+        "https://anatomy.ttuhscep.edu/nervous_system/eye_tables.html",
+        "https://anatomy.ttuhscep.edu/nervous_system/eye.html"
       ],
       "stages": [
         {
@@ -22862,6 +24401,412 @@
             "vm:anatomy:body:head-neck:right:muscle:right-sternothyroid",
             "vm:anatomy:body:head-neck:right:muscle:right-thyrohyoid",
             "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage"
+          ]
+        },
+        {
+          "id": "v1-frontal-lacrimal-subset",
+          "title": "V1 · frontal & lacrimal source subset",
+          "rule": {
+            "fmaIds": [
+              "FMA52639",
+              "FMA52640",
+              "FMA52656",
+              "FMA52657",
+              "FMA52643",
+              "FMA52644",
+              "FMA52629",
+              "FMA52630"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA59102",
+                "FMA59103"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "superior",
+          "description": "Compare the source-labelled frontal, supra-orbital, supratrochlear and lacrimal nerves with the lacrimal glands as separate orbital context. These surfaces do not establish branch continuity or sensory territories.",
+          "inspect": "Choose Both, Left or Right. Select a source surface, Remove it and Undo to restore it; return separation to 0% before comparing source positions. This conventional V1 grouping does not prove a complete CN V, branch continuity, sensory function, patient registration or clinical approval. Source relationships await revision-bound radiologist review.",
+          "requiredSourceBindings": [
+            {
+              "id": "vm:anatomy:body:head-neck:right:nerve:right-frontal-nerve",
+              "fmaId": "FMA52639",
+              "laterality": "right",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52639",
+              "sources": [
+                {
+                  "file": "FJ1341",
+                  "sha256": "1d9f4f0ed3196ceb32439608452ef9849f631e1adce9920a6e31bc517bf2f714"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:nerve:left-frontal-nerve",
+              "fmaId": "FMA52640",
+              "laterality": "left",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52640",
+              "sources": [
+                {
+                  "file": "FJ1290",
+                  "sha256": "66c53668aa92b73c55ce5fcfe6476e6665eedf923c8ea02290cdf3456296e0e9"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:nerve:right-supra-orbital-nerve",
+              "fmaId": "FMA52656",
+              "laterality": "right",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52656",
+              "sources": [
+                {
+                  "file": "FJ1376",
+                  "sha256": "18a71e5cefbb6c68e1daf6147fedfa0943ee3044725ea7eccbe5ca62db4c15e4"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:nerve:left-supra-orbital-nerve",
+              "fmaId": "FMA52657",
+              "laterality": "left",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52657",
+              "sources": [
+                {
+                  "file": "FJ1325",
+                  "sha256": "c37ecf086b1049ac3b8acbd0b50ac5eb4c14a58e3a7c56b9d952f463b183853a"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:nerve:right-supratrochlear-nerve",
+              "fmaId": "FMA52643",
+              "laterality": "right",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52643",
+              "sources": [
+                {
+                  "file": "FJ1377",
+                  "sha256": "d11bfb0864f689cc996e2e41c91ce975e3c1dee33c947e2668cce82c03c663d2"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:nerve:left-supratrochlear-nerve",
+              "fmaId": "FMA52644",
+              "laterality": "left",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52644",
+              "sources": [
+                {
+                  "file": "FJ1326",
+                  "sha256": "f8a3b51c6408d43a35ccf8a773e4bdd5b5872d562402a9834c34c5dc0b3d9c25"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:nerve:right-lacrimal-nerve",
+              "fmaId": "FMA52629",
+              "laterality": "right",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52629",
+              "sources": [
+                {
+                  "file": "FJ1351",
+                  "sha256": "0e563e908e3c1e6ea08e3233e8e90c37b6fd029b165a0e6c41d37f985b538f22"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:nerve:left-lacrimal-nerve",
+              "fmaId": "FMA52630",
+              "laterality": "left",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52630",
+              "sources": [
+                {
+                  "file": "FJ1300",
+                  "sha256": "4922693d563eaa50f8b0b0f7547dce8fd265fc40de5414b83020e5b302cecd0a"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
+              "fmaId": "FMA59102",
+              "laterality": "right",
+              "bundle": "head-neck-organs-gaps",
+              "nodeName": "FMA59102",
+              "sources": [
+                {
+                  "file": "FJ1350",
+                  "sha256": "ff108bfd00a1a4dc0eebfa62c8553b1ca94d7003d18437e7d637566db433f604"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland",
+              "fmaId": "FMA59103",
+              "laterality": "left",
+              "bundle": "head-neck-organs-gaps",
+              "nodeName": "FMA59103",
+              "sources": [
+                {
+                  "file": "FJ1299",
+                  "sha256": "4249d4bed4b176bb504a756ebffca8ea5b96268e6f57b000206c81ead66674d8"
+                }
+              ]
+            }
+          ],
+          "sideFilteredSourceBindings": true,
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:left:nerve:left-frontal-nerve",
+            "vm:anatomy:body:head-neck:left:nerve:left-lacrimal-nerve",
+            "vm:anatomy:body:head-neck:left:nerve:left-supra-orbital-nerve",
+            "vm:anatomy:body:head-neck:left:nerve:left-supratrochlear-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:right-frontal-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:right-lacrimal-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:right-supra-orbital-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:right-supratrochlear-nerve",
+            "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
+            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland"
+          ]
+        },
+        {
+          "id": "v1-nasociliary-subset",
+          "title": "V1 · nasociliary source subset",
+          "rule": {
+            "fmaIds": [
+              "FMA52669",
+              "FMA52670",
+              "FMA52676",
+              "FMA52677",
+              "FMA52715",
+              "FMA52716",
+              "FMA52698",
+              "FMA52699",
+              "FMA82734",
+              "FMA82735",
+              "FMA52673",
+              "FMA52674"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA53549",
+                "FMA53550"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "superior",
+          "description": "Compare the source-labelled nasociliary, ethmoidal, infratrochlear, long ciliary and ciliary-ganglion communicating branches. The paired ciliary ganglia are context, not proof of a connected or functioning pathway.",
+          "inspect": "Choose Both, Left or Right. Select a source surface, Remove it and Undo to restore it; return separation to 0% before comparing source positions. This conventional V1 grouping does not prove a complete CN V, branch continuity, sensory function, patient registration or clinical approval. Source relationships await revision-bound radiologist review.",
+          "requiredSourceBindings": [
+            {
+              "id": "vm:anatomy:body:head-neck:right:nerve:right-nasociliary-nerve",
+              "fmaId": "FMA52669",
+              "laterality": "right",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52669",
+              "sources": [
+                {
+                  "file": "FJ1361",
+                  "sha256": "f399ec1e5dd080357ba1bdde33393932e400f76567cf9c9c2392430600f99059"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:nerve:left-nasociliary-nerve",
+              "fmaId": "FMA52670",
+              "laterality": "left",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52670",
+              "sources": [
+                {
+                  "file": "FJ1310",
+                  "sha256": "c6f00f35feecee6f75646ac7a5461f03ee6ca89e55158c9574fbf5663270df77"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:nerve:right-anterior-ethmoidal-nerve",
+              "fmaId": "FMA52676",
+              "laterality": "right",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52676",
+              "sources": [
+                {
+                  "file": "FJ1333",
+                  "sha256": "125af43b25653f04d3c1efcb0ae71cc19da9b13dd305ff443881bcc1fbec138f"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:nerve:left-anterior-ethmoidal-nerve",
+              "fmaId": "FMA52677",
+              "laterality": "left",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52677",
+              "sources": [
+                {
+                  "file": "FJ1283",
+                  "sha256": "b75bf29e8ccea444f1a0ccd694c9f7fdbc7ad8d0cace68f60be489024e647af9"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:nerve:right-posterior-ethmoidal-nerve",
+              "fmaId": "FMA52715",
+              "laterality": "right",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52715",
+              "sources": [
+                {
+                  "file": "FJ1366",
+                  "sha256": "f57d8678d7c047eff9a104ece72c3e0391909fef1f895679bb37ffb7a88dbb00"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:nerve:left-posterior-ethmoidal-nerve",
+              "fmaId": "FMA52716",
+              "laterality": "left",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52716",
+              "sources": [
+                {
+                  "file": "FJ1315",
+                  "sha256": "5d9a0810f0345ba52ca1680d132e0e63021af48a691e6abd1a137c898f78134e"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:nerve:right-infratrochlear-nerve",
+              "fmaId": "FMA52698",
+              "laterality": "right",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52698",
+              "sources": [
+                {
+                  "file": "FJ1347",
+                  "sha256": "01773f3e0da8b9564817531e2aba0d85f97a9da6d1e20b593b44c14ded8281ac"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:nerve:left-infratrochlear-nerve",
+              "fmaId": "FMA52699",
+              "laterality": "left",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52699",
+              "sources": [
+                {
+                  "file": "FJ1296",
+                  "sha256": "d209c170330a18a2f1065be1bd0acacc034ea30a46e19a9bf0946fa12eece412"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:nerve:right-long-ciliary-nerve",
+              "fmaId": "FMA82734",
+              "laterality": "right",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA82734",
+              "sources": [
+                {
+                  "file": "FJ1369",
+                  "sha256": "a3e9a8f15fcd4b9ed6bb12ca2fa984b971ecb9e090b832effc8e108537871917"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:nerve:left-long-ciliary-nerve",
+              "fmaId": "FMA82735",
+              "laterality": "left",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA82735",
+              "sources": [
+                {
+                  "file": "FJ1318",
+                  "sha256": "41dd32800ddf73a2dabd9dc2556766d2fea99a593793a98879985bc926b89c7b"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:nerve:communicating-branch-of-right-nasociliary-nerve-with-right-ciliary-ganglion",
+              "fmaId": "FMA52673",
+              "laterality": "right",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52673",
+              "sources": [
+                {
+                  "file": "FJ1362",
+                  "sha256": "e9055e3812268376fcb1d0dc51e212e3c1b5b506947abde5d9d2a1de61516970"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:nerve:communicating-branch-of-left-nasociliary-nerve-with-left-ciliary-ganglion",
+              "fmaId": "FMA52674",
+              "laterality": "left",
+              "bundle": "head-neck-nerves",
+              "nodeName": "FMA52674",
+              "sources": [
+                {
+                  "file": "FJ1311",
+                  "sha256": "9511e0d9b9f66f61538766c053cb26c0a1aab37c15b01e5b6269c00a9047647d"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+              "fmaId": "FMA53549",
+              "laterality": "right",
+              "bundle": "head-neck-nerves-inventory",
+              "nodeName": "FMA53549",
+              "sources": [
+                {
+                  "file": "FJ1339",
+                  "sha256": "de1f5bc0af45dc52a70d8e2d647f509b3ff0072ae504ab95483e9c1662195076"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
+              "fmaId": "FMA53550",
+              "laterality": "left",
+              "bundle": "head-neck-nerves-inventory",
+              "nodeName": "FMA53550",
+              "sources": [
+                {
+                  "file": "FJ1288",
+                  "sha256": "c362a3813e882588d31710138ce6e180c2d0dd32e9755a0f53452a82657371e0"
+                }
+              ]
+            }
+          ],
+          "sideFilteredSourceBindings": true,
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:left:nerve:left-anterior-ethmoidal-nerve",
+            "vm:anatomy:body:head-neck:left:nerve:left-infratrochlear-nerve",
+            "vm:anatomy:body:head-neck:left:nerve:left-nasociliary-nerve",
+            "vm:anatomy:body:head-neck:left:nerve:communicating-branch-of-left-nasociliary-nerve-with-left-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:left:nerve:left-posterior-ethmoidal-nerve",
+            "vm:anatomy:body:head-neck:left:nerve:left-long-ciliary-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:right-anterior-ethmoidal-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:right-infratrochlear-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:right-nasociliary-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:communicating-branch-of-right-nasociliary-nerve-with-right-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:right:nerve:right-posterior-ethmoidal-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:right-long-ciliary-nerve",
+            "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion"
           ]
         }
       ]

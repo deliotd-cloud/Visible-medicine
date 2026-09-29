@@ -1,0 +1,1642 @@
+{
+  "date": "2026-09-29",
+  "source": "bdb4ad29d819f056acd1ca194989e107a21167e6",
+  "runtimeSource": "2792be3b4f5d2913aa506f35691b53ae6c711867",
+  "website": "130228c1b7e4e6aefaa427be07a15e2e1deb4bba",
+  "method": "Local browser, DOM clicks and recipe/enabled-count reads; mobile viewport observed 375x812. Counts are not GPU or clinical evidence.",
+  "layers": [
+    {
+      "region": "head-neck",
+      "url": "http://localhost:3000/atlas/head-neck-3d",
+      "observations": [
+        {
+          "label": "Stage 1: Assembled anatomy",
+          "expected": 291,
+          "enabled": 291,
+          "recipe": "Current recipe: Assembled anatomy",
+          "removed": "Removed from this view (0)",
+          "loading": null
+        },
+        {
+          "label": "Stage 2: Remove platysma",
+          "expected": 289,
+          "enabled": 289,
+          "recipe": "Current recipe: Remove platysma",
+          "removed": "Removed from this view (2)",
+          "loading": null
+        },
+        {
+          "label": "Stage 3: Expose deeper neck muscles",
+          "expected": 287,
+          "enabled": 287,
+          "recipe": "Current recipe: Expose deeper neck muscles",
+          "removed": "Removed from this view (4)",
+          "loading": null
+        },
+        {
+          "label": "Stage 4: Skeletal framework",
+          "expected": 30,
+          "enabled": 30,
+          "recipe": "Current recipe: Skeletal framework",
+          "removed": "Removed from this view (261)",
+          "loading": null
+        }
+      ],
+      "last": {
+        "enabled": 30,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (261)",
+        "loading": null
+      },
+      "undo": {
+        "enabled": 287,
+        "recipe": "Current recipe: Expose deeper neck muscles",
+        "removed": "Removed from this view (4)",
+        "loading": null
+      },
+      "redo": {
+        "enabled": 30,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (261)",
+        "loading": null
+      },
+      "reset": {
+        "enabled": 291,
+        "recipe": "Current recipe: Assembled anatomy",
+        "removed": "Removed from this view (0)",
+        "loading": null
+      },
+      "allCountsMatch": true,
+      "redoRestored": true,
+      "reassembled": true
+    },
+    {
+      "region": "spine",
+      "url": "http://localhost:3000/atlas/spine-3d",
+      "observations": [
+        {
+          "label": "Stage 1: Assembled anatomy",
+          "expected": 115,
+          "enabled": 115,
+          "recipe": "Current recipe: Assembled anatomy",
+          "removed": "Removed from this view (0)",
+          "loading": null
+        },
+        {
+          "label": "Stage 2: Remove trapezius parts",
+          "expected": 109,
+          "enabled": 109,
+          "recipe": "Current recipe: Remove trapezius parts",
+          "removed": "Removed from this view (6)",
+          "loading": null
+        },
+        {
+          "label": "Stage 3: Expose the longitudinal columns",
+          "expected": 101,
+          "enabled": 101,
+          "recipe": "Current recipe: Expose the longitudinal columns",
+          "removed": "Removed from this view (14)",
+          "loading": null
+        },
+        {
+          "label": "Stage 4: Expose smaller deep muscles",
+          "expected": 82,
+          "enabled": 82,
+          "recipe": "Current recipe: Expose smaller deep muscles",
+          "removed": "Removed from this view (33)",
+          "loading": null
+        },
+        {
+          "label": "Stage 5: Skeletal framework",
+          "expected": 25,
+          "enabled": 25,
+          "recipe": "Current recipe: Skeletal framework",
+          "removed": "Removed from this view (90)",
+          "loading": null
+        }
+      ],
+      "last": {
+        "enabled": 25,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (90)",
+        "loading": null
+      },
+      "undo": {
+        "enabled": 82,
+        "recipe": "Current recipe: Expose smaller deep muscles",
+        "removed": "Removed from this view (33)",
+        "loading": null
+      },
+      "redo": {
+        "enabled": 25,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (90)",
+        "loading": null
+      },
+      "reset": {
+        "enabled": 115,
+        "recipe": "Current recipe: Assembled anatomy",
+        "removed": "Removed from this view (0)",
+        "loading": null
+      },
+      "allCountsMatch": true,
+      "redoRestored": true,
+      "reassembled": true
+    },
+    {
+      "region": "thorax",
+      "url": "http://localhost:3000/atlas/thorax-3d",
+      "observations": [
+        {
+          "label": "Stage 1: Assembled anatomy",
+          "expected": 158,
+          "enabled": 158,
+          "recipe": "Current recipe: Assembled anatomy",
+          "removed": "Removed from this view (0)",
+          "loading": null
+        },
+        {
+          "label": "Stage 2: Remove pectoralis major",
+          "expected": 156,
+          "enabled": 156,
+          "recipe": "Current recipe: Remove pectoralis major",
+          "removed": "Removed from this view (2)",
+          "loading": null
+        },
+        {
+          "label": "Stage 3: Expose deeper chest wall",
+          "expected": 153,
+          "enabled": 153,
+          "recipe": "Current recipe: Expose deeper chest wall",
+          "removed": "Removed from this view (5)",
+          "loading": null
+        },
+        {
+          "label": "Stage 4: Skeletal framework",
+          "expected": 39,
+          "enabled": 39,
+          "recipe": "Current recipe: Skeletal framework",
+          "removed": "Removed from this view (119)",
+          "loading": null
+        }
+      ],
+      "last": {
+        "enabled": 39,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (119)",
+        "loading": null
+      },
+      "undo": {
+        "enabled": 153,
+        "recipe": "Current recipe: Expose deeper chest wall",
+        "removed": "Removed from this view (5)",
+        "loading": null
+      },
+      "redo": {
+        "enabled": 39,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (119)",
+        "loading": null
+      },
+      "reset": {
+        "enabled": 158,
+        "recipe": "Current recipe: Assembled anatomy",
+        "removed": "Removed from this view (0)",
+        "loading": null
+      },
+      "allCountsMatch": true,
+      "redoRestored": true,
+      "reassembled": true
+    },
+    {
+      "region": "abdomen",
+      "url": "http://localhost:3000/atlas/abdomen-3d",
+      "observations": [
+        {
+          "label": "Stage 1: Assembled anatomy",
+          "expected": 106,
+          "enabled": 106,
+          "recipe": "Current recipe: Assembled anatomy",
+          "removed": "Removed from this view (0)",
+          "loading": null
+        },
+        {
+          "label": "Stage 2: Remove the available wall",
+          "expected": 104,
+          "enabled": 104,
+          "recipe": "Current recipe: Remove the available wall",
+          "removed": "Removed from this view (2)",
+          "loading": null
+        },
+        {
+          "label": "Stage 3: Skeletal framework",
+          "expected": 5,
+          "enabled": 5,
+          "recipe": "Current recipe: Skeletal framework",
+          "removed": "Removed from this view (101)",
+          "loading": null
+        }
+      ],
+      "last": {
+        "enabled": 5,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (101)",
+        "loading": null
+      },
+      "undo": {
+        "enabled": 104,
+        "recipe": "Current recipe: Remove the available wall",
+        "removed": "Removed from this view (2)",
+        "loading": null
+      },
+      "redo": {
+        "enabled": 5,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (101)",
+        "loading": null
+      },
+      "reset": {
+        "enabled": 106,
+        "recipe": "Current recipe: Assembled anatomy",
+        "removed": "Removed from this view (0)",
+        "loading": null
+      },
+      "allCountsMatch": true,
+      "redoRestored": true,
+      "reassembled": true
+    },
+    {
+      "region": "pelvis",
+      "url": "http://localhost:3000/atlas/pelvis-3d",
+      "observations": [
+        {
+          "label": "Stage 1: Assembled anatomy",
+          "expected": 82,
+          "enabled": 82,
+          "recipe": "Current recipe: Assembled anatomy",
+          "removed": "Removed from this view (0)",
+          "loading": null
+        },
+        {
+          "label": "Stage 2: Remove gluteus maximus",
+          "expected": 80,
+          "enabled": 80,
+          "recipe": "Current recipe: Remove gluteus maximus",
+          "removed": "Removed from this view (2)",
+          "loading": null
+        },
+        {
+          "label": "Stage 3: Expose the deep gluteal group",
+          "expected": 78,
+          "enabled": 78,
+          "recipe": "Current recipe: Expose the deep gluteal group",
+          "removed": "Removed from this view (4)",
+          "loading": null
+        },
+        {
+          "label": "Stage 4: Skeletal framework",
+          "expected": 5,
+          "enabled": 5,
+          "recipe": "Current recipe: Skeletal framework",
+          "removed": "Removed from this view (77)",
+          "loading": null
+        }
+      ],
+      "last": {
+        "enabled": 5,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (77)",
+        "loading": null
+      },
+      "undo": {
+        "enabled": 78,
+        "recipe": "Current recipe: Expose the deep gluteal group",
+        "removed": "Removed from this view (4)",
+        "loading": null
+      },
+      "redo": {
+        "enabled": 5,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (77)",
+        "loading": null
+      },
+      "reset": {
+        "enabled": 82,
+        "recipe": "Current recipe: Assembled anatomy",
+        "removed": "Removed from this view (0)",
+        "loading": null
+      },
+      "allCountsMatch": true,
+      "redoRestored": true,
+      "reassembled": true
+    },
+    {
+      "region": "shoulder-arm",
+      "url": "http://localhost:3000/atlas/3d?region=shoulder-arm",
+      "observations": [
+        {
+          "label": "Stage 1: Assembled anatomy",
+          "expected": 115,
+          "enabled": 115,
+          "recipe": "Current recipe: Assembled anatomy",
+          "removed": "Removed from this view (0)",
+          "loading": null
+        },
+        {
+          "label": "Stage 2: Remove the deltoid",
+          "expected": 109,
+          "enabled": 109,
+          "recipe": "Current recipe: Remove the deltoid",
+          "removed": "Removed from this view (6)",
+          "loading": null
+        },
+        {
+          "label": "Stage 3: Expose the deep arm",
+          "expected": 101,
+          "enabled": 101,
+          "recipe": "Current recipe: Expose the deep arm",
+          "removed": "Removed from this view (14)",
+          "loading": null
+        },
+        {
+          "label": "Stage 4: Skeletal framework",
+          "expected": 6,
+          "enabled": 6,
+          "recipe": "Current recipe: Skeletal framework",
+          "removed": "Removed from this view (109)",
+          "loading": null
+        }
+      ],
+      "last": {
+        "enabled": 6,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (109)",
+        "loading": null
+      },
+      "undo": {
+        "enabled": 101,
+        "recipe": "Current recipe: Expose the deep arm",
+        "removed": "Removed from this view (14)",
+        "loading": null
+      },
+      "redo": {
+        "enabled": 6,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (109)",
+        "loading": null
+      },
+      "reset": {
+        "enabled": 115,
+        "recipe": "Current recipe: Assembled anatomy",
+        "removed": "Removed from this view (0)",
+        "loading": null
+      },
+      "allCountsMatch": true,
+      "redoRestored": true,
+      "reassembled": true
+    },
+    {
+      "region": "forearm",
+      "url": "http://localhost:3000/atlas/3d?region=forearm",
+      "observations": [
+        {
+          "label": "Stage 1: Assembled anatomy",
+          "expected": 86,
+          "enabled": 86,
+          "recipe": "Current recipe: Assembled anatomy",
+          "removed": "Removed from this view (0)",
+          "loading": null
+        },
+        {
+          "label": "Stage 2: Remove superficial flexors",
+          "expected": 74,
+          "enabled": 74,
+          "recipe": "Current recipe: Remove superficial flexors",
+          "removed": "Removed from this view (12)",
+          "loading": null
+        },
+        {
+          "label": "Stage 3: Expose deep flexors",
+          "expected": 72,
+          "enabled": 72,
+          "recipe": "Current recipe: Expose deep flexors",
+          "removed": "Removed from this view (14)",
+          "loading": null
+        },
+        {
+          "label": "Stage 4: Expose deep extensors",
+          "expected": 60,
+          "enabled": 60,
+          "recipe": "Current recipe: Expose deep extensors",
+          "removed": "Removed from this view (26)",
+          "loading": null
+        },
+        {
+          "label": "Stage 5: Skeletal framework",
+          "expected": 6,
+          "enabled": 6,
+          "recipe": "Current recipe: Skeletal framework",
+          "removed": "Removed from this view (80)",
+          "loading": null
+        }
+      ],
+      "last": {
+        "enabled": 6,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (80)",
+        "loading": null
+      },
+      "undo": {
+        "enabled": 60,
+        "recipe": "Current recipe: Expose deep extensors",
+        "removed": "Removed from this view (26)",
+        "loading": null
+      },
+      "redo": {
+        "enabled": 6,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (80)",
+        "loading": null
+      },
+      "reset": {
+        "enabled": 86,
+        "recipe": "Current recipe: Assembled anatomy",
+        "removed": "Removed from this view (0)",
+        "loading": null
+      },
+      "allCountsMatch": true,
+      "redoRestored": true,
+      "reassembled": true
+    },
+    {
+      "region": "hand",
+      "url": "http://localhost:3000/atlas/3d?region=hand",
+      "observations": [
+        {
+          "label": "Stage 1: Assembled anatomy",
+          "expected": 63,
+          "enabled": 63,
+          "recipe": "Current recipe: Assembled anatomy",
+          "removed": "Removed from this view (0)",
+          "loading": null
+        },
+        {
+          "label": "Stage 2: Remove outer intrinsic muscles",
+          "expected": 60,
+          "enabled": 60,
+          "recipe": "Current recipe: Remove outer intrinsic muscles",
+          "removed": "Removed from this view (3)",
+          "loading": null
+        },
+        {
+          "label": "Stage 3: Skeletal framework",
+          "expected": 27,
+          "enabled": 27,
+          "recipe": "Current recipe: Skeletal framework",
+          "removed": "Removed from this view (36)",
+          "loading": null
+        }
+      ],
+      "last": {
+        "enabled": 27,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (36)",
+        "loading": null
+      },
+      "undo": {
+        "enabled": 60,
+        "recipe": "Current recipe: Remove outer intrinsic muscles",
+        "removed": "Removed from this view (3)",
+        "loading": null
+      },
+      "redo": {
+        "enabled": 27,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (36)",
+        "loading": null
+      },
+      "reset": {
+        "enabled": 63,
+        "recipe": "Current recipe: Assembled anatomy",
+        "removed": "Removed from this view (0)",
+        "loading": null
+      },
+      "allCountsMatch": true,
+      "redoRestored": true,
+      "reassembled": true
+    },
+    {
+      "region": "thigh",
+      "url": "http://localhost:3000/atlas/3d?region=thigh",
+      "observations": [
+        {
+          "label": "Stage 1: Assembled anatomy",
+          "expected": 95,
+          "enabled": 95,
+          "recipe": "Current recipe: Assembled anatomy",
+          "removed": "Removed from this view (0)",
+          "loading": null
+        },
+        {
+          "label": "Stage 2: Remove the outer muscle set",
+          "expected": 89,
+          "enabled": 89,
+          "recipe": "Current recipe: Remove the outer muscle set",
+          "removed": "Removed from this view (6)",
+          "loading": null
+        },
+        {
+          "label": "Stage 3: Expose vastus intermedius",
+          "expected": 87,
+          "enabled": 87,
+          "recipe": "Current recipe: Expose vastus intermedius",
+          "removed": "Removed from this view (8)",
+          "loading": null
+        },
+        {
+          "label": "Stage 4: Expose the deeper adductors",
+          "expected": 81,
+          "enabled": 81,
+          "recipe": "Current recipe: Expose the deeper adductors",
+          "removed": "Removed from this view (14)",
+          "loading": null
+        },
+        {
+          "label": "Stage 5: Expose the deep hip group",
+          "expected": 79,
+          "enabled": 79,
+          "recipe": "Current recipe: Expose the deep hip group",
+          "removed": "Removed from this view (16)",
+          "loading": null
+        },
+        {
+          "label": "Stage 6: Skeletal framework",
+          "expected": 5,
+          "enabled": 5,
+          "recipe": "Current recipe: Skeletal framework",
+          "removed": "Removed from this view (90)",
+          "loading": null
+        }
+      ],
+      "last": {
+        "enabled": 5,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (90)",
+        "loading": null
+      },
+      "undo": {
+        "enabled": 79,
+        "recipe": "Current recipe: Expose the deep hip group",
+        "removed": "Removed from this view (16)",
+        "loading": null
+      },
+      "redo": {
+        "enabled": 5,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (90)",
+        "loading": null
+      },
+      "reset": {
+        "enabled": 95,
+        "recipe": "Current recipe: Assembled anatomy",
+        "removed": "Removed from this view (0)",
+        "loading": null
+      },
+      "allCountsMatch": true,
+      "redoRestored": true,
+      "reassembled": true
+    },
+    {
+      "region": "leg",
+      "url": "http://localhost:3000/atlas/3d?region=leg",
+      "observations": [
+        {
+          "label": "Stage 1: Assembled anatomy",
+          "expected": 76,
+          "enabled": 76,
+          "recipe": "Current recipe: Assembled anatomy",
+          "removed": "Removed from this view (0)",
+          "loading": null
+        },
+        {
+          "label": "Stage 2: Remove gastrocnemius",
+          "expected": 72,
+          "enabled": 72,
+          "recipe": "Current recipe: Remove gastrocnemius",
+          "removed": "Removed from this view (4)",
+          "loading": null
+        },
+        {
+          "label": "Stage 3: Open the deep posterior group",
+          "expected": 68,
+          "enabled": 68,
+          "recipe": "Current recipe: Open the deep posterior group",
+          "removed": "Removed from this view (8)",
+          "loading": null
+        },
+        {
+          "label": "Stage 4: Skeletal framework",
+          "expected": 8,
+          "enabled": 8,
+          "recipe": "Current recipe: Skeletal framework",
+          "removed": "Removed from this view (68)",
+          "loading": null
+        }
+      ],
+      "last": {
+        "enabled": 8,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (68)",
+        "loading": null
+      },
+      "undo": {
+        "enabled": 68,
+        "recipe": "Current recipe: Open the deep posterior group",
+        "removed": "Removed from this view (8)",
+        "loading": null
+      },
+      "redo": {
+        "enabled": 8,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (68)",
+        "loading": null
+      },
+      "reset": {
+        "enabled": 76,
+        "recipe": "Current recipe: Assembled anatomy",
+        "removed": "Removed from this view (0)",
+        "loading": null
+      },
+      "allCountsMatch": true,
+      "redoRestored": true,
+      "reassembled": true
+    },
+    {
+      "region": "foot",
+      "url": "http://localhost:3000/atlas/3d?region=foot",
+      "observations": [
+        {
+          "label": "Stage 1: Assembled anatomy",
+          "expected": 122,
+          "enabled": 122,
+          "recipe": "Current recipe: Assembled anatomy",
+          "removed": "Removed from this view (0)",
+          "loading": null
+        },
+        {
+          "label": "Stage 2: Remove plantar layer 1",
+          "expected": 116,
+          "enabled": 116,
+          "recipe": "Current recipe: Remove plantar layer 1",
+          "removed": "Removed from this view (6)",
+          "loading": null
+        },
+        {
+          "label": "Stage 3: Remove plantar layer 2",
+          "expected": 106,
+          "enabled": 106,
+          "recipe": "Current recipe: Remove plantar layer 2",
+          "removed": "Removed from this view (16)",
+          "loading": null
+        },
+        {
+          "label": "Stage 4: Remove plantar layer 3",
+          "expected": 96,
+          "enabled": 96,
+          "recipe": "Current recipe: Remove plantar layer 3",
+          "removed": "Removed from this view (26)",
+          "loading": null
+        },
+        {
+          "label": "Stage 5: Skeletal framework",
+          "expected": 54,
+          "enabled": 54,
+          "recipe": "Current recipe: Skeletal framework",
+          "removed": "Removed from this view (68)",
+          "loading": null
+        }
+      ],
+      "last": {
+        "enabled": 54,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (68)",
+        "loading": null
+      },
+      "undo": {
+        "enabled": 96,
+        "recipe": "Current recipe: Remove plantar layer 3",
+        "removed": "Removed from this view (26)",
+        "loading": null
+      },
+      "redo": {
+        "enabled": 54,
+        "recipe": "Current recipe: Skeletal framework",
+        "removed": "Removed from this view (68)",
+        "loading": null
+      },
+      "reset": {
+        "enabled": 122,
+        "recipe": "Current recipe: Assembled anatomy",
+        "removed": "Removed from this view (0)",
+        "loading": null
+      },
+      "allCountsMatch": true,
+      "redoRestored": true,
+      "reassembled": true
+    }
+  ],
+  "studies": {
+    "viewport": [
+      375,
+      812
+    ],
+    "observations": [
+      {
+        "title": "Assembled anatomy",
+        "expected": 1104,
+        "enabled": 1104,
+        "recipe": "Current recipe: Assembled anatomy"
+      },
+      {
+        "title": "Musculoskeletal frame",
+        "expected": 575,
+        "enabled": 575,
+        "recipe": "Current recipe: Musculoskeletal frame"
+      },
+      {
+        "title": "Organ window",
+        "expected": 83,
+        "enabled": 83,
+        "recipe": "Current recipe: Organ window"
+      },
+      {
+        "title": "Neural subset",
+        "expected": 59,
+        "enabled": 59,
+        "recipe": "Current recipe: Neural subset"
+      },
+      {
+        "title": "Skeletal framework",
+        "expected": 203,
+        "enabled": 203,
+        "recipe": "Current recipe: Skeletal framework"
+      },
+      {
+        "title": "Vascular relationships",
+        "expected": 500,
+        "enabled": 500,
+        "recipe": "Current recipe: Vascular relationships"
+      },
+      {
+        "title": "Connective-tissue relationships",
+        "expected": 293,
+        "enabled": 293,
+        "recipe": "Current recipe: Connective-tissue relationships"
+      },
+      {
+        "title": "Selected arteries",
+        "expected": 393,
+        "enabled": 393,
+        "recipe": "Current recipe: Selected arteries"
+      },
+      {
+        "title": "Selected veins",
+        "expected": 294,
+        "enabled": 294,
+        "recipe": "Current recipe: Selected veins"
+      },
+      {
+        "title": "Right pulmonary hilum: bronchus & vessels",
+        "expected": 4,
+        "enabled": 4,
+        "recipe": "Current recipe: Right pulmonary hilum: bronchus & vessels"
+      },
+      {
+        "title": "Left pulmonary hilum: bronchus & vessels",
+        "expected": 4,
+        "enabled": 4,
+        "recipe": "Current recipe: Left pulmonary hilum: bronchus & vessels"
+      },
+      {
+        "title": "Right pes anserinus: muscle convergence",
+        "expected": 4,
+        "enabled": 4,
+        "recipe": "Current recipe: Right pes anserinus: muscle convergence"
+      },
+      {
+        "title": "Left pes anserinus: muscle convergence",
+        "expected": 4,
+        "enabled": 4,
+        "recipe": "Current recipe: Left pes anserinus: muscle convergence"
+      },
+      {
+        "title": "Posterior mediastinum: oesophagus & vessels",
+        "expected": 4,
+        "enabled": 4,
+        "recipe": "Current recipe: Posterior mediastinum: oesophagus & vessels"
+      },
+      {
+        "title": "Right kidney relationships",
+        "expected": 6,
+        "enabled": 6,
+        "recipe": "Current recipe: Right kidney relationships"
+      },
+      {
+        "title": "Left kidney relationships",
+        "expected": 6,
+        "enabled": 6,
+        "recipe": "Current recipe: Left kidney relationships"
+      },
+      {
+        "title": "Renal arteries & great vessels",
+        "expected": 6,
+        "enabled": 6,
+        "recipe": "Current recipe: Renal arteries & great vessels"
+      },
+      {
+        "title": "Kidneys & proximal ureter relationships",
+        "expected": 4,
+        "enabled": 4,
+        "recipe": "Current recipe: Kidneys & proximal ureter relationships"
+      },
+      {
+        "title": "Tentorium: supplied right portion",
+        "expected": 4,
+        "enabled": 4,
+        "recipe": "Current recipe: Tentorium: supplied right portion"
+      },
+      {
+        "title": "Longus colli: supplied left parts",
+        "expected": 15,
+        "enabled": 15,
+        "recipe": "Current recipe: Longus colli: supplied left parts"
+      },
+      {
+        "title": "Knee: genicular arteries",
+        "expected": 22,
+        "enabled": 22,
+        "recipe": "Current recipe: Knee: genicular arteries"
+      },
+      {
+        "title": "Knee: popliteal artery and vein",
+        "expected": 14,
+        "enabled": 14,
+        "recipe": "Current recipe: Knee: popliteal artery and vein"
+      },
+      {
+        "title": "Male pelvis: deferent ducts",
+        "expected": 10,
+        "enabled": 10,
+        "recipe": "Current recipe: Male pelvis: deferent ducts"
+      },
+      {
+        "title": "Arm: brachial vessels & flexors",
+        "expected": 14,
+        "enabled": 14,
+        "recipe": "Current recipe: Arm: brachial vessels & flexors"
+      },
+      {
+        "title": "Arm: deep brachial artery & triceps",
+        "expected": 12,
+        "enabled": 12,
+        "recipe": "Current recipe: Arm: deep brachial artery & triceps"
+      },
+      {
+        "title": "Abdominal wall: epigastric vessels",
+        "expected": 10,
+        "enabled": 10,
+        "recipe": "Current recipe: Abdominal wall: epigastric vessels"
+      },
+      {
+        "title": "Pelvic venous tributaries",
+        "expected": 17,
+        "enabled": 17,
+        "recipe": "Current recipe: Pelvic venous tributaries"
+      },
+      {
+        "title": "Deep brain: septal landmarks",
+        "expected": 11,
+        "enabled": 11,
+        "recipe": "Current recipe: Deep brain: septal landmarks"
+      },
+      {
+        "title": "Male pelvis: urethra & corpus spongiosum",
+        "expected": 6,
+        "enabled": 6,
+        "recipe": "Current recipe: Male pelvis: urethra & corpus spongiosum"
+      },
+      {
+        "title": "Male pelvis: bladder, prostate, rectum & urethra",
+        "expected": 4,
+        "enabled": 4,
+        "recipe": "Current recipe: Male pelvis: bladder, prostate, rectum & urethra"
+      },
+      {
+        "title": "Elbow: muscles & arteries",
+        "expected": 26,
+        "enabled": 26,
+        "recipe": "Current recipe: Elbow: muscles & arteries"
+      },
+      {
+        "title": "Elbow: superficial veins",
+        "expected": 26,
+        "enabled": 26,
+        "recipe": "Current recipe: Elbow: superficial veins"
+      },
+      {
+        "title": "Lower neck: vessels & scalenes",
+        "expected": 18,
+        "enabled": 18,
+        "recipe": "Current recipe: Lower neck: vessels & scalenes"
+      },
+      {
+        "title": "Infrahyoid · superficial layer",
+        "expected": 6,
+        "enabled": 6,
+        "recipe": "Current recipe: Infrahyoid · superficial layer"
+      },
+      {
+        "title": "Infrahyoid · deep layer",
+        "expected": 6,
+        "enabled": 6,
+        "recipe": "Current recipe: Infrahyoid · deep layer"
+      },
+      {
+        "title": "V1 · frontal & lacrimal source subset",
+        "expected": 10,
+        "enabled": 10,
+        "recipe": "Current recipe: V1 · frontal & lacrimal source subset"
+      },
+      {
+        "title": "V1 · nasociliary source subset",
+        "expected": 14,
+        "enabled": 14,
+        "recipe": "Current recipe: V1 · nasociliary source subset"
+      }
+    ],
+    "allCountsMatch": true
+  },
+  "history": [
+    {
+      "region": "whole-body",
+      "url": "http://localhost:3000/atlas/3d",
+      "initial": {
+        "recipe": "Current recipe: Free exploration",
+        "undoDisabled": true,
+        "redoDisabled": true
+      },
+      "layers": false,
+      "text": "Whole body\n1104\nstructures\nReference anatomy · review pending\nExplore\nDissect\nPractice\nGuided learning\nSearch\nSystems & tools\nView:\nAnterior\nBoth sides\n\nView from: front\n\nSpread\n0%\nOriginal-position guides and bone pinning are reset. System visibility and removed structures remain unchanged.\nDrag to rotate · Pinch to zoom · Select any visible structure\nBodyParts3D · CC BY 4.0 · Adapted\nStructure info\nSystems & tools\n\nChoose anatomy or a dissection view, then close to return to the model.\n\nWhole body\nAnatomical systems\nBones\n203\nMuscles\n372\nOrgans\n83\nNervous\n59 · partial\nVessels\n297\nConnective\n90\nDissection\nCustom view\nUndo\nRedo\nReassemble\nStudy windows & focuses\nSearch & preview\n\nIndependent views of selected structures—not successive dissection layers.\n\nCurrent recipe: Free exploration\n\nGhost removed tissues\nFree exploration\nMuscles by nerve\nBack layers · separate specimenFemale pelvis · separate referenceKidney layers · separate reference\nDisplay options\nQuick views · arrangement · surfaces\nInspect deeper\nCutaway · transparency · illustration view\nSaved study views\n0 in this region\nImaging link Not connected\nCoverage & sources\nReference anatomy · review pending\nReturn to model"
+    },
+    {
+      "region": "head-neck",
+      "url": "http://localhost:3000/atlas/head-neck-3d",
+      "layers": [
+        {
+          "name": "Stage 1: Assembled anatomy",
+          "text": "1Assembled anatomy291 retained"
+        },
+        {
+          "name": "Stage 2: Remove platysma",
+          "text": "2Remove platysma289 retained"
+        },
+        {
+          "name": "Stage 3: Expose deeper neck muscles",
+          "text": "3Expose deeper neck muscles287 retained"
+        },
+        {
+          "name": "Stage 4: Skeletal framework",
+          "text": "4Skeletal framework30 retained"
+        }
+      ],
+      "initial": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 4 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": true
+      },
+      "advanced": {
+        "recipe": "Current recipe: Remove platysma",
+        "stage": "2 / 4 · Remove platysma▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undone": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 4 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": false
+      },
+      "redone": {
+        "recipe": "Current recipe: Remove platysma",
+        "stage": "2 / 4 · Remove platysma▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "reset": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 4 · Assembled anatomy▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undoRestored": true,
+      "redoRestored": true,
+      "reassembled": true,
+      "advancedChanged": true,
+      "frameOverflow": false,
+      "alerts": []
+    },
+    {
+      "region": "spine",
+      "url": "http://localhost:3000/atlas/spine-3d",
+      "layers": [
+        {
+          "name": "Stage 1: Assembled anatomy",
+          "text": "1Assembled anatomy115 retained"
+        },
+        {
+          "name": "Stage 2: Remove trapezius parts",
+          "text": "2Remove trapezius parts109 retained"
+        },
+        {
+          "name": "Stage 3: Expose the longitudinal columns",
+          "text": "3Expose the longitudinal columns101 retained"
+        },
+        {
+          "name": "Stage 4: Expose smaller deep muscles",
+          "text": "4Expose smaller deep muscles82 retained"
+        },
+        {
+          "name": "Stage 5: Skeletal framework",
+          "text": "5Skeletal framework25 retained"
+        }
+      ],
+      "initial": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 5 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": true
+      },
+      "advanced": {
+        "recipe": "Current recipe: Remove trapezius parts",
+        "stage": "2 / 5 · Remove trapezius parts▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undone": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 5 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": false
+      },
+      "redone": {
+        "recipe": "Current recipe: Remove trapezius parts",
+        "stage": "2 / 5 · Remove trapezius parts▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "reset": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 5 · Assembled anatomy▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undoRestored": true,
+      "redoRestored": true,
+      "reassembled": true,
+      "advancedChanged": true,
+      "frameOverflow": false,
+      "alerts": []
+    },
+    {
+      "region": "thorax",
+      "url": "http://localhost:3000/atlas/thorax-3d",
+      "layers": [
+        {
+          "name": "Stage 1: Assembled anatomy",
+          "text": "1Assembled anatomy158 retained"
+        },
+        {
+          "name": "Stage 2: Remove pectoralis major",
+          "text": "2Remove pectoralis major156 retained"
+        },
+        {
+          "name": "Stage 3: Expose deeper chest wall",
+          "text": "3Expose deeper chest wall153 retained"
+        },
+        {
+          "name": "Stage 4: Skeletal framework",
+          "text": "4Skeletal framework39 retained"
+        }
+      ],
+      "initial": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 4 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": true
+      },
+      "advanced": {
+        "recipe": "Current recipe: Remove pectoralis major",
+        "stage": "2 / 4 · Remove pectoralis major▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undone": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 4 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": false
+      },
+      "redone": {
+        "recipe": "Current recipe: Remove pectoralis major",
+        "stage": "2 / 4 · Remove pectoralis major▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "reset": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 4 · Assembled anatomy▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undoRestored": true,
+      "redoRestored": true,
+      "reassembled": true,
+      "advancedChanged": true,
+      "frameOverflow": false,
+      "alerts": []
+    },
+    {
+      "region": "abdomen",
+      "url": "http://localhost:3000/atlas/abdomen-3d",
+      "layers": [
+        {
+          "name": "Stage 1: Assembled anatomy",
+          "text": "1Assembled anatomy106 retained"
+        },
+        {
+          "name": "Stage 2: Remove the available wall",
+          "text": "2Remove the available wall104 retained"
+        },
+        {
+          "name": "Stage 3: Skeletal framework",
+          "text": "3Skeletal framework5 retained"
+        }
+      ],
+      "initial": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 3 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": true
+      },
+      "advanced": {
+        "recipe": "Current recipe: Remove the available wall",
+        "stage": "2 / 3 · Remove the available wall▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undone": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 3 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": false
+      },
+      "redone": {
+        "recipe": "Current recipe: Remove the available wall",
+        "stage": "2 / 3 · Remove the available wall▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "reset": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 3 · Assembled anatomy▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undoRestored": true,
+      "redoRestored": true,
+      "reassembled": true,
+      "advancedChanged": true,
+      "frameOverflow": false,
+      "alerts": []
+    },
+    {
+      "region": "pelvis",
+      "url": "http://localhost:3000/atlas/pelvis-3d",
+      "layers": [
+        {
+          "name": "Stage 1: Assembled anatomy",
+          "text": "1Assembled anatomy82 retained"
+        },
+        {
+          "name": "Stage 2: Remove gluteus maximus",
+          "text": "2Remove gluteus maximus80 retained"
+        },
+        {
+          "name": "Stage 3: Expose the deep gluteal group",
+          "text": "3Expose the deep gluteal group78 retained"
+        },
+        {
+          "name": "Stage 4: Skeletal framework",
+          "text": "4Skeletal framework5 retained"
+        }
+      ],
+      "initial": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 4 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": true
+      },
+      "advanced": {
+        "recipe": "Current recipe: Remove gluteus maximus",
+        "stage": "2 / 4 · Remove gluteus maximus▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undone": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 4 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": false
+      },
+      "redone": {
+        "recipe": "Current recipe: Remove gluteus maximus",
+        "stage": "2 / 4 · Remove gluteus maximus▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "reset": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 4 · Assembled anatomy▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undoRestored": true,
+      "redoRestored": true,
+      "reassembled": true,
+      "advancedChanged": true,
+      "frameOverflow": false,
+      "alerts": []
+    },
+    {
+      "region": "shoulder-arm",
+      "url": "http://localhost:3000/atlas/3d?region=shoulder-arm",
+      "layers": [
+        {
+          "name": "Stage 1: Assembled anatomy",
+          "text": "1Assembled anatomy115 retained"
+        },
+        {
+          "name": "Stage 2: Remove the deltoid",
+          "text": "2Remove the deltoid109 retained"
+        },
+        {
+          "name": "Stage 3: Expose the deep arm",
+          "text": "3Expose the deep arm101 retained"
+        },
+        {
+          "name": "Stage 4: Skeletal framework",
+          "text": "4Skeletal framework6 retained"
+        }
+      ],
+      "initial": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 4 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": true
+      },
+      "advanced": {
+        "recipe": "Current recipe: Remove the deltoid",
+        "stage": "2 / 4 · Remove the deltoid▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undone": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 4 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": false
+      },
+      "redone": {
+        "recipe": "Current recipe: Remove the deltoid",
+        "stage": "2 / 4 · Remove the deltoid▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "reset": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 4 · Assembled anatomy▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undoRestored": true,
+      "redoRestored": true,
+      "reassembled": true,
+      "advancedChanged": true,
+      "frameOverflow": false,
+      "alerts": []
+    },
+    {
+      "region": "forearm",
+      "url": "http://localhost:3000/atlas/3d?region=forearm",
+      "layers": [
+        {
+          "name": "Stage 1: Assembled anatomy",
+          "text": "1Assembled anatomy86 retained"
+        },
+        {
+          "name": "Stage 2: Remove superficial flexors",
+          "text": "2Remove superficial flexors74 retained"
+        },
+        {
+          "name": "Stage 3: Expose deep flexors",
+          "text": "3Expose deep flexors72 retained"
+        },
+        {
+          "name": "Stage 4: Expose deep extensors",
+          "text": "4Expose deep extensors60 retained"
+        },
+        {
+          "name": "Stage 5: Skeletal framework",
+          "text": "5Skeletal framework6 retained"
+        }
+      ],
+      "initial": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 5 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": true
+      },
+      "advanced": {
+        "recipe": "Current recipe: Remove superficial flexors",
+        "stage": "2 / 5 · Remove superficial flexors▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undone": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 5 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": false
+      },
+      "redone": {
+        "recipe": "Current recipe: Remove superficial flexors",
+        "stage": "2 / 5 · Remove superficial flexors▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "reset": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 5 · Assembled anatomy▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undoRestored": true,
+      "redoRestored": true,
+      "reassembled": true,
+      "advancedChanged": true,
+      "frameOverflow": false,
+      "alerts": []
+    },
+    {
+      "region": "hand",
+      "url": "http://localhost:3000/atlas/3d?region=hand",
+      "layers": [
+        {
+          "name": "Stage 1: Assembled anatomy",
+          "text": "1Assembled anatomy63 retained"
+        },
+        {
+          "name": "Stage 2: Remove outer intrinsic muscles",
+          "text": "2Remove outer intrinsic muscles60 retained"
+        },
+        {
+          "name": "Stage 3: Skeletal framework",
+          "text": "3Skeletal framework27 retained"
+        }
+      ],
+      "initial": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 3 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": true
+      },
+      "advanced": {
+        "recipe": "Current recipe: Remove outer intrinsic muscles",
+        "stage": "2 / 3 · Remove outer intrinsic muscles▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undone": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 3 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": false
+      },
+      "redone": {
+        "recipe": "Current recipe: Remove outer intrinsic muscles",
+        "stage": "2 / 3 · Remove outer intrinsic muscles▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "reset": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 3 · Assembled anatomy▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undoRestored": true,
+      "redoRestored": true,
+      "reassembled": true,
+      "advancedChanged": true,
+      "frameOverflow": false,
+      "alerts": []
+    },
+    {
+      "region": "thigh",
+      "url": "http://localhost:3000/atlas/3d?region=thigh",
+      "layers": [
+        {
+          "name": "Stage 1: Assembled anatomy",
+          "text": "1Assembled anatomy95 retained"
+        },
+        {
+          "name": "Stage 2: Remove the outer muscle set",
+          "text": "2Remove the outer muscle set89 retained"
+        },
+        {
+          "name": "Stage 3: Expose vastus intermedius",
+          "text": "3Expose vastus intermedius87 retained"
+        },
+        {
+          "name": "Stage 4: Expose the deeper adductors",
+          "text": "4Expose the deeper adductors81 retained"
+        },
+        {
+          "name": "Stage 5: Expose the deep hip group",
+          "text": "5Expose the deep hip group79 retained"
+        },
+        {
+          "name": "Stage 6: Skeletal framework",
+          "text": "6Skeletal framework5 retained"
+        }
+      ],
+      "initial": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 6 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": true
+      },
+      "advanced": {
+        "recipe": "Current recipe: Remove the outer muscle set",
+        "stage": "2 / 6 · Remove the outer muscle set▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undone": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 6 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": false
+      },
+      "redone": {
+        "recipe": "Current recipe: Remove the outer muscle set",
+        "stage": "2 / 6 · Remove the outer muscle set▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "reset": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 6 · Assembled anatomy▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undoRestored": true,
+      "redoRestored": true,
+      "reassembled": true,
+      "advancedChanged": true,
+      "frameOverflow": false,
+      "alerts": []
+    },
+    {
+      "region": "leg",
+      "url": "http://localhost:3000/atlas/3d?region=leg",
+      "layers": [
+        {
+          "name": "Stage 1: Assembled anatomy",
+          "text": "1Assembled anatomy76 retained"
+        },
+        {
+          "name": "Stage 2: Remove gastrocnemius",
+          "text": "2Remove gastrocnemius72 retained"
+        },
+        {
+          "name": "Stage 3: Open the deep posterior group",
+          "text": "3Open the deep posterior group68 retained"
+        },
+        {
+          "name": "Stage 4: Skeletal framework",
+          "text": "4Skeletal framework8 retained"
+        }
+      ],
+      "initial": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 4 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": true
+      },
+      "advanced": {
+        "recipe": "Current recipe: Remove gastrocnemius",
+        "stage": "2 / 4 · Remove gastrocnemius▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undone": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 4 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": false
+      },
+      "redone": {
+        "recipe": "Current recipe: Remove gastrocnemius",
+        "stage": "2 / 4 · Remove gastrocnemius▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "reset": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 4 · Assembled anatomy▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undoRestored": true,
+      "redoRestored": true,
+      "reassembled": true,
+      "advancedChanged": true,
+      "frameOverflow": false,
+      "alerts": []
+    },
+    {
+      "region": "foot",
+      "url": "http://localhost:3000/atlas/3d?region=foot",
+      "layers": [
+        {
+          "name": "Stage 1: Assembled anatomy",
+          "text": "1Assembled anatomy122 retained"
+        },
+        {
+          "name": "Stage 2: Remove plantar layer 1",
+          "text": "2Remove plantar layer 1116 retained"
+        },
+        {
+          "name": "Stage 3: Remove plantar layer 2",
+          "text": "3Remove plantar layer 2106 retained"
+        },
+        {
+          "name": "Stage 4: Remove plantar layer 3",
+          "text": "4Remove plantar layer 396 retained"
+        },
+        {
+          "name": "Stage 5: Skeletal framework",
+          "text": "5Skeletal framework54 retained"
+        }
+      ],
+      "initial": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 5 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": true
+      },
+      "advanced": {
+        "recipe": "Current recipe: Remove plantar layer 1",
+        "stage": "2 / 5 · Remove plantar layer 1▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undone": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 5 · Assembled anatomy▼",
+        "undoDisabled": true,
+        "redoDisabled": false
+      },
+      "redone": {
+        "recipe": "Current recipe: Remove plantar layer 1",
+        "stage": "2 / 5 · Remove plantar layer 1▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "reset": {
+        "recipe": "Current recipe: Assembled anatomy",
+        "stage": "1 / 5 · Assembled anatomy▼",
+        "undoDisabled": false,
+        "redoDisabled": true
+      },
+      "undoRestored": true,
+      "redoRestored": true,
+      "reassembled": true,
+      "advancedChanged": true,
+      "frameOverflow": false,
+      "alerts": []
+    }
+  ]
+}

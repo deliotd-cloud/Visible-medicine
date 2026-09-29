@@ -1,5 +1,13 @@
 # First-release viewer acceptance evidence
 
+## 29 September: regional layers and whole-body study wiring
+
+[Dissection browser evidence](REGIONAL_DISSECTION_ACCEPTANCE_20260929.md)
+covers 47 layer steps across 11 regions, 37 whole-body study groups, recipe/count
+Undo/Redo and reassembly, plus one remove/Undo sample. Source history/library
+checks pass. This verifies control/state wiring, not mesh visibility, precise
+spatial reassembly, clinical accuracy or full device acceptance.
+
 ## 29 September: all regional routes, desktop and phone layout
 
 [24-case local browser evidence](REGIONAL_VIEWER_ACCEPTANCE_20260929.md) covers

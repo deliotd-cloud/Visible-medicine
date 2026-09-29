@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import * as THREE from 'three';
 import { build } from './workspace-test-build.mjs';
 import { bodyOffset, translatedBox, fitBounds } from '../lib/explode-layout.mjs';
+import { checkOrWriteJson } from './check-or-write-json.mjs';
 // Use the same confined TypeScript resolver as the other pure-helper suites.
 // Direct Node imports cannot resolve the application's extensionless imports.
 // Bundle the real helpers; retain every assertion and use no runtime stubs.
@@ -262,9 +263,10 @@ const manifest = {
     };
   }),
 };
-await fs.writeFile(
+await checkOrWriteJson(
   'content/dissection-manifest.json',
-  JSON.stringify(manifest, null, 2),
+  manifest,
+  process.argv.includes('--check'),
 );
 const result = {
   passed: true,
@@ -282,8 +284,9 @@ const result = {
   browserInteractionTesting: false,
   rows,
 };
-await fs.writeFile(
+await checkOrWriteJson(
   'docs/dissection-validation.json',
-  JSON.stringify(result, null, 2),
+  result,
+  process.argv.includes('--check'),
 );
 console.log(JSON.stringify({ ...result, rows: undefined }, null, 2));
