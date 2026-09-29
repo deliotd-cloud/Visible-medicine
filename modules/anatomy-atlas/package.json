@@ -317,7 +317,7 @@
     "thyroid-imaging:test": "node scripts/pin-thyroid-imaging.mjs --check && node scripts/record-thyroid-imaging-transition.mjs --check && node scripts/validate-thyroid-imaging.mjs",
     "model-first:test": "node scripts/validate-model-first.mjs",
     "atlas-navigation:test": "node scripts/validate-atlas-navigation.mjs",
-    "anatomy-search:test": "node scripts/validate-anatomy-search.mjs",
+    "anatomy-search:test": "node scripts/validate-anatomy-search.mjs && node scripts/test-search-word-forms.mjs",
     "shoulder-workspace:test": "node scripts/validate-shoulder-workspace.mjs",
     "selection-visibility:test": "node scripts/validate-selection-visibility.mjs",
     "supporting:audit": "node scripts/audit-supporting-candidates.mjs",

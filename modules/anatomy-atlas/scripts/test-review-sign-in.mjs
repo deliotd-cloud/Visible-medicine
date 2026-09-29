@@ -76,7 +76,9 @@ function assertLink(tree, entry) {
 }
 
 test('all admitted review selections survive sign-in without changing model scope or source token', () => {
-  assert.equal(api.clinicalReviewEntries.length, 1575);
+  // Includes the two admitted hippocampi; continue testing every exact return.
+  assert.equal(api.clinicalReviewEntries.length, 1577);
+  assert.equal(api.clinicalReviewEntries.filter(e => e.scope === 'nested' && /hippocampus/i.test(e.name)).length, 2);
   for (const entry of api.clinicalReviewEntries) {
     sameSelection(destination(api.reviewSignInHref(targetFor(entry))), entry.href);
   }

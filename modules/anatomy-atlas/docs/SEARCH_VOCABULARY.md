@@ -34,6 +34,24 @@ and cranial-nerve number distinctions are preserved.
 
 ## References and rights
 
+### Bounded word forms, 29 September 2026
+
+Atlas search and the source Clinical Review index accept `colliculus`, `colliculi`
+and `collicular`, plus `brachium`/`brachia`, as search word forms. For example,
+`inferior collicular brachia left` finds the existing left inferior brachium.
+These terms already occur in the source labels and collicular-brachia teaching;
+this is navigation vocabulary, not a new clinical equivalence or source admission.
+Full words must match: `brachia` does not match brachial arteries or brachialis.
+No generic stemming, typo correction or external service is introduced.
+FMA numeric tokens now require a complete ID, just like cranial-nerve numbers.
+Labels, exact selection actions, side handling, source/review links and held
+superior brachia are unchanged. Dedicated shoulder/specimen search is not expanded.
+
+`scripts/test-search-word-forms.mjs` reproduces the previously empty query, checks
+324 query cases across 36 region/side scopes, three source Clinical Review
+queries, word-boundary/identifier negatives, nonmutation and unchanged actions.
+Website delivery and actual browser acceptance are separate from these checks.
+
 The deferent-duct aliases were checked on 11 September 2026 against the original source rows and [NCI/SEER Duct System](https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html). These aliases bind only the two admitted whole source records; no epididymis, ejaculatory duct or additional nerve is inferred.
 
 Terms were checked on 9 September 2026 against the retained BodyParts3D v4 IS-A/PART-OF source rows and these factual references:

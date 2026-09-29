@@ -218,9 +218,23 @@ export function normalizeAnatomySearch(value: string): string {
     .trim();
 }
 
-/** CN IV must never match CN VI, an identifier digit or "division". */
+// Explicit word forms used by existing labels/teaching, not general stemming.
+// In particular, "brachial" and "brachialis" are not synonyms for "brachium".
+const searchWordForms = [
+  ['colliculus', 'colliculi', 'collicular'],
+  ['brachium', 'brachia'],
+] as const;
+const wordForms = new Map<string, readonly string[]>(
+  searchWordForms.flatMap(group => group.map(word => [word, group] as const)),
+);
+
+/** Search-only equivalence. Numeric identities and curated forms use whole words. */
 export function anatomySearchWordMatches(text: string, word: string): boolean {
-  return /^cn\d+$/.test(word)
-    ? text.split(' ').includes(word)
-    : text.includes(word);
+  if (/^(?:cn|fma)\d+$/.test(word)) return text.split(' ').includes(word);
+  const forms = wordForms.get(word);
+  if (forms) {
+    const tokens = text.split(' ');
+    return forms.some(form => tokens.includes(form));
+  }
+  return text.includes(word);
 }

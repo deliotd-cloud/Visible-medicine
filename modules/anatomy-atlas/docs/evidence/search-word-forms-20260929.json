@@ -1,0 +1,35 @@
+{
+  "scope": "Search-only word forms; no new anatomy, teaching or assets",
+  "baselineCommit": "c97c2b0b200ab1813a510ef65355fa2b45d05499",
+  "reproducedBeforeFix": "inferior collicular returned zero instead of two admitted inferior brachia",
+  "sourceTests": {
+    "scopes": 36,
+    "queryCases": 324,
+    "clinicalReviewQueries": 3,
+    "unchangedExactActions": true,
+    "heldSuperiorBrachiaAbsent": true,
+    "wordBoundaryAndNumericIdNegatives": true,
+    "passedSuites": ["anatomy-search", "atlas-navigation", "clinical-review", "renderer", "selection-visibility", "search-preview-focus", "search-pagination-focus", "reviews", "body-review", "nested-review"],
+    "typescript": "pass",
+    "headNeckAndShoulderModuleBuilds": "pass",
+    "preexistingTestCorrection": "sign-in count 1575 to 1577, with explicit two-hippocampus assertion and every exact return still tested"
+  },
+  "browser": {
+    "target": "Hash-verified local generated source module, not deployed website",
+    "verifiedSourceInputs": 866,
+    "viewport": "375x812",
+    "inferiorCollicular": "two correctly labelled results",
+    "leftSelection": "opens brainstem study, FMA73464, matching source label and draft teaching",
+    "rightInferiorCollicularBrachia": "one right FMA73463 result",
+    "superiorCollicularBrachia": "zero results; held sources not admitted",
+    "horizontalOverflow": false,
+    "physicalDeviceTesting": false
+  },
+  "modelFilesChanged": false,
+  "sourceSelectionIdsChanged": false,
+  "teachingChanged": false,
+  "displayFingerprintsRegenerated": true,
+  "clinicalApproval": false,
+  "published": false,
+  "next": "Import into website learner and Clinical Review, preserving fracture work, then verify integrated behavior"
+}
