@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "a3f12f72d660bcbe7b27e172eaadafa8d9d09e44",
-  "sha256": "e3c0492f93782049ce8e49db440e25903a4599342696566c7e5677c930fc4784",
+  "sourceCommit": "c32312102a1793d579ec22297b0d3df81e4cb122",
+  "sha256": "1c90a09a9d006acedf3393f03e394397f6be9ff98611d0f79c840990e53d571f",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -2699,6 +2699,10 @@
       "sha256": "3d4dba4d517088183dd5a21957c3d0a35862f8c0ad4d69be1395dc2ea6a2d338"
     },
     {
+      "path": "atlas-review/lib/lower-limb-bone-reasoning.ts",
+      "sha256": "08de7b02c6dc58c5a88baa52e8532bd66a6b8f047b951fe9600653175ca88738"
+    },
+    {
       "path": "atlas-review/lib/lower-limb-motor.ts",
       "sha256": "e769da189fa98ef8997b2fd275638f9996517a7ed2dd5a1818a5283bb5653c56"
     },
@@ -2948,7 +2952,7 @@
     },
     {
       "path": "atlas-review/lib/reasoning-questions.ts",
-      "sha256": "317c6dc0a84590c8075a7cd07f18824e8eba989cda6baaa10c57091f4588bd66"
+      "sha256": "c65f4352b240fb253ba6f815bc63c8d8fa3667ab54e1cddd386014764d43ac19"
     },
     {
       "path": "atlas-review/lib/rectal-deferent-imaging.ts",
@@ -3388,7 +3392,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "d585222f8c08bfa90a4e0231d223a611d0f28c929b55134df6a1f73aa34fe401"
+      "sha256": "fe8998fd7fb6f90a5fe05777c620bffab305fdbbe4f01a01d6be6b11fd1de27a"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3644,7 +3648,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "f7861141112111f8fc24ed7ccc4722d001129a08bfe2c30db6144ba9aa6d0b51"
+      "sha256": "563a76197c0c8cb4d87059eaf7a23d39444c27f873cd16064461bf59b5a90715"
     }
   ]
 }

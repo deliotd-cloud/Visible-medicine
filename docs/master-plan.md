@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+29 September: lower-limb bone reasoning imported locally from Atlas `c323121`.
+Eight draft concepts/sixteen bilateral surfaces;166 concepts total. All preceding
+158 and137 model hashes preserved.277 website tests, types/build and actual
+leg/foot/whole-body learner plus femur Clinical Review checks pass. Cancelled
+browser requests remain recorded; no question or page errors. Fracture work
+preserved. No publication or approval. GitHub/C recovery, D pending while full.
+See `docs/lower-limb-bone-reasoning-delivery-20260929.md`. Native MRI remains done.
+
 29 September: upper-limb bone reasoning imported locally from Atlas `a3f12f7`.
 Five new draft concepts on ten existing bilateral bone selections; 158 total
 concepts. All preceding153 and137 models unchanged. Source checks,276 website

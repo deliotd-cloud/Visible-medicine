@@ -1,5 +1,5 @@
 {
-  "revision": "a3f12f72d660bcbe7b27e172eaadafa8d9d09e44",
+  "revision": "c32312102a1793d579ec22297b0d3df81e4cb122",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2528,8 +2528,8 @@
     },
     {
       "path": "lib/reasoning-questions.ts",
-      "sourceSha256": "317c6dc0a84590c8075a7cd07f18824e8eba989cda6baaa10c57091f4588bd66",
-      "importedSha256": "317c6dc0a84590c8075a7cd07f18824e8eba989cda6baaa10c57091f4588bd66"
+      "sourceSha256": "c65f4352b240fb253ba6f815bc63c8d8fa3667ab54e1cddd386014764d43ac19",
+      "importedSha256": "c65f4352b240fb253ba6f815bc63c8d8fa3667ab54e1cddd386014764d43ac19"
     },
     {
       "path": "lib/forearm-reasoning.ts",
@@ -2605,6 +2605,11 @@
       "path": "lib/upper-limb-bone-reasoning.ts",
       "sourceSha256": "11161555f3296f06e435e2c2e1a0bd2ee1dc14806e0c1234625064071ecc0bf6",
       "importedSha256": "11161555f3296f06e435e2c2e1a0bd2ee1dc14806e0c1234625064071ecc0bf6"
+    },
+    {
+      "path": "lib/lower-limb-bone-reasoning.ts",
+      "sourceSha256": "08de7b02c6dc58c5a88baa52e8532bd66a6b8f047b951fe9600653175ca88738",
+      "importedSha256": "08de7b02c6dc58c5a88baa52e8532bd66a6b8f047b951fe9600653175ca88738"
     },
     {
       "path": "lib/regional-tours.ts",
@@ -2788,8 +2793,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "216af8925e5dcaae86e80cf4ee088b53bcdc87170ff436fbcf3d55ad7adfcee0",
-      "importedSha256": "ca8999a03ad814746be64c63b48747b461d215628700fd07c21fe341693dc15c"
+      "sourceSha256": "c810db7634f0f9ed46697cd6ca49a38e1692d400e3f2f39769efb62cdfcc7b8b",
+      "importedSha256": "1ae98736a4d55e851c4b0eae025d8bc55db6ffc5a8e0d525e441f216dfb1cf2f"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3079,7 +3084,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "fb6991b58ab04357c6b9ffc2a98e3df6bf329a9b6be41feec22eacea2e2dc217",
-      "importedSha256": "5e589070680a4eed9f3b9c63e870e13d0214f2425d03116d24106ff4a2826649"
+      "importedSha256": "0b2387a2ad6a2d0c6a8617e6643ab4f2fed13cbaf452150316392138f6a84417"
     },
     {
       "path": "app/review/review.css",
@@ -4383,8 +4388,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "d585222f8c08bfa90a4e0231d223a611d0f28c929b55134df6a1f73aa34fe401",
-      "importedSha256": "d585222f8c08bfa90a4e0231d223a611d0f28c929b55134df6a1f73aa34fe401"
+      "sourceSha256": "fe8998fd7fb6f90a5fe05777c620bffab305fdbbe4f01a01d6be6b11fd1de27a",
+      "importedSha256": "fe8998fd7fb6f90a5fe05777c620bffab305fdbbe4f01a01d6be6b11fd1de27a"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -4483,5 +4488,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "e3c0492f93782049ce8e49db440e25903a4599342696566c7e5677c930fc4784"
+  "websiteIntegrationSha256": "1c90a09a9d006acedf3393f03e394397f6be9ff98611d0f79c840990e53d571f"
 }
