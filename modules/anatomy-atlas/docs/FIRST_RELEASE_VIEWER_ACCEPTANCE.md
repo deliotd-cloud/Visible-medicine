@@ -1,5 +1,13 @@
 # First-release viewer acceptance evidence
 
+## 29 September: all regional routes, desktop and phone layout
+
+[24-case local browser evidence](REGIONAL_VIEWER_ACCEPTANCE_20260929.md) covers
+search, named selection, sheet return, focused keyboard rotation and horizontal
+layout across all 12 regional/whole-body routes at two sizes. Supplemental native
+keyboard and separation samples pass. This does not close physical-device,
+all-structure, spatial or clinical acceptance gates.
+
 ## 28 September: enlarged label text and drawing space
 
 [Enlarged-label evidence](ENLARGED_LABEL_READABILITY.md) follows up the observed
