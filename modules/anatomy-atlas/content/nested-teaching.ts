@@ -1,4 +1,5 @@
 import type { NestedStudy } from '../lib/nested-anatomy';
+import { superiorTemporalMRI, superiorTemporalMRIReferences } from './superior-temporal-mri.ts';
 import { cardiacXrayTeaching, cardiacXrayReferences } from './cardiac-xray-teaching.ts';
 import { ventricularUltrasoundTeaching, ventricularUltrasoundReferences } from './ventricular-ultrasound-teaching.ts';
 import { cerebralLobarImaging, cerebralLobarReferences } from './cerebral-lobar-imaging.ts';
@@ -63,6 +64,7 @@ export const nestedTeachingReferences: Record<
   string,
   { title: string; url: string }
 > = {
+  ...superiorTemporalMRIReferences,
   ...cardiacXrayReferences,
   ...ventricularUltrasoundReferences,
   ...hippocampalTeachingReferences,
@@ -1040,7 +1042,7 @@ export const nestedConcepts: NestedConcept[] = [
       ),
       pathology: cerebralTeaching.anteriorSuperiorTemporal.pathology,
     },
-    imaging: cerebralTeaching.anteriorSuperiorTemporal.imaging,
+    imaging: { ...cerebralTeaching.anteriorSuperiorTemporal.imaging, mri: superiorTemporalMRI.anterior },
     modelLimit:
       'Additional ISA source part, absent from the original brain aggregate. It is not independently validated Heschl cortex or an auditory territory.',
     quiz: quiz(
@@ -1051,6 +1053,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'cerebral-superior-temporal-posterior',
     study: 'cerebral',
+    imaging: { mri: superiorTemporalMRI.posterior },
     fmaIds: ['FMA72805', 'FMA72804'],
     sections: {
       anatomy: section(

@@ -453,7 +453,7 @@ for (const target of targets) {
                   ? ['ct', 'mri', 'ultrasound', 'xray']
                   : concept.id === 'cerebral-insula' || lobarIds.some(id => concept.id === 'cerebral-' + id)
                     ? ['ct', 'mri']
-                    : concept.id === 'cerebral-superior-temporal-anterior'
+                    : ['cerebral-superior-temporal-anterior', 'cerebral-superior-temporal-posterior'].includes(concept.id)
                       ? ['mri']
                       : []));
   same(
@@ -647,12 +647,13 @@ same(coverage.clinical, { draft: 71, pending: 0 });
 for (const tab of ['anatomy', 'function', 'quiz'])
   same(coverage[tab], { draft: 71, pending: 0 });
 same(coverage.ct, { draft: 47, pending: 24 });
-same(coverage.mri, { draft: 54, pending: 17 });
+same(coverage.mri, { draft: 56, pending: 15 });
 same(coverage.xray, { draft: 9, pending: 62 });
 same(coverage.ultrasound, { draft: 41, pending: 30 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
 const wordsBySource = {};
 const hosts = new Set([
+  'resource.loni.usc.edu',
   'radiologyassistant.nl',
   'gravitas.acr.org',
   'www.radiologymasterclass.co.uk',
@@ -723,11 +724,11 @@ for (const concept of api.nestedConcepts) {
     }
   }
 }
-same(Object.keys(wordsBySource).length, 98);
+same(Object.keys(wordsBySource).length, 100);
 same(
   new Set(Object.values(api.nestedTeachingReferences).map((ref) => ref.url))
     .size,
-  99,
+  101,
   'Do not split one source into duplicate reference keys',
 );
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {

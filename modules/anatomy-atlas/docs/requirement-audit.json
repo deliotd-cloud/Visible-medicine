@@ -249,7 +249,7 @@
     "public/models/bodyparts3d/pulmonary/catalog.json": "b62ccd78dfc2ced8674b94eba67596add4de482f54c3f242814982b4e3dab9ea",
     "docs/pulmonary-source-audit.json": "734fc23b6d4812b81ffb007214c271096562bcb8376766fc9d609bfddabc95db",
     "content/cerebral-supplement-audit.json": "a186519bbf31065f5c4e58472c542a9cbd2a6b64d35423a4f6c92d7bae1d69d7",
-    "content/nested-teaching.ts": "83ece8dc3b394714950aec5b29e8f74333311275040e56e4d59f4652b1aeed21",
+    "content/nested-teaching.ts": "61ba520e5bbaa3f2dde78d6cf35c63f70a519594f343342d06bf08984c6afb43",
     "content/nested-review-bindings.json": "ce08b922d13c6a76f6672de0ca73cceea2250c1208ee9edc8f3f59d05bf4b73d",
     "lib/nested-review.ts": "18afa81b7b1aa02ae1f174bd8d3b5c902d2d2eb8351c33798ae93a4927f90b74",
     "lib/nested-review-key.ts": "bf11dbacc334bac13a821a14d754478d6754d3e468344384e263d3b3442430e8",
@@ -267,6 +267,7 @@
     "content/hepatic-teaching.ts": "0c93b76eba32feb4e5c1d0f139fccd416645dad6419b1e59bb97b043c534a654",
     "content/pulmonary-teaching.ts": "0abe50a77f1a4e64eabd51bc2be39a0798ea2aa567625acb5201b58872934b0a",
     "content/cerebral-teaching.ts": "ba741cc7373be4ffad1dd7a04af2605d5a033bbe6d40723196241d89d905b1a0",
+    "content/superior-temporal-mri.ts": "6a9b9f8668ac513d3115083de2954f62eb304947b25e19a1646d7a4b1fadc42f",
     "content/nested-teaching-bindings.v1.json": "333fe4f02e3a776c119bd8d6af75787da27ebdd0d777fa5e028fe60cfd42a81e",
     "lib/nested-anatomy.ts": "b9368085e520b5228f43391825729ee39b98995522b5db39ef2e8627cfcf28d1",
     "lib/nested-teaching.ts": "aa2423a1cc53f70f992c19b601160000d44937eda47faae422d6898902edd23d",
@@ -377,7 +378,7 @@
     "lib/intrinsic-larynx-tour.ts": "05e8dc9544e40cd49c2cf5fb086958b401f2b5bd6d3e294309ef54cf6c31ea3a",
     "lib/male-duct-tour.ts": "0ecd223bcd86e19c06ac24b70685543b9881cc1754bfb0d08cff85a837edff11",
     "lib/deep-brain-tour.ts": "f3dc89facdbc8cdf134b25480495a263fbf50daedb2aa74421912672054442eb",
-    "nestedTeachingData": "ac05018557df9f38a371dc8f3323f8a7e391553c977e350903b93bd180c8de27"
+    "nestedTeachingData": "4207e18d62f328b5611d3b481c26e0f3e4e169bc3da5d6920480ffbbae1107c1"
   },
   "rendering": {
     "bodyBatching": {
@@ -1925,7 +1926,7 @@
         }
       ],
       "concepts": 47,
-      "references": 115,
+      "references": 117,
       "topics": {
         "anatomy": {
           "specificDraft": 79,
@@ -1946,9 +1947,9 @@
           "generatedIdentification": 0
         },
         "mri": {
-          "specificDraft": 60,
+          "specificDraft": 62,
           "identityOnly": 0,
-          "pending": 48,
+          "pending": 46,
           "generatedIdentification": 0
         },
         "xray": {

@@ -2,10 +2,11 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {nestedBeforeCardiacXray} from './cardiac-xray-history.mjs';
+import {nestedBeforeSuperiorTemporalMRI} from './superior-temporal-mri-history.mjs';
 const hash = v => createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export const ventricularUltrasoundIds = ['lateral','third','fourth'];
 export function nestedBeforeVentricularUltrasound(api) {
-  api = nestedBeforeCardiacXray(api);
+  api = nestedBeforeCardiacXray(nestedBeforeSuperiorTemporalMRI(api));
   const additions = Object.fromEntries(ventricularUltrasoundIds.map(id => {
     const c = api.nestedConcepts.find(c => c.id === 'ventricular-' + id);
     assert(c);return [id,c.imaging.ultrasound];
