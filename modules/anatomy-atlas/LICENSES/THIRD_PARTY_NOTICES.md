@@ -1920,3 +1920,12 @@ figures, tables, scans or models are reproduced. Links are evidence references,
 not a grant to redistribute publisher assets. Existing geometry/licence notices
 remain unchanged. No new dependency, media asset or mandatory fee is introduced.
 See `docs/CRICOTHYROID_IMAGING.md` for source and clinical limitations.
+
+## Carpal guided learning references — 29 September 2026
+
+The right carpal-row tour uses short original factual captions referencing
+TTUHSC El Paso upper-limb bone tables. No copyrighted table, illustration, prose
+passage or mnemonic is reproduced. The linked page is a factual reference, not
+an asset licence. Existing BodyParts3D4.0/CC BY4.0 geometry and notices remain
+unchanged. No new asset, font, dependency, service or mandatory fee is added.
+See `docs/CARPAL_GUIDED_TOUR.md`; clinical review remains required.

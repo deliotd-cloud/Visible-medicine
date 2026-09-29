@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "carpal-tour:test": "node scripts/test-carpal-tour.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-regional-tour-review.mjs && node scripts/test-tour-step-picker.mjs && node scripts/test-tour-camera.mjs",
     "cricothyroid-imaging:test": "node scripts/test-cricothyroid-imaging.mjs && node --import tsx scripts/validate-cricothyroid.mjs && node scripts/validate-nested-teaching.mjs",
     "lumbar-tour:test": "node scripts/test-lumbar-tour.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-regional-tour-review.mjs && node scripts/test-tour-camera.mjs",
     "tour-step-picker:test": "node scripts/test-tour-step-picker.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-shoulder-tours.mjs && node scripts/test-shoulder-tour-session.mjs",

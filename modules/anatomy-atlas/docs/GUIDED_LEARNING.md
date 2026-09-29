@@ -1,5 +1,10 @@
 # Agent-authored guided learning
 
+29 September: [right carpal-row tour](CARPAL_GUIDED_TOUR.md) follows all eight
+existing wrist bones in the Hand and Whole body Guided learning menu. The hand
+muscle tour stays the default. One assembled frame and existing smooth camera
+transitions preserve orientation; no additional toolbar or model is introduced.
+
 29 September: [right subscapular branch tour](SUBSCAPULAR_TOUR.md) adds four
 source-bound arterial stops under Shoulder & arm and Whole body. Existing tours,
 model bytes and draft/review boundaries remain unchanged.

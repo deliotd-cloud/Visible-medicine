@@ -8,7 +8,7 @@ Generated from the current displayed catalogue, teaching resolver, dissection pr
 - Dedicated shoulder: 9 representations / 11 source parts, overlapping the body catalogue.
 - Nested dissections: 108 selectable parts, 47 teaching concepts / 119 references; 29 geometry-only selections retain pending teaching.
 - 159 dissection stages / 207 focuses. These operate on supplied surfaces, not complete anatomy.
-- Guided learning: 18 regional tours / 97 stops; dedicated shoulder 1 tour / 5 stops. These source-bound drafts reuse existing anatomy, not additional unique structures or clinical approvals.
+- Guided learning: 19 regional tours / 105 stops; dedicated shoulder 1 tour / 5 stops. These source-bound drafts reuse existing anatomy, not additional unique structures or clinical approvals.
 - Find/name identification; 166 draft reasoning concepts bound to 308 root-body representations in shoulder-arm, foot, thigh, pelvis, leg, forearm, head-neck, spine, thorax, abdomen, hand. [Reasoning practice](REASONING_PRACTICE.md) is separate from Quiz-tab notes.
 
 Independent specimens retain separate source frames and teaching inventories. These counts are not added to root-body or nested coverage; lower-limb regional scopes overlap the same specimen.
