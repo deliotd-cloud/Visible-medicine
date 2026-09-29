@@ -25,7 +25,7 @@ Four unchanged originals are retained in `content/sources/collicular-brachia`, p
 
 ## Teaching, integration and review
 
-One source-bound concept provides Anatomy/Function drafts and an auditory-relay self-check for both sides. [UTHealth's auditory laboratory](https://oac22.hsc.uth.tmc.edu/courses/neuroanatomy/L06P12.html) is a factual reading reference; no university illustration, passage, scan or teaching file is redistributed. Clinical, Pathology, CT, MRI, X-ray and Ultrasound remain pending. No diagnostic performance or actual scan correspondence is inferred.
+One source-bound concept provides Anatomy/Function drafts and an auditory-relay self-check for both sides. [UTHealth's auditory laboratory](https://oac22.hsc.uth.tmc.edu/courses/neuroanatomy/L06P12.html) is a factual reading reference; no university illustration, passage, scan or teaching file is redistributed. MRI, Clinical and Pathology drafts were added on 29 September; see [teaching scope and references](COLLICULAR_TEACHING_20260929.md). CT, X-ray and Ultrasound remain pending. No diagnostic performance or actual scan correspondence is inferred. Counts below describe the original geometry milestone; use CURRENT_STATUS.md for the current inventory.
 
 There are now 71 reachable nested selections across 42 teaching concepts. All 69 prior teaching bindings and parent records are preserved exactly; the main display remains 1,042 selections. The 532-piece comparative difference now comprises 24 nested-covered pieces, 45 direct holds, one display exclusion, one related cross-tree hold and 461 further candidates. Source pieces are not counts of complete missing structures.
 

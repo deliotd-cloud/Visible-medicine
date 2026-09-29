@@ -196,6 +196,9 @@ const addedDuctReferences = new Set([
   'femoralComponentVariation',
   'femoralComponentInjury',
   'auditoryBrachium',
+  'auditoryBrachiumMRI',
+  'auditoryBrachiumClinical',
+  'auditoryBrachiumPathology',
   'pancreaticImagingDiagnosis',
   'pancreaticMRCP',
   'pancreaticUltrasoundWindow',
@@ -426,7 +429,7 @@ for (const target of targets) {
   const expectedImaging =
     concept.study === 'pancreatic'
       ? ['ct', 'mri', 'ultrasound']
-      : ((visualImagingIds.has(concept.id)
+      : ((visualImagingIds.has(concept.id) || concept.id === 'inferior-collicular-brachia'
           ? ['mri']
           : eyeImagingScope[concept.id]) ??
         (brainImagingIds.has(concept.id)
@@ -638,12 +641,12 @@ same(
   71,
   'Changing either study or side resets revealed answer',
 );
-same(coverage.pathology, { draft: 69, pending: 2 });
-same(coverage.clinical, { draft: 69, pending: 2 });
+same(coverage.pathology, { draft: 71, pending: 0 });
+same(coverage.clinical, { draft: 71, pending: 0 });
 for (const tab of ['anatomy', 'function', 'quiz'])
   same(coverage[tab], { draft: 71, pending: 0 });
 same(coverage.ct, { draft: 47, pending: 24 });
-same(coverage.mri, { draft: 52, pending: 19 });
+same(coverage.mri, { draft: 54, pending: 17 });
 same(coverage.xray, { draft: 5, pending: 66 });
 same(coverage.ultrasound, { draft: 37, pending: 34 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
@@ -717,11 +720,11 @@ for (const concept of api.nestedConcepts) {
     }
   }
 }
-same(Object.keys(wordsBySource).length, 91);
+same(Object.keys(wordsBySource).length, 94);
 same(
   new Set(Object.values(api.nestedTeachingReferences).map((ref) => ref.url))
     .size,
-  92,
+  95,
   'Do not split one source into duplicate reference keys',
 );
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {

@@ -6,7 +6,7 @@ Generated from the current displayed catalogue, teaching resolver, dissection pr
 
 - 1104 displayed root-body representations, 109 body GLBs (104390180 canonical bytes), 11 regions plus whole body; 1022 retained archival records.
 - Dedicated shoulder: 9 representations / 11 source parts, overlapping the body catalogue.
-- Nested dissections: 108 selectable parts, 47 teaching concepts / 106 references; 29 geometry-only selections retain pending teaching.
+- Nested dissections: 108 selectable parts, 47 teaching concepts / 109 references; 29 geometry-only selections retain pending teaching.
 - 159 dissection stages / 207 focuses. These operate on supplied surfaces, not complete anatomy.
 - Guided learning: 16 regional tours / 88 stops; dedicated shoulder 1 tour / 5 stops. These source-bound drafts reuse existing anatomy, not additional unique structures or clinical approvals.
 - Find/name identification; 146 draft reasoning concepts bound to 268 root-body representations in head-neck, foot, thigh, leg, pelvis, spine, thorax, abdomen, shoulder-arm, hand, forearm. [Reasoning practice](REASONING_PRACTICE.md) is separate from Quiz-tab notes.
@@ -46,11 +46,11 @@ Separate from root-body coverage and overlapping parent anatomy. Unnamed cranial
 | Anatomy | 79 | 0 | 29 | 0 |
 | Function | 77 | 0 | 31 | 0 |
 | CT | 53 | 0 | 55 | 0 |
-| MRI | 58 | 0 | 50 | 0 |
+| MRI | 60 | 0 | 48 | 0 |
 | X-ray | 5 | 0 | 103 | 0 |
 | Ultrasound | 39 | 0 | 69 | 0 |
-| Pathology | 75 | 0 | 33 | 0 |
-| Clinical | 75 | 0 | 33 | 0 |
+| Pathology | 77 | 0 | 31 | 0 |
+| Clinical | 77 | 0 | 31 | 0 |
 | Quiz notes | 79 | 0 | 29 | 0 |
 
 ## Dedicated shoulder teaching readiness

@@ -203,7 +203,7 @@
     "lib/cubital-veins.ts": "1877da3b251cae1816573786fe271a94306571f606fb8410386a326efe3e30e6",
     "docs/collicular-brachia-source-audit.json": "376863798d350db47711e802a9f5a0180b9d1c99f0972bbec769e6588e5c5b9a",
     "lib/brainstem.ts": "c1672c0d2e21d0fb3b752b6cb001a970b071fa492b218a9c788a476754fc24a9",
-    "content/collicular-brachia-teaching.ts": "f805f4ab67d5d0ae82a0e2bd9116d0e2a7b31f837d05d349dd8cfabd1172428d",
+    "content/collicular-brachia-teaching.ts": "21f9b9db8750b17b0b445e65e756edbec29a52b8ed2922268e1f0c3eb572dab2",
     "public/models/bodyparts3d/cerebral/catalog.json": "8dbcf8e0cbc5aff4c468e2eeda2e57fb048c65515ce35257b56f2247267624de",
     "public/models/bodyparts3d/hippocampi/catalog.json": "b9448630bcee365817b6421355675c2a44a955993f9a6b66e7e655da8abfb9e1",
     "lib/hippocampi.ts": "ae33235e59efb4a3303786cc2acbadb0b0feafe5900700cc77a849fb3192db31",
@@ -375,7 +375,7 @@
     "lib/intrinsic-larynx-tour.ts": "05e8dc9544e40cd49c2cf5fb086958b401f2b5bd6d3e294309ef54cf6c31ea3a",
     "lib/male-duct-tour.ts": "0ecd223bcd86e19c06ac24b70685543b9881cc1754bfb0d08cff85a837edff11",
     "lib/deep-brain-tour.ts": "f3dc89facdbc8cdf134b25480495a263fbf50daedb2aa74421912672054442eb",
-    "nestedTeachingData": "400fcdb431723124777bcda68bc32a8851dc3f61045b04045276d3d60d65e228"
+    "nestedTeachingData": "d8e329fb1e6a31270ea424dca39a2a1695ab181dbfa11013517ed5d793917611"
   },
   "rendering": {
     "bodyBatching": {
@@ -1923,7 +1923,7 @@
         }
       ],
       "concepts": 47,
-      "references": 106,
+      "references": 109,
       "topics": {
         "anatomy": {
           "specificDraft": 79,
@@ -1944,9 +1944,9 @@
           "generatedIdentification": 0
         },
         "mri": {
-          "specificDraft": 58,
+          "specificDraft": 60,
           "identityOnly": 0,
-          "pending": 50,
+          "pending": 48,
           "generatedIdentification": 0
         },
         "xray": {
@@ -1962,15 +1962,15 @@
           "generatedIdentification": 0
         },
         "pathology": {
-          "specificDraft": 75,
+          "specificDraft": 77,
           "identityOnly": 0,
-          "pending": 33,
+          "pending": 31,
           "generatedIdentification": 0
         },
         "clinical": {
-          "specificDraft": 75,
+          "specificDraft": 77,
           "identityOnly": 0,
-          "pending": 33,
+          "pending": 31,
           "generatedIdentification": 0
         },
         "quiz": {
