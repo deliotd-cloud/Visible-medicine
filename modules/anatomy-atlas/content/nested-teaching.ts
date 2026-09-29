@@ -1,4 +1,5 @@
 import type { NestedStudy } from '../lib/nested-anatomy';
+import { cardiacXrayTeaching, cardiacXrayReferences } from './cardiac-xray-teaching.ts';
 import { ventricularUltrasoundTeaching, ventricularUltrasoundReferences } from './ventricular-ultrasound-teaching.ts';
 import { cerebralLobarImaging, cerebralLobarReferences } from './cerebral-lobar-imaging.ts';
 import { hippocampalConcepts, hippocampalTeachingReferences } from './hippocampal-teaching.ts';
@@ -62,6 +63,7 @@ export const nestedTeachingReferences: Record<
   string,
   { title: string; url: string }
 > = {
+  ...cardiacXrayReferences,
   ...ventricularUltrasoundReferences,
   ...hippocampalTeachingReferences,
   ...femoralComponentReferences,
@@ -382,7 +384,7 @@ export const nestedConcepts: NestedConcept[] = [
         clinical: cardiacTeaching[id].clinical,
         pathology: cardiacTeaching[id].pathology,
       },
-      imaging: cardiacTeaching[id].imaging,
+      imaging: { ...cardiacTeaching[id].imaging, xray: cardiacXrayTeaching[id] },
       modelLimit:
         'Static source cavity only; no cardiac-phase, volume, wall thickness, valve motion or registered scan. Atrial walls are optional nonselectable reference surfaces.',
       quiz: quiz(question, answer, 'cardiacFlow'),

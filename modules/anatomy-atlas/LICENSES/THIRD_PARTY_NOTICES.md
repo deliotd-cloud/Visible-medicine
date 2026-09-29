@@ -1833,6 +1833,16 @@ passages are redistributed. References are not licences to reuse those assets.
 Existing adult-model credits remain unchanged. No new dependency, font, service
 or fee is added. Drafts do not confer clinical or acquired-image approval.
 
+## Cardiac chamber X-ray references — 29 September 2026
+
+Four original short orientation notes cite Radiology Assistant's chest-radiograph
+teaching and Graham Lloyd-Jones' Radiology Masterclass projection tutorial.
+See `docs/CARDIAC_CHAMBER_XRAY_20260929.md` for checked source URLs and scope.
+Factual references only: no source images, diagrams, tables, scans, question-bank
+material or extended prose copied. Links are not media-reuse licences. Existing
+BodyParts3D credits remain unchanged; no new asset, dependency, font or fee.
+These are draft teaching notes, not clinical or acquired-image approval.
+
 ## Brain connections references
 
 Six original short questions reference factual relationships in UTHealth McGovern

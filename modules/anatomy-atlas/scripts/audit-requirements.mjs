@@ -590,6 +590,7 @@ for (const path of [
   'app/review/nested/workspace.tsx',
   'app/api/nested-review/route.ts',
   'content/cardiac-teaching.ts',
+  'content/cardiac-xray-teaching.ts',
   'content/hepatic-teaching.ts',
   'content/pulmonary-teaching.ts',
   'content/cerebral-teaching.ts',
