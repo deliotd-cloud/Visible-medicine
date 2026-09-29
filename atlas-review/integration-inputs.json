@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "1223e506beaf1ba8ddba1d082c8449e42cb64f72",
-  "sha256": "dab6714bee2c8f1e0b7ffc68abdb5f63927f83418db6f5baa8b8def33cee1bea",
+  "sourceCommit": "c55db3aba23f5f260ef09955b470650a8485800a",
+  "sha256": "cac3d706c04fdb80e044c8618115e5006860967d3d620f17ff406250c4b0f3e9",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -715,6 +715,10 @@
       "sha256": "0848e6de5820400a84fee5cfdff88ad406de07774aedafc10ec7ffdedbf0a72c"
     },
     {
+      "path": "atlas-review/content/cardiac-xray-teaching.ts",
+      "sha256": "65ae09bf24479ff492b55304299a88fbfc15f0dde7277e35df4d856f59fe01a8"
+    },
+    {
       "path": "atlas-review/content/central-neural-imaging-pins.json",
       "sha256": "3395a863ca17220821a540ae016a2d864d421d2e57e61f5ddcdae81f57d940be"
     },
@@ -1344,7 +1348,7 @@
     },
     {
       "path": "atlas-review/content/nested-teaching.ts",
-      "sha256": "97b0825d12e19341bcb4e281875578de0fb62d710961b192d360928387189d7a"
+      "sha256": "83ece8dc3b394714950aec5b29e8f74333311275040e56e4d59f4652b1aeed21"
     },
     {
       "path": "atlas-review/content/ophthalmic-nerve-studies.ts",
@@ -3372,7 +3376,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "2f947e3c498e0e02e198c8b0a4496c243ff624af0e06c42a879e96519d16c2f6"
+      "sha256": "1aa78f2a6cda9ee67031644a703135b7093a7f5e6f7b84f1b251bde5e3b95151"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3628,7 +3632,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "5f6f3dd3805de404f4c95f1cae65be00ca2ec2f4ea9d8b1c57fc96628c3e0505"
+      "sha256": "3631c4acacab0e9932d465086fa3577b5d7f2f18aae01f9043813e8aa4c92ecc"
     }
   ]
 }

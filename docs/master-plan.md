@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+29 September: cardiac chamber X-ray teaching imported locally from Atlas
+`c55db3a`. Four original referenced drafts appear in existing learner tabs and
+Clinical Review; no new navigation or scanned images. 271 tests, types/build
+and actual phone-sized learner/review checks pass. All model bytes, independent
+access and separate fracture work preserved. No publication or clinical approval.
+See `docs/cardiac-chamber-xray-delivery-20260929.md`. Native MRI remains done.
+
 29 September: expanded dissection reflow imported locally from Atlas `1223e50`.
 Practice and cutaway controls wrap at enlarged text; structure columns adapt;
 short-screen model height now returns after text enlargement. Actual generated

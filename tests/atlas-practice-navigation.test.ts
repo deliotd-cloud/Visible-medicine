@@ -10,9 +10,9 @@ test('shared practice exports tested focus navigation without changing model inv
   const base='public/atlas-runtime/head-neck/';
   const sha=(data:Buffer)=>createHash('sha256').update(data).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'0b3cb1ed4751616cb8508fb2f09d90b6e68fd97c69af5b69bd68a3bfa7fadf3d');
+  assert.equal(sha(bytes),'01098b2fa54c4c08f044137eacddff123f54e51235fd50c933db03bc75664aa3');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'1223e506beaf1ba8ddba1d082c8449e42cb64f72');
+  assert.equal(manifest.sourceCommit,'c55db3aba23f5f260ef09955b470650a8485800a');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({
