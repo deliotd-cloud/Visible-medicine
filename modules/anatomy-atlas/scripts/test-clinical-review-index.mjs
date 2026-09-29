@@ -5,6 +5,7 @@ import bindings from '../content/nested-review-bindings.json' with { type: 'json
 
 const built = await build({ stdin: { resolveDir: process.cwd(), contents: `
 export * from './lib/clinical-review-index';
+export * from './lib/clinical-review-pilot';
 export {structures} from './app/anatomy-data';
 export {bodyReviewSummaries} from './lib/body-review-material';
 export {nestedReviewRows} from './lib/nested-review-material';
@@ -62,6 +63,27 @@ test('pagination is human one-based, clamped, deterministic and complete', () =>
   assert.equal(find({ page: Number.MAX_SAFE_INTEGER }).page, first.pageCount);
   for (const bad of [0, -1, 1.5, NaN, Infinity, Number.MAX_SAFE_INTEGER + 1, '0', '-1', '1.5', '1e2', ['2'], {}, null]) assert.equal(find({ page: bad }).page, 1);
   const copy = find(); copy.entries[0].name = 'foreign'; assert.notEqual(find().entries[0].name, 'foreign');
+});
+
+test('starter sample preserves exact scope, batch order and current links without duplicating the catalogue', () => {
+  const result = find({ scope: 'pilot', page: '99' });
+  assert.equal(result.total, 11); assert.equal(result.page, 1); assert.equal(result.pageCount, 1);
+  assert.deepEqual(result.entries.map(e => e.scope), [...Array(9).fill('body'), 'nested', 'nested']);
+  assert.deepEqual(result.entries.slice(0, 9).map(e => e.id), api.reviewPilotRoots.map(r => r[1]));
+  assert.deepEqual(result.entries.slice(9).map(e => e.id), api.reviewPilotNested.map(r => r[3]));
+  for (const e of result.entries) assert.deepEqual(e, entries.find(row => row.key === e.key));
+  assert.equal(find({scope:'pilot',q:'left femur'}).total,1);
+  assert.equal(find({scope:'pilot',q:'Achilles'}).total,0);
+  assert.equal(href({scope:'pilot',page:99}),'/review/overview?scope=pilot');
+  assert.equal(href({scope:'pilot',q:'left femur'}),'/review/overview?q=left+femur&scope=pilot');
+  const key = result.entries[0].key;
+  assert.throws(()=>api.resolveReviewPilot(entries.filter(e=>e.key!==key)),/Starter review identity/);
+  assert.throws(()=>api.resolveReviewPilot([...entries,result.entries[0]]),/Starter review identity/);
+  // A refreshed source token is read from the live catalogue, never the old JSON snapshot.
+  const nested = result.entries[9];
+  const refreshed = api.resolveReviewPilot(entries.map(e=>e.key===nested.key?{...e,href:e.href+'&test=current'}:e));
+  assert.equal(refreshed[9].href,nested.href+'&test=current');
+  assert(!('approval' in result));
 });
 
 test('familiar anatomy names retain exact source, scope and side rather than merging models', () => {

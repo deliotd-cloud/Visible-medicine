@@ -65,6 +65,16 @@ test('search, no results and pagination retain safe canonical state', async () =
   assert(!hostile.includes('Review results pages'));
 });
 
+test('starter review uses the existing compact filter and exact source links', async () => {
+  const html = await render({ scope: 'pilot' });
+  assert(html.includes('value="pilot" selected=""'));
+  assert(html.includes('11 matching selections'));
+  assert(html.includes('not a release allowlist'));
+  assert(!html.includes('aria-label="Review results pages"'));
+  for (const entry of findClinicalReviewEntries({scope:'pilot'}).entries)
+    assert(html.includes('href="' + escape(entry.href) + '"'));
+});
+
 test('all four existing review headers return to the hub without replacing decision editors', async () => {
   for (const path of ['app/review/review-dashboard.tsx', 'app/review/body/review-dashboard.tsx',
     'app/review/nested/page.tsx', 'app/review/specimens/page.tsx']) {

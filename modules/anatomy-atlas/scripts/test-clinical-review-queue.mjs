@@ -67,15 +67,16 @@ test('authentication is checked before storage; no client-selected user or dupli
   const count = queries.length;
   assert.equal((await api.getClinicalReviewQueue(request('', ''), db)).status, 401);
   assert.equal(queries.length, count);
-  for (const query of ['?user=someone-else', '?scope=body&scope=nested', '?page=1&page=2'])
+  for (const query of ['?user=someone-else', '?scope=body&scope=nested', '?scope=pilot&scope=body', '?page=1&page=2'])
     assert.equal((await api.getClinicalReviewQueue(request(query), db)).status, 400);
   assert.equal((await api.getClinicalReviewQueue(request(), undefined)).status, 503);
 });
 
 test('empty histories mean not started in all four exact scopes, with bounded reads', async () => {
-  for (const scope of ['shoulder', 'body', 'nested', 'specimens']) {
+  for (const scope of ['shoulder', 'body', 'nested', 'specimens', 'pilot']) {
     queries.length = 0;
     const rows = await read('?scope=' + scope);
+    if (scope === 'pilot') { assert.equal(rows.length,11); assert.equal(rows.filter(r=>r.key.startsWith('nested:')).length,2); }
     assert(rows.length <= 12);
     assert(rows.every(row => row.geometry === 'not-started' && row.teaching === 'not-started'));
     assert(queries.length <= 24);

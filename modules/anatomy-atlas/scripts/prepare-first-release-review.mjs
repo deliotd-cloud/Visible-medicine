@@ -17,14 +17,15 @@ const compiled = await build({ stdin: { contents: `
   export { nestedReviewKey } from './lib/nested-review-key';
   export { bodyDisplayCatalog } from './lib/body-display-catalog';
   export { default as raw } from './public/models/bodyparts3d/full-body/catalog.json';
+  export { reviewPilotRoots, reviewPilotNested } from './lib/clinical-review-pilot';
 `, resolveDir: root, loader: 'ts' }, bundle: true, platform: 'node', format: 'esm', write: false });
 const api = await import('data:text/javascript;base64,' + Buffer.from(compiled.outputFiles[0].text).toString('base64'));
-const rootFmas = ['FMA13395', 'FMA13396', 'FMA32544', 'FMA32545', 'FMA24474', 'FMA24475', 'FMA50737', 'FMA7088', 'FMA50801'];
 const entries = [];
-for (const fmaId of rootFmas) {
+for (const [fmaId, expectedId] of api.reviewPilotRoots) {
   const matches = api.bodyReviewSummaries.filter(s => s.fmaId === fmaId);
   assert.equal(matches.length, 1, 'Pilot identity must resolve exactly: ' + fmaId);
   const [row] = matches;
+  assert.equal(row.id, expectedId);
   const material = await api.bodyReviewMaterial(row.id);
   const context = await api.bodyReviewContext(row.id);
   assert(material && context && material.approval === false);
@@ -37,10 +38,12 @@ for (const fmaId of rootFmas) {
     decision: 'not-recorded-in-this-index' });
 }
 const targets = api.nestedStudyTargets(api.bodyDisplayCatalog(api.raw));
-for (const [study, fmaId] of [['ventricles', 'FMA78454'], ['cardiac', 'FMA9466']]) {
+for (const [study, fmaId, parentId, structureId] of api.reviewPilotNested) {
   const matches = targets.filter(t => t.study === study && t.structure.fmaId === fmaId);
   assert.equal(matches.length, 1, 'Nested pilot identity must resolve exactly: ' + fmaId);
   const [target] = matches;
+  assert.equal(target.parentId, parentId);
+  assert.equal(target.structureId, structureId);
   const packet = await api.nestedReviewMaterial(api.nestedReviewKey(target.parentId, study), target.structureId);
   assert(packet && packet.atlasLink);
   entries.push({ kind: 'nested', fmaId, name: target.structure.name,

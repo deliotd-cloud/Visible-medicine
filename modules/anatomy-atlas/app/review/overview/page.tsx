@@ -56,6 +56,7 @@ export default async function ClinicalReviewPage({ searchParams }: {
             <label htmlFor="clinical-review-scope">Review area</label>
             <select id="clinical-review-scope" name="scope" defaultValue={result.scope}>
               <option value="all">All review areas</option>
+              <option value="pilot">Starter review (11 selections)</option>
               {clinicalReviewScopes.map(scope => <option key={scope.id} value={scope.id}>{scope.label}</option>)}
             </select>
           </div>
@@ -64,6 +65,7 @@ export default async function ClinicalReviewPage({ searchParams }: {
         </form>
         </search>
         <section id="review-results" aria-labelledby="review-results-heading" tabIndex={-1}>
+          {result.scope === 'pilot' && <p>Start with paired bones and muscles, then vessel and organ surfaces, then internal spaces. This sample is not a release allowlist; review geometry and teaching separately.</p>}
           <div className="clinical-review-results-heading">
             <h2 id="review-results-heading">{result.total.toLocaleString()} matching selections</h2>
             <span>Separate models remain separate reviews</span>
