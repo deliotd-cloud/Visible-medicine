@@ -8,7 +8,7 @@ import { build as componentBuild } from './workspace-component-test-build.mjs';
 const compiled = await build({
   stdin: {
     contents:
-      "export * from './lib/body-review-material.ts'; export * from './lib/body-review-search.ts'; export * from './lib/body-review-response.ts'; export { GET } from './app/api/body-review/route.ts'; export { bodyLesson } from './app/body-content.ts';",
+      "export * from './lib/body-review-material.ts'; export * from './lib/body-review-search.ts'; export * from './lib/body-review-response.ts'; export { GET } from './app/api/body-review/route.ts'; export { bodyLesson } from './app/body-content.ts'; export {reasoningConceptFor} from './lib/reasoning-questions.ts';",
     resolveDir: process.cwd(),
     loader: 'ts',
   },
@@ -231,8 +231,20 @@ for (const packet of [
   renders++;
 }
 const reasoningPackets = packets.filter(p=>p.reasoning);
-assert.equal(reasoningPackets.length,268);
+// Derive exact eligible source IDs from the authored binding registry, separately
+// from the review/practice packet generation. The old 268 predates bone questions.
+const expectedReasoningIds = packets.filter(p => api.reasoningConceptFor(p.source.structure)).map(p => p.structureId).sort();
+assert(expectedReasoningIds.length > 0);
+assert.deepEqual(reasoningPackets.map(p => p.structureId).sort(), expectedReasoningIds);
 for (const packet of reasoningPackets) {
+  const concept = api.reasoningConceptFor(packet.source.structure);
+  assert(concept);
+  for (const key of ['key', 'revision', 'readiness', 'prompt', 'explanation', 'references'])
+    assert.deepEqual(packet.reasoning[key], concept[key], packet.structureId + ': reasoning ' + key);
+  assert.equal(packet.reasoning.answerId, packet.structureId);
+  assert.equal(packet.reasoning.choices.filter(choice => choice.id === packet.structureId).length, 1);
+  assert.equal(new Set(packet.reasoning.choices.map(choice => choice.id)).size, packet.reasoning.choices.length);
+  for (const choice of packet.reasoning.choices) assert(rows.some(row => row.id === choice.id), 'Choice is an exact admitted source ID');
   const html=render(React.createElement(module.exports.BodyReviewDetails,{material:packet}));
   assert(html.includes('Interactive reasoning'));
   assert(html.includes('Correct answer'));

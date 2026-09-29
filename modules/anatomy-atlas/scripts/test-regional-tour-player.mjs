@@ -14,8 +14,11 @@ const built = await build({ stdin: {
   loader: 'tsx', resolveDir: process.cwd(),
 }, bundle: true, write: false, format: 'cjs', platform: 'node', loader: { '.css': 'empty' }, plugins: [{ name: 'gpu-boundary', setup(api) {
   api.onLoad({ filter: /[\\/]app[\\/]body-scene\.tsx$/ }, () => ({ loader: 'tsx', contents: 'if(globalThis.retryControl.importError)throw new Error("import failed"); export function BodyScene(){return null;} export function retryBodyAssets(urls,base){globalThis.retryControl.clear(urls,base);}' }));
+  // Camera/player assertions inspect resolved, real source teaching. Async load,
+  // cancellation and retry have their own actual-boundary tests.
+  api.onLoad({ filter: /[\\/]app[\\/]lazy-body-teaching\.tsx$/ }, () => ({ loader: 'tsx', contents: "import * as teaching from './body-content'; export function LazyBodyTeaching({enabled=true,children}){return enabled?children(teaching):null;}" }));
 } }] });
-const nodes = tree => !tree || typeof tree !== 'object' ? [] : Array.isArray(tree) ? tree.flatMap(nodes) : [tree, ...nodes(tree.props?.children)];
+const nodes = tree => !tree || typeof tree !== 'object' ? [] : Array.isArray(tree) ? tree.flatMap(nodes) : tree.type?.name==='LazyBodyTeaching' ? [tree,...nodes(tree.type(tree.props))] : [tree, ...nodes(tree.props?.children)];
 const text = tree => tree == null ? '' : typeof tree === 'string' || typeof tree === 'number' ? String(tree) : Array.isArray(tree) ? tree.map(text).join('') : text(tree.props?.children);
 const plain = value => JSON.parse(JSON.stringify(value));
 
@@ -152,7 +155,9 @@ test('Source-bound quick checks pause playback, remount per step and disappear o
   const check=()=>nodes(h.tree()).find(n=>n.props?.lesson&&n.props?.onOpen);
   assert.equal(check(),undefined);
   h.ready();assert.equal(check(),undefined,'No attempt before Start');
-  h.click('Start guided tour');const initial=check();assert.ok(initial.props.lesson.correctAnswer);
+  h.click('Start guided tour');assert.equal(check(),undefined,'Compact teaching waits for the explanation disclosure');
+  nodes(h.tree()).find(n=>n.props?.className==='regional-tour-explanation').props.onToggle({currentTarget:{open:true}});h.render();
+  const initial=check();assert.ok(initial.props.lesson.correctAnswer);
   const disclosureKeys=nodes(h.tree()).filter(n=>n.props?.onOpen).map(n=>n.key);
   assert.equal(new Set(disclosureKeys).size,disclosureKeys.length,'Sibling disclosures require unique keys to prevent retained duplicate panels');
   h.click('Play');assert.equal(h.timers.size,1);

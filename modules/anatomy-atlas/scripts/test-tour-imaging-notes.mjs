@@ -34,9 +34,17 @@ assert.doesNotMatch(html,/javascript:|<img|<iframe|<canvas|<details[^>]*open/);
 assert.match(html,/aria-pressed="true"/);
 // Bind all displayed lessons to the exact source selection and existing review topics.
 let count=0;
+const tours=tourModule.exports.regionalTours;
+assert.equal(new Set(tours.map(tour=>tour.id)).size,tours.length,'Unique registered tour IDs');
+const modalityIds=api.tourImagingModalities.map(modality=>modality.id);
+assert.deepEqual(plain(modalityIds),['ct','mri','xray','ultrasound'],'All four supported imaging modalities');
+const expectedCount=(tours.reduce((total,tour)=>total+tour.steps.length,0)+api.shoulderTour.steps.length)*modalityIds.length;
 for(const tour of tourModule.exports.regionalTours) for(const step of tour.steps){
  const structure=api.regionalTourStructures(api.catalog,tour).find(s=>s.id===step.selectedId);
+ assert(structure,'Exact registered step source resolves');
+ assert.equal(api.catalog.structures.filter(s=>s.id===step.selectedId).length,1,'Step source ID is unambiguous');
  const packet=await api.bodyReviewMaterial(structure.id);
+ assert(packet);assert.equal(packet.structureId,step.selectedId);
  for(const {id} of api.tourImagingModalities){
   const lesson=api.bodyLesson(structure,id),topic=packet.topics.find(t=>t.tab===id);
   for(const key of ['title','body','bullets','note','citations','readiness'])assert.deepEqual(plain(lesson[key]??null),plain(topic[key]??null),structure.name+': '+id+' '+key);
@@ -47,8 +55,9 @@ for(const [index,step] of api.shoulderTour.steps.entries()){
  const p=api.ShoulderTourPlayer({index,playing:false,ready:true,onStart(){},onPlayPause(){},onStep(){},onExit(){},onReadImaging:props.onOpen});
  const notes=nodes(p).find(n=>n.type===api.TourImagingNotes);assert.ok(notes);assert.equal(notes.key,step.id);
  const structure=api.structures.find(s=>s.id===step.selectedId);assert.equal(notes.props.structureName,structure.name);
+ assert.deepEqual(plain(notes.props.lessons.map(lesson=>lesson.id)),plain(modalityIds),'Every shoulder stop exposes the same complete modality set');
  for(const l of notes.props.lessons){assert.deepEqual(plain(l.content),plain(structure.sections[l.id]));count++;}
  notes.props.onOpen();
 }
-assert.equal(opened,6);assert.equal(count,348);
+assert.equal(opened,1+api.shoulderTour.steps.length);assert.equal(count,expectedCount);
 console.log(JSON.stringify({passed:true,sourceBoundModalityLessons:count,openPauseCallback:true,missingAndPending:true,safeReferences:true,noPatientImages:true}));

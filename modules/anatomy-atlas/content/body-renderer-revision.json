@@ -26,7 +26,7 @@
     },
     {
       "path": "app/anatomy-control-rail.tsx",
-      "sha256": "313212905758d13825c51738df4b7fa374dce6822414c97b701dff98ecd232d9"
+      "sha256": "955463bf3bb3d0b658f2b31e36de3de92c0a9ccd8c8ff145f2a8f627ade961ed"
     },
     {
       "path": "app/anatomy-data.ts",
@@ -54,7 +54,7 @@
     },
     {
       "path": "app/atlas-workspace.tsx",
-      "sha256": "3492d74682daa945418e97a7e8130cae62907e4c7f67285c99196b329f79b104"
+      "sha256": "ee177772777f18e2db5ed8ab5c30448ace5e07fa1adab4e7f6515c6907605110"
     },
     {
       "path": "app/back-layers-study.tsx",
@@ -78,7 +78,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "bbae6dd690fa8d65ca53f1150518b56909061609b32038cf9fd102913cc80273"
+      "sha256": "6e93637ab53c186a8513a0314fd5d8fdfacbf6665e1443d3b6a31f6b411b9ba9"
     },
     {
       "path": "app/body-scene.tsx",
@@ -209,6 +209,10 @@
       "sha256": "79a6abdd556a0eb06af9192fff1ef4b3c5e48fa4e4560cf4788b3d46d1969cdf"
     },
     {
+      "path": "app/lazy-body-teaching.tsx",
+      "sha256": "e8fb67f5f028e3333c93b2075007d7f41da794129cc07608adba09a0c5307bb8"
+    },
+    {
       "path": "app/nested-practice.css",
       "sha256": "8e0c687cecb73a74e65f6a574ad0858237d9f61680732eafb140c760779f1591"
     },
@@ -242,7 +246,7 @@
     },
     {
       "path": "app/regional-guided-learning.tsx",
-      "sha256": "1fdd24ca0a05ea3683ac35790aaab268bfb74c09eb1f769a91fce7552a4aa5c0"
+      "sha256": "90d4a7d2bbbae7c9abc0676a40e597be8b26fa7ed49fc2db2306ae7759ab48e5"
     },
     {
       "path": "app/related-study.tsx",
@@ -1362,7 +1366,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "fb6991b58ab04357c6b9ffc2a98e3df6bf329a9b6be41feec22eacea2e2dc217"
+      "sha256": "b8f32750ef4e1448914c4856d8996b84b93dad4422ef1051aeb310c905209b8d"
     },
     {
       "path": "content/sca-mca-clinical-pins.json",
@@ -1851,6 +1855,10 @@
     {
       "path": "lib/body-system-presets.ts",
       "sha256": "67b34405e32541d49c85ad931cc818d5a1d9ab923b317f91e83d9a0fb6fbe285"
+    },
+    {
+      "path": "lib/body-teaching-loader.ts",
+      "sha256": "1d1b1c5d43eab766a6d73e0b568c4700213157f301221e4fe0ad8a0aff8d372b"
     },
     {
       "path": "lib/bone-joints.ts",
@@ -3361,5 +3369,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "c9e578902920b1a53d4f5c1ff15cb390bb7d5a3fbcbfce4aa3c772bc0d7b77c6"
+  "sha256": "899a8e554865f3dfee74d948577937443be4f171371597f14c1ed1ebd8b72e32"
 }

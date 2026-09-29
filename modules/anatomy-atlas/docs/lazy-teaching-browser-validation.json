@@ -1,0 +1,215 @@
+{
+  "base": "http://127.0.0.1:57289/atlas-runtime/head-neck/index.html",
+  "sourceHashes": {
+    "app/body-explorer.tsx": "6e93637ab53c186a8513a0314fd5d8fdfacbf6665e1443d3b6a31f6b411b9ba9",
+    "app/lazy-body-teaching.tsx": "e8fb67f5f028e3333c93b2075007d7f41da794129cc07608adba09a0c5307bb8",
+    "lib/body-teaching-loader.ts": "1d1b1c5d43eab766a6d73e0b568c4700213157f301221e4fe0ad8a0aff8d372b",
+    "app/anatomy-control-rail.tsx": "955463bf3bb3d0b658f2b31e36de3de92c0a9ccd8c8ff145f2a8f627ade961ed"
+  },
+  "cases": [
+    {
+      "width": 1280,
+      "fail": false,
+      "requests": [
+        "http://127.0.0.1:57289/atlas-runtime/head-neck/assets/body-content-BJTS1Skk.js"
+      ],
+      "failures": [],
+      "checks": [
+        {
+          "name": "Right patella",
+          "tab": "anatomy",
+          "title": "Right patella · Structure & relationships · draft"
+        },
+        {
+          "name": "Right patella",
+          "tab": "function",
+          "title": "Right patella · Role & limits · draft"
+        },
+        {
+          "name": "Right patella",
+          "tab": "ct",
+          "title": "Right patella · Patella · CT and radiograph comparison · draft"
+        },
+        {
+          "name": "Right patella",
+          "tab": "mri",
+          "title": "Right patella · Patella · MRI comparison · draft"
+        },
+        {
+          "name": "Right patella",
+          "tab": "clinical",
+          "title": "Right patella · Clinical context · draft"
+        },
+        {
+          "name": "Left tibia",
+          "tab": "anatomy",
+          "title": "Left tibia · Structure & relationships · draft"
+        },
+        {
+          "name": "Left tibia",
+          "tab": "function",
+          "title": "Left tibia · Role & limits · draft"
+        },
+        {
+          "name": "Left tibia",
+          "tab": "ct",
+          "title": "Left tibia · Proximal tibia · CT comparison · draft"
+        },
+        {
+          "name": "Left tibia",
+          "tab": "mri",
+          "title": "Left tibia · Proximal tibia · MRI comparison · draft"
+        },
+        {
+          "name": "Left tibia",
+          "tab": "clinical",
+          "title": "Left tibia · Clinical context · draft"
+        }
+      ],
+      "screenshot": "../work/lazy-teaching-browser-tour-20260929-1280-notes.png",
+      "tourChecked": false
+    },
+    {
+      "width": 375,
+      "fail": false,
+      "requests": [
+        "http://127.0.0.1:57289/atlas-runtime/head-neck/assets/body-content-BJTS1Skk.js"
+      ],
+      "failures": [],
+      "checks": [
+        {
+          "name": "Right patella",
+          "tab": "anatomy",
+          "title": "Right patella · Structure & relationships · draft"
+        },
+        {
+          "name": "Right patella",
+          "tab": "function",
+          "title": "Right patella · Role & limits · draft"
+        },
+        {
+          "name": "Right patella",
+          "tab": "ct",
+          "title": "Right patella · Patella · CT and radiograph comparison · draft"
+        },
+        {
+          "name": "Right patella",
+          "tab": "mri",
+          "title": "Right patella · Patella · MRI comparison · draft"
+        },
+        {
+          "name": "Right patella",
+          "tab": "clinical",
+          "title": "Right patella · Clinical context · draft"
+        },
+        {
+          "name": "Left tibia",
+          "tab": "anatomy",
+          "title": "Left tibia · Structure & relationships · draft"
+        },
+        {
+          "name": "Left tibia",
+          "tab": "function",
+          "title": "Left tibia · Role & limits · draft"
+        },
+        {
+          "name": "Left tibia",
+          "tab": "ct",
+          "title": "Left tibia · Proximal tibia · CT comparison · draft"
+        },
+        {
+          "name": "Left tibia",
+          "tab": "mri",
+          "title": "Left tibia · Proximal tibia · MRI comparison · draft"
+        },
+        {
+          "name": "Left tibia",
+          "tab": "clinical",
+          "title": "Left tibia · Clinical context · draft"
+        }
+      ],
+      "screenshot": "../work/lazy-teaching-browser-tour-20260929-375-notes.png",
+      "tourChecked": true
+    },
+    {
+      "width": 375,
+      "fail": true,
+      "requests": [
+        "http://127.0.0.1:57289/atlas-runtime/head-neck/assets/body-content-BJTS1Skk.js",
+        "http://127.0.0.1:57289/atlas-runtime/head-neck/assets/body-content-BJTS1Skk.js"
+      ],
+      "failures": [
+        {
+          "url": "http://127.0.0.1:57289/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-vessels-recovery.glb",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:57289/atlas-runtime/head-neck/assets/body-content-BJTS1Skk.js",
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "url": "http://127.0.0.1:57289/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-vessels-recovery.glb",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "checks": [
+        {
+          "name": "Right patella",
+          "tab": "anatomy",
+          "title": "Right patella · Structure & relationships · draft"
+        },
+        {
+          "name": "Right patella",
+          "tab": "function",
+          "title": "Right patella · Role & limits · draft"
+        },
+        {
+          "name": "Right patella",
+          "tab": "ct",
+          "title": "Right patella · Patella · CT and radiograph comparison · draft"
+        },
+        {
+          "name": "Right patella",
+          "tab": "mri",
+          "title": "Right patella · Patella · MRI comparison · draft"
+        },
+        {
+          "name": "Right patella",
+          "tab": "clinical",
+          "title": "Right patella · Clinical context · draft"
+        },
+        {
+          "name": "Left tibia",
+          "tab": "anatomy",
+          "title": "Left tibia · Structure & relationships · draft"
+        },
+        {
+          "name": "Left tibia",
+          "tab": "function",
+          "title": "Left tibia · Role & limits · draft"
+        },
+        {
+          "name": "Left tibia",
+          "tab": "ct",
+          "title": "Left tibia · Proximal tibia · CT comparison · draft"
+        },
+        {
+          "name": "Left tibia",
+          "tab": "mri",
+          "title": "Left tibia · Proximal tibia · MRI comparison · draft"
+        },
+        {
+          "name": "Left tibia",
+          "tab": "clinical",
+          "title": "Left tibia · Clinical context · draft"
+        }
+      ],
+      "screenshot": "../work/lazy-teaching-browser-tour-20260929-375-recovery.png",
+      "tourChecked": false
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "clinicalApproval": false,
+  "published": false
+}

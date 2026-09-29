@@ -43,7 +43,7 @@ import {
   type AtlasSearchEntry,
 } from '@/lib/atlas-navigation';
 import type { BodyCatalog, BodyStructure } from './body-types';
-import { bodyContent } from './body-content';
+import { BodyTeachingVisibility, LazyBodyTeaching } from './lazy-body-teaching';
 import { StructureQuickCheck } from './structure-quick-check';
 import type { StudySide } from '@/lib/study-links';
 import type { ContentTab } from './anatomy-data';
@@ -233,12 +233,15 @@ export function WorkspaceOnly({
   className?: string;
 }) {
   const { mode } = useAtlasWorkspace();
+  const teachingVisible = useContext(BodyTeachingVisibility);
   return (
     <div
       className={`atlas-mode-panel ${className}`}
       hidden={!modes.includes(mode)}
     >
-      {children}
+      <BodyTeachingVisibility.Provider value={teachingVisible && modes.includes(mode)}>
+        {children}
+      </BodyTeachingVisibility.Provider>
     </div>
   );
 }
@@ -431,11 +434,15 @@ export function GroupedAnatomyNotes({
 
 export function QuizNotes({ structure }: { structure: BodyStructure }) {
   const { exam } = useAtlasWorkspace();
+  const [open, setOpen] = useState(false);
+  const teachingVisible = useContext(BodyTeachingVisibility);
   if (exam) return null;
-  const content = bodyContent(structure, 'quiz');
   return (
-    <details className="atlas-quiz-notes">
+    <details className="atlas-quiz-notes" onToggle={event => setOpen(event.currentTarget.open)}>
       <summary>Quiz notes · {structure.name}</summary>
+      <LazyBodyTeaching enabled={open && teachingVisible}>{({bodyContent}) => {
+        const content = bodyContent(structure, 'quiz');
+        return <>
       {content.correctAnswer !== undefined ? (
         <StructureQuickCheck
           key={structure.id}
@@ -462,6 +469,8 @@ export function QuizNotes({ structure }: { structure: BodyStructure }) {
           Reference {i + 1} ↗
         </a>
       ))}
+        </>;
+      }}</LazyBodyTeaching>
     </details>
   );
 }

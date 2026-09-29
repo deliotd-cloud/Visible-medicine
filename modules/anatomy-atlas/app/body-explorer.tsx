@@ -80,7 +80,7 @@ import {
   type BodyStructure,
   type BodySystem,
 } from './body-types';
-import { bodyContent } from './body-content';
+import { BodyTeachingVisibility, LazyBodyTeaching } from './lazy-body-teaching';
 import { parseBodyCatalog } from '@/lib/body-catalog-input';
 import { ComponentImagingNotes } from './component-imaging-notes';
 import { resolveComponentImagingTarget } from '@/lib/component-imaging-navigation';
@@ -2110,6 +2110,7 @@ export default function BodyExplorer({
             </div>
           </ImagingComparisonWorkspace>
         </section>
+        <BodyTeachingVisibility.Provider value={!inlineStudy}>
         <AnatomyInfoPanel practice={exam}>
           {!exam && linkIssue && (
             <div className="body-study-link-issue">
@@ -2661,7 +2662,8 @@ export default function BodyExplorer({
                         </Button>
                       </details>
                     </div>
-                    <GroupedAnatomyNotes>
+                    <LazyBodyTeaching enabled={!exam}>
+                    {({bodyContent}) => <GroupedAnatomyNotes>
                       {(value) => {
                         const content = bodyContent(selected, value);
                         return (
@@ -2717,7 +2719,8 @@ export default function BodyExplorer({
                           </div>
                         );
                       }}
-                    </GroupedAnatomyNotes>
+                    </GroupedAnatomyNotes>}
+                    </LazyBodyTeaching>
                     <WorkspaceOnly modes={['dissect']}>
                     <RelatedStudy
                       views={relatedViews}
@@ -2858,6 +2861,7 @@ export default function BodyExplorer({
             </>
           )}
         </AnatomyInfoPanel>
+        </BodyTeachingVisibility.Provider>
       </div>
       <InlineStudy active={inlineStudy}>
       {eyeParent && !exam && eyeParent.id === selectedId && (

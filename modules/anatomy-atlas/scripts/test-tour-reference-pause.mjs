@@ -10,8 +10,11 @@ const require=createRequire(import.meta.url),React=require('react');
 const catalog=JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json',import.meta.url),'utf8'));
 const built=await build({stdin:{contents:"export {ShoulderTourPlayer} from './app/shoulder-tour-player'; export {shoulderTour} from './lib/shoulder-tours'; export {RegionalGuidedLearning} from './app/regional-guided-learning'; export {thoraxTour} from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog';",loader:'tsx',resolveDir:process.cwd()},bundle:true,write:false,format:'cjs',platform:'node',loader:{'.css':'empty'},plugins:[{name:'gpu-boundary',setup(api){
   api.onLoad({filter:/[\\/]app[\\/]body-scene\.tsx$/},()=>({loader:'tsx',contents:'export function BodyScene(){return null;} export function retryBodyAssets(){}'}));
+  // Resolve the actual source teaching for these synchronous pause assertions;
+  // loader lifecycle is exercised separately in test-body-teaching-loader.mjs.
+  api.onLoad({filter:/[\\/]app[\\/]lazy-body-teaching\.tsx$/},()=>({loader:'tsx',contents:"import * as teaching from './body-content'; export function LazyBodyTeaching({enabled=true,children}){return enabled?children(teaching):null;}"}));
 }}]});
-const nodes=t=>!t||typeof t!=='object'?[]:Array.isArray(t)?t.flatMap(nodes):[t,...nodes(t.props?.children)];
+const nodes=t=>!t||typeof t!=='object'?[]:Array.isArray(t)?t.flatMap(nodes):t.type?.name==='LazyBodyTeaching'?[t,...nodes(t.type(t.props))]:[t,...nodes(t.props?.children)];
 const text=t=>t==null?'':typeof t==='string'||typeof t==='number'?String(t):Array.isArray(t)?t.map(text).join(''):text(t.props?.children);
 const plain=v=>JSON.parse(JSON.stringify(v));
 function load(shim=React,extra={}){
