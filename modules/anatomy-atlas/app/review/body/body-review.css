@@ -114,6 +114,34 @@
 .body-review-paper p {
   margin: 0.65rem 0;
 }
+.body-review-structure-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.body-review-structure-navigation p {
+  flex: 1 1 12rem;
+  margin: 0;
+  min-width: 0;
+  font-size: 0.875rem;
+  overflow-wrap: anywhere;
+}
+.body-review-structure-navigation button[data-slot='button'] {
+  height: auto;
+  min-height: 44px;
+  min-width: 44px;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.body-review-structure-navigation :focus-visible {
+  outline: 2px solid var(--vm-teal);
+  outline-offset: 3px;
+}
 .body-review-paper details {
   border-top: 1px solid var(--border);
   padding: 1rem 0;

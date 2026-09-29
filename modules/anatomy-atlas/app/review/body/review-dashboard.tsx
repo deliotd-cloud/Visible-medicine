@@ -52,7 +52,12 @@ export function BodyReviewDashboard({
   const [region, setRegion] = useState(initialRegion),
     [system, setSystem] = useState('all'),
     [query, setQuery] = useState('');
-  const [page, setPage] = useState(0),
+  const [page, setPage] = useState(() => {
+      const index = bodyReviewQueue(rows, initialRegion, 'all', '').findIndex(
+        (s) => s.id === initialId,
+      );
+      return Math.floor(Math.max(0, index) / 20);
+    }),
     [selected, setSelected] = useState(initialId);
   const [dirty, setDirty] = useState(false);
   useEffect(() => {
@@ -85,6 +90,21 @@ export function BodyReviewDashboard({
     Math.max(0, Math.ceil(matches.length / 20) - 1),
   );
   const visible = matches.slice(currentPage * 20, currentPage * 20 + 20);
+  const selectedIndex = matches.findIndex((s) => s.id === selected);
+  const previousStructure = selectedIndex > 0 ? matches[selectedIndex - 1] : null;
+  const nextStructure =
+    selectedIndex >= 0 ? matches[selectedIndex + 1] ?? null : null;
+  function selectStructure(id: string) {
+    // Clicking the current row must retain its editor and unsaved draft.
+    if (id === selected) return;
+    const index = matches.findIndex((s) => s.id === id);
+    if (index < 0 || !canLeave()) return;
+    setDirty(false);
+    setMaterial(null);
+    setError('');
+    setPage(Math.floor(index / 20));
+    setSelected(id);
+  }
   useEffect(() => {
     const controller = new AbortController();
     let current = true;
@@ -231,14 +251,7 @@ export function BodyReviewDashboard({
                   <Button
                     variant={selected === s.id ? 'secondary' : 'ghost'}
                     aria-pressed={selected === s.id}
-                    onClick={() => {
-                      if (!canLeave()) return;
-                      setDirty(false);
-                      setMaterial(null);
-                      setError('');
-                      setSelected(s.id);
-                      setAttempt((n) => n + 1);
-                    }}
+                    onClick={() => selectStructure(s.id)}
                   >
                     {s.name}
                     <small>
@@ -275,6 +288,36 @@ export function BodyReviewDashboard({
             aria-label="Selected review worksheet"
             aria-busy={loading}
           >
+            <nav
+              className="body-review-structure-navigation"
+              aria-label="Structures in the filtered review queue"
+            >
+              <Button
+                variant="outline"
+                disabled={!previousStructure}
+                onClick={() => {
+                  if (previousStructure) selectStructure(previousStructure.id);
+                }}
+              >
+                Previous structure
+              </Button>
+              <p role="status" aria-atomic="true">
+                {selectedIndex >= 0
+                  ? `Structure ${selectedIndex + 1} of ${matches.length} in the filtered queue`
+                  : selected
+                    ? 'Selected structure is outside the filtered queue'
+                    : 'No structure selected'}
+              </p>
+              <Button
+                variant="outline"
+                disabled={!nextStructure}
+                onClick={() => {
+                  if (nextStructure) selectStructure(nextStructure.id);
+                }}
+              >
+                Next structure
+              </Button>
+            </nav>
             {loading && (
               <p role="status">Loading the selected source and teaching…</p>
             )}
