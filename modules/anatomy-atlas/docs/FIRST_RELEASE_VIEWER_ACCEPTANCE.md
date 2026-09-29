@@ -1,5 +1,14 @@
 # First-release viewer acceptance evidence
 
+## 29 September: sided separation and dense-label acceptance
+
+[Sided separation matrix](SIDED_EXPLODE_MATRIX.md) covers 36 source display
+scopes, 1,080 Tray and 33,534 Extract cases, plus 86 integrated-browser states.
+[Dense-stage and whole-body evidence](DENSE_STAGE_ACCEPTANCE_20260929.md) adds
+42 multi-label states and three organ-window separation/reset journeys. These
+are source/desktop/responsive acceptance samples, not physical-device or clinical
+approval. No production defect was reproduced; no runtime or geometry changed.
+
 ## 29 September: regional layers and whole-body study wiring
 
 [Dissection browser evidence](REGIONAL_DISSECTION_ACCEPTANCE_20260929.md)
