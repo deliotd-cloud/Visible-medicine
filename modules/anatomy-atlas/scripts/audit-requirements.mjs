@@ -60,6 +60,7 @@ export { createLearningRegistry, parseLearningDocument, learningResourceKinds } 
 export { allLearningAnatomyRepresentations } from './lib/nested-learning-anatomy.ts';
 export { bodyDisplayCatalog } from './lib/body-display-catalog.ts';
 export { nestedStudyTargets } from './lib/nested-anatomy.ts';
+export { cerebralCatalog } from './lib/cerebral.ts';
 export { nestedReviewRows } from './lib/nested-review-material.ts';
 export { nestedTeachingFor, nestedTopicLesson } from './lib/nested-teaching.ts';
 export { nestedConcepts, nestedTeachingReferences } from './content/nested-teaching.ts';
@@ -129,6 +130,7 @@ const {
   allLearningAnatomyRepresentations,
   bodyDisplayCatalog,
   nestedStudyTargets,
+  cerebralCatalog,
   nestedReviewRows,
   nestedTeachingFor,
   nestedTopicLesson,
@@ -179,7 +181,7 @@ const inferiorEpigastricAudit = await json('docs/inferior-epigastric-source-audi
 const musclePartCondition = await json('docs/muscle-part-condition-audit.json');
 const cubitalVeinAudit = await json('docs/cubital-vein-source-audit.json');
 const collicularBrachiaAudit = await json('docs/collicular-brachia-source-audit.json');
-const cerebral = await json('public/models/bodyparts3d/cerebral/catalog.json');
+const cerebral = cerebralCatalog;
 const cardiac = await json('public/models/bodyparts3d/cardiac/catalog.json');
 const hepatic = await json('public/models/bodyparts3d/hepatic/catalog.json');
 const renal = await json('public/models/bodyparts3d/renal/catalog.json');
@@ -294,6 +296,12 @@ const nestedRows = nestedStudyTargets(displayCatalog).map((target) => {
     (s) => s.id === target.parentId,
   );
   const concept = nestedTeachingFor(parent, target.study, target.structure);
+  if (target.study === 'cerebral' && ['FMA72714', 'FMA72713'].includes(target.structure.fmaId)) {
+    assert.equal(concept, null, 'New hippocampal surfaces must not inherit teaching');
+    nestedGeometryOnly.push({id:target.structureId,parentId:target.parentId,study:target.study});
+    const sections=Object.fromEntries(tabs.map(tab=>[tab,{readiness:'pending',title:'Hippocampus · teaching pending',body:'Source-aligned hippocampal surface. Structure-specific teaching and clinical review have not yet been completed.'}]));
+    return {sections,readiness:Object.fromEntries(tabs.map(tab=>[tab,'pending']))};
+  }
   // The existing cranial partition study deliberately exposes unnamed source
   // pieces, not independent anatomical segments with inherited parent lessons.
   // Count that gap explicitly; retain the failure for any other missing binding.
@@ -531,6 +539,9 @@ for (const path of [
   'lib/brainstem.ts',
   'content/collicular-brachia-teaching.ts',
   'public/models/bodyparts3d/cerebral/catalog.json',
+  'public/models/bodyparts3d/hippocampi/catalog.json',
+  'lib/hippocampi.ts',
+  'scripts/validate-hippocampi.mjs',
   'public/models/bodyparts3d/cardiac/catalog.json',
   'lib/cardiac.ts',
   'lib/hepatic.ts',

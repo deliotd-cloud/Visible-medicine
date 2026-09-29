@@ -1,12 +1,13 @@
 import raw from '../public/models/bodyparts3d/cerebral/catalog.json' with { type: 'json' };
 import type { BodyCatalog, BodyStructure } from '../app/body-types';
 import { ventriclesFor, ventricleCatalog } from './ventricles.ts';
+import { withHippocampi } from './hippocampi.ts';
 
 export type CerebralStructure = BodyStructure & {
   group: string;
   sourceRelationship: 'parent-component' | 'supplemental-source';
 };
-export const cerebralCatalog = raw as unknown as Omit<
+const baseCerebralCatalog = raw as unknown as Omit<
   BodyCatalog,
   'structures'
 > & {
@@ -16,6 +17,7 @@ export const cerebralCatalog = raw as unknown as Omit<
   supplementalIds: string[];
   contextIds: string[];
 };
+export const cerebralCatalog = withHippocampi(baseCerebralCatalog);
 export function cerebralFor(parent: BodyStructure | null) {
   if (
     !ventriclesFor(parent).length ||
@@ -43,8 +45,11 @@ export const cerebralGroups = [
     name: 'Superior temporal · posterior',
     colour: '#8bc5cf',
   },
+  { id: 'hippocampus', name: 'Hippocampus', colour: '#dfad58' },
 ] as const;
 const notes: Record<string, string> = {
+  hippocampus:
+    'Original left and right hippocampal surfaces from the supplied brain, kept in their source positions. These coarse surfaces do not separately depict CA fields, dentate gyrus or subiculum and are not patient-specific segmentations. Use Hippocampi to reveal both, or Medial temporal context to retain the partial temporal regions and optional ventricular context. Anatomical and clinical validation remain pending.',
   frontal:
     'The frontal region lies anterior to the central sulcus. The source groups precentral, superior, middle and inferior frontal gyri; this is not a complete cortical parcellation or a map of motor and executive function.',
   parietal:
@@ -76,6 +81,10 @@ export function cerebralPresets(layers: BodyStructure[]) {
     right: layers.filter((s) => s.laterality === 'right').map((s) => s.id),
     insula: layers
       .filter((s) => ['FMA72978', 'FMA72977'].includes(s.fmaId))
+      .map((s) => s.id),
+    hippocampi: layers.filter((s) => ['FMA72714', 'FMA72713'].includes(s.fmaId)).map((s) => s.id),
+    'medial-temporal': layers
+      .filter((s) => ['FMA72714', 'FMA72713', 'FMA72972', 'FMA72971'].includes(s.fmaId))
       .map((s) => s.id),
     temporal: layers
       .filter((s) =>

@@ -1,8 +1,9 @@
 {
   "passed": true,
-  "checks": 160032,
-  "selectableRepresentations": 14,
-  "sourceFiles": 32,
+  "checks": 160051,
+  "selectableRepresentations": 16,
+  "baseBundleSourceFiles": 32,
+  "additionalHippocampi": "Two surfaces / 2,000 triangles independently checked by validate-hippocampi.mjs",
   "existingContextSpaces": 2,
   "triangles": 102158,
   "bytes": 1856608,

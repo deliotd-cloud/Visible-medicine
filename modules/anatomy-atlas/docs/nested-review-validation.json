@@ -44,7 +44,7 @@
     },
     {
       "key": "[\"vm:anatomy:body:head-neck:midline:organ:brain\",\"cerebral\"]",
-      "selections": 14
+      "selections": 16
     },
     {
       "key": "[\"vm:anatomy:body:head-neck:midline:organ:brain\",\"visual-pathway\"]",
@@ -83,10 +83,10 @@
       "selections": 3
     }
   ],
-  "contexts": 106,
-  "sourceBundlesVerified": 25,
+  "contexts": 108,
+  "sourceBundlesVerified": 26,
   "teachingApprovalPrerequisitesPresent": 73,
-  "pendingTopicStates": 421,
+  "pendingTopicStates": 437,
   "checks": [
     "exact source/frame separation",
     "unique parent/study/child material identities",

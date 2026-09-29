@@ -453,6 +453,8 @@ export function VentricularView({
                       right: 'Right regions',
                       insula: 'Insulae',
                       temporal: 'Temporal regions',
+                      hippocampi: 'Hippocampi',
+                      'medial-temporal': 'Medial temporal context',
                     }
                   : isBrainstem
                     ? {

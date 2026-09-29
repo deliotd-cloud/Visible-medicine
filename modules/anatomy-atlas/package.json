@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "hippocampi:test": "node scripts/validate-hippocampi.mjs && node scripts/validate-cerebral.mjs",
     "deep-brain-tour:test": "node scripts/test-deep-brain-tour.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-regional-tour-review.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-tour-camera.mjs",
     "shoulder-website-review-link:test": "node --import tsx --test scripts/test-shoulder-website-review-link.mjs",
     "shoulder-soft-tissue-xray:test": "node --import tsx --test scripts/test-shoulder-soft-tissue-xray.mjs",

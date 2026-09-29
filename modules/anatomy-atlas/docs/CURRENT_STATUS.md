@@ -6,7 +6,7 @@ Generated from the current displayed catalogue, teaching resolver, dissection pr
 
 - 1104 displayed root-body representations, 109 body GLBs (104390180 canonical bytes), 11 regions plus whole body; 1022 retained archival records.
 - Dedicated shoulder: 9 representations / 11 source parts, overlapping the body catalogue.
-- Nested dissections: 106 selectable parts, 46 teaching concepts / 97 references; 29 geometry-only selections retain pending teaching.
+- Nested dissections: 108 selectable parts, 46 teaching concepts / 97 references; 31 geometry-only selections retain pending teaching.
 - 159 dissection stages / 207 focuses. These operate on supplied surfaces, not complete anatomy.
 - Guided learning: 16 regional tours / 88 stops; dedicated shoulder 1 tour / 5 stops. These source-bound drafts reuse existing anatomy, not additional unique structures or clinical approvals.
 - Find/name identification; 146 draft reasoning concepts bound to 268 root-body representations in head-neck, foot, thigh, leg, pelvis, spine, thorax, abdomen, shoulder-arm, hand, forearm. [Reasoning practice](REASONING_PRACTICE.md) is separate from Quiz-tab notes.
@@ -43,15 +43,15 @@ Separate from root-body coverage and overlapping parent anatomy. Unnamed cranial
 
 | Topic | Specific/source-group draft | Identity only | Pending | Generated identification |
 | --- | ---: | ---: | ---: | ---: |
-| Anatomy | 77 | 0 | 29 | 0 |
-| Function | 75 | 0 | 31 | 0 |
-| CT | 41 | 0 | 65 | 0 |
-| MRI | 46 | 0 | 60 | 0 |
-| X-ray | 5 | 0 | 101 | 0 |
-| Ultrasound | 37 | 0 | 69 | 0 |
-| Pathology | 73 | 0 | 33 | 0 |
-| Clinical | 73 | 0 | 33 | 0 |
-| Quiz notes | 77 | 0 | 29 | 0 |
+| Anatomy | 77 | 0 | 31 | 0 |
+| Function | 75 | 0 | 33 | 0 |
+| CT | 41 | 0 | 67 | 0 |
+| MRI | 46 | 0 | 62 | 0 |
+| X-ray | 5 | 0 | 103 | 0 |
+| Ultrasound | 37 | 0 | 71 | 0 |
+| Pathology | 73 | 0 | 35 | 0 |
+| Clinical | 73 | 0 | 35 | 0 |
+| Quiz notes | 77 | 0 | 31 | 0 |
 
 ## Dedicated shoulder teaching readiness
 
@@ -71,7 +71,7 @@ These representations overlap root-body anatomy. Shared text and introductory qu
 
 ## Imaging implementation and configured resources
 
-Atlas static registry: version 1; 0 configured resources / 0 correspondences in `content/learning-resources.v1.json`. Its scope is the Atlas document, not the separate website host configuration. Supported versions 1 and 2 cover 1219 scope-specific destinations, including 106 nested destinations; kinds: ct, mri, xray, ultrasound, lecture, quiz. See [resource contract](LEARNING_RESOURCE_CONTRACT.md) and [nested linking](NESTED_LEARNING_LINKS.md).
+Atlas static registry: version 1; 0 configured resources / 0 correspondences in `content/learning-resources.v1.json`. Its scope is the Atlas document, not the separate website host configuration. Supported versions 1 and 2 cover 1221 scope-specific destinations, including 108 nested destinations; kinds: ct, mri, xray, ultrasound, lecture, quiz. See [resource contract](LEARNING_RESOURCE_CONTRACT.md) and [nested linking](NESTED_LEARNING_LINKS.md).
 
 Implemented capabilities are distinct from registry counts: the [Didanix Education selection port](DIDANIX_SELECTION_ADAPTER.md), [optional decoded CT/MRI viewer](VOLUME_VIEWER.md), and [private native MRI import checker](NATIVE_MRI_VIEWER.md) exist in Atlas source. The separate website's canonical `docs/master-plan.md`, mapped in the coordination `WORKSPACE_MAP.md`, records Education integration and completed native MRI synthetic QA. This inventory does not inspect that website's runtime or certify deployment. Empty Atlas resource configuration is not evidence that image viewers or website integration are absent.
 
@@ -82,7 +82,7 @@ Didanix Education/light remains the learner imaging target. Local QA and optiona
 - Teaching and reasoning remain drafts. This inventory reads no private review records and determines no clinical approvals. Anatomy and teaching require separate revision-bound radiologist sign-off; approvals never transfer between scopes. See [specimen reviews](SPECIMEN_REVIEWS.md).
 - Teaching identities FMA45097/FMA45098, FMA19728 and FMA61970 remain held; source/geometry holds such as FJ3211 remain separate. Peripheral nerves/plexuses, complete joint layers, finer organ interiors and female-body gaps remain. Independent female pelvis is not a complete female body. See [source inventory](SOURCE_INVENTORY.md), [gap decisions](GAP_FILLING.md) and [brachial-plexus source review](BRACHIAL_PLEXUS_SOURCE_REVIEW_20260928.md).
 - Dated browser samples accept only tested revisions/flows. Full physical-device, accessibility, dense-label, free-orbit separation and performance acceptance remain separate; software/SSR tests do not complete that matrix.
-- 139 public/archive GLBs; 808 classified lockfile entries / 0 unclassified. Asset totals include alternate/reference files. Preserve source credit/licences and reserved brand rights; classification is not exhaustive legal clearance or a perpetual free-hosting guarantee.
+- 140 public/archive GLBs; 808 classified lockfile entries / 0 unclassified. Asset totals include alternate/reference files. Preserve source credit/licences and reserved brand rights; classification is not exhaustive legal clearance or a perpetual free-hosting guarantee.
 - This audit imports no patient scans, identifiers, CT-head masks or accepted boundaries. Clinical PACS and the separate desktop application remain outside this work.
 - Recovery and publication require dated exact-source checkpoints and verified readbacks/restores. These counts do not verify deployment, GitHub/D recovery, private-review or conversation recovery.
 

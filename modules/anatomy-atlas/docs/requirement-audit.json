@@ -205,6 +205,9 @@
     "lib/brainstem.ts": "c1672c0d2e21d0fb3b752b6cb001a970b071fa492b218a9c788a476754fc24a9",
     "content/collicular-brachia-teaching.ts": "f805f4ab67d5d0ae82a0e2bd9116d0e2a7b31f837d05d349dd8cfabd1172428d",
     "public/models/bodyparts3d/cerebral/catalog.json": "8dbcf8e0cbc5aff4c468e2eeda2e57fb048c65515ce35257b56f2247267624de",
+    "public/models/bodyparts3d/hippocampi/catalog.json": "b9448630bcee365817b6421355675c2a44a955993f9a6b66e7e655da8abfb9e1",
+    "lib/hippocampi.ts": "ae33235e59efb4a3303786cc2acbadb0b0feafe5900700cc77a849fb3192db31",
+    "scripts/validate-hippocampi.mjs": "1ac015e78a3006d1592bd1434891e77d981a10e36f1f01bceec400e1c5de3c23",
     "public/models/bodyparts3d/cardiac/catalog.json": "59cebff69d885e243a9b5b8048d9735eb7f4e7848b7f21a40fa6c12873c5b0a3",
     "lib/cardiac.ts": "482facae9feb332a9899d008cca33aa6bb950046ae7ea96ea2ee67a89001c6ea",
     "lib/hepatic.ts": "86a6ac1226f1ab496c3dc7aee6279da3ef662a0c3316fee10862cb8ba30fae80",
@@ -245,7 +248,7 @@
     "docs/pulmonary-source-audit.json": "734fc23b6d4812b81ffb007214c271096562bcb8376766fc9d609bfddabc95db",
     "content/cerebral-supplement-audit.json": "a186519bbf31065f5c4e58472c542a9cbd2a6b64d35423a4f6c92d7bae1d69d7",
     "content/nested-teaching.ts": "7bfb61c51a22046b50c5c411ba09223a5d0536b7adfef07990dd54b6caabbbd8",
-    "content/nested-review-bindings.json": "ae98b0279003f76f48f2409c51fefc563ce461670284ce36897dd28fa01690f3",
+    "content/nested-review-bindings.json": "ce08b922d13c6a76f6672de0ca73cceea2250c1208ee9edc8f3f59d05bf4b73d",
     "lib/nested-review.ts": "18afa81b7b1aa02ae1f174bd8d3b5c902d2d2eb8351c33798ae93a4927f90b74",
     "lib/nested-review-key.ts": "bf11dbacc334bac13a821a14d754478d6754d3e468344384e263d3b3442430e8",
     "lib/nested-review-links.ts": "0d8d29a78763f5d3d00736fd2ae1aea0dbe6059ad50d6eb59d6b52e4f43e525f",
@@ -276,7 +279,7 @@
     "lib/ventricular-relationships.ts": "b9d2bd5ea079a600c2593ca522f325ceb03c2f2704a26747b4262ef6838c84df",
     "lib/cardiac-context.ts": "428c871b7a942e34c87833ff97441e59e7757c4ae0f5610713e779396df432ef",
     "public/models/bodyparts3d/cardiac/great-vessel-context.json": "fac546e54237db4bed783d583b01c583f423a35a74bd759727d519074de0af85",
-    "app/ventricles.tsx": "56f6eba3b7f735be290f436958194b12cc5c0f4266c2c6d4ecbb879d84e4d405",
+    "app/ventricles.tsx": "7d0d7ed434011c50c49da5540725dadf472785e44a1000b96ca768ed028f7a1e",
     "app/ventricular-relationships.css": "a0aa30cb8500f11382ddd18120660c8e4df68b60369e3b6c487f98b12f0fe743",
     "app/body-scene.tsx": "ab99681505b1f1eb8b3935c14b9a614310fb831c0b122492a23be635b3a302ce",
     "app/body-batch.tsx": "05b63136f4d8af290da9d4c190256bd1e17b6339842070b04c26b63238e0ae72",
@@ -1573,8 +1576,8 @@
       "collicularBrachiaOriginalTriangles": 568,
       "collicularBrachiaLateralityHolds": 2,
       "brainstemContext": 1,
-      "cerebralSelections": 14,
-      "cerebralParentSubdivisions": 10,
+      "cerebralSelections": 16,
+      "cerebralParentSubdivisions": 12,
       "cerebralAdditionalSourceParts": 4,
       "cerebralContext": 2,
       "cardiacCavities": 4,
@@ -1680,8 +1683,8 @@
       1,
       2
     ],
-    "availableRepresentations": 1219,
-    "nestedRepresentations": 106,
+    "availableRepresentations": 1221,
+    "nestedRepresentations": 108,
     "supportedKinds": [
       "ct",
       "mri",
@@ -1769,8 +1772,18 @@
       }
     },
     "nested": {
-      "representations": 106,
+      "representations": 108,
       "geometryOnlyRepresentations": [
+        {
+          "id": "vm:anatomy:body:head-neck:left:organ:left-hippocampus",
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "study": "cerebral"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:organ:right-hippocampus",
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "study": "cerebral"
+        },
         {
           "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1700",
           "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
@@ -1923,55 +1936,55 @@
         "anatomy": {
           "specificDraft": 77,
           "identityOnly": 0,
-          "pending": 29,
+          "pending": 31,
           "generatedIdentification": 0
         },
         "function": {
           "specificDraft": 75,
           "identityOnly": 0,
-          "pending": 31,
+          "pending": 33,
           "generatedIdentification": 0
         },
         "ct": {
           "specificDraft": 41,
           "identityOnly": 0,
-          "pending": 65,
+          "pending": 67,
           "generatedIdentification": 0
         },
         "mri": {
           "specificDraft": 46,
           "identityOnly": 0,
-          "pending": 60,
+          "pending": 62,
           "generatedIdentification": 0
         },
         "xray": {
           "specificDraft": 5,
           "identityOnly": 0,
-          "pending": 101,
+          "pending": 103,
           "generatedIdentification": 0
         },
         "ultrasound": {
           "specificDraft": 37,
           "identityOnly": 0,
-          "pending": 69,
+          "pending": 71,
           "generatedIdentification": 0
         },
         "pathology": {
           "specificDraft": 73,
           "identityOnly": 0,
-          "pending": 33,
+          "pending": 35,
           "generatedIdentification": 0
         },
         "clinical": {
           "specificDraft": 73,
           "identityOnly": 0,
-          "pending": 33,
+          "pending": 35,
           "generatedIdentification": 0
         },
         "quiz": {
           "specificDraft": 77,
           "identityOnly": 0,
-          "pending": 29,
+          "pending": 31,
           "generatedIdentification": 0
         }
       },
@@ -2658,8 +2671,8 @@
       "png": 5,
       "svg": 2,
       "md": 9,
-      "glb": 139,
-      "json": 51,
+      "glb": 140,
+      "json": 52,
       "zip": 1,
       "html": 1,
       "tsv": 1
@@ -2673,7 +2686,7 @@
   "review": {
     "revisionIdentities": 9,
     "hasPrivateReviews": false,
-    "status": "Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot, 1104 displayed root-body selections, nine independent specimen/region scopes (356 scoped records / 267 distinct source IDs), and 106 nested selections in 20 parent/study scopes. Exact source/frame identity and navigation are bound; no decisions transfer across scopes. The 1,022-record archival catalogue is retained. This inventory reads no personal review records. Acquired imaging review remains unavailable; source implementation does not prove hosted migration or clinical sign-off."
+    "status": "Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot, 1104 displayed root-body selections, nine independent specimen/region scopes (356 scoped records / 267 distinct source IDs), and 108 nested selections in 20 parent/study scopes. Exact source/frame identity and navigation are bound; no decisions transfer across scopes. The 1,022-record archival catalogue is retained. This inventory reads no personal review records. Acquired imaging review remains unavailable; source implementation does not prove hosted migration or clinical sign-off."
   },
   "boundaries": {
     "scope": "Current source implementation, not operations performed by this inventory script",

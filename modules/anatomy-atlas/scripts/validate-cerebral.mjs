@@ -68,9 +68,9 @@ same(manifest.evidence, evidence);
 same(manifest.coordinateSystem, catalog.coordinateSystem);
 same(manifest.license, 'CC-BY-4.0');
 same(manifest.credit, catalog.credit);
-same(manifest.structures.length, 16);
+same(manifest.structures.length, 18);
 const layers = cerebralFor(parent);
-same(layers.length, 14);
+same(layers.length, 16);
 const definitions = [
   [
     'FMA72970',
@@ -300,14 +300,14 @@ for (const [fmaId, name, files, side, groupName] of definitions) {
 same(triangles, 102158);
 same(
   new Set(
-    layers.flatMap((s) => s.sources.map((f) => s.sourceTree + '/' + f.file)),
+    layers.filter((s) => s.bundle === 'cerebral').flatMap((s) => s.sources.map((f) => s.sourceTree + '/' + f.file)),
   ).size,
   32,
 );
 same(manifest.supplementalIds.length, 4);
 same(
   layers
-    .filter((s) => s.sourceRelationship === 'parent-component')
+    .filter((s) => s.bundle === 'cerebral' && s.sourceRelationship === 'parent-component')
     .flatMap((s) => s.sources).length,
   28,
 );
@@ -400,11 +400,13 @@ const reduce = (action) => {
   return state;
 };
 for (const [value, count] of [
-  ['left', 7],
-  ['right', 7],
+  ['left', 8],
+  ['right', 8],
   ['insula', 2],
   ['temporal', 6],
-  ['all', 14],
+  ['hippocampi', 2],
+  ['medial-temporal', 4],
+  ['all', 16],
 ]) {
   reduce({ type: 'preset', value });
   same(layers.length - state.hidden.length, count);
@@ -435,7 +437,7 @@ for (let i = 0; i < 65; i++)
 same(state.history.length, 30);
 for (const layer of layers)
   reduce({ type: 'visibility', id: layer.id, visible: false });
-same(state.hidden.length, 14);
+same(state.hidden.length, 16);
 same(state.selectedId, null);
 reduce({ type: 'preset', value: 'all' });
 same(state.hidden, []);
@@ -526,7 +528,7 @@ for (const study of ['cerebral', 'brainstem', 'ventricles']) {
   same(switches.filter((tag) => tag.includes('aria-label="Show original position"')).length, 1);
   same(
     switches.filter((tag) => !tag.includes('aria-label="Show original position"')).length,
-    study === 'cerebral' ? 14 : study === 'brainstem' ? 6 : 4,
+    study === 'cerebral' ? 16 : study === 'brainstem' ? 6 : 4,
   );
   for (const text of study === 'cerebral'
     ? [
@@ -548,11 +550,11 @@ for (const study of ['cerebral', 'brainstem', 'ventricles']) {
   const scene = uiEnv.__scene;
   same(
     scene.structures.length,
-    study === 'cerebral' ? 16 : study === 'brainstem' ? 7 : 9,
+    study === 'cerebral' ? 18 : study === 'brainstem' ? 7 : 9,
   );
   same(
     scene.landmarks.length,
-    study === 'cerebral' ? 14 : study === 'brainstem' ? 6 : 4,
+    study === 'cerebral' ? 16 : study === 'brainstem' ? 6 : 4,
   );
   if (study === 'cerebral')
     for (const group of cerebralGroups) {
@@ -610,8 +612,9 @@ same(
 const report = {
   passed: true,
   checks,
-  selectableRepresentations: 14,
-  sourceFiles: 32,
+  selectableRepresentations: 16,
+  baseBundleSourceFiles: 32,
+  additionalHippocampi: 'Two surfaces / 2,000 triangles independently checked by validate-hippocampi.mjs',
   existingContextSpaces: 2,
   triangles,
   bytes: bytes.length,

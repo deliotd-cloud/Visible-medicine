@@ -85,7 +85,10 @@ const catalog = api.bodyDisplayCatalog(
 // lessons and their UI/source guards are covered in validate-femoral-components.
 // Unnamed cranial source partitions have no independent teaching concepts;
 // their absence of inherited lessons is tested in validate-cranial-artery-components.
-const targets = api.nestedStudyTargets(catalog).filter(t => !['femoral-components', 'cranial-artery-components', 'coronary-venous'].includes(t.study));
+// The two hippocampal additions are geometry-only; their pending lessons are
+// checked independently in validate-hippocampi, not added to this legacy corpus.
+const targets = api.nestedStudyTargets(catalog).filter(t => !['femoral-components', 'cranial-artery-components', 'coronary-venous'].includes(t.study)
+  && !(t.study === 'cerebral' && ['FMA72714', 'FMA72713'].includes(t.structure.fmaId)));
 const initial = JSON.stringify(catalog);
 same(targets.length, 71);
 same(api.nestedConcepts.length, 42);
