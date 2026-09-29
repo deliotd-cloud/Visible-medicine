@@ -1,5 +1,16 @@
 # Third-party notices
 
+## Superior temporal MRI orientation (29 September 2026)
+
+Original concise teaching cites USC LONI's superior temporal gyrus research
+protocol and Lehman et al. (2016, PMID26514961) for anatomical landmarks and
+cross-plane orientation. Only factual paraphrases and reference links are
+included: no illustrations, protocol text, scans, masks or question-bank items
+are copied. The LONI anterior/posterior convention is not asserted to match the
+BodyParts3D source boundary. Citations grant no right to redistribute their
+assets. Existing model licences and clinical/privacy/release gates remain.
+No dependency, font, texture, model or paid service has been added.
+
 ## Inferior-collicular teaching references (29 September 2026)
 
 Original brief MRI/Clinical/Pathology summaries cite Sitek et al. (2022,

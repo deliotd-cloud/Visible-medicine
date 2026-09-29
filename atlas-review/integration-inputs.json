@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "0ede9422e6e9ce7e190cbe48d3cd3fe3714c7828",
-  "sha256": "1c92422cc6fac14988e9f265aa8b214c8eaf515078c3179bd33749a404ac7435",
+  "sourceCommit": "08ef3834b790763917fd45ad5a3e404da3cdf2f0",
+  "sha256": "fa3676438b9f402c029d87626882241810470fb924bbff139e19ace21f5ff1ac",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -1348,7 +1348,7 @@
     },
     {
       "path": "atlas-review/content/nested-teaching.ts",
-      "sha256": "83ece8dc3b394714950aec5b29e8f74333311275040e56e4d59f4652b1aeed21"
+      "sha256": "61ba520e5bbaa3f2dde78d6cf35c63f70a519594f343342d06bf08984c6afb43"
     },
     {
       "path": "atlas-review/content/ophthalmic-nerve-studies.ts",
@@ -1573,6 +1573,10 @@
     {
       "path": "atlas-review/content/spine-pelvic-muscle-imaging.ts",
       "sha256": "199970087d2e10d264c3c86c91cbe1151116a32f7b51637d1cf583586ac13416"
+    },
+    {
+      "path": "atlas-review/content/superior-temporal-mri.ts",
+      "sha256": "6a9b9f8668ac513d3115083de2954f62eb304947b25e19a1646d7a4b1fadc42f"
     },
     {
       "path": "atlas-review/content/systemic-venous-pins.json",
@@ -3376,7 +3380,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "9b9ac1092e885855c54c4416209f3bc3f4b7191a6606fa40b343f55e806459b2"
+      "sha256": "4c1f1b77837300774eb67c683bee5c11b02d61629199ff520d679fe2aac6033a"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3632,7 +3636,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "4495cc4d2637154441af23fd998c6a73f4cdce357a6e5705ef67165639d77378"
+      "sha256": "7fdce978c7d1d6c26a77c4273851b02aaa54bd8d300fadc12efa216ef69880b0"
     }
   ]
 }

@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+29 September: superior temporal MRI teaching imported locally from Atlas
+`08ef383`. Four anterior/posterior sided selections receive referenced structural
+orientation; posterior MRI is newly available, anterior prior teaching preserved.
+273 website tests, types/build and actual learner/review phone checks pass.
+Models, independent access and fracture work preserved. No scan upload,
+publication or approval. See `docs/superior-temporal-mri-delivery-20260929.md`.
+Native MRI remains done.
+
 29 September: compact mobile anatomy controls imported locally from Atlas
 `0ede942`. Learner and Clinical Review camera actions have 44px touch targets;
 normal phone camera controls retain one compact row. System switches, teaching,
