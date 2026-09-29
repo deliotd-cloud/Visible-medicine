@@ -1,5 +1,14 @@
 # Visible Medicine — shared delivery plan
 
+29 September: right subscapular arterial guided tour integrated locally.
+Four right-sided stops with scapular context, existing compact tour selector and
+smooth camera transitions. Seventeen regional tours /92 stops; no model changes.
+Source-bound review includes five affected selections and does not carry previous
+approval forward. Desktop/phone/200%-text and actual Clinical Review checks pass;
+293 website tests covered with corrected tour-count fixtures, types/build pass.
+No publication or clinical approval. GitHub/C recovery recorded; D pending/full.
+See `docs/subscapular-tour-delivery-20260929.md`. Native MRI remains done.
+
 29 September: lossless protected model delivery implemented locally.
 Native Workers gzip negotiates original client preferences; stored geometry,
 canonical fingerprints, private authorization and identity range reads remain

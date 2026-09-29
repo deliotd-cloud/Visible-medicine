@@ -1,5 +1,12 @@
 # Third-party notices
 
+## Subscapular arterial guided tour (29 September 2026)
+
+Original 123-word captions cite the UAMS upper-limb artery teaching table for
+typical branch relationships. No table, article text or figure is reproduced.
+Existing BodyParts3D CC BY 4.0 model assets and attribution are unchanged.
+See `docs/SUBSCAPULAR_TOUR.md`; the tour remains a draft requiring review.
+
 ## Superior temporal MRI orientation (29 September 2026)
 
 Original concise teaching cites USC LONI's superior temporal gyrus research

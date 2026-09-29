@@ -7,7 +7,7 @@ import {createHash} from 'node:crypto';
 // embedded browser journey; this gate proves those exact players reach both hosts.
 test('reference-reading pause reaches both learner modules and protected review',()=>{
  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
- assert.equal(review.revision,'ed5215fcd3a8c4c113f8072b552f0a3cc1b5aa82');
+ assert.equal(review.revision,'6149a26a1fd1ae74782f93be77856a1c1de08b86');
  for(const [module,path,sourceHash,handler] of [
   ['shoulder','app/shoulder-tour-player.tsx','cb8a94094e8dde630c3bf24e9ae27a18e0239307388fbffd2a81b5e2cf18657e','if(event.currentTarget.open)onReadImaging();'],
   ['head-neck','app/regional-guided-learning.tsx','90d4a7d2bbbae7c9abc0676a40e597be8b26fa7ed49fc2db2306ae7759ab48e5','if(event.currentTarget.open){setPlaying(false);setMotionPaused(true);}'],

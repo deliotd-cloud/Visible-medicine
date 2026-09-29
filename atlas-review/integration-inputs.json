@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "ed5215fcd3a8c4c113f8072b552f0a3cc1b5aa82",
-  "sha256": "034ced3667cb3ef533d533d5f7257f5f32c05fddce595e00e6e38dd9312db26f",
+  "sourceCommit": "6149a26a1fd1ae74782f93be77856a1c1de08b86",
+  "sha256": "c95af8457b11442c863527d6b4b652572a0b6c0ad7f545ead40c8fb75a796b29",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -2992,7 +2992,7 @@
     },
     {
       "path": "atlas-review/lib/regional-tours.ts",
-      "sha256": "bbde9a945bd1525373762a0048a307d51ba9ffdaeeeaa0f472505f0716da2e93"
+      "sha256": "160b8187e79e7ca184cfc9653e1031bbbefef643f1fa43155f9a99418cdb13ed"
     },
     {
       "path": "atlas-review/lib/regional-vascular-clinical.ts",
@@ -3189,6 +3189,10 @@
     {
       "path": "atlas-review/lib/subscapular-arteries.ts",
       "sha256": "f2bf9dd0cfb5846221865f83fbb8bf1680ea38533b8aa562dd41f58249bb63db"
+    },
+    {
+      "path": "atlas-review/lib/subscapular-tour.ts",
+      "sha256": "bb0dedb25c5ff20485e290c0ee91ef2a9668ea291aa11ed7f33209c4b1ce0504"
     },
     {
       "path": "atlas-review/lib/swallowing-curriculum.ts",
@@ -3400,7 +3404,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "fe8998fd7fb6f90a5fe05777c620bffab305fdbbe4f01a01d6be6b11fd1de27a"
+      "sha256": "1bb25235ae6aba5055c5ea2220ff75399dedc88ed0f0d35de2794ea1cb6659e9"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3656,7 +3660,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "6bed4ebcce3f7b8f4beb2c05160a0cf66263c46aa4f8192cee9eaa6c3f717dd6"
+      "sha256": "fd1665d3735a24531ba5ad49b82efc4409bbe0806a82ce0a290e27022d422455"
     }
   ]
 }
