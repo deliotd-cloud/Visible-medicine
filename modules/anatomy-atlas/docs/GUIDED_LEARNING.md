@@ -389,3 +389,11 @@ step title, step count and playback/exit controls remain outside the disclosure.
 In embedded mobile tours only, repeated regional metadata is hidden because the
 website already identifies the region; mode navigation remains available. Exit
 restores the ordinary regional header. No tour definitions or geometry changed.
+## Lower lumbar and sacral addition — 29 September 2026
+
+The existing Spine selector also offers [Lower lumbar spine & sacrum](LUMBAR_GUIDED_TOUR.md):
+five source-bound bone/whole-disc stops with local camera frames and smooth
+transitions. Cervical orientation stays the default. Source-disc labels do not
+establish patient numbering or separately segmented annulus/nucleus. The current
+library has18 regional tours and97 stops, plus the dedicated shoulder tour/five
+stops. All remain draft; no review or acquired-image approval transfers.

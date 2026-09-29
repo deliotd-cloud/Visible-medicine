@@ -10,7 +10,7 @@ const require = createRequire(import.meta.url), React = require('react');
 const catalog = JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json', import.meta.url), 'utf8'));
 const catalogBefore = JSON.stringify(catalog);
 const built = await build({ stdin: {
-  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, celiacTour, forearmTour, subscapularTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, maleDuctTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
+  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, celiacTour, forearmTour, subscapularTour, lumbarTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, maleDuctTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
   loader: 'tsx', resolveDir: process.cwd(),
 }, bundle: true, write: false, format: 'cjs', platform: 'node', loader: { '.css': 'empty' }, plugins: [{ name: 'gpu-boundary', setup(api) {
   api.onLoad({ filter: /[\\/]app[\\/]body-scene\.tsx$/ }, () => ({ loader: 'tsx', contents: 'if(globalThis.retryControl.importError)throw new Error("import failed"); export function BodyScene(){return null;} export function retryBodyAssets(urls,base){globalThis.retryControl.clear(urls,base);}' }));
@@ -74,17 +74,19 @@ test('Direct step navigation pauses autoplay and uses exact frames without resum
   h.click('Exit tour');assert.equal(h.exits(),1);h.unchanged();
 });
 
-test('Subscapular tour keeps four exact artery steps, smooth frames, pause and exit',()=>{
-  const h=harness(catalog,'subscapularTour',true);
+test('Subscapular and lumbar tours keep exact steps, smooth frames, pause and exit',()=>{
+ for(const name of ['subscapularTour','lumbarTour']){
+  const h=harness(catalog,name,true);
   assert.equal(h.button('Start guided tour').disabled,true);h.ready();h.click('Start guided tour');
   for(const [index,step]of h.props.tour.steps.entries()){
     assert.equal(h.scene().selectedId,step.selectedId);assert.equal(h.scene().transitionMs,1800);
     assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
     assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,index)));
     if(index===0){h.click('Play');assert.equal(h.timers.size,1);h.click('Pause');assert.equal(h.timers.size,0);}
-    if(index<3)h.click('Next');
+    if(index<h.props.tour.steps.length-1)h.click('Next');
   }
   h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
+ }
 });
 
 test('Retry clears only failed required anatomy and preserves the paused step and teaching',async()=>{

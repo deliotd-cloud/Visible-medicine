@@ -78,7 +78,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "6e93637ab53c186a8513a0314fd5d8fdfacbf6665e1443d3b6a31f6b411b9ba9"
+      "sha256": "d6e7ebbe87a4325a84d3a0241b788edcf23e6dae7ec6e3c3f6c15875abf6ad57"
     },
     {
       "path": "app/body-scene.tsx",
@@ -150,11 +150,11 @@
     },
     {
       "path": "app/eye-layers.tsx",
-      "sha256": "3efe67855495116b5e75ccd14c0737fbd814ae0192633a6080f9d83bae9ecfbc"
+      "sha256": "dc85935898d81d5b6a1c17b750f7ae7b52893dda8c1082e200859a74ec61d675"
     },
     {
       "path": "app/femoral-components.tsx",
-      "sha256": "adedfcc6a51b584908e5813c57b33b873c2b4ec60b70750837aa54e33c10764e"
+      "sha256": "0bcd8922fb70204b272a1083c67a6bfda8b3af20eb20f870ef19be0700aa05ae"
     },
     {
       "path": "app/fitted-camera.tsx",
@@ -190,7 +190,7 @@
     },
     {
       "path": "app/imaging-link.tsx",
-      "sha256": "7119b61ed1d58aa31c828152e698d4bdcdcecece7fb7b66cda275d21e2ec59a3"
+      "sha256": "5e106ad4a26e4c4a6a91ee2d76079da5486f66acbcfbbf364f4683e7b55210e8"
     },
     {
       "path": "app/independent-study-navigation.tsx",
@@ -211,6 +211,10 @@
     {
       "path": "app/lazy-body-teaching.tsx",
       "sha256": "e8fb67f5f028e3333c93b2075007d7f41da794129cc07608adba09a0c5307bb8"
+    },
+    {
+      "path": "app/nested-education-link.ts",
+      "sha256": "b2ebc43750d6cad1f924b89c6e04fa1035c40f01c97e68b479baf0ca9218008e"
     },
     {
       "path": "app/nested-practice.css",
@@ -398,7 +402,7 @@
     },
     {
       "path": "app/ventricles.tsx",
-      "sha256": "5f25c4d966c8d8ca5ca52fa1bb59e32fa62a942a2a03b63717e5be1d3b2ff396"
+      "sha256": "08a2c1cd5d64cb9072d8fe80f2d95a40a7eb0611a2071043db45bc4a8f6f7ed0"
     },
     {
       "path": "app/ventricular-relationships.css",
@@ -2441,6 +2445,10 @@
       "sha256": "0a3ea708b9636f783a33c71987ae21173d8101ac80bf4889d7870b9889704ceb"
     },
     {
+      "path": "lib/learning-anatomy.ts",
+      "sha256": "ee24e46059a1ebbab82a7d2aaf78e9893eea4638ea00136989d2d098789077b3"
+    },
+    {
       "path": "lib/learning-resource-types.ts",
       "sha256": "c08858a0b3bdcc0467d815d71a129428c3b311c1eaf318a544e1f091b1833778"
     },
@@ -2545,6 +2553,10 @@
       "sha256": "56d60e3802bfc6dd8797fa2c36048916306b0084142a4b59e07b070e0f2b7e76"
     },
     {
+      "path": "lib/lumbar-tour.ts",
+      "sha256": "00ca73890eeb65988461f90b4f333259955f689d0e6dcdcafa7f3a783f004bed"
+    },
+    {
       "path": "lib/main-bronchus-xray.ts",
       "sha256": "5d5530f56c2a54843cb284f7ff83b03c5de5f651d9031aa870526acb2afcf9d6"
     },
@@ -2595,6 +2607,14 @@
     {
       "path": "lib/nested-anatomy.ts",
       "sha256": "b9368085e520b5228f43391825729ee39b98995522b5db39ef2e8627cfcf28d1"
+    },
+    {
+      "path": "lib/nested-education-binding.ts",
+      "sha256": "4ef9ac4e7fb31d13899399c353fd883ba7c49c8cc44c51c132710ae7eea4f476"
+    },
+    {
+      "path": "lib/nested-learning-anatomy.ts",
+      "sha256": "0a635f713f9bc99d00c62c14cc4c5d05a4eb639f9633afc9f2ae2b440bb4dcc7"
     },
     {
       "path": "lib/nested-practice.ts",
@@ -2786,7 +2806,7 @@
     },
     {
       "path": "lib/regional-tours.ts",
-      "sha256": "160b8187e79e7ca184cfc9653e1031bbbefef643f1fa43155f9a99418cdb13ed"
+      "sha256": "9b92b8daf760a9297b1e59f97e77f3b93bdf8773d8574f6b8dc88ba2c3ff8665"
     },
     {
       "path": "lib/regional-vascular-clinical.ts",
@@ -2822,7 +2842,7 @@
     },
     {
       "path": "lib/root-education-api.ts",
-      "sha256": "f7ad2030bb5834874cda9f1382312117d73fed2a99d6b17bd3d548472884f8ad"
+      "sha256": "50b9f4c223cf550c232366368849745b82ca2c6935162535c279e51deabe5554"
     },
     {
       "path": "lib/sca-mca-clinical.ts",
@@ -3166,7 +3186,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "8e7e2e8c4d03f7b47d095133e09867df6d2a900ebcba8396dbb95acaed64d955"
+      "sha256": "921e19658d54f9d223042d08ed03742e64fc8a9e24451eddfaed71dd9fc9946f"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3381,5 +3401,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "d79be9fd42d9c1432aa34b1b68015cc2d9454785aa2e9ccf21fabac21151f2b7"
+  "sha256": "2f932feef5daf59c417fae43f733324e5ea698f0bc97d636d15c8ad0170149c3"
 }
