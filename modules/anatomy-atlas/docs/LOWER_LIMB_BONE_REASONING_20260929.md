@@ -28,7 +28,7 @@ acceptance is separately recorded in
 `docs/lower-limb-bone-reasoning-browser-validation.json`. No test or source
 reference establishes clinical approval, imaging registration or publication.
 
-## Saved pause checkpoint
+## Historical pause checkpoint
 
 Paused at the owner's request before browser acceptance and website integration.
 Source verification passed: 2690 focused assertions (294 negative mutations,
@@ -42,3 +42,18 @@ Resume with real leg/foot/whole-body browser acceptance, then the guarded learne
 and Clinical Review import. The website remains at the preceding verified
 upper-limb-bone revision. No scan or model changes; source references and tests
 are saved for continuation.
+
+## Resumed browser acceptance
+
+Owner resumed on 29 September. Real generated-viewer acceptance now passes
+leg desktop (4 questions), foot phone (4) and whole body at 320x480 with 200% text
+(13 upper/lower bone concepts). Deliberate misses and retries2/2,2/2,7/7 pass;
+same-side choices, source references, draft disclosure and no horizontal overflow
+are verified. Updated upper-bone regression also passes3/3/13 questions across
+three viewports. No page errors in either suite. Lower-limb evidence retains one
+aborted spine-skeleton request in the whole-body case; no bone-question or
+assertion failure. Upper-bone regression recorded no resource failures.
+
+Current evidence now exists at the browser validation path above. This proves
+source-viewer acceptance only; website import and its acceptance are recorded
+separately in the website/parent checkpoint. No clinical approval is implied.

@@ -1,0 +1,724 @@
+{
+  "schemaVersion": 1,
+  "sourceServer": "http://127.0.0.1:51950/atlas-runtime/head-neck/index.html?region=head-neck",
+  "sourceHashes": {
+    "lib/lower-limb-bone-reasoning.ts": "08de7b02c6dc58c5a88baa52e8532bd66a6b8f047b951fe9600653175ca88738",
+    "lib/upper-limb-bone-reasoning.ts": "11161555f3296f06e435e2c2e1a0bd2ee1dc14806e0c1234625064071ecc0bf6",
+    "lib/reasoning-questions.ts": "c65f4352b240fb253ba6f815bc63c8d8fa3667ab54e1cddd386014764d43ac19",
+    "app/body-explorer.tsx": "bbae6dd690fa8d65ca53f1150518b56909061609b32038cf9fd102913cc80273",
+    "app/reasoning-feedback.tsx": "835f5f3fa84c056c30be0851a2fee17b6d9d11a76dd74fe2827da5c948718791"
+  },
+  "sourceInputs": 872,
+  "priorAttempts": [],
+  "cases": [
+    {
+      "region": "leg",
+      "width": 1280,
+      "height": 900,
+      "touch": false,
+      "textScale": 1,
+      "filters": {
+        "Bones": true,
+        "Muscles": false,
+        "Organs": {
+          "unavailable": true,
+          "entries": 0,
+          "checked": true
+        },
+        "Nervous": {
+          "unavailable": true,
+          "entries": 0,
+          "checked": true
+        },
+        "Vessels": false,
+        "Connective": false
+      },
+      "expectedConcepts": [
+        "lower-limb-bone-femur",
+        "lower-limb-bone-fibula",
+        "lower-limb-bone-patella",
+        "lower-limb-bone-tibia"
+      ],
+      "questions": [
+        {
+          "index": 1,
+          "key": "lower-limb-bone-patella",
+          "target": "Left patella",
+          "targetId": "vm:anatomy:body:leg:left:bone:left-patella",
+          "side": "left",
+          "choices": [
+            "Left fibula",
+            "Left femur",
+            "Left tibia",
+            "Left patella"
+          ],
+          "chosen": "Left fibula",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 2,
+          "key": "lower-limb-bone-fibula",
+          "target": "Right fibula",
+          "targetId": "vm:anatomy:body:leg:right:bone:right-fibula",
+          "side": "right",
+          "choices": [
+            "Right fibula",
+            "Right femur",
+            "Right patella",
+            "Right tibia"
+          ],
+          "chosen": "Right fibula",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 3,
+          "key": "lower-limb-bone-tibia",
+          "target": "Left tibia",
+          "targetId": "vm:anatomy:body:leg:left:bone:left-tibia",
+          "side": "left",
+          "choices": [
+            "Left patella",
+            "Left femur",
+            "Left tibia",
+            "Left fibula"
+          ],
+          "chosen": "Left patella",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 4,
+          "key": "lower-limb-bone-femur",
+          "target": "Right femur",
+          "targetId": "vm:anatomy:body:thigh:right:bone:right-femur",
+          "side": "right",
+          "choices": [
+            "Right fibula",
+            "Right tibia",
+            "Right femur",
+            "Right patella"
+          ],
+          "chosen": "Right femur",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        }
+      ],
+      "retryQuestions": [
+        {
+          "index": 1,
+          "key": "lower-limb-bone-tibia",
+          "target": "Left tibia",
+          "targetId": "vm:anatomy:body:leg:left:bone:left-tibia",
+          "side": "left",
+          "choices": [
+            "Left fibula",
+            "Left femur",
+            "Left tibia",
+            "Left patella"
+          ],
+          "chosen": "Left tibia",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 2,
+          "key": "lower-limb-bone-patella",
+          "target": "Left patella",
+          "targetId": "vm:anatomy:body:leg:left:bone:left-patella",
+          "side": "left",
+          "choices": [
+            "Left femur",
+            "Left patella",
+            "Left tibia",
+            "Left fibula"
+          ],
+          "chosen": "Left patella",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        }
+      ],
+      "completedScore": "2/4",
+      "retryScore": "2/2",
+      "noHorizontalOverflow": true
+    },
+    {
+      "region": "foot",
+      "width": 375,
+      "height": 812,
+      "touch": true,
+      "textScale": 1,
+      "filters": {
+        "Bones": true,
+        "Muscles": false,
+        "Organs": {
+          "unavailable": true,
+          "entries": 0,
+          "checked": true
+        },
+        "Nervous": {
+          "unavailable": true,
+          "entries": 0,
+          "checked": true
+        },
+        "Vessels": false,
+        "Connective": false
+      },
+      "expectedConcepts": [
+        "lower-limb-bone-calcaneus",
+        "lower-limb-bone-cuboid",
+        "lower-limb-bone-navicular",
+        "lower-limb-bone-talus"
+      ],
+      "questions": [
+        {
+          "index": 1,
+          "key": "lower-limb-bone-navicular",
+          "target": "Navicular bone of left foot",
+          "targetId": "vm:anatomy:body:foot:left:bone:navicular-bone-of-left-foot",
+          "side": "left",
+          "choices": [
+            "Left talus",
+            "Left calcaneus",
+            "Left cuboid bone",
+            "Navicular bone of left foot"
+          ],
+          "chosen": "Left talus",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 2,
+          "key": "lower-limb-bone-talus",
+          "target": "Left talus",
+          "targetId": "vm:anatomy:body:foot:left:bone:left-talus",
+          "side": "left",
+          "choices": [
+            "Left cuboid bone",
+            "Navicular bone of left foot",
+            "Left talus",
+            "Left calcaneus"
+          ],
+          "chosen": "Left talus",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 3,
+          "key": "lower-limb-bone-calcaneus",
+          "target": "Left calcaneus",
+          "targetId": "vm:anatomy:body:foot:left:bone:left-calcaneus",
+          "side": "left",
+          "choices": [
+            "Left cuboid bone",
+            "Navicular bone of left foot",
+            "Left calcaneus",
+            "Left talus"
+          ],
+          "chosen": "Left cuboid bone",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 4,
+          "key": "lower-limb-bone-cuboid",
+          "target": "Left cuboid bone",
+          "targetId": "vm:anatomy:body:foot:left:bone:left-cuboid-bone",
+          "side": "left",
+          "choices": [
+            "Left talus",
+            "Left cuboid bone",
+            "Left calcaneus",
+            "Navicular bone of left foot"
+          ],
+          "chosen": "Left cuboid bone",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        }
+      ],
+      "retryQuestions": [
+        {
+          "index": 1,
+          "key": "lower-limb-bone-navicular",
+          "target": "Navicular bone of left foot",
+          "targetId": "vm:anatomy:body:foot:left:bone:navicular-bone-of-left-foot",
+          "side": "left",
+          "choices": [
+            "Navicular bone of left foot",
+            "Left calcaneus",
+            "Left cuboid bone",
+            "Left talus"
+          ],
+          "chosen": "Navicular bone of left foot",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 2,
+          "key": "lower-limb-bone-calcaneus",
+          "target": "Left calcaneus",
+          "targetId": "vm:anatomy:body:foot:left:bone:left-calcaneus",
+          "side": "left",
+          "choices": [
+            "Left calcaneus",
+            "Left cuboid bone",
+            "Navicular bone of left foot",
+            "Left talus"
+          ],
+          "chosen": "Left calcaneus",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        }
+      ],
+      "completedScore": "2/4",
+      "retryScore": "2/2",
+      "noHorizontalOverflow": true
+    },
+    {
+      "region": "whole-body",
+      "width": 320,
+      "height": 480,
+      "touch": true,
+      "textScale": 2,
+      "filters": {
+        "Bones": true,
+        "Muscles": false,
+        "Organs": false,
+        "Nervous": false,
+        "Vessels": false,
+        "Connective": false
+      },
+      "expectedConcepts": [
+        "lower-limb-bone-calcaneus",
+        "lower-limb-bone-cuboid",
+        "lower-limb-bone-femur",
+        "lower-limb-bone-fibula",
+        "lower-limb-bone-navicular",
+        "lower-limb-bone-patella",
+        "lower-limb-bone-talus",
+        "lower-limb-bone-tibia",
+        "upper-limb-bone-clavicle",
+        "upper-limb-bone-humerus",
+        "upper-limb-bone-radius",
+        "upper-limb-bone-scapula",
+        "upper-limb-bone-ulna"
+      ],
+      "questions": [
+        {
+          "index": 1,
+          "key": "upper-limb-bone-clavicle",
+          "target": "Left clavicle",
+          "targetId": "vm:anatomy:body:shoulder-arm:left:bone:left-clavicle",
+          "side": "left",
+          "choices": [
+            "Left scapula",
+            "Left radius",
+            "Left ulna",
+            "Left clavicle",
+            "Left humerus"
+          ],
+          "chosen": "Left scapula",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 2,
+          "key": "lower-limb-bone-calcaneus",
+          "target": "Right calcaneus",
+          "targetId": "vm:anatomy:body:foot:right:bone:right-calcaneus",
+          "side": "right",
+          "choices": [
+            "Right calcaneus",
+            "Navicular bone of right foot",
+            "Right cuboid bone",
+            "Right talus"
+          ],
+          "chosen": "Right calcaneus",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 3,
+          "key": "upper-limb-bone-humerus",
+          "target": "Right humerus",
+          "targetId": "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+          "side": "right",
+          "choices": [
+            "Right radius",
+            "Right scapula",
+            "Right ulna",
+            "Right clavicle",
+            "Right humerus"
+          ],
+          "chosen": "Right radius",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 4,
+          "key": "upper-limb-bone-ulna",
+          "target": "Left ulna",
+          "targetId": "vm:anatomy:body:forearm:left:bone:left-ulna",
+          "side": "left",
+          "choices": [
+            "Left clavicle",
+            "Left humerus",
+            "Left ulna",
+            "Left radius",
+            "Left scapula"
+          ],
+          "chosen": "Left ulna",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 5,
+          "key": "lower-limb-bone-fibula",
+          "target": "Left fibula",
+          "targetId": "vm:anatomy:body:leg:left:bone:left-fibula",
+          "side": "left",
+          "choices": [
+            "Left fibula",
+            "Left patella",
+            "Left tibia",
+            "Left femur"
+          ],
+          "chosen": "Left patella",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 6,
+          "key": "lower-limb-bone-navicular",
+          "target": "Navicular bone of right foot",
+          "targetId": "vm:anatomy:body:foot:right:bone:navicular-bone-of-right-foot",
+          "side": "right",
+          "choices": [
+            "Right talus",
+            "Right calcaneus",
+            "Right cuboid bone",
+            "Navicular bone of right foot"
+          ],
+          "chosen": "Navicular bone of right foot",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 7,
+          "key": "lower-limb-bone-femur",
+          "target": "Right femur",
+          "targetId": "vm:anatomy:body:thigh:right:bone:right-femur",
+          "side": "right",
+          "choices": [
+            "Right femur",
+            "Right fibula",
+            "Right patella",
+            "Right tibia"
+          ],
+          "chosen": "Right fibula",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 8,
+          "key": "lower-limb-bone-tibia",
+          "target": "Right tibia",
+          "targetId": "vm:anatomy:body:leg:right:bone:right-tibia",
+          "side": "right",
+          "choices": [
+            "Right fibula",
+            "Right patella",
+            "Right femur",
+            "Right tibia"
+          ],
+          "chosen": "Right tibia",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 9,
+          "key": "lower-limb-bone-talus",
+          "target": "Left talus",
+          "targetId": "vm:anatomy:body:foot:left:bone:left-talus",
+          "side": "left",
+          "choices": [
+            "Left cuboid bone",
+            "Left calcaneus",
+            "Navicular bone of left foot",
+            "Left talus"
+          ],
+          "chosen": "Left cuboid bone",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 10,
+          "key": "lower-limb-bone-cuboid",
+          "target": "Right cuboid bone",
+          "targetId": "vm:anatomy:body:foot:right:bone:right-cuboid-bone",
+          "side": "right",
+          "choices": [
+            "Right cuboid bone",
+            "Right talus",
+            "Navicular bone of right foot",
+            "Right calcaneus"
+          ],
+          "chosen": "Right cuboid bone",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 11,
+          "key": "upper-limb-bone-scapula",
+          "target": "Left scapula",
+          "targetId": "vm:anatomy:body:shoulder-arm:left:bone:left-scapula",
+          "side": "left",
+          "choices": [
+            "Left radius",
+            "Left ulna",
+            "Left humerus",
+            "Left scapula",
+            "Left clavicle"
+          ],
+          "chosen": "Left radius",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 12,
+          "key": "lower-limb-bone-patella",
+          "target": "Left patella",
+          "targetId": "vm:anatomy:body:leg:left:bone:left-patella",
+          "side": "left",
+          "choices": [
+            "Left femur",
+            "Left tibia",
+            "Left patella",
+            "Left fibula"
+          ],
+          "chosen": "Left patella",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 13,
+          "key": "upper-limb-bone-radius",
+          "target": "Left radius",
+          "targetId": "vm:anatomy:body:forearm:left:bone:left-radius",
+          "side": "left",
+          "choices": [
+            "Left scapula",
+            "Left radius",
+            "Left humerus",
+            "Left ulna",
+            "Left clavicle"
+          ],
+          "chosen": "Left scapula",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        }
+      ],
+      "retryQuestions": [
+        {
+          "index": 1,
+          "key": "lower-limb-bone-talus",
+          "target": "Left talus",
+          "targetId": "vm:anatomy:body:foot:left:bone:left-talus",
+          "side": "left",
+          "choices": [
+            "Left calcaneus",
+            "Left cuboid bone",
+            "Navicular bone of left foot",
+            "Left talus"
+          ],
+          "chosen": "Left talus",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 2,
+          "key": "upper-limb-bone-humerus",
+          "target": "Right humerus",
+          "targetId": "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+          "side": "right",
+          "choices": [
+            "Right clavicle",
+            "Right humerus",
+            "Right scapula",
+            "Right ulna",
+            "Right radius"
+          ],
+          "chosen": "Right humerus",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 3,
+          "key": "upper-limb-bone-scapula",
+          "target": "Left scapula",
+          "targetId": "vm:anatomy:body:shoulder-arm:left:bone:left-scapula",
+          "side": "left",
+          "choices": [
+            "Left radius",
+            "Left humerus",
+            "Left scapula",
+            "Left clavicle",
+            "Left ulna"
+          ],
+          "chosen": "Left scapula",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 4,
+          "key": "lower-limb-bone-femur",
+          "target": "Right femur",
+          "targetId": "vm:anatomy:body:thigh:right:bone:right-femur",
+          "side": "right",
+          "choices": [
+            "Right femur",
+            "Right fibula",
+            "Right patella",
+            "Right tibia"
+          ],
+          "chosen": "Right femur",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 5,
+          "key": "upper-limb-bone-radius",
+          "target": "Left radius",
+          "targetId": "vm:anatomy:body:forearm:left:bone:left-radius",
+          "side": "left",
+          "choices": [
+            "Left scapula",
+            "Left ulna",
+            "Left humerus",
+            "Left radius",
+            "Left clavicle"
+          ],
+          "chosen": "Left radius",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 6,
+          "key": "lower-limb-bone-fibula",
+          "target": "Left fibula",
+          "targetId": "vm:anatomy:body:leg:left:bone:left-fibula",
+          "side": "left",
+          "choices": [
+            "Left patella",
+            "Left fibula",
+            "Left femur",
+            "Left tibia"
+          ],
+          "chosen": "Left fibula",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 7,
+          "key": "upper-limb-bone-clavicle",
+          "target": "Left clavicle",
+          "targetId": "vm:anatomy:body:shoulder-arm:left:bone:left-clavicle",
+          "side": "left",
+          "choices": [
+            "Left ulna",
+            "Left scapula",
+            "Left humerus",
+            "Left radius",
+            "Left clavicle"
+          ],
+          "chosen": "Left clavicle",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        }
+      ],
+      "completedScore": "6/13",
+      "retryScore": "7/7",
+      "noHorizontalOverflow": true
+    }
+  ],
+  "errors": [],
+  "resourceFailures": [
+    {
+      "region": "whole-body",
+      "width": 320,
+      "url": "http://127.0.0.1:51950/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-skeleton.glb",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "failure": null,
+  "passed": true,
+  "clinicalApproval": false,
+  "educatorApproval": false,
+  "spatialValidation": false,
+  "deploymentValidation": false
+}
