@@ -53,7 +53,7 @@
 .clinical-review-skip { position:fixed; top:0; left:1rem; transform:translateY(-150%); z-index:10; padding:1rem; background:white; }
 .clinical-review-skip:focus { transform:none; }
 @media(max-width:700px) {
-  .clinical-review-scopes { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .clinical-review-scopes { grid-template-columns:repeat(auto-fit,minmax(min(100%,9rem),1fr)); }
   .clinical-review-results-heading { display:block; }
   .clinical-review-results-heading > span { display:block; margin-top:.25rem; }
   .clinical-review-search > div { flex:1 1 100%; }
