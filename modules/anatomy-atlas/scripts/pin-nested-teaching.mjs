@@ -38,10 +38,7 @@ assert.equal(
   'Cranial component teaching requires an explicit source-pinning workflow',
 );
 const targets = scope.exports.nestedStudyTargets(catalog).filter(
-  // These two newly exposed surfaces deliberately have no authored lessons yet.
-  // validate-hippocampi checks their exact source identities and pending status.
-  t => !['femoral-components', 'cranial-artery-components'].includes(t.study)
-    && !(t.study === 'cerebral' && ['FMA72714', 'FMA72713'].includes(t.structure.fmaId)),
+  t => !['femoral-components', 'cranial-artery-components'].includes(t.study),
 );
 const bindings = targets.map((target) => {
   const matches = nestedConcepts.filter(

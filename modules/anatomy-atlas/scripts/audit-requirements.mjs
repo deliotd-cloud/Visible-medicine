@@ -296,12 +296,6 @@ const nestedRows = nestedStudyTargets(displayCatalog).map((target) => {
     (s) => s.id === target.parentId,
   );
   const concept = nestedTeachingFor(parent, target.study, target.structure);
-  if (target.study === 'cerebral' && ['FMA72714', 'FMA72713'].includes(target.structure.fmaId)) {
-    assert.equal(concept, null, 'New hippocampal surfaces must not inherit teaching');
-    nestedGeometryOnly.push({id:target.structureId,parentId:target.parentId,study:target.study});
-    const sections=Object.fromEntries(tabs.map(tab=>[tab,{readiness:'pending',title:'Hippocampus · teaching pending',body:'Source-aligned hippocampal surface. Structure-specific teaching and clinical review have not yet been completed.'}]));
-    return {sections,readiness:Object.fromEntries(tabs.map(tab=>[tab,'pending']))};
-  }
   // The existing cranial partition study deliberately exposes unnamed source
   // pieces, not independent anatomical segments with inherited parent lessons.
   // Count that gap explicitly; retain the failure for any other missing binding.
@@ -542,6 +536,8 @@ for (const path of [
   'public/models/bodyparts3d/hippocampi/catalog.json',
   'lib/hippocampi.ts',
   'scripts/validate-hippocampi.mjs',
+  'scripts/validate-hippocampal-teaching.mjs',
+  'content/hippocampal-teaching.ts',
   'public/models/bodyparts3d/cardiac/catalog.json',
   'lib/cardiac.ts',
   'lib/hepatic.ts',

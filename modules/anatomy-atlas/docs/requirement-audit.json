@@ -207,7 +207,9 @@
     "public/models/bodyparts3d/cerebral/catalog.json": "8dbcf8e0cbc5aff4c468e2eeda2e57fb048c65515ce35257b56f2247267624de",
     "public/models/bodyparts3d/hippocampi/catalog.json": "b9448630bcee365817b6421355675c2a44a955993f9a6b66e7e655da8abfb9e1",
     "lib/hippocampi.ts": "ae33235e59efb4a3303786cc2acbadb0b0feafe5900700cc77a849fb3192db31",
-    "scripts/validate-hippocampi.mjs": "1ac015e78a3006d1592bd1434891e77d981a10e36f1f01bceec400e1c5de3c23",
+    "scripts/validate-hippocampi.mjs": "f8a32c6fc0b1f473f5410e7345340a496b14a1afbeafd8ee02da1814fc4850cb",
+    "scripts/validate-hippocampal-teaching.mjs": "837aef1f3e4334d89f560d18a187b2fac3d9ba24535c84d80415474682b02624",
+    "content/hippocampal-teaching.ts": "6ee598d0771a70ca570ce017222eb8a4894feb4c8b59343ebc70f4ced435af87",
     "public/models/bodyparts3d/cardiac/catalog.json": "59cebff69d885e243a9b5b8048d9735eb7f4e7848b7f21a40fa6c12873c5b0a3",
     "lib/cardiac.ts": "482facae9feb332a9899d008cca33aa6bb950046ae7ea96ea2ee67a89001c6ea",
     "lib/hepatic.ts": "86a6ac1226f1ab496c3dc7aee6279da3ef662a0c3316fee10862cb8ba30fae80",
@@ -247,7 +249,7 @@
     "public/models/bodyparts3d/pulmonary/catalog.json": "b62ccd78dfc2ced8674b94eba67596add4de482f54c3f242814982b4e3dab9ea",
     "docs/pulmonary-source-audit.json": "734fc23b6d4812b81ffb007214c271096562bcb8376766fc9d609bfddabc95db",
     "content/cerebral-supplement-audit.json": "a186519bbf31065f5c4e58472c542a9cbd2a6b64d35423a4f6c92d7bae1d69d7",
-    "content/nested-teaching.ts": "7bfb61c51a22046b50c5c411ba09223a5d0536b7adfef07990dd54b6caabbbd8",
+    "content/nested-teaching.ts": "bb5811f2c542ec677ef1e040465fd85faf534cc571582b35b12c795faa84f183",
     "content/nested-review-bindings.json": "ce08b922d13c6a76f6672de0ca73cceea2250c1208ee9edc8f3f59d05bf4b73d",
     "lib/nested-review.ts": "18afa81b7b1aa02ae1f174bd8d3b5c902d2d2eb8351c33798ae93a4927f90b74",
     "lib/nested-review-key.ts": "bf11dbacc334bac13a821a14d754478d6754d3e468344384e263d3b3442430e8",
@@ -263,7 +265,7 @@
     "content/hepatic-teaching.ts": "0c93b76eba32feb4e5c1d0f139fccd416645dad6419b1e59bb97b043c534a654",
     "content/pulmonary-teaching.ts": "0abe50a77f1a4e64eabd51bc2be39a0798ea2aa567625acb5201b58872934b0a",
     "content/cerebral-teaching.ts": "ba741cc7373be4ffad1dd7a04af2605d5a033bbe6d40723196241d89d905b1a0",
-    "content/nested-teaching-bindings.v1.json": "eee2e2c777674822b19d6f2d4dc7c3481b45e123915bfae565ab02bdba6a86fa",
+    "content/nested-teaching-bindings.v1.json": "333fe4f02e3a776c119bd8d6af75787da27ebdd0d777fa5e028fe60cfd42a81e",
     "lib/nested-anatomy.ts": "b9368085e520b5228f43391825729ee39b98995522b5db39ef2e8627cfcf28d1",
     "lib/nested-teaching.ts": "aa2423a1cc53f70f992c19b601160000d44937eda47faae422d6898902edd23d",
     "app/nested-teaching.tsx": "502e0a1d13c65875963bc760ca01260bde329368fe6d3bf4162f98cf3de42744",
@@ -373,7 +375,7 @@
     "lib/intrinsic-larynx-tour.ts": "05e8dc9544e40cd49c2cf5fb086958b401f2b5bd6d3e294309ef54cf6c31ea3a",
     "lib/male-duct-tour.ts": "0ecd223bcd86e19c06ac24b70685543b9881cc1754bfb0d08cff85a837edff11",
     "lib/deep-brain-tour.ts": "f3dc89facdbc8cdf134b25480495a263fbf50daedb2aa74421912672054442eb",
-    "nestedTeachingData": "2dd21c7a6aac5618b4fced69e9c237283a7e107b7d415bebd6160a3b68f44a81"
+    "nestedTeachingData": "5f870fabc652377a89b7eeba845df6856760b25fcbfec5e9d22fab79761b7e09"
   },
   "rendering": {
     "bodyBatching": {
@@ -1775,16 +1777,6 @@
       "representations": 108,
       "geometryOnlyRepresentations": [
         {
-          "id": "vm:anatomy:body:head-neck:left:organ:left-hippocampus",
-          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
-          "study": "cerebral"
-        },
-        {
-          "id": "vm:anatomy:body:head-neck:right:organ:right-hippocampus",
-          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
-          "study": "cerebral"
-        },
-        {
           "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1700",
           "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
           "study": "cranial-artery-components"
@@ -1930,31 +1922,31 @@
           "study": "cranial-artery-components"
         }
       ],
-      "concepts": 46,
-      "references": 97,
+      "concepts": 47,
+      "references": 101,
       "topics": {
         "anatomy": {
+          "specificDraft": 79,
+          "identityOnly": 0,
+          "pending": 29,
+          "generatedIdentification": 0
+        },
+        "function": {
           "specificDraft": 77,
           "identityOnly": 0,
           "pending": 31,
           "generatedIdentification": 0
         },
-        "function": {
-          "specificDraft": 75,
-          "identityOnly": 0,
-          "pending": 33,
-          "generatedIdentification": 0
-        },
         "ct": {
-          "specificDraft": 41,
+          "specificDraft": 43,
           "identityOnly": 0,
-          "pending": 67,
+          "pending": 65,
           "generatedIdentification": 0
         },
         "mri": {
-          "specificDraft": 46,
+          "specificDraft": 48,
           "identityOnly": 0,
-          "pending": 62,
+          "pending": 60,
           "generatedIdentification": 0
         },
         "xray": {
@@ -1970,21 +1962,21 @@
           "generatedIdentification": 0
         },
         "pathology": {
-          "specificDraft": 73,
+          "specificDraft": 75,
           "identityOnly": 0,
-          "pending": 35,
+          "pending": 33,
           "generatedIdentification": 0
         },
         "clinical": {
-          "specificDraft": 73,
+          "specificDraft": 75,
           "identityOnly": 0,
-          "pending": 35,
+          "pending": 33,
           "generatedIdentification": 0
         },
         "quiz": {
-          "specificDraft": 77,
+          "specificDraft": 79,
           "identityOnly": 0,
-          "pending": 31,
+          "pending": 29,
           "generatedIdentification": 0
         }
       },

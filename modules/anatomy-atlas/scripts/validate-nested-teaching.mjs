@@ -46,8 +46,8 @@ runInNewContext(compiled.outputFiles[0].text, {
 });
 const api = {
   ...scope.exports,
-  nestedConcepts: scope.exports.nestedConcepts.filter(c => c.study !== 'femoral-components' && c.study !== 'coronary-venous'),
-  nestedTeachingReferences: Object.fromEntries(Object.entries(scope.exports.nestedTeachingReferences).filter(([key]) => !['femoralComponentAnatomy', 'femoralComponentVariation', 'femoralComponentInjury', 'coronaryVenousAnatomy', 'coronaryVenousHeart', 'coronarySinusImaging', 'smallCardiacVariation'].includes(key))),
+  nestedConcepts: scope.exports.nestedConcepts.filter(c => c.study !== 'femoral-components' && c.study !== 'coronary-venous' && c.id !== 'cerebral-hippocampus'),
+  nestedTeachingReferences: Object.fromEntries(Object.entries(scope.exports.nestedTeachingReferences).filter(([key]) => !['femoralComponentAnatomy', 'femoralComponentVariation', 'femoralComponentInjury', 'coronaryVenousAnatomy', 'coronaryVenousHeart', 'coronarySinusImaging', 'smallCardiacVariation', 'hippocampalTopography', 'hippocampalMemory', 'hippocampalLearning', 'hippocampalMRI'].includes(key))),
 };
 // Exact two-field extension; verify new bytes before restoring older snapshots.
 const eyeUsHashes = {
@@ -85,8 +85,8 @@ const catalog = api.bodyDisplayCatalog(
 // lessons and their UI/source guards are covered in validate-femoral-components.
 // Unnamed cranial source partitions have no independent teaching concepts;
 // their absence of inherited lessons is tested in validate-cranial-artery-components.
-// The two hippocampal additions are geometry-only; their pending lessons are
-// checked independently in validate-hippocampi, not added to this legacy corpus.
+// Hippocampal lessons are checked in validate-hippocampal-teaching, separately
+// from this legacy corpus; none of these older lesson snapshots is repinned.
 const targets = api.nestedStudyTargets(catalog).filter(t => !['femoral-components', 'cranial-artery-components', 'coronary-venous'].includes(t.study)
   && !(t.study === 'cerebral' && ['FMA72714', 'FMA72713'].includes(t.structure.fmaId)));
 const initial = JSON.stringify(catalog);
@@ -97,7 +97,8 @@ const priorConcepts = historicalApi.nestedConcepts.filter((c) => c.study !== 'cr
 same(priorConcepts.length, 40);
 const savedPins = JSON.parse(await readFile('content/nested-teaching-bindings.v1.json'));
 same(savedPins.bindings.filter((b) => b.study === 'coronary-venous').length, 2);
-const allPins = { ...savedPins, bindings: savedPins.bindings.filter((b) => b.study !== 'coronary-venous') };
+same(savedPins.bindings.filter(b => b.conceptId === 'cerebral-hippocampus').length, 2);
+const allPins = { ...savedPins, bindings: savedPins.bindings.filter((b) => b.study !== 'coronary-venous' && b.conceptId !== 'cerebral-hippocampus') };
 same(allPins.bindings.length, 71);
 same(allPins.parents.length, 11);
 const legacyPins = {

@@ -1,4 +1,5 @@
 import type { NestedStudy } from '../lib/nested-anatomy';
+import { hippocampalConcepts, hippocampalTeachingReferences } from './hippocampal-teaching.ts';
 import { femoralComponentConcepts, femoralComponentReferences } from './femoral-component-teaching.ts';
 import { collicularBrachiaConcepts, collicularBrachiaReferences } from './collicular-brachia-teaching.ts';
 import {
@@ -59,6 +60,7 @@ export const nestedTeachingReferences: Record<
   string,
   { title: string; url: string }
 > = {
+  ...hippocampalTeachingReferences,
   ...femoralComponentReferences,
   ...eyeImagingReferences,
   ...visualPathwayImagingReferences,
@@ -216,6 +218,7 @@ const quiz = (
 // Original, concise teaching drafts. These are conceptual lessons shared by
 // explicitly pinned source representations, not patient-specific findings.
 export const nestedConcepts: NestedConcept[] = [
+  ...hippocampalConcepts,
   ...coronaryVenousConcepts,
   ...femoralComponentConcepts,
   ...collicularBrachiaConcepts,

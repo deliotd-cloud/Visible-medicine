@@ -29,8 +29,9 @@ Head-neck and whole-body delivery both include the same new bundle.
   not a claim of complete biological fidelity or absence of geometric proximity.
 - All 106 previous nested review source tokens remain unchanged. The two new
   structures have their own review contexts and no inherited approvals.
-- Source teaching for these new children is pending, not copied from Brain.
-  The visible geometry-scope note is not comprehensive clinical teaching.
+- Source-bound teaching now covers anatomy, function, clinical context,
+  pathology, CT/MRI and an original self-check. All are drafts, not copied from
+  Brain. X-ray/ultrasound and acquired-image correspondence remain pending.
 
 The runtime only appends the bundle when the parent, source frame, original
 structures, original bundles, original selection IDs, version and licence match
@@ -42,14 +43,14 @@ Review shape, bilateral orientation and relationships to temporal cortex and
 ventricular spaces. These coarse source surfaces do not resolve CA subfields,
 dentate gyrus, subiculum, hippocampal head/body/tail labels or microscopic layers.
 They cannot establish disease, atrophy, sclerosis or quantitative normal ranges.
-Author and sign off structure-specific anatomy/function and clinical/imaging
+Review and sign off structure-specific anatomy/function and clinical/imaging
 lessons separately. CT/MRI registration and scan access remain unavailable until
 the independent imaging and privacy gates are met. No CT-head masks were touched.
 
 ## Checks and delivery
 
 `npm run hippocampi:test` checks source/GLB fidelity, original-asset preservation,
-fail-closed guards, pending teaching, nested delivery and original source tokens;
+fail-closed guards, draft/pending teaching, nested delivery and original source tokens;
 the cerebral regression also exercises the rendered L/R controls, presets, undo,
 context visibility and labels. Run normal nested-teaching/review and type checks.
 Renderer revisions must be regenerated before module export. Website import and
@@ -58,3 +59,20 @@ this source document.
 
 See [third-party attribution](../LICENSES/THIRD_PARTY_NOTICES.md). No fonts,
 textures, paid services or new software dependencies were added.
+
+## Teaching references and editorial scope
+
+`content/hippocampal-teaching.ts` contains original short factual summaries and
+four linked references: UTHealth limbic topography, hippocampal connections,
+learning/memory, and the 2019 ILAE structural MRI consensus. No figures, patient
+images, tables, question-bank items or copied passages were imported. Links
+do not license the referenced sites' media. MRI notes describe a published
+approach, not an acquisition prescription or validated image registration.
+
+The two additions are explicitly pinned to their current parent and exact
+hippocampal bundle; the original 73 teaching bindings are retained. Review
+materials expose the same draft text and original self-check as the learner.
+Teaching readiness is distinct from approval and does not clear imaging gates.
+`node scripts/validate-hippocampal-teaching.mjs` tests source rejection, detached
+content, preserved lessons, learner rendering and review parity. Website import
+must follow the source checkpoint before this content reaches the website.

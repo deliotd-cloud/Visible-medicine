@@ -77,12 +77,13 @@ for(const s of added.structures){
     assert([...vertex,n.getX(i),n.getY(i),n.getZ(i)].every(Number.isFinite));
     anchorFound ||= vertex.every((v,j)=>v===s.anchor[j]);
   }assert(anchorFound);
-  assert.equal(api.nestedTeachingFor(base.parent,'cerebral',s),null,'Do not inherit root lessons');
+  assert.equal(api.nestedTeachingFor(base.parent,'cerebral',s)?.id,'cerebral-hippocampus','Use explicitly pinned hippocampal teaching, not root lessons');
   const target=api.nestedStudyTargets(catalog).find(t=>t.structureId===s.id);assert(target);
   assert.equal(target.sourceHash,bundle.sha256);
   const group=api.nestedReviewRows.find(g=>g.study==='cerebral');
   const packet=await api.nestedReviewMaterial(group.key,s.id);assert(packet);
-  assert(packet.teaching.topics.every(t=>t.readiness==='pending'));assert(packet.context.blockers.teaching.length);
+  for(const topic of packet.teaching.topics)assert.equal(topic.readiness,['xray','ultrasound'].includes(topic.tab)?'pending':'draft');
+  assert.equal(packet.context.blockers.teaching.length,0);assert(packet.context.blockers.imaging.length);
   assert.deepEqual(packet.source.structure,s);
 }
 assert.equal(triangles,2000);
