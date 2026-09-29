@@ -7,19 +7,20 @@ import { fileURLToPath } from 'node:url';
 import { build } from './workspace-component-test-build.mjs';
 
 const root = new URL('../', import.meta.url);
-const [base, report = fileURLToPath(new URL('docs/upper-limb-bone-reasoning-browser-validation.json', root))] = process.argv.slice(2);
+const [base, report = fileURLToPath(new URL('docs/lower-limb-bone-reasoning-browser-validation.json', root))] = process.argv.slice(2);
 assert(base && ['localhost', '127.0.0.1'].includes(new URL(base).hostname), 'Local source QA server required');
 const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
 const inputs = await (await fetch(new URL('source-inputs.json', base))).json();
 const sourceHashes = {};
-for (const path of ['lib/upper-limb-bone-reasoning.ts', 'lib/lower-limb-bone-reasoning.ts', 'lib/reasoning-questions.ts', 'app/body-explorer.tsx', 'app/reasoning-feedback.tsx']) {
+for (const path of ['lib/lower-limb-bone-reasoning.ts', 'lib/upper-limb-bone-reasoning.ts', 'lib/reasoning-questions.ts', 'app/body-explorer.tsx', 'app/reasoning-feedback.tsx']) {
   sourceHashes[path] = sha256(await readFile(new URL(path, root)));
   assert.equal(inputs.find(input => input.path === path)?.sha256, sourceHashes[path], `QA source bound to ${path}`);
 }
-const bundled = await build({ stdin: { contents: `export * from './lib/reasoning-questions';`, resolveDir: fileURLToPath(root), loader: 'ts' }, bundle: true, platform: 'node', format: 'cjs', write: false });
+const bundled = await build({ stdin: { contents: `export * from './lib/lower-limb-bone-reasoning'; export * from './lib/upper-limb-bone-reasoning';`, resolveDir: fileURLToPath(root), loader: 'ts' }, bundle: true, platform: 'node', format: 'cjs', write: false });
 const module = { exports: {} };
 runInNewContext(bundled.outputFiles[0].text, { require: createRequire(new URL('package.json', root)), module, exports: module.exports });
-const concepts = module.exports.reasoningConcepts.filter(c => c.sourceTissue === 'bone');
+const { lowerLimbBoneReasoningConcepts: lowerConcepts, upperLimbBoneReasoningConcepts: upperConcepts } = module.exports;
+const concepts = [...upperConcepts, ...lowerConcepts];
 const catalog = JSON.parse(await readFile(new URL('public/models/bodyparts3d/full-body/catalog.json', root), 'utf8'));
 const { chromium } = await import(process.env.VM_PLAYWRIGHT_MODULE || 'playwright');
 const browser = await chromium.launch({ headless: true });
@@ -33,11 +34,12 @@ const evidence = { schemaVersion: 1, sourceServer: base, sourceHashes, sourceInp
 const escape = text => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 try {
   for (const [region, width, height, touch, textScale] of [
-    ['shoulder-arm', 1280, 900, false, 1], ['forearm', 375, 812, true, 1], ['whole-body', 320, 480, true, 2],
+    ['leg', 1280, 900, false, 1], ['foot', 375, 812, true, 1], ['whole-body', 320, 480, true, 2],
   ]) {
     const expected = Array.from(concepts).filter(c => region === 'whole-body' || (c.sourceRegions ?? [c.region]).includes(region));
     const expectedKeys = expected.map(c => c.key).sort();
     const total = expected.length;
+    assert.equal(total, region === 'whole-body' ? 13 : 4);
     const context = await browser.newContext({ viewport: { width, height }, hasTouch: touch, isMobile: touch });
     const page = await context.newPage(); page.setDefaultTimeout(45000);
     page.on('pageerror', error => evidence.errors.push({ region, width, message: error.message }));
@@ -91,7 +93,7 @@ try {
       const correctRegex = new RegExp(`^(?:${correctLabels.map(escape).join('|')})$`);
       const correctLabel = labels.find(label => correctRegex.test(label)); assert(correctLabel, `Exact source answer for ${concept.key}`);
       const target = catalog.structures.find(s => s.name === correctLabel); assert(target);
-      const choiceCount = concept.key.startsWith('lower-limb-bone-') ? 4 : region === 'whole-body' ? 5 : 3;
+      const choiceCount = concept.key.startsWith('upper-limb-bone-') ? 5 : 4;
       assert.equal(labels.length, choiceCount);
       assert.equal(new Set(labels).size, choiceCount);
       for (const label of labels) {

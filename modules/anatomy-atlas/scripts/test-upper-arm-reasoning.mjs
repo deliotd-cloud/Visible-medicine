@@ -55,11 +55,11 @@ const expected = [
 ];
 same(baseline.reasoningConcepts.length, 146);
 same(api.reasoningConcepts.slice(0, 146), baseline.reasoningConcepts, 'Exact ordered old146 concepts preserved');
-same(api.reasoningConcepts.length, 158);
+same(api.reasoningConcepts.length, 166);
 same(api.reasoningConcepts.slice(146,153), api.upperArmReasoningConcepts);
 same(api.upperArmReasoningConcepts.map(c => c.key), expected.map(([key]) => key));
-same(new Set(api.reasoningConcepts.map(c => c.key)).size, 158);
-same(catalog.structures.filter(api.reasoningConceptFor).length, 292);
+same(new Set(api.reasoningConcepts.map(c => c.key)).size, 166);
+same(catalog.structures.filter(api.reasoningConceptFor).length, 308);
 same(catalog.structures.filter(s => s.region === 'shoulder-arm' && api.reasoningConceptFor(s)).length, 46);
 const targets = [];
 const referenceWords = {};

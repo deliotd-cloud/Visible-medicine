@@ -1863,7 +1863,14 @@ Factual references only; no publisher images, scans, tables or extended text
 copied. Links confer no media reuse rights. No new model, font, dependency,
 service or fee; existing asset credits and clinical-review gates unchanged.
 
-## Upper-limb reasoning references
+## Limb reasoning references
+
+Lower-limb bone reasoning additions (29 September 2026) similarly reference the
+TTUHSC El Paso lower-limb bones table for factual relationships. Eight original
+brief questions/explanations total163 words; no tables, diagrams or source
+question-bank items are copied. Source copyright is retained; links grant no
+media reuse rights. See `docs/LOWER_LIMB_BONE_REASONING_20260929.md`. Existing
+models/credits and draft-review gates remain; no new asset, dependency or fee.
 
 Upper-limb bone reasoning additions (29 September 2026) use the TTUHSC El Paso
 upper-limb bones table as a factual reference only. Five original short questions

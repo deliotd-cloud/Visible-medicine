@@ -58,8 +58,8 @@ for (const s of api.catalog.structures) {
     checklistVersion:old.bodyChecklistVersion,source:material.fingerprints.source,
     renderer:context.rendererHash,checks:old.bodyChecklists.geometry})), 'No blanket geometry re-review for a teaching-only change');
 }
-assert.equal(eligible,292);
-assert.equal(absent,812);
+assert.equal(eligible,308);
+assert.equal(absent,796);
 const s = api.catalog.structures.find(s=>api.reasoningConceptFor(s)?.key==='thoracic-ascending-aorta');
 const original = await api.bodyReviewMaterial(s.id);
 assert.equal(oldParser.parseBodyReviewResponse(original,s.id),null,'Cached old UI must not hide newly reviewable questions');
