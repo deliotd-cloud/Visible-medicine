@@ -1,4 +1,5 @@
 import type { NestedStudy } from '../lib/nested-anatomy';
+import { cerebralLobarImaging, cerebralLobarReferences } from './cerebral-lobar-imaging.ts';
 import { hippocampalConcepts, hippocampalTeachingReferences } from './hippocampal-teaching.ts';
 import { femoralComponentConcepts, femoralComponentReferences } from './femoral-component-teaching.ts';
 import { collicularBrachiaConcepts, collicularBrachiaReferences } from './collicular-brachia-teaching.ts';
@@ -174,6 +175,7 @@ export const nestedTeachingReferences: Record<
     title: 'NINDS · Cerebellar degeneration',
     url: 'https://www.ninds.nih.gov/health-information/disorders/cerebellar-degeneration',
   },
+  ...cerebralLobarReferences,
   lobes: {
     title: 'UTHealth · Lobes and sulci',
     url: 'https://nba.uth.tmc.edu/neuroanatomy/L1/Lab01p06_index.html',
@@ -885,6 +887,7 @@ export const nestedConcepts: NestedConcept[] = [
     },
     modelLimit:
       'Four named source gyri are grouped. This is not complete frontal cortex, a motor homunculus or a mapped language/executive territory.',
+    imaging: cerebralLobarImaging.frontal,
     quiz: quiz(
       'Which sulcus separates frontal from parietal cortex?',
       'The central sulcus.',
@@ -916,6 +919,7 @@ export const nestedConcepts: NestedConcept[] = [
     },
     modelLimit:
       'Postcentral/angular/supramarginal and superior-parietal source groups are combined. Sensory maps and individual functional networks are absent.',
+    imaging: cerebralLobarImaging.parietal,
     quiz: quiz(
       'Is the postcentral region anterior or posterior to the central sulcus?',
       'Posterior.',
@@ -948,6 +952,7 @@ export const nestedConcepts: NestedConcept[] = [
     },
     modelLimit:
       'The original compound lacks superior temporal parts, supplied separately here; it is not a complete temporal lobe or segmented hippocampus.',
+    imaging: cerebralLobarImaging.temporal,
     quiz: quiz(
       'Which sulcus separates this region from overlying frontal/parietal cortex?',
       'The lateral sulcus.',
@@ -978,6 +983,7 @@ export const nestedConcepts: NestedConcept[] = [
     },
     modelLimit:
       'One surface per side; calcarine banks, primary visual cortex and retinotopic subdivisions are not independently labelled.',
+    imaging: cerebralLobarImaging.occipital,
     quiz: quiz(
       'Does this lobe mesh show a validated visual-field map?',
       'No. It identifies a source lobe, not a functional retinotopic map.',

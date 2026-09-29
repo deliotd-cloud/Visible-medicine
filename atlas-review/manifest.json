@@ -1,5 +1,5 @@
 {
-  "revision": "2c9d80ba1eaba9f520a7da9ac7fcb1201ca42a65",
+  "revision": "2792be3b4f5d2913aa506f35691b53ae6c711867",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2658,8 +2658,13 @@
     },
     {
       "path": "content/nested-teaching.ts",
-      "sourceSha256": "bb5811f2c542ec677ef1e040465fd85faf534cc571582b35b12c795faa84f183",
-      "importedSha256": "bb5811f2c542ec677ef1e040465fd85faf534cc571582b35b12c795faa84f183"
+      "sourceSha256": "4d0d3ee3f333d844c4bdc2dccf1caf3691ab1eeda9c0f93bdeee1a860ad87bcf",
+      "importedSha256": "4d0d3ee3f333d844c4bdc2dccf1caf3691ab1eeda9c0f93bdeee1a860ad87bcf"
+    },
+    {
+      "path": "content/cerebral-lobar-imaging.ts",
+      "sourceSha256": "373cb51d6902444a72d410c48b2eb81fc9820e6530cfc8cc55f8a9e3bd64f6e1",
+      "importedSha256": "373cb51d6902444a72d410c48b2eb81fc9820e6530cfc8cc55f8a9e3bd64f6e1"
     },
     {
       "path": "content/hippocampal-teaching.ts",
@@ -2758,8 +2763,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "a13fb69222247878a3950366fed19a94185c1b4a94be120732162c022f28e75b",
-      "importedSha256": "af7d493ae3f969f4657c0816daa9ff640f2e5ca09e39d09981fc1db047808a81"
+      "sourceSha256": "5cf1d125709742d847f2bc3b8b8d0f5726acbecaab7459b5e76e48e3f526ba1b",
+      "importedSha256": "e3a136737ce998958c12f0de48568cbd890a54bfdece092583ec1e8fd6ff6290"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3049,7 +3054,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "52c6ebe8633eb8bdc745feb0e63054da2cdb96fb7772d28103e38673fdb2c1cd",
-      "importedSha256": "3027cf2813e334ff7c11be32efc5ebd205f445c32101dcd71b8d767462f163a7"
+      "importedSha256": "f1eb7871502b381bcd913885ef274837bda95c5f2cb8f6a138352c19ce174990"
     },
     {
       "path": "app/review/review.css",
@@ -4353,8 +4358,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "e9db3b62fae23a19a2099f2dca9634e383eb85d9503924876fa40b1f6468f806",
-      "importedSha256": "e9db3b62fae23a19a2099f2dca9634e383eb85d9503924876fa40b1f6468f806"
+      "sourceSha256": "ca6fe9793c004238baf20de754377ce780e83f860fdff0de2ac4d9bb2e89072a",
+      "importedSha256": "ca6fe9793c004238baf20de754377ce780e83f860fdff0de2ac4d9bb2e89072a"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -4453,5 +4458,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "dd8fa465ec60b03bd0c52d783f934187bf4611ee22476d42bbc25a78782f9b35"
+  "websiteIntegrationSha256": "9feddbc38bd27fd28190bce56d4d4cac22364a381202d155e7d9ae817289caff"
 }

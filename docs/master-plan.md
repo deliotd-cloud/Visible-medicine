@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+29 September: cerebral-lobar CT/MRI teaching imported locally from Atlas
+`2792be3`. Eight paired lobe selections have 16 new draft modality placements
+in learner and protected Clinical Review, retaining existing compact tabs.
+All model bytes, source identities and independent access preserved.260 tests,
+types/build and mobile learner/worksheet checks pass. No acquired-image approval,
+publication, patient upload or fracture changes. See
+`docs/cerebral-lobar-imaging-delivery-20260929.md`. Native MRI remains done.
+
 29 September: expanded nested identification practice imported locally from
 Atlas `2c9d80b`: 50 additional named selections, folded controls and reversible
 label-free separation for overlapping Find targets. All model bytes, geometry
