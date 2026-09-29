@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+29 September: practice setup imported locally from Atlas `2bf25d3`.
+Session length now stays inside the open Practice panel, with no header duplicate.
+275 tests, types/build and actual desktop/phone/200%-text scoring/retry pass.
+Content, models and fracture work preserved. GitHub/C recovery; D copy pending
+because D is full. No publication or approval. See
+`docs/practice-setup-delivery-20260929.md`. Native MRI remains done.
+
 29 September: upper-arm reasoning imported locally from Atlas `e401fbe`.
 Seven new topics on fourteen existing bilateral muscle selections bring the
 bank to153 concepts. Existing concepts/models and fracture work preserved.

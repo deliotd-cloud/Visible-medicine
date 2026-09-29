@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "sourceCommit": "e401fbe05172f628b0f33ddfe13bf2eb38fb2f26",
+  "sourceCommit": "2bf25d326e6f3890a69a34673127a6e04ecae7aa",
   "region": "shoulder-right",
   "structures": 9,
   "patientDataIncluded": false,
@@ -10,7 +10,7 @@
     {
       "path": "index.html",
       "bytes": 504,
-      "sha256": "bc104ef18fc1ffa448cd34321019557a587c2e079723f6b75ee4e48fc247c804"
+      "sha256": "8d92dceb4ecefe1b736b3db93aacb206115640eafcad3160e1e8df7974985b6a"
     },
     {
       "path": "BUNDLED_NOTICES.txt",
@@ -28,24 +28,24 @@
       "sha256": "e5823ad9330cae468df32a5754e1511de58c61893c94d7a380dd2d120f0d141b"
     },
     {
+      "path": "assets/anatomy-scene-Bgkkz9Wk.js",
+      "bytes": 1068380,
+      "sha256": "ec8aad4ea1fba1532c1cb158a47be1cb838ca5fe386980d2b2a18c6f2a3b51cf"
+    },
+    {
       "path": "assets/anatomy-scene-DWpmDIUC.css",
       "bytes": 2767,
       "sha256": "dd7c542a365357d2921742ad887ebff8660a31d404fca8b512e450865cc2896d"
     },
     {
-      "path": "assets/anatomy-scene-TuFYZfQP.js",
-      "bytes": 1068380,
-      "sha256": "27c3faa72d70c760301cbda4d7bfa720926729df184c6793b1c5280822f489ed"
+      "path": "assets/index-B7e9x0t8.css",
+      "bytes": 298812,
+      "sha256": "ee484814c7e863fca896fae08b4bcdfbfc30fed076dbd3a996af2f58c335b853"
     },
     {
-      "path": "assets/index-BZmuFyLh.js",
+      "path": "assets/index-BP1E1XV-.js",
       "bytes": 4177279,
-      "sha256": "4c3bea7669d61ef8bca7cf8bb41ac627b1bce78ce8a8a75e53596d0074283e28"
-    },
-    {
-      "path": "assets/index-Ld6ZLv2-.css",
-      "bytes": 298665,
-      "sha256": "6a6a4e938c45ecd0f8de1b2320d7ec880d5e21a956498146f920d5da4ddaefbd"
+      "sha256": "1d4a4ff2b7b679c6f1ae5bee3f09b4c86e9e4523bd8fcf627871f6ba612b97ab"
     },
     {
       "path": "models/bodyparts3d/shoulder-right.glb",

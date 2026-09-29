@@ -1809,21 +1809,6 @@ export default function BodyExplorer({
         />
         <WorkspaceFocus />
         <WorkspaceOnly modes={['practice']} className="vm-practice-start">
-          <Select
-            value={String(practiceCount)}
-            onValueChange={(value) => value && setPracticeCount(Number(value))}
-          >
-            <SelectTrigger disabled={exam} aria-label="Practice session length">
-              <SelectValue>{practiceCount} questions</SelectValue>
-            </SelectTrigger>
-            <SelectContent>
-              {[5, 10, 20].map((n) => (
-                <SelectItem key={n} value={String(n)}>
-                  {n} questions
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
           <Button
             variant="outline"
             onClick={() =>
@@ -2283,6 +2268,22 @@ export default function BodyExplorer({
                         ? 'Name isolated anatomy'
                         : 'Find on model'}
                   </summary>
+                  <label htmlFor="practice-session-length">Session length</label>
+                  <Select
+                    value={String(practiceCount)}
+                    onValueChange={(value) => value && setPracticeCount(Number(value))}
+                  >
+                    <SelectTrigger id="practice-session-length" aria-label="Practice session length">
+                      <SelectValue>{practiceCount} questions</SelectValue>
+                    </SelectTrigger>
+                    <SelectContent>
+                      {[5, 10, 20].map((n) => (
+                        <SelectItem key={n} value={String(n)}>
+                          {n} questions
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
                   <label htmlFor="practice-answer-mode">Answer mode</label>
                   <Select
                     value={practiceMode}

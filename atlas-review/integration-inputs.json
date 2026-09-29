@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "e401fbe05172f628b0f33ddfe13bf2eb38fb2f26",
-  "sha256": "1564f1cce32cc79411009fca40218eb34092001ad5a3b3d8e4d8e60573e67c3b",
+  "sourceCommit": "2bf25d326e6f3890a69a34673127a6e04ecae7aa",
+  "sha256": "3ebb4df1746d9e4da235d6acc37cbfd6d1f6ce09e2f0640e631878040548b264",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-explorer.tsx",
-      "sha256": "6799bf73a63f3c1c83dba0390613dd882d01019a716d3018126a918d57124552"
+      "sha256": "e4db8290e5767c301d2eca8fd25a58a4deff44f0aca6f3ff88c3ab82928d0a82"
     },
     {
       "path": "atlas-review/app/body-scene.tsx",
@@ -3640,7 +3640,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "e5dedf1d4af626389234bb8ff7b4c62369ae5a43dd40bb13b457281099ccc133"
+      "sha256": "d6afdf21c4ccd2c6be9e9c366034f491357f913e90c04fa5f2d823ead6762fb5"
     }
   ]
 }
