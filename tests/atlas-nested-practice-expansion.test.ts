@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import ts from 'typescript';
 
 test('expanded practice is the same reviewed source in learner and Clinical Review, with unchanged anatomy',()=>{
-  const revision='1ccfb21d4dcb07fd6a9a1ef8306b6c1d13dfea1d';
+  const revision='d1dc51ed38502b557b8ae04aae295e20dc5f7317';
   const read=(p:string)=>readFileSync(p,'utf8');
   const json=(p:string)=>JSON.parse(read(p));
   const sha=(s:string)=>createHash('sha256').update(s).digest('hex');

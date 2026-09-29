@@ -93,7 +93,7 @@
   },
   {
     "path": "app/body-explorer.tsx",
-    "sha256": "6e93637ab53c186a8513a0314fd5d8fdfacbf6665e1443d3b6a31f6b411b9ba9"
+    "sha256": "7a0b953d8b5c81590b2e3f97409e7a4ee5ad35f69fe31119e178d63171b4ea98"
   },
   {
     "path": "app/body-scene.tsx",
@@ -205,7 +205,7 @@
   },
   {
     "path": "app/imaging-link.tsx",
-    "sha256": "7119b61ed1d58aa31c828152e698d4bdcdcecece7fb7b66cda275d21e2ec59a3"
+    "sha256": "5e106ad4a26e4c4a6a91ee2d76079da5486f66acbcfbbf364f4683e7b55210e8"
   },
   {
     "path": "app/independent-study-navigation.tsx",
@@ -222,6 +222,10 @@
   {
     "path": "app/lazy-body-teaching.tsx",
     "sha256": "e8fb67f5f028e3333c93b2075007d7f41da794129cc07608adba09a0c5307bb8"
+  },
+  {
+    "path": "app/nested-education-link.ts",
+    "sha256": "b2ebc43750d6cad1f924b89c6e04fa1035c40f01c97e68b479baf0ca9218008e"
   },
   {
     "path": "app/nested-practice.css",
@@ -409,7 +413,7 @@
   },
   {
     "path": "app/ventricles.tsx",
-    "sha256": "5f25c4d966c8d8ca5ca52fa1bb59e32fa62a942a2a03b63717e5be1d3b2ff396"
+    "sha256": "f257d94c627dbd6888e1dc7d8709264bf168050f409678a2aae3c2cb3a54b7cc"
   },
   {
     "path": "app/ventricular-relationships.css",
@@ -2536,6 +2540,10 @@
     "sha256": "0a3ea708b9636f783a33c71987ae21173d8101ac80bf4889d7870b9889704ceb"
   },
   {
+    "path": "lib/learning-anatomy.ts",
+    "sha256": "ee24e46059a1ebbab82a7d2aaf78e9893eea4638ea00136989d2d098789077b3"
+  },
+  {
     "path": "lib/learning-resource-types.ts",
     "sha256": "c08858a0b3bdcc0467d815d71a129428c3b311c1eaf318a544e1f091b1833778"
   },
@@ -2690,6 +2698,14 @@
   {
     "path": "lib/nested-anatomy.ts",
     "sha256": "b9368085e520b5228f43391825729ee39b98995522b5db39ef2e8627cfcf28d1"
+  },
+  {
+    "path": "lib/nested-education-binding.ts",
+    "sha256": "372cffa20affc7c2a6eeefa70b548f46b36717ebf0b9e52417a32da8978c8ece"
+  },
+  {
+    "path": "lib/nested-learning-anatomy.ts",
+    "sha256": "0a635f713f9bc99d00c62c14cc4c5d05a4eb639f9633afc9f2ae2b440bb4dcc7"
   },
   {
     "path": "lib/nested-practice.ts",
@@ -2917,7 +2933,7 @@
   },
   {
     "path": "lib/root-education-api.ts",
-    "sha256": "f7ad2030bb5834874cda9f1382312117d73fed2a99d6b17bd3d548472884f8ad"
+    "sha256": "50b9f4c223cf550c232366368849745b82ca2c6935162535c279e51deabe5554"
   },
   {
     "path": "lib/sca-mca-clinical.ts",

@@ -1,5 +1,5 @@
 {
-  "revision": "1ccfb21d4dcb07fd6a9a1ef8306b6c1d13dfea1d",
+  "revision": "d1dc51ed38502b557b8ae04aae295e20dc5f7317",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2799,7 +2799,7 @@
     {
       "path": "content/body-renderer-revision.json",
       "sourceSha256": "de064cf6949dc297c6504be368fe7012af947bb775baffe785f316166849ee36",
-      "importedSha256": "77e5ee90b6ed67ea49590742d2f021419297d84ded77ec35802cb4d22bf5b418"
+      "importedSha256": "fe58524419c329899f137f1ec744c9fc717401533276f6f34b8c5e8aedc0c255"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3089,7 +3089,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "1fcf6761a76bd594af08a21f79f6408d4963b35a075399f12531de08a2df2e8c",
-      "importedSha256": "b223d1ce97898c6adc096382f9aa0ecee3eef252b3b614601e4bada55a901b13"
+      "importedSha256": "00d4cb0ecb2cf377fe8d25dd209c18b96a5cc7a2c151896d093eb5ee9425113d"
     },
     {
       "path": "app/review/review.css",
@@ -3173,8 +3173,8 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sourceSha256": "6e93637ab53c186a8513a0314fd5d8fdfacbf6665e1443d3b6a31f6b411b9ba9",
-      "importedSha256": "af87f28957018835cfdf0e0cf4abcd165cb91ad203b9f23e69bf34f487c510c4"
+      "sourceSha256": "7a0b953d8b5c81590b2e3f97409e7a4ee5ad35f69fe31119e178d63171b4ea98",
+      "importedSha256": "adceeae0b165fb10161f1c44aca0f7aab09e419fc29bf98518b46e9aa8698adf"
     },
     {
       "path": "app/um-knee-entry.css",
@@ -3568,8 +3568,8 @@
     },
     {
       "path": "app/imaging-link.tsx",
-      "sourceSha256": "7119b61ed1d58aa31c828152e698d4bdcdcecece7fb7b66cda275d21e2ec59a3",
-      "importedSha256": "e8b9096adb659a98316535d8a50d5112b78c6908662cfd147820bbd56703eaba"
+      "sourceSha256": "5e106ad4a26e4c4a6a91ee2d76079da5486f66acbcfbbf364f4683e7b55210e8",
+      "importedSha256": "3898dfde87d6b8dc70ff3a3bcb39fa5fd813899e409967b5d5affc744867c08e"
     },
     {
       "path": "lib/imaging-sync.ts",
@@ -3588,8 +3588,8 @@
     },
     {
       "path": "lib/root-education-api.ts",
-      "sourceSha256": "f7ad2030bb5834874cda9f1382312117d73fed2a99d6b17bd3d548472884f8ad",
-      "importedSha256": "f7ad2030bb5834874cda9f1382312117d73fed2a99d6b17bd3d548472884f8ad"
+      "sourceSha256": "50b9f4c223cf550c232366368849745b82ca2c6935162535c279e51deabe5554",
+      "importedSha256": "50b9f4c223cf550c232366368849745b82ca2c6935162535c279e51deabe5554"
     },
     {
       "path": "lib/didanix-atlas-adapter.ts",
@@ -4178,13 +4178,33 @@
     },
     {
       "path": "app/ventricles.tsx",
-      "sourceSha256": "5f25c4d966c8d8ca5ca52fa1bb59e32fa62a942a2a03b63717e5be1d3b2ff396",
-      "importedSha256": "2c93a44ed5ec92d3ce87ddf4f9dbe2e2115b33fc66743867c7b41b0c292a8245"
+      "sourceSha256": "f257d94c627dbd6888e1dc7d8709264bf168050f409678a2aae3c2cb3a54b7cc",
+      "importedSha256": "f2f9761d7046d60da341393d87b41a17f2029a5203b61468355d912028db0d93"
     },
     {
       "path": "app/femoral-components.tsx",
       "sourceSha256": "adedfcc6a51b584908e5813c57b33b873c2b4ec60b70750837aa54e33c10764e",
       "importedSha256": "a9e28c16435d8deaf77cfaabd34be6db9c8083c065856ab023401cde2a12be8e"
+    },
+    {
+      "path": "app/nested-education-link.ts",
+      "sourceSha256": "b2ebc43750d6cad1f924b89c6e04fa1035c40f01c97e68b479baf0ca9218008e",
+      "importedSha256": "b2ebc43750d6cad1f924b89c6e04fa1035c40f01c97e68b479baf0ca9218008e"
+    },
+    {
+      "path": "lib/nested-education-binding.ts",
+      "sourceSha256": "372cffa20affc7c2a6eeefa70b548f46b36717ebf0b9e52417a32da8978c8ece",
+      "importedSha256": "372cffa20affc7c2a6eeefa70b548f46b36717ebf0b9e52417a32da8978c8ece"
+    },
+    {
+      "path": "lib/nested-learning-anatomy.ts",
+      "sourceSha256": "0a635f713f9bc99d00c62c14cc4c5d05a4eb639f9633afc9f2ae2b440bb4dcc7",
+      "importedSha256": "0a635f713f9bc99d00c62c14cc4c5d05a4eb639f9633afc9f2ae2b440bb4dcc7"
+    },
+    {
+      "path": "lib/learning-anatomy.ts",
+      "sourceSha256": "ee24e46059a1ebbab82a7d2aaf78e9893eea4638ea00136989d2d098789077b3",
+      "importedSha256": "ee24e46059a1ebbab82a7d2aaf78e9893eea4638ea00136989d2d098789077b3"
     },
     {
       "path": "lib/cardiac-circulation.ts",
@@ -4513,5 +4533,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "a812cdfcff52c25b8d2412e125fa21a0418a53b215ab8be08bc2e4501c743d6c"
+  "websiteIntegrationSha256": "bcbb4da0f5deb2878dcc939df649264979e64775c6d6578b73a35092b53aa733"
 }

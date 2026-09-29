@@ -1,5 +1,15 @@
 # Visible Medicine — shared delivery plan
 
+29 September: nested anatomy Education linking integrated locally.
+Shared nested workbenches have independent current-source selection connections;
+root Atlas linking remains separate. Explicit host/learner opt-in, stale/hidden
+selection rejection and Practice/lifecycle pause are retained. No real images
+or case registry connected. All137 model hashes/notices unchanged.298 website
+tests, types/build, desktop/phone/200%-text synthetic CT/MRI and actual Clinical
+Review checks pass. Separate fracture work preserved. No publication/approval;
+D recovery still pending while full. Native MRI remains done. See
+`docs/nested-education-delivery-20260929.md`.
+
 29 September: sequential body Clinical Review navigation integrated locally.
 Previous/Next structure retains filters and follows the selected queue page,
 including deep links. Unsaved edits require confirmation; same-row selection is

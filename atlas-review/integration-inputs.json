@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "1ccfb21d4dcb07fd6a9a1ef8306b6c1d13dfea1d",
-  "sha256": "a812cdfcff52c25b8d2412e125fa21a0418a53b215ab8be08bc2e4501c743d6c",
+  "sourceCommit": "d1dc51ed38502b557b8ae04aae295e20dc5f7317",
+  "sha256": "bcbb4da0f5deb2878dcc939df649264979e64775c6d6578b73a35092b53aa733",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-explorer.tsx",
-      "sha256": "af87f28957018835cfdf0e0cf4abcd165cb91ad203b9f23e69bf34f487c510c4"
+      "sha256": "adceeae0b165fb10161f1c44aca0f7aab09e419fc29bf98518b46e9aa8698adf"
     },
     {
       "path": "atlas-review/app/body-scene.tsx",
@@ -236,7 +236,7 @@
     },
     {
       "path": "atlas-review/app/imaging-link.tsx",
-      "sha256": "e8b9096adb659a98316535d8a50d5112b78c6908662cfd147820bbd56703eaba"
+      "sha256": "3898dfde87d6b8dc70ff3a3bcb39fa5fd813899e409967b5d5affc744867c08e"
     },
     {
       "path": "atlas-review/app/independent-study-navigation.tsx",
@@ -253,6 +253,10 @@
     {
       "path": "atlas-review/app/lazy-body-teaching.tsx",
       "sha256": "e8fb67f5f028e3333c93b2075007d7f41da794129cc07608adba09a0c5307bb8"
+    },
+    {
+      "path": "atlas-review/app/nested-education-link.ts",
+      "sha256": "b2ebc43750d6cad1f924b89c6e04fa1035c40f01c97e68b479baf0ca9218008e"
     },
     {
       "path": "atlas-review/app/nested-practice.css",
@@ -520,7 +524,7 @@
     },
     {
       "path": "atlas-review/app/ventricles.tsx",
-      "sha256": "2c93a44ed5ec92d3ce87ddf4f9dbe2e2115b33fc66743867c7b41b0c292a8245"
+      "sha256": "f2f9761d7046d60da341393d87b41a17f2029a5203b61468355d912028db0d93"
     },
     {
       "path": "atlas-review/app/ventricular-relationships.css",
@@ -2631,6 +2635,10 @@
       "sha256": "0a3ea708b9636f783a33c71987ae21173d8101ac80bf4889d7870b9889704ceb"
     },
     {
+      "path": "atlas-review/lib/learning-anatomy.ts",
+      "sha256": "ee24e46059a1ebbab82a7d2aaf78e9893eea4638ea00136989d2d098789077b3"
+    },
+    {
       "path": "atlas-review/lib/learning-resource-types.ts",
       "sha256": "c08858a0b3bdcc0467d815d71a129428c3b311c1eaf318a544e1f091b1833778"
     },
@@ -2785,6 +2793,14 @@
     {
       "path": "atlas-review/lib/nested-anatomy.ts",
       "sha256": "b9368085e520b5228f43391825729ee39b98995522b5db39ef2e8627cfcf28d1"
+    },
+    {
+      "path": "atlas-review/lib/nested-education-binding.ts",
+      "sha256": "372cffa20affc7c2a6eeefa70b548f46b36717ebf0b9e52417a32da8978c8ece"
+    },
+    {
+      "path": "atlas-review/lib/nested-learning-anatomy.ts",
+      "sha256": "0a635f713f9bc99d00c62c14cc4c5d05a4eb639f9633afc9f2ae2b440bb4dcc7"
     },
     {
       "path": "atlas-review/lib/nested-practice.ts",
@@ -3044,7 +3060,7 @@
     },
     {
       "path": "atlas-review/lib/root-education-api.ts",
-      "sha256": "f7ad2030bb5834874cda9f1382312117d73fed2a99d6b17bd3d548472884f8ad"
+      "sha256": "50b9f4c223cf550c232366368849745b82ca2c6935162535c279e51deabe5554"
     },
     {
       "path": "atlas-review/lib/sca-mca-clinical.ts",
@@ -3668,7 +3684,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "97783992fe30476b53657d76618c0eb832f07f12d0f1d4087254a6fa5b580946"
+      "sha256": "c07d9289bf4e224280dcc8182c791ced8a906382f696800cfd3ee345341476f5"
     }
   ]
 }

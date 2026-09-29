@@ -1,5 +1,7 @@
 'use client';
 import FemoralComponents from './femoral-components';
+import { ImagingLink } from './imaging-link';
+import { useNestedEducationLink } from './nested-education-link';
 import { femoralComponentsFor } from '@/atlas-review/lib/femoral-components';
 import { cranialArteryComponentsFor } from '@/atlas-review/lib/cranial-artery-components';
 import {
@@ -204,12 +206,14 @@ export type ComponentStudy =
 // Shared compact source-component workbench; the keyed parent resets state between studies.
 export function VentricularView({
   parent,
+  educationCatalog,
   study = 'ventricles',
   initialSelectedId,
   initialTeachingTopic,
   assetBase = '',
 }: {
   parent: BodyStructure;
+  educationCatalog?: BodyCatalog;
   study?: ComponentStudy;
   initialSelectedId?: string;
   initialTeachingTopic?: NestedImagingTopic;
@@ -741,7 +745,7 @@ export function VentricularView({
       pulmonaryRole,
     ],
   );
-  function select(id: string) {
+  function applySelection(id: string) {
     if (!selectableIds.includes(id)) return;
     if (circulation && !circulation.selectedIds.includes(id))
       setCirculationIndex(null);
@@ -749,6 +753,22 @@ export function VentricularView({
     if (relationship && !relationshipSelectionIds(relationship).includes(id))
       setRelationshipId(null);
     setFocus(false);
+  }
+  const educationAllowedIds = useMemo(
+    () => layers.filter(s => !hidden.includes(s.id) && loaded.includes(s.bundle) && !failed.includes(s.bundle)).map(s => s.id),
+    [layers, hidden, loaded, failed],
+  );
+  const educationLink = useNestedEducationLink({
+    catalog: educationCatalog, parent, study, layers,
+    allowedIds: educationAllowedIds,
+    disabled: !!practiceSnapshot || health !== 'ready' || loading || hasFailed ||
+      isolated || inspection.plane !== 'off' || practiceBranchFiltered,
+    onSelect: applySelection,
+  });
+  function select(id: string) {
+    if (!selectableIds.includes(id)) return;
+    applySelection(id);
+    educationLink.publish(id);
   }
   function preset(value: string, selection?: string) {
     if (!Object.hasOwn(presets, value)) return;
@@ -992,6 +1012,7 @@ export function VentricularView({
             </SelectContent>
           </Select>
         </div>
+        {educationLink.adapter && <ImagingLink link={educationLink} />}
         {practiceKind && (
           <details className="nested-practice-launcher">
             <summary ref={practiceLauncher}>Practice identification</summary>
@@ -1899,6 +1920,7 @@ export function VentricularView({
 
 function LegacyVentricles({
   parent,
+  educationCatalog,
   onClose,
   initialStudy,
   initialSelectedId,
@@ -1906,6 +1928,7 @@ function LegacyVentricles({
   assetBase = '',
 }: {
   parent: BodyStructure;
+  educationCatalog?: BodyCatalog;
   onClose: () => void;
   initialStudy?: ComponentStudy;
   initialSelectedId?: string;
@@ -2026,6 +2049,7 @@ function LegacyVentricles({
         </header>
         <VentricularView
           assetBase={assetBase}
+          educationCatalog={educationCatalog}
           key={`${parent.id}:${study}`}
           parent={parent}
           study={study}
@@ -2043,6 +2067,7 @@ function LegacyVentricles({
 
 export default function Ventricles(props: {
   parent: BodyStructure;
+  educationCatalog?: BodyCatalog;
   onClose: () => void;
   initialStudy?:
     | ComponentStudy
@@ -2052,7 +2077,7 @@ export default function Ventricles(props: {
   initialTeachingTopic?: NestedImagingTopic;
   assetBase?: string;
 }) {
-  const { initialStudy, ...rest } = props;
+  const { initialStudy, educationCatalog, ...rest } = props;
   if (
     initialStudy === 'cranial-artery-components' ||
     (!initialStudy && cranialArteryComponentsFor(props.parent).length)
@@ -2063,5 +2088,5 @@ export default function Ventricles(props: {
     (!initialStudy && femoralComponentsFor(props.parent).length)
   )
     return <FemoralComponents {...rest} />;
-  return <LegacyVentricles {...rest} initialStudy={initialStudy} />;
+  return <LegacyVentricles {...rest} educationCatalog={educationCatalog} initialStudy={initialStudy} />;
 }

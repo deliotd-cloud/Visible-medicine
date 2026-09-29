@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 test('learner and reviewer share bounded word forms and exact source-bound results', async () => {
   const manifest=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const inputs=JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json','utf8'));
-  assert.equal(manifest.revision,'1ccfb21d4dcb07fd6a9a1ef8306b6c1d13dfea1d');
+  assert.equal(manifest.revision,'d1dc51ed38502b557b8ae04aae295e20dc5f7317');
   for(const path of ['lib/anatomy-search.ts','lib/atlas-navigation.ts']) {
     const file=manifest.files.find((f:any)=>f.path===path);assert(file);
     assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,file.sourceSha256);

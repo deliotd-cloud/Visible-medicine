@@ -10,9 +10,9 @@ test('regional practice export preserves every model and binds the tested source
   const base = 'public/atlas-runtime/head-neck/';
   const sha = (b: string | Buffer) => createHash('sha256').update(b).digest('hex');
   const bytes = readFileSync(base + 'manifest.json');
-  assert.equal(sha(bytes), '11313012553cb09e46e37a063aadc7485e3c4165a91aa98e78d21cf900f9a501');
+  assert.equal(sha(bytes), '9bc502f8747bc92ee658000ff4a7238e2b591f6cecccfb7092dfc335796c9c5b');
   const manifest = JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit, '1ccfb21d4dcb07fd6a9a1ef8306b6c1d13dfea1d');
+  assert.equal(manifest.sourceCommit, 'd1dc51ed38502b557b8ae04aae295e20dc5f7317');
   assert.equal(manifest.patientDataIncluded, false);
   assert.equal(manifest.clinicalApproved, false);
   assert.equal(manifest.imagingConnection, false);
@@ -25,7 +25,7 @@ test('regional practice export preserves every model and binds the tested source
     'app/nested-practice.tsx': '37917409e0021403ffd4ed7fa92b3371af250e31b1411abbf697644610bf8c5e',
     'app/nested-practice.css': '8e0c687cecb73a74e65f6a574ad0858237d9f61680732eafb140c760779f1591',
     'lib/nested-practice.ts': '6e21a6dc48dc026110e76138d3705f8b5a94146df3b48767d31275c5bf04ce82',
-    'app/ventricles.tsx': '5f25c4d966c8d8ca5ca52fa1bb59e32fa62a942a2a03b63717e5be1d3b2ff396',
+    'app/ventricles.tsx': 'f257d94c627dbd6888e1dc7d8709264bf168050f409678a2aae3c2cb3a54b7cc',
   })) assert.equal(inputs.find(f => f.path === path)?.sha256, hash);
   const runtime = manifest.files.filter((f:{path:string}) => f.path.endsWith('.js')).map((f:{path:string;sha256:string}) => {
     const data = readFileSync(base + f.path); assert.equal(sha(data), f.sha256); return data.toString();
