@@ -12,6 +12,7 @@ import { thoracicOrganReasoningConcepts } from './thoracic-organ-reasoning';
 import { deepBrainReasoningConcepts } from './deep-brain-reasoning';
 import { pelvicOrganReasoningConcepts } from './pelvic-organ-reasoning';
 import { thoracicVesselReasoningConcepts, thoracicVesselReasoningSourceMatches } from './thoracic-vessel-reasoning';
+import { upperArmReasoningConcepts } from './upper-arm-reasoning';
 // "midline" retains the exact catalogue tag, including bilateral source groups.
 type ReasoningBinding = { fma: string; side: 'right' | 'left' | 'midline' | 'unpaired' | 'unspecified' } & (
   | { file: string; files?: never }
@@ -352,6 +353,7 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
   ...deepBrainReasoningConcepts,
   ...pelvicOrganReasoningConcepts,
   ...thoracicVesselReasoningConcepts,
+  ...upperArmReasoningConcepts,
 ];
 export function reasoningConceptFor(s: BodyStructure) {
   if (

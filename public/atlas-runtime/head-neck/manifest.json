@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "sourceCommit": "08ef3834b790763917fd45ad5a3e404da3cdf2f0",
+  "sourceCommit": "e401fbe05172f628b0f33ddfe13bf2eb38fb2f26",
   "region": "head-neck",
   "sourceVersion": "4.0",
   "regionalIds": [
@@ -11157,7 +11157,7 @@
     {
       "path": "index.html",
       "bytes": 914,
-      "sha256": "1f1966a1757012c213af56af3867f6ab0868bc73b247c73734e5a33b57bf4dc7"
+      "sha256": "154a7ef1fd243157e495d1c4b41489c9a9196411b92e1d0c40f8641a77625c84"
     },
     {
       "path": "BUNDLED_NOTICES.txt",
@@ -11171,13 +11171,13 @@
     },
     {
       "path": "source-inputs.json",
-      "bytes": 118759,
-      "sha256": "1da11d6d410247474f660c2e0e943ac8074b640f1473fa1f5691c272899d4a86"
+      "bytes": 118891,
+      "sha256": "5cdaf302dc3640a49646fdda62731a4a8c500544197f824a875e01ac2bdb8152"
     },
     {
-      "path": "assets/abdominal-wall-study-CII9PZvx.js",
+      "path": "assets/abdominal-wall-study-Dbw7xAID.js",
       "bytes": 44599,
-      "sha256": "609db9778795c0ba032cb6429887a609e0d52353f7cc75a3d6cf2a83840c43a9"
+      "sha256": "79ffb0f437c0ffc02f2c78c89017de078169521ad36569caae9b93565b2f62f3"
     },
     {
       "path": "assets/anatomy-load-state-C_7D7z_U.js",
@@ -11185,9 +11185,9 @@
       "sha256": "a8af94d5770fa1179af03c7ffdc866e0e9562026727a2d9a592366b7eb7b784d"
     },
     {
-      "path": "assets/back-layers-study-lk6gqfsU.js",
+      "path": "assets/back-layers-study-Bk3UXdUq.js",
       "bytes": 76787,
-      "sha256": "b9bc30cbc97d56e07771e07b53445ce02323a1220bd8a0852e114f89d0302566"
+      "sha256": "1b5538aa0574cb0181707579024f20551b05597518a6b4d49c3c65a8ca0f4961"
     },
     {
       "path": "assets/body-scene-Bau-G6D-.js",
@@ -11205,14 +11205,9 @@
       "sha256": "87c31bfe8303461a8afbde6251bb48df5a77645f774c8ef3ac48c292a30ec5c8"
     },
     {
-      "path": "assets/cutaway-controls-DvdkAJam.js",
+      "path": "assets/cutaway-controls-DVG2zAfN.js",
       "bytes": 119557,
-      "sha256": "ee5734c741ebe6831b72d29e6c6049f1112d91b75b16f1c277826884da2006f2"
-    },
-    {
-      "path": "assets/eye-layers-BC2enikF.js",
-      "bytes": 11522,
-      "sha256": "741e67065d9e476726092f9cfba5bf07c44ff95190cf2981c5e0703aa7bdb8ee"
+      "sha256": "6035c801a85f4aece2610eacf09446ebcc07f5d9f7a65690994cd39904e2acf8"
     },
     {
       "path": "assets/eye-layers-D-ebm8PC.css",
@@ -11220,24 +11215,29 @@
       "sha256": "defc762f2a2603fba1925c2f26fa225e01fb7d4019080f625ea69ce7f5aba4c6"
     },
     {
-      "path": "assets/hra-pelvis-study-BxUBQEod.js",
+      "path": "assets/eye-layers-DfgF27bV.js",
+      "bytes": 11522,
+      "sha256": "297910a466247139d8ab7c27523839f21aa8a46cf95fad4dbdcfcc9c08d9db47"
+    },
+    {
+      "path": "assets/hra-pelvis-study-ChdmgUrf.js",
       "bytes": 94864,
-      "sha256": "6008deb705cf2effb2e2a2155f6affc92c6b3094db582ad14f768a62a058f19a"
+      "sha256": "15dfd6ba6f1aca8e78987ce12a6c14f436ec0365a84f39fdf7e558fefd242554"
     },
     {
-      "path": "assets/hra-renal-study-D9rA7oHx.js",
+      "path": "assets/hra-renal-study-6d3Hf5vt.js",
       "bytes": 4389,
-      "sha256": "8f960cc025166474fe1a0602381fd84d3989972865502e15c2985b568293fd27"
+      "sha256": "263f115fd4deeff8ef0dc6a21b6e8bf430b36f76ddca7805eb23ac526ceb5cec"
     },
     {
-      "path": "assets/hra-renal-teaching-BGqn0FP_.js",
+      "path": "assets/hra-renal-teaching-DvgHjCCx.js",
       "bytes": 115099,
-      "sha256": "99964cc4f5c1c37407a845b3d436b5c96f3233b3cab978d690c4348babcf963f"
+      "sha256": "4467ed69630f7904d357631d1e5777ec0c882a797e8d6c04654c9478b3f7026a"
     },
     {
-      "path": "assets/independent-study-navigation-CuHPln5C.js",
+      "path": "assets/independent-study-navigation-Du6WYq93.js",
       "bytes": 2628,
-      "sha256": "9ef48c9d97da1b2867774346b69ad90be234700f3f2cc7c499133f915e1b58a2"
+      "sha256": "ae328a51479398cdd4a898089f16ba69647966daf6e8401a886f7cf99ec214cb"
     },
     {
       "path": "assets/index-9ff5abQr.css",
@@ -11245,9 +11245,9 @@
       "sha256": "e845ab7e33486b8abe85717900744c2d94441417f4e135d4c0a105d4f248ada3"
     },
     {
-      "path": "assets/index-CQbwUXH1.js",
-      "bytes": 2166706,
-      "sha256": "a02f795b9a64588920454b8609c5989a5d531f2faef008b43d103d1a19985e74"
+      "path": "assets/index-B0djSO-o.js",
+      "bytes": 2169310,
+      "sha256": "022ea0a85a1e43088bedfd3f3d6ca9a617429824669206b7663bc4b9bc31bc4d"
     },
     {
       "path": "assets/rolldown-runtime-hePW80VL.js",
@@ -11265,9 +11265,9 @@
       "sha256": "c44d063752a4a8ad4b1ce30b0644a4a8fcef2577a185166c8401c1665c698f67"
     },
     {
-      "path": "assets/um-knee-study-D2iRo10X.js",
+      "path": "assets/um-knee-study-CgUupBMv.js",
       "bytes": 522912,
-      "sha256": "a07f0dba1e0b21dcfd72bf798196c3629b18125af18f7c148370b2044cd5188f"
+      "sha256": "d8ff398151501b857b9e549f22b520fef3ddf115d04fb7b075dee0c450d3fa15"
     },
     {
       "path": "assets/um-knee-study-DRREfAwA.css",
@@ -11275,19 +11275,19 @@
       "sha256": "74f9a6f5483fc5e68b0d9fa56032db4c6d644f0a3816f4165f3c819384377f84"
     },
     {
-      "path": "assets/um-limb-study-B0qoKjoG.js",
+      "path": "assets/um-limb-study-D9SfSp80.js",
       "bytes": 2603,
-      "sha256": "aa1ee982ea568ddf3655dfee928403d944142d4fcd67fc457e0c971cee3a959e"
-    },
-    {
-      "path": "assets/ventricles-C8AYFLoW.js",
-      "bytes": 239873,
-      "sha256": "76aa381c2aae1419e6ee130b8a3cb2362ced2375a37a2aa38bb3402b927fe228"
+      "sha256": "6b911659ddbb54a563ce02180c2d4da790f84cb29f37ba679f79bbdff27b1619"
     },
     {
       "path": "assets/ventricles-CfdrTivY.css",
       "bytes": 1203,
       "sha256": "3afed59416d5b658434fa6dd284a3af3ff3868bdf2412b57c6f882f616e0b385"
+    },
+    {
+      "path": "assets/ventricles-DPep9bmK.js",
+      "bytes": 239873,
+      "sha256": "621cc6b3212e016e7bff825fc3303c2b94394899cb7024fc74ac0f8383495666"
     },
     {
       "path": "models/bodyparts3d-v3/abdominal-wall/abdominal-wall.glb",
@@ -12001,8 +12001,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "bytes": 218451,
-      "sha256": "4c1f1b77837300774eb67c683bee5c11b02d61629199ff520d679fe2aac6033a"
+      "bytes": 218839,
+      "sha256": "2714746a4189b9adffbab884c198250a6b1fdb1221b702ff72880e94dddd3676"
     },
     {
       "path": "LICENSES/CC-BY-4.0.txt",

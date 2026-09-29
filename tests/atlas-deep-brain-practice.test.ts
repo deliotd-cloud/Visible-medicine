@@ -9,14 +9,14 @@ test('deep-brain formative practice ships tested source without new models or ac
   const base='public/atlas-runtime/head-neck/';
   const sha=(data:Buffer)=>createHash('sha256').update(data).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'abd2471d5fb617eb9e8d9d881f3a539043acec019537aae1054b5591bb655501');
+  assert.equal(sha(bytes),'b82ac1a78b59c92118e1bb4501bbe779447b3d8b4d5a0b4aef4a4020063c8d6e');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'08ef3834b790763917fd45ad5a3e404da3cdf2f0');
+  assert.equal(manifest.sourceCommit,'e401fbe05172f628b0f33ddfe13bf2eb38fb2f26');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({
     'lib/deep-brain-reasoning.ts':'0f18416cece4e887ff8916abf70667b6e9fcbbceff558863782e4e2038616a5f',
-    'lib/reasoning-questions.ts':'06e537e4f2f283547ec90da3144b21db06415e347e692fb6b139cecf641affdf',
+    'lib/reasoning-questions.ts':'186793c4046ff872280359e62cac477ed9c1adde95156f57a94478479c07b679',
   }))assert.deepEqual(inputs.filter(input=>input.path===path),[{path,sha256}]);
   assert.ok(!inputs.some(input=>/native-mr|local-mr-study|\.vmmr|patient[-_/]?data/i.test(input.path)));
   const runtime=(manifest.files as {path:string;sha256:string}[]).filter(file=>file.path.endsWith('.js')).map(file=>{

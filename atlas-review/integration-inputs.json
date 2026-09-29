@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "08ef3834b790763917fd45ad5a3e404da3cdf2f0",
-  "sha256": "fa3676438b9f402c029d87626882241810470fb924bbff139e19ace21f5ff1ac",
+  "sourceCommit": "e401fbe05172f628b0f33ddfe13bf2eb38fb2f26",
+  "sha256": "1564f1cce32cc79411009fca40218eb34092001ad5a3b3d8e4d8e60573e67c3b",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -2948,7 +2948,7 @@
     },
     {
       "path": "atlas-review/lib/reasoning-questions.ts",
-      "sha256": "06e537e4f2f283547ec90da3144b21db06415e347e692fb6b139cecf641affdf"
+      "sha256": "186793c4046ff872280359e62cac477ed9c1adde95156f57a94478479c07b679"
     },
     {
       "path": "atlas-review/lib/rectal-deferent-imaging.ts",
@@ -3323,6 +3323,10 @@
       "sha256": "f51b0532e23719646b5588188c637a49b7523acc5ff976c6cff7101ffa41bf4d"
     },
     {
+      "path": "atlas-review/lib/upper-arm-reasoning.ts",
+      "sha256": "d2d0c7c8bdfeb111e1fe9b69a8258973379f6ead9ee6a7c508930d962498404a"
+    },
+    {
       "path": "atlas-review/lib/upper-limb-arterial.ts",
       "sha256": "946e337e78ee2c1b01eeab074a5c1f014c63cd0e8b6d76a084d9b02dc3529422"
     },
@@ -3380,7 +3384,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "4c1f1b77837300774eb67c683bee5c11b02d61629199ff520d679fe2aac6033a"
+      "sha256": "2714746a4189b9adffbab884c198250a6b1fdb1221b702ff72880e94dddd3676"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3636,7 +3640,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "7fdce978c7d1d6c26a77c4273851b02aaa54bd8d300fadc12efa216ef69880b0"
+      "sha256": "e5dedf1d4af626389234bb8ff7b4c62369ae5a43dd40bb13b457281099ccc133"
     }
   ]
 }

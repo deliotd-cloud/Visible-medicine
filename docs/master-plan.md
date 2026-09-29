@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+29 September: upper-arm reasoning imported locally from Atlas `e401fbe`.
+Seven new topics on fourteen existing bilateral muscle selections bring the
+bank to153 concepts. Existing concepts/models and fracture work preserved.
+274 tests, types/build, desktop/phone learner scoring/retry and anconeus Clinical
+Review question/reference checks pass. Draft only; no approval or publication.
+See `docs/upper-arm-reasoning-delivery-20260929.md`. Native MRI remains done.
+
 29 September: superior temporal MRI teaching imported locally from Atlas
 `08ef383`. Four anterior/posterior sided selections receive referenced structural
 orientation; posterior MRI is newly available, anterior prior teaching preserved.
