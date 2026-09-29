@@ -1,0 +1,458 @@
+{
+  "schemaVersion": 1,
+  "sourceServer": "http://127.0.0.1:54965/atlas-runtime/head-neck/index.html?region=head-neck",
+  "sourceHashes": {
+    "lib/upper-limb-bone-reasoning.ts": "11161555f3296f06e435e2c2e1a0bd2ee1dc14806e0c1234625064071ecc0bf6",
+    "lib/reasoning-questions.ts": "317c6dc0a84590c8075a7cd07f18824e8eba989cda6baaa10c57091f4588bd66",
+    "app/body-explorer.tsx": "bbae6dd690fa8d65ca53f1150518b56909061609b32038cf9fd102913cc80273",
+    "app/reasoning-feedback.tsx": "835f5f3fa84c056c30be0851a2fee17b6d9d11a76dd74fe2827da5c948718791"
+  },
+  "sourceInputs": 871,
+  "priorAttempts": [
+    {
+      "failure": "locator.click: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('switch', { name: 'Show Organs', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <span role=\"switch\" tabindex=\"-1\" data-checked=\"\" data-disabled=\"\" data-slot=\"switch\" id=\"base-ui-_r_1c_\" aria-checked=\"true\" data-size=\"default\" aria-disabled=\"true\" aria-label=\"Show Organs\" class=\"peer group/switch relative inline-flex shrink-0 items-center rounded-full border border-transparent transition-all outline-none group-has-[:focus-visible]/field-label:border-transparent group-has-[:focus-visible]/field-label:ring-0 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:border-rin…>…</span>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    86 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not enabled\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+      "sourceHashes": {
+        "lib/upper-limb-bone-reasoning.ts": "11161555f3296f06e435e2c2e1a0bd2ee1dc14806e0c1234625064071ecc0bf6",
+        "lib/reasoning-questions.ts": "317c6dc0a84590c8075a7cd07f18824e8eba989cda6baaa10c57091f4588bd66",
+        "app/body-explorer.tsx": "bbae6dd690fa8d65ca53f1150518b56909061609b32038cf9fd102913cc80273",
+        "app/reasoning-feedback.tsx": "835f5f3fa84c056c30be0851a2fee17b6d9d11a76dd74fe2827da5c948718791"
+      },
+      "completedQuestionCounts": []
+    }
+  ],
+  "cases": [
+    {
+      "region": "shoulder-arm",
+      "width": 1280,
+      "height": 900,
+      "touch": false,
+      "textScale": 1,
+      "filters": {
+        "Bones": true,
+        "Muscles": false,
+        "Organs": {
+          "unavailable": true,
+          "entries": 0,
+          "checked": true
+        },
+        "Nervous": {
+          "unavailable": true,
+          "entries": 0,
+          "checked": true
+        },
+        "Vessels": false,
+        "Connective": {
+          "unavailable": true,
+          "entries": 0,
+          "checked": true
+        }
+      },
+      "expectedConcepts": [
+        "upper-limb-bone-clavicle",
+        "upper-limb-bone-humerus",
+        "upper-limb-bone-scapula"
+      ],
+      "questions": [
+        {
+          "index": 1,
+          "key": "upper-limb-bone-humerus",
+          "target": "Left humerus",
+          "targetId": "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+          "side": "left",
+          "choices": [
+            "Left scapula",
+            "Left clavicle",
+            "Left humerus"
+          ],
+          "chosen": "Left scapula",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 2,
+          "key": "upper-limb-bone-scapula",
+          "target": "Left scapula",
+          "targetId": "vm:anatomy:body:shoulder-arm:left:bone:left-scapula",
+          "side": "left",
+          "choices": [
+            "Left humerus",
+            "Left scapula",
+            "Left clavicle"
+          ],
+          "chosen": "Left scapula",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 3,
+          "key": "upper-limb-bone-clavicle",
+          "target": "Right clavicle",
+          "targetId": "vm:anatomy:upper-limb:shoulder:right:bone:clavicle",
+          "side": "right",
+          "choices": [
+            "Right humerus",
+            "Right clavicle",
+            "Right scapula"
+          ],
+          "chosen": "Right humerus",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        }
+      ],
+      "retryQuestions": [
+        {
+          "index": 1,
+          "key": "upper-limb-bone-clavicle",
+          "target": "Right clavicle",
+          "targetId": "vm:anatomy:upper-limb:shoulder:right:bone:clavicle",
+          "side": "right",
+          "choices": [
+            "Right clavicle",
+            "Right humerus",
+            "Right scapula"
+          ],
+          "chosen": "Right clavicle",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 2,
+          "key": "upper-limb-bone-humerus",
+          "target": "Left humerus",
+          "targetId": "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+          "side": "left",
+          "choices": [
+            "Left scapula",
+            "Left humerus",
+            "Left clavicle"
+          ],
+          "chosen": "Left humerus",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        }
+      ],
+      "completedScore": "1/3",
+      "retryScore": "2/2",
+      "noHorizontalOverflow": true
+    },
+    {
+      "region": "forearm",
+      "width": 375,
+      "height": 812,
+      "touch": true,
+      "textScale": 1,
+      "filters": {
+        "Bones": true,
+        "Muscles": false,
+        "Organs": {
+          "unavailable": true,
+          "entries": 0,
+          "checked": true
+        },
+        "Nervous": {
+          "unavailable": true,
+          "entries": 0,
+          "checked": true
+        },
+        "Vessels": false,
+        "Connective": false
+      },
+      "expectedConcepts": [
+        "upper-limb-bone-humerus",
+        "upper-limb-bone-radius",
+        "upper-limb-bone-ulna"
+      ],
+      "questions": [
+        {
+          "index": 1,
+          "key": "upper-limb-bone-ulna",
+          "target": "Right ulna",
+          "targetId": "vm:anatomy:body:forearm:right:bone:right-ulna",
+          "side": "right",
+          "choices": [
+            "Right ulna",
+            "Right radius",
+            "Right humerus"
+          ],
+          "chosen": "Right radius",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 2,
+          "key": "upper-limb-bone-radius",
+          "target": "Left radius",
+          "targetId": "vm:anatomy:body:forearm:left:bone:left-radius",
+          "side": "left",
+          "choices": [
+            "Left radius",
+            "Left ulna",
+            "Left humerus"
+          ],
+          "chosen": "Left radius",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 3,
+          "key": "upper-limb-bone-humerus",
+          "target": "Left humerus",
+          "targetId": "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+          "side": "left",
+          "choices": [
+            "Left radius",
+            "Left humerus",
+            "Left ulna"
+          ],
+          "chosen": "Left radius",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        }
+      ],
+      "retryQuestions": [
+        {
+          "index": 1,
+          "key": "upper-limb-bone-humerus",
+          "target": "Left humerus",
+          "targetId": "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+          "side": "left",
+          "choices": [
+            "Left ulna",
+            "Left humerus",
+            "Left radius"
+          ],
+          "chosen": "Left humerus",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 2,
+          "key": "upper-limb-bone-ulna",
+          "target": "Right ulna",
+          "targetId": "vm:anatomy:body:forearm:right:bone:right-ulna",
+          "side": "right",
+          "choices": [
+            "Right ulna",
+            "Right humerus",
+            "Right radius"
+          ],
+          "chosen": "Right ulna",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        }
+      ],
+      "completedScore": "1/3",
+      "retryScore": "2/2",
+      "noHorizontalOverflow": true
+    },
+    {
+      "region": "whole-body",
+      "width": 320,
+      "height": 480,
+      "touch": true,
+      "textScale": 2,
+      "filters": {
+        "Bones": true,
+        "Muscles": false,
+        "Organs": false,
+        "Nervous": false,
+        "Vessels": false,
+        "Connective": false
+      },
+      "expectedConcepts": [
+        "upper-limb-bone-clavicle",
+        "upper-limb-bone-humerus",
+        "upper-limb-bone-radius",
+        "upper-limb-bone-scapula",
+        "upper-limb-bone-ulna"
+      ],
+      "questions": [
+        {
+          "index": 1,
+          "key": "upper-limb-bone-scapula",
+          "target": "Right scapula",
+          "targetId": "vm:anatomy:upper-limb:shoulder:right:bone:scapula",
+          "side": "right",
+          "choices": [
+            "Right ulna",
+            "Right clavicle",
+            "Right scapula",
+            "Right radius",
+            "Right humerus"
+          ],
+          "chosen": "Right ulna",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 2,
+          "key": "upper-limb-bone-radius",
+          "target": "Right radius",
+          "targetId": "vm:anatomy:body:forearm:right:bone:right-radius",
+          "side": "right",
+          "choices": [
+            "Right humerus",
+            "Right clavicle",
+            "Right radius",
+            "Right ulna",
+            "Right scapula"
+          ],
+          "chosen": "Right radius",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 3,
+          "key": "upper-limb-bone-humerus",
+          "target": "Right humerus",
+          "targetId": "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+          "side": "right",
+          "choices": [
+            "Right radius",
+            "Right clavicle",
+            "Right humerus",
+            "Right ulna",
+            "Right scapula"
+          ],
+          "chosen": "Right radius",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 4,
+          "key": "upper-limb-bone-ulna",
+          "target": "Right ulna",
+          "targetId": "vm:anatomy:body:forearm:right:bone:right-ulna",
+          "side": "right",
+          "choices": [
+            "Right humerus",
+            "Right scapula",
+            "Right radius",
+            "Right clavicle",
+            "Right ulna"
+          ],
+          "chosen": "Right ulna",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 5,
+          "key": "upper-limb-bone-clavicle",
+          "target": "Left clavicle",
+          "targetId": "vm:anatomy:body:shoulder-arm:left:bone:left-clavicle",
+          "side": "left",
+          "choices": [
+            "Left radius",
+            "Left clavicle",
+            "Left humerus",
+            "Left ulna",
+            "Left scapula"
+          ],
+          "chosen": "Left radius",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        }
+      ],
+      "retryQuestions": [
+        {
+          "index": 1,
+          "key": "upper-limb-bone-clavicle",
+          "target": "Left clavicle",
+          "targetId": "vm:anatomy:body:shoulder-arm:left:bone:left-clavicle",
+          "side": "left",
+          "choices": [
+            "Left scapula",
+            "Left radius",
+            "Left ulna",
+            "Left clavicle",
+            "Left humerus"
+          ],
+          "chosen": "Left clavicle",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 2,
+          "key": "upper-limb-bone-scapula",
+          "target": "Right scapula",
+          "targetId": "vm:anatomy:upper-limb:shoulder:right:bone:scapula",
+          "side": "right",
+          "choices": [
+            "Right humerus",
+            "Right clavicle",
+            "Right scapula",
+            "Right ulna",
+            "Right radius"
+          ],
+          "chosen": "Right scapula",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        },
+        {
+          "index": 3,
+          "key": "upper-limb-bone-humerus",
+          "target": "Right humerus",
+          "targetId": "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+          "side": "right",
+          "choices": [
+            "Right humerus",
+            "Right radius",
+            "Right clavicle",
+            "Right scapula",
+            "Right ulna"
+          ],
+          "chosen": "Right humerus",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "draftGate": true,
+          "answerOnce": true
+        }
+      ],
+      "completedScore": "2/5",
+      "retryScore": "3/3",
+      "noHorizontalOverflow": true
+    }
+  ],
+  "errors": [],
+  "resourceFailures": [],
+  "failure": null,
+  "passed": true,
+  "clinicalApproval": false,
+  "educatorApproval": false,
+  "spatialValidation": false,
+  "deploymentValidation": false
+}

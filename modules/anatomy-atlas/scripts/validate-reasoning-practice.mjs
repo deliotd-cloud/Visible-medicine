@@ -95,10 +95,10 @@ same(api.reasoningConcepts.slice(123,126).map(c => c.key), ['thoracic-trachea','
 same(hash(JSON.stringify(api.reasoningConcepts.slice(0,126))), '523ab89c9c6313eec445979978777283e316b118328bd18ddde80a47ecfd3a32', 'All preceding 126 concepts remain unchanged and ordered');
 same(hash(JSON.stringify(api.reasoningConcepts.slice(0,132))), '256305e55245d7595c03cc888c3bb8a4918debd6bf6055419860cf66555c892e', 'All preceding 132 concepts remain unchanged and ordered');
 same(hash(JSON.stringify(api.reasoningConcepts.slice(0,140))), '2b5f7d7e84abdb80f494c0e0a6d3b371e8cb122abf46b9da69b8d555a9eebe66', 'All preceding 140 concepts remain unchanged and ordered');
-same(api.reasoningConcepts.length, 153);
-same(bound.length, 282);
-same(bound.filter((s) => s.region === 'shoulder-arm').length, 40);
-same(bound.filter((s) => s.region === 'forearm').length, 18);
+same(api.reasoningConcepts.length, 158);
+same(bound.length, 292);
+same(bound.filter((s) => s.region === 'shoulder-arm').length, 46);
+same(bound.filter((s) => s.region === 'forearm').length, 22);
 same(bound.filter((s) => s.region === 'hand').length, 20);
 same(bound.filter((s) => s.region === 'thigh').length, 36);
 same(bound.filter((s) => s.region === 'leg').length, 28);
@@ -108,7 +108,7 @@ same(bound.filter((s) => s.region === 'spine').length, 24);
 same(bound.filter((s) => s.region === 'thorax').length, 19);
 same(bound.filter((s) => s.region === 'abdomen').length, 11);
 same(bound.filter((s) => s.region === 'pelvis').length, 10);
-same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 153);
+same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 158);
 same(hash(JSON.stringify(precedingConcepts.filter(c => !c.key.startsWith('neck-')))),
   'caafb323ca7d5a04971f91ad369d68c3a8da5e43839b39d8cd76192d1497bad2',
   'All 100 preceding concepts remain unchanged and in order');
@@ -169,12 +169,13 @@ for (const concept of api.reasoningConcepts) {
   const organ = concept.sourceTissue === 'organ';
   const neuralOrgan = concept.sourceTissue === 'neural-organ';
   const vessel = concept.sourceTissue === 'vessel';
+  const bone = concept.sourceTissue === 'bone';
   const vesselSides = { FMA3736: 'midline', FMA3768: 'midline', FMA87217: 'unspecified', FMA4720: 'unspecified', FMA4838: 'unspecified', FMA4944: 'midline' };
   const pairedOrgan = ['pelvic-testis', 'pelvic-epididymis', 'pelvic-seminal-vesicle', 'pelvic-ureter'].includes(concept.key);
   same(concept.bindings.length, vessel || grouped || (organ && !pairedOrgan) ? 1 : 2);
   if (vessel) check(Object.hasOwn(vesselSides, concept.bindings[0].fma), 'Only the six explicitly authored vessels');
   same([...new Set(concept.bindings.map(b => b.side))].sort((a, b) => a.localeCompare(b)), vessel ? [vesselSides[concept.bindings[0].fma]] : organ && !pairedOrgan ? ['unpaired'] : grouped ? ['midline'] : ['left', 'right']);
-  same(new Set(concept.distractors).size, 3);
+  same(new Set(concept.distractors).size, bone ? 4 : 3);
   check(!concept.distractors.includes(concept.key));
   check(concept.prompt.length > 40 && concept.explanation.length > 40);
   check(concept.references.length > 0);
@@ -198,8 +199,8 @@ for (const concept of api.reasoningConcepts) {
     );
     const s = bound.find((s) => s.fmaId === binding.fma);
     check(s && s.laterality === binding.side);
-    same(s.system, vessel ? 'vessels' : neuralOrgan ? 'nerves' : organ ? 'organs' : 'muscles');
-    same(s.category, vessel ? 'vessel' : neuralOrgan || organ ? 'organ' : 'muscle');
+    same(s.system, bone ? 'skeleton' : vessel ? 'vessels' : neuralOrgan ? 'nerves' : organ ? 'organs' : 'muscles');
+    same(s.category, bone ? 'bone' : vessel ? 'vessel' : neuralOrgan || organ ? 'organ' : 'muscle');
     same(s.region, concept.region);
     same(s.sourceTree, concept.sourceTree ?? 'isa');
     same(s.regions, concept.sourceRegions ?? [concept.region]);
@@ -310,7 +311,7 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
     )
       same(session, null, 'No unbound regional question is invented');
     if (!session) continue;
-    const expected = { 'whole-body': 20, 'head-neck': 20, 'shoulder-arm': 20, forearm: 9,
+    const expected = { 'whole-body': 20, 'head-neck': 20, 'shoulder-arm': 20, forearm: 12,
       hand: 10, thigh: 18, pelvis: 16, leg: 14, foot: 8, spine: 12, thorax: 16, abdomen: 9 }[region];
     same(session.questions.length, expected);
     same(
@@ -373,7 +374,7 @@ for (const count of [1, 5, 10, 20, 100, NaN, Infinity, -10]) {
   same(
     create(all, { count }).questions.length,
     Math.min(
-      153,
+      158,
       Math.max(1, Math.min(20, Math.floor(Number.isFinite(count) ? count : 5))),
     ),
   );

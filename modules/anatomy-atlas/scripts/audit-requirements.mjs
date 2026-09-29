@@ -627,6 +627,7 @@ for (const path of [
   'lib/um-limb-studies.ts',
   'lib/trunk-reasoning.ts',
   'lib/upper-arm-reasoning.ts',
+  'lib/upper-limb-bone-reasoning.ts',
   'lib/um-limb-teaching.ts',
   'content/um-limb-teaching.ts',
   'content/um-limb-clinical.ts',

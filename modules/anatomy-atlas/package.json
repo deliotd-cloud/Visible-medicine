@@ -270,6 +270,7 @@
     "practice:test": "node scripts/validate-practice.mjs",
     "reasoning-practice:test": "node scripts/validate-reasoning-practice.mjs",
     "upper-arm-reasoning:test": "node scripts/test-upper-arm-reasoning.mjs",
+    "upper-limb-bone-reasoning:test": "node scripts/test-upper-limb-bone-reasoning.mjs",
     "learning-resources:test": "node scripts/validate-learning-resources.mjs",
     "dissection-workbench:test": "node scripts/validate-dissection-workbench.mjs",
     "dissection-history:test": "node scripts/validate-dissection-history.mjs",

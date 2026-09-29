@@ -44,6 +44,16 @@ try {
     await page.waitForFunction(url => document.querySelector('iframe')?.contentWindow.location.href === url && document.querySelector('iframe')?.contentDocument.querySelector('.body-toolbar'), address.href);
     const frame = page.frames().find(candidate => candidate.url() === address.href); assert(frame);
     if (textScale !== 1) await frame.locator('html').evaluate((element, scale) => { element.style.fontSize = `${100 * scale}%`; }, textScale);
+    // Preserve this muscle-family acceptance through the learner's system filter:
+    // newly authored bone concepts must not crowd seven muscle topics out of20.
+    const tools = frame.getByRole('button', { name: 'Systems & tools', exact: true });
+    if (await tools.isVisible()) await tools.click();
+    const bones = frame.getByRole('switch', { name: 'Show Bones', exact: true });
+    await bones.waitFor();
+    if (await bones.getAttribute('aria-checked') === 'true') await bones.click();
+    assert.equal(await bones.getAttribute('aria-checked'), 'false', 'Muscle-only practice excludes bones through ordinary UI');
+    const closeTools = frame.getByRole('button', { name: 'Close systems & tools', exact: true });
+    if (await closeTools.isVisible()) await closeTools.click();
     await frame.getByText('Practice', { exact: true }).click();
     await frame.getByRole('combobox', { name: 'Practice answer mode', exact: true }).click();
     await frame.getByRole('option', { name: 'Apply anatomy · draft', exact: true }).click();

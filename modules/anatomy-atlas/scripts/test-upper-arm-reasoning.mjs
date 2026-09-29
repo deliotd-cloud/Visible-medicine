@@ -55,12 +55,12 @@ const expected = [
 ];
 same(baseline.reasoningConcepts.length, 146);
 same(api.reasoningConcepts.slice(0, 146), baseline.reasoningConcepts, 'Exact ordered old146 concepts preserved');
-same(api.reasoningConcepts.length, 153);
-same(api.reasoningConcepts.slice(146), api.upperArmReasoningConcepts);
+same(api.reasoningConcepts.length, 158);
+same(api.reasoningConcepts.slice(146,153), api.upperArmReasoningConcepts);
 same(api.upperArmReasoningConcepts.map(c => c.key), expected.map(([key]) => key));
-same(new Set(api.reasoningConcepts.map(c => c.key)).size, 153);
-same(catalog.structures.filter(api.reasoningConceptFor).length, 282);
-same(catalog.structures.filter(s => s.region === 'shoulder-arm' && api.reasoningConceptFor(s)).length, 40);
+same(new Set(api.reasoningConcepts.map(c => c.key)).size, 158);
+same(catalog.structures.filter(api.reasoningConceptFor).length, 292);
+same(catalog.structures.filter(s => s.region === 'shoulder-arm' && api.reasoningConceptFor(s)).length, 46);
 const targets = [];
 const referenceWords = {};
 for (const [key, ...bindings] of expected) {
@@ -157,4 +157,4 @@ same(create(targets, {}, []), null, 'Unloaded new-only scope excluded');
 same(create(display.structures, { retryIds: targets.map(s => s.id) })?.questions.length, 7, 'All fourteen targets provide seven concept questions');
 for (const words of Object.values(referenceWords)) check(words <= 200, 'Each reference contributes at most 200 words across the seven concepts');
 same(hash(api.reasoningConcepts.slice(0, 146)), hash(baseline.reasoningConcepts), 'Runtime checks do not mutate baseline concepts');
-console.log(JSON.stringify({ checks, negativeSourceCases, concepts: 153, bindings: 282, addedConcepts: 7, addedBindings: 14, baselineHead, baseline146Hash: hash(baseline.reasoningConcepts), referenceWords, boundaries: 'Draft teaching only; no clinical, spatial, browser or deployment validation.' }, null, 2));
+console.log(JSON.stringify({ checks, negativeSourceCases, concepts: api.reasoningConcepts.length, bindings: catalog.structures.filter(api.reasoningConceptFor).length, addedConcepts: 7, addedBindings: 14, baselineHead, baseline146Hash: hash(baseline.reasoningConcepts), referenceWords, boundaries: 'Draft teaching only; no clinical, spatial, browser or deployment validation.' }, null, 2));
