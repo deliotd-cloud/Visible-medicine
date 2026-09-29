@@ -66,6 +66,7 @@ test('search, no results and pagination retain safe canonical state', async () =
 });
 
 test('starter review uses the existing compact filter and exact source links', async () => {
+  assert.match(await readFile('app/review/overview/overview.css','utf8'),/\.clinical-review-status-bar \{[^}]*flex-wrap:wrap/);
   const html = await render({ scope: 'pilot' });
   assert(html.includes('value="pilot" selected=""'));
   assert(html.includes('11 matching selections'));
