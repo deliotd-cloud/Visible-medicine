@@ -1,5 +1,15 @@
 # Visible Medicine — shared delivery plan
 
+29 September: sequential body Clinical Review navigation integrated locally.
+Previous/Next structure retains filters and follows the selected queue page,
+including deep links. Unsaved edits require confirmation; same-row selection is
+a no-op. No automatic save or approval. Review action labels now wrap at200% text.
+Nine source component tests,296 website tests, types/build and actual desktop/
+phone/enlarged-text interaction checks pass. Learner assets, models and teaching
+remain byte-identical. No publication/approval; fracture work preserved.
+GitHub/C recovery recorded; D remains full/pending. Native MRI remains done.
+See `docs/review-navigation-delivery-20260929.md`.
+
 29 September: compact guided-tour step navigation integrated locally.
 All 18 tours share a step-count menu; opening pauses playback and choosing a
 stop uses existing smooth camera motion without implicitly resuming. Names wrap

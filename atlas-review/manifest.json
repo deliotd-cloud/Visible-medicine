@@ -1,5 +1,5 @@
 {
-  "revision": "9ddeaed1a045cc86aeda7ac40d0dd48bf6a405b1",
+  "revision": "1ccfb21d4dcb07fd6a9a1ef8306b6c1d13dfea1d",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2799,7 +2799,7 @@
     {
       "path": "content/body-renderer-revision.json",
       "sourceSha256": "de064cf6949dc297c6504be368fe7012af947bb775baffe785f316166849ee36",
-      "importedSha256": "8806caff809f62ba61596d265143f2aa57857a8aa19decfe51744e6efafe924c"
+      "importedSha256": "77e5ee90b6ed67ea49590742d2f021419297d84ded77ec35802cb4d22bf5b418"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3089,7 +3089,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "1fcf6761a76bd594af08a21f79f6408d4963b35a075399f12531de08a2df2e8c",
-      "importedSha256": "2cd618c103c9e0d050c07bc1017a50d7135db8930035439d46ef0b6a68a553c5"
+      "importedSha256": "b223d1ce97898c6adc096382f9aa0ecee3eef252b3b614601e4bada55a901b13"
     },
     {
       "path": "app/review/review.css",
@@ -3103,8 +3103,8 @@
     },
     {
       "path": "app/review/body/review-dashboard.tsx",
-      "sourceSha256": "81c7140930c5b897e17c903a0ebfa553d01d0b1f37d6730cc70cea1ad98d97c7",
-      "importedSha256": "63d446de86094cfb0a5c184fa03d69dc49aa4c5cbedf88a49acd05a9b89eb994"
+      "sourceSha256": "c56c404477de445f65fd1fba2df2a37b79a586930a655f99aff0cef988ad0f82",
+      "importedSha256": "4518b60a5f7473187293cac9c3a6418e62f37dcaa5aa6d2932751ae6fd634986"
     },
     {
       "path": "lib/body-review-search.ts",
@@ -3128,8 +3128,8 @@
     },
     {
       "path": "app/review/body/body-review.css",
-      "sourceSha256": "d7daafcca33e17d46914abce35881944a08c895d956be49640d8e7ac1ee63f2a",
-      "importedSha256": "d7daafcca33e17d46914abce35881944a08c895d956be49640d8e7ac1ee63f2a"
+      "sourceSha256": "03fd2ee904232ab0b3da7424feed9e200aecf604ee451b6ab5a4e63da083faad",
+      "importedSha256": "03fd2ee904232ab0b3da7424feed9e200aecf604ee451b6ab5a4e63da083faad"
     },
     {
       "path": "app/review/nested/page.tsx",
@@ -4513,5 +4513,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "61e14c0d1efad5224bd5e342ba1261d310b2fa0abb312b0bae7061c9328a9ad9"
+  "websiteIntegrationSha256": "a812cdfcff52c25b8d2412e125fa21a0418a53b215ab8be08bc2e4501c743d6c"
 }
