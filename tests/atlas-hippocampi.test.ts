@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 import {hippocampalModel,beforeHippocampi} from './atlas-hippocampi-fixture.ts';
 import {ATLAS_DELIVERY_POLICY} from '../lib/atlas-delivery-policy.ts';
 
-const revision='8386fa7e3c17c7a6da67d6a511604e95f31fdebb';
+const revision='c97c2b0b200ab1813a510ef65355fa2b45d05499';
 const base='6990315c6b053f623738d8664e06de9d7af1dcf3';
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const hash=(bytes:string|Uint8Array)=>createHash('sha256').update(bytes).digest('hex');

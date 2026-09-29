@@ -1,5 +1,5 @@
 {
-  "revision": "8386fa7e3c17c7a6da67d6a511604e95f31fdebb",
+  "revision": "c97c2b0b200ab1813a510ef65355fa2b45d05499",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2678,8 +2678,8 @@
     },
     {
       "path": "content/collicular-brachia-teaching.ts",
-      "sourceSha256": "f805f4ab67d5d0ae82a0e2bd9116d0e2a7b31f837d05d349dd8cfabd1172428d",
-      "importedSha256": "f805f4ab67d5d0ae82a0e2bd9116d0e2a7b31f837d05d349dd8cfabd1172428d"
+      "sourceSha256": "21f9b9db8750b17b0b445e65e756edbec29a52b8ed2922268e1f0c3eb572dab2",
+      "importedSha256": "21f9b9db8750b17b0b445e65e756edbec29a52b8ed2922268e1f0c3eb572dab2"
     },
     {
       "path": "content/eye-imaging-teaching.ts",
@@ -2763,8 +2763,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "123b818a282b17facdcac6f258cc64b3616c64c7407fa17d11a57cb7699dcd80",
-      "importedSha256": "a265041840d3371e2767e0e9a9f537245e8de4e5630882bee212cb7162728cb2"
+      "sourceSha256": "94ddb547a7acd60c0a784130495e23f6399acf9e3ea8c5ff65aad2ce07c86435",
+      "importedSha256": "024deb97ea231e5c87e73de70baaa8275dfe8fcb8f9eb7dd002aa3ab15581daf"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3054,7 +3054,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "52c6ebe8633eb8bdc745feb0e63054da2cdb96fb7772d28103e38673fdb2c1cd",
-      "importedSha256": "fc87db2737a8fb1cb6017dbbfff09afa66642a29a05121973af116f7aa5fe7a8"
+      "importedSha256": "0e8b90057313fa38e6055e6e2b7270d17c51503271a9f91d95976aa9dec9f1f2"
     },
     {
       "path": "app/review/review.css",
@@ -4358,8 +4358,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "dbcb8f2fcd33d5c34b4e50ae518fd1cbaf6297e31bba4c2c73918848d8ec324b",
-      "importedSha256": "dbcb8f2fcd33d5c34b4e50ae518fd1cbaf6297e31bba4c2c73918848d8ec324b"
+      "sourceSha256": "fbb048821547538845a123d5832fa7a93e031a039df6f21260710aa86b0404d1",
+      "importedSha256": "fbb048821547538845a123d5832fa7a93e031a039df6f21260710aa86b0404d1"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -4458,5 +4458,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "17b5f9bbf144d17c06cbe0ce30c775c07e7566c7f43833f44031add2dc0d9230"
+  "websiteIntegrationSha256": "febce8b6575ee6149a88ff425e319114eca753935dfca60624bd09bb335564f2"
 }

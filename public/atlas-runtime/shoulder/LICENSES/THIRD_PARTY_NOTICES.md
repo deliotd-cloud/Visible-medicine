@@ -1,5 +1,15 @@
 # Third-party notices
 
+## Inferior-collicular teaching references (29 September 2026)
+
+Original brief MRI/Clinical/Pathology summaries cite Sitek et al. (2022,
+PMID35392412), Fischer et al. (1995, PMID7750451), and Thomas et al. (2012,
+PMID23349608). Only factual reading links and original prose are included; no
+publisher images, datasets, scans or article text are redistributed. These
+citations do not license third-party media or validate the source anatomy.
+See `docs/COLLICULAR_TEACHING_20260929.md`. Existing geometry attribution and
+clinical/privacy/release gates remain unchanged.
+
 ## Cerebral-lobar imaging teaching — 29 September 2026
 
 Original concise CT/MRI teaching links to consultant-authored Radiology

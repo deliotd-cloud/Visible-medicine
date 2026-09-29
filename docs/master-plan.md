@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+29 September: inferior-collicular teaching imported locally from Atlas
+`c97c2b0`. Six MRI/Clinical/Pathology draft placements reach both source selections
+in learner and Clinical Review; CT/X-ray/US stay pending. Models, identity,
+independent access and unrelated fracture work preserved. No patient upload,
+publication or clinical approval. See
+`docs/collicular-teaching-delivery-20260929.md`. Native MRI remains done.
+
 29 September: femoral component imaging teaching imported locally from Atlas
 `8386fa7`. Two lateral circumflex femoral source components receive six draft
 CT/MRA/colour-Doppler placements in learner and Clinical Review. Model bytes,
