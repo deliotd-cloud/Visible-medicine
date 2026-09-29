@@ -1,0 +1,29 @@
+{
+  "baseline": "61f1c97114800e161bd302652f93854c5b0a6703",
+  "date": "2026-09-29",
+  "before": {"website": "d1b24cc7f31097345e958742ac4acc6f58a9a793", "viewport": [375,812], "iframe": [375,577], "canvasHeight":84.453125},
+  "sourceRenderer": "87c17e0a376bab809da928f9c28474bb9222b65ee74a7d19f21089c69aafc1b0",
+  "sourceHashVerifiedInputs":867,
+  "cssFixture": {"cases":18,"widths":[320,375,700],"heights":[320,577,812],"textScales":[1,2],"passed":true,"switchThumbsAndExpandedHitAreas":true},
+  "productionModule": {
+    "cases":12,
+    "studies":["ventricles","eye","femoral-components"],
+    "viewportsPerStudy":[
+      {"width":375,"height":577,"textScale":1,"canvasHeight":206.03125},
+      {"width":375,"height":577,"textScale":2,"canvasHeight":412.03125},
+      {"width":320,"height":480,"textScale":1,"canvasHeight":206.03125},
+      {"width":1440,"height":820,"textScale":1,"canvasHeight":601.078125}
+    ],
+    "allPassed":true,"modelAndLastExpandedControlReachable":true,"horizontalOverflow":false,
+    "desktopColumns":"1140px 260px","phoneSceneTargetsAtLeast44px":true,
+    "disclaimersPresent":true
+  },
+  "manualBrowser": {"visuallyInspectedScreenshot":true,"nativeSpaceTogglesLeftVentricleAndRetainsFocus":true,"toggleRestored":true},
+  "checks": ["renderer:test","selection-visibility:test","model-first:test","study-navigation:test","TypeScript","regional module build","shoulder module build"],
+  "failuresRetained": ["Initial probe targeted a closed details descendant; probe now opens disclosures before testing reachability", "Actual 200% text exposed fixed-width switch track/thumb overflow", "Expanded switch hit area also needed font-relative side padding"],
+  "logs": ["work/nested-readability-tests-20260929.log","work/nested-readability-fixture-accepted-20260929.log","work/nested-readability-production-accepted-20260929.json","work/nested-readability-build-accepted-20260929.log","work/nested-readability-shoulder-accepted-20260929.log"],
+  "delegation": {"implementation":"gpt-6-sol medium","readOnlyAudit":"gpt-5.6-terra medium; no additional keyboard defect established","nestedDelegation":false,"tokens":"unavailable","rework":"Production checks prompted scoped switch-track and hit-area corrections"},
+  "physicalDeviceTested":false,"nativeBrowserZoomTested":false,"clinicalApproval":false,
+  "geometryChanged":false,"patientDataIncluded":false,"published":false,
+  "delivery":"Source implementation; website import remains next"
+}

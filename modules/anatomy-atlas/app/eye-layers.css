@@ -58,7 +58,7 @@
   overflow-y: auto;
   overflow-x: hidden;
   /* Room for the existing expanded switch hit targets and focus outlines. */
-  padding: 3px 12px;
+  padding: 3px max(12px, 0.75rem);
   scrollbar-gutter: stable;
   overflow-wrap: anywhere;
   overscroll-behavior: contain;
@@ -104,6 +104,17 @@
 }
 .eye-layer-list [data-slot='switch'] {
   flex: none;
+}
+/* The shared switch thumb scales in rem while its base track uses pixels.
+   Match that scale within studies so checked thumbs stay inside the track at
+   enlarged text sizes. Keep the component's expanded hit area and behavior. */
+.eye-layer-workbench [data-slot='switch'][data-size='default'] {
+  width: 2rem;
+  height: 1.15rem;
+}
+.eye-layer-workbench [data-slot='switch'][data-size='sm'] {
+  width: 1.5rem;
+  height: 0.875rem;
 }
 .artery-source-part-list {
   max-height: min(35dvh, 19rem);
@@ -306,9 +317,32 @@
     grid-template-rows: minmax(220px, 1.2fr) minmax(0, 1fr);
     gap: 0.5rem;
   }
+  .atlas-inline-study .eye-layer-viewport {
+    /* BodyScene includes its live orientation row above the actual canvas. */
+    grid-template-rows: auto minmax(max(calc(200px + 2rem), 14.5rem), 1fr) auto;
+  }
+  .eye-layer-scene-tools {
+    margin: 0.35rem 0.35rem 0;
+    gap: 0.3rem;
+  }
+  .eye-layer-scene-tools :is(button, [data-slot='select-trigger']),
+  .eye-layer-heading > button,
+  .eye-layer-layout-note button {
+    min-height: 44px;
+    height: auto;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  .eye-layer-scene-tools [data-slot='select-trigger'] {
+    width: auto;
+    min-width: 0;
+    flex: 1 1 7rem;
+  }
+  .eye-layer-layout-note { margin: 0.25rem 0.35rem 0.35rem; }
   .eye-layer-controls {
     border-top: 1px solid var(--border);
-    padding: 0.25rem 12px;
+    padding: 0.25rem max(12px, 0.75rem);
   }
   .eye-layer-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
