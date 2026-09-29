@@ -1,5 +1,5 @@
 {
-  "revision": "6149a26a1fd1ae74782f93be77856a1c1de08b86",
+  "revision": "9ddeaed1a045cc86aeda7ac40d0dd48bf6a405b1",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2798,8 +2798,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "1000a7fd0d0082fb62d53c9461e0319d742ad349ae0682854f0d5a1c0b486654",
-      "importedSha256": "f2ef2a3db23ac2ea78e50d0d6c66ef6c4bc1183085a78624f1cf544f2cf40d4b"
+      "sourceSha256": "de064cf6949dc297c6504be368fe7012af947bb775baffe785f316166849ee36",
+      "importedSha256": "8806caff809f62ba61596d265143f2aa57857a8aa19decfe51744e6efafe924c"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3088,8 +3088,8 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sourceSha256": "b8f32750ef4e1448914c4856d8996b84b93dad4422ef1051aeb310c905209b8d",
-      "importedSha256": "84e386e5f60eedf9a4239fedffe9e987adc5bbbb69f21266e279fe99bdb5a457"
+      "sourceSha256": "1fcf6761a76bd594af08a21f79f6408d4963b35a075399f12531de08a2df2e8c",
+      "importedSha256": "2cd618c103c9e0d050c07bc1017a50d7135db8930035439d46ef0b6a68a553c5"
     },
     {
       "path": "app/review/review.css",
@@ -3293,8 +3293,8 @@
     },
     {
       "path": "app/regional-guided-learning.tsx",
-      "sourceSha256": "90d4a7d2bbbae7c9abc0676a40e597be8b26fa7ed49fc2db2306ae7759ab48e5",
-      "importedSha256": "f72297604a4780254376cbddc431f6e7f5bd3f24fef32ba10aada8d3b6c5d9a8"
+      "sourceSha256": "a5bdbb67088765d8b7f0c179199c9ac4f819a7ae0e58fc7e8925f676b3db6a52",
+      "importedSha256": "60fcd1f1f3a2bca800da8cd15ac8069735d2ec94a4ec8b482c72df8d9ac0175f"
     },
     {
       "path": "lib/renderer-health.ts",
@@ -3325,6 +3325,16 @@
       "path": "app/tour-quick-check.tsx",
       "sourceSha256": "7277f66586c2c54d5a7e175da1b5b821599d3f19e64eda4b65cab47adcae49bc",
       "importedSha256": "ef9c5dfa93e94d241b1b12037d560632ead5f4b35e3d0490897d49ed3fee04d3"
+    },
+    {
+      "path": "app/tour-step-picker.tsx",
+      "sourceSha256": "9d13911f2cebdc089f5b9417e3dd684991a349ad33b192b03bb37cde73456b1c",
+      "importedSha256": "9aba19bc004828bf3c6a392a44f49221eb76400ae798298cc7938724022b3a3f"
+    },
+    {
+      "path": "app/tour-step-picker.css",
+      "sourceSha256": "ee5c28f8fa34888c0ee37241b17410f5bfaa4c3a3bec6e9e792255f5988f5160",
+      "importedSha256": "ee5c28f8fa34888c0ee37241b17410f5bfaa4c3a3bec6e9e792255f5988f5160"
     },
     {
       "path": "app/regional-guided-learning.css",
@@ -4383,8 +4393,8 @@
     },
     {
       "path": "app/shoulder-tour-player.tsx",
-      "sourceSha256": "cb8a94094e8dde630c3bf24e9ae27a18e0239307388fbffd2a81b5e2cf18657e",
-      "importedSha256": "28a103d323f6a751957f3c10b3b568b9e198b993234721d51610d0010ee67166"
+      "sourceSha256": "9999b7e35c90af53815d06fddec2c4082bc5a231685df734e37b074c070638da",
+      "importedSha256": "4a7f727330163df2b5840ed0e00ac9aff94b03472d835f6ffe43b1393a3ea9b1"
     },
     {
       "path": "app/shoulder-tour-player.css",
@@ -4503,5 +4513,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "c95af8457b11442c863527d6b4b652572a0b6c0ad7f545ead40c8fb75a796b29"
+  "websiteIntegrationSha256": "61e14c0d1efad5224bd5e342ba1261d310b2fa0abb312b0bae7061c9328a9ad9"
 }

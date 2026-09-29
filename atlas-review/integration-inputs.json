@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "6149a26a1fd1ae74782f93be77856a1c1de08b86",
-  "sha256": "c95af8457b11442c863527d6b4b652572a0b6c0ad7f545ead40c8fb75a796b29",
+  "sourceCommit": "9ddeaed1a045cc86aeda7ac40d0dd48bf6a405b1",
+  "sha256": "61e14c0d1efad5224bd5e342ba1261d310b2fa0abb312b0bae7061c9328a9ad9",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -288,7 +288,7 @@
     },
     {
       "path": "atlas-review/app/regional-guided-learning.tsx",
-      "sha256": "f72297604a4780254376cbddc431f6e7f5bd3f24fef32ba10aada8d3b6c5d9a8"
+      "sha256": "60fcd1f1f3a2bca800da8cd15ac8069735d2ec94a4ec8b482c72df8d9ac0175f"
     },
     {
       "path": "atlas-review/app/related-study.tsx",
@@ -404,7 +404,7 @@
     },
     {
       "path": "atlas-review/app/shoulder-tour-player.tsx",
-      "sha256": "28a103d323f6a751957f3c10b3b568b9e198b993234721d51610d0010ee67166"
+      "sha256": "4a7f727330163df2b5840ed0e00ac9aff94b03472d835f6ffe43b1393a3ea9b1"
     },
     {
       "path": "atlas-review/app/shoulder-workspace.css",
@@ -473,6 +473,14 @@
     {
       "path": "atlas-review/app/tour-quick-check.tsx",
       "sha256": "ef9c5dfa93e94d241b1b12037d560632ead5f4b35e3d0490897d49ed3fee04d3"
+    },
+    {
+      "path": "atlas-review/app/tour-step-picker.css",
+      "sha256": "ee5c28f8fa34888c0ee37241b17410f5bfaa4c3a3bec6e9e792255f5988f5160"
+    },
+    {
+      "path": "atlas-review/app/tour-step-picker.tsx",
+      "sha256": "9aba19bc004828bf3c6a392a44f49221eb76400ae798298cc7938724022b3a3f"
     },
     {
       "path": "atlas-review/app/um-knee-entry.css",
@@ -3660,7 +3668,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "fd1665d3735a24531ba5ad49b82efc4409bbe0806a82ce0a290e27022d422455"
+      "sha256": "eaaf5d4ef1c31507e94ed2e490adfa32000f43662adfc4a0d5fbcbedf1d05280"
     }
   ]
 }

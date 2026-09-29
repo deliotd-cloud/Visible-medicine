@@ -1,5 +1,14 @@
 # Visible Medicine — shared delivery plan
 
+29 September: compact guided-tour step navigation integrated locally.
+All 18 tours share a step-count menu; opening pauses playback and choosing a
+stop uses existing smooth camera motion without implicitly resuming. Names wrap
+at narrow widths and enlarged text. All97 stop callbacks and both website viewers
+checked;294 website tests, types/build and six desktop/phone/200%-text cases pass.
+Models and teaching unchanged. Separate fracture changes remain isolated.
+No publication or approval. GitHub/C recovery recorded; D pending while full.
+See `docs/tour-step-delivery-20260929.md`. Native MRI remains done.
+
 29 September: right subscapular arterial guided tour integrated locally.
 Four right-sided stops with scapular context, existing compact tour selector and
 smooth camera transitions. Seventeen regional tours /92 stops; no model changes.

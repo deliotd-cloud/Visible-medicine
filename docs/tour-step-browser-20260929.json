@@ -1,0 +1,158 @@
+{
+  "localOnly": true,
+  "results": [
+    {
+      "scope": "regional",
+      "layout": "desktop",
+      "width": 1280,
+      "height": 900,
+      "font": 16,
+      "total": 6,
+      "keyboardLastStep": true,
+      "escapeKeepsPaused": true,
+      "returnToFirst": true,
+      "focusReturns": true,
+      "measurement": {
+        "overflow": false,
+        "triggerHeight": 44,
+        "canvases": 1
+      },
+      "menuBounds": {
+        "left": 819.3381958007812,
+        "right": 1257.851318359375,
+        "viewport": 1280,
+        "scroll": 448,
+        "width": 448
+      },
+      "exitWorks": true
+    },
+    {
+      "scope": "regional",
+      "layout": "phone",
+      "width": 375,
+      "height": 812,
+      "font": 16,
+      "total": 6,
+      "keyboardLastStep": true,
+      "escapeKeepsPaused": true,
+      "returnToFirst": true,
+      "focusReturns": true,
+      "measurement": {
+        "overflow": false,
+        "triggerHeight": 44,
+        "canvases": 1
+      },
+      "menuBounds": {
+        "left": 19.115245819091797,
+        "right": 354.85126876831055,
+        "viewport": 375,
+        "scroll": 343,
+        "width": 343
+      },
+      "exitWorks": true
+    },
+    {
+      "scope": "regional",
+      "layout": "phone-large",
+      "width": 375,
+      "height": 812,
+      "font": 32,
+      "total": 6,
+      "keyboardLastStep": true,
+      "escapeKeepsPaused": true,
+      "returnToFirst": true,
+      "focusReturns": true,
+      "measurement": {
+        "overflow": false,
+        "triggerHeight": 88,
+        "canvases": 1
+      },
+      "menuBounds": {
+        "left": 19.40027618408203,
+        "right": 329.24195098876953,
+        "viewport": 375,
+        "scroll": 311,
+        "width": 311
+      },
+      "exitWorks": true
+    },
+    {
+      "scope": "shoulder",
+      "layout": "desktop",
+      "width": 1280,
+      "height": 900,
+      "font": 16,
+      "total": 5,
+      "keyboardLastStep": true,
+      "escapeKeepsPaused": true,
+      "returnToFirst": true,
+      "focusReturns": true,
+      "measurement": {
+        "overflow": false,
+        "triggerHeight": 44,
+        "canvases": 1
+      },
+      "menuBounds": {
+        "left": 810.4766845703125,
+        "right": 1256.796630859375,
+        "viewport": 1280,
+        "scroll": 448,
+        "width": 448
+      },
+      "exitWorks": true
+    },
+    {
+      "scope": "shoulder",
+      "layout": "phone",
+      "width": 375,
+      "height": 812,
+      "font": 16,
+      "total": 5,
+      "keyboardLastStep": true,
+      "escapeKeepsPaused": true,
+      "returnToFirst": true,
+      "focusReturns": true,
+      "measurement": {
+        "overflow": false,
+        "triggerHeight": 44,
+        "canvases": 1
+      },
+      "menuBounds": {
+        "left": 13.848006248474121,
+        "right": 353.46501064300537,
+        "viewport": 375,
+        "scroll": 343,
+        "width": 343
+      },
+      "exitWorks": true
+    },
+    {
+      "scope": "shoulder",
+      "layout": "phone-large",
+      "width": 375,
+      "height": 812,
+      "font": 32,
+      "total": 5,
+      "keyboardLastStep": true,
+      "escapeKeepsPaused": true,
+      "returnToFirst": true,
+      "focusReturns": true,
+      "measurement": {
+        "overflow": false,
+        "triggerHeight": 88,
+        "canvases": 1
+      },
+      "menuBounds": {
+        "left": 30.40397071838379,
+        "right": 340.2349338531494,
+        "viewport": 375,
+        "scroll": 311,
+        "width": 311
+      },
+      "exitWorks": true
+    }
+  ],
+  "errors": [],
+  "published": false,
+  "approvalSubmitted": false
+}

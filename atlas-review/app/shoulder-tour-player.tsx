@@ -2,6 +2,7 @@ import { Button } from '@/atlas-review/components/ui/button';
 import { shoulderTour } from '@/atlas-review/lib/shoulder-tours';
 import { structures } from './anatomy-data';
 import { TourImagingNotes,tourImagingModalities } from './tour-imaging-notes';
+import { TourStepPicker } from './tour-step-picker';
 import './shoulder-tour-player.css';
 
 export type ShoulderTourPlayerProps = {
@@ -29,8 +30,9 @@ export function ShoulderTourPlayer({ index, playing, ready, onStart, onPlayPause
   return (
     <section className="shoulder-tour-player" aria-label={shoulderTour.title}>
       <div className="shoulder-tour-heading">
-        <strong>{step.title}</strong>
-        <span>Step {activeIndex + 1} of {shoulderTour.steps.length}</span>
+        <strong aria-live="polite" aria-atomic="true">{step.title}</strong>
+        <TourStepPicker steps={shoulderTour.steps} index={activeIndex} ready={ready}
+          onPause={onReadImaging} onStep={onStep}/>
       </div>
       <p aria-live="polite" aria-atomic="true">{step.caption}</p>
       <details className="shoulder-tour-evidence" onToggle={event=>{if(event.currentTarget.open)onReadImaging();}}>

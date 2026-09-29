@@ -246,7 +246,7 @@
     },
     {
       "path": "app/regional-guided-learning.tsx",
-      "sha256": "90d4a7d2bbbae7c9abc0676a40e597be8b26fa7ed49fc2db2306ae7759ab48e5"
+      "sha256": "a5bdbb67088765d8b7f0c179199c9ac4f819a7ae0e58fc7e8925f676b3db6a52"
     },
     {
       "path": "app/related-study.tsx",
@@ -351,6 +351,14 @@
     {
       "path": "app/tour-quick-check.tsx",
       "sha256": "7277f66586c2c54d5a7e175da1b5b821599d3f19e64eda4b65cab47adcae49bc"
+    },
+    {
+      "path": "app/tour-step-picker.css",
+      "sha256": "ee5c28f8fa34888c0ee37241b17410f5bfaa4c3a3bec6e9e792255f5988f5160"
+    },
+    {
+      "path": "app/tour-step-picker.tsx",
+      "sha256": "9d13911f2cebdc089f5b9417e3dd684991a349ad33b192b03bb37cde73456b1c"
     },
     {
       "path": "app/um-knee-entry.css",
@@ -1366,7 +1374,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "b8f32750ef4e1448914c4856d8996b84b93dad4422ef1051aeb310c905209b8d"
+      "sha256": "1fcf6761a76bd594af08a21f79f6408d4963b35a075399f12531de08a2df2e8c"
     },
     {
       "path": "content/sca-mca-clinical-pins.json",
@@ -3158,7 +3166,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "fb22f74c768302e6ac2a4d713a0a1fe8b2695b22e03c155c0aa2fbb101c6721e"
+      "sha256": "8e7e2e8c4d03f7b47d095133e09867df6d2a900ebcba8396dbb95acaed64d955"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3373,7 +3381,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "dc0df70d5ea4f68f2c3d8f8ad47fbe5ea1949336c6d57fef4d8825d195197265",
-  "sourceRendererSha256": "93947620ad271cd6a7d138238fdab047eccd9ee78df52c26805dd1877a534018",
-  "websiteIntegrationSha256": "c95af8457b11442c863527d6b4b652572a0b6c0ad7f545ead40c8fb75a796b29"
+  "sha256": "61cebeef7ad2dcc004d21602066fc8485277f298b7a33c6ad03891bca027666a",
+  "sourceRendererSha256": "d79be9fd42d9c1432aa34b1b68015cc2d9454785aa2e9ccf21fabac21151f2b7",
+  "websiteIntegrationSha256": "61e14c0d1efad5224bd5e342ba1261d310b2fa0abb312b0bae7061c9328a9ad9"
 }

@@ -7,10 +7,10 @@ import {createHash} from 'node:crypto';
 // embedded browser journey; this gate proves those exact players reach both hosts.
 test('reference-reading pause reaches both learner modules and protected review',()=>{
  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
- assert.equal(review.revision,'6149a26a1fd1ae74782f93be77856a1c1de08b86');
+ assert.equal(review.revision,'9ddeaed1a045cc86aeda7ac40d0dd48bf6a405b1');
  for(const [module,path,sourceHash,handler] of [
-  ['shoulder','app/shoulder-tour-player.tsx','cb8a94094e8dde630c3bf24e9ae27a18e0239307388fbffd2a81b5e2cf18657e','if(event.currentTarget.open)onReadImaging();'],
-  ['head-neck','app/regional-guided-learning.tsx','90d4a7d2bbbae7c9abc0676a40e597be8b26fa7ed49fc2db2306ae7759ab48e5','if(event.currentTarget.open){setPlaying(false);setMotionPaused(true);}'],
+  ['shoulder','app/shoulder-tour-player.tsx','9999b7e35c90af53815d06fddec2c4082bc5a231685df734e37b074c070638da','if(event.currentTarget.open)onReadImaging();'],
+  ['head-neck','app/regional-guided-learning.tsx','a5bdbb67088765d8b7f0c179199c9ac4f819a7ae0e58fc7e8925f676b3db6a52','if(event.currentTarget.open){setPlaying(false);setMotionPaused(true);}'],
  ]){
   const base=`public/atlas-runtime/${module}/`;
   const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
