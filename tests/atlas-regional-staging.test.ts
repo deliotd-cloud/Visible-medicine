@@ -26,7 +26,7 @@ test('regional staging preserves immutable candidates after explicit administrat
   assert.equal(candidate.proposedInventorySha256, 'a74532b7b64b61221f14ddefb02c267296376397c19da5553772996fdcaebba4');
   assert.equal(candidate.activeInventorySha256, '9f686f1a2c9909bba2b46b1b76805aa8168287c4aa4d0f420e942b3fb7c90e2c');
   // Teaching/UI companions can advance without rewriting the immutable staging receipt.
-  assert.equal(sha(readFileSync('lib/atlas-model-inventory.json', 'utf8')), '835c4708fce52aa195bd625ad6832569f8d301aa300d7985f07ca09ba70910b6');
+  assert.equal(sha(readFileSync('lib/atlas-model-inventory.json', 'utf8')), '238933e82afd7cbc317626dc6306c78a3fc8d05cdb7505b8ab15325f09882694');
   const beforeCoronary=beforeHippocampi(active.models).filter((m: AtlasStoredModel)=>m.sha256!==coronary.models[0].sha256);
   const priorActiveModels=beforeCoronary.filter((m: AtlasStoredModel)=>m.sha256!==celiac.models[0].sha256);
   const pelvicAlias = '/atlas-runtime/female-pelvis/models/hra-renal/kidneys.glb';
@@ -37,7 +37,7 @@ test('regional staging preserves immutable candidates after explicit administrat
   const previousModels = priorActiveModels.map((m: AtlasStoredModel) => ({...m, paths:m.paths.filter(p => p !== pelvicAlias)}));
   assert.equal(sha(JSON.stringify(previousModels)), '5047d0652bcadd1772f60e2928ae53e228d9359d99488056e39777c4a7cdedb6', 'Removing exactly the new alias reproduces every previously verified model identity, byte count and path');
   assert.equal(sha(JSON.stringify(priorActiveModels)), '972cd41676713abf3aa458055783ce95bcfac41596bf5ec411911f9a1717aa10');
-  assert.equal(sha(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8')), '917e1f02b35ea83d6bf75bdbf9e144c53afd936c36fc97ceedaed9beca5c0819');
+  assert.equal(sha(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8')), '11aacce3bf243a5ec4014c6065a8ee8571643c7197f862f3f6449df7d329bebb');
   assert.deepEqual(candidate.models, [
     { sha256: 'f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826', bytes: 11856, paths: ['/atlas-runtime/head-neck/models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb'] },
     { sha256: '9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5', bytes: 65264, paths: ['/atlas-runtime/head-neck/models/bodyparts3d/short-ciliary/short-ciliary.glb'] },

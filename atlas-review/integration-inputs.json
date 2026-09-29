@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "2bf25d326e6f3890a69a34673127a6e04ecae7aa",
-  "sha256": "3ebb4df1746d9e4da235d6acc37cbfd6d1f6ce09e2f0640e631878040548b264",
+  "sourceCommit": "a3f12f72d660bcbe7b27e172eaadafa8d9d09e44",
+  "sha256": "e3c0492f93782049ce8e49db440e25903a4599342696566c7e5677c930fc4784",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -2948,7 +2948,7 @@
     },
     {
       "path": "atlas-review/lib/reasoning-questions.ts",
-      "sha256": "186793c4046ff872280359e62cac477ed9c1adde95156f57a94478479c07b679"
+      "sha256": "317c6dc0a84590c8075a7cd07f18824e8eba989cda6baaa10c57091f4588bd66"
     },
     {
       "path": "atlas-review/lib/rectal-deferent-imaging.ts",
@@ -3331,6 +3331,10 @@
       "sha256": "946e337e78ee2c1b01eeab074a5c1f014c63cd0e8b6d76a084d9b02dc3529422"
     },
     {
+      "path": "atlas-review/lib/upper-limb-bone-reasoning.ts",
+      "sha256": "11161555f3296f06e435e2c2e1a0bd2ee1dc14806e0c1234625064071ecc0bf6"
+    },
+    {
       "path": "atlas-review/lib/upper-limb-motor.ts",
       "sha256": "7809b6454d0814836ccab7305215a5c08e1dc7758f54707a7a82f3920ef3e2b9"
     },
@@ -3384,7 +3388,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "2714746a4189b9adffbab884c198250a6b1fdb1221b702ff72880e94dddd3676"
+      "sha256": "d585222f8c08bfa90a4e0231d223a611d0f28c929b55134df6a1f73aa34fe401"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3640,7 +3644,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "d6afdf21c4ccd2c6be9e9c366034f491357f913e90c04fa5f2d823ead6762fb5"
+      "sha256": "f7861141112111f8fc24ed7ccc4722d001129a08bfe2c30db6144ba9aa6d0b51"
     }
   ]
 }

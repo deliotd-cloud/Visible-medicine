@@ -1,5 +1,14 @@
 # Visible Medicine — shared delivery plan
 
+29 September: upper-limb bone reasoning imported locally from Atlas `a3f12f7`.
+Five new draft concepts on ten existing bilateral bone selections; 158 total
+concepts. All preceding153 and137 models unchanged. Source checks,276 website
+tests (one bundler-process exit recovered on isolated rerun), types/build and
+actual desktop/phone/200%-text learner plus Clinical Review checks pass.
+Fracture work preserved. No publication or approval. GitHub/C recovery, D copy
+pending while full. See `docs/upper-limb-bone-reasoning-delivery-20260929.md`.
+Native MRI remains done.
+
 29 September: practice setup imported locally from Atlas `2bf25d3`.
 Session length now stays inside the open Practice panel, with no header duplicate.
 275 tests, types/build and actual desktop/phone/200%-text scoring/retry pass.
