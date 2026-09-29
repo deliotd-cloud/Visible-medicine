@@ -18,7 +18,7 @@ test('lumbar tour source import has the exact declared teaching and review depen
  ]);
  assert.equal(after.files.length,before.files.length+1);
  for(const f of changed)assert.equal(createHash('sha256').update(execFileSync('git',['show','0292830:atlas-review/'+f.path],{maxBuffer:32e6})).digest('hex'),f.importedSha256);
- const regional=json('public/atlas-runtime/head-neck/source-inputs.json');
+ const regional=JSON.parse(execFileSync('git',['show','0292830:public/atlas-runtime/head-neck/source-inputs.json'],{encoding:'utf8'}));
  for(const path of ['lib/lumbar-tour.ts','lib/regional-tours.ts'])
   assert.equal(regional.find((f:any)=>f.path===path)?.sha256,after.files.find((f:any)=>f.path===path)?.sourceSha256);
  assert.equal(after.files.some((f:any)=>f.path==='content/learning-resources.v1.json'),false);
@@ -27,7 +27,7 @@ test('lumbar tour source import has the exact declared teaching and review depen
 test('lumbar tour keeps every model and existing licence notice without patient data or approval',()=>{
  for(const module of ['head-neck','shoulder']){
   const prefix='public/atlas-runtime/'+module+'/',before=prior(prefix+'manifest.json'),after=json(prefix+'manifest.json');
-  assert.equal(after.sourceCommit,'e1aeae3e97e01fe059b7de505e3d901a4f6b3695');
+  assert.equal(after.sourceCommit,'53e1ff32cc7b5ac81ec9d5e151c6e419fcb6a723');
   const retained=(f:any)=>f.path.endsWith('.glb')||f.path==='BUNDLED_NOTICES.txt'||f.path==='bundled-dependencies.json'||f.path.includes('credits');
   assert.deepEqual(after.files.filter(retained),before.files.filter(retained));
   for(const f of after.files.filter(retained))assert.equal(sha(prefix+f.path),f.sha256);

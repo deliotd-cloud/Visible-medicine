@@ -1,5 +1,15 @@
 # Visible Medicine — shared delivery plan
 
+29 September: eight-bone carpal tour integrated locally.
+Hand and Whole body Guided learning include the right wrist sequence; the
+intrinsic-hand tour remains the default. Stable assembled framing and existing
+smooth transitions retained. All137 model bytes and prior notices preserved.
+304 website tests covered (two outdated fixtures corrected and affected tests
+rerun), types/build and32 actual learner stops plus scaphoid Clinical Review
+pass. Existing imaging notes checked without granting scan access. No approval
+or publication; separate fracture work preserved. GitHub/C recovery recorded
+separately; D full/pending, untouched. See `docs/carpal-tour-delivery-20260929.md`.
+
 29 September: cricothyroid CT/MRI teaching integrated locally.
 Four existing named muscle parts now show two cited draft lessons in learner
 and Clinical Review views. All137 models and source bindings retained; no new

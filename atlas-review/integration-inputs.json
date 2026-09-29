@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "e1aeae3e97e01fe059b7de505e3d901a4f6b3695",
-  "sha256": "b392f434ff4a45af2772c9eff55056f2b7a385eed145cc1d8b94c971265329be",
+  "sourceCommit": "53e1ff32cc7b5ac81ec9d5e151c6e419fcb6a723",
+  "sha256": "86ce8624519ec91e7babf4ae8fe4b59e57fad9a32eeef2e7a135705aaebb2c4c",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -2095,6 +2095,10 @@
       "sha256": "482facae9feb332a9899d008cca33aa6bb950046ae7ea96ea2ee67a89001c6ea"
     },
     {
+      "path": "atlas-review/lib/carpal-tour.ts",
+      "sha256": "bb5ca59e6c6d9ab153800b77c4dc8786d132493165fd6020257971bc1ef20f35"
+    },
+    {
       "path": "atlas-review/lib/central-neural-clinical-curriculum.ts",
       "sha256": "1034631e736dd108c677f5fbd7f4242e6e2c588f9d69ebeaa8ba7de8119f51e2"
     },
@@ -3024,7 +3028,7 @@
     },
     {
       "path": "atlas-review/lib/regional-tours.ts",
-      "sha256": "9b92b8daf760a9297b1e59f97e77f3b93bdf8773d8574f6b8dc88ba2c3ff8665"
+      "sha256": "a1980f9b1d601473c83096087d17aa2701e96010b2b843bd0bc0d2130d4a8b88"
     },
     {
       "path": "atlas-review/lib/regional-vascular-clinical.ts",
@@ -3436,7 +3440,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "fc1886ec10e827f39ba63bce7ce9697a2e28b4db07a817aad4487b976627e0ec"
+      "sha256": "61a340f51925dd7b16592d2264fb426c5528e95e0a7bc1a100e4d6727112b777"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3692,7 +3696,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "b4020187559540d731ef16dee2c1297be2e5f61fd941e75d90f8eb0d893d1e12"
+      "sha256": "102ee1a9b918a0ae015c2ee9894760ce686e38263c5c45ecb2ef641ecec9ec69"
     }
   ]
 }

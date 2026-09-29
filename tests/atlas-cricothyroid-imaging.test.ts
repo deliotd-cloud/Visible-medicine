@@ -10,10 +10,11 @@ test('cricothyroid draft CT/MRI import preserves models and binds each part to i
  const prior=(p:string)=>JSON.parse(execFileSync('git',['show','a0841f3:'+p],{encoding:'utf8',maxBuffer:32e6}));
  const manifest=json('atlas-review/manifest.json');
  const learner=json('public/atlas-runtime/head-neck/manifest.json');
- assert.equal(manifest.revision,'e1aeae3e97e01fe059b7de505e3d901a4f6b3695');
+ assert.equal(manifest.revision,'53e1ff32cc7b5ac81ec9d5e151c6e419fcb6a723');
  assert.equal(learner.sourceCommit,manifest.revision);
  const before=prior('atlas-review/manifest.json');
- assert.deepEqual(manifest.files.filter((f:any)=>before.files.find((p:any)=>p.path===f.path)?.sourceSha256!==f.sourceSha256).map((f:any)=>f.path).sort(),[
+ const saved=JSON.parse(execFileSync('git',['show','6302b12:atlas-review/manifest.json'],{encoding:'utf8'}));
+ assert.deepEqual(saved.files.filter((f:any)=>before.files.find((p:any)=>p.path===f.path)?.sourceSha256!==f.sourceSha256).map((f:any)=>f.path).sort(),[
   'LICENSES/THIRD_PARTY_NOTICES.md','content/body-renderer-revision.json','content/cricothyroid-teaching.ts',
  ]);
  const path='content/cricothyroid-teaching.ts',f=manifest.files.find((f:any)=>f.path===path);
