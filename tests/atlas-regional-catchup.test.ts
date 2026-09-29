@@ -7,15 +7,15 @@ test('regional catch-up carries exact saved focus and search inputs without priv
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'567f5f38c5e1d1b8ec56bda4230429b1dfce383e75701df2f1c65fba5d7dea1c');
+  assert.equal(sha(bytes),'8b399ae000f66008c84e5d9e8101252dd4f53f50338fade8904fbb4d0227624e');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'c97c2b0b200ab1813a510ef65355fa2b45d05499');
+  assert.equal(manifest.sourceCommit,'1c3dca274a958a88d583989b769d4b05296622d8');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,hash] of Object.entries({
     'content/ophthalmic-nerve-studies.ts':'4dad953a18972048d20d756a4358a52fb3742f4fefe6502e747df7900822581a',
     'content/infrahyoid-layer-study.ts':'fc769248ed0ebe18572288b09793ebc37810d959ab333cde18a58e1f38d10e02',
     'content/mediastinal-organ-study.ts':'4307af9d54321db061a743e24faab1838487c220b3cc110528bf860002200767',
-    'lib/anatomy-search.ts':'2c469d5d892b6bfbfe2c11211f2bc421a6664e3c5b0286cf017ac1b43f25d1a7',
+    'lib/anatomy-search.ts':'a761621615a6ba52e8c9742b2d9771f4b3e71447b52229ad78f4883185fedca2',
     'lib/atlas-navigation.ts':'a8d79020c9d9283dfc50f7055b7c8015746a8f13962267c41f63accb200cdb39',
     'lib/study-library.ts':'88b6f0937a24eca205f2f65b878dc2b33958ecbc241949579af62ab563f2cfc1',
   }))assert.deepEqual(inputs.filter(input=>input.path===path),[{path,sha256:hash}]);

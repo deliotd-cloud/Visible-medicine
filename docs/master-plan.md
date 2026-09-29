@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+29 September: anatomical search word forms imported locally from Atlas
+`1c3dca2`. Learner and Clinical Review accept collicular/colliculus and
+brachia/brachium, retaining exact source labels, sides and links; FMA numeric
+queries require complete IDs. Shared display revisions refreshed, with no
+geometry/teaching change or automatic approval. Models, independent access and
+separate fracture work preserved. No publication or patient upload. See
+`docs/search-word-forms-delivery-20260929.md`. Native MRI remains done.
+
 29 September: inferior-collicular teaching imported locally from Atlas
 `c97c2b0`. Six MRI/Clinical/Pathology draft placements reach both source selections
 in learner and Clinical Review; CT/X-ray/US stay pending. Models, identity,
