@@ -298,6 +298,7 @@
     "lib/um-knee-study.ts": "80908fce33eb88fe5d217d8ed70c948559c19981c48a7daf034353224ee25b55",
     "lib/um-limb-studies.ts": "a544d566b88d1a55c23f85e743d5cbabcc2518c54458c18eff6faa429a9ce810",
     "lib/trunk-reasoning.ts": "a98bd0dd78b8c27fdc0c72b52511e435a417eae09603a863e30305d9d18ef42d",
+    "lib/upper-arm-reasoning.ts": "d2d0c7c8bdfeb111e1fe9b69a8258973379f6ead9ee6a7c508930d962498404a",
     "lib/um-limb-teaching.ts": "f51b0532e23719646b5588188c637a49b7523acc5ff976c6cff7101ffa41bf4d",
     "content/um-limb-teaching.ts": "a595b6a56d315fe1a08e77aa8dcb3c4f1b7fe74589ef72140d38d605e8b2abb7",
     "content/um-limb-clinical.ts": "552cb9cf96de3173773ecb71e88e9e19a08904f7ff3bade456f74d815ad41161",
@@ -367,7 +368,7 @@
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
     "resolvedContentAndRecipeData": "e5c2c05557a48137e701bc8110a451b9b4937e1b0f0b8bd10da654d9c0eb3b1d",
     "explicitTopicReadiness": "75adadc036908764557bb74454f91dd9e327727335b43d4d3aca3b0cb2518bf2",
-    "reasoningQuestionData": "379e5c6302a2d098162cb6c7cb7deeaec508636aae7972ae60c8af00f2518d3c",
+    "reasoningQuestionData": "3ea6baf4c4754bbf1ed28632550ff6349bb0b68258f14818191d2d96b8019a78",
     "guidedLearningData": "0925f1d369b1e339c0ebc9e0f75d70083817b5c5ed5e086740f1255a0221b253",
     "app/volume-image.tsx": "34d28f4f9284cbb18dd4c175815490fb3727912fdb4acb22143c91167ccd4448",
     "app/review/mri-import/page.tsx": "70e68c1a824ba1fe8f8b3c4291a9d8015c18288a9040289d4f4adec59bed039e",
@@ -1663,8 +1664,8 @@
       "name"
     ],
     "reasoning": {
-      "concepts": 146,
-      "exactRepresentations": 268,
+      "concepts": 153,
+      "exactRepresentations": 282,
       "regions": [
         "head-neck",
         "foot",

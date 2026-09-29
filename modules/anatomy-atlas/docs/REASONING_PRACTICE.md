@@ -1,5 +1,16 @@
 # Source-bound anatomical reasoning pilot
 
+## Upper arm and scapular muscles — 29 September 2026
+
+Seven new draft concepts cover anconeus, short-head biceps, medial/lateral
+triceps, levator scapulae and both rhomboids. The current bank contains
+153 concepts / 282 source representations, with 20 concepts available in the
+shoulder-arm region. The preceding 146 ordered concepts are unchanged.
+Existing same-side choices, feedback and retry controls are reused, with no
+new UI. See [scope and review gates](UPPER_ARM_REASONING_20260929.md).
+Historical counts and review limitations below describe their dated checkpoints;
+the current body-review contract includes revision-bound reasoning snapshots.
+
 ## Thoracic vessels — 27 September 2026
 
 Six original draft concepts extend Apply anatomy to the ascending aorta, arch,

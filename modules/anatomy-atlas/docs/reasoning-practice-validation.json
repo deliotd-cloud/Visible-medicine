@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "checks": 17993,
-  "negativeIdentityCases": 4153,
-  "concepts": 146,
-  "exactRepresentations": 268,
+  "checks": 18669,
+  "negativeIdentityCases": 4363,
+  "concepts": 153,
+  "exactRepresentations": 282,
   "regionalConcepts": {
-    "shoulder-arm": 13,
+    "shoulder-arm": 20,
     "forearm": 9,
     "hand": 10,
     "thigh": 18,
@@ -63,7 +63,7 @@
     "catalog": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
     "officialElementIndex": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf",
     "officialPartofElementIndex": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea",
-    "questions": "379e5c6302a2d098162cb6c7cb7deeaec508636aae7972ae60c8af00f2518d3c"
+    "questions": "3ea6baf4c4754bbf1ed28632550ff6349bb0b68258f14818191d2d96b8019a78"
   },
   "verification": [
     "Official complete FMA/file membership",
