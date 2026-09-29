@@ -1910,3 +1910,13 @@ TTUHSC El Paso back anatomy tables and UAMS back-joint tables, documented in
 `docs/LUMBAR_GUIDED_TOUR.md`. No source prose, tables, diagrams or images are
 redistributed. Existing BodyParts3D4.0/CC BY4.0 asset notices remain in force.
 This authoring addition introduces no new asset, dependency or licence grant.
+
+## Cricothyroid CT/MRI teaching references — 29 September 2026
+
+Original short factual notes cite the publicly accessible primary research
+abstracts of Pickuth et al. (2000; PMID10971539) and Chen et al. (2012;
+PMID21816571), with existing TTUHSC El Paso anatomy context. No abstract prose,
+figures, tables, scans or models are reproduced. Links are evidence references,
+not a grant to redistribute publisher assets. Existing geometry/licence notices
+remain unchanged. No new dependency, media asset or mandatory fee is introduced.
+See `docs/CRICOTHYROID_IMAGING.md` for source and clinical limitations.

@@ -146,7 +146,12 @@ for (const t of targets) {
     'quiz',
   ])
     same(nestedTopicLesson(concept, topic).readiness, 'draft');
-  for (const topic of ['ct', 'mri', 'ultrasound']) {
+  for (const topic of ['ct', 'mri']) {
+    const lesson = nestedTopicLesson(concept, topic);
+    same(lesson.readiness, 'draft');
+    same(lesson.citations.length > 0, true);
+  }
+  for (const topic of ['xray', 'ultrasound']) {
     const lesson = nestedTopicLesson(concept, topic);
     same(lesson.readiness, 'pending');
     same(lesson.citations, undefined);
@@ -203,6 +208,7 @@ console.log(
     rootUnchanged: true,
     runtimeGeometryMatchesPrototype: true,
     clinicalApproval: false,
-    imagingOrPaidAccessAdded: false,
+    imagingTeachingAdded: ['ct', 'mri'],
+    scanOrPaidAccessAdded: false,
   }),
 );

@@ -1,6 +1,14 @@
 import type { NestedConcept, NestedSection } from './nested-teaching';
 
 export const cricothyroidTeachingReferences = {
+  cricothyroidCTApproximation: {
+    title: 'Pickuth et al. (2000) · CT before and after cricothyroid approximation (research abstract)',
+    url: 'https://pubmed.ncbi.nlm.nih.gov/10971539/',
+  },
+  cricothyroidMicroMRI: {
+    title: 'Chen et al. (2012) · Excised human larynx reconstruction with 7-T micro-MRI (research abstract)',
+    url: 'https://pubmed.ncbi.nlm.nih.gov/21816571/',
+  },
   cricothyroidUniversity: {
     title: 'TTUHSC El Paso · Laryngeal muscles and cartilages',
     url: 'https://anatomy.ttuhscep.edu/nervous_system/deepneck_tables.html',
@@ -45,6 +53,16 @@ export const cricothyroidConcepts: NestedConcept[] = [
       pathology: draft(
         'The meshes do not depict denervation or paralysis. The cited clinical study found no dependable association between cricothyroid electromyographic status and resting vocal-fold position. Do not turn a source-model pose or apparent gap into a diagnosis; no pathological geometry is supplied here.',
         'cricothyroidParalysis',
+      ),
+    },
+    imaging: {
+      ct: draft(
+        'CT assessment of cricothyroid distance concerns the cartilaginous framework, not a direct measurement of either selected muscle part. In a study of 29 patients undergoing cricothyroid approximation, spiral CT assessed the distance before and after surgery; greater reduction was associated with greater pitch elevation. This is evidence about postoperative framework relationships, not proof that CT separates the straight and oblique bellies or measures their contraction. Inspect the acquired images and clinical context; do not infer muscle strength, nerve integrity or an operative target from the gap between these atlas surfaces. Separation here is a viewing aid, not a surgical simulation or patient measurement.',
+        'cricothyroidCTApproximation',
+      ),
+      mri: draft(
+        'Distinguish research micro-MRI from routine in-vivo neck MRI. Chen and colleagues scanned one excised postmortem human larynx at 7 T and manually reconstructed most intrinsic muscles with the surrounding cartilages. The cricothyroid joint remained poorly defined. That study does not establish routine clinical visibility of each straight or oblique belly, normal signal thresholds or diagnostic performance for denervation. These four source-labelled meshes were not segmented from that experiment or from your patient’s MRI. Use them to learn named relationships, not to assign voxel boundaries, infer a muscle lesion or transfer a research measurement into a clinical report.',
+        'cricothyroidMicroMRI',
       ),
     },
     modelLimit:

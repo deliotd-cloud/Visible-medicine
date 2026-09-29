@@ -222,7 +222,7 @@
     "content/femoral-component-teaching-bindings.v1.json": "258bef0d9526cf5e2a471d49b397c8582fe4016945c9e6cd9f52e79c6a37a43f",
     "public/models/bodyparts3d/femoral-components/catalog.json": "594f8071b63861fcb1f4a0b821a26fd5c54b609444b8321474802b16ec13a799",
     "docs/femoral-component-source-audit.json": "4d4ef68501b179b3eae660a58f3de6a5851c874f25574c333e782033280c6a90",
-    "content/cricothyroid-teaching.ts": "43e6e81da3b782aaefb0f806e57517edee327e1a24b9eaa748896aef93c033db",
+    "content/cricothyroid-teaching.ts": "ad6404871498f39639a478eef5a17c6abe8395e7351d2a6c8595606d2533b68d",
     "public/models/bodyparts3d/cricothyroid/catalog.json": "bf52f5d63c8d3917179c52fb5d62f0a931d1f57dff4c27de615329d058fa7479",
     "content/pancreatic-teaching.ts": "9e8a890f18d9dc9fb5105e854340db4623e762a0785dd4c08b8e5f4d80773817",
     "public/models/bodyparts3d/pancreatic/catalog.json": "d138ba3d14314bdf84abf5eb80a873b73a542fd69d3d9cee5419158b1cb67028",
@@ -383,7 +383,7 @@
     "lib/deep-brain-tour.ts": "f3dc89facdbc8cdf134b25480495a263fbf50daedb2aa74421912672054442eb",
     "lib/subscapular-tour.ts": "bb0dedb25c5ff20485e290c0ee91ef2a9668ea291aa11ed7f33209c4b1ce0504",
     "lib/lumbar-tour.ts": "00ca73890eeb65988461f90b4f333259955f689d0e6dcdcafa7f3a783f004bed",
-    "nestedTeachingData": "4207e18d62f328b5611d3b481c26e0f3e4e169bc3da5d6920480ffbbae1107c1"
+    "nestedTeachingData": "e1d6522909554a2938b62ab28dde76549a2d6117cfdaef79b7c930b1ece3739c"
   },
   "rendering": {
     "bodyBatching": {
@@ -1931,7 +1931,7 @@
         }
       ],
       "concepts": 47,
-      "references": 117,
+      "references": 119,
       "topics": {
         "anatomy": {
           "specificDraft": 79,
@@ -1946,15 +1946,15 @@
           "generatedIdentification": 0
         },
         "ct": {
-          "specificDraft": 53,
+          "specificDraft": 57,
           "identityOnly": 0,
-          "pending": 55,
+          "pending": 51,
           "generatedIdentification": 0
         },
         "mri": {
-          "specificDraft": 62,
+          "specificDraft": 66,
           "identityOnly": 0,
-          "pending": 46,
+          "pending": 42,
           "generatedIdentification": 0
         },
         "xray": {
