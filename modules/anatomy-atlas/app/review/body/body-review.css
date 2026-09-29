@@ -267,7 +267,11 @@
 .body-decisions .body-review-actions button {
   height: auto;
   min-height: 2.75rem;
+  min-width: 0;
+  max-width: 100%;
+  flex-shrink: 1;
   white-space: normal;
+  overflow-wrap: anywhere;
 }
 @media (max-width: 500px) {
   .body-decision-tabs,
