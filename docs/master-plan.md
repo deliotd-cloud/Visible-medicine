@@ -1,5 +1,13 @@
 # Visible Medicine — shared delivery plan
 
+29 September: deep-brain guided tour imported locally from Atlas `b5447ec`.
+Six smooth-camera stops and seven existing source selections are available in
+Head & neck/Whole body Guided learning with matching Clinical Review evidence.
+Website checks, types/build and mobile/desktop navigation pass. Models, access,
+worksheet return and fracture work preserved; no publication or clinical approval.
+See `docs/deep-brain-tour-delivery-20260929.md` and coordination recovery checkpoint.
+Native MRI remains done.
+
 29 September: review models now return to the exact originating worksheet,
 including independent specimen close controls. Complete source-bound query
 matching and same-origin fallback preserve review context without changing

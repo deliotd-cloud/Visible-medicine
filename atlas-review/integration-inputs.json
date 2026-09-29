@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "e1ad6b0c2aa62cb0f719ef666d559ec0bc8c9eed",
-  "sha256": "ab93d781c2bae2b3126d894ca7ff2f8d7bbe32d7f1147445a08740b8367b21ce",
+  "sourceCommit": "b5447ec5a14f32670ddc591918997b14b62974b7",
+  "sha256": "315818bab66b0c97549e842934b521559c1836439bb12a5e8277b8dc3ee4ba70",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -2211,6 +2211,10 @@
       "sha256": "0f18416cece4e887ff8916abf70667b6e9fcbbceff558863782e4e2038616a5f"
     },
     {
+      "path": "atlas-review/lib/deep-brain-tour.ts",
+      "sha256": "f3dc89facdbc8cdf134b25480495a263fbf50daedb2aa74421912672054442eb"
+    },
+    {
       "path": "atlas-review/lib/deep-leg-veins.ts",
       "sha256": "2faa7dd187bc9bd00b48b4de00acea4ebdbd12d8f07a827ff3a63f8a214ed2a2"
     },
@@ -2952,7 +2956,7 @@
     },
     {
       "path": "atlas-review/lib/regional-tours.ts",
-      "sha256": "1c96e08ea6950a3d22eb4d7ba3885d2e64ab468495cc3fec24af28e9378b46e2"
+      "sha256": "bbde9a945bd1525373762a0048a307d51ba9ffdaeeeaa0f472505f0716da2e93"
     },
     {
       "path": "atlas-review/lib/regional-vascular-clinical.ts",
@@ -3352,7 +3356,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "55b670b0d8a8a425b2d57fd4da8653818e815a18e6e4492f82c83e64a23c52da"
+      "sha256": "104c93f9b54ed5d23079a748c9b92f42930c1fdfc8a61854d52e3e0b69aef4d0"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3604,7 +3608,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "c222091894bb34d6cfb4d8818d8c985adc4f58ae17f18b41e7b6d2ea369fdf1c"
+      "sha256": "9be9f88018b67364c3f68511ef72b10c96959959d0f67628b9de8887e1e63933"
     }
   ]
 }

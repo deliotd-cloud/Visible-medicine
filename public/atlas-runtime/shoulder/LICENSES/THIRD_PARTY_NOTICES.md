@@ -1759,6 +1759,15 @@ licence and attribution. No new asset, dependency, font, service or fee is added
 Static muscle/cartilage surfaces are not vocal-fold motion, an airway lumen,
 patient registration or a procedural demonstration. Clinical review is pending.
 
+# Deep-brain guided tour references — 29 September 2026
+
+Six short original orientation captions reference UTHealth Neuroanatomy and
+Neuroscience Online, with exact URLs in `docs/DEEP_BRAIN_TOUR.md` and each stop.
+No diagrams, tables, scans or copied passages are redistributed. Reference
+links do not grant reuse rights to website media. Seven existing BodyParts3D
+CC BY 4.0 selections retain all credits; no new assets, dependencies or fees.
+The tour remains a draft for revision-bound radiologist review.
+
 # Brain connections quick-check references — 29 September 2026
 
 Six original short questions reference factual relationships in UTHealth McGovern
