@@ -1,0 +1,4382 @@
+{
+  "date": "2026-09-29",
+  "sourceCommit": "ed5215fcd3a8c4c113f8072b552f0a3cc1b5aa82",
+  "websiteUnchanged": "4a5a9ed4989f4dca1719fbb689b715c5e7c79f9a",
+  "diagnosticOnly": true,
+  "rawLabSha256": "34fe7d17017acc9c806f90ae5d035fc969a7dcda5ac1d43c740fb94f05405699",
+  "verifiedSourceInputs": 874,
+  "verifiedLosslessRoundtrips": 202,
+  "files": [
+    {
+      "name": "index.html",
+      "sha256": "3bab9f24e776915bd4f8c4d9a8fb26cb996dce83dff96c0138337cd5b3deb6bd",
+      "bytes": 1132,
+      "gzipBytes": 447
+    },
+    {
+      "name": "source-inputs.json",
+      "sha256": "c58bdb6dda19c727dee7118bfb9b389ab3b2f18312938780e1daf930097fa450",
+      "bytes": 119432,
+      "gzipBytes": 40443
+    },
+    {
+      "name": "assets/abdominal-wall-study-BLurTC0n.js",
+      "sha256": "1dae096fcc486f6c07b94bbb856c275f811f6506a911b6df3a511e2b35019538",
+      "bytes": 44594,
+      "gzipBytes": 14386
+    },
+    {
+      "name": "assets/acral-bone-clinical-curriculum-D71glUVk.js",
+      "sha256": "54ee6bccb9a9d0e84e27e3a3f752324e3698777caf0adb640a1815490534dc9b",
+      "bytes": 83981,
+      "gzipBytes": 21408
+    },
+    {
+      "name": "assets/anatomy-load-state-BP8N43td.js",
+      "sha256": "2bcf462df80a79f4113f42b2628d3d9321d13482aca64ea20f703ab133ba094a",
+      "bytes": 242926,
+      "gzipBytes": 76928
+    },
+    {
+      "name": "assets/back-layers-study-DkW7oDPt.js",
+      "sha256": "1fa25c86e91747a3e70489ebaed62d8b3f5a0c3e128e7519957658acfbb5bd5d",
+      "bytes": 76782,
+      "gzipBytes": 23657
+    },
+    {
+      "name": "assets/body-content-BJTS1Skk.js",
+      "sha256": "8f6a2851e0e79b38157208458d1a6a565c7156c00da5a05d69bfc391ba1a4ef3",
+      "bytes": 3652345,
+      "gzipBytes": 722156
+    },
+    {
+      "name": "assets/body-display-catalog-CMqiQfzT.js",
+      "sha256": "fef173e209e7790a5721171c427003379ce2282e4792e90f8633fc74701e9e02",
+      "bytes": 450208,
+      "gzipBytes": 113715
+    },
+    {
+      "name": "assets/body-scene-D3l4i9HZ.js",
+      "sha256": "daf89fd4cd88f84ae5ab21fee178dffdd2148151d5bdfd80637d5fad520ed6c7",
+      "bytes": 1076844,
+      "gzipBytes": 291930
+    },
+    {
+      "name": "assets/body-scene-D9W1oC7m.css",
+      "sha256": "87a8de4b8d336f22bbb46cb40d26cb54399df149c1f3899ad1f05f6ddae8c751",
+      "bytes": 3193,
+      "gzipBytes": 1058
+    },
+    {
+      "name": "assets/cutaway-controls-4N0ICIXO.css",
+      "sha256": "87c31bfe8303461a8afbde6251bb48df5a77645f774c8ef3ac48c292a30ec5c8",
+      "bytes": 1127,
+      "gzipBytes": 451
+    },
+    {
+      "name": "assets/cutaway-controls-BYZ0KSYA.js",
+      "sha256": "7adedf477b431e8de4f332f5970af55553881b4eb97a6325b57df3964c0f00a9",
+      "bytes": 119605,
+      "gzipBytes": 34319
+    },
+    {
+      "name": "assets/eye-layers-D-ebm8PC.css",
+      "sha256": "defc762f2a2603fba1925c2f26fa225e01fb7d4019080f625ea69ce7f5aba4c6",
+      "bytes": 6588,
+      "gzipBytes": 1696
+    },
+    {
+      "name": "assets/eye-layers-DvcR-0IW.js",
+      "sha256": "df0c6fa87b99c92dea6d7b47c25da1b1b61c2e198d5d5e3984507ffcdb4c55b3",
+      "bytes": 11522,
+      "gzipBytes": 4087
+    },
+    {
+      "name": "assets/hra-pelvis-study-BebDJ5mP.js",
+      "sha256": "445ea39c251cba4257ea7a3266d6e6c70757e4e8d7de66411b2f7564af137c35",
+      "bytes": 94859,
+      "gzipBytes": 26114
+    },
+    {
+      "name": "assets/hra-renal-study-CEjbO2za.js",
+      "sha256": "311abed08809f61f629d9ff384ea69894b8b5ec916a1f065e64512ad4fc6ec05",
+      "bytes": 4384,
+      "gzipBytes": 1998
+    },
+    {
+      "name": "assets/hra-renal-teaching-BJ_YPymp.js",
+      "sha256": "2a8c7f144365d13900e09f943293e906d3e93915541533f92ed223c6f43d79ec",
+      "bytes": 115099,
+      "gzipBytes": 24119
+    },
+    {
+      "name": "assets/independent-study-navigation-C5K1jXEg.js",
+      "sha256": "41438dbf8007dfc815bee7ef2e8c80d30b6dbcd0c45f6c96f4709dc516321fbe",
+      "bytes": 2628,
+      "gzipBytes": 1205
+    },
+    {
+      "name": "assets/index-iW70jpiL.css",
+      "sha256": "81019f22a79d38c6e616d782a336f3a93d50822f8c01b3245af476e4ee174172",
+      "bytes": 291896,
+      "gzipBytes": 47600
+    },
+    {
+      "name": "assets/index-UP-DVxHv.js",
+      "sha256": "88aa2c12395b00d6cdea91f13b613ea589a568f5b4c80c4df68f1f8a7d30ff6b",
+      "bytes": 2264549,
+      "gzipBytes": 576706
+    },
+    {
+      "name": "assets/neuroanatomy-DKkDnLNH.js",
+      "sha256": "f7a6b41e7c0ea8cd35c515b0a9ac7abdd46fde4067628f5d7c93420ad7aea337",
+      "bytes": 7379,
+      "gzipBytes": 2599
+    },
+    {
+      "name": "assets/rolldown-runtime-hePW80VL.js",
+      "sha256": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021",
+      "bytes": 716,
+      "gzipBytes": 428
+    },
+    {
+      "name": "assets/slider-C3JV0uJQ.css",
+      "sha256": "235c70c13778df2acad662f6528f2b5da9c584a17e04185984d199555847112e",
+      "bytes": 8203,
+      "gzipBytes": 1796
+    },
+    {
+      "name": "assets/slider-D7Ls4Pd3.js",
+      "sha256": "aea1beedaa3531e9ceebb1cdb5e64eb60cb1fbda198ebe5ab93c58ca35e7a9dc",
+      "bytes": 931794,
+      "gzipBytes": 233216
+    },
+    {
+      "name": "assets/um-knee-study-DRREfAwA.css",
+      "sha256": "74f9a6f5483fc5e68b0d9fa56032db4c6d644f0a3816f4165f3c819384377f84",
+      "bytes": 4009,
+      "gzipBytes": 1137
+    },
+    {
+      "name": "assets/um-knee-study-Kzc7nSRB.js",
+      "sha256": "5e33a6d529aef091bc5ee38a1b9d2828e60671d2a14027e1c2c790d2bf4660f5",
+      "bytes": 522970,
+      "gzipBytes": 129682
+    },
+    {
+      "name": "assets/um-limb-study-D5IUw7-B.js",
+      "sha256": "1be499f907d69921f2ceeab8cd7ad5fc18234bda626d8908b14d05f029ddae88",
+      "bytes": 2603,
+      "gzipBytes": 1273
+    },
+    {
+      "name": "assets/ventricles-CfdrTivY.css",
+      "sha256": "3afed59416d5b658434fa6dd284a3af3ff3868bdf2412b57c6f882f616e0b385",
+      "bytes": 1203,
+      "gzipBytes": 491
+    },
+    {
+      "name": "assets/ventricles-CGA3zVyD.js",
+      "sha256": "71f00322fd33aa2e2d6844639c91253834fe35e07c8ffe9b81b27e354142bf31",
+      "bytes": 239899,
+      "gzipBytes": 74611
+    },
+    {
+      "name": "models/bodyparts3d/full-body/catalog.json",
+      "sha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+      "bytes": 1651755,
+      "gzipBytes": 242068
+    },
+    {
+      "name": "models/bodyparts3d/celiac-display/README.md",
+      "sha256": "348ccc4db232320685b406e6356381432fa76d56ae4e3ed635a2125f262ed26a",
+      "bytes": 1210,
+      "gzipBytes": 704
+    },
+    {
+      "name": "models/bodyparts3d/celiac-display/display-correction.json",
+      "sha256": "d71a1bccdbd2c18e1d5a9f6537170e1acbb66c832fa6fbee68e25c7a0ad3ca82",
+      "bytes": 6073,
+      "gzipBytes": 1880
+    },
+    {
+      "name": "brand/visible-medicine-lockup-dark.png",
+      "sha256": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
+      "bytes": 111431,
+      "gzipBytes": 110590
+    },
+    {
+      "name": "brand/visible-medicine-lockup-light.png",
+      "sha256": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
+      "bytes": 121818,
+      "gzipBytes": 120943
+    },
+    {
+      "name": "LICENSE",
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea",
+      "bytes": 1467,
+      "gzipBytes": 897
+    },
+    {
+      "name": "LICENSES/THIRD_PARTY_NOTICES.md",
+      "sha256": "fe8998fd7fb6f90a5fe05777c620bffab305fdbbe4f01a01d6be6b11fd1de27a",
+      "bytes": 219821,
+      "gzipBytes": 56703
+    },
+    {
+      "name": "LICENSES/CC-BY-4.0.txt",
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "bytes": 18657,
+      "gzipBytes": 5915
+    },
+    {
+      "name": "LICENSES/BODYPARTS3D.md",
+      "sha256": "f38c70c390c721341f55b89515d0757941d4042a1b299419efc1f96d399957b6",
+      "bytes": 2903,
+      "gzipBytes": 1492
+    },
+    {
+      "name": "LICENSES/BODYPARTS3D_FULL_BODY.md",
+      "sha256": "71d06b15964d053a5901a5d4125a719feae87618b9b42c7c3808a796169146b2",
+      "bytes": 18665,
+      "gzipBytes": 6281
+    },
+    {
+      "name": "LICENSES/bodyparts3d-license-evidence.html",
+      "sha256": "90dea95329aea5015ce339e430d9f342090617c82ee48613e15dd2240f08b746",
+      "bytes": 14694,
+      "gzipBytes": 3858
+    },
+    {
+      "name": "models/bodyparts3d/credits.html",
+      "sha256": "fdc8507897dbc230ee32130af5fb3ce254db74ea9e037d32a498c8b1ebe558a5",
+      "bytes": 7432,
+      "gzipBytes": 2761
+    },
+    {
+      "name": "models/bodyparts3d-v3/abdominal-wall/catalog.json",
+      "sha256": "a2fa96e5203e8a2c0ce5898a0d190834523a34f0b61c4ebfbce502a933f6d03e",
+      "bytes": 39011,
+      "gzipBytes": 7343
+    },
+    {
+      "name": "models/bodyparts3d-v3/abdominal-wall/NOTICE.md",
+      "sha256": "da24e3c60a56b46d3d3c23933beee0752a5adac3fe3bf3967c9eac1a73ccc7f0",
+      "bytes": 2084,
+      "gzipBytes": 1104
+    },
+    {
+      "name": "models/bodyparts3d-v3/back-layers/catalog.json",
+      "sha256": "23ba69e7268a03c8ab722313326bb7ffc3ac13aa49c0036c043993b38e0e9242",
+      "bytes": 64060,
+      "gzipBytes": 11494
+    },
+    {
+      "name": "models/bodyparts3d-v3/back-layers/NOTICE.md",
+      "sha256": "41cdebcbf14c33d84bb3338db05015b9cf1c4a815b6909cb2db698fd2c6e884f",
+      "bytes": 2087,
+      "gzipBytes": 1099
+    },
+    {
+      "name": "models/hra-renal/catalog.json",
+      "sha256": "0bdc5a8ec478c58fbc977b2cf720543d9715d3654bf42b9b3bb5d2e1d49cecf5",
+      "bytes": 135779,
+      "gzipBytes": 16508
+    },
+    {
+      "name": "models/hra-renal/NOTICE.md",
+      "sha256": "cb30b4dc59e4df19cf533753eab2299354d0f948e694d865042971a74cf2da78",
+      "bytes": 2374,
+      "gzipBytes": 1336
+    },
+    {
+      "name": "models/hra-pelvis/catalog.json",
+      "sha256": "a0e997a2eb4af64d25bf5f6f9901ea70616fb59443696f7630e0aea6bd53c619",
+      "bytes": 65210,
+      "gzipBytes": 9906
+    },
+    {
+      "name": "models/hra-pelvis/NOTICE.md",
+      "sha256": "898505e9c8837bd74e9f2535726676e13e9020e593ef15943b61a7845ff1c927",
+      "bytes": 3098,
+      "gzipBytes": 1641
+    },
+    {
+      "name": "models/bodyparts3d-v3/abdominal-wall/source-readme.html",
+      "sha256": "0c2913b3c51f2c6b248ac054acfd0b2a72940386199ca95fa9aa848bd69746e0",
+      "bytes": 13104,
+      "gzipBytes": 3460
+    },
+    {
+      "name": "models/bodyparts3d-v3/abdominal-wall/license-deed.html",
+      "sha256": "4a02a925c115a4f8e0e5018fbed2fcb9388fde1b0c0ce4a61a506bb44e0307ec",
+      "bytes": 35950,
+      "gzipBytes": 6881
+    },
+    {
+      "name": "models/bodyparts3d-v3/abdominal-wall/license-legalcode.html",
+      "sha256": "d44c2a342063c22bb793a7ab5f9bbf3374f03f0d433f7530333f409d1fea42f9",
+      "bytes": 37208,
+      "gzipBytes": 9334
+    },
+    {
+      "name": "models/bodyparts3d-v3/abdominal-wall/source-audit.json",
+      "sha256": "d805df5b5693a8ad5e9463cb04d31d002fb56c107c600718cf4886472de6dd87",
+      "bytes": 98061,
+      "gzipBytes": 12089
+    },
+    {
+      "name": "models/bodyparts3d-v3/back-layers/source-readme.html",
+      "sha256": "0c2913b3c51f2c6b248ac054acfd0b2a72940386199ca95fa9aa848bd69746e0",
+      "bytes": 13104,
+      "gzipBytes": 3460
+    },
+    {
+      "name": "models/bodyparts3d-v3/back-layers/license-deed.html",
+      "sha256": "4a02a925c115a4f8e0e5018fbed2fcb9388fde1b0c0ce4a61a506bb44e0307ec",
+      "bytes": 35950,
+      "gzipBytes": 6881
+    },
+    {
+      "name": "models/bodyparts3d-v3/back-layers/license-legalcode.html",
+      "sha256": "d44c2a342063c22bb793a7ab5f9bbf3374f03f0d433f7530333f409d1fea42f9",
+      "bytes": 37208,
+      "gzipBytes": 9334
+    },
+    {
+      "name": "models/bodyparts3d-v3/back-layers/source-audit.json",
+      "sha256": "9332271aa8fb112732af273747aba8ce3f1938f15399cbc8e35566333e0e4387",
+      "bytes": 165771,
+      "gzipBytes": 20048
+    },
+    {
+      "name": "models/bodyparts3d-v3/abdominal-wall/specimen-data.ts.txt",
+      "sha256": "06795f84c4440639f4b24ea31e10b5e0a37f0e8f494a261f512d12c8ea1687b7",
+      "bytes": 6057,
+      "gzipBytes": 2368
+    },
+    {
+      "name": "models/bodyparts3d-v3/back-layers/specimen-data.ts.txt",
+      "sha256": "f11998c77ff5823e257f9c81b625532d952ded36fd9729e65fbace6d0090f62c",
+      "bytes": 5889,
+      "gzipBytes": 2186
+    },
+    {
+      "name": "models/hra-renal/source-metadata.json",
+      "sha256": "b9f137b1176c31419c68b78ac87f0926f874dad22f56d4dde7df3e2f15bab501",
+      "bytes": 8855,
+      "gzipBytes": 1877
+    },
+    {
+      "name": "models/hra-pelvis/source-metadata.json",
+      "sha256": "b9f137b1176c31419c68b78ac87f0926f874dad22f56d4dde7df3e2f15bab501",
+      "bytes": 8855,
+      "gzipBytes": 1877
+    },
+    {
+      "name": "models/um-knee/catalog.json",
+      "sha256": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e",
+      "bytes": 19729,
+      "gzipBytes": 4663
+    },
+    {
+      "name": "models/um-limb/catalog.json",
+      "sha256": "fc27b778fe8a0e13f773f272bd0bd9bdf9d22117029bd5a5b5d11f0dc39c83fb",
+      "bytes": 81420,
+      "gzipBytes": 14522
+    },
+    {
+      "name": "LICENSES/um-lower-limb-v1-2/readme.txt",
+      "sha256": "deb6b13e74e499015a79a84c0bc5c4faa15cc8a763de43ebb8ec088824fc2967",
+      "bytes": 7540,
+      "gzipBytes": 3223
+    },
+    {
+      "name": "LICENSES/um-lower-limb-v1-2/dataverse.json",
+      "sha256": "a9d0957579f4c78975978e12f5627fc9e0be758da676dd11d16dd72a303e5375",
+      "bytes": 12272,
+      "gzipBytes": 3369
+    },
+    {
+      "name": "models/um-limb/MODEL_NOTICE.md",
+      "sha256": "283726a12527577a3f28343ace3ab37094c8726e31a6e7782ee208d14d79011e",
+      "bytes": 1903,
+      "gzipBytes": 1130
+    },
+    {
+      "name": "models/bodyparts3d-v3/abdominal-wall/abdominal-wall.glb",
+      "sha256": "2b80e2e9505593d10f807475ff3e3226ee917b7f0cb8abf5e59f9421d1d50748",
+      "bytes": 15335852,
+      "gzipBytes": 10346137
+    },
+    {
+      "name": "models/bodyparts3d-v3/back-layers/back-layers.glb",
+      "sha256": "f8fa3e2a955ae43d74b359dfc9ad14487381ed496fecfeca9d47aa6a0024a7c4",
+      "bytes": 7625848,
+      "gzipBytes": 5647059
+    },
+    {
+      "name": "models/bodyparts3d/anterior-cardiac-vein/anterior-cardiac-vein.glb",
+      "sha256": "ff72014e957d661a16892581db9e371482541302e4a3203ba3e84cac9f5f1928",
+      "bytes": 17252,
+      "gzipBytes": 13789
+    },
+    {
+      "name": "models/bodyparts3d/brachial-veins/brachial-veins.glb",
+      "sha256": "e603953fca42e17c45f3daa91d3c53bedc0ccf83b70b18b864f9dc72d6bbe265",
+      "bytes": 100360,
+      "gzipBytes": 85309
+    },
+    {
+      "name": "models/bodyparts3d/brainstem/brainstem.glb",
+      "sha256": "fd1d8d04656a300fe0e8271a418ec0807b227baa96d6afa822d0df6ad0bf72ba",
+      "bytes": 1707728,
+      "gzipBytes": 1433718
+    },
+    {
+      "name": "models/bodyparts3d/cardiac/cardiac.glb",
+      "sha256": "64d93898db3b6cb4dbea452508799c98cbe65b361eba2f17658ecae532a01f67",
+      "bytes": 587588,
+      "gzipBytes": 498526
+    },
+    {
+      "name": "models/bodyparts3d/celiac-display/celiac-display.glb",
+      "sha256": "4f431242839c255ae2320b4004c537a4c2defb7d0cd7b51fdea60f7ba3c09e8f",
+      "bytes": 5604,
+      "gzipBytes": 4567
+    },
+    {
+      "name": "models/bodyparts3d/cerebral/cerebral.glb",
+      "sha256": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410",
+      "bytes": 1856608,
+      "gzipBytes": 1575197
+    },
+    {
+      "name": "models/bodyparts3d/circumflex-femoral/circumflex-femoral.glb",
+      "sha256": "265bddde64b37086b7f953515b1fd0a24543b0c9b210adc6e3837b22dc9bae69",
+      "bytes": 191180,
+      "gzipBytes": 163687
+    },
+    {
+      "name": "models/bodyparts3d/collicular-brachia/collicular-brachia.glb",
+      "sha256": "40dd8f7f7b9a6bc79be1fdc6282ed50965c7f07d853a4db981dd7203477185c8",
+      "bytes": 13044,
+      "gzipBytes": 10181
+    },
+    {
+      "name": "models/bodyparts3d/coronary-venous/coronary-venous.glb",
+      "sha256": "4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12",
+      "bytes": 40996,
+      "gzipBytes": 34079
+    },
+    {
+      "name": "models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb",
+      "sha256": "f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826",
+      "bytes": 11856,
+      "gzipBytes": 10141
+    },
+    {
+      "name": "models/bodyparts3d/cranial-arteries/cranial-arteries.glb",
+      "sha256": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+      "bytes": 212796,
+      "gzipBytes": 171064
+    },
+    {
+      "name": "models/bodyparts3d/cranial-artery-components/cranial-artery-components.glb",
+      "sha256": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086",
+      "bytes": 227840,
+      "gzipBytes": 160246
+    },
+    {
+      "name": "models/bodyparts3d/cricothyroid/cricothyroid.glb",
+      "sha256": "7a6695ee3fc8feeba3b187e3d9a800aa205b57486208f84a8ef8e170097452a4",
+      "bytes": 323604,
+      "gzipBytes": 264776
+    },
+    {
+      "name": "models/bodyparts3d/cubital-veins/cubital-veins.glb",
+      "sha256": "8e31545af2568c7f31a327ccbefa0a85cb054a422e1091fd06676b2b39127321",
+      "bytes": 287992,
+      "gzipBytes": 242855
+    },
+    {
+      "name": "models/bodyparts3d/deep-leg-veins/deep-leg-veins.glb",
+      "sha256": "b10cd33cb0a8be2602c7d41b8ec88d4a50cd678df936b2a78dfedb6191910096",
+      "bytes": 1295728,
+      "gzipBytes": 1106685
+    },
+    {
+      "name": "models/bodyparts3d/deferent-ducts/deferent-ducts.glb",
+      "sha256": "53d2cdcb86c04d78671705b34f5b82c0130427735c8c7986553b3a042d8c7544",
+      "bytes": 39612,
+      "gzipBytes": 32761
+    },
+    {
+      "name": "models/bodyparts3d/elbow-arteries/elbow-arteries.glb",
+      "sha256": "f8c7361dd6d9f089937df2d879c9851cc2346353bafe2600da871a04f8a0060d",
+      "bytes": 353176,
+      "gzipBytes": 290636
+    },
+    {
+      "name": "models/bodyparts3d/eye-layers/eye-layers.glb",
+      "sha256": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+      "bytes": 3578388,
+      "gzipBytes": 2921785
+    },
+    {
+      "name": "models/bodyparts3d/eye-layers/right-eyeball.glb",
+      "sha256": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+      "bytes": 1756184,
+      "gzipBytes": 1425742
+    },
+    {
+      "name": "models/bodyparts3d/femoral-components/femoral-components.glb",
+      "sha256": "a35dfffc15ed011570781c6c194ecbfeda08bc70926a39b8cbf0cffa8b88dca0",
+      "bytes": 283964,
+      "gzipBytes": 240279
+    },
+    {
+      "name": "models/bodyparts3d/full-body/abdomen-connective-axial-detail.glb",
+      "sha256": "896e726212e5823542796bf7b12e3b6588a30ff519de4425959d8991c890228d",
+      "bytes": 37124,
+      "gzipBytes": 31943
+    },
+    {
+      "name": "models/bodyparts3d/full-body/abdomen-connective-mesenteric.glb",
+      "sha256": "45d592f6eaef66743c7fe88ec944d68a6e6ddf2496d59331e353b15f99b91845",
+      "bytes": 727116,
+      "gzipBytes": 568106
+    },
+    {
+      "name": "models/bodyparts3d/full-body/abdomen-muscles.glb",
+      "sha256": "0317376bdb64b43c8eba26598419cb980f3a7090b68656375136df617d817b8c",
+      "bytes": 4031580,
+      "gzipBytes": 3437023
+    },
+    {
+      "name": "models/bodyparts3d/full-body/abdomen-organs-inventory.glb",
+      "sha256": "beb3ff34d8e0d64041f6639fea2a4aefff6e11f04f5ed0a9f9d62cec85257a42",
+      "bytes": 40896,
+      "gzipBytes": 33671
+    },
+    {
+      "name": "models/bodyparts3d/full-body/abdomen-organs-junction.glb",
+      "sha256": "233de27cdb6d272b62e99917813aba52abfbab4978374b6fb2b322573abbd672",
+      "bytes": 6484,
+      "gzipBytes": 5292
+    },
+    {
+      "name": "models/bodyparts3d/full-body/abdomen-organs-recovery.glb",
+      "sha256": "9ed6f0864a2b37edc4c36ffbb84fdab9cacf34c6069d93455f1ffcb6eee711ab",
+      "bytes": 74092,
+      "gzipBytes": 63168
+    },
+    {
+      "name": "models/bodyparts3d/full-body/abdomen-organs.glb",
+      "sha256": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+      "bytes": 6383736,
+      "gzipBytes": 4292889
+    },
+    {
+      "name": "models/bodyparts3d/full-body/abdomen-vessels-mesenteric.glb",
+      "sha256": "d26bb01909128f5cd8a56fb410967a688801a22652305bb2656e04d3e7df2680",
+      "bytes": 226020,
+      "gzipBytes": 184785
+    },
+    {
+      "name": "models/bodyparts3d/full-body/abdomen-vessels-recovery.glb",
+      "sha256": "e41d66684de08fd9bd7dfca340acb63cbf7714eb09a3ea9594184f497c509abe",
+      "bytes": 477592,
+      "gzipBytes": 395332
+    },
+    {
+      "name": "models/bodyparts3d/full-body/abdomen-vessels-visceral-detail.glb",
+      "sha256": "be90ec41dc6046b820b337d986b6a67792a33ba33216db8aecb068fed4b85173",
+      "bytes": 133144,
+      "gzipBytes": 106583
+    },
+    {
+      "name": "models/bodyparts3d/full-body/foot-connective-recovery.glb",
+      "sha256": "d4797b74c353d5364113703c07422d57e032325846975f7c752fe4a3ae36a424",
+      "bytes": 102396,
+      "gzipBytes": 84590
+    },
+    {
+      "name": "models/bodyparts3d/full-body/foot-muscles-dissection.glb",
+      "sha256": "3a85853e4f552b5d2f4a9a63bc5efec306d13205a08633125cc0ff78939c2a63",
+      "bytes": 178072,
+      "gzipBytes": 131168
+    },
+    {
+      "name": "models/bodyparts3d/full-body/foot-muscles.glb",
+      "sha256": "44557187f3ffba580548a455d95340b66b57bebbaad286e8a1484dcceffbd42e",
+      "bytes": 444740,
+      "gzipBytes": 316517
+    },
+    {
+      "name": "models/bodyparts3d/full-body/foot-skeleton.glb",
+      "sha256": "1b363def6136145a2a0faa31ca5edb46db8345631a4343c25919a3abf73d2d40",
+      "bytes": 612448,
+      "gzipBytes": 483711
+    },
+    {
+      "name": "models/bodyparts3d/full-body/foot-vessels-foot-vascular.glb",
+      "sha256": "9e6d01cc92726aa2db728febcf52e0adfa0e6b9db9f58705f49b0653c8311881",
+      "bytes": 192916,
+      "gzipBytes": 159887
+    },
+    {
+      "name": "models/bodyparts3d/full-body/foot-vessels-recovery.glb",
+      "sha256": "648366ffe116673e7428067e8d7f14739161a220fb94e24d832ba9b9312a94b9",
+      "bytes": 107772,
+      "gzipBytes": 89031
+    },
+    {
+      "name": "models/bodyparts3d/full-body/forearm-connective-gaps.glb",
+      "sha256": "3edf719c336df784236543a43f75d98442f8b680d32f9ed00365822c7d783564",
+      "bytes": 60244,
+      "gzipBytes": 42478
+    },
+    {
+      "name": "models/bodyparts3d/full-body/forearm-muscles-dissection.glb",
+      "sha256": "650758b91e7a4dd4b0a743d067fe79cbf527a51e95669e9e61aa2bc3c45c57b4",
+      "bytes": 261864,
+      "gzipBytes": 210678
+    },
+    {
+      "name": "models/bodyparts3d/full-body/forearm-muscles.glb",
+      "sha256": "a99abc2a2bfe0845e80b90d18f6473e2614695c8f7acb7a26a9febb4d46a509b",
+      "bytes": 1854940,
+      "gzipBytes": 1540327
+    },
+    {
+      "name": "models/bodyparts3d/full-body/forearm-skeleton.glb",
+      "sha256": "7af54bdb11a8ae93d9236c6ed35b9a471543bc2a8a32867992a8917d22b1e0d5",
+      "bytes": 57728,
+      "gzipBytes": 47607
+    },
+    {
+      "name": "models/bodyparts3d/full-body/forearm-vessels-forearm-vascular.glb",
+      "sha256": "afe5f1b4dc3d79fa05550ef1fc5cc28bc8502a2e2fbe7947ffdf3e61afff9782",
+      "bytes": 66352,
+      "gzipBytes": 54478
+    },
+    {
+      "name": "models/bodyparts3d/full-body/forearm-vessels-recovery.glb",
+      "sha256": "8a9c9b62561c8b952147b91fcf0a9c2a01d6f7fe38737259e4eb8d76ece0904f",
+      "bytes": 2083932,
+      "gzipBytes": 1753384
+    },
+    {
+      "name": "models/bodyparts3d/full-body/hand-connective-axial-detail.glb",
+      "sha256": "80a96ba7c54a11468857a98acda39b39aab8620d4baebe4184a698ecf4c28f1d",
+      "bytes": 71364,
+      "gzipBytes": 60135
+    },
+    {
+      "name": "models/bodyparts3d/full-body/hand-muscles-dissection.glb",
+      "sha256": "3f7cae06bed1f4b93bb1ec2715ac4d739e5e38c7f0c495ea22447d57065f29ff",
+      "bytes": 56028,
+      "gzipBytes": 38935
+    },
+    {
+      "name": "models/bodyparts3d/full-body/hand-muscles-gaps.glb",
+      "sha256": "68885665a6924684c3c7b1f078eecb702efd444d78eea1a5941bed6ad0a089dc",
+      "bytes": 146948,
+      "gzipBytes": 112294
+    },
+    {
+      "name": "models/bodyparts3d/full-body/hand-muscles-recovery.glb",
+      "sha256": "754fba175b857079656672c0ab11dd37ad0235cd87c3ccfffa08a2df1c54e129",
+      "bytes": 100344,
+      "gzipBytes": 83176
+    },
+    {
+      "name": "models/bodyparts3d/full-body/hand-muscles.glb",
+      "sha256": "d0fad445fa6a804c237706038b126e6cb9e3829ec171c9929ab435d4ee74870e",
+      "bytes": 120784,
+      "gzipBytes": 80965
+    },
+    {
+      "name": "models/bodyparts3d/full-body/hand-skeleton.glb",
+      "sha256": "5f61ad363b757aa0cfcf0d7be4bcedcf63cbfec9ff5728cace9d62aa0447eac1",
+      "bytes": 416816,
+      "gzipBytes": 315445
+    },
+    {
+      "name": "models/bodyparts3d/full-body/hand-vessels-hand-vascular.glb",
+      "sha256": "3b2f158e1c345f4abc5c66cfcf7fb916bd4117de80b767919a1c594baf028391",
+      "bytes": 534016,
+      "gzipBytes": 440386
+    },
+    {
+      "name": "models/bodyparts3d/full-body/hand-vessels-hand-venous.glb",
+      "sha256": "3fd81ec284853b9e7eae84b3a4282ba0e5713160f07b1b5d6d8a70f8bb7d502e",
+      "bytes": 577748,
+      "gzipBytes": 487496
+    },
+    {
+      "name": "models/bodyparts3d/full-body/hand-vessels-recovery.glb",
+      "sha256": "81851762c0aca58931fa8b0cd1c31853558b70578a518896cb97fb8eeae357a0",
+      "bytes": 65364,
+      "gzipBytes": 55070
+    },
+    {
+      "name": "models/bodyparts3d/full-body/head-neck-connective-gaps.glb",
+      "sha256": "c2073b8bfca9d8aa41c5c4810738138ba54fe6db1f5bfd935a3231414a38c3f8",
+      "bytes": 692376,
+      "gzipBytes": 566582
+    },
+    {
+      "name": "models/bodyparts3d/full-body/head-neck-connective-head-detail.glb",
+      "sha256": "7f6c0355e8db6b561ea3b8d7bf10584422dccf873c842cb010f0987056f1a2f5",
+      "bytes": 45764,
+      "gzipBytes": 36004
+    },
+    {
+      "name": "models/bodyparts3d/full-body/head-neck-connective-laryngeal-detail.glb",
+      "sha256": "a4788313cc86677900a528208e8ac7045f07bee300ea17073386bf0c12c83de4",
+      "bytes": 178112,
+      "gzipBytes": 148128
+    },
+    {
+      "name": "models/bodyparts3d/full-body/head-neck-connective-ocular-detail.glb",
+      "sha256": "08b23d00975e6cd10eeca344d556fe75ec8cd6f45fc7087ac7da28754754108b",
+      "bytes": 94876,
+      "gzipBytes": 77561
+    },
+    {
+      "name": "models/bodyparts3d/full-body/head-neck-connective-recovery.glb",
+      "sha256": "2243b05c7b505ee666ac4a36becfe5298735558b0e86b4d8e4476115f372ce05",
+      "bytes": 175092,
+      "gzipBytes": 125977
+    },
+    {
+      "name": "models/bodyparts3d/full-body/head-neck-muscles.glb",
+      "sha256": "ad355b54f865461f5433bd1062bb206bde1967f6d4dc003840e7788800a69adb",
+      "bytes": 8566352,
+      "gzipBytes": 7110792
+    },
+    {
+      "name": "models/bodyparts3d/full-body/head-neck-nerves-deep-brain.glb",
+      "sha256": "6046dacb923f5103acb3b86dadf2817b5f0c133af88e0d225170cf331fbd0e3c",
+      "bytes": 1866940,
+      "gzipBytes": 1559252
+    },
+    {
+      "name": "models/bodyparts3d/full-body/head-neck-nerves-gaps.glb",
+      "sha256": "4aba05d53fa7bf578be5ef6f945c4a498a007e62529dd0e7c5db32f57d0c1461",
+      "bytes": 100964,
+      "gzipBytes": 83268
+    },
+    {
+      "name": "models/bodyparts3d/full-body/head-neck-nerves-inventory.glb",
+      "sha256": "4e7f008f8f6167e351bc02c6b04f538ba74433f893d77e5a5b0bb8396fa3b1b9",
+      "bytes": 10012,
+      "gzipBytes": 7586
+    },
+    {
+      "name": "models/bodyparts3d/full-body/head-neck-nerves.glb",
+      "sha256": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "bytes": 8286776,
+      "gzipBytes": 5166341
+    },
+    {
+      "name": "models/bodyparts3d/full-body/head-neck-organs-gaps.glb",
+      "sha256": "4d05d792dd062b49d22f8740e4f0a0c4785249cbcac61a47ac7a48d06b5a6ab1",
+      "bytes": 98216,
+      "gzipBytes": 79519
+    },
+    {
+      "name": "models/bodyparts3d/full-body/head-neck-organs-head-detail.glb",
+      "sha256": "3375bde94900a77d8ab7c6c37ec934b30e2a745495006630b1645053522c040a",
+      "bytes": 745932,
+      "gzipBytes": 614360
+    },
+    {
+      "name": "models/bodyparts3d/full-body/head-neck-organs-ocular-detail.glb",
+      "sha256": "2f0b7535025dfd415ef448ae4fef66e351303e1fad2e7da128fa7122bac9929b",
+      "bytes": 57312,
+      "gzipBytes": 43811
+    },
+    {
+      "name": "models/bodyparts3d/full-body/head-neck-organs-recovery.glb",
+      "sha256": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+      "bytes": 3587376,
+      "gzipBytes": 2916057
+    },
+    {
+      "name": "models/bodyparts3d/full-body/head-neck-organs-visceral-detail.glb",
+      "sha256": "87b0684fd3a8d120d622f2f96edb49059cd530ba927423d5ac5f28d1069c2f84",
+      "bytes": 65180,
+      "gzipBytes": 54509
+    },
+    {
+      "name": "models/bodyparts3d/full-body/head-neck-skeleton.glb",
+      "sha256": "c1b950c82fd76e69cf153757ca275a6bd27fd25d74d3fd24259b15f9172a39d4",
+      "bytes": 2355384,
+      "gzipBytes": 1975898
+    },
+    {
+      "name": "models/bodyparts3d/full-body/head-neck-vessels-recovery.glb",
+      "sha256": "800d583a96a6df8fdd2b5fff86c6e719a90e897d6c3c89bbb1a3bd71b0e89cbb",
+      "bytes": 608992,
+      "gzipBytes": 492638
+    },
+    {
+      "name": "models/bodyparts3d/full-body/leg-connective-gaps.glb",
+      "sha256": "5b28b2d13a891e88c177fb2db80c81a2dcf1c0201644ee68c8ce69870b98d70a",
+      "bytes": 346900,
+      "gzipBytes": 296076
+    },
+    {
+      "name": "models/bodyparts3d/full-body/leg-muscles-dissection.glb",
+      "sha256": "3f6f533850ecd3017a742f140e7779a901dda238eaaac42b6bf6eb9b3d2347b1",
+      "bytes": 252980,
+      "gzipBytes": 218317
+    },
+    {
+      "name": "models/bodyparts3d/full-body/leg-muscles.glb",
+      "sha256": "c535a021142b325daebfd0a8bca2b0406f05fae820870d524dc0a6993d3eb72d",
+      "bytes": 1304804,
+      "gzipBytes": 1089486
+    },
+    {
+      "name": "models/bodyparts3d/full-body/leg-skeleton.glb",
+      "sha256": "8885078bc114d8cf5c2ebd12f393761965b2016bf6f5fc196c83549527e2c0af",
+      "bytes": 118776,
+      "gzipBytes": 99768
+    },
+    {
+      "name": "models/bodyparts3d/full-body/leg-vessels-recovery.glb",
+      "sha256": "e2751d62cf20f86ec14865a79bad26e70245443965702d98512541378851e466",
+      "bytes": 2900368,
+      "gzipBytes": 2471758
+    },
+    {
+      "name": "models/bodyparts3d/full-body/pelvis-muscles.glb",
+      "sha256": "ffaed94ac4c0f18df42d7cc21903e8e2b32d4c163929713913935a3eecf95ba2",
+      "bytes": 115108,
+      "gzipBytes": 97593
+    },
+    {
+      "name": "models/bodyparts3d/full-body/pelvis-organs-gaps.glb",
+      "sha256": "28a4c4665dacfa483546cc8166dd31698c7a0fdb1e678cf9f22e5a2c63f88abc",
+      "bytes": 16892,
+      "gzipBytes": 12908
+    },
+    {
+      "name": "models/bodyparts3d/full-body/pelvis-organs-recovery.glb",
+      "sha256": "d2876cb12fa3f6c71170d18bd6813f96783c47fe12ddf68263bf12e0cae98629",
+      "bytes": 73348,
+      "gzipBytes": 59928
+    },
+    {
+      "name": "models/bodyparts3d/full-body/pelvis-organs.glb",
+      "sha256": "90baaeb1c521a6b2546e99576bce4b231c6e068b4fa3d48dbd4cb7eb355f93c3",
+      "bytes": 49544,
+      "gzipBytes": 41857
+    },
+    {
+      "name": "models/bodyparts3d/full-body/pelvis-skeleton.glb",
+      "sha256": "58e1008b8064e8a61ce659e0246615960826772abe7070f66496eadcd86f4746",
+      "bytes": 86960,
+      "gzipBytes": 74868
+    },
+    {
+      "name": "models/bodyparts3d/full-body/pelvis-vessels-recovery.glb",
+      "sha256": "e089b9e9d3eac8ec6c1731ddc2ab0972ae0be041d5175cdedc5cc0bfb8eb09ad",
+      "bytes": 122592,
+      "gzipBytes": 97055
+    },
+    {
+      "name": "models/bodyparts3d/full-body/shoulder-arm-muscles-dissection.glb",
+      "sha256": "fa709d07df413d2228065f153b6f8f7d951ffa03365052c56e920914d0376b4d",
+      "bytes": 510384,
+      "gzipBytes": 409576
+    },
+    {
+      "name": "models/bodyparts3d/full-body/shoulder-arm-muscles.glb",
+      "sha256": "01c2e96da438f1761a3e6d6121f54e04c866073d396111ec6e018b0cc689a3e8",
+      "bytes": 2623088,
+      "gzipBytes": 2185654
+    },
+    {
+      "name": "models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+      "sha256": "f75517af8f2d72d1fd890c20fea3375948addab8eaee42f9217dcfd5754d3649",
+      "bytes": 1162668,
+      "gzipBytes": 984652
+    },
+    {
+      "name": "models/bodyparts3d/full-body/shoulder-arm-vessels-inventory.glb",
+      "sha256": "d12d81529a1408f934b5055462bb39f0f79c84e25c878a25225652b9baac3e84",
+      "bytes": 616356,
+      "gzipBytes": 514060
+    },
+    {
+      "name": "models/bodyparts3d/full-body/shoulder-arm-vessels-recovery.glb",
+      "sha256": "2630e1f06ada20094814ee1a5245e9d420627a15869c3b6a3c51763be21da84c",
+      "bytes": 575076,
+      "gzipBytes": 482977
+    },
+    {
+      "name": "models/bodyparts3d/full-body/spine-connective-gaps.glb",
+      "sha256": "aae6dc0589fa3dc9ce5ea51ff28520a077290adb5b92fa4570c3cf20b2090e02",
+      "bytes": 934264,
+      "gzipBytes": 784303
+    },
+    {
+      "name": "models/bodyparts3d/full-body/spine-muscles-axial-detail.glb",
+      "sha256": "d7e3b995e0c18e3ebe7e7b97a11fbcd1e228218e0010462614e4938acf7f87ee",
+      "bytes": 381316,
+      "gzipBytes": 304540
+    },
+    {
+      "name": "models/bodyparts3d/full-body/spine-muscles-dissection.glb",
+      "sha256": "05090ad649d93cea83e30d8156afdd18c0e21dd29c1dca7f96749d6ace611841",
+      "bytes": 804760,
+      "gzipBytes": 685673
+    },
+    {
+      "name": "models/bodyparts3d/full-body/spine-muscles.glb",
+      "sha256": "6cc6a2b15cda5a0defc35fdc2bebda607eac042571fec74bb1d2caba51748404",
+      "bytes": 5127960,
+      "gzipBytes": 4344091
+    },
+    {
+      "name": "models/bodyparts3d/full-body/spine-nerves.glb",
+      "sha256": "e88d03a126729c550c2aa9524eb3c466dc222cf874a327ec2d97432e97c8814d",
+      "bytes": 14420,
+      "gzipBytes": 12444
+    },
+    {
+      "name": "models/bodyparts3d/full-body/spine-skeleton.glb",
+      "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957",
+      "bytes": 1286192,
+      "gzipBytes": 1099115
+    },
+    {
+      "name": "models/bodyparts3d/full-body/thigh-connective-axial-detail.glb",
+      "sha256": "a4df87c97da679dd55fa2640f502c6d9a75ad83afc6c8beb9de334f0aa0b0b17",
+      "bytes": 620568,
+      "gzipBytes": 533138
+    },
+    {
+      "name": "models/bodyparts3d/full-body/thigh-muscles-dissection.glb",
+      "sha256": "f39c954742853c7e583570779b70a9f3ef844d9061055b083adb9912732c235c",
+      "bytes": 1022092,
+      "gzipBytes": 869047
+    },
+    {
+      "name": "models/bodyparts3d/full-body/thigh-muscles.glb",
+      "sha256": "b67c1e601bb0926ab1a488873ea35b213b4757894ed86918f1eb1b12dc69fbd1",
+      "bytes": 1802128,
+      "gzipBytes": 1487780
+    },
+    {
+      "name": "models/bodyparts3d/full-body/thigh-skeleton.glb",
+      "sha256": "27bd799bd85387beea9fab40cbe2f83a5e780983170db4dfd1d2e0eda8fd2b59",
+      "bytes": 115852,
+      "gzipBytes": 99831
+    },
+    {
+      "name": "models/bodyparts3d/full-body/thigh-vessels-recovery.glb",
+      "sha256": "5037db3cd7d8d0bf2ac6ae2c4656b50e73c71f5f530595b80cd68153afb6c9f7",
+      "bytes": 1415760,
+      "gzipBytes": 1206708
+    },
+    {
+      "name": "models/bodyparts3d/full-body/thorax-connective-recovery.glb",
+      "sha256": "2874e8680da861973d2eac549f62cf4d0b5f4c26472a532b7661c74b2ce96900",
+      "bytes": 289716,
+      "gzipBytes": 239125
+    },
+    {
+      "name": "models/bodyparts3d/full-body/thorax-muscles-dissection.glb",
+      "sha256": "12ff12c3ea0e745193b90842a3c62fd980dabd24e737ece8dee399925ab2e9a0",
+      "bytes": 314224,
+      "gzipBytes": 262385
+    },
+    {
+      "name": "models/bodyparts3d/full-body/thorax-muscles.glb",
+      "sha256": "3bbf7759e54e34272175de042ef4e26c24412b9f073a2f8eea3ce4fe79ebb682",
+      "bytes": 14990372,
+      "gzipBytes": 9410410
+    },
+    {
+      "name": "models/bodyparts3d/full-body/thorax-organs-inventory.glb",
+      "sha256": "b79225df1153cff7b18c0da4db7cd3257db94f16222376c4d6623a5e542bddc3",
+      "bytes": 157388,
+      "gzipBytes": 133372
+    },
+    {
+      "name": "models/bodyparts3d/full-body/thorax-organs-recovery.glb",
+      "sha256": "d62d13a0a9a999495f771ecaee2e9cafe27c8d4fbdac4019fa699a711d6dc355",
+      "bytes": 38832,
+      "gzipBytes": 33222
+    },
+    {
+      "name": "models/bodyparts3d/full-body/thorax-organs.glb",
+      "sha256": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+      "bytes": 3711452,
+      "gzipBytes": 3138277
+    },
+    {
+      "name": "models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+      "sha256": "0ff2ab3d8b16b2c3af0b3320bc85b72512c54af5bfedc3f2159dd2316fa5de60",
+      "bytes": 149456,
+      "gzipBytes": 127131
+    },
+    {
+      "name": "models/bodyparts3d/full-body/thorax-skeleton.glb",
+      "sha256": "9c45f3aef04a0507414a6280b4866d31eda2a9df50ef61acc3071d5d909d12cd",
+      "bytes": 3099336,
+      "gzipBytes": 2632272
+    },
+    {
+      "name": "models/bodyparts3d/full-body/thorax-vessels-inventory.glb",
+      "sha256": "8071f97ac5b843ab55e8bf019918947ab9c363b1e1901faebefa619e5345fe6f",
+      "bytes": 483532,
+      "gzipBytes": 410199
+    },
+    {
+      "name": "models/bodyparts3d/full-body/thorax-vessels-recovery.glb",
+      "sha256": "0c82e1cb2960c6f2474f2b4759974adab5871d8074a2f4e3712e1c3a37a48ca7",
+      "bytes": 1131748,
+      "gzipBytes": 942467
+    },
+    {
+      "name": "models/bodyparts3d/full-body/thorax-vessels-thoracic-detail.glb",
+      "sha256": "bd86da53fb00401a01db7e321ca14b0bfec784b53a496a22dc5e6338db3d0044",
+      "bytes": 91700,
+      "gzipBytes": 77126
+    },
+    {
+      "name": "models/bodyparts3d/genicular-arteries/genicular-arteries.glb",
+      "sha256": "a62ea69e56014790059ecd85cf9281bebb93280220b5a5677954c85b01ef5e9a",
+      "bytes": 403484,
+      "gzipBytes": 342933
+    },
+    {
+      "name": "models/bodyparts3d/hepatic-veins/hepatic-veins.glb",
+      "sha256": "1f8922b93ec4c92bf6d695de9b75a00fb6f1552522125ca25861b1ed04f403cf",
+      "bytes": 256984,
+      "gzipBytes": 217698
+    },
+    {
+      "name": "models/bodyparts3d/hepatic/hepatic-branches.glb",
+      "sha256": "4cf393e8b9bce6637f139b6e85d47be0098aac52103bbacfba3cc399747d9857",
+      "bytes": 1065752,
+      "gzipBytes": 895498
+    },
+    {
+      "name": "models/bodyparts3d/hepatic/hepatic-tissue-context.glb",
+      "sha256": "bdec533f350ee74b15e14f073f600599841b060a8275d3c60795646c8bd7523c",
+      "bytes": 2302328,
+      "gzipBytes": 1929789
+    },
+    {
+      "name": "models/bodyparts3d/hippocampi/hippocampi.glb",
+      "sha256": "11cf97da7aa459f1181c79278b41c9c4369f8954eb5d4a00d1bc22b5cf28964e",
+      "bytes": 38548,
+      "gzipBytes": 32024
+    },
+    {
+      "name": "models/bodyparts3d/inferior-epigastric-vessels/inferior-epigastric-vessels.glb",
+      "sha256": "8049ac70b0130cfe597cde159d1716f79f1b686583ea71dc91a5955f6c95925c",
+      "bytes": 526756,
+      "gzipBytes": 437215
+    },
+    {
+      "name": "models/bodyparts3d/inferior-thyroid-arteries/inferior-thyroid-arteries.glb",
+      "sha256": "abe5a85b810ba231cf032546e26e35c6c6243b7cfd880853bf7110345da0b155",
+      "bytes": 20064,
+      "gzipBytes": 16011
+    },
+    {
+      "name": "models/bodyparts3d/limbic-landmarks/limbic-landmarks.glb",
+      "sha256": "9b17997e1211d794777fb1b6fbb6e84252445ae15f1b2cc811c80efad8a8e514",
+      "bytes": 150304,
+      "gzipBytes": 123188
+    },
+    {
+      "name": "models/bodyparts3d/longus-colli/longus-colli.glb",
+      "sha256": "b43cedda733267f51027a892b1ac08a35874853ce65802deca5304e039f6d08f",
+      "bytes": 133088,
+      "gzipBytes": 113372
+    },
+    {
+      "name": "models/bodyparts3d/pancreas/pancreas.glb",
+      "sha256": "716e391810aa6dcc7a415b9d97c20b9cc70cc7e0f4561495a9a700ea73a774bf",
+      "bytes": 229880,
+      "gzipBytes": 193616
+    },
+    {
+      "name": "models/bodyparts3d/pancreatic/pancreatic.glb",
+      "sha256": "e96b496cb36205d2338204d6d0c6f94cb6e3722f7ff9a7a4e176d435d6de0b1c",
+      "bytes": 232172,
+      "gzipBytes": 196372
+    },
+    {
+      "name": "models/bodyparts3d/pelvic-veins/pelvic-veins.glb",
+      "sha256": "d503c707236e8b344ee0c582e8ef935cdb11a5dd6bdbcec2b9f758df4b6f60fa",
+      "bytes": 1183456,
+      "gzipBytes": 1006863
+    },
+    {
+      "name": "models/bodyparts3d/portal-veins/portal-veins.glb",
+      "sha256": "583069160dbd753bb7f64b62667d20134ccbf7554b9bd4cf57b0de0a5a50ee53",
+      "bytes": 76724,
+      "gzipBytes": 62681
+    },
+    {
+      "name": "models/bodyparts3d/pulmonary/pulmonary-left.glb",
+      "sha256": "d4670d3c15580e2a1ef53debab32f08c8199fe6ddaf90af3f3aedb197d93e68d",
+      "bytes": 754268,
+      "gzipBytes": 640535
+    },
+    {
+      "name": "models/bodyparts3d/pulmonary/pulmonary-right.glb",
+      "sha256": "62bb25db79270dbd6fe96598e9438d7bfca3592c5f7559cd1ea320e18bb16eca",
+      "bytes": 1330588,
+      "gzipBytes": 1124296
+    },
+    {
+      "name": "models/bodyparts3d/renal/renal-vascular.glb",
+      "sha256": "410fb0c4179785c91d018e549cd0ffbdd48c8e9919620dc0f32cdac3559c6a3e",
+      "bytes": 266784,
+      "gzipBytes": 223032
+    },
+    {
+      "name": "models/bodyparts3d/short-ciliary/short-ciliary.glb",
+      "sha256": "9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5",
+      "bytes": 65264,
+      "gzipBytes": 35516
+    },
+    {
+      "name": "models/bodyparts3d/subscapular-arteries/subscapular-arteries.glb",
+      "sha256": "6e7ccebe78f6a8c89b556e5e1256d755801725590c4625bebd3fecd6d93f04b3",
+      "bytes": 31116,
+      "gzipBytes": 25578
+    },
+    {
+      "name": "models/bodyparts3d/tentorium/tentorium.glb",
+      "sha256": "b7b35094243dab53b9681c98d5123aa4b93a881fb0e48de4a8d7f32186007d4c",
+      "bytes": 396152,
+      "gzipBytes": 328171
+    },
+    {
+      "name": "models/bodyparts3d/ventricles/ventricles.glb",
+      "sha256": "e99326a0fd0b0bdc0a64d2a1adbb7a63c758af6f765199b8febe851e62b9eab1",
+      "bytes": 846988,
+      "gzipBytes": 711342
+    },
+    {
+      "name": "models/bodyparts3d/visual-pathway/visual-pathway.glb",
+      "sha256": "c9698e52e4678c06a5ed5df8212e3ecb1ce89d9a25d4e1859f0ec5be7d4864bc",
+      "bytes": 120068,
+      "gzipBytes": 100185
+    },
+    {
+      "name": "models/hra-pelvis/pelvis.glb",
+      "sha256": "f18f1f0e3c6e8c0562b6b66864a8d786ffdb9e6a688da9288550fad6e491b866",
+      "bytes": 3796080,
+      "gzipBytes": 3257029
+    },
+    {
+      "name": "models/hra-renal/kidneys.glb",
+      "sha256": "bd5d2affb912f135c8c8da7e7892fbc906ebae017ed7042e900646c2b6332cfc",
+      "bytes": 3557552,
+      "gzipBytes": 2993969
+    },
+    {
+      "name": "models/um-knee/knee.glb",
+      "sha256": "cf61571a8c80f463805b1362bb81b3d9eec3c62a1780c7288355e4a20fa8515b",
+      "bytes": 5298360,
+      "gzipBytes": 4601320
+    },
+    {
+      "name": "models/um-limb/foot.glb",
+      "sha256": "dbd323ceaa7385977905b8aa9dfbfa2c03a9e7ca02c3084b5fd8d94e933a14d5",
+      "bytes": 2676564,
+      "gzipBytes": 2303040
+    },
+    {
+      "name": "models/um-limb/hip-thigh.glb",
+      "sha256": "72470f8171fcfe7b7eb397ea86be47f2ec781a4c12b4c9755213d91e4f04f262",
+      "bytes": 11143104,
+      "gzipBytes": 8684598
+    },
+    {
+      "name": "models/um-limb/leg.glb",
+      "sha256": "76698dfcc0ed1710b06227cfccc5eb574cd03534966a406c9252899a7337437c",
+      "bytes": 9251564,
+      "gzipBytes": 7998049
+    },
+    {
+      "name": "models/um-limb/thigh.glb",
+      "sha256": "3edb8b2d00673b08631070a682d34d56aba8d55d5aa6398874580afa3036d3d2",
+      "bytes": 19648284,
+      "gzipBytes": 16171040
+    }
+  ],
+  "experiments": [
+    {
+      "rawReport": "work/atlas-delivery-load-results-20260929.json",
+      "rawSha256": "0d5597e2eaea56f27cdf28ca3c0af4c124230a393dfec2f54bdf358b10a12ee4",
+      "browserVersion": "Not recorded in exploratory first pass",
+      "settings": {
+        "viewport": {
+          "width": 375,
+          "height": 812
+        },
+        "deviceScaleFactor": 1,
+        "isMobile": true,
+        "hasTouch": true
+      },
+      "network": {
+        "offline": false,
+        "latency": 150,
+        "downloadThroughput": 1125000,
+        "uploadThroughput": 1125000
+      },
+      "cpuSlowdown": 4,
+      "definition": "Existing renderer ready + all requested groups loaded; checked across two animation frames. Not visual accuracy, field performance or clinical readiness.",
+      "summary": [
+        {
+          "mode": "identity",
+          "medianReadyMs": 16770.19999999553,
+          "medianRendererMs": 7942.60000000149,
+          "medianModelBytes": 9461616
+        },
+        {
+          "mode": "gzip",
+          "medianReadyMs": 10598.80000000447,
+          "medianRendererMs": 3121.60000000149,
+          "medianModelBytes": 7940298
+        },
+        {
+          "mode": "gzip-preload",
+          "medianReadyMs": 10552.5,
+          "medianRendererMs": 3095.1999999955297,
+          "medianModelBytes": 7940298
+        }
+      ],
+      "runs": [
+        {
+          "round": 0,
+          "mode": "identity",
+          "probe": {
+            "firstLoading": 6618.80000000447,
+            "rendererReady": 7940.30000000447,
+            "ready": 16742.40000000596,
+            "failed": false
+          },
+          "errors": [],
+          "resources": [
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-UP-DVxHv.js",
+              "start": 185.90000000596046,
+              "end": 4116.4000000059605,
+              "transfer": 2264849,
+              "encoded": 2264549,
+              "decoded": 2264549
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/rolldown-runtime-hePW80VL.js",
+              "start": 186.60000000149012,
+              "end": 361.80000000447035,
+              "transfer": 1016,
+              "encoded": 716,
+              "decoded": 716
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/anatomy-load-state-BP8N43td.js",
+              "start": 187,
+              "end": 1418.2000000029802,
+              "transfer": 243226,
+              "encoded": 242926,
+              "decoded": 242926
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-display-catalog-CMqiQfzT.js",
+              "start": 187.30000000447035,
+              "end": 2012.2000000029802,
+              "transfer": 450508,
+              "encoded": 450208,
+              "decoded": 450208
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/neuroanatomy-DKkDnLNH.js",
+              "start": 187.60000000149012,
+              "end": 564.6000000014901,
+              "transfer": 7679,
+              "encoded": 7379,
+              "decoded": 7379
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-D7Ls4Pd3.js",
+              "start": 187.90000000596046,
+              "end": 2962.3000000044703,
+              "transfer": 932094,
+              "encoded": 931794,
+              "decoded": 931794
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-C3JV0uJQ.css",
+              "start": 188.20000000298023,
+              "end": 392.40000000596046,
+              "transfer": 8503,
+              "encoded": 8203,
+              "decoded": 8203
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-iW70jpiL.css",
+              "start": 188.40000000596046,
+              "end": 1589.4000000059605,
+              "transfer": 292196,
+              "encoded": 291896,
+              "decoded": 291896
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-light.png",
+              "start": 4396.60000000149,
+              "end": 4746.4000000059605,
+              "transfer": 122118,
+              "encoded": 121818,
+              "decoded": 121818
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/catalog.json",
+              "start": 4436.5,
+              "end": 6154,
+              "transfer": 1652055,
+              "encoded": 1651755,
+              "decoded": 1651755
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D3l4i9HZ.js",
+              "start": 6413.70000000298,
+              "end": 7653.70000000298,
+              "transfer": 1077144,
+              "encoded": 1076844,
+              "decoded": 1076844
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D9W1oC7m.css",
+              "start": 6414.5,
+              "end": 6593.4000000059605,
+              "transfer": 3493,
+              "encoded": 3193,
+              "decoded": 3193
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-dark.png",
+              "start": 6619.4000000059605,
+              "end": 6983.60000000149,
+              "transfer": 111731,
+              "encoded": 111431,
+              "decoded": 111431
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+              "start": 7824.5,
+              "end": 15760.30000000447,
+              "transfer": 2355684,
+              "encoded": 2355384,
+              "decoded": 2355384
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+              "start": 7827,
+              "end": 8451.20000000298,
+              "transfer": 87260,
+              "encoded": 86960,
+              "decoded": 86960
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-skeleton.glb",
+              "start": 7828,
+              "end": 13865.60000000149,
+              "transfer": 1286492,
+              "encoded": 1286192,
+              "decoded": 1286192
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/foot-skeleton.glb",
+              "start": 7829,
+              "end": 11156.90000000596,
+              "transfer": 612748,
+              "encoded": 612448,
+              "decoded": 612448
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-skeleton.glb",
+              "start": 7830.20000000298,
+              "end": 10205.5,
+              "transfer": 417116,
+              "encoded": 416816,
+              "decoded": 416816
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton.glb",
+              "start": 7831.10000000149,
+              "end": 16431.60000000149,
+              "transfer": 3099636,
+              "encoded": 3099336,
+              "decoded": 3099336
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+              "start": 7831.80000000447,
+              "end": 13865.40000000596,
+              "transfer": 1162968,
+              "encoded": 1162668,
+              "decoded": 1162668
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-skeleton.glb",
+              "start": 7832.60000000149,
+              "end": 10986.30000000447,
+              "transfer": 116152,
+              "encoded": 115852,
+              "decoded": 115852
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-skeleton.glb",
+              "start": 7833.5,
+              "end": 11733.5,
+              "transfer": 119076,
+              "encoded": 118776,
+              "decoded": 118776
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/forearm-skeleton.glb",
+              "start": 7834.20000000298,
+              "end": 11640.60000000149,
+              "transfer": 58028,
+              "encoded": 57728,
+              "decoded": 57728
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+              "start": 7834.9000000059605,
+              "end": 12468.90000000596,
+              "transfer": 149756,
+              "encoded": 149456,
+              "decoded": 149456
+            }
+          ]
+        },
+        {
+          "round": 0,
+          "mode": "gzip",
+          "probe": {
+            "firstLoading": 2545.2999999970198,
+            "rendererReady": 3123.5,
+            "ready": 10610.29999999702,
+            "failed": false
+          },
+          "errors": [],
+          "resources": [
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-UP-DVxHv.js",
+              "start": 184.79999999701977,
+              "end": 1311.3999999985099,
+              "transfer": 577006,
+              "encoded": 576706,
+              "decoded": 2264549
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/rolldown-runtime-hePW80VL.js",
+              "start": 185.19999999552965,
+              "end": 361.59999999403954,
+              "transfer": 728,
+              "encoded": 428,
+              "decoded": 716
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/anatomy-load-state-BP8N43td.js",
+              "start": 185.39999999850988,
+              "end": 642.3999999985099,
+              "transfer": 77228,
+              "encoded": 76928,
+              "decoded": 242926
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-display-catalog-CMqiQfzT.js",
+              "start": 185.59999999403954,
+              "end": 732.8999999985099,
+              "transfer": 114015,
+              "encoded": 113715,
+              "decoded": 450208
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/neuroanatomy-DKkDnLNH.js",
+              "start": 185.79999999701977,
+              "end": 534.0999999940395,
+              "transfer": 2899,
+              "encoded": 2599,
+              "decoded": 7379
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-D7Ls4Pd3.js",
+              "start": 186,
+              "end": 1044.7999999970198,
+              "transfer": 233516,
+              "encoded": 233216,
+              "decoded": 931794
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-C3JV0uJQ.css",
+              "start": 186.19999999552965,
+              "end": 361.79999999701977,
+              "transfer": 2096,
+              "encoded": 1796,
+              "decoded": 8203
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-iW70jpiL.css",
+              "start": 186.39999999850988,
+              "end": 517.8999999985099,
+              "transfer": 47900,
+              "encoded": 47600,
+              "decoded": 291896
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-light.png",
+              "start": 1583.6999999955297,
+              "end": 1937.0999999940395,
+              "transfer": 121243,
+              "encoded": 120943,
+              "decoded": 121818
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/catalog.json",
+              "start": 1620.8999999985099,
+              "end": 2077.89999999851,
+              "transfer": 242368,
+              "encoded": 242068,
+              "decoded": 1651755
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D3l4i9HZ.js",
+              "start": 2338,
+              "end": 2841.0999999940395,
+              "transfer": 292230,
+              "encoded": 291930,
+              "decoded": 1076844
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D9W1oC7m.css",
+              "start": 2338.7999999970198,
+              "end": 2515,
+              "transfer": 1358,
+              "encoded": 1058,
+              "decoded": 3193
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-dark.png",
+              "start": 2546.1999999955297,
+              "end": 2873.0999999940395,
+              "transfer": 110890,
+              "encoded": 110590,
+              "decoded": 111431
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+              "start": 3008,
+              "end": 9701.19999999553,
+              "transfer": 1976198,
+              "encoded": 1975898,
+              "decoded": 2355384
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+              "start": 3010.1999999955297,
+              "end": 3576.2999999970198,
+              "transfer": 75168,
+              "encoded": 74868,
+              "decoded": 86960
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-skeleton.glb",
+              "start": 3011.1999999955297,
+              "end": 8121,
+              "transfer": 1099415,
+              "encoded": 1099115,
+              "decoded": 1286192
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/foot-skeleton.glb",
+              "start": 3012,
+              "end": 5684.29999999702,
+              "transfer": 484011,
+              "encoded": 483711,
+              "decoded": 612448
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-skeleton.glb",
+              "start": 3013,
+              "end": 4839.89999999851,
+              "transfer": 315745,
+              "encoded": 315445,
+              "decoded": 416816
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton.glb",
+              "start": 3013.7999999970198,
+              "end": 10294.89999999851,
+              "transfer": 2632572,
+              "encoded": 2632272,
+              "decoded": 3099336
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+              "start": 3014.39999999851,
+              "end": 8105,
+              "transfer": 984952,
+              "encoded": 984652,
+              "decoded": 1162668
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-skeleton.glb",
+              "start": 3015.1999999955297,
+              "end": 5541,
+              "transfer": 100131,
+              "encoded": 99831,
+              "decoded": 115852
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-skeleton.glb",
+              "start": 3016,
+              "end": 6199.19999999553,
+              "transfer": 100068,
+              "encoded": 99768,
+              "decoded": 118776
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/forearm-skeleton.glb",
+              "start": 3016.7999999970198,
+              "end": 6090.69999999553,
+              "transfer": 47907,
+              "encoded": 47607,
+              "decoded": 57728
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+              "start": 3017.5,
+              "end": 6811.19999999553,
+              "transfer": 127431,
+              "encoded": 127131,
+              "decoded": 149456
+            }
+          ]
+        },
+        {
+          "round": 0,
+          "mode": "gzip-preload",
+          "probe": {
+            "firstLoading": 2873.3000000044703,
+            "rendererReady": 3167.9000000059605,
+            "ready": 10631.60000000149,
+            "failed": false
+          },
+          "errors": [],
+          "resources": [
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-UP-DVxHv.js",
+              "start": 187.80000000447035,
+              "end": 1580.2000000029802,
+              "transfer": 577006,
+              "encoded": 576706,
+              "decoded": 2264549
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/rolldown-runtime-hePW80VL.js",
+              "start": 188.20000000298023,
+              "end": 363.1000000014901,
+              "transfer": 728,
+              "encoded": 428,
+              "decoded": 716
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/anatomy-load-state-BP8N43td.js",
+              "start": 188.40000000596046,
+              "end": 644.5,
+              "transfer": 77228,
+              "encoded": 76928,
+              "decoded": 242926
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-display-catalog-CMqiQfzT.js",
+              "start": 188.60000000149012,
+              "end": 752.9000000059605,
+              "transfer": 114015,
+              "encoded": 113715,
+              "decoded": 450208
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/neuroanatomy-DKkDnLNH.js",
+              "start": 188.90000000596046,
+              "end": 536.2000000029802,
+              "transfer": 2899,
+              "encoded": 2599,
+              "decoded": 7379
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-D7Ls4Pd3.js",
+              "start": 189,
+              "end": 1207.4000000059605,
+              "transfer": 233516,
+              "encoded": 233216,
+              "decoded": 931794
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-C3JV0uJQ.css",
+              "start": 189.20000000298023,
+              "end": 363.20000000298023,
+              "transfer": 2096,
+              "encoded": 1796,
+              "decoded": 8203
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-iW70jpiL.css",
+              "start": 189.40000000596046,
+              "end": 536.2000000029802,
+              "transfer": 47900,
+              "encoded": 47600,
+              "decoded": 291896
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D3l4i9HZ.js",
+              "start": 189.60000000149012,
+              "end": 1408.5,
+              "transfer": 292230,
+              "encoded": 291930,
+              "decoded": 1076844
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-light.png",
+              "start": 1895.3000000044703,
+              "end": 2232.3000000044703,
+              "transfer": 121243,
+              "encoded": 120943,
+              "decoded": 121818
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/catalog.json",
+              "start": 1916.4000000059605,
+              "end": 2387.60000000149,
+              "transfer": 242368,
+              "encoded": 242068,
+              "decoded": 1651755
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D9W1oC7m.css",
+              "start": 2656.8000000044703,
+              "end": 2822.9000000059605,
+              "transfer": 1358,
+              "encoded": 1058,
+              "decoded": 3193
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-dark.png",
+              "start": 2874,
+              "end": 3134,
+              "transfer": 110890,
+              "encoded": 110590,
+              "decoded": 111431
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+              "start": 3042.2000000029802,
+              "end": 9691.10000000149,
+              "transfer": 1976198,
+              "encoded": 1975898,
+              "decoded": 2355384
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+              "start": 3044.4000000059605,
+              "end": 3568.2000000029802,
+              "transfer": 75168,
+              "encoded": 74868,
+              "decoded": 86960
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-skeleton.glb",
+              "start": 3045.2000000029802,
+              "end": 8130,
+              "transfer": 1099415,
+              "encoded": 1099115,
+              "decoded": 1286192
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/foot-skeleton.glb",
+              "start": 3046,
+              "end": 5697.80000000447,
+              "transfer": 484011,
+              "encoded": 483711,
+              "decoded": 612448
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-skeleton.glb",
+              "start": 3047,
+              "end": 4852.70000000298,
+              "transfer": 315745,
+              "encoded": 315445,
+              "decoded": 416816
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton.glb",
+              "start": 3047.60000000149,
+              "end": 10299.20000000298,
+              "transfer": 2632572,
+              "encoded": 2632272,
+              "decoded": 3099336
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+              "start": 3048.4000000059605,
+              "end": 8115.4000000059605,
+              "transfer": 984952,
+              "encoded": 984652,
+              "decoded": 1162668
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-skeleton.glb",
+              "start": 3049,
+              "end": 5541.9000000059605,
+              "transfer": 100131,
+              "encoded": 99831,
+              "decoded": 115852
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-skeleton.glb",
+              "start": 3049.8000000044703,
+              "end": 6179.60000000149,
+              "transfer": 100068,
+              "encoded": 99768,
+              "decoded": 118776
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/forearm-skeleton.glb",
+              "start": 3050.60000000149,
+              "end": 6117.10000000149,
+              "transfer": 47907,
+              "encoded": 47607,
+              "decoded": 57728
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+              "start": 3051.3000000044703,
+              "end": 6834.60000000149,
+              "transfer": 127431,
+              "encoded": 127131,
+              "decoded": 149456
+            }
+          ]
+        },
+        {
+          "round": 1,
+          "mode": "gzip",
+          "probe": {
+            "firstLoading": 2534.10000000149,
+            "rendererReady": 3113.39999999851,
+            "ready": 10580.89999999851,
+            "failed": false
+          },
+          "errors": [],
+          "resources": [
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-UP-DVxHv.js",
+              "start": 189.29999999701977,
+              "end": 1314.1000000014901,
+              "transfer": 577006,
+              "encoded": 576706,
+              "decoded": 2264549
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/rolldown-runtime-hePW80VL.js",
+              "start": 189.89999999850988,
+              "end": 363.69999999552965,
+              "transfer": 728,
+              "encoded": 428,
+              "decoded": 716
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/anatomy-load-state-BP8N43td.js",
+              "start": 190.10000000149012,
+              "end": 644.6999999955297,
+              "transfer": 77228,
+              "encoded": 76928,
+              "decoded": 242926
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-display-catalog-CMqiQfzT.js",
+              "start": 190.39999999850988,
+              "end": 737.7999999970198,
+              "transfer": 114015,
+              "encoded": 113715,
+              "decoded": 450208
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/neuroanatomy-DKkDnLNH.js",
+              "start": 190.69999999552965,
+              "end": 534.3999999985099,
+              "transfer": 2899,
+              "encoded": 2599,
+              "decoded": 7379
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-D7Ls4Pd3.js",
+              "start": 190.69999999552965,
+              "end": 1034.6000000014901,
+              "transfer": 233516,
+              "encoded": 233216,
+              "decoded": 931794
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-C3JV0uJQ.css",
+              "start": 190.89999999850988,
+              "end": 363.79999999701977,
+              "transfer": 2096,
+              "encoded": 1796,
+              "decoded": 8203
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-iW70jpiL.css",
+              "start": 191.19999999552965,
+              "end": 518.1999999955297,
+              "transfer": 47900,
+              "encoded": 47600,
+              "decoded": 291896
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-light.png",
+              "start": 1582.2999999970198,
+              "end": 1908,
+              "transfer": 121243,
+              "encoded": 120943,
+              "decoded": 121818
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/catalog.json",
+              "start": 1620.1999999955297,
+              "end": 2065.10000000149,
+              "transfer": 242368,
+              "encoded": 242068,
+              "decoded": 1651755
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D3l4i9HZ.js",
+              "start": 2326.2999999970198,
+              "end": 2827.89999999851,
+              "transfer": 292230,
+              "encoded": 291930,
+              "decoded": 1076844
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D9W1oC7m.css",
+              "start": 2327.2999999970198,
+              "end": 2499.10000000149,
+              "transfer": 1358,
+              "encoded": 1058,
+              "decoded": 3193
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-dark.png",
+              "start": 2534.6999999955297,
+              "end": 2858.2999999970198,
+              "transfer": 110890,
+              "encoded": 110590,
+              "decoded": 111431
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+              "start": 2995.10000000149,
+              "end": 9663.29999999702,
+              "transfer": 1976198,
+              "encoded": 1975898,
+              "decoded": 2355384
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+              "start": 2997.10000000149,
+              "end": 3573.89999999851,
+              "transfer": 75168,
+              "encoded": 74868,
+              "decoded": 86960
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-skeleton.glb",
+              "start": 2998,
+              "end": 8101.69999999553,
+              "transfer": 1099415,
+              "encoded": 1099115,
+              "decoded": 1286192
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/foot-skeleton.glb",
+              "start": 2999,
+              "end": 5661.39999999851,
+              "transfer": 484011,
+              "encoded": 483711,
+              "decoded": 612448
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-skeleton.glb",
+              "start": 2999.7999999970198,
+              "end": 4816.39999999851,
+              "transfer": 315745,
+              "encoded": 315445,
+              "decoded": 416816
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton.glb",
+              "start": 3000.7999999970198,
+              "end": 10269.10000000149,
+              "transfer": 2632572,
+              "encoded": 2632272,
+              "decoded": 3099336
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+              "start": 3001.60000000149,
+              "end": 8099.79999999702,
+              "transfer": 984952,
+              "encoded": 984652,
+              "decoded": 1162668
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-skeleton.glb",
+              "start": 3002.39999999851,
+              "end": 5505.69999999553,
+              "transfer": 100131,
+              "encoded": 99831,
+              "decoded": 115852
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-skeleton.glb",
+              "start": 3003.39999999851,
+              "end": 6159.89999999851,
+              "transfer": 100068,
+              "encoded": 99768,
+              "decoded": 118776
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/forearm-skeleton.glb",
+              "start": 3004.1999999955297,
+              "end": 6082.39999999851,
+              "transfer": 47907,
+              "encoded": 47607,
+              "decoded": 57728
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+              "start": 3005,
+              "end": 6816.10000000149,
+              "transfer": 127431,
+              "encoded": 127131,
+              "decoded": 149456
+            }
+          ]
+        },
+        {
+          "round": 1,
+          "mode": "gzip-preload",
+          "probe": {
+            "firstLoading": 2794.89999999851,
+            "rendererReady": 3080.89999999851,
+            "ready": 10552.5,
+            "failed": false
+          },
+          "errors": [],
+          "resources": [
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-UP-DVxHv.js",
+              "start": 182.19999999552965,
+              "end": 1567.8999999985099,
+              "transfer": 577006,
+              "encoded": 576706,
+              "decoded": 2264549
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/rolldown-runtime-hePW80VL.js",
+              "start": 182.79999999701977,
+              "end": 355.5,
+              "transfer": 728,
+              "encoded": 428,
+              "decoded": 716
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/anatomy-load-state-BP8N43td.js",
+              "start": 183,
+              "end": 636.6999999955297,
+              "transfer": 77228,
+              "encoded": 76928,
+              "decoded": 242926
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-display-catalog-CMqiQfzT.js",
+              "start": 183.39999999850988,
+              "end": 760.2999999970198,
+              "transfer": 114015,
+              "encoded": 113715,
+              "decoded": 450208
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/neuroanatomy-DKkDnLNH.js",
+              "start": 183.59999999403954,
+              "end": 527.7999999970198,
+              "transfer": 2899,
+              "encoded": 2599,
+              "decoded": 7379
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-D7Ls4Pd3.js",
+              "start": 183.79999999701977,
+              "end": 1197.5999999940395,
+              "transfer": 233516,
+              "encoded": 233216,
+              "decoded": 931794
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-C3JV0uJQ.css",
+              "start": 184.39999999850988,
+              "end": 355.79999999701977,
+              "transfer": 2096,
+              "encoded": 1796,
+              "decoded": 8203
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-iW70jpiL.css",
+              "start": 184.5,
+              "end": 511.79999999701977,
+              "transfer": 47900,
+              "encoded": 47600,
+              "decoded": 291896
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D3l4i9HZ.js",
+              "start": 184.79999999701977,
+              "end": 1381.5,
+              "transfer": 292230,
+              "encoded": 291930,
+              "decoded": 1076844
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-light.png",
+              "start": 1837.6999999955297,
+              "end": 2162.5999999940395,
+              "transfer": 121243,
+              "encoded": 120943,
+              "decoded": 121818
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/catalog.json",
+              "start": 1875.2999999970198,
+              "end": 2332.39999999851,
+              "transfer": 242368,
+              "encoded": 242068,
+              "decoded": 1651755
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D9W1oC7m.css",
+              "start": 2590.2999999970198,
+              "end": 2770.1999999955297,
+              "transfer": 1358,
+              "encoded": 1058,
+              "decoded": 3193
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-dark.png",
+              "start": 2795.5,
+              "end": 3063.2999999970198,
+              "transfer": 110890,
+              "encoded": 110590,
+              "decoded": 111431
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+              "start": 2964.5999999940395,
+              "end": 9624.79999999702,
+              "transfer": 1976198,
+              "encoded": 1975898,
+              "decoded": 2355384
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+              "start": 2966.7999999970198,
+              "end": 3515.89999999851,
+              "transfer": 75168,
+              "encoded": 74868,
+              "decoded": 86960
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-skeleton.glb",
+              "start": 2968,
+              "end": 8046.0999999940395,
+              "transfer": 1099415,
+              "encoded": 1099115,
+              "decoded": 1286192
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/foot-skeleton.glb",
+              "start": 2968.7999999970198,
+              "end": 5618.89999999851,
+              "transfer": 484011,
+              "encoded": 483711,
+              "decoded": 612448
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-skeleton.glb",
+              "start": 2969.5999999940395,
+              "end": 4763.0999999940395,
+              "transfer": 315745,
+              "encoded": 315445,
+              "decoded": 416816
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton.glb",
+              "start": 2970.39999999851,
+              "end": 10235.79999999702,
+              "transfer": 2632572,
+              "encoded": 2632272,
+              "decoded": 3099336
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+              "start": 2971.0999999940395,
+              "end": 8031.5999999940395,
+              "transfer": 984952,
+              "encoded": 984652,
+              "decoded": 1162668
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-skeleton.glb",
+              "start": 2971.89999999851,
+              "end": 5463.89999999851,
+              "transfer": 100131,
+              "encoded": 99831,
+              "decoded": 115852
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-skeleton.glb",
+              "start": 2972.5999999940395,
+              "end": 6113.5,
+              "transfer": 100068,
+              "encoded": 99768,
+              "decoded": 118776
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/forearm-skeleton.glb",
+              "start": 2973.39999999851,
+              "end": 6036.29999999702,
+              "transfer": 47907,
+              "encoded": 47607,
+              "decoded": 57728
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+              "start": 2974.0999999940395,
+              "end": 6752.79999999702,
+              "transfer": 127431,
+              "encoded": 127131,
+              "decoded": 149456
+            }
+          ]
+        },
+        {
+          "round": 1,
+          "mode": "identity",
+          "probe": {
+            "firstLoading": 6637,
+            "rendererReady": 7942.60000000149,
+            "ready": 16770.19999999553,
+            "failed": false
+          },
+          "errors": [],
+          "resources": [
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-UP-DVxHv.js",
+              "start": 192.89999999850988,
+              "end": 4127,
+              "transfer": 2264849,
+              "encoded": 2264549,
+              "decoded": 2264549
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/rolldown-runtime-hePW80VL.js",
+              "start": 193.29999999701977,
+              "end": 367.6000000014901,
+              "transfer": 1016,
+              "encoded": 716,
+              "decoded": 716
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/anatomy-load-state-BP8N43td.js",
+              "start": 193.5,
+              "end": 1429.6999999955297,
+              "transfer": 243226,
+              "encoded": 242926,
+              "decoded": 242926
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-display-catalog-CMqiQfzT.js",
+              "start": 193.79999999701977,
+              "end": 2022.7999999970198,
+              "transfer": 450508,
+              "encoded": 450208,
+              "decoded": 450208
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/neuroanatomy-DKkDnLNH.js",
+              "start": 194.10000000149012,
+              "end": 570.5,
+              "transfer": 7679,
+              "encoded": 7379,
+              "decoded": 7379
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-D7Ls4Pd3.js",
+              "start": 194.29999999701977,
+              "end": 2971.1999999955297,
+              "transfer": 932094,
+              "encoded": 931794,
+              "decoded": 931794
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-C3JV0uJQ.css",
+              "start": 194.5,
+              "end": 398.69999999552965,
+              "transfer": 8503,
+              "encoded": 8203,
+              "decoded": 8203
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-iW70jpiL.css",
+              "start": 194.69999999552965,
+              "end": 1603.1999999955297,
+              "transfer": 292196,
+              "encoded": 291896,
+              "decoded": 291896
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-light.png",
+              "start": 4406.60000000149,
+              "end": 4757.79999999702,
+              "transfer": 122118,
+              "encoded": 121818,
+              "decoded": 121818
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/catalog.json",
+              "start": 4444.69999999553,
+              "end": 6160.89999999851,
+              "transfer": 1652055,
+              "encoded": 1651755,
+              "decoded": 1651755
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D3l4i9HZ.js",
+              "start": 6424.89999999851,
+              "end": 7662,
+              "transfer": 1077144,
+              "encoded": 1076844,
+              "decoded": 1076844
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D9W1oC7m.css",
+              "start": 6425.69999999553,
+              "end": 6597,
+              "transfer": 3493,
+              "encoded": 3193,
+              "decoded": 3193
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-dark.png",
+              "start": 6637.79999999702,
+              "end": 7001.69999999553,
+              "transfer": 111731,
+              "encoded": 111431,
+              "decoded": 111431
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+              "start": 7826.69999999553,
+              "end": 15785.60000000149,
+              "transfer": 2355684,
+              "encoded": 2355384,
+              "decoded": 2355384
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+              "start": 7829,
+              "end": 8472,
+              "transfer": 87260,
+              "encoded": 86960,
+              "decoded": 86960
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-skeleton.glb",
+              "start": 7829.79999999702,
+              "end": 13860.79999999702,
+              "transfer": 1286492,
+              "encoded": 1286192,
+              "decoded": 1286192
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/foot-skeleton.glb",
+              "start": 7830.39999999851,
+              "end": 11178,
+              "transfer": 612748,
+              "encoded": 612448,
+              "decoded": 612448
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-skeleton.glb",
+              "start": 7831.29999999702,
+              "end": 10204.89999999851,
+              "transfer": 417116,
+              "encoded": 416816,
+              "decoded": 416816
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton.glb",
+              "start": 7832.19999999553,
+              "end": 16459.69999999553,
+              "transfer": 3099636,
+              "encoded": 3099336,
+              "decoded": 3099336
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+              "start": 7832.89999999851,
+              "end": 13870.5,
+              "transfer": 1162968,
+              "encoded": 1162668,
+              "decoded": 1162668
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-skeleton.glb",
+              "start": 7833.79999999702,
+              "end": 10991.19999999553,
+              "transfer": 116152,
+              "encoded": 115852,
+              "decoded": 115852
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-skeleton.glb",
+              "start": 7834.39999999851,
+              "end": 11740.19999999553,
+              "transfer": 119076,
+              "encoded": 118776,
+              "decoded": 118776
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/forearm-skeleton.glb",
+              "start": 7835.60000000149,
+              "end": 11647.19999999553,
+              "transfer": 58028,
+              "encoded": 57728,
+              "decoded": 57728
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+              "start": 7836.29999999702,
+              "end": 12472.60000000149,
+              "transfer": 149756,
+              "encoded": 149456,
+              "decoded": 149456
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "mode": "gzip-preload",
+          "probe": {
+            "firstLoading": 2808.39999999851,
+            "rendererReady": 3095.1999999955297,
+            "ready": 10550.39999999851,
+            "failed": false
+          },
+          "errors": [],
+          "resources": [
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-UP-DVxHv.js",
+              "start": 179.79999999701977,
+              "end": 1556.8999999985099,
+              "transfer": 577006,
+              "encoded": 576706,
+              "decoded": 2264549
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/rolldown-runtime-hePW80VL.js",
+              "start": 180.39999999850988,
+              "end": 355,
+              "transfer": 728,
+              "encoded": 428,
+              "decoded": 716
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/anatomy-load-state-BP8N43td.js",
+              "start": 180.59999999403954,
+              "end": 636.6999999955297,
+              "transfer": 77228,
+              "encoded": 76928,
+              "decoded": 242926
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-display-catalog-CMqiQfzT.js",
+              "start": 180.79999999701977,
+              "end": 744,
+              "transfer": 114015,
+              "encoded": 113715,
+              "decoded": 450208
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/neuroanatomy-DKkDnLNH.js",
+              "start": 181,
+              "end": 527.7999999970198,
+              "transfer": 2899,
+              "encoded": 2599,
+              "decoded": 7379
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-D7Ls4Pd3.js",
+              "start": 181.19999999552965,
+              "end": 1198.2999999970198,
+              "transfer": 233516,
+              "encoded": 233216,
+              "decoded": 931794
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-C3JV0uJQ.css",
+              "start": 181.29999999701977,
+              "end": 355.19999999552965,
+              "transfer": 2096,
+              "encoded": 1796,
+              "decoded": 8203
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-iW70jpiL.css",
+              "start": 181.39999999850988,
+              "end": 527.5999999940395,
+              "transfer": 47900,
+              "encoded": 47600,
+              "decoded": 291896
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D3l4i9HZ.js",
+              "start": 181.59999999403954,
+              "end": 1386.2999999970198,
+              "transfer": 292230,
+              "encoded": 291930,
+              "decoded": 1076844
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-light.png",
+              "start": 1828.5,
+              "end": 2178.2999999970198,
+              "transfer": 121243,
+              "encoded": 120943,
+              "decoded": 121818
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/catalog.json",
+              "start": 1867.5,
+              "end": 2332.2999999970198,
+              "transfer": 242368,
+              "encoded": 242068,
+              "decoded": 1651755
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D9W1oC7m.css",
+              "start": 2594.2999999970198,
+              "end": 2766.5,
+              "transfer": 1358,
+              "encoded": 1058,
+              "decoded": 3193
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-dark.png",
+              "start": 2809.0999999940395,
+              "end": 3081.1999999955297,
+              "transfer": 110890,
+              "encoded": 110590,
+              "decoded": 111431
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+              "start": 2974.5,
+              "end": 9606.29999999702,
+              "transfer": 1976198,
+              "encoded": 1975898,
+              "decoded": 2355384
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+              "start": 2976.6999999955297,
+              "end": 3502.0999999940395,
+              "transfer": 75168,
+              "encoded": 74868,
+              "decoded": 86960
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-skeleton.glb",
+              "start": 2977.7999999970198,
+              "end": 8025.5,
+              "transfer": 1099415,
+              "encoded": 1099115,
+              "decoded": 1286192
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/foot-skeleton.glb",
+              "start": 2978.6999999955297,
+              "end": 5619.39999999851,
+              "transfer": 484011,
+              "encoded": 483711,
+              "decoded": 612448
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-skeleton.glb",
+              "start": 2979.5,
+              "end": 4781.39999999851,
+              "transfer": 315745,
+              "encoded": 315445,
+              "decoded": 416816
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton.glb",
+              "start": 2980.1999999955297,
+              "end": 10214.79999999702,
+              "transfer": 2632572,
+              "encoded": 2632272,
+              "decoded": 3099336
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+              "start": 2980.89999999851,
+              "end": 8026.39999999851,
+              "transfer": 984952,
+              "encoded": 984652,
+              "decoded": 1162668
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-skeleton.glb",
+              "start": 2981.6999999955297,
+              "end": 5480,
+              "transfer": 100131,
+              "encoded": 99831,
+              "decoded": 115852
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-skeleton.glb",
+              "start": 2982.5999999940395,
+              "end": 6120,
+              "transfer": 100068,
+              "encoded": 99768,
+              "decoded": 118776
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/forearm-skeleton.glb",
+              "start": 2983.5999999940395,
+              "end": 6042.0999999940395,
+              "transfer": 47907,
+              "encoded": 47607,
+              "decoded": 57728
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+              "start": 2984.1999999955297,
+              "end": 6757.39999999851,
+              "transfer": 127431,
+              "encoded": 127131,
+              "decoded": 149456
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "mode": "identity",
+          "probe": {
+            "firstLoading": 6643.10000000149,
+            "rendererReady": 7967.20000000298,
+            "ready": 16782.30000000447,
+            "failed": false
+          },
+          "errors": [],
+          "resources": [
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-UP-DVxHv.js",
+              "start": 193.30000000447035,
+              "end": 4130.20000000298,
+              "transfer": 2264849,
+              "encoded": 2264549,
+              "decoded": 2264549
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/rolldown-runtime-hePW80VL.js",
+              "start": 193.80000000447035,
+              "end": 372.6000000014901,
+              "transfer": 1016,
+              "encoded": 716,
+              "decoded": 716
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/anatomy-load-state-BP8N43td.js",
+              "start": 194,
+              "end": 1434.6000000014901,
+              "transfer": 243226,
+              "encoded": 242926,
+              "decoded": 242926
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-display-catalog-CMqiQfzT.js",
+              "start": 194.20000000298023,
+              "end": 2029.3000000044703,
+              "transfer": 450508,
+              "encoded": 450208,
+              "decoded": 450208
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/neuroanatomy-DKkDnLNH.js",
+              "start": 194.40000000596046,
+              "end": 576.6000000014901,
+              "transfer": 7679,
+              "encoded": 7379,
+              "decoded": 7379
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-D7Ls4Pd3.js",
+              "start": 194.60000000149012,
+              "end": 2983.9000000059605,
+              "transfer": 932094,
+              "encoded": 931794,
+              "decoded": 931794
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-C3JV0uJQ.css",
+              "start": 194.80000000447035,
+              "end": 404.20000000298023,
+              "transfer": 8503,
+              "encoded": 8203,
+              "decoded": 8203
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-iW70jpiL.css",
+              "start": 195,
+              "end": 1604.3000000044703,
+              "transfer": 292196,
+              "encoded": 291896,
+              "decoded": 291896
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-light.png",
+              "start": 4428.70000000298,
+              "end": 4792.10000000149,
+              "transfer": 122118,
+              "encoded": 121818,
+              "decoded": 121818
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/catalog.json",
+              "start": 4449.80000000447,
+              "end": 6181.60000000149,
+              "transfer": 1652055,
+              "encoded": 1651755,
+              "decoded": 1651755
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D3l4i9HZ.js",
+              "start": 6439.80000000447,
+              "end": 7679.5,
+              "transfer": 1077144,
+              "encoded": 1076844,
+              "decoded": 1076844
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D9W1oC7m.css",
+              "start": 6440.60000000149,
+              "end": 6618.4000000059605,
+              "transfer": 3493,
+              "encoded": 3193,
+              "decoded": 3193
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-dark.png",
+              "start": 6643.70000000298,
+              "end": 7005.20000000298,
+              "transfer": 111731,
+              "encoded": 111431,
+              "decoded": 111431
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+              "start": 7848.4000000059605,
+              "end": 15792.80000000447,
+              "transfer": 2355684,
+              "encoded": 2355384,
+              "decoded": 2355384
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+              "start": 7850.70000000298,
+              "end": 8475.5,
+              "transfer": 87260,
+              "encoded": 86960,
+              "decoded": 86960
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-skeleton.glb",
+              "start": 7851.60000000149,
+              "end": 13888.40000000596,
+              "transfer": 1286492,
+              "encoded": 1286192,
+              "decoded": 1286192
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/foot-skeleton.glb",
+              "start": 7852.4000000059605,
+              "end": 11189.90000000596,
+              "transfer": 612748,
+              "encoded": 612448,
+              "decoded": 612448
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-skeleton.glb",
+              "start": 7853.4000000059605,
+              "end": 10221.90000000596,
+              "transfer": 417116,
+              "encoded": 416816,
+              "decoded": 416816
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton.glb",
+              "start": 7854.30000000447,
+              "end": 16464.30000000447,
+              "transfer": 3099636,
+              "encoded": 3099336,
+              "decoded": 3099336
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+              "start": 7855,
+              "end": 13888.60000000149,
+              "transfer": 1162968,
+              "encoded": 1162668,
+              "decoded": 1162668
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-skeleton.glb",
+              "start": 7855.80000000447,
+              "end": 11004.60000000149,
+              "transfer": 116152,
+              "encoded": 115852,
+              "decoded": 115852
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-skeleton.glb",
+              "start": 7856.60000000149,
+              "end": 11750.80000000447,
+              "transfer": 119076,
+              "encoded": 118776,
+              "decoded": 118776
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/forearm-skeleton.glb",
+              "start": 7857.5,
+              "end": 11658.30000000447,
+              "transfer": 58028,
+              "encoded": 57728,
+              "decoded": 57728
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+              "start": 7858.20000000298,
+              "end": 12485.80000000447,
+              "transfer": 149756,
+              "encoded": 149456,
+              "decoded": 149456
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "mode": "gzip",
+          "probe": {
+            "firstLoading": 2547.60000000149,
+            "rendererReady": 3121.60000000149,
+            "ready": 10598.80000000447,
+            "failed": false
+          },
+          "errors": [],
+          "resources": [
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-UP-DVxHv.js",
+              "start": 189.40000000596046,
+              "end": 1318.6000000014901,
+              "transfer": 577006,
+              "encoded": 576706,
+              "decoded": 2264549
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/rolldown-runtime-hePW80VL.js",
+              "start": 190.10000000149012,
+              "end": 364.5,
+              "transfer": 728,
+              "encoded": 428,
+              "decoded": 716
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/anatomy-load-state-BP8N43td.js",
+              "start": 190.30000000447035,
+              "end": 642.8000000044703,
+              "transfer": 77228,
+              "encoded": 76928,
+              "decoded": 242926
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-display-catalog-CMqiQfzT.js",
+              "start": 190.5,
+              "end": 737.8000000044703,
+              "transfer": 114015,
+              "encoded": 113715,
+              "decoded": 450208
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/neuroanatomy-DKkDnLNH.js",
+              "start": 190.70000000298023,
+              "end": 535.1000000014901,
+              "transfer": 2899,
+              "encoded": 2599,
+              "decoded": 7379
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-D7Ls4Pd3.js",
+              "start": 190.90000000596046,
+              "end": 1049.3000000044703,
+              "transfer": 233516,
+              "encoded": 233216,
+              "decoded": 931794
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-C3JV0uJQ.css",
+              "start": 191,
+              "end": 364.80000000447035,
+              "transfer": 2096,
+              "encoded": 1796,
+              "decoded": 8203
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-iW70jpiL.css",
+              "start": 191.30000000447035,
+              "end": 535,
+              "transfer": 47900,
+              "encoded": 47600,
+              "decoded": 291896
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-light.png",
+              "start": 1595.6000000014901,
+              "end": 1957.2000000029802,
+              "transfer": 121243,
+              "encoded": 120943,
+              "decoded": 121818
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/catalog.json",
+              "start": 1616.2000000029802,
+              "end": 2080.9000000059605,
+              "transfer": 242368,
+              "encoded": 242068,
+              "decoded": 1651755
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D3l4i9HZ.js",
+              "start": 2338.4000000059605,
+              "end": 2844.10000000149,
+              "transfer": 292230,
+              "encoded": 291930,
+              "decoded": 1076844
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D9W1oC7m.css",
+              "start": 2339.2000000029802,
+              "end": 2519.2000000029802,
+              "transfer": 1358,
+              "encoded": 1058,
+              "decoded": 3193
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-dark.png",
+              "start": 2548.3000000044703,
+              "end": 2876.10000000149,
+              "transfer": 110890,
+              "encoded": 110590,
+              "decoded": 111431
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+              "start": 3006.7000000029802,
+              "end": 9659.30000000447,
+              "transfer": 1976198,
+              "encoded": 1975898,
+              "decoded": 2355384
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+              "start": 3008.7000000029802,
+              "end": 3580.8000000044703,
+              "transfer": 75168,
+              "encoded": 74868,
+              "decoded": 86960
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-skeleton.glb",
+              "start": 3009.7000000029802,
+              "end": 8111.30000000447,
+              "transfer": 1099415,
+              "encoded": 1099115,
+              "decoded": 1286192
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/foot-skeleton.glb",
+              "start": 3010.3000000044703,
+              "end": 5676.70000000298,
+              "transfer": 484011,
+              "encoded": 483711,
+              "decoded": 612448
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-skeleton.glb",
+              "start": 3011.10000000149,
+              "end": 4850,
+              "transfer": 315745,
+              "encoded": 315445,
+              "decoded": 416816
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton.glb",
+              "start": 3012,
+              "end": 10268.40000000596,
+              "transfer": 2632572,
+              "encoded": 2632272,
+              "decoded": 3099336
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+              "start": 3012.7000000029802,
+              "end": 8098,
+              "transfer": 984952,
+              "encoded": 984652,
+              "decoded": 1162668
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-skeleton.glb",
+              "start": 3013.3000000044703,
+              "end": 5550.80000000447,
+              "transfer": 100131,
+              "encoded": 99831,
+              "decoded": 115852
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-skeleton.glb",
+              "start": 3014.10000000149,
+              "end": 6199.4000000059605,
+              "transfer": 100068,
+              "encoded": 99768,
+              "decoded": 118776
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/forearm-skeleton.glb",
+              "start": 3015,
+              "end": 6081.70000000298,
+              "transfer": 47907,
+              "encoded": 47607,
+              "decoded": 57728
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+              "start": 3015.7000000029802,
+              "end": 6803.10000000149,
+              "transfer": 127431,
+              "encoded": 127131,
+              "decoded": 149456
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rawReport": "work/atlas-delivery-text-results-20260929.json",
+      "rawSha256": "8d0e22ce88c5f0675831782358ae5debe148746e0a6284ff3a2ecb65538b2926",
+      "browserVersion": "151.0.7922.34",
+      "settings": {
+        "viewport": {
+          "width": 375,
+          "height": 812
+        },
+        "deviceScaleFactor": 1,
+        "isMobile": true,
+        "hasTouch": true
+      },
+      "network": {
+        "offline": false,
+        "latency": 150,
+        "downloadThroughput": 1125000,
+        "uploadThroughput": 1125000
+      },
+      "cpuSlowdown": 4,
+      "definition": "Existing renderer ready + all requested groups loaded; checked across two animation frames. Not visual accuracy, field performance or clinical readiness.",
+      "summary": [
+        {
+          "mode": "gzip-text",
+          "medianReadyMs": 11947.5,
+          "medianRendererMs": 3149.7000000029802,
+          "medianModelBytes": 9461616
+        },
+        {
+          "mode": "gzip",
+          "medianReadyMs": 10600.79999999702,
+          "medianRendererMs": 3121.0999999940395,
+          "medianModelBytes": 7940298
+        }
+      ],
+      "runs": [
+        {
+          "round": 0,
+          "mode": "gzip-text",
+          "probe": {
+            "firstLoading": 2560.89999999851,
+            "rendererReady": 3149.7000000029802,
+            "ready": 11947.5,
+            "failed": false
+          },
+          "errors": [],
+          "resources": [
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-UP-DVxHv.js",
+              "start": 188.39999999850988,
+              "end": 1310.5,
+              "transfer": 577006,
+              "encoded": 576706,
+              "decoded": 2264549
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/rolldown-runtime-hePW80VL.js",
+              "start": 189,
+              "end": 362.1000000014901,
+              "transfer": 728,
+              "encoded": 428,
+              "decoded": 716
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/anatomy-load-state-BP8N43td.js",
+              "start": 189.20000000298023,
+              "end": 642.3999999985099,
+              "transfer": 77228,
+              "encoded": 76928,
+              "decoded": 242926
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/neuroanatomy-DKkDnLNH.js",
+              "start": 189.5,
+              "end": 532.8999999985099,
+              "transfer": 2899,
+              "encoded": 2599,
+              "decoded": 7379
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-display-catalog-CMqiQfzT.js",
+              "start": 189.5,
+              "end": 737.8999999985099,
+              "transfer": 114015,
+              "encoded": 113715,
+              "decoded": 450208
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-D7Ls4Pd3.js",
+              "start": 189.60000000149012,
+              "end": 1031,
+              "transfer": 233516,
+              "encoded": 233216,
+              "decoded": 931794
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-C3JV0uJQ.css",
+              "start": 189.89999999850988,
+              "end": 362.30000000447035,
+              "transfer": 2096,
+              "encoded": 1796,
+              "decoded": 8203
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-iW70jpiL.css",
+              "start": 190.30000000447035,
+              "end": 517.8000000044703,
+              "transfer": 47900,
+              "encoded": 47600,
+              "decoded": 291896
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-light.png",
+              "start": 1589.3000000044703,
+              "end": 1969.1000000014901,
+              "transfer": 122118,
+              "encoded": 121818,
+              "decoded": 121818
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/catalog.json",
+              "start": 1611.3000000044703,
+              "end": 2093.8000000044703,
+              "transfer": 242368,
+              "encoded": 242068,
+              "decoded": 1651755
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D3l4i9HZ.js",
+              "start": 2353.5,
+              "end": 2857.8000000044703,
+              "transfer": 292230,
+              "encoded": 291930,
+              "decoded": 1076844
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D9W1oC7m.css",
+              "start": 2354.60000000149,
+              "end": 2528.8000000044703,
+              "transfer": 1358,
+              "encoded": 1058,
+              "decoded": 3193
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-dark.png",
+              "start": 2561.5,
+              "end": 2905.10000000149,
+              "transfer": 111731,
+              "encoded": 111431,
+              "decoded": 111431
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+              "start": 3030.89999999851,
+              "end": 10965.10000000149,
+              "transfer": 2355684,
+              "encoded": 2355384,
+              "decoded": 2355384
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+              "start": 3033.10000000149,
+              "end": 3653.2000000029802,
+              "transfer": 87260,
+              "encoded": 86960,
+              "decoded": 86960
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-skeleton.glb",
+              "start": 3034,
+              "end": 9051.20000000298,
+              "transfer": 1286492,
+              "encoded": 1286192,
+              "decoded": 1286192
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/foot-skeleton.glb",
+              "start": 3034.7000000029802,
+              "end": 6353.20000000298,
+              "transfer": 612748,
+              "encoded": 612448,
+              "decoded": 612448
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-skeleton.glb",
+              "start": 3035.7000000029802,
+              "end": 5393.20000000298,
+              "transfer": 417116,
+              "encoded": 416816,
+              "decoded": 416816
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton.glb",
+              "start": 3036.60000000149,
+              "end": 11625.70000000298,
+              "transfer": 3099636,
+              "encoded": 3099336,
+              "decoded": 3099336
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+              "start": 3037.39999999851,
+              "end": 9051.39999999851,
+              "transfer": 1162968,
+              "encoded": 1162668,
+              "decoded": 1162668
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-skeleton.glb",
+              "start": 3038,
+              "end": 6179.20000000298,
+              "transfer": 116152,
+              "encoded": 115852,
+              "decoded": 115852
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-skeleton.glb",
+              "start": 3038.8000000044703,
+              "end": 6929.80000000447,
+              "transfer": 119076,
+              "encoded": 118776,
+              "decoded": 118776
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/forearm-skeleton.glb",
+              "start": 3039.60000000149,
+              "end": 6821.39999999851,
+              "transfer": 58028,
+              "encoded": 57728,
+              "decoded": 57728
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+              "start": 3040.3000000044703,
+              "end": 7652.60000000149,
+              "transfer": 149756,
+              "encoded": 149456,
+              "decoded": 149456
+            }
+          ]
+        },
+        {
+          "round": 0,
+          "mode": "gzip",
+          "probe": {
+            "firstLoading": 2535.1999999955297,
+            "rendererReady": 3121.0999999940395,
+            "ready": 10600.79999999702,
+            "failed": false
+          },
+          "errors": [],
+          "resources": [
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-UP-DVxHv.js",
+              "start": 183.69999999552965,
+              "end": 1314.6999999955297,
+              "transfer": 577006,
+              "encoded": 576706,
+              "decoded": 2264549
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/rolldown-runtime-hePW80VL.js",
+              "start": 184.29999999701977,
+              "end": 360.29999999701977,
+              "transfer": 728,
+              "encoded": 428,
+              "decoded": 716
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/anatomy-load-state-BP8N43td.js",
+              "start": 184.5,
+              "end": 641.3999999985099,
+              "transfer": 77228,
+              "encoded": 76928,
+              "decoded": 242926
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-display-catalog-CMqiQfzT.js",
+              "start": 184.69999999552965,
+              "end": 733.3999999985099,
+              "transfer": 114015,
+              "encoded": 113715,
+              "decoded": 450208
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/neuroanatomy-DKkDnLNH.js",
+              "start": 184.89999999850988,
+              "end": 531.7999999970198,
+              "transfer": 2899,
+              "encoded": 2599,
+              "decoded": 7379
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-D7Ls4Pd3.js",
+              "start": 185.09999999403954,
+              "end": 1034.2999999970198,
+              "transfer": 233516,
+              "encoded": 233216,
+              "decoded": 931794
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-C3JV0uJQ.css",
+              "start": 185.29999999701977,
+              "end": 360.3999999985099,
+              "transfer": 2096,
+              "encoded": 1796,
+              "decoded": 8203
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-iW70jpiL.css",
+              "start": 185.5,
+              "end": 532.0999999940395,
+              "transfer": 47900,
+              "encoded": 47600,
+              "decoded": 291896
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-light.png",
+              "start": 1585.0999999940395,
+              "end": 1909.7999999970198,
+              "transfer": 121243,
+              "encoded": 120943,
+              "decoded": 121818
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/catalog.json",
+              "start": 1621.3999999985099,
+              "end": 2066.5,
+              "transfer": 242368,
+              "encoded": 242068,
+              "decoded": 1651755
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D3l4i9HZ.js",
+              "start": 2325.1999999955297,
+              "end": 2833.89999999851,
+              "transfer": 292230,
+              "encoded": 291930,
+              "decoded": 1076844
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D9W1oC7m.css",
+              "start": 2326,
+              "end": 2505.1999999955297,
+              "transfer": 1358,
+              "encoded": 1058,
+              "decoded": 3193
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-dark.png",
+              "start": 2535.89999999851,
+              "end": 2863.89999999851,
+              "transfer": 110890,
+              "encoded": 110590,
+              "decoded": 111431
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+              "start": 3005,
+              "end": 9676.29999999702,
+              "transfer": 1976198,
+              "encoded": 1975898,
+              "decoded": 2355384
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+              "start": 3007.1999999955297,
+              "end": 3566.6999999955297,
+              "transfer": 75168,
+              "encoded": 74868,
+              "decoded": 86960
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-skeleton.glb",
+              "start": 3008.1999999955297,
+              "end": 8104.5999999940395,
+              "transfer": 1099415,
+              "encoded": 1099115,
+              "decoded": 1286192
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/foot-skeleton.glb",
+              "start": 3009.0999999940395,
+              "end": 5678.39999999851,
+              "transfer": 484011,
+              "encoded": 483711,
+              "decoded": 612448
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-skeleton.glb",
+              "start": 3009.89999999851,
+              "end": 4839.19999999553,
+              "transfer": 315745,
+              "encoded": 315445,
+              "decoded": 416816
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton.glb",
+              "start": 3010.5999999940395,
+              "end": 10268.79999999702,
+              "transfer": 2632572,
+              "encoded": 2632272,
+              "decoded": 3099336
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+              "start": 3011.5,
+              "end": 8088.69999999553,
+              "transfer": 984952,
+              "encoded": 984652,
+              "decoded": 1162668
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-skeleton.glb",
+              "start": 3012.0999999940395,
+              "end": 5525.5,
+              "transfer": 100131,
+              "encoded": 99831,
+              "decoded": 115852
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-skeleton.glb",
+              "start": 3012.7999999970198,
+              "end": 6179.5999999940395,
+              "transfer": 100068,
+              "encoded": 99768,
+              "decoded": 118776
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/forearm-skeleton.glb",
+              "start": 3013.6999999955297,
+              "end": 6103.0999999940395,
+              "transfer": 47907,
+              "encoded": 47607,
+              "decoded": 57728
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+              "start": 3014.5,
+              "end": 6820.89999999851,
+              "transfer": 127431,
+              "encoded": 127131,
+              "decoded": 149456
+            }
+          ]
+        },
+        {
+          "round": 1,
+          "mode": "gzip",
+          "probe": {
+            "firstLoading": 2556.5999999940395,
+            "rendererReady": 3111.2999999970198,
+            "ready": 10597.89999999851,
+            "failed": false
+          },
+          "errors": [],
+          "resources": [
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-UP-DVxHv.js",
+              "start": 194,
+              "end": 1322,
+              "transfer": 577006,
+              "encoded": 576706,
+              "decoded": 2264549
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/rolldown-runtime-hePW80VL.js",
+              "start": 194.5,
+              "end": 371.69999999552965,
+              "transfer": 728,
+              "encoded": 428,
+              "decoded": 716
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/anatomy-load-state-BP8N43td.js",
+              "start": 194.69999999552965,
+              "end": 650.5999999940395,
+              "transfer": 77228,
+              "encoded": 76928,
+              "decoded": 242926
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-display-catalog-CMqiQfzT.js",
+              "start": 195,
+              "end": 745.0999999940395,
+              "transfer": 114015,
+              "encoded": 113715,
+              "decoded": 450208
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/neuroanatomy-DKkDnLNH.js",
+              "start": 195.19999999552965,
+              "end": 543.2999999970198,
+              "transfer": 2899,
+              "encoded": 2599,
+              "decoded": 7379
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-D7Ls4Pd3.js",
+              "start": 195.29999999701977,
+              "end": 1054.5999999940395,
+              "transfer": 233516,
+              "encoded": 233216,
+              "decoded": 931794
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-C3JV0uJQ.css",
+              "start": 195.59999999403954,
+              "end": 371.8999999985099,
+              "transfer": 2096,
+              "encoded": 1796,
+              "decoded": 8203
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-iW70jpiL.css",
+              "start": 195.79999999701977,
+              "end": 543.1999999955297,
+              "transfer": 47900,
+              "encoded": 47600,
+              "decoded": 291896
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-light.png",
+              "start": 1598.3999999985099,
+              "end": 1962.0999999940395,
+              "transfer": 121243,
+              "encoded": 120943,
+              "decoded": 121818
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/catalog.json",
+              "start": 1620.1999999955297,
+              "end": 2088.0999999940395,
+              "transfer": 242368,
+              "encoded": 242068,
+              "decoded": 1651755
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D3l4i9HZ.js",
+              "start": 2353.0999999940395,
+              "end": 2831.7999999970198,
+              "transfer": 292230,
+              "encoded": 291930,
+              "decoded": 1076844
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D9W1oC7m.css",
+              "start": 2354.0999999940395,
+              "end": 2536.0999999940395,
+              "transfer": 1358,
+              "encoded": 1058,
+              "decoded": 3193
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-dark.png",
+              "start": 2557.39999999851,
+              "end": 2878.7999999970198,
+              "transfer": 110890,
+              "encoded": 110590,
+              "decoded": 111431
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+              "start": 2997.6999999955297,
+              "end": 9686.89999999851,
+              "transfer": 1976198,
+              "encoded": 1975898,
+              "decoded": 2355384
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+              "start": 2999.6999999955297,
+              "end": 3566.5999999940395,
+              "transfer": 75168,
+              "encoded": 74868,
+              "decoded": 86960
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-skeleton.glb",
+              "start": 3000.5,
+              "end": 8109.19999999553,
+              "transfer": 1099415,
+              "encoded": 1099115,
+              "decoded": 1286192
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/foot-skeleton.glb",
+              "start": 3001.39999999851,
+              "end": 5672.39999999851,
+              "transfer": 484011,
+              "encoded": 483711,
+              "decoded": 612448
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-skeleton.glb",
+              "start": 3002.0999999940395,
+              "end": 4835.5999999940395,
+              "transfer": 315745,
+              "encoded": 315445,
+              "decoded": 416816
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton.glb",
+              "start": 3002.7999999970198,
+              "end": 10267.39999999851,
+              "transfer": 2632572,
+              "encoded": 2632272,
+              "decoded": 3099336
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+              "start": 3003.6999999955297,
+              "end": 8096.79999999702,
+              "transfer": 984952,
+              "encoded": 984652,
+              "decoded": 1162668
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-skeleton.glb",
+              "start": 3004.39999999851,
+              "end": 5532.19999999553,
+              "transfer": 100131,
+              "encoded": 99831,
+              "decoded": 115852
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-skeleton.glb",
+              "start": 3005.0999999940395,
+              "end": 6186.5,
+              "transfer": 100068,
+              "encoded": 99768,
+              "decoded": 118776
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/forearm-skeleton.glb",
+              "start": 3005.89999999851,
+              "end": 6076.19999999553,
+              "transfer": 47907,
+              "encoded": 47607,
+              "decoded": 57728
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+              "start": 3006.7999999970198,
+              "end": 6800.5,
+              "transfer": 127431,
+              "encoded": 127131,
+              "decoded": 149456
+            }
+          ]
+        },
+        {
+          "round": 1,
+          "mode": "gzip-text",
+          "probe": {
+            "firstLoading": 2524.60000000149,
+            "rendererReady": 3105.60000000149,
+            "ready": 11942,
+            "failed": false
+          },
+          "errors": [],
+          "resources": [
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-UP-DVxHv.js",
+              "start": 180.30000000447035,
+              "end": 1294.5,
+              "transfer": 577006,
+              "encoded": 576706,
+              "decoded": 2264549
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/rolldown-runtime-hePW80VL.js",
+              "start": 180.89999999850988,
+              "end": 357.8999999985099,
+              "transfer": 728,
+              "encoded": 428,
+              "decoded": 716
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/anatomy-load-state-BP8N43td.js",
+              "start": 181.10000000149012,
+              "end": 640.5,
+              "transfer": 77228,
+              "encoded": 76928,
+              "decoded": 242926
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-display-catalog-CMqiQfzT.js",
+              "start": 181.20000000298023,
+              "end": 733.6000000014901,
+              "transfer": 114015,
+              "encoded": 113715,
+              "decoded": 450208
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/neuroanatomy-DKkDnLNH.js",
+              "start": 181.5,
+              "end": 529.8000000044703,
+              "transfer": 2899,
+              "encoded": 2599,
+              "decoded": 7379
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-D7Ls4Pd3.js",
+              "start": 181.5,
+              "end": 1029.1000000014901,
+              "transfer": 233516,
+              "encoded": 233216,
+              "decoded": 931794
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-C3JV0uJQ.css",
+              "start": 181.70000000298023,
+              "end": 358,
+              "transfer": 2096,
+              "encoded": 1796,
+              "decoded": 8203
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-iW70jpiL.css",
+              "start": 181.89999999850988,
+              "end": 529.8999999985099,
+              "transfer": 47900,
+              "encoded": 47600,
+              "decoded": 291896
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-light.png",
+              "start": 1565.3000000044703,
+              "end": 1936.3000000044703,
+              "transfer": 122118,
+              "encoded": 121818,
+              "decoded": 121818
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/catalog.json",
+              "start": 1585.6000000014901,
+              "end": 2060.3000000044703,
+              "transfer": 242368,
+              "encoded": 242068,
+              "decoded": 1651755
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D3l4i9HZ.js",
+              "start": 2316.8000000044703,
+              "end": 2823.39999999851,
+              "transfer": 292230,
+              "encoded": 291930,
+              "decoded": 1076844
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D9W1oC7m.css",
+              "start": 2317.60000000149,
+              "end": 2497.39999999851,
+              "transfer": 1358,
+              "encoded": 1058,
+              "decoded": 3193
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-dark.png",
+              "start": 2525.3000000044703,
+              "end": 2870.2000000029802,
+              "transfer": 111731,
+              "encoded": 111431,
+              "decoded": 111431
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+              "start": 2993.3000000044703,
+              "end": 10941.89999999851,
+              "transfer": 2355684,
+              "encoded": 2355384,
+              "decoded": 2355384
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+              "start": 2995.60000000149,
+              "end": 3623.2000000029802,
+              "transfer": 87260,
+              "encoded": 86960,
+              "decoded": 86960
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-skeleton.glb",
+              "start": 2996.60000000149,
+              "end": 9037.30000000447,
+              "transfer": 1286492,
+              "encoded": 1286192,
+              "decoded": 1286192
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/foot-skeleton.glb",
+              "start": 2997.5,
+              "end": 6331.10000000149,
+              "transfer": 612748,
+              "encoded": 612448,
+              "decoded": 612448
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-skeleton.glb",
+              "start": 2998.3000000044703,
+              "end": 5365.10000000149,
+              "transfer": 417116,
+              "encoded": 416816,
+              "decoded": 416816
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton.glb",
+              "start": 2999.10000000149,
+              "end": 11617.80000000447,
+              "transfer": 3099636,
+              "encoded": 3099336,
+              "decoded": 3099336
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+              "start": 2999.89999999851,
+              "end": 9036.89999999851,
+              "transfer": 1162968,
+              "encoded": 1162668,
+              "decoded": 1162668
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-skeleton.glb",
+              "start": 3000.7000000029802,
+              "end": 6144.89999999851,
+              "transfer": 116152,
+              "encoded": 115852,
+              "decoded": 115852
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-skeleton.glb",
+              "start": 3001.3000000044703,
+              "end": 6893.80000000447,
+              "transfer": 119076,
+              "encoded": 118776,
+              "decoded": 118776
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/forearm-skeleton.glb",
+              "start": 3002.10000000149,
+              "end": 6813.20000000298,
+              "transfer": 58028,
+              "encoded": 57728,
+              "decoded": 57728
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+              "start": 3002.89999999851,
+              "end": 7640.10000000149,
+              "transfer": 149756,
+              "encoded": 149456,
+              "decoded": 149456
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "mode": "gzip-text",
+          "probe": {
+            "firstLoading": 2593.10000000149,
+            "rendererReady": 3172,
+            "ready": 12014.10000000149,
+            "failed": false
+          },
+          "errors": [],
+          "resources": [
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-UP-DVxHv.js",
+              "start": 182.5,
+              "end": 1311.3000000044703,
+              "transfer": 577006,
+              "encoded": 576706,
+              "decoded": 2264549
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/rolldown-runtime-hePW80VL.js",
+              "start": 183.10000000149012,
+              "end": 360.80000000447035,
+              "transfer": 728,
+              "encoded": 428,
+              "decoded": 716
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/anatomy-load-state-BP8N43td.js",
+              "start": 183.30000000447035,
+              "end": 641.5,
+              "transfer": 77228,
+              "encoded": 76928,
+              "decoded": 242926
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-display-catalog-CMqiQfzT.js",
+              "start": 183.5,
+              "end": 735.6000000014901,
+              "transfer": 114015,
+              "encoded": 113715,
+              "decoded": 450208
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/neuroanatomy-DKkDnLNH.js",
+              "start": 183.80000000447035,
+              "end": 531.6000000014901,
+              "transfer": 2899,
+              "encoded": 2599,
+              "decoded": 7379
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-D7Ls4Pd3.js",
+              "start": 183.90000000596046,
+              "end": 1041.7000000029802,
+              "transfer": 233516,
+              "encoded": 233216,
+              "decoded": 931794
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-C3JV0uJQ.css",
+              "start": 184.20000000298023,
+              "end": 360.90000000596046,
+              "transfer": 2096,
+              "encoded": 1796,
+              "decoded": 8203
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-iW70jpiL.css",
+              "start": 184.30000000447035,
+              "end": 531.8000000044703,
+              "transfer": 47900,
+              "encoded": 47600,
+              "decoded": 291896
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-light.png",
+              "start": 1614.3000000044703,
+              "end": 1997.3000000044703,
+              "transfer": 122118,
+              "encoded": 121818,
+              "decoded": 121818
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/catalog.json",
+              "start": 1636.2000000029802,
+              "end": 2123.5,
+              "transfer": 242368,
+              "encoded": 242068,
+              "decoded": 1651755
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D3l4i9HZ.js",
+              "start": 2383.60000000149,
+              "end": 2889.5,
+              "transfer": 292230,
+              "encoded": 291930,
+              "decoded": 1076844
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D9W1oC7m.css",
+              "start": 2384.60000000149,
+              "end": 2559.5,
+              "transfer": 1358,
+              "encoded": 1058,
+              "decoded": 3193
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-dark.png",
+              "start": 2593.8000000044703,
+              "end": 2920.4000000059605,
+              "transfer": 111731,
+              "encoded": 111431,
+              "decoded": 111431
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+              "start": 3055.2000000029802,
+              "end": 10997.60000000149,
+              "transfer": 2355684,
+              "encoded": 2355384,
+              "decoded": 2355384
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+              "start": 3057.60000000149,
+              "end": 3686.8000000044703,
+              "transfer": 87260,
+              "encoded": 86960,
+              "decoded": 86960
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-skeleton.glb",
+              "start": 3058.4000000059605,
+              "end": 9085.40000000596,
+              "transfer": 1286492,
+              "encoded": 1286192,
+              "decoded": 1286192
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/foot-skeleton.glb",
+              "start": 3059.60000000149,
+              "end": 6402.9000000059605,
+              "transfer": 612748,
+              "encoded": 612448,
+              "decoded": 612448
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-skeleton.glb",
+              "start": 3060.5,
+              "end": 5421.10000000149,
+              "transfer": 417116,
+              "encoded": 416816,
+              "decoded": 416816
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton.glb",
+              "start": 3061.5,
+              "end": 11679.20000000298,
+              "transfer": 3099636,
+              "encoded": 3099336,
+              "decoded": 3099336
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+              "start": 3062.4000000059605,
+              "end": 9085.10000000149,
+              "transfer": 1162968,
+              "encoded": 1162668,
+              "decoded": 1162668
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-skeleton.glb",
+              "start": 3063.3000000044703,
+              "end": 6202.10000000149,
+              "transfer": 116152,
+              "encoded": 115852,
+              "decoded": 115852
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-skeleton.glb",
+              "start": 3064.10000000149,
+              "end": 6951.4000000059605,
+              "transfer": 119076,
+              "encoded": 118776,
+              "decoded": 118776
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/forearm-skeleton.glb",
+              "start": 3064.9000000059605,
+              "end": 6872.80000000447,
+              "transfer": 58028,
+              "encoded": 57728,
+              "decoded": 57728
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+              "start": 3065.60000000149,
+              "end": 7691.80000000447,
+              "transfer": 149756,
+              "encoded": 149456,
+              "decoded": 149456
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "mode": "gzip",
+          "probe": {
+            "firstLoading": 2564,
+            "rendererReady": 3193.5,
+            "ready": 10639.09999999404,
+            "failed": false
+          },
+          "errors": [],
+          "resources": [
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-UP-DVxHv.js",
+              "start": 186.19999999552965,
+              "end": 1303,
+              "transfer": 577006,
+              "encoded": 576706,
+              "decoded": 2264549
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/rolldown-runtime-hePW80VL.js",
+              "start": 186.69999999552965,
+              "end": 363.19999999552965,
+              "transfer": 728,
+              "encoded": 428,
+              "decoded": 716
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/anatomy-load-state-BP8N43td.js",
+              "start": 187,
+              "end": 644.6999999955297,
+              "transfer": 77228,
+              "encoded": 76928,
+              "decoded": 242926
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-display-catalog-CMqiQfzT.js",
+              "start": 187.19999999552965,
+              "end": 738.5999999940395,
+              "transfer": 114015,
+              "encoded": 113715,
+              "decoded": 450208
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/neuroanatomy-DKkDnLNH.js",
+              "start": 187.39999999850988,
+              "end": 534.6999999955297,
+              "transfer": 2899,
+              "encoded": 2599,
+              "decoded": 7379
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-D7Ls4Pd3.js",
+              "start": 187.39999999850988,
+              "end": 1038.5,
+              "transfer": 233516,
+              "encoded": 233216,
+              "decoded": 931794
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/slider-C3JV0uJQ.css",
+              "start": 187.79999999701977,
+              "end": 363.3999999985099,
+              "transfer": 2096,
+              "encoded": 1796,
+              "decoded": 8203
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/index-iW70jpiL.css",
+              "start": 187.89999999850988,
+              "end": 534.7999999970198,
+              "transfer": 47900,
+              "encoded": 47600,
+              "decoded": 291896
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-light.png",
+              "start": 1577.8999999985099,
+              "end": 1946.8999999985099,
+              "transfer": 121243,
+              "encoded": 120943,
+              "decoded": 121818
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/catalog.json",
+              "start": 1599,
+              "end": 2088.7999999970198,
+              "transfer": 242368,
+              "encoded": 242068,
+              "decoded": 1651755
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D3l4i9HZ.js",
+              "start": 2347.89999999851,
+              "end": 2871.0999999940395,
+              "transfer": 292230,
+              "encoded": 291930,
+              "decoded": 1076844
+            },
+            {
+              "path": "/atlas-runtime/head-neck/assets/body-scene-D9W1oC7m.css",
+              "start": 2348.7999999970198,
+              "end": 2529.5,
+              "transfer": 1358,
+              "encoded": 1058,
+              "decoded": 3193
+            },
+            {
+              "path": "/atlas-runtime/head-neck/brand/visible-medicine-lockup-dark.png",
+              "start": 2565.0999999940395,
+              "end": 2902.0999999940395,
+              "transfer": 110890,
+              "encoded": 110590,
+              "decoded": 111431
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+              "start": 3056.2999999970198,
+              "end": 9715.69999999553,
+              "transfer": 1976198,
+              "encoded": 1975898,
+              "decoded": 2355384
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+              "start": 3060.0999999940395,
+              "end": 3603.5999999940395,
+              "transfer": 75168,
+              "encoded": 74868,
+              "decoded": 86960
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-skeleton.glb",
+              "start": 3061.39999999851,
+              "end": 8140.79999999702,
+              "transfer": 1099415,
+              "encoded": 1099115,
+              "decoded": 1286192
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/foot-skeleton.glb",
+              "start": 3062.39999999851,
+              "end": 5723.79999999702,
+              "transfer": 484011,
+              "encoded": 483711,
+              "decoded": 612448
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-skeleton.glb",
+              "start": 3063.39999999851,
+              "end": 4898.69999999553,
+              "transfer": 315745,
+              "encoded": 315445,
+              "decoded": 416816
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton.glb",
+              "start": 3064.0999999940395,
+              "end": 10324.39999999851,
+              "transfer": 2632572,
+              "encoded": 2632272,
+              "decoded": 3099336
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+              "start": 3064.7999999970198,
+              "end": 8140.5999999940395,
+              "transfer": 984952,
+              "encoded": 984652,
+              "decoded": 1162668
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-skeleton.glb",
+              "start": 3065.5999999940395,
+              "end": 5583.5999999940395,
+              "transfer": 100131,
+              "encoded": 99831,
+              "decoded": 115852
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-skeleton.glb",
+              "start": 3066.2999999970198,
+              "end": 6238.29999999702,
+              "transfer": 100068,
+              "encoded": 99768,
+              "decoded": 118776
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/forearm-skeleton.glb",
+              "start": 3067.0999999940395,
+              "end": 6146,
+              "transfer": 47907,
+              "encoded": 47607,
+              "decoded": 57728
+            },
+            {
+              "path": "/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+              "start": 3068,
+              "end": 6875,
+              "transfer": 127431,
+              "encoded": 127131,
+              "decoded": 149456
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
