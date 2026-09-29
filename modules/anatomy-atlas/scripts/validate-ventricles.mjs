@@ -264,6 +264,7 @@ function visit(n) {
   if (
     ts.isJsxAttribute(n) &&
     n.name.text === 'onClick' &&
+    n.parent.properties.some(p => ts.isJsxAttribute(p) && p.name.text === 'ref' && p.initializer?.expression?.getText(ast) === 'ventricleLauncher') &&
     n.initializer?.getText(ast).includes('setVentricleParent(selected)')
   )
     open = n.initializer.expression.getText(ast);
@@ -273,11 +274,12 @@ function visit(n) {
 }
 visit(ast);
 check(open && close);
-let chosen,
+let chosen, manualHeartStudy = 'coronary-venous',
   focused = 0;
 const env = {
   selected: parent,
   setNestedSelection: () => {},
+  setManualHeartStudy: (value) => { manualHeartStudy = value; },
   nestedReturnFocus: { current: null },
   cameraCapture: { current: { pan: [1, 2, 3], distance: 4 } },
   cameraRestore: { current: null },
@@ -294,6 +296,7 @@ same(env.cameraRestore.current, env.cameraCapture.current);
 check(env.cameraRestore.current !== env.cameraCapture.current);
 runInNewContext(`(${close})();`, env);
 same(chosen, null);
+same(manualHeartStudy, null, 'Closing the shared study clears the coronary override');
 same(focused, 1);
 check(
   source.includes("const inlineStudy = workspace.mode === 'dissect' && !exam && Boolean(") &&
@@ -311,7 +314,7 @@ function findLauncherGuard(n) {
   if (ts.isBinaryExpression(n) && n.operatorToken.kind === ts.SyntaxKind.AmpersandAmpersandToken) {
     let right = n.right;
     while (ts.isParenthesizedExpression(right)) right = right.expression;
-    if (ts.isJsxElement(right) && right.getText(ast).includes('setVentricleParent(selected)'))
+    if (ts.isJsxElement(right) && right.getText(ast).includes('ref={ventricleLauncher}'))
       launcherGuard = n.left.getText(ast);
   }
   ts.forEachChild(n, findLauncherGuard);

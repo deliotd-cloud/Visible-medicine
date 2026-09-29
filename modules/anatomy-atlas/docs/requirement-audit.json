@@ -249,7 +249,7 @@
     "public/models/bodyparts3d/pulmonary/catalog.json": "b62ccd78dfc2ced8674b94eba67596add4de482f54c3f242814982b4e3dab9ea",
     "docs/pulmonary-source-audit.json": "734fc23b6d4812b81ffb007214c271096562bcb8376766fc9d609bfddabc95db",
     "content/cerebral-supplement-audit.json": "a186519bbf31065f5c4e58472c542a9cbd2a6b64d35423a4f6c92d7bae1d69d7",
-    "content/nested-teaching.ts": "4d0d3ee3f333d844c4bdc2dccf1caf3691ab1eeda9c0f93bdeee1a860ad87bcf",
+    "content/nested-teaching.ts": "97b0825d12e19341bcb4e281875578de0fb62d710961b192d360928387189d7a",
     "content/nested-review-bindings.json": "ce08b922d13c6a76f6672de0ca73cceea2250c1208ee9edc8f3f59d05bf4b73d",
     "lib/nested-review.ts": "18afa81b7b1aa02ae1f174bd8d3b5c902d2d2eb8351c33798ae93a4927f90b74",
     "lib/nested-review-key.ts": "bf11dbacc334bac13a821a14d754478d6754d3e468344384e263d3b3442430e8",
@@ -375,7 +375,7 @@
     "lib/intrinsic-larynx-tour.ts": "05e8dc9544e40cd49c2cf5fb086958b401f2b5bd6d3e294309ef54cf6c31ea3a",
     "lib/male-duct-tour.ts": "0ecd223bcd86e19c06ac24b70685543b9881cc1754bfb0d08cff85a837edff11",
     "lib/deep-brain-tour.ts": "f3dc89facdbc8cdf134b25480495a263fbf50daedb2aa74421912672054442eb",
-    "nestedTeachingData": "d8e329fb1e6a31270ea424dca39a2a1695ab181dbfa11013517ed5d793917611"
+    "nestedTeachingData": "de477ccbf1b6a569994c900a41b2fc0ced34c3265728e02eb2ab2ef0ef2a7dbd"
   },
   "rendering": {
     "bodyBatching": {
@@ -1923,7 +1923,7 @@
         }
       ],
       "concepts": 47,
-      "references": 109,
+      "references": 111,
       "topics": {
         "anatomy": {
           "specificDraft": 79,
@@ -1956,9 +1956,9 @@
           "generatedIdentification": 0
         },
         "ultrasound": {
-          "specificDraft": 39,
+          "specificDraft": 43,
           "identityOnly": 0,
-          "pending": 69,
+          "pending": 65,
           "generatedIdentification": 0
         },
         "pathology": {

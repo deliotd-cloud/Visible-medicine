@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-29",
+  "scope": "Three draft ultrasound topics for four existing ventricular selections",
+  "baseline": "1c3dca274a958a88d583989b769d4b05296622d8",
+  "selections": ["FMA78450", "FMA78449", "FMA78454", "FMA78469"],
+  "checks": {
+    "ventricularUltrasound": "pass: bindings, actual rendered panels, references, preserved prior lessons and rejected stale identities",
+    "nestedTeaching": "pass including historical corpus reconstruction",
+    "ventricularGeometry": "pass after correcting launcher selection in the test fixture; viewer unchanged",
+    "nestedReview": "pass; acquired-image approval unavailable",
+    "typescript": "pass",
+    "regionalModuleBuild": "pass; existing chunk-size warning",
+    "shoulderModuleBuild": "pass"
+  },
+  "browser": {
+    "scope": "Local source-hash-verified generated module, not the website import",
+    "verifiedSourceInputs": 867,
+    "desktopViewport": [1440, 949],
+    "mobileEmulatedViewport": [375, 812],
+    "allFourPanels": "Ultrasound text, references and adult-model limitations observed in DOM at both sizes",
+    "horizontalOverflow": false,
+    "physicalDeviceTested": false,
+    "screenshotAvailable": false,
+    "limitations": "Screenshot request was terminated after hanging; no bitmap-based visual inspection claimed. resize_page did not change the viewport; mobile checks used emulate and verified actual innerWidth/innerHeight."
+  },
+  "logs": [
+    "work/ventricular-ultrasound-tests-retry-20260929.log",
+    "work/ventricular-ultrasound-geometry-final-20260929.log",
+    "work/ventricular-ultrasound-review-test-20260929.log",
+    "work/ventricular-ultrasound-types-20260929.log",
+    "work/ventricular-ultrasound-build-final-20260929.log",
+    "work/ventricular-ultrasound-shoulder-build-20260929.log"
+  ],
+  "clinicalApproval": false,
+  "acquiredUltrasoundImagesAdded": false,
+  "geometryChanged": false,
+  "patientDataUploaded": false,
+  "published": false,
+  "next": "Export clean modules and import into website learner and Clinical Review; revision-bound radiologist review remains required."
+}

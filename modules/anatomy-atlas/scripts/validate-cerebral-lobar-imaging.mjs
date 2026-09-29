@@ -6,6 +6,7 @@ import {runInNewContext} from 'node:vm';
 import {resolve} from 'node:path';
 import {build} from './workspace-component-test-build.mjs';
 import {nestedBeforeLobarImaging, lobarIds} from './cerebral-lobar-imaging-history.mjs';
+import {nestedBeforeVentricularUltrasound} from './ventricular-ultrasound-history.mjs';
 const base = '2c9d80ba1eaba9f520a7da9ac7fcb1201ca42a65';
 const require = createRequire(import.meta.url);
 const React = require('react');
@@ -20,7 +21,7 @@ async function load(contents, resolveDir = process.cwd()) {
 }
 const api = await load(`export * from './content/nested-teaching'; export * from './lib/nested-teaching'; export * from './lib/nested-review-material'; export {cerebralCatalog} from './lib/cerebral'; export {NestedTeaching} from './app/nested-teaching';`);
 const previous = await load(old('content/nested-teaching.ts'), resolve('content'));
-const restored = nestedBeforeLobarImaging(api);
+const restored = nestedBeforeLobarImaging(nestedBeforeVentricularUltrasound(api));
 assert.deepEqual(clone(restored.nestedConcepts), clone(previous.nestedConcepts), 'All 47 prior concepts and non-imaging fields preserved');
 assert.deepEqual(clone(restored.nestedTeachingReferences), clone(previous.nestedTeachingReferences), 'All prior references preserved');
 for (const path of ['content/nested-teaching-bindings.v1.json', 'content/nested-review-bindings.json']) assert.equal(await readFile(path, 'utf8'), old(path), path + ' unchanged');

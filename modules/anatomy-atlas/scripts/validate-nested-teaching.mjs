@@ -8,6 +8,7 @@ import { nestedBeforeClinicalReferenceRevision } from './clinical-reference-revi
 import { nestedBeforePulmonaryImaging } from './pulmonary-imaging-history.mjs';
 import { nestedBeforePulmonaryXray } from './pulmonary-xray-history.mjs';
 import { nestedBeforeLobarImaging, lobarIds } from './cerebral-lobar-imaging-history.mjs';
+import { nestedBeforeVentricularUltrasound } from './ventricular-ultrasound-history.mjs';
 
 const require = createRequire(import.meta.url);
 const React = require('react');
@@ -66,7 +67,7 @@ const beforeEyeUs = {
   nestedTeachingReferences: Object.fromEntries(Object.entries(api.nestedTeachingReferences)
     .filter(([key]) => !['lensBiometryUBM', 'posteriorScleraBScan'].includes(key))),
 };
-const historicalApi = nestedBeforeClinicalReferenceRevision(nestedBeforePulmonaryImaging(nestedBeforePulmonaryXray(nestedBeforeLobarImaging(beforeEyeUs))));
+const historicalApi = nestedBeforeClinicalReferenceRevision(nestedBeforePulmonaryImaging(nestedBeforePulmonaryXray(nestedBeforeLobarImaging(nestedBeforeVentricularUltrasound(beforeEyeUs)))));
 const copy = (value) => JSON.parse(JSON.stringify(value));
 let checks = 0;
 const check = (value, message) => {
@@ -433,7 +434,7 @@ for (const target of targets) {
           ? ['mri']
           : eyeImagingScope[concept.id]) ??
         (brainImagingIds.has(concept.id)
-          ? ['ct', 'mri']
+          ? concept.study === 'ventricles' ? ['ct', 'mri', 'ultrasound'] : ['ct', 'mri']
           : concept.study === 'renal'
             ? ['renal-veins', 'renal-ureteric-arteries'].includes(concept.id)
               ? ['ct', 'mri', 'ultrasound']
@@ -648,10 +649,11 @@ for (const tab of ['anatomy', 'function', 'quiz'])
 same(coverage.ct, { draft: 47, pending: 24 });
 same(coverage.mri, { draft: 54, pending: 17 });
 same(coverage.xray, { draft: 5, pending: 66 });
-same(coverage.ultrasound, { draft: 37, pending: 34 });
+same(coverage.ultrasound, { draft: 41, pending: 30 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
 const wordsBySource = {};
 const hosts = new Set([
+  'gravitas.acr.org',
   'www.radiologymasterclass.co.uk',
   'www.myesr.org',
   'oac22.hsc.uth.tmc.edu',
@@ -720,11 +722,11 @@ for (const concept of api.nestedConcepts) {
     }
   }
 }
-same(Object.keys(wordsBySource).length, 94);
+same(Object.keys(wordsBySource).length, 96);
 same(
   new Set(Object.values(api.nestedTeachingReferences).map((ref) => ref.url))
     .size,
-  95,
+  97,
   'Do not split one source into duplicate reference keys',
 );
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {
