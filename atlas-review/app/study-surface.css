@@ -16,8 +16,29 @@
 .atlas-inline-study .eye-layer-workbench { min-width:0; }
 @media(max-width:700px) {
   .body-app > [data-study-surface='inline'].eye-layers-dialog { padding:8px; gap:6px; }
-  .atlas-inline-study .eye-layer-workbench {
-    grid-template-rows:minmax(190px,1.2fr) minmax(100px,1fr);
-  }
   .atlas-inline-study .eye-layer-heading [data-slot='dialog-description'] { font-size:.875rem; }
+}
+/* A nested study has its own heading and scene tools. Reserve drawing space
+   below those intrinsic rows instead of squeezing all of them into 190px.
+   Short embeds and enlarged phone text use the panel's document scroll; the
+   controls and teaching notices follow the model in their natural order. */
+.body-app[data-presentation='panel'][data-panel-short='true'] > [data-study-surface='inline'].eye-layers-dialog {
+  flex:1 0 auto; grid-template-rows:auto auto; overflow:visible;
+}
+.body-app[data-presentation='panel'][data-panel-short='true'] .atlas-inline-study .eye-layer-workbench {
+  grid-template-columns:minmax(0,1fr); grid-template-rows:auto auto;
+}
+.body-app[data-presentation='panel'][data-panel-short='true'] .atlas-inline-study .eye-layer-viewport {
+  grid-template-rows:auto minmax(max(calc(200px + 2rem),14.5rem),1fr) auto;
+}
+.body-app[data-presentation='panel'][data-panel-short='true'] .atlas-inline-study .eye-layer-controls {
+  overflow:visible;
+}
+@media(max-width:700px) {
+  .body-app:has(> .atlas-inline-study:not([hidden])) { overflow-y:auto; }
+  .body-app > [data-study-surface='inline'].eye-layers-dialog {
+    flex:1 0 auto; grid-template-rows:auto auto; overflow:visible;
+  }
+  .atlas-inline-study .eye-layer-workbench { grid-template-rows:auto auto; }
+  .atlas-inline-study .eye-layer-controls { overflow:visible; }
 }

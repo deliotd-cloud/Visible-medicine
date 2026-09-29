@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+29 September: nested model readability imported locally from Atlas `922b99a`.
+Learner and Clinical Review reserve usable model drawing space in short windows,
+retain reachable controls and fix enlarged-text switch overflow. Existing anatomy,
+teaching, model hashes and independent access preserved. Fracture work untouched;
+no patient upload, publication or clinical approval. See
+`docs/nested-readability-delivery-20260929.md`. Native MRI remains done.
+
 29 September: ventricular ultrasound teaching imported locally from Atlas
 `61f1c97`. Three referenced draft topics reach four selections in learner and
 Clinical Review using existing tabs, with explicit adult-model/neonatal-window
