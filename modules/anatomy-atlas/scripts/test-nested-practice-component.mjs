@@ -5,7 +5,7 @@ import {runInNewContext} from 'node:vm';
 import {build} from './workspace-component-test-build.mjs';
 const require=createRequire(import.meta.url), React=require('react');
 const actualLink=await import('vinext/shims/link');
-const built=await build({stdin:{contents:`export {NestedPractice} from './app/nested-practice'; export {VentricularView} from './app/ventricles'; export {cardiacCatalog} from './lib/cardiac'; export {ventricleCatalog} from './lib/ventricles'; export {nestedPracticePool} from './lib/nested-practice';`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'cjs',write:false,plugins:[{name:'gpu-boundary',setup(b){b.onLoad({filter:/body-scene\.tsx$/},()=>({contents:'export const BodyScene=()=>null; export const retryBodyAssets=()=>{};',loader:'tsx'}));}}]});
+const built=await build({stdin:{contents:`export {NestedPractice} from './app/nested-practice'; export {VentricularView} from './app/ventricles'; export {cardiacCatalog} from './lib/cardiac'; export {ventricleCatalog} from './lib/ventricles'; export {nestedPracticePool,nestedPracticeKind} from './lib/nested-practice'; export {nestedStudyTargets} from './lib/nested-anatomy'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export {default as raw} from './public/models/bodyparts3d/full-body/catalog.json';`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'cjs',write:false,plugins:[{name:'gpu-boundary',setup(b){b.onLoad({filter:/body-scene\.tsx$/},()=>({contents:'export const BodyScene=()=>null; export const retryBodyAssets=()=>{};',loader:'tsx'}));}}]});
 let slots=[],cursor=0,checks=0,effectSlots=[],effectCursor=0,pendingEffects=[];
 const state=value=>{const i=cursor++;if(!(i in slots))slots[i]=typeof value==='function'?value():value;return [slots[i],next=>{slots[i]=typeof next==='function'?next(slots[i]):next;}];};
 const layoutEffect=(fn,deps)=>{const i=effectCursor++;const prior=effectSlots[i];if(!prior||!deps||deps.some((value,index)=>!Object.is(value,prior[index])))pendingEffects.push(fn);effectSlots[i]=deps;};
@@ -145,4 +145,88 @@ for(const [study,catalog] of [['cardiac',api.cardiacCatalog],['ventricles',api.v
   same({selectedId:scene().selectedId,hiddenIds:scene().hiddenIds,view:scene().view,explode:scene().explode,inspection:scene().inspection},before,'Dissection state preserved');
   button('Undo layers').onClick();render();same(scene().hiddenIds.filter(id=>scene().landmarks.includes(id)),[],'History preserved and still reversible');
 }
-console.log(JSON.stringify({passed:true,checks,actualComponentCallbacks:true,browserAcceptance:false}));
+const body=api.bodyDisplayCatalog(api.raw);
+const extendedStudies=new Map();
+for(const target of api.nestedStudyTargets(body))if(api.nestedPracticeKind(target.study)==='structure') {
+  extendedStudies.set(target.parentId+'|'+target.study,{parent:body.structures.find(s=>s.id===target.parentId),study:target.study});
+}
+let extendedSelections=0;
+for(const {parent,study} of extendedStudies.values()) {
+  mount();let tree;
+  const render=()=>{tree=renderComponent(()=>api.VentricularView({parent,study}));};
+  const scene=()=>nodes(tree).find(n=>n.props?.onRendererHealth)?.props;
+  const button=label=>nodes(tree).find(n=>n.props?.onClick&&text(n)===label)?.props;
+  const start=()=>nodes(tree).find(n=>n.props?.onClick&&text(n).startsWith('Start practice ('))?.props;
+  render();check(start()?.disabled,study+' waits for ready model');
+  check(nodes(tree).some(n=>n.type==='details'&&n.props.className==='nested-practice-launcher'&&!n.props.open),'Practice stays folded');
+  scene().onRendererHealth('ready');for(const b of scene().catalog.bundles)scene().onLoaded(b.id);render();
+  check(!start().disabled,study+' has eligible loaded questions');
+  const catalog=scene().catalog;
+  const pool=api.nestedPracticePool(parent,study,scene().structures,catalog.bundles.map(b=>b.id),scene().hiddenIds);
+  extendedSelections+=pool.length;
+  check(text(tree).includes(`Start practice (${Math.min(5,pool.length)})`));
+  const bundle=pool[0].bundle;
+  scene().onFailure(bundle);render();check(start().disabled);start().onClick();render();check(scene());
+  scene().onLoaded(bundle);render();
+  button('Fade others').onClick();render();check(start().disabled);start().onClick();render();check(scene());
+  button('Fade others').onClick();render();
+  const cut=nodes(tree).find(n=>n.props?.subject&&n.props?.onChange&&n.props?.value?.plane==='off').props;
+  cut.onChange({...cut.value,plane:'sagittal'});render();check(start().disabled);start().onClick();render();check(scene());
+  cut.onChange(cut.value);render();
+  if(study==='pulmonary') {
+    const filter=nodes(tree).find(n=>n.props?.onValueChange&&nodes(n).some(child=>child.props?.id==='pulmonary-branch-type'));
+    check(filter,'Pulmonary branch selector exists');
+    const role=nodes(filter).find(n=>n.props?.value&&n.props.value!=='all'&&!n.props.onValueChange)?.props.value;
+    check(role,'A real non-all branch role exists');
+    filter.props.onValueChange(role);render();
+    for(const b of scene().catalog.bundles)scene().onLoaded(b.id);render();
+    check(start().disabled,'Filtered branches cannot become whole-group questions');
+    check(text(tree).includes('Restore all branch types'));start().onClick();render();check(scene());
+    filter.props.onValueChange('all');render();check(!start().disabled);
+  }
+  const cerebralLayers=nodes(tree).find(n=>n.props?.layers&&n.props?.onVisibility);
+  const switches=pool.map(s=>cerebralLayers
+    ? {onCheckedChange:visible=>cerebralLayers.props.onVisibility(s.id,visible)}
+    : nodes(tree).find(n=>n.props?.onCheckedChange&&n.props['aria-label']==='Show '+s.name.toLowerCase())?.props);
+  check(switches.every(Boolean),study+': missing visibility controls for '+pool.filter((s,i)=>!switches[i]).map(s=>s.name).join(', '));
+  for(const toggle of switches.slice(1))toggle.onCheckedChange(false);render();
+  check(start().disabled,'One visible structure cannot start practice');start().onClick();render();check(scene());
+  for(const toggle of switches.slice(1))toggle.onCheckedChange(true);render();
+  const before=clone({selectedId:scene().selectedId,hiddenIds:scene().hiddenIds,view:scene().view,explode:scene().explode,inspection:scene().inspection});
+  start().onClick();render();check(tree.type===api.NestedPractice);same(tree.props.structures.map(s=>s.id).sort(),pool.map(s=>s.id).sort());
+  tree.props.onClose();render();
+  same({selectedId:scene().selectedId,hiddenIds:scene().hiddenIds,view:scene().view,explode:scene().explode,inspection:scene().inspection},before,'Return preserves dissection state');
+  for(const mode of ['name','find']) {
+    mount();let practiceTree;
+    const run=()=>{practiceTree=renderComponent(()=>api.NestedPractice({catalog,structures:pool,study,mode,view:'anterior',onClose:()=>{}}));};
+    const model=()=>nodes(practiceTree).find(n=>n.props?.onRendererHealth)?.props;
+    const control=label=>nodes(practiceTree).find(n=>n.props?.onClick&&text(n)===label)?.props;
+    run();check(control('Skip & reveal').disabled);
+    same(model().practiceTray,false,'Starts in anatomical positions');
+    if(mode==='find') {
+      control('Separate overlapping structures').onClick();run();same(model().practiceTray,true);
+      same(model().exam,true);same(model().labels,false);same(model().selectedId,null);
+      check(text(practiceTree).includes('not anatomical positions'));
+      control('Restore anatomical positions').onClick();run();same(model().practiceTray,false);
+    } else check(!control('Separate overlapping structures'),'Naming has only one isolated target');
+    for(const b of catalog.bundles)model().onLoaded(b.id);model().onRendererHealth('ready');run();
+    const count=Math.min(5,pool.length);
+    for(let i=0;i<count;i++) {
+      check(text(practiceTree).includes(`Question ${i+1} of ${count}`));
+      same(model().labels,false);same(model().contextIds,[]);same(model().selectedId,null);
+      const correct=mode==='name'?model().structures[0]:pool.find(s=>nodes(practiceTree).some(n=>n.type==='h3'&&text(n)==='Find '+s.name));
+      check(correct,'Current prompt resolves one exact source structure');
+      if(i===0)control('Skip & reveal').onClick();
+      else if(mode==='name')control(correct.name).onClick();
+      else model().onSelect(correct.id);
+      run();check(text(practiceTree).includes((i===0?'Answer: ':'Correct: ')+correct.name));
+      control(i===count-1?'Finish round':'Next structure').onClick();run();
+    }
+    check(text(practiceTree).includes(`${count-1} of ${count} correct.`));
+    check(!control('Retry missed').disabled);control('Retry missed').onClick();run();
+    check(text(practiceTree).includes('Question 1 of 1'),'Retry contains only the missed target');
+    check(control('Skip & reveal').disabled,'Retry waits for its new scene');
+  }
+}
+same(extendedSelections,50,'All fifty added selections exercised in their real parent workbench');
+console.log(JSON.stringify({passed:true,checks,extendedParentStudies:extendedStudies.size,extendedSelections,actualComponentCallbacks:true,browserAcceptance:false}));
