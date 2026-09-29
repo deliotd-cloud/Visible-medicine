@@ -33,7 +33,7 @@ try {
 const evidence = { schemaVersion: 1, sourceServer: base, sourceHashes, sourceInputs: inputs.length, priorAttempts, cases: [], errors: [], resourceFailures: [], failure: null, passed: false, clinicalApproval: false, educatorApproval: false, spatialValidation: false, deploymentValidation: false };
 const escape = text => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 try {
-  for (const [width, height, touch] of [[1280, 900, false], [375, 812, true]]) {
+  for (const [width, height, touch, textScale = 1] of [[1280, 900, false], [375, 812, true], [320, 480, true, 2]]) {
     const context = await browser.newContext({ viewport: { width, height }, hasTouch: touch, isMobile: touch });
     const page = await context.newPage(); page.setDefaultTimeout(45000);
     page.on('pageerror', error => evidence.errors.push({ width, message: error.message }));
@@ -43,17 +43,21 @@ try {
     await page.locator('iframe').evaluate((element, url) => { element.src = url; }, address.href);
     await page.waitForFunction(url => document.querySelector('iframe')?.contentWindow.location.href === url && document.querySelector('iframe')?.contentDocument.querySelector('.body-toolbar'), address.href);
     const frame = page.frames().find(candidate => candidate.url() === address.href); assert(frame);
+    if (textScale !== 1) await frame.locator('html').evaluate((element, scale) => { element.style.fontSize = `${100 * scale}%`; }, textScale);
     await frame.getByText('Practice', { exact: true }).click();
     await frame.getByRole('combobox', { name: 'Practice answer mode', exact: true }).click();
     await frame.getByRole('option', { name: 'Apply anatomy · draft', exact: true }).click();
-    // The compact practice panel is modal. Close it to use the header length
-    // control, then reopen its normal launcher to start the session.
-    if (touch) await frame.getByRole('button', { name: 'Close practice', exact: true }).click();
-    await frame.getByRole('combobox', { name: 'Practice session length', exact: true }).click();
-    await frame.getByRole('option', { name: '20 questions', exact: true }).click();
-    if (touch) await frame.locator('.body-info-launcher').click();
+    const lengthControl = frame.getByRole('combobox', { name: 'Practice session length', exact: true });
+    assert.equal(await lengthControl.count(), 1, 'One session length control, no header duplicate');
+    assert(await lengthControl.evaluate(element => Boolean(element.closest('.vm-practice-options'))), 'Session length belongs to the setup panel');
+    for (const count of [10, 5, 20]) {
+      await lengthControl.click();
+      await frame.getByRole('option', { name: `${count} questions`, exact: true }).click();
+      await frame.getByRole('button', { name: `Start ${count} questions`, exact: true }).waitFor();
+      if (touch) await frame.getByRole('button', { name: 'Close practice', exact: true }).waitFor();
+    }
     await frame.getByRole('button', { name: 'Start 20 questions', exact: true }).click();
-    const caseEvidence = { width, height, touch, region: 'shoulder-arm', questions: [], retryQuestions: [], newConcepts: [], completedScore: null, retryScore: null, noHorizontalOverflow: null };
+    const caseEvidence = { width, height, touch, textScale, sessionLengthChanges: [10, 5, 20], controlInsideSetup: true, region: 'shoulder-arm', questions: [], retryQuestions: [], newConcepts: [], completedScore: null, retryScore: null, noHorizontalOverflow: null };
     evidence.cases.push(caseEvidence);
     let score = 0, newOrdinal = 0;
     const missed = [];

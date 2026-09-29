@@ -1,0 +1,1261 @@
+{
+  "schemaVersion": 1,
+  "sourceServer": "http://127.0.0.1:55950/atlas-runtime/head-neck/index.html?region=head-neck",
+  "sourceHashes": {
+    "lib/upper-arm-reasoning.ts": "d2d0c7c8bdfeb111e1fe9b69a8258973379f6ead9ee6a7c508930d962498404a",
+    "lib/reasoning-questions.ts": "186793c4046ff872280359e62cac477ed9c1adde95156f57a94478479c07b679",
+    "app/body-explorer.tsx": "bbae6dd690fa8d65ca53f1150518b56909061609b32038cf9fd102913cc80273",
+    "app/reasoning-feedback.tsx": "835f5f3fa84c056c30be0851a2fee17b6d9d11a76dd74fe2827da5c948718791"
+  },
+  "sourceInputs": 870,
+  "priorAttempts": [],
+  "cases": [
+    {
+      "width": 1280,
+      "height": 900,
+      "touch": false,
+      "textScale": 1,
+      "sessionLengthChanges": [
+        10,
+        5,
+        20
+      ],
+      "controlInsideSetup": true,
+      "region": "shoulder-arm",
+      "questions": [
+        {
+          "index": 1,
+          "key": "teres-minor",
+          "prompt": "Among the cuff muscles, which external rotator receives axillary nerve supply?",
+          "target": "Left teres minor",
+          "choices": [
+            "Left supraspinatus",
+            "Left teres minor",
+            "Left subscapularis",
+            "Left infraspinatus muscle"
+          ],
+          "chosen": "Left teres minor",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 2,
+          "key": "biceps-long-head",
+          "prompt": "Which muscle head combines a supraglenoid origin with a contribution to elbow flexion and forearm supination?",
+          "target": "Long head of left biceps brachii",
+          "choices": [
+            "Long head of left triceps brachii",
+            "Long head of left biceps brachii",
+            "Left coracobrachialis",
+            "Left brachialis"
+          ],
+          "chosen": "Long head of left biceps brachii",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 3,
+          "key": "limb-deltoid-acromial",
+          "prompt": "Which deltoid part links the acromion to the humeral deltoid tuberosity?",
+          "target": "Acromial part of right deltoid",
+          "choices": [
+            "Acromial part of right deltoid",
+            "Clavicular part of right deltoid",
+            "Right supraspinatus",
+            "Spinal part of right deltoid"
+          ],
+          "chosen": "Acromial part of right deltoid",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 4,
+          "key": "coracobrachialis",
+          "prompt": "Which muscle runs from the coracoid process to the humeral shaft, acting at the shoulder without crossing the elbow?",
+          "target": "Left coracobrachialis",
+          "choices": [
+            "Long head of left triceps brachii",
+            "Left brachialis",
+            "Left coracobrachialis",
+            "Long head of left biceps brachii"
+          ],
+          "chosen": "Left coracobrachialis",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 5,
+          "key": "upper-arm-anconeus",
+          "prompt": "Which small elbow extensor connects the lateral epicondyle to the proximal ulna?",
+          "target": "Right anconeus",
+          "choices": [
+            "Right anconeus",
+            "Medial head of right triceps brachii",
+            "Lateral head of right triceps brachii",
+            "Right brachialis"
+          ],
+          "chosen": "Medial head of right triceps brachii",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 6,
+          "key": "serratus-anterior",
+          "prompt": "Which long-thoracic-nerve-supplied muscle helps hold the scapula against the ribs during reaching?",
+          "target": "Left serratus anterior",
+          "choices": [
+            "Left teres major",
+            "Left serratus anterior",
+            "Left coracobrachialis",
+            "Left subscapularis"
+          ],
+          "chosen": "Left serratus anterior",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 7,
+          "key": "limb-deltoid-spinal",
+          "prompt": "Which deltoid part arises from the scapular spine and assists shoulder extension and external rotation?",
+          "target": "Spinal part of right deltoid",
+          "choices": [
+            "Acromial part of right deltoid",
+            "Clavicular part of right deltoid",
+            "Spinal part of right deltoid",
+            "Right infraspinatus muscle"
+          ],
+          "chosen": "Spinal part of right deltoid",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 8,
+          "key": "upper-arm-rhomboid-minor",
+          "prompt": "Which rhomboid attaches at the root of the scapular spine?",
+          "target": "Left rhomboid minor",
+          "choices": [
+            "Left rhomboid major",
+            "Left serratus anterior",
+            "Left levator scapulae",
+            "Left rhomboid minor"
+          ],
+          "chosen": "Left rhomboid minor",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 9,
+          "key": "teres-major",
+          "prompt": "Which muscle assists internal rotation from near the inferior scapular angle but is not a rotator-cuff member?",
+          "target": "Left teres major",
+          "choices": [
+            "Left teres major",
+            "Left infraspinatus muscle",
+            "Left subscapularis",
+            "Left teres minor"
+          ],
+          "chosen": "Left teres major",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 10,
+          "key": "subscapularis",
+          "prompt": "Which cuff muscle reaches the lesser, rather than greater, humeral tubercle from the anterior scapula?",
+          "target": "Right subscapularis",
+          "choices": [
+            "Right subscapularis",
+            "Right teres minor",
+            "Right infraspinatus muscle",
+            "Right supraspinatus"
+          ],
+          "chosen": "Right subscapularis",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 11,
+          "key": "upper-arm-levator-scapulae",
+          "prompt": "Which scapular elevator connects upper cervical transverse processes to the superior scapular angle?",
+          "target": "Right levator scapulae",
+          "choices": [
+            "Right levator scapulae",
+            "Right rhomboid minor",
+            "Right serratus anterior",
+            "Right rhomboid major"
+          ],
+          "chosen": "Right rhomboid minor",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 12,
+          "key": "upper-arm-rhomboid-major",
+          "prompt": "Which rhomboid attaches along the medial scapula below its spine?",
+          "target": "Right rhomboid major",
+          "choices": [
+            "Right rhomboid minor",
+            "Right levator scapulae",
+            "Right rhomboid major",
+            "Right serratus anterior"
+          ],
+          "chosen": "Right rhomboid major",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 13,
+          "key": "limb-deltoid-clavicular",
+          "prompt": "Which deltoid part begins on the lateral clavicle and contributes to shoulder flexion and internal rotation?",
+          "target": "Clavicular part of left deltoid",
+          "choices": [
+            "Acromial part of left deltoid",
+            "Spinal part of left deltoid",
+            "Left supraspinatus",
+            "Clavicular part of left deltoid"
+          ],
+          "chosen": "Clavicular part of left deltoid",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 14,
+          "key": "triceps-long-head",
+          "prompt": "Which muscle head links the infraglenoid region to the olecranon, crossing both shoulder and elbow?",
+          "target": "Long head of left triceps brachii",
+          "choices": [
+            "Long head of left triceps brachii",
+            "Left brachialis",
+            "Left coracobrachialis",
+            "Long head of left biceps brachii"
+          ],
+          "chosen": "Long head of left triceps brachii",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 15,
+          "key": "supraspinatus",
+          "prompt": "Which cuff muscle passes from the fossa above the scapular spine towards the top of the greater humeral tubercle?",
+          "target": "Right supraspinatus",
+          "choices": [
+            "Right teres minor",
+            "Right infraspinatus muscle",
+            "Right subscapularis",
+            "Right supraspinatus"
+          ],
+          "chosen": "Right supraspinatus",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 16,
+          "key": "brachialis",
+          "prompt": "Which elbow flexor attaches to the ulna and does not itself supinate the forearm?",
+          "target": "Left brachialis",
+          "choices": [
+            "Long head of left triceps brachii",
+            "Left coracobrachialis",
+            "Long head of left biceps brachii",
+            "Left brachialis"
+          ],
+          "chosen": "Left brachialis",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 17,
+          "key": "upper-arm-triceps-medial",
+          "prompt": "Which triceps head originates from the lower posteromedial humerus?",
+          "target": "Medial head of left triceps brachii",
+          "choices": [
+            "Left anconeus",
+            "Long head of left triceps brachii",
+            "Medial head of left triceps brachii",
+            "Lateral head of left triceps brachii"
+          ],
+          "chosen": "Left anconeus",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 18,
+          "key": "infraspinatus",
+          "prompt": "Which posterior cuff muscle combines external rotation with suprascapular nerve supply?",
+          "target": "Right infraspinatus muscle",
+          "choices": [
+            "Right infraspinatus muscle",
+            "Right subscapularis",
+            "Right supraspinatus",
+            "Right teres minor"
+          ],
+          "chosen": "Right infraspinatus muscle",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 19,
+          "key": "upper-arm-biceps-short",
+          "prompt": "Which biceps head begins at the coracoid rather than the supraglenoid tubercle?",
+          "target": "Short head of right biceps brachii",
+          "choices": [
+            "Right coracobrachialis",
+            "Short head of right biceps brachii",
+            "Long head of right biceps brachii",
+            "Right brachialis"
+          ],
+          "chosen": "Short head of right biceps brachii",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 20,
+          "key": "upper-arm-triceps-lateral",
+          "prompt": "Which triceps head has its humeral origin posterolaterally?",
+          "target": "Lateral head of right triceps brachii",
+          "choices": [
+            "Lateral head of right triceps brachii",
+            "Long head of right triceps brachii",
+            "Medial head of right triceps brachii",
+            "Right anconeus"
+          ],
+          "chosen": "Long head of right triceps brachii",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        }
+      ],
+      "retryQuestions": [
+        {
+          "index": 1,
+          "key": "upper-arm-triceps-lateral",
+          "prompt": "Which triceps head has its humeral origin posterolaterally?",
+          "target": "Lateral head of right triceps brachii",
+          "choices": [
+            "Medial head of right triceps brachii",
+            "Right anconeus",
+            "Long head of right triceps brachii",
+            "Lateral head of right triceps brachii"
+          ],
+          "chosen": "Lateral head of right triceps brachii",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 2,
+          "key": "upper-arm-triceps-medial",
+          "prompt": "Which triceps head originates from the lower posteromedial humerus?",
+          "target": "Medial head of left triceps brachii",
+          "choices": [
+            "Left anconeus",
+            "Lateral head of left triceps brachii",
+            "Long head of left triceps brachii",
+            "Medial head of left triceps brachii"
+          ],
+          "chosen": "Medial head of left triceps brachii",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 3,
+          "key": "upper-arm-levator-scapulae",
+          "prompt": "Which scapular elevator connects upper cervical transverse processes to the superior scapular angle?",
+          "target": "Right levator scapulae",
+          "choices": [
+            "Right rhomboid minor",
+            "Right levator scapulae",
+            "Right rhomboid major",
+            "Right serratus anterior"
+          ],
+          "chosen": "Right levator scapulae",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 4,
+          "key": "upper-arm-anconeus",
+          "prompt": "Which small elbow extensor connects the lateral epicondyle to the proximal ulna?",
+          "target": "Right anconeus",
+          "choices": [
+            "Medial head of right triceps brachii",
+            "Lateral head of right triceps brachii",
+            "Right brachialis",
+            "Right anconeus"
+          ],
+          "chosen": "Right anconeus",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        }
+      ],
+      "newConcepts": [
+        "upper-arm-anconeus",
+        "upper-arm-rhomboid-minor",
+        "upper-arm-levator-scapulae",
+        "upper-arm-rhomboid-major",
+        "upper-arm-triceps-medial",
+        "upper-arm-biceps-short",
+        "upper-arm-triceps-lateral"
+      ],
+      "completedScore": "16/20",
+      "retryScore": "4/4",
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "touch": true,
+      "textScale": 1,
+      "sessionLengthChanges": [
+        10,
+        5,
+        20
+      ],
+      "controlInsideSetup": true,
+      "region": "shoulder-arm",
+      "questions": [
+        {
+          "index": 1,
+          "key": "coracobrachialis",
+          "prompt": "Which muscle runs from the coracoid process to the humeral shaft, acting at the shoulder without crossing the elbow?",
+          "target": "Left coracobrachialis",
+          "choices": [
+            "Long head of left biceps brachii",
+            "Left coracobrachialis",
+            "Left brachialis",
+            "Long head of left triceps brachii"
+          ],
+          "chosen": "Left coracobrachialis",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 2,
+          "key": "upper-arm-rhomboid-major",
+          "prompt": "Which rhomboid attaches along the medial scapula below its spine?",
+          "target": "Left rhomboid major",
+          "choices": [
+            "Left rhomboid minor",
+            "Left rhomboid major",
+            "Left levator scapulae",
+            "Left serratus anterior"
+          ],
+          "chosen": "Left rhomboid minor",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 3,
+          "key": "upper-arm-triceps-lateral",
+          "prompt": "Which triceps head has its humeral origin posterolaterally?",
+          "target": "Lateral head of left triceps brachii",
+          "choices": [
+            "Long head of left triceps brachii",
+            "Lateral head of left triceps brachii",
+            "Left anconeus",
+            "Medial head of left triceps brachii"
+          ],
+          "chosen": "Lateral head of left triceps brachii",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 4,
+          "key": "limb-deltoid-clavicular",
+          "prompt": "Which deltoid part begins on the lateral clavicle and contributes to shoulder flexion and internal rotation?",
+          "target": "Clavicular part of left deltoid",
+          "choices": [
+            "Acromial part of left deltoid",
+            "Clavicular part of left deltoid",
+            "Left supraspinatus",
+            "Spinal part of left deltoid"
+          ],
+          "chosen": "Clavicular part of left deltoid",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 5,
+          "key": "limb-deltoid-acromial",
+          "prompt": "Which deltoid part links the acromion to the humeral deltoid tuberosity?",
+          "target": "Acromial part of left deltoid",
+          "choices": [
+            "Left supraspinatus",
+            "Acromial part of left deltoid",
+            "Spinal part of left deltoid",
+            "Clavicular part of left deltoid"
+          ],
+          "chosen": "Acromial part of left deltoid",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 6,
+          "key": "triceps-long-head",
+          "prompt": "Which muscle head links the infraglenoid region to the olecranon, crossing both shoulder and elbow?",
+          "target": "Long head of right triceps brachii",
+          "choices": [
+            "Long head of right biceps brachii",
+            "Long head of right triceps brachii",
+            "Right brachialis",
+            "Right coracobrachialis"
+          ],
+          "chosen": "Long head of right triceps brachii",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 7,
+          "key": "brachialis",
+          "prompt": "Which elbow flexor attaches to the ulna and does not itself supinate the forearm?",
+          "target": "Right brachialis",
+          "choices": [
+            "Right brachialis",
+            "Long head of right biceps brachii",
+            "Right coracobrachialis",
+            "Long head of right triceps brachii"
+          ],
+          "chosen": "Right brachialis",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 8,
+          "key": "upper-arm-rhomboid-minor",
+          "prompt": "Which rhomboid attaches at the root of the scapular spine?",
+          "target": "Left rhomboid minor",
+          "choices": [
+            "Left rhomboid minor",
+            "Left levator scapulae",
+            "Left rhomboid major",
+            "Left serratus anterior"
+          ],
+          "chosen": "Left levator scapulae",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 9,
+          "key": "teres-major",
+          "prompt": "Which muscle assists internal rotation from near the inferior scapular angle but is not a rotator-cuff member?",
+          "target": "Right teres major",
+          "choices": [
+            "Right teres minor",
+            "Right infraspinatus muscle",
+            "Right teres major",
+            "Right subscapularis"
+          ],
+          "chosen": "Right teres major",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 10,
+          "key": "upper-arm-biceps-short",
+          "prompt": "Which biceps head begins at the coracoid rather than the supraglenoid tubercle?",
+          "target": "Short head of left biceps brachii",
+          "choices": [
+            "Left coracobrachialis",
+            "Long head of left biceps brachii",
+            "Short head of left biceps brachii",
+            "Left brachialis"
+          ],
+          "chosen": "Short head of left biceps brachii",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 11,
+          "key": "serratus-anterior",
+          "prompt": "Which long-thoracic-nerve-supplied muscle helps hold the scapula against the ribs during reaching?",
+          "target": "Right serratus anterior",
+          "choices": [
+            "Right coracobrachialis",
+            "Right serratus anterior",
+            "Right subscapularis",
+            "Right teres major"
+          ],
+          "chosen": "Right serratus anterior",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 12,
+          "key": "upper-arm-anconeus",
+          "prompt": "Which small elbow extensor connects the lateral epicondyle to the proximal ulna?",
+          "target": "Right anconeus",
+          "choices": [
+            "Medial head of right triceps brachii",
+            "Right anconeus",
+            "Lateral head of right triceps brachii",
+            "Right brachialis"
+          ],
+          "chosen": "Medial head of right triceps brachii",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 13,
+          "key": "infraspinatus",
+          "prompt": "Which posterior cuff muscle combines external rotation with suprascapular nerve supply?",
+          "target": "Right infraspinatus muscle",
+          "choices": [
+            "Right infraspinatus muscle",
+            "Right teres minor",
+            "Right subscapularis",
+            "Right supraspinatus"
+          ],
+          "chosen": "Right infraspinatus muscle",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 14,
+          "key": "upper-arm-levator-scapulae",
+          "prompt": "Which scapular elevator connects upper cervical transverse processes to the superior scapular angle?",
+          "target": "Left levator scapulae",
+          "choices": [
+            "Left serratus anterior",
+            "Left rhomboid minor",
+            "Left rhomboid major",
+            "Left levator scapulae"
+          ],
+          "chosen": "Left levator scapulae",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 15,
+          "key": "upper-arm-triceps-medial",
+          "prompt": "Which triceps head originates from the lower posteromedial humerus?",
+          "target": "Medial head of right triceps brachii",
+          "choices": [
+            "Right anconeus",
+            "Long head of right triceps brachii",
+            "Medial head of right triceps brachii",
+            "Lateral head of right triceps brachii"
+          ],
+          "chosen": "Right anconeus",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 16,
+          "key": "subscapularis",
+          "prompt": "Which cuff muscle reaches the lesser, rather than greater, humeral tubercle from the anterior scapula?",
+          "target": "Left subscapularis",
+          "choices": [
+            "Left subscapularis",
+            "Left supraspinatus",
+            "Left infraspinatus muscle",
+            "Left teres minor"
+          ],
+          "chosen": "Left subscapularis",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 17,
+          "key": "limb-deltoid-spinal",
+          "prompt": "Which deltoid part arises from the scapular spine and assists shoulder extension and external rotation?",
+          "target": "Spinal part of left deltoid",
+          "choices": [
+            "Clavicular part of left deltoid",
+            "Acromial part of left deltoid",
+            "Left infraspinatus muscle",
+            "Spinal part of left deltoid"
+          ],
+          "chosen": "Spinal part of left deltoid",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 18,
+          "key": "biceps-long-head",
+          "prompt": "Which muscle head combines a supraglenoid origin with a contribution to elbow flexion and forearm supination?",
+          "target": "Long head of left biceps brachii",
+          "choices": [
+            "Left brachialis",
+            "Long head of left triceps brachii",
+            "Left coracobrachialis",
+            "Long head of left biceps brachii"
+          ],
+          "chosen": "Long head of left biceps brachii",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 19,
+          "key": "teres-minor",
+          "prompt": "Among the cuff muscles, which external rotator receives axillary nerve supply?",
+          "target": "Right teres minor",
+          "choices": [
+            "Right infraspinatus muscle",
+            "Right subscapularis",
+            "Right supraspinatus",
+            "Right teres minor"
+          ],
+          "chosen": "Right teres minor",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 20,
+          "key": "supraspinatus",
+          "prompt": "Which cuff muscle passes from the fossa above the scapular spine towards the top of the greater humeral tubercle?",
+          "target": "Right supraspinatus",
+          "choices": [
+            "Right teres minor",
+            "Right infraspinatus muscle",
+            "Right subscapularis",
+            "Right supraspinatus"
+          ],
+          "chosen": "Right supraspinatus",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        }
+      ],
+      "retryQuestions": [
+        {
+          "index": 1,
+          "key": "upper-arm-rhomboid-major",
+          "prompt": "Which rhomboid attaches along the medial scapula below its spine?",
+          "target": "Left rhomboid major",
+          "choices": [
+            "Left levator scapulae",
+            "Left rhomboid minor",
+            "Left rhomboid major",
+            "Left serratus anterior"
+          ],
+          "chosen": "Left rhomboid major",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 2,
+          "key": "upper-arm-triceps-medial",
+          "prompt": "Which triceps head originates from the lower posteromedial humerus?",
+          "target": "Medial head of right triceps brachii",
+          "choices": [
+            "Right anconeus",
+            "Lateral head of right triceps brachii",
+            "Medial head of right triceps brachii",
+            "Long head of right triceps brachii"
+          ],
+          "chosen": "Medial head of right triceps brachii",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 3,
+          "key": "upper-arm-anconeus",
+          "prompt": "Which small elbow extensor connects the lateral epicondyle to the proximal ulna?",
+          "target": "Right anconeus",
+          "choices": [
+            "Right brachialis",
+            "Medial head of right triceps brachii",
+            "Lateral head of right triceps brachii",
+            "Right anconeus"
+          ],
+          "chosen": "Right anconeus",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 4,
+          "key": "upper-arm-rhomboid-minor",
+          "prompt": "Which rhomboid attaches at the root of the scapular spine?",
+          "target": "Left rhomboid minor",
+          "choices": [
+            "Left levator scapulae",
+            "Left rhomboid minor",
+            "Left rhomboid major",
+            "Left serratus anterior"
+          ],
+          "chosen": "Left rhomboid minor",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        }
+      ],
+      "newConcepts": [
+        "upper-arm-rhomboid-major",
+        "upper-arm-triceps-lateral",
+        "upper-arm-rhomboid-minor",
+        "upper-arm-biceps-short",
+        "upper-arm-anconeus",
+        "upper-arm-levator-scapulae",
+        "upper-arm-triceps-medial"
+      ],
+      "completedScore": "16/20",
+      "retryScore": "4/4",
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 320,
+      "height": 480,
+      "touch": true,
+      "textScale": 2,
+      "sessionLengthChanges": [
+        10,
+        5,
+        20
+      ],
+      "controlInsideSetup": true,
+      "region": "shoulder-arm",
+      "questions": [
+        {
+          "index": 1,
+          "key": "upper-arm-rhomboid-minor",
+          "prompt": "Which rhomboid attaches at the root of the scapular spine?",
+          "target": "Right rhomboid minor",
+          "choices": [
+            "Right serratus anterior",
+            "Right levator scapulae",
+            "Right rhomboid major",
+            "Right rhomboid minor"
+          ],
+          "chosen": "Right serratus anterior",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 2,
+          "key": "limb-deltoid-spinal",
+          "prompt": "Which deltoid part arises from the scapular spine and assists shoulder extension and external rotation?",
+          "target": "Spinal part of left deltoid",
+          "choices": [
+            "Spinal part of left deltoid",
+            "Acromial part of left deltoid",
+            "Clavicular part of left deltoid",
+            "Left infraspinatus muscle"
+          ],
+          "chosen": "Spinal part of left deltoid",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 3,
+          "key": "subscapularis",
+          "prompt": "Which cuff muscle reaches the lesser, rather than greater, humeral tubercle from the anterior scapula?",
+          "target": "Right subscapularis",
+          "choices": [
+            "Right teres minor",
+            "Right supraspinatus",
+            "Right infraspinatus muscle",
+            "Right subscapularis"
+          ],
+          "chosen": "Right subscapularis",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 4,
+          "key": "limb-deltoid-acromial",
+          "prompt": "Which deltoid part links the acromion to the humeral deltoid tuberosity?",
+          "target": "Acromial part of right deltoid",
+          "choices": [
+            "Acromial part of right deltoid",
+            "Right supraspinatus",
+            "Clavicular part of right deltoid",
+            "Spinal part of right deltoid"
+          ],
+          "chosen": "Acromial part of right deltoid",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 5,
+          "key": "upper-arm-triceps-medial",
+          "prompt": "Which triceps head originates from the lower posteromedial humerus?",
+          "target": "Medial head of right triceps brachii",
+          "choices": [
+            "Long head of right triceps brachii",
+            "Right anconeus",
+            "Lateral head of right triceps brachii",
+            "Medial head of right triceps brachii"
+          ],
+          "chosen": "Medial head of right triceps brachii",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 6,
+          "key": "biceps-long-head",
+          "prompt": "Which muscle head combines a supraglenoid origin with a contribution to elbow flexion and forearm supination?",
+          "target": "Long head of left biceps brachii",
+          "choices": [
+            "Long head of left biceps brachii",
+            "Long head of left triceps brachii",
+            "Left coracobrachialis",
+            "Left brachialis"
+          ],
+          "chosen": "Long head of left biceps brachii",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 7,
+          "key": "infraspinatus",
+          "prompt": "Which posterior cuff muscle combines external rotation with suprascapular nerve supply?",
+          "target": "Left infraspinatus muscle",
+          "choices": [
+            "Left supraspinatus",
+            "Left subscapularis",
+            "Left teres minor",
+            "Left infraspinatus muscle"
+          ],
+          "chosen": "Left infraspinatus muscle",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 8,
+          "key": "limb-deltoid-clavicular",
+          "prompt": "Which deltoid part begins on the lateral clavicle and contributes to shoulder flexion and internal rotation?",
+          "target": "Clavicular part of left deltoid",
+          "choices": [
+            "Spinal part of left deltoid",
+            "Left supraspinatus",
+            "Clavicular part of left deltoid",
+            "Acromial part of left deltoid"
+          ],
+          "chosen": "Clavicular part of left deltoid",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 9,
+          "key": "supraspinatus",
+          "prompt": "Which cuff muscle passes from the fossa above the scapular spine towards the top of the greater humeral tubercle?",
+          "target": "Left supraspinatus",
+          "choices": [
+            "Left supraspinatus",
+            "Left infraspinatus muscle",
+            "Left teres minor",
+            "Left subscapularis"
+          ],
+          "chosen": "Left supraspinatus",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 10,
+          "key": "teres-minor",
+          "prompt": "Among the cuff muscles, which external rotator receives axillary nerve supply?",
+          "target": "Left teres minor",
+          "choices": [
+            "Left teres minor",
+            "Left infraspinatus muscle",
+            "Left subscapularis",
+            "Left supraspinatus"
+          ],
+          "chosen": "Left teres minor",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 11,
+          "key": "upper-arm-biceps-short",
+          "prompt": "Which biceps head begins at the coracoid rather than the supraglenoid tubercle?",
+          "target": "Short head of left biceps brachii",
+          "choices": [
+            "Left brachialis",
+            "Long head of left biceps brachii",
+            "Short head of left biceps brachii",
+            "Left coracobrachialis"
+          ],
+          "chosen": "Left brachialis",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 12,
+          "key": "brachialis",
+          "prompt": "Which elbow flexor attaches to the ulna and does not itself supinate the forearm?",
+          "target": "Left brachialis",
+          "choices": [
+            "Long head of left triceps brachii",
+            "Left coracobrachialis",
+            "Long head of left biceps brachii",
+            "Left brachialis"
+          ],
+          "chosen": "Left brachialis",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 13,
+          "key": "serratus-anterior",
+          "prompt": "Which long-thoracic-nerve-supplied muscle helps hold the scapula against the ribs during reaching?",
+          "target": "Left serratus anterior",
+          "choices": [
+            "Left serratus anterior",
+            "Left subscapularis",
+            "Left coracobrachialis",
+            "Left teres major"
+          ],
+          "chosen": "Left serratus anterior",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 14,
+          "key": "upper-arm-levator-scapulae",
+          "prompt": "Which scapular elevator connects upper cervical transverse processes to the superior scapular angle?",
+          "target": "Right levator scapulae",
+          "choices": [
+            "Right levator scapulae",
+            "Right rhomboid major",
+            "Right rhomboid minor",
+            "Right serratus anterior"
+          ],
+          "chosen": "Right levator scapulae",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 15,
+          "key": "triceps-long-head",
+          "prompt": "Which muscle head links the infraglenoid region to the olecranon, crossing both shoulder and elbow?",
+          "target": "Long head of left triceps brachii",
+          "choices": [
+            "Left coracobrachialis",
+            "Left brachialis",
+            "Long head of left biceps brachii",
+            "Long head of left triceps brachii"
+          ],
+          "chosen": "Long head of left triceps brachii",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 16,
+          "key": "upper-arm-triceps-lateral",
+          "prompt": "Which triceps head has its humeral origin posterolaterally?",
+          "target": "Lateral head of left triceps brachii",
+          "choices": [
+            "Medial head of left triceps brachii",
+            "Long head of left triceps brachii",
+            "Lateral head of left triceps brachii",
+            "Left anconeus"
+          ],
+          "chosen": "Medial head of left triceps brachii",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 17,
+          "key": "coracobrachialis",
+          "prompt": "Which muscle runs from the coracoid process to the humeral shaft, acting at the shoulder without crossing the elbow?",
+          "target": "Right coracobrachialis",
+          "choices": [
+            "Right coracobrachialis",
+            "Long head of right triceps brachii",
+            "Long head of right biceps brachii",
+            "Right brachialis"
+          ],
+          "chosen": "Right coracobrachialis",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 18,
+          "key": "teres-major",
+          "prompt": "Which muscle assists internal rotation from near the inferior scapular angle but is not a rotator-cuff member?",
+          "target": "Right teres major",
+          "choices": [
+            "Right infraspinatus muscle",
+            "Right subscapularis",
+            "Right teres major",
+            "Right teres minor"
+          ],
+          "chosen": "Right teres major",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 19,
+          "key": "upper-arm-rhomboid-major",
+          "prompt": "Which rhomboid attaches along the medial scapula below its spine?",
+          "target": "Left rhomboid major",
+          "choices": [
+            "Left levator scapulae",
+            "Left rhomboid major",
+            "Left serratus anterior",
+            "Left rhomboid minor"
+          ],
+          "chosen": "Left rhomboid major",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 20,
+          "key": "upper-arm-anconeus",
+          "prompt": "Which small elbow extensor connects the lateral epicondyle to the proximal ulna?",
+          "target": "Right anconeus",
+          "choices": [
+            "Medial head of right triceps brachii",
+            "Lateral head of right triceps brachii",
+            "Right anconeus",
+            "Right brachialis"
+          ],
+          "chosen": "Medial head of right triceps brachii",
+          "correct": false,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        }
+      ],
+      "retryQuestions": [
+        {
+          "index": 1,
+          "key": "upper-arm-anconeus",
+          "prompt": "Which small elbow extensor connects the lateral epicondyle to the proximal ulna?",
+          "target": "Right anconeus",
+          "choices": [
+            "Medial head of right triceps brachii",
+            "Right anconeus",
+            "Right brachialis",
+            "Lateral head of right triceps brachii"
+          ],
+          "chosen": "Right anconeus",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 2,
+          "key": "upper-arm-biceps-short",
+          "prompt": "Which biceps head begins at the coracoid rather than the supraglenoid tubercle?",
+          "target": "Short head of left biceps brachii",
+          "choices": [
+            "Short head of left biceps brachii",
+            "Left coracobrachialis",
+            "Left brachialis",
+            "Long head of left biceps brachii"
+          ],
+          "chosen": "Short head of left biceps brachii",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 3,
+          "key": "upper-arm-triceps-lateral",
+          "prompt": "Which triceps head has its humeral origin posterolaterally?",
+          "target": "Lateral head of left triceps brachii",
+          "choices": [
+            "Long head of left triceps brachii",
+            "Medial head of left triceps brachii",
+            "Left anconeus",
+            "Lateral head of left triceps brachii"
+          ],
+          "chosen": "Lateral head of left triceps brachii",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        },
+        {
+          "index": 4,
+          "key": "upper-arm-rhomboid-minor",
+          "prompt": "Which rhomboid attaches at the root of the scapular spine?",
+          "target": "Right rhomboid minor",
+          "choices": [
+            "Right rhomboid minor",
+            "Right rhomboid major",
+            "Right serratus anterior",
+            "Right levator scapulae"
+          ],
+          "chosen": "Right rhomboid minor",
+          "correct": true,
+          "feedbackAndCitations": true,
+          "answerOnce": true
+        }
+      ],
+      "newConcepts": [
+        "upper-arm-rhomboid-minor",
+        "upper-arm-triceps-medial",
+        "upper-arm-biceps-short",
+        "upper-arm-levator-scapulae",
+        "upper-arm-triceps-lateral",
+        "upper-arm-rhomboid-major",
+        "upper-arm-anconeus"
+      ],
+      "completedScore": "16/20",
+      "retryScore": "4/4",
+      "noHorizontalOverflow": true
+    }
+  ],
+  "errors": [],
+  "resourceFailures": [],
+  "failure": null,
+  "passed": true,
+  "clinicalApproval": false,
+  "educatorApproval": false,
+  "spatialValidation": false,
+  "deploymentValidation": false
+}

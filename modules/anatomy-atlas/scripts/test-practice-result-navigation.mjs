@@ -50,12 +50,17 @@ for(const finish of ['complete','exit'])for(const removed of [true,false])for(co
     practice=api.practiceReducer(practice,{type:'next',sessionId:12,index:1});
   }else practice=api.practiceReducer(practice,{type:'exit'});
   assert.equal(practice.status,'complete');const saved=structuredClone(practice);
-  const state={exam:false,regionStructures,profile,resolveDissection:api.resolveDissection,dissectionReducer:api.dissectionReducer,
+  const state={exam:false,guidedLearning:false,regionStructures,profile,resolveDissection:api.resolveDissection,dissectionReducer:api.dissectionReducer,
     r:{target:target.id},cameraRestore,initialInspection:{opacity:1},selected:null,inspection:null,focus:false,zoom:2,reset:0,
     setSelectedId:id=>{state.selected=id;events.push('select');},setSelectionNotice:()=>{},publishSelection:()=>{},
     setSystems:value=>{model.systems=value(model.systems);},setDissection:value=>{model.dissection=value(model.dissection);},
     setInspection:value=>{state.inspection=value;},setFocus:value=>{state.focus=value;},setZoom:value=>{state.zoom=value;},setReset:value=>{state.reset=value(state.reset);}};
   for(const name of ['applySelection','select','result']){runInNewContext(extracted[name],state);state[name]=state.handler;}
+  state.guidedLearning=true;
+  state.select(target.id);
+  assert.equal(state.selected,null,'Practice selection must not take over a guided tour');
+  assert.deepEqual(events,[]);
+  state.guidedLearning=false;
   let info=false;context={exam:false,mode:'practice',focusView:layout==='focus',panelLayout:{info:layout!=='desktop'},
     chooseMode:mode=>{events.push(mode);session.chooseMode(mode);},showInfo:()=>{events.push('info');info=true;}};
   const button=api.PracticeResultStudyButton({onSelect:state.result,children:'Review structure'});
