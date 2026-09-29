@@ -49,7 +49,7 @@ runInNewContext(compiled.outputFiles[0].text, {
 const api = {
   ...scope.exports,
   nestedConcepts: scope.exports.nestedConcepts.filter(c => c.study !== 'femoral-components' && c.study !== 'coronary-venous' && c.id !== 'cerebral-hippocampus'),
-  nestedTeachingReferences: Object.fromEntries(Object.entries(scope.exports.nestedTeachingReferences).filter(([key]) => !['femoralComponentAnatomy', 'femoralComponentVariation', 'femoralComponentInjury', 'femoralComponentCTA', 'femoralComponentMRA', 'femoralComponentDoppler', 'coronaryVenousAnatomy', 'coronaryVenousHeart', 'coronarySinusImaging', 'smallCardiacVariation', 'hippocampalTopography', 'hippocampalMemory', 'hippocampalLearning', 'hippocampalMRI'].includes(key))),
+  nestedTeachingReferences: Object.fromEntries(Object.entries(scope.exports.nestedTeachingReferences).filter(([key]) => !['femoralComponentAnatomy', 'femoralComponentVariation', 'femoralComponentInjury', 'femoralComponentCTA', 'femoralComponentMRA', 'femoralComponentDoppler', 'coronarySinusEchoView', 'coronarySinusEchoDilation', 'coronaryVenousAnatomy', 'coronaryVenousHeart', 'coronarySinusImaging', 'smallCardiacVariation', 'hippocampalTopography', 'hippocampalMemory', 'hippocampalLearning', 'hippocampalMRI'].includes(key))),
 };
 // Exact two-field extension; verify new bytes before restoring older snapshots.
 const eyeUsHashes = {

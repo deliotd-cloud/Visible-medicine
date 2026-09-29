@@ -121,7 +121,8 @@ for (const target of targets) {
     assert.equal(topic.readiness, 'draft');
     assert(topic.body.length > 80 && topic.citations?.length, `${target.structureId} ${tab} needs cited teaching`);
   }
-  for (const tab of ['xray', 'ultrasound']) assert.equal(nestedTopicLesson(lesson, tab).readiness, 'pending');
+  assert.equal(nestedTopicLesson(lesson, 'xray').readiness, 'pending');
+  assert.equal(nestedTopicLesson(lesson, 'ultrasound').readiness, target.structure.fmaId === 'FMA4706' ? 'draft' : 'pending');
   for (const tab of ['clinical', 'pathology', 'ct', 'mri']) {
     const topic = nestedTopicLesson(lesson, tab);
     assert(topic.citations.some((url) => url === 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4195839/' || url === 'https://pubmed.ncbi.nlm.nih.gov/15232770/'));
@@ -130,4 +131,4 @@ for (const target of targets) {
 }
 for (const key of ['coronarySinusImaging', 'smallCardiacVariation']) assert(nestedTeachingReferences[key]?.url);
 assert.deepEqual(children.map((s) => s.validation.anatomicalReview), [false, false]);
-console.log(JSON.stringify({ passed: true, selections: 2, originalSourceFiles: 3, triangles, visibilityStates: history.length, oneVisibleOwner: true, staleLinksRejected: true, priorCavities: 4, draftTopics: ['anatomy', 'function', 'clinical', 'pathology', 'ct', 'mri'], pendingTopics: ['xray', 'ultrasound'], clinicalApproval: false }));
+console.log(JSON.stringify({ passed: true, selections: 2, originalSourceFiles: 3, triangles, visibilityStates: history.length, oneVisibleOwner: true, staleLinksRejected: true, priorCavities: 4, sharedDraftTopics: ['anatomy', 'function', 'clinical', 'pathology', 'ct', 'mri'], coronarySinusUltrasoundDraft: true, smallCardiacVeinUltrasoundPending: true, xrayPending: true, clinicalApproval: false }));

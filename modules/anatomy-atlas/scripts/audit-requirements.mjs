@@ -591,6 +591,7 @@ for (const path of [
   'app/api/nested-review/route.ts',
   'content/cardiac-teaching.ts',
   'content/cardiac-xray-teaching.ts',
+  'content/coronary-venous-teaching.ts',
   'content/hepatic-teaching.ts',
   'content/pulmonary-teaching.ts',
   'content/cerebral-teaching.ts',

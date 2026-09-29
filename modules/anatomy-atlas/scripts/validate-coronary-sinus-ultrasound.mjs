@@ -1,0 +1,34 @@
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {createRequire} from 'node:module';
+import {runInNewContext} from 'node:vm';
+import {build} from './workspace-component-test-build.mjs';
+const base='c55db3aba23f5f260ef09955b470650a8485800a',require=createRequire(import.meta.url);
+const React=require('react'),{renderToStaticMarkup}=require('react-dom/server');
+const clone=v=>JSON.parse(JSON.stringify(v));
+async function load(contents){const b=await build({stdin:{contents,resolveDir:process.cwd(),loader:'tsx'},bundle:true,write:false,platform:'node',format:'cjs'});const m={exports:{}};runInNewContext(b.outputFiles[0].text,{module:m,exports:m.exports,require,crypto,TextEncoder,URLSearchParams,structuredClone});return m.exports;}
+const api=await load(`export * from './content/coronary-venous-teaching';export * from './lib/nested-teaching';export * from './lib/nested-review-material';export {coronaryVenousCatalog as catalog} from './lib/coronary-venous';export {NestedTeaching} from './app/nested-teaching';`);
+const old=await load(execFileSync('git',['show',base+':content/coronary-venous-teaching.ts'],{encoding:'utf8'}));
+const restored=clone(api.coronaryVenousConcepts),concept=restored.find(c=>c.id==='coronary-sinus');
+const lesson=concept.imaging.ultrasound;assert.equal(lesson.readiness,'draft');
+assert.match(lesson.body,/parasternal long-axis/);assert.match(lesson.body,/appearance alone does not establish the cause/);assert.match(lesson.body,/no echo window, Doppler flow, contrast transit or validated diameter/);
+assert.deepEqual(lesson.references,['coronarySinusEchoView','coronarySinusEchoDilation']);
+delete concept.imaging.ultrasound;
+assert.deepEqual(restored,clone(old.coronaryVenousConcepts),'Only the coronary sinus ultrasound note may change');
+const refs=clone(api.coronaryVenousTeachingReferences);delete refs.coronarySinusEchoView;delete refs.coronarySinusEchoDilation;
+assert.deepEqual(refs,clone(old.coronaryVenousTeachingReferences));
+const selected=api.catalog.structures.find(s=>s.fmaId==='FMA4706'),parent=api.catalog.parent;
+const resolved=api.nestedTeachingFor(parent,'coronary-venous',selected);assert.equal(resolved.id,'coronary-sinus');
+const topic=api.nestedTopicLesson(resolved,'ultrasound');assert.equal(topic.body,lesson.body);
+assert.deepEqual(clone(topic.citations),['https://pmc.ncbi.nlm.nih.gov/articles/PMC1860876/','https://pubmed.ncbi.nlm.nih.gov/21827538/']);
+const html=renderToStaticMarkup(React.createElement(api.NestedTeaching,{parent,study:'coronary-venous',selected,initialTopic:'ultrasound'}));
+assert(html.includes(lesson.body));for(const url of topic.citations)assert(html.includes(url));
+const group=api.nestedReviewRows.find(g=>g.study==='coronary-venous');
+const packet=await api.nestedReviewMaterial(group.key,selected.id);
+assert.equal(packet.teaching.topics.find(t=>t.tab==='ultrasound').body,lesson.body);
+assert.equal(packet.context.revisions.imaging,null);assert(packet.context.blockers.imaging.length);
+assert.equal(await api.nestedReviewSelection(group.key,selected.id,'0'.repeat(64)),null);
+for(const mutate of [s=>s.fmaId='FMA0',s=>s.laterality='unknown',s=>s.sources[0].sha256='0'.repeat(64)]){const stale=clone(selected);mutate(stale);assert.equal(api.nestedTeachingFor(parent,'coronary-venous',stale),null);}
+const small=api.catalog.structures.find(s=>s.fmaId==='FMA4714');
+assert.equal(api.nestedTopicLesson(api.nestedTeachingFor(parent,'coronary-venous',small),'ultrasound').readiness,'pending');
+console.log(JSON.stringify({passed:true,newDrafts:1,smallCardiacVeinUnchanged:true,priorContentPreserved:true,clinicalApproval:false}));
