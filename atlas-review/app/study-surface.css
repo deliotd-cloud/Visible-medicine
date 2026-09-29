@@ -29,7 +29,9 @@
   grid-template-columns:minmax(0,1fr); grid-template-rows:auto auto;
 }
 .body-app[data-presentation='panel'][data-panel-short='true'] .atlas-inline-study .eye-layer-viewport {
-  grid-template-rows:auto minmax(max(calc(200px + 2rem),14.5rem),1fr) auto;
+  /* A definite short-screen track can shrink again after enlarged text; an
+     intrinsic 1fr track otherwise feeds the previous canvas height back in. */
+  grid-template-rows:auto max(calc(200px + 2rem),14.5rem) auto;
 }
 .body-app[data-presentation='panel'][data-panel-short='true'] .atlas-inline-study .eye-layer-controls {
   overflow:visible;

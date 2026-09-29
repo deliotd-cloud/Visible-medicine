@@ -1,5 +1,5 @@
 {
-  "revision": "922b99a18d917376ba14493e2743ae4d09b84988",
+  "revision": "1223e506beaf1ba8ddba1d082c8449e42cb64f72",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2768,8 +2768,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "0e333ae9e2ecbd03e823bd479b261f724078c6551321df89aca6591212b3c92e",
-      "importedSha256": "7979633259eb20e6bfb3a869d7fbba55aa877150e7526134df0a3b9896d7ad79"
+      "sourceSha256": "e23bd6ab346d09acffafe207fcc3a1f0ede412139239005baf918b3ac9e71060",
+      "importedSha256": "3edf603f0e91b545f481e84e78aaf2eac5a1410afc0012ede088039559b273c3"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3059,7 +3059,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "fb6991b58ab04357c6b9ffc2a98e3df6bf329a9b6be41feec22eacea2e2dc217",
-      "importedSha256": "0c37d37ee8c164c7070b8712cf8959aa6013ef1feba0aabb1cfb2b768f7bc75d"
+      "importedSha256": "e565c9cd253a0a168b49c2022a4f22ccb38326a04f687e586c6c3708211985be"
     },
     {
       "path": "app/review/review.css",
@@ -3248,8 +3248,8 @@
     },
     {
       "path": "app/study-surface.css",
-      "sourceSha256": "7c773b14614d09bfa7b0cafa41719f19e55f8aa6bcd8fb78a3d5640513bacbcf",
-      "importedSha256": "7c773b14614d09bfa7b0cafa41719f19e55f8aa6bcd8fb78a3d5640513bacbcf"
+      "sourceSha256": "43a64f5f2d48c7345a3c06457cf8a2dee084a167c08e4bd2f644e0f9f87f5510",
+      "importedSha256": "43a64f5f2d48c7345a3c06457cf8a2dee084a167c08e4bd2f644e0f9f87f5510"
     },
     {
       "path": "app/regional-guided-learning.tsx",
@@ -4123,8 +4123,8 @@
     },
     {
       "path": "app/eye-layers.css",
-      "sourceSha256": "94c684387e7144863bc0d39ba31097bd6302ee17fad8f906cce7efad5050e3ee",
-      "importedSha256": "94c684387e7144863bc0d39ba31097bd6302ee17fad8f906cce7efad5050e3ee"
+      "sourceSha256": "ded73dc7f5193f851c5082098ab743fbbf037c3cafcebc665cb05e3048bc2722",
+      "importedSha256": "ded73dc7f5193f851c5082098ab743fbbf037c3cafcebc665cb05e3048bc2722"
     },
     {
       "path": "app/ventricles.tsx",
@@ -4463,5 +4463,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "33f601a2837c2b314633da8eddc6c7ee7abc00249f7bbb470b9684d4872e4748"
+  "websiteIntegrationSha256": "dab6714bee2c8f1e0b7ffc68abdb5f63927f83418db6f5baa8b8def33cee1bea"
 }

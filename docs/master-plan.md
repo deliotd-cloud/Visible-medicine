@@ -1,5 +1,12 @@
 # Visible Medicine — shared delivery plan
 
+29 September: expanded dissection reflow imported locally from Atlas `1223e50`.
+Practice and cutaway controls wrap at enlarged text; structure columns adapt;
+short-screen model height now returns after text enlargement. Actual generated
+viewer passes 36 expanded-state/repeated-resize cases. Anatomy, models, teaching,
+independent access and separate fracture work preserved. No publication/approval.
+See `docs/nested-expanded-reflow-delivery-20260929.md`. Native MRI remains done.
+
 29 September: nested model readability imported locally from Atlas `922b99a`.
 Learner and Clinical Review reserve usable model drawing space in short windows,
 retain reachable controls and fix enlarged-text switch overflow. Existing anatomy,

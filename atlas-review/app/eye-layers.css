@@ -13,6 +13,8 @@
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 .eye-layer-heading [data-slot='dialog-title'] {
   font-size: 1.15rem;
@@ -63,6 +65,22 @@
   overflow-wrap: anywhere;
   overscroll-behavior: contain;
   font-size: 0.875rem;
+}
+/* Disclosed practice/cutaway controls must wrap at the same scale as their text.
+   Keep the selected value visible rather than clipping it to a single line. */
+.eye-layer-controls :is(button, [data-slot='select-trigger']) {
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.eye-layer-controls [data-slot='select-value'] {
+  min-width: 0;
+  display: block;
+  -webkit-line-clamp: unset;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 .eye-layer-presets label,
 .eye-layer-cutaway label,
@@ -319,7 +337,7 @@
   }
   .atlas-inline-study .eye-layer-viewport {
     /* BodyScene includes its live orientation row above the actual canvas. */
-    grid-template-rows: auto minmax(max(calc(200px + 2rem), 14.5rem), 1fr) auto;
+    grid-template-rows: auto max(calc(200px + 2rem), 14.5rem) auto;
   }
   .eye-layer-scene-tools {
     margin: 0.35rem 0.35rem 0;
@@ -345,7 +363,7 @@
     padding: 0.25rem max(12px, 0.75rem);
   }
   .eye-layer-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr));
     gap: 0.25rem 0.75rem;
   }
   .eye-layer-list li > button:first-child {
