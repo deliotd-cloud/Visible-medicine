@@ -1,8 +1,12 @@
 import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
 import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
 import {build} from './workspace-component-test-build.mjs';
 const require=createRequire(import.meta.url),React=require('react');
+const pickerCss=readFileSync('app/whole-body-guided-learning.css','utf8');
+assert.match(pickerCss,/\.whole-body-tour-picker button\{[^}]*height:auto;/,'Shared fixed trigger height must not clip enlarged tour titles');
+assert.match(pickerCss,/\[data-slot="select-value"\]\{[^}]*display:block;[^}]*overflow-wrap:anywhere;[^}]*-webkit-line-clamp:unset;/,'Selected title must wrap without a one-line clamp');
 const result=await build({stdin:{contents:"export * from './app/whole-body-guided-learning'; export {regionalTours} from './lib/regional-tours';",resolveDir:process.cwd(),loader:'tsx'},bundle:true,write:false,platform:'node',format:'cjs',loader:{'.css':'empty'},plugins:[{name:'observable-child-boundaries',setup(api){
  api.onLoad({filter:/[\\/]app[\\/]regional-guided-learning\.tsx$/},()=>({loader:'js',contents:'export const RegionalGuidedLearning="RegionalGuidedLearning";'}));
  api.onLoad({filter:/[\\/]components[\\/]ui[\\/]select\.tsx$/},()=>({loader:'js',contents:'export const Select="Select",SelectContent="SelectContent",SelectItem="SelectItem",SelectTrigger="SelectTrigger",SelectValue="SelectValue";'}));
