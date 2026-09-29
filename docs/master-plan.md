@@ -1,5 +1,14 @@
 # Visible Medicine — shared delivery plan
 
+29 September: expanded nested identification practice imported locally from
+Atlas `2c9d80b`: 50 additional named selections, folded controls and reversible
+label-free separation for overlapping Find targets. All model bytes, geometry
+identities, teaching bindings and independent access preserved. Learner scoring,
+missed retry, dissection return and exact review worksheet return checked locally;
+tests, types/build and review integrity pass. No publication, approval or fracture
+changes. See `docs/nested-practice-expansion-delivery-20260929.md`.
+Native MRI remains done.
+
 29 September: source-bound hippocampal teaching imported locally from Atlas
 `ed3e0e2`. Both hippocampi now provide draft Anatomy/Function/Clinical/Pathology,
 CT/MRI and a self-check in learner and protected Clinical Review panels. All

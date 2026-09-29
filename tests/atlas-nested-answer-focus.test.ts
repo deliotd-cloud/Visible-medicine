@@ -14,7 +14,7 @@ test('regional delivery includes verified nested answer focus with clinical and 
   assert.equal(manifest.sourceCommit,registered.sourceCommit);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   assert.deepEqual(inputs.filter(i=>i.path==='app/nested-practice.tsx'),[{
-    path:'app/nested-practice.tsx',sha256:'b5541c479f67dd518556f99fd4ca6b8ceefad1a54dac3b29175798fe8dcdfb44',
+    path:'app/nested-practice.tsx',sha256:'37917409e0021403ffd4ed7fa92b3371af250e31b1411abbf697644610bf8c5e',
   }]);
   assert(!inputs.some(i=>/test-nested-practice|\.local\//.test(i.path)));
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])

@@ -85,7 +85,7 @@ import {
   type BodyStructure,
 } from './body-types';
 import { NestedPractice } from './nested-practice';
-import { nestedPracticePool } from '@/atlas-review/lib/nested-practice';
+import { nestedPracticeKind, nestedPracticePool } from '@/atlas-review/lib/nested-practice';
 import type { PracticeMode } from '@/atlas-review/lib/anatomy-practice';
 import { initialInspection } from '@/atlas-review/lib/inspection-state';
 import {
@@ -660,6 +660,8 @@ export function VentricularView({
     () => nestedPracticePool(parent, study, layers, loaded, hidden),
     [parent, study, layers, loaded, hidden],
   );
+  const practiceKind = nestedPracticeKind(study);
+  const practiceBranchFiltered = isPulmonary && pulmonaryRole !== 'all';
   useLayoutEffect(() => {
     if (!practiceSnapshot && restorePracticeFocus.current) {
       restorePracticeFocus.current = false;
@@ -990,12 +992,13 @@ export function VentricularView({
             </SelectContent>
           </Select>
         </div>
-        {(study === 'cardiac' || study === 'ventricles') && (
+        {practiceKind && (
           <details className="nested-practice-launcher">
             <summary ref={practiceLauncher}>Practice identification</summary>
             <p>
-              Named source spaces visible in this view only. Context and chamber
-              walls are excluded.
+              {practiceKind === 'space'
+                ? 'Named source spaces visible in this view only. Context and chamber walls are excluded.'
+                : 'Named source structures visible in this view only. Groups retain their source boundaries; surrounding context is excluded.'}
             </p>
             <Select
               value={practiceMode}
@@ -1005,18 +1008,19 @@ export function VentricularView({
             >
               <SelectTrigger aria-label="Nested practice answer mode">
                 <SelectValue>
-                  {practiceMode === 'find' ? 'Find the named space' : 'Name the isolated space'}
+                  {practiceMode === 'find' ? `Find the named ${practiceKind}` : `Name the isolated ${practiceKind}`}
                 </SelectValue>
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="find">Find the named space</SelectItem>
-                <SelectItem value="name">Name the isolated space</SelectItem>
+                <SelectItem value="find">Find the named {practiceKind}</SelectItem>
+                <SelectItem value="name">Name the isolated {practiceKind}</SelectItem>
               </SelectContent>
             </Select>
             <Button
               size="sm"
               variant="outline"
               disabled={
+                practiceBranchFiltered ||
                 isolated ||
                 inspection.plane !== 'off' ||
                 health !== 'ready' ||
@@ -1025,6 +1029,7 @@ export function VentricularView({
               }
               onClick={() => {
                 if (
+                  practiceBranchFiltered ||
                   isolated ||
                   inspection.plane !== 'off' ||
                   health !== 'ready' ||
@@ -1038,7 +1043,9 @@ export function VentricularView({
             >
               Start practice ({Math.min(5, practicePool.length)})
             </Button>
-            {isolated ? (
+            {practiceBranchFiltered ? (
+              <p role="status">Restore all branch types before starting practice.</p>
+            ) : isolated ? (
               <p role="status">Turn off Fade others before starting practice.</p>
             ) : inspection.plane !== 'off' ? (
               <p role="status">Restore the whole view before starting practice.</p>
@@ -1048,10 +1055,10 @@ export function VentricularView({
               <p role="status">Retry the failed anatomy before starting practice.</p>
             ) : practicePool.length < 2 ? (
               <p role="status">
-                Show and load at least two eligible named spaces to practise.
+                Show and load at least two eligible named {practiceKind}s to practise.
               </p>
             ) : (
-              <p>Up to five spaces per round. The camera may reframe on return.</p>
+              <p>Up to five {practiceKind}s per round. The camera may reframe on return.</p>
             )}
           </details>
         )}

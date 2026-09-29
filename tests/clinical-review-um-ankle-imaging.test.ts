@@ -6,7 +6,7 @@ import { build } from 'esbuild';
 
 test('seven ankle drafts reach both learner modules and exact specimen review', async () => {
   const review = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
-  assert.equal(review.revision, 'ed3e0e2a202b359023be127567c2a268d901a396');
+  assert.equal(review.revision, '2c9d80ba1eaba9f520a7da9ac7fcb1201ca42a65');
   const pins = {
     'content/um-calf-foot-clinical.ts': '557ae3859bea0db95f70303474d9afa053a8dec0380a6ffc325c070f281c9fd1',
     'content/um-limb-teaching-bindings.v1.json': 'cd73ab7b7fd70de4a4e83c173617dffac78220bd8a56670da6f52f9cafc4c0b1',

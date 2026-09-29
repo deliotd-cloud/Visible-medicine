@@ -6,13 +6,13 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 
-test('regional practice export preserves every model and binds the tested named-space implementation', () => {
+test('regional practice export preserves every model and binds the tested source-identification implementation', () => {
   const base = 'public/atlas-runtime/head-neck/';
   const sha = (b: string | Buffer) => createHash('sha256').update(b).digest('hex');
   const bytes = readFileSync(base + 'manifest.json');
-  assert.equal(sha(bytes), '463b0437947b72f17e001195409693b2576733d612fd2b9d21bee429952f6d38');
+  assert.equal(sha(bytes), '4c546a73ea08bac20bc887ceda2abfd1e7e83557849311e14231ad5c4ac29b7f');
   const manifest = JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit, 'ed3e0e2a202b359023be127567c2a268d901a396');
+  assert.equal(manifest.sourceCommit, '2c9d80ba1eaba9f520a7da9ac7fcb1201ca42a65');
   assert.equal(manifest.patientDataIncluded, false);
   assert.equal(manifest.clinicalApproved, false);
   assert.equal(manifest.imagingConnection, false);
@@ -22,15 +22,15 @@ test('regional practice export preserves every model and binds the tested named-
   for (const [path, hash] of Object.entries({
     'app/atlas-workspace.tsx': '3492d74682daa945418e97a7e8130cae62907e4c7f67285c99196b329f79b104',
     'app/dissection-controls.tsx': '520127bb748b4c8e2e1cd05f7e97937d73d86a8add37f8023315bbb214330e6d',
-    'app/nested-practice.tsx': 'b5541c479f67dd518556f99fd4ca6b8ceefad1a54dac3b29175798fe8dcdfb44',
+    'app/nested-practice.tsx': '37917409e0021403ffd4ed7fa92b3371af250e31b1411abbf697644610bf8c5e',
     'app/nested-practice.css': '8e0c687cecb73a74e65f6a574ad0858237d9f61680732eafb140c760779f1591',
-    'lib/nested-practice.ts': 'e61db487c33d4c8aaeb737e0122b376abeb5f5bb4df49d99370285eb85d65a82',
-    'app/ventricles.tsx': '7d0d7ed434011c50c49da5540725dadf472785e44a1000b96ca768ed028f7a1e',
+    'lib/nested-practice.ts': '6e21a6dc48dc026110e76138d3705f8b5a94146df3b48767d31275c5bf04ce82',
+    'app/ventricles.tsx': '5f25c4d966c8d8ca5ca52fa1bb59e32fa62a942a2a03b63717e5be1d3b2ff396',
   })) assert.equal(inputs.find(f => f.path === path)?.sha256, hash);
   const runtime = manifest.files.filter((f:{path:string}) => f.path.endsWith('.js')).map((f:{path:string;sha256:string}) => {
     const data = readFileSync(base + f.path); assert.equal(sha(data), f.sha256); return data.toString();
   }).join('\n');
-  for (const text of ['Find the named space', 'Name the isolated space', 'Practice identification']) assert(runtime.includes(text), text);
+  for (const text of ['Practice identification', 'Separate overlapping structures', 'Restore anatomical positions', 'Restore all branch types before starting practice.']) assert(runtime.includes(text), text);
   assert(runtime.includes('Enabled by the current layers and system filters; models may still be loading or unavailable.'));
   const prior = JSON.parse(execFileSync('git', ['show', 'b4514b336868b7cedca25f33b61ed428355c4726:lib/atlas-model-inventory.json'], {encoding:'utf8'}));
   const current = JSON.parse(readFileSync('lib/atlas-model-inventory.json', 'utf8'));

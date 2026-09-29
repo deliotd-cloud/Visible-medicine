@@ -6,10 +6,24 @@ import { nestedTeachingFor } from './nested-teaching';
 const eligibleFmaIds: Partial<Record<NestedStudy, ReadonlySet<string>>> = {
   cardiac: new Set(['FMA11359', 'FMA9465', 'FMA9291', 'FMA9466']),
   ventricles: new Set(['FMA78450', 'FMA78449', 'FMA78454', 'FMA78469']),
+  cerebral: new Set(['FMA72970','FMA72969','FMA72974','FMA72973','FMA72972','FMA72971','FMA72976','FMA72975','FMA72978','FMA72977','FMA72801','FMA72800','FMA72805','FMA72804','FMA72714','FMA72713']),
+  brainstem: new Set(['FMA61993','FMA67943','FMA62004','FMA67944','FMA73464','FMA73463']),
+  pulmonary: new Set(['FMA7333','FMA7383','FMA7337','FMA7370','FMA7371']),
+  hepatic: new Set(['FMA14778','FMA14779','FMA15414','FMA15415','FMA71857','FMA71858','FMA15800']),
+  renal: new Set(['FMA70492','FMA69265','FMA14335','FMA14343','FMA70493','FMA14336','FMA14349']),
+  'visual-pathway': new Set(['FMA62045','FMA62382','FMA67936']),
+  cricothyroid: new Set(['FMA46611','FMA46612','FMA46613','FMA46614']),
+  'coronary-venous': new Set(['FMA4706','FMA4714']),
 };
 
-/** Only exact, authored space identities may enter nested identification.
- * Context, walls, aggregates and every unlisted study remain excluded. */
+export function nestedPracticeKind(study: NestedStudy): 'space' | 'structure' | null {
+  if (!eligibleFmaIds[study]) return null;
+  return study === 'cardiac' || study === 'ventricles' ? 'space' : 'structure';
+}
+
+/** Explicit named source selections only, never automatic catalogue admission.
+ * Source groups retain their full names/boundaries; they are not whole organs.
+ * Context, chamber walls and unlisted studies remain excluded. */
 export function nestedPracticePool(
   parent: BodyStructure,
   study: NestedStudy,

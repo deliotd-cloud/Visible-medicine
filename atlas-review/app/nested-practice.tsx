@@ -11,7 +11,7 @@ import {
   practiceScore,
   type PracticeMode,
 } from '@/atlas-review/lib/anatomy-practice';
-import { nestedPracticeReady } from '@/atlas-review/lib/nested-practice';
+import { nestedPracticeKind, nestedPracticeReady } from '@/atlas-review/lib/nested-practice';
 import type { NestedStudy } from '@/atlas-review/lib/nested-anatomy';
 import type { RendererHealth } from '@/atlas-review/lib/renderer-health';
 import { initialInspection } from '@/atlas-review/lib/inspection-state';
@@ -37,6 +37,7 @@ export function NestedPractice({
   assetBase?: string;
   onClose: () => void;
 }) {
+  const kind = nestedPracticeKind(study) ?? 'structure';
   const [practice, dispatch] = useReducer(
     practiceReducer,
     undefined,
@@ -56,6 +57,7 @@ export function NestedPractice({
   const [loaded, setLoaded] = useState<string[]>([]);
   const [failed, setFailed] = useState<string[]>([]);
   const [retry, setRetry] = useState(0);
+  const [separated, setSeparated] = useState(false);
   const heading = useRef<HTMLHeadingElement>(null);
   const feedback = useRef<HTMLOutputElement>(null);
   useLayoutEffect(() => {
@@ -158,6 +160,7 @@ export function NestedPractice({
             reset={practice.id + practice.index}
             focus
             exam
+            practiceTray={kind === 'structure' && practice.mode === 'find' && separated}
             inspection={initialInspection}
             plate={false}
             appearance={appearance}
@@ -204,10 +207,10 @@ export function NestedPractice({
           {complete
             ? 'Practice complete'
             : practice.mode === 'find'
-              ? `Find ${target?.name ?? 'the named space'}`
-              : 'Name the isolated space'}
+              ? `Find ${target?.name ?? `the named ${kind}`}`
+              : `Name the isolated ${kind}`}
         </h3>
-        <p>Source spaces only, not chamber walls. Labels, teaching and selection hints are hidden.</p>
+        <p>{kind === 'space' ? 'Source spaces only, not chamber walls.' : 'Source-defined structures and named groups only, not complete organs or validated clinical anatomy.'} Labels, teaching and selection hints are hidden.</p>
         <p>Formative practice only; this is not a validated assessment.</p>
         {!complete && question && target && (
           <>
@@ -228,7 +231,17 @@ export function NestedPractice({
                 ))}
               </div>
             ) : (
-              <p>Select the named surface in the model.</p>
+              <>
+                <p>Select the named surface in the model.</p>
+                {kind === 'structure' && (
+                  <>
+                    <Button variant="outline" aria-pressed={separated} onClick={() => setSeparated(value => !value)}>
+                      {separated ? 'Restore anatomical positions' : 'Separate overlapping structures'}
+                    </Button>
+                    {separated && <p role="status">Separated shapes for identification, not anatomical positions.</p>}
+                  </>
+                )}
+              </>
             )}
             <output ref={feedback} tabIndex={-1} className="block">
               {!ready
@@ -241,7 +254,7 @@ export function NestedPractice({
             </output>
             {answered ? (
               <Button onClick={next} disabled={!ready}>
-                {practice.index + 1 === practice.questions.length ? 'Finish round' : 'Next space'}
+                {practice.index + 1 === practice.questions.length ? 'Finish round' : `Next ${kind}`}
               </Button>
             ) : (
               <Button variant="ghost" disabled={!ready} onClick={() => answer(null)}>

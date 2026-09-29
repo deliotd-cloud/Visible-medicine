@@ -80,6 +80,8 @@ type Props = {
   reset: number;
   focus: boolean;
   exam: boolean;
+  /** Explicit formative-practice tray; never reveals labels or selection hints. */
+  practiceTray?: boolean;
   inspection: InspectionState;
   /** Optional stable cut frame, independent of camera framing and context visibility. */
   inspectionBounds?: SelectionBounds | null;
@@ -380,7 +382,8 @@ export function BodyScene(props: Props) {
         )
       : frame;
   }, [props.inspectionBounds, frame]);
-  const layout = props.exam ? 'spatial' : props.layout;
+  const practiceTray = props.exam && props.practiceTray === true;
+  const layout = props.exam ? (practiceTray ? 'tray' : 'spatial') : props.layout;
   const tray = useMemo(
     () =>
       layout === 'tray'
@@ -402,7 +405,7 @@ export function BodyScene(props: Props) {
           bodyPresentationOffset(
             item,
             center,
-            props.exam ? 0 : props.explode,
+            props.exam ? (practiceTray ? 100 : 0) : props.explode,
             layout,
             props.anchorSkeleton,
             tray,
@@ -413,6 +416,7 @@ export function BodyScene(props: Props) {
       rendered,
       center,
       props.exam,
+      practiceTray,
       props.explode,
       layout,
       props.anchorSkeleton,

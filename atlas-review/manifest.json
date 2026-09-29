@@ -1,5 +1,5 @@
 {
-  "revision": "ed3e0e2a202b359023be127567c2a268d901a396",
+  "revision": "2c9d80ba1eaba9f520a7da9ac7fcb1201ca42a65",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2758,8 +2758,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "feda2fbcb229c4c41185f5be9bda40fd543a4f9401e35900e39ed0a130cee204",
-      "importedSha256": "4ad8058b0e77a699d2fa9ff7876edd046c0fd4e48514abb1c4ce7b5fdfc35076"
+      "sourceSha256": "a13fb69222247878a3950366fed19a94185c1b4a94be120732162c022f28e75b",
+      "importedSha256": "af7d493ae3f969f4657c0816daa9ff640f2e5ca09e39d09981fc1db047808a81"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3049,7 +3049,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "52c6ebe8633eb8bdc745feb0e63054da2cdb96fb7772d28103e38673fdb2c1cd",
-      "importedSha256": "e37f02e467f9e5620b135a73a8e70c200b4341256900785ca6341ccdee5dee01"
+      "importedSha256": "3027cf2813e334ff7c11be32efc5ebd205f445c32101dcd71b8d767462f163a7"
     },
     {
       "path": "app/review/review.css",
@@ -3283,8 +3283,8 @@
     },
     {
       "path": "app/body-scene.tsx",
-      "sourceSha256": "ab99681505b1f1eb8b3935c14b9a614310fb831c0b122492a23be635b3a302ce",
-      "importedSha256": "f6eb7a625abf72c0570f761ab6c8ed7d221e3233fe185b82e9abb4fe9d80accb"
+      "sourceSha256": "2876f4674b4f1fedabdcb6f6aaef8f0085dfd9deb8e1c3bc8d68705931cecf7e",
+      "importedSha256": "b424392cb9d339283af4746b9e094313679fdd324f57be4bdff46d03cc5a9b7d"
     },
     {
       "path": "app/anatomy-canvas.tsx",
@@ -4118,8 +4118,8 @@
     },
     {
       "path": "app/ventricles.tsx",
-      "sourceSha256": "7d0d7ed434011c50c49da5540725dadf472785e44a1000b96ca768ed028f7a1e",
-      "importedSha256": "643c8bda26e63397a5c5b991152cb2d761bf4bd6fe632ecd680e983c05922e54"
+      "sourceSha256": "5f25c4d966c8d8ca5ca52fa1bb59e32fa62a942a2a03b63717e5be1d3b2ff396",
+      "importedSha256": "2c93a44ed5ec92d3ce87ddf4f9dbe2e2115b33fc66743867c7b41b0c292a8245"
     },
     {
       "path": "app/femoral-components.tsx",
@@ -4168,13 +4168,13 @@
     },
     {
       "path": "app/nested-practice.tsx",
-      "sourceSha256": "b5541c479f67dd518556f99fd4ca6b8ceefad1a54dac3b29175798fe8dcdfb44",
-      "importedSha256": "aa044658e5f6d4dfa12446e1532b46e93f84f338393056666006090845cb51ba"
+      "sourceSha256": "37917409e0021403ffd4ed7fa92b3371af250e31b1411abbf697644610bf8c5e",
+      "importedSha256": "dbe2c5d6f4b9bc5e1222210586068e17def3cd8406f2be7ff385344266ff73a5"
     },
     {
       "path": "lib/nested-practice.ts",
-      "sourceSha256": "e61db487c33d4c8aaeb737e0122b376abeb5f5bb4df49d99370285eb85d65a82",
-      "importedSha256": "e61db487c33d4c8aaeb737e0122b376abeb5f5bb4df49d99370285eb85d65a82"
+      "sourceSha256": "6e21a6dc48dc026110e76138d3705f8b5a94146df3b48767d31275c5bf04ce82",
+      "importedSha256": "6e21a6dc48dc026110e76138d3705f8b5a94146df3b48767d31275c5bf04ce82"
     },
     {
       "path": "app/nested-practice.css",
@@ -4453,5 +4453,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "249eed182b88edf5e74041a7b9a5e5efab7fb67db599d0e35a159fe0aaa4d49f"
+  "websiteIntegrationSha256": "dd8fa465ec60b03bd0c52d783f934187bf4611ee22476d42bbc25a78782f9b35"
 }
