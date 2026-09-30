@@ -5,6 +5,12 @@ Baseline Atlas `eb6031b48e00faec4894c180f4c0d5a680847224`.
 This advances a missing cerebral-artery chain without creating invented vessels.
 Existing learner geometry, teaching, review decisions and website are unchanged.
 
+The subsequent [contextual source review](CHOROIDAL_CONTEXT_REVIEW.md) adds a
+rotatable local inspector and order/translation/reflection-independent shape
+screening. No candidate is admitted. The left-parent/plexus near-contact flag
+remains unresolved; plexus envelope classification fails closed because its
+combined source has non-manifold vertices. This does not alter existing geometry.
+
 | Official source concept | Original IS-A file | Triangles |
 | --- | --- | --- |
 | Right anterior choroidal artery, FMA50088 | FJ1658 | 418 |
