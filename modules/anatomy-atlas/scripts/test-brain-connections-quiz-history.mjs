@@ -2,9 +2,12 @@ import assert from 'node:assert/strict';
 import { contentContext } from './content-contract-tools.mjs';
 import { exactSourceHistoryApi } from './exact-source-history-api.mjs';
 import { beforeBrainConnectionsQuiz } from './brain-connections-quiz-history.mjs';
+import { beforeFootSesamoidTeaching } from './foot-sesamoid-teaching-history.mjs';
 import pins from '../content/brain-connections-quiz-pins.json' with { type: 'json' };
 const { api: currentApi, catalog } = await contentContext();
-const api = currentApi;
+// Replay the later recorded foot transition first, so unchanged assertions below
+// compare the brain transition with its own input, not a later editorial state.
+const api = beforeFootSesamoidTeaching(currentApi);
 const parent = await exactSourceHistoryApi(pins.parentCommit);
 const prior = beforeBrainConnectionsQuiz(api);
 const display = api.bodyDisplayCatalog(catalog);

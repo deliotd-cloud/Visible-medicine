@@ -2,10 +2,12 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
+import {beforeFootSesamoidTeaching} from './foot-sesamoid-teaching-history.mjs';
 import pins from '../content/brain-connections-quiz-pins.json' with {type:'json'};
 import transition from '../content/brain-connections-quiz-transition.json' with {type:'json'};
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 export function beforeBrainConnectionsQuiz(api){
+ api=beforeFootSesamoidTeaching(api);
  if(typeof api.bodyLesson!=='function')return api;
  if(typeof api.bodyDisplayCatalog!=='function'&&pins.entries.every(e=>api.bodyLesson(e.identity,'quiz')===undefined))return api;
  assert.equal(hash(pins),'57e9fee36987b78f394d064b8320a62d0b37d95a60fb75e0e76ac1a4a08d0c04');

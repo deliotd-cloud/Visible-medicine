@@ -1,4 +1,5 @@
 import { centralVesselImagingLesson } from '../lib/central-vessel-imaging';
+import { footSesamoidLesson } from '../lib/foot-sesamoid-teaching';
 import { orbitalNerveMriLesson } from '../lib/orbital-nerve-mri';
 import { mediastinalXrayLesson } from '../lib/mediastinal-xray';
 import { hilarVesselXrayLesson } from '../lib/hilar-vessel-xray';
@@ -242,6 +243,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const footSesamoid = footSesamoidLesson(s, tab);
+  if (footSesamoid) return footSesamoid;
   const abdominalOrganQuiz = abdominalOrganQuizLesson(s, tab);
   const brainConnectionsQuiz = brainConnectionsQuizLesson(s, tab);
   if (brainConnectionsQuiz) return brainConnectionsQuiz;

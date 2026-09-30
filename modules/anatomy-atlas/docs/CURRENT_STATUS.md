@@ -27,15 +27,15 @@ Independent specimens retain separate source frames and teaching inventories. Th
 
 | Topic | Specific/source-group draft | Identity only | Pending | Generated identification |
 | --- | ---: | ---: | ---: | ---: |
-| Anatomy | 1102 | 2 | 0 | 0 |
-| Function | 1099 | 0 | 5 | 0 |
-| CT | 898 | 0 | 206 | 0 |
-| MRI | 870 | 0 | 234 | 0 |
-| X-ray | 454 | 0 | 650 | 0 |
-| Ultrasound | 624 | 0 | 480 | 0 |
-| Pathology | 1097 | 0 | 7 | 0 |
-| Clinical | 1097 | 0 | 7 | 0 |
-| Quiz notes | 114 | 0 | 1 | 989 |
+| Anatomy | 1104 | 0 | 0 | 0 |
+| Function | 1101 | 0 | 3 | 0 |
+| CT | 900 | 0 | 204 | 0 |
+| MRI | 872 | 0 | 232 | 0 |
+| X-ray | 456 | 0 | 648 | 0 |
+| Ultrasound | 626 | 0 | 478 | 0 |
+| Pathology | 1099 | 0 | 5 | 0 |
+| Clinical | 1099 | 0 | 5 | 0 |
+| Quiz notes | 116 | 0 | 1 | 987 |
 
 ## Nested teaching readiness
 

@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "foot-sesamoid:test": "node scripts/pin-foot-sesamoid-teaching.mjs --check && node scripts/validate-foot-sesamoid-teaching.mjs",
     "choroidal-context:test": "node --test scripts/test-source-shape-equivalence.mjs scripts/test-source-containment-sampler.mjs scripts/test-choroidal-context-scene.mjs scripts/test-choroidal-context-server.mjs",
     "choroidal-context:check": "node scripts/audit-choroidal-context.mjs --check",
     "choroidal-context:preview": "node scripts/build-choroidal-context-preview.mjs",

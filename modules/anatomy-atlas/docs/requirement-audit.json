@@ -3,6 +3,10 @@
   "method": "Offline source and displayed-copy inventory; no clinical or browser certification.",
   "sourceHashes": {
     "lib/root-education-api.ts": "50b9f4c223cf550c232366368849745b82ca2c6935162535c279e51deabe5554",
+    "lib/foot-sesamoid-teaching.ts": "3fff1e3731ad28496af251623c2719a9ac49317a899a8b3e6c6d1df552b99bef",
+    "content/foot-sesamoid-teaching.ts": "d25249c8f585bdf706c187c0e013342322ca85c073a3439a2efa187dcfcc6b7a",
+    "content/foot-sesamoid-teaching-pins.json": "666a4c4bb8fe514c61d4c718e4f861365fbbc091dcf4a8a25f4808e0bd5aadc0",
+    "content/foot-sesamoid-teaching-transition.json": "152601015b5e130f4eb35e6f967f5fcb0931b9dcefc62695485004d8c82bbd24",
     "app/body-education-link.ts": "47a0a195899e3efedc743b7923c9a52f4a8c1943da5613285fc7a398e4448c40",
     "integration/shoulder/education-api.ts": "4f2017f78d81c821c64ecd85ff3a60bb442cf3bc207b62da0718bc1f7a13afe0",
     "lib/regional-framing.ts": "96c4e2c9690fdc93b3caadea4a36bad91a038e95ec7da08a362aadf142d8b575",
@@ -368,8 +372,8 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "e5c2c05557a48137e701bc8110a451b9b4937e1b0f0b8bd10da654d9c0eb3b1d",
-    "explicitTopicReadiness": "75adadc036908764557bb74454f91dd9e327727335b43d4d3aca3b0cb2518bf2",
+    "resolvedContentAndRecipeData": "988a957652b1389469f8921213633a18b775da163a41266db38dd4de1a8324c6",
+    "explicitTopicReadiness": "2aa6bb365a1266bb41eafd488e963c1c6d1924aa1171cf2e2a29582d0f7c356b",
     "reasoningQuestionData": "e14edb0ec5501658df333e69f0aef4d9593b6647a3773258ff0ef6ec03b786fb",
     "guidedLearningData": "a5d76cdc05eff586584131d14f77c8a36dd508bf1a794e004b9d31dde1e72ec4",
     "app/volume-image.tsx": "34d28f4f9284cbb18dd4c175815490fb3727912fdb4acb22143c91167ccd4448",
@@ -1729,58 +1733,58 @@
     "classificationLimit": "Explicit readiness from authoring branches; not inferred from titles and not clinical approval. Legacy shoulder topics are draft; new X-ray authoring explicitly distinguishes draft and pending.",
     "body": {
       "anatomy": {
-        "specificDraft": 1102,
-        "identityOnly": 2,
+        "specificDraft": 1104,
+        "identityOnly": 0,
         "pending": 0,
         "generatedIdentification": 0
       },
       "function": {
+        "specificDraft": 1101,
+        "identityOnly": 0,
+        "pending": 3,
+        "generatedIdentification": 0
+      },
+      "ct": {
+        "specificDraft": 900,
+        "identityOnly": 0,
+        "pending": 204,
+        "generatedIdentification": 0
+      },
+      "mri": {
+        "specificDraft": 872,
+        "identityOnly": 0,
+        "pending": 232,
+        "generatedIdentification": 0
+      },
+      "xray": {
+        "specificDraft": 456,
+        "identityOnly": 0,
+        "pending": 648,
+        "generatedIdentification": 0
+      },
+      "ultrasound": {
+        "specificDraft": 626,
+        "identityOnly": 0,
+        "pending": 478,
+        "generatedIdentification": 0
+      },
+      "pathology": {
         "specificDraft": 1099,
         "identityOnly": 0,
         "pending": 5,
         "generatedIdentification": 0
       },
-      "ct": {
-        "specificDraft": 898,
-        "identityOnly": 0,
-        "pending": 206,
-        "generatedIdentification": 0
-      },
-      "mri": {
-        "specificDraft": 870,
-        "identityOnly": 0,
-        "pending": 234,
-        "generatedIdentification": 0
-      },
-      "xray": {
-        "specificDraft": 454,
-        "identityOnly": 0,
-        "pending": 650,
-        "generatedIdentification": 0
-      },
-      "ultrasound": {
-        "specificDraft": 624,
-        "identityOnly": 0,
-        "pending": 480,
-        "generatedIdentification": 0
-      },
-      "pathology": {
-        "specificDraft": 1097,
-        "identityOnly": 0,
-        "pending": 7,
-        "generatedIdentification": 0
-      },
       "clinical": {
-        "specificDraft": 1097,
+        "specificDraft": 1099,
         "identityOnly": 0,
-        "pending": 7,
+        "pending": 5,
         "generatedIdentification": 0
       },
       "quiz": {
-        "specificDraft": 114,
+        "specificDraft": 116,
         "identityOnly": 0,
         "pending": 1,
-        "generatedIdentification": 989
+        "generatedIdentification": 987
       }
     },
     "nested": {
@@ -2555,58 +2559,58 @@
       },
       "foot": {
         "anatomy": {
-          "specificDraft": 120,
-          "identityOnly": 2,
+          "specificDraft": 122,
+          "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 120,
+          "specificDraft": 122,
           "identityOnly": 0,
-          "pending": 2,
+          "pending": 0,
           "generatedIdentification": 0
         },
         "ct": {
-          "specificDraft": 116,
+          "specificDraft": 118,
           "identityOnly": 0,
-          "pending": 6,
+          "pending": 4,
           "generatedIdentification": 0
         },
         "mri": {
-          "specificDraft": 108,
+          "specificDraft": 110,
           "identityOnly": 0,
-          "pending": 14,
+          "pending": 12,
           "generatedIdentification": 0
         },
         "xray": {
-          "specificDraft": 88,
+          "specificDraft": 90,
           "identityOnly": 0,
-          "pending": 34,
+          "pending": 32,
           "generatedIdentification": 0
         },
         "ultrasound": {
-          "specificDraft": 70,
+          "specificDraft": 72,
           "identityOnly": 0,
-          "pending": 52,
+          "pending": 50,
           "generatedIdentification": 0
         },
         "pathology": {
-          "specificDraft": 120,
+          "specificDraft": 122,
           "identityOnly": 0,
-          "pending": 2,
+          "pending": 0,
           "generatedIdentification": 0
         },
         "clinical": {
-          "specificDraft": 120,
+          "specificDraft": 122,
           "identityOnly": 0,
-          "pending": 2,
+          "pending": 0,
           "generatedIdentification": 0
         },
         "quiz": {
-          "specificDraft": 8,
+          "specificDraft": 10,
           "identityOnly": 0,
           "pending": 0,
-          "generatedIdentification": 114
+          "generatedIdentification": 112
         }
       },
       "spine": {

@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "e88cf0d8a38be93fb57426473878911c52ed9acb9e89ae2cf18f71496faa12b1"
+      "sha256": "bcc9e98b5e01e77309eb3289dee19aed212649de353ae1e0f42d11147ade453f"
     },
     {
       "path": "app/body-education-link.ts",
@@ -831,6 +831,14 @@
     {
       "path": "content/foot-muscle-imaging.ts",
       "sha256": "80aba36ae5a6dfb3313510f75d414f96c27468d00c912c22b3d87dad5dfa2ba2"
+    },
+    {
+      "path": "content/foot-sesamoid-teaching-pins.json",
+      "sha256": "666a4c4bb8fe514c61d4c718e4f861365fbbc091dcf4a8a25f4808e0bd5aadc0"
+    },
+    {
+      "path": "content/foot-sesamoid-teaching.ts",
+      "sha256": "d25249c8f585bdf706c187c0e013342322ca85c073a3439a2efa187dcfcc6b7a"
     },
     {
       "path": "content/foot-vascular-quiz-pins.json",
@@ -2173,6 +2181,10 @@
       "sha256": "cef5ea8c92edd619891b8c2c51e94b2b0c98d5a285e6c1681a50d4e5c773d9de"
     },
     {
+      "path": "lib/foot-sesamoid-teaching.ts",
+      "sha256": "3fff1e3731ad28496af251623c2719a9ac49317a899a8b3e6c6d1df552b99bef"
+    },
+    {
       "path": "lib/foot-vascular-anatomy.ts",
       "sha256": "4678ddd09311b67e646004b61cf3b52f207b68678010d39dbe04bb37076ccdd4"
     },
@@ -3194,7 +3206,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "e029c5dcba47d3e71ca3118c79f9570c3ae7873e94b699e4b706e674d86d4111"
+      "sha256": "5da5847cb10f51dd1a071ca08abf7390ee2662bd47cac91786a6cbad94a94285"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3409,5 +3421,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "82f964ca0d017f935158146c76ae7c3157b211aaba7ba3df97c7e1a24168f35c"
+  "sha256": "6adaa9e3f8f7214ba04287878ac3dca27c266ccd930c8db3db8e479ea2731c5d"
 }

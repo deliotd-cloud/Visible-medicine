@@ -16,6 +16,7 @@ export * from './lib/content-types.ts';
 export * from './lib/pelvic-veins.ts';
 export * from './content/pelvic-vein-teaching.ts';
 export * from './app/body-content.ts';
+export * from './lib/foot-sesamoid-teaching.ts';
 export * from './lib/laryngeal-framework-imaging.ts';
 export * from './lib/lateral-cricoarytenoid-us.ts';
 export * from './lib/plantar-arterial-us.ts';

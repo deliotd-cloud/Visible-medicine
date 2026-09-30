@@ -1962,3 +1962,15 @@ BodyParts3D licence/source links copied into the generated inspector's
 `THIRD_PARTY_NOTICES.txt`. System fonts only; no textures, patient scans, publisher
 diagrams, dependency, service or mandatory fee added. Software/topology evidence
 does not provide clinical clearance. See `docs/CHOROIDAL_CONTEXT_REVIEW.md`.
+
+## Foot-sesamoid teaching reference — 1 October 2026
+
+Two existing generic side-specific BodyParts3D sesamoid groups receive original
+draft prose linking AAOS and Nwawka/Chen research reviews. These are factual
+reading references, not licences to redistribute source media. No article prose,
+figures, scans, tables, patient data or question-bank content is imported. Existing
+geometry/CC BY4.0 credit is unchanged. No asset, dependency, font, texture, service
+or mandatory fee added. Mesh component identity is explicitly unverified; the
+common first-MTP example does not rename the source. Radiologist sign-off remains
+revision-bound and separate from source/software checks. See
+`docs/FOOT_SESAMOID_TEACHING.md` for references and access limitations.

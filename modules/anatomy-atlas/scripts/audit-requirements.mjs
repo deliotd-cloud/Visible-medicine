@@ -331,6 +331,10 @@ const profiles = Object.values(dissectionProfiles);
 const sourceHashes = {};
 for (const path of [
   'lib/root-education-api.ts',
+  'lib/foot-sesamoid-teaching.ts',
+  'content/foot-sesamoid-teaching.ts',
+  'content/foot-sesamoid-teaching-pins.json',
+  'content/foot-sesamoid-teaching-transition.json',
   'app/body-education-link.ts',
   'integration/shoulder/education-api.ts',
   'lib/regional-framing.ts',
