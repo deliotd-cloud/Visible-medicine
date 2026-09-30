@@ -269,6 +269,8 @@
     "source-geometry:test": "node scripts/validate-source-geometry-screen.mjs",
     "candidate-spatial:audit": "node scripts/audit-candidate-spatial.mjs",
     "candidate-spatial:test": "node scripts/validate-candidate-spatial.mjs",
+    "anterior-choroidal-source:audit": "node scripts/audit-anterior-choroidal-source.mjs",
+    "anterior-choroidal-source:test": "node scripts/test-anterior-choroidal-source.mjs && node scripts/audit-anterior-choroidal-source.mjs --check && node scripts/render-anterior-choroidal-review.mjs --check",
     "neuro:test": "node scripts/validate-neuroanatomy.mjs",
     "axial:test": "node scripts/validate-axial-anatomy.mjs",
     "head-detail:test": "node scripts/validate-head-detail.mjs",
