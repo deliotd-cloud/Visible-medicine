@@ -1,5 +1,21 @@
 # Visible Medicine — shared delivery plan
 
+30 September: desktop dissection viewport and explode readability corrected locally.
+Short three-column embeds now keep the model within the available workspace;
+long dissection rails and teaching notes scroll independently. Compact/focus
+layouts retain their existing flow. Explode choice text and shoulder tooltips
+wrap at enlarged text sizes. Source eb6031b; all existing anatomy/models retained.
+No publication or clinical approval. Verification/recovery details:
+`docs/desktop-explode-delivery-20260930.md`. Fracture changes preserved; D remains
+full/pending and untouched. Continue the full Atlas/website roadmap.
+
+30 September owner priority: desktop-first delivery.
+Direct credits and implementation effort primarily to the desktop PC website,
+Atlas detail/dissection, clinical-review workflow and desktop presentation.
+Retain basic mobile usability and essential regression checks; defer broad
+mobile-only polish and repetitive device matrices unless materially necessary.
+Preserve accessibility, privacy, licensing, entitlement and clinical sign-off gates.
+
 29 September: enlarged-text tour selector corrected and integrated locally.
 The shared picker grows with wrapped titles instead of clipping at a fixed
 height. All19titles checked at320/375/1280px and100/200%text (114checks), plus

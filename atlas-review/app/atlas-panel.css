@@ -103,3 +103,15 @@
 .body-app[data-presentation='panel'][data-panel-short='true'] .shoulder-model-workspace>.viewer-panel {
   grid-template-rows:auto minmax(12.5rem,1fr);
 }
+/* A short desktop embed still has three columns. Do not let long dissection
+   rails/teaching notes enlarge their shared model row. Keep their independent
+   scrolling; compact drawer and focus layouts retain the document flow above. */
+.body-app[data-presentation='panel'][data-panel-short='true'][data-panel-tools='false'][data-focus-view='false'] {
+  overflow:hidden;
+}
+.body-app[data-presentation='panel'][data-panel-short='true'][data-panel-tools='false'][data-focus-view='false']>.body-layout {
+  flex:1 1 0; min-height:0; overflow:hidden;
+}
+.body-app[data-presentation='panel'][data-panel-short='true'][data-panel-tools='false'][data-focus-view='false'] .body-workspace {
+  overflow-y:auto;
+}
