@@ -14,10 +14,12 @@ assert.equal(tour.region,'hand');assert.equal(tour.status,'draft');assert.deepEq
 assert.deepEqual(tour.steps.map(s=>s.selectedId),ids);assert.deepEqual(tour.requiredDisplayBundles,Object.fromEntries(ids.map(id=>[id,'hand-skeleton'])));
 assert.deepEqual(tour.steps.map(s=>s.view),['posterior','posterior','posterior','anterior','anterior','posterior','posterior','anterior']);
 assert.equal(api.regionalToursFor('hand').length,2);assert.equal(api.regionalTourFor('hand').id,api.handTour.id);
-assert.equal(api.regionalTours.length,19);assert.equal(api.regionalTours.reduce((n,t)=>n+t.steps.length,0),105);
-assert.equal(new Set(api.regionalTours.flatMap(t=>api.regionalTourStructures(api.catalog,t).map(s=>s.id))).size,130);
-assert.deepEqual(api.regionalTours.filter(t=>t.id!==tour.id),prior.regionalTours,'All eighteen preceding definitions are preserved');
-for(const structure of api.catalog.structures)assert.deepEqual(api.regionalTourEvidence(api.catalog,structure.id).filter(e=>e.tour.id!==tour.id),prior.regionalTourEvidence(api.catalog,structure.id),'All preceding per-structure evidence is preserved');
+// Preserve the original carpal-admission snapshot; later renal addition is tested separately.
+const historicalTours=api.regionalTours.filter(t=>t.id!==api.renalTour.id);
+assert.equal(historicalTours.length,19);assert.equal(historicalTours.reduce((n,t)=>n+t.steps.length,0),105);
+assert.equal(new Set(historicalTours.flatMap(t=>api.regionalTourStructures(api.catalog,t).map(s=>s.id))).size,130);
+assert.deepEqual(historicalTours.filter(t=>t.id!==tour.id),prior.regionalTours,'All eighteen preceding definitions are preserved');
+for(const structure of api.catalog.structures)assert.deepEqual(api.regionalTourEvidence(api.catalog,structure.id).filter(e=>e.tour.id!==tour.id&&e.tour.id!==api.renalTour.id),prior.regionalTourEvidence(api.catalog,structure.id),'All preceding per-structure evidence is preserved');
 const selected=api.regionalTourStructures(api.catalog,tour);
 assert.deepEqual(selected.map(s=>s.id),ids);
 assert.deepEqual(selected.map(s=>s.fmaId),['FMA24435','FMA24437','FMA24439','FMA24441','FMA24443','FMA23725','FMA24446','FMA24448']);

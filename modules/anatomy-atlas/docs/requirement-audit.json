@@ -275,7 +275,7 @@
     "app/nested-teaching.css": "d912bfc774cc744511a4c0e87a0a35f6b693def9f4bddc25b6f010f07dfa83bc",
     "package-lock.json": "7143e44eb0cb9e11c3f42c4a66d7bdef6f5c89334378d6cc23dcb37f43a1f350",
     "content/schema/anatomy-structure.schema.json": "b29bda2931faaa47bb7747f07a46520b65d7e4847ce65b5df29dd008a90de95c",
-    "content/review-revisions.json": "1fcf6761a76bd594af08a21f79f6408d4963b35a075399f12531de08a2df2e8c",
+    "content/review-revisions.json": "380ce2b69ed41e887017d8a0fac7b12bbac88e21b494c68e439179f94aced95e",
     "content/learning-resources.v1.json": "799fec602114a944b4f675d341b445982dac56786cca9b5800d52db7d95899e5",
     "lib/learning-resource-types.ts": "c08858a0b3bdcc0467d815d71a129428c3b311c1eaf318a544e1f091b1833778",
     "lib/learning-resources.ts": "e2e191c19df1f7bfebd31d429c6320430845d145ac1f9c604a011827eb482da4",
@@ -371,10 +371,10 @@
     "resolvedContentAndRecipeData": "e5c2c05557a48137e701bc8110a451b9b4937e1b0f0b8bd10da654d9c0eb3b1d",
     "explicitTopicReadiness": "75adadc036908764557bb74454f91dd9e327727335b43d4d3aca3b0cb2518bf2",
     "reasoningQuestionData": "e14edb0ec5501658df333e69f0aef4d9593b6647a3773258ff0ef6ec03b786fb",
-    "guidedLearningData": "9b5bc5c383c5ebb34241766bf2667862b1941c0f6188f88d6b8a1f25fbe55432",
+    "guidedLearningData": "a5d76cdc05eff586584131d14f77c8a36dd508bf1a794e004b9d31dde1e72ec4",
     "app/volume-image.tsx": "34d28f4f9284cbb18dd4c175815490fb3727912fdb4acb22143c91167ccd4448",
     "app/review/mri-import/page.tsx": "70e68c1a824ba1fe8f8b3c4291a9d8015c18288a9040289d4f4adec59bed039e",
-    "lib/regional-tours.ts": "a1980f9b1d601473c83096087d17aa2701e96010b2b843bd0bc0d2130d4a8b88",
+    "lib/regional-tours.ts": "48c13b140f587d182f1b0aa597012f35525d9e681233941673a8dcc7e3a46e20",
     "lib/shoulder-tours.ts": "03083449553e2f4db25adf66c9d5fc18b2c7849ee2b1846f4cd06775ceeb2fda",
     "lib/chest-wall-tour.ts": "232ec7d0e64d12929a24a68782c8110090ab6df78f4f15cb8440bfc6ff9ac5da",
     "lib/orbital-tour.ts": "e28d25ee70c8aea373439d1e938d1d2da5a23115042728da42989a6e4853c3d0",
@@ -384,6 +384,7 @@
     "lib/subscapular-tour.ts": "bb0dedb25c5ff20485e290c0ee91ef2a9668ea291aa11ed7f33209c4b1ce0504",
     "lib/lumbar-tour.ts": "00ca73890eeb65988461f90b4f333259955f689d0e6dcdcafa7f3a783f004bed",
     "lib/carpal-tour.ts": "bb5ca59e6c6d9ab153800b77c4dc8786d132493165fd6020257971bc1ef20f35",
+    "lib/renal-tour.ts": "20dad74e41a7e4ebe3b9699dea0257795aec56f2f7713d6ecb5febd5cec7307f",
     "nestedTeachingData": "e1d6522909554a2938b62ab28dde76549a2d6117cfdaef79b7c930b1ece3739c"
   },
   "rendering": {
@@ -1627,8 +1628,8 @@
   },
   "study": {
     "guidedLearning": {
-      "regionalTours": 19,
-      "regionalStops": 105,
+      "regionalTours": 20,
+      "regionalStops": 109,
       "shoulderTours": 1,
       "shoulderStops": 5,
       "readiness": "draft"

@@ -10,7 +10,7 @@ const require = createRequire(import.meta.url), React = require('react');
 const catalog = JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json', import.meta.url), 'utf8'));
 const catalogBefore = JSON.stringify(catalog);
 const built = await build({ stdin: {
-  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, celiacTour, forearmTour, subscapularTour, lumbarTour, carpalTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, maleDuctTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
+  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, celiacTour, forearmTour, subscapularTour, lumbarTour, carpalTour, renalTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, maleDuctTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
   loader: 'tsx', resolveDir: process.cwd(),
 }, bundle: true, write: false, format: 'cjs', platform: 'node', loader: { '.css': 'empty' }, plugins: [{ name: 'gpu-boundary', setup(api) {
   api.onLoad({ filter: /[\\/]app[\\/]body-scene\.tsx$/ }, () => ({ loader: 'tsx', contents: 'if(globalThis.retryControl.importError)throw new Error("import failed"); export function BodyScene(){return null;} export function retryBodyAssets(urls,base){globalThis.retryControl.clear(urls,base);}' }));
@@ -86,6 +86,33 @@ test('Subscapular and lumbar tours keep exact steps, smooth frames, pause and ex
     if(index<h.props.tour.steps.length-1)h.click('Next');
   }
   h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
+ }
+});
+
+test('Renal tour requires both source bundles, keeps one assembled frame and respects reduced motion',()=>{
+ const h=harness(catalog,'renalTour');
+ assert.equal(h.scene().structures.length,5);
+ assert.deepEqual(h.bundles().sort(),['abdomen-organs','abdomen-vessels-recovery']);
+ h.scene().onLoaded('abdomen-organs');h.scene().onRendererHealth('ready');h.render();
+ assert.equal(h.button('Start guided tour').disabled,true,'Organ-only readiness cannot unlock artery teaching');
+ h.scene().onLoaded('abdomen-vessels-recovery');h.render();h.click('Start guided tour');
+ const frame=plain(h.scene().presetBounds);h.click('Play');
+ for(const [index,step]of h.props.tour.steps.entries()){
+  assert.equal(h.scene().selectedId,step.selectedId);assert.equal(h.scene().view,step.view);
+  assert.equal(h.scene().structures.length,5);assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
+  assert.deepEqual(plain(h.scene().presetBounds),frame);
+  assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,index)));
+  assert.equal(h.scene().transitionMs,1800);h.tick();
+ }
+ assert.equal(h.scene().reset,3);assert.equal(h.timers.size,0);
+ h.preference.matches=true;h.listeners.get('motion')();h.render();
+ h.click('Back');assert.equal(h.scene().transitionMs,0);assert.equal(h.scene().reset,2);
+ h.preference.matches=false;h.listeners.get('motion')();h.render();
+ h.click('Next');assert.equal(h.scene().transitionMs,1800);h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
+ for(const id of [...h.props.tour.contextIds,...h.props.tour.steps.map(s=>s.selectedId)]){
+  const unavailable=harness(catalog,'renalTour',true,id);
+  assert.equal(nodes(unavailable.tree()).filter(n=>n.type==='BodyScene').length,0);
+  assert.equal(unavailable.button('Start guided tour').disabled,true);assert.equal(unavailable.timers.size,0);
  }
 });
 

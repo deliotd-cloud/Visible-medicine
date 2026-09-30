@@ -10,7 +10,7 @@ const prior=await compile(execFileSync('git',['show',parent+':lib/regional-tours
 const tour=api.lumbarTour,ids=tour.steps.map(s=>s.selectedId);
 assert.equal(tour.status,'draft');assert.equal(tour.region,'spine');
 assert.equal(tour.revision,'lower-lumbar-sacral-orientation-v1');
-assert.deepEqual(api.regionalTours.filter(t=>t.id!==tour.id&&t.id!==api.carpalTour.id),prior.regionalTours);
+assert.deepEqual(api.regionalTours.filter(t=>t.id!==tour.id&&t.id!==api.carpalTour.id&&t.id!==api.renalTour.id),prior.regionalTours);
 assert.equal(api.regionalToursFor('spine').length,2);
 assert.equal(api.regionalTourFor('spine').id,api.cervicalSpineTour.id);
 const selected=api.regionalTourStructures(api.catalog,tour);

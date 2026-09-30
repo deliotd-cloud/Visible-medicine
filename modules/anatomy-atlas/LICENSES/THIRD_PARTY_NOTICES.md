@@ -1940,3 +1940,13 @@ et al. (PMID11156774). No article prose, figure, table or scan is reproduced;
 their links are factual references, not media reuse permissions. No new service,
 dependency, paid asset or font is introduced. The sheet uses system fonts.
 See `docs/ANTERIOR_CHOROIDAL_SOURCE_REVIEW.md` for source and clinical limitations.
+
+## Renal guided learning reference — 30 September 2026
+
+The kidney/renal-artery tour contains original short factual captions referencing
+TTUHSC El Paso's kidney/retroperitoneum table. No source table, illustration,
+scan, question-bank item or prose passage is redistributed. The linked page is
+a factual reference, not a media reuse licence. All existing BodyParts3D4.0
+CC BY4.0 geometry and credit remain unchanged. No new asset, font, dependency,
+service or mandatory fee is added. See `docs/RENAL_GUIDED_TOUR.md`; teaching and
+the full tour require revision-bound radiologist review.

@@ -402,3 +402,12 @@ transitions. Cervical orientation stays the default. Source-disc labels do not
 establish patient numbering or separately segmented annulus/nucleus. The current
 library has18 regional tours and97 stops, plus the dedicated shoulder tour/five
 stops. All remain draft; no review or acquired-image approval transfers.
+
+## Renal orientation addition — 30 September 2026
+
+[Kidneys & renal arteries](RENAL_GUIDED_TOUR.md) adds four source-bound stops
+under Abdomen and Whole body. Both kidneys and artery segments share a stable
+frame through smooth posterior/anterior turns; the aorta is faded context.
+The coeliac tour remains the abdominal default. The library now has20 regional
+tours/109 stops, plus the dedicated shoulder sequence/five stops. No geometry,
+source specimen alignment, scan access or clinical approval changes.
