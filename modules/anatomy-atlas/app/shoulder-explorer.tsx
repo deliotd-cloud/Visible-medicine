@@ -1114,7 +1114,7 @@ export default function ShoulderExplorer({
                   >
                     {isolated ? <Eye /> : <EyeOff />}
                   </TooltipTrigger>
-                  <TooltipContent>
+                  <TooltipContent className="vm-viewer-tooltip">
                     {isolated ? 'Show all structures' : 'Fade other structures'}
                   </TooltipContent>
                 </Tooltip>
@@ -1133,7 +1133,7 @@ export default function ShoulderExplorer({
                   >
                     <Tags />
                   </TooltipTrigger>
-                  <TooltipContent>Toggle labels</TooltipContent>
+                  <TooltipContent className="vm-viewer-tooltip">Toggle labels</TooltipContent>
                 </Tooltip>
                 <Tooltip>
                   <TooltipTrigger
@@ -1150,7 +1150,7 @@ export default function ShoulderExplorer({
                   >
                     <Crosshair />
                   </TooltipTrigger>
-                  <TooltipContent>
+                  <TooltipContent className="vm-viewer-tooltip">
                     Reference plane illustration — not a scan
                   </TooltipContent>
                 </Tooltip>
@@ -1205,7 +1205,7 @@ export default function ShoulderExplorer({
                   >
                     <RotateCcw />
                   </TooltipTrigger>
-                  <TooltipContent>Reset view</TooltipContent>
+                  <TooltipContent className="vm-viewer-tooltip">Reset view</TooltipContent>
                 </Tooltip>
               </div>
               <div className="viewer-hint">

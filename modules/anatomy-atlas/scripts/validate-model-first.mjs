@@ -585,6 +585,13 @@ const compiled = await build({
             'export const BodyScene = () => null; export const retryBodyAssets = () => {};',
           loader: 'tsx',
         }));
+        // These markup assertions inspect the settled, visible information
+        // panel. Server rendering cannot run the teaching loader's effect, so
+        // resolve its real module in this fixture as the tour-player test does.
+        b.onLoad({ filter: /lazy-body-teaching\.tsx$/ }, () => ({
+          contents: "import { createContext } from 'react'; import * as teaching from './body-content'; export const BodyTeachingVisibility = createContext(true); export function LazyBodyTeaching({ enabled = true, children }) { return enabled ? children(teaching) : null; }",
+          loader: 'tsx',
+        }));
         // The runtime session hook owns mode since 6786ed3c. Keep the loaded
         // explorer path, but inject the requested fixture mode explicitly.
         b.onLoad({ filter: /workspace-session\.ts$/ }, () => ({

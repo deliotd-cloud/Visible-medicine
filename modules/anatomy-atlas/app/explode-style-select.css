@@ -21,10 +21,24 @@
   min-height: 2.25rem;
   font-size: 0.875rem;
 }
+/* The shared Select value defaults to a single-line clamp. Keep the chosen
+   mechanism readable at enlarged text sizes without widening the toolbar. */
+.vm-explode-style > [data-slot='select-value'] {
+  display: block;
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  -webkit-line-clamp: unset;
+}
 .viewer-hint {
   max-width: calc(100% - 2rem);
   white-space: normal;
   text-align: center;
+}
+.vm-viewer-tooltip {
+  max-width: min(20rem, calc(100vw - 1rem));
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 @media (pointer: coarse) {
   .body-explode .vm-explode-style,
