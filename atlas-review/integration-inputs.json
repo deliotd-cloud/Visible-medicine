@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "eb6031b48e00faec4894c180f4c0d5a680847224",
-  "sha256": "260b5270b52bec0c2885b28b3b068bb35a2931186e33ff5660e4f6e441b3cd7c",
+  "sourceCommit": "11ba63422686e0f8666bf18769c67485dc518d19",
+  "sha256": "76d917a02fd1dcfb36870942cbe85f7ed49bda9ff4c73be23232684260857e65",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -3028,7 +3028,7 @@
     },
     {
       "path": "atlas-review/lib/regional-tours.ts",
-      "sha256": "a1980f9b1d601473c83096087d17aa2701e96010b2b843bd0bc0d2130d4a8b88"
+      "sha256": "48c13b140f587d182f1b0aa597012f35525d9e681233941673a8dcc7e3a46e20"
     },
     {
       "path": "atlas-review/lib/regional-vascular-clinical.ts",
@@ -3045,6 +3045,10 @@
     {
       "path": "atlas-review/lib/renal-studies.ts",
       "sha256": "bc44af653a69733ff82ef7cbad2db054cdf57f43319193cfc3e69b555968a9f5"
+    },
+    {
+      "path": "atlas-review/lib/renal-tour.ts",
+      "sha256": "20dad74e41a7e4ebe3b9699dea0257795aec56f2f7713d6ecb5febd5cec7307f"
     },
     {
       "path": "atlas-review/lib/renal.ts",
@@ -3440,7 +3444,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "61a340f51925dd7b16592d2264fb426c5528e95e0a7bc1a100e4d6727112b777"
+      "sha256": "a92c99702755a3100db6915e4e16ce5b5ac082616052f0ec47779ba70588cc9a"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3696,7 +3700,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "a207bf7f9792f7ec02bc7f83c527a90ecc92deea909879631da7bdc72bd596bd"
+      "sha256": "5ebbc630a835e2232c2ce0fbb4ffbaf30d1a7dc080ac9d6132a36ada1aebe218"
     }
   ]
 }

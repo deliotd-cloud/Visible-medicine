@@ -2810,7 +2810,7 @@
     },
     {
       "path": "lib/regional-tours.ts",
-      "sha256": "a1980f9b1d601473c83096087d17aa2701e96010b2b843bd0bc0d2130d4a8b88"
+      "sha256": "48c13b140f587d182f1b0aa597012f35525d9e681233941673a8dcc7e3a46e20"
     },
     {
       "path": "lib/regional-vascular-clinical.ts",
@@ -2827,6 +2827,10 @@
     {
       "path": "lib/renal-studies.ts",
       "sha256": "bc44af653a69733ff82ef7cbad2db054cdf57f43319193cfc3e69b555968a9f5"
+    },
+    {
+      "path": "lib/renal-tour.ts",
+      "sha256": "20dad74e41a7e4ebe3b9699dea0257795aec56f2f7713d6ecb5febd5cec7307f"
     },
     {
       "path": "lib/renal.ts",
@@ -3190,7 +3194,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "9df5555a43b7073fccdb308ce143d456cc5401ada52e12f3279452f00da0b02e"
+      "sha256": "e029c5dcba47d3e71ca3118c79f9570c3ae7873e94b699e4b706e674d86d4111"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3405,7 +3409,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "091e3f9555b1a2547447e4184986c42492f564ac27250cc177a1b4c60240a406",
-  "sourceRendererSha256": "6922c445e8143bee8795172ed5b27f6d1e4b3bdce8a29b3e5cc4815198e314fe",
-  "websiteIntegrationSha256": "260b5270b52bec0c2885b28b3b068bb35a2931186e33ff5660e4f6e441b3cd7c"
+  "sha256": "62fb923eb98dd2b2088fff92c8a430392c07ad76537ab505790ff833ee403bd2",
+  "sourceRendererSha256": "82f964ca0d017f935158146c76ae7c3157b211aaba7ba3df97c7e1a24168f35c",
+  "websiteIntegrationSha256": "76d917a02fd1dcfb36870942cbe85f7ed49bda9ff4c73be23232684260857e65"
 }

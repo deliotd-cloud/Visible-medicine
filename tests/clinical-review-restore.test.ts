@@ -8,7 +8,7 @@ import ts from 'typescript';
 test('review ships the tested scoped restoration handlers and bound viewer', () => {
   const review = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
   const viewer = JSON.parse(readFileSync('public/atlas-review-viewer/manifest.json', 'utf8'));
-  assert.equal(review.revision, 'eb6031b48e00faec4894c180f4c0d5a680847224');
+  assert.equal(review.revision, '11ba63422686e0f8666bf18769c67485dc518d19');
   assert.equal(viewer.sourceCommit, review.revision);
   assert.equal(viewer.websiteIntegrationSha256, review.websiteIntegrationSha256);
   assert.equal(viewer.personalRecordsIncluded, false);

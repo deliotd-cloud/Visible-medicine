@@ -1,5 +1,17 @@
 # Visible Medicine — shared delivery plan
 
+30 September: renal guided learning integrated locally.
+Abdomen/Whole body now offer four kidney/renal-artery stops in one stable source
+frame, with smooth turns and faded aortic context; coeliac remains the default.
+Source11ba6342;20regional tours/109stops. All137original models and prior notices
+retained.306website tests covered via full/affected runs, types/build and16actual
+integrated learner stops plus right-kidney Clinical Review pass. Imaging notes
+pause playback without connecting scans or granting case/paid-lecture access.
+No publication or clinical approval; separate fracture work preserved. See
+`docs/renal-tour-delivery-20260930.md`. GitHub/C recovery recorded separately;
+D remains full/pending, untouched. Native MRI already done; goal remains active.
+
+
 30 September: desktop dissection viewport and explode readability corrected locally.
 Short three-column embeds now keep the model within the available workspace;
 long dissection rails and teaching notes scroll independently. Compact/focus
