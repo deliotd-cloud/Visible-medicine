@@ -7,8 +7,8 @@ import { build } from 'esbuild';
 test('seven thoracic quick checks reach learner and review with exact identities and answer evidence', async () => {
   const review = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
   const learner = JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8'));
-  assert.equal(review.revision, '927180af8a7d04a96cd54088953dc68a1dd54588');
-  assert.equal(learner.sourceCommit,'927180af8a7d04a96cd54088953dc68a1dd54588');
+  assert.equal(review.revision, '551f7dc0902be9c26c57a74cac4f101925767809');
+  assert.equal(learner.sourceCommit,'551f7dc0902be9c26c57a74cac4f101925767809');
   assert.equal(learner.patientDataIncluded, false);
   assert.equal(learner.clinicalApproved, false);
   const inputs = JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json', 'utf8'));

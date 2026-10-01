@@ -1,5 +1,5 @@
 {
-  "revision": "927180af8a7d04a96cd54088953dc68a1dd54588",
+  "revision": "551f7dc0902be9c26c57a74cac4f101925767809",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2904,7 +2904,7 @@
     {
       "path": "content/body-renderer-revision.json",
       "sourceSha256": "e522729c1d0339db6d81b0bf1233a412dbb668c69a06d022a47e11282d694bb8",
-      "importedSha256": "f61a7b52c59b81320cc2f05c4f8625203582284a9148906841a08684513a193c"
+      "importedSha256": "42f4cb9c9b0225fd9b0ce862b27022ee3e2043707fd0a0a95d2653004bb3a785"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3259,7 +3259,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "b2cca8944a1175a744056d0e5e5b2759ec4f58174f5b2f4a2f674bdd2c46508e",
-      "importedSha256": "03e2533633b9491a3e315341b2bcc3f4266c0dc8cf556bc99e5c53180334ff18"
+      "importedSha256": "451266ea6c2bfc3e970b237e7af0ebb413e92fa882f8ece862e0518b25d3da59"
     },
     {
       "path": "app/review/review.css",
@@ -3318,13 +3318,18 @@
     },
     {
       "path": "app/review/nested/page.tsx",
-      "sourceSha256": "0c5ebbf95ff761b243b2fdb3f30c70c6bdf75c9dd765f271a541cff249a44e69",
-      "importedSha256": "0ae6d7b7a2cc8a23593e47250b94a8fb9313d0c7d90d6e44af9598ef93299fe3"
+      "sourceSha256": "6fc962dfbde7462ca3ef98dd1043d2094ec259ca8e526b2f89171430eaf5d5f5",
+      "importedSha256": "db1bca82803958c711c527a4266a96c44ed387805ce37da4ed94f9ab86680dc0"
+    },
+    {
+      "path": "lib/nested-review-queue.ts",
+      "sourceSha256": "129b0bdfebc739f8ff40c8f1140a916ee5c514a32d5749508d1d0f220d2f3ea2",
+      "importedSha256": "6419a5ba3f43e0777256708d6225112e0073f620626f9449d2db09aada969ecc"
     },
     {
       "path": "app/review/nested/workspace.tsx",
-      "sourceSha256": "94360c32732f1ea67d2ea044fd5afaa68fdf07b7d8934e72ff01812c8a9afccc",
-      "importedSha256": "9b592f751c1b4393c8f1ae64fe6084bb206fc689d3396abb8a9393a97ea7e359"
+      "sourceSha256": "5c7147fe4149d39b3b92291e7489e6e35340959c57e5b465ec6bab74767da009",
+      "importedSha256": "0994b16d961659e4e4b109f8a89aafdd07ad704079cd6347fc8bcc5018b67eb7"
     },
     {
       "path": "lib/nested-review-client.ts",
@@ -3333,8 +3338,8 @@
     },
     {
       "path": "app/review/nested/nested-review.css",
-      "sourceSha256": "961103a616dd2022dd86d528f6cc779e27f2c29c4f2b4eb1821a5669bea5e604",
-      "importedSha256": "961103a616dd2022dd86d528f6cc779e27f2c29c4f2b4eb1821a5669bea5e604"
+      "sourceSha256": "16a0a5f593db064e493efd8909e7b778cf6f7fc7a2762af9654fcae0db74ebf4",
+      "importedSha256": "16a0a5f593db064e493efd8909e7b778cf6f7fc7a2762af9654fcae0db74ebf4"
     },
     {
       "path": "app/review/specimens/page.tsx",
@@ -4718,5 +4723,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "1e2a99ccf2742882024e9565bb3ab73c1cbd8dab88eddc27a310d6e8b1e2960c"
+  "websiteIntegrationSha256": "49cdf7496c4cc02c077e9c7bd73aa72e77ceaa79f5772c374d00e7d8773035e7"
 }

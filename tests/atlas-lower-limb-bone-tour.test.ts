@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 
 test('hip-to-heel learner and Clinical Review retain exact whole-body teaching evidence',async()=>{
-  const source='927180af8a7d04a96cd54088953dc68a1dd54588';
+  const source='551f7dc0902be9c26c57a74cac4f101925767809';
   const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
   const review=json('atlas-review/manifest.json');
   assert.equal(review.revision,source);

@@ -13,7 +13,7 @@ import {
   SelectItem,
 } from "@/atlas-review/components/ui/select";
 import { specimenTopicLabels } from "@/atlas-review/lib/specimen-links";
-import bindings from '@/atlas-review/content/nested-review-bindings.json';
+import { nestedReviewQueue, nestedReviewQuery, nestedReviewNavigationTrack } from '@/atlas-review/lib/nested-review-queue';
 import type {
   NestedReviewMaterial,
   nestedReviewRows,
@@ -57,15 +57,19 @@ export function NestedReviewWorkspace({
   rows,
   packet,
   invalid,
+  initialQuery = '',
+  initialTrack = 'geometry',
 }: {
   rows: typeof nestedReviewRows;
   packet: NestedReviewMaterial | null;
   invalid: boolean;
+  initialQuery?: string;
+  initialTrack?: 'geometry' | 'teaching';
 }) {
-  const [query, setQuery] = useState(""),
+  const [query, setQuery] = useState(nestedReviewQuery(initialQuery)),
     [key, setKey] = useState(packet?.context.nestedKey ?? rows[0].key);
   const [dirty, setDirty] = useState(false),
-    [track, setTrack] = useState<NestedReviewTrack>("geometry");
+    [track, setTrack] = useState<NestedReviewTrack>(nestedReviewNavigationTrack(initialTrack));
   useEffect(() => {
     if (!dirty) return;
     const unload = (e: BeforeUnloadEvent) => {
@@ -94,11 +98,8 @@ export function NestedReviewWorkspace({
     };
   }, [dirty]);
   const group = rows.find((r) => r.key === key)!;
-  const filtered = group.surfaces.filter((s) =>
-    `${s.name} ${s.id} ${s.laterality}`
-      .toLowerCase()
-      .includes(query.trim().toLowerCase()),
-  );
+  const queue = nestedReviewQueue(rows, key, query, packet?.context ?? null, track);
+  const filtered = queue.entries;
   return (
     <div className="body-review-grid nested-review">
       <aside className="body-review-queue">
@@ -126,15 +127,36 @@ export function NestedReviewWorkspace({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Name, side or exact ID"
+          maxLength={160}
         />
-        <p>{filtered.length} selections</p>
+        <nav className="nested-review-queue-navigation" aria-label="Structures in the filtered review queue">
+          {queue.previous ? (
+            <Button size="sm" variant="outline" nativeButton={false}
+              render={<a href={queue.previous.href} aria-label={`Previous structure: ${queue.previous.name}`} />}>
+              Previous
+            </Button>
+          ) : <Button size="sm" variant="outline" disabled>Previous</Button>}
+          {queue.next ? (
+            <Button size="sm" variant="outline" nativeButton={false}
+              render={<a href={queue.next.href} aria-label={`Next structure: ${queue.next.name}`} />}>
+              Next
+            </Button>
+          ) : <Button size="sm" variant="outline" disabled>Next</Button>}
+        </nav>
+        <p role="status">
+          {queue.index >= 0 ? `Structure ${queue.index + 1} of ${filtered.length} in the filtered queue`
+            : packet ? 'Selected structure is outside this filtered queue'
+            : `${filtered.length} selections`}
+        </p>
+        {!!query && <Button size="sm" variant="ghost" onClick={() => setQuery('')}>Clear search</Button>}
+        {!filtered.length && <p>No matching structures. Clear or change your search.</p>}
         <ul>
           {filtered.map((s) => (
             <li key={s.id}>
               <a
                 className="nested-review-choice"
                 aria-current={packet?.context.structureId === s.id && packet.context.nestedKey === key ? "page" : undefined}
-                href={`/workspace/atlas-review/nested?parent=${encodeURIComponent(group.parentId)}&study=${encodeURIComponent(group.study)}&structure=${encodeURIComponent(s.id)}&source=${bindings.groups.find(g=>g.key===key)?.selections.find(r=>r.id===s.id)?.sourceToken??''}`}
+                href={s.href}
               >
                 {s.name}
               </a>

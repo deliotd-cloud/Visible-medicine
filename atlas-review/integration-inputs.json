@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "927180af8a7d04a96cd54088953dc68a1dd54588",
-  "sha256": "1e2a99ccf2742882024e9565bb3ab73c1cbd8dab88eddc27a310d6e8b1e2960c",
+  "sourceCommit": "551f7dc0902be9c26c57a74cac4f101925767809",
+  "sha256": "49cdf7496c4cc02c077e9c7bd73aa72e77ceaa79f5772c374d00e7d8773035e7",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -320,15 +320,15 @@
     },
     {
       "path": "atlas-review/app/review/nested/nested-review.css",
-      "sha256": "961103a616dd2022dd86d528f6cc779e27f2c29c4f2b4eb1821a5669bea5e604"
+      "sha256": "16a0a5f593db064e493efd8909e7b778cf6f7fc7a2762af9654fcae0db74ebf4"
     },
     {
       "path": "atlas-review/app/review/nested/page.tsx",
-      "sha256": "0ae6d7b7a2cc8a23593e47250b94a8fb9313d0c7d90d6e44af9598ef93299fe3"
+      "sha256": "db1bca82803958c711c527a4266a96c44ed387805ce37da4ed94f9ab86680dc0"
     },
     {
       "path": "atlas-review/app/review/nested/workspace.tsx",
-      "sha256": "9b592f751c1b4393c8f1ae64fe6084bb206fc689d3396abb8a9393a97ea7e359"
+      "sha256": "0994b16d961659e4e4b109f8a89aafdd07ad704079cd6347fc8bcc5018b67eb7"
     },
     {
       "path": "atlas-review/app/review/overview/overview.css",
@@ -2939,6 +2939,10 @@
       "sha256": "eba8b577811c1ac65122b61301b2c83cf7b3a97574bc2a4cc7b2ddae43600801"
     },
     {
+      "path": "atlas-review/lib/nested-review-queue.ts",
+      "sha256": "6419a5ba3f43e0777256708d6225112e0073f620626f9449d2db09aada969ecc"
+    },
+    {
       "path": "atlas-review/lib/nested-review-store.ts",
       "sha256": "d1e2ac0203b571ff069d170c3d3184771ab4bcb4e5c8926f7736cc47ca010301"
     },
@@ -3832,7 +3836,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "5b31b1040818c793d948ac00f00d4c40397e8ca836b8f45f4b8d7152391c2341"
+      "sha256": "1ad05cf5ff6666a5adf476804d8dea210e707eb0d81f98630f8c236195f7e9b7"
     }
   ]
 }

@@ -20,6 +20,18 @@
   gap: 0.5rem;
   flex-wrap: wrap;
 }
+.nested-review-queue-navigation {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+.nested-review-queue-navigation a {
+  min-height: 2.4rem;
+  height: auto;
+  white-space: normal;
+  max-width: 100%;
+}
 .nested-decision fieldset {
   border-top: 1px solid var(--border);
   padding-top: 1rem;

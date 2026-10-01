@@ -1,13 +1,14 @@
 import { Brand } from '../../brand';
 import { nestedReviewRows, nestedReviewSelection } from '@/atlas-review/lib/nested-review-material';
 import { nestedReviewKey } from '@/atlas-review/lib/nested-review-key';
+import { nestedReviewQuery, nestedReviewNavigationTrack } from '@/atlas-review/lib/nested-review-queue';
 import { NestedReviewWorkspace } from './workspace';
 import '../body/body-review.css';
 import './nested-review.css';
 export const dynamic = 'force-dynamic';
 export const metadata = {title:'Nested Anatomy Review | Visible Medicine'};
 export default async function NestedReviewPage({searchParams}:{
-  searchParams:Promise<{parent?:string;study?:string;structure?:string;source?:string}>;
+  searchParams:Promise<{parent?:string;study?:string;structure?:string;source?:string;q?:string|string[];t?:string|string[]}>;
 }) {
   const p=await searchParams;
   const packet=typeof p.parent==='string'&&typeof p.study==='string'&&typeof p.structure==='string'
@@ -17,6 +18,6 @@ export default async function NestedReviewPage({searchParams}:{
       <a href="/workspace/atlas-review">Clinical review home</a><a href="/atlas">Atlas</a></header>
     <main className="body-review-shell"><h1>Review the selected internal structure</h1>
       <p>Private, account-specific records for an exact parent, dissection study and child. No automatic approval or transfer between scopes.</p>
-      <NestedReviewWorkspace key={packet?.context.materialHash??'pick'} rows={nestedReviewRows} packet={packet} invalid={!!(p.parent||p.study||p.structure)&&!packet}/>
+      <NestedReviewWorkspace key={packet?.context.materialHash??'pick'} rows={nestedReviewRows} packet={packet} initialQuery={nestedReviewQuery(p.q)} initialTrack={nestedReviewNavigationTrack(p.t)} invalid={!!(p.parent||p.study||p.structure)&&!packet}/>
     </main></div>;
 }
