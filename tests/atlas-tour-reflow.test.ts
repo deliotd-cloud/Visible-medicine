@@ -8,7 +8,7 @@ test('tour title reflow ships matching learner/review styles without changing an
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
  const previous=(p:string)=>JSON.parse(execFileSync('git',['show','047d488a:'+p],{encoding:'utf8',maxBuffer:32e6}));
  const review=json('atlas-review/manifest.json'),before=previous('atlas-review/manifest.json');
- assert.equal(review.revision,'f636891cdcee10aeca20ae684cb04c183fa7600e');
+ assert.equal(review.revision,'43072a948beda597e7a62439e8c093aa76cb94a7');
  // Keep the exact historical reflow delta pinned to its delivered commit;
  // subsequent independently reviewed runtime fixes advance the current import.
  const reflow=JSON.parse(execFileSync('git',['show','1727b2e3:atlas-review/manifest.json'],{encoding:'utf8',maxBuffer:32e6}));
@@ -17,6 +17,7 @@ test('tour title reflow ships matching learner/review styles without changing an
  assert.deepEqual(review.files.map((f:any)=>f.path).sort(),[...before.files.map((f:any)=>f.path),'lib/renal-tour.ts','lib/tarsal-tour.ts','lib/lower-limb-bone-tour.ts','lib/upper-limb-bone-tour.ts',
   'content/body-review-display-pins.json','lib/body-review-display-evidence.ts','lib/body-review-display-integrity.ts',
   'lib/hra-pelvic-guided-dissection.ts','lib/hra-renal-guided-dissection.ts','lib/specimen-guided-dissection.ts',
+  'lib/um-limb-guided-dissection.ts','lib/um-proximal-guided-dissection.ts','lib/um-distal-guided-dissection.ts',
   'lib/abdominal-guided-dissection.ts','lib/back-guided-dissection.ts',
   'content/abdominal-bone-teaching.ts',
   'content/um-proximal-topic-completion.ts','content/um-distal-topic-completion.ts','content/um-limb-modality-references.ts',

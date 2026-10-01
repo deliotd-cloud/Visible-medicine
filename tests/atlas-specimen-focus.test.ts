@@ -7,13 +7,13 @@ test('specimen runtime binds verified removal/history focus without publishing C
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'024ca267eddea5240211e42d9bdad326ec4048aacc738a4954f50c09a2f84c7f');
+  assert.equal(sha(bytes),'bc989060f3f77ed46da11d5092ee1aebac08dec5453b47c4fa0a643eb1101410');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'f636891cdcee10aeca20ae684cb04c183fa7600e');
+  assert.equal(manifest.sourceCommit,'43072a948beda597e7a62439e8c093aa76cb94a7');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of [
     ['app/specimen-removal-focus.ts','eb7b9f29bbab0e9524a5162e0254d6c0561a773ad8bf9c7ca89cc59fefe3f362'],
-    ['app/um-knee-study.tsx','d112b2681b6d39dc81dcdb3bfc3a86b33d045a8e9b9cee4a26b8f864c29e0973'],
+    ['app/um-knee-study.tsx','e100830b33643dc1696ebffed0e8f26254fdfbfc49f0911e1a649d56f0a4f7d7'],
   ])assert.deepEqual(inputs.filter(i=>i.path===path),[{path,sha256}]);
   assert(!inputs.some(i=>/ct-handoff-preflight|\.local\//.test(i.path)));
   const files=manifest.files as {path:string;sha256:string}[];

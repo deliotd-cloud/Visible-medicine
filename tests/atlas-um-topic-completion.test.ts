@@ -7,7 +7,7 @@ import {readFileSync} from 'node:fs';
 import {dirname, resolve} from 'node:path';
 import {build} from 'esbuild';
 
-const source = 'f636891cdcee10aeca20ae684cb04c183fa7600e';
+const source = '43072a948beda597e7a62439e8c093aa76cb94a7';
 const sourceBefore = '33566ee21aa65ed1a370a5e7653337048656a13e';
 const websiteBefore = '1512df5abcfe30c19b098904e678dadcab12239a';
 const sourceRepo = process.env.ATLAS_SOURCE_REPO ?? resolve('..', '..', '..', '2026-09-05', 'referenced-chatgpt-conversation-this-is-an-2', 'outputs');
@@ -42,7 +42,15 @@ async function reviewApi(previous = false) {
           loader: path.endsWith('.json') ? 'json' : 'ts', resolveDir: dirname(args.path),
         }));
       }
-    }}] : [],
+    }}] : [{name: 'delivered-um-topic-milestone', setup(plugin) {
+      // Keep this exact modality transition test pinned to its delivered adapter.
+      // Current guided-teaching changes have separate current-import coverage.
+      for (const path of ['lib/specimen-review-material.ts', 'content/body-renderer-revision.json'])
+        plugin.onLoad({filter: new RegExp(path.replaceAll('/', '[\\\\/]') + '$')}, args => ({
+          contents: gitBytes(process.cwd(), 'ebef136aa174d9b81329d917e4ef129430760ad2', 'atlas-review/' + path).toString('utf8'),
+          loader: path.endsWith('.json') ? 'json' : 'ts', resolveDir: dirname(args.path),
+        }));
+    }}],
   });
   return import('data:text/javascript;base64,' + Buffer.from(result.outputFiles[0].text).toString('base64'));
 }

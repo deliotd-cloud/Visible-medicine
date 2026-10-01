@@ -1,5 +1,78 @@
 # Third-party notices
 
+## Abdominal wall and back source-guided dissection (1 October 2026)
+
+The optional visibility sequences reuse the already admitted BodyParts3D/DBCLS
+version-3 surfaces and study memberships. Their source-study adaptations in
+`lib/abdominal-guided-dissection.ts` and `lib/back-guided-dissection.ts` retain
+**CC BY-SA 2.1 Japan** and the required credit: BodyParts3D, Copyright© The
+Database Center for Life Science licensed by CC Attribution-Share Alike 2.1 Japan.
+Original shared application code retains its existing grant. Source geometry,
+attribution, notices, downloadable source/model and recipients' ShareAlike rights
+are unchanged. No external prose, figure, scan, font, texture, dependency, paid
+service or mandatory fee added. See `docs/WALL_BACK_GUIDED_DISSECTION.md` for
+scope, unchanged sources and required clinical/device review.
+
+## Subscapular arterial guided tour (29 September 2026)
+
+Original 123-word captions cite the UAMS upper-limb artery teaching table for
+typical branch relationships. No table, article text or figure is reproduced.
+Existing BodyParts3D CC BY 4.0 model assets and attribution are unchanged.
+See `docs/SUBSCAPULAR_TOUR.md`; the tour remains a draft requiring review.
+
+## Superior temporal MRI orientation (29 September 2026)
+
+Original concise teaching cites USC LONI's superior temporal gyrus research
+protocol and Lehman et al. (2016, PMID26514961) for anatomical landmarks and
+cross-plane orientation. Only factual paraphrases and reference links are
+included: no illustrations, protocol text, scans, masks or question-bank items
+are copied. The LONI anterior/posterior convention is not asserted to match the
+BodyParts3D source boundary. Citations grant no right to redistribute their
+assets. Existing model licences and clinical/privacy/release gates remain.
+No dependency, font, texture, model or paid service has been added.
+
+## Inferior-collicular teaching references (29 September 2026)
+
+Original brief MRI/Clinical/Pathology summaries cite Sitek et al. (2022,
+PMID35392412), Fischer et al. (1995, PMID7750451), and Thomas et al. (2012,
+PMID23349608). Only factual reading links and original prose are included; no
+publisher images, datasets, scans or article text are redistributed. These
+citations do not license third-party media or validate the source anatomy.
+See `docs/COLLICULAR_TEACHING_20260929.md`. Existing geometry attribution and
+clinical/privacy/release gates remain unchanged.
+
+## Cerebral-lobar imaging teaching — 29 September 2026
+
+Original concise CT/MRI teaching links to consultant-authored Radiology
+Masterclass and the ESR CNS chapter. No reference text, images, diagrams or
+PDFs are redistributed. These are factual references, not reusable assets:
+the ESR chapter explicitly uses CC BY-NC-ND 4.0 and is excluded from commercial
+asset ingestion. No new dependency, fee, model or patient image is introduced.
+See [teaching scope and validation](../docs/CEREBRAL_LOBAR_IMAGING_20260929.md).
+
+## Selectable hippocampi — 29 September 2026
+
+BodyParts3D, © The Database Center for Life Science licensed under
+CC Attribution 4.0 International. Original v4 PART-OF surfaces FJ1759/FMA72714
+(left) and FJ1807/FMA72713 (right), already present in the licensed brain
+aggregate, are now separated for selection. Converted OBJ to GLB, welded
+coincident vertices, recalculated normals and applied the existing common
+source-to-scene transform. No geometry was invented or imported from patients.
+Credit is retained in the viewer and bundle manifest. Commercial reuse requires
+attribution and compliance with [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+The [official source licence](https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html)
+was checked on 29 September 2026. No new dependency or mandatory paid service.
+These surfaces remain unvalidated; see [scope](../docs/HIPPOCAMPI.md).
+
+## Shoulder soft-tissue X-ray drafts — 28 September 2026
+
+Original concise factual teaching with links to Texas Tech anatomy, RadiologyInfo
+(ACR/RSNA/ASRT) and AAOS. [References and scope](../docs/SHOULDER_SOFT_TISSUE_XRAY.md).
+These copyrighted reference pages are not imported assets or permissively licensed
+datasets. No source prose, figures, tables, scans, logos or meshes are reproduced;
+no endorsement implied. Existing project terms remain; no new dependency, paid
+service or mandatory fee is introduced. Clinical approval remains pending.
+
 ## Small-intestinal mesentery MRI draft — 26 September 2026
 
 Pierro A et al. (2023), *Small Bowel Imaging … Part I*, Life 13(8):1691,
@@ -1655,3 +1728,380 @@ No publisher figures, tables, scans, layouts or extended prose are reproduced.
 Source links accompany the drafts; no endorsement implied. No new model, font,
 texture, dataset, dependency or paid service. Existing licences are unchanged;
 revision-bound radiologist sign-off remains required.
+
+## Agent-authored shoulder guided tour — 27 September 2026
+
+Original short orientation captions reference the TTUHSC El Paso upper-limb
+muscle table, https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html,
+checked 27 September 2026. This is a linked factual reference, not imported or
+relicensed prose, imagery or a model. Existing shoulder geometry and its notices
+are unchanged. No new dependency, font, texture, dataset, paid service or
+mandatory fee. AI authorship does not confer clinical validation: captions,
+layer choices, camera framing and omissions require radiologist review.
+
+## Agent-authored thoracic guided tour — 27 September 2026
+
+Original concise orientation captions use factual reference checking against
+Texas Tech University Health Sciences Center El Paso, Lungs and Mediastina
+(https://anatomy.ttuhscep.edu/schemes/lungs_ans.html), and the NCBI Bookshelf
+chapter Right Aortic Arches (https://www.ncbi.nlm.nih.gov/books/NBK431104/).
+References checked 27 September 2026. Linked sources are not imported assets
+or relicensed publisher content. No figures, scans or extended passages copied.
+Existing BodyParts3D surfaces, source coordinates and required credits retained.
+No new model, texture, font, dependency, paid service or mandatory fee. Source
+segments are incomplete and the tour requires revision-bound radiologist review.
+
+## Cervical formative questions — 28 September 2026
+
+Original short questions and explanations use factual checking against UAMS,
+Bones of the Back Region
+(https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/bone-tables/bones-of-the-back-region/),
+and TTUHSC El Paso, Deep Back & Spinal Cord tables
+(https://anatomy.ttuhscep.edu/musculoskeletal_system/spinalcord_tables.html).
+Read 28 September 2026. Linked university pages remain their owners' copyright;
+no tables, figures, scans, extended prose or question-bank content is reproduced
+or relicensed. No new model, font, dependency, texture, paid API or mandatory
+fee is introduced. Existing source credits/rights remain. Draft questions and
+source anatomy require revision-bound radiologist review.
+# Chest-wall guided learning factual reference — 28 September 2026
+
+Original concise captions reference TTUHSC El Paso's thoracic-muscle teaching
+table: https://anatomy.ttuhscep.edu/anatomytables/muscles_thorax.html . The
+copyrighted table, illustrations and prose are not copied or redistributed.
+The captions describe anatomical facts, not source-verified mesh boundaries.
+Existing BodyParts3D geometry and its CC BY 4.0 notices are unchanged. No new
+model, image, font, dependency, paid service or mandatory fee is introduced.
+
+# Pelvic organ quick-check factual references — 28 September 2026
+
+Male pelvic duct landmark tour (28 September 2026): original short captions use
+NIH NCI SEER factual references at
+https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html and
+https://training.seer.cancer.gov/anatomy/reproductive/male/glands.html . No source
+media, tables or prose are copied. Existing meshes and their attribution remain
+unchanged; no new asset, dependency, service or mandatory fee. Static reference
+surfaces are not a continuous lumen, fertility assessment or registered scan.
+All tour teaching and anatomical relationships require radiologist review.
+
+Original questions use NIH NIDDK urinary-tract/enlarged-prostate and NCI SEER
+male duct/accessory-gland facts. Exact links accompany each lesson and
+`docs/PELVIC_ORGAN_QUIZ.md`. No media, tables or question-bank items are copied.
+References do not license third-party website assets. Existing source geometry
+and attribution remain unchanged. No dependency, font, paid service or mandatory
+fee is added. All eight placements require revision-bound radiologist sign-off.
+
+# Abdominal organ quick-check factual references — 28 September 2026
+
+Four original short questions use anatomical/physiological facts from NIH NCI
+SEER Training (pancreas, spleen, adrenal gland) and NIDDK (kidney function).
+Exact page links accompany each draft question. No source illustrations, tables,
+question-bank items or extended prose are copied or redistributed. References
+are evidence links, not a claim to license third-party website assets. Existing
+BodyParts3D geometry/credits are unchanged. No new media, font, dependency, paid
+API or mandatory fee is introduced. Clinical approval remains revision-bound
+and pending; source surfaces do not depict microscopic tissue or patient scans.
+
+# Orbital guided learning factual reference — 28 September 2026
+
+Original concise captions reference TTUHSC El Paso's eye anatomy table:
+https://anatomy.ttuhscep.edu/nervous_system/eye_tables.html . No illustrations,
+tables, scans or source prose are copied. This is a factual reference, not a
+licence to redistribute that website's media. Existing BodyParts3D muscle
+surfaces and corrected globe retain their existing attribution and commercial
+reuse conditions. No new model, image, texture, font, dependency, service or
+mandatory fee is introduced. Static source surfaces do not simulate gaze or
+constitute clinical approval, patient registration or a diagnostic examination.
+
+# Intrinsic laryngeal guided learning reference — 28 September 2026
+
+Original short captions use factual muscle relationships/actions from TTUHSC
+El Paso's larynx and neck table:
+https://anatomy.ttuhscep.edu/schemes/larynx_tables.html . No table, illustration,
+scan or source prose is copied. This reference does not license the website's
+media for reuse. Existing BodyParts3D surfaces keep their commercial-compatible
+licence and attribution. No new asset, dependency, font, service or fee is added.
+Static muscle/cartilage surfaces are not vocal-fold motion, an airway lumen,
+patient registration or a procedural demonstration. Clinical review is pending.
+
+# Deep-brain guided tour references — 29 September 2026
+
+Six short original orientation captions reference UTHealth Neuroanatomy and
+Neuroscience Online, with exact URLs in `docs/DEEP_BRAIN_TOUR.md` and each stop.
+No diagrams, tables, scans or copied passages are redistributed. Reference
+links do not grant reuse rights to website media. Seven existing BodyParts3D
+CC BY 4.0 selections retain all credits; no new assets, dependencies or fees.
+The tour remains a draft for revision-bound radiologist review.
+
+# Hippocampal teaching references — 29 September 2026
+
+Hippocampal teaching added on 29 September uses original short factual summaries
+with source links in `content/hippocampal-teaching.ts`: UTHealth Neuroanatomy
+Online (Lab 11), Neuroscience Online (chapters 5 and 7), and the ILAE 2019
+structural MRI consensus. No third-party images, figures, tables, question-bank
+content or extended prose were copied. These evidence links grant no licence
+to redistribute those sources' media. All existing BodyParts3D credits remain;
+no new asset, dependency, font, paid service or mandatory fee was introduced.
+Draft lessons and their limitations require radiologist review.
+
+# Brain connections quick-check references — 29 September 2026
+
+## Femoral component imaging references — 29 September 2026
+
+Original short teaching summaries reference Yu et al. (2022; PMID36512153), Jiang
+et al. (2016; PMID27446322), and Debelmas et al. (2018; PMID29481406). See
+`docs/FEMORAL_COMPONENT_IMAGING_20260929.md`. No article passages, publisher media,
+scans, tables or datasets are redistributed; evidence links confer no media
+licence. Existing geometry credits remain. No dependency, font, fee or service
+added. Clinical and imaging approval remain pending.
+
+## Ventricular ultrasound orientation, 29 September 2026
+
+Original short neonatal/infant orientation notes link to the ACR–AIUM–SPR–SRU
+neurosonography parameter and Steggerda et al. (2015), PMID25899415. Evidence and
+retrieval limits are recorded in `docs/VENTRICULAR_ULTRASOUND_20260929.md`.
+No guideline PDF, publisher figures, tables, ultrasound images, scans or extended
+passages are redistributed. References are not licences to reuse those assets.
+Existing adult-model credits remain unchanged. No new dependency, font, service
+or fee is added. Drafts do not confer clinical or acquired-image approval.
+
+## Cardiac chamber X-ray references — 29 September 2026
+
+Four original short orientation notes cite Radiology Assistant's chest-radiograph
+teaching and Graham Lloyd-Jones' Radiology Masterclass projection tutorial.
+See `docs/CARDIAC_CHAMBER_XRAY_20260929.md` for checked source URLs and scope.
+Factual references only: no source images, diagrams, tables, scans, question-bank
+material or extended prose copied. Links are not media-reuse licences. Existing
+BodyParts3D credits remain unchanged; no new asset, dependency, font or fee.
+These are draft teaching notes, not clinical or acquired-image approval.
+
+## Coronary sinus ultrasound references
+
+An original short draft cites the Mai et al. (2006) case observation and Kolski
+et al. (2011) primary study abstract. See
+`docs/CORONARY_SINUS_ULTRASOUND_20260929.md` for exact URLs and limitations.
+Factual references only; no publisher images, scans, tables or extended text
+copied. Links confer no media reuse rights. No new model, font, dependency,
+service or fee; existing asset credits and clinical-review gates unchanged.
+
+## Limb reasoning references
+
+Lower-limb bone reasoning additions (29 September 2026) similarly reference the
+TTUHSC El Paso lower-limb bones table for factual relationships. Eight original
+brief questions/explanations total163 words; no tables, diagrams or source
+question-bank items are copied. Source copyright is retained; links grant no
+media reuse rights. See `docs/LOWER_LIMB_BONE_REASONING_20260929.md`. Existing
+models/credits and draft-review gates remain; no new asset, dependency or fee.
+
+Upper-limb bone reasoning additions (29 September 2026) use the TTUHSC El Paso
+upper-limb bones table as a factual reference only. Five original short questions
+and explanations (119 words); no source tables, diagrams or question-bank items
+copied. The source is copyrighted; its link grants no media reuse rights.
+See `docs/UPPER_LIMB_BONE_REASONING_20260929.md`. Existing models and credits are
+unchanged. No new asset, dependency, font, service or mandatory fee is introduced.
+
+Upper-arm reasoning additions (29 September 2026) use the TTUHSC El Paso
+upper-limb anatomy table as a factual reference only. Original brief questions
+and explanations, not copied tables, illustrations or question-bank items.
+The referenced website is copyrighted; its link grants no media reuse rights.
+See `docs/UPPER_ARM_REASONING_20260929.md`. No new assets or fees are introduced.
+
+## Brain connections references
+
+Six original short questions reference factual relationships in UTHealth McGovern
+Medical School's Neuroanatomy/Neuroscience Online and the US National Cancer
+Institute's CSF definition. Exact links and scope are in
+`docs/BRAIN_CONNECTIONS_QUIZ.md` and accompany the displayed questions. No source
+question-bank items, illustrations, tables, scans or extended prose are copied.
+Links are evidence references, not licences to redistribute those websites'
+assets. Existing BodyParts3D geometry and credits are unchanged. No new media,
+font, dependency, service or mandatory fee is introduced. All questions remain
+draft and require revision-bound radiologist review.
+## Lower lumbar guided learning references — 29 September 2026
+
+The lower-lumbar/sacral tour contains original short factual captions linked to
+TTUHSC El Paso back anatomy tables and UAMS back-joint tables, documented in
+`docs/LUMBAR_GUIDED_TOUR.md`. No source prose, tables, diagrams or images are
+redistributed. Existing BodyParts3D4.0/CC BY4.0 asset notices remain in force.
+This authoring addition introduces no new asset, dependency or licence grant.
+
+## Cricothyroid CT/MRI teaching references — 29 September 2026
+
+Original short factual notes cite the publicly accessible primary research
+abstracts of Pickuth et al. (2000; PMID10971539) and Chen et al. (2012;
+PMID21816571), with existing TTUHSC El Paso anatomy context. No abstract prose,
+figures, tables, scans or models are reproduced. Links are evidence references,
+not a grant to redistribute publisher assets. Existing geometry/licence notices
+remain unchanged. No new dependency, media asset or mandatory fee is introduced.
+See `docs/CRICOTHYROID_IMAGING.md` for source and clinical limitations.
+
+## Carpal guided learning references — 29 September 2026
+
+The right carpal-row tour uses short original factual captions referencing
+TTUHSC El Paso upper-limb bone tables. No copyrighted table, illustration, prose
+passage or mnemonic is reproduced. The linked page is a factual reference, not
+an asset licence. Existing BodyParts3D4.0/CC BY4.0 geometry and notices remain
+unchanged. No new asset, font, dependency, service or mandatory fee is added.
+See `docs/CARPAL_GUIDED_TOUR.md`; clinical review remains required.
+
+## Anterior choroidal source-only review — 30 September 2026
+
+The diagnostic report and orthographic SVG derivative use four retained original
+BodyParts3D4.0 meshes under the existing CC BY4.0 licence. Mandatory DBCLS credit
+and derivative scope are retained; no candidate is admitted to the public atlas.
+Original short factual review notes cite Uz et al. (PMID16425152) and Wiesmann
+et al. (PMID11156774). No article prose, figure, table or scan is reproduced;
+their links are factual references, not media reuse permissions. No new service,
+dependency, paid asset or font is introduced. The sheet uses system fonts.
+See `docs/ANTERIOR_CHOROIDAL_SOURCE_REVIEW.md` for source and clinical limitations.
+
+## Renal guided learning reference — 30 September 2026
+
+The kidney/renal-artery tour contains original short factual captions referencing
+TTUHSC El Paso's kidney/retroperitoneum table. No source table, illustration,
+scan, question-bank item or prose passage is redistributed. The linked page is
+a factual reference, not a media reuse licence. All existing BodyParts3D4.0
+CC BY4.0 geometry and credit remain unchanged. No new asset, font, dependency,
+service or mandatory fee is added. See `docs/RENAL_GUIDED_TOUR.md`; teaching and
+the full tour require revision-bound radiologist review.
+
+## Cerebral arterial contextual source review — 30 September 2026
+
+The local source-only inspector uses fourteen retained original BodyParts3D files
+under the existing CC BY4.0 licence and mandatory DBCLS credit. It does not admit
+the anterior-choroidal or optic-context candidates into the learner atlas. Source
+vertices/faces remain unchanged; review colours, opacity and camera presentation
+are added. Three.js and its OrbitControls remain MIT, with complete MIT terms and
+BodyParts3D licence/source links copied into the generated inspector's
+`THIRD_PARTY_NOTICES.txt`. System fonts only; no textures, patient scans, publisher
+diagrams, dependency, service or mandatory fee added. Software/topology evidence
+does not provide clinical clearance. See `docs/CHOROIDAL_CONTEXT_REVIEW.md`.
+
+## Foot-sesamoid teaching reference — 1 October 2026
+
+Two existing generic side-specific BodyParts3D sesamoid groups receive original
+draft prose linking AAOS and Nwawka/Chen research reviews. These are factual
+reading references, not licences to redistribute source media. No article prose,
+figures, scans, tables, patient data or question-bank content is imported. Existing
+geometry/CC BY4.0 credit is unchanged. No asset, dependency, font, texture, service
+or mandatory fee added. Mesh component identity is explicitly unverified; the
+common first-MTP example does not rename the source. Radiologist sign-off remains
+revision-bound and separate from source/software checks. See
+`docs/FOOT_SESAMOID_TEACHING.md` for references and access limitations.
+
+## Cerebellar/MCA imaging teaching — 1 October 2026
+
+Original draft CT/MRI prose links Akgun2013, Wakao2014, Bash2005 and Korogi1997
+primary studies as factual reading references only. No source prose passage,
+figure, table, scan, question-bank item or dataset is imported. Bibliographic
+access does not grant media reuse rights. Existing BodyParts3D4.0/CC BY4.0 models
+and credit remain unchanged; no asset, dependency, font, texture, service or
+mandatory fee added. Clinical acceptance remains revision-bound and independent
+of licensing/software evidence. See `docs/CEREBELLAR_MCA_IMAGING.md`.
+
+## Tentorium CT/MRI teaching — 1 October 2026
+
+The existing right-only tentorial source receives two original short drafts.
+Anatomical summary adapted from Rai R, Iwanaga J, Shokouhi G, Oskouian RJ and
+Tubbs RS, *The Tentorium Cerebelli: A Comprehensive Review Including Its Anatomy,
+Embryology, and Surgical Techniques*, Cureus 2018;10:e3079,
+[DOI 10.7759/cureus.3079](https://doi.org/10.7759/cureus.3079), © 2018 Rai et al.,
+[CC BY 3.0](https://creativecommons.org/licenses/by/3.0/); wording shortened and
+rephrased, no endorsement. Naidich1977 (PMID870939) and Farn/Mirowitz1994
+(PMID8273651) are factual reading references only, not media reuse grants.
+No prose passage, article image, table, scan, patient data or study dataset is
+imported. Existing BodyParts3D4.0/CC BY4.0 geometry/credit is unchanged. No new
+asset, dependency, font, texture, paid service or mandatory product fee. Clinical
+review remains revision-bound. See `docs/TENTORIUM_IMAGING.md`.
+
+# Right tarsal guided tour reference — 1 October 2026
+
+Original brief factual orientation captions reference TTUHSC El Paso,
+[Bones of the Lower Limb](https://anatomy.ttuhscep.edu/anatomytables/bones_lowerlimb.html).
+The copyright-protected table is a reading reference, not an asset-reuse licence:
+no table, diagram, screenshot or prose passage is imported. Existing right-foot
+BodyParts3D 4.0 / CC BY 4.0 meshes, source hashes and credits are unchanged.
+No new model, image, texture, font, dependency, paid provider or mandatory runtime
+fee is introduced. The tour remains draft pending revision-bound radiologist
+review; it establishes neither acquired-image linkage nor registration.
+
+# Hip-to-heel guided tour reference — 1 October 2026
+
+Original short orientation captions cite the same TTUHSC El Paso lower-limb bone
+table as a factual reading reference, not permission to reuse its assets. No
+table, diagram, screenshot or source prose passage is copied. Seven existing
+right-sided BodyParts3D 4.0 / CC BY 4.0 bone surfaces retain exact coordinates,
+hashes and attribution. No new model, media, font, dependency or paid service is
+added. Explicit root-region scope does not join independent specimens or imply
+clinical approval, joint-space validation or acquired-image registration.
+
+## Renal source-guided learning and abdominal skeletal drafts (1 October 2026)
+
+The renal visibility guide reuses admitted HRA v1.10 / CC BY 4.0 surfaces and
+existing study sets; all original mesh credits and three source holds remain.
+The abdominal skeleton uses only existing BodyParts3D version-3 assets, retaining
+CC BY-SA 2.1 Japan credits, downloadable sources and recipients' ShareAlike rights.
+Neither geometry nor data adaptations are relicensed by new application code.
+Original short factual teaching cites university anatomy tables, ACR publication
+abstracts, ACR/RSNA RadiologyInfo and AAOS reading; no source prose, tables,
+diagrams, PDFs or images are redistributed or treated as licensed datasets.
+Current OpenStax pages' non-commercial/AI restrictions are not relied on for
+this new slice. A reference link is not an asset-use grant or endorsement.
+No font, model, texture, dataset, scan, dependency, paid service or mandatory fee
+added. Detailed scope and required review: `docs/RENAL_GUIDED_ABDOMINAL_BONES.md`.
+
+## Back-specimen teaching completion (1 October 2026)
+
+Original short draft notes fill missing topics for existing back bones and muscle
+parts. Their reading references are ACR primary publications, ACR/RSNA information,
+AO anatomical/imaging material and original case research, not licensed assets or
+endorsements. No publisher prose, table, figure, scan, screenshot, PDF or image is
+redistributed. New notes do not rely on current OpenStax non-commercial/AI terms
+as a commercial grant; retaining earlier references does not clear historic use.
+All existing BodyParts3D v3 / CC BY-SA2.1 Japan source assets, credits, downloads
+and recipients' rights remain unchanged. No additional model, font, texture,
+dataset, dependency, paid service or mandatory fee. Scope and required clinical
+review: `docs/BACK_TEACHING_COMPLETION.md`.
+
+## HRA renal modality-topic completion (1 October 2026)
+
+Ten original introductory notes fill missing renal MRI, ultrasound and X-ray
+topics. ACR/RSNA RadiologyInfo pages are primary factual reading links, not
+asset-use grants, copied publisher prose, images, tables, PDFs or datasets.
+New content does not rely on non-commercial/AI-restricted source licences;
+preserving older references does not retrospectively clear them. Existing HRA
+CC BY4.0 meshes, source retention, credits and held anatomy remain unchanged.
+No new model, font, texture, dependency, patient scan, paid service or mandatory
+fee. Scope and required review: `docs/HRA_RENAL_TOPIC_COMPLETION.md`.
+
+## HRA pelvic modality-topic completion (1 October 2026)
+
+27 original introductory family/topic notes fill missing pelvic CT, X-ray and
+ultrasound placements. ACR/RSNA RadiologyInfo and retained anatomical references
+are reading links, not imported publisher text, images, diagrams, tables, PDFs
+or datasets. Reading access does not grant redistribution rights or endorsement;
+preserving older links does not retrospectively clear external material.
+Existing HRA CC BY4.0 models, credits, source retention and held anatomy remain
+unchanged. No new mesh, font, texture, dependency, patient pixel, paid service
+or mandatory fee. Draft/review scope: `docs/HRA_PELVIC_TOPIC_COMPLETION.md`.
+
+## UM lower-limb modality-topic completion (1 October 2026)
+
+155 original draft imaging notes fill missing CT, MRI, X-ray and ultrasound
+placements on explicitly mapped existing selections. Primary medical reading
+links are not imported prose, diagrams, images, PDFs, tables or datasets and
+do not grant publisher asset redistribution rights or endorsement. Existing
+references and UM CC0 mesh provenance/credits remain unchanged; prior external
+material is not retrospectively cleared. The two unresolved grouped bone
+selections retain their holds. No new model, font, texture, dependency, patient
+pixel, paid service or mandatory fee. Scope and clinical review requirements:
+`docs/UM_LIMB_MODALITY_COMPLETION.md`.
+
+## UM lower-limb guided dissection (1 October 2026)
+
+Five original source-guided visibility sequences reuse the admitted UM CC0 meshes
+without modifying geometry, identity, grouping, attribution or existing teaching.
+No publisher prose, diagram, photograph, dataset or new dependency is included.
+General anatomy reading links are not asset redistribution permissions or
+endorsement. Prior notices and source/clinical holds remain unchanged; no patient
+pixels, new model/font/texture, paid service or mandatory fee. Scope and review
+requirements: `docs/UM_LIMB_GUIDED_DISSECTION.md`.

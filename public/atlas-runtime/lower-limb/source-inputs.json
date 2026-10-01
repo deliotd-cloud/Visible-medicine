@@ -13,7 +13,7 @@
   },
   {
     "path": "app/body-scene.tsx",
-    "sha256": "7117993fb76445f522d303c664fb5405ac07344f5e255906e2ee47640dc4acbc"
+    "sha256": "2876f4674b4f1fedabdcb6f6aaef8f0085dfd9deb8e1c3bc8d68705931cecf7e"
   },
   {
     "path": "app/body-types.ts",
@@ -25,7 +25,7 @@
   },
   {
     "path": "app/explode-style-select.css",
-    "sha256": "78b35b79e440dcd0021fbf577fecfdd4cdd6eaf83bc11e2fd9779d2f874f4b2a"
+    "sha256": "de9ea836cd62f2c2090d2d971e3f248a6b606681a63b47c15957b67a623b4b9a"
   },
   {
     "path": "app/explode-style-select.tsx",
@@ -33,11 +33,11 @@
   },
   {
     "path": "app/eye-layers.css",
-    "sha256": "bc6eda158baa6293b5721818b64927946931e76aacc4aea090917d9e9ed74119"
+    "sha256": "ded73dc7f5193f851c5082098ab743fbbf037c3cafcebc665cb05e3048bc2722"
   },
   {
     "path": "app/fitted-camera.tsx",
-    "sha256": "8621b76137dc18b1200cffb5fc79a0e38d55bb95d933978e7d73e43727850a49"
+    "sha256": "cad2aa9543c94c2d751a1593cda90e2db4c84a2b639d6d380b131a74ea0f09f9"
   },
   {
     "path": "app/globals.css",
@@ -49,7 +49,7 @@
   },
   {
     "path": "app/scene-label-layer.tsx",
-    "sha256": "e5e9726bae8b040dd02be573df1994eff3ae844a846cf37394c85782ccc129e0"
+    "sha256": "05748f6bf138ec79cce969af67b2e681300ef6bbee693f4d379292af46a11eab"
   },
   {
     "path": "app/scene-orientation.css",
@@ -81,11 +81,11 @@
   },
   {
     "path": "app/um-knee-study.css",
-    "sha256": "6a231afb04d42c5524506b2d4bee6e1e6e8fd7f7e4d46d6f1be7ce94eccecd36"
+    "sha256": "b8d7a6ba20a215d601f04fe68673f6c1e4a9744ade2b91f34ff8ccd55ce6c703"
   },
   {
     "path": "app/um-knee-study.tsx",
-    "sha256": "da403c020632fc371ef2bcbb4ebf30f28761fcfd5d05231d63aaba806c8cbc48"
+    "sha256": "e100830b33643dc1696ebffed0e8f26254fdfbfc49f0911e1a649d56f0a4f7d7"
   },
   {
     "path": "app/um-limb-learning.tsx",
@@ -132,6 +132,10 @@
     "sha256": "557ae3859bea0db95f70303474d9afa053a8dec0380a6ffc325c070f281c9fd1"
   },
   {
+    "path": "content/um-distal-topic-completion.ts",
+    "sha256": "7d09851523fb515f33942710b7f2a171ae612881b5b5e2372fa75444b07fafe2"
+  },
+  {
     "path": "content/um-hip-muscle-clinical.ts",
     "sha256": "549770dd9f1b85494595b227c187b87ab91bb56e43d31f1f62fbb185cac5b252"
   },
@@ -141,7 +145,11 @@
   },
   {
     "path": "content/um-limb-clinical.ts",
-    "sha256": "552cb9cf96de3173773ecb71e88e9e19a08904f7ff3bade456f74d815ad41161"
+    "sha256": "6c01a206e6c4d88071a581aa7fe670efa9ee3705a52ed27c25541bcb31ab9adb"
+  },
+  {
+    "path": "content/um-limb-modality-references.ts",
+    "sha256": "df216bc1e3a26fb9588b175582d845bffbba36dc357122a10edce48e63875ecc"
   },
   {
     "path": "content/um-limb-motor.ts",
@@ -153,7 +161,11 @@
   },
   {
     "path": "content/um-limb-teaching-bindings.v1.json",
-    "sha256": "cd73ab7b7fd70de4a4e83c173617dffac78220bd8a56670da6f52f9cafc4c0b1"
+    "sha256": "a23f2358e2d4392812969dfb32b2081368c718928ec8633174ec21ac875ef7c4"
+  },
+  {
+    "path": "content/um-proximal-topic-completion.ts",
+    "sha256": "df26a9fa11c9ff043cd4a1ce04bf0a466d64daf4ae4609621cb332fae82c10bd"
   },
   {
     "path": "integration/lower-limb/index.html",
@@ -193,7 +205,7 @@
   },
   {
     "path": "lib/anatomy-search.ts",
-    "sha256": "2c469d5d892b6bfbfe2c11211f2bc421a6664e3c5b0286cf017ac1b43f25d1a7"
+    "sha256": "a761621615a6ba52e8c9742b2d9771f4b3e71447b52229ad78f4883185fedca2"
   },
   {
     "path": "lib/anatomy-vessels.ts",
@@ -237,7 +249,7 @@
   },
   {
     "path": "lib/independent-specimen.ts",
-    "sha256": "3127e41d9c16d47f5ebe0c0e312e8d0bf3dded9cc00b6ab6548256e939f269b0"
+    "sha256": "77ad41fa2572a0d2f1c3e9d73d58bd4395ff5800a0f1a777bd92d4fd2038f408"
   },
   {
     "path": "lib/inspection-geometry.ts",
@@ -285,7 +297,11 @@
   },
   {
     "path": "lib/screen-label-layout.ts",
-    "sha256": "bdbc34219c70803768ececed8aa2f952ec18c9cbeae85d77cd29af458debef04"
+    "sha256": "2b5c270ce1653bda7bc1ed8cef0cded20ae99a8fa579623756d5da31845514d7"
+  },
+  {
+    "path": "lib/specimen-guided-dissection.ts",
+    "sha256": "916c5d9a39d6d78c00a2a4c09a9577e9a1c07c03fb5783b25f807c82d28608be"
   },
   {
     "path": "lib/specimen-identification.ts",
@@ -312,8 +328,20 @@
     "sha256": "d8687a5538d6721a64928065df70b4a2b454dc478929a3ef1e67d8118c2628fd"
   },
   {
+    "path": "lib/tour-camera.ts",
+    "sha256": "616b2e1ba047ec760129532922922a166baa02fcb53a253582d91a5982587467"
+  },
+  {
+    "path": "lib/um-distal-guided-dissection.ts",
+    "sha256": "0263b5141b79b3e9d1c52b0d1dc496db0bfe09960870330124d2fd6a87e86b12"
+  },
+  {
     "path": "lib/um-knee-study.ts",
     "sha256": "80908fce33eb88fe5d217d8ed70c948559c19981c48a7daf034353224ee25b55"
+  },
+  {
+    "path": "lib/um-limb-guided-dissection.ts",
+    "sha256": "6426e0ae3ed6655062626de18afdf878c6f2b821cc44b668cc7c98c3c65a6d08"
   },
   {
     "path": "lib/um-limb-motor.ts",
@@ -330,6 +358,10 @@
   {
     "path": "lib/um-limb-teaching.ts",
     "sha256": "f51b0532e23719646b5588188c637a49b7523acc5ff976c6cff7101ffa41bf4d"
+  },
+  {
+    "path": "lib/um-proximal-guided-dissection.ts",
+    "sha256": "97473c256223e2c83a7884065a26bde4fa093000f533726a01d4058b97c980f5"
   },
   {
     "path": "lib/utils.ts",

@@ -7,7 +7,7 @@ import {readFileSync} from 'node:fs';
 import {resolve} from 'node:path';
 import {build} from 'esbuild';
 
-const source = 'f636891cdcee10aeca20ae684cb04c183fa7600e';
+const source = '43072a948beda597e7a62439e8c093aa76cb94a7';
 const guidedMilestone = '944f57b801471c3b005a64ec83314188b2f06cf5';
 const sourceParent = 'e88e43b4c0c0aa5d2fa48c2ee5fc0b86c9519abe';
 const websiteBefore = 'c93ee19856ac4598de1fd8afd703b175dac4a6db';
@@ -22,6 +22,7 @@ const imported = async () => {
   const result = await build({stdin: {contents: [
     "export {hraPelvisDefinition} from './atlas-review/lib/hra-pelvis';",
     "export {hraPelvicGuidedDissection} from './atlas-review/lib/hra-pelvic-guided-dissection';",
+    "export {umLimbGuidedDissection} from './atlas-review/lib/um-limb-guided-dissection';",
     "export {kneeDefinition} from './atlas-review/lib/um-limb-studies';",
     "export {specimenReviewMaterial, specimenReviewRows} from './atlas-review/lib/specimen-review-material';",
     "export {parseSavedSpecimenReview, specimenReviewStale, specimenDecisionLabel, blankSpecimenReview} from './atlas-review/lib/specimen-review';",
@@ -106,14 +107,15 @@ test('pelvic guided sequence is the pinned source in learner and Clinical Review
     }
   }
   assert.equal(count, 16);
-  // An explicit unguided context; row order is not a guide-availability contract.
+  // Knee now has its own admitted guide, never a cross-source pelvic guide.
   const other = api.specimenReviewRows.find((row: any) => row.key === api.kneeDefinition.key);
   assert(other);
   const otherPacket = await api.specimenReviewMaterial(other.key, other.surfaces[0].id);
   assert(otherPacket);
-  assert.equal(otherPacket.teaching.guidedDissection, undefined);
-  assert.equal(otherPacket.context.teachingTabs.includes('guided-dissection'), false);
-  assert.equal(otherPacket.context.checklists.teaching.some((item: any) => item.id === 'guided-dissection'), false);
+  assert.deepEqual(otherPacket.teaching.guidedDissection, api.umLimbGuidedDissection(api.kneeDefinition));
+  assert.notEqual(otherPacket.teaching.guidedDissection.id, guide.id);
+  assert.equal(otherPacket.context.teachingTabs.includes('guided-dissection'), true);
+  assert.equal(otherPacket.context.checklists.teaching.some((item: any) => item.id === 'guided-dissection'), true);
 
   const bundle = learner.files.filter((entry: any) => entry.path.endsWith('.js')).map((entry: any) => {
     const bytes = readFileSync('public/atlas-runtime/head-neck/' + entry.path);

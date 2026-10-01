@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "f636891cdcee10aeca20ae684cb04c183fa7600e",
-  "sha256": "0d66612b5f122009d435f3163351ebfb6e816b5740e4f7de0a460d5c4be618be",
+  "sourceCommit": "43072a948beda597e7a62439e8c093aa76cb94a7",
+  "sha256": "d7d5d55092d24c0bc7ae0b6fbc73228f8904f61ddcf98ae22ac52466e407eab4",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -496,7 +496,7 @@
     },
     {
       "path": "atlas-review/app/um-knee-study.tsx",
-      "sha256": "cc6658e39f542730336a2a35863b5ab9bbfef58ec2c1e1d582f4546b9f43248e"
+      "sha256": "63a2cd4c1dd3f40eb5e3c6d038599af3df74f13fe1a0326219921597e5788ca4"
     },
     {
       "path": "atlas-review/app/um-limb-learning.tsx",
@@ -3248,7 +3248,7 @@
     },
     {
       "path": "atlas-review/lib/specimen-guided-dissection.ts",
-      "sha256": "b961f4b37a66a30eb015796ea70e87262ff3452b24814f8d602a824369998129"
+      "sha256": "916c5d9a39d6d78c00a2a4c09a9577e9a1c07c03fb5783b25f807c82d28608be"
     },
     {
       "path": "atlas-review/lib/specimen-identification.ts",
@@ -3268,7 +3268,7 @@
     },
     {
       "path": "atlas-review/lib/specimen-review-material.ts",
-      "sha256": "3881ea9d14fdc58e9ed17c0903dd52e42d76aadd152e3024466c5d05f5ebb8bc"
+      "sha256": "33e4deca7d8c2fed6cab7753ab9a6671fbaeb73e5c26a49bda42274b782b68e1"
     },
     {
       "path": "atlas-review/lib/specimen-review-store.ts",
@@ -3463,8 +3463,16 @@
       "sha256": "a98bd0dd78b8c27fdc0c72b52511e435a417eae09603a863e30305d9d18ef42d"
     },
     {
+      "path": "atlas-review/lib/um-distal-guided-dissection.ts",
+      "sha256": "0263b5141b79b3e9d1c52b0d1dc496db0bfe09960870330124d2fd6a87e86b12"
+    },
+    {
       "path": "atlas-review/lib/um-knee-study.ts",
       "sha256": "80908fce33eb88fe5d217d8ed70c948559c19981c48a7daf034353224ee25b55"
+    },
+    {
+      "path": "atlas-review/lib/um-limb-guided-dissection.ts",
+      "sha256": "6426e0ae3ed6655062626de18afdf878c6f2b821cc44b668cc7c98c3c65a6d08"
     },
     {
       "path": "atlas-review/lib/um-limb-motor.ts",
@@ -3481,6 +3489,10 @@
     {
       "path": "atlas-review/lib/um-limb-teaching.ts",
       "sha256": "f51b0532e23719646b5588188c637a49b7523acc5ff976c6cff7101ffa41bf4d"
+    },
+    {
+      "path": "atlas-review/lib/um-proximal-guided-dissection.ts",
+      "sha256": "97473c256223e2c83a7884065a26bde4fa093000f533726a01d4058b97c980f5"
     },
     {
       "path": "atlas-review/lib/upper-arm-reasoning.ts",
@@ -3552,7 +3564,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "150ec262a07c28ceb74dd231bb43d52abff9a228af2b42fa2e29cf26fa173060"
+      "sha256": "a7c00b596de15751bba58d18a8bccd8ee9d62edc62dc055e509c76b37ba13674"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3808,7 +3820,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "32fe09f4ee68ae26af5f72da887945f7a864f9f249b8333fa997db156d823194"
+      "sha256": "a20b47aebbfe79da7d975acc3e56695d66ffff7515f2e3d011c699f145fcbea6"
     }
   ]
 }

@@ -5,6 +5,7 @@ import { hraPelvisDefinition } from "./hra-pelvis";
 import { hraPelvicGuidedDissection } from './hra-pelvic-guided-dissection';
 import { abdominalGuidedDissection } from './abdominal-guided-dissection';
 import { backGuidedDissection } from './back-guided-dissection';
+import { umLimbGuidedDissection } from './um-limb-guided-dissection';
 import type { SpecimenGuidedDissection } from './specimen-guided-dissection';
 import { hraPelvicTeaching, hraPelvicContextReferenceTitles } from "./hra-pelvis-teaching";
 import renal from "../public/models/hra-renal/catalog.json";
@@ -67,6 +68,7 @@ const registry: Adapter[] = [
     guide: backGuidedDissection,
     lesson:backLayersTeachingFor, titles:backLayersReferences, path:'/specimens/back-layers' },
   ...Object.values(limbDefinitions).map((definition):Adapter=>({ definition,
+    guide: umLimbGuidedDissection,
     raw:{...limb,companionKnee:knee,reviewRegion:definition.key,sourceFrame:'um-5t6tz7-v1-2:source-lps'},
     lesson:specimenTeachingFor,
     titles:Object.fromEntries(Object.values(specimenClinicalReferences).map(reference => [reference.url, reference.title])),

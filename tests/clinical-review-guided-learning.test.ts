@@ -9,8 +9,8 @@ test('shoulder guided learning reaches learner and review with exact source iden
   const base='public/atlas-runtime/shoulder/';
   const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
-  assert.equal(review.revision,'f636891cdcee10aeca20ae684cb04c183fa7600e');
-  assert.equal(learner.sourceCommit,'f636891cdcee10aeca20ae684cb04c183fa7600e');
+  assert.equal(review.revision,'43072a948beda597e7a62439e8c093aa76cb94a7');
+  assert.equal(learner.sourceCommit,'43072a948beda597e7a62439e8c093aa76cb94a7');
   for(const path of ['lib/shoulder-tours.ts','lib/tour-camera.ts','app/shoulder-tour-player.tsx','app/fitted-camera.tsx']) {
     const entry=review.files.find((f:any)=>f.path===path);
     assert.ok(entry,path);

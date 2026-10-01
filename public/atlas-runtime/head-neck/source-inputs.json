@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "150ec262a07c28ceb74dd231bb43d52abff9a228af2b42fa2e29cf26fa173060"
+    "sha256": "a7c00b596de15751bba58d18a8bccd8ee9d62edc62dc055e509c76b37ba13674"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -385,7 +385,7 @@
   },
   {
     "path": "app/um-knee-study.tsx",
-    "sha256": "d112b2681b6d39dc81dcdb3bfc3a86b33d045a8e9b9cee4a26b8f864c29e0973"
+    "sha256": "e100830b33643dc1696ebffed0e8f26254fdfbfc49f0911e1a649d56f0a4f7d7"
   },
   {
     "path": "app/um-limb-learning.tsx",
@@ -1417,7 +1417,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "380ce2b69ed41e887017d8a0fac7b12bbac88e21b494c68e439179f94aced95e"
+    "sha256": "b2cca8944a1175a744056d0e5e5b2759ec4f58174f5b2f4a2f674bdd2c46508e"
   },
   {
     "path": "content/sca-mca-clinical-pins.json",
@@ -3097,7 +3097,7 @@
   },
   {
     "path": "lib/specimen-guided-dissection.ts",
-    "sha256": "b961f4b37a66a30eb015796ea70e87262ff3452b24814f8d602a824369998129"
+    "sha256": "916c5d9a39d6d78c00a2a4c09a9577e9a1c07c03fb5783b25f807c82d28608be"
   },
   {
     "path": "lib/specimen-identification.ts",
@@ -3292,8 +3292,16 @@
     "sha256": "a98bd0dd78b8c27fdc0c72b52511e435a417eae09603a863e30305d9d18ef42d"
   },
   {
+    "path": "lib/um-distal-guided-dissection.ts",
+    "sha256": "0263b5141b79b3e9d1c52b0d1dc496db0bfe09960870330124d2fd6a87e86b12"
+  },
+  {
     "path": "lib/um-knee-study.ts",
     "sha256": "80908fce33eb88fe5d217d8ed70c948559c19981c48a7daf034353224ee25b55"
+  },
+  {
+    "path": "lib/um-limb-guided-dissection.ts",
+    "sha256": "6426e0ae3ed6655062626de18afdf878c6f2b821cc44b668cc7c98c3c65a6d08"
   },
   {
     "path": "lib/um-limb-motor.ts",
@@ -3310,6 +3318,10 @@
   {
     "path": "lib/um-limb-teaching.ts",
     "sha256": "f51b0532e23719646b5588188c637a49b7523acc5ff976c6cff7101ffa41bf4d"
+  },
+  {
+    "path": "lib/um-proximal-guided-dissection.ts",
+    "sha256": "97473c256223e2c83a7884065a26bde4fa093000f533726a01d4058b97c980f5"
   },
   {
     "path": "lib/upper-arm-reasoning.ts",

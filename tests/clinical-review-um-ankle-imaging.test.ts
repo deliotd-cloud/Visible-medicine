@@ -6,7 +6,7 @@ import { build } from 'esbuild';
 
 test('seven ankle drafts reach both learner modules and exact specimen review', async () => {
   const review = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
-  assert.equal(review.revision, 'f636891cdcee10aeca20ae684cb04c183fa7600e');
+  assert.equal(review.revision, '43072a948beda597e7a62439e8c093aa76cb94a7');
   const pins = {
     'content/um-calf-foot-clinical.ts': '557ae3859bea0db95f70303474d9afa053a8dec0380a6ffc325c070f281c9fd1',
     'content/um-limb-teaching-bindings.v1.json': 'a23f2358e2d4392812969dfb32b2081368c718928ec8633174ec21ac875ef7c4',
@@ -15,15 +15,12 @@ test('seven ankle drafts reach both learner modules and exact specimen review', 
     const base = 'public/atlas-runtime/' + module + '/';
     const manifest = JSON.parse(readFileSync(base + 'manifest.json', 'utf8'));
     const inputs = JSON.parse(readFileSync(base + 'source-inputs.json', 'utf8'));
-    // The independent lower-limb release retains its historical binding revision;
-    // current learner/review bindings advance for the missing-topic additions.
-    // The original ankle teaching module itself must remain byte-identical.
-    assert.equal(manifest.sourceCommit, module === 'head-neck' ? 'f636891cdcee10aeca20ae684cb04c183fa7600e' : '80ff7f2ce56ce3cc27d4d9e6962797292585c3df');
+    // Both learner runtimes now use the same current teaching bindings.
+    // The original ankle module remains byte-identical despite additive drafts.
+    assert.equal(manifest.sourceCommit, module === 'head-neck' ? '43072a948beda597e7a62439e8c093aa76cb94a7' : '43072a948beda597e7a62439e8c093aa76cb94a7');
     for (const key of ['patientDataIncluded', 'clinicalApproved', 'imagingConnection', 'standaloneReviewConnection']) assert.equal(manifest[key], false);
     for (const [path, expected] of Object.entries(pins)) {
-      const learnerExpected = module === 'lower-limb' && path === 'content/um-limb-teaching-bindings.v1.json'
-        ? 'cd73ab7b7fd70de4a4e83c173617dffac78220bd8a56670da6f52f9cafc4c0b1' : expected;
-      assert.equal(inputs.find((f: any) => f.path === path)?.sha256, learnerExpected);
+      assert.equal(inputs.find((f: any) => f.path === path)?.sha256, expected);
       const imported = review.files.find((f: any) => f.path === path);
       assert.equal(imported.sourceSha256, expected);
       assert.equal(createHash('sha256').update(readFileSync('atlas-review/' + path)).digest('hex'), imported.importedSha256);

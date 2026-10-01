@@ -1,5 +1,5 @@
 {
-  "revision": "f636891cdcee10aeca20ae684cb04c183fa7600e",
+  "revision": "43072a948beda597e7a62439e8c093aa76cb94a7",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2888,13 +2888,13 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "e04e0ed220f017f2743e7507beb5641bdf1274f6a84f56b4c7d446f973130660",
-      "importedSha256": "4ad8ee7b1b92c1b555328ff4751d97667799ca8cc6503e975fe52682b49214ab"
+      "sourceSha256": "09c210650623ec9dca91a62b905660b4ba96d2c327a33abcc7ade454eeea4f60",
+      "importedSha256": "1d73bc9c72cd436e5ca57121e4a427d1fc25e3f74ee0a51f92b8b9800d13845d"
     },
     {
       "path": "lib/specimen-review-material.ts",
-      "sourceSha256": "3881ea9d14fdc58e9ed17c0903dd52e42d76aadd152e3024466c5d05f5ebb8bc",
-      "importedSha256": "3881ea9d14fdc58e9ed17c0903dd52e42d76aadd152e3024466c5d05f5ebb8bc"
+      "sourceSha256": "33e4deca7d8c2fed6cab7753ab9a6671fbaeb73e5c26a49bda42274b782b68e1",
+      "importedSha256": "33e4deca7d8c2fed6cab7753ab9a6671fbaeb73e5c26a49bda42274b782b68e1"
     },
     {
       "path": "lib/hra-renal.ts",
@@ -2983,8 +2983,8 @@
     },
     {
       "path": "lib/specimen-guided-dissection.ts",
-      "sourceSha256": "b961f4b37a66a30eb015796ea70e87262ff3452b24814f8d602a824369998129",
-      "importedSha256": "b961f4b37a66a30eb015796ea70e87262ff3452b24814f8d602a824369998129"
+      "sourceSha256": "916c5d9a39d6d78c00a2a4c09a9577e9a1c07c03fb5783b25f807c82d28608be",
+      "importedSha256": "916c5d9a39d6d78c00a2a4c09a9577e9a1c07c03fb5783b25f807c82d28608be"
     },
     {
       "path": "lib/hra-pelvis.ts",
@@ -3042,24 +3042,9 @@
       "importedSha256": "23ba69e7268a03c8ab722313326bb7ffc3ac13aa49c0036c043993b38e0e9242"
     },
     {
-      "path": "lib/hra-pelvis-teaching.ts",
-      "sourceSha256": "dd7ad44dab1bb22c2e1878e2a9d9625ef720f6857bb863bd1c48ab4408c47b2e",
-      "importedSha256": "dd7ad44dab1bb22c2e1878e2a9d9625ef720f6857bb863bd1c48ab4408c47b2e"
-    },
-    {
-      "path": "content/hra-pelvic-teaching.ts",
-      "sourceSha256": "0ccbf9e59a351b9cffda708493d5be849ed30fdb4154537a5fe50fff1bfa8b50",
-      "importedSha256": "0ccbf9e59a351b9cffda708493d5be849ed30fdb4154537a5fe50fff1bfa8b50"
-    },
-    {
-      "path": "lib/um-limb-navigation.ts",
-      "sourceSha256": "4697de9da3dc98ae0888681e9c799301a54eab2a8919c0f4b004664606bdd83f",
-      "importedSha256": "4697de9da3dc98ae0888681e9c799301a54eab2a8919c0f4b004664606bdd83f"
-    },
-    {
-      "path": "content/um-limb-navigation.v1.json",
-      "sourceSha256": "34833f71e385972efb27f5798a094cb23f4df608c8baa4ca8256bb725332174c",
-      "importedSha256": "34833f71e385972efb27f5798a094cb23f4df608c8baa4ca8256bb725332174c"
+      "path": "lib/um-limb-guided-dissection.ts",
+      "sourceSha256": "6426e0ae3ed6655062626de18afdf878c6f2b821cc44b668cc7c98c3c65a6d08",
+      "importedSha256": "6426e0ae3ed6655062626de18afdf878c6f2b821cc44b668cc7c98c3c65a6d08"
     },
     {
       "path": "lib/um-limb-studies.ts",
@@ -3080,6 +3065,36 @@
       "path": "public/models/um-knee/catalog.json",
       "sourceSha256": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e",
       "importedSha256": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e"
+    },
+    {
+      "path": "lib/um-proximal-guided-dissection.ts",
+      "sourceSha256": "97473c256223e2c83a7884065a26bde4fa093000f533726a01d4058b97c980f5",
+      "importedSha256": "97473c256223e2c83a7884065a26bde4fa093000f533726a01d4058b97c980f5"
+    },
+    {
+      "path": "lib/um-distal-guided-dissection.ts",
+      "sourceSha256": "0263b5141b79b3e9d1c52b0d1dc496db0bfe09960870330124d2fd6a87e86b12",
+      "importedSha256": "0263b5141b79b3e9d1c52b0d1dc496db0bfe09960870330124d2fd6a87e86b12"
+    },
+    {
+      "path": "lib/hra-pelvis-teaching.ts",
+      "sourceSha256": "dd7ad44dab1bb22c2e1878e2a9d9625ef720f6857bb863bd1c48ab4408c47b2e",
+      "importedSha256": "dd7ad44dab1bb22c2e1878e2a9d9625ef720f6857bb863bd1c48ab4408c47b2e"
+    },
+    {
+      "path": "content/hra-pelvic-teaching.ts",
+      "sourceSha256": "0ccbf9e59a351b9cffda708493d5be849ed30fdb4154537a5fe50fff1bfa8b50",
+      "importedSha256": "0ccbf9e59a351b9cffda708493d5be849ed30fdb4154537a5fe50fff1bfa8b50"
+    },
+    {
+      "path": "lib/um-limb-navigation.ts",
+      "sourceSha256": "4697de9da3dc98ae0888681e9c799301a54eab2a8919c0f4b004664606bdd83f",
+      "importedSha256": "4697de9da3dc98ae0888681e9c799301a54eab2a8919c0f4b004664606bdd83f"
+    },
+    {
+      "path": "content/um-limb-navigation.v1.json",
+      "sourceSha256": "34833f71e385972efb27f5798a094cb23f4df608c8baa4ca8256bb725332174c",
+      "importedSha256": "34833f71e385972efb27f5798a094cb23f4df608c8baa4ca8256bb725332174c"
     },
     {
       "path": "lib/um-limb-teaching.ts",
@@ -3228,8 +3243,8 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sourceSha256": "380ce2b69ed41e887017d8a0fac7b12bbac88e21b494c68e439179f94aced95e",
-      "importedSha256": "789cac3a36bfee42a7a9ab77147ea28f0d1e13ab9bb82063a58ebfe30beede43"
+      "sourceSha256": "b2cca8944a1175a744056d0e5e5b2759ec4f58174f5b2f4a2f674bdd2c46508e",
+      "importedSha256": "6944bead2a22bc8b72d6c7aa797b516818b4b8dc7bb699938374e9c6c450e5b5"
     },
     {
       "path": "app/review/review.css",
@@ -4458,8 +4473,8 @@
     },
     {
       "path": "app/um-knee-study.tsx",
-      "sourceSha256": "d112b2681b6d39dc81dcdb3bfc3a86b33d045a8e9b9cee4a26b8f864c29e0973",
-      "importedSha256": "cc6658e39f542730336a2a35863b5ab9bbfef58ec2c1e1d582f4546b9f43248e"
+      "sourceSha256": "e100830b33643dc1696ebffed0e8f26254fdfbfc49f0911e1a649d56f0a4f7d7",
+      "importedSha256": "63a2cd4c1dd3f40eb5e3c6d038599af3df74f13fe1a0326219921597e5788ca4"
     },
     {
       "path": "app/specimen-removal-focus.ts",
@@ -4588,8 +4603,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "150ec262a07c28ceb74dd231bb43d52abff9a228af2b42fa2e29cf26fa173060",
-      "importedSha256": "150ec262a07c28ceb74dd231bb43d52abff9a228af2b42fa2e29cf26fa173060"
+      "sourceSha256": "a7c00b596de15751bba58d18a8bccd8ee9d62edc62dc055e509c76b37ba13674",
+      "importedSha256": "a7c00b596de15751bba58d18a8bccd8ee9d62edc62dc055e509c76b37ba13674"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -4688,5 +4703,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "0d66612b5f122009d435f3163351ebfb6e816b5740e4f7de0a460d5c4be618be"
+  "websiteIntegrationSha256": "d7d5d55092d24c0bc7ae0b6fbc73228f8904f61ddcf98ae22ac52466e407eab4"
 }

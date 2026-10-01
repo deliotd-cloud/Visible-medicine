@@ -27,6 +27,7 @@ import { motorStudyAction, specimenMotorGroups } from '@/atlas-review/lib/um-lim
 import type { ResolvedSpecimenNavigation } from '@/atlas-review/lib/um-limb-navigation';
 import type { SpecimenPracticeAdapter } from '@/atlas-review/lib/specimen-identification';
 import { guidedDissectionAction, type SpecimenGuidedDissection } from '@/atlas-review/lib/specimen-guided-dissection';
+import { umLimbGuidedDissection } from '@/atlas-review/lib/um-limb-guided-dissection';
 import type { StudyCamera } from '@/atlas-review/lib/study-views';
 import './eye-layers.css';
 import './um-knee-study.css';
@@ -63,7 +64,8 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
   const [zoomStep, setZoomStep] = useState(0);
   const [health, setHealth] = useState<RendererHealth>('starting');
   const [practice, setPractice] = useState<IdentificationState | null>(null);
-  const guide = useMemo(() => supplement?.guidedDissection?.(specimen) ?? null, [supplement, specimen]);
+  const guide = useMemo(() => supplement === undefined
+    ? umLimbGuidedDissection(specimen) : supplement?.guidedDissection?.(specimen) ?? null, [supplement, specimen]);
   const cameraCapture = useRef<StudyCamera | null>(null), cameraRestore = useRef<StudyCamera | null>(null);
   const guideLauncher = useRef<HTMLButtonElement | null>(null), restoreGuideFocus = useRef(false);
   const [guideExpanded, setGuideExpanded] = useState(false);
@@ -109,7 +111,8 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
   const onFailure = useCallback((id: string) => setFailed((p) => p.includes(id) ? p : [...p, id]), []);
   const selected = kneeSpecimen.structures.find((s) => s.id === selectedId);
   const active = activeSpecimenStudy(specimen, hidden);
-  const closeUpBounds = jointCloseUp && !focus && explode === 0 && !isolated ? specimen.closeUp : null;
+  const closeUpBounds = (guidance ? guide?.steps[guidance.index]?.cameraBounds : null)
+    ?? (jointCloseUp && !focus && explode === 0 && !isolated ? specimen.closeUp : null);
   const visible = kneeStructures.filter((s) => !hidden.includes(s.id));
   const required = kneeCatalog.bundles.filter((b) => visible.some((s) => s.bundle === b.id));
   const pending = required.filter((b) => !loaded.includes(b.id) && !failed.includes(b.id));
