@@ -319,6 +319,7 @@ export function FittedCamera({
       enableZoom={!locked}
       minDistance={0.1}
       maxDistance={Math.max(500, bounds.getSize(new Vector3()).length() * 20)}
+      onStart={() => { transition.current = null; capture(); }}
       onChange={capture}
     />
   );

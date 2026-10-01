@@ -86,6 +86,12 @@ render({viewKey:'lateral-resize',direction:[-1,0,0],transitionMs:1000});frame(nu
 size.width=500;camera.aspect=500/600;render();
 for(let i=0;i<25;i++)frame(null,.05);
 near(camera.position.z,0);assert(camera.position.x<0,'Resize mid-transition still reaches selected view');
+const manual=render({viewKey:'manual-interruption',direction:[0,0,1],transitionMs:1000,locked:false});
+frame(null,.05);manual.props.onStart();
+const manuallyChosen=camera.position.clone();
+for(let i=0;i<25;i++)frame(null,.05);
+near(camera.position.distanceTo(manuallyChosen),0);
+assert(capture.current,'User inspection interrupts the sweep and preserves camera capture');
 render({viewKey:'superior',direction:[0,1,0],up:[0,0,-1],transitionMs:0,locked:true});
 const polarStart=camera.position.clone();
 render({viewKey:'inferior',direction:[0,-1,0],up:[0,0,1],transitionMs:1000});
@@ -97,4 +103,4 @@ render({transitionPaused:true});frame(null,.5);
 near(camera.position.distanceTo(polarPaused),0);near(camera.up.distanceTo(polarUp),0);
 render({transitionPaused:false});for(let i=0;i<20;i++)frame(null,.05);
 assert(camera.position.y<controls.target.y);near(camera.up.distanceTo(new Vector3(0,0,1)),0);
-console.log(JSON.stringify({passed:true,antipodalOrbitSamples:101,polarFrameSamples:202,actualCameraPauseResume:true,actualPolarPauseResume:true,exactRestore:true,reducedMotionImmediate:true}));
+console.log(JSON.stringify({passed:true,antipodalOrbitSamples:101,polarFrameSamples:202,actualCameraPauseResume:true,actualPolarPauseResume:true,manualInterruption:true,exactRestore:true,reducedMotionImmediate:true}));

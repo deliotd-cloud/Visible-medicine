@@ -37,13 +37,32 @@ export function specimenCatalog({ key, source, surfaces, bundles, matrix }: {
   };
 }
 export type SpecimenAction = VentricularAction | { type: 'group'; tissue: string; visible: boolean }
-  | { type: 'show-only'; ids: string[]; selectedId: string };
+  | { type: 'show-only'; ids: string[]; selectedId: string }
+  | { type: 'restore-state'; state: VentricularState };
 export function specimenAction(specimen: SpecimenDefinition, value: string): VentricularAction | null {
   const study = specimen.studies.find((s) => s.id === value);
   return study ? { type: 'preset', value, selectedId: study.selectedId } : null;
 }
 export function reduceSpecimen(specimen: SpecimenDefinition, state: VentricularState, action: SpecimenAction) {
   const structures = specimen.catalog.structures;
+  if (action.type === 'restore-state') {
+    // Device-local guided learning restores its exact pre-session Undo/Redo chain.
+    // Never admit a foreign, hidden selected ID or malformed history snapshot.
+    const next = action.state;
+    const validSnapshot = (value: unknown) => {
+      if (!value || typeof value !== 'object') return false;
+      const snapshot = value as VentricularState;
+      return Array.isArray(snapshot.hidden)
+        && new Set(snapshot.hidden).size === snapshot.hidden.length
+        && snapshot.hidden.every(id => structures.some(s => s.id === id))
+        && (snapshot.selectedId === null || (structures.some(s => s.id === snapshot.selectedId)
+          && !snapshot.hidden.includes(snapshot.selectedId)));
+    };
+    if (!validSnapshot(next) || !Array.isArray(next.history) || !Array.isArray(next.future)
+      || next.history.length > 30 || next.future.length > 30
+      || !next.history.every(validSnapshot) || !next.future.every(validSnapshot)) return state;
+    return structuredClone(next);
+  }
   if (action.type === 'show-only') {
     // Reject malformed/foreign sets instead of silently opening another tissue.
     if (!action.ids.length || new Set(action.ids).size !== action.ids.length || !action.ids.includes(action.selectedId)

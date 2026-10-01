@@ -1,6 +1,7 @@
 import { hraRenalDefinition } from "./hra-renal";
 import { hraRenalTeaching } from "./hra-renal-teaching";
 import { hraPelvisDefinition } from "./hra-pelvis";
+import { hraPelvicGuidedDissection } from './hra-pelvic-guided-dissection';
 import { hraPelvicTeaching, hraPelvicContextReferenceTitles } from "./hra-pelvis-teaching";
 import renal from "../public/models/hra-renal/catalog.json";
 import pelvis from "../public/models/hra-pelvis/catalog.json";
@@ -110,14 +111,22 @@ export async function specimenReviewMaterial(
     studies: r.definition.studies,
     limitations: r.definition.limitations,
   };
+  const pelvicGuide = hraPelvicGuidedDissection(r.definition);
+  const guidedDissection = pelvicGuide?.steps.some(step => step.ids.includes(s.id)) ? pelvicGuide : null;
   const teaching = {
     topics,
     lesson,
     referenceTitles: r.titles as Record<string, string>,
     ...(lesson?.motorGroups?.length ? { motorSupplies: lesson.motorGroups.map(m => ({...m,...motorNerves[m.nerve]})) } : {}),
+    // The exact captions, order, camera views and surrounding source IDs are
+    // review material, not an unversioned renderer-only teaching overlay.
+    ...(guidedDissection ? { guidedDissection } : {}),
   };
   const sourceHash = await digest(source),
     teachingHash = await digest(teaching);
+  const checklists = structuredClone(specimenChecklists);
+  if (guidedDissection) checklists.teaching.push({ id: 'guided-dissection',
+    label: 'Inspect every guided step in the actual source viewer: caption, side, visible neighbours, selection and camera frame. These steps do not validate surgical planes or scan registration.' });
   const identity = {
     catalogScope: specimenReviewScope,
     specimenKey,
@@ -130,11 +139,12 @@ export async function specimenReviewMaterial(
     sourceHash,
     teachingHash,
     renderer: renderer.sha256,
-    checklist: specimenChecklists,
+    checklist: checklists,
   });
   const teachingTabs = [
     ...topics.filter((t) => t.body !== null).map((t) => t.tab),
     ...(lesson?.extended?.selfCheck ? ["self-check"] : []),
+    ...(guidedDissection ? ['guided-dissection'] : []),
   ];
   const context: SpecimenReviewContext = {
     ...identity,
@@ -144,7 +154,7 @@ export async function specimenReviewMaterial(
     teachingHash,
     rendererHash: renderer.sha256,
     teachingTabs,
-    checklists: structuredClone(specimenChecklists),
+    checklists,
     blockers: {
       geometry: atlasLink ? [] : ['The exact source/study link is unavailable. Resolve this binding before geometry approval.'],
       teaching: ["anatomy", "function", "clinical", "pathology"]
@@ -162,13 +172,13 @@ export async function specimenReviewMaterial(
         identity,
         sourceHash,
         renderer: renderer.sha256,
-        checklist: specimenChecklists.geometry,
+        checklist: checklists.geometry,
       }),
       teaching: await digest({
         identity,
         sourceHash,
         teachingHash,
-        checklist: specimenChecklists.teaching,
+        checklist: checklists.teaching,
       }),
       imaging: null,
     },

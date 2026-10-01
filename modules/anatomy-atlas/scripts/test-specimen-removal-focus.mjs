@@ -205,6 +205,7 @@ test('Set aside captures only its own focused trigger before the visibility disp
     };
     runInNewContext(`(${callbacks[0]})({ currentTarget: trigger })`, {
       trigger, selected: { id: 'tissue-a' }, removalFocusOrigin,
+      guidance: null,
       dispatch, setFocus: value => order.push(['focus-mode', value]),
     });
     assert.equal(removalFocusOrigin.current, focused ? trigger : null);
@@ -274,6 +275,7 @@ test('Undo/Redo handlers capture focused origin and layout effect chooses the co
     const calls = [];
     runInNewContext(`${handler}; historyStep(type, trigger)`, {
       type, trigger, historyFocusOrigin,
+      guidance: null,
       dispatch: action => { state = reduceSpecimen(specimen, state, action); },
       assembledDisplay: () => {},
     });
@@ -289,4 +291,20 @@ test('Undo/Redo handlers capture focused origin and layout effect chooses the co
     assert.equal(calls[0][0], focused ? trigger : null);
     assert.equal(calls[0][1], focused && type === 'undo' ? redoButton.current : undoButton.current);
   }
+});
+
+test('active guidance rejects extracted Set aside and Undo handlers without stealing focus', () => {
+  const trigger = {}, removalFocusOrigin = { current: null }, historyFocusOrigin = { current: null };
+  runInNewContext(`(${callbacks[0]})({currentTarget:trigger})`, {
+    trigger, guidance: { index: 0 }, selected: { id: 'tissue-a' }, removalFocusOrigin,
+    dispatch: () => assert.fail('No guided tissue mutation'), setFocus: () => assert.fail('No focus change'),
+  });
+  const handler = ts.transpileModule(historyFunctions[0].getText(parsed), {
+    compilerOptions: { target: ts.ScriptTarget.ES2022 },
+  }).outputText;
+  runInNewContext(`${handler}; historyStep('undo', trigger)`, {
+    trigger, guidance: { index: 0 }, historyFocusOrigin,
+    dispatch: () => assert.fail('No guided history mutation'), assembledDisplay: () => assert.fail('No display change'),
+  });
+  assert.equal(removalFocusOrigin.current, null); assert.equal(historyFocusOrigin.current, null);
 });

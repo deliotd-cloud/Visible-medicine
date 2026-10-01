@@ -1,5 +1,9 @@
 # Separate HRA female pelvic study
 
+1 October: optional six-stage [source-guided dissection](HRA_PELVIC_GUIDED_DISSECTION.md)
+connects existing support and urinary/vessel views. Models and original studies
+are unchanged; the new sequence is draft and requires revision-bound review.
+
 17 September urinary-context extension: **43 selectable surfaces / 11 studies**.
 The original 41 pelvic surfaces and eight study memberships are preserved.
 Two existing renal-study ureters are reused at their original coordinates with
