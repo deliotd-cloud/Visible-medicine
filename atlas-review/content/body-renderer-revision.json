@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "100b4b439259f932d65a4798e294e57bcbc7d45dba5799f7188e2dec454e3d21"
+      "sha256": "688a620d5821e5f228d07010be7a365edfff35a729561b02ec2871f3a05e0fc3"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1487,6 +1487,14 @@
     {
       "path": "content/tarsal-imaging-pins.json",
       "sha256": "40eaf4348d262d96756925b0ca26ef94fd88b7f5db2974c09e1a7320a0026bf3"
+    },
+    {
+      "path": "content/tentorium-imaging-pins.json",
+      "sha256": "a14170116ecab10fdf63d70d7bcc9620c3a2b15984a7de76a23dd2fa49f74a7f"
+    },
+    {
+      "path": "content/tentorium-imaging.ts",
+      "sha256": "f63b16069bebccb464e361b45899024c8a915d8cba7dd56be6120077415ce814"
     },
     {
       "path": "content/tentorium-studies.ts",
@@ -3017,6 +3025,10 @@
       "sha256": "25d1061071ff016a0b61342ae79b6af6268a486c3cb39d9333cc6c7cfe35640d"
     },
     {
+      "path": "lib/tentorium-imaging.ts",
+      "sha256": "27bfe0b92460557f42130f82637c4f0f7da8dc97c09b35d52e6cffe49a1397e2"
+    },
+    {
       "path": "lib/tentorium.ts",
       "sha256": "974332c66ba542c04d602721c3bfe810723ecfdb0e2f8796d33b7c545f55eeab"
     },
@@ -3433,7 +3445,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "5809133ce006723ea9810e1fccaf0731893d59ebe99679d3ece1a6950d0fa898",
-  "sourceRendererSha256": "e52b5834dd52c1d6754899e6de5140326075d6be9e4cd43746ddc30a8194c155",
-  "websiteIntegrationSha256": "40064dc5f8dae7204a53e932a4e1e2c4a4f6015bbb79ce21cadb6bf2ba12f2c3"
+  "sha256": "2868bae9505dd6f4ec05e8b10f45308905314e2a3bb8bd787a555c6dc8010c2e",
+  "sourceRendererSha256": "c2b8c7382599f4dcdc2816fea4ae51eb7e3ec8a972fd48fc472a3eb3186d8c4a",
+  "websiteIntegrationSha256": "634c5df6c4878dbb3dcd197dddc648767f159046c95644d6df6d49b16fa3c2f5"
 }

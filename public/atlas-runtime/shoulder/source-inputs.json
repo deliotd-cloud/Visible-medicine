@@ -29,7 +29,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "84009bd22efcf5623e9fc8a9e138711558d74d81ce9ef2f18e9710262617e418"
+    "sha256": "688a620d5821e5f228d07010be7a365edfff35a729561b02ec2871f3a05e0fc3"
   },
   {
     "path": "app/body-explorer.css",
@@ -1006,6 +1006,14 @@
   {
     "path": "content/tarsal-imaging-pins.json",
     "sha256": "40eaf4348d262d96756925b0ca26ef94fd88b7f5db2974c09e1a7320a0026bf3"
+  },
+  {
+    "path": "content/tentorium-imaging-pins.json",
+    "sha256": "a14170116ecab10fdf63d70d7bcc9620c3a2b15984a7de76a23dd2fa49f74a7f"
+  },
+  {
+    "path": "content/tentorium-imaging.ts",
+    "sha256": "f63b16069bebccb464e361b45899024c8a915d8cba7dd56be6120077415ce814"
   },
   {
     "path": "content/tentorium-studies.ts",
@@ -2106,6 +2114,10 @@
   {
     "path": "lib/tarsal-imaging.ts",
     "sha256": "25d1061071ff016a0b61342ae79b6af6268a486c3cb39d9333cc6c7cfe35640d"
+  },
+  {
+    "path": "lib/tentorium-imaging.ts",
+    "sha256": "27bfe0b92460557f42130f82637c4f0f7da8dc97c09b35d52e6cffe49a1397e2"
   },
   {
     "path": "lib/tentorium.ts",

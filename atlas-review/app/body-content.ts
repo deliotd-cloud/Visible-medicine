@@ -1,4 +1,5 @@
 import { centralVesselImagingLesson } from '../lib/central-vessel-imaging';
+import { tentoriumImagingLesson } from '../lib/tentorium-imaging';
 import { footSesamoidLesson } from '../lib/foot-sesamoid-teaching';
 import { cerebellarMcaImagingLesson } from '../lib/cerebellar-mca-imaging';
 import { orbitalNerveMriLesson } from '../lib/orbital-nerve-mri';
@@ -244,6 +245,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const tentoriumImaging = tentoriumImagingLesson(s, tab);
+  if (tentoriumImaging) return tentoriumImaging;
   const cerebellarMcaImaging = cerebellarMcaImagingLesson(s, tab);
   if (cerebellarMcaImaging) return cerebellarMcaImaging;
   const footSesamoid = footSesamoidLesson(s, tab);
