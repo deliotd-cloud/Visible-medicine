@@ -1,5 +1,5 @@
 {
-  "revision": "551f7dc0902be9c26c57a74cac4f101925767809",
+  "revision": "03da432b035d1dca7cc9f3344ee2722af627d859",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2753,8 +2753,8 @@
     },
     {
       "path": "lib/nested-review-material.ts",
-      "sourceSha256": "eba8b577811c1ac65122b61301b2c83cf7b3a97574bc2a4cc7b2ddae43600801",
-      "importedSha256": "eba8b577811c1ac65122b61301b2c83cf7b3a97574bc2a4cc7b2ddae43600801"
+      "sourceSha256": "54ae33d7031b140d22ca4bc769b03756524cc2d4b3f009545da14a7a4b3649cf",
+      "importedSha256": "54ae33d7031b140d22ca4bc769b03756524cc2d4b3f009545da14a7a4b3649cf"
     },
     {
       "path": "lib/nested-teaching.ts",
@@ -2893,8 +2893,8 @@
     },
     {
       "path": "lib/nested-review.ts",
-      "sourceSha256": "18afa81b7b1aa02ae1f174bd8d3b5c902d2d2eb8351c33798ae93a4927f90b74",
-      "importedSha256": "18afa81b7b1aa02ae1f174bd8d3b5c902d2d2eb8351c33798ae93a4927f90b74"
+      "sourceSha256": "802a709f60b1a8c1c3dd79d71235d75748fd2ff650034b4fc4a98c517556ed91",
+      "importedSha256": "802a709f60b1a8c1c3dd79d71235d75748fd2ff650034b4fc4a98c517556ed91"
     },
     {
       "path": "lib/body-review-decisions.ts",
@@ -2903,8 +2903,13 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "e522729c1d0339db6d81b0bf1233a412dbb668c69a06d022a47e11282d694bb8",
-      "importedSha256": "42f4cb9c9b0225fd9b0ce862b27022ee3e2043707fd0a0a95d2653004bb3a785"
+      "sourceSha256": "1f2050aa69c8761cf8d88ea4f361e30e166ac912fe755d7e7ce96cb78d641d95",
+      "importedSha256": "32deac071d7e03e5c57cad9536a39d6e3e5611e48bce54ecd45a2313468bf56f"
+    },
+    {
+      "path": "lib/eye-layer-guide.ts",
+      "sourceSha256": "83e038694f0a874bbbb57c2e4e52a20fb29cef5dad2162eeef0cc281ef36d0fb",
+      "importedSha256": "83e038694f0a874bbbb57c2e4e52a20fb29cef5dad2162eeef0cc281ef36d0fb"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3259,7 +3264,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "b2cca8944a1175a744056d0e5e5b2759ec4f58174f5b2f4a2f674bdd2c46508e",
-      "importedSha256": "451266ea6c2bfc3e970b237e7af0ebb413e92fa882f8ece862e0518b25d3da59"
+      "importedSha256": "671fdbea533348fe62affccffb9a76631a21bc941baab26ad7cdf8fc62e8e965"
     },
     {
       "path": "app/review/review.css",
@@ -3328,8 +3333,8 @@
     },
     {
       "path": "app/review/nested/workspace.tsx",
-      "sourceSha256": "5c7147fe4149d39b3b92291e7489e6e35340959c57e5b465ec6bab74767da009",
-      "importedSha256": "0994b16d961659e4e4b109f8a89aafdd07ad704079cd6347fc8bcc5018b67eb7"
+      "sourceSha256": "89ac9a87f30ce89b76e96880f9564a5f01b7b718357a5afd29f2b796435afd5e",
+      "importedSha256": "4f067137691eb5f6c70606db6cd73432c748ff03a4bdf8fa6a885dbd6156d4b3"
     },
     {
       "path": "lib/nested-review-client.ts",
@@ -4333,8 +4338,8 @@
     },
     {
       "path": "app/eye-layers.tsx",
-      "sourceSha256": "dc85935898d81d5b6a1c17b750f7ae7b52893dda8c1082e200859a74ec61d675",
-      "importedSha256": "065a09ffbeccf8ba2f0664652da79a00952be6bcd9508405cedd78ec24a7c6d2"
+      "sourceSha256": "69b96f889ee6a5175e0c97eca2c9c725392413e6da6c952e5196184c0bbfe15a",
+      "importedSha256": "4724ce14d89090689b833dfffd37089a6bfedb4c16af8440271ca1308bb52abb"
     },
     {
       "path": "app/nested-teaching.tsx",
@@ -4383,8 +4388,8 @@
     },
     {
       "path": "app/eye-layers.css",
-      "sourceSha256": "ded73dc7f5193f851c5082098ab743fbbf037c3cafcebc665cb05e3048bc2722",
-      "importedSha256": "ded73dc7f5193f851c5082098ab743fbbf037c3cafcebc665cb05e3048bc2722"
+      "sourceSha256": "2a41b0ec2acdf38eda670d60702bc6e918cafdecedbaa33c671323bf3b6e5361",
+      "importedSha256": "2a41b0ec2acdf38eda670d60702bc6e918cafdecedbaa33c671323bf3b6e5361"
     },
     {
       "path": "app/ventricles.tsx",
@@ -4723,5 +4728,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "49cdf7496c4cc02c077e9c7bd73aa72e77ceaa79f5772c374d00e7d8773035e7"
+  "websiteIntegrationSha256": "4863abe2e4d3b8304f8fcc32ed232a5f790cb18a5d4675bad8980ffd81eda83d"
 }

@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "551f7dc0902be9c26c57a74cac4f101925767809",
-  "sha256": "49cdf7496c4cc02c077e9c7bd73aa72e77ceaa79f5772c374d00e7d8773035e7",
+  "sourceCommit": "03da432b035d1dca7cc9f3344ee2722af627d859",
+  "sha256": "4863abe2e4d3b8304f8fcc32ed232a5f790cb18a5d4675bad8980ffd81eda83d",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -192,11 +192,11 @@
     },
     {
       "path": "atlas-review/app/eye-layers.css",
-      "sha256": "ded73dc7f5193f851c5082098ab743fbbf037c3cafcebc665cb05e3048bc2722"
+      "sha256": "2a41b0ec2acdf38eda670d60702bc6e918cafdecedbaa33c671323bf3b6e5361"
     },
     {
       "path": "atlas-review/app/eye-layers.tsx",
-      "sha256": "065a09ffbeccf8ba2f0664652da79a00952be6bcd9508405cedd78ec24a7c6d2"
+      "sha256": "4724ce14d89090689b833dfffd37089a6bfedb4c16af8440271ca1308bb52abb"
     },
     {
       "path": "atlas-review/app/femoral-components.tsx",
@@ -328,7 +328,7 @@
     },
     {
       "path": "atlas-review/app/review/nested/workspace.tsx",
-      "sha256": "0994b16d961659e4e4b109f8a89aafdd07ad704079cd6347fc8bcc5018b67eb7"
+      "sha256": "4f067137691eb5f6c70606db6cd73432c748ff03a4bdf8fa6a885dbd6156d4b3"
     },
     {
       "path": "atlas-review/app/review/overview/overview.css",
@@ -2419,6 +2419,10 @@
       "sha256": "d5790bc375114b906fdede4e430764df3fc0ff3ce71fba02ed87fec45129dff3"
     },
     {
+      "path": "atlas-review/lib/eye-layer-guide.ts",
+      "sha256": "83e038694f0a874bbbb57c2e4e52a20fb29cef5dad2162eeef0cc281ef36d0fb"
+    },
+    {
       "path": "atlas-review/lib/eye-layer-state.ts",
       "sha256": "e863d50a92dc1f842bc95898c410516a7fd2fe9d9fe9923ea8de7f244056389a"
     },
@@ -2936,7 +2940,7 @@
     },
     {
       "path": "atlas-review/lib/nested-review-material.ts",
-      "sha256": "eba8b577811c1ac65122b61301b2c83cf7b3a97574bc2a4cc7b2ddae43600801"
+      "sha256": "54ae33d7031b140d22ca4bc769b03756524cc2d4b3f009545da14a7a4b3649cf"
     },
     {
       "path": "atlas-review/lib/nested-review-queue.ts",
@@ -2948,7 +2952,7 @@
     },
     {
       "path": "atlas-review/lib/nested-review.ts",
-      "sha256": "18afa81b7b1aa02ae1f174bd8d3b5c902d2d2eb8351c33798ae93a4927f90b74"
+      "sha256": "802a709f60b1a8c1c3dd79d71235d75748fd2ff650034b4fc4a98c517556ed91"
     },
     {
       "path": "atlas-review/lib/nested-teaching.ts",
@@ -3836,7 +3840,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "1ad05cf5ff6666a5adf476804d8dea210e707eb0d81f98630f8c236195f7e9b7"
+      "sha256": "f8242230bf4cc124df8843d8c0de9ddd8572c51ca93cb84a92bc3a4d582e8106"
     }
   ]
 }

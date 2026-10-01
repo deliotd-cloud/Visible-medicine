@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {withoutPelvicRingNotice} from './atlas-pelvic-notice-history.ts';
-const source='551f7dc0902be9c26c57a74cac4f101925767809',before='443896f4f141266c4579fb4e1001c0097bb25479';
+const source='03da432b035d1dca7cc9f3344ee2722af627d859',before='443896f4f141266c4579fb4e1001c0097bb25479';
 const prior=(path:string)=>execFileSync('git',['show',before+':'+path],{maxBuffer:32e6});
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
@@ -26,12 +26,12 @@ async function load(previous=false){
 
 test('complete pelvic-ring tour and notices reach learners and protected review with original models',async()=>{
  const api=await load(),tour=api.pelvicRingTour,review=json('atlas-review/manifest.json');
- assert.equal(review.revision,source);assert.equal(review.files.length,941);
+ assert.equal(review.revision,source);assert.equal(review.files.length,942);
  const old=jsonFrom(prior('atlas-review/manifest.json'));
  assert.deepEqual(review.packages,old.packages);
- assert.deepEqual(review.files.filter((f:any)=>!old.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),['content/nested-ct-orientation.ts','lib/nested-review-queue.ts','lib/pelvic-ring-tour.ts']);
+ assert.deepEqual(review.files.filter((f:any)=>!old.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),['content/nested-ct-orientation.ts','lib/eye-layer-guide.ts','lib/nested-review-queue.ts','lib/pelvic-ring-tour.ts']);
  const changed=review.files.filter((f:any)=>old.files.find((p:any)=>p.path===f.path)?.sourceSha256!==f.sourceSha256).map((f:any)=>f.path).sort();
- assert.deepEqual(changed,['LICENSES/THIRD_PARTY_NOTICES.md','app/review/nested/nested-review.css','app/review/nested/page.tsx','app/review/nested/workspace.tsx','content/body-renderer-revision.json','content/body-review-display-pins.json','content/nested-ct-orientation.ts','content/nested-teaching.ts','lib/nested-review-queue.ts','lib/pelvic-ring-tour.ts','lib/regional-tours.ts']);
+ assert.deepEqual(changed,['LICENSES/THIRD_PARTY_NOTICES.md','app/eye-layers.css','app/eye-layers.tsx','app/review/nested/nested-review.css','app/review/nested/page.tsx','app/review/nested/workspace.tsx','content/body-renderer-revision.json','content/body-review-display-pins.json','content/nested-ct-orientation.ts','content/nested-teaching.ts','lib/eye-layer-guide.ts','lib/nested-review-material.ts','lib/nested-review-queue.ts','lib/nested-review.ts','lib/pelvic-ring-tour.ts','lib/regional-tours.ts']);
  for(const f of review.files)assert.equal(sha(readFileSync('atlas-review/'+f.path)),f.importedSha256,f.path);
  const notice=readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md','utf8').replaceAll('\r','');
  assert.equal(withoutPelvicRingNotice(notice),Buffer.from(prior('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md')).toString('utf8').replaceAll('\r',''));

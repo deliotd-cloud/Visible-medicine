@@ -227,7 +227,7 @@ export function parseSavedNestedReview(v: unknown): SavedNestedReview {
     m = v.material;
   if (
     !Array.isArray(m.teachingTabs) ||
-    m.teachingTabs.length > 9 ||
+    m.teachingTabs.length > 10 ||
     m.teachingTabs.some(
       (t) =>
         ![
@@ -240,6 +240,7 @@ export function parseSavedNestedReview(v: unknown): SavedNestedReview {
           "xray",
           "ultrasound",
           "self-check",
+          "guided-learning",
         ].includes(String(t)),
     ) ||
     new Set(m.teachingTabs).size !== m.teachingTabs.length

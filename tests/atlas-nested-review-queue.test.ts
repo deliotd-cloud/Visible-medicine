@@ -7,18 +7,20 @@ import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
 import {dirname} from 'node:path';
 import {build} from 'esbuild';
-const source='551f7dc0902be9c26c57a74cac4f101925767809',base='db062f3fa5c287d24c20f4b8e77a9ba2eb120ecc';
+const source='03da432b035d1dca7cc9f3344ee2722af627d859',base='db062f3fa5c287d24c20f4b8e77a9ba2eb120ecc';
 const old=(path:string)=>Buffer.from(execFileSync('git',['show',base+':'+path],{maxBuffer:32e6}));
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
-async function load(previous=false){
+const milestone=(path:string)=>Buffer.from(execFileSync('git',['show','792810f5:'+path],{maxBuffer:32e6}));
+async function load(previous=false,historicalQueue=false){
  const result=await build({stdin:{contents:`export * from './atlas-review/lib/nested-review-queue';
  export * from './atlas-review/lib/nested-review-material';export * from './atlas-review/lib/nested-review';
  export * from './atlas-review/lib/nested-review-api';export * from './atlas-review/lib/nested-review-client';
  export {default as NestedReviewPage} from './atlas-review/app/review/nested/page';`,
  resolveDir:process.cwd(),loader:'tsx'},bundle:true,write:false,platform:'node',format:'cjs',packages:'external',
- jsx:'automatic',loader:{'.css':'empty'},plugins:previous?[{name:'exact-previous-website-renderer',setup(api){
- api.onLoad({filter:/body-renderer-revision\.json$/},args=>({contents:old('atlas-review/content/body-renderer-revision.json').toString('utf8'),loader:'json',resolveDir:dirname(args.path)}));
+ jsx:'automatic',loader:{'.css':'empty'},plugins:previous||historicalQueue?[{name:'exact-queue-milestone',setup(api){
+ if(historicalQueue)api.onLoad({filter:/[\\/]lib[\\/]nested-review-material\.ts$/},args=>({contents:milestone('atlas-review/lib/nested-review-material.ts').toString('utf8'),loader:'ts',resolveDir:dirname(args.path)}));
+ api.onLoad({filter:/body-renderer-revision\.json$/},args=>({contents:(previous?old:milestone)('atlas-review/content/body-renderer-revision.json').toString('utf8'),loader:'json',resolveDir:dirname(args.path)}));
  }}]:[]});
  const module={exports:{}},nodeRequire=createRequire(process.cwd()+'/package.json');
  // Node's external CJS wrappers differ from vinext's framework default imports.
@@ -30,12 +32,12 @@ async function load(previous=false){
  return module.exports as any;
 }
 
-test('compact review queue reaches the host route with exact source, retained search/track and unchanged models, learners and rights',async()=>{
+test('compact review queue retains exact source/search/track and models/rights after the independently tested eye guide',async()=>{
  const api=await load(),review=json('atlas-review/manifest.json'),prior=JSON.parse(old('atlas-review/manifest.json').toString('utf8'));
- assert.equal(review.revision,source);assert.equal(review.files.length,941);assert.deepEqual(review.packages,prior.packages);
- assert.deepEqual(review.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path),['lib/nested-review-queue.ts']);
+ assert.equal(review.revision,source);assert.equal(review.files.length,942);assert.deepEqual(review.packages,prior.packages);
+ assert.deepEqual(review.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path),['lib/eye-layer-guide.ts','lib/nested-review-queue.ts']);
  assert.deepEqual(review.files.filter((f:any)=>prior.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),
-  ['app/review/nested/nested-review.css','app/review/nested/page.tsx','app/review/nested/workspace.tsx']);
+  ['app/eye-layers.css','app/eye-layers.tsx','app/review/nested/nested-review.css','app/review/nested/page.tsx','app/review/nested/workspace.tsx','content/body-renderer-revision.json','lib/nested-review-material.ts','lib/nested-review.ts']);
  for(const file of review.files)assert.equal(sha(readFileSync('atlas-review/'+file.path)),file.importedSha256,file.path);
  const receipt=json('atlas-review/integration-inputs.json');assert.equal(receipt.sourceCommit,source);
  assert(receipt.inputs.some((i:any)=>i.path==='atlas-review/lib/nested-review-queue.ts'));
@@ -46,13 +48,15 @@ test('compact review queue reaches the host route with exact source, retained se
  for(const name of ['head-neck','shoulder','lower-limb']){
   const folder='public/atlas-runtime/'+name+'/',manifest=json(folder+'manifest.json');
   const earlier=JSON.parse(old(folder+'manifest.json').toString('utf8'));
-  assert.equal(manifest.sourceCommit,source);assert.deepEqual(manifest.files,earlier.files,'Verified learner bytes reused');
+  assert.equal(manifest.sourceCommit,source);
+  assert.deepEqual(manifest.files.filter((f:any)=>f.path.startsWith('models/')),earlier.files.filter((f:any)=>f.path.startsWith('models/')),'Model bytes unchanged');
   for(const file of manifest.files)assert.equal(sha(readFileSync(folder+file.path)),file.sha256);
-  assert.deepEqual(readFileSync(folder+'source-inputs.json'),old(folder+'source-inputs.json'));
+  for(const path of ['bundled-dependencies.json','BUNDLED_NOTICES.txt','LICENSES/THIRD_PARTY_NOTICES.md'])
+   assert.deepEqual(readFileSync(folder+path),old(folder+path),'Credits/dependencies retained');
  }
  const inventory=json('lib/atlas-model-inventory.json');assert.equal(inventory.models.length,137);
  assert.deepEqual(inventory.models,JSON.parse(old('lib/atlas-model-inventory.json').toString('utf8')).models);
- for(const path of ['content/nested-review-bindings.json','content/nested-teaching.ts','lib/nested-review.ts',
+ for(const path of ['content/nested-review-bindings.json','content/nested-teaching.ts',
   'lib/nested-review-client.ts','lib/nested-review-api.ts','LICENSES/THIRD_PARTY_NOTICES.md'])
   assert.deepEqual(readFileSync('atlas-review/'+path),old('atlas-review/'+path),path+' retained');
  let count=0;
@@ -86,8 +90,8 @@ test('compact review queue reaches the host route with exact source, retained se
  assert(workspace.includes('document.addEventListener("click", click, true)'));assert(workspace.includes('window.addEventListener("beforeunload", unload)'));
 });
 
-test('website binding preserves all teaching/source identities, rejects old material before storage and retains revision-scoped history',async()=>{
- const now=await load(),before=await load(true),storage=new Proxy({},{get(){throw Error('Stale packet reached storage');}});
+test('exact saved queue milestone preserves teaching/source identities and rejects old material; later eye transitions tested separately',async()=>{
+ const now=await load(false,true),before=await load(true,true),storage=new Proxy({},{get(){throw Error('Stale packet reached storage');}});
  let contexts=0,materialRejects=0,geometryRejects=0;let fixture:any;
  for(const group of now.nestedReviewRows)for(const row of group.surfaces){
   const current=await now.nestedReviewMaterial(group.key,row.id),previous=await before.nestedReviewMaterial(group.key,row.id);
@@ -108,7 +112,7 @@ test('website binding preserves all teaching/source identities, rejects old mate
   if(!fixture&&!c.blockers.teaching.length)fixture={c,p};
  }
  assert.deepEqual({contexts,materialRejects,geometryRejects},{contexts:108,materialRejects:216,geometryRejects:108});
- const renderer=json('atlas-review/content/body-renderer-revision.json'),oldRenderer=JSON.parse(old('atlas-review/content/body-renderer-revision.json').toString('utf8'));
+ const renderer=JSON.parse(milestone('atlas-review/content/body-renderer-revision.json').toString('utf8')),oldRenderer=JSON.parse(old('atlas-review/content/body-renderer-revision.json').toString('utf8'));
  assert.equal(renderer.sourceRendererSha256,oldRenderer.sourceRendererSha256);
  assert.notEqual(renderer.websiteIntegrationSha256,oldRenderer.websiteIntegrationSha256);
  const {c,p}=fixture;

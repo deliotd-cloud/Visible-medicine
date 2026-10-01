@@ -161,11 +161,11 @@
   },
   {
     "path": "app/eye-layers.css",
-    "sha256": "ded73dc7f5193f851c5082098ab743fbbf037c3cafcebc665cb05e3048bc2722"
+    "sha256": "2a41b0ec2acdf38eda670d60702bc6e918cafdecedbaa33c671323bf3b6e5361"
   },
   {
     "path": "app/eye-layers.tsx",
-    "sha256": "dc85935898d81d5b6a1c17b750f7ae7b52893dda8c1082e200859a74ec61d675"
+    "sha256": "69b96f889ee6a5175e0c97eca2c9c725392413e6da6c952e5196184c0bbfe15a"
   },
   {
     "path": "app/femoral-components.tsx",
@@ -2306,6 +2306,10 @@
   {
     "path": "lib/explode-layout.mjs",
     "sha256": "d5790bc375114b906fdede4e430764df3fc0ff3ce71fba02ed87fec45129dff3"
+  },
+  {
+    "path": "lib/eye-layer-guide.ts",
+    "sha256": "83e038694f0a874bbbb57c2e4e52a20fb29cef5dad2162eeef0cc281ef36d0fb"
   },
   {
     "path": "lib/eye-layer-state.ts",
