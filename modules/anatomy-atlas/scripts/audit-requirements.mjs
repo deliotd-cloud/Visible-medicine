@@ -33,6 +33,7 @@ export { hraPelvicGuidedDissection } from './lib/hra-pelvic-guided-dissection.ts
 export { abdominalGuidedDissection } from './lib/abdominal-guided-dissection.ts';
 export { backGuidedDissection } from './lib/back-guided-dissection.ts';
 export { hraRenalGuidedDissection } from './lib/hra-renal-guided-dissection.ts';
+export { umLimbGuidedDissection } from './lib/um-limb-guided-dissection.ts';
 export { hraPelvicTeaching, hraPelvicPractice } from './lib/hra-pelvis-teaching.ts';
 export { hraRenalDefinition } from './lib/hra-renal.ts';
 export { hraRenalTeaching, hraRenalPractice } from './lib/hra-renal-teaching.ts';
@@ -93,6 +94,7 @@ const {
   abdominalGuidedDissection,
   backGuidedDissection,
   hraRenalGuidedDissection,
+  umLimbGuidedDissection,
   hraPelvicTeaching,
   hraPelvicPractice,
   hraRenalDefinition,
@@ -669,6 +671,9 @@ for (const path of [
   'lib/abdominal-guided-dissection.ts',
   'lib/back-guided-dissection.ts',
   'lib/hra-renal-guided-dissection.ts',
+  'lib/um-limb-guided-dissection.ts',
+  'lib/um-proximal-guided-dissection.ts',
+  'lib/um-distal-guided-dissection.ts',
   'content/abdominal-bone-teaching.ts',
   'lib/abdominal-wall.ts',
   'lib/back-layers.ts',
@@ -750,7 +755,9 @@ const backGuide = backGuidedDissection(backLayersDefinition);
 assert(abdominalGuide && backGuide, 'Admitted wall/back guides must resolve exactly');
 const renalGuide = hraRenalGuidedDissection(hraRenalDefinition);
 assert(renalGuide, 'Exact renal guide source identity required');
-const independentGuides = [pelvicGuidedDissection, abdominalGuide, backGuide, renalGuide];
+const limbGuides = Object.values(limbDefinitions).map(umLimbGuidedDissection);
+assert(limbGuides.every(Boolean), 'All five exact lower-limb source guides must resolve');
+const independentGuides = [pelvicGuidedDissection, abdominalGuide, backGuide, renalGuide, ...limbGuides];
 sourceHashes.independentGuidedDissectionData = hash(JSON.stringify(independentGuides));
 for (const path of [
   'app/volume-image.tsx', 'app/review/mri-import/page.tsx',

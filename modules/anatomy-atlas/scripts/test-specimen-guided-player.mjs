@@ -4,6 +4,7 @@ import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import { test } from 'node:test';
 import { build } from './workspace-component-test-build.mjs';
+import { build as buildData } from './workspace-test-build.mjs';
 
 const require = createRequire(import.meta.url);
 const React = require('react');
@@ -28,7 +29,7 @@ const nodes = tree => !tree || typeof tree !== 'object' ? [] : Array.isArray(tre
 const text = tree => tree == null ? '' : typeof tree === 'string' || typeof tree === 'number'
   ? String(tree) : Array.isArray(tree) ? tree.map(text).join('') : text(tree.props?.children);
 
-function harness({ definition, supplement, initialNavigation, reducedMotion = false } = {}) {
+function harness({ definition, supplement, initialNavigation, reducedMotion = false, nativeGuide = false } = {}) {
   const slots = [], effects = [], listeners = new Map();
   let cursor = 0, tree, dirty = false;
   const changed = (old, next) => !old || !next || old.length !== next.length
@@ -79,7 +80,7 @@ function harness({ definition, supplement, initialNavigation, reducedMotion = fa
   });
   const api = module.exports;
   const specimen = definition ?? api.hraPelvisDefinition;
-  const props = { specimen, supplement: supplement === undefined
+  const props = { specimen, supplement: nativeGuide ? undefined : supplement === undefined
     ? api.createHraPelvisSupplement() : supplement, initialNavigation };
   const sourceBefore = JSON.stringify(specimen);
   function render() {
@@ -254,6 +255,40 @@ test('Wall/back/renal supplements deliver exact steps with readiness, reduced mo
     assert.deepEqual(plain(h.slots[0]), before);
     h.unchanged();
   }
+});
+
+void test('Native UM guides deliver every exact step, reduced motion and Finish/Exit restoration', async () => {
+  const result = await buildData({ stdin: { contents: "export {limbDefinitions} from './lib/um-limb-studies'; export {umLimbGuidedDissection} from './lib/um-limb-guided-dissection';", resolveDir: process.cwd(), loader: 'ts' },
+    bundle: true, write: false, platform: 'node', format: 'esm' });
+  const api = await import('data:text/javascript;base64,' + Buffer.from(result.outputFiles[0].text).toString('base64'));
+  let frames = 0;
+  for (const definition of Object.values(api.limbDefinitions)) for (const reducedMotion of [false, true]) {
+    const h = harness({ definition, nativeGuide: true, reducedMotion });
+    const guide = api.umLimbGuidedDissection(definition), before = plain(h.slots[0]);
+    const cameraBefore = snapshot(h.scene().cameraBounds);
+    assert.equal(h.button('Start guided dissection').disabled, true);
+    const details = nodes(h.tree()).filter(node => node.type === 'details' && node.props?.className?.includes('um-specimen-guided-learning'));
+    assert.equal(details.length, 1); assert.equal(details[0].props.open, false);
+    h.ready(); h.click('Start guided dissection');
+    for (const [index, step] of guide.steps.entries()) {
+      assert.equal(h.scene().selectedId, step.selectedId);
+      assert.equal(h.scene().view, step.view);
+      assert.deepEqual(plain(h.scene().hiddenIds), definition.surfaces.filter(surface => !step.ids.includes(surface.id)).map(surface => surface.id));
+      assert.equal(h.scene().transitionMs, reducedMotion ? 0 : 1800);
+      assert.deepEqual(snapshot(h.scene().cameraBounds), snapshot(step.cameraBounds ?? definition.closeUp));
+      assert(text(h.tree()).includes(step.caption)); frames++;
+      if (index < guide.steps.length - 1) h.click('Next');
+    }
+    h.click('Previous'); h.click('Next'); h.click('Finish');
+    assert.deepEqual(plain(h.slots[0]), before);
+    assert.deepEqual(snapshot(h.scene().cameraBounds), cameraBefore);
+    h.ready(); h.click('Start guided dissection');
+    h.scene().onRendererHealth('lost'); h.render();
+    assert.equal(h.button('Next').disabled, true);
+    h.click('Exit guided dissection'); assert.deepEqual(plain(h.slots[0]), before);
+    h.unchanged();
+  }
+  assert.equal(frames, 92);
 });
 
 test('Rendering loss and hidden document pause navigation while Exit remains available', () => {

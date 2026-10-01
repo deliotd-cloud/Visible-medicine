@@ -63,7 +63,7 @@ const require = createRequire(import.meta.url), React = require('react');
 const built = await componentBuild({ entryPoints: ['app/um-knee-study.tsx'], bundle: true, write: false, format: 'cjs', platform: 'node', plugins: [{ name: 'scene-boundary', setup(api) {
   api.onLoad({ filter: /body-scene\.tsx$/ }, () => ({ loader: 'js', contents: 'export function BodyScene(props) { globalThis.sceneProps = props; return null; } export function retryBodyAssets() {}' }));
 } }] });
-const mod = { exports: {} }, context = { module: mod, exports: mod.exports, require, URL, URLSearchParams, console, process: { env: { NODE_ENV: 'test' } } };
+const mod = { exports: {} }, context = { module: mod, exports: mod.exports, require, structuredClone, URL, URLSearchParams, console, process: { env: { NODE_ENV: 'test' } } };
 runInNewContext(built.outputFiles[0].text, context);
 for (const definition of Object.values(limbDefinitions)) {
   const selected = definition.surfaces.at(-1), href = makeSpecimenLink(definition, { selectedId: selected.id, view: 'right', topic: 'function' });

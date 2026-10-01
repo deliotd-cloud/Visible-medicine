@@ -2095,3 +2095,13 @@ material is not retrospectively cleared. The two unresolved grouped bone
 selections retain their holds. No new model, font, texture, dependency, patient
 pixel, paid service or mandatory fee. Scope and clinical review requirements:
 `docs/UM_LIMB_MODALITY_COMPLETION.md`.
+
+## UM lower-limb guided dissection (1 October 2026)
+
+Five original source-guided visibility sequences reuse the admitted UM CC0 meshes
+without modifying geometry, identity, grouping, attribution or existing teaching.
+No publisher prose, diagram, photograph, dataset or new dependency is included.
+General anatomy reading links are not asset redistribution permissions or
+endorsement. Prior notices and source/clinical holds remain unchanged; no patient
+pixels, new model/font/texture, paid service or mandatory fee. Scope and review
+requirements: `docs/UM_LIMB_GUIDED_DISSECTION.md`.

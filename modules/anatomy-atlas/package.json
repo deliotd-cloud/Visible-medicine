@@ -7,6 +7,7 @@
   },
   "scripts": {
     "um-topic-completion:test": "node scripts/pin-um-limb-teaching.mjs --check && node scripts/test-um-topic-completion.mjs && node scripts/test-um-topic-review-completion.mjs && node scripts/validate-um-limb-clinical.mjs",
+    "um-guided-dissection:test": "node --import tsx --test scripts/test-um-proximal-guided-dissection.mjs scripts/test-um-distal-guided-dissection.mjs scripts/test-um-limb-guided-dissection.mjs && node scripts/test-um-guided-review.mjs && node scripts/test-specimen-guided-player.mjs",
     "hra-pelvic-topic-completion:test": "node scripts/test-hra-pelvic-topic-completion.mjs && node scripts/test-hra-pelvic-topic-review-completion.mjs && node scripts/validate-hra-pelvic-teaching.mjs",
     "hra-renal-topic-completion:test": "node scripts/test-hra-renal-topic-completion.mjs && node scripts/test-hra-renal-topic-review-completion.mjs && node scripts/validate-hra-renal-teaching.mjs",
     "back-topic-completion:test": "node --test scripts/test-back-muscle-topic-completion.mjs scripts/test-back-bone-topic-completion.mjs && node scripts/test-back-topic-review-completion.mjs && node scripts/validate-back-layers-teaching.mjs",

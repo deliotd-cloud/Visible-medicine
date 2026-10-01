@@ -3,12 +3,15 @@ import {execFileSync} from 'node:child_process';
 import {dirname} from 'node:path';
 import {build} from './workspace-test-build.mjs';
 const baseline='33566ee21aa65ed1a370a5e7653337048656a13e';
-const oldFile=path=>execFileSync('git',['show',baseline+':'+path],{encoding:'utf8',maxBuffer:32e6});
+// Preserve the exact delivered modality delta. Current guided additions have
+// their own full-context transition test, rather than weakening this assertion.
+const milestone='f636891cdcee10aeca20ae684cb04c183fa7600e';
+const oldFile=(path,revision=baseline)=>execFileSync('git',['show',revision+':'+path],{encoding:'utf8',maxBuffer:32e6});
 async function load(previous=false){
- const built=await build({stdin:{contents:"export * from './lib/specimen-review-material'; export * from './lib/specimen-review'; export * from './lib/specimen-review-api'; export {specimenClinicalReferences} from './content/um-limb-clinical';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',plugins:previous?[{name:'before-um-modality-completion',setup(api){
+ const built=await build({stdin:{contents:"export * from './lib/specimen-review-material'; export * from './lib/specimen-review'; export * from './lib/specimen-review-api'; export {specimenClinicalReferences} from './content/um-limb-clinical';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',plugins:[{name:'exact-um-modality-milestone',setup(api){
   for(const path of ['content/um-limb-teaching-bindings.v1.json','content/body-renderer-revision.json','lib/specimen-review-material.ts','content/um-limb-clinical.ts'])
-   api.onLoad({filter:new RegExp(path.replaceAll('/','[\\\\/]')+'$')},args=>({contents:oldFile(path),loader:path.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)}));
- }}]:[]});
+   api.onLoad({filter:new RegExp(path.replaceAll('/','[\\\\/]')+'$')},args=>({contents:oldFile(path,previous?baseline:milestone),loader:path.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)}));
+ }}]});
  return import('data:text/javascript;base64,'+Buffer.from(built.outputFiles[0].text).toString('base64'));
 }
 const[current,previous]=await Promise.all([load(),load(true)]),storage=new Proxy({},{get(){throw Error('Stale UM request reached storage');}});

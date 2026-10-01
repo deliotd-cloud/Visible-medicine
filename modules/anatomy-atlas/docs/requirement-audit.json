@@ -300,7 +300,7 @@
     "docs/body-batching-baseline.json": "4cebcd07c28d91aa748afb1385f51ef9d33803feb84e98df64681582ce8177fd",
     "scripts/glb-lossless-codec.mjs": "053f0a2a7a397600b8c70814fa07f0013928d60702b163a8c8514d1eaafba224",
     "scripts/compress-model-delivery.mjs": "b18e1c9b00891f31190f8f3ccc02287500673fab48d9e74f0490cc68e9fbddf4",
-    "app/um-knee-study.tsx": "d112b2681b6d39dc81dcdb3bfc3a86b33d045a8e9b9cee4a26b8f864c29e0973",
+    "app/um-knee-study.tsx": "e100830b33643dc1696ebffed0e8f26254fdfbfc49f0911e1a649d56f0a4f7d7",
     "app/um-knee-study.css": "b8d7a6ba20a215d601f04fe68673f6c1e4a9744ade2b91f34ff8ccd55ce6c703",
     "app/um-knee-entry.css": "b68e0232a417ca07cc3ae07ed3e756c93833623981a5cf5323b7a71db7017339",
     "lib/um-knee-study.ts": "80908fce33eb88fe5d217d8ed70c948559c19981c48a7daf034353224ee25b55",
@@ -328,11 +328,14 @@
     "app/specimens/lower-limb/specimen-linked-page.tsx": "307aa24d529359cc1ed537b285ceda1dc3088d88ff981bc42e747f0f8425942a",
     "app/um-limb-learning.tsx": "68032fe4e72628eb0af7c9b841aa4022512f39d2457779a069dee46fa841d6d0",
     "lib/independent-specimen.ts": "77ad41fa2572a0d2f1c3e9d73d58bd4395ff5800a0f1a777bd92d4fd2038f408",
-    "lib/specimen-guided-dissection.ts": "b961f4b37a66a30eb015796ea70e87262ff3452b24814f8d602a824369998129",
+    "lib/specimen-guided-dissection.ts": "916c5d9a39d6d78c00a2a4c09a9577e9a1c07c03fb5783b25f807c82d28608be",
     "lib/hra-pelvic-guided-dissection.ts": "ef1c883db974f04702bda1acce0566d480dc1359e8aff8225fe0a77d816f9eb4",
     "lib/abdominal-guided-dissection.ts": "73bfb2cc99767b2ede0969bde9cb1db61edb0b97c994e846686cd1bd90720df7",
     "lib/back-guided-dissection.ts": "369af44b99ec6ae40540c17d115082f50213e2be25e93dcb85632eeb8825a46b",
     "lib/hra-renal-guided-dissection.ts": "c1feb8e84baed26579ec3ff411a7fa4e14a825494c0f3d227b3509f76e882236",
+    "lib/um-limb-guided-dissection.ts": "6426e0ae3ed6655062626de18afdf878c6f2b821cc44b668cc7c98c3c65a6d08",
+    "lib/um-proximal-guided-dissection.ts": "97473c256223e2c83a7884065a26bde4fa093000f533726a01d4058b97c980f5",
+    "lib/um-distal-guided-dissection.ts": "0263b5141b79b3e9d1c52b0d1dc496db0bfe09960870330124d2fd6a87e86b12",
     "content/abdominal-bone-teaching.ts": "e968a035feafa0abdc44efad2b342a487275fa67a573d58afbeb5513336ebd1f",
     "lib/abdominal-wall.ts": "06795f84c4440639f4b24ea31e10b5e0a37f0e8f494a261f512d12c8ea1687b7",
     "lib/back-layers.ts": "f11998c77ff5823e257f9c81b625532d952ded36fd9729e65fbace6d0090f62c",
@@ -386,7 +389,7 @@
     "explicitTopicReadiness": "e20a1195f635264428e5f573689b20e27940c77fe962d9492c637116121062f5",
     "reasoningQuestionData": "e14edb0ec5501658df333e69f0aef4d9593b6647a3773258ff0ef6ec03b786fb",
     "guidedLearningData": "265baafbd6c051866df4e5b589d639a035ab0a9090c6c89b76f6bd2b29656d99",
-    "independentGuidedDissectionData": "bb8142a9a752129ae623e7c048d1cffcacb887da6c8fa691c27d9ef60ad11aee",
+    "independentGuidedDissectionData": "37605607dfcdc37cf3cc013f93f11c8f5af9633cbd9eb8b4d313d34f053d0596",
     "app/volume-image.tsx": "34d28f4f9284cbb18dd4c175815490fb3727912fdb4acb22143c91167ccd4448",
     "app/review/mri-import/page.tsx": "70e68c1a824ba1fe8f8b3c4291a9d8015c18288a9040289d4f4adec59bed039e",
     "lib/regional-tours.ts": "07b0abcc6bb6e24c24da073614070fded914c97af61f1d28a6ae45172cf61e91",
@@ -1678,6 +1681,46 @@
           "sourceFrame": "hra-united-female-v1.10:lps-mm",
           "steps": 8,
           "representations": 82,
+          "geometryChanged": false
+        },
+        {
+          "specimenKey": "um-5t6tz7-v1-2:knee",
+          "guideId": "um-knee-source-guide",
+          "sourceFrame": "um-5t6tz7-v1-2:source-lps",
+          "steps": 6,
+          "representations": 15,
+          "geometryChanged": false
+        },
+        {
+          "specimenKey": "um-5t6tz7-v1-2:lower-limb:hip-thigh",
+          "guideId": "um-hip-thigh-source-guide",
+          "sourceFrame": "um-5t6tz7-v1-2:source-lps",
+          "steps": 9,
+          "representations": 34,
+          "geometryChanged": false
+        },
+        {
+          "specimenKey": "um-5t6tz7-v1-2:lower-limb:calf",
+          "guideId": "um-calf-source-guide",
+          "sourceFrame": "um-5t6tz7-v1-2:source-lps",
+          "steps": 7,
+          "representations": 15,
+          "geometryChanged": false
+        },
+        {
+          "specimenKey": "um-5t6tz7-v1-2:lower-limb:foot",
+          "guideId": "um-foot-source-guide",
+          "sourceFrame": "um-5t6tz7-v1-2:source-lps",
+          "steps": 8,
+          "representations": 23,
+          "geometryChanged": false
+        },
+        {
+          "specimenKey": "um-5t6tz7-v1-2:lower-limb:whole",
+          "guideId": "um-whole-source-guide",
+          "sourceFrame": "um-5t6tz7-v1-2:source-lps",
+          "steps": 16,
+          "representations": 67,
           "geometryChanged": false
         }
       ],

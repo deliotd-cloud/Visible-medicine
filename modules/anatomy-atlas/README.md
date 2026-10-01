@@ -1,5 +1,10 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Independent lower limb → Guided learning:** [Five source-guided sequences](docs/UM_LIMB_GUIDED_DISSECTION.md)
+cover hip/thigh, knee, calf, foot and the whole source limb using the existing
+collapsed player and smooth camera controls. Draft visibility comparisons only;
+source-only pending generated website integration and clinical/browser review.
+
 **Pelvis → Clinical / Pathology:** [Both deferent ducts](docs/DEFERENT_CLINICAL.md)
 gain four source-bound introductory draft placements within existing tabs.
 Normal-course localisation, congenital absence and interrupted transport are
