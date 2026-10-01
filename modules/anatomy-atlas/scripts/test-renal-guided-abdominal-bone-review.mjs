@@ -6,15 +6,19 @@ import {dirname} from 'node:path';
 import {build} from './workspace-test-build.mjs';
 
 const baseline='adad1abe1ad6fdb3c942d1d8b6a98393591bec80';
-const oldFile=path=>execFileSync('git',['show',`${baseline}:${path}`],{encoding:'utf8',maxBuffer:32e6});
+const milestone='7d3010368fc53e3433e8df4f9e9d4ddb67e786e8';
+const oldFile=(path,revision=baseline)=>execFileSync('git',['show',`${revision}:${path}`],{encoding:'utf8',maxBuffer:32e6});
 const contents="export * from './lib/specimen-review-material'; export * from './lib/specimen-review'; export * from './lib/specimen-review-api'; export * from './lib/hra-renal'; export * from './lib/hra-renal-guided-dissection'; export * from './lib/abdominal-wall';";
 async function load(previous=false){
   const result=await build({stdin:{contents,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',
-    plugins:previous?[{name:'exact-before-renal-bones',setup(api){
+    plugins:[{name:'exact-renal-bones-milestone',setup(api){
+      const revision=previous?baseline:milestone;
       for(const path of ['lib/specimen-review-material.ts','lib/abdominal-wall-teaching.ts'])
-        api.onLoad({filter:new RegExp(path.replaceAll('/','[\\\\/]')+'$')},args=>({contents:oldFile(path),loader:'ts',resolveDir:dirname(args.path)}));
-      api.onLoad({filter:/[\\/]content[\\/]body-renderer-revision\.json$/},()=>({contents:oldFile('content/body-renderer-revision.json'),loader:'json'}));
-    }}]:[]});
+        api.onLoad({filter:new RegExp(path.replaceAll('/','[\\\\/]')+'$')},args=>({contents:oldFile(path,revision),loader:'ts',resolveDir:dirname(args.path)}));
+      for(const path of ['content/back-bone-teaching.ts','content/back-layers-clinical.ts'])
+        api.onLoad({filter:new RegExp(path.replaceAll('/','[\\\\/]')+'$')},args=>({contents:oldFile(path,milestone),loader:'ts',resolveDir:dirname(args.path)}));
+      api.onLoad({filter:/[\\/]content[\\/]body-renderer-revision\.json$/},()=>({contents:oldFile('content/body-renderer-revision.json',revision),loader:'json'}));
+    }}]});
   return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
 }
 const current=await load(),previous=await load(true);

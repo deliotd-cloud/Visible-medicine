@@ -338,8 +338,8 @@
     "lib/back-layers.ts": "f11998c77ff5823e257f9c81b625532d952ded36fd9729e65fbace6d0090f62c",
     "lib/back-layers-teaching.ts": "cb0125ca6ca20b98ca3b08c8b7015788fd8e427bd33581b1d4eb351fd211648e",
     "content/back-layers-teaching.ts": "6aa0130d732e155fa225829952e2ebba1702a650699b4cf9feaabde942bdfb41",
-    "content/back-layers-clinical.ts": "aef46c639404b420803382ae7763c47b1f951d4903b68c91c5514955e1f093ea",
-    "content/back-bone-teaching.ts": "09580e7ee30c2c4dd951bde5a53b6c93168d43d3cab3ede337b88a102db7854d",
+    "content/back-layers-clinical.ts": "2b6718847589ad135b8682ef8c94ff2717b014c1b1de3b13c838c578f6995b4d",
+    "content/back-bone-teaching.ts": "590d53eecda100df1444eeb227bf434c6441c3f9d93d8060f041848adcef4861",
     "app/back-layers-study.tsx": "050a156b026d83fe93dd5512a3f226528fe1a64d10dbbbc48499ebd0a9f99da2",
     "app/specimens/back-layers/page.tsx": "72068571827eac1e6c85f2992c478efee88e1dc101f0b56d9c61169eda9861bb",
     "public/models/bodyparts3d-v3/back-layers/catalog.json": "23ba69e7268a03c8ab722313326bb7ffc3ac13aa49c0036c043993b38e0e9242",
@@ -947,15 +947,15 @@
       "anatomyFunctionDrafts": 48,
       "attachmentMotorDrafts": 14,
       "extendedTopicDrafts": {
-        "clinical": 47,
-        "pathology": 38,
-        "ct": 35,
-        "mri": 41,
-        "xray": 34,
-        "ultrasound": 4
+        "clinical": 48,
+        "pathology": 48,
+        "ct": 48,
+        "mri": 48,
+        "xray": 48,
+        "ultrasound": 48
       },
       "clinicalSelfChecks": 48,
-      "distinctExtendedTopicTexts": 39,
+      "distinctExtendedTopicTexts": 75,
       "distinctClinicalSelfChecks": 17,
       "practiceTargets": 14,
       "source": {

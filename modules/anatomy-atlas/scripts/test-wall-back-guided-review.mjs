@@ -14,7 +14,7 @@ async function load(previous = false) {
   const result = await build({stdin:{contents,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',
     plugins: [{name:'exact-wall-back-guide-milestone',setup(api){
       const revision = previous ? baseline : milestone;
-      for (const path of ['lib/specimen-review-material.ts', 'lib/abdominal-wall-teaching.ts'])
+      for (const path of ['lib/specimen-review-material.ts', 'lib/abdominal-wall-teaching.ts', 'content/back-bone-teaching.ts', 'content/back-layers-clinical.ts'])
         api.onLoad({filter:new RegExp(path.replaceAll('/', '[\\\\/]') + '$')},args=>({contents:oldFile(path, revision),loader:'ts',resolveDir:dirname(args.path)}));
       api.onLoad({filter:/[\\/]content[\\/]body-renderer-revision\.json$/},()=>({contents:oldFile('content/body-renderer-revision.json', revision),loader:'json'}));
     }}],

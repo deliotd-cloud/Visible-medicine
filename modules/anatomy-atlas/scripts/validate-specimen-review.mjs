@@ -64,10 +64,10 @@ for (const group of api.specimenReviewRows)
   }
 assert.equal(contexts, 356);
 assert.equal(hashes.size, 356);
-// Includes 21 exact abdominal skeletal drafts added to the saved 321 contexts.
-// The current renal/bone transition test separately proves the exact delta;
-// reviewable draft coverage is not a clinical approval.
-assert.equal(teachingReady, 342);
+// Back-topic completion adds ten software prerequisites to the saved342.
+// The full356 back transition test separately proves this exact change.
+// Populated draft topics are not clinical approval.
+assert.equal(teachingReady, 352);
 for (const key of ["", "__proto__", "body-display-catalog", "shoulder-pilot"])
   assert.equal(await api.specimenReviewMaterial(key, "unknown"), null);
 const group = api.specimenReviewRows[0],

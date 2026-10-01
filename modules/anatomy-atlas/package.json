@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "back-topic-completion:test": "node --test scripts/test-back-muscle-topic-completion.mjs scripts/test-back-bone-topic-completion.mjs && node scripts/test-back-topic-review-completion.mjs && node scripts/validate-back-layers-teaching.mjs",
     "renal-guided-abdominal-bones:test": "node --import tsx --test scripts/test-hra-renal-guided-dissection.mjs && node --test scripts/test-abdominal-bone-teaching.mjs && node scripts/test-renal-guided-abdominal-bone-review.mjs && node scripts/test-specimen-guided-player.mjs && node scripts/validate-abdominal-teaching.mjs",
     "wall-back-guided-dissection:test": "node --import tsx --test scripts/test-abdominal-guided-dissection.mjs scripts/test-back-guided-dissection.mjs && node scripts/test-wall-back-guided-review.mjs && node scripts/test-specimen-guided-player.mjs",
     "pelvic-guided-dissection:test": "node --import tsx --test scripts/test-hra-pelvic-guided-dissection.mjs && node scripts/test-specimen-guided-player.mjs && node scripts/test-specimen-guided-review.mjs",

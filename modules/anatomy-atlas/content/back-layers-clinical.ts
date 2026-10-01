@@ -45,6 +45,18 @@ export const backLayersClinicalReferences = {
     title: 'Loyola · Rhomboid minor anatomy',
     url: 'https://www.meddean.luc.edu/lumen/meded/grossanatomy/dissector/muscles/rhmn.htm',
   },
+  mskMRI: {
+    title: 'RSNA/ACR · Musculoskeletal MRI and radiograph limits',
+    url: 'https://www.radiologyinfo.org/en/info/muscmr',
+  },
+  mskUltrasound: {
+    title: 'RSNA/ACR · Musculoskeletal ultrasound and depth limits',
+    url: 'https://www.radiologyinfo.org/en/info/musculous',
+  },
+  accessoryUS: {
+    title: 'Spinal accessory nerve ultrasound · Original case report',
+    url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC7603778/',
+  },
 } as const;
 type Ref = keyof typeof backLayersClinicalReferences;
 const references = (...keys: Ref[]) =>
@@ -73,10 +85,18 @@ export const backLayersClinical: Record<string, SpecimenClinicalLesson> = {
         'Distinguish a tendon avulsion at the humerus from a myotendinous injury. A published isolated avulsion spared teres major; neighbouring muscles must not be assumed injured together. No pathological mesh or treatment recommendation is supplied.',
         'latissimus',
       ),
+      ct: draft(
+        'If CT already covers the posterior axilla, orient the humeral attachment and look for gross asymmetry or a collection, while recognising that CT does not define a small tendon discontinuity as reliably as dedicated soft-tissue imaging. The published avulsion is case evidence, not a CT performance standard.',
+        'latissimus', 'mskMRI',
+      ),
       mri: draft(
         'Check that the examination covers the posterior axillary muscle–tendon unit and humeral attachment; a routine shoulder field can omit relevant tissue. Follow continuity and any fluid-signal gap or retraction on acquired images. The atlas cannot measure these findings.',
         'field',
         'latissimus',
+      ),
+      xray: draft(
+        'Radiographs show the adjacent humerus and shoulder girdle, not the full latissimus tendon course or a subtle myotendinous tear. A normal bone image cannot exclude the reported posterior axillary soft-tissue injury; assess that question on appropriately covered acquired soft-tissue imaging.',
+        'latissimus', 'mskMRI',
       ),
       ultrasound: draft(
         'In one reported avulsion, dynamic ultrasound confirmed the detached latissimus tendon beside a haematoma. This is case evidence, not a validated sensitivity estimate or scanning protocol. Atlas rotation and separation do not reproduce a dynamic examination.',
@@ -111,6 +131,10 @@ export const backLayersClinical: Record<string, SpecimenClinicalLesson> = {
         'paraspinal',
         'multifidusFactors',
       ),
+      xray: draft(
+        'A spine radiograph can orient vertebral levels and show bone alignment, but it cannot quantify multifidus area, composition or fatty infiltration. Do not infer preserved muscle from normal radiographic bone landmarks or treat these disconnected source fragments as a measured muscle region.',
+        'paraspinal', 'mskMRI',
+      ),
       ultrasound: draft(
         'Ultrasound studies can delineate lumbar multifidus, but its lateral boundary may be difficult to reproduce. Probe coverage, processing and prone-versus-supine positioning affect comparison with MRI. An atlas volume is not interchangeable with either acquired measurement.',
         'multifidusUS',
@@ -135,9 +159,21 @@ export const backLayersClinical: Record<string, SpecimenClinicalLesson> = {
         'The reported injury detached rhomboid major at its scapular insertion with retraction. Keep that structural failure distinct from weakness without demonstrated disruption. A separation gap made by the viewer is not a tear.',
         'rhomboid',
       ),
+      ct: draft(
+        'An acquired CT can locate the medial scapular border and reveal gross adjacent bone or muscle asymmetry, but a subtle rhomboid major insertional defect is better assessed with covered soft-tissue imaging. The cited detachment was demonstrated by MRI; no CT diagnostic accuracy follows from that case.',
+        'rhomboid', 'mskMRI',
+      ),
       mri: draft(
         'A periscapular MRI case demonstrated insertional disruption and surrounding fluid on a fluid-sensitive sequence. Ensure the medial scapular attachment is actually covered. One case does not establish a universal MRI protocol or diagnostic performance.',
         'rhomboid',
+      ),
+      xray: draft(
+        'Radiographs can show scapular position and bone injury but do not directly show the rhomboid major insertional tear described in the case. Apparent scapular asymmetry is nonspecific; correlate with examination and appropriately covered soft-tissue images rather than treating the atlas surface as proof.',
+        'rhomboid', 'mskMRI',
+      ),
+      ultrasound: draft(
+        'Probe-accessible tissue near the medial scapular border may be compared dynamically with the opposite side, but bone shadowing and depth can limit the attachment view. The published major tear was shown with MRI, not a validated rhomboid ultrasound protocol or sensitivity estimate.',
+        'rhomboid', 'mskUltrasound',
       ),
     },
     selfCheck: selfCheck(
@@ -155,10 +191,26 @@ export const backLayersClinical: Record<string, SpecimenClinicalLesson> = {
         'minor',
         'dorsalScapular',
       ),
+      pathology: draft(
+        'Weakness of the smaller superior rhomboid could accompany a dorsal scapular nerve disorder, yet the cited entrapment case localised findings near major and did not establish a minor tear. Keep neural dysfunction, muscle atrophy and a structural insertional lesion separate until actual patient evidence identifies one.',
+        'minor', 'dorsalScapular',
+      ),
+      ct: draft(
+        'If CT includes the upper medial scapula, use its bony landmarks to distinguish the minor attachment region from major below. Gross muscle asymmetry may be visible, but CT alone does not establish an isolated minor tear or nerve lesion; neither is present in this source selection.',
+        'minor', 'mskMRI',
+      ),
       mri: draft(
         'Use its attachment near the scapular spine to distinguish minor from the more inferior major when orienting acquired images. The linked tear case concerns major, not minor. This is an anatomical localisation aid, not validated MRI lesion teaching for minor.',
         'minor',
         'rhomboid',
+      ),
+      xray: draft(
+        'A scapular radiograph can orient the spine and medial border, but it does not display rhomboid minor fibres or prove a tear. Do not transfer the published major insertional injury to this separate superior muscle from a normal or abnormal bone view.',
+        'minor', 'rhomboid', 'mskMRI',
+      ),
+      ultrasound: draft(
+        'A probe may access superficial tissue by the root of the scapular spine, while scapular bone shadow and the small muscle extent constrain the view. The cited dorsal scapular ultrasound case assessed the nerve near major; it does not validate an isolated minor tear or a complete minor survey.',
+        'minor', 'dorsalScapular', 'mskUltrasound',
       ),
     },
     selfCheck: selfCheck(
@@ -180,9 +232,21 @@ export const backLayersClinical: Record<string, SpecimenClinicalLesson> = {
         'Reported trapezius denervation appearances include atrophy and increased T2/STIR signal. These are observations to interpret with the clinical setting, not proof that every bright or small trapezius is denervated. The atlas shows no disease state.',
         'accessory',
       ),
+      ct: draft(
+        'A CT acquired for another indication may show side-to-side trapezius bulk asymmetry and adjacent shoulder-girdle bones, but muscle size alone is nonspecific for spinal accessory neuropathy. Source-part boundaries are display divisions, not CT-defined nerve territories or a diagnosis.',
+        'accessory', 'mskMRI',
+      ),
       mri: draft(
         'Review trapezius bulk and fluid-sensitive signal, and consider the relevant nerve course and surgical history in acquired images. The small cited series also described postoperative scarring near the nerve. None of these findings can be read from the surface model.',
         'accessory',
+      ),
+      xray: draft(
+        'Radiographs can show the clavicle and scapula, including gross alignment, but cannot directly depict trapezius denervation or the spinal accessory nerve. Shoulder position is an indirect and nonspecific clue; it cannot assign a lesion to any one of the three displayed source parts.',
+        'accessory', 'mskMRI',
+      ),
+      ultrasound: draft(
+        'In an original iatrogenic palsy case, ultrasound assessed an accessible spinal accessory nerve segment while MRI showed trapezius atrophy. Probe access varies along the nerve course and deeper tissue may be limited; a normal accessible segment does not clear the entire nerve or diagnose a source part.',
+        'accessoryUS', 'mskUltrasound',
       ),
     },
     selfCheck: selfCheck(

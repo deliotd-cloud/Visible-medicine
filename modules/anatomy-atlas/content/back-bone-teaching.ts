@@ -51,6 +51,14 @@ export const backBoneReferences = {
     title: 'AAOS · shoulder trauma',
     url: 'https://www.orthoinfo.org/diseases--conditions/shoulder-trauma-fractures-and-dislocations/',
   },
+  ultrasound: {
+    title: 'ACR/RSNA · musculoskeletal ultrasound and its bone limits',
+    url: 'https://www.radiologyinfo.org/en/info/musculous',
+  },
+  shoulderImaging: {
+    title: 'ACR · Acute Shoulder Pain, 2024 update (primary publication)',
+    url: 'https://pubmed.ncbi.nlm.nih.gov/40409888/',
+  },
 } as const;
 type Ref = keyof typeof backBoneReferences;
 const urls = (...keys: Ref[]) => keys.map((key) => backBoneReferences[key].url);
@@ -293,6 +301,58 @@ export const backBoneConcepts = {
 } as const satisfies Record<string, Concept>;
 export type BackBoneConcept = keyof typeof backBoneConcepts;
 
+// Complete only slots absent from the delivered lessons. These are teaching
+// prompts for acquired images, never findings from the unvalidated source bone.
+const additionalTopics: Record<BackBoneConcept, SpecimenClinicalLesson['topics']> = {
+  occipital: {
+    clinical: draft('The occipital condyles meet C1 at the craniovertebral junction. After trauma, the bone-only view cannot show the stabilising ligaments, brainstem or cord; symptoms and acquired images must be assessed together.', 'upperCervicalRadiographs'),
+    pathology: draft('An occipital-condyle fracture or craniovertebral displacement changes the skull-base relationship to C1. The intact source contour and display offset represent neither injury nor stability.', 'upperCervicalRadiographs'),
+    ct: draft('Multiplanar CT can show an occipital-condyle fracture and its relationship to the C1 lateral mass. Use the condyle as an orientation landmark here; no fracture fragment or patient alignment is encoded.', 'upperCervicalRadiographs'),
+    mri: draft('When craniovertebral soft-tissue or neural injury is suspected, acquired MRI can address tissues beyond a CT bone assessment. This occipital surface has no ligament, cord or signal data.', 'upperCervicalRadiographs', 'spineImaging'),
+    ultrasound: draft('Ultrasound can depict accessible superficial soft tissue but bone blocks the deeper craniovertebral junction. A visible occipital surface cannot substitute for acquired CT or MRI when that junction is in question.', 'ultrasound', 'upperCervicalRadiographs'),
+  },
+  atlas: {
+    pathology: draft('A C1 ring fracture can involve its anterior or posterior arch; associated ligament injury is a separate question. The supplied unbroken ring cannot exclude either injury in a patient.', 'upperCervicalRadiographs'),
+    ultrasound: draft('C1 lies beneath the skull base and other acoustic barriers. Ultrasound does not survey the full ring, dens relationship or transverse ligament; this bone selection is only a landmark for acquired cross-sectional assessment.', 'ultrasound', 'upperCervicalRadiographs'),
+  },
+  axis: {
+    pathology: draft('The C2 dens and posterior elements can be injured in different patterns. A modelled dens attached to the body describes this source arrangement, not evidence that a patient has no fracture or instability.', 'upperCervicalRadiographs'),
+    ultrasound: draft('The C2 dens lies deep behind bone, beyond a reliable ultrasound window. Surface sonography cannot clear an odontoid fracture or the C1–C2 relationship; use acquired images when clinically indicated.', 'ultrasound', 'upperCervicalRadiographs'),
+  },
+  cervical: {
+    pathology: draft('A C3–C6 injury may affect a body, facet or posterior element and may coexist with ligament or neural damage. Source foramina and explode spacing are reference and display context, not evidence of traumatic widening or compression.', 'trauma', 'spineImaging'),
+    ultrasound: draft('The C3–C6 vertebral canal and bone interior are hidden from surface ultrasound by the posterior elements. Ultrasound may address an accessible soft-tissue question, but cannot survey a cervical fracture or cord injury.', 'ultrasound', 'spineImaging'),
+  },
+  c7: {
+    pathology: draft('Trauma near C7 can involve the cervicothoracic transition; a prominent spinous process alone does not identify the full injury level or pattern. The unaltered source bone and separation offsets are not patient findings.', 'trauma', 'spineImaging'),
+    ultrasound: draft('Although the C7 spinous tip can be superficial, ultrasound sees only reachable outer cortex and soft tissue. It cannot evaluate the deep C7–T1 canal or exclude a junctional injury.', 'ultrasound', 'spineImaging'),
+  },
+  thoracic: {
+    ultrasound: draft('Ribs and posterior vertebral cortex obstruct a complete thoracic-vertebra ultrasound view. Sonography may answer a nearby soft-tissue question, but cannot establish vertebral height, canal integrity or a fracture pattern.', 'ultrasound', 'trauma'),
+  },
+  lumbar: {
+    ultrasound: draft('Ultrasound can show some superficial lumbar tissues and accessible bone cortex; it cannot penetrate the vertebral body to assess marrow or the canal. A bone-only lesson is not an acquired ultrasound or fracture screen.', 'ultrasound', 'compression'),
+  },
+  sacrum: {
+    ultrasound: draft('The sacral cortex and depth limit ultrasound assessment of the posterior pelvic ring. Pelvic sonography can address organs or fluid, but cannot establish a sacral fracture or sacroiliac stability from this surface.', 'ultrasound', 'pelvis'),
+  },
+  clavicle: {
+    mri: draft('MRI can answer selected soft-tissue or occult-injury questions around the clavicle after clinical and radiographic assessment. This source contains no marrow signal, acromioclavicular ligament or sternoclavicular capsule.', 'shoulderImaging', 'shoulder'),
+    ultrasound: draft('The superficial clavicular cortex may be accessible to ultrasound, and adjacent soft tissue can be examined, but sound cannot show the bone interior or the entire injury pattern. No sonogram is supplied here.', 'ultrasound', 'shoulderImaging'),
+  },
+  scapula: {
+    mri: draft('MRI can investigate selected peri-scapular soft tissues and shoulder joint structures when the clinical question warrants it. The visible scapular spine and glenoid are bone landmarks, with no labrum, tendon or marrow signal.', 'shoulderImaging', 'shoulder'),
+    ultrasound: draft('Ultrasound can assess accessible rotator-cuff tendons near the scapular shoulder, but the scapular blade blocks deeper structures and its cortex is not a complete fracture survey. The labrum and marrow are absent.', 'ultrasound', 'shoulderImaging'),
+  },
+  hip: {
+    ultrasound: draft('Pelvic ultrasound can assess selected organs or fluid, but the adult hip bone blocks a view through the pelvic ring. It cannot determine acetabular or iliac fracture extent or ring stability from this surface.', 'ultrasound', 'pelvis'),
+  },
+  humerus: {
+    mri: draft('MRI may address suspected rotator-cuff or other soft-tissue injury beside the proximal humerus after the initial clinical and radiographic assessment. This full-bone mesh has no tendon, nerve, cartilage or marrow signal.', 'shoulderImaging', 'shoulder'),
+    ultrasound: draft('Ultrasound can examine rotator-cuff tendons beside the humeral head and an accessible cortical margin. Acoustic shadowing prevents assessment through the humerus, so it cannot describe the full fracture pattern or marrow.', 'ultrasound', 'shoulderImaging'),
+  },
+};
+
 // Projection orientation only; no acquisition protocol or clearance thresholds.
 const cervicalXray: Partial<Record<BackBoneConcept, SpecimenTopicDraft>> = {
   occipital: draft(
@@ -370,6 +430,7 @@ export function authoredBackBoneLesson(key: BackBoneConcept): SpecimenLesson {
           'One unvalidated, reduced-resolution source bone, not separate landmark meshes. No cartilage, discs, ligament integrity, bone density, marrow signal or patient registration. Explode offsets and source defects are not disease.',
         topics: {
           ...selectedTopics,
+          ...additionalTopics[key],
           ...(cervicalXray[key] ? { xray: cervicalXray[key] } : {}),
         },
         selfCheck: {

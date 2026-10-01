@@ -83,7 +83,7 @@ same(
     (n, l) => n + Object.keys(l.topics).length,
     0,
   ),
-  17,
+  30,
 );
 for (const s of def.surfaces) {
   const lesson = lessonFor(def, s);
@@ -148,11 +148,11 @@ for (const s of def.surfaces) {
 }
 same(counts, {
   clinical: 14,
-  pathology: 12,
-  ct: 2,
+  pathology: 14,
+  ct: 14,
   mri: 14,
-  xray: 0,
-  ultrasound: 4,
+  xray: 14,
+  ultrasound: 14,
 });
 same(Object.keys(api.backLayersPartNotes).sort(), [
   'FMA33581',
@@ -215,6 +215,7 @@ const require = createRequire(import.meta.url),
   context = {
     module: mod,
     exports: mod.exports,
+    structuredClone,
     // Match the installed application's Next-compatible framework alias.
     require: (id) => id === 'next/link' ? { __esModule: true, ...actualLink } : require(id),
     URL,
@@ -268,7 +269,7 @@ for (const surface of muscles)
       );
   }
 same(topicRenders, 112);
-same(pendingRenders, 38);
+same(pendingRenders, 0);
 same(
   /<details[^>]* open/.test(
     render('BackLayersTeaching', { surface: muscles[0], definition: def }),
@@ -288,6 +289,12 @@ const oldCompiled = await build({
 });
 const oldApi = await import('data:text/javascript;base64,' +
   Buffer.from(oldCompiled.outputFiles[0].text).toString('base64'));
+// Freeze the delivered eight-note radiograph milestone. The new back completion
+// tests separately compare every old populated topic with the current lessons.
+const delivered='7d3010368fc53e3433e8df4f9e9d4ddb67e786e8';
+const deliveredFile=path=>execFileSync('git',['show',`${delivered}:${path}`],{encoding:'utf8',maxBuffer:32e6});
+const deliveredCompiled=await build({stdin:{contents:deliveredFile('content/back-bone-teaching.ts'),resolveDir:resolve('content'),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
+const deliveredApi=await import('data:text/javascript;base64,'+Buffer.from(deliveredCompiled.outputFiles[0].text).toString('base64'));
 const addedXray = {
   FMA52735: /skull base.*C1 ring/,
   FMA12519: /C1 has no vertebral body/,
@@ -305,10 +312,10 @@ same(api.backBoneConcepts, oldApi.backBoneConcepts);
 for (const path of ['content/back-layers-teaching.ts',
   'content/back-layers-clinical.ts', 'lib/back-layers-teaching.ts',
   'lib/back-layers.ts', 'public/models/bodyparts3d-v3/back-layers/catalog.json'])
-  same(readFileSync(path, 'utf8').replace(/\r\n/g, '\n'),
+  same(deliveredFile(path).replace(/\r\n/g, '\n'),
     historical(path).replace(/\r\n/g, '\n'));
 for (const bone of bones) {
-  const current = copy(lessonFor(def, bone));
+  const current = copy(deliveredApi.authoredBackBoneLesson(deliveredApi.backBoneBindings[bone.fmaId]));
   const previous = oldApi.authoredBackBoneLesson(oldApi.backBoneBindings[bone.fmaId]);
   if (addedXray[bone.fmaId]) {
     same(previous.extended.topics.xray, undefined);
@@ -426,15 +433,15 @@ for (const bone of bones) {
   }
 }
 same(boneCounts, {
-  clinical: 33,
-  pathology: 26,
-  ct: 33,
-  mri: 27,
+  clinical: 34,
+  pathology: 34,
+  ct: 34,
+  mri: 34,
   xray: 34,
-  ultrasound: 0,
+  ultrasound: 34,
 });
 same(boneTopicRenders, 272);
-same(bonePendingRenders, 51);
+same(bonePendingRenders, 0);
 same(JSON.stringify(def), before);
 const bad = copy(def);
 bad.catalog.coordinateSystem.sourceToSceneColumnMajor[12] += 0.5;
@@ -456,7 +463,7 @@ console.log(
     checks,
     muscles: muscles.length,
     extendedTopics: counts,
-    distinctTopicTexts: 17,
+    distinctTopicTexts: 30,
     topicRenders,
     pendingRenders,
     bones: bones.length,
