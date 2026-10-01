@@ -1,5 +1,9 @@
 # Nested structure reviews
 
+The [compact filtered queue](NESTED_REVIEW_QUEUE.md) adds source-pinned
+Previous/Next navigation and search/track retention. Current coverage is in
+CURRENT_STATUS.md; the original milestone totals below are historical.
+
 The /review/nested worksheet separates each parent, dissection study and child
 from whole-body, shoulder and independent-specimen reviews. There are104
 admitted child destinations in19 parent/study scopes at this source revision.
