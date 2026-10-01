@@ -4,6 +4,9 @@ import { hipThighClinicalLessons, hipThighClinicalReferences } from './um-hip-th
 import { calfFootClinicalLessons, calfFootClinicalReferences } from './um-calf-foot-clinical';
 import { hipMuscleClinicalLessons, hipMuscleClinicalReferences } from './um-hip-muscle-clinical';
 import { boneCartilageClinicalLessons, boneCartilageClinicalReferences } from './um-bone-cartilage-clinical';
+import { umProximalTopicCompletion, umProximalModalityReferences } from './um-proximal-topic-completion';
+import { umDistalTopicCompletion, umDistalModalityReferences } from './um-distal-topic-completion';
+import { limbModalityReferences } from './um-limb-modality-references';
 export type SpecimenExtendedTopic = 'clinical' | 'pathology' | 'ct' | 'mri' | 'xray' | 'ultrasound';
 export type SpecimenTopicDraft = { readiness: 'draft'; body: string; references: string[] };
 export type SpecimenClinicalLesson = {
@@ -13,6 +16,9 @@ export type SpecimenClinicalLesson = {
 };
 const aaos = (slug: string) => `https://www.orthoinfo.org/diseases--conditions/${slug}/`;
 export const specimenClinicalReferences = {
+  ...Object.fromEntries(Object.entries(limbModalityReferences).map(([key,value]) => ['modality-'+key,value])),
+  ...Object.fromEntries(Object.entries(umProximalModalityReferences).map(([key,value]) => ['proximal-'+key,value])),
+  ...Object.fromEntries(Object.entries(umDistalModalityReferences).map(([key,value]) => ['distal-'+key,value])),
   ...boneCartilageClinicalReferences,
   ...hipMuscleClinicalReferences,
   ...calfFootClinicalReferences,
@@ -144,3 +150,22 @@ export const specimenClinicalLessons: Record<string, SpecimenClinicalLesson> = {
     selfCheck: quiz('Which nearby joint often matters in a calcaneal fracture?', 'The subtalar joint: articular disruption can contribute to later pain and restricted movement.', 'calcaneus'),
   },
 };
+
+// Complete missing imaging topics only; existing teaching and source identities
+// remain authoritative. Fail closed on duplicate ownership or an overwrite.
+const additions = [umProximalTopicCompletion, umDistalTopicCompletion];
+const seen = new Set<string>();
+for (const collection of additions) for (const [slug, topics] of Object.entries(collection)) {
+  const lesson = specimenClinicalLessons[slug];
+  if (!lesson || seen.has(slug)) throw new Error(`Invalid modality-completion selection: ${slug}`);
+  seen.add(slug);
+  for (const [topic, note] of Object.entries(topics)) {
+    if (!['ct', 'mri', 'xray', 'ultrasound'].includes(topic) || !note ||
+        Object.hasOwn(lesson.topics, topic) || note.readiness !== 'draft') {
+      throw new Error(`Invalid modality-completion topic: ${slug}/${topic}`);
+    }
+    lesson.topics[topic as SpecimenExtendedTopic] = {
+      ...note, references: [...note.references],
+    };
+  }
+}

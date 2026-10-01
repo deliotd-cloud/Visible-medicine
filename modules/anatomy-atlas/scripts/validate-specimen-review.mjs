@@ -464,11 +464,11 @@ vm.runInNewContext(bundle.outputFiles[0].text, {
 });
 const React = require("react"),
   { renderToStaticMarkup } = require("react-dom/server");
-// Renal and pelvic topics are populated. Preserve pending-state coverage using
-// the explicit still-incomplete UM knee femur, not a fabricated missing topic.
-const pendingGroup = api.specimenReviewRows.find(row => row.key === 'um-5t6tz7-v1-2:knee');
+// Named UM imaging topics are populated. The unresolved pelvic source group
+// retains a real identity/teaching hold; never fabricate a missing named topic.
+const pendingGroup = api.specimenReviewRows.find(row => row.key === 'um-5t6tz7-v1-2:lower-limb:hip-thigh');
 assert(pendingGroup);
-const pendingPacket = await api.specimenReviewMaterial(pendingGroup.key, 'vm:reference:um-5t6tz7-v1-2:knee:femur');
+const pendingPacket = await api.specimenReviewMaterial(pendingGroup.key, 'vm:reference:um-5t6tz7-v1-2:lower-limb:pelvis-group');
 assert(pendingPacket.teaching.topics.some(topic => topic.body === null));
 for (const p of [null, packet, pendingPacket]) {
   const html = renderToStaticMarkup(

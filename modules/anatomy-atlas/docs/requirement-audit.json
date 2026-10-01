@@ -311,7 +311,7 @@
     "lib/lower-limb-bone-reasoning.ts": "08de7b02c6dc58c5a88baa52e8532bd66a6b8f047b951fe9600653175ca88738",
     "lib/um-limb-teaching.ts": "f51b0532e23719646b5588188c637a49b7523acc5ff976c6cff7101ffa41bf4d",
     "content/um-limb-teaching.ts": "a595b6a56d315fe1a08e77aa8dcb3c4f1b7fe74589ef72140d38d605e8b2abb7",
-    "content/um-limb-clinical.ts": "552cb9cf96de3173773ecb71e88e9e19a08904f7ff3bade456f74d815ad41161",
+    "content/um-limb-clinical.ts": "6c01a206e6c4d88071a581aa7fe670efa9ee3705a52ed27c25541bcb31ab9adb",
     "content/um-hip-thigh-clinical.ts": "07bb3a62231ffa4f8283b02da90703273e015cd051fbdb604ddaa3d5afe8b6ec",
     "content/um-calf-foot-clinical.ts": "557ae3859bea0db95f70303474d9afa053a8dec0380a6ffc325c070f281c9fd1",
     "content/um-hip-muscle-clinical.ts": "549770dd9f1b85494595b227c187b87ab91bb56e43d31f1f62fbb185cac5b252",
@@ -319,7 +319,7 @@
     "content/um-limb-motor.ts": "28bd381dbe13677053a13710617041411125e143b3651aef2e8474de225a8b0c",
     "lib/um-limb-motor.ts": "f22ebd7d595c6b1c4a6918047f20fdadefd387db142ae91473e6da0e274bef68",
     "app/um-limb-motor.tsx": "b0cbc68e49b2ddb719a50adf4b0d982cdf77cadd3479f21790258a197dd2559c",
-    "content/um-limb-teaching-bindings.v1.json": "cd73ab7b7fd70de4a4e83c173617dffac78220bd8a56670da6f52f9cafc4c0b1",
+    "content/um-limb-teaching-bindings.v1.json": "a23f2358e2d4392812969dfb32b2081368c718928ec8633174ec21ac875ef7c4",
     "lib/specimen-links.ts": "a185fc2f0c8f439c423660acfe1ada45605245e1131b6e317d130a7339944d76",
     "lib/um-limb-navigation.ts": "4697de9da3dc98ae0888681e9c799301a54eab2a8919c0f4b004664606bdd83f",
     "content/um-limb-navigation.v1.json": "34833f71e385972efb27f5798a094cb23f4df608c8baa4ca8256bb725332174c",
@@ -1072,20 +1072,20 @@
               "pending": 2
             },
             "ct": {
-              "draft": 11,
-              "pending": 56
+              "draft": 65,
+              "pending": 2
             },
             "mri": {
-              "draft": 36,
-              "pending": 31
+              "draft": 65,
+              "pending": 2
             },
             "xray": {
-              "draft": 31,
-              "pending": 36
+              "draft": 65,
+              "pending": 2
             },
             "ultrasound": {
-              "draft": 27,
-              "pending": 40
+              "draft": 65,
+              "pending": 2
             }
           },
           "clinicalSelfChecks": 65,

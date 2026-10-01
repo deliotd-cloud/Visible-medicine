@@ -1625,6 +1625,10 @@
       "sha256": "557ae3859bea0db95f70303474d9afa053a8dec0380a6ffc325c070f281c9fd1"
     },
     {
+      "path": "content/um-distal-topic-completion.ts",
+      "sha256": "7d09851523fb515f33942710b7f2a171ae612881b5b5e2372fa75444b07fafe2"
+    },
+    {
       "path": "content/um-hip-muscle-clinical.ts",
       "sha256": "549770dd9f1b85494595b227c187b87ab91bb56e43d31f1f62fbb185cac5b252"
     },
@@ -1634,7 +1638,11 @@
     },
     {
       "path": "content/um-limb-clinical.ts",
-      "sha256": "552cb9cf96de3173773ecb71e88e9e19a08904f7ff3bade456f74d815ad41161"
+      "sha256": "6c01a206e6c4d88071a581aa7fe670efa9ee3705a52ed27c25541bcb31ab9adb"
+    },
+    {
+      "path": "content/um-limb-modality-references.ts",
+      "sha256": "df216bc1e3a26fb9588b175582d845bffbba36dc357122a10edce48e63875ecc"
     },
     {
       "path": "content/um-limb-motor.ts",
@@ -1646,11 +1654,15 @@
     },
     {
       "path": "content/um-limb-teaching-bindings.v1.json",
-      "sha256": "cd73ab7b7fd70de4a4e83c173617dffac78220bd8a56670da6f52f9cafc4c0b1"
+      "sha256": "a23f2358e2d4392812969dfb32b2081368c718928ec8633174ec21ac875ef7c4"
     },
     {
       "path": "content/um-limb-teaching.ts",
       "sha256": "a595b6a56d315fe1a08e77aa8dcb3c4f1b7fe74589ef72140d38d605e8b2abb7"
+    },
+    {
+      "path": "content/um-proximal-topic-completion.ts",
+      "sha256": "df26a9fa11c9ff043cd4a1ce04bf0a466d64daf4ae4609621cb332fae82c10bd"
     },
     {
       "path": "content/upper-limb-arterial-pins.json",
@@ -3278,7 +3290,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "824b6abfdb4ba2dd14fa721205307e15e29118d34e6a40a82712e9c3c130db84"
+      "sha256": "02504b77bf04d115b708948cdd5a3f7a9c0ebff7408d0d518c8c91e08bd287a2"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3493,5 +3505,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "2ddf0c414e84071c74b83bb7b432f824ab0420234742e958d51b743fa9ee229e"
+  "sha256": "6f738a63e7368541b7ce0b7470d6d49e911d3ce6ccf9b218c8256ce563072091"
 }

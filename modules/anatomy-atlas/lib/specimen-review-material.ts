@@ -17,6 +17,7 @@ import { makeIndependentStudyLink, independentStudyRoutes } from './independent-
 import { makeSpecimenLink } from './um-limb-navigation';
 import { limbDefinitions } from './um-limb-studies';
 import { specimenTeachingFor } from './um-limb-teaching';
+import { specimenClinicalReferences } from '../content/um-limb-clinical';
 import { abdominalWallDefinition } from './abdominal-wall';
 import { abdominalTeachingFor } from './abdominal-wall-teaching';
 import { abdominalReferenceTitles } from '../content/abdominal-wall-teaching';
@@ -67,7 +68,9 @@ const registry: Adapter[] = [
     lesson:backLayersTeachingFor, titles:backLayersReferences, path:'/specimens/back-layers' },
   ...Object.values(limbDefinitions).map((definition):Adapter=>({ definition,
     raw:{...limb,companionKnee:knee,reviewRegion:definition.key,sourceFrame:'um-5t6tz7-v1-2:source-lps'},
-    lesson:specimenTeachingFor,titles:{},path:'/specimens/lower-limb',limb:true })),
+    lesson:specimenTeachingFor,
+    titles:Object.fromEntries(Object.values(specimenClinicalReferences).map(reference => [reference.url, reference.title])),
+    path:'/specimens/lower-limb',limb:true })),
 ];
 export const specimenReviewRows = registry.map((r) => ({
   key: r.definition.key,

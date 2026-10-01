@@ -2,12 +2,15 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
+import { execFileSync } from 'node:child_process';
 import { build } from './workspace-test-build.mjs';
 import { build as componentBuild } from './workspace-component-test-build.mjs';
 const source = await build({ stdin: { contents: "export * from './content/um-limb-clinical.ts'; export * from './lib/um-limb-teaching.ts'; export * from './lib/um-limb-navigation.ts'; export * from './lib/specimen-links.ts'; export { limbDefinitions } from './lib/um-limb-studies.ts';", resolveDir: process.cwd(), loader: 'ts' }, bundle: true, write: false, format: 'esm', platform: 'node' });
 const api = await import('data:text/javascript;base64,' + Buffer.from(source.outputFiles[0].text).toString('base64'));
 const { specimenClinicalLessons, specimenClinicalReferences, specimenTeachingFor, availableSpecimenTopics, limbDefinitions, specimenTopics, parseSpecimenLink, makeSpecimenLink, resolveSpecimenLink } = api;
 const whole = limbDefinitions.whole, counts = Object.fromEntries(specimenTopics.slice(2).map(t => [t, 0]));
+const originalPins = JSON.parse(execFileSync('git', ['show', '33566ee21aa65ed1a370a5e7653337048656a13e:content/um-limb-teaching-bindings.v1.json'], {encoding:'utf8',maxBuffer:32e6}));
+const originalClinicalLessons = Object.fromEntries(originalPins.bindings.filter(b => b.lesson.extended).map(b => [b.surface.slug, b.lesson.extended]));
 let checks = 0, markupCases = 0, deepLinks = 0;
 const same = (a, b, message) => { checks++; assert.deepEqual(a, b, message); };
 const clone = value => JSON.parse(JSON.stringify(value));
@@ -43,7 +46,17 @@ for (const selected of whole.surfaces) {
   lesson.extended.topics.clinical.body = 'mutated';
   same(specimenTeachingFor(whole, selected).extended, extended);
 }
-same(counts, { clinical: 65, pathology: 65, ct: 11, mri: 36, xray: 31, ultrasound: 27 });
+const originalCounts = Object.fromEntries(specimenTopics.slice(2).map(t => [t, 0]));
+for (const [slug, old] of Object.entries(originalClinicalLessons)) {
+  for (const [topic, draft] of Object.entries(old.topics)) {
+    originalCounts[topic]++;
+    same(specimenClinicalLessons[slug].topics[topic], draft, `Preserved historical topic: ${slug}/${topic}`);
+  }
+  same(specimenClinicalLessons[slug].modelLimit, old.modelLimit);
+  same(specimenClinicalLessons[slug].selfCheck, old.selfCheck);
+}
+same(originalCounts, { clinical: 65, pathology: 65, ct: 11, mri: 36, xray: 31, ultrasound: 27 });
+same(counts, { clinical: 65, pathology: 65, ct: 65, mri: 65, xray: 65, ultrasound: 65 });
 const hipTopics = {
   femur: ['clinical', 'pathology', 'xray', 'ct', 'mri'],
   'femoral-head-cartilage': ['clinical', 'pathology', 'xray'],
@@ -59,7 +72,8 @@ const hipTopics = {
   'biceps-femoris-short-head': ['clinical', 'pathology', 'mri'],
 };
 for (const [slug, topics] of Object.entries(hipTopics)) {
-  same(Object.keys(specimenClinicalLessons[slug].topics).sort(), topics.sort(), `Exact hip/thigh topic coverage: ${slug}`);
+  same(Object.keys(originalClinicalLessons[slug].topics).sort(), topics.sort(), `Exact historical hip/thigh topic coverage: ${slug}`);
+  same(Object.keys(specimenClinicalLessons[slug].topics).sort(), [...specimenTopics.slice(2)].sort(), `Current complete hip/thigh topics: ${slug}`);
   same(Object.values(limbDefinitions).some(def => def.key.endsWith(':hip-thigh') && def.surfaces.some(s => s.slug === slug)), true);
 }
 const calfFootTopics = {
@@ -72,7 +86,8 @@ const calfFootTopics = {
 };
 for (const [slug, imaging] of Object.entries(calfFootTopics)) {
   const lesson = specimenClinicalLessons[slug];
-  same(Object.keys(lesson.topics).sort(), ['clinical', 'pathology', ...imaging].sort(), `Exact calf/foot topics: ${slug}`);
+  same(Object.keys(originalClinicalLessons[slug].topics).sort(), ['clinical', 'pathology', ...imaging].sort(), `Historical calf/foot topics: ${slug}`);
+  same(Object.keys(lesson.topics).sort(), [...specimenTopics.slice(2)].sort(), `Current complete calf/foot topics: ${slug}`);
   same(Object.values(limbDefinitions).some(def => /:(calf|foot|knee)$/.test(def.key) && def.surfaces.some(s => s.slug === slug)), true);
   same(Object.keys(lesson).sort(), ['modelLimit', 'selfCheck', 'topics']);
   same(/FMA\d|FJ\d|"identities"|"scope"/.test(JSON.stringify(lesson)), false, `No other-specimen identifiers: ${slug}`);
@@ -90,7 +105,8 @@ const remainingHipTopics = {
 };
 for (const [slug, imaging] of Object.entries(remainingHipTopics)) {
   const lesson = specimenClinicalLessons[slug];
-  same(Object.keys(lesson.topics).sort(), ['clinical', 'pathology', ...imaging].sort(), `Remaining hip muscle topics: ${slug}`);
+  same(Object.keys(originalClinicalLessons[slug].topics).sort(), ['clinical', 'pathology', ...imaging].sort(), `Historical remaining hip muscle topics: ${slug}`);
+  same(Object.keys(lesson.topics).sort(), [...specimenTopics.slice(2)].sort(), `Current complete remaining hip muscle topics: ${slug}`);
   same(limbDefinitions['hip-thigh'].surfaces.some(s => s.slug === slug), true);
   same(Object.keys(lesson).sort(), ['modelLimit', 'selfCheck', 'topics']);
   same(/FMA\d|FJ\d|"identities"|"scope"/.test(JSON.stringify(lesson)), false);
@@ -115,7 +131,8 @@ const boneCartilageTopics = {
 };
 for (const [slug, imaging] of Object.entries(boneCartilageTopics)) {
   const lesson = specimenClinicalLessons[slug];
-  same(Object.keys(lesson.topics).sort(), ['clinical', 'pathology', ...imaging].sort(), `Bone/cartilage topics: ${slug}`);
+  same(Object.keys(originalClinicalLessons[slug].topics).sort(), ['clinical', 'pathology', ...imaging].sort(), `Historical bone/cartilage topics: ${slug}`);
+  same(Object.keys(lesson.topics).sort(), [...specimenTopics.slice(2)].sort(), `Current complete bone/cartilage topics: ${slug}`);
   same(Object.values(limbDefinitions).some(def => def.key !== whole.key && def.surfaces.some(s => s.slug === slug)), true);
   same(Object.keys(lesson).sort(), ['modelLimit', 'selfCheck', 'topics']);
   same(/FMA\d|FJ\d|"identities"|"scope"/.test(JSON.stringify(lesson)), false);
