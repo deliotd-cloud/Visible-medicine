@@ -4,6 +4,8 @@ import { runInNewContext } from 'node:vm';
 import { readFile } from 'node:fs/promises';
 import { build } from './workspace-test-build.mjs';
 import { build as componentBuild } from './workspace-component-test-build.mjs';
+import { checkBodyReviewDisplayPins } from './generate-body-review-display-pins.mjs';
+await checkBodyReviewDisplayPins();
 
 const compiled = await build({
   stdin: {
@@ -35,7 +37,7 @@ for (const row of rows) {
   assert.equal(packet.approval, false);
   assert.equal(packet.status, 'worksheet-not-submitted');
   assert.equal(packet.kind, 'body-display-catalog');
-  assert.deepEqual(api.parseBodyReviewResponse(packet, row.id), packet);
+  assert.deepEqual((await api.parseBodyReviewResponse(packet, row.id)), packet);
   assert.equal(packet.source.structure.id, row.id);
   for (const lesson of packet.topics) {
     const { tab, ...copy } = lesson;
@@ -159,10 +161,10 @@ for (const mutate of [
 ]) {
   const bad = structuredClone(selected);
   mutate(bad);
-  assert.equal(api.parseBodyReviewResponse(bad, selected.structureId), null);
+  assert.equal((await api.parseBodyReviewResponse(bad, selected.structureId)), null);
 }
-assert.equal(api.parseBodyReviewResponse(null, selected.structureId), null);
-assert.equal(api.parseBodyReviewResponse(selected, 'foreign'), null);
+assert.equal((await api.parseBodyReviewResponse(null, selected.structureId)), null);
+assert.equal((await api.parseBodyReviewResponse(selected, 'foreign')), null);
 const request = (query, authenticated = true) =>
   new Request(`https://atlas.invalid/api/body-review?${query}`, {
     headers: authenticated

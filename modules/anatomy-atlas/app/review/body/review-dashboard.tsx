@@ -130,7 +130,7 @@ export function BodyReviewDashboard({
               ? data.error
               : 'Unable to load the worksheet.',
           );
-        const parsed = parseBodyReviewResponse(data, selected);
+        const parsed = await parseBodyReviewResponse(data, selected);
         if (!parsed) throw new Error('Unexpected worksheet. Please retry.');
         if (current) setMaterial(parsed);
       })

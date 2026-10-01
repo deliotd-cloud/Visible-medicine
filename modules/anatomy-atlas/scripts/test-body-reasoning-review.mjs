@@ -40,7 +40,7 @@ for (const s of api.catalog.structures) {
   assert(r.choices.every(c=>c.laterality===s.laterality));
   const material = await api.bodyReviewMaterial(s.id);
   assert.deepEqual(material.reasoning, r);
-  assert(api.parseBodyReviewResponse(material,s.id));
+  assert((await api.parseBodyReviewResponse(material,s.id)));
   const scope = {schema:'vm-body-review-worksheet-2',kind:material.kind,structureId:s.id};
   assert.equal(material.fingerprints.teaching,digest({scope,topics:material.topics,reasoning:r,...(material.guidedTours.length?{guidedTours:material.guidedTours}:{})}));
   assert.equal(material.schema,'vm-body-review-worksheet-3');
@@ -84,7 +84,7 @@ for (const mutate of [
   p=>p.topics[0].correctAnswer={},p=>p.topics[0].explanation=42,
 ]) {
   const packet=structuredClone(original);mutate(packet);
-  assert.equal(api.parseBodyReviewResponse(packet,s.id),null);rejected++;
+  assert.equal((await api.parseBodyReviewResponse(packet,s.id)),null);rejected++;
 }
 const concept = api.reasoningConceptFor(s);
 for (const edit of [c=>c.prompt+=' TEST',c=>c.explanation+=' TEST',c=>c.revision++,

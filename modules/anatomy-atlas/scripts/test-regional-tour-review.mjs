@@ -68,7 +68,7 @@ for(const s of oldTours.regionalTours.flatMap(t=>oldTours.regionalTourStructures
 let checked=0;
 for(const s of api.catalog.structures){
  const m=await api.bodyReviewMaterial(s.id),c=await api.bodyReviewContext(s.id);
- assert(api.parseBodyReviewResponse(m,s.id));
+ assert((await api.parseBodyReviewResponse(m,s.id)));
  assert.equal(oldParser.parseBodyReviewResponse(m,s.id),null,'Old UI cannot silently omit guided review');
  const scope={schema:'vm-body-review-worksheet-2',kind:m.kind,structureId:s.id};
  const previous=digest({scope,topics:m.topics,reasoning:m.reasoning});
@@ -102,7 +102,7 @@ for(const structure of orbitalStructures){
   p=>p.guidedTours[0].stepFrames[0].min[0]-=1,
   p=>p.guidedTours[0].tour.steps[0].caption+=' changed',
   p=>p.guidedTours[0].structures.find(s=>s.id!==structure.id).sources[0].sha256='0'.repeat(64),
- ]){const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,structure.id),null);orbitalRejected++;}
+ ]){const altered=structuredClone(packet);mutate(altered);assert.equal((await api.parseBodyReviewResponse(altered,structure.id)),null);orbitalRejected++;}
 }
 assert.equal(orbitalRejected,42);
 const intrinsic=api.regionalTourStructures(api.catalog,api.intrinsicLarynxTour);
@@ -126,8 +126,8 @@ for(const structure of intrinsic){
   p=>p.guidedTours[index].stepFrames[6].max[0]+=1,
   p=>p.guidedTours[index].structures.find(s=>s.id!==structure.id).sources[0].sha256='0'.repeat(64),
   p=>p.guidedTours[index].tour.contextIds=[],
- ]){const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,structure.id),null);intrinsicRejected++;}
- if(context){const altered=structuredClone(packet);altered.guidedTours=altered.guidedTours.filter(e=>e.tour.id!==api.larynxTour.id);assert.equal(api.parseBodyReviewResponse(altered,structure.id),null);intrinsicRejected++;}
+ ]){const altered=structuredClone(packet);mutate(altered);assert.equal((await api.parseBodyReviewResponse(altered,structure.id)),null);intrinsicRejected++;}
+ if(context){const altered=structuredClone(packet);altered.guidedTours=altered.guidedTours.filter(e=>e.tour.id!==api.larynxTour.id);assert.equal((await api.parseBodyReviewResponse(altered,structure.id)),null);intrinsicRejected++;}
 }
 assert.equal(sharedContext,3);assert.equal(intrinsicRejected,73);
 const chestStructures=api.regionalTourStructures(api.catalog,api.chestWallTour);
@@ -146,19 +146,19 @@ for(const structure of chestStructures){
   p=>delete p.guidedTours[0].tour.requiredDisplayBundles,
   p=>p.guidedTours[0].stepFrames[3].min[0]-=1,
   p=>p.guidedTours[0].structures.find(s=>s.id!==structure.id).sources[0].sha256='0'.repeat(64),
- ]){const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,structure.id),null);chestInvalidPackets++;}
+ ]){const altered=structuredClone(packet);mutate(altered);assert.equal((await api.parseBodyReviewResponse(altered,structure.id)),null);chestInvalidPackets++;}
 }
 assert.equal(chestInvalidPackets,54);
 const sample=await api.bodyReviewMaterial(selected[0].id);
 for(const mutate of [p=>delete p.guidedTours,p=>p.guidedTours=[],p=>p.guidedTours.push(structuredClone(p.guidedTours[0])),p=>p.schema='vm-body-review-worksheet-2',p=>p.guidedTours[0].tour.steps[0].references=['javascript:alert(1)'],p=>p.guidedTours[0].tour.steps[0].selectedId='missing',p=>p.guidedTours[0].structures[0].sources[0].sha256='0'.repeat(64),p=>p.guidedTours[0].transitionMs=0,p=>p.guidedTours[0].tour.steps[0].durationMs=-1]){
- const p=structuredClone(sample);mutate(p);assert.equal(api.parseBodyReviewResponse(p,selected[0].id),null);
+ const p=structuredClone(sample);mutate(p);assert.equal((await api.parseBodyReviewResponse(p,selected[0].id)),null);
 }
 const ev=api.regionalTourEvidence(api.catalog,selected[0].id);ev[0].tour.steps[0].caption='changed';assert.notEqual(api.thoraxTour.steps[0].caption,'changed');
 for(const s of selected) {const missing={...api.catalog,structures:api.catalog.structures.filter(v=>v.id!==s.id)};assert.throws(()=>api.regionalTourStructures(missing,api.thoraxTour));}
 for(const s of cervical) {const missing={...api.catalog,structures:api.catalog.structures.filter(v=>v.id!==s.id)};assert.throws(()=>api.regionalTourStructures(missing,api.cervicalSpineTour));}
 const spinePacket=await api.bodyReviewMaterial(cervical[0].id);
 for(const mutate of [p=>p.guidedTours[0].tour.limitations='Approved',p=>p.guidedTours[0].limitations='Approved',p=>p.guidedTours[0].tour.contextIds=[],p=>p.guidedTours[0].tour.steps.reverse()]){
- const p=structuredClone(spinePacket);mutate(p);assert.equal(api.parseBodyReviewResponse(p,cervical[0].id),null);
+ const p=structuredClone(spinePacket);mutate(p);assert.equal((await api.parseBodyReviewResponse(p,cervical[0].id)),null);
 }
 for(const s of abdominal) {const missing={...api.catalog,structures:api.catalog.structures.filter(v=>v.id!==s.id)};assert.throws(()=>api.regionalTourStructures(missing,api.celiacTour));}
 const wrongDisplay=structuredClone(api.catalog);wrongDisplay.structures.find(s=>s.id===celiac.id).bundle='abdomen-vessels-recovery';
@@ -167,10 +167,10 @@ const missingDisplay={...api.catalog,bundles:api.catalog.bundles.filter(b=>b.id!
 assert.throws(()=>api.regionalTourStructures(missingDisplay,api.celiacTour));
 const abdominalPacket=await api.bodyReviewMaterial(celiac.id);
 const tampered=structuredClone(abdominalPacket);delete tampered.guidedTours[0].tour.requiredDisplayBundles;
-assert.equal(api.parseBodyReviewResponse(tampered,celiac.id),null);
+assert.equal((await api.parseBodyReviewResponse(tampered,celiac.id)),null);
 assert.equal(abdominalPacket.guidedTours[0].stepFrames.length,5);
 for(const mutate of [p=>delete p.guidedTours[0].stepFrames,p=>p.guidedTours[0].stepFrames[0].min[0]-=1,p=>p.guidedTours[0].tour.steps[0].frameIds=[]]){
- const p=structuredClone(abdominalPacket);mutate(p);assert.equal(api.parseBodyReviewResponse(p,celiac.id),null);
+ const p=structuredClone(abdominalPacket);mutate(p);assert.equal((await api.parseBodyReviewResponse(p,celiac.id)),null);
 }
 for(const frameIds of [[],['missing'],[celiac.id,celiac.id],[api.celiacTour.contextIds[0]]]) {
  const tour=structuredClone(api.celiacTour);tour.steps[0].frameIds=frameIds;assert.throws(()=>api.regionalTourFrame(api.catalog,tour,0));
@@ -182,7 +182,7 @@ assert.deepEqual(forearmEvidence,api.regionalTourEvidence(api.catalog,forearmMus
 assert.equal(forearmEvidence.transitionMs,1800);assert.equal(forearmEvidence.separation,0);assert.equal(forearmEvidence.stepFrames.length,5);
 for(let i=0;i<5;i++)assert.deepEqual(forearmEvidence.stepFrames[i],api.regionalTourFrame(api.catalog,api.forearmTour,i));
 for(const [label,mutate] of [['caption',p=>p.guidedTours[0].tour.steps[0].caption='Changed teaching'],['frame bounds',p=>p.guidedTours[0].stepFrames[0].min[0]-=1],['frame target',p=>p.guidedTours[0].tour.steps[0].frameIds=[forearmMuscles[1]]],['context side',p=>p.guidedTours[0].structures[0].laterality='left'],['unknown context side',p=>p.guidedTours[0].structures[0].laterality='unknown'],['missing context side',p=>delete p.guidedTours[0].structures[0].laterality],['selected side',p=>p.guidedTours[0].tour.steps[0].selectedId=forearmMuscles[0].replace(':right:',':left:')]]){
- const p=structuredClone(forearmPacket);mutate(p);assert.equal(api.parseBodyReviewResponse(p,forearmMuscles[0])===null,true,`Reject altered forearm ${label}`);
+ const p=structuredClone(forearmPacket);mutate(p);assert.equal((await api.parseBodyReviewResponse(p,forearmMuscles[0]))===null,true,`Reject altered forearm ${label}`);
 }
 let limbInvalidPackets=0,limbMissingSources=0,limbInvalidFrames=0;
 for(const spec of limbCases){
@@ -215,7 +215,7 @@ for(const spec of limbCases){
   ['source version',p=>p.guidedTours[0].sourceVersion+='-changed'],
   ['nonselected bundle digest',p=>p.guidedTours[0].bundles.find(b=>b.id!==p.source.bundle.id).sha256='0'.repeat(64)],
  ]){
-  const p=structuredClone(packet);mutate(p);assert.equal(api.parseBodyReviewResponse(p,id),null,`Reject altered ${spec.region} ${label}`);limbInvalidPackets++;
+  const p=structuredClone(packet);mutate(p);assert.equal((await api.parseBodyReviewResponse(p,id)),null,`Reject altered ${spec.region} ${label}`);limbInvalidPackets++;
  }
  for(const frameIds of [[],['missing'],[id,id],[tour.contextIds[0]]]){
   const altered=structuredClone(tour);altered.steps[0].frameIds=frameIds;assert.throws(()=>api.regionalTourFrame(api.catalog,altered,0));limbInvalidFrames++;
@@ -245,7 +245,7 @@ for(const [tour,expectedId,count,bundles] of [
    p=>p.guidedTours[0].stepFrames[0].min[0]-=1,
    p=>p.guidedTours[0].tour.contextIds=['independent-female-pelvis'],
    p=>p.guidedTours[0].sourceVersion+='-mixed-source',
-  ]){const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,structure.id),null);visceralInvalid++;}
+  ]){const altered=structuredClone(packet);mutate(altered);assert.equal((await api.parseBodyReviewResponse(altered,structure.id)),null);visceralInvalid++;}
  }
  for(let i=0;i<5;i++){
   assert.deepEqual(tour.steps[i].frameIds,[tour.steps[i].selectedId]);
@@ -264,7 +264,7 @@ for(const structure of ductStructures){
  const prior=priorTours.regionalTourEvidence(api.catalog,structure.id);
  assert.equal(packet.guidedTours.length,prior.length+1);
  assert.deepEqual(packet.guidedTours.filter(e=>e.tour.id!==api.maleDuctTour.id),prior);
- if(prior.length){sharedPelvic++;const p=structuredClone(packet);p.guidedTours=[p.guidedTours[index]];assert.equal(api.parseBodyReviewResponse(p,structure.id),null);ductRejected++;}
+ if(prior.length){sharedPelvic++;const p=structuredClone(packet);p.guidedTours=[p.guidedTours[index]];assert.equal((await api.parseBodyReviewResponse(p,structure.id)),null);ductRejected++;}
  for(const mutate of [
   p=>p.guidedTours.splice(index,1),p=>p.guidedTours.push(structuredClone(p.guidedTours[index])),
   p=>p.guidedTours[index].tour.steps.reverse(),p=>p.guidedTours[index].tour.steps[0].caption+=' changed',
@@ -274,7 +274,7 @@ for(const structure of ductStructures){
   p=>p.guidedTours[index].tour.contextIds=[],
   p=>p.guidedTours[index].structures[0].laterality='unknown',
   p=>p.guidedTours[index].tour.requiredDisplayBundles={},
- ]){const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,structure.id),null);ductRejected++;}
+ ]){const altered=structuredClone(packet);mutate(altered);assert.equal((await api.parseBodyReviewResponse(altered,structure.id)),null);ductRejected++;}
 }
 assert.equal(sharedPelvic,3);assert.equal(ductRejected,91);
 

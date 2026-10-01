@@ -34,11 +34,11 @@ for(const s of selected){
  assert.equal(s.validation.anatomicalReview,false);
  for(const structures of [api.catalog.structures.filter(x=>x.id!==s.id),[...api.catalog.structures,s],api.catalog.structures.map(x=>x.id===s.id?{...x,regions:['foot']}:x),api.catalog.structures.map(x=>x.id===s.id?{...x,bundle:'foot-skeleton'}:x)]){assert.throws(()=>api.regionalTourStructures({...api.catalog,structures},tour));rejectedSources++;}
  const packet=await api.bodyReviewMaterial(s.id),evidence=api.regionalTourEvidence(api.catalog,s.id);
- assert.equal(packet.approval,false);assert(api.parseBodyReviewResponse(packet,s.id));assert.deepEqual(packet.guidedTours,evidence);
+ assert.equal(packet.approval,false);assert((await api.parseBodyReviewResponse(packet,s.id)));assert.deepEqual(packet.guidedTours,evidence);
  const index=packet.guidedTours.findIndex(e=>e.tour.id===tour.id),added=evidence[index];
  assert(index>=0);assert.deepEqual(added.tour,tour);assert.deepEqual(added.structures,selected);
  assert.equal(added.stepFrames.length,4);assert.equal(added.transitionMs,1800);assert.equal(added.transition,'quintic-orbit');assert.equal(added.separation,0);
- for(const mutate of [p=>p.guidedTours.splice(index,1),p=>p.guidedTours.push(structuredClone(p.guidedTours[index])),p=>p.guidedTours[index].tour.steps.reverse(),p=>p.guidedTours[index].tour.revision+='-stale',p=>p.guidedTours[index].tour.steps[0].caption+=' changed',p=>p.guidedTours[index].tour.requiredDisplayBundles={},p=>p.guidedTours[index].structures[0].sources[0].sha256='0'.repeat(64),p=>p.guidedTours[index].stepFrames[0].min[0]-=1,p=>p.guidedTours[index].transition='linear']){const changed=structuredClone(packet);mutate(changed);assert.equal(api.parseBodyReviewResponse(changed,s.id),null);rejectedPackets++;}
+ for(const mutate of [p=>p.guidedTours.splice(index,1),p=>p.guidedTours.push(structuredClone(p.guidedTours[index])),p=>p.guidedTours[index].tour.steps.reverse(),p=>p.guidedTours[index].tour.revision+='-stale',p=>p.guidedTours[index].tour.steps[0].caption+=' changed',p=>p.guidedTours[index].tour.requiredDisplayBundles={},p=>p.guidedTours[index].structures[0].sources[0].sha256='0'.repeat(64),p=>p.guidedTours[index].stepFrames[0].min[0]-=1,p=>p.guidedTours[index].transition='linear']){const changed=structuredClone(packet);mutate(changed);assert.equal((await api.parseBodyReviewResponse(changed,s.id)),null);rejectedPackets++;}
  if(s.id===aorta)assert.deepEqual(packet.guidedTours.filter(e=>e.tour.id!==tour.id),prior.regionalTourEvidence(api.catalog,s.id),'Aorta keeps exact prior coeliac tour');
 }
 for(const [i,step]of tour.steps.entries()){

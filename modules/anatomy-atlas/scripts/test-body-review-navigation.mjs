@@ -9,6 +9,7 @@ import { build as materialBuild } from './workspace-test-build.mjs';
 
 const require = createRequire(import.meta.url), React = require('react');
 let states, cursor, effectCursor, effectSlots, pending, requests, confirms, confirmResult;
+let verificationPromises = [];
 const shim = {
   ...React,
   useState(initial) {
@@ -33,7 +34,12 @@ const compiled = await build({ stdin: {
 }, bundle: true, write: false, platform: 'node', format: 'cjs' });
 const scope = { exports: {} };
 runInNewContext(compiled.outputFiles[0].text, {
-  module: scope, exports: scope.exports, AbortController, URL, URLSearchParams, Error, structuredClone,
+  module: scope, exports: scope.exports, AbortController, URL, URLSearchParams, Error, structuredClone, TextEncoder,
+  crypto: { subtle: { digest(...args) {
+    const promise = crypto.subtle.digest(...args);
+    verificationPromises.push(promise);
+    return promise;
+  } } },
   window: {
     confirm(message) { confirms.push(message); return confirmResult; },
     addEventListener() {}, removeEventListener() {},
@@ -75,9 +81,13 @@ const worksheet = id => {
   assert(worksheets.has(id), 'Loaded fixture must be an actual current-build structure');
   return JSON.parse(JSON.stringify(worksheets.get(id)));
 };
-const settle = () => new Promise(resolve => setImmediate(resolve));
+const settle = async () => {
+  await new Promise(resolve => setImmediate(resolve));
+  await Promise.all(verificationPromises.splice(0));
+  await new Promise(resolve => setImmediate(resolve));
+};
 function setup({ rows = syntheticRows, initialId = rows[0]?.id ?? null, initialRegion = 'all' } = {}) {
-  states = []; effectSlots = []; pending = []; requests = []; confirms = []; confirmResult = true;
+  states = []; effectSlots = []; pending = []; requests = []; confirms = []; confirmResult = true; verificationPromises = [];
   const render = () => {
     cursor = 0; effectCursor = 0;
     const tree = scope.exports.BodyReviewDashboard({ rows, initialId, initialRegion,

@@ -52,10 +52,10 @@ for(const s of api.catalog.structures){
   assert.equal(digest({scope,topics:packet.topics,reasoning:packet.reasoning,...(historical.length?{guidedTours:historical}:{})}),oldHash);
   unchanged++;continue;
  }
- changed++;assert.notEqual(packet.fingerprints.teaching,oldHash);assert.equal(packet.approval,false);assert(api.parseBodyReviewResponse(packet,s.id));
+ changed++;assert.notEqual(packet.fingerprints.teaching,oldHash);assert.equal(packet.approval,false);assert((await api.parseBodyReviewResponse(packet,s.id)));
  assert.deepEqual(packet.guidedTours.filter(e=>e.tour.id!==tour.id),oldTours);
  for(const mutate of [p=>p.guidedTours=[],p=>p.guidedTours[0].tour.steps.reverse(),p=>p.guidedTours[0].tour.steps[0].caption+=' foreign',p=>p.guidedTours[0].tour.revision+='-foreign',p=>p.guidedTours[0].stepFrames[0].min[0]-=1,p=>p.guidedTours[0].structures[0].sources[0].sha256='0'.repeat(64),p=>p.guidedTours[0].tour.limitations='Approved']){
-  const p=structuredClone(packet);mutate(p);assert.equal(api.parseBodyReviewResponse(p,s.id),null);rejected++;
+  const p=structuredClone(packet);mutate(p);assert.equal((await api.parseBodyReviewResponse(p,s.id)),null);rejected++;
  }
 }
 assert.equal(changed,7);assert.equal(unchanged,1097);

@@ -1,6 +1,10 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { structures, quizQuestions } from '../app/anatomy-data.ts';
 import { currentReviewDocument } from './review-revision-evidence.mjs';
+import { checkBodyReviewDisplayPins } from './generate-body-review-display-pins.mjs';
+// Existing production-build gate: reject stale display pins without rewriting
+// decisions or changing the renderer's package/lockfile revision domain.
+await checkBodyReviewDisplayPins();
 const root = new URL('../', import.meta.url);
 const manifest = JSON.parse(
   await readFile(
