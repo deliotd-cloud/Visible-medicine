@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {withoutEyeCrossSectionalNotice} from './atlas-eye-notice-history.ts';
 import test from 'node:test';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -8,7 +9,7 @@ test('tour title reflow ships matching learner/review styles without changing an
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
  const previous=(p:string)=>JSON.parse(execFileSync('git',['show','047d488a:'+p],{encoding:'utf8',maxBuffer:32e6}));
  const review=json('atlas-review/manifest.json'),before=previous('atlas-review/manifest.json');
- assert.equal(review.revision,'43072a948beda597e7a62439e8c093aa76cb94a7');
+ assert.equal(review.revision,'a10f1fd19c7dcf27470943f4775cb509f7da811f');
  // Keep the exact historical reflow delta pinned to its delivered commit;
  // subsequent independently reviewed runtime fixes advance the current import.
  const reflow=JSON.parse(execFileSync('git',['show','1727b2e3:atlas-review/manifest.json'],{encoding:'utf8',maxBuffer:32e6}));
@@ -19,7 +20,7 @@ test('tour title reflow ships matching learner/review styles without changing an
   'lib/hra-pelvic-guided-dissection.ts','lib/hra-renal-guided-dissection.ts','lib/specimen-guided-dissection.ts',
   'lib/um-limb-guided-dissection.ts','lib/um-proximal-guided-dissection.ts','lib/um-distal-guided-dissection.ts',
   'lib/abdominal-guided-dissection.ts','lib/back-guided-dissection.ts',
-  'content/abdominal-bone-teaching.ts',
+  'content/abdominal-bone-teaching.ts','content/eye-cross-sectional-teaching.ts',
   'content/um-proximal-topic-completion.ts','content/um-distal-topic-completion.ts','content/um-limb-modality-references.ts',
   ...['foot-sesamoid-teaching','cerebellar-mca-imaging','tentorium-imaging','cranial-bone-quiz'].flatMap(kind=>['lib/'+kind+'.ts','content/'+kind+'.ts','content/'+kind+'-pins.json'])].sort());
  const path='app/whole-body-guided-learning.css',css=readFileSync('atlas-review/'+path,'utf8'),entry=review.files.find((f:any)=>f.path===path);
@@ -37,7 +38,7 @@ test('tour title reflow ships matching learner/review styles without changing an
   assert.deepEqual(manifest.files.filter(retained),old.files.filter(retained));
   const notice=prefix+'LICENSES/THIRD_PARTY_NOTICES.md';
   const earlier=execFileSync('git',['show','047d488a:'+notice],{encoding:'utf8'}).replaceAll('\r','');
-  const currentNotice=readFileSync(notice,'utf8').replaceAll('\r','');
+  const currentNotice=withoutEyeCrossSectionalNotice(readFileSync(notice,'utf8').replaceAll('\r',''));
   const retainedNotice=execFileSync('git',['show','c0da7e2bf6a9f6f3e262b8c5326c369e5e6cafd2:'+notice],{encoding:'utf8'}).replaceAll('\r','');
   const renalNotice=execFileSync('git',['show','abfd5cf175f2b28417f43a34d34c3c730b453a4e:'+notice],{encoding:'utf8'}).replaceAll('\r','');
   const backNotice=execFileSync('git',['show','1377cba878403777924a82515a12faedb679363d:'+notice],{encoding:'utf8'}).replaceAll('\r','');

@@ -1,5 +1,27 @@
 # Third-party notices
 
+## Eye cross-sectional teaching (1 October 2026)
+
+Twelve original introductory draft notes adapt normal anatomical/MR facts from:
+
+- Foti, P. V., Travali, M., Farina, R. et al. (2021), *Diagnostic methods and
+  therapeutic options of uveal melanoma with emphasis on MR imaging—Part I*,
+  Insights into Imaging 12, 66. https://doi.org/10.1186/s13244-021-01000-x
+- De La Hoz Polo, M., Torramilans Lluís, A., Pozuelo Segura, O. et al. (2016),
+  *Ocular ultrasonography focused on the posterior eye segment: what radiologists
+  should know*, Insights into Imaging 7, 351–364.
+  https://doi.org/10.1007/s13244-016-0471-z
+
+Both publishers' Rights and permissions sections were verified on 1 October 2026
+as [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), permitting commercial
+reuse with attribution. Changes: concise original paraphrases combined with
+Atlas-specific geometry cautions; no paper illustrations, scans, tables or
+verbatim prose reproduced. On-screen references retain authors, date, source,
+licence and adaptation notice. These credits do not clear other article media
+or certify clinical accuracy. No new model, dataset, dependency, font, texture,
+service, payment or mandatory future fee. Existing model licences, source holds,
+privacy gates and radiologist review remain unchanged.
+
 ## Abdominal wall and back source-guided dissection (1 October 2026)
 
 The optional visibility sequences reuse the already admitted BodyParts3D/DBCLS

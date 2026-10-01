@@ -9,7 +9,7 @@ test('partial tentorium CT/MRI drafts have exact learner/review identity and fai
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
  const review=json('atlas-review/manifest.json'),runtime=json('public/atlas-runtime/head-neck/manifest.json');
  const inputs=json('public/atlas-runtime/head-neck/source-inputs.json');
- assert.equal(review.revision,'43072a948beda597e7a62439e8c093aa76cb94a7');
+ assert.equal(review.revision,'a10f1fd19c7dcf27470943f4775cb509f7da811f');
  assert.equal(runtime.sourceCommit,review.revision);
  for(const path of ['app/body-content.ts','content/tentorium-imaging.ts','content/tentorium-imaging-pins.json','lib/tentorium-imaging.ts']){
   const entry=review.files.find((f:any)=>f.path===path);assert(entry,path);

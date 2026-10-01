@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {withoutEyeCrossSectionalNotice} from './atlas-eye-notice-history.ts';
 import test from 'node:test';
 import {Buffer} from 'node:buffer';
 import {execFileSync} from 'node:child_process';
@@ -7,7 +8,7 @@ import {readFileSync} from 'node:fs';
 import {dirname, resolve} from 'node:path';
 import {build} from 'esbuild';
 
-const source = '43072a948beda597e7a62439e8c093aa76cb94a7';
+const source = 'a10f1fd19c7dcf27470943f4775cb509f7da811f';
 const renalTopicMilestone = '944f57b801471c3b005a64ec83314188b2f06cf5';
 const sourceBefore = 'fc5457b6dbc12cb6ce702c2fc272d0bcb6cc59fc';
 const websiteBefore = '1377cba878403777924a82515a12faedb679363d';
@@ -76,14 +77,15 @@ test('renal modality topics are pinned in learner and Clinical Review with model
   for (const module of ['head-neck', 'shoulder']) {
     const path = `public/atlas-runtime/${module}/LICENSES/THIRD_PARTY_NOTICES.md`;
     const before = previousWebsiteBytes(path).toString('utf8').replaceAll('\r', '');
-    const now = readFileSync(path, 'utf8').replaceAll('\r', '');
+    const nowRaw = readFileSync(path, 'utf8').replaceAll('\r', '');
+    const now = withoutEyeCrossSectionalNotice(nowRaw);
     assert(now.startsWith(before), `complete prior notice retained: ${module}`);
     assert.match(now.slice(before.length), /^\n## HRA renal modality-topic completion \(1 October 2026\)\n/);
     const renalNotice = gitBytes(process.cwd(), 'afca2757914d0fc35af577fe1d736caf8549a99f', path).toString('utf8').replaceAll('\r', '');
     assert(renalNotice.startsWith(before), `historical renal notice retained: ${module}`);
     assert(now.startsWith(renalNotice), `complete renal notice retained: ${module}`);
     assert.match(now.slice(renalNotice.length), /^\n## HRA pelvic modality-topic completion \(1 October 2026\)\n/);
-    assert.equal(now, readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md', 'utf8').replaceAll('\r', ''));
+    assert.equal(nowRaw, readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md', 'utf8').replaceAll('\r', ''));
   }
   for (const flag of ['patientDataIncluded', 'clinicalApproved', 'standaloneReviewConnection', 'imagingConnection'])
     assert.equal(learner[flag], false, flag);

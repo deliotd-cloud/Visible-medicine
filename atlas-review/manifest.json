@@ -1,5 +1,5 @@
 {
-  "revision": "43072a948beda597e7a62439e8c093aa76cb94a7",
+  "revision": "a10f1fd19c7dcf27470943f4775cb509f7da811f",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2768,8 +2768,13 @@
     },
     {
       "path": "content/nested-teaching.ts",
-      "sourceSha256": "61ba520e5bbaa3f2dde78d6cf35c63f70a519594f343342d06bf08984c6afb43",
-      "importedSha256": "61ba520e5bbaa3f2dde78d6cf35c63f70a519594f343342d06bf08984c6afb43"
+      "sourceSha256": "72188a3e2171f7ec6b3325c806c401e83dc21a2cb6e26ce52aab08fc35cf7adc",
+      "importedSha256": "72188a3e2171f7ec6b3325c806c401e83dc21a2cb6e26ce52aab08fc35cf7adc"
+    },
+    {
+      "path": "content/eye-cross-sectional-teaching.ts",
+      "sourceSha256": "aba5c44848ae2c1b2ce9f3e70b6047de40419c075076be72c3d970315e9a16a4",
+      "importedSha256": "aba5c44848ae2c1b2ce9f3e70b6047de40419c075076be72c3d970315e9a16a4"
     },
     {
       "path": "content/superior-temporal-mri.ts",
@@ -2888,8 +2893,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "09c210650623ec9dca91a62b905660b4ba96d2c327a33abcc7ade454eeea4f60",
-      "importedSha256": "1d73bc9c72cd436e5ca57121e4a427d1fc25e3f74ee0a51f92b8b9800d13845d"
+      "sourceSha256": "cc03a99956ef2fc2c947de3798625d2e9443a0b5c55854c17da9853d597648a8",
+      "importedSha256": "f75b35a656d52096775ed44fe1600f1651a5ede079feb74be9ded7342708ea63"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3244,7 +3249,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "b2cca8944a1175a744056d0e5e5b2759ec4f58174f5b2f4a2f674bdd2c46508e",
-      "importedSha256": "6944bead2a22bc8b72d6c7aa797b516818b4b8dc7bb699938374e9c6c450e5b5"
+      "importedSha256": "b842aa7b43ecd17fe8a36d0571df3ed1f1e74e6815414bab1a689bf1ca1248da"
     },
     {
       "path": "app/review/review.css",
@@ -4603,8 +4608,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "a7c00b596de15751bba58d18a8bccd8ee9d62edc62dc055e509c76b37ba13674",
-      "importedSha256": "a7c00b596de15751bba58d18a8bccd8ee9d62edc62dc055e509c76b37ba13674"
+      "sourceSha256": "b9110af5f31a4a62f1b3e5843a61a4d0ebc94d387b717cb8ef77a97a541410e6",
+      "importedSha256": "b9110af5f31a4a62f1b3e5843a61a4d0ebc94d387b717cb8ef77a97a541410e6"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -4703,5 +4708,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "d7d5d55092d24c0bc7ae0b6fbc73228f8904f61ddcf98ae22ac52466e407eab4"
+  "websiteIntegrationSha256": "254b5129ef8eaf5159c2d564f1892799c6bb6417ffb7db63f4fe7faf5948c93b"
 }

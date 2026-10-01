@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {withoutEyeCrossSectionalNotice} from './atlas-eye-notice-history.ts';
 import test from 'node:test';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -27,14 +28,15 @@ test('lumbar tour source import has the exact declared teaching and review depen
 test('lumbar tour keeps every model and existing licence notice without patient data or approval',()=>{
  for(const module of ['head-neck','shoulder']){
   const prefix='public/atlas-runtime/'+module+'/',before=prior(prefix+'manifest.json'),after=json(prefix+'manifest.json');
-  assert.equal(after.sourceCommit,'43072a948beda597e7a62439e8c093aa76cb94a7');
+  assert.equal(after.sourceCommit,'a10f1fd19c7dcf27470943f4775cb509f7da811f');
   const retained=(f:any)=>f.path.endsWith('.glb')||f.path==='BUNDLED_NOTICES.txt'||f.path==='bundled-dependencies.json'||f.path.includes('credits');
   assert.deepEqual(after.files.filter(retained),before.files.filter(retained));
   for(const f of after.files.filter(retained))assert.equal(sha(prefix+f.path),f.sha256);
   assert.deepEqual(after.modelBundles,before.modelBundles);assert.deepEqual(after.regionalScopes,before.regionalScopes);
   for(const flag of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection'])assert.equal(after[flag],false);
   const path=prefix+'LICENSES/THIRD_PARTY_NOTICES.md';
-  const old=Buffer.from(oldBytes(path)).toString('utf8').replace(/\r/g,''),current=readFileSync(path,'utf8').replace(/\r/g,'');
+  const old=Buffer.from(oldBytes(path)).toString('utf8').replace(/\r/g,''),currentRaw=readFileSync(path,'utf8').replace(/\r/g,'');
+  const current=withoutEyeCrossSectionalNotice(currentRaw);
   // Keep each delivered notice milestone intact as later source credits append.
   const retainedNotice=execFileSync('git',['show','c0da7e2bf6a9f6f3e262b8c5326c369e5e6cafd2:'+path],{encoding:'utf8'}).replaceAll('\r','');
   const renalNotice=execFileSync('git',['show','abfd5cf175f2b28417f43a34d34c3c730b453a4e:'+path],{encoding:'utf8'}).replaceAll('\r','');
@@ -53,7 +55,7 @@ test('lumbar tour keeps every model and existing licence notice without patient 
   assert.equal(beforeWallBack,execFileSync('git',['show','c5448a86:'+path],{encoding:'utf8'}).replaceAll('\r',''),'Historical wall/back notice was the only earlier addition');
   assert(beforeWallBack.startsWith(old.trimEnd()),'Every previous notice is retained');
   assert.match(beforeWallBack.slice(old.trimEnd().length),/Lower lumbar guided learning references/);
-  assert.equal(current,readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md','utf8').replace(/\r/g,''));
+  assert.equal(currentRaw,readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md','utf8').replace(/\r/g,''));
  }
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,prior('lib/atlas-model-inventory.json').models);
 });

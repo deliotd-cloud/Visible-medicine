@@ -7,8 +7,8 @@ test('specimen reassembly ships the exact focus-preserving component and safety 
  const base='public/atlas-runtime/head-neck/';
  const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
  const bytes=readFileSync(base+'manifest.json'), manifest=JSON.parse(bytes.toString());
- assert.equal(sha(bytes),'bc989060f3f77ed46da11d5092ee1aebac08dec5453b47c4fa0a643eb1101410');
- assert.equal(manifest.sourceCommit,'43072a948beda597e7a62439e8c093aa76cb94a7');
+ assert.equal(sha(bytes),'f449a0dc07bd2ba2d54ac0673bce8f9f522acd489cc82c53192244c6691a48fe');
+ assert.equal(manifest.sourceCommit,'a10f1fd19c7dcf27470943f4775cb509f7da811f');
  const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
  for(const [path,sha256] of [
   ['app/specimen-removal-focus.ts','eb7b9f29bbab0e9524a5162e0254d6c0561a773ad8bf9c7ca89cc59fefe3f362'],

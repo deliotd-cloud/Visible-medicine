@@ -1,4 +1,5 @@
 import type { NestedStudy } from '../lib/nested-anatomy';
+import { eyeCrossSectionalTeaching, eyeCrossSectionalReferences } from './eye-cross-sectional-teaching.ts';
 import { superiorTemporalMRI, superiorTemporalMRIReferences } from './superior-temporal-mri.ts';
 import { cardiacXrayTeaching, cardiacXrayReferences } from './cardiac-xray-teaching.ts';
 import { ventricularUltrasoundTeaching, ventricularUltrasoundReferences } from './ventricular-ultrasound-teaching.ts';
@@ -70,6 +71,7 @@ export const nestedTeachingReferences: Record<
   ...hippocampalTeachingReferences,
   ...femoralComponentReferences,
   ...eyeImagingReferences,
+  ...eyeCrossSectionalReferences,
   ...visualPathwayImagingReferences,
   ...brainImagingReferences,
   ...collicularBrachiaReferences,
@@ -395,7 +397,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'eye-cornea',
     study: 'eye',
-    imaging: eyeImagingTeaching.cornea,
+    imaging: { ...eyeImagingTeaching.cornea, ...eyeCrossSectionalTeaching.cornea },
     fmaIds: ['FMA58239', 'FMA58240'],
     sections: {
       anatomy: section(
@@ -427,7 +429,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'eye-iris',
     study: 'eye',
-    imaging: eyeImagingTeaching.iris,
+    imaging: { ...eyeImagingTeaching.iris, ...eyeCrossSectionalTeaching.iris },
     fmaIds: ['FMA58236', 'FMA58237'],
     sections: {
       anatomy: section(
@@ -458,7 +460,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'eye-lens',
     study: 'eye',
-    imaging: eyeImagingTeaching.lens,
+    imaging: { ...eyeImagingTeaching.lens, ...eyeCrossSectionalTeaching.lens },
     fmaIds: ['FMA58242', 'FMA58243'],
     sections: {
       anatomy: section(
@@ -493,7 +495,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'eye-zonule',
     study: 'eye',
-    imaging: eyeImagingTeaching.zonule,
+    imaging: { ...eyeImagingTeaching.zonule, ...eyeCrossSectionalTeaching.zonule },
     fmaIds: ['FMA58839', 'FMA58840'],
     sections: {
       anatomy: section(
@@ -525,7 +527,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'eye-vitreous',
     study: 'eye',
-    imaging: eyeImagingTeaching.vitreous,
+    imaging: { ...eyeImagingTeaching.vitreous, ...eyeCrossSectionalTeaching.vitreous },
     fmaIds: ['FMA58828', 'FMA58829'],
     sections: {
       anatomy: section(
@@ -557,7 +559,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'eye-choroid',
     study: 'eye',
-    imaging: eyeImagingTeaching.choroid,
+    imaging: { ...eyeImagingTeaching.choroid, ...eyeCrossSectionalTeaching.choroid },
     fmaIds: ['FMA58299', 'FMA58300'],
     sections: {
       anatomy: section(
@@ -618,7 +620,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'eye-chamber',
     study: 'eye',
-    imaging: eyeImagingTeaching.chamber,
+    imaging: { ...eyeImagingTeaching.chamber, ...eyeCrossSectionalTeaching.chamber },
     fmaIds: ['FMA58082'],
     sections: {
       anatomy: section(

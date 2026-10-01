@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {withoutEyeCrossSectionalNotice} from './atlas-eye-notice-history.ts';
 import test from 'node:test';
 import {Buffer} from 'node:buffer';
 import {execFileSync} from 'node:child_process';
@@ -7,7 +8,7 @@ import {readFileSync} from 'node:fs';
 import {dirname, resolve} from 'node:path';
 import {build} from 'esbuild';
 
-const source = '43072a948beda597e7a62439e8c093aa76cb94a7';
+const source = 'a10f1fd19c7dcf27470943f4775cb509f7da811f';
 const backTopicMilestone = 'fc5457b6dbc12cb6ce702c2fc272d0bcb6cc59fc';
 const sourceBefore = '7d3010368fc53e3433e8df4f9e9d4ddb67e786e8';
 const websiteBefore = 'abfd5cf175f2b28417f43a34d34c3c730b453a4e';
@@ -90,7 +91,8 @@ test('back-topic completion is pinned in learner and Clinical Review with models
   for (const module of ['head-neck', 'shoulder']) {
     const path = `public/atlas-runtime/${module}/LICENSES/THIRD_PARTY_NOTICES.md`;
     const before = previousWebsiteBytes(path).toString('utf8').replaceAll('\r', '');
-    const now = readFileSync(path, 'utf8').replaceAll('\r', '');
+    const nowRaw = readFileSync(path, 'utf8').replaceAll('\r', '');
+    const now = withoutEyeCrossSectionalNotice(nowRaw);
     const backNotice = gitBytes(process.cwd(), '1377cba878403777924a82515a12faedb679363d', path).toString('utf8').replaceAll('\r', '');
     assert(backNotice.startsWith(before), `complete prior notice retained: ${module}`);
     assert.match(backNotice.slice(before.length), /^\n## Back-specimen teaching completion \(1 October 2026\)\n/);
@@ -100,7 +102,7 @@ test('back-topic completion is pinned in learner and Clinical Review with models
     assert(renalNotice.startsWith(backNotice), `complete historical renal notice retained: ${module}`);
     assert(now.startsWith(renalNotice), `complete renal notice retained: ${module}`);
     assert.match(now.slice(renalNotice.length), /^\n## HRA pelvic modality-topic completion \(1 October 2026\)\n/);
-    assert.equal(now, readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md', 'utf8').replaceAll('\r', ''));
+    assert.equal(nowRaw, readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md', 'utf8').replaceAll('\r', ''));
   }
   for (const flag of ['patientDataIncluded', 'clinicalApproved', 'standaloneReviewConnection', 'imagingConnection'])
     assert.equal(learner[flag], false, flag);

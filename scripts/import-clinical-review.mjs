@@ -8,7 +8,7 @@ import ts from 'typescript';
 
 const repository = process.argv[2];
 if (!repository) throw Error('Supply the Atlas repository path');
-const revision = '43072a948beda597e7a62439e8c093aa76cb94a7';
+const revision = 'a10f1fd19c7dcf27470943f4775cb509f7da811f';
 const git = (...args) => execFileSync('git', ['-C', repository, ...args], { maxBuffer: 64 * 1024 * 1024 });
 const names = new Set(git('ls-tree', '-r', '--name-only', revision).toString().trim().split('\n'));
 const output = 'atlas-review';

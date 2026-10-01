@@ -6,7 +6,7 @@ import { build } from 'esbuild';
 
 test('seven ankle drafts reach both learner modules and exact specimen review', async () => {
   const review = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
-  assert.equal(review.revision, '43072a948beda597e7a62439e8c093aa76cb94a7');
+  assert.equal(review.revision, 'a10f1fd19c7dcf27470943f4775cb509f7da811f');
   const pins = {
     'content/um-calf-foot-clinical.ts': '557ae3859bea0db95f70303474d9afa053a8dec0380a6ffc325c070f281c9fd1',
     'content/um-limb-teaching-bindings.v1.json': 'a23f2358e2d4392812969dfb32b2081368c718928ec8633174ec21ac875ef7c4',
@@ -17,7 +17,7 @@ test('seven ankle drafts reach both learner modules and exact specimen review', 
     const inputs = JSON.parse(readFileSync(base + 'source-inputs.json', 'utf8'));
     // Both learner runtimes now use the same current teaching bindings.
     // The original ankle module remains byte-identical despite additive drafts.
-    assert.equal(manifest.sourceCommit, module === 'head-neck' ? '43072a948beda597e7a62439e8c093aa76cb94a7' : '43072a948beda597e7a62439e8c093aa76cb94a7');
+    assert.equal(manifest.sourceCommit, module === 'head-neck' ? 'a10f1fd19c7dcf27470943f4775cb509f7da811f' : 'a10f1fd19c7dcf27470943f4775cb509f7da811f');
     for (const key of ['patientDataIncluded', 'clinicalApproved', 'imagingConnection', 'standaloneReviewConnection']) assert.equal(manifest[key], false);
     for (const [path, expected] of Object.entries(pins)) {
       assert.equal(inputs.find((f: any) => f.path === path)?.sha256, expected);

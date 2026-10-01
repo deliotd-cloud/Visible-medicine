@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {withoutEyeCrossSectionalNotice} from './atlas-eye-notice-history.ts';
 import test from 'node:test';
 import {execFileSync} from 'node:child_process';
 import {Buffer} from 'node:buffer';
@@ -7,7 +8,7 @@ import {createHash} from 'node:crypto';
 import {dirname, resolve} from 'node:path';
 import {build} from 'esbuild';
 
-const source = '43072a948beda597e7a62439e8c093aa76cb94a7';
+const source = 'a10f1fd19c7dcf27470943f4775cb509f7da811f';
 const before = 'ebef136aa174d9b81329d917e4ef129430760ad2';
 const sourceRepo = process.env.ATLAS_SOURCE_REPO ?? resolve('..', '..', '..', '2026-09-05', 'referenced-chatgpt-conversation-this-is-an-2', 'outputs');
 const bytesAt = (repo: string, revision: string, path: string) => Buffer.from(execFileSync('git', ['-C', repo, 'show', `${revision}:${path}`], {maxBuffer: 32e6}));
@@ -83,7 +84,8 @@ test('five source-bound lower-limb guides ship complete captions and framing to 
  assert.equal(guides, 5); assert.equal(stops, 46);
  for (const module of ['head-neck', 'shoulder', 'lower-limb']) {
   const path = `public/atlas-runtime/${module}/LICENSES/THIRD_PARTY_NOTICES.md`;
-  const old = previousBytes(path).toString('utf8').replaceAll('\r', ''), now = readFileSync(path, 'utf8').replaceAll('\r', '');
+  const old = previousBytes(path).toString('utf8').replaceAll('\r', ''), nowRaw = readFileSync(path, 'utf8').replaceAll('\r', '');
+  const now = withoutEyeCrossSectionalNotice(nowRaw);
   if (module === 'lower-limb') {
    // This separate pilot skipped earlier batches that prepended dated notices.
    // Preserve the entire old notice body, not just a list of matching headings.
@@ -91,7 +93,7 @@ test('five source-bound lower-limb guides ship complete captions and framing to 
    assert(now.includes(old.slice('# Third-party notices\n\n'.length)), 'Entire previous independent-pilot notice body retained');
    assert.match(now, /UM.*guided.*dissection/i);
   } else {assert(now.startsWith(old)); assert.match(now.slice(old.length), /UM.*guided.*dissection/i);}
-  assert.equal(now, readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md', 'utf8').replaceAll('\r', ''));
+  assert.equal(nowRaw, readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md', 'utf8').replaceAll('\r', ''));
  }
 });
 
