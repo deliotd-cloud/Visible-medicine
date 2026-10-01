@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "e88e43b4c0c0aa5d2fa48c2ee5fc0b86c9519abe",
-  "sha256": "c8e3a07dc0ded37d5263d65abb23f9faa78856dfa44490ccfc2c19b28a6d7d11",
+  "sourceCommit": "a023f47064b2987c5593d9a7884c7e1937afe001",
+  "sha256": "22b4460fa8d226b63ccd5bade5d082c262ba7646abfd3d3cc6c08225f5866d3a",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -204,7 +204,7 @@
     },
     {
       "path": "atlas-review/app/fitted-camera.tsx",
-      "sha256": "1552c8b595088217b917e51ffb5a1f3eaa20ba132a048179f452425ca4d0c732"
+      "sha256": "1675e279f3ac98e27ebfb2030abf707e5ade1165ece1d29e17d2ce15ab971b73"
     },
     {
       "path": "atlas-review/app/globals.css",
@@ -216,7 +216,7 @@
     },
     {
       "path": "atlas-review/app/hra-pelvis-supplement.tsx",
-      "sha256": "433786f0125268a7dbfd299930e1ae4489b685205fcd5897cfe85fef97ef0012"
+      "sha256": "e85a7d78074b97a51a1058ba43fa306ea889cb82c570677052a05a73bf1e5cf4"
     },
     {
       "path": "atlas-review/app/hra-renal-study.tsx",
@@ -364,7 +364,7 @@
     },
     {
       "path": "atlas-review/app/review/specimens/workspace.tsx",
-      "sha256": "d855983d3d66f8163a770276774307bfae467d78fd75844f963a395bddce370b"
+      "sha256": "8bac7aa04c912902df0f91f9bcafb4e28909bc26de192da795c0a56cf080bd73"
     },
     {
       "path": "atlas-review/app/scene-label-layer.css",
@@ -492,11 +492,11 @@
     },
     {
       "path": "atlas-review/app/um-knee-study.css",
-      "sha256": "d8c4851100416189bc01c9d8505079d66ce1cea009cca88eb7d93ac00476f2f0"
+      "sha256": "b8d7a6ba20a215d601f04fe68673f6c1e4a9744ade2b91f34ff8ccd55ce6c703"
     },
     {
       "path": "atlas-review/app/um-knee-study.tsx",
-      "sha256": "9572260fea2e6ded62622fb70aa8d6a6bea384713236def8214810c99dc42232"
+      "sha256": "cc6658e39f542730336a2a35863b5ab9bbfef58ec2c1e1d582f4546b9f43248e"
     },
     {
       "path": "atlas-review/app/um-limb-learning.tsx",
@@ -2591,6 +2591,10 @@
       "sha256": "ae33235e59efb4a3303786cc2acbadb0b0feafe5900700cc77a849fb3192db31"
     },
     {
+      "path": "atlas-review/lib/hra-pelvic-guided-dissection.ts",
+      "sha256": "ef1c883db974f04702bda1acce0566d480dc1359e8aff8225fe0a77d816f9eb4"
+    },
+    {
       "path": "atlas-review/lib/hra-pelvis-teaching.ts",
       "sha256": "dd7ad44dab1bb22c2e1878e2a9d9625ef720f6857bb863bd1c48ab4408c47b2e"
     },
@@ -2624,7 +2628,7 @@
     },
     {
       "path": "atlas-review/lib/independent-specimen.ts",
-      "sha256": "3127e41d9c16d47f5ebe0c0e312e8d0bf3dded9cc00b6ab6548256e939f269b0"
+      "sha256": "77ad41fa2572a0d2f1c3e9d73d58bd4395ff5800a0f1a777bd92d4fd2038f408"
     },
     {
       "path": "atlas-review/lib/independent-study-links.ts",
@@ -3215,6 +3219,10 @@
       "sha256": "b8c5fee2d8b91950d1951ea733e519b8fe7dec3e92e0fad22dd7a36df54871a2"
     },
     {
+      "path": "atlas-review/lib/specimen-guided-dissection.ts",
+      "sha256": "b961f4b37a66a30eb015796ea70e87262ff3452b24814f8d602a824369998129"
+    },
+    {
       "path": "atlas-review/lib/specimen-identification.ts",
       "sha256": "6f82c800c9c3572913f02db1cec19102a6fceb2604981d37ea98b716edb7b12a"
     },
@@ -3232,7 +3240,7 @@
     },
     {
       "path": "atlas-review/lib/specimen-review-material.ts",
-      "sha256": "3e6a5605a2296afa2bbb2a549f6817713927f0e057f9c6916aea4763473da9ee"
+      "sha256": "7410bbc96117decb46ca1cb40a096ddffecbf7031bf1cb684971aa58665f80ba"
     },
     {
       "path": "atlas-review/lib/specimen-review-store.ts",
@@ -3240,7 +3248,7 @@
     },
     {
       "path": "atlas-review/lib/specimen-review.ts",
-      "sha256": "7874ce2ce970d592c32ce678676d1e78f6a6d8f2be1ab9429139db945439d654"
+      "sha256": "dbb0febff23ed1e89cbb1e11f48d901ca1424c5a13fe90501bb81ef59493f073"
     },
     {
       "path": "atlas-review/lib/spinal-bone-curriculum.ts",
@@ -3772,7 +3780,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "866b04e75a6673adccac658a4bec215411b0194aa2955206edf2246b7d583a4a"
+      "sha256": "53320677e7875f60c9c2b5faef2556ff1a3eb83ede327b175a6f2621a7e0c715"
     }
   ]
 }

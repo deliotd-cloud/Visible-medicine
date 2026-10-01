@@ -7,7 +7,7 @@ test('regional and whole-body export delivers source-bound Circle of Willis draf
   const root = 'public/atlas-runtime/head-neck/';
   const manifest = JSON.parse(readFileSync(root + 'manifest.json', 'utf8'));
   const inputs = JSON.parse(readFileSync(root + 'source-inputs.json', 'utf8')) as {path:string;sha256:string}[];
-  assert.equal(manifest.sourceCommit, 'e88e43b4c0c0aa5d2fa48c2ee5fc0b86c9519abe');
+  assert.equal(manifest.sourceCommit, 'a023f47064b2987c5593d9a7884c7e1937afe001');
   for (const [path, sha256] of Object.entries({
     'app/body-content.ts': '8abdc0e09da92457bfa3c483ea8004cd5ef155621ff0b4fb3770e83ca2624502',
     'content/circle-willis-imaging-pins.json': '8891733101134e78fad8a36d1fd8b7387ea64b20ed2c2d36f3a20e978d6deece',
@@ -31,5 +31,5 @@ test('regional and whole-body export delivers source-bound Circle of Willis draf
   }
   // The protected review export is separately built/bound, including the compact-controls update.
   const review = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
-  assert.equal(review.websiteIntegrationSha256, 'c8e3a07dc0ded37d5263d65abb23f9faa78856dfa44490ccfc2c19b28a6d7d11');
+  assert.equal(review.websiteIntegrationSha256, '22b4460fa8d226b63ccd5bade5d082c262ba7646abfd3d3cc6c08225f5866d3a');
 });

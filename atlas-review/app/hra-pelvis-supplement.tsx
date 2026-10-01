@@ -2,6 +2,7 @@
 import type { SpecimenSupplement } from './um-knee-study';
 import { modelDeliveryUrl } from '@/atlas-review/lib/model-delivery';
 import { SpecimenLearning } from './um-limb-learning';
+import { hraPelvicGuidedDissection } from '@/atlas-review/lib/hra-pelvic-guided-dissection';
 import {
   hraPelvisSource,
   hraPelvisColors,
@@ -14,6 +15,7 @@ import {
 export function createHraPelvisSupplement({ assetBase, studyLink }: { assetBase?: string; studyLink?: SpecimenSupplement['studyLink'] } = {}): SpecimenSupplement {
   return {
   studyLink,
+  guidedDissection: hraPelvicGuidedDissection,
   colors: hraPelvisColors,
   identification: hraPelvicPractice,
   tissueGroups: [

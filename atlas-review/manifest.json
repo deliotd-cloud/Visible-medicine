@@ -1,5 +1,5 @@
 {
-  "revision": "e88e43b4c0c0aa5d2fa48c2ee5fc0b86c9519abe",
+  "revision": "a023f47064b2987c5593d9a7884c7e1937afe001",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2868,8 +2868,8 @@
     },
     {
       "path": "lib/independent-specimen.ts",
-      "sourceSha256": "3127e41d9c16d47f5ebe0c0e312e8d0bf3dded9cc00b6ab6548256e939f269b0",
-      "importedSha256": "3127e41d9c16d47f5ebe0c0e312e8d0bf3dded9cc00b6ab6548256e939f269b0"
+      "sourceSha256": "77ad41fa2572a0d2f1c3e9d73d58bd4395ff5800a0f1a777bd92d4fd2038f408",
+      "importedSha256": "77ad41fa2572a0d2f1c3e9d73d58bd4395ff5800a0f1a777bd92d4fd2038f408"
     },
     {
       "path": "lib/nested-review-key.ts",
@@ -2888,13 +2888,13 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "950135b0c9c6e9aaedcf0d1f3809a173eea519178d4646d4f24107cf60b90e7b",
-      "importedSha256": "1b53af711ca80bca9001e3611a2a1ca0aa6866118231c4ed062ac83c2dc36960"
+      "sourceSha256": "ca91d33193dd1ba0c22d8c9d33a632db555f3c5b313eba73e23f300eae415745",
+      "importedSha256": "da22fd456a54bc46a136d1080206a6e7ea730fecad1e2562d5ad3e492a22a631"
     },
     {
       "path": "lib/specimen-review-material.ts",
-      "sourceSha256": "3e6a5605a2296afa2bbb2a549f6817713927f0e057f9c6916aea4763473da9ee",
-      "importedSha256": "3e6a5605a2296afa2bbb2a549f6817713927f0e057f9c6916aea4763473da9ee"
+      "sourceSha256": "7410bbc96117decb46ca1cb40a096ddffecbf7031bf1cb684971aa58665f80ba",
+      "importedSha256": "7410bbc96117decb46ca1cb40a096ddffecbf7031bf1cb684971aa58665f80ba"
     },
     {
       "path": "lib/hra-renal.ts",
@@ -2970,6 +2970,16 @@
       "path": "public/models/hra-pelvis/catalog.json",
       "sourceSha256": "a0e997a2eb4af64d25bf5f6f9901ea70616fb59443696f7630e0aea6bd53c619",
       "importedSha256": "a0e997a2eb4af64d25bf5f6f9901ea70616fb59443696f7630e0aea6bd53c619"
+    },
+    {
+      "path": "lib/hra-pelvic-guided-dissection.ts",
+      "sourceSha256": "ef1c883db974f04702bda1acce0566d480dc1359e8aff8225fe0a77d816f9eb4",
+      "importedSha256": "ef1c883db974f04702bda1acce0566d480dc1359e8aff8225fe0a77d816f9eb4"
+    },
+    {
+      "path": "lib/specimen-guided-dissection.ts",
+      "sourceSha256": "b961f4b37a66a30eb015796ea70e87262ff3452b24814f8d602a824369998129",
+      "importedSha256": "b961f4b37a66a30eb015796ea70e87262ff3452b24814f8d602a824369998129"
     },
     {
       "path": "lib/hra-pelvis-teaching.ts",
@@ -3083,8 +3093,8 @@
     },
     {
       "path": "lib/specimen-review.ts",
-      "sourceSha256": "7874ce2ce970d592c32ce678676d1e78f6a6d8f2be1ab9429139db945439d654",
-      "importedSha256": "7874ce2ce970d592c32ce678676d1e78f6a6d8f2be1ab9429139db945439d654"
+      "sourceSha256": "dbb0febff23ed1e89cbb1e11f48d901ca1424c5a13fe90501bb81ef59493f073",
+      "importedSha256": "dbb0febff23ed1e89cbb1e11f48d901ca1424c5a13fe90501bb81ef59493f073"
     },
     {
       "path": "content/nested-review-bindings.json",
@@ -3184,7 +3194,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "380ce2b69ed41e887017d8a0fac7b12bbac88e21b494c68e439179f94aced95e",
-      "importedSha256": "203183b1beb8b30642332a1c166b4fad2ecca4ca5a349e2cfb2ef12b09e52a43"
+      "importedSha256": "88dc7b74af386669ade5953cc74fa4d386030a25c19982f9953a79b7a7d7ab66"
     },
     {
       "path": "app/review/review.css",
@@ -3268,8 +3278,8 @@
     },
     {
       "path": "app/review/specimens/workspace.tsx",
-      "sourceSha256": "1dcee7d1798927385208dcac6a125bce5b847c4bc9ae3dd28c10cd1e15cff0b3",
-      "importedSha256": "d855983d3d66f8163a770276774307bfae467d78fd75844f963a395bddce370b"
+      "sourceSha256": "80a245c77b13b82f33e700e5519c9d0b23936be94df24d0f32a10dc722872dd4",
+      "importedSha256": "8bac7aa04c912902df0f91f9bcafb4e28909bc26de192da795c0a56cf080bd73"
     },
     {
       "path": "lib/specimen-review-client.ts",
@@ -3473,8 +3483,8 @@
     },
     {
       "path": "app/fitted-camera.tsx",
-      "sourceSha256": "ff59cb133b53a6ea728dc0aa902a1530559e375a834ec5eb7d0d7b5509a73e5c",
-      "importedSha256": "1552c8b595088217b917e51ffb5a1f3eaa20ba132a048179f452425ca4d0c732"
+      "sourceSha256": "cad2aa9543c94c2d751a1593cda90e2db4c84a2b639d6d380b131a74ea0f09f9",
+      "importedSha256": "1675e279f3ac98e27ebfb2030abf707e5ade1165ece1d29e17d2ce15ab971b73"
     },
     {
       "path": "lib/explode-layout.mjs",
@@ -4413,8 +4423,8 @@
     },
     {
       "path": "app/um-knee-study.tsx",
-      "sourceSha256": "da403c020632fc371ef2bcbb4ebf30f28761fcfd5d05231d63aaba806c8cbc48",
-      "importedSha256": "9572260fea2e6ded62622fb70aa8d6a6bea384713236def8214810c99dc42232"
+      "sourceSha256": "d112b2681b6d39dc81dcdb3bfc3a86b33d045a8e9b9cee4a26b8f864c29e0973",
+      "importedSha256": "cc6658e39f542730336a2a35863b5ab9bbfef58ec2c1e1d582f4546b9f43248e"
     },
     {
       "path": "app/specimen-removal-focus.ts",
@@ -4448,8 +4458,8 @@
     },
     {
       "path": "app/um-knee-study.css",
-      "sourceSha256": "d8c4851100416189bc01c9d8505079d66ce1cea009cca88eb7d93ac00476f2f0",
-      "importedSha256": "d8c4851100416189bc01c9d8505079d66ce1cea009cca88eb7d93ac00476f2f0"
+      "sourceSha256": "b8d7a6ba20a215d601f04fe68673f6c1e4a9744ade2b91f34ff8ccd55ce6c703",
+      "importedSha256": "b8d7a6ba20a215d601f04fe68673f6c1e4a9744ade2b91f34ff8ccd55ce6c703"
     },
     {
       "path": "app/abdominal-wall-study.tsx",
@@ -4473,8 +4483,8 @@
     },
     {
       "path": "app/hra-pelvis-supplement.tsx",
-      "sourceSha256": "be8825273881d8da435782d63becdd18c3df990675ccfb380bc26817da72fe81",
-      "importedSha256": "433786f0125268a7dbfd299930e1ae4489b685205fcd5897cfe85fef97ef0012"
+      "sourceSha256": "0540e6186de3ab7d8ed70491128a04947bfc12ccab7b3f3f1fdb73c1a99cba6c",
+      "importedSha256": "e85a7d78074b97a51a1058ba43fa306ea889cb82c570677052a05a73bf1e5cf4"
     },
     {
       "path": "app/hra-renal-study.tsx",
@@ -4643,5 +4653,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "c8e3a07dc0ded37d5263d65abb23f9faa78856dfa44490ccfc2c19b28a6d7d11"
+  "websiteIntegrationSha256": "22b4460fa8d226b63ccd5bade5d082c262ba7646abfd3d3cc6c08225f5866d3a"
 }

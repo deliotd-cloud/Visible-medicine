@@ -22,6 +22,11 @@
 .um-specimen-search-status p { flex: 1 1 10rem; }
 .um-specimen-search-status button { min-height: 36px; white-space: normal; }
 .um-knee-source-id { overflow-wrap: anywhere; }
+.um-specimen-manual-controls { min-width: 0; border: 0; padding: 0; margin: 0; }
+.um-specimen-guided-learning { border: 1px solid var(--border); border-radius: .5rem; padding: .6rem; margin-bottom: .6rem; }
+.um-specimen-guided-learning h3 { font-size: 1rem; font-weight: 600; }
+.um-specimen-guided-learning .eye-layer-actions { flex-wrap: wrap; }
+.um-specimen-guided-learning button { min-height: 44px; height: auto; white-space: normal; }
 .um-source-caution { border-left: 2px solid var(--primary); padding-left: .5rem; }
 .um-specimen-link-warning { padding: 1rem; max-width: 46rem; line-height: 1.6; }
 .um-specimen-link-warning h2 { font-size: 1.25rem; font-weight: 600; }

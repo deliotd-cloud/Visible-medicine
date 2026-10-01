@@ -220,6 +220,18 @@ export function SpecimenReviewWorkspace({
                   ))}
                 </section>
               ))}
+              {packet.teaching.guidedDissection && <section aria-label="Guided dissection to review">
+                <h3>{packet.teaching.guidedDissection.title} · Draft</h3>
+                <p>{packet.teaching.guidedDissection.limitation}</p>
+                <p>Source frame: {packet.teaching.guidedDissection.sourceFrame}. This sequence is part of this teaching fingerprint; earlier approval does not cover it.</p>
+                <ol>{packet.teaching.guidedDissection.steps.map(step => <li key={step.id}>
+                  <h4>{step.title} · {step.view} view</h4><p>{step.caption}</p>
+                  <p>Selected: <code>{step.selectedId}</code></p>
+                  <details><summary>Exact visible source surfaces ({step.ids.length})</summary>
+                    <ul>{step.ids.map(id => <li key={id}><code>{id}</code></li>)}</ul>
+                  </details>
+                </li>)}</ol>
+              </section>}
               {packet.teaching.lesson?.extended && (
                 <>
                   <h3>Model-specific caution</h3>
