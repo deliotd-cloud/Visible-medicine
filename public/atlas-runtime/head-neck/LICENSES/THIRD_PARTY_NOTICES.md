@@ -1950,3 +1950,37 @@ a factual reference, not a media reuse licence. All existing BodyParts3D4.0
 CC BY4.0 geometry and credit remain unchanged. No new asset, font, dependency,
 service or mandatory fee is added. See `docs/RENAL_GUIDED_TOUR.md`; teaching and
 the full tour require revision-bound radiologist review.
+
+## Cerebral arterial contextual source review — 30 September 2026
+
+The local source-only inspector uses fourteen retained original BodyParts3D files
+under the existing CC BY4.0 licence and mandatory DBCLS credit. It does not admit
+the anterior-choroidal or optic-context candidates into the learner atlas. Source
+vertices/faces remain unchanged; review colours, opacity and camera presentation
+are added. Three.js and its OrbitControls remain MIT, with complete MIT terms and
+BodyParts3D licence/source links copied into the generated inspector's
+`THIRD_PARTY_NOTICES.txt`. System fonts only; no textures, patient scans, publisher
+diagrams, dependency, service or mandatory fee added. Software/topology evidence
+does not provide clinical clearance. See `docs/CHOROIDAL_CONTEXT_REVIEW.md`.
+
+## Foot-sesamoid teaching reference — 1 October 2026
+
+Two existing generic side-specific BodyParts3D sesamoid groups receive original
+draft prose linking AAOS and Nwawka/Chen research reviews. These are factual
+reading references, not licences to redistribute source media. No article prose,
+figures, scans, tables, patient data or question-bank content is imported. Existing
+geometry/CC BY4.0 credit is unchanged. No asset, dependency, font, texture, service
+or mandatory fee added. Mesh component identity is explicitly unverified; the
+common first-MTP example does not rename the source. Radiologist sign-off remains
+revision-bound and separate from source/software checks. See
+`docs/FOOT_SESAMOID_TEACHING.md` for references and access limitations.
+
+## Cerebellar/MCA imaging teaching — 1 October 2026
+
+Original draft CT/MRI prose links Akgun2013, Wakao2014, Bash2005 and Korogi1997
+primary studies as factual reading references only. No source prose passage,
+figure, table, scan, question-bank item or dataset is imported. Bibliographic
+access does not grant media reuse rights. Existing BodyParts3D4.0/CC BY4.0 models
+and credit remain unchanged; no asset, dependency, font, texture, service or
+mandatory fee added. Clinical acceptance remains revision-bound and independent
+of licensing/software evidence. See `docs/CEREBELLAR_MCA_IMAGING.md`.

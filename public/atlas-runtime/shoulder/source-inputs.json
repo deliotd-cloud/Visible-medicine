@@ -29,7 +29,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "a974be279f6dc96660d838fa0323f5ccbf48104d536fba688e141de3159dac71"
+    "sha256": "84009bd22efcf5623e9fc8a9e138711558d74d81ce9ef2f18e9710262617e418"
   },
   {
     "path": "app/body-explorer.css",
@@ -300,6 +300,14 @@
     "sha256": "829915273c8d8f8f2b8fb064662d9cbf27d3cfa147701e00625f016fc830427a"
   },
   {
+    "path": "content/cerebellar-mca-imaging-pins.json",
+    "sha256": "3a7cc4b77e150bae94134a71cb0107e9c09c66d1ab22d30b7ae16b73381ac1d2"
+  },
+  {
+    "path": "content/cerebellar-mca-imaging.ts",
+    "sha256": "9ca2cecdcf52319cf4d45d4953997da40d50b1a34fff964be6fb0f52012e7722"
+  },
+  {
     "path": "content/cervical-quiz-pins.json",
     "sha256": "8d2295fe2cc4edb40f6f11cbced5b6a95a118f7174e7a996afb13a7b1f1860e5"
   },
@@ -470,6 +478,14 @@
   {
     "path": "content/foot-muscle-imaging.ts",
     "sha256": "80aba36ae5a6dfb3313510f75d414f96c27468d00c912c22b3d87dad5dfa2ba2"
+  },
+  {
+    "path": "content/foot-sesamoid-teaching-pins.json",
+    "sha256": "666a4c4bb8fe514c61d4c718e4f861365fbbc091dcf4a8a25f4808e0bd5aadc0"
+  },
+  {
+    "path": "content/foot-sesamoid-teaching.ts",
+    "sha256": "d25249c8f585bdf706c187c0e013342322ca85c073a3439a2efa187dcfcc6b7a"
   },
   {
     "path": "content/foot-vascular-quiz-pins.json",
@@ -1300,6 +1316,10 @@
     "sha256": "d350763dc2518e42b158d907e8289e7b7e50bc45c53314a25160c0924d4fa4bb"
   },
   {
+    "path": "lib/cerebellar-mca-imaging.ts",
+    "sha256": "59062ecabeae6eeb42e189eb1b84b80a243347596f6fdea05bbabf59147db3fc"
+  },
+  {
     "path": "lib/cerebral.ts",
     "sha256": "c929ff426870c46ae187ca8f012b77b89a7296667888807633a18fbb4b4ef08e"
   },
@@ -1478,6 +1498,10 @@
   {
     "path": "lib/foot-muscle-imaging.ts",
     "sha256": "6c0b568ac63cf9c43d99051557191e0f8b6d38c04297ffec6a9b5fb618a58262"
+  },
+  {
+    "path": "lib/foot-sesamoid-teaching.ts",
+    "sha256": "3fff1e3731ad28496af251623c2719a9ac49317a899a8b3e6c6d1df552b99bef"
   },
   {
     "path": "lib/foot-vascular-anatomy.ts",

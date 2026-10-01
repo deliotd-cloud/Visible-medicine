@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "11ba63422686e0f8666bf18769c67485dc518d19",
-  "sha256": "76d917a02fd1dcfb36870942cbe85f7ed49bda9ff4c73be23232684260857e65",
+  "sourceCommit": "971f12ceedc8316904bdc7da810262bb993362f9",
+  "sha256": "3340bff961b5b482178e6d90c4b025e2c7a2dc26582791e1f3d40dc97dbac81e",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -112,7 +112,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "e88cf0d8a38be93fb57426473878911c52ed9acb9e89ae2cf18f71496faa12b1"
+      "sha256": "100b4b439259f932d65a4798e294e57bcbc7d45dba5799f7188e2dec454e3d21"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -751,6 +751,14 @@
       "sha256": "829915273c8d8f8f2b8fb064662d9cbf27d3cfa147701e00625f016fc830427a"
     },
     {
+      "path": "atlas-review/content/cerebellar-mca-imaging-pins.json",
+      "sha256": "3a7cc4b77e150bae94134a71cb0107e9c09c66d1ab22d30b7ae16b73381ac1d2"
+    },
+    {
+      "path": "atlas-review/content/cerebellar-mca-imaging.ts",
+      "sha256": "9ca2cecdcf52319cf4d45d4953997da40d50b1a34fff964be6fb0f52012e7722"
+    },
+    {
       "path": "atlas-review/content/cerebral-arterial-pins.json",
       "sha256": "8b6185b71ca1684f15480f224f3e9f4d873bdc109b72f27ef6bfb378a5225e64"
     },
@@ -973,6 +981,14 @@
     {
       "path": "atlas-review/content/foot-muscle-imaging.ts",
       "sha256": "80aba36ae5a6dfb3313510f75d414f96c27468d00c912c22b3d87dad5dfa2ba2"
+    },
+    {
+      "path": "atlas-review/content/foot-sesamoid-teaching-pins.json",
+      "sha256": "666a4c4bb8fe514c61d4c718e4f861365fbbc091dcf4a8a25f4808e0bd5aadc0"
+    },
+    {
+      "path": "atlas-review/content/foot-sesamoid-teaching.ts",
+      "sha256": "d25249c8f585bdf706c187c0e013342322ca85c073a3439a2efa187dcfcc6b7a"
     },
     {
       "path": "atlas-review/content/foot-vascular-quiz-pins.json",
@@ -2115,6 +2131,10 @@
       "sha256": "d350763dc2518e42b158d907e8289e7b7e50bc45c53314a25160c0924d4fa4bb"
     },
     {
+      "path": "atlas-review/lib/cerebellar-mca-imaging.ts",
+      "sha256": "59062ecabeae6eeb42e189eb1b84b80a243347596f6fdea05bbabf59147db3fc"
+    },
+    {
       "path": "atlas-review/lib/cerebral-arterial.ts",
       "sha256": "b44185de2dffed0bf552da5ea90d351182ed65a8993dab14a48b6c5beb130d87"
     },
@@ -2365,6 +2385,10 @@
     {
       "path": "atlas-review/lib/foot-reasoning.ts",
       "sha256": "cef5ea8c92edd619891b8c2c51e94b2b0c98d5a285e6c1681a50d4e5c773d9de"
+    },
+    {
+      "path": "atlas-review/lib/foot-sesamoid-teaching.ts",
+      "sha256": "3fff1e3731ad28496af251623c2719a9ac49317a899a8b3e6c6d1df552b99bef"
     },
     {
       "path": "atlas-review/lib/foot-vascular-anatomy.ts",
@@ -3444,7 +3468,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "a92c99702755a3100db6915e4e16ce5b5ac082616052f0ec47779ba70588cc9a"
+      "sha256": "32df5e035bcefbf10c4e37c3583678a0949f2d7392041720a8d0194ab8b975a7"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3700,7 +3724,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "5ebbc630a835e2232c2ce0fbb4ffbaf30d1a7dc080ac9d6132a36ada1aebe218"
+      "sha256": "fec2065223bf483f34b0af129c3016d941309d9b10bfeaa64b2425356ee3a00a"
     }
   ]
 }

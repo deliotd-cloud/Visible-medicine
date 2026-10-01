@@ -9,7 +9,7 @@ test('carpal tour import preserves all models and delivers exact assembled sourc
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
  const prior=(p:string)=>JSON.parse(execFileSync('git',['show','6302b12:'+p],{encoding:'utf8',maxBuffer:32e6}));
  const review=json('atlas-review/manifest.json'),before=prior('atlas-review/manifest.json');
- assert.equal(review.revision,'11ba63422686e0f8666bf18769c67485dc518d19');
+ assert.equal(review.revision,'971f12ceedc8316904bdc7da810262bb993362f9');
  const saved=JSON.parse(execFileSync('git',['show','047d488a:atlas-review/manifest.json'],{encoding:'utf8'}));
  assert.deepEqual(saved.files.filter((f:any)=>before.files.find((p:any)=>p.path===f.path)?.sourceSha256!==f.sourceSha256).map((f:any)=>f.path).sort(),[
   'LICENSES/THIRD_PARTY_NOTICES.md','content/body-renderer-revision.json','lib/carpal-tour.ts','lib/regional-tours.ts',
