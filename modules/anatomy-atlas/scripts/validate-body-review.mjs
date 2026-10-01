@@ -145,6 +145,17 @@ for (const mutate of [
   (p) => {
     p.limits = null;
   },
+  // Well-typed changes must fail too: unchanged claimed hashes do not make
+  // different clinical evidence part of the current-build worksheet.
+  (p) => { p.topics[0].body += ' Altered teaching'; },
+  (p) => { p.topics[0].citations = ['https://example.invalid/altered']; },
+  (p) => { p.topics[0].correctAnswer = 'Altered answer'; },
+  (p) => { p.topics[0].note = 'Altered scope'; },
+  (p) => { p.source.structure.name += ' Altered identity'; },
+  (p) => { p.source.bundle.sha256 = '0'.repeat(64); },
+  (p) => { p.checklist.teaching = []; },
+  (p) => { p.limits = []; },
+  (p) => { p.atlasLink = '/regions/forearm?structure=foreign'; },
 ]) {
   const bad = structuredClone(selected);
   mutate(bad);

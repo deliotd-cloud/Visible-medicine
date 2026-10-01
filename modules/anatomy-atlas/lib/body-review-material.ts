@@ -67,7 +67,8 @@ async function digest(value: unknown) {
     b.toString(16).padStart(2, '0'),
   ).join('');
 }
-export async function bodyReviewMaterial(id: string) {
+/** Current-build display evidence, resolved by exact ID, never by packet claims. */
+export function bodyReviewSnapshot(id: string) {
   if (!id || id.length > 256) return null;
   const matches = catalog.structures.filter((s) => s.id === id);
   if (matches.length !== 1) return null;
@@ -95,6 +96,26 @@ export async function bodyReviewMaterial(id: string) {
   const guidedTours = regionalTourEvidence(catalog, id);
   const checks = {geometry:[...bodyReviewChecks.geometry],teaching:[...bodyReviewChecks.teaching] as string[],imaging:[...bodyReviewChecks.imaging]};
   if (guidedTours.length) checks.teaching.push('Review the entire displayed guided tour, all context surfaces, captions, references, target selections and camera transitions; record framing or teaching corrections.');
+  return structuredClone({
+    source,
+    topics,
+    reasoning,
+    guidedTours,
+    checklist: checks,
+    atlasLink: makeStudyLink(catalog, structure.region, structure.id, 'both'),
+    limits: [
+      'Worksheet only: no review decision is saved or imported. It cannot approve anatomy, teaching or imaging.',
+      'Hashes identify source/content/checklist snapshots, not signatures or a revision-bound approval of renderer code.',
+      'This root-body selection excludes nested organ dissections, independent specimens and dedicated shoulder-pilot reviews.',
+      'Draft readiness is editorial coverage, not clinical validation. Quiz notes and source-specific interactive reasoning are separate sections; only the displayed material is included, not the entire question bank.',
+      'No patient images, spatial registration, private review history or paid lecture content is included.',
+    ],
+  });
+}
+export async function bodyReviewMaterial(id: string) {
+  const snapshot = bodyReviewSnapshot(id);
+  if (!snapshot) return null;
+  const { source, topics, reasoning, guidedTours, checklist: checks } = snapshot;
   const scope = {
     schema: bodyReviewSchema,
     kind: 'body-display-catalog',
@@ -119,7 +140,7 @@ export async function bodyReviewMaterial(id: string) {
     guidedTours,
     fingerprints,
     materialHash: await digest({ scope, fingerprints }),
-    atlasLink: makeStudyLink(catalog, structure.region, structure.id, 'both'),
+    atlasLink: snapshot.atlasLink,
     checklist: checks,
     reviewerNotes: {
       reviewer: '',
@@ -128,13 +149,7 @@ export async function bodyReviewMaterial(id: string) {
       evidence: [],
       corrections: [],
     },
-    limits: [
-      'Worksheet only: no review decision is saved or imported. It cannot approve anatomy, teaching or imaging.',
-      'Hashes identify source/content/checklist snapshots, not signatures or a revision-bound approval of renderer code.',
-      'This root-body selection excludes nested organ dissections, independent specimens and dedicated shoulder-pilot reviews.',
-      'Draft readiness is editorial coverage, not clinical validation. Quiz notes and source-specific interactive reasoning are separate sections; only the displayed material is included, not the entire question bank.',
-      'No patient images, spatial registration, private review history or paid lecture content is included.',
-    ],
+    limits: snapshot.limits,
   });
 }
 export type BodyReviewMaterial = NonNullable<

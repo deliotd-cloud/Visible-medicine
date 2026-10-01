@@ -5,6 +5,7 @@ import { readFile } from 'node:fs/promises';
 import { runInNewContext } from 'node:vm';
 import { test } from 'node:test';
 import { build } from './workspace-component-test-build.mjs';
+import { build as materialBuild } from './workspace-test-build.mjs';
 
 const require = createRequire(import.meta.url), React = require('react');
 let states, cursor, effectCursor, effectSlots, pending, requests, confirms, confirmResult;
@@ -32,7 +33,7 @@ const compiled = await build({ stdin: {
 }, bundle: true, write: false, platform: 'node', format: 'cjs' });
 const scope = { exports: {} };
 runInNewContext(compiled.outputFiles[0].text, {
-  module: scope, exports: scope.exports, AbortController, URL, URLSearchParams, Error,
+  module: scope, exports: scope.exports, AbortController, URL, URLSearchParams, Error, structuredClone,
   window: {
     confirm(message) { confirms.push(message); return confirmResult; },
     addEventListener() {}, removeEventListener() {},
@@ -60,18 +61,20 @@ const syntheticRows = Array.from({ length: 25 }, (_, i) => ({
   fmaId: `FMA${i + 1}`, system: i % 2 ? 'muscles' : 'skeleton',
   laterality: 'left', regions: [i % 2 ? 'forearm' : 'thorax'],
 }));
-const worksheet = id => ({
-  schema: 'vm-body-review-worksheet-3', kind: 'body-display-catalog', structureId: id,
-  approval: false, status: 'worksheet-not-submitted', materialHash: 'a'.repeat(64),
-  source: {
-    structure: { id, name: id, fmaId: 'FMA1', laterality: 'left', sourceTree: 'isa',
-      sources: [{ file: 'FJ1', sha256: 'b'.repeat(64) }] },
-    bundle: { sha256: 'c'.repeat(64) }, credit: 'Synthetic fixture', licence: 'Fixture', sourceVersion: 'fixture',
-  },
-  atlasLink: null, topics: ['anatomy', 'function', 'ct', 'mri', 'xray', 'ultrasound', 'pathology', 'clinical', 'quiz']
-    .map(tab => ({ tab, title: 'Fixture', body: 'Synthetic test worksheet', readiness: 'draft' })),
-  reasoning: null, guidedTours: [], checklist: { geometry: [], teaching: [], imaging: [] }, limits: [],
+// Pure queue-only tests retain synthetic rows. Tests that load a worksheet use
+// actual current-build evidence: invented source IDs must not pass the parser.
+const materialBundle = await materialBuild({
+  stdin: { contents: "export * from './lib/body-review-material.ts';", resolveDir: process.cwd(), loader: 'ts' },
+  bundle: true, write: false, format: 'esm', platform: 'node',
 });
+const materialApi = await import('data:text/javascript;base64,' + Buffer.from(materialBundle.outputFiles[0].text).toString('base64'));
+const realRows = materialApi.bodyReviewSummaries.slice(0, 25)
+  .sort((a, b) => a.name.localeCompare(b.name) || a.id.localeCompare(b.id));
+const worksheets = new Map(await Promise.all(realRows.map(async row => [row.id, await materialApi.bodyReviewMaterial(row.id)])));
+const worksheet = id => {
+  assert(worksheets.has(id), 'Loaded fixture must be an actual current-build structure');
+  return JSON.parse(JSON.stringify(worksheets.get(id)));
+};
 const settle = () => new Promise(resolve => setImmediate(resolve));
 function setup({ rows = syntheticRows, initialId = rows[0]?.id ?? null, initialRegion = 'all' } = {}) {
   states = []; effectSlots = []; pending = []; requests = []; confirms = []; confirmResult = true;
@@ -168,14 +171,14 @@ test('empty, unselected and outside-filter selections cannot navigate', () => {
 });
 
 test('dirty cancellation retains selection, material and draft; confirmation only navigates', async () => {
-  const h = setup(); await h.dirty();
+  const h = setup({ rows: realRows }); await h.dirty();
   confirmResult = false;
   const before = JSON.stringify(states), requestCount = requests.length;
   h.move('Next');
   assert.equal(JSON.stringify(states), before);
   assert.equal(requests.length, requestCount); assert.equal(confirms.length, 1);
   confirmResult = true; h.move('Next');
-  assert.equal(states[4], 'synthetic-1'); assert.equal(states[5], false);
+  assert.equal(states[4], realRows[1].id); assert.equal(states[5], false);
   assert.equal(states[6], null); assert.equal(states[7], '');
   h.render();
   assert.equal(requests.length, requestCount + 1);
@@ -184,7 +187,7 @@ test('dirty cancellation retains selection, material and draft; confirmation onl
 });
 
 test('clicking the selected queue row is a no-op even with dirty edits', async () => {
-  const h = setup(); await h.dirty();
+  const h = setup({ rows: realRows }); await h.dirty();
   const before = JSON.stringify(states), requestCount = requests.length;
   h.selected().props.onClick(); h.render();
   assert.equal(JSON.stringify(states), before); assert.equal(confirms.length, 0);
@@ -193,7 +196,7 @@ test('clicking the selected queue row is a no-op even with dirty edits', async (
 });
 
 test('actual navigation clears stale errors and superseded requests cannot replace the new worksheet', async () => {
-  const h = setup(), initial = requests[0];
+  const h = setup({ rows: realRows }), initial = requests[0];
   h.move('Next'); h.render();
   assert.equal(initial.options.signal.aborted, true);
   initial.reject(new Error('Obsolete worksheet failure')); await settle();
@@ -203,8 +206,22 @@ test('actual navigation clears stale errors and superseded requests cannot repla
   h.move('Next');
   assert.equal(states[7], ''); assert.equal(states[6], null);
   h.render();
-  requests.at(-1).resolve({ ok: true, json: async () => worksheet('synthetic-2') }); await settle();
-  assert.equal(walk(h.render(), n => typeof n.props.onDirty === 'function')[0].props.id, 'synthetic-2');
+  requests.at(-1).resolve({ ok: true, json: async () => worksheet(realRows[2].id) }); await settle();
+  assert.equal(walk(h.render(), n => typeof n.props.onDirty === 'function')[0].props.id, realRows[2].id);
+  h.cleanup();
+});
+
+test('altered evidence cannot expose the decision editor; retry accepts the trusted worksheet', async () => {
+  const h = setup({ rows: realRows });
+  const altered = worksheet(realRows[0].id);
+  altered.topics[0].body += ' Altered teaching under an unchanged revision.';
+  requests.at(-1).resolve({ ok: true, json: async () => altered }); await settle();
+  assert(text(h.render()).includes('Unexpected worksheet. Please retry.'));
+  assert.equal(walk(h.render(), n => typeof n.props.onDirty === 'function').length, 0);
+  button(h.render(), 'Retry').props.onClick(); h.render();
+  requests.at(-1).resolve({ ok: true, json: async () => worksheet(realRows[0].id) }); await settle();
+  assert(!text(h.render()).includes('Unexpected worksheet. Please retry.'));
+  assert.equal(walk(h.render(), n => typeof n.props.onDirty === 'function').length, 1);
   h.cleanup();
 });
 

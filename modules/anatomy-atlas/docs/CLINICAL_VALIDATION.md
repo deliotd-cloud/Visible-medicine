@@ -1,5 +1,10 @@
 # Clinical validation checklist
 
+[Worksheet integrity](BODY_REVIEW_INTEGRITY.md): current-build display comparisons
+reject altered source or teaching evidence under unchanged claimed revisions.
+This preserves existing decisions; it does not grant clinical approval, verify
+signatures or replace server-side revision checks and radiologist sign-off.
+
 [Cerebellar/MCA imaging](CEREBELLAR_MCA_IMAGING.md): review ten CT/MRI drafts for
 both PICA, both SCA and the retained right MCA. Distinguish CTA from routine CT,
 MRA from structural MRI, source gaps from flow signal loss/occlusion, and

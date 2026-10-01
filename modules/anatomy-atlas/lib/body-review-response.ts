@@ -1,4 +1,6 @@
 import type { BodyReviewMaterial } from './body-review-material';
+import { bodyReviewSnapshot } from './body-review-material';
+import { sourceCanonical } from './body-source-additions';
 import type { BodyCatalog, BodyStructure } from '../app/body-types';
 import { validBodyPresentationParts } from './body-presentation-parts';
 import { regionalTours, regionalTourLimitations, regionalTourStepFrames, regionalTourEvidence } from './regional-tours';
@@ -102,7 +104,9 @@ function validTours(value:unknown,source:Record<string,unknown>):boolean {
       structures.every(s=>bundles.some(b=>b.id===s.bundle))&&structures.every(s=>contextIds.includes(s.id)||steps.some(step=>object(step)&&step.selectedId===s.id));
   });
 }
-/** Validate fields consumed by the read-only UI; never accept a review decision. */
+/** Validate current-build display evidence; never accept a review decision.
+ * Save-time revision hashes are independently recomputed by the server.
+ */
 export function parseBodyReviewResponse(
   value: unknown,
   expectedId: string,
@@ -200,5 +204,24 @@ export function parseBodyReviewResponse(
     !strings(value.limits)
   )
     return null;
+  // Shape checks alone allow valid-looking, altered prose with unchanged hashes.
+  // Compare all displayed evidence to this build's exact source/content, including
+  // references, answer keys, reasoning, limitations and source-specific links.
+  // JSON normalization matches the wire format (optional undefined fields omitted).
+  try {
+    const expected = bodyReviewSnapshot(expectedId);
+    if (!expected) return null;
+    const displayed = {
+      source: value.source,
+      topics: value.topics,
+      reasoning: value.reasoning,
+      guidedTours: value.guidedTours,
+      checklist: value.checklist,
+      atlasLink: value.atlasLink,
+      limits: value.limits,
+    };
+    if (sourceCanonical(JSON.parse(JSON.stringify(displayed))) !==
+        sourceCanonical(JSON.parse(JSON.stringify(expected)))) return null;
+  } catch { return null; }
   return value as BodyReviewMaterial;
 }
