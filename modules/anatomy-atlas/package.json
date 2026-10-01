@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "tarsal-tour:test": "node scripts/test-tarsal-tour.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-regional-tour-review.mjs && node scripts/test-tour-step-picker.mjs && node scripts/test-tour-camera.mjs",
     "cerebellar-mca-imaging:test": "node scripts/pin-cerebellar-mca-imaging.mjs --check && node scripts/validate-cerebellar-mca-imaging.mjs",
     "foot-sesamoid:test": "node scripts/pin-foot-sesamoid-teaching.mjs --check && node scripts/validate-foot-sesamoid-teaching.mjs",
     "choroidal-context:test": "node --test scripts/test-source-shape-equivalence.mjs scripts/test-source-containment-sampler.mjs scripts/test-choroidal-context-scene.mjs scripts/test-choroidal-context-server.mjs",
