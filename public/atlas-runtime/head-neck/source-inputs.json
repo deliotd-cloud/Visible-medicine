@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "5aa6f2c8640a7387487f31185f6924e5b0457f4d4641eee2a3839b8096e18a9c"
+    "sha256": "150ec262a07c28ceb74dd231bb43d52abff9a228af2b42fa2e29cf26fa173060"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -1676,6 +1676,10 @@
     "sha256": "557ae3859bea0db95f70303474d9afa053a8dec0380a6ffc325c070f281c9fd1"
   },
   {
+    "path": "content/um-distal-topic-completion.ts",
+    "sha256": "7d09851523fb515f33942710b7f2a171ae612881b5b5e2372fa75444b07fafe2"
+  },
+  {
     "path": "content/um-hip-muscle-clinical.ts",
     "sha256": "549770dd9f1b85494595b227c187b87ab91bb56e43d31f1f62fbb185cac5b252"
   },
@@ -1685,7 +1689,11 @@
   },
   {
     "path": "content/um-limb-clinical.ts",
-    "sha256": "552cb9cf96de3173773ecb71e88e9e19a08904f7ff3bade456f74d815ad41161"
+    "sha256": "6c01a206e6c4d88071a581aa7fe670efa9ee3705a52ed27c25541bcb31ab9adb"
+  },
+  {
+    "path": "content/um-limb-modality-references.ts",
+    "sha256": "df216bc1e3a26fb9588b175582d845bffbba36dc357122a10edce48e63875ecc"
   },
   {
     "path": "content/um-limb-motor.ts",
@@ -1697,7 +1705,11 @@
   },
   {
     "path": "content/um-limb-teaching-bindings.v1.json",
-    "sha256": "cd73ab7b7fd70de4a4e83c173617dffac78220bd8a56670da6f52f9cafc4c0b1"
+    "sha256": "a23f2358e2d4392812969dfb32b2081368c718928ec8633174ec21ac875ef7c4"
+  },
+  {
+    "path": "content/um-proximal-topic-completion.ts",
+    "sha256": "df26a9fa11c9ff043cd4a1ce04bf0a466d64daf4ae4609621cb332fae82c10bd"
   },
   {
     "path": "content/upper-limb-arterial-pins.json",

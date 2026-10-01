@@ -8,7 +8,7 @@ test('tour title reflow ships matching learner/review styles without changing an
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
  const previous=(p:string)=>JSON.parse(execFileSync('git',['show','047d488a:'+p],{encoding:'utf8',maxBuffer:32e6}));
  const review=json('atlas-review/manifest.json'),before=previous('atlas-review/manifest.json');
- assert.equal(review.revision,'33566ee21aa65ed1a370a5e7653337048656a13e');
+ assert.equal(review.revision,'f636891cdcee10aeca20ae684cb04c183fa7600e');
  // Keep the exact historical reflow delta pinned to its delivered commit;
  // subsequent independently reviewed runtime fixes advance the current import.
  const reflow=JSON.parse(execFileSync('git',['show','1727b2e3:atlas-review/manifest.json'],{encoding:'utf8',maxBuffer:32e6}));
@@ -19,6 +19,7 @@ test('tour title reflow ships matching learner/review styles without changing an
   'lib/hra-pelvic-guided-dissection.ts','lib/hra-renal-guided-dissection.ts','lib/specimen-guided-dissection.ts',
   'lib/abdominal-guided-dissection.ts','lib/back-guided-dissection.ts',
   'content/abdominal-bone-teaching.ts',
+  'content/um-proximal-topic-completion.ts','content/um-distal-topic-completion.ts','content/um-limb-modality-references.ts',
   ...['foot-sesamoid-teaching','cerebellar-mca-imaging','tentorium-imaging','cranial-bone-quiz'].flatMap(kind=>['lib/'+kind+'.ts','content/'+kind+'.ts','content/'+kind+'-pins.json'])].sort());
  const path='app/whole-body-guided-learning.css',css=readFileSync('atlas-review/'+path,'utf8'),entry=review.files.find((f:any)=>f.path===path);
  assert.equal(createHash('sha256').update(css).digest('hex'),entry.importedSha256);

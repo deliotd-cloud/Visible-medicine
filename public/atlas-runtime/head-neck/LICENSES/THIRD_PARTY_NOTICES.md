@@ -2083,3 +2083,15 @@ preserving older links does not retrospectively clear external material.
 Existing HRA CC BY4.0 models, credits, source retention and held anatomy remain
 unchanged. No new mesh, font, texture, dependency, patient pixel, paid service
 or mandatory fee. Draft/review scope: `docs/HRA_PELVIC_TOPIC_COMPLETION.md`.
+
+## UM lower-limb modality-topic completion (1 October 2026)
+
+155 original draft imaging notes fill missing CT, MRI, X-ray and ultrasound
+placements on explicitly mapped existing selections. Primary medical reading
+links are not imported prose, diagrams, images, PDFs, tables or datasets and
+do not grant publisher asset redistribution rights or endorsement. Existing
+references and UM CC0 mesh provenance/credits remain unchanged; prior external
+material is not retrospectively cleared. The two unresolved grouped bone
+selections retain their holds. No new model, font, texture, dependency, patient
+pixel, paid service or mandatory fee. Scope and clinical review requirements:
+`docs/UM_LIMB_MODALITY_COMPLETION.md`.

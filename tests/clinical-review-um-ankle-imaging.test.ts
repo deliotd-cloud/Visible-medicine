@@ -6,20 +6,24 @@ import { build } from 'esbuild';
 
 test('seven ankle drafts reach both learner modules and exact specimen review', async () => {
   const review = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
-  assert.equal(review.revision, '33566ee21aa65ed1a370a5e7653337048656a13e');
+  assert.equal(review.revision, 'f636891cdcee10aeca20ae684cb04c183fa7600e');
   const pins = {
     'content/um-calf-foot-clinical.ts': '557ae3859bea0db95f70303474d9afa053a8dec0380a6ffc325c070f281c9fd1',
-    'content/um-limb-teaching-bindings.v1.json': 'cd73ab7b7fd70de4a4e83c173617dffac78220bd8a56670da6f52f9cafc4c0b1',
+    'content/um-limb-teaching-bindings.v1.json': 'a23f2358e2d4392812969dfb32b2081368c718928ec8633174ec21ac875ef7c4',
   };
   for (const module of ['head-neck', 'lower-limb']) {
     const base = 'public/atlas-runtime/' + module + '/';
     const manifest = JSON.parse(readFileSync(base + 'manifest.json', 'utf8'));
     const inputs = JSON.parse(readFileSync(base + 'source-inputs.json', 'utf8'));
-    // Independent lower-limb release retains the same exact teaching bytes.
-    assert.equal(manifest.sourceCommit, module === 'head-neck' ? '33566ee21aa65ed1a370a5e7653337048656a13e' : '80ff7f2ce56ce3cc27d4d9e6962797292585c3df');
+    // The independent lower-limb release retains its historical binding revision;
+    // current learner/review bindings advance for the missing-topic additions.
+    // The original ankle teaching module itself must remain byte-identical.
+    assert.equal(manifest.sourceCommit, module === 'head-neck' ? 'f636891cdcee10aeca20ae684cb04c183fa7600e' : '80ff7f2ce56ce3cc27d4d9e6962797292585c3df');
     for (const key of ['patientDataIncluded', 'clinicalApproved', 'imagingConnection', 'standaloneReviewConnection']) assert.equal(manifest[key], false);
     for (const [path, expected] of Object.entries(pins)) {
-      assert.equal(inputs.find((f: any) => f.path === path)?.sha256, expected);
+      const learnerExpected = module === 'lower-limb' && path === 'content/um-limb-teaching-bindings.v1.json'
+        ? 'cd73ab7b7fd70de4a4e83c173617dffac78220bd8a56670da6f52f9cafc4c0b1' : expected;
+      assert.equal(inputs.find((f: any) => f.path === path)?.sha256, learnerExpected);
       const imported = review.files.find((f: any) => f.path === path);
       assert.equal(imported.sourceSha256, expected);
       assert.equal(createHash('sha256').update(readFileSync('atlas-review/' + path)).digest('hex'), imported.importedSha256);

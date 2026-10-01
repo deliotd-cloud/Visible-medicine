@@ -7,8 +7,8 @@ test('learner and review deliver Reset separation correction without restoring r
   const review = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
   const learner = JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8'));
   const inputs = JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json', 'utf8'));
-  assert.equal(review.revision, '33566ee21aa65ed1a370a5e7653337048656a13e');
-  assert.equal(learner.sourceCommit,'33566ee21aa65ed1a370a5e7653337048656a13e');
+  assert.equal(review.revision, 'f636891cdcee10aeca20ae684cb04c183fa7600e');
+  assert.equal(learner.sourceCommit,'f636891cdcee10aeca20ae684cb04c183fa7600e');
   const entry = review.files.find((f: any) => f.path === 'app/body-explorer.tsx');
   assert.equal(entry.sourceSha256, 'd6e7ebbe87a4325a84d3a0241b788edcf23e6dae7ec6e3c3f6c15875abf6ad57');
   assert.equal(inputs.find((f: any) => f.path === entry.path)?.sha256, entry.sourceSha256);
