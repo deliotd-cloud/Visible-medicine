@@ -4,3 +4,8 @@
    trigger. Long titles must remain inside the control at enlarged text sizes. */
 .whole-body-tour-picker button{width:100%;min-width:0;height:auto;min-height:44px;white-space:normal;text-align:left;}
 .whole-body-tour-picker button>[data-slot="select-value"]{display:block;min-width:0;overflow:visible;overflow-wrap:anywhere;line-height:1.35;-webkit-line-clamp:unset;}
+.whole-body-nested-guidance{display:flex;flex-direction:column;flex:1;min-width:0;min-height:0;padding:8px 10px;gap:8px;}
+.whole-body-nested-guidance>header{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;}
+.whole-body-nested-guidance h2{font-size:1rem;line-height:1.4;}
+.whole-body-nested-guidance>header button{min-height:44px;padding:6px 12px;border:1px solid var(--border);border-radius:8px;font-size:.875rem;}
+.whole-body-nested-guidance>.eye-layer-workbench{flex:1;min-height:0;}

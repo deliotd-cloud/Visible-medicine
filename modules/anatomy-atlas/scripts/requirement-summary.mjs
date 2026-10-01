@@ -20,6 +20,13 @@ export function renderRequirementSummary(report) {
   const body = readinessTable(teaching.body, anatomy.bodyRepresentations);
   const nested = readinessTable(teaching.nested.topics, teaching.nested.representations);
   const shoulder = readinessTable(teaching.shoulder, anatomy.shoulderRepresentations);
+  const nestedGuides=study.guidedLearning.nestedStudies??[];
+  for(const guide of nestedGuides){
+    assert(Number.isSafeInteger(guide.steps)&&guide.steps>0,'Invalid nested guide stop count');
+    assert.equal(guide.representations,guide.children.length,'Nested guide representation count must match source children');
+    assert.equal(new Set(guide.children.map(child=>child.id)).size,guide.children.length,'Nested guide children must be distinct');
+  }
+  const distinctGuidedChildren=new Set(nestedGuides.flatMap(guide=>guide.children.map(child=>child.id))).size;
   const independent = [
     ['Lower limb', anatomy.independentSpecimens[0].representations, 'UM_LIMB_DISSECTION.md'],
     ['Kidneys', anatomy.renalSpecimen.representations, 'HRA_KIDNEY_SPECIMEN.md'],
@@ -38,6 +45,7 @@ Generated from the current displayed catalogue, teaching resolver, dissection pr
 - Nested dissections: ${teaching.nested.representations} selectable parts, ${teaching.nested.concepts} teaching concepts / ${teaching.nested.references} references; ${teaching.nested.geometryOnlyRepresentations.length} geometry-only selections retain pending teaching.
 - ${study.stages} dissection stages / ${study.focuses} focuses. These operate on supplied surfaces, not complete anatomy.
 - Guided learning: ${study.guidedLearning.regionalTours} regional tours / ${study.guidedLearning.regionalStops} stops; dedicated shoulder ${study.guidedLearning.shoulderTours} tour / ${study.guidedLearning.shoulderStops} stops. These source-bound drafts reuse existing anatomy, not additional unique structures or clinical approvals.
+${nestedGuides.length ? `- Nested eye guided learning: ${nestedGuides.length} source-bound draft guides / ${nestedGuides.reduce((n, guide) => n + guide.steps, 0)} stops across ${distinctGuidedChildren} existing distinct eye children. [Eye-layer guidance](EYE_LAYER_GUIDED_LEARNING.md) overlaps the nested anatomy above; it adds no root-body anatomy, regional tours, geometry or clinical approval.\n` : ''}\
 ${study.guidedLearning.independentSpecimens?.length ? `- Independent source-guided dissection: ${study.guidedLearning.independentSpecimens.length} draft sequences / ${study.guidedLearning.independentSpecimens.reduce((n, guide) => n + guide.steps, 0)} steps. [Female pelvis](HRA_PELVIC_GUIDED_DISSECTION.md), [abdominal wall and back](WALL_BACK_GUIDED_DISSECTION.md), [kidneys](RENAL_GUIDED_ABDOMINAL_BONES.md) and [lower-limb regions](UM_LIMB_GUIDED_DISSECTION.md) reuse admitted surfaces in separate source frames; no new anatomy or validated surgical planes.\n` : ''}\
 - Find/name identification; ${practice.reasoning.concepts} draft reasoning concepts bound to ${practice.reasoning.exactRepresentations} root-body representations in ${practice.reasoning.regions.join(', ')}. [Reasoning practice](REASONING_PRACTICE.md) is separate from Quiz-tab notes.
 

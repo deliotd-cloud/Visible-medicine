@@ -9,6 +9,7 @@ assert.match(pickerCss,/\.whole-body-tour-picker button\{[^}]*height:auto;/,'Sha
 assert.match(pickerCss,/\[data-slot="select-value"\]\{[^}]*display:block;[^}]*overflow-wrap:anywhere;[^}]*-webkit-line-clamp:unset;/,'Selected title must wrap without a one-line clamp');
 const result=await build({stdin:{contents:"export * from './app/whole-body-guided-learning'; export {regionalTours} from './lib/regional-tours';",resolveDir:process.cwd(),loader:'tsx'},bundle:true,write:false,platform:'node',format:'cjs',loader:{'.css':'empty'},plugins:[{name:'observable-child-boundaries',setup(api){
  api.onLoad({filter:/[\\/]app[\\/]regional-guided-learning\.tsx$/},()=>({loader:'js',contents:'export const RegionalGuidedLearning="RegionalGuidedLearning";'}));
+ api.onLoad({filter:/[\\/]app[\\/]eye-layers\.tsx$/},()=>({loader:'js',contents:'export const EyeLayerView="EyeLayerView";'}));
  api.onLoad({filter:/[\\/]components[\\/]ui[\\/]select\.tsx$/},()=>({loader:'js',contents:'export const Select="Select",SelectContent="SelectContent",SelectItem="SelectItem",SelectTrigger="SelectTrigger",SelectValue="SelectValue";'}));
 }}]});
 let state,exits=0;

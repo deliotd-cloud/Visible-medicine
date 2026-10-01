@@ -61,8 +61,39 @@ test('empty Atlas registry is explicitly distinct from implemented viewers and w
 test('guided learning uses resolved inventory counts and keeps shoulder scope separate', () => {
   const output = renderRequirementSummary(report), tours = report.study.guidedLearning;
   assert(report.sourceHashes.guidedLearningData);
+  assert(report.sourceHashes['lib/eye-layer-guide.ts']);
+  assert(report.sourceHashes.nestedEyeGuidedLearningData);
   assert(output.includes(`${tours.regionalTours} regional tours / ${tours.regionalStops} stops; dedicated shoulder ${tours.shoulderTours} tour / ${tours.shoulderStops} stops`));
+  assert.equal(tours.regionalTours, 24);
+  assert.equal(tours.nestedStudies.length, 2);
+  assert.deepEqual(tours.nestedStudies.map(guide => guide.parentId).sort(), [
+    'vm:anatomy:body:head-neck:left:organ:left-eyeball',
+    'vm:anatomy:body:head-neck:right:organ:right-eyeball',
+  ]);
+  assert.equal(tours.nestedStudies.reduce((n, guide) => n + guide.steps, 0), 8);
+  assert.equal(tours.nestedStudies.reduce((n, guide) => n + guide.representations, 0), 15);
+  assert.equal(new Set(tours.nestedStudies.flatMap(guide => guide.children.map(child => child.id))).size, 15);
+  for (const guide of tours.nestedStudies) {
+    assert.equal(guide.study, 'eye');
+    assert.equal(guide.readiness, 'draft');
+    assert.equal(guide.geometryChanged, false);
+    assert.equal(guide.representations, guide.children.length);
+    assert.match(guide.parentSourceHash, /^[a-f0-9]{64}$/);
+    assert(guide.children.every(child => child.sourceHash && child.sourceFiles.length));
+  }
+  assert(output.includes('2 source-bound draft guides / 8 stops across 15 existing distinct eye children'));
+  assert(output.includes('overlaps the nested anatomy above'));
   const changed = structuredClone(report);
   changed.study.guidedLearning.regionalStops++;
   assert.notEqual(renderRequirementSummary(changed), output);
+  const nestedChanged = structuredClone(report);
+  nestedChanged.study.guidedLearning.nestedStudies[0].steps++;
+  assert.notEqual(renderRequirementSummary(nestedChanged), output);
+  nestedChanged.study.guidedLearning.nestedStudies[0].steps=-1;
+  assert.throws(()=>renderRequirementSummary(nestedChanged),/Invalid nested guide stop count/);
+  const badCount=structuredClone(report);badCount.study.guidedLearning.nestedStudies[0].representations++;
+  assert.throws(()=>renderRequirementSummary(badCount),/representation count must match/);
+  const duplicate=structuredClone(report),guide=duplicate.study.guidedLearning.nestedStudies[0];
+  guide.children[1]=structuredClone(guide.children[0]);
+  assert.throws(()=>renderRequirementSummary(duplicate),/children must be distinct/);
 });

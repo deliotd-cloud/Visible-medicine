@@ -163,7 +163,7 @@
     "docs/pancreatic-source-audit.json": "09e5f83b77c4d3c6afbb788f91f523443f7821ba32f24a85311c1a1a9b61fc33",
     "lib/eye-layer-state.ts": "e863d50a92dc1f842bc95898c410516a7fd2fe9d9fe9923ea8de7f244056389a",
     "lib/ventricles.ts": "46f8ae96624771fb1e3bfb73f26c4ddbe4467e201784374df6159e68834a630c",
-    "app/eye-layers.tsx": "69b96f889ee6a5175e0c97eca2c9c725392413e6da6c952e5196184c0bbfe15a",
+    "app/eye-layers.tsx": "61138f2e48a41702e3ee0516a6c7e74bf4f8182cc389773740748cc384a06098",
     "public/models/bodyparts3d/ventricles/catalog.json": "9a9852fe7e3f245c73525b94cd6fee08bd974f015cab5010d01d56e49ceb0a68",
     "public/models/bodyparts3d/brainstem/catalog.json": "1f405d0df3656da30f34c063bd81c3442cb33e8d2566b17447126460c95c3a38",
     "public/models/bodyparts3d/collicular-brachia/catalog.json": "a607dbbdae16aff65fa35c65e181fe0aa828b3e4d09b10ba2a851d46a0a4e9d0",
@@ -395,6 +395,12 @@
     "explicitTopicReadiness": "e20a1195f635264428e5f573689b20e27940c77fe962d9492c637116121062f5",
     "reasoningQuestionData": "e14edb0ec5501658df333e69f0aef4d9593b6647a3773258ff0ef6ec03b786fb",
     "guidedLearningData": "207ff82ca7c5125cc093ff7d845b6b1868a9d53caf71ea6b491672d6c40fe1b5",
+    "lib/eye-layer-guide.ts": "83e038694f0a874bbbb57c2e4e52a20fb29cef5dad2162eeef0cc281ef36d0fb",
+    "lib/nested-guided-learning.ts": "56ce7db943ebe22f92733b8173a7dcaea4e59d921463d10ea3710cf029486972",
+    "content/nested-guided-learning-bindings.v1.json": "6929af9e77abcd8ee3a3f1b9bda8f4affeb1b21b35d513854d1bd68a03034c14",
+    "app/whole-body-guided-learning.tsx": "837a007eebc8aa0f28613aeab2dab0de9a83c25db93b6549867b56e0df29dcdf",
+    "app/whole-body-guided-learning.css": "f35c1d9271e7f5ad93d9ed6229a1da0d49b232432e4f7370c9dd8c90c656c94a",
+    "nestedEyeGuidedLearningData": "9e19b3b4b627f788b3552ff99482993a85e215f27c28467419e6a87c4f832b49",
     "independentGuidedDissectionData": "37605607dfcdc37cf3cc013f93f11c8f5af9633cbd9eb8b4d313d34f053d0596",
     "app/volume-image.tsx": "34d28f4f9284cbb18dd4c175815490fb3727912fdb4acb22143c91167ccd4448",
     "app/review/mri-import/page.tsx": "70e68c1a824ba1fe8f8b3c4291a9d8015c18288a9040289d4f4adec59bed039e",
@@ -1727,6 +1733,262 @@
           "sourceFrame": "um-5t6tz7-v1-2:source-lps",
           "steps": 16,
           "representations": 67,
+          "geometryChanged": false
+        }
+      ],
+      "nestedStudies": [
+        {
+          "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+          "study": "eye",
+          "guideId": "eye-layer-guide:vm:anatomy:body:head-neck:left:organ:left-eyeball",
+          "parentSourceHash": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+          "parentSourceFiles": [
+            {
+              "file": "FJ1282",
+              "sha256": "c66ed172ed90448e3e9508f21b116f319cfd1036cb7281e2f3541ede5f2adb1f"
+            },
+            {
+              "file": "FJ1285",
+              "sha256": "dd7677f804c1c370a2c6d11966877934efa9ca09c6b100e18f06fd4508ccbbb6"
+            },
+            {
+              "file": "FJ1286",
+              "sha256": "ba4e6f7156124700b63d526a882933b35b89fa0e9fd53495964d57aa5de1c989"
+            },
+            {
+              "file": "FJ1289",
+              "sha256": "6edadfa812d834f5b90d17d427baa0c6688a4cc32856c2b8c6320907bbc05150"
+            },
+            {
+              "file": "FJ1297",
+              "sha256": "e9359237794eef61117f1c12a6822dafdd0cfc70ada8d2447e3d26d4fcda9bd7"
+            },
+            {
+              "file": "FJ1305",
+              "sha256": "a2b7f9b53dd2d14a352dfa0d3e01452031a2957aae62aa7c904d7c1d1922954c"
+            },
+            {
+              "file": "FJ1317",
+              "sha256": "81a184bd0d3d8602af3c2186405a16565bcabd0d305fcbad7e02b979335d9582"
+            },
+            {
+              "file": "FJ1320",
+              "sha256": "a73a8e48e83cd65e15eda97533b59cac7f3f687a7b117e587bc561bf4f7b50a1"
+            },
+            {
+              "file": "FJ1331",
+              "sha256": "417bc91c6719b2982cb60640058ddcce9f50ecfb5a20db02393f2cf7bad82a0b"
+            }
+          ],
+          "children": [
+            {
+              "id": "vm:anatomy:body:head-neck:left:organ:left-cornea",
+              "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+              "sourceFiles": [
+                {
+                  "file": "FJ1289",
+                  "sha256": "6edadfa812d834f5b90d17d427baa0c6688a4cc32856c2b8c6320907bbc05150"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:organ:left-iris",
+              "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+              "sourceFiles": [
+                {
+                  "file": "FJ1297",
+                  "sha256": "e9359237794eef61117f1c12a6822dafdd0cfc70ada8d2447e3d26d4fcda9bd7"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:organ:left-lens",
+              "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+              "sourceFiles": [
+                {
+                  "file": "FJ1305",
+                  "sha256": "a2b7f9b53dd2d14a352dfa0d3e01452031a2957aae62aa7c904d7c1d1922954c"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:ligament:suspensory-ligament-of-left-lens",
+              "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+              "sourceFiles": [
+                {
+                  "file": "FJ1320",
+                  "sha256": "a73a8e48e83cd65e15eda97533b59cac7f3f687a7b117e587bc561bf4f7b50a1"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:organ:left-vitreous-body",
+              "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+              "sourceFiles": [
+                {
+                  "file": "FJ1331",
+                  "sha256": "417bc91c6719b2982cb60640058ddcce9f50ecfb5a20db02393f2cf7bad82a0b"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:organ:left-choroid",
+              "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+              "sourceFiles": [
+                {
+                  "file": "FJ1285",
+                  "sha256": "dd7677f804c1c370a2c6d11966877934efa9ca09c6b100e18f06fd4508ccbbb6"
+                },
+                {
+                  "file": "FJ1286",
+                  "sha256": "ba4e6f7156124700b63d526a882933b35b89fa0e9fd53495964d57aa5de1c989"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:organ:left-sclera",
+              "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+              "sourceFiles": [
+                {
+                  "file": "FJ1317",
+                  "sha256": "81a184bd0d3d8602af3c2186405a16565bcabd0d305fcbad7e02b979335d9582"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:left:space:anterior-chamber-of-left-eyeball",
+              "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+              "sourceFiles": [
+                {
+                  "file": "FJ1282",
+                  "sha256": "c66ed172ed90448e3e9508f21b116f319cfd1036cb7281e2f3541ede5f2adb1f"
+                }
+              ]
+            }
+          ],
+          "steps": 4,
+          "representations": 8,
+          "readiness": "draft",
+          "geometryChanged": false
+        },
+        {
+          "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+          "study": "eye",
+          "guideId": "eye-layer-guide:vm:anatomy:body:head-neck:right:organ:right-eyeball",
+          "parentSourceHash": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+          "parentSourceFiles": [
+            {
+              "file": "FJ1336",
+              "sha256": "518f78b01de0273ea1cdd6152f2215f9432f2ce00ac2164cea8aa3a420cd897c"
+            },
+            {
+              "file": "FJ1337",
+              "sha256": "db3077437828f311b6afa07dc9dc7a27ab0e005ddce62570420c61af31643f22"
+            },
+            {
+              "file": "FJ1340",
+              "sha256": "20cc1b1156cd9fdebd96d8a7710ff3d6d6fc9fef79b7173ef41491e2b6e650a3"
+            },
+            {
+              "file": "FJ1348",
+              "sha256": "1120c896903582ef7349b5be68a03bfb215def235851a82b1f1f44cfe212ad9e"
+            },
+            {
+              "file": "FJ1356",
+              "sha256": "767e9107cf299b87729c9eb921a2ede22d3bfd03ae7027b6fb88631c1a0ec150"
+            },
+            {
+              "file": "FJ1368",
+              "sha256": "6fce2e1842730573a8d1360a88a9512b2ee5fe0ebe55e669cd265601da663b49"
+            },
+            {
+              "file": "FJ1371",
+              "sha256": "8dc5ab248fc952170f9057aaf4bbd2339d9ee4c30b40b32ce793e54b22706738"
+            },
+            {
+              "file": "FJ1382",
+              "sha256": "de22335a9c3ad8036e0651eb09aa975e15151bb5ac6e3d142cf8260204fa633f"
+            }
+          ],
+          "children": [
+            {
+              "id": "vm:anatomy:body:head-neck:right:organ:right-cornea",
+              "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+              "sourceFiles": [
+                {
+                  "file": "FJ1340",
+                  "sha256": "20cc1b1156cd9fdebd96d8a7710ff3d6d6fc9fef79b7173ef41491e2b6e650a3"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:organ:right-iris",
+              "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+              "sourceFiles": [
+                {
+                  "file": "FJ1348",
+                  "sha256": "1120c896903582ef7349b5be68a03bfb215def235851a82b1f1f44cfe212ad9e"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:organ:right-lens",
+              "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+              "sourceFiles": [
+                {
+                  "file": "FJ1356",
+                  "sha256": "767e9107cf299b87729c9eb921a2ede22d3bfd03ae7027b6fb88631c1a0ec150"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:ligament:suspensory-ligament-of-right-lens",
+              "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+              "sourceFiles": [
+                {
+                  "file": "FJ1371",
+                  "sha256": "8dc5ab248fc952170f9057aaf4bbd2339d9ee4c30b40b32ce793e54b22706738"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:organ:right-vitreous-body",
+              "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+              "sourceFiles": [
+                {
+                  "file": "FJ1382",
+                  "sha256": "de22335a9c3ad8036e0651eb09aa975e15151bb5ac6e3d142cf8260204fa633f"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:organ:right-choroid",
+              "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+              "sourceFiles": [
+                {
+                  "file": "FJ1336",
+                  "sha256": "518f78b01de0273ea1cdd6152f2215f9432f2ce00ac2164cea8aa3a420cd897c"
+                },
+                {
+                  "file": "FJ1337",
+                  "sha256": "db3077437828f311b6afa07dc9dc7a27ab0e005ddce62570420c61af31643f22"
+                }
+              ]
+            },
+            {
+              "id": "vm:anatomy:body:head-neck:right:organ:right-sclera",
+              "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+              "sourceFiles": [
+                {
+                  "file": "FJ1368",
+                  "sha256": "6fce2e1842730573a8d1360a88a9512b2ee5fe0ebe55e669cd265601da663b49"
+                }
+              ]
+            }
+          ],
+          "steps": 4,
+          "representations": 7,
+          "readiness": "draft",
           "geometryChanged": false
         }
       ],

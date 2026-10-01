@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "nested-guided-library:test": "node scripts/test-nested-guided-library.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-eye-layer-guide-component.mjs && node scripts/test-nested-guided-library-review.mjs && node --test scripts/test-requirement-summary-current.mjs",
     "eye-layer-guide:test": "node scripts/test-eye-layer-guide.mjs && node scripts/test-eye-layer-guide-component.mjs && node scripts/test-eye-layer-guide-review.mjs && node scripts/test-eye-education-component.mjs && node scripts/test-tour-camera.mjs",
     "nested-ct-orientation:test": "node scripts/validate-nested-ct-orientation.mjs && node scripts/validate-nested-teaching.mjs && node scripts/validate-nested-review.mjs",
     "pelvic-ring-tour:test": "node scripts/test-pelvic-ring-tour.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-regional-tour-review.mjs && node scripts/test-tour-step-picker.mjs && node scripts/test-tour-camera.mjs",

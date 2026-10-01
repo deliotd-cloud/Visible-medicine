@@ -37,6 +37,12 @@ revision refusal before storage. Controlled component tests are not browser/GPU
 or clinical evidence. Signed-in browser interaction, visual readability and
 revision-bound radiologist sign-off remain required. Publication is not implied.
 
+The [shared guided library](NESTED_GUIDED_LIBRARY.md) also exposes both exact-source
+eye studies in the existing Tour picker for Head & neck and Whole body. They
+open inline with this disclosure expanded, without starting automatically or
+changing the ordinary eye study's collapsed default. Inventory counts these
+separately as overlapping existing nested anatomy, not new meshes or approvals.
+
 Saved verification: all 25 final stages passed, including 93 contract checks,
 158 controlled component checks, 75 existing eye-education checks, TypeScript,
 both builds and 915 physical production inputs. Review tests confirmed 30 draft

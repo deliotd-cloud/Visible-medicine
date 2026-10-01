@@ -81,5 +81,10 @@ for(const parent of parents){
  slots=[];render({initialSelectedId:'foreign-child'});scene().onLoaded();scene().onRendererHealth('ready');render({initialSelectedId:'foreign-child'});
  check(button('Start eye walkthrough').disabled,'Foreign incoming selection fails closed');button('Start eye walkthrough').onClick();render({initialSelectedId:'foreign-child'});check(!button('End walkthrough'));
  slots=[];render({parent:{...parent,name:'altered parent'}});check(!button('Start eye walkthrough'),'Full binding mismatch denies guide');
+ slots=[];render({initialGuidedLearningExpanded:true});
+ check(nodes(tree).find(n=>n.type==='details'&&n.props.className==='eye-layer-guided-learning').props.open,'Library expands the existing walkthrough disclosure');
+ check(!button('End walkthrough')&&button('Start eye walkthrough').disabled,'Expanded disclosure does not autoplay or bypass readiness');
+ slots=[];render();
+ check(!nodes(tree).find(n=>n.type==='details'&&n.props.className==='eye-layer-guided-learning').props.open,'Ordinary eye study retains compact default');
 }
 console.log(JSON.stringify({componentChecks:checks,parents:parents.length,smoothCameraShared:true,manualStatePreserved:true,browserAcceptance:false,clinicalApproval:false}));

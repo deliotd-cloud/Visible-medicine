@@ -65,6 +65,8 @@ export { createLearningRegistry, parseLearningDocument, learningResourceKinds } 
 export { allLearningAnatomyRepresentations } from './lib/nested-learning-anatomy.ts';
 export { bodyDisplayCatalog } from './lib/body-display-catalog.ts';
 export { nestedStudyTargets } from './lib/nested-anatomy.ts';
+export { eyeLayerGuide } from './lib/eye-layer-guide.ts';
+export { nestedGuidedStudyOptions } from './lib/nested-guided-learning.ts';
 export { cerebralCatalog } from './lib/cerebral.ts';
 export { nestedReviewRows } from './lib/nested-review-material.ts';
 export { nestedTeachingFor, nestedTopicLesson } from './lib/nested-teaching.ts';
@@ -140,6 +142,8 @@ const {
   allLearningAnatomyRepresentations,
   bodyDisplayCatalog,
   nestedStudyTargets,
+  eyeLayerGuide,
+  nestedGuidedStudyOptions,
   cerebralCatalog,
   nestedReviewRows,
   nestedTeachingFor,
@@ -301,7 +305,8 @@ function summarize(rows) {
 }
 const displayCatalog = bodyDisplayCatalog(catalog);
 const nestedGeometryOnly = [];
-const nestedRows = nestedStudyTargets(displayCatalog).map((target) => {
+const nestedTargets = nestedStudyTargets(displayCatalog);
+const nestedRows = nestedTargets.map((target) => {
   const parent = displayCatalog.structures.find(
     (s) => s.id === target.parentId,
   );
@@ -754,6 +759,52 @@ sourceHashes.explicitTopicReadiness = hash(
 );
 sourceHashes.reasoningQuestionData = hash(JSON.stringify(reasoningConcepts));
 sourceHashes.guidedLearningData = hash(JSON.stringify({ regionalTours, shoulderTour }));
+const expectedEyeParents = [
+  'vm:anatomy:body:head-neck:left:organ:left-eyeball',
+  'vm:anatomy:body:head-neck:right:organ:right-eyeball',
+];
+assert.deepEqual(eyeLayers.parents.map(parent => parent.id).sort(), expectedEyeParents,
+  'Both admitted eye parents must retain their exact source identities');
+const eyeTargets = nestedTargets.filter(target => target.study === 'eye');
+assert.equal(eyeTargets.length, 15, 'Both admitted eye studies must retain 15 existing children');
+const nestedEyeGuides = expectedEyeParents.map(parentId => {
+  const parent = displayCatalog.structures.find(structure => structure.id === parentId);
+  assert(parent, 'Admitted eye parent is absent from the current display catalogue: ' + parentId);
+  const guide = eyeLayerGuide(parent);
+  assert(guide && guide.parentId === parentId && guide.study === 'eye' && guide.status === 'draft',
+    'Exact-source eye guide is unavailable: ' + parentId);
+  assert.equal(guide.steps.length, 4, 'Expected four source-bound stops for each eye');
+  const targets = eyeTargets.filter(target => target.parentId === parentId);
+  assert(targets.length > 0, 'Admitted eye study has no source-bound children: ' + parentId);
+  const childIds = targets.map(target => target.structureId);
+  assert.equal(new Set(childIds).size, childIds.length, 'Eye child IDs must be distinct');
+  assert.deepEqual([...new Set(guide.steps.flatMap(step => step.ids))].sort(), childIds.slice().sort(),
+    'The eye guide must cover exactly the admitted existing children');
+  assert(targets.every(target => target.parentHash === targets[0].parentHash),
+    'Eye study parent source hashes disagree');
+  return {
+    parentId,
+    study: 'eye',
+    guideId: guide.id,
+    parentSourceHash: targets[0].parentHash,
+    parentSourceFiles: parent.sources,
+    children: targets.map(target => ({ id: target.structureId, sourceHash: target.sourceHash,
+      sourceFiles: target.structure.sources })),
+    steps: guide.steps.length,
+    representations: childIds.length,
+    readiness: 'draft',
+    geometryChanged: false,
+  };
+});
+sourceHashes['lib/eye-layer-guide.ts'] = hash(await read('lib/eye-layer-guide.ts'));
+for(const path of ['lib/nested-guided-learning.ts','content/nested-guided-learning-bindings.v1.json','app/whole-body-guided-learning.tsx','app/whole-body-guided-learning.css'])
+  sourceHashes[path]=hash(await read(path));
+const discoverableEyeGuides=nestedGuidedStudyOptions(displayCatalog);
+assert.deepEqual(discoverableEyeGuides.map(option=>option.parent.id).sort(),expectedEyeParents,
+  'Both exact-source eye guides must be discoverable in the shared library');
+sourceHashes.nestedEyeGuidedLearningData = hash(JSON.stringify({ inventory: nestedEyeGuides,
+  resolvedGuides: expectedEyeParents.map(parentId =>
+    eyeLayerGuide(displayCatalog.structures.find(structure => structure.id === parentId))) }));
 const pelvicGuidedDissection = hraPelvicGuidedDissection(hraPelvisDefinition);
 assert(pelvicGuidedDissection, 'Admitted pelvic source guide must resolve exactly');
 const abdominalGuide = abdominalGuidedDissection(abdominalWallDefinition);
@@ -1212,6 +1263,7 @@ const report = {
       independentSpecimens: independentGuides.map(guide => ({ specimenKey: guide.specimenKey, guideId: guide.id,
         sourceFrame: guide.sourceFrame, steps: guide.steps.length,
         representations: new Set(guide.steps.flatMap(step => step.ids)).size, geometryChanged: false })),
+      nestedStudies: nestedEyeGuides,
       readiness: 'draft',
     },
     vesselVisibilityGroups: vesselVisibilityGroups(catalog.structures, []).map(({kind,total}) => ({kind,total})),

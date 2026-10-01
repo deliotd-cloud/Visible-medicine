@@ -150,7 +150,7 @@
     },
     {
       "path": "app/eye-layers.tsx",
-      "sha256": "69b96f889ee6a5175e0c97eca2c9c725392413e6da6c952e5196184c0bbfe15a"
+      "sha256": "61138f2e48a41702e3ee0516a6c7e74bf4f8182cc389773740748cc384a06098"
     },
     {
       "path": "app/femoral-components.tsx",
@@ -418,11 +418,11 @@
     },
     {
       "path": "app/whole-body-guided-learning.css",
-      "sha256": "03f4e025c1a429995fd766705cdd12acc9b862423b019eaf50f7bb08374eb33b"
+      "sha256": "f35c1d9271e7f5ad93d9ed6229a1da0d49b232432e4f7370c9dd8c90c656c94a"
     },
     {
       "path": "app/whole-body-guided-learning.tsx",
-      "sha256": "2f1650c349e40ed5b4d50c0e26b396e18130536c3363439c848fce7bcb74b771"
+      "sha256": "837a007eebc8aa0f28613aeab2dab0de9a83c25db93b6549867b56e0df29dcdf"
     },
     {
       "path": "app/workspace-session.ts",
@@ -1247,6 +1247,10 @@
     {
       "path": "content/nested-ct-orientation.ts",
       "sha256": "a258b94e94c0124df1761dbaf738cc90b0977a793463991b22bcd37b0323d31a"
+    },
+    {
+      "path": "content/nested-guided-learning-bindings.v1.json",
+      "sha256": "6929af9e77abcd8ee3a3f1b9bda8f4affeb1b21b35d513854d1bd68a03034c14"
     },
     {
       "path": "content/nested-review-bindings.json",
@@ -2709,6 +2713,10 @@
       "sha256": "4ef9ac4e7fb31d13899399c353fd883ba7c49c8cc44c51c132710ae7eea4f476"
     },
     {
+      "path": "lib/nested-guided-learning.ts",
+      "sha256": "56ce7db943ebe22f92733b8173a7dcaea4e59d921463d10ea3710cf029486972"
+    },
+    {
       "path": "lib/nested-learning-anatomy.ts",
       "sha256": "0a635f713f9bc99d00c62c14cc4c5d05a4eb639f9633afc9f2ae2b440bb4dcc7"
     },
@@ -3318,7 +3326,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "b3b7425415459ebfb1d1ac77fc6b96546ca14290f437e9927a45a115aec6e16d"
+      "sha256": "48cf93d90ccbee40d2fa0f690d1eb82707c188fbf856d104e3ce3785b5307766"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3533,5 +3541,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "20031e907abcb4f2cd9cb337e1e1ddc69639715a0e81a5ad688d211f17d09fce"
+  "sha256": "18ded5ae33a8875a198fa3f6b36a244f8d1f56a0663eb86ba7ca07e4ba5da714"
 }
