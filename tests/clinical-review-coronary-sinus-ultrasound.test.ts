@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 test('coronary sinus echo draft is source-bound in learner and review while small vein and imaging approval remain pending',async()=>{
  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
  const inputs=JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json','utf8'));
- assert.equal(review.revision,'065062b5d5a9db1ee891dbd66fa890d7bb46b0fa');
+ assert.equal(review.revision,'8cfd73cda5077ea608720c3c4d88d8e51371e2ef');
  for(const path of ['content/coronary-venous-teaching.ts','content/nested-teaching.ts','content/nested-teaching-bindings.v1.json','lib/nested-teaching.ts']){
   const file=review.files.find((f:any)=>f.path===path);assert(file);
   assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,file.sourceSha256);

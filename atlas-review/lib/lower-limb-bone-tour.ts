@@ -11,18 +11,24 @@ const bones=[
 ] as const;
 type Bone=typeof bones[number][0];
 const id=(name:Bone)=>bones.find(item=>item[0]===name)![1];
-const frame=bones.map(item=>item[1]);
+// Camera framing never removes, repositions or crops the assembled source meshes.
+// Long bones remain context outside a focused patellar or hindfoot camera window.
+const frames:Record<Bone,Bone[]>={
+  hip:['hip'],femur:['femur'],patella:['patella'],
+  tibia:['tibia','fibula'],fibula:['tibia','fibula'],
+  talus:['talus','calcaneus'],calcaneus:['talus','calcaneus'],
+};
 const reference='https://anatomy.ttuhscep.edu/anatomytables/bones_lowerlimb.html';
 const stop=(name:Bone,title:string,view:RegionalTour['steps'][number]['view'],caption:string):RegionalTour['steps'][number]=>({
-  id:name,title,selectedId:id(name),view,caption,frameIds:[...frame],
+  id:name,title,selectedId:id(name),view,caption,frameIds:frames[name].map(id),
   references:[reference],durationMs:14000,fadeOthers:true,
 });
 
 export const lowerLimbBoneTour:RegionalTour={
   id:'right-lower-limb-bone-orientation',title:'Right lower limb: hip to heel',region:'whole-body',
-  revision:'right-lower-limb-bone-orientation-v1',status:'draft',
-  description:'Seven original right-sided whole-bone surfaces from hip to heel. Every stop retains the same assembled source frame.',
-  limitations:'Whole-bone source surfaces only; ilium, ischium, pubis and individual bone landmarks are not separate selections. Cartilage, menisci, ligaments and tendons are not shown. No weight-bearing or validated joint-space measurement, fracture diagnosis, acquired scan, patient registration or clinical approval. Fading changes visibility, not anatomy. Draft pending revision-bound radiologist review.',
+  revision:'right-lower-limb-bone-orientation-v2',status:'draft',
+  description:'Seven original right-sided whole-bone surfaces from hip to heel. Smooth contextual close-ups retain the assembled source relationships.',
+  limitations:'Whole-bone source surfaces only; ilium, ischium, pubis and individual bone landmarks are not separate selections. All seven bones stay assembled; focused camera windows can place other context outside the view without removing it. Cartilage, menisci, ligaments and tendons are not shown. No weight-bearing or validated joint-space measurement, fracture diagnosis, acquired scan, patient registration or clinical approval. Fading changes visibility, not anatomy. Draft pending revision-bound radiologist review.',
   contextIds:[],
   scopeRegions:['pelvis','thigh','leg','foot'],
   requiredDisplayBundles:Object.fromEntries(bones.map(([,boneId,bundle])=>[boneId,bundle])),
