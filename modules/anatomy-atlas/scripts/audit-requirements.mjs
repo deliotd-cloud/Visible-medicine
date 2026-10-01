@@ -30,6 +30,8 @@ const bundled = await build({
   stdin: {
     contents: `export { hraPelvisDefinition } from './lib/hra-pelvis.ts';
 export { hraPelvicGuidedDissection } from './lib/hra-pelvic-guided-dissection.ts';
+export { abdominalGuidedDissection } from './lib/abdominal-guided-dissection.ts';
+export { backGuidedDissection } from './lib/back-guided-dissection.ts';
 export { hraPelvicTeaching, hraPelvicPractice } from './lib/hra-pelvis-teaching.ts';
 export { hraRenalDefinition } from './lib/hra-renal.ts';
 export { hraRenalTeaching, hraRenalPractice } from './lib/hra-renal-teaching.ts';
@@ -87,6 +89,8 @@ export { abdominalTeachingFor } from './lib/abdominal-wall-teaching.ts';`,
 const {
   hraPelvisDefinition,
   hraPelvicGuidedDissection,
+  abdominalGuidedDissection,
+  backGuidedDissection,
   hraPelvicTeaching,
   hraPelvicPractice,
   hraRenalDefinition,
@@ -660,6 +664,8 @@ for (const path of [
   'lib/independent-specimen.ts',
   'lib/specimen-guided-dissection.ts',
   'lib/hra-pelvic-guided-dissection.ts',
+  'lib/abdominal-guided-dissection.ts',
+  'lib/back-guided-dissection.ts',
   'lib/abdominal-wall.ts',
   'lib/back-layers.ts',
   'lib/back-layers-teaching.ts',
@@ -735,7 +741,11 @@ sourceHashes.reasoningQuestionData = hash(JSON.stringify(reasoningConcepts));
 sourceHashes.guidedLearningData = hash(JSON.stringify({ regionalTours, shoulderTour }));
 const pelvicGuidedDissection = hraPelvicGuidedDissection(hraPelvisDefinition);
 assert(pelvicGuidedDissection, 'Admitted pelvic source guide must resolve exactly');
-sourceHashes.independentGuidedDissectionData = hash(JSON.stringify(pelvicGuidedDissection));
+const abdominalGuide = abdominalGuidedDissection(abdominalWallDefinition);
+const backGuide = backGuidedDissection(backLayersDefinition);
+assert(abdominalGuide && backGuide, 'Admitted wall/back guides must resolve exactly');
+const independentGuides = [pelvicGuidedDissection, abdominalGuide, backGuide];
+sourceHashes.independentGuidedDissectionData = hash(JSON.stringify(independentGuides));
 for (const path of [
   'app/volume-image.tsx', 'app/review/mri-import/page.tsx',
   'lib/regional-tours.ts', 'lib/shoulder-tours.ts', 'lib/chest-wall-tour.ts',
@@ -1180,9 +1190,9 @@ const report = {
       regionalStops: regionalTours.reduce((total, tour) => total + tour.steps.length, 0),
       shoulderTours: 1,
       shoulderStops: shoulderTour.steps.length,
-      independentSpecimens: [{ specimenKey: pelvicGuidedDissection.specimenKey, guideId: pelvicGuidedDissection.id,
-        sourceFrame: pelvicGuidedDissection.sourceFrame, steps: pelvicGuidedDissection.steps.length,
-        representations: new Set(pelvicGuidedDissection.steps.flatMap(step => step.ids)).size, geometryChanged: false }],
+      independentSpecimens: independentGuides.map(guide => ({ specimenKey: guide.specimenKey, guideId: guide.id,
+        sourceFrame: guide.sourceFrame, steps: guide.steps.length,
+        representations: new Set(guide.steps.flatMap(step => step.ids)).size, geometryChanged: false })),
       readiness: 'draft',
     },
     vesselVisibilityGroups: vesselVisibilityGroups(catalog.structures, []).map(({kind,total}) => ({kind,total})),

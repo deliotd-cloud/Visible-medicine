@@ -6,14 +6,17 @@ import { dirname } from 'node:path';
 import { build } from './workspace-test-build.mjs';
 
 const baseline = 'e88e43b4c0c0aa5d2fa48c2ee5fc0b86c9519abe';
-const oldFile = path => execFileSync('git', ['show', `${baseline}:${path}`], { encoding: 'utf8', maxBuffer: 10_000_000 });
+// Retain the delivered pelvic-only delta. The wall/back test separately checks
+// current teaching against this milestone across all independent review rows.
+const milestone = 'a023f47064b2987c5593d9a7884c7e1937afe001';
+const oldFile = (path, revision = baseline) => execFileSync('git', ['show', `${revision}:${path}`], { encoding: 'utf8', maxBuffer: 10_000_000 });
 const contents = "export * from './lib/specimen-review-material'; export * from './lib/specimen-review'; export * from './lib/specimen-review-api'; export * from './lib/specimen-review-client'; export * from './lib/hra-pelvic-guided-dissection'; export * from './lib/hra-pelvis'; export * from './lib/independent-specimen'; export * from './lib/specimen-guided-dissection';";
 async function load(previous = false) {
   const result = await build({ stdin: { contents, resolveDir: process.cwd(), loader: 'ts' }, bundle: true, write: false, format: 'esm', platform: 'node',
-    plugins: previous ? [{ name: 'exact-pre-guide-review', setup(api) {
-      api.onLoad({ filter: /[\\/]lib[\\/]specimen-review-material\.ts$/ }, args => ({ contents: oldFile('lib/specimen-review-material.ts'), loader: 'ts', resolveDir: dirname(args.path) }));
-      api.onLoad({ filter: /[\\/]content[\\/]body-renderer-revision\.json$/ }, () => ({ contents: oldFile('content/body-renderer-revision.json'), loader: 'json' }));
-    } }] : [],
+    plugins: [{ name: 'exact-pelvic-guide-milestone', setup(api) {
+      api.onLoad({ filter: /[\\/]lib[\\/]specimen-review-material\.ts$/ }, args => ({ contents: oldFile('lib/specimen-review-material.ts', previous ? baseline : milestone), loader: 'ts', resolveDir: dirname(args.path) }));
+      if (previous) api.onLoad({ filter: /[\\/]content[\\/]body-renderer-revision\.json$/ }, () => ({ contents: oldFile('content/body-renderer-revision.json'), loader: 'json' }));
+    } }],
   });
   return import(`data:text/javascript;base64,${Buffer.from(result.outputFiles[0].text).toString('base64')}`);
 }
@@ -92,4 +95,4 @@ for (const corrupt of [null, {}, { ...state, selectedId: 'foreign' }, { ...state
 }
 assert.equal(current.guidedDissectionAction(definition, { ...guide, specimenKey: 'foreign' }, 0), null);
 for (const index of [-1, 6, NaN, 0.5]) assert.equal(current.guidedDissectionAction(definition, guide, index), null);
-console.log(JSON.stringify({ contexts, unchangedSourceContexts: contexts, changedGuidedTeachingContexts: changed, rejectedStalePackets: rejectedStale, modelsUnchanged: true, clinicalApproved: false }));
+console.log(JSON.stringify({ deliveredTeachingMilestone: milestone, contexts, unchangedSourceContexts: contexts, changedGuidedTeachingContexts: changed, rejectedStalePackets: rejectedStale, modelsUnchanged: true, clinicalApproved: false }));

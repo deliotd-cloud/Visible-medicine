@@ -266,6 +266,7 @@ const require = createRequire(import.meta.url),
   context = {
     module: mod,
     exports: mod.exports,
+    structuredClone,
     require: (id) => id === 'next/link' ? { __esModule: true, ...actualLink } : require(id),
     URL,
     URLSearchParams,

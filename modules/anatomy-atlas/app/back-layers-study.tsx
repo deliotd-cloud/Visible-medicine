@@ -27,6 +27,7 @@ import type {
 } from '@/lib/independent-specimen';
 import type { SpecimenTopic } from '@/lib/specimen-links';
 import {modelDeliveryUrl} from '@/lib/model-delivery';
+import { backGuidedDissection } from '@/lib/back-guided-dissection';
 
 export function BackLayersTeaching({
   surface,
@@ -49,6 +50,7 @@ export function BackLayersTeaching({
   );
 }
 export function backLayersSupplementFor(assetBase=''): SpecimenSupplement { return {
+  guidedDissection: backGuidedDissection,
   studyLink: (definition, selectedId, studyId, view) => <IndependentStudyLinkControl assetBase={assetBase} definition={definition} selectedId={selectedId} studyId={studyId} view={view} />,
   colors: backLayersColors,
   identification: backLayersPractice,

@@ -7,9 +7,10 @@ import { build } from './workspace-component-test-build.mjs';
 
 const require = createRequire(import.meta.url);
 const React = require('react');
+const actualLink = await import('vinext/shims/link');
 const built = await build({
   stdin: {
-    contents: "export { KneeSpecimenView } from './app/um-knee-study'; export { createHraPelvisSupplement } from './app/hra-pelvis-supplement'; export { hraPelvisDefinition } from './lib/hra-pelvis'; export { hraPelvicGuidedDissection } from './lib/hra-pelvic-guided-dissection'; export { kneeDefinition } from './lib/um-limb-studies'; export { hraRenalDefinition } from './lib/hra-renal'; export { initialSpecimen, reduceSpecimen } from './lib/independent-specimen'; export { validStudyCamera } from './lib/study-views';",
+    contents: "export { KneeSpecimenView } from './app/um-knee-study'; export { createHraPelvisSupplement } from './app/hra-pelvis-supplement'; export { hraPelvisDefinition } from './lib/hra-pelvis'; export { hraPelvicGuidedDissection } from './lib/hra-pelvic-guided-dissection'; export { kneeDefinition } from './lib/um-limb-studies'; export { hraRenalDefinition } from './lib/hra-renal'; export { initialSpecimen, reduceSpecimen } from './lib/independent-specimen'; export { validStudyCamera } from './lib/study-views'; export { abdominalWallDefinition } from './lib/abdominal-wall'; export { backLayersDefinition } from './lib/back-layers'; export { abdominalWallSupplementFor } from './app/abdominal-wall-study'; export { backLayersSupplementFor } from './app/back-layers-study';",
     resolveDir: process.cwd(), loader: 'tsx',
   },
   bundle: true, write: false, format: 'cjs', platform: 'node',
@@ -74,7 +75,7 @@ function harness({ definition, supplement, initialNavigation, reducedMotion = fa
   const module = { exports: {} };
   runInNewContext(built.outputFiles[0].text, {
     module, exports: module.exports, structuredClone, window, document,
-    require(id) { return id === 'react' ? shim : require(id); },
+    require(id) { return id === 'react' ? shim : id === 'next/link' ? { __esModule: true, ...actualLink } : require(id); },
   });
   const api = module.exports;
   const specimen = definition ?? api.hraPelvisDefinition;
@@ -221,6 +222,37 @@ test('Guided session restores exact reducer history, search, display and capture
   assert.deepEqual(plain(h.scene().cameraRestore.current), captured);
   assert.equal(h.api.validStudyCamera(h.scene().cameraRestore.current), true);
   h.unchanged();
+});
+
+test('Wall/back supplements deliver six exact steps with readiness, reduced motion and Finish restoration', () => {
+  const api = harness().api;
+  for (const [definition, supplement] of [
+    [api.abdominalWallDefinition, api.abdominalWallSupplementFor()],
+    [api.backLayersDefinition, api.backLayersSupplementFor()],
+  ]) for (const reducedMotion of [false, true]) {
+    const h = harness({ definition, supplement, reducedMotion });
+    const guide = supplement.guidedDissection(definition);
+    assert.equal(guide.steps.length, 6);
+    assert.equal(h.button('Start guided dissection').disabled, true);
+    const before = plain(h.slots[0]);
+    h.ready(); h.click('Start guided dissection');
+    for (const [index, step] of guide.steps.entries()) {
+      assert.equal(h.scene().selectedId, step.selectedId);
+      assert.equal(h.scene().view, step.view);
+      assert.deepEqual(plain(h.scene().hiddenIds), plain(definition.surfaces.filter(surface => !step.ids.includes(surface.id)).map(surface => surface.id)));
+      assert.equal(h.scene().transitionMs, reducedMotion ? 0 : 1800);
+      assert(text(h.tree()).includes(step.caption));
+      if (index < guide.steps.length - 1) h.click('Next');
+    }
+    h.click('Finish');
+    assert.deepEqual(plain(h.slots[0]), before);
+    h.ready(); h.click('Start guided dissection');
+    h.scene().onRendererHealth('lost'); h.render();
+    assert.equal(h.button('Next').disabled, true);
+    h.click('Exit guided dissection');
+    assert.deepEqual(plain(h.slots[0]), before);
+    h.unchanged();
+  }
 });
 
 test('Rendering loss and hidden document pause navigation while Exit remains available', () => {

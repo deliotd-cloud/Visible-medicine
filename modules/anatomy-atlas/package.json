@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "wall-back-guided-dissection:test": "node --import tsx --test scripts/test-abdominal-guided-dissection.mjs scripts/test-back-guided-dissection.mjs && node scripts/test-wall-back-guided-review.mjs && node scripts/test-specimen-guided-player.mjs",
     "pelvic-guided-dissection:test": "node --import tsx --test scripts/test-hra-pelvic-guided-dissection.mjs && node scripts/test-specimen-guided-player.mjs && node scripts/test-specimen-guided-review.mjs",
     "cranial-bone-quiz:test": "node scripts/test-cranial-bone-quiz.mjs --integrated && node scripts/cranial-bone-quiz-transition.mjs --check && node scripts/test-cranial-bone-quiz-history.mjs && node scripts/test-tour-quick-check.mjs",
     "upper-limb-bone-tour:test": "node scripts/test-upper-limb-bone-tour.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-regional-tour-review.mjs && node scripts/test-tour-step-picker.mjs && node scripts/test-tour-camera.mjs",

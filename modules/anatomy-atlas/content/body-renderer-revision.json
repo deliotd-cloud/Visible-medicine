@@ -18,7 +18,7 @@
     },
     {
       "path": "app/abdominal-wall-study.tsx",
-      "sha256": "4d553f20904fa72629716b7c502c9bf18637d3b242fa49aa03806e54ccb528b8"
+      "sha256": "31ab0e30b356043755c74970e777f36e8760629177c711c87477fabd6e5c5db9"
     },
     {
       "path": "app/anatomy-canvas.tsx",
@@ -58,7 +58,7 @@
     },
     {
       "path": "app/back-layers-study.tsx",
-      "sha256": "ba4c174c306d94735a0a2d7bea791e8ac21e67e21726db4c5eff1e5915ff0fec"
+      "sha256": "050a156b026d83fe93dd5512a3f226528fe1a64d10dbbbc48499ebd0a9f99da2"
     },
     {
       "path": "app/body-batch.tsx",
@@ -1709,6 +1709,10 @@
       "sha256": "808a7843520946b378496a3629d12dcea5d708c519f58bb0cc99befa7bb1c147"
     },
     {
+      "path": "lib/abdominal-guided-dissection.ts",
+      "sha256": "73bfb2cc99767b2ede0969bde9cb1db61edb0b97c994e846686cd1bd90720df7"
+    },
+    {
       "path": "lib/abdominal-organ-clinical-curriculum.ts",
       "sha256": "2945f5c4cb8c7ff6656130ca73f03f4cecafd9cadcf342de606a97612d8e8d6a"
     },
@@ -1859,6 +1863,10 @@
     {
       "path": "lib/axial-connective-clinical-curriculum.ts",
       "sha256": "a5b83ef274fbdf6c6828b9e2871148b92d17b78c74064ddb0f205bccd694139e"
+    },
+    {
+      "path": "lib/back-guided-dissection.ts",
+      "sha256": "369af44b99ec6ae40540c17d115082f50213e2be25e93dcb85632eeb8825a46b"
     },
     {
       "path": "lib/back-layers-teaching.ts",
@@ -3262,7 +3270,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "47ff03a2ec6dffcfe245517c928a91cfae714d70e61765ee26c99946c8f4f910"
+      "sha256": "90c1b85b8cf57bf82cc8e5711c7de35581d31c0d5babe93d7ffc92effd2f015c"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3477,5 +3485,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "8f27d53ae7627aafb18936c26fbbc5ebf19b2114c975649a50e55acde7a3de53"
+  "sha256": "6727ac48858b517aa401b12e9b7c1f743ef07d6f870f8be869c0f31f4eca2dcb"
 }
