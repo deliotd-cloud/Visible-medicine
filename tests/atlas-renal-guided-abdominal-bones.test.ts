@@ -7,8 +7,9 @@ import {readFileSync} from 'node:fs';
 import {dirname, resolve} from 'node:path';
 import {build} from 'esbuild';
 
-const source = '7d3010368fc53e3433e8df4f9e9d4ddb67e786e8';
+const source = 'fc5457b6dbc12cb6ce702c2fc272d0bcb6cc59fc';
 const sourceBefore = 'adad1abe1ad6fdb3c942d1d8b6a98393591bec80';
+const renalBoneMilestone = '7d3010368fc53e3433e8df4f9e9d4ddb67e786e8';
 const websiteBefore = 'c0da7e2bf6a9f6f3e262b8c5326c369e5e6cafd2';
 const sourceRepo = process.env.ATLAS_SOURCE_REPO ?? resolve('..', '..', '..', '2026-09-05', 'referenced-chatgpt-conversation-this-is-an-2', 'outputs');
 const gitBytes = (repo: string, revision: string, path: string) => Buffer.from(execFileSync('git', ['-C', repo, 'show', `${revision}:${path}`], {maxBuffer: 32e6}));
@@ -18,7 +19,7 @@ const previousWebsiteBytes = (path: string) => Buffer.from(execFileSync('git', [
 const json = (path: string) => JSON.parse(readFileSync(path, 'utf8'));
 const sha256 = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex');
 
-async function reviewApi(previous = false) {
+async function reviewApi(revision: 'latest' | 'prior' | 'milestone' = 'latest') {
   const result = await build({
     stdin: {contents: [
       "export {hraRenalDefinition} from './atlas-review/lib/hra-renal';",
@@ -29,13 +30,20 @@ async function reviewApi(previous = false) {
       "export {postSpecimenReview} from './atlas-review/lib/specimen-review-api';",
     ].join('\n'), resolveDir: process.cwd(), loader: 'ts'},
     bundle: true, write: false, platform: 'node', format: 'esm',
-    plugins: previous ? [{name: 'previous-renal-and-bone-teaching', setup(plugin) {
-      // Both adapters changed at this source revision. Keep every other import current.
+    plugins: revision === 'latest' ? [] : [{name: 'historical-renal-and-bone-teaching', setup(plugin) {
+      const adapterRevision = revision === 'prior' ? sourceBefore : renalBoneMilestone;
       for (const path of ['lib/specimen-review-material.ts', 'lib/abdominal-wall-teaching.ts'])
         plugin.onLoad({filter: new RegExp(path.replaceAll('/', '[\\\\/]') + '$')}, args => ({
-          contents: previousSourceBytes(path).toString('utf8'), loader: 'ts', resolveDir: dirname(args.path),
+          contents: gitBytes(sourceRepo, adapterRevision, path).toString('utf8'), loader: 'ts', resolveDir: dirname(args.path),
         }));
-    }}] : [],
+      for (const path of ['content/back-bone-teaching.ts', 'content/back-layers-clinical.ts'])
+        plugin.onLoad({filter: new RegExp(path.replaceAll('/', '[\\\\/]') + '$')}, args => ({
+          contents: gitBytes(sourceRepo, renalBoneMilestone, path).toString('utf8'), loader: 'ts', resolveDir: dirname(args.path),
+        }));
+      plugin.onLoad({filter: /[\\/]content[\\/]body-renderer-revision\.json$/}, () => ({
+        contents: gitBytes(sourceRepo, adapterRevision, 'content/body-renderer-revision.json').toString('utf8'), loader: 'json',
+      }));
+    }}],
   });
   return import('data:text/javascript;base64,' + Buffer.from(result.outputFiles[0].text).toString('base64'));
 }
@@ -145,8 +153,8 @@ test('pinned renal guide and abdominal bone lessons ship in the shared learner a
 });
 
 test('356 source identities stay fixed; 103 teaching changes reject 309 stale or foreign submissions before storage', {timeout: 120000}, async () => {
-  const current = await reviewApi();
-  const previous = await reviewApi(true);
+  const current = await reviewApi('milestone');
+  const previous = await reviewApi('prior');
   const guide = current.hraRenalGuidedDissection(current.hraRenalDefinition);
   assert(guide);
   const renalIds = new Set<string>(guide.steps.flatMap((step: any) => step.ids));

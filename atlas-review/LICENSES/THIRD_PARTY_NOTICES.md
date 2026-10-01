@@ -2048,3 +2048,16 @@ Current OpenStax pages' non-commercial/AI restrictions are not relied on for
 this new slice. A reference link is not an asset-use grant or endorsement.
 No font, model, texture, dataset, scan, dependency, paid service or mandatory fee
 added. Detailed scope and required review: `docs/RENAL_GUIDED_ABDOMINAL_BONES.md`.
+
+## Back-specimen teaching completion (1 October 2026)
+
+Original short draft notes fill missing topics for existing back bones and muscle
+parts. Their reading references are ACR primary publications, ACR/RSNA information,
+AO anatomical/imaging material and original case research, not licensed assets or
+endorsements. No publisher prose, table, figure, scan, screenshot, PDF or image is
+redistributed. New notes do not rely on current OpenStax non-commercial/AI terms
+as a commercial grant; retaining earlier references does not clear historic use.
+All existing BodyParts3D v3 / CC BY-SA2.1 Japan source assets, credits, downloads
+and recipients' rights remain unchanged. No additional model, font, texture,
+dataset, dependency, paid service or mandatory fee. Scope and required clinical
+review: `docs/BACK_TEACHING_COMPLETION.md`.

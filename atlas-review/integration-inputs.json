@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "7d3010368fc53e3433e8df4f9e9d4ddb67e786e8",
-  "sha256": "2ff80c22001285a514617d572bbcf1baf766c3f966d631653e30724dcd69c6cb",
+  "sourceCommit": "fc5457b6dbc12cb6ce702c2fc272d0bcb6cc59fc",
+  "sha256": "1290c86149f6c93c57159c15d21847b327912981ab561163f37d2cd2581a1398",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -704,11 +704,11 @@
     },
     {
       "path": "atlas-review/content/back-bone-teaching.ts",
-      "sha256": "09580e7ee30c2c4dd951bde5a53b6c93168d43d3cab3ede337b88a102db7854d"
+      "sha256": "590d53eecda100df1444eeb227bf434c6441c3f9d93d8060f041848adcef4861"
     },
     {
       "path": "atlas-review/content/back-layers-clinical.ts",
-      "sha256": "aef46c639404b420803382ae7763c47b1f951d4903b68c91c5514955e1f093ea"
+      "sha256": "2b6718847589ad135b8682ef8c94ff2717b014c1b1de3b13c838c578f6995b4d"
     },
     {
       "path": "atlas-review/content/back-layers-teaching.ts",
@@ -3540,7 +3540,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "b91374b0f91174ea06a0e7fdf3cd9bec3e2a2966f25605b56dd955ed9a1a97e0"
+      "sha256": "2e22c21fb5aa4a370cb2f6a92729e231fdda1517905ebd8c83e1d7142bb2d3ca"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3796,7 +3796,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "248ac167eabb83afa3b021da2345057528865b3877202654804f5bdcbe935422"
+      "sha256": "c4263443eb952edb0178be688f8c44397f5deb30deed4a9cc9d0df5ce6f27f6b"
     }
   ]
 }

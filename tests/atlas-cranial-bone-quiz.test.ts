@@ -8,7 +8,7 @@ import {resolve} from 'node:path';
 import {build, transform} from 'esbuild';
 
 test('cranial bone quick checks retain exact source, learner and revision-bound review evidence', async () => {
-  const source = '7d3010368fc53e3433e8df4f9e9d4ddb67e786e8';
+  const source = 'fc5457b6dbc12cb6ce702c2fc272d0bcb6cc59fc';
   const parent = 'bc03ed3f7324819f4bfa3e7cd0afb7203cc8e3b8';
   const websiteBaseline = '736ad7a31aa8e6414493a534f66ce7810b0a4780';
   const sourceRepo = process.env.ATLAS_SOURCE_REPO ?? resolve('..', '..', '..', '2026-09-05', 'referenced-chatgpt-conversation-this-is-an-2', 'outputs');
