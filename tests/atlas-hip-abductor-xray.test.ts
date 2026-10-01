@@ -8,9 +8,9 @@ test('hip abductor X-ray drafts ship their exact source-bound implementation wit
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'6b1d01be6254fb9f522ef3ede8802209397d2b7a8f6c1b87004696306696d52c');
+  assert.equal(sha(bytes),'1324c80a441ed12b16d3cefd0d3798d224c9b1c2312e04545da9c68186dee247');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'d35fab9730ca5420d7a65f0ba321d8cbfff03571');
+  assert.equal(manifest.sourceCommit,'e8a7ceca9fe7c82c744345f1854bafb6055853af');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of [
     ['app/body-content.ts','688a620d5821e5f228d07010be7a365edfff35a729561b02ec2871f3a05e0fc3'],

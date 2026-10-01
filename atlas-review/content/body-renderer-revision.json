@@ -2842,7 +2842,7 @@
     },
     {
       "path": "lib/regional-tours.ts",
-      "sha256": "48c13b140f587d182f1b0aa597012f35525d9e681233941673a8dcc7e3a46e20"
+      "sha256": "0d04c5fd758286e9dd350bebd573fc7989ef9a355379e9856e739286bf6efec0"
     },
     {
       "path": "lib/regional-vascular-clinical.ts",
@@ -3023,6 +3023,10 @@
     {
       "path": "lib/tarsal-imaging.ts",
       "sha256": "25d1061071ff016a0b61342ae79b6af6268a486c3cb39d9333cc6c7cfe35640d"
+    },
+    {
+      "path": "lib/tarsal-tour.ts",
+      "sha256": "81dbbe8f9aeeb3363f5f5cc4e30c04f8f088a9fde08813bf21ae7ab2d14de1e1"
     },
     {
       "path": "lib/tentorium-imaging.ts",
@@ -3230,7 +3234,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "b1af5933159fbbede63cbadfe63abf05d8a5efdaae99800d3f7dd77e79e151c3"
+      "sha256": "f72e61380826db7d098b80398b0c0abcabedbc45c675edd0d390cfe5ed1a4c19"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3445,7 +3449,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "2868bae9505dd6f4ec05e8b10f45308905314e2a3bb8bd787a555c6dc8010c2e",
-  "sourceRendererSha256": "c2b8c7382599f4dcdc2816fea4ae51eb7e3ec8a972fd48fc472a3eb3186d8c4a",
-  "websiteIntegrationSha256": "634c5df6c4878dbb3dcd197dddc648767f159046c95644d6df6d49b16fa3c2f5"
+  "sha256": "ec7cd715e33d59af835e49972109bf797a74150bf233bde941e7e42c87386ad0",
+  "sourceRendererSha256": "6bf5a243c818e8ef24e0dfed8142e404eeaf76169c3350112b818233af317d58",
+  "websiteIntegrationSha256": "6e11de7279454cd9d1917fb363c72bd60e4f2f4e2906a78235872652724d624c"
 }

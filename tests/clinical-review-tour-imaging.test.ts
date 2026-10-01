@@ -6,11 +6,11 @@ import {build} from 'esbuild';
 
 test('guided imaging notes reach both learners and review without inventing scan access',async()=>{
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
-  assert.equal(review.revision,'d35fab9730ca5420d7a65f0ba321d8cbfff03571');
+  assert.equal(review.revision,'e8a7ceca9fe7c82c744345f1854bafb6055853af');
   for(const module of ['head-neck','shoulder']){
     const base=`public/atlas-runtime/${module}/`;
     const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-    assert.equal(learner.sourceCommit,'d35fab9730ca5420d7a65f0ba321d8cbfff03571');
+    assert.equal(learner.sourceCommit,'e8a7ceca9fe7c82c744345f1854bafb6055853af');
     const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
     for(const path of ['app/tour-imaging-notes.tsx','app/tour-imaging-notes.css']){
       const f=review.files.find((f:any)=>f.path===path);assert.ok(f,path);
@@ -47,7 +47,7 @@ test('guided imaging notes reach both learners and review without inventing scan
     const structure=api.structures.find((s:any)=>s.id===step.selectedId);
     for(const tab of ['ct','mri','xray','ultrasound']){assert.ok(structure.sections[tab]?.body);checked++;}
   }
-  assert.equal(checked,456); // 109 regional stops plus five shoulder stops, four modalities each.
+  assert.equal(checked,484); // 116 regional stops plus five shoulder stops, four modalities each.
   const notes=readFileSync('atlas-review/app/tour-imaging-notes.tsx','utf8');
   assert.ok(notes.includes('paid lectures require their own access'));
   assert.ok(notes.includes('if(event.currentTarget.open)onOpen()'));

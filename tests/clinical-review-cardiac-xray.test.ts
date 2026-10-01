@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 test('all four cardiac X-ray drafts reach exact review selections from the learner source without imaging approval',async()=>{
  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
  const inputs=JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json','utf8'));
- assert.equal(review.revision,'d35fab9730ca5420d7a65f0ba321d8cbfff03571');
+ assert.equal(review.revision,'e8a7ceca9fe7c82c744345f1854bafb6055853af');
  for(const path of ['content/cardiac-xray-teaching.ts','content/nested-teaching.ts','content/nested-teaching-bindings.v1.json','lib/nested-teaching.ts']){
   const file=review.files.find((f:any)=>f.path===path);assert(file);
   assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,file.sourceSha256);

@@ -1999,3 +1999,14 @@ No prose passage, article image, table, scan, patient data or study dataset is
 imported. Existing BodyParts3D4.0/CC BY4.0 geometry/credit is unchanged. No new
 asset, dependency, font, texture, paid service or mandatory product fee. Clinical
 review remains revision-bound. See `docs/TENTORIUM_IMAGING.md`.
+
+# Right tarsal guided tour reference — 1 October 2026
+
+Original brief factual orientation captions reference TTUHSC El Paso,
+[Bones of the Lower Limb](https://anatomy.ttuhscep.edu/anatomytables/bones_lowerlimb.html).
+The copyright-protected table is a reading reference, not an asset-reuse licence:
+no table, diagram, screenshot or prose passage is imported. Existing right-foot
+BodyParts3D 4.0 / CC BY 4.0 meshes, source hashes and credits are unchanged.
+No new model, image, texture, font, dependency, paid provider or mandatory runtime
+fee is introduced. The tour remains draft pending revision-bound radiologist
+review; it establishes neither acquired-image linkage nor registration.

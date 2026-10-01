@@ -9,7 +9,7 @@ test('partial tentorium CT/MRI drafts have exact learner/review identity and fai
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
  const review=json('atlas-review/manifest.json'),runtime=json('public/atlas-runtime/head-neck/manifest.json');
  const inputs=json('public/atlas-runtime/head-neck/source-inputs.json');
- assert.equal(review.revision,'d35fab9730ca5420d7a65f0ba321d8cbfff03571');
+ assert.equal(review.revision,'e8a7ceca9fe7c82c744345f1854bafb6055853af');
  assert.equal(runtime.sourceCommit,review.revision);
  for(const path of ['app/body-content.ts','content/tentorium-imaging.ts','content/tentorium-imaging-pins.json','lib/tentorium-imaging.ts']){
   const entry=review.files.find((f:any)=>f.path===path);assert(entry,path);
@@ -18,9 +18,12 @@ test('partial tentorium CT/MRI drafts have exact learner/review identity and fai
  }
  const priorPins=JSON.parse(execFileSync('git',['show','8f041073:atlas-review/content/body-review-display-pins.json'],{encoding:'utf8',maxBuffer:4e6}));
  const pins=json('atlas-review/content/body-review-display-pins.json');
+ const tentoriumPins=JSON.parse(execFileSync('git',['show','3316fb7a:atlas-review/content/body-review-display-pins.json'],{encoding:'utf8',maxBuffer:4e6}));
  assert.equal(pins.pins.length,1104);assert.equal(priorPins.pins.length,1104);
  const id='vm:anatomy:body:head-neck:right:connective:tentorium-source-portion';
- assert.deepEqual(pins.pins.filter((p:any,i:number)=>JSON.stringify(p)!==JSON.stringify(priorPins.pins[i])).map((p:any)=>p.structureId),[id]);
+ // Preserve the exact historical tentorium delta; the later tarsal tour has its own seven-pin regression.
+ assert.deepEqual(tentoriumPins.pins.filter((p:any,i:number)=>JSON.stringify(p)!==JSON.stringify(priorPins.pins[i])).map((p:any)=>p.structureId),[id]);
+ assert.deepEqual(pins.pins.find((p:any)=>p.structureId===id),tentoriumPins.pins.find((p:any)=>p.structureId===id));
  for(const region of ['head-neck','whole-body'])assert(runtime.regionalScopes.find((s:any)=>s.region===region).regionalIds.includes(id));
  const result=await build({stdin:{contents:`export * from './atlas-review/lib/body-review-material';export * from './atlas-review/lib/body-review-response';export * from './atlas-review/lib/tentorium-imaging';export * from './atlas-review/content/tentorium-imaging';`,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
  const api=await import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
