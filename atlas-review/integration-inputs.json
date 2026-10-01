@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "03da432b035d1dca7cc9f3344ee2722af627d859",
-  "sha256": "4863abe2e4d3b8304f8fcc32ed232a5f790cb18a5d4675bad8980ffd81eda83d",
+  "sourceCommit": "08b0fbda394c7a878a3b5474e8aa566b8dfb0b83",
+  "sha256": "12e3168ef67c041dcd5672e38a699d99178827a5ee2970824694281bef23a472",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -196,7 +196,7 @@
     },
     {
       "path": "atlas-review/app/eye-layers.tsx",
-      "sha256": "4724ce14d89090689b833dfffd37089a6bfedb4c16af8440271ca1308bb52abb"
+      "sha256": "54b8e2f3e1e4f7bcc5e1d62411251413033f77b0517cf20aeefbc74f5fcc1b18"
     },
     {
       "path": "atlas-review/app/femoral-components.tsx",
@@ -540,11 +540,11 @@
     },
     {
       "path": "atlas-review/app/whole-body-guided-learning.css",
-      "sha256": "03f4e025c1a429995fd766705cdd12acc9b862423b019eaf50f7bb08374eb33b"
+      "sha256": "f35c1d9271e7f5ad93d9ed6229a1da0d49b232432e4f7370c9dd8c90c656c94a"
     },
     {
       "path": "atlas-review/app/whole-body-guided-learning.tsx",
-      "sha256": "fc62855add7601d1593ae0202713fce7916accbcf188979f3ed3385fab33954d"
+      "sha256": "ecf9ef2c6b9404f2597879a26049f917ca6159ef006575f00cdaff7676cbbf51"
     },
     {
       "path": "atlas-review/app/workspace-session.ts",
@@ -1393,6 +1393,10 @@
     {
       "path": "atlas-review/content/nested-ct-orientation.ts",
       "sha256": "a258b94e94c0124df1761dbaf738cc90b0977a793463991b22bcd37b0323d31a"
+    },
+    {
+      "path": "atlas-review/content/nested-guided-learning-bindings.v1.json",
+      "sha256": "6929af9e77abcd8ee3a3f1b9bda8f4affeb1b21b35d513854d1bd68a03034c14"
     },
     {
       "path": "atlas-review/content/nested-review-bindings.json",
@@ -2915,6 +2919,10 @@
       "sha256": "4ef9ac4e7fb31d13899399c353fd883ba7c49c8cc44c51c132710ae7eea4f476"
     },
     {
+      "path": "atlas-review/lib/nested-guided-learning.ts",
+      "sha256": "56ce7db943ebe22f92733b8173a7dcaea4e59d921463d10ea3710cf029486972"
+    },
+    {
       "path": "atlas-review/lib/nested-learning-anatomy.ts",
       "sha256": "0a635f713f9bc99d00c62c14cc4c5d05a4eb639f9633afc9f2ae2b440bb4dcc7"
     },
@@ -3840,7 +3848,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "f8242230bf4cc124df8843d8c0de9ddd8572c51ca93cb84a92bc3a4d582e8106"
+      "sha256": "fb36ed5e49a4bc838f2e08fa8d28a6f08e23a61b98e1c540d64ed521d0f54b3f"
     }
   ]
 }

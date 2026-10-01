@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Guided-library source admission only; not clinical approval, imaging registration or access",
+  "bindings": [
+    {
+      "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+      "parentBundle": {
+        "id": "eye-corrected-parent",
+        "url": "/models/bodyparts3d/eye-layers/right-eyeball.glb?v=f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+        "bytes": 1756184,
+        "sha256": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+        "structures": 1
+      }
+    },
+    {
+      "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+      "parentBundle": {
+        "id": "head-neck-organs-recovery",
+        "url": "/models/bodyparts3d/full-body/head-neck-organs-recovery.glb",
+        "bytes": 3587376,
+        "sha256": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+        "structures": 3
+      }
+    }
+  ]
+}

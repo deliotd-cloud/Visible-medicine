@@ -8,7 +8,7 @@ import {DatabaseSync} from 'node:sqlite';
 import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
 import {build} from 'esbuild';
-const source='03da432b035d1dca7cc9f3344ee2722af627d859',base='792810f5bcf8808f57d2f55e12cca217ed4d262d';
+const source='08b0fbda394c7a878a3b5474e8aa566b8dfb0b83',base='792810f5bcf8808f57d2f55e12cca217ed4d262d';
 const old=(p:string)=>Buffer.from(execFileSync('git',['show',base+':'+p],{maxBuffer:32e6}));
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
@@ -31,10 +31,11 @@ async function load(previous=false){
 }
 test('eye guide reaches learner and protected review with exact source, credits and unchanged model/access boundaries',async()=>{
  const api=await load(),review=json('atlas-review/manifest.json'),prior=JSON.parse(old('atlas-review/manifest.json').toString());
- assert.equal(review.revision,source);assert.equal(review.files.length,942);assert.deepEqual(review.packages,prior.packages);
- assert.deepEqual(review.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path),['lib/eye-layer-guide.ts']);
+ assert.equal(review.revision,source);assert.equal(review.files.length,944);assert.deepEqual(review.packages,prior.packages);
+ assert.deepEqual(review.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),
+  ['content/nested-guided-learning-bindings.v1.json','lib/eye-layer-guide.ts','lib/nested-guided-learning.ts']);
  assert.deepEqual(review.files.filter((f:any)=>prior.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),
-  ['app/eye-layers.css','app/eye-layers.tsx','app/review/nested/workspace.tsx','content/body-renderer-revision.json','lib/nested-review-material.ts','lib/nested-review.ts']);
+  ['app/eye-layers.css','app/eye-layers.tsx','app/review/nested/workspace.tsx','app/whole-body-guided-learning.css','app/whole-body-guided-learning.tsx','content/body-renderer-revision.json','lib/nested-review-material.ts','lib/nested-review.ts']);
  for(const f of review.files)assert.equal(sha(readFileSync('atlas-review/'+f.path)),f.importedSha256,f.path);
  const receipt=json('atlas-review/integration-inputs.json');assert.equal(receipt.sourceCommit,source);
  assert(receipt.inputs.some((i:any)=>i.path==='atlas-review/lib/eye-layer-guide.ts'));

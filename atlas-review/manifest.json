@@ -1,5 +1,5 @@
 {
-  "revision": "03da432b035d1dca7cc9f3344ee2722af627d859",
+  "revision": "08b0fbda394c7a878a3b5474e8aa566b8dfb0b83",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2903,8 +2903,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "1f2050aa69c8761cf8d88ea4f361e30e166ac912fe755d7e7ce96cb78d641d95",
-      "importedSha256": "32deac071d7e03e5c57cad9536a39d6e3e5611e48bce54ecd45a2313468bf56f"
+      "sourceSha256": "83918b8bee232b38723991cd717a01795389323da02538ff5560d905864877fc",
+      "importedSha256": "3d33d61e83a499dbf9476ecb2e394ade4ebcdf20dc529ed7300c46c8302bffa9"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3264,7 +3264,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "b2cca8944a1175a744056d0e5e5b2759ec4f58174f5b2f4a2f674bdd2c46508e",
-      "importedSha256": "671fdbea533348fe62affccffb9a76631a21bc941baab26ad7cdf8fc62e8e965"
+      "importedSha256": "579d3c67045b2c6ed84670f6afc68d05fb00c35ca0dedc156e9b278c29d4cf73"
     },
     {
       "path": "app/review/review.css",
@@ -3698,18 +3698,103 @@
     },
     {
       "path": "app/whole-body-guided-learning.tsx",
-      "sourceSha256": "2f1650c349e40ed5b4d50c0e26b396e18130536c3363439c848fce7bcb74b771",
-      "importedSha256": "fc62855add7601d1593ae0202713fce7916accbcf188979f3ed3385fab33954d"
+      "sourceSha256": "3632ccf1b955251eb5781cb052bb8023e82df96fbd991afff4c991655c8f4f78",
+      "importedSha256": "ecf9ef2c6b9404f2597879a26049f917ca6159ef006575f00cdaff7676cbbf51"
+    },
+    {
+      "path": "lib/nested-guided-learning.ts",
+      "sourceSha256": "56ce7db943ebe22f92733b8173a7dcaea4e59d921463d10ea3710cf029486972",
+      "importedSha256": "56ce7db943ebe22f92733b8173a7dcaea4e59d921463d10ea3710cf029486972"
+    },
+    {
+      "path": "content/nested-guided-learning-bindings.v1.json",
+      "sourceSha256": "6929af9e77abcd8ee3a3f1b9bda8f4affeb1b21b35d513854d1bd68a03034c14",
+      "importedSha256": "6929af9e77abcd8ee3a3f1b9bda8f4affeb1b21b35d513854d1bd68a03034c14"
     },
     {
       "path": "app/whole-body-guided-learning.css",
-      "sourceSha256": "03f4e025c1a429995fd766705cdd12acc9b862423b019eaf50f7bb08374eb33b",
-      "importedSha256": "03f4e025c1a429995fd766705cdd12acc9b862423b019eaf50f7bb08374eb33b"
+      "sourceSha256": "f35c1d9271e7f5ad93d9ed6229a1da0d49b232432e4f7370c9dd8c90c656c94a",
+      "importedSha256": "f35c1d9271e7f5ad93d9ed6229a1da0d49b232432e4f7370c9dd8c90c656c94a"
     },
     {
-      "path": "app/upper-limb-motor.css",
-      "sourceSha256": "8642774fece7df3c1b7597191362bbd83efb87dc0b3a063fb457e274d809b496",
-      "importedSha256": "8642774fece7df3c1b7597191362bbd83efb87dc0b3a063fb457e274d809b496"
+      "path": "app/eye-layers.tsx",
+      "sourceSha256": "61138f2e48a41702e3ee0516a6c7e74bf4f8182cc389773740748cc384a06098",
+      "importedSha256": "54b8e2f3e1e4f7bcc5e1d62411251413033f77b0517cf20aeefbc74f5fcc1b18"
+    },
+    {
+      "path": "app/nested-teaching.tsx",
+      "sourceSha256": "502e0a1d13c65875963bc760ca01260bde329368fe6d3bf4162f98cf3de42744",
+      "importedSha256": "1da791cfa17862157c243831b01fced3394c304e57363933343a50e97101ba75"
+    },
+    {
+      "path": "app/nested-teaching.css",
+      "sourceSha256": "d912bfc774cc744511a4c0e87a0a35f6b693def9f4bddc25b6f010f07dfa83bc",
+      "importedSha256": "d912bfc774cc744511a4c0e87a0a35f6b693def9f4bddc25b6f010f07dfa83bc"
+    },
+    {
+      "path": "lib/nested-review-links.ts",
+      "sourceSha256": "0d8d29a78763f5d3d00736fd2ae1aea0dbe6059ad50d6eb59d6b52e4f43e525f",
+      "importedSha256": "7bd3d20b155782e2441511c8e38b920312c18e15e11dea50bd237876dc48ffce"
+    },
+    {
+      "path": "app/imaging-link.tsx",
+      "sourceSha256": "5e106ad4a26e4c4a6a91ee2d76079da5486f66acbcfbbf364f4683e7b55210e8",
+      "importedSha256": "3898dfde87d6b8dc70ff3a3bcb39fa5fd813899e409967b5d5affc744867c08e"
+    },
+    {
+      "path": "lib/imaging-sync.ts",
+      "sourceSha256": "42696bac9b39e5761bd6e654996d6d6245bd51782b8387a8f946e9f42882b147",
+      "importedSha256": "42696bac9b39e5761bd6e654996d6d6245bd51782b8387a8f946e9f42882b147"
+    },
+    {
+      "path": "lib/anatomy-link-registry.ts",
+      "sourceSha256": "ffd7480f172055c1cd61049779c17a507ae8aa5abbcfb5d093e5bec75a3e1205",
+      "importedSha256": "ffd7480f172055c1cd61049779c17a507ae8aa5abbcfb5d093e5bec75a3e1205"
+    },
+    {
+      "path": "app/imaging-link.css",
+      "sourceSha256": "ee0cd87e6ee32c14d6fad90bd3c739240d126eac026b9ac5cfd194a61cef1dc2",
+      "importedSha256": "ee0cd87e6ee32c14d6fad90bd3c739240d126eac026b9ac5cfd194a61cef1dc2"
+    },
+    {
+      "path": "app/nested-education-link.ts",
+      "sourceSha256": "b2ebc43750d6cad1f924b89c6e04fa1035c40f01c97e68b479baf0ca9218008e",
+      "importedSha256": "b2ebc43750d6cad1f924b89c6e04fa1035c40f01c97e68b479baf0ca9218008e"
+    },
+    {
+      "path": "lib/learning-resource-types.ts",
+      "sourceSha256": "c08858a0b3bdcc0467d815d71a129428c3b311c1eaf318a544e1f091b1833778",
+      "importedSha256": "c08858a0b3bdcc0467d815d71a129428c3b311c1eaf318a544e1f091b1833778"
+    },
+    {
+      "path": "lib/learning-resources.ts",
+      "sourceSha256": "e2e191c19df1f7bfebd31d429c6320430845d145ac1f9c604a011827eb482da4",
+      "importedSha256": "e2e191c19df1f7bfebd31d429c6320430845d145ac1f9c604a011827eb482da4"
+    },
+    {
+      "path": "lib/nested-education-binding.ts",
+      "sourceSha256": "4ef9ac4e7fb31d13899399c353fd883ba7c49c8cc44c51c132710ae7eea4f476",
+      "importedSha256": "4ef9ac4e7fb31d13899399c353fd883ba7c49c8cc44c51c132710ae7eea4f476"
+    },
+    {
+      "path": "lib/nested-learning-anatomy.ts",
+      "sourceSha256": "0a635f713f9bc99d00c62c14cc4c5d05a4eb639f9633afc9f2ae2b440bb4dcc7",
+      "importedSha256": "0a635f713f9bc99d00c62c14cc4c5d05a4eb639f9633afc9f2ae2b440bb4dcc7"
+    },
+    {
+      "path": "lib/learning-anatomy.ts",
+      "sourceSha256": "ee24e46059a1ebbab82a7d2aaf78e9893eea4638ea00136989d2d098789077b3",
+      "importedSha256": "ee24e46059a1ebbab82a7d2aaf78e9893eea4638ea00136989d2d098789077b3"
+    },
+    {
+      "path": "lib/root-education-api.ts",
+      "sourceSha256": "50b9f4c223cf550c232366368849745b82ca2c6935162535c279e51deabe5554",
+      "importedSha256": "50b9f4c223cf550c232366368849745b82ca2c6935162535c279e51deabe5554"
+    },
+    {
+      "path": "lib/didanix-atlas-adapter.ts",
+      "sourceSha256": "4a81117559f93422222550249ca627d31355ee5cefaa9eda0adf4975e6bb4729",
+      "importedSha256": "4a81117559f93422222550249ca627d31355ee5cefaa9eda0adf4975e6bb4729"
     },
     {
       "path": "components/ui/switch.tsx",
@@ -3720,6 +3805,26 @@
       "path": "components/ui/slider.tsx",
       "sourceSha256": "1bf16ef0b71435f474d7ce741da41bf99b9d9141d4ba01df3d6b12e04a3b8462",
       "importedSha256": "d95678546728aada8b2d99b07047c1e0cbd42b010f2a13d25ddf9b0651eaeba0"
+    },
+    {
+      "path": "app/cutaway-controls.tsx",
+      "sourceSha256": "249e53bbccbbcbfd349692d20978b7341001ff5346973297b30ca9e89c547f47",
+      "importedSha256": "9ee12ddd1d2d5fb030616f57457dc19d19b39ed84c6be5a1c1b740b2c6962e36"
+    },
+    {
+      "path": "lib/eye-layer-state.ts",
+      "sourceSha256": "e863d50a92dc1f842bc95898c410516a7fd2fe9d9fe9923ea8de7f244056389a",
+      "importedSha256": "e863d50a92dc1f842bc95898c410516a7fd2fe9d9fe9923ea8de7f244056389a"
+    },
+    {
+      "path": "app/eye-layers.css",
+      "sourceSha256": "2a41b0ec2acdf38eda670d60702bc6e918cafdecedbaa33c671323bf3b6e5361",
+      "importedSha256": "2a41b0ec2acdf38eda670d60702bc6e918cafdecedbaa33c671323bf3b6e5361"
+    },
+    {
+      "path": "app/upper-limb-motor.css",
+      "sourceSha256": "8642774fece7df3c1b7597191362bbd83efb87dc0b3a063fb457e274d809b496",
+      "importedSha256": "8642774fece7df3c1b7597191362bbd83efb87dc0b3a063fb457e274d809b496"
     },
     {
       "path": "app/explode-style-select.tsx",
@@ -3757,49 +3862,9 @@
       "importedSha256": "d4e2664c8cdc96bcd015993f6fa69673dcefa5f78553ce1cb11ccd4e71d2a30e"
     },
     {
-      "path": "lib/anatomy-link-registry.ts",
-      "sourceSha256": "ffd7480f172055c1cd61049779c17a507ae8aa5abbcfb5d093e5bec75a3e1205",
-      "importedSha256": "ffd7480f172055c1cd61049779c17a507ae8aa5abbcfb5d093e5bec75a3e1205"
-    },
-    {
-      "path": "app/imaging-link.tsx",
-      "sourceSha256": "5e106ad4a26e4c4a6a91ee2d76079da5486f66acbcfbbf364f4683e7b55210e8",
-      "importedSha256": "3898dfde87d6b8dc70ff3a3bcb39fa5fd813899e409967b5d5affc744867c08e"
-    },
-    {
-      "path": "lib/imaging-sync.ts",
-      "sourceSha256": "42696bac9b39e5761bd6e654996d6d6245bd51782b8387a8f946e9f42882b147",
-      "importedSha256": "42696bac9b39e5761bd6e654996d6d6245bd51782b8387a8f946e9f42882b147"
-    },
-    {
-      "path": "app/imaging-link.css",
-      "sourceSha256": "ee0cd87e6ee32c14d6fad90bd3c739240d126eac026b9ac5cfd194a61cef1dc2",
-      "importedSha256": "ee0cd87e6ee32c14d6fad90bd3c739240d126eac026b9ac5cfd194a61cef1dc2"
-    },
-    {
       "path": "app/body-education-link.ts",
       "sourceSha256": "47a0a195899e3efedc743b7923c9a52f4a8c1943da5613285fc7a398e4448c40",
       "importedSha256": "47a0a195899e3efedc743b7923c9a52f4a8c1943da5613285fc7a398e4448c40"
-    },
-    {
-      "path": "lib/root-education-api.ts",
-      "sourceSha256": "50b9f4c223cf550c232366368849745b82ca2c6935162535c279e51deabe5554",
-      "importedSha256": "50b9f4c223cf550c232366368849745b82ca2c6935162535c279e51deabe5554"
-    },
-    {
-      "path": "lib/didanix-atlas-adapter.ts",
-      "sourceSha256": "4a81117559f93422222550249ca627d31355ee5cefaa9eda0adf4975e6bb4729",
-      "importedSha256": "4a81117559f93422222550249ca627d31355ee5cefaa9eda0adf4975e6bb4729"
-    },
-    {
-      "path": "lib/learning-resources.ts",
-      "sourceSha256": "e2e191c19df1f7bfebd31d429c6320430845d145ac1f9c604a011827eb482da4",
-      "importedSha256": "e2e191c19df1f7bfebd31d429c6320430845d145ac1f9c604a011827eb482da4"
-    },
-    {
-      "path": "lib/learning-resource-types.ts",
-      "sourceSha256": "c08858a0b3bdcc0467d815d71a129428c3b311c1eaf318a544e1f091b1833778",
-      "importedSha256": "c08858a0b3bdcc0467d815d71a129428c3b311c1eaf318a544e1f091b1833778"
     },
     {
       "path": "app/imaging-comparison.tsx",
@@ -4337,61 +4402,6 @@
       "importedSha256": "67b34405e32541d49c85ad931cc818d5a1d9ab923b317f91e83d9a0fb6fbe285"
     },
     {
-      "path": "app/eye-layers.tsx",
-      "sourceSha256": "69b96f889ee6a5175e0c97eca2c9c725392413e6da6c952e5196184c0bbfe15a",
-      "importedSha256": "4724ce14d89090689b833dfffd37089a6bfedb4c16af8440271ca1308bb52abb"
-    },
-    {
-      "path": "app/nested-teaching.tsx",
-      "sourceSha256": "502e0a1d13c65875963bc760ca01260bde329368fe6d3bf4162f98cf3de42744",
-      "importedSha256": "1da791cfa17862157c243831b01fced3394c304e57363933343a50e97101ba75"
-    },
-    {
-      "path": "app/nested-teaching.css",
-      "sourceSha256": "d912bfc774cc744511a4c0e87a0a35f6b693def9f4bddc25b6f010f07dfa83bc",
-      "importedSha256": "d912bfc774cc744511a4c0e87a0a35f6b693def9f4bddc25b6f010f07dfa83bc"
-    },
-    {
-      "path": "lib/nested-review-links.ts",
-      "sourceSha256": "0d8d29a78763f5d3d00736fd2ae1aea0dbe6059ad50d6eb59d6b52e4f43e525f",
-      "importedSha256": "7bd3d20b155782e2441511c8e38b920312c18e15e11dea50bd237876dc48ffce"
-    },
-    {
-      "path": "app/nested-education-link.ts",
-      "sourceSha256": "b2ebc43750d6cad1f924b89c6e04fa1035c40f01c97e68b479baf0ca9218008e",
-      "importedSha256": "b2ebc43750d6cad1f924b89c6e04fa1035c40f01c97e68b479baf0ca9218008e"
-    },
-    {
-      "path": "lib/nested-education-binding.ts",
-      "sourceSha256": "4ef9ac4e7fb31d13899399c353fd883ba7c49c8cc44c51c132710ae7eea4f476",
-      "importedSha256": "4ef9ac4e7fb31d13899399c353fd883ba7c49c8cc44c51c132710ae7eea4f476"
-    },
-    {
-      "path": "lib/nested-learning-anatomy.ts",
-      "sourceSha256": "0a635f713f9bc99d00c62c14cc4c5d05a4eb639f9633afc9f2ae2b440bb4dcc7",
-      "importedSha256": "0a635f713f9bc99d00c62c14cc4c5d05a4eb639f9633afc9f2ae2b440bb4dcc7"
-    },
-    {
-      "path": "lib/learning-anatomy.ts",
-      "sourceSha256": "ee24e46059a1ebbab82a7d2aaf78e9893eea4638ea00136989d2d098789077b3",
-      "importedSha256": "ee24e46059a1ebbab82a7d2aaf78e9893eea4638ea00136989d2d098789077b3"
-    },
-    {
-      "path": "app/cutaway-controls.tsx",
-      "sourceSha256": "249e53bbccbbcbfd349692d20978b7341001ff5346973297b30ca9e89c547f47",
-      "importedSha256": "9ee12ddd1d2d5fb030616f57457dc19d19b39ed84c6be5a1c1b740b2c6962e36"
-    },
-    {
-      "path": "lib/eye-layer-state.ts",
-      "sourceSha256": "e863d50a92dc1f842bc95898c410516a7fd2fe9d9fe9923ea8de7f244056389a",
-      "importedSha256": "e863d50a92dc1f842bc95898c410516a7fd2fe9d9fe9923ea8de7f244056389a"
-    },
-    {
-      "path": "app/eye-layers.css",
-      "sourceSha256": "2a41b0ec2acdf38eda670d60702bc6e918cafdecedbaa33c671323bf3b6e5361",
-      "importedSha256": "2a41b0ec2acdf38eda670d60702bc6e918cafdecedbaa33c671323bf3b6e5361"
-    },
-    {
       "path": "app/ventricles.tsx",
       "sourceSha256": "08a2c1cd5d64cb9072d8fe80f2d95a40a7eb0611a2071043db45bc4a8f6f7ed0",
       "importedSha256": "dace20b965bc3837808101f9304194e87ff2360c942b0a0687875a7b6930993a"
@@ -4728,5 +4738,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "4863abe2e4d3b8304f8fcc32ed232a5f790cb18a5d4675bad8980ffd81eda83d"
+  "websiteIntegrationSha256": "12e3168ef67c041dcd5672e38a699d99178827a5ee2970824694281bef23a472"
 }

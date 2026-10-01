@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {withoutNestedCTOrientationNotice} from './atlas-nested-ct-notice-history.ts';
-const source='03da432b035d1dca7cc9f3344ee2722af627d859';
+const source='08b0fbda394c7a878a3b5474e8aa566b8dfb0b83';
 const before='c3fb787a9811bf0ef9c3bd130f7a0534d49db9ad';
 const previousBytes=(path:string)=>Buffer.from(execFileSync('git',['show',before+':'+path],{maxBuffer:32e6}));
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
@@ -34,12 +34,12 @@ async function load(previous=false){
 
 test('complete named CT drafts and credited sources reach learners and protected review without changing models or rights',async()=>{
  const api=await load(),review=json('atlas-review/manifest.json'),oldReview=JSON.parse(previousBytes('atlas-review/manifest.json').toString('utf8'));
- assert.equal(review.revision,source);assert.equal(review.files.length,942);
+ assert.equal(review.revision,source);assert.equal(review.files.length,944);
  assert.deepEqual(review.packages,oldReview.packages);
- assert.deepEqual(review.files.filter((f:any)=>!oldReview.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path),['content/nested-ct-orientation.ts','lib/eye-layer-guide.ts','lib/nested-review-queue.ts']);
+ assert.deepEqual(review.files.filter((f:any)=>!oldReview.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),['content/nested-ct-orientation.ts','content/nested-guided-learning-bindings.v1.json','lib/eye-layer-guide.ts','lib/nested-guided-learning.ts','lib/nested-review-queue.ts']);
  assert(oldReview.files.every((p:any)=>review.files.some((f:any)=>f.path===p.path)));
  assert.deepEqual(review.files.filter((f:any)=>oldReview.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),
-  ['LICENSES/THIRD_PARTY_NOTICES.md','app/eye-layers.css','app/eye-layers.tsx','app/review/nested/nested-review.css','app/review/nested/page.tsx','app/review/nested/workspace.tsx','content/body-renderer-revision.json','content/nested-teaching.ts','lib/nested-review-material.ts','lib/nested-review.ts']);
+  ['LICENSES/THIRD_PARTY_NOTICES.md','app/eye-layers.css','app/eye-layers.tsx','app/review/nested/nested-review.css','app/review/nested/page.tsx','app/review/nested/workspace.tsx','app/whole-body-guided-learning.css','app/whole-body-guided-learning.tsx','content/body-renderer-revision.json','content/nested-teaching.ts','lib/nested-review-material.ts','lib/nested-review.ts']);
  for(const file of review.files)assert.equal(sha(readFileSync('atlas-review/'+file.path)),file.importedSha256,file.path);
  assert.deepEqual(Object.keys(api.nestedCTOrientation),ids);
  assert.deepEqual(Object.keys(api.nestedCTOrientationReferences),keys);

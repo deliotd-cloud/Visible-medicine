@@ -9,16 +9,20 @@ test('whole-body library delivers the tested selector and shared regional player
   const manifest=JSON.parse(readFileSync(root+'manifest.json','utf8'));
   const inputs=JSON.parse(readFileSync(root+'source-inputs.json','utf8'));
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
-  assert.equal(manifest.sourceCommit,'03da432b035d1dca7cc9f3344ee2722af627d859');
-  for(const path of ['app/whole-body-guided-learning.tsx','app/whole-body-guided-learning.css','app/body-explorer.tsx','app/regional-guided-learning.tsx','lib/regional-tours.ts']){
+  assert.equal(manifest.sourceCommit,'08b0fbda394c7a878a3b5474e8aa566b8dfb0b83');
+  for(const path of ['app/whole-body-guided-learning.tsx','app/whole-body-guided-learning.css','app/body-explorer.tsx','app/regional-guided-learning.tsx','lib/regional-tours.ts','lib/nested-guided-learning.ts','content/nested-guided-learning-bindings.v1.json']){
     assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,
       review.files.find((f:any)=>f.path===path)?.sourceSha256,path);
     assert.ok(inputs.some((f:any)=>f.path===path),path+' must exist');
   }
   const source=readFileSync('atlas-review/app/whole-body-guided-learning.tsx','utf8');
-  assert.ok(source.includes('key={`${tour.id}:${tour.revision}`}'));
+  assert.ok(source.includes('key={`${tour.id}:${tour.tour.revision}`}'));
+  assert.ok(source.includes('key={`${tour.id}:${tour.eye.parentHash}:${tour.eye.sourceHash}:${JSON.stringify(tour.eye.guide)}`}'));
   assert.ok(source.includes('options.some(t=>t.id===id)'));
   assert.ok(source.includes("wholeBodyTourOptions.filter(t=>t.region===region)"));
+  assert.ok(source.includes("nestedGuidedStudyOptions(catalog,region)"));
+  assert.ok(source.includes('initialGuidedLearningExpanded'));
+  assert.ok(source.includes('educationCatalog={catalog}'));
   assert.ok(source.includes('No guided tours are available for this region.'));
   assert.ok(source.includes('onExit={onExit}'));
   assert.ok(!/<iframe|window\.open|location\.(assign|href)/.test(source));

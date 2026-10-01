@@ -59,12 +59,14 @@ export function EyeLayerView({
   initialTeachingTopic,
   educationCatalog,
   assetBase = '',
+  initialGuidedLearningExpanded = false,
 }: {
   parent: BodyStructure;
   initialSelectedId?: string;
   initialTeachingTopic?: NestedImagingTopic;
   educationCatalog?: BodyCatalog;
   assetBase?: string;
+  initialGuidedLearningExpanded?: boolean;
 }) {
   const layers = useMemo(() => eyeLayersFor(parent), [parent]);
   const initialSelection = layers.find((s) => s.id === initialSelectedId)?.id;
@@ -103,7 +105,7 @@ export function EyeLayerView({
   const guide = useMemo(() => eyeLayerGuide(parent), [parent]);
   const cameraCapture = useRef<StudyCamera | null>(null), cameraRestore = useRef<StudyCamera | null>(null);
   const guideLauncher = useRef<HTMLButtonElement | null>(null), restoreGuideFocus = useRef(false);
-  const [guideExpanded, setGuideExpanded] = useState(false);
+  const [guideExpanded, setGuideExpanded] = useState(initialGuidedLearningExpanded);
   const [reducedMotion, setReducedMotion] = useState(true), [pageHidden, setPageHidden] = useState(false);
   const [guidance, setGuidance] = useState<{id: string; index: number; camera: StudyCamera | null} | null>(null);
   const step = guidance?.id === guide?.id ? guide?.steps[guidance!.index] : undefined;
