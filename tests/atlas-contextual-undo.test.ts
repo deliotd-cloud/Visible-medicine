@@ -6,7 +6,7 @@ import test from 'node:test';
 test('regional export includes tested removal focus, contextual Undo and panel-only reveal',()=>{
   const base='public/atlas-runtime/head-neck/';
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-  assert.equal(manifest.sourceCommit,'971f12ceedc8316904bdc7da810262bb993362f9');
+  assert.equal(manifest.sourceCommit,'d5ebe0712d71f4f352ebac679373f00b8d7d94e1');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({
     'app/body-selection-notice.tsx':'585313543be9121cb073f3cb0cb0259f3c9da703b555b77ae5ddf12c706b21aa',

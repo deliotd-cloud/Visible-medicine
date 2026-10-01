@@ -8,7 +8,7 @@ test('all twenty regional tours ship complete source-bound review evidence', asy
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const base='public/atlas-runtime/head-neck/';
   const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-  assert.equal(learner.sourceCommit,'971f12ceedc8316904bdc7da810262bb993362f9');
+  assert.equal(learner.sourceCommit,'d5ebe0712d71f4f352ebac679373f00b8d7d94e1');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
   for(const path of ['lib/regional-tours.ts','lib/chest-wall-tour.ts','lib/orbital-tour.ts','lib/intrinsic-larynx-tour.ts','lib/male-duct-tour.ts','lib/deep-brain-tour.ts','lib/subscapular-tour.ts','app/regional-guided-learning.tsx','lib/tour-camera.ts','app/fitted-camera.tsx']) {
     const file=review.files.find((f:any)=>f.path===path); assert.ok(file,path);
@@ -79,7 +79,7 @@ test('all twenty regional tours ship complete source-bound review evidence', asy
   for(const id of ids) {
     const packet=await api.bodyReviewMaterial(id);
     assert.equal(packet.schema,'vm-body-review-worksheet-3');
-    assert.ok(api.parseBodyReviewResponse(packet,id));
+    assert.ok((await api.parseBodyReviewResponse(packet,id)));
     const shared=api.intrinsicLarynxTour.contextIds.includes(id);
     const sharedPelvis=['urinary-bladder','prostate','right-seminal-vesicle'].some(name=>id.endsWith(':'+name));
     const sharedLumbar=id==='vm:anatomy:body:spine:midline:bone:sacrum';
@@ -90,7 +90,7 @@ test('all twenty regional tours ship complete source-bound review evidence', asy
       assert.deepEqual(packet.guidedTours.map((e:any)=>e.tour.id),[api.malePelvisTour.id,api.lumbarTour.id]);
       for(const omitted of [api.malePelvisTour.id,api.lumbarTour.id]){
         const changed=structuredClone(packet);changed.guidedTours=changed.guidedTours.filter((e:any)=>e.tour.id!==omitted);
-        assert.equal(api.parseBodyReviewResponse(changed,id),null,'Both sacral teaching sequences are review material');
+        assert.equal((await api.parseBodyReviewResponse(changed,id)),null,'Both sacral teaching sequences are review material');
       }
     }
     const tourIndex=packet.guidedTours.findIndex((e:any)=>e.tour.id===tour.id);assert.ok(tourIndex>=0);
@@ -98,14 +98,14 @@ test('all twenty regional tours ship complete source-bound review evidence', asy
       assert.deepEqual(packet.guidedTours.map((e:any)=>e.tour.id),[api.larynxTour.id,api.intrinsicLarynxTour.id]);
       for(const omitted of [api.larynxTour.id,api.intrinsicLarynxTour.id]){
         const changed=structuredClone(packet);changed.guidedTours=changed.guidedTours.filter((e:any)=>e.tour.id!==omitted);
-        assert.equal(api.parseBodyReviewResponse(changed,id),null,'Neither shared tour can be omitted');
+        assert.equal((await api.parseBodyReviewResponse(changed,id)),null,'Neither shared tour can be omitted');
       }
     }
     if(sharedPelvis){
       assert.deepEqual(packet.guidedTours.map((e:any)=>e.tour.id),[api.malePelvisTour.id,api.maleDuctTour.id]);
       for(const omitted of [api.malePelvisTour.id,api.maleDuctTour.id]){
         const changed=structuredClone(packet);changed.guidedTours=changed.guidedTours.filter((e:any)=>e.tour.id!==omitted);
-        assert.equal(api.parseBodyReviewResponse(changed,id),null,'Neither shared pelvic tour can be omitted');
+        assert.equal((await api.parseBodyReviewResponse(changed,id)),null,'Neither shared pelvic tour can be omitted');
       }
     }
     assert.deepEqual(packet.guidedTours[tourIndex].tour,tour);
@@ -113,7 +113,7 @@ test('all twenty regional tours ship complete source-bound review evidence', asy
       assert.deepEqual(packet.guidedTours.map((e:any)=>e.tour.id),[api.upperArmTour.id,api.subscapularTour.id]);
       for(const omitted of [api.upperArmTour.id,api.subscapularTour.id]){
         const changed=structuredClone(packet);changed.guidedTours=changed.guidedTours.filter((e:any)=>e.tour.id!==omitted);
-        assert.equal(api.parseBodyReviewResponse(changed,id),null,'Shared scapula requires both complete tour records');
+        assert.equal((await api.parseBodyReviewResponse(changed,id)),null,'Shared scapula requires both complete tour records');
       }
     }
     assert.equal(packet.guidedTours[tourIndex].structures.length,count);
@@ -130,7 +130,7 @@ test('all twenty regional tours ship complete source-bound review evidence', asy
       (p:any)=>{p.guidedTours[tourIndex].structures.find((s:any)=>s.id!==id).sources[0].sha256='0'.repeat(64);},
       (p:any)=>{p.guidedTours[tourIndex].structures.find((s:any)=>s.id!==id).bounds.min[0]-=1;},
       (p:any)=>{p.guidedTours[tourIndex].sourceVersion+='-altered';},
-    ]) {const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,id),null);}
+    ]) {const altered=structuredClone(packet);mutate(altered);assert.equal((await api.parseBodyReviewResponse(altered,id)),null);}
     if(tour===api.celiacTour) {
       const evidence=packet.guidedTours[tourIndex];
       assert.equal(evidence.structures.find((s:any)=>s.id===tour.steps[0].selectedId).bundle,'celiac-display-corrected');
@@ -140,7 +140,7 @@ test('all twenty regional tours ship complete source-bound review evidence', asy
         (p:any)=>{delete p.guidedTours[tourIndex].stepFrames;},
         (p:any)=>{p.guidedTours[tourIndex].stepFrames[0].min[0]-=1;},
         (p:any)=>{delete p.guidedTours[tourIndex].tour.requiredDisplayBundles;},
-      ]) {const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,id),null);}
+      ]) {const altered=structuredClone(packet);mutate(altered);assert.equal((await api.parseBodyReviewResponse(altered,id)),null);}
     }
     if(tour===api.intrinsicLarynxTour) {
       const e=packet.guidedTours[tourIndex];
@@ -152,7 +152,7 @@ test('all twenty regional tours ship complete source-bound review evidence', asy
         (p:any)=>{p.guidedTours[tourIndex].tour.steps.reverse();},
         (p:any)=>{p.guidedTours[tourIndex].stepFrames[6].max[0]+=1;},
         (p:any)=>{p.guidedTours.push(structuredClone(p.guidedTours[tourIndex]));},
-      ]){const changed=structuredClone(packet);mutate(changed);assert.equal(api.parseBodyReviewResponse(changed,id),null);}
+      ]){const changed=structuredClone(packet);mutate(changed);assert.equal((await api.parseBodyReviewResponse(changed,id)),null);}
     }
     if(tour===api.orbitalTour) {
       const e=packet.guidedTours[tourIndex],globe=tour.contextIds[0];
@@ -166,7 +166,7 @@ test('all twenty regional tours ship complete source-bound review evidence', asy
         (p:any)=>{p.guidedTours[tourIndex].structures.find((s:any)=>s.id===globe).bundle='head-neck-organs-recovery';},
         (p:any)=>{p.guidedTours[tourIndex].tour.steps.reverse();},
         (p:any)=>{p.guidedTours[tourIndex].stepFrames[5].max[0]+=1;},
-      ]) {const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,id),null);}
+      ]) {const altered=structuredClone(packet);mutate(altered);assert.equal((await api.parseBodyReviewResponse(altered,id)),null);}
     }
     if(tour===api.maleDuctTour) {
       const e=packet.guidedTours[tourIndex];
@@ -178,7 +178,7 @@ test('all twenty regional tours ship complete source-bound review evidence', asy
         (p:any)=>{p.guidedTours[tourIndex].tour.steps.reverse();},
         (p:any)=>{p.guidedTours[tourIndex].stepFrames[5].max[0]+=1;},
         (p:any)=>{p.guidedTours[tourIndex].structures.find((s:any)=>s.id.endsWith(':right-deferent-duct')).fmaId='FMA19236';},
-      ]){const changed=structuredClone(packet);mutate(changed);assert.equal(api.parseBodyReviewResponse(changed,id),null);}
+      ]){const changed=structuredClone(packet);mutate(changed);assert.equal((await api.parseBodyReviewResponse(changed,id)),null);}
     }
     if(tour===api.deepBrainTour) {
       const e=packet.guidedTours[tourIndex];
@@ -188,7 +188,7 @@ test('all twenty regional tours ship complete source-bound review evidence', asy
       assert.ok(!e.structures.some((s:any)=>s.fmaId==='FMA61970'));
       assert.match(tour.limitations,/hippocampus is not shown/);
       for(const mutate of [(p:any)=>{p.guidedTours[tourIndex].tour.steps.reverse();},(p:any)=>{p.guidedTours[tourIndex].stepFrames[5].min[0]-=1;},(p:any)=>{p.guidedTours[tourIndex].structures[0].sources[0].sha256='0'.repeat(64);}]) {
-        const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,id),null);
+        const altered=structuredClone(packet);mutate(altered);assert.equal((await api.parseBodyReviewResponse(altered,id)),null);
       }
     }
     if(tour===api.larynxTour||tour===api.malePelvisTour) {
@@ -200,7 +200,7 @@ test('all twenty regional tours ship complete source-bound review evidence', asy
       assert.ok(e.structures.every((s:any)=>!s.id.includes('independent')));
       for(const step of tour.steps)assert.deepEqual(step.frameIds,[step.selectedId]);
       for(const mutate of [(p:any)=>{p.guidedTours[tourIndex].tour.contextIds=['independent-female-pelvis'];},(p:any)=>{p.guidedTours[tourIndex].stepFrames[0].max[1]+=1;}]) {
-        const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,id),null);
+        const altered=structuredClone(packet);mutate(altered);assert.equal((await api.parseBodyReviewResponse(altered,id)),null);
       }
     }
     if(tour===api.subscapularTour){
@@ -213,7 +213,7 @@ test('all twenty regional tours ship complete source-bound review evidence', asy
         (p:any)=>{p.guidedTours[tourIndex].stepFrames[3].max[0]+=1;},
         (p:any)=>{p.guidedTours[tourIndex].structures[0].laterality='left';},
         (p:any)=>{delete p.guidedTours[tourIndex].tour.requiredDisplayBundles;},
-      ]){const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,id),null);}
+      ]){const altered=structuredClone(packet);mutate(altered);assert.equal((await api.parseBodyReviewResponse(altered,id)),null);}
     }
     if(tour===api.carpalTour){
       const evidence=packet.guidedTours[tourIndex];
@@ -235,7 +235,7 @@ test('all twenty regional tours ship complete source-bound review evidence', asy
         (p:any)=>{p.guidedTours[tourIndex].stepFrames[4].max[0]+=1;},
         (p:any)=>{p.guidedTours[tourIndex].structures[0].laterality='left';},
         (p:any)=>{delete p.guidedTours[tourIndex].structures[0].laterality;},
-      ]) {const altered=structuredClone(packet);mutate(altered);assert.equal(api.parseBodyReviewResponse(altered,id),null);}
+      ]) {const altered=structuredClone(packet);mutate(altered);assert.equal((await api.parseBodyReviewResponse(altered,id)),null);}
     }
   }
   }
@@ -271,7 +271,7 @@ test('all structure-check hosts deliver the corrected success/retry component',(
     const base=`public/atlas-runtime/${module}/`;
     const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
     const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
-    assert.equal(manifest.sourceCommit,'971f12ceedc8316904bdc7da810262bb993362f9');
+    assert.equal(manifest.sourceCommit,'d5ebe0712d71f4f352ebac679373f00b8d7d94e1');
     assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,review.files.find((f:any)=>f.path===path)?.sourceSha256);
     const js=manifest.files.filter((f:any)=>f.path.endsWith('.js')).map((f:any)=>readFileSync(base+f.path,'utf8')).join('\n');
     for(const text of ['Practise again','Try again','Correct.','Incorrect.']) assert.ok(js.includes(text),module+': '+text);

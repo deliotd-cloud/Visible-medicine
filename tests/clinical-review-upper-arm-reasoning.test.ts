@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 test('all fourteen upper-arm reasoning selections reach matching learner and review revisions',async()=>{
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const learner=JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json','utf8'));
-  assert.equal(learner.sourceCommit,'971f12ceedc8316904bdc7da810262bb993362f9');
+  assert.equal(learner.sourceCommit,'d5ebe0712d71f4f352ebac679373f00b8d7d94e1');
   const path='lib/upper-arm-reasoning.ts';
   const input=JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json','utf8')).find((r:any)=>r.path===path);
   const file=review.files.find((r:any)=>r.path===path);assert(file&&input);
@@ -23,7 +23,7 @@ test('all fourteen upper-arm reasoning selections reach matching learner and rev
   for(const row of api.bodyReviewSummaries.filter((r:any)=>r.system==='muscles'&&r.regions.includes('shoulder-arm'))){
     const packet=await api.bodyReviewMaterial(row.id);
     if(!packet.reasoning?.key.startsWith('upper-arm-'))continue;
-    assert(api.parseBodyReviewResponse(packet,row.id));
+    assert((await api.parseBodyReviewResponse(packet,row.id)));
     assert.equal(packet.approval,false);
     assert.equal(packet.reasoning.readiness,'draft');
     assert.equal(packet.reasoning.answerId,row.id);

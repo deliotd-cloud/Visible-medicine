@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 
 test('renal learner and review imports bind the same unchanged geometry and four-step draft',async()=>{
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8')),review=json('atlas-review/manifest.json');
- assert.equal(review.revision,'971f12ceedc8316904bdc7da810262bb993362f9');
+ assert.equal(review.revision,'d5ebe0712d71f4f352ebac679373f00b8d7d94e1');
  for(const module of ['head-neck','shoulder'])assert.equal(json('public/atlas-runtime/'+module+'/manifest.json').sourceCommit,review.revision);
  const prior=JSON.parse(execFileSync('git',['show','9baaa9e5:lib/atlas-model-inventory.json'],{encoding:'utf8'}));
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,prior.models);
@@ -22,12 +22,12 @@ test('renal learner and review imports bind the same unchanged geometry and four
  assert.deepEqual(tour.steps.map((s:any)=>s.selectedId),ids);assert.equal(tour.status,'draft');assert.equal(api.regionalTourFor('abdomen').id,api.celiacTour.id);
  assert.equal(api.regionalTours.length,20);assert.equal(api.regionalTours.reduce((n:number,t:any)=>n+t.steps.length,0),109);
  for(const id of [...ids,...tour.contextIds]){
-  const packet=await api.bodyReviewMaterial(id);assert.equal(packet.approval,false);assert(api.parseBodyReviewResponse(packet,id));
+  const packet=await api.bodyReviewMaterial(id);assert.equal(packet.approval,false);assert((await api.parseBodyReviewResponse(packet,id)));
   const index=packet.guidedTours.findIndex((e:any)=>e.tour.id===tour.id),evidence=packet.guidedTours[index];assert.deepEqual(evidence.tour,tour);
   assert.equal(evidence.transitionMs,1800);assert.equal(evidence.transition,'quintic-orbit');assert.equal(evidence.separation,0);assert.equal(evidence.stepFrames.length,4);
   for(const step of tour.steps)assert.deepEqual(step.frameIds,ids);
   for(const mutate of [(p:any)=>p.guidedTours.splice(index,1),(p:any)=>p.guidedTours[index].tour.steps[0].caption+=' changed',(p:any)=>p.guidedTours[index].tour.revision+='-stale',(p:any)=>p.guidedTours[index].stepFrames[0].min[0]-=1]){
-   const changed=structuredClone(packet);mutate(changed);assert.equal(api.parseBodyReviewResponse(changed,id),null);
+   const changed=structuredClone(packet);mutate(changed);assert.equal((await api.parseBodyReviewResponse(changed,id)),null);
   }
  }
 });

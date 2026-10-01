@@ -8,8 +8,8 @@ test('eight shoulder CT drafts reach learner and protected review without images
   const review = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
   const learner = JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8'));
   const inputs = JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json', 'utf8'));
-  assert.equal(review.revision, '971f12ceedc8316904bdc7da810262bb993362f9');
-  assert.equal(learner.sourceCommit,'971f12ceedc8316904bdc7da810262bb993362f9');
+  assert.equal(review.revision, 'd5ebe0712d71f4f352ebac679373f00b8d7d94e1');
+  assert.equal(learner.sourceCommit,'d5ebe0712d71f4f352ebac679373f00b8d7d94e1');
   for (const path of ['content/shoulder-arterial-ct-pins.json', 'content/shoulder-arterial-ct.ts', 'lib/shoulder-arterial-ct.ts']) {
     const file = review.files.find((f: any) => f.path === path); assert(file);
     assert.equal(inputs.find((f: any) => f.path === path)?.sha256, file.sourceSha256);
@@ -38,7 +38,7 @@ test('eight shoulder CT drafts reach learner and protected review without images
       assert(learner.regionalScopes.find((s: any) => s.region === region).regionalIds.includes(identity.id));
     }
     const packet = await api.bodyReviewMaterial(identity.id);
-    assert(api.parseBodyReviewResponse(packet, identity.id));
+    assert((await api.parseBodyReviewResponse(packet, identity.id)));
     assert.equal(packet.approval, false);
     const { tab, ...lesson } = packet.topics.find((t: any) => t.tab === 'ct');
     assert.equal(tab, 'ct');

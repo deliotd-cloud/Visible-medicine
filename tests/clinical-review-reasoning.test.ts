@@ -7,8 +7,8 @@ import { build } from 'esbuild';
 test('interactive reasoning reaches learner and protected review with source-bound answers', async () => {
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const learner=JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json','utf8'));
-  assert.equal(review.revision,'971f12ceedc8316904bdc7da810262bb993362f9');
-  assert.equal(learner.sourceCommit,'971f12ceedc8316904bdc7da810262bb993362f9');
+  assert.equal(review.revision,'d5ebe0712d71f4f352ebac679373f00b8d7d94e1');
+  assert.equal(learner.sourceCommit,'d5ebe0712d71f4f352ebac679373f00b8d7d94e1');
   const inputs=JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json','utf8'));
   for(const path of ['lib/reasoning-questions.ts','lib/thoracic-vessel-reasoning.ts','lib/atlas-practice.ts']) {
     const file=review.files.find((f:any)=>f.path===path);assert(file);
@@ -24,7 +24,7 @@ test('interactive reasoning reaches learner and protected review with source-bou
   let count=0;
   for(const row of api.bodyReviewSummaries.filter((s:any)=>s.system==='vessels' && s.regions.includes('thorax'))) {
     const packet=await api.bodyReviewMaterial(row.id);
-    assert(api.parseBodyReviewResponse(packet,row.id));
+    assert((await api.parseBodyReviewResponse(packet,row.id)));
     assert.equal(packet.schema,'vm-body-review-worksheet-3');
     assert.equal(packet.approval,false);
     if(!packet.reasoning) continue;

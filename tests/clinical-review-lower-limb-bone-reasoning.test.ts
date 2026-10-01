@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 test('all sixteen lower-limb bone questions share exact learner and review sources',async()=>{
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const learner=JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json','utf8'));
-  assert.equal(learner.sourceCommit,'971f12ceedc8316904bdc7da810262bb993362f9');
+  assert.equal(learner.sourceCommit,'d5ebe0712d71f4f352ebac679373f00b8d7d94e1');
   const path='lib/lower-limb-bone-reasoning.ts';
   const input=JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json','utf8')).find((r:any)=>r.path===path);
   const file=review.files.find((r:any)=>r.path===path);assert(file&&input);
@@ -23,7 +23,7 @@ test('all sixteen lower-limb bone questions share exact learner and review sourc
   for(const row of api.bodyReviewSummaries.filter((r:any)=>r.system==='skeleton')){
     const packet=await api.bodyReviewMaterial(row.id);
     if(!packet.reasoning?.key.startsWith('lower-limb-bone-'))continue;
-    assert(api.parseBodyReviewResponse(packet,row.id));
+    assert((await api.parseBodyReviewResponse(packet,row.id)));
     assert.equal(packet.approval,false);
     assert.equal(packet.reasoning.readiness,'draft');
     assert.equal(packet.reasoning.answerId,row.id);
@@ -34,7 +34,7 @@ test('all sixteen lower-limb bone questions share exact learner and review sourc
     assert.equal(context.teachingHash,packet.fingerprints.teaching);
     assert(context.checklists.teaching.some((c:any)=>c.id==='assessment'));
     const tampered=structuredClone(packet);tampered.reasoning.answerId='unknown';
-    assert.equal(api.parseBodyReviewResponse(tampered,row.id),null);
+    assert.equal((await api.parseBodyReviewResponse(tampered,row.id)),null);
     const sides=keys.get(packet.reasoning.key)??new Set<string>();
     assert(!sides.has(row.laterality));sides.add(row.laterality);keys.set(packet.reasoning.key,sides);
   }

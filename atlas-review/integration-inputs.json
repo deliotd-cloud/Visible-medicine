@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "971f12ceedc8316904bdc7da810262bb993362f9",
-  "sha256": "3340bff961b5b482178e6d90c4b025e2c7a2dc26582791e1f3d40dc97dbac81e",
+  "sourceCommit": "d5ebe0712d71f4f352ebac679373f00b8d7d94e1",
+  "sha256": "40064dc5f8dae7204a53e932a4e1e2c4a4f6015bbb79ce21cadb6bf2ba12f2c3",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -316,7 +316,7 @@
     },
     {
       "path": "atlas-review/app/review/body/review-dashboard.tsx",
-      "sha256": "4518b60a5f7473187293cac9c3a6418e62f37dcaa5aa6d2932751ae6fd634986"
+      "sha256": "29aa4cce3d84ae2d583179523b2af815437e3bc7cc2d78a533d0b4d7328fb3a1"
     },
     {
       "path": "atlas-review/app/review/nested/nested-review.css",
@@ -709,6 +709,10 @@
     {
       "path": "atlas-review/content/back-layers-teaching.ts",
       "sha256": "6aa0130d732e155fa225829952e2ebba1702a650699b4cf9feaabde942bdfb41"
+    },
+    {
+      "path": "atlas-review/content/body-review-display-pins.json",
+      "sha256": "58548bff8c9ffd2616a127bba894aabdba99d0285f649877027f03f3f63ee8dd"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -2039,12 +2043,20 @@
       "sha256": "fc1a6f92ddb888d4e2dfd82a8b368f13b24c1b9fd1a89fc175e82ad28daf5f41"
     },
     {
+      "path": "atlas-review/lib/body-review-display-evidence.ts",
+      "sha256": "e07b606cf4cc3b60540f72cfa3d869bf5ceb8a364a7530a612f89659883e228c"
+    },
+    {
+      "path": "atlas-review/lib/body-review-display-integrity.ts",
+      "sha256": "ac806bc740868b7ddf2006286a18f97249b7dfca11e4abcd83a99fc2f25b9aab"
+    },
+    {
       "path": "atlas-review/lib/body-review-material.ts",
-      "sha256": "4f519cc25801bfc816861cc28e156bf7a0bf4cfb1a22dec7ec61efcc6668c6b5"
+      "sha256": "71b8c26fb077860bc5e37a0f39cfd7717e96514fde6ac1df7094e349ed6bce00"
     },
     {
       "path": "atlas-review/lib/body-review-response.ts",
-      "sha256": "cc7dd49743bd0166a08274e5e98dd584255f5b5b4c9f1ddd39893e715018d964"
+      "sha256": "261bc16fa9c42abd253b62d088efe5eb93625f72886320886ab5daa8e318a912"
     },
     {
       "path": "atlas-review/lib/body-review-search.ts",
@@ -3724,7 +3736,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "fec2065223bf483f34b0af129c3016d941309d9b10bfeaa64b2425356ee3a00a"
+      "sha256": "479deca5488d98a102620dc6893ba44e1499deb90dbbecc51a2adf3cc8db185e"
     }
   ]
 }

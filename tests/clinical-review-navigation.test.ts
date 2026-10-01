@@ -10,7 +10,13 @@ test('saved sequential-review delivery changed only its body review interface; c
  const changed=after.files.filter((f:any)=>before.files.find((p:any)=>p.path===f.path)?.sourceSha256!==f.sourceSha256).map((f:any)=>f.path).sort();
  assert.deepEqual(changed,['app/review/body/body-review.css','app/review/body/review-dashboard.tsx']);
  assert.equal(after.files.length,before.files.length);
- for(const path of changed){const f=after.files.find((f:any)=>f.path===path);assert.equal(createHash('sha256').update(readFileSync('atlas-review/'+path)).digest('hex'),f.importedSha256);}
+ const current=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
+ for(const path of changed){
+  const delivered=after.files.find((f:any)=>f.path===path);
+  assert.equal(createHash('sha256').update(execFileSync('git',['show','0c608b3:atlas-review/'+path])).digest('hex'),delivered.importedSha256,'Historical navigation delivery stays exact');
+  const now=current.files.find((f:any)=>f.path===path);
+  assert.equal(createHash('sha256').update(readFileSync('atlas-review/'+path)).digest('hex'),now.importedSha256,'Current navigation source is independently bound');
+ }
  const dashboard=readFileSync('atlas-review/app/review/body/review-dashboard.tsx','utf8');
  assert.ok(dashboard.includes('Previous structure')&&dashboard.includes('Next structure'));
  assert.ok(dashboard.includes('if (id === selected) return;'));

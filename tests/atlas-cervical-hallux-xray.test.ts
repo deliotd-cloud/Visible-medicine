@@ -8,9 +8,9 @@ test('cervical and hallux orientation ships exact source, draft wording and no i
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'bcc02d7e8699edbb240cd23b16424db4ad6f4dc083282e4f61c1532f19fed76d');
+  assert.equal(sha(bytes),'ac941b1da5484e8453c026352130dc210eb111a232862bef88c4fd96150aedd1');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'971f12ceedc8316904bdc7da810262bb993362f9');
+  assert.equal(manifest.sourceCommit,'d5ebe0712d71f4f352ebac679373f00b8d7d94e1');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of [
     ['app/body-content.ts','84009bd22efcf5623e9fc8a9e138711558d74d81ce9ef2f18e9710262617e418'],

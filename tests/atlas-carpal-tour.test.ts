@@ -9,7 +9,7 @@ test('carpal tour import preserves all models and delivers exact assembled sourc
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
  const prior=(p:string)=>JSON.parse(execFileSync('git',['show','6302b12:'+p],{encoding:'utf8',maxBuffer:32e6}));
  const review=json('atlas-review/manifest.json'),before=prior('atlas-review/manifest.json');
- assert.equal(review.revision,'971f12ceedc8316904bdc7da810262bb993362f9');
+ assert.equal(review.revision,'d5ebe0712d71f4f352ebac679373f00b8d7d94e1');
  const saved=JSON.parse(execFileSync('git',['show','047d488a:atlas-review/manifest.json'],{encoding:'utf8'}));
  assert.deepEqual(saved.files.filter((f:any)=>before.files.find((p:any)=>p.path===f.path)?.sourceSha256!==f.sourceSha256).map((f:any)=>f.path).sort(),[
   'LICENSES/THIRD_PARTY_NOTICES.md','content/body-renderer-revision.json','lib/carpal-tour.ts','lib/regional-tours.ts',
@@ -29,12 +29,12 @@ test('carpal tour import preserves all models and delivers exact assembled sourc
  assert.deepEqual(tour.steps.map((s:any)=>s.selectedId),ids);assert.equal(api.regionalTourFor('hand').id,api.handTour.id);
  assert.deepEqual(tour.requiredDisplayBundles,Object.fromEntries(ids.map(id=>[id,'hand-skeleton'])));
  for(const id of ids){
-  const packet=await api.bodyReviewMaterial(id);assert.equal(packet.approval,false);assert(api.parseBodyReviewResponse(packet,id));
+  const packet=await api.bodyReviewMaterial(id);assert.equal(packet.approval,false);assert((await api.parseBodyReviewResponse(packet,id)));
   const evidence=packet.guidedTours.find((e:any)=>e.tour.id===tour.id);assert.deepEqual(evidence.tour,tour);
   assert.equal(evidence.transitionMs,1800);assert.equal(evidence.transition,'quintic-orbit');assert.equal(evidence.separation,0);
   for(const step of tour.steps)assert.deepEqual(step.frameIds,ids);
   for(const mutate of [(p:any)=>p.guidedTours=[],(p:any)=>p.guidedTours[0].tour.steps[0].caption+=' changed',(p:any)=>p.guidedTours[0].tour.revision+='-stale']){
-   const changed=structuredClone(packet);mutate(changed);assert.equal(api.parseBodyReviewResponse(changed,id),null);
+   const changed=structuredClone(packet);mutate(changed);assert.equal((await api.parseBodyReviewResponse(changed,id)),null);
   }
  }
 });
