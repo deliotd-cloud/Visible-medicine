@@ -1,5 +1,12 @@
 # Separate HRA female pelvic study
 
+1 October modality-topic completion: all43 source-bound selections now have six
+extended introductory topics (258 placements).68 missing CT/X-ray/ultrasound
+placements were added; all190 earlier placements, Anatomy/Function, guides,
+self-checks, models and source holds retained. Visibility-limit teaching is not
+an acquired image, clinical validation or complete curriculum. See
+[completion and review evidence](HRA_PELVIC_TOPIC_COMPLETION.md).
+
 1 October: optional six-stage [source-guided dissection](HRA_PELVIC_GUIDED_DISSECTION.md)
 connects existing support and urinary/vessel views. Models and original studies
 are unchanged; the new sequence is draft and requires revision-bound review.
@@ -29,7 +36,7 @@ close-up; shapes and source positions remain unchanged.
 
 Eleven studies: the original reproductive overview; all 41 native pelvic surfaces; uterus/cervix; left adnexa; right adnexa; supporting surfaces; uterine vessel context; bladder/uterus/rectum; plus ureters with pelvic organs and separate left/right ureter context views. Context appears only when requested. The initial view still contains 18 reproductive surfaces.
 
-All **43 selections have source-bound introductory Anatomy/Function drafts**: the existing 41 pelvic lessons plus two reused ureter lessons. The original pelvic set spans 28 concepts and 178 extended draft placements, as documented in the [context teaching extension](FEMALE_PELVIC_CONTEXT_TEACHING.md). Incomplete modality topics remain explicitly pending. Source-identification rounds use up to ten eligible visible selections. These are not validated exams.
+All **43 selections have source-bound introductory Anatomy/Function drafts**: the existing 41 pelvic lessons plus two reused ureter lessons. The original pelvic set spans 28 concepts and 178 extended draft placements, as documented in the [context teaching extension](FEMALE_PELVIC_CONTEXT_TEACHING.md). The additive modality completion now supplies246 placements for these41 selections, plus12 unchanged renal-ureter placements; remaining broader clinical and imaging gates are not cleared. Source-identification rounds use up to ten eligible visible selections. These are not validated exams.
 
 ## Initial structure-specific teaching (preserved baseline)
 

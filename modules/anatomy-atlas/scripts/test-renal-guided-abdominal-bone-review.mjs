@@ -15,7 +15,7 @@ async function load(previous=false){
       const revision=previous?baseline:milestone;
       for(const path of ['lib/specimen-review-material.ts','lib/abdominal-wall-teaching.ts'])
         api.onLoad({filter:new RegExp(path.replaceAll('/','[\\\\/]')+'$')},args=>({contents:oldFile(path,revision),loader:'ts',resolveDir:dirname(args.path)}));
-      for(const path of ['content/back-bone-teaching.ts','content/back-layers-clinical.ts'])
+      for(const path of ['content/back-bone-teaching.ts','content/back-layers-clinical.ts','content/hra-pelvic-teaching.ts'])
         api.onLoad({filter:new RegExp(path.replaceAll('/','[\\\\/]')+'$')},args=>({contents:oldFile(path,milestone),loader:'ts',resolveDir:dirname(args.path)}));
       api.onLoad({filter:/[\\/]content[\\/]hra-renal-clinical\.ts$/},args=>({contents:oldFile('content/hra-renal-clinical.ts',milestone),loader:'ts',resolveDir:dirname(args.path)}));
       api.onLoad({filter:/[\\/]content[\\/]body-renderer-revision\.json$/},()=>({contents:oldFile('content/body-renderer-revision.json',revision),loader:'json'}));

@@ -12,6 +12,7 @@ const contents="export * from './lib/specimen-review-material'; export * from '.
 async function load(previous=false) {
  const result=await build({stdin:{contents,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',
   plugins:[{name:'retain-delivered-renal-vocabulary',setup(api){
+   api.onLoad({filter:/[\\/]content[\\/]hra-pelvic-teaching\.ts$/},args=>({contents:oldFile('content/hra-pelvic-teaching.ts',milestone),loader:'ts',resolveDir:dirname(args.path)}));
    api.onLoad({filter:/[\\/]content[\\/]hra-renal-clinical\.ts$/},args=>({contents:oldFile('content/hra-renal-clinical.ts',milestone),loader:'ts',resolveDir:dirname(args.path)}));
   }},...(previous?[{name:'before-back-topic-completion',setup(api){
    for(const path of ['content/back-bone-teaching.ts','content/back-layers-clinical.ts'])

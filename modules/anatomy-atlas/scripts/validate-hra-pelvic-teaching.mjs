@@ -29,6 +29,7 @@ const {
   hraPelvicConcepts: concepts,
   hraPelvicReferences: references,
   hraPelvicReferenceTitles: titles,
+  hraPelvicContextReferenceTitles: contextTitles,
 } = api;
 const source = JSON.stringify(def),
   rows = def.surfaces.filter((s) => bindings[s.id]),
@@ -89,12 +90,22 @@ for (const s of def.surfaces) {
 assert.deepEqual(counts, {
   clinical: 41,
   pathology: 41,
-  ct: 12,
+  ct: 41,
   mri: 41,
-  xray: 4,
-  ultrasound: 39,
+  xray: 41,
+  ultrasound: 41,
 });
-// Explicit extension contract: all 31 earlier source lessons remain identical.
+// The historical expansion retains its exact delivered lessons. The separate
+// topic-completion test checks the current additive transition from this milestone.
+const milestoneSource = execFileSync('git', ['show',
+  '944f57b801471c3b005a64ec83314188b2f06cf5:content/hra-pelvic-teaching.ts'], { encoding: 'utf8' });
+const milestoneBuild = await build({
+  stdin: { contents: milestoneSource, resolveDir: process.cwd(), loader: 'ts' },
+  bundle: true, write: false, format: 'esm', platform: 'node',
+});
+const milestoneApi = await import('data:text/javascript;base64,' +
+  Buffer.from(milestoneBuild.outputFiles[0].text).toString('base64'));
+// Explicit original expansion contract: all 31 earlier source lessons identical.
 const oldSource = execFileSync(
   'git',
   [
@@ -117,10 +128,7 @@ const oldApi = await import(
 for (const [id, concept] of Object.entries(oldApi.hraPelvicLessonBindings)) {
   assert.equal(bindings[id], concept);
   assert.deepEqual(
-    lessonFor(
-      def,
-      def.surfaces.find((s) => s.id === id),
-    ),
+    milestoneApi.authoredHraPelvicLesson(concept),
     oldApi.authoredHraPelvicLesson(concept),
   );
 }
@@ -195,6 +203,7 @@ const require = createRequire(import.meta.url),
     exports: mod.exports,
     require: id => id === 'next/link' ? { __esModule: true, ...actualLink } : require(id),
     URL,
+    structuredClone,
     console,
     process: { env: { NODE_ENV: 'test' } },
   };
@@ -202,7 +211,7 @@ runInNewContext(component.outputFiles[0].text, context);
 const render = require('react-dom/server').renderToStaticMarkup;
 const paragraph = (body) => render(React.createElement('p', null, body));
 let renderedTopics = 0;
-for (const s of rows) {
+for (const s of def.surfaces) {
   const lesson = lessonFor(def, s);
   for (const topic of ['anatomy', 'function', ...Object.keys(counts)]) {
     const html = render(
@@ -211,7 +220,7 @@ for (const s of rows) {
         selected: s,
         initialTopic: topic,
         resolveLesson: lessonFor,
-        referenceTitles: titles,
+        referenceTitles: contextTitles,
       }),
     );
     assert(html.includes('Teaching draft'));
@@ -222,8 +231,9 @@ for (const s of rows) {
         : topic === 'function'
           ? lesson.function
           : lesson.extended.topics[topic]?.body;
-    if (body) assert(html.includes(paragraph(body)), s.id + ' ' + topic);
-    else assert(html.includes('teaching is pending for this source selection'));
+    assert(body, s.id + ' ' + topic + ': every current topic authored');
+    assert(html.includes(paragraph(body)), s.id + ' ' + topic);
+    assert(!html.includes('teaching is pending for this source selection'));
     if (['ct', 'mri', 'xray', 'ultrasound'].includes(topic))
       assert(
         html.includes(

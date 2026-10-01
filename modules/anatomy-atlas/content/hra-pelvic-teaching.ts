@@ -95,6 +95,18 @@ export const hraPelvicReferences = {
     title: 'ESUR · MRI of genital tract anomalies (2020)',
     url: 'https://link.springer.com/article/10.1007/s00330-020-06750-8',
   },
+  abdominalCt: {
+    title: 'ACR/RSNA · Abdominal and Pelvic CT',
+    url: 'https://www.radiologyinfo.org/en/info/abdominct',
+  },
+  abdominalXray: {
+    title: 'ACR/RSNA · Abdominal X-ray',
+    url: 'https://www.radiologyinfo.org/en/info/abdominrad',
+  },
+  pelvicUltrasound: {
+    title: 'ACR/RSNA · Pelvis Ultrasound',
+    url: 'https://www.radiologyinfo.org/en/info/pelvus',
+  },
 } as const;
 export const hraPelvicReferenceTitles = Object.fromEntries(
   Object.values(hraPelvicReferences).map((r) => [r.url, r.title]),
@@ -133,6 +145,7 @@ const topics: Record<
     clinical: draft('Use the cervical projection and surrounding vaginal fornices to orient the upper vagina. The source junction is a gross regional boundary, not the microscopic squamocolumnar junction.', 'cervix'),
     pathology: draft('Epithelial cervical disease cannot be inferred from this junction mesh. Distinguish a gross cervix–vagina relationship from the transformation zone examined during cervical assessment.', 'cervix'),
     ct: draft('For CT correlation, identify the cervix and upper vagina in the acquired study before assigning a source-region label. This surface supplies neither a tissue attenuation nor a tumour boundary.', 'cervix'),
+    xray: draft('On an unenhanced pelvic projection, the cervix–vagina meeting region is superimposed on other soft tissues. The source seam is a gross teaching boundary, not a line to trace on the radiograph or an epithelial landmark.', 'cervix', 'abdominalXray'),
     mri: draft('Follow the cervical canal towards the upper vagina in orthogonal planes. A rendered seam is not evidence of a septum, abnormal canal or interrupted vaginal continuity.', 'anomalies'),
     ultrasound: draft('When correlating pelvic ultrasound, establish the cervix and adjacent vaginal region first. This source has no probe plane or validated epithelial landmark; do not overlay its outline automatically.', 'cervix'),
   },
@@ -140,6 +153,7 @@ const topics: Record<
     clinical: draft('Compare the rectum with the vagina anteriorly and sacrum posteriorly. Its displayed shell is not a mesorectal fascia segmentation, resection margin or complete anal-sphincter model.', 'anatomy'),
     pathology: draft('Adenocarcinoma is the predominant colorectal malignancy. For a real rectal lesion, organ origin, depth and surrounding involvement require acquired imaging and tissue diagnosis, not this reference contour.', 'colorectal'),
     ct: draft('Use CT to relate a labelled rectum to the rest of the imaged pelvis. Do not transfer an MRI local-staging category or a measured mesorectal margin from this unregistered surface.', 'rectalMri'),
+    xray: draft('A pelvic radiograph may show gas or stool projected over the expected rectal region, but overlapping contents do not delineate its wall or mesorectal fascia. The isolated rectal shell is not a projection image.', 'colorectal', 'abdominalXray'),
     mri: draft('High-resolution T2-weighted images establish local anatomy; interpret diffusion-weighted images with T2 and ADC maps. Assess the mesorectal fascia, vessels and nodes separately. A numerical ADC threshold alone is not a staging rule.', 'rectalMri'),
     ultrasound: draft('Endorectal ultrasound has a role in selected early-tumour assessment. It is a different examination from routine transabdominal pelvic ultrasound; this model supplies neither wall-layer echoes nor a tumour-depth measurement.', 'rectalMri'),
   },
@@ -171,6 +185,7 @@ const topics: Record<
     clinical: draft('The uterine artery crosses superior to the ureter near the cervix. This is an important operative relationship, but the current specimen does not supply a complete ureter or a safe procedural route.', 'dissection'),
     pathology: draft('In pregnancy, uterine artery Doppler contributes to pre-eclampsia risk assessment alongside other factors. A vessel outline or isolated waveform feature is not a diagnosis; this source is not a pregnancy simulation.', 'uterineDoppler'),
     ct: draft('For future CT correlation, the mapped artery must be identified in that study and side. Source colour and a nearby enhancing vessel are not sufficient to establish the same branch or a spatial registration.', 'pelvicVessels'),
+    xray: draft('A routine pelvic radiograph cannot follow the small uterine arterial branch across the ureter. The source vessel is an anatomical route, while projection overlap and absent vessel contrast prevent a side-specific arterial trace.', 'pelvicVessels', 'abdominalXray'),
     mri: draft('Keep an arterial source selection separate from adjacent veins and uterine tissue when planning MRI teaching anchors. This mesh contains no angiographic sequence, perfusion measurement or validated patient vascular tree.', 'pelvicVessels'),
     ultrasound: draft('Colour Doppler helps locate the vessel; spectral Doppler provides a waveform. Uterine artery indices depend on the acquisition method and pregnancy context. No Doppler signal or gestational reference range is generated by this model.', 'uterineDoppler'),
   },
@@ -178,6 +193,7 @@ const topics: Record<
     clinical: draft('Uterine veins drain the uterine plexus towards the internal iliac veins. Connections with ovarian and vaginal venous networks mean a single displayed branch is not the complete pelvic drainage system.', 'pelvicVessels'),
     pathology: draft('Pelvic venous disorders require symptoms and venous pathophysiology to be considered together. A prominent reference vein alone does not diagnose a symptomatic pelvic venous disorder.', 'pelvicVeins'),
     ct: draft('Use the acquired venous anatomy and study protocol when assigning a CT anchor. This donor branch is not evidence of reflux, obstruction or a contrast-filling defect in a patient.', 'pelvicVeins'),
+    xray: draft('A plain pelvic projection does not resolve the uterine venous plexus or distinguish this branch from nearby arteries. Do not interpret the model calibre or blue colour as a radiographic sign of pelvic venous disease.', 'pelvicVeins', 'abdominalXray'),
     mri: draft('A venous anatomical map and a haemodynamic assessment are distinct. This reference has no measured flow direction, venographic acquisition or validated link to an MRI case.', 'pelvicVeins'),
     ultrasound: draft('A venous assessment needs acquired flow information and clinical context. The blue source surface supplies neither a Doppler trace nor evidence of reflux; do not infer haemodynamics from colour or calibre.', 'pelvicVeins'),
   },
@@ -187,6 +203,7 @@ const topics: Record<
     ct: draft('Review sacral injuries in axial images and multiplanar reconstructions, checking displacement and foraminal or canal involvement. No fracture line, displacement measurement or neural compression is encoded in this normal-reference mesh.', 'sacralImaging'),
     mri: draft('MRI can reveal marrow oedema in an occult insufficiency fracture, including after unrevealing CT. The rendered bone has no marrow signal, and its appearance cannot exclude an injury.', 'sacralImaging'),
     xray: draft('Sacral fractures can be obscured on pelvic radiographs. A reassuring projection alone does not exclude injury; this isolated 3D bone is not a simulated diagnostic radiograph.', 'sacralImaging'),
+    ultrasound: draft('Routine pelvic ultrasound uses soft-tissue acoustic windows and does not reproduce the enclosed sacral canal or marrow. The bright bony interface, when encountered, is not a map of the foramina or a fracture assessment.', 'pelvicUltrasound', 'sacralImaging'),
   },
   uterosacral: {
     clinical: draft(
@@ -197,6 +214,8 @@ const topics: Record<
       'Deep endometriosis may affect the uterosacral region. Assess a suspected deposit and adjacent spread on acquired images; a thick or irregular source mesh is not a lesion.',
       'compartments',
     ),
+    ct: draft('Use the posterior cervix, rectum and sacral region to orient a CT examination. The thin uterosacral band is not reliably separated as this mesh suggests; CT relationship alone cannot establish a small deposit or its margins.', 'dissection', 'abdominalCt'),
+    xray: draft('The paired uterosacral supports are soft-tissue bands behind the cervix, superimposed on bowel and sacrum in a pelvic projection. Their source contours should not be read as visible radiographic ligaments.', 'dissection', 'abdominalXray'),
     mri: draft(
       'Follow the ligament in more than one plane. ESUR cautions that thickness alone is not specific for an endometriotic deposit; a nodule seen in only one plane remains uncertain. This model cannot supply either signal or diagnostic measurements.',
       'compartments',
@@ -215,6 +234,8 @@ const topics: Record<
       'Parametrial involvement is a location to assess, not a diagnosis conferred by selecting the cardinal surface. Distinguish the underlying disease, its extent and neighbouring organ involvement on patient studies.',
       'compartments',
     ),
+    ct: draft('On CT, orient the lateral cervical region by the cervix, bladder and pelvic sidewall. The cardinal source edge does not identify a separate CT fascial plane, ureter course or measured extent of parametrial tissue.', 'dissection', 'abdominalCt'),
+    xray: draft('A plain pelvic radiograph overlaps the lateral cervical connective tissue with pelvic bones and other soft tissues. It cannot display a separate cardinal ligament or the vessels and ureter near its source region.', 'dissection', 'abdominalXray'),
     mri: draft(
       'Use the cervix, vagina and lateral pelvic tissues as orientation landmarks when assessing parametrial spread. Named reporting compartments are analytical divisions, not separately encapsulated organs or these mesh outlines.',
       'compartments',
@@ -235,6 +256,8 @@ const topics: Record<
       'A cyst beside the ovary may be extraovarian. Establish the ovary separately and assess the lesion itself; separating these folds does not simulate a cyst, adhesion or obstructed tube.',
       'cystic',
     ),
+    ct: draft('Relate a CT finding to the uterus, tube and ovary before assigning a broad-ligament, mesosalpinx or mesovarium location. These delicate peritoneal folds are not individual CT contours copied from the source model.', 'anatomy', 'abdominalCt'),
+    xray: draft('Broad-ligament folds and their tubal or ovarian portions are not individually outlined on a plain pelvic radiograph. Bowel and pelvic bones overlap their expected location; the source fold is anatomical context only.', 'anatomy', 'abdominalXray'),
     mri: draft(
       'Orient the uterus, ovaries and tubes together. MRI can clarify an indeterminate adnexal finding, but this thin source surface is not an MR-visible tissue boundary or a validated segmentation of a lesion.',
       'adnexa',
@@ -254,6 +277,8 @@ const topics: Record<
       'A mass near an ovarian attachment still requires determination of its organ of origin. Surface displacement in this atlas is a display operation, not evidence of a mass or vascular compromise.',
       'cystic',
     ),
+    ct: draft('On CT, place the ovary between its uterine attachment and the lateral pelvic sidewall before considering a nearby finding. The source support does not resolve its vessels, lymphatics or a patient-specific tether.', 'dissection', 'abdominalCt'),
+    xray: draft('Neither the proper ovarian ligament nor the lateral suspensory fold forms a distinct line on an ordinary pelvic radiograph. Their routes are obscured by superimposed pelvic soft tissues and bowel.', 'dissection', 'abdominalXray'),
     mri: draft(
       'Use the ovary, uterus and pelvic sidewall as relational landmarks. The source contains no flow, enhancement or tissue signal; a geometric connection cannot demonstrate perfusion.',
       'anatomy',
@@ -273,6 +298,8 @@ const topics: Record<
       'Describe a lesion near this recess separately from invasion of the bladder wall. An apparent contact between model surfaces supplies no evidence of tissue invasion or adhesion.',
       'compartments',
     ),
+    ct: draft('Locate the anterior peritoneal recess between bladder and uterus on the acquired CT using both organ boundaries. The source pouch is a potential space, not a fixed open cavity or a segmented fluid collection.', 'dissection', 'abdominalCt'),
+    xray: draft('The vesicouterine recess is a peritoneal reflection between two soft-tissue organs, not a radiopaque cavity. Plain projection overlap cannot show its separate wall or distinguish it by the model outline.', 'dissection', 'abdominalXray'),
     mri: draft(
       'The vesico-uterine space relates to the posterior part of the bladder dome. Localize findings relative to the uterus and bladder wall; do not confuse this with the bladder base or the posterior pouch of Douglas.',
       'compartments',
@@ -305,6 +332,7 @@ const topics: Record<
       'When ovarian malignancy is suspected, contrast-enhanced CT is used to assess disease extent beyond the ovary. This is a different task from characterizing normal follicles; the atlas cannot stage disease.',
       'adnexa',
     ),
+    xray: draft('A plain pelvic projection may contain adnexal calcification, but it does not localize every density to an ovary or define the ovarian cortex. Identify organ origin with the appropriate acquired examination rather than this mesh.', 'adnexa', 'abdominalXray'),
   },
   tube: {
     clinical: draft(
@@ -315,6 +343,8 @@ const topics: Record<
       'Hydrosalpinx is a fluid-distended uterine tube. A folded tubular configuration helps distinguish it from a rounded adnexal cyst; source gaps here are not obstruction.',
       'cystic',
     ),
+    ct: draft('CT can place a gross adnexal finding beside the uterus and ovary, but normal ampulla, isthmus, infundibulum and fimbriae are not separate routine CT labels. These source segments do not establish lumen patency.', 'anatomy', 'abdominalCt'),
+    xray: draft('An unenhanced pelvic radiograph cannot resolve normal uterine-tube segments or fimbriae against overlapping bowel and pelvic soft tissue. The clearly separated source pieces are anatomy lessons, not projected radiographic edges.', 'anatomy', 'abdominalXray'),
     mri: draft(
       'Simple fluid in a hydrosalpinx is typically bright on T2 and dark on T1. Inspect the contents and wall; these source surfaces contain neither fluid signal nor wall enhancement.',
       'cystic',
@@ -333,6 +363,8 @@ const topics: Record<
       'Adenomyosis involves endometrial-type tissue within myometrium; a leiomyoma is a smooth-muscle tumour. Neither is represented by an irregularity or gap in this model.',
       'uterus',
     ),
+    ct: draft('On CT, use the uterine outline and cervix to orient the body or lower-region source label. The source divides external regions, while CT findings within the cavity or wall require interpretation of acquired tissue detail.', 'uterus', 'abdominalCt'),
+    xray: draft('The body and lower uterine region overlap other pelvic soft tissues on a plain radiograph; even a visible uterine-region density cannot identify this model seam or endometrial and myometrial layers.', 'uterus', 'abdominalXray'),
     mri: draft(
       'On T2-weighted MRI, distinguish bright endometrium, the darker junctional zone and outer myometrium. Their appearance varies with physiology. None is separately segmented in this atlas.',
       'uterus',
@@ -351,6 +383,8 @@ const topics: Record<
       'Different cavity configurations can accompany different external contours. Do not classify a septate or bicorporeal uterus by splitting, hiding or exploding this reference.',
       'anomalies',
     ),
+    ct: draft('The superior uterine contour can help orient CT anatomy relative to the adnexa, but a rendered fundal dome does not disclose the internal cavity configuration. Assess a suspected anomaly on suitable acquired images.', 'anomalies', 'abdominalCt'),
+    xray: draft('A routine pelvic projection does not show the separate internal cavity and external fundal contour needed to understand a uterine anomaly. The source dome is a 3D orientation aid, not a radiographic classification.', 'anomalies', 'abdominalXray'),
     mri: draft(
       'Uterus-oriented imaging, especially a true coronal view, relates the cavity to the external fundal contour. Rotating this mesh is not equivalent to obtaining that MR plane.',
       'anomalies',
@@ -369,6 +403,8 @@ const topics: Record<
       'Nabothian cysts are cervical gland retention cysts. A labelled cervical opening is not a cyst, and an atlas surface cannot characterize a patient lesion.',
       'uterus',
     ),
+    ct: draft('Use the uterine body and upper vagina to locate the cervical region on CT. The internal and external os are canal ends in this source, not measured CT apertures or a reliably traced epithelial boundary.', 'cervix', 'abdominalCt'),
+    xray: draft('The cervix and its two canal openings are superimposed on surrounding pelvic soft tissues in a plain projection. The atlas openings should not be treated as visible radiographic holes or screening findings.', 'cervix', 'abdominalXray'),
     mri: draft(
       'Orient assessment to the cervical canal, including a perpendicular short-axis view when evaluating cervical structure. The cervix and uterine body need not share one axis.',
       'anomalies',
@@ -387,6 +423,9 @@ const topics: Record<
       'Cyst location helps distinguish vaginal, periurethral and vestibular lesions. A Gartner duct cyst is associated with the vaginal wall; Bartholin lesions arise near the introitus. No cyst or gland is modelled.',
       'cystic',
     ),
+    ct: draft('Follow the gross vaginal course below the cervix and between bladder and rectum when orienting CT anatomy. Its collapsed walls and fine layers are not resolved by this source shell or transferred to a patient scan.', 'anatomy', 'abdominalCt'),
+    xray: draft('A plain pelvic projection superimposes the vagina with bladder, rectum and pelvic bones. The vaginal canal is not outlined as this source shell; a projection cannot show its fornices or wall layers separately.', 'anatomy', 'abdominalXray'),
+    ultrasound: draft('On acquired pelvic ultrasound, relate the vagina to the cervix, bladder and rectum in the actual examination plane. The source shell provides neither echoes nor a probe orientation, so it cannot define a vaginal wall lesion.', 'cervix', 'pelvicUltrasound'),
     mri: draft(
       'Follow vaginal continuity with the cervix and its relationship to adjacent organs in multiple planes. This source cannot show an obstructing septum, retained blood or a duplicated vagina.',
       'anomalies',
@@ -753,7 +792,9 @@ export function authoredHraPelvicLesson(key: HraPelvicConcept): SpecimenLesson {
           references: [
             ...new Set([
               ...refs(...c.refs),
-              ...Object.values(lessonTopics).flatMap((t) => t.references),
+              ...Object.entries(lessonTopics)
+                .filter(([tab]) => !modalityCompletionTopics[c.family]?.includes(tab as keyof TopicSet))
+                .flatMap(([, topic]) => topic.references),
             ]),
           ],
         },
@@ -761,3 +802,13 @@ export function authoredHraPelvicLesson(key: HraPelvicConcept): SpecimenLesson {
     }),
   ) as SpecimenLesson;
 }
+
+// Additional modality references belong to the new topic notes, not silently to
+// the existing self-check. Preserve its original revision-bound evidence set.
+const modalityCompletionTopics: Partial<Record<keyof typeof topics, readonly (keyof TopicSet)[]>> = {
+  junction: ['xray'], rectum: ['xray'], uterineArtery: ['xray'], uterineVein: ['xray'],
+  sacrum: ['ultrasound'], uterosacral: ['ct', 'xray'], cardinal: ['ct', 'xray'],
+  peritoneal: ['ct', 'xray'], adnexalSupport: ['ct', 'xray'], pouch: ['ct', 'xray'],
+  ovary: ['xray'], tube: ['ct', 'xray'], uterus: ['ct', 'xray'], fundus: ['ct', 'xray'],
+  cervix: ['ct', 'xray'], vagina: ['ct', 'xray', 'ultrasound'],
+};

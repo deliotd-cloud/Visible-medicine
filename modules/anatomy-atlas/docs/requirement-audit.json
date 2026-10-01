@@ -366,7 +366,7 @@
     "app/specimens/female-pelvis/page.tsx": "7ba748df96faceeb181bd2c58a4913b4d2bde605fe5d01b939f7e3be7a39424c",
     "lib/hra-pelvis.ts": "a23f687a1f2a2effa9bcb44249acb62ae7868896052e83796ea189c916e2ff39",
     "lib/hra-pelvis-teaching.ts": "dd7ad44dab1bb22c2e1878e2a9d9625ef720f6857bb863bd1c48ab4408c47b2e",
-    "content/hra-pelvic-teaching.ts": "37d738d68742247e45d59b00a040626694e4b21bf547ec938686c62f8d61c492",
+    "content/hra-pelvic-teaching.ts": "0ccbf9e59a351b9cffda708493d5be849ed30fdb4154537a5fe50fff1bfa8b50",
     "public/models/hra-pelvis/catalog.json": "a0e997a2eb4af64d25bf5f6f9901ea70616fb59443696f7630e0aea6bd53c619",
     "public/models/hra-pelvis/NOTICE.md": "898505e9c8837bd74e9f2535726676e13e9020e593ef15943b61a7845ff1c927",
     "content/sources/hra-pelvis/metadata.json": "b9f137b1176c31419c68b78ac87f0926f874dad22f56d4dde7df3e2f15bab501",
@@ -847,14 +847,14 @@
       "pendingTeaching": 0,
       "practiceTargets": 43,
       "distinctAnatomyConcepts": 29,
-      "extendedTopicDrafts": 190,
+      "extendedTopicDrafts": 258,
       "extendedByTopic": {
         "clinical": 43,
         "pathology": 43,
-        "ct": 14,
+        "ct": 43,
         "mri": 43,
-        "xray": 6,
-        "ultrasound": 41
+        "xray": 43,
+        "ultrasound": 43
       },
       "clinicalSelfChecks": 43,
       "source": {

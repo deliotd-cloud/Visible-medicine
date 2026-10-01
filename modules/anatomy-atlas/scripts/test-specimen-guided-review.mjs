@@ -16,7 +16,7 @@ async function load(previous = false) {
     plugins: [{ name: 'exact-pelvic-guide-milestone', setup(api) {
       api.onLoad({ filter: /[\\/]lib[\\/]specimen-review-material\.ts$/ }, args => ({ contents: oldFile('lib/specimen-review-material.ts', previous ? baseline : milestone), loader: 'ts', resolveDir: dirname(args.path) }));
       api.onLoad({ filter: /[\\/]lib[\\/]abdominal-wall-teaching\.ts$/ }, args => ({ contents: oldFile('lib/abdominal-wall-teaching.ts', previous ? baseline : milestone), loader: 'ts', resolveDir: dirname(args.path) }));
-      for (const path of ['content/back-bone-teaching.ts','content/back-layers-clinical.ts','content/hra-renal-clinical.ts'])
+      for (const path of ['content/back-bone-teaching.ts','content/back-layers-clinical.ts','content/hra-renal-clinical.ts','content/hra-pelvic-teaching.ts'])
         api.onLoad({filter:new RegExp(path.replaceAll('/','[\\\\/]')+'$')},args=>({contents:oldFile(path,previous?baseline:milestone),loader:'ts',resolveDir:dirname(args.path)}));
       if (previous) api.onLoad({ filter: /[\\/]content[\\/]body-renderer-revision\.json$/ }, () => ({ contents: oldFile('content/body-renderer-revision.json'), loader: 'json' }));
     } }],
