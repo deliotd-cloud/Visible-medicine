@@ -8,7 +8,7 @@ test('tour title reflow ships matching learner/review styles without changing an
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
  const previous=(p:string)=>JSON.parse(execFileSync('git',['show','047d488a:'+p],{encoding:'utf8',maxBuffer:32e6}));
  const review=json('atlas-review/manifest.json'),before=previous('atlas-review/manifest.json');
- assert.equal(review.revision,'944f57b801471c3b005a64ec83314188b2f06cf5');
+ assert.equal(review.revision,'33566ee21aa65ed1a370a5e7653337048656a13e');
  // Keep the exact historical reflow delta pinned to its delivered commit;
  // subsequent independently reviewed runtime fixes advance the current import.
  const reflow=JSON.parse(execFileSync('git',['show','1727b2e3:atlas-review/manifest.json'],{encoding:'utf8',maxBuffer:32e6}));
@@ -45,6 +45,10 @@ test('tour title reflow ships matching learner/review styles without changing an
   assert.match(backNotice.slice(renalNotice.length),/^\n## Back-specimen teaching completion \(1 October 2026\)\n/);
   assert.ok(currentNotice.startsWith(backNotice),'Entire preceding back notice retained byte-for-byte');
   assert.match(currentNotice.slice(backNotice.length),/^\n## HRA renal modality-topic completion \(1 October 2026\)\n/);
+  const completedRenalNotice=execFileSync('git',['show','afca2757914d0fc35af577fe1d736caf8549a99f:'+notice],{encoding:'utf8'}).replaceAll('\r','');
+  assert.ok(completedRenalNotice.startsWith(backNotice),'Entire preceding back and renal notices retained byte-for-byte');
+  assert.ok(currentNotice.startsWith(completedRenalNotice),'Entire preceding renal notice retained byte-for-byte');
+  assert.match(currentNotice.slice(completedRenalNotice.length),/^\n## HRA pelvic modality-topic completion \(1 October 2026\)\n/);
   const beforeWallBack=retainedNotice.replace(/^# Third-party notices\n\n## Abdominal wall and back source-guided dissection \(1 October 2026\)\n[\s\S]+?\n(?=## )/,'# Third-party notices\n\n');
   assert.equal(beforeWallBack,execFileSync('git',['show','c5448a86:'+notice],{encoding:'utf8'}).replaceAll('\r',''),'Historical wall/back notice was the only earlier addition');
   assert.ok(beforeWallBack.startsWith(earlier),'All earlier notices retained');

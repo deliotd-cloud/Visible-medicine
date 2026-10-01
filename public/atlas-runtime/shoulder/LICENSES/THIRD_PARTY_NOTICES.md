@@ -2072,3 +2072,14 @@ preserving older references does not retrospectively clear them. Existing HRA
 CC BY4.0 meshes, source retention, credits and held anatomy remain unchanged.
 No new model, font, texture, dependency, patient scan, paid service or mandatory
 fee. Scope and required review: `docs/HRA_RENAL_TOPIC_COMPLETION.md`.
+
+## HRA pelvic modality-topic completion (1 October 2026)
+
+27 original introductory family/topic notes fill missing pelvic CT, X-ray and
+ultrasound placements. ACR/RSNA RadiologyInfo and retained anatomical references
+are reading links, not imported publisher text, images, diagrams, tables, PDFs
+or datasets. Reading access does not grant redistribution rights or endorsement;
+preserving older links does not retrospectively clear external material.
+Existing HRA CC BY4.0 models, credits, source retention and held anatomy remain
+unchanged. No new mesh, font, texture, dependency, patient pixel, paid service
+or mandatory fee. Draft/review scope: `docs/HRA_PELVIC_TOPIC_COMPLETION.md`.

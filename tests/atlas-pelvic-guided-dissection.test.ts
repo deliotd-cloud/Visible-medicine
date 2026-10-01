@@ -7,7 +7,8 @@ import {readFileSync} from 'node:fs';
 import {resolve} from 'node:path';
 import {build} from 'esbuild';
 
-const source = '944f57b801471c3b005a64ec83314188b2f06cf5';
+const source = '33566ee21aa65ed1a370a5e7653337048656a13e';
+const guidedMilestone = '944f57b801471c3b005a64ec83314188b2f06cf5';
 const sourceParent = 'e88e43b4c0c0aa5d2fa48c2ee5fc0b86c9519abe';
 const websiteBefore = 'c93ee19856ac4598de1fd8afd703b175dac4a6db';
 const sourceRepo = process.env.ATLAS_SOURCE_REPO ?? resolve('..', '..', '..', '2026-09-05', 'referenced-chatgpt-conversation-this-is-an-2', 'outputs');
@@ -126,8 +127,11 @@ test('pelvic guided sequence is the pinned source in learner and Clinical Review
     assert(reviewUi.includes(phrase), `review viewer: ${phrase}`);
   assert.equal(Buffer.from(readFileSync('atlas-review/lib/hra-pelvic-guided-dissection.ts')).equals(sourceBytes('lib/hra-pelvic-guided-dissection.ts')), true);
   assert.deepEqual(json('lib/atlas-model-inventory.json').models, JSON.parse(priorWebsiteBytes('lib/atlas-model-inventory.json').toString()).models);
-  for (const path of ['atlas-review/content/hra-pelvic-teaching.ts', 'atlas-review/lib/hra-pelvis.ts', 'atlas-review/lib/hra-pelvis-teaching.ts'])
-    assert.deepEqual(readFileSync(path), priorWebsiteBytes(path), `previous pelvic content: ${path}`);
+  for (const path of ['atlas-review/content/hra-pelvic-teaching.ts', 'atlas-review/lib/hra-pelvis.ts', 'atlas-review/lib/hra-pelvis-teaching.ts']) {
+    const sourcePath = path.replace(/^atlas-review\//, '');
+    assert.deepEqual(gitBytes(sourceRepo, guidedMilestone, sourcePath), priorWebsiteBytes(path), `historical pelvic content: ${path}`);
+    assert.deepEqual(readFileSync(path), sourceBytes(sourcePath), `current pelvic content: ${path}`);
+  }
   for (const path of ['public/models/hra-pelvis/catalog.json', 'public/models/hra-renal/catalog.json'])
     assert.deepEqual(sourceBytes(path), priorSourceBytes(path), `source catalogue: ${path}`);
 });

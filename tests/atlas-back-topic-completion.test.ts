@@ -7,7 +7,7 @@ import {readFileSync} from 'node:fs';
 import {dirname, resolve} from 'node:path';
 import {build} from 'esbuild';
 
-const source = '944f57b801471c3b005a64ec83314188b2f06cf5';
+const source = '33566ee21aa65ed1a370a5e7653337048656a13e';
 const backTopicMilestone = 'fc5457b6dbc12cb6ce702c2fc272d0bcb6cc59fc';
 const sourceBefore = '7d3010368fc53e3433e8df4f9e9d4ddb67e786e8';
 const websiteBefore = 'abfd5cf175f2b28417f43a34d34c3c730b453a4e';
@@ -19,7 +19,7 @@ const previousWebsiteBytes = (path: string) => gitBytes(process.cwd(), websiteBe
 const json = (path: string) => JSON.parse(readFileSync(path, 'utf8'));
 const sha256 = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex');
 
-async function reviewApi(previous = false) {
+async function reviewApi(revision: 'latest' | 'milestone' | 'prior' = 'latest') {
   const result = await build({
     stdin: {contents: [
       "export {backLayersDefinition} from './atlas-review/lib/back-layers';",
@@ -28,12 +28,24 @@ async function reviewApi(previous = false) {
       "export {postSpecimenReview} from './atlas-review/lib/specimen-review-api';",
     ].join('\n'), resolveDir: process.cwd(), loader: 'ts'},
     bundle: true, write: false, platform: 'node', format: 'esm',
-    plugins: [{name: 'historical-back-topic-teaching', setup(plugin) {
+    plugins: revision === 'latest' ? [] : [{name: 'historical-back-topic-teaching', setup(plugin) {
+      plugin.onLoad({filter: /[\\/]content[\\/]hra-pelvic-teaching\.ts$/}, args => ({
+        contents: gitBytes(sourceRepo, backTopicMilestone, 'content/hra-pelvic-teaching.ts').toString('utf8'), loader: 'ts', resolveDir: dirname(args.path),
+      }));
       // Keep the later renal vocabulary out of both sides of this delivered transition.
       plugin.onLoad({filter: /[\\/]content[\\/]hra-renal-clinical\.ts$/}, args => ({
         contents: gitBytes(sourceRepo, backTopicMilestone, 'content/hra-renal-clinical.ts').toString('utf8'), loader: 'ts', resolveDir: dirname(args.path),
       }));
-      if (!previous) return;
+      if (revision === 'milestone') {
+        for (const path of ['content/back-bone-teaching.ts', 'content/back-layers-clinical.ts'])
+          plugin.onLoad({filter: new RegExp(path.replaceAll('/', '[\\\\/]') + '$')}, args => ({
+            contents: gitBytes(sourceRepo, backTopicMilestone, path).toString('utf8'), loader: 'ts', resolveDir: dirname(args.path),
+          }));
+        plugin.onLoad({filter: /[\\/]content[\\/]body-renderer-revision\.json$/}, () => ({
+          contents: gitBytes(sourceRepo, backTopicMilestone, 'content/body-renderer-revision.json').toString('utf8'), loader: 'json',
+        }));
+        return;
+      }
       for (const path of ['content/back-bone-teaching.ts', 'content/back-layers-clinical.ts'])
         plugin.onLoad({filter: new RegExp(path.replaceAll('/', '[\\\\/]') + '$')}, args => ({
           contents: previousSourceBytes(path).toString('utf8'), loader: 'ts', resolveDir: dirname(args.path),
@@ -84,6 +96,10 @@ test('back-topic completion is pinned in learner and Clinical Review with models
     assert.match(backNotice.slice(before.length), /^\n## Back-specimen teaching completion \(1 October 2026\)\n/);
     assert(now.startsWith(backNotice), `complete back notice retained: ${module}`);
     assert.match(now.slice(backNotice.length), /^\n## HRA renal modality-topic completion \(1 October 2026\)\n/);
+    const renalNotice = gitBytes(process.cwd(), 'afca2757914d0fc35af577fe1d736caf8549a99f', path).toString('utf8').replaceAll('\r', '');
+    assert(renalNotice.startsWith(backNotice), `complete historical renal notice retained: ${module}`);
+    assert(now.startsWith(renalNotice), `complete renal notice retained: ${module}`);
+    assert.match(now.slice(renalNotice.length), /^\n## HRA pelvic modality-topic completion \(1 October 2026\)\n/);
     assert.equal(now, readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md', 'utf8').replaceAll('\r', ''));
   }
   for (const flag of ['patientDataIncluded', 'clinicalApproved', 'standaloneReviewConnection', 'imagingConnection'])
@@ -94,7 +110,7 @@ test('back-topic completion is pinned in learner and Clinical Review with models
   assert(surface, 'back skeletal surface');
   const packet = await api.specimenReviewMaterial(api.backLayersDefinition.key, surface.id);
   assert(packet?.teaching.lesson, 'shipped review lesson');
-  const priorApi = await reviewApi(true);
+  const priorApi = await reviewApi('prior');
   const priorPacket = await priorApi.specimenReviewMaterial(api.backLayersDefinition.key, surface.id);
   const newTopic = packet.teaching.topics.find((topic: any) =>
     priorPacket.teaching.topics.find((old: any) => old.tab === topic.tab)?.body === null);
@@ -112,8 +128,8 @@ test('back-topic completion is pinned in learner and Clinical Review with models
 });
 
 test('356 source contexts stay fixed; 48 back teaching changes reject 144 stale or foreign submissions before storage', {timeout: 120000}, async () => {
-  const current = await reviewApi();
-  const previous = await reviewApi(true);
+  const current = await reviewApi('milestone');
+  const previous = await reviewApi('prior');
   const unreachableStorage = new Proxy({}, {get() { throw Error('Revision conflict reached storage'); }});
   let contexts = 0, changed = 0, unchanged = 0, added = 0, unblocked = 0, rejected = 0;
   for (const row of current.specimenReviewRows) for (const surface of row.surfaces) {

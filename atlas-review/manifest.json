@@ -1,5 +1,5 @@
 {
-  "revision": "944f57b801471c3b005a64ec83314188b2f06cf5",
+  "revision": "33566ee21aa65ed1a370a5e7653337048656a13e",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2888,8 +2888,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "7bb3f942d47b66e938ac83cf5f946e7543f22cf7225b99241043d3fe77a561b1",
-      "importedSha256": "e9cef2f26da3e205dbaac0b2443856e2b3cff9b6b399aeffe19240778d824889"
+      "sourceSha256": "107dcf82a1fc58300bfe1cb5460d909d3c836018d94430ce291902f96f0c5be2",
+      "importedSha256": "74cb4dde81555287408dc8eeac8936632fe532b2037bf5a22c2fd4118e7b4f22"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3033,8 +3033,8 @@
     },
     {
       "path": "content/hra-pelvic-teaching.ts",
-      "sourceSha256": "37d738d68742247e45d59b00a040626694e4b21bf547ec938686c62f8d61c492",
-      "importedSha256": "37d738d68742247e45d59b00a040626694e4b21bf547ec938686c62f8d61c492"
+      "sourceSha256": "0ccbf9e59a351b9cffda708493d5be849ed30fdb4154537a5fe50fff1bfa8b50",
+      "importedSha256": "0ccbf9e59a351b9cffda708493d5be849ed30fdb4154537a5fe50fff1bfa8b50"
     },
     {
       "path": "lib/um-limb-navigation.ts",
@@ -3214,7 +3214,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "380ce2b69ed41e887017d8a0fac7b12bbac88e21b494c68e439179f94aced95e",
-      "importedSha256": "a9a63b6bdf85d606f4e4d3c954194d7fc99d8caca5408d46901af997da0cf874"
+      "importedSha256": "fb6018ed0da5a701daf52a4ed4ad5b8e51e8d60e2087425cb253e9e0d7928be3"
     },
     {
       "path": "app/review/review.css",
@@ -4573,8 +4573,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "7e714a75d572cb01a868e6f5c20a317ad109ccdb781b55b7a461a874cca2dd00",
-      "importedSha256": "7e714a75d572cb01a868e6f5c20a317ad109ccdb781b55b7a461a874cca2dd00"
+      "sourceSha256": "5aa6f2c8640a7387487f31185f6924e5b0457f4d4641eee2a3839b8096e18a9c",
+      "importedSha256": "5aa6f2c8640a7387487f31185f6924e5b0457f4d4641eee2a3839b8096e18a9c"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -4673,5 +4673,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "940cd296c4c011f63f9d40ddb3958ffb723081ecfa39b019ca9b580570098e6a"
+  "websiteIntegrationSha256": "edbce753ac0aa9ddc42fcc32f1b3c8e2d81efe85ea0cd2d73ea479580621469b"
 }

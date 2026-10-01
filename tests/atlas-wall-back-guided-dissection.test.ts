@@ -7,7 +7,7 @@ import {readFileSync} from 'node:fs';
 import {dirname, resolve} from 'node:path';
 import {build} from 'esbuild';
 
-const source = '944f57b801471c3b005a64ec83314188b2f06cf5';
+const source = '33566ee21aa65ed1a370a5e7653337048656a13e';
 const sourceBefore = 'a023f47064b2987c5593d9a7884c7e1937afe001';
 const wallBackMilestone = 'adad1abe1ad6fdb3c942d1d8b6a98393591bec80';
 const websiteBefore = 'c5448a86591b231d29719b37f5f5ed9eb3ee416b';
@@ -35,6 +35,9 @@ async function materialApi(revision: 'latest' | 'prior' | 'milestone' = 'latest'
     bundle: true, write: false, platform: 'node', format: 'esm',
     plugins: revision === 'latest' ? [] : [{name: 'historical-wall-back-material', setup(plugin) {
       const commit = revision === 'prior' ? sourceBefore : wallBackMilestone;
+      plugin.onLoad({filter: /[\\/]content[\\/]hra-pelvic-teaching\.ts$/}, args => ({
+        contents: gitBytes(sourceRepo, commit, 'content/hra-pelvic-teaching.ts').toString('utf8'), loader: 'ts', resolveDir: dirname(args.path),
+      }));
       for (const path of ['lib/specimen-review-material.ts', 'lib/abdominal-wall-teaching.ts', 'content/back-bone-teaching.ts', 'content/back-layers-clinical.ts'])
         plugin.onLoad({filter: new RegExp(path.replaceAll('/', '[\\\\/]') + '$')}, args => ({
           contents: gitBytes(sourceRepo, commit, path).toString('utf8'), loader: 'ts', resolveDir: dirname(args.path),

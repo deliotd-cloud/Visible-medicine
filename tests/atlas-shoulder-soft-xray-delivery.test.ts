@@ -9,8 +9,8 @@ test('learner and protected review deliver the same six draft shoulder X-ray les
   const manifest = JSON.parse(readFileSync(root+'manifest.json','utf8'));
   const review = JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const inputs = JSON.parse(readFileSync(root+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
-  assert.equal(manifest.sourceCommit,'944f57b801471c3b005a64ec83314188b2f06cf5');
-  assert.equal(review.revision,'944f57b801471c3b005a64ec83314188b2f06cf5');
+  assert.equal(manifest.sourceCommit,'33566ee21aa65ed1a370a5e7653337048656a13e');
+  assert.equal(review.revision,'33566ee21aa65ed1a370a5e7653337048656a13e');
   const path = 'lib/shoulder-soft-tissue-xray.ts';
   const actual = createHash('sha256').update(readFileSync('atlas-review/'+path)).digest('hex');
   assert.equal(inputs.find(f=>f.path===path)?.sha256,actual);

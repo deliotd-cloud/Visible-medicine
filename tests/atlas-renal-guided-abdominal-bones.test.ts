@@ -7,7 +7,7 @@ import {readFileSync} from 'node:fs';
 import {dirname, resolve} from 'node:path';
 import {build} from 'esbuild';
 
-const source = '944f57b801471c3b005a64ec83314188b2f06cf5';
+const source = '33566ee21aa65ed1a370a5e7653337048656a13e';
 const sourceBefore = 'adad1abe1ad6fdb3c942d1d8b6a98393591bec80';
 const renalBoneMilestone = '7d3010368fc53e3433e8df4f9e9d4ddb67e786e8';
 const websiteBefore = 'c0da7e2bf6a9f6f3e262b8c5326c369e5e6cafd2';
@@ -32,6 +32,9 @@ async function reviewApi(revision: 'latest' | 'prior' | 'milestone' = 'latest') 
     bundle: true, write: false, platform: 'node', format: 'esm',
     plugins: revision === 'latest' ? [] : [{name: 'historical-renal-and-bone-teaching', setup(plugin) {
       const adapterRevision = revision === 'prior' ? sourceBefore : renalBoneMilestone;
+      plugin.onLoad({filter: /[\\/]content[\\/]hra-pelvic-teaching\.ts$/}, args => ({
+        contents: gitBytes(sourceRepo, renalBoneMilestone, 'content/hra-pelvic-teaching.ts').toString('utf8'), loader: 'ts', resolveDir: dirname(args.path),
+      }));
       for (const path of ['lib/specimen-review-material.ts', 'lib/abdominal-wall-teaching.ts'])
         plugin.onLoad({filter: new RegExp(path.replaceAll('/', '[\\\\/]') + '$')}, args => ({
           contents: gitBytes(sourceRepo, adapterRevision, path).toString('utf8'), loader: 'ts', resolveDir: dirname(args.path),
