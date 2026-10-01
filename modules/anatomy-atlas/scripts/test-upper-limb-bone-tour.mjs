@@ -36,10 +36,10 @@ assert.deepEqual(tour.scopeRegions,['shoulder-arm','forearm','hand']);
 assert.deepEqual(tour.contextIds,contextIds);
 assert.deepEqual(tour.steps.map(step=>step.selectedId),ids);
 assert.deepEqual(tour.requiredDisplayBundles,Object.fromEntries([...source,...context].map(([id,,,bundle])=>[id,bundle])));
-assert.deepEqual(api.regionalTours.filter(item=>item.id!==tour.id),prior.regionalTours,'All 22 historical tours remain exact');
-assert.equal(api.regionalTours.length,prior.regionalTours.length+1);
+assert.deepEqual(api.regionalTours.filter(item=>item.id!==tour.id&&item.id!==api.pelvicRingTour.id),prior.regionalTours,'All 22 historical tours remain exact');
+assert.equal(api.regionalTours.filter(t=>t.id!==api.pelvicRingTour.id).length,prior.regionalTours.length+1);
 for(const structure of api.catalog.structures){
-  assert.deepEqual(api.regionalTourEvidence(api.catalog,structure.id).filter(item=>item.tour.id!==tour.id),
+  assert.deepEqual(api.regionalTourEvidence(api.catalog,structure.id).filter(item=>item.tour.id!==tour.id&&item.tour.id!==api.pelvicRingTour.id),
     prior.regionalTourEvidence(api.catalog,structure.id),`Historical evidence remains exact for ${structure.id}`);
 }
 const selected=api.regionalTourStructures(api.catalog,tour);

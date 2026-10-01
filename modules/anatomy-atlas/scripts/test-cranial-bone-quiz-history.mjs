@@ -18,7 +18,8 @@ for(const e of pins.entries){
  assert.equal(restored.cranialBoneQuizLesson(e.identity,'quiz'),undefined);
  const lesson=restored.bodyLesson(e.identity,'quiz');lesson.body+=' mutation';assert.deepEqual(restored.bodyLesson(e.identity,'quiz'),e.previous.quiz);
 }
-const before=JSON.parse(await readFile('content/body-review-display-pins.json','utf8'));
+// Pin the delivered cranial-quiz milestone; subsequent tour pins have their own exact transition test.
+const before=JSON.parse((await import('node:child_process')).execFileSync('git',['show','a10f1fd19c7dcf27470943f4775cb509f7da811f:content/body-review-display-pins.json'],{encoding:'utf8'}));
 const original=JSON.parse((await import('node:child_process')).execFileSync('git',['show',pins.parentCommit+':content/body-review-display-pins.json'],{encoding:'utf8'}));
 assert.deepEqual(Object.fromEntries(Object.entries(before).filter(([k])=>k!=='pins')),Object.fromEntries(Object.entries(original).filter(([k])=>k!=='pins')));
 assert.equal(before.pins.length,original.pins.length);const saved=new Map(original.pins.map(p=>[p.structureId,p.sha256]));

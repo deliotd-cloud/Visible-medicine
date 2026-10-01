@@ -1,5 +1,11 @@
 # Agent-authored guided learning
 
+1 October: [pelvic ring & hips](PELVIC_RING_GUIDED_TOUR.md) adds six draft
+assembled-view stops to Pelvis and Whole body, retaining the existing default
+and selector. Five exact hip-bone/sacrum/femur surfaces remain unchanged;
+revisited structures receive distinct stop identities and unique-union overview
+framing. Existing smooth camera, pause and reduced-motion controls are reused.
+
 29 September: [right carpal-row tour](CARPAL_GUIDED_TOUR.md) follows all eight
 existing wrist bones in the Hand and Whole body Guided learning menu. The hand
 muscle tour stays the default. One assembled frame and existing smooth camera

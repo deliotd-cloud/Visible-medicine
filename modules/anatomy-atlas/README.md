@@ -1,5 +1,10 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Pelvis → Guided learning:** [Pelvic ring & hips](docs/PELVIC_RING_GUIDED_TOUR.md)
+adds six smooth assembled-view stops using the existing region/whole-body tour
+selector. Five exact whole-bone surfaces stay unchanged; draft orientation only,
+pending generated website integration and browser/radiologist review.
+
 **Eye → CT / MRI:** [Cross-sectional orientation drafts](docs/EYE_CROSS_SECTIONAL_TEACHING.md)
 add twelve missing notes to seven existing concepts, retaining all earlier eye
 lessons and source geometry. No scan or registration is connected; the chamber

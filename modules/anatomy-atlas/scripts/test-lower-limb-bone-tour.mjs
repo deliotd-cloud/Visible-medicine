@@ -38,12 +38,12 @@ assert.deepEqual(tour.steps.map(({frameIds,...step})=>step),previousTour.steps.m
 assert.deepEqual(tour.requiredDisplayBundles,previousTour.requiredDisplayBundles);
 assert.deepEqual(tour.scopeRegions,previousTour.scopeRegions);
 assert.deepEqual(tour.requiredDisplayBundles,Object.fromEntries(source.map(([id,,,bundle])=>[id,bundle])));
-const historicalTours=api.regionalTours.filter(t=>t.id!==api.upperLimbBoneTour.id);
+const historicalTours=api.regionalTours.filter(t=>t.id!==api.upperLimbBoneTour.id&&t.id!==api.pelvicRingTour.id);
 assert.equal(historicalTours.length,22);
 assert.equal(historicalTours.reduce((count,t)=>count+t.steps.length,0),123);
 assert.deepEqual(historicalTours.filter(t=>t.id!==tour.id),prior.regionalTours,'All 21 previous tour definitions preserved');
 for(const structure of api.catalog.structures){
-  assert.deepEqual(api.regionalTourEvidence(api.catalog,structure.id).filter(evidence=>evidence.tour.id!==tour.id&&evidence.tour.id!==api.upperLimbBoneTour.id),
+  assert.deepEqual(api.regionalTourEvidence(api.catalog,structure.id).filter(evidence=>evidence.tour.id!==tour.id&&evidence.tour.id!==api.upperLimbBoneTour.id&&evidence.tour.id!==api.pelvicRingTour.id),
     prior.regionalTourEvidence(api.catalog,structure.id),`Previous evidence preserved for ${structure.id}`);
 }
 const selected=api.regionalTourStructures(api.catalog,tour);

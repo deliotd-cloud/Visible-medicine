@@ -10,7 +10,7 @@ const require = createRequire(import.meta.url), React = require('react');
 const catalog = JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json', import.meta.url), 'utf8'));
 const catalogBefore = JSON.stringify(catalog);
 const built = await build({ stdin: {
-  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, celiacTour, forearmTour, subscapularTour, lumbarTour, carpalTour, renalTour, tarsalTour, lowerLimbBoneTour, upperLimbBoneTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, maleDuctTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
+  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, celiacTour, forearmTour, subscapularTour, lumbarTour, carpalTour, renalTour, tarsalTour, lowerLimbBoneTour, upperLimbBoneTour, pelvicRingTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, maleDuctTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
   loader: 'tsx', resolveDir: process.cwd(),
 }, bundle: true, write: false, format: 'cjs', platform: 'node', loader: { '.css': 'empty' }, plugins: [{ name: 'gpu-boundary', setup(api) {
   api.onLoad({ filter: /[\\/]app[\\/]body-scene\.tsx$/ }, () => ({ loader: 'tsx', contents: 'if(globalThis.retryControl.importError)throw new Error("import failed"); export function BodyScene(){return null;} export function retryBodyAssets(urls,base){globalThis.retryControl.clear(urls,base);}' }));
@@ -147,10 +147,11 @@ test('Carpal tour keeps eight assembled bones, exact stops, shared smooth motion
  }
 });
 
-test('Whole-limb tours wait for every source bundle and keep assembled geometry through contextual close-ups',()=>{
+test('Whole-limb and pelvic-ring tours wait for every source bundle and keep assembled geometry through contextual close-ups',()=>{
  for(const [tourName,count,bundles] of [
   ['lowerLimbBoneTour',7,['pelvis-skeleton','thigh-skeleton','leg-skeleton','foot-skeleton']],
   ['upperLimbBoneTour',9,['shoulder-arm-skeleton','forearm-skeleton','hand-skeleton']],
+  ['pelvicRingTour',5,['pelvis-skeleton','spine-skeleton','thigh-skeleton']],
  ]){
  for(const compact of [false,true]){
   const h=harness(catalog,tourName,compact);
@@ -170,7 +171,7 @@ test('Whole-limb tours wait for every source bundle and keep assembled geometry 
    assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,index)));
    assert.equal(h.scene().transitionMs,1800);h.tick();
   }
-  assert.equal(h.scene().reset,6);assert.equal(h.timers.size,0);
+  assert.equal(h.scene().reset,h.props.tour.steps.length-1);assert.equal(h.timers.size,0);
   h.preference.matches=true;h.listeners.get('motion')();h.render();
   h.click('Back');assert.equal(h.scene().transitionMs,0);
   h.preference.matches=false;h.listeners.get('motion')();h.render();
