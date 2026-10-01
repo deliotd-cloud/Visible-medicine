@@ -1,12 +1,17 @@
 'use client';
 import {useId,useState} from 'react';
+import dynamic from 'next/dynamic';
 import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
 import {regionalTours} from '@/lib/regional-tours';
 import {nestedGuidedStudyOptions} from '@/lib/nested-guided-learning';
 import type {BodyCatalog} from './body-types';
 import {RegionalGuidedLearning} from './regional-guided-learning';
-import {EyeLayerView} from './eye-layers';
 import './whole-body-guided-learning.css';
+
+// Selecting a nested tour must not eagerly load its 3D/teaching workbench
+// for every region. Use the same deferred boundary as manual eye exploration.
+const EyeLayerView=dynamic(()=>import('./eye-layers').then(module=>module.EyeLayerView),{ssr:false,
+  loading:()=> <p role="status">Loading eye layers…</p>});
 
 // Whole-body tours explicitly declare their same-catalog regional union.
 // Regional membership is never rewritten, nor independent specimens combined.

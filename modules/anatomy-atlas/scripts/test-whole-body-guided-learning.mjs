@@ -14,7 +14,7 @@ const result=await build({stdin:{contents:"export * from './app/whole-body-guide
 }}]});
 let state,exits=0;
 const mod={exports:{}};
-runInNewContext(result.outputFiles[0].text,{module:mod,exports:mod.exports,require(id){return id==='react'?{...React,useId:()=>':tour-picker:',useState:initial=>{state??=initial;return[state,next=>{state=next;}];}}:require(id);}});
+runInNewContext(result.outputFiles[0].text,{module:mod,exports:mod.exports,require(id){return id==='next/dynamic'?()=> 'EyeLayerView':id==='react'?{...React,useId:()=>':tour-picker:',useState:initial=>{state??=initial;return[state,next=>{state=next;}];}}:require(id);}});
 const api=mod.exports,plain=v=>JSON.parse(JSON.stringify(v));
 const catalog={structures:[],bundles:[]},onExit=()=>{exits++;};
 const props={catalog,assetBase:'/atlas-runtime/head-neck',onExit};

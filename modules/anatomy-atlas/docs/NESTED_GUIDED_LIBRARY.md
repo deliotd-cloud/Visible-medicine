@@ -22,6 +22,10 @@ visibility rather than tissue translation, loading/hidden-page/renderer pauses,
 and prior manual-view/camera restoration. Ending guidance returns to manual eye
 exploration; the Tour picker changes study and Exit tour returns to the atlas.
 No automatic start, surgical-plane, clinical-approval or scan-registration claim.
+The eye workbench is loaded only when selected, through the same deferred boundary
+as manual eye exploration, with a loading status rather than eager 3D/teaching
+payload for unrelated regions. Production import checks retain the existing
+5 MB initial-JavaScript budget; this is not a measured browser performance score.
 
 The requirement inventory separately records two nested eye guides/eight stops
 over 15 existing children, with source provenance and fingerprints. These overlap

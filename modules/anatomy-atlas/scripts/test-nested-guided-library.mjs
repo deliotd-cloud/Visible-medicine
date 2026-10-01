@@ -14,7 +14,7 @@ const compiled=await build({stdin:{contents:`export {WholeBodyGuidedLearning} fr
  }}]});
 let selected,exits=0,checks=0;const module={exports:{}};
 runInNewContext(compiled.outputFiles[0].text,{module,exports:module.exports,structuredClone,
- require:id=>id==='react'?{...React,useId:()=>':nested-tour-picker:',useState:v=>{selected??=v;return[selected,next=>{selected=next;}];}}:require(id)});
+ require:id=>id==='next/dynamic'?()=> 'EyeLayerView':id==='react'?{...React,useId:()=>':nested-tour-picker:',useState:v=>{selected??=v;return[selected,next=>{selected=next;}];}}:require(id)});
 const api=module.exports,plain=v=>JSON.parse(JSON.stringify(v)),check=(v,m)=>{checks++;assert(v,m);};
 const equal=(a,b,m)=>{checks++;assert.deepEqual(plain(a),plain(b),m);};
 const catalog=api.bodyDisplayCatalog(api.raw),original=JSON.stringify(catalog),options=api.nestedGuidedStudyOptions(catalog);
@@ -73,4 +73,8 @@ one('Select').props.onValueChange(options[0].id);render();check(one('EyeLayerVie
 props.catalog=structuredClone(catalog);props.catalog.bundles.find(b=>b.id===options[0].parent.bundle).sha256='0'.repeat(64);render();
 check(nodes(tree).filter(n=>n.type==='EyeLayerView').length===0,'Source invalidation unmounts stale guide');
 const css=readFileSync('app/whole-body-guided-learning.css','utf8');check(css.includes('whole-body-nested-guidance')&&css.includes('min-height:0'),'Inline working surface bounded');
+const source=readFileSync('app/whole-body-guided-learning.tsx','utf8');
+check(!/import\s*\{EyeLayerView\}\s*from/.test(source),'No static eye workbench import');
+check(source.includes("dynamic(()=>import('./eye-layers').then(module=>module.EyeLayerView),{ssr:false"),'Explicit deferred named eye boundary');
+check(source.includes('Loading eye layers…'),'Accessible loading status while deferred viewer loads');
 console.log(JSON.stringify({checks,nestedGuides:2,stops:8,existingChildren:15,regionalToursRetained:24,singleInlineViewer:true,sourceGuards:true,browserAcceptance:false}));
