@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "sourceCommit": "a10f1fd19c7dcf27470943f4775cb509f7da811f",
+  "sourceCommit": "31a6ae7d0a823374b97c21cd7e810070e056d352",
   "region": "head-neck",
   "sourceVersion": "4.0",
   "regionalIds": [
@@ -11157,7 +11157,7 @@
     {
       "path": "index.html",
       "bytes": 1132,
-      "sha256": "0bc7b13b9b5dd8307cb2deff99ea24cd1b934c4d571acf3a2aa796b6b5a2cee0"
+      "sha256": "aa2bd294553e285f5907f66e7f0eff9e9f0811e71ac48624090f1c762b183aee"
     },
     {
       "path": "BUNDLED_NOTICES.txt",
@@ -11171,13 +11171,13 @@
     },
     {
       "path": "source-inputs.json",
-      "bytes": 124600,
-      "sha256": "5e5e3496c59e50635063f29aa1db75f792bfbced05c121b398e99175fd6be85f"
+      "bytes": 124729,
+      "sha256": "662ffebcc88199da770232004945ec9b0fca3b80eacf11a1ea8ae1f3296ee83c"
     },
     {
-      "path": "assets/abdominal-wall-study-Eymi2vp2.js",
+      "path": "assets/abdominal-wall-study-C5-uCBVz.js",
       "bytes": 61428,
-      "sha256": "edf6ad16b272b85adfdbb7d82f16c782f4c95bacb6317a02161843c24e2db2d9"
+      "sha256": "30865141d30490d0410cd5066ea512df4677b60215ba7c25f564592d9ccb2096"
     },
     {
       "path": "assets/acral-bone-clinical-curriculum-D71glUVk.js",
@@ -11190,14 +11190,14 @@
       "sha256": "2bcf462df80a79f4113f42b2628d3d9321d13482aca64ea20f703ab133ba094a"
     },
     {
-      "path": "assets/back-layers-study-In2zRGn3.js",
+      "path": "assets/back-layers-study-Ehzrvcs0.js",
       "bytes": 90423,
-      "sha256": "b7da5cbf1d82338ebbf48c79dcee778c46a4b8296840cbc1d818938b289804c8"
+      "sha256": "d20124fcfe4f6a1a7528e54619c22e9272aa497d812e8efd030e185ab3cff094"
     },
     {
-      "path": "assets/body-content-dWnPCbXR.js",
+      "path": "assets/body-content-DZdNpXCH.js",
       "bytes": 3698936,
-      "sha256": "6d239ae9c9836e71e39e2f1336a221496660c333ed375eee023daa00f1678d03"
+      "sha256": "503f5e52509f7e22110c5df4b646e491e2e67abf1dc83e2d2d652bd63ead7d78"
     },
     {
       "path": "assets/body-display-catalog-DZKQ38d4.js",
@@ -11220,14 +11220,9 @@
       "sha256": "87c31bfe8303461a8afbde6251bb48df5a77645f774c8ef3ac48c292a30ec5c8"
     },
     {
-      "path": "assets/cutaway-controls-UmnXyLSh.js",
+      "path": "assets/cutaway-controls-_X77pFEg.js",
       "bytes": 122099,
-      "sha256": "31a968debb323fcee3ed0b49d8d8d266ce10d035f2a355ef29d402138f071a10"
-    },
-    {
-      "path": "assets/eye-layers-BNq4fbXA.js",
-      "bytes": 11897,
-      "sha256": "30d2551e789c05b7e92c2dfda1f0c174590cc13a0af366045c758e154eb64faf"
+      "sha256": "33925e2db637ceae5623697f1bb674e8978c858b62132d633ebe6f0edec93140"
     },
     {
       "path": "assets/eye-layers-D-ebm8PC.css",
@@ -11235,29 +11230,34 @@
       "sha256": "defc762f2a2603fba1925c2f26fa225e01fb7d4019080f625ea69ce7f5aba4c6"
     },
     {
-      "path": "assets/hra-pelvis-study-B5-q5LvN.js",
+      "path": "assets/eye-layers-eTk3D7gQ.js",
+      "bytes": 11897,
+      "sha256": "06cd9c9267aac812ae18783c6921a2811478a383ecc9cf386f88f5b7fd2df2c5"
+    },
+    {
+      "path": "assets/hra-pelvis-study-2110MmYq.js",
       "bytes": 105630,
-      "sha256": "afb558d0524bc58ac4d7c1a37da0d96574a233dc02c7c0e943bd1597998d5e4a"
+      "sha256": "70b3db3c8e5371bd18eeb55e41193c95cdbe09df8d27bf0f6fb98a1a76f9ba56"
     },
     {
-      "path": "assets/hra-renal-study-DFrL0X03.js",
+      "path": "assets/hra-renal-study-BAYCr3bt.js",
       "bytes": 7522,
-      "sha256": "e502b1404d6e9fb650056985f6e808688e46c5cd1c1b5aec30dae5c8e190b5f1"
+      "sha256": "542690ea19e45732cbc16db818651d73787f08c62b48a43e5cd88a160addae8d"
     },
     {
-      "path": "assets/hra-renal-teaching-DWCrt_qa.js",
+      "path": "assets/hra-renal-teaching-t6ExOTBO.js",
       "bytes": 118009,
-      "sha256": "a0ffcbc73b8b68759a202488bca703aa57e4fc65acfea0b763108c820114308b"
+      "sha256": "3e2171488ec4eedadb5e4a3775ab222964319e489cbccd5f8c5613d0f80a991f"
     },
     {
-      "path": "assets/independent-study-navigation-BBHG1Iw-.js",
+      "path": "assets/independent-study-navigation-D003CubE.js",
       "bytes": 2628,
-      "sha256": "8323443e011ad7ccf8bd25e66d18207e10710e5926ceed7ecef2fc355387ebf8"
+      "sha256": "67f8bf79c3eaaf31009a355a615581d0c1d42bccab3a33864e8a3dd661084ff9"
     },
     {
-      "path": "assets/index-BIXV311i.js",
-      "bytes": 2291851,
-      "sha256": "af0deeffaebb2824b941c8461b750a941e33c0f01ce579d0b53387bfe24fc09a"
+      "path": "assets/index-7v4DlIR-.js",
+      "bytes": 2294823,
+      "sha256": "fa008e96c6dbeb87672120b0497ae5f48e00a3057886081e86307a870ace1e03"
     },
     {
       "path": "assets/index-Bl6zsEEc.css",
@@ -11275,9 +11275,9 @@
       "sha256": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021"
     },
     {
-      "path": "assets/slider-BZq7I3tJ.js",
+      "path": "assets/slider-BgtEUXh-.js",
       "bytes": 931779,
-      "sha256": "2ddba2845acbd5004f7e9ed4841f1a422f8522e55092c75c59b0a5e5f6bec90c"
+      "sha256": "f1d0dbcdd745a5ca47e946ff9daf0d9f74766d09e8fb08f351f683d51c70dcff"
     },
     {
       "path": "assets/slider-CKwahJ-z.css",
@@ -11290,19 +11290,19 @@
       "sha256": "9c293246a67c7ed218396014e6ca9919eb1b1c7a15bb2b8497ea199d8e64faff"
     },
     {
-      "path": "assets/um-knee-study-DtualBJB.js",
+      "path": "assets/um-knee-study-xXxp3p8F.js",
       "bytes": 661467,
-      "sha256": "71c3574a57c5a6729d50347c92bbd8179a06a571859118ff0fd1e791fa97086f"
+      "sha256": "62b59a0d257928dff0d7947e314916d20198756f01b85653bc42e130cfef97f1"
     },
     {
-      "path": "assets/um-limb-study-CXUJRxJi.js",
+      "path": "assets/um-limb-study-rsa38slv.js",
       "bytes": 2603,
-      "sha256": "41b03d932be617d1f5dfbba17634b465d6e78e192a375c2443346e98abcc711f"
+      "sha256": "0a7224193278fa9d29c22843753913218066976e8356de86d4b33e890bc36f91"
     },
     {
-      "path": "assets/ventricles-BVmbiGTb.js",
+      "path": "assets/ventricles-BNwIQ6LS.js",
       "bytes": 240796,
-      "sha256": "85abbca000579d276bda8a960a0abd00a477c6bbff2af13f3747410e5831d8fa"
+      "sha256": "b7c28df532fa41b0c9d4e6bd51b79e855a341f5350e968d4d78b65d43b2aab94"
     },
     {
       "path": "assets/ventricles-CfdrTivY.css",
@@ -12021,8 +12021,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "bytes": 234158,
-      "sha256": "b9110af5f31a4a62f1b3e5843a61a4d0ebc94d387b717cb8ef77a97a541410e6"
+      "bytes": 234909,
+      "sha256": "f7428581144c1e4d467757af3be8d575df83c79956fa90a8bd78216ca9bacbbe"
     },
     {
       "path": "LICENSES/CC-BY-4.0.txt",

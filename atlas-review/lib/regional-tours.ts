@@ -18,6 +18,8 @@ export { lumbarTour } from './lumbar-tour';
 import { carpalTour } from './carpal-tour';
 export { carpalTour } from './carpal-tour';
 import { renalTour } from './renal-tour';
+import { pelvicRingTour } from './pelvic-ring-tour';
+export { pelvicRingTour } from './pelvic-ring-tour';
 export { renalTour } from './renal-tour';
 import { tarsalTour } from './tarsal-tour';
 export { tarsalTour } from './tarsal-tour';
@@ -234,7 +236,7 @@ export const malePelvisTour: RegionalTour = {
     surfaceStep('rectum','Rectum · Posterior relationship',pelvicOrgan('unpaired','rectum'),'left','Finish from the left with the rectum behind the bladder and prostate. The sacrum provides posterior context. Fading adjacent organs improves visibility but does not reveal a validated rectal wall or mesorectal plane.',pelvisReference),
   ],
 };
-export const regionalTours=[thoraxTour,chestWallTour,cervicalSpineTour,celiacTour,forearmTour,thighTour,legTour,handTour,footTour,upperArmTour,larynxTour,orbitalTour,intrinsicLarynxTour,malePelvisTour,maleDuctTour,deepBrainTour,subscapularTour,lumbarTour,carpalTour,renalTour,tarsalTour,lowerLimbBoneTour,upperLimbBoneTour];
+export const regionalTours=[thoraxTour,chestWallTour,cervicalSpineTour,celiacTour,forearmTour,thighTour,legTour,handTour,footTour,upperArmTour,larynxTour,orbitalTour,intrinsicLarynxTour,malePelvisTour,maleDuctTour,deepBrainTour,subscapularTour,lumbarTour,carpalTour,renalTour,tarsalTour,lowerLimbBoneTour,upperLimbBoneTour,pelvicRingTour];
 export const regionalTourFor=(region:string)=>regionalTours.find(t=>t.region===region)??null;
 export const regionalToursFor=(region:string)=>regionalTours.filter(t=>t.region===region);
 export const regionalTourLimitations=(tour:RegionalTour)=>tour.limitations??'Selected exterior source surfaces only; no complete lumen, bronchial tree, surgical plane, acquired imaging or spatial registration. Draft pending radiologist review.';
@@ -269,7 +271,9 @@ export function regionalTourFrame(catalog:BodyCatalog,tour:RegionalTour,index?:n
   const structures=regionalTourStructures(catalog,tour);
   if(index!==undefined&&(!Number.isInteger(index)||index<0||index>=tour.steps.length))throw Error('Invalid tour step.');
   const step=index===undefined?undefined:tour.steps[index];
-  const ids=step?.frameIds??tour.steps.map(s=>s.selectedId);
+  // A sequence may revisit one structure from another view. Its overview is
+  // the unique target union; explicit camera windows must still be unambiguous.
+  const ids=step?.frameIds??[...new Set(tour.steps.map(s=>s.selectedId))];
   if(!ids.length||new Set(ids).size!==ids.length||!ids.every(id=>structures.some(s=>s.id===id))||
     (step&&!ids.includes(step.selectedId)))throw Error('Invalid tour camera frame.');
   const frame=selectionBounds(structures.filter(s=>ids.includes(s.id)));

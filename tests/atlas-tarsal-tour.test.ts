@@ -8,7 +8,7 @@ import {build} from 'esbuild';
 test('tarsal learner and review imports preserve source geometry, previous tours and independent imaging',async()=>{
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
  const prior=(p:string)=>JSON.parse(execFileSync('git',['show','3316fb7a:'+p],{encoding:'utf8',maxBuffer:32e6}));
- const review=json('atlas-review/manifest.json');assert.equal(review.revision,'a10f1fd19c7dcf27470943f4775cb509f7da811f');
+ const review=json('atlas-review/manifest.json');assert.equal(review.revision,'31a6ae7d0a823374b97c21cd7e810070e056d352');
  for(const module of ['head-neck','shoulder'])assert.equal(json('public/atlas-runtime/'+module+'/manifest.json').sourceCommit,review.revision);
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,prior('lib/atlas-model-inventory.json').models);
  const inputs=json('public/atlas-runtime/head-neck/source-inputs.json');
@@ -27,8 +27,8 @@ test('tarsal learner and review imports preserve source geometry, previous tours
  const ids=names.map(n=>'vm:anatomy:body:foot:right:bone:'+n);
  assert.deepEqual(tour.steps.map((s:any)=>s.selectedId),ids);assert.equal(tour.status,'draft');
  assert.equal(api.regionalTourFor('foot').id,api.footTour.id);assert.equal(api.regionalToursFor('foot').length,2);
- assert.equal(api.regionalTours.length,23);assert.equal(api.regionalTours.reduce((n:number,t:any)=>n+t.steps.length,0),130);
- assert.deepEqual(api.regionalTours.filter((t:any)=>t.id!==tour.id&&t.id!==api.lowerLimbBoneTour.id&&t.id!==api.upperLimbBoneTour.id),old.regionalTours,'All twenty previous tour definitions retained');
+ assert.equal(api.regionalTours.length,24);assert.equal(api.regionalTours.reduce((n:number,t:any)=>n+t.steps.length,0),136);
+ assert.deepEqual(api.regionalTours.filter((t:any)=>t.id!==tour.id&&t.id!==api.lowerLimbBoneTour.id&&t.id!==api.upperLimbBoneTour.id&&t.id!==api.pelvicRingTour.id),old.regionalTours,'All twenty previous tour definitions retained');
  assert.deepEqual(tour.requiredDisplayBundles,Object.fromEntries(ids.map(id=>[id,'foot-skeleton'])));
  for(const id of ids){
   const packet=await api.bodyReviewMaterial(id);assert.equal(packet.approval,false);assert(await api.parseBodyReviewResponse(packet,id));

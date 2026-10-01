@@ -1,9 +1,11 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
+import {withoutPelvicRingNotice} from './atlas-pelvic-notice-history.ts';
 
 // Reconstruct the prior notice only after checking the entire new section.
 // Historical append-only assertions remain strict; shipped credits stay intact.
 export function withoutEyeCrossSectionalNotice(text: string): string {
+  text=withoutPelvicRingNotice(text);
   const start = text.indexOf('## Eye cross-sectional teaching (1 October 2026)\n\n');
   if (start < 0) return text;
   assert.equal(start, '# Third-party notices\n\n'.length);

@@ -2127,3 +2127,15 @@ General anatomy reading links are not asset redistribution permissions or
 endorsement. Prior notices and source/clinical holds remain unchanged; no patient
 pixels, new model/font/texture, paid service or mandatory fee. Scope and review
 requirements: `docs/UM_LIMB_GUIDED_DISSECTION.md`.
+
+## Pelvic-ring guided orientation (1 October 2026)
+
+Six original brief orientation captions reference Thomas R. Gest and Jaye
+Schlesinger, MedCharts Anatomy, as identified by the TTUHSC El Paso lower-limb
+bone teaching page: https://anatomy.ttuhscep.edu/anatomytables/bones_lowerlimb.html.
+The publisher table remains copyrighted; this is a factual reading citation,
+not a licence to redistribute its prose, tables, diagrams or images. None are
+imported. The newly authored code/captions use this project's licence; existing
+BodyParts3D CC BY 4.0 geometry and attribution remain unchanged. No OpenStax
+material, new model, font, texture, dependency, scan, paid service or fee is
+added. Source/clinical limitations: `docs/PELVIC_RING_GUIDED_TOUR.md`.

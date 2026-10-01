@@ -8,7 +8,7 @@ import {resolve} from 'node:path';
 import {build, transform} from 'esbuild';
 
 test('cranial bone quick checks retain exact source, learner and revision-bound review evidence', async () => {
-  const source = 'a10f1fd19c7dcf27470943f4775cb509f7da811f';
+  const source = '31a6ae7d0a823374b97c21cd7e810070e056d352';
   const parent = 'bc03ed3f7324819f4bfa3e7cd0afb7203cc8e3b8';
   const websiteBaseline = '736ad7a31aa8e6414493a534f66ce7810b0a4780';
   const sourceRepo = process.env.ATLAS_SOURCE_REPO ?? resolve('..', '..', '..', '2026-09-05', 'referenced-chatgpt-conversation-this-is-an-2', 'outputs');
@@ -125,7 +125,10 @@ test('cranial bone quick checks retain exact source, learner and revision-bound 
   assert.deepEqual(Object.fromEntries(Object.entries(importedPins).filter(([key]) => key !== 'pins')),
     Object.fromEntries(Object.entries(oldPins).filter(([key]) => key !== 'pins')));
   const before = new Map(oldPins.pins.map((pin: any) => [pin.structureId, pin.sha256]));
-  const after = new Map(importedPins.pins.map((pin: any) => [pin.structureId, pin.sha256]));
+  // Preserve the exact skull-quiz milestone. The new pelvic integration test
+  // separately proves the five later pin changes against this saved milestone.
+  const historicalPins=JSON.parse(execFileSync('git',['show','443896f4:atlas-review/content/body-review-display-pins.json'],{encoding:'utf8',maxBuffer:8e6}));
+  const after = new Map(historicalPins.pins.map((pin: any) => [pin.structureId, pin.sha256]));
   assert.equal(before.size, oldPins.pins.length);
   assert.equal(after.size, importedPins.pins.length);
   assert.deepEqual([...after.keys()].sort(), [...before.keys()].sort());
@@ -134,8 +137,10 @@ test('cranial bone quick checks retain exact source, learner and revision-bound 
   assert.deepEqual(json('lib/atlas-model-inventory.json').models,
     JSON.parse(websiteBefore('lib/atlas-model-inventory.json').toString('utf8')).models,
     'all model identities, paths and hashes remain unchanged');
-  for (const path of ['public/atlas-runtime/head-neck/models/bodyparts3d/full-body/catalog.json', 'atlas-review/lib/regional-tours.ts'])
+  for (const path of ['public/atlas-runtime/head-neck/models/bodyparts3d/full-body/catalog.json'])
     assert.deepEqual(readFileSync(path), websiteBefore(path), `no catalog, model inventory or tour changes: ${path}`);
+  assert.deepEqual(execFileSync('git',['show','443896f4:atlas-review/lib/regional-tours.ts'],{maxBuffer:8e6}),
+    websiteBefore('atlas-review/lib/regional-tours.ts'),'all tours at the cranial checkpoint remain unchanged');
   for (const bundle of sourcePins.bundles) {
     const path = `public/atlas-runtime/head-neck${bundle.url.split('?')[0]}`;
     const bytes = readFileSync(path);

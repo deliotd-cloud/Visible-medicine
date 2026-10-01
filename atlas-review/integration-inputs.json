@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "a10f1fd19c7dcf27470943f4775cb509f7da811f",
-  "sha256": "254b5129ef8eaf5159c2d564f1892799c6bb6417ffb7db63f4fe7faf5948c93b",
+  "sourceCommit": "31a6ae7d0a823374b97c21cd7e810070e056d352",
+  "sha256": "c85dc9e46c5bdc4e59fd449d69a2b58cec3e89fdd42eebdc136bb30406e81948",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -716,7 +716,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "08e64c79701c086006364e766347cdf63f60218324a30670894f88f736ab6fab"
+      "sha256": "7127ad334b121bfa923d203b14cdf985ce7d98314fb4e11181e8ede975592178"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -3031,6 +3031,10 @@
       "sha256": "f951d93412bcc797afabef89ca1d3ea7a0a6716a15493b9b9eabebb292487824"
     },
     {
+      "path": "atlas-review/lib/pelvic-ring-tour.ts",
+      "sha256": "6e73d09d97c75f9334146e28690205063f51f165b5a8071bec85e7e27cb835ea"
+    },
+    {
       "path": "atlas-review/lib/pelvic-veins.ts",
       "sha256": "c7bfabbe5d9f05f61c1dd729c3378bdf32b3055452342da33b2a54d9b480fa33"
     },
@@ -3124,7 +3128,7 @@
     },
     {
       "path": "atlas-review/lib/regional-tours.ts",
-      "sha256": "07b0abcc6bb6e24c24da073614070fded914c97af61f1d28a6ae45172cf61e91"
+      "sha256": "0f8c33d4a8aad3ca7621b7a8a373bfe12a6f7641b1e02aed11420e9ded81d52e"
     },
     {
       "path": "atlas-review/lib/regional-vascular-clinical.ts",
@@ -3568,7 +3572,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "b9110af5f31a4a62f1b3e5843a61a4d0ebc94d387b717cb8ef77a97a541410e6"
+      "sha256": "f7428581144c1e4d467757af3be8d575df83c79956fa90a8bd78216ca9bacbbe"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3824,7 +3828,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "48f5b44ba5f5a906f1d370e85ddeef9a76d839f3b06d7c893bd25e3be73f1a1c"
+      "sha256": "ee5d280b672463fa0bbfaf9d16d93f69ad0575ec9fbb959e88f92bbfbb6f1344"
     }
   ]
 }
