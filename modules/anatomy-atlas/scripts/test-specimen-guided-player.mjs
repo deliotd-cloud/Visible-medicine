@@ -10,7 +10,7 @@ const React = require('react');
 const actualLink = await import('vinext/shims/link');
 const built = await build({
   stdin: {
-    contents: "export { KneeSpecimenView } from './app/um-knee-study'; export { createHraPelvisSupplement } from './app/hra-pelvis-supplement'; export { hraPelvisDefinition } from './lib/hra-pelvis'; export { hraPelvicGuidedDissection } from './lib/hra-pelvic-guided-dissection'; export { kneeDefinition } from './lib/um-limb-studies'; export { hraRenalDefinition } from './lib/hra-renal'; export { initialSpecimen, reduceSpecimen } from './lib/independent-specimen'; export { validStudyCamera } from './lib/study-views'; export { abdominalWallDefinition } from './lib/abdominal-wall'; export { backLayersDefinition } from './lib/back-layers'; export { abdominalWallSupplementFor } from './app/abdominal-wall-study'; export { backLayersSupplementFor } from './app/back-layers-study';",
+    contents: "export { KneeSpecimenView } from './app/um-knee-study'; export { createHraPelvisSupplement } from './app/hra-pelvis-supplement'; export { hraPelvisDefinition } from './lib/hra-pelvis'; export { hraPelvicGuidedDissection } from './lib/hra-pelvic-guided-dissection'; export { kneeDefinition } from './lib/um-limb-studies'; export { hraRenalDefinition } from './lib/hra-renal'; export { initialSpecimen, reduceSpecimen } from './lib/independent-specimen'; export { validStudyCamera } from './lib/study-views'; export { abdominalWallDefinition } from './lib/abdominal-wall'; export { backLayersDefinition } from './lib/back-layers'; export { abdominalWallSupplementFor } from './app/abdominal-wall-study'; export { backLayersSupplementFor } from './app/back-layers-study'; export { hraRenalSupplementFor } from './app/hra-renal-study';",
     resolveDir: process.cwd(), loader: 'tsx',
   },
   bundle: true, write: false, format: 'cjs', platform: 'node',
@@ -224,15 +224,16 @@ test('Guided session restores exact reducer history, search, display and capture
   h.unchanged();
 });
 
-test('Wall/back supplements deliver six exact steps with readiness, reduced motion and Finish restoration', () => {
+test('Wall/back/renal supplements deliver exact steps with readiness, reduced motion and Finish restoration', () => {
   const api = harness().api;
   for (const [definition, supplement] of [
     [api.abdominalWallDefinition, api.abdominalWallSupplementFor()],
     [api.backLayersDefinition, api.backLayersSupplementFor()],
+    [api.hraRenalDefinition, api.hraRenalSupplementFor()],
   ]) for (const reducedMotion of [false, true]) {
     const h = harness({ definition, supplement, reducedMotion });
     const guide = supplement.guidedDissection(definition);
-    assert.equal(guide.steps.length, 6);
+    assert.equal(guide.steps.length, definition.key === api.hraRenalDefinition.key ? 8 : 6);
     assert.equal(h.button('Start guided dissection').disabled, true);
     const before = plain(h.slots[0]);
     h.ready(); h.click('Start guided dissection');
@@ -275,7 +276,7 @@ test('Rendering loss and hidden document pause navigation while Exit remains ava
   h.unchanged();
 });
 
-test('Reduced motion removes camera tween; ordinary specimens have no guide', () => {
+test('Reduced motion removes camera tween; a specimen without its supplement has no guide', () => {
   const h = harness({ reducedMotion: true }); h.ready(); h.click('Start guided dissection');
   assert.equal(h.scene().transitionMs, 0);
   h.click('Next'); assert.equal(h.scene().transitionMs, 0);

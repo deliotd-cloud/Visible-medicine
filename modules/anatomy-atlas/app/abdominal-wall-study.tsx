@@ -9,8 +9,8 @@ import { abdominalWallDefinition, abdominalWallSource, abdominalWallColors } fro
 import type { SpecimenDefinition, SpecimenSurface } from '@/lib/independent-specimen';
 import { abdominalWallPractice } from '@/lib/abdominal-wall-practice';
 import { abdominalTeachingFor } from '@/lib/abdominal-wall-teaching';
-import { abdominalSurfaceMatches } from '@/lib/abdominal-wall-binding';
 import { abdominalReferenceTitles } from '@/content/abdominal-wall-teaching';
+import { abdominalBoneReferenceTitles } from '@/content/abdominal-bone-teaching';
 import { SpecimenLearning } from './um-limb-learning';
 import type { SpecimenTopic } from '@/lib/specimen-links';
 import { modelDeliveryUrl } from '@/lib/model-delivery';
@@ -19,11 +19,9 @@ import { abdominalGuidedDissection } from '@/lib/abdominal-guided-dissection';
 export function AbdominalWallTeaching({ surface, definition = abdominalWallDefinition, initialTopic }: {
   surface: SpecimenSurface; definition?: SpecimenDefinition; initialTopic?: SpecimenTopic;
 }) {
-  if (surface.tissue === 'skeleton' && abdominalSurfaceMatches(definition, surface)) return <details className="um-knee-details"><summary>Learn · skeletal context</summary>
-    <p>This named bone is context from the same source release. Muscle attachment footprints are not separately mapped; detailed bone teaching for this specimen is pending.</p>
-  </details>;
   return <SpecimenLearning definition={definition} selected={surface} initialTopic={initialTopic}
-    resolveLesson={abdominalTeachingFor} attachmentLabels={{ proximal: 'Origin', distal: 'Insertion' }} referenceTitles={abdominalReferenceTitles} />;
+    resolveLesson={abdominalTeachingFor} attachmentLabels={surface.tissue === 'muscle' ? { proximal: 'Origin', distal: 'Insertion' } : undefined}
+    referenceTitles={surface.tissue === 'skeleton' ? abdominalBoneReferenceTitles : abdominalReferenceTitles} />;
 }
 export function abdominalWallSupplementFor(assetBase = ''): SpecimenSupplement { return {
   guidedDissection: abdominalGuidedDissection,

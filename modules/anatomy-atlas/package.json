@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "renal-guided-abdominal-bones:test": "node --import tsx --test scripts/test-hra-renal-guided-dissection.mjs && node --test scripts/test-abdominal-bone-teaching.mjs && node scripts/test-renal-guided-abdominal-bone-review.mjs && node scripts/test-specimen-guided-player.mjs && node scripts/validate-abdominal-teaching.mjs",
     "wall-back-guided-dissection:test": "node --import tsx --test scripts/test-abdominal-guided-dissection.mjs scripts/test-back-guided-dissection.mjs && node scripts/test-wall-back-guided-review.mjs && node scripts/test-specimen-guided-player.mjs",
     "pelvic-guided-dissection:test": "node --import tsx --test scripts/test-hra-pelvic-guided-dissection.mjs && node scripts/test-specimen-guided-player.mjs && node scripts/test-specimen-guided-review.mjs",
     "cranial-bone-quiz:test": "node scripts/test-cranial-bone-quiz.mjs --integrated && node scripts/cranial-bone-quiz-transition.mjs --check && node scripts/test-cranial-bone-quiz-history.mjs && node scripts/test-tour-quick-check.mjs",

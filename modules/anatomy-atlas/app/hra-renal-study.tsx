@@ -10,8 +10,10 @@ import { hraRenalDefinition, hraRenalSource, hraRenalColors, hraRenalCollectingS
 import { hraRenalTeaching, hraRenalPractice } from '@/lib/hra-renal-teaching';
 import { hraRenalReferenceTitles } from '@/content/hra-renal-teaching';
 import { modelDeliveryUrl } from '@/lib/model-delivery';
+import { hraRenalGuidedDissection } from '@/lib/hra-renal-guided-dissection';
 
 export function hraRenalSupplementFor(assetBase = ''): SpecimenSupplement { return {
+  guidedDissection: hraRenalGuidedDissection,
   studyLink: (definition, selectedId, studyId, view) => <IndependentStudyLinkControl assetBase={assetBase} definition={definition} selectedId={selectedId} studyId={studyId} view={view} />,
   colors: hraRenalColors, identification: hraRenalPractice,
   tissueGroups: [

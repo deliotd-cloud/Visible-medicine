@@ -32,6 +32,7 @@ const bundled = await build({
 export { hraPelvicGuidedDissection } from './lib/hra-pelvic-guided-dissection.ts';
 export { abdominalGuidedDissection } from './lib/abdominal-guided-dissection.ts';
 export { backGuidedDissection } from './lib/back-guided-dissection.ts';
+export { hraRenalGuidedDissection } from './lib/hra-renal-guided-dissection.ts';
 export { hraPelvicTeaching, hraPelvicPractice } from './lib/hra-pelvis-teaching.ts';
 export { hraRenalDefinition } from './lib/hra-renal.ts';
 export { hraRenalTeaching, hraRenalPractice } from './lib/hra-renal-teaching.ts';
@@ -91,6 +92,7 @@ const {
   hraPelvicGuidedDissection,
   abdominalGuidedDissection,
   backGuidedDissection,
+  hraRenalGuidedDissection,
   hraPelvicTeaching,
   hraPelvicPractice,
   hraRenalDefinition,
@@ -666,6 +668,8 @@ for (const path of [
   'lib/hra-pelvic-guided-dissection.ts',
   'lib/abdominal-guided-dissection.ts',
   'lib/back-guided-dissection.ts',
+  'lib/hra-renal-guided-dissection.ts',
+  'content/abdominal-bone-teaching.ts',
   'lib/abdominal-wall.ts',
   'lib/back-layers.ts',
   'lib/back-layers-teaching.ts',
@@ -744,7 +748,9 @@ assert(pelvicGuidedDissection, 'Admitted pelvic source guide must resolve exactl
 const abdominalGuide = abdominalGuidedDissection(abdominalWallDefinition);
 const backGuide = backGuidedDissection(backLayersDefinition);
 assert(abdominalGuide && backGuide, 'Admitted wall/back guides must resolve exactly');
-const independentGuides = [pelvicGuidedDissection, abdominalGuide, backGuide];
+const renalGuide = hraRenalGuidedDissection(hraRenalDefinition);
+assert(renalGuide, 'Exact renal guide source identity required');
+const independentGuides = [pelvicGuidedDissection, abdominalGuide, backGuide, renalGuide];
 sourceHashes.independentGuidedDissectionData = hash(JSON.stringify(independentGuides));
 for (const path of [
   'app/volume-image.tsx', 'app/review/mri-import/page.tsx',

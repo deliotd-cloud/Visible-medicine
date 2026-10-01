@@ -15,7 +15,7 @@ const urls=new Set(Object.values(references).map(r=>r.url));
 same(muscles.length,8);same(Object.keys(api.abdominalLessonBindings).sort(),muscles.map(s=>s.id).sort());
 for(const s of def.surfaces){
   const lesson=lessonFor(def,s);
-  if(s.tissue!=='muscle'){same(lesson,null);continue;}
+  if(s.tissue!=='muscle'){ok(lesson);continue;}
   ok(lesson);ok(lesson.anatomy.length>90);ok(lesson.function.length>60);same(Object.keys(lesson.extended.topics).sort(),topics.slice(2).sort());
   for(const field of ['proximal','distal','motor'])ok(lesson.attachments[field].length>15);
   for(const draft of Object.values(lesson.extended.topics)){same(draft.readiness,'draft');ok(draft.body.length>90);ok(draft.references.length>0);ok(draft.references.every(u=>urls.has(u)&&new URL(u).protocol==='https:'));}
@@ -33,7 +33,7 @@ same(lessonFor(knee,muscles[0]),null);same(lessonFor(def,knee.surfaces[0]),null)
 // Installed React and the real Learn tabs. Stub only the unrelated WebGL module;
 // SSR checks do not certify browser interaction, geometry or clinical accuracy.
 const component=await componentBuild({stdin:{contents:"export { AbdominalWallTeaching, abdominalWallSupplement } from './app/abdominal-wall-study.tsx'; export { KneeSpecimenView } from './app/um-knee-study.tsx'; export { SpecimenLearning } from './app/um-limb-learning.tsx';",resolveDir:process.cwd(),loader:'tsx'},bundle:true,write:false,format:'cjs',platform:'node',plugins:[{name:'scene-boundary',setup(tool){tool.onLoad({filter:/body-scene\.tsx$/},()=>({loader:'js',contents:'export function BodyScene(){return null;} export function retryBodyAssets(){}'}));}}]});
-const require=createRequire(import.meta.url),React=require('react'),mod={exports:{}},context={module:mod,exports:mod.exports,require,URL,URLSearchParams,console,process:{env:{NODE_ENV:'test'}}};runInNewContext(component.outputFiles[0].text,context);
+const require=createRequire(import.meta.url),React=require('react'),actualLink=await import('vinext/shims/link'),mod={exports:{}},context={module:mod,exports:mod.exports,structuredClone,require(id){return id==='next/link'?{__esModule:true,...actualLink}:require(id);},URL,URLSearchParams,console,process:{env:{NODE_ENV:'test'}}};runInNewContext(component.outputFiles[0].text,context);
 const render=(name,props)=>require('react-dom/server').renderToStaticMarkup(React.createElement(mod.exports[name],props));
 const escape=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#x27;');
 let topicRenders=0;
@@ -45,10 +45,17 @@ for(const surface of muscles)for(const topic of topics){
   if(['ct','mri','xray','ultrasound'].includes(topic))ok(html.includes('No patient images, scan alignment or measured pathology'));
 }
 const closed=render('AbdominalWallTeaching',{surface:muscles[0],definition:def});same(/<details[^>]* open/.test(closed),false);
-for(const bone of def.surfaces.filter(s=>s.tissue==='skeleton')){const html=render('AbdominalWallTeaching',{surface:bone,definition:def});ok(html.includes('Learn · skeletal context'));same(html.includes('Clinical self-check'),false);}
+let boneTopicRenders=0;
+for(const bone of def.surfaces.filter(s=>s.tissue==='skeleton'))for(const topic of topics){
+  const lesson=lessonFor(def,bone),html=render('AbdominalWallTeaching',{surface:bone,definition:def,initialTopic:topic});boneTopicRenders++;
+  const body=topic==='anatomy'||topic==='function'?lesson[topic]:lesson.extended?.topics[topic]?.body;
+  if(body)ok(html.includes(escape(body)));else ok(html.includes('pending'));
+  ok(html.includes('Clinical self-check'));same(html.includes('detailed bone teaching for this specimen is pending'),false);
+  same(html.includes('<dt>Origin</dt>'),false);same(html.includes('<dt>Insertion</dt>'),false);
+}
 const bad=copy(def);bad.catalog.coordinateSystem.sourceToSceneColumnMajor[12]+=.5;
 ok(render('AbdominalWallTeaching',{surface:muscles[0],definition:bad}).includes('Teaching unavailable'));
 ok(render('KneeSpecimenView',{specimen:bad,supplement:mod.exports.abdominalWallSupplement}).includes('Teaching unavailable'));
 ok(render('SpecimenLearning',{definition:knee,selected:knee.surfaces[0],initialTopic:'anatomy'}).includes(escape(api.specimenTeachingFor(knee,knee.surfaces[0]).anatomy)));
 ok(render('SpecimenLearning',{definition:knee,selected:knee.surfaces[0],resolveLesson:()=>null}).includes('Teaching unavailable'));
-console.log(JSON.stringify({checks,muscles:muscles.length,extendedTopics:muscles.length*6,topicRenders,sourceFrameMutationsRejected:mutations.length,browserOrClinicalAcceptance:false}));
+console.log(JSON.stringify({checks,muscles:muscles.length,extendedTopics:muscles.length*6,topicRenders,boneTopicRenders,sourceFrameMutationsRejected:mutations.length,browserOrClinicalAcceptance:false}));

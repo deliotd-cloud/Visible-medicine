@@ -64,9 +64,10 @@ for (const group of api.specimenReviewRows)
   }
 assert.equal(contexts, 356);
 assert.equal(hashes.size, 356);
-// Includes the saved pelvic organ/vascular/sacral drafts added after the support
-// milestone. Reviewable draft coverage is not a clinical approval.
-assert.equal(teachingReady, 321);
+// Includes 21 exact abdominal skeletal drafts added to the saved 321 contexts.
+// The current renal/bone transition test separately proves the exact delta;
+// reviewable draft coverage is not a clinical approval.
+assert.equal(teachingReady, 342);
 for (const key of ["", "__proto__", "body-display-catalog", "shoulder-pilot"])
   assert.equal(await api.specimenReviewMaterial(key, "unknown"), null);
 const group = api.specimenReviewRows[0],
@@ -493,7 +494,7 @@ const report = {
   pendingTopicStates: pending,
   checks: [
     "exact source/frame separation",
-    "354 unique regional/specimen material identities",
+    `${contexts} unique regional/specimen material identities`,
     "original GLB hashes",
     "immutable prior migrations",
     "account isolation",

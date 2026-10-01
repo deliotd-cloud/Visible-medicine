@@ -6,14 +6,18 @@ import { dirname } from 'node:path';
 import { build } from './workspace-test-build.mjs';
 
 const baseline = 'a023f47064b2987c5593d9a7884c7e1937afe001';
-const oldFile = path => execFileSync('git', ['show', `${baseline}:${path}`], {encoding:'utf8',maxBuffer:20e6});
+// Keep this delivered milestone exact; the renal/bone review test checks current state.
+const milestone = 'adad1abe1ad6fdb3c942d1d8b6a98393591bec80';
+const oldFile = (path, revision = baseline) => execFileSync('git', ['show', `${revision}:${path}`], {encoding:'utf8',maxBuffer:20e6});
 const contents = "export * from './lib/specimen-review-material'; export * from './lib/specimen-review'; export * from './lib/specimen-review-api'; export * from './lib/specimen-review-client'; export * from './lib/abdominal-wall'; export * from './lib/back-layers'; export * from './lib/abdominal-guided-dissection'; export * from './lib/back-guided-dissection';";
 async function load(previous = false) {
   const result = await build({stdin:{contents,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',
-    plugins: previous ? [{name:'exact-before-wall-back-guide',setup(api){
-      api.onLoad({filter:/[\\/]lib[\\/]specimen-review-material\.ts$/},args=>({contents:oldFile('lib/specimen-review-material.ts'),loader:'ts',resolveDir:dirname(args.path)}));
-      api.onLoad({filter:/[\\/]content[\\/]body-renderer-revision\.json$/},()=>({contents:oldFile('content/body-renderer-revision.json'),loader:'json'}));
-    }}] : [],
+    plugins: [{name:'exact-wall-back-guide-milestone',setup(api){
+      const revision = previous ? baseline : milestone;
+      for (const path of ['lib/specimen-review-material.ts', 'lib/abdominal-wall-teaching.ts'])
+        api.onLoad({filter:new RegExp(path.replaceAll('/', '[\\\\/]') + '$')},args=>({contents:oldFile(path, revision),loader:'ts',resolveDir:dirname(args.path)}));
+      api.onLoad({filter:/[\\/]content[\\/]body-renderer-revision\.json$/},()=>({contents:oldFile('content/body-renderer-revision.json', revision),loader:'json'}));
+    }}],
   });
   return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
 }

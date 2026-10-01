@@ -15,6 +15,7 @@ async function load(previous = false) {
   const result = await build({ stdin: { contents, resolveDir: process.cwd(), loader: 'ts' }, bundle: true, write: false, format: 'esm', platform: 'node',
     plugins: [{ name: 'exact-pelvic-guide-milestone', setup(api) {
       api.onLoad({ filter: /[\\/]lib[\\/]specimen-review-material\.ts$/ }, args => ({ contents: oldFile('lib/specimen-review-material.ts', previous ? baseline : milestone), loader: 'ts', resolveDir: dirname(args.path) }));
+      api.onLoad({ filter: /[\\/]lib[\\/]abdominal-wall-teaching\.ts$/ }, args => ({ contents: oldFile('lib/abdominal-wall-teaching.ts', previous ? baseline : milestone), loader: 'ts', resolveDir: dirname(args.path) }));
       if (previous) api.onLoad({ filter: /[\\/]content[\\/]body-renderer-revision\.json$/ }, () => ({ contents: oldFile('content/body-renderer-revision.json'), loader: 'json' }));
     } }],
   });

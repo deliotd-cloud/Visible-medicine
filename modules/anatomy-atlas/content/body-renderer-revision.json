@@ -18,7 +18,7 @@
     },
     {
       "path": "app/abdominal-wall-study.tsx",
-      "sha256": "31ab0e30b356043755c74970e777f36e8760629177c711c87477fabd6e5c5db9"
+      "sha256": "e8635326829bab9da23b78ec8025c8e32541495131b3d80afea55bfdb2e3cc29"
     },
     {
       "path": "app/anatomy-canvas.tsx",
@@ -174,7 +174,7 @@
     },
     {
       "path": "app/hra-renal-study.tsx",
-      "sha256": "80eed76f9ea02589327c29f56ad74d66eb1d58759578f03abab6e6cad775db6a"
+      "sha256": "a3480af773ef7d1e882d4aa994b444dc9b36181495263dafb6ad52a080ddc19c"
     },
     {
       "path": "app/imaging-comparison.css",
@@ -475,6 +475,10 @@
     {
       "path": "content/abdominal-arterial.ts",
       "sha256": "8d3adf0135a17a01281b5cbdf3d9cbd62167849043c6bf4948382f8cb8956ec1"
+    },
+    {
+      "path": "content/abdominal-bone-teaching.ts",
+      "sha256": "e968a035feafa0abdc44efad2b342a487275fa67a573d58afbeb5513336ebd1f"
     },
     {
       "path": "content/abdominal-branch-imaging-pins.json",
@@ -1746,7 +1750,7 @@
     },
     {
       "path": "lib/abdominal-wall-teaching.ts",
-      "sha256": "30f1fbd0b64e9cd73566372eed356e71c40a0b0a20fe87e1c8e4ddf6b8068b16"
+      "sha256": "1afe4f79d3b190506a0d55e345b1bd48b53ab1699ac8ef8729b7ea395d9616d0"
     },
     {
       "path": "lib/abdominal-wall.ts",
@@ -2403,6 +2407,10 @@
     {
       "path": "lib/hra-pelvis.ts",
       "sha256": "a23f687a1f2a2effa9bcb44249acb62ae7868896052e83796ea189c916e2ff39"
+    },
+    {
+      "path": "lib/hra-renal-guided-dissection.ts",
+      "sha256": "c1feb8e84baed26579ec3ff411a7fa4e14a825494c0f3d227b3509f76e882236"
     },
     {
       "path": "lib/hra-renal-teaching.ts",
@@ -3270,7 +3278,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "90c1b85b8cf57bf82cc8e5711c7de35581d31c0d5babe93d7ffc92effd2f015c"
+      "sha256": "d83709c42265dc40ed3a8abf8696fd00a474a69486234a64354e5aaf76da781c"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3485,5 +3493,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "6727ac48858b517aa401b12e9b7c1f743ef07d6f870f8be869c0f31f4eca2dcb"
+  "sha256": "330bdacb85f93b8e5e8cbbe6cf3a91027ed3e0f5a8e5a82dd7484f6ad9d18eab"
 }
