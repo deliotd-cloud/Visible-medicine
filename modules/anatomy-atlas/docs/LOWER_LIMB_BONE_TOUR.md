@@ -1,6 +1,8 @@
 # Right lower-limb bone orientation tour
 
-Draft, source-bound teaching sequence for seven whole right-sided bones from the hip to the heel. The selected IDs, original geometry and display bundles come from the existing body catalog. Every stop uses the same seven-bone assembled camera frame, with a 14-second step and fading of the other surfaces. The tour introduces no new selectable sub-bone landmarks or anatomy assets.
+Draft, source-bound teaching sequence for seven whole right-sided bones from the hip to the heel. The selected IDs, original geometry and display bundles come from the existing body catalog. Revision v2 uses contextual camera close-ups with a 14-second step and fading of the other surfaces. All seven meshes stay assembled throughout; changing the framing does not remove or move anatomy. The tour introduces no new selectable sub-bone landmarks or anatomy assets.
+
+Hip and femur stops fit their respective whole bone. The patella stop fits the patella while adjacent distal femur and proximal tibia remain visible context; this is a viewing window, not a validated knee landmark segmentation. Tibia/fibula share a leg frame, and talus/calcaneus share a hindfoot frame. Other context may extend beyond the camera view. The existing 1.8-second quintic orbit moves between frames; reduced-motion preference removes the sweep. Exact per-step bounds and v2 tour identity are included in revision-bound Clinical Review evidence; v1 approvals cannot validate these changed frames.
 
 Anatomical relationships are based on the [Texas Tech University Health Sciences Center El Paso lower-limb bone table](https://anatomy.ttuhscep.edu/anatomytables/bones_lowerlimb.html). The short captions are original orientation text; no table wording or media is reproduced. The source is descriptive anatomy, not validation of the model's alignment, spacing or clinical accuracy.
 

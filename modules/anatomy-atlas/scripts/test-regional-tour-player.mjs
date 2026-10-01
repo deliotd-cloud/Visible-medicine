@@ -147,7 +147,7 @@ test('Carpal tour keeps eight assembled bones, exact stops, shared smooth motion
  }
 });
 
-test('Hip-to-heel tour waits for all four source bundles and keeps the assembled frame',()=>{
+test('Hip-to-heel tour waits for all four source bundles and keeps assembled geometry through contextual close-ups',()=>{
  for(const compact of [false,true]){
   const h=harness(catalog,'lowerLimbBoneTour',compact);
   assert.equal(h.scene().structures.length,7);
@@ -159,12 +159,12 @@ test('Hip-to-heel tour waits for all four source bundles and keeps the assembled
    assert.equal(h.button('Start guided tour').disabled,true,'Partial source readiness cannot unlock teaching');
   }
   h.scene().onLoaded(bundles.at(-1));h.render();h.click('Start guided tour');
-  const frame=plain(h.scene().presetBounds);h.click('Play');
+  const assembledIds=plain(h.scene().structures.map(s=>s.id));h.click('Play');
   for(const [index,step]of h.props.tour.steps.entries()){
    assert.equal(h.scene().selectedId,step.selectedId);assert.equal(h.scene().view,step.view);
    assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
-   assert.deepEqual(plain(h.scene().presetBounds),frame);
-   assert.deepEqual(frame,plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,index)));
+   assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),assembledIds,'Camera windows never drop source context');
+   assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,index)));
    assert.equal(h.scene().transitionMs,1800);h.tick();
   }
   assert.equal(h.scene().reset,6);assert.equal(h.timers.size,0);
