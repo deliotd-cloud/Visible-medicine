@@ -15,6 +15,7 @@ export default function FemalePelvisModulePage() {
       <Link href="/atlas" aria-label="Back to anatomy atlas">← Atlas</Link>
       <h1>Female pelvic anatomy</h1>
       <span>Private pilot · Review pending</span>
+      <Link className="atlas-intended-use-link" href="/intended-use">Education &amp; research only</Link>
       <a href="/atlas-runtime/female-pelvis/index.html" target="_blank" rel="noopener noreferrer">Open full screen ↗</a>
     </header>
     <AtlasRegionNavigation modality="3d" selected="female-pelvis"/>

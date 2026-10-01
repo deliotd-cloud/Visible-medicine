@@ -68,7 +68,7 @@ export default async function Home() {
         <div className="research-grid">
           <div><span>Dataset provenance</span><b>Source, licence and de-identification evidence remain attached to every publication.</b></div>
           <div><span>Immutable versions</span><b>Courses and studies can pin an exact atlas release instead of silently changing underneath.</b></div>
-          <div><span>Research boundary</span><b>Non-clinical research spaces stay distinct from public reviewed anatomy and learner records.</b></div>
+          <div><span>Research boundary</span><b>Non-clinical research spaces stay distinct from the public Atlas and learner records.</b></div>
         </div>
         <Link className="outline-button" href="/research">Read the research framework <span>→</span></Link>
       </section>
@@ -77,7 +77,7 @@ export default async function Home() {
         <p className="section-index">04 / The platform</p>
         <h2>One education platform.<br />Three connected experiences.</h2>
         <div className="family-map">
-          <div><span>Explore</span><h3>Atlas</h3><p>Reviewed radiological anatomy, labels, practice and linked explanations.</p></div>
+          <div><span>Explore</span><h3>Atlas</h3><p>Source-based radiological anatomy, labels, practice and linked explanations. Specialist review is in progress.</p></div>
           <div className="family-active"><span>Learn</span><h3>Courses</h3><p>Official learning paths and private institutional teaching.</p></div>
           <div><span>Create</span><h3>Studio</h3><p>Course authoring, assessment, live teaching and secure delivery.</p></div>
         </div>

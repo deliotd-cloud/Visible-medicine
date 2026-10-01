@@ -821,9 +821,12 @@ body.splash-open { overflow: hidden; }
 .workspace-switcher > summary { min-height: 38px; padding: 0 14px; display: flex; align-items: center; gap: 8px; border: 1px solid color-mix(in srgb, var(--teal) 24%, var(--line)); border-radius: 999px; background: rgba(255,255,255,.55); font-size: 12px; cursor: pointer; list-style: none; }
 .workspace-switcher > summary::-webkit-details-marker { display: none; }
 .workspace-switcher[open] > summary { border-color: var(--teal); background: white; }
+.workspace-switcher > summary:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
 .workspace-switcher nav { position: absolute; z-index: 40; top: calc(100% + 12px); right: 0; width: 310px; padding: 8px; display: grid; border: 1px solid var(--line); border-radius: 12px; background: rgba(250,252,251,.98); box-shadow: 0 25px 70px rgba(8,42,49,.18); }
+.workspace-switcher:not([open]) nav { display: none; }
 .workspace-switcher nav a { padding: 13px; display: grid; gap: 3px; border-radius: 7px; }
 .workspace-switcher nav a:hover, .workspace-switcher nav a[aria-current="page"] { background: var(--panel); }
+.workspace-switcher nav a:focus-visible { outline: 2px solid var(--teal); outline-offset: -2px; }
 .workspace-switcher nav b { font-size: 13px; }
 .workspace-switcher nav span { color: var(--secondary-text); font-size: 10px; }
 

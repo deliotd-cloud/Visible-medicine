@@ -10,15 +10,15 @@ test('orbital ultrasound and compact Search are delivered without changing geome
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json'),manifest=JSON.parse(bytes.toString());
-  assert.equal(sha(bytes),'b7a4762773376faefca327cbcc6511547eeec7ca56007123b3fc32cedda42832');
-  assert.equal(manifest.sourceCommit,'08b0fbda394c7a878a3b5474e8aa566b8dfb0b83');
+  assert.equal(sha(bytes),'3cd4e463b72520c24016012613d9100b83aaaf25077c04fd06e652e29ef44882');
+  assert.equal(manifest.sourceCommit,'6888a898281695faf9e41bdf34a7d3c771c4f7f2');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of [
     ['content/orbital-neck-muscle-imaging.ts','d8273c7b122422a39bd5239bd07714a13e4497ec927f8e82c24d829d0552e67e'],
     ['lib/orbital-neck-muscle-imaging.ts','d087d792653bab1640f37f30cd4930d2c5f95e34c3bfa23cc06c6df7556e3262'],
     ['app/atlas-workspace.tsx','ee177772777f18e2db5ed8ab5c30448ace5e07fa1adab4e7f6515c6907605110'],
-    ['app/atlas-workspace.css','10112bc03082946db1a475a390cf1a385f92bc83e4dc978d6d87d2773f9fae72'],
+    ['app/atlas-workspace.css','bc4727a16bc05b6c4da466a72a6a9172fb395937d58757b437068d314b4a4eea'],
   ])assert.deepEqual(inputs.filter(input=>input.path===path),[{path,sha256}]);
   assert.ok(!inputs.some(input=>/native-mr|local-mr-study|\.vmmr|patient[-_/]?data/i.test(input.path)));
   const files=manifest.files as {path:string;sha256:string}[];

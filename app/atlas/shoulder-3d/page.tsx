@@ -17,6 +17,7 @@ export default async function ShoulderModulePage({searchParams}:{searchParams:Pr
       <Link href="/atlas" aria-label="Back to anatomy atlas">← Atlas</Link>
       <h1>Shoulder anatomy</h1>
       <span>Private pilot · Review pending</span>
+      <Link className="atlas-intended-use-link" href="/intended-use">Education &amp; research only</Link>
       <a href={moduleHref} target="_blank" rel="noopener noreferrer">Open full screen ↗</a>
     </header>
     <AtlasRegionNavigation modality="3d" selected="shoulder"/>

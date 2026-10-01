@@ -9,6 +9,7 @@ export default function SpineModulePage(){
     <header className="shoulder-module-bar">
       <Link href="/atlas" aria-label="Back to anatomy atlas">← Atlas</Link>
       <h1>Spine &amp; back</h1><span>Private pilot · Review pending</span>
+      <Link className="atlas-intended-use-link" href="/intended-use">Education &amp; research only</Link>
       <a href="/atlas-runtime/head-neck/index.html?region=spine" target="_blank" rel="noopener noreferrer">Open full screen ↗</a>
     </header>
     <AtlasRegionNavigation modality="3d" selected="spine"/>

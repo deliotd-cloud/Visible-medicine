@@ -407,3 +407,138 @@
     display: none;
   }
 }
+
+/* A website-sized desktop iframe has no spare vertical space for duplicate
+   gutters. Keep the model, controls and source credit in normal grid flow: long
+   captions or enlarged text can grow the row and scroll the centre pane. */
+@media (min-width: 1101px) and (min-height: 600px) {
+  .body-app[data-presentation='panel'] .anatomy-control-rail .body-system-bar span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  /* The switch track is fixed-pixel; its thumb must use the same sizing unit
+     so enlarged text cannot push the thumb beyond the narrow system card. */
+  .body-app[data-presentation='panel'] .anatomy-control-rail [data-slot='switch'][data-size='default'] [data-slot='switch-thumb'] {
+    width: 16px;
+    height: 16px;
+  }
+  /* Match the fixed-pixel track with a 44px-wide hit area. A rem-based
+     negative inset expands outside this narrow rail when text is enlarged.
+     Preserve a >=44px target in both axes without clipping or reducing text. */
+  .body-app[data-presentation='panel'] .anatomy-control-rail [data-slot='switch']::after {
+    inset-inline: -6px;
+    inset-block: -13px;
+  }
+  .body-app[data-presentation='panel'] .anatomy-control-rail :is(button, .vm-inspection-scale, .vm-opacity > div:first-child, .vm-inspection-options label) {
+    min-width: 0;
+    max-width: 100%;
+    flex-wrap: wrap;
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+  /* Leave room for slider endpoint hit targets inside the padded fieldset. */
+  .body-app[data-presentation='panel'] .anatomy-control-rail .vm-inspection-grid [data-slot='slider'] {
+    width: calc(100% - 56px);
+    margin-inline: 28px;
+  }
+  .body-app[data-presentation='panel'] .anatomy-control-rail .vm-inspection-grid [data-slot='slider-thumb']::after {
+    inset: -16px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .body-app[data-presentation='panel'] > .body-topbar[data-shared-header='true'] {
+    min-height: 0;
+    padding: 2px 12px;
+    gap: 4px 10px;
+  }
+  .body-app[data-presentation='panel'] .body-workspace .body-canvas {
+    grid-template-columns: minmax(0, 1fr) auto;
+    /* At large text sizes, preserve a useful drawing surface and let this
+       pane scroll instead of squeezing the model beneath wrapped controls. */
+    grid-template-rows: auto minmax(max(160px, 12rem), 1fr) auto auto;
+    gap: 2px 10px;
+    padding: 3px 0 2px;
+    margin-bottom: 4px;
+  }
+  .body-app[data-presentation='panel'] .body-workspace .body-canvas > :is(.body-view-row, .body-scene, .body-toolbar) {
+    grid-column: 1 / -1;
+  }
+  .body-app[data-presentation='panel'] .body-workspace .body-canvas > .body-view-row {
+    margin-inline: 6px;
+  }
+  .body-app[data-presentation='panel'] .body-workspace .body-canvas > .body-toolbar {
+    padding: 3px;
+    flex-wrap: wrap;
+    max-width: calc(100% - 12px);
+  }
+  .body-app[data-presentation='panel'] .body-workspace .body-canvas > .body-canvas-caption {
+    grid-row: 4;
+    grid-column: 1;
+    width: auto;
+    justify-self: start;
+    text-align: left;
+    padding-left: 6px;
+  }
+  .body-app[data-presentation='panel'] .body-workspace .body-canvas > .model-credit {
+    grid-row: 4;
+    grid-column: 2;
+    width: auto;
+    justify-self: end;
+    text-align: right;
+    padding-right: 6px;
+    white-space: normal;
+  }
+  /* Reading belongs beside the anatomy on desktop, not above it. Preserve the
+     complete disclosure and source credit; only its reading pane scrolls when
+     long imaging notes are opened. Playback controls stay in normal flow. */
+  .body-app[data-presentation='panel'] .regional-tour {
+    display: grid;
+    grid-template-columns: minmax(280px, 24%) minmax(0, 1fr);
+    grid-template-rows: minmax(max(300px, 18rem), 1fr) auto;
+    min-height: 0;
+    overflow: auto;
+  }
+  .body-app[data-presentation='panel'] .regional-tour-panel {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    padding: 10px;
+    overflow-wrap: anywhere;
+  }
+  .body-app[data-presentation='panel'] .regional-tour-heading {
+    flex-shrink: 0;
+  }
+  .body-app[data-presentation='panel'] .regional-tour-explanation {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+  }
+  .body-app[data-presentation='panel'] .regional-tour-panel > output {
+    flex-shrink: 0;
+  }
+  .body-app[data-presentation='panel'] .regional-tour-controls {
+    flex-shrink: 0;
+    flex-wrap: wrap;
+  }
+  .body-app[data-presentation='panel'] .regional-tour-controls button {
+    min-height: 44px;
+    max-width: 100%;
+    white-space: normal;
+  }
+  .body-app[data-presentation='panel'] .regional-tour-canvas {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+    min-height: max(300px, 18rem);
+  }
+  .body-app[data-presentation='panel'] .regional-tour-credit {
+    grid-column: 2;
+    grid-row: 2;
+    overflow-wrap: anywhere;
+  }
+}

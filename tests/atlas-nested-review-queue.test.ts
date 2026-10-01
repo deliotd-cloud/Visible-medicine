@@ -7,7 +7,7 @@ import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
 import {dirname} from 'node:path';
 import {build} from 'esbuild';
-const source='08b0fbda394c7a878a3b5474e8aa566b8dfb0b83',base='db062f3fa5c287d24c20f4b8e77a9ba2eb120ecc';
+const source='6888a898281695faf9e41bdf34a7d3c771c4f7f2',base='db062f3fa5c287d24c20f4b8e77a9ba2eb120ecc';
 const old=(path:string)=>Buffer.from(execFileSync('git',['show',base+':'+path],{maxBuffer:32e6}));
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
@@ -38,7 +38,7 @@ test('compact review queue retains exact source/search/track and models/rights a
  assert.deepEqual(review.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),
   ['content/nested-guided-learning-bindings.v1.json','lib/eye-layer-guide.ts','lib/nested-guided-learning.ts','lib/nested-review-queue.ts']);
  assert.deepEqual(review.files.filter((f:any)=>prior.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),
-  ['app/eye-layers.css','app/eye-layers.tsx','app/review/nested/nested-review.css','app/review/nested/page.tsx','app/review/nested/workspace.tsx','app/whole-body-guided-learning.css','app/whole-body-guided-learning.tsx','content/body-renderer-revision.json','lib/nested-review-material.ts','lib/nested-review.ts']);
+  ['app/atlas-workspace.css','app/eye-layers.css','app/eye-layers.tsx','app/review/nested/nested-review.css','app/review/nested/page.tsx','app/review/nested/workspace.tsx','app/whole-body-guided-learning.css','app/whole-body-guided-learning.tsx','content/body-renderer-revision.json','lib/nested-review-material.ts','lib/nested-review.ts']);
  for(const file of review.files)assert.equal(sha(readFileSync('atlas-review/'+file.path)),file.importedSha256,file.path);
  const receipt=json('atlas-review/integration-inputs.json');assert.equal(receipt.sourceCommit,source);
  assert(receipt.inputs.some((i:any)=>i.path==='atlas-review/lib/nested-review-queue.ts'));

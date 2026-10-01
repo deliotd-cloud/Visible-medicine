@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {withoutNestedCTOrientationNotice} from './atlas-nested-ct-notice-history.ts';
-const source='08b0fbda394c7a878a3b5474e8aa566b8dfb0b83';
+const source='6888a898281695faf9e41bdf34a7d3c771c4f7f2';
 const before='c3fb787a9811bf0ef9c3bd130f7a0534d49db9ad';
 const previousBytes=(path:string)=>Buffer.from(execFileSync('git',['show',before+':'+path],{maxBuffer:32e6}));
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
@@ -39,7 +39,7 @@ test('complete named CT drafts and credited sources reach learners and protected
  assert.deepEqual(review.files.filter((f:any)=>!oldReview.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),['content/nested-ct-orientation.ts','content/nested-guided-learning-bindings.v1.json','lib/eye-layer-guide.ts','lib/nested-guided-learning.ts','lib/nested-review-queue.ts']);
  assert(oldReview.files.every((p:any)=>review.files.some((f:any)=>f.path===p.path)));
  assert.deepEqual(review.files.filter((f:any)=>oldReview.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),
-  ['LICENSES/THIRD_PARTY_NOTICES.md','app/eye-layers.css','app/eye-layers.tsx','app/review/nested/nested-review.css','app/review/nested/page.tsx','app/review/nested/workspace.tsx','app/whole-body-guided-learning.css','app/whole-body-guided-learning.tsx','content/body-renderer-revision.json','content/nested-teaching.ts','lib/nested-review-material.ts','lib/nested-review.ts']);
+  ['LICENSES/THIRD_PARTY_NOTICES.md','app/atlas-workspace.css','app/eye-layers.css','app/eye-layers.tsx','app/review/nested/nested-review.css','app/review/nested/page.tsx','app/review/nested/workspace.tsx','app/whole-body-guided-learning.css','app/whole-body-guided-learning.tsx','content/body-renderer-revision.json','content/nested-teaching.ts','lib/nested-review-material.ts','lib/nested-review.ts']);
  for(const file of review.files)assert.equal(sha(readFileSync('atlas-review/'+file.path)),file.importedSha256,file.path);
  assert.deepEqual(Object.keys(api.nestedCTOrientation),ids);
  assert.deepEqual(Object.keys(api.nestedCTOrientationReferences),keys);

@@ -8,15 +8,15 @@ export const metadata: Metadata = {
 
 const plans = [
   { name: "Explorer", price: "Free access", audience: "For discovering the platform", features: ["Selected Atlas modules", "Public educational resources", "Official course previews", "No institutional publishing"] },
-  { name: "Individual", price: "Annual subscription", audience: "For independent learners", features: ["Full published Atlas", "Visible Medicine official courses", "Bookmarks and saved progress", "Practice and revision tools"] },
-  { name: "Institution", price: "Annual platform licence", audience: "For universities, hospitals and societies", features: ["Private organisation workspace", "Studio authoring and assessments", "Educator and learner roles", "Engagement and completion reporting"] },
+  { name: "Individual", price: "Annual subscription", audience: "For independent Atlas learners", features: ["Full published Atlas", "Courses purchased or granted separately", "Bookmarks and saved progress", "Practice and revision tools"] },
+  { name: "Institution", price: "Annual platform licence", audience: "For universities, hospitals and societies", features: ["Private organisation workspace", "Studio authoring for your organisation", "Educator and learner roles", "Engagement and completion reporting"] },
   { name: "Enterprise", price: "Custom agreement", audience: "For multi-school or complex deployments", features: ["Multiple organisations", "Advanced identity and LMS integration", "Higher storage and support tiers", "Contracted governance requirements"] },
 ];
 
 export default function PricingPage() {
   return (
     <main className="inner-page pricing-page">
-      <section className="page-hero pricing-page-hero"><p className="eyebrow"><span /> Commercial model</p><h1>Access for learners.<br />A platform for institutions.</h1><p>The initial model combines discoverable educational content with paid individual access and annual institutional licences. Final prices will follow bounded pilot evidence rather than being invented before usage and support costs are known.</p></section>
+      <section className="page-hero pricing-page-hero"><p className="eyebrow"><span /> Commercial model</p><h1>Access for learners.<br />A platform for institutions.</h1><p>The initial model combines discoverable educational content with paid individual Atlas access and annual institutional licences. Final prices will follow bounded pilot evidence rather than being invented before usage and support costs are known.</p><p>Atlas, imaging-case, lecture/course and Studio access are separate. An Atlas subscription does not include paid lectures or courses. Institution and Enterprise plans support your organisation’s authoring and delivery; they do not automatically include the Atlas, imaging cases or separately paid courses. Any bundle must explicitly identify the access it grants.</p></section>
       <section className="plan-grid">
         {plans.map((plan, index) => <article className={plan.name === "Institution" ? "featured-plan" : ""} key={plan.name}><span>0{index + 1}</span><h2>{plan.name}</h2><b>{plan.price}</b><p>{plan.audience}</p><ul>{plan.features.map((feature) => <li key={feature}>{feature}</li>)}</ul></article>)}
       </section>

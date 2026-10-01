@@ -115,31 +115,61 @@ const secondaryLinks = [
 export function SiteHeader({ signedIn }: { signedIn: boolean }) {
   const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const [workspaceOpen, setWorkspaceOpen] = useState(false);
   const navigationRef = useRef<HTMLElement>(null);
+  const workspaceRef = useRef<HTMLDetailsElement>(null);
+  const workspaceToggleRef = useRef<HTMLElement>(null);
+  const restoringFocusRef = useRef(false);
   const isActive = (href: string) =>
     pathname === href || (href !== "/" && pathname.startsWith(`${href}/`));
   const accountHref = signedIn ? "/account" : "/account-entry";
 
+  const closeWorkspace = (restoreFocus = false) => {
+    setWorkspaceOpen(false);
+    if (restoreFocus) workspaceToggleRef.current?.focus();
+  };
+  const openPrimary = (sectionId: string) => {
+    closeWorkspace();
+    setOpenMenu(sectionId);
+  };
+
   useEffect(() => {
     const closeOutside = (event: globalThis.PointerEvent) => {
       if (!navigationRef.current?.contains(event.target as Node)) setOpenMenu(null);
+      if (!workspaceRef.current?.contains(event.target as Node)) setWorkspaceOpen(false);
     };
     const closeWithEscape = (event: KeyboardEvent) => {
-      if (event.key !== "Escape" || !openMenu) return;
-      navigationRef.current
-        ?.querySelector<HTMLButtonElement>(`[data-nav-trigger="${openMenu}"]`)
-        ?.focus();
-      // Restoring focus triggers the group's onFocus; close after that handler.
+      if (event.key !== "Escape") return;
+      if (workspaceOpen) {
+        event.preventDefault();
+        closeWorkspace(true);
+      } else if (openMenu) {
+        event.preventDefault();
+        restoringFocusRef.current = true;
+        navigationRef.current
+          ?.querySelector<HTMLButtonElement>(`[data-nav-trigger="${openMenu}"]`)
+          ?.focus();
+        restoringFocusRef.current = false;
+        setOpenMenu(null);
+      }
+    };
+    const closeOnScroll = (event: Event) => {
+      // Scrolling within a long menu (including keyboard focus scrolling) must
+      // not dismiss it. Page scrolling still closes both dropdowns.
+      if (navigationRef.current?.contains(event.target as Node) || workspaceRef.current?.contains(event.target as Node)) return;
       setOpenMenu(null);
+      setWorkspaceOpen(false);
     };
 
     document.addEventListener("pointerdown", closeOutside);
     document.addEventListener("keydown", closeWithEscape);
+    window.addEventListener("scroll", closeOnScroll, true);
     return () => {
       document.removeEventListener("pointerdown", closeOutside);
       document.removeEventListener("keydown", closeWithEscape);
+      window.removeEventListener("scroll", closeOnScroll, true);
     };
-  }, [openMenu]);
+  }, [openMenu, workspaceOpen]);
 
   const closeMobileNavigation = (event: MouseEvent<HTMLAnchorElement>) => {
     (event.currentTarget.closest(".mobile-nav") as HTMLDetailsElement | null)?.removeAttribute("open");
@@ -173,19 +203,18 @@ export function SiteHeader({ signedIn }: { signedIn: boolean }) {
               key={section.id}
               onBlur={(event) => closeGroupAfterBlur(section.id, event)}
               onFocus={(event) => {
-                if (section.id !== 'atlas' || !(event.target instanceof Element) || !event.target.closest('[data-nav-trigger]')) setOpenMenu(section.id);
+                if (!restoringFocusRef.current && event.target !== event.currentTarget.querySelector('[data-nav-trigger]')) openPrimary(section.id);
               }}
-              onPointerEnter={() => { if (section.id !== 'atlas') setOpenMenu(section.id); }}
               onPointerLeave={(event) => closeGroupAfterPointerLeave(section.id, event)}
             >
-              <Link className="primary-nav-link" aria-current={isActive(section.href) ? "page" : undefined} href={section.href} onPointerEnter={() => setOpenMenu(section.id)} onClick={() => setOpenMenu(null)}>{section.label}</Link>
+              <Link className="primary-nav-link" aria-current={isActive(section.href) ? "page" : undefined} href={section.href} onPointerEnter={() => openPrimary(section.id)} onClick={() => setOpenMenu(null)}>{section.label}</Link>
               <button
                 aria-controls={`${section.id}-navigation`}
                 aria-expanded={expanded}
                 aria-label={`${expanded ? "Close" : "Open"} ${section.label} navigation`}
                 className="primary-nav-toggle"
                 data-nav-trigger={section.id}
-                onClick={() => setOpenMenu(expanded ? null : section.id)}
+                onClick={() => expanded ? setOpenMenu(null) : openPrimary(section.id)}
                 type="button"
               >
                 <span aria-hidden="true">⌄</span>
@@ -215,22 +244,22 @@ export function SiteHeader({ signedIn }: { signedIn: boolean }) {
       </nav>
       <Link className="search-link" href="/search" aria-label="Search Visible Medicine" aria-current={pathname === "/search" ? "page" : undefined}>⌕ <span>Search</span></Link>
       <Link className="account-entry-link" href={accountHref} aria-current={isActive(accountHref) ? "page" : undefined}>{signedIn ? "Profile" : "Sign in"}</Link>
-      <details className="workspace-switcher"><summary>Open workspace <span aria-hidden="true">⌄</span></summary><nav aria-label="Choose workspace"><Link aria-current={isActive("/my-learning") ? "page" : undefined} href="/my-learning"><b>Learn</b><span>Progress, revision and certificates</span></Link><Link aria-current={pathname.startsWith("/studio/") ? "page" : undefined} href="/studio/workspace"><b>Studio</b><span>Courses, workbooks and publishing</span></Link><Link aria-current={isActive("/workspace") ? "page" : undefined} href="/workspace"><b>Institution</b><span>People, controls and readiness</span></Link><Link aria-current={isActive("/account") ? "page" : undefined} href="/account"><b>Account</b><span>Profile, export and learner rights</span></Link></nav></details>
+      {signedIn && <details className="workspace-switcher" open={workspaceOpen} ref={workspaceRef}><summary aria-expanded={workspaceOpen} onClick={(event) => { event.preventDefault(); setOpenMenu(null); setWorkspaceOpen(!workspaceOpen); }} ref={workspaceToggleRef}>Open workspace <span aria-hidden="true">⌄</span></summary><nav aria-label="Choose workspace"><Link aria-current={isActive("/my-learning") ? "page" : undefined} href="/my-learning" onClick={() => closeWorkspace()}><b>Learn</b><span>Progress, revision and certificates</span></Link><Link aria-current={pathname.startsWith("/studio/") ? "page" : undefined} href="/studio/workspace" onClick={() => closeWorkspace()}><b>Studio</b><span>Courses, workbooks and publishing</span></Link><Link aria-current={isActive("/workspace") ? "page" : undefined} href="/workspace" onClick={() => closeWorkspace()}><b>Institution</b><span>People, controls and readiness</span></Link><Link aria-current={isActive("/account") ? "page" : undefined} href="/account" onClick={() => closeWorkspace()}><b>Account</b><span>Profile, export and learner rights</span></Link></nav></details>}
       <details className="mobile-nav">
         <summary><span className="menu-label">Menu</span><span className="close-label">Close</span></summary>
         <nav aria-label="Mobile navigation">
           <span className="mobile-nav-section">Explore and learn</span>
           <Link aria-current={pathname === "/" ? "page" : undefined} href="/" onClick={closeMobileNavigation}>Home<span aria-hidden="true">→</span></Link>
           {navigationSections.slice(0, 2).map((section) => (
-            <MobileNavigationGroup isActive={isActive} key={section.id} section={section} onNavigate={closeMobileNavigation} />
+            <MobileNavigationGroup isActive={isActive} key={section.id} section={section} signedIn={signedIn} onNavigate={closeMobileNavigation} />
           ))}
           <span className="mobile-nav-section">Create and manage</span>
           {navigationSections.slice(2).map((section) => (
-            <MobileNavigationGroup isActive={isActive} key={section.id} section={section} onNavigate={closeMobileNavigation} />
+            <MobileNavigationGroup isActive={isActive} key={section.id} section={section} signedIn={signedIn} onNavigate={closeMobileNavigation} />
           ))}
           <span className="mobile-nav-section">Your work</span>
           <Link aria-current={isActive(accountHref) ? "page" : undefined} href={accountHref} onClick={closeMobileNavigation}>{signedIn ? "Profile and account" : "Sign in or create account"}<span aria-hidden="true">→</span></Link>
-          {([[
+          {signedIn && ([[
             "My learning", "/my-learning",
           ], [
             "Studio workspace", "/studio/workspace",
@@ -255,10 +284,12 @@ function MobileNavigationGroup({
   section,
   isActive,
   onNavigate,
+  signedIn,
 }: {
   section: NavigationSection;
   isActive: (href: string) => boolean;
   onNavigate: (event: MouseEvent<HTMLAnchorElement>) => void;
+  signedIn: boolean;
 }) {
   return (
     <details className="mobile-nav-group">
@@ -267,7 +298,7 @@ function MobileNavigationGroup({
       </summary>
       <div className="mobile-nav-group-content">
         {section.id === 'atlas' && <Link href="/atlas" onClick={onNavigate}>Atlas overview<span aria-hidden="true">→</span></Link>}
-        {section.groups.map((group) => (
+        {section.groups.filter((group) => signedIn || !group.workspace).map((group) => (
           <div className={`mobile-nav-subgroup${group.workspace ? " mobile-nav-workspace" : ""}`} key={group.label}>
             <span>{group.label}</span>
             {group.links.map((link) => (

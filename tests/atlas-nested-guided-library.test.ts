@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import {dirname} from 'node:path';
 import {build} from 'esbuild';
 
-const source='08b0fbda394c7a878a3b5474e8aa566b8dfb0b83';
+const source='6888a898281695faf9e41bdf34a7d3c771c4f7f2';
 const baseline='3d67b5575a49e302b0da7c4c55a5d6f3a033b003';
 const old=(path:string)=>Buffer.from(execFileSync('git',['show',baseline+':'+path],{maxBuffer:32e6}));
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
@@ -32,7 +32,7 @@ test('nested library source, exact eye options and credits reach learner and pro
  assert.deepEqual(review.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),
   ['content/nested-guided-learning-bindings.v1.json','lib/nested-guided-learning.ts']);
  assert.deepEqual(review.files.filter((f:any)=>prior.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),
-  ['app/eye-layers.tsx','app/whole-body-guided-learning.css','app/whole-body-guided-learning.tsx','content/body-renderer-revision.json']);
+  ['app/atlas-workspace.css','app/eye-layers.tsx','app/whole-body-guided-learning.css','app/whole-body-guided-learning.tsx','content/body-renderer-revision.json']);
  for(const f of review.files)assert.equal(sha(readFileSync('atlas-review/'+f.path)),f.importedSha256,f.path);
  const receipt=json('atlas-review/integration-inputs.json');assert.equal(receipt.sourceCommit,source);
  for(const path of ['atlas-review/lib/nested-guided-learning.ts','atlas-review/content/nested-guided-learning-bindings.v1.json'])
@@ -74,7 +74,7 @@ test('nested library source, exact eye options and credits reach learner and pro
   'Prior protected notice has exactly one source revision line');
  assert.equal(readFileSync('public/atlas-review-viewer/THIRD_PARTY_NOTICES.txt','utf8'),
   priorCredits.replace('Atlas source: 03da432b035d1dca7cc9f3344ee2722af627d859\n',
-   'Atlas source: 08b0fbda394c7a878a3b5474e8aa566b8dfb0b83\n'),
+   'Atlas source: 6888a898281695faf9e41bdf34a7d3c771c4f7f2\n'),
   'Protected viewer credits retain every byte after the source revision header');
  for(const p of ['content/nested-review-bindings.json','content/nested-teaching.ts','lib/nested-review-material.ts',
   'lib/nested-review.ts','LICENSES/THIRD_PARTY_NOTICES.md'])

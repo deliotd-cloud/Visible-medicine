@@ -9,6 +9,7 @@ export default function PelvisModulePage(){
     <header className="shoulder-module-bar">
       <Link href="/atlas" aria-label="Back to anatomy atlas">← Atlas</Link>
       <h1>Pelvic anatomy</h1><span>Private pilot · Review pending</span>
+      <Link className="atlas-intended-use-link" href="/intended-use">Education &amp; research only</Link>
       <a href="/atlas-runtime/head-neck/index.html?region=pelvis" target="_blank" rel="noopener noreferrer">Open full screen ↗</a>
     </header>
     <AtlasRegionNavigation modality="3d" selected="pelvis"/>

@@ -90,7 +90,7 @@ export function SiteFrame({ children, signedIn }: { children: ReactNode; signedI
       <a className="skip-link" href="#main-content">Skip to content</a>
       {publicSite && <SiteHeader signedIn={signedIn} />}
       {workspace && <WorkspaceContextBar pathname={pathname} signedIn={signedIn} />}
-      {standardSite && <div className="intended-use-strip"><span>Education &amp; research only</span><p>No diagnosis, reporting, patient care or clinical decision-making.</p><a href="/intended-use">Read intended use →</a></div>}
+      {standardSite && !anatomyPanel && <div className="intended-use-strip"><span>Education &amp; research only</span><p>No diagnosis, reporting, patient care or clinical decision-making.</p><a href="/intended-use">Read intended use →</a></div>}
       {workspace && pathname.startsWith("/workspace") && <nav className="institution-app-nav" aria-label="Institution workspace navigation">{institutionLinks.map(([label, href]) => { const active = href === "/workspace" ? pathname === href : pathname === href || pathname.startsWith(`${href}/`); return <Link aria-current={active ? "page" : undefined} href={href} key={href}>{label}</Link>; })}</nav>}
       <div id="main-content" tabIndex={-1}>{children}</div>
       {publicSite && !anatomyPanel && <SiteFooter />}
