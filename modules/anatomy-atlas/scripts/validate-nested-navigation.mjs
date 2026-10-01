@@ -19,6 +19,7 @@ const require = createRequire(import.meta.url),
 const compiled = await build({
   stdin: {
     contents: `export { bodyDisplayCatalog } from './lib/body-display-catalog';
+    export { parseBodyCatalog } from './lib/body-catalog-input';
     export { nestedStudyTargets, resolveNestedTarget } from './lib/nested-anatomy';
     export { atlasSearchIndex, filterAtlasSearch } from './lib/atlas-navigation';
     export { bodyStudyScope, makeStudyLink, parseStudyLink, resolveStudyLink } from './lib/study-links';
@@ -98,7 +99,8 @@ const raw = JSON.parse(
 const catalog = api.bodyDisplayCatalog(raw),
   before = JSON.stringify(catalog);
 const targets = nestedStudyTargets(catalog);
-same(targets.length, 106);
+// Include the two already admitted hippocampal selections; not new eye geometry.
+same(targets.length, 108);
 same(
   Object.fromEntries(
     [
@@ -122,7 +124,7 @@ same(
     eye: 15,
     ventricles: 4,
     brainstem: 6,
-    cerebral: 14,
+    cerebral: 16,
     cardiac: 4,
     'coronary-venous': 2,
     pulmonary: 5,
@@ -135,7 +137,7 @@ same(
     'cranial-artery-components': 29,
   },
 );
-same(new Set(targets.map((t) => t.structureId)).size, 106);
+same(new Set(targets.map((t) => t.structureId)).size, 108);
 const parse = (href) => {
   const url = new URL(href, 'https://atlas.invalid');
   return { url, parsed: parseStudyLink(Object.fromEntries(url.searchParams)) };
@@ -146,7 +148,7 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
   for (const side of ['both', 'left', 'right']) {
     const index = atlasSearchIndex(catalog, region, side);
     const nested = index.filter((e) => e.key.startsWith('nested:'));
-    same(nested.length, 106);
+    same(nested.length, 108);
     for (const target of targets) {
       const entry = nested.find(
         (e) => e.key === `nested:${target.study}:${target.structureId}`,
@@ -520,6 +522,7 @@ for (const target of targets) {
       data: raw,
       chooseWorkspaceMode: mode => { changes.workspaceMode = mode; },
       bodyDisplayCatalog: api.bodyDisplayCatalog,
+      parseBodyCatalog: api.parseBodyCatalog,
       bodyLinkEntries: () => {},
       active: true,
       appliedStudyLink: { current: false },

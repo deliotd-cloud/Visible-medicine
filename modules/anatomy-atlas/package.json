@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "eye-cross-sectional:test": "node scripts/validate-eye-cross-sectional.mjs && node scripts/validate-nested-teaching.mjs && node scripts/generate-nested-review-bindings.mjs --check && node scripts/validate-nested-review.mjs",
     "um-topic-completion:test": "node scripts/pin-um-limb-teaching.mjs --check && node scripts/test-um-topic-completion.mjs && node scripts/test-um-topic-review-completion.mjs && node scripts/validate-um-limb-clinical.mjs",
     "um-guided-dissection:test": "node --import tsx --test scripts/test-um-proximal-guided-dissection.mjs scripts/test-um-distal-guided-dissection.mjs scripts/test-um-limb-guided-dissection.mjs && node scripts/test-um-guided-review.mjs && node scripts/test-specimen-guided-player.mjs",
     "hra-pelvic-topic-completion:test": "node scripts/test-hra-pelvic-topic-completion.mjs && node scripts/test-hra-pelvic-topic-review-completion.mjs && node scripts/validate-hra-pelvic-teaching.mjs",

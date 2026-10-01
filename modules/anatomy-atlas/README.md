@@ -1,5 +1,11 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Eye → CT / MRI:** [Cross-sectional orientation drafts](docs/EYE_CROSS_SECTIONAL_TEACHING.md)
+add twelve missing notes to seven existing concepts, retaining all earlier eye
+lessons and source geometry. No scan or registration is connected; the chamber
+remains left-only. Source integration is separate from website publication and
+revision-bound radiologist approval.
+
 **Independent lower limb → Guided learning:** [Five source-guided sequences](docs/UM_LIMB_GUIDED_DISSECTION.md)
 cover hip/thigh, knee, calf, foot and the whole source limb using the existing
 collapsed player and smooth camera controls. Draft visibility comparisons only;

@@ -244,6 +244,9 @@
     "content/visual-pathway-teaching.ts": "7e5fd834fb125b12047a5ea3471baa7eef12d90a4c223332fa32e8a36f6bcfdd",
     "content/brain-imaging-teaching.ts": "584e9bcf307fbb67ee58fb203e6763ee3f1e2f2411f2706b76f32deba75d253c",
     "content/eye-imaging-teaching.ts": "ff7d6582465ee18d20f915ee8686a1cf9840f40e936ec4db31f3b9a2a02a2065",
+    "content/eye-cross-sectional-teaching.ts": "aba5c44848ae2c1b2ce9f3e70b6047de40419c075076be72c3d970315e9a16a4",
+    "scripts/eye-cross-sectional-history.mjs": "8c0ac776149868342fc97182484b32a5a3a2fb9598ac39f13f2c032b01d63b81",
+    "scripts/validate-eye-cross-sectional.mjs": "021a74a86204484d3cc676b767db1f2b5ca317387b2ca2afd677bbe99a872aaa",
     "public/models/bodyparts3d/visual-pathway/catalog.json": "6e92922cab267cc4bde9cc8262a6caccd619c89bab90fed6a4b346a022b24b32",
     "docs/visual-pathway-source-audit.json": "5b1a018edcc3b4d271eeb5ae0fe81aef1b92161e1c179585573602ffd57184f6",
     "public/models/bodyparts3d/hepatic/catalog.json": "53962f7814854e576efde820bed1ccd2f7393b1296798898dee25f773e24d6c8",
@@ -257,7 +260,7 @@
     "public/models/bodyparts3d/pulmonary/catalog.json": "b62ccd78dfc2ced8674b94eba67596add4de482f54c3f242814982b4e3dab9ea",
     "docs/pulmonary-source-audit.json": "734fc23b6d4812b81ffb007214c271096562bcb8376766fc9d609bfddabc95db",
     "content/cerebral-supplement-audit.json": "a186519bbf31065f5c4e58472c542a9cbd2a6b64d35423a4f6c92d7bae1d69d7",
-    "content/nested-teaching.ts": "61ba520e5bbaa3f2dde78d6cf35c63f70a519594f343342d06bf08984c6afb43",
+    "content/nested-teaching.ts": "72188a3e2171f7ec6b3325c806c401e83dc21a2cb6e26ce52aab08fc35cf7adc",
     "content/nested-review-bindings.json": "ce08b922d13c6a76f6672de0ca73cceea2250c1208ee9edc8f3f59d05bf4b73d",
     "lib/nested-review.ts": "18afa81b7b1aa02ae1f174bd8d3b5c902d2d2eb8351c33798ae93a4927f90b74",
     "lib/nested-review-key.ts": "bf11dbacc334bac13a821a14d754478d6754d3e468344384e263d3b3442430e8",
@@ -283,7 +286,7 @@
     "app/nested-teaching.css": "d912bfc774cc744511a4c0e87a0a35f6b693def9f4bddc25b6f010f07dfa83bc",
     "package-lock.json": "7143e44eb0cb9e11c3f42c4a66d7bdef6f5c89334378d6cc23dcb37f43a1f350",
     "content/schema/anatomy-structure.schema.json": "b29bda2931faaa47bb7747f07a46520b65d7e4847ce65b5df29dd008a90de95c",
-    "content/review-revisions.json": "380ce2b69ed41e887017d8a0fac7b12bbac88e21b494c68e439179f94aced95e",
+    "content/review-revisions.json": "b2cca8944a1175a744056d0e5e5b2759ec4f58174f5b2f4a2f674bdd2c46508e",
     "content/learning-resources.v1.json": "799fec602114a944b4f675d341b445982dac56786cca9b5800d52db7d95899e5",
     "lib/learning-resource-types.ts": "c08858a0b3bdcc0467d815d71a129428c3b311c1eaf318a544e1f091b1833778",
     "lib/learning-resources.ts": "e2e191c19df1f7bfebd31d429c6320430845d145ac1f9c604a011827eb482da4",
@@ -403,7 +406,7 @@
     "lib/lumbar-tour.ts": "00ca73890eeb65988461f90b4f333259955f689d0e6dcdcafa7f3a783f004bed",
     "lib/carpal-tour.ts": "bb5ca59e6c6d9ab153800b77c4dc8786d132493165fd6020257971bc1ef20f35",
     "lib/renal-tour.ts": "20dad74e41a7e4ebe3b9699dea0257795aec56f2f7713d6ecb5febd5cec7307f",
-    "nestedTeachingData": "e1d6522909554a2938b62ab28dde76549a2d6117cfdaef79b7c930b1ece3739c"
+    "nestedTeachingData": "45157a5f407787094da0671ff5ba53f9e0edc3e2ce63737653e585047bedede7"
   },
   "rendering": {
     "bodyBatching": {
@@ -2025,7 +2028,7 @@
         }
       ],
       "concepts": 47,
-      "references": 119,
+      "references": 121,
       "topics": {
         "anatomy": {
           "specificDraft": 79,
@@ -2040,15 +2043,15 @@
           "generatedIdentification": 0
         },
         "ct": {
-          "specificDraft": 57,
+          "specificDraft": 68,
           "identityOnly": 0,
-          "pending": 51,
+          "pending": 40,
           "generatedIdentification": 0
         },
         "mri": {
-          "specificDraft": 66,
+          "specificDraft": 77,
           "identityOnly": 0,
-          "pending": 42,
+          "pending": 31,
           "generatedIdentification": 0
         },
         "xray": {

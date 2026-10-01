@@ -9,6 +9,7 @@ import { nestedBeforePulmonaryImaging } from './pulmonary-imaging-history.mjs';
 import { nestedBeforePulmonaryXray } from './pulmonary-xray-history.mjs';
 import { nestedBeforeLobarImaging, lobarIds } from './cerebral-lobar-imaging-history.mjs';
 import { nestedBeforeVentricularUltrasound } from './ventricular-ultrasound-history.mjs';
+import { nestedBeforeEyeCrossSectional, eyeCrossSectionalScope } from './eye-cross-sectional-history.mjs';
 
 const require = createRequire(import.meta.url);
 const React = require('react');
@@ -56,15 +57,16 @@ const eyeUsHashes = {
   'eye-lens': 'c71308116b8adbda8d67d4b9dec4bd53db697052e60c88ce73d96682921a3e14',
   'eye-sclera': 'a147afbfcbe303730892a7399f793f8d1d90e7ca88765331aff4da34a7b8181d',
 };
+const beforeCrossSectional = nestedBeforeEyeCrossSectional(api);
 const beforeEyeUs = {
-  ...api,
-  nestedConcepts: api.nestedConcepts.map(c => {
+  ...beforeCrossSectional,
+  nestedConcepts: beforeCrossSectional.nestedConcepts.map(c => {
     if (!Object.hasOwn(eyeUsHashes, c.id)) return c;
     assert.equal(createHash('sha256').update(JSON.stringify(c.imaging.ultrasound)).digest('hex'), eyeUsHashes[c.id]);
     const { ultrasound: _added, ...imaging } = c.imaging;
     return { ...c, imaging };
   }),
-  nestedTeachingReferences: Object.fromEntries(Object.entries(api.nestedTeachingReferences)
+  nestedTeachingReferences: Object.fromEntries(Object.entries(beforeCrossSectional.nestedTeachingReferences)
     .filter(([key]) => !['lensBiometryUBM', 'posteriorScleraBScan'].includes(key))),
 };
 const historicalApi = nestedBeforeClinicalReferenceRevision(nestedBeforePulmonaryImaging(nestedBeforePulmonaryXray(nestedBeforeLobarImaging(nestedBeforeVentricularUltrasound(beforeEyeUs)))));
@@ -460,6 +462,9 @@ for (const target of targets) {
                     : ['cerebral-superior-temporal-anterior', 'cerebral-superior-temporal-posterior'].includes(concept.id)
                       ? ['mri']
                       : []));
+  for (const topic of eyeCrossSectionalScope[concept.id] ?? []) {
+    if (!expectedImaging.includes(topic)) expectedImaging.push(topic);
+  }
   same(
     Object.keys(concept.imaging ?? {}).sort(),
     [...expectedImaging].sort((a, b) => a.localeCompare(b)),
@@ -650,8 +655,8 @@ same(coverage.pathology, { draft: 71, pending: 0 });
 same(coverage.clinical, { draft: 71, pending: 0 });
 for (const tab of ['anatomy', 'function', 'quiz'])
   same(coverage[tab], { draft: 71, pending: 0 });
-same(coverage.ct, { draft: 51, pending: 20 });
-same(coverage.mri, { draft: 60, pending: 11 });
+same(coverage.ct, { draft: 62, pending: 9 });
+same(coverage.mri, { draft: 71, pending: 0 });
 same(coverage.xray, { draft: 9, pending: 62 });
 same(coverage.ultrasound, { draft: 41, pending: 30 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
@@ -728,11 +733,11 @@ for (const concept of api.nestedConcepts) {
     }
   }
 }
-same(Object.keys(wordsBySource).length, 102);
+same(Object.keys(wordsBySource).length, 104);
 same(
   new Set(Object.values(api.nestedTeachingReferences).map((ref) => ref.url))
     .size,
-  103,
+  105,
   'Do not split one source into duplicate reference keys',
 );
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {
