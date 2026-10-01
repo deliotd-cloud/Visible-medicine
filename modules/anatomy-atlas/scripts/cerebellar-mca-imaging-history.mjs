@@ -4,7 +4,9 @@ import {isDeepStrictEqual} from 'node:util';
 import pins from '../content/cerebellar-mca-imaging-pins.json' with {type:'json'};
 import transition from '../content/cerebellar-mca-imaging-transition.json' with {type:'json'};
 import {hash,snapshot} from './pin-cerebellar-mca-imaging.mjs';
+import {beforeTentoriumImaging} from './tentorium-imaging-history.mjs';
 export function beforeCerebellarMcaImaging(api,display){
+ api=beforeTentoriumImaging(api,display);
  if(typeof api.bodyLesson!=='function')return api;
  if(typeof api.bodyDisplayCatalog!=='function'&&pins.entries.every(e=>e.topics.every(t=>api.bodyLesson(e.identity,t)===undefined)))return api;
  assert.equal(hash(pins),'829a111dcd6bb74dfcffe9fb1da5119c7988d002b84f3896b944022443235386');

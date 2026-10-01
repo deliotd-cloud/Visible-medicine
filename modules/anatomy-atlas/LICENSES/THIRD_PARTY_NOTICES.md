@@ -1984,3 +1984,18 @@ access does not grant media reuse rights. Existing BodyParts3D4.0/CC BY4.0 model
 and credit remain unchanged; no asset, dependency, font, texture, service or
 mandatory fee added. Clinical acceptance remains revision-bound and independent
 of licensing/software evidence. See `docs/CEREBELLAR_MCA_IMAGING.md`.
+
+## Tentorium CT/MRI teaching — 1 October 2026
+
+The existing right-only tentorial source receives two original short drafts.
+Anatomical summary adapted from Rai R, Iwanaga J, Shokouhi G, Oskouian RJ and
+Tubbs RS, *The Tentorium Cerebelli: A Comprehensive Review Including Its Anatomy,
+Embryology, and Surgical Techniques*, Cureus 2018;10:e3079,
+[DOI 10.7759/cureus.3079](https://doi.org/10.7759/cureus.3079), © 2018 Rai et al.,
+[CC BY 3.0](https://creativecommons.org/licenses/by/3.0/); wording shortened and
+rephrased, no endorsement. Naidich1977 (PMID870939) and Farn/Mirowitz1994
+(PMID8273651) are factual reading references only, not media reuse grants.
+No prose passage, article image, table, scan, patient data or study dataset is
+imported. Existing BodyParts3D4.0/CC BY4.0 geometry/credit is unchanged. No new
+asset, dependency, font, texture, paid service or mandatory product fee. Clinical
+review remains revision-bound. See `docs/TENTORIUM_IMAGING.md`.

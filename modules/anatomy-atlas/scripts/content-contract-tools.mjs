@@ -16,6 +16,7 @@ export * from './lib/content-types.ts';
 export * from './lib/pelvic-veins.ts';
 export * from './content/pelvic-vein-teaching.ts';
 export * from './app/body-content.ts';
+export * from './lib/tentorium-imaging.ts';
 export * from './lib/foot-sesamoid-teaching.ts';
 export * from './lib/cerebellar-mca-imaging.ts';
 export * from './lib/laryngeal-framework-imaging.ts';

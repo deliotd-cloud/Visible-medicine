@@ -1,5 +1,11 @@
 # Tentorium — incomplete right-sided source
 
+1 October teaching update: the CT/MRI topics now have source-bound original
+drafts; see [tentorium imaging](TENTORIUM_IMAGING.md). The source/admission
+evidence below is the unchanged 11 September milestone. Its pending-topic wording
+describes that historical revision, not today's CT/MRI readiness. Ultrasound,
+X-ray, Clinical and Pathology remain pending; no source hold or approval changes.
+
 Added 11 September 2026. **Head & neck → Study → Tentorium: supplied right portion** removes the brain and overlying skull, retaining the supplied fold with occipital, right temporal and sphenoid context. The same focus is available in Whole body. Choose Both or Right; no tentorial geometry is shown on Left. Use existing rotation, labels, separation, removal and Undo. No additional toolbar.
 
 ## Important anatomical distinction

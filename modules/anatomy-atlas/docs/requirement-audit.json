@@ -376,8 +376,8 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "251fecab56b77a90a3c8a98b99ad956c72448ef63b73181d5c9d27a26e0974c2",
-    "explicitTopicReadiness": "1c513c3426a8964a69a8dabd42b12ea65511f2bbad048c1d5c9947410df79e41",
+    "resolvedContentAndRecipeData": "525e01d99f20f27c7a9463eb7ab0357bb20ad2f06cd9deafe8df31b172895daa",
+    "explicitTopicReadiness": "6f6cedf24780be2398782f4f124fdd1f73b0792d8630098f2a31dec4f7e66462",
     "reasoningQuestionData": "e14edb0ec5501658df333e69f0aef4d9593b6647a3773258ff0ef6ec03b786fb",
     "guidedLearningData": "a5d76cdc05eff586584131d14f77c8a36dd508bf1a794e004b9d31dde1e72ec4",
     "app/volume-image.tsx": "34d28f4f9284cbb18dd4c175815490fb3727912fdb4acb22143c91167ccd4448",
@@ -1749,15 +1749,15 @@
         "generatedIdentification": 0
       },
       "ct": {
-        "specificDraft": 905,
+        "specificDraft": 906,
         "identityOnly": 0,
-        "pending": 199,
+        "pending": 198,
         "generatedIdentification": 0
       },
       "mri": {
-        "specificDraft": 877,
+        "specificDraft": 878,
         "identityOnly": 0,
-        "pending": 227,
+        "pending": 226,
         "generatedIdentification": 0
       },
       "xray": {
@@ -2071,15 +2071,15 @@
           "generatedIdentification": 0
         },
         "ct": {
-          "specificDraft": 170,
+          "specificDraft": 171,
           "identityOnly": 0,
-          "pending": 121,
+          "pending": 120,
           "generatedIdentification": 0
         },
         "mri": {
-          "specificDraft": 182,
+          "specificDraft": 183,
           "identityOnly": 0,
-          "pending": 109,
+          "pending": 108,
           "generatedIdentification": 0
         },
         "xray": {

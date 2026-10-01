@@ -29,8 +29,8 @@ Independent specimens retain separate source frames and teaching inventories. Th
 | --- | ---: | ---: | ---: | ---: |
 | Anatomy | 1104 | 0 | 0 | 0 |
 | Function | 1101 | 0 | 3 | 0 |
-| CT | 905 | 0 | 199 | 0 |
-| MRI | 877 | 0 | 227 | 0 |
+| CT | 906 | 0 | 198 | 0 |
+| MRI | 878 | 0 | 226 | 0 |
 | X-ray | 456 | 0 | 648 | 0 |
 | Ultrasound | 626 | 0 | 478 | 0 |
 | Pathology | 1099 | 0 | 5 | 0 |
