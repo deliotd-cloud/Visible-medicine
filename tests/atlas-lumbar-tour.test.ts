@@ -27,7 +27,7 @@ test('lumbar tour source import has the exact declared teaching and review depen
 test('lumbar tour keeps every model and existing licence notice without patient data or approval',()=>{
  for(const module of ['head-neck','shoulder']){
   const prefix='public/atlas-runtime/'+module+'/',before=prior(prefix+'manifest.json'),after=json(prefix+'manifest.json');
-  assert.equal(after.sourceCommit,'adad1abe1ad6fdb3c942d1d8b6a98393591bec80');
+  assert.equal(after.sourceCommit,'7d3010368fc53e3433e8df4f9e9d4ddb67e786e8');
   const retained=(f:any)=>f.path.endsWith('.glb')||f.path==='BUNDLED_NOTICES.txt'||f.path==='bundled-dependencies.json'||f.path.includes('credits');
   assert.deepEqual(after.files.filter(retained),before.files.filter(retained));
   for(const f of after.files.filter(retained))assert.equal(sha(prefix+f.path),f.sha256);
@@ -35,12 +35,14 @@ test('lumbar tour keeps every model and existing licence notice without patient 
   for(const flag of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection'])assert.equal(after[flag],false);
   const path=prefix+'LICENSES/THIRD_PARTY_NOTICES.md';
   const old=Buffer.from(oldBytes(path)).toString('utf8').replace(/\r/g,''),current=readFileSync(path,'utf8').replace(/\r/g,'');
-  // The current slice prepends one source-credit section rather than appending it.
-  // Verify the entire pre-guide notice byte-for-byte before the historical check.
-  const retainedNotice=current.replace(/^# Third-party notices\n\n## Abdominal wall and back source-guided dissection \(1 October 2026\)\n[\s\S]+?\n(?=## )/,'# Third-party notices\n\n');
-  assert.equal(retainedNotice,execFileSync('git',['show','c5448a86:'+path],{encoding:'utf8'}).replaceAll('\r',''),'Only the new guide credit was added');
-  assert(retainedNotice.startsWith(old.trimEnd()),'Every previous notice is retained');
-  assert.match(retainedNotice.slice(old.trimEnd().length),/Lower lumbar guided learning references/);
+  // The new renal/bone credit is appended after the complete c0da notice.
+  const retainedNotice=execFileSync('git',['show','c0da7e2bf6a9f6f3e262b8c5326c369e5e6cafd2:'+path],{encoding:'utf8'}).replaceAll('\r','');
+  assert(current.startsWith(retainedNotice),'Entire preceding notice retained byte-for-byte');
+  assert.match(current.slice(retainedNotice.length),/^\n## Renal source-guided learning and abdominal skeletal drafts \(1 October 2026\)\n/);
+  const beforeWallBack=retainedNotice.replace(/^# Third-party notices\n\n## Abdominal wall and back source-guided dissection \(1 October 2026\)\n[\s\S]+?\n(?=## )/,'# Third-party notices\n\n');
+  assert.equal(beforeWallBack,execFileSync('git',['show','c5448a86:'+path],{encoding:'utf8'}).replaceAll('\r',''),'Historical wall/back notice was the only earlier addition');
+  assert(beforeWallBack.startsWith(old.trimEnd()),'Every previous notice is retained');
+  assert.match(beforeWallBack.slice(old.trimEnd().length),/Lower lumbar guided learning references/);
   assert.equal(current,readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md','utf8').replace(/\r/g,''));
  }
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,prior('lib/atlas-model-inventory.json').models);

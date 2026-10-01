@@ -4,11 +4,12 @@ import {Buffer} from 'node:buffer';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
-import {resolve} from 'node:path';
+import {dirname, resolve} from 'node:path';
 import {build} from 'esbuild';
 
-const source = 'adad1abe1ad6fdb3c942d1d8b6a98393591bec80';
+const source = '7d3010368fc53e3433e8df4f9e9d4ddb67e786e8';
 const sourceBefore = 'a023f47064b2987c5593d9a7884c7e1937afe001';
+const wallBackMilestone = 'adad1abe1ad6fdb3c942d1d8b6a98393591bec80';
 const websiteBefore = 'c5448a86591b231d29719b37f5f5ed9eb3ee416b';
 const sourceRepo = process.env.ATLAS_SOURCE_REPO ?? resolve('..', '..', '..', '2026-09-05', 'referenced-chatgpt-conversation-this-is-an-2', 'outputs');
 const gitBytes = (repo: string, revision: string, path: string) => Buffer.from(execFileSync('git', ['-C', repo, 'show', `${revision}:${path}`], {maxBuffer: 32e6}));
@@ -18,9 +19,9 @@ const priorWebsiteBytes = (path: string) => Buffer.from(execFileSync('git', ['sh
 const json = (path: string) => JSON.parse(readFileSync(path, 'utf8'));
 const hash = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex');
 
-// The prior build substitutes only the review-material adapter. All its imports
-// resolve to the same current website modules, isolating the new teaching delta.
-async function materialApi(prior = false) {
+// Reconstruct the delivered wall/back transition independently of later renal
+// and skeletal teaching. Both sides pin the adapter, teaching and renderer inputs.
+async function materialApi(revision: 'latest' | 'prior' | 'milestone' = 'latest') {
   const result = await build({
     stdin: {contents: [
       "export {abdominalWallDefinition} from './atlas-review/lib/abdominal-wall';",
@@ -32,12 +33,16 @@ async function materialApi(prior = false) {
       "export {postSpecimenReview} from './atlas-review/lib/specimen-review-api';",
     ].join('\n'), resolveDir: process.cwd(), loader: 'ts'},
     bundle: true, write: false, platform: 'node', format: 'esm',
-    plugins: prior ? [{name: 'prior-review-material-only', setup(plugin) {
-      plugin.onLoad({filter: /[\\/]specimen-review-material\.ts$/}, () => ({
-        contents: priorSourceBytes('lib/specimen-review-material.ts').toString('utf8'),
-        loader: 'ts', resolveDir: resolve('atlas-review/lib'),
+    plugins: revision === 'latest' ? [] : [{name: 'historical-wall-back-material', setup(plugin) {
+      const commit = revision === 'prior' ? sourceBefore : wallBackMilestone;
+      for (const path of ['lib/specimen-review-material.ts', 'lib/abdominal-wall-teaching.ts'])
+        plugin.onLoad({filter: new RegExp(path.replaceAll('/', '[\\\\/]') + '$')}, args => ({
+          contents: gitBytes(sourceRepo, commit, path).toString('utf8'), loader: 'ts', resolveDir: dirname(args.path),
+        }));
+      plugin.onLoad({filter: /[\\/]content[\\/]body-renderer-revision\.json$/}, () => ({
+        contents: gitBytes(sourceRepo, commit, 'content/body-renderer-revision.json').toString('utf8'), loader: 'json',
       }));
-    }}] : [],
+    }}],
   });
   return import('data:text/javascript;base64,' + Buffer.from(result.outputFiles[0].text).toString('base64'));
 }
@@ -142,8 +147,8 @@ test('wall and back guidance ships from the pinned source in the shared learner 
 });
 
 test('only 77 teaching packets change; prior reviews and foreign identities conflict before storage', {timeout: 120000}, async () => {
-  const current = await materialApi();
-  const prior = await materialApi(true);
+  const current = await materialApi('milestone');
+  const prior = await materialApi('prior');
   const guideByKey = new Map([
     [current.abdominalWallDefinition.key, current.abdominalGuidedDissection(current.abdominalWallDefinition)],
     [current.backLayersDefinition.key, current.backGuidedDissection(current.backLayersDefinition)],

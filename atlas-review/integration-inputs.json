@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "adad1abe1ad6fdb3c942d1d8b6a98393591bec80",
-  "sha256": "0a1e84128fbff27f2d0dc5e1f5a20fa4f7a562251d506ad5f3d5f51d57e20fdb",
+  "sourceCommit": "7d3010368fc53e3433e8df4f9e9d4ddb67e786e8",
+  "sha256": "2ff80c22001285a514617d572bbcf1baf766c3f966d631653e30724dcd69c6cb",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -36,7 +36,7 @@
     },
     {
       "path": "atlas-review/app/abdominal-wall-study.tsx",
-      "sha256": "6c0d05e336441e7d478d914423399f17f235bfeadd15a7daea919c62a4a5b398"
+      "sha256": "66b03b457bbc4cc5912a2658c7cd482482c0f6289f293bb27bf63146945387aa"
     },
     {
       "path": "atlas-review/app/anatomy-canvas.tsx",
@@ -220,7 +220,7 @@
     },
     {
       "path": "atlas-review/app/hra-renal-study.tsx",
-      "sha256": "5c2dc699ef080c5f6f92df2b92427f51cb81596b8c2d762f25806b1d04a9fa8b"
+      "sha256": "eee6c57e2ba527075566d87b7ee5442311c7fc1eca0b432f7edc1f98fcfe1504"
     },
     {
       "path": "atlas-review/app/imaging-comparison.css",
@@ -617,6 +617,10 @@
     {
       "path": "atlas-review/content/abdominal-arterial.ts",
       "sha256": "8d3adf0135a17a01281b5cbdf3d9cbd62167849043c6bf4948382f8cb8956ec1"
+    },
+    {
+      "path": "atlas-review/content/abdominal-bone-teaching.ts",
+      "sha256": "e968a035feafa0abdc44efad2b342a487275fa67a573d58afbeb5513336ebd1f"
     },
     {
       "path": "atlas-review/content/abdominal-branch-imaging-pins.json",
@@ -1892,7 +1896,7 @@
     },
     {
       "path": "atlas-review/lib/abdominal-wall-teaching.ts",
-      "sha256": "30f1fbd0b64e9cd73566372eed356e71c40a0b0a20fe87e1c8e4ddf6b8068b16"
+      "sha256": "1afe4f79d3b190506a0d55e345b1bd48b53ab1699ac8ef8729b7ea395d9616d0"
     },
     {
       "path": "atlas-review/lib/abdominal-wall.ts",
@@ -2611,6 +2615,10 @@
       "sha256": "a23f687a1f2a2effa9bcb44249acb62ae7868896052e83796ea189c916e2ff39"
     },
     {
+      "path": "atlas-review/lib/hra-renal-guided-dissection.ts",
+      "sha256": "c1feb8e84baed26579ec3ff411a7fa4e14a825494c0f3d227b3509f76e882236"
+    },
+    {
       "path": "atlas-review/lib/hra-renal-teaching.ts",
       "sha256": "ed766480f08295f56623d563c2afe7dfd53d0332fe9ae468d5594d722fbc038b"
     },
@@ -3248,7 +3256,7 @@
     },
     {
       "path": "atlas-review/lib/specimen-review-material.ts",
-      "sha256": "cd812880a4ceb9fad9c2b7a3c875787cfbcb036e92d2d866eac21f4744e3645a"
+      "sha256": "cdd451b0fbe23413ba8cf7bc52e170c1d826df9f8294296704c872acfdda7f8f"
     },
     {
       "path": "atlas-review/lib/specimen-review-store.ts",
@@ -3532,7 +3540,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "9c396e9b1b5fc1e540f6f17ee512c1d7f161fe45719b43bb2979077af895ce5c"
+      "sha256": "b91374b0f91174ea06a0e7fdf3cd9bec3e2a2966f25605b56dd955ed9a1a97e0"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3788,7 +3796,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "fda78179c58fc9b9c0112c3e0ff77ebfbf436ea7f8db8de392c704bb6f05b4a9"
+      "sha256": "248ac167eabb83afa3b021da2345057528865b3877202654804f5bdcbe935422"
     }
   ]
 }

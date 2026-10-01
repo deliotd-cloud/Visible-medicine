@@ -9,8 +9,8 @@ import { abdominalWallDefinition, abdominalWallSource, abdominalWallColors } fro
 import type { SpecimenDefinition, SpecimenSurface } from '@/atlas-review/lib/independent-specimen';
 import { abdominalWallPractice } from '@/atlas-review/lib/abdominal-wall-practice';
 import { abdominalTeachingFor } from '@/atlas-review/lib/abdominal-wall-teaching';
-import { abdominalSurfaceMatches } from '@/atlas-review/lib/abdominal-wall-binding';
 import { abdominalReferenceTitles } from '@/atlas-review/content/abdominal-wall-teaching';
+import { abdominalBoneReferenceTitles } from '@/atlas-review/content/abdominal-bone-teaching';
 import { SpecimenLearning } from './um-limb-learning';
 import type { SpecimenTopic } from '@/atlas-review/lib/specimen-links';
 import { modelDeliveryUrl } from '@/atlas-review/lib/model-delivery';
@@ -19,11 +19,9 @@ import { abdominalGuidedDissection } from '@/atlas-review/lib/abdominal-guided-d
 export function AbdominalWallTeaching({ surface, definition = abdominalWallDefinition, initialTopic }: {
   surface: SpecimenSurface; definition?: SpecimenDefinition; initialTopic?: SpecimenTopic;
 }) {
-  if (surface.tissue === 'skeleton' && abdominalSurfaceMatches(definition, surface)) return <details className="um-knee-details"><summary>Learn · skeletal context</summary>
-    <p>This named bone is context from the same source release. Muscle attachment footprints are not separately mapped; detailed bone teaching for this specimen is pending.</p>
-  </details>;
   return <SpecimenLearning definition={definition} selected={surface} initialTopic={initialTopic}
-    resolveLesson={abdominalTeachingFor} attachmentLabels={{ proximal: 'Origin', distal: 'Insertion' }} referenceTitles={abdominalReferenceTitles} />;
+    resolveLesson={abdominalTeachingFor} attachmentLabels={surface.tissue === 'muscle' ? { proximal: 'Origin', distal: 'Insertion' } : undefined}
+    referenceTitles={surface.tissue === 'skeleton' ? abdominalBoneReferenceTitles : abdominalReferenceTitles} />;
 }
 export function abdominalWallSupplementFor(assetBase = ''): SpecimenSupplement { return {
   guidedDissection: abdominalGuidedDissection,

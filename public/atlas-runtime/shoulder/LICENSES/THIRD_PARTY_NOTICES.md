@@ -2033,3 +2033,18 @@ right-sided BodyParts3D 4.0 / CC BY 4.0 bone surfaces retain exact coordinates,
 hashes and attribution. No new model, media, font, dependency or paid service is
 added. Explicit root-region scope does not join independent specimens or imply
 clinical approval, joint-space validation or acquired-image registration.
+
+## Renal source-guided learning and abdominal skeletal drafts (1 October 2026)
+
+The renal visibility guide reuses admitted HRA v1.10 / CC BY 4.0 surfaces and
+existing study sets; all original mesh credits and three source holds remain.
+The abdominal skeleton uses only existing BodyParts3D version-3 assets, retaining
+CC BY-SA 2.1 Japan credits, downloadable sources and recipients' ShareAlike rights.
+Neither geometry nor data adaptations are relicensed by new application code.
+Original short factual teaching cites university anatomy tables, ACR publication
+abstracts, ACR/RSNA RadiologyInfo and AAOS reading; no source prose, tables,
+diagrams, PDFs or images are redistributed or treated as licensed datasets.
+Current OpenStax pages' non-commercial/AI restrictions are not relied on for
+this new slice. A reference link is not an asset-use grant or endorsement.
+No font, model, texture, dataset, scan, dependency, paid service or mandatory fee
+added. Detailed scope and required review: `docs/RENAL_GUIDED_ABDOMINAL_BONES.md`.

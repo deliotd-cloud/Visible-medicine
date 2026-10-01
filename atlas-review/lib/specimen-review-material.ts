@@ -1,5 +1,6 @@
 import { hraRenalDefinition } from "./hra-renal";
 import { hraRenalTeaching } from "./hra-renal-teaching";
+import { hraRenalGuidedDissection } from './hra-renal-guided-dissection';
 import { hraPelvisDefinition } from "./hra-pelvis";
 import { hraPelvicGuidedDissection } from './hra-pelvic-guided-dissection';
 import { abdominalGuidedDissection } from './abdominal-guided-dissection';
@@ -19,6 +20,7 @@ import { specimenTeachingFor } from './um-limb-teaching';
 import { abdominalWallDefinition } from './abdominal-wall';
 import { abdominalTeachingFor } from './abdominal-wall-teaching';
 import { abdominalReferenceTitles } from '../content/abdominal-wall-teaching';
+import { abdominalBoneReferenceTitles } from '../content/abdominal-bone-teaching';
 import { backLayersDefinition } from './back-layers';
 import { backLayersTeachingFor } from './back-layers-teaching';
 import { backLayersReferences } from '../content/back-layers-teaching';
@@ -39,10 +41,11 @@ import {
 // Explicit source adapters only. More donors require their own admitted source,
 // frame and teaching adapter, not inferred identity matches or migrated approvals.
 type ReviewCatalogue = { source: { credit: string; license: string }; sourceFrame: string; [key: string]: unknown };
-type Adapter = { definition: SpecimenDefinition; raw: ReviewCatalogue; lesson: (d:SpecimenDefinition,s:SpecimenSurface)=>SpecimenLesson|null; titles: Readonly<Record<string,string>>; path:string; limb?:boolean; guide?: (definition: SpecimenDefinition) => SpecimenGuidedDissection | null };
+type Adapter = { definition: SpecimenDefinition; raw: ReviewCatalogue; lesson: (d:SpecimenDefinition,s:SpecimenSurface)=>SpecimenLesson|null; titles: Readonly<Record<string,string>>; boneTitles?: Readonly<Record<string,string>>; path:string; limb?:boolean; guide?: (definition: SpecimenDefinition) => SpecimenGuidedDissection | null };
 const registry: Adapter[] = [
   {
     definition: hraRenalDefinition,
+    guide: hraRenalGuidedDissection,
     raw: renal,
     lesson: hraRenalTeaching,
     titles: hraRenalReferenceTitles,
@@ -58,7 +61,7 @@ const registry: Adapter[] = [
   },
   { definition:abdominalWallDefinition, raw:{...abdominal,sourceFrame:independentStudyRoutes.find(r=>r.key===abdominal.specimenId)!.frame},
     guide: abdominalGuidedDissection,
-    lesson:abdominalTeachingFor, titles:abdominalReferenceTitles, path:'/specimens/abdominal-wall' },
+    lesson:abdominalTeachingFor, titles:abdominalReferenceTitles, boneTitles:abdominalBoneReferenceTitles, path:'/specimens/abdominal-wall' },
   { definition:backLayersDefinition, raw:{...back,sourceFrame:independentStudyRoutes.find(r=>r.key===back.specimenId)!.frame},
     guide: backGuidedDissection,
     lesson:backLayersTeachingFor, titles:backLayersReferences, path:'/specimens/back-layers' },
@@ -122,7 +125,7 @@ export async function specimenReviewMaterial(
   const teaching = {
     topics,
     lesson,
-    referenceTitles: r.titles as Record<string, string>,
+    referenceTitles: (s.tissue === 'skeleton' && r.boneTitles ? r.boneTitles : r.titles) as Record<string, string>,
     ...(lesson?.motorGroups?.length ? { motorSupplies: lesson.motorGroups.map(m => ({...m,...motorNerves[m.nerve]})) } : {}),
     // The exact captions, order, camera views and surrounding source IDs are
     // review material, not an unversioned renderer-only teaching overlay.

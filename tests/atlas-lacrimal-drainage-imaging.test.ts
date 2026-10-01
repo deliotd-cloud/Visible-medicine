@@ -18,9 +18,9 @@ const selections=[
 
 test('head-neck export binds six exact lacrimal drainage selections to CT and MRI drafts only',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'d364c626969710fe919fa1305a31cc0049dfc45997107d700a014f29f26538b7');
+  assert.equal(sha(manifestBytes),'782709d3f501adc6ec47b8338e16c958b5b3eccb5d65d3b4e62c0208e30b895d');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'adad1abe1ad6fdb3c942d1d8b6a98393591bec80');
+  assert.equal(manifest.sourceCommit,'7d3010368fc53e3433e8df4f9e9d4ddb67e786e8');
   for(const flag of ['patientDataIncluded','clinicalApproved','imagingConnection','standaloneReviewConnection'])
     assert.equal(manifest[flag],false,flag);
 
@@ -73,7 +73,7 @@ test('head-neck export binds six exact lacrimal drainage selections to CT and MR
   ])assert.ok(runtime.includes(phrase),phrase);
 
   const inventoryBytes=readFileSync('lib/atlas-model-inventory.json');
-  assert.equal(sha(inventoryBytes),'e1d993c08753f32228c26b628468beaf80cdc5f4756254772123b61605d7e15c');
+  assert.equal(sha(inventoryBytes),'ff7bdfd8cfafe6cd9a22e6d151b23faedd4ac2615c23a56778f7f8c020656eed');
   const inventory=JSON.parse(inventoryBytes.toString());
   assert.equal(inventory.sources.find((source:{module:string})=>source.module==='head-neck')?.manifestSha256,sha(manifestBytes));
   assert.equal(inventory.models.length,137);

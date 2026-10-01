@@ -1,5 +1,5 @@
 {
-  "revision": "adad1abe1ad6fdb3c942d1d8b6a98393591bec80",
+  "revision": "7d3010368fc53e3433e8df4f9e9d4ddb67e786e8",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2888,13 +2888,13 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "1c824470020bda933d688899dc40f17a7b8873696f81a04396a365a47635e853",
-      "importedSha256": "11197d87f7a0f01311572e57b8f97bfe6fb88210b0792ec02ef4b9aff7ed1a63"
+      "sourceSha256": "67b2957842d83b1f6eca7813792431859366dbb20bbcd2c6ad600df944ecad8c",
+      "importedSha256": "ce436d254bce96bd605c72c543a597a4be884c201e2acbe6a534c784f4a91ac5"
     },
     {
       "path": "lib/specimen-review-material.ts",
-      "sourceSha256": "cd812880a4ceb9fad9c2b7a3c875787cfbcb036e92d2d866eac21f4744e3645a",
-      "importedSha256": "cd812880a4ceb9fad9c2b7a3c875787cfbcb036e92d2d866eac21f4744e3645a"
+      "sourceSha256": "cdd451b0fbe23413ba8cf7bc52e170c1d826df9f8294296704c872acfdda7f8f",
+      "importedSha256": "cdd451b0fbe23413ba8cf7bc52e170c1d826df9f8294296704c872acfdda7f8f"
     },
     {
       "path": "lib/hra-renal.ts",
@@ -2962,6 +2962,16 @@
       "importedSha256": "6f82c800c9c3572913f02db1cec19102a6fceb2604981d37ea98b716edb7b12a"
     },
     {
+      "path": "lib/hra-renal-guided-dissection.ts",
+      "sourceSha256": "c1feb8e84baed26579ec3ff411a7fa4e14a825494c0f3d227b3509f76e882236",
+      "importedSha256": "c1feb8e84baed26579ec3ff411a7fa4e14a825494c0f3d227b3509f76e882236"
+    },
+    {
+      "path": "lib/specimen-guided-dissection.ts",
+      "sourceSha256": "b961f4b37a66a30eb015796ea70e87262ff3452b24814f8d602a824369998129",
+      "importedSha256": "b961f4b37a66a30eb015796ea70e87262ff3452b24814f8d602a824369998129"
+    },
+    {
       "path": "lib/hra-pelvis.ts",
       "sourceSha256": "a23f687a1f2a2effa9bcb44249acb62ae7868896052e83796ea189c916e2ff39",
       "importedSha256": "a23f687a1f2a2effa9bcb44249acb62ae7868896052e83796ea189c916e2ff39"
@@ -2975,11 +2985,6 @@
       "path": "lib/hra-pelvic-guided-dissection.ts",
       "sourceSha256": "ef1c883db974f04702bda1acce0566d480dc1359e8aff8225fe0a77d816f9eb4",
       "importedSha256": "ef1c883db974f04702bda1acce0566d480dc1359e8aff8225fe0a77d816f9eb4"
-    },
-    {
-      "path": "lib/specimen-guided-dissection.ts",
-      "sourceSha256": "b961f4b37a66a30eb015796ea70e87262ff3452b24814f8d602a824369998129",
-      "importedSha256": "b961f4b37a66a30eb015796ea70e87262ff3452b24814f8d602a824369998129"
     },
     {
       "path": "lib/abdominal-guided-dissection.ts",
@@ -3073,13 +3078,18 @@
     },
     {
       "path": "lib/abdominal-wall-teaching.ts",
-      "sourceSha256": "30f1fbd0b64e9cd73566372eed356e71c40a0b0a20fe87e1c8e4ddf6b8068b16",
-      "importedSha256": "30f1fbd0b64e9cd73566372eed356e71c40a0b0a20fe87e1c8e4ddf6b8068b16"
+      "sourceSha256": "1afe4f79d3b190506a0d55e345b1bd48b53ab1699ac8ef8729b7ea395d9616d0",
+      "importedSha256": "1afe4f79d3b190506a0d55e345b1bd48b53ab1699ac8ef8729b7ea395d9616d0"
     },
     {
       "path": "content/abdominal-wall-teaching.ts",
       "sourceSha256": "b0da512ba08095bb8516538b11f6f052f5e1bd052f2a418fc1015602fe8f5896",
       "importedSha256": "b0da512ba08095bb8516538b11f6f052f5e1bd052f2a418fc1015602fe8f5896"
+    },
+    {
+      "path": "content/abdominal-bone-teaching.ts",
+      "sourceSha256": "e968a035feafa0abdc44efad2b342a487275fa67a573d58afbeb5513336ebd1f",
+      "importedSha256": "e968a035feafa0abdc44efad2b342a487275fa67a573d58afbeb5513336ebd1f"
     },
     {
       "path": "lib/back-layers-teaching.ts",
@@ -3204,7 +3214,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "380ce2b69ed41e887017d8a0fac7b12bbac88e21b494c68e439179f94aced95e",
-      "importedSha256": "db4b9d5f89c2fc387b3d61cd3fb0bb3418f27a7048217c78f96ca882dcabfc0b"
+      "importedSha256": "bf528cf85d357506f8c5b1aa63e27d4ff52d936b3c1afbfdf7bfa871a128b37b"
     },
     {
       "path": "app/review/review.css",
@@ -4473,8 +4483,8 @@
     },
     {
       "path": "app/abdominal-wall-study.tsx",
-      "sourceSha256": "31ab0e30b356043755c74970e777f36e8760629177c711c87477fabd6e5c5db9",
-      "importedSha256": "6c0d05e336441e7d478d914423399f17f235bfeadd15a7daea919c62a4a5b398"
+      "sourceSha256": "e8635326829bab9da23b78ec8025c8e32541495131b3d80afea55bfdb2e3cc29",
+      "importedSha256": "66b03b457bbc4cc5912a2658c7cd482482c0f6289f293bb27bf63146945387aa"
     },
     {
       "path": "app/independent-study-navigation.tsx",
@@ -4498,8 +4508,8 @@
     },
     {
       "path": "app/hra-renal-study.tsx",
-      "sourceSha256": "80eed76f9ea02589327c29f56ad74d66eb1d58759578f03abab6e6cad775db6a",
-      "importedSha256": "5c2dc699ef080c5f6f92df2b92427f51cb81596b8c2d762f25806b1d04a9fa8b"
+      "sourceSha256": "a3480af773ef7d1e882d4aa994b444dc9b36181495263dafb6ad52a080ddc19c",
+      "importedSha256": "eee6c57e2ba527075566d87b7ee5442311c7fc1eca0b432f7edc1f98fcfe1504"
     },
     {
       "path": "app/back-layers-study.tsx",
@@ -4563,8 +4573,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "9c396e9b1b5fc1e540f6f17ee512c1d7f161fe45719b43bb2979077af895ce5c",
-      "importedSha256": "9c396e9b1b5fc1e540f6f17ee512c1d7f161fe45719b43bb2979077af895ce5c"
+      "sourceSha256": "b91374b0f91174ea06a0e7fdf3cd9bec3e2a2966f25605b56dd955ed9a1a97e0",
+      "importedSha256": "b91374b0f91174ea06a0e7fdf3cd9bec3e2a2966f25605b56dd955ed9a1a97e0"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -4663,5 +4673,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "0a1e84128fbff27f2d0dc5e1f5a20fa4f7a562251d506ad5f3d5f51d57e20fdb"
+  "websiteIntegrationSha256": "2ff80c22001285a514617d572bbcf1baf766c3f966d631653e30724dcd69c6cb"
 }
