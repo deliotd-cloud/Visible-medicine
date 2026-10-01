@@ -1,5 +1,5 @@
 {
-  "revision": "fc5457b6dbc12cb6ce702c2fc272d0bcb6cc59fc",
+  "revision": "944f57b801471c3b005a64ec83314188b2f06cf5",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2888,8 +2888,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "67b5a9901e5f473f68a48daac563e78a2bf49b0bab58c4fd2893faa9360d098c",
-      "importedSha256": "d5a2414fc256a3669a849d4e8061c9f2e5b91cf680486d5ed3377ea0523ce9eb"
+      "sourceSha256": "7bb3f942d47b66e938ac83cf5f946e7543f22cf7225b99241043d3fe77a561b1",
+      "importedSha256": "e9cef2f26da3e205dbaac0b2443856e2b3cff9b6b399aeffe19240778d824889"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -2953,8 +2953,8 @@
     },
     {
       "path": "content/hra-renal-clinical.ts",
-      "sourceSha256": "56a4b179bdce07846f126645351398a2912e6ee29b7ca07768a2821b0f785933",
-      "importedSha256": "56a4b179bdce07846f126645351398a2912e6ee29b7ca07768a2821b0f785933"
+      "sourceSha256": "767ae00939b72e046bef953be2fb439dce3daac4e81b2786a08b20afc4fcee57",
+      "importedSha256": "767ae00939b72e046bef953be2fb439dce3daac4e81b2786a08b20afc4fcee57"
     },
     {
       "path": "lib/specimen-identification.ts",
@@ -3214,7 +3214,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "380ce2b69ed41e887017d8a0fac7b12bbac88e21b494c68e439179f94aced95e",
-      "importedSha256": "c7e2fc85838621b8bd5baa59ee8fdc026a7638a045eb0c81b2840272ce67e458"
+      "importedSha256": "a9a63b6bdf85d606f4e4d3c954194d7fc99d8caca5408d46901af997da0cf874"
     },
     {
       "path": "app/review/review.css",
@@ -4573,8 +4573,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "2e22c21fb5aa4a370cb2f6a92729e231fdda1517905ebd8c83e1d7142bb2d3ca",
-      "importedSha256": "2e22c21fb5aa4a370cb2f6a92729e231fdda1517905ebd8c83e1d7142bb2d3ca"
+      "sourceSha256": "7e714a75d572cb01a868e6f5c20a317ad109ccdb781b55b7a461a874cca2dd00",
+      "importedSha256": "7e714a75d572cb01a868e6f5c20a317ad109ccdb781b55b7a461a874cca2dd00"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -4673,5 +4673,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "1290c86149f6c93c57159c15d21847b327912981ab561163f37d2cd2581a1398"
+  "websiteIntegrationSha256": "940cd296c4c011f63f9d40ddb3958ffb723081ecfa39b019ca9b580570098e6a"
 }

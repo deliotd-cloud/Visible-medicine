@@ -8,7 +8,7 @@ test('tour title reflow ships matching learner/review styles without changing an
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
  const previous=(p:string)=>JSON.parse(execFileSync('git',['show','047d488a:'+p],{encoding:'utf8',maxBuffer:32e6}));
  const review=json('atlas-review/manifest.json'),before=previous('atlas-review/manifest.json');
- assert.equal(review.revision,'fc5457b6dbc12cb6ce702c2fc272d0bcb6cc59fc');
+ assert.equal(review.revision,'944f57b801471c3b005a64ec83314188b2f06cf5');
  // Keep the exact historical reflow delta pinned to its delivered commit;
  // subsequent independently reviewed runtime fixes advance the current import.
  const reflow=JSON.parse(execFileSync('git',['show','1727b2e3:atlas-review/manifest.json'],{encoding:'utf8',maxBuffer:32e6}));
@@ -38,10 +38,13 @@ test('tour title reflow ships matching learner/review styles without changing an
   const currentNotice=readFileSync(notice,'utf8').replaceAll('\r','');
   const retainedNotice=execFileSync('git',['show','c0da7e2bf6a9f6f3e262b8c5326c369e5e6cafd2:'+notice],{encoding:'utf8'}).replaceAll('\r','');
   const renalNotice=execFileSync('git',['show','abfd5cf175f2b28417f43a34d34c3c730b453a4e:'+notice],{encoding:'utf8'}).replaceAll('\r','');
+  const backNotice=execFileSync('git',['show','1377cba878403777924a82515a12faedb679363d:'+notice],{encoding:'utf8'}).replaceAll('\r','');
   assert.ok(renalNotice.startsWith(retainedNotice),'Entire wall/back notice retained byte-for-byte');
   assert.match(renalNotice.slice(retainedNotice.length),/^\n## Renal source-guided learning and abdominal skeletal drafts \(1 October 2026\)\n/);
-  assert.ok(currentNotice.startsWith(renalNotice),'Entire preceding renal notice retained byte-for-byte');
-  assert.match(currentNotice.slice(renalNotice.length),/^\n## Back-specimen teaching completion \(1 October 2026\)\n/);
+  assert.ok(backNotice.startsWith(renalNotice),'Entire preceding renal notice retained byte-for-byte');
+  assert.match(backNotice.slice(renalNotice.length),/^\n## Back-specimen teaching completion \(1 October 2026\)\n/);
+  assert.ok(currentNotice.startsWith(backNotice),'Entire preceding back notice retained byte-for-byte');
+  assert.match(currentNotice.slice(backNotice.length),/^\n## HRA renal modality-topic completion \(1 October 2026\)\n/);
   const beforeWallBack=retainedNotice.replace(/^# Third-party notices\n\n## Abdominal wall and back source-guided dissection \(1 October 2026\)\n[\s\S]+?\n(?=## )/,'# Third-party notices\n\n');
   assert.equal(beforeWallBack,execFileSync('git',['show','c5448a86:'+notice],{encoding:'utf8'}).replaceAll('\r',''),'Historical wall/back notice was the only earlier addition');
   assert.ok(beforeWallBack.startsWith(earlier),'All earlier notices retained');

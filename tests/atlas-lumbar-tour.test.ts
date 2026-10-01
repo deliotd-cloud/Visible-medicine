@@ -27,7 +27,7 @@ test('lumbar tour source import has the exact declared teaching and review depen
 test('lumbar tour keeps every model and existing licence notice without patient data or approval',()=>{
  for(const module of ['head-neck','shoulder']){
   const prefix='public/atlas-runtime/'+module+'/',before=prior(prefix+'manifest.json'),after=json(prefix+'manifest.json');
-  assert.equal(after.sourceCommit,'fc5457b6dbc12cb6ce702c2fc272d0bcb6cc59fc');
+  assert.equal(after.sourceCommit,'944f57b801471c3b005a64ec83314188b2f06cf5');
   const retained=(f:any)=>f.path.endsWith('.glb')||f.path==='BUNDLED_NOTICES.txt'||f.path==='bundled-dependencies.json'||f.path.includes('credits');
   assert.deepEqual(after.files.filter(retained),before.files.filter(retained));
   for(const f of after.files.filter(retained))assert.equal(sha(prefix+f.path),f.sha256);
@@ -35,13 +35,16 @@ test('lumbar tour keeps every model and existing licence notice without patient 
   for(const flag of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection'])assert.equal(after[flag],false);
   const path=prefix+'LICENSES/THIRD_PARTY_NOTICES.md';
   const old=Buffer.from(oldBytes(path)).toString('utf8').replace(/\r/g,''),current=readFileSync(path,'utf8').replace(/\r/g,'');
-  // The historical wall/back and renal notices precede the current back teaching credit.
+  // Keep each delivered notice milestone intact as later source credits append.
   const retainedNotice=execFileSync('git',['show','c0da7e2bf6a9f6f3e262b8c5326c369e5e6cafd2:'+path],{encoding:'utf8'}).replaceAll('\r','');
   const renalNotice=execFileSync('git',['show','abfd5cf175f2b28417f43a34d34c3c730b453a4e:'+path],{encoding:'utf8'}).replaceAll('\r','');
+  const backNotice=execFileSync('git',['show','1377cba878403777924a82515a12faedb679363d:'+path],{encoding:'utf8'}).replaceAll('\r','');
   assert(renalNotice.startsWith(retainedNotice),'Entire wall/back notice retained byte-for-byte');
   assert.match(renalNotice.slice(retainedNotice.length),/^\n## Renal source-guided learning and abdominal skeletal drafts \(1 October 2026\)\n/);
-  assert(current.startsWith(renalNotice),'Entire preceding renal notice retained byte-for-byte');
-  assert.match(current.slice(renalNotice.length),/^\n## Back-specimen teaching completion \(1 October 2026\)\n/);
+  assert(backNotice.startsWith(renalNotice),'Entire preceding renal notice retained byte-for-byte');
+  assert.match(backNotice.slice(renalNotice.length),/^\n## Back-specimen teaching completion \(1 October 2026\)\n/);
+  assert(current.startsWith(backNotice),'Entire preceding back notice retained byte-for-byte');
+  assert.match(current.slice(backNotice.length),/^\n## HRA renal modality-topic completion \(1 October 2026\)\n/);
   const beforeWallBack=retainedNotice.replace(/^# Third-party notices\n\n## Abdominal wall and back source-guided dissection \(1 October 2026\)\n[\s\S]+?\n(?=## )/,'# Third-party notices\n\n');
   assert.equal(beforeWallBack,execFileSync('git',['show','c5448a86:'+path],{encoding:'utf8'}).replaceAll('\r',''),'Historical wall/back notice was the only earlier addition');
   assert(beforeWallBack.startsWith(old.trimEnd()),'Every previous notice is retained');

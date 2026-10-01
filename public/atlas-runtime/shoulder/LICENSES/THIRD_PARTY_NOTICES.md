@@ -2061,3 +2061,14 @@ All existing BodyParts3D v3 / CC BY-SA2.1 Japan source assets, credits, download
 and recipients' rights remain unchanged. No additional model, font, texture,
 dataset, dependency, paid service or mandatory fee. Scope and required clinical
 review: `docs/BACK_TEACHING_COMPLETION.md`.
+
+## HRA renal modality-topic completion (1 October 2026)
+
+Ten original introductory notes fill missing renal MRI, ultrasound and X-ray
+topics. ACR/RSNA RadiologyInfo pages are primary factual reading links, not
+asset-use grants, copied publisher prose, images, tables, PDFs or datasets.
+New content does not rely on non-commercial/AI-restricted source licences;
+preserving older references does not retrospectively clear them. Existing HRA
+CC BY4.0 meshes, source retention, credits and held anatomy remain unchanged.
+No new model, font, texture, dependency, patient scan, paid service or mandatory
+fee. Scope and required review: `docs/HRA_RENAL_TOPIC_COMPLETION.md`.

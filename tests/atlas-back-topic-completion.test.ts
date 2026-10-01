@@ -7,7 +7,8 @@ import {readFileSync} from 'node:fs';
 import {dirname, resolve} from 'node:path';
 import {build} from 'esbuild';
 
-const source = 'fc5457b6dbc12cb6ce702c2fc272d0bcb6cc59fc';
+const source = '944f57b801471c3b005a64ec83314188b2f06cf5';
+const backTopicMilestone = 'fc5457b6dbc12cb6ce702c2fc272d0bcb6cc59fc';
 const sourceBefore = '7d3010368fc53e3433e8df4f9e9d4ddb67e786e8';
 const websiteBefore = 'abfd5cf175f2b28417f43a34d34c3c730b453a4e';
 const sourceRepo = process.env.ATLAS_SOURCE_REPO ?? resolve('..', '..', '..', '2026-09-05', 'referenced-chatgpt-conversation-this-is-an-2', 'outputs');
@@ -27,7 +28,12 @@ async function reviewApi(previous = false) {
       "export {postSpecimenReview} from './atlas-review/lib/specimen-review-api';",
     ].join('\n'), resolveDir: process.cwd(), loader: 'ts'},
     bundle: true, write: false, platform: 'node', format: 'esm',
-    plugins: previous ? [{name: 'previous-back-topic-teaching', setup(plugin) {
+    plugins: [{name: 'historical-back-topic-teaching', setup(plugin) {
+      // Keep the later renal vocabulary out of both sides of this delivered transition.
+      plugin.onLoad({filter: /[\\/]content[\\/]hra-renal-clinical\.ts$/}, args => ({
+        contents: gitBytes(sourceRepo, backTopicMilestone, 'content/hra-renal-clinical.ts').toString('utf8'), loader: 'ts', resolveDir: dirname(args.path),
+      }));
+      if (!previous) return;
       for (const path of ['content/back-bone-teaching.ts', 'content/back-layers-clinical.ts'])
         plugin.onLoad({filter: new RegExp(path.replaceAll('/', '[\\\\/]') + '$')}, args => ({
           contents: previousSourceBytes(path).toString('utf8'), loader: 'ts', resolveDir: dirname(args.path),
@@ -35,7 +41,7 @@ async function reviewApi(previous = false) {
       plugin.onLoad({filter: /[\\/]content[\\/]body-renderer-revision\.json$/}, () => ({
         contents: previousSourceBytes('content/body-renderer-revision.json').toString('utf8'), loader: 'json',
       }));
-    }}] : [],
+    }}],
   });
   return import('data:text/javascript;base64,' + Buffer.from(result.outputFiles[0].text).toString('base64'));
 }
@@ -73,8 +79,11 @@ test('back-topic completion is pinned in learner and Clinical Review with models
     const path = `public/atlas-runtime/${module}/LICENSES/THIRD_PARTY_NOTICES.md`;
     const before = previousWebsiteBytes(path).toString('utf8').replaceAll('\r', '');
     const now = readFileSync(path, 'utf8').replaceAll('\r', '');
-    assert(now.startsWith(before), `complete prior notice retained: ${module}`);
-    assert.match(now.slice(before.length), /^\n## Back-specimen teaching completion \(1 October 2026\)\n/);
+    const backNotice = gitBytes(process.cwd(), '1377cba878403777924a82515a12faedb679363d', path).toString('utf8').replaceAll('\r', '');
+    assert(backNotice.startsWith(before), `complete prior notice retained: ${module}`);
+    assert.match(backNotice.slice(before.length), /^\n## Back-specimen teaching completion \(1 October 2026\)\n/);
+    assert(now.startsWith(backNotice), `complete back notice retained: ${module}`);
+    assert.match(now.slice(backNotice.length), /^\n## HRA renal modality-topic completion \(1 October 2026\)\n/);
     assert.equal(now, readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md', 'utf8').replaceAll('\r', ''));
   }
   for (const flag of ['patientDataIncluded', 'clinicalApproved', 'standaloneReviewConnection', 'imagingConnection'])

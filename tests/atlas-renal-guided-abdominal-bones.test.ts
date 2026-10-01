@@ -7,7 +7,7 @@ import {readFileSync} from 'node:fs';
 import {dirname, resolve} from 'node:path';
 import {build} from 'esbuild';
 
-const source = 'fc5457b6dbc12cb6ce702c2fc272d0bcb6cc59fc';
+const source = '944f57b801471c3b005a64ec83314188b2f06cf5';
 const sourceBefore = 'adad1abe1ad6fdb3c942d1d8b6a98393591bec80';
 const renalBoneMilestone = '7d3010368fc53e3433e8df4f9e9d4ddb67e786e8';
 const websiteBefore = 'c0da7e2bf6a9f6f3e262b8c5326c369e5e6cafd2';
@@ -40,6 +40,9 @@ async function reviewApi(revision: 'latest' | 'prior' | 'milestone' = 'latest') 
         plugin.onLoad({filter: new RegExp(path.replaceAll('/', '[\\\\/]') + '$')}, args => ({
           contents: gitBytes(sourceRepo, renalBoneMilestone, path).toString('utf8'), loader: 'ts', resolveDir: dirname(args.path),
         }));
+      plugin.onLoad({filter: /[\\/]content[\\/]hra-renal-clinical\.ts$/}, args => ({
+        contents: gitBytes(sourceRepo, renalBoneMilestone, 'content/hra-renal-clinical.ts').toString('utf8'), loader: 'ts', resolveDir: dirname(args.path),
+      }));
       plugin.onLoad({filter: /[\\/]content[\\/]body-renderer-revision\.json$/}, () => ({
         contents: gitBytes(sourceRepo, adapterRevision, 'content/body-renderer-revision.json').toString('utf8'), loader: 'json',
       }));
