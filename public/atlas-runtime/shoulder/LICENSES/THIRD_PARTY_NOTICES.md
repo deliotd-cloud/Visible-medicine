@@ -2010,3 +2010,13 @@ BodyParts3D 4.0 / CC BY 4.0 meshes, source hashes and credits are unchanged.
 No new model, image, texture, font, dependency, paid provider or mandatory runtime
 fee is introduced. The tour remains draft pending revision-bound radiologist
 review; it establishes neither acquired-image linkage nor registration.
+
+# Hip-to-heel guided tour reference — 1 October 2026
+
+Original short orientation captions cite the same TTUHSC El Paso lower-limb bone
+table as a factual reading reference, not permission to reuse its assets. No
+table, diagram, screenshot or source prose passage is copied. Seven existing
+right-sided BodyParts3D 4.0 / CC BY 4.0 bone surfaces retain exact coordinates,
+hashes and attribution. No new model, media, font, dependency or paid service is
+added. Explicit root-region scope does not join independent specimens or imply
+clinical approval, joint-space validation or acquired-image registration.

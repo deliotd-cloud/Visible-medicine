@@ -19,9 +19,12 @@ import { bodyDisplayCatalog } from './body-display-catalog';
 const wireCanonical = (value: unknown) => value === undefined
   ? undefined : sourceCanonical(JSON.parse(JSON.stringify(value)));
 let trustedTourPackets: Map<string, string | undefined> | undefined;
+let trustedTourCatalog: BodyCatalog | undefined;
+const tourCatalog = () => trustedTourCatalog ??=
+  bodyDisplayCatalog(rawCatalog as unknown as BodyCatalog);
 function trustedTourPacket(id: string): string | undefined {
   if (!trustedTourPackets) {
-    const catalog = bodyDisplayCatalog(rawCatalog as unknown as BodyCatalog);
+    const catalog = tourCatalog();
     trustedTourPackets = new Map(
       regionalTours.map((t) => [
         t.id,
@@ -263,7 +266,7 @@ function validTours(value: unknown, source: Record<string, unknown>): boolean {
       steps = t.steps;
     try {
       const frames = regionalTourStepFrames(
-        { structures, bundles } as unknown as BodyCatalog,
+        { ...tourCatalog(), structures, bundles } as unknown as BodyCatalog,
         definition,
       );
       if (wireCanonical(e.stepFrames) !== wireCanonical(frames)) return false;

@@ -1,5 +1,5 @@
 {
-  "revision": "e8a7ceca9fe7c82c744345f1854bafb6055853af",
+  "revision": "065062b5d5a9db1ee891dbd66fa890d7bb46b0fa",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2658,8 +2658,8 @@
     },
     {
       "path": "lib/regional-tours.ts",
-      "sourceSha256": "0d04c5fd758286e9dd350bebd573fc7989ef9a355379e9856e739286bf6efec0",
-      "importedSha256": "0d04c5fd758286e9dd350bebd573fc7989ef9a355379e9856e739286bf6efec0"
+      "sourceSha256": "49128ec0743f984da96156e66fa000cf959d9e80ac1ab99d26eb3af12e08e3f1",
+      "importedSha256": "49128ec0743f984da96156e66fa000cf959d9e80ac1ab99d26eb3af12e08e3f1"
     },
     {
       "path": "lib/selection-visibility.ts",
@@ -2720,6 +2720,11 @@
       "path": "lib/tarsal-tour.ts",
       "sourceSha256": "81dbbe8f9aeeb3363f5f5cc4e30c04f8f088a9fde08813bf21ae7ab2d14de1e1",
       "importedSha256": "81dbbe8f9aeeb3363f5f5cc4e30c04f8f088a9fde08813bf21ae7ab2d14de1e1"
+    },
+    {
+      "path": "lib/lower-limb-bone-tour.ts",
+      "sourceSha256": "faf55bc81bb4b95ebb1fa9b6afd50d4eedf38d6a9f029c8870956f07e47876ed",
+      "importedSha256": "faf55bc81bb4b95ebb1fa9b6afd50d4eedf38d6a9f029c8870956f07e47876ed"
     },
     {
       "path": "lib/nested-review-material.ts",
@@ -2863,8 +2868,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "3ca3652222fdeb030db4f6211b76a5afb7b6e9d6340331a2933c660d89a85311",
-      "importedSha256": "aca5dacbad717b47609e76ead4ffeccac54d71f2a6708e58c2c826fda1e6c879"
+      "sourceSha256": "ffcf841a79569441c7d2dc3f2ae14b490513aa932f0e49db16232c65245e03b8",
+      "importedSha256": "697b501a51e58914be4dad6bfb04d106a6db6cbb14c2c7aa5e894ea2b95a7011"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3159,7 +3164,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "380ce2b69ed41e887017d8a0fac7b12bbac88e21b494c68e439179f94aced95e",
-      "importedSha256": "da067e4cd65c2a8318e2a71eeed80b962c58dc7e60c0a5fc8826b1dd19e0487a"
+      "importedSha256": "75eb483ca0a68253f3bfccaa226c79a3c6e451b2f8f9e3caa02e5e2fd0237de8"
     },
     {
       "path": "app/review/review.css",
@@ -3183,8 +3188,8 @@
     },
     {
       "path": "lib/body-review-response.ts",
-      "sourceSha256": "261bc16fa9c42abd253b62d088efe5eb93625f72886320886ab5daa8e318a912",
-      "importedSha256": "261bc16fa9c42abd253b62d088efe5eb93625f72886320886ab5daa8e318a912"
+      "sourceSha256": "349421e4c5baf266067b30ac1d7753607707deebd39f8c0ac80c75892d17b5b4",
+      "importedSha256": "349421e4c5baf266067b30ac1d7753607707deebd39f8c0ac80c75892d17b5b4"
     },
     {
       "path": "lib/body-review-display-integrity.ts",
@@ -3193,8 +3198,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "a93236f07686d67c452b3984729b67fd122c2b8f92556394d0b5d38568e75f16",
-      "importedSha256": "a93236f07686d67c452b3984729b67fd122c2b8f92556394d0b5d38568e75f16"
+      "sourceSha256": "5735fd3d1ecf9d28f471f02ad3cc302c4dae8fa6698b72d7354daabd21ab212f",
+      "importedSha256": "5735fd3d1ecf9d28f471f02ad3cc302c4dae8fa6698b72d7354daabd21ab212f"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -3588,8 +3593,8 @@
     },
     {
       "path": "app/whole-body-guided-learning.tsx",
-      "sourceSha256": "96720e3bd119a2f41d06c1baac8d61583abb2dad9d9942bb41e812dcb36a9ed9",
-      "importedSha256": "25fc52ddc31c612614baa9687b020ed044d64b1a5986a0f88306c298d6db45fd"
+      "sourceSha256": "2f1650c349e40ed5b4d50c0e26b396e18130536c3363439c848fce7bcb74b771",
+      "importedSha256": "fc62855add7601d1593ae0202713fce7916accbcf188979f3ed3385fab33954d"
     },
     {
       "path": "app/whole-body-guided-learning.css",
@@ -4518,8 +4523,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "609d15b5f8e003281468058966b42f9ebb33437f833ae5157db65e870e80527a",
-      "importedSha256": "609d15b5f8e003281468058966b42f9ebb33437f833ae5157db65e870e80527a"
+      "sourceSha256": "321e739a44bdcae056978c403ab2c2b6400d338e32acbbf140d5884bf3ee70e5",
+      "importedSha256": "321e739a44bdcae056978c403ab2c2b6400d338e32acbbf140d5884bf3ee70e5"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -4618,5 +4623,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "6e11de7279454cd9d1917fb363c72bd60e4f2f4e2906a78235872652724d624c"
+  "websiteIntegrationSha256": "579d595809d9659d2d0232babee336ee1b53b5e66ba85dc65715a1473d39cdd2"
 }

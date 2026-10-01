@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 
 test('renal learner and review imports bind the same unchanged geometry and four-step draft',async()=>{
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8')),review=json('atlas-review/manifest.json');
- assert.equal(review.revision,'e8a7ceca9fe7c82c744345f1854bafb6055853af');
+ assert.equal(review.revision,'065062b5d5a9db1ee891dbd66fa890d7bb46b0fa');
  for(const module of ['head-neck','shoulder'])assert.equal(json('public/atlas-runtime/'+module+'/manifest.json').sourceCommit,review.revision);
  const prior=JSON.parse(execFileSync('git',['show','9baaa9e5:lib/atlas-model-inventory.json'],{encoding:'utf8'}));
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,prior.models);
@@ -20,7 +20,7 @@ test('renal learner and review imports bind the same unchanged geometry and four
  const api=await import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64')),tour=api.renalTour;
  const ids=['right:organ:right-kidney','right:vessel:right-renal-artery','left:organ:left-kidney','left:vessel:left-renal-artery'].map(n=>'vm:anatomy:body:abdomen:'+n);
  assert.deepEqual(tour.steps.map((s:any)=>s.selectedId),ids);assert.equal(tour.status,'draft');assert.equal(api.regionalTourFor('abdomen').id,api.celiacTour.id);
- assert.equal(api.regionalTours.length,21);assert.equal(api.regionalTours.reduce((n:number,t:any)=>n+t.steps.length,0),116);
+ assert.equal(api.regionalTours.length,22);assert.equal(api.regionalTours.reduce((n:number,t:any)=>n+t.steps.length,0),123);
  for(const id of [...ids,...tour.contextIds]){
   const packet=await api.bodyReviewMaterial(id);assert.equal(packet.approval,false);assert((await api.parseBodyReviewResponse(packet,id)));
   const index=packet.guidedTours.findIndex((e:any)=>e.tour.id===tour.id),evidence=packet.guidedTours[index];assert.deepEqual(evidence.tour,tour);
