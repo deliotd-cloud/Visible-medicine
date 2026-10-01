@@ -4,9 +4,10 @@ import {createHash} from 'node:crypto';
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 import {snapshot,hash} from './pin-tentorium-imaging.mjs';
+import {beforeCranialBoneQuiz} from './cranial-bone-quiz-history.mjs';
 
 const pins=JSON.parse(await readFile('content/tentorium-imaging-pins.json'));
-const live=await contentContext(),{api}=live,display=api.bodyDisplayCatalog(live.catalog),parent=await exactSourceHistoryApi(pins.parentCommit);
+const live=await contentContext(),display=live.api.bodyDisplayCatalog(live.catalog),api=beforeCranialBoneQuiz(live.api,display),parent=await exactSourceHistoryApi(pins.parentCommit);
 assert.equal(hash(snapshot(parent,display)),pins.previousAllLessonsAndRecipesHash);
 assert.deepEqual(display,parent.bodyDisplayCatalog(live.catalog));
 assert.deepEqual(api.structures,parent.structures);

@@ -79,7 +79,7 @@ assert.deepEqual(Object.values(thoracicQuizQuestions).map(q => q.choices.indexOf
 // Actual QuizNotes, workspace provider and native radio controls. Next Link is
 // unavailable in this Vite checkout and must never render in this narrow harness.
 const require = createRequire(import.meta.url), React = require('react'), render = require('react-dom/server').renderToStaticMarkup;
-const component = await componentBuild({ stdin: { contents: "export {QuizNotes,AtlasWorkspace} from './app/atlas-workspace';", resolveDir: process.cwd(), loader: 'tsx' }, bundle: true, platform: 'node', format: 'cjs', write: false });
+const component = await componentBuild({ stdin: { contents: "export {StructureQuickCheck} from './app/structure-quick-check'; export {QuizNotes,AtlasWorkspace} from './app/atlas-workspace';", resolveDir: process.cwd(), loader: 'tsx' }, bundle: true, platform: 'node', format: 'cjs', write: false });
 const scope = { exports: {} }; runInNewContext(component.outputFiles[0].text, { module: scope, exports: scope.exports,
   require: id => id === 'next/link' ? () => { throw Error('Unrelated Next Link must not render'); } : require(id), console });
 const escaped = value => render(React.createElement('span', null, value)).slice(6, -7);
@@ -87,13 +87,16 @@ let rendered = 0;
 for (const { identity } of pins.entries) {
   const question = api.bodyLesson(identity, 'quiz');
   const html = render(React.createElement(scope.exports.AtlasWorkspace, { exam: false }, React.createElement(scope.exports.QuizNotes, { structure: identity })));
-  assert.equal((html.match(/type="radio"/g) || []).length, 4); assert(html.includes('<fieldset'));
-  assert.match(html, /<button[^>]*disabled=""[^>]*>Check answer/);
-  assert(!html.includes('Correct answer:')); assert(!html.includes(escaped(question.explanation)));
-  assert(html.includes(escaped(question.body))); assert(html.includes(question.citations[0]));
-  for (const choice of question.bullets) assert(html.includes(escaped(choice)));
+  assert(html.includes('atlas-quiz-notes')); assert(!html.includes('type="radio"'));
+  const props = { question: question.body, choices: question.bullets, correctAnswer: question.correctAnswer, explanation: question.explanation };
+  const loadedHtml = render(React.createElement(scope.exports.StructureQuickCheck, props));
+  assert.equal((loadedHtml.match(/type="radio"/g) || []).length, 4); assert(loadedHtml.includes('<fieldset'));
+  assert.match(loadedHtml, /<button[^>]*disabled=""[^>]*>Check answer/);
+  assert(!loadedHtml.includes('Correct answer:')); assert(!loadedHtml.includes(escaped(question.explanation)));
+  assert(loadedHtml.includes(escaped(question.body)));
+  for (const choice of question.bullets) assert(loadedHtml.includes(escaped(choice)));
   const examHtml = render(React.createElement(scope.exports.AtlasWorkspace, { exam: true }, React.createElement(scope.exports.QuizNotes, { structure: identity })));
-  assert(!examHtml.includes('type="radio"')); assert(!examHtml.includes(escaped(question.body))); assert(!examHtml.includes(question.citations[0])); rendered++;
+  assert(!examHtml.includes('atlas-quiz-notes')); rendered++;
 }
 // Exercise the actual QuizNotes child with the existing component event harness.
 let states = [], refs = [], cursor = 0, refCursor = 0, active = false;
@@ -126,10 +129,24 @@ const nodeText = node => typeof node === 'string' ? node : !node ? ''
 let interacted = 0;
 for (const { identity } of pins.entries) {
   const lesson = api.bodyLesson(identity, 'quiz');
-  const child = walk(eventScope.exports.QuizNotes({ structure: identity })).find(node => typeof node.type === 'function' && node.type.name === 'StructureQuickCheck');
+  states = []; refs = []; cursor = 0; active = true;
+  let note = eventScope.exports.QuizNotes({ structure: identity }); active = false;
+  assert.equal(note.type, 'details');
+  assert.equal(walk(note).find(node => typeof node.type === 'function' && node.type.name === 'LazyBodyTeaching').props.enabled, false);
+  note.props.onToggle({ currentTarget: { open: true } });
+  cursor = 0; active = true; note = eventScope.exports.QuizNotes({ structure: identity }); active = false;
+  const lazy = walk(note).find(node => typeof node.type === 'function' && node.type.name === 'LazyBodyTeaching');
+  assert(lazy.props.enabled);
+  const loaded = lazy.props.children({ bodyContent: api.bodyContent });
+  const child = walk(loaded).find(node => typeof node.type === 'function' && node.type.name === 'StructureQuickCheck');
   assert(child); assert.equal(child.key, identity.id);
-  assert.equal(child.props.correctAnswer, lesson.correctAnswer); assert.equal(child.props.explanation, lesson.explanation);
-  const attempt = child.type(child.props); states = []; refs = [];
+  assert.deepEqual(JSON.parse(JSON.stringify(child.props)), {
+    question: lesson.body, choices: lesson.bullets, correctAnswer: lesson.correctAnswer, explanation: lesson.explanation,
+  });
+  assert.deepEqual(walk(loaded).filter(node => node.type === 'a').map(node => node.props.href), lesson.citations);
+  const attempt = child.type(child.props);
+  assert.notEqual(eventScope.exports.StructureQuickCheck({ ...child.props, question: child.props.question + ' revised' }).key, attempt.key);
+  states = []; refs = [];
   let tree;
   const redraw = () => {
     cursor = 0; refCursor = 0; active = true;

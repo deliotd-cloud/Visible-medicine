@@ -159,7 +159,9 @@ for(const [index,step] of tour.steps.entries()){
 for(const index of [-1,7,0.5,NaN])assert.throws(()=>api.regionalTourFrame(api.catalog,tour,index));
 const pinsPath='content/body-review-display-pins.json';
 const previousPins=JSON.parse(execFileSync('git',['show',previousRevision+':'+pinsPath],{encoding:'utf8',maxBuffer:2e6}));
-const currentPins=JSON.parse(readFileSync(pinsPath,'utf8'));
+// Preserve exact delivered tour deltas; later independent quiz material is
+// checked against the current pins by test-cranial-bone-quiz-history.mjs.
+const currentPins=JSON.parse(execFileSync('git',['show','bc03ed3f7324819f4bfa3e7cd0afb7203cc8e3b8:'+pinsPath],{encoding:'utf8',maxBuffer:2e6}));
 assert.deepEqual(Object.fromEntries(Object.entries(currentPins).filter(([key])=>key!=='pins')),
   Object.fromEntries(Object.entries(previousPins).filter(([key])=>key!=='pins')));
 assert.equal(currentPins.pins.length,previousPins.pins.length);

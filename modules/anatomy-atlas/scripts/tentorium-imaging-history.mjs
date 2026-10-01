@@ -4,7 +4,9 @@ import {isDeepStrictEqual} from 'node:util';
 import pins from '../content/tentorium-imaging-pins.json' with {type:'json'};
 import transition from '../content/tentorium-imaging-transition.json' with {type:'json'};
 import {hash,snapshot} from './pin-tentorium-imaging.mjs';
+import {beforeCranialBoneQuiz} from './cranial-bone-quiz-history.mjs';
 export function beforeTentoriumImaging(api,display){
+ api=beforeCranialBoneQuiz(api,display);
  if(typeof api.bodyLesson!=='function')return api;
  if(typeof api.bodyDisplayCatalog!=='function'&&pins.entries.every(e=>e.topics.every(t=>api.bodyLesson(e.identity,t)===undefined)))return api;
  assert.equal(hash(pins),'47d878a56e0e7643ca3f45ce6ce2e1d67f4554b275604d401f670ba777a248ff');

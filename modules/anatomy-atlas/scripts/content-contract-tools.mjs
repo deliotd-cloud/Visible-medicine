@@ -29,6 +29,7 @@ export * from './lib/orbital-nerve-mri.ts';
 export * from './lib/circle-willis-imaging.ts';
 export * from './lib/thoracic-quiz.ts';
 export * from './lib/cervical-quiz.ts';
+export * from './lib/cranial-bone-quiz.ts';
 export * from './lib/abdominal-organ-quiz.ts';
 export * from './lib/pelvic-organ-quiz.ts';
 export * from './lib/brain-connections-quiz.ts';

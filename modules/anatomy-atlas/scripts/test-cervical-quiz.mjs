@@ -115,17 +115,30 @@ for (const { identity } of pins.entries) {
   const attempt = events.StructureQuickCheck(props);
   assert.equal(attempt.key, JSON.stringify(props)); assert(!keys.has(attempt.key)); keys.add(attempt.key);
   assert.notEqual(events.StructureQuickCheck({ ...props, explanation: props.explanation + ' revised' }).key, attempt.key);
+  assert.notEqual(events.StructureQuickCheck({ ...props, question: props.question + ' revised' }).key, attempt.key);
   if (integrated) {
-    const child = walk(events.QuizNotes({ structure: identity })).find(node => typeof node.type === 'function' && node.type.name === 'StructureQuickCheck');
+    states = []; refs = []; cursor = 0; active = true;
+    let note = events.QuizNotes({ structure: identity }); active = false;
+    assert.equal(note.type, 'details');
+    assert.equal(walk(note).find(node => typeof node.type === 'function' && node.type.name === 'LazyBodyTeaching').props.enabled, false);
+    note.props.onToggle({ currentTarget: { open: true } });
+    cursor = 0; active = true; note = events.QuizNotes({ structure: identity }); active = false;
+    const lazy = walk(note).find(node => typeof node.type === 'function' && node.type.name === 'LazyBodyTeaching');
+    assert(lazy.props.enabled);
+    const loaded = lazy.props.children({ bodyContent: api.bodyContent });
+    const child = walk(loaded).find(node => typeof node.type === 'function' && node.type.name === 'StructureQuickCheck');
     assert(child); assert.equal(child.key, identity.id); assert.deepEqual(JSON.parse(JSON.stringify(child.props)), props);
     const html = render(React.createElement(actual.AtlasWorkspace, { exam: false }, React.createElement(actual.QuizNotes, { structure: identity })));
-    assert.equal((html.match(/type="radio"/g) || []).length, 4); assert(html.includes('<fieldset'));
-    assert.match(html, /<button[^>]*disabled=""[^>]*>Check answer/); assert(!html.includes('Correct answer:'));
-    assert(!html.includes('answer key is missing')); assert(!html.includes(escaped(lesson.explanation)));
-    assert(html.includes(escaped(lesson.body))); assert(html.includes(lesson.citations[0]));
-    for (const choice of lesson.bullets) assert(html.includes(escaped(choice)));
+    assert(html.includes('atlas-quiz-notes')); assert(!html.includes('type="radio"'));
+    const loadedHtml = render(React.createElement(actual.StructureQuickCheck, props));
+    assert.equal((loadedHtml.match(/type="radio"/g) || []).length, 4); assert(loadedHtml.includes('<fieldset'));
+    assert.match(loadedHtml, /<button[^>]*disabled=""[^>]*>Check answer/); assert(!loadedHtml.includes('Correct answer:'));
+    assert(!loadedHtml.includes('answer key is missing')); assert(!loadedHtml.includes(escaped(lesson.explanation)));
+    assert(loadedHtml.includes(escaped(lesson.body)));
+    for (const choice of lesson.bullets) assert(loadedHtml.includes(escaped(choice)));
+    assert.deepEqual(walk(loaded).filter(node => node.type === 'a').map(node => node.props.href), lesson.citations);
     const examHtml = render(React.createElement(actual.AtlasWorkspace, { exam: true }, React.createElement(actual.QuizNotes, { structure: identity })));
-    assert(!examHtml.includes('type="radio"')); assert(!examHtml.includes(escaped(lesson.body))); rendered++;
+    assert(!examHtml.includes('atlas-quiz-notes')); rendered++;
   }
   states = []; refs = []; let tree;
   const redraw = () => {
