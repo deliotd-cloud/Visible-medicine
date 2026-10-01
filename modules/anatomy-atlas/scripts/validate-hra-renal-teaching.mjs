@@ -15,9 +15,9 @@ const { hraRenalDefinition: def, hraRenalTeaching: lessonFor, hraRenalTopicFamil
 const beforeCommit = 'bd0ec72c46247676c02e9375ba9038823c6e75df';
 const previous = await compile(execFileSync('git', ['show', beforeCommit + ':content/hra-renal-teaching.ts'], { encoding: 'utf8' }), process.cwd() + '/content');
 assert.equal(def.surfaces.length, 82); assert.equal(Object.keys(concepts).length, 12); assert.equal(Object.keys(families).length, 9);
-assert.equal(new Set(Object.values(families).flatMap(f => Object.values(f).map(t => t.body))).size, 44);
+assert.equal(new Set(Object.values(families).flatMap(f => Object.values(f).map(t => t.body))).size, 54);
 const knownURLs = new Set(Object.values(references).map(r => r.url));
-assert.equal(knownURLs.size, 13);
+assert.equal(knownURLs.size, 15);
 for (const invalid of ['unknown', '__proto__', 'constructor', 'toString']) {
   assert.equal(authoredHraRenalClinical(invalid), null); assert.equal(authoredHraRenalLesson(invalid), null);
 }
@@ -46,7 +46,7 @@ for (const s of def.surfaces) {
     assert.equal(lessonFor(def, { ...s, [field]: 'foreign' }), null); rejections++;
   }
 }
-assert.deepEqual(counts, { clinical: 82, pathology: 82, ct: 82, mri: 61, ultrasound: 58, xray: 33 });
+assert.deepEqual(counts, { clinical: 82, pathology: 82, ct: 82, mri: 82, ultrasound: 82, xray: 82 });
 for (const mutate of [d => d.source.version = 'other', d => d.catalog.bundles[0].sha256 = '0'.repeat(64), d => d.catalog.coordinateSystem.sourceToSceneColumnMajor[0] *= -1, d => d.studies[0].ids.pop()]) {
   const bad = JSON.parse(snapshot); mutate(bad);
   for (const s of def.surfaces) { assert.equal(lessonFor(bad, s), null); rejections++; }
@@ -79,10 +79,10 @@ for (const s of def.surfaces) for (const topic of ['anatomy', 'function', ...Obj
   if (['ct', 'mri', 'xray', 'ultrasound'].includes(topic)) assert(html.includes('No patient images, scan alignment or measured pathology'));
   renders++;
 }
-assert.equal(pending, 94);
+assert.equal(pending, 0);
 assert(render(React.createElement(mod.exports.SpecimenLearning, { definition: def, selected: { ...def.surfaces[0], nodeName: 'foreign' }, initialTopic: 'mri', resolveLesson: lessonFor })).includes('Teaching unavailable for this source binding'));
 const report = {
-  sourceBoundSelections: 82, distinctConcepts: 12, topicFamilies: 9, uniqueTopicTexts: 44,
+  sourceBoundSelections: 82, distinctConcepts: 12, topicFamilies: 9, uniqueTopicTexts: 54,
   extendedPlacements: Object.values(counts).reduce((a,b) => a+b,0), counts,
   clinicalSelfCheckPlacements: 82, distinctSelfChecks: 12, renderedTopics: renders, pendingTopicStates: pending,
   rejectedMutations: rejections, originalCoreTeachingPreserved: true,

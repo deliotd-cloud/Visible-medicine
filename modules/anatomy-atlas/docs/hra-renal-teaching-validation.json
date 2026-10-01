@@ -2,20 +2,20 @@
   "sourceBoundSelections": 82,
   "distinctConcepts": 12,
   "topicFamilies": 9,
-  "uniqueTopicTexts": 44,
-  "extendedPlacements": 398,
+  "uniqueTopicTexts": 54,
+  "extendedPlacements": 492,
   "counts": {
     "clinical": 82,
     "pathology": 82,
     "ct": 82,
-    "mri": 61,
-    "ultrasound": 58,
-    "xray": 33
+    "mri": 82,
+    "ultrasound": 82,
+    "xray": 82
   },
   "clinicalSelfCheckPlacements": 82,
   "distinctSelfChecks": 12,
   "renderedTopics": 656,
-  "pendingTopicStates": 94,
+  "pendingTopicStates": 0,
   "rejectedMutations": 984,
   "originalCoreTeachingPreserved": true,
   "historicalPreservation": {
@@ -23,7 +23,7 @@
     "after": "bc36e110fda43e394f3811676626f42fc0ec6b2f",
     "geometryAndNavigationUnchanged": true
   },
-  "sourceSha256": "56a4b179bdce07846f126645351398a2912e6ee29b7ca07768a2821b0f785933",
+  "sourceSha256": "767ae00939b72e046bef953be2fb439dce3daac4e81b2786a08b20afc4fcee57",
   "clinicalOrDeviceApproval": false,
   "realImaging": false
 }

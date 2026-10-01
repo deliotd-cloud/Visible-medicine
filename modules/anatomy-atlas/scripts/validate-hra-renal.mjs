@@ -157,7 +157,9 @@ const require = createRequire(import.meta.url), React = require('react'), mod = 
 const testRequire = specifier => specifier === 'next/link'
   ? ({ href, children, ...props }) => React.createElement('a', { href, ...props }, children)
   : require(specifier);
-const context = { module: mod, exports: mod.exports, require: testRequire, URL, URLSearchParams, console, process: { env: { NODE_ENV: 'test' } } };
+// The existing guide uses the native browser/Node clone API; expose it in the
+// isolated component harness without replacing the guide or its assertions.
+const context = { module: mod, exports: mod.exports, require: testRequire, URL, URLSearchParams, structuredClone, console, process: { env: { NODE_ENV: 'test' } } };
 runInNewContext(component.outputFiles[0].text, context);
 const render = (name, props) => require('react-dom/server').renderToStaticMarkup(React.createElement(mod.exports[name], props));
 for (const study of def.studies) {

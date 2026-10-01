@@ -11,11 +11,11 @@ Use **Kidney layers · separate reference → select a structure → Learn**. Th
 | Clinical | 82 |
 | Pathology | 82 |
 | CT | 82 |
-| MRI | 61 |
-| Ultrasound | 58 |
-| X-ray | 33 |
+| MRI | 82 |
+| Ultrasound | 82 |
+| X-ray | 82 |
 
-These are **398 placements of 44 distinct topic texts**, organised into nine topic families. Twelve concept-specific cautions and 12 self-checks are shown across all82 selections. Lettered parts share the relevant anatomical concept; they are not claimed as398 unique lessons.94 source/modality slots remain pending. In particular, papillary MRI/US, hilar US, venous US and several X-ray topics are not filled with generic material.
+Updated1 October2026: **492 placements of54 distinct topic texts**, organised into nine topic families. Twelve concept-specific cautions and12 self-checks remain across all82 selections. Lettered parts share an anatomical concept; these are not492 unique lessons. Ten new structure-specific introductory notes fill94 formerly pending MRI/US/X-ray slots, preserving all398 previously populated placements. Modality/source limitations are explicit; no acquired-image evidence or validated papillary-necrosis detection is added. See [completion scope](HRA_RENAL_TOPIC_COMPLETION.md).
 
 Teaching focuses on tissue/compartment distinction, cortical pseudotumours, papillary injury, parenchymal infection, collecting-system and ureteric disease, renal arterial stenosis and venous tumour extension. Model-specific self-checks distinguish teaching offsets, source gaps and held meshes from clinical pathology. No patient diagnosis, disease simulation, treatment plan, contrast dose, scan-timing prescription, disease grading or copied staging system is supplied.
 
@@ -36,6 +36,6 @@ Original teaching uses the project’s code/content terms; the anatomical geomet
 
 ## Validation and review boundary
 
-`npm run hra-renal-teaching:test` tests all82 source bindings,656 rendered topic states,94 pending states,984 malformed-source rejections, defensive lesson copies and preservation of previous Anatomy/Function material. It checks that the original meshes, catalogue, retention/audit, dissection definition, practice adapter, shared learning UI, atlas launcher and dependency lockfile remain unchanged. The dedicated kidney dissection suite remains separate. Generated results: `docs/hra-renal-teaching-validation.json`.
+`npm run hra-renal-teaching:test` tests all82 source bindings,656 rendered topic states (now zero pending),984 malformed-source rejections, defensive lesson copies and preservation of previous Anatomy/Function material. Original geometry/navigation milestone comparisons remain pinned separately; the new completion suite compares current geometry/source retention and existing teaching against its exact baseline. The dedicated kidney dissection suite remains separate. Generated results: `docs/hra-renal-teaching-validation.json`.
 
 You remain the radiologist sign-off owner. Review every topic’s wording, anatomical applicability, source age and clinical emphasis; obtain actual device/GPU/interaction evidence separately. Remaining work includes broader/advanced renal teaching, licensed acquired imaging, structure mapping/registration, independent-scope review storage and external lecture entitlement integration. No test or cited guideline approves the source geometry. The absent left outer cortex/right columns/left vein remain source-quality holds, not diagnoses.

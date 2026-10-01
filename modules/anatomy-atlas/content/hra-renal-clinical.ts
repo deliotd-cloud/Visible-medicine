@@ -12,6 +12,8 @@ export const hraRenalClinicalReferences = {
   artery: { title: 'NIDDK · Renal artery stenosis', url: 'https://www.niddk.nih.gov/health-information/kidney-disease/renal-artery-stenosis' },
   urography: { title: 'ACR/RSNA · Urography', url: 'https://www.radiologyinfo.org/en/info/urography' },
   stones: { title: 'ACR/RSNA · Kidney and bladder stones', url: 'https://www.radiologyinfo.org/en/info/stones-renal' },
+  abdominalXray: { title: 'ACR/RSNA · Abdominal X-ray', url: 'https://www.radiologyinfo.org/en/info/abdominrad' },
+  abdominalUltrasound: { title: 'ACR/RSNA · Abdominal ultrasound', url: 'https://www.radiologyinfo.org/en/info/abdominus' },
   infection: { title: 'IDKD · Urinary infection and obstruction (chapter 20)', url: 'https://www.ncbi.nlm.nih.gov/books/NBK543798/' },
   renalMRI: { title: 'IDKD · Renal MRI and inflammatory disease (chapter 23)', url: 'https://www.ncbi.nlm.nih.gov/books/NBK543809/' },
   column: { title: 'Algin et al. · Columns of Bertin: imaging findings (2014)', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4261443/' },
@@ -37,12 +39,15 @@ export const hraRenalTopicFamilies = {
     ct: draft('CT depicts traumatic haematoma alongside parenchymal, vascular and collecting-system injury. An intact reference surface cannot exclude any of these findings in a patient.', 'haematoma'),
     mri: draft('MRI can help when CT is equivocal or during follow-up; it is not the default acute renal-trauma examination. This surface contains no blood-product signal or scan protocol.', 'trauma'),
     ultrasound: draft('FAST may miss renal injury. A negative examination does not rule it out, and FAST cannot substitute for the renal characterisation provided by CT.', 'trauma'),
+    xray: draft('A plain abdominal radiograph may show the kidney region or some stones in projection, but it does not directly delineate the fibrous capsule or a subcapsular collection. This capsule mesh is not an acquired radiograph.', 'abdominalXray'),
   },
   hilum: {
     clinical: draft('Assess vessels and the collecting system separately around a central renal mass; involvement of one does not establish involvement of the other.', 'rcc'),
     pathology: draft('Hilar location alone does not identify tumour type. Distinguish a parenchymal renal tumour from malignancy of the urinary lining, and assess spread independently.', 'rcc', 'urothelial'),
     ct: draft('Arterial and nephrographic CT phases assess vascular and parenchymal injury; delayed urographic images assess urinary leakage. A single reference surface supplies none of those phases.', 'trauma'),
     mri: draft('MR urography evaluates the urinary tract; renal MRI also assesses surrounding tissues. The hilum surface alone represents neither a lumen nor a vascular map.', 'urography'),
+    xray: draft('A plain abdominal radiograph projects overlapping structures around the kidney; it cannot separate the hilar vessels from the collecting system or define this soft-tissue indentation. Contrast urography is a different examination.', 'abdominalXray', 'urography'),
+    ultrasound: draft('Abdominal ultrasound can examine the kidney, and an acquired Doppler study can assess flow in renal vessels near the hilum. Bowel gas and depth may limit the view; this hilar mesh contains no Doppler data or complete pedicle.', 'abdominalUltrasound'),
   },
   parenchyma: {
     clinical: draft('Assess parenchymal abnormalities together with the collecting system and surrounding tissues; infection can extend beyond the kidney.', 'infection'),
@@ -50,6 +55,7 @@ export const hraRenalTopicFamilies = {
     ct: draft('Pyelonephritis may produce wedge-shaped or striated reduced enhancement. A striated nephrogram is not specific to infection.', 'infection', 'renalMRI'),
     mri: draft('T1/T2, dynamic enhancement and diffusion provide complementary renal information. Restricted diffusion alone does not distinguish infection from tumour.', 'renalMRI'),
     ultrasound: draft('Renal size, echogenicity, corticomedullary distinction and collecting-system dilatation can be assessed. Ultrasound can miss early infection or small complications.', 'infection'),
+    xray: draft('A plain abdominal radiograph can locate some mineralised urinary stones, but its projection has limited soft-tissue detail and cannot resolve cortex, medulla or parenchymal enhancement. Model colours do not represent radiographic density.', 'abdominalXray', 'stones'),
   },
   column: {
     clinical: draft('A prominent column of Bertin can mimic a renal mass. Establish continuity with cortical tissue before interpreting a central projection.', 'column'),
@@ -57,11 +63,15 @@ export const hraRenalTopicFamilies = {
     ct: draft('A cortical pseudotumour typically follows cortical attenuation and enhancement. Do not infer either measurement from this model’s colour.', 'column'),
     mri: draft('Compare the suspected column with cortex across sequences and enhancement phases; matching behaviour supports a cortical pseudotumour.', 'column'),
     ultrasound: draft('Columns may resemble cortical echogenicity and vascularity, but atypical appearances occur. A single echogenicity observation is not definitive.', 'column'),
+    xray: draft('The cortical column is a soft-tissue extension between pyramids, not a separate structure that a plain abdominal radiograph can define. Projection overlap and limited soft-tissue detail prevent reading this mesh as an X-ray mass sign.', 'abdominalXray', 'column'),
   },
   papilla: {
     clinical: draft('Papillary necrosis has several causes, including diabetes, analgesic overuse, sickle-cell disease, infection and obstruction; anatomy alone does not establish the cause.', 'papilla'),
     pathology: draft('Papillary injury can lead to sloughing, calyceal distortion or downstream obstruction. Source-part boundaries and missing mesh connections are not sloughed papillae.', 'papilla'),
     ct: draft('Excreted contrast can outline papillary clefts or a sloughed papilla; filling defects and papillary blunting are possible findings, not features simulated here.', 'papilla'),
+    mri: draft('MR urography can provide a view of urinary collecting spaces and their relationship to the papillary region. This source papilla is only an anatomical locator: no MR signal, excreted contrast or validated papillary-necrosis finding is supplied.', 'urography'),
+    xray: draft('A plain abdominal radiograph may depict some mineralised stones in the kidney region, but cannot directly distinguish a papilla from its adjacent calyx or show papillary tissue injury. This source-part label is not an X-ray finding.', 'abdominalXray', 'stones'),
+    ultrasound: draft('An acquired renal ultrasound can show kidney and collecting-region anatomy, although bowel gas and depth can obscure detail. This papillary mesh supplies neither ultrasound echoes nor validated detection of papillary necrosis.', 'abdominalUltrasound'),
   },
   collecting: {
     clinical: draft('Separate pelvicalyceal dilatation from its cause. Stones are one potential cause; clinical and imaging assessment must establish whether drainage is obstructed.', 'stones', 'infection'),
@@ -92,6 +102,8 @@ export const hraRenalTopicFamilies = {
     pathology: draft('Venous tumour extension is distinct from a missing or fragmented source surface. The held left-vein mesh is not evidence of thrombosis.', 'venous'),
     ct: draft('Contrast-enhanced CT helps map venous extension of a renal tumour. This mesh has no enhancement, thrombus or measured venous patency.', 'rcc'),
     mri: draft('When CT leaves the upper extent of venous tumour thrombus unclear, MRI can resolve that uncertainty. The specimen does not contain a complete caval pathway.', 'rcc'),
+    xray: draft('A plain abdominal radiograph has limited soft-tissue detail and cannot delineate the renal vein, its lumen or venous extension. The displayed right-vein mesh is an anatomical reference, not an X-ray vessel image or evidence of patency.', 'abdominalXray'),
+    ultrasound: draft('An acquired Doppler ultrasound can assess blood flow in arteries and veins, including a renal vein when adequately seen. Bowel gas and depth can limit evaluation; this partial mesh contains no flow data, complete venous pathway or basis to exclude thrombus.', 'abdominalUltrasound'),
   },
 } as const satisfies Record<string, Topics>;
 

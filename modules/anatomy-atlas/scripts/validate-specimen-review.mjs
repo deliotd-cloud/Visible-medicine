@@ -67,6 +67,7 @@ assert.equal(hashes.size, 356);
 // Back-topic completion adds ten software prerequisites to the saved342.
 // The full356 back transition test separately proves this exact change.
 // Populated draft topics are not clinical approval.
+// Renal completion fills94 topic slots without clearing more prerequisites.
 assert.equal(teachingReady, 352);
 for (const key of ["", "__proto__", "body-display-catalog", "shoulder-pilot"])
   assert.equal(await api.specimenReviewMaterial(key, "unknown"), null);
@@ -463,7 +464,13 @@ vm.runInNewContext(bundle.outputFiles[0].text, {
 });
 const React = require("react"),
   { renderToStaticMarkup } = require("react-dom/server");
-for (const p of [null, packet]) {
+// Renal topics are now populated. Keep the pending-state assertion against an
+// explicit still-incomplete pelvic context, alongside the completed renal one.
+const pendingGroup = api.specimenReviewRows.find(row => row.key === 'hra-united-female-v1.10-pelvis');
+assert(pendingGroup);
+const pendingPacket = await api.specimenReviewMaterial(pendingGroup.key, pendingGroup.surfaces[0].id);
+assert(pendingPacket.teaching.topics.some(topic => topic.body === null));
+for (const p of [null, packet, pendingPacket]) {
   const html = renderToStaticMarkup(
     React.createElement(module.exports.SpecimenReviewWorkspace, {
       rows: api.specimenReviewRows,
@@ -477,7 +484,11 @@ for (const p of [null, packet]) {
     assert.match(html, /Private history not loaded/);
     assert.match(html, /<fieldset disabled/);
     assert.match(html, /Export unsigned worksheet/);
-    assert.match(html, /Pending — no authored topic/);
+    if (p === pendingPacket) assert.match(html, /Pending — no authored topic/);
+    else {
+      assert(p.teaching.topics.every(topic => typeof topic.body === 'string'));
+      assert(!html.includes('Pending — no authored topic'));
+    }
     assert(!html.includes("Approval recorded"));
   }
 }

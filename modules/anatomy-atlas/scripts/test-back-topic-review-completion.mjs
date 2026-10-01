@@ -6,15 +6,18 @@ import {dirname} from 'node:path';
 import {build} from './workspace-test-build.mjs';
 
 const baseline='7d3010368fc53e3433e8df4f9e9d4ddb67e786e8';
-const oldFile=path=>execFileSync('git',['show',`${baseline}:${path}`],{encoding:'utf8',maxBuffer:32e6});
+const milestone='fc5457b6dbc12cb6ce702c2fc272d0bcb6cc59fc';
+const oldFile=(path,revision=baseline)=>execFileSync('git',['show',`${revision}:${path}`],{encoding:'utf8',maxBuffer:32e6});
 const contents="export * from './lib/specimen-review-material'; export * from './lib/specimen-review'; export * from './lib/specimen-review-api'; export * from './lib/back-layers'; export * from './lib/back-guided-dissection';";
 async function load(previous=false) {
  const result=await build({stdin:{contents,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',
-  plugins:previous?[{name:'before-back-topic-completion',setup(api){
+  plugins:[{name:'retain-delivered-renal-vocabulary',setup(api){
+   api.onLoad({filter:/[\\/]content[\\/]hra-renal-clinical\.ts$/},args=>({contents:oldFile('content/hra-renal-clinical.ts',milestone),loader:'ts',resolveDir:dirname(args.path)}));
+  }},...(previous?[{name:'before-back-topic-completion',setup(api){
    for(const path of ['content/back-bone-teaching.ts','content/back-layers-clinical.ts'])
     api.onLoad({filter:new RegExp(path.replaceAll('/','[\\\\/]')+'$')},args=>({contents:oldFile(path),loader:'ts',resolveDir:dirname(args.path)}));
    api.onLoad({filter:/[\\/]content[\\/]body-renderer-revision\.json$/},()=>({contents:oldFile('content/body-renderer-revision.json'),loader:'json'}));
-  }}]:[]});
+  }}]:[])]});
  return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
 }
 const current=await load(),previous=await load(true);
