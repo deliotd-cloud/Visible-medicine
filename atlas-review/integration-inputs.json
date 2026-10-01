@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "8cfd73cda5077ea608720c3c4d88d8e51371e2ef",
-  "sha256": "bc18f3cd856f4deda6c045c2dea5a9570c504a5bb4862bde1617767aa4734c47",
+  "sourceCommit": "bc03ed3f7324819f4bfa3e7cd0afb7203cc8e3b8",
+  "sha256": "4d8e20bbce5d8ee650a7a6ffd4a45928235a5ac085b71ad9a53a941a4b13c2c5",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -712,7 +712,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "a0b583c426ea4492ea9ff21ff518f845869295aefc1f54ed177f74390c51db10"
+      "sha256": "f86278a6a06845f179ef91b8f5123c96293474af3a5ee010b8e39ebb135c2d77"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -3076,7 +3076,7 @@
     },
     {
       "path": "atlas-review/lib/regional-tours.ts",
-      "sha256": "49128ec0743f984da96156e66fa000cf959d9e80ac1ab99d26eb3af12e08e3f1"
+      "sha256": "07b0abcc6bb6e24c24da073614070fded914c97af61f1d28a6ae45172cf61e91"
     },
     {
       "path": "atlas-review/lib/regional-vascular-clinical.ts",
@@ -3447,6 +3447,10 @@
       "sha256": "11161555f3296f06e435e2c2e1a0bd2ee1dc14806e0c1234625064071ecc0bf6"
     },
     {
+      "path": "atlas-review/lib/upper-limb-bone-tour.ts",
+      "sha256": "b3e812caffac7f7b540023820ebd477c4ba19bfefc64cad0e38dab6a339a3f77"
+    },
+    {
       "path": "atlas-review/lib/upper-limb-motor.ts",
       "sha256": "7809b6454d0814836ccab7305215a5c08e1dc7758f54707a7a82f3920ef3e2b9"
     },
@@ -3756,7 +3760,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "3812f85df71665b4a98cd32263d60ece169897ca677ebece2d88a41939c9f954"
+      "sha256": "82f1c19bd804e80437fad8cda1e1288d8c7db3c667c86a9cd63bc5d492a187f6"
     }
   ]
 }

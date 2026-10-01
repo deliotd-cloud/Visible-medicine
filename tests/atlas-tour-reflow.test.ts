@@ -8,13 +8,13 @@ test('tour title reflow ships matching learner/review styles without changing an
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
  const previous=(p:string)=>JSON.parse(execFileSync('git',['show','047d488a:'+p],{encoding:'utf8',maxBuffer:32e6}));
  const review=json('atlas-review/manifest.json'),before=previous('atlas-review/manifest.json');
- assert.equal(review.revision,'8cfd73cda5077ea608720c3c4d88d8e51371e2ef');
+ assert.equal(review.revision,'bc03ed3f7324819f4bfa3e7cd0afb7203cc8e3b8');
  // Keep the exact historical reflow delta pinned to its delivered commit;
  // subsequent independently reviewed runtime fixes advance the current import.
  const reflow=JSON.parse(execFileSync('git',['show','1727b2e3:atlas-review/manifest.json'],{encoding:'utf8',maxBuffer:32e6}));
  assert.equal(reflow.revision,'7dd7f5cfe4690ca1e5542107e52f97fa5142865f');
  assert.deepEqual(reflow.files.filter((f:any)=>before.files.find((p:any)=>p.path===f.path)?.sourceSha256!==f.sourceSha256).map((f:any)=>f.path).sort(),['app/whole-body-guided-learning.css','content/body-renderer-revision.json']);
- assert.deepEqual(review.files.map((f:any)=>f.path).sort(),[...before.files.map((f:any)=>f.path),'lib/renal-tour.ts','lib/tarsal-tour.ts','lib/lower-limb-bone-tour.ts',
+ assert.deepEqual(review.files.map((f:any)=>f.path).sort(),[...before.files.map((f:any)=>f.path),'lib/renal-tour.ts','lib/tarsal-tour.ts','lib/lower-limb-bone-tour.ts','lib/upper-limb-bone-tour.ts',
   'content/body-review-display-pins.json','lib/body-review-display-evidence.ts','lib/body-review-display-integrity.ts',
   ...['foot-sesamoid-teaching','cerebellar-mca-imaging','tentorium-imaging'].flatMap(kind=>['lib/'+kind+'.ts','content/'+kind+'.ts','content/'+kind+'-pins.json'])].sort());
  const path='app/whole-body-guided-learning.css',css=readFileSync('atlas-review/'+path,'utf8'),entry=review.files.find((f:any)=>f.path===path);

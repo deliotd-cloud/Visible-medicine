@@ -8,7 +8,7 @@ import {build} from 'esbuild';
 test('tarsal learner and review imports preserve source geometry, previous tours and independent imaging',async()=>{
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
  const prior=(p:string)=>JSON.parse(execFileSync('git',['show','3316fb7a:'+p],{encoding:'utf8',maxBuffer:32e6}));
- const review=json('atlas-review/manifest.json');assert.equal(review.revision,'8cfd73cda5077ea608720c3c4d88d8e51371e2ef');
+ const review=json('atlas-review/manifest.json');assert.equal(review.revision,'bc03ed3f7324819f4bfa3e7cd0afb7203cc8e3b8');
  for(const module of ['head-neck','shoulder'])assert.equal(json('public/atlas-runtime/'+module+'/manifest.json').sourceCommit,review.revision);
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,prior('lib/atlas-model-inventory.json').models);
  const inputs=json('public/atlas-runtime/head-neck/source-inputs.json');
@@ -27,14 +27,14 @@ test('tarsal learner and review imports preserve source geometry, previous tours
  const ids=names.map(n=>'vm:anatomy:body:foot:right:bone:'+n);
  assert.deepEqual(tour.steps.map((s:any)=>s.selectedId),ids);assert.equal(tour.status,'draft');
  assert.equal(api.regionalTourFor('foot').id,api.footTour.id);assert.equal(api.regionalToursFor('foot').length,2);
- assert.equal(api.regionalTours.length,22);assert.equal(api.regionalTours.reduce((n:number,t:any)=>n+t.steps.length,0),123);
- assert.deepEqual(api.regionalTours.filter((t:any)=>t.id!==tour.id&&t.id!==api.lowerLimbBoneTour.id),old.regionalTours,'All twenty previous tour definitions retained');
+ assert.equal(api.regionalTours.length,23);assert.equal(api.regionalTours.reduce((n:number,t:any)=>n+t.steps.length,0),130);
+ assert.deepEqual(api.regionalTours.filter((t:any)=>t.id!==tour.id&&t.id!==api.lowerLimbBoneTour.id&&t.id!==api.upperLimbBoneTour.id),old.regionalTours,'All twenty previous tour definitions retained');
  assert.deepEqual(tour.requiredDisplayBundles,Object.fromEntries(ids.map(id=>[id,'foot-skeleton'])));
  for(const id of ids){
   const packet=await api.bodyReviewMaterial(id);assert.equal(packet.approval,false);assert(await api.parseBodyReviewResponse(packet,id));
   const index=packet.guidedTours.findIndex((e:any)=>e.tour.id===tour.id),evidence=packet.guidedTours[index];assert.deepEqual(evidence.tour,tour);
   assert.equal(evidence.transitionMs,1800);assert.equal(evidence.transition,'quintic-orbit');assert.equal(evidence.separation,0);assert.equal(evidence.stepFrames.length,7);
-  assert.deepEqual(packet.guidedTours.filter((e:any)=>e.tour.id!==tour.id&&e.tour.id!==api.lowerLimbBoneTour.id),old.regionalTourEvidence({structures:packet.guidedTours.flatMap((e:any)=>e.structures).filter((s:any,i:number,a:any[])=>a.findIndex(x=>x.id===s.id)===i),bundles:packet.guidedTours.flatMap((e:any)=>e.bundles).filter((b:any,i:number,a:any[])=>a.findIndex(x=>x.id===b.id)===i),coordinateSystem:evidence.coordinateSystem,sourceVersion:evidence.sourceVersion},id));
+  assert.deepEqual(packet.guidedTours.filter((e:any)=>e.tour.id!==tour.id&&e.tour.id!==api.lowerLimbBoneTour.id&&e.tour.id!==api.upperLimbBoneTour.id),old.regionalTourEvidence({structures:packet.guidedTours.flatMap((e:any)=>e.structures).filter((s:any,i:number,a:any[])=>a.findIndex(x=>x.id===s.id)===i),bundles:packet.guidedTours.flatMap((e:any)=>e.bundles).filter((b:any,i:number,a:any[])=>a.findIndex(x=>x.id===b.id)===i),coordinateSystem:evidence.coordinateSystem,sourceVersion:evidence.sourceVersion},id));
   for(const step of tour.steps)assert.deepEqual(step.frameIds,ids);
   for(const mutate of [(p:any)=>p.guidedTours.splice(index,1),(p:any)=>p.guidedTours[index].tour.steps[0].caption+=' changed',(p:any)=>p.guidedTours[index].tour.revision+='-stale',(p:any)=>p.guidedTours[index].stepFrames[0].min[0]-=1,(p:any)=>p.guidedTours[index].transition='linear']){
    const changed=structuredClone(packet);mutate(changed);assert.equal(await api.parseBodyReviewResponse(changed,id),null);

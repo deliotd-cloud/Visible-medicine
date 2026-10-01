@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 
 test('hip-to-heel learner and Clinical Review retain exact whole-body teaching evidence',async()=>{
-  const source='8cfd73cda5077ea608720c3c4d88d8e51371e2ef';
+  const source='bc03ed3f7324819f4bfa3e7cd0afb7203cc8e3b8';
   const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
   const review=json('atlas-review/manifest.json');
   assert.equal(review.revision,source);
@@ -74,10 +74,10 @@ test('hip-to-heel learner and Clinical Review retain exact whole-body teaching e
     }
   }
   assert.equal(api.regionalTourFor('whole-body').id,tour.id);
-  assert.deepEqual(api.regionalToursFor('whole-body').map((entry:any)=>entry.id),[tour.id]);
-  assert.equal(api.regionalTours.length,22);
-  assert.equal(api.regionalTours.reduce((sum:number,entry:any)=>sum+entry.steps.length,0),123);
-  assert.deepEqual(api.regionalTours.filter((entry:any)=>entry.id!==tour.id),previous.regionalTours.filter((entry:any)=>entry.id!==tour.id),'all 21 earlier definitions remain exact');
+  assert.deepEqual(api.regionalToursFor('whole-body').map((entry:any)=>entry.id),[tour.id,api.upperLimbBoneTour.id]);
+  assert.equal(api.regionalTours.filter((entry:any)=>entry.id!==api.upperLimbBoneTour.id).length,22);
+  assert.equal(api.regionalTours.filter((entry:any)=>entry.id!==api.upperLimbBoneTour.id).reduce((sum:number,entry:any)=>sum+entry.steps.length,0),123);
+  assert.deepEqual(api.regionalTours.filter((entry:any)=>entry.id!==tour.id&&entry.id!==api.upperLimbBoneTour.id),previous.regionalTours.filter((entry:any)=>entry.id!==tour.id),'all 21 earlier definitions remain exact');
 
   for(const id of ids){
     const packet=await api.bodyReviewMaterial(id);

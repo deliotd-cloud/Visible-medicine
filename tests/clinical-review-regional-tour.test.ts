@@ -4,13 +4,13 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { build } from 'esbuild';
 
-test('all twenty-two regional tours ship complete source-bound review evidence', async () => {
+test('all twenty-three regional tours ship complete source-bound review evidence', async () => {
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const base='public/atlas-runtime/head-neck/';
   const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-  assert.equal(learner.sourceCommit,'8cfd73cda5077ea608720c3c4d88d8e51371e2ef');
+  assert.equal(learner.sourceCommit,'bc03ed3f7324819f4bfa3e7cd0afb7203cc8e3b8');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
-  for(const path of ['lib/regional-tours.ts','lib/tarsal-tour.ts','lib/chest-wall-tour.ts','lib/orbital-tour.ts','lib/intrinsic-larynx-tour.ts','lib/male-duct-tour.ts','lib/deep-brain-tour.ts','lib/subscapular-tour.ts','app/regional-guided-learning.tsx','lib/tour-camera.ts','app/fitted-camera.tsx']) {
+  for(const path of ['lib/regional-tours.ts','lib/tarsal-tour.ts','lib/upper-limb-bone-tour.ts','lib/chest-wall-tour.ts','lib/orbital-tour.ts','lib/intrinsic-larynx-tour.ts','lib/male-duct-tour.ts','lib/deep-brain-tour.ts','lib/subscapular-tour.ts','app/regional-guided-learning.tsx','lib/tour-camera.ts','app/fitted-camera.tsx']) {
     const file=review.files.find((f:any)=>f.path===path); assert.ok(file,path);
     assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,file.sourceSha256,path);
     assert.equal(createHash('sha256').update(readFileSync('atlas-review/'+path)).digest('hex'),file.importedSha256);
@@ -51,7 +51,8 @@ test('all twenty-two regional tours ship complete source-bound review evidence',
     assert.equal(api.regionalTourFor(region).id,id);assert.equal(api[name].revision,id+'-v1');
     assert.deepEqual(api[name].steps.map((s:any)=>s.view),['anterior','right','posterior','posterior','left']);
   }
-  assert.equal(api.regionalTours.length,22);
+  assert.equal(api.regionalTours.length,23);
+  assert.equal(api.regionalTours.reduce((sum:number,tour:any)=>sum+tour.steps.length,0),130);
   assert.equal(api.tarsalTour.status,'draft');assert.equal(api.tarsalTour.steps.length,7);
   assert.deepEqual(api.regionalToursFor('foot').map((t:any)=>t.id),[api.footTour.id,api.tarsalTour.id]);
   assert.equal(api.renalTour.status,'draft');assert.equal(api.renalTour.steps.length,4);
@@ -74,7 +75,7 @@ test('all twenty-two regional tours ship complete source-bound review evidence',
   assert.deepEqual(api.regionalToursFor('thorax').map((t:any)=>t.id),[api.thoraxTour.id,api.chestWallTour.id]);
   assert.equal(api.regionalTourFor('thorax').id,api.thoraxTour.id);
   assert.deepEqual(api.chestWallTour.steps.map((s:any)=>s.view),['right','right','right','posterior','posterior','superior']);
-  for(const tour of api.regionalTours) {
+  for(const tour of api.regionalTours.filter((tour:any)=>tour.id!==api.upperLimbBoneTour.id)) {
   const count=tour===api.lowerLimbBoneTour?7:tour===api.renalTour?5:tour===api.carpalTour?8:tour===api.tarsalTour?7:tour===api.lumbarTour?5:tour===api.subscapularTour?5:tour===api.deepBrainTour?7:tour===api.intrinsicLarynxTour?10:tour===api.orbitalTour?7:tour===api.chestWallTour?9:({thorax:8,spine:8,abdomen:6,forearm:7,thigh:6,leg:7,hand:7,foot:8,'shoulder-arm':8,'head-neck':6,pelvis:8} as Record<string,number>)[tour.region];
   const ids=new Set([...tour.contextIds,...tour.steps.map((s:any)=>s.selectedId)]);
   assert.equal(ids.size,count);
@@ -89,7 +90,8 @@ test('all twenty-two regional tours ship complete source-bound review evidence',
     const sharedTarsal=id==='vm:anatomy:body:foot:right:bone:right-calcaneus';
     const previousCount=shared||sharedPelvis||sharedLumbar||sharedAorta||sharedTarsal||api.subscapularTour.contextIds.includes(id)?2:1;
     const gainsHipHeel=api.lowerLimbBoneTour.steps.some((s:any)=>s.selectedId===id)&&!id.endsWith(':right-patella');
-    assert.equal(packet.guidedTours.length,previousCount+(gainsHipHeel?1:0));
+    const gainsUpperLimb=[...api.upperLimbBoneTour.contextIds,...api.upperLimbBoneTour.steps.map((step:any)=>step.selectedId)].includes(id);
+    assert.equal(packet.guidedTours.length,previousCount+(gainsHipHeel?1:0)+(gainsUpperLimb?1:0));
     if(sharedTarsal){
       assert.deepEqual(packet.guidedTours.map((e:any)=>e.tour.id),[api.footTour.id,api.tarsalTour.id,api.lowerLimbBoneTour.id]);
       for(const omitted of [api.footTour.id,api.tarsalTour.id,api.lowerLimbBoneTour.id]){
@@ -122,10 +124,11 @@ test('all twenty-two regional tours ship complete source-bound review evidence',
     }
     assert.deepEqual(packet.guidedTours[tourIndex].tour,tour);
     if(api.subscapularTour.contextIds.includes(id)){
-      assert.deepEqual(packet.guidedTours.map((e:any)=>e.tour.id),[api.upperArmTour.id,api.subscapularTour.id]);
-      for(const omitted of [api.upperArmTour.id,api.subscapularTour.id]){
+      const required=[api.upperArmTour.id,api.subscapularTour.id,...(gainsUpperLimb?[api.upperLimbBoneTour.id]:[])];
+      assert.deepEqual(packet.guidedTours.map((e:any)=>e.tour.id),required);
+      for(const omitted of required){
         const changed=structuredClone(packet);changed.guidedTours=changed.guidedTours.filter((e:any)=>e.tour.id!==omitted);
-        assert.equal((await api.parseBodyReviewResponse(changed,id)),null,'Shared scapula requires both complete tour records');
+        assert.equal((await api.parseBodyReviewResponse(changed,id)),null,'Shared scapula requires every complete tour record');
       }
     }
     assert.equal(packet.guidedTours[tourIndex].structures.length,count);
@@ -283,7 +286,7 @@ test('all structure-check hosts deliver the corrected success/retry component',(
     const base=`public/atlas-runtime/${module}/`;
     const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
     const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
-    assert.equal(manifest.sourceCommit,'8cfd73cda5077ea608720c3c4d88d8e51371e2ef');
+    assert.equal(manifest.sourceCommit,'bc03ed3f7324819f4bfa3e7cd0afb7203cc8e3b8');
     assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,review.files.find((f:any)=>f.path===path)?.sourceSha256);
     const js=manifest.files.filter((f:any)=>f.path.endsWith('.js')).map((f:any)=>readFileSync(base+f.path,'utf8')).join('\n');
     for(const text of ['Practise again','Try again','Correct.','Incorrect.']) assert.ok(js.includes(text),module+': '+text);

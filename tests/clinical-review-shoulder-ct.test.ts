@@ -8,8 +8,8 @@ test('eight shoulder CT drafts reach learner and protected review without images
   const review = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
   const learner = JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8'));
   const inputs = JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json', 'utf8'));
-  assert.equal(review.revision, '8cfd73cda5077ea608720c3c4d88d8e51371e2ef');
-  assert.equal(learner.sourceCommit,'8cfd73cda5077ea608720c3c4d88d8e51371e2ef');
+  assert.equal(review.revision, 'bc03ed3f7324819f4bfa3e7cd0afb7203cc8e3b8');
+  assert.equal(learner.sourceCommit,'bc03ed3f7324819f4bfa3e7cd0afb7203cc8e3b8');
   for (const path of ['content/shoulder-arterial-ct-pins.json', 'content/shoulder-arterial-ct.ts', 'lib/shoulder-arterial-ct.ts']) {
     const file = review.files.find((f: any) => f.path === path); assert(file);
     assert.equal(inputs.find((f: any) => f.path === path)?.sha256, file.sourceSha256);
