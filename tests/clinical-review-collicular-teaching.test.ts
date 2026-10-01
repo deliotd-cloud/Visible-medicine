@@ -7,13 +7,14 @@ import {build} from 'esbuild';
 test('inferior-collicular teaching is exact across learner and review, never acquired-image approval',async()=>{
  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
  const inputs=JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json','utf8'));
- assert.equal(review.revision,'31a6ae7d0a823374b97c21cd7e810070e056d352');
+ assert.equal(review.revision,'927180af8a7d04a96cd54088953dc68a1dd54588');
  for(const path of ['content/collicular-brachia-teaching.ts','content/nested-teaching-bindings.v1.json','lib/nested-teaching.ts']){
   const file=review.files.find((f:any)=>f.path===path);assert(file);
   assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,file.sourceSha256);
   assert.equal(createHash('sha256').update(readFileSync('atlas-review/'+path)).digest('hex'),file.importedSha256);
  }
- const result=await build({stdin:{contents:`export * from './atlas-review/lib/nested-review-material';`,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
+ const result=await build({stdin:{contents:`export * from './atlas-review/lib/nested-review-material';
+ export {nestedCTOrientation} from './atlas-review/content/nested-ct-orientation';`,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
  const api=await import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
  const group=api.nestedReviewRows.find((g:any)=>g.study==='brainstem');assert(group);
  const targets=group.surfaces.filter((s:any)=>s.id.endsWith('inferior-colliculus'));assert.equal(targets.length,2);
@@ -30,7 +31,11 @@ test('inferior-collicular teaching is exact across learner and review, never acq
   assert.match(packet.teaching.concept.sections.clinical.body,/combined lesion/);
   assert.match(packet.teaching.concept.sections.pathology.body,/not a typical-disease template/);
   assert.match(packet.teaching.concept.imaging.mri.body,/research streamlines are not routine/);
-  for(const topic of ['ct','xray','ultrasound'])assert.equal(packet.teaching.topics.find((t:any)=>t.tab===topic).readiness,'pending');
+  const ct=packet.teaching.topics.find((t:any)=>t.tab==='ct');
+  assert.equal(ct.readiness,'draft');
+  assert.equal(ct.body,api.nestedCTOrientation['inferior-collicular-brachia'].body);
+  assert.deepEqual(packet.teaching.concept.imaging.ct,api.nestedCTOrientation['inferior-collicular-brachia']);
+  for(const topic of ['xray','ultrasound'])assert.equal(packet.teaching.topics.find((t:any)=>t.tab===topic).readiness,'pending');
   assert.equal(await api.nestedReviewSelection(group.key,target.id,'0'.repeat(64)),null);
  }
  assert.equal(placements,6);

@@ -2139,3 +2139,20 @@ imported. The newly authored code/captions use this project's licence; existing
 BodyParts3D CC BY 4.0 geometry and attribution remain unchanged. No OpenStax
 material, new model, font, texture, dependency, scan, paid service or fee is
 added. Source/clinical limitations: `docs/PELVIC_RING_GUIDED_TOUR.md`.
+
+## Named nested CT orientation (1 October 2026)
+
+Five original short CT orientation exercises cite: ©2022 Sitek, Calabrese,
+Johnson, Ghosh and Chandrasekaran, Frontiers in Neuroscience 16:751595,
+https://doi.org/10.3389/fnins.2022.751595; ©2018 Ozker, Yoshor and Beauchamp,
+Frontiers in Human Neuroscience 12:141, https://doi.org/10.3389/fnhum.2018.00141;
+©2022 Mendoza, Shotbolt, Faiq, Parra and Chan, Biology 11:454,
+https://doi.org/10.3390/biology11030454. Each publisher identifies CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/. Original orientation exercises
+are our interpretation, not publisher CT-validation results. Credit, licence
+and modification notices remain available; no author/publisher endorsement.
+No publisher prose, figure, table, image, PDF or dataset is imported. Third-party
+figure permissions are not assumed to cover reuse. Existing models/credits and
+recipient rights remain unchanged; no new font, texture, dependency, scan, paid
+service or mandatory fee. Prior materials are not retrospectively cleared.
+Draft/source limits and clinical review: `docs/NESTED_CT_ORIENTATION.md`.

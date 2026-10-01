@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "31a6ae7d0a823374b97c21cd7e810070e056d352",
-  "sha256": "c85dc9e46c5bdc4e59fd449d69a2b58cec3e89fdd42eebdc136bb30406e81948",
+  "sourceCommit": "927180af8a7d04a96cd54088953dc68a1dd54588",
+  "sha256": "1e2a99ccf2742882024e9565bb3ab73c1cbd8dab88eddc27a310d6e8b1e2960c",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -1391,6 +1391,10 @@
       "sha256": "587364471b352822e6fb1debb036890906655d8cec61ac2ee70975b7eeb0c561"
     },
     {
+      "path": "atlas-review/content/nested-ct-orientation.ts",
+      "sha256": "a258b94e94c0124df1761dbaf738cc90b0977a793463991b22bcd37b0323d31a"
+    },
+    {
       "path": "atlas-review/content/nested-review-bindings.json",
       "sha256": "ce08b922d13c6a76f6672de0ca73cceea2250c1208ee9edc8f3f59d05bf4b73d"
     },
@@ -1400,7 +1404,7 @@
     },
     {
       "path": "atlas-review/content/nested-teaching.ts",
-      "sha256": "72188a3e2171f7ec6b3325c806c401e83dc21a2cb6e26ce52aab08fc35cf7adc"
+      "sha256": "dae4c7a409906d608aedd961a38155bae90c8bc9f05795493f14b38d688db2be"
     },
     {
       "path": "atlas-review/content/ophthalmic-nerve-studies.ts",
@@ -3572,7 +3576,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "f7428581144c1e4d467757af3be8d575df83c79956fa90a8bd78216ca9bacbbe"
+      "sha256": "8c29092d1e85b6eba2aaa756d44420f8ad2e59d8b599671276fb68c2d994cc9a"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3828,7 +3832,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "ee5d280b672463fa0bbfaf9d16d93f69ad0575ec9fbb959e88f92bbfbb6f1344"
+      "sha256": "5b31b1040818c793d948ac00f00d4c40397e8ca836b8f45f4b8d7152391c2341"
     }
   ]
 }

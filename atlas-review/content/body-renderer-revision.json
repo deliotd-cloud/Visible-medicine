@@ -1245,6 +1245,10 @@
       "sha256": "587364471b352822e6fb1debb036890906655d8cec61ac2ee70975b7eeb0c561"
     },
     {
+      "path": "content/nested-ct-orientation.ts",
+      "sha256": "a258b94e94c0124df1761dbaf738cc90b0977a793463991b22bcd37b0323d31a"
+    },
+    {
       "path": "content/nested-review-bindings.json",
       "sha256": "ce08b922d13c6a76f6672de0ca73cceea2250c1208ee9edc8f3f59d05bf4b73d"
     },
@@ -1254,7 +1258,7 @@
     },
     {
       "path": "content/nested-teaching.ts",
-      "sha256": "72188a3e2171f7ec6b3325c806c401e83dc21a2cb6e26ce52aab08fc35cf7adc"
+      "sha256": "dae4c7a409906d608aedd961a38155bae90c8bc9f05795493f14b38d688db2be"
     },
     {
       "path": "content/ophthalmic-nerve-studies.ts",
@@ -3310,7 +3314,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "ef75a51e2087b3d6840ca74af86e196ab36ed91981ba6121a0325065bdd981e7"
+      "sha256": "de99440973d3ffa8e2653942e3d89e6c6a95cb1577bc11f94da6d25e4470858d"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3525,7 +3529,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "1b5d0cb5bc9500e672ccd6c81fe8f4f9853974045104ab03f670afd35d095bc4",
-  "sourceRendererSha256": "ebe8102747bfd9c83ea96692b5e5165a6c9fe008decad7c192847090e0c7c730",
-  "websiteIntegrationSha256": "c85dc9e46c5bdc4e59fd449d69a2b58cec3e89fdd42eebdc136bb30406e81948"
+  "sha256": "41496eea5b51e3b318ceb8337caa26829382042c77aa4bb379a1bef6b31e61ad",
+  "sourceRendererSha256": "fdc12a496633121d4a09e2f670150001a6cfee0542c9c044716dcee1c7529a5c",
+  "websiteIntegrationSha256": "1e2a99ccf2742882024e9565bb3ab73c1cbd8dab88eddc27a310d6e8b1e2960c"
 }

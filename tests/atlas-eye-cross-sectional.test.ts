@@ -7,18 +7,21 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {dirname} from 'node:path';
 import {build} from 'esbuild';
-const source='31a6ae7d0a823374b97c21cd7e810070e056d352',before='107b55dfd3511222755a7d35fc18e7058350bf4c';
+const source='927180af8a7d04a96cd54088953dc68a1dd54588',before='107b55dfd3511222755a7d35fc18e7058350bf4c';
 const previousBytes=(path:string)=>Buffer.from(execFileSync('git',['show',before+':'+path],{maxBuffer:32e6}));
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
 async function load(previous=false){
+ // Replay the exact eye milestone; live later CT changes have their own full
+ // 108-context delta check in atlas-nested-ct-orientation.test.ts.
+ const saved=previous?before:'c3fb787a9811bf0ef9c3bd130f7a0534d49db9ad';
  const result=await build({stdin:{contents:`export * from './atlas-review/lib/nested-review-material';
  export * from './atlas-review/lib/nested-review';export * from './atlas-review/lib/nested-review-api';
  export {nestedConcepts,nestedTeachingReferences} from './atlas-review/content/nested-teaching';
  export {eyeCrossSectionalTeaching,eyeCrossSectionalReferences} from './atlas-review/content/eye-cross-sectional-teaching';`,resolveDir:process.cwd(),loader:'ts'},
- bundle:true,write:false,platform:'node',format:'esm',plugins:previous?[{name:'exact-imported-eye-baseline',setup(api){
-  for(const path of ['content/nested-teaching.ts','content/body-renderer-revision.json'])api.onLoad({filter:new RegExp(path.replaceAll('/','[\\\\/]')+'$')},args=>({contents:previousBytes('atlas-review/'+path).toString('utf8'),loader:path.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)}));
- }}]:[]});
+ bundle:true,write:false,platform:'node',format:'esm',plugins:[{name:'exact-imported-eye-baseline',setup(api){
+  for(const path of ['content/nested-teaching.ts','content/body-renderer-revision.json'])api.onLoad({filter:new RegExp(path.replaceAll('/','[\\\\/]')+'$')},args=>({contents:Buffer.from(execFileSync('git',['show',saved+':atlas-review/'+path],{maxBuffer:32e6})).toString('utf8'),loader:path.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)}));
+ }}]});
  return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
 }
 test('all eye CT/MRI drafts and credits reach learner and protected review without new anatomy or rights',async()=>{

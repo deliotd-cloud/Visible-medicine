@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 
 test('renal learner and review imports bind the same unchanged geometry and four-step draft',async()=>{
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8')),review=json('atlas-review/manifest.json');
- assert.equal(review.revision,'31a6ae7d0a823374b97c21cd7e810070e056d352');
+ assert.equal(review.revision,'927180af8a7d04a96cd54088953dc68a1dd54588');
  for(const module of ['head-neck','shoulder'])assert.equal(json('public/atlas-runtime/'+module+'/manifest.json').sourceCommit,review.revision);
  const prior=JSON.parse(execFileSync('git',['show','9baaa9e5:lib/atlas-model-inventory.json'],{encoding:'utf8'}));
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,prior.models);
