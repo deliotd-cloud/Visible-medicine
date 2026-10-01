@@ -13,7 +13,7 @@ const fmas=['FMA86464','FMA61961','FMA72924','FMA72925','FMA72832','FMA74877'];
 assert.deepEqual(tour.steps.map(step=>structures.find(s=>s.id===step.selectedId).fmaId),fmas);
 assert.deepEqual(structures.filter(s=>tour.contextIds.includes(s.id)).map(s=>s.fmaId),['FMA72833']);
 assert(!structures.some(s=>s.fmaId==='FMA61970'));assert.equal(structures.find(s=>s.fmaId==='FMA74877').sources.length,2);
-assert.deepEqual(api.regionalTours.filter(t=>t.id!==tour.id&&t.id!==api.subscapularTour.id&&t.id!==api.lumbarTour.id&&t.id!==api.carpalTour.id&&t.id!==api.renalTour.id&&t.id!==api.tarsalTour.id&&t.id!==api.lowerLimbBoneTour.id),previous.regionalTours);
+assert.deepEqual(api.regionalTours.filter(t=>t.id!==tour.id&&t.id!==api.subscapularTour.id&&t.id!==api.lumbarTour.id&&t.id!==api.carpalTour.id&&t.id!==api.renalTour.id&&t.id!==api.tarsalTour.id&&t.id!==api.lowerLimbBoneTour.id&&t.id!==api.upperLimbBoneTour.id),previous.regionalTours);
 const raw=JSON.parse(execFileSync('git',['show',parent+':public/models/bodyparts3d/full-body/catalog.json'],{encoding:'utf8',maxBuffer:8e6}));
 for(const s of structures){
  assert.deepEqual(s,raw.structures.find(old=>old.id===s.id),'Exact immutable source identity');
@@ -48,7 +48,7 @@ for(const s of api.catalog.structures){
  if(!structures.some(t=>t.id===s.id)){
   // Compare this historical milestone's evidence without the later, separately
   // tested later sequences; do not carry their new review hashes backwards.
-  const historical=packet.guidedTours.filter(e=>e.tour.id!==api.subscapularTour.id&&e.tour.id!==api.lumbarTour.id&&e.tour.id!==api.carpalTour.id&&e.tour.id!==api.renalTour.id&&e.tour.id!==api.tarsalTour.id&&e.tour.id!==api.lowerLimbBoneTour.id);
+  const historical=packet.guidedTours.filter(e=>e.tour.id!==api.subscapularTour.id&&e.tour.id!==api.lumbarTour.id&&e.tour.id!==api.carpalTour.id&&e.tour.id!==api.renalTour.id&&e.tour.id!==api.tarsalTour.id&&e.tour.id!==api.lowerLimbBoneTour.id&&e.tour.id!==api.upperLimbBoneTour.id);
   assert.equal(digest({scope,topics:packet.topics,reasoning:packet.reasoning,...(historical.length?{guidedTours:historical}:{})}),oldHash);
   unchanged++;continue;
  }

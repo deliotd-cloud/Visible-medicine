@@ -11,9 +11,9 @@ const parent='8da967df7f4f419014ea03b323d239732a787be1';
 assert.equal(readFileSync('lib/chest-wall-tour.ts','utf8').replace(/\r/g,''),execFileSync('git',['show',parent+':lib/chest-wall-tour.ts'],{encoding:'utf8'}).replace(/\r/g,''));
 const priorTours=await compile(execFileSync('git',['show',parent+':lib/regional-tours.ts'],{encoding:'utf8'}).replaceAll("from './","from './lib/"));
 assert.equal(readFileSync('lib/orbital-tour.ts','utf8').replace(/\r/g,''),execFileSync('git',['show',parent+':lib/orbital-tour.ts'],{encoding:'utf8'}).replace(/\r/g,''));
-assert.deepEqual(api.regionalTours.filter(t=>![api.maleDuctTour.id,api.deepBrainTour.id,api.subscapularTour.id,api.lumbarTour.id,api.carpalTour.id,api.renalTour.id,api.tarsalTour.id,api.lowerLimbBoneTour.id].includes(t.id)),priorTours.regionalTours);
+assert.deepEqual(api.regionalTours.filter(t=>![api.maleDuctTour.id,api.deepBrainTour.id,api.subscapularTour.id,api.lumbarTour.id,api.carpalTour.id,api.renalTour.id,api.tarsalTour.id,api.lowerLimbBoneTour.id,api.upperLimbBoneTour.id].includes(t.id)),priorTours.regionalTours);
 for(const s of priorTours.regionalTours.flatMap(t=>priorTours.regionalTourStructures(api.catalog,t))){
- assert.deepEqual(api.regionalTourEvidence(api.catalog,s.id).filter(e=>![api.maleDuctTour.id,api.deepBrainTour.id,api.subscapularTour.id,api.lumbarTour.id,api.carpalTour.id,api.renalTour.id,api.tarsalTour.id,api.lowerLimbBoneTour.id].includes(e.tour.id)),priorTours.regionalTourEvidence(api.catalog,s.id),'Every prior individual tour retains its evidence');
+ assert.deepEqual(api.regionalTourEvidence(api.catalog,s.id).filter(e=>![api.maleDuctTour.id,api.deepBrainTour.id,api.subscapularTour.id,api.lumbarTour.id,api.carpalTour.id,api.renalTour.id,api.tarsalTour.id,api.lowerLimbBoneTour.id,api.upperLimbBoneTour.id].includes(e.tour.id)),priorTours.regionalTourEvidence(api.catalog,s.id),'Every prior individual tour retains its evidence');
 }
 const oldParser=await compile(execFileSync('git',['show','6b1539f:lib/body-review-response.ts'],{encoding:'utf8'}).replaceAll("from './","from './lib/"));
 const canonical=v=>Array.isArray(v)?'['+v.map(canonical).join(',')+']':v&&typeof v==='object'?'{'+Object.keys(v).sort().map(k=>JSON.stringify(k)+':'+canonical(v[k])).join(',')+'}':JSON.stringify(v);
@@ -64,7 +64,7 @@ for(const spec of limbCases){
 const oldTours=await compile(execFileSync('git',['show','82dee8b:lib/regional-tours.ts'],{encoding:'utf8'}).replaceAll("from './","from './lib/"));
 assert.deepEqual(api.regionalTourEvidence(api.catalog,selected[0].id),oldTours.regionalTourEvidence(api.catalog,selected[0].id),'Existing thorax evidence unchanged');
 assert.deepEqual(api.regionalTourEvidence(api.catalog,cervical[0].id),oldTours.regionalTourEvidence(api.catalog,cervical[0].id),'Existing cervical evidence unchanged');
-for(const s of oldTours.regionalTours.flatMap(t=>oldTours.regionalTourStructures(api.catalog,t)))assert.deepEqual(api.regionalTourEvidence(api.catalog,s.id).filter(e=>e.tour.id!==api.subscapularTour.id&&e.tour.id!==api.lumbarTour.id&&e.tour.id!==api.carpalTour.id&&e.tour.id!==api.renalTour.id&&e.tour.id!==api.tarsalTour.id&&e.tour.id!==api.lowerLimbBoneTour.id),oldTours.regionalTourEvidence(api.catalog,s.id),'All 65 prior individual tour sequences unchanged; shared scapula also gains new tour evidence');
+for(const s of oldTours.regionalTours.flatMap(t=>oldTours.regionalTourStructures(api.catalog,t)))assert.deepEqual(api.regionalTourEvidence(api.catalog,s.id).filter(e=>e.tour.id!==api.subscapularTour.id&&e.tour.id!==api.lumbarTour.id&&e.tour.id!==api.carpalTour.id&&e.tour.id!==api.renalTour.id&&e.tour.id!==api.tarsalTour.id&&e.tour.id!==api.lowerLimbBoneTour.id&&e.tour.id!==api.upperLimbBoneTour.id),oldTours.regionalTourEvidence(api.catalog,s.id),'All 65 prior individual tour sequences unchanged; shared scapula also gains new tour evidence');
 let checked=0;
 for(const s of api.catalog.structures){
  const m=await api.bodyReviewMaterial(s.id),c=await api.bodyReviewContext(s.id);
@@ -76,7 +76,8 @@ for(const s of api.catalog.structures){
  const beforeDuct=digest({scope,topics:m.topics,reasoning:m.reasoning,...(priorEvidence.length?{guidedTours:priorEvidence}:{})});
  const gainsDuct=[...api.maleDuctTour.contextIds,...api.maleDuctTour.steps.map(step=>step.selectedId)].includes(s.id);
  const gainsBrain=[...api.deepBrainTour.contextIds,...api.deepBrainTour.steps.map(step=>step.selectedId)].includes(s.id);
- if(api.lowerLimbBoneTour.steps.some(step=>step.selectedId===s.id)||api.tarsalTour.steps.some(step=>step.selectedId===s.id)||[...api.renalTour.contextIds,...api.renalTour.steps.map(step=>step.selectedId)].includes(s.id)||api.carpalTour.steps.some(step=>step.selectedId===s.id)||api.lumbarTour.steps.some(step=>step.selectedId===s.id)||gainsDuct||gainsBrain||[...api.subscapularTour.contextIds,...api.subscapularTour.steps.map(step=>step.selectedId)].includes(s.id))assert.notEqual(m.fingerprints.teaching,beforeDuct,'New tour teaching requires fresh review');
+ const gainsUpperLimb=[...api.upperLimbBoneTour.contextIds,...api.upperLimbBoneTour.steps.map(step=>step.selectedId)].includes(s.id);
+ if(gainsUpperLimb||api.lowerLimbBoneTour.steps.some(step=>step.selectedId===s.id)||api.tarsalTour.steps.some(step=>step.selectedId===s.id)||[...api.renalTour.contextIds,...api.renalTour.steps.map(step=>step.selectedId)].includes(s.id)||api.carpalTour.steps.some(step=>step.selectedId===s.id)||api.lumbarTour.steps.some(step=>step.selectedId===s.id)||gainsDuct||gainsBrain||[...api.subscapularTour.contextIds,...api.subscapularTour.steps.map(step=>step.selectedId)].includes(s.id))assert.notEqual(m.fingerprints.teaching,beforeDuct,'New tour teaching requires fresh review');
  else assert.equal(m.fingerprints.teaching,beforeDuct,'No unrelated teaching review is invalidated');
  const tours=api.regionalTours.filter(t=>[...t.contextIds,...t.steps.map(step=>step.selectedId)].includes(s.id));
  if(tours.length){
@@ -87,7 +88,7 @@ for(const s of api.catalog.structures){
  }else{assert.equal(m.guidedTours.length,0);assert.equal(m.fingerprints.teaching,previous,'Unrelated teaching history retained');assert(!c.checklists.teaching.some(v=>v.id==='guided-tour'));}
  assert.equal(c.revisions.imaging,null);
 }
-assert.equal(api.catalog.structures.length,1104);assert.equal(checked,141);assert.equal(api.regionalTours.length,22);
+assert.equal(api.catalog.structures.length,1104);assert.equal(checked,142);assert.equal(api.regionalTours.length,23);
 const orbitalStructures=api.regionalTourStructures(api.catalog,api.orbitalTour);
 assert.equal(orbitalStructures.length,7);assert.equal(api.regionalToursFor('head-neck').length,4);
 let orbitalRejected=0;

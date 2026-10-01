@@ -38,11 +38,12 @@ assert.deepEqual(tour.steps.map(({frameIds,...step})=>step),previousTour.steps.m
 assert.deepEqual(tour.requiredDisplayBundles,previousTour.requiredDisplayBundles);
 assert.deepEqual(tour.scopeRegions,previousTour.scopeRegions);
 assert.deepEqual(tour.requiredDisplayBundles,Object.fromEntries(source.map(([id,,,bundle])=>[id,bundle])));
-assert.equal(api.regionalTours.length,22);
-assert.equal(api.regionalTours.reduce((count,t)=>count+t.steps.length,0),123);
-assert.deepEqual(api.regionalTours.filter(t=>t.id!==tour.id),prior.regionalTours,'All 21 previous tour definitions preserved');
+const historicalTours=api.regionalTours.filter(t=>t.id!==api.upperLimbBoneTour.id);
+assert.equal(historicalTours.length,22);
+assert.equal(historicalTours.reduce((count,t)=>count+t.steps.length,0),123);
+assert.deepEqual(historicalTours.filter(t=>t.id!==tour.id),prior.regionalTours,'All 21 previous tour definitions preserved');
 for(const structure of api.catalog.structures){
-  assert.deepEqual(api.regionalTourEvidence(api.catalog,structure.id).filter(evidence=>evidence.tour.id!==tour.id),
+  assert.deepEqual(api.regionalTourEvidence(api.catalog,structure.id).filter(evidence=>evidence.tour.id!==tour.id&&evidence.tour.id!==api.upperLimbBoneTour.id),
     prior.regionalTourEvidence(api.catalog,structure.id),`Previous evidence preserved for ${structure.id}`);
 }
 const selected=api.regionalTourStructures(api.catalog,tour);
@@ -167,8 +168,9 @@ const newPinMap=new Map(currentPins.pins.map(pin=>[pin.structureId,pin.sha256]))
 assert.equal(oldPinMap.size,previousPins.pins.length);
 assert.equal(newPinMap.size,currentPins.pins.length);
 assert.deepEqual([...newPinMap.keys()].sort(),[...oldPinMap.keys()].sort());
-const changedPins=[...newPinMap].filter(([id,hash])=>hash!==oldPinMap.get(id)).map(([id])=>id).sort();
-assert.deepEqual(changedPins,[...ids].sort(),'Only the seven target display-review pins may change');
+const subsequentIds=new Set([...api.upperLimbBoneTour.contextIds,...api.upperLimbBoneTour.steps.map(step=>step.selectedId)]);
+const changedPins=[...newPinMap].filter(([id,hash])=>!subsequentIds.has(id)&&hash!==oldPinMap.get(id)).map(([id])=>id).sort();
+assert.deepEqual(changedPins,[...ids].sort(),'Only the seven original target display-review pins change outside the separately tested upper-limb addition');
 const referenceWords=tour.steps.map(step=>step.title+' '+step.caption).join(' ').split(/\s+/).length;
 assert(referenceWords<=140);
 assert.match(tour.limitations,/revision-bound radiologist review/);
