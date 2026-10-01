@@ -422,7 +422,7 @@
     },
     {
       "path": "app/whole-body-guided-learning.tsx",
-      "sha256": "96720e3bd119a2f41d06c1baac8d61583abb2dad9d9942bb41e812dcb36a9ed9"
+      "sha256": "2f1650c349e40ed5b4d50c0e26b396e18130536c3363439c848fce7bcb74b771"
     },
     {
       "path": "app/workspace-session.ts",
@@ -2573,6 +2573,10 @@
       "sha256": "08de7b02c6dc58c5a88baa52e8532bd66a6b8f047b951fe9600653175ca88738"
     },
     {
+      "path": "lib/lower-limb-bone-tour.ts",
+      "sha256": "faf55bc81bb4b95ebb1fa9b6afd50d4eedf38d6a9f029c8870956f07e47876ed"
+    },
+    {
       "path": "lib/lower-limb-motor.ts",
       "sha256": "e769da189fa98ef8997b2fd275638f9996517a7ed2dd5a1818a5283bb5653c56"
     },
@@ -2842,7 +2846,7 @@
     },
     {
       "path": "lib/regional-tours.ts",
-      "sha256": "0d04c5fd758286e9dd350bebd573fc7989ef9a355379e9856e739286bf6efec0"
+      "sha256": "49128ec0743f984da96156e66fa000cf959d9e80ac1ab99d26eb3af12e08e3f1"
     },
     {
       "path": "lib/regional-vascular-clinical.ts",
@@ -3234,7 +3238,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "f72e61380826db7d098b80398b0c0abcabedbc45c675edd0d390cfe5ed1a4c19"
+      "sha256": "91501db6ac5652c074e3ee3d3943bce7ed947b2905c12c86cfbc76ec8fb73e92"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3449,5 +3453,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "6bf5a243c818e8ef24e0dfed8142e404eeaf76169c3350112b818233af317d58"
+  "sha256": "27fd66bc0621ca9c23b99bfb30d9b79b580d49ca9d01ced1122bb1a97f07811a"
 }

@@ -14,11 +14,11 @@ assert.equal(tour.region,'abdomen');assert.equal(tour.status,'draft');assert.dee
 assert.deepEqual(tour.steps.map(s=>s.selectedId),ids);assert.deepEqual(tour.steps.map(s=>s.view),['posterior','anterior','posterior','anterior']);
 assert.deepEqual(tour.requiredDisplayBundles,Object.fromEntries([aorta,...ids].map(id=>[id,id.includes(':organ:')?'abdomen-organs':'abdomen-vessels-recovery'])));
 assert.equal(api.regionalToursFor('abdomen').length,2);assert.equal(api.regionalTourFor('abdomen').id,api.celiacTour.id);
-const historicalTours=api.regionalTours.filter(t=>t.id!==api.tarsalTour.id);
+const historicalTours=api.regionalTours.filter(t=>t.id!==api.tarsalTour.id&&t.id!==api.lowerLimbBoneTour.id);
 assert.equal(historicalTours.length,20);assert.equal(historicalTours.reduce((n,t)=>n+t.steps.length,0),109);
 assert.equal(new Set(historicalTours.flatMap(t=>api.regionalTourStructures(api.catalog,t).map(s=>s.id))).size,134);
 assert.deepEqual(historicalTours.filter(t=>t.id!==tour.id),prior.regionalTours,'All nineteen preceding definitions preserved');
-for(const s of api.catalog.structures)assert.deepEqual(api.regionalTourEvidence(api.catalog,s.id).filter(e=>e.tour.id!==tour.id&&e.tour.id!==api.tarsalTour.id),prior.regionalTourEvidence(api.catalog,s.id),'All prior per-structure evidence preserved');
+for(const s of api.catalog.structures)assert.deepEqual(api.regionalTourEvidence(api.catalog,s.id).filter(e=>e.tour.id!==tour.id&&e.tour.id!==api.tarsalTour.id&&e.tour.id!==api.lowerLimbBoneTour.id),prior.regionalTourEvidence(api.catalog,s.id),'All prior per-structure evidence preserved');
 const selected=api.regionalTourStructures(api.catalog,tour);
 assert.deepEqual(selected.map(s=>s.id),[aorta,...ids]);
 assert.deepEqual(selected.map(s=>s.fmaId),['FMA3789','FMA7204','FMA14752','FMA7205','FMA14753']);

@@ -379,10 +379,10 @@
     "resolvedContentAndRecipeData": "525e01d99f20f27c7a9463eb7ab0357bb20ad2f06cd9deafe8df31b172895daa",
     "explicitTopicReadiness": "6f6cedf24780be2398782f4f124fdd1f73b0792d8630098f2a31dec4f7e66462",
     "reasoningQuestionData": "e14edb0ec5501658df333e69f0aef4d9593b6647a3773258ff0ef6ec03b786fb",
-    "guidedLearningData": "cee36b628b37fa6bb71c387e1bed7d4f9395e6e715a58e32f067b9a864671237",
+    "guidedLearningData": "ca48a4aa9345d0b98034d3ccad56ed31307e237cc789e4269e192017021faefc",
     "app/volume-image.tsx": "34d28f4f9284cbb18dd4c175815490fb3727912fdb4acb22143c91167ccd4448",
     "app/review/mri-import/page.tsx": "70e68c1a824ba1fe8f8b3c4291a9d8015c18288a9040289d4f4adec59bed039e",
-    "lib/regional-tours.ts": "0d04c5fd758286e9dd350bebd573fc7989ef9a355379e9856e739286bf6efec0",
+    "lib/regional-tours.ts": "49128ec0743f984da96156e66fa000cf959d9e80ac1ab99d26eb3af12e08e3f1",
     "lib/shoulder-tours.ts": "03083449553e2f4db25adf66c9d5fc18b2c7849ee2b1846f4cd06775ceeb2fda",
     "lib/chest-wall-tour.ts": "232ec7d0e64d12929a24a68782c8110090ab6df78f4f15cb8440bfc6ff9ac5da",
     "lib/orbital-tour.ts": "e28d25ee70c8aea373439d1e938d1d2da5a23115042728da42989a6e4853c3d0",
@@ -1636,8 +1636,8 @@
   },
   "study": {
     "guidedLearning": {
-      "regionalTours": 21,
-      "regionalStops": 116,
+      "regionalTours": 22,
+      "regionalStops": 123,
       "shoulderTours": 1,
       "shoulderStops": 5,
       "readiness": "draft"

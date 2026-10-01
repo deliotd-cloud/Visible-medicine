@@ -6,9 +6,9 @@ import type {BodyCatalog} from './body-types';
 import {RegionalGuidedLearning} from './regional-guided-learning';
 import './whole-body-guided-learning.css';
 
-// Reuse source-bound regional scopes; do not invent whole-body memberships or
-// combine independent specimens into a new camera/source frame.
-const order=['head-neck','spine','thorax','abdomen','pelvis','shoulder-arm','forearm','hand','thigh','leg','foot'];
+// Whole-body tours explicitly declare their same-catalog regional union.
+// Regional membership is never rewritten, nor independent specimens combined.
+const order=['whole-body','head-neck','spine','thorax','abdomen','pelvis','shoulder-arm','forearm','hand','thigh','leg','foot'];
 export const wholeBodyTourOptions=order.flatMap(region=>regionalTours.filter(t=>t.region===region));
 
 export function WholeBodyGuidedLearning({catalog,assetBase,onExit,region='whole-body'}:{catalog:BodyCatalog;assetBase?:string;onExit:()=>void;region?:string}) {

@@ -12,7 +12,7 @@ const scapula='vm:anatomy:upper-limb:shoulder:right:bone:scapula';
 assert.equal(tour.status,'draft');assert.equal(tour.region,'shoulder-arm');assert.equal(tour.revision,'right-subscapular-arterial-relationships-v1');
 assert.deepEqual(tour.steps.map(s=>s.selectedId),targets);assert.deepEqual(tour.contextIds,[scapula]);
 assert.deepEqual(tour.steps.map(s=>s.view),['anterior','right','posterior','right']);
-assert.deepEqual(api.regionalTours.filter(t=>t.id!==tour.id&&t.id!==api.lumbarTour.id&&t.id!==api.carpalTour.id&&t.id!==api.renalTour.id&&t.id!==api.tarsalTour.id),prior.regionalTours,'All sixteen preceding tour definitions preserved');
+assert.deepEqual(api.regionalTours.filter(t=>t.id!==tour.id&&t.id!==api.lumbarTour.id&&t.id!==api.carpalTour.id&&t.id!==api.renalTour.id&&t.id!==api.tarsalTour.id&&t.id!==api.lowerLimbBoneTour.id),prior.regionalTours,'All sixteen preceding tour definitions preserved');
 assert.equal(api.regionalToursFor('shoulder-arm').length,2);assert.equal(api.regionalTourFor('shoulder-arm').id,api.upperArmTour.id,'Existing default stays unchanged');
 const selected=api.regionalTourStructures(api.catalog,tour);assert.equal(selected.length,5);
 assert.deepEqual(selected.filter(s=>targets.includes(s.id)).map(s=>s.fmaId),['FMA22655','FMA22678','FMA23180','FMA66321']);

@@ -21,11 +21,15 @@ import { renalTour } from './renal-tour';
 export { renalTour } from './renal-tour';
 import { tarsalTour } from './tarsal-tour';
 export { tarsalTour } from './tarsal-tour';
+import { lowerLimbBoneTour } from './lower-limb-bone-tour';
+export { lowerLimbBoneTour } from './lower-limb-bone-tour';
 
 export type RegionalTour = {
   id: string; title: string; description: string; region: string; revision: string;
   status: 'draft'; contextIds: string[]; limitations?: string;
   requiredDisplayBundles?: Record<string,string>;
+  /** Explicit same-catalog regional union, allowed only in Whole body. */
+  scopeRegions?: string[];
   steps: Array<{ id: string; title: string; caption: string; selectedId: string;
     view: DissectionView; durationMs: number; fadeOthers: boolean; references: string[]; frameIds?: string[] }>;
 };
@@ -228,7 +232,7 @@ export const malePelvisTour: RegionalTour = {
     surfaceStep('rectum','Rectum · Posterior relationship',pelvicOrgan('unpaired','rectum'),'left','Finish from the left with the rectum behind the bladder and prostate. The sacrum provides posterior context. Fading adjacent organs improves visibility but does not reveal a validated rectal wall or mesorectal plane.',pelvisReference),
   ],
 };
-export const regionalTours=[thoraxTour,chestWallTour,cervicalSpineTour,celiacTour,forearmTour,thighTour,legTour,handTour,footTour,upperArmTour,larynxTour,orbitalTour,intrinsicLarynxTour,malePelvisTour,maleDuctTour,deepBrainTour,subscapularTour,lumbarTour,carpalTour,renalTour,tarsalTour];
+export const regionalTours=[thoraxTour,chestWallTour,cervicalSpineTour,celiacTour,forearmTour,thighTour,legTour,handTour,footTour,upperArmTour,larynxTour,orbitalTour,intrinsicLarynxTour,malePelvisTour,maleDuctTour,deepBrainTour,subscapularTour,lumbarTour,carpalTour,renalTour,tarsalTour,lowerLimbBoneTour];
 export const regionalTourFor=(region:string)=>regionalTours.find(t=>t.region===region)??null;
 export const regionalToursFor=(region:string)=>regionalTours.filter(t=>t.region===region);
 export const regionalTourLimitations=(tour:RegionalTour)=>tour.limitations??'Selected exterior source surfaces only; no complete lumen, bronchial tree, surgical plane, acquired imaging or spatial registration. Draft pending radiologist review.';
@@ -236,13 +240,28 @@ export const regionalTourLimitations=(tour:RegionalTour)=>tour.limitations??'Sel
 /** Resolve exact identities; never substitute a similarly named surface. */
 export function regionalTourStructures(catalog:BodyCatalog,tour:RegionalTour):BodyStructure[] {
   const ids=[...new Set([...tour.contextIds,...tour.steps.map(s=>s.selectedId)])];
-  return ids.map(id=>{
-    const matches=catalog.structures.filter(s=>s.id===id&&s.regions.includes(tour.region));
+  const scope=tour.scopeRegions;
+  // Cross-region tours never rewrite catalog membership or combine specimens.
+  // Require explicit root regions and exact bundle admission for every target.
+  if(scope!==undefined&&(tour.region!=='whole-body'||!Array.isArray(scope)||
+    !scope.length||new Set(scope).size!==scope.length||
+    !scope.every(region=>catalog.regions.some(item=>item.id===region))||
+    !ids.every(id=>typeof tour.requiredDisplayBundles?.[id]==='string'&&tour.requiredDisplayBundles[id].length>0)))
+    throw Error('The guided tour does not match the available anatomy source.');
+  const structures=ids.map(id=>{
+    const matches=catalog.structures.filter(s=>s.id===id&&
+      (scope?scope.some(region=>s.regions.includes(region)):s.regions.includes(tour.region)));
     if(matches.length!==1||catalog.bundles.filter(b=>b.id===matches[0].bundle).length!==1||
       (tour.requiredDisplayBundles?.[id]&&matches[0].bundle!==tour.requiredDisplayBundles[id]))
       throw Error('The guided tour does not match the available anatomy source.');
     return matches[0];
   });
+  if(scope){
+    const actual=new Set(structures.flatMap(s=>s.regions));
+    if(actual.size!==scope.length||!scope.every(region=>actual.has(region)))
+      throw Error('The guided tour does not match the available anatomy source.');
+  }
+  return structures;
 }
 export function regionalTourFrame(catalog:BodyCatalog,tour:RegionalTour,index?:number) {
   const structures=regionalTourStructures(catalog,tour);

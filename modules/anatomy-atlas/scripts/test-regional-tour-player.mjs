@@ -10,7 +10,7 @@ const require = createRequire(import.meta.url), React = require('react');
 const catalog = JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json', import.meta.url), 'utf8'));
 const catalogBefore = JSON.stringify(catalog);
 const built = await build({ stdin: {
-  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, celiacTour, forearmTour, subscapularTour, lumbarTour, carpalTour, renalTour, tarsalTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, maleDuctTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
+  contents: "export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, celiacTour, forearmTour, subscapularTour, lumbarTour, carpalTour, renalTour, tarsalTour, lowerLimbBoneTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, maleDuctTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
   loader: 'tsx', resolveDir: process.cwd(),
 }, bundle: true, write: false, format: 'cjs', platform: 'node', loader: { '.css': 'empty' }, plugins: [{ name: 'gpu-boundary', setup(api) {
   api.onLoad({ filter: /[\\/]app[\\/]body-scene\.tsx$/ }, () => ({ loader: 'tsx', contents: 'if(globalThis.retryControl.importError)throw new Error("import failed"); export function BodyScene(){return null;} export function retryBodyAssets(urls,base){globalThis.retryControl.clear(urls,base);}' }));
@@ -144,6 +144,35 @@ test('Carpal tour keeps eight assembled bones, exact stops, shared smooth motion
   const h=harness(catalog,'carpalTour',true,step.selectedId);
   assert.equal(nodes(h.tree()).filter(n=>n.type==='BodyScene').length,0);assert.equal(h.button('Start guided tour').disabled,true);
   assert.equal(h.timers.size,0);h.click('Exit tour');assert.equal(h.exits(),1);h.unchanged();
+ }
+});
+
+test('Hip-to-heel tour waits for all four source bundles and keeps the assembled frame',()=>{
+ for(const compact of [false,true]){
+  const h=harness(catalog,'lowerLimbBoneTour',compact);
+  assert.equal(h.scene().structures.length,7);
+  const bundles=['pelvis-skeleton','thigh-skeleton','leg-skeleton','foot-skeleton'];
+  assert.deepEqual(h.bundles().sort(),[...bundles].sort());
+  h.scene().onRendererHealth('ready');h.render();
+  for(const bundle of bundles.slice(0,-1)){
+   h.scene().onLoaded(bundle);h.render();
+   assert.equal(h.button('Start guided tour').disabled,true,'Partial source readiness cannot unlock teaching');
+  }
+  h.scene().onLoaded(bundles.at(-1));h.render();h.click('Start guided tour');
+  const frame=plain(h.scene().presetBounds);h.click('Play');
+  for(const [index,step]of h.props.tour.steps.entries()){
+   assert.equal(h.scene().selectedId,step.selectedId);assert.equal(h.scene().view,step.view);
+   assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
+   assert.deepEqual(plain(h.scene().presetBounds),frame);
+   assert.deepEqual(frame,plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,index)));
+   assert.equal(h.scene().transitionMs,1800);h.tick();
+  }
+  assert.equal(h.scene().reset,6);assert.equal(h.timers.size,0);
+  h.preference.matches=true;h.listeners.get('motion')();h.render();
+  h.click('Back');assert.equal(h.scene().transitionMs,0);
+  h.preference.matches=false;h.listeners.get('motion')();h.render();
+  h.click('Next');assert.equal(h.scene().transitionMs,1800);h.click('Finish');
+  assert.equal(h.exits(),1);h.unchanged();
  }
 });
 
