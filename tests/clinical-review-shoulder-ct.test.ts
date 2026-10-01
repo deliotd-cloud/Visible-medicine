@@ -8,8 +8,8 @@ test('eight shoulder CT drafts reach learner and protected review without images
   const review = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
   const learner = JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8'));
   const inputs = JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json', 'utf8'));
-  assert.equal(review.revision, 'bc03ed3f7324819f4bfa3e7cd0afb7203cc8e3b8');
-  assert.equal(learner.sourceCommit,'bc03ed3f7324819f4bfa3e7cd0afb7203cc8e3b8');
+  assert.equal(review.revision, 'e88e43b4c0c0aa5d2fa48c2ee5fc0b86c9519abe');
+  assert.equal(learner.sourceCommit,'e88e43b4c0c0aa5d2fa48c2ee5fc0b86c9519abe');
   for (const path of ['content/shoulder-arterial-ct-pins.json', 'content/shoulder-arterial-ct.ts', 'lib/shoulder-arterial-ct.ts']) {
     const file = review.files.find((f: any) => f.path === path); assert(file);
     assert.equal(inputs.find((f: any) => f.path === path)?.sha256, file.sourceSha256);
@@ -18,9 +18,9 @@ test('eight shoulder CT drafts reach learner and protected review without images
   // Existing dispatch source has checkout CRLF/LF mixing after a Windows patch;
   // the review importer reads Git's LF blob. Pin both audited forms explicitly.
   assert.equal(inputs.find((f: any) => f.path === 'app/body-content.ts')?.sha256,
-    '688a620d5821e5f228d07010be7a365edfff35a729561b02ec2871f3a05e0fc3');
+    '8abdc0e09da92457bfa3c483ea8004cd5ef155621ff0b4fb3770e83ca2624502');
   const dispatch = review.files.find((f: any) => f.path === 'app/body-content.ts');
-  assert.equal(dispatch.sourceSha256, '688a620d5821e5f228d07010be7a365edfff35a729561b02ec2871f3a05e0fc3');
+  assert.equal(dispatch.sourceSha256, '8abdc0e09da92457bfa3c483ea8004cd5ef155621ff0b4fb3770e83ca2624502');
   assert.equal(createHash('sha256').update(readFileSync('atlas-review/app/body-content.ts')).digest('hex'), dispatch.sourceSha256);
   for (const key of ['patientDataIncluded', 'clinicalApproved', 'imagingConnection', 'standaloneReviewConnection']) assert.equal(learner[key], false);
   const pins = JSON.parse(readFileSync('atlas-review/content/shoulder-arterial-ct-pins.json', 'utf8'));

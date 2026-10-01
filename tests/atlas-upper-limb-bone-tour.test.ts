@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 
 test('right upper-limb learner and Clinical Review preserve assembled source and revision-bound evidence',async()=>{
-  const source='bc03ed3f7324819f4bfa3e7cd0afb7203cc8e3b8';
+  const source='e88e43b4c0c0aa5d2fa48c2ee5fc0b86c9519abe';
   const baseline='8357c39cfacc14dc391be2c470fab14f661e1855';
   const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
   const saved=(path:string)=>execFileSync('git',['show',`${baseline}:${path}`],{maxBuffer:8e6});
@@ -116,7 +116,9 @@ test('right upper-limb learner and Clinical Review preserve assembled source and
       assert.throws(()=>api.regionalTourStructures({...api.catalog,bundles},tour));
   }
   const oldPins=JSON.parse(Buffer.from(saved('atlas-review/content/body-review-display-pins.json')).toString('utf8'));
-  const pins=json('atlas-review/content/body-review-display-pins.json');
+  // Retain this tour's exact delivered nine-pin delta. The later independent
+  // skull-quiz delta against current pins is checked by atlas-cranial-bone-quiz.
+  const pins=JSON.parse(Buffer.from(execFileSync('git',['show','736ad7a31aa8e6414493a534f66ce7810b0a4780:atlas-review/content/body-review-display-pins.json'],{maxBuffer:2e6})).toString('utf8'));
   assert.deepEqual(Object.fromEntries(Object.entries(pins).filter(([key])=>key!=='pins')),
     Object.fromEntries(Object.entries(oldPins).filter(([key])=>key!=='pins')));
   assert.equal(pins.pins.length,oldPins.pins.length);

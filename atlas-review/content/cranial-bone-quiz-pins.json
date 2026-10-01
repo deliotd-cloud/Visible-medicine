@@ -1,0 +1,587 @@
+{
+  "parentCommit": "bc03ed3f7324819f4bfa3e7cd0afb7203cc8e3b8",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "head-neck-skeleton",
+      "url": "/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+      "bytes": 2355384,
+      "sha256": "c1b950c82fd76e69cf153757ca275a6bd27fd25d74d3fd24259b15f9172a39d4",
+      "structures": 23
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "ade93fb4e35ba94c25be66f861045ba10335b0afb618210a0ab3ee2581aa045d",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:bone:frontal-bone",
+        "fmaId": "FMA52734",
+        "name": "Frontal bone",
+        "sourceName": "frontal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-skeleton",
+        "nodeName": "FMA52734",
+        "bounds": {
+          "min": [
+            -0.6330249905586243,
+            7.208899974822998,
+            0.5663899779319763
+          ],
+          "max": [
+            0.6199209690093994,
+            8.299399375915527,
+            1.2738499641418457
+          ]
+        },
+        "center": [
+          -0.006552010774612427,
+          7.754149675369263,
+          0.920119971036911
+        ],
+        "anchor": [
+          -0.03617209941148758,
+          7.801199913024902,
+          1.1664700508117676
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3200",
+            "sha256": "48583dbbeab8ae243aa4c266b44ca5b26b9c4e1e79976819cfdf5dcb59ec5772"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "frontal",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find frontal bone on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:bone:right-parietal-bone",
+        "fmaId": "FMA52788",
+        "name": "Right parietal bone",
+        "sourceName": "right parietal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-skeleton",
+        "nodeName": "FMA52788",
+        "bounds": {
+          "min": [
+            -0.7618849873542786,
+            7.178800106048584,
+            -0.6483139991760254
+          ],
+          "max": [
+            0.050024401396512985,
+            8.362700462341309,
+            0.7788600325584412
+          ]
+        },
+        "center": [
+          -0.3559302929788828,
+          7.770750284194946,
+          0.06527301669120789
+        ],
+        "anchor": [
+          -0.6940039992332458,
+          7.800899505615234,
+          0.035199012607336044
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3380",
+            "sha256": "b6874589f3ddcbeae7153c2d499c23d0083eb18e95d139759529c901384758c8"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "parietal",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find right parietal bone on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:bone:left-parietal-bone",
+        "fmaId": "FMA52789",
+        "name": "Left parietal bone",
+        "sourceName": "left parietal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-skeleton",
+        "nodeName": "FMA52789",
+        "bounds": {
+          "min": [
+            -0.07867740094661713,
+            7.178000450134277,
+            -0.6495220065116882
+          ],
+          "max": [
+            0.7485649585723877,
+            8.362700462341309,
+            0.816860020160675
+          ]
+        },
+        "center": [
+          0.3349437788128853,
+          7.770350456237793,
+          0.08366900682449341
+        ],
+        "anchor": [
+          0.6798329949378967,
+          7.798699855804443,
+          0.04735500365495682
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3274",
+            "sha256": "45ab8d9b21c1854c9ea744137560020004e694eba3217a0a3fa0876d02207f65"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "parietal",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find left parietal bone on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:bone:occipital-bone",
+        "fmaId": "FMA52735",
+        "name": "Occipital bone",
+        "sourceName": "occipital bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-skeleton",
+        "nodeName": "FMA52735",
+        "bounds": {
+          "min": [
+            -0.6196119785308838,
+            6.777700424194336,
+            -0.6800100207328796
+          ],
+          "max": [
+            0.6070529818534851,
+            7.845099925994873,
+            0.5095899701118469
+          ]
+        },
+        "center": [
+          -0.006279498338699341,
+          7.3114001750946045,
+          -0.08521002531051636
+        ],
+        "anchor": [
+          -0.011581499129533768,
+          7.092199802398682,
+          -0.3996880054473877
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3309",
+            "sha256": "c0262a08591e48504c8a53302525377e0c4ad1c165456475f3bb80aab6202d44"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "occipital",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find occipital bone on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:bone:right-temporal-bone",
+        "fmaId": "FMA52738",
+        "name": "Right temporal bone",
+        "sourceName": "right temporal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-skeleton",
+        "nodeName": "FMA52738",
+        "bounds": {
+          "min": [
+            -0.7398940324783325,
+            6.755699634552002,
+            -0.1498740017414093
+          ],
+          "max": [
+            -0.12695099413394928,
+            7.515300273895264,
+            0.8373599052429199
+          ]
+        },
+        "center": [
+          -0.4334225133061409,
+          7.135499954223633,
+          0.3437429517507553
+        ],
+        "anchor": [
+          -0.4194689989089966,
+          7.163599967956543,
+          0.34665900468826294
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3386",
+            "sha256": "b008c86a55b1e7743a56060b4d9cb8f8abcac71d83810f66fc50847181b7fa75"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "temporal",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find right temporal bone on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:bone:left-temporal-bone",
+        "fmaId": "FMA52739",
+        "name": "Left temporal bone",
+        "sourceName": "left temporal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-skeleton",
+        "nodeName": "FMA52739",
+        "bounds": {
+          "min": [
+            0.11624199897050858,
+            6.754799842834473,
+            -0.14929600059986115
+          ],
+          "max": [
+            0.7258529663085938,
+            7.514599800109863,
+            0.835669994354248
+          ]
+        },
+        "center": [
+          0.42104748263955116,
+          7.134699821472168,
+          0.34318699687719345
+        ],
+        "anchor": [
+          0.44613200426101685,
+          7.15839958190918,
+          0.35491204261779785
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3281",
+            "sha256": "0dd858a59e8f4f004871f55411f4048bd6a69e4ec55cf6daa08ae34a5dbd974a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "temporal",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find left temporal bone on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:bone:sphenoid-bone",
+        "fmaId": "FMA52736",
+        "name": "Sphenoid bone",
+        "sourceName": "sphenoid bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-skeleton",
+        "nodeName": "FMA52736",
+        "bounds": {
+          "min": [
+            -0.5631980299949646,
+            6.789100170135498,
+            0.40412697196006775
+          ],
+          "max": [
+            0.5503290295600891,
+            7.484599590301514,
+            0.9501899480819702
+          ]
+        },
+        "center": [
+          -0.006434500217437744,
+          7.136849880218506,
+          0.677158460021019
+        ],
+        "anchor": [
+          -0.00809909962117672,
+          7.142499923706055,
+          0.6977500319480896
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3394",
+            "sha256": "127f537eb70e6ad4b036a535550ab7a681ce06dbdc1efda85956d910c54d6285"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "sphenoid",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find sphenoid bone on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:bone:ethmoid",
+        "fmaId": "FMA52740",
+        "name": "Ethmoid",
+        "sourceName": "ethmoid",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-skeleton",
+        "nodeName": "FMA52740",
+        "bounds": {
+          "min": [
+            -0.21509899199008942,
+            6.972800254821777,
+            0.6981599926948547
+          ],
+          "max": [
+            0.2020140141248703,
+            7.323399543762207,
+            1.1719999313354492
+          ]
+        },
+        "center": [
+          -0.006542488932609558,
+          7.148099899291992,
+          0.935079962015152
+        ],
+        "anchor": [
+          -0.02683749981224537,
+          7.139699935913086,
+          0.9341999888420105
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3199",
+            "sha256": "ffc2b3a343d531e72fdc70c0ef7f8c1c10c3fb84509f015585ad3b24eb403e21"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ethmoid",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find ethmoid on the model."
+        }
+      }
+    }
+  ]
+}

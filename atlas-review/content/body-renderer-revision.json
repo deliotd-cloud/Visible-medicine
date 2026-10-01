@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "688a620d5821e5f228d07010be7a365edfff35a729561b02ec2871f3a05e0fc3"
+      "sha256": "8abdc0e09da92457bfa3c483ea8004cd5ef155621ff0b4fb3770e83ca2624502"
     },
     {
       "path": "app/body-education-link.ts",
@@ -723,6 +723,14 @@
     {
       "path": "content/cranial-bone-imaging.ts",
       "sha256": "61087027fac4511522badf36e39e1958ceb4b502750285498aa11ad3e3df0b24"
+    },
+    {
+      "path": "content/cranial-bone-quiz-pins.json",
+      "sha256": "f55a4ec789764a4a7865339a91ec6fed9e8cb222a5bf7cdd91112efe9a960beb"
+    },
+    {
+      "path": "content/cranial-bone-quiz.ts",
+      "sha256": "d3c9488721a2ec4d2b0f2cb623fe1996c3db8cb4adb3695d438e0ff0e1873a76"
     },
     {
       "path": "content/cranial-boundary-clinical-pins.json",
@@ -2069,6 +2077,10 @@
       "sha256": "4b55a1d4824b5181185399093458888bf6854255c9f29a7731b0bc5410aa5848"
     },
     {
+      "path": "lib/cranial-bone-quiz.ts",
+      "sha256": "9447b37a28dc6090091e57aa0a0ecf24979b7a706b7a666506ab9542ebd38d98"
+    },
+    {
       "path": "lib/cranial-boundary-clinical.ts",
       "sha256": "b753047c94c9ad6e63c58e9a7cfad519dd3cb2d1e6bbae3d10bc358fbf88c963"
     },
@@ -3242,7 +3254,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "93d1788babed4ad73a7915d60c57abd24a5e01c84e652d7f92f3e0ed6b036ec5"
+      "sha256": "f0cf7616851075ca9bbc0fb4610753d66a196278dfb9d81a008473a9480e48f2"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3457,7 +3469,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "abb63da5de3bef275ee93e68567609ad532a98bb0b733b15a425a732ba94e2ed",
-  "sourceRendererSha256": "529084272d5b217f92addb8b9f41c2dde8650f0bbf1d0ea1ed05f8fddb81552f",
-  "websiteIntegrationSha256": "4d8e20bbce5d8ee650a7a6ffd4a45928235a5ac085b71ad9a53a941a4b13c2c5"
+  "sha256": "b419537b4a02abe573c1f270ca2cedcb7baa24c03ac7d8ac2783a028422f3676",
+  "sourceRendererSha256": "3ef75ae7de7780748f7d0b844032b3b91b8738b735e581e5264e2c407d6290ae",
+  "websiteIntegrationSha256": "c8e3a07dc0ded37d5263d65abb23f9faa78856dfa44490ccfc2c19b28a6d7d11"
 }

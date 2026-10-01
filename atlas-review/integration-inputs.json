@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "bc03ed3f7324819f4bfa3e7cd0afb7203cc8e3b8",
-  "sha256": "4d8e20bbce5d8ee650a7a6ffd4a45928235a5ac085b71ad9a53a941a4b13c2c5",
+  "sourceCommit": "e88e43b4c0c0aa5d2fa48c2ee5fc0b86c9519abe",
+  "sha256": "c8e3a07dc0ded37d5263d65abb23f9faa78856dfa44490ccfc2c19b28a6d7d11",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -112,7 +112,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "688a620d5821e5f228d07010be7a365edfff35a729561b02ec2871f3a05e0fc3"
+      "sha256": "8abdc0e09da92457bfa3c483ea8004cd5ef155621ff0b4fb3770e83ca2624502"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -712,7 +712,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "f86278a6a06845f179ef91b8f5123c96293474af3a5ee010b8e39ebb135c2d77"
+      "sha256": "08e64c79701c086006364e766347cdf63f60218324a30670894f88f736ab6fab"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -869,6 +869,14 @@
     {
       "path": "atlas-review/content/cranial-bone-imaging.ts",
       "sha256": "61087027fac4511522badf36e39e1958ceb4b502750285498aa11ad3e3df0b24"
+    },
+    {
+      "path": "atlas-review/content/cranial-bone-quiz-pins.json",
+      "sha256": "f55a4ec789764a4a7865339a91ec6fed9e8cb222a5bf7cdd91112efe9a960beb"
+    },
+    {
+      "path": "atlas-review/content/cranial-bone-quiz.ts",
+      "sha256": "d3c9488721a2ec4d2b0f2cb623fe1996c3db8cb4adb3695d438e0ff0e1873a76"
     },
     {
       "path": "atlas-review/content/cranial-boundary-clinical-pins.json",
@@ -2273,6 +2281,10 @@
     {
       "path": "atlas-review/lib/cranial-bone-imaging.ts",
       "sha256": "4b55a1d4824b5181185399093458888bf6854255c9f29a7731b0bc5410aa5848"
+    },
+    {
+      "path": "atlas-review/lib/cranial-bone-quiz.ts",
+      "sha256": "9447b37a28dc6090091e57aa0a0ecf24979b7a706b7a666506ab9542ebd38d98"
     },
     {
       "path": "atlas-review/lib/cranial-boundary-clinical.ts",
@@ -3760,7 +3772,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "82f1c19bd804e80437fad8cda1e1288d8c7db3c667c86a9cd63bc5d492a187f6"
+      "sha256": "866b04e75a6673adccac658a4bec215411b0194aa2955206edf2246b7d583a4a"
     }
   ]
 }
