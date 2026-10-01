@@ -156,9 +156,9 @@ for (const structure of addition.structures) {
   const lesson = a.nestedTeachingFor(parent, 'brainstem', structure);
   assert.equal(lesson.id, 'inferior-collicular-brachia');
   assert.equal(lesson.sections.anatomy.readiness, 'draft');
-  for (const topic of ['clinical', 'pathology', 'mri'])
+  for (const topic of ['clinical', 'pathology', 'ct', 'mri'])
     assert.equal(a.nestedTopicLesson(lesson, topic).readiness, 'draft');
-  for (const topic of ['ct', 'xray', 'ultrasound'])
+  for (const topic of ['xray', 'ultrasound'])
     assert.equal(a.nestedTopicLesson(lesson, topic).readiness, 'pending');
   assert.equal(
     a.nestedTeachingFor(parent, 'brainstem', { ...structure, sources: [] }),

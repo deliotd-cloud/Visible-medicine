@@ -1,4 +1,5 @@
 import type { NestedStudy } from '../lib/nested-anatomy';
+import { nestedCTOrientation, nestedCTOrientationReferences } from './nested-ct-orientation.ts';
 import { eyeCrossSectionalTeaching, eyeCrossSectionalReferences } from './eye-cross-sectional-teaching.ts';
 import { superiorTemporalMRI, superiorTemporalMRIReferences } from './superior-temporal-mri.ts';
 import { cardiacXrayTeaching, cardiacXrayReferences } from './cardiac-xray-teaching.ts';
@@ -65,6 +66,7 @@ export const nestedTeachingReferences: Record<
   string,
   { title: string; url: string }
 > = {
+  ...nestedCTOrientationReferences,
   ...superiorTemporalMRIReferences,
   ...cardiacXrayReferences,
   ...ventricularUltrasoundReferences,
@@ -231,10 +233,14 @@ export const nestedConcepts: NestedConcept[] = [
   ...hippocampalConcepts,
   ...coronaryVenousConcepts,
   ...femoralComponentConcepts,
-  ...collicularBrachiaConcepts,
+  ...collicularBrachiaConcepts.map(concept => ({ ...concept,
+    imaging: { ...concept.imaging, ct: nestedCTOrientation[concept.id] },
+  })),
   ...cricothyroidConcepts,
   ...pancreaticConcepts,
-  ...visualPathwayConcepts,
+  ...visualPathwayConcepts.map(concept => ({ ...concept,
+    imaging: { ...concept.imaging, ct: nestedCTOrientation[concept.id] },
+  })),
   ...renalConcepts,
   ...(
     [
@@ -1044,7 +1050,8 @@ export const nestedConcepts: NestedConcept[] = [
       ),
       pathology: cerebralTeaching.anteriorSuperiorTemporal.pathology,
     },
-    imaging: { ...cerebralTeaching.anteriorSuperiorTemporal.imaging, mri: superiorTemporalMRI.anterior },
+    imaging: { ...cerebralTeaching.anteriorSuperiorTemporal.imaging, mri: superiorTemporalMRI.anterior,
+      ct: nestedCTOrientation['cerebral-superior-temporal-anterior'] },
     modelLimit:
       'Additional ISA source part, absent from the original brain aggregate. It is not independently validated Heschl cortex or an auditory territory.',
     quiz: quiz(
@@ -1055,7 +1062,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'cerebral-superior-temporal-posterior',
     study: 'cerebral',
-    imaging: { mri: superiorTemporalMRI.posterior },
+    imaging: { mri: superiorTemporalMRI.posterior, ct: nestedCTOrientation['cerebral-superior-temporal-posterior'] },
     fmaIds: ['FMA72805', 'FMA72804'],
     sections: {
       anatomy: section(

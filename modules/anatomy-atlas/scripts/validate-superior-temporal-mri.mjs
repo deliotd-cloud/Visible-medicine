@@ -6,6 +6,9 @@ import {resolve} from 'node:path';
 import {readFileSync} from 'node:fs';
 import {build} from './workspace-component-test-build.mjs';
 import {nestedBeforeSuperiorTemporalMRI} from './superior-temporal-mri-history.mjs';
+import {nestedBeforeCTOrientation} from './nested-ct-orientation-history.mjs';
+import {nestedBeforeEyeCrossSectional} from './eye-cross-sectional-history.mjs';
+import {nestedCTOrientation} from '../content/nested-ct-orientation.ts';
 const base='0ede9422e6e9ce7e190cbe48d3cd3fe3714c7828',require=createRequire(import.meta.url);
 const React=require('react'),{renderToStaticMarkup}=require('react-dom/server');
 const clone=v=>JSON.parse(JSON.stringify(v));
@@ -16,7 +19,7 @@ async function load(contents,resolveDir=process.cwd()){
 }
 const api=await load(`export * from './content/nested-teaching';export * from './lib/nested-teaching';export * from './lib/nested-review-material';export {cerebralCatalog as catalog} from './lib/cerebral';export {NestedTeaching} from './app/nested-teaching';`);
 const previous=await load(old('content/nested-teaching.ts'),resolve('content'));
-const restored=nestedBeforeSuperiorTemporalMRI(api);
+const restored=nestedBeforeSuperiorTemporalMRI(nestedBeforeEyeCrossSectional(nestedBeforeCTOrientation(api)));
 assert.deepEqual(clone(restored.nestedConcepts),clone(previous.nestedConcepts));
 assert.deepEqual(clone(restored.nestedTeachingReferences),clone(previous.nestedTeachingReferences));
 for(const p of ['content/nested-teaching-bindings.v1.json','content/nested-review-bindings.json'])assert.equal(readFileSync(p,'utf8'),old(p));
@@ -32,7 +35,9 @@ for(const suffix of ['anterior','posterior']){
   if(suffix==='posterior'){assert.match(lesson.body,/not a complete Wernicke area/);assert.match(lesson.body,/No MRI signal or registered scan/);}
   const html=renderToStaticMarkup(React.createElement(api.NestedTeaching,{parent,study:'cerebral',selected,initialTopic:'mri'}));
   assert(html.includes('Sylvian fissure'));for(const url of lesson.citations)assert(html.includes(url));
-  for(const topic of ['ct','xray','ultrasound'])assert.equal(api.nestedTopicLesson(concept,topic).readiness,'pending');
+  assert.deepEqual(clone(concept.imaging.ct),clone(nestedCTOrientation[concept.id]));
+  assert.equal(api.nestedTopicLesson(concept,'ct').readiness,'draft');
+  for(const topic of ['xray','ultrasound'])assert.equal(api.nestedTopicLesson(concept,topic).readiness,'pending');
   const packet=await api.nestedReviewMaterial(group.key,selected.id);
   assert.equal(packet.teaching.topics.find(t=>t.tab==='mri').body,lesson.body);
   assert.equal(packet.context.revisions.imaging,null);assert(packet.context.blockers.imaging.length);

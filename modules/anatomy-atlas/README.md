@@ -638,4 +638,9 @@ Independent clinical review remains required for source anatomy, reduced-mesh fi
 MIT covers authored code, not the BodyParts3D meshes or the Visible Medicine trademark. Preserve third-party rights and attribution.
 # Private website integration
 
+Five named nested CT orientation drafts (nine sided selections) retain all
+earlier lessons and geometry. They are not validated CT boundaries, patient
+registration or clinical approval. See [scope, references and required review](docs/NESTED_CT_ORIENTATION.md);
+run `npm run nested-ct-orientation:test` for exact source/content/review checks.
+
 The shoulder can now be delivered inside the main website as a self-contained panel, with the existing dissection tools and retained source notices. See [pilot architecture, export and release gates](docs/SHOULDER_WEBSITE_PILOT.md). Didanix Education remains the intended scan viewer; no patient data or paid lecture access is connected by this preview.

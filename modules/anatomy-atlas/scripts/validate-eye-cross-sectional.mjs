@@ -17,16 +17,19 @@ export * from './lib/nested-review';export * from './lib/nested-review-api';
 export {eyeCatalog} from './lib/eye-layers';
 export {NestedTeaching} from './app/nested-teaching';`;
 async function load(previous = false) {
+  // Immutable eye milestone; the new live CT delta is checked independently
+  // against this saved complete corpus by validate-nested-ct-orientation.mjs.
+  const saved = previous ? base : '31a6ae7d0a823374b97c21cd7e810070e056d352';
   const result = await build({ stdin: { contents: entry, resolveDir: process.cwd(), loader: 'tsx' },
     bundle: true, write: false, platform: 'node', format: 'cjs',
-    plugins: previous ? [{ name: 'exact-saved-content', setup(api) {
+    plugins: [{ name: 'exact-saved-content', setup(api) {
       api.onLoad({ filter: /(?:nested-teaching\.ts|body-renderer-revision\.json)$/, namespace: 'component-test' }, args => {
         const path = relative(process.cwd(), args.path).replaceAll('\\', '/');
         if (!['content/nested-teaching.ts', 'content/body-renderer-revision.json'].includes(path)) return;
-        return { contents: old(path).toString('utf8'), resolveDir: dirname(args.path),
+        return { contents: execFileSync('git', ['show', saved + ':' + path], { maxBuffer: 16e6 }).toString('utf8'), resolveDir: dirname(args.path),
           loader: path.endsWith('.json') ? 'json' : 'ts' };
       });
-    } }] : [] });
+    } }] });
   const module = { exports: {} };
   runInNewContext(result.outputFiles[0].text, { module, exports: module.exports, require,
     crypto, TextEncoder, TextDecoder, URL, URLSearchParams, structuredClone, Request, Response, console });

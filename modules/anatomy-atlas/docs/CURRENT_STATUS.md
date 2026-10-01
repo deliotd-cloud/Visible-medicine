@@ -6,7 +6,7 @@ Generated from the current displayed catalogue, teaching resolver, dissection pr
 
 - 1104 displayed root-body representations, 109 body GLBs (104390180 canonical bytes), 11 regions plus whole body; 1022 retained archival records.
 - Dedicated shoulder: 9 representations / 11 source parts, overlapping the body catalogue.
-- Nested dissections: 108 selectable parts, 47 teaching concepts / 121 references; 29 geometry-only selections retain pending teaching.
+- Nested dissections: 108 selectable parts, 47 teaching concepts / 125 references; 29 geometry-only selections retain pending teaching.
 - 159 dissection stages / 207 focuses. These operate on supplied surfaces, not complete anatomy.
 - Guided learning: 24 regional tours / 136 stops; dedicated shoulder 1 tour / 5 stops. These source-bound drafts reuse existing anatomy, not additional unique structures or clinical approvals.
 - Independent source-guided dissection: 9 draft sequences / 72 steps. [Female pelvis](HRA_PELVIC_GUIDED_DISSECTION.md), [abdominal wall and back](WALL_BACK_GUIDED_DISSECTION.md), [kidneys](RENAL_GUIDED_ABDOMINAL_BONES.md) and [lower-limb regions](UM_LIMB_GUIDED_DISSECTION.md) reuse admitted surfaces in separate source frames; no new anatomy or validated surgical planes.
@@ -46,7 +46,7 @@ Separate from root-body coverage and overlapping parent anatomy. Unnamed cranial
 | --- | ---: | ---: | ---: | ---: |
 | Anatomy | 79 | 0 | 29 | 0 |
 | Function | 77 | 0 | 31 | 0 |
-| CT | 68 | 0 | 40 | 0 |
+| CT | 77 | 0 | 31 | 0 |
 | MRI | 77 | 0 | 31 | 0 |
 | X-ray | 9 | 0 | 99 | 0 |
 | Ultrasound | 44 | 0 | 64 | 0 |

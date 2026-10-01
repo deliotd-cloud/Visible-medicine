@@ -5,6 +5,7 @@ import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
 import {resolve} from 'node:path';
 import {build} from './workspace-component-test-build.mjs';
+import {nestedCTOrientation} from '../content/nested-ct-orientation.ts';
 const base='8386fa7e3c17c7a6da67d6a511604e95f31fdebb';
 const require=createRequire(import.meta.url),React=require('react');
 const {renderToStaticMarkup}=require('react-dom/server');
@@ -32,7 +33,9 @@ let placements=0;
 for(const target of targets){
  const parent=api.catalog.structures.find(s=>s.id===target.parentId),selected=target.structure;
  const concept=api.nestedTeachingFor(parent,target.study,selected);
- assert.deepEqual(clone(concept),current);
+ const withoutNewCT=clone(concept);delete withoutNewCT.imaging.ct;
+ assert.deepEqual(withoutNewCT,current);
+ assert.deepEqual(clone(concept.imaging.ct),clone(nestedCTOrientation[concept.id]));
  const group=api.nestedReviewRows.find(g=>g.study===target.study&&g.parentId===parent.id);
  const packet=await api.nestedReviewMaterial(group.key,selected.id);
  assert.equal(packet.context.revisions.imaging,null);assert(packet.context.blockers.imaging.length);
@@ -52,7 +55,8 @@ for(const target of targets){
   const review=packet.teaching.topics.find(t=>t.tab===topic);assert.equal(review.body,lesson.body);assert.equal(review.readiness,'draft');
   placements++;
  }
- for(const topic of ['ct','xray','ultrasound'])assert.equal(api.nestedTopicLesson(concept,topic).readiness,'pending');
+ assert.equal(api.nestedTopicLesson(concept,'ct').readiness,'draft');
+ for(const topic of ['xray','ultrasound'])assert.equal(api.nestedTopicLesson(concept,topic).readiness,'pending');
  for(const mutate of [s=>s.fmaId='FMA0',s=>s.laterality='unspecified',s=>s.sources[0].sha256='0'.repeat(64)]){
   const stale=clone(selected);mutate(stale);assert.equal(api.nestedTeachingFor(parent,target.study,stale),null);
  }
@@ -62,4 +66,4 @@ assert.match(current.sections.clinical.body,/combined lesion/);
 assert.match(current.sections.pathology.body,/not a typical-disease template/);
 assert.match(current.imaging.mri.body,/research streamlines are not routine/);
 for(const path of ['content/nested-teaching-bindings.v1.json','content/nested-review-bindings.json','public/models/bodyparts3d/collicular-brachia/catalog.json','public/models/bodyparts3d/brainstem/catalog.json'])assert.equal(readFileSync(path,'utf8'),old(path),path+' unchanged');
-console.log(JSON.stringify({passed:true,selections:2,draftPlacements:placements,pending:['ct','xray','ultrasound'],clinicalApproval:false,patientImages:false}));
+console.log(JSON.stringify({passed:true,selections:2,draftPlacements:placements,pending:['xray','ultrasound'],clinicalApproval:false,patientImages:false}));

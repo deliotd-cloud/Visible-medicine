@@ -10,6 +10,7 @@ import { nestedBeforePulmonaryXray } from './pulmonary-xray-history.mjs';
 import { nestedBeforeLobarImaging, lobarIds } from './cerebral-lobar-imaging-history.mjs';
 import { nestedBeforeVentricularUltrasound } from './ventricular-ultrasound-history.mjs';
 import { nestedBeforeEyeCrossSectional, eyeCrossSectionalScope } from './eye-cross-sectional-history.mjs';
+import { nestedBeforeCTOrientation, nestedCTOrientationIds } from './nested-ct-orientation-history.mjs';
 
 const require = createRequire(import.meta.url);
 const React = require('react');
@@ -57,7 +58,7 @@ const eyeUsHashes = {
   'eye-lens': 'c71308116b8adbda8d67d4b9dec4bd53db697052e60c88ce73d96682921a3e14',
   'eye-sclera': 'a147afbfcbe303730892a7399f793f8d1d90e7ca88765331aff4da34a7b8181d',
 };
-const beforeCrossSectional = nestedBeforeEyeCrossSectional(api);
+const beforeCrossSectional = nestedBeforeEyeCrossSectional(nestedBeforeCTOrientation(api));
 const beforeEyeUs = {
   ...beforeCrossSectional,
   nestedConcepts: beforeCrossSectional.nestedConcepts.map(c => {
@@ -465,6 +466,7 @@ for (const target of targets) {
   for (const topic of eyeCrossSectionalScope[concept.id] ?? []) {
     if (!expectedImaging.includes(topic)) expectedImaging.push(topic);
   }
+  if (nestedCTOrientationIds.includes(concept.id) && !expectedImaging.includes('ct')) expectedImaging.push('ct');
   same(
     Object.keys(concept.imaging ?? {}).sort(),
     [...expectedImaging].sort((a, b) => a.localeCompare(b)),
@@ -655,13 +657,14 @@ same(coverage.pathology, { draft: 71, pending: 0 });
 same(coverage.clinical, { draft: 71, pending: 0 });
 for (const tab of ['anatomy', 'function', 'quiz'])
   same(coverage[tab], { draft: 71, pending: 0 });
-same(coverage.ct, { draft: 62, pending: 9 });
+same(coverage.ct, { draft: 71, pending: 0 });
 same(coverage.mri, { draft: 71, pending: 0 });
 same(coverage.xray, { draft: 9, pending: 62 });
 same(coverage.ultrasound, { draft: 41, pending: 30 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
 const wordsBySource = {};
 const hosts = new Set([
+  'www.frontiersin.org',
   'resource.loni.usc.edu',
   'radiologyassistant.nl',
   'gravitas.acr.org',
@@ -727,17 +730,17 @@ for (const concept of api.nestedConcepts) {
       const url = new URL(source.url);
       check(url.protocol === 'https:' && hosts.has(url.hostname));
       // Licence text establishes reuse terms; it is not a factual clinical source.
-      if (ref !== 'renalReuseLicense')
+      if (!['renalReuseLicense', 'nestedCTReuseLicense'].includes(ref))
         wordsBySource[ref] =
           (wordsBySource[ref] ?? 0) + section.body.trim().split(/\s+/).length;
     }
   }
 }
-same(Object.keys(wordsBySource).length, 104);
+same(Object.keys(wordsBySource).length, 107);
 same(
   new Set(Object.values(api.nestedTeachingReferences).map((ref) => ref.url))
     .size,
-  105,
+  108,
   'Do not split one source into duplicate reference keys',
 );
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {
