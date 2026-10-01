@@ -234,6 +234,17 @@ export function NestedReviewWorkspace({
                   ))}
                 </section>
               ))}
+              {packet.teaching.guidedLearning && <section aria-label="Eye guided-learning evidence">
+                <h3>{packet.teaching.guidedLearning.title} · Draft</h3>
+                <p>{packet.teaching.guidedLearning.transitionMs / 1000}s camera sweep · other visible components faded · no separation · reduced-motion and hidden-page pause supported</p>
+                <p>{packet.teaching.guidedLearning.limitation}</p>
+                <ol>{packet.teaching.guidedLearning.steps.map(step => <li key={step.id}>
+                  <h4>{step.title}</h4><p>{step.caption}</p>
+                  <p>Preset: {step.preset} · Camera: {step.view} · Selected: {step.selectedId}</p>
+                  <ul>{step.ids.map(id => <li key={id}>{id}</li>)}</ul>
+                  {step.references.map(url => <p key={url}><a href={url} target="_blank" rel="noreferrer">{packet.teaching.referenceTitles[url] ?? 'Source reference'}</a></p>)}
+                </li>)}</ol>
+              </section>}
               {packet.teaching.lesson?.extended && (
                 <>
                   <h3>Model-specific caution</h3>

@@ -66,6 +66,11 @@
   overscroll-behavior: contain;
   font-size: 0.875rem;
 }
+.eye-layer-manual-controls { border: 0; padding: 0; margin: 0; min-width: 0; }
+.eye-layer-guided-learning { border-bottom: 1px solid var(--border); padding: 0.5rem 0; }
+.eye-layer-guided-learning summary { cursor: pointer; font-weight: 600; }
+.eye-layer-guided-learning :is(p, h3) { line-height: 1.5; margin: 0.5rem 0; }
+.eye-layer-guided-learning a { display: block; text-decoration: underline; margin: 0.35rem 0; }
 /* Disclosed practice/cutaway controls must wrap at the same scale as their text.
    Keep the selected value visible rather than clipping it to a single line. */
 .eye-layer-controls :is(button, [data-slot='select-trigger']) {

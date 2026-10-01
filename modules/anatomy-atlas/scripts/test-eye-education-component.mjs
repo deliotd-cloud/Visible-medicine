@@ -13,10 +13,10 @@ const built=await build({stdin:{contents:`export {default as EyeLayers,EyeLayerV
 }}]});
 let slots=[],cursor=0,checks=0;
 const state=value=>{const i=cursor++;if(!(i in slots))slots[i]=typeof value==='function'?value():value;return [slots[i],next=>slots[i]=typeof next==='function'?next(slots[i]):next];};
-const shim={...React,useState:state,useReducer:(reduce,arg,init)=>{const [value,set]=state(()=>init?init(arg):arg);return [value,action=>set(previous=>reduce(previous,action))];},useMemo:fn=>fn(),useCallback:fn=>fn};
+const shim={...React,useState:state,useRef:value=>state(()=>({current:value}))[0],useEffect:()=>{},useLayoutEffect:()=>{},useReducer:(reduce,arg,init)=>{const [value,set]=state(()=>init?init(arg):arg);return [value,action=>set(previous=>reduce(previous,action))];},useMemo:fn=>fn(),useCallback:fn=>fn};
 const education={options:null,adapter:null,published:[],use(options){this.options=options;return {adapter:this.adapter,publish:id=>this.published.push(id)};}};
 const scope={exports:{}};
-runInNewContext(built.outputFiles[0].text,{module:scope,exports:scope.exports,require:id=>id==='react'?shim:id==='next/link'?{__esModule:true,...actualLink}:require(id),education});
+runInNewContext(built.outputFiles[0].text,{module:scope,exports:scope.exports,require:id=>id==='react'?shim:id==='next/link'?{__esModule:true,...actualLink}:require(id),education,structuredClone});
 const api=scope.exports, nodes=n=>!n||typeof n!=='object'?[]:Array.isArray(n)?n.flatMap(nodes):[n,...nodes(n.props?.children)];
 const text=n=>typeof n==='string'||typeof n==='number'?String(n):!n?'':Array.isArray(n)?n.map(text).join(''):text(n.props?.children);
 const check=(v,message)=>{checks++;assert(v,message);};

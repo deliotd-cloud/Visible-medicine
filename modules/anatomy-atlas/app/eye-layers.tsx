@@ -1,5 +1,5 @@
 'use client';
-import { useCallback, useMemo, useReducer, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useReducer, useRef, useState } from 'react';
 import { NestedTeaching } from './nested-teaching';
 import { ImagingLink } from './imaging-link';
 import { useNestedEducationLink } from './nested-education-link';
@@ -49,6 +49,8 @@ import {
 import type { DissectionView } from './dissection-data';
 import type { BodyLayout } from '@/lib/body-arrangement';
 import type { RendererHealth } from '@/lib/renderer-health';
+import type { StudyCamera } from '@/lib/study-views';
+import { eyeLayerGuide } from '@/lib/eye-layer-guide';
 import './eye-layers.css';
 
 export function EyeLayerView({
@@ -67,9 +69,9 @@ export function EyeLayerView({
   const layers = useMemo(() => eyeLayersFor(parent), [parent]);
   const initialSelection = layers.find((s) => s.id === initialSelectedId)?.id;
   const frame = useMemo(() => selectionBounds(layers), [layers]);
-  const [inspection, setInspection] = useState(initialInspection);
+  const [manualInspection, setInspection] = useState(initialInspection);
   const [
-    { selectedId, hidden, history, future, preset: currentPreset },
+    { selectedId: manualSelectedId, hidden: manualHidden, history, future, preset: manualPreset },
     dispatch,
   ] = useReducer(
     (state: EyeLayerState, action: EyeAction) =>
@@ -86,18 +88,49 @@ export function EyeLayerView({
           }
         : initialEyeLayers(items),
   );
-  const [explode, setExplode] = useState(0),
-    [layout, setLayout] = useState<BodyLayout>('extract');
-  const [showOrigins, setShowOrigins] = useState(false);
-  const [view, setView] = useState<DissectionView>('anterior'),
-    [labels, setLabels] = useState(true);
-  const [isolated, setIsolated] = useState(!!initialSelection),
-    [focus, setFocus] = useState(false),
+  const [manualExplode, setExplode] = useState(0),
+    [manualLayout, setLayout] = useState<BodyLayout>('extract');
+  const [manualOrigins, setShowOrigins] = useState(false);
+  const [manualView, setView] = useState<DissectionView>('anterior'),
+    [manualLabels, setLabels] = useState(true);
+  const [manualIsolated, setIsolated] = useState(!!initialSelection),
+    [manualFocus, setFocus] = useState(false),
     [reset, setReset] = useState(0);
   const [health, setHealth] = useState<RendererHealth>('starting');
   const [loaded, setLoaded] = useState(false),
     [failed, setFailed] = useState(false),
     [retry, setRetry] = useState(0);
+  const guide = useMemo(() => eyeLayerGuide(parent), [parent]);
+  const cameraCapture = useRef<StudyCamera | null>(null), cameraRestore = useRef<StudyCamera | null>(null);
+  const guideLauncher = useRef<HTMLButtonElement | null>(null), restoreGuideFocus = useRef(false);
+  const [guideExpanded, setGuideExpanded] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(true), [pageHidden, setPageHidden] = useState(false);
+  const [guidance, setGuidance] = useState<{id: string; index: number; camera: StudyCamera | null} | null>(null);
+  const step = guidance?.id === guide?.id ? guide?.steps[guidance!.index] : undefined;
+  // Guidance is a reversible presentation overlay: manual state/history never changes.
+  const selectedId = step?.selectedId ?? manualSelectedId;
+  const hidden = step ? layers.filter(s => !step.ids.includes(s.id)).map(s => s.id) : manualHidden;
+  const currentPreset = step?.preset ?? manualPreset;
+  const inspection = step ? initialInspection : manualInspection;
+  const explode = step ? 0 : manualExplode, layout = step ? 'spatial' : manualLayout;
+  const showOrigins = step ? false : manualOrigins, view = step?.view ?? manualView;
+  const labels = step ? true : manualLabels, isolated = step ? guide!.fadeOthers : manualIsolated;
+  const focus = step ? false : manualFocus;
+  const ready = health === 'ready' && loaded && !failed;
+  useEffect(() => {
+    if (!guide) return;
+    const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const motion = () => setReducedMotion(preference.matches);
+    const visibility = () => setPageHidden(document.hidden);
+    motion(); visibility();
+    preference.addEventListener('change', motion); document.addEventListener('visibilitychange', visibility);
+    return () => { preference.removeEventListener('change', motion); document.removeEventListener('visibilitychange', visibility); };
+  }, [guide]);
+  useLayoutEffect(() => {
+    if (!guidance && restoreGuideFocus.current) {
+      guideLauncher.current?.focus(); restoreGuideFocus.current = false;
+    }
+  }, [guidance]);
   const onLoaded = useCallback(() => {
     setLoaded(true);
     setFailed(false);
@@ -130,6 +163,7 @@ export function EyeLayerView({
     [layers, selectedId],
   );
   function applySelection(id: string) {
+    if (step) return;
     dispatch({ type: 'select', id });
     setFocus(false);
   }
@@ -147,19 +181,33 @@ export function EyeLayerView({
     allowedIds: educationAllowedIds,
     disabled: !layers.length || (!!initialSelectedId && !initialSelection) ||
       health !== 'ready' || !loaded || failed ||
-      isolated || inspection.plane !== 'off',
+      !!step || isolated || inspection.plane !== 'off',
     onSelect: applySelection,
   });
   function select(id: string) {
+    if (step) return;
     applySelection(id);
     educationLink.publish(id);
   }
   function preset(value: EyePreset) {
+    if (step) return;
     dispatch({ type: 'preset', value });
     setExplode(0);
     setIsolated(false);
     setFocus(false);
     setInspection(initialInspection);
+  }
+  function guideStep(index: number) {
+    if (!guide || !ready || pageHidden || !Number.isInteger(index) || !guide.steps[index] ||
+      (!!initialSelectedId && !initialSelection)) return;
+    setGuidance(previous => ({id: guide.id, index,
+      camera: previous?.id === guide.id ? previous.camera : structuredClone(cameraCapture.current)}));
+    setReset(n => n + 1); setGuideExpanded(true);
+  }
+  function exitGuide() {
+    if (!guidance) return;
+    cameraRestore.current = structuredClone(guidance.camera);
+    restoreGuideFocus.current = true; setGuidance(null); setReset(n => n + 1);
   }
   const unavailable = eyeCatalog.excluded.filter(
     (s) => s.parentId === parent.id,
@@ -200,6 +248,11 @@ export function EyeLayerView({
           plate={false}
           appearance={appearance}
           retries={{ 'eye-layers': retry }}
+          cameraBounds={step ? selectionBounds(layers.filter(s => step.ids.includes(s.id))) : undefined}
+          cameraCapture={cameraCapture} cameraRestore={cameraRestore}
+          tourLocked={!!step}
+          transitionMs={step && !reducedMotion ? guide!.transitionMs : 0}
+          transitionPaused={!!step && (!ready || pageHidden)}
           onSelect={select}
           onLoaded={onLoaded}
           onFailure={onFailure}
@@ -234,6 +287,7 @@ export function EyeLayerView({
         )}
         <div className="eye-layer-scene-tools">
           <Select
+            disabled={!!step}
             value={view}
             onValueChange={(v) => {
               if (
@@ -273,6 +327,7 @@ export function EyeLayerView({
           <Button
             size="sm"
             variant={labels ? 'default' : 'outline'}
+            disabled={!!step}
             aria-pressed={labels}
             onClick={() => setLabels((v) => !v)}
           >
@@ -281,6 +336,7 @@ export function EyeLayerView({
           <Button
             size="sm"
             variant="outline"
+            disabled={!!step}
             onClick={() => {
               setReset((r) => r + 1);
               setFocus(false);
@@ -314,6 +370,29 @@ export function EyeLayerView({
         className="eye-layer-controls"
         aria-label="Eye dissection controls"
       >
+        {guide && <details className="eye-layer-guided-learning" open={guideExpanded}
+          onToggle={event => { if (!step) setGuideExpanded(event.currentTarget.open); }}>
+          <summary>Guided learning</summary>
+          {step ? <section aria-label="Eye-layer walkthrough" aria-live="polite">
+            <p>Step {guidance!.index + 1} of {guide.steps.length} · Draft</p>
+            <h3>{step.title}</h3><p>{step.caption}</p>
+            {!ready || pageHidden ? <p role="status">Walkthrough paused until the model is ready and this page is visible.</p> : null}
+            <div className="eye-layer-actions">
+              <Button size="sm" variant="outline" disabled={!ready || pageHidden || guidance!.index === 0}
+                onClick={() => guideStep(guidance!.index - 1)}>Previous step</Button>
+              <Button size="sm" variant="outline" disabled={!ready || pageHidden || guidance!.index === guide.steps.length - 1}
+                onClick={() => guideStep(guidance!.index + 1)}>Next step</Button>
+              <Button size="sm" variant="outline" onClick={exitGuide}>End walkthrough</Button>
+            </div>
+            {step.references.map(url => <a key={url} href={url} target="_blank" rel="noreferrer">{eyeReferences.find(r => r.url === url)?.label ?? 'Source reference'}</a>)}
+          </section> : <><p>{guide.title} · Four source-bound steps · Draft</p>
+            <Button ref={guideLauncher} size="sm" variant="outline"
+              disabled={!ready || pageHidden || (!!initialSelectedId && !initialSelection)}
+              onClick={() => guideStep(0)}>Start eye walkthrough</Button></>}
+          <p>{guide.limitation}</p>
+        </details>}
+        <fieldset className="eye-layer-manual-controls" disabled={!!step}>
+        <legend className="sr-only">Manual eye dissection controls</legend>
         {educationLink.adapter && <ImagingLink link={educationLink} />}
         <div className="eye-layer-presets">
           <label htmlFor="eye-layer-preset">Study view</label>
@@ -567,6 +646,7 @@ export function EyeLayerView({
             </a>
           ))}
         </details>
+        </fieldset>
       </aside>
     </div>
   );

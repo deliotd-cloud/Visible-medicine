@@ -41,7 +41,8 @@ for(const group of api.nestedReviewRows)for(const row of group.surfaces){
  for(const key of ['source','partSource']){const changed=new URL(url);changed.searchParams.set(key,'0'.repeat(64));assert.notEqual(nav.resolveStudyLink(catalog,region,nav.parseStudyLink(Object.fromEntries(changed.searchParams))).status,'ready');}
  const href=nav.nestedReviewHref(p.source.parent,p.source.study,p.source.structure);assert(href);assert.equal(new URL(href,'https://atlas.test').searchParams.get('source'),c.sourceHash);
  assert.equal(nav.nestedReviewHref({...p.source.parent,name:'foreign'},p.source.study,p.source.structure),null);
- const used=new Set([...p.teaching.topics.flatMap(t=>t.references),...(p.teaching.lesson?.extended.selfCheck.references??[])]);
+ const used=new Set([...p.teaching.topics.flatMap(t=>t.references),...(p.teaching.lesson?.extended.selfCheck.references??[]),
+   ...(p.teaching.guidedLearning?.steps.flatMap(step=>step.references)??[])]);
  assert(Object.keys(p.teaching.referenceTitles).every(url=>used.has(url)));
  assert.equal(nav.nestedReviewHref(p.source.parent,p.source.study,{...p.source.structure,name:'foreign'}),null);
  assert.equal(await api.nestedReviewMaterial(group.key,row.id+'-invalid'),null);

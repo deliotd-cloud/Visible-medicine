@@ -727,6 +727,7 @@ findCutBindings(eyeAst);
 check(presetFunction && restoreCallback);
 const actions = [];
 const cutEnv = {
+  step: null,
   initialInspection,
   dispatch: (v) => actions.push(['dispatch', v]),
   setExplode: (v) => actions.push(['explode', v]),
@@ -743,6 +744,10 @@ same(actions, [
   ['inspection', initialInspection],
 ]);
 actions.length = 0;
+cutEnv.step = { id: 'controlled-active-guide' };
+runInNewContext(ts.transpile(`${presetFunction}; preset('wall');`), cutEnv);
+same(actions, [], 'Manual preset cannot override an active guide');
+cutEnv.step = null;
 runInNewContext(`(${restoreCallback})();`, cutEnv);
 same(actions, [['inspection', initialInspection]]);
 let cutawayGeometryCases = 0;

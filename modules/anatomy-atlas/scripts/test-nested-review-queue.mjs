@@ -87,13 +87,16 @@ assert(source.includes('window.addEventListener("beforeunload", unload)'));
 const page = await readFile('app/review/nested/page.tsx', 'utf8');
 assert(page.includes('initialQuery={nestedReviewQuery(p.q)}'));
 assert(page.includes('initialTrack={nestedReviewNavigationTrack(p.t)}'));
-// Navigation never changes models, teaching, binding identity or server approval logic.
+// Preserve the queue-only milestone exactly; later teaching additions have their
+// own current-state transition checks, not an exemption from this historical gate.
+const queueMilestone='551f7dc0902be9c26c57a74cac4f101925767809';
 for (const path of ['content/nested-review-bindings.json', 'content/nested-teaching.ts',
   'lib/nested-review-material.ts', 'lib/nested-review-api.ts', 'lib/nested-review.ts',
   'public/models/bodyparts3d/full-body/catalog.json'])
-  assert.deepEqual(await readFile(path), execFileSync('git', ['show', '927180af8a7d04a96cd54088953dc68a1dd54588:' + path], { maxBuffer: 32e6 }), path);
+  assert.deepEqual(execFileSync('git', ['show', queueMilestone+':' + path], { maxBuffer: 32e6 }), execFileSync('git', ['show', '927180af8a7d04a96cd54088953dc68a1dd54588:' + path], { maxBuffer: 32e6 }), path);
 const report = { sourceBaseline: '927180af8a7d04a96cd54088953dc68a1dd54588', scopes: rows.length,
-  exactSourceLinks: links, sourceAndTeachingUnchanged: true, filteredNeighboursAndQueryRetention: true,
+  exactSourceLinks: links, sourceAndTeachingUnchangedAtQueueMilestone: true, queueMilestone,
+  currentTeachingTransitionCheck: 'scripts/test-eye-layer-guide-review.mjs', filteredNeighboursAndQueryRetention: true,
   invalidScopeAndSourceRejected: true, actualWorkspaceSSR: true, existingUnsavedGuardRetained: true,
   browserInteractionVerified: false, clinicalApproval: false };
 await writeFile('docs/nested-review-queue-validation.json', JSON.stringify(report, null, 2) + '\n');
