@@ -4,7 +4,8 @@ import {createHash} from 'node:crypto';
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {snapshot,hash} from './pin-pica-clinical.mjs';
 import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
-const pins=JSON.parse(await readFile('content/foot-sesamoid-teaching-pins.json')),live=await contentContext(),{api}=live,display=api.bodyDisplayCatalog(live.catalog),parent=await exactSourceHistoryApi(pins.parentCommit);
+import {beforeCerebellarMcaImaging} from './cerebellar-mca-imaging-history.mjs';
+const pins=JSON.parse(await readFile('content/foot-sesamoid-teaching-pins.json')),live=await contentContext(),display=live.api.bodyDisplayCatalog(live.catalog),api=beforeCerebellarMcaImaging(live.api,display),parent=await exactSourceHistoryApi(pins.parentCommit);
 assert.equal(hash(snapshot(parent,display)),pins.previousAllLessonsAndRecipesHash);
 assert.deepEqual(display.coordinateSystem,pins.coordinateSystem);assert.deepEqual(api.structures,parent.structures);assert.deepEqual(api.dissectionProfiles,parent.dissectionProfiles);
 for(const b of pins.bundles){assert.deepEqual(display.bundles.find(x=>x.id===b.id),b);const bytes=await readFile('public'+b.url.split('?')[0]);assert.equal(bytes.length,b.bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),b.sha256);}

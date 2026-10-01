@@ -2,10 +2,12 @@
 import assert from 'node:assert/strict';
 import {isDeepStrictEqual} from 'node:util';
 import {createHash} from 'node:crypto';
+import {beforeCerebellarMcaImaging} from './cerebellar-mca-imaging-history.mjs';
 import pins from '../content/foot-sesamoid-teaching-pins.json' with {type:'json'};
 import transition from '../content/foot-sesamoid-teaching-transition.json' with {type:'json'};
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function beforeFootSesamoidTeaching(api){
+ api=beforeCerebellarMcaImaging(api);
  if(typeof api.bodyLesson!=='function')return api;
  if(typeof api.bodyDisplayCatalog!=='function'&&pins.entries.every(e=>e.topics.every(t=>api.bodyLesson(e.identity,t)===undefined)))return api;
  assert.equal(hash(pins),'dfb15a8f599b38965484b3e9ae4779ad5538660b4f005636b1a467440d31ccaf');

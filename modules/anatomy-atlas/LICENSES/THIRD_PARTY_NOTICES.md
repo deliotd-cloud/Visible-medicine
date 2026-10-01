@@ -1974,3 +1974,13 @@ or mandatory fee added. Mesh component identity is explicitly unverified; the
 common first-MTP example does not rename the source. Radiologist sign-off remains
 revision-bound and separate from source/software checks. See
 `docs/FOOT_SESAMOID_TEACHING.md` for references and access limitations.
+
+## Cerebellar/MCA imaging teaching — 1 October 2026
+
+Original draft CT/MRI prose links Akgun2013, Wakao2014, Bash2005 and Korogi1997
+primary studies as factual reading references only. No source prose passage,
+figure, table, scan, question-bank item or dataset is imported. Bibliographic
+access does not grant media reuse rights. Existing BodyParts3D4.0/CC BY4.0 models
+and credit remain unchanged; no asset, dependency, font, texture, service or
+mandatory fee added. Clinical acceptance remains revision-bound and independent
+of licensing/software evidence. See `docs/CEREBELLAR_MCA_IMAGING.md`.

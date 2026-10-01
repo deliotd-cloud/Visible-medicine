@@ -7,6 +7,10 @@
     "content/foot-sesamoid-teaching.ts": "d25249c8f585bdf706c187c0e013342322ca85c073a3439a2efa187dcfcc6b7a",
     "content/foot-sesamoid-teaching-pins.json": "666a4c4bb8fe514c61d4c718e4f861365fbbc091dcf4a8a25f4808e0bd5aadc0",
     "content/foot-sesamoid-teaching-transition.json": "152601015b5e130f4eb35e6f967f5fcb0931b9dcefc62695485004d8c82bbd24",
+    "lib/cerebellar-mca-imaging.ts": "59062ecabeae6eeb42e189eb1b84b80a243347596f6fdea05bbabf59147db3fc",
+    "content/cerebellar-mca-imaging.ts": "9ca2cecdcf52319cf4d45d4953997da40d50b1a34fff964be6fb0f52012e7722",
+    "content/cerebellar-mca-imaging-pins.json": "3a7cc4b77e150bae94134a71cb0107e9c09c66d1ab22d30b7ae16b73381ac1d2",
+    "content/cerebellar-mca-imaging-transition.json": "9548e39a108153fc81ba310efe9adb6b80a3b74b900127fbc208e784cecd752d",
     "app/body-education-link.ts": "47a0a195899e3efedc743b7923c9a52f4a8c1943da5613285fc7a398e4448c40",
     "integration/shoulder/education-api.ts": "4f2017f78d81c821c64ecd85ff3a60bb442cf3bc207b62da0718bc1f7a13afe0",
     "lib/regional-framing.ts": "96c4e2c9690fdc93b3caadea4a36bad91a038e95ec7da08a362aadf142d8b575",
@@ -372,8 +376,8 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "988a957652b1389469f8921213633a18b775da163a41266db38dd4de1a8324c6",
-    "explicitTopicReadiness": "2aa6bb365a1266bb41eafd488e963c1c6d1924aa1171cf2e2a29582d0f7c356b",
+    "resolvedContentAndRecipeData": "251fecab56b77a90a3c8a98b99ad956c72448ef63b73181d5c9d27a26e0974c2",
+    "explicitTopicReadiness": "1c513c3426a8964a69a8dabd42b12ea65511f2bbad048c1d5c9947410df79e41",
     "reasoningQuestionData": "e14edb0ec5501658df333e69f0aef4d9593b6647a3773258ff0ef6ec03b786fb",
     "guidedLearningData": "a5d76cdc05eff586584131d14f77c8a36dd508bf1a794e004b9d31dde1e72ec4",
     "app/volume-image.tsx": "34d28f4f9284cbb18dd4c175815490fb3727912fdb4acb22143c91167ccd4448",
@@ -1745,15 +1749,15 @@
         "generatedIdentification": 0
       },
       "ct": {
-        "specificDraft": 900,
+        "specificDraft": 905,
         "identityOnly": 0,
-        "pending": 204,
+        "pending": 199,
         "generatedIdentification": 0
       },
       "mri": {
-        "specificDraft": 872,
+        "specificDraft": 877,
         "identityOnly": 0,
-        "pending": 232,
+        "pending": 227,
         "generatedIdentification": 0
       },
       "xray": {
@@ -2067,15 +2071,15 @@
           "generatedIdentification": 0
         },
         "ct": {
-          "specificDraft": 165,
+          "specificDraft": 170,
           "identityOnly": 0,
-          "pending": 126,
+          "pending": 121,
           "generatedIdentification": 0
         },
         "mri": {
-          "specificDraft": 177,
+          "specificDraft": 182,
           "identityOnly": 0,
-          "pending": 114,
+          "pending": 109,
           "generatedIdentification": 0
         },
         "xray": {

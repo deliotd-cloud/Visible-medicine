@@ -1,5 +1,13 @@
 # Clinical validation checklist
 
+[Cerebellar/MCA imaging](CEREBELLAR_MCA_IMAGING.md): review ten CT/MRI drafts for
+both PICA, both SCA and the retained right MCA. Distinguish CTA from routine CT,
+MRA from structural MRI, source gaps from flow signal loss/occlusion, and
+nonvisualisation from proven agenesis. Source SCA midline crossing is not a
+patient variant; no left MCA or validated M1/M2 boundaries are supplied. Verify
+historical study scope without transferring performance percentages/protocols.
+Teaching, source geometry and imaging correspondence require separate acceptance.
+
 [Limb-bone ultrasound](LIMB_BONE_ULTRASOUND.md): review ten new elbow/knee
 orientation placements for paired radius, ulna, femur, tibia and fibula. Confirm
 regional endpoint versus whole-bone scope, adult-bone visibility limitations and

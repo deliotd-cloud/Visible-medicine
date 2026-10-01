@@ -267,8 +267,17 @@ for (const record of [...shoulder, ...body]) {
 }
 same(
   [...statuses].sort((a, b) => (a < b ? -1 : a > b ? 1 : 0)),
-  ['draft', 'generated-identification', 'identity-only', 'pending'],
+  ['draft', 'generated-identification', 'pending'],
 );
+// The latest recorded foot teaching removed the final identity-only placements.
+// Current production coverage need not exercise every supported schema value.
+// Keep explicit positive coverage of all four values without inventing a gap.
+for (const readiness of ['draft', 'identity-only', 'pending', 'generated-identification']) {
+  const fixture = clone(body[0]);
+  fixture.content.ct.readiness = readiness;
+  check(validate(fixture), `Supported editorial readiness: ${readiness}`);
+  same(fixture.validation.clinicalApproval, 'not-included');
+}
 same(assets.size, 87);
 const deltoid = shoulder.find((entry) => entry.id.endsWith(':deltoid'));
 same(deltoid.meshBindings.length, 3);
