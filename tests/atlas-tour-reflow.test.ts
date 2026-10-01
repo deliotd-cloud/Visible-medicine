@@ -8,7 +8,7 @@ test('tour title reflow ships matching learner/review styles without changing an
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
  const previous=(p:string)=>JSON.parse(execFileSync('git',['show','047d488a:'+p],{encoding:'utf8',maxBuffer:32e6}));
  const review=json('atlas-review/manifest.json'),before=previous('atlas-review/manifest.json');
- assert.equal(review.revision,'a023f47064b2987c5593d9a7884c7e1937afe001');
+ assert.equal(review.revision,'adad1abe1ad6fdb3c942d1d8b6a98393591bec80');
  // Keep the exact historical reflow delta pinned to its delivered commit;
  // subsequent independently reviewed runtime fixes advance the current import.
  const reflow=JSON.parse(execFileSync('git',['show','1727b2e3:atlas-review/manifest.json'],{encoding:'utf8',maxBuffer:32e6}));
@@ -17,6 +17,7 @@ test('tour title reflow ships matching learner/review styles without changing an
  assert.deepEqual(review.files.map((f:any)=>f.path).sort(),[...before.files.map((f:any)=>f.path),'lib/renal-tour.ts','lib/tarsal-tour.ts','lib/lower-limb-bone-tour.ts','lib/upper-limb-bone-tour.ts',
   'content/body-review-display-pins.json','lib/body-review-display-evidence.ts','lib/body-review-display-integrity.ts',
   'lib/hra-pelvic-guided-dissection.ts','lib/specimen-guided-dissection.ts',
+  'lib/abdominal-guided-dissection.ts','lib/back-guided-dissection.ts',
   ...['foot-sesamoid-teaching','cerebellar-mca-imaging','tentorium-imaging','cranial-bone-quiz'].flatMap(kind=>['lib/'+kind+'.ts','content/'+kind+'.ts','content/'+kind+'-pins.json'])].sort());
  const path='app/whole-body-guided-learning.css',css=readFileSync('atlas-review/'+path,'utf8'),entry=review.files.find((f:any)=>f.path===path);
  assert.equal(createHash('sha256').update(css).digest('hex'),entry.importedSha256);
@@ -33,7 +34,10 @@ test('tour title reflow ships matching learner/review styles without changing an
   assert.deepEqual(manifest.files.filter(retained),old.files.filter(retained));
   const notice=prefix+'LICENSES/THIRD_PARTY_NOTICES.md';
   const earlier=execFileSync('git',['show','047d488a:'+notice],{encoding:'utf8'}).replaceAll('\r','');
-  assert.ok(readFileSync(notice,'utf8').replaceAll('\r','').startsWith(earlier),'All earlier notices retained');
+  const currentNotice=readFileSync(notice,'utf8').replaceAll('\r','');
+  const retainedNotice=currentNotice.replace(/^# Third-party notices\n\n## Abdominal wall and back source-guided dissection \(1 October 2026\)\n[\s\S]+?\n(?=## )/,'# Third-party notices\n\n');
+  assert.equal(retainedNotice,execFileSync('git',['show','c5448a86:'+notice],{encoding:'utf8'}).replaceAll('\r',''),'Only the new guide credit was added');
+  assert.ok(retainedNotice.startsWith(earlier),'All earlier notices retained');
   for(const flag of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection'])assert.equal(manifest[flag],false);
  }
  const learner=json('public/atlas-runtime/head-neck/manifest.json');

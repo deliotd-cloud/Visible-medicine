@@ -1,5 +1,18 @@
 # Third-party notices
 
+## Abdominal wall and back source-guided dissection (1 October 2026)
+
+The optional visibility sequences reuse the already admitted BodyParts3D/DBCLS
+version-3 surfaces and study memberships. Their source-study adaptations in
+`lib/abdominal-guided-dissection.ts` and `lib/back-guided-dissection.ts` retain
+**CC BY-SA 2.1 Japan** and the required credit: BodyParts3D, Copyright© The
+Database Center for Life Science licensed by CC Attribution-Share Alike 2.1 Japan.
+Original shared application code retains its existing grant. Source geometry,
+attribution, notices, downloadable source/model and recipients' ShareAlike rights
+are unchanged. No external prose, figure, scan, font, texture, dependency, paid
+service or mandatory fee added. See `docs/WALL_BACK_GUIDED_DISSECTION.md` for
+scope, unchanged sources and required clinical/device review.
+
 ## Subscapular arterial guided tour (29 September 2026)
 
 Original 123-word captions cite the UAMS upper-limb artery teaching table for

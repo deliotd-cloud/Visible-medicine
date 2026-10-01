@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "a023f47064b2987c5593d9a7884c7e1937afe001",
-  "sha256": "22b4460fa8d226b63ccd5bade5d082c262ba7646abfd3d3cc6c08225f5866d3a",
+  "sourceCommit": "adad1abe1ad6fdb3c942d1d8b6a98393591bec80",
+  "sha256": "0a1e84128fbff27f2d0dc5e1f5a20fa4f7a562251d506ad5f3d5f51d57e20fdb",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -36,7 +36,7 @@
     },
     {
       "path": "atlas-review/app/abdominal-wall-study.tsx",
-      "sha256": "abfd7c65ee4acd4e60540276773646f4f8797204f5a8e3243679fad6c315f368"
+      "sha256": "6c0d05e336441e7d478d914423399f17f235bfeadd15a7daea919c62a4a5b398"
     },
     {
       "path": "atlas-review/app/anatomy-canvas.tsx",
@@ -104,7 +104,7 @@
     },
     {
       "path": "atlas-review/app/back-layers-study.tsx",
-      "sha256": "f72cfee6a900235e3463aa3d5b8f164bb1db923eac1c3781e2b02c68c3bd4cca"
+      "sha256": "ba236487bc1900f89fcb5fe43cf3e1b98abe610b5bcd4e0751e963dec1a02f09"
     },
     {
       "path": "atlas-review/app/body-batch.tsx",
@@ -1855,6 +1855,10 @@
       "sha256": "808a7843520946b378496a3629d12dcea5d708c519f58bb0cc99befa7bb1c147"
     },
     {
+      "path": "atlas-review/lib/abdominal-guided-dissection.ts",
+      "sha256": "73bfb2cc99767b2ede0969bde9cb1db61edb0b97c994e846686cd1bd90720df7"
+    },
+    {
       "path": "atlas-review/lib/abdominal-organ-clinical-curriculum.ts",
       "sha256": "2945f5c4cb8c7ff6656130ca73f03f4cecafd9cadcf342de606a97612d8e8d6a"
     },
@@ -2005,6 +2009,10 @@
     {
       "path": "atlas-review/lib/axial-connective-clinical-curriculum.ts",
       "sha256": "a5b83ef274fbdf6c6828b9e2871148b92d17b78c74064ddb0f205bccd694139e"
+    },
+    {
+      "path": "atlas-review/lib/back-guided-dissection.ts",
+      "sha256": "369af44b99ec6ae40540c17d115082f50213e2be25e93dcb85632eeb8825a46b"
     },
     {
       "path": "atlas-review/lib/back-layers-teaching.ts",
@@ -3240,7 +3248,7 @@
     },
     {
       "path": "atlas-review/lib/specimen-review-material.ts",
-      "sha256": "7410bbc96117decb46ca1cb40a096ddffecbf7031bf1cb684971aa58665f80ba"
+      "sha256": "cd812880a4ceb9fad9c2b7a3c875787cfbcb036e92d2d866eac21f4744e3645a"
     },
     {
       "path": "atlas-review/lib/specimen-review-store.ts",
@@ -3524,7 +3532,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "321e739a44bdcae056978c403ab2c2b6400d338e32acbbf140d5884bf3ee70e5"
+      "sha256": "9c396e9b1b5fc1e540f6f17ee512c1d7f161fe45719b43bb2979077af895ce5c"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3780,7 +3788,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "53320677e7875f60c9c2b5faef2556ff1a3eb83ede327b175a6f2621a7e0c715"
+      "sha256": "fda78179c58fc9b9c0112c3e0ff77ebfbf436ea7f8db8de392c704bb6f05b4a9"
     }
   ]
 }

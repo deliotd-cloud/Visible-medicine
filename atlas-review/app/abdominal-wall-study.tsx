@@ -14,6 +14,7 @@ import { abdominalReferenceTitles } from '@/atlas-review/content/abdominal-wall-
 import { SpecimenLearning } from './um-limb-learning';
 import type { SpecimenTopic } from '@/atlas-review/lib/specimen-links';
 import { modelDeliveryUrl } from '@/atlas-review/lib/model-delivery';
+import { abdominalGuidedDissection } from '@/atlas-review/lib/abdominal-guided-dissection';
 
 export function AbdominalWallTeaching({ surface, definition = abdominalWallDefinition, initialTopic }: {
   surface: SpecimenSurface; definition?: SpecimenDefinition; initialTopic?: SpecimenTopic;
@@ -25,6 +26,7 @@ export function AbdominalWallTeaching({ surface, definition = abdominalWallDefin
     resolveLesson={abdominalTeachingFor} attachmentLabels={{ proximal: 'Origin', distal: 'Insertion' }} referenceTitles={abdominalReferenceTitles} />;
 }
 export function abdominalWallSupplementFor(assetBase = ''): SpecimenSupplement { return {
+  guidedDissection: abdominalGuidedDissection,
   studyLink: (definition, selectedId, studyId, view) => <IndependentStudyLinkControl assetBase={assetBase} definition={definition} selectedId={selectedId} studyId={studyId} view={view} />,
   colors: abdominalWallColors,
   identification: abdominalWallPractice,

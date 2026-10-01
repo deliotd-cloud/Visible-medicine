@@ -2,6 +2,9 @@ import { hraRenalDefinition } from "./hra-renal";
 import { hraRenalTeaching } from "./hra-renal-teaching";
 import { hraPelvisDefinition } from "./hra-pelvis";
 import { hraPelvicGuidedDissection } from './hra-pelvic-guided-dissection';
+import { abdominalGuidedDissection } from './abdominal-guided-dissection';
+import { backGuidedDissection } from './back-guided-dissection';
+import type { SpecimenGuidedDissection } from './specimen-guided-dissection';
 import { hraPelvicTeaching, hraPelvicContextReferenceTitles } from "./hra-pelvis-teaching";
 import renal from "../public/models/hra-renal/catalog.json";
 import pelvis from "../public/models/hra-pelvis/catalog.json";
@@ -36,7 +39,7 @@ import {
 // Explicit source adapters only. More donors require their own admitted source,
 // frame and teaching adapter, not inferred identity matches or migrated approvals.
 type ReviewCatalogue = { source: { credit: string; license: string }; sourceFrame: string; [key: string]: unknown };
-type Adapter = { definition: SpecimenDefinition; raw: ReviewCatalogue; lesson: (d:SpecimenDefinition,s:SpecimenSurface)=>SpecimenLesson|null; titles: Readonly<Record<string,string>>; path:string; limb?:boolean };
+type Adapter = { definition: SpecimenDefinition; raw: ReviewCatalogue; lesson: (d:SpecimenDefinition,s:SpecimenSurface)=>SpecimenLesson|null; titles: Readonly<Record<string,string>>; path:string; limb?:boolean; guide?: (definition: SpecimenDefinition) => SpecimenGuidedDissection | null };
 const registry: Adapter[] = [
   {
     definition: hraRenalDefinition,
@@ -47,14 +50,17 @@ const registry: Adapter[] = [
   },
   {
     definition: hraPelvisDefinition,
+    guide: hraPelvicGuidedDissection,
     raw: { ...pelvis, companionRenal: renal },
     lesson: hraPelvicTeaching,
     titles: hraPelvicContextReferenceTitles,
     path: "/specimens/female-pelvis",
   },
   { definition:abdominalWallDefinition, raw:{...abdominal,sourceFrame:independentStudyRoutes.find(r=>r.key===abdominal.specimenId)!.frame},
+    guide: abdominalGuidedDissection,
     lesson:abdominalTeachingFor, titles:abdominalReferenceTitles, path:'/specimens/abdominal-wall' },
   { definition:backLayersDefinition, raw:{...back,sourceFrame:independentStudyRoutes.find(r=>r.key===back.specimenId)!.frame},
+    guide: backGuidedDissection,
     lesson:backLayersTeachingFor, titles:backLayersReferences, path:'/specimens/back-layers' },
   ...Object.values(limbDefinitions).map((definition):Adapter=>({ definition,
     raw:{...limb,companionKnee:knee,reviewRegion:definition.key,sourceFrame:'um-5t6tz7-v1-2:source-lps'},
@@ -111,8 +117,8 @@ export async function specimenReviewMaterial(
     studies: r.definition.studies,
     limitations: r.definition.limitations,
   };
-  const pelvicGuide = hraPelvicGuidedDissection(r.definition);
-  const guidedDissection = pelvicGuide?.steps.some(step => step.ids.includes(s.id)) ? pelvicGuide : null;
+  const sourceGuide = r.guide?.(r.definition);
+  const guidedDissection = sourceGuide?.steps.some(step => step.ids.includes(s.id)) ? sourceGuide : null;
   const teaching = {
     topics,
     lesson,
