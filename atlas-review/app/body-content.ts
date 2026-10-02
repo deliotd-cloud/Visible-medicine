@@ -113,6 +113,7 @@ import { footVascularQuizLesson } from '../lib/foot-vascular-quiz';
 import { thoracicQuizLesson } from '../lib/thoracic-quiz';
 import { cervicalQuizLesson } from '../lib/cervical-quiz';
 import { cranialBoneQuizLesson } from '../lib/cranial-bone-quiz';
+import { lumbarSacralQuizLesson } from '../lib/lumbar-sacral-quiz';
 import { abdominalOrganQuizLesson } from '../lib/abdominal-organ-quiz';
 import { pelvicOrganQuizLesson } from '../lib/pelvic-organ-quiz';
 import { brainConnectionsQuizLesson } from '../lib/brain-connections-quiz';
@@ -265,6 +266,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (cervicalQuiz) return cervicalQuiz;
   const cranialBoneQuiz = cranialBoneQuizLesson(s, tab);
   if (cranialBoneQuiz) return cranialBoneQuiz;
+  const lumbarSacralQuiz = lumbarSacralQuizLesson(s, tab);
+  if (lumbarSacralQuiz) return lumbarSacralQuiz;
   const thoracicQuiz = thoracicQuizLesson(s, tab);
   if (thoracicQuiz) return thoracicQuiz;
   const circleWillisImaging = circleWillisImagingLesson(s, tab);

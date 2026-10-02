@@ -29,7 +29,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "abd9f39720fffabccbe5484a25710a2feb19afb7adcbe8202cb74991e860f442"
+    "sha256": "294ecfffb03fc981db1006c0afc77c13977bc0c06f9c4771e67d74454ed44854"
   },
   {
     "path": "app/body-explorer.css",
@@ -750,6 +750,14 @@
   {
     "path": "content/lower-venous-imaging.ts",
     "sha256": "107dc5c3938bfe14c68d717ada5e703f7f3ae05462f50612827f3eb5265bc66b"
+  },
+  {
+    "path": "content/lumbar-sacral-quiz-pins.json",
+    "sha256": "32b5975b8b2a0445cb20191611eb99c441b86000fc13df54fdcc2b10814715d2"
+  },
+  {
+    "path": "content/lumbar-sacral-quiz.ts",
+    "sha256": "16886546b7ef20fba6b9be24571e3d2b38e2c15cec5cb66cb8e11535dd302171"
   },
   {
     "path": "content/main-bronchus-xray.ts",
@@ -1810,6 +1818,10 @@
   {
     "path": "lib/lower-venous-imaging.ts",
     "sha256": "56d60e3802bfc6dd8797fa2c36048916306b0084142a4b59e07b070e0f2b7e76"
+  },
+  {
+    "path": "lib/lumbar-sacral-quiz.ts",
+    "sha256": "13306ebd04e4800dfdb5d01361fd88753d75040a6e0504b1997ff52e05bd15ef"
   },
   {
     "path": "lib/main-bronchus-xray.ts",

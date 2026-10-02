@@ -4,8 +4,9 @@ import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
+import {regionalSpreadMilestoneBytes,withoutLumbarSacralNotice} from './atlas-lumbar-sacral-history.ts';
 
-const revision='e3849b6a31eac0ae8e556d753d4fe86e5e19c90a';
+const revision='ac88a3c72de1e69971321e00a883e4b88fc356ce';
 const baseline='167c77f4da6ec16455093008dcacea250b0a6678';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6});
@@ -13,17 +14,20 @@ const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
 
 test('bounded regional Spread reaches learner and protected review without model, licence or access changes',async()=>{
  const review=json('atlas-review/manifest.json'),prior=JSON.parse(old('atlas-review/manifest.json').toString());
- assert.equal(review.revision,revision);assert.equal(review.files.length,947);assert.deepEqual(review.packages,prior.packages);
- assert.deepEqual(review.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path),['lib/body-spread.ts']);
- assert.deepEqual(review.files.filter((f:any)=>prior.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),['app/body-explorer.tsx','app/body-scene.tsx','content/body-renderer-revision.json']);
+ assert.equal(review.revision,revision);assert.equal(review.files.length,950);assert.deepEqual(review.packages,prior.packages);
+ // Preserve the exact Spread epoch; the lumbar regression proves the later delta.
+ const spreadEpoch=JSON.parse(regionalSpreadMilestoneBytes('atlas-review/manifest.json').toString());
+ assert.deepEqual(spreadEpoch.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path),['lib/body-spread.ts']);
+ assert.deepEqual(spreadEpoch.files.filter((f:any)=>prior.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),['app/body-explorer.tsx','app/body-scene.tsx','content/body-renderer-revision.json']);
  for(const f of review.files)assert.equal(sha(readFileSync('atlas-review/'+f.path)),f.importedSha256,f.path);
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,JSON.parse(old('lib/atlas-model-inventory.json').toString()).models);
- for(const [name,count,added] of [['head-neck',920,true],['shoulder',607,false],['lower-limb',100,true]] as const){
+ for(const [name,count,added] of [['head-neck',923,true],['shoulder',610,false],['lower-limb',100,true]] as const){
   const base='public/atlas-runtime/'+name+'/',manifest=json(base+'manifest.json'),previous=JSON.parse(old(base+'manifest.json').toString()),inputs=json(base+'source-inputs.json');
   assert.equal(manifest.sourceCommit,revision);assert.equal(inputs.length,count);assert.equal(inputs.some((f:any)=>f.path==='lib/body-spread.ts'),added);
   assert.deepEqual(manifest.files.filter((f:any)=>f.path.startsWith('models/')),previous.files.filter((f:any)=>f.path.startsWith('models/')));
   for(const flag of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection','imagingConnection'])assert.deepEqual(manifest[flag],previous[flag]);
-  for(const p of ['LICENSES/THIRD_PARTY_NOTICES.md','bundled-dependencies.json','BUNDLED_NOTICES.txt'])assert.deepEqual(readFileSync(base+p),old(base+p));
+  assert.equal(withoutLumbarSacralNotice(readFileSync(base+'LICENSES/THIRD_PARTY_NOTICES.md','utf8')),old(base+'LICENSES/THIRD_PARTY_NOTICES.md').toString());
+  for(const p of ['bundled-dependencies.json','BUNDLED_NOTICES.txt'])assert.deepEqual(readFileSync(base+p),old(base+p));
  }
  const learner=json('public/atlas-runtime/head-neck/manifest.json');
  const text=learner.files.filter((f:any)=>f.path.endsWith('.js')).map((f:any)=>readFileSync('public/atlas-runtime/head-neck/'+f.path,'utf8')).join('\n');
@@ -70,7 +74,7 @@ test('Spread preserves all teaching and rejects stale root/nested geometry befor
   }nested++;
  }
  assert.deepEqual({roots,nested,rejected},{roots:1104,nested:108,rejected:1428});
- for(const p of ['content/body-review-display-pins.json','content/shoulder-arm-muscle-imaging.ts','content/shoulder-arm-muscle-imaging-pins.json','content/shoulder-arterial-ct.ts','content/shoulder-arterial-mri.ts','LICENSES/THIRD_PARTY_NOTICES.md'])assert.deepEqual(readFileSync('atlas-review/'+p),old('atlas-review/'+p));
+ for(const p of ['content/body-review-display-pins.json','content/shoulder-arm-muscle-imaging.ts','content/shoulder-arm-muscle-imaging-pins.json','content/shoulder-arterial-ct.ts','content/shoulder-arterial-mri.ts','LICENSES/THIRD_PARTY_NOTICES.md'])assert.deepEqual(regionalSpreadMilestoneBytes('atlas-review/'+p),old('atlas-review/'+p));
  // The host binder conservatively fingerprints the whole review integration.
  // Dedicated shoulder source revisions stay exact; website-bound tracks change.
  const shoulder=json('atlas-review/content/review-revisions.json'),priorShoulder=JSON.parse(old('atlas-review/content/review-revisions.json').toString());

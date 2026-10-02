@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 test('all ten upper-limb bone selections share source-bound learner and review questions',async()=>{
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const learner=JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json','utf8'));
-  assert.equal(learner.sourceCommit,'e3849b6a31eac0ae8e556d753d4fe86e5e19c90a');
+  assert.equal(learner.sourceCommit,'ac88a3c72de1e69971321e00a883e4b88fc356ce');
   const path='lib/upper-limb-bone-reasoning.ts';
   const input=JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json','utf8')).find((r:any)=>r.path===path);
   const file=review.files.find((r:any)=>r.path===path);assert(file&&input);

@@ -1,0 +1,458 @@
+{
+  "parentCommit": "e3849b6a31eac0ae8e556d753d4fe86e5e19c90a",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "spine-skeleton",
+      "url": "/models/bodyparts3d/full-body/spine-skeleton.glb",
+      "bytes": 1286192,
+      "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957",
+      "structures": 25
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "ef30cad99e821ea1c1c22ea03443a6510400f8da297b0cb02c470b353120365b",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:first-lumbar-vertebra",
+        "fmaId": "FMA13072",
+        "name": "First lumbar vertebra",
+        "sourceName": "first lumbar vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "abdomen"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA13072",
+        "bounds": {
+          "min": [
+            -0.3577980101108551,
+            2.1520001888275146,
+            -0.2077759951353073
+          ],
+          "max": [
+            0.3446139991283417,
+            2.719799757003784,
+            0.5948000550270081
+          ]
+        },
+        "center": [
+          -0.006592005491256714,
+          2.4358999729156494,
+          0.19351202994585037
+        ],
+        "anchor": [
+          0.004260269924998283,
+          2.477099657058716,
+          0.2578299641609192
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3157",
+            "sha256": "67940f16382935851ebeb7a86c926dbf922070f390c438fdbbb56f7b7fb76057"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "numbering",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find first lumbar vertebra on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:second-lumbar-vertebra",
+        "fmaId": "FMA13073",
+        "name": "Second lumbar vertebra",
+        "sourceName": "second lumbar vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "abdomen"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA13073",
+        "bounds": {
+          "min": [
+            -0.4035089910030365,
+            1.9231598377227783,
+            -0.15651199221611023
+          ],
+          "max": [
+            0.3906079828739166,
+            2.3976001739501953,
+            0.6471999883651733
+          ]
+        },
+        "center": [
+          -0.0064505040645599365,
+          2.160380005836487,
+          0.24534399807453156
+        ],
+        "anchor": [
+          -0.04304170235991478,
+          2.146899938583374,
+          0.3003379702568054
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3159",
+            "sha256": "5e6301d2020ba73167e71c274848ddcbec0f7936d9f26a78f2de8ffa82f095c7"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ligament",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find second lumbar vertebra on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:third-lumbar-vertebra",
+        "fmaId": "FMA13074",
+        "name": "Third lumbar vertebra",
+        "sourceName": "third lumbar vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "abdomen"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA13074",
+        "bounds": {
+          "min": [
+            -0.40202900767326355,
+            1.6769299507141113,
+            -0.20486000180244446
+          ],
+          "max": [
+            0.3884100019931793,
+            2.097299814224243,
+            0.653529942035675
+          ]
+        },
+        "center": [
+          -0.006809502840042114,
+          1.8871148824691772,
+          0.2243349701166153
+        ],
+        "anchor": [
+          -0.006866959854960442,
+          1.9032598733901978,
+          0.2972889840602875
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3162",
+            "sha256": "aa58bbebf75e858d5258926b3f85ef6bc27f765464e87bfc828baf24156bf155"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "softTissue",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find third lumbar vertebra on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:fourth-lumbar-vertebra",
+        "fmaId": "FMA13075",
+        "name": "Fourth lumbar vertebra",
+        "sourceName": "fourth lumbar vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "abdomen"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA13075",
+        "bounds": {
+          "min": [
+            -0.4276610314846039,
+            1.3866400718688965,
+            -0.23843799531459808
+          ],
+          "max": [
+            0.4141540229320526,
+            1.8340197801589966,
+            0.6040499806404114
+          ]
+        },
+        "center": [
+          -0.006753504276275635,
+          1.6103299260139465,
+          0.18280599266290665
+        ],
+        "anchor": [
+          0.0035792801063507795,
+          1.6106799840927124,
+          0.22114303708076477
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3165",
+            "sha256": "2b02ea3874d39295b15a7de2a2b2dd1367cf5a00a5ba5f87519f2a7064b2286f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "degenerativeSlip",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find fourth lumbar vertebra on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:fifth-lumbar-vertebra",
+        "fmaId": "FMA13076",
+        "name": "Fifth lumbar vertebra",
+        "sourceName": "fifth lumbar vertebra",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "abdomen"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA13076",
+        "bounds": {
+          "min": [
+            -0.5100070238113403,
+            1.0459496974945068,
+            -0.31755000352859497
+          ],
+          "max": [
+            0.4957360029220581,
+            1.5483300685882568,
+            0.4907650053501129
+          ]
+        },
+        "center": [
+          -0.007135510444641113,
+          1.2971398830413818,
+          0.08660750091075897
+        ],
+        "anchor": [
+          -0.03946299850940704,
+          1.282289981842041,
+          0.07836498320102692
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3168",
+            "sha256": "0b8d0317800abd7c7cb66473cfa23bcecf2b2a8060a4434f32eb9f6ea93c1cc4"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "pars",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find fifth lumbar vertebra on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:bone:sacrum",
+        "fmaId": "FMA16202",
+        "name": "Sacrum",
+        "sourceName": "sacrum",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "pelvis",
+          "thigh"
+        ],
+        "bundle": "spine-skeleton",
+        "nodeName": "FMA16202",
+        "bounds": {
+          "min": [
+            -0.5959120392799377,
+            -0.17163024842739105,
+            -0.5725374817848206
+          ],
+          "max": [
+            0.5820289850234985,
+            1.2720000743865967,
+            0.31396400928497314
+          ]
+        },
+        "center": [
+          -0.0069415271282196045,
+          0.5501849129796028,
+          -0.1292867362499237
+        ],
+        "anchor": [
+          0.0035980800166726112,
+          0.6635797023773193,
+          -0.22178100049495697
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3393",
+            "sha256": "cd04cc9f78d758ba34e92896914f647d22d257b9e7e51b97764670f694033489"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "sacrum",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find sacrum on the model."
+        }
+      }
+    }
+  ]
+}

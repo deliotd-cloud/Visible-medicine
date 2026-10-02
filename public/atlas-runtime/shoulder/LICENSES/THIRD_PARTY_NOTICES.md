@@ -2170,3 +2170,15 @@ dependency, font, texture, paid API or mandatory fee is introduced. Source limit
 reference scope and radiologist review requirements are documented in
 `docs/CUBITAL_VENOUS_ULTRASOUND.md`. No patient registration, access entitlement,
 compressibility, Doppler finding or procedural safety is supplied by these meshes.
+
+## Lumbar and sacral structure checks — 2 October 2026
+
+Six original draft questions use factual reading references to AAOS OrthoInfo,
+Konin and Walz (AJNR 2010, PMID20203111), and Lyders et al. (AJNR 2010,
+PMC7964142). No publisher prose, diagram, photograph, table, scan, PDF or dataset
+is imported. Reading access does not grant redistribution rights or endorsement.
+Original questions/code use the project's MIT terms; existing BodyParts3D CC BY
+4.0 models, attribution and held anatomy are unchanged. No new model, font,
+texture, dependency, paid API or mandatory fee. References and clinical review
+scope: `docs/LUMBAR_SACRAL_QUIZ.md`. No patient-level numbering, CT/MRI registration,
+diagnostic result or clinical approval is supplied by these questions.

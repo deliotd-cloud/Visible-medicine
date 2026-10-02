@@ -6,27 +6,27 @@ import {createHash} from 'node:crypto';
 import {dirname} from 'node:path';
 import {build} from 'esbuild';
 
-const source='e3849b6a31eac0ae8e556d753d4fe86e5e19c90a';
+const source='ac88a3c72de1e69971321e00a883e4b88fc356ce';
 const beforeWebsite='4aa346e7923e3b303ad869d71e0ea36044d61aa6';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
 const old=(p:string)=>Buffer.from(execFileSync('git',['show',beforeWebsite+':'+p],{maxBuffer:32e6}));
 const targetFmas=new Set(['FMA22964','FMA22965','FMA22968','FMA22969']);
-async function reviewApi(previous=false){
+async function reviewApi(previous=false,cubitalMilestone=false){
  const output=await build({stdin:{contents:`export {bodyReviewSnapshot,bodyReviewMaterial,bodyReviewSummaries} from './atlas-review/lib/body-review-material';
  export {bodyReviewContext} from './atlas-review/lib/body-review-context';
  export {blankBodyReview,bodyApprovalProblems,bodyReviewStale,bodyDecisionLabel} from './atlas-review/lib/body-review-decisions';
  export {postBodyDecision} from './atlas-review/lib/body-review-api';`,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',
- plugins:previous?[{name:'exact-before-cubital-teaching-and-renderer',setup(p){
+ plugins:previous||cubitalMilestone?[{name:'exact-before-cubital-teaching-and-renderer',setup(p){
   for(const file of ['app/body-content.ts','content/body-renderer-revision.json'])
-   p.onLoad({filter:file.endsWith('.ts')?/[\\/]app[\\/]body-content\.ts$/:/[\\/]content[\\/]body-renderer-revision\.json$/},args=>({contents:old('atlas-review/'+file).toString('utf8'),loader:file.endsWith('.ts')?'ts':'json',resolveDir:dirname(args.path)}));
+   p.onLoad({filter:file.endsWith('.ts')?/[\\/]app[\\/]body-content\.ts$/:/[\\/]content[\\/]body-renderer-revision\.json$/},args=>({contents:(cubitalMilestone?execFileSync('git',['show','167c77f4da6ec16455093008dcacea250b0a6678:atlas-review/'+file],{maxBuffer:32e6}):old('atlas-review/'+file)).toString('utf8'),loader:file.endsWith('.ts')?'ts':'json',resolveDir:dirname(args.path)}));
  }}]:[]});
  return import('data:text/javascript;base64,'+Buffer.from(output.outputFiles[0].text).toString('base64'));
 }
 
 test('four exact superficial veins deliver original ultrasound orientation to learner and protected review without new models or access',async()=>{
  const review=json('atlas-review/manifest.json'),priorReview=JSON.parse(old('atlas-review/manifest.json').toString('utf8'));
- assert.equal(review.revision,source);assert.equal(review.files.length,947);assert.deepEqual(review.packages,priorReview.packages);
+ assert.equal(review.revision,source);assert.equal(review.files.length,950);assert.deepEqual(review.packages,priorReview.packages);
  // Keep this editorial delta at its saved epoch; current Spread delta is tested separately.
  const cubitalMilestone=JSON.parse(execFileSync('git',['show','167c77f4da6ec16455093008dcacea250b0a6678:atlas-review/manifest.json'],{encoding:'utf8',maxBuffer:32e6}));
  assert.equal(cubitalMilestone.files.length,946);
@@ -36,7 +36,7 @@ test('four exact superficial veins deliver original ultrasound orientation to le
  assert.deepEqual(new Set(catalog.structures.map((s:any)=>s.fmaId)),targetFmas);
  assert.deepEqual(catalog.structures.map((s:any)=>s.sources[0].file),['FJ2287','FJ2235','FJ2286','FJ2234']);
  const learner=json('public/atlas-runtime/head-neck/manifest.json'),inputs=json('public/atlas-runtime/head-neck/source-inputs.json');
- assert.equal(learner.sourceCommit,source);assert.equal(inputs.length,920);
+ assert.equal(learner.sourceCommit,source);assert.equal(inputs.length,923);
  const text=learner.files.filter((f:any)=>f.path.endsWith('.js')).map((f:any)=>{const b=readFileSync('public/atlas-runtime/head-neck/'+f.path);assert.equal(sha(b),f.sha256);return new TextDecoder().decode(b);}).join('\n');
  for(const p of ['content/cubital-venous-ultrasound.ts','lib/cubital-venous-ultrasound.ts'])assert(inputs.some((i:any)=>i.path===p));
  for(const s of catalog.structures){const packet=await api.bodyReviewMaterial(s.id);assert(packet);assert.equal(packet.approval,false);assert.deepEqual(packet.source.structure,s);
@@ -58,7 +58,7 @@ test('four exact superficial veins deliver original ultrasound orientation to le
 });
 
 test('only four ultrasound topics change; old teaching submissions fail before storage and review tracks stay independent',async()=>{
- const now=await reviewApi(),before=await reviewApi(true),forbidden=new Proxy({},{get(){throw Error('Invalid submission reached storage');}});
+ const now=await reviewApi(false,true),before=await reviewApi(true),forbidden=new Proxy({},{get(){throw Error('Invalid submission reached storage');}});
  assert.deepEqual(now.bodyReviewSummaries,before.bodyReviewSummaries);assert.equal(now.bodyReviewSummaries.length,1104);
  let changed=0,unchanged=0,teachingChanged=0,teachingPreserved=0,rejected=0;
  for(const row of now.bodyReviewSummaries){const n=now.bodyReviewSnapshot(row.id),b=before.bodyReviewSnapshot(row.id);assert(n&&b);

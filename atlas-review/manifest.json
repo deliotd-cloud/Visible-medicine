@@ -1,5 +1,5 @@
 {
-  "revision": "e3849b6a31eac0ae8e556d753d4fe86e5e19c90a",
+  "revision": "ac88a3c72de1e69971321e00a883e4b88fc356ce",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -538,8 +538,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "abd9f39720fffabccbe5484a25710a2feb19afb7adcbe8202cb74991e860f442",
-      "importedSha256": "abd9f39720fffabccbe5484a25710a2feb19afb7adcbe8202cb74991e860f442"
+      "sourceSha256": "294ecfffb03fc981db1006c0afc77c13977bc0c06f9c4771e67d74454ed44854",
+      "importedSha256": "294ecfffb03fc981db1006c0afc77c13977bc0c06f9c4771e67d74454ed44854"
     },
     {
       "path": "lib/central-vessel-imaging.ts",
@@ -1345,6 +1345,21 @@
       "path": "content/cranial-bone-quiz.ts",
       "sourceSha256": "d3c9488721a2ec4d2b0f2cb623fe1996c3db8cb4adb3695d438e0ff0e1873a76",
       "importedSha256": "d3c9488721a2ec4d2b0f2cb623fe1996c3db8cb4adb3695d438e0ff0e1873a76"
+    },
+    {
+      "path": "lib/lumbar-sacral-quiz.ts",
+      "sourceSha256": "13306ebd04e4800dfdb5d01361fd88753d75040a6e0504b1997ff52e05bd15ef",
+      "importedSha256": "13306ebd04e4800dfdb5d01361fd88753d75040a6e0504b1997ff52e05bd15ef"
+    },
+    {
+      "path": "content/lumbar-sacral-quiz-pins.json",
+      "sourceSha256": "32b5975b8b2a0445cb20191611eb99c441b86000fc13df54fdcc2b10814715d2",
+      "importedSha256": "32b5975b8b2a0445cb20191611eb99c441b86000fc13df54fdcc2b10814715d2"
+    },
+    {
+      "path": "content/lumbar-sacral-quiz.ts",
+      "sourceSha256": "16886546b7ef20fba6b9be24571e3d2b38e2c15cec5cb66cb8e11535dd302171",
+      "importedSha256": "16886546b7ef20fba6b9be24571e3d2b38e2c15cec5cb66cb8e11535dd302171"
     },
     {
       "path": "lib/abdominal-organ-quiz.ts",
@@ -2913,8 +2928,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "3154c7b2ecd2a5477b1b3e80ca92dd6cde8df044c094fa0863f965495b1397d5",
-      "importedSha256": "ad9e6755d1d70a462d6f451aaa6f7addb08ea9f9123217857111fffee5cffeb3"
+      "sourceSha256": "d054d4661821a7b13aef7b5c640a08634a507c50a6fdc8a6a6268dbbea830f2b",
+      "importedSha256": "eada37e2c0e87a229153282da23aad832b8ec8dfd066c38e0d17cf1d6068ff98"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3274,7 +3289,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "b11a64faee7da01fc540154c35da783198b776aed2e01ae50b9a3ff165ea14e0",
-      "importedSha256": "e50f973db83ea259f7d6e7c5f11bb174ab24fc1daf66cd8cb460962c7ce628f7"
+      "importedSha256": "410ef7f4a656ede6ee4d91cd437bf17c158a01e90e46af97a3d27684392dcc4b"
     },
     {
       "path": "app/review/review.css",
@@ -3308,8 +3323,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "f6ac88f40df1ac4a65159cc9286d80d3b7ac93f785ccdc5da535f7ba6051e37e",
-      "importedSha256": "f6ac88f40df1ac4a65159cc9286d80d3b7ac93f785ccdc5da535f7ba6051e37e"
+      "sourceSha256": "bce2072e37b64f55c3cb7fbe1889516d0bee4dbfecd15466df4d9afe91c8797f",
+      "importedSha256": "bce2072e37b64f55c3cb7fbe1889516d0bee4dbfecd15466df4d9afe91c8797f"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -4653,8 +4668,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "4627118a7feaa2ebeb33ecd00cf2f51190f7eba2e9e2ce01bc05d1c38fc5bc69",
-      "importedSha256": "4627118a7feaa2ebeb33ecd00cf2f51190f7eba2e9e2ce01bc05d1c38fc5bc69"
+      "sourceSha256": "a307d58e94218d038f62fc8e4390883c08385523f843720fe49091eda37d535a",
+      "importedSha256": "a307d58e94218d038f62fc8e4390883c08385523f843720fe49091eda37d535a"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -4753,5 +4768,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "320b85c9055f5c705a69124a259aa9bd37c58936b2bedb14b78e2628a869609a"
+  "websiteIntegrationSha256": "1c2c6cd64b9075b1376f556c7abc4d199754fa276e8637e77cf7a18196b1a7d3"
 }
