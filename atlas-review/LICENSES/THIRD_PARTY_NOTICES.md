@@ -2207,3 +2207,28 @@ and anatomical validation holds remain unchanged. No new asset, dependency,
 font, texture, paid API or mandatory fee. See `docs/WRIST_ULTRASOUND.md` for exact
 references and review boundaries. No echoes, patient registration, diagnostic
 findings or procedural safety are supplied by the model.
+
+## Carpal-bone structure checks — 2 October 2026
+
+Eight original questions serve sixteen existing bilateral bone selections.
+Włodarczyk, J., Czaplicka, K., Tabor, Z., Wojciechowski, W. and Urbanik, A.:
+Segmentation of bones in magnetic resonance images of the wrist, Int J CARS
+10:419–431 (2015), https://doi.org/10.1007/s11548-014-1105-x. Publisher rights:
+https://link.springer.com/article/10.1007/s11548-014-1105-x identifies Creative
+Commons Attribution allowing any use with author/source credit; the HTML does
+not specify a licence version, so none is invented here. Rusli, W.M.R. and
+Kedgley, A.E.: Statistical shape modelling of the first carpometacarpal joint
+reveals high variation in morphology, Biomech Model Mechanobiol 19:1203–1210
+(2020), https://doi.org/10.1007/s10237-019-01257-8, CC BY 4.0,
+https://creativecommons.org/licenses/by/4.0/. These factual question adaptations
+and explanations are our original interpretation, not publisher wording or
+endorsement. Author/year credits, source and licence information are retained.
+No article prose, figure, scan, table, PDF, algorithm or dataset is imported.
+
+AAOS OrthoInfo scaphoid-fracture and ESSR wrist-guideline links support factual
+reading only; they are not permission to redistribute their images or prose.
+OpenStax's non-commercial current edition is excluded from these questions and
+citations. Original teaching/code uses project MIT terms; existing BodyParts3D
+CC BY 4.0 models/credits and anatomical holds remain unchanged. No new model,
+font, texture, dependency, paid service or mandatory fee is introduced.
+Exact references, scope and clinical review: `docs/CARPAL_BONE_QUIZ.md`.

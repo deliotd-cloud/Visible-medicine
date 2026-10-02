@@ -1,5 +1,5 @@
 {
-  "revision": "acd99b11e279a0525f1488456c0a8adf2abb2cf7",
+  "revision": "49db4337ad84bee7d1823050f5b90ed43cf647c1",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -538,8 +538,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "f9e50fa3e5482b06f7d267a7c749be652362523122116f0e75c1d1055e838dac",
-      "importedSha256": "f9e50fa3e5482b06f7d267a7c749be652362523122116f0e75c1d1055e838dac"
+      "sourceSha256": "7ca537e126e08bfb3622a1d54a99d83d724101b9a1fa2032734d5eca2513e457",
+      "importedSha256": "7ca537e126e08bfb3622a1d54a99d83d724101b9a1fa2032734d5eca2513e457"
     },
     {
       "path": "lib/central-vessel-imaging.ts",
@@ -1360,6 +1360,21 @@
       "path": "content/lumbar-sacral-quiz.ts",
       "sourceSha256": "16886546b7ef20fba6b9be24571e3d2b38e2c15cec5cb66cb8e11535dd302171",
       "importedSha256": "16886546b7ef20fba6b9be24571e3d2b38e2c15cec5cb66cb8e11535dd302171"
+    },
+    {
+      "path": "lib/carpal-bone-quiz.ts",
+      "sourceSha256": "cb790de5a77cb319c47175dc638101e53ad6c55049ee5465107efd2af5373bbb",
+      "importedSha256": "cb790de5a77cb319c47175dc638101e53ad6c55049ee5465107efd2af5373bbb"
+    },
+    {
+      "path": "content/carpal-bone-quiz-pins.json",
+      "sourceSha256": "af82e70ff70cd55311b0dc8224e593e83dbb739b6d31cea5429974aa7814e5dd",
+      "importedSha256": "af82e70ff70cd55311b0dc8224e593e83dbb739b6d31cea5429974aa7814e5dd"
+    },
+    {
+      "path": "content/carpal-bone-quiz.ts",
+      "sourceSha256": "21e6966f04c51da49626fab908bf557b7dac20b460d314dc3a8ea8ad0f0f7e64",
+      "importedSha256": "21e6966f04c51da49626fab908bf557b7dac20b460d314dc3a8ea8ad0f0f7e64"
     },
     {
       "path": "lib/wrist-ultrasound.ts",
@@ -2948,8 +2963,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "e143e9651ec2a07e9f8b6f68363062a0c7987e4304ad6dd8113b37a168bc60b9",
-      "importedSha256": "95cde35f30afd3728d4db721127561f1d44117637658ba1325483fd3a99291fb"
+      "sourceSha256": "7c336f17ca02e4f6d56b38c04e6f31216a0de613c9aa2829695695837792deb1",
+      "importedSha256": "e67c581a8b09c40ebe7404537218b1dc1d2133e03a72d7270dba616d7ff12830"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3309,7 +3324,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "b11a64faee7da01fc540154c35da783198b776aed2e01ae50b9a3ff165ea14e0",
-      "importedSha256": "2e7b30cb826a8aa5af92d6a1c0c6745a1d03fb8a50ac3cd0d49db9993aa992e1"
+      "importedSha256": "efcc78c05b7cc749126878dd79268eaff991186ff082fe028d9e6c4f687ddd0d"
     },
     {
       "path": "app/review/review.css",
@@ -3343,8 +3358,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "274600c8f106c0081964ff278f79556bc2086c92f3e9835c82a1d80cafe0e841",
-      "importedSha256": "274600c8f106c0081964ff278f79556bc2086c92f3e9835c82a1d80cafe0e841"
+      "sourceSha256": "c20cf57222ef832133944adc899be072540503ed14643a86658cbb1294094c5a",
+      "importedSha256": "c20cf57222ef832133944adc899be072540503ed14643a86658cbb1294094c5a"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -4688,8 +4703,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "499aec376f3ec6e1d2f608a6147c5a7f8028a3c2f54a619e0df283ac9ef4d5f9",
-      "importedSha256": "499aec376f3ec6e1d2f608a6147c5a7f8028a3c2f54a619e0df283ac9ef4d5f9"
+      "sourceSha256": "3584ac26d0587cc170361a56df498a2213b46de854ae0ca3fdbc20f671095ff8",
+      "importedSha256": "3584ac26d0587cc170361a56df498a2213b46de854ae0ca3fdbc20f671095ff8"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -4788,5 +4803,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "d494c1862fc5ff3416b144edec8f2f5b6cf685aa3bd2e512a0a502035343adc7"
+  "websiteIntegrationSha256": "6df4dae374d0aeefd66d7368ea1a2f3423a96944bbe81f9087347d04ef068f26"
 }

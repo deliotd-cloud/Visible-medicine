@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 test('inferior-collicular teaching is exact across learner and review, never acquired-image approval',async()=>{
  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
  const inputs=JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json','utf8'));
- assert.equal(review.revision,'acd99b11e279a0525f1488456c0a8adf2abb2cf7');
+ assert.equal(review.revision,'49db4337ad84bee7d1823050f5b90ed43cf647c1');
  for(const path of ['content/collicular-brachia-teaching.ts','content/nested-teaching-bindings.v1.json','lib/nested-teaching.ts']){
   const file=review.files.find((f:any)=>f.path===path);assert(file);
   assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,file.sourceSha256);

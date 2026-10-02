@@ -6,25 +6,26 @@ import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {lumbarSacralMilestoneBytes,withoutWristUltrasoundNotice} from './atlas-wrist-ultrasound-history.ts';
 import {wristUltrasoundMilestoneBytes} from './atlas-circle-willis-history.ts';
-const revision='acd99b11e279a0525f1488456c0a8adf2abb2cf7';
+const revision='49db4337ad84bee7d1823050f5b90ed43cf647c1';
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
-async function api(previous=false){
+async function api(previous=false,wristMilestone=false){
  const result=await build({stdin:{contents:`export * from './atlas-review/app/body-content';
  export * from './atlas-review/content/wrist-ultrasound';export * from './atlas-review/lib/wrist-ultrasound';
  export * from './atlas-review/lib/body-review-material';export * from './atlas-review/lib/body-review-context';
  export * from './atlas-review/lib/body-review-response';export * from './atlas-review/lib/body-review-decisions';export * from './atlas-review/lib/body-review-api';
  export * from './atlas-review/lib/nested-review-material';export * from './atlas-review/lib/nested-review';export * from './atlas-review/lib/nested-review-api';`,
  resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',
- plugins:previous?[{name:'exact-pre-wrist-ultrasound-website',setup(p){
-  for(const file of ['app/body-content.ts','content/body-renderer-revision.json'])p.onLoad({filter:file.endsWith('.ts')?/[\\/]app[\\/]body-content\.ts$/:/[\\/]content[\\/]body-renderer-revision\.json$/},args=>({contents:lumbarSacralMilestoneBytes('atlas-review/'+file).toString(),loader:file.endsWith('.ts')?'ts':'json',resolveDir:dirname(args.path)}));
+ plugins:previous||wristMilestone?[{name:'exact-wrist-ultrasound-website-history',setup(p){
+  const milestone=previous?lumbarSacralMilestoneBytes:wristUltrasoundMilestoneBytes;
+  for(const file of ['app/body-content.ts','content/body-renderer-revision.json'])p.onLoad({filter:file.endsWith('.ts')?/[\\/]app[\\/]body-content\.ts$/:/[\\/]content[\\/]body-renderer-revision\.json$/},args=>({contents:milestone('atlas-review/'+file).toString(),loader:file.endsWith('.ts')?'ts':'json',resolveDir:dirname(args.path)}));
  }}]:[]});
  return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
 }
 
 test('eight exact wrist Ultrasound drafts reach lazy learner teaching and protected unsigned review',async()=>{
  const review=json('atlas-review/manifest.json'),prior=JSON.parse(lumbarSacralMilestoneBytes('atlas-review/manifest.json').toString());
- assert.equal(review.revision,revision);assert.equal(review.files.length,954);assert.deepEqual(review.packages,prior.packages);
+ assert.equal(review.revision,revision);assert.equal(review.files.length,957);assert.deepEqual(review.packages,prior.packages);
  const wristDelivery=JSON.parse(wristUltrasoundMilestoneBytes('atlas-review/manifest.json').toString());
  assert.deepEqual(wristDelivery.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),['content/wrist-ultrasound-pins.json','content/wrist-ultrasound.ts','lib/wrist-ultrasound.ts']);
  for(const file of review.files)assert.equal(sha(readFileSync('atlas-review/'+file.path)),file.importedSha256,file.path);
@@ -54,7 +55,7 @@ test('eight exact wrist Ultrasound drafts reach lazy learner teaching and protec
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,JSON.parse(lumbarSacralMilestoneBytes('lib/atlas-model-inventory.json').toString()).models);
  for(const name of ['head-neck','shoulder','lower-limb']){
   const base='public/atlas-runtime/'+name+'/',manifest=json(base+'manifest.json'),old=JSON.parse(lumbarSacralMilestoneBytes(base+'manifest.json').toString());
-  assert.equal(manifest.sourceCommit,revision);assert.equal(json(base+'source-inputs.json').length,({'head-neck':927,shoulder:613,'lower-limb':100} as Record<string,number>)[name]);
+  assert.equal(manifest.sourceCommit,revision);assert.equal(json(base+'source-inputs.json').length,({'head-neck':930,shoulder:616,'lower-limb':100} as Record<string,number>)[name]);
   assert.deepEqual(manifest.files.filter((f:any)=>f.path.startsWith('models/')),old.files.filter((f:any)=>f.path.startsWith('models/')));
   for(const flag of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection','imagingConnection'])assert.deepEqual(manifest[flag],old[flag]);
   assert.equal(withoutWristUltrasoundNotice(readFileSync(base+'LICENSES/THIRD_PARTY_NOTICES.md','utf8')),lumbarSacralMilestoneBytes(base+'LICENSES/THIRD_PARTY_NOTICES.md').toString());
@@ -64,7 +65,9 @@ test('eight exact wrist Ultrasound drafts reach lazy learner teaching and protec
 });
 
 test('only eight Ultrasound topics change; all other root/nested packets and stale submission gates retained',async()=>{
- const now=await api(),before=await api(true),targets=new Set(json('atlas-review/content/wrist-ultrasound-pins.json').entries.map((e:any)=>e.identity.id));
+ // Freeze this original eight-topic delta at its exact saved delivery epoch.
+ // Current delivery is exercised above and the later carpal delta has its own full proof.
+ const now=await api(false,true),before=await api(true),targets=new Set(json('atlas-review/content/wrist-ultrasound-pins.json').entries.map((e:any)=>e.identity.id));
  assert.deepEqual(now.bodyReviewSummaries,before.bodyReviewSummaries);assert.equal(now.bodyReviewSummaries.length,1104);
  const storage=new Proxy({},{get(){throw Error('Stale request reached storage');}});
  const request=(body:any)=>new Request('https://review.test/api/review',{method:'POST',headers:{origin:'https://review.test','content-type':'application/json','oai-authenticated-user-id':'SYNTHETIC_WRIST_US_TEST'},body:JSON.stringify(body)});

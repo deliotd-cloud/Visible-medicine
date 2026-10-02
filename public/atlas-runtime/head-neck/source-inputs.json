@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "499aec376f3ec6e1d2f608a6147c5a7f8028a3c2f54a619e0df283ac9ef4d5f9"
+    "sha256": "3584ac26d0587cc170361a56df498a2213b46de854ae0ca3fdbc20f671095ff8"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "f9e50fa3e5482b06f7d267a7c749be652362523122116f0e75c1d1055e838dac"
+    "sha256": "7ca537e126e08bfb3622a1d54a99d83d724101b9a1fa2032734d5eca2513e457"
   },
   {
     "path": "app/body-education-link.ts",
@@ -606,6 +606,14 @@
   {
     "path": "content/cardiac-xray-teaching.ts",
     "sha256": "65ae09bf24479ff492b55304299a88fbfc15f0dde7277e35df4d856f59fe01a8"
+  },
+  {
+    "path": "content/carpal-bone-quiz-pins.json",
+    "sha256": "af82e70ff70cd55311b0dc8224e593e83dbb739b6d31cea5429974aa7814e5dd"
+  },
+  {
+    "path": "content/carpal-bone-quiz.ts",
+    "sha256": "21e6966f04c51da49626fab908bf557b7dac20b460d314dc3a8ea8ad0f0f7e64"
   },
   {
     "path": "content/central-neural-imaging-pins.json",
@@ -2102,6 +2110,10 @@
   {
     "path": "lib/cardiac.ts",
     "sha256": "482facae9feb332a9899d008cca33aa6bb950046ae7ea96ea2ee67a89001c6ea"
+  },
+  {
+    "path": "lib/carpal-bone-quiz.ts",
+    "sha256": "cb790de5a77cb319c47175dc638101e53ad6c55049ee5465107efd2af5373bbb"
   },
   {
     "path": "lib/carpal-tour.ts",

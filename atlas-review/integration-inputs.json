@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "acd99b11e279a0525f1488456c0a8adf2abb2cf7",
-  "sha256": "d494c1862fc5ff3416b144edec8f2f5b6cf685aa3bd2e512a0a502035343adc7",
+  "sourceCommit": "49db4337ad84bee7d1823050f5b90ed43cf647c1",
+  "sha256": "6df4dae374d0aeefd66d7368ea1a2f3423a96944bbe81f9087347d04ef068f26",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -112,7 +112,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "f9e50fa3e5482b06f7d267a7c749be652362523122116f0e75c1d1055e838dac"
+      "sha256": "7ca537e126e08bfb3622a1d54a99d83d724101b9a1fa2032734d5eca2513e457"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -716,7 +716,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "274600c8f106c0081964ff278f79556bc2086c92f3e9835c82a1d80cafe0e841"
+      "sha256": "c20cf57222ef832133944adc899be072540503ed14643a86658cbb1294094c5a"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -741,6 +741,14 @@
     {
       "path": "atlas-review/content/cardiac-xray-teaching.ts",
       "sha256": "65ae09bf24479ff492b55304299a88fbfc15f0dde7277e35df4d856f59fe01a8"
+    },
+    {
+      "path": "atlas-review/content/carpal-bone-quiz-pins.json",
+      "sha256": "af82e70ff70cd55311b0dc8224e593e83dbb739b6d31cea5429974aa7814e5dd"
+    },
+    {
+      "path": "atlas-review/content/carpal-bone-quiz.ts",
+      "sha256": "21e6966f04c51da49626fab908bf557b7dac20b460d314dc3a8ea8ad0f0f7e64"
     },
     {
       "path": "atlas-review/content/central-neural-imaging-pins.json",
@@ -2199,6 +2207,10 @@
       "sha256": "482facae9feb332a9899d008cca33aa6bb950046ae7ea96ea2ee67a89001c6ea"
     },
     {
+      "path": "atlas-review/lib/carpal-bone-quiz.ts",
+      "sha256": "cb790de5a77cb319c47175dc638101e53ad6c55049ee5465107efd2af5373bbb"
+    },
+    {
       "path": "atlas-review/lib/carpal-tour.ts",
       "sha256": "bb5ca59e6c6d9ab153800b77c4dc8786d132493165fd6020257971bc1ef20f35"
     },
@@ -3632,7 +3644,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "499aec376f3ec6e1d2f608a6147c5a7f8028a3c2f54a619e0df283ac9ef4d5f9"
+      "sha256": "3584ac26d0587cc170361a56df498a2213b46de854ae0ca3fdbc20f671095ff8"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3888,7 +3900,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "316f9f89349216ad78e66f1429d48bf382836368832b4a13777e86f8e6f0a257"
+      "sha256": "3d232ffcb4205631e59cf9381a5a841b8299757bb0b87ea0b177c8db0d80a8aa"
     }
   ]
 }

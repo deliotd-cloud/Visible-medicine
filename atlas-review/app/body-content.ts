@@ -114,6 +114,7 @@ import { thoracicQuizLesson } from '../lib/thoracic-quiz';
 import { cervicalQuizLesson } from '../lib/cervical-quiz';
 import { cranialBoneQuizLesson } from '../lib/cranial-bone-quiz';
 import { lumbarSacralQuizLesson } from '../lib/lumbar-sacral-quiz';
+import { carpalBoneQuizLesson } from '../lib/carpal-bone-quiz';
 import { wristUltrasoundLesson } from '../lib/wrist-ultrasound';
 import { abdominalOrganQuizLesson } from '../lib/abdominal-organ-quiz';
 import { pelvicOrganQuizLesson } from '../lib/pelvic-organ-quiz';
@@ -269,6 +270,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (cranialBoneQuiz) return cranialBoneQuiz;
   const lumbarSacralQuiz = lumbarSacralQuizLesson(s, tab);
   if (lumbarSacralQuiz) return lumbarSacralQuiz;
+  const carpalBoneQuiz = carpalBoneQuizLesson(s, tab);
+  if (carpalBoneQuiz) return carpalBoneQuiz;
   const wristUltrasound = wristUltrasoundLesson(s, tab);
   if (wristUltrasound) return wristUltrasound;
   const thoracicQuiz = thoracicQuizLesson(s, tab);

@@ -7,7 +7,7 @@ import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {withoutPelvicRingNotice} from './atlas-pelvic-notice-history.ts';
 import {desktopLayoutImportMilestone,desktopLayoutMilestoneBytes} from './atlas-cubital-ultrasound-history.ts';
-const source='acd99b11e279a0525f1488456c0a8adf2abb2cf7',before='443896f4f141266c4579fb4e1001c0097bb25479';
+const source='49db4337ad84bee7d1823050f5b90ed43cf647c1',before='443896f4f141266c4579fb4e1001c0097bb25479';
 const prior=(path:string)=>execFileSync('git',['show',before+':'+path],{maxBuffer:32e6});
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
@@ -27,7 +27,7 @@ async function load(previous=false){
 
 test('complete pelvic-ring tour and notices reach learners and protected review with original models',async()=>{
  const api=await load(),tour=api.pelvicRingTour,review=json('atlas-review/manifest.json');
- assert.equal(review.revision,source);assert.equal(review.files.length,954);
+ assert.equal(review.revision,source);assert.equal(review.files.length,957);
  const old=jsonFrom(prior('atlas-review/manifest.json'));
  assert.deepEqual(review.packages,old.packages);
  const milestone=desktopLayoutImportMilestone();

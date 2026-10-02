@@ -5,7 +5,8 @@ import {createHash} from 'node:crypto';
 import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {wristUltrasoundMilestoneBytes,withoutCircleWillisNotice} from './atlas-circle-willis-history.ts';
-const revision='acd99b11e279a0525f1488456c0a8adf2abb2cf7';
+import {circleWillisMilestoneBytes} from './atlas-carpal-bone-quiz-history.ts';
+const revision='49db4337ad84bee7d1823050f5b90ed43cf647c1';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
 async function load(previous=false){
@@ -26,8 +27,8 @@ async function load(previous=false){
 test('Circle of Willis tour reaches contained learner and protected review without new anatomy or access',async()=>{
  const api=await load(),tour=api.circleWillisTour,review=json('atlas-review/manifest.json');
  const prior=JSON.parse(wristUltrasoundMilestoneBytes('atlas-review/manifest.json').toString());
- assert.equal(review.revision,revision);assert.equal(review.files.length,954);assert.deepEqual(review.packages,prior.packages);
- assert.deepEqual(review.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path),['lib/circle-willis-tour.ts']);
+ assert.equal(review.revision,revision);assert.equal(review.files.length,957);assert.deepEqual(review.packages,prior.packages);
+ assert.deepEqual(review.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),['content/carpal-bone-quiz-pins.json','content/carpal-bone-quiz.ts','lib/carpal-bone-quiz.ts','lib/circle-willis-tour.ts']);
  for(const f of review.files)assert.equal(sha(readFileSync('atlas-review/'+f.path)),f.importedSha256,f.path);
  assert.equal(tour.status,'draft');assert.equal(tour.steps.length,10);assert.equal(api.regionalTours.length,25);
  assert.equal(api.regionalTours.reduce((n:number,t:any)=>n+t.steps.length,0),146);
@@ -46,7 +47,7 @@ test('Circle of Willis tour reaches contained learner and protected review witho
  }
  for(const name of ['head-neck','shoulder','lower-limb']){
   const folder='public/atlas-runtime/'+name+'/';assert.equal(json(folder+'manifest.json').sourceCommit,revision);
-  assert.equal(json(folder+'source-inputs.json').length,({'head-neck':927,shoulder:613,'lower-limb':100} as Record<string,number>)[name]);
+  assert.equal(json(folder+'source-inputs.json').length,({'head-neck':930,shoulder:616,'lower-limb':100} as Record<string,number>)[name]);
   assert.equal(withoutCircleWillisNotice(readFileSync(folder+'LICENSES/THIRD_PARTY_NOTICES.md','utf8')),wristUltrasoundMilestoneBytes(folder+'LICENSES/THIRD_PARTY_NOTICES.md').toString());
  }
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,JSON.parse(wristUltrasoundMilestoneBytes('lib/atlas-model-inventory.json').toString()).models);
@@ -84,7 +85,7 @@ test('only ten tour teaching identities change; all topics/nested drafts remain 
   assert.deepEqual(now.teaching,prior.teaching);assert.deepEqual(now.source,prior.source);nested++;
  }
  assert.equal(preserved,1104);assert.equal(topics,9936);assert.equal(rejected,1114);assert.equal(altered,60);assert.equal(nested,108);
- const oldPins=JSON.parse(wristUltrasoundMilestoneBytes('atlas-review/content/body-review-display-pins.json').toString()),pins=json('atlas-review/content/body-review-display-pins.json');
+ const oldPins=JSON.parse(wristUltrasoundMilestoneBytes('atlas-review/content/body-review-display-pins.json').toString()),pins=JSON.parse(circleWillisMilestoneBytes('atlas-review/content/body-review-display-pins.json').toString());
  const oldMap=new Map(oldPins.pins.map((p:any)=>[p.structureId,p.sha256]));assert.equal(pins.pins.length,oldPins.pins.length);
  assert.deepEqual(pins.pins.filter((p:any)=>p.sha256!==oldMap.get(p.structureId)).map((p:any)=>p.structureId).sort(),[...ids].sort());
 });

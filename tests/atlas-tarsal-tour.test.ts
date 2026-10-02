@@ -8,7 +8,7 @@ import {build} from 'esbuild';
 test('tarsal learner and review imports preserve source geometry, previous tours and independent imaging',async()=>{
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
  const prior=(p:string)=>JSON.parse(execFileSync('git',['show','3316fb7a:'+p],{encoding:'utf8',maxBuffer:32e6}));
- const review=json('atlas-review/manifest.json');assert.equal(review.revision,'acd99b11e279a0525f1488456c0a8adf2abb2cf7');
+ const review=json('atlas-review/manifest.json');assert.equal(review.revision,'49db4337ad84bee7d1823050f5b90ed43cf647c1');
  for(const module of ['head-neck','shoulder'])assert.equal(json('public/atlas-runtime/'+module+'/manifest.json').sourceCommit,review.revision);
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,prior('lib/atlas-model-inventory.json').models);
  const inputs=json('public/atlas-runtime/head-neck/source-inputs.json');

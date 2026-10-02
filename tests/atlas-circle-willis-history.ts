@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
+import {withoutCarpalQuizNotice} from './atlas-carpal-bone-quiz-history.ts';
 /** Test-only exact saved wrist delivery epoch, never a learner fallback. */
 export function wristUltrasoundMilestoneBytes(path:string){
  assert((/^(?:atlas-review\/|public\/atlas-)/.test(path)||path==='lib/atlas-model-inventory.json')&&!path.includes('..'));
@@ -9,6 +10,7 @@ export function wristUltrasoundMilestoneBytes(path:string){
 }
 /** Remove only this exact checked prefix; all older notices/suffixes survive. */
 export function withoutCircleWillisNotice(text:string):string{
+ text=withoutCarpalQuizNotice(text);
  const marker='## Circle of Willis guided orientation (2 October 2026)\n';
  const start=text.indexOf(marker);if(start<0)return text;
  assert.equal(text.indexOf(marker,start+marker.length),-1,'Duplicate Circle of Willis notice');
