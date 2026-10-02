@@ -25,6 +25,7 @@ import { laryngealImagingLesson } from '../lib/laryngeal-imaging';
 import { laryngealMuscleTeachingLesson } from '../lib/laryngeal-muscle-teaching';
 import { thoracicBranchImagingLesson } from '../lib/thoracic-branch-imaging';
 import { abdominalBranchImagingLesson } from '../lib/abdominal-branch-imaging';
+import { colicArterialMriLesson } from '../lib/colic-arterial-mri';
 import {
   structures as shoulderStructures,
   type ContentTab,
@@ -330,6 +331,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   const thyroidImaging = thyroidImagingLesson(s, tab);
   if (thyroidImaging) return thyroidImaging;
   if (neckTeaching) return neckTeaching;
+  const colicArterialMri = colicArterialMriLesson(s, tab);
+  if (colicArterialMri) return colicArterialMri;
   const abdominalBranchImaging = abdominalBranchImagingLesson(s, tab);
   if (abdominalBranchImaging) return abdominalBranchImaging;
   const thoracicBranchImaging = thoracicBranchImagingLesson(s, tab);

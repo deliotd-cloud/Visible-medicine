@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "82a62afc3bbed7b036a70bc5c507ed3d05781c53c4bb46ab1d41863572f53bca"
+      "sha256": "3a5e5865e4d2ac14cc88b4a08d4044bd372ea28e76104a9981652762e7a53ec2"
     },
     {
       "path": "app/body-education-link.ts",
@@ -667,6 +667,14 @@
     {
       "path": "content/circle-willis-imaging.ts",
       "sha256": "d71c9cfe19ceb29934c91832cc3bd39d14a2dec405f4816e5eef4643d8eea2f1"
+    },
+    {
+      "path": "content/colic-arterial-mri-pins.json",
+      "sha256": "da602f3a12586946fc2c168ddfba055de93ce80ec91c1b829b57721de6d2b52a"
+    },
+    {
+      "path": "content/colic-arterial-mri.ts",
+      "sha256": "85f790407bbb49fc0d9a0e3b515808b2ae4fe0d9ec29dcbc548cd866f4fa2842"
     },
     {
       "path": "content/collicular-brachia-teaching.ts",
@@ -2117,6 +2125,10 @@
       "sha256": "088b9434143cc6885d80fa0ef90de7ff437f863f1b19fc6df4faf7c6ad3e5bec"
     },
     {
+      "path": "lib/colic-arterial-mri.ts",
+      "sha256": "35c257927186644ffacd0621e9bb089061057dea89ffe6f812486d898d931a20"
+    },
+    {
       "path": "lib/common-interosseous-us.ts",
       "sha256": "ba89e797a74515b21ea71925011c6fc9b6b9866ad6bb87da4d972f9f27e5e617"
     },
@@ -3426,7 +3438,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "ea58d0f69c299c4b80669b0264decd0313f0cee891482be363e537e196ec1efc"
+      "sha256": "33d23ea13f89d11536f36aa7ea081f764a41d1e287e7d2239d142cb53672915c"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3641,7 +3653,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "809bb0c05bd1f4823a6fd10228b38e2788b55a3904e226600de653f598d35654",
-  "sourceRendererSha256": "d8dc3e2de46589e1c101aa8cc1488bf82c81d508b74ac6131f0d54494076840d",
-  "websiteIntegrationSha256": "8ddfee47285e425f2d4b9a26aae175711d317812d6d0e1e60baca235ad8a493d"
+  "sha256": "6977e225f5068baf3ee55b665d3319b0cf40c389898684fbec16fd2dfdc10e4a",
+  "sourceRendererSha256": "725a7a3d1253d036591d4aab684063bb9b5786c41b1bf98367bd245eeac37dc1",
+  "websiteIntegrationSha256": "dcfa518dbe5e1b6d56f88fa5adbc60c30971221053be60c1f9048448a1231d72"
 }

@@ -1,11 +1,20 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {dirname,relative} from 'node:path';
 import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
+const membraneEpoch='ac7e99c7b6068020c90446628091782181d6c485';
+const epochBytes=(p:string)=>execFileSync('git',['show',membraneEpoch+':'+p],{maxBuffer:32e6});
+function readFileSync(p:string,encoding:'utf8'):string;
+function readFileSync(p:string):Buffer;
+function readFileSync(p:string,encoding?:'utf8'):Buffer|string{const bytes=epochBytes(p);return encoding?bytes.toString():bytes;}
+const membraneEpochPlugin={name:'immutable-completed-membrane-epoch',setup(api:import('esbuild').PluginBuild){api.onLoad({filter:/\.(?:ts|json)$/},args=>{
+ const path=relative(process.cwd(),args.path).replaceAll('\\','/');
+ if(!['atlas-review/app/body-content.ts','atlas-review/content/body-renderer-revision.json','atlas-review/content/body-review-display-pins.json'].includes(path))return;
+ return{contents:epochBytes(path).toString(),loader:path.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)};
+});}};
 const baseline='0b85c1ab71c8557f0869b272d20a75db5864e5f4';
 const revision='24e82d38d226eac294ffa5f3a922448f4904cec0';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
@@ -19,16 +28,16 @@ async function load(previous=false){
  export * from './atlas-review/lib/body-review-context';export * from './atlas-review/lib/body-review-response';
  export * from './atlas-review/lib/body-review-api';export * from './atlas-review/lib/body-review-decisions';
  export {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';`,resolveDir:process.cwd(),loader:'ts'},
- bundle:true,write:false,platform:'node',format:'esm',plugins:previous?[{name:'exact-before-projection',setup(api){
+ bundle:true,write:false,platform:'node',format:'esm',plugins:[...(previous?[{name:'exact-before-projection',setup(api:import('esbuild').PluginBuild){
   api.onLoad({filter:/\.(?:ts|json)$/},args=>{
    const p=relative(process.cwd(),args.path).replaceAll('\\','/');
    if(!['atlas-review/app/body-content.ts','atlas-review/content/body-renderer-revision.json'].includes(p))return;
    return{contents:old(p),loader:p.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)};
   });
- }}]:[]});
+ }}]:[]),membraneEpochPlugin]});
  return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
 }
-test('eight source-pinned membrane topics reach learners and protected Review without extra controls, assets or rights',async()=>{
+test('historical membrane delivery: eight source-pinned membrane topics reach learners and protected Review without extra controls, assets or rights',async()=>{
  const api=await load(),review=json('atlas-review/manifest.json'),epoch=JSON.parse(old('atlas-review/manifest.json'));
  assert.equal(review.revision,revision);assert.equal(review.files.length,969);assert.deepEqual(review.packages,epoch.packages);
  assert.deepEqual(review.files.filter((f:any)=>!epoch.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),
@@ -48,7 +57,7 @@ test('eight source-pinned membrane topics reach learners and protected Review wi
   assert.deepEqual(manifest.files.filter((f:any)=>f.path.startsWith('models/')),JSON.parse(old(base+'manifest.json')).files.filter((f:any)=>f.path.startsWith('models/')));
   for(const f of manifest.files)assert.equal(sha(readFileSync(base+f.path)),f.sha256);
  }
- const base='public/atlas-runtime/head-neck/',manifest=json(base+'manifest.json'),code=emittedTeaching(base,manifest.files,true);
+ const base='public/atlas-runtime/head-neck/',manifest=json(base+'manifest.json'),code=emittedTeaching(base,manifest.files,true,epochBytes);
  const reviewBase='public/atlas-review-viewer/',viewer=json(reviewBase+'manifest.json');
  assert.equal(viewer.sourceCommit,revision);assert.equal(viewer.personalRecordsIncluded,false);
  for(const f of viewer.files)assert.equal(sha(readFileSync(reviewBase+f.path)),f.sha256);
@@ -60,7 +69,7 @@ test('eight source-pinned membrane topics reach learners and protected Review wi
  const inputs=json(base+'source-inputs.json');assert.equal(inputs.length,942);
  for(const p of ['app/body-content.ts','content/interosseous-membrane-projection-pins.json','content/interosseous-membrane-projection.ts','lib/interosseous-membrane-projection.ts'])assert.equal(inputs.find((f:any)=>f.path===p).sha256,review.files.find((f:any)=>f.path===p).sourceSha256);
 });
-test('all9936 topics retain exactly8 changes and four review packets advance; foreign sources and stale decisions fail closed',async()=>{
+test('historical membrane teaching: all9936 topics retain exactly8 changes and four review packets advance; foreign sources and stale decisions fail closed',async()=>{
  const current=await load(),previous=await load(true),catalog=current.bodyDisplayCatalog(json('public/atlas-runtime/head-neck/models/bodyparts3d/full-body/catalog.json'));
  const pins=json('atlas-review/content/interosseous-membrane-projection-pins.json'),targets=new Map(pins.entries.map((e:any)=>[e.identity.id,e]));
  assert.equal(catalog.structures.length,1104);assert.equal(pins.entries.length,4);

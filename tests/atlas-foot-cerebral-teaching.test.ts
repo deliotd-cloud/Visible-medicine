@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 
 test('learner and Clinical Review retain 28 exact source-bound drafts without new models or approval',async()=>{
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8')),review=json('atlas-review/manifest.json');
- assert.equal(review.revision,'24e82d38d226eac294ffa5f3a922448f4904cec0');
+ assert.equal(review.revision,'806d7839d65f107e6cf04e236cab314f7d30c388');
  const inputs=json('public/atlas-runtime/head-neck/source-inputs.json');
  for(const name of ['head-neck','shoulder'])assert.equal(json('public/atlas-runtime/'+name+'/manifest.json').sourceCommit,review.revision);
  const prior=JSON.parse(execFileSync('git',['show','5cdb5c6c:lib/atlas-model-inventory.json'],{encoding:'utf8'}));

@@ -3,10 +3,10 @@ import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 
 /** Verify teaching bytes and their actual import path from the emitted entry. */
-export function emittedTeaching(base:string,files:{path:string;sha256:string}[],allReachable=false) {
+export function emittedTeaching(base:string,files:{path:string;sha256:string}[],allReachable=false,readArtifact:(path:string)=>Buffer=readFileSync) {
   const read=(path:string)=>{
     const file=files.find(file=>file.path===path);assert.ok(file,`${path} in manifest`);
-    const bytes=readFileSync(base+path);
+    const bytes=readArtifact(base+path);
     assert.equal(createHash('sha256').update(bytes).digest('hex'),file.sha256,path);
     return bytes.toString();
   };

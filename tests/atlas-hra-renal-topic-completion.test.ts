@@ -8,7 +8,7 @@ import {readFileSync} from 'node:fs';
 import {dirname, resolve} from 'node:path';
 import {build} from 'esbuild';
 
-const source = '24e82d38d226eac294ffa5f3a922448f4904cec0';
+const source = '806d7839d65f107e6cf04e236cab314f7d30c388';
 const renalTopicMilestone = '944f57b801471c3b005a64ec83314188b2f06cf5';
 const sourceBefore = 'fc5457b6dbc12cb6ce702c2fc272d0bcb6cc59fc';
 const websiteBefore = '1377cba878403777924a82515a12faedb679363d';

@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "82a62afc3bbed7b036a70bc5c507ed3d05781c53c4bb46ab1d41863572f53bca"
+    "sha256": "3a5e5865e4d2ac14cc88b4a08d4044bd372ea28e76104a9981652762e7a53ec2"
   },
   {
     "path": "app/body-education-link.ts",
@@ -678,6 +678,14 @@
   {
     "path": "content/circle-willis-imaging.ts",
     "sha256": "d71c9cfe19ceb29934c91832cc3bd39d14a2dec405f4816e5eef4643d8eea2f1"
+  },
+  {
+    "path": "content/colic-arterial-mri-pins.json",
+    "sha256": "da602f3a12586946fc2c168ddfba055de93ce80ec91c1b829b57721de6d2b52a"
+  },
+  {
+    "path": "content/colic-arterial-mri.ts",
+    "sha256": "85f790407bbb49fc0d9a0e3b515808b2ae4fe0d9ec29dcbc548cd866f4fa2842"
   },
   {
     "path": "content/collicular-brachia-teaching.ts",
@@ -2210,6 +2218,10 @@
   {
     "path": "lib/close-up-labels.ts",
     "sha256": "088b9434143cc6885d80fa0ef90de7ff437f863f1b19fc6df4faf7c6ad3e5bec"
+  },
+  {
+    "path": "lib/colic-arterial-mri.ts",
+    "sha256": "35c257927186644ffacd0621e9bb089061057dea89ffe6f812486d898d931a20"
   },
   {
     "path": "lib/common-interosseous-us.ts",

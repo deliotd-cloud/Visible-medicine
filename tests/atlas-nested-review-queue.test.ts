@@ -9,7 +9,7 @@ import {runInNewContext} from 'node:vm';
 import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {desktopLayoutImportMilestone,withoutCubitalVenousUltrasoundNotice} from './atlas-cubital-ultrasound-history.ts';
-const source='24e82d38d226eac294ffa5f3a922448f4904cec0',base='db062f3fa5c287d24c20f4b8e77a9ba2eb120ecc';
+const source='806d7839d65f107e6cf04e236cab314f7d30c388',base='db062f3fa5c287d24c20f4b8e77a9ba2eb120ecc';
 const old=(path:string)=>Buffer.from(execFileSync('git',['show',base+':'+path],{maxBuffer:32e6}));
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
@@ -36,7 +36,7 @@ async function load(previous=false,historicalQueue=false){
 
 test('compact review queue retains exact source/search/track and models/rights after the independently tested eye guide',async()=>{
  const api=await load(),review=json('atlas-review/manifest.json'),prior=JSON.parse(old('atlas-review/manifest.json').toString('utf8'));
- assert.equal(review.revision,source);assert.equal(review.files.length,969);assert.deepEqual(review.packages,prior.packages);
+ assert.equal(review.revision,source);assert.equal(review.files.length,972);assert.deepEqual(review.packages,prior.packages);
  const milestone=desktopLayoutImportMilestone();
  assert.deepEqual(milestone.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),
   ['content/nested-guided-learning-bindings.v1.json','lib/eye-layer-guide.ts','lib/nested-guided-learning.ts','lib/nested-review-queue.ts']);

@@ -8,12 +8,12 @@ test('hip abductor X-ray drafts ship their exact source-bound implementation wit
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'40e364dfd2dd5cf146efdf6fe56674ae0f0d2d1cb0cef4a18ff295a6babf25aa');
+  assert.equal(sha(bytes),'c2e772d3f305536b2d9ed71f8148ddae1414334c16081fb0f98c92bdb9ae6f0f');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'24e82d38d226eac294ffa5f3a922448f4904cec0');
+  assert.equal(manifest.sourceCommit,'806d7839d65f107e6cf04e236cab314f7d30c388');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of [
-    ['app/body-content.ts','82a62afc3bbed7b036a70bc5c507ed3d05781c53c4bb46ab1d41863572f53bca'],
+    ['app/body-content.ts','3a5e5865e4d2ac14cc88b4a08d4044bd372ea28e76104a9981652762e7a53ec2'],
     ['content/hip-abductor-xray.ts','cbec6faa8e72189f423c3a76fdddb876b9fb1eb8579aa02629f03c187663a691'],
     ['lib/hip-abductor-xray.ts','1c5829f35585e0097025bac08f8159ea519a119ee7ae493235b5b2fc4c94be8a'],
   ])assert.deepEqual(inputs.filter(i=>i.path===path),[{path,sha256}]);

@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "24e82d38d226eac294ffa5f3a922448f4904cec0",
-  "sha256": "8ddfee47285e425f2d4b9a26aae175711d317812d6d0e1e60baca235ad8a493d",
+  "sourceCommit": "806d7839d65f107e6cf04e236cab314f7d30c388",
+  "sha256": "dcfa518dbe5e1b6d56f88fa5adbc60c30971221053be60c1f9048448a1231d72",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "82a62afc3bbed7b036a70bc5c507ed3d05781c53c4bb46ab1d41863572f53bca"
+      "sha256": "3a5e5865e4d2ac14cc88b4a08d4044bd372ea28e76104a9981652762e7a53ec2"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -728,7 +728,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "8cabc4a46a4aa22c3dd122121983bd45dc4eb890ef364a02c547ea06e748856b"
+      "sha256": "0bd8682a80626a2d8cfcc0fb9f86d4f4f8342d8ba27509d64599e8dba97c81d6"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -825,6 +825,14 @@
     {
       "path": "atlas-review/content/circle-willis-imaging.ts",
       "sha256": "d71c9cfe19ceb29934c91832cc3bd39d14a2dec405f4816e5eef4643d8eea2f1"
+    },
+    {
+      "path": "atlas-review/content/colic-arterial-mri-pins.json",
+      "sha256": "da602f3a12586946fc2c168ddfba055de93ce80ec91c1b829b57721de6d2b52a"
+    },
+    {
+      "path": "atlas-review/content/colic-arterial-mri.ts",
+      "sha256": "85f790407bbb49fc0d9a0e3b515808b2ae4fe0d9ec29dcbc548cd866f4fa2842"
     },
     {
       "path": "atlas-review/content/collicular-brachia-teaching.ts",
@@ -2333,6 +2341,10 @@
     {
       "path": "atlas-review/lib/close-up-labels.ts",
       "sha256": "088b9434143cc6885d80fa0ef90de7ff437f863f1b19fc6df4faf7c6ad3e5bec"
+    },
+    {
+      "path": "atlas-review/lib/colic-arterial-mri.ts",
+      "sha256": "35c257927186644ffacd0621e9bb089061057dea89ffe6f812486d898d931a20"
     },
     {
       "path": "atlas-review/lib/common-interosseous-us.ts",
@@ -3960,7 +3972,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "2b667a55e86843b2b11eee901316f16a5ac91666f11f42f16de4bb1fdd7fe760"
+      "sha256": "626f0a397f35ed6b4a1e5738a6f0d032fe7459b1449a8a9326d7b2197b363f31"
     }
   ]
 }
