@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 test('femoral component imaging shares exact learner/review content without acquired-image approval',async()=>{
  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
  const inputs=JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json','utf8'));
- assert.equal(review.revision,'49db4337ad84bee7d1823050f5b90ed43cf647c1');
+ assert.equal(review.revision,'bfaaa27e85ca62864e7e1f9a62c72f79c5608a98');
  for(const path of ['content/femoral-component-teaching.ts','content/femoral-component-teaching-bindings.v1.json','lib/femoral-components.ts']) {
   const file=review.files.find((f:any)=>f.path===path);assert(file);
   assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,file.sourceSha256);

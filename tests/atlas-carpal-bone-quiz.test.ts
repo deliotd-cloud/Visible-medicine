@@ -1,11 +1,12 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {carpalQuizHostProof} from './atlas-carpal-bone-quiz-proof.ts';
 import {circleWillisMilestoneBytes,withoutCarpalQuizNotice} from './atlas-carpal-bone-quiz-history.ts';
+import {carpalQuizMilestoneBytes} from './atlas-thoracic-bone-quiz-history.ts';
 const revision='49db4337ad84bee7d1823050f5b90ed43cf647c1';
-const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
+const milestone=(p:string)=>carpalQuizMilestoneBytes(p);
+const json=(p:string)=>JSON.parse(milestone(p).toString());
 const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
 const added=['content/carpal-bone-quiz-pins.json','content/carpal-bone-quiz.ts','lib/carpal-bone-quiz.ts'];
 
@@ -15,13 +16,13 @@ test('carpal questions reach contained learner and protected review with unchang
  assert.deepEqual(review.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),added);
  assert.deepEqual(review.files.filter((f:any)=>prior.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),
   ['LICENSES/THIRD_PARTY_NOTICES.md','app/body-content.ts','content/body-renderer-revision.json','content/body-review-display-pins.json']);
- for(const f of review.files)assert.equal(sha(readFileSync('atlas-review/'+f.path)),f.importedSha256,f.path);
+ for(const f of review.files)assert.equal(sha(milestone('atlas-review/'+f.path)),f.importedSha256,f.path);
  const pins=json('atlas-review/content/carpal-bone-quiz-pins.json');assert.equal(pins.entries.length,16);
  for(const name of ['head-neck','shoulder','lower-limb','protected']){
   const folder=name==='protected'?'public/atlas-review-viewer/':'public/atlas-runtime/'+name+'/';
   const manifest=json(folder+'manifest.json'),old=JSON.parse(circleWillisMilestoneBytes(folder+'manifest.json').toString());
   assert.equal(manifest.sourceCommit,revision);assert.equal(manifest[name==='protected'?'personalRecordsIncluded':'patientDataIncluded'],false);
-  for(const f of manifest.files)assert.equal(sha(readFileSync(folder+f.path)),f.sha256,f.path);
+  for(const f of manifest.files)assert.equal(sha(milestone(folder+f.path)),f.sha256,f.path);
   if(name==='protected')assert.equal(manifest.websiteIntegrationSha256,review.websiteIntegrationSha256);
   else{
    for(const flag of ['clinicalApproved','standaloneReviewConnection','imagingConnection'])assert.deepEqual(manifest[flag],old[flag]);
@@ -31,11 +32,11 @@ test('carpal questions reach contained learner and protected review with unchang
   const noticePath=folder+(name==='protected'?'THIRD_PARTY_NOTICES.txt':'LICENSES/THIRD_PARTY_NOTICES.md');
   const previousNotice=circleWillisMilestoneBytes(noticePath).toString();
   const expectedNotice=name==='protected'?previousNotice.replace('Atlas source: '+prior.revision,'Atlas source: '+revision):previousNotice;
-  assert.equal(withoutCarpalQuizNotice(readFileSync(noticePath,'utf8')),expectedNotice);
+  assert.equal(withoutCarpalQuizNotice(milestone(noticePath).toString()),expectedNotice);
  }
  // Delivery checks supplement, not replace, the actual resolver/review proof.
  for(const folder of ['public/atlas-runtime/head-neck/','public/atlas-runtime/shoulder/','public/atlas-review-viewer/']){
-  const m=json(folder+'manifest.json');const code=m.files.filter((f:any)=>f.path.endsWith('.js')).map((f:any)=>readFileSync(folder+f.path,'utf8')).join('\n').replace(/\\u([0-9a-fA-F]{4})/g,(_:string,h:string)=>String.fromCharCode(parseInt(h,16)));
+  const m=json(folder+'manifest.json');const code=m.files.filter((f:any)=>f.path.endsWith('.js')).map((f:any)=>milestone(folder+f.path).toString()).join('\n').replace(/\\u([0-9a-fA-F]{4})/g,(_:string,h:string)=>String.fromCharCode(parseInt(h,16)));
   for(const entry of pins.entries){
    assert(code.includes(entry.identity.id));assert(code.includes(entry.identity.fmaId));
   }
@@ -58,7 +59,7 @@ test('16 source-bound draft quizzes preserve other topics/nested content and rej
 });
 
 test('carpal notice replay preserves earlier credits/suffixes and rejects altered/duplicate/foreign append',()=>{
- const current=readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md','utf8'),old=circleWillisMilestoneBytes('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md').toString();
+ const current=milestone('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md').toString(),old=circleWillisMilestoneBytes('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md').toString();
  assert.equal(withoutCarpalQuizNotice(current),old);assert.equal(withoutCarpalQuizNotice(old),old);
  const suffix='\nAdditional dependency notice\n',prefix='# Clinical Review third-party notices\n\nAtlas source: '+revision+'\n\n';
  assert.equal(withoutCarpalQuizNotice(prefix+current+suffix),prefix+old+suffix);

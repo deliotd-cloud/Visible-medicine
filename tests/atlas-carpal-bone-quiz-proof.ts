@@ -17,13 +17,14 @@ export {structures} from './atlas-review/app/anatomy-data';export {dissectionPro
 import raw from './atlas-review/public/models/bodyparts3d/full-body/catalog.json';
 import {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';export const catalog=bodyDisplayCatalog(raw as any);`;
 async function load(previous=false){
+  const epoch=previous?parent:'366939a9b9ff8bfdc958dca087dcc57d2c8feb39';
   const replay=new Set(['app/body-content.ts','content/body-review-display-pins.json','content/body-renderer-revision.json']);
   const result=await build({stdin:{contents:entry,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',
-    plugins:previous?[{name:'pre-carpal-bone-quiz',setup(api){api.onLoad({filter:/.*/,namespace:'file'},args=>{
+    plugins:[{name:'exact-carpal-bone-quiz-epoch',setup(api){api.onLoad({filter:/.*/,namespace:'file'},args=>{
       const path=relative(process.cwd(),args.path).replaceAll('\\','/').replace(/^atlas-review\//,'');
       if(!replay.has(path))return;
-      return {contents:old(path).toString(),loader:path.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)};
-    });}}]:[]});
+      return {contents:execFileSync('git',['show',epoch+':atlas-review/'+path],{maxBuffer:16e6}).toString(),loader:path.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)};
+    });}}]});
   return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
 }
 export async function carpalQuizHostProof(){
@@ -47,14 +48,14 @@ for(const path of [
 
 const pinsPath='content/body-review-display-pins.json';
 type DisplayPin={structureId:string;sha256:string};
-const priorPins:{pins:DisplayPin[]}=JSON.parse(old(pinsPath).toString()),currentPins:{pins:DisplayPin[]}=JSON.parse(readFileSync('atlas-review/'+pinsPath,'utf8'));
+const priorPins:{pins:DisplayPin[]}=JSON.parse(old(pinsPath).toString()),currentPins:{pins:DisplayPin[]}=JSON.parse(execFileSync('git',['show','366939a9b9ff8bfdc958dca087dcc57d2c8feb39:atlas-review/'+pinsPath],{encoding:'utf8',maxBuffer:16e6}));
 assert.deepEqual({...currentPins,pins:[]},{...priorPins,pins:[]});
 assert.equal(currentPins.pins.length,1104);
 assert.deepEqual(currentPins.pins.map(pin=>pin.structureId),priorPins.pins.map(pin=>pin.structureId));
 const priorPinById=new Map(priorPins.pins.map(pin=>[pin.structureId,pin.sha256]));
 assert.deepEqual(currentPins.pins.filter(pin=>pin.sha256!==priorPinById.get(pin.structureId)).map(pin=>pin.structureId).sort(),[...targets.keys()].sort());
 const priorRenderer=JSON.parse(old('content/body-renderer-revision.json').toString());
-const currentRenderer=JSON.parse(readFileSync('atlas-review/content/body-renderer-revision.json','utf8'));
+const currentRenderer=JSON.parse(execFileSync('git',['show','366939a9b9ff8bfdc958dca087dcc57d2c8feb39:atlas-review/content/body-renderer-revision.json'],{encoding:'utf8',maxBuffer:16e6}));
 assert.notEqual(currentRenderer.sha256,priorRenderer.sha256);
 
 const storage={prepare(){throw Error('Stale synthetic review reached storage');}};

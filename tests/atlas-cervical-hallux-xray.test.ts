@@ -8,12 +8,12 @@ test('cervical and hallux orientation ships exact source, draft wording and no i
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'ec8bd2cc47e9d09c449bc94be26d79783986dd4af17abb60fc1947ddfcd97bba');
+  assert.equal(sha(bytes),'10e0857ff5d0d17d1d51f60ee728e5cf6c2b91c3c6e15db6d7f8614be8f35cf4');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'49db4337ad84bee7d1823050f5b90ed43cf647c1');
+  assert.equal(manifest.sourceCommit,'bfaaa27e85ca62864e7e1f9a62c72f79c5608a98');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of [
-    ['app/body-content.ts','7ca537e126e08bfb3622a1d54a99d83d724101b9a1fa2032734d5eca2513e457'],
+    ['app/body-content.ts','5d92aa258721f1d7e2ee330281e59a573e93cb403526f4feab8d632a9b00b385'],
     ['content/back-bone-teaching.ts','590d53eecda100df1444eeb227bf434c6441c3f9d93d8060f041848adcef4861'],
     ['content/hallux-xray.ts','e6bd2b81a637f4bf170631d035b98aa7be96de11f101086364939d5579505311'],
     ['lib/hallux-xray.ts','87f3bb780aeb9c25ca308059cae5207891ef69e5e6b5dc0616528f0ccc5eb699'],

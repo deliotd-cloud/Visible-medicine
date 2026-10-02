@@ -8,12 +8,12 @@ test('hand bone X-ray drafts ship their exact source-bound implementation withou
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'ec8bd2cc47e9d09c449bc94be26d79783986dd4af17abb60fc1947ddfcd97bba');
+  assert.equal(sha(bytes),'10e0857ff5d0d17d1d51f60ee728e5cf6c2b91c3c6e15db6d7f8614be8f35cf4');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'49db4337ad84bee7d1823050f5b90ed43cf647c1');
+  assert.equal(manifest.sourceCommit,'bfaaa27e85ca62864e7e1f9a62c72f79c5608a98');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of [
-    ['app/body-content.ts','7ca537e126e08bfb3622a1d54a99d83d724101b9a1fa2032734d5eca2513e457'],
+    ['app/body-content.ts','5d92aa258721f1d7e2ee330281e59a573e93cb403526f4feab8d632a9b00b385'],
     ['content/hand-bone-xray.ts','624460d95748280d06636823375e34fb2779e68f235f6064198268d9430bee6d'],
     ['lib/hand-bone-xray.ts','3c2149eca9c8bcaa380f10feb48363dfaff58828c6400c5f88c8011c0a0417ef'],
   ])assert.deepEqual(inputs.filter(i=>i.path===path),[{path,sha256}]);

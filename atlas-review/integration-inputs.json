@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "49db4337ad84bee7d1823050f5b90ed43cf647c1",
-  "sha256": "6df4dae374d0aeefd66d7368ea1a2f3423a96944bbe81f9087347d04ef068f26",
+  "sourceCommit": "bfaaa27e85ca62864e7e1f9a62c72f79c5608a98",
+  "sha256": "6c693ad9f6475bb903a484b928bec6e522b077e1c769c6cfaf97053248bdf015",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -25,6 +25,10 @@
     {
       "path": "app/workspace/atlas-review/shoulder/page.tsx",
       "sha256": "1216ffc684e3e3e8e13c6e3a74f067efecf48e90a71721a4fa942964eccd5f70"
+    },
+    {
+      "path": "app/workspace/atlas-review/source-comparisons/optic/page.tsx",
+      "sha256": "ca60561a7f4bf2947c080ead539e255c34541434fcee393cf92feabe8ae936e0"
     },
     {
       "path": "app/workspace/atlas-review/specimens/page.tsx",
@@ -112,7 +116,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "7ca537e126e08bfb3622a1d54a99d83d724101b9a1fa2032734d5eca2513e457"
+      "sha256": "5d92aa258721f1d7e2ee330281e59a573e93cb403526f4feab8d632a9b00b385"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -716,7 +720,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "c20cf57222ef832133944adc899be072540503ed14643a86658cbb1294094c5a"
+      "sha256": "cfc1bdbaa56249d5ff30ef99c9c6308d1783f4b69dfcbe7de61ca9ce44a28074"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -1709,6 +1713,14 @@
     {
       "path": "atlas-review/content/thoracic-bone-imaging.ts",
       "sha256": "1929be45d018e3803ac092f803e87e26f9db7e8458c6046e3d404383ef0941c2"
+    },
+    {
+      "path": "atlas-review/content/thoracic-bone-quiz-pins.json",
+      "sha256": "b39b1d20b32d1fbe84bef02f5ec070a28f78c57f13b3b35b4793d3ff1009899d"
+    },
+    {
+      "path": "atlas-review/content/thoracic-bone-quiz.ts",
+      "sha256": "91ce2ebf4cfc0b9aabb6a1c1f93e5c16a049974286c80c7b43864911281dc181"
     },
     {
       "path": "atlas-review/content/thoracic-branch-imaging-pins.json",
@@ -3463,6 +3475,10 @@
       "sha256": "cd980735bb04d2a76a899a166ecd3315e70fdfc0bc397f90baea168cb7e02ba8"
     },
     {
+      "path": "atlas-review/lib/thoracic-bone-quiz.ts",
+      "sha256": "3c5afd5de6557037b8b14f764a9194436d752cebb137305ed4b58224a2131f59"
+    },
+    {
       "path": "atlas-review/lib/thoracic-branch-imaging.ts",
       "sha256": "ea501db08476c08242a8c22fefd68352ff1d55fba3a9c02cf3f9cd4bff688bea"
     },
@@ -3644,7 +3660,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "3584ac26d0587cc170361a56df498a2213b46de854ae0ca3fdbc20f671095ff8"
+      "sha256": "9e5e4149b920a29ca9a9120e5784df76f914bd330d28d5badf9caa618cb75d6d"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3900,7 +3916,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "3d232ffcb4205631e59cf9381a5a841b8299757bb0b87ea0b177c8db0d80a8aa"
+      "sha256": "b96ce324d8e3a263e5831d20aeb4fc7e4bab5336c1ff6fe27b9ef0d60d83bd51"
     }
   ]
 }

@@ -2232,3 +2232,15 @@ citations. Original teaching/code uses project MIT terms; existing BodyParts3D
 CC BY 4.0 models/credits and anatomical holds remain unchanged. No new model,
 font, texture, dependency, paid service or mandatory fee is introduced.
 Exact references, scope and clinical review: `docs/CARPAL_BONE_QUIZ.md`.
+
+## Thoracic-bone quick checks — 2 October 2026
+
+Nine original formative questions cover 27 existing rib/sternal selections.
+Safarini/Bordoni and Altalib/Miao/Menezes StatPearls chapters (NCBI Bookshelf)
+and Patel et al., J Trauma Acute Care Surg (2023), PMID 37982795, support factual
+verification only. Their publication rights are not commercial asset grants.
+No source prose, question bank, image, table, figure, scan or dataset is imported;
+independently written questions and code use the project's MIT licence.
+The existing BodyParts3D CC BY 4.0 source obligations and holds remain intact.
+No new mesh, texture, font, dependency, paid service or mandatory fee is added.
+References and clinical limitations: `docs/THORACIC_BONE_QUIZ.md`.

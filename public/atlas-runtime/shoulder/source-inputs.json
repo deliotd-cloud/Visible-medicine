@@ -29,7 +29,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "7ca537e126e08bfb3622a1d54a99d83d724101b9a1fa2032734d5eca2513e457"
+    "sha256": "5d92aa258721f1d7e2ee330281e59a573e93cb403526f4feab8d632a9b00b385"
   },
   {
     "path": "app/body-explorer.css",
@@ -1062,6 +1062,14 @@
   {
     "path": "content/thoracic-bone-imaging.ts",
     "sha256": "1929be45d018e3803ac092f803e87e26f9db7e8458c6046e3d404383ef0941c2"
+  },
+  {
+    "path": "content/thoracic-bone-quiz-pins.json",
+    "sha256": "b39b1d20b32d1fbe84bef02f5ec070a28f78c57f13b3b35b4793d3ff1009899d"
+  },
+  {
+    "path": "content/thoracic-bone-quiz.ts",
+    "sha256": "91ce2ebf4cfc0b9aabb6a1c1f93e5c16a049974286c80c7b43864911281dc181"
   },
   {
     "path": "content/thoracic-branch-imaging-pins.json",
@@ -2198,6 +2206,10 @@
   {
     "path": "lib/thoracic-bone-imaging.ts",
     "sha256": "cd980735bb04d2a76a899a166ecd3315e70fdfc0bc397f90baea168cb7e02ba8"
+  },
+  {
+    "path": "lib/thoracic-bone-quiz.ts",
+    "sha256": "3c5afd5de6557037b8b14f764a9194436d752cebb137305ed4b58224a2131f59"
   },
   {
     "path": "lib/thoracic-branch-imaging.ts",
