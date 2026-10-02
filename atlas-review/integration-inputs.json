@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "24d023f471d39d7d1e4660fb4f20264528bdd6fe",
-  "sha256": "b177e6e1cba6a2731f0b84a6cec9a34651e2c0d0f053c782c99a1213b2918207",
+  "sourceCommit": "6c156e8b4cead4a24cc19ea2cc5a53e77ba8e06e",
+  "sha256": "aa7c053961f0e4d80115995622a33415c457e302402c59210bbcbfeb24f1fcbf",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -728,7 +728,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "cfc1bdbaa56249d5ff30ef99c9c6308d1783f4b69dfcbe7de61ca9ce44a28074"
+      "sha256": "30bac250a0dfc5578ec5dc182b8edef460f93de5ca871450d348640b362694e4"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -1753,6 +1753,10 @@
     {
       "path": "atlas-review/content/thoracic-branch-imaging.ts",
       "sha256": "519d12bdaa31fe1e062616a96c35b238c1fe313c882339ee893c92d8b828450c"
+    },
+    {
+      "path": "atlas-review/content/thoracic-core-reasoning-pins.json",
+      "sha256": "b520374e44447ea37830c6a1c13fc20708cf407cd1a31a3b5203c024b589de4f"
     },
     {
       "path": "atlas-review/content/thoracic-hilar-study.ts",
@@ -3200,7 +3204,7 @@
     },
     {
       "path": "atlas-review/lib/reasoning-questions.ts",
-      "sha256": "c65f4352b240fb253ba6f815bc63c8d8fa3667ab54e1cddd386014764d43ac19"
+      "sha256": "6720580471dbc6ec84e54a50d3a5dc24818a67f529e8a5ed1674a4c57b5261fe"
     },
     {
       "path": "atlas-review/lib/rectal-deferent-imaging.ts",
@@ -3505,6 +3509,10 @@
     {
       "path": "atlas-review/lib/thoracic-branch-imaging.ts",
       "sha256": "ea501db08476c08242a8c22fefd68352ff1d55fba3a9c02cf3f9cd4bff688bea"
+    },
+    {
+      "path": "atlas-review/lib/thoracic-core-reasoning.ts",
+      "sha256": "cdb353b7e59a4f6224e5b45ac28cdf3317763e38da3042ef918f5955002c1077"
     },
     {
       "path": "atlas-review/lib/thoracic-inlet-xray.ts",
@@ -3940,7 +3948,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "36bdd4d9dbca2a94ba2fe1fcd981d7d49788eda8ebb020e1c6721e864f622ea2"
+      "sha256": "9e195f40e0517c0752ee47d5b4494091e75d95494d70717ac4b0aa74710e02a1"
     }
   ]
 }

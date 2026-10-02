@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 import {dirname,relative} from 'node:path';
 import {build} from 'esbuild';
 import {preMCANestedPlugin,preMCAImportBytes} from './atlas-mca-history.ts';
+import {thoracicQuizMilestoneBytes} from './atlas-thoracic-bone-quiz-history.ts';
 import pins from '../atlas-review/content/thoracic-bone-quiz-pins.json' with {type:'json'};
 import {thoracicBoneQuizQuestions} from '../atlas-review/content/thoracic-bone-quiz.ts';
 
@@ -20,7 +21,12 @@ import {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';expor
 async function load(previous=false){
   const replay=new Set(['app/body-content.ts','content/body-review-display-pins.json','content/body-renderer-revision.json']);
   const result=await build({stdin:{contents:entry,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',
-    plugins:[preMCANestedPlugin(),...(previous?[{name:'pre-thoracic-bone-quiz',setup(api:any){api.onLoad({filter:/.*/,namespace:'file'},(args:any)=>{
+    plugins:[preMCANestedPlugin(),{name:'immutable-thoracic-question-epoch',setup(api:any){api.onLoad({filter:/\.(?:ts|json)$/},(args:any)=>{
+      const path=relative(process.cwd(),args.path).replaceAll('\\','/');
+      // This historical transition is distinct from the live core-question proof.
+      if(path!=='atlas-review/lib/reasoning-questions.ts' && (previous||path!=='atlas-review/content/body-review-display-pins.json'))return;
+      return {contents:thoracicQuizMilestoneBytes(path).toString(),loader:path.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)};
+    });}},...(previous?[{name:'pre-thoracic-bone-quiz',setup(api:any){api.onLoad({filter:/.*/,namespace:'file'},(args:any)=>{
       const path=relative(process.cwd(),args.path).replaceAll('\\','/').replace(/^atlas-review\//,'');
       if(!replay.has(path))return;
       return {contents:old(path).toString(),loader:path.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)};
@@ -48,7 +54,7 @@ for(const path of [
 
 const pinsPath='content/body-review-display-pins.json';
 type DisplayPin={structureId:string;sha256:string};
-const priorPins:{pins:DisplayPin[]}=JSON.parse(old(pinsPath).toString()),currentPins:{pins:DisplayPin[]}=JSON.parse(readFileSync('atlas-review/'+pinsPath,'utf8'));
+const priorPins:{pins:DisplayPin[]}=JSON.parse(old(pinsPath).toString()),currentPins:{pins:DisplayPin[]}=JSON.parse(thoracicQuizMilestoneBytes('atlas-review/'+pinsPath).toString());
 assert.deepEqual({...currentPins,pins:[]},{...priorPins,pins:[]});
 assert.equal(currentPins.pins.length,1104);
 assert.deepEqual(currentPins.pins.map(pin=>pin.structureId),priorPins.pins.map(pin=>pin.structureId));

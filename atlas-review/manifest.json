@@ -1,5 +1,5 @@
 {
-  "revision": "24d023f471d39d7d1e4660fb4f20264528bdd6fe",
+  "revision": "6c156e8b4cead4a24cc19ea2cc5a53e77ba8e06e",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2658,8 +2658,8 @@
     },
     {
       "path": "lib/reasoning-questions.ts",
-      "sourceSha256": "c65f4352b240fb253ba6f815bc63c8d8fa3667ab54e1cddd386014764d43ac19",
-      "importedSha256": "c65f4352b240fb253ba6f815bc63c8d8fa3667ab54e1cddd386014764d43ac19"
+      "sourceSha256": "6720580471dbc6ec84e54a50d3a5dc24818a67f529e8a5ed1674a4c57b5261fe",
+      "importedSha256": "6720580471dbc6ec84e54a50d3a5dc24818a67f529e8a5ed1674a4c57b5261fe"
     },
     {
       "path": "lib/forearm-reasoning.ts",
@@ -2740,6 +2740,16 @@
       "path": "lib/lower-limb-bone-reasoning.ts",
       "sourceSha256": "08de7b02c6dc58c5a88baa52e8532bd66a6b8f047b951fe9600653175ca88738",
       "importedSha256": "08de7b02c6dc58c5a88baa52e8532bd66a6b8f047b951fe9600653175ca88738"
+    },
+    {
+      "path": "lib/thoracic-core-reasoning.ts",
+      "sourceSha256": "cdb353b7e59a4f6224e5b45ac28cdf3317763e38da3042ef918f5955002c1077",
+      "importedSha256": "cdb353b7e59a4f6224e5b45ac28cdf3317763e38da3042ef918f5955002c1077"
+    },
+    {
+      "path": "content/thoracic-core-reasoning-pins.json",
+      "sourceSha256": "b520374e44447ea37830c6a1c13fc20708cf407cd1a31a3b5203c024b589de4f",
+      "importedSha256": "b520374e44447ea37830c6a1c13fc20708cf407cd1a31a3b5203c024b589de4f"
     },
     {
       "path": "lib/regional-tours.ts",
@@ -2998,8 +3008,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "6d0cfd33cd44c656fbaa17af93c4a95b5c3d363a8ee859af9c3064f4519a7cfd",
-      "importedSha256": "4851e385ee32edd237445c2e0160281707384b5892134cac80c326377c9f9c1c"
+      "sourceSha256": "411e86f28a9765ee65b771460db60cdc7e8e17cd0647dfa6075967b574bba2da",
+      "importedSha256": "98953d685ac56ad74593a697297808c1fb784b1cefd86d77e83553a37f30c2f5"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3359,7 +3369,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "e0d6e4581985a67ec82f0e43f0ad575b831cb80304ef7ce85b6d58cf5f389886",
-      "importedSha256": "b470ee08a2e7c850421555b7de807a9b089904436b9275641e21ef0eee1738b8"
+      "importedSha256": "2af8affaf1678bb1d85ae30752196cfc60fefa5c6fc59a98f1ae6e274ae0feba"
     },
     {
       "path": "app/review/review.css",
@@ -3393,8 +3403,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "cfc1bdbaa56249d5ff30ef99c9c6308d1783f4b69dfcbe7de61ca9ce44a28074",
-      "importedSha256": "cfc1bdbaa56249d5ff30ef99c9c6308d1783f4b69dfcbe7de61ca9ce44a28074"
+      "sourceSha256": "30bac250a0dfc5578ec5dc182b8edef460f93de5ca871450d348640b362694e4",
+      "importedSha256": "30bac250a0dfc5578ec5dc182b8edef460f93de5ca871450d348640b362694e4"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -4838,5 +4848,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "b177e6e1cba6a2731f0b84a6cec9a34651e2c0d0f053c782c99a1213b2918207"
+  "websiteIntegrationSha256": "aa7c053961f0e4d80115995622a33415c457e302402c59210bbcbfeb24f1fcbf"
 }

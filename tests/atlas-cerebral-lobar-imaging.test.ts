@@ -6,14 +6,14 @@ import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 
 test('paired cerebral CT/MRI drafts reach learner and exact review worksheets without changing source anatomy',async()=>{
-  const revision='24d023f471d39d7d1e4660fb4f20264528bdd6fe';
+  const revision='6c156e8b4cead4a24cc19ea2cc5a53e77ba8e06e';
   const base='c73aeae9b5f0b21091a97612d9ed54f3dd549c8e';
   const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
   const prior=(p:string)=>JSON.parse(execFileSync('git',['show',base+':'+p],{encoding:'utf8'}));
   const sha=(s:Uint8Array|string)=>createHash('sha256').update(s).digest('hex');
   const learner=json('public/atlas-runtime/head-neck/manifest.json');
   const review=json('atlas-review/manifest.json');
-  assert.equal(learner.sourceCommit,revision);assert.equal(review.revision,'24d023f471d39d7d1e4660fb4f20264528bdd6fe');
+  assert.equal(learner.sourceCommit,revision);assert.equal(review.revision,'6c156e8b4cead4a24cc19ea2cc5a53e77ba8e06e');
   const inputs=json('public/atlas-runtime/head-neck/source-inputs.json');
   for(const path of ['content/cerebral-lobar-imaging.ts','content/nested-teaching.ts']){
     const source=review.files.find((f:any)=>f.path===path);assert(source);

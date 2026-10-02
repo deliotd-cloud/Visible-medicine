@@ -1652,6 +1652,10 @@
     "sha256": "519d12bdaa31fe1e062616a96c35b238c1fe313c882339ee893c92d8b828450c"
   },
   {
+    "path": "content/thoracic-core-reasoning-pins.json",
+    "sha256": "b520374e44447ea37830c6a1c13fc20708cf407cd1a31a3b5203c024b589de4f"
+  },
+  {
     "path": "content/thoracic-hilar-study.ts",
     "sha256": "29337537b45c066543ef0ee4010c4d6dfe2ca985b09726f3fc894535c34c4ac8"
   },
@@ -3049,7 +3053,7 @@
   },
   {
     "path": "lib/reasoning-questions.ts",
-    "sha256": "c65f4352b240fb253ba6f815bc63c8d8fa3667ab54e1cddd386014764d43ac19"
+    "sha256": "6720580471dbc6ec84e54a50d3a5dc24818a67f529e8a5ed1674a4c57b5261fe"
   },
   {
     "path": "lib/rectal-deferent-imaging.ts",
@@ -3318,6 +3322,10 @@
   {
     "path": "lib/thoracic-branch-imaging.ts",
     "sha256": "ea501db08476c08242a8c22fefd68352ff1d55fba3a9c02cf3f9cd4bff688bea"
+  },
+  {
+    "path": "lib/thoracic-core-reasoning.ts",
+    "sha256": "cdb353b7e59a4f6224e5b45ac28cdf3317763e38da3042ef918f5955002c1077"
   },
   {
     "path": "lib/thoracic-inlet-xray.ts",

@@ -6,7 +6,7 @@ import {dirname,relative} from 'node:path';
 import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
-const revision='24d023f471d39d7d1e4660fb4f20264528bdd6fe';
+const revision='6c156e8b4cead4a24cc19ea2cc5a53e77ba8e06e';
 const baseline='2df4395d6df36a53da361e1ab3b6c07ddbb67e2a';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{encoding:'utf8',maxBuffer:32e6});
@@ -34,9 +34,11 @@ async function load(previous=false){
 }
 test('26 exact source-part PICA drafts reach local learners and protected review, without new models or rights',async()=>{
  const api=await load(),review=json('atlas-review/manifest.json'),prior=JSON.parse(old('atlas-review/manifest.json'));
- assert.equal(review.revision,revision);assert.equal(review.files.length,964);assert.deepEqual(review.packages,prior.packages);
- assert.deepEqual(review.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),['content/pica-source-teaching-bindings.v1.json','content/pica-source-teaching.ts']);
- assert.deepEqual(review.files.filter((f:any)=>prior.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),['content/body-renderer-revision.json','content/nested-teaching.ts','lib/nested-review-material.ts','lib/nested-teaching.ts']);
+ assert.equal(review.revision,revision);assert.equal(review.files.length,966);assert.deepEqual(review.packages,prior.packages);
+ // Freeze the original PICA transition; later root questions are audited separately.
+ const epoch=JSON.parse(execFileSync('git',['show','6d851df6891316da971430ca8ddf522d31df640b:atlas-review/manifest.json'],{encoding:'utf8',maxBuffer:32e6}));
+ assert.deepEqual(epoch.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),['content/pica-source-teaching-bindings.v1.json','content/pica-source-teaching.ts']);
+ assert.deepEqual(epoch.files.filter((f:any)=>prior.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),['content/body-renderer-revision.json','content/nested-teaching.ts','lib/nested-review-material.ts','lib/nested-teaching.ts']);
  for(const f of review.files)assert.equal(sha(readFileSync('atlas-review/'+f.path)),f.importedSha256);
  assert.deepEqual(api.picaSourceConcepts.map((c:any)=>c.id),ids);
  assert.equal(new Set(api.picaSourceConcepts.map((c:any)=>c.quiz.question)).size,26);

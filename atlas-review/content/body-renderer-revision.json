@@ -1601,6 +1601,10 @@
       "sha256": "519d12bdaa31fe1e062616a96c35b238c1fe313c882339ee893c92d8b828450c"
     },
     {
+      "path": "content/thoracic-core-reasoning-pins.json",
+      "sha256": "b520374e44447ea37830c6a1c13fc20708cf407cd1a31a3b5203c024b589de4f"
+    },
+    {
       "path": "content/thoracic-hilar-study.ts",
       "sha256": "29337537b45c066543ef0ee4010c4d6dfe2ca985b09726f3fc894535c34c4ac8"
     },
@@ -2954,7 +2958,7 @@
     },
     {
       "path": "lib/reasoning-questions.ts",
-      "sha256": "c65f4352b240fb253ba6f815bc63c8d8fa3667ab54e1cddd386014764d43ac19"
+      "sha256": "6720580471dbc6ec84e54a50d3a5dc24818a67f529e8a5ed1674a4c57b5261fe"
     },
     {
       "path": "lib/rectal-deferent-imaging.ts",
@@ -3225,6 +3229,10 @@
       "sha256": "ea501db08476c08242a8c22fefd68352ff1d55fba3a9c02cf3f9cd4bff688bea"
     },
     {
+      "path": "lib/thoracic-core-reasoning.ts",
+      "sha256": "cdb353b7e59a4f6224e5b45ac28cdf3317763e38da3042ef918f5955002c1077"
+    },
+    {
       "path": "lib/thoracic-inlet-xray.ts",
       "sha256": "21b996d128b0c6846e7a3a0d8bffda936f3bc7f7ee8b52911d03d178f54bea83"
     },
@@ -3406,7 +3414,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "197637a5f7b73e8e94589667d87be1f09a76bfaad902a19f393930c2a5c5f35b"
+      "sha256": "6143d3efa1ccc1f9fbd54e22bfe763ab78976ab1af238485e33c7ac86a71003b"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3621,7 +3629,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "d7d289a1ec651aa40ec9e1c719f3163492793807a6acf186f468f77215b7cd32",
-  "sourceRendererSha256": "6f6ecca4c474997e5c3657ce15fa17d826566f25cfc041e5fb4d9abafe794e2c",
-  "websiteIntegrationSha256": "b177e6e1cba6a2731f0b84a6cec9a34651e2c0d0f053c782c99a1213b2918207"
+  "sha256": "3c7d064852b5ef8c436371f46eda29bd6176f54588941dfe79770281ad2e6769",
+  "sourceRendererSha256": "3d2aaad27c9ce7c062a206c68eb64e6ee1135ce5945a224ace4409c7a451f409",
+  "websiteIntegrationSha256": "aa7c053961f0e4d80115995622a33415c457e302402c59210bbcbfeb24f1fcbf"
 }
