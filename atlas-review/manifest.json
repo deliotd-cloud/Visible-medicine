@@ -1,5 +1,5 @@
 {
-  "revision": "871c57b7729476bb08cbf04d58732b90fc4b52c5",
+  "revision": "aa290176f8bfdb02157f7197e4647508c9c41d87",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -538,8 +538,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "4a06c9923e3b13eddd937f63f97c6b84f1f03ea9adb95bb2c691b333a5a547d8",
-      "importedSha256": "4a06c9923e3b13eddd937f63f97c6b84f1f03ea9adb95bb2c691b333a5a547d8"
+      "sourceSha256": "f890730222a09735274f16534f4c7a79db85bd0453a87e27d1ce1a907f2e0a38",
+      "importedSha256": "f890730222a09735274f16534f4c7a79db85bd0453a87e27d1ce1a907f2e0a38"
     },
     {
       "path": "lib/central-vessel-imaging.ts",
@@ -1450,6 +1450,21 @@
       "path": "content/carpal-bone-quiz.ts",
       "sourceSha256": "21e6966f04c51da49626fab908bf557b7dac20b460d314dc3a8ea8ad0f0f7e64",
       "importedSha256": "21e6966f04c51da49626fab908bf557b7dac20b460d314dc3a8ea8ad0f0f7e64"
+    },
+    {
+      "path": "lib/tarsal-bone-quiz.ts",
+      "sourceSha256": "6f167e75472bf23a37f2f6017d61986fa98f42dd6b67f4df3e7791fd49a505d4",
+      "importedSha256": "6f167e75472bf23a37f2f6017d61986fa98f42dd6b67f4df3e7791fd49a505d4"
+    },
+    {
+      "path": "content/tarsal-bone-quiz-pins.json",
+      "sourceSha256": "6431a98421d48c3aea4b6a8d3abfb9f60912cd03e4cff65c6f117808ed626bb0",
+      "importedSha256": "6431a98421d48c3aea4b6a8d3abfb9f60912cd03e4cff65c6f117808ed626bb0"
+    },
+    {
+      "path": "content/tarsal-bone-quiz.ts",
+      "sourceSha256": "2abe76de5db486947f516287ec9e962832236fdafdef81a86478b6700ce437f4",
+      "importedSha256": "2abe76de5db486947f516287ec9e962832236fdafdef81a86478b6700ce437f4"
     },
     {
       "path": "lib/thoracic-bone-quiz.ts",
@@ -3083,8 +3098,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "b56bee1270bb10a6de360e610d015c9df3a27a90498cd8dacc58a1ff1c4acb0d",
-      "importedSha256": "ce8b015888b1b03d549c006c56aec57e6488f5d316673e4d035f17e6327fb7ec"
+      "sourceSha256": "7aa886aee7dad561569f3978bf1d53f8042ba63ef93b31488971e42a1433e4f3",
+      "importedSha256": "9a977ff76e198d7d944bd3bf5a422e3460f1e6a97f568aa0ea0267297d4b1a0c"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3444,7 +3459,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "e0d6e4581985a67ec82f0e43f0ad575b831cb80304ef7ce85b6d58cf5f389886",
-      "importedSha256": "d59283d9843a0b1e93ac9ce223cf8e469d90f56bebc28b9b772a54069895e8d1"
+      "importedSha256": "100415f12b0b7c9a5a3b2601c8ce11d10f49679e51ac4d60f3ae0b1a8b8fde1d"
     },
     {
       "path": "app/review/review.css",
@@ -3478,8 +3493,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "3f4f612ec1cbf3bc422af0321d28b187a6e8afae1ae9075740724aaf97f77170",
-      "importedSha256": "3f4f612ec1cbf3bc422af0321d28b187a6e8afae1ae9075740724aaf97f77170"
+      "sourceSha256": "d2af7f9d6d37c1518a178ecd20528a4f1312b86a21509bcda3f922bdd9fc5500",
+      "importedSha256": "d2af7f9d6d37c1518a178ecd20528a4f1312b86a21509bcda3f922bdd9fc5500"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -4928,5 +4943,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "2fff5da50e4f8b69948d45236c6a9f0e44efbeca7103d04444ac0f4b765fca68"
+  "websiteIntegrationSha256": "19240ac3703bed2ada2a66834b4b76a47db13296d39ff9ca29e6f69ed39dcbf9"
 }

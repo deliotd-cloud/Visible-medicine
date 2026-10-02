@@ -11,7 +11,7 @@ import {shoulderGirdleEpochBytes,shoulderGirdleEpochPlugin} from './atlas-should
 const baseline='e9542886d8db5ab02d9575f49990569e7ba7dc2f';
 // Coordinator replaces this after the separately versioned Atlas source is saved.
 const revision='ed3d7a1ebaa11edc5bea4c918e43b6019b93d521';
-const liveRevision='871c57b7729476bb08cbf04d58732b90fc4b52c5';
+const liveRevision='aa290176f8bfdb02157f7197e4647508c9c41d87';
 function readFileSync(p:string,encoding:'utf8'):string;
 function readFileSync(p:string):Buffer;
 function readFileSync(p:string,encoding?:'utf8'):Buffer|string{const bytes=shoulderGirdleEpochBytes(p);return encoding?bytes.toString():bytes;}

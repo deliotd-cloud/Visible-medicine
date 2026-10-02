@@ -1,33 +1,37 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {readFileSync} from 'node:fs';
+import {readFileSync as liveReadFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {dirname,relative} from 'node:path';
 import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {thoracoabdominalEpochBytes,thoracoabdominalEpochPlugin} from './atlas-thoracoabdominal-orientation-history.ts';
 
 const baseline='d71bacf180d971cfc98a763414deedd3d8a6b0f0';
 const revision='871c57b7729476bb08cbf04d58732b90fc4b52c5';
 const pinsHash='79d77062dcb4edc4b3f0633b569a7148657a04e8c10653bd0ffe734a359fcfa6';
+function readFileSync(p:string,encoding:'utf8'):string;
+function readFileSync(p:string):Buffer;
+function readFileSync(p:string,encoding?:'utf8'):Buffer|string{const bytes=thoracoabdominalEpochBytes(p);return encoding?bytes.toString():bytes;}
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Buffer|string)=>createHash('sha256').update(b).digest('hex');
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{encoding:'utf8',maxBuffer:32e6});
 const normalized=(s:string)=>s.replaceAll('\r\n','\n');
-async function load(previous=false){
+async function load(previous=false,live=false){
  const result=await build({stdin:{contents:`export * from './atlas-review/app/body-content';
  export * from './atlas-review/lib/thoracoabdominal-orientation';
  export * from './atlas-review/lib/content-types';export * from './atlas-review/lib/body-review-material';
  export * from './atlas-review/lib/body-review-context';export * from './atlas-review/lib/body-review-response';
  export * from './atlas-review/lib/body-review-api';export * from './atlas-review/lib/body-review-decisions';
  export {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';`,resolveDir:process.cwd(),loader:'ts'},
- bundle:true,write:false,platform:'node',format:'esm',plugins:previous?[{name:'exact-pre-thoracoabdominal-import',setup(api){
+ bundle:true,write:false,platform:'node',format:'esm',plugins:[...(previous?[{name:'exact-pre-thoracoabdominal-import',setup(api:import('esbuild').PluginBuild){
   api.onLoad({filter:/\.(?:ts|json)$/},args=>{
    const p=relative(process.cwd(),args.path).replaceAll('\\','/');
    if(!['atlas-review/app/body-content.ts','atlas-review/content/body-renderer-revision.json','atlas-review/content/body-review-display-pins.json'].includes(p))return;
    return{contents:old(p),loader:p.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)};
   });
- }}]:[]});
+ }}]:[]),...(live?[]:[thoracoabdominalEpochPlugin()])]});
  return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
 }
 
@@ -68,7 +72,7 @@ test('nine exact-source thoracoabdominal drafts reach regional learner and prote
     assert.equal(inputs.find((f:any)=>f.path===p)?.sha256,review.files.find((f:any)=>f.path===p)?.sourceSha256,p);
   }
   if(name==='head-neck'){
-   const code=emittedTeaching(base,manifest.files,true);
+   const code=emittedTeaching(base,manifest.files,true,thoracoabdominalEpochBytes);
    for(const entry of pins.entries)for(const tab of entry.topics){const lesson=api.thoracoabdominalOrientationLesson(entry.identity,tab);assert(lesson);
     for(const value of [lesson.body,...lesson.bullets,...lesson.citations,lesson.note])
      assert(code.includes(value)||code.includes(JSON.stringify(value).slice(1,-1)),`${name}: ${value}`);
@@ -141,4 +145,28 @@ test('all 9936 topics and 1104 worksheets change only at pinned drafts; stale sy
  }
  assert.deepEqual({changed,preserved,changedWorksheets,unchangedWorksheets,stale,mutations},
   {changed:9,preserved:9927,changedWorksheets:8,unchangedWorksheets:1096,stale:16,mutations:153});
+});
+
+test('current delivery retains all nine thoracoabdominal drafts in reachable learner and Review artifacts',async()=>{
+ const current=await load(false,true),epoch=await load(),liveJson=(p:string)=>JSON.parse(liveReadFileSync(p,'utf8'));
+ const review=liveJson('atlas-review/manifest.json');assert.equal(review.revision,'aa290176f8bfdb02157f7197e4647508c9c41d87');
+ const base='public/atlas-runtime/head-neck/',manifest=liveJson(base+'manifest.json');
+ assert.equal(manifest.sourceCommit,review.revision);assert.equal(manifest.patientDataIncluded,false);
+ const learnerCode=emittedTeaching(base,manifest.files,true),viewerBase='public/atlas-review-viewer/',viewer=liveJson(viewerBase+'manifest.json');
+ assert.equal(viewer.sourceCommit,review.revision);assert.equal(viewer.personalRecordsIncluded,false);
+ for(const f of viewer.files)assert.equal(sha(liveReadFileSync(viewerBase+f.path)),f.sha256);
+ const reviewCode=viewer.files.filter((f:any)=>f.path.endsWith('.js')).map((f:any)=>liveReadFileSync(viewerBase+f.path,'utf8')).join('\n');
+ let topics=0,packets=0;
+ for(const entry of liveJson('atlas-review/content/thoracoabdominal-orientation-pins.json').entries){
+  for(const tab of entry.topics){
+   const lesson=current.thoracoabdominalOrientationLesson(entry.identity,tab);assert(lesson);topics++;
+   assert.deepEqual(current.bodyLesson(entry.identity,tab),epoch.bodyLesson(entry.identity,tab));
+   assert.deepEqual(current.bodyLesson(entry.identity,tab),lesson);
+   for(const value of [lesson.body,...lesson.bullets,...lesson.citations,lesson.note])for(const code of [learnerCode,reviewCode])
+    assert(code.includes(value)||code.includes(JSON.stringify(value).slice(1,-1)),value);
+  }
+  const before=await epoch.bodyReviewMaterial(entry.identity.id),after=await current.bodyReviewMaterial(entry.identity.id);
+  assert.deepEqual(after.fingerprints,before.fingerprints);assert.equal(after.approval,false);assert(await current.parseBodyReviewResponse(after,entry.identity.id));packets++;
+ }
+ assert.equal(topics,9);assert.equal(packets,8);
 });

@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "871c57b7729476bb08cbf04d58732b90fc4b52c5",
-  "sha256": "2fff5da50e4f8b69948d45236c6a9f0e44efbeca7103d04444ac0f4b765fca68",
+  "sourceCommit": "aa290176f8bfdb02157f7197e4647508c9c41d87",
+  "sha256": "19240ac3703bed2ada2a66834b4b76a47db13296d39ff9ca29e6f69ed39dcbf9",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "4a06c9923e3b13eddd937f63f97c6b84f1f03ea9adb95bb2c691b333a5a547d8"
+      "sha256": "f890730222a09735274f16534f4c7a79db85bd0453a87e27d1ce1a907f2e0a38"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -736,7 +736,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "3f4f612ec1cbf3bc422af0321d28b187a6e8afae1ae9075740724aaf97f77170"
+      "sha256": "d2af7f9d6d37c1518a178ecd20528a4f1312b86a21509bcda3f922bdd9fc5500"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -1725,6 +1725,14 @@
     {
       "path": "atlas-review/content/systemic-venous.ts",
       "sha256": "b209da089da96d8585e069c2fa04764ce04d2ffd68d61ba236175e2a8b6a5bf2"
+    },
+    {
+      "path": "atlas-review/content/tarsal-bone-quiz-pins.json",
+      "sha256": "6431a98421d48c3aea4b6a8d3abfb9f60912cd03e4cff65c6f117808ed626bb0"
+    },
+    {
+      "path": "atlas-review/content/tarsal-bone-quiz.ts",
+      "sha256": "2abe76de5db486947f516287ec9e962832236fdafdef81a86478b6700ce437f4"
     },
     {
       "path": "atlas-review/content/tarsal-imaging-concepts.ts",
@@ -3515,6 +3523,10 @@
       "sha256": "3d7ea90f180f90efefd8e6a922f30add3d88c010147a9ed1ff197fbd2995a644"
     },
     {
+      "path": "atlas-review/lib/tarsal-bone-quiz.ts",
+      "sha256": "6f167e75472bf23a37f2f6017d61986fa98f42dd6b67f4df3e7791fd49a505d4"
+    },
+    {
       "path": "atlas-review/lib/tarsal-imaging.ts",
       "sha256": "25d1061071ff016a0b61342ae79b6af6268a486c3cb39d9333cc6c7cfe35640d"
     },
@@ -4012,7 +4024,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "d7ad125b8a3881e30e1b207ce02a6e058fca7b2baa77cb6f1cfc0f3433ff5e50"
+      "sha256": "682801a9952ff396f7a10df4991e01fb6a205a3a09759fc489371eb2ba14b013"
     }
   ]
 }

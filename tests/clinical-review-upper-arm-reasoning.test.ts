@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 test('all fourteen upper-arm reasoning selections reach matching learner and review revisions',async()=>{
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const learner=JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json','utf8'));
-  assert.equal(learner.sourceCommit,'871c57b7729476bb08cbf04d58732b90fc4b52c5');
+  assert.equal(learner.sourceCommit,'aa290176f8bfdb02157f7197e4647508c9c41d87');
   const path='lib/upper-arm-reasoning.ts';
   const input=JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json','utf8')).find((r:any)=>r.path===path);
   const file=review.files.find((r:any)=>r.path===path);assert(file&&input);

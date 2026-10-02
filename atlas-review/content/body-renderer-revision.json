@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "4a06c9923e3b13eddd937f63f97c6b84f1f03ea9adb95bb2c691b333a5a547d8"
+      "sha256": "f890730222a09735274f16534f4c7a79db85bd0453a87e27d1ce1a907f2e0a38"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1571,6 +1571,14 @@
     {
       "path": "content/systemic-venous.ts",
       "sha256": "b209da089da96d8585e069c2fa04764ce04d2ffd68d61ba236175e2a8b6a5bf2"
+    },
+    {
+      "path": "content/tarsal-bone-quiz-pins.json",
+      "sha256": "6431a98421d48c3aea4b6a8d3abfb9f60912cd03e4cff65c6f117808ed626bb0"
+    },
+    {
+      "path": "content/tarsal-bone-quiz.ts",
+      "sha256": "2abe76de5db486947f516287ec9e962832236fdafdef81a86478b6700ce437f4"
     },
     {
       "path": "content/tarsal-imaging-concepts.ts",
@@ -3233,6 +3241,10 @@
       "sha256": "3d7ea90f180f90efefd8e6a922f30add3d88c010147a9ed1ff197fbd2995a644"
     },
     {
+      "path": "lib/tarsal-bone-quiz.ts",
+      "sha256": "6f167e75472bf23a37f2f6017d61986fa98f42dd6b67f4df3e7791fd49a505d4"
+    },
+    {
       "path": "lib/tarsal-imaging.ts",
       "sha256": "25d1061071ff016a0b61342ae79b6af6268a486c3cb39d9333cc6c7cfe35640d"
     },
@@ -3693,7 +3705,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "b7a4214addf06531cea0755819a70d460d8f933854c7aef2ff9edbffa80218d8",
-  "sourceRendererSha256": "1d81ba66bce9731138a6a76dcd7b153db9a447e3373af1cc14ef581fe088dfe7",
-  "websiteIntegrationSha256": "2fff5da50e4f8b69948d45236c6a9f0e44efbeca7103d04444ac0f4b765fca68"
+  "sha256": "196c189ead34817e963885b3310eeab233f79d9d582308db377a463452df3f34",
+  "sourceRendererSha256": "01cca68f383a581757fe59e28253464c7382610080bcc6f5ae2c7507f7bd098d",
+  "websiteIntegrationSha256": "19240ac3703bed2ada2a66834b4b76a47db13296d39ff9ca29e6f69ed39dcbf9"
 }

@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "4a06c9923e3b13eddd937f63f97c6b84f1f03ea9adb95bb2c691b333a5a547d8"
+    "sha256": "f890730222a09735274f16534f4c7a79db85bd0453a87e27d1ce1a907f2e0a38"
   },
   {
     "path": "app/body-education-link.ts",
@@ -1622,6 +1622,14 @@
   {
     "path": "content/systemic-venous.ts",
     "sha256": "b209da089da96d8585e069c2fa04764ce04d2ffd68d61ba236175e2a8b6a5bf2"
+  },
+  {
+    "path": "content/tarsal-bone-quiz-pins.json",
+    "sha256": "6431a98421d48c3aea4b6a8d3abfb9f60912cd03e4cff65c6f117808ed626bb0"
+  },
+  {
+    "path": "content/tarsal-bone-quiz.ts",
+    "sha256": "2abe76de5db486947f516287ec9e962832236fdafdef81a86478b6700ce437f4"
   },
   {
     "path": "content/tarsal-imaging-concepts.ts",
@@ -3326,6 +3334,10 @@
   {
     "path": "lib/systemic-venous.ts",
     "sha256": "3d7ea90f180f90efefd8e6a922f30add3d88c010147a9ed1ff197fbd2995a644"
+  },
+  {
+    "path": "lib/tarsal-bone-quiz.ts",
+    "sha256": "6f167e75472bf23a37f2f6017d61986fa98f42dd6b67f4df3e7791fd49a505d4"
   },
   {
     "path": "lib/tarsal-imaging.ts",

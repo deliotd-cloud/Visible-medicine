@@ -29,7 +29,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "4a06c9923e3b13eddd937f63f97c6b84f1f03ea9adb95bb2c691b333a5a547d8"
+    "sha256": "f890730222a09735274f16534f4c7a79db85bd0453a87e27d1ce1a907f2e0a38"
   },
   {
     "path": "app/body-explorer.css",
@@ -1058,6 +1058,14 @@
   {
     "path": "content/spine-pelvic-muscle-imaging.ts",
     "sha256": "199970087d2e10d264c3c86c91cbe1151116a32f7b51637d1cf583586ac13416"
+  },
+  {
+    "path": "content/tarsal-bone-quiz-pins.json",
+    "sha256": "6431a98421d48c3aea4b6a8d3abfb9f60912cd03e4cff65c6f117808ed626bb0"
+  },
+  {
+    "path": "content/tarsal-bone-quiz.ts",
+    "sha256": "2abe76de5db486947f516287ec9e962832236fdafdef81a86478b6700ce437f4"
   },
   {
     "path": "content/tarsal-imaging-concepts.ts",
@@ -2226,6 +2234,10 @@
   {
     "path": "lib/swallowing-curriculum.ts",
     "sha256": "74a5678392927149fbab787300d28347d2f613df6db1e9d753f7d3110dee7102"
+  },
+  {
+    "path": "lib/tarsal-bone-quiz.ts",
+    "sha256": "6f167e75472bf23a37f2f6017d61986fa98f42dd6b67f4df3e7791fd49a505d4"
   },
   {
     "path": "lib/tarsal-imaging.ts",
