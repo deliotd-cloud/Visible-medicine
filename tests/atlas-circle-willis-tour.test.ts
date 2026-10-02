@@ -7,7 +7,7 @@ import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {wristUltrasoundMilestoneBytes,withoutCircleWillisNotice} from './atlas-circle-willis-history.ts';
 import {circleWillisMilestoneBytes} from './atlas-carpal-bone-quiz-history.ts';
-const revision='806d7839d65f107e6cf04e236cab314f7d30c388';
+const revision='732f5f56ff3708b9200b25f18ac3f6f175a438e5';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
 async function load(previous=false){
@@ -28,7 +28,7 @@ async function load(previous=false){
 test('Circle of Willis tour reaches contained learner and protected review without new anatomy or access',async()=>{
  const api=await load(),tour=api.circleWillisTour,review=json('atlas-review/manifest.json');
  const prior=JSON.parse(wristUltrasoundMilestoneBytes('atlas-review/manifest.json').toString());
- assert.equal(review.revision,revision);assert.equal(review.files.length,972);assert.deepEqual(review.packages,prior.packages);
+ assert.equal(review.revision,revision);assert.equal(review.files.length,975);assert.deepEqual(review.packages,prior.packages);
  const preMCA=JSON.parse(preMCAImportBytes('atlas-review/manifest.json').toString());
  assert.deepEqual(preMCA.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),['content/carpal-bone-quiz-pins.json','content/carpal-bone-quiz.ts','lib/carpal-bone-quiz.ts','lib/circle-willis-tour.ts','content/thoracic-bone-quiz-pins.json','content/thoracic-bone-quiz.ts','lib/thoracic-bone-quiz.ts'].sort());
  for(const f of review.files)assert.equal(sha(readFileSync('atlas-review/'+f.path)),f.importedSha256,f.path);
@@ -49,7 +49,7 @@ test('Circle of Willis tour reaches contained learner and protected review witho
  }
  for(const name of ['head-neck','shoulder','lower-limb']){
   const folder='public/atlas-runtime/'+name+'/';assert.equal(json(folder+'manifest.json').sourceCommit,revision);
-  assert.equal(json(folder+'source-inputs.json').length,({'head-neck':945,shoulder:625,'lower-limb':100} as Record<string,number>)[name]);
+  assert.equal(json(folder+'source-inputs.json').length,({'head-neck':948,shoulder:628,'lower-limb':100} as Record<string,number>)[name]);
   assert.equal(withoutCircleWillisNotice(readFileSync(folder+'LICENSES/THIRD_PARTY_NOTICES.md','utf8')),wristUltrasoundMilestoneBytes(folder+'LICENSES/THIRD_PARTY_NOTICES.md').toString());
  }
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,JSON.parse(wristUltrasoundMilestoneBytes('lib/atlas-model-inventory.json').toString()).models);

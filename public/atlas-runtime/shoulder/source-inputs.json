@@ -29,7 +29,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "3a5e5865e4d2ac14cc88b4a08d4044bd372ea28e76104a9981652762e7a53ec2"
+    "sha256": "377259cdb73688963baf1af06356b87f7084f3473cf0bc9d9220685006486785"
   },
   {
     "path": "app/body-explorer.css",
@@ -246,6 +246,14 @@
   {
     "path": "content/abdominal-organ-quiz.ts",
     "sha256": "336cba1c47587e71916a07f863339b814aa6c7f2606e3464f2d7627599adddeb"
+  },
+  {
+    "path": "content/abdominal-vascular-mri-pins.json",
+    "sha256": "97300443f3ca6bde73a55d479a5e14ff493b8970081ce5f7462380cd24f552ad"
+  },
+  {
+    "path": "content/abdominal-vascular-mri.ts",
+    "sha256": "ef5b9259642696b41b8ffbf1859343bd06e03feffe74cd6211072d76dc80ac60"
   },
   {
     "path": "content/achilles-ct-pins.json",
@@ -1230,6 +1238,10 @@
   {
     "path": "lib/abdominal-organ-quiz.ts",
     "sha256": "77477913b63cedccd4952a3ab151533905a985a83436da2770849fc0f408d2a0"
+  },
+  {
+    "path": "lib/abdominal-vascular-mri.ts",
+    "sha256": "0cc66432dbb41466b08eccc3a7a3e8eae2a49320ff1223b40d2163fbce0a3823"
   },
   {
     "path": "lib/abdominal-vessel-clinical-curriculum.ts",

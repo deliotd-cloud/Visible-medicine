@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "3a5e5865e4d2ac14cc88b4a08d4044bd372ea28e76104a9981652762e7a53ec2"
+      "sha256": "377259cdb73688963baf1af06356b87f7084f3473cf0bc9d9220685006486785"
     },
     {
       "path": "app/body-education-link.ts",
@@ -511,6 +511,14 @@
     {
       "path": "content/abdominal-organ-quiz.ts",
       "sha256": "336cba1c47587e71916a07f863339b814aa6c7f2606e3464f2d7627599adddeb"
+    },
+    {
+      "path": "content/abdominal-vascular-mri-pins.json",
+      "sha256": "97300443f3ca6bde73a55d479a5e14ff493b8970081ce5f7462380cd24f552ad"
+    },
+    {
+      "path": "content/abdominal-vascular-mri.ts",
+      "sha256": "ef5b9259642696b41b8ffbf1859343bd06e03feffe74cd6211072d76dc80ac60"
     },
     {
       "path": "content/abdominal-wall-teaching.ts",
@@ -1827,6 +1835,10 @@
     {
       "path": "lib/abdominal-organ-reasoning.ts",
       "sha256": "b8912daea3a16c92ae8e8bda65c2d2877e7002d390ac6130dfc45a53e6a312b8"
+    },
+    {
+      "path": "lib/abdominal-vascular-mri.ts",
+      "sha256": "0cc66432dbb41466b08eccc3a7a3e8eae2a49320ff1223b40d2163fbce0a3823"
     },
     {
       "path": "lib/abdominal-vessel-clinical-curriculum.ts",
@@ -3438,7 +3450,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "33d23ea13f89d11536f36aa7ea081f764a41d1e287e7d2239d142cb53672915c"
+      "sha256": "6ebea1850da3c4a5cdb8391b5cf135ff12931c036f769c228b0aebc0a7e61c17"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3653,7 +3665,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "6977e225f5068baf3ee55b665d3319b0cf40c389898684fbec16fd2dfdc10e4a",
-  "sourceRendererSha256": "725a7a3d1253d036591d4aab684063bb9b5786c41b1bf98367bd245eeac37dc1",
-  "websiteIntegrationSha256": "dcfa518dbe5e1b6d56f88fa5adbc60c30971221053be60c1f9048448a1231d72"
+  "sha256": "b071ebb9af30c14dd38e46edfb83fd0f9a7eca5c7f996ce49f38ac75f932c26e",
+  "sourceRendererSha256": "51526f184a8499b318d20843bee5e27970d3eaf7a3e1b3c748cfc67c9225ce8d",
+  "websiteIntegrationSha256": "a9b1e43e5f7409de08950d70aa9cf837c89c9e8d82cc084f0d5f1ccf4abe323a"
 }

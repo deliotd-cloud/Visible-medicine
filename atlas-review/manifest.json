@@ -1,5 +1,5 @@
 {
-  "revision": "806d7839d65f107e6cf04e236cab314f7d30c388",
+  "revision": "732f5f56ff3708b9200b25f18ac3f6f175a438e5",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -538,8 +538,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "3a5e5865e4d2ac14cc88b4a08d4044bd372ea28e76104a9981652762e7a53ec2",
-      "importedSha256": "3a5e5865e4d2ac14cc88b4a08d4044bd372ea28e76104a9981652762e7a53ec2"
+      "sourceSha256": "377259cdb73688963baf1af06356b87f7084f3473cf0bc9d9220685006486785",
+      "importedSha256": "377259cdb73688963baf1af06356b87f7084f3473cf0bc9d9220685006486785"
     },
     {
       "path": "lib/central-vessel-imaging.ts",
@@ -955,6 +955,21 @@
       "path": "content/colic-arterial-mri.ts",
       "sourceSha256": "85f790407bbb49fc0d9a0e3b515808b2ae4fe0d9ec29dcbc548cd866f4fa2842",
       "importedSha256": "85f790407bbb49fc0d9a0e3b515808b2ae4fe0d9ec29dcbc548cd866f4fa2842"
+    },
+    {
+      "path": "lib/abdominal-vascular-mri.ts",
+      "sourceSha256": "0cc66432dbb41466b08eccc3a7a3e8eae2a49320ff1223b40d2163fbce0a3823",
+      "importedSha256": "0cc66432dbb41466b08eccc3a7a3e8eae2a49320ff1223b40d2163fbce0a3823"
+    },
+    {
+      "path": "content/abdominal-vascular-mri-pins.json",
+      "sourceSha256": "97300443f3ca6bde73a55d479a5e14ff493b8970081ce5f7462380cd24f552ad",
+      "importedSha256": "97300443f3ca6bde73a55d479a5e14ff493b8970081ce5f7462380cd24f552ad"
+    },
+    {
+      "path": "content/abdominal-vascular-mri.ts",
+      "sourceSha256": "ef5b9259642696b41b8ffbf1859343bd06e03feffe74cd6211072d76dc80ac60",
+      "importedSha256": "ef5b9259642696b41b8ffbf1859343bd06e03feffe74cd6211072d76dc80ac60"
     },
     {
       "path": "lib/intestinal-junction.ts",
@@ -3038,8 +3053,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "8b21bd6b490b430fb27c398cae4d9cd194d5afcfbea36d5194000c5bde79c77b",
-      "importedSha256": "3c07bc6b8bbbb17de004ab71b1112194826501cadb4fce1fa76cbe2265bad037"
+      "sourceSha256": "5fde11a50b07cf73093bfd7d3978df39ffb8ade8a7d3e4f9677326845574985c",
+      "importedSha256": "eed631c54aaeb68a5e02edc34fafd1cf569a1fe017238fc67618752f0630579b"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3399,7 +3414,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "e0d6e4581985a67ec82f0e43f0ad575b831cb80304ef7ce85b6d58cf5f389886",
-      "importedSha256": "59e0d2bc1a4a0235ecf61bf0e46dd5e5bad8421f76425e3ffa0bf691efd0597a"
+      "importedSha256": "fe565352ec003a1564cd89d389f7e148c677eac9592248efbd373b8d141bc520"
     },
     {
       "path": "app/review/review.css",
@@ -3433,8 +3448,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "0bd8682a80626a2d8cfcc0fb9f86d4f4f8342d8ba27509d64599e8dba97c81d6",
-      "importedSha256": "0bd8682a80626a2d8cfcc0fb9f86d4f4f8342d8ba27509d64599e8dba97c81d6"
+      "sourceSha256": "0f45aa15245f08295d707c50541b70a0e5b56eaa2e339e9d304eee4acfc17e82",
+      "importedSha256": "0f45aa15245f08295d707c50541b70a0e5b56eaa2e339e9d304eee4acfc17e82"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -4878,5 +4893,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "dcfa518dbe5e1b6d56f88fa5adbc60c30971221053be60c1f9048448a1231d72"
+  "websiteIntegrationSha256": "a9b1e43e5f7409de08950d70aa9cf837c89c9e8d82cc084f0d5f1ccf4abe323a"
 }

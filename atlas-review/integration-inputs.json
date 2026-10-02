@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "806d7839d65f107e6cf04e236cab314f7d30c388",
-  "sha256": "dcfa518dbe5e1b6d56f88fa5adbc60c30971221053be60c1f9048448a1231d72",
+  "sourceCommit": "732f5f56ff3708b9200b25f18ac3f6f175a438e5",
+  "sha256": "a9b1e43e5f7409de08950d70aa9cf837c89c9e8d82cc084f0d5f1ccf4abe323a",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "3a5e5865e4d2ac14cc88b4a08d4044bd372ea28e76104a9981652762e7a53ec2"
+      "sha256": "377259cdb73688963baf1af06356b87f7084f3473cf0bc9d9220685006486785"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -667,6 +667,14 @@
       "sha256": "336cba1c47587e71916a07f863339b814aa6c7f2606e3464f2d7627599adddeb"
     },
     {
+      "path": "atlas-review/content/abdominal-vascular-mri-pins.json",
+      "sha256": "97300443f3ca6bde73a55d479a5e14ff493b8970081ce5f7462380cd24f552ad"
+    },
+    {
+      "path": "atlas-review/content/abdominal-vascular-mri.ts",
+      "sha256": "ef5b9259642696b41b8ffbf1859343bd06e03feffe74cd6211072d76dc80ac60"
+    },
+    {
       "path": "atlas-review/content/abdominal-wall-teaching.ts",
       "sha256": "b0da512ba08095bb8516538b11f6f052f5e1bd052f2a418fc1015602fe8f5896"
     },
@@ -728,7 +736,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "0bd8682a80626a2d8cfcc0fb9f86d4f4f8342d8ba27509d64599e8dba97c81d6"
+      "sha256": "0f45aa15245f08295d707c50541b70a0e5b56eaa2e339e9d304eee4acfc17e82"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -1985,6 +1993,10 @@
     {
       "path": "atlas-review/lib/abdominal-organ-reasoning.ts",
       "sha256": "b8912daea3a16c92ae8e8bda65c2d2877e7002d390ac6130dfc45a53e6a312b8"
+    },
+    {
+      "path": "atlas-review/lib/abdominal-vascular-mri.ts",
+      "sha256": "0cc66432dbb41466b08eccc3a7a3e8eae2a49320ff1223b40d2163fbce0a3823"
     },
     {
       "path": "atlas-review/lib/abdominal-vessel-clinical-curriculum.ts",
@@ -3972,7 +3984,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "626f0a397f35ed6b4a1e5738a6f0d032fe7459b1449a8a9326d7b2197b363f31"
+      "sha256": "6181d867a7313c978744b4a2250c79c6930f621fcf8da6505a46adbf7fcc7f4a"
     }
   ]
 }
