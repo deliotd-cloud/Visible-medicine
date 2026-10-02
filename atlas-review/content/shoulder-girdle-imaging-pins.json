@@ -1,0 +1,1282 @@
+{
+  "schemaVersion": 1,
+  "parentCommit": "732f5f56ff3708b9200b25f18ac3f6f175a438e5",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "shoulder-arm-vessels-inventory",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-inventory.glb",
+      "bytes": 616356,
+      "sha256": "d12d81529a1408f934b5055462bb39f0f79c84e25c878a25225652b9baac3e84",
+      "structures": 20
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+        "fmaId": "FMA3992",
+        "name": "Right thyrocervical trunk",
+        "sourceName": "right thyrocervical trunk",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA3992",
+        "bounds": {
+          "min": [
+            -0.4277290105819702,
+            5.521999359130859,
+            0.4754229784011841
+          ],
+          "max": [
+            -0.40075698494911194,
+            5.5794997215271,
+            0.49482595920562744
+          ]
+        },
+        "center": [
+          -0.4142429977655411,
+          5.5507495403289795,
+          0.48512446880340576
+        ],
+        "anchor": [
+          -0.41858500242233276,
+          5.532700061798096,
+          0.48956596851348877
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2307",
+            "sha256": "b81b463eeedf5999f8cd9e072d445799e9c3dcd23a618cda3fb867af39cfe123"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thyrocervical-trunk",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+        "fmaId": "FMA4084",
+        "name": "Left thyrocervical trunk",
+        "sourceName": "left thyrocervical trunk",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA4084",
+        "bounds": {
+          "min": [
+            0.4013550281524658,
+            5.521899223327637,
+            0.4747239649295807
+          ],
+          "max": [
+            0.4276890158653259,
+            5.579100131988525,
+            0.49424201250076294
+          ]
+        },
+        "center": [
+          0.4145220220088959,
+          5.550499677658081,
+          0.4844829887151718
+        ],
+        "anchor": [
+          0.4182009994983673,
+          5.533499717712402,
+          0.4902590215206146
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2255",
+            "sha256": "15a93e07812a3d1aeed4d8be392335496fb024ab0d8bb1d4e30e281c3d93c810"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thyrocervical-trunk",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+        "fmaId": "FMA5039",
+        "name": "Right costocervical trunk",
+        "sourceName": "right costocervical trunk",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA5039",
+        "bounds": {
+          "min": [
+            -0.5218989849090576,
+            5.472499847412109,
+            0.41986504197120667
+          ],
+          "max": [
+            -0.4543980062007904,
+            5.555600643157959,
+            0.49830496311187744
+          ]
+        },
+        "center": [
+          -0.488148495554924,
+          5.514050245285034,
+          0.45908500254154205
+        ],
+        "anchor": [
+          -0.4895249903202057,
+          5.522500038146973,
+          0.4635910093784332
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2276",
+            "sha256": "607905f3c66e08d10c3362c702d0ca13bebd55a71fd83667a61f6738d1a66210"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "costocervical-trunk",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+        "fmaId": "FMA4086",
+        "name": "Left costocervical trunk",
+        "sourceName": "left costocervical trunk",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA4086",
+        "bounds": {
+          "min": [
+            0.4547460079193115,
+            5.472900390625,
+            0.4201899766921997
+          ],
+          "max": [
+            0.5215910077095032,
+            5.5548996925354,
+            0.4979889690876007
+          ]
+        },
+        "center": [
+          0.48816850781440735,
+          5.5139000415802,
+          0.4590894728899002
+        ],
+        "anchor": [
+          0.48764801025390625,
+          5.507900238037109,
+          0.451477974653244
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2224",
+            "sha256": "32df22be6cdf4200ad69dc439e7b6be7cf6e9ebcc44579526819bbcdf75fc106"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "costocervical-trunk",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+        "fmaId": "FMA4057",
+        "name": "Right dorsal scapular artery",
+        "sourceName": "right dorsal scapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA4057",
+        "bounds": {
+          "min": [
+            -1.0666000843048096,
+            3.8316004276275635,
+            -0.5321046113967896
+          ],
+          "max": [
+            -0.5545200109481812,
+            5.613199234008789,
+            0.479032963514328
+          ]
+        },
+        "center": [
+          -0.8105600476264954,
+          4.722399830818176,
+          -0.026535823941230774
+        ],
+        "anchor": [
+          -0.5809879899024963,
+          4.696700572967529,
+          -0.4426394999027252
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2284",
+            "sha256": "1790c89e2535c2831726f71c88ab9f918e113cf20fef742b56d928c108b337aa"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "dorsal-scapular-artery",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+        "fmaId": "FMA10552",
+        "name": "Left dorsal scapular artery",
+        "sourceName": "left dorsal scapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA10552",
+        "bounds": {
+          "min": [
+            0.5547209978103638,
+            3.831899404525757,
+            -0.5322532057762146
+          ],
+          "max": [
+            1.0665899515151978,
+            5.613199234008789,
+            0.47892096638679504
+          ]
+        },
+        "center": [
+          0.8106554746627808,
+          4.722549319267273,
+          -0.026666119694709778
+        ],
+        "anchor": [
+          0.5759209990501404,
+          4.744699478149414,
+          -0.44102680683135986
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2232",
+            "sha256": "729363384679145bcaf83868d792dd3dff3f42c56a809d3a3d6cc1e09261e5be"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "dorsal-scapular-artery",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+        "fmaId": "FMA50859",
+        "name": "Right suprascapular vein",
+        "sourceName": "right suprascapular vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA50859",
+        "bounds": {
+          "min": [
+            -1.3964999914169312,
+            4.831300258636475,
+            0.01680198684334755
+          ],
+          "max": [
+            -0.6351689696311951,
+            5.439599514007568,
+            0.6387699842453003
+          ]
+        },
+        "center": [
+          -1.015834480524063,
+          5.1354498863220215,
+          0.3277859855443239
+        ],
+        "anchor": [
+          -1.0245000123977661,
+          5.289799690246582,
+          0.23821403086185455
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2302",
+            "sha256": "05a1af2bdafa5d179753ce923971e3300a4451ce71788d9fc3bf115897dc92db"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "suprascapular-vein",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+        "fmaId": "FMA50860",
+        "name": "Left suprascapular vein",
+        "sourceName": "left suprascapular vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA50860",
+        "bounds": {
+          "min": [
+            0.6352019906044006,
+            4.831200122833252,
+            0.016885986551642418
+          ],
+          "max": [
+            1.3961501121520996,
+            5.439599514007568,
+            0.6388300061225891
+          ]
+        },
+        "center": [
+          1.0156760513782501,
+          5.13539981842041,
+          0.32785799633711576
+        ],
+        "anchor": [
+          1.0412299633026123,
+          5.273900032043457,
+          0.21618598699569702
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2250",
+            "sha256": "50bcc347434326f06d5db0054036b90215f78f964c3d00c0c94cd0b981dd558b"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "suprascapular-vein",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+        "fmaId": "FMA66563",
+        "name": "Trunk of right thoraco-acromial artery",
+        "sourceName": "trunk of right thoraco-acromial artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA66563",
+        "bounds": {
+          "min": [
+            -0.9646859765052795,
+            5.183399677276611,
+            0.4785099923610687
+          ],
+          "max": [
+            -0.9166169762611389,
+            5.309200286865234,
+            0.5283600091934204
+          ]
+        },
+        "center": [
+          -0.9406514763832092,
+          5.246299982070923,
+          0.5034350007772446
+        ],
+        "anchor": [
+          -0.9337560534477234,
+          5.278399467468262,
+          0.4792209565639496
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2304",
+            "sha256": "b82a47ccca2bb3affd63d8d1f86ad7c79a5a725bcbeb60a25711f1cd3275494e"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thoraco-acromial-trunk",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+        "fmaId": "FMA66564",
+        "name": "Trunk of left thoraco-acromial artery",
+        "sourceName": "trunk of left thoraco-acromial artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA66564",
+        "bounds": {
+          "min": [
+            0.9166539907455444,
+            5.183299541473389,
+            0.4786139726638794
+          ],
+          "max": [
+            0.9652439951896667,
+            5.309000015258789,
+            0.528659999370575
+          ]
+        },
+        "center": [
+          0.9409489929676056,
+          5.246149778366089,
+          0.5036369860172272
+        ],
+        "anchor": [
+          0.9215799570083618,
+          5.276999473571777,
+          0.48698097467422485
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2252",
+            "sha256": "2ff1924941e505e62ac394bc8e8087f6903c7dba58826d87dd21cbc254e511c7"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thoraco-acromial-trunk",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+        "fmaId": "FMA23063",
+        "name": "Pectoral branch of right thoraco-acromial artery",
+        "sourceName": "pectoral branch of right thoraco-acromial artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA23063",
+        "bounds": {
+          "min": [
+            -1.2689299583435059,
+            4.00629997253418,
+            0.48791801929473877
+          ],
+          "max": [
+            -0.9245250225067139,
+            5.224100112915039,
+            0.9948499798774719
+          ]
+        },
+        "center": [
+          -1.0967274904251099,
+          4.615200042724609,
+          0.7413839995861053
+        ],
+        "anchor": [
+          -1.1094200611114502,
+          4.625999927520752,
+          0.7812199592590332
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2361",
+            "sha256": "341bf21d162b7d1f60261396f397db0d7d4acb5be2295e30dea7f6b9394651e8"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "pectoral-branch",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+        "fmaId": "FMA23064",
+        "name": "Pectoral branch of left thoraco-acromial artery",
+        "sourceName": "pectoral branch of left thoraco-acromial artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA23064",
+        "bounds": {
+          "min": [
+            0.9245760440826416,
+            4.00629997253418,
+            0.4878929853439331
+          ],
+          "max": [
+            1.268880009651184,
+            5.224100112915039,
+            0.9948499798774719
+          ]
+        },
+        "center": [
+          1.0967280268669128,
+          4.615200042724609,
+          0.7413714826107025
+        ],
+        "anchor": [
+          1.1071399450302124,
+          4.64069938659668,
+          0.7724999785423279
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2330",
+            "sha256": "3defe0932a0a8948faf7037f0812527864b9ac4e4f8251f45873d7b48ab00977"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "pectoral-branch",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+        "fmaId": "FMA23068",
+        "name": "Acromial branch of right thoraco-acromial artery",
+        "sourceName": "acromial branch of right thoraco-acromial artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA23068",
+        "bounds": {
+          "min": [
+            -1.3827999830245972,
+            5.175000190734863,
+            0.46362799406051636
+          ],
+          "max": [
+            -0.9414899945259094,
+            5.349799633026123,
+            0.5357099771499634
+          ]
+        },
+        "center": [
+          -1.1621449887752533,
+          5.262399911880493,
+          0.49966898560523987
+        ],
+        "anchor": [
+          -1.1718900203704834,
+          5.241800308227539,
+          0.4815899729728699
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2263",
+            "sha256": "d794a35d47638639cd793d357a99312850d6f7b27531cdc10b4b00817f35e170"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "acromial-branch",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+        "fmaId": "FMA23069",
+        "name": "Acromial branch of left thoraco-acromial artery",
+        "sourceName": "acromial branch of left thoraco-acromial artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA23069",
+        "bounds": {
+          "min": [
+            0.9414849877357483,
+            5.174900054931641,
+            0.4637850224971771
+          ],
+          "max": [
+            1.3825300931930542,
+            5.349799633026123,
+            0.5355899930000305
+          ]
+        },
+        "center": [
+          1.1620075404644012,
+          5.262349843978882,
+          0.4996875077486038
+        ],
+        "anchor": [
+          1.169390082359314,
+          5.241700649261475,
+          0.47968003153800964
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2211",
+            "sha256": "bd760839d0c3565e6d2bfe9d40e111116f7965e636053f213b0800b1ccb27537"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "acromial-branch",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+        "fmaId": "FMA23072",
+        "name": "Deltoid branch of right thoraco-acromial artery",
+        "sourceName": "deltoid branch of right thoraco-acromial artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA23072",
+        "bounds": {
+          "min": [
+            -1.6184399127960205,
+            5.1080002784729,
+            0.4776820242404938
+          ],
+          "max": [
+            -1.1191400289535522,
+            5.21150016784668,
+            0.5387200117111206
+          ]
+        },
+        "center": [
+          -1.3687899708747864,
+          5.15975022315979,
+          0.5082010179758072
+        ],
+        "anchor": [
+          -1.3607699871063232,
+          5.134900093078613,
+          0.5233399868011475
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2282",
+            "sha256": "c5d3cd8addb5e3355d853cd416a599e3a90e6c450adbe08c6aad1d28136dc761"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "deltoid-branch",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+        "fmaId": "FMA23073",
+        "name": "Deltoid branch of left thoraco-acromial artery",
+        "sourceName": "deltoid branch of left thoraco-acromial artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA23073",
+        "bounds": {
+          "min": [
+            1.1192200183868408,
+            5.108100414276123,
+            0.47790297865867615
+          ],
+          "max": [
+            1.6182299852371216,
+            5.211400032043457,
+            0.5388400554656982
+          ]
+        },
+        "center": [
+          1.3687250018119812,
+          5.15975022315979,
+          0.5083715170621872
+        ],
+        "anchor": [
+          1.3586399555206299,
+          5.135500431060791,
+          0.5237900018692017
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2230",
+            "sha256": "cf6ccdb1b2c827dd096a04457aee6f55d2c95a3400f4dc6254c42fbfbd6bfcd1"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "deltoid-branch",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ],
+  "previousCatalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "previousAllTopicsHash": "7ba700a5f1fe22babf0f918756373d338521261fd82cb549b7391b2f425049f0"
+}

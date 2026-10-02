@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "732f5f56ff3708b9200b25f18ac3f6f175a438e5",
-  "sha256": "a9b1e43e5f7409de08950d70aa9cf837c89c9e8d82cc084f0d5f1ccf4abe323a",
+  "sourceCommit": "ed3d7a1ebaa11edc5bea4c918e43b6019b93d521",
+  "sha256": "33040e4443ee680bf63fa22a91717c11d1a23dbd163c09e1439ec417178b9cbd",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "377259cdb73688963baf1af06356b87f7084f3473cf0bc9d9220685006486785"
+      "sha256": "fe245f67716123194313d986f1c6c97469fb4f4d8c09c150c818debaee61d194"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -136,7 +136,7 @@
     },
     {
       "path": "atlas-review/app/body-explorer.tsx",
-      "sha256": "a4222472b227d98a08ae4fda33d736bd4781002c3f9c9968609e004bea587913"
+      "sha256": "37e61d98bcf7fe0512f919bab2406115002844d185fff0be016798b873ce93a0"
     },
     {
       "path": "atlas-review/app/body-scene.tsx",
@@ -736,7 +736,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "0f45aa15245f08295d707c50541b70a0e5b56eaa2e339e9d304eee4acfc17e82"
+      "sha256": "b55f0beffe73aa8d38df57dfff3a331085fc884893074ab615e372fb569e224b"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -1675,6 +1675,14 @@
       "sha256": "e9ea55d29364250ae5aab7bcc77f6dec9a80de3cc26b2f3ceb085a3fd4e90d16"
     },
     {
+      "path": "atlas-review/content/shoulder-girdle-imaging-pins.json",
+      "sha256": "6100b0ad3bef67b409c9366ce73cf8f2ac0e5c43c3efff179e52531043be53ee"
+    },
+    {
+      "path": "atlas-review/content/shoulder-girdle-imaging.ts",
+      "sha256": "7ad6111ae5d08727faecb83eb25bdd2c5f0c8d8429a72918cb890f4e5e2c23e7"
+    },
+    {
       "path": "atlas-review/content/shoulder-xray-bindings.json",
       "sha256": "f3e544bf002d4bf8ab0101f5e300e207fff74296f156378667ecc7fe3de10975"
     },
@@ -2225,6 +2233,10 @@
     {
       "path": "atlas-review/lib/body-system-presets.ts",
       "sha256": "67b34405e32541d49c85ad931cc818d5a1d9ab923b317f91e83d9a0fb6fbe285"
+    },
+    {
+      "path": "atlas-review/lib/body-system-toggle.ts",
+      "sha256": "81f721626ad03c0fc4f44245945e7c6c97e0b4158f3efcc75ba8f6d57d3bbaef"
     },
     {
       "path": "atlas-review/lib/body-teaching-loader.ts",
@@ -3383,6 +3395,10 @@
       "sha256": "dab771a8dee5c917271d3354d350922bea85d985583c863cf1ff1f4b6481b18b"
     },
     {
+      "path": "atlas-review/lib/shoulder-girdle-imaging.ts",
+      "sha256": "5694c05ae47ba199038ca9bbb0a3c134f240798f26ad0cdd29f3553050dbfff6"
+    },
+    {
       "path": "atlas-review/lib/shoulder-soft-tissue-xray.ts",
       "sha256": "49f6c4d1a1a97f4532d382260f9bc4a8ea158a83184b05df8a2ae1bbd67070fd"
     },
@@ -3984,7 +4000,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "6181d867a7313c978744b4a2250c79c6930f621fcf8da6505a46adbf7fcc7f4a"
+      "sha256": "80ae7298061ca823670931bd8e4429d9a8e882996022186ac31c5e6c07e63582"
     }
   ]
 }

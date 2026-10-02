@@ -1,17 +1,22 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {readFileSync} from 'node:fs';
+import {readFileSync as liveReadFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {dirname,relative} from 'node:path';
 import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {abdominalVascularMriEpochBytes,abdominalVascularMriEpochPlugin} from './atlas-abdominal-vascular-mri-history.ts';
 const baseline='48f697462c8d7445d0b9707b19a9ebce3adf48aa';
 const revision='732f5f56ff3708b9200b25f18ac3f6f175a438e5';
+const liveRevision='ed3d7a1ebaa11edc5bea4c918e43b6019b93d521';
+function readFileSync(p:string,encoding:'utf8'):string;
+function readFileSync(p:string):Buffer;
+function readFileSync(p:string,encoding?:'utf8'):Buffer|string{const bytes=abdominalVascularMriEpochBytes(p);return encoding?bytes.toString():bytes;}
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Buffer|string)=>createHash('sha256').update(b).digest('hex');
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{encoding:'utf8',maxBuffer:32e6});
-async function load(previous=false){
+async function load(previous=false,live=false){
  const result=await build({stdin:{contents:`export * from './atlas-review/app/body-content';
  export * from './atlas-review/lib/abdominal-vascular-mri';
  export * from './atlas-review/content/abdominal-vascular-mri';
@@ -19,13 +24,13 @@ async function load(previous=false){
  export * from './atlas-review/lib/body-review-context';export * from './atlas-review/lib/body-review-response';
  export * from './atlas-review/lib/body-review-api';export * from './atlas-review/lib/body-review-decisions';
  export {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';`,resolveDir:process.cwd(),loader:'ts'},
- bundle:true,write:false,platform:'node',format:'esm',plugins:previous?[{name:'exact-before-projection',setup(api){
+ bundle:true,write:false,platform:'node',format:'esm',plugins:[...(previous?[{name:'exact-before-projection',setup(api:import('esbuild').PluginBuild){
   api.onLoad({filter:/\.(?:ts|json)$/},args=>{
    const p=relative(process.cwd(),args.path).replaceAll('\\','/');
    if(!['atlas-review/app/body-content.ts','atlas-review/content/body-renderer-revision.json'].includes(p))return;
    return{contents:old(p),loader:p.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)};
   });
- }}]:[]});
+ }}]:[]),...(!live?[abdominalVascularMriEpochPlugin()]:[])]});
  return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
 }
 test('eighteen source-pinned abdominal vascular MRI topics reach learners and protected Review without extra controls, assets or rights',async()=>{
@@ -48,7 +53,7 @@ test('eighteen source-pinned abdominal vascular MRI topics reach learners and pr
   assert.deepEqual(manifest.files.filter((f:any)=>f.path.startsWith('models/')),JSON.parse(old(base+'manifest.json')).files.filter((f:any)=>f.path.startsWith('models/')));
   for(const f of manifest.files)assert.equal(sha(readFileSync(base+f.path)),f.sha256);
  }
- const base='public/atlas-runtime/head-neck/',manifest=json(base+'manifest.json'),code=emittedTeaching(base,manifest.files,true);
+ const base='public/atlas-runtime/head-neck/',manifest=json(base+'manifest.json'),code=emittedTeaching(base,manifest.files,true,abdominalVascularMriEpochBytes);
  const reviewBase='public/atlas-review-viewer/',viewer=json(reviewBase+'manifest.json');
  assert.equal(viewer.sourceCommit,revision);assert.equal(viewer.personalRecordsIncluded,false);
  for(const f of viewer.files)assert.equal(sha(readFileSync(reviewBase+f.path)),f.sha256);
@@ -96,4 +101,47 @@ test('all9936 topics retain exactly18 MRI changes and eighteen review packets ad
   }
  }
  assert.deepEqual({changed,unchanged,packets,rejected,mutations},{changed:18,unchanged:9918,packets:18,rejected:36,mutations:234});
+});
+
+test('the later shoulder-girdle import retains the completed abdominal MRI source and visible teaching',async()=>{
+ const api=await load(false,true),liveJson=(p:string)=>JSON.parse(liveReadFileSync(p,'utf8'));
+ const review=liveJson('atlas-review/manifest.json');assert.equal(review.revision,liveRevision);
+ for(const p of ['content/abdominal-vascular-mri-pins.json','content/abdominal-vascular-mri.ts','lib/abdominal-vascular-mri.ts']){
+  assert.equal(sha(liveReadFileSync('atlas-review/'+p)),sha(abdominalVascularMriEpochBytes('atlas-review/'+p)),p+' source bytes retained');
+  const record=review.files.find((f:any)=>f.path===p);assert(record);
+  assert.equal(record.sourceSha256,sha(liveReadFileSync('atlas-review/'+p)));
+ }
+ const pins=liveJson('atlas-review/content/abdominal-vascular-mri-pins.json');
+ assert.equal(sha(JSON.stringify(pins)),'40b5d68a52b2e7b2bc7c61be943c626318838ac2655231fa3a43c16f4b072367');
+ assert.equal(pins.parentCommit,'806d7839d65f107e6cf04e236cab314f7d30c388');assert.equal(pins.entries.length,18);
+ let learnerCode:string|undefined;
+ const specializedEntries:Record<string,string[]>={
+  shoulder:['scripts/export-shoulder-module.mjs','app/shoulder-explorer.tsx','app/atlas-workspace.tsx'],
+  'female-pelvis':['scripts/export-female-pelvis-module.mjs','app/hra-pelvis-supplement.tsx'],
+  'lower-limb':['scripts/export-lower-limb-module.mjs','app/um-knee-study.tsx'],
+ };
+ for(const name of ['head-neck','shoulder','female-pelvis','lower-limb']){
+  const base='public/atlas-runtime/'+name+'/',manifest=liveJson(base+'manifest.json');
+  assert.equal(manifest.sourceCommit,liveRevision);assert.equal(manifest.patientDataIncluded,false);
+  const prior=JSON.parse(abdominalVascularMriEpochBytes(base+'manifest.json').toString());
+  assert.deepEqual(manifest.files.filter((f:any)=>f.path.startsWith('models/')),prior.files.filter((f:any)=>f.path.startsWith('models/')));
+  for(const f of manifest.files)assert.equal(sha(liveReadFileSync(base+f.path)),f.sha256,base+f.path);
+  if(name==='head-neck')learnerCode=emittedTeaching(base,manifest.files,true);
+  else{
+   const inputs=liveJson(base+'source-inputs.json'),priorInputs=JSON.parse(abdominalVascularMriEpochBytes(base+'source-inputs.json').toString());
+   for(const path of specializedEntries[name]){
+    const entry=inputs.find((f:any)=>f.path===path),before=priorInputs.find((f:any)=>f.path===path);
+    assert(entry&&before,`${name}: ${path} entry source`);assert.deepEqual(entry,before,`${name}: ${path} source mapping unchanged`);
+   }
+  }
+ }
+ assert(learnerCode);
+ const reviewBase='public/atlas-review-viewer/',viewer=liveJson(reviewBase+'manifest.json');
+ assert.equal(viewer.sourceCommit,liveRevision);assert.equal(viewer.personalRecordsIncluded,false);
+ const reviewCode=viewer.files.filter((f:any)=>f.path.endsWith('.js')).map((f:any)=>liveReadFileSync(reviewBase+f.path,'utf8')).join('\n');
+ for(const entry of pins.entries){
+  const lesson=api.abdominalVascularMriLesson(entry.identity,'mri');assert(lesson);
+  assert.deepEqual(api.bodyLesson(entry.identity,'mri'),lesson);
+  for(const value of [lesson.body,...lesson.bullets,...lesson.citations,lesson.note])for(const artifact of [learnerCode,reviewCode])assert(artifact.includes(value)||artifact.includes(JSON.stringify(value).slice(1,-1)),value);
+ }
 });

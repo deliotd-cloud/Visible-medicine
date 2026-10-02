@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "377259cdb73688963baf1af06356b87f7084f3473cf0bc9d9220685006486785"
+    "sha256": "fe245f67716123194313d986f1c6c97469fb4f4d8c09c150c818debaee61d194"
   },
   {
     "path": "app/body-education-link.ts",
@@ -93,7 +93,7 @@
   },
   {
     "path": "app/body-explorer.tsx",
-    "sha256": "af2304091172896d7ba7f3c9eb57303cb0bffcc2b1ff5ad93b98e3ac56428984"
+    "sha256": "2dad1c22dfec424db6a4cdf578cb4f9cafe6a0e3295f95ed7d3318976aa62dc0"
   },
   {
     "path": "app/body-scene.tsx",
@@ -1532,6 +1532,14 @@
     "sha256": "e9ea55d29364250ae5aab7bcc77f6dec9a80de3cc26b2f3ceb085a3fd4e90d16"
   },
   {
+    "path": "content/shoulder-girdle-imaging-pins.json",
+    "sha256": "6100b0ad3bef67b409c9366ce73cf8f2ac0e5c43c3efff179e52531043be53ee"
+  },
+  {
+    "path": "content/shoulder-girdle-imaging.ts",
+    "sha256": "7ad6111ae5d08727faecb83eb25bdd2c5f0c8d8429a72918cb890f4e5e2c23e7"
+  },
+  {
     "path": "content/shoulder-xray-bindings.json",
     "sha256": "f3e544bf002d4bf8ab0101f5e300e207fff74296f156378667ecc7fe3de10975"
   },
@@ -2118,6 +2126,10 @@
   {
     "path": "lib/body-system-presets.ts",
     "sha256": "67b34405e32541d49c85ad931cc818d5a1d9ab923b317f91e83d9a0fb6fbe285"
+  },
+  {
+    "path": "lib/body-system-toggle.ts",
+    "sha256": "81f721626ad03c0fc4f44245945e7c6c97e0b4158f3efcc75ba8f6d57d3bbaef"
   },
   {
     "path": "lib/body-teaching-loader.ts",
@@ -3218,6 +3230,10 @@
   {
     "path": "lib/shoulder-clinical-curriculum.ts",
     "sha256": "dab771a8dee5c917271d3354d350922bea85d985583c863cf1ff1f4b6481b18b"
+  },
+  {
+    "path": "lib/shoulder-girdle-imaging.ts",
+    "sha256": "5694c05ae47ba199038ca9bbb0a3c134f240798f26ad0cdd29f3553050dbfff6"
   },
   {
     "path": "lib/shoulder-soft-tissue-xray.ts",

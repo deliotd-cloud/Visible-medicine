@@ -8,7 +8,7 @@ import {readFileSync} from 'node:fs';
 import {dirname, resolve} from 'node:path';
 import {build} from 'esbuild';
 
-const source = '732f5f56ff3708b9200b25f18ac3f6f175a438e5';
+const source = 'ed3d7a1ebaa11edc5bea4c918e43b6019b93d521';
 const sourceBefore = '944f57b801471c3b005a64ec83314188b2f06cf5';
 const websiteBefore = 'afca2757914d0fc35af577fe1d736caf8549a99f';
 const sourceRepo = process.env.ATLAS_SOURCE_REPO ?? resolve('..', '..', '..', '2026-09-05', 'referenced-chatgpt-conversation-this-is-an-2', 'outputs');

@@ -47,6 +47,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/atlas-review/components/ui/button';
 import { Switch } from '@/atlas-review/components/ui/switch';
+import { bodySystemToggle } from '@/atlas-review/lib/body-system-toggle';
 import { Slider } from '@/atlas-review/components/ui/slider';
 import { ExplodeStyleSelect } from './explode-style-select';
 import { cubitalStudyBounds } from '@/atlas-review/lib/cubital-studies';
@@ -1516,9 +1517,10 @@ export default function BodyExplorer({
               />
             );
           const Icon = icons[system],
-            count = regionStructures.filter((s) => s.system === system).length;
+            count = regionStructures.filter((s) => s.system === system).length,
+            toggle = bodySystemToggle(count, systems[system], exam);
           return (
-            <div key={system} className={systems[system] ? 'active' : ''}>
+            <div key={system} className={toggle.checked ? 'active' : ''}>
               <Icon style={{ color: bodySystems[system].color }} />
               <span>
                 {bodySystems[system].name}
@@ -1528,12 +1530,13 @@ export default function BodyExplorer({
                 </small>
               </span>
               <Switch
-                checked={systems[system]}
-                disabled={exam || count === 0}
+                checked={toggle.checked}
+                disabled={toggle.disabled}
                 onCheckedChange={(checked) =>
                   setSystems((prev) => ({ ...prev, [system]: checked }))
                 }
                 aria-label={`Show ${bodySystems[system].name}`}
+                aria-description={!toggle.available ? 'No source structures are available for this system in this region.' : undefined}
               />
             </div>
           );

@@ -1,5 +1,5 @@
 {
-  "revision": "732f5f56ff3708b9200b25f18ac3f6f175a438e5",
+  "revision": "ed3d7a1ebaa11edc5bea4c918e43b6019b93d521",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -538,8 +538,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "377259cdb73688963baf1af06356b87f7084f3473cf0bc9d9220685006486785",
-      "importedSha256": "377259cdb73688963baf1af06356b87f7084f3473cf0bc9d9220685006486785"
+      "sourceSha256": "fe245f67716123194313d986f1c6c97469fb4f4d8c09c150c818debaee61d194",
+      "importedSha256": "fe245f67716123194313d986f1c6c97469fb4f4d8c09c150c818debaee61d194"
     },
     {
       "path": "lib/central-vessel-imaging.ts",
@@ -970,6 +970,21 @@
       "path": "content/abdominal-vascular-mri.ts",
       "sourceSha256": "ef5b9259642696b41b8ffbf1859343bd06e03feffe74cd6211072d76dc80ac60",
       "importedSha256": "ef5b9259642696b41b8ffbf1859343bd06e03feffe74cd6211072d76dc80ac60"
+    },
+    {
+      "path": "lib/shoulder-girdle-imaging.ts",
+      "sourceSha256": "5694c05ae47ba199038ca9bbb0a3c134f240798f26ad0cdd29f3553050dbfff6",
+      "importedSha256": "5694c05ae47ba199038ca9bbb0a3c134f240798f26ad0cdd29f3553050dbfff6"
+    },
+    {
+      "path": "content/shoulder-girdle-imaging-pins.json",
+      "sourceSha256": "6100b0ad3bef67b409c9366ce73cf8f2ac0e5c43c3efff179e52531043be53ee",
+      "importedSha256": "6100b0ad3bef67b409c9366ce73cf8f2ac0e5c43c3efff179e52531043be53ee"
+    },
+    {
+      "path": "content/shoulder-girdle-imaging.ts",
+      "sourceSha256": "7ad6111ae5d08727faecb83eb25bdd2c5f0c8d8429a72918cb890f4e5e2c23e7",
+      "importedSha256": "7ad6111ae5d08727faecb83eb25bdd2c5f0c8d8429a72918cb890f4e5e2c23e7"
     },
     {
       "path": "lib/intestinal-junction.ts",
@@ -3053,8 +3068,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "5fde11a50b07cf73093bfd7d3978df39ffb8ade8a7d3e4f9677326845574985c",
-      "importedSha256": "eed631c54aaeb68a5e02edc34fafd1cf569a1fe017238fc67618752f0630579b"
+      "sourceSha256": "0bf8f27ecbdd9f9710605759d7ffbcbe0a4c5fad85eed4e0340daeeca0e8c150",
+      "importedSha256": "a7a7c9f11125a0587e441d506de6cb5fb41434407b007aae4d869f2908798f76"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3414,7 +3429,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "e0d6e4581985a67ec82f0e43f0ad575b831cb80304ef7ce85b6d58cf5f389886",
-      "importedSha256": "fe565352ec003a1564cd89d389f7e148c677eac9592248efbd373b8d141bc520"
+      "importedSha256": "99232c43872bd50050618b3b4dd8ea624954e363658fd08e7bdf78b86eb87e40"
     },
     {
       "path": "app/review/review.css",
@@ -3448,8 +3463,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "0f45aa15245f08295d707c50541b70a0e5b56eaa2e339e9d304eee4acfc17e82",
-      "importedSha256": "0f45aa15245f08295d707c50541b70a0e5b56eaa2e339e9d304eee4acfc17e82"
+      "sourceSha256": "b55f0beffe73aa8d38df57dfff3a331085fc884893074ab615e372fb569e224b",
+      "importedSha256": "b55f0beffe73aa8d38df57dfff3a331085fc884893074ab615e372fb569e224b"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -3518,8 +3533,8 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sourceSha256": "af2304091172896d7ba7f3c9eb57303cb0bffcc2b1ff5ad93b98e3ac56428984",
-      "importedSha256": "a4222472b227d98a08ae4fda33d736bd4781002c3f9c9968609e004bea587913"
+      "sourceSha256": "2dad1c22dfec424db6a4cdf578cb4f9cafe6a0e3295f95ed7d3318976aa62dc0",
+      "importedSha256": "37e61d98bcf7fe0512f919bab2406115002844d185fff0be016798b873ce93a0"
     },
     {
       "path": "app/um-knee-entry.css",
@@ -3980,6 +3995,11 @@
       "path": "app/upper-limb-motor.css",
       "sourceSha256": "8642774fece7df3c1b7597191362bbd83efb87dc0b3a063fb457e274d809b496",
       "importedSha256": "8642774fece7df3c1b7597191362bbd83efb87dc0b3a063fb457e274d809b496"
+    },
+    {
+      "path": "lib/body-system-toggle.ts",
+      "sourceSha256": "81f721626ad03c0fc4f44245945e7c6c97e0b4158f3efcc75ba8f6d57d3bbaef",
+      "importedSha256": "81f721626ad03c0fc4f44245945e7c6c97e0b4158f3efcc75ba8f6d57d3bbaef"
     },
     {
       "path": "app/explode-style-select.tsx",
@@ -4893,5 +4913,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "a9b1e43e5f7409de08950d70aa9cf837c89c9e8d82cc084f0d5f1ccf4abe323a"
+  "websiteIntegrationSha256": "33040e4443ee680bf63fa22a91717c11d1a23dbd163c09e1439ec417178b9cbd"
 }
