@@ -1,5 +1,5 @@
 {
-  "revision": "6888a898281695faf9e41bdf34a7d3c771c4f7f2",
+  "revision": "fa7dcf45efbad1dc908b02e6c699dcb02e6b3c06",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -538,8 +538,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "8abdc0e09da92457bfa3c483ea8004cd5ef155621ff0b4fb3770e83ca2624502",
-      "importedSha256": "8abdc0e09da92457bfa3c483ea8004cd5ef155621ff0b4fb3770e83ca2624502"
+      "sourceSha256": "abd9f39720fffabccbe5484a25710a2feb19afb7adcbe8202cb74991e860f442",
+      "importedSha256": "abd9f39720fffabccbe5484a25710a2feb19afb7adcbe8202cb74991e860f442"
     },
     {
       "path": "lib/central-vessel-imaging.ts",
@@ -1797,6 +1797,16 @@
       "importedSha256": "4b003f2e5d91186b05429989a28f9b4162e9364043736fa5e9d0199b59da0332"
     },
     {
+      "path": "lib/cubital-venous-ultrasound.ts",
+      "sourceSha256": "bd250a8637fbdc438ae17e35912a3962fff9a12b34c0f5063c0689435f46134b",
+      "importedSha256": "bd250a8637fbdc438ae17e35912a3962fff9a12b34c0f5063c0689435f46134b"
+    },
+    {
+      "path": "content/cubital-venous-ultrasound.ts",
+      "sourceSha256": "ba87a58db1a936bd7541b24f758d5b328f7e038af703412459d337ec22a4aac5",
+      "importedSha256": "ba87a58db1a936bd7541b24f758d5b328f7e038af703412459d337ec22a4aac5"
+    },
+    {
       "path": "lib/iliac-venous-imaging.ts",
       "sourceSha256": "67be90455b641db01288ce8a4fe837f2f20082b0b713840835971bd42c4ef4f2",
       "importedSha256": "67be90455b641db01288ce8a4fe837f2f20082b0b713840835971bd42c4ef4f2"
@@ -2903,8 +2913,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "1b468f8d17a2014694dbf40e0bf228b02353bfca693386e70e4bf2ee274030b7",
-      "importedSha256": "b538096eff1193ecd1de04215511ffdc2177c2e4cc81866a51221d02b951baa0"
+      "sourceSha256": "22fa2bcc802e2aa4a3e3211e815e4e4d5d1121de01adf8051cadc42a058c0161",
+      "importedSha256": "266a1e1365ea1f3f0d16b795c34bb37be62e93a7d7ea6080cf42623d286572fc"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3263,8 +3273,8 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sourceSha256": "b2cca8944a1175a744056d0e5e5b2759ec4f58174f5b2f4a2f674bdd2c46508e",
-      "importedSha256": "5ee1d00b9173fd4c8c22620af569a91ade7a5efcaa2082cac14291bd564de6ac"
+      "sourceSha256": "b11a64faee7da01fc540154c35da783198b776aed2e01ae50b9a3ff165ea14e0",
+      "importedSha256": "752568f07f8ca46f473a3dd50eede660cf0c0138f20568e9aecf194202da995d"
     },
     {
       "path": "app/review/review.css",
@@ -3298,8 +3308,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "7127ad334b121bfa923d203b14cdf985ce7d98314fb4e11181e8ede975592178",
-      "importedSha256": "7127ad334b121bfa923d203b14cdf985ce7d98314fb4e11181e8ede975592178"
+      "sourceSha256": "f6ac88f40df1ac4a65159cc9286d80d3b7ac93f785ccdc5da535f7ba6051e37e",
+      "importedSha256": "f6ac88f40df1ac4a65159cc9286d80d3b7ac93f785ccdc5da535f7ba6051e37e"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -4638,8 +4648,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "8c29092d1e85b6eba2aaa756d44420f8ad2e59d8b599671276fb68c2d994cc9a",
-      "importedSha256": "8c29092d1e85b6eba2aaa756d44420f8ad2e59d8b599671276fb68c2d994cc9a"
+      "sourceSha256": "4627118a7feaa2ebeb33ecd00cf2f51190f7eba2e9e2ce01bc05d1c38fc5bc69",
+      "importedSha256": "4627118a7feaa2ebeb33ecd00cf2f51190f7eba2e9e2ce01bc05d1c38fc5bc69"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -4738,5 +4748,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "9ed31e45b15f6ee92a3232f0e29b2a1d92f1f5ceaece89fa723921aa68134e33"
+  "websiteIntegrationSha256": "9cc8acf9566195de3801c50b68b8b9bdbbdbf0a7c28244ebbc36d25fe56eb571"
 }

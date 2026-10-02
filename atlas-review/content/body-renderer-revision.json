@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "8abdc0e09da92457bfa3c483ea8004cd5ef155621ff0b4fb3770e83ca2624502"
+      "sha256": "abd9f39720fffabccbe5484a25710a2feb19afb7adcbe8202cb74991e860f442"
     },
     {
       "path": "app/body-education-link.ts",
@@ -765,6 +765,10 @@
       "sha256": "e787db76a21b7c3844a74f86e72b61d380345fccd72503030863d97d43b631c0"
     },
     {
+      "path": "content/cubital-venous-ultrasound.ts",
+      "sha256": "ba87a58db1a936bd7541b24f758d5b328f7e038af703412459d337ec22a4aac5"
+    },
+    {
       "path": "content/deep-venous-clinical-pins.json",
       "sha256": "37d56c9087a81591788a26d0a82eaec67904937caed39691405a1f57eafb0e82"
     },
@@ -1418,7 +1422,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "b2cca8944a1175a744056d0e5e5b2759ec4f58174f5b2f4a2f674bdd2c46508e"
+      "sha256": "b11a64faee7da01fc540154c35da783198b776aed2e01ae50b9a3ff165ea14e0"
     },
     {
       "path": "content/sca-mca-clinical-pins.json",
@@ -2135,6 +2139,10 @@
     {
       "path": "lib/cubital-veins.ts",
       "sha256": "1877da3b251cae1816573786fe271a94306571f606fb8410386a326efe3e30e6"
+    },
+    {
+      "path": "lib/cubital-venous-ultrasound.ts",
+      "sha256": "bd250a8637fbdc438ae17e35912a3962fff9a12b34c0f5063c0689435f46134b"
     },
     {
       "path": "lib/deep-brain-reasoning.ts",
@@ -3326,7 +3334,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "48cf93d90ccbee40d2fa0f690d1eb82707c188fbf856d104e3ce3785b5307766"
+      "sha256": "c4c0b08cbe4b0f1dbfdb27d147baa9646e3a6ce6ea9e3877f3b65c5b0fdcc297"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3541,7 +3549,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "52dccd69c2b8cf28f771f0fa36f971dd2d5a184210c721bdc55b5fd45047d082",
-  "sourceRendererSha256": "7dba9635ced96440f070e59b5de6eb64f0e728e2b510345bae5a5a70b7fef06b",
-  "websiteIntegrationSha256": "9ed31e45b15f6ee92a3232f0e29b2a1d92f1f5ceaece89fa723921aa68134e33"
+  "sha256": "5bbc85eef4a1c0cd3848066cd198d7be6afb16a5ab5f3f872e21e8e06384b42d",
+  "sourceRendererSha256": "dc4760930d1dd3e869e205c9c53df49f3f10071978cc5aac22a2a4f066627ef5",
+  "websiteIntegrationSha256": "9cc8acf9566195de3801c50b68b8b9bdbbdbf0a7c28244ebbc36d25fe56eb571"
 }

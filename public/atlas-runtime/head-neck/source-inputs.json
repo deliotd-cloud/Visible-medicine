@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "8c29092d1e85b6eba2aaa756d44420f8ad2e59d8b599671276fb68c2d994cc9a"
+    "sha256": "4627118a7feaa2ebeb33ecd00cf2f51190f7eba2e9e2ce01bc05d1c38fc5bc69"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "8abdc0e09da92457bfa3c483ea8004cd5ef155621ff0b4fb3770e83ca2624502"
+    "sha256": "abd9f39720fffabccbe5484a25710a2feb19afb7adcbe8202cb74991e860f442"
   },
   {
     "path": "app/body-education-link.ts",
@@ -776,6 +776,10 @@
     "sha256": "e787db76a21b7c3844a74f86e72b61d380345fccd72503030863d97d43b631c0"
   },
   {
+    "path": "content/cubital-venous-ultrasound.ts",
+    "sha256": "ba87a58db1a936bd7541b24f758d5b328f7e038af703412459d337ec22a4aac5"
+  },
+  {
     "path": "content/deep-venous-clinical-pins.json",
     "sha256": "37d56c9087a81591788a26d0a82eaec67904937caed39691405a1f57eafb0e82"
   },
@@ -1429,7 +1433,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "b2cca8944a1175a744056d0e5e5b2759ec4f58174f5b2f4a2f674bdd2c46508e"
+    "sha256": "b11a64faee7da01fc540154c35da783198b776aed2e01ae50b9a3ff165ea14e0"
   },
   {
     "path": "content/sca-mca-clinical-pins.json",
@@ -2230,6 +2234,10 @@
   {
     "path": "lib/cubital-veins.ts",
     "sha256": "1877da3b251cae1816573786fe271a94306571f606fb8410386a326efe3e30e6"
+  },
+  {
+    "path": "lib/cubital-venous-ultrasound.ts",
+    "sha256": "bd250a8637fbdc438ae17e35912a3962fff9a12b34c0f5063c0689435f46134b"
   },
   {
     "path": "lib/deep-brain-reasoning.ts",

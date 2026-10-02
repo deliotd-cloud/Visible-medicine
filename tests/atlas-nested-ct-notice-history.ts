@@ -1,8 +1,10 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
+import {withoutCubitalVenousUltrasoundNotice} from './atlas-cubital-ultrasound-history.ts';
 
 // Only this independently checked terminal addition may be removed in history.
 export function withoutNestedCTOrientationNotice(text:string):string {
+ text=withoutCubitalVenousUltrasoundNotice(text);
  const start=text.indexOf('\n## Named nested CT orientation (1 October 2026)\n');
  if(start<0)return text;
  assert.equal(createHash('sha256').update(text.slice(start)).digest('hex'),

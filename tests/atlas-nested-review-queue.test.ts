@@ -7,7 +7,8 @@ import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
 import {dirname} from 'node:path';
 import {build} from 'esbuild';
-const source='6888a898281695faf9e41bdf34a7d3c771c4f7f2',base='db062f3fa5c287d24c20f4b8e77a9ba2eb120ecc';
+import {desktopLayoutImportMilestone,withoutCubitalVenousUltrasoundNotice} from './atlas-cubital-ultrasound-history.ts';
+const source='fa7dcf45efbad1dc908b02e6c699dcb02e6b3c06',base='db062f3fa5c287d24c20f4b8e77a9ba2eb120ecc';
 const old=(path:string)=>Buffer.from(execFileSync('git',['show',base+':'+path],{maxBuffer:32e6}));
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
@@ -34,10 +35,11 @@ async function load(previous=false,historicalQueue=false){
 
 test('compact review queue retains exact source/search/track and models/rights after the independently tested eye guide',async()=>{
  const api=await load(),review=json('atlas-review/manifest.json'),prior=JSON.parse(old('atlas-review/manifest.json').toString('utf8'));
- assert.equal(review.revision,source);assert.equal(review.files.length,944);assert.deepEqual(review.packages,prior.packages);
- assert.deepEqual(review.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),
+ assert.equal(review.revision,source);assert.equal(review.files.length,946);assert.deepEqual(review.packages,prior.packages);
+ const milestone=desktopLayoutImportMilestone();
+ assert.deepEqual(milestone.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),
   ['content/nested-guided-learning-bindings.v1.json','lib/eye-layer-guide.ts','lib/nested-guided-learning.ts','lib/nested-review-queue.ts']);
- assert.deepEqual(review.files.filter((f:any)=>prior.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),
+ assert.deepEqual(milestone.files.filter((f:any)=>prior.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),
   ['app/atlas-workspace.css','app/eye-layers.css','app/eye-layers.tsx','app/review/nested/nested-review.css','app/review/nested/page.tsx','app/review/nested/workspace.tsx','app/whole-body-guided-learning.css','app/whole-body-guided-learning.tsx','content/body-renderer-revision.json','lib/nested-review-material.ts','lib/nested-review.ts']);
  for(const file of review.files)assert.equal(sha(readFileSync('atlas-review/'+file.path)),file.importedSha256,file.path);
  const receipt=json('atlas-review/integration-inputs.json');assert.equal(receipt.sourceCommit,source);
@@ -52,14 +54,16 @@ test('compact review queue retains exact source/search/track and models/rights a
   assert.equal(manifest.sourceCommit,source);
   assert.deepEqual(manifest.files.filter((f:any)=>f.path.startsWith('models/')),earlier.files.filter((f:any)=>f.path.startsWith('models/')),'Model bytes unchanged');
   for(const file of manifest.files)assert.equal(sha(readFileSync(folder+file.path)),file.sha256);
-  for(const path of ['bundled-dependencies.json','BUNDLED_NOTICES.txt','LICENSES/THIRD_PARTY_NOTICES.md'])
+  assert.equal(withoutCubitalVenousUltrasoundNotice(readFileSync(folder+'LICENSES/THIRD_PARTY_NOTICES.md','utf8')),old(folder+'LICENSES/THIRD_PARTY_NOTICES.md').toString('utf8'));
+  for(const path of ['bundled-dependencies.json','BUNDLED_NOTICES.txt'])
    assert.deepEqual(readFileSync(folder+path),old(folder+path),'Credits/dependencies retained');
  }
  const inventory=json('lib/atlas-model-inventory.json');assert.equal(inventory.models.length,137);
  assert.deepEqual(inventory.models,JSON.parse(old('lib/atlas-model-inventory.json').toString('utf8')).models);
  for(const path of ['content/nested-review-bindings.json','content/nested-teaching.ts',
-  'lib/nested-review-client.ts','lib/nested-review-api.ts','LICENSES/THIRD_PARTY_NOTICES.md'])
+  'lib/nested-review-client.ts','lib/nested-review-api.ts'])
   assert.deepEqual(readFileSync('atlas-review/'+path),old('atlas-review/'+path),path+' retained');
+ assert.equal(withoutCubitalVenousUltrasoundNotice(readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md','utf8')),old('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md').toString('utf8'));
  let count=0;
  for(const group of api.nestedReviewRows){
   const list=api.nestedReviewQueue(api.nestedReviewRows,group.key,'',null,'teaching');

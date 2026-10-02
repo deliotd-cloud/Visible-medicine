@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "6888a898281695faf9e41bdf34a7d3c771c4f7f2",
-  "sha256": "9ed31e45b15f6ee92a3232f0e29b2a1d92f1f5ceaece89fa723921aa68134e33",
+  "sourceCommit": "fa7dcf45efbad1dc908b02e6c699dcb02e6b3c06",
+  "sha256": "9cc8acf9566195de3801c50b68b8b9bdbbdbf0a7c28244ebbc36d25fe56eb571",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -112,7 +112,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "8abdc0e09da92457bfa3c483ea8004cd5ef155621ff0b4fb3770e83ca2624502"
+      "sha256": "abd9f39720fffabccbe5484a25710a2feb19afb7adcbe8202cb74991e860f442"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -716,7 +716,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "7127ad334b121bfa923d203b14cdf985ce7d98314fb4e11181e8ede975592178"
+      "sha256": "f6ac88f40df1ac4a65159cc9286d80d3b7ac93f785ccdc5da535f7ba6051e37e"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -909,6 +909,10 @@
     {
       "path": "atlas-review/content/cubital-study-pins.json",
       "sha256": "e787db76a21b7c3844a74f86e72b61d380345fccd72503030863d97d43b631c0"
+    },
+    {
+      "path": "atlas-review/content/cubital-venous-ultrasound.ts",
+      "sha256": "ba87a58db1a936bd7541b24f758d5b328f7e038af703412459d337ec22a4aac5"
     },
     {
       "path": "atlas-review/content/deep-venous-clinical-pins.json",
@@ -2343,6 +2347,10 @@
       "sha256": "1877da3b251cae1816573786fe271a94306571f606fb8410386a326efe3e30e6"
     },
     {
+      "path": "atlas-review/lib/cubital-venous-ultrasound.ts",
+      "sha256": "bd250a8637fbdc438ae17e35912a3962fff9a12b34c0f5063c0689435f46134b"
+    },
+    {
       "path": "atlas-review/lib/deep-brain-reasoning.ts",
       "sha256": "0f18416cece4e887ff8916abf70667b6e9fcbbceff558863782e4e2038616a5f"
     },
@@ -3592,7 +3600,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "8c29092d1e85b6eba2aaa756d44420f8ad2e59d8b599671276fb68c2d994cc9a"
+      "sha256": "4627118a7feaa2ebeb33ecd00cf2f51190f7eba2e9e2ce01bc05d1c38fc5bc69"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3848,7 +3856,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "c8a0520141a36ce023850ea5f758bdfe7fed95c557395be41e0761f17ae32cb3"
+      "sha256": "45379c31266bd281a713756d29037750c9807cc380e78261c444a9719f54e626"
     }
   ]
 }

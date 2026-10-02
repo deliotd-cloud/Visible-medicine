@@ -2156,3 +2156,17 @@ figure permissions are not assumed to cover reuse. Existing models/credits and
 recipient rights remain unchanged; no new font, texture, dependency, scan, paid
 service or mandatory fee. Prior materials are not retrospectively cleared.
 Draft/source limits and clinical review: `docs/NESTED_CT_ORIENTATION.md`.
+
+## Superficial forearm venous ultrasound orientation — 2 October 2026
+
+Four draft placements reuse the admitted BodyParts3D median cubital and median
+antebrachial vein surfaces without changing their geometry or CC BY 4.0 credits.
+Original brief teaching and integration code use the project's MIT terms. UAMS
+upper-limb anatomy, ACR/RSNA RadiologyInfo venous ultrasound, and Mukai et al.'s
+primary cubital ultrasound study (PMID29140886) are outbound reading references,
+not imported assets or commercial redistribution licences. No publisher prose,
+image, table, diagram, scan, article PDF or third-party dataset is copied. No new
+dependency, font, texture, paid API or mandatory fee is introduced. Source limits,
+reference scope and radiologist review requirements are documented in
+`docs/CUBITAL_VENOUS_ULTRASOUND.md`. No patient registration, access entitlement,
+compressibility, Doppler finding or procedural safety is supplied by these meshes.

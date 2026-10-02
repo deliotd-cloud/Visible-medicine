@@ -8,7 +8,8 @@ import {DatabaseSync} from 'node:sqlite';
 import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
 import {build} from 'esbuild';
-const source='6888a898281695faf9e41bdf34a7d3c771c4f7f2',base='792810f5bcf8808f57d2f55e12cca217ed4d262d';
+import {desktopLayoutImportMilestone,withoutCubitalVenousUltrasoundNotice} from './atlas-cubital-ultrasound-history.ts';
+const source='fa7dcf45efbad1dc908b02e6c699dcb02e6b3c06',base='792810f5bcf8808f57d2f55e12cca217ed4d262d';
 const old=(p:string)=>Buffer.from(execFileSync('git',['show',base+':'+p],{maxBuffer:32e6}));
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
@@ -31,10 +32,11 @@ async function load(previous=false){
 }
 test('eye guide reaches learner and protected review with exact source, credits and unchanged model/access boundaries',async()=>{
  const api=await load(),review=json('atlas-review/manifest.json'),prior=JSON.parse(old('atlas-review/manifest.json').toString());
- assert.equal(review.revision,source);assert.equal(review.files.length,944);assert.deepEqual(review.packages,prior.packages);
- assert.deepEqual(review.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),
+ assert.equal(review.revision,source);assert.equal(review.files.length,946);assert.deepEqual(review.packages,prior.packages);
+ const milestone=desktopLayoutImportMilestone(); // Exact saved inventory epoch, not later root-body teaching.
+ assert.deepEqual(milestone.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),
   ['content/nested-guided-learning-bindings.v1.json','lib/eye-layer-guide.ts','lib/nested-guided-learning.ts']);
- assert.deepEqual(review.files.filter((f:any)=>prior.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),
+ assert.deepEqual(milestone.files.filter((f:any)=>prior.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),
   ['app/atlas-workspace.css','app/eye-layers.css','app/eye-layers.tsx','app/review/nested/workspace.tsx','app/whole-body-guided-learning.css','app/whole-body-guided-learning.tsx','content/body-renderer-revision.json','lib/nested-review-material.ts','lib/nested-review.ts']);
  for(const f of review.files)assert.equal(sha(readFileSync('atlas-review/'+f.path)),f.importedSha256,f.path);
  const receipt=json('atlas-review/integration-inputs.json');assert.equal(receipt.sourceCommit,source);
@@ -64,7 +66,8 @@ test('eye guide reaches learner and protected review with exact source, credits 
  }
  const inventory=json('lib/atlas-model-inventory.json');assert.equal(inventory.models.length,137);
  assert.deepEqual(inventory.models,JSON.parse(old('lib/atlas-model-inventory.json').toString()).models);
- for(const p of ['content/nested-teaching-bindings.v1.json','content/nested-review-bindings.json','content/nested-teaching.ts','LICENSES/THIRD_PARTY_NOTICES.md'])
+ assert.equal(withoutCubitalVenousUltrasoundNotice(readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md','utf8')),old('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md').toString('utf8'));
+ for(const p of ['content/nested-teaching-bindings.v1.json','content/nested-review-bindings.json','content/nested-teaching.ts'])
   assert.deepEqual(readFileSync('atlas-review/'+p),old('atlas-review/'+p));
 });
 test('exact 15 eye teaching transitions, 93 unchanged packets, stale refusals and 30 real draft history round trips',async()=>{
