@@ -7,7 +7,7 @@ import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {desktopLayoutImportMilestone,withoutCubitalVenousUltrasoundNotice} from './atlas-cubital-ultrasound-history.ts';
 
-const source='bfaaa27e85ca62864e7e1f9a62c72f79c5608a98';
+const source='bdc245713386d043aad45792a1476ab1af8955b0';
 const baseline='3d67b5575a49e302b0da7c4c55a5d6f3a033b003';
 const old=(path:string)=>Buffer.from(execFileSync('git',['show',baseline+':'+path],{maxBuffer:32e6}));
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
@@ -77,7 +77,7 @@ test('nested library source, exact eye options and credits reach learner and pro
   'Prior protected notice has exactly one source revision line');
  assert.equal(withoutCubitalVenousUltrasoundNotice(readFileSync('public/atlas-review-viewer/THIRD_PARTY_NOTICES.txt','utf8')),
   priorCredits.replace('Atlas source: 03da432b035d1dca7cc9f3344ee2722af627d859\n',
-   'Atlas source: bfaaa27e85ca62864e7e1f9a62c72f79c5608a98\n'),
+   'Atlas source: bdc245713386d043aad45792a1476ab1af8955b0\n'),
   'Protected viewer credits retain every byte after the source revision header');
  for(const p of ['content/nested-review-bindings.json','content/nested-teaching.ts','lib/nested-review-material.ts',
   'lib/nested-review.ts'])

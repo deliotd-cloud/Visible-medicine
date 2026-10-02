@@ -7,6 +7,11 @@ export function carpalQuizMilestoneBytes(path:string){
  assert((/^(?:atlas-review\/|public\/atlas-)/.test(path)||path==='lib/atlas-model-inventory.json')&&!path.includes('..'));
  return execFileSync('git',['show','dae6af5448463d2d8bf2c193723cf076f6f88e8c:'+path],{maxBuffer:32e6});
 }
+/** Exact saved thoracic milestone, separate from later renderer-only changes. */
+export function thoracicQuizMilestoneBytes(path:string){
+ assert((/^(?:atlas-review\/|public\/atlas-)/.test(path)||path==='lib/atlas-model-inventory.json')&&!path.includes('..'));
+ return execFileSync('git',['show','e7b2deb78b691639970c994d477f4739333e508f:'+path],{maxBuffer:32e6});
+}
 /** Test-only removal of this complete hash-pinned append; shipped credits stay. */
 export function withoutThoracicQuizNotice(text:string):string{
  const marker='\n## Thoracic-bone quick checks — 2 October 2026\n';

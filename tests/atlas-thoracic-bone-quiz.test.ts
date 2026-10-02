@@ -3,8 +3,8 @@ import test from 'node:test';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {thoracicQuizHostProof} from './atlas-thoracic-bone-quiz-proof.ts';
-import {carpalQuizMilestoneBytes,withoutThoracicQuizNotice} from './atlas-thoracic-bone-quiz-history.ts';
-const revision='bfaaa27e85ca62864e7e1f9a62c72f79c5608a98';
+import {carpalQuizMilestoneBytes,thoracicQuizMilestoneBytes,withoutThoracicQuizNotice} from './atlas-thoracic-bone-quiz-history.ts';
+const revision='bdc245713386d043aad45792a1476ab1af8955b0';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
 const added=['content/thoracic-bone-quiz-pins.json','content/thoracic-bone-quiz.ts','lib/thoracic-bone-quiz.ts'];
@@ -12,9 +12,13 @@ const added=['content/thoracic-bone-quiz-pins.json','content/thoracic-bone-quiz.
 test('thoracic questions reach contained learner and protected review with unchanged models/access',()=>{
  const review=json('atlas-review/manifest.json'),prior=JSON.parse(carpalQuizMilestoneBytes('atlas-review/manifest.json').toString());
  assert.equal(review.revision,revision);assert.equal(review.files.length,960);assert.deepEqual(review.packages,prior.packages);
- assert.deepEqual(review.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),added);
- assert.deepEqual(review.files.filter((f:any)=>prior.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),
+ const epoch=JSON.parse(thoracicQuizMilestoneBytes('atlas-review/manifest.json').toString());
+ assert.deepEqual(epoch.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),added);
+ assert.deepEqual(epoch.files.filter((f:any)=>prior.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),
   ['LICENSES/THIRD_PARTY_NOTICES.md','app/body-content.ts','content/body-renderer-revision.json','content/body-review-display-pins.json']);
+ assert.deepEqual(review.files.map((f:any)=>f.path),epoch.files.map((f:any)=>f.path));
+ assert.deepEqual(review.files.filter((f:any)=>epoch.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),
+  ['app/fitted-camera.tsx','content/body-renderer-revision.json','content/review-revisions.json']);
  for(const f of review.files)assert.equal(sha(readFileSync('atlas-review/'+f.path)),f.importedSha256,f.path);
  const pins=json('atlas-review/content/thoracic-bone-quiz-pins.json');assert.equal(pins.entries.length,27);
  for(const name of ['head-neck','shoulder','lower-limb','protected']){

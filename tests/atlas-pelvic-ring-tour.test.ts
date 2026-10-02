@@ -7,7 +7,7 @@ import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {withoutPelvicRingNotice} from './atlas-pelvic-notice-history.ts';
 import {desktopLayoutImportMilestone,desktopLayoutMilestoneBytes} from './atlas-cubital-ultrasound-history.ts';
-const source='bfaaa27e85ca62864e7e1f9a62c72f79c5608a98',before='443896f4f141266c4579fb4e1001c0097bb25479';
+const source='bdc245713386d043aad45792a1476ab1af8955b0',before='443896f4f141266c4579fb4e1001c0097bb25479';
 const prior=(path:string)=>execFileSync('git',['show',before+':'+path],{maxBuffer:32e6});
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');

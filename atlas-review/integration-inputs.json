@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "bfaaa27e85ca62864e7e1f9a62c72f79c5608a98",
-  "sha256": "6c693ad9f6475bb903a484b928bec6e522b077e1c769c6cfaf97053248bdf015",
+  "sourceCommit": "bdc245713386d043aad45792a1476ab1af8955b0",
+  "sha256": "a081970c9f8013c237a6390326d1c2dd9ac707acf75ceee579ffd22883f7bdde",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -27,8 +27,16 @@
       "sha256": "1216ffc684e3e3e8e13c6e3a74f067efecf48e90a71721a4fa942964eccd5f70"
     },
     {
+      "path": "app/workspace/atlas-review/source-comparisons/disc/page.tsx",
+      "sha256": "ce098cbd31d523f7c3a0d02cf6a1ba1b9d50d3028e7a13e09ad61c64d23b8b4f"
+    },
+    {
       "path": "app/workspace/atlas-review/source-comparisons/optic/page.tsx",
       "sha256": "ca60561a7f4bf2947c080ead539e255c34541434fcee393cf92feabe8ae936e0"
+    },
+    {
+      "path": "app/workspace/atlas-review/source-comparisons/page.tsx",
+      "sha256": "9be7ebf0f2b9750695a22dd5300ff91c75441e54c48da8321d8211a3c0f5c85e"
     },
     {
       "path": "app/workspace/atlas-review/specimens/page.tsx",
@@ -208,7 +216,7 @@
     },
     {
       "path": "atlas-review/app/fitted-camera.tsx",
-      "sha256": "1675e279f3ac98e27ebfb2030abf707e5ade1165ece1d29e17d2ce15ab971b73"
+      "sha256": "4145ea107b2e0474d5fab93560ab7accd04cb778083198c17c4d096eec451124"
     },
     {
       "path": "atlas-review/app/globals.css",
@@ -3916,7 +3924,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "b96ce324d8e3a263e5831d20aeb4fc7e4bab5336c1ff6fe27b9ef0d60d83bd51"
+      "sha256": "945b28ca5d4ebed55cc345a89ea19d65e395e31554b65515f724c38bfff8809b"
     }
   ]
 }

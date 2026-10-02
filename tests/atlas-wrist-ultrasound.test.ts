@@ -6,7 +6,7 @@ import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {lumbarSacralMilestoneBytes,withoutWristUltrasoundNotice} from './atlas-wrist-ultrasound-history.ts';
 import {wristUltrasoundMilestoneBytes} from './atlas-circle-willis-history.ts';
-const revision='bfaaa27e85ca62864e7e1f9a62c72f79c5608a98';
+const revision='bdc245713386d043aad45792a1476ab1af8955b0';
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
 async function api(previous=false,wristMilestone=false){

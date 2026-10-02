@@ -299,6 +299,9 @@ export function FittedCamera({
       });
     }
     return bindCameraKeyboard(gl.domElement, () => controls.current, () => {
+      // A consumed keyboard rotation is manual inspection, just like an orbit
+      // gesture. Do not overwrite its live pose on the next guided-tour frame.
+      transition.current = null;
       capture();
       invalidate();
       if (onKeyboardRotate && controls.current) {

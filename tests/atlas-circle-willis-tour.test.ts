@@ -6,7 +6,7 @@ import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {wristUltrasoundMilestoneBytes,withoutCircleWillisNotice} from './atlas-circle-willis-history.ts';
 import {circleWillisMilestoneBytes} from './atlas-carpal-bone-quiz-history.ts';
-const revision='bfaaa27e85ca62864e7e1f9a62c72f79c5608a98';
+const revision='bdc245713386d043aad45792a1476ab1af8955b0';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
 async function load(previous=false){

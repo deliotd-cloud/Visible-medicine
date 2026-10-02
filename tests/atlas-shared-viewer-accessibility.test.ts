@@ -8,14 +8,14 @@ const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
 
 test('shared viewer binds reset wording and keyboard-only orientation status to exact Atlas source',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'10e0857ff5d0d17d1d51f60ee728e5cf6c2b91c3c6e15db6d7f8614be8f35cf4');
+  assert.equal(sha(manifestBytes),'83223ffc18192f71837d1e3fca766c0def963b9aa0bf22766df5278592cfcb06');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'bfaaa27e85ca62864e7e1f9a62c72f79c5608a98');
+  assert.equal(manifest.sourceCommit,'bdc245713386d043aad45792a1476ab1af8955b0');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,expected] of Object.entries({
     'app/body-explorer.tsx':'af2304091172896d7ba7f3c9eb57303cb0bffcc2b1ff5ad93b98e3ac56428984',
     'app/body-scene.tsx':'8954f1e055dbf5eac684a14081ad5689c8a197fef4620dadaf6bebfe5c62d318',
-    'app/fitted-camera.tsx':'cad2aa9543c94c2d751a1593cda90e2db4c84a2b639d6d380b131a74ea0f09f9',
+    'app/fitted-camera.tsx':'5b645a3e14cc8792bdab2be9e5369d40add37005b53a6aa9b40dd39123fa96d9',
     'lib/camera-keyboard.ts':'9a0a095306c6687ca7fd568570c7a66363566ac3a70f2916bc1e8f74aa405220',
   }))assert.equal(inputs.find(input=>input.path===path)?.sha256,expected,path);
   const script=(name:string)=>{
@@ -48,6 +48,8 @@ test('shared viewer binds reset wording and keyboard-only orientation status to 
   const cameraBytes=readFileSync('atlas-review/app/fitted-camera.tsx');
   assert.equal(sha(cameraBytes),cameraFile.importedSha256);
   const cameraSource=cameraBytes.toString();
-  assert.match(cameraSource,/return bindCameraKeyboard\(gl\.domElement, \(\) => controls\.current, \(\) => \{\s+capture\(\);\s+invalidate\(\);\s+if \(onKeyboardRotate && controls\.current\)/);
+  const keyboardPrelude=cameraSource.match(/return bindCameraKeyboard\(gl\.domElement, \(\) => controls\.current, \(\) => \{([\s\S]*?)capture\(\);\s+invalidate\(\);\s+if \(onKeyboardRotate && controls\.current\)/);
+  assert.ok(keyboardPrelude, 'Accepted keyboard input retains capture, invalidation and orientation callback');
+  assert.ok(keyboardPrelude[1].includes('transition.current = null;'), 'Keyboard inspection interrupts the sweep before capture');
   assert.ok(cameraSource.includes('onChange={capture}'), 'Pointer orbit keeps the camera capture callback only');
 });

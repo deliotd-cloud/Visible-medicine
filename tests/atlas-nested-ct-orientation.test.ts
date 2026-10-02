@@ -7,7 +7,7 @@ import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {withoutNestedCTOrientationNotice} from './atlas-nested-ct-notice-history.ts';
 import {desktopLayoutImportMilestone} from './atlas-cubital-ultrasound-history.ts';
-const source='bfaaa27e85ca62864e7e1f9a62c72f79c5608a98';
+const source='bdc245713386d043aad45792a1476ab1af8955b0';
 const before='c3fb787a9811bf0ef9c3bd130f7a0534d49db9ad';
 const previousBytes=(path:string)=>Buffer.from(execFileSync('git',['show',before+':'+path],{maxBuffer:32e6}));
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
