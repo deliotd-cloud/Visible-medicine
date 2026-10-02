@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {preMCAImportBytes} from './atlas-mca-history.ts';
 import test from 'node:test';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -8,7 +9,7 @@ import {runInNewContext} from 'node:vm';
 import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {desktopLayoutImportMilestone,withoutCubitalVenousUltrasoundNotice} from './atlas-cubital-ultrasound-history.ts';
-const source='bdc245713386d043aad45792a1476ab1af8955b0',base='db062f3fa5c287d24c20f4b8e77a9ba2eb120ecc';
+const source='55b0e548c6552de3ef6c4e8f432e71d60690e843',base='db062f3fa5c287d24c20f4b8e77a9ba2eb120ecc';
 const old=(path:string)=>Buffer.from(execFileSync('git',['show',base+':'+path],{maxBuffer:32e6}));
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
@@ -35,7 +36,7 @@ async function load(previous=false,historicalQueue=false){
 
 test('compact review queue retains exact source/search/track and models/rights after the independently tested eye guide',async()=>{
  const api=await load(),review=json('atlas-review/manifest.json'),prior=JSON.parse(old('atlas-review/manifest.json').toString('utf8'));
- assert.equal(review.revision,source);assert.equal(review.files.length,960);assert.deepEqual(review.packages,prior.packages);
+ assert.equal(review.revision,source);assert.equal(review.files.length,962);assert.deepEqual(review.packages,prior.packages);
  const milestone=desktopLayoutImportMilestone();
  assert.deepEqual(milestone.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),
   ['content/nested-guided-learning-bindings.v1.json','lib/eye-layer-guide.ts','lib/nested-guided-learning.ts','lib/nested-review-queue.ts']);
@@ -62,7 +63,7 @@ test('compact review queue retains exact source/search/track and models/rights a
  assert.deepEqual(inventory.models,JSON.parse(old('lib/atlas-model-inventory.json').toString('utf8')).models);
  for(const path of ['content/nested-review-bindings.json','content/nested-teaching.ts',
   'lib/nested-review-client.ts','lib/nested-review-api.ts'])
-  assert.deepEqual(readFileSync('atlas-review/'+path),old('atlas-review/'+path),path+' retained');
+  assert.deepEqual(path==='content/nested-teaching.ts'?preMCAImportBytes('atlas-review/'+path):readFileSync('atlas-review/'+path),old('atlas-review/'+path),path+' retained');
  assert.equal(withoutCubitalVenousUltrasoundNotice(readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md','utf8')),old('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md').toString('utf8'));
  let count=0;
  for(const group of api.nestedReviewRows){

@@ -7,7 +7,7 @@ import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {withoutNestedCTOrientationNotice} from './atlas-nested-ct-notice-history.ts';
 import {desktopLayoutImportMilestone} from './atlas-cubital-ultrasound-history.ts';
-const source='bdc245713386d043aad45792a1476ab1af8955b0';
+const source='55b0e548c6552de3ef6c4e8f432e71d60690e843';
 const before='c3fb787a9811bf0ef9c3bd130f7a0534d49db9ad';
 const previousBytes=(path:string)=>Buffer.from(execFileSync('git',['show',before+':'+path],{maxBuffer:32e6}));
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
@@ -15,7 +15,10 @@ const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
 const ids=['inferior-collicular-brachia','cerebral-superior-temporal-anterior',
  'cerebral-superior-temporal-posterior','visual-optic-chiasm','visual-optic-tracts'];
 const keys=['nestedCTAuditory','nestedCTTemporal','nestedCTVisual','nestedCTReuseLicense'];
-async function load(previous=false){
+async function load(previous=false,historical=false){
+ // Keep the nine-CT-topic transition at its exact pre-MCA epoch. Current MCA
+ // source admission and all 108 live contexts have a separate regression test.
+ const saved=previous?before:historical?'a8349b2fefbe8be1403c78822487ba7eb95d7d8c':null;
  const result=await build({stdin:{contents:`export * from './atlas-review/lib/nested-review-material';
  export * from './atlas-review/lib/nested-review';export * from './atlas-review/lib/nested-review-api';
  export * from './atlas-review/lib/nested-teaching';
@@ -26,16 +29,16 @@ async function load(previous=false){
  export const renderCT=(parent,study,selected)=>renderToStaticMarkup(React.createElement(NestedTeaching,{parent,study,selected,initialTopic:'ct'}));`,
  resolveDir:process.cwd(),loader:'tsx'},bundle:true,write:false,platform:'node',format:'esm',jsx:'automatic',loader:{'.css':'empty'},
  banner:{js:`import {createRequire as nodeRequire} from 'node:module';const require=nodeRequire(${JSON.stringify(process.cwd()+'/package.json')});`},
- plugins:previous?[{name:'exact-imported-pre-ct-baseline',setup(api){
-  for(const path of ['content/nested-teaching.ts','content/body-renderer-revision.json'])
-   api.onLoad({filter:new RegExp(path.replaceAll('/','[\\\\/]')+'$')},args=>({contents:previousBytes('atlas-review/'+path).toString('utf8'),loader:path.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)}));
+ plugins:saved?[{name:'exact-imported-ct-epoch',setup(api){
+  for(const path of ['lib/nested-teaching.ts','content/nested-teaching.ts','content/body-renderer-revision.json'])
+   api.onLoad({filter:new RegExp(path.replaceAll('/','[\\\\/]')+'$')},args=>({contents:execFileSync('git',['show',saved+':atlas-review/'+path],{encoding:'utf8',maxBuffer:32e6}),loader:path.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)}));
  }}]:[]});
  return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
 }
 
 test('complete named CT drafts and credited sources reach learners and protected review without changing models or rights',async()=>{
  const api=await load(),review=json('atlas-review/manifest.json'),oldReview=JSON.parse(previousBytes('atlas-review/manifest.json').toString('utf8'));
- assert.equal(review.revision,source);assert.equal(review.files.length,960);
+ assert.equal(review.revision,source);assert.equal(review.files.length,962);
  assert.deepEqual(review.packages,oldReview.packages);
  const milestone=desktopLayoutImportMilestone();
  assert.deepEqual(milestone.files.filter((f:any)=>!oldReview.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),['content/nested-ct-orientation.ts','content/nested-guided-learning-bindings.v1.json','lib/eye-layer-guide.ts','lib/nested-guided-learning.ts','lib/nested-review-queue.ts']);
@@ -75,7 +78,7 @@ test('complete named CT drafts and credited sources reach learners and protected
 });
 
 test('nine named CT teaching revisions change; all source and held teaching remain exact, and stale approvals fail before storage',async()=>{
- const current=await load(),previous=await load(true),storage=new Proxy({},{get(){throw Error('Stale request reached storage');}});
+ const current=await load(false,true),previous=await load(true),storage=new Proxy({},{get(){throw Error('Stale request reached storage');}});
  const restored=current.nestedConcepts.map((c:any)=>{
   if(!ids.includes(c.id))return c;
   const copy=structuredClone(c);delete copy.imaging.ct;return copy;
@@ -84,7 +87,7 @@ test('nine named CT teaching revisions change; all source and held teaching rema
  assert.deepEqual(Object.fromEntries(Object.entries(current.nestedTeachingReferences).filter(([key])=>!keys.includes(key))),previous.nestedTeachingReferences);
  let contexts=0,changed=0,unchanged=0,teachingRejected=0,geometryRejected=0,pending=0,unnamed=0,remainders=0;
  const placements=Object.fromEntries(ids.map(id=>[id,0]));
- const renderer=json('atlas-review/content/body-renderer-revision.json');
+ const renderer=JSON.parse(execFileSync('git',['show','a8349b2fefbe8be1403c78822487ba7eb95d7d8c:atlas-review/content/body-renderer-revision.json'],{encoding:'utf8'}));
  for(const group of current.nestedReviewRows)for(const surface of group.surfaces){
   const old=await previous.nestedReviewMaterial(group.key,surface.id),now=await current.nestedReviewMaterial(group.key,surface.id);
   assert(old&&now);contexts++;assert.deepEqual(now.source,old.source);assert.equal(now.context.sourceHash,old.context.sourceHash);

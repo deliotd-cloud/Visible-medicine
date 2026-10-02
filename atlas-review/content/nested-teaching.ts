@@ -7,6 +7,7 @@ import { ventricularUltrasoundTeaching, ventricularUltrasoundReferences } from '
 import { cerebralLobarImaging, cerebralLobarReferences } from './cerebral-lobar-imaging.ts';
 import { hippocampalConcepts, hippocampalTeachingReferences } from './hippocampal-teaching.ts';
 import { femoralComponentConcepts, femoralComponentReferences } from './femoral-component-teaching.ts';
+import { mcaSourceConcepts, mcaSourceTeachingReferences } from './mca-source-teaching.ts';
 import { collicularBrachiaConcepts, collicularBrachiaReferences } from './collicular-brachia-teaching.ts';
 import {
   eyeImagingTeaching,
@@ -72,6 +73,7 @@ export const nestedTeachingReferences: Record<
   ...ventricularUltrasoundReferences,
   ...hippocampalTeachingReferences,
   ...femoralComponentReferences,
+  ...mcaSourceTeachingReferences,
   ...eyeImagingReferences,
   ...eyeCrossSectionalReferences,
   ...visualPathwayImagingReferences,
@@ -233,6 +235,7 @@ export const nestedConcepts: NestedConcept[] = [
   ...hippocampalConcepts,
   ...coronaryVenousConcepts,
   ...femoralComponentConcepts,
+  ...mcaSourceConcepts,
   ...collicularBrachiaConcepts.map(concept => ({ ...concept,
     imaging: { ...concept.imaging, ct: nestedCTOrientation[concept.id] },
   })),

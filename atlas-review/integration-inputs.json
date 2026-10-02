@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "bdc245713386d043aad45792a1476ab1af8955b0",
-  "sha256": "a081970c9f8013c237a6390326d1c2dd9ac707acf75ceee579ffd22883f7bdde",
+  "sourceCommit": "55b0e548c6552de3ef6c4e8f432e71d60690e843",
+  "sha256": "46e4c80329e98dffe18f4499868262a6159008d60e1d01c553eca717edaa8e53",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -1391,6 +1391,14 @@
       "sha256": "6a38862dceedfb4d17a8610b954efa1d4a6a1925528091515bc2cabe0fd13c45"
     },
     {
+      "path": "atlas-review/content/mca-source-teaching-bindings.v1.json",
+      "sha256": "8eb77a1a0a2900d960743796883373432a3dd877f8ceae69c92301d45903e2ad"
+    },
+    {
+      "path": "atlas-review/content/mca-source-teaching.ts",
+      "sha256": "0ad19551a5fe8b559e8d424518755a6ac545e2c0c589eefb48555914a01a5006"
+    },
+    {
       "path": "atlas-review/content/mediastinal-organ-study.ts",
       "sha256": "4307af9d54321db061a743e24faab1838487c220b3cc110528bf860002200767"
     },
@@ -1440,7 +1448,7 @@
     },
     {
       "path": "atlas-review/content/nested-teaching.ts",
-      "sha256": "dae4c7a409906d608aedd961a38155bae90c8bc9f05795493f14b38d688db2be"
+      "sha256": "8a369870a99320eaaa4589110ba0a75d12cc450c6740a245838aa10f156acc01"
     },
     {
       "path": "atlas-review/content/ophthalmic-nerve-studies.ts",
@@ -3032,7 +3040,7 @@
     },
     {
       "path": "atlas-review/lib/nested-teaching.ts",
-      "sha256": "aa2423a1cc53f70f992c19b601160000d44937eda47faae422d6898902edd23d"
+      "sha256": "676319cb796359b29427941865c1d42d673617238c7c20d05b12b090aa567c5b"
     },
     {
       "path": "atlas-review/lib/neural-anatomy-curriculum.ts",
@@ -3924,7 +3932,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "945b28ca5d4ebed55cc345a89ea19d65e395e31554b65515f724c38bfff8809b"
+      "sha256": "2a8876dd60f74c31ccc9c389fb1caf2ebc85bc7fc0f418af9acc049caddb1b8f"
     }
   ]
 }

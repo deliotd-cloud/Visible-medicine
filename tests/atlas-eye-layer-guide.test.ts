@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {preMCAImportBytes} from './atlas-mca-history.ts';
 import test from 'node:test';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -9,7 +10,7 @@ import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
 import {build} from 'esbuild';
 import {desktopLayoutImportMilestone,withoutCubitalVenousUltrasoundNotice} from './atlas-cubital-ultrasound-history.ts';
-const source='bdc245713386d043aad45792a1476ab1af8955b0',base='792810f5bcf8808f57d2f55e12cca217ed4d262d';
+const source='55b0e548c6552de3ef6c4e8f432e71d60690e843',base='792810f5bcf8808f57d2f55e12cca217ed4d262d';
 const old=(p:string)=>Buffer.from(execFileSync('git',['show',base+':'+p],{maxBuffer:32e6}));
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
@@ -32,7 +33,7 @@ async function load(previous=false){
 }
 test('eye guide reaches learner and protected review with exact source, credits and unchanged model/access boundaries',async()=>{
  const api=await load(),review=json('atlas-review/manifest.json'),prior=JSON.parse(old('atlas-review/manifest.json').toString());
- assert.equal(review.revision,source);assert.equal(review.files.length,960);assert.deepEqual(review.packages,prior.packages);
+ assert.equal(review.revision,source);assert.equal(review.files.length,962);assert.deepEqual(review.packages,prior.packages);
  const milestone=desktopLayoutImportMilestone(); // Exact saved inventory epoch, not later root-body teaching.
  assert.deepEqual(milestone.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),
   ['content/nested-guided-learning-bindings.v1.json','lib/eye-layer-guide.ts','lib/nested-guided-learning.ts']);
@@ -68,7 +69,7 @@ test('eye guide reaches learner and protected review with exact source, credits 
  assert.deepEqual(inventory.models,JSON.parse(old('lib/atlas-model-inventory.json').toString()).models);
  assert.equal(withoutCubitalVenousUltrasoundNotice(readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md','utf8')),old('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md').toString('utf8'));
  for(const p of ['content/nested-teaching-bindings.v1.json','content/nested-review-bindings.json','content/nested-teaching.ts'])
-  assert.deepEqual(readFileSync('atlas-review/'+p),old('atlas-review/'+p));
+  assert.deepEqual(p==='content/nested-teaching.ts'?preMCAImportBytes('atlas-review/'+p):readFileSync('atlas-review/'+p),old('atlas-review/'+p));
 });
 test('exact 15 eye teaching transitions, 93 unchanged packets, stale refusals and 30 real draft history round trips',async()=>{
  const now=await load(),before=await load(true),forbidden=new Proxy({},{get(){throw Error('Stale request reached storage');}});

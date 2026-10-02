@@ -16,8 +16,8 @@ test('pulmonary X-ray drafts ship source-bound text without offline history or i
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of [
     ['content/pulmonary-teaching.ts','0abe50a77f1a4e64eabd51bc2be39a0798ea2aa567625acb5201b58872934b0a'],
-    ['content/nested-teaching.ts','dae4c7a409906d608aedd961a38155bae90c8bc9f05795493f14b38d688db2be'],
-    ['lib/nested-teaching.ts','aa2423a1cc53f70f992c19b601160000d44937eda47faae422d6898902edd23d'],
+    ['content/nested-teaching.ts','8a369870a99320eaaa4589110ba0a75d12cc450c6740a245838aa10f156acc01'],
+    ['lib/nested-teaching.ts','676319cb796359b29427941865c1d42d673617238c7c20d05b12b090aa567c5b'],
     ['app/nested-teaching.tsx','502e0a1d13c65875963bc760ca01260bde329368fe6d3bf4162f98cf3de42744'],
   ])assert.deepEqual(inputs.filter(i=>i.path===path),[{path,sha256}]);
   assert.deepEqual(inputs.filter(f=>f.path.startsWith('scripts/')).map(f=>f.path),[

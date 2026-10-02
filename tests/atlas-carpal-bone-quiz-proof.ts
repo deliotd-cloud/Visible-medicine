@@ -3,6 +3,7 @@ import {execFileSync} from 'node:child_process';
 import {readFileSync} from 'node:fs';
 import {dirname,relative} from 'node:path';
 import {build} from 'esbuild';
+import {preMCANestedPlugin,preMCAImportBytes} from './atlas-mca-history.ts';
 import pins from '../atlas-review/content/carpal-bone-quiz-pins.json' with {type:'json'};
 import {carpalBoneQuizQuestions} from '../atlas-review/content/carpal-bone-quiz.ts';
 
@@ -20,7 +21,7 @@ async function load(previous=false){
   const epoch=previous?parent:'366939a9b9ff8bfdc958dca087dcc57d2c8feb39';
   const replay=new Set(['app/body-content.ts','content/body-review-display-pins.json','content/body-renderer-revision.json']);
   const result=await build({stdin:{contents:entry,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',
-    plugins:[{name:'exact-carpal-bone-quiz-epoch',setup(api){api.onLoad({filter:/.*/,namespace:'file'},args=>{
+    plugins:[preMCANestedPlugin(),{name:'exact-carpal-bone-quiz-epoch',setup(api){api.onLoad({filter:/.*/,namespace:'file'},args=>{
       const path=relative(process.cwd(),args.path).replaceAll('\\','/').replace(/^atlas-review\//,'');
       if(!replay.has(path))return;
       return {contents:execFileSync('git',['show',epoch+':atlas-review/'+path],{maxBuffer:16e6}).toString(),loader:path.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)};
@@ -44,7 +45,7 @@ for(const path of [
   'content/nested-teaching-bindings.v1.json','lib/nested-education-binding.ts',
   'lib/body-review-api.ts','lib/body-review-material.ts','lib/body-review-context.ts',
   'lib/body-review-response.ts','lib/body-review-decisions.ts',
-]) assert.deepEqual(readFileSync('atlas-review/'+path),old(path),path+' preserved at exact parent');
+]) assert.deepEqual(['lib/nested-teaching.ts','content/nested-teaching.ts'].includes(path)?preMCAImportBytes('atlas-review/'+path):readFileSync('atlas-review/'+path),old(path),path+' preserved at exact parent');
 
 const pinsPath='content/body-review-display-pins.json';
 type DisplayPin={structureId:string;sha256:string};

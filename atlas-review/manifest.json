@@ -1,5 +1,5 @@
 {
-  "revision": "bdc245713386d043aad45792a1476ab1af8955b0",
+  "revision": "55b0e548c6552de3ef6c4e8f432e71d60690e843",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2833,8 +2833,8 @@
     },
     {
       "path": "lib/nested-teaching.ts",
-      "sourceSha256": "aa2423a1cc53f70f992c19b601160000d44937eda47faae422d6898902edd23d",
-      "importedSha256": "aa2423a1cc53f70f992c19b601160000d44937eda47faae422d6898902edd23d"
+      "sourceSha256": "676319cb796359b29427941865c1d42d673617238c7c20d05b12b090aa567c5b",
+      "importedSha256": "676319cb796359b29427941865c1d42d673617238c7c20d05b12b090aa567c5b"
     },
     {
       "path": "content/nested-teaching-bindings.v1.json",
@@ -2847,9 +2847,14 @@
       "importedSha256": "258bef0d9526cf5e2a471d49b397c8582fe4016945c9e6cd9f52e79c6a37a43f"
     },
     {
+      "path": "content/mca-source-teaching-bindings.v1.json",
+      "sourceSha256": "8eb77a1a0a2900d960743796883373432a3dd877f8ceae69c92301d45903e2ad",
+      "importedSha256": "8eb77a1a0a2900d960743796883373432a3dd877f8ceae69c92301d45903e2ad"
+    },
+    {
       "path": "content/nested-teaching.ts",
-      "sourceSha256": "dae4c7a409906d608aedd961a38155bae90c8bc9f05795493f14b38d688db2be",
-      "importedSha256": "dae4c7a409906d608aedd961a38155bae90c8bc9f05795493f14b38d688db2be"
+      "sourceSha256": "8a369870a99320eaaa4589110ba0a75d12cc450c6740a245838aa10f156acc01",
+      "importedSha256": "8a369870a99320eaaa4589110ba0a75d12cc450c6740a245838aa10f156acc01"
     },
     {
       "path": "content/nested-ct-orientation.ts",
@@ -2895,6 +2900,11 @@
       "path": "content/femoral-component-teaching.ts",
       "sourceSha256": "5f52d9e615dfd8f842a705b630c37b67ec396fb92b3a53dbf02d19de91320b31",
       "importedSha256": "5f52d9e615dfd8f842a705b630c37b67ec396fb92b3a53dbf02d19de91320b31"
+    },
+    {
+      "path": "content/mca-source-teaching.ts",
+      "sourceSha256": "0ad19551a5fe8b559e8d424518755a6ac545e2c0c589eefb48555914a01a5006",
+      "importedSha256": "0ad19551a5fe8b559e8d424518755a6ac545e2c0c589eefb48555914a01a5006"
     },
     {
       "path": "content/collicular-brachia-teaching.ts",
@@ -2978,8 +2988,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "c1318b4c596e0b4cddb2a62b62bcf54bdc7b004cdab11c880dd5bfdc37dad6c8",
-      "importedSha256": "1b77771c6019d4db1121a2e7e560a47a8b16410bf690eb1e8daa85a491cd2795"
+      "sourceSha256": "207d1aa5ebb6f2c2a512928fe671c58cfeab88de242086b2e6be6a2a2922939d",
+      "importedSha256": "c5abd9e3e65815049660eabe9c104ceda6bd86bb24fe5ea9bd406c9784702eca"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3339,7 +3349,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "e0d6e4581985a67ec82f0e43f0ad575b831cb80304ef7ce85b6d58cf5f389886",
-      "importedSha256": "4958e4ef766adf1860e8379b544c16c5d775ab33e16ff44bc060e14c05d02285"
+      "importedSha256": "532b1dcdb2bce9ac57e36f6faf8fc0e4353f50bc019890f818ee2d1c92f03b7f"
     },
     {
       "path": "app/review/review.css",
@@ -4818,5 +4828,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "a081970c9f8013c237a6390326d1c2dd9ac707acf75ceee579ffd22883f7bdde"
+  "websiteIntegrationSha256": "46e4c80329e98dffe18f4499868262a6159008d60e1d01c553eca717edaa8e53"
 }
