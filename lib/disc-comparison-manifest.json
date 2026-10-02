@@ -1,0 +1,293 @@
+{
+  "schemaVersion": 1,
+  "purpose": "source-only-unresolved-disc-review",
+  "atlasInspectorRevision": "952d758104102f5853e00e846cb3448511daa960",
+  "reportSha256": "f732345422ac5d30bf0ecd3604b8220385b44b4cf24d8732f072f3b611226603",
+  "admissions": 0,
+  "clinicalValidation": false,
+  "sourceGeometryChanged": false,
+  "levelAssigned": false,
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "meshCount": 8,
+  "meshes": [
+    {
+      "key": "isa/FJ3211",
+      "role": "candidate",
+      "tree": "isa",
+      "file": "FJ3211",
+      "id": "FMA10446",
+      "name": "intervertebral disk",
+      "held": true,
+      "sources": [
+        {
+          "tree": "isa",
+          "file": "FJ3211",
+          "sha256": "2b1d69b821267f6446dab98a17ded12898ae2c68890575b435556f1aaf6cc78f",
+          "bytes": 358663
+        }
+      ],
+      "vertices": 4131,
+      "triangles": 3476,
+      "bounds": {
+        "min": [
+          -21.7746,
+          -105.126,
+          1061.5
+        ],
+        "max": [
+          20.4661,
+          -65.797,
+          1078.89
+        ]
+      },
+      "geometrySha256": "4a3145d732f76ac0c3ea77466a7e0465837a88a73db343f1c2f740484d901677"
+    },
+    {
+      "key": "partof/FJ3211",
+      "role": "candidate",
+      "tree": "partof",
+      "file": "FJ3211",
+      "id": "FMA25511",
+      "name": "intervertebral symphysis",
+      "held": true,
+      "sources": [
+        {
+          "tree": "partof",
+          "file": "FJ3211",
+          "sha256": "312819388c2857a2908b6529b463f43406f090748a464d3aa4bd00f0f3920ccd",
+          "bytes": 358666
+        }
+      ],
+      "vertices": 4131,
+      "triangles": 3476,
+      "bounds": {
+        "min": [
+          -21.7746,
+          -105.126,
+          1061.5
+        ],
+        "max": [
+          20.4661,
+          -65.797,
+          1078.89
+        ]
+      },
+      "geometrySha256": "4a3145d732f76ac0c3ea77466a7e0465837a88a73db343f1c2f740484d901677"
+    },
+    {
+      "key": "isa/FJ3155",
+      "role": "context",
+      "tree": "isa",
+      "file": "FJ3155",
+      "id": "FMA10059",
+      "name": "eleventh thoracic vertebra",
+      "held": false,
+      "sources": [
+        {
+          "tree": "isa",
+          "file": "FJ3155",
+          "sha256": "1f9c9f6dfcd5585e09abc2cf9a8f54ba1c33df399c6d4dad1a92301d85cd88b3",
+          "bytes": 178070
+        }
+      ],
+      "vertices": 1593,
+      "triangles": 2674,
+      "bounds": {
+        "min": [
+          -26.761,
+          -92.5324,
+          1075.72
+        ],
+        "max": [
+          25.5593,
+          -13.0089,
+          1129.27
+        ]
+      },
+      "geometrySha256": "37301162b6739345c8cdeae2a6e0abde53627bf7f59c7990f6b687b29bce5075"
+    },
+    {
+      "key": "isa/FJ3156",
+      "role": "context",
+      "tree": "isa",
+      "file": "FJ3156",
+      "id": "FMA10081",
+      "name": "twelfth thoracic vertebra",
+      "held": false,
+      "sources": [
+        {
+          "tree": "isa",
+          "file": "FJ3156",
+          "sha256": "ffeebd0dead6ed95395e35c0843888b079acf67543e2820437e99978c69642a0",
+          "bytes": 181653
+        }
+      ],
+      "vertices": 1593,
+      "triangles": 2772,
+      "bounds": {
+        "min": [
+          -22.3864,
+          -101.385,
+          1049.96
+        ],
+        "max": [
+          21.0548,
+          -22.5609,
+          1101.59
+        ]
+      },
+      "geometrySha256": "57d14a833ca64293ebce4d043ffe7160c207bb0d7a88200d7ae650d2c656a1cd"
+    },
+    {
+      "key": "isa/FJ3157",
+      "role": "context",
+      "tree": "isa",
+      "file": "FJ3157",
+      "id": "FMA13072",
+      "name": "first lumbar vertebra",
+      "held": false,
+      "sources": [
+        {
+          "tree": "isa",
+          "file": "FJ3157",
+          "sha256": "67940f16382935851ebeb7a86c926dbf922070f390c438fdbbb56f7b7fb76057",
+          "bytes": 193798
+        }
+      ],
+      "vertices": 1682,
+      "triangles": 2972,
+      "bounds": {
+        "min": [
+          -35.7798,
+          -109.48,
+          1015.2
+        ],
+        "max": [
+          34.4614,
+          -29.2224,
+          1071.98
+        ]
+      },
+      "geometrySha256": "ed6d763487e7158055149ff6bd994838c2ba02fa2756002261110c18f1b09354"
+    },
+    {
+      "key": "isa/FJ3159",
+      "role": "context",
+      "tree": "isa",
+      "file": "FJ3159",
+      "id": "FMA13073",
+      "name": "second lumbar vertebra",
+      "held": false,
+      "sources": [
+        {
+          "tree": "isa",
+          "file": "FJ3159",
+          "sha256": "5e6301d2020ba73167e71c274848ddcbec0f7936d9f26a78f2de8ffa82f095c7",
+          "bytes": 214016
+        }
+      ],
+      "vertices": 1875,
+      "triangles": 3214,
+      "bounds": {
+        "min": [
+          -40.3509,
+          -114.72,
+          992.316
+        ],
+        "max": [
+          39.0608,
+          -34.3488,
+          1039.76
+        ]
+      },
+      "geometrySha256": "d90f6e70424cd7dc387df7dbec8c5224ba67a83e2ebb42ff98bfb5f127286281"
+    },
+    {
+      "key": "isa/FJ3210",
+      "role": "context",
+      "tree": "isa",
+      "file": "FJ3210",
+      "id": "FMA13508",
+      "name": "intervertebral disk of eleventh thoracic vertebra",
+      "held": false,
+      "sources": [
+        {
+          "tree": "isa",
+          "file": "FJ3210",
+          "sha256": "8f2a670e4c8271c8ac6c1195cd324e1d5e69255b937e759c99c6ee90279bc21f",
+          "bytes": 308298
+        }
+      ],
+      "vertices": 3353,
+      "triangles": 3336,
+      "bounds": {
+        "min": [
+          -20.7728,
+          -97.0122,
+          1091.61
+        ],
+        "max": [
+          19.4286,
+          -56.9869,
+          1108.24
+        ]
+      },
+      "geometrySha256": "33424e5e9ee868aa4bb1ee09e9790f2c37f67285559a9c6e6bf25e5cffb1de98"
+    },
+    {
+      "key": "isa/FJ3212",
+      "role": "context",
+      "tree": "isa",
+      "file": "FJ3212",
+      "id": "FMA16033",
+      "name": "intervertebral disk of first lumbar vertebra",
+      "held": false,
+      "sources": [
+        {
+          "tree": "isa",
+          "file": "FJ3212",
+          "sha256": "5bcf1493e5210294ed340c9d3146cf28f8961a255cc9bbcbe38526342baefcc1",
+          "bytes": 344934
+        }
+      ],
+      "vertices": 3874,
+      "triangles": 3498,
+      "bounds": {
+        "min": [
+          -21.8952,
+          -112.303,
+          1032.56
+        ],
+        "max": [
+          20.5982,
+          -74.5321,
+          1048.57
+        ]
+      },
+      "geometrySha256": "1fd11972fc234069a96f3d6e6544a04dcbaee1e1852ff4e0425d64bf9f50be64"
+    }
+  ],
+  "files": [
+    {
+      "name": "index.html",
+      "bytes": 4302,
+      "sha256": "863afaf90e8f031a93ab7fd0611548893c9484d786260dc5c82057c117cb75ca"
+    },
+    {
+      "name": "app.js",
+      "bytes": 554272,
+      "sha256": "0961483f6745520dee002c684d1a4f70a2b0c45528bf0f948a0505f2de8b1c68"
+    },
+    {
+      "name": "scene.json",
+      "bytes": 998931,
+      "sha256": "bdba4c098d634a0238f235c65d8820c8dd3f2dafcb71c76bf3d7865a10355c83"
+    },
+    {
+      "name": "THIRD_PARTY_NOTICES.txt",
+      "bytes": 2296,
+      "sha256": "6f6d3f874abf9a0cb172d482f40327cc63bb3ee35ce10c4e2834d06bb91217b7"
+    }
+  ]
+}
