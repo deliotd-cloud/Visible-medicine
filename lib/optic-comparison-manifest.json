@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 1,
+  "purpose": "source-only-optic-alternative-review",
+  "atlasInspectorRevision": "d9cd141f1fefae6842754e134a1ef18d5661c727",
+  "reportSha256": "a452431f36caf78862240811e2ca151e8b7a2bed62473645d0fcc6ba0746365a",
+  "admissions": 0,
+  "clinicalValidation": false,
+  "sourceGeometryChanged": false,
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "meshCount": 10,
+  "pairs": [
+    {
+      "id": "FMA50875",
+      "side": "right",
+      "files": [
+        "FJ1364",
+        "FJ1819"
+      ],
+      "held": true
+    },
+    {
+      "id": "FMA50878",
+      "side": "left",
+      "files": [
+        "FJ1313",
+        "FJ1772"
+      ],
+      "held": true
+    }
+  ],
+  "meshes": [
+    {
+      "key": "isa/FJ1364",
+      "id": "FMA50875",
+      "side": "right",
+      "role": "candidate",
+      "held": true,
+      "sources": [
+        {
+          "file": "FJ1364",
+          "sha256": "e6a52be718612218521df5194422c0fe7b05fd2f94976ac8e5c526b1fb743b5c",
+          "bytes": 117132,
+          "geometrySha256": "39f26eaf5075074b294b9d76ea3b3993f05631148322b2a62b850d8fde4c4702"
+        }
+      ],
+      "geometrySha256": "130dd4b19dafe7faafbcd46e41f19f248275bbb8972bcaec7cf29c15e35ccdfb"
+    },
+    {
+      "key": "isa/FJ1819",
+      "id": "FMA50875",
+      "side": "right",
+      "role": "candidate",
+      "held": true,
+      "sources": [
+        {
+          "file": "FJ1819",
+          "sha256": "3fde0d489978522bb0c916db61287c42aedfb4c6660b6f8016a148ffccef89f4",
+          "bytes": 146608,
+          "geometrySha256": "841be24e1f4cc40befbee26c177e663661382f77585b686ec89d5cba4217333d"
+        }
+      ],
+      "geometrySha256": "c19385b1945c40e5cf7337d58dc7186e522655a707885903fce3749243dbdee1"
+    },
+    {
+      "key": "isa/FJ1313",
+      "id": "FMA50878",
+      "side": "left",
+      "role": "candidate",
+      "held": true,
+      "sources": [
+        {
+          "file": "FJ1313",
+          "sha256": "a20cd06d796575d9041a6b6e01724f70fb50f1807e324941f43dcdc3e8c51e40",
+          "bytes": 115439,
+          "geometrySha256": "05806d4d1a81584a5cbd4cdcd6da1aa9a11e0cd61e3172a216fd8826af7fc0c7"
+        }
+      ],
+      "geometrySha256": "49cacf0782004f51fef07a8d262d5a0c24ddbee644e37bcf0dbd2686f5bc1897"
+    },
+    {
+      "key": "isa/FJ1772",
+      "id": "FMA50878",
+      "side": "left",
+      "role": "candidate",
+      "held": true,
+      "sources": [
+        {
+          "file": "FJ1772",
+          "sha256": "314b4a735672c1ce6690d29199856569fa3db4864f2d94690e091432e085e057",
+          "bytes": 146521,
+          "geometrySha256": "4251a2ae961e46691fe627890f32f09426e640e3f4901c1dcd69c1b259d24310"
+        }
+      ],
+      "geometrySha256": "fb5a28e7eb42465b3b70695f268cd7b8f4563db085ec441eb70d95270f28d1ad"
+    },
+    {
+      "key": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+      "id": "FMA12514",
+      "side": "right",
+      "role": "globe-context",
+      "held": false,
+      "sources": [
+        {
+          "file": "FJ1336",
+          "sha256": "518f78b01de0273ea1cdd6152f2215f9432f2ce00ac2164cea8aa3a420cd897c"
+        },
+        {
+          "file": "FJ1337",
+          "sha256": "db3077437828f311b6afa07dc9dc7a27ab0e005ddce62570420c61af31643f22"
+        },
+        {
+          "file": "FJ1340",
+          "sha256": "20cc1b1156cd9fdebd96d8a7710ff3d6d6fc9fef79b7173ef41491e2b6e650a3"
+        },
+        {
+          "file": "FJ1348",
+          "sha256": "1120c896903582ef7349b5be68a03bfb215def235851a82b1f1f44cfe212ad9e"
+        },
+        {
+          "file": "FJ1356",
+          "sha256": "767e9107cf299b87729c9eb921a2ede22d3bfd03ae7027b6fb88631c1a0ec150"
+        },
+        {
+          "file": "FJ1368",
+          "sha256": "6fce2e1842730573a8d1360a88a9512b2ee5fe0ebe55e669cd265601da663b49"
+        },
+        {
+          "file": "FJ1371",
+          "sha256": "8dc5ab248fc952170f9057aaf4bbd2339d9ee4c30b40b32ce793e54b22706738"
+        },
+        {
+          "file": "FJ1382",
+          "sha256": "de22335a9c3ad8036e0651eb09aa975e15151bb5ac6e3d142cf8260204fa633f"
+        }
+      ],
+      "geometrySha256": "a958e1b6bc47aaea7c808e0b71f10388bba28ea72a7f2e0eb5d0a0dddb29c1b0"
+    },
+    {
+      "key": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+      "id": "FMA12515",
+      "side": "left",
+      "role": "globe-context",
+      "held": false,
+      "sources": [
+        {
+          "file": "FJ1282",
+          "sha256": "c66ed172ed90448e3e9508f21b116f319cfd1036cb7281e2f3541ede5f2adb1f"
+        },
+        {
+          "file": "FJ1285",
+          "sha256": "dd7677f804c1c370a2c6d11966877934efa9ca09c6b100e18f06fd4508ccbbb6"
+        },
+        {
+          "file": "FJ1286",
+          "sha256": "ba4e6f7156124700b63d526a882933b35b89fa0e9fd53495964d57aa5de1c989"
+        },
+        {
+          "file": "FJ1289",
+          "sha256": "6edadfa812d834f5b90d17d427baa0c6688a4cc32856c2b8c6320907bbc05150"
+        },
+        {
+          "file": "FJ1297",
+          "sha256": "e9359237794eef61117f1c12a6822dafdd0cfc70ada8d2447e3d26d4fcda9bd7"
+        },
+        {
+          "file": "FJ1305",
+          "sha256": "a2b7f9b53dd2d14a352dfa0d3e01452031a2957aae62aa7c904d7c1d1922954c"
+        },
+        {
+          "file": "FJ1317",
+          "sha256": "81a184bd0d3d8602af3c2186405a16565bcabd0d305fcbad7e02b979335d9582"
+        },
+        {
+          "file": "FJ1320",
+          "sha256": "a73a8e48e83cd65e15eda97533b59cac7f3f687a7b117e587bc561bf4f7b50a1"
+        },
+        {
+          "file": "FJ1331",
+          "sha256": "417bc91c6719b2982cb60640058ddcce9f50ecfb5a20db02393f2cf7bad82a0b"
+        }
+      ],
+      "geometrySha256": "712622051b3ad40afc422a4c4dcc3033d3bca27abad219a2aaf425ecf3a66592"
+    },
+    {
+      "key": "isa/FMA62045",
+      "id": "FMA62045",
+      "side": "midline",
+      "role": "visual-context",
+      "held": false,
+      "sources": [
+        {
+          "file": "FJ1771",
+          "sha256": "35525fbff0dae57779ca901612c148df339e2ff9dc01ad265577e2aacd7b10c1",
+          "bytes": 53200,
+          "geometrySha256": "c99539e8182db029c475425dacc2bd72cb38b788a9df11509486390239ec5d65"
+        },
+        {
+          "file": "FJ1818",
+          "sha256": "080b278fab566f29df1aa026d562b722ddc4c1d77172527be9bb0eb253fe8ef8",
+          "bytes": 53023,
+          "geometrySha256": "84fd7616d29099c46eb16dc07172eb7ae7fc920f49382f8aed456291c3096719"
+        }
+      ],
+      "geometrySha256": "d0b2783f447f0b76c49e0664e94db684c5b4d5a4f791a6625464851be8d7c742"
+    },
+    {
+      "key": "isa/FMA62382",
+      "id": "FMA62382",
+      "side": "right",
+      "role": "visual-context",
+      "held": false,
+      "sources": [
+        {
+          "file": "FJ1820",
+          "sha256": "53b9d1b4f549c2e3926e110dac77a665b1627517f5c9309a9c3b1f1dfaf1b176",
+          "bytes": 142055,
+          "geometrySha256": "9aef863a50bdff13756ebcb74d9341aea828473f2ebf98078e6b637b5cd74158"
+        }
+      ],
+      "geometrySha256": "9189d64776e3e72d5b2dac7f998231593ac8fe0f399dd710f8e845c7522e6f3e"
+    },
+    {
+      "key": "isa/FMA67936",
+      "id": "FMA67936",
+      "side": "left",
+      "role": "visual-context",
+      "held": false,
+      "sources": [
+        {
+          "file": "FJ1773",
+          "sha256": "c6b08e9c445dcf174e31bb91f3034dcdec7317782dcbdf0aa3c9cc2fa92d50a1",
+          "bytes": 141140,
+          "geometrySha256": "5c2cb95c8b6460a812c4676ff4f941b0d6b20d403bb5589577159c8160c22845"
+        }
+      ],
+      "geometrySha256": "c5caa6113f5bb3fd4d11deaab5b2c90d68494c26085ad4502c0c807a07fd73b9"
+    },
+    {
+      "key": "vm:anatomy:body:head-neck:midline:bone:sphenoid-bone",
+      "id": "FMA52736",
+      "side": "midline",
+      "role": "bone-context",
+      "held": false,
+      "sources": [
+        {
+          "file": "FJ3394",
+          "sha256": "127f537eb70e6ad4b036a535550ab7a681ce06dbdc1efda85956d910c54d6285"
+        }
+      ],
+      "geometrySha256": "187ac7b4e5fb3a8e68509ff407f47f3df514979025e78433089c434a32f52c24"
+    }
+  ],
+  "files": [
+    {
+      "name": "index.html",
+      "bytes": 5015,
+      "sha256": "894b700d91782ebcd833bcf2ef822a4eeafaea46eafe65a8eafa47d870b46a48"
+    },
+    {
+      "name": "app.js",
+      "bytes": 554296,
+      "sha256": "da9d0c7773eb41de3cb62224f6ede73b0f88073922fd0b8f43daa35313263368"
+    },
+    {
+      "name": "scene.json",
+      "bytes": 7559248,
+      "sha256": "6bf2800fc3910c0e1faa2dc6e419c7fe4373809204382353a65d328f3e3457f2"
+    },
+    {
+      "name": "THIRD_PARTY_NOTICES.txt",
+      "bytes": 1442,
+      "sha256": "b7f8b82bf8381b176bba3dba32deaba37cb4adee8f8b7776ccdcdeff815727d4"
+    }
+  ]
+}

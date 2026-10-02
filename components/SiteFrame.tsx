@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import type { ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
 
@@ -91,7 +91,15 @@ export function SiteFrame({ children, signedIn }: { children: ReactNode; signedI
       {publicSite && <SiteHeader signedIn={signedIn} />}
       {workspace && <WorkspaceContextBar pathname={pathname} signedIn={signedIn} />}
       {standardSite && !anatomyPanel && <div className="intended-use-strip"><span>Education &amp; research only</span><p>No diagnosis, reporting, patient care or clinical decision-making.</p><a href="/intended-use">Read intended use →</a></div>}
-      {workspace && pathname.startsWith("/workspace") && <nav className="institution-app-nav" aria-label="Institution workspace navigation">{institutionLinks.map(([label, href]) => { const active = href === "/workspace" ? pathname === href : pathname === href || pathname.startsWith(`${href}/`); return <Link aria-current={active ? "page" : undefined} href={href} key={href}>{label}</Link>; })}</nav>}
+      {workspace && pathname.startsWith("/workspace") && <nav className="institution-app-nav" aria-label="Institution workspace navigation">{institutionLinks.map(([label, href]) => {
+        const comparing = pathname.startsWith('/workspace/atlas-review/source-comparisons/');
+        const active = href === "/workspace" ? pathname === href : (pathname === href || pathname.startsWith(`${href}/`)) && !(href === '/workspace/atlas-review' && comparing);
+        return <Fragment key={href}>
+          <Link aria-current={active ? "page" : undefined} href={href}>{label}</Link>
+          {href === '/workspace/atlas-review' && pathname.startsWith('/workspace/atlas-review') &&
+            <Link aria-current={comparing ? 'page' : undefined} href="/workspace/atlas-review/source-comparisons/optic">Source comparisons</Link>}
+        </Fragment>;
+      })}</nav>}
       <div id="main-content" tabIndex={-1}>{children}</div>
       {publicSite && !anatomyPanel && <SiteFooter />}
     </div>
