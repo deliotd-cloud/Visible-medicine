@@ -1,6 +1,6 @@
 # Clinical Review third-party notices
 
-Atlas source: ac88a3c72de1e69971321e00a883e4b88fc356ce
+Atlas source: ab3e884bd28c9d112bfd7300d429891a3c1d1d36
 
 # Third-party notices
 
@@ -2186,6 +2186,18 @@ Original questions/code use the project's MIT terms; existing BodyParts3D CC BY
 texture, dependency, paid API or mandatory fee. References and clinical review
 scope: `docs/LUMBAR_SACRAL_QUIZ.md`. No patient-level numbering, CT/MRI registration,
 diagnostic result or clinical approval is supplied by these questions.
+
+## Wrist ultrasound orientation — 2 October 2026
+
+Original four draft lessons for eight existing wrist-bone selections use outbound
+ESSR wrist technical-guideline and ACR/RSNA musculoskeletal ultrasound reading
+links. No publisher prose, diagram, image, scan, table, PDF or dataset imported;
+reading access is not a redistribution licence or endorsement. Original code and
+prose use project MIT terms. Existing BodyParts3D CC BY 4.0 attribution/models
+and anatomical validation holds remain unchanged. No new asset, dependency,
+font, texture, paid API or mandatory fee. See `docs/WRIST_ULTRASOUND.md` for exact
+references and review boundaries. No echoes, patient registration, diagnostic
+findings or procedural safety are supplied by the model.
 
 
 ## @babel/runtime 7.29.7 (MIT)

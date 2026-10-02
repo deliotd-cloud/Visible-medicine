@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "294ecfffb03fc981db1006c0afc77c13977bc0c06f9c4771e67d74454ed44854"
+      "sha256": "f9e50fa3e5482b06f7d267a7c749be652362523122116f0e75c1d1055e838dac"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1737,6 +1737,14 @@
       "sha256": "3f187b82214165b932599c9df5a47a2f65d9416747e2d651231acb99db4fbf33"
     },
     {
+      "path": "content/wrist-ultrasound-pins.json",
+      "sha256": "be49cfd7aa0217c4df329e43c426d38d580feca7e0fdc852aa149f3327bc4520"
+    },
+    {
+      "path": "content/wrist-ultrasound.ts",
+      "sha256": "d0cd7fcf59177aa82a7dbbd26a64cda991e4674948d51f3d1043a51302950064"
+    },
+    {
       "path": "lib/abdominal-arterial.ts",
       "sha256": "23f20b2c03f6b4e2fbe13d47de0af0ba0ad25e36dc8baae4439b43448531fe03"
     },
@@ -3341,6 +3349,10 @@
       "sha256": "6d61c1e5e947e5d9f4067c40d9b97e996b40dbc07999cc773db43be471f58cf4"
     },
     {
+      "path": "lib/wrist-ultrasound.ts",
+      "sha256": "48f76abd70318e3d3af9bb40f8a307e5be93d3c7a9a299b2e7f37a9b712d7987"
+    },
+    {
       "path": "lib/xray-teaching.ts",
       "sha256": "7a38c62a92467401cf5192adef611efdf21ad9ceb213371a984ee44fd425a6d1"
     },
@@ -3565,7 +3577,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "187f2ffbb8e81b2be2b7ec68fa80d84b09ed7d82592f9cff05b90131f7bd7c22",
-  "sourceRendererSha256": "1ca6a912e0e788cd1291bb470c76e45838f62c4c9a396df8f76500aaf6e24ac2",
-  "websiteIntegrationSha256": "1c2c6cd64b9075b1376f556c7abc4d199754fa276e8637e77cf7a18196b1a7d3"
+  "sha256": "d06400f786235783efaefed6cc2022e066832109fbcbf508f254496d93c53c0c",
+  "sourceRendererSha256": "ebf89e38cb5f6f536e1c2dd111a438bde35a9c5890a272f3fdc53d9830d607c9",
+  "websiteIntegrationSha256": "b5c865b74e5b4520d1b76d043c2cad175f357c535e61a2cadca28d15b32ae612"
 }

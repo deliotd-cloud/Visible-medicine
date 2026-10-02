@@ -6,34 +6,38 @@ import {createHash} from 'node:crypto';
 import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {regionalSpreadMilestoneBytes,withoutLumbarSacralNotice} from './atlas-lumbar-sacral-history.ts';
+import {lumbarSacralMilestoneBytes} from './atlas-wrist-ultrasound-history.ts';
 
-const revision='ac88a3c72de1e69971321e00a883e4b88fc356ce';
+const revision='ab3e884bd28c9d112bfd7300d429891a3c1d1d36';
 const baseline='968f502957088c8d53c9bac025db0746d4c1424a';
 const sourceParent='e3849b6a31eac0ae8e556d753d4fe86e5e19c90a';
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
-async function api(previous=false){
+async function api(previous=false,lumbarMilestone=false){
  const result=await build({stdin:{contents:`export * from './atlas-review/app/body-content';
  export * from './atlas-review/content/lumbar-sacral-quiz';export * from './atlas-review/lib/lumbar-sacral-quiz';
  export * from './atlas-review/lib/body-review-material';export * from './atlas-review/lib/body-review-context';
  export * from './atlas-review/lib/body-review-response';export * from './atlas-review/lib/body-review-decisions';export * from './atlas-review/lib/body-review-api';
  export * from './atlas-review/lib/nested-review-material';export * from './atlas-review/lib/nested-review';export * from './atlas-review/lib/nested-review-api';`,
  resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',
- plugins:previous?[{name:'exact-pre-lumbar-website',setup(p){
-  for(const file of ['app/body-content.ts','content/body-renderer-revision.json'])p.onLoad({filter:file.endsWith('.ts')?/[\\/]app[\\/]body-content\.ts$/:/[\\/]content[\\/]body-renderer-revision\.json$/},args=>({contents:regionalSpreadMilestoneBytes('atlas-review/'+file).toString(),loader:file.endsWith('.ts')?'ts':'json',resolveDir:dirname(args.path)}));
+ plugins:previous||lumbarMilestone?[{name:'exact-lumbar-website-epochs',setup(p){
+  for(const file of ['app/body-content.ts','content/body-renderer-revision.json'])p.onLoad({filter:file.endsWith('.ts')?/[\\/]app[\\/]body-content\.ts$/:/[\\/]content[\\/]body-renderer-revision\.json$/},args=>({contents:(lumbarMilestone?lumbarSacralMilestoneBytes:regionalSpreadMilestoneBytes)('atlas-review/'+file).toString(),loader:file.endsWith('.ts')?'ts':'json',resolveDir:dirname(args.path)}));
  }}]:[]});
  return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
 }
 
 test('six exact lumbar/sacral questions reach lazy learner teaching and protected review as unsigned drafts',async()=>{
  const review=json('atlas-review/manifest.json'),prior=JSON.parse(regionalSpreadMilestoneBytes('atlas-review/manifest.json').toString());
- assert.equal(review.revision,revision);assert.equal(review.files.length,950);assert.deepEqual(review.packages,prior.packages);
- assert.deepEqual(review.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),['content/lumbar-sacral-quiz-pins.json','content/lumbar-sacral-quiz.ts','lib/lumbar-sacral-quiz.ts']);
+ assert.equal(review.revision,revision);assert.equal(review.files.length,953);assert.deepEqual(review.packages,prior.packages);
+ // Retain the original six-question editorial delta at its saved epoch. The
+ // wrist regression separately proves the current eight Ultrasound additions.
+ const lumbarEpoch=JSON.parse(lumbarSacralMilestoneBytes('atlas-review/manifest.json').toString());
+ assert.deepEqual(lumbarEpoch.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),['content/lumbar-sacral-quiz-pins.json','content/lumbar-sacral-quiz.ts','lib/lumbar-sacral-quiz.ts']);
  for(const f of review.files)assert.equal(sha(readFileSync('atlas-review/'+f.path)),f.importedSha256,f.path);
  const pins=json('atlas-review/content/lumbar-sacral-quiz-pins.json');assert.equal(pins.parentCommit,sourceParent);assert.equal(pins.entries.length,6);
  assert.deepEqual(pins.entries.map((e:any)=>e.identity.fmaId),['FMA13072','FMA13073','FMA13074','FMA13075','FMA13076','FMA16202']);
  const now=await api(),runtime=json('public/atlas-runtime/head-neck/manifest.json'),inputs=json('public/atlas-runtime/head-neck/source-inputs.json');
- assert.equal(inputs.length,923);assert.equal(runtime.sourceCommit,revision);
+ assert.equal(inputs.length,926);assert.equal(runtime.sourceCommit,revision);
  const lazy=runtime.files.filter((f:any)=>/^assets\/body-content-[\w-]+\.js$/.test(f.path));assert.equal(lazy.length,1);
  const bytes=readFileSync('public/atlas-runtime/head-neck/'+lazy[0].path);assert.equal(sha(bytes),lazy[0].sha256);const text=bytes.toString();
  for(const entry of pins.entries){
@@ -50,13 +54,13 @@ test('six exact lumbar/sacral questions reach lazy learner teaching and protecte
   const context=await now.bodyReviewContext(entry.identity.id);assert(context.teachingTabs.includes('quiz'));assert.equal(context.revisions.imaging,null);assert(context.blockers.imaging.length);
   assert.equal(now.lumbarSacralQuizLesson({...entry.identity,nodeName:'foreign'},'quiz'),undefined);
  }
- const oldPins=JSON.parse(regionalSpreadMilestoneBytes('atlas-review/content/body-review-display-pins.json').toString()),newPins=json('atlas-review/content/body-review-display-pins.json');
+ const oldPins=JSON.parse(regionalSpreadMilestoneBytes('atlas-review/content/body-review-display-pins.json').toString()),newPins=JSON.parse(lumbarSacralMilestoneBytes('atlas-review/content/body-review-display-pins.json').toString());
  const oldMap=new Map(oldPins.pins.map((p:any)=>[p.structureId,p.sha256]));assert.equal(newPins.pins.length,oldPins.pins.length);
  assert.deepEqual(newPins.pins.filter((p:any)=>p.sha256!==oldMap.get(p.structureId)).map((p:any)=>p.structureId).sort(),pins.entries.map((e:any)=>e.identity.id).sort());
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,JSON.parse(execFileSync('git',['show',baseline+':lib/atlas-model-inventory.json'],{maxBuffer:32e6}).toString()).models);
  for(const name of ['head-neck','shoulder','lower-limb']){
   const base='public/atlas-runtime/'+name+'/',manifest=json(base+'manifest.json'),old=JSON.parse(regionalSpreadMilestoneBytes(base+'manifest.json').toString());
-  assert.equal(manifest.sourceCommit,revision);assert.equal(json(base+'source-inputs.json').length,({'head-neck':923,shoulder:610,'lower-limb':100} as Record<string,number>)[name]);
+  assert.equal(manifest.sourceCommit,revision);assert.equal(json(base+'source-inputs.json').length,({'head-neck':926,shoulder:613,'lower-limb':100} as Record<string,number>)[name]);
   assert.deepEqual(manifest.files.filter((f:any)=>f.path.startsWith('models/')),old.files.filter((f:any)=>f.path.startsWith('models/')));
   for(const flag of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection','imagingConnection'])assert.deepEqual(manifest[flag],old[flag]);
   assert.equal(withoutLumbarSacralNotice(readFileSync(base+'LICENSES/THIRD_PARTY_NOTICES.md','utf8')),regionalSpreadMilestoneBytes(base+'LICENSES/THIRD_PARTY_NOTICES.md').toString());
@@ -66,7 +70,7 @@ test('six exact lumbar/sacral questions reach lazy learner teaching and protecte
 });
 
 test('only six quiz topics change; unchanged teaching, nested scope and stale submission gates are retained',async()=>{
- const now=await api(),before=await api(true),targets=new Set(json('atlas-review/content/lumbar-sacral-quiz-pins.json').entries.map((e:any)=>e.identity.id));
+ const now=await api(false,true),before=await api(true),targets=new Set(json('atlas-review/content/lumbar-sacral-quiz-pins.json').entries.map((e:any)=>e.identity.id));
  assert.deepEqual(now.bodyReviewSummaries,before.bodyReviewSummaries);assert.equal(now.bodyReviewSummaries.length,1104);
  const storage=new Proxy({},{get(){throw Error('Stale or unsigned request reached storage');}});
  const request=(body:any)=>new Request('https://review.test/api/review',{method:'POST',headers:{origin:'https://review.test','content-type':'application/json','oai-authenticated-user-id':'SYNTHETIC_LUMBAR_QUIZ_TEST'},body:JSON.stringify(body)});

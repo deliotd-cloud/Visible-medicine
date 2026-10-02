@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "a307d58e94218d038f62fc8e4390883c08385523f843720fe49091eda37d535a"
+    "sha256": "80f3cf390fdf4b347da58e8f1283b45496e3315623640f8dedd0fb1fb347bcd1"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "294ecfffb03fc981db1006c0afc77c13977bc0c06f9c4771e67d74454ed44854"
+    "sha256": "f9e50fa3e5482b06f7d267a7c749be652362523122116f0e75c1d1055e838dac"
   },
   {
     "path": "app/body-education-link.ts",
@@ -1784,6 +1784,14 @@
     "sha256": "3f187b82214165b932599c9df5a47a2f65d9416747e2d651231acb99db4fbf33"
   },
   {
+    "path": "content/wrist-ultrasound-pins.json",
+    "sha256": "be49cfd7aa0217c4df329e43c426d38d580feca7e0fdc852aa149f3327bc4520"
+  },
+  {
+    "path": "content/wrist-ultrasound.ts",
+    "sha256": "d0cd7fcf59177aa82a7dbbd26a64cda991e4674948d51f3d1043a51302950064"
+  },
+  {
     "path": "integration/head-neck/companions.mjs",
     "sha256": "eeeb3bc7ba5048100af858286dc0166da6f37e4cc9957d72ac90de16a0211863"
   },
@@ -3434,6 +3442,10 @@
   {
     "path": "lib/wrist-imaging.ts",
     "sha256": "6d61c1e5e947e5d9f4067c40d9b97e996b40dbc07999cc773db43be471f58cf4"
+  },
+  {
+    "path": "lib/wrist-ultrasound.ts",
+    "sha256": "48f76abd70318e3d3af9bb40f8a307e5be93d3c7a9a299b2e7f37a9b712d7987"
   },
   {
     "path": "lib/xray-teaching.ts",
