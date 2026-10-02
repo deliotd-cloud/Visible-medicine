@@ -16,7 +16,7 @@ test('disc comparison remains held and separate from unchanged learner and optic
  assert.deepEqual(packet.meshes.filter((m:any)=>m.role==='candidate').map((m:any)=>[m.key,m.id,m.held]),[['isa/FJ3211','FMA10446',true],['partof/FJ3211','FMA25511',true]]);
  assert.equal(JSON.parse(readFileSync('lib/optic-comparison-manifest.json','utf8')).atlasInspectorRevision,'d9cd141f1fefae6842754e134a1ef18d5661c727');
  for(const path of ['atlas-review/manifest.json','public/atlas-runtime/head-neck/manifest.json','public/atlas-review-viewer/manifest.json']) {
-  const imported=JSON.parse(readFileSync(path,'utf8'));assert.equal(imported.sourceCommit??imported.revision,'ed3d7a1ebaa11edc5bea4c918e43b6019b93d521');
+  const imported=JSON.parse(readFileSync(path,'utf8'));assert.equal(imported.sourceCommit??imported.revision,'871c57b7729476bb08cbf04d58732b90fc4b52c5');
  }
  assert.match(readFileSync('.local/disc-review/assets.ts','utf8'),/^import 'server-only';/);
  for(const path of ['public/disc-review','public/disc-comparison','public/atlas-review-viewer/scene.json'])assert.equal(existsSync(path),false);

@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "fe245f67716123194313d986f1c6c97469fb4f4d8c09c150c818debaee61d194"
+      "sha256": "4a06c9923e3b13eddd937f63f97c6b84f1f03ea9adb95bb2c691b333a5a547d8"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1659,6 +1659,14 @@
     {
       "path": "content/thoracoabdominal-organ-imaging.ts",
       "sha256": "bebed40490aa6ba882c6a53d54db529564be3a3ee556d724605ba2748febcc06"
+    },
+    {
+      "path": "content/thoracoabdominal-orientation-pins.json",
+      "sha256": "01346fad2dd98a2483ab1dd722f23c3e3fc1b1d33e028b8fc779a5af6719d39d"
+    },
+    {
+      "path": "content/thoracoabdominal-orientation.ts",
+      "sha256": "a5fce45fa0ec4e1c22c4a36b9fee663fb2840cb74c77e4e94d5d2f6c5716a3bd"
     },
     {
       "path": "content/thorax-central-airway-study.ts",
@@ -3317,6 +3325,10 @@
       "sha256": "c503474a75696b55f6bf6bd13bb01b85a60b79c1bc63e0740eb522d81966f720"
     },
     {
+      "path": "lib/thoracoabdominal-orientation.ts",
+      "sha256": "9cb290950814f9f13c2cd481cfb7697048c9f9ae42412bb3fe60398d9a333b3e"
+    },
+    {
       "path": "lib/thorax-motor.ts",
       "sha256": "6e5f15f9c9f7e73457e2ac7502bddf6971b743bcd8ab2e35b86b6466bb42777b"
     },
@@ -3466,7 +3478,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "e3d923890be9a6b7d9b3a7907d96f06d38c7e6cc900a27a9e34a09451dad1258"
+      "sha256": "b40b732ef66651b3643ba80fdb241dace8a87de8058aee7e70ab0cb3255027df"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3681,7 +3693,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "e16a2e555aa3eb20d4a86ec93a648f4aab3511eafa099867f4b27d042f1becc4",
-  "sourceRendererSha256": "99d048fe63824a672b6ef768bb22c1ceef6b6620ab18fa0e8b95104607ba3977",
-  "websiteIntegrationSha256": "33040e4443ee680bf63fa22a91717c11d1a23dbd163c09e1439ec417178b9cbd"
+  "sha256": "b7a4214addf06531cea0755819a70d460d8f933854c7aef2ff9edbffa80218d8",
+  "sourceRendererSha256": "1d81ba66bce9731138a6a76dcd7b153db9a447e3373af1cc14ef581fe088dfe7",
+  "websiteIntegrationSha256": "2fff5da50e4f8b69948d45236c6a9f0e44efbeca7103d04444ac0f4b765fca68"
 }

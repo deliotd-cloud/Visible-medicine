@@ -1,20 +1,25 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {readFileSync} from 'node:fs';
+import {readFileSync as liveReadFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {dirname,relative} from 'node:path';
 import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {shoulderGirdleEpochBytes,shoulderGirdleEpochPlugin} from './atlas-shoulder-girdle-imaging-history.ts';
 
 const baseline='e9542886d8db5ab02d9575f49990569e7ba7dc2f';
 // Coordinator replaces this after the separately versioned Atlas source is saved.
 const revision='ed3d7a1ebaa11edc5bea4c918e43b6019b93d521';
+const liveRevision='871c57b7729476bb08cbf04d58732b90fc4b52c5';
+function readFileSync(p:string,encoding:'utf8'):string;
+function readFileSync(p:string):Buffer;
+function readFileSync(p:string,encoding?:'utf8'):Buffer|string{const bytes=shoulderGirdleEpochBytes(p);return encoding?bytes.toString():bytes;}
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Buffer|string)=>createHash('sha256').update(b).digest('hex');
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{encoding:'utf8',maxBuffer:32e6});
 const normalized=(s:string)=>s.replaceAll('\r\n','\n');
-async function load(previous=false){
+async function load(previous=false,live=false){
  const result=await build({stdin:{contents:`export * from './atlas-review/app/body-content';
  export * from './atlas-review/lib/shoulder-girdle-imaging';
  export * from './atlas-review/lib/body-system-toggle';
@@ -22,17 +27,17 @@ async function load(previous=false){
  export * from './atlas-review/lib/body-review-context';export * from './atlas-review/lib/body-review-response';
  export * from './atlas-review/lib/body-review-api';export * from './atlas-review/lib/body-review-decisions';
  export {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';`,resolveDir:process.cwd(),loader:'ts'},
- bundle:true,write:false,platform:'node',format:'esm',plugins:previous?[{name:'exact-before-projection',setup(api){
+ bundle:true,write:false,platform:'node',format:'esm',plugins:[...(previous?[{name:'exact-before-projection',setup(api:import('esbuild').PluginBuild){
   api.onLoad({filter:/\.(?:ts|json)$/},args=>{
    const p=relative(process.cwd(),args.path).replaceAll('\\','/');
-   if(!['atlas-review/app/body-content.ts','atlas-review/content/body-renderer-revision.json'].includes(p))return;
+   if(!['atlas-review/app/body-content.ts','atlas-review/content/body-renderer-revision.json','atlas-review/content/body-review-display-pins.json'].includes(p))return;
    return{contents:old(p),loader:p.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)};
   });
- }}]:[]});
+ }}]:[]),...(!live?[shoulderGirdleEpochPlugin()]:[])]});
  return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
 }
 
-test('sixteen exact-source shoulder-girdle drafts reach the regional learner and protected Review; all four runtimes preserve models and access',async()=>{
+test('recorded shoulder milestone: sixteen exact-source drafts reach the regional learner and protected Review; all four runtimes preserve models and access',async()=>{
  assert.match(revision,/^[a-f0-9]{40}$/,'Set saved Atlas source commit before import verification');
  const api=await load(),review=json('atlas-review/manifest.json'),epoch=JSON.parse(old('atlas-review/manifest.json'));
  assert.equal(review.revision,revision);assert.equal(review.files.length,979);assert.deepEqual(review.packages,epoch.packages);
@@ -57,7 +62,7 @@ test('sixteen exact-source shoulder-girdle drafts reach the regional learner and
    // Regional Shoulder & arm uses head-neck. The dedicated shoulder entry has
    // a different teaching panel; an orphan chunk is not learner reachability.
    if(name==='head-neck'){
-    const code=emittedTeaching(base,manifest.files,true);
+    const code=emittedTeaching(base,manifest.files,true,shoulderGirdleEpochBytes);
     for(const entry of pins.entries)for(const tab of entry.topics){
      const lesson=api.shoulderGirdleImagingLesson(entry.identity,tab);assert(lesson);
      for(const value of [lesson.body,...lesson.bullets,...lesson.citations,lesson.note])assert(code.includes(value)||code.includes(JSON.stringify(value).slice(1,-1)),`${name}: ${value}`);
@@ -81,7 +86,7 @@ test('sixteen exact-source shoulder-girdle drafts reach the regional learner and
  assert.deepEqual(api.bodySystemToggle(1,false,true),{available:true,checked:false,disabled:true});
 });
 
-test('all 9936 topics change only at 32 pinned CT/MRI placements; 16 Review packets advance and stale requests fail closed',async()=>{
+test('recorded shoulder milestone: all 9936 topics change only at 32 pinned CT/MRI placements; 16 Review packets advance and stale requests fail closed',async()=>{
  const current=await load(),previous=await load(true),catalog=current.bodyDisplayCatalog(json('public/atlas-runtime/head-neck/models/bodyparts3d/full-body/catalog.json'));
  const pins=json('atlas-review/content/shoulder-girdle-imaging-pins.json'),targets=new Map(pins.entries.map((e:any)=>[e.identity.id,e]));
  assert.equal(catalog.structures.length,1104);assert.equal(pins.entries.length,16);assert.equal(new Set(targets.keys()).size,16);
@@ -129,4 +134,30 @@ test('all 9936 topics change only at 32 pinned CT/MRI placements; 16 Review pack
   }
  }
  assert.deepEqual({changed,unchanged,packets,unchangedWorksheets,rejected,mutations},{changed:32,unchanged:9904,packets:16,unchangedWorksheets:1088,rejected:32,mutations:416});
+});
+
+test('current delivery retains all32 shoulder drafts and actual learner/Review reachability independently of the recorded epoch',async()=>{
+ const current=await load(false,true),epoch=await load(),liveJson=(p:string)=>JSON.parse(liveReadFileSync(p,'utf8'));
+ const review=liveJson('atlas-review/manifest.json');assert.equal(review.revision,liveRevision);
+ for(const path of ['content/shoulder-girdle-imaging-pins.json','content/shoulder-girdle-imaging.ts','lib/shoulder-girdle-imaging.ts']){
+  assert.equal(normalized(liveReadFileSync('atlas-review/'+path,'utf8')),normalized(shoulderGirdleEpochBytes('atlas-review/'+path).toString()),'Original authored source: '+path);
+ }
+ const base='public/atlas-runtime/head-neck/',manifest=liveJson(base+'manifest.json');
+ assert.equal(manifest.sourceCommit,liveRevision);assert.equal(manifest.patientDataIncluded,false);
+ const learnerCode=emittedTeaching(base,manifest.files,true),viewerBase='public/atlas-review-viewer/',viewer=liveJson(viewerBase+'manifest.json');
+ assert.equal(viewer.sourceCommit,liveRevision);assert.equal(viewer.personalRecordsIncluded,false);
+ for(const f of viewer.files)assert.equal(sha(liveReadFileSync(viewerBase+f.path)),f.sha256);
+ const reviewCode=viewer.files.filter((f:any)=>f.path.endsWith('.js')).map((f:any)=>liveReadFileSync(viewerBase+f.path,'utf8')).join('\n');
+ let topics=0,packets=0;
+ for(const entry of liveJson('atlas-review/content/shoulder-girdle-imaging-pins.json').entries){
+  for(const tab of entry.topics){
+   const lesson=current.shoulderGirdleImagingLesson(entry.identity,tab);assert(lesson);topics++;
+   assert.deepEqual(current.bodyLesson(entry.identity,tab),epoch.bodyLesson(entry.identity,tab));
+   assert.deepEqual(current.bodyLesson(entry.identity,tab),lesson);
+   for(const text of [lesson.body,...lesson.bullets,...lesson.citations,lesson.note])for(const code of [learnerCode,reviewCode])assert(code.includes(text)||code.includes(JSON.stringify(text).slice(1,-1)),text);
+  }
+  const before=await epoch.bodyReviewMaterial(entry.identity.id),after=await current.bodyReviewMaterial(entry.identity.id);
+  assert.deepEqual(after.fingerprints,before.fingerprints);assert.equal(after.approval,false);assert(await current.parseBodyReviewResponse(after,entry.identity.id));packets++;
+ }
+ assert.equal(topics,32);assert.equal(packets,16);
 });

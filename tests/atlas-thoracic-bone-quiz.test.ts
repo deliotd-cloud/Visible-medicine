@@ -5,14 +5,14 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {thoracicQuizHostProof} from './atlas-thoracic-bone-quiz-proof.ts';
 import {carpalQuizMilestoneBytes,thoracicQuizMilestoneBytes,withoutThoracicQuizNotice} from './atlas-thoracic-bone-quiz-history.ts';
-const revision='ed3d7a1ebaa11edc5bea4c918e43b6019b93d521';
+const revision='871c57b7729476bb08cbf04d58732b90fc4b52c5';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
 const added=['content/thoracic-bone-quiz-pins.json','content/thoracic-bone-quiz.ts','lib/thoracic-bone-quiz.ts'];
 
 test('thoracic questions reach contained learner and protected review with unchanged models/access',()=>{
  const review=json('atlas-review/manifest.json'),prior=JSON.parse(carpalQuizMilestoneBytes('atlas-review/manifest.json').toString());
- assert.equal(review.revision,revision);assert.equal(review.files.length,979);assert.deepEqual(review.packages,prior.packages);
+ assert.equal(review.revision,revision);assert.equal(review.files.length,982);assert.deepEqual(review.packages,prior.packages);
  const epoch=JSON.parse(thoracicQuizMilestoneBytes('atlas-review/manifest.json').toString());
  assert.deepEqual(epoch.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),added);
  assert.deepEqual(epoch.files.filter((f:any)=>prior.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),
@@ -32,7 +32,7 @@ test('thoracic questions reach contained learner and protected review with uncha
   else{
    for(const flag of ['clinicalApproved','standaloneReviewConnection','imagingConnection'])assert.deepEqual(manifest[flag],old[flag]);
    assert.deepEqual(manifest.files.filter((f:any)=>f.path.startsWith('models/')),old.files.filter((f:any)=>f.path.startsWith('models/')));
-   assert.equal(json(folder+'source-inputs.json').length,({'head-neck':952,shoulder:631,'lower-limb':100} as Record<string,number>)[name]);
+   assert.equal(json(folder+'source-inputs.json').length,({'head-neck':955,shoulder:634,'lower-limb':100} as Record<string,number>)[name]);
   }
   const noticePath=folder+(name==='protected'?'THIRD_PARTY_NOTICES.txt':'LICENSES/THIRD_PARTY_NOTICES.md');
   const previousNotice=carpalQuizMilestoneBytes(noticePath).toString();

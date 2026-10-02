@@ -9,7 +9,7 @@ import {emittedTeaching} from './atlas-emitted-teaching.ts';
 import {abdominalVascularMriEpochBytes,abdominalVascularMriEpochPlugin} from './atlas-abdominal-vascular-mri-history.ts';
 const baseline='48f697462c8d7445d0b9707b19a9ebce3adf48aa';
 const revision='732f5f56ff3708b9200b25f18ac3f6f175a438e5';
-const liveRevision='ed3d7a1ebaa11edc5bea4c918e43b6019b93d521';
+const liveRevision='871c57b7729476bb08cbf04d58732b90fc4b52c5';
 function readFileSync(p:string,encoding:'utf8'):string;
 function readFileSync(p:string):Buffer;
 function readFileSync(p:string,encoding?:'utf8'):Buffer|string{const bytes=abdominalVascularMriEpochBytes(p);return encoding?bytes.toString():bytes;}

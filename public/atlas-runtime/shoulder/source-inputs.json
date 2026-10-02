@@ -29,7 +29,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "fe245f67716123194313d986f1c6c97469fb4f4d8c09c150c818debaee61d194"
+    "sha256": "4a06c9923e3b13eddd937f63f97c6b84f1f03ea9adb95bb2c691b333a5a547d8"
   },
   {
     "path": "app/body-explorer.css",
@@ -1134,6 +1134,14 @@
   {
     "path": "content/thoracoabdominal-organ-imaging.ts",
     "sha256": "bebed40490aa6ba882c6a53d54db529564be3a3ee556d724605ba2748febcc06"
+  },
+  {
+    "path": "content/thoracoabdominal-orientation-pins.json",
+    "sha256": "01346fad2dd98a2483ab1dd722f23c3e3fc1b1d33e028b8fc779a5af6719d39d"
+  },
+  {
+    "path": "content/thoracoabdominal-orientation.ts",
+    "sha256": "a5fce45fa0ec4e1c22c4a36b9fee663fb2840cb74c77e4e94d5d2f6c5716a3bd"
   },
   {
     "path": "content/thorax-central-airway-study.ts",
@@ -2286,6 +2294,10 @@
   {
     "path": "lib/thoracoabdominal-organ-imaging.ts",
     "sha256": "c503474a75696b55f6bf6bd13bb01b85a60b79c1bc63e0740eb522d81966f720"
+  },
+  {
+    "path": "lib/thoracoabdominal-orientation.ts",
+    "sha256": "9cb290950814f9f13c2cd481cfb7697048c9f9ae42412bb3fe60398d9a333b3e"
   },
   {
     "path": "lib/thyroid-imaging.ts",

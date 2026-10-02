@@ -28,6 +28,7 @@ import { abdominalBranchImagingLesson } from '../lib/abdominal-branch-imaging';
 import { colicArterialMriLesson } from '../lib/colic-arterial-mri';
 import { abdominalVascularMriLesson } from '../lib/abdominal-vascular-mri';
 import { shoulderGirdleImagingLesson } from '../lib/shoulder-girdle-imaging';
+import { thoracoabdominalOrientationLesson } from '../lib/thoracoabdominal-orientation';
 import {
   structures as shoulderStructures,
   type ContentTab,
@@ -333,6 +334,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   const thyroidImaging = thyroidImagingLesson(s, tab);
   if (thyroidImaging) return thyroidImaging;
   if (neckTeaching) return neckTeaching;
+  const thoracoabdominalOrientation = thoracoabdominalOrientationLesson(s, tab);
+  if (thoracoabdominalOrientation) return thoracoabdominalOrientation;
   const shoulderGirdleImaging = shoulderGirdleImagingLesson(s, tab);
   if (shoulderGirdleImaging) return shoulderGirdleImaging;
   const abdominalVascularMri = abdominalVascularMriLesson(s, tab);
