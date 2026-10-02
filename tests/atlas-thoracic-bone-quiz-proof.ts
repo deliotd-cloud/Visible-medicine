@@ -24,7 +24,7 @@ async function load(previous=false){
     plugins:[preMCANestedPlugin(),{name:'immutable-thoracic-question-epoch',setup(api:any){api.onLoad({filter:/\.(?:ts|json)$/},(args:any)=>{
       const path=relative(process.cwd(),args.path).replaceAll('\\','/');
       // This historical transition is distinct from the live core-question proof.
-      if(path!=='atlas-review/lib/reasoning-questions.ts' && (previous||path!=='atlas-review/content/body-review-display-pins.json'))return;
+      if(path!=='atlas-review/lib/reasoning-questions.ts' && (previous||!['atlas-review/content/body-review-display-pins.json','atlas-review/app/body-content.ts'].includes(path)))return;
       return {contents:thoracicQuizMilestoneBytes(path).toString(),loader:path.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)};
     });}},...(previous?[{name:'pre-thoracic-bone-quiz',setup(api:any){api.onLoad({filter:/.*/,namespace:'file'},(args:any)=>{
       const path=relative(process.cwd(),args.path).replaceAll('\\','/').replace(/^atlas-review\//,'');

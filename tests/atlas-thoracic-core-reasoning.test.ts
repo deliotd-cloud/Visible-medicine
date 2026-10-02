@@ -6,8 +6,9 @@ import {dirname,relative} from 'node:path';
 import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {preProjectionImportBytes,preProjectionTeachingPlugin} from './atlas-interosseous-projection-history.ts';
 const baseline='6d851df6891316da971430ca8ddf522d31df640b';
-const revision='6c156e8b4cead4a24cc19ea2cc5a53e77ba8e06e';
+const revision='24e82d38d226eac294ffa5f3a922448f4904cec0';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{encoding:'utf8',maxBuffer:32e6});
 const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
@@ -22,22 +23,23 @@ async function load(previous=false){
  export * from './atlas-review/lib/body-review-api';
  export {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';
  `,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',
- plugins:previous?[{name:'exact-pre-core-questions',setup(api){
+ plugins:[preProjectionTeachingPlugin(),...(previous?[{name:'exact-pre-core-questions',setup(api: import('esbuild').PluginBuild){
   api.onLoad({filter:/\.(?:ts|json)$/},args=>{
    const p=relative(process.cwd(),args.path).replaceAll('\\','/');
    if(!['atlas-review/lib/reasoning-questions.ts','atlas-review/content/body-renderer-revision.json'].includes(p))return;
    return{contents:old(p),loader:p.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)};
   });
- }}]:[]});
+ }}]:[])]});
  return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
 }
 test('four core thoracic questions ship over five exact roots without new models, permissions or dependencies',async()=>{
  const api=await load(),prior=await load(true),review=json('atlas-review/manifest.json');
  const epoch=JSON.parse(old('atlas-review/manifest.json'));
- assert.equal(review.revision,revision);assert.equal(review.files.length,966);
+ const milestone=JSON.parse(preProjectionImportBytes('atlas-review/manifest.json').toString());
+ assert.equal(review.revision,revision);assert.equal(review.files.length,969);
  assert.deepEqual(review.packages,epoch.packages);
- assert.deepEqual(review.files.filter((f:any)=>!epoch.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),['content/thoracic-core-reasoning-pins.json','lib/thoracic-core-reasoning.ts']);
- assert.deepEqual(review.files.filter((f:any)=>epoch.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),['content/body-renderer-revision.json','content/body-review-display-pins.json','lib/reasoning-questions.ts']);
+ assert.deepEqual(milestone.files.filter((f:any)=>!epoch.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),['content/thoracic-core-reasoning-pins.json','lib/thoracic-core-reasoning.ts']);
+ assert.deepEqual(milestone.files.filter((f:any)=>epoch.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),['content/body-renderer-revision.json','content/body-review-display-pins.json','lib/reasoning-questions.ts']);
  for(const f of review.files)assert.equal(sha(readFileSync('atlas-review/'+f.path)),f.importedSha256,f.path);
  assert.deepEqual(api.reasoningConcepts.slice(0,166),prior.reasoningConcepts);
  assert.equal(api.reasoningConcepts.length,170);

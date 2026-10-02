@@ -11,6 +11,7 @@ import { epigastricVeinPathologyLesson } from '../lib/epigastric-vein-pathology'
 import { mainBronchusXrayLesson } from '../lib/main-bronchus-xray';
 import { hipAbductorXrayLesson } from '../lib/hip-abductor-xray';
 import { handBoneXrayLesson } from '../lib/hand-bone-xray';
+import { interosseousMembraneProjectionLesson } from '../lib/interosseous-membrane-projection';
 import { halluxXrayLesson } from '../lib/hallux-xray';
 import { properDigitalTeachingLesson } from '../lib/proper-digital-teaching';
 import { spinalDiscFunctionLesson } from '../lib/spinal-disc-function';
@@ -347,6 +348,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (orbitalNeckMuscleImaging) return orbitalNeckMuscleImaging;
   const handBoneXray = handBoneXrayLesson(s, tab);
   if (handBoneXray) return handBoneXray;
+  const interosseousMembraneProjection = interosseousMembraneProjectionLesson(s, tab);
+  if (interosseousMembraneProjection) return interosseousMembraneProjection;
   const halluxXray = halluxXrayLesson(s, tab);
   if (halluxXray) return halluxXray;
   const acralBoneImaging = acralBoneImagingLesson(s, tab);

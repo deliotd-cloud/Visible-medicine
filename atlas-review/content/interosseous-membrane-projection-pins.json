@@ -1,0 +1,357 @@
+{
+  "schemaVersion": 1,
+  "parentCommit": "6c156e8b4cead4a24cc19ea2cc5a53e77ba8e06e",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "forearm-connective-gaps",
+      "url": "/models/bodyparts3d/full-body/forearm-connective-gaps.glb",
+      "bytes": 60244,
+      "sha256": "3edf719c336df784236543a43f75d98442f8b680d32f9ed00365822c7d783564",
+      "structures": 2
+    },
+    {
+      "id": "leg-connective-gaps",
+      "url": "/models/bodyparts3d/full-body/leg-connective-gaps.glb",
+      "bytes": 346900,
+      "sha256": "5b28b2d13a891e88c177fb2db80c81a2dcf1c0201644ee68c8ce69870b98d70a",
+      "structures": 4
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
+        "fmaId": "FMA23707",
+        "name": "Interosseous membrane of right forearm",
+        "sourceName": "interosseous membrane of right forearm",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-connective-gaps",
+        "nodeName": "FMA23707",
+        "bounds": {
+          "min": [
+            -2.5067598819732666,
+            0.21471984684467316,
+            0.20117104053497314
+          ],
+          "max": [
+            -2.289450168609619,
+            1.7778997421264648,
+            0.6823599934577942
+          ]
+        },
+        "center": [
+          -2.398105025291443,
+          0.996309794485569,
+          0.44176551699638367
+        ],
+        "anchor": [
+          -2.4015800952911377,
+          0.9821801781654358,
+          0.4531240165233612
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1476",
+            "sha256": "e70c96c4534da21f082cc494a7804f42db96195bed75641334348845cb1ddb97"
+          }
+        ],
+        "coverageNote": "Interosseous membrane surface; individual bundles and insertions are not separately segmented. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "forearm",
+      "topics": [
+        "ct",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
+        "fmaId": "FMA23708",
+        "name": "Interosseous membrane of left forearm",
+        "sourceName": "interosseous membrane of left forearm",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-connective-gaps",
+        "nodeName": "FMA23708",
+        "bounds": {
+          "min": [
+            2.289450168609619,
+            0.21471984684467316,
+            0.20117104053497314
+          ],
+          "max": [
+            2.5067598819732666,
+            1.7778997421264648,
+            0.6823599934577942
+          ]
+        },
+        "center": [
+          2.398105025291443,
+          0.996309794485569,
+          0.44176551699638367
+        ],
+        "anchor": [
+          2.4015800952911377,
+          0.9821801781654358,
+          0.4531240165233612
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1476M",
+            "sha256": "2855876f02fbf5186e8cb19d640828808063a859d297042494477cc40c212d22"
+          }
+        ],
+        "coverageNote": "Interosseous membrane surface; individual bundles and insertions are not separately segmented. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "forearm",
+      "topics": [
+        "ct",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:right:ligament:interosseous-membrane-of-right-leg",
+        "fmaId": "FMA35192",
+        "name": "Interosseous membrane of right leg",
+        "sourceName": "interosseous membrane of right leg",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "right",
+        "region": "leg",
+        "regions": [
+          "leg"
+        ],
+        "bundle": "leg-connective-gaps",
+        "nodeName": "FMA35192",
+        "bounds": {
+          "min": [
+            -1.0368499755859375,
+            -7.821455955505371,
+            0.1289139986038208
+          ],
+          "max": [
+            -0.8502410054206848,
+            -4.635980129241943,
+            0.3688880205154419
+          ]
+        },
+        "center": [
+          -0.9435454905033112,
+          -6.228718042373657,
+          0.24890100955963135
+        ],
+        "anchor": [
+          -0.9445939660072327,
+          -6.233829975128174,
+          0.24552398920059204
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1392",
+            "sha256": "5e096412b0b74f19d32080170b9cd6598d62bf9ba5add6bd2adf41b487f17d8f"
+          }
+        ],
+        "coverageNote": "Interosseous membrane surface; individual bundles and insertions are not separately segmented. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "leg",
+      "topics": [
+        "ct",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:left:ligament:interosseous-membrane-of-left-leg",
+        "fmaId": "FMA35193",
+        "name": "Interosseous membrane of left leg",
+        "sourceName": "interosseous membrane of left leg",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "left",
+        "region": "leg",
+        "regions": [
+          "leg"
+        ],
+        "bundle": "leg-connective-gaps",
+        "nodeName": "FMA35193",
+        "bounds": {
+          "min": [
+            0.8502410054206848,
+            -7.821455955505371,
+            0.1289139986038208
+          ],
+          "max": [
+            1.0368499755859375,
+            -4.635980129241943,
+            0.3688880205154419
+          ]
+        },
+        "center": [
+          0.9435454905033112,
+          -6.228718042373657,
+          0.24890100955963135
+        ],
+        "anchor": [
+          0.9445939660072327,
+          -6.233829975128174,
+          0.24552398920059204
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1392M",
+            "sha256": "60f79a84a6c31041436e09928e1d07070d4b2350ec44ac5badec46bd0e61b786"
+          }
+        ],
+        "coverageNote": "Interosseous membrane surface; individual bundles and insertions are not separately segmented. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "leg",
+      "topics": [
+        "ct",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    }
+  ],
+  "previousCatalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "previousAllTopicsHash": "cb1edb40c7b6cf7ea4a4ec555bce40539f99f2e8c093ff360b5fd85a7675b12d"
+}

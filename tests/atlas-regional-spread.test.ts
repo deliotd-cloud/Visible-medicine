@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 import {regionalSpreadMilestoneBytes,withoutLumbarSacralNotice} from './atlas-lumbar-sacral-history.ts';
 
-const revision='6c156e8b4cead4a24cc19ea2cc5a53e77ba8e06e';
+const revision='24e82d38d226eac294ffa5f3a922448f4904cec0';
 const baseline='167c77f4da6ec16455093008dcacea250b0a6678';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6});
@@ -14,14 +14,14 @@ const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
 
 test('bounded regional Spread reaches learner and protected review without model, licence or access changes',async()=>{
  const review=json('atlas-review/manifest.json'),prior=JSON.parse(old('atlas-review/manifest.json').toString());
- assert.equal(review.revision,revision);assert.equal(review.files.length,966);assert.deepEqual(review.packages,prior.packages);
+ assert.equal(review.revision,revision);assert.equal(review.files.length,969);assert.deepEqual(review.packages,prior.packages);
  // Preserve the exact Spread epoch; the lumbar regression proves the later delta.
  const spreadEpoch=JSON.parse(regionalSpreadMilestoneBytes('atlas-review/manifest.json').toString());
  assert.deepEqual(spreadEpoch.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path),['lib/body-spread.ts']);
  assert.deepEqual(spreadEpoch.files.filter((f:any)=>prior.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),['app/body-explorer.tsx','app/body-scene.tsx','content/body-renderer-revision.json']);
  for(const f of review.files)assert.equal(sha(readFileSync('atlas-review/'+f.path)),f.importedSha256,f.path);
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,JSON.parse(old('lib/atlas-model-inventory.json').toString()).models);
- for(const [name,count,added] of [['head-neck',939,true],['shoulder',619,false],['lower-limb',100,true]] as const){
+ for(const [name,count,added] of [['head-neck',942,true],['shoulder',622,false],['lower-limb',100,true]] as const){
   const base='public/atlas-runtime/'+name+'/',manifest=json(base+'manifest.json'),previous=JSON.parse(old(base+'manifest.json').toString()),inputs=json(base+'source-inputs.json');
   assert.equal(manifest.sourceCommit,revision);assert.equal(inputs.length,count);assert.equal(inputs.some((f:any)=>f.path==='lib/body-spread.ts'),added);
   assert.deepEqual(manifest.files.filter((f:any)=>f.path.startsWith('models/')),previous.files.filter((f:any)=>f.path.startsWith('models/')));

@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "6c156e8b4cead4a24cc19ea2cc5a53e77ba8e06e",
-  "sha256": "aa7c053961f0e4d80115995622a33415c457e302402c59210bbcbfeb24f1fcbf",
+  "sourceCommit": "24e82d38d226eac294ffa5f3a922448f4904cec0",
+  "sha256": "8ddfee47285e425f2d4b9a26aae175711d317812d6d0e1e60baca235ad8a493d",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "5d92aa258721f1d7e2ee330281e59a573e93cb403526f4feab8d632a9b00b385"
+      "sha256": "82a62afc3bbed7b036a70bc5c507ed3d05781c53c4bb46ab1d41863572f53bca"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -728,7 +728,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "30bac250a0dfc5578ec5dc182b8edef460f93de5ca871450d348640b362694e4"
+      "sha256": "8cabc4a46a4aa22c3dd122121983bd45dc4eb890ef364a02c547ea06e748856b"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -1221,6 +1221,14 @@
     {
       "path": "atlas-review/content/infrahyoid-layer-study.ts",
       "sha256": "fc769248ed0ebe18572288b09793ebc37810d959ab333cde18a58e1f38d10e02"
+    },
+    {
+      "path": "atlas-review/content/interosseous-membrane-projection-pins.json",
+      "sha256": "5fdd0c113bde7bbdc8790dd273ea98b0732f730750a370cd2c4cefca15a61ff2"
+    },
+    {
+      "path": "atlas-review/content/interosseous-membrane-projection.ts",
+      "sha256": "49197fb8f8f5bd7a09e1160911fc14f2e6897d2e2347b3fad77b2b75571da593"
     },
     {
       "path": "atlas-review/content/lacrimal-drainage-imaging-pins.json",
@@ -2779,6 +2787,10 @@
       "sha256": "9034b6b6447248feb1b64374f403539b9572c01dd2db68574dd66fafcfd795e7"
     },
     {
+      "path": "atlas-review/lib/interosseous-membrane-projection.ts",
+      "sha256": "545efae99a2109c210fd91532898de94178719f8467e61d90462a0b573b085f8"
+    },
+    {
       "path": "atlas-review/lib/intestinal-junction.ts",
       "sha256": "df13b2bdd0ebdea8b0afece440d9171158afade01ec0e1577b012f83b55637ff"
     },
@@ -3948,7 +3960,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "9e195f40e0517c0752ee47d5b4494091e75d95494d70717ac4b0aa74710e02a1"
+      "sha256": "2b667a55e86843b2b11eee901316f16a5ac91666f11f42f16de4bb1fdd7fe760"
     }
   ]
 }
