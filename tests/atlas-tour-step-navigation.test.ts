@@ -8,7 +8,7 @@ test('both website tour players deliver the same pause-safe step picker without 
  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
  for(const module of ['head-neck','shoulder']){
   const base='public/atlas-runtime/'+module+'/',manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-  assert.equal(manifest.sourceCommit,'ab3e884bd28c9d112bfd7300d429891a3c1d1d36');
+  assert.equal(manifest.sourceCommit,'acd99b11e279a0525f1488456c0a8adf2abb2cf7');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
   for(const path of ['app/tour-step-picker.tsx','app/tour-step-picker.css']){
    const file=review.files.find((f:any)=>f.path===path);assert.ok(file);

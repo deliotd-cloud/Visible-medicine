@@ -7,7 +7,7 @@ import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {withoutPelvicRingNotice} from './atlas-pelvic-notice-history.ts';
 import {desktopLayoutImportMilestone,desktopLayoutMilestoneBytes} from './atlas-cubital-ultrasound-history.ts';
-const source='ab3e884bd28c9d112bfd7300d429891a3c1d1d36',before='443896f4f141266c4579fb4e1001c0097bb25479';
+const source='acd99b11e279a0525f1488456c0a8adf2abb2cf7',before='443896f4f141266c4579fb4e1001c0097bb25479';
 const prior=(path:string)=>execFileSync('git',['show',before+':'+path],{maxBuffer:32e6});
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
@@ -27,7 +27,7 @@ async function load(previous=false){
 
 test('complete pelvic-ring tour and notices reach learners and protected review with original models',async()=>{
  const api=await load(),tour=api.pelvicRingTour,review=json('atlas-review/manifest.json');
- assert.equal(review.revision,source);assert.equal(review.files.length,953);
+ assert.equal(review.revision,source);assert.equal(review.files.length,954);
  const old=jsonFrom(prior('atlas-review/manifest.json'));
  assert.deepEqual(review.packages,old.packages);
  const milestone=desktopLayoutImportMilestone();
@@ -57,9 +57,9 @@ test('complete pelvic-ring tour and notices reach learners and protected review 
  assert.equal(tour.status,'draft');assert.equal(tour.steps.length,6);
  assert.equal(new Set(tour.steps.map((s:any)=>s.id)).size,6);
  assert.equal(new Set(tour.steps.map((s:any)=>s.selectedId)).size,5);
- assert.equal(api.regionalTours.length,24);assert.equal(api.regionalTours.reduce((n:number,t:any)=>n+t.steps.length,0),136);
+ assert.equal(api.regionalTours.length,25);assert.equal(api.regionalTours.reduce((n:number,t:any)=>n+t.steps.length,0),146);
  assert.equal(api.regionalToursFor('pelvis').length,3);
- const oldApi=await load(true);assert.deepEqual(api.regionalTours.filter((t:any)=>t.id!==tour.id),oldApi.regionalTours);
+ const oldApi=await load(true);assert.deepEqual(api.regionalTours.filter((t:any)=>t.id!==tour.id&&t.id!==api.circleWillisTour.id),oldApi.regionalTours);
  assert.equal(api.regionalTourFor('pelvis').id,oldApi.regionalTourFor('pelvis').id);
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,jsonFrom(prior('lib/atlas-model-inventory.json')).models);
 });
@@ -74,7 +74,7 @@ test('five pelvic teaching revisions change, source pins stay exact and stale or
  const storage=new Proxy({},{get(){throw Error('Stale request reached storage');}});let stale=0,altered=0;
  assert.equal(api.catalog.structures.length,1104);
  for(const s of api.catalog.structures)
-  assert.deepEqual(api.regionalTourEvidence(api.catalog,s.id).filter((e:any)=>e.tour.id!==tour.id),previous.regionalTourEvidence(previous.catalog,s.id));
+  assert.deepEqual(api.regionalTourEvidence(api.catalog,s.id).filter((e:any)=>e.tour.id!==tour.id&&e.tour.id!==api.circleWillisTour.id),previous.regionalTourEvidence(previous.catalog,s.id));
  const bounds=ids.map(id=>api.catalog.structures.find((s:any)=>s.id===id).bounds);
  assert.deepEqual(api.regionalTourFrame(api.catalog,tour),{min:[0,1,2].map(a=>Math.min(...bounds.map(b=>b.min[a]))),max:[0,1,2].map(a=>Math.max(...bounds.map(b=>b.max[a])))});
  for(const id of ids){

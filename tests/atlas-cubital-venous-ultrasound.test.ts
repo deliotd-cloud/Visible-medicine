@@ -5,8 +5,9 @@ import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {dirname} from 'node:path';
 import {build} from 'esbuild';
+import {withoutCircleWillisNotice} from './atlas-circle-willis-history.ts';
 
-const source='ab3e884bd28c9d112bfd7300d429891a3c1d1d36';
+const source='acd99b11e279a0525f1488456c0a8adf2abb2cf7';
 const beforeWebsite='4aa346e7923e3b303ad869d71e0ea36044d61aa6';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
@@ -26,7 +27,7 @@ async function reviewApi(previous=false,cubitalMilestone=false){
 
 test('four exact superficial veins deliver original ultrasound orientation to learner and protected review without new models or access',async()=>{
  const review=json('atlas-review/manifest.json'),priorReview=JSON.parse(old('atlas-review/manifest.json').toString('utf8'));
- assert.equal(review.revision,source);assert.equal(review.files.length,953);assert.deepEqual(review.packages,priorReview.packages);
+ assert.equal(review.revision,source);assert.equal(review.files.length,954);assert.deepEqual(review.packages,priorReview.packages);
  // Keep this editorial delta at its saved epoch; current Spread delta is tested separately.
  const cubitalMilestone=JSON.parse(execFileSync('git',['show','167c77f4da6ec16455093008dcacea250b0a6678:atlas-review/manifest.json'],{encoding:'utf8',maxBuffer:32e6}));
  assert.equal(cubitalMilestone.files.length,946);
@@ -36,7 +37,7 @@ test('four exact superficial veins deliver original ultrasound orientation to le
  assert.deepEqual(new Set(catalog.structures.map((s:any)=>s.fmaId)),targetFmas);
  assert.deepEqual(catalog.structures.map((s:any)=>s.sources[0].file),['FJ2287','FJ2235','FJ2286','FJ2234']);
  const learner=json('public/atlas-runtime/head-neck/manifest.json'),inputs=json('public/atlas-runtime/head-neck/source-inputs.json');
- assert.equal(learner.sourceCommit,source);assert.equal(inputs.length,926);
+ assert.equal(learner.sourceCommit,source);assert.equal(inputs.length,927);
  const text=learner.files.filter((f:any)=>f.path.endsWith('.js')).map((f:any)=>{const b=readFileSync('public/atlas-runtime/head-neck/'+f.path);assert.equal(sha(b),f.sha256);return new TextDecoder().decode(b);}).join('\n');
  for(const p of ['content/cubital-venous-ultrasound.ts','lib/cubital-venous-ultrasound.ts'])assert(inputs.some((i:any)=>i.path===p));
  for(const s of catalog.structures){const packet=await api.bodyReviewMaterial(s.id);assert(packet);assert.equal(packet.approval,false);assert.deepEqual(packet.source.structure,s);
@@ -49,7 +50,7 @@ test('four exact superficial veins deliver original ultrasound orientation to le
  for(const name of ['head-neck','shoulder','lower-limb']){const now=json('public/atlas-runtime/'+name+'/manifest.json'),prior=JSON.parse(old('public/atlas-runtime/'+name+'/manifest.json').toString('utf8'));
   assert.equal(now.sourceCommit,source);assert.deepEqual(now.files.filter((f:any)=>f.path.startsWith('models/')),prior.files.filter((f:any)=>f.path.startsWith('models/')));
   for(const flag of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection','imagingConnection'])assert.deepEqual(now[flag],prior[flag]);
-  const notice=readFileSync('public/atlas-runtime/'+name+'/LICENSES/THIRD_PARTY_NOTICES.md','utf8').replaceAll('\r',''),oldNotice=old('public/atlas-runtime/'+name+'/LICENSES/THIRD_PARTY_NOTICES.md').toString('utf8').replaceAll('\r','');
+  const notice=withoutCircleWillisNotice(readFileSync('public/atlas-runtime/'+name+'/LICENSES/THIRD_PARTY_NOTICES.md','utf8').replaceAll('\r','')),oldNotice=old('public/atlas-runtime/'+name+'/LICENSES/THIRD_PARTY_NOTICES.md').toString('utf8').replaceAll('\r','');
   assert(notice.startsWith(oldNotice));assert.match(notice.slice(oldNotice.length),/Superficial forearm venous ultrasound orientation/);
   assert.deepEqual(readFileSync('public/atlas-runtime/'+name+'/bundled-dependencies.json'),old('public/atlas-runtime/'+name+'/bundled-dependencies.json'));
  }

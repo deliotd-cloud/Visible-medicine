@@ -5,7 +5,8 @@ import {createHash} from 'node:crypto';
 import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {lumbarSacralMilestoneBytes,withoutWristUltrasoundNotice} from './atlas-wrist-ultrasound-history.ts';
-const revision='ab3e884bd28c9d112bfd7300d429891a3c1d1d36';
+import {wristUltrasoundMilestoneBytes} from './atlas-circle-willis-history.ts';
+const revision='acd99b11e279a0525f1488456c0a8adf2abb2cf7';
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
 async function api(previous=false){
@@ -23,8 +24,9 @@ async function api(previous=false){
 
 test('eight exact wrist Ultrasound drafts reach lazy learner teaching and protected unsigned review',async()=>{
  const review=json('atlas-review/manifest.json'),prior=JSON.parse(lumbarSacralMilestoneBytes('atlas-review/manifest.json').toString());
- assert.equal(review.revision,revision);assert.equal(review.files.length,953);assert.deepEqual(review.packages,prior.packages);
- assert.deepEqual(review.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),['content/wrist-ultrasound-pins.json','content/wrist-ultrasound.ts','lib/wrist-ultrasound.ts']);
+ assert.equal(review.revision,revision);assert.equal(review.files.length,954);assert.deepEqual(review.packages,prior.packages);
+ const wristDelivery=JSON.parse(wristUltrasoundMilestoneBytes('atlas-review/manifest.json').toString());
+ assert.deepEqual(wristDelivery.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),['content/wrist-ultrasound-pins.json','content/wrist-ultrasound.ts','lib/wrist-ultrasound.ts']);
  for(const file of review.files)assert.equal(sha(readFileSync('atlas-review/'+file.path)),file.importedSha256,file.path);
  const pins=json('atlas-review/content/wrist-ultrasound-pins.json');assert.equal(pins.parentCommit,'ac88a3c72de1e69971321e00a883e4b88fc356ce');assert.equal(pins.entries.length,8);
  assert.deepEqual(pins.entries.map((e:any)=>e.identity.fmaId),['FMA24436','FMA24435','FMA24438','FMA24437','FMA24442','FMA24441','FMA24449','FMA24448']);
@@ -46,13 +48,13 @@ test('eight exact wrist Ultrasound drafts reach lazy learner teaching and protec
   const context=await now.bodyReviewContext(entry.identity.id);assert(context.teachingTabs.includes('ultrasound'));assert.equal(context.revisions.imaging,null);assert(context.blockers.imaging.length);
   assert.equal(now.wristUltrasoundLesson({...entry.identity,nodeName:'foreign'},'ultrasound'),undefined);
  }
- const oldPins=JSON.parse(lumbarSacralMilestoneBytes('atlas-review/content/body-review-display-pins.json').toString()),newPins=json('atlas-review/content/body-review-display-pins.json');
+ const oldPins=JSON.parse(lumbarSacralMilestoneBytes('atlas-review/content/body-review-display-pins.json').toString()),newPins=JSON.parse(wristUltrasoundMilestoneBytes('atlas-review/content/body-review-display-pins.json').toString());
  const oldMap=new Map(oldPins.pins.map((p:any)=>[p.structureId,p.sha256]));assert.equal(newPins.pins.length,oldPins.pins.length);
  assert.deepEqual(newPins.pins.filter((p:any)=>p.sha256!==oldMap.get(p.structureId)).map((p:any)=>p.structureId).sort(),pins.entries.map((e:any)=>e.identity.id).sort());
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,JSON.parse(lumbarSacralMilestoneBytes('lib/atlas-model-inventory.json').toString()).models);
  for(const name of ['head-neck','shoulder','lower-limb']){
   const base='public/atlas-runtime/'+name+'/',manifest=json(base+'manifest.json'),old=JSON.parse(lumbarSacralMilestoneBytes(base+'manifest.json').toString());
-  assert.equal(manifest.sourceCommit,revision);assert.equal(json(base+'source-inputs.json').length,({'head-neck':926,shoulder:613,'lower-limb':100} as Record<string,number>)[name]);
+  assert.equal(manifest.sourceCommit,revision);assert.equal(json(base+'source-inputs.json').length,({'head-neck':927,shoulder:613,'lower-limb':100} as Record<string,number>)[name]);
   assert.deepEqual(manifest.files.filter((f:any)=>f.path.startsWith('models/')),old.files.filter((f:any)=>f.path.startsWith('models/')));
   for(const flag of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection','imagingConnection'])assert.deepEqual(manifest[flag],old[flag]);
   assert.equal(withoutWristUltrasoundNotice(readFileSync(base+'LICENSES/THIRD_PARTY_NOTICES.md','utf8')),lumbarSacralMilestoneBytes(base+'LICENSES/THIRD_PARTY_NOTICES.md').toString());

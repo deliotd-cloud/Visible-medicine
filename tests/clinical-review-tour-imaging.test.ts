@@ -6,11 +6,11 @@ import {build} from 'esbuild';
 
 test('guided imaging notes reach both learners and review without inventing scan access',async()=>{
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
-  assert.equal(review.revision,'ab3e884bd28c9d112bfd7300d429891a3c1d1d36');
+  assert.equal(review.revision,'acd99b11e279a0525f1488456c0a8adf2abb2cf7');
   for(const module of ['head-neck','shoulder']){
     const base=`public/atlas-runtime/${module}/`;
     const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-    assert.equal(learner.sourceCommit,'ab3e884bd28c9d112bfd7300d429891a3c1d1d36');
+    assert.equal(learner.sourceCommit,'acd99b11e279a0525f1488456c0a8adf2abb2cf7');
     const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
     for(const path of ['app/tour-imaging-notes.tsx','app/tour-imaging-notes.css']){
       const f=review.files.find((f:any)=>f.path===path);assert.ok(f,path);
@@ -24,7 +24,7 @@ test('guided imaging notes reach both learners and review without inventing scan
   const result=await build({stdin:{contents:`
     export {structures} from './atlas-review/app/anatomy-data';
     export {shoulderTour} from './atlas-review/lib/shoulder-tours';
-    export {regionalTours,regionalTourStructures} from './atlas-review/lib/regional-tours';
+    export {regionalTours,regionalTourStructures,circleWillisTour} from './atlas-review/lib/regional-tours';
     export {bodyLesson} from './atlas-review/app/body-content';
     export {bodyReviewMaterial} from './atlas-review/lib/body-review-material';
     import raw from './atlas-review/public/models/bodyparts3d/full-body/catalog.json';
@@ -47,7 +47,9 @@ test('guided imaging notes reach both learners and review without inventing scan
     const structure=api.structures.find((s:any)=>s.id===step.selectedId);
     for(const tab of ['ct','mri','xray','ultrasound']){assert.ok(structure.sections[tab]?.body);checked++;}
   }
-  assert.equal(checked,564); // 136 regional stops plus five shoulder stops, four modalities each.
+  assert.equal(api.circleWillisTour.steps.length,10);
+  assert.equal(checked,604); // 146 regional stops plus five shoulder stops, four modalities each.
+  assert.equal(checked-api.circleWillisTour.steps.length*4,564,'Prior 136 regional/five shoulder stops retained');
   const notes=readFileSync('atlas-review/app/tour-imaging-notes.tsx','utf8');
   assert.ok(notes.includes('paid lectures require their own access'));
   assert.ok(notes.includes('if(event.currentTarget.open)onOpen()'));

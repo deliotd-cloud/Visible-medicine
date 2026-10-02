@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
+import {withoutCircleWillisNotice} from './atlas-circle-willis-history.ts';
 
 /** Exact saved lumbar teaching epoch; wrist Ultrasound is tested separately. */
 export function lumbarSacralMilestoneBytes(path:string){
@@ -11,6 +12,7 @@ export function lumbarSacralMilestoneBytes(path:string){
 /** Remove only the exact pinned append, including before protected dependency
  * suffixes. No shipped notice is modified by this test-only helper. */
 export function withoutWristUltrasoundNotice(text:string):string{
+ text=withoutCircleWillisNotice(text);
  const marker='\n## Wrist ultrasound orientation — 2 October 2026\n';
  const start=text.indexOf(marker);if(start<0)return text;
  assert.equal(text.indexOf(marker,start+marker.length),-1,'Duplicate wrist Ultrasound notice');

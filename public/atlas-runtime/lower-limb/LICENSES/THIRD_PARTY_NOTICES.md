@@ -1,5 +1,18 @@
 # Third-party notices
 
+## Circle of Willis guided orientation (2 October 2026)
+
+Ten original draft captions refer to UTHealth Neuroanatomy Online, Lab 4,
+[internal carotid system](https://nba.uth.tmc.edu/neuroanatomy/l4/Lab04p06_index.html)
+and [vertebrobasilar system](https://nba.uth.tmc.edu/neuroanatomy/l4/Lab04p07_index.html),
+plus ACR/RSNA [CTA](https://www.radiologyinfo.org/en/info/angioct) and
+[MRA](https://www.radiologyinfo.org/en/info/angiomr) information. Factual references
+only: no illustration, scan, publisher prose, table or dataset redistributed.
+Original authored text/code retain project MIT terms; existing BodyParts3D
+surfaces retain CC BY 4.0 notices. No new mesh, dependency, font, texture, paid
+service or mandatory future product fee. Anatomy, imaging and clinical approval
+remain separate and pending.
+
 ## Eye cross-sectional teaching (1 October 2026)
 
 Twelve original introductory draft notes adapt normal anatomical/MR facts from:

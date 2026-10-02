@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 
 test('right upper-limb learner and Clinical Review preserve assembled source and revision-bound evidence',async()=>{
-  const source='ab3e884bd28c9d112bfd7300d429891a3c1d1d36';
+  const source='acd99b11e279a0525f1488456c0a8adf2abb2cf7';
   const baseline='8357c39cfacc14dc391be2c470fab14f661e1855';
   const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
   const saved=(path:string)=>execFileSync('git',['show',`${baseline}:${path}`],{maxBuffer:8e6});
@@ -80,12 +80,12 @@ test('right upper-limb learner and Clinical Review preserve assembled source and
   assert.match(tour.limitations,/articular disc is unrendered/);
   assert.match(tour.limitations,/revision-bound radiologist review/);
   assert.deepEqual(api.regionalToursFor('whole-body').map((entry:any)=>entry.id),[api.lowerLimbBoneTour.id,tour.id]);
-  const historical=api.regionalTours.filter((entry:any)=>entry.id!==api.pelvicRingTour.id);
+  const historical=api.regionalTours.filter((entry:any)=>entry.id!==api.pelvicRingTour.id&&entry.id!==api.circleWillisTour.id);
   assert.equal(historical.length,23);
   assert.equal(historical.reduce((sum:number,entry:any)=>sum+entry.steps.length,0),130);
   assert.deepEqual(historical.filter((entry:any)=>entry.id!==tour.id),old.regionalTours,'all 22 preceding tours remain exact');
   for(const structure of api.catalog.structures)
-    assert.deepEqual(api.regionalTourEvidence(api.catalog,structure.id).filter((item:any)=>item.tour.id!==tour.id&&item.tour.id!==api.pelvicRingTour.id),old.regionalTourEvidence(api.catalog,structure.id),`historical evidence for ${structure.id}`);
+    assert.deepEqual(api.regionalTourEvidence(api.catalog,structure.id).filter((item:any)=>item.tour.id!==tour.id&&item.tour.id!==api.pelvicRingTour.id&&item.tour.id!==api.circleWillisTour.id),old.regionalTourEvidence(api.catalog,structure.id),`historical evidence for ${structure.id}`);
 
   const selected=api.regionalTourStructures(api.catalog,tour);
   assert.deepEqual(selected.map((structure:any)=>[structure.id,structure.fmaId,structure.regions,structure.bundle]),[...contextStructures,...sourceStructures]);
