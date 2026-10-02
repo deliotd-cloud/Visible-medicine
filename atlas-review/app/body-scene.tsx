@@ -15,6 +15,7 @@ import { Line, useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 import { FittedCamera } from './fitted-camera';
 import { translatedBox } from '@/atlas-review/lib/explode-layout.mjs';
+import { bodySpreadOffset, bodySpreadScale } from '@/atlas-review/lib/body-spread';
 import {
   arrangeBodyStructures,
   bodyPresentationOffset,
@@ -67,6 +68,8 @@ type Props = {
   landmarks: string[];
   explode: number;
   layout: BodyLayout;
+  /** Root-body display only; independent specimens retain their own layouts. */
+  adaptiveSpread?: boolean;
   anchorSkeleton: boolean;
   showOrigins: boolean;
   /** Default preserves the regional viewer's existing whole-model wireframes. */
@@ -397,19 +400,34 @@ export function BodyScene(props: Props) {
           : undefined,
     [layout, rendered, center, props.view, props.hiddenIds, props.selectedId],
   );
+  // Full source-scope proportions, never the visible pool or camera orientation.
+  // Thin regional frames need greater transverse separation, without stretching
+  // anatomy or causing structures to jump when another entry is hidden.
+  const spreadScale = useMemo(
+    () => props.adaptiveSpread ? bodySpreadScale(frame) : new THREE.Vector3(1, 1, 1),
+    [props.adaptiveSpread, frame],
+  );
   const offsets = useMemo(
     () =>
       new Map(
         rendered.map((item) => [
           item.id,
-          bodyPresentationOffset(
-            item,
-            center,
-            props.exam ? (practiceTray ? 100 : 0) : props.explode,
-            layout,
-            props.anchorSkeleton,
-            tray,
-          ),
+          layout === 'spatial' && props.adaptiveSpread
+            ? bodySpreadOffset(
+                item.center,
+                center,
+                props.exam ? 0 : props.explode,
+                props.anchorSkeleton && item.system === 'skeleton',
+                spreadScale,
+              )
+            : bodyPresentationOffset(
+                item,
+                center,
+                props.exam ? (practiceTray ? 100 : 0) : props.explode,
+                layout,
+                props.anchorSkeleton,
+                tray,
+              ),
         ]),
       ),
     [
@@ -421,6 +439,8 @@ export function BodyScene(props: Props) {
       layout,
       props.anchorSkeleton,
       tray,
+      props.adaptiveSpread,
+      spreadScale,
     ],
   );
   const originGuide = useMemo(

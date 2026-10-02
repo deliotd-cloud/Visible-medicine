@@ -7,11 +7,11 @@ test('practice return ships its exact tested source and retains private-source b
  const base='public/atlas-runtime/head-neck/';
  const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
  const bytes=readFileSync(base+'manifest.json'), manifest=JSON.parse(bytes.toString());
- assert.equal(sha(bytes),'f1889b66a09938de12fcd10c1f5c9797b6462ccf5e33537338db01eff4bc3b98');
- assert.equal(manifest.sourceCommit,'fa7dcf45efbad1dc908b02e6c699dcb02e6b3c06');
+ assert.equal(sha(bytes),'e16dca348e21b8afeba9b13cb8d377e407fadd8a1f73fae712159a4ad1886294');
+ assert.equal(manifest.sourceCommit,'e3849b6a31eac0ae8e556d753d4fe86e5e19c90a');
  const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
  assert.deepEqual(inputs.filter(i=>i.path==='app/body-explorer.tsx'),[{
-  path:'app/body-explorer.tsx',sha256:'d6e7ebbe87a4325a84d3a0241b788edcf23e6dae7ec6e3c3f6c15875abf6ad57',
+  path:'app/body-explorer.tsx',sha256:'af2304091172896d7ba7f3c9eb57303cb0bffcc2b1ff5ad93b98e3ac56428984',
  }]);
  const files=manifest.files as {path:string;sha256:string}[];
  const chunks=files.filter(f=>/\/index-[^/]+\.js$/.test(f.path));assert.equal(chunks.length,1);

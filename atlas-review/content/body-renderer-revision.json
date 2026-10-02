@@ -78,11 +78,11 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "d6e7ebbe87a4325a84d3a0241b788edcf23e6dae7ec6e3c3f6c15875abf6ad57"
+      "sha256": "af2304091172896d7ba7f3c9eb57303cb0bffcc2b1ff5ad93b98e3ac56428984"
     },
     {
       "path": "app/body-scene.tsx",
-      "sha256": "2876f4674b4f1fedabdcb6f6aaef8f0085dfd9deb8e1c3bc8d68705931cecf7e"
+      "sha256": "8954f1e055dbf5eac684a14081ad5689c8a197fef4620dadaf6bebfe5c62d318"
     },
     {
       "path": "app/body-selection-notice.tsx",
@@ -1937,6 +1937,10 @@
       "sha256": "3e19f6a5c2bc36facfea90dd886cb0cb0447ef47cae5eb0c5b951ebcca095948"
     },
     {
+      "path": "lib/body-spread.ts",
+      "sha256": "fa9ae81d0e9521aba044e54708ccc532b7347585f74be04e6cded6cb2572131a"
+    },
+    {
       "path": "lib/body-system-presets.ts",
       "sha256": "67b34405e32541d49c85ad931cc818d5a1d9ab923b317f91e83d9a0fb6fbe285"
     },
@@ -3334,7 +3338,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "c4c0b08cbe4b0f1dbfdb27d147baa9646e3a6ce6ea9e3877f3b65c5b0fdcc297"
+      "sha256": "301a6d070e7b3ca538c14a0851955caa7f1164b88d8be1cc8c0641865fe4d6b1"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3549,7 +3553,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "5bbc85eef4a1c0cd3848066cd198d7be6afb16a5ab5f3f872e21e8e06384b42d",
-  "sourceRendererSha256": "dc4760930d1dd3e869e205c9c53df49f3f10071978cc5aac22a2a4f066627ef5",
-  "websiteIntegrationSha256": "9cc8acf9566195de3801c50b68b8b9bdbbdbf0a7c28244ebbc36d25fe56eb571"
+  "sha256": "f6b882a54630cf471744617377cdab1f78b1f7d9bbefea5c666c3f13f56ba458",
+  "sourceRendererSha256": "1494fa696bb5f5005ce4a003efe5b7dd5ad31d49dcf0b281b641484e2753b8bb",
+  "websiteIntegrationSha256": "320b85c9055f5c705a69124a259aa9bd37c58936b2bedb14b78e2628a869609a"
 }

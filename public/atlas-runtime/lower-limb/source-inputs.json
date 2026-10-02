@@ -13,7 +13,7 @@
   },
   {
     "path": "app/body-scene.tsx",
-    "sha256": "2876f4674b4f1fedabdcb6f6aaef8f0085dfd9deb8e1c3bc8d68705931cecf7e"
+    "sha256": "8954f1e055dbf5eac684a14081ad5689c8a197fef4620dadaf6bebfe5c62d318"
   },
   {
     "path": "app/body-types.ts",
@@ -222,6 +222,10 @@
   {
     "path": "lib/body-bundle-geometry.ts",
     "sha256": "89bae02ed7b8850982c111e9415f08266770c8e17f0ce9daa4b39f6b2a431c73"
+  },
+  {
+    "path": "lib/body-spread.ts",
+    "sha256": "fa9ae81d0e9521aba044e54708ccc532b7347585f74be04e6cded6cb2572131a"
   },
   {
     "path": "lib/camera-keyboard.ts",

@@ -6,10 +6,10 @@ import test from 'node:test';
 test('regional runtime binds the verified camera-resize and reassembly fixes',()=>{
   const base='public/atlas-runtime/head-neck/';
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-  assert.equal(manifest.sourceCommit,'fa7dcf45efbad1dc908b02e6c699dcb02e6b3c06');
+  assert.equal(manifest.sourceCommit,'e3849b6a31eac0ae8e556d753d4fe86e5e19c90a');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of [
-    ['app/body-explorer.tsx','d6e7ebbe87a4325a84d3a0241b788edcf23e6dae7ec6e3c3f6c15875abf6ad57'],
+    ['app/body-explorer.tsx','af2304091172896d7ba7f3c9eb57303cb0bffcc2b1ff5ad93b98e3ac56428984'],
     ['app/fitted-camera.tsx','cad2aa9543c94c2d751a1593cda90e2db4c84a2b639d6d380b131a74ea0f09f9'],
   ]) assert.deepEqual(inputs.filter(i=>i.path===path),[{path,sha256}]);
   const runtime=(manifest.files as {path:string;sha256:string}[]).filter(f=>f.path.endsWith('.js')).map(f=>{

@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "fa7dcf45efbad1dc908b02e6c699dcb02e6b3c06",
-  "sha256": "9cc8acf9566195de3801c50b68b8b9bdbbdbf0a7c28244ebbc36d25fe56eb571",
+  "sourceCommit": "e3849b6a31eac0ae8e556d753d4fe86e5e19c90a",
+  "sha256": "320b85c9055f5c705a69124a259aa9bd37c58936b2bedb14b78e2628a869609a",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,11 +124,11 @@
     },
     {
       "path": "atlas-review/app/body-explorer.tsx",
-      "sha256": "6b72d163f6a06dc3f1e2bf2e65b33856f73319188b2c71e64854a5b5716baccd"
+      "sha256": "a4222472b227d98a08ae4fda33d736bd4781002c3f9c9968609e004bea587913"
     },
     {
       "path": "atlas-review/app/body-scene.tsx",
-      "sha256": "b424392cb9d339283af4746b9e094313679fdd324f57be4bdff46d03cc5a9b7d"
+      "sha256": "5769033cff9297d9cbaa399418f4b823ad7bd61386adc1f5bc8ac2d653995b1a"
     },
     {
       "path": "atlas-review/app/body-selection-notice.tsx",
@@ -2127,6 +2127,10 @@
       "sha256": "3e19f6a5c2bc36facfea90dd886cb0cb0447ef47cae5eb0c5b951ebcca095948"
     },
     {
+      "path": "atlas-review/lib/body-spread.ts",
+      "sha256": "fa9ae81d0e9521aba044e54708ccc532b7347585f74be04e6cded6cb2572131a"
+    },
+    {
       "path": "atlas-review/lib/body-system-presets.ts",
       "sha256": "67b34405e32541d49c85ad931cc818d5a1d9ab923b317f91e83d9a0fb6fbe285"
     },
@@ -3856,7 +3860,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "45379c31266bd281a713756d29037750c9807cc380e78261c444a9719f54e626"
+      "sha256": "d43e8681effeab33fb3aa543b503cb5aac8883b4321bf4ad38ed664a23257a8d"
     }
   ]
 }

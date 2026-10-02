@@ -93,11 +93,11 @@
   },
   {
     "path": "app/body-explorer.tsx",
-    "sha256": "d6e7ebbe87a4325a84d3a0241b788edcf23e6dae7ec6e3c3f6c15875abf6ad57"
+    "sha256": "af2304091172896d7ba7f3c9eb57303cb0bffcc2b1ff5ad93b98e3ac56428984"
   },
   {
     "path": "app/body-scene.tsx",
-    "sha256": "2876f4674b4f1fedabdcb6f6aaef8f0085dfd9deb8e1c3bc8d68705931cecf7e"
+    "sha256": "8954f1e055dbf5eac684a14081ad5689c8a197fef4620dadaf6bebfe5c62d318"
   },
   {
     "path": "app/body-selection-notice.tsx",
@@ -2030,6 +2030,10 @@
   {
     "path": "lib/body-source-additions.ts",
     "sha256": "3e19f6a5c2bc36facfea90dd886cb0cb0447ef47cae5eb0c5b951ebcca095948"
+  },
+  {
+    "path": "lib/body-spread.ts",
+    "sha256": "fa9ae81d0e9521aba044e54708ccc532b7347585f74be04e6cded6cb2572131a"
   },
   {
     "path": "lib/body-system-presets.ts",

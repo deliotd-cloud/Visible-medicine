@@ -6,12 +6,12 @@ import test from 'node:test';
 test('regional export includes tested removal focus, contextual Undo and panel-only reveal',()=>{
   const base='public/atlas-runtime/head-neck/';
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-  assert.equal(manifest.sourceCommit,'fa7dcf45efbad1dc908b02e6c699dcb02e6b3c06');
+  assert.equal(manifest.sourceCommit,'e3849b6a31eac0ae8e556d753d4fe86e5e19c90a');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({
     'app/body-selection-notice.tsx':'585313543be9121cb073f3cb0cb0259f3c9da703b555b77ae5ddf12c706b21aa',
     'lib/contextual-dissection-undo.ts':'628154c5b1ef24e0a1a8f69544fbfeefbd84ab5b950955515a0ca6886d4e93ef',
-    'app/body-explorer.tsx':'d6e7ebbe87a4325a84d3a0241b788edcf23e6dae7ec6e3c3f6c15875abf6ad57',
+    'app/body-explorer.tsx':'af2304091172896d7ba7f3c9eb57303cb0bffcc2b1ff5ad93b98e3ac56428984',
     'app/body-explorer.css':'315a5cbfeac80620e6f805b82d409a293acdf07869333438b6eb74dbbb3a826f',
   }))assert.deepEqual(inputs.filter(input=>input.path===path),[{path,sha256}]);
   const runtime=(manifest.files as {path:string;sha256:string}[]).filter(file=>file.path.endsWith('.js')).map(file=>{

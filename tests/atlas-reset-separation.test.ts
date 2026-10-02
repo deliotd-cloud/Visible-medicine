@@ -7,10 +7,10 @@ test('learner and review deliver Reset separation correction without restoring r
   const review = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
   const learner = JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8'));
   const inputs = JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json', 'utf8'));
-  assert.equal(review.revision, 'fa7dcf45efbad1dc908b02e6c699dcb02e6b3c06');
-  assert.equal(learner.sourceCommit,'fa7dcf45efbad1dc908b02e6c699dcb02e6b3c06');
+  assert.equal(review.revision, 'e3849b6a31eac0ae8e556d753d4fe86e5e19c90a');
+  assert.equal(learner.sourceCommit,'e3849b6a31eac0ae8e556d753d4fe86e5e19c90a');
   const entry = review.files.find((f: any) => f.path === 'app/body-explorer.tsx');
-  assert.equal(entry.sourceSha256, 'd6e7ebbe87a4325a84d3a0241b788edcf23e6dae7ec6e3c3f6c15875abf6ad57');
+  assert.equal(entry.sourceSha256, 'af2304091172896d7ba7f3c9eb57303cb0bffcc2b1ff5ad93b98e3ac56428984');
   assert.equal(inputs.find((f: any) => f.path === entry.path)?.sha256, entry.sourceSha256);
   const source = readFileSync('atlas-review/' + entry.path, 'utf8');
   assert.equal(createHash('sha256').update(source).digest('hex'), entry.importedSha256);

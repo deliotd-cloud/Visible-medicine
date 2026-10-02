@@ -1679,7 +1679,7 @@ export default function BodyExplorer({
                 ? 'Same-scale surfaces, grouped by system. At 100%, each catalogue entry has its own space—not an anatomical position.'
                 : layout === 'extract' && !exam
                   ? 'Only the selected structure moves. Others remain assembled. This is a teaching view, not a surgical extraction path.'
-                  : 'Source anatomy at 0% separation. Rotate freely or choose a standard direction.'}
+                  : 'Source anatomy at 0% separation. Spread adds more space across narrow regions; it is a teaching arrangement, not anatomical displacement.'}
             </p>
           </div>
           {!exam && (
@@ -1922,6 +1922,7 @@ export default function BodyExplorer({
                   explode={explode}
                   layout={exam ? 'spatial' : layout}
                   anchorSkeleton={anchorSkeleton}
+                  adaptiveSpread
                   showOrigins={showOrigins && !exam}
                   labels={labels && !exam}
                   view={view}

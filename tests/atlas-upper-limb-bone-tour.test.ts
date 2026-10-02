@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 
 test('right upper-limb learner and Clinical Review preserve assembled source and revision-bound evidence',async()=>{
-  const source='fa7dcf45efbad1dc908b02e6c699dcb02e6b3c06';
+  const source='e3849b6a31eac0ae8e556d753d4fe86e5e19c90a';
   const baseline='8357c39cfacc14dc391be2c470fab14f661e1855';
   const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
   const saved=(path:string)=>execFileSync('git',['show',`${baseline}:${path}`],{maxBuffer:8e6});
