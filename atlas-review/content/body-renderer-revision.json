@@ -1290,7 +1290,7 @@
     },
     {
       "path": "content/nested-teaching.ts",
-      "sha256": "8a369870a99320eaaa4589110ba0a75d12cc450c6740a245838aa10f156acc01"
+      "sha256": "415e77735aced6c54c46182c362682f26348c99317628548b4d80d1906d0691b"
     },
     {
       "path": "content/ophthalmic-nerve-studies.ts",
@@ -1363,6 +1363,14 @@
     {
       "path": "content/pica-clinical.ts",
       "sha256": "d3c74eb672d1f295dffc2379d8f399efe52de6164f7db9cb73fef167d6c21196"
+    },
+    {
+      "path": "content/pica-source-teaching-bindings.v1.json",
+      "sha256": "61f6a1c0b5287bb88c29a5f6ed62f73189446d2eb4346c5882340d262e68ad21"
+    },
+    {
+      "path": "content/pica-source-teaching.ts",
+      "sha256": "da20837b2bd25b25dd171ff19921dd12e57323c1ba85a0e5d54239171b476e80"
     },
     {
       "path": "content/plantar-arterial-ct-pins.json",
@@ -2794,7 +2802,7 @@
     },
     {
       "path": "lib/nested-teaching.ts",
-      "sha256": "676319cb796359b29427941865c1d42d673617238c7c20d05b12b090aa567c5b"
+      "sha256": "3fe0bbfd7078554e013c00e2e58c70aa96af34074540bf4e959b8269941a356f"
     },
     {
       "path": "lib/neural-anatomy-curriculum.ts",
@@ -3398,7 +3406,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "c19fe95427f5164996e819ddaf51ec701f116652071b7a9908622479c4209f3c"
+      "sha256": "197637a5f7b73e8e94589667d87be1f09a76bfaad902a19f393930c2a5c5f35b"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3613,7 +3621,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "31982358ad2cbf6d9794208184d7267b060461c9a057b654b80cb03a14482026",
-  "sourceRendererSha256": "2d6b3f5d072dcf22dc53d77fd0a3ac6b60c56cb9eeea9212634cddb79da9282c",
-  "websiteIntegrationSha256": "46e4c80329e98dffe18f4499868262a6159008d60e1d01c553eca717edaa8e53"
+  "sha256": "d7d289a1ec651aa40ec9e1c719f3163492793807a6acf186f468f77215b7cd32",
+  "sourceRendererSha256": "6f6ecca4c474997e5c3657ce15fa17d826566f25cfc041e5fb4d9abafe794e2c",
+  "websiteIntegrationSha256": "b177e6e1cba6a2731f0b84a6cec9a34651e2c0d0f053c782c99a1213b2918207"
 }

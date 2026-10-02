@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "55b0e548c6552de3ef6c4e8f432e71d60690e843",
-  "sha256": "46e4c80329e98dffe18f4499868262a6159008d60e1d01c553eca717edaa8e53",
+  "sourceCommit": "24d023f471d39d7d1e4660fb4f20264528bdd6fe",
+  "sha256": "b177e6e1cba6a2731f0b84a6cec9a34651e2c0d0f053c782c99a1213b2918207",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -1448,7 +1448,7 @@
     },
     {
       "path": "atlas-review/content/nested-teaching.ts",
-      "sha256": "8a369870a99320eaaa4589110ba0a75d12cc450c6740a245838aa10f156acc01"
+      "sha256": "415e77735aced6c54c46182c362682f26348c99317628548b4d80d1906d0691b"
     },
     {
       "path": "atlas-review/content/ophthalmic-nerve-studies.ts",
@@ -1521,6 +1521,14 @@
     {
       "path": "atlas-review/content/pica-clinical.ts",
       "sha256": "d3c74eb672d1f295dffc2379d8f399efe52de6164f7db9cb73fef167d6c21196"
+    },
+    {
+      "path": "atlas-review/content/pica-source-teaching-bindings.v1.json",
+      "sha256": "61f6a1c0b5287bb88c29a5f6ed62f73189446d2eb4346c5882340d262e68ad21"
+    },
+    {
+      "path": "atlas-review/content/pica-source-teaching.ts",
+      "sha256": "da20837b2bd25b25dd171ff19921dd12e57323c1ba85a0e5d54239171b476e80"
     },
     {
       "path": "atlas-review/content/plantar-arterial-ct-pins.json",
@@ -3024,7 +3032,7 @@
     },
     {
       "path": "atlas-review/lib/nested-review-material.ts",
-      "sha256": "54ae33d7031b140d22ca4bc769b03756524cc2d4b3f009545da14a7a4b3649cf"
+      "sha256": "737be8fc002e4bd67a3b8ba56defe7ca89ea7cd4781deb9b1f2ab3b1e48ada22"
     },
     {
       "path": "atlas-review/lib/nested-review-queue.ts",
@@ -3040,7 +3048,7 @@
     },
     {
       "path": "atlas-review/lib/nested-teaching.ts",
-      "sha256": "676319cb796359b29427941865c1d42d673617238c7c20d05b12b090aa567c5b"
+      "sha256": "3fe0bbfd7078554e013c00e2e58c70aa96af34074540bf4e959b8269941a356f"
     },
     {
       "path": "atlas-review/lib/neural-anatomy-curriculum.ts",
@@ -3932,7 +3940,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "2a8876dd60f74c31ccc9c389fb1caf2ebc85bc7fc0f418af9acc049caddb1b8f"
+      "sha256": "36bdd4d9dbca2a94ba2fe1fcd981d7d49788eda8ebb020e1c6721e864f622ea2"
     }
   ]
 }

@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {prePICANestedPlugin} from './atlas-pica-history.ts';
 import {preMCAImportBytes} from './atlas-mca-history.ts';
 import test from 'node:test';
 import {readFileSync} from 'node:fs';
@@ -8,9 +9,9 @@ import {createHash} from 'node:crypto';
 import {DatabaseSync} from 'node:sqlite';
 import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
-import {build} from 'esbuild';
+import {build,type PluginBuild} from 'esbuild';
 import {desktopLayoutImportMilestone,withoutCubitalVenousUltrasoundNotice} from './atlas-cubital-ultrasound-history.ts';
-const source='55b0e548c6552de3ef6c4e8f432e71d60690e843',base='792810f5bcf8808f57d2f55e12cca217ed4d262d';
+const source='24d023f471d39d7d1e4660fb4f20264528bdd6fe',base='792810f5bcf8808f57d2f55e12cca217ed4d262d';
 const old=(p:string)=>Buffer.from(execFileSync('git',['show',base+':'+p],{maxBuffer:32e6}));
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
@@ -21,10 +22,10 @@ async function load(previous=false){
  export * from './atlas-review/lib/nested-review-client';export {eyeLayerGuide} from './atlas-review/lib/eye-layer-guide';
  export {default as Page} from './atlas-review/app/review/nested/page';`,resolveDir:process.cwd(),loader:'tsx'},
  bundle:true,write:false,platform:'node',format:'cjs',packages:'external',jsx:'automatic',loader:{'.css':'empty'},
- plugins:previous?[{name:'exact-pre-eye-guide-website',setup(api){
+ plugins:[...(previous?[{name:'exact-pre-eye-guide-website',setup(api:PluginBuild){
   for(const p of ['lib/nested-review-material.ts','content/body-renderer-revision.json'])
    api.onLoad({filter:new RegExp(p.replaceAll('/','[\\\\/]')+'$')},args=>({contents:old('atlas-review/'+p).toString(),loader:p.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)}));
- }}]:[]});
+ }}]:[]),prePICANestedPlugin()]});
  const module={exports:{}},nodeRequire=createRequire(process.cwd()+'/package.json');
  const require=(id:string)=>{const value=nodeRequire(id);return ['next/link','next/image'].includes(id)?value.default??value:value;};
  runInNewContext(result.outputFiles[0].text,{module,exports:module.exports,require,crypto,Request,Response,URL,URLSearchParams,
@@ -33,7 +34,7 @@ async function load(previous=false){
 }
 test('eye guide reaches learner and protected review with exact source, credits and unchanged model/access boundaries',async()=>{
  const api=await load(),review=json('atlas-review/manifest.json'),prior=JSON.parse(old('atlas-review/manifest.json').toString());
- assert.equal(review.revision,source);assert.equal(review.files.length,962);assert.deepEqual(review.packages,prior.packages);
+ assert.equal(review.revision,source);assert.equal(review.files.length,964);assert.deepEqual(review.packages,prior.packages);
  const milestone=desktopLayoutImportMilestone(); // Exact saved inventory epoch, not later root-body teaching.
  assert.deepEqual(milestone.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),
   ['content/nested-guided-learning-bindings.v1.json','lib/eye-layer-guide.ts','lib/nested-guided-learning.ts']);

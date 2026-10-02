@@ -15,9 +15,9 @@ const selections=[
 
 test('shared regional export retains four exact interosseous CT draft bindings and source limits',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'e550c309929299073ee3db6d7b23b6858113945001202555d012e50387d14220');
+  assert.equal(sha(manifestBytes),'252cd11991e738794ca9075f69cc9e41307c116f1659df5fa25afb83a2bec487');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'55b0e548c6552de3ef6c4e8f432e71d60690e843');
+  assert.equal(manifest.sourceCommit,'24d023f471d39d7d1e4660fb4f20264528bdd6fe');
   for(const flag of ['patientDataIncluded','clinicalApproved','imagingConnection','standaloneReviewConnection'])
     assert.equal(manifest[flag],false,flag);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];

@@ -8,7 +8,7 @@ import {createHash} from 'node:crypto';
 import {dirname, resolve} from 'node:path';
 import {build} from 'esbuild';
 
-const source = '55b0e548c6552de3ef6c4e8f432e71d60690e843';
+const source = '24d023f471d39d7d1e4660fb4f20264528bdd6fe';
 const before = 'ebef136aa174d9b81329d917e4ef129430760ad2';
 const sourceRepo = process.env.ATLAS_SOURCE_REPO ?? resolve('..', '..', '..', '2026-09-05', 'referenced-chatgpt-conversation-this-is-an-2', 'outputs');
 const bytesAt = (repo: string, revision: string, path: string) => Buffer.from(execFileSync('git', ['-C', repo, 'show', `${revision}:${path}`], {maxBuffer: 32e6}));

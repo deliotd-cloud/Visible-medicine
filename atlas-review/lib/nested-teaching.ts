@@ -1,6 +1,7 @@
 import pins from '../content/nested-teaching-bindings.v1.json' with { type: 'json' };
 import femoralPins from '../content/femoral-component-teaching-bindings.v1.json' with { type: 'json' };
 import mcaPins from '../content/mca-source-teaching-bindings.v1.json' with { type: 'json' };
+import picaPins from '../content/pica-source-teaching-bindings.v1.json' with { type: 'json' };
 import {
   nestedConcepts,
   nestedTeachingReferences,
@@ -33,7 +34,9 @@ export function nestedTeachingFor(
   selected: BodyStructure,
 ): NestedConcept | null {
   const activePins = study === 'femoral-components' ? femoralPins
-    : study === 'cranial-artery-components' ? mcaPins : pins;
+    : study === 'cranial-artery-components'
+      ? (['FMA50519','FMA50520'].includes(parent.fmaId) ? picaPins : mcaPins)
+      : pins;
   const pinnedParent = activePins.parents.find((p) => p.id === parent.id);
   if (!pinnedParent || canonical(pinnedParent) !== canonical(parent))
     return null;

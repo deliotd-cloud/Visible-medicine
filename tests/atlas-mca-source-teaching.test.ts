@@ -1,11 +1,12 @@
 import assert from 'node:assert/strict';
+import {prePICANestedPlugin,mcaImportMilestone} from './atlas-pica-history.ts';
 import test from 'node:test';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {dirname} from 'node:path';
 import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
-const revision='55b0e548c6552de3ef6c4e8f432e71d60690e843';
+const revision='24d023f471d39d7d1e4660fb4f20264528bdd6fe';
 const baseline='a8349b2fefbe8be1403c78822487ba7eb95d7d8c';
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const old=(path:string)=>execFileSync('git',['show',baseline+':'+path],{encoding:'utf8',maxBuffer:32e6});
@@ -24,18 +25,19 @@ async function load(previous=false){
  plugins:previous?[{name:'exact-pre-mca-import',setup(api){
   for(const path of ['lib/nested-teaching.ts','content/nested-teaching.ts','content/body-renderer-revision.json'])
    api.onLoad({filter:new RegExp(path.replaceAll('/','[\\\\/]')+'$')},args=>({contents:old('atlas-review/'+path),loader:path.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)}));
- }}]:[]});
+ }}]:[prePICANestedPlugin()]});
  return import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
 }
 
 test('three source-file MCA drafts and full credits reach local learners/review, without new models or rights',async()=>{
  const api=await load(),review=json('atlas-review/manifest.json'),prior=JSON.parse(old('atlas-review/manifest.json'));
- assert.equal(review.revision,revision);assert.equal(review.files.length,962);
+ assert.equal(review.revision,revision);assert.equal(review.files.length,964);
  assert.deepEqual(review.packages,prior.packages);
- assert.deepEqual(review.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),
+ const milestone=mcaImportMilestone();
+ assert.deepEqual(milestone.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),
   ['content/mca-source-teaching-bindings.v1.json','content/mca-source-teaching.ts']);
  assert(prior.files.every((p:any)=>review.files.some((f:any)=>f.path===p.path)));
- assert.deepEqual(review.files.filter((f:any)=>prior.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),
+ assert.deepEqual(milestone.files.filter((f:any)=>prior.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),
   ['content/body-renderer-revision.json','content/nested-teaching.ts','lib/nested-teaching.ts']);
  for(const f of review.files)assert.equal(sha(readFileSync('atlas-review/'+f.path)),f.importedSha256,f.path);
  assert.deepEqual(api.mcaSourceConcepts.map((c:any)=>c.id),ids);
@@ -73,7 +75,7 @@ test('three source-file MCA drafts and full credits reach local learners/review,
  assert.equal(json('lib/disc-comparison-manifest.json').atlasInspectorRevision,'952d758104102f5853e00e846cb3448511daa960');
 });
 
-test('exactly three teaching contexts advance; 105 remain exact, finer identity/imaging stay blocked and stale submissions never reach storage',async()=>{
+test('historical MCA epoch: three teaching contexts advance; 105 remain exact, identity/imaging stay blocked and stale submissions never reach storage',async()=>{
  const previous=await load(true),current=await load(),storage=new Proxy({},{get(){throw Error('Stale request reached storage');}});
  assert.deepEqual(current.nestedReviewRows,previous.nestedReviewRows);
  let changed=0,unchanged=0,pica=0,geometryExpired=0,rejected=0;

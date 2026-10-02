@@ -47,8 +47,16 @@ export async function nestedReviewMaterial(key:string,structureId:string) {
   const guide=eyeGuide?.steps.some(step=>step.ids.includes(structureId))?eyeGuide:null;
   const usedUrls=new Set([...topics.flatMap(t=>t.references),...(concept?.quiz.references.map(r=>nestedTeachingReferences[r].url)??[]),
     ...(guide?.steps.flatMap(step=>step.references)??[])]);
+  // Scoped additions cannot relabel an unrelated lesson sharing the same URL.
+  // Legacy title lookup remains stable for its existing review revisions.
+  const citedKeys=new Set([
+    ...Object.values(concept?.sections??{}).flatMap(section=>section.references),
+    ...Object.values(concept?.imaging??{}).flatMap(section=>section?.references??[]),
+    ...(concept?.quiz.references??[]),
+  ]);
   const referenceTitles=Object.fromEntries([
-    ...Object.values(nestedTeachingReferences).filter(r=>usedUrls.has(r.url)).map(r=>[r.url,r.title]),
+    ...Object.entries(nestedTeachingReferences).filter(([key,r])=>usedUrls.has(r.url)&&
+      (!('scopedToConcept' in r&&r.scopedToConcept===true)||citedKeys.has(key))).map(([,r])=>[r.url,r.title]),
     ...(guide?eyeReferences.filter(r=>usedUrls.has(r.url)&&!Object.values(nestedTeachingReferences).some(item=>item.url===r.url)).map(r=>[r.url,r.label]):[]),
   ]);
   const lesson=concept?{extended:{modelLimit:concept.modelLimit,selfCheck:{

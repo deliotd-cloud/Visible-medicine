@@ -10,9 +10,9 @@ test('sided main-bronchus X-ray drafts retain their source bindings and release 
   const base='public/atlas-runtime/head-neck/';
   const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'e550c309929299073ee3db6d7b23b6858113945001202555d012e50387d14220');
+  assert.equal(sha(bytes),'252cd11991e738794ca9075f69cc9e41307c116f1659df5fa25afb83a2bec487');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'55b0e548c6552de3ef6c4e8f432e71d60690e843');
+  assert.equal(manifest.sourceCommit,'24d023f471d39d7d1e4660fb4f20264528bdd6fe');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({
