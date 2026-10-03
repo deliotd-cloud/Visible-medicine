@@ -4,8 +4,8 @@ import { readFileSync } from 'node:fs';
 import { build } from 'esbuild';
 
 // Includes the eafd71c quiz batch and the body-panel answer-evidence repair.
-const reviewRevision = '2c6d1f3eedc067c48203bed0639f67a9fc7fd3c5';
-const learnerRevision = '2c6d1f3eedc067c48203bed0639f67a9fc7fd3c5';
+const reviewRevision = 'f97ea55ee2e7b57865c012650b40fc44041f45da';
+const learnerRevision = 'f97ea55ee2e7b57865c012650b40fc44041f45da';
 const identities = [
   ['right-medial-plantar-artery', 'right', 'FMA43929', 'Posterior tibial artery', ['FJ2164']],
   ['left-medial-plantar-artery', 'left', 'FMA43930', 'Posterior tibial artery', ['FJ2082']],

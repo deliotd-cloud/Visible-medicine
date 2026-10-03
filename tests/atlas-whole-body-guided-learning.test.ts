@@ -9,7 +9,7 @@ test('whole-body library delivers the tested selector and shared regional player
   const manifest=JSON.parse(readFileSync(root+'manifest.json','utf8'));
   const inputs=JSON.parse(readFileSync(root+'source-inputs.json','utf8'));
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
-  assert.equal(manifest.sourceCommit,'2c6d1f3eedc067c48203bed0639f67a9fc7fd3c5');
+  assert.equal(manifest.sourceCommit,'f97ea55ee2e7b57865c012650b40fc44041f45da');
   for(const path of ['app/whole-body-guided-learning.tsx','app/whole-body-guided-learning.css','app/body-explorer.tsx','app/regional-guided-learning.tsx','lib/regional-tours.ts','lib/nested-guided-learning.ts','content/nested-guided-learning-bindings.v1.json']){
     assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,
       review.files.find((f:any)=>f.path===path)?.sourceSha256,path);

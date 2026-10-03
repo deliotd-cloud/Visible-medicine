@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "000da74416c25c3764c5029c0697a0e4d73a6a25edd1a6f0550991789c4711bb"
+    "sha256": "a25c4346ea9586e657a5ea32ef433981a3ebfe306102b9943decec24b09a02d8"
   },
   {
     "path": "app/body-education-link.ts",
@@ -970,6 +970,14 @@
   {
     "path": "content/genicular-imaging.ts",
     "sha256": "c95faad0c2c4fe2a5fcc5c6f04e2f1dda92abf1452c9305d4b27c59647f5e259"
+  },
+  {
+    "path": "content/genicular-mri-pins.json",
+    "sha256": "e943e50f7c8e72b5c8fc25d95c51f24f7da7f917af7fefa08e922d723ef07f83"
+  },
+  {
+    "path": "content/genicular-mri.ts",
+    "sha256": "a14746291274f1716c522a5df12c21f2c3ce2fd7bd74232411fd50f2f98441f2"
   },
   {
     "path": "content/genicular-study-pins.json",
@@ -2578,6 +2586,10 @@
   {
     "path": "lib/genicular-imaging.ts",
     "sha256": "2bf7b934b7178723d6f4d258899ebc99a4c6f098bf4d3c4bc3f83778bba8fcf5"
+  },
+  {
+    "path": "lib/genicular-mri.ts",
+    "sha256": "d47a62a16928f467b30ef8a8d86f8299b9d2fbb11307aff9ca84ce20a9535a50"
   },
   {
     "path": "lib/genicular-study.ts",

@@ -10,9 +10,9 @@ test('posterior mediastinal study ships with exact sources and no new assets or 
   const base='public/atlas-runtime/head-neck/';
   const sha=(data:Buffer)=>createHash('sha256').update(data).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'ad613c36b351688444c9e17041199c05d75292f54ca1ba21fa8379b0454a6815');
+  assert.equal(sha(bytes),'3a02e800637efce34cf13a58773ae7f939e36e3ff44edb400eeb5d40f1a24534');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'2c6d1f3eedc067c48203bed0639f67a9fc7fd3c5');
+  assert.equal(manifest.sourceCommit,'f97ea55ee2e7b57865c012650b40fc44041f45da');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({

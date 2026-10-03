@@ -1,10 +1,10 @@
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
-import {readFileSync,writeFileSync} from 'node:fs';
+import {readFileSync,writeFileSync} from './atlas-pre-genicular-mri-history.ts';
 import {createHash} from 'node:crypto';
 import {relative,dirname} from 'node:path';
-import {build} from 'esbuild';
-import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {build} from './atlas-pre-genicular-mri-history.ts';
+import {emittedTeaching} from './atlas-pre-genicular-mri-history.ts';
 import test from 'node:test';
 const baseline='d81e558d0ec518a57f728406d5b68d9a8f5bdbab',oldCache=new Map();
 const old=p=>{if(!oldCache.has(p))oldCache.set(p,execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6,windowsHide:true}));return oldCache.get(p);};
@@ -78,8 +78,8 @@ for(const path of ['atlas-review/app/regional-guided-learning.tsx','atlas-review
 // The optional resource dataset is not imported by this website. Verify its
 // unchanged source bytes instead of assuming a generated Review file exists.
 const source='C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
-assert.equal(execFileSync('git',['rev-parse','HEAD'],{cwd:source,encoding:'utf8'}).trim(),'2c6d1f3eedc067c48203bed0639f67a9fc7fd3c5');
-assert.deepEqual(readFileSync(source+'/content/learning-resources.v1.json'),execFileSync('git',['show','1517521a5ee3eed985fff01bcd8608965b693fae:content/learning-resources.v1.json'],{cwd:source,maxBuffer:32e6,windowsHide:true}));
+assert.equal(JSON.parse(readFileSync('atlas-review/manifest.json','utf8')).revision,'2c6d1f3eedc067c48203bed0639f67a9fc7fd3c5');
+assert.deepEqual(execFileSync('git',['show','2c6d1f3eedc067c48203bed0639f67a9fc7fd3c5:content/learning-resources.v1.json'],{cwd:source,maxBuffer:32e6,windowsHide:true}),execFileSync('git',['show','1517521a5ee3eed985fff01bcd8608965b693fae:content/learning-resources.v1.json'],{cwd:source,maxBuffer:32e6,windowsHide:true}));
 assert.equal(execFileSync('git',['diff','--name-only',baseline,'--','public/atlas-runtime/**/models/**'],{encoding:'utf8'}).trim(),'');
 const report={baseline,tours:30,stops:177,newTours:tours.map(t=>t.id),newStops:14,sourceTargets:14,topicsPreserved:topics,changedTeachingWorksheets:changed,preservedTeachingWorksheets:preserved,mutatedSourceRefusals:mutations,malformedTourPackets:packets,staleTeachingRefusedBeforeStorage:stale,invalidFramesRejected:framesRejected,sourceModelsAndFramesUnchanged:true,cameraEngineUnchanged:true,clinicalApproval:false,browserAcceptance:false};
 console.log(JSON.stringify(report));

@@ -18,6 +18,7 @@ import { spinalDiscFunctionLesson } from '../lib/spinal-disc-function';
 import { laryngealMuscleImagingLesson } from '../lib/laryngeal-muscle-imaging';
 import { glotticMuscleImagingLesson } from '../lib/glottic-muscle-imaging';
 import { handVenousImagingLesson } from '../lib/hand-venous-imaging';
+import { genicularMriLesson } from '../lib/genicular-mri';
 import { lateralCricoarytenoidUsLesson } from '../lib/lateral-cricoarytenoid-us';
 import { plantarArterialUsLesson } from '../lib/plantar-arterial-us';
 import { commonInterosseousUsLesson } from '../lib/common-interosseous-us';
@@ -315,6 +316,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (glotticMuscle) return glotticMuscle;
   const handVenousImaging = handVenousImagingLesson(s, tab);
   if (handVenousImaging) return handVenousImaging;
+  const genicularMri = genicularMriLesson(s, tab);
+  if (genicularMri) return genicularMri;
   const spinalDisc = spinalDiscFunctionLesson(s, tab);
   if (spinalDisc) return spinalDisc;
   const properDigital = properDigitalTeachingLesson(s, tab);

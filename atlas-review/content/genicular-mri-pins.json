@@ -1,0 +1,573 @@
+{
+  "baseline": "2c6d1f3eedc067c48203bed0639f67a9fc7fd3c5",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "genicular-arteries",
+      "url": "/models/bodyparts3d/genicular-arteries/genicular-arteries.glb?v=a62ea69e56014790059ecd85cf9281bebb93280220b5a5677954c85b01ef5e9a",
+      "bytes": 403484,
+      "sha256": "a62ea69e56014790059ecd85cf9281bebb93280220b5a5677954c85b01ef5e9a",
+      "structures": 10
+    }
+  ],
+  "beforeAllTeachingSnapshotHash": "254e672558e5847185150a3c2809d5b195a630de5b05bea59f186ac2d0e8ac72",
+  "entries": [
+    {
+      "family": "middle",
+      "identity": {
+        "id": "vm:anatomy:body:leg:right:vessel:right-middle-genicular-artery",
+        "fmaId": "FMA22562",
+        "name": "Right middle genicular artery",
+        "sourceName": "right middle genicular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "thigh"
+        ],
+        "bundle": "genicular-arteries",
+        "nodeName": "FMA22562",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2167",
+            "sha256": "8ab69c1b57bc47e6d2f5a06885808fbdae84a0453d037549de7ae99193fcf469"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -1.0987499952316284,
+            -4.254300117492676,
+            0.015204000286757946
+          ],
+          "max": [
+            -0.42679500579833984,
+            -3.983069896697998,
+            0.15320800244808197
+          ]
+        },
+        "center": [
+          -0.7627725005149841,
+          -4.118685007095337,
+          0.08420600136741996
+        ],
+        "anchor": [
+          -0.7745429873466492,
+          -4.09621000289917,
+          0.07830599695444107
+        ],
+        "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Right middle genicular artery · Review pending",
+        "body": "Structure-specific imaging teaching is awaiting validation. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+        "bullets": [],
+        "note": "No patient CT/MRI/ultrasound, angiogram, embolisation target or intervention guidance is supplied."
+      }
+    },
+    {
+      "family": "middle",
+      "identity": {
+        "id": "vm:anatomy:body:leg:left:vessel:left-middle-genicular-artery",
+        "fmaId": "FMA22563",
+        "name": "Left middle genicular artery",
+        "sourceName": "left middle genicular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "thigh"
+        ],
+        "bundle": "genicular-arteries",
+        "nodeName": "FMA22563",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2084",
+            "sha256": "a2f628de8834efc7051088a5d0d99e2c1489a2512f29dc5680d6fce78ddbef54"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.4268060028553009,
+            -4.254240036010742,
+            0.015018999576568604
+          ],
+          "max": [
+            1.098680019378662,
+            -3.9832301139831543,
+            0.1531040072441101
+          ]
+        },
+        "center": [
+          0.7627430111169815,
+          -4.118735074996948,
+          0.08406150341033936
+        ],
+        "anchor": [
+          0.7742879986763,
+          -4.096010208129883,
+          0.07565999776124954
+        ],
+        "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Left middle genicular artery · Review pending",
+        "body": "Structure-specific imaging teaching is awaiting validation. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+        "bullets": [],
+        "note": "No patient CT/MRI/ultrasound, angiogram, embolisation target or intervention guidance is supplied."
+      }
+    },
+    {
+      "family": "superior-medial",
+      "identity": {
+        "id": "vm:anatomy:body:leg:right:vessel:right-medial-superior-genicular-artery",
+        "fmaId": "FMA22586",
+        "name": "Right medial superior genicular artery",
+        "sourceName": "right medial superior genicular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "thigh"
+        ],
+        "bundle": "genicular-arteries",
+        "nodeName": "FMA22586",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2166",
+            "sha256": "3898b8e1fe2a48c8e1e54a6e538e0a9d8665df30299c53942fb953b9838bca35"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.7418090105056763,
+            -4.17533016204834,
+            0.13216200470924377
+          ],
+          "max": [
+            -0.326557993888855,
+            -3.769670009613037,
+            0.6091700196266174
+          ]
+        },
+        "center": [
+          -0.5341835021972656,
+          -3.9725000858306885,
+          0.3706660121679306
+        ],
+        "anchor": [
+          -0.41990500688552856,
+          -4.0659098625183105,
+          0.4440920054912567
+        ],
+        "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Right medial superior genicular artery · Review pending",
+        "body": "Structure-specific imaging teaching is awaiting validation. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+        "bullets": [],
+        "note": "No patient CT/MRI/ultrasound, angiogram, embolisation target or intervention guidance is supplied."
+      }
+    },
+    {
+      "family": "superior-medial",
+      "identity": {
+        "id": "vm:anatomy:body:leg:left:vessel:left-medial-superior-genicular-artery",
+        "fmaId": "FMA22587",
+        "name": "Left medial superior genicular artery",
+        "sourceName": "left medial superior genicular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "thigh"
+        ],
+        "bundle": "genicular-arteries",
+        "nodeName": "FMA22587",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2083",
+            "sha256": "b07405510eda9a39934d9071638a2a809d2b59252449dfce636ec81f7b281641"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.32660600543022156,
+            -4.175169944763184,
+            0.13214999437332153
+          ],
+          "max": [
+            0.7417749762535095,
+            -3.7697300910949707,
+            0.6092900037765503
+          ]
+        },
+        "center": [
+          0.5341904908418655,
+          -3.972450017929077,
+          0.3707199990749359
+        ],
+        "anchor": [
+          0.41496899724006653,
+          -4.063799858093262,
+          0.43825700879096985
+        ],
+        "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Left medial superior genicular artery · Review pending",
+        "body": "Structure-specific imaging teaching is awaiting validation. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+        "bullets": [],
+        "note": "No patient CT/MRI/ultrasound, angiogram, embolisation target or intervention guidance is supplied."
+      }
+    },
+    {
+      "family": "superior-lateral",
+      "identity": {
+        "id": "vm:anatomy:body:leg:right:vessel:right-lateral-superior-genicular-artery",
+        "fmaId": "FMA22588",
+        "name": "Right lateral superior genicular artery",
+        "sourceName": "right lateral superior genicular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "thigh"
+        ],
+        "bundle": "genicular-arteries",
+        "nodeName": "FMA22588",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2162",
+            "sha256": "839d8b65347f04461e87767555736e2768cc5c8d8c5b366dd0badf957bae0d10"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -1.1190400123596191,
+            -4.10152006149292,
+            0.14014500379562378
+          ],
+          "max": [
+            -0.7072539925575256,
+            -3.6958799362182617,
+            0.5342299938201904
+          ]
+        },
+        "center": [
+          -0.9131470024585724,
+          -3.898699998855591,
+          0.3371874988079071
+        ],
+        "anchor": [
+          -0.9450079798698425,
+          -3.840250015258789,
+          0.221342995762825
+        ],
+        "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Right lateral superior genicular artery · Review pending",
+        "body": "Structure-specific imaging teaching is awaiting validation. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+        "bullets": [],
+        "note": "No patient CT/MRI/ultrasound, angiogram, embolisation target or intervention guidance is supplied."
+      }
+    },
+    {
+      "family": "superior-lateral",
+      "identity": {
+        "id": "vm:anatomy:body:leg:left:vessel:left-lateral-superior-genicular-artery",
+        "fmaId": "FMA22589",
+        "name": "Left lateral superior genicular artery",
+        "sourceName": "left lateral superior genicular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "thigh"
+        ],
+        "bundle": "genicular-arteries",
+        "nodeName": "FMA22589",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2080",
+            "sha256": "ee4b74a8e7423554d279b5a5c8cd90c301f0252dcb6fc8651cad417a85320516"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.7072409987449646,
+            -4.10152006149292,
+            0.1401589959859848
+          ],
+          "max": [
+            1.1189500093460083,
+            -3.6958999633789062,
+            0.5342199802398682
+          ]
+        },
+        "center": [
+          0.9130955040454865,
+          -3.898710012435913,
+          0.3371894881129265
+        ],
+        "anchor": [
+          0.9400039911270142,
+          -3.8385798931121826,
+          0.22063900530338287
+        ],
+        "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Left lateral superior genicular artery · Review pending",
+        "body": "Structure-specific imaging teaching is awaiting validation. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+        "bullets": [],
+        "note": "No patient CT/MRI/ultrasound, angiogram, embolisation target or intervention guidance is supplied."
+      }
+    },
+    {
+      "family": "inferior-lateral",
+      "identity": {
+        "id": "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
+        "fmaId": "FMA43892",
+        "name": "Right inferior lateral genicular artery",
+        "sourceName": "right inferior lateral genicular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "thigh"
+        ],
+        "bundle": "genicular-arteries",
+        "nodeName": "FMA43892",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2150",
+            "sha256": "7a2e9fc70cca1ac7fe5a94fb48a2e105710e7f89fc63f18d7f492dcba961401e"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -1.1597599983215332,
+            -4.5959601402282715,
+            0.03790700063109398
+          ],
+          "max": [
+            -0.7942619919776917,
+            -4.178800106048584,
+            0.515749990940094
+          ]
+        },
+        "center": [
+          -0.9770109951496124,
+          -4.387380123138428,
+          0.276828495785594
+        ],
+        "anchor": [
+          -1.092079997062683,
+          -4.33696985244751,
+          0.18830999732017517
+        ],
+        "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Right inferior lateral genicular artery · Review pending",
+        "body": "Structure-specific imaging teaching is awaiting validation. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+        "bullets": [],
+        "note": "No patient CT/MRI/ultrasound, angiogram, embolisation target or intervention guidance is supplied."
+      }
+    },
+    {
+      "family": "inferior-lateral",
+      "identity": {
+        "id": "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery",
+        "fmaId": "FMA43893",
+        "name": "Left inferior lateral genicular artery",
+        "sourceName": "left inferior lateral genicular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "thigh"
+        ],
+        "bundle": "genicular-arteries",
+        "nodeName": "FMA43893",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2076",
+            "sha256": "e7e540baf3289dcfb29bf857a9d93754b9eb6897c3192110f4e563f7b7cb2c59"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.7943289875984192,
+            -4.595779895782471,
+            0.037755999714136124
+          ],
+          "max": [
+            1.1598000526428223,
+            -4.178800106048584,
+            0.5154500007629395
+          ]
+        },
+        "center": [
+          0.9770645201206207,
+          -4.387290000915527,
+          0.2766030002385378
+        ],
+        "anchor": [
+          1.1015299558639526,
+          -4.329410076141357,
+          0.20728300511837006
+        ],
+        "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Left inferior lateral genicular artery · Review pending",
+        "body": "Structure-specific imaging teaching is awaiting validation. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+        "bullets": [],
+        "note": "No patient CT/MRI/ultrasound, angiogram, embolisation target or intervention guidance is supplied."
+      }
+    }
+  ]
+}

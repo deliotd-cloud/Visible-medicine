@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "2c6d1f3eedc067c48203bed0639f67a9fc7fd3c5",
-  "sha256": "94a0301ad6bb977d246dfe6c232a5faf8c419f60ca81bec4bc14e48669f76cb2",
+  "sourceCommit": "f97ea55ee2e7b57865c012650b40fc44041f45da",
+  "sha256": "69477ebd02956c16b38b53bcbd4e31ede79dcf609279e31e416a2b01000ae0d0",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "000da74416c25c3764c5029c0697a0e4d73a6a25edd1a6f0550991789c4711bb"
+      "sha256": "a25c4346ea9586e657a5ea32ef433981a3ebfe306102b9943decec24b09a02d8"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -736,7 +736,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "668737998fbb35835a8b4fd417eccb84792f3e07eee00307a0a733f6aa0cef75"
+      "sha256": "3370b1c339e1ecb441cb872bb84393d227bba9230efe162510a2d1e5aa7ecbf4"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -1117,6 +1117,14 @@
     {
       "path": "atlas-review/content/genicular-imaging.ts",
       "sha256": "c95faad0c2c4fe2a5fcc5c6f04e2f1dda92abf1452c9305d4b27c59647f5e259"
+    },
+    {
+      "path": "atlas-review/content/genicular-mri-pins.json",
+      "sha256": "e943e50f7c8e72b5c8fc25d95c51f24f7da7f917af7fefa08e922d723ef07f83"
+    },
+    {
+      "path": "atlas-review/content/genicular-mri.ts",
+      "sha256": "a14746291274f1716c522a5df12c21f2c3ce2fd7bd74232411fd50f2f98441f2"
     },
     {
       "path": "atlas-review/content/genicular-study-pins.json",
@@ -2703,6 +2711,10 @@
       "sha256": "2bf7b934b7178723d6f4d258899ebc99a4c6f098bf4d3c4bc3f83778bba8fcf5"
     },
     {
+      "path": "atlas-review/lib/genicular-mri.ts",
+      "sha256": "d47a62a16928f467b30ef8a8d86f8299b9d2fbb11307aff9ca84ce20a9535a50"
+    },
+    {
       "path": "atlas-review/lib/genicular-study.ts",
       "sha256": "b1654af910c5ac0581a48a76946d71398634bd2d513de778e4e9b92e7bf425cf"
     },
@@ -4096,7 +4108,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "74335825c7767c0580a27511039c6ef8bbadd1b243d7eae581bb4822344d2d16"
+      "sha256": "2dcb72e2a752750bd84bb7c853cf8c5637de6c20e7d409317b6376f48521f07b"
     }
   ]
 }

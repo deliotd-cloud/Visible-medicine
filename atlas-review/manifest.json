@@ -1,5 +1,5 @@
 {
-  "revision": "2c6d1f3eedc067c48203bed0639f67a9fc7fd3c5",
+  "revision": "f97ea55ee2e7b57865c012650b40fc44041f45da",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -538,8 +538,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "000da74416c25c3764c5029c0697a0e4d73a6a25edd1a6f0550991789c4711bb",
-      "importedSha256": "000da74416c25c3764c5029c0697a0e4d73a6a25edd1a6f0550991789c4711bb"
+      "sourceSha256": "a25c4346ea9586e657a5ea32ef433981a3ebfe306102b9943decec24b09a02d8",
+      "importedSha256": "a25c4346ea9586e657a5ea32ef433981a3ebfe306102b9943decec24b09a02d8"
     },
     {
       "path": "lib/central-vessel-imaging.ts",
@@ -830,6 +830,21 @@
       "path": "content/hand-venous-imaging.ts",
       "sourceSha256": "8d149a1ece86e368cff8a0d7b452f3a0fb9cffc3e4c86f1c298701ac46e0bfa2",
       "importedSha256": "8d149a1ece86e368cff8a0d7b452f3a0fb9cffc3e4c86f1c298701ac46e0bfa2"
+    },
+    {
+      "path": "lib/genicular-mri.ts",
+      "sourceSha256": "d47a62a16928f467b30ef8a8d86f8299b9d2fbb11307aff9ca84ce20a9535a50",
+      "importedSha256": "d47a62a16928f467b30ef8a8d86f8299b9d2fbb11307aff9ca84ce20a9535a50"
+    },
+    {
+      "path": "content/genicular-mri-pins.json",
+      "sourceSha256": "e943e50f7c8e72b5c8fc25d95c51f24f7da7f917af7fefa08e922d723ef07f83",
+      "importedSha256": "e943e50f7c8e72b5c8fc25d95c51f24f7da7f917af7fefa08e922d723ef07f83"
+    },
+    {
+      "path": "content/genicular-mri.ts",
+      "sourceSha256": "a14746291274f1716c522a5df12c21f2c3ce2fd7bd74232411fd50f2f98441f2",
+      "importedSha256": "a14746291274f1716c522a5df12c21f2c3ce2fd7bd74232411fd50f2f98441f2"
     },
     {
       "path": "lib/lateral-cricoarytenoid-us.ts",
@@ -3188,8 +3203,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "c727a2c2d9efbd4eabf7a00bf652a13a425a54e6cdb0656ac9dad18fe01a1103",
-      "importedSha256": "851bd462aef1a1f78fb2721af9717892bf9e91c542856567dc4301baca0e7ee4"
+      "sourceSha256": "0c1ccd2b77e850fe2aa4d3247734b7480700643999c3442010e481333651a36e",
+      "importedSha256": "10f55e8456e515054cd2163c0244563751e468043b0088362ecd1c4ea178b397"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3549,7 +3564,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "e0d6e4581985a67ec82f0e43f0ad575b831cb80304ef7ce85b6d58cf5f389886",
-      "importedSha256": "efe793d0366f771363098cb9a0681ecf62d08f3d53aa6b15eadad77d195ac8f4"
+      "importedSha256": "04d1f56597d807dca8ce7f9f9439c206ed6a18d657665229d5e35d63c77b076f"
     },
     {
       "path": "app/review/review.css",
@@ -3583,8 +3598,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "668737998fbb35835a8b4fd417eccb84792f3e07eee00307a0a733f6aa0cef75",
-      "importedSha256": "668737998fbb35835a8b4fd417eccb84792f3e07eee00307a0a733f6aa0cef75"
+      "sourceSha256": "3370b1c339e1ecb441cb872bb84393d227bba9230efe162510a2d1e5aa7ecbf4",
+      "importedSha256": "3370b1c339e1ecb441cb872bb84393d227bba9230efe162510a2d1e5aa7ecbf4"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -5033,5 +5048,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "94a0301ad6bb977d246dfe6c232a5faf8c419f60ca81bec4bc14e48669f76cb2"
+  "websiteIntegrationSha256": "69477ebd02956c16b38b53bcbd4e31ede79dcf609279e31e416a2b01000ae0d0"
 }
