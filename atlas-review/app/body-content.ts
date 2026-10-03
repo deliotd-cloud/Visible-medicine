@@ -127,6 +127,7 @@ import { abdominalOrganQuizLesson } from '../lib/abdominal-organ-quiz';
 import { pelvicOrganQuizLesson } from '../lib/pelvic-organ-quiz';
 import { brainConnectionsQuizLesson } from '../lib/brain-connections-quiz';
 import { shoulderArterialCtLesson } from '../lib/shoulder-arterial-ct';
+import { handArterialCtLesson } from '../lib/hand-arterial-ct';
 import { circleWillisImagingLesson } from '../lib/circle-willis-imaging';
 import { kneeImagingLesson } from '../lib/knee-imaging';
 import { bodyXrayLesson } from '../lib/xray-teaching';
@@ -257,6 +258,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const handCt = handArterialCtLesson(s, tab);
+  if (handCt) return handCt;
   const tentoriumImaging = tentoriumImagingLesson(s, tab);
   if (tentoriumImaging) return tentoriumImaging;
   const cerebellarMcaImaging = cerebellarMcaImagingLesson(s, tab);

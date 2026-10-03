@@ -2,11 +2,9 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {readFileSync} from 'node:fs';
-import {dirname,relative} from 'node:path';
-import {build} from 'esbuild';
-import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {build,emittedTeaching,readFileSync} from './atlas-pre-hand-ct-history.ts';
 
+// Frozen website 5c1e040f versus bee7d759; current hand CT delivery is tested separately.
 const baseline='bee7d759305803ade07ecd26fc877099b7008ff1';
 const source='946700cc8c5162076cd5e5d9f79a00ba72c6fda1';
 const sourceHashes:Record<string,string>={
@@ -37,12 +35,8 @@ async function load(previous=false){
  import raw from './atlas-review/public/models/bodyparts3d/full-body/catalog.json';
  import {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';
  export const catalog=bodyDisplayCatalog(raw as any);`,resolveDir:process.cwd(),loader:'ts'},
-  bundle:true,write:false,platform:'node',format:'esm',plugins:previous?[{name:'exact-pre-hepatobiliary-import',
-   setup(plugin:import('esbuild').PluginBuild){plugin.onLoad({filter:/\.(?:ts|json)$/},args=>{
-    const path=relative(process.cwd(),args.path).replaceAll('\\','/');
-    if(!frozen.has(path))return;
-    return {contents:old(path),loader:path.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)};
-   });}}]:[]});
+  bundle:true,write:false,platform:'node',format:'esm'},
+  previous?path=>frozen.has(path)?old(path):undefined:undefined);
  return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
 }
 

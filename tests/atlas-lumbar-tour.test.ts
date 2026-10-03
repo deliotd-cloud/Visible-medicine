@@ -28,7 +28,7 @@ test('lumbar tour source import has the exact declared teaching and review depen
 test('lumbar tour keeps every model and existing licence notice without patient data or approval',()=>{
  for(const module of ['head-neck','shoulder']){
   const prefix='public/atlas-runtime/'+module+'/',before=prior(prefix+'manifest.json'),after=json(prefix+'manifest.json');
-  assert.equal(after.sourceCommit,'946700cc8c5162076cd5e5d9f79a00ba72c6fda1');
+  assert.equal(after.sourceCommit,'2413ff790069d5bfa6c2c507d67ebfa2a5b3fe51');
   const retained=(f:any)=>f.path.endsWith('.glb')||f.path==='BUNDLED_NOTICES.txt'||f.path==='bundled-dependencies.json'||f.path.includes('credits');
   assert.deepEqual(after.files.filter(retained),before.files.filter(retained));
   for(const f of after.files.filter(retained))assert.equal(sha(prefix+f.path),f.sha256);

@@ -29,7 +29,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "f890730222a09735274f16534f4c7a79db85bd0453a87e27d1ce1a907f2e0a38"
+    "sha256": "a17e3da0ca457c5e436c2da133b78e283422de1711cbf91ed168bef9a06d5c8c"
   },
   {
     "path": "app/body-explorer.css",
@@ -594,6 +594,14 @@
   {
     "path": "content/hallux-xray.ts",
     "sha256": "e6bd2b81a637f4bf170631d035b98aa7be96de11f101086364939d5579505311"
+  },
+  {
+    "path": "content/hand-arterial-ct-pins.json",
+    "sha256": "fc7dfacbfe9e12cfd8128407d4d838015e72b41fa7abdf3219ed3e5ebb8a4dd9"
+  },
+  {
+    "path": "content/hand-arterial-ct.ts",
+    "sha256": "c3b3dcdbe6d0b59823ba219e0d051a5a7cf4d6ba62d3b244e2840d91a8b66d24"
   },
   {
     "path": "content/hand-bone-xray.ts",
@@ -1682,6 +1690,10 @@
   {
     "path": "lib/hallux-xray.ts",
     "sha256": "87f3bb780aeb9c25ca308059cae5207891ef69e5e6b5dc0616528f0ccc5eb699"
+  },
+  {
+    "path": "lib/hand-arterial-ct.ts",
+    "sha256": "be14923f78afca0515b2c854b136d59f1253a7501e7e9d2f7ace462d7850586b"
   },
   {
     "path": "lib/hand-bone-xray.ts",
