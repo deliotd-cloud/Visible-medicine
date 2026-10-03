@@ -13,9 +13,9 @@ const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
 
 test('exact Atlas coronary venous study is nested under Heart with one protected source bundle',()=>{
   const manifestBytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(manifestBytes),'3ca72ff683d47273f7ec349029b10f62c4d272651542ecdbc51afc42d18b9a11');
+  assert.equal(sha(manifestBytes),'ead1eabaca33890ba12f6bd254ad35baf91dd4d8b43d3a4301dc6878e1741192');
   const manifest=JSON.parse(manifestBytes.toString());
-  assert.equal(manifest.sourceCommit,'c78e383a37976e2e459fd41504eac6281241af1d');
+  assert.equal(manifest.sourceCommit,'da1c7f692fcaf318a9c059aa5cb4ef0db8bbd6e8');
   assert.equal(manifest.regionalScopes.length,12);
   for(const flag of ['patientDataIncluded','clinicalApproved','imagingConnection','standaloneReviewConnection'])
     assert.equal(manifest[flag],false,flag);
@@ -52,7 +52,7 @@ test('exact Atlas coronary venous study is nested under Heart with one protected
 
 test('coronary model stays registered for administrator review without case or lecture entitlement',async()=>{
   const inventoryBytes=readFileSync('lib/atlas-model-inventory.json');
-  assert.equal(sha(inventoryBytes),'fe6ef98c7a586d83d3b27291f60bfb10fb758585f4e8834b7f59987fe6cd7cb3');
+  assert.equal(sha(inventoryBytes),'5b0be4dd0d3dafb8674fdb03d5da257a35369b7283c2675475ed579269eca61c');
   const inventory=JSON.parse(inventoryBytes.toString());
   assert.equal(inventory.models.length,137);
   assert.equal(inventory.models.flatMap((model:{paths:string[]})=>model.paths).length,144);

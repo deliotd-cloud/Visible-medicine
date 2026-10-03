@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 import {regionalSpreadMilestoneBytes} from './atlas-lumbar-sacral-history.ts';
 
-const revision='c78e383a37976e2e459fd41504eac6281241af1d';
+const revision='da1c7f692fcaf318a9c059aa5cb4ef0db8bbd6e8';
 const baseline='167c77f4da6ec16455093008dcacea250b0a6678';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6});
@@ -15,8 +15,10 @@ const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
 test('bounded regional Spread reaches learner and protected review without model, licence or access changes',async()=>{
  const review=json('atlas-review/manifest.json'),prior=JSON.parse(old('atlas-review/manifest.json').toString());
  const ultrasoundInputs=['content/hyoid-epiglottis-ultrasound-pins.json','content/hyoid-epiglottis-ultrasound.ts','lib/hyoid-epiglottis-ultrasound.ts'];
- assert.equal(review.revision,revision);assert.equal(review.files.length,1018+ultrasoundInputs.length);assert.deepEqual(review.packages,prior.packages);
+ const cranialInputs=['content/cranial-bone-xray-pins.json','content/cranial-bone-xray.ts','lib/cranial-bone-xray.ts'];
+ assert.equal(review.revision,revision);assert.equal(review.files.length,1018+ultrasoundInputs.length+cranialInputs.length);assert.deepEqual(review.packages,prior.packages);
  assert.deepEqual(review.files.filter((f:any)=>ultrasoundInputs.includes(f.path)).map((f:any)=>f.path).sort(),ultrasoundInputs);
+ assert.deepEqual(review.files.filter((f:any)=>cranialInputs.includes(f.path)).map((f:any)=>f.path).sort(),cranialInputs);
  // Preserve the exact Spread epoch; the lumbar regression proves the later delta.
  const spreadEpoch=JSON.parse(regionalSpreadMilestoneBytes('atlas-review/manifest.json').toString());
  assert.deepEqual(spreadEpoch.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path),['lib/body-spread.ts']);
@@ -25,8 +27,9 @@ test('bounded regional Spread reaches learner and protected review without model
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,JSON.parse(old('lib/atlas-model-inventory.json').toString()).models);
  for(const [name,count,added] of [['head-neck',991,true],['shoulder',664,false],['lower-limb',100,true]] as const){
   const base='public/atlas-runtime/'+name+'/',manifest=json(base+'manifest.json'),previous=JSON.parse(old(base+'manifest.json').toString()),inputs=json(base+'source-inputs.json');
-  assert.equal(manifest.sourceCommit,revision);assert.equal(inputs.length,count+(name==='lower-limb'?0:ultrasoundInputs.length));assert.equal(inputs.some((f:any)=>f.path==='lib/body-spread.ts'),added);
+  assert.equal(manifest.sourceCommit,revision);assert.equal(inputs.length,count+(name==='lower-limb'?0:ultrasoundInputs.length+cranialInputs.length));assert.equal(inputs.some((f:any)=>f.path==='lib/body-spread.ts'),added);
   assert.deepEqual(inputs.filter((f:any)=>ultrasoundInputs.includes(f.path)).map((f:any)=>f.path).sort(),name==='lower-limb'?[]:ultrasoundInputs);
+  assert.deepEqual(inputs.filter((f:any)=>cranialInputs.includes(f.path)).map((f:any)=>f.path).sort(),name==='lower-limb'?[]:cranialInputs);
   assert.deepEqual(manifest.files.filter((f:any)=>f.path.startsWith('models/')),previous.files.filter((f:any)=>f.path.startsWith('models/')));
   for(const flag of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection','imagingConnection'])assert.deepEqual(manifest[flag],previous[flag]);
   const noticePath=base+'LICENSES/THIRD_PARTY_NOTICES.md';
@@ -35,7 +38,10 @@ test('bounded regional Spread reaches learner and protected review without model
   assert.deepEqual(regionalSpreadMilestoneBytes(noticePath),old(noticePath),'Spread did not change preceding licence bytes');
   const header='# Third-party notices\n\n',circle='## Circle of Willis guided orientation (2 October 2026)\n';
   const spinal='\n## Spinal-bone ultrasound orientation — 3 October 2026\n';
-  assert(current.startsWith(header+'## Hyoid and epiglottis ultrasound teaching (3 October 2026)\n'));
+  assert(current.startsWith(header+'## Cranial-bone X-ray teaching (3 October 2026)\n'));
+  const hyoidNotice=execFileSync('git',['show','67d7d3be152679b7a3f23a745d022a50111d9ebe:'+noticePath],{maxBuffer:32e6}).toString();
+  assert(hyoidNotice.startsWith(header+'## Hyoid and epiglottis ultrasound teaching (3 October 2026)\n'));
+  assert(current.endsWith(hyoidNotice.slice(header.length)),'All completed hyoid and earlier notice bytes remain exact');
   const previousNotice=execFileSync('git',['show','452f36b1ca5d86bdac8b7ce4c2bfc42da22fb712:'+noticePath],{maxBuffer:32e6}).toString();
   assert(previousNotice.startsWith(header+'## Open3DModel upper-limb candidate (3 October 2026, offline only)\n'));
   assert(current.endsWith(previousNotice.slice(header.length)),'All prior licence bytes are preserved after the new factual-teaching disclosure');

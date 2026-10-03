@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "8b7d941b7df991b68a0b92200842976ad74e18700eb604adf18f4ee2437f4c80"
+    "sha256": "637041606ee5e36aec82549c99f3c8ce2b3e992b13ca00100b9660d5f6e714a2"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "e95640d66ab2cc88257091ea948a0048637032774efbcc53e0fb514f04641e4b"
+    "sha256": "36dc4e365094d96a94f1c77bf2e3fd4d9e5264d182ceea567e8d9e4a5fb194c3"
   },
   {
     "path": "app/body-education-link.ts",
@@ -770,6 +770,14 @@
   {
     "path": "content/cranial-bone-quiz.ts",
     "sha256": "d3c9488721a2ec4d2b0f2cb623fe1996c3db8cb4adb3695d438e0ff0e1873a76"
+  },
+  {
+    "path": "content/cranial-bone-xray-pins.json",
+    "sha256": "7b742733260d1801aab48530ec8fed5ecda8d7c391f918cf54eaf44b720879ca"
+  },
+  {
+    "path": "content/cranial-bone-xray.ts",
+    "sha256": "8b2b5e1d300c16a6f4b8802dae2b4d20eb4586fb24c261fe3599c75cb8ffb30e"
   },
   {
     "path": "content/cranial-boundary-clinical-pins.json",
@@ -2422,6 +2430,10 @@
   {
     "path": "lib/cranial-bone-quiz.ts",
     "sha256": "9447b37a28dc6090091e57aa0a0ecf24979b7a706b7a666506ab9542ebd38d98"
+  },
+  {
+    "path": "lib/cranial-bone-xray.ts",
+    "sha256": "d583b262e6581d0e1eaf3ce42fecb8d2586f086433540fc3d72c275635f4fc35"
   },
   {
     "path": "lib/cranial-boundary-clinical.ts",

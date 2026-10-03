@@ -24,6 +24,7 @@ import { shoulderArterialImagingLesson } from '../lib/shoulder-arterial-imaging'
 import { plantarArterialMriLesson } from '../lib/plantar-arterial-mri';
 import { spinalBoneUltrasoundLesson } from '../lib/spinal-bone-ultrasound';
 import { hyoidEpiglottisUltrasoundLesson } from '../lib/hyoid-epiglottis-ultrasound';
+import { cranialBoneXrayLesson } from '../lib/cranial-bone-xray';
 import { lateralCricoarytenoidUsLesson } from '../lib/lateral-cricoarytenoid-us';
 import { plantarArterialUsLesson } from '../lib/plantar-arterial-us';
 import { commonInterosseousUsLesson } from '../lib/common-interosseous-us';
@@ -333,6 +334,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (spinalBoneUltrasound) return spinalBoneUltrasound;
   const hyoidEpiglottisUltrasound = hyoidEpiglottisUltrasoundLesson(s, tab);
   if (hyoidEpiglottisUltrasound) return hyoidEpiglottisUltrasound;
+  const cranialBoneXray = cranialBoneXrayLesson(s, tab);
+  if (cranialBoneXray) return cranialBoneXray;
   const spinalDisc = spinalDiscFunctionLesson(s, tab);
   if (spinalDisc) return spinalDisc;
   const properDigital = properDigitalTeachingLesson(s, tab);

@@ -1,5 +1,18 @@
 # Third-party notices
 
+## Cranial-bone X-ray teaching (3 October 2026)
+
+Eight source-bound selections use six original educational lesson families.
+Reading links cite UAMS head/neck bone relationships, Dartmouth Hitchcock's
+historical skull/sinus projection protocol and RadiologyInfo's explanation of
+projection overlap. No reference prose, image, figure, scan, trace, table or
+dataset is redistributed. The protocol is not presented as current acquisition
+or diagnostic advice. Citations do not grant rights to the linked media.
+Original project wording retains MIT terms; existing model geometry retains
+its unchanged BodyParts3D CC BY 4.0 attribution. No new dependency, font,
+texture, model, service or licence fee. Radiologist review and any future
+image-rights/patient-correspondence approval remain separate gates.
+
 ## Hyoid and epiglottis ultrasound teaching (3 October 2026)
 
 Original short factual teaching drafts cite Parmar et al., *Ultrasound: A novel

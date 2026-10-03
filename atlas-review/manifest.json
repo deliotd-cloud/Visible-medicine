@@ -1,5 +1,5 @@
 {
-  "revision": "c78e383a37976e2e459fd41504eac6281241af1d",
+  "revision": "da1c7f692fcaf318a9c059aa5cb4ef0db8bbd6e8",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -538,8 +538,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "e95640d66ab2cc88257091ea948a0048637032774efbcc53e0fb514f04641e4b",
-      "importedSha256": "e95640d66ab2cc88257091ea948a0048637032774efbcc53e0fb514f04641e4b"
+      "sourceSha256": "36dc4e365094d96a94f1c77bf2e3fd4d9e5264d182ceea567e8d9e4a5fb194c3",
+      "importedSha256": "36dc4e365094d96a94f1c77bf2e3fd4d9e5264d182ceea567e8d9e4a5fb194c3"
     },
     {
       "path": "lib/central-vessel-imaging.ts",
@@ -920,6 +920,21 @@
       "path": "content/hyoid-epiglottis-ultrasound.ts",
       "sourceSha256": "3431e1f91b8a083525c1d8ab10680fd8b40b2d47233853084b8d642e97aa928e",
       "importedSha256": "3431e1f91b8a083525c1d8ab10680fd8b40b2d47233853084b8d642e97aa928e"
+    },
+    {
+      "path": "lib/cranial-bone-xray.ts",
+      "sourceSha256": "d583b262e6581d0e1eaf3ce42fecb8d2586f086433540fc3d72c275635f4fc35",
+      "importedSha256": "d583b262e6581d0e1eaf3ce42fecb8d2586f086433540fc3d72c275635f4fc35"
+    },
+    {
+      "path": "content/cranial-bone-xray-pins.json",
+      "sourceSha256": "7b742733260d1801aab48530ec8fed5ecda8d7c391f918cf54eaf44b720879ca",
+      "importedSha256": "7b742733260d1801aab48530ec8fed5ecda8d7c391f918cf54eaf44b720879ca"
+    },
+    {
+      "path": "content/cranial-bone-xray.ts",
+      "sourceSha256": "8b2b5e1d300c16a6f4b8802dae2b4d20eb4586fb24c261fe3599c75cb8ffb30e",
+      "importedSha256": "8b2b5e1d300c16a6f4b8802dae2b4d20eb4586fb24c261fe3599c75cb8ffb30e"
     },
     {
       "path": "lib/lateral-cricoarytenoid-us.ts",
@@ -3278,8 +3293,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "5c9472a14f02bed1cb409e0d795ad6ac19c1bb5720bc6d485cf0f4fa57bf3f79",
-      "importedSha256": "af6b1d0675c1e162dcd65f37b60cfeeb8b380aa9d76a41c59d7808676fc07d13"
+      "sourceSha256": "793791e6471b16bf08d71e632c9247e1f6d22a633a6715f6aa23b21c266946c7",
+      "importedSha256": "30d06db78c501a3fd6f039db372069c30f0b4981f5ef99addbb9be89b4d568bb"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3639,7 +3654,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "e0d6e4581985a67ec82f0e43f0ad575b831cb80304ef7ce85b6d58cf5f389886",
-      "importedSha256": "7b87243047dca6d2c48ec1d107fb30edbfe60b1b3f24b512759311a75779599f"
+      "importedSha256": "c0881d51180eaa136280ae80335bf22ca9db5e998fd3fda30bc2ed3774ddedb4"
     },
     {
       "path": "app/review/review.css",
@@ -3673,8 +3688,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "ef7dc2cf02fc063f06f0a579b0a097de25a0bb3cd461b03abed6ad5095342570",
-      "importedSha256": "ef7dc2cf02fc063f06f0a579b0a097de25a0bb3cd461b03abed6ad5095342570"
+      "sourceSha256": "df09e9270c7b61185841781f28c517b81bfefcc50264726fa8b6c564981af31d",
+      "importedSha256": "df09e9270c7b61185841781f28c517b81bfefcc50264726fa8b6c564981af31d"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -5023,8 +5038,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "8b7d941b7df991b68a0b92200842976ad74e18700eb604adf18f4ee2437f4c80",
-      "importedSha256": "8b7d941b7df991b68a0b92200842976ad74e18700eb604adf18f4ee2437f4c80"
+      "sourceSha256": "637041606ee5e36aec82549c99f3c8ce2b3e992b13ca00100b9660d5f6e714a2",
+      "importedSha256": "637041606ee5e36aec82549c99f3c8ce2b3e992b13ca00100b9660d5f6e714a2"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -5123,5 +5138,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "6f5d2cbfd3b75f03407e83a0612042d8897aa85173d3cdd4c0250331cbe8e541"
+  "websiteIntegrationSha256": "f4021af7ea70747fc26117940a6ed5845edbe3d7ddfd1648171ce4611fe5afd0"
 }

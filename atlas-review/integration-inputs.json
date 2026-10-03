@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "c78e383a37976e2e459fd41504eac6281241af1d",
-  "sha256": "6f5d2cbfd3b75f03407e83a0612042d8897aa85173d3cdd4c0250331cbe8e541",
+  "sourceCommit": "da1c7f692fcaf318a9c059aa5cb4ef0db8bbd6e8",
+  "sha256": "f4021af7ea70747fc26117940a6ed5845edbe3d7ddfd1648171ce4611fe5afd0",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "e95640d66ab2cc88257091ea948a0048637032774efbcc53e0fb514f04641e4b"
+      "sha256": "36dc4e365094d96a94f1c77bf2e3fd4d9e5264d182ceea567e8d9e4a5fb194c3"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -736,7 +736,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "ef7dc2cf02fc063f06f0a579b0a097de25a0bb3cd461b03abed6ad5095342570"
+      "sha256": "df09e9270c7b61185841781f28c517b81bfefcc50264726fa8b6c564981af31d"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -917,6 +917,14 @@
     {
       "path": "atlas-review/content/cranial-bone-quiz.ts",
       "sha256": "d3c9488721a2ec4d2b0f2cb623fe1996c3db8cb4adb3695d438e0ff0e1873a76"
+    },
+    {
+      "path": "atlas-review/content/cranial-bone-xray-pins.json",
+      "sha256": "7b742733260d1801aab48530ec8fed5ecda8d7c391f918cf54eaf44b720879ca"
+    },
+    {
+      "path": "atlas-review/content/cranial-bone-xray.ts",
+      "sha256": "8b2b5e1d300c16a6f4b8802dae2b4d20eb4586fb24c261fe3599c75cb8ffb30e"
     },
     {
       "path": "atlas-review/content/cranial-boundary-clinical-pins.json",
@@ -2547,6 +2555,10 @@
       "sha256": "9447b37a28dc6090091e57aa0a0ecf24979b7a706b7a666506ab9542ebd38d98"
     },
     {
+      "path": "atlas-review/lib/cranial-bone-xray.ts",
+      "sha256": "d583b262e6581d0e1eaf3ce42fecb8d2586f086433540fc3d72c275635f4fc35"
+    },
+    {
       "path": "atlas-review/lib/cranial-boundary-clinical.ts",
       "sha256": "b753047c94c9ad6e63c58e9a7cfad519dd3cb2d1e6bbae3d10bc358fbf88c963"
     },
@@ -3912,7 +3924,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "8b7d941b7df991b68a0b92200842976ad74e18700eb604adf18f4ee2437f4c80"
+      "sha256": "637041606ee5e36aec82549c99f3c8ce2b3e992b13ca00100b9660d5f6e714a2"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -4168,7 +4180,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "7086e14a0704931756103e43547b8fec08cb4685c711a2742f0a9c64335bfccc"
+      "sha256": "5174dc7a008f61ded5560034eb18b4ce59b8d580a70cc5acd7ac43bc65595fc7"
     }
   ]
 }

@@ -8,7 +8,7 @@ import {build} from 'esbuild';
 import {regionalSpreadMilestoneBytes,withoutLumbarSacralNotice} from './atlas-lumbar-sacral-history.ts';
 import {lumbarSacralMilestoneBytes} from './atlas-wrist-ultrasound-history.ts';
 
-const revision='c78e383a37976e2e459fd41504eac6281241af1d';
+const revision='da1c7f692fcaf318a9c059aa5cb4ef0db8bbd6e8';
 const baseline='968f502957088c8d53c9bac025db0746d4c1424a';
 const sourceParent='e3849b6a31eac0ae8e556d753d4fe86e5e19c90a';
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
