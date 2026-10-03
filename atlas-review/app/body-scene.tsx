@@ -515,6 +515,7 @@ export function BodyScene(props: Props) {
   const orthographic = props.plate || layout === 'tray';
   const orientationOutput = useMemo(() => createRef<HTMLSpanElement>(), []);
   const keyboardOrientationOutput = useMemo(() => createRef<HTMLOutputElement>(), []);
+  const keyboardCameraFrom = useMemo(() => createRef<THREE.Vector3>(), []);
   const orientationAxes = useMemo(
     () => orientationBasis(props.catalog.coordinateSystem),
     [props.catalog.coordinateSystem],
@@ -524,6 +525,7 @@ export function BodyScene(props: Props) {
     if (!node || props.exam) return;
     const direction = orientationText(cameraOrientation(cameraFrom, orientationAxes));
     const degrees = (angle: number) => Math.round(angle * 180 / Math.PI);
+    keyboardCameraFrom.current = cameraFrom.clone();
     // oxlint-disable-next-line react/react-compiler -- This read-only live status is an imperative DOM sink for Three camera input.
     node.textContent = `View from: ${direction}. Orbit angle: ${degrees(azimuth)}° around, ${degrees(polar)}° from above.`;
   };
@@ -565,6 +567,8 @@ export function BodyScene(props: Props) {
           <RendererMonitor onHealth={onHealth} />
           <SceneOrientation
             output={orientationOutput}
+            statusOutput={keyboardOrientationOutput}
+            keyboardCameraFrom={keyboardCameraFrom}
             coordinates={props.catalog.coordinateSystem}
             enabled={!props.exam}
           />

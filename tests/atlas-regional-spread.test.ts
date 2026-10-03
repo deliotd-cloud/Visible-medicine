@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 import {regionalSpreadMilestoneBytes} from './atlas-lumbar-sacral-history.ts';
 
-const revision='59c881d0eac308c8c5a2bc87f2c5a0f3f6d6c763';
+const revision='e7355245ac0d5f92a7a76c6fb2c42f917c3675c3';
 const baseline='167c77f4da6ec16455093008dcacea250b0a6678';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6});

@@ -10,8 +10,8 @@ test('shared regional viewer isolates scene intrinsic size without changing mode
   const base='public/atlas-runtime/head-neck/';
   const hash=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json'),manifest=JSON.parse(bytes.toString());
-  assert.equal(hash(bytes),'1d70085b2275395a9336f4c7c92841a99031dc971eeac9caef63f24af42918a2');
-  assert.equal(manifest.sourceCommit,'59c881d0eac308c8c5a2bc87f2c5a0f3f6d6c763');
+  assert.equal(hash(bytes),'2f45bf7464f0f7d9404425da519e7ed0cdbbbe6700c3db31b1145d15df5b4b0c');
+  assert.equal(manifest.sourceCommit,'e7355245ac0d5f92a7a76c6fb2c42f917c3675c3');
   for(const flag of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
   assert.deepEqual(inputs.filter((i:{path:string})=>i.path==='app/body-explorer.css'),[

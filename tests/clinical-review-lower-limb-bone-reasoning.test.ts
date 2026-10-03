@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 test('all sixteen lower-limb bone questions share exact learner and review sources',async()=>{
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const learner=JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json','utf8'));
-  assert.equal(learner.sourceCommit,'59c881d0eac308c8c5a2bc87f2c5a0f3f6d6c763');
+  assert.equal(learner.sourceCommit,'e7355245ac0d5f92a7a76c6fb2c42f917c3675c3');
   const path='lib/lower-limb-bone-reasoning.ts';
   const input=JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json','utf8')).find((r:any)=>r.path===path);
   const file=review.files.find((r:any)=>r.path===path);assert(file&&input);

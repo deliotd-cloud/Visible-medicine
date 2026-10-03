@@ -5,7 +5,7 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {thoracicQuizHostProof} from './atlas-thoracic-bone-quiz-proof.ts';
 import {carpalQuizMilestoneBytes,thoracicQuizMilestoneBytes,withoutThoracicQuizNotice} from './atlas-thoracic-bone-quiz-history.ts';
-const revision='59c881d0eac308c8c5a2bc87f2c5a0f3f6d6c763';
+const revision='e7355245ac0d5f92a7a76c6fb2c42f917c3675c3';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
 const added=['content/thoracic-bone-quiz-pins.json','content/thoracic-bone-quiz.ts','lib/thoracic-bone-quiz.ts'];

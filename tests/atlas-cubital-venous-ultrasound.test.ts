@@ -7,7 +7,7 @@ import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {withoutCircleWillisNotice} from './atlas-circle-willis-history.ts';
 
-const source='59c881d0eac308c8c5a2bc87f2c5a0f3f6d6c763';
+const source='e7355245ac0d5f92a7a76c6fb2c42f917c3675c3';
 const beforeWebsite='4aa346e7923e3b303ad869d71e0ea36044d61aa6';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
