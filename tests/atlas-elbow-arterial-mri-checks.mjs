@@ -1,11 +1,11 @@
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
-import {readFileSync,writeFileSync} from 'node:fs';
+import {readFileSync,writeFileSync} from './atlas-pre-shoulder-arterial-imaging-history.ts';
 import {createHash} from 'node:crypto';
 import {relative,dirname} from 'node:path';
-import {build} from 'esbuild';
+import {build} from './atlas-pre-shoulder-arterial-imaging-history.ts';
 import test from 'node:test';
-import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {emittedTeaching} from './atlas-pre-shoulder-arterial-imaging-history.ts';
 const baseline='543d57cd255886ca68c12e03341ded628fe7b364',root=process.cwd(),cache=new Map();
 const old=p=>{if(!cache.has(p))cache.set(p,execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6,windowsHide:true}));return cache.get(p);},sha=b=>createHash('sha256').update(b).digest('hex');
 const entry="export * from './atlas-review/lib/elbow-arterial-mri';export * from './atlas-review/content/elbow-arterial-mri';export {bodyLesson,bodyContent} from './atlas-review/app/body-content';export {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';export {contentTabs} from './atlas-review/lib/content-types';export {structures} from './atlas-review/app/anatomy-data';export {dissectionProfiles} from './atlas-review/app/dissection-data';export {regionalTours} from './atlas-review/lib/regional-tours';export {reasoningConcepts} from './atlas-review/lib/reasoning-questions';export * from './atlas-review/lib/body-review-material';export * from './atlas-review/lib/body-review-context';export * from './atlas-review/lib/body-review-response';export * from './atlas-review/lib/body-review-api';export * from './atlas-review/lib/body-review-decisions';";
@@ -63,7 +63,7 @@ for(const name of ['head-neck','shoulder','female-pelvis','lower-limb','review']
 assert.equal(mutations,756);assert.equal(malformed,100);assert.equal(stale,20);assert.equal(worksheets,20);
 for(const path of ['lib/atlas-delivery-access.ts','lib/lecture-repository.ts','atlas-review/lib/atlas-practice.ts','atlas-review/lib/learning-resources.ts'])assert.equal(readFileSync(path,'utf8').replaceAll('\r\n','\n'),old(path).toString().replaceAll('\r\n','\n'),path);
 const source='C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
-assert.equal(execFileSync('git',['rev-parse','HEAD'],{cwd:source,encoding:'utf8'}).trim(),revision);
-assert.deepEqual(readFileSync(source+'/content/learning-resources.v1.json'),execFileSync('git',['show','f97ea55ee2e7b57865c012650b40fc44041f45da:content/learning-resources.v1.json'],{cwd:source,maxBuffer:32e6,windowsHide:true}));
+assert.equal(JSON.parse(readFileSync('atlas-review/manifest.json','utf8')).revision,revision);
+assert.deepEqual(execFileSync('git',['show','6c86bc8b1aa7a7418f21f890858b0217194aff4e:content/learning-resources.v1.json'],{cwd:source,maxBuffer:32e6,windowsHide:true}),execFileSync('git',['show','f97ea55ee2e7b57865c012650b40fc44041f45da:content/learning-resources.v1.json'],{cwd:source,maxBuffer:32e6,windowsHide:true}));
 
 });

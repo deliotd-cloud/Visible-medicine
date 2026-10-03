@@ -5,20 +5,20 @@ import {createHash} from 'node:crypto';
 
 // Source behavior is covered by the Atlas camera suite. These release checks
 // bind all exported viewers to that implementation and its focus-only styling.
-const source = '6c86bc8b1aa7a7418f21f890858b0217194aff4e';
+const source = 'e6168496a8a59927164fc84c9297583d8ae01339';
 const modules = {
-  shoulder:'f97591ffb5d895c3ce7ceafb50b2a066fd00b31fe7334f1e8dbc4ec2bd37e10a',
-  'female-pelvis':'f44d129947602cd24a2f528f7e8f9ab2d7562a4d1ca108c8f712bd226d7d3bb2',
-  'lower-limb':'387ef7ec1a53cf4c3f8a9ce7091e3d02f3b3f254cd2817b8c01b9a527eec026d',
-  'head-neck':'511cdcfae5d23ff80cda6b09f4c4a682cd817337327a9c1f39403516a4fd90db',
+  shoulder:'0450630e31f1bc51069169875c9557d55a12003e652592deaf0f6fcb64116119',
+  'female-pelvis':'698e40e3061ad8c056b70d644af17a0c2be244ccd60d9690344e0c659adeaf88',
+  'lower-limb':'a0a3eb3e92c8ffb5877c1a7d282b99754767e129588d96e7def3f526e6d604fa',
+  'head-neck':'3f4e446f3941fa0d6f874dfa37ad9592d74aa98737906630f6592497cf2873e4',
 };
 for(const [module,manifestHash] of Object.entries(modules)) test(`${module} exports the source-verified keyboard camera and focus-only hint`,()=>{
   const base = `public/atlas-runtime/${module}/`;
   const bytes = readFileSync(base+'manifest.json');
   assert.equal(createHash('sha256').update(bytes).digest('hex'),manifestHash);
   assert.equal(JSON.parse(bytes.toString()).sourceCommit,module==='shoulder'
-    ?'6c86bc8b1aa7a7418f21f890858b0217194aff4e'
-    :module==='female-pelvis'?'6c86bc8b1aa7a7418f21f890858b0217194aff4e':module==='lower-limb'?'6c86bc8b1aa7a7418f21f890858b0217194aff4e':source);
+    ?'e6168496a8a59927164fc84c9297583d8ae01339'
+    :module==='female-pelvis'?'e6168496a8a59927164fc84c9297583d8ae01339':module==='lower-limb'?'e6168496a8a59927164fc84c9297583d8ae01339':source);
   const inputs = JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({
     'lib/camera-keyboard.ts':module==='shoulder'

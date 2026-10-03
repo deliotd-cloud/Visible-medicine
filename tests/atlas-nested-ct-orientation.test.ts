@@ -7,7 +7,7 @@ import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {withoutNestedCTOrientationNotice} from './atlas-nested-ct-notice-history.ts';
 import {desktopLayoutImportMilestone} from './atlas-cubital-ultrasound-history.ts';
-const source='6c86bc8b1aa7a7418f21f890858b0217194aff4e';
+const source='e6168496a8a59927164fc84c9297583d8ae01339';
 const before='c3fb787a9811bf0ef9c3bd130f7a0534d49db9ad';
 const previousBytes=(path:string)=>Buffer.from(execFileSync('git',['show',before+':'+path],{maxBuffer:32e6}));
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
@@ -38,7 +38,7 @@ async function load(previous=false,historical=false){
 
 test('complete named CT drafts and credited sources reach learners and protected review without changing models or rights',async()=>{
  const api=await load(),review=json('atlas-review/manifest.json'),oldReview=JSON.parse(previousBytes('atlas-review/manifest.json').toString('utf8'));
- assert.equal(review.revision,source);assert.equal(review.files.length,1009);
+ assert.equal(review.revision,source);assert.equal(review.files.length,1012);
  assert.deepEqual(review.packages,oldReview.packages);
  const milestone=desktopLayoutImportMilestone();
  assert.deepEqual(milestone.files.filter((f:any)=>!oldReview.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),['content/nested-ct-orientation.ts','content/nested-guided-learning-bindings.v1.json','lib/eye-layer-guide.ts','lib/nested-guided-learning.ts','lib/nested-review-queue.ts']);

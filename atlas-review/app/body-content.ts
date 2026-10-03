@@ -20,6 +20,7 @@ import { glotticMuscleImagingLesson } from '../lib/glottic-muscle-imaging';
 import { handVenousImagingLesson } from '../lib/hand-venous-imaging';
 import { genicularMriLesson } from '../lib/genicular-mri';
 import { elbowArterialMriLesson } from '../lib/elbow-arterial-mri';
+import { shoulderArterialImagingLesson } from '../lib/shoulder-arterial-imaging';
 import { lateralCricoarytenoidUsLesson } from '../lib/lateral-cricoarytenoid-us';
 import { plantarArterialUsLesson } from '../lib/plantar-arterial-us';
 import { commonInterosseousUsLesson } from '../lib/common-interosseous-us';
@@ -321,6 +322,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (genicularMri) return genicularMri;
   const elbowArterialMri = elbowArterialMriLesson(s, tab);
   if (elbowArterialMri) return elbowArterialMri;
+  const shoulderArterialImaging = shoulderArterialImagingLesson(s, tab);
+  if (shoulderArterialImaging) return shoulderArterialImaging;
   const spinalDisc = spinalDiscFunctionLesson(s, tab);
   if (spinalDisc) return spinalDisc;
   const properDigital = properDigitalTeachingLesson(s, tab);
