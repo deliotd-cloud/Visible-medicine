@@ -10,9 +10,9 @@ test('shared runtime carries both source-pinned pulmonary-hilar studies without 
   const base='public/atlas-runtime/head-neck/';
   const sha=(data:Buffer)=>createHash('sha256').update(data).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'4002688ab01c6941ca946e3d91efc383e066a7bb1a1dcbf95a1bc8009bde0cd2');
+  assert.equal(sha(bytes),'528aa1c087152690fcd89a6137e3c66342eaffbd71858a030a77f020e4a96f44');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'dcd1e1cfe4036c2af309c5a1a451adf659e62417');
+  assert.equal(manifest.sourceCommit,'1517521a5ee3eed985fff01bcd8608965b693fae');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({

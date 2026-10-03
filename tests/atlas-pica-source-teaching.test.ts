@@ -6,7 +6,7 @@ import {dirname,relative} from 'node:path';
 import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
-const revision='dcd1e1cfe4036c2af309c5a1a451adf659e62417';
+const revision='1517521a5ee3eed985fff01bcd8608965b693fae';
 const baseline='2df4395d6df36a53da361e1ab3b6c07ddbb67e2a';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{encoding:'utf8',maxBuffer:32e6});
@@ -34,7 +34,7 @@ async function load(previous=false){
 }
 test('26 exact source-part PICA drafts reach local learners and protected review, without new models or rights',async()=>{
  const api=await load(),review=json('atlas-review/manifest.json'),prior=JSON.parse(old('atlas-review/manifest.json'));
- assert.equal(review.revision,revision);assert.equal(review.files.length,999);assert.deepEqual(review.packages,prior.packages);
+ assert.equal(review.revision,revision);assert.equal(review.files.length,1002);assert.deepEqual(review.packages,prior.packages);
  // Freeze the original PICA transition; later root questions are audited separately.
  const epoch=JSON.parse(execFileSync('git',['show','6d851df6891316da971430ca8ddf522d31df640b:atlas-review/manifest.json'],{encoding:'utf8',maxBuffer:32e6}));
  assert.deepEqual(epoch.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),['content/pica-source-teaching-bindings.v1.json','content/pica-source-teaching.ts']);

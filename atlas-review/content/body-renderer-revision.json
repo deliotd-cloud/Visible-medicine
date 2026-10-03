@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "022d65282fa6a3f9400919a4db172afa0fa6f1bdcfaefe108e4b4f672b25adf1"
+      "sha256": "000da74416c25c3764c5029c0697a0e4d73a6a25edd1a6f0550991789c4711bb"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1023,6 +1023,14 @@
     {
       "path": "content/hand-muscle-imaging.ts",
       "sha256": "e91d54120b06c48f163ee9ddb84b646c96a40d0c0ef13d4e4f9749c22c1125e2"
+    },
+    {
+      "path": "content/hand-venous-imaging-pins.json",
+      "sha256": "ecd70dc7b7a394882324b624b4b24ef31499f7aaabfa06e736c8ac917f7554ff"
+    },
+    {
+      "path": "content/hand-venous-imaging.ts",
+      "sha256": "8d149a1ece86e368cff8a0d7b452f3a0fb9cffc3e4c86f1c298701ac46e0bfa2"
     },
     {
       "path": "content/head-neck-vessel-imaging-pins.json",
@@ -2541,6 +2549,10 @@
       "sha256": "ba058b19095e8c43a1714b2da6001d8d53601e7aa27bcdb4e1ea26cb87501b89"
     },
     {
+      "path": "lib/hand-venous-imaging.ts",
+      "sha256": "35edb46ac0e7aa7aaa21079a4ae1f3743414e2d80190837883d198d8e013bf41"
+    },
+    {
       "path": "lib/hand-vessel-clinical-curriculum.ts",
       "sha256": "4c6f29b5f9fde2ab8507d334c2764dba246592ab2fb4aaf9b8ddac08bab4cd14"
     },
@@ -3761,7 +3773,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "1b297790d1f8c607991f07a307223534f340dada03dfaece55f635dc23587995",
-  "sourceRendererSha256": "d39b1626b3a1264da3192d2700cf249620bd9f62e1d44c86bb40380b91fdee00",
-  "websiteIntegrationSha256": "2f763aaa9e13b7bc5fb1e24301e7adf011244e389dcb36fc296a2e2443afea9a"
+  "sha256": "5140017c0423b99ebfb3da5b352a5e6178a3842b37a2989ac17e5f618801ac58",
+  "sourceRendererSha256": "47a2770ec03a56a9f1081383eaa6a14b75acd499515c0aa0cc31532ff9839432",
+  "websiteIntegrationSha256": "3db25b1cb536e1324c41f38a5a437171580f7da8276586a6e5f9bef5fff1cf8e"
 }

@@ -10,13 +10,13 @@ test('proper digital artery teaching reaches the shared viewer without new model
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json');
-  assert.equal(sha(bytes),'4002688ab01c6941ca946e3d91efc383e066a7bb1a1dcbf95a1bc8009bde0cd2');
+  assert.equal(sha(bytes),'528aa1c087152690fcd89a6137e3c66342eaffbd71858a030a77f020e4a96f44');
   const manifest=JSON.parse(bytes.toString());
-  assert.equal(manifest.sourceCommit,'dcd1e1cfe4036c2af309c5a1a451adf659e62417');
+  assert.equal(manifest.sourceCommit,'1517521a5ee3eed985fff01bcd8608965b693fae');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256] of Object.entries({
-    'app/body-content.ts':'022d65282fa6a3f9400919a4db172afa0fa6f1bdcfaefe108e4b4f672b25adf1',
+    'app/body-content.ts':'000da74416c25c3764c5029c0697a0e4d73a6a25edd1a6f0550991789c4711bb',
     'content/proper-digital-teaching.ts':'e3d3bfd651987ba881c3b7a11dc6a0a07ef9135c73554d43de2a74b839952012',
     'lib/proper-digital-teaching.ts':'9e072b27456a485d71364eb35fcca7939b64d7af7049b07933d15ec548c63c71',
   }))assert.deepEqual(inputs.filter(input=>input.path===path),[{path,sha256}]);

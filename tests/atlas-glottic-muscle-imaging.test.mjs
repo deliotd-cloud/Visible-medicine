@@ -1,12 +1,12 @@
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
-import {readFile,writeFile} from 'node:fs/promises';
+import {readFile,writeFile} from './atlas-pre-hand-venous-imaging-history.ts';
 import {createHash} from 'node:crypto';
 import {relative,dirname} from 'node:path';
 import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
-import {build} from 'esbuild';
-import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {build} from './atlas-pre-hand-venous-imaging-history.ts';
+import {emittedTeaching} from './atlas-pre-hand-venous-imaging-history.ts';
 import test from 'node:test';
 const baseline='306a304ac43a9745ac89e618e351e051697eaac3',root=process.cwd(),old=p=>execFileSync('git',['show',baseline+':'+p],{encoding:'utf8',windowsHide:true,maxBuffer:32e6});
 const same=(a,b,m)=>assert.deepEqual(structuredClone(a),structuredClone(b),m),sha=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
